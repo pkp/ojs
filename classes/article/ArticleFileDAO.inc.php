@@ -33,13 +33,13 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 		if ($revision == null) {
 			if ($articleId != null) {
-				$result =& $this->retrieveLimit(
+				$result = $this->retrieveLimit(
 					'SELECT a.* FROM article_files a WHERE file_id = ? AND submission_id = ? ORDER BY revision DESC',
 					array($fileId, $articleId),
 					1
 				);
 			} else {
-				$result =& $this->retrieveLimit(
+				$result = $this->retrieveLimit(
 					'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision DESC',
 					$fileId,
 					1
@@ -48,12 +48,12 @@ class ArticleFileDAO extends PKPFileDAO {
 
 		} else {
 			if ($articleId != null) {
-				$result =& $this->retrieve(
+				$result = $this->retrieve(
 					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ? AND submission_id = ?',
 					array($fileId, $revision, $articleId)
 				);
 			} else {
-				$result =& $this->retrieve(
+				$result = $this->retrieve(
 					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ?',
 					array($fileId, $revision)
 				);
@@ -62,12 +62,10 @@ class ArticleFileDAO extends PKPFileDAO {
 
 		$returner = null;
 		if (isset($result) && $result->RecordCount() != 0) {
-			$returner =& $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$returner = $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -85,12 +83,12 @@ class ArticleFileDAO extends PKPFileDAO {
 
 		// FIXME If "round" is review-specific, it shouldn't be in this table
 		if ($round == null) {
-			$result =& $this->retrieve(
+			$result = $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision',
 				$fileId
 			);
 		} else {
-			$result =& $this->retrieve(
+			$result = $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND round = ? ORDER BY revision',
 				array($fileId, $round)
 			);
@@ -102,8 +100,6 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $articleFiles;
 	}
 
@@ -120,12 +116,12 @@ class ArticleFileDAO extends PKPFileDAO {
 		$articleFiles = array();
 
 		if ($end == null) {
-			$result =& $this->retrieve(
+			$result = $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ?',
 				array($fileId, $start)
 			);
 		} else {
-			$result =& $this->retrieve(
+			$result = $this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ? AND revision <= ?',
 				array($fileId, $start, $end)
 			);
@@ -137,8 +133,6 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $articleFiles;
 	}
 
@@ -152,7 +146,7 @@ class ArticleFileDAO extends PKPFileDAO {
 			$returner = null;
 			return $returner;
 		}
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT MAX(revision) AS max_revision FROM article_files a WHERE file_id = ?',
 			$fileId
 		);
@@ -165,8 +159,6 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -178,7 +170,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	function &getArticleFilesByArticle($articleId) {
 		$articleFiles = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM article_files WHERE submission_id = ?',
 			$articleId
 		);
@@ -189,8 +181,6 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $articleFiles;
 	}
 
@@ -204,7 +194,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		import('classes.file.ArticleFileManager');
 		$articleFiles = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM article_files WHERE assoc_id = ? AND file_stage = ?',
 			array($assocId, $fileStage)
 		);
@@ -215,8 +205,6 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $articleFiles;
 	}
 

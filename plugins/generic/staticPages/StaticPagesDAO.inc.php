@@ -26,7 +26,7 @@ class StaticPagesDAO extends DAO {
 	}
 
 	function getStaticPage($staticPageId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM static_pages WHERE static_page_id = ?', $staticPageId
 		);
 
@@ -39,7 +39,7 @@ class StaticPagesDAO extends DAO {
 	}
 
 	function &getStaticPagesByJournalId($journalId, $rangeInfo = null) {
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			'SELECT * FROM static_pages WHERE journal_id = ?', $journalId, $rangeInfo
 		);
 
@@ -48,7 +48,7 @@ class StaticPagesDAO extends DAO {
 	}
 
 	function getStaticPageByPath($journalId, $path) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM static_pages WHERE journal_id = ? AND path = ?', array($journalId, $path)
 		);
 

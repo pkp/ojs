@@ -82,8 +82,7 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteByLoadId($loadId) {
-		$result =& $this->update('DELETE from usage_stats_temporary_records WHERE load_id = ?', array($loadId));
-		return $result;
+		return $this->update('DELETE from usage_stats_temporary_records WHERE load_id = ?', array($loadId));
 	}
 
 
@@ -95,17 +94,14 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 	* @param $loadId string
 	* @return ADORecordSet
 	*/
-	function &_getGrouped($loadId) {
-		$result =& $this->retrieve(
-					'SELECT assoc_type, assoc_id, day, country_id, region, city, file_type, load_id, count(metric) as metric
-					FROM usage_stats_temporary_records WHERE load_id = ?
-					GROUP BY assoc_type, assoc_id, day, country_id, region, city, file_type, load_id',
-		array($loadId)
+	function _getGrouped($loadId) {
+		return $this->retrieve(
+			'SELECT assoc_type, assoc_id, day, country_id, region, city, file_type, load_id, count(metric) as metric
+			FROM usage_stats_temporary_records WHERE load_id = ?
+			GROUP BY assoc_type, assoc_id, day, country_id, region, city, file_type, load_id',
+o			array($loadId)
 		);
-
-		return $result;
 	}
-
 }
 
 ?>

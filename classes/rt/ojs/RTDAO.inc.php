@@ -27,7 +27,7 @@ class RTDAO extends DAO {
 	 * @param $journalId int
 	 * @return RT
 	 */
-	function &getJournalRTByJournal(&$journal) {
+	function getJournalRTByJournal($journal) {
 		$rt = new JournalRT($journal->getId());
 		$rt->setEnabled($journal->getSetting('rtEnabled')?true:false);
 		$rt->setVersion((int) $journal->getSetting('rtVersionId'));
@@ -56,7 +56,7 @@ class RTDAO extends DAO {
 		return $rt;
 	}
 
-	function updateJournalRT(&$rt) {
+	function updateJournalRT($rt) {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = $journalDao->getById($rt->getJournalId());
 
@@ -91,7 +91,7 @@ class RTDAO extends DAO {
 	 * Insert a new RT configuration.
 	 * @param $rt object
 	 */
-	function insertJournalRT(&$rt) {
+	function insertJournalRT($rt) {
 		return $this->updateJournalRT($rt);
 	}
 
@@ -105,30 +105,29 @@ class RTDAO extends DAO {
 	 * @param $pagingInfo object DBResultRange (optional)
 	 * @return array RTVersion
 	 */
-	function &getVersions($journalId, $pagingInfo = null) {
+	function getVersions($journalId, $pagingInfo = null) {
 		$versions = array();
 
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			'SELECT * FROM rt_versions WHERE journal_id = ? ORDER BY version_key',
 			$journalId,
 			$pagingInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnVersionFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnVersionFromRow');
 	}
 
 	function _versionCacheMiss($cache, $id) {
 		$ids = explode('-', $id);
-		$version =& $this->getVersion($ids[0], $ids[1], false);
+		$version = $this->getVersion($ids[0], $ids[1], false);
 		$cache->setCache($id, $version);
 		return $version;
 	}
 
-	function &_getVersionCache() {
+	function _getVersionCache() {
 		if (!isset($this->versionCache)) {
-			$cacheManager =& CacheManager::getManager();
-			$this->versionCache =& $cacheManager->getObjectCache('rtVersions', 0, array($this, '_versionCacheMiss'));
+			$cacheManager = CacheManager::getManager();
+			$this->versionCache = $cacheManager->getObjectCache('rtVersions', 0, array($this, '_versionCacheMiss'));
 		}
 		return $this->versionCache;
 	}
@@ -139,26 +138,23 @@ class RTDAO extends DAO {
 	 * @param $journalId int optional
 	 * @return RTVersion optional
 	 */
-	function &getVersion($versionId, $journalId = null, $useCache = null) {
+	function getVersion($versionId, $journalId = null, $useCache = null) {
 		if ($useCache) {
-			$cache =& $this->_getVersionCache();
-			$returner = $cache->get((int) $versionId . '-' . (int) $journalId);
-			return $returner;
+			$cache = $this->_getVersionCache();
+			return $cache->get((int) $versionId . '-' . (int) $journalId);
 		}
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM rt_versions WHERE version_id = ? AND journal_id = ?',
 			array((int) $versionId, (int) $journalId)
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnVersionFromRow($result->GetRowAssoc(false));
+			$returner = $this->_returnVersionFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -167,7 +163,7 @@ class RTDAO extends DAO {
 	 * @param $journalId int
 	 * @param $version RTVersion
 	 */
-	function insertVersion($journalId, &$version) {
+	function insertVersion($journalId, $version) {
 		$this->update(
 			'INSERT INTO rt_versions
 			(journal_id, version_key, locale, title, description)
@@ -191,7 +187,7 @@ class RTDAO extends DAO {
 	 * @param $journalId int
 	 * @param $version RTVersion
 	 */
-	function updateVersion($journalId, &$version) {
+	function updateVersion($journalId, $version) {
 		// FIXME Update contexts and searches?
 		return $this->update(
 			'UPDATE rt_versions
@@ -211,7 +207,7 @@ class RTDAO extends DAO {
 			)
 		);
 
-		$cache =& $this->_getVersionCache();
+		$cache = $this->_getVersionCache();
 		$cache->flush();
 	}
 
@@ -220,7 +216,7 @@ class RTDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteVersionsByJournalId($journalId) {
-		$versions =& $this->getVersions($journalId);
+		$versions = $this->getVersions($journalId);
 		foreach ($versions->toArray() as $version) {
 			$this->deleteVersion($version->getVersionId(), $journalId);
 		}
@@ -238,7 +234,7 @@ class RTDAO extends DAO {
 			array((int) $versionId, (int) $journalId)
 		);
 
-		$cache =& $this->_getVersionCache();
+		$cache = $this->_getVersionCache();
 		$cache->flush();
 	}
 
@@ -258,7 +254,7 @@ class RTDAO extends DAO {
 	 * @param $row array
 	 * @return RTVersion
 	 */
-	function &_returnVersionFromRow($row) {
+	function _returnVersionFromRow($row) {
 		$version = new RTVersion();
 		$version->setVersionId($row['version_id']);
 		$version->setKey($row['version_key']);
@@ -266,7 +262,7 @@ class RTDAO extends DAO {
 		$version->setTitle($row['title']);
 		$version->setDescription($row['description']);
 
-		if (!HookRegistry::call('RTDAO::_returnVersionFromRow', array(&$version, &$row))) {
+		if (!HookRegistry::call('RTDAO::_returnVersionFromRow', array($version, $row))) {
 			$contextsIterator = $this->getContexts($row['version_id']);
 			$version->setContexts($contextsIterator->toArray());
 		}
@@ -279,7 +275,7 @@ class RTDAO extends DAO {
 	 * @param $row array
 	 * @return RTSearch
 	 */
-	function &_returnSearchFromRow($row) {
+	function _returnSearchFromRow($row) {
 		$search = new RTSearch();
 		$search->setSearchId($row['search_id']);
 		$search->setContextId($row['context_id']);
@@ -290,7 +286,7 @@ class RTDAO extends DAO {
 		$search->setSearchPost($row['search_post']);
 		$search->setOrder($row['seq']);
 
-		HookRegistry::call('RTDAO::_returnSearchFromRow', array(&$search, &$row));
+		HookRegistry::call('RTDAO::_returnSearchFromRow', array($search, $row));
 
 		return $search;
 	}
@@ -306,20 +302,18 @@ class RTDAO extends DAO {
 	 * @param $contextId int
 	 * @return RT
 	 */
-	function &getContext($contextId) {
-		$result =& $this->retrieve(
+	function getContext($contextId) {
+		$result = $this->retrieve(
 			'SELECT * FROM rt_contexts WHERE context_id = ?',
 			array((int) $contextId)
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnContextFromRow($result->GetRowAssoc(false));
+			$returner = $this->_returnContextFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -329,17 +323,16 @@ class RTDAO extends DAO {
 	 * @param $pagingInfo object DBResultRange (optional)
 	 * @return array RTContext
 	 */
-	function &getContexts($versionId, $pagingInfo = null) {
+	function getContexts($versionId, $pagingInfo = null) {
 		$contexts = array();
 
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			'SELECT * FROM rt_contexts WHERE version_id = ? ORDER BY seq',
 			array((int) $versionId),
 			$pagingInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnContextFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnContextFromRow');
 	}
 
 	/**
@@ -347,7 +340,7 @@ class RTDAO extends DAO {
 	 * @param $versionId int
 	 * @param $context RTContext
 	 */
-	function insertContext(&$context) {
+	function insertContext($context) {
 		$this->update(
 			'INSERT INTO rt_contexts
 			(version_id, title, abbrev, description, cited_by, author_terms, geo_terms, define_terms, seq)
@@ -380,7 +373,7 @@ class RTDAO extends DAO {
 	 * Update an existing context.
 	 * @param $context RTContext
 	 */
-	function updateContext(&$context) {
+	function updateContext($context) {
 		// FIXME Update searches?
 		return $this->update(
 			'UPDATE rt_contexts
@@ -422,7 +415,7 @@ class RTDAO extends DAO {
 	 * Sequentially renumber contexts in their sequence order.
 	 */
 	function resequenceContexts($versionId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT context_id FROM rt_contexts WHERE version_id = ? ORDER BY seq',
 			array((int) $versionId)
 		);
@@ -447,7 +440,7 @@ class RTDAO extends DAO {
 	 * @param $row array
 	 * @return RTContext
 	 */
-	function &_returnContextFromRow($row) {
+	function _returnContextFromRow($row) {
 		$context = new RTContext();
 		$context->setContextId($row['context_id']);
 		$context->setVersionId($row['version_id']);
@@ -461,7 +454,7 @@ class RTDAO extends DAO {
 		$context->setOrder($row['seq']);
 
 		if (!HookRegistry::call('RTDAO::_returnContextFromRow', array(&$context, &$row))) {
-			$searchesIterator =& $this->getSearches($row['context_id']);
+			$searchesIterator = $this->getSearches($row['context_id']);
 			$context->setSearches($searchesIterator->toArray());
 		}
 
@@ -479,20 +472,18 @@ class RTDAO extends DAO {
 	 * @param $searchId int
 	 * @return RTSearch
 	 */
-	function &getSearch($searchId) {
-		$result =& $this->retrieve(
+	function getSearch($searchId) {
+		$result = $this->retrieve(
 			'SELECT * FROM rt_searches WHERE search_id = ?',
 			array((int) $searchId)
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnSearchFromRow($result->GetRowAssoc(false));
+			$returner = $this->_returnSearchFromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -502,24 +493,23 @@ class RTDAO extends DAO {
 	 * @param $pagingInfo object DBResultRange (optional)
 	 * @return array RTSearch
 	 */
-	function &getSearches($contextId, $pagingInfo = null) {
+	function getSearches($contextId, $pagingInfo = null) {
 		$searches = array();
 
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			'SELECT * FROM rt_searches WHERE context_id = ? ORDER BY seq',
 			array((int) $contextId),
 			$pagingInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSearchFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnSearchFromRow');
 	}
 
 	/**
 	 * Insert new search.
 	 * @param $search RTSearch
 	 */
-	function insertSearch(&$search) {
+	function insertSearch($search) {
 		$this->update(
 			'INSERT INTO rt_searches
 			(context_id, title, description, url, search_url, search_post, seq)
@@ -544,7 +534,7 @@ class RTDAO extends DAO {
 	 * Update an existing search.
 	 * @param $search RTSearch
 	 */
-	function updateSearch(&$search) {
+	function updateSearch($search) {
 		return $this->update(
 			'UPDATE rt_searches
 			SET title = ?, description = ?, url = ?, search_url = ?, search_post = ?, seq = ?
@@ -589,7 +579,7 @@ class RTDAO extends DAO {
 	 * Sequentially renumber searches in their sequence order.
 	 */
 	function resequenceSearches($contextId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT search_id FROM rt_searches WHERE context_id = ? ORDER BY seq',
 			array((int) $contextId)
 		);

@@ -72,7 +72,7 @@ class BookForReviewDAO extends DAO {
 	 * @return BookForReview
 	 */
 	function &getBookForReview($bookId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM books_for_review WHERE book_id = ?', $bookId
 		);
 
@@ -90,7 +90,7 @@ class BookForReviewDAO extends DAO {
 	 * @return int
 	 */
 	function getBookForReviewJournalId($bookId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT journal_id FROM books_for_review WHERE book_id = ?', $bookId
 		);
 
@@ -343,8 +343,8 @@ class BookForReviewDAO extends DAO {
 	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching BooksForReview
 	 */
-	function &getBooksForReviewByAuthor($journalId, $userId, $rangeInfo = null) {
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+	function getBooksForReviewByAuthor($journalId, $userId, $rangeInfo = null) {
+		$bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 
 		$sql = 'SELECT DISTINCT bfr.*
@@ -358,9 +358,8 @@ class BookForReviewDAO extends DAO {
 			(int) $userId
 		);
 
-		$result =& $this->retrieveRange($sql, $paramArray, $rangeInfo);
-		$returner = new DAOResultFactory($result, $this, '_returnBookForReviewFromRow');
-		return $returner;
+		$result = $this->retrieveRange($sql, $paramArray, $rangeInfo);
+		return new DAOResultFactory($result, $this, '_returnBookForReviewFromRow');
 	}
 
 	/**
@@ -370,8 +369,8 @@ class BookForReviewDAO extends DAO {
 	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching BooksForReview 
 	 */
-	function &getBooksForReviewAssignedByAuthor($journalId, $userId, $rangeInfo = null) {
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+	function getBooksForReviewAssignedByAuthor($journalId, $userId, $rangeInfo = null) {
+		$bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 
 		$sql = 'SELECT DISTINCT bfr.*
@@ -388,9 +387,8 @@ class BookForReviewDAO extends DAO {
 			(int) $userId
 		);
 
-		$result =& $this->retrieveRange($sql, $paramArray, $rangeInfo);
-		$returner = new DAOResultFactory($result, $this, '_returnBookForReviewFromRow');
-		return $returner;
+		$result = $this->retrieveRange($sql, $paramArray, $rangeInfo);
+		return new DAOResultFactory($result, $this, '_returnBookForReviewFromRow');
 	}
 
 	/**
@@ -400,8 +398,8 @@ class BookForReviewDAO extends DAO {
 	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching BooksForReview 
 	 */
-	function &getBooksForReviewByDateDue($journalId, $dateDue, $rangeInfo = null) {
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+	function getBooksForReviewByDateDue($journalId, $dateDue, $rangeInfo = null) {
+		$bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 
 		$sql = sprintf(
@@ -419,9 +417,8 @@ class BookForReviewDAO extends DAO {
 			(int) $journalId
 		);
 
-		$result =& $this->retrieveRange($sql, $paramArray, $rangeInfo);
-		$returner = new DAOResultFactory($result, $this, '_returnBookForReviewFromRow');
-		return $returner;
+		$result = $this->retrieveRange($sql, $paramArray, $rangeInfo);
+		return new DAOResultFactory($result, $this, '_returnBookForReviewFromRow');
 	}
 
 	/**
@@ -436,7 +433,7 @@ class BookForReviewDAO extends DAO {
 	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching BooksForReview 
 	 */
-	function &getBooksForReviewByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $status = null, $userId = null, $editorId = null, $rangeInfo = null) {
+	function getBooksForReviewByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $status = null, $userId = null, $editorId = null, $rangeInfo = null) {
 		$sql = 'SELECT DISTINCT bfr.* FROM books_for_review bfr';
 		$paramArray = array();
 
@@ -489,9 +486,8 @@ class BookForReviewDAO extends DAO {
 		$sql .= ' bfr.journal_id = ? ORDER BY bfr.book_id DESC';
 		$paramArray[] = (int) $journalId;
 
-		$result =& $this->retrieveRange($sql, $paramArray, $rangeInfo);
-		$returner = new DAOResultFactory($result, $this, '_returnBookForReviewFromRow');
-		return $returner;
+		$result = $this->retrieveRange($sql, $paramArray, $rangeInfo);
+		return new DAOResultFactory($result, $this, '_returnBookForReviewFromRow');
 	}
 
 	/**
@@ -499,11 +495,11 @@ class BookForReviewDAO extends DAO {
 	 * @param $articleId int
 	 * @return BookForReview
 	 */
-	function &getSubmittedBookForReviewByArticle($journalId, $articleId) {
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+	function getSubmittedBookForReviewByArticle($journalId, $articleId) {
+		$bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT *
 			FROM books_for_review
 			WHERE submission_id = ?
@@ -531,10 +527,10 @@ class BookForReviewDAO extends DAO {
 	 * @return int
 	 */
 	function getSubmittedBookForReviewIdByArticle($journalId, $articleId) {
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT book_id 
 				FROM books_for_review 
 				WHERE submission_id = ?
@@ -550,8 +546,6 @@ class BookForReviewDAO extends DAO {
 		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? $result->fields[0] : null;
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -563,7 +557,7 @@ class BookForReviewDAO extends DAO {
 	 * @return int 
 	 */
 	function getBooksForReviewStatusCount($journalId, $status = null, $userId = null) {
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+		$bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 
 		$sql = 'SELECT COUNT(*)
@@ -581,7 +575,7 @@ class BookForReviewDAO extends DAO {
 			$paramArray[] = (int) $userId;
 		}
 
-		$result =& $this->retrieve($sql, $paramArray);
+		$result = $this->retrieve($sql, $paramArray);
 		return isset($result->fields[0]) ? $result->fields[0] : 0;	
 	}
 
@@ -591,8 +585,8 @@ class BookForReviewDAO extends DAO {
 	 * @param $userId int, book review user to match
 	 * @return array, status as index 
 	 */
-	function &getStatusCounts($journalId, $userId = null) {
-		$bfrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+	function getStatusCounts($journalId, $userId = null) {
+		$bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$bfrPlugin->import('classes.BookForReview');
 		$counts = array();
 
@@ -610,7 +604,7 @@ class BookForReviewDAO extends DAO {
 	 * @param $bookId int
 	 */
 	function removeCoverPage($bookId, $locale) {
-		$book =& $this->getBookForReview($bookId);
+		$book = $this->getBookForReview($bookId);
 
 		if ($book) {
 			// Delete cover image file from the filesystem and settings

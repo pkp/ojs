@@ -20,7 +20,7 @@ class ReferralDAO extends DAO {
 	 * @return Referral
 	 */
 	function &getReferral($referralId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM referrals WHERE referral_id = ?', $referralId
 		);
 
@@ -66,7 +66,7 @@ class ReferralDAO extends DAO {
 	 * @return boolean
 	 */
 	function referralExistsByUrl($articleId, $url) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	COUNT(*)
 			FROM	referrals
 			WHERE	submission_id = ? AND
@@ -79,8 +79,6 @@ class ReferralDAO extends DAO {
 		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -213,7 +211,7 @@ class ReferralDAO extends DAO {
 	 * @return object DAOResultFactory containing matching Referrals
 	 */
 	function &getPublishedReferralsForArticle($articleId, $rangeInfo = null) {
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			'SELECT	r.*
 			FROM	referrals r
 			WHERE	r.submission_id = ? AND

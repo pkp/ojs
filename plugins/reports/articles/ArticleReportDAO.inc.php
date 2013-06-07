@@ -12,7 +12,6 @@
  * @brief Article report DAO
  */
 
-import('classes.submission.common.Action');
 import('lib.pkp.classes.db.DBRowIterator');
 
 class ArticleReportDAO extends DAO {
@@ -25,7 +24,7 @@ class ArticleReportDAO extends DAO {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	a.submission_id AS submission_id,
 				COALESCE(asl1.setting_value, aspl1.setting_value) AS title,
 				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
@@ -58,7 +57,7 @@ class ArticleReportDAO extends DAO {
 		);
 		$articlesReturner = new DBRowIterator($result);
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	MAX(d.date_decided) AS date_decided,
 				d.submission_id AS submission_id
 			FROM	edit_decisions d,

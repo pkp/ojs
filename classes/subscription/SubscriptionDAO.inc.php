@@ -39,15 +39,13 @@ class SubscriptionDAO extends DAO {
 	 * @return int
 	 */
 	function getSubscriptionJournalId($subscriptionId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT journal_id FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
 
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 

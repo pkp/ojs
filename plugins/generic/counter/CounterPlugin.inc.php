@@ -159,10 +159,6 @@ class CounterPlugin extends GenericPlugin {
 			$this->import('CounterReportDAO');
 			$counterReportDao = new CounterReportDAO();
 			DAORegistry::registerDAO('CounterReportDAO', $counterReportDao);
-			$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
-			if (file_exists($counterReportDao->getOldLogFilename())) {
-				$verbs[] = array('migrate', __('plugins.generic.counter.migrate'));
-			}
 		}
 		return $verbs;
 	}
@@ -174,11 +170,6 @@ class CounterPlugin extends GenericPlugin {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 		$request =& $this->getRequest();
 		switch ($verb) {
-			case 'migrate':
-				$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
-				$counterReportDao->upgradeFromLogFile();
-				$request->redirect('index', 'counter');
-				return false;
 			case 'counter':
 				$request->redirect(null, 'counter');
 				return false;

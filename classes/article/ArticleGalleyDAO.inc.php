@@ -45,7 +45,7 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalley($galleyId, $articleId = null) {
 		$params = array((int) $galleyId);
 		if ($articleId !== null) $params[] = (int) $articleId;
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	g.*
 			FROM	submission_galleys g
 			WHERE	g.galley_id = ?' .
@@ -61,8 +61,6 @@ class ArticleGalleyDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -78,7 +76,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return boolean
 	 */
 	function pubIdExists($pubIdType, $pubId, $galleyId, $journalId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT COUNT(*)
 			FROM article_galley_settings ags
 				INNER JOIN submission_galleys ag ON ags.galley_id = ag.galley_id
@@ -125,7 +123,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $journalId int optional
 	 * @return DAOResultFactory The factory for galleys identified by setting.
 	 */
-	function &getGalleysBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
+	function getGalleysBySetting($settingName, $settingValue, $articleId = null, $journalId = null) {
 		$params = array($settingName);
 
 		$sql = 'SELECT	g.*
@@ -149,11 +147,9 @@ class ArticleGalleyDAO extends DAO {
 			$sql .= ' AND a.context_id = ?';
 		}
 		$sql .= ' ORDER BY a.context_id, pa.issue_id, g.galley_id';
-		$result =& $this->retrieve($sql, $params);
+		$result = $this->retrieve($sql, $params);
 
-
-		$returner = new DAOResultFactory($result, $this, '_returnGalleyFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnGalleyFromRow');
 	}
 
 	/**
@@ -161,10 +157,10 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 * @return array ArticleGalleys
 	 */
-	function &getGalleysByArticle($articleId) {
+	function getGalleysByArticle($articleId) {
 		$galleys = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT g.*
 			FROM submission_galleys g
 			WHERE g.submission_id = ? ORDER BY g.seq',
@@ -177,8 +173,6 @@ class ArticleGalleyDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		HookRegistry::call('ArticleGalleyDAO::getArticleGalleys', array(&$galleys, &$articleId)); // FIXME: XMLGalleyPlugin uses this; should convert to DAO auto call
 
 		return $galleys;
@@ -189,18 +183,17 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 * @return array ArticleGalleys
 	 */
-	function &getById($articleId) {
+	function getByArticleId($articleId) {
 		$galleys = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 				'SELECT g.*
 				FROM submission_galleys g
 				WHERE g.submission_id = ? ORDER BY g.seq',
 				(int) $articleId
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnGalleyFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnGalleyFromRow');
 	}
 
 	/**
@@ -208,8 +201,8 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $journalId int
 	 * @return DAOResultFactory
 	 */
-	function &getGalleysByJournalId($journalId) {
-		$result =& $this->retrieve(
+	function getGalleysByJournalId($journalId) {
+		$result = $this->retrieve(
 			'SELECT
 				g.*
 			FROM submission_galleys g
@@ -218,8 +211,7 @@ class ArticleGalleyDAO extends DAO {
 			(int) $journalId
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnGalleyFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnGalleyFromRow');
 	}
 
 	/**
@@ -416,7 +408,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return boolean
 	 */
 	function galleyExistsByFileId($articleId, $fileId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT COUNT(*) FROM submission_galleys
 			WHERE submission_id = ? AND file_id = ?',
 			array((int) $articleId, (int) $fileId)
@@ -425,8 +417,6 @@ class ArticleGalleyDAO extends DAO {
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -448,7 +438,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function resequenceGalleys($articleId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT galley_id FROM submission_galleys WHERE submission_id = ? ORDER BY seq',
 			(int) $articleId
 		);
@@ -470,15 +460,13 @@ class ArticleGalleyDAO extends DAO {
 	 * @return int
 	 */
 	function getNextGalleySequence($articleId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT MAX(seq) + 1 FROM submission_galleys WHERE submission_id = ?',
 			(int) $articleId
 		);
 		$returner = floor($result->fields[0]);
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -503,7 +491,7 @@ class ArticleGalleyDAO extends DAO {
 	function &getGalleyImages($galleyId) {
 		$images = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT a.* FROM submission_galley_html_images i, article_files a
 			WHERE i.file_id = a.file_id AND i.galley_id = ?',
 			(int) $galleyId
@@ -515,8 +503,6 @@ class ArticleGalleyDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $images;
 	}
 

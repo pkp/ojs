@@ -58,13 +58,6 @@ class UserAction {
 			$noteDao->updateObject($note);
 		}
 
-		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignments = $editAssignmentDao->getEditAssignmentsByUserId($oldUserId);
-		while ($editAssignment = $editAssignments->next()) {
-			$editAssignment->setEditorId($newUserId);
-			$editAssignmentDao->updateEditAssignment($editAssignment);
-		}
-
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		$editDecisionDao->transferEditorDecisions($oldUserId, $newUserId);
 

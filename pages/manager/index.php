@@ -85,16 +85,6 @@ switch ($op) {
 		import('pages.manager.ImportExportHandler');
 		break;
 	//
-	// Statistics Functions
-	//
-	case 'statistics':
-	case 'saveStatisticsSettings':
-	case 'savePublicStatisticsList':
-	case 'report':
-		define('HANDLER_CLASS', 'StatisticsHandler');
-		import('pages.manager.StatisticsHandler');
-		break;
-	//
 	// Payment
 	//
 	case 'payments':

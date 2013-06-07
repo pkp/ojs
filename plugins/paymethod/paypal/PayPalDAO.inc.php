@@ -70,7 +70,7 @@ class PayPalDAO extends DAO {
 	 * @return boolean
 	 */
 	function transactionExists($txnId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	count(*) FROM paypal_transactions WHERE txn_id = ?',
 			array($txnId)
 		);

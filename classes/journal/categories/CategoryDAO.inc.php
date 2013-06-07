@@ -63,7 +63,6 @@ class CategoryDAO extends ControlledVocabDAO {
 				);
 				$categories[$categoryId]['journals'][] = $journal;
 			}
-			unset($journal);
 		}
 
 		// Save the cache file

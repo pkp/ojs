@@ -45,7 +45,7 @@ class AuthorDAO extends PKPAuthorDAO {
 		);
 		if ($journalId !== null) $params[] = (int) $journalId;
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT DISTINCT
 				aa.submission_id
 			FROM	authors aa
@@ -71,8 +71,6 @@ class AuthorDAO extends PKPAuthorDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $publishedArticles;
 	}
 
@@ -103,7 +101,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			$initialSql = '';
 		}
 
-		$result =& $this->retrieveRange(
+		$result = $this->retrieveRange(
 			'SELECT DISTINCT
 				CAST(\'\' AS CHAR) AS url,
 				0 AS author_id,

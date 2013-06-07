@@ -30,8 +30,8 @@ class BookForReviewAuthorDAO extends DAO {
 	 * @param $authorId int
 	 * @return BookForReviewAuthor
 	 */
-	function &getAuthor($authorId) {
-		$result =& $this->retrieve(
+	function getAuthor($authorId) {
+		$result = $this->retrieve(
 			'SELECT * FROM books_for_review_authors WHERE author_id = ?', $authorId
 		);
 
@@ -41,8 +41,6 @@ class BookForReviewAuthorDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -51,10 +49,10 @@ class BookForReviewAuthorDAO extends DAO {
 	 * @param $bookId int
 	 * @return array BookForReviewAuthors ordered by sequence
 	 */
-	function &getAuthorsByBookForReview($bookId) {
+	function getAuthorsByBookForReview($bookId) {
 		$authors = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM books_for_review_authors WHERE book_id = ? ORDER BY seq',
 			$bookId
 		);
@@ -65,8 +63,6 @@ class BookForReviewAuthorDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $authors;
 	}
 
@@ -75,12 +71,12 @@ class BookForReviewAuthorDAO extends DAO {
 	 * @param $bookId int
 	 * @return array int ordered by sequence
 	 */
-	function &getAuthorIdsByBookForReview($bookId) {
+	function getAuthorIdsByBookForReview($bookId) {
 		$authors = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT author_id FROM books_for_review_authors WHERE book_id = ? ORDER BY seq',
-			$articleId
+			(int) $articleId
 		);
 
 		while (!$result->EOF) {
@@ -89,8 +85,6 @@ class BookForReviewAuthorDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $authors;
 	}
 
@@ -202,7 +196,7 @@ class BookForReviewAuthorDAO extends DAO {
 	 * @param $bookId int
 	 */
 	function resequenceAuthors($bookId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT author_id FROM books_for_review_authors WHERE book_id = ? ORDER BY seq', $bookId
 		);
 

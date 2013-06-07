@@ -32,7 +32,7 @@ class ExternalFeedDAO extends DAO {
 	 * @return ExternalFeed
 	 */
 	function &getExternalFeed($feedId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM external_feeds WHERE feed_id = ?', $feedId
 		);
 
@@ -50,7 +50,7 @@ class ExternalFeedDAO extends DAO {
 	 * @return int
 	 */
 	function getExternalFeedJournalId($feedId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT journal_id FROM external_feeds WHERE feed_id = ?', $feedId
 		);
 
@@ -212,22 +212,21 @@ class ExternalFeedDAO extends DAO {
 	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching ExternalFeeds 
 	 */
-	function &getExternalFeedsByJournalId($journalId, $rangeInfo = null) {
-		$result =& $this->retrieveRange(
+	function getExternalFeedsByJournalId($journalId, $rangeInfo = null) {
+		$result = $this->retrieveRange(
 			'SELECT * FROM external_feeds WHERE journal_id = ? ORDER BY seq ASC',
 			$journalId,
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnExternalFeedFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnExternalFeedFromRow');
 	}
 
 	/**
 	 * Sequentially renumber external feeds in their sequence order.
 	 */
 	function resequenceExternalFeeds($journalId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT feed_id FROM external_feeds WHERE journal_id = ? ORDER BY seq',
 			$journalId
 		);

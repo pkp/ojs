@@ -286,64 +286,7 @@ class IssueGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function issueToc($args, $request) {
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue->getId();
-
 		$templateMgr = TemplateManager::getManager($request);
-
-		$journal = $request->getJournal();
-		$templateMgr->assign('enablePublicArticleId', $journal->getSetting('enablePublicArticleId'));
-		$templateMgr->assign('enablePageNumber', $journal->getSetting('enablePageNumber'));
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$templateMgr->assign('customSectionOrderingExists', $customSectionOrderingExists = $sectionDao->customSectionOrderingExists($issueId));
-
-		$templateMgr->assign('issueId', $issueId);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('unpublished', !$issue->getPublished());
-		$templateMgr->assign('issueAccess', $issue->getAccessStatus());
-
-		// get issue sections and articles
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
-
-		$layoutEditorSubmissionDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-		$proofedArticleIds = $layoutEditorSubmissionDao->getProofedArticlesByIssueId($issueId);
-		$templateMgr->assign('proofedArticleIds', $proofedArticleIds);
-
-		$currSection = 0;
-		$counter = 0;
-		$sections = array();
-		$sectionCount = 0;
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		foreach ($publishedArticles as $article) {
-			$sectionId = $article->getSectionId();
-			if ($currSection != $sectionId) {
-				$lastSectionId = $currSection;
-				$sectionCount++;
-				if ($lastSectionId !== 0) $sections[$lastSectionId][5] = $customSectionOrderingExists?$sectionDao->getCustomSectionOrder($issueId, $sectionId):$sectionCount; // Store next custom order
-				$currSection = $sectionId;
-				$counter++;
-				$sections[$sectionId] = array(
-					$sectionId,
-					$article->getSectionTitle(),
-					array($article),
-					$counter,
-					$customSectionOrderingExists?
-						$sectionDao->getCustomSectionOrder($issueId, $lastSectionId): // Last section custom ordering
-						($sectionCount-1),
-					null // Later populated with next section ordering
-				);
-			} else {
-				$sections[$article->getSectionId()][2][] = $article;
-			}
-		}
-		$templateMgr->assign_by_ref('sections', $sections);
-
-		$templateMgr->assign('accessOptions', array(
-			ARTICLE_ACCESS_ISSUE_DEFAULT => AppLocale::Translate('editor.issues.default'),
-			ARTICLE_ACCESS_OPEN => AppLocale::Translate('editor.issues.open')
-		));
-
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
 		return $json->getString();
 	}

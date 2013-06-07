@@ -53,7 +53,7 @@ class OpenAIREDAO extends OAIDAO {
 		if (isset($journalId)) {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	pa.published_submission_id,
 					pa.date_published,
 					pa.seq,
@@ -90,8 +90,6 @@ class OpenAIREDAO extends OAIDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $records;
 	}
 
@@ -112,7 +110,7 @@ class OpenAIREDAO extends OAIDAO {
 		if (isset($journalId)) {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	pa.published_submission_id,
 					pa.date_published,
 					pa.seq,
@@ -149,8 +147,6 @@ class OpenAIREDAO extends OAIDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $records;
 	}
 
@@ -168,8 +164,6 @@ class OpenAIREDAO extends OAIDAO {
 			);
 			$returner = (isset($result->fields[0]) && $result->fields[0] == 1) ? true : false;
 			$result->Close();
-			unset($result);
-
 			return $returner;
 		} else {
 			$submissionTombstoneSettingsDao = DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
@@ -184,18 +178,14 @@ class OpenAIREDAO extends OAIDAO {
 	 */
 	function isOpenAIREArticle($articleId) {
 		$params = array('projectID', (int) $articleId);
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT COUNT(*) FROM submission_settings WHERE setting_name = ? AND setting_value IS NOT NULL AND setting_value <> \'\' AND submission_id = ?',
 			$params
 		);
 		$returner = (isset($result->fields[0]) && $result->fields[0] == 1) ? true : false;
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
-
-
 }
 
 ?>

@@ -54,7 +54,7 @@ class DRIVERDAO extends OAIDAO {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	COALESCE(st.date_deleted, a.last_modified) AS last_modified,
 					COALESCE(a.submission_id, st.submission_id) AS submission_id,
 					COALESCE(j.journal_id, st.journal_id) AS journal_id,
@@ -87,12 +87,9 @@ class DRIVERDAO extends OAIDAO {
 				$records[] = $record;
 			}
 			$result->MoveNext();
-			unset($record, $row);
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $records;
 	}
 
@@ -114,7 +111,7 @@ class DRIVERDAO extends OAIDAO {
 			array_push($params, (int) $journalId, (int) $journalId);
 		}
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	COALESCE(st.date_deleted, a.last_modified) AS last_modified,
 					COALESCE(a.submission_id, st.submission_id) AS submission_id,
 					COALESCE(j.journal_id, st.journal_id) AS journal_id,
@@ -150,11 +147,8 @@ class DRIVERDAO extends OAIDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $records;
 	}
-
 }
 
 ?>

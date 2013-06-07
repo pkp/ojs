@@ -37,13 +37,12 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	 * @return int
 	 */
 	function _getSubmissionReviewFileId($submissionId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT review_file_id FROM submissions WHERE submission_id = ?',
 			(int) $submissionId
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : null;
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -55,7 +54,7 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	function &getReviewFilesByRound($articleId) {
 		$returner = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	f.*, r.round as round
 			FROM	review_rounds r,
 				article_files f,
@@ -75,8 +74,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -88,7 +85,7 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	function &getAuthorViewableFilesByRound($articleId) {
 		$files = array();
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	f.*, r.reviewer_id, r.review_id
 			FROM	review_assignments r,
 				article_files f
@@ -116,8 +113,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $files;
 	}
 
@@ -127,7 +122,7 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	 */
 	function getAverageQualityRatings($journalId) {
 		$averageQualityRatings = Array();
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	r.reviewer_id, AVG(r.quality) AS average, COUNT(r.quality) AS count
 			FROM	review_assignments r, submissions a
 			WHERE	r.submission_id = a.submission_id AND
@@ -143,8 +138,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $averageQualityRatings;
 	}
 
@@ -153,8 +146,8 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	 * @return array
 	 */
 	function getCompletedReviewCounts($journalId) {
-		$returner = Array();
-		$result =& $this->retrieve(
+		$returner = array();
+		$result = $this->retrieve(
 			'SELECT	r.reviewer_id, COUNT(r.review_id) AS count
 			FROM	review_assignments r,
 				submissions a
@@ -173,8 +166,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 

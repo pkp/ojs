@@ -293,7 +293,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function loadData($request, $filter) {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		return $articleGalleyDao->getById($submission->getId());
+		return $articleGalleyDao->getByArticleId($submission->getId());
 	}
 }
 

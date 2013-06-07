@@ -71,7 +71,7 @@ class PluginSettingsDAO extends DAO {
 		// Normalize plug-in name to lower case.
 		$pluginName = strtolower_codesafe($pluginName);
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT setting_name, setting_value, setting_type FROM plugin_settings WHERE plugin_name = ? AND journal_id = ?', array($pluginName, $journalId)
 		);
 
@@ -82,10 +82,9 @@ class PluginSettingsDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 
 		// Update the cache.
-		$cache =& $this->_getCache($journalId, $pluginName);
+		$cache = $this->_getCache($journalId, $pluginName);
 		$cache->setEntireCache($pluginSettings);
 
 		return $pluginSettings;
@@ -131,8 +130,6 @@ class PluginSettingsDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 

@@ -12,9 +12,6 @@
  * @brief Timed view report DAO
  */
 
-
-import('classes.submission.common.Action');
-
 class TimedViewReportDAO extends DAO {
 	/**
 	 * Get the abstract view count for each article in a journal.
@@ -25,7 +22,7 @@ class TimedViewReportDAO extends DAO {
 	 */
 	function getAbstractViewCount($journalId, $startDate = null, $endDate = null) {
 		if ($startDate && $endDate) {
-			$result =& $this->retrieve(
+			$result = $this->retrieve(
 				sprintf('SELECT tvl.submission_id, COUNT(tvl.submission_id) AS total_abstract_views
 						FROM timed_views_log tvl
 						WHERE tvl.galley_id IS NULL
@@ -38,7 +35,7 @@ class TimedViewReportDAO extends DAO {
 						array((int) $journalId)
 				);
 		} else {
-			$result =& $this->retrieve(
+			$result = $this->retrieve(
 				'SELECT tvl.submission_id, COUNT(tvl.submission_id) AS total_abstract_views
 						FROM timed_views_log tvl
 						WHERE tvl.galley_id IS NULL
@@ -47,10 +44,7 @@ class TimedViewReportDAO extends DAO {
 				array((int) $journalId)
 			);
 		}
-		$abstractViewCount = new DBRowIterator($result);
-		unset($result);
-
-		return $abstractViewCount;
+		return new DBRowIterator($result);
 	}
 
 	/**
@@ -62,7 +56,7 @@ class TimedViewReportDAO extends DAO {
 	 */
 	function getGalleyViewCountsForArticle($articleId, $startDate = null, $endDate = null) {
 		if ($startDate && $endDate) {
-			$result =& $this->retrieve(
+			$result = $this->retrieve(
 				sprintf('SELECT tvl.submission_id, tvl.galley_id, COUNT(tvl.galley_id) AS total_galley_views, ag.label
 						FROM timed_views_log tvl
 						LEFT JOIN submission_galleys ag ON (tvl.galley_id = ag.galley_id)
@@ -76,7 +70,7 @@ class TimedViewReportDAO extends DAO {
 						array((int) $articleId)
 				);
 		} else {
-			$result =& $this->retrieve(
+			$result = $this->retrieve(
 				'SELECT tvl.submission_id, tvl.galley_id, COUNT(tvl.galley_id) AS total_galley_views, ag.label
 						FROM timed_views_log tvl
 						LEFT JOIN submission_galleys ag ON (tvl.galley_id = ag.galley_id)
@@ -86,10 +80,7 @@ class TimedViewReportDAO extends DAO {
 				array((int) $articleId)
 			);
 		}
-		$abstractViewCount = new DBRowIterator($result);
-		unset($result);
-
-		return $abstractViewCount;
+		return new DBRowIterator($result);
 	}
 
 	/**

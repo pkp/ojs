@@ -19,7 +19,7 @@ class CounterReportDAO extends DAO {
 	 * @return array
 	 */
 	function getYears() {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT DISTINCT year FROM counter_monthly_log'
 		);
 		$years = array();
@@ -37,7 +37,7 @@ class CounterReportDAO extends DAO {
 	 * @return array
 	 */
 	function getJournalIds() {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT DISTINCT journal_id FROM counter_monthly_log l'
 		);
 		$journalIds = array();
@@ -64,7 +64,7 @@ class CounterReportDAO extends DAO {
 		$beginComb 	= $begin['year'] * 100 + $begin['mon'];
 		$endComb 	= $end['year'] * 100 + $end['mon'];
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM counter_monthly_log
 			WHERE journal_id = ? AND year * 100 + month >= ? AND year * 100 + month <= ?',
 			array((int) $journalId, (int) $beginComb, (int) $endComb)
@@ -76,8 +76,6 @@ class CounterReportDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -93,7 +91,7 @@ class CounterReportDAO extends DAO {
 		$beginComb 	= $begin['year'] * 100 + $begin['mon'];
 		$endComb 	= $end['year'] * 100 + $end['mon'];
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT month, SUM(count_html) as count_html, SUM(count_pdf) as count_pdf FROM counter_monthly_log
 			WHERE year * 100 + month >= ? AND year * 100 + month <= ?
 			GROUP BY month',
@@ -106,8 +104,6 @@ class CounterReportDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 
@@ -116,7 +112,7 @@ class CounterReportDAO extends DAO {
 	 * Internal function to create the monthly record
 	 */
 	function _conditionalCreate($journalId, $year, $month) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM counter_monthly_log WHERE journal_id = ? AND year = ? AND month = ?',
 			array((int) $journalId, (int) $year, (int) $month)
 		);
@@ -130,7 +126,6 @@ class CounterReportDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
 	}
 
 
@@ -157,45 +152,6 @@ class CounterReportDAO extends DAO {
 			array((int) $journalId, (int) $year, (int) $month)
 		);
 
-		return true;
-	}
-
-	function getOldLogFilename() {
-		return dirname(__FILE__) . '/log.txt';
-	}
-
-	function upgradeFromLogFile() {
-		$file = $this->getOldLogFilename();
-		if (!file_exists($file)) return true;
-
-		$fp = fopen($file, 'r');
-		if (!$fp) return true;
-
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals();
-		$journalUrlMap = array();
-		while ($journal = $journals->next()) {
-			$journalUrlMap[Request::url($journal->getPath(), 'index')] = $journal->getId();
-		}
-		unset($journals);
-
-		while ($data = fgets($fp, 4096)) {
-			$fragments = explode("\t", trim($data));
-			if (sizeof($fragments) < 10) continue;
-			list($stamp, $user, $site, $journal, $publisher, $printIssn, $onlineIssn, $type, $value, $journalUrl) = $fragments;
-
-			if (!isset($journalUrlMap[$journalUrl])) continue; // Unable to match
-			if ($type == 'search') continue; // Unused log entry
-
-			$journalId = $journalUrlMap[$journalUrl];
-			$stamp = strtotime($stamp);
-			$year = strftime('%Y', $stamp);
-			$month = strftime('%m', $stamp);
-
-			$this->incrementCount($journalId, $year, $month, $type == 'pdf', $type == 'html');
-		}
-
-		fclose ($fp);
 		return true;
 	}
 }

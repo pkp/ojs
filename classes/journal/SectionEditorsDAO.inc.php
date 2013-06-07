@@ -65,7 +65,7 @@ class SectionEditorsDAO extends DAO {
 
 		$userDao = DAORegistry::getDAO('UserDAO');
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT u.*, e.can_review AS can_review, e.can_edit AS can_edit FROM users AS u, section_editors AS e WHERE u.user_id = e.user_id AND e.journal_id = ? AND e.section_id = ? ORDER BY last_name, first_name',
 			array($journalId, $sectionId)
 		);
@@ -81,8 +81,6 @@ class SectionEditorsDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $users;
 	}
 
@@ -97,7 +95,7 @@ class SectionEditorsDAO extends DAO {
 
 		$userDao = DAORegistry::getDAO('UserDAO');
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	u.*
 			FROM	users u
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
@@ -115,8 +113,6 @@ class SectionEditorsDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
-
 		return $users;
 	}
 
@@ -169,14 +165,12 @@ class SectionEditorsDAO extends DAO {
 	 * @return boolean
 	 */
 	function editorExists($journalId, $sectionId, $userId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT COUNT(*) FROM section_editors WHERE journal_id = ? AND section_id = ? AND user_id = ?', array($journalId, $sectionId, $userId)
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 
 		$result->Close();
-		unset($result);
-
 		return $returner;
 	}
 }

@@ -50,7 +50,7 @@ class ArticleMailTemplate extends SubmissionMailTemplate {
 	 *  CC this email to all assigned section editors in the given stage
 	 * @param $articleId int
 	 * @param $stageId int
-	 * @return array of Users (note, this differs from OxS which returns EditAssignment objects)
+	 * @return array of Users
 	 */
 	function ccAssignedSectionEditors($articleId, $stageId) {
 		return $this->ccAssignedSubEditors($articleId, $stageId);

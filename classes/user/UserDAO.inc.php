@@ -45,7 +45,7 @@ class UserDAO extends PKPUserDAO {
 	 * @return array matching Users
 	 */
 
-	function &getJournalUsersByField($field = USER_FIELD_NONE, $match = null, $value = null, $allowDisabled = true, $journalId = null, $dbResultRange = null) {
+	function getJournalUsersByField($field = USER_FIELD_NONE, $match = null, $value = null, $allowDisabled = true, $journalId = null, $dbResultRange = null) {
 		$sql = 'SELECT * FROM users u WHERE 1=1';
 		if ($journalId) $sql = 'SELECT u.* FROM users u LEFT JOIN roles r ON u.user_id=r.user_id WHERE (r.journal_id='.$journalId.' or r.role_id IS NULL)';
 
@@ -84,12 +84,11 @@ class UserDAO extends PKPUserDAO {
 		$orderSql = ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
 
 		if ($field != USER_FIELD_NONE)
-			$result =& $this->retrieveRange($sql . ($allowDisabled?'':' AND u.disabled = 0') . $groupSql . $orderSql, $var, $dbResultRange);
+			$result = $this->retrieveRange($sql . ($allowDisabled?'':' AND u.disabled = 0') . $groupSql . $orderSql, $var, $dbResultRange);
 		else
-			$result =& $this->retrieveRange($sql . ($allowDisabled?'':' AND u.disabled = 0') . $groupSql . $orderSql, false, $dbResultRange);
+			$result = $this->retrieveRange($sql . ($allowDisabled?'':' AND u.disabled = 0') . $groupSql . $orderSql, false, $dbResultRange);
 
-		$returner = new DAOResultFactory($result, $this, '_returnUserFromRowWithData');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnUserFromRowWithData');
 	}
 }
 

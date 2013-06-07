@@ -40,7 +40,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		if ($articleId) $params[] = (int) $articleId;
 
 		// get derived galley from DB
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT	x.*,
 				x.galley_type AS file_type,
 				g.file_id,
@@ -83,13 +83,13 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		// we have to use this crazy loop because PHP4 can't access objects by reference in foreach()
 		reset($galleys);
 		while (list($key) = each($galleys)) {
-			$galley =& $galleys[$key];
+			$galley = $galleys[$key];
 
 			// if the galley is an XML galley, append XML-derived galleys
 			if ($galley->getFileType() == "text/xml" || $galley->getFileType() == "application/xml") {
 
 				// get derived galleys from DB for this article
-				$result =& $this->retrieve(
+				$result = $this->retrieve(
 					'SELECT	galley_id
 					FROM	submission_xml_galleys x
 					WHERE	x.galley_id = ? AND
@@ -121,7 +121,6 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 // WARNING: See bug #5152 and note below.
 //				if (isset($xmlGalley)) unset($galleys[$key]);
 			}
-			unset($galley);
 		}
 
 		return true;

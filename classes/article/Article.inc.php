@@ -227,67 +227,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get an array of user IDs associated with this article
-	 * @param $authors boolean
-	 * @param $reviewers boolean
-	 * @param $editors boolean
-	 * @param $proofreader boolean
-	 * @param $copyeditor boolean
-	 * @param $layoutEditor boolean
-	 * @return array User IDs
-	 */
-	function getAssociatedUserIds($authors = true, $reviewers = true, $editors = true, $proofreader = true, $copyeditor = true, $layoutEditor = true) {
-		$articleId = $this->getId();
-		$signoffDao = DAORegistry::getDAO('SignoffDAO');
-
-		$userIds = array();
-
-		if($authors) {
-			$userId = $this->getUserId();
-			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'author');
-		}
-
-		if($editors) {
-			$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO');
-			$editAssignments =& $editAssignmentDao->getEditorAssignmentsByArticleId($articleId);
-			while ($editAssignment = $editAssignments->next()) {
-				$userId = $editAssignment->getEditorId();
-				if ($userId) $userIds[] = array('id' => $userId, 'role' => 'editor');
-			}
-		}
-
-		if($copyeditor) {
-			$copyedSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
-			$userId = $copyedSignoff->getUserId();
-			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'copyeditor');
-		}
-
-		if($layoutEditor) {
-			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-			$userId = $layoutSignoff->getUserId();
-			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'layoutEditor');
-		}
-
-		if($proofreader) {
-			$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
-			$userId = $proofSignoff->getUserId();
-			if ($userId) $userIds[] = array('id' => $userId, 'role' => 'proofreader');
-		}
-
-		if($reviewers) {
-			$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-			$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($articleId);
-			foreach ($reviewAssignments as $reviewAssignment) {
-				$userId = $reviewAssignment->getReviewerId();
-				if ($userId) $userIds[] = array('id' => $userId, 'role' => 'reviewer');
-				unset($reviewAssignment);
-			}
-		}
-
-		return $userIds;
-	}
-
-	/**
 	 * Get the signoff for this article
 	 * @param $signoffType string
 	 * @return Signoff

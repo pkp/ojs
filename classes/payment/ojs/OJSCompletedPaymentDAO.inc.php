@@ -23,11 +23,11 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $journalId int optional
 	 * @return CompletedPayment
 	 */
-	function &getCompletedPayment($completedPaymentId, $journalId = null) {
+	function getCompletedPayment($completedPaymentId, $journalId = null) {
 		$params = array((int) $completedPaymentId);
 		if ($journalId) $params[] = (int) $journalId;
 
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM completed_payments WHERE completed_payment_id = ?' . ($journalId?' AND journal_id = ?':''),
 			$params
 		);
@@ -38,7 +38,6 @@ class OJSCompletedPaymentDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -81,7 +80,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function hasPaidPurchaseArticle ($userId, $articleId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
 			array(
 				PAYMENT_TYPE_PURCHASE_ARTICLE,
@@ -105,7 +104,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param int $issueId
 	 */
 	function hasPaidPurchaseIssue ($userId, $issueId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
 			array(
 				PAYMENT_TYPE_PURCHASE_ISSUE,
@@ -130,7 +129,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return bool
 	 */
 	function hasPaidSubmission ( $journalId, $articleId ) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?',
 			array(
 				(int) PAYMENT_TYPE_SUBMISSION,
@@ -155,7 +154,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return CompletedPayment
 	 */
 	function &getSubmissionCompletedPayment ($journalId, $articleId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?',
 			array(
 				(int) PAYMENT_TYPE_SUBMISSION,
@@ -170,7 +169,6 @@ class OJSCompletedPaymentDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -181,7 +179,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return bool
 	 */
 	function hasPaidFastTrack ( $journalId, $articleId ) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?',
 			array(
 				(int) PAYMENT_TYPE_FASTTRACK,
@@ -205,7 +203,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return CompletedPayment
 	 */
 	function getFastTrackCompletedPayment ($journalId, $articleId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?',
 			array(
 				(int) PAYMENT_TYPE_FASTTRACK,
@@ -220,7 +218,6 @@ class OJSCompletedPaymentDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -230,7 +227,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param int $articleId
 	 */
 	function hasPaidPublication ($journalId, $articleId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?',
 			array(
 				(int) PAYMENT_TYPE_PUBLICATION,
@@ -251,7 +248,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return CompletedPayment
 	 */
 	function getPublicationCompletedPayment ($journalId, $articleId) {
-		$result =& $this->retrieve(
+		$result = $this->retrieve(
 			'SELECT * FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?',
 			array(
 				(int) PAYMENT_TYPE_PUBLICATION,
@@ -266,7 +263,6 @@ class OJSCompletedPaymentDAO extends DAO {
 		}
 
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -275,15 +271,14 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $journalId int
 	 * @return object DAOResultFactory containing matching payments
 	 */
-	function &getPaymentsByJournalId($journalId, $rangeInfo = null) {
-		$result =& $this->retrieveRange(
+	function getPaymentsByJournalId($journalId, $rangeInfo = null) {
+		$result = $this->retrieveRange(
 			'SELECT * FROM completed_payments WHERE journal_id = ? ORDER BY timestamp DESC',
 			(int) $journalId,
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnPaymentFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnPaymentFromRow');
 	}
 
 	/**
