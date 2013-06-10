@@ -9,7 +9,7 @@
  * @class StatisticsHandler
  * @ingroup pages_manager
  *
- * @brief Handle requests for statistics functions. 
+ * @brief Handle requests for statistics functions.
  */
 
 import('pages.manager.ManagerHandler');
@@ -83,12 +83,15 @@ class StatisticsHandler extends ManagerHandler {
 		$reportPlugins =& PluginRegistry::loadCategory('reports');
 		$templateMgr->assign_by_ref('reportPlugins', $reportPlugins);
 
+		$templateMgr->assign('defaultMetricType', $journal->getSetting('defaultMetricType'));
+		$templateMgr->assign('availableMetricTypes', $journal->getMetricTypes(true));
+
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.statsAndReports');
 
 		$templateMgr->display('manager/statistics/index.tpl');
 	}
 
-	function saveStatisticsSections() {
+	function saveStatisticsSettings() {
 		// The manager wants to save the list of sections used to
 		// generate statistics.
 
@@ -101,8 +104,11 @@ class StatisticsHandler extends ManagerHandler {
 			if (empty($sectionIds)) $sectionIds = array();
 			else $sectionIds = array($sectionIds);
 		}
-
 		$journal->updateSetting('statisticsSectionIds', $sectionIds);
+
+		$defaultMetricType = Request::getUserVar('defaultMetricType');
+		$journal->updateSetting('defaultMetricType', $defaultMetricType);
+
 		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
 	}
 

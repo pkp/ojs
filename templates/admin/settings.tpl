@@ -142,12 +142,32 @@
 
 <br />
 <div id="oaiRegistration">
-<h4>{translate key="admin.settings.oaiRegistration"}</h4>
-
-{url|assign:"oaiUrl" page="oai"}
-{url|assign:"siteUrl" page="index"}
-<p>{translate key="admin.settings.oaiRegistrationDescription" siteUrl=$siteUrl oaiUrl=$oaiUrl}</p>
+	<h4>{translate key="admin.settings.oaiRegistration"}</h4>
+	
+	{url|assign:"oaiUrl" page="oai"}
+	{url|assign:"siteUrl" page="index"}
+	<p>{translate key="admin.settings.oaiRegistrationDescription" siteUrl=$siteUrl oaiUrl=$oaiUrl}</p>
 </div>
+
+{if count($availableMetricTypes) > 2}
+	<br />
+	<div id="defaultMetricSelection">
+		<h4>{translate key="defaultMetric.title"}</h4>
+		<p>{translate key="admin.settings.defaultMetricDescription"}</p>
+		<table class="data" width="100%">
+			<tr valign="top">
+				<td width="20%" class="label">{fieldLabel name="defaultMetricType" key="defaultMetric.availableMetrics"}</td>
+				<td colspan="2" width="80%" class="value">
+					<select name="defaultMetricType" class="selectMenu" id="defaultMetricType">
+						{foreach from=$availableMetricTypes key=metricType item=displayName}
+							<option value="{$metricType|escape}"{if $metricType == $defaultMetricType} selected="selected"{/if}>{$displayName|escape}</option>
+						{/foreach}
+					</select>
+				</td>
+			</tr>
+		</table>
+	</div>
+{/if}
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin" escape=false}'" /></p>
 

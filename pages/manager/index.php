@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_manager
  */
- 
+
 /**
  * @file pages/manager/index.php
  *
@@ -11,7 +11,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_manager
- * @brief Handle requests for journal management functions. 
+ * @brief Handle requests for journal management functions.
  *
  */
 
@@ -118,7 +118,7 @@ switch ($op) {
 		import('pages.manager.FilesHandler');
 		break;
 	//
-	// Subscription Policies 
+	// Subscription Policies
 	//
 	case 'subscriptionPolicies':
 	case 'saveSubscriptionPolicies':
@@ -185,7 +185,7 @@ switch ($op) {
 	// Statistics Functions
 	//
 	case 'statistics':
-	case 'saveStatisticsSections':
+	case 'saveStatisticsSettings':
 	case 'savePublicStatisticsList':
 	case 'report':
 		define('HANDLER_CLASS', 'StatisticsHandler');
@@ -193,7 +193,7 @@ switch ($op) {
 		break;
 	//
 	// Payment
-	//	
+	//
 	case 'payments':
 	case 'savePaymentSettings':
 	case 'payMethodSettings':

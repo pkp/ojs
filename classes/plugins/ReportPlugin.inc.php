@@ -15,33 +15,61 @@
 import('classes.plugins.Plugin');
 
 class ReportPlugin extends Plugin {
+
 	function ReportPlugin() {
 		parent::Plugin();
 	}
 
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		assert(false); // Should always be overridden
+	* Retrieve a range of aggregate, filtered, ordered metric values, i.e.
+	* a statistics report.
+	*
+	* @see <http://pkp.sfu.ca/wiki/index.php/OJSdeStatisticsConcept#Input_and_Output_Formats_.28Aggregation.2C_Filters.2C_Metrics_Data.29>
+	* for a full specification of the input and output format of this method.
+	*
+	* @param $metricType null|string|array metrics selection
+	* @param $columns string|array column (aggregation level) selection
+	* @param $filters array report-level filter selection
+	* @param $orderBy array order criteria
+	* @param $range null|DBResultRange paging specification
+	*
+	* @return null|array The selected data as a simple tabular result set or
+	*  null if metrics are not supported by this plug-in, the specified report
+	*  is invalid or cannot be produced or another error occurred.
+	*/
+	function getMetrics($metricType = null, $columns = array(), $filters = array(), $orderBy = array(), $range = null) {
+		return null;
 	}
 
 	/**
-	 * Get the display name of this plugin. This name is displayed on the
-	 * Conference Manager's Reports page, for example.
-	 * @return String
+	 * Metric types available from this plug-in.
+	 *
+	 * @return array An array of metric identifiers (strings) supported by
+	 *   this plugin.
 	 */
-	function getDisplayName() {
-		assert(false); // Should always be overridden
+	function getMetricTypes() {
+		return array();
 	}
 
 	/**
-	 * Get a description of the plugin.
+	 * Public metric type that will be displayed to end users.
+	 * @param $metricType string One of the values returned from getMetricTypes()
+	 * @return null|string The metric type or null if the plug-in does not support
+	 *  standard metric retrieval or the metric type was not found.
 	 */
-	function getDescription() {
-		assert(false); // Should always be overridden
+	function getMetricDisplayType($metricType) {
+		return null;
+	}
+
+	/**
+	 * Full name of the metric type.
+	 * @param $metricType string One of the values returned from getMetricTypes()
+	 * @return null|string The full name of the metric type or null if the
+	 *  plug-in does not support standard metric retrieval or the metric type
+	 *  was not found.
+	 */
+	function getMetricFullName($metricType) {
+		return null;
 	}
 
 	/**

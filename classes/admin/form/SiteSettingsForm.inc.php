@@ -42,6 +42,9 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 
 		$templateMgr->assign('redirectOptions', $journals);
 
+		$application =& PKPApplication::getApplication();
+		$templateMgr->assign('availableMetricTypes', $application->getMetricTypes(true));
+
 		return parent::display();
 	}
 
@@ -56,13 +59,14 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 
 		$this->_data['useAlphalist'] = $site->getSetting('useAlphalist');
 		$this->_data['usePaging'] = $site->getSetting('usePaging');
+		$this->_data['defaultMetricType'] = $site->getSetting('defaultMetricType');
 	}
 
 	/**
 	 * Assign user-submitted data to form.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('useAlphalist', 'usePaging'));
+		$this->readUserVars(array('useAlphalist', 'usePaging', 'defaultMetricType'));
 		return parent::readInputData();
 	}
 
@@ -72,9 +76,10 @@ class SiteSettingsForm extends PKPSiteSettingsForm {
 	function execute() {
 		parent::execute();
 
-		$siteSettingsDao =& $this->siteSettingsDao;
+		$siteSettingsDao =& $this->siteSettingsDao; /* @var $siteSettingsDao SiteSettingsDAO */
 		$siteSettingsDao->updateSetting('useAlphalist', (boolean) $this->getData('useAlphalist'), 'bool');
 		$siteSettingsDao->updateSetting('usePaging', (boolean) $this->getData('usePaging'), 'bool');
+		$siteSettingsDao->updateSetting('defaultMetricType', $this->getData('defaultMetricType'), 'string');
 	}
 }
 

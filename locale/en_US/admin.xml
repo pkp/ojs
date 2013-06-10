@@ -23,6 +23,11 @@
     <message key="admin.settings.journalsList.showThumbnail">Journal thumbnail</message>
     <message key="admin.settings.journalsList.showTitle">Journal title</message>
     <message key="admin.settings.journalsList.showDescription">Journal description</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in severeral contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an orderd list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</message>
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
 	<message key="admin.locale.maybeIncomplete">Marked locales may be incomplete.</message>
