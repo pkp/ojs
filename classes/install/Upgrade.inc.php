@@ -684,7 +684,7 @@ class Upgrade extends Installer {
 						'load_id' => $loadId,
 						'assoc_type' => ASSOC_TYPE_JOURNAL,
 						'assoc_id' => $row['journal_id'],
-						'metric_type' => 'legacyCounterPlugin::counter',
+						'metric_type' => OJS_METRIC_TYPE_LEGACY_COUNTER,
 						'metric' => $row[$countType],
 						'file_type' => $fileType,
 						'month' => $row['year'] . $month
@@ -737,7 +737,7 @@ class Upgrade extends Installer {
 		unset($result);
 
 		while ($record = $tempStatsDao->getNextByLoadId($loadId)) {
-			$record['metric_type'] = 'ojs::timedViews';
+			$record['metric_type'] = OJS_METRIC_TYPE_TIMED_VIEWS;
 			$metricsDao->insertRecord($record);
 		}
 
