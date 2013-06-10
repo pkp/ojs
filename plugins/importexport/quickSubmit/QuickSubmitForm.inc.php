@@ -257,6 +257,7 @@ class QuickSubmitForm extends Form {
 		$tempFileIds = $this->getData('tempFileId');
 		$temporaryFileManager = new TemporaryFileManager();
 		$articleFileManager = new ArticleFileManager($articleId);
+		$designatedPrimary = false;
 		foreach (array_keys($tempFileIds) as $locale) {
 			$temporaryFile = $temporaryFileManager->getFile($tempFileIds[$locale], $user->getId());
 			$fileId = null;
@@ -291,11 +292,17 @@ class QuickSubmitForm extends Form {
 
 				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 				$galleyDao->insertGalley($galley);
-			}
 
-			if ($locale == $journal->getPrimaryLocale()) {
-				$article->setSubmissionFileId($fileId);
-				$article->SetReviewFileId($fileId);
+				if (!$designatedPrimary) {
+					$article->setSubmissionFileId($fileId);
+					$article->setReviewFileId($fileId);
+					if ($locale == $journal->getPrimaryLocale()) {
+						// Used to make sure that *some* file
+						// is designated Review Version, but
+						// preferrably the primary locale.
+						$designatedPrimary = true;
+					}
+				}
 			}
 
 			// Update file search index
