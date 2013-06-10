@@ -745,6 +745,66 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	* For 2.4 upgrade: migrate OJS default statistics to the metrics table.
+	*/
+	function migrateDefaultUsageStatistics() {
+		$loadId = '3.0.0-upgrade-ojsViews';
+		$metricsDao = DAORegistry::getDAO('MetricsDAO');
+		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, journal_id, issue_id)';
+
+		// Galleys.
+		$galleyUpdateCases = array(
+			array('fileType' => STATISTICS_FILE_TYPE_PDF, 'isHtml' => false, 'assocType' => ASSOC_TYPE_GALLEY),
+			array('fileType' => STATISTICS_FILE_TYPE_HTML, 'isHtml' => true, 'assocType' => ASSOC_TYPE_GALLEY),
+			array('fileType' => STATISTICS_FILE_TYPE_OTHER, 'isHtml' => false, 'assocType' => ASSOC_TYPE_GALLEY),
+			array('fileType' => STATISTICS_FILE_TYPE_PDF, 'assocType' => ASSOC_TYPE_ISSUE_GALLEY),
+			array('fileType' => STATISTICS_FILE_TYPE_OTHER, 'assocType' => ASSOC_TYPE_ISSUE_GALLEY),
+		);
+
+		foreach ($galleyUpdateCases as $case) {
+			$params = array();
+			if ($case['fileType'] == STATISTICS_FILE_TYPE_PDF) {
+				$pdfFileTypeWhereCheck = 'IN';
+			} else {
+				$pdfFileTypeWhereCheck = 'NOT IN';
+			}
+
+			$params = array($case['fileType'], $loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, $case['assocType']);
+
+			if ($case['assocType'] == ASSOC_TYPE_GALLEY) {
+				array_push($params, $case['isHtml']);
+				$selectClause = ' SELECT ?, ?, ?, ?, ag.galley_id, ag.article_id, ag.views, a.journal_id, pa.issue_id
+					FROM article_galleys_stats_migration as ag
+					LEFT JOIN submissions AS a ON ag.article_id = a.submission_id
+					LEFT JOIN published_submissions as pa on ag.article_id = pa.submission_id
+					LEFT JOIN submission_files as af on ag.file_id = af.file_id
+					WHERE a.submission_id is not null AND ag.views > 0 AND ag.html_galley = ?
+						AND af.file_type ';
+			} else {
+				$selectClause = 'SELECT ?, ?, ?, ?, ig.galley_id, ig.views, i.journal_id, ig.issue_id
+					FROM issue_galleys_stats_migration AS ig
+					LEFT JOIN issues AS i ON ig.issue_id = i.issue_id
+					LEFT JOIN issue_files AS ifi ON ig.file_id = ifi.file_id
+					WHERE ig.views > 0 AND i.issue_id is not null AND ifi.file_type ';
+			}
+
+			array_push($params, 'application/pdf', 'application/x-pdf', 'text/pdf', 'text/x-pdf');
+
+			$metricsDao->update($insertIntoClause . $selectClause . $pdfFileTypeWhereCheck . ' (?, ?, ?, ?)', $params, false);
+		}
+
+		// Published articles.
+		$params = array($loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, ASSOC_TYPE_ARTICLE);
+		$metricsDao->update($insertIntoClause .
+			'SELECT ?, ?, ?, pa.article_id, pa.views, i.journal_id, pa.article_id, pa.issue_id
+			FROM published_articles_stats_migration as pa
+			LEFT JOIN issues AS i ON pa.issue_id = i.issue_id
+			WHERE pa.views > 0 AND i.issue_id is not null;');
+
+		return true;
+	}
 }
 
 ?>
