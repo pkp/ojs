@@ -20,6 +20,7 @@ define('OJS_METRIC_TYPE_COUNTER', 'ojs::counter');
 // TODO: #8015 Move to their own report plugins when created.
 define('OJS_METRIC_TYPE_LEGACY_COUNTER', 'ojs::legacyCounterPlugin');
 define('OJS_METRIC_TYPE_TIMED_VIEWS', 'ojs::timedViews');
+define('OJS_METRIC_TYPE_LEGACY_DEFAULT', 'ojs::legacyDefault');
 
 class UsageStatsReportPlugin extends ReportPlugin {
 
