@@ -712,8 +712,6 @@ class Upgrade extends Installer {
 		$tempStatsDao = new UsageStatsTemporaryRecordDAO();
 		$tempStatsDao->deleteByLoadId($loadId);
 
-		$metricsDao->purgeLoadBatch($loadId);
-
 		import('plugins.generic.usageStats.GeoLocationTool');
 		$geoLocationTool = new GeoLocationTool();
 
