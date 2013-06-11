@@ -11,7 +11,11 @@
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#journalSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#journalSettingsForm').pkpHandler('$.pkp.controllers.tab.settings.form.FileViewFormHandler',
+			{ldelim}
+				fetchFileUrl: '{url|escape:javascript op='fetchFile' escape=false}'
+			{rdelim}
+		);
 	{rdelim});
 </script>
 
@@ -36,6 +40,14 @@
 			{url|assign:"sampleUrl" router=$smarty.const.ROUTE_PAGE journal="path"}
 			{** FIXME: is this class instruct still the right one? **}
 			<span class="instruct">{translate key="admin.journals.urlWillBe" sampleUrl=$sampleUrl}</span>
+		{/fbvFormSection}
+		{fbvFormSection label="admin.journals.thumbnail"}
+			<div id="{$uploadThumbnailLinkAction->getId()}" class="pkp_linkActions">
+				{include file="linkAction/linkAction.tpl" action=$uploadThumbnailLinkAction contextId="journalSettingsForm"}
+			</div>
+			<div id="homepageImage">
+				{$thumbnailImage}
+			</div>
 		{/fbvFormSection}
 		{fbvFormSection for="enabled" list=true}
 			{if $enabled}{assign var="enabled" value="checked"}{/if}

@@ -38,11 +38,22 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$journal = $journalDao->getById($this->contextId);
 
 			parent::initData($journal);
+			$this->setData('journalThumbnail', $journal->getSetting('journalThumbnail'));
 		} else {
 			parent::initData();
 		}
 	}
 
+	/**
+	 * Get a list of field names for which localized settings are used
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array_merge(
+			parent::getLocaleFieldNames(),
+			'journalThumbnail'
+		);
+	}
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -54,6 +65,32 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$journal = $journalDao->getById($this->contextId);
 			if ($journal) $this->setData('oldPath', $journal->getPath());
 		}
+	}
+
+	/**
+	 * Display the form.
+	 */
+	function fetch($args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$router = $request->getRouter();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		import('lib.pkp.classes.linkAction.LinkAction');
+		$templateMgr->assign(
+			'uploadThumbnailLinkAction',
+			new LinkAction(
+				'uploadThumbnail',
+				new AjaxModal(
+					$router->url(
+						$request, null, null, 'showThumbnailUploadForm'),
+					__('common.upload'),
+					'modal_add_file'
+				),
+				__('common.upload'),
+				'add'
+			)
+		);
+		$templateMgr->assign('thumbnailImage', $this->renderFileView($request));
+		return parent::fetch($args, $request);
 	}
 
 	/**
@@ -143,8 +180,99 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 		// Make sure all plugins are loaded for settings preload
 		PluginRegistry::loadAllPlugins();
 
-		HookRegistry::call('JournalSiteSettingsForm::execute', array($this, $journal, $section, &$isNewJournal));
+		HookRegistry::call('JournalSiteSettingsForm::execute', array($this, $journal, $section, $isNewJournal));
 	}
+
+	/**
+	 * Render a template to show details about an uploaded file in the form
+	 * and a link action to delete it.
+	 * @param $request Request
+	 * @return string
+	 */
+	function renderFileView($request) {
+		$file = $this->getData('journalThumbnail');
+		$locale = AppLocale::getLocale();
+
+		// Check if the file is localized.
+		if (!is_null($file) && key_exists($locale, $file)) {
+			// We use the current localized file value.
+			$file = $file[$locale];
+		}
+
+		// Only render the file view if we have a file.
+		if (is_array($file)) {
+			$templateMgr = TemplateManager::getManager($request);
+
+			// Get the common alternate text for the image.
+			$templateMgr->assign('commonAltText', __('admin.journals.thumbnail'));
+
+			$templateMgr->assign('file', $file);
+			$templateMgr->assign('deleteLinkAction', $this->_getDeleteFileLinkAction($request));
+
+			return $templateMgr->fetch('controllers/tab/settings/formImageView.tpl');
+		} else {
+			return null;
+		}
+	}
+
+	/**
+	 * Delete an uploaded file.
+	 * @return boolean
+	 */
+	function deleteFile($request) {
+		$context = $request->getContext();
+		$locale = AppLocale::getLocale();
+
+		// Get the file.
+		$file = $this->getData('journalThumbnail');
+
+		// Check if the file is localized.
+		if (key_exists($locale, $file)) {
+			// We use the current localized file value.
+			$file = $file[$locale];
+		} else {
+			$locale = null;
+		}
+
+		// Deletes the file and its settings.
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+		if ($publicFileManager->removeContextFile($context->getAssocType(), $context->getId(), $file['uploadName'])) {
+			$settingsDao = $context->getSettingsDao();
+			$settingsDao->deleteSetting($context->getId(), 'journalThumbnail', $locale);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+
+	//
+	// Protected functions
+	//
+	/**
+	 * Get the delete file link action.
+	 * @param $request Request
+	 * @return LinkAction
+	 */
+	function _getDeleteFileLinkAction($request) {
+		$router = $request->getRouter();
+		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+
+		return new LinkAction(
+			'deleteFile-journalThumbnail',
+			new RemoteActionConfirmationModal(
+				__('common.confirmDelete'), null,
+				$router->url(
+					$request, null, null, 'deleteFile'
+				),
+				'modal_delete'
+			),
+			__('common.delete'),
+			null
+		);
+	}
+
 }
 
 ?>

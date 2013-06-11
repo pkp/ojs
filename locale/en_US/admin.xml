@@ -91,4 +91,5 @@
 	<message key="admin.categories.confirmDelete">Are you sure you wish to delete this category?</message>
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">A category name is required.</message>
+	<message key="admin.journals.thumbnail">Thumbnail</message>
 </locale>
