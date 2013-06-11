@@ -287,6 +287,8 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function issueToc($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$templateMgr->assign_by_ref('issue', $issue);
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
 		return $json->getString();
 	}

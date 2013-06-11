@@ -33,7 +33,7 @@
 			<div id="pluploadimage"></div>
 			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 			{if $fileName.$formLocale}
-				<img src="{$publicFilesDir}/{$fileName.$formLocale|escape}" alt="{$coverPageAltText.$formLocale|escape}"/>
+				<img src="{$publicFilesDir}/{$fileName.$formLocale|escape}?random=$issueId|uniqid}" alt="{$coverPageAltText.$formLocale|escape}"/>
 			{/if}
 			{fbvElement type="text" id="coverPageAltText" label="common.altText" value=$coverPageAltText multilingual=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}

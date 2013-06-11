@@ -67,7 +67,6 @@ class CoverForm extends Form {
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			if (!$publicFileManager->getImageExtension($temporaryFile->getFileType())) {
-error_log($temporaryFile->getFileType());
 				$this->addError('coverPage', __('editor.issues.invalidCoverPageFormat'));
 			}
 		}

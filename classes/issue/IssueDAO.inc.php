@@ -540,7 +540,7 @@ class IssueDAO extends DAO {
 				pa.submission_id = ? AND
 				pa.submission_id = a.submission_id';
 		if ($journalId !== null) {
-			$sql .= ' AND i.journal_id = ? AND a.journal_id = i.journal_id';
+			$sql .= ' AND i.journal_id = ? AND a.context_id = i.journal_id';
 			$params[] = (int) $journalId;
 		}
 
