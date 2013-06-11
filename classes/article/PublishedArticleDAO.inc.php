@@ -79,10 +79,11 @@ class PublishedArticleDAO extends ArticleDAO {
 		$sql = 'SELECT DISTINCT
 				ps.*,
 				s.*,
-				COALESCE(o.seq, s.seq) AS section_seq,
+				COALESCE(o.seq, ps.seq) AS section_seq,
 				ps.seq,
 				' . $this->_getFetchColumns() . '
 			FROM	published_submissions ps
+				LEFT JOIN submissions s ON ps.submission_id = s.submission_id
 				' . $this->_getFetchJoins() . '
 				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND o.issue_id = ?)
 			WHERE	ps.submission_id = s.submission_id
@@ -163,7 +164,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				se.abstracts_not_required AS abstracts_not_required,
 				se.hide_title AS section_hide_title,
 				se.hide_author AS section_hide_author,
-				COALESCE(o.seq, s.seq) AS section_seq,
+				COALESCE(o.seq, ps.seq) AS section_seq,
 				ps.seq,
 				' . $this->_getFetchColumns() . '
 			FROM	published_submissions ps
