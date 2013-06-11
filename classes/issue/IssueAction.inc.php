@@ -237,7 +237,7 @@ class IssueAction {
 				ROLE_ID_SUBSCRIPTION_MANAGER
 			);
 
-			$roles =& $roleDao->getRolesByUserId($userId, $journalId);
+			$roles =& $roleDao->getByUserId($userId, $journalId);
 			foreach ($roles as $role) {
 				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
 			}
