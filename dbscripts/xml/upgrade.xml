@@ -128,6 +128,11 @@
 	<upgrade minversion="2.2.0.0" maxversion="2.3.3.9">
 		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations2.xml" condition="return $installer->columnExists('authors', 'affiliation');" />
 	</upgrade>
+	
+	<upgrade minversion="2.0.0.0" maxversion="2.4.2.0">
+		<data file="dbscripts/xml/upgrade/2.4.3_preupdate_usageStatistics.xml" condition="return $installer->columnExists('published_articles', 'views');" />
+		<data file="dbscripts/xml/upgrade/2.4.3_preupdate_usageStatistics2.xml" condition="return $installer->columnExists('issue_galleys', 'views');" />
+	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- 2.x to 2.4 -->
@@ -334,6 +339,18 @@
 	
 	<upgrade minversion="2.4.0.0" maxversion="2.4.1.0">
 		<data file="dbscripts/xml/upgrade/2.4.2_remove_submission_tombstones.xml" condition="return $installer->tableExists('submission_tombstones');" />
+	</upgrade>
+	
+	<upgrade minversion="2.0.0.0" maxversion="2.4.2.0">
+		<schema file="plugins/generic/usageStats/schema.xml" />
+		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
+		<note file="docs/release-notes/GeoLocalizationToolRequired" condition="return !$installer->fileExists('plugins/generic/usageStats/GeoLiteCity.dat');" />
+		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
+		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.3_postUsageStatsMigration.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.3_postUsageStatsMigration2.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.3_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
+		<data file="dbscripts/xml/upgrade/2.4.3_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

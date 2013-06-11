@@ -1028,6 +1028,188 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	* For 2.4 upgrade: migrate COUNTER statistics to the metrics table.
+	*/
+	function migrateCounterPluginUsageStatistics() {
+		$metricsDao =& DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+		$result =& $metricsDao->retrieve('SELECT * FROM counter_monthly_log');
+		if ($result->EOF) return true;
+
+		$loadId = '2.4.2-upgrade-counter';
+		$metricsDao->purgeLoadBatch($loadId);
+
+		$fileTypeCounts = array(
+				'count_html' => STATISTICS_FILE_TYPE_HTML,
+				'count_pdf' => STATISTICS_FILE_TYPE_PDF,
+				'count_other' => STATISTICS_FILE_TYPE_OTHER
+		);
+
+		while(!$result->EOF) {
+			$row =& $result->GetRowAssoc(false);
+			foreach ($fileTypeCounts as $countType => $fileType) {
+				$month = (string) $row['month'];
+				if (strlen($month) == 1) {
+					$month = '0' . $month;
+				}
+				if ($row[$countType]) {
+					$record = array(
+							'load_id' => $loadId,
+							'assoc_type' => ASSOC_TYPE_JOURNAL,
+							'assoc_id' => $row['journal_id'],
+							'metric_type' => OJS_METRIC_TYPE_LEGACY_COUNTER,
+							'metric' => $row[$countType],
+							'file_type' => $fileType,
+							'month' => $row['year'] . $month
+					);
+					$errorMsg = null;
+					$metricsDao->insertRecord($record, $errorMsg);
+				}
+			}
+			$result->MoveNext();
+		}
+
+		// Remove the plugin settings.
+		$metricsDao->update('delete from plugin_settings where plugin_name = ?', array('counterplugin'), false);
+
+		return true;
+	}
+
+	/**
+	 * For 2.4 upgrade: migrate Timed views statistics to the metrics table.
+	 */
+	function migrateTimedViewsUsageStatistics() {
+		$metricsDao =& DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+		$result =& $metricsDao->retrieve('SELECT * FROM timed_views_log');
+		if ($result->EOF) return true;
+
+		$loadId = '2.4.2-upgrade-timedViews';
+		$metricsDao->purgeLoadBatch($loadId);
+
+		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin');
+		$plugin->import('UsageStatsTemporaryRecordDAO');
+		$tempStatsDao = new UsageStatsTemporaryRecordDAO();
+		$tempStatsDao->deleteByLoadId($loadId);
+
+		import('plugins.generic.usageStats.GeoLocationTool');
+		$geoLocationTool = new GeoLocationTool();
+
+		while(!$result->EOF) {
+			$row =& $result->GetRowAssoc(false);
+			list($countryId, $cityName, $region) = $geoLocationTool->getGeoLocation($row['ip_address']);
+			if ($row['galley_id']) {
+				$assocType = ASSOC_TYPE_GALLEY;
+				$assocId = $row['galley_id'];
+			} else {
+				$assocType = ASSOC_TYPE_ARTICLE;
+				$assocId = $row['article_id'];
+			};
+
+			$day = date('Ymd', strtotime($row['date']));
+			$tempStatsDao->insert($assocType, $assocId, $day, $countryId, $region, $cityName, null, $loadId);
+			$result->MoveNext();
+		}
+
+		// Articles.
+		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_ARTICLE);
+		$tempStatsDao->update(
+			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
+			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.journal_id, pa.issue_id
+			FROM usage_stats_temporary_records AS tr
+			LEFT JOIN articles AS a ON a.article_id = tr.assoc_id
+			LEFT JOIN published_articles AS pa ON pa.article_id = tr.assoc_id
+			WHERE tr.load_id = ? AND tr.assoc_type = ? AND a.journal_id IS NOT NULL AND pa.issue_id IS NOT NULL
+			GROUP BY tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.file_type, tr.load_id', $params
+		);
+
+		// Galleys.
+		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_GALLEY);
+		$tempStatsDao->update(
+			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
+			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.article_id, count(tr.metric), a.journal_id, pa.issue_id
+			FROM usage_stats_temporary_records AS tr
+			LEFT JOIN article_galleys AS ag ON ag.galley_id = tr.assoc_id
+			LEFT JOIN articles AS a ON a.article_id = ag.article_id
+			LEFT JOIN published_articles AS pa ON pa.article_id = ag.article_id
+			WHERE tr.load_id = ? AND tr.assoc_type = ? AND a.journal_id IS NOT NULL AND pa.issue_id IS NOT NULL
+			GROUP BY tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.file_type, tr.load_id', $params
+		);
+
+		$tempStatsDao->deleteByLoadId($loadId);
+
+		// Remove the plugin settings.
+		$metricsDao->update('delete from plugin_settings where plugin_name = ?', array('timedviewplugin'), false);
+
+		return true;
+	}
+
+	/**
+	 * For 2.4 upgrade: migrate OJS default statistics to the metrics table.
+	 */
+	function migrateDefaultUsageStatistics() {
+		$loadId = '2.4.2-upgrade-ojsViews';
+		$metricsDao =& DAORegistry::getDAO('MetricsDAO');
+		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, context_id, issue_id)';
+
+		// Galleys.
+		$galleyUpdateCases = array(
+			array('fileType' => STATISTICS_FILE_TYPE_PDF, 'isHtml' => false, 'assocType' => ASSOC_TYPE_GALLEY),
+			array('fileType' => STATISTICS_FILE_TYPE_HTML, 'isHtml' => true, 'assocType' => ASSOC_TYPE_GALLEY),
+			array('fileType' => STATISTICS_FILE_TYPE_OTHER, 'isHtml' => false, 'assocType' => ASSOC_TYPE_GALLEY)
+		);
+
+		if (Installer::tableExists('issue_galleys_stats_migration')) {
+			$galleyUpdateCases[] = array('fileType' => STATISTICS_FILE_TYPE_PDF, 'assocType' => ASSOC_TYPE_ISSUE_GALLEY);
+			$galleyUpdateCases[] = array('fileType' => STATISTICS_FILE_TYPE_OTHER, 'assocType' => ASSOC_TYPE_ISSUE_GALLEY);
+		}
+
+		foreach ($galleyUpdateCases as $case) {
+			$params = array();
+			if ($case['fileType'] == STATISTICS_FILE_TYPE_PDF) {
+				$pdfFileTypeWhereCheck = 'IN';
+			} else {
+				$pdfFileTypeWhereCheck = 'NOT IN';
+			}
+
+			$params = array($case['fileType'], $loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, $case['assocType']);
+
+			if ($case['assocType'] == ASSOC_TYPE_GALLEY) {
+				array_push($params, (int) $case['isHtml']);
+				$selectClause = ' SELECT ?, ?, ?, ?, ag.galley_id, ag.article_id, ag.views, a.journal_id, pa.issue_id
+						FROM article_galleys_stats_migration as ag
+						LEFT JOIN articles AS a ON ag.article_id = a.article_id
+						LEFT JOIN published_articles as pa on ag.article_id = pa.article_id
+						LEFT JOIN article_files as af on ag.file_id = af.file_id
+						WHERE a.article_id is not null AND ag.views > 0 AND ag.html_galley = ?
+							AND af.file_type ';
+			} else {
+				$selectClause = ' SELECT ?, ?, ?, ?, ig.galley_id, 0, ig.views, i.journal_id, ig.issue_id
+						FROM issue_galleys_stats_migration AS ig
+						LEFT JOIN issues AS i ON ig.issue_id = i.issue_id
+						LEFT JOIN issue_files AS ifi ON ig.file_id = ifi.file_id
+						WHERE ig.views > 0 AND i.issue_id is not null AND ifi.file_type ';
+			}
+
+			array_push($params, 'application/pdf', 'application/x-pdf', 'text/pdf', 'text/x-pdf');
+
+			$metricsDao->update($insertIntoClause . $selectClause . $pdfFileTypeWhereCheck . ' (?, ?, ?, ?)', $params, false);
+		}
+
+		// Published articles.
+		$params = array(null, $loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, ASSOC_TYPE_ARTICLE);
+		$metricsDao->update($insertIntoClause .
+				' SELECT ?, ?, ?, ?, pa.article_id, pa.article_id, pa.views, i.journal_id, pa.issue_id
+				FROM published_articles_stats_migration as pa
+				LEFT JOIN issues AS i ON pa.issue_id = i.issue_id
+				WHERE pa.views > 0 AND i.issue_id is not null;', $params, false);
+
+		// Set the site default metric type.
+		$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO'); /* @var $siteSettingsDao SiteSettingsDAO */
+		$siteSettingsDao->updateSetting('defaultMetricType', OJS_METRIC_TYPE_COUNTER);
+
+		return true;
+	}
 }
 
 ?>
