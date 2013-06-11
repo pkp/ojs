@@ -99,7 +99,7 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 			'SELECT assoc_type, assoc_id, day, country_id, region, city, file_type, load_id, count(metric) as metric
 			FROM usage_stats_temporary_records WHERE load_id = ?
 			GROUP BY assoc_type, assoc_id, day, country_id, region, city, file_type, load_id',
-o			array($loadId)
+			array($loadId)
 		);
 	}
 }
