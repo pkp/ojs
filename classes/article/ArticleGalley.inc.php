@@ -139,7 +139,7 @@ class ArticleGalley extends Representation {
 	 */
 	function getBestGalleyId(&$journal) {
 		if ($journal->getSetting('enablePublicGalleyId')) {
-			$publicGalleyId = $this->getPubId('publisher-id');
+			$publicGalleyId = $this->getStoredPubId('publisher-id');
 			if (!empty($publicGalleyId)) return $publicGalleyId;
 		}
 		return $this->getId();
