@@ -89,11 +89,10 @@ class URNPubIdPlugin extends PubIdPlugin {
 				// Now we can identify the journal
 				$journalId = $article->getJournalId();
 			}
-			// get the journal
-			$request =& Application::getRequest();
-			$router =& $request->getRouter();
-			$journal =& $router->getContext($request);
-			if (!$journal || $journal->getId() != $journalId) return null;
+
+			$journal =& $this->_getJournal($journalId);
+			if (!$journal) return null;
+			$journalId = $journal->getId();
 
 			// Check whether URNs are enabled for the given object type
 			$urnEnabled = ($this->getSetting($journalId, "enable${pubObjectType}URN") == '1');

@@ -302,32 +302,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		return count($doiParts) == 2;
 	}
 
-
-	//
-	// Private helper methods
-	//
-	/**
-	 * Get the journal object.
-	 * @param $journalId integer
-	 * @return Journal
-	 */
-	function &_getJournal($journalId) {
-		assert(is_numeric($journalId));
-
-		// Get the journal object from the context (optimized).
-		$request =& Application::getRequest();
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request); /* @var $journal Journal */
-
-		// Check whether we still have to retrieve the journal from the database.
-		if (!$journal || $journal->getId() != $journalId) {
-			unset($journal);
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getById($journalId);
-		}
-
-		return $journal;
-	}
 }
 
 ?>
