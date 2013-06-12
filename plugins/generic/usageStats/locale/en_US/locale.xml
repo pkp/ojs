@@ -16,9 +16,6 @@
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activating this option will make the plugin create access log files inside the files directory. Those files should be used to extract the usage statistics data. If you don't want to create more access log files you can leave this option disabled and use your own server log access files.</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Parse log files regex</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">The default regex used can parse apache access log files in combined format and also the plugin's log files. If your access log files are in a different format you will have to insert a regex capable of parsing them and giving the expected values. See UsageStatsLoader::_getDataFromLogEntry() for more information.</message>
-	<message key="plugins.generic.usageStats.settings.extraction">Usage data extraction options</message>
-	<message key="plugins.generic.usageStats.settings.timeBetweenRequests">Minimum time between requests</message>
-	<message key="plugins.generic.usageStats.settings.timeBetweenRequests.description">All requests to the same data object from the same origin that don't exced this minimum time from the last one will be ignored.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Usage statistics plugin settings saved</message>
 	
 	<message key="plugins.generic.usageStats.openFileFailed">The file {$file} could not be open and was rejected.</message>

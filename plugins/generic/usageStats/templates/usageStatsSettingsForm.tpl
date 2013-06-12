@@ -27,10 +27,5 @@
 			{fbvElement type="text" id="accessLogFileParseRegex" value=$accessLogFileParseRegex"}
 		{/fbvFormSection}
 	{/fbvFormArea}	
-	{fbvFormArea id="usageStatsExtraction" title="plugins.generic.usageStats.settings.extraction"}
-		{fbvFormSection title="plugins.generic.usageStats.settings.timeBetweenRequests" description="plugins.generic.usageStats.settings.timeBetweenRequests.description" required=true}
-			{fbvElement type="text" id="minTimeBetweenRequests" value=$minTimeBetweenRequests"}
-		{/fbvFormSection}
-	{/fbvFormArea}
 	{fbvFormButtons id="usageStatsSettingsFormSubmit" submitText="common.save"}
 </form>

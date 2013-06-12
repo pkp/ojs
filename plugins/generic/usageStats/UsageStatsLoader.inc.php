@@ -386,9 +386,10 @@ class UsageStatsLoader extends FileLoader {
 			}
 		}
 
-		// Only count article/view access with a galley if it's
-		// an html or pdf galley, otherwise we would be counting
-		// access before user really access the object.
+		// Don't count article/view access with an html or pdf galley,
+		// otherwise we would be counting access before user really
+		// access the object. If user really access the object, a download
+		// operation will be also logged and that's the one we have to count.
 		$articleViewAccessUrls = array('/article/view/', '/article/viewArticle/');
 		if (in_array($workingUrl, $articleViewAccessUrls) && $assocType == ASSOC_TYPE_GALLEY &&
 			$galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
