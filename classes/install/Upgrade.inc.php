@@ -696,6 +696,9 @@ class Upgrade extends Installer {
 		}
 		unset($result);
 
+		// Remove the plugin settings.
+		$metricsDao->update('DELETE FROM plugin_settings WHERE plugin_name = ?', array('counterplugin'), false);
+
 		return true;
 	}
 
@@ -760,6 +763,9 @@ class Upgrade extends Installer {
 		);
 
 		$tempStatsDao->deleteByLoadId($loadId);
+
+		// Remove the plugin settings.
+		$metricsDao->update('DELETE FROM plugin_settings WHERE plugin_name = ?', array('timedviewplugin'), false);
 
 		return true;
 	}
