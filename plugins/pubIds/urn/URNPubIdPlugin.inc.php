@@ -138,7 +138,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 					$urn = $urnPrefix . $suffixPattern;
 					if ($issue) {
 						// %j - journal initials
-						$suffixPattern = String::regexp_replace('/%j/', String::strtolower($journal->getLocalizedAcronym()), $suffixPattern);
+						$suffixPattern = String::regexp_replace('/%j/', String::strtolower($journal->getAcronym($journal->getPrimaryLocale())), $suffixPattern);
 						// %v - volume number
 						$suffixPattern = String::regexp_replace('/%v/', $issue->getVolume(), $suffixPattern);
 						// %i - issue number
@@ -171,7 +171,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 
 				default:
 					if ($issue) {
-						$suffixPattern = String::strtolower($journal->getLocalizedAcronym());
+						$suffixPattern = String::strtolower($journal->getAcronym($journal->getPrimaryLocale()));
 						$suffixPattern .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
 						if ($article) {
 		 					$suffixPattern .= '.' . $article->getId();

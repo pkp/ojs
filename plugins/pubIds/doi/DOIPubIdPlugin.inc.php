@@ -157,7 +157,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				$doiSuffix = $this->getSetting($journalId, "doi${pubObjectType}SuffixPattern");
 
 				// %j - journal initials
-				$doiSuffix = String::regexp_replace('/%j/', String::strtolower($journal->getLocalizedAcronym()), $doiSuffix);
+				$doiSuffix = String::regexp_replace('/%j/', String::strtolower($journal->getAcronym($journal->getPrimaryLocale())), $doiSuffix);
 
 				if ($issue) {
 					// %v - volume number
@@ -187,7 +187,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				break;
 
 			default:
-				$doiSuffix = String::strtolower($journal->getLocalizedAcronym());
+				$doiSuffix = String::strtolower($journal->getAcronym($journal->getPrimaryLocale()));
 
 				if ($issue) {
 					$doiSuffix .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
