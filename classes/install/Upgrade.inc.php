@@ -827,6 +827,10 @@ class Upgrade extends Installer {
 			LEFT JOIN issues AS i ON pa.issue_id = i.issue_id
 			WHERE pa.views > 0 AND i.issue_id is not null;', $params, false);
 
+		// Set the site default metric type.
+		$siteSettingsDao = DAORegistry::getDAO('SiteSettingsDAO'); /* @var $siteSettingsDao SiteSettingsDAO */
+		$siteSettingsDao->updateSetting('defaultMetricType', OJS_METRIC_TYPE_COUNTER);
+
 		return true;
 	}
 }
