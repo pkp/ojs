@@ -154,6 +154,9 @@ class ArticleGalleyForm extends Form {
 		$journal =& Request::getJournal();
 		$fileId = null;
 
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article =& $articleDao->getArticle($this->articleId, $journal->getId());
+
 		if (isset($this->galley)) {
 			$galley =& $this->galley;
 
@@ -252,8 +255,6 @@ class ArticleGalleyForm extends Form {
 			} else {
 				$galley->setLabel($this->getData('label'));
 			}
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$article =& $articleDao->getArticle($this->articleId, $journal->getId());
 			$galley->setLocale($article->getLocale());
 
 			if ($enablePublicGalleyId) {
@@ -283,6 +284,9 @@ class ArticleGalleyForm extends Form {
 			$articleSearchIndex->articleFileChanged($this->articleId, ARTICLE_SEARCH_GALLEY_FILE, $fileId);
 			$articleSearchIndex->articleChangesFinished();
 		}
+
+		// Stamp the article modification (for OAI)
+		$articleDao->updateArticle($article);
 
 		return $this->galleyId;
 	}

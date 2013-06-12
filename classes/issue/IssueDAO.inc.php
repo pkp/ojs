@@ -285,6 +285,7 @@ class IssueDAO extends DAO {
 		$issue->setCurrent($row['current']);
 		$issue->setDatePublished($this->datetimeFromDB($row['date_published']));
 		$issue->setDateNotified($this->datetimeFromDB($row['date_notified']));
+		$issue->setLastModified($this->datetimeFromDB($row['last_modified']));
 		$issue->setAccessStatus($row['access_status']);
 		$issue->setOpenAccessDate($this->datetimeFromDB($row['open_access_date']));
 		$issue->setShowVolume($row['show_volume']);
@@ -339,10 +340,10 @@ class IssueDAO extends DAO {
 	function insertIssue(&$issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name)
+				(journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?)',
-				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
+				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?)',
+				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
 				$issue->getVolume(),
@@ -405,6 +406,7 @@ class IssueDAO extends DAO {
 	 * @param Issue object
 	 */
 	function updateIssue($issue) {
+		$issue->stampModified();
 		$this->update(
 			sprintf('UPDATE issues
 				SET
@@ -416,6 +418,7 @@ class IssueDAO extends DAO {
 					current = ?,
 					date_published = %s,
 					date_notified = %s,
+					last_modified = %s,
 					open_access_date = %s,
 					access_status = ?,
 					show_volume = ?,
@@ -425,7 +428,7 @@ class IssueDAO extends DAO {
 					style_file_name = ?,
 					original_style_file_name = ?
 				WHERE issue_id = ?',
-			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
+			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
 				$issue->getVolume(),

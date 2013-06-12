@@ -71,6 +71,10 @@ class LayoutEditorAction extends Action {
 				}
 			}
 			$galleyDao->deleteGalley($galley);
+
+			// Stamp the article modification (for OAI)
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$articleDao->updateArticle($article);
 		}
 	}
 
@@ -138,6 +142,10 @@ class LayoutEditorAction extends Action {
 				$articleSearchIndex->articleFileDeleted($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 				$articleSearchIndex->articleChangesFinished();
 			}
+
+			// Stamp the article modification (for OAI)
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$articleDao->updateArticle($article);
 		}
 	}
 

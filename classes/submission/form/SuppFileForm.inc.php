@@ -275,6 +275,10 @@ class SuppFileForm extends Form {
 		$articleSearchIndex->suppFileMetadataChanged($this->suppFile);
 		$articleSearchIndex->articleChangesFinished();
 
+		// Stamp the article modification (for OAI)
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articleDao->updateArticle($this->article);
+
 		return $this->suppFileId;
 	}
 

@@ -54,7 +54,7 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getEarliestDatestamp()
 	 */
 	function getEarliestDatestamp($setIds = array()) {
-		return parent::getEarliestDatestamp('SELECT	MIN(COALESCE(dot.date_deleted, a.last_modified))', $setIds);
+		return parent::getEarliestDatestamp('SELECT	CASE WHEN COALESCE(dot.date_deleted, a.last_modified) > i.last_modified THEN i.last_modified ELSE COALESCE(dot.date_deleted, a.last_modified) END', $setIds);
 	}
 
 	/**
@@ -179,7 +179,7 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getRecordSelectStatement()
 	 */
 	function getRecordSelectStatement() {
-		return 'SELECT	COALESCE(dot.date_deleted, a.last_modified) AS last_modified,
+		return 'SELECT	CASE WHEN COALESCE(dot.date_deleted, a.last_modified) < i.last_modified THEN i.last_modified ELSE COALESCE(dot.date_deleted, a.last_modified) END AS last_modified,
 			COALESCE(a.article_id, dot.data_object_id) AS article_id,
 			COALESCE(j.journal_id, tsoj.assoc_id) AS journal_id,
 			COALESCE(tsos.assoc_id, s.section_id) AS section_id,
@@ -219,8 +219,8 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getDateRangeWhereClause()
 	 */
 	function getDateRangeWhereClause($from, $until) {
-		return (isset($from) ? ' AND ((dot.date_deleted IS NOT NULL AND dot.date_deleted >= '. $this->datetimeToDB($from) .') OR (dot.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) .'))' : '')
-			. (isset($until) ? ' AND ((dot.date_deleted IS NOT NULL AND dot.date_deleted <= ' .$this->datetimeToDB($until) .') OR (dot.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) .'))' : '')
+		return (isset($from) ? ' AND CASE WHEN COALESCE(dot.date_deleted, a.last_modified) < i.last_modified THEN (i.last_modified >= ' . $this->datetimeToDB($from) . ') ELSE ((dot.date_deleted IS NOT NULL AND dot.date_deleted >= ' . $this->datetimeToDB($from) . ') OR (dot.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) . '))' : '')
+			. (isset($until) ? ' AND CASE WHEN COALESCE(dot.date_deleted, a.last_modified) < i.last_modified THEN (i.last_modified <= ' . $this->datetimeToDB($until) . ') ELSE ((dot.date_deleted IS NOT NULL AND dot.date_deleted <= ' . $this->datetimeToDB($until) . ') OR (dot.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) . '))' : '')
 			. ' ORDER BY journal_id';
 	}
 
