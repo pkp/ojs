@@ -102,9 +102,6 @@ class UsageStatsLoader extends FileLoader {
 			if(!$assocId || !$assocType) continue;
 
 			list($countryCode, $cityName, $region) = $this->_geoLocationTool->getGeoLocation($entryData['ip']);
-			if (!$countryCode) {
-				echo ($lineNumber . ' - ' . $entryData['ip'] . PHP_EOL);
-			}
 			$day = date('Ymd', $entryData['date']);
 
 			// Check downloaded file type, if any.
@@ -211,7 +208,7 @@ class UsageStatsLoader extends FileLoader {
 			$parseRegex = $plugin->getSetting(0, 'accessLogFileParseRegex');
 		} else {
 			// Regex to parse this plugin's log access files.
-			$parseRegex = '/^(\S+) \S+ \S+ "(.*?)" (\S+)/';
+			$parseRegex = '/^(\S+) \S+ \S+ "(.*?)" (\S+) "(.*?)"/';
 		}
 
 		// The default regex will parse only apache log files in combined format.
@@ -383,17 +380,17 @@ class UsageStatsLoader extends FileLoader {
 						$assocId = $this->_getInternalIssueId($assocId, $journal);
 						break;
 				}
-			}
-		}
 
-		// Don't count article/view access with an html or pdf galley,
-		// otherwise we would be counting access before user really
-		// access the object. If user really access the object, a download
-		// operation will be also logged and that's the one we have to count.
-		$articleViewAccessUrls = array('/article/view/', '/article/viewArticle/');
-		if (in_array($workingUrl, $articleViewAccessUrls) && $assocType == ASSOC_TYPE_GALLEY &&
-			$galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
-			$assocId = $assocType = false;
+				// Don't count article/view access with an html or pdf galley,
+				// otherwise we would be counting access before user really
+				// access the object. If user really access the object, a download
+				// operation will be also logged and that's the one we have to count.
+				$articleViewAccessUrls = array('/article/view/', '/article/viewArticle/');
+				if (in_array($workingUrl, $articleViewAccessUrls) && $assocType == ASSOC_TYPE_GALLEY &&
+				$galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
+					$assocId = $assocType = false;
+				}
+			}
 		}
 
 		return array($assocId, $assocType);
