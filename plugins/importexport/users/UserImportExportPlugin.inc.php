@@ -167,7 +167,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'exportAll':
 				$this->import('UserExportDom');
-				$users = $roleDao->getUsersByJournalId($journal->getId());
+				$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+				$users = $userGroupDao->getUsersByContextId($journal->getId());
 				$users = $users->toArray();
 				$userExportDom = new UserExportDom();
 				$doc = $userExportDom->exportUsers($journal, $users);
@@ -258,8 +259,9 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$this->import('UserExportDom');
 				$roleDao = DAORegistry::getDAO('RoleDAO');
 				$rolePaths = null;
+				$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 				if (empty($args)) {
-					$users = $roleDao->getUsersByJournalId($journal->getId());
+					$users = $userGroupDao->getUsersByContextId($journal->getId());
 					$users = $users->toArray();
 				} else {
 					$users = array();

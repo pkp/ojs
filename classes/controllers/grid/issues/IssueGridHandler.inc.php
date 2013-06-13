@@ -382,9 +382,9 @@ class IssueGridHandler extends GridHandler {
 		// Send a notification to associated users
 		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
-		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$notificationUsers = array();
-		$allUsers = $roleDao->getUsersByJournalId($journalId);
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$allUsers = $userGroupDao->getUsersByContextId($journalId);
 		while ($user = $allUsers->next()) {
 			$notificationUsers[] = array('id' => $user->getId());
 		}
