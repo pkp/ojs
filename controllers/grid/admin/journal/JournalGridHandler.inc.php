@@ -23,11 +23,6 @@ class JournalGridHandler extends ContextGridHandler {
 	 */
 	function JournalGridHandler() {
 		parent::ContextGridHandler();
-		$this->addRoleAssignment(ROLE_ID_SITE_ADMIN, array(
-			'showThumbnailUploadForm',
-			'uploadFile', 'saveFile',
-			'fetchFile'
-		));
 	}
 
 
@@ -96,8 +91,7 @@ class JournalGridHandler extends ContextGridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function editContext($args, $request) {
-
-		// Identify the journal Id.
+		// Get the journal ID. (Not the same as the context!)
 		$journalId = $request->getUserVar('rowId');
 
 		// Form handling.
@@ -146,9 +140,6 @@ class JournalGridHandler extends ContextGridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function deleteContext($args, $request) {
-		// Identify the current context.
-		$context = $request->getContext();
-
 		// Identify the journal Id.
 		$journalId = $request->getUserVar('rowId');
 		$journalDao = DAORegistry::getDAO('JournalDAO');
@@ -174,93 +165,6 @@ class JournalGridHandler extends ContextGridHandler {
 		$json = new JSONMessage(false);
 		return $json->getString();
 	}
-
-	/**
-	 * Show the upload thumbnail image form.
-	 * @param $request Request
-	 * @param $args array
-	 * @return string JSON message
-	 */
-	function showThumbnailUploadForm($args, $request) {
-		import('lib.pkp.controllers.tab.settings.appearance.form.NewContextImageFileForm');
-		$fileUploadForm = new NewContextImageFileForm('journalThumbnail');
-		$fileUploadForm->initData($request);
-
-		$json = new JSONMessage(true, $fileUploadForm->fetch($request));
-		return $json->getString();
-	}
-
-	/**
-	 * Upload a new file.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return string
-	 */
-	function uploadFile($args, $request) {
-		import('lib.pkp.controllers.tab.settings.appearance.form.NewContextImageFileForm');
-		$fileUploadForm = new NewContextImageFileForm('journalThumbnail');
-		$json = new JSONMessage();
-
-		$temporaryFileId = $fileUploadForm->uploadFile($request);
-
-		if ($temporaryFileId !== false) {
-			$json->setAdditionalAttributes(array(
-				'temporaryFileId' => $temporaryFileId
-			));
-		} else {
-			$json->setStatus(false);
-			$json->setContent(__('common.uploadFailed'));
-		}
-
-		return $json->getString();
-	}
-
-	/**
-	 * Save an uploaded file.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return string
-	 */
-	function saveFile($args, $request) {
-		import('lib.pkp.controllers.tab.settings.appearance.form.NewContextImageFileForm');
-		$fileUploadForm = new NewContextImageFileForm('journalThumbnail');
-		$fileUploadForm->readInputData();
-
-		if ($fileUploadForm->validate()) {
-			if ($fileUploadForm->execute($request)) {
-				// Generate a JSON message with an event
-				return DAO::getDataChangedEvent('journalThumbnail');
-			}
-		}
-		$json = new JSONMessage(false, __('common.invalidFileType'));
-		return $json->getString();
-	}
-
-	/**
-	 * Fetch a file that has been uploaded.
-	 *
-	 * @param $args array
-	 * @param $request Request
-	 * @return string
-	 */
-	function fetchFile($args, $request) {
-		// Try to fetch the file.
-		$journalId = $request->getUserVar('rowId');
-		$settingsForm = new JournalSiteSettingsForm($journalId);
-		$settingsForm->initData($request);
-
-		$renderedElement = $settingsForm->renderFileView($request);
-
-		$json = new JSONMessage();
-		if ($renderedElement == false) {
-			$json->setAdditionalAttributes(array('noData' => 'journalThumbnail'));
-		} else {
-			$json->setElementId('journalThumbnail');
-			$json->setContent($renderedElement);
-		}
-		return $json->getString();
-	}
-
 
 
 	//

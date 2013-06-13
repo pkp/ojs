@@ -307,6 +307,7 @@
 	<message key="manager.setup.journalStyleSheetInvalid">Invalid journal stylesheet format. Accepted format is .css.</message>
 	<message key="manager.setup.journalTheme">Journal Theme</message>
 	<message key="manager.setup.journalThumbnail">Journal thumbnail</message>
+	<message key="manager.setup.journalThumbnail.altText">Alternate text for thumbnail</message>
 	<message key="manager.setup.journalTitle">Journal title</message>
 	<message key="manager.setup.labelName">Label name</message>
 	<message key="manager.setup.layoutInstructions">Layout Instructions</message>
