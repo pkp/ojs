@@ -991,7 +991,7 @@ class LucenePlugin extends GenericPlugin {
 			// ...or for all journals.
 			} else {
 				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-				$journalIterator = $journalDao->getJournals();
+				$journalIterator = $journalDao->getAll();
 				$journals = $journalIterator->toArray();
 			}
 

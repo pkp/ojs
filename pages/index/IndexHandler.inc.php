@@ -105,23 +105,9 @@ class IndexHandler extends Handler {
 			else $rangeInfo = null;
 			$templateMgr->assign('usePaging', $usePaging);
 
-			// Fetch the alpha list parameters
-			$searchInitial = $request->getUserVar('searchInitial');
-			$templateMgr->assign('searchInitial', $searchInitial);
-			$templateMgr->assign('useAlphalist', $site->getSetting('useAlphalist'));
-
-			$journals = $journalDao->getJournals(
-				true,
-				$rangeInfo,
-				$searchInitial?JOURNAL_FIELD_TITLE:JOURNAL_FIELD_SEQUENCE,
-				$searchInitial?JOURNAL_FIELD_TITLE:null,
-				$searchInitial?'startsWith':null,
-				$searchInitial
-			);
-			$templateMgr->assign_by_ref('journals', $journals);
-			$templateMgr->assign_by_ref('site', $site);
-
-			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
+			$journals = $journalDao->getAll(true, $rangeInfo);
+			$templateMgr->assign('journals', $journals);
+			$templateMgr->assign('site', $site);
 
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('index/site.tpl');

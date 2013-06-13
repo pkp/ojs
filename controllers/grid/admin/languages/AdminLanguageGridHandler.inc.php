@@ -42,7 +42,7 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 		$siteSupportedLocales = $site->getSupportedLocales();
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$contexts = $journalDao->getJournals()->toArray();
+		$contexts = $journalDao->getAll()->toArray();
 		foreach ($contexts as $context) {
 			$primaryLocale = $context->getPrimaryLocale();
 			$supportedLocales = $context->getSetting('supportedLocales');
@@ -67,7 +67,7 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 	 */
 	function _canManage($request) {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals();
+		$journals = $journalDao->getAll();
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 		$journal = $request->getJournal();
 		return ($journals->getCount() == 1 && $journal && in_array(ROLE_ID_MANAGER, $userRoles));

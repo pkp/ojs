@@ -61,7 +61,6 @@
        <message key="admin.mergeUsers.allUsers">Всі користувачі, які мають ролі</message>
        <message key="admin.mergeUsers.confirm">Ви впевнені, що хочете об'єднати обрані облікові записи ({$oldAccountCount}) у єдиний обліковий запис із іменем користувача "{$newUsername}"? Обрані {$oldAccountCount} облікових записів не будуть надалі існувати окремо. Це незворотна дія.</message>
        <message key="admin.mergerUsers.noneEnrolled">Немає користувачів, які мають ролі.</message>
-	<message key="admin.settings.useAlphalist">Відображати на домашній сторінці сайту алфавіт для швидкої навігації між журналами (корисно для сайтів з багатьма журналами).</message>
 	<message key="admin.settings.journalsList.showDescription">Опис журналу</message>
 	<message key="admin.categories">Категорії</message>
 	<message key="admin.categories.disableCategories">Не організовувати журнали за категоріями.</message>

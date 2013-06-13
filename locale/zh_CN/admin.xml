@@ -71,7 +71,6 @@
 	<message key="admin.categories.create">新建一个类别</message>
 	<message key="admin.categories.noneCreated">没有创建任何类别</message>
 	<message key="admin.settings.options">选项</message>
-	<message key="admin.settings.useAlphalist">对于含有许多期刊的网站，在其首页上提供字母列表从而在不同期刊间进行快速的字母导航。</message>
 	<message key="admin.settings.usePaging">含有多本期刊的网站，其期刊表会被分成若干页。</message>
 	<message key="admin.settings.journalsList">期刊元素</message>
 	<message key="admin.settings.journalsList.description">请选择在该网站页面上将为每本期刊所显示的期刊元素。</message>

@@ -60,7 +60,6 @@
 	<message key="admin.mergerUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
 	<message key="admin.settings.options">Opções</message>
-	<message key="admin.settings.useAlphalist">Para sites com muitas publicações, exibir uma lista alfabética na página inicial, permitindo uma navegação alfabética rápida entre as publicações.</message>
 	<message key="admin.settings.usePaging">Para sites com muitas publicações, quebrar a lista em várias páginas.</message>
 	<message key="admin.settings.journalsList">Elementos da publicação</message>
 	<message key="admin.settings.journalsList.description">Escolha os elementos da publicação que serão exibidos para cada publicação na página do site.</message>

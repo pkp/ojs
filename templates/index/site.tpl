@@ -16,10 +16,6 @@
 
 <a name="journals"></a>
 
-{if $useAlphalist}
-	<p>{foreach from=$alphaList item=letter}<a href="{url searchInitial=$letter sort="title"}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
-{/if}
-
 {iterate from=journals item=journal}
 	{if $site->getSetting('showThumbnail')}
 		{assign var="displayJournalThumbnail" value=$journal->getLocalizedSetting('journalThumbnail')}

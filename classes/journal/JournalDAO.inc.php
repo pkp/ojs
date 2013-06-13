@@ -143,93 +143,12 @@ class JournalDAO extends ContextDAO {
 	}
 
 	/**
-	 * Retrieve all journals.
-	 * @param $enabledOnly boolean True to return enabled journals only
-	 * @param $rangeInfo object optional
-	 * @param $sortBy JOURNAL_FIELD_... optional sorting parameter
-	 * @param $searchField JOURNAL_FIELD_... optional filter parameter
-	 * @param $searchMatch string 'is', 'contains', 'startsWith' optional
-	 * @param $search string optional
-	 * @return DAOResultFactory containing matching journals
-	 */
-	function getJournals($enabledOnly = false, $rangeInfo = null, $sortBy = JOURNAL_FIELD_SEQUENCE, $searchField = null, $searchMatch = null, $search = null) {
-		$joinSql = $whereSql = $orderBySql = '';
-		$params = array();
-		$needTitleJoin = false;
-
-		// Handle sort conditions
-		switch ($sortBy) {
-			case JOURNAL_FIELD_TITLE:
-				$needTitleJoin = true;
-				$orderBySql = 'COALESCE(jsl.setting_value, jsl.setting_name)';
-				break;
-			case JOURNAL_FIELD_SEQUENCE:
-				$orderBySql = 'j.seq';
-				break;
-		}
-
-		// Handle search conditions
-		switch ($searchField) {
-			case JOURNAL_FIELD_TITLE:
-				$needTitleJoin = true;
-				$whereSql .= ($whereSql?' AND ':'') . ' COALESCE(jsl.setting_value, jsl.setting_name) ';
-				switch ($searchMatch) {
-					case 'is':
-						$whereSql .= ' = ?';
-						$params[] = $search;
-						break;
-					case 'contains':
-						$whereSql .= ' LIKE ?';
-						$params[] = "%search%";
-						break;
-					default: // $searchMatch === 'startsWith'
-						$whereSql .= ' LIKE ?';
-						$params[] = "$search%";
-						break;
-				}
-				break;
-		}
-
-		// If we need to join on the journal name (for sort or filter),
-		// include it.
-		if ($needTitleJoin) {
-			$joinSql .= ' LEFT JOIN journal_settings jspl ON (jspl.setting_name = ? AND jspl.locale = ? AND jspl.journal_id = j.journal_id) LEFT JOIN journal_settings jsl ON (jsl.setting_name = ? AND jsl.locale = ? AND jsl.journal_id = j.journal_id)';
-			$params = array_merge(
-				array(
-					'name',
-					AppLocale::getPrimaryLocale(),
-					'name',
-					AppLocale::getLocale()
-				),
-				$params
-			);
-		}
-
-		// Handle filtering conditions
-		if ($enabledOnly) $whereSql .= ($whereSql?'AND ':'') . 'j.enabled=1 ';
-
-		// Clean up SQL strings
-		if ($whereSql) $whereSql = "WHERE $whereSql";
-		if ($orderBySql) $orderBySql = "ORDER BY $orderBySql";
-		$result = $this->retrieveRange(
-			"SELECT	j.*
-			FROM	journals j
-				$joinSql
-				$whereSql
-				$orderBySql",
-			$params, $rangeInfo
-		);
-
-		return new DAOResultFactory($result, $this, '_fromRow');
-	}
-
-	/**
 	 * Retrieve the IDs and titles of all journals in an associative array.
 	 * @return array
 	 */
-	function &getTitles($enabledOnly = false) {
+	function getTitles($enabledOnly = false) {
 		$journals = array();
-		$journalIterator = $this->getJournals($enabledOnly);
+		$journalIterator = $this->getAll($enabledOnly);
 		while ($journal = $journalIterator->next()) {
 			$journals[$journal->getId()] = $journal->getLocalizedName();
 		}

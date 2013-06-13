@@ -104,7 +104,7 @@ class GatewayHandler extends Handler {
 
 		} else {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journals = $journalDao->getJournals(true);
+			$journals = $journalDao->getAll(true);
 			$templateMgr->assign_by_ref('journals', $journals);
 		}
 
@@ -189,7 +189,7 @@ class GatewayHandler extends Handler {
 
 		} else {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journals = $journalDao->getJournals(true);
+			$journals = $journalDao->getAll(true);
 			$templateMgr->assign('journals', $journals);
 		}
 

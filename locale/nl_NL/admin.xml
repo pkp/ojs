@@ -77,5 +77,4 @@
 	<message key="admin.settings.journalsList">Tijdschriftelementen</message>
 	<message key="admin.settings.journalsList.description">Kies de tijdschriftelementen die voor ieder tijdschrift getoond worden op de pagina van de site</message>
 	<message key="admin.settings.journalsList.showThumbnail">Miniatuur van het tijdschrift</message>
-	<message key="admin.settings.useAlphalist">Toon een alfabetische lijst op de homepagina, om bij sites met veel tijdschriften snel op alfabet te kunnen navigeren.</message>
 </locale>

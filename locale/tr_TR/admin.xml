@@ -59,7 +59,6 @@
 	<message key="admin.mergeUsers.allUsers">Tüm Kayıtlı Üyeler</message>
 	<message key="admin.mergeUsers.confirm">Seçilen {$oldAccountCount} hesap/hesapları "{$newUsername}" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Kayıtlı olmayan üyeler.</message>
-	<message key="admin.settings.useAlphalist">Birden çok dergi olan siteler için, dergiler arasında hızlı yönlendirmeyi sağlayan alfabetik liste göstermektedir.</message>
 	<message key="admin.settings.journalsList.description">Lütfen site sayfasında her bir dergi için listelenen dergi elemanlarını seçiniz.</message>
 	<message key="admin.categories.enable.description">Dergilerin geniş kümeler düzenlemenize yardımcı olmak için Site Yöneticisi burada kategorileri tanımlayarak bir dizi seçebilir. Dergi yöneticisi her bir dergi için bu kategorilerden birçoğunu seçebilir ve okuyucular dergi koleksiyonlarını katagorilere göre listeleyebilir.</message>
 	<message key="admin.categories.editTitle">Kategori Düzenle</message>

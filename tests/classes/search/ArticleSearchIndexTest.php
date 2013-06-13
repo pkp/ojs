@@ -398,7 +398,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	private function registerMockJournalDAO() {
 		// Mock a JournalDAO.
-		$journalDao = $this->getMock('JournalDAO', array('getJournals'), array(), '', false);
+		$journalDao = $this->getMock('JournalDAO', array('getAll'), array(), '', false);
 
 		// Mock an empty result set.
 		$journals = array();
@@ -406,7 +406,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 
 		// Mock the getById() method.
 		$journalDao->expects($this->any())
-		           ->method('getJournals')
+		           ->method('getAll')
 		           ->will($this->returnValue($journalsIterator));
 
 		// Register the mock DAO.

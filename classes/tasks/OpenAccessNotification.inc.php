@@ -96,7 +96,7 @@ class OpenAccessNotification extends ScheduledTask {
 
 	function execute() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals(true);
+		$journals = $journalDao->getAll(true);
 
 		$todayDate = array(
 			'year' => date('Y'),
@@ -125,7 +125,7 @@ class OpenAccessNotification extends ScheduledTask {
 				$curDate['year'] = $todayDate['year'];
 			}
 
-			$journals = $journalDao->getJournals(true);
+			$journals = $journalDao->getAll(true);
 			while ($journal = $journals->next()) {
 				// Send reminders for simulated 31st day of short month		
 				$this->sendNotifications($journal, $curDate);
@@ -140,7 +140,7 @@ class OpenAccessNotification extends ScheduledTask {
 			$curDate['month'] = 2;
 			$curDate['year'] = $todayDate['year'];
 
-			$journals = $journalDao->getJournals(true);
+			$journals = $journalDao->getAll(true);
 			while ($journal = $journals->next()) {
 				// Send reminders for simulated 30th day of February		
 				$this->sendNotifications($journal, $curDate);
@@ -151,7 +151,7 @@ class OpenAccessNotification extends ScheduledTask {
 
 				$curDate['day'] = 29;
 
-				$journals = $journalDao->getJournals(true);
+				$journals = $journalDao->getAll(true);
 				while ($journal = $journals->next()) {
 					// Send reminders for simulated 29th day of February		
 					$this->sendNotifications($journal, $curDate);

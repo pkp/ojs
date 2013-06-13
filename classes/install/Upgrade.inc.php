@@ -404,7 +404,7 @@ class Upgrade extends Installer {
 		$testRow = $vocabTestResult->GetRowAssoc(false);
 		if ($testRow['total'] > 0) return true;
 
-		$journals = $journalDao->getJournals();
+		$journals = $journalDao->getAll();
 		while ($journal = $journals->next()) {
 			// for languages, we depend on the journal locale settings since languages are not localized.
 			// Use Journal locales, or primary if no defined submission locales.
@@ -517,7 +517,7 @@ class Upgrade extends Installer {
 
 		// iterate through all journals and assign remaining users to their respective groups.
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals();
+		$journals = $journalDao->getAll();
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_PKP_DEFAULT);
 

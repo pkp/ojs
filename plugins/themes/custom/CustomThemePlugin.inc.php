@@ -150,7 +150,7 @@ class CustomThemePlugin extends ThemePlugin {
 
 		// Duplicate the stylesheet for journals that use this plugin.
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals();
+		$journals = $journalDao->getAll();
 		$success = true;
 		while ($journal = $journals->next()) {
 			if ($journal->getSetting('journalTheme') == 'custom') {

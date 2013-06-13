@@ -71,12 +71,12 @@ class ArticleSearch extends SubmissionSearch {
 			if (!empty($searchFilters['searchJournal'])) {
 				$journal = $journalDao->getById($searchFilters['searchJournal']);
 			} elseif (array_key_exists('journalTitle', $request->getUserVars())) {
-				$journals = $journalDao->getJournals(
-					false, null, JOURNAL_FIELD_TITLE,
-					JOURNAL_FIELD_TITLE, 'is', $request->getUserVar('journalTitle')
-				);
-				if ($journals->getCount() == 1) {
-					$journal = $journals->next();
+				$journals = $journalDao->getTitles(false);
+				while ($journal = $journals->next()) {
+					if (in_array(
+						$request->getUserVar('journalTitle'),
+						(array) $journal->getTitle(null)
+					)) break;
 				}
 			}
 		}

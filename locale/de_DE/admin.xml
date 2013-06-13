@@ -14,7 +14,6 @@
 	<message key="admin.hostedJournals">Zeitschriften auf dieser Website</message>
 	<message key="admin.settings.journalRedirect">Umleitung zu der Zeitschrift</message>
 	<message key="admin.settings.options">Optionen</message>
-	<message key="admin.settings.useAlphalist">Zeige bei Installationen mit mehreren Zeitschriften eine alphabetische Liste auf der Startseite, um eine schnelle alphabetische Navigation zwischen den Zeitschriften zu ermöglichen.</message>
 	<message key="admin.settings.usePaging">Teile bei Installationen mit mehreren Zeitschriften die Liste der Zeitschriften auf mehrere Seiten auf.</message>
 	<message key="admin.settings.journalRedirectInstructions">Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird.</message>
 	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>

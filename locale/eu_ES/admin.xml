@@ -60,7 +60,6 @@
 	<message key="admin.languages.installNewLocalesInstructions">Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko.</message>
 	<message key="admin.journals.createInstructions">Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko.</message>
 	<message key="admin.settings.options">Aukerak</message>
-	<message key="admin.settings.useAlphalist">Aldizkari bat baino gehiago duten webguneetan, erakutsi hasierako orrian zerrenda alfabetiko bat, aldizkarien artean nabigazio alfabetiko bizkorra egiteko.</message>
 	<message key="admin.settings.usePaging">Aldizkari ugari dituzten webguneetan, banatu aldizkarien zerrenda hainbat orritan.</message>
 	<message key="admin.settings.journalsList">Aldizkariaren elementuak</message>
 	<message key="admin.settings.journalsList.description">Mesedez, aukeratu webgunean aldizkari bakoitzak bistaratuko dituen aldizkariaren elementuak.</message>

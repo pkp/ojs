@@ -290,7 +290,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
 
-			$journals = $journalDao->getJournals();
+			$journals = $journalDao->getAll();
 			while ($journal = $journals->next()) {
 				$numIndexed = 0;
 

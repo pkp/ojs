@@ -35,7 +35,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 		$plugins = parent::getCategoryData($categoryDataElement, $filter);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals();
+		$journals = $journalDao->getAll();
 		$singleJournal = false;
 		if ($journals->getCount() == 1) {
 			$singleJournal = true;

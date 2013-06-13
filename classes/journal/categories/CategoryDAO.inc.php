@@ -52,7 +52,7 @@ class CategoryDAO extends ControlledVocabDAO {
 
 		// Add each journal's categories to the data structure
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals(true);
+		$journals = $journalDao->getAll(true);
 		while ($journal = $journals->next()) {
 			$selectedCategories = $journal->getSetting('categories');
 			foreach ((array) $selectedCategories as $categoryId) {

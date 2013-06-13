@@ -76,6 +76,5 @@
 	<message key="admin.settings.journalsList.description">Scegli gli elementi da mostrare per ciascuna rivista nella home page del sito.</message>
 	<message key="admin.settings.journalsList">Elementi della rivista</message>
 	<message key="admin.settings.usePaging">In siti con molte riviste, spezza la lista in diverse pagine.</message>
-	<message key="admin.settings.useAlphalist">Per siti con molte riviste, mostra una lista alfabetica nella home page del sito per permettere una rapida navigazione tra tutte le riviste ospitate.</message>
 	<message key="admin.categories.enable.description">L'amministratore del sito può definire qui un set di categorie per migliorare l'organizzazione di siti che ospitano molte riviste. Gli amministratori delle riviste possono poi scegliere alcune di queste categorie per ciascuna rivista e i lettori possono navigare attraverso le riviste per categorie.</message>
 </locale>

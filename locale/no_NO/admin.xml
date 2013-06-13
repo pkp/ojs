@@ -70,7 +70,6 @@
 	<message key="admin.categories.create">Lag ny kategori</message>
 	<message key="admin.categories.noneCreated">Ingen kategorier er laget.</message>
 	<message key="admin.settings.options">Valg</message>
-	<message key="admin.settings.useAlphalist">For nettsted med mange tidsskrift: Vis en alfabetisk liste på hjemmesiden, slik at man lett kan navigere mellom tidsskriftene.</message>
 	<message key="admin.settings.usePaging">Dersom nettstedet har mange tidsskrift: Bryt tidsskrift listen opp over flere sider.</message>
 	<message key="admin.settings.journalsList">Tidsskriftelementer</message>
 	<message key="admin.settings.journalsList.description">Velg de tidsskriftelementer som skal vises for hvert tidsskrift på nettstedet.</message>

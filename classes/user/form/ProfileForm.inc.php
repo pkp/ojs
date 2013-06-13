@@ -29,7 +29,7 @@ class ProfileForm extends PKPProfileForm {
 		$templateMgr = TemplateManager::getManager($request);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getJournals(true);
+		$journals = $journalDao->getAll(true);
 		while ($thisJournal = $journals->next()) {
 			if ($thisJournal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $thisJournal->getSetting('enableOpenAccessNotification')) {
 				$templateMgr->assign('displayOpenAccessNotification', true);
@@ -50,7 +50,7 @@ class ProfileForm extends PKPProfileForm {
 		$openAccessNotify = $request->getUserVar('openAccessNotify');
 
 		$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
-		$journals = $journalDao->getJournals(true);
+		$journals = $journalDao->getAll(true);
 		while ($thisJournal = $journals->next()) {
 			if ($thisJournal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $thisJournal->getSetting('enableOpenAccessNotification')) {
 				$currentlyReceives = $user->getSetting('openAccessNotification', $thisJournal->getId());

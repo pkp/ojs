@@ -56,7 +56,7 @@ class RTAdminHandler extends Handler {
 
 			$journals = array();
 
-			$allJournals = $journalDao->getJournals();
+			$allJournals = $journalDao->getAll();
 			$allJournals = $allJournals->toArray();
 
 			foreach ($allJournals as $journal) {
