@@ -1797,3 +1797,41 @@ div.ui-pnotify-container {
   color:#a0b0a0 !important;
   border-color:#a0b0a0 !important;
 }
+div.tocArticle { width:100%; }
+div.tocArticle div.tocTitle {
+  text-align:left;
+  clear:both;
+  width:85%;
+}
+div.tocArticle div.tocTitle a { text-decoration:none; }
+div.tocArticle span.tocGalleys { padding-left:5px; }
+div.tocArticle span.tocGalleys a {
+  text-decoration:none;
+  background-color:#bdd6bd;
+  padding:2px;
+}
+div.tocArticle div.tocAuthors {
+  float:left;
+  width:85%;
+  padding-bottom:5px;
+  font-style:italic;
+}
+div.tocArticle div.tocAuthors .tocGalleys { font-style:normal; }
+div.tocArticle div.tocPages {
+  float:right;
+  width:15%;
+  padding-bottom:5px;
+  text-align:right;
+}
+.tocArticleCoverImage img {
+  border:0;
+  float:left;
+  width:100px;
+  margin:0 1em 1em 0;
+}
+h4.tocSectionTitle {
+  clear:both;
+  border-bottom:1px black dotted;
+  padding-bottom:5px;
+  margin-bottom:10px;
+}
