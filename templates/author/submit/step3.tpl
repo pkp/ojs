@@ -159,6 +159,14 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][lastName]" id="authors-0-lastName" size="20" maxlength="90" /></td>
 </tr>
 <tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" /></td>
+</tr>
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-0-url" key="user.url"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][url]" id="authors-0-url" size="30" maxlength="255" /></td>
+</tr>
+<tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-affiliation" key="user.affiliation"}</td>
 	<td width="80%" class="value">
 		<textarea name="authors[0][affiliation][{$formLocale|escape}]" class="textArea" id="authors-0-affiliation" rows="5" cols="40"></textarea><br/>
@@ -173,14 +181,6 @@ function moveAuthor(dir, authorIndex) {
 			{html_options options=$countries}
 		</select>
 	</td>
-</tr>
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" /></td>
-</tr>
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors-0-url" required="true" key="user.url"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][url]" id="authors-0-url" size="30" maxlength="255" /></td>
 </tr>
 {if $currentJournal->getSetting('requireAuthorCompetingInterests')}
 <tr valign="top">
