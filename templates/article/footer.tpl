@@ -61,8 +61,10 @@
 			var range = document.selection.createRange();
 			term = range.text;
 		}
-		if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
-		else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+		if (term != ""){
+			if (url.indexOf('?') > -1) openRTWindowWithToolbar(url + '&defineTerm=' + term);
+			else openRTWindowWithToolbar(url + '?defineTerm=' + term);
+		}
 	}
 
 	if(document.captureEvents) {
