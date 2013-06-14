@@ -332,31 +332,6 @@ class QuickSubmitForm extends Form {
 		assert(false); // FIXME: $decisionLabels missing from call below.
 		SectionEditorAction::recordDecision($this->request, $sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
 
-		// Create signoff infrastructure
-		$copyeditInitialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
-		$copyeditAuthorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
-		$copyeditFinalSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $articleId);
-		$copyeditInitialSignoff->setUserId(0);
-		$copyeditAuthorSignoff->setUserId($user->getId());
-		$copyeditFinalSignoff->setUserId(0);
-		$signoffDao->updateObject($copyeditInitialSignoff);
-		$signoffDao->updateObject($copyeditAuthorSignoff);
-		$signoffDao->updateObject($copyeditFinalSignoff);
-
-		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-		$layoutSignoff->setUserId(0);
-		$signoffDao->updateObject($layoutSignoff);
-
-		$proofAuthorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $articleId);
-		$proofProofreaderSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
-		$proofLayoutEditorSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-		$proofAuthorSignoff->setUserId($user->getId());
-		$proofProofreaderSignoff->setUserId(0);
-		$proofLayoutEditorSignoff->setUserId(0);
-		$signoffDao->updateObject($proofAuthorSignoff);
-		$signoffDao->updateObject($proofProofreaderSignoff);
-		$signoffDao->updateObject($proofLayoutEditorSignoff);
-
 		import('classes.author.form.submit.AuthorSubmitForm');
 		AuthorSubmitForm::assignEditors($article);
 

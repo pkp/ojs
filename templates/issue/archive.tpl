@@ -49,5 +49,5 @@
 	{translate key="current.noCurrentIssueDesc"}
 {/if}
 </div>
-{include file="common/footer.tpl"}
 
+{include file="common/footer.tpl"}

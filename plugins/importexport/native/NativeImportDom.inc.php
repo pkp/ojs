@@ -806,34 +806,6 @@ class NativeImportDom {
 		// Create submission mangement records
 		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 
-		$initialCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $article->getId());
-		$initialCopyeditSignoff->setUserId(0);
-		$signoffDao->updateObject($initialCopyeditSignoff);
-
-		$authorCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getId());
-		$authorCopyeditSignoff->setUserId(0);
-		$signoffDao->updateObject($authorCopyeditSignoff);
-
-		$finalCopyeditSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, $article->getId());
-		$finalCopyeditSignoff->setUserId(0);
-		$signoffDao->updateObject($finalCopyeditSignoff);
-
-		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
-		$layoutSignoff->setUserId(0);
-		$signoffDao->updateObject($layoutSignoff);
-
-		$authorProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_AUTHOR', ASSOC_TYPE_ARTICLE, $article->getId());
-		$authorProofSignoff->setUserId(0);
-		$signoffDao->updateObject($authorProofSignoff);
-
-		$proofreaderProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $article->getId());
-		$proofreaderProofSignoff->setUserId(0);
-		$signoffDao->updateObject($proofreaderProofSignoff);
-
-		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $article->getId());
-		$layoutProofSignoff->setUserId(0);
-		$signoffDao->updateObject($layoutProofSignoff);
-
 		// Log the import in the article event log.
 		import('lib.pkp.classes.log.SubmissionLog');
 		SubmissionLog::logEventHeadless(

@@ -21,7 +21,6 @@ import('classes.submission.reviewer.ReviewerSubmission');
 class SectionEditorSubmissionDAO extends ArticleDAO {
 	var $userDao;
 	var $reviewAssignmentDao;
-	var $copyeditorSubmissionDao;
 	var $articleFileDao;
 	var $suppFileDao;
 	var $signoffDao;
@@ -198,19 +197,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 			);
 		}
 
-		// Update copyeditor assignment
-		$copyeditSignoff = $this->signoffDao->getBySymbolic('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $sectionEditorSubmission->getId());
-		if ($copyeditSignoff) {
-			$copyeditorSubmission =& $this->copyeditorSubmissionDao->getCopyeditorSubmission($sectionEditorSubmission->getId());
-		} else {
-			$copyeditorSubmission = new CopyeditorSubmission();
-		}
-
-		// Only update the fields that an editor can modify.
-		$copyeditorSubmission->setId($sectionEditorSubmission->getId());
-		$copyeditorSubmission->setDateStatusModified($sectionEditorSubmission->getDateStatusModified());
-		$copyeditorSubmission->setLastModified($sectionEditorSubmission->getLastModified());
-
 		// update review assignments
 		foreach ($sectionEditorSubmission->getReviewAssignments() as $roundReviewAssignments) {
 			foreach ($roundReviewAssignments as $reviewAssignment) {
@@ -312,9 +298,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 			case 'authors': return 'author_name';
 			case 'title': return 'submission_title';
 			case 'active': return 'incomplete';
-			case 'subCopyedit': return 'copyedit_completed';
-			case 'subLayout': return 'layout_completed';
-			case 'subProof': return 'proofread_completed';
 			case 'reviewerName': return 'u.last_name';
 			case 'quality': return 'average_quality';
 			case 'done': return 'completed';

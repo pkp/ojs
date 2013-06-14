@@ -136,17 +136,6 @@ class NotificationManager extends PKPNotificationManager {
 			if ($userId == $editAssignment->getEditorId()) $roles[] = ROLE_ID_SECTION_EDITOR;
 		}
 
-		// Check if user is copy/layout editor or proofreader
-		$signoffDao = DAORegistry::getDAO('SignoffDAO'); /* @var $signoffDao SignoffDAO */
-		$copyedSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $articleId);
-		if ($userId == $copyedSignoff->getUserId()) $roles[] = ROLE_ID_COPYEDITOR;
-
-		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
-		if ($userId == $layoutSignoff->getUserId()) $roles[] = ROLE_ID_LAYOUT_EDITOR;
-
-		$proofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
-		if ($userId == $proofSignoff->getUserId()) $roles[] = ROLE_ID_PROOFREADER;
-
 		// Check if user is author
 		if ($article && $userId == $article->getUserId()) $roles[] = ROLE_ID_AUTHOR;
 
