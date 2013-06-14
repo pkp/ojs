@@ -89,7 +89,7 @@ class ArticleReportDAO extends DAO {
 		}
 
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$articles = $articleDao->getByJournalId($journalId);
+		$articles = $articleDao->getByContextId($journalId);
 		$authorsReturner = array();
 		$index = 1;
 		while ($article = $articles->next()) {

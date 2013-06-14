@@ -296,7 +296,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedName())) . ' ... ';
 
-				$articles = $articleDao->getByJournalId($journal->getId());
+				$articles = $articleDao->getByContextId($journal->getId());
 				while ($article = $articles->next()) {
 					if ($article->getDateSubmitted()) {
 						self::articleMetadataChanged($article);

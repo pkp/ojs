@@ -252,26 +252,6 @@ class ArticleDAO extends SubmissionDAO {
 	}
 
 	/**
-	 * Get all articles for a journal (or all articles in the system).
-	 * @param $journalId int
-	 * @return DAOResultFactory containing matching Articles
-	 */
-	function getByJournalId($journalId = null) {
-		return parent::getByContextId($journalId);
-	}
-
-	/**
-	 * Delete all articles by journal ID.
-	 * @param $journalId int
-	 */
-	function deleteByJournalId($journalId) {
-		$articles = $this->getByJournalId($journalId);
-		while ($article = $articles->next()) {
-			$this->deleteById($article->getId());
-		}
-	}
-
-	/**
 	 * Get the ID of the journal an article is in.
 	 * @param $articleId int
 	 * @return int
@@ -425,7 +405,7 @@ class ArticleDAO extends SubmissionDAO {
 		$journalId = (int) $journalId;
 		$settingName = 'pub-id::'.$pubIdType;
 
-		$articles = $this->getByJournalId($journalId);
+		$articles = $this->getByContextId($journalId);
 		while ($article = $articles->next()) {
 			$this->update(
 				'DELETE FROM submission_settings WHERE setting_name = ? AND submission_id = ?',
