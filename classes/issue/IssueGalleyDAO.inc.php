@@ -123,7 +123,7 @@ class IssueGalleyDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		} else {
-			HookRegistry::call('IssueGalleyDAO::getByPubId', array(&$galleyId, &$issueId, &$returner));
+			HookRegistry::call('IssueGalleyDAO::getByPubId', array(&$pubIdType, &$pubId, &$issueId, &$returner));
 		}
 		$result->Close();
 		return $returner;

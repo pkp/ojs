@@ -43,12 +43,10 @@ class ArticleTombstoneManager {
 		$articleTombstone->setSetName($section->getLocalizedTitle());
 		$articleTombstone->setOAIIdentifier($oaiIdentifier);
 		$articleTombstone->setOAISetObjectsIds($OAISetObjectsIds);
-		$tombstoneId = $tombstoneDao->insertObject($articleTombstone);
+		$tombstoneDao->insertObject($articleTombstone);
 
 		if (HookRegistry::call('ArticleTombstoneManager::insertArticleTombstone', array(&$articleTombstone, &$article, &$journal))) return;
 	}
-
-
 }
 
 ?>

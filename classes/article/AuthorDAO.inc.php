@@ -86,8 +86,7 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * @param $includeEmail Whether or not to include the email in the select distinct
 	 * @return array Authors ordered by sequence
 	 */
-	function &getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
-		$authors = array();
+	function getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
 		$params = array(
 			'affiliation', AppLocale::getPrimaryLocale(),
 			'affiliation', AppLocale::getLocale()
@@ -131,8 +130,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSimpleAuthorFromRow');
-		return $returner;
+		return new DAOResultFactory($result, $this, '_returnSimpleAuthorFromRow');
 	}
 
 	/**

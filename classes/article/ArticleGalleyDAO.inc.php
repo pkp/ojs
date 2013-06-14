@@ -184,8 +184,6 @@ class ArticleGalleyDAO extends DAO {
 	 * @return array ArticleGalleys
 	 */
 	function getByArticleId($articleId) {
-		$galleys = array();
-
 		$result = $this->retrieve(
 				'SELECT g.*
 				FROM submission_galleys g

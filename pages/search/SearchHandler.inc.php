@@ -235,7 +235,7 @@ class SearchHandler extends Handler {
 			$searchInitial = $request->getUserVar('searchInitial');
 			$rangeInfo = $this->getRangeInfo($request, 'authors');
 
-			$authors =& $authorDao->getAuthorsAlphabetizedByJournal(
+			$authors = $authorDao->getAuthorsAlphabetizedByJournal(
 				isset($journal)?$journal->getId():null,
 				$searchInitial,
 				$rangeInfo

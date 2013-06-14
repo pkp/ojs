@@ -119,7 +119,6 @@ class NotificationManager extends PKPNotificationManager {
 	function _getHighestPrivilegedRolesForArticle($request, $articleId) {
 		$user = $request->getUser();
 		$userId = $user->getId();
-		$roleDao = DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
 		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 
 		$roles = array();

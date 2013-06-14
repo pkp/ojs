@@ -64,10 +64,6 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return PublishedArticle objects array
 	 */
 	function getPublishedArticles($issueId) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-		$locale = AppLocale::getLocale();
-		$publishedArticles = array();
-
 		$params = array_merge(
 			$this->_getFetchParameters(),
 			array(
@@ -93,6 +89,7 @@ class PublishedArticleDAO extends ArticleDAO {
 
 		$result = $this->retrieve($sql, $params);
 
+		$publishedArticles = array();
 		while (!$result->EOF) {
 			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
@@ -246,10 +243,9 @@ class PublishedArticleDAO extends ArticleDAO {
 	/**
 	 * Retrieve Published Article by pub id
 	 * @param $publishedArticleId int
-	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleById($publishedArticleId, $simple = false) {
+	function getPublishedArticleById($publishedArticleId) {
 		$result = $this->retrieve(
 			'SELECT * FROM published_submissions WHERE published_submission_id = ?', (int) $publishedArticleId
 		);

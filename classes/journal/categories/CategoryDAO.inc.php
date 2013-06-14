@@ -78,9 +78,9 @@ class CategoryDAO extends ControlledVocabDAO {
 	 * @return array
 	 */
 	function getCache() {
-		// The following line is only for classloading purposes
-		$categoryEntryDao = $this->getEntryDAO();
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		// The following lines are only for classloading purposes
+		$this->getEntryDAO();
+		DAORegistry::getDAO('JournalDAO');
 
 		// Load and return the cache, building it if necessary.
 		$filename = $this->getCacheFilename();

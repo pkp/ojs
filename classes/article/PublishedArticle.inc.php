@@ -114,8 +114,6 @@ class PublishedArticle extends Article {
 	 * @return array ArticleGalley
 	 */
 	function getLocalizedGalleys() {
-		$primaryLocale = AppLocale::getPrimaryLocale();
-
 		$allGalleys = $this->getData('galleys');
 		$galleys = array();
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $tryLocale) {
@@ -125,7 +123,7 @@ class PublishedArticle extends Article {
 				}
 			}
 			if (!empty($galleys)) {
-				HookRegistry::call('ArticleGalleyDAO::getLocalizedGalleysByArticle', array(&$galleys, &$articleId));
+				HookRegistry::call('ArticleGalleyDAO::getLocalizedGalleysByArticle', array(&$galleys));
 				return $galleys;
 			}
 		}

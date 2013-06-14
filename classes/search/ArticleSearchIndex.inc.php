@@ -146,7 +146,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 			// Index galley files
 			$fileDao = DAORegistry::getDAO('SubmissionFileDAO');
-			$files = $submissionFiles = $fileDao->getLatestRevisions(
+			$files = $fileDao->getLatestRevisions(
 				$article->getId(), WORKFLOW_STAGE_ID_PRODUCTION
 			);
 			foreach ($files as $file) {
@@ -231,7 +231,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	function articleDeleted($articleId) {
 		// Trigger a hook to let the indexing back-end know that
 		// an article was deleted.
-		$hookResult = HookRegistry::call(
+		HookRegistry::call(
 			'ArticleSearchIndex::articleDeleted',
 			array($articleId)
 		);
@@ -247,7 +247,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	function articleChangesFinished() {
 		// Trigger a hook to let the indexing back-end know that
 		// the index may be updated.
-		$hookResult = HookRegistry::call(
+		HookRegistry::call(
 			'ArticleSearchIndex::articleChangesFinished'
 		);
 

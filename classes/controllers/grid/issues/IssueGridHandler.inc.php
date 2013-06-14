@@ -101,6 +101,7 @@ class IssueGridHandler extends GridHandler {
 	 * @param $issueGridCellProvider IssueGridCellProvider
 	 */
 	protected function _addCenterColumns($issueGridCellProvider) {
+		// Default implementation does nothing.
 	}
 
 	/**
