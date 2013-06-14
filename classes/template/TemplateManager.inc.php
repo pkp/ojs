@@ -214,7 +214,6 @@ class TemplateManager extends PKPTemplateManager {
 
 		$page = $iterator->getPage();
 		$pageCount = $iterator->getPageCount();
-		$itemTotal = $iterator->getCount();
 
 		$pageBase = max($page - floor($numPageLinks / 2), 1);
 		$paramName = $name . 'Page';

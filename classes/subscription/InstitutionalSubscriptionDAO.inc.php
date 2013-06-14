@@ -295,7 +295,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		if ($this->_insertSubscription($institutionalSubscription)) {
 			$subscriptionId = $institutionalSubscription->getId();
 
-			$returner = $this->update(
+			$this->update(
 				'INSERT INTO institutional_subscriptions
 				(subscription_id, institution_name, mailing_address, domain)
 				VALUES
