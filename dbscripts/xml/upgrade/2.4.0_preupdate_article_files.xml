@@ -15,6 +15,7 @@
 	<!-- Bug #6128: Change paper_files 'type' column to 'file_stage' -->
 	<sql>
 		<!-- First, change all strings to their integer equivalents -->
+		<query>DELETE FROM article_files WHERE type = 'temp'</query><!-- Bug #8264 -->
 		<query>UPDATE article_files SET type = 1 WHERE type = 'submission/original'</query><!-- ARTICLE_FILE_SUBMISSION -->
 		<query>UPDATE article_files SET type = 2 WHERE type = 'submission/review'</query><!-- ARTICLE_FILE_REVIEW -->
 		<query>UPDATE article_files SET type = 3 WHERE type = 'submission/editor'</query><!-- ARTICLE_FILE_EDITOR -->
