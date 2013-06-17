@@ -700,7 +700,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Taşınabilir Döküman Biçimi (PDF)</message>
 	<message key="article.pdf.download">PDF İndir</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Web tarayıcınıza bir PDF okuyucu eklentisi kuruluysa seçtiğiniz PDF dosyası buraya yüklenecetir. (örneğin; <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>'ın güncel sürümü).</p><p> Alternatif olarak, PDF okuyucusu kullanarak açmak için dosyayı doğrudan bilgisayarınıza yükleyebilirsiniz. PDF dosyayı indirmek için aşağıdaki indir bağlantısını tıklayın.</p> <p> Nasıl yazdırabileceğiniz, kaydedebileceğiniz ve PDF'le nasıl çalışabileceğiniz konusunda daha fazla yardıma ihtiyaç duyarsanız, Highwire Press <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDF'lerle ilgili Sıkça Sorulan Sorular</ a> desteği verir.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Web tarayıcınıza bir PDF okuyucu eklentisi kuruluysa seçtiğiniz PDF dosyası buraya yüklenecetir. (örneğin; <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>'ın güncel sürümü).</p><p> Alternatif olarak, PDF okuyucusu kullanarak açmak için dosyayı doğrudan bilgisayarınıza yükleyebilirsiniz. PDF dosyayı indirmek için aşağıdaki indir bağlantısını tıklayın.</p>]]></message>
 	
 	<!-- PDF ve HTML dışı gönderiler için ara sayfa -->
 	<message key="article.nonpdf.title">Makale İndir</message>

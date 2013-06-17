@@ -752,8 +752,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Download this PDF file</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p> <p>Alternatively, you can download the PDF file directly to your computer, from where it can be opened using a PDF reader. To download the PDF, click the Download link above.</p>]]></message>
-
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p>]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Article Download</message>

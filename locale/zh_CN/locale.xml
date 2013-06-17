@@ -1183,7 +1183,7 @@ Note that if your site administrator has already registered this site with these
 </ol>]]></message>
 	<message key="user.register.reviewerInterests">识别审稿利益冲突 （实质性领域和研究方法）：</message>
 	<message key="user.subscriptions.statusInformation">活跃和无效的订阅将会随着到期日列在下面。此外，下面的状态信息可以包含在每个订阅之中。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>如果您的Web浏览器安装了PDF阅读器插件（如，最新的版本<a href="http://www.adobe.com/products/acrobat/readstep2.html"> Adobe Acrobat Reader</a>).您所选择的PDF文件应加载到这里。</p> <p>如果您想要有关如何打印、保存和使用PDFs的更多信息，Highwire Press 为您提供了一个有帮助的<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">有关PDFs的常问问题</a>.</p> <p>或者，您可以直接将PDF文件下载到您的电脑，在电脑上使用PDF阅读器将其打开。如果要下载PDF，点击上面的下载链接。</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>如果您的Web浏览器安装了PDF阅读器插件（如，最新的版本<a href="http://www.adobe.com/products/acrobat/readstep2.html"> Adobe Acrobat Reader</a>).您所选择的PDF文件应加载到这里。</p>]]></message>
 	<message key="site.noJournals">没有可用期刊。</message>
 	<message key="gifts.buyer">从</message>
 	<message key="gifts.buyerDescription">谁送来的礼品？</message>

@@ -776,8 +776,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<!-- Einschubseite für PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Diese PDF-Datei herunterladen</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Die PDF-Datei, die Sie ausgewählt haben, sollte hier geöffnet werden, wenn für Ihren Webbrowser ein PDF-Lese-Plug-In installiert ist (zum Beispiel eine aktuelle Version des <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Falls Sie mehr Informationen über das Drucken, Speichern und Arbeiten von und mit PDF-Dateien erhalten möchten, bietet Highwire Press hilfreiche <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p> <p>Alternativ können Sie die PDF-Datei direkt auf Ihren Computer laden, von wo aus sie in einem PDF-Leseprogramm geöffnet werden kann. Um die PDF-Datei herunterzuladen, klicken Sie auf den Download-Link unten.</p>]]></message>
-
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Die PDF-Datei, die Sie ausgewählt haben, sollte hier geöffnet werden, wenn für Ihren Webbrowser ein PDF-Lese-Plug-In installiert ist (zum Beispiel eine aktuelle Version des <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p>]]></message>
 
 	<!-- Einschubseite für Fahnen, die weder PDF noch HTML sind -->
 	<message key="article.nonpdf.title">Artikel herunterladen</message>

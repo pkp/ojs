@@ -779,8 +779,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">പോര്‍ട്ടബിള്‍ ഡോക്യുമെന്റ് ഫോര്‍മാറ്റ് (പിഡിഎഫ് )</message>
 	<message key="article.pdf.download">ഈ പിഡിഎഫ് ഫയല്‍ ഡൗണ്‍ലോഡ് ചെയ്യുക</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Alternatively, you can also download the PDF file directly to your computer, from where it can be opened using a PDF reader. To download the PDF, click the Download link below.</p> <p>If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
-
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Alternatively, you can also download the PDF file directly to your computer, from where it can be opened using a PDF reader. To download the PDF, click the Download link below.</p>]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">ലേഖനങ്ങള്‍ ഡൗണ്‍ലോഡ് ചെയ്യുന്നതിന്</message>

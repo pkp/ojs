@@ -910,6 +910,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="payment.authorFees">投稿料</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">手作業による支払いは開始されましたが，まだ受け取っていません。</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">オンライン支払は開始されましたが，キャンセルあるいは完了していません。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a> の最新版）をインストールしていれば，選択したPDFファイルがここにロードされるはずです。</p><p>また，PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 ダウンロードする場合は下記のリンクをクリックしてください。</p><p>PDFファイルの印刷，保存．作成などについてさらに詳しく知りたい場合は，Highwire Pressが提供している <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a> が参考になります。</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a> の最新版）をインストールしていれば，選択したPDFファイルがここにロードされるはずです。</p><p>また，PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 ダウンロードする場合は下記のリンクをクリックしてください。</p>]]></message>
 	<message key="user.subscriptions.statusInformation">アクティベートあるいは有効期限切れの講読が有効期限順に下記に表示されます。また，次のようなステータス情報がそれぞれの講読ごとに表示される場合があります。</message>
 </locale>

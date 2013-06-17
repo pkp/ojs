@@ -579,7 +579,8 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Last ned denne PDF-filen</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF-filen du valgte skal nå lastes i denne rammen dersom din nettleser har en PDF-plugin installert (f.eks. en nyere versjon av <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Dersom du bare får opp denne meldingen så må du laste ned filen og åpne den lokalt på din egen maskin.</p><p>For å laste ned PDF-filen, trykk på linken under rammen.</p> <p>Hvis du vil ha mer informasjon om hvordan du skriver ut, lagrer og jobber med PDF-filer så har Highwire Press en hjelpsom <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">FAQ</a> (FAQ=Ofte Stillte Spørsmål) på engelsk om PDF.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF-filen du valgte skal nå lastes i denne rammen dersom din nettleser har en PDF-plugin installert (f.eks. en nyere versjon av <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Dersom du bare får opp denne meldingen så må du laste ned filen og åpne den lokalt på din egen maskin.</p><p>For å laste ned PDF-filen, trykk på linken under rammen.</p>]]></message>
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikkelnedlasting</message>
 	<message key="article.nonpdf.note"><![CDATA[Filen du valgte skal nå bli lastet ned automatisk. Hvis ikke, kan du klikke på lenken nedenfor. Merk at filen kan kreve et spesielt leseprogram eller en programutvidelse for å vises.<br /><br />Hvis filen ikke lastes ned automatisk, <a href="{$url}">klikk her</a>.]]></message>

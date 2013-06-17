@@ -1034,7 +1034,7 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.subscriptions.form.deleteIpRange">Slet</message>
 	<message key="user.subscriptions.form.addIpRange">Tilføj</message>
 	<message key="article.pdf.download">Download denne pdf-fil</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Den valgte pdf-fil vil blive indlæst her, hvis din browser har en PDF reader-plugin installeret (for eksempel en nyere version af <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Du kan også downloade pdf-filen direkte til din computer, hvorfra den kan åbnes med en PDF reader. Klik på Download-linket herunder for at downloade pdf-filen.</p> <p>Hvis du ønsker yderligere information om, hvordan du printer, gemmer og arbejder med pdf-filer, kan du få hjælp på Highwire Press' side <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Den valgte pdf-fil vil blive indlæst her, hvis din browser har en PDF reader-plugin installeret (for eksempel en nyere version af <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Du kan også downloade pdf-filen direkte til din computer, hvorfra den kan åbnes med en PDF reader. Klik på Download-linket herunder for at downloade pdf-filen.</p>]]></message>
 	<message key="about.history">Tidsskriftshistorik</message>
 	<message key="about.subscriptions.individual">Individuelle abonnementer</message>
 	<message key="about.subscriptions.institutional">Institutionsabonnementer</message>

@@ -743,8 +743,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Unduh file PDF  ini</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>File PDF yang Anda pilih harus dimuat di sini jika perambah web mempunyai plugin PDF reader diinstall (sebagai contoh: versi sekarang dari <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Alternatif lain, Anda juga bisa mengunduh file PDF langsung ke komputer Anda, dan bisa dibuka dengan menggunakan PDF reader. Untuk mengunduh PDF, klik tautan Unduh di bawah ini</p> <p>Jika ada membutuhkan informasi lebih lanjut tentang cara mencetak, simpan dan bekerja dengan PDF, menyediakan Highwire Press bantuan <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Pertanyaan yang sering diajuka mengenai PDF</a>.</p>]]></message>
-
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>File PDF yang Anda pilih harus dimuat di sini jika perambah web mempunyai plugin PDF reader diinstall (sebagai contoh: versi sekarang dari <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Alternatif lain, Anda juga bisa mengunduh file PDF langsung ke komputer Anda, dan bisa dibuka dengan menggunakan PDF reader. Untuk mengunduh PDF, klik tautan Unduh di bawah ini</p>]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Unduh Artikel</message>

@@ -756,8 +756,7 @@
        <!-- Interstitial page for PDFs -->
        <message key="article.pdf.title">Portable Document Format (PDF)</message>
        <message key="article.pdf.download">Завантажити цей PDF-файл</message>
-       <message key="article.pdf.pluginMissing"><![CDATA[<p>Якщо у Вашому браузері встановлений модуль читання PDF-файлів (наприклад, остання версія <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>), то обраний Вами файл PDF завантажиться у це вікно.</p> <p>Крім того, Ви можете завантажити PDF-файл безпосередньо на свій комп'ютер, де його можна буде відкрити за допомогою програми читання PDF-файлів. Щоб завантажити PDF-файл, натисніть посилання "Завантажити" нижче.</p> <p>Якщо Ви хочете отримати більше інформації про те, як працювати з PDF-файлами, роздруковувати та зберігати їх, рекомендуємо корисну статтю Highwire Press <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
-
+       <message key="article.pdf.pluginMissing"><![CDATA[<p>Якщо у Вашому браузері встановлений модуль читання PDF-файлів (наприклад, остання версія <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>), то обраний Вами файл PDF завантажиться у це вікно.</p> <p>Крім того, Ви можете завантажити PDF-файл безпосередньо на свій комп'ютер, де його можна буде відкрити за допомогою програми читання PDF-файлів. Щоб завантажити PDF-файл, натисніть посилання "Завантажити" нижче.</p>]]></message>
        
        <!-- Interstitial page for non-PDF non-HTML galleys -->
        <message key="article.nonpdf.title">Завантаження статті</message>
