@@ -125,9 +125,9 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$signOffNotificationType = $this->_getSignoffNotificationTypeByStageId($stageId);
 		$editorAssignmentNotificationType = $this->_getEditorAssignmentNotificationTypeByStageId($stageId);
 
-		$editorAssignments =& $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), null, $editorAssignmentNotificationType, $contextId);
+		$editorAssignments = $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), null, $editorAssignmentNotificationType, $contextId);
 		if (isset($signOffNotificationType)) {
-			$signoffAssignments =& $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), $user->getId(), $signOffNotificationType, $contextId);
+			$signoffAssignments = $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), $user->getId(), $signOffNotificationType, $contextId);
 		}
 
 		// if the User has assigned TASKs in this stage check, return true
@@ -137,7 +137,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		// check for more specific notifications on those stages that have them.
 		if ($stageId == WORKFLOW_STAGE_ID_PRODUCTION) {
-			$submissionApprovalNotification =& $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), null, NOTIFICATION_TYPE_APPROVE_SUBMISSION, $contextId);
+			$submissionApprovalNotification = $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), null, NOTIFICATION_TYPE_APPROVE_SUBMISSION, $contextId);
 			if (!$submissionApprovalNotification->wasEmpty()) {
 				return true;
 			}
@@ -145,16 +145,15 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) {
 			$reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
-			$reviewRounds =& $reviewRoundDao->getBySubmissionId($submission->getId(), $stageId);
+			$reviewRounds = $reviewRoundDao->getBySubmissionId($submission->getId(), $stageId);
 			$notificationTypes = array(NOTIFICATION_TYPE_REVIEW_ROUND_STATUS, NOTIFICATION_TYPE_ALL_REVIEWS_IN);
-			while ($reviewRound =& $reviewRounds->next()) {
+			while ($reviewRound = $reviewRounds->next()) {
 				foreach ($notificationTypes as $type) {
-					$notifications =& $notificationDao->getByAssoc(ASSOC_TYPE_REVIEW_ROUND, $reviewRound->getId(), null, $type, $contextId);
+					$notifications = $notificationDao->getByAssoc(ASSOC_TYPE_REVIEW_ROUND, $reviewRound->getId(), null, $type, $contextId);
 					if (!$notifications->wasEmpty()) {
 						return true;
 					}
 				}
-				unset($reviewRound);
 			}
 		}
 

@@ -156,7 +156,7 @@ class ArticleHandler extends Handler {
 			// to allow for generated citations to be displayed here (including a way for
 			// the reader to choose any of the installed citation styles for output), see #5938.
 			$citationDao = DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
-			$citationFactory =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $article->getId());
+			$citationFactory = $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $article->getId());
 			$templateMgr->assign('citationFactory', $citationFactory);
 		} else {
 			// Use the article's CSS file, if set.

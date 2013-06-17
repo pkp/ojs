@@ -42,8 +42,8 @@ class SubmissionFileRequestedRevisionRequiredPolicy extends PKPSubmissionFileReq
 		$reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO'); /* @var $reviewRoundDao ReviewRoundDAO */
 
 		// Get the submission file.
-		$submissionFile =& $this->getSubmissionFile($request);
-		$reviewRound =& $reviewRoundDao->getBySubmissionFileId($submissionFile->getFileId());
+		$submissionFile = $this->getSubmissionFile($request);
+		$reviewRound = $reviewRoundDao->getBySubmissionFileId($submissionFile->getFileId());
 
 		// Make sure that the last review round editor decision is request revisions.
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */

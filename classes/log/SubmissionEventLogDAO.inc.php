@@ -39,8 +39,7 @@ class SubmissionEventLogDAO extends PKPSubmissionEventLogDAO {
 	 * @return DAOResultFactory
 	 */
 	function &getByArticleId($articleId) {
-		$returner =& $this->getByAssoc(ASSOC_TYPE_SUBMISSION, $articleId);
-		return $returner;
+		return $this->getByAssoc(ASSOC_TYPE_SUBMISSION, $articleId);
 	}
 }
 

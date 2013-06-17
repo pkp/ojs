@@ -140,7 +140,7 @@ class NotificationManager extends PKPNotificationManager {
 
 		// Check if user is reviewer
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO'); /* @var $reviewAssignmentDao ReviewAssignmentDAO */
-		$reviewAssignments =& $reviewAssignmentDao->getBySubmissionId($articleId);
+		$reviewAssignments = $reviewAssignmentDao->getBySubmissionId($articleId);
 		foreach ($reviewAssignments as $reviewAssignment) {
 			if ($userId == $reviewAssignment->getReviewerId()) $roles[] = ROLE_ID_REVIEWER;
 		}
