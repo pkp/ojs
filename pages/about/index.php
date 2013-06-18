@@ -30,7 +30,7 @@ switch($op) {
 		break;
 	case 'aboutThisPublishingSystem':
 		define('HANDLER_CLASS', 'AboutSiteHandler');
-		import('pages.about.AboutSiteHandler');
+		import('lib.pkp.pages.about.AboutSiteHandler');
 		break;
 }
 
