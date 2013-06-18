@@ -22,41 +22,6 @@ class PageRouter extends PKPPageRouter {
 	function getCacheablePages() {
 		return array('about', 'announcement', 'help', 'index', 'information', 'rt', 'issue', '');
 	}
-
-	/**
-	 * Redirect to user home page (or the role home page if the user has one role).
-	 * @param $request PKPRequest the request to be routed
-	 */
-	function redirectHome($request) {
-		$roleDao = DAORegistry::getDAO('RoleDAO');
-		$user = $request->getUser();
-		$userId = $user->getId();
-
-		if ($journal = $this->getContext($request, 1)) {
-			// The user is in the journal context, see if they have one role only
-			$roles =& $roleDao->getRolesByUserId($userId, $journal->getId());
-			if(count($roles) == 1) {
-				$role = array_shift($roles);
-				if ($role->getRoleId() == ROLE_ID_READER) $request->redirect(null, 'index');
-				$request->redirect(null, $role->getPath());
-			} else {
-				$request->redirect(null, 'dashboard');
-			}
-		} else {
-			// The user is at the site context, check to see if they are
-			// only registered in one place w/ one role
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$roles = $roleDao->getRolesByUserId($userId);
-
-			if(count($roles) == 1) {
-				$role = array_shift($roles);
-				$journal = $journalDao->getById($role->getJournalId());
-				if (!isset($journal)) $request->redirect('index', 'user');;
-				if ($role->getRoleId() == ROLE_ID_READER) $request->redirect(null, 'index');
-				$request->redirect($journal->getPath(), $role->getPath());
-			} else $request->redirect('index', 'user');
-		}
-	}
 }
 
 ?>
