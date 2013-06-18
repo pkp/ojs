@@ -47,8 +47,7 @@ class AboutContextHandler extends Handler {
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$context = $request->getContext();
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('journalSettings', $settingsDao->getSettings($context->getId()));
-		$contextSettings = $settingsDao->getSettings($context->getId());
+		$templateMgr->assign('contextSettings', $settingsDao->getSettings($context->getId()));
 		$templateMgr->display('about/contact.tpl');
 	}
 
