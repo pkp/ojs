@@ -41,6 +41,9 @@ class ArticleDAO extends SubmissionDAO {
 	 * @param $journalId int optional
 	 * @param $rangeInfo DBResultRange optional
 	 * @return array The articles identified by setting.
+	 * WARNING: This query is selectively indexed for PostgreSQL. Ensure that the
+	 * settings you wish to query are specified in dbscripts/xml/indexes.xml to
+	 * avoid a potentially costly query.
 	 */
 	function getBySetting($settingName, $settingValue, $journalId = null, $rangeInfo = null) {
 		$params = $this->_getFetchParameters();
