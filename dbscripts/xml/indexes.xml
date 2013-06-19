@@ -20,16 +20,16 @@
 		</query>
 		
 		<query driver="postgres7">
-			CREATE INDEX issue_settings_name_value ON issue_settings (setting_name, setting_value);
+			CREATE INDEX issue_settings_name_value ON issue_settings (setting_name, setting_value)
 		</query>
 		<query driver="postgres7">
-			CREATE INDEX article_settings_name_value ON article_settings (setting_name, setting_value);
+			CREATE INDEX article_settings_name_value ON article_settings (setting_name, setting_value) WHERE setting_name IN ('indexingState', 'medra::registeredDoi', 'datacite::registeredDoi')
 		</query>
 		<query driver="postgres7">
-			CREATE INDEX article_supp_file_settings_name_value ON article_supp_file_settings (setting_name, setting_value);
+			CREATE INDEX article_supp_file_settings_name_value ON article_supp_file_settings (setting_name, setting_value)
 		</query>
 		<query driver="postgres7">
-			CREATE INDEX article_galley_settings_name_value ON article_galley_settings (setting_name, setting_value);
+			CREATE INDEX article_galley_settings_name_value ON article_galley_settings (setting_name, setting_value)
 		</query>
 	</sql>
 </data>
