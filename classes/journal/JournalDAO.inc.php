@@ -15,6 +15,7 @@
 
 import('lib.pkp.classes.context.ContextDAO');
 import('classes.journal.Journal');
+import('lib.pkp.classes.metadata.MetadataTypeDescription');
 
 define('JOURNAL_FIELD_TITLE', 1);
 define('JOURNAL_FIELD_SEQUENCE', 2);
