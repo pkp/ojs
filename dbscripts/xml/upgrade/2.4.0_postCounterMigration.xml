@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.0_postUsageStatsMigration.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.0 Deletes counter stats table.
+  * 
+  -->
+
+<data>
+	<!-- Bug #8015: Statistics consolidation -->
+	<sql>
+		<drop table="counter_monthly_log" />
+	</sql>
+</data>

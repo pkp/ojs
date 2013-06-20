@@ -187,7 +187,9 @@
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
 		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_migrateUsageStatistics.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
