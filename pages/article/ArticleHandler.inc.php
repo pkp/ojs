@@ -37,8 +37,19 @@ class ArticleHandler extends Handler {
 		parent::Handler($request);
 		$router = $request->getRouter();
 
-		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorCustom($this, false, null, null, create_function('$journal', 'return $journal->getSetting(\'publishingMode\') != PUBLISHING_MODE_NONE;'), array($router->getContext($request))));
+	}
+
+	/**
+	 * @see PKPHandler::authorize()
+	 * @param $request PKPRequest
+	 * @param $args array
+	 * @param $roleAssignments array
+	 */
+	function authorize($request, &$args, $roleAssignments) {
+		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
+		$this->addPolicy(new ContextRequiredPolicy($request));
+		return parent::authorize($request, $args, $roleAssignments);
 	}
 
 	/**
