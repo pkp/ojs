@@ -489,10 +489,8 @@ class UsageStatsLoader extends FileLoader {
 				$file = readdir($dh);
 			}
 		}
-		if (!$file) {
-			// No file or more than one file in the directory.
-			return false;
-		}
+
+		if (!$file) return false;
 
 		return $dir . DIRECTORY_SEPARATOR . $file;
 	}
