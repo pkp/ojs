@@ -1185,7 +1185,7 @@ class SolrWebService extends XmlWebService {
 			if (is_null($result)) return null;
 
 			// Retrieve the number of successfully indexed articles.
-			$numProcessed = $this->_getDocumentsProcessed($result) + $numDeleted;
+			$numProcessed = $this->_getDocumentsProcessed($result);
 			return $numProcessed;
 		} else {
 			// Nothing to update.

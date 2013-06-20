@@ -138,8 +138,8 @@ necessary installation requirements to install Solr. This is the OJS server if
 you decide to deploy in embedded server mode or the central search server if you
 deploy in central server mode:
 
-- Operating System: Any operating system that supports J2SE 1.5 or greater
-  (this includes all recent versions of Linux and Windows).
+- Operating System: Any recent versions of Linux that supports J2SE 1.5 or greater.
+  Please note that Windows is not supported in this release, but it will be in the future.
 
 - Disk Space: The disk your Solr server will reside on should have at least
   150 MB of free disk space for the Solr/Jetty installation files. The disc your
@@ -162,7 +162,10 @@ deploy in central server mode:
 
 - PHP configuration: The minimum PHP version for this plug-in is 5.0.0. The
   plug-in relies on the PHP curl. Please activate it before enabling the
-  plug-in.
+  plug-in. If you have a large OJS installation then rebuilding your index
+  (see the dedicated chapter) may require lots of memory. Please increase
+  the 'memory_limit' in php.ini until you no longer get 'Allowed memory size
+  ... exhausted' errors.
 
 
 5 Embedded Server Mode: Installation and Configuration
@@ -191,9 +194,8 @@ a Solr search server.
 
   2) install java:
      You'll need a working installation of the Java 2 Platform, Standard Edition
-     (J2SE) Runtime Environment, Version 1.5 or higher. If you are on Linux then
-     install a J2SE compliant Java package. If you are on Windows you may get
-     the latest J2SE version from http://java.com/en/download/index.jsp.
+     (J2SE) Runtime Environment, Version 1.5 or higher, so please install a J2SE 
+     compliant Java package.
 
   3) Download the Jetty and Solr binaries:
 
@@ -204,53 +206,53 @@ a Solr search server.
        We are using version 6.1.26 here as an example but the latest version may
        be different. Please change the following commands accordingly.
 
-       If you are on Linux execute something like:
+       Execute something like (from the OJS application directory):
           #> cd plugins/generic/lucene/lib
           #> wget http://dist.codehaus.org/jetty/jetty-6.1.26/jetty-6.1.26.zip
           #> unzip jetty-6.1.26.zip
 
        (You may have to install the unzip tool first...)
 
-       This should create a folder jetty-6.1.26 in your lib directory. If you
-       are on Linux then please create a symlink pointing to this directory,
-       e.g.:
+       This should create a folder jetty-6.1.26 in your lib directory. 
+       Please create a symlink pointing to this directory, e.g.:
           #> ln -s jetty-6.1.26 jetty
 
-       If you are on Windows then download and unzip the file to the lib folder
-       using your favorite browser and zip tool. Then rename the Jetty folder to
-       "jetty".
-
-     - Solr: Get the latest Solr binary from an Apache download mirror and unzip
+     - Solr: Get Solr 3.6.2 binary from an Apache download mirror and unzip
        it into plugins/generic/lucene/lib in your OJS application directory.
 
-       We are using version 3.6.1 here as an example but the latest version may
-       be different. Please change the following commands accordingly.
-
-       If you are on Linux execute something like:
+       Execute something like (from the OJS application directory):
           #> cd plugins/generic/lucene/lib
-          #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.1/
-                                                          apache-solr-3.6.1.zip
-          #> unzip apache-solr-3.6.1.zip
+          #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.2/
+                                                          apache-solr-3.6.2.zip
+          #> unzip apache-solr-3.6.2.zip
 
-       This should create a folder apache-solr-3.5.0 in your lib directory. If
-       you are on Linux then please create a symlink pointing to this directory,
-       e.g.:
-          #> ln -s apache-solr-3.6.1 solr
+       This should create a folder apache-solr-3.6.2 in your lib directory. 
+       Please create a symlink pointing to this directory, e.g.:
+          #> ln -s apache-solr-3.6.2 solr
 
-       On Windows download and unzip the file to the lib folder. Then rename the
-       Solr folder to "solr".
+  4) Check your installation:
+     We provide a script that finalizes the installation and helps you to make
+     sure that you correctly installed Jetty and Solr.
 
-  4) Try starting the Solr server for the first time:
+     Please execute (from the OJS directory):
+         #> cd plugins/generic/lucene/embedded/bin
+         #> ./chkconfig.sh
+
+     If you get error messages then please return to step 3) and check your
+     installation.
+     
+  5) Try starting the Solr server for the first time:
      Go to the directory plugins/generic/lucene/embedded/bin and execute the
-     start script there. On Linux this would be:
+     start script there. This would be (from the OJS application
+     directory):
          #> cd plugins/generic/lucene/embedded/bin
          #> ./start.sh
 
      You should receive the message "Solr started." and executing:
          #> ps -ef | grep solr
      you should see the java process of your running Solr instance.
-
-  5) Now open up your web browser and log into your OJS journal manager account.
+     
+  6) Now open up your web browser and log into your OJS journal manager account.
 
      Go to "Journal Manager -> System Plugins -> Generic Plugins" and enable the
      "Lucene Search Plugin".
@@ -261,10 +263,12 @@ a Solr search server.
      In this case go to the plug-ins setting page and configure the password
      accordingly.
 
-  6) Build your lucene index:
+  7) Build your lucene index:
 
      Back to the command line go to the tools directory and execute the script
-     to rebuild your index:
+     to rebuild your index.
+     
+     From the OJS directory this becomes:
         #> cd tools
         #> php rebuildSearchIndex.php
 
@@ -272,7 +276,6 @@ a Solr search server.
         # LucenePlugin: Clearing index ... done
         # LucenePlugin: Indexing "lucene-test" ... 412 articles indexed
         # LucenePlugin: Indexing "test" ... 536 articles indexed
-        # LucenePlugin: Rebuilding dictionaries ... done 
 
      Please make sure that the output really includes the "LucenePlugin" string.
      Otherwise your plug-in was not correctly activated.
@@ -366,7 +369,6 @@ specific to the OJS Lucene/Solr plug-in:
         # LucenePlugin: Clearing index ... done
         # LucenePlugin: Indexing "lucene-test" ... 412 articles indexed
         # LucenePlugin: Indexing "test" ... 536 articles indexed
-        # LucenePlugin: Rebuilding dictionaries ... done
 
      Please make sure that the output really includes the "LucenePlugin" string.
      Otherwise your plug-in was not correctly activated.
@@ -382,6 +384,12 @@ specific to the OJS Lucene/Solr plug-in:
 
 If you have trouble installing or configuring the Solr server then you may try
 the following:
+
+- If you get 'Allowed memory size ... exhausted' errors while doing an index
+  rebuild then you have to increase your 'memory_limit' setting in php.ini.
+  Doing a huge index rebuild may require considerable memory resources. This
+  cannot be fixed easily as it is due to memory leaks in the PHP mysql
+  extension used by OJS.
 
 - Check whether your Solr server is really running:
 
@@ -450,6 +458,21 @@ the following:
   register a bug report at 'http://pkp.sfu.ca/bugzilla/' and post the most
   recent error message. This will help OJS developers to resolve your problem.
 
+If you get errors when STARTING or STOPPING the solr server:
+
+- You'll have difficulties when starting Solr from a different user 
+  than stopping it.
+  
+- If you have permission problems then please make sure that the 'files/lucene'
+  directory and all subfolders and files therein are readable and writable by
+  the user account that runs Solr. You may have to change permissions if you
+  want to start the server differently than before.
+
+If you find that binary files (i.e. galleys or supplementary files) are NOT
+being correctly INDEXED:
+
+- Please make sure that the 'base_url' parameter in your OJS directory points
+  to the correct URL (without trailing slash).
 
 8 Push versus Pull Indexing
 ---------------------------
@@ -500,7 +523,7 @@ To do so you have to:
 - edit the configuration file ('plugins/generic/lucene/embedded/etc/pull.conf')
   of the pull processing script on the Solr server (see the inline comments
   there),
-- enable pull-processing in all OJS clients,
+- enable pull-processing in the Lucene plugin settings of all OJS clients,
 - schedule the pull download script ('plugins/generic/lucene/embedded/bin/
   pull.sh') on the Solr server, e.g. as a cron job. We recommend scheduling
   this script once or twice a day during off-hours when server load is low.
@@ -534,7 +557,7 @@ In these cases you'll have to rebuild your search index so that searches can
 be reliably executed again.
 
 To do so please go to the command line, change to the OJS tools directory and
-execute the script to rebuild the index. On Linux this would be something like:
+execute the script to rebuild the index. This would be something like:
    #> cd tools
    #> php rebuildSearchIndex.php
 
