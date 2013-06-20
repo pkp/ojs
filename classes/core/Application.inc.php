@@ -35,7 +35,7 @@ define('CONTEXT_JOURNAL', 1);
 
 // Dimensions:
 // 1) publication object dimension:
-define('STATISTICS_DIMENSION_JOURNAL_ID', 'journal_id');
+define('STATISTICS_DIMENSION_CONTEXT_ID', 'context_id');
 define('STATISTICS_DIMENSION_ISSUE_ID', 'issue_id');
 define('STATISTICS_DIMENSION_ARTICLE_ID', 'submission_id');
 define('STATISTICS_DIMENSION_ASSOC_TYPE', 'assoc_type');
@@ -414,8 +414,8 @@ class Application extends PKPApplication {
 	private function _getJournalContext($filter) {
 		// Check whether the report is on journal level.
 		$journal = null;
-		if (isset($filter[STATISTICS_DIMENSION_JOURNAL_ID])) {
-			$journalFilter = $filter[STATISTICS_DIMENSION_JOURNAL_ID];
+		if (isset($filter[STATISTICS_DIMENSION_CONTEXT_ID])) {
+			$journalFilter = $filter[STATISTICS_DIMENSION_CONTEXT_ID];
 			if (is_scalar($journalFilter)) {
 				// Retrieve the journal.
 				$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */

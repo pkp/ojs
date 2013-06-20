@@ -46,16 +46,15 @@ class MetricsDAO extends DAO {
 			if (!is_string($metricTypeElement)) return null;
 		}
 		$validColumns = array(
-			STATISTICS_DIMENSION_JOURNAL_ID, STATISTICS_DIMENSION_ISSUE_ID,
+			STATISTICS_DIMENSION_CONTEXT_ID, STATISTICS_DIMENSION_ISSUE_ID,
 			STATISTICS_DIMENSION_ARTICLE_ID, STATISTICS_DIMENSION_COUNTRY,
 			STATISTICS_DIMENSION_REGION, STATISTICS_DIMENSION_CITY,
 			STATISTICS_DIMENSION_ASSOC_TYPE, STATISTICS_DIMENSION_ASSOC_ID,
 			STATISTICS_DIMENSION_MONTH, STATISTICS_DIMENSION_DAY,
 			STATISTICS_DIMENSION_FILE_TYPE, STATISTICS_DIMENSION_METRIC_TYPE
 		);
-		foreach ($columns as $column) {
-			if (!in_array($column, $validColumns)) return null;
-		}
+		if (count(array_diff($columns, $validColumns)) > 0) return null;
+
 		$validColumns[] = STATISTICS_METRIC;
 		foreach ($filters as $filterColumn => $value) {
 			if (!in_array($filterColumn, $validColumns)) return null;
@@ -99,7 +98,7 @@ class MetricsDAO extends DAO {
 			// hierarchy aggregation level as keys.
 			if ($column === STATISTICS_METRIC) {
 				$havingClause = 'HAVING ';
-				$currentClause =& $havingClause;
+				$currentClause =& $havingClause; // Reference required.
 			} else {
 				if ($isFirst && $column) {
 					$whereClause = 'WHERE ';
@@ -107,7 +106,7 @@ class MetricsDAO extends DAO {
 				} else {
 					$whereClause .= ' AND ';
 				}
-				$currentClause =& $whereClause;
+				$currentClause =& $whereClause; // Reference required.
 			}
 
 			if (is_array($values) && isset($values['from'])) {
@@ -173,7 +172,7 @@ class MetricsDAO extends DAO {
 	 * @param $loadId string
 	 */
 	function purgeLoadBatch($loadId) {
-		$this->update('DELETE FROM metrics WHERE load_id = ?', $loadId);
+		$this->update('DELETE FROM metrics WHERE load_id = ?', $loadId); // Not a number.
 	}
 
 	/**
@@ -275,7 +274,7 @@ class MetricsDAO extends DAO {
 			default:
 				throw new Exception('Cannot load record: invalid association type.');
 		}
-		$recordToStore['journal_id'] = $journalId;
+		$recordToStore['context_id'] = $journalId;
 		$recordToStore['issue_id'] = $issueId;
 		$recordToStore['submission_id'] = $articleId;
 

@@ -694,7 +694,6 @@ class Upgrade extends Installer {
 			}
 			$result->MoveNext();
 		}
-		unset($result);
 
 		// Remove the plugin settings.
 		$metricsDao->update('DELETE FROM plugin_settings WHERE plugin_name = ?', array('counterplugin'), false);
@@ -735,8 +734,6 @@ class Upgrade extends Installer {
 			$result->MoveNext();
 		}
 
-		unset($result);
-
 		// Articles.
 		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_ARTICLE);
 		$tempStatsDao->update(
@@ -776,7 +773,7 @@ class Upgrade extends Installer {
 	function migrateDefaultUsageStatistics() {
 		$loadId = '3.0.0-upgrade-ojsViews';
 		$metricsDao = DAORegistry::getDAO('MetricsDAO');
-		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, journal_id, issue_id)';
+		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, context_id, issue_id)';
 
 		// Galleys.
 		$galleyUpdateCases = array(
@@ -798,7 +795,7 @@ class Upgrade extends Installer {
 			$params = array($case['fileType'], $loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, $case['assocType']);
 
 			if ($case['assocType'] == ASSOC_TYPE_GALLEY) {
-				array_push($params, $case['isHtml']);
+				array_push($params, (int) $case['isHtml']);
 				$selectClause = ' SELECT ?, ?, ?, ?, ag.galley_id, ag.article_id, ag.views, a.journal_id, pa.issue_id
 					FROM article_galleys_stats_migration as ag
 					LEFT JOIN submissions AS a ON ag.article_id = a.submission_id

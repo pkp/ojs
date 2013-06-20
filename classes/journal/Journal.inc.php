@@ -184,7 +184,7 @@ class Journal extends Context {
 	 */
 	function getMetrics($metricType = null, $columns = array(), $filter = array(), $orderBy = array(), $range = null) {
 		// Add a journal filter and run the report.
-		$filter[STATISTICS_DIMENSION_JOURNAL_ID] = $this->getId();
+		$filter[STATISTICS_DIMENSION_CONTEXT_ID] = $this->getId();
 		$application = PKPApplication::getApplication();
 		return $application->getMetrics($metricType, $columns, $filter, $orderBy, $range);
 	}
