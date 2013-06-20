@@ -218,8 +218,18 @@ class UsageStatsLoader extends FileLoader {
 		if (preg_match($parseRegex, $entry, $m)) {
 			$returner['ip'] = $m[1];
 			$returner['date'] = strtotime($m[2]);
-			$returner['url'] = $m[3];
+			$returner['url'] = urldecode($m[3]);
 			$returner['userAgent'] = $m[4];
+		}
+
+		// Make sure url matchs the path info enabled mode.
+		if (strpos($returner['url'], '?journal=') !== false) {
+			$returner['url'] = str_replace('?', '/', $returner['url']);
+			$returner['url'] = str_replace('journal=', '', $returner['url']);
+			$returner['url'] = str_replace('page=', '', $returner['url']);
+			$returner['url'] = str_replace('op=', '', $returner['url']);
+			$returner['url'] = str_replace('path[]=', '', $returner['url']);
+			$returner['url'] = str_replace('&', '/', $returner['url']);
 		}
 
 		return $returner;
