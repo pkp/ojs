@@ -27,8 +27,6 @@ class IssueHandler extends Handler {
 	 **/
 	function IssueHandler() {
 		parent::Handler();
-
-		$this->addCheck(new HandlerValidatorCustom($this, false, null, null, create_function('$journal', 'return $journal->getSetting(\'publishingMode\') != PUBLISHING_MODE_NONE;'), array(Request::getJournal())));
 	}
 
 	/**
@@ -40,6 +38,10 @@ class IssueHandler extends Handler {
 	function authorize($request, &$args, $roleAssignments) {
 		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
 		$this->addPolicy(new ContextRequiredPolicy($request));
+
+		import('classes.security.authorization.OjsJournalMustPublishPolicy');
+		$this->addPolicy(new OjsJournalMustPublishPolicy($request));
+
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
