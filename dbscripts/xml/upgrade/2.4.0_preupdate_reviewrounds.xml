@@ -18,10 +18,7 @@
 		</query>
 		<query driver="postgres7">
 			DROP INDEX review_rounds_pkey;
-			ALTER TABLE review_rounds ADD review_round_id INT;
-			CREATE SEQUENCE review_rounds_review_round_id_seq_tmp;<!-- _tmp to avoid name clash when table is recreated by ADODB -->
-			ALTER TABLE review_rounds ALTER COLUMN review_round_id SET DEFAULT NEXTVAL('review_rounds_review_round_id_seq_tmp');
-			UPDATE review_rounds SET review_round_id = NEXTVAL('review_rounds_review_round_id_seq_tmp');
+			ALTER TABLE review_rounds ADD review_round_id SERIAL;
 			ALTER TABLE review_rounds ADD PRIMARY KEY (review_round_id);
 		</query>
 	</sql>
