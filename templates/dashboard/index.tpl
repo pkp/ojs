@@ -22,6 +22,7 @@
 	<ul>
 		<li><a href="{url op="tasks"}">{translate key="dashboard.tasks"}</a></li>
 		<li><a href="{url op="submissions"}">{translate key="dashboard.submissions"}</a></li>
+		<li><a href="{url op="archives"}">{translate key="navigation.archives"}</a></li>
 	</ul>
 </div>
 

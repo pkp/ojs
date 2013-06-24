@@ -21,7 +21,7 @@ class DashboardHandler extends Handler {
 		parent::Handler();
 
 		$this->addRoleAssignment(array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_GUEST_EDITOR, ROLE_ID_AUTHOR, ROLE_ID_REVIEWER, ROLE_ID_ASSISTANT),
-				array('index', 'tasks', 'submissions'));
+				array('index', 'tasks', 'submissions', 'archives'));
 	}
 
 	/**
@@ -103,6 +103,18 @@ class DashboardHandler extends Handler {
 		$this->setupTemplate($request);
 
 		return $templateMgr->fetchJson('dashboard/submissions.tpl');
+	}
+
+	/**
+	 * View archives tab
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function archives($args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$this->setupTemplate($request);
+
+		return $templateMgr->fetchJson('dashboard/archives.tpl');
 	}
 
 	/**
