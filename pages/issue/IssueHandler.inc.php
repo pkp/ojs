@@ -16,9 +16,6 @@ import ('classes.issue.IssueAction');
 import('classes.handler.Handler');
 
 class IssueHandler extends Handler {
-	/** @var Issue retrieved issue */
-	var $_issue = null;
-
 	/** @var IssueGalley retrieved issue galley */
 	var $_galley = null;
 
@@ -42,7 +39,34 @@ class IssueHandler extends Handler {
 		import('classes.security.authorization.OjsJournalMustPublishPolicy');
 		$this->addPolicy(new OjsJournalMustPublishPolicy($request));
 
+		import('classes.security.authorization.OjsIssueRequiredPolicy');
+		// the 'archives' op does not need this policy so it is left out of the operations array.
+		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args, array('view', 'viewIssue', 'viewFile', 'viewDownloadIterstitial')));
+
 		return parent::authorize($request, $args, $roleAssignments);
+	}
+
+	/**
+	 * @see PKPHandler::initialize()
+	 */
+	function initialize($request, $args) {
+		// Get the issue galley
+		$galleyId = isset($args[1]) && is_numeric($args[1]) ? $args[1] : 0;
+		if ($galleyId) {
+			$issue = $this->getIssue();
+			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+			$journal = $request->getJournal();
+			if ($journal->getSetting('enablePublicGalleyId')) {
+				$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
+			} else {
+				$galley = $galleyDao->getById($galleyId, $issue->getId());
+			}
+
+			// Invalid galley id, redirect to issue page
+			if (!$galley) $request->redirect(null, null, 'view', $issue->getId());
+
+			$this->setGalley($galley);
+		}
 	}
 
 	/**
@@ -56,7 +80,6 @@ class IssueHandler extends Handler {
 	 * Display current issue page.
 	 */
 	function current($args, $request) {
-		$this->validate($request);
 		$this->setupTemplate($request);
 
 		$showToc = isset($args[0]) ? $args[0] : '';
@@ -85,14 +108,12 @@ class IssueHandler extends Handler {
 	 * Display issue view page.
 	 */
 	function view($args, $request) {
-		$issueId = isset($args[0]) ? $args[0] : 0;
+		$issue = $this->getIssue();
 		$showToc = isset($args[1]) ? $args[1] : '';
 
-		$this->validate($request, $issueId);
 		$this->setupTemplate($request);
 
 		$journal = $request->getJournal();
-		$issue =& $this->getIssue();
 
 		$templateMgr = TemplateManager::getManager($request);
 		$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
@@ -111,7 +132,6 @@ class IssueHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function archive($args, $request) {
-		$this->validate($request);
 		$this->setupTemplate($request);
 
 		$journal = $request->getJournal();
@@ -138,38 +158,38 @@ class IssueHandler extends Handler {
 	 * @param $request Request
 	 */
 	function viewIssue($args, $request) {
-		$issueId = isset($args[0]) ? $args[0] : 0;
+		$issue = $this->getIssue();
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
-		$this->validate($request, $issueId, $galleyId);
-		$this->setupTemplate($request);
+		if ($galleyId && $this->userCanViewGalley($request)) {
+			$this->setupTemplate($request);
 
-		$journal = $request->getJournal();
-		$issue = $this->getIssue();
-		$galley = $this->getGalley();
+			$journal = $request->getJournal();
+			$galley = $this->getGalley();
 
-		// Ensure we have PDF galley for inline viewing
-		// Otherwise redirect to download issue galley page
-		if (!$galley->isPdfGalley()) {
-			$request->redirect(null, null, 'viewDownloadInterstitial', array($issueId, $galleyId));
+			// Ensure we have PDF galley for inline viewing
+			// Otherwise redirect to download issue galley page
+			if (!$galley->isPdfGalley()) {
+				$request->redirect(null, null, 'viewDownloadInterstitial', array($issue->getId(), $galleyId));
+			}
+
+			// Display PDF galley inline
+			$templateMgr = TemplateManager::getManager($request);
+			$templateMgr->addJavaScript('js/inlinePdf.js');
+			$templateMgr->addJavaScript('js/pdfobject.js');
+			$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/pdfView.css');
+
+			$templateMgr->assign_by_ref('issue', $issue);
+			$templateMgr->assign_by_ref('galley', $galley);
+			$templateMgr->assign_by_ref('journal', $journal);
+			$templateMgr->assign('issueId', $issue->getId());
+			$templateMgr->assign('galleyId', $galleyId);
+
+			$templateMgr->assign('issueHeadingTitle', __('issue.viewIssue'));
+			$templateMgr->assign('locale', AppLocale::getLocale());
+
+			$templateMgr->display('issue/issueGalley.tpl');
 		}
-
-		// Display PDF galley inline
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->addJavaScript('js/inlinePdf.js');
-		$templateMgr->addJavaScript('js/pdfobject.js');
-		$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/pdfView.css');
-
-		$templateMgr->assign_by_ref('issue', $issue);
-		$templateMgr->assign_by_ref('galley', $galley);
-		$templateMgr->assign_by_ref('journal', $journal);
-		$templateMgr->assign('issueId', $issueId);
-		$templateMgr->assign('galleyId', $galleyId);
-
-		$templateMgr->assign('issueHeadingTitle', __('issue.viewIssue'));
-		$templateMgr->assign('locale', AppLocale::getLocale());
-
-		$templateMgr->display('issue/issueGalley.tpl');
 	}
 
 	/**
@@ -178,22 +198,21 @@ class IssueHandler extends Handler {
 	 * @param $request Request
 	 */
 	function viewDownloadInterstitial($args, $request) {
-		$issueId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-
-		$this->validate($request, $issueId, $galleyId);
-		$this->setupTemplate($request);
-
-		$journal = $request->getJournal();
 		$issue = $this->getIssue();
-		$galley = $this->getGalley();
+		$galleyId = isset($args[1]) ? $args[1] : 0;
+		if ($galleyId && $this->userCanViewGalley($request)) {
+			$this->setupTemplate($request);
 
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('issueId', $issueId);
-		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign('galley', $galley);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->display('issue/interstitial.tpl');
+			$journal = $request->getJournal();
+			$galley = $this->getGalley();
+
+			$templateMgr = TemplateManager::getManager($request);
+			$templateMgr->assign('issueId', $issue->getId());
+			$templateMgr->assign('galleyId', $galleyId);
+			$templateMgr->assign('galley', $galley);
+			$templateMgr->assign('issue', $issue);
+			$templateMgr->display('issue/interstitial.tpl');
+		}
 	}
 
 	/**
@@ -202,12 +221,10 @@ class IssueHandler extends Handler {
 	 * @param $request Request
 	 */
 	function viewFile($args, $request) {
-		$issueId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
-
-		$this->validate($request, $issueId, $galleyId);
-
-		$this->_showIssueGalley($request, true);
+		if ($galleyId && $this->userCanViewGalley($request)) {
+			$this->_showIssueGalley($request, true);
+		}
 	}
 
 	/**
@@ -216,12 +233,10 @@ class IssueHandler extends Handler {
 	 * @param $request Request
 	 */
 	function download($args, $request) {
-		$issueId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
-
-		$this->validate($request, $issueId, $galleyId);
-
-		$this->_showIssueGalley($request, false);
+		if ($galleyId && $this->userCanViewGalley($request)) {
+			$this->_showIssueGalley($request, false);
+		}
 	}
 
 	/**
@@ -229,15 +244,7 @@ class IssueHandler extends Handler {
 	 * @return Issue
 	 */
 	function getIssue() {
-		return $this->_issue;
-	}
-
-	/**
-	 * Set a retrieved issue
-	 * @param $issue Issue
-	 */
-	function setIssue($issue) {
-		$this->_issue = $issue;
+		return $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 	}
 
 	/**
@@ -257,61 +264,19 @@ class IssueHandler extends Handler {
 	}
 
 	/**
-	 * Validation
-	 * @see lib/pkp/classes/handler/PKPHandler#validate()
+	 * Determines whether or not a user can view an issue galley.
 	 * @param $request Request
-	 * @param $issueId int
-	 * @param $galleyId int
 	 */
-	function validate($request, $issueId = null, $galleyId = null) {
-		$returner = parent::validate(null, $request);
-
-		// Validate requests that don't specify an issue or galley
-		if (!$issueId && !$galleyId) {
-			return $returner;
-		}
-
-		// Require an issue id to continue
-		if (!$issueId) $request->redirect(null, 'index');
+	function userCanViewGalley($request) {
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 
 		$journal = $request->getJournal();
-		$journalId = $journal->getId();
 		$user = $request->getUser();
 		$userId = $user ? $user->getId() : 0;
-		$issue = null;
-		$galley = null;
-
-		// Get the issue
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		if ($journal->getSetting('enablePublicIssueId')) {
-			$issue = $issueDao->getByBestId($issueId, $journalId);
-		} else {
-			$issue = $issueDao->getById((int) $issueId, null, true);
-		}
-
-		// Invalid issue id, redirect to current issue
-		if (!$issue) $request->redirect(null, null, 'current');
-
-		$this->setIssue($issue);
-
-		// If no issue galley id provided, then we're done
-		if (!$galleyId) return true;
-
-		// Get the issue galley
-		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		if ($journal->getSetting('enablePublicGalleyId')) {
-			$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
-		} else {
-			$galley = $galleyDao->getById($galleyId, $issue->getId());
-		}
-
-		// Invalid galley id, redirect to issue page
-		if (!$galley) $request->redirect(null, null, 'view', $issueId);
-
-		$this->setGalley($galley);
+		$issue = $this->getIssue();
+		$galley = $this->getGalley();
 
 		// If this is an editorial user who can view unpublished issue galleys,
 		// bypass further validation
@@ -320,7 +285,7 @@ class IssueHandler extends Handler {
 		// Ensure reader has rights to view the issue galley
 		if ($issue->getPublished()) {
 			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
-			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issueId);
+			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId());
 
 			// Check if login is required for viewing.
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess')) {
@@ -332,7 +297,7 @@ class IssueHandler extends Handler {
 			if (!$isSubscribedDomain && $subscriptionRequired) {
 
 				// Check if user has a valid subscription
-				$subscribedUser = $issueAction->subscribedUser($journal, $issueId);
+				$subscribedUser = $issueAction->subscribedUser($journal, $issue->getId());
 
 				if (!$subscribedUser) {
 					// Check if payments are enabled,
@@ -351,11 +316,11 @@ class IssueHandler extends Handler {
 						// If the issue galley has been purchased, then allow reader access
 						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
-						if ($completedPaymentDao->hasPaidPurchaseIssue($userId, $issueId) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
+						if ($completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId()) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
 							return true;
 						} else {
 							// Otherwise queue an issue purchase payment and display payment form
-							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issueId, $journal->getSetting('purchaseIssueFee'));
+							$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getSetting('purchaseIssueFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 							$templateMgr = TemplateManager::getManager($request);
