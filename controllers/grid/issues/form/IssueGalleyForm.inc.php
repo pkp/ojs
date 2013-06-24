@@ -175,9 +175,10 @@ class IssueGalleyForm extends Form {
 			$issueGalley->setIssueId($this->_issue->getId());
 			$issueGalley->setFileId($issueGalleyFile->getId());
 
+			$enablePublicGalleyId = $journal->getSetting('enablePublicGalleyId');
+
 			if ($this->getData('label') == null) {
 				// Generate initial label based on file type
-				$enablePublicGalleyId = $journal->getSetting('enablePublicGalleyId');
 				if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
 						$issueGalley->setLabel('PDF');
