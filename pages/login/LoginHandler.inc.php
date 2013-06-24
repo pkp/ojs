@@ -21,19 +21,6 @@ class LoginHandler extends PKPLoginHandler {
 	 * @param $args array ($userId)
 	 * @param $request PKPRequest
 	 */
-
-	/**
-	 * @see PKPHandler::authorize()
-	 * @param $request PKPRequest
-	 * @param $args array
-	 * @param $roleAssignments array
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
-		$this->addPolicy(new ContextRequiredPolicy($request));
-		return parent::authorize($request, $args, $roleAssignments);
-	}
-
 	function signInAsUser($args, $request) {
 		// only managers and admins have permission
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER)));
