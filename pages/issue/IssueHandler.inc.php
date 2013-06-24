@@ -41,7 +41,7 @@ class IssueHandler extends Handler {
 
 		import('classes.security.authorization.OjsIssueRequiredPolicy');
 		// the 'archives' op does not need this policy so it is left out of the operations array.
-		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args, array('view', 'viewIssue', 'viewFile', 'viewDownloadIterstitial')));
+		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args, array('view', 'viewIssue', 'viewFile', 'viewDownloadIterstitial', 'download')));
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
