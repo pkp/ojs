@@ -407,7 +407,7 @@ class SuppFileDAO extends DAO {
 			FROM article_supp_file_settings sfs
 				INNER JOIN article_supplementary_files f ON sfs.supp_id = f.supp_id
 				INNER JOIN submissions a ON f.article_id = a.submission_id
-			WHERE sfs.setting_name = ? AND sfs.setting_value = ? AND f.supp_id <> ? AND a.journal_id = ?',
+			WHERE sfs.setting_name = ? AND sfs.setting_value = ? AND f.supp_id <> ? AND a.context_id = ?',
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
