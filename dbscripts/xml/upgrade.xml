@@ -12,8 +12,7 @@
 
 <install version="3.0.0.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.9.9">
-		<note file="docs/UPGRADE-UNSUPPORTED" />
-		<code function="abort" />
+		<code function="abort" message="installer.unsupportedUpgradeError" />
 	</upgrade>
 
 	<!--

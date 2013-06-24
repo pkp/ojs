@@ -49,14 +49,6 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * Fail the upgrade.
-	 * @return boolean
-	 */
-	function abort() {
-		return false;
-	}
-
-	/**
 	 * Clear the data cache files (needed because of direct tinkering
 	 * with settings tables)
 	 * @return boolean
