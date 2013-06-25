@@ -652,48 +652,6 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Installation d'OJS</message>
 	<message key="installer.ojsUpgrade">Mise à jour d'OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>Version d'OJS {$version}</h4>
-
-<p>Merci de télécharger Open Journal Systems <strong> du Public Knowledge Project</strong>. Avant de continuer, veuillez lire le fichier <a href="{$baseUrl}/docs/README">README</a> inclus avec ce logiciel. Pour en savoir plus sur Public Knowledge Project et ses projets de logiciels, veuillez visiter le <a href="http://pkp.sfu.ca/" target="_blank">site Web du PKP</a>. Si vous avez des rapports de bogues ou des demandes de soutien technique concernant Open Journal Systems, voir le <a href="http://pkp.sfu.ca/support/forum" target="_blank">forum de soutien</a> ou visiter le <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">système de rapports de bogues</a>en ligne de PKP. Même si le forum de soutien is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-
-<h4>Mise à jour</h4>
-
-<p>Si vous faites la mise à jour d'une installation existante d'OJS 2.x, <a href="{$pageUrl}/install/upgrade">cliquer ici</a> pour procéder.</p>
-
-<h4>Configuration du système recommandée</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (incluant PHP 5.x); vous utilisez présentement PHP {$phpVersion}{$wrongPhpText}</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (incluant MySQL 4.x) ou <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluant PostgreSQL 8.x)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x ou Microsoft IIS 6</li>
-	<li>Système d'exploitation : Tout système d'exploitation qui supporte le logiciel ci-dessus, y compris <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>Comme PKP n'a pas les ressources nécessaires lui permettant de tester toutes les combinaisons possibles de versions et de plateformes des logiciels, aucune garantie de fonctionnement ou de soutien adéquat n'est implicite.</p>
-
-<p>Des modifications à ces paramètres peuvent être apportées après l'installation en modifiant le fichier <tt>config.inc.php</tt> dans le répertoire de base d'OJS, ou en utilisant l'interface de administration du site Web.</p>
-
-<h4>Systèmes de base de données pris en charge</h4>
-
-<p>Présentement, OJS a uniquement été testé sur MySQL et PostgreSQL, bien que d'autres systèmes de gestion de base de données pris en charge par <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> pourraient fonctionner (en tout ou en partie). Il est possible d'envoyer à l'équipe d'OJS des rapports de compatibilité ou des rustines de codes pour d'autres SGBD.</p>
-
-<h4>Étapes précédant l'installation</h4>
-
-<p>1. Les fichiers et répertoires suivants (et leur contenu) doivent être accessibles en écriture :</p>
-<ul>
-	<li><tt>config.inc.php</tt> est accessible en écriture (facultatif) : {$writable_config}</li>
-	<li><tt>public/</tt> est accessible en écriture : {$writable_public}</li>
-	<li><tt>cache/</tt> est accessible en écriture : {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> est accessible en écriture : {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> est accessible en écriture : {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> est accessible en écriture : {$writable_db_cache}</li>
-</ul>
-
-<p>2. Un répertoire pour stocker les fichiers téléchargés doit être créé et accessible en écriture (voir "Paramètres des fichiers" ci-dessous).</p>
-
-<h4>Installation manuelle</h4>
-
-<p>Sélectionner l'<strong>Installation manuelle</strong>pour afficher les énoncés SQL nécessaires à la création du schéma et des données initiales de la base de données OJS qui permettront de procéder à l'installation manuelle de la base de données. Cette option est utile au moment du débogage des problèmes d'installation, particulièrement avec les plateformes qui ne sont pas prises en charge. Prendre note que cette méthode d'installation ne crée pas de bases de donnés ou de tables, bien que le fichier de configuration sera quand même généré avec les paramètres de la base de données fournis.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Version {$version} d'OJS</h4>
 	
 <p>Merci de télécharger <strong>Open Journal Systems</strong> du Public Knowledge Project. Avant de continuer, veuillez lire les fichiers <a href="{$baseUrl}/docs/README">README</a> et <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> inclus avec ce logiciel. Pour en savoir plus sur le Public Knowledge Project et ses projets logiciels, veuillez visiter le site Web <a href="http://pkp.sfu.ca/" target="_blank">PKP</a>. Si vous avez des rapports de bogues ou des demandes de soutien technique concernant Open Journal Systems, voir le <a href="http://pkp.sfu.ca/support/forum" target="_blank">forum de soutien</a> ou visiter le <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">système de rapports de bogues</a>en ligne de PKP. Même si le forum de soutien is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>

@@ -867,45 +867,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Instalasi OJS</message>
 	<message key="installer.ojsUpgrade">Updgrade OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>Versi OJS {$version}</h4>
-
-<p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong>. Sebelum melanjutkan, silahkan membaca <a href="{$baseUrl}/docs/README">README</a>. Berkas disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silahkan kunjungi <a href="http://pkp.sfu.ca/" target="_blank">web site PKP</a>. Jika Anda memiliki laporan bug atau butuh dukungan teknis mengenai OJS, lihat <a href="http://pkp.sfu.ca/support/forum" target="_blank">forum dukungan</a> atau kunjungi PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Laporkan bug sistem</a>.Selain itu Anda dapat mengontak tim pengembang OJS melalui <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-<h4>Upgrade</h4>
-
-<p>Jika Anda ingin mengupgrade instalasi yang sudah ada OJS 1.x, <a href="{$upgradeUrl}">klik disini</a> untuk proses.</p>
-
-<h4>Persyaratan Sistem</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (termasuk PHP 5.x); saat ini Anda menggunakan PHP {$phpVersion}{$wrongPhpText}</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (termasuk MySQL 4.x) atau <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (termasuk PostgreSQL 8.x)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x atau >= 2.0.4x atau Microsoft IIS 6</li>
-	<li>Sistem operasi: Semua sistem operasi support OJS, termasuk <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>Upgrade OJS dapat dilakukan setelah instalasi dengan mengedit file <tt>config.inc.php</tt> di direktori OJS, atau menggunakan antarmuka Administrasi Situs.</p>
-
-<h4>Sistem Database</h4>
-
-<p>OJS dapat bekerja dengan baik di sistem database MySQL dan PostgreSQL. OJS juga dapat bekerja baik secara utuh ataupun sebagian pada sistem database lain yang didukung <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>. Laporan kompabilitas dan patch kode DBMS dapat dikirimkan ke web site PKP.</p>
-
-<h4>Pra-Instalasi</h4>
-
-<p>1. Berkas-berkas berikut dan direktori (beserta isinya) harus dibuat "dapat ditulis":</p>
-<ul>
-	<li><tt>config.inc.php</tt> dapat ditulis (opsional): {$writable_config}</li>
-	<li><tt>public/</tt> dapat ditulis: {$writable_public}</li>
-	<li><tt>cache/</tt> dapat ditulis: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> dapat ditulis: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> dapat ditulis: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> dapat ditulis: {$writable_db_cache}</li>
-</ul>
-
-<p>2. Buat direktori khusus untuk menyimpan berkas unggahan dan buat "dapat ditulis" (lihat Pengaturan Berkas dibawah ini)</p>
-
-<h4>Instalasi Manual</h4>
-
-<p>Pilih <strong>Install Manual</strong> untuk menampilkan pernyataan SQL yang diperlukan untuk membuat skema database OJS dan data awal sehingga instalasi database dapat dilakukan secara manual. Opsi ini berguna ketika terdapat debug saat instalasi, terutama karena platform yang tidak support. Perhatikan bahwa opsi instalasi ini tidak membuat database atau tabel secara otomatis, meskipun file konfigurasi masih akan ditulis dengan pengaturan database yang tersedia.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Versi OJS {$version}</h4>
 	
 <p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong>. Sebelum melanjutkan, silahkan membaca <a href="{$baseUrl}/docs/README">README</a>. Berkas disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silahkan kunjungi <a href="http://pkp.sfu.ca/" target="_blank">web site PKP</a>. Jika Anda memiliki laporan bug atau butuh dukungan teknis mengenai OJS, lihat <a href="http://pkp.sfu.ca/support/forum" target="_blank">forum dukungan</a> atau kunjungi PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Laporkan bug sistem</a>.Selain itu Anda dapat mengontak tim pengembang OJS melalui <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>

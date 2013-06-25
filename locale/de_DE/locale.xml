@@ -939,32 +939,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<!-- Installation -->
 	<message key="installer.ojsInstallation">Installation von OJS</message>
 	<message key="installer.ojsUpgrade">Aktualisierung von OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS-Version {$version}</h4>
-
-<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Projects (PKP)</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörende <a href="{$baseUrl}/docs/README">README</a>-Datei. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href="http://pkp.sfu.ca/" target="_blank">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href="http://pkp.sfu.ca/support/forum">Support Forum</a> von PKP oder besuchen Sie unseren <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href="mailto:pkp.contact@gmail.com"></a> per E-Mail kontaktieren.</p>
-
-<h4>Aktualisierungen</h4>
-
-<p>Wenn Sie eine bestehende Version von OJS 2.x durch eine neuere ersetzen wollen, <a href="{$upgradeUrl}/install/upgrade">hier klicken</a></p>
-
-<h4>Empfohlene Systemvoraussetzungen</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (einschließlich PHP 5.x); Sie nutzen momentan PHP {$phpVersion}{$wrongPhpText}</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (einschließlich MySQL 4.x) oder <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (einschließlich PostgreSQL 8.x)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x oder >= 2.0.4x oder Microsoft IIS 6</li>
-	<li>Betriebssystem: Jedes Betriebssystem, das die obigen Programme unterstützt, darunter <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>Die Ressourcen von PKP sind begrenzt; nicht alle Kombinationen von Plattformen und Programmversionen können getestet werden. Eine Funktionsgarantie kann daher nicht gegeben werden. </p>
-
-<p>Änderungen an diesen Einstellungen können nach der Installation in der Datei <tt>config.inc.php</tt> im OJS-Basisverzeichnis oder über die Oberfläche der Website-Administration vorgenommen werden.</p>
-
-<h4>Unterstützte Datenbank-Systeme</h4>
-
-<p>Bisher wurde OJS nur mit MySQL und PostgreSQL getestet, aber andere Datenbanken, die <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> unterstützen, können ebenfalls funktionieren (ganz oder teilweise). Berichte zur Kompatibilität und Patches für andere Datenbanken nimmt das OJS-Team gerne entgegen.</p>
-]]></message>
-<message key="installer.preInstallationInstructions"><![CDATA[
+	<message key="installer.preInstallationInstructions"><![CDATA[
 <h4>Vor der Installation</h4>
 
 

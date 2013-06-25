@@ -551,48 +551,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Installer -->
   <message key="installer.ojsInstallation">OJSのインストール</message>
   <message key="installer.ojsUpgrade">OJSのバージョンアップ</message>
-  <message key="installer.installationInstructions"><![CDATA[<h4>OJS バージョン {$version}</h4>
-
-<p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうございました。処理を進める前に、このソフトウェアに添付されている<a href="{$baseUrl}/docs/README">README</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href="http://pkp.sfu.ca/" target="_blank">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a href="http://pkp.sfu.ca/support/forum">サポートフォーラム</a>、または、PKPのオンライン<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>にメールしてくださっても構いません。</p>
-
-<h4>バージョンアップ</h4>
-
-<p>既存のOJS 2.xからバージョンアップする場合は、<a href="{$upgradeUrl}">ここをクリック</a>して作業を進めてください。</p>
-
-<h4>推奨するシステム要件</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> 4.2.x以降 （PHP 5.xを含む）</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> 3.23.23以降（MySQL 4.xを含む）、または、<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> 7.1以降（PostgreSQL 8.xを含む）</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> 1.3.2x以降、または、2.0.4x以降、または、Microsoft IIS 6</li>
-	<li>OS: <a href="http://www.linux.org/" target="_blank">Linux</a>、<a href="http://www.bsd.org/" target="_blank">BSD</a>、<a href="http://www.sun.com/" target="_blank">Solaris</a>、<a href="http://www.apple.com/" target="_blank">Mac OS X</a>、<a href="http://www.microsoft.com/">Windows</a>など、上記のソフトウェアをサポートするすべてのOS。</li>
-</ul>
-
-<p>PKPは、上記のソフトウェアバージョンとプラットフォームの可能なすべての組み合わせについてテストする資源を持っていませんので、正常な動作やサポートを保証するものではありません。</p>
-
-<p>ここで行う設定は、インストール後にOJSベースディレクトリにある<tt>config.inc.php</tt>ファイルの編集、または、サイト管理Webインターフェースを使用することにより変更することができます。</p>
-
-<h4>サポートするデータベースシステム</h4>
-
-<p>OJSは、現在のところ、 MySQLとPostgreSQLでのみテストを行っていますが、<a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>がサポートしている他のデータベース管理システムでも（完全に、または一部）動作すると思われます 。他のDBMSによる互換性報告やパッチコードをOJSチームにお送りください。</p>
-
-<h4>インストール前に行う処理</h4>
-
-<p>1. 以下のファイルとディレクトリ（配下のすべてのコンテンツを含む）を書き込みができるようにする必要があります。</p>
-<ul>
-	<li><tt>config.inc.php</tt>は書き込み可（オプション）: {$writable_config}</li>
-	<li><tt>public/</tt>は書き込み可: {$writable_public}</li>
-	<li><tt>cache/</tt>は書き込み可: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt>は書き込み可: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt>は書き込み可: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt>は書き込み可: {$writable_db_cache}</li>
-</ul>
-
-<p>2. アップロードファイルを格納するためのディレクトリを作成して、書き込みができるようにする必要があります（以下の「ファイル設定」を参照してください）。</p>
-
-<h4>マニュアルインストール</h4>
-
-<p>データベースのインストールをマニュアルで実行するには<strong>マニュアルインストール</strong>を選択してください。OJSデータベーススキーマおよび初期データを作成するために必要なSQL文が表示されます。 このオプションは、インストール、特にサポートしていないプラットフォームへのインストール時の問題をデバックする際に役に立ちます。このインストール法では、指定したデータベース設定が設定ファイルに書かれますが、データベースやテーブルは作成されないことに注意してください。</p>]]></message>
   <message key="installer.upgradeInstructions"><![CDATA[<h4>OJS バージョン {$version}</h4>
 	
 <p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうございました。処理を進める前に、このソフトウェアに添付されている<a href="{$baseUrl}/docs/README">README</a>ファイルと<a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href="http://pkp.sfu.ca/" target="_blank">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a href="http://pkp.sfu.ca/support/forum">サポートフォーラム</a>、または、PKPのオンライン<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>にメールしてくださっても構いません。</p>

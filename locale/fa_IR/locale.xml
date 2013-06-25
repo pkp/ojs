@@ -459,48 +459,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="help.ojsHelpAbbrev">راهنمای OJS</message>
 <!-- نصب کننده -->  <message key="installer.ojsInstallation">نصب OJS</message>
 	<message key="installer.ojsUpgrade">بروز رسانی OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS نسخه {$version}</h4>
-
-<p>از دانلود <strong>سیستم مجلات آزاد </strong> پروژه دانش عمومی تشکر میکنیم. قبل از ادامه لطفا متن فایل  <a href="{$baseUrl}/docs/README">README</a> همراه با این نرم افزار را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و پروژه های نرم افزاری آن لطفا از <a href="http://pkp.sfu.ca/" target="_blank">وب سایت PKP</a> بازدید بفرمائید. اگر میخواهید گزارش اشکال بدهید ویا بدنبال حمایت تکنیکی برای سیستم مجلات آزاد هستید به <a href="http://pkp.sfu.ca/support/forum">فوروم حمایت</a> مراجعه و یا از  <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">سیستم گزارش اشکال </a> آن لاین PKP بازدید کنید. اگرچه فوروم حمایت متد ترجیحی تماس میباشد ، شما میتوانید به تیم حمایت کننده به آدررس <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> ایمیل بزنید. </p>
-
-<h4>بروزرسانی</h4>
-
-<p>چنانچه میخواهید نسخه OJS 2.x موجود را ارتقا دهید  <a href="{$upgradeUrl}">اینجا را کلیک </a> کنید.</p>
-
-<h4>ملزومات توصیه شده سیستم</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x شامل PHP 5.x</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 شامل MySQL 4.x یا <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 شامل PostgreSQL 8.x</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x یا >= 2.0.4x یا Microsoft IIS 6</li>
-	<li>سیستم عامل: هر سیستم عاملی که نرم افزار های فوق را حمایت کند قابل استفاده است. شامل  <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a> میباشد.</li>
-</ul>
-
-<p>از آنجا که PKP  دارای تمام امکانات برای تست کردن بر روی هر گونه ترکیب احتمالی  از نسخه های مختلف نرم افزارهای فوق و سیستم های عامل نیست ، هیچگونه تضمینی در مورد عملکرد صحیح و یا حمایت از آن را نمیتوانیم عهده دار شویم</p>
-
-<p>پس از خاتمه نصب برنامه میتوانید این تنظیمات را از طریق ویرایش فایل  <tt>config.inc.php</tt> در شاخه اصلی OJS ، ویا از طریق صفحه مدیریت سایت تغییر دهید.</p>
-
-<h4>سیستم های بانک اطلاعاتی مورد پشتیبانی</h4>
-
-<p>OJS در حال حاضر بر روی MySQL و PostgreSQL تست شده است. با سایر سیستم های بانک اطلاعاتی که توسط <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> حمایت میشوند نیز ممکن است بصورت نسبی یا تمام عیار کار کند. گزارشات سازکاری ویا کد های وصله ای برای سایر سیستم های بانک اطلاعاتی را میتوانید به تیم OJS بفرستید</p>
-
-<h4>مراحل قبل از نصب</h4>
-
-<p>1. فایلها و پوشه های زیر و محتویات آنها میبایست قابل نوشتن باشد:</p>
-<ul>
-	<li><tt>config.inc.php</tt> قابل نوشتن است. البته این مورد اختیاری است: {$writable_config}</li>
-	<li><tt>public/</tt> قابل نوشتن است: {$writable_public}</li>
-	<li><tt>cache/</tt> قابل نوشتن است: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> قابل نوشتن است: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> قابل نوشتن است: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> قابل نوشتن است: {$writable_db_cache}</li>
-</ul>
-
-<p>2. یک پوشه برای ذخیره فایلهای آپلود شده میبایست ایجاد شده و قابل نوشتن شود. به "File Settings" در قسمت پائین این صفحه نگاه کنید.</p>
-
-<h4>نصب دستی</h4>
-
-<p> <strong>نصب دستی</strong> را انتخاب کنید تا جملات SQL لازم برای ایجاد ساختار بانک اطلاعاتی و داده های مقدماتی را مشاهده کنید. بدین وسیله نصب بانک اطلاعاتی میتواند بصورت دستی صورت گیرد. این گزینه مخصوصا موقعی مفید است که بخواهید مشکلات نصب را اشکال زدائی کنید ، مخصوصا هنگام نصب بر روی سیستمهای عاملی که هنوز حمایت نشده اند. اگرچه با این روش فایل تنظیمات با مقادیر داده شده بانک اطلاعاتی نوشته میشود ولی توجه داشته باشید که با این متد ، بانک اطلاعاتی ایجاد نمیشود.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS نسخه {$version}</h4>
 	
 <p>با تشکر بخاطر دان لود  <strong>سیستم مجلات آزاد</strong> پروژه دانش عمومی قبل از ادامه ، فایل  <a href="{$baseUrl}/docs/README">README</a> و فایل <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> همراه با این نرم افزار را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و و پروژههای نرم افزاری آن از  <a href="http://pkp.sfu.ca/" target="_blank">وب سایت PKP</a> دیدن فرمائید. چنانچه میخواهید گزارش اشکال بدهید ویا بدنبال حمایت تکنیکی در مورد سیستم مجلات آزاد هستید به  <a href="http://pkp.sfu.ca/support/forum">فوروم حمایت</a> بروید و یا از  <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">سیستم گزارش اشکال </a> آنلاین PKP بازدید کنید. اگرچه فوروم حمایت روش ترجیحی تماس است همچنین میتواید به آدرس ایمیل  <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>

@@ -819,32 +819,6 @@ El camp Actives llista les revisions en curs.]]></message>
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Instal·lació de l’OJS</message>
 	<message key="installer.ojsUpgrade">Actualització de l’OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versió {$version}</h4>
-<p>Gràcies per baixar l’<strong>Open Journal Systems</strong> del Public Knowledge Project.  Abans de continuar, llegiu el fitxer <a href="{$baseUrl}/docs/README">README</a> que s’inclou amb aquesta aplicació. Per a més informació sobre el Public Knowledge Project i els seus projectes de programari, visiteu el <a href="http://pkp.sfu.ca/" target="_blank">lloc web del PKP</a>. Si necessiteu informar sobre errors o demanar suport tècnic per a l’Open Journal Systems, entreu al <a href="http://pkp.sfu.ca/support/forum">fòrum de suport</a> o visiteu el <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">sistema d’informació d’errors</a> en línia del PKP.  Noteu que el fòrum de suport és el mètode de contacte principal, encara que també us podeu posar en contacte amb l’equip per correu electrònic: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-<h4>Actualització</h4>
-<p>Si esteu actualitzant una instal·lació existent de l’OJS 2.x, <a href="{$upgradeUrl}">feu clic aquí</a> per a continuar.</p>
-<h4>Requisits de sistema recomanats</h4>
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (inclòs PHP 5.x); actualment utilitzeu PHP {$phpVersion}{$wrongPhpText}.</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (inclòs MySQL 4.x) o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (inclòs PostgreSQL 8.x).</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x o >= 2.0.4x o Microsoft IIS 6</li>
-	<li>Sistema operatiu: qualsevol SO que admeti el programari anterior, inclosos <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a> i <a href="http://www.microsoft.com/">Windows</a>.</li>
-</ul>
-<p> El PKP no disposa de recursos per a comprovar totes les possibles combinacions de versions de programari i plataformes, per la qual cosa no ofereix garanties de funcionament correcte ni assistència.</p>
-<p>Una vegada finalitzada la instal·lació podreu modificar aquests paràmetres editant el fitxer <tt>config.inc.php</tt> del directori base de l’OJS, o bé accedint a la interfície web d’administració del lloc.</p>
-<h4>Sistemes de bases de dades admesos</h4>
-<p>Només s’ha comprovat la compatibilitat amb MySQL i PostgreSQL, però és possible que l’OJS també funcioni (parcialment o completament) amb altres sistemes de gestió de bases de dades admesos per <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>. Podeu enviar informes de compatibilitat i pedaços de codi per a sistemes de gestió de bases de dades alternatius a l’equip de l’OJS.</p>
-<h4>Passos previs a la instal·lació</h4>
-<p>1. Comproveu que els fitxers i directoris següents (i també els seus continguts) tinguin permís d’escriptura:</p>
-<ul>
-	<li><tt>config.inc.php</tt> té permís d’escriptura (opcional): {$writable_config}</li>
-	<li><tt>public/</tt> té permís d’escriptura: {$writable_public}</li>
-	<li><tt>caché/</tt> té permís d’escriptura: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> té permís d’escriptura: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> té permís d’escriptura: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> té permís d’escriptura: {$writable_db_cache}</li>
-</ul>
-<p>2. Creeu un directori amb permís d’escriptura per a emmagatzemar-hi els fitxers penjats (vegeu la secció "Configuració de fitxers").</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versió {$version}</h4>
 	
 <p>Gràcies per baixar l’<strong>Open Journal Systems</strong> del Public Knowledge Project.  Abans de continuar, llegiu els fitxers <a href="{$baseUrl}/docs/README">README</a> i <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> que s’inclouen amb aquesta aplicació. Per a més informació sobre el Public Knowledge Project i els seus projectes de programari, visiteu el <a href="http://pkp.sfu.ca/" target="_blank">lloc web del PKP</a>. Si necessiteu informar sobre errors o demanar suport tècnic per a l’Open Journal Systems, entreu al <a href="http://pkp.sfu.ca/support/forum">fòrum de suport</a> o visiteu el <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">sistema d’informació d’errors</a> en línia del PKP.  Noteu que el fòrum de suport és el mètode de contacte principal, encara que també us podeu posar en contacte amb l’equip per correu electrònic: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>

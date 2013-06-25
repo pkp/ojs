@@ -671,44 +671,6 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Installazione di OJS</message>
 	<message key="installer.ojsUpgrade">Aggiornamento OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versione {$version}</h4>
-
-<p>Grazie per aver scaricato <strong>Open Journal Systems</strong> del Public Knowledge Project. Prima di procedere, leggi il file <a href="{$baseUrl}/docs/README">README</a> incluso in questo software. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti software, visita il <a href="http://pkp.sfu.ca/" target="_blank">sito web del PKP</a>. Se hai trovato un bug o hai richieste tecniche su Open Journal Systems, utilizza il <a href="http://pkp.sfu.ca/support/forum" target="_blank">forum</a> o visita il <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a> del PKP. Sebbene il forum sia il metodo preferito di contatto, puoi anche inviare una mail al team PKP a<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-
-<h4>Upgrade</h4>
-
-<p>Se stai aggiornando una istallazione preesistente di OJS 2.x, <a href="{$upgradeUrl}">clicca qui</a> per procedere.</p>
-
-<h4>Requisiti di sistema suggeriti</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (incluso PHP 5.x); versione PHP attualmente in uso: {$phpVersion}{$wrongPhpText}</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (incluso MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluso PostgreSQL 8.x)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x o >= 2.0.4x o Microsoft IIS 6</li>
-	<li>Sistema operativo: Qualsiasi sistema operativo che supporti i software indicati sopra, compresi <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>PKP non ha le risorse per testare qualsiasi combinazione possibile di versioni di software e piattaforme,, quindi non vengono fornite garanzie di corretto funzionamento o di supporto.</p>
-
-<p>Possono essere apportati cambiamenti a queste impostazioni modificando il  file <tt>config.inc.php</tt> nella directory base di OJS, o usando l'interfaccia di amministrazione del sito.</p>
-
-<h4>Database supportati</h4>
-
-<p>OJS è stato testato solo su MySQL e PostgreSQL, sebbene altri DBMS supportati da <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> possano, almeno in parte, funzionare. Report di compatibilità e/o patch per DBMS alternativi possono essere inviate al team OJS.</p>
-
-<h4>Passaggi pre-installazione</h4>
-
-<p>1. I seguenti file e directory (e il loro contenuto) devono essere scrivibili:</p>
-<ul>
-	<li><tt>config.inc.php</tt> è scrivibile (optional): {$writable_config}</li>
-	<li><tt>public/</tt> è scrivibile: {$writable_public}</li>
-	<li><tt>cache/</tt> è scrivibile: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> è scrivibile: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> è scrivibile: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> è scrivibile: {$writable_db_cache}</li>
-</ul>
-
-<p>2. Deve essere creata e resa scrivibile una directory per contenere i file caricati (v. Impostazioni del file sotto).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versione {$version}</h4>
 
 <p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README">README</a> e <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> i  files inclusi in questo programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare il <a href="http://pkp.sfu.ca/" target="_blank">sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://pkp.sfu.ca/support/forum">forum di supporto</a> o visita online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>

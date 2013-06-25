@@ -808,55 +808,6 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS instalazioa</message>
 	<message key="installer.ojsUpgrade">OJS bertsio-berritzea</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS {$version} bertsioa</h4>
-
-<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur ezazu mesedez software honekin batera ematen den <a href="{$baseUrl}/docs/README">README</a> fitxategia. Public Knowledge Project-i eta dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://pkp.sfu.ca/support/forum">laguntza teknikoko foroa</a> edo PKPren <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
-
-<h4>Bertsio-berritzea</h4>
-
-<p>Lehendik daukazun OJS 2.x bertsioa berritzera bazoaz, egin klik <a href="{$upgradeUrl}">hemen</a>.</p>
-
-<h4>Gomendatutako sistema-eskakizunak</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (PHP 5.x barne); orain PHP {$phpVersion}{$wrongPhpText} daukazu.</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (MySQL 4.x barne) edo <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (PostgreSQL 8.x barne)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x edo >= 2.0.4x edo Microsoft IIS 6</li>
-	<li>Sistema eragilea: Goiko softwarea onartzen duen edozein SE, besteak beste: <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>Hala ere, PKPk ez dauka software-bertsio eta plataforma konbinazio posible guztiak probatzeko adina baliabide eta, beraz, ezin du bermatu denek ondo funtzionatuko dutenik.</p>
-
-<p>Instalazioa egin ondoren ezarpen hauek aldatu ahal izango dira, OJSren 
-oinarriko direktorioko <tt>config.inc.php</tt> fitxategia editatuz, edo gune-administratzailearen web interfazearen bidez.</p>
-
-<h4>Onartzen diren datu-base sistemak</h4>
-
-<p>OJS MySQL eta PostgreSQL sistemetan bakarrik probatu da oraingoz, baina <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>k onartzen dituen datu-baseak kudeatzeko beste sistema batzuek ere funtziona dezakete (guztiz edo zati batean). Beste DBMS batzuen bateragarritasunari buruzko txostenak eta/edo kode-adabakiak OJS taldeari bidal dakizkioke.</p>
-
-<h4>Instalatu aurreko urratsak</h4>
-
-<p>1. Ondorengo fitxategi eta direktorioetan (eta bertako edukian) idazteko baimena eduki behar da:</p>
-<ul>
-	<li><tt>config.inc.php</tt> idazgarria da (aukerakoa): {$writable_config}</li>
-	<li><tt>public/</tt> idazgarria da: {$writable_public}</li>
-	<li><tt>cache/</tt> idazgarria da: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> idazgarria da: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> idazgarria da: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> idazgarria da: {$writable_db_cache}</li>
-</ul>
-
-<p>2. Direktorio idazgarri bat sortu behar da kargatutako fitxategiak gordetzeko (ikus "Fitxategi-ezarpenak" beherago).</p>
-
-<h4>Eskuzko instalazioa</h4>
-
-<p>Datu-basea eskuz instalatu ahal izateko, hautatu <strong>Eskuzko 
-instalazioa</strong> OJS datu-basearen eskema eta hasierako datuak sortzeko SQL 
-instrukzioak bistaratzeko. Aukera hau praktikoa da instalazioan sortzen diren 
-problemak konpontzeko, batez ere euskarri gabeko plataformetan. Kontuan izan 
-instalazio-metodo hau ez dela saiatuko datu-basea edo taulak sortzen, 
-datu-basearen ezarpenak konfigurazio-fitxategian idatziko diren 
-arren.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS {$version} bertsioa</h4>
 	
 <p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur itzazu mesedez software honekin batera ematen diren <a href="{$baseUrl}/docs/README">README</a> eta <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> fitxategiak. Public Knowledge Project-i eta lantzen dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://pkp.sfu.ca/support/forum">laguntza teknikoko foroa</a> edo PKPren <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>

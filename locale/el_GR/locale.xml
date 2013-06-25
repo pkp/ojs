@@ -768,49 +768,7 @@
         <!-- Installer -->
         <message key="installer.ojsInstallation">Εγκατάσταση OJS</message>
         <message key="installer.ojsUpgrade">Αναβάθμιση OJS</message>
-        <message key="installer.installationInstructions"><![CDATA[<h4>Έκδοση OJS {$version}</h4>  
-        
-        <p>Σας ευχαριστούμε που προτιμήσατε το <strong>Open Journal Systems</strong> του Public Knowledge Project. Πριν να προχωρήσετε, συμβουλευτείτε το αρχείο <a href="{$baseUrl}/docs/README">README</a> που παρέχεται μαζί με το λογισμικό. Για περισσότερες πληροφορίες σχετικά με το Public Knowledge Project και τα έργα λογισμικού, επισκεφτείτε τον ιστότοπο του PKP <a href="http://pkp.sfu.ca/" target="_blank"> </a>. Εάν έχετε αναφορές σφαλμάτων ή ερωτήματα για την τεχνική υποστήριξη σχετικά με το Open Journal Systems, ανατρέξτε στο φόρουμ υποστήριξης <a href="http://pkp.sfu.ca/support/forum"></a> ή επισκεφτείτε το σύστημα σύνταξης αναφορών του PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank"></a>. Παρόλο που το φόρουμ υποστήριξης είναι η προτιμώμενη μέθοδος επικοινωνίας, μπορείτε επίσης να επικοινωνήσετε με την ομάδα μέσω ηλεκτρονικού ταχυδρομείου στη διεύθυνση <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>  
-       
-        <h4>Αναβάθμιση</h4>  
-        
-        <p>Εάν πραγματοποιείτε αναβάθμιση της υπάρχουσας εγκατάστασης του OJS 2.x, <a href="{$upgradeUrl}">Πατήστε εδώ κλικ</a> για να προχωρήσετε.</p>  
-        
-        <h4> Συνιστώμενες απαιτήσεις συστήματος</h4>  
-        
-        <ul>         
-        <li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (συμπεριλαμβανομένου του PHP 5.x)</li>         
-        <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (συμπεριλαμβανομένου του MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (συμπεριλαμβανομένου του PostgreSQL 8.x)</li>         
-        <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x ή Microsoft IIS 6</li>         
-        <li>Λειτουργικό σύστημα: οποιοδήποτε λειτουργικό σύστημα υποστηρίζει το προαναφερόμενο λογισμικό, συμπεριλαμβανομένων των <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li> 
-        </ul>  
-        
-        <p>Εφόσον το PKP δεν διαθέτει πόρους για να δοκιμάσει κάθε πιθανό συνδυασμό εκδόσεων λογισμικού και πλατφορμών, δεν υπάρχει εγγύηση σωστής λειτουργίας ή υποστήριξης.</p>  
-        
-        <p>Αλλαγές στις συγκεκριμένες ρυθμίσεις μπορούν να πραγματοποιηθούν μετά από την εγκατάσταση, μέσω του αρχείου <tt>config.inc.php</tt> στη βάση καταλόγου OJS, ή χρησιμοποιώντας τη διεπαφή διαχείρισης (administration) του ιστοτόπου.</p>  
-        
-        <h4>Υποστηριζόμενα συστήματα βάσης δεδομένων</h4> 
-         
-        <p>Το OJS έχει προς το παρόν δοκιμαστεί σε MySQL και PostgreSQL, παρόλο που και άλλα συστήματα διαχείρισης βάσεων δεδομένων που υποστηρίζονται από <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> ενδέχεται να λειτουργούν (πλήρως ή εν μέρει). Οι αναφορές συμβατότητας ή/και οι επιδιορθώσεις κωδικών για εναλλακτικά DBMS μπορούν αποσταλούν στην ομάδα του OJS.</p>  
-        
-        <h4>Στάδια προετοιμασίας της εγκατάστασης</h4>  
-        
-        <p>1. Τα ακόλουθα αρχεία και κατάλογοι (και τα περιεχόμενα αυτών) πρέπει να καταστούν εγγράψιμα (writable):</p> 
-        <ul>         
-        <li><tt>config.inc.php</tt> είναι εγγράψιμο (προαιρετικό) {$writable_config}</li>         
-        <li><tt>public/</tt> είναι εγγράψιμο: {$writable_public}</li>         
-        <li><tt>cache/</tt> είναι εγγράψιμο: {$writable_cache}</li>         
-        <li><tt>cache/t_cache/</tt> είναι εγγράψιμο: {$writable_templates_cache}</li>         
-        <li><tt>cache/t_compile/</tt> είναι εγγράψιμο: {$writable_templates_compile}</li>         
-        <li><tt>cache/_db</tt> είναι εγγράψιμο: {$writable_db_cache}</li> 
-        </ul>  
-        
-        <p>2. Πρέπει να δημιουργηθεί κατάλογος για αποθήκευση αρχείων που έχουν φορτωθεί και να καταστεί εγγράψιμος (βλέπε «Ρυθμίσεις αρχείου» παρακάτω).</p>  
-        
-        <h4>Μη αυτόματη εγκατάσταση</h4>  
-        
-        <p>Επιλέξτε <strong>Μη αυτόματη εγκατάσταση</strong> για να προβάλλετε τις δηλώσεις SQL που είναι απαραίτητες για τη δημιουργία σχήματος βάσης δεδομένων OJS και αρχικών δεδομένων ώστε να είναι δυνατή η μη αυτόματη εκτέλεση της εγκατάστασης της βάσης δεδομένων. Η συγκεκριμένη επιλογή είναι χρήσιμη κατά την εξουδετέρωση σφαλμάτων από προβλήματα της εγκατάστασης, ειδικότερα σε πλατφόρμες που δεν υποστηρίζονται. Λάβετε υπόψη ότι η συγκεκριμένη μέθοδος εγκατάστασης δεν θα επιχειρήσει τη δημιουργία βάσης δεδομένων ή πινάκων, παρόλο που το αρχείο ρυθμίσεων θα εγγραφεί με τις παρεχόμενες ρυθμίσεις της βάσης δεδομένων.</p>]]></message>                 
-				<message key="installer.upgradeInstructions"><![CDATA[<h4>Έκδοση OJS{$version}</h4>        
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>Έκδοση OJS{$version}</h4>        
 				
 				<p>Σας ευχαριστούμε που προτιμήσατε το <strong>Open Journal Systems</strong> του Public Knowledge Project. Πριν να προχωρήσετε παρακάτω, συμβουλευτείτε τα αρχεία <a href=""{$baseUrl}/docs/README"">README</a> και <a href=""{$baseUrl}/docs/UPGRADE"">UPGRADE</a> που παρέχονται μαζί με αυτό το λογισμικό. Για περισσότερες πληροφορίες σχετικά με το Public Knowledge Project και τα έργα λογισμικού αυτού, επισκεφτείτε τον ιστότοπο του PKP <a href=""http://pkp.sfu.ca/"" target=""_blank""></a>. Εάν έχετε αναφορές σφαλμάτων ή ερωτήματα για την τεχνική υποστήριξη σχετικά με το Open Journal Systems, ανατρέξτε στο φόρουμ υποστήριξης <a href=""http://pkp.sfu.ca/support/forum""></a> ή επισκεφτείτε το σύστημα σύνταξης αναφορών του PKP online <a href=""http://pkp.sfu.ca/bugzilla/"" target=""_blank""></a>. Παρόλο που το φόρουμ υποστήριξης είναι η προτιμώμενη μέθοδος επικοινωνίας, μπορείτε επίσης να επικοινωνήσετε με την ομάδα μέσω ηλεκτρονικού ταχυδρομείου στη διεύθυνση <a href=""mailto:pkp.contact@gmail.com"">pkp.contact@gmail.com</a>.</p>
 				<p><strong>Συνίσταται αυστηρώς</strong> η δημιουργία εφεδρικών αντιγράφων ασφαλαίας (back up) της βάσης δεδομένων, του καταλόγου αρχείων και του καταλόγου εγκατάστασης του OJS πριν να προχωρήσετε παρακάτω.</p>

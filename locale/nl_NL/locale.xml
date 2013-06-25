@@ -759,48 +759,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installatie</message>
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
-
-<p>Dank u voor het downloaden van <strong>Open Journal Systems</strong> van het Public Knowledge Project. Lees voor u verdergaat eerst het <a href="{$baseUrl}/docs/README">README</a> bestand van de software. Voor meer informatie over het Public Knowledge Project en zijn software projecten, zie de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Als u problemen wilt melden of technische vragen wilt stellen over Open Journal Systems, zie het <a href="http://pkp.sfu.ca/support/forum">support forum</a> of bezoek PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">probleemrapportage systeem</a>. Hoewel het support forum de voorkeur heeft kun u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-
-<h4>Upgrade</h4>
-
-<p>Wanneer u een upgrade doet van een bestaande installatie van OJS 2.x, <a href="{$upgradeUrl}">klik hier</a> om verder te gaan.</p>
-
-<h4>Systeemeisen</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (inclusief PHP 5.x), u gebruikt nu PHP {$phpVersion}{$wrongPhpText}</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (inclusief MySQL 4.x) of <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (inclusief PostgreSQL 8.x)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x of Microsoft IIS 6</li>
-	<li>Operating system: Ieder OS dat de bovengenoemde software onderstent, inclusief <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>Aangezien PKP niet de middelen heeft om iedere combinatie van softwareversies en platforms te testen, impliceert dit geen garanties voor correcte werking of ondersteuning.</p>
-
-<p>Deze instellingen kunnen na installatie gewijzigd worden door het bestand <tt>config.inc.php</tt> in de  OJS map aan te passen of met de sitebeheer web interface.</p>
-
-<h4>Ondersteunde database systemen</h4>
-
-<p>OJS is momenteel alleen getest met MySQL en PostgreSQL, hoewel andere database management systemen die ondersteund worden door <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> kunnen werken (geheel of gedeeltelijk). Compatibiliteistrappporen en/of aanpassingen in de code voor alernatieve DBMS-en kunnen naar het OJS team gestuurd worden.</p>
-
-<h4>Pre-Installatie Stappen</h4>
-
-<p>1. De volgende bestanden en mappen (en hun inhoud) moeten wijzigbaar gemaakt worden:</p>
-<ul>
-	<li><tt>config.inc.php</tt> is wijzigbaar (optioneel): {$writable_config}</li>
-	<li><tt>public/</tt> is wijzigbaar: {$writable_public}</li>
-	<li><tt>cache/</tt> is wijzigbaar: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> is wijzigbaar: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> is wijzigbaar: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> is wijzigbaar: {$writable_db_cache}</li>
-</ul>
-
-<p>2. Een map om ingestuurde bestanden op te slaan moet aangemaakt worden en schrijfbaar zijn (Zie "Bestandsinstellingen" hieronder).</p>
-
-<h4>Handmatige installatie</h4>
-
-<p>Kies <strong>Handmatige installatie</strong> om de  SQL commando's te tonen voor het aanmaken van het OJS database schema en de initiële gegevens zodat de database installatie met de hand uitgevoerd kan worden. Deze optie is handig voor het localiseren van installatieproblemen, in het bijzonder op niet-ondersteunde platforms. Merk op dat deze installatie niet probeert om de database of tabellen aan te maken, hoewel het configuratiebestand met de opgegeven database instellingen wel wordt weggeschreven.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
 	
 <p>Dank u voor het downloaden van  Public Knowledge Project's <strong>Open Journal Systems</strong>. Lees voor u verdergaat de <a href="{$baseUrl}/docs/README">README</a> en <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> bestanden bij deze software. Bezoek voor meer informatie over het Public Knowledge Project en zijn software projecten de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Voor het melden van fouten  en het verkrijgen van technische ondersteuning voor Open Journal Systems kunt u terecht op het <a href="http://pkp.sfu.ca/support/forum">support forum</a> of bezoek PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">fout rapportage systeem</a>. Hoewel het forum de voorkeur heeft kunt u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>

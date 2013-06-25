@@ -693,48 +693,6 @@ vaš korisnički račun, unesite u polja ispod vašu sadašnju i novu lozinku.</
 	
 	<!--  Installer  --><message key="installer.ojsInstallation">OJS instalacija</message>
 	<message key="installer.ojsUpgrade">OJS nadogradnja</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS verzija {$version}</h4>
-
-<p>Hvala vam na preuzimanju Public Knowledge Project-ovog <strong>Open Journal Systems-a</strong>. Prije postupka, molimo vas da pročitate <a href="{$baseUrl}/docs/README">README</a> datoteku koja dolazi uz ovaj program. Za više informacija o Public Knowledge Project-u i njegovim programskim projektima, posjetite <a href="http://pkp.sfu.ca/" target="_blank">PKP mrežnu stranicu</a>. Ako primite izvješća o greški u programu ili tražite tehničku podršku za Open Journal Systems, pogledajte <a href="http://pkp.sfu.ca/support/forum">forum za podršku</a> ili posjetite  PKP-ov online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">sustav za prijavljivanje greške</a>. Iako je forum za podršku korištenija metoda kontaktiranja, možete poslati i e-poštu stručnom timu na <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-
-<h4>Nadogradnja</h4>
-
-<p>Ako nadograđujete postojeću instalaciju OJS 2.x, <a href="{$upgradeUrl}">kliknite ovdje</a> za nastavak.</p>
-
-<h4>Preporučeni uvjeti za sustav</h4>
-
-<ul>
- <li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (uključujući PHP 5.x); trenutno koristite PHP {$phpVersion}{$wrongPhpText}</li>
- <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (uključujući MySQL 4.x) ili <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (uključujući PostgreSQL 8.x)</li>
- <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x ili >= 2.0.4x ili Microsoft IIS 6</li>
- <li>Operativni sustav: bilo koji OS koji podržava gore navedeni program, uključujući <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>Budući da PKP nema sredstava da testira svaku moguću kombinaciju programskih verzija i platformi, nije garantirana potpuna ispravnost postupka ili podrške.</p>
-
-<p>Nakon instalacije ove postavke se mogu promijeniti, uređivanjem datoteke <tt>config.inc.php</tt> u glavnom OJS direktoriju ili korištenjem administracijske stranice mrežnog sučelja.</p>
-
-<h4>Podržani sustavi baze podataka</h4>
-
-<p>OJS je trenutno testiran na MySQL i PostgreSQL, iako drugi sustavi za upravljanje bazom podataka podržani od <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> mogu funkcionirati (u potpunosti ili djelomično). Funkcionalni izvještaji i/ili zakrpe koda za alternativne sustave za upravljanjem bazom podataka mogu biti poslani OJS timu.</p>
-
-<h4>Predinstalacijski koraci</h4>
-
-<p>1. Sljedeće datoteke i direktoriji (i njihovi sadržaji) moraju biti omogućeni za pisanje:</p>
-<ul>
- <li>Po <tt>config.inc.php</tt> je moguće pisati (po izboru): {$writable_config}</li>
- <li>Po <tt>public/</tt> je moguće pisati: {$writable_public}</li>
- <li>Po <tt>cache/</tt> je moguće pisati: {$writable_cache}</li>
- <li>Po <tt>cache/t_cache/</tt> je moguće pisati: {$writable_templates_cache}</li>
- <li>Po <tt>cache/t_compile/</tt> je moguće pisati: {$writable_templates_compile}</li>
- <li>Po <tt>cache/_db</tt> je moguće pisati: {$writable_db_cache}</li>
-</ul>
-
-<p>2. Direktorij za pohranu poslanih datoteka mora biti kreiran i omogućen za pisanje (vidite ispod "datotečne postavke").</p>
-
-<h4>Ručno instaliranje</h4>
-
-<p>Izaberite <strong>Ručnu instalaciju</strong> da bi prikazali SQL izjave potrebne za kreiranje OJS sheme baze podataka i inicijalnih podataka, tako da instalacija baze podataka može biti izvršena ručno. Ta opcija je korisna kada otkrivate pogreške kod instalacijskih problema, djelomično na nepodržanim platformama. Obavijest: ta metoda instalacije neće poduzeti ništa kako bi kreirala bazu podataka ili bilo koje tablice, iako će konfiguracijska datoteka svejedno biti zapisana s isporučenim postavkama baze podataka.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS verzija {$version}</h4>
 	
 <p>Hvala Vam za preuzimanje Public Knowledge Projecta, <strong>Open Journal Systems</strong>. Prije postupka, molimo pročitajte <a href="{$baseUrl}/docs/README">README</a> i <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> datoteke uključene s ovim softverom. Za više informacija o Public Knowledge Project-u i njegovim softverskim projektima, molimo posjetite <a href="http://pkp.sfu.ca/" target="_blank">PKP mrežnu stranicu</a>. Ako imate prijavu o grešci ili tražite tehničku podršku za OJS, pogledajte <a href="http://pkp.sfu.ca/support/forum">forum podrške</a> ili posjetite PKP-ov online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">sustav prijave pogrešaka</a>. Iako je forum podrške preferirana metoda kontakta, također možete timu poslati e-poštu na <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>

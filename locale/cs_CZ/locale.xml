@@ -766,48 +766,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS instalace</message>
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>Verze OJS {$version}</h4>
-
-<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README">README</a> soubor dodaný s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://pkp.sfu.ca/support/forum">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-
-<h4>Upgrade</h4>
-
-<p>Pokud provádíte upgrade existující instalace OJS 2.x, <a href="{$upgradeUrl}">Klikněte zde</a> pro pokračování.</p>
-
-<h4>Doporučované požadavky na systém</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (včetně PHP 5.x); aktuálně používáte PHP {$phpVersion}{$wrongPhpText}</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (včetně MySQL 4.x) nebo <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (včetně PostgreSQL 8.x)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x nebo Microsoft IIS 6</li>
-	<li>Operační systém: jakýkoliv OS, který podporuje výše uvedený software, včetně <a href="http://www.linux.org/" target="_blank">Linuxu</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solarisu</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>Jelikož PKP nemá prostředky, aby otestoval každou možnou kombinaci verze softwaru a platforem, není předpokládána žádná garance plné funkčnosti nebo podpora.</p>
-
-<p>Tato nastavení mohou být po instalaci změněna úpravou souboru <tt>config.inc.php</tt> ve výchozím OJS adresáři nebo s využitím webového administračního rozhraní.</p>
-
-<h4>Podporované databázové systémy</h4>
-
-<p>OJS byl v současnosti testován pouze na MySQL a PostgreSQL, avšak jiné systémy pro správu databází podporované <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> mohou také fungovat (plně nebo částečně). Reporty o kompatibilitě a/nebo opravy kódu (code patches) pro alternativní DBMS lze zaslat OJS týmu.</p>
-
-<h4>Kroky předcházející instalaci</h4>
-
-<p>1. Následující soubory a adresáře (a jejich obsah) musí být nastaveny na zapsatelné (writable):</p>
-<ul>
-	<li><tt>config.inc.php</tt> je zapsatelný (volitelné): {$writable_config}</li>
-	<li><tt>public/</tt> je zapsatelný: {$writable_public}</li>
-	<li><tt>cache/</tt> je zapsatelný: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> je zapsatelný: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> je zapsatelný: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> je zapsatelný: {$writable_db_cache}</li>
-</ul>
-
-<p>2. Musí být vytvořen adresář pro ukládání nahraných souborů a nastaven jako zapsatelný (viz "Nastavení souborů" níže).</p>
-
-<h4>Ruční instalace</h4>
-
-<p>Zvolte <strong>Ruční instalaci</strong> pro zobrazení SQL příkazů potřebných pro vytvoření schématu databáze a počátečních dat tak, aby mohla být instalace databáze provedena ručně. Tato možnost je užitečná v případě že provádíte debugging instalačních problémů, především na nepodporovaných platformách. Vězte, že tato metoda instalace se nepokusí vytvořit databázi ani žádné tabulky, avšak konfigurační soubor bude přesto zapsán s dodaným nastavením databáze.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Verze OJS {$version}</h4>
 	
 <p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README">README</a> a <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> soubory dodané s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://pkp.sfu.ca/support/forum">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
