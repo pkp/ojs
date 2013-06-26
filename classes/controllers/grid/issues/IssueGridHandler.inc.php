@@ -405,7 +405,7 @@ class IssueGridHandler extends GridHandler {
 		$dispatcher = $request->getDispatcher();
 		// FIXME: Find a better way to reload the containing tabs.
 		// Without this, issues don't move between tabs properly.
-		return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'issues'));
+		return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues'));
 	}
 
 	/**
@@ -436,7 +436,7 @@ class IssueGridHandler extends GridHandler {
 		$dispatcher = $request->getDispatcher();
 		// FIXME: Find a better way to reload the containing tabs.
 		// Without this, issues don't move between tabs properly.
-		return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'editor', 'issues'));
+		return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues'));
 	}
 }
 
