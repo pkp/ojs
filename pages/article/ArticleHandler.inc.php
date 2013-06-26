@@ -35,7 +35,6 @@ class ArticleHandler extends Handler {
 	 */
 	function ArticleHandler($request) {
 		parent::Handler($request);
-		$router = $request->getRouter();
 	}
 
 	/**
