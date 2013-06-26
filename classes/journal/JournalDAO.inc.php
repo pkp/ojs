@@ -132,7 +132,7 @@ class JournalDAO extends ContextDAO {
 		$announcementTypeDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
 
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$articleDao->deleteByJournalId($journalId);
+		$articleDao->deleteByContextId($journalId);
 
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->deleteById($journalId);
