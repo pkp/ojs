@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.uid">Аттрибут, хранящий имя пользователя</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Атрибут, значение которого уникально определяет учетную запись, такой как uid, cn или sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Формат хранимого пароля</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Формат хранения пароля на сервере. Рекомендуется SSHA  (требует PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">Настройки SASL (необязательно)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Использовать SASL вместо простой авторизации (требует  PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">Механизм SASL</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Например "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>

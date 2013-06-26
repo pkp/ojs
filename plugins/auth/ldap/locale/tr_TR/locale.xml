@@ -27,9 +27,7 @@
 	<message key="plugins.auth.ldap.settings.managerpwd">Manager şifresi</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">The manager DN ve şifresi yalnız kullanıcı profili, şifresi bilgilerinin senkronizasyonu seçildi ise gereklidir. Eğer LDAP yalnızca siteye giriş için kullanılacak ise gerekli değildir.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Şifre encryption</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">Hash biçimi şifrenin sunucuda saklanması için kullanılır. SSHA önerilir (PHP >= 4.3.0 gerektirir).</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL Ayarları (opsiyonel)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Basit tanımlama yerine SASL kullan (PHP >= 5  gerektirir.)</message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mekanizması</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Örnek, "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>

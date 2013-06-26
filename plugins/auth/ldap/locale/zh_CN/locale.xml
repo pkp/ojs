@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.uid">帐户名称属性</message>
 	<message key="plugins.auth.ldap.settings.uid.description">该属性的值唯一标识一个对象，如用户的uid或CN或sAMAccountName</message>
 	<message key="plugins.auth.ldap.settings.pwhash">密码加密</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[哈希格式存储到服务器的密码。建议SSHA(requires PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL的设置（可选）</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[使用SASL而不是简单的身份验证 (requires PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mechanism</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">E.g., "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">领域</message>

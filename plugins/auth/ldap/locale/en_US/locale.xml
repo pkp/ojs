@@ -28,9 +28,9 @@
 	<message key="plugins.auth.ldap.settings.uid">Account name attribute</message>
 	<message key="plugins.auth.ldap.settings.uid.description">The attribute whose value uniquely identifies a user object, such as uid or cn or sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Password encryption</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">Hash format for passwords stored to the server. SSHA is recommended (requires PHP >= 4.3.0).</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Hash format for passwords stored to the server. SSHA is recommended.</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL Settings (optional)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Use SASL instead of simple authentication (requires PHP >= 5)</message>
+	<message key="plugins.auth.ldap.settings.sasl">Use SASL instead of simple authentication</message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mechanism</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">E.g., "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>

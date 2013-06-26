@@ -58,16 +58,6 @@
 	<message key="common.payment">പണം കൊടുക്കല്‍</message>
 	<message key="common.payments">പണം  ഒടുക്കല്‍</message>
 	<message key="common.pageHeader.altText">താളിന്റെ ഹെഡര്‍</message>
-	<message key="common.homePageHeader.altText">Homepage Header</message>
-	<message key="common.journalHomepageImage.altText">Journal Homepage Image</message>
-
-	<!-- Common Form Messages -->
-	
-	<!-- Common Email Messages -->
-
-	<!-- Common Localization Terms -->
-
-	<!-- Common Error Messages -->
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">ജേണല്‍ ഹെല്പ്</message>
@@ -108,7 +98,6 @@
 	<message key="section.sections">ജേണല്‍ വിഭാഗങ്ങള്‍</message>
 	<message key="section.title">വിഭാഗത്തിന്റെ   തലക്കെട്ട്</message>
 	<message key="section.abbreviation">ചുരുക്കെഴുത്ത് .</message>
-	<message key="section.abbreviation.example">(For example, Articles=ART)</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.article">പ്രബന്ധം</message>
@@ -160,7 +149,6 @@
 	<message key="submission.notifyEditor">ഗ്രന്ധകര്‍ത്താവിന് അറിയിപ്പ് നല്‍കുക</message>
 	<message key="submission.editorAuthorRecord">ഗ്രന്ധപരിശോധകന്റെ/ഗ്രന്ധകര്‍ത്താവിന്റെ ഇ-മെയില്‍ രേഖപ്പെടുത്തുക</message>
 	<message key="submission.reviewersVersion">ഫയലിനെക്കുറി ച്ചുള്ള പുനപരിശോധകന്റെ ആവിഷ്കാരം അഥവാ വ്യാഖ്യാനം</message>
-	<message key="submission.postReviewVersion">Post-review version of file</message>
 	<message key="submission.editorVersion">ഗ്രന്ധപരിശോധകനുള്ള ആവിഷ്കാരം</message>
 	<message key="submission.authorsRevisedVersion">ഗ്രന്ധകര്‍ത്താവ്  പുനപരിശോധിച്ച്  ആവിഷ്കരിച്ച ഫയല്‍</message>
 	<message key="submission.authorVersion">ഗ്രന്ധകര്‍ത്താവിനുള്ള ആവിഷ്കാരം</message>
@@ -205,7 +193,6 @@
 	<message key="user.registerForOtherJournals">മറ്റ് ജേണല്‍സിനു വേണ്ടി രെജിസ്റ്റര്‍ ചെയ്യുക</message>
 	<message key="user.myJournals">എന്റെ ജേണല്‍സ്</message>
 	<message key="user.manageMySubscriptions">എന്റെ സംഭാവനകള്‍ നിയന്ത്രണത്തില്‍ കൊണ്ടുവരിക</message>
-	<message key="user.noRoles.chooseJournal">Your account is not currently associated with any journals. Please choose a journal:
 താങ്കളുടെ അക്കൗണ്ട് നിലവില്‍ മറ്റൊരു ജേണല്‍സുമായും പങ്കാളിത്തമില്.ദയവായി ഒരു ജേണല്‍ തിരഞ്ഞെടുക്കുക</message>
 	<message key="user.noRoles.noRolesForJournal">താങ്കളുടെ അക്കൗണ്ടിന് നിലവില്‍ ഈ ജേണലിനുവേണ്ടി ഏതൊരു കര്‍ത്തവ്യവുമില്ല . ദയവായി താഴെപറഞ്ഞിരിക്കുന്നവയില്‍നിന്നും ഒരു പ്രവൃത്തി  തിരഞ്ഞെടുക്കുക.</message>
 	<message key="user.noRoles.submitArticle">ഒരു നിര്‍ദ്ദേശം സമര്‍പ്പിക്കുക</message>
@@ -334,41 +321,9 @@
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">ഈ ലേഖനത്തില്‍ അഭിപ്രായം രേഖപ്പെടുത്തുക</message>
-	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
 	
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[To have the contents of all journals hosted on this site indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your site's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.
-<br /><br />
-Note that the OAI interface can be disabled for this site by editing the OJS system configuration. Future versions of OJS will allow the OAI interface to be enabled or disabled for individual journals within the site.]]></message>
-
-	
-	
-	<!-- Languages -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
-	<ul>
-		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
-		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
-	</ul>
-<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specifying a default authentication source other than OJS has the following effects:</p>
-<ul>
-	<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>
-</ul>]]></message>
-	
-	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Use this form to modify your system configuration (the <tt>config.inc.php</tt> file). Click Save to save your new configuration, or "Display" to simply display the updated configuration file and not modify your existing configuration.
-<br /><br />
-<span class="formError">Warning: Modifying these settings can potentially leave your site in an inaccessible state (requiring your configuration file to be manually fixed). It is strongly recommended that you do not make any changes unless you know exactly what you are doing.</span>]]></message>
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOTE!</div>
-<p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
-	
-
-	<!-- Site Administrator Merge Users -->	
-
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">സബ്സ്ക്രിപ്ഷന്‍ മനേജ്മെന്റ്</message>
 	<message key="subscriptionManager.individualSubscriptions">വെവ്വേറെ സബ്സ്ക്രിപ്ഷന്‍സ്</message>
@@ -400,125 +355,11 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.implicitAuth">ഇമ്പ്ലിസിറ്റ് ആതന്റികേഷന്‍ പ്ലഗിന്‍സ്</message>
 	<message key="plugins.categories.implicitAuth.description">എച്ച്ടിടിപി ഹെഡേര്‍സ് അടിസ്ഥാനമാക്കിയുള്ള ആതേന്റിക്കേറ്റിങ്ങ് യൂസര്‍സിനെ അനുക്കൂലിച്ച് കൊണ്ടുള്ള ഇംപ്ലിസിറ്റ് ആതേന്റിക്കേഷന്‍ പ്ലഗിന്‍സ് ഇംപ്ലിമെന്റ് ചെയ്യുന്നു.</message>
 
-
-
-
- 
-
-	<!-- Files Browser -->
-
-	<!-- Journal Setup -->
-	
-	<!-- Setup Step 1 -->
-
-	<!-- Setup Step 2 -->
-
-
-	<message key="manager.setup.reviewProcessEmailDescription">Editors send
-	Reviewers the request to review with the submission attached to the email. Reviewers email editors their assent (or regrets), as well as the review and recommendation. Editors enter Reviewers' assent (or regrets), as well as the review and recommendation on the submission's Review page, to record the review process.</message>
-
-
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
-<br /><br />
-Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
-	
-	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
-<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
-</ol>
-
-<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Journal will use a subject classification system available on the web.<br />
-Title of classification system]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oaister.org/dataproviders.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
-<br /><br />
-Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>
 	<message key="manager.setup.citations.enable">ഈ ഫോര്‍മാറ്റില്‍ ഉള്ള പ്ലഗിന്‍സ് ഒഎഐ കമ്യൂണിക്കേസ്കനില്‍ ഉള്ള മെറ്റാഡാറ്റയെ എക്സ് പ്രസ്സ് ചെയ്യുന്നു  സൈറ്റെഷന്‍ന്റെ മാര്ക്ക് അപ് അസിസ്റ്റന്റിനെ പ്രാബല്യത്തിലാക്കുക</message>
-
-	<!-- Setup Step 4 -->
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Table of Contents.<br /><br />
-Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Journal Management.)]]></message>
-	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are available.</p>
-
-<ol>
-	<li><strong>Add a Reading Tool</strong><p>The Journal Manager can add "Find References" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>
-	<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</p></li>
-</ol>]]></message>
-
-	<!-- Setup Step 5 -->
-
-	<!-- Languages -->
-	
-	<!-- Section Management -->
-
-	<!-- Import/Export -->
-
-	<!-- Groups / Editorial Team -->
-
-
 
 	<!-- People Management -->
 	<message key="manager.people.confirmDisable">ഈ യൂസറിനെ അപ്രാപ്യമാക്കേണമോ ? ഇത് ഈ സിസ്റ്റത്തില്‍ യൂസറിനെ ലോഗിന്‍ ചെയ്യുന്നത്തില്‍ നിന്നും തടയുന്നു.
 താങ്കള്‍ക്ക് യൂസര്‍ അക്കൗണ്ട് അപ്രപ്യത്തിലാക്കുന്നതിന് കാരണം ഓപ്ഷണല്‍ ആയി നല്‍കാം</message>
-	<message key="manager.people.noAdministrativeRights"><![CDATA[Sorry, you do not have administrative rights over this user. This may be because:
-		<ul>
-			<li>The user is a site administrator</li>
-			<li>The user is active in journals you do not manage</li>
-		</ul>
-	This task must be performed by a site administrator.]]></message>
-
-
-	
-	<!-- Email Management -->
-
-	<!-- Subscription Policy Management -->
-
-	<!-- Subscription Type Management -->
-
-	<!-- Subscription Management -->
-
-	<!-- Announcement Type Management -->
-
-	<!-- Announcements Management -->
-
-	<!-- Editor -->
-	<message key="editor.submissionReview.notes"><![CDATA[<ol>
-	<li>Highlighted items indicate action is required by editor.</li>
-	<li>"Due" is filled in when reviewer accepts request to review; it displays number of weeks to review's due date or (-) weeks that it is overdue.</li>
-</ol>]]></message>
-
-	<!-- Editor Index Page -->
-
-	<!-- Back Issues -->
-
-	<!-- Create Issue / Issue Data -->
-
-	<!-- Live Issues -->
-
-	<!-- Navigation sidebar menu -->
-	
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
-Ratings is out of 5 (Excellent).<br/>
-Weeks refers to average period of time to complete a review.<br/>
-Latest is date of most recently accepted review.<br/>
-Active is how many reviews are currently being considered or underway.]]></message>
-
-
-
-
-
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">പ്രാബല്യത്തിലുള്ള എഡിറ്റോറിയല്‍ അസൈന്‍മെന്റ്സ്</message>
@@ -542,7 +383,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="sectionEditor.review.createReviewer">പുതിയ റിവ്യൂവറിനെ നിര്‍മ്മിക്കുക</message>
 
 	<!-- Layout Editor -->
-	<message key="layoutEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="layoutEditor.completedEditorialAssignments">പ്രാബല്യത്തിലുള്ള എഡിറ്റോറിയല്‍ അസൈന്‍മെന്റ്സ്</message>
 	<message key="layoutEditor.noActiveAssignments">പ്രാബല്യത്തിലുള്ള എഡിറ്റോറിയല്‍ അസൈന്‍മെന്റ്സ് ഒന്നും തന്നെ ഇല്ല.</message>
 	<message key="layoutEditor.layoutEditingAssignments">ലേഔട്ട് എഡിറ്റിങ്ങ് അസൈന്‍മെന്റ്സ്</message>
@@ -588,12 +428,10 @@ Active is how many reviews are currently being considered or underway.]]></messa
         <message key="reviewer.article.reviewSchedule">ഷെഡ്യൂള്‍ അവലോകനം ചെയ്യുക</message>
         <message key="reviewer.article.reviewSteps">സ്റ്റെപ്പ്സ് അവലോകനം ചെയ്യുക</message>
         <message key="reviewer.article.reviewerGuidelines">റിവ്യൂവര്‍ ഗൈഡ് ലൈന്‍സ്</message>
-	<message key="reviewer.article.reviewGuidelinesDescription">The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author.</message>
         <message key="reviewer.article.notifyEditorA">സബ്മിഷന്‍സിന്റെ ഗ്രന്ധപരിശോധകനെ അറിയിക്കുക</message>
         <message key="reviewer.article.notifyEditorB">താങ്കള്‍ അവലോകനം ചെയ്തിട്ടുണ്ടോ ഇല്ലയോ എന്നതിനെ കുറിച്ച്.</message>
         <message key="reviewer.article.consultGuidelines">താങ്കള്‍ അവലോകനം ചെയ്യാന്‍ പോവുകയാണെങ്കില്‍ താഴെ പറഞ്ഞിട്ടുള്ള റിവ്യൂവറിന്റെ വിദഗ്ദ്ധാഭിപ്രായം കൂടി പരിശോധിക്കുക.</message>
         <message key="reviewer.article.downloadSubmission">സബ്മിഷനുമായി ബന്ധപ്പെട്ട ഫയലുകള്‍ ഡൗണ്‍ലോഡ് ചെയ്യാനും അവലോകനം ചെയ്യാനും ( സ്ക്രീനിലോ അഥവാ പ്രിന്റ് ചെയ്യാനോ )ഫയലിന്റെ നാമത്തില്‍ ക്ലിക്ക് ചെയ്യുക.</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare whether or not you have competing interests with regard to this research (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
 	<message key="reviewer.competingInterests">കോംപെറ്റിങ്ങ് ഇന്‍ട്രെസ്റ്റ്സ്</message>
         <message key="reviewer.article.enterReviewA">ഈ സബ്മിഷനെക്കുറിച്ചുള്ള താങ്കളുടെ അവലോകനം നല്‍ക്കുന്നതിനായി (അഥവാ പേയ്സ്റ്റ്) ഐക്കണില്‍ ക്ലിക്ക് ചെയ്യുക.</message>
         <message key="reviewer.article.uploadFile">ഇതിനു പുറമേ വിദഗ്ദ്ധാഭിപ്രായത്തിനായി താങ്കള്‍ക്ക് ഗ്രന്ഥപരിശോധകനോ പിന്നെ/അഥവാ ഗ്രന്ഥകര്‍ത്താവിനോ ഫയല്‍ അപ് ലോഡ് ചെയ്യാം.</message>
@@ -610,30 +448,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">പ്രൂഫ് റീഡിങ്ങ് അസ്സൈന്‍മെന്റ്സ് ഒന്നുംതന്നെ ഇല്ല്ല</message>
-
-	<!-- Author -->
-
-
-	<!-- Article Submission Step 1 -->
-
-	
-	<!-- Article Submission Step 2 -->
-	
-	<!-- Article Submission Step 3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[<p>To upload a manuscript to this journal, complete the following steps.</p>
-<ol>
-<li>On this page, click Browse (or Choose File) which opens a Choose File window for locating the file on the hard drive of your computer.</li>
-<li>Locate the file you wish to submit and highlight it.</li>
-<li>Click Open on the Choose File window, which places the name of the file on this page.</li>
-<li>Click Upload on this page, which uploads the file from the computer to the journal's web site and renames it following the journal's conventions.</li>
-<li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
-</ol>]]></message>
-
-	<!-- Article Submission Step 4 -->
-	
-	<!-- Article Submission Step 4a: Supplementary Files -->
-	
-	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">റിവ്യൂ വെര്‍ഷന്‍ നടക്കാത്തിടത്ത് ഇ-മെയില്‍ റിക്വസ്റ്റ് അയ്ക്കാന്‍ സാധിക്കില്ല</message>
@@ -696,16 +510,12 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">യൂസര്‍ അല്ലെങ്കില്‍ ഈ സൈറ്റില്‍ രജിസ്റ്റര്‍ ചെയ്യുക</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[For security reasons, this system emails a reset password to registered users, rather than recalling the 
-current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">പാസ്സ് വേര്‍ഡ് ആവര്‍ത്തിക്കുക</message>
 	<message key="user.register.selectJournal">റജിസ്റ്റര്‍ ചെയ്യുന്നതിനായി ഒരു ജര്‍ണല്‍ തിരഞ്ഞെടുക്കുക</message>
 	<message key="user.register.noJournals">ഈ സൈറ്റില്‍ താങ്കള്‍ ഒരു ജര്‍ണലും റജിസ്റ്റര്‍ ചെയ്തിട്ടില്ല.</message>
 	<message key="user.register.privacyStatement">പ്രൈവസി സ്റ്റേറ്റ്മെന്റ്</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are already registered with this or another journal on this site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are <strong>not</strong> already registered with this or another journal on this site.]]></message>
 	<message key="user.register.loginToRegister">ഈ ജര്‍ണലില്‍ റജിസ്റ്റര്‍ ചെയ്യുന്നതിനായി താങ്കളുടെ നിലവിലുള്ള യൂസര്‍നേമും പാസ്സ് വേര്‍ഡും എന്റര്‍ ചെയ്യുക.</message>
 	<message key="user.register.registrationDisabled">ഈ ജര്‍ണല്‍ ഇപ്പോ യൂസര്‍ റജിസ്ട്രേഷനുകള്‍ ഒന്നും സ്വീകരിക്കുന്നില്ല.</message>
 	<message key="user.register.form.passwordLengthTooShort">താങ്കള്‍ നല്‍കിയ പാസ്സ് വേര്‍ഡ് ദൈര്‍ഘ്യമുള്ളതല്ല.</message>
@@ -719,7 +529,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">എന്റെ സബ്സ്ക്രിപ്ഷന്‍സ്</message>
 	<message key="user.subscriptions.subscriptionStatus">സബ്സ്ക്രിപ്ഷന്‍ സ്റ്റാറ്റസ്</message>
-	<message key="user.subscriptions.statusInformation">Active and expired subscriptions are displayed below along with their expiration date. In addition, the following status information may be included with each subscription.</message>
 	<message key="user.subscriptions.status">സ്റ്റാറ്റസ്</message>
 	<message key="user.subscriptions.statusDescription">വിവരണം</message>
 	<message key="user.subscriptions.status.needsInformationDescription">സബ്ക്രിപ്ഷന്‍ പ്രാബല്യത്തിലാക്കുന്നതിന് മുമ്പ് കൂടുതല്‍ വിവരങ്ങള്‍ ആവശ്യമുണ്ട്</message>
@@ -746,12 +555,10 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.subscriptions.form.institutionNameRequired">ഇന്‍സ്റ്റിട്യൂഷന്‍ന്റെ പേര് ആവശ്യമാണ്</message>
 	<message key="user.subscriptions.form.institutionMailingAddress">മെയിലിങ്ങ് അഡ്രസ്സ്</message>
 	<message key="user.subscriptions.form.domain">ഡോമൈന്‍</message>
-	<message key="user.subscriptions.form.domainInstructions"><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></message>
 	<message key="user.subscriptions.form.domainIPRangeRequired">തിരഞ്ഞെടുത്ത സബ്സ്ക്രിഷന്‍ ഇനത്തിനു സബ്സ്ക്രിപ്ഷന്‍ ആതന്റിക്കേഷനായി ഒരു ഡോമൈന്‍ പിന്നെ/അഥവാ ഐപി റേഞ്ച് ആവശ്യമാണ്.</message>
 	<message key="user.subscriptions.form.domainValid">ദയവായി ഒരു പ്രാബല്യത്തിലുള്ള ഡോമൈന്‍ നാമം നല്‍ക്കുക.</message>
 	<message key="user.subscriptions.form.ipRange">ഐപി റേഞ്ചസ്</message>
 	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
-	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></message>
 	<message key="user.subscriptions.form.ipRangeValid">ദയവായി ഒരു പ്രാബല്യത്തിലുള്ള ഐപി റേഞ്ച് നല്‍ക്കുക.</message>
 	<message key="user.subscriptions.form.deleteIpRange">മായ്ക്കുക</message>
 	<message key="user.subscriptions.form.addIpRange">ചേര്‍ക്കുക</message>
@@ -765,25 +572,13 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="search.allJournals">എല്ലാ ജര്‍ണലുകളും</message>
 	<message key="search.authorIndex">ഓതര്‍ ഇന്‍ഡക്സ് ബ്രൗസ് ചെയ്യുക</message>
 	<message key="search.authorDetails">ഗ്രന്ഥകര്‍ത്താവിന്റെ വിശദാംശങ്ങള്‍</message>
-	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
-<li>Search terms are case-insensitive</li>
-<li>Common words are ignored</li>
-<li>By default only articles containing <em>all</em> terms in the query are returned (i.e., <em>AND</em> is implied)</li>
-<li>Combine multiple words with <em>OR</em> to find articles containing either term; e.g., <em>education OR research</em></li>
-<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal OR conference) NOT theses)</em></li>
-<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em></li>
-<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g. <em>online -politics</em> or <em>online NOT politics</em></li>
-<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of characters; e.g., <em>soci* morality</em> would match documents containing "sociological" or "societal"</li>
-</ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">പോര്‍ട്ടബിള്‍ ഡോക്യുമെന്റ് ഫോര്‍മാറ്റ് (പിഡിഎഫ് )</message>
 	<message key="article.pdf.download">ഈ പിഡിഎഫ് ഫയല്‍ ഡൗണ്‍ലോഡ് ചെയ്യുക</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Alternatively, you can also download the PDF file directly to your computer, from where it can be opened using a PDF reader. To download the PDF, click the Download link below.</p>]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">ലേഖനങ്ങള്‍ ഡൗണ്‍ലോഡ് ചെയ്യുന്നതിന്</message>
-	<message key="article.nonpdf.note"><![CDATA[The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, <a href="{$url}">click here</a>.]]></message>
 	
 	<!-- Site index -->
 	<message key="site.journalsHosted">ജര്‍ണലുകള്‍ ഈ സൈറ്റില്‍ ആണ് ഹോസ്റ്റ് ചെയ്യപ്പെട്ടിരിക്കുന്നത്</message>
@@ -823,7 +618,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.onlineSubmissions.registrationRequired">നിലവിലുള്ള സമര്‍പ്പണങ്ങളുടെ സ്റ്റാറ്റസ് പരിശോധിക്കാനും ഓണ്‍ലൈനായി ഐറ്റംസ് സമര്‍പ്പിക്കാനും രജിസ്ട്രേഷന്‍,ലോഗിന്‍ എന്നിവ ആവശ്യമാണ്.</message>
 	<message key="about.authorGuidelines">ഓതര്‍ ഗൈഡ്ലൈന്‍സ്</message>
 	<message key="about.submissionPreparationChecklist">സമര്‍പ്പണം തയ്യാറാക്കുന്നതിനുള്ള ചെക്ക് ലിസ്റ്റ്</message>
-	<message key="about.submissionPreparationChecklist.description">As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines.</message>
 	<message key="about.copyrightNotice">കോപ്പിറൈറ്റ് നോട്ടീസ്</message>
 	<message key="about.privacyStatement">പ്രൈവസി സ്റ്റ്റ്റേറ്റ്മെന്റ്</message>
 	<message key="about.authorFees">ഓതര്‍ ഫീസ്</message>
@@ -849,10 +643,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.journalSponsorship">ജര്‍ണലിന്റെ സ്പോണ്‍സര്‍ഷിപ്പ്</message>
 	<message key="about.aboutThisPublishingSystem">ഈ പബ്ലിഷിങ്ങ് സിസ്റ്റത്തെക്കുറിച്ച്</message>
 	<message key="about.aboutThisPublishingSystem.altText">ഒജെഎസ് എഡിറ്റോറിയലും പ്രസിദ്ധീകരണ പ്രക്രിയയും</message>
-	<message key="about.aboutOJSJournal"><![CDATA[This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[This site uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
-	
-	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">ഓപ്പണ്‍ ജര്‍ണല്‍ സിസ്റ്റംസ് ഹെല്‍പ്പ്</message>
@@ -872,7 +662,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="payment.payNow">ഇപ്പോള്‍ തന്നെ പേ ചെയ്യുക</message>
 	<message key="payment.waive">ഉപേക്ഷിക്കുക</message>
 	<message key="payment.alreadyPaid">മുന്‍മ്പേ പേ ചെയ്തിരിക്കുന്നു</message>
-	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
 	<message key="payment.paymentReceived">പേമെന്റ് ലഭിച്ചിരിക്കുന്നു</message>
 	<message key="payment.paymentSent">പേമെന്റ് ഇതിനു മുന്‍മ്പേ അയച്ചിരിക്കുന്നു</message>
 	<message key="payment.authorFees">ഓതര്‍ ഫീസ്</message>
@@ -903,85 +692,15 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">ഒജെഎസ് ഇന്‍സ്റ്റാളേഷന്‍</message>
 	<message key="installer.ojsUpgrade">ഒജെഎസ് അപ്ഗ്രേഡ്</message>
-	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
-	
-<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> and <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://pkp.sfu.ca/support/forum" target="_blank">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>
-<p>If you are running in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>]]></message>
-	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
-<br /><br />
-Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">പ്രഥമ ഭാഷ സിസ്റ്റത്തിനു വേണ്ടി ഉപയോഗിക്കുന്നു. ഇവിടെ പറഞ്ഞിട്ടില്ലാത്ത ഭാഷകള്‍ സപ്പോര്‍ട്ട് ചെയ്യുന്നതില്‍ താങ്കള്‍ക്ക് താല്‍പര്യം ഉണ്ടെങ്കില്‍ ഒജെഎസ് ഡോക്യുമെന്റേഷനില്‍ വിദഗ്ദ്ധാഭിപ്രായം നേടുക.</message>
 	<message key="installer.additionalLocalesInstructions">ഈ സിസ്റ്റത്തെ സപ്പോര്‍ട്ട് ചെയ്യുന്നതിനായി ഇതിനു പുറമേ ഒരു ഭാഷ തിരഞ്ഞെടുക്കുക. ഈ ഭാഷകള്‍ ഈ സൈറ്റില്‍ ഹോസ്റ്റ് ചെയ്തിരിക്കുന്ന ജര്‍ണലുകളുടെ ഉപയോഗത്തിനായി ലഭ്യമാക്കിയിരിക്കുന്നു. കൂടുതലായി തിരഞ്ഞെടുത്ത ഭാഷകള്‍ എപ്പോള്‍ വേണമെങ്കിലും അഡ്മിനിട്രേഷന്‍ ഇന്‍റ്റര്‍ഫേസ് വഴി ഇന്‍സ്റ്റാള്‍ ചെയ്യവുന്നതാണ്.</message>
-	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
-	<message key="installer.databaseSettingsInstructions">OJS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database.</message>
 	<message key="installer.installApplication">ഓപ്പണ്‍ ജര്‍ണല്‍ സിസ്റ്റംസ് ഇന്‍സ്റ്റാള്‍ ചെയ്യുക</message>
 	<message key="installer.upgradeApplication">ഓപ്പണ്‍ ജര്‍ണല്‍ സിസ്റ്റംസ് അപ്ഗ്രേഡ് ചെയ്യുക</message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
-	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
-<p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manual installation</h4>
-<p>The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually. You will also have to manually configure the <tt>config.inc.php</tt> configuration file.</p>]]></message>
-	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
-<p>To begin using the system, <a href="{$loginUrl}">login</a> with the username and password entered on the previous page.</p>
-<p>If you wish to receive news and updates, you can:</p>
-<ol>
-	<li><a href="http://pkp.sfu.ca/ojs/register" target="_new">Register</a> your journal, conference, or harvester and receive updates on software upgrades, security patches, and more.</li>
-	<li>Join our <a href="http://pkp.sfu.ca/informed" target="_new">discussion list</a> for OJS, OCS, the Harvester, Lemon8-XML, OMP, or all of the above.</li>
-	<li>Subscribe to the <a href="http://pkp.sfu.ca/blog" target="_new">PKP blog</a> <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a>.</li>
-</ol>
-<p>If you have questions or comments, please visit the <a href="http://pkp.sfu.ca/support/forum" target="_new">support forum</a>.</p>]]></message>
-	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>
-<p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <em>On</em>.</p>
-<p>If you haven't already registered and wish to receive news and updates, <strong>please register at <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> If you have questions or comments, please visit the <a href="http://pkp.sfu.ca/support/forum" target="_new">support forum</a>.</p>]]></message>
-
-
-	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} has entered a new submission, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} has revised article {$articleId}. The new file ID is {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} has been assigned to review submission {$articleId} for review round {$round}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} has been unassigned from reviewing submission {$articleId} for review round {$round}.</message>
-	<message key="log.review.reviewInitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been initiated.</message>
-	<message key="log.review.reviewReinitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been reinitiated.</message>
-	<message key="log.review.reviewCancelled">The round {$round} review by {$reviewerName} for submission {$articleId} has been cancelled.</message>
-	<message key="log.review.reviewCleared">The round {$round} review by {$reviewerName} for submission {$articleId} has been cleared.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} has been rated for the round {$round} review of submission {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">The due date for the round {$round} review of submission {$articleId} by {$reviewerName} has been set to {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">The recommendation for the round {$round} review of submission {$articleId} by {$reviewerName} has been set.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">The recommendation for the round {$round} review of submission {$articleId} has been set by the editor, {$editorName}, on behalf of the reviewer, {$reviewerName}.</message>
-	<message key="log.review.resubmit">The submission {$articleId} has been resubmitted for review.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$articleId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$articleId} on behalf of the reviewer, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">ഒരു റിവ്യൂവറിന്റെ ഫയല്‍ അപ് ലോഡ് ചെയ്തിരിക്കുന്നു</message>
-	<message key="log.editor.decision">An editor decision ({$decision}) for article {$articleId} was recorded by {$editorName}.</message>
-
-
-	<message key="log.copyedit.initiate">Copyediting on submission {$articleId} has been commenced by {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">ഡിഫാള്‍ട്ട് ആയിട്ടുള്ള കോപ്പി എഡിറ്റ് ഫയല്‍ തിരഞ്ഞെടുക്കപ്പെട്ടിരിക്കുന്നു.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the initial copy edit of submission {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} has completed the final copy edit of submission {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
 	<message key="log.copyedit.copyeditorFile">സബ്മിഷന്‍ ഫയലിന്റെ കോപ്പി എഡിറ്റര്‍ വേര്‍ഷന്‍ അപ് ലോഡ് ചെയ്തിരിക്കുന്നു.</message>
 	<message key="log.copyedit.authorFile">ഗ്രന്ഥകര്‍ത്താവ് കോപ്പി എഡിറ്റ് ചെയ്ത സബ്മിഷന്‍ ഫയലിന്റെ ഒരു വേര്‍ഷന്‍ അപ് ലോഡ് ചെയ്തിരിക്കുന്നു.</message>
-
-	<message key="log.layout.layoutEditorAssigned">{$editorName} has been assigned as layout editor for submission {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} has been unassigned as layout editor for submission {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} has completed layout editing for submission {$articleId}.</message>
-
-	<message key="log.editor.metadataModified">The metadata for this article was modified by {$editorName}.</message>
 	<message key="log.editor.editorFile">സമര്‍പ്പിച്ച ഫയലിന്റെ എഡിറ്റര്‍ വേര്‍ഷന്‍ അപ്-ലോഡ് ചെയ്തു.</message>
-	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
-	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
-	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} has expedited the editing process for article {$articleId}.</message>
-
-	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
-
-	<message key="log.imported">{$userName} has imported article {$articleId}.</message>
 
 	<!-- Reading Tools entries -->
 
@@ -989,10 +708,8 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">റീഡിങ്ങ് ടൂള്‍ ഓപ്ഷന്‍സ്</message>
 
-	<message key="rt.admin.settings.description">The reading tools appear in a frame beside published items in the sections of the journal that have been designated for indexing. The reading tools consist of a set of optional tools related to the published item, listed below, and a set of tools that provide access to related items, organized by field and discipline.</message>
 	<message key="rt.admin.settings.enableReadingTools">ജേണലിന്റെ നിയോഗിക്കപ്പെട്ട സെക്ഷനുകളില്‍ റീഡിങ്ങ് ടൂള്‍സ് പ്രാപ്തമാക്കുക.</message>
 	<message key="rt.admin.settings.relatedItems">ഫീല്‍ഡ്</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[See <a href="{$relatedItemsLink}" class="action">Related Items Sets</a> to view, add, correct, or delete related items for each field.]]></message>
 
 	<message key="rt.admin.options">ജേണല്‍ ഐറ്റം ടൂള്‍സ്</message>
 	<message key="rt.admin.relatedItems">റിലേറ്റഡ് ഐറ്റം ടൂള്‍സ്</message>
@@ -1002,45 +719,16 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.settings.addComment.anonymous">യൂസറുകള്‍ പോസ്റ്റിനായി രജിസ്റ്റര്‍ ചെയ്യുകയും ലോഗിന്‍ ചെയ്യുകയും വേണം,അജ്ഞാതാവസ്ഥ അനുവദിക്കുന്നതാണ്.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">യൂസറുകള്‍ പോസ്റ്റിനായി രജിസ്റ്റര്‍ ചെയ്യേണ്ടത് ആവശ്യമില്ല,അജ്ഞാതാവസ്ഥ അനുവദിക്കുന്നതാണ്.</message>
 
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
-You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
-Validation may fail on search URLs that require posted form data.]]></message>
-	
-	<!-- RT Entities -->
-
-
-
-
 	<message key="rt.metadata.dublinCore.primaryAuthor">സൃഷ്ടാവ്</message>
 
 	<message key="rt.metadata.pkp.primaryAuthor">ലേഖകന്റെ പേര്,അംഗീകാരം,രാജ്യം</message>
 	<message key="rt.metadata.pkp.peerReviewed">പിയര്‍-റിവ്യൂവ്ഡ് ആര്‍ട്ടിക്കിള്‍</message>
 	<message key="rt.metadata.pkp.doi">ഡിജിറ്റല്‍ ഒബ്ജക്ട് ഐഡന്റിഫയര്‍</message>
-
-
-
-
-
 	<message key="rt.beNotifiedWhen">ബീ നോട്ടിഫൈഡ് വെന്‍...</message>
-
 	<message key="rt.thisJournal">ജേണല്‍ തിരയുക</message>
-	
-
-	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
-	
-	
 	
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">ജേണലില്‍ പ്രധാനപ്പെട്ട എന്തെങ്കിലും പുതിയ വിവരങ്ങള്‍ ചേര്‍ക്കുമ്പോള്‍ ആ വിവരം അറിയിക്കുന്നതിനായി താങ്കളുടെ ഇ-മെയില്‍ അഡ്രസ്സ് നല്‍കുക.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[This page shows important updates associated with this journal such as new issues or announcements.  You may subscribe to these notifications through RSS feeds (by clicking on the images to the right), or   <a href="{$emailUrl}">through email.</a>]]></message>
-
 	<message key="notification.type.articleSubmitted">ഒരു പുതിയ പ്രബന്ധം "{$param}"സമര്‍പ്പിച്ചിരിക്കുന്നു</message>
 	<message key="notification.type.copyeditComment">ഒരു കോപ്പി എഡിറ്റര്‍  "{$param}" ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
 	<message key="notification.type.editing">എഡിറ്റിങ്ങ് ഈവന്റ്സ്</message>

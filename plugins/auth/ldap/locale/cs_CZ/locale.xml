@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.uid">Atribut jména účtu</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Atribut jehož hodnota jedinečně identifikuje uživatelský objekt, jako uid nebo cn nebo sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Šifrování hesla</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Hash formát pro hesla ukládaná na server. Je doporučeno SSHA (vyžaduje PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL nastavení (volitelné)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Používat SASL namísto jednoduchého ověření (vyžaduje PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mechanizmus</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Např.: "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Oblast</message>

@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.managerpwd">Beheerderswachtwoord</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">Beheerder DN en wachtwoord zijn alleen nodig als de gebruikersprofiel/wachtwoord synchronisatie of gebruikers creatie opties ingeschakeld zijn. Ze kunnen overgeslagen worden als LDAP alleen voor authenticatie wordt gebruikt.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Wachtwoordencryptie</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Hash formaat voor wachtwoorden die opgeslagen worden op de server. SSHA wordt aanbevolen (vereist PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL Instellingen (optioneel)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Gebruik SASL in plaats van eenvoudige authenticatie (vereist PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mechanisme</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Bijvoorbeeld "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Domein</message>

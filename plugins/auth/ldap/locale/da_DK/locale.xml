@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.uid">Kontonavn attribut</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Det attribut, hvis værdi fungerer som unik identifikation af et brugerobjekt, såsom uid eller cn eller sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Password kryptering</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Hash format for passwords gemt på server. SSHA er anbefalet (kræver PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL indstillinger (valgfri)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Brug SASL i stedet for simpel godkendelse (kræver PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mekanisme</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">F.eks.  "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>

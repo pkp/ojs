@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.uid">Kontu-izenaren atributua</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Erabiltzaile-objektu bat unibokoki identifikatzen duen atributua, esate baterako uid edo cn edo sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Pasahitz-enkriptatzea</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">Zerbitzarian biltegiratutako pasahitzen hash formatua. SSHA gomendatzen da (PHP >= 4.3.0 behar du).</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL ezarpenak (aukerakoa)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Erabili SASL autentifikazio sinplearen ordez (PHP >= 5 behar du)</message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mekanismoa</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Adib., "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>

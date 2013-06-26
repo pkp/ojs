@@ -31,9 +31,7 @@
        <message key="plugins.auth.ldap.settings.uid">Атрибут імені облікового запису</message>
        <message key="plugins.auth.ldap.settings.uid.description">Атрибут, який унікально ідентифікує користувача як об'єкт, наприклад, uid, cn або sAMAccountName.</message>
        <message key="plugins.auth.ldap.settings.pwhash">Шифрування пароля</message>
-       <message key="plugins.auth.ldap.settings.pwhash.description">Хеш формат для паролів на сервері. Рекомендується SSHA (потребує PHP >= 4.3.0).</message>
        <message key="plugins.auth.ldap.settings.saslopt">Налаштування SASL (необов'язкове)</message>
-       <message key="plugins.auth.ldap.settings.sasl">Використовувати SASL замість простої аутентифікації (потребує PHP >= 5)</message>
        <message key="plugins.auth.ldap.settings.saslmech">Механізм SASL</message>
        <message key="plugins.auth.ldap.settings.saslmech.description">наприклад, "DIGEST-MD5"</message>
        <message key="plugins.auth.ldap.settings.saslrealm">Realm</message>

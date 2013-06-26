@@ -799,8 +799,6 @@
 <p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://pkp.sfu.ca/support/forum">支援討論區</a>，或者請見PKP的線上<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>。</p>
 <p>我們<strong>強烈地建議您</strong>在繼續下一步之前，請備份您的資料庫、檔案目錄以及OJS的安裝目錄</p>
 <p>如果您正在執行<a href="http://www.php.net/features.safe-mode" target="_blank">PHP安全模式</a>， 請確保在您的 php.ini 設定檔中設定max_execution_time指令一個高額的上限。如果這個或者其他的時間上限（例如Apache的 "Timeout"指令）已到，而升級程序遭到中斷，您必須以手動的方式介入。</p>]]></message>
-	<message key="installer.localeSettingsInstructions"><![CDATA[為了完整支援Unicode (UTF-8)編碼，請選擇以UTF-8作為編碼字元。注意，這項支援目前需要一個MySQL >= 4.1.1或者PostgreSQL >= 7.1 的資料庫伺服器。也請注意，完整的Unicode編碼需要PHP >= 4.3.0搭配支援<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>庫 (最新版本的PHP安裝過程已經預設啟動)。如果您的伺服器沒有滿足這些條件的話，您可能在使用額外的字符集時會碰到問題<br /><br />
-您的伺服器目前對mbstring的支援性：<strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">使用本系統的主要語言。如果您有意支援不列在這裡的語系，請參見OJS的說明文件。</message>
 	<message key="installer.additionalLocalesInstructions">選擇額外的語系以支援本系統。這些語言可以被本站的期刊所使用。也可以在任何時間點透過網站管理介面來安裝額外的語系。</message>
 	<message key="installer.filesDirInstructions"><![CDATA[輸入一個儲存上傳檔案的既存目錄的完整路徑名稱。這個目錄不應該直接透過網頁存取。<strong>請確定這個目錄存在而且可寫入</strong> Windows路徑名稱應該使用右斜線，例如："C:/myjournal/files".]]></message>

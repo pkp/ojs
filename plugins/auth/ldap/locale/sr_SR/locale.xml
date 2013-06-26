@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.uid">Atribudi imena naloga</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Atributi čije vrednosti jedinstveno identifikuju korisnika, kao uid, cn ili sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Šifrovanje lozinke</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Haš format za lozinke koje se čuvaju na serveru. Preporučuje se SSHA (zahteva PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL podešavanja (opciono)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Koristi SASL umesto jednostavne autentifikacije (zahteva PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mehanizam</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Npr. "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Oblast</message>

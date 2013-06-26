@@ -25,9 +25,7 @@
 	<message key="plugins.auth.ldap.settings.managerpwd" >رمز عبور مدیر</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description" >دی ان پایه و رمز عبور مدیر فقط وقتی لازم است که همزمان سازی کارنامه با رمز عبور کاربر و یا گزینه های ایجاد کاربر فعال شده باشد.</message>
 	<message key="plugins.auth.ldap.settings.pwhash" >رمز نگاری گذرواژه</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description" >فورمات هش (نوعی رمزنگاری) برای گذرواژه های ذخیره شده بر روی سرور. SSHA توصیه می شود (در صورت داشتن PHP >= 4.3.0)</message>
 	<message key="plugins.auth.ldap.settings.saslopt" >تنظیمات SASL (اختیاری است)</message>
-	<message key="plugins.auth.ldap.settings.sasl" >بجای تایید هویت ساده از SASL استفاده کنید (در صورت PHP >= 5)</message>
 	<message key="plugins.auth.ldap.settings.saslmech" >مکانیسم SASL</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description" >مانند, &quot;DIGEST-MD5&quot;</message>
 	<message key="plugins.auth.ldap.settings.saslrealm" >قلمرو</message>

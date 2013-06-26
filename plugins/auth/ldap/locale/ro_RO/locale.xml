@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.uid">Atribut la numele contului</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Atributul al cărei valori unice identifică un obiect al utilizatorului, precum un uid sau cn sau sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Criptarea parolei</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">Format hash pentru parolele stocate pe server. Se recomandă SSHA (necesită PHP >= 4.3.0).</message>
 	<message key="plugins.auth.ldap.settings.saslopt">Setări SASL (opţional)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Foloseşte SASL în locul autentificării simple (necesită PHP >= 5)</message>
 	<message key="plugins.auth.ldap.settings.saslmech">mecanism SASL</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Ex., "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>

@@ -27,9 +27,7 @@
 	<message key="plugins.auth.ldap.settings.managerpwd">管理密碼</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">只有在使用者的帳號/密碼同步化或者建立使用者選項啟用的時候，才會需要管理DN和密碼 。如果LDAP只會被用來進行認證，那麼可以忽略這些選項。</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Pa密碼加密</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">將密碼儲存到伺服器上得亂數格式。建議使用(需要PHP >= 4.3.0)。</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL設定(選用)</message>
-	<message key="plugins.auth.ldap.settings.sasl">使用SASL來代替簡單的認證 (需要PHP >= 5)</message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL機制</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">例如："DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">領域</message>

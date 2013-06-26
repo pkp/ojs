@@ -34,9 +34,7 @@
 	<message key="plugins.auth.ldap.settings.managerpwd">Κωδικός Πρόσβασης (password) Διαχειριστή</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">Ο Διαχειριστής DN και ο κωδικός πρόσβασης απαιτούνται μόνο αν είναι ενεργοποιημένες οι επιλογές συγχρονισμός προφίλ/κωδικός πρόρσβασης χρήστη ή δημιουργία χρήστη. Αν το LDAP θα χρησιμοποιηθεί αποκλειστικά για πιστοποίηση τότε αυτές οι επιλογές μπορούν να παραβλεφθούν.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Password encryption</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">Hash σχήμα για τους κωδικούς πρόσβασης που αποθηκεύονται στον κεντρικό υπολογιστή. Προτείνεται το SSHA (απαιτείται PHP >= 4.3.0).</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL Ρυθμίσεις (προαιρετικό)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Χρήση SASL αντί για απλή πιστοποίησης (απαιτείται PHP >= 5)</message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL Μηχανισμός</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Π.χ., "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>

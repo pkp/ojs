@@ -31,7 +31,6 @@
 	<message key="plugins.auth.ldap.settings.pwhash">Lösenordskryptering</message>
 	<message key="plugins.auth.ldap.settings.pwhash.description">Hash format för lösenord som sparas på servern. SSHa rekommenderas (Kräver PHP > 4.3.0)</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL inställningar (frivilligt)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Använd SASL istället för "simple authentication" (Kräver PHP >= 5)</message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mekanism</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">T. ex., "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">"Realm"/Domän</message>

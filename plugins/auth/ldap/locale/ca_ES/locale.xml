@@ -29,9 +29,7 @@
 	<message key="plugins.auth.ldap.settings.uid">Atribut del nom del compte</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Atribut el valor del qual identifica de manera � un objecte de l'usuari, com ara uid, cn o sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Encriptació de contrasenyes</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Format de funció resum per a les contrasenyes emmagatzemades al servidor. Es recomana SSHA (requereix PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">Configuració de SASL (opcional)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Utilitza SASL en lloc de l'autenticació simple (requereix PHP >= 5).]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">Mecanisme SASL</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">P. ex., "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Domini</message>

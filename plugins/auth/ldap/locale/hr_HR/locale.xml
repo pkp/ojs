@@ -28,9 +28,7 @@
 	<message key="plugins.auth.ldap.settings.managerpwd">Administratorova lozinka</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">Administratorov naziv domene i lozinka su obavezni  ako je omogućena sinkronizacija korisničkog profila/lozinke ili ako su omogućene opcije kreiranja korisnika. Ako će se LDAP poslužitelj koristiti isključivo za provjeru vjerodostojnosti korisničkih računa, tada ove opcije mogu biti isključene.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Enkripcija lozinke</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">Raspršeni format za lozinke pohranjen na poslužitelju. Preporuča se SSHA (zahtjeva PHP >= 4.3.0).</message>
 	<message key="plugins.auth.ldap.settings.saslopt">Postavke SASL sučelja (po izboru)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Koristiti SASL sučelje umjesto jednostavne provjere vjerodostojnosti (zahtjeva PHP >= 5)</message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mehanizam</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Npr. "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Područje</message>

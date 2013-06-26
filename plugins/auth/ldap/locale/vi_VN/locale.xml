@@ -12,29 +12,6 @@
   -->
  
 <locale name="vi_VN" full_name="Tiếng Việt">
-	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">This plugin allows for authentication and synchronization of user accounts against an external LDAP data source.</message>
-	
-	<message key="plugins.auth.ldap.settings">LDAP Settings</message>
-	<message key="plugins.auth.ldap.settings.hostname">Server hostname</message>
-	<message key="plugins.auth.ldap.settings.hostname.description">E.g., "ldap.example.com", or "ldaps://ldap.example.com" (to use SSL)</message>
-	<message key="plugins.auth.ldap.settings.port">Server port</message>
-	<message key="plugins.auth.ldap.settings.port.description">Optional. Defaults to 389 (LDAP) or 636 (LDAP over SSL)</message>
-	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
-	<message key="plugins.auth.ldap.settings.basedn.description">E.g., "ou=people,dc=example,dc=com"</message>
-	<message key="plugins.auth.ldap.settings.managerdn">Manager DN</message>
-	<message key="plugins.auth.ldap.settings.managerdn.description">E.g., "cn=Manager,dc=example,dc=com"</message>
-	<message key="plugins.auth.ldap.settings.managerpwd">Manager password</message>
-	<message key="plugins.auth.ldap.settings.managerpwd.description">The manager DN and password are only required if the user profile/password synchronization or user creation options are enabled. If LDAP will be used solely for authentication then these options can be omitted.</message>
-	<message key="plugins.auth.ldap.settings.pwhash">Password encryption</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">Hash format for passwords stored to the server. SSHA is recommended (requires PHP >= 4.3.0).</message>
-	<message key="plugins.auth.ldap.settings.saslopt">SASL Settings (optional)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Use SASL instead of simple authentication (requires PHP >= 5)</message>
-	<message key="plugins.auth.ldap.settings.saslmech">SASL mechanism</message>
-	<message key="plugins.auth.ldap.settings.saslmech.description">E.g., "DIGEST-MD5"</message>
-	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
-	<message key="plugins.auth.ldap.settings.saslauthzid">Requested authorization ID</message>
-	<message key="plugins.auth.ldap.settings.saslprop">SASL security properties</message>
 	<message key="plugins.auth.ldap.settings.uid">Thuộc tính của tên tài khoản</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Thuộc tính mà giá trị của nó xác định duy nhất một đối tượng người dùng, ví dụ như uid hoặc cn hoặc sAMAccountNam.</message>
 </locale>

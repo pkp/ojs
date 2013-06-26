@@ -27,9 +27,7 @@
 	<message key="plugins.auth.ldap.settings.managerpwd">Contraseña del administrador</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">El gestor DN y la contraseña sólo son necesarios si están activadas las opciones de sincronización usuario/a - contraseña o creación de usuarios/as. Se pueden omitir estas opciones si se va usar LDAP únicamente para autentificación.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Encriptación de contraseña</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Formato hash para contraseñas almacenadas en el servidor. Se recomienda SSHA (es necesario PHP >= 4.3.0).]]></message>
 	<message key="plugins.auth.ldap.settings.saslopt">Configuración SASL (opcional)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Utilizar SASL en vez de autentificación simple (es necesario PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">Mecanismo SASL</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Por ejemplo, "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
