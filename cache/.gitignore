@@ -1,4 +1,5 @@
 *.php
 *.html
 *.gz
+URI/
 HTML/
