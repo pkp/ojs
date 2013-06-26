@@ -150,7 +150,7 @@ class InstallForm extends Form {
 			'clientCharset' => 'utf-8',
 			'connectionCharset' => '',
 			'databaseCharset' => '',
-			'encryption' => 'md5',
+			'encryption' => function_exists('sha1')?'sha1':'md5',
 			'filesDir' =>  $docRoot . 'files',
 			'databaseDriver' => 'mysql',
 			'databaseHost' => 'localhost',
