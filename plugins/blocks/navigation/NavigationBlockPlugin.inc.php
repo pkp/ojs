@@ -58,7 +58,7 @@ class NavigationBlockPlugin extends BlockPlugin {
 			'indexTerms' => 'search.indexTerms',
 			'galleyFullText' => 'search.fullText'
 		));
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 
