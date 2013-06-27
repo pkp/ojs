@@ -34,7 +34,7 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 	//
 	function effect() {
 
-		if (!$this->_context || $this->_context->getSetting('publishingMode') == PUBLISHING_MODE_NONE) {
+		if ($this->_context && $this->_context->getSetting('publishingMode') == PUBLISHING_MODE_NONE) {
 			return AUTHORIZATION_DENY;
 		}
 
