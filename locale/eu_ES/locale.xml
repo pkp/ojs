@@ -659,8 +659,8 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="user.register.selectJournal">Hautatu zein aldizkaritan erregistratu nahi duzun</message>
 	<message key="user.register.noJournals">Gune honetan ez dago zu erregistratzeko moduko aldizkaririk.</message>
 	<message key="user.register.privacyStatement">Pribatutasun-deklarazioa</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[Aldizkari honetan edo gune honetako beste aldizkariren baten erregistratuta bazaude, <a href="{$registerUrl}">egin klik hemen</a>.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[Aldizkari honetan edo gune honetako beste aldizkariren baten erregistratuta <strong>ez</strong> bazaude, <a href="{$registerUrl}">egin klik hemen</a>.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[Aldizkari honetan edo gune honetako beste aldizkariren baten erregistratuta bazaude, <a href="{$registerUrl}">egin klik hemen</a>.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[Aldizkari honetan edo gune honetako beste aldizkariren baten erregistratuta <strong>ez</strong> bazaude, <a href="{$registerUrl}">egin klik hemen</a>.]]></message>
 	<message key="user.register.loginToRegister">Aldizkari honetan erregistratzeko, sartu zure oraingo erabiltzaile-izena eta pasahitza.</message>
 	<message key="user.register.registrationDisabled">Aldizkari honek ez du erabiltzaile berriak erregistratzeko aukerarik ematen orain.</message>
 	<message key="user.register.form.passwordLengthTooShort">Sartu duzun pasahitza laburregia da.</message>

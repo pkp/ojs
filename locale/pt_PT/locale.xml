@@ -544,8 +544,8 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<message key="user.register.selectJournal">Escolha em qual revista pretende efectuar o registo</message>
 	<message key="user.register.noJournals">Não há revistas para se registar neste portal.</message>	
 	<message key="user.register.privacyStatement">Política de Privacidade</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso já possua registo em alguma revista do portal.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso <strong>não</strong> encontre-se registado nesta ou noutra revista do portal.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso já possua registo em alguma revista do portal.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso <strong>não</strong> encontre-se registado nesta ou noutra revista do portal.]]></message>
 	<message key="user.register.loginToRegister">Insira o nome de utilizador e senha para registar-se na revista.</message>
 	<message key="user.register.registrationDisabled">Registo de utilizadores desactivado no momento.</message>
 	<message key="user.register.form.passwordLengthTooShort">Senha inserida não contém o mínimo de caracteres.</message>

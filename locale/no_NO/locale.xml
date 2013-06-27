@@ -544,8 +544,8 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="user.register.selectJournal">Velg et tidsskrift du vil registrere deg hos</message>
 	<message key="user.register.noJournals">Det finnes ingen tidsskrift å registrere seg hos på dette nettstedet.</message>
 	<message key="user.register.privacyStatement">Erklæring om personopplysninger</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikk her</a> hvis du er allerede registrert hos dette eller et annet tidsskrift på dette nettstedet.]]></message>
- 	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikk her</a> hvis du <b>ikke</b> allerede er registrert hos dette eller et annet tidsskrift på dette nettstedet.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klikk her</a> hvis du er allerede registrert hos dette eller et annet tidsskrift på dette nettstedet.]]></message>
+ 	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klikk her</a> hvis du <b>ikke</b> allerede er registrert hos dette eller et annet tidsskrift på dette nettstedet.]]></message>
 	<message key="user.register.loginToRegister">Skriv inn det registrerte brukernavnet og passordet ditt for å registrere deg hos dette tidsskriftet også.</message>
 	<message key="user.register.registrationDisabled">Dette tidsskriftet tar for øyeblikket ikke i mot brukerregistrering.</message>
 	<message key="user.register.form.passwordLengthTooShort">Passordet du skrev inn er ikke langt nok.</message>

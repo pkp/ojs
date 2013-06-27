@@ -550,8 +550,8 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="user.register.selectJournal">Sélectionner une revue pour vous y inscrire</message>
 	<message key="user.register.noJournals">Il n'y a pas de revues auxquelles vous pouvez vous inscrire à ce site.</message>
 	<message key="user.register.privacyStatement">Déclaration de confidentialité</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Cliquer ici</a> si vous êtes déjà inscrit à une autre revue dans ce site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Cliquer ici</a> si vous n'êtes <strong>pas</strong> déjà inscrit à une autre revue dans ce site.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Cliquer ici</a> si vous êtes déjà inscrit à une autre revue dans ce site.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Cliquer ici</a> si vous n'êtes <strong>pas</strong> déjà inscrit à une autre revue dans ce site.]]></message>
 	<message key="user.register.loginToRegister">Saisir vos nom d'utilisateur et mot de passe actuels pour vous inscrire à cette revue</message>
 	<message key="user.register.registrationDisabled">Cette revue n'accepte pas les inscriptions d'utilisateurs pour le moment.</message>
 	<message key="user.register.form.passwordLengthTooShort">Le mot de passe que vous avez saisi n'est pas assez long.</message>

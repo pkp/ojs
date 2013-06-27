@@ -785,8 +785,8 @@ Note that if your site administrator has already registered this site with these
 	<message key="user.register.selectJournal">选择一份期刊进行注册</message>
 	<message key="user.register.noJournals">本站目前尚无任何期刊可供注册.</message>
 	<message key="user.register.privacyStatement">隐私权声明</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[如果您已经在本站上的任何一份期刊上注册过了，请<a href="{$registerUrl}">点击这里</a>。]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上注册过，请<a href="{$registerUrl}">点击这里</a>。]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[如果您已经在本站上的任何一份期刊上注册过了，请<a href="{$registerUrl}">点击这里</a>。]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上注册过，请<a href="{$registerUrl}">点击这里</a>。]]></message>
 	<message key="user.register.loginToRegister">要注册这份期刊，请输入您现有的用户名称以及密码.</message>
 	<message key="user.register.registrationDisabled">这份期刊目前不接受用户注册.</message>
 	<message key="user.register.form.passwordLengthTooShort">您输入的密码不够长.</message>

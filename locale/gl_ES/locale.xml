@@ -580,8 +580,8 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<message key="user.register.selectJournal">Selecciona unha revista para rexistrarte</message>
 	<message key="user.register.noJournals">Neste sitio non hai revistas nas que te poidas rexistrar.</message>
 	<message key="user.register.privacyStatement">Declaración de privacidade</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica aquí</a> se xa estás registrada/o nesta ou calquera outra revista desta web.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica aquí</a> se <strong>no</strong> xa estás rexistra con esta ou calquera outra revista desta web.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clica aquí</a> se xa estás registrada/o nesta ou calquera outra revista desta web.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clica aquí</a> se <strong>no</strong> xa estás rexistra con esta ou calquera outra revista desta web.]]></message>
 	<message key="user.register.loginToRegister">Insire o teu nome de usuaria/o e contrasinal actual para rexistrarte nesta revista.</message>
 	<message key="user.register.registrationDisabled">Neste intre non és posibel rexistrarse nesta revista.</message>
 	<message key="user.register.form.passwordLengthTooShort">O contrasinal que introduciches non é longa de abondo.</message>

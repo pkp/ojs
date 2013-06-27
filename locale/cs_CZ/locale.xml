@@ -621,8 +621,8 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="user.register.selectJournal">Zvolte časopis, do kterého se chcete zaregistrovat</message>
 	<message key="user.register.noJournals">Na této stránce nejsou žádné časopisy, do kterých byste se mohl zaregistrovat.</message>
 	<message key="user.register.privacyStatement">Prohlášení o soukromí</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud jste již registrovaný do tohoto nebo jiného časopisu na této stránce.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud ještě <b>nejste</b> registrovaný do tohoto nebo jiného časopisu na této stránce.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud jste již registrovaný do tohoto nebo jiného časopisu na této stránce.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud ještě <b>nejste</b> registrovaný do tohoto nebo jiného časopisu na této stránce.]]></message>
 	<message key="user.register.loginToRegister">Pro zaregistrování do tohoto časopisu vložte Vaše existující uživatelské jméno a heslo.</message>
 	<message key="user.register.registrationDisabled">Tento časopis v současnosti nepřijímá žádné registrace uživatelů.</message>
 	<message key="user.register.form.passwordLengthTooShort">Heslo, které jste vložil není dostatečně dlouhé.</message>

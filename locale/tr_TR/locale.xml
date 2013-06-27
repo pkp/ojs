@@ -625,8 +625,8 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="user.register.selectJournal">Kayıt için bir dergi seçiniz</message>
 	<message key="user.register.noJournals">Bu sitede kayıt olabileceğiniz bir dergi yok.</message>
 	<message key="user.register.privacyStatement">Gizlilik Bildirimi</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[Bu site üzerinde herhangi bir dergiye kayıtlı iseniz <a href="{$registerUrl}">buraya tıklayınız</a>.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[Bu sitede hergangi bir dergiye kayıtlı <strong> değilseniz</strong> <a href="{$registerUrl}">burayı tıklayın</a> .]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[Bu site üzerinde herhangi bir dergiye kayıtlı iseniz <a href="{$registerUrl}">buraya tıklayınız</a>.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[Bu sitede hergangi bir dergiye kayıtlı <strong> değilseniz</strong> <a href="{$registerUrl}">burayı tıklayın</a> .]]></message>
 	<message key="user.register.loginToRegister">Dergiye kaydolmak için mevcut kullanıcı adı ve şifrenizi giriniz.</message>
 	<message key="user.register.registrationDisabled">Bu dergi şu anda kullanıcı kayıtlarını kabul etmemektedir.</message>
 	<message key="user.register.form.passwordLengthTooShort">Girdiğiniz şifre yeterince uzun değildir.</message>

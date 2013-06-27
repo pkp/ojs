@@ -441,8 +441,8 @@ Sadržaj priloženog fajla možete proveriti ukoliko kliknete na njegovo ime. Um
 	<!--  Profile  -->	<!--  Registration  -->	<message key="user.register.selectJournal">Odaberite časopis za koji se želite registrovati</message>
 	<message key="user.register.noJournals">Ne postoje časopisi za koje se možete registrovati na ovom sajtu.</message>
 	<message key="user.register.privacyStatement">Izjava o privatnosti</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite ovde</a> ako ste se već registrovali.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite ovde</a> ako <b>se niste</b> registrovali na ovom ili nekom drugom časopisu na ovom sajtu.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Kliknite ovde</a> ako ste se već registrovali.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Kliknite ovde</a> ako <b>se niste</b> registrovali na ovom ili nekom drugom časopisu na ovom sajtu.]]></message>
 	<message key="user.register.loginToRegister">Unesite vaše postojeće korisničko ime i lozinku da biste se registrovali za ovaj časopis.</message>
 	<message key="user.register.registrationDisabled">Ovaj časopis trenutno ne prihvata registracije korisnika.</message>
 	<message key="user.register.form.passwordLengthTooShort">Lozinka koju ste uneli nije dovoljno duga.</message>

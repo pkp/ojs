@@ -623,8 +623,8 @@
         <message key="user.register.selectJournal">Επιλέξτε ένα  περιοδικό για να εγγραφείτε</message>
         <message key="user.register.noJournals">Δεν υπάρχουν περιοδικά στα οποία μπορείτε να εγγραφείτε στον ιστότοπο αυτό.</message>
         <message key="user.register.privacyStatement">Πολιτική Προστασίας Προσωπικών Δεδομένων</message>
-        <message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a  href="{$registerUrl}">Πατήστε εδώ</a> εάν είστε ήδη  εγγεγραμμένος χρήστης σε αυτό ή σε άλλο  περιοδικό της συλλογής.]]></message>
-        <message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a  href="{$registerUrl}">Πατήστε εδώ</a> εάν <strong>ΔΕΝ</strong> είστε  ήδη εγγεγραμμένος σε αυτό ή σε άλλο περιοδικό  της συλλογής.]]></message>
+        <message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a  href="{$registerUrl}">Πατήστε εδώ</a> εάν είστε ήδη  εγγεγραμμένος χρήστης σε αυτό ή σε άλλο  περιοδικό της συλλογής.]]></message>
+        <message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a  href="{$registerUrl}">Πατήστε εδώ</a> εάν <strong>ΔΕΝ</strong> είστε  ήδη εγγεγραμμένος σε αυτό ή σε άλλο περιοδικό  της συλλογής.]]></message>
         <message key="user.register.loginToRegister">Εισαγάγετε το υπάρχον όνομα χρήστη και τον κωδικό πρόσβασής σας για να εγγραφείτε σε  αυτό το περιοδικό.</message>
         <message key="user.register.registrationDisabled">Το περιοδικό αυτό προς το παρόν δεν αποδέχεται εγγραφές χρηστών.</message>
         <message key="user.register.form.passwordLengthTooShort">Ο κωδικός πρόσβασης που εισάγατε περιέχει λιγότερους χαρακτήρες από τον ελάχιστο επιτρεπτό αριθμό χαρακτήρων.</message>

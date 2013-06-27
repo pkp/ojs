@@ -614,8 +614,8 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="user.register.selectJournal">Kies een tijdschrift om u bij te registreren</message>
 	<message key="user.register.noJournals">Deze site heeft geen tijdschriften waarbij u zich kunt registreren.</message>
 	<message key="user.register.privacyStatement">Privacyverklaring</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik hier</a> als u reeds geregistreerd bent bij dit of een ander tijdschrift op deze site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik hier</a> als u <b>niet</b> al geregistreerd bent bij deze site.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik hier</a> als u reeds geregistreerd bent bij dit of een ander tijdschrift op deze site.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik hier</a> als u <b>niet</b> al geregistreerd bent bij deze site.]]></message>
 	<message key="user.register.loginToRegister">Geef uw bestaande gebruikersnaam en wachtwoord om u voor dit tijdschrift te registreren.</message>
 	<message key="user.register.registrationDisabled">Dit tijdschrift accepteert momenteel geen registraties.</message>
 	<message key="user.register.form.passwordLengthTooShort">Het ingevoerde wachtwoord is niet lang genoeg.</message>

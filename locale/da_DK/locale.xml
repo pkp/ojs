@@ -614,8 +614,8 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="user.register.selectJournal">Vælg et tidsskrift, du vil registreres hos</message>
 	<message key="user.register.noJournals">Der findes ingen tidsskrifter, du kan blive registreret hos, på dette websted.</message>
 	<message key="user.register.privacyStatement">Erklæring om beskyttelse af personlige oplysninger</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik her</a>, hvis du allerede er registreret hos dette eller et andet tidsskrift på dette websted.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik her</a>, hvis du <b>ikke</b> allerede er registreret hos dette eller et andet tidsskrift på dette websted.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik her</a>, hvis du allerede er registreret hos dette eller et andet tidsskrift på dette websted.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik her</a>, hvis du <b>ikke</b> allerede er registreret hos dette eller et andet tidsskrift på dette websted.]]></message>
 	<message key="user.register.loginToRegister">Angiv dit eksisterende brugernavn og din eksisterende adgangskode for at registrere hos dette tidsskrift.</message>
 	<message key="user.register.registrationDisabled">Dette tidsskrift accepterer i øjeblikket ikke brugerregistreringer.</message>
 	<message key="user.register.form.passwordLengthTooShort">Den angivne adgangskode er for kort.</message>

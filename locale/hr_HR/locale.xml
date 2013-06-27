@@ -596,8 +596,8 @@ vaš korisnički račun, unesite u polja ispod vašu sadašnju i novu lozinku.</
 	<message key="user.register.selectJournal">Odaberite časopis na koji se želite registrirati</message>
 	<message key="user.register.noJournals">Ne postoje časopisi na koje se možete registrirati na ovoj stranici.</message>
 	<message key="user.register.privacyStatement">Izjava o privatnosti</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite ovdje</a> ako ste se već registrirali.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite ovdje</a> ako <b>se niste</b> već registrirali za ovaj ili neki drugi časopis na ovoj stranici.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Kliknite ovdje</a> ako ste se već registrirali.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Kliknite ovdje</a> ako <b>se niste</b> već registrirali za ovaj ili neki drugi časopis na ovoj stranici.]]></message>
 	<message key="user.register.loginToRegister">Unesite vaše postojeće korisničko ime i lozinku da biste se registrirali za ovaj časopis.</message>
 	<message key="user.register.registrationDisabled">Ovaj časopis trenutno ne prihvaća registracije korisnika.</message>
 	<message key="user.register.form.passwordLengthTooShort">Lozinka koju ste unijeli nije dovoljno duga.</message>

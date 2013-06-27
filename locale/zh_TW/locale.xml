@@ -648,8 +648,8 @@
 	<message key="user.register.selectJournal">選擇一份期刊進行註冊</message>
 	<message key="user.register.noJournals">本站目前尚無任何期刊可供註冊，</message>
 	<message key="user.register.privacyStatement">隱私權聲明</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[如果您已經在本站上的任何一份期刊上註冊過了，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上註冊過，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[如果您已經在本站上的任何一份期刊上註冊過了，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上註冊過，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
 	<message key="user.register.loginToRegister">要註冊這份期刊，請輸入您現有的使用者名稱以及密碼</message>
 	<message key="user.register.registrationDisabled">這份期刊目前不接受使用者註冊。</message>
 	<message key="user.register.form.passwordLengthTooShort">您輸入的密碼不夠長.</message>

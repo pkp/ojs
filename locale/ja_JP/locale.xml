@@ -459,8 +459,8 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="user.register.selectJournal">登録する雑誌を選択してください</message>
   <message key="user.register.noJournals">登録できる雑誌はありません。</message>
   <message key="user.register.privacyStatement">個人情報の扱いについて</message>
-  <message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[既にこの雑誌またはこのサイトの別の雑誌に登録している場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]></message>
-  <message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[まだこのサイトの雑誌に登録して<strong>いない</strong>場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]></message>
+  <message key="user.register.alreadyRegisteredOtherContext"><![CDATA[既にこの雑誌またはこのサイトの別の雑誌に登録している場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]></message>
+  <message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[まだこのサイトの雑誌に登録して<strong>いない</strong>場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]></message>
   <message key="user.register.loginToRegister">この雑誌に登録するには、ユーザ名とパスワードを入力してください。</message>
   <message key="user.register.registrationDisabled">この雑誌は、現在、ユーザ登録を受付けていません。</message>
   <message key="user.register.form.passwordLengthTooShort">指定したパスワードは短すぎます。</message>

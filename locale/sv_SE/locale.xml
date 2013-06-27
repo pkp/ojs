@@ -682,8 +682,8 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="user.register.selectJournal">Välj tidskrift du vill registrera dig hos</message>
 	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här sidan.</message>
 	<message key="user.register.privacyStatement">Sekretesspolicy</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klicka här</a> om du redan har registrerat dig hos den här tidskriften eller annan tidskrift på den här sidan.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klicka här</a> om du <b>inte</b> har registrerat dig hos den här tidskriften, eller annan tidskrift på den här sidan.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klicka här</a> om du redan har registrerat dig hos den här tidskriften eller annan tidskrift på den här sidan.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klicka här</a> om du <b>inte</b> har registrerat dig hos den här tidskriften, eller annan tidskrift på den här sidan.]]></message>
 	<message key="user.register.loginToRegister">Ange ditt aktuella användarnamn och lösenord för att registrera dig hos den här tidskriften.</message>
 	<message key="user.register.registrationDisabled">Den här tidskriften accepterar för tillfället inga registreringar.</message>
 	<message key="user.register.form.passwordLengthTooShort">Angett lösenord innehåller inte tillräckligt många tecken.</message>

@@ -390,8 +390,8 @@
 	<message key="user.register.selectJournal">Выбрать журнал для регистрации</message>
 
 	<message key="user.register.privacyStatement">Конфиденциальность</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a>, если Вы зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a> если Вы <strong>не</strong> зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a>, если Вы зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a> если Вы <strong>не</strong> зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
 	<message key="user.register.loginToRegister">Введите Ваше имя и пароль, чтобы получить доступ к этому журналу.</message>
 	<message key="user.register.registrationDisabled">Этот журнал пока не регистрирует новых пользователей.</message>
 

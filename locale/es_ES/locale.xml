@@ -576,8 +576,8 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="user.register.selectJournal">Seleccione una revista para registrarse</message>
 	<message key="user.register.noJournals">En este sitio no hay revistas en las que se pueda registrar.</message>
 	<message key="user.register.privacyStatement">Declaración de privacidad</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Haga click aquí</a> si ya está registrada/o en esta u otra revista de este sitio web.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Haga click aquí</a> si <strong>no</strong> se ha registrado ya con esta u otra revista en este sitio web.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Haga click aquí</a> si ya está registrada/o en esta u otra revista de este sitio web.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Haga click aquí</a> si <strong>no</strong> se ha registrado ya con esta u otra revista en este sitio web.]]></message>
 	<message key="user.register.loginToRegister">Introduzca su nombre de usuaria/o y contraseña actual para registrarse en esta revista.</message>
 	<message key="user.register.registrationDisabled">En este momento no es posible registrarse en esta revista.</message>
 	<message key="user.register.form.passwordLengthTooShort">La contraseña que ha introducido no es suficientemente larga.</message>

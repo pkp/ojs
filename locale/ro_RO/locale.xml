@@ -784,8 +784,8 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="user.register.selectJournal">Selectează o revistă la care să te înscrii</message>
 	<message key="user.register.noJournals">Nu există reviste la care să te poţi înscrie pe acest site.</message>
 	<message key="user.register.privacyStatement">Declaraţie de confidenţialitate</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Apasă aici</a> dacă eşti deja înregistrat la această revistă sau la altă revistă de pe acest site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Apasă aici</a> dacă <strong>nu</strong> eşti deja înregistrat la această revistă sau la o altă revistă de pe acest site.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Apasă aici</a> dacă eşti deja înregistrat la această revistă sau la altă revistă de pe acest site.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Apasă aici</a> dacă <strong>nu</strong> eşti deja înregistrat la această revistă sau la o altă revistă de pe acest site.]]></message>
 	<message key="user.register.loginToRegister">Introdu numele şi parola existentă pentru a te autentifica la această revistă.</message>
 	<message key="user.register.registrationDisabled">Această revistă nu acceptă înscrieri de utilizatori în acest moment.</message>
 	<message key="user.register.form.passwordLengthTooShort">Parola introdusă nu este îndeajuns de lungă.</message>

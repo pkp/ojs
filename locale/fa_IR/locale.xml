@@ -378,8 +378,8 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="user.register.selectJournal">مجله ای را برای ثبت نام انتخاب کنید.</message>
 	<message key="user.register.noJournals">مجله ای برای ثبت نام در این سایت وجود ندارد.</message>
 	<message key="user.register.privacyStatement">بیانیه محرمانگی</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام کرده اید <a href="{$registerUrl}">اینجا</a>  را کلیک کنید]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام <b>نکرده اید</b> <a href="{$registerUrl}">اینجا</a> را کلیک کنید]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام کرده اید <a href="{$registerUrl}">اینجا</a>  را کلیک کنید]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[چنانچه قبلا برای این مجله و یا مجله ای دیگر در این سایت ثبت نام <b>نکرده اید</b> <a href="{$registerUrl}">اینجا</a> را کلیک کنید]]></message>
 	<message key="user.register.loginToRegister">نام کاربری و رمز عبور جاری  خود را وارد کنید تا برای این مجله ثبت نام کنید</message>
 	<message key="user.register.registrationDisabled">این مجله در حال حاضر ثبت نام کاربر نمی پذیرد</message>
 	<message key="user.register.form.passwordLengthTooShort">طول رمز عبور انتخاب شده کافی نیست</message>

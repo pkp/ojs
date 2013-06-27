@@ -667,8 +667,8 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="user.register.selectJournal">Pilih sebuah jurnal untuk mendaftar</message>
 	<message key="user.register.noJournals">Tidak ada jurnal untuk Anda mendaftar di situs ini.</message>
 	<message key="user.register.privacyStatement">Pernyataan Privasi</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik di sini</a> Jika Anda sudah terdaftar di jurnal ini atau jurnal lain di situs ini.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klik di sini</a> Jika Anda <strong>belum</strong> terdaftar di jurnal ini atau jurnal lain di situs ini.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik di sini</a> Jika Anda sudah terdaftar di jurnal ini atau jurnal lain di situs ini.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klik di sini</a> Jika Anda <strong>belum</strong> terdaftar di jurnal ini atau jurnal lain di situs ini.]]></message>
 	<message key="user.register.loginToRegister">Masukkan nama pengguna dan kata sandi Anda untuk login di jurnal ini.</message>
 	<message key="user.register.registrationDisabled">Jurnal sedang tidak menerima pendaftaran pengguna.</message>
 	<message key="user.register.form.passwordLengthTooShort">Kata Sandi yang Anda masukkan tidak cukup panjang.</message>

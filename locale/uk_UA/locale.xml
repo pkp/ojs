@@ -681,8 +681,8 @@
        <message key="user.register.selectJournal">Оберіть журнал, користувачем якого Ви хочете бути</message>
        <message key="user.register.noJournals">На цьому сайті немає журналів, у яких Ви можете зареєструватись.</message>
        <message key="user.register.privacyStatement">Положення про конфіденційність</message>
-       <message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Натисніть сюди</a>, якщо Ви вже зареєстровані у одному з журналів на цьому сайті.]]></message>
-       <message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Натисніть сюди</a>, якщо Ви <strong>не</strong> зареєстровані у жодному з журналів на цьому сайті.]]></message>
+       <message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Натисніть сюди</a>, якщо Ви вже зареєстровані у одному з журналів на цьому сайті.]]></message>
+       <message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Натисніть сюди</a>, якщо Ви <strong>не</strong> зареєстровані у жодному з журналів на цьому сайті.]]></message>
        <message key="user.register.loginToRegister">Щоб зареєструватися для цього журналу вкажіть існуюче ім'я користувача та пароль.</message>
        <message key="user.register.registrationDisabled">Зараз цей журнал не дозволяє реєстрацію користувачів.</message>
        <message key="user.register.form.passwordLengthTooShort">Введений Вами пароль занадто короткий.</message>

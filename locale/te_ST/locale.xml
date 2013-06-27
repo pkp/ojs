@@ -1721,8 +1721,8 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="user.register.registerAs">Règîþtèr åþ</message>
 	<message key="user.register.privacyStatement">Prîvåçý ßtåtèmèñt</message>
 	<message key="user.register.completeForm">Fîll îñ thîþ fórm tó règîþtèr wîth thîþ jóürñål.</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè <strong>ñót</strong> ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè <strong>ñót</strong> ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
 	<message key="user.register.loginToRegister">Éñtèr ýóür èxîþtîñg üþèrñåmè åñð påþþwórð tó règîþtèr wîth thîþ jóürñål.</message>
 	<message key="user.register.registrationDisabled">Thîþ jóürñål îþ çürrèñtlý ñót åççèptîñg üþèr règîþtråtîóñþ.</message>
 	<message key="user.register.usernameRestriction">Thè üþèrñåmè müþt çóñtåîñ óñlý lówèrçåþè lèttèrþ, ñümbèrþ, åñð hýphèñþ/üñðèrþçórèþ.</message>

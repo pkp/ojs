@@ -540,8 +540,8 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="user.register.selectJournal">Escolha em qual revista realizar o cadastro</message>
 	<message key="user.register.noJournals">Não há revistas para se cadastrar neste portal.</message>	
 	<message key="user.register.privacyStatement">Política de Privacidade</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso já possua cadastro em alguma revista do portal.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso <strong>não</strong> tenha se cadastrado nesta ou em outra revista do portal.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso já possua cadastro em alguma revista do portal.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso <strong>não</strong> tenha se cadastrado nesta ou em outra revista do portal.]]></message>
 	<message key="user.register.loginToRegister">Digite o login e senha para cadastrar-se na revista.</message>
 	<message key="user.register.registrationDisabled">Cadastro de usuários desativado no momento.</message>
 	<message key="user.register.form.passwordLengthTooShort">Senha digitada não contém o mínimo de caracteres.</message>

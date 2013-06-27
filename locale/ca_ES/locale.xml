@@ -671,8 +671,8 @@ El camp Actives llista les revisions en curs.]]></message>
 	<message key="user.register.selectJournal">Seleccioneu una revista per a registrar-vos-hi</message>
 	<message key="user.register.noJournals">Aquest lloc no conté cap revista a la qual us pugueu registrar.</message>
 	<message key="user.register.privacyStatement">Declaració de privacitat</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Feu clic aquí</a> si ja heu fet el registre en aquesta revista o en alguna altra revista d’aquest lloc.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Feu clic aquí</a> si <b>no</b> heu fet el registre en aquesta revista ni en cap altra revista d’aquest lloc.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Feu clic aquí</a> si ja heu fet el registre en aquesta revista o en alguna altra revista d’aquest lloc.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Feu clic aquí</a> si <b>no</b> heu fet el registre en aquesta revista ni en cap altra revista d’aquest lloc.]]></message>
 	<message key="user.register.loginToRegister">Introduïu el vostre nom d’usuari i la vostra contrasenya per a registrar-vos en aquesta revista.</message>
 	<message key="user.register.registrationDisabled">Actualment aquesta revista no accepta registres d’usuaris.</message>
 	<message key="user.register.form.passwordLengthTooShort">La contrasenya que heu introduït és massa curta.</message>

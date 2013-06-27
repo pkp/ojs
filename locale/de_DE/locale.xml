@@ -701,8 +701,8 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="user.register.selectJournal">Wählen Sie die Zeitschrift aus, für die Sie sich registrieren wollen</message>
 	<message key="user.register.noJournals">Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten.</message>
 	<message key="user.register.privacyStatement">Schutz persönlicher Daten</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Hier klicken</a>, wenn Sie bereits für diese oder eine andere Zeitschrift auf dieser Site registriert sind.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Hier klicken</a>, wenn Sie sich <strong>noch nicht</strong> für diese oder eine andere Zeitschrift auf dieser Site registriert haben.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Hier klicken</a>, wenn Sie bereits für diese oder eine andere Zeitschrift auf dieser Site registriert sind.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Hier klicken</a>, wenn Sie sich <strong>noch nicht</strong> für diese oder eine andere Zeitschrift auf dieser Site registriert haben.]]></message>
 	<message key="user.register.loginToRegister">Tragen Sie bitte Ihren bestehenden Benutzer/innen-Namen und Ihr aktuelles Passwort ein, um sich für diese Zeitschrift zu registrieren.</message>
 	<message key="user.register.registrationDisabled">Gegenwärtig nimmt diese Zeitschrift keine Registrierung von Benutzer/innen entgegen.</message>
 	<message key="user.register.form.passwordLengthTooShort">Das eingetragene Passwort ist zu kurz.</message>

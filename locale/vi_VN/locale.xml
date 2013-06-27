@@ -563,8 +563,8 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="user.register.selectJournal">Chọn một tạp chí muốn đăng ký</message>
 	<message key="user.register.noJournals">Không có tạp chí nào quý vị có thể đăng ký trên web site này.</message>
 	<message key="user.register.privacyStatement">Tuyên bố về bí mật cá nhân</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị đã đăng ký với tạp chí này hoặc tạp chí khác trên web site này.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị <strong>chưa</strong> đăng ký tạp chí này hoặc các tạp chí khác trên web site này.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị đã đăng ký với tạp chí này hoặc tạp chí khác trên web site này.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị <strong>chưa</strong> đăng ký tạp chí này hoặc các tạp chí khác trên web site này.]]></message>
 	<message key="user.register.loginToRegister">Nhập bí danh và mật khẩu hiện dùng để đăng ký với tạp chí này.</message>
 	<message key="user.register.registrationDisabled">Tạp chí này hiện không nhận đăng ký người dùng.</message>
 	<message key="user.register.form.passwordLengthTooShort">Mật khẩu quý vị nhập chưa đủ dài.</message>
