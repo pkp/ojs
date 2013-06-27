@@ -433,18 +433,22 @@ class ArticleDAO extends SubmissionDAO {
 
 	/**
 	 * Get all unassigned submissions for a context or all contexts
-	 * @param $journalId int optional the ID of the journal to query.
+	 * @param $journalId mixed optional the ID of the journal to query, or an array containing possible context ids.
 	 * @param $subEditorId int optional the ID of the sub editor
 	 * 	whose section will be included in the results (excluding others).
+	 * @param $includeDeclined boolean optional include submissions which have STATUS_DECLINED
+	 * @param $includePublished boolean optional include submissions which are published
+	 * @param $rangeInfo DBRangeInfo
 	 * @return DAOResultFactory containing matching Submissions
 	 */
-	function getBySubEditorId($journalId = null, $subEditorId = null) {
+	function getBySubEditorId($journalId = null, $subEditorId = null, $includeDeclined = true, $includePublished = true, $rangeInfo = null) {
 		$params = $this->_getFetchParameters();
 		$params[] = ROLE_ID_MANAGER;
 		if ($subEditorId) $params[] = (int) $subEditorId;
-		if ($journalId) $params[] = (int) $journalId;
+		if ($journalId && is_int($journalId))
+			$params[] = (int) $journalId;
 
-		$result = $this->retrieve(
+		$result = $this->retrieveRange(
 			'SELECT	s.*, ps.date_published,
 				' . $this->_getFetchColumns() . '
 			FROM	submissions s
@@ -453,10 +457,15 @@ class ArticleDAO extends SubmissionDAO {
 				LEFT JOIN stage_assignments sa ON (s.submission_id = sa.submission_id)
 				LEFT JOIN user_groups g ON (sa.user_group_id = g.user_group_id AND g.role_id = ?)
 				' . ($subEditorId?' JOIN section_editors se ON (se.journal_id = s.context_id AND se.user_id = ? AND se.section_id = s.section_id)':'') . '
-			WHERE	s.date_submitted IS NOT NULL
-				' . ($journalId?' AND s.context_id = ?':'') . '
+			WHERE	s.date_submitted IS NOT NULL'
+			. (!$includeDeclined?' AND s.status <> ' . STATUS_DECLINED : '' )
+			. (!$includePublished?' AND ps.date_published IS NULL' : '' )
+			. ($journalId && !is_array($journalId)?' AND s.context_id = ?':'')
+			. ($journalId && is_array($journalId)?' AND s.context_id IN  (' . join(',', array_map(array($this,'_arrayWalkIntCast'), $journalId)) . ')':'') . '
+
 			GROUP BY s.submission_id',
-			$params
+			$params,
+			$rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');

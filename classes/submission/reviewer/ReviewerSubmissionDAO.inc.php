@@ -187,7 +187,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 	 * @param $rangeInfo object
 	 * @return array ReviewerSubmissions
 	 */
-	function getReviewerSubmissionsByReviewerId($reviewerId, $journalId = null, $active = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
+	function getReviewerSubmissionsByReviewerId($reviewerId, $journalId = null, $active = true, $skipDeclined = true, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 		$sql = 'SELECT	a.*,
@@ -212,6 +212,10 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 			$sql .=  ' AND r.date_completed IS NULL AND r.declined <> 1 AND (r.cancelled = 0 OR r.cancelled IS NULL)';
 		} else {
 			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1 OR r.declined = 1)';
+		}
+
+		if ($skipDeclined) {
+			$sql .= ' AND a.status <> ' . STATUS_DECLINED;
 		}
 
 		if ($sortBy) {
