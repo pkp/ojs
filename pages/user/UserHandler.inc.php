@@ -265,7 +265,7 @@ class UserHandler extends PKPUserHandler {
 	 */
 	function setupTemplate($request = null) {
 		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_GRID);
 	}
 
 	/**
