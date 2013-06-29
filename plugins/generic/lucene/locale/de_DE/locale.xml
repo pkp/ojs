@@ -14,6 +14,8 @@
 	<message key="plugins.generic.lucene.displayName">Lucene-Suche-Plug-In</message>
 	<message key="plugins.generic.lucene.description">Das Lucene-Suche-Plug-In bietet Unterstützung von Mehrsprachigkeit, verbesserte Relevanz der Suchergebnisse, schnellere Indizierung, bessere Skalierung und mehr.</message>
 
+	<message key="plugins.generic.lucene.faceting.displayName">Lucene-Facettierung</message>
+	<message key="plugins.generic.lucene.faceting.description">Facettierungs-Block-Plug-In für Lucene</message>
 	<message key="plugins.generic.lucene.faceting.title">Verfeinern Sie Ihre Suche</message>
 	<message key="plugins.generic.lucene.faceting.discipline">Disziplin</message>
 	<message key="plugins.generic.lucene.faceting.subject">Schlagwort</message>
@@ -22,9 +24,9 @@
 	<message key="plugins.generic.lucene.faceting.journalTitle">Zeitschrift</message>
 	<message key="plugins.generic.lucene.faceting.authors">Autor/in</message>
 	<message key="plugins.generic.lucene.faceting.publicationDate">Veröffentlichungsdatum</message>
-
+	
 	<message key="plugins.generic.lucene.message.coreNotFound">Der angeforderte Kern '{$core}' wurde nicht auf dem Solr-Server gefunden. Ist er online?</message>
-	<message key="plugins.generic.lucene.message.indexingIncomplete">Ein Fehler ist bei der Indizierung aufgetreten: {$numIndexed} aus einer Menge von {$batchCount} indiziert.</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">Ein Fehler ist bei der Indizierung aufgetreten: {$numProcessed} aus einer Menge von {$batchCount} verarbeitet ({numDeleted} gelöschte Dokumente in dieser Menge).</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index mit {$numDocs} Dokumenten online.</message>
 	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Die Pull-Indizierung ist nicht eingeschaltet. Bitte erlauben Sie sie in den Einstellungen des Lucene-Suche-Plug-Ins.</message>
 	<message key="plugins.generic.lucene.message.searchServiceOffline">Leider ist der OJS-Suchdienst momentan offline.</message>
