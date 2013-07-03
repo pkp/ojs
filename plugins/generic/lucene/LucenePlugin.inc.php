@@ -125,6 +125,7 @@ class LucenePlugin extends GenericPlugin {
 			}
 
 			// Register callbacks (controller-level).
+			HookRegistry::register('ArticleSearch::getResultSetOrderingOptions', array($this, 'callbackGetResultSetOrderingOptions'));
 			HookRegistry::register('SubmissionSearch::retrieveResults', array($this, 'callbackRetrieveResults'));
 			HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array($this, 'callbackArticleMetadataChanged'));
 			HookRegistry::register('ArticleSearchIndex::articleFileChanged', array($this, 'callbackArticleFileChanged'));
@@ -134,6 +135,7 @@ class LucenePlugin extends GenericPlugin {
 			HookRegistry::register('ArticleSearchIndex::articleDeleted', array($this, 'callbackArticleDeleted'));
 			HookRegistry::register('ArticleSearchIndex::articleChangesFinished', array($this, 'callbackArticleChangesFinished'));
 			HookRegistry::register('ArticleSearchIndex::rebuildIndex', array($this, 'callbackRebuildIndex'));
+			HookRegistry::register('ArticleSearch::getSimilarityTerms', array($this, 'callbackGetSimilarityTerms'));
 
 			// Register callbacks (forms).
 			if ($customRanking) {
@@ -152,7 +154,6 @@ class LucenePlugin extends GenericPlugin {
 				HookRegistry::register('Templates::Manager::Sections::SectionForm::AdditionalMetadata', array($this, 'callbackTemplateSectionFormAdditionalMetadata'));
 			}
 			HookRegistry::register('Templates::Search::SearchResults::PreResults', array($this, 'callbackTemplatePreResults'));
-			HookRegistry::register('Templates::Search::SearchResults::AdditionalArticleLinks', array($this, 'callbackTemplateAdditionalArticleLinks'));
 			HookRegistry::register('Templates::Search::SearchResults::AdditionalArticleInfo', array($this, 'callbackTemplateAdditionalArticleInfo'));
 			HookRegistry::register('Templates::Search::SearchResults::SyntaxInstructions', array($this, 'callbackTemplateSyntaxInstructions'));
 
@@ -302,7 +303,7 @@ class LucenePlugin extends GenericPlugin {
 
 					// Boost File Update.
 					} elseif ($request->getUserVar('updateBoostFile')) {
-						$this->_updateBoostFile();
+						$this->_updateBoostFiles();
 
 					// Start/Stop solr server.
 					} elseif ($request->getUserVar('stopServer')) {
@@ -371,7 +372,6 @@ class LucenePlugin extends GenericPlugin {
 		$publicOps = array(
 			'queryAutocomplete',
 			'pullChangedArticles',
-			'similarDocuments',
 			'usageMetricBoost'
 		);
 		if (!in_array($op, $publicOps)) return;
@@ -420,29 +420,38 @@ class LucenePlugin extends GenericPlugin {
 	// Controller level hook implementations.
 	//
 	/**
-	 * @see SubmissionSearch::retrieveResults()
+	 * @see ArticleSearch::getResultSetOrderingOptions()
+	 */
+	function callbackGetResultSetOrderingOptions($hookName, $params) {
+		$resultSetOrderingOptions =& $params[1];
+
+		// Only show the "popularity" option when sorting-by-metric is enabled.
+		if (!$this->getSetting(0, 'sortingByMetric')) {
+			unset($resultSetOrderingOptions['popularityAll'], $resultSetOrderingOptions['popularityMonth']);
+		}
+	}
+
+	/**
 	 */
 	function callbackRetrieveResults($hookName, $params) {
 		assert($hookName == 'SubmissionSearch::retrieveResults');
 
 		// Unpack the parameters.
-		list($journal, $keywords, $fromDate, $toDate, $page, $itemsPerPage, $dummy) = $params;
-		$totalResults =& $params[6]; // need to use reference
-		$error =& $params[7]; // need to use reference
+		list($journal, $keywords, $fromDate, $toDate, $orderBy, $orderDir, $exclude, $page, $itemsPerPage) = $params;
+		$totalResults =& $params[9]; // need to use reference
+		$error =& $params[10]; // need to use reference
 
 		// Instantiate a search request.
 		$searchRequest = new SolrSearchRequest();
 		$searchRequest->setJournal($journal);
 		$searchRequest->setFromDate($fromDate);
 		$searchRequest->setToDate($toDate);
+		$searchRequest->setOrderBy($orderBy);
+		$searchRequest->setOrderDir($orderDir == 'asc' ? true : false);
 		$searchRequest->setPage($page);
 		$searchRequest->setItemsPerPage($itemsPerPage);
 		$searchRequest->addQueryFromKeywords($keywords);
-
-		// Get the ordering criteria.
-		list($orderBy, $orderDir) = $this->_getResultSetOrdering($journal);
-		$searchRequest->setOrderBy($orderBy);
-		$searchRequest->setOrderDir($orderDir == 'asc' ? true : false);
+		$searchRequest->setExcludedIds($exclude);
 
 		// Configure alternative spelling suggestions.
 		$spellcheck = (boolean)$this->getSetting(0, 'spellcheck');
@@ -486,10 +495,10 @@ class LucenePlugin extends GenericPlugin {
 		// Configure ranking-by-metric.
 		$rankingByMetric = (boolean)$this->getSetting(0, 'rankingByMetric');
 		if ($rankingByMetric) {
-			// The 'usageMetric' field is an external file field containing
+			// The 'usageMetricAll' field is an external file field containing
 			// multiplicative boost values calculated from usage metrics and
-			// normalized to values between 0.5 and 2.0.
-			$searchRequest->addBoostField('usageMetric');
+			// normalized to values between 1.0 and 2.0.
+			$searchRequest->addBoostField('usageMetricAll');
 		}
 
 		// Call the solr web service.
@@ -663,6 +672,21 @@ class LucenePlugin extends GenericPlugin {
 		return true;
 	}
 
+	/**
+	 * @see ArticleSearch::getSimilarityTerms()
+	 */
+	function callbackGetSimilarityTerms($hookName, $params) {
+		$articleId = $params[0];
+		$searchTerms =& $params[1];
+
+		// Identify "interesting" terms of the
+		// given article and return them "by ref".
+		$solrWebService = $this->getSolrWebService();
+		$searchTerms = $solrWebService->getInterestingTerms($articleId);
+
+		return true;
+	}
+
 
 	//
 	// Form hook implementations.
@@ -751,30 +775,23 @@ class LucenePlugin extends GenericPlugin {
 		$template = $params[1];
 		if ($template != 'search/search.tpl') return false;
 
-		// Get request and context.
+		// Get the request.
 		$request = PKPApplication::getRequest();
-		$journal = $request->getContext();
 
 		// Assign our private stylesheet.
 		$templateMgr = $params[0];
 		$templateMgr->addStylesheet($request->getBaseUrl() . '/' . $this->getPluginPath() . '/templates/lucene.css');
-
-		// Result set ordering options.
-		$orderByOptions = $this->_getResultSetOrderingOptions($journal);
-		$templateMgr->assign('luceneOrderByOptions', $orderByOptions);
-		$orderDirOptions = $this->_getResultSetOrderingDirectionOptions();
-		$templateMgr->assign('luceneOrderDirOptions', $orderDirOptions);
-
-		// Result set ordering selection.
-		list($orderBy, $orderDir) = $this->_getResultSetOrdering($journal);
-		$templateMgr->assign('orderBy', $orderBy);
-		$templateMgr->assign('orderDir', $orderDir);
 
 		// Instant search.
 		if ($this->getSetting(0, 'instantSearch')) {
 			$instantSearch = (boolean)$request->getUserVar('instantSearch');
 			$templateMgr->assign('instantSearch', $instantSearch);
 			$templateMgr->assign('instantSearchEnabled', true);
+		}
+
+		// Similar documents.
+		if ($this->getSetting(0, 'simdocs')) {
+			$templateMgr->assign('simDocsEnabled', true);
 		}
 
 		return false;
@@ -805,38 +822,6 @@ class LucenePlugin extends GenericPlugin {
 			array($this->_spellingSuggestionField => $this->_spellingSuggestion)
 		);
 		$output .= $smarty->fetch($this->getTemplatePath() . 'preResults.tpl');
-		return false;
-	}
-
-	/**
-	 * @see templates/search/searchResults.tpl
-	 */
-	function callbackTemplateAdditionalArticleLinks($hookName, $params) {
-		// Check whether the "similar documents" feature is
-		// enabled.
-		if (!$this->getSetting(0, 'simdocs')) return false;
-
-		// Check and prepare the article parameter.
-		$hookParams = $params[0];
-		if (!(isset($hookParams['articleId']) && is_numeric($hookParams['articleId']))) {
-			return false;
-		}
-		$urlParams = array(
-			'articleId' => $hookParams['articleId']
-		);
-
-		// Create a URL that links to "similar documents".
-		$request = PKPApplication::getRequest();
-		$router = $request->getRouter();
-		$simdocsUrl = $router->url(
-			$request, null, 'lucene', 'similarDocuments', null, $urlParams
-		);
-
-		// Return a link to the URL (a template seems overkill here).
-		$output =& $params[2];
-		$output .= '&nbsp;<a href="' . $simdocsUrl . '" class="file">'
-			. __('plugins.generic.lucene.results.similarDocuments')
-			. '</a>';
 		return false;
 	}
 
@@ -898,22 +883,30 @@ class LucenePlugin extends GenericPlugin {
 	/**
 	 * Generate an external boost file from usage statistics data.
 	 * The file will be empty when an error condition is met.
+	 * @param $timeFilter string Can be one of "all" (all-time statistics) or
+	 *   "month" (last month only).
 	 * @param $output boolean|string When true then write to stdout, otherwise
 	 *   interpret the variable as file name and write to the given file.
 	 */
-	function generateBoostFile($output = true) {
+	function generateBoostFile($timeFilter, $output = true) {
 		// Check error conditions:
-		// - the "ranking-by-metric" feature is not enabled
+		// - the "ranking/sorting-by-metric" feature is not enabled
 		// - a "main metric" is not configured
 		$application = PKPApplication::getApplication();
 		$metricType = $application->getDefaultMetricType();
-		if (!$this->getSetting(0, 'rankingByMetric') || empty($metricType)) return;
+		if (!($this->getSetting(0, 'rankingByMetric') || $this->getSetting(0, 'sortingByMetric')) ||
+				empty($metricType)) return;
 
 		// Retrieve a usage report for all articles ordered by the article ID.
 		// Ordering seems to be important, see the remark about pre-sorting the file here:
 		// https://lucene.apache.org/solr/api-3_6_2/org/apache/solr/schema/ExternalFileField.html
 		$column = STATISTICS_DIMENSION_ARTICLE_ID;
 		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_ARTICLE));
+		if ($timeFilter == 'month') {
+			$oneMonthAgo = date('Ymd', strtotime('-1 month'));
+			$today = date('Ymd');
+			$filter[STATISTICS_DIMENSION_DAY] = array('from' => $oneMonthAgo, 'to' => $today);
+		}
 		$orderBy = array(STATISTICS_DIMENSION_ARTICLE_ID => STATISTICS_ORDER_ASC);
 		$metricReport = $application->getMetrics($metricType, $column, $filter, $orderBy);
 		if (empty($metricReport)) return;
@@ -935,12 +928,10 @@ class LucenePlugin extends GenericPlugin {
 		// Normalize and return the metric values.
 		// NB: We do not return values for articles that have no data.
 		foreach ($metricReport as $reportRow) {
-			// The normalization function is: 2 ^ ((2 * metric / max) - 1).
-			// This normalizes the metric symmetrically around half the max value
-			// to values between 0.5 and 2.0, i.e. half the max value is normalized
-			// to 1.0, zero is normalized to 0.5 and the max value becomes 2.0.
+			// The normalization function is: 2 ^ (metric / max).
+			// This normalizes the metric to values between 1.0 and 2.0.
 			$record = $instId . '-' . $reportRow['submission_id'] . '=' .
-					round(pow(2, (2 * $reportRow['metric'] / $max) - 1), 5) . PHP_EOL;
+					round(pow(2, $reportRow['metric'] / $max), 5) . PHP_EOL;
 			if (is_null($file)) {
 				echo $record;
 			} else {
@@ -955,74 +946,6 @@ class LucenePlugin extends GenericPlugin {
 	//
 	// Private helper methods
 	//
-	/**
-	 * Return the available options for result
-	 * set ordering.
-	 * @param $journal Journal
-	 * @return array
-	 */
-	function _getResultSetOrderingOptions($journal) {
-		$resultSetOrderingOptions = array(
-			'score' => __('plugins.generic.lucene.results.orderBy.relevance'),
-			'authors' => __('plugins.generic.lucene.results.orderBy.author'),
-			'issuePublicationDate' => __('plugins.generic.lucene.results.orderBy.issue'),
-			'publicationDate' => __('plugins.generic.lucene.results.orderBy.date'),
-			'title' => __('plugins.generic.lucene.results.orderBy.article')
-		);
-
-		// Only show the "journal title" option if we have several journals.
-		if (!is_a($journal, 'Journal')) {
-			$resultSetOrderingOptions['journalTitle'] = __('plugins.generic.lucene.results.orderBy.journal');
-		}
-
-		return $resultSetOrderingOptions;
-	}
-
-	/**
-	 * Return the available options for the result
-	 * set ordering direction.
-	 * @return array
-	 */
-	function _getResultSetOrderingDirectionOptions() {
-		return array(
-			'asc' => __('plugins.generic.lucene.results.orderDir.asc'),
-			'desc' => __('plugins.generic.lucene.results.orderDir.desc')
-		);
-	}
-
-	/**
-	 * Return the currently selected result
-	 * set ordering option (default: descending relevance).
-	 * @param $journal Journal
-	 * @return array An array with the order field as the
-	 *  first entry and the order direction as the second
-	 *  entry.
-	 */
-	function _getResultSetOrdering($journal) {
-		// Retrieve the request.
-		$request =& Application::getRequest();
-
-		// Order field.
-		$orderBy = $request->getUserVar('orderBy');
-		$orderByOptions = $this->_getResultSetOrderingOptions($journal);
-		if (is_null($orderBy) || !in_array($orderBy, array_keys($orderByOptions))) {
-			$orderBy = 'score';
-		}
-
-		// Ordering direction.
-		$orderDir = $request->getUserVar('orderDir');
-		$orderDirOptions = $this->_getResultSetOrderingDirectionOptions();
-		if (is_null($orderDir) || !in_array($orderDir, array_keys($orderDirOptions))) {
-			if (in_array($orderBy, array('score', 'publicationDate', 'issuePublicationDate'))) {
-				$orderDir = 'desc';
-			} else {
-				$orderDir = 'asc';
-			}
-		}
-
-		return array($orderBy, $orderDir);
-	}
-
 	/**
 	 * Get all currently enabled facet categories.
 	 * @return array
@@ -1139,7 +1062,7 @@ class LucenePlugin extends GenericPlugin {
 		if ($updateBoostFile) {
 			// Update the boost file.
 			$this->_indexingMessage($log, 'LucenePlugin: ' . __('plugins.generic.lucene.rebuildIndex.updateBoostFile') . ' ... ', $messages);
-			$this->_updateBoostFile();
+			$this->_updateBoostFiles();
 		}
 
 		$this->_indexingMessage($log, __('search.cli.rebuildIndex.done') . PHP_EOL, $messages);
@@ -1231,32 +1154,35 @@ class LucenePlugin extends GenericPlugin {
 	/**
 	 * Generate and update the boost file.
 	 */
-	function _updateBoostFile() {
+	function _updateBoostFiles() {
 		// Make sure that we have an embedded server.
 		if ($this->getSetting(0, 'pullIndexing')) return;
 
-		// Make sure that the ranking-by-metric feature is enabled.
-		if (!$this->getSetting(0, 'rankingByMetric')) return;
+		// Make sure that the ranking/sorting-by-metric feature is enabled.
+		if (!($this->getSetting(0, 'rankingByMetric') || $this->getSetting(0, 'sortingByMetric'))) return;
 
 		// Construct the file name.
 		$ds = DIRECTORY_SEPARATOR;
-		$fileName = Config::getVar('files', 'files_dir') . "${ds}lucene${ds}data${ds}external_usageMetric";
 
-		// Find the next extension. We cannot write to the existing file
-		// while it is in-use and locked (on Windows).
-		// Solr lets us write a new file and will always use the
-		// (alphabetically) last file. The older file will automatically
-		// be deleted.
-		$lastExtension = 0;
-		foreach (glob($fileName . '.*') as $source) {
-			$existingExtension = (int)pathinfo($source, PATHINFO_EXTENSION);
-			if ($existingExtension > $lastExtension) $lastExtension = $existingExtension;
+		foreach (array('all', 'month') as $filter) {
+			$fileName = Config::getVar('files', 'files_dir') . "${ds}lucene${ds}data${ds}external_usageMetric" . ucfirst($filter);
+
+			// Find the next extension. We cannot write to the existing file
+			// while it is in-use and locked (on Windows).
+			// Solr lets us write a new file and will always use the
+			// (alphabetically) last file. The older file will automatically
+			// be deleted.
+			$lastExtension = 0;
+			foreach (glob($fileName . '.*') as $source) {
+				$existingExtension = (int)pathinfo($source, PATHINFO_EXTENSION);
+				if ($existingExtension > $lastExtension) $lastExtension = $existingExtension;
+			}
+			$newExtension = (string) $lastExtension + 1;
+			$newExtension = str_pad($newExtension, 8, '0', STR_PAD_LEFT);
+
+			// Generate the files.
+			$this->generateBoostFile($filter, $fileName . '.' . $newExtension);
 		}
-		$newExtension = (string) $lastExtension + 1;
-		$newExtension = str_pad($newExtension, 8, '0', STR_PAD_LEFT);
-
-		// Generate the file.
-		$this->generateBoostFile($fileName . '.' . $newExtension);
 
 		// Make the solr server aware of the boost file.
 		$solr = $this->getSolrWebService();

@@ -6,7 +6,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS solr/lucene search plugin index schema default configuration.
-  * 
+  *
   * NB: You may customize the index/query analyzer chains. Do not change the field
   * configuration, though, as this will probably break the OJS/solr indexing or
   * search protocol.
@@ -28,7 +28,7 @@
     <fieldType name="pdate" class="solr.DateField" sortMissingLast="true"/>
 
     <!-- Faceting fields (you may have to change the tokenization patterns)-->
-	<!-- General faceted field (comma- or semicolon-separated, e.g. discipline, type, subject, etc.) -->
+    <!-- General faceted field (comma- or semicolon-separated, e.g. discipline, type, subject, etc.) -->
     <fieldType name="facet" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.PatternTokenizerFactory" pattern="[,;]\s*"/>
@@ -56,9 +56,9 @@
       </analyzer>
     </fieldType>
 
-	<!-- Configuration for specific languages. You may add or change language-specific
-	     analysis chains here. The import process will automatically recognize new
-	     locales. -->
+    <!-- Configuration for specific languages. You may add or change language-specific
+         analysis chains here. The import process will automatically recognize new
+         locales. -->
     <!-- Catalan -->
     <fieldType name="text_ca" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
@@ -115,7 +115,7 @@
       </analyzer>
     </fieldType>
 
-	<!-- Greek -->
+    <!-- Greek -->
     <fieldType name="text_el" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -351,7 +351,7 @@
       External field to support ranking by an external fast-changing metric.
       Values in the external field should vary between 0.5 (half) and 2.0 (double).
       The default value is 1 (neutral ranking) so that the results for articles
-      without specific ranking data will not destort results (especially for very
+      without specific ranking data will not distort results (especially for very
       new articles or in a central server case with inconsistently configured
       clients).
     -->
@@ -442,8 +442,9 @@
     <!-- Ignore any fields that don't already match an existing
          field name or dynamic field (e.g. unsupported locales). -->
     <dynamicField name="*" type="ignored" multiValued="true" />
-    
-    <field name="usageMetric" type="externalFile" multiValued="false" />
+
+    <field name="usageMetricAll" type="externalFile" multiValued="false" />
+    <field name="usageMetricMonth" type="externalFile" multiValued="false" />
   </fields>
 
   <!-- Field to use to determine and enforce document uniqueness.

@@ -98,7 +98,7 @@ class LuceneSettingsForm extends Form {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('autosuggestTypes', $this->_getAutosuggestTypes());
 
-		// Prepare ranking-by-metric.
+		// Prepare ranking-by-metric/sorting-by-metric.
 		$metricName = $this->_getDefaultMetric();
 		$templateMgr->assign('metricName', $metricName);
 		$templateMgr->assign('noMainMetric', empty($metricName));
@@ -146,7 +146,8 @@ class LuceneSettingsForm extends Form {
 			'facetCategorySubject', 'facetCategoryType',
 			'facetCategoryCoverage', 'facetCategoryJournalTitle',
 			'facetCategoryAuthors', 'facetCategoryPublicationDate',
-			'customRanking', 'instantSearch', 'rankingByMetric'
+			'customRanking', 'instantSearch',
+			'rankingByMetric', 'sortingByMetric'
 		);
 		$otherFormFields = array(
 			'searchEndpoint', 'username', 'instId',

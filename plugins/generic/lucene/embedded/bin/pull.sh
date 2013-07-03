@@ -66,13 +66,38 @@ for PULL_URL in $PULL_URLS; do
 done
 
 # For the usage statistics update:
-# Identify the next file name (required for compatibility with the corresponding embedded
+# Identify the next file names (required for compatibility with the corresponding embedded
 # server behavior so that one can switch between the two).
-CURRENT_STAT_FILE=`ls $PULL_LUCENE_INDEX_DIR/external_usageMetric.* 2>/dev/null | sort | tail -n1`
-CURRENT_STAT_EXTENSION=`echo $CURRENT_STAT_FILE | sed -r 's/.*\.0*([1-9][0-9]*)$/\1/'`
-NEXT_STAT_EXTENSION=$((CURRENT_STAT_EXTENSION+1)) # This works even if no prior file was found...
-NEXT_STAT_EXTENSION=`printf %08d $NEXT_STAT_EXTENSION` # Padding to eight numbers.
-NEXT_STAT_FILE="$PULL_LUCENE_INDEX_DIR/external_usageMetric.$NEXT_STAT_EXTENSION"
+function getCurrentStatFile {
+  ls "$PULL_LUCENE_INDEX_DIR/"external_usageMetric$1.* 2>/dev/null | sort | tail -n1
+}
+function getNextStatFile {
+  local CURRENT_STAT_EXTENSION=`echo $1 | sed -r 's/.*\.0*([1-9][0-9]*)$/\1/'`
+  local NEXT_STAT_EXTENSION=$((CURRENT_STAT_EXTENSION+1)) # This works even if no prior file was found...
+  NEXT_STAT_EXTENSION=`printf %08d $NEXT_STAT_EXTENSION` # Padding to eight numbers.
+  echo "$PULL_LUCENE_INDEX_DIR/external_usageMetric$2.$NEXT_STAT_EXTENSION"
+}
+CURRENT_STAT_FILE_A=`getCurrentStatFile All`
+CURRENT_STAT_FILE_M=`getCurrentStatFile Month`
+NEXT_STAT_FILE_A=`getNextStatFile "$CURRENT_STAT_FILE_A" All`
+NEXT_STAT_FILE_M=`getNextStatFile "$CURRENT_STAT_FILE_M" Month`
+function updateStatFile {
+  # Download usage statistics to a temporary file.
+  local TEMPFILE=`tempfile`
+  curl -s "$PULL_URL/index/lucene/usageMetricBoost?filter=$1" >$TEMPFILE
+  if [ -s "$TEMPFILE" ]; then
+    if [ ! -z "$2" ]; then
+      # Copy the old file to the new location while suppresing all
+      # entries from the same installation.
+      local INST_ID=`head -n1 "$TEMPFILE" | sed -r 's/-[0-9]+=[0-9.]+$//'`
+      sed -r "/^$INST_ID-[0-9]+=/d" "$2" >>"$TEMPFILE"
+    fi
+    UPDATED_STAT_FILE='true'
+    LC_ALL=C sort "$TEMPFILE" >$3
+    echo " - Updated statistics to '$3'."
+  fi
+  rm $TEMPFILE
+}
 UPDATED_STAT_FILE='false'
 
 for PULL_URL in $PULL_URLS; do
@@ -94,27 +119,15 @@ for PULL_URL in $PULL_URLS; do
 
   # Update usage statistics.
   echo " - Checking usage statistics."
-  # Download usage statistics to a temporary file.
-  TEMPFILE=`tempfile`
-  curl -s "$PULL_URL/index/lucene/usageMetricBoost" >$TEMPFILE
-  if [[ -s $TEMPFILE ]]; then
-    if [[ ! -z "$CURRENT_STAT_FILE" ]]; then
-      # Copy the old file to the new location while suppresing all
-      # entries from the same installation.
-      INST_ID=`head -n1 "$TEMPFILE" | sed -r 's/-[0-9]+=[0-9.]+$//'`
-      sed -r "/^$INST_ID-[0-9]+=/d" $CURRENT_STAT_FILE >>$TEMPFILE
-      UPDATED_STAT_FILE='true'
-    fi
-    LC_ALL=C sort $TEMPFILE >$NEXT_STAT_FILE
-    echo " - Updated statistics to '$NEXT_STAT_FILE'."
-  else
+  updateStatFile all "$CURRENT_STAT_FILE_A" "$NEXT_STAT_FILE_A"
+  updateStatFile month "$CURRENT_STAT_FILE_M" "$NEXT_STAT_FILE_M"
+  if [ $UPDATED_STAT_FILE = 'false' ]; then
     echo " - No statistics found or statistics disabled."
   fi
-  rm $TEMPFILE
   echo
 done
 
-if [[ $UPDATED_STAT_FILE = "true" ]]; then
+if [ $UPDATED_STAT_FILE = 'true' ]; then
   # Tell Solr to refresh usage statistics data.
   curl -s $RELOAD_EXT_FILE_ENDPOINT >/dev/null
 fi

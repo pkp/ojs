@@ -7,16 +7,6 @@
  * Special stylesheet for Lucene search result formatting.
  */
 
-.plugins_generic_lucene_preResults {
-	width: 100%;
-	margin: 0 0 0.5em 0.5em;
-	line-height: 2em;
-}
-
-.plugins_generic_lucene_preResults_ordering {
-	float: right;
-}
-
 tr.plugins_generic_lucene_highlighting td {
 	padding-left: 30px;
 }

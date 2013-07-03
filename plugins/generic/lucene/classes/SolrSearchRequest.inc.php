@@ -27,6 +27,11 @@ class SolrSearchRequest {
 	var $_query = array();
 
 	/**
+	 * @var array An array of unique IDs to exclude.
+	 */
+	var $_excludedIds = array();
+
+	/**
 	 * @var integer For paginated queries: The page to be returned.
 	 */
 	var $_page = 1;
@@ -129,6 +134,22 @@ class SolrSearchRequest {
 	 */
 	function setQuery($query) {
 		$this->_query = $query;
+	}
+
+	/**
+	 * Set a list of unique IDs to exclude from the search result.
+	 * @param $excludedIds array
+	 */
+	function setExcludedIds($excludedIds) {
+		$this->_excludedIds = $excludedIds;
+	}
+
+	/**
+	 * Get the list of excluded unique IDs.
+	 * @return array
+	 */
+	function getExcludedIds() {
+		return $this->_excludedIds;
 	}
 
 	/**

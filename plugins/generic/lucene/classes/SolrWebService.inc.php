@@ -1113,9 +1113,21 @@ class SolrWebService extends XmlWebService {
 		// Translate the direction.
 		$dirString = ($direction?' asc':' desc');
 
-		// Relevance ordering.
+		// Special case: relevance ordering.
 		if ($field == 'score') {
 			return $field . $dirString;
+		}
+
+		// Special case: popularity ordering.
+		if ($field == 'popularityAll') {
+			// The abs() function has no actual effect as our usage Metric
+			// is always positive. It is just a workaround so that we can use
+			// an external file field for sorting which would otherwise raise
+			// an exception (which is a Solr bug in version 3.6.1).
+			return 'abs(usageMetricAll)' . $dirString;
+		}
+		if ($field == 'popularityMonth') {
+			return 'abs(usageMetricMonth)' . $dirString;
 		}
 
 		// We order by descending relevance by default.
@@ -1235,7 +1247,7 @@ class SolrWebService extends XmlWebService {
 			if (is_null($result)) return null;
 
 			// Retrieve the number of successfully indexed articles.
-			$numProcessed = $this->_getDocumentsProcessed($result) + $numDeleted;
+			$numProcessed = $this->_getDocumentsProcessed($result);
 			return $numProcessed;
 		} else {
 			// Nothing to update.
@@ -1862,6 +1874,12 @@ class SolrWebService extends XmlWebService {
 		$journal = $searchRequest->getJournal();
 		if (is_a($journal, 'Journal')) {
 			$params['fq'][] = 'journal_id:"' . $this->_instId . '-' . $journal->getId() . '"';
+		}
+
+		// Add excluded IDs as a filter query (if set).
+		$excludedIds = $searchRequest->getExcludedIds();
+		if (!empty($excludedIds)) {
+			$params['fq'][] = 'article_id:(-"' . $this->_instId . '-' . implode('" -"' . $this->_instId . '-', $excludedIds) . '")';
 		}
 		return $params;
 	}

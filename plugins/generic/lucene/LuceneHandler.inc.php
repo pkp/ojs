@@ -133,46 +133,6 @@ class LuceneHandler extends Handler {
 	}
 
 	/**
-	 * If the "similar documents" feature is enabled then this
-	 * handler redirects to a search query that shows documents
-	 * similar to the one identified by an article id in the
-	 * request.
-	 * @param $args array
-	 * @param $request Request
-	 */
-	function similarDocuments($args, $request) {
-		$this->validate(null, $request);
-
-		// Retrieve the ID of the article that
-		// we want similar documents for.
-		$articleId = $request->getUserVar('articleId');
-
-		// Check error conditions.
-		// - The "similar documents" feature is not enabled.
-		// - We got a non-numeric article ID.
-		$lucenePlugin = $this->_getLucenePlugin();
-		if (!($lucenePlugin->getSetting(0, 'simdocs')
-				&& is_numeric($articleId))) {
-			$request->redirect(null, 'search');
-		}
-
-		// Identify "interesting" terms of the
-		// given article.
-		$solrWebService = $lucenePlugin->getSolrWebService(); /* @var $solrWebService SolrWebService */
-		$searchTerms = $solrWebService->getInterestingTerms($articleId);
-		if (empty($searchTerms)) {
-			$request->redirect(null, 'search');
-		}
-
-		// Redirect to a search query with these
-		// terms.
-		$searchParams = array(
-			'query' => implode(' ', $searchTerms),
-		);
-		$request->redirect(null, 'search', 'search', null, $searchParams);
-	}
-
-	/**
 	 * If the "ranking-by-metric" feature is enabled then this
 	 * handler returns a file with normalized boost data.
 	 * @param $args array
@@ -184,12 +144,17 @@ class LuceneHandler extends Handler {
 		// We return a text file.
 		header('Content-type: text/plain');
 
+		// Make sure that we got a parameter telling us
+		// whether to generate all-time or monthly statistics.
+		$filter = $request->getUserVar('filter');
+		if ($filter != 'all' && $filter != 'month') return;
+
 		// Only allow external report generation in the pull scenario.
 		$lucenePlugin = $this->_getLucenePlugin();
 		if (!$lucenePlugin->getSetting(0, 'pullIndexing')) return;
 
 		// Generate (and output) the report.
-		if (!$lucenePlugin->generateBoostFile());
+		if (!$lucenePlugin->generateBoostFile($filter));
 	}
 
 

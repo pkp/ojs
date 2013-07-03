@@ -161,10 +161,9 @@ deploy in central server mode:
   If that doesn't help and you see a lot of swapping occur on your machine then
   you'll probably have to install more physical RAM.
 
-- PHP configuration: The minimum PHP version for this plug-in is 5.0.0. The
-  plug-in relies on the PHP curl. Please activate it before enabling the
-  plug-in. If you have a large OJS installation then rebuilding your index
-  (see the dedicated chapter) may require lots of memory. Please increase
+- PHP configuration: The plug-in relies on the PHP curl. Please activate it 
+  before enabling the plug-in. If you have a large OJS installation then rebuilding 
+  your index (see the dedicated chapter) may require lots of memory. Please increase
   the 'memory_limit' in php.ini until you no longer get 'Allowed memory size
   ... exhausted' errors.
 
@@ -208,7 +207,7 @@ a Solr search server.
        We are using version 6.1.26 here as an example but the latest version may
        be different. Please change the following commands accordingly.
 
-       If you are on Linux execute something like:
+       If you are on Linux execute something like (from the OJS application directory):
           #> cd plugins/generic/lucene/lib
           #> wget http://dist.codehaus.org/jetty/jetty-6.1.26/jetty-6.1.26.zip
           #> unzip jetty-6.1.26.zip
@@ -230,29 +229,26 @@ a Solr search server.
        Please make sure that you find the file "start.jar" in the jetty folder.
        If not, you may have to unwrap the unzipped file hierarchy.
 
-     - Solr: Get the latest Solr binary from an Apache download mirror and unzip
+     - Solr: Get the latest Solr 3.6.2 binary from an Apache download mirror and unzip
        it into plugins/generic/lucene/lib in your OJS application directory.
-
-       We are using version 3.6.1 here as an example but the latest version may
-       be different. Please change the following commands accordingly.
 
        If you are on Linux execute something like (from the OJS application
        directory):
           #> cd plugins/generic/lucene/lib
-          #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.1/
-                                                          apache-solr-3.6.1.zip
-          #> unzip apache-solr-3.6.1.zip
+          #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.2/
+                                                          apache-solr-3.6.2.zip
+          #> unzip apache-solr-3.6.2.zip
 
-       This should create a folder apache-solr-3.5.0 in your lib directory. If
+       This should create a folder apache-solr-3.6.2 in your lib directory. If
        you are on Linux then please create a symlink pointing to this directory,
        e.g.:
-          #> ln -s apache-solr-3.6.1 solr
+          #> ln -s apache-solr-3.6.2 solr
 
        On Windows download and unzip the file to the lib folder. Then rename the
        Solr folder to "solr" or use the Windows "mklink" tool to create a
        symlink to the unzipped folder, e.g.:
           C:\...\ojs> cd plugins\generic\lucene\lib
-          C:\...\lib> mklink /d solr apache-solr-3.6.1
+          C:\...\lib> mklink /d solr apache-solr-3.6.2
 
        Please make sure that you find the "example" folder below the solr
        folder. If not, you may have to unwrap the unzipped file hierarchy.
@@ -619,7 +615,7 @@ The Lucene plugin allows you to influence the ranking of articles based on
 arbitrary usage statistics collected via OJS statistics/reporting plugins.
 
 Usage statistics will be used to boost ranking scores with a factor between
-0.5 (half, articles with 0 usage events) and 2.0 (double, article with the
+1.0 (one, articles with 0 usage events) and 2.0 (double, article with the
 highest number of usage events). This means that an otherwise highly ranked
 article may be downranked or vice versa. Usage statistics will only be one
 of several factors, though. If you'd like to order search results by usage

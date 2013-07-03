@@ -166,6 +166,18 @@
 				</td>
 			</tr>
 			<tr>
+				<td class="label" align="right"><input {if $noMainMetric}disabled="disabled" {/if}type="checkbox" name="sortingByMetric" id="sortingByMetric" {if $sortingByMetric}checked="checked" {/if}/></td>
+				<td class="value">
+					<label for="sortingByMetric">
+						{if $noMainMetric}
+							{translate key="plugins.generic.lucene.settings.sortingByMetricDisabled"}
+						{else}
+							{translate key="plugins.generic.lucene.settings.sortingByMetricEnabled" metricName=$metricName}
+						{/if}
+					</label>
+				</td>
+			</tr>
+			<tr valign="top">
 				<td class="label" align="right"><input type="checkbox" name="instantSearch" id="instantSearch" {if $instantSearch}checked="checked" {/if}/></td>
 				<td class="value">
 					<label for="instantSearch">{translate key="plugins.generic.lucene.settings.instantSearch"}</label>
@@ -229,9 +241,9 @@
 					<br/>
 				</td>
 			</tr>
-			{if $rankingByMetric}
+			{if $rankingByMetric || $sortingByMetric}
 				<tr>
-					<td class="label">{fieldLabel name="updateBoostFile" key="plugins.generic.lucene.settings.rankingByMetric"}</td>
+					<td width="20%" class="label">{fieldLabel name="updateBoostFile" key="plugins.generic.lucene.settings.usageStatistics"}</td>
 					<td class="value">
 						{if $pullIndexing || !$canWriteBoostFile}
 							<span class="instruct">{translate key="plugins.generic.lucene.settings.updateBoostFileDisabled"}</span>
