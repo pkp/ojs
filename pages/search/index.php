@@ -18,6 +18,7 @@
 switch ($op) {
 	case 'index':
 	case 'search':
+	case 'similarDocuments':
 	case 'authors':
 	case 'titles':
 	case 'categories':

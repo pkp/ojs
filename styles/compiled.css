@@ -417,6 +417,12 @@ ul.tagit input[type="text"] {
   left:30px;
   right:30px;
 }
+.pkp_pages_search_preResults {
+  width:100%;
+  margin:0 0 0.5em 0.5em;
+  line-height:2em;
+}
+.pkp_pages_search_preResults_ordering { float:right; }
 .pkp_helpers_invisible { visibility:hidden; }
 .pkp_helpers_display_none { display:none !important; }
 .pkp_helpers_clear { clear:both; }

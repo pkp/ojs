@@ -324,8 +324,21 @@
 	<message key="comments.commentsOnArticle">Comments on this article</message>
 	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Site Administration -->
+	<!-- Search -->
+	<message key="search.results.orderBy">Order results by</message>
+	<message key="search.results.orderBy.article">Article Title</message>
+	<message key="search.results.orderBy.author">Author</message>
+	<message key="search.results.orderBy.date">Publication Date</message>
+	<message key="search.results.orderBy.issue">Issue</message>
+	<message key="search.results.orderBy.journal">Journal Title</message>
+	<message key="search.results.orderBy.popularityAll">Popularity (All Time)</message>
+	<message key="search.results.orderBy.popularityMonth">Popularity (Last Month)</message>
+	<message key="search.results.orderBy.relevance">Relevance</message>
+	<message key="search.results.orderDir.asc">Ascending</message>
+	<message key="search.results.orderDir.desc">Descending</message>
+	<message key="search.results.similarDocuments">similar documents</message>
 
+	<!-- Site Administration -->
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[To have the contents of all journals hosted on this site indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your site's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.
@@ -551,31 +564,31 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="reviewer.article.uploadedFile">Uploaded files</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Version uploaded by reviewer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
-        <message key="reviewer.article.schedule.request">Editor's Request</message>
-        <message key="reviewer.article.schedule.response">Your Response</message>
-        <message key="reviewer.article.schedule.submitted">Review Submitted</message>
-        <message key="reviewer.article.schedule.due">Review Due</message>
+	<message key="reviewer.article.schedule.request">Editor's Request</message>
+	<message key="reviewer.article.schedule.response">Your Response</message>
+	<message key="reviewer.article.schedule.submitted">Review Submitted</message>
+	<message key="reviewer.article.schedule.due">Review Due</message>
 	<message key="reviewer.article.decision.accept">Accept Submission</message>
 	<message key="reviewer.article.decision.pendingRevisions">Revisions Required</message>
 	<message key="reviewer.article.decision.resubmitHere">Resubmit for Review</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Resubmit Elsewhere</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Resubmit Elsewhere</message>
 	<message key="reviewer.article.decision.decline">Decline Submission</message>
 	<message key="reviewer.article.decision.seeComments">See Comments</message>
 	<message key="reviewer.article.schedule">Schedule</message>
-        <message key="reviewer.article.submissionToBeReviewed">Submission To Be Reviewed</message>
-        <message key="reviewer.article.reviewSchedule">Review Schedule</message>
-        <message key="reviewer.article.reviewSteps">Review Steps</message>
-        <message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
+	<message key="reviewer.article.submissionToBeReviewed">Submission To Be Reviewed</message>
+	<message key="reviewer.article.reviewSchedule">Review Schedule</message>
+	<message key="reviewer.article.reviewSteps">Review Steps</message>
+	<message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author.]]></message>
-        <message key="reviewer.article.notifyEditorA">Notify the submission's editor</message>
-        <message key="reviewer.article.notifyEditorB">as to whether you will undertake the review.</message>
-        <message key="reviewer.article.consultGuidelines">If you are going to do the review, consult Reviewer Guidelines below.</message>
-        <message key="reviewer.article.downloadSubmission">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare whether or not you have competing interests with regard to this research (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="reviewer.article.notifyEditorA">Notify the submission's editor</message>
+	<message key="reviewer.article.notifyEditorB">as to whether you will undertake the review.</message>
+	<message key="reviewer.article.consultGuidelines">If you are going to do the review, consult Reviewer Guidelines below.</message>
+	<message key="reviewer.article.downloadSubmission">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare whether or not you have competing interests with regard to this research (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
 	<message key="reviewer.competingInterests">Competing Interests</message>
-        <message key="reviewer.article.enterReviewA">Click on icon to enter (or paste) your review of this submission.</message>
-        <message key="reviewer.article.uploadFile">In addition, you can upload files for the editor and/or author to consult.</message>
-        <message key="reviewer.article.selectRecommendation">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
+	<message key="reviewer.article.enterReviewA">Click on icon to enter (or paste) your review of this submission.</message>
+	<message key="reviewer.article.uploadFile">In addition, you can upload files for the editor and/or author to consult.</message>
+	<message key="reviewer.article.selectRecommendation">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
 	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
 	<message key="reviewer.article.ensuringBlindReview">Ensuring a Blind Review</message>

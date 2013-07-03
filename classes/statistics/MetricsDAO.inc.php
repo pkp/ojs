@@ -6,7 +6,7 @@
 /**
  * @file classes/statistics/MetricsDAO.inc.php
  *
- * Copyright (c) 2003-2012 John Willinsky
+ * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MetricsDAO
@@ -125,6 +125,7 @@ class MetricsDAO extends DAO {
 					$currentClause .= "$column = ?";
 					$params[] = $values;
 				} else {
+					if (empty($values)) return null;
 					$placeholders = array_pad(array(), count($values), '?');
 					$placeholders = implode(', ', $placeholders);
 					$currentClause .= "$column IN ($placeholders)";

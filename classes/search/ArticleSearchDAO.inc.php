@@ -59,11 +59,11 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		if (!empty($publishedFrom)) {
-			$sqlWhere .= ' AND pa.date_published >= ' . $this->datetimeToDB($publishedFrom);
+			$sqlWhere .= ' AND ps.date_published >= ' . $this->datetimeToDB($publishedFrom);
 		}
 
 		if (!empty($publishedTo)) {
-			$sqlWhere .= ' AND pa.date_published <= ' . $this->datetimeToDB($publishedTo);
+			$sqlWhere .= ' AND ps.date_published <= ' . $this->datetimeToDB($publishedTo);
 		}
 
 		if (!empty($journal)) {
@@ -74,14 +74,19 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		$result = $this->retrieveCached(
 			'SELECT
 				o.submission_id,
+				MAX(s.context_id) AS journal_id,
+				MAX(i.date_published) AS i_pub,
+				MAX(ps.date_published) AS s_pub,
 				COUNT(*) AS count
 			FROM
-				published_submissions pa,
+				submissions s,
+				published_submissions ps,
 				issues i,
 				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE
-				pa.submission_id = o.submission_id AND
-				i.issue_id = pa.issue_id AND
+				s.submission_id = o.submission_id AND
+				ps.submission_id = s.submission_id AND
+				i.issue_id = ps.issue_id AND
 				i.published = 1 AND ' . $sqlWhere . '
 			GROUP BY o.submission_id
 			ORDER BY count DESC
@@ -90,8 +95,20 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			3600 * $cacheHours // Cache for 24 hours
 		);
 
-		return new DBRowIterator($result);
+		$returner = array();
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$returner[$row['submission_id']] = array(
+				'count' => $row['count'],
+				'journal_id' => $row['journal_id'],
+				'issuePublicationDate' => $this->datetimeFromDB($row['i_pub']),
+				'publicationDate' => $this->datetimeFromDB($row['s_pub'])
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
 	}
+
 }
 
 ?>
