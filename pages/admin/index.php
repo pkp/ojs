@@ -20,8 +20,8 @@ switch ($op) {
 	// Journal Management
 	//
 	case 'contexts':
-		define('HANDLER_CLASS', 'PKPAdminContextHandler');
-		import('lib.pkp.pages.admin.PKPAdminContextHandler');
+		define('HANDLER_CLASS', 'AdminContextHandler');
+		import('lib.pkp.pages.admin.AdminContextHandler');
 		break;
 	//
 	// Merge users
