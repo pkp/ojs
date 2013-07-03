@@ -127,55 +127,6 @@ class TemplateManager extends PKPTemplateManager {
 	}
 
 	/**
-	 * Smarty usage: {get_help_id key="(dir)*.page.topic" url="boolean"}
-	 *
-	 * Custom Smarty function for retrieving help topic ids.
-	 * Direct mapping of page topic key to a numerical value representing the associated help topic xml file
-	 * @params $params array associative array, must contain "key" parameter for string to translate
-	 * @params $smarty Smarty
-	 * @return numerical help topic id
-	 */
-	function smartyGetHelpId($params, &$smarty) {
-		import('classes.help.Help');
-		$help =& Help::getHelp();
-		if (isset($params) && !empty($params)) {
-			if (isset($params['key'])) {
-				$key = $params['key'];
-				unset($params['key']);
-				$translatedKey = $help->translate($key);
-			} else {
-				$translatedKey = $help->translate('');
-			}
-
-			if ($params['url'] == 'true') {
-				$dispatcher =& PKPApplication::getDispatcher();
-				return $dispatcher->url($this->request, ROUTE_PAGE, null, 'help', 'view', explode('/', $translatedKey));
-			} else {
-				return $translatedKey;
-			}
-		}
-	}
-
-	/**
-	 * Smarty usage: {help_topic key="(dir)*.page.topic" text="foo"}
-	 *
-	 * Custom Smarty function for creating anchor tags
-	 * @params $params array associative array
-	 * @params $smarty Smarty
-	 * @return anchor link to related help topic
-	 */
-	function smartyHelpTopic($params, &$smarty) {
-		import('classes.help.Help');
-		$help =& Help::getHelp();
-		if (isset($params) && !empty($params)) {
-			$translatedKey = isset($params['key']) ? $help->translate($params['key']) : $help->translate('');
-			$link = $this->request->url(null, 'help', 'view', explode('/', $translatedKey));
-			$text = isset($params['text']) ? $params['text'] : '';
-			return "<a href=\"$link\">$text</a>";
-		}
-	}
-
-	/**
 	 * Display page links for a listing of items that has been
 	 * divided onto multiple pages.
 	 * Usage:
