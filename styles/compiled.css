@@ -900,6 +900,18 @@ div.plupload div.plupload_header { display:none; }
   position:absolute;
 }
 #reviewTabs .ui-tabs-nav a.pkp_controllers_linkAction { line-height:0px; }
+.stTabsInnerWrapper {
+  padding-left:15px;
+  padding-right:15px;
+}
+.stTabsMainWrapper ul.ui-tabs-nav {
+  margin-left:2px;
+  margin-right:2px;
+}
+.stNav {
+  height:23px !important;
+  padding-top:7px;
+}
 .loading_container {
   text-align:center;
   padding-top:10px;
