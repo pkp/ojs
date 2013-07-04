@@ -33,12 +33,28 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 	// Implement template methods from AuthorizationPolicy
 	//
 	function effect() {
+		if (!$this->_context) return AUTHORIZATION_DENY;
 
-		if ($this->_context && $this->_context->getSetting('publishingMode') == PUBLISHING_MODE_NONE) {
+		// Certain roles are allowed to see unpublished content.
+		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		if (count(array_intersect(
+			$userRoles,
+			array(
+				ROLE_ID_EDITOR,
+				ROLE_ID_SITE_ADMIN,
+				ROLE_ID_ASSISTANT,
+				ROLE_ID_SECTION_EDITOR
+			)
+		))>0) {
+			return AUTHORIZATION_PERMIT;
+		}
+
+		if ($this->_context->getSetting('publishingMode') == PUBLISHING_MODE_NONE) {
 			return AUTHORIZATION_DENY;
 		}
 
 		return AUTHORIZATION_PERMIT;
 	}
 }
+
 ?>

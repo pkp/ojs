@@ -53,7 +53,7 @@ class IssueHandler extends Handler {
 		// Get the issue galley
 		$galleyId = isset($args[1]) && is_numeric($args[1]) ? $args[1] : 0;
 		if ($galleyId) {
-			$issue = $this->getIssue();
+			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 			$journal = $request->getJournal();
 			if ($journal->getSetting('enablePublicGalleyId')) {
@@ -99,7 +99,7 @@ class IssueHandler extends Handler {
 		}
 
 		// consider public identifiers
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		$templateMgr->display('issue/viewPage.tpl');
 	}
@@ -108,7 +108,7 @@ class IssueHandler extends Handler {
 	 * Display issue view page.
 	 */
 	function view($args, $request) {
-		$issue = $this->getIssue();
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$showToc = isset($args[1]) ? $args[1] : '';
 
 		$this->setupTemplate($request);
@@ -120,7 +120,7 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('issueId', $issue->getBestIssueId());
 
 		// consider public identifiers
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		$templateMgr->display('issue/viewPage.tpl');
 
@@ -133,22 +133,19 @@ class IssueHandler extends Handler {
 	 */
 	function archive($args, $request) {
 		$this->setupTemplate($request);
-
 		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$rangeInfo = $this->getRangeInfo($request, 'issues');
 
-		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
-
+		$templateMgr = TemplateManager::getManager($request);
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		$coverPagePath = $request->getBaseUrl() . '/';
 		$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
-
-		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('coverPagePath', $coverPagePath);
-		$templateMgr->assign('locale', AppLocale::getLocale());
-		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
+
+		$rangeInfo = $this->getRangeInfo($request, 'issues');
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
+		$templateMgr->assign('issues', $publishedIssuesIterator);
 		$templateMgr->display('issue/archive.tpl');
 	}
 
@@ -158,17 +155,15 @@ class IssueHandler extends Handler {
 	 * @param $request Request
 	 */
 	function viewIssue($args, $request) {
-		$issue = $this->getIssue();
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		if ($galleyId && $this->userCanViewGalley($request)) {
 			$this->setupTemplate($request);
 
-			$journal = $request->getJournal();
-			$galley = $this->getGalley();
-
 			// Ensure we have PDF galley for inline viewing
 			// Otherwise redirect to download issue galley page
+			$galley = $this->getGalley();
 			if (!$galley->isPdfGalley()) {
 				$request->redirect(null, null, 'viewDownloadInterstitial', array($issue->getId(), $galleyId));
 			}
@@ -179,15 +174,12 @@ class IssueHandler extends Handler {
 			$templateMgr->addJavaScript('js/pdfobject.js');
 			$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/pdfView.css');
 
-			$templateMgr->assign_by_ref('issue', $issue);
-			$templateMgr->assign_by_ref('galley', $galley);
-			$templateMgr->assign_by_ref('journal', $journal);
+			$templateMgr->assign('issue', $issue);
+			$templateMgr->assign('galley', $galley);
 			$templateMgr->assign('issueId', $issue->getId());
 			$templateMgr->assign('galleyId', $galleyId);
 
 			$templateMgr->assign('issueHeadingTitle', __('issue.viewIssue'));
-			$templateMgr->assign('locale', AppLocale::getLocale());
-
 			$templateMgr->display('issue/issueGalley.tpl');
 		}
 	}
@@ -198,12 +190,10 @@ class IssueHandler extends Handler {
 	 * @param $request Request
 	 */
 	function viewDownloadInterstitial($args, $request) {
-		$issue = $this->getIssue();
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		if ($galleyId && $this->userCanViewGalley($request)) {
 			$this->setupTemplate($request);
-
-			$journal = $request->getJournal();
 			$galley = $this->getGalley();
 
 			$templateMgr = TemplateManager::getManager($request);
@@ -240,14 +230,6 @@ class IssueHandler extends Handler {
 	}
 
 	/**
-	 * Get the retrieved issue
-	 * @return Issue
-	 */
-	function getIssue() {
-		return $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-	}
-
-	/**
 	 * Get the retrieved issue galley
 	 * @return IssueGalley
 	 */
@@ -275,7 +257,7 @@ class IssueHandler extends Handler {
 		$journal = $request->getJournal();
 		$user = $request->getUser();
 		$userId = $user ? $user->getId() : 0;
-		$issue = $this->getIssue();
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$galley = $this->getGalley();
 
 		// If this is an editorial user who can view unpublished issue galleys,
@@ -354,8 +336,7 @@ class IssueHandler extends Handler {
 	 * @param $inline boolean
 	 */
 	function _showIssueGalley($request, $inline = false) {
-		$journal = $request->getJournal();
-		$issue = $this->getIssue();
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$galley = $this->getGalley();
 
 		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
@@ -382,94 +363,88 @@ class IssueHandler extends Handler {
 
 		// Determine pre-publication access
 		// FIXME: Do that. (Bug #8278)
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+
 		$prePublicationAccess = false;
 
-		if (isset($issue) && ($issue->getPublished() || $prePublicationAccess)) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueHeadingTitle = $issue->getIssueIdentification(false, true);
+		$locale = AppLocale::getLocale();
 
-			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
-			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
-
-			$locale = AppLocale::getLocale();
-
-			import('classes.file.PublicFileManager');
-			$publicFileManager = new PublicFileManager();
-			$coverPagePath = $request->getBaseUrl() . '/';
-			$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
-			$templateMgr->assign('coverPagePath', $coverPagePath);
-			$templateMgr->assign('locale', $locale);
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+		$coverPagePath = $request->getBaseUrl() . '/';
+		$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
+		$templateMgr->assign('coverPagePath', $coverPagePath);
+		$templateMgr->assign('locale', $locale);
 
 
-			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageCover($locale)) {
-				$templateMgr->assign('fileName', $issue->getFileName($locale));
-				$templateMgr->assign('width', $issue->getWidth($locale));
-				$templateMgr->assign('height', $issue->getHeight($locale));
-				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
-				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
+		if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageCover($locale)) {
+			$templateMgr->assign('fileName', $issue->getFileName($locale));
+			$templateMgr->assign('width', $issue->getWidth($locale));
+			$templateMgr->assign('height', $issue->getHeight($locale));
+			$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
+			$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
 
-				$showToc = false;
-			} else {
-				// Issue galleys
-				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-				$issueGalleys = $issueGalleyDao->getByIssueId($issue->getId());
-				$templateMgr->assign('issueGalleys', $issueGalleys);
-
-				// Published articles
-				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
-
-				$publicFileManager = new PublicFileManager();
-				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
-				$showToc = true;
-			}
-			$templateMgr->assign('showToc', $showToc);
-			$templateMgr->assign_by_ref('issue', $issue);
-
-			// Subscription Access
-			import('classes.issue.IssueAction');
-			$issueAction = new IssueAction();
-			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
-			$subscribedUser = $issueAction->subscribedUser($journal);
-			$subscribedDomain = $issueAction->subscribedDomain($journal);
-			$subscriptionExpiryPartial = $journal->getSetting('subscriptionExpiryPartial');
-
-			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
-				$templateMgr->assign('subscriptionExpiryPartial', true);
-
-				// Partial subscription expiry for issue
-				$partial = $issueAction->subscribedUser($journal, $issue->getId());
-				if (!$partial) $issueAction->subscribedDomain($journal, $issue->getId());
-				$templateMgr->assign('issueExpiryPartial', $partial);
-
-				// Partial subscription expiry for articles
-				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId());
-
-				$articleExpiryPartial = array();
-				foreach ($publishedArticlesTemp as $publishedArticle) {
-					$partial = $issueAction->subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
-					if (!$partial) $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
-					$articleExpiryPartial[$publishedArticle->getId()] = $partial;
-				}
-				$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);
-			}
-
-			$templateMgr->assign('subscriptionRequired', $subscriptionRequired);
-			$templateMgr->assign('subscribedUser', $subscribedUser);
-			$templateMgr->assign('subscribedDomain', $subscribedDomain);
-			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
-
-			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager = new OJSPaymentManager($request);
-			if ( $paymentManager->onlyPdfEnabled() ) {
-				$templateMgr->assign('restrictOnlyPdf', true);
-			}
-			if ( $paymentManager->purchaseArticleEnabled() ) {
-				$templateMgr->assign('purchaseArticleEnabled', true);
-			}
-
+			$showToc = false;
 		} else {
-			$issueCrumbTitle = __('archive.issueUnavailable');
-			$issueHeadingTitle = __('archive.issueUnavailable');
+			// Issue galleys
+			$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+			$issueGalleys = $issueGalleyDao->getByIssueId($issue->getId());
+			$templateMgr->assign('issueGalleys', $issueGalleys);
+
+			// Published articles
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
+
+			$publicFileManager = new PublicFileManager();
+			$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
+			$showToc = true;
+		}
+		$templateMgr->assign('showToc', $showToc);
+		$templateMgr->assign('issue', $issue);
+
+		// Subscription Access
+		import('classes.issue.IssueAction');
+		$issueAction = new IssueAction();
+		$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+		$subscribedUser = $issueAction->subscribedUser($journal);
+		$subscribedDomain = $issueAction->subscribedDomain($journal);
+		$subscriptionExpiryPartial = $journal->getSetting('subscriptionExpiryPartial');
+
+		if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
+			$templateMgr->assign('subscriptionExpiryPartial', true);
+
+			// Partial subscription expiry for issue
+			$partial = $issueAction->subscribedUser($journal, $issue->getId());
+			if (!$partial) $issueAction->subscribedDomain($journal, $issue->getId());
+			$templateMgr->assign('issueExpiryPartial', $partial);
+
+			// Partial subscription expiry for articles
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId());
+
+			$articleExpiryPartial = array();
+			foreach ($publishedArticlesTemp as $publishedArticle) {
+				$partial = $issueAction->subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
+				if (!$partial) $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
+				$articleExpiryPartial[$publishedArticle->getId()] = $partial;
+			}
+			$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);
+		}
+
+		$templateMgr->assign('subscriptionRequired', $subscriptionRequired);
+		$templateMgr->assign('subscribedUser', $subscribedUser);
+		$templateMgr->assign('subscribedDomain', $subscribedDomain);
+		$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
+
+		import('classes.payment.ojs.OJSPaymentManager');
+		$paymentManager = new OJSPaymentManager($request);
+		if ( $paymentManager->onlyPdfEnabled() ) {
+			$templateMgr->assign('restrictOnlyPdf', true);
+		}
+		if ( $paymentManager->purchaseArticleEnabled() ) {
+			$templateMgr->assign('purchaseArticleEnabled', true);
 		}
 
 		if ($styleFileName = $issue->getStyleFileName()) {
@@ -480,7 +455,6 @@ class IssueHandler extends Handler {
 			);
 		}
 
-		$templateMgr->assign('pageCrumbTitleTranslated', $issueCrumbTitle);
 		$templateMgr->assign('issueHeadingTitle', $issueHeadingTitle);
 	}
 }

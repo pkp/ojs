@@ -1137,6 +1137,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Access denied! You have not been assigned as a copyeditor to this article.</message>
 	<message key="user.authorization.noContext">No journal in context!</message>
 	<message key="user.authorization.sectionAssignment">You are trying to access an article that is not part of your section.</message>
+	<message key="user.authorization.invalidIssue">Invalid issue requested!</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Invalid copyeditor submission or no copyeditor submission requested!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Invalid section editor submission or no section editor submission requested!</message>
 
