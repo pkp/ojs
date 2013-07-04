@@ -20,26 +20,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 	 * @param $contextId omit for a new journal
 	 */
 	function JournalSiteSettingsForm($contextId = null) {
-		parent::ContextSiteSettingsForm('admin/journalSettings.tpl', $contextId);
-
-		// Validation checks for this form
-		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'admin.journals.form.titleRequired'));
-		$this->addCheck(new FormValidator($this, 'path', 'required', 'admin.journals.form.pathRequired'));
-		$this->addCheck(new FormValidatorAlphaNum($this, 'path', 'required', 'admin.journals.form.pathAlphaNumeric'));
-		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->existsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array($this, DAORegistry::getDAO('JournalDAO'))));
-	}
-
-	/**
-	 * Initialize form data from current settings.
-	 */
-	function initData() {
-		if (isset($this->contextId)) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journal = $journalDao->getById($this->contextId);
-			parent::initData($journal);
-		} else {
-			parent::initData();
-		}
+		parent::ContextSiteSettingsForm($contextId);
 	}
 
 	/**
@@ -70,6 +51,12 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$journal = $journalDao->newDataObject();
 		}
 
+		// Check if the journal path has changed.
+		$pathChanged = false;
+		$journalPath = $journal->getPath();
+		if ($journalPath != $this->getData('path')) {
+			$pathChanged = true;
+		}
 		$journal->setPath($this->getData('path'));
 		$journal->setEnabled($this->getData('enabled'));
 
@@ -87,7 +74,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$journalId = $journalDao->insertObject($journal);
 			$journalDao->resequence();
 
-			$installedLocales =& $site->getInstalledLocales();
+			$installedLocales = $site->getInstalledLocales();
 
 			// Install default genres
 			$genreDao = DAORegistry::getDAO('GenreDAO');
@@ -143,6 +130,10 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 		PluginRegistry::loadAllPlugins();
 
 		HookRegistry::call('JournalSiteSettingsForm::execute', array($this, $journal, $section, $isNewJournal));
+
+		if ($isNewJournal || $pathChanged) {
+			return $journal->getPath();
+		}
 	}
 }
 

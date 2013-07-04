@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml contexts"1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -35,14 +35,14 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-konfigurationsindstillinger fra <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Tidsskriftsindstillinger</message>
 	<message key="admin.journals.noneCreated">Der er ikke oprettet nogen tidsskrifter.</message>
-	<message key="admin.journals.confirmDelete">Er du sikker på, at du vil slette dette tidsskrift og alt dets indhold permanent?</message>
+	<message key="admin.contexts.confirmDelete">Er du sikker på, at du vil slette dette tidsskrift og alt dets indhold permanent?</message>
 	<message key="admin.journals.create">Opret tidsskrift</message>
 	<message key="admin.journals.createInstructions">Du vil automatisk blive registreret som chef for dette tidsskrift. Når du har oprettet et nyt tidsskrift, skal du som chef registrere det for at kunne fortsætte med dets konfiguration og brugertilmelding.</message>
 	<message key="admin.journals.urlWillBe">Tidsskriftets URL-adresse er {$sampleUrl}</message>
-	<message key="admin.journals.form.titleRequired">En titel er påkrævet.</message>
-	<message key="admin.journals.form.pathRequired">En sti er påkrævet.</message>
-	<message key="admin.journals.form.pathAlphaNumeric">Stien må kun indeholde alfanumeriske tegn, understregningstegn og bindestreger og skal begynde og slutte med et alfanumerisk tegn.</message>
-	<message key="admin.journals.form.pathExists">Den valgte sti bruges allerede af et andet tidsskrift.</message>
+	<message key="admin.contexts.form.titleRequired">En titel er påkrævet.</message>
+	<message key="admin.contexts.form.pathRequired">En sti er påkrævet.</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">Stien må kun indeholde alfanumeriske tegn, understregningstegn og bindestreger og skal begynde og slutte med et alfanumerisk tegn.</message>
+	<message key="admin.contexts.form.pathExists">Den valgte sti bruges allerede af et andet tidsskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Offentliggør dette tidsskrift på webstedet</message>
 	<message key="admin.journals.journalDescription">Tidsskriftsbeskrivelse</message>
 	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. "ojs").</message>
