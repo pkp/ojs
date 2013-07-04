@@ -18,9 +18,6 @@ import('lib.pkp.classes.security.PKPRole');
 /** ID codes for all user roles */
 define('ROLE_ID_EDITOR',		0x00000100);
 define('ROLE_ID_SECTION_EDITOR',	0x00000011);
-define('ROLE_ID_LAYOUT_EDITOR',		0x00000300);
-define('ROLE_ID_COPYEDITOR',		0x00002000);
-define('ROLE_ID_PROOFREADER',		0x00003000);
 define('ROLE_ID_SUBSCRIPTION_MANAGER',	0x00200000);
 define('ROLE_ID_GUEST_EDITOR',		0x00000201);
 
@@ -51,12 +48,6 @@ class Role extends PKPRole {
 				return 'user.role.guestEditor' . ($plural ? 's' : '');
 			case ROLE_ID_SECTION_EDITOR:
 				return 'user.role.sectionEditor' . ($plural ? 's' : '');
-			case ROLE_ID_LAYOUT_EDITOR:
-				return 'user.role.layoutEditor' . ($plural ? 's' : '');
-			case ROLE_ID_COPYEDITOR:
-				return 'user.role.copyeditor' . ($plural ? 's' : '');
-			case ROLE_ID_PROOFREADER:
-				return 'user.role.proofreader' . ($plural ? 's' : '');
 			case ROLE_ID_SUBSCRIPTION_MANAGER:
 				return 'user.role.subscriptionManager' . ($plural ? 's' : '');
 			default:
@@ -76,12 +67,6 @@ class Role extends PKPRole {
 				return 'guestEditor';
 			case ROLE_ID_SECTION_EDITOR:
 				return 'sectionEditor';
-			case ROLE_ID_LAYOUT_EDITOR:
-				return 'layoutEditor';
-			case ROLE_ID_COPYEDITOR:
-				return 'copyeditor';
-			case ROLE_ID_PROOFREADER:
-				return 'proofreader';
 			case ROLE_ID_SUBSCRIPTION_MANAGER:
 				return 'subscriptionManager';
 			default:

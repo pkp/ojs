@@ -320,39 +320,12 @@ class Validation {
 	}
 
 	/**
-	 * Shortcut for checking authorization as layout editor.
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	static function isLayoutEditor($journalId = -1) {
-		return Validation::isAuthorized(ROLE_ID_LAYOUT_EDITOR, $journalId);
-	}
-
-	/**
 	 * Shortcut for checking authorization as reviewer.
 	 * @param $journalId int
 	 * @return boolean
 	 */
 	static function isReviewer($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_REVIEWER, $journalId);
-	}
-
-	/**
-	 * Shortcut for checking authorization as copyeditor.
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	static function isCopyeditor($journalId = -1) {
-		return Validation::isAuthorized(ROLE_ID_COPYEDITOR, $journalId);
-	}
-
-	/**
-	 * Shortcut for checking authorization as proofreader.
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	static function isProofreader($journalId = -1) {
-		return Validation::isAuthorized(ROLE_ID_PROOFREADER, $journalId);
 	}
 
 	/**

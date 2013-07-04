@@ -231,20 +231,17 @@ class IssueAction {
 				ROLE_ID_MANAGER,
 				ROLE_ID_EDITOR,
 				ROLE_ID_SECTION_EDITOR,
-				ROLE_ID_LAYOUT_EDITOR,
-				ROLE_ID_COPYEDITOR,
-				ROLE_ID_PROOFREADER,
+				ROLE_ID_ASSISTANT,
 				ROLE_ID_SUBSCRIPTION_MANAGER
 			);
 
-			$roles =& $roleDao->getByUserId($userId, $journalId);
+			$roles = $roleDao->getByUserId($userId, $journalId);
 			foreach ($roles as $role) {
 				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
 			}
 		}
 		return false;
 	}
-
 }
 
 ?>

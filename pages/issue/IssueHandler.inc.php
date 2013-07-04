@@ -379,7 +379,12 @@ class IssueHandler extends Handler {
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$templateMgr = TemplateManager::getManager($request);
-		if (isset($issue) && ($issue->getPublished() || Validation::isEditor($journalId) || Validation::isLayoutEditor($journalId) || Validation::isProofreader($journalId)) && $issue->getJournalId() == $journalId) {
+
+		// Determine pre-publication access
+		// FIXME: Do that. (Bug #8278)
+		$prePublicationAccess = false;
+
+		if (isset($issue) && ($issue->getPublished() || $prePublicationAccess)) {
 
 			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);

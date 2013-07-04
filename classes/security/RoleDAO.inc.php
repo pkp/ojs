@@ -50,9 +50,6 @@ class RoleDAO extends PKPRoleDAO {
 			ROLE_ID_GUEST_EDITOR => 'user.role.guestEditor',
 			ROLE_ID_ASSISTANT => 'user.role.journalAssistant',
 			ROLE_ID_SECTION_EDITOR => 'user.role.sectionEditor',
-			ROLE_ID_COPYEDITOR => 'user.role.copyeditor',
-			ROLE_ID_PROOFREADER => 'user.role.proofreader',
-			ROLE_ID_LAYOUT_EDITOR => 'user.role.layoutEditor',
 			ROLE_ID_SUBSCRIPTION_MANAGER => 'user.role.subscriptionManager',
 		);
 		$roleNames = $parentRoleNames + $journalRoleNames;
@@ -79,12 +76,6 @@ class RoleDAO extends PKPRoleDAO {
 				return ROLE_ID_EDITOR;
 			case 'sectionEditor':
 				return ROLE_ID_SECTION_EDITOR;
-			case 'layoutEditor':
-				return ROLE_ID_LAYOUT_EDITOR;
-			case 'copyeditor':
-				return ROLE_ID_COPYEDITOR;
-			case 'proofreader':
-				return ROLE_ID_PROOFREADER;
 			case 'subscriptionManager':
 				return ROLE_ID_SUBSCRIPTION_MANAGER;
 			default:
