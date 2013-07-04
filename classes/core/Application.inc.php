@@ -158,7 +158,6 @@ class Application extends PKPApplication {
 			'SectionDAO' => 'classes.journal.SectionDAO',
 			'SectionEditorsDAO' => 'classes.journal.SectionEditorsDAO',
 			'SectionEditorSubmissionDAO' => 'classes.submission.sectionEditor.SectionEditorSubmissionDAO',
-			'SignoffDAO' => 'classes.signoff.SignoffDAO',
 			'SocialMediaDAO' => 'classes.journal.SocialMediaDAO',
 			'StageAssignmentDAO' => 'lib.pkp.classes.stageAssignment.StageAssignmentDAO',
 			'SubmissionEventLogDAO' => 'classes.log.SubmissionEventLogDAO',
