@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/sehl/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.sehl.name">SEHL programutvidelse</message>
+	<message key="plugins.generic.sehl.description">Denne programutvidelsen implementerer Search Engine HighLighting (SEHL - søkemotormarkering) slik at når en søkemotor finner en HTML-artikkel, blir søkeordene markert i søkeresultatet.</message>
+</locale>

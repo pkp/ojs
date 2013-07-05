@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/reviews/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.reviews.displayName">Rapport over fagfellevurderingsoppdrag</message>
+	<message key="plugins.reports.reviews.description">Denne programutvidelsen lager en kommeseparert fil med en liste over fagfellevurderingsoppdrag for et tidsskrift.</message>
+	<message key="plugins.reports.reviews.round">Runde</message>
+	<message key="plugins.reports.reviews.reviewerId">Fagfellevurderer-ID</message>
+	<message key="plugins.reports.reviews.reviewer">Fagfellevurderer</message>
+	<message key="plugins.reports.reviews.dateAssigned">Oppdraget gitt dato</message>
+	<message key="plugins.reports.reviews.dateNotified">Beskjed gitt dato</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Bekreftet dato</message>
+	<message key="plugins.reports.reviews.dateCompleted">Fullført dato</message>
+	<message key="plugins.reports.reviews.dateReminded">Dato for påminnelse</message>
+</locale>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/citationFormats/mla/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in nb_NO.
+  *
+  -->
+ 
+<locale name="nb_NO" full_name="Norwegian">
+	<message key="plugins.citationFormats.mla.displayName">Programutvidelse for MLA siteringsformat</message>
+	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
+	<message key="plugins.citationFormats.mla.description">Denne programutvidelsen implementerer MLA siteringsformat.</message>
+	<message key="plugins.citationFormats.mla.noPages">antall sider</message>
+</locale>

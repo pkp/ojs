@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/doaj/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norwegian) locale.
+  *
+  -->
+
+<locale name="nb_NO" full_name="Norwegian">
+	<message key="plugins.importexport.doaj.displayName">Programutvidelse for eksport til DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Eksporter tidsskrift til DOAJ og e-post tidsskriftinformasjon til DOAJs ansvarlige</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Eksporter tidsskriftdata til DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Eksporter tidsskrift</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Eksporter artikkelinformasjon i XML til arkivering i DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contact">Kontakt DOAJ for å bli inkludert</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">For å få ditt tidsskrift vurdert for inkludering i DOAJ, send dette delvis utfylte skjemaet til DOAJ, etter å ha fylt ut det som mangler, som best du kan.</message>
+</locale>

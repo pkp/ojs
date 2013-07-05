@@ -412,7 +412,7 @@
     <dynamicField name="*_ja_JP" type="text_cjk" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_ml_IN" type="text" indexed="true"  stored="true" multiValued="false" /> <!-- not currently supported -->
     <dynamicField name="*_nl_NL" type="text_nl" indexed="true"  stored="true" multiValued="false" />
-    <dynamicField name="*_no_NO" type="text_no" indexed="true"  stored="true" multiValued="false" />
+    <dynamicField name="*_nb_NO" type="text_no" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_pt_BR" type="text_pt" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_pt_PT" type="text_pt" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_ro_RO" type="text_ro" indexed="true"  stored="true" multiValued="false" />

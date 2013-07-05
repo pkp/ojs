@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/erudit/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norwegian) locale.
+  *
+  -->
+ 
+<locale name="nb_NO" full_name="Norwegian">
+	<message key="plugins.importexport.erudit.displayName">Programutvidelse for Erudit artikkeleksport</message>
+	<message key="plugins.importexport.erudit.description">Eksporterer artikler ved hjelp av den engelske Erudit DTD</message>
+
+	<message key="plugins.importexport.erudit.cliUsage">Bruk: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]</message>
+	<message key="plugins.importexport.erudit.export">Eksporter data</message>
+	<message key="plugins.importexport.erudit.export.issues">Eksporter utgaver</message>
+	<message key="plugins.importexport.erudit.export.sections">Eksporter seksjoner</message>
+	<message key="plugins.importexport.erudit.export.articles">Eksporter artikler</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Velg utgave</message>
+	<message key="plugins.importexport.erudit.selectArticle">Velg artikkel</message>
+
+	<message key="plugins.importexport.erudit.cliError">FEIL:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">Den angitte filstien til tidsskriftet, "{$journalPath}", finnes ikke.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Kunne ikke skrives til filen "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">Ingen artikkel stemmer overens med den angitte artikkel-ID "{$articleId}".</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Ingen sideoppsett stemmer med den spesifiserte informasjonen "{$galleyLabel}".</message>
+
+	<message key="plugins.importexport.erudit.unavailable">Ikke tilgjengelig</message>
+</locale>

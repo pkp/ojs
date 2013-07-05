@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/users/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norwegian) locale.
+  *
+  -->
+ 
+<locale name="nb_NO" full_name="Norwegian">
+	<message key="plugins.importexport.users.displayName">Programutvidelse for XML-eksport og -import av brukere</message>
+	<message key="plugins.importexport.users.description">Importer og eksporter brukere</message>
+
+	<message key="plugins.importexport.users.cliUsage">Bruk: {$scriptName} {$pluginName} [kommando] ...
+Kommandoer:
+	importer [xmlFileName] [journal_path] [optional flags]
+	eksporter [xmlFileName] [journal_path]
+	eksporter[xmlFileName] [journal_path] [role_path1] [role_path2] ...
+
+Valgbare flagg:
+	continue_on_error: Hvis spesifisert: ikke stopp brukerimport selv om det oppstår feil
+
+	send_notify: Hvis spesifisert: send e-postvarsel med brukernavn og passord til importerte brukeres
+
+Eksempler:
+	Importer brukere til myJournal fra myImportFile.xml, og fortsett selv om det oppstår feil:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	Eksporter alle brukere fra myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Eksporter alle brukere som er registrert som fagkonsulenter, sammen med bare fagkonsulentrollene deres:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer</message>
+	<message key="plugins.importexport.users.import.importUsers">Importer brukere</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Velg en XML-datafil med brukerinformasjon for import til dette tidsskriftet. Se 'Hjelp' for detaljer om formatet for denne filen.<br /><br />Vennligst merk at hvis den importerte filen inneholder brukernavn eller e-postadresser som allerede finnes i systemet, så vil ikke brukerdataene for disse brukerne bli importert, og eventuelle nye roller vil knyttes til de eksisterende brukerne.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Kunne ikke importere brukeren</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Kunne ikke tilordne brukerrollen</message>
+	<message key="plugins.importexport.users.import.dataFile">Brukerdatafil</message>
+	<message key="plugins.importexport.users.import.sendNotify">Send e-postvarsel med brukernavn og passord til hver av de importerte brukerne.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Fortsett å importere øvrige brukere selv om en feil oppstår.</message>
+	<message key="plugins.importexport.users.import.noFileError">Ingen fil ble lastet opp!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Følgende brukere ble nå importert til dette systemet</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Det oppsto feil under importen</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Bekreft at dette er de brukerne du vil ha importert til dette systemet</message>
+	<message key="plugins.importexport.users.import.warning">Advarsel</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Kan ikke bruke passord hashed med {$importHash}; OJS er konfigurert for å bruke {$ojsHash}. Hvis du fortsetter må du gjenopprette de importerte brukernes passord.</message>
+	<message key="plugins.importexport.users.unknownJournal">En ukjent tidsskrift-filsti "{$journalPath}" ble angitt.</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Eksporter brukere</message>
+	<message key="plugins.importexport.users.export.exportByRole">Eksporter etter rolle</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Eksporter alle</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Det forekom feil under eksporten</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Kunne ikke skrive til filen "{$fileName}".</message>
+</locale>

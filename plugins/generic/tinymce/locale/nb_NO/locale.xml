@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/tinymce/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norwegian) locale.
+  *
+  -->
+ 
+<locale name="nb_NO" full_name="Norwegian">
+	<message key="plugins.generic.tinymce.name">TinyMCE-programutvidelse</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Denne programutvidelsen oppretter WYSIWYG-redigering i OJS tekstfelt ved bruk av <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>-editor.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Denne programutvidelsen oppretter WYSIWYG-redigering i OJS tekstfelt ved bruk av <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE er for øyeblikket ikke installert; installer den i {$tinyMcePath}.</strong>]]></message>
+
+	<message key="plugins.generic.tinymce.settings">Innstillinger</message>
+</locale>
