@@ -61,7 +61,7 @@
 	</upgrade>
 
 	<upgrade minversion="2.3.0.0" maxversion="2.9.9.9">
-		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics.xml" condition="return $installer->tableExists('article_galleys');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics.xml" condition="return $installer->columnExists('article_galleys', 'views');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate.xml" condition="return $installer->columnExists('edit_decisions', 'article_id');" />	
 	</upgrade>
 
