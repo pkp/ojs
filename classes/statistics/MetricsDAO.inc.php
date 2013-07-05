@@ -168,6 +168,28 @@ class MetricsDAO extends DAO {
 	}
 
 	/**
+	 * Get all load ids that are associated
+	 * with records filtered by the passed
+	 * arguments.
+	 * @param $assocType int
+	 * @param $assocId int
+	 * @param $metricType string
+	 * @return array
+	 */
+	function getLoadId($assocType, $assocId, $metricType) {
+		$params = array($assocType, $assocId, $metricType);
+		$result = $this->retrieve('SELECT load_id FROM metrics WHERE assoc_type = ? AND assoc_id = ? AND metric_type = ? GROUP BY load_id', $params);
+
+		$loadIds = array();
+		while (!$result->EOF) {
+			$row = $result->FetchRow();
+			$loadIds[] = $row['load_id'];
+		}
+
+		return $loadIds;
+	}
+
+	/**
 	 * Purge a load batch before re-loading it.
 	 *
 	 * @param $loadId string
