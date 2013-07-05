@@ -66,6 +66,8 @@ define('STATISTICS_FILE_TYPE_HTML', 1);
 define('STATISTICS_FILE_TYPE_PDF', 2);
 define('STATISTICS_FILE_TYPE_OTHER', 3);
 
+// Geography.
+define('STATISTICS_UNKNOWN_COUNTRY_ID', 'ZZ');
 
 class Application extends PKPApplication {
 	function Application() {
@@ -385,6 +387,13 @@ class Application extends PKPApplication {
 		$filter = array(
 			STATISTICS_DIMENSION_ASSOC_ID => $assocId,
 			STATISTICS_DIMENSION_ASSOC_TYPE => $assocType);
+
+		$request = $this->getRequest();
+		$journal =& $request->getJournal();
+		if ($journal) {
+			$filter[STATISTICS_DIMENSION_CONTEXT_ID] = $journal->getId();
+		}
+
 		$metric = $this->getMetrics(null, array(), $filter);
 		if (is_array($metric)) {
 			return $metric[0]['metric'];
