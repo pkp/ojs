@@ -17,15 +17,23 @@ import('classes.user.User');
 import('lib.pkp.classes.user.PKPUserDAO');
 
 class UserDAO extends PKPUserDAO {
+
+	/**
+	 * Constructor.
+	 */
+	function UserDAO() {
+		parent::PKPUserDAO();
+	}
+
 	/**
 	 * Renew a membership to dateEnd + 1 year
-	 * if the was expired, renew to current date + 1 year  
+	 * if the was expired, renew to current date + 1 year
 	 * @param $user User
-	 */	
+	 */
 	function renewMembership(&$user){
 		$dateEnd = $user->getSetting('dateEndMembership', 0);
 		if (!$dateEnd) $dateEnd = 0;
-		
+
 		// if the membership is expired, extend it to today + 1 year
 		$time = time();
 		if ($dateEnd < $time ) $dateEnd = $time;
