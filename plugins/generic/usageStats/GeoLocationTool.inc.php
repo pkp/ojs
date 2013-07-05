@@ -21,14 +21,22 @@ class GeoLocationTool {
 
 	var $_regionName;
 
+	var $_isDbFilePresent;
+
 	/**
 	 * Constructor.
 	 * @param $argv array command-line arguments
 	 */
 	function GeoLocationTool() {
-		$this->_geoLocationTool = geoip_open(dirname(__FILE__) . DIRECTORY_SEPARATOR . "GeoLiteCity.dat", GEOIP_STANDARD);
-		include('lib' . DIRECTORY_SEPARATOR . 'geoIp' . DIRECTORY_SEPARATOR . 'geoipregionvars.php');
-		$this->_regionName = $GEOIP_REGION_NAME;
+		$geoLocationDbFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . "GeoLiteCity.dat";
+		if (file_exists($geoLocationDbFile)) {
+			$_isDbFilePresent = true;
+			$this->_geoLocationTool = geoip_open($geoLocationDbFile, GEOIP_STANDARD);
+			include('lib' . DIRECTORY_SEPARATOR . 'geoIp' . DIRECTORY_SEPARATOR . 'geoipregionvars.php');
+			$this->_regionName = $GEOIP_REGION_NAME;
+		} else {
+			$_isDbFilePresent = false;
+		}
 	}
 
 	//
@@ -41,6 +49,9 @@ class GeoLocationTool {
 	 * @return array
 	 */
 	public function getGeoLocation($ip) {
+		// If no geolocation tool, the geo database file is missing.
+		if (!$this->_geoLocationTool) return array(null, null, null);
+
 		$record = geoip_record_by_addr($this->_geoLocationTool, $ip);
 
 		$regionName = null;
