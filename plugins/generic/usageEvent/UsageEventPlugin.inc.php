@@ -112,6 +112,13 @@ class UsageEventPlugin extends GenericPlugin {
 	 * @return array
 	 */
 	private function _buildUsageEvent($hookName, $args) {
+		// Finished downloading a file?
+		if ($hookName == 'FileManager::downloadFileFinished') {
+			// The usage event for this request is already build and
+			// passed to any other registered hook.
+			return null;
+		}
+
 		$request = $this->getRequest();
 		$router = $request->getRouter(); /* @var $router PageRouter */
 		$templateMgr = $args[0]; /* @var $templateMgr TemplateManager */
@@ -199,12 +206,6 @@ class UsageEventPlugin extends GenericPlugin {
 				$canonicalUrlParams = array($issue->getBestIssueId(), $pubObject->getBestGalleyId($journal));
 				$idParams = array('i' . $issue->getId(), 'ig' . $pubObject->getId());
 				break;
-
-			// Finished downloading a file.
-			case 'FileManager::downloadFileFinished':
-				// The usage event for this request is already build and
-				// passed to any other registered hook.
-				return null;
 
 			default:
 				// Why are we called from an unknown hook?
