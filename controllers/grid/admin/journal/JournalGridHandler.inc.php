@@ -109,28 +109,54 @@ class JournalGridHandler extends ContextGridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function updateContext($args, $request) {
-		// Identify the journal Id.
-		$journalId = $request->getUserVar('contextId');
+		// Identify the context Id.
+		$contextId = $request->getUserVar('contextId');
 
 		// Form handling.
-		$settingsForm = new JournalSiteSettingsForm($journalId);
+		$settingsForm = new JournalSiteSettingsForm($contextId);
 		$settingsForm->readInputData();
 
-		if ($settingsForm->validate()) {
-			PluginRegistry::loadCategory('blocks');
-
-			$settingsForm->execute($request);
-
-			// Create the notification.
-			$notificationMgr = new NotificationManager();
-			$user = $request->getUser();
-			$notificationMgr->createTrivialNotification($user->getId());
-
-			return DAO::getDataChangedEvent($journalId);
+		if (!$settingsForm->validate()) {
+			$json = new JSONMessage(false);
+			return $json->getString();
 		}
 
-		$json = new JSONMessage(false);
-		return $json->getString();
+		PluginRegistry::loadCategory('blocks');
+
+		// The context settings form will return a context path in two cases:
+		// 1 - if a new context was created;
+		// 2 - if a press path of an existing context was edited.
+		$newContextPath = $settingsForm->execute($request);
+
+		// Create the notification.
+		$notificationMgr = new NotificationManager();
+		$user = $request->getUser();
+		$notificationMgr->createTrivialNotification($user->getId());
+
+		// Check for the two cases above.
+		if ($newContextPath) {
+			$context = $request->getContext();
+
+			if (is_null($contextId)) {
+				// CASE 1: new press created.
+				// Create notification related to payment method configuration.
+				$contextDao = Application::getContextDAO();
+				$newContext = $contextDao->getByPath($newContextPath);
+				$notificationMgr->createNotification($request, null, NOTIFICATION_TYPE_CONFIGURE_PAYMENT_METHOD,
+					$newContext->getId(), ASSOC_TYPE_JOURNAL, $newContext->getId(), NOTIFICATION_LEVEL_NORMAL);
+
+				// redirect and set the parameter to open the press
+				// setting wizard modal after redirection.
+				return $this->_getRedirectEvent($request, $newContextPath, true);
+			} else {
+				// CASE 2: check if user is in the context of
+				// the press being edited.
+				if ($context->getId() == $contextId) {
+					return $this->_getRedirectEvent($request, $newContextPath, false);
+				}
+			}
+		}
+		return DAO::getDataChangedEvent($contextId);
 	}
 
 	/**
