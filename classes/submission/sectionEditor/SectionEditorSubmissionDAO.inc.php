@@ -22,7 +22,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 	var $userDao;
 	var $reviewAssignmentDao;
 	var $articleFileDao;
-	var $suppFileDao;
 	var $signoffDao;
 	var $galleyDao;
 	var $articleEmailLogDao;
@@ -37,7 +36,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 		$this->userDao = DAORegistry::getDAO('UserDAO');
 		$this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$this->signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
@@ -118,22 +116,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 		$sectionEditorSubmission->setMostRecentLayoutComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_LAYOUT, $row['submission_id']));
 		$sectionEditorSubmission->setMostRecentProofreadComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_PROOFREAD, $row['submission_id']));
 
-		// Files
-		$sectionEditorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
-		$sectionEditorSubmission->setRevisedFile($this->articleFileDao->getArticleFile($row['revised_file_id']));
-		$sectionEditorSubmission->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id']));
-		$sectionEditorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['submission_id']));
-		$sectionEditorSubmission->setEditorFile($this->articleFileDao->getArticleFile($row['editor_file_id']));
-
-
-		for ($i = 1; $i <= $row['current_round']; $i++) {
-			$sectionEditorSubmission->setEditorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['editor_file_id'], $i), $i);
-			$sectionEditorSubmission->setAuthorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['revised_file_id'], $i), $i);
-		}
-
-		// Review Rounds
-		$sectionEditorSubmission->setReviewRevision($row['review_revision']);
-
 		// Review Assignments
 		$reviewRounds = $this->reviewRoundDao->getBySubmissionId($row['submission_id']);
 		while ($reviewRound = $reviewRounds->next()) {
@@ -177,25 +159,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 			}
 			unset($editorDecisions);
 		}
-		if ($this->reviewRoundExists($sectionEditorSubmission->getId(), $sectionEditorSubmission->getCurrentRound())) {
-			$this->update(
-				'UPDATE review_rounds
-					SET
-						review_revision = ?
-					WHERE submission_id = ? AND round = ?',
-				array(
-					$sectionEditorSubmission->getReviewRevision(),
-					$sectionEditorSubmission->getId(),
-					$sectionEditorSubmission->getCurrentRound()
-				)
-			);
-		} elseif ($sectionEditorSubmission->getReviewRevision()!=null) {
-			$this->createReviewRound(
-				$sectionEditorSubmission->getId(),
-				$sectionEditorSubmission->getCurrentRound() === null ? 1 : $sectionEditorSubmission->getCurrentRound(),
-				$sectionEditorSubmission->getReviewRevision()
-			);
-		}
 
 		// update review assignments
 		foreach ($sectionEditorSubmission->getReviewAssignments() as $roundReviewAssignments) {
@@ -222,8 +185,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 			// Only update fields that can actually be edited.
 			$article->setSectionId($sectionEditorSubmission->getSectionId());
 			$article->setCurrentRound($sectionEditorSubmission->getCurrentRound());
-			$article->setReviewFileId($sectionEditorSubmission->getReviewFileId());
-			$article->setEditorFileId($sectionEditorSubmission->getEditorFileId());
 			$article->setStatus($sectionEditorSubmission->getStatus());
 			$article->setDateStatusModified($sectionEditorSubmission->getDateStatusModified());
 			$article->setLastModified($sectionEditorSubmission->getLastModified());

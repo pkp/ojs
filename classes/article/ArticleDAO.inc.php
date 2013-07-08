@@ -227,9 +227,6 @@ class ArticleDAO extends SubmissionDAO {
 		$articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$articleSearchDao->deleteSubmissionKeywords($articleId);
 
-		$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
-		$suppFileDao->deleteSuppFilesByArticle($articleId);
-
 		// Delete article files -- first from the filesystem, then from the database
 		import('classes.file.ArticleFileManager');
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');

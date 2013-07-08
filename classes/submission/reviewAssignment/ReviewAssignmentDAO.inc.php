@@ -32,21 +32,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	}
 
 	/**
-	 * Return the review file ID for a submission, given its submission ID.
-	 * @param $submissionId int
-	 * @return int
-	 */
-	function _getSubmissionReviewFileId($submissionId) {
-		$result = $this->retrieve(
-			'SELECT review_file_id FROM submissions WHERE submission_id = ?',
-			(int) $submissionId
-		);
-		$returner = isset($result->fields[0]) ? $result->fields[0] : null;
-		$result->Close();
-		return $returner;
-	}
-
-	/**
 	 * Get a review file for an article for each round.
 	 * @param $articleId int
 	 * @return array ArticleFiles
@@ -184,16 +169,8 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	 * @param $row array
 	 * @return ReviewAssignment
 	 */
-	function &_fromRow($row) {
-		$reviewAssignment =& parent::_fromRow($row);
-		$reviewFileId = $this->_getSubmissionReviewFileId($reviewAssignment->getSubmissionId());
-		$reviewAssignment->setReviewFileId($reviewFileId);
-
-		// Files
-		$reviewAssignment->setReviewFile($this->articleFileDao->getArticleFile($reviewFileId, $row['review_revision']));
-		$reviewAssignment->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
-		$reviewAssignment->setReviewerFileRevisions($this->articleFileDao->getArticleFileRevisions($row['reviewer_file_id']));
-		$reviewAssignment->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['submission_id']));
+	function _fromRow($row) {
+		$reviewAssignment = parent::_fromRow($row);
 
 		// Comments
 		$reviewAssignment->setMostRecentPeerReviewComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));

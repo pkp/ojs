@@ -295,22 +295,6 @@ class ReviewerSubmission extends Article {
 	}
 
 	/**
-	 * Get reviewer file id.
-	 * @return int
-	 */
-	function getReviewerFileId() {
-		return $this->getData('reviewerFileId');
-	}
-
-	/**
-	 * Set reviewer file id.
-	 * @param $reviewerFileId int
-	 */
-	function setReviewerFileId($reviewerFileId) {
-		return $this->setData('reviewerFileId', $reviewerFileId);
-	}
-
-	/**
 	 * Get quality.
 	 * @return int
 	 */

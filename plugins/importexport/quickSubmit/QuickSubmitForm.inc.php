@@ -295,7 +295,6 @@ class QuickSubmitForm extends Form {
 
 				if (!$designatedPrimary) {
 					$article->setSubmissionFileId($fileId);
-					$article->setReviewFileId($fileId);
 					if ($locale == $journal->getPrimaryLocale()) {
 						// Used to make sure that *some* file
 						// is designated Review Version, but
@@ -326,7 +325,6 @@ class QuickSubmitForm extends Form {
 		// Accept the submission
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 		$articleFileManager = new ArticleFileManager($articleId);
-		$sectionEditorSubmission->setReviewFile($articleFileManager->getFile($article->getSubmissionFileId()));
 		import('classes.submission.sectionEditor.SectionEditorAction');
 
 		assert(false); // FIXME: $decisionLabels missing from call below.

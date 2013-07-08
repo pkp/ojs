@@ -549,10 +549,20 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/>
 		</field>
+
+		<!--
+		 - The following fields are DEPRECATED and should not be used;
+		 - They are only maintained so that they are not accidentally
+		 - dropped by the schema sync before upgrade scripts are run.
+		 -->
+
 		<field name="submission_file_id" type="I8"/>
 		<field name="revised_file_id" type="I8"/>
 		<field name="review_file_id" type="I8"/>
 		<field name="editor_file_id" type="I8"/>
+
+		<!-- End deprecation list -->
+
 		<field name="pages" type="C2" size="255"/>
 		<field name="fast_tracked" type="I1">
 			<NOTNULL/>

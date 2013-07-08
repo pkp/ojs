@@ -133,12 +133,13 @@ class OJSSwordDeposit {
 		unset($file);
 
 		// Try the Review Version.
+		/* FIXME for OJS 3.0
 		$file =& $sectionEditorSubmission->getReviewFile();
 		if ($file) {
 			$this->_addFile($file);
 			return true;
 		}
-		unset($file);
+		unset($file); */
 
 		// Otherwise, don't add anything (best not to go back to the
 		// author version, as it may not be vetted)

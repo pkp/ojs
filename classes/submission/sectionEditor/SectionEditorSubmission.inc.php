@@ -195,57 +195,6 @@ class SectionEditorSubmission extends Article {
 	}
 
 	/**
-	 * Get revised file for this article.
-	 * @return ArticleFile
-	 */
-	function &getRevisedFile() {
-		$returner =& $this->getData('revisedFile');
-		return $returner;
-	}
-
-	/**
-	 * Set revised file for this article.
-	 * @param $submissionFile ArticleFile
-	 */
-	function setRevisedFile($revisedFile) {
-		return $this->setData('revisedFile', $revisedFile);
-	}
-
-	/**
-	 * Get supplementary files for this article.
-	 * @return array SuppFiles
-	 */
-	function &getSuppFiles() {
-		$returner =& $this->getData('suppFiles');
-		return $returner;
-	}
-
-	/**
-	 * Set supplementary file for this article.
-	 * @param $suppFiles array SuppFiles
-	 */
-	function setSuppFiles($suppFiles) {
-		return $this->setData('suppFiles', $suppFiles);
-	}
-
-	/**
-	 * Get review file.
-	 * @return ArticleFile
-	 */
-	function &getReviewFile() {
-		$returner =& $this->getData('reviewFile');
-		return $returner;
-	}
-
-	/**
-	 * Set review file.
-	 * @param $reviewFile ArticleFile
-	 */
-	function setReviewFile($reviewFile) {
-		return $this->setData('reviewFile', $reviewFile);
-	}
-
-	/**
 	 * Get all editor file revisions.
 	 * @return array ArticleFiles
 	 */
@@ -300,26 +249,6 @@ class SectionEditorSubmission extends Article {
 	 */
 	function setEditorFile($editorFile) {
 		return $this->setData('editorFile', $editorFile);
-	}
-
-	//
-	// Review Rounds
-	//
-
-	/**
-	 * Get review file revision.
-	 * @return int
-	 */
-	function getReviewRevision() {
-		return $this->getData('reviewRevision');
-	}
-
-	/**
-	 * Set review file revision.
-	 * @param $reviewRevision int
-	 */
-	function setReviewRevision($reviewRevision) {
-		return $this->setData('reviewRevision', $reviewRevision);
 	}
 
 	//
