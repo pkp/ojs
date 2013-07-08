@@ -456,7 +456,7 @@ class ArticleDAO extends SubmissionDAO {
 				' . $this->_getFetchJoins() . '
 				LEFT JOIN stage_assignments sa ON (s.submission_id = sa.submission_id)
 				LEFT JOIN user_groups g ON (sa.user_group_id = g.user_group_id AND g.role_id = ?)
-				' . ($subEditorId?' JOIN section_editors se ON (se.journal_id = s.context_id AND se.user_id = ? AND se.section_id = s.section_id)':'') . '
+				' . ($subEditorId?' JOIN section_editors see ON (see.journal_id = s.context_id AND see.user_id = ? AND see.section_id = s.section_id)':'') . '
 			WHERE	s.date_submitted IS NOT NULL'
 			. (!$includeDeclined?' AND s.status <> ' . STATUS_DECLINED : '' )
 			. (!$includePublished?' AND ps.date_published IS NULL' : '' )
