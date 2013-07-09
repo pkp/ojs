@@ -22,12 +22,24 @@
 	<message key="admin.settings.journalsList.showThumbnail">Vorschaubild der Zeitschrift</message>
 	<message key="admin.settings.journalsList.showTitle">Titel der Zeitschrift</message>
 	<message key="admin.settings.journalsList.showDescription">Beschreibung der Zeitschrift</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden verschiedenen Kontexten angezeigt werden.
+		Es gibt Fälle, wo eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
+		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
+	</message>
+	<message key="admin.languages.confirmDisable">Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren möchten? Dies wird alle gehosteten Zeitschriften betreffen, die diese Regionaleinstellung momentan benutzen.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Das Herunterladen von Regionalpaketen von dem Webserver des Public Knowledge Projects ist momentan nicht möglich, da:</p>
+	<ul>
+		<li>Ihr Server verfügt nicht über das Werkzeug GNU "tar" oder erlaubt nicht dessen Ausführung.</li>
+		<li>OJS kann die Registrierungsdatei für Regionaleinstellungen nicht verändern, typischerweise "registry/locales.xml".</li>
+	</ul>
+<p>Regionalpakete können manuell von der <a href="http://pkp.sfu.ca">PKP-Website</a> heruntergeladen werden.</p>]]></message>
+
 	<message key="admin.languages.primaryLocaleInstructions">Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten soll. Die gewählten Parameter können von allen Zeitschriften, die auf der Website angeboten werden, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (die Seiten bestimmter Zeitschriften können davon ausgenommen werden). Wenn nur eine Regionaleinstellung ausgewählt wird, erscheint das Sprachenmenü nicht, und den Zeitschriften stehen keine erweiterten Spracheinstellungen zur Verfügung.</message>
 	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>	
 	<message key="admin.languages.confirmUninstall">Sind Sie sicher, dass Sie diese Regionaleinstellung deinstallieren wollen? Jede Zeitschrift, die diesen Datensatz verwendet, wird davon betroffen sein.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Wählen Sie zusätzliche Regionaleinstellungen, die dieses System unterstützen soll. Die Regionaleinstellungen müssen installiert sein, bevor sie von den angebotenen Zeitschriften verwendet werden können. Weitere Informationen zum Hinzufügen neuer Regionaleinstellungen finden Sie in der OJS-Dokumentation.</message>
-	<message key="admin.languages.downloadLocales">Regionaleinstellungen herunterladen</message>
 	<message key="admin.languages.downloadFailed">Das Herunterladen der Regionaleinstellung ist fehlgeschlagen. Die Fehlernachricht(en) weiter unten beschreiben den Fehler.</message>
 	<message key="admin.languages.localeInstalled">Die Regionaleinstellung "{$locale}" wurde installiert.</message>
 	<message key="admin.languages.download">Regionaleinstellung herunterladen</message>

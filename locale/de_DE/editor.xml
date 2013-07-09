@@ -46,6 +46,7 @@
 	<message key="editor.notifyUsers.includeToc">Das Inhaltsverzeichnis dieser Ausgabe anfügen:</message>
 	<message key="editor.editorAdministration">Redaktionsaufgaben</message>
 	<message key="editor.issues.createIssue">Ausgabe erstellen</message>
+	<message key="editor.issues.editIssue">Ausgabenverwaltung: {$issueIdentification}</message>
 	<message key="editor.issues.backIssues">Frühere Ausgaben</message>
 	<message key="editor.issues.futureIssues">Zukünftige Ausgaben</message>
 	<message key="editor.issues.currentIssue">Aktuelle Ausgabe</message>
@@ -117,6 +118,9 @@
 	<message key="editor.navigation.issues">Ausgaben</message>
 	<message key="editor.navigation.futureIssues">Zukünftige Ausgaben</message>
 	<message key="grid.action.addIssue">Ausgabe erstellen</message>
+	<message key="grid.action.viewIssue">Ausgabe ansehen</message>
+	<message key="grid.action.previewIssue">Voransicht</message>
+	<message key="grid.action.addIssueGalley">Ausgabenfahne anlegen</message>
 	<message key="editor.navigation.issueArchive">Frühere Ausgaben</message>
 	<message key="editor.article.designateReviewVersion">Die ursprüngliche Datei zur Begutachtungsversion machen</message>
 	<message key="editor.article.uploadReviewVersion">Eine überarbeitete Begutachtungsversion hochladen</message>
@@ -203,6 +207,7 @@
 	<message key="editor.article.scheduleForPublication">Zur Veröffentlichung vorsehen in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Muss noch zugewiesen werden</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Die Veröffentlichungsgebühr für diesen Artikel wurde noch nicht bezahlt. Sie können den Artikel zur Veröffentlichung einplanen, sobald die Gebühr bezahlt ist.</message>
+	<message key="editor.article.customJournalSettings">Benutzerdefinierte Kennungen und Seiteninformationen</message>
 	<message key="editor.article.display">Anzeigen</message>
 	<message key="editor.article.hideTocAuthorDescription">Autor/innennamen nicht im Inhaltsverzeichnis der Ausgabe anzeigen</message>
 	<message key="editor.article.hideTocAuthorDefault">Voreinstellung</message>
@@ -217,6 +222,13 @@
 	<message key="editor.article.coverPageInstructions">(Erlaubte Formate: .gif, .jpg oder .png)</message>
 	<message key="editor.article.uploaded">Hochgeladen</message>
 	<message key="editor.article.removeCoverPage">Titelbild entfernen?</message>
+	<message key="grid.action.removeArticle">Artikel aus Ausgabe entfernen</message>
 	<message key="editor.article.remove">Entfernen</message>
+	<message key="editor.article.remove.confirm">Sind Sie sicher, dass Sie diesen Artikel aus der Ausgabe entfernen möchten? Der Artikel kann dann für eine andere Ausgabe eingeteilt werden.</message>
 	<message key="editor.issues.invalidAccessDate">Zugangsdatum ungültig.</message>
+	<message key="editor.issues.editIssueGalley">Ausgabenfahne bearbeiten</message>
+	<message key="editor.externalReview.introduction">In der Externen Begutachtung weist die/der Redakteur/in zeitschriftenexternen Gutachter/innen die Beitragsdateien zu und wertet die eintreffenden Gutachten aus, bevor sie/er die angemessene Aktion auswählt (inklusive der Benachrichtigung der/des Autor/in): Überarbeitung erforderlich (Überarbeitungen werden nur von der Redakteurin/dem Redakteur gesichtet); Erneut zur Begutachtung einreichen (Überarbeitungen führen zu einer erneuten Begutachtungsrunde); Beitrag annehmen (führt zur Auswahl von Dateien für die Lektoratsphase) oder Beitrag ablehnen (Redakteur/in verschiebt die Einreichung ins Archiv).</message>
+	<message key="editor.submission.introduction">Unter Einreichungen wählt die/der Redakteur/in nach der Sichtung der eingereichten Dateien die angemessene Aktion (inklusive der Benachrichtigung der/des Autor/in): In die Externe Begutachtung schicken (führt zu der Auswahl von Dateien für die Externe Begutachtung); Beitrag annehmen (führt zur Auswahl von Dateien für die Lektoratsphase) oder Beitrag ablehnen (Redakteur/in verschiebt die Einreichung ins Archiv).</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Der/die Layouter/in bereitet diese Dateien für alle Fahnen vor und lädt dann die entsprechenden <span class="pkp_help_title">Korrekturfahnen</span> für das Korrekturlektorat hoch.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Fahnendateien auswählen</message>
 </locale>
