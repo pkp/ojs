@@ -271,6 +271,7 @@
 		</field>
 		<field name="date_published" type="T" />
 		<field name="date_notified" type="T" />
+		<field name="last_modified" type="T" />
 		<field name="access_status" type="I1">
 			<NOTNULL />
 			<DEFAULT VALUE="1" />

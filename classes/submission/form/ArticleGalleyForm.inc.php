@@ -41,7 +41,7 @@ class ArticleGalleyForm extends Form {
 
 		if (isset($galleyId) && !empty($galleyId)) {
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-			$this->galley =& $galleyDao->getGalley($galleyId, $articleId);
+			$this->galley = $galleyDao->getGalley($galleyId, $articleId);
 			if (isset($this->galley)) {
 				$this->galleyId = $galleyId;
 			}
@@ -70,7 +70,7 @@ class ArticleGalleyForm extends Form {
 			$templateMgr->assign_by_ref('galley', $this->galley);
 		}
 		// consider public identifiers
-		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 		parent::display();
 	}
@@ -102,7 +102,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->galley)) {
-			$galley =& $this->galley;
+			$galley = $this->galley;
 			$this->_data = array(
 				'label' => $galley->getLabel(),
 				'publicGalleyId' => $galley->getPubId('publisher-id'),
@@ -151,8 +151,11 @@ class ArticleGalleyForm extends Form {
 		$journal = Request::getJournal();
 		$fileId = null;
 
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($this->articleId, $journal->getId());
+
 		if (isset($this->galley)) {
-			$galley =& $this->galley;
+			$galley = $this->galley;
 
 			// Upload galley file
 			if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -178,7 +181,7 @@ class ArticleGalleyForm extends Form {
 
 			} else if($this->getData('deleteStyleFile')) {
 				// Delete stylesheet file
-				$styleFile =& $galley->getStyleFile();
+				$styleFile = $galley->getStyleFile();
 				if (isset($styleFile)) {
 					$articleFileManager->deleteFile($styleFile->getFileId());
 				}
@@ -249,8 +252,6 @@ class ArticleGalleyForm extends Form {
 			} else {
 				$galley->setLabel($this->getData('label'));
 			}
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$article = $articleDao->getById($this->articleId, $journal->getId());
 			$galley->setLocale($article->getLocale());
 
 			if ($enablePublicGalleyId) {
@@ -280,6 +281,9 @@ class ArticleGalleyForm extends Form {
 			$articleSearchIndex->articleFileChanged($this->articleId, SUBMISSION_SEARCH_GALLEY_FILE, $fileId);
 			$articleSearchIndex->articleChangesFinished();
 		}
+
+		// Stamp the article modification (for OAI)
+		$articleDao->updateArticle($article);
 
 		return $this->galleyId;
 	}
@@ -323,7 +327,7 @@ class ArticleGalleyForm extends Form {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
 		if (isset($this->galley)) {
-			$images =& $this->galley->getImageFiles();
+			$images = $this->galley->getImageFiles();
 			if (isset($images)) {
 				for ($i=0, $count=count($images); $i < $count; $i++) {
 					if ($images[$i]->getFileId() == $imageId) {

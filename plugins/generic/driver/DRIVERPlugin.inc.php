@@ -37,10 +37,10 @@ class DRIVERPlugin extends GenericPlugin {
 
 			// Add DRIVER set to OAI results
 			HookRegistry::register('OAIDAO::getJournalSets', array($this, 'sets'));
-			HookRegistry::register('JournalOAI::records', array($this, 'records'));
-			HookRegistry::register('JournalOAI::identifiers', array($this, 'identifiers'));
-			HookRegistry::register('OAIDAO::_returnRecordFromRow', array($this, 'changeRecord'));
-			HookRegistry::register('OAIDAO::_returnIdentifierFromRow', array($this, 'changeIdentifier'));
+			HookRegistry::register('JournalOAI::records', array($this, 'recordsOrIdentifiers'));
+			HookRegistry::register('JournalOAI::identifiers', array($this, 'recordsOrIdentifiers'));
+			HookRegistry::register('OAIDAO::_returnRecordFromRow', array($this, 'addSet'));
+			HookRegistry::register('OAIDAO::_returnIdentifierFromRow', array($this, 'addSet'));
 
 			// consider DRIVER article in article tombstones
 			HookRegistry::register('ArticleTombstoneManager::insertArticleTombstone', array($this, 'insertDRIVERArticleTombstone'));
@@ -70,9 +70,9 @@ class DRIVERPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Change OAI records to consider the DRIVER set
+	 * Get DRIVER records or identifiers
 	 */
-	function records($hookName, $params) {
+	function recordsOrIdentifiers($hookName, $params) {
 		$journalOAI =& $params[0];
 		$from = $params[1];
 		$until = $params[2];
@@ -84,56 +84,24 @@ class DRIVERPlugin extends GenericPlugin {
 
 		$records = array();
 		if (isset($set) && $set == 'driver') {
-			$journalId = $journalOAI->journalId;
 			$driverDao = DAORegistry::getDAO('DRIVERDAO');
 			$driverDao->setOAI($journalOAI);
-			$records = $driverDao->getDRIVERRecords($journalId, $from, $until, $offset, $limit, $total);
+			if ($hookName == 'JournalOAI::records') {
+				$funcName = '_returnRecordFromRow';
+			} else if ($hookName == 'JournalOAI::identifiers') {
+				$funcName = '_returnIdentifierFromRow';
+			}
+			$journalId = $journalOAI->journalId;
+			$records = $driverDao->getDRIVERRecordsOrIdentifiers(array($journalId, null), $from, $until, $offset, $limit, $total, $funcName);
 			return true;
 		}
 		return false;
 	}
 
 	/**
-	 * Change OAI identifier to consider the DRIVER set
+	 * Change OAI record or identifier to consider the DRIVER set
 	 */
-	function identifiers($hookName, $params) {
-		$journalOAI =& $params[0];
-		$from = $params[1];
-		$until = $params[2];
-		$set = $params[3];
-		$offset = $params[4];
-		$limit = $params[5];
-		$total = $params[6];
-		$records =& $params[7];
-
-		$records = array();
-		if (isset($set) && $set == 'driver') {
-			$journalId = $journalOAI->journalId;
-			$driverDao = DAORegistry::getDAO('DRIVERDAO');
-			$driverDao->setOAI($journalOAI);
-			$records = $driverDao->getDRIVERIdentifiers($journalId, $from, $until, $offset, $limit, $total);
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * Change OAI record to consider the DRIVER set
-	 */
-	function changeRecord($hookName, $params) {
-		$record =& $params[0];
-		$row = $params[1];
-
-		if ($this->isDRIVERRecord($row)) {
-			$record->sets[] = 'driver';
-		}
-		return false;
-	}
-
-	/**
-	 * Change OAI identifier to consider the DRIVER set
-	 */
-	function changeIdentifier($hookName, $params) {
+	function addSet($hookName, $params) {
 		$record =& $params[0];
 		$row = $params[1];
 
@@ -149,9 +117,9 @@ class DRIVERPlugin extends GenericPlugin {
 	function insertDRIVERArticleTombstone($hookName, $params) {
 		$articleTombstone =& $params[0];
 
-		if ($this->isDRIVERArticle($articleTombstone->getJournalId(), $articleTombstone->getSubmissionId())) {
-			$submissionTombstoneSettingsDao = DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
-			$submissionTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
+		if ($this->isDRIVERArticle($articleTombstone->getOAISetObjectId(ASSOC_TYPE_JOURNAL), $articleTombstone->getDataObjectId())) {
+			$dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO');
+			$dataObjectTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
 		}
 		return false;
 	}
@@ -177,7 +145,7 @@ class DRIVERPlugin extends GenericPlugin {
 			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = DRIVER_ACCESS_OPEN;
 			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
-				if ($issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
+				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
 					if (is_a($article, 'PublishedArticle') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
@@ -198,14 +166,14 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 
 			// is there a full text
-			$galleys =& $article->getGalleys();
+			$galleys = $article->getGalleys();
 			if (!empty($galleys)) {
 				return $status == DRIVER_ACCESS_OPEN;
 			}
 			return false;
 		} else {
-			$submissionTombstoneSettingsDao = DAORegistry::getDAO('SubmissionTombstoneSettingsDAO');
-			return $submissionTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
+			$dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO');
+			return $dataObjectTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
 		}
 	}
 
@@ -229,7 +197,7 @@ class DRIVERPlugin extends GenericPlugin {
 			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = DRIVER_ACCESS_OPEN;
 			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
-				if ($issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
+				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
 					if (is_a($article, 'PublishedArticle') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
@@ -250,7 +218,7 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 
 			// is there a full text
-			$galleys =& $article->getGalleys();
+			$galleys = $article->getGalleys();
 			if (!empty($galleys)) {
 				return $status == DRIVER_ACCESS_OPEN;
 			}
@@ -258,4 +226,5 @@ class DRIVERPlugin extends GenericPlugin {
 	}
 
 }
+
 ?>

@@ -175,6 +175,29 @@ class Issue extends DataObject {
 		return $this->setData('dateNotified', $dateNotified);
 	}
 
+ 	/**
+	 * get date the issue was last modified
+	 * @return date
+	 */
+	function getLastModified() {
+		return $this->getData('lastModified');
+	}
+
+	/**
+	 * set date the issue was last modified
+	 * @param $lastModified date
+	 */
+	function setLastModified($lastModified) {
+		return $this->setData('lastModified', $lastModified);
+	}
+
+	/**
+	 * Stamp the date of the last modification to the current time.
+	 */
+	function stampModified() {
+		return $this->setLastModified(Core::getCurrentDate());
+	}
+
 	/**
 	 * get access status (ISSUE_ACCESS_...)
 	 * @return int
