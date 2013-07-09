@@ -123,12 +123,14 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 
 	<p>Geben Sie "FORMAT" in das Feld für Korrekturlektorat-Korrekturen ein, gefolgt von einer Beschreibung von Stelle und die Art des Problems.</p>
 	<br />
-	<pre>3. FORMAT
-	Die Zahlen in Tabelle 3 sind in der dritten Spalte nicht rechtsbündig.</pre>
+	<pre>3. FORMATIERUNG
+	Die Zahlen in Tabelle 3 sind in der dritten Spalte nicht bündig.</pre>
 	<br />
-	<pre>4. FORMAT
+	<pre>4. FORMATIERUNG
 	Der Absatz, der mit "Dieses Thema schließlich ..." beginnt, ist nicht eingerückt.</pre>]]></message>
-
+	
+	<message key="default.journalSettings.emailHeader">Die folgende Nachricht wird im Namen von {$journalName} übermittelt.
+________________________________________________________________________</message>
 	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}</message>
@@ -154,4 +156,37 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<message key="default.journalSettings.membershipFeeDescription">Durch Zahlung dieser Gebühr werden Sie für ein Jahr Mitglied. Während dieser Zeit haben Sie kostenlosen Zugang zu dieser Zeitschrift.</message>
 	<message key="default.journalSettings.donationFee">Spenden an die Zeitschrift</message>
 	<message key="default.journalSettings.donationFeeDescription">Spenden jeglicher Höhe an diese Zeitschrift werden dankend angenommen. Sie ermöglichen es den Redakteur/innen, weiterhin eine Zeitschrift von höchster Qualität für ihre Leser/innen bereitzustellen.</message>
+
+	<!-- Group defaults -->
+	<message key="default.groups.name.manager">Zeitschriftenverwalter/in</message>
+	<message key="default.groups.plural.manager">Zeitschriftenverwalter/innen</message>
+	<message key="default.groups.abbrev.manager">ZV</message>
+	<message key="default.groups.name.editor">Zeitschriftenredakteur/in</message>
+	<message key="default.groups.plural.editor">Zeitschriftenredakteur/innen</message>
+	<message key="default.groups.abbrev.editor">ZR</message>
+	<message key="default.groups.name.guestEditor">Gastredakteur/in</message>
+	<message key="default.groups.plural.guestEditor">Gastredakteur/innen</message>
+	<message key="default.groups.abbrev.guestEditor">GastR</message>
+	<message key="default.groups.name.sectionEditor">Rubrikredakteur/in</message>
+	<message key="default.groups.plural.sectionEditor">Rubrikredakteur/innen</message>
+	<message key="default.groups.abbrev.sectionEditor">RubR</message>
+	<message key="default.groups.name.subscriptionManager">Abonnementverwalter/in</message>
+	<message key="default.groups.plural.subscriptionManager">Abonnementverwalter/innen</message>
+	<message key="default.groups.abbrev.subscriptionManager">AboV</message>
+
+	<!-- Genre Defaults -->
+	<message key="default.genres.researchInstrument">Forschungsinstrument</message>
+	<message key="default.genres.researchInstrument.designation">##</message>
+	<message key="default.genres.researchMaterials">Forschungsmaterial</message>
+	<message key="default.genres.researchMaterials.designation">##</message>
+	<message key="default.genres.researchResults">Forschungsergebnisse</message>
+	<message key="default.genres.researchResults.designation">##</message>
+	<message key="default.genres.transcripts">Transkripte</message>
+	<message key="default.genres.transcripts.designation">##</message>
+	<message key="default.genres.dataAnalysis">Datenanalyse</message>
+	<message key="default.genres.dataAnalysis.designation">##</message>
+	<message key="default.genres.dataSet">Datensatz</message>
+	<message key="default.genres.dataSet.designation">##</message>
+	<message key="default.genres.sourceTexts">Quelltexte</message>
+	<message key="default.genres.sourceTexts.designation">##</message>
 </locale>
