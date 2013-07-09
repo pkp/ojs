@@ -935,7 +935,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">{$filename} moneta-zerrenda XMLtik kargatu da</message>
-	<message key="debug.notes.helpMappingLoad">Laguntza mapatzeko {$filename} XML fitxategia birkargatu da {$id} bilatzean.</message>
 
 	<!--
 	 *
@@ -1026,22 +1025,18 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="notification.mailListDescription">Sartu zure helbide eletkronikoa aldizkariari gehitu zaizkion eduki berri garrantzitsuen jakinarazpenak berehala jasotzeko.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Orri honek aldizkariarekin lotutako eguneraketa garrantzitsuak erakusten ditu, hala nola gai edo anuntzio berriak. Jakinarazpen horietan izen-eman dezakezu, bai RSS jarioekin (eskuineko irudietan klik eginez), bai <a href="{$emailUrl}">posta elektronikoz. </a>]]></message>
 	<message key="notification.type.articleSubmitted">Artikulu berri bat, "{$param}", aurkeztu da.</message>
-	<message key="notification.type.copyeditComment">Zuzentzaile batek iruzkin bat utzi du "{$param}" artikuluan.</message>
 	<message key="notification.type.editing">Gertaerak editatzen</message>
 	<message key="notification.type.editorDecisionComment">Editoreak erabakitzeko iruzkin bat utzi da "{$param}" artikuluan.</message>
 	<message key="notification.type.galleyModified">Galerada bat aldatu da "{$param}" artikuluan.</message>
 	<message key="notification.type.issuePublished">Gai bat argitaratu da.</message>
-	<message key="notification.type.layoutComment">Iruzkin bat utzi da "{$param}" artikuluaren diseinuari buruz.</message>
 	<message key="notification.type.metadataModified">"{$param}" artikuluaren metadatuak aldatu dira.</message>
 	<message key="notification.type.newAnnouncement">Jakinarazpen berria sortu da.</message>
-	<message key="notification.type.proofreadComment">Proba-zuzentzaileak iruzkin bat utzi du "{$param}" artikuluan.</message>
 	<message key="notification.type.reviewerComment">Ebaluatzaile batek "{$param}" artikuluari buruzko iruzkina egin du.</message>
 	<message key="notification.type.reviewerFormComment">Ebaluazio-inprimaki baten ebaluazioa bidali da "{$param}" artikuluarentzat.</message>
 	<message key="notification.type.reviewing">Gertaerak ebaluatzen</message>
 	<message key="notification.type.site">Guneko gertaerak</message>
 	<message key="notification.type.submissionComment">Editore batek iruzkin bat egin du "{$param}" artikuluari buruz.</message>
 	<message key="notification.type.submissions">Aurkezpenen gertaerak</message>
-	<message key="notification.type.suppFileModified">"{$param}'s" artikuluaren fitxategi osagarriak aldatu dira.</message>
 	<message key="notification.type.userComment">Irakurle batek iruzkin bat egin du  "{$param}" artikuluari buruz.</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Sarbidea ukatuta! Ez zaizu esleitu artikulu honen zuzenketa egitea.</message>
 	<message key="user.authorization.noJournal">Ez dago aldizkaririk testuinguruan!</message>

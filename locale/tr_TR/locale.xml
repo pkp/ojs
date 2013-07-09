@@ -995,22 +995,18 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="notification.mailListDescription">Dergi içeriği ile ilgili bildirimlerin e-posta adresinize gelmesini istiyorsanız e-posta adresinizi kayıt ediniz.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Bu sayfa, yeni sayı veya duyurular gibi dergi ile ilgili önemli güncellemeleri gösterir. RSS beslemeleri (sağdaki resimlere tıklayarak) ya da   <a href="{$emailUrl}">e-posta yoluyla</a> bu bildirimlere abone olabilirsiniz.]]></message>
 	<message key="notification.type.articleSubmitted">"{$title}" başlıklı bir makale gönderildi..</message>
-	<message key="notification.type.copyeditComment">Sayfa düzenleyici "{$title}" başlıklı makale için yorum yaptı.</message>
 	<message key="notification.type.editing">Düzenleme durumları</message>
 	<message key="notification.type.editorDecisionComment">"{$title}" başlıklı makale için editör karar yorumu yaptı.</message>
 	<message key="notification.type.galleyModified">"{$title}" başlıklı makale için galeride güncellendi.</message>
 	<message key="notification.type.issuePublished">Yeni bir sayı yayımlandı.</message>
-	<message key="notification.type.layoutComment">"{$title}" başlıklı makalenin sayfa düzenleyicisi yorum yaptı.</message>
 	<message key="notification.type.metadataModified">"{$title}" başlıklı makalenin üst verisi güncellendi.</message>
 	<message key="notification.type.newAnnouncement">Yeni duyuru oluşturuldu.</message>	
-	<message key="notification.type.proofreadComment">"{$title}" başlıklı makalenin düzeltmeni bir yorum yaptı.</message>
 	<message key="notification.type.reviewerComment">"{$title}" başlıklı makale için bir hakem yorum yaptı.</message>
 	<message key="notification.type.reviewerFormComment">"{$title}" başlıklı makale için değerlendirme formu gönderildi.</message>
 	<message key="notification.type.reviewing">Değerlendirme Durumları</message>
 	<message key="notification.type.site">Site Durumları</message>
 	<message key="notification.type.submissionComment">"{$title}" başlıklı makale için bir editör yorum yaptı.</message>
 	<message key="notification.type.submissions">Gönderi Durumları</message>
-	<message key="notification.type.suppFileModified">"{$title}" adlı makalenin ek dosya/dosyaları güncelllendi.</message>
 	<message key="notification.type.userComment">"{$title}" başlıklı makale için bir okuyucu yorum yaptı.</message>
 
 	<!--
@@ -1029,7 +1025,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">"{$filename}" XML dosyasından para birimi listesi yüklendi</message>
-	<message key="debug.notes.helpMappingLoad">{$id} içinde yapılan {$filename} adlı XML haritalama dosyası yardımı yeniden çağrıldı.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<![CDATA[<ol>
 	<li>Aşağıda gösterilen işaretli öğeler bir editör tarafından eylem yapılması gerektiğini gösterir:

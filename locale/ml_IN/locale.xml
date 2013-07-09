@@ -730,22 +730,18 @@
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">ജേണലില്‍ പ്രധാനപ്പെട്ട എന്തെങ്കിലും പുതിയ വിവരങ്ങള്‍ ചേര്‍ക്കുമ്പോള്‍ ആ വിവരം അറിയിക്കുന്നതിനായി താങ്കളുടെ ഇ-മെയില്‍ അഡ്രസ്സ് നല്‍കുക.</message>
 	<message key="notification.type.articleSubmitted">ഒരു പുതിയ പ്രബന്ധം "{$param}"സമര്‍പ്പിച്ചിരിക്കുന്നു</message>
-	<message key="notification.type.copyeditComment">ഒരു കോപ്പി എഡിറ്റര്‍  "{$param}" ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
 	<message key="notification.type.editing">എഡിറ്റിങ്ങ് ഈവന്റ്സ്</message>
 	<message key="notification.type.editorDecisionComment">"{$param}"-നു വേണ്ടി എഡിറ്റര്‍ ഡിസിഷനില്‍ ഒരു കമന്റ് കൊടുത്തിരിക്കുന്നു.</message>
 	<message key="notification.type.galleyModified">"{$param}"-നു വേണ്ടി ഒരു ഗ്യാലേ പരിഷ്കരിച്ചിരിക്കുന്നു.</message>
 	<message key="notification.type.issuePublished">ഒരു പതിപ്പ് പ്രസിദ്ധീകരിച്ചിരിക്കുന്നു.</message>
-	<message key="notification.type.layoutComment">"{$param}"-ന്റെ ലേ ഔട്ടിനെപ്പട്ടി ഒരു കമന്റ് കൊടുത്തിരിക്കുന്നു.</message>
 	<message key="notification.type.metadataModified">"{$param}"-ന്റെ മെറ്റാഡേറ്റ പരിഷ്കരിച്ചിരിക്കുന്നു.</message>
 	<message key="notification.type.newAnnouncement">ഒരു പുതിയ അറിയിപ്പ് സൃഷ്ടിച്ചിരിക്കുന്നു.</message>	
-	<message key="notification.type.proofreadComment">പ്രൂഫ് റീഡര്‍ "{$param}"ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
 	<message key="notification.type.reviewerComment">റിവ്യൂവര്‍ "{$param}"ല്‍ കമന്റ് ചെയ്തു.</message>
 	<message key="notification.type.reviewerFormComment">ഒരു റിവ്യൂ ഫോം അവലോകനം"{$param}"നു വേണ്ടി സമര്‍പ്പിച്ചിരിക്കുന്നു.</message>
 	<message key="notification.type.reviewing">റിവ്യൂവിങ്ങ് ഈവന്റ്സ്</message>
 	<message key="notification.type.site">സൈറ്റ് ഈവന്റ്സ്</message>
 	<message key="notification.type.submissionComment">എഡിറ്റര്‍ "{$param}"ല്‍ ഒരു കമന്റ് ചെയ്തിരിക്കുന്നു.</message>
 	<message key="notification.type.submissions">സബ്മിഷന്‍ ഈവന്റ്സ്</message>
-	<message key="notification.type.suppFileModified">"{$param}"ന്റെ സപ്ലിമെന്ററി ഫയല്‍(ഫയലുകള്‍) പരിഷ്ക്കരിച്ചിരിക്കുന്നു</message>
 	<message key="notification.type.userComment">വായനക്കാരന്‍ "{$param}"ല്‍ ഒരു കമന്റ് നല്‍കിയിരിക്കുന്നു.</message>
 
 	<!--
@@ -764,5 +760,4 @@
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">XML-ല്‍ നിന്നും കറന്‍സി ലിസ്റ്റ് "{$filename}"  ലോഡ് ചെയ്തിരിക്കുന്നു</message>
-	<message key="debug.notes.helpMappingLoad">{$id} തിരയുന്നതിനായി XML ഹെല്‍പ്പ് മാപ്പിങ്ങ് ഫയല്‍ {$filename} റീലോഡ് ചെയ്തിരിക്കുന്നു</message>
 </locale>

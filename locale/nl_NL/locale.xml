@@ -881,7 +881,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<!-- Icons: Default "alt" text -->
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Lijst munteenheden "{$filename}" uit XML geladen</message>
-	<message key="debug.notes.helpMappingLoad">XML help mapping bestand {$filename} opnieuw geladen op zoek naar {$id}.</message>
 
 	<!--
 	 *
@@ -1003,13 +1002,9 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="notification.type.submissionComment">Een redacteur heeft "{$title}" van commentaar voorzien.</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">De richtlijnen voor review geven reviewers criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in het tijdschrift. Ze kunnen instructies bevatten voor het maken een effectief en behulpzaam review. Bij het uitvoeren van een review krijgen reviewers twee tekstvelden, de eerste "voor redacteur en auteur" en de tweede "voor redacteur". De tijdschriftbeheerder kan ook een peer review formulier aanmaken bij revieuwformulieren, In alle gevallen hebben de redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
 	<message key="notification.type.articleSubmitted">Een nieuw artikel, "{$title}", is ingestuurd.</message>
-	<message key="notification.type.copyeditComment">Een tekstredacteur heeft een opmerking gemaakt bij "{$title}" .</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Deze pagina toont belangrijke berichten over dit tijdschrift zoals nieuwe nummers of nieuwsberichten. U kunt zich op deze berichten abonneren via RSS feeds (door op de afbeeldingen rechts te klikken) of   <a href="{$emailUrl}">via e-mail.</a>]]></message>
 	<message key="notification.type.editing">Redactieberichten</message>
-	<message key="notification.type.layoutComment">Er is een opmerking geplaatst over de layout van ""{$title}.</message>
-	<message key="notification.type.proofreadComment">Een proeflezer heeft een opmerking geplaatst bij "{$title}".</message>
 	<message key="notification.type.userComment">Een lezer heeft een opmerking geplaatst bij "{$title}"</message>
-	<message key="notification.type.suppFileModified">Aanvullende bestanden van "{$title}" zijn gewijzigd.</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>
 	<message key="user.subscriptions.statusDescription">Beschrijving</message>
 	<message key="user.subscriptions.status">Status</message>

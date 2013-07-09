@@ -878,7 +878,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar registado para comentar, com permissão de anonimato.</message>
 	<message key="rt.metadata.pkp.doi">Identificador de Objecto Digital (DOI)</message>
 	<message key="debug.notes.currencyListLoad">Lista de moedas "{$filename}" do ficheiro XML</message>
-	<message key="debug.notes.helpMappingLoad">Foi recarregado o ficheiro XML de mapeamento da ajuda {$filename} pesquisando por {$id}.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível transferir idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
 	<ul>
 		<li>O servidor não possui ou não permite a execução da ferramenta "tar" GNU</li>
@@ -1009,22 +1008,18 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="notification.mailListDescription">Indique o seu endereço de e-mail para receber notificações imediatas sobre conteúdo importante recentemente publicado na revista.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Esta página exibe actualizações importantes associadas a esta revista, como lançamento de edições e notícias. Assine as notificações através de canais RSS (clicando nas imagens à direita), ou <a href="{$emailUrl}">por e-mail.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Um novo artigo, "{$param}", foi submetido.</message>
-	<message key="notification.type.copyeditComment">O Editor de Texto fez um comentário sobre ""{$param}".</message>
 	<message key="notification.type.editing">Editando eventos</message>
 	<message key="notification.type.editorDecisionComment">Um comentário foi feito sobre a decisão editorial de "{$param}".</message>
 	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$param}".</message>
 	<message key="notification.type.issuePublished">Uma nova edição foi publicada.</message>
-	<message key="notification.type.layoutComment">Um comentário foi feito sobre o layout de "{$param}".</message>
 	<message key="notification.type.metadataModified">Os metadados de "{$param}" foram alterados.</message>
 	<message key="notification.type.newAnnouncement">Uma nova notícia foi publicada.</message>
-	<message key="notification.type.proofreadComment">Um comentário foi feito pelo leitor de provas sobre "{$param}".</message>
 	<message key="notification.type.reviewerComment">Um revisor fez comentários sobre "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Um formulário de revisão sobre "{$param}" foi enviado.</message>
 	<message key="notification.type.reviewing">Eventos da Revisão</message>
 	<message key="notification.type.site">Eventos do Site</message>
 	<message key="notification.type.submissionComment">Um editor fez comentários sobre "{$param}".</message>
 	<message key="notification.type.submissions">Eventos da Submissão</message>
-	<message key="notification.type.suppFileModified">Ficheiro(s) suplementar(es) de "{$param}" foram alterados.</message>
 	<message key="notification.type.userComment">Um leitor comentou sobre "{$param}".</message>
 	<message key="navigation.archives">Anteriores</message>
 	<message key="user.register.reviewerInterests">Identificar os interesses de revisão (áreas relevantes e métodos de investigação):</message>

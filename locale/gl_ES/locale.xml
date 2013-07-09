@@ -805,7 +805,6 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<!-- Debug messages -->
 
 
-	<message key="debug.notes.helpMappingLoad">Ficheiro de axuda de mapeo XML {$filename} recargado ao buscar {$id}.</message>
 	<message key="submission.reviewForm">Formulario de revisión</message>
 	<message key="submission.reviewFormResponse">Resposta ao Formulario de Revisión</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Por favor preenche os campos que se precisan</message>
@@ -973,13 +972,9 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="rt.admin.settings.addComment">Angadir comentario (habilita aos lectores a enviar comentarios, co Administrador daa Revista con competencia para borralos).</message>
 	<message key="rt.metadata.pkp.doi">Identificador de Obxecto Digital</message>
 	<message key="notification.mailListDescription">Insire o teu enderezo de correo electrónico para recibir notificacións inmediatas de novo contido engadido á revista.</message>
-	<message key="notification.type.copyeditComment">Un corrector de estilo deixou un comentario en "{$param}".</message>
 	<message key="notification.type.editorDecisionComment">Fíxose un comentario como decisión do editor para "{$param}".</message>
-	<message key="notification.type.layoutComment">Fíxose un comentario sobre el deseño de "{$param}".</message>
 	<message key="notification.type.metadataModified">Modificouse o metadado de "{$param}".</message>
-	<message key="notification.type.proofreadComment">Fíxose un comentario sobre "{$param}" polo corrector de probas .</message>
 	<message key="notification.type.reviewerFormComment">Enviouse unha revisión de formulario de revisión para "{$param}"</message>
-	<message key="notification.type.suppFileModified">Ficheiros suplementares de "{$param}" foron modificados.</message>
 	<message key="debug.notes.currencyListLoad">Cargada listaxe de moedas "{$filename}" dende XML</message>
 	<message key="reviewer.article.selectRecommendation">Seleccionar unha recomendación e enviar a revisión para completar o proceso. Tes que inserir unha revisión ou subir un ficheiro antes de seleccionar unha recomendación.</message>
 	<message key="submission.layout.referenceLinking">Ligazón para a referéncia</message>

@@ -10,6 +10,13 @@
   * 3.0.0.0 general updates.
   -->
 <data>
+	<!-- Delete old-style notifications -->
+	<sql>
+		<query>DELETE FROM notifications WHERE type=16777224</query><!-- NOTIFICATION_TYPE_LAYOUT_COMMENT -->
+		<query>DELETE FROM notifications WHERE type=16777225</query><!-- NOTIFICATION_TYPE_COPYEDIT_COMMENT -->
+		<query>DELETE FROM notifications WHERE type=16777232</query><!-- NOTIFICATION_TYPE_PROOFREAD_COMMENT -->
+		<query>DELETE FROM notifications WHERE type=16777220</query><!-- NOTIFICATION_TYPE_SUPP_FILE_MODIFIED WARNING: This type ID conflicts with others! -->
+	</sql>
 	<!-- Bug #6324: Issue Access Status = 0 -->
 	<sql>
 		<query>UPDATE issues SET access_status=1 WHERE access_status=0</query>

@@ -950,7 +950,6 @@ Aquesta prova pot contenir errors, per la qual cosa haureu de comprovar els URL 
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">S’ha carregat la llista de monedes "{$filename}" des d’XML.</message>
-	<message key="debug.notes.helpMappingLoad">S’ha tornat a carregar el fitxer de mapatge d’ajuda XML {$filename} a la cerca de {$id}.</message>
 
 	<!--
 	 *

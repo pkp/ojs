@@ -896,7 +896,6 @@
         <!-- Icons: Default "alt" text -->
         <!-- Debug messages -->
 				<message key="debug.notes.currencyListLoad">Η λίστα νομισματικών μονάδων  "{$filename}" φορτώθηκε από XML</message>
-				<message key="debug.notes.helpMappingLoad">Η επαναφόρτωση XML βοηθάει την χαρτογράφηση του αρχείου {$filename} για την αναζήτηση {$id}.</message>
 
 	<!-- Default settings for payment items. -->
 	<message key="submission.reviewForm">Φόρμα αξιολόγησης</message>
@@ -1005,22 +1004,18 @@
 	<message key="notification.mailListDescription">Εισάγετε την διεύθυνση του ηλεκτρονικού σας ταχυδρομείου για λαμβάνετε άμεση ενημέρωση για νέο περιεχόμενο που έχει δημοσιευτεί στο περιοδικό.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Αυτή η σελίδα παρουσιάζει σημαντικές πληροφορίες σχετικά με αυτό το περιοδικό όπως την δημοσίευση νέων τευχών ή ανακοινώσεων. Μπορείτε να εγγραφείτε ώστε να λαμβάνετε αυτές τις ειδοποιήσεις μέσω ροής RSS (πατώντας τις εικόνες στα δεξιά) ή μέσω <a href="{$emailUrl}">email.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Ένα νέο άρθρο, "{$param}", έχει υποβληθεί.</message>
-	<message key="notification.type.copyeditComment">Ένας Επιμελητής Κειμένου έχει εισάγει ένα σχόλιο στο "{$param}".</message>
 	<message key="notification.type.editing">Διόρθωση Γεγονότων</message>
 	<message key="notification.type.editorDecisionComment">Ένα σχόλιο έχει εισαχθεί από έναν επιμελητή στο "{$param}".</message>
 	<message key="notification.type.galleyModified">Ένα τυπογραφικό δοκίμιο έχει μεταβληθεί για το "{$param}".</message>
 	<message key="notification.type.issuePublished">Ένα τεύχος έχει δημοσιευτεί.</message>
-	<message key="notification.type.layoutComment">Ένα σχόλιο έχει εισαχθεί σχετικά με τη σελιδοποίηση του "{$param}" .</message>
 	<message key="notification.type.metadataModified">Τα μεταδεδομένα του "{$param}" έχουν μεταβληθεί.</message>
 	<message key="notification.type.newAnnouncement">Μια ανακοίνωση έχει δημιουργηθεί.</message>
-	<message key="notification.type.proofreadComment">Ένα σχόλιο από έναν Επιμελητή Τυπογραφικού Δοκιμίου έχει εισαχθεί σχετικά με το  "{$param}".</message>
 	<message key="notification.type.reviewerComment">Ένας Αξιολογητής έχει σχολιάσει το  "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Μια φόρμα αξιολόγησης έχει υποβληθεί για το "{$param}".</message>
 	<message key="notification.type.reviewing">Γεγονότα Αξιολόγησης</message>
 	<message key="notification.type.site">Γεγονότα Ιστοτόπου</message>
 	<message key="notification.type.submissionComment">Ένας επιμελητής έχει κάνει ένα σχόλιο για το "{$param}".</message>
 	<message key="notification.type.submissions">Γεγονότα Υποβολής</message>
-	<message key="notification.type.suppFileModified">Έχουν μεταβληθεί τα συμπληρωματικά αρχεία της "{$param}".</message>
 	<message key="notification.type.userComment">Ένας αναγνώστης έχει κάνει ένα σχόλιο για το "{$param}"</message>
 	<message key="user.register.reviewerInterests">Προσδιορίστε τα ενδιαφέροντα αξιολόγησης (θεματικές περιοχές και ερευνητικές μέθοδοι):</message>
 	<message key="user.subscriptions.subscriptionStatus">Κατάσταση Συνδρομής</message>

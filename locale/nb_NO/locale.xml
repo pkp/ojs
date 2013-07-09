@@ -936,7 +936,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="rt.admin.settings.addComment.authenticated">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates ikke.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert før innsending; anonym innsending tillates.</message>
-	<message key="debug.notes.helpMappingLoad">Gjenopplastet XML bidrar til å kartlegge filen {$filename} under søk etter {$id}.</message>
 	<message key="article.article">Artikkel</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
@@ -1013,22 +1012,18 @@ Authors who publish with this journal agree to the following terms:
 	<message key="notification.mailListDescription">Oppgi e-postadresse for å få umiddelbar varsling når viktig nytt innhold legges til i tidsskriftet.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Denne siden viser viktige oppdateringer som har med dette tidsskriftet å gjøre, som nye nummer eller kunngjøringer. Du kan abonnere på disse varslingene via RSS-tjenesten (ved å klikke på symbolene til høyre) eller <a href="{$emailUrl}">via e-post.</a>]]></message>
 	<message key="notification.type.articleSubmitted">En ny artikkel, "{$param}", har blitt innlevert.</message>
-	<message key="notification.type.copyeditComment">En manusredaktør har lagt inn en kommentar på "{$param}".</message>
 	<message key="notification.type.editing">Redigeringshendelser</message>
 	<message key="notification.type.editorDecisionComment">Redaktørens beslutning vedrørende "{$param}" har blitt kommentert.</message>
 	<message key="notification.type.galleyModified">Et sideoppsett til "{$param}" har blitt endret.</message>
 	<message key="notification.type.issuePublished">Et nummer har blitt publisert.</message>
-	<message key="notification.type.layoutComment">"{$param}'s" layout har blitt kommentert.</message>
 	<message key="notification.type.metadataModified">"{$param}'s" metadata har blitt endret.</message>
 	<message key="notification.type.newAnnouncement">En ny kunngjøring har blitt lagt inn.</message>
-	<message key="notification.type.proofreadComment">En korrekturleser har kommentert "{$param}".</message>
 	<message key="notification.type.reviewerComment">En fagfellevurderer har kommentert "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Et vurderingsskjema har blitt sendt inn for "{$param}".</message>
 	<message key="notification.type.reviewing">Vurderingshendelser</message>
 	<message key="notification.type.site">Nettstedshendelser</message>
 	<message key="notification.type.submissionComment">En redaktør har kommentert "{$param}".</message>
 	<message key="notification.type.submissions">Innleveringshendelser</message>
-	<message key="notification.type.suppFileModified">Tilleggsfilene til "{$param}" har blitt endret.</message>
 	<message key="notification.type.userComment">En leser har kommentert "{$param}".</message>
 	<message key="user.register.reviewerInterests">Angi interessante vurderingsområder (hovedområder og forskningsmetoder):</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>

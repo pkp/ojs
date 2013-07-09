@@ -739,25 +739,20 @@
 	<message key="notification.mailListDescription">Введите свой электронный адрес, чтобы получать уведомления о новостях журнала.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[На этой странице показан список новостей этого журнала, таких как выход новых номеров и обьявления. Вы можете получать эти новости в формате RSS (нажав на иконки справа), или <a href="{$emailUrl}">по электронной почте.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Представлена новая статья, "{$param}".</message>
-	<message key="notification.type.copyeditComment">Редактор оставил комментарий о "{$param}".</message>
 	<message key="notification.type.editing">Процесс редактирования</message>
 	<message key="notification.type.editorDecisionComment">Добавлено решение редактора о публикации "{$param}".</message>
 	<message key="notification.type.galleyModified">Изменены гранки статьи "{$param}".</message>
 	<message key="notification.type.issuePublished">Опубликован новый выпуск.</message>
-	<message key="notification.type.layoutComment">Добавлен комментарий о верстке "{$param}".</message>
 	<message key="notification.type.metadataModified">Изменены метаданные "{$param}".</message>
 	<message key="notification.type.newAnnouncement">Создано новое обьявление.</message>
-	<message key="notification.type.proofreadComment">Добавлен комментарий корректора о "{$param}".</message>
 	<message key="notification.type.reviewerComment">Добавлен комментарий рецензента о "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Введена форма рецензента для "{$param}".</message>
 	<message key="notification.type.reviewing">Процесс рецензирования</message>
 	<message key="notification.type.site">События сайта</message>
 	<message key="notification.type.submissionComment">Редактор сделал комментарий о "{$param}".</message>
 	<message key="notification.type.submissions">Процесс отправки</message>
-	<message key="notification.type.suppFileModified">Изменились дополнительные файлы "{$param}".</message>
 	<message key="notification.type.userComment">Читатель добавил комментарий о "{$param}"</message>
 	<message key="debug.notes.currencyListLoad">Загружен список валют "{$filename}" в XML</message>
-	<message key="debug.notes.helpMappingLoad">Перезагружен XML файл подсказки {$filename} в поиске {$id}.</message>
 	<message key="submission.reviewFormResponse">Заполненная Форма Рецензента</message>
 	<message key="navigation.competingInterestGuidelines">Описание Конфликта Интересов</message>
 	<message key="navigation.categories">Категории</message>

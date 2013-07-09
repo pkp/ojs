@@ -1092,22 +1092,18 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.notificationsPublicDescription"><![CDATA[Auf dieser Seite finden Sie Updates wie neue Ausgaben oder Ankündigungen. Sie können diese Benachrichtigungen als RSS-Feed abonnieren (indem Sie auf die Abbildungen rechts klicken) oder <a href="{$emailUrl}">via E-Mail.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$title}", wurde eingereicht.</message>
-	<message key="notification.type.copyeditComment">Ein Lektor/eine Lektorin hat einen Kommentar zu "{$title}" hinterlassen.</message>
 	<message key="notification.type.editing">Redaktionelle Ereignisse</message>
 	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$title}" wurde hinterlassen.</message>
 	<message key="notification.type.galleyModified">Für "{$title}" wurde eine Korrekturfahne geändert.</message>
 	<message key="notification.type.issuePublished">Eine Ausgabe wurde veröffentlicht.</message>
-	<message key="notification.type.layoutComment">Zum Layout von "{$title}'s" wurde ein Kommentar hinterlassen.</message>
 	<message key="notification.type.metadataModified">Die Metdadaten von "{$title}'s" wurden verändert.</message>
 	<message key="notification.type.newAnnouncement">Eine neue Ankündigung wurde erstellt.</message>
-	<message key="notification.type.proofreadComment">Ein/e Korrekturlektor/in hat einen Kommentar zu "{$title}" hinterlassen.</message>
 	<message key="notification.type.reviewerComment">Ein/e Gutachter/in hat "{$title} kommentiert.</message>
 	<message key="notification.type.reviewerFormComment">Für "{$title}" wurde ein Begutachtungsformular eingereicht.</message>
 	<message key="notification.type.reviewing">Begutachtungsereignisse</message>
 	<message key="notification.type.site">Site-Ereignisse</message>
 	<message key="notification.type.submissionComment">Ein/e Redakteur/in hat "{$title}" kommentiert.</message>
 	<message key="notification.type.submissions">Einreichungsereignisse</message>
-	<message key="notification.type.suppFileModified">Die Zusatzdatei(en) zu "{$title}" wurden verändert.</message>
 	<message key="notification.type.userComment">Ein/e Leser/in hat "{$title}" kommentiert.</message>
 
 	<!--
@@ -1126,5 +1122,4 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!-- Meldungen: Fehlerbehebung -->
 	<message key="debug.notes.currencyListLoad">Währungsliste "{$filename}" aus XML geladen</message>
-	<message key="debug.notes.helpMappingLoad">Auf der Suche nach {$id} wurde die XML-Hilfedatei {$filename} erneut geladen.</message>
 </locale>

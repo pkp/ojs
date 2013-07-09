@@ -1007,7 +1007,6 @@ Validering av URL:s kan misslyckas på sökningar som kräver inskickad data.]]>
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Laddad valutalista "{$filename}" från XML</message>
-	<message key="debug.notes.helpMappingLoad">Ladda XML hjälpmappningsfil {$filename} för att söka på {$id}.</message>
 
 	<!--
 	 *

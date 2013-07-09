@@ -873,7 +873,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="rt.admin.settings.addComment.anonymous">Usuários devem estar cadastrados e logados para comentar, com permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar cadastrado para comentar, com permissão de anonimato.</message>
 	<message key="debug.notes.currencyListLoad">Lista de moedas "{$filename}" do arquivo XML</message>
-	<message key="debug.notes.helpMappingLoad">Foi recarregado o arquivo XML de mapeamento da ajuda {$filename} buscando por {$id}.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
 	<ul>
 		<li>Seu servidor não possui ou não permite a execução da ferramenta "tar" GNU</li>
@@ -1004,22 +1003,18 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="notification.mailListDescription">Informe seu endereço de e-mail para receber notificações imediatas sobre conteúdo importante recentemente publicado na revista.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Esta página exibe atualizações importantes associadas a este periódico, como lançamento de edições e notícias. Assine as notificações através de canais RSS (clicando nas imagens à direita), ou <a href="{$emailUrl}">por e-mail.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Um novo artigo, "{$title}", foi submetido.</message>
-	<message key="notification.type.copyeditComment">O Editor de Texto fez um comentário sobre ""{$title}".</message>
 	<message key="notification.type.editing">Editando eventos</message>
 	<message key="notification.type.editorDecisionComment">Um comentário foi feito sobre a decisão editorial de "{$title}".</message>
 	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$title}".</message>
 	<message key="notification.type.issuePublished">Uma nova edição foi publicada.</message>
-	<message key="notification.type.layoutComment">Um comentário foi feito sobre o layout de "{$title}".</message>
 	<message key="notification.type.metadataModified">Os metadados de "{$title}" foram alterados.</message>
 	<message key="notification.type.newAnnouncement">Uma nova notícia foi publicada.</message>
-	<message key="notification.type.proofreadComment">Um comentário foi feito pelo leitor de provas sobre "{$title}".</message>
 	<message key="notification.type.reviewerComment">Um avaliador fez comentários sobre "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">Um formulário de avaliação sobre "{$title}" foi enviado.</message>
 	<message key="notification.type.reviewing">Eventos da Avaliação</message>
 	<message key="notification.type.site">Eventos do Portal</message>
 	<message key="notification.type.submissionComment">Um editor fez comentários sobre "{$title}".</message>
 	<message key="notification.type.submissions">Eventos da Submissão</message>
-	<message key="notification.type.suppFileModified">Arquivo(s) suplementar(es) de "{$title}" foram alterados.</message>
 	<message key="notification.type.userComment">Um leitor comentou sobre "{$title}".</message>
 	<message key="navigation.archives">Anteriores</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Um pagamento manual foi iniciado, mas não foi recebido ainda</message>

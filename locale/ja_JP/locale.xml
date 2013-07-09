@@ -731,7 +731,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="rt.admin.settings.addComment.unauthenticated">コメントをつけるには、ユーザ登録の必要がない。匿名によるコメントを許可する。</message>
 	<message key="rt.metadata.pkp.doi">DOI</message>
 	<message key="debug.notes.currencyListLoad">XMLから通貨リスト"{$filename}" をロードしました。</message>
-	<message key="debug.notes.helpMappingLoad">{$id}を捜すためにXMLヘルプマッピングファイル{$filename} を再ロードしました。</message>
 	<message key="submission.reviewForm">査読フォーム</message>
 	<message key="submission.reviewFormResponse">査読フォームレスポンス</message>
 	<message key="reviewer.article.enterReviewForm">アイコンをクリックして、査読フォームに記入してください。</message>
@@ -767,7 +766,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="notification.type.editing">編集イベント</message>
 	<message key="notification.type.galleyModified">"{$param}".</message>
 	<message key="notification.type.submissions">投稿イベント</message>
-	<message key="notification.type.suppFileModified">"{$param}" の補足ファイルが修正された</message>
 	<message key="notification.type.userComment">読者が "{$param}" にコメントした。</message>
 	<message key="subscriptions.individualDescription">個人購読では購読コンテンツにアクセスするためにはログインが必要です。</message>
 	<message key="subscriptions.institutionalDescription">機関購読ではログインは必要ありません。ユーザのドメインもしくはIPアドレス(またはその両方)によって購読コンテンツへのアクセスが提供されます。</message>
@@ -791,7 +789,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.form.deleteIpRange">削除</message>
 	<message key="user.subscriptions.form.addIpRange">追加</message>
 	<message key="notification.type.issuePublished">新しい巻号が出版された時</message>
-	<message key="notification.type.layoutComment">"{$param}" のレイアウトについてコメントがあった時</message>
 	<message key="notification.type.metadataModified">"{$param}" のメタデータが修正された時</message>
 	<message key="notification.type.newAnnouncement">新しいお知らせが作成された時</message>
 	<message key="notification.type.reviewerComment">査読者が "{$param}" にコメントした時</message>
@@ -824,9 +821,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.form.typeIdValid">有効な購読種別を選択してください。</message>
 	<message key="user.subscriptions.form.domainIPRangeRequired">選択された購読種別は購読の認証のためのドメイン名とIPアドレス(の両方もしくは片方)が必要です。</message>
 	<message key="user.subscriptions.form.domainValid">有効なドメイン名を入力してください。</message>
-	<message key="notification.type.copyeditComment">コピーエディタが "{$param}" にコメントした時</message>
 	<message key="notification.type.editorDecisionComment">"{$param}" の編集者の判断についてコメントがあった時</message>
-	<message key="notification.type.proofreadComment">"{$param}" について校正者のコメントがあった時</message>
 	<message key="subscriptions.status.awaitingManualPayment">手作業による支払い待ち</message>
 	<message key="about.subscriptionTypes.format">フォーマット</message>
 	<message key="about.subscriptionTypes.duration">期間</message>

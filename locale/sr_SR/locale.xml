@@ -754,7 +754,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="rt.admin.settings.addComment.anonymous">Anonimni komentari su dozvoljeni, ali korisnici moraju biti registrovani i prijavljeni kako bi ostavili komentar.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Anonimni komentari su dozvoljeni.</message>
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
-	<message key="debug.notes.helpMappingLoad">Ponovno učitana XML help mapping datoteka {$filename} pretražujući za {$id}.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
 	<message key="submission.reviewForm">Recenzijski obrazac</message>
 	<message key="submission.reviewFormResponse">Odgovor na recenziju</message>
@@ -880,17 +879,13 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="rt.admin.validateUrls.description"><![CDATA[Potencijalono pogrešni URL-ovi za sajtove za pretragu su prikazani niže.<br />Potrebno je da ručno proverite svaki URL pošto ovo nije 100% ipsravno.]]></message>
 	<message key="notification.mailListDescription">Unesite Vašu imejl adresu kako biste primali trenutna obaveštenja o važnim novostima u vašem časopisu</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Ova stranica prikazuje važne nadogradnje vezane za časopis, kao što su novi brojevi ili obaveštenja (vesti). Možete se pretplatiti na ova obaveštenja preko RSS-a (klikom na sliku desno) ili <a href="{$emailUrl}">putem imejla.</a>]]></message>
-	<message key="notification.type.copyeditComment">Lektor je ostavio komentar na "{$param}".</message>
 	<message key="notification.type.editing">Događaji u uredništvu</message>
 	<message key="notification.type.editorDecisionComment">Ostavljen je komentar na urednikovu odluku "{$param}".</message>
-	<message key="notification.type.layoutComment">Ostavljen je komentar o "{$param}" izgledu.</message>
-	<message key="notification.type.proofreadComment">Korektor je ostavio komentar na "{$param}".</message>
 	<message key="notification.type.reviewerComment">Recenzent je ostavio komentar na "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Recenzija preko recenzentske forme je predata za "{$param}".</message>
 	<message key="notification.type.reviewing">Događaji u čitalačkom delu</message>
 	<message key="notification.type.submissionComment">Urednik je komentarisao "{$param}".</message>
 	<message key="notification.type.submissions">Događaji u delu za predaje</message>
-	<message key="notification.type.suppFileModified">"{$param}" dodatni fajl(ovi) je izmenjen.</message>
 	<message key="notification.type.userComment">Čitaoc je komentarisao "{$param}'s"</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Pristup nije dozvoljen! Niste dodati kao lektor za ovaj članak.</message>
 	<message key="user.authorization.sectionAssignment">Pokušavate da pristupite članku koji nije u vašoj sekciji.</message>

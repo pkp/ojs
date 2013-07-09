@@ -895,7 +895,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<!-- Icons: Default "alt" text -->
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Nahraný seznam měn "{$filename}" z XML</message>
-	<message key="debug.notes.helpMappingLoad">Znovunahraný soubor XML mapující nápovědu {$filename} při hledání {$id}.</message>
 
 	<!--
 	 *
@@ -1013,15 +1012,11 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<message key="notification.mailListDescription">Pro příjem okamžitých oznámení o přidání důležitého nového obsahu do časopisu vložte vaši emailovou adresu.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Tato stránka zobrazuje důležité aktuality související s tímto časopisem - například vydání nového čísla nebo oznámení. Můžete se přihlásit k odběru těchto oznámení prostřednictvím RSS čtečky (kliknutím na obrázek napravo) nebo <a href="{$emailUrl}">prostřednictvím emailu.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Byl odeslán nový článek "{$param}".</message>
-	<message key="notification.type.copyeditComment">Redaktor zanechal komentář u "{$param}".</message>
 	<message key="notification.type.editorDecisionComment">Byl zanechán komentář k rozhodnutí editora pro "{$param}".</message>
 	<message key="notification.type.galleyModified">Byla změněna sazebnice pro "{$param}".</message>
-	<message key="notification.type.layoutComment">Byl zanechán komentář ke grafickému formátu pro "{$param}".</message>
 	<message key="notification.type.metadataModified">Byla modifikována metadata pro "{$param}".</message>
-	<message key="notification.type.proofreadComment">Korektor zanechal komentář pro "{$param}".</message>
 	<message key="notification.type.reviewerComment">Recenzent zanechal komentář pro "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Byl odeslán recenzní posudek pro "{$param}".</message>
 	<message key="notification.type.submissionComment">Editora zanechal komentář pro "{$param}".</message>
-	<message key="notification.type.suppFileModified">Byl změněn doplňkový soubor(y) u "{$param}".</message>
 	<message key="notification.type.userComment">Čtenář zanechal komentář k "{$param}".</message>
 </locale>

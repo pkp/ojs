@@ -2160,7 +2160,6 @@ Vålîðåtîóñ måý fåîl óñ þèårçh ÜRLþ thåt rèqüîrè póþtè
 	<message key="debug.notes.localeListLoad">Lóåðèð lóçålè lîþt "{$localeList}" fróm XML</message>
 	<message key="debug.notes.currencyListLoad">Lóåðèð çürrèñçý lîþt "{$filename}" fróm XML</message>
 	<message key="debug.notes.missingLocaleKey">Mîþþîñg lóçålè kèý "{$key}".</message>
-	<message key="debug.notes.helpMappingLoad">Rèlóåðèð XML hèlp måppîñg fîlè {$filename} îñ þèårçh óf {$id}.</message>
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Thè þübmîþþîóñ håþ ñót bèèñ prèvîóüþlý püblîþhèð, ñór îþ ît bèfórè åñóthèr jóürñål fór çóñþîðèråtîóñ (ór åñ èxplåñåtîóñ håþ bèèñ próvîðèð îñ Çómmèñtþ tó thè Éðîtór).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Thè þübmîþþîóñ fîlè îþ îñ Mîçróþóft Wórð, RTF, ór WórðPèrfèçt ðóçümèñt fîlè fórmåt.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Thè tèxt îþ þîñglè-þpåçèð; üþèþ å 12-póîñt fóñt; èmplóýþ îtålîçþ, råthèr thåñ üñðèrlîñîñg (èxçèpt wîth ÜRL åððrèþþèþ); åñð åll îllüþtråtîóñþ, fîgürèþ, åñð tåblèþ årè plåçèð wîthîñ thè tèxt åt thè åppróprîåtè póîñtþ, råthèr thåñ åt thè èñð.</message>

@@ -1176,22 +1176,18 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="notification.notificationsPublicDescription">Această pagină indică actualizările importante asociate cu această revistă precum noilenumere sau anunțurile. Te poți înscrie pentru a primi aceste anunțuri prin intermediul fluxurilor RSS (dând clic pe imaginea din dreapta) sau <![CDATA[  <a href="{$emailUrl}">prin email.</a>]]></message>
 	
 	<message key="notification.type.articleSubmitted">Un articol nou, "{$param}", a fost introdus ca propunere.</message>
-	<message key="notification.type.copyeditComment">Un (tehno)redactor a lăsat un comentariu la "{$param}".</message>
 	<message key="notification.type.editing">Editarea evenimentelor</message>
 	<message key="notification.type.editorDecisionComment">A fost lăsat un comentariu la decizia redactorului pentru "{$param}".</message>
 	<message key="notification.type.galleyModified">A fost modificată o asamblare pentru "{$param}".</message>
 	<message key="notification.type.issuePublished">A fost publicat un nou număr.</message>
-	<message key="notification.type.layoutComment">A fost lăsat un comentariu la macheta "{$param}".</message>
 	<message key="notification.type.metadataModified">Metadatele "{$param}" au fost modificate.</message>
 	<message key="notification.type.newAnnouncement">A fost creat un anunț nou.</message>	
-	<message key="notification.type.proofreadComment">A fost lăsat un comentariu de către un corector pentru "{$param}".</message>
 	<message key="notification.type.reviewerComment">Un evaluator a comentat la "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">A fost trimis un formular de evaluare pentru "{$param}".</message>
 	<message key="notification.type.reviewing">Evenimente la evaluare</message>
 	<message key="notification.type.site">Evenimente privind siteul</message>
 	<message key="notification.type.submissionComment">Un redactor a făcut un comentariu la "{$param}".</message>
 	<message key="notification.type.submissions">Evenimente privind propunerea</message>
-	<message key="notification.type.suppFileModified">Fișierele suplimentare ale "{$param}" au fost modificate.</message>
 	<message key="notification.type.userComment">Un cititor a făcut un comentariu la "{$param}"</message>
 
 
@@ -1204,7 +1200,6 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Lista de monede "{$filename}" a fost încărcată din XML</message>
-	<message key="debug.notes.helpMappingLoad">Fişierul XML de mapare a sistemului de asistenţă {$filename} a fost reîncărcat în căutarea lui {$id}.</message>
 	<message key="user.register.reviewerInterests">Identificarea intereselor în contextul evaluării (zone ale subiectelor de studiu și metodele de cercetare):</message>
 	<message key="user.subscriptions.subscriptionStatus">Starea propunerii</message>
 	<message key="user.subscriptions.statusInformation">Abonamentele active și cele care au expirat sunt afișate mai jos împreună cu data expirării. Suplimentar, informațiile privind starea, pot fi incluse cu fiecare abonament.</message>

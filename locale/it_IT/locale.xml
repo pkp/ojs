@@ -917,7 +917,6 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.membership.buyMembership">Acquista l'iscrizione individuale</message>
 	<message key="payment.membership.renewMembership">Rinnova l'iscrizione individuale</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rifiutato il round di revisione n. {$round} per l'articolo {$articleId} in favore di {$reviewerName}.</message>
-	<message key="debug.notes.helpMappingLoad">Mappatura del file XML {$filename}  di help ricaricata in cerca di {$id}.</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Articolo</message>
 	<message key="user.manageMySubscriptions">Gestisci i miei abbonamenti</message>
@@ -995,15 +994,12 @@ Titolo dello schema di classificazione]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Le linee guida per la revisione indicano ai revisori i criteri per giudicare una submission e possono includere ulteriori istruzioni per la redazione di una revisione efficace e utile. Nel condurre la revisione, ai revisono vengono presentate due box per l'inserimento di testi liberi, il primo "per l'autore e per l'editor", il secondo "per l'editor". In alternativa, l'amministratore &#242; creare un modulo per la revisione. In ogni caso, gli editor avranno la possibilit&#224; di includere le revisioni nella corrispondenza con gli autori.]]></message>
 	<message key="notification.mailListDescription"><![CDATA[Inserisci il tuo indirizzo email per ricevere notifiche delle novit&#224; della rivista.]]></message>
 	<message key="notification.type.articleSubmitted"><![CDATA[&#200; stato proposto un nuovo articolo, "{$title}"]]></message>
-	<message key="notification.type.copyeditComment">Un copyeditor ha lasciato un commento su  "{$title}".</message>
 	<message key="notification.type.editing">Eventi modificati</message>
 	<message key="notification.type.editorDecisionComment"><![CDATA[La decisione dell'editor su  "{$title}" &#232; stata commentata.]]></message>
 	<message key="notification.type.galleyModified"><![CDATA[La gabbia di "{$title}" &#232; stata modificata.]]></message>
 	<message key="notification.type.issuePublished"><![CDATA[&#200; stato pubblicato un nuovo fascicolo.]]></message>
-	<message key="notification.type.layoutComment"><![CDATA[&#200; stato commentato il layout di "{$title}".]]></message>
 	<message key="notification.type.metadataModified">I metadati di "{$title}" sono stati modificati.</message>
 	<message key="notification.type.newAnnouncement"><![CDATA[&#200; stato pubblicato un nuovo avviso.]]></message>
-	<message key="notification.type.proofreadComment">Il correttore di bozze ha commentato "{$title}".</message>
 	<message key="notification.type.reviewerComment">Un revisore ha commentato "{$title}".</message>
 	<message key="notification.type.reviewerFormComment"><![CDATA[&#200; stato completato un modulo di revisione per "{$title}"]]></message>
 	<message key="notification.type.site">Eventi del sito</message>
@@ -1011,7 +1007,6 @@ Titolo dello schema di classificazione]]></message>
 	<message key="notification.type.reviewing">Eventi legati alle revisioni</message>
 	<message key="notification.type.submissionComment">Un editor ha commentato  "{$title}".</message>
 	<message key="notification.type.submissions">Eventi legati alle submission</message>
-	<message key="notification.type.suppFileModified"><![CDATA[&#200; stato modificato un file supplementare di  "{$title}".]]></message>
 	<message key="notification.type.userComment">Un lettore ha commentato  "{$title}"</message>
 	<message key="user.subscriptions.subscriptionStatus">Stato dell'abbonamento</message>
 	<message key="user.subscriptions.status">Stato</message>

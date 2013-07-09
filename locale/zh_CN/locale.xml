@@ -1123,22 +1123,18 @@ Note that if your site administrator has already registered this site with these
 	<message key="notification.notificationsPublicDescription">这页显示了杂志刊期或公告相关的重要更新. 您可以通过RSS(点击右侧的图片)或者<![CDATA[  <a href="{$emailUrl}">通过电子邮件.</a>订阅这个通知 ]]></message>
 
 	<message key="notification.type.articleSubmitted">一篇新文章, "{$param}", 已经提交.</message>
-	<message key="notification.type.copyeditComment">文本编辑已经评论了 "{$param}".</message>
 	<message key="notification.type.editing">编辑事件</message>
 	<message key="notification.type.editorDecisionComment">在编辑的决定里已经对 "{$param}"进行了评论</message>
 	<message key="notification.type.galleyModified">草稿已经被修改，关于"{$param}".</message>
 	<message key="notification.type.issuePublished">一个刊期已经出版</message>
-	<message key="notification.type.layoutComment">有一个关于"{$param}'s"的排版评论.</message>
 	<message key="notification.type.metadataModified">"{$param}"的原数据已经被修改.</message>
 	<message key="notification.type.newAnnouncement">一条新的公告已经被创建.</message>	
-	<message key="notification.type.proofreadComment">一个校对已经对 "{$param}"进行了评论</message>
 	<message key="notification.type.reviewerComment">一个审稿人对 "{$param}"进行了评论.</message>
 	<message key="notification.type.reviewerFormComment">一个关于 "{$param}"的审稿评论已经提交.</message>
 	<message key="notification.type.reviewing">审稿事件</message>
 	<message key="notification.type.site">站点事件</message>
 	<message key="notification.type.submissionComment">一个编辑已经对"{$param}"进行了评论.</message>
 	<message key="notification.type.submissions">投稿时间</message>
-	<message key="notification.type.suppFileModified">"{$param}"的附件已经被修改.</message>
 	<message key="notification.type.userComment">一个读者对"{$param}"进行了评论</message>
 
 	<!--
@@ -1150,7 +1146,6 @@ Note that if your site administrator has already registered this site with these
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">已经从XML载入货币列表：{$filename}</message>
-	<message key="debug.notes.helpMappingLoad">Reloaded XML help mapping file {$filename} in search of {$id}.</message>
 	<message key="about.aboutOJSSite"><![CDATA[本站使用开放期刊系统（OJS  {$ojsVersion} ）.OJS是一个开源的期刊管理于出版软件，由<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>组织研发，遵循GNU General Public License.]]></message>
 	<message key="user.subscriptions.subscriptionStatus">订阅状态</message>
 	<message key="user.subscriptions.status">状态</message>

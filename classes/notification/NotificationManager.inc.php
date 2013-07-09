@@ -40,29 +40,16 @@ class NotificationManager extends PKPNotificationManager {
 
 		switch ($type) {
 			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
-				$role = $this->_getCachedRole($request, $notification);
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submission', $notification->getAssocId());
-			case NOTIFICATION_TYPE_SUPP_FILE_MODIFIED:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId());
 			case NOTIFICATION_TYPE_METADATA_MODIFIED:
-				$role = $this->_getCachedRole($request, $notification);
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submission', $notification->getAssocId(), null, 'metadata');
+			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
+				assert($notification->getAssocType() == ASSOC_TYPE_MONOGRAPH && is_numeric($notification->getAssocId()));
+				return $dispatcher->url($request, ROUTE_PAGE, $press->getPath(), 'workflow', 'submission', $notification->getAssocId());
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'layout');
 			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'editorDecision');
-			case NOTIFICATION_TYPE_LAYOUT_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'layout');
-			case NOTIFICATION_TYPE_COPYEDIT_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'coypedit');
-			case NOTIFICATION_TYPE_PROOFREAD_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'proofread');
 			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
 			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
@@ -165,20 +152,12 @@ class NotificationManager extends PKPNotificationManager {
 		switch ($type) {
 			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
 				return __('notification.type.articleSubmitted', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_SUPP_FILE_MODIFIED:
-				return __('notification.type.suppFileModified', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_METADATA_MODIFIED:
 				return __('notification.type.metadataModified', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				return __('notification.type.galleyModified', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
 				return __('notification.type.submissionComment', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_LAYOUT_COMMENT:
-				return __('notification.type.layoutComment', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_COPYEDIT_COMMENT:
-				return __('notification.type.copyeditComment', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_PROOFREAD_COMMENT:
-				return __('notification.type.proofreadComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
 				return __('notification.type.reviewerComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
@@ -278,15 +257,10 @@ class NotificationManager extends PKPNotificationManager {
 		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
 				return 'notifyIconNewPage';
-			case NOTIFICATION_TYPE_SUPP_FILE_MODIFIED:
-				return 'notifyIconPageAttachment';
 			case NOTIFICATION_TYPE_METADATA_MODIFIED:
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				return 'notifyIconEdit';
 			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
-			case NOTIFICATION_TYPE_LAYOUT_COMMENT:
-			case NOTIFICATION_TYPE_COPYEDIT_COMMENT:
-			case NOTIFICATION_TYPE_PROOFREAD_COMMENT:
 			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
 			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
 			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:

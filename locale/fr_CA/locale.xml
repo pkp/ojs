@@ -983,24 +983,19 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="notification.mailListDescription">Saisir votre adresse de courriel pour être avisé immédiatement de tout nouveau contenu important ajouté à la revue.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Cette page montre les mises à jour importantes associées avec cette revue tel que les nouvelles parutions et les annonces. Vous pouvez vous abonner à ces avis par l'intermédiaire des flux RSS (en cliquant sur les images à droite), ou <a href="{$emailUrl}">par courriel.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Un nouvel article, "{$param}", a été soumis.</message>
-	<message key="notification.type.copyeditComment">Un réviseur a laissé un commentaire sur "{$param}".</message>
 	<message key="notification.type.editing">Événements de révision</message>
 	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$param}".</message>
 	<message key="notification.type.galleyModified">Un épreuve a été modifié pour "{$param}".</message>
 	<message key="notification.type.issuePublished">Un numéro a été publié.</message>
-	<message key="notification.type.layoutComment">Un commentaire a été laissé à propos de la mise en page de "{$param}".</message>
 	<message key="notification.type.metadataModified">Les métadonnées de "{$param}" ont été modifiées.</message>
 	<message key="notification.type.newAnnouncement">Un nouvelle annonce a été créée.</message>
-	<message key="notification.type.proofreadComment">Un commentaire a été laissé par un correcteur d'épreuves sur "{$param}".</message>
 	<message key="notification.type.reviewerComment">Un évaluateur a écrit un commentaire sur "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Une évaluation de formulaire d'évaluation a été soumise pour "{$param}".</message>
 	<message key="notification.type.reviewing">Événements d'évaluation</message>
 	<message key="notification.type.site">Événements du site</message>
 	<message key="notification.type.submissionComment">Un rédacteur a fait un commentaire sur "{$param}".</message>
 	<message key="notification.type.submissions">Événements de soumission</message>
-	<message key="notification.type.suppFileModified">Le (ou les) fichier(s) supplémentaire(s) de "{$param}" a (ont) été modifié(s).</message>
 	<message key="notification.type.userComment">Un lecteur a fait un commentaire sur "{$param}"</message>
-	<message key="debug.notes.helpMappingLoad">Fichier de mappage d'aide XML {$filename} rechargé à la recherche de {$id}.</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>Le fichier PDF que vous avez sélectionné devrait s'afficher ici si votre navigateur Web a un plugiciel de lecture PDF d'installé (par exemple, une version récente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Sinon, vous pouvez également télécharger directement le fichier PDF sur votre poste de travail, où il peut être ouvert à l'aide d'un outil de lecture PDF. Pour télécharger le PDF, cliquer sur le lien Télécharger ci-dessous.</p>]]></message>
 	<message key="user.register.reviewerInterests">Identifier les intérêts d'évaluation (questions de fond et méthodes de recherche) :</message>
 	<message key="user.subscriptions.subscriptionStatus">Statut de l'abonnement</message>

@@ -880,7 +880,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	--> <!-- Icons: Default "alt" text -->
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Valutalisten "{$filename}" er indlæst fra XML</message>
-	<message key="debug.notes.helpMappingLoad">XML-hjælptilknytningsfilen {$filename} blev genindlæst under søgning efter {$id}.</message>
 
 	<!--
 	 *
@@ -1004,22 +1003,18 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="notification.mailListDescription">Indtast din e-mail-adresse for at modtage meddelelser om vigtigt nyt indhold, så snart det bliver tilføjet i tidsskriftet.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Denne side viser vigtige opdateringer vedrørende dette tidsskrift, fx nye numre eller meddelelser.  Du kan abonnere på disse meddelelser via RSS feeds (ved at klikke på billederne til højre) eller <a href="{$emailUrl}">via e-mail.</a>]]></message>
 	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", er blevet indleveret.</message>
-	<message key="notification.type.copyeditComment">En manuskriptredaktør har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.editing">Redigeringshændelser</message>
 	<message key="notification.type.editorDecisionComment">Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende "{$title}".</message>
 	<message key="notification.type.galleyModified">Der er foretaget en ændring af et satsskib for "{$title}".</message>
 	<message key="notification.type.issuePublished">Der er blevet udgivet et nummer.</message>
-	<message key="notification.type.layoutComment">Der er blevet skrevet en kommentar vedrørende "{$title}s" layout.</message>
 	<message key="notification.type.metadataModified">"{$title}s" metadata er blevet ændret.</message>
 	<message key="notification.type.newAnnouncement">Der er blevet oprettet en ny meddelelse.</message>
-	<message key="notification.type.proofreadComment">En korrekturlæser har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.reviewerComment">En bedømmer har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">Der er blevet indsendt en bedømmelsesformular vedrørende "{$title}".</message>
 	<message key="notification.type.reviewing">Bedømmelseshændelser</message>
 	<message key="notification.type.site">Websted-hændelser</message>
 	<message key="notification.type.submissionComment">En redaktør har skrevet en kommentar vedrørende "{$title}".</message>
 	<message key="notification.type.submissions">Indleveringshændelser</message>
-	<message key="notification.type.suppFileModified">"{$title}s" supplerende fil(er) er blevet ændret.</message>
 	<message key="notification.type.userComment">En læser har skrevet en kommentar vedrørende "{$title}"</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Adgang nægtet! Du er ikke blevet tildelt rollen som manuskriptredaktør på denne artikel.</message>
 	<message key="user.authorization.noJournal">Intet tidsskrift i denne kontekst!</message>

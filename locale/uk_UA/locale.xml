@@ -1048,22 +1048,18 @@
        <message key="notification.notificationsPublicDescription"><![CDATA[На цій сторінці відображаються важливі новини, пов'язані з цим журналом, наприклад, інформація про нові випуски або анонси. Ви можете передплатити ці сповіщення як стрічку RSS (натисніть на зображенні праворуч) або як   <a href="{$emailUrl}">поштову передплату</a>.]]></message>
 
        <message key="notification.type.articleSubmitted">Надіслана нова стаття: "{$title}".</message>
-       <message key="notification.type.copyeditComment">Літературний редактор залишив коментар щодо статті"{$title}".</message>
        <message key="notification.type.editing">Події редакційного процесу</message>
        <message key="notification.type.editorDecisionComment">Залишений коментар на рішення видавця щодо статті"{$title}".</message>
        <message key="notification.type.galleyModified">Змінена гранка статті "{$title}".</message>
        <message key="notification.type.issuePublished">Опублікований випуск.</message>
-       <message key="notification.type.layoutComment">Залишений коментар щодо гранки статті "{$title}".</message>
        <message key="notification.type.metadataModified">Змінені метадані подання "{$title}".</message>
        <message key="notification.type.newAnnouncement">Створений новий анонс.</message>       
-       <message key="notification.type.proofreadComment">Коректор залишив коментар щодо подання "{$title}".</message>
        <message key="notification.type.reviewerComment">Рецензент прокоментував подання "{$title}".</message>
        <message key="notification.type.reviewerFormComment">Надіслана форма рецензування для подання "{$title}".</message>
        <message key="notification.type.reviewing">Події процесу рецензування</message>
        <message key="notification.type.site">Події сайту</message>
        <message key="notification.type.submissionComment">Редактор зробив коментар на подання "{$title}".</message>
        <message key="notification.type.submissions">Події з рукописами</message>
-       <message key="notification.type.suppFileModified">Змінений супровідний файл подання "{$title}".</message>
        <message key="notification.type.userComment">Читач залишив коментар на статтю "{$title}"</message>
 
        <!--
@@ -1082,7 +1078,6 @@
        
        <!-- Debug messages -->
        <message key="debug.notes.currencyListLoad">З XML-файлу завантажений список валют "{$filename}"</message>
-       <message key="debug.notes.helpMappingLoad">Перевантажений файл XML {$filename} довідки у пошуку {$id}.</message>
 	<message key="navigation.categories">Категорії</message>
 	<message key="issue.viewIssue">Дивитися випуск</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>

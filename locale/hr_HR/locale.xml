@@ -1018,7 +1018,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="rt.admin.settings.addComment.unauthenticated">Anonimni komentari su dopušteni, a korisnici se ne trebaju registrirati da bi ih ostavljali.</message>
 	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
-	<message key="debug.notes.helpMappingLoad">Ponovno učitana XML help mapping datoteka {$filename} pretražujući za {$id}.</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Uključivanje poveznica u proces prijeloma</h4>
 	<p>Kada prilog pretvarate u HTML ili PDF datoteku, provjerite da su sve poveznike u prijavi aktivne.</p>
 	<h4>A. Kada je autor priložio poveznicu uz referencu</h4>
