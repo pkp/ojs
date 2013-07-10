@@ -94,7 +94,7 @@ class JournalGridHandler extends ContextGridHandler {
 			} else {
 				// CASE 2: check if user is in the context of
 				// the press being edited.
-				if ($context->getId() == $contextId) {
+				if ($context && $context->getId() == $contextId) {
 					return $this->_getRedirectEvent($request, $newContextPath, false);
 				}
 			}
