@@ -728,7 +728,7 @@ class Upgrade extends Installer {
 		// Articles.
 		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_ARTICLE);
 		$tempStatsDao->update(
-					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, journal_id, issue_id)
+					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
 					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.context_id, pa.issue_id
 					FROM usage_stats_temporary_records AS tr
 					LEFT JOIN submissions AS a ON a.submission_id = tr.assoc_id
@@ -740,12 +740,12 @@ class Upgrade extends Installer {
 		// Galleys.
 		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_GALLEY);
 		$tempStatsDao->update(
-					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, journal_id, issue_id)
+					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
 					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.submission_id, count(tr.metric), a.context_id, pa.issue_id
 					FROM usage_stats_temporary_records AS tr
 					LEFT JOIN submission_galleys AS ag ON ag.galley_id = tr.assoc_id
 					LEFT JOIN submissions AS a ON a.submission_id = ag.submission_id
-					LEFT JOIN published_articles AS pa ON pa.submission_id = ag.submission_id
+					LEFT JOIN published_submissions AS pa ON pa.submission_id = ag.submission_id
 					WHERE tr.load_id = ? AND tr.assoc_type = ? AND a.context_id IS NOT NULL AND pa.issue_id IS NOT NULL
 					GROUP BY tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.file_type, tr.load_id', $params
 		);
