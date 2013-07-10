@@ -13,8 +13,6 @@
  */
 
 import('lib.pkp.controllers.grid.admin.context.ContextGridHandler');
-
-import('controllers.grid.admin.journal.JournalGridRow');
 import('controllers.grid.admin.journal.form.JournalSiteSettingsForm');
 
 class JournalGridHandler extends ContextGridHandler {
@@ -23,61 +21,6 @@ class JournalGridHandler extends ContextGridHandler {
 	 */
 	function JournalGridHandler() {
 		parent::ContextGridHandler();
-	}
-
-
-	//
-	// Implement template methods from PKPHandler.
-	//
-	/**
-	 * @see PKPHandler::initialize()
-	 */
-	function initialize($request) {
-		// Load user-related translations.
-		AppLocale::requireComponents(
-			LOCALE_COMPONENT_APP_ADMIN,
-			LOCALE_COMPONENT_APP_MANAGER,
-			LOCALE_COMPONENT_APP_COMMON
-		);
-
-		parent::initialize($request);
-
-		// Basic grid configuration.
-		$this->setTitle('journal.journals');
-	}
-
-
-	//
-	// Implement methods from GridHandler.
-	//
-	/**
-	 * @see GridHandler::getRowInstance()
-	 * @return UserGridRow
-	 */
-	function getRowInstance() {
-		return new JournalGridRow();
-	}
-
-	/**
-	 * @see GridHandler::loadData()
-	 * @param $request PKPRequest
-	 * @return array Grid data.
-	 */
-	function loadData($request) {
-		// Get all journals.
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getAll();
-
-		return $journals->toAssociativeArray();
-	}
-
-	/**
-	 * @see lib/pkp/classes/controllers/grid/GridHandler::setDataElementSequence()
-	 */
-	function setDataElementSequence($request, $rowId, &$journal, $newSequence) {
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journal->setSequence($newSequence);
-		$journalDao->updateObject($journal);
 	}
 
 
