@@ -37,7 +37,6 @@
 	<message key="admin.journals.noneCreated">Chưa có tạp chí nào được khởi tạo.</message>
 	<message key="admin.contexts.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn tạp chí này và tất cả nội dung của tạp chí?</message>
 	<message key="admin.journals.create">Khởi tạp một tạp chí</message>
-	<message key="admin.journals.createInstructions">Quý vị sẽ tự động được bổ nhiệm là người quản lý (Tổng biên tập) tạp chí này. Sau khi tạo một tạp chí mới, đăng nhập vào với tư cách Tổng biên tập để tiếp tục thiết lập cho tạp chí và bổ nhiệm người dùng.</message>
 	<message key="admin.journals.urlWillBe">Địa chỉ của tạp chí sẽ là {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Phải có tên tạp chí.</message>
 	<message key="admin.contexts.form.pathRequired">Phải có đường dẫn.</message>

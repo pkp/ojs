@@ -37,7 +37,6 @@
 	<message key="admin.journals.noneCreated">Inga tidskrifter har skapats.</message>
 	<message key="admin.contexts.confirmDelete">Är du säker på att du vill radera den här tidskriften och allt dess innehåll?</message>
 	<message key="admin.journals.create">Skapa tidskrift</message>
-	<message key="admin.journals.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift, logga in som tidskriftsansvarig för att fortsätta installation och aktivering av användare.</message>
 	<message key="admin.journals.urlWillBe">Tidskriftens URL kommer att vara: {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Titelfältet är obligatoriskt.</message>
 	<message key="admin.contexts.form.pathRequired">Sökvägsfältet är obligatoriskt.</message>

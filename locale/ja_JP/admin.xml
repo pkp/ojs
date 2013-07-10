@@ -36,7 +36,6 @@
 	<message key="admin.journals.noneCreated">雑誌は作成されていません。</message>
 	<message key="admin.contexts.confirmDelete">この雑誌を削除し、すべてのコンテンツを破棄してもよいですか。</message>
 	<message key="admin.journals.create">雑誌の作成</message>
-	<message key="admin.journals.createInstructions">あなたはこの雑誌の管理者として自動的に登録されます。新雑誌の作成後に雑誌の設定やユーザの登録を行うには、管理者としてこの雑誌を指定してください。</message>
 	<message key="admin.journals.urlWillBe">雑誌のURLは、{$sampleUrl} のようになります。</message>
 	<message key="admin.contexts.form.titleRequired">雑誌名は必須です。</message>
 	<message key="admin.contexts.form.pathRequired">パス名は必須です。</message>

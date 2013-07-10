@@ -56,7 +56,6 @@
 	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
 	<message key="admin.contexts.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>
 	<message key="admin.journals.create">Eine Zeitschrift einrichten</message>
-	<message key="admin.journals.createInstructions">Sie werden automatisch als Redakteur/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift eingerichtet haben, loggen Sie sich dort als Redakteur/in ein, fahren Sie mit der Konfiguration fort und tragen Sie Benutzer/innen ein.</message>
 	<message key="admin.journals.urlWillBe"><![CDATA[Die URL der Zeitschrift ist {$sampleUrl}]]></message>
 	<message key="admin.contexts.form.titleRequired">Ein Titel ist erforderlich.</message>
 	<message key="admin.contexts.form.pathRequired">Ein Zugangspfad ist erforderlich.</message>

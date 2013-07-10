@@ -38,7 +38,6 @@
 	<message key="admin.journals.noneCreated">Dergi Oluşturulmadı.</message>
 	<message key="admin.contexts.confirmDelete">Bu dergi ve tüm içeriğini kalıcı olarak silmek istediğinizden emin misiniz?</message>
 	<message key="admin.journals.create">Dergi Oluştur</message>
-	<message key="admin.journals.createInstructions">Otomatik olarak bu derginin yöneticisi olarak kaydedileceksiniz. Yeni bir dergi oluşturduktan sonra, ayarları ile devam edebilmek ve kullanıcı kaydı yapabilmek için yönetici olarak girin.</message>
 	<message key="admin.journals.urlWillBe">Bu dergiyi tanımlayan kısa bir kelime ya da kısaltma olmalıdır. Derginin URL adresi {$sampleUrl} şeklinde olabilir.</message>
 	<message key="admin.contexts.form.titleRequired">Bir başlık gerekli.</message>
 	<message key="admin.contexts.form.pathRequired">Bir yol gerekli.</message>

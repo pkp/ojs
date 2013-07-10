@@ -37,7 +37,6 @@
 	<message key="admin.journals.noneCreated">Δεν έχει δημιουργηθεί  κανένα περιοδικό.</message>
 	<message key="admin.contexts.confirmDelete">Είστε σίγουροι ότι  θέλετε να διαγράψετε μόνιμα αυτό το  περιοδικό και το σύνολο του περιεχομένου  του;</message>
 	<message key="admin.journals.create">Δημιουργία  Περιοδικού</message>
-	<message key="admin.journals.createInstructions">Αυτόματα θα σας  αποδοθεί ο  ρόλος του Διαχειριστή Περιοδικού  για αυτό το περιοδικό. Μόλις δημιουργήσετε  ένα νέο περιοδικό, συνδεθείτε με αυτό ως  Διαχειριστής Περιοδικού για να συνεχίσετε με  τις απαραίτητες ρυθμίσεις και τις υπόλοιπες  αναθέσεις - αποδόσεις ρόλων.</message>
 	<message key="admin.journals.urlWillBe">Το URL του περιοδικού θα  είναι {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Η συμπλήρωση του  τίτλου περιοδικού είναι υποχρεωτική.</message>
 	<message key="admin.contexts.form.pathRequired">Η συμπλήρωση του  πεδίου της διαδρομής είναι υποχρεωτική.</message>

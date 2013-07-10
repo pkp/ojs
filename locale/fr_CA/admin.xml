@@ -37,7 +37,6 @@
 	<message key="admin.journals.noneCreated">Aucune revue n'a été créée.</message>
 	<message key="admin.contexts.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement cette revue et tout son contenu?</message>
 	<message key="admin.journals.create">Créer une revue</message>
-	<message key="admin.journals.createInstructions">Vous serez inscrit automatiquement en tant que responsable de cette revue. Après avoir créé une nouvelle revue, entrez-y à titre de responsable pour poursuivre sa configuration et pour l'inscription à des rôles des utilisateurs.</message>
 	<message key="admin.journals.urlWillBe">Ça devrait être un mot court ou un acronyme qui identifie la revue. L'URL de la revue sera {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Le titre est obligatoire.</message>
 	<message key="admin.contexts.form.pathRequired">Le chemin est obligatoire.</message>

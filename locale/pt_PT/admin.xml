@@ -37,7 +37,6 @@
 	<message key="admin.journals.noneCreated">Nenhuma revista foi criada.</message>
 	<message key="admin.contexts.confirmDelete">Deseja realmente eliminar permanentemente esta revista e o seu conteúdo?</message>
 	<message key="admin.journals.create">Criar revista</message>
-	<message key="admin.journals.createInstructions">O seu registo como Editor-Gestor da revista será automático. Após a criação de uma revista, aceda-a como gestor e continue com as configurações da revista e registo de utilizadores.</message>
 	<message key="admin.journals.urlWillBe">Geralmente é usado um acrónimo que identifica a revista. O URL da revista será: {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Título obrigatório</message>
 	<message key="admin.contexts.form.pathRequired">Caminho obrigatório.</message>

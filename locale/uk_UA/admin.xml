@@ -40,7 +40,6 @@
        <message key="admin.journals.noneCreated">Журналів не було створено.</message>
        <message key="admin.contexts.confirmDelete">Ви впевнені, що бажаєте назавжди видалити цей журнал і весь його зміст?</message>
        <message key="admin.journals.create">Створити журнал</message>
-       <message key="admin.journals.createInstructions">Вам буде автоматично надана роль менеджера цього журналу. Після створення нового журналу, продовжуйте його створення як менеджер, зробіть необхідні налаштування та розподіліть ролі користувачів.</message>
        <message key="admin.journals.urlWillBe">Це повинно бути коротке слово або акронім, який ідентифікуватиме цей журнал. URL-адресою журналу буде {$sampleUrl}</message>
        <message key="admin.contexts.form.titleRequired">Необхідна назва.</message>
        <message key="admin.contexts.form.pathRequired">Необхідний шлях.</message>

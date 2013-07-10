@@ -36,7 +36,6 @@
 	<message key="admin.journals.noneCreated">No s’ha creat cap revista.</message>
 	<message key="admin.contexts.confirmDelete">Esteu segur/a que voleu suprimir aquesta revista i tots els seus continguts de manera permanent?</message>
 	<message key="admin.journals.create">Crea una revista</message>
-	<message key="admin.journals.createInstructions">Sereu donat/ada d’alta com a administrador/a d’aquesta revista automàticament. Una vegada hàgiu creat una nova revista, entreu-hi com a administrador/a per a configurar-la i donar-hi d’alta els usuaris/usuàries.</message>
 	<message key="admin.journals.urlWillBe">L’URL de la revista serà {$sampleUrl}.</message>
 	<message key="admin.contexts.form.titleRequired">Heu d’introduir un títol.</message>
 	<message key="admin.contexts.form.pathRequired">Heu d’introduir un camí.</message>

@@ -58,7 +58,6 @@
 	<message key="admin.mergerUsers.noneEnrolled">Inskribatutako erabiltzailerik ez.</message>
 	<message key="admin.locale.maybeIncomplete">Markatutako localeak osatu gabe egon daitezke.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko.</message>
-	<message key="admin.journals.createInstructions">Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko.</message>
 	<message key="admin.settings.options">Aukerak</message>
 	<message key="admin.settings.usePaging">Aldizkari ugari dituzten webguneetan, banatu aldizkarien zerrenda hainbat orritan.</message>
 	<message key="admin.settings.journalsList">Aldizkariaren elementuak</message>

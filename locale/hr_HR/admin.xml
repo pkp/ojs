@@ -36,7 +36,6 @@
 	<message key="admin.journals.noneCreated">Nema kreiranih časopisa.</message>
 	<message key="admin.contexts.confirmDelete">Jeste li sigurni da želite trajno izbrisati ovaj časopis i sav njegov sadržaj?</message>
 	<message key="admin.journals.create">Kreiraj časopis</message>
-	<message key="admin.journals.createInstructions">Automatski ćete biti evidentirani  kao glavni urednik ovog časopisa. Po kreiranju novog časopisa, pristupite mu kao glavni urednik kako biste nastavili s podešavanjem i upisom korisnika.</message>
 	<message key="admin.journals.urlWillBe">URL časopisa će biti {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Naslov je obavezan.</message>
 	<message key="admin.contexts.form.pathRequired">Putanja je obavezna.</message>

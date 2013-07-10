@@ -31,7 +31,6 @@
 	<message key="admin.journals.noneCreated">沒有期刊被設置。</message>
 	<message key="admin.contexts.confirmDelete">您確定要永遠刪除這種期刊和它所有的內容？</message>
 	<message key="admin.journals.create">建置期刊</message>
-	<message key="admin.journals.createInstructions">您會自動被指派成為這個期刊的管理員。建立一個新期刊之後，可用管理員的身份登入，繼續設定期刊和指派角色給其他使用者。</message>
 	<message key="admin.journals.urlWillBe">期刊的網址將會是 {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">需要期刊名稱。</message>
 	<message key="admin.contexts.form.pathRequired">需要一個路徑。</message>
