@@ -492,8 +492,14 @@ class Upgrade extends Installer {
 	 */
 	function migrateUserRoles() {
 
-		// First, do Admins.
+		// if there are any user_groups created, then this has already run.  Return immediately in that case.
+
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$userGroupTest = $userGroupDao->retrieve('SELECT count(*) AS total FROM user_groups');
+		$testRow = $userGroupTest->GetRowAssoc(false);
+		if ($testRow['total'] > 0) return true;
+
+		// First, do Admins.
 		// create the admin user group.
 		$userGroupDao->update('INSERT INTO user_groups (user_group_id, context_id, role_id, path, is_default) VALUES (?, ?, ?, ?, ?)', array(1, 0, ROLE_ID_SITE_ADMIN, 'admin', 1));
 		$userResult = $userGroupDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array(0, ROLE_ID_SITE_ADMIN));
