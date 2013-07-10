@@ -197,7 +197,7 @@ class IssueGridHandler extends GridHandler {
 			$issueId = $issueForm->execute($request);
 			return DAO::getDataChangedEvent($issueId);
 		} else {
-			$json = new JSONMessage(false);
+			$json = new JSONMessage(true, $issueForm->fetch($request));
 			return $json->getString();
 		}
 	}
