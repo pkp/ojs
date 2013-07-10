@@ -191,26 +191,6 @@ class JournalGridHandler extends ContextGridHandler {
 		$json = new JSONMessage(false);
 		return $json->getString();
 	}
-
-
-	//
-	// Private helper methods.
-	//
-	/**
-	 * Get the "add context" locale key
-	 * @return string
-	 */
-	protected function _getAddContextKey() {
-		return 'admin.journals.create';
-	}
-
-	/**
-	 * Get the context name locale key
-	 * @return string
-	 */
-	protected function _getContextNameKey() {
-		return 'manager.setup.journalTitle';
-	}
 }
 
 ?>
