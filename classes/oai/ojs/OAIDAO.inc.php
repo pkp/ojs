@@ -219,8 +219,8 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getDateRangeWhereClause()
 	 */
 	function getDateRangeWhereClause($from, $until) {
-		return (isset($from) ? ' AND CASE WHEN COALESCE(dot.date_deleted, a.last_modified) < i.last_modified THEN (i.last_modified >= ' . $this->datetimeToDB($from) . ') ELSE ((dot.date_deleted IS NOT NULL AND dot.date_deleted >= ' . $this->datetimeToDB($from) . ') OR (dot.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) . '))' : '')
-			. (isset($until) ? ' AND CASE WHEN COALESCE(dot.date_deleted, a.last_modified) < i.last_modified THEN (i.last_modified <= ' . $this->datetimeToDB($until) . ') ELSE ((dot.date_deleted IS NOT NULL AND dot.date_deleted <= ' . $this->datetimeToDB($until) . ') OR (dot.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) . '))' : '')
+		return (isset($from) ? ' AND CASE WHEN COALESCE(dot.date_deleted, a.last_modified) < i.last_modified THEN (i.last_modified >= ' . $this->datetimeToDB($from) . ') ELSE ((dot.date_deleted IS NOT NULL AND dot.date_deleted >= ' . $this->datetimeToDB($from) . ') OR (dot.date_deleted IS NULL AND a.last_modified >= ' . $this->datetimeToDB($from) . ')) END' : '')
+			. (isset($until) ? ' AND CASE WHEN COALESCE(dot.date_deleted, a.last_modified) < i.last_modified THEN (i.last_modified <= ' . $this->datetimeToDB($until) . ') ELSE ((dot.date_deleted IS NOT NULL AND dot.date_deleted <= ' . $this->datetimeToDB($until) . ') OR (dot.date_deleted IS NULL AND a.last_modified <= ' . $this->datetimeToDB($until) . ')) END' : '')
 			. ' ORDER BY journal_id';
 	}
 
