@@ -37,7 +37,7 @@
 	<message key="admin.journals.journalSettings">杂志设置</message>
 	<message key="admin.journals.noneCreated">没有期刊已经建立.</message>
 	<message key="admin.contexts.confirmDelete">您确定要永久删除此期刊和其所有内容?</message>
-	<message key="admin.journals.create">创建期刊</message>
+	<message key="admin.contexts.create">创建期刊</message>
 	<message key="admin.journals.urlWillBe">应该是一个单一的短词或缩写来标识杂志，期刊URL将是 {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">标题是必须的</message>
 	<message key="admin.contexts.form.pathRequired">路径是必须的</message>

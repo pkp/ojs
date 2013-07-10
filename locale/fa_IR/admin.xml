@@ -36,7 +36,7 @@
 	<message key="admin.journals.journalSettings">تنظمات مجله</message>
 	<message key="admin.journals.noneCreated">هیچ مجله ای تعریف نشده است</message>
 	<message key="admin.contexts.confirmDelete">آیا مطمئنید که می خواهید به طور دائم این مجله و تمام محتویات آن را پاک کنید؟</message>
-	<message key="admin.journals.create">مجله جدید</message>
+	<message key="admin.contexts.create">مجله جدید</message>
 	<message key="admin.journals.urlWillBe">URL مجله این است: {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">عنوان الزامی است</message>
 	<message key="admin.contexts.form.pathRequired">مسیر الزامی است</message>

@@ -37,7 +37,7 @@
 	<message key="admin.journals.journalSettings">Podešavanja časopisa</message>
 	<message key="admin.journals.noneCreated">Nema kreiranih časopisa.</message>
 	<message key="admin.contexts.confirmDelete">Da li ste sigurni da želite trajno obrisati ovaj časopis i njeov sadržaj?</message>
-	<message key="admin.journals.create">Napravi časopis</message>
+	<message key="admin.contexts.create">Napravi časopis</message>
 	<message key="admin.journals.urlWillBe">Ovo bi trebala da bude jedna kratka reč ili akronim koji identifikuje časopis. URL časopisa će biti {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Naslov je obavezan.</message>
 	<message key="admin.contexts.form.pathRequired">Putanja je obavezna.</message>

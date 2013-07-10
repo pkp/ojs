@@ -36,7 +36,7 @@
 	<message key="admin.journals.journalSettings">Impostazioni della rivista</message>
 	<message key="admin.journals.noneCreated">Non è stata creata nessuna rivista.</message>
 	<message key="admin.contexts.confirmDelete">Sei sicuro di voler cancellare definitivamente questa rivista e tutti i suoi contenuti?</message>
-	<message key="admin.journals.create">Crea una nuova rivista</message>
+	<message key="admin.contexts.create">Crea una nuova rivista</message>
 	<message key="admin.journals.urlWillBe">Utilizzare un termine breve o un acronimo. La URL della rivista sarà {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Inserire un titolo</message>
 	<message key="admin.contexts.form.pathRequired">Inserire un path.</message>

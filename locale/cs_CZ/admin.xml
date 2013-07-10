@@ -35,7 +35,7 @@
 	<message key="admin.journals.journalSettings">Nastavení časopisu</message>
 	<message key="admin.journals.noneCreated">Žádné časopisy nebyly vytvořeny.</message>
 	<message key="admin.contexts.confirmDelete">Jste si jistý, že chcete trvale odstranit tento časopis a veškerý jeho obsah?</message>
-	<message key="admin.journals.create">Vytvořit časopis</message>
+	<message key="admin.contexts.create">Vytvořit časopis</message>
 	<message key="admin.journals.urlWillBe">URL časopisu bude {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Je vyžadován název.</message>
 	<message key="admin.contexts.form.pathRequired">Je vyžadována cesta.</message>

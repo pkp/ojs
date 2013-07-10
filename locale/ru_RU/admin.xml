@@ -37,7 +37,7 @@
 	<message key="admin.journals.journalSettings">Настройки журнала</message>
 	<message key="admin.journals.noneCreated">Нет созданных журналов.</message>
 	<message key="admin.contexts.confirmDelete">Стереть этот журнал навсегда?</message>
-	<message key="admin.journals.create">Создать журнал</message>
+	<message key="admin.contexts.create">Создать журнал</message>
 	<message key="admin.journals.urlWillBe"><![CDATA[Адрес журнала {$path}/&lt;path&gt;]]></message>
 	<message key="admin.contexts.form.titleRequired">Нужно название.</message>
 	<message key="admin.contexts.form.pathRequired">Нужен путь.</message>

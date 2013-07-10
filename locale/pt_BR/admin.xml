@@ -36,7 +36,7 @@
 	<message key="admin.journals.journalSettings">Configurações da revista</message>
 	<message key="admin.journals.noneCreated">Nenhuma revista foi criada.</message>
 	<message key="admin.contexts.confirmDelete">Deseja realmente excluir permanentemente esta revista e seu conteúdo?</message>
-	<message key="admin.journals.create">Criar revista</message>
+	<message key="admin.contexts.create">Criar revista</message>
 	<message key="admin.journals.urlWillBe">Geralmente é usado um acrônimo que identifica o periódico. A URL da revista será: {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">O título é obrigatório</message>
 	<message key="admin.contexts.form.pathRequired">O caminho é obrigatório.</message>

@@ -36,7 +36,7 @@
 	<message key="admin.journals.journalSettings">Paramètres de la revue</message>
 	<message key="admin.journals.noneCreated">Aucune revue n'a été créée.</message>
 	<message key="admin.contexts.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement cette revue et tout son contenu?</message>
-	<message key="admin.journals.create">Créer une revue</message>
+	<message key="admin.contexts.create">Créer une revue</message>
 	<message key="admin.journals.urlWillBe">Ça devrait être un mot court ou un acronyme qui identifie la revue. L'URL de la revue sera {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Le titre est obligatoire.</message>
 	<message key="admin.contexts.form.pathRequired">Le chemin est obligatoire.</message>

@@ -36,7 +36,7 @@
 	<message key="admin.journals.journalSettings">Instellingen tijdschrift</message>
 	<message key="admin.journals.noneCreated">Er zijn geen tijdschriften aangemaakt.</message>
 	<message key="admin.contexts.confirmDelete">Weet u zeker dat u dit tijdschrift en de inhoud daarvan wilt verwijderen?</message>
-	<message key="admin.journals.create">Creëer tijdschrift</message>
+	<message key="admin.contexts.create">Creëer tijdschrift</message>
 	<message key="admin.journals.urlWillBe">De URL van dit tijdschrift wordt {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Een titel is verplicht.</message>
 	<message key="admin.contexts.form.pathRequired">Een pad is verplicht.</message>

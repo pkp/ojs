@@ -38,7 +38,7 @@
 	<message key="admin.journals.journalSettings">Setările revistei</message>
 	<message key="admin.journals.noneCreated">Nu a fost creată nicio revistă.</message>
 	<message key="admin.contexts.confirmDelete">Eşti sigur că vrei să ştergi permanent această revistă şi întreg conţinutul său?</message>
-	<message key="admin.journals.create">Creează o revistă</message>
+	<message key="admin.contexts.create">Creează o revistă</message>
 	<message key="admin.journals.urlWillBe">Aici trebuie pus un cuvânt scurt sau un acronim care să identifice unic revista. URL-ul revistei va fi {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Este nevoie de un titlu.</message>
 	<message key="admin.contexts.form.pathRequired">Este necesară o cale.</message>

@@ -37,7 +37,7 @@
 	<message key="admin.journals.journalSettings">ജേണല്‍ ക്രമീകരണങ്ങള്‍</message>
 	<message key="admin.journals.noneCreated">ജേണലുകള്‍ ഒന്നും തന്നെ സൃഷ്ടിക്കപ്പെട്ടിട്ടില്ല.</message>
 	<message key="admin.contexts.confirmDelete">ഈ ജേണലും അതിന്റെ സകല ഉള്ളടക്കവും സ്ഥിരമായി മായ്ക്കണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ?</message>
-	<message key="admin.journals.create">ജേണല്‍ സൃഷ്ടിക്കുക</message>
+	<message key="admin.contexts.create">ജേണല്‍ സൃഷ്ടിക്കുക</message>
 	<message key="admin.journals.urlWillBe">ഇത് ജേണലിനെ സൂചിപ്പിക്കുന്ന ഒരു ഒറ്റവാക്ക് അല്ലെങ്കില്‍ പദസംക്ഷേപം ആയിരിക്കണം.ജേണലിന്റെ യു.ആര്‍.എല്‍ {$sampleUrl} ആയിരിക്കണം.</message>
 	<message key="admin.contexts.form.titleRequired">ഒരു തലക്കെട്ട് ആവശ്യമാണ്.</message>
 	<message key="admin.contexts.form.pathRequired">ഒരു പാത്ത് ആവശ്യമാണ്.</message>

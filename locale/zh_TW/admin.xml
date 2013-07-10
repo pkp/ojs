@@ -30,7 +30,7 @@
 	<message key="admin.journals.journalSettings">期刊設定</message>
 	<message key="admin.journals.noneCreated">沒有期刊被設置。</message>
 	<message key="admin.contexts.confirmDelete">您確定要永遠刪除這種期刊和它所有的內容？</message>
-	<message key="admin.journals.create">建置期刊</message>
+	<message key="admin.contexts.create">建置期刊</message>
 	<message key="admin.journals.urlWillBe">期刊的網址將會是 {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">需要期刊名稱。</message>
 	<message key="admin.contexts.form.pathRequired">需要一個路徑。</message>

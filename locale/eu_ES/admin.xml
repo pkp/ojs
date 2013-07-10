@@ -35,7 +35,7 @@
 	<message key="admin.journals.journalSettings">Aldizkariaren ezarpenak</message>
 	<message key="admin.journals.noneCreated">Ez da aldizkaririk sortu.</message>
 	<message key="admin.contexts.confirmDelete">Ziur zaude betiko ezabatu nahi dituzula aldizkari hau eta bere eduki osoa?</message>
-	<message key="admin.journals.create">Sortu aldizkaria</message>
+	<message key="admin.contexts.create">Sortu aldizkaria</message>
 	<message key="admin.journals.urlWillBe">Aldizkariaren URLa {$sampleUrl} izango da.</message>
 	<message key="admin.contexts.form.titleRequired">Titulu bat eman behar da.</message>
 	<message key="admin.contexts.form.pathRequired">Bidea zehaztu behar da.</message>

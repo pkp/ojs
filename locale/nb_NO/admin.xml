@@ -30,7 +30,7 @@
 	<message key="admin.journals.journalSettings">Tidsskriftinnstillinger</message>
 	<message key="admin.journals.noneCreated">Ingen tidsskrift er opprettet.</message>
 	<message key="admin.contexts.confirmDelete">Er du sikker på at du vil slette dette tidsskriftet for alltid, også alt innhold?</message>
-	<message key="admin.journals.create">Opprett tidsskrift</message>
+	<message key="admin.contexts.create">Opprett tidsskrift</message>
 	<message key="admin.journals.urlWillBe">Dette bør være ett enkelt kort ord eller akronym som identifiserer tidsskriftet. Tidsskriftets URL vil bli {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">En tittel er påkrevet.</message>
 	<message key="admin.contexts.form.pathRequired">En filsti er påkrevet.</message>
