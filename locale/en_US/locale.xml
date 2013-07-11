@@ -1126,6 +1126,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.type.submissions">Submission Events</message>
 	<message key="notification.type.userComment">A reader has made a comment on "{$title}"</message>
 	<message key="notification.savedIssueMetadata">Issue publication metadata saved.</message>
+	<message key="notification.type.editorAssignmentTask">A new article has been submitted to which an editor needs to be assigned.</message>
 
 	<!--
 	 *
