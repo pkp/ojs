@@ -45,6 +45,10 @@ class NotificationManager extends PKPNotificationManager {
 			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
 				assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE && is_numeric($notification->getAssocId()));
 				return $dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'workflow', 'submission', $notification->getAssocId());
+			case NOTIFICATION_TYPE_REVIEW_ASSIGNMENT:
+				$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO'); /* @var $reviewAssignmentDao ReviewAssignmentDAO */
+				$reviewAssignment = $reviewAssignmentDao->getById($notification->getAssocId());
+				return $dispatcher->url($request, ROUTE_PAGE, $press->getPath(), 'reviewer', 'submission', $reviewAssignment->getSubmissionId());
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'layout');
@@ -161,6 +165,8 @@ class NotificationManager extends PKPNotificationManager {
 				return __('notification.type.submissionComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
 				return __('notification.type.reviewerComment', array('title' => $this->_getArticleTitle($notification)));
+			case NOTIFICATION_TYPE_REVIEW_ASSIGNMENT:
+				return __('notification.type.reviewAssignment');
 			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
 				assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE && is_numeric($notification->getAssocId()));
 				return __('notification.type.editorAssignmentTask');
