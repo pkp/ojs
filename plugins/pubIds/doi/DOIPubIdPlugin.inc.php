@@ -87,9 +87,9 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			$journalId = $pubObject->getJournalId();
 		} else {
 			// Retrieve the published article.
-			assert(is_a($pubObject, 'ArticleFile'));
+			assert(is_a($pubObject, 'ArticleGalley'));
 			$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-			$article =& $articleDao->getPublishedArticleByArticleId($pubObject->getArticleId(), null, true);
+			$article =& $articleDao->getPublishedArticleByArticleId($pubObject->getSubmissionId(), null, true);
 			if (!$article) return null;
 
 			// Now we can identify the journal.

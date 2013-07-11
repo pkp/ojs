@@ -16,11 +16,7 @@
 {include file="article/header.tpl"}
 
 {if $galley}
-	{if $galley->isHTMLGalley()}
-		{$galley->getHTMLContents()}
-	{elseif $galley->isPdfGalley()}
-		{include file="article/pdfViewer.tpl"}
-	{/if}
+	{call_hook name="Templates::Galley::displayGalley" fileId=$fileId}
 {else}
 	<div id="topBar">
 		{if is_a($article, 'PublishedArticle')}{assign var=galleys value=$article->getGalleys()}{/if}
