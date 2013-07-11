@@ -64,7 +64,7 @@ class NotificationsGridCellProvider extends PKPNotificationsGridCellProvider {
 						break;
 					case ASSOC_TYPE_REVIEW_ROUND:
 						$reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
-						$reviewRound = $reviewRoundDao->getReviewRoundById($notification->getAssocId());
+						$reviewRound = $reviewRoundDao->getById($notification->getAssocId());
 						assert(is_a($reviewRound, 'ReviewRound'));
 						$articleId = $reviewRound->getSubmissionId();
 						break;
