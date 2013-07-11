@@ -1057,8 +1057,9 @@ class SectionEditorSubmissionDAO extends DAO {
 				r.date_notified IS NOT NULL AND
 				r.date_completed IS NULL AND
 				r.cancelled = 0 AND
-				a.journal_id = ?
-			GROUP BY r.reviewer_id',
+				a.journal_id = ? AND
+				a.status = ' . STATUS_QUEUED
+			. ' GROUP BY r.reviewer_id',
 			(int) $journalId
 		);
 		while (!$result->EOF) {
