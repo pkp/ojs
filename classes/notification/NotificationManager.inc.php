@@ -147,7 +147,7 @@ class NotificationManager extends PKPNotificationManager {
 		assert(isset($type));
 
 		$message = null;
-		HookRegistry::call('NotificationManager::getNotificationContents', array(&$notification, &$message));
+		HookRegistry::call('NotificationManager::getNotificationMessage', array(&$notification, &$message));
 		if($message) return $message;
 
 		switch ($type) {
@@ -205,7 +205,7 @@ class NotificationManager extends PKPNotificationManager {
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
 				return __('plugins.generic.booksForReview.notification.authorRemoved');
 			default:
-				return parent::getNotificationContents($request, $notification);
+				return parent::getNotificationMessage($request, $notification);
 		}
 	}
 
