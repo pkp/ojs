@@ -284,6 +284,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setSequence($row['seq']);
 		$galley->setRemoteURL($row['remote_url']);
 		$galley->setIsAvailable($row['is_available']);
+		$galley->setGalleyType($row['galley_type']);
 
 		$this->getDataObjectSettings('article_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
@@ -299,9 +300,9 @@ class ArticleGalleyDAO extends DAO {
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
-				(submission_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url, is_available)
+				(submission_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url, is_available, galley_type)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				(int) $galley->getSubmissionId(),
 				0,
@@ -312,6 +313,7 @@ class ArticleGalleyDAO extends DAO {
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSequence(),
 				$galley->getRemoteURL(),
 				$galley->getIsAvailable(),
+				$galley->getGalleyType(),
 			)
 		);
 		$galley->setId($this->getInsertId());
@@ -337,7 +339,8 @@ class ArticleGalleyDAO extends DAO {
 					style_file_id = ?,
 					seq = ?,
 					remote_url = ?,
-					is_available = ?
+					is_available = ?,
+					galley_type = ?
 				WHERE galley_id = ?',
 			array(
 				0,
@@ -348,6 +351,7 @@ class ArticleGalleyDAO extends DAO {
 				$galley->getSequence(),
 				$galley->getRemoteURL(),
 				(int) $galley->getIsAvailable(),
+				$galley->getGalleyType(),
 				(int) $galley->getId(),
 			)
 		);
@@ -416,19 +420,6 @@ class ArticleGalleyDAO extends DAO {
 
 		$result->Close();
 		return $returner;
-	}
-
-	/**
-	 * Increment the views count for a galley.
-	 * @param $galleyId int
-	 */
-	function incrementViews($galleyId) {
-		if ( !HookRegistry::call('ArticleGalleyDAO::incrementGalleyViews', array(&$galleyId)) ) {
-			return $this->update(
-				'UPDATE submission_galleys SET views = views + 1 WHERE galley_id = ?',
-				(int) $galleyId
-			);
-		} else return false;
 	}
 
 	/**

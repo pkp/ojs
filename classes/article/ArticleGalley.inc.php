@@ -29,7 +29,10 @@ class ArticleGalley extends Representation {
 	 * @return boolean
 	 */
 	function isHTMLGalley() {
-		return false;
+		if ($this->getGalleyType() == 'htmlarticlegalleyplugin')
+			return true;
+		else
+			return false;
 	}
 
 	/**
@@ -37,14 +40,10 @@ class ArticleGalley extends Representation {
 	 * @return boolean
 	 */
 	function isPdfGalley() {
-		switch ($this->getFileType()) {
-			case 'application/pdf':
-			case 'application/x-pdf':
-			case 'text/pdf':
-			case 'text/x-pdf':
-				return true;
-			default: return false;
-		}
+		if ($this->getGalleyType() == 'pdfarticlegalleyplugin')
+			return true;
+		else
+			return false;
 	}
 
 	/**
@@ -175,6 +174,70 @@ class ArticleGalley extends Representation {
 	 */
 	function setIsAvailable($isAvailable) {
 		return $this->setData('isAvailable', $isAvailable);
+	}
+
+	/**
+	 * Set the type of this galley, which maps to an articleGalley plugin.
+	 * @param string $galleyType
+	 */
+	function setGalleyType($galleyType) {
+		return $this->setData('galleyType', $galleyType);
+	}
+
+	/**
+	 * Returns the type of this galley.
+	 * @return string
+	 */
+	function getGalleyType() {
+		return $this->getData('galleyType');
+	}
+
+	/**
+	 * Convenience method for fetching the latest revisions of the files for this galley.
+	 * @param $fileType string optional limit to specific file type.
+	 * @return array SubmissionFile
+	 */
+	function getLatestGalleyFiles($fileType = null) {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFiles = $submissionFileDao->getLatestRevisionsByAssocId(
+				ASSOC_TYPE_GALLEY, $this->getId(),
+				$this->getSubmissionId(), SUBMISSION_FILE_PROOF
+			);
+
+		if (!$fileType) {
+			return $submissionFiles;
+		}
+		else {
+			$filteredFiles = array();
+			foreach ($submissionFiles as $id => $file) {
+				if ($file->getFileType() == $fileType) {
+					$filteredFiles[$id] = $file;
+				}
+			}
+
+			return $filteredFiles;
+		}
+	}
+
+	/**
+	 * Attempt to retrieve the first file assigned to this galley.
+	 * @param $fileType string optional limit to specific file type.
+	 * @param $allFiles whether or not to include non-viewable files.
+	 * @return SubmissionFile or null
+	 */
+	function getFirstGalleyFile($fileType = null, $allFiles = false) {
+		$submissionFiles = $this->getLatestGalleyFiles(	$fileType);
+		if (is_array($submissionFiles) && sizeof($submissionFiles) > 0) {
+			if ($allFiles) {
+				return array_shift($submissionFiles);
+			} else { // return first viewable file.
+				foreach ($submissionFiles as $id => $file) {
+					if ($file->getViewable()) return $file;
+				}
+			}
+		}
+
+		return null;
 	}
 }
 
