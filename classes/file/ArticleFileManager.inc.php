@@ -20,6 +20,7 @@
  * [article id]/submission/editor
  * [article id]/submission/copyedit
  * [article id]/submission/layout
+ * [article id]/submission/proof
  * [article id]/supp
  * [article id]/attachment
  */
@@ -201,8 +202,11 @@ class ArticleFileManager extends FileManager {
 	 */
 	function &getFile($fileId, $revision = null) {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		$articleFile =& $submissionFileDao->getRevision($fileId, $revision, null, $this->articleId);
-		return $articleFile;
+		if ($revision != null) {
+			return $submissionFileDao->getRevision($fileId, $revision, null, $this->articleId);
+		} else {
+			return $submissionFileDao->getLatestRevision($fileId, null, $this->articleId);
+		}
 	}
 
 	/**
@@ -268,10 +272,10 @@ class ArticleFileManager extends FileManager {
 	 */
 	function downloadFile($fileId, $revision = null, $inline = false) {
 		$articleFile =& $this->getFile($fileId, $revision);
+
 		if (isset($articleFile)) {
 			$fileType = $articleFile->getFileType();
 			$filePath = $this->filesDir .  $this->fileStageToPath($articleFile->getFileStage()) . '/' . $articleFile->getFileName();
-
 			return parent::downloadFile($filePath, $fileType, $inline);
 
 		} else {
@@ -336,6 +340,8 @@ class ArticleFileManager extends FileManager {
 			case SUBMISSION_FILE_COPYEDIT: return 'submission/copyedit';
 			case SUBMISSION_FILE_LAYOUT: return 'submission/layout';
 			case SUBMISSION_FILE_ATTACHMENT: return 'attachment';
+			case SUBMISSION_FILE_DEPENDENT:
+			case SUBMISSION_FILE_PROOF: return 'submission/proof';
 			case SUBMISSION_FILE_SUBMISSION: default: return 'submission/original';
 		}
 	}
@@ -355,6 +361,8 @@ class ArticleFileManager extends FileManager {
 			case SUBMISSION_FILE_COPYEDIT: return 'CE';
 			case SUBMISSION_FILE_LAYOUT: return 'LE';
 			case SUBMISSION_FILE_ATTACHMENT: return 'AT';
+			case SUBMISSION_FILE_DEPENDENT:
+			case SUBMISSION_FILE_PROOF: return 'PR';
 			case SUBMISSION_FILE_SUBMISSION: default: return 'SM';
 		}
 	}
