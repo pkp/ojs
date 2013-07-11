@@ -44,6 +44,7 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 	 */
 	function getDelegateClassNames() {
 		static $delegateClasses = array(
+			'artworkfile' => 'classes.article.ArtworkFileDAODelegate',
 			'articlefile' => 'classes.article.ArticleFileDAODelegate'
 		);
 		return $delegateClasses;
@@ -54,6 +55,7 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 	 */
 	function getGenreCategoryMapping() {
 		static $genreCategoryMapping = array(
+			GENRE_CATEGORY_ARTWORK => 'artworkfile',
 			GENRE_CATEGORY_DOCUMENT => 'articlefile'
 		);
 		return $genreCategoryMapping;
@@ -68,8 +70,10 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 		// PKPSubmissionFileDAO.
 		return 'SELECT DISTINCT
 				sf.file_id AS submission_file_id, sf.revision AS submission_revision,
-				sf.*
-			FROM	submission_files sf ';
+				af.file_id AS artwork_file_id, af.revision AS artwork_revision,
+				sf.*, af.*
+			FROM	submission_files sf
+				LEFT JOIN submission_artwork_files af ON sf.file_id = af.file_id AND sf.revision = af.revision ';
 	}
 
 
@@ -135,7 +139,13 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 	 * @see PKPSubmissionFileDAO::fromRow()
 	 */
 	function fromRow($row) {
-		$fileImplementation = 'ArticleFile';
+			// Identify the appropriate file implementation for the
+		// given row.
+		if (isset($row['artwork_file_id']) && is_numeric($row['artwork_file_id'])) {
+			$fileImplementation = 'ArtworkFile';
+		} else {
+			$fileImplementation = 'ArticleFile';
+		}
 
 		// Let the superclass instantiate the file.
 		return parent::fromRow($row, $fileImplementation);
