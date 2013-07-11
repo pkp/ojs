@@ -43,7 +43,7 @@ class NotificationManager extends PKPNotificationManager {
 			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
 			case NOTIFICATION_TYPE_METADATA_MODIFIED:
 			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
-				assert($notification->getAssocType() == ASSOC_TYPE_MONOGRAPH && is_numeric($notification->getAssocId()));
+				assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE && is_numeric($notification->getAssocId()));
 				return $dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'workflow', 'submission', $notification->getAssocId());
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
