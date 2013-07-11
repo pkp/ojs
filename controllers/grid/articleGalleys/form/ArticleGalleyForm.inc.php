@@ -69,10 +69,20 @@ class ArticleGalleyForm extends Form {
 		if ($this->_articleGalley) {
 			$templateMgr->assign('articleGalleyId', $this->_articleGalley->getId());
 			$templateMgr->assign('articleGalley', $this->_articleGalley);
+			$templateMgr->assign('galleyType', $this->_articleGalley->getGalleyType());
 		}
 		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 		$templateMgr->assign('enablePublicGalleyId', $journal->getSetting('enablePublicGalleyId'));
 
+		// load the Article Galley plugins.
+		$plugins = PluginRegistry::loadCategory('articleGalleys');
+		$enabledPlugins = array();
+		foreach ($plugins as $plugin) {
+			if ($plugin->getEnabled()) { // plugins must be enabled to be used by article galleys.
+				$enabledPlugins[$plugin->getName()] = $plugin->getDisplayName();
+			}
+		}
+		$templateMgr->assign('enabledPlugins', $enabledPlugins);
 		return parent::fetch($request);
 	}
 
@@ -101,7 +111,8 @@ class ArticleGalleyForm extends Form {
 			$this->_data = array(
 				'label' => $this->_articleGalley->getLabel(),
 				'publicGalleyId' => $this->_articleGalley->getStoredPubId('publisher-id'),
-				'galleyLocale' => $this->_articleGalley->getLocale()
+				'galleyLocale' => $this->_articleGalley->getLocale(),
+				'galleyType' => $this->_articleGalley->getGalleyType(),
 			);
 		} else {
 			$this->_data = array();
@@ -117,6 +128,7 @@ class ArticleGalleyForm extends Form {
 				'label',
 				'publicGalleyId',
 				'galleyLocale',
+				'galleyType',
 			)
 		);
 	}
@@ -142,6 +154,7 @@ class ArticleGalleyForm extends Form {
 				$articleGalley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
 			}
 			$articleGalley->setLocale($this->getData('galleyLocale'));
+			$articleGalley->setGalleyType($this->getData('galleyType'));
 
 			// Update galley in the db
 			$articleGalleyDao->updateGalley($articleGalley);
@@ -155,6 +168,7 @@ class ArticleGalleyForm extends Form {
 			}
 
 			$articleGalley->setLocale($this->getData('galleyLocale'));
+			$articleGalley->setGalleyType($this->getData('galleyType'));
 
 			// Insert new galley into the db
 			$articleGalleyDao->insertGalley($articleGalley);
