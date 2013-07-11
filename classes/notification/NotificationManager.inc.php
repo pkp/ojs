@@ -161,6 +161,9 @@ class NotificationManager extends PKPNotificationManager {
 				return __('notification.type.submissionComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
 				return __('notification.type.reviewerComment', array('title' => $this->_getArticleTitle($notification)));
+			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
+				assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE && is_numeric($notification->getAssocId()));
+				return __('notification.type.editorAssignmentTask');
 			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
 				return __('notification.type.reviewerFormComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
