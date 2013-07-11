@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/articleGalleys/pdfArticleGalley/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.articleGalleys.pdfArticleGalley.displayName">PDF Article Galley</message>
+	<message key="plugins.articleGalleys.pdfArticleGalley.description">This plugin provides rendering support for PDF Article Galleys.</message>
+</locale>
