@@ -26,6 +26,14 @@ class UserDAO extends PKPUserDAO {
 	}
 
 	/**
+	 * Construct a new User object.
+	 * @return User
+	 */
+	function newDataObject() {
+		return new User();
+	}
+
+	/**
 	 * Renew a membership to dateEnd + 1 year
 	 * if the was expired, renew to current date + 1 year
 	 * @param $user User
