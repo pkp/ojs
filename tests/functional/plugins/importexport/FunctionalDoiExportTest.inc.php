@@ -44,7 +44,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	protected function getAffectedTables() {
 		return array(
 			'plugin_settings', 'issue_settings', 'submission_settings',
-			'article_galley_settings', 'article_supp_file_settings',
+			'submission_galley_settings', 'article_supp_file_settings',
 			'journal_settings', 'notifications', 'notification_settings'
 		);
 	}

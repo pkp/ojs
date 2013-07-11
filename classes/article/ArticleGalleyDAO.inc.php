@@ -78,10 +78,10 @@ class ArticleGalleyDAO extends DAO {
 	function pubIdExists($pubIdType, $pubId, $galleyId, $journalId) {
 		$result = $this->retrieve(
 			'SELECT COUNT(*)
-			FROM article_galley_settings ags
-				INNER JOIN submission_galleys ag ON ags.galley_id = ag.galley_id
-				INNER JOIN submissions a ON ag.submission_id = a.submission_id
-			WHERE ags.setting_name = ? AND ags.setting_value = ? AND ags.galley_id <> ? AND a.context_id = ?',
+			FROM submission_galley_settings sgs
+				INNER JOIN submission_galleys sg ON sgs.galley_id = sg.galley_id
+				INNER JOIN submissions s ON sg.submission_id = s.submission_id
+			WHERE sgs.setting_name = ? AND sgs.setting_value = ? AND sgs.galley_id <> ? AND s.context_id = ?',
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
@@ -131,11 +131,11 @@ class ArticleGalleyDAO extends DAO {
 				INNER JOIN submissions a ON a.submission_id = g.submission_id
 				LEFT JOIN published_submissions pa ON g.submission_id = pa.submission_id ';
 		if (is_null($settingValue)) {
-			$sql .= 'LEFT JOIN article_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
+			$sql .= 'LEFT JOIN submission_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
 				WHERE	(gs.setting_value IS NULL OR gs.setting_value = "")';
 		} else {
 			$params[] = $settingValue;
-			$sql .= 'INNER JOIN article_galley_settings gs ON g.galley_id = gs.galley_id
+			$sql .= 'INNER JOIN submission_galley_settings gs ON g.galley_id = gs.galley_id
 				WHERE	gs.setting_name = ? AND gs.setting_value = ?';
 		}
 		if ($articleId) {
@@ -250,7 +250,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $galley
 	 */
 	function updateLocaleFields(&$galley) {
-		$this->updateDataObjectSettings('article_galley_settings', $galley, array(
+		$this->updateDataObjectSettings('submission_galley_settings', $galley, array(
 			'galley_id' => $galley->getId()
 		));
 	}
@@ -286,7 +286,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setIsAvailable($row['is_available']);
 		$galley->setGalleyType($row['galley_type']);
 
-		$this->getDataObjectSettings('article_galley_settings', 'galley_id', $row['galley_id'], $galley);
+		$this->getDataObjectSettings('submission_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
 		HookRegistry::call('ArticleGalleyDAO::_returnGalleyFromRow', array(&$galley, &$row));
 
@@ -386,7 +386,7 @@ class ArticleGalleyDAO extends DAO {
 			);
 		}
 		if ($this->getAffectedRows()) {
-			$this->update('DELETE FROM article_galley_settings WHERE galley_id = ?', array((int) $galleyId));
+			$this->update('DELETE FROM submission_galley_settings WHERE galley_id = ?', array((int) $galleyId));
 			$this->deleteImagesByGalley($galleyId);
 		}
 	}
@@ -553,7 +553,7 @@ class ArticleGalleyDAO extends DAO {
 			'setting_type' => 'string',
 			'setting_value' => (string)$pubId
 		);
-		$this->replace('article_galley_settings', $updateArray, $idFields);
+		$this->replace('submission_galley_settings', $updateArray, $idFields);
 	}
 
 	/**
@@ -570,7 +570,7 @@ class ArticleGalleyDAO extends DAO {
 		$galleys =& $this->getGalleysByJournalId($journalId);
 		while ($galley = $galleys->next()) {
 			$this->update(
-				'DELETE FROM article_galley_settings WHERE setting_name = ? AND galley_id = ?',
+				'DELETE FROM submission_galley_settings WHERE setting_name = ? AND galley_id = ?',
 				array(
 					$settingName,
 					(int)$galley->getId()
