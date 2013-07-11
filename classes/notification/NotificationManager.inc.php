@@ -142,7 +142,7 @@ class NotificationManager extends PKPNotificationManager {
 	 * @param $notification Notification
 	 * @return string
 	 */
-	function getNotificationContents($request, $notification) {
+	function getNotificationMessage($request, $notification) {
 		$type = $notification->getType();
 		assert(isset($type));
 
