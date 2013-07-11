@@ -34,13 +34,13 @@ class ArticleFileDAO extends PKPFileDAO {
 		if ($revision == null) {
 			if ($articleId != null) {
 				$result = $this->retrieveLimit(
-					'SELECT a.* FROM article_files a WHERE file_id = ? AND submission_id = ? ORDER BY revision DESC',
+					'SELECT a.* FROM submission_files a WHERE file_id = ? AND submission_id = ? ORDER BY revision DESC',
 					array($fileId, $articleId),
 					1
 				);
 			} else {
 				$result = $this->retrieveLimit(
-					'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision DESC',
+					'SELECT a.* FROM submission_files a WHERE file_id = ? ORDER BY revision DESC',
 					$fileId,
 					1
 				);
@@ -49,12 +49,12 @@ class ArticleFileDAO extends PKPFileDAO {
 		} else {
 			if ($articleId != null) {
 				$result = $this->retrieve(
-					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ? AND submission_id = ?',
+					'SELECT a.* FROM submission_files a WHERE file_id = ? AND revision = ? AND submission_id = ?',
 					array($fileId, $revision, $articleId)
 				);
 			} else {
 				$result = $this->retrieve(
-					'SELECT a.* FROM article_files a WHERE file_id = ? AND revision = ?',
+					'SELECT a.* FROM submission_files a WHERE file_id = ? AND revision = ?',
 					array($fileId, $revision)
 				);
 			}
@@ -84,12 +84,12 @@ class ArticleFileDAO extends PKPFileDAO {
 		// FIXME If "round" is review-specific, it shouldn't be in this table
 		if ($round == null) {
 			$result = $this->retrieve(
-				'SELECT a.* FROM article_files a WHERE file_id = ? ORDER BY revision',
+				'SELECT a.* FROM submission_files a WHERE file_id = ? ORDER BY revision',
 				$fileId
 			);
 		} else {
 			$result = $this->retrieve(
-				'SELECT a.* FROM article_files a WHERE file_id = ? AND round = ? ORDER BY revision',
+				'SELECT a.* FROM submission_files a WHERE file_id = ? AND round = ? ORDER BY revision',
 				array($fileId, $round)
 			);
 		}
@@ -117,12 +117,12 @@ class ArticleFileDAO extends PKPFileDAO {
 
 		if ($end == null) {
 			$result = $this->retrieve(
-				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ?',
+				'SELECT a.* FROM submission_files a WHERE file_id = ? AND revision >= ?',
 				array($fileId, $start)
 			);
 		} else {
 			$result = $this->retrieve(
-				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ? AND revision <= ?',
+				'SELECT a.* FROM submission_files a WHERE file_id = ? AND revision >= ? AND revision <= ?',
 				array($fileId, $start, $end)
 			);
 		}
@@ -147,7 +147,7 @@ class ArticleFileDAO extends PKPFileDAO {
 			return $returner;
 		}
 		$result = $this->retrieve(
-			'SELECT MAX(revision) AS max_revision FROM article_files a WHERE file_id = ?',
+			'SELECT MAX(revision) AS max_revision FROM submission_files a WHERE file_id = ?',
 			$fileId
 		);
 
@@ -171,7 +171,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		$articleFiles = array();
 
 		$result = $this->retrieve(
-			'SELECT * FROM article_files WHERE submission_id = ?',
+			'SELECT * FROM submission_files WHERE submission_id = ?',
 			$articleId
 		);
 
@@ -195,7 +195,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		$articleFiles = array();
 
 		$result = $this->retrieve(
-			'SELECT * FROM article_files WHERE assoc_id = ? AND file_stage = ?',
+			'SELECT * FROM submission_files WHERE assoc_id = ? AND file_stage = ?',
 			array($assocId, $fileStage)
 		);
 
@@ -261,7 +261,7 @@ class ArticleFileDAO extends PKPFileDAO {
 		}
 
 		$this->update(
-			sprintf('INSERT INTO article_files
+			sprintf('INSERT INTO submission_files
 				(' . ($fileId ? 'file_id, ' : '') . 'revision, submission_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, file_stage, date_uploaded, date_modified, round, viewable, assoc_id)
 				VALUES
 				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
@@ -282,7 +282,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 */
 	function updateArticleFile(&$articleFile) {
 		$this->update(
-			sprintf('UPDATE article_files
+			sprintf('UPDATE submission_files
 				SET
 					submission_id = ?,
 					source_file_id = ?,
@@ -336,11 +336,11 @@ class ArticleFileDAO extends PKPFileDAO {
 	function deleteArticleFileById($fileId, $revision = null) {
 		if ($revision == null) {
 			return $this->update(
-				'DELETE FROM article_files WHERE file_id = ?', $fileId
+				'DELETE FROM submission_files WHERE file_id = ?', $fileId
 			);
 		} else {
 			return $this->update(
-				'DELETE FROM article_files WHERE file_id = ? AND revision = ?', array($fileId, $revision)
+				'DELETE FROM submission_files WHERE file_id = ? AND revision = ?', array($fileId, $revision)
 			);
 		}
 	}
@@ -351,7 +351,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 */
 	function deleteArticleFiles($articleId) {
 		return $this->update(
-			'DELETE FROM article_files WHERE submission_id = ?', $articleId
+			'DELETE FROM submission_files WHERE submission_id = ?', $articleId
 		);
 	}
 
@@ -360,7 +360,7 @@ class ArticleFileDAO extends PKPFileDAO {
 	 * @return int
 	 */
 	function getInsertId() {
-		return $this->_getInsertId('article_files', 'file_id');
+		return $this->_getInsertId('submission_files', 'file_id');
 	}
 }
 

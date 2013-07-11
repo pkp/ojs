@@ -481,7 +481,7 @@ class ArticleGalleyDAO extends DAO {
 		$images = array();
 
 		$result = $this->retrieve(
-			'SELECT a.* FROM submission_galley_html_images i, article_files a
+			'SELECT a.* FROM submission_galley_html_images i, submission_files a
 			WHERE i.file_id = a.file_id AND i.galley_id = ?',
 			(int) $galleyId
 		);

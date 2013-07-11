@@ -27,7 +27,7 @@ class SuppFileDAO extends DAO {
 		if ($articleId) $params[] = $articleId;
 
 		$result = $this->retrieve(
-			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ?' . ($articleId?' AND s.article_id = ?':''),
+			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN submission_files a ON (s.file_id = a.file_id) WHERE s.supp_id = ?' . ($articleId?' AND s.article_id = ?':''),
 			$params
 		);
 
@@ -74,7 +74,7 @@ class SuppFileDAO extends DAO {
 
 		$sql = 'SELECT s.*, af.file_name, af.original_file_name, af.file_type, af.file_size, af.date_uploaded, af.date_modified
 			FROM	article_supplementary_files s
-				LEFT JOIN article_files af ON s.file_id = af.file_id
+				LEFT JOIN submission_files af ON s.file_id = af.file_id
 				INNER JOIN submissions a ON a.submission_id = s.article_id
 				LEFT JOIN published_submissions pa ON s.article_id = pa.submission_id ';
 		if (is_null($settingValue)) {
@@ -115,7 +115,7 @@ class SuppFileDAO extends DAO {
 		$suppFiles = array();
 
 		$result = $this->retrieve(
-			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
+			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN submission_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
 			(int) $articleId
 		);
 
@@ -139,7 +139,7 @@ class SuppFileDAO extends DAO {
 				s.*,
 				af.file_name, af.original_file_name, af.file_stage, af.file_type, af.file_size, af.date_uploaded, af.date_modified
 			FROM article_supplementary_files s
-			LEFT JOIN article_files af ON (s.file_id = af.file_id)
+			LEFT JOIN submission_files af ON (s.file_id = af.file_id)
 			INNER JOIN submissions a ON (s.article_id = a.submission_id)
 			WHERE a.journal_id = ?',
 			(int) $journalId
