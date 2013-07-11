@@ -14,6 +14,7 @@
 
 // import grid signoff files grid base classes
 import('controllers.grid.files.signoff.SignoffFilesGridHandler');
+import('controllers.grid.files.galley.GalleyFilesSignoffGridCategoryRow');
 
 // Import file class which contains the SUBMISSION_FILE_* constants.
 import('lib.pkp.classes.submission.SubmissionFile');
@@ -34,7 +35,24 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 			ASSOC_TYPE_GALLEY
 		);
 
+		$this->addRoleAssignment(
+			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR),
+			array('dependentFiles')
+		);
+
 		$this->setEmptyCategoryRowText('grid.noAuditors');
+	}
+
+	function authorize($request, $args, $roleAssignments){
+
+		// If a file ID was specified, authorize it.  dependentFiles requires this.
+		// fileId corresponds to the main galley file that these other files depend on.
+		if ($request->getUserVar('fileId')) {
+			import('classes.security.authorization.SubmissionFileAccessPolicy');
+			$this->addPolicy(new SubmissionFileAccessPolicy($request, $args, $roleAssignments, SUBMISSION_FILE_ACCESS_MODIFY));
+		}
+
+		return parent::authorize($request, $args, $roleAssignments);
 	}
 
 	//
@@ -88,6 +106,36 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 			parent::getRequestArgs(),
 			array('articleGalleyId' => $this->getAssocId())
 		);
+	}
+
+	/**
+	 * Get the row handler - override the default row handler
+	 * @return CopyeditingFilesGridRow
+	 */
+	function getCategoryRowInstance() {
+		$galley = $this->getGalley();
+		$row = new GalleyFilesSignoffGridCategoryRow($galley->getId(), $this->getStageId());
+		$submission = $this->getSubmission();
+		$row->setCellProvider(new SignoffFilesGridCellProvider($submission->getId(), $this->getStageId()));
+		$row->addFlag('gridRowStyle', true);
+		return $row;
+	}
+
+	/**
+	 * display the template containing the dependent files grid.
+	 * @param array $args
+	 * @param PKPRequest $request
+	 * @return string
+	 */
+	function dependentFiles($args, $request) {
+
+		$templateMgr = TemplateManager::getManager($request);
+		$submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
+		if ($submissionFile) {
+			$templateMgr->assign('fileId', $submissionFile->getFileId());
+			$templateMgr->assign('submissionId', $submissionFile->getSubmissionId());
+			return $templateMgr->fetchJson('controllers/grid/files/galley/dependentFiles.tpl');
+		}
 	}
 }
 
