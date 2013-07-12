@@ -25,6 +25,8 @@
 </script>
 
 <form class="pkp_form" id="issueForm" method="post" action="{url op="updateIssue" issueId=$issueId}">
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueDataNotification"}
+
 	{if $issue && $issue->getPublished()}
 		{assign var=issuePublished value=true}
 	{else}

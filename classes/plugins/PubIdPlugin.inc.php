@@ -439,6 +439,28 @@ class PubIdPlugin extends Plugin {
 		return false;
 	}
 
+	/**
+	 * Get the journal object.
+	 * @param $journalId integer
+	 * @return Journal
+	 */
+	function &getJournal($journalId) {
+		assert(is_numeric($journalId));
+
+		// Get the journal object from the context (optimized).
+		$request = $this->getRequest();
+		$router = $request->getRouter();
+		$journal = $router->getContext($request); /* @var $journal Journal */
+
+		// Check whether we still have to retrieve the journal from the database.
+		if (!$journal || $journal->getId() != $journalId) {
+			unset($journal);
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journal = $journalDao->getById($journalId);
+		}
+
+		return $journal;
+	}
 
 	//
 	// Private helper methods

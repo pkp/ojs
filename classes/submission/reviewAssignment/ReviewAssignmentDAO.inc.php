@@ -42,7 +42,7 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		$result = $this->retrieve(
 			'SELECT	f.*, r.round as round
 			FROM	review_rounds r,
-				article_files f,
+				submission_files f,
 				submissions a
 			WHERE	a.submission_id = r.submission_id AND
 				r.submission_id = ? AND
@@ -73,7 +73,7 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 		$result = $this->retrieve(
 			'SELECT	f.*, r.reviewer_id, r.review_id
 			FROM	review_assignments r,
-				article_files f
+				submission_files f
 			WHERE	reviewer_file_id = file_id AND
 				viewable = 1 AND
 				r.submission_id = ?

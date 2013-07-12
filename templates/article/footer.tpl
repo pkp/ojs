@@ -42,9 +42,6 @@
 <br /><br />
 {$pageFooter}
 {/if}
-</div><!-- content -->
-</div><!-- main -->
-</div><!-- body -->
 
 {if $defineTermsContextId}
 <script>
@@ -76,6 +73,4 @@
 </script>
 {/if}
 
-</div> <!-- container -->
-</body>
-</html>
+{include file="common/footer.tpl"}

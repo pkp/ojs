@@ -599,7 +599,7 @@
 	<message key="admin.journals.journalSettings">Jóürñål ßèttîñgþ</message>
 	<message key="admin.journals.noneCreated">Ñó jóürñålþ håvè bèèñ çrèåtèð.</message>
 	<message key="admin.contexts.confirmDelete">Ærè ýóü þürè ýóü wåñt tó pèrmåñèñtlý ðèlètè thîþ jóürñål åñð åll óf îtþ çóñtèñtþ?</message>
-	<message key="admin.journals.create">Çrèåtè Jóürñål</message>
+	<message key="admin.contexts.create">Çrèåtè Jóürñål</message>
 	<message key="admin.journals.createInstructions">Ýóü wîll åütómåtîçållý bè èñróllèð åþ thè måñågèr óf thîþ jóürñål. Æftèr çrèåtîñg å ñèw jóürñål, èñtèr ît åþ å måñågèr tó çóñtîñüè wîth îtþ þètüp åñð üþèr èñróllmèñt.</message>
 	<message key="admin.journals.urlWillBe">Thè jóürñål'þ ÜRL wîll bè {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Æ tîtlè îþ rèqüîrèð.</message>

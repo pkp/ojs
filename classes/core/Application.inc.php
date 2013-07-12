@@ -183,6 +183,7 @@ class Application extends PKPApplication {
 			// This is necessary as several other plug-in categories
 			// depend on meta-data. This is a very rudimentary type of
 			// dependency management for plug-ins.
+			'articleGalleys',
 			'metadata',
 			'auth',
 			'blocks',

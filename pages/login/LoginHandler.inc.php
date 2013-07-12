@@ -52,7 +52,7 @@ class LoginHandler extends PKPLoginHandler {
 				$session->setSessionVar('userId', $userId);
 				$session->setUserId($userId);
 				$session->setSessionVar('username', $newUser->getUsername());
-				$request->redirect(null, 'user');
+				$request->redirect(null, 'dashboard');
 			}
 		}
 		$request->redirect(null, $request->getRequestedPage());
@@ -84,7 +84,7 @@ class LoginHandler extends PKPLoginHandler {
 			}
 		}
 
-		$request->redirect(null, 'user');
+		$request->redirect(null, 'dashboard');
 	}
 
 	/**

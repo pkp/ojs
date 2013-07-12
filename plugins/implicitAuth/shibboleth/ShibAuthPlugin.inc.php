@@ -175,9 +175,9 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 		$mailing_address = Config::getVar('security', 'implicit_auth_header_mailing_address');
 		$uin = Config::getVar('security', 'implicit_auth_header_uin');
 
-		// Create a new user object and set it's fields from the header variables
-
-		$user = new User();
+		// Create a new user object and set its fields from the header variables
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$user = $userDao->newDataObject();
 
 		$user->setAuthStr($_SERVER[$uin]);
 
@@ -197,7 +197,6 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 		// Now go insert the user in the db
 
-		$userDao = DAORegistry::getDAO('UserDAO');
 		$userDao->insertObject($user);
 
 		$userId = $user->getId();

@@ -37,13 +37,18 @@ class NotificationManager extends PKPNotificationManager {
 		$router = $request->getRouter();
 		$dispatcher = $router->getDispatcher();
 		$type = $notification->getType();
+		$context = $request->getContext();
 
 		switch ($type) {
 			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
 			case NOTIFICATION_TYPE_METADATA_MODIFIED:
 			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
-				assert($notification->getAssocType() == ASSOC_TYPE_MONOGRAPH && is_numeric($notification->getAssocId()));
-				return $dispatcher->url($request, ROUTE_PAGE, $press->getPath(), 'workflow', 'submission', $notification->getAssocId());
+				assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE && is_numeric($notification->getAssocId()));
+				return $dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'workflow', 'submission', $notification->getAssocId());
+			case NOTIFICATION_TYPE_REVIEW_ASSIGNMENT:
+				$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO'); /* @var $reviewAssignmentDao ReviewAssignmentDAO */
+				$reviewAssignment = $reviewAssignmentDao->getById($notification->getAssocId());
+				return $dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'reviewer', 'submission', $reviewAssignment->getSubmissionId());
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'layout');
@@ -141,12 +146,12 @@ class NotificationManager extends PKPNotificationManager {
 	 * @param $notification Notification
 	 * @return string
 	 */
-	function getNotificationContents($request, $notification) {
+	function getNotificationMessage($request, $notification) {
 		$type = $notification->getType();
 		assert(isset($type));
 
 		$message = null;
-		HookRegistry::call('NotificationManager::getNotificationContents', array(&$notification, &$message));
+		HookRegistry::call('NotificationManager::getNotificationMessage', array(&$notification, &$message));
 		if($message) return $message;
 
 		switch ($type) {
@@ -160,6 +165,11 @@ class NotificationManager extends PKPNotificationManager {
 				return __('notification.type.submissionComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
 				return __('notification.type.reviewerComment', array('title' => $this->_getArticleTitle($notification)));
+			case NOTIFICATION_TYPE_REVIEW_ASSIGNMENT:
+				return __('notification.type.reviewAssignment');
+			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
+				assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE && is_numeric($notification->getAssocId()));
+				return __('notification.type.editorAssignmentTask');
 			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
 				return __('notification.type.reviewerFormComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
@@ -201,7 +211,7 @@ class NotificationManager extends PKPNotificationManager {
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
 				return __('plugins.generic.booksForReview.notification.authorRemoved');
 			default:
-				return parent::getNotificationContents($request, $notification);
+				return parent::getNotificationMessage($request, $notification);
 		}
 	}
 

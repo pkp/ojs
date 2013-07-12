@@ -43,7 +43,9 @@
 	<meta name="DC.Description" xml:lang="{$metaLocale|String_substr:0:2|escape}" content="{$metaValue|strip_tags|escape}"/>
 {/foreach}{/if}
 {if is_a($article, 'PublishedArticle')}{foreach from=$article->getGalleys() item=dcGalley}
-	<meta name="DC.Format" scheme="IMT" content="{$dcGalley->getFileType()|escape}"/>
+	{foreach from=$dcGalley->getLatestGalleyFiles() item=galleyFile}
+		<meta name="DC.Format" scheme="IMT" content="{$galleyFile->getFileType()|escape}"/>
+	{/foreach}
 {/foreach}{/if}
 	<meta name="DC.Identifier" content="{$article->getBestArticleId($currentJournal)|escape}"/>
 {if $article->getPages()}

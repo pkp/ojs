@@ -30,7 +30,7 @@ class FunctionalPubIdsImportExportTest extends FunctionalImportExportBaseTestCas
 	 */
 	protected function getAffectedTables() {
 		return array(
-			'submissions', 'submission_settings', 'submission_galleys', 'article_galley_settings',
+			'submissions', 'submission_settings', 'submission_galleys', 'submission_galley_settings',
 			'article_supplementary_files', 'article_supp_file_settings',
 			'issues', 'issue_settings',
 			'plugin_settings'

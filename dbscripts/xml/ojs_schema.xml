@@ -693,6 +693,9 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="galley_type" type="C2" size="255">
+			<NOTNULL/>
+		</field>
 		<descr>Submission galleys</descr>
 		<index name="submission_galleys_submission_id">
 			<col>submission_id</col>

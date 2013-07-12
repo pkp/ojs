@@ -22,6 +22,7 @@
 	<genre key="DATASET" sortable="0" category="1" localeKey="default.genres.dataSet"/>
 	<genre key="SOURCETEXTS" sortable="0" category="1" localeKey="default.genres.sourceTexts"/>
 	<genre key="MULTIMEDIA" sortable="0" category="1" localeKey="default.genres.multimedia"/>
-	<genre key="IMAGE" sortable="0" category="1" localeKey="default.genres.image"/>
+	<genre key="IMAGE" sortable="0" category="2" localeKey="default.genres.image"/>
+	<genre key="STYLE" sortable="0" category="1" localeKey="default.genres.styleSheet" />
 	<genre key="OTHER" sortable="1" category="1" localeKey="default.genres.other"/>
 </genres>

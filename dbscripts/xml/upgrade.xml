@@ -181,7 +181,7 @@
 		<code function="migrateArticleMetadata" />
 		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" condition="return !$installer->tableExists('user_user_groups');" />
 		<code function="clearDataCache" />
-		<code function="migrateUserRoles" condition="return !$installer->tableExists('user_user_groups');" />
+		<code function="migrateUserRoles" />
 		<schema file="plugins/generic/usageStats/schema.xml" />
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
 		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />

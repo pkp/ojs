@@ -31,6 +31,7 @@ class RegistrationForm extends PKPRegistrationForm {
 	 */
 	function readInputData() {
 		$this->readUserVars(array('openAccessNotification'));
+		return parent::readInputData();
 	}
 
 	/**

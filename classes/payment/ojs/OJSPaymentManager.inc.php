@@ -389,7 +389,7 @@ class OJSPaymentManager extends PaymentManager {
 					$username = Validation::suggestUsername($recipientFirstName, $recipientLastName);
 					$password = Validation::generatePassword();
 
-					$user = new User();
+					$user = $userDao->newDataObject();
 					$user->setUsername($username);
 					$user->setPassword(Validation::encryptCredentials($username, $password));
 					$user->setFirstName($recipientFirstName);

@@ -120,9 +120,11 @@ class SectionEditorSubmission extends Article {
 
 	/**
 	 * Get review assignments for this article.
+	 * @param $stageId int the stage id (not used in OJS, but called this way in PKPReviewerGridHandler)
+	 * @param $round int the review round
 	 * @return array ReviewAssignments
 	 */
-	function &getReviewAssignments($round = null) {
+	function &getReviewAssignments($stageId = null, $round = null) {
 		if ($round == null) {
 			return $this->reviewAssignments;
 		} else {
@@ -173,9 +175,9 @@ class SectionEditorSubmission extends Article {
 		return $this->editorDecisions[$round] = $editorDecisions;
 	}
 
-	// 
+	//
 	// Files
-	//	
+	//
 
 	/**
 	 * Get submission file for this article.
