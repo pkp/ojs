@@ -89,4 +89,5 @@
 	<message key="admin.categories.confirmDelete">Are you sure you wish to delete this category?</message>
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">A category name is required.</message>
+	<message key="admin.presses.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</message>
 </locale>
