@@ -155,16 +155,9 @@ class ArticleHTMLGalley extends ArticleGalley {
 				}
 				break;
 			case 'suppfile':
-				if (isset($urlParts[1]) && isset($urlParts[2])) {
-					$url = Request::url(
-						null,
-						'article',
-						'downloadSuppFile',
-						array($urlParts[1], $urlParts[2]),
-						null,
-						$anchor
-					);
-				}
+				assert(false);
+				// FIXME? Suppfile was previously supported here,
+				// but suspect it went unused
 				break;
 			case 'sitepublic':
 					array_shift($urlParts);

@@ -107,17 +107,6 @@ class ArticleFileManager extends FileManager {
 	}
 
 	/**
-	 * Upload a supp file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 * @return int file ID, is false if failure
-	 */
-	function uploadSuppFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, SUBMISSION_FILE_SUPP, $fileId, $overwrite);
-	}
-
-	/**
 	 * Upload a public file.
 	 * @param $fileName string the name of the file used in the POST form
 	 * @param $fileId int
@@ -160,29 +149,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function copyPublicFile($url, $mimeType, $fileId = null, $overwrite = true) {
 		return $this->handleCopy($url, $mimeType, SUBMISSION_FILE_PUBLIC, $fileId, $overwrite);
-	}
-
-	/**
-	 * Write a supplemental file.
-	 * @param $fileName string The original filename
-	 * @param $contents string The contents to be written to the file
-	 * @param $mimeType string The mime type of the original file
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 */
-	function writeSuppFile($fileName, &$contents, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleWrite($fileName, $contents, $mimeType, SUBMISSION_FILE_SUPP, $fileId, $overwrite);
-	}
-
-	/**
-	 * Copy a supplemental file.
-	 * @param $url string The source URL/filename
-	 * @param $mimeType string The mime type of the original file
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 */
-	function copySuppFile($url, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleCopy($url, $mimeType, SUBMISSION_FILE_SUPP, $fileId, $overwrite);
 	}
 
 	/**

@@ -134,16 +134,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
-			// Index supplementary files
-			$fileDao = DAORegistry::getDAO('SuppFileDAO');
-			$files = $fileDao->getSuppFilesByArticle($article->getId());
-			foreach ($files as $file) {
-				if ($file->getFileId()) {
-					self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
-				}
-				self::suppFileMetadataChanged($file);
-			}
-
 			// Index galley files
 			$fileDao = DAORegistry::getDAO('SubmissionFileDAO');
 			$files = $fileDao->getLatestRevisions(
@@ -179,43 +169,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		if ($hookResult === false || is_null($hookResult)) {
 			$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 			return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
-		}
-	}
-
-	/**
-	 * Signal to the indexing back-end that the metadata of
-	 * a supplementary file changed.
-	 *
-	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
-	 * comments.
-	 *
-	 * @param $suppFile object
-	 */
-	function suppFileMetadataChanged(&$suppFile) {
-		// Check whether a search plug-in jumps in.
-		$hookResult = HookRegistry::call(
-			'ArticleSearchIndex::suppFileMetadataChanged',
-			array($suppFile)
-		);
-
-		// If no search plug-in is activated then fall back to the
-		// default database search implementation.
-		if ($hookResult === false || is_null($hookResult)) {
-			// Update search index
-			$articleId = $suppFile->getArticleId();
-			self::_updateTextIndex(
-				$articleId,
-				SUBMISSION_SEARCH_SUPPLEMENTARY_FILE,
-				array_merge(
-					array_values((array) $suppFile->getTitle(null)),
-					array_values((array) $suppFile->getCreator(null)),
-					array_values((array) $suppFile->getSubject(null)),
-					array_values((array) $suppFile->getTypeOther(null)),
-					array_values((array) $suppFile->getDescription(null)),
-					array_values((array) $suppFile->getSource(null))
-				),
-				$suppFile->getFileId()
-			);
 		}
 	}
 

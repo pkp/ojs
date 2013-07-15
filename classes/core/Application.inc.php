@@ -166,7 +166,6 @@ class Application extends PKPApplication {
 			'SubmissionFileDAO' => 'classes.article.SubmissionFileDAO',
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
 			'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
-			'SuppFileDAO' => 'classes.article.SuppFileDAO',
 			'UserGroupAssignmentDAO' => 'lib.pkp.classes.security.UserGroupAssignmentDAO',
 			'UserDAO' => 'classes.user.UserDAO',
 			'UserSettingsDAO' => 'classes.user.UserSettingsDAO'

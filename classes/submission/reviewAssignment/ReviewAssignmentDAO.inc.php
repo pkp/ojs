@@ -18,7 +18,6 @@ import('lib.pkp.classes.submission.reviewAssignment.PKPReviewAssignmentDAO');
 
 class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	var $articleFileDao;
-	var $suppFileDao;
 	var $submissionCommentsDao;
 
 	/**
@@ -27,7 +26,6 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	function ReviewAssignmentDAO() {
 		parent::PKPReviewAssignmentDAO();
 		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		$this->suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 		$this->submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
 	}
 
