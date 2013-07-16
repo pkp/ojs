@@ -343,18 +343,26 @@ function updateAbstractRequired() {
 	
 	<div id="indexing">
 		<h4>{translate key="submission.indexing"}</h4>
-		{if $journal->getSetting('metaDiscipline') || $journal->getSetting('metaSubjectClass') || $journal->getSetting('metaSubject') || $journal->getSetting('metaCoverage') || $journal->getSetting('metaType')}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
+		{if $journal->getSetting('metaDiscipline') || $journal->getSetting('metaSubjectClass') || $journal->getSetting('metaSubject') || $journal->getSetting('metaCoverage') || $journal->getSetting('metaType')}<p>{translate key="author.submit.eScholsubmissionIndexingDescription"}</p>{/if}
 		<table width="100%" class="data">
 		{if $journal->getSetting('metaDiscipline')}
 		<tr valign="top">
-			<td{if $journal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="30%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
-			<td width="70%" class="value"><input type="text" class="textField" name="discipline[{$formLocale|escape}]" id="discipline" value="{$discipline[$formLocale]|escape}" size="40" maxlength="255" /></td>
-		</tr>
-		{if $journal->getLocalizedSetting('metaDisciplineExamples')}
-		<tr valign="top">
-			<td><span class="instruct">{$journal->getLocalizedSetting('metaDisciplineExamples')|escape}</span></td>
-		</tr>
-		{/if}
+			<td{if $journal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="30%" class="label">{fieldLabel name="discipline" key="article.eScholdiscipline"}</td>
+			<td width="80%" class="value">		
+		  <select multiple class="selectMenu" name="discipline[{$formLocale|escape}][]"  id="discipline">
+		    <option value="disc2932">Architecture</option>
+            <option value="disc1481">Arts and Humanities</option>
+            <option value="disc3688">Business</option>
+            <option value="disc3579">Education</option>
+			<option value="disc3525">Engineering</option>
+            <option value="disc1573">Law</option>
+            <option value="disc1540">Life Sciences</option>
+            <option value="disc3864">Physical Sciences and Mathematics</option>
+			<option value="disc1965">Social and Behavioral Sciences</option>		
+		</select>	
+		
+		</td>
+		</tr>		
 		<tr valign="top">
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
