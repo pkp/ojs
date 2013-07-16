@@ -134,14 +134,22 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
-			// Index galley files
 			$fileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			// Index galley files
 			$files = $fileDao->getLatestRevisions(
 				$article->getId(), WORKFLOW_STAGE_ID_PRODUCTION
 			);
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
 					self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $file->getFileId());
+					// Index dependent files associated with any galley files.
+					$dependentFiles = $fileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $article->getId(), SUBMISSION_FILE_DEPENDENT);
+					foreach ($dependentFiles as $depFile) {
+						if ($depFile->getFileId()) {
+							self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $depFile->getFileId());
+						}
+						self::suppFileMetadataChanged($dependentFile);
+					}
 				}
 			}
 		}
