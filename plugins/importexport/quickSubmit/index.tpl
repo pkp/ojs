@@ -347,7 +347,7 @@ function updateAbstractRequired() {
 		<table width="100%" class="data">
 		{if $journal->getSetting('metaDiscipline')}
 		<tr valign="top">
-			<td{if $journal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="30%" class="label">{fieldLabel name="discipline" key="article.eScholdiscipline"}</td>
+			<td{if $journal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="30%" class="label">{fieldLabel name="discipline" key="article.eScholdiscipline" required="true"}</td>
 			<td width="80%" class="value">		
 		  <select multiple class="selectMenu" name="discipline[{$formLocale|escape}][]"  id="discipline">
 		    <option value="disc2932">Architecture</option>

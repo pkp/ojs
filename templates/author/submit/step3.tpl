@@ -231,7 +231,7 @@ function moveAuthor(dir, authorIndex) {
 	<table width="100%" class="data">
 	{if $currentJournal->getSetting('metaDiscipline')}
 	<tr valign="top">
-		<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.eScholdiscipline"}</td>
+		<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.eScholdiscipline" required="true"}</td>
 		<td width="80%" class="value">		
 		<select multiple class="selectMenu" name="discipline[{$formLocale|escape}][]"  id="discipline">
 		    <option value="disc2932">Architecture</option>

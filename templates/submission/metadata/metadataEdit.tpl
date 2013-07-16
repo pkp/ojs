@@ -267,7 +267,7 @@ function moveAuthor(dir, authorIndex) {
 <table width="100%" class="data">
 	{if $journalSettings.metaDiscipline}
 	<tr valign="top">
-		<td class="label">{fieldLabel name="discipline" key="article.eScholdiscipline"}</td>
+		<td class="label">{fieldLabel name="discipline" key="article.eScholdiscipline" required="true"}</td>
 		{assign var="choices" value=$discipline[$formLocale]}	      		
 		<td class="value">		
 		<select multiple class="selectMenu" name="discipline[{$formLocale|escape}][]" id="discipline">
