@@ -69,6 +69,7 @@
 	<message key="author.submit.addAuthor">Add Author</message>
 	<message key="author.submit.deleteAuthor">Delete Author</message>
 	<message key="author.submit.submissionIndexingDescription">Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</message>
+	<message key="author.submit.eScholsubmissionIndexingDescription">Provide terms for indexing the submission.</message>
 	{*<message key="author.submit.submissionSupportingAgencies">Supporting Agencies</message>*} {* 20120307 BLH Changed wording to reflect eSchol use *}
 	<message key="author.submit.submissionSupportingAgencies">Acknowledgements</message>
 	{*<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies that provided funding or support for the work presented in this submission.</message>*} {* 20120307 BLH Changed wording to reflect eSchol use *}

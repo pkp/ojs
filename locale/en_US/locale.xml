@@ -139,6 +139,7 @@
 	<message key="article.suppFiles">Supplementary File(s)</message>
 	<message key="article.suppFilesAbbrev">Supp. files</message>
 	<message key="article.discipline">Academic discipline and sub-disciplines</message>
+	<message key="article.eScholdiscipline">Academic discipline(s)</message>
 	<message key="article.subjectClassification">Subject classification</message>
 	<message key="article.subject">Keywords</message>
 	<message key="article.coverage">Coverage</message>

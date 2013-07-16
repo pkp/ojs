@@ -102,8 +102,31 @@
 <table width="100%" class="data">
 	{if $currentJournal->getSetting('metaDiscipline')}
 		<tr valign="top">
-			<td width="20%" class="label">{translate key="article.discipline"}</td>
-			<td width="80%" class="value">{$submission->getLocalizedDiscipline()|escape|default:"&mdash;"}</td>
+			<td width="20%" class="label">{translate key="article.eScholdiscipline"}</td>
+			{assign var="choices" value=$submission->getLocalizedDiscipline()}			
+			<td width="80%" class="value">		
+			{foreach from=$choices item=disc}			 
+			     {if $disc == 'disc2932'}
+			     Architecture<br/>
+			     {elseif $disc == 'disc1481'}
+			     Arts and Humanities<br/>
+			     {elseif $disc == 'disc3688'}
+			     Business<br/>
+			 {elseif $disc == 'disc3579'}
+			 Education<br/>
+			 {elseif $disc == 'disc3525'}
+			 Engineering<br/>
+			 {elseif $disc == 'disc1573'}
+			 Law<br/>
+			 {elseif $disc == 'disc1540'}
+			 Life Sciences<br/>
+			 {elseif $disc == 'disc3864'}
+			 Physical Sciences and Mathematics<br/>
+			{elseif $disc == 'disc1965'}
+			 Social and Behavioral Sciences<br/>
+			 {/if}
+			 {/foreach}
+			 </td>
 		</tr>
 		<tr>
 			<td colspan="2" class="separator">&nbsp;</td>

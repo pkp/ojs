@@ -227,18 +227,28 @@ function moveAuthor(dir, authorIndex) {
 {if $section->getMetaIndexed()==1}
 <div id="indexing">
 	<h3>{translate key="submission.indexing"}</h3>
-	{if $currentJournal->getSetting('metaDiscipline') || $currentJournal->getSetting('metaSubjectClass') || $currentJournal->getSetting('metaSubject') || $currentJournal->getSetting('metaCoverage') || $currentJournal->getSetting('metaType')}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
+	{if $currentJournal->getSetting('metaDiscipline') || $currentJournal->getSetting('metaSubjectClass') || $currentJournal->getSetting('metaSubject') || $currentJournal->getSetting('metaCoverage') || $currentJournal->getSetting('metaType')}<p>{translate key="author.submit.eScholsubmissionIndexingDescription"}</p>{/if}
 	<table width="100%" class="data">
 	{if $currentJournal->getSetting('metaDiscipline')}
 	<tr valign="top">
-		<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="discipline[{$formLocale|escape}]" id="discipline" value="{$discipline[$formLocale]|escape}" size="40" maxlength="255" /></td>
+		<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.eScholdiscipline"}</td>
+		<td width="80%" class="value">
+		<!--{*<input type="text" class="textField" name="discipline[{$formLocale|escape}]" id="discipline" value="{$discipline[$formLocale]|escape}" size="40" maxlength="255" />*} -->
+		<select multiple class="selectMenu" name="discipline[{$formLocale|escape}][]"  id="discipline">
+		    <option value="disc2932">Architecture</option>
+            <option value="disc1481">Arts and Humanities</option>
+            <option value="disc3688">Business</option>
+            <option value="disc3579">Education</option>
+			<option value="disc3525">Engineering</option>
+            <option value="disc1573">Law</option>
+            <option value="disc1540">Life Sciences</option>
+            <option value="disc3864">Physical Sciences and Mathematics</option>
+			<option value="disc1965">Social and Behavioral Sciences</option>		
+		</select>	
+		
+		</td>
 	</tr>
-	{if $currentJournal->getLocalizedSetting('metaDisciplineExamples')}
-	<tr valign="top">
-		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaDisciplineExamples')|escape}</span></td>
-	</tr>
-	{/if}
+
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>

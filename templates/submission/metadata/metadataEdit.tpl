@@ -262,18 +262,26 @@ function moveAuthor(dir, authorIndex) {
 <div id="indexing">
 <h3>{translate key="submission.indexing"}</h3>
 
-{if $journalSettings.metaDiscipline || $journalSettings.metaSubjectClass || $journalSettings.metaSubject || $journalSettings.metaCoverage || $journalSettings.metaType}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
+{if $journalSettings.metaDiscipline || $journalSettings.metaSubjectClass || $journalSettings.metaSubject || $journalSettings.metaCoverage || $journalSettings.metaType}<p>{translate key="author.submit.eScholsubmissionIndexingDescription"}</p>{/if}
 
 <table width="100%" class="data">
 	{if $journalSettings.metaDiscipline}
 	<tr valign="top">
-		<td class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
-		<td class="value">
-			<input type="text" name="discipline[{$formLocale|escape}]" id="discipline" value="{$discipline[$formLocale]|escape}" size="40" maxlength="255" class="textField" />
-			{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''}
-			<br />
-			<span class="instruct">{$currentJournal->getLocalizedSetting('metaDisciplineExamples')|escape}</span>
-			{/if}
+		<td class="label">{fieldLabel name="discipline" key="article.eScholdiscipline"}</td>
+		{assign var="choices" value=$discipline[$formLocale]}	      		
+		<td class="value">		
+		<select multiple class="selectMenu" name="discipline[{$formLocale|escape}][]" id="discipline">
+		    <option value="disc2932" {if in_array('disc2932',$choices)}selected="selected"{/if}>Architecture</option>
+            <option value="disc1481" {if in_array('disc1481',$choices)}selected="selected"{/if}>Arts and Humanities</option>
+            <option value="disc3688" {if in_array('disc3688',$choices)}selected="selected"{/if}>Business</option>
+            <option value="disc3579" {if in_array('disc3579',$choices)}selected="selected"{/if}>Education</option>
+			<option value="disc3525" {if in_array('disc3525',$choices)}selected="selected"{/if}>Engineering</option>
+            <option value="disc1573" {if in_array('disc1573',$choices)}selected="selected"{/if}>Law</option>
+            <option value="disc1540" {if in_array('disc1540',$choices)}selected="selected"{/if}>Life Sciences</option>
+            <option value="disc3864" {if in_array('disc3864',$choices)}selected="selected"{/if}>Physical Sciences and Mathematics</option>
+			<option value="disc1965" {if in_array('disc1965',$choices)}selected="selected"{/if}>Social and Behavioral Sciences</option>		
+		</select>	
+
 		</td>
 	</tr>
 	<tr>
