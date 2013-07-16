@@ -194,7 +194,7 @@ class ReferralDAO extends DAO {
 				submissions a
 			WHERE	r.submission_id = a.submission_id AND
 				a.user_id = ? AND
-				a.journal_id = ?' .
+				a.context_id = ?' .
 				($status !== null?' AND r.status = ?':'') . '
 			ORDER BY r.date_added',
 			$params,

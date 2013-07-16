@@ -61,13 +61,13 @@ class ReviewReportDAO extends DAO {
 				LEFT JOIN submission_settings asl ON (a.submission_id=asl.submission_id AND asl.locale=? AND asl.setting_name=?)
 				LEFT JOIN submission_settings aspl ON (a.submission_id=aspl.submission_id AND aspl.locale=a.locale AND aspl.setting_name=?),
 				users u
-			WHERE	u.user_id=r.reviewer_id AND a.journal_id= ?
+			WHERE	u.user_id=r.reviewer_id AND a.context_id= ?
 			ORDER BY article',
 			array(
 				$locale, // Article title
 				'title',
 				'title',
-				$journalId
+				(int) $journalId
 			)
 		);
 		$reviewsReturner = new DBRowIterator($result);
