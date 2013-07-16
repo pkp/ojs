@@ -45,7 +45,7 @@
 
 	<!-- galley files grid -->
 	<message key="submission.galleyFiles">Galley Files</message>
-	<message key="submission.proofReadingDescription"><![CDATA[The layout editor uploads the production-ready files that have been prepared for publication here. Use <em>Assign</em> to designate authors and others to proofread the galleys, with corrected files uploaded for approval prior to publication.]]></message>
+	<message key="submission.proofReadingDescription"><![CDATA[The layout editor uploads the production-ready files that have been prepared for publication here. Use <em>Assign Auditor</em> to designate authors and others to proofread the galleys, with corrected files uploaded for approval prior to publication.]]></message>
 	<message key="grid.action.approveProof">Approve this proof for inclusion in the galley.</message>
 	<message key="grid.action.pageProofApproved">This proof has been approved for inclusion in the galley.</message>
 </locale>
