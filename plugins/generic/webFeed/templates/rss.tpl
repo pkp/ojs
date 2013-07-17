@@ -85,7 +85,8 @@
 				<dc:date>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</dc:date>
 				<prism:publicationDate>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</prism:publicationDate>
 			{/if}
-			<prism:volume>{$issue->getVolume()|escape}</prism:volume>
+			{if $issue->getVolume()}<prism:volume>{$issue->getVolume()|escape}</prism:volume>{/if}
+			{if $issue->getNumber()}<prism:number>{$issue->getNumber()|escape}</prism:number>{/if}
 		</item>
 	{/foreach}{* articles *}
 {/foreach}{* sections *}
