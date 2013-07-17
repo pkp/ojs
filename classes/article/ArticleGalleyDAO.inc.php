@@ -10,11 +10,10 @@
  * @ingroup article
  * @see ArticleGalley
  *
- * @brief Operations for retrieving and modifying ArticleGalley/ArticleHTMLGalley objects.
+ * @brief Operations for retrieving and modifying ArticleGalley objects.
  */
 
 import('classes.article.ArticleGalley');
-import('classes.article.ArticleHTMLGalley');
 
 class ArticleGalleyDAO extends DAO {
 	/** Helper file DAOs. */
@@ -261,22 +260,9 @@ class ArticleGalleyDAO extends DAO {
 	 * @return ArticleGalley
 	 */
 	function &_returnGalleyFromRow($row) {
-		if ($row['html_galley']) {
-			$galley = new ArticleHTMLGalley();
 
-			// HTML-specific settings
-			$galley->setStyleFileId($row['style_file_id']);
-			if ($row['style_file_id']) {
-				$galley->setStyleFile($this->articleFileDao->getArticleFile($row['style_file_id']));
-			}
+		$galley = new ArticleGalley();
 
-			// Retrieve images
-			$images =& $this->getGalleyImages($row['galley_id']);
-			$galley->setImageFiles($images);
-
-		} else {
-			$galley = new ArticleGalley();
-		}
 		$galley->setId($row['galley_id']);
 		$galley->setSubmissionId($row['submission_id']);
 		$galley->setLocale($row['locale']);
@@ -300,16 +286,14 @@ class ArticleGalleyDAO extends DAO {
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
-				(submission_id, file_id, label, locale, html_galley, style_file_id, seq, remote_url, is_available, galley_type)
+				(submission_id, file_id, label, locale, seq, remote_url, is_available, galley_type)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				(int) $galley->getSubmissionId(),
 				0,
 				$galley->getLabel(),
 				$galley->getLocale(),
-				(int) $galley->isHTMLGalley(),
-				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSequence(),
 				$galley->getRemoteURL(),
 				$galley->getIsAvailable(),
@@ -335,8 +319,6 @@ class ArticleGalleyDAO extends DAO {
 					file_id = ?,
 					label = ?,
 					locale = ?,
-					html_galley = ?,
-					style_file_id = ?,
 					seq = ?,
 					remote_url = ?,
 					is_available = ?,
@@ -346,8 +328,6 @@ class ArticleGalleyDAO extends DAO {
 				0,
 				$galley->getLabel(),
 				$galley->getLocale(),
-				(int) $galley->isHTMLGalley(),
-				$galley->isHTMLGalley() ? (int) $galley->getStyleFileId() : null,
 				$galley->getSequence(),
 				$galley->getRemoteURL(),
 				(int) $galley->getIsAvailable(),
@@ -387,7 +367,15 @@ class ArticleGalleyDAO extends DAO {
 		}
 		if ($this->getAffectedRows()) {
 			$this->update('DELETE FROM submission_galley_settings WHERE galley_id = ?', array((int) $galleyId));
-			$this->deleteImagesByGalley($galleyId);
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+
+			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galleyId, $articleId, SUBMISSION_FILE_PROOF);
+			foreach ($galleyFiles as $file) {
+				// delete dependent files for each galley file
+				$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), SUBMISSION_FILE_DEPENDENT);
+			}
+			// delete the galley files.
+			$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galleyId, SUBMISSION_FILE_PROOF);
 		}
 	}
 
@@ -465,73 +453,6 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function getInsertId() {
 		return $this->_getInsertId('submission_galleys', 'galley_id');
-	}
-
-
-	//
-	// Extra routines specific to HTML galleys.
-	//
-
-	/**
-	 * Retrieve array of the images for an HTML galley.
-	 * @param $galleyId int
-	 * @return array ArticleFile
-	 */
-	function &getGalleyImages($galleyId) {
-		$images = array();
-
-		$result = $this->retrieve(
-			'SELECT a.* FROM submission_galley_html_images i, submission_files a
-			WHERE i.file_id = a.file_id AND i.galley_id = ?',
-			(int) $galleyId
-		);
-
-		while (!$result->EOF) {
-			$images[] =& $this->articleFileDao->_returnArticleFileFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		return $images;
-	}
-
-	/**
-	 * Attach an image to an HTML galley.
-	 * @param $galleyId int
-	 * @param $fileId int
-	 */
-	function insertGalleyImage($galleyId, $fileId) {
-		return $this->update(
-			'INSERT INTO submission_galley_html_images
-			(galley_id, file_id)
-			VALUES
-			(?, ?)',
-			array((int) $galleyId, (int) $fileId)
-		);
-	}
-
-	/**
-	 * Delete an image from an HTML galley.
-	 * @param $galleyId int
-	 * @param $fileId int
-	 */
-	function deleteGalleyImage($galleyId, $fileId) {
-		return $this->update(
-			'DELETE FROM submission_galley_html_images
-			WHERE galley_id = ? AND file_id = ?',
-			array((int) $galleyId, (int) $fileId)
-		);
-	}
-
-	/**
-	 * Delete HTML galley images by galley.
-	 * @param $galleyId int
-	 */
-	function deleteImagesByGalley($galleyId) {
-		return $this->update(
-			'DELETE FROM submission_galley_html_images WHERE galley_id = ?',
-			(int) $galleyId
-		);
 	}
 
 	/**

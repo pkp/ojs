@@ -679,11 +679,6 @@
 			<NOTNULL/>
 		</field>
 		<field name="label" type="C2" size="32"/>
-		<field name="html_galley" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="style_file_id" type="I8"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
