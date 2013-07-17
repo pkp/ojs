@@ -49,4 +49,5 @@
 	<message key="grid.action.approveProof">Approve this proof for inclusion in the galley.</message>
 	<message key="grid.action.pageProofApproved">This proof has been approved for inclusion in the galley.</message>
 	<message key="submission.submit.titleAndSummary">Title and Abstract</message>
+	<message key="submission.submit.upload.description">Upload files associated with this submission, including the article, multimedia, data sets, artwork, etc.</message>
 </locale>
