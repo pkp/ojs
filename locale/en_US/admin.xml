@@ -52,6 +52,7 @@
 	<message key="admin.systemVersion">OJS Version</message>
 	<message key="admin.systemConfiguration">OJS Configuration</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</message>
 	<message key="admin.journals.journalSettings">Journal Settings</message>
 	<message key="admin.journals.noneCreated">No journals have been created.</message>
 	<message key="admin.contexts.confirmDelete">Are you sure you want to permanently delete this journal and all of its contents?</message>
