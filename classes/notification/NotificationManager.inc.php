@@ -89,7 +89,9 @@ class NotificationManager extends PKPNotificationManager {
 			foreach ($this->privilegedRoles[$userId][$articleId] as $roleId) {
 				// Get the first role that is in the validRoles list
 				if (in_array($roleId, $validRoles)) {
-					return $roleDao->getPath($roleId);
+					$role = $roleDao->newDataObject();
+					$role->setId($roleId);
+					return $role->getPath();
 				}
 			}
 		} else {
@@ -121,10 +123,16 @@ class NotificationManager extends PKPNotificationManager {
 			$roles[] = ROLE_ID_EDITOR;
 		}
 
-		$editAssignmentDao = DAORegistry::getDAO('EditAssignmentDAO'); /* @var $editAssignmentDao EditAssignmentDAO */
-		$editAssignments = $editAssignmentDao->getEditingSectionEditorAssignmentsByArticleId($articleId);
-		while ($editAssignment = $editAssignments->next()) {
-			if ($userId == $editAssignment->getEditorId()) $roles[] = ROLE_ID_SECTION_EDITOR;
+		// two stage check for section editors.
+		// 1.  verify that the user generally has the SUB_EDITOR role in the journal...
+		// 2.  verify that the user is assigned to a section in the journal.
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		if ($roleDao->userHasRole($article->getJournalId(), $userId, ROLE_ID_SUB_EDITOR)) {
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$editorSections = $sectionDao->getEditorSections($article->getJournalId());
+			if (array_key_exists($userId, $editorSections)) {
+				$roles[] = ROLE_ID_SUB_EDITOR;
+			}
 		}
 
 		// Check if user is author
