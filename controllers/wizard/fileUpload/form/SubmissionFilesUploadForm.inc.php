@@ -21,6 +21,7 @@ class SubmissionFilesUploadForm extends PKPSubmissionFilesUploadForm {
 	 * @param $request Request
 	 * @param $submissionId integer
 	 * @param $uploaderRoles array
+	 * @param $uploaderGroupIds array
 	 * @param $stageId integer One of the WORKFLOW_STAGE_ID_* constants.
 	 * @param $fileStage integer
 	 * @param $revisionOnly boolean
@@ -28,10 +29,10 @@ class SubmissionFilesUploadForm extends PKPSubmissionFilesUploadForm {
 	 * @param $reviewRound ReviewRound
 	 * @param $revisedFileId integer
 	 */
-	function SubmissionFilesUploadForm($request, $submissionId, $stageId, $uploaderRoles, $fileStage,
+	function SubmissionFilesUploadForm($request, $submissionId, $stageId, $uploaderRoles, $uploaderGroupIds, $fileStage,
 			$revisionOnly = false, $reviewRound = null, $revisedFileId = null, $assocType = null, $assocId = null) {
 		parent::PKPSubmissionFilesUploadForm(
-			$request, $submissionId, $stageId, $uploaderRoles, $fileStage, $revisionOnly, $reviewRound, $revisedFileId, $assocType, $assocId
+			$request, $submissionId, $stageId, $uploaderRoles, $uploaderGroupIds, $fileStage, $revisionOnly, $reviewRound, $revisedFileId, $assocType, $assocId
 		);
 	}
 
