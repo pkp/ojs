@@ -285,6 +285,18 @@ class Validation {
 	}
 
 	/**
+	 * Check if the user is logged in as a different user.
+	 * @return boolean
+	 */
+	static function isLoggedInAs() {
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
+		$signedInAs = $session->getSessionVar('signedInAs');
+
+		return isset($signedInAs) && !empty($signedInAs);
+	}
+
+	/**
 	 * Shortcut for checking authorization as site admin.
 	 * @return boolean
 	 */
