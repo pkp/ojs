@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationLookup_pubmed
- */
-
-/**
  * @file plugins/citationLookup/pubmed/PubmedCitationLookupPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

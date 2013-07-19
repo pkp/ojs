@@ -29,7 +29,7 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	// Implement template methods from PKPHandler
 	//
 	/**
-	 * @see PKPHandler::authorize()
+	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		import('classes.security.authorization.GalleyRequiredPolicy');
@@ -52,7 +52,7 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	// Implement methods from FilesListbuilderHandler
 	//
 	/**
-	 * @see FilesListbuilderHandler::getOptions()
+	 * @copydoc FilesListbuilderHandler::getOptions()
 	 */
 	function getOptions() {
 		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
@@ -67,7 +67,7 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	}
 
 	/**
-	 * @see FilesListbuilderHandler::getRequestArgs
+	 * @copydoc FilesListbuilderHandler::getRequestArgs()
 	 */
 	function getRequestArgs() {
 		$galley =& $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);

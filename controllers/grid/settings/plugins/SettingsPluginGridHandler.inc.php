@@ -29,7 +29,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	// Extended methods from PluginGridHandler
 	//
 	/**
-	 * @see PluginGridHandler::loadData()
+	 * @copydoc PluginGridHandler::loadData()
 	 */
 	function getCategoryData($categoryDataElement, $filter) {
 		$plugins = parent::getCategoryData($categoryDataElement, $filter);
@@ -66,7 +66,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	// Overriden template methods.
 	//
 	/**
-	 * @see CategoryGridHandler::getCategoryRowInstance()
+	 * @copydoc CategoryGridHandler::getCategoryRowInstance()
 	 */
 	function getRowInstance() {
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
@@ -76,7 +76,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::authorize()
+	 * @copydoc GridHandler::authorize()
 	 */
 	function authorize($request, $args, $roleAssignments) {
 		$category = $request->getUserVar('category');

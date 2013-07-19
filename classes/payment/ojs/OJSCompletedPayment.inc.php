@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup payment_ojs
- */
-
-/**
  * @file classes/payment/ojs/OJSCompletedPayment.inc.php
  *
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSCompletedPayment
- * @ingroup payment_ojs
+ * @ingroup payment
  * @see OJSCompletedPaymentDAO
  *
  * @brief Class describing a payment ready to be in the database.

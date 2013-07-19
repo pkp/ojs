@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationLookup_crossref
- */
-
-/**
  * @file plugins/citationLookup/crossref/CrossrefCitationLookupPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

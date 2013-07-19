@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationLookup_isbndb
- */
-
-/**
  * @file plugins/citationLookup/isbndb/IsbndbCitationLookupPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

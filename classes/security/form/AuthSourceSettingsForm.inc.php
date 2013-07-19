@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup security_form
- */
-
-/**
  * @file classes/security/form/AuthSourceSettingsForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthSourceSettingsForm
- * @ingroup security_form
+ * @ingroup security
  * @see AuthSource, AuthSourceDAO
  *
  * @brief Form for editing authentication source settings.

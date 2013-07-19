@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_metadata_mods34_schema
- */
-
-/**
  * @file plugins/metadata/mods34/schema/Mods34Schema.inc.php
  *
  * Copyright (c) 2000-2013 John Willinsky

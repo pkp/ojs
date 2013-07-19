@@ -154,7 +154,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 	}
 
 	/**
-	 * @see Form::readInputData()
+	 * @copydoc Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(array('waivePublicationFee', 'markAsPaid', 'issueId', 'datePublished', 'accessStatus', 'pages', 'publicArticleId'));

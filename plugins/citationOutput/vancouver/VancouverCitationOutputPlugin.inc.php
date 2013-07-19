@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationOutput_vancouver
- */
-
-/**
  * @file plugins/citationOutput/vancouver/VancouverCitationOutputPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

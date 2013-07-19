@@ -115,7 +115,7 @@ class SectionGridHandler extends SetupGridHandler {
 	// Overridden methods from GridHandler
 	//
 	/**
-	 * @see GridHandler::initFeatures()
+	 * @copydoc GridHandler::initFeatures()
 	 */
 	function initFeatures($request, $args) {
 		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
@@ -131,14 +131,14 @@ class SectionGridHandler extends SetupGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::getDataElementSequence()
+	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementSequence($row) {
 		return $row['seq'];
 	}
 
 	/**
-	 * @see GridHandler::setDataElementSequence()
+	 * @copydoc GridHandler::setDataElementSequence()
 	 */
 	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');

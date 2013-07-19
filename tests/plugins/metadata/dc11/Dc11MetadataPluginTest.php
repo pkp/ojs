@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup tests_plugins_metadata_dc11
- */
-
-/**
  * @file tests/plugins/metadata/dc11/Dc11MetadataPluginTest.inc.php
  *
  * Copyright (c) 2000-2013 John Willinsky

@@ -77,7 +77,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 	/**
 	 * Returns an instance of the form used for reviewing a submission's 'submission' metadata.
-	 * @see PublicationEntryTabHandler::_getPublicationEntrySubmissionReviewForm()
+	 * @copydoc PublicationEntryTabHandler::_getPublicationEntrySubmissionReviewForm()
 	 * @return PKPForm
 	 */
 	function _getPublicationEntrySubmissionReviewForm() {

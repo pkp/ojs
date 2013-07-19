@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_metadata_openurl10
- */
-
-/**
  * @file plugins/metadata/openurl10/Openurl10MetadataPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

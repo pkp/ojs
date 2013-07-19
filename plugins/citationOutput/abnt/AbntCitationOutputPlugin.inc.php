@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationOutput_abnt
- */
-
-/**
  * @file plugins/citationOutput/abnt/AbntCitationOutputPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

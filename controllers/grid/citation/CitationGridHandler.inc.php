@@ -36,7 +36,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	// Implement template methods from PKPHandler
 	//
 	/**
-	 * @see PKPHandler::authorize()
+	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		// Make sure the user can edit the submission in the request.
@@ -46,7 +46,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	}
 
 	/**
-	 * @see PKPHandler::initialize()
+	 * @copydoc PKPHandler::initialize()
 	 */
 	function initialize($request, $args) {
 		// Associate the citation editor with the authorized article.
@@ -62,7 +62,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	// Override methods from PKPCitationGridHandler
 	//
 	/**
-	 * @see PKPCitationGridHandler::exportCitations()
+	 * @copydoc PKPCitationGridHandler::exportCitations()
 	 */
 	function exportCitations($args, $request) {
 		$dispatcher = $this->getDispatcher();

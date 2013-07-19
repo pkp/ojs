@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup subscription_form
- */
- 
-/**
  * @file classes/subscription/form/InstitutionalSubscriptionForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class InstitutionalSubscriptionForm
- * @ingroup subscription_form
+ * @ingroup subscription
  *
  * @brief Form class for institutional subscription create/edits.
  */

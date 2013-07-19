@@ -7,7 +7,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalRTAdmin
- * @ingroup rt_ojs
+ * @ingroup rt
  *
  * @brief OJS-specific Reading Tools administration interface.
  */

@@ -90,7 +90,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	}
 
 	/**
-	 * @see SignoffFilesGridHandler::getRowInstance()
+	 * @copydoc SignoffFilesGridHandler::getRowInstance()
 	 */
 	function getRowInstance() {
 		$row = parent::getRowInstance();
@@ -99,7 +99,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::getRequestArgs()
+	 * @copydoc GridHandler::getRequestArgs()
 	 */
 	function getRequestArgs() {
 		return array_merge(

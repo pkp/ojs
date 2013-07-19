@@ -1,7 +1,4 @@
 <?php
-/**
- * @defgroup classes_statistics
- */
 
 /**
  * @file classes/statistics/MetricsDAO.inc.php
@@ -10,7 +7,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MetricsDAO
- * @ingroup classes_statistics
+ * @ingroup statistics
  *
  * @brief Operations for retrieving and adding statistics data.
  */

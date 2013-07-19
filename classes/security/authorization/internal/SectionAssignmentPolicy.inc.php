@@ -26,14 +26,14 @@ class SectionAssignmentPolicy extends AuthorizationPolicy {
 	 */
 	function SectionAssignmentPolicy($request) {
 		parent::AuthorizationPolicy('user.authorization.seriesAssignment');
-		$this->_request =& $request;
+		$this->_request = $request;
 	}
 
 	//
 	// Implement template methods from AuthorizationPolicy
 	//
 	/**
-	 * @see AuthorizationPolicy::effect()
+	 * @copydoc AuthorizationPolicy::effect()
 	 */
 	function effect() {
 		// Get the user

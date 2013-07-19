@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup rt_ojs_form
- */
-
-/**
  * @file classes/comment/form/CommentForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CommentForm
- * @ingroup rt_ojs_form
+ * @ingroup comment
  * @see Comment, CommentDAO
  *
  * @brief Form to change metadata information for an RT comment.

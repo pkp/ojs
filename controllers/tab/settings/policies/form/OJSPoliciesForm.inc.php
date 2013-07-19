@@ -34,7 +34,7 @@ class OJSPoliciesForm extends PoliciesForm {
 	// Implement template methods from Form.
 	//
 	/**
-	 * @see Form::getLocaleFieldNames()
+	 * @copydoc Form::getLocaleFieldNames()
 	 */
 	function getLocaleFieldNames() {
 		return array_merge(parent::getLocaleFieldNames(), array(

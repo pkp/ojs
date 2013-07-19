@@ -59,8 +59,7 @@ class AdminCategoryForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
-	 * @see Form::readInputData()
+	 * @copydoc Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(array('name'));
@@ -68,6 +67,8 @@ class AdminCategoryForm extends Form {
 
 	/**
 	 * Save category.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function execute($args, $request) {
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');

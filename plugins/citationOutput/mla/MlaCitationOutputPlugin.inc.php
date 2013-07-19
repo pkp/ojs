@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationOutput_mla
- */
-
-/**
  * @file plugins/citationOutput/mla/MlaCitationOutputPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

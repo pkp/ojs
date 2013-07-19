@@ -48,7 +48,7 @@ class ArticleGalleyGridCellProvider extends GridCellProvider {
 	}
 
 	/**
-	 * @see GridCellProvider::getCellActions()
+	 * @copydoc GridCellProvider::getCellActions()
 	 */
 	function getCellActions($request, $row, $column) {
 		$articleGalley =& $row->getData();

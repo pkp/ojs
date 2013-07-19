@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup user_form
- */
-
-/**
  * @file classes/user/form/RegistrationForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

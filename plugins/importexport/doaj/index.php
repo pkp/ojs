@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_native
+ * @defgroup plugins_importexport_doaj
  */
  
 /**
@@ -10,7 +10,7 @@
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup plugins_importexport_native
+ * @ingroup plugins_importexport_doaj
  * @brief Wrapper for native XML import/export plugin.
  *
  */

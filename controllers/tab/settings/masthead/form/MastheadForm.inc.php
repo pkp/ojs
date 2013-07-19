@@ -60,8 +60,7 @@ class MastheadForm extends ContextSettingsForm {
 	// Overridden methods from ContextSettingsForm.
 	//
 	/**
-	 * @see ContextSettingsForm::initData.
-	 * @param $request Request
+	 * @copydoc ContextSettingsForm::initData()
 	 */
 	function initData($request) {
 		parent::initData($request);
@@ -78,7 +77,7 @@ class MastheadForm extends ContextSettingsForm {
 	}
 
 	/**
-	 * @see Form::fetch()
+	 * @copydoc Form::fetch()
 	 */
 	function fetch($request, $params = null) {
 		$site = $request->getSite();
@@ -88,7 +87,7 @@ class MastheadForm extends ContextSettingsForm {
 	}
 
 	/**
-	 * @see ContextSettingsForm::execute()
+	 * @copydoc ContextSettingsForm::execute()
 	 * @param $request Request
 	 */
 	function execute($request) {
@@ -110,7 +109,7 @@ class MastheadForm extends ContextSettingsForm {
 	}
 
 	/**
-	 * @see ListbuilderHandler::updateEntry
+	 * @copydoc ListbuilderHandler::updateEntry()
 	 */
 	function updateEntry($request, $rowId, $newRowId) {
 		$this->deleteEntry($request, $rowId);
@@ -119,7 +118,7 @@ class MastheadForm extends ContextSettingsForm {
 	}
 
 	/**
-	 * @see ListbuilderHandler::deleteEntry
+	 * @copydoc ListbuilderHandler::deleteEntry()
 	 */
 	function deleteEntry($request, $rowId) {
 		if (isset($this->categories[$rowId['name']])) unset($this->categories[$rowId['name']]);
@@ -127,7 +126,7 @@ class MastheadForm extends ContextSettingsForm {
 	}
 
 	/**
-	 * @see ListbuilderHandler::insertEntry
+	 * @copydoc ListbuilderHandler::insertEntry()
 	 */
 	function insertEntry($request, $rowId) {
 		$this->categories[$rowId['name']] = true;
