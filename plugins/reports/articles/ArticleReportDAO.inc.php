@@ -38,7 +38,7 @@ class ArticleReportDAO extends DAO {
 				LEFT JOIN submission_settings asl2 ON (asl2.submission_id=a.submission_id AND asl2.setting_name = ? AND asl2.locale = ?)
 				LEFT JOIN section_settings spl ON (spl.section_id=a.section_id AND spl.setting_name = ? AND spl.locale = ?)
 				LEFT JOIN section_settings sl ON (sl.section_id=a.section_id AND sl.setting_name = ? AND sl.locale = ?)
-			WHERE	a.journal_id = ? AND
+			WHERE	a.context_id = ? AND
 				a.submission_progress = 0
 			ORDER BY a.submission_id',
 			array(
@@ -52,7 +52,7 @@ class ArticleReportDAO extends DAO {
 				$primaryLocale,
 				'title',
 				$locale,
-				$journalId
+				(int) $journalId
 			)
 		);
 		$articlesReturner = new DBRowIterator($result);
@@ -62,7 +62,7 @@ class ArticleReportDAO extends DAO {
 				d.submission_id AS submission_id
 			FROM	edit_decisions d,
 				submissions a
-			WHERE	a.journal_id = ? AND
+			WHERE	a.context_id = ? AND
 				a.submission_progress = 0 AND
 				a.submission_id = d.submission_id
 			GROUP BY d.submission_id',
@@ -109,7 +109,7 @@ class ArticleReportDAO extends DAO {
 					LEFT JOIN author_settings aaas ON (aa.author_id = aaas.author_id AND aaas.setting_name = ? AND aaas.locale = ?)
 					LEFT JOIN author_settings aaasl ON (aa.author_id = aaasl.author_id AND aaasl.setting_name = ? AND aaasl.locale = ?)
 				WHERE
-					a.journal_id = ? AND
+					a.context_id = ? AND
 					a.submission_progress = 0 AND
 					aa.submission_id = ?',
 				array(
@@ -121,7 +121,7 @@ class ArticleReportDAO extends DAO {
 					$primaryLocale,
 					'affiliation',
 					$locale,
-					$journalId,
+					(int) $journalId,
 					$article->getId()
 				)
 			);

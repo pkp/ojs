@@ -2,7 +2,7 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 3.0.0.0_preupdate.xml
+  * 3.0.0_preupdate.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -39,7 +39,6 @@
 		<rename table="published_articles" column="article_id" to="submission_id" />
 		<rename table="published_articles" column="published_article_id" to="published_submission_id" />
 		<rename table="published_articles" to="published_submissions" />
-		<!-- FIXME: Make the following conditional on table/column existence; they're in plugins. -->
 		<!-- article_xml_galleys to submission_xml_galleys -->
 		<rename table="article_xml_galleys" column="article_id" to="submission_id" />
 		<rename table="article_xml_galleys" to="submission_xml_galleys" />
@@ -48,10 +47,5 @@
 		<rename table="article_search_keyword_list" to="submission_search_keyword_list" />
 		<rename table="article_search_object_keywords" to="submission_search_object_keywords" />
 		<rename table="article_html_galley_images" to="submission_html_galley_images" />
-
-		<!-- FIXME: Make the following conditional on table/column existence; they're in plugins. -->
-		<rename table="referrals" column="article_id" to="submission_id" />
-		<rename table="timed_views_log" column="article_id" to="submission_id" />
-		<rename table="books_for_review" column="article_id" to="submission_id" />
 	</sql>
 </data>

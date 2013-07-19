@@ -229,11 +229,8 @@ class MetricsDAO extends DAO {
 						throw new Exception('Cannot load record: invalid galley id.');
 					}
 				} else {
-					$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
-					$articleFile = $suppFileDao->getSuppFile($recordToStore['assoc_id']);
-					if (!is_a($articleFile, 'SuppFile')) {
-						throw new Exception('Cannot load record: invalid supplementary file id.');
-					}
+					assert(false); // Unknown assoc type
+					// FIXME: Previously supplementary files were supported here.
 				}
 				$articleId = $articleFile->getSubmissionId();
 				$isArticleFile = true;

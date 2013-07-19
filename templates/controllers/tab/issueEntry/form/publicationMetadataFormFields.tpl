@@ -49,7 +49,7 @@
 							{else}
 								{assign var=publicArticleId value=0}
 							{/if}
-							{fbvElement type="text" id="publicArticleId" label="editor.issues.publicId" value=$publicArticleId|escape inline=true size=$fbvStyles.size.MEDIUM}
+							{fbvElement type="text" id="publicArticleId" label="editor.issues.publicId" value=$publicArticleId inline=true size=$fbvStyles.size.MEDIUM}
 					{/if}
 					{if $enablePageNumber}
 							{if $publishedArticle}
@@ -57,7 +57,7 @@
 							{else}
 								{assign var=pages value=0}
 							{/if}
-							{fbvElement type="text" id="pages" label="editor.issues.pages" value=$pages|escape inline=true size=$fbvStyles.size.MEDIUM}
+							{fbvElement type="text" id="pages" label="editor.issues.pages" value=$pages inline=true size=$fbvStyles.size.MEDIUM}
 					{/if}
 				{/fbvFormSection}
 			{/fbvFormArea}

@@ -9,11 +9,12 @@
   * Contributed by Andrea Marchitelli - CINECA
   *
   * Browse plugin localization strings for the it_IT locale.
+  * Contributed by Andrea Marchitelli - CINECA.
   -->
  
 <locale name="it_IT" full_name="Italiano">
 	<!-- plugin -->
-	<message key="plugins.generic.browse.displayName">Naviga</message>
+	<message key="plugins.generic.browse.displayName">Navigazione</message>
 	<message key="plugins.generic.browse.description">Questo plugin consente la navigazione per sezioni</message>
 
 	<!-- URN manager options, setting -->

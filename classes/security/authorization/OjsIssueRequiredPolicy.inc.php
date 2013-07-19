@@ -54,10 +54,11 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 		if (!$issue->getPublished() && count(array_intersect(
 			$userRoles,
 			array(
-				ROLE_ID_EDITOR,
 				ROLE_ID_SITE_ADMIN,
+				ROLE_ID_MANAGER,
+				ROLE_ID_EDITOR,
+				ROLE_ID_SECTION_EDITOR,
 				ROLE_ID_ASSISTANT,
-				ROLE_ID_SECTION_EDITOR
 			)
 		))==0) {
 			return AUTHORIZATION_DENY;

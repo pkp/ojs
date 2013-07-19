@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup announcement
- */
-
-/**
  * @file classes/announcement/Announcement.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

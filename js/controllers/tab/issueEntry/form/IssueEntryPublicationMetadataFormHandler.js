@@ -26,7 +26,7 @@
 	 * @param {Object} options form options.
 	 */
 	$.pkp.controllers.tab.issueEntry.form.
-		IssueEntryPublicationMetadataFormHandler = function($form, options) {
+			IssueEntryPublicationMetadataFormHandler = function($form, options) {
 
 		this.parent($form, options);
 
@@ -47,6 +47,7 @@
 					IssueEntryPublicationMetadataFormHandler,
 			$.pkp.controllers.form.AjaxFormHandler);
 
+
 	/**
 	 * Callback that will mark an article as 'payment received'.
 	 *
@@ -64,6 +65,7 @@
 
 		$element.submit();
 	};
+
 
 	/**
 	 * Callback that will waive pament for an article.

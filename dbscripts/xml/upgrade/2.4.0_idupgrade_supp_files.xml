@@ -14,7 +14,7 @@
 <data>
 	<!-- Prepare migration of public ids and DOIs to settings tables -->
 	<sql>
-		<rename table="article_supplementary_files" to="article_supp_files_old" />
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT supp_id, 'pub-id::publisher-id', public_supp_file_id, 'string', '' FROM article_supplementary_files</query>
 
 		<query driver="postgres7">
 			DROP INDEX article_supplementary_files_file_id

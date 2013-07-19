@@ -782,6 +782,7 @@ class Upgrade extends Installer {
 		);
 
 		foreach ($galleyUpdateCases as $case) {
+			$skipQuery = false;
 			$params = array();
 			if ($case['fileType'] == STATISTICS_FILE_TYPE_PDF) {
 				$pdfFileTypeWhereCheck = 'IN';
@@ -801,16 +802,24 @@ class Upgrade extends Installer {
 					WHERE a.submission_id is not null AND ag.views > 0 AND ag.html_galley = ?
 						AND af.file_type ';
 			} else {
-				$selectClause = 'SELECT ?, ?, ?, ?, ig.galley_id, 0, ig.views, i.journal_id, ig.issue_id
-					FROM issue_galleys_stats_migration AS ig
-					LEFT JOIN issues AS i ON ig.issue_id = i.issue_id
-					LEFT JOIN issue_files AS ifi ON ig.file_id = ifi.file_id
-					WHERE ig.views > 0 AND i.issue_id is not null AND ifi.file_type ';
+				if ($this->tableExists('issue_galleys_stats_migration')) {
+					$selectClause = 'SELECT ?, ?, ?, ?, ig.galley_id, 0, ig.views, i.journal_id, ig.issue_id
+						FROM issue_galleys_stats_migration AS ig
+						LEFT JOIN issues AS i ON ig.issue_id = i.issue_id
+						LEFT JOIN issue_files AS ifi ON ig.file_id = ifi.file_id
+						WHERE ig.views > 0 AND i.issue_id is not null AND ifi.file_type ';
+				} else {
+					// Upgrading from a version that
+					// didn't support issue galleys. Skip.
+					$skipQuery = true;
+				}
 			}
 
 			array_push($params, 'application/pdf', 'application/x-pdf', 'text/pdf', 'text/x-pdf');
 
-			$metricsDao->update($insertIntoClause . $selectClause . $pdfFileTypeWhereCheck . ' (?, ?, ?, ?)', $params, false);
+			if (!$skipQuery) {
+				$metricsDao->update($insertIntoClause . $selectClause . $pdfFileTypeWhereCheck . ' (?, ?, ?, ?)', $params, false);
+			}
 		}
 
 		// Published articles.

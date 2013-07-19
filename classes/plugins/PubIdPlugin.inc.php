@@ -131,7 +131,7 @@ class PubIdPlugin extends Plugin {
 	/**
 	 * Get the public identifier.
 	 * @param $pubObject object
-	 *  (Issue, Article, PublishedArticle, ArticleGalley, SuppFile)
+	 *  (Issue, Article, PublishedArticle, ArticleGalley)
 	 * @param $preview boolean
 	 *  when true, the public identifier will not be stored
 	 * @return string
@@ -281,7 +281,7 @@ class PubIdPlugin extends Plugin {
 		// the pubId suffixes only as a pubId with the given suffix may exist
 		// (e.g. through import) even if the suffix itself is not in the
 		// database.
-		$typesToCheck = array('Issue', 'PublishedArticle', 'ArticleGalley', 'SuppFile');
+		$typesToCheck = array('Issue', 'PublishedArticle', 'ArticleGalley');
 		foreach($typesToCheck as $pubObjectType) {
 			switch($pubObjectType) {
 				case 'Issue':
@@ -300,11 +300,6 @@ class PubIdPlugin extends Plugin {
 				case 'ArticleGalley':
 					$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 					$objectsToCheck =& $galleyDao->getGalleysByJournalId($journalId);
-					break;
-
-				case 'SuppFile':
-					$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
-					$objectsToCheck =& $suppFileDao->getSuppFilesByJournalId($journalId);
 					break;
 			}
 
@@ -350,7 +345,7 @@ class PubIdPlugin extends Plugin {
 	/**
 	 * Return the object type.
 	 * @param $pubObject object
-	 *  (Issue, Article, PublishedArticle, ArticleGalley, SuppFile)
+	 *  (Issue, Article, PublishedArticle, ArticleGalley)
 	 * @return array
 	 */
 	function getPubObjectType($pubObject) {
@@ -358,7 +353,6 @@ class PubIdPlugin extends Plugin {
 			'Issue' => 'Issue',
 			'Article' => 'Article',
 			'ArticleGalley' => 'Galley',
-			'SuppFile' => 'SuppFile'
 		);
 		$pubObjectType = null;
 		foreach ($allowedTypes as $allowedType => $pubObjectTypeCandidate) {
@@ -377,7 +371,7 @@ class PubIdPlugin extends Plugin {
 
 	/**
 	 * Set and store a public identifier.
-	 * @param $pubObject Issue|Article|ArticleGalley|SuppFile
+	 * @param $pubObject Issue|Article|ArticleGalley
 	 * @param $pubObjectType string As returned from self::getPubObjectType()
 	 * @param $pubId string
 	 * @return string
@@ -398,7 +392,6 @@ class PubIdPlugin extends Plugin {
 			'Issue' => 'IssueDAO',
 			'Article' => 'ArticleDAO',
 			'Galley' => 'ArticleGalleyDAO',
-			'SuppFile' => 'SuppFileDAO'
 		);
 		$daoName = $daos[$pubObjectType];
 		assert(!empty($daoName));
@@ -470,7 +463,7 @@ class PubIdPlugin extends Plugin {
 	 * @return array
 	 */
 	function _getDAOs() {
-		return array('IssueDAO', 'ArticleDAO', 'ArticleGalleyDAO', 'SuppFileDAO');
+		return array('IssueDAO', 'ArticleDAO', 'ArticleGalleyDAO');
 	}
 }
 

@@ -18,8 +18,8 @@ class PubIdPluginHelper {
 	/**
 	 * Validate the additional form fields from public identifier plugins.
 	 * @param $journalId int
-	 * @param $form object IssueForm, MetadataForm, ArticleGalleyForm or SuppFileForm
-	 * @param $pubObject object An Article, Issue, ArticleGalley or SuppFile
+	 * @param $form object IssueForm, MetadataForm, or ArticleGalleyForm
+	 * @param $pubObject object An Article, Issue, or ArticleGalley
 	 */
 	function validate($journalId, &$form, &$pubObject) {
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
@@ -39,8 +39,8 @@ class PubIdPluginHelper {
 
 	/**
 	 * Init the additional form fields from public identifier plugins.
-	 * @param $form object IssueForm, MetadataForm, ArticleGalleyForm or SuppFileForm
-	 * @param $pubObject object An Article, Issue, ArticleGalley or SuppFile
+	 * @param $form object IssueForm, MetadataForm, or ArticleGalleyForm
+	 * @param $pubObject object An Article, Issue, or ArticleGalley
 	 */
 	function init(&$form, &$pubObject) {
 		if (isset($pubObject)) {
@@ -58,7 +58,7 @@ class PubIdPluginHelper {
 
 	/**
 	 * Read the additional input data from public identifier plugins.
-	 * @param $form object IssueForm, MetadataForm, ArticleGalleyForm or SuppFileForm
+	 * @param $form object IssueForm, MetadataForm, or ArticleGalleyForm
 	 */
 	function readInputData(&$form) {
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
@@ -71,8 +71,8 @@ class PubIdPluginHelper {
 
 	/**
 	 * Set the additional data from public identifier plugins.
-	 * @param $form object IssueForm, MetadataForm, ArticleGalleyForm or SuppFileForm
-	 * @param $pubObject object An Article, Issue, ArticleGalley or SuppFile
+	 * @param $form object IssueForm, MetadataForm, or ArticleGalleyForm
+	 * @param $pubObject object An Article, Issue, or ArticleGalley
 	 */
 	function execute(&$form, &$pubObject) {
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);

@@ -57,7 +57,7 @@ class AuthorDAO extends PKPAuthorDAO {
 				AND aa.last_name = ?
 				AND (asl.setting_value = ?' . (empty($affiliation)?' OR asl.setting_value IS NULL':'') . ')
 				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' .
-				($journalId!==null?(' AND a.journal_id = ?'):''),
+				($journalId!==null?(' AND a.context_id = ?'):''),
 			$params
 		);
 
@@ -122,7 +122,7 @@ class AuthorDAO extends PKPAuthorDAO {
 				JOIN submissions a ON (a.submission_id = aa.submission_id AND a.status = ' . STATUS_PUBLISHED . ')
 				JOIN published_submissions pa ON (pa.submission_id = a.submission_id)
 				JOIN issues i ON (pa.issue_id = i.issue_id AND i.published = 1)
-			WHERE ' . (isset($journalId)?'a.journal_id = ? AND ':'') . '
+			WHERE ' . (isset($journalId)?'a.context_id = ? AND ':'') . '
 				(aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
 				$initialSql . '
 			ORDER BY aa.last_name, aa.first_name',

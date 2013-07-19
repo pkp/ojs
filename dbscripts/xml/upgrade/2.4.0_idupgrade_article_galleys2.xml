@@ -16,9 +16,7 @@
 		<!--
 		  - Migrate public IDs to settings tables.
 		  -->
-		<query>INSERT INTO article_galleys (galley_id, locale, article_id, file_id, label, html_galley, style_file_id, seq) SELECT galley_id, locale, article_id, file_id, label, html_galley, style_file_id, seq FROM article_galleys_old</query>
-		<query driver="postgres7">SELECT SETVAL(pg_get_serial_sequence('article_galleys', 'galley_id'), (SELECT MAX(galley_id) FROM article_galleys)+1)</query>
- 		<query>INSERT INTO article_galley_settings (galley_id, setting_name, setting_value, setting_type, locale) SELECT galley_id, 'pub-id::publisher-id', public_galley_id, 'string', '' FROM article_galleys_old</query>
-		<query>DROP TABLE article_galleys_old</query>
+		<query>INSERT INTO submission_galley_settings (galley_id, setting_name, setting_value, setting_type, locale) SELECT galley_id, 'pub-id::publisher-id', public_galley_id, 'string', '' FROM tmp_public_galley_ids</query>
+		<query>DROP TABLE tmp_public_galley_ids</query>
 	</sql>
 </data>

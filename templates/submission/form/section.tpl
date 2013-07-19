@@ -9,5 +9,5 @@
 {url|assign:"aboutUrl" page="about" op="submissions"}
 {translate|assign:sectionTitle key="author.submit.journalSectionDescription" aboutUrl=$aboutUrl}
 {fbvFormSection label="section.section" description=$sectionTitle translate=false}
-	{fbvElement type="select" id="sectionId" from=$sectionOptions selected=$sectionId translate=false disabled=$readOnly}
+	{fbvElement type="select" id="sectionId" from=$sectionOptions selected=$sectionId translate=false disabled=$readOnly size=$fbvStyles.size.MEDIUM}
 {/fbvFormSection}

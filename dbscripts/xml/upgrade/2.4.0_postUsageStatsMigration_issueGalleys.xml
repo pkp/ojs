@@ -2,21 +2,20 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 2.4.0_postUsageStatsMigration.xml
+  * 2.4.0_postUsageStatsMigration_issueGalleys.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 2.4.0 Deletes temporary tables used in stats migration.
-  * (issue_galleys_stats_migration is dropped elsewhere as it is not present
-  * in all versions under consideration.)
+  * (specific to issue_galleys_stats_migration, which is not present in all
+  * versions.)
   *
   -->
 
 <data>
 	<!-- Bug #8015: Statistics consolidation -->
 	<sql>
-		<drop table="article_galleys_stats_migration" />
-		<drop table="published_articles_stats_migration" />
+		<drop table="issue_galleys_stats_migration" />
 	</sql>
 </data>

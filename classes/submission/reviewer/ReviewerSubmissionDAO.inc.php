@@ -205,7 +205,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE r.reviewer_id = ? ' . ($journalId?	' AND a.journal_id = ? ':'') .
+			WHERE r.reviewer_id = ? ' . ($journalId?	' AND a.context_id = ? ':'') .
 				'AND r.date_notified IS NOT NULL';
 
 		if ($active) {
@@ -254,7 +254,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				LEFT JOIN section s ON (s.section_id = a.section_id)
 				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN review_rounds r2 ON (r.submission_id = r2.submission_id AND r.stage_id = r2.stage_id AND r.round = r2.round)
-			WHERE	a.journal_id = ? AND
+			WHERE	a.context_id = ? AND
 				r.reviewer_id = ? AND
 				r.date_notified IS NOT NULL',
 			array((int) $journalId, (int) $reviewerId)

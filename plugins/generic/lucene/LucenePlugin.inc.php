@@ -131,7 +131,6 @@ class LucenePlugin extends GenericPlugin {
 			HookRegistry::register('ArticleSearchIndex::articleFileChanged', array($this, 'callbackArticleFileChanged'));
 			HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array($this, 'callbackArticleFileDeleted'));
 			HookRegistry::register('ArticleSearchIndex::articleFilesChanged', array($this, 'callbackArticleFilesChanged'));
-			HookRegistry::register('ArticleSearchIndex::suppFileMetadataChanged', array($this, 'callbackSuppFileMetadataChanged'));
 			HookRegistry::register('ArticleSearchIndex::articleDeleted', array($this, 'callbackArticleDeleted'));
 			HookRegistry::register('ArticleSearchIndex::articleChangesFinished', array($this, 'callbackArticleChangesFinished'));
 			HookRegistry::register('ArticleSearchIndex::rebuildIndex', array($this, 'callbackRebuildIndex'));
@@ -592,17 +591,6 @@ class LucenePlugin extends GenericPlugin {
 		assert($hookName == 'ArticleSearchIndex::articleFileDeleted');
 		list($articleId, $type, $assocId) = $params;
 		$this->_solrWebService->markArticleChanged($articleId);
-		return true;
-	}
-
-	/**
-	 * @see ArticleSearchIndex::suppFileMetadataChanged()
-	 */
-	function callbackSuppFileMetadataChanged($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::suppFileMetadataChanged');
-		list($suppFile) = $params; /* @var $suppFile SuppFile */
-		if (!is_a($suppFile, 'SuppFile')) return true;
-		$this->_solrWebService->markArticleChanged($suppFile->getArticleId());
 		return true;
 	}
 

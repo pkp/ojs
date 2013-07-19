@@ -248,6 +248,7 @@
 	<message key="manager.setup.enableUserRegistration.reader">Readers (will receive notifications and be counted as equivalent to a subscriber)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Reviewers (available for reviewing submissions)</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
+	<message key="manager.setup.focusAndScope.description">Enter a statement below, which will appear in About the Journal, that speaks to authors, readers, and librarians about the range of monographs and other items which the press will publish.</message>
 	<message key="manager.setup.focusAndScopeDescription">Enter a statement below, which will appear in About the Journal, that speaks to authors, readers, and librarians about the range of articles and other items which the journal will publish.</message>
 	<message key="manager.setup.focusAndScopeOfJournal">Focus and Scope of Journal</message>
 	<message key="manager.setup.focusScope">Focus and Scope</message>
@@ -350,9 +351,10 @@
 	<message key="manager.setup.onlineIssn">Online ISSN</message>
 	<message key="manager.setup.openAccess">The journal will provide open access to its contents.</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
+	<message key="manager.setup.openAccessPolicy.description">If the journal will provide readers with immediate free access to all published content, enter an Open Access Policy which will appear in About the Journal under Policies.</message>
 	<message key="manager.setup.openAccessPolicyDescription">If the journal will provide readers with immediate free access to all published content, enter an Open Access Policy which will appear in About the Journal under Policies.</message>
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
-	<message key="manager.setup.peerReviewDescription">Outline the journal's peer review policy and processes for readers and authors, including the number of reviewers typically used in reviewing a submission, the criteria by which reviewers are asked to judge submissions, typical time taken to conduct the reviews, and the principles for recruiting reviewers. This will appear in About the Journal.</message>
+	<message key="manager.setup.peerReview.description">Outline the journal's peer review policy and processes for readers and authors, including the number of reviewers typically used in reviewing a submission, the criteria by which reviewers are asked to judge submissions, typical time taken to conduct the reviews, and the principles for recruiting reviewers. This will appear in About the Journal.</message>
 	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
 	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
 	<message key="manager.setup.policies">Policies</message>
@@ -361,6 +363,7 @@
 	<message key="manager.setup.principalContactDescription">This position, which can be treated as a principal editorship, managing editorship, or administrative staff position, will be listed on the homepage of the journal under Contact, along with the Technical Support Contact.</message>
 	<message key="manager.setup.printIssn">Print ISSN</message>
 	<message key="manager.setup.privacyStatement">Privacy Statement</message>
+	<message key="manager.setup.privacyStatement.description">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.privacyStatement2">Privacy statement</message>
 	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>

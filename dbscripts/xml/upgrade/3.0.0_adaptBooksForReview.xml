@@ -2,18 +2,17 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 2.4.0_postTimedViewsMigration.xml
+  * 3.0.0_adaptBooksForReview.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * 2.4.0 Deletes timed views stats table.
-  * 
+  * Database updates XML file (run before schema is reconciled).
+  *
   -->
-
 <data>
-	<!-- Bug #8015: Statistics consolidation -->
 	<sql>
-		<drop table="timed_views_log" />
+		<rename table="books_for_review" column="article_id" to="submission_id" />
 	</sql>
 </data>
+

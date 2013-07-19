@@ -1,7 +1,9 @@
 <?php
 
 /**
- * @defgroup article
+ * @defgroup article Article
+ * Articles, OMP's extension of the generic Submission class in lib-pkp, are
+ * implemented here.
  */
 
 /**

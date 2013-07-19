@@ -8,7 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
-  *
+  * Contributed by Andrea Marchitelli - CINECA.
   -->
 
 <locale name="it_IT" full_name = "Italiano">
@@ -213,7 +213,7 @@
 	<message key="editor.issues.galley">Gabbia del fascicolo</message>
 	<message key="editor.issues.viewingGalley">Vedi la bozza del fascicolo</message>
 	<message key="editor.issues.issueGalleysDescription">Pubblica una gabbia contenente l'intero fascicolo</message>
-	<message key="editor.issues.noneIssueGalleys">Non sono state pubblicate gabbie del fascicolo.</message>
+	<message key="editor.issues.noneIssueGalleys">Non sono state pubblicate gabbie per questo fascicolo.</message>
 	<message key="editor.issues.galleyLabelRequired">Inserire un'etichetta per la gabbia del fascicolo</message>
 	<message key="editor.issues.galleyLocaleRequired">Inserire la lingua della gabbia del fascicolo</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Esiste già un identificatore della gabbia del fascicolo</message>

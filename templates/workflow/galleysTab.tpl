@@ -13,6 +13,7 @@ $(function() {ldelim}
 	$('#galleyTabs').pkpHandler(
 		'$.pkp.controllers.tab.galley.GalleysTabHandler',
 		{ldelim}
+			notScrollable: true,
 			tabsUrl:'{url|escape:javascript router=$smarty.const.ROUTE_PAGE
 				op='galleysTab'
 				submissionId=$submission->getId()

@@ -140,7 +140,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function execute($request) {
 		import('classes.file.IssueFileManager');
-		$articleGalleyIdx = $this->_articleGalley?$this->_articleGalley->getId():null;
+		$articleGalleyId = $this->_articleGalley?$this->_articleGalley->getId():null;
 
 		$journal = $request->getJournal();
 		$user = $request->getUser();
