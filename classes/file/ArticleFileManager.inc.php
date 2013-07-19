@@ -469,7 +469,7 @@ class ArticleFileManager extends FileManager {
 		if (!$fileId) {
 			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
-			$articleFile =& $this->generateDummyFile($this->article);
+			$articleFile = $this->generateDummyFile($this->article);
 		} else {
 			$dummyFile = false;
 			$articleFile = new ArticleFile();
