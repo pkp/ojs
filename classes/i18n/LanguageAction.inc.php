@@ -1,17 +1,13 @@
 <?php
-/**
- * @defgroup admin
- */
 
 /**
  * @file classes/i18n/LanguageAction.inc.php
- * @defgroup admin
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LanguageAction
- * @ingroup admin
+ * @ingroup i18n
  *
  * @brief LanguageAction class.
  */

@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup gifts
- */
-
-/**
  * @file pages/gifts/GiftsHandler.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GiftsHandler
- * @ingroup gifts
+ * @ingroup gift
  *
  * @brief Handle requests to buy gifts
  */

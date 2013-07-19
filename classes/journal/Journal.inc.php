@@ -1,7 +1,9 @@
 <?php
 
 /**
- * @defgroup journal
+ * @defgroup journal Journal
+ * Extensions to the pkp-lib "context" concept to specialize it for use in OJS
+ * in representing Journal objects and journal-specific concerns.
  */
 
 /**

@@ -1,7 +1,8 @@
 <?php
 
 /**
- * @defgroup issue
+ * @defgroup issue Issue
+ * Implement journal issues.
  */
 
 /**

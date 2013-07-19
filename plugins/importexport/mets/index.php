@@ -1,7 +1,8 @@
 <?php
 
 /**
- * @defgroup plugins
+ * @defgroup metsPlugin METS Plugin
+ * Implements the METS import/export plugin.
  */
 
 /**
@@ -10,10 +11,8 @@
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup plugins
+ * @ingroup metsPlugin
  * @brief Wrapper for METS export plugin.
- *
- *
  */
 
 require_once('MetsExportPlugin.inc.php');

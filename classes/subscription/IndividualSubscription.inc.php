@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup subscription
- */
- 
-/**
  * @file classes/subscription/IndividualSubscription.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

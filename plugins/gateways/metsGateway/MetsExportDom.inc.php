@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup GatewayPlugin
- */
-
-/**
  * @file plugins/gateways/metsGateway/MetsExportDom.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MetsExportDom
- * @ingroup GatewayPlugin
+ * @ingroup metsGatewayPlugin
  *
  * @brief MetsExportDom export plugin DOM functions for export
  */

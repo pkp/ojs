@@ -1,7 +1,8 @@
 <?php 
 
 /**
- * @defgroup plugins
+ * @defgroup paypalPlugin PayPal Plugin
+ * Implements a payment handling plugin using the PayPal service.
  */
  
 /**
@@ -10,7 +11,7 @@
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup plugins
+ * @ingroup paypalPlugin
  * @brief Wrapper for PayPal plugin.
  */
  
