@@ -39,6 +39,9 @@ registry_dir = registry
 ; Session cookie name
 session_cookie_name = OJSSID
 
+; Session cookie path; if not specified, defaults to the detected base path
+; session_cookie_path = /
+
 ; Number of days to save login cookie for if user selects to remember
 ; (set to 0 to force expiration at end of current session)
 session_lifetime = 30
