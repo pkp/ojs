@@ -14,7 +14,7 @@
 <data>
 	<!-- Prepare migration of public ids and DOIs to settings tables -->
 	<sql>
-		<rename table="articles" to="articles_old" />
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT article_id, 'pub-id::doi', doi, 'string', '' FROM articles WHERE doi IS NOT NULL AND doi != ''</query>
 
 		<query driver="postgres7">
 			DROP INDEX articles_user_id

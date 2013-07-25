@@ -14,7 +14,7 @@
 <data>
 	<!-- Prepare migration of public ids and DOIs to settings tables -->
 	<sql>
-		<rename table="issues" to="issues_old" />
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT issue_id, 'pub-id::publisher-id', public_issue_id, 'string', '' FROM issues WHERE public_issue_id IS NOT NULL AND public_issue_id != ''</query>
 	
 		<query driver="postgres7">
 			DROP INDEX issues_journal_id
