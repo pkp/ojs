@@ -167,7 +167,7 @@ class DataciteExportDom extends DOIExportDom {
 
 		// Rights
 		$rights = $this->getPrimaryTranslation($journal->getSetting('copyrightNotice', null), $objectLocalePrecedence);
-		if (!empty($rights)) XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'rights', $rights);
+		if (!empty($rights)) XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'rights', String::html2text($rights));
 
 		// Descriptions
 		$descriptionsElement =& $this->_descriptionsElement($issue, $article, $suppFile, $objectLocalePrecedence, $articlesByIssue);
