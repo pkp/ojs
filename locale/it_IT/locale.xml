@@ -8,7 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italian) locale.
-  * Contributed by Andrea Marchitelli.
+  * Contributed by Andrea Marchitelli - CINECA.
   *
   -->
 
@@ -96,7 +96,7 @@
 	<message key="article.suppFilesAbbrev">Files supp.</message>
 	<message key="article.discipline">Settore scientifico-disciplinare (MIUR)</message>
 	<message key="article.subjectClassification">Classificazione</message>
-	<message key="article.subject">Keywords</message>
+	<message key="article.subject">Keyword</message>
 	<message key="article.coverage">Ambito</message>
 	<message key="article.coverageGeo">Ambito geografico</message>
 	<message key="article.coverageChron">Ambito temporale/storico</message>
@@ -200,10 +200,10 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.general.defaultEvent">Evento di Submission</message>
-	<message key="submission.event.submissionSubmitted">Articolo Inviato</message>
+	<message key="submission.event.general.defaultEvent">Evento</message>
+	<message key="submission.event.submissionSubmitted">Proposta Inviata</message>
 	<message key="submission.event.general.issueScheduled">Contributo inserito nella programmazione del fascicolo corrente</message>
-	<message key="submission.event.general.issueAssigned">COntributo assegnato al fascicolo</message>
+	<message key="submission.event.general.issueAssigned">Contributo assegnato al fascicolo</message>
 	<message key="submission.event.general.articlePublished">Articolo pubblicato</message>
 	<message key="submission.event.author.authorRevision">Revisione dell'autore inviata</message>
 	<message key="submission.event.general.authorRevision">Aggiornato il file di revisione dell'autore</message>
@@ -296,7 +296,7 @@ Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal f
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">Gli editor inviano ai revisori la richiesta di revisione allegando la submission  all'email. I Revisori rispondono con un messaggio agli editor esprimendo il loro assenso (o rifiuto), e poi il parere e i suggerimenti sulla proposta. Gli editor inseriscono l'assenso (o rifiuto) dei revisori, e poi la loro decisione e i loro suggerimenti, nella pagina della submission, per tenere tracciare il processo editoriale.</message>
+	<message key="manager.setup.reviewProcessEmailDescription">Gli editor inviano ai revisori la richiesta di revisione allegando la submission  all'email. I Revisori rispondono con un messaggio agli editor esprimendo il loro assenso (o rifiuto), e poi il parere e i suggerimenti sulla proposta. Gli editor inseriscono l'assenso (o rifiuto) dei revisori, e poi la loro decisione e i loro suggerimenti, nella pagina della proposta, per tenere tracciare il processo editoriale.</message>
 
 
 
@@ -312,7 +312,7 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[<p>Per permettere l'indicizzazione dei contenuti della rivista all'interno di un sistema di database di ricerca globale  e distribuito , <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">registra</a> l'URL della rivista sull'<a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a> del Public Knowledge Project. Questo strumento raccoglie i metadati di ogni articolo pubblicato dalla rivista, permettendo cos&#x00EC; una ricerca accurata e globale tra i siti che aderiscono all'<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>. </p><p>Nota: se l'amministratore ha gi&#x00E0; registrato il sito all'interno del PKP Harvster, la vostra rivista sar&#x00E0; indicizzata automaticamente e non avrete bisogno di effettuare la registrazione.</p><p>Fai <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui</a> e inserisci <span class="highlight">{$siteUrl}</span> come <strong>URL del sito</strong>, e <span class="highlight">{$oaiUrl}</span> come <strong>base-URL</strong> dell'archivio OAI.</p><p>Utilizzando le medesime URL è possibile registrarsi su tutti i <em>service provider OAI</em>.</p>]]></message>
 
 	<!-- Setup Step 4 -->
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Fasi: Coda delle submission &gt; Revisione delle submission &gt; Editing delle Submission &gt; Coda della Programmazione &gt; Sommario.<br /><br />
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Fasi: Coda delle proposte &gt; Revisione delle proposte &gt; Editing delle proposte &gt; Coda della Programmazione &gt; Sommario.<br /><br />
 	Selezionate un modello per gestire questi aspetti del processo editoriale. (Per selezionare un editor e i vari Section editor andare nella sezione editors nella Gestione della rivista.)]]></message>
 
 
@@ -387,7 +387,7 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Incarichi attivi</message>
 	<message key="sectionEditor.completedEditorialAssignments">Incarichi completati</message>
-	<message key="sectionEditor.noneAssigned">Nessuna submission assegnata.</message>
+	<message key="sectionEditor.noneAssigned">Nessuna proposta assegnata.</message>
 	<message key="sectionEditor.copyedit.confirmRenotify">Un'altra notifica a questo copyeditor farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
 	<message key="sectionEditor.author.confirmRenotify">Un'altra notifica a questo autore farà ricominciare da capo il loro incarico. Sei sicuro di voler fare questo?</message>
 	<message key="sectionEditor.layout.confirmRenotify">Un'altra notifica a questo editor di layout farà ricominciare da capo l'incarico. Sei sicuro di voler fare questo?</message>
@@ -694,46 +694,46 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 
 
 	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} ha inserito una nuova submission, con il seguente ID {$submissionId}.</message>
+	<message key="log.author.submitted">{$authorName} ha inserito una nuova proposta, con il seguente ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} ha modificato l'articolo {$articleId}. Il nuovo ID è {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">A {$reviewerName} è stato assegnato il compito di revisionare la proposta #{$articleId} per il ciclo di review nr. {$round}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} è stato tolto dal compito di review della submission {$articleId} per il ciclo di review nr. {$round}.</message>
-	<message key="log.review.reviewInitiated">È iniziato il ciclo di review nr. {$round} per la submission {$articleId} assegnato a {$reviewerName}.</message>
-	<message key="log.review.reviewReinitiated">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la submission {$articleId} è riniziato.</message>
-	<message key="log.review.reviewCancelled">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la submission {$articleId} è stato cancellato.</message>
-	<message key="log.review.reviewCleared">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la submission {$articleId} è stato portato a termine.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} è stato preso in considerazione per il ciclo di review nr. {$round} della submission {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">La data di scadenza per il ciclo di review nr. {$round} della submission {$articleId} assegnata a {$reviewerName} è il {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">È disponibile il giudizio per il ciclo di review nr. {$round} della submission {$articleId} assegnata a {$reviewerName}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">La raccomandazione per la tornata {$round} di revisione della submission {$articleId} è stata inviata all'editor, {$editorName}, per conto del revisore, {$reviewerName}.</message>
-	<message key="log.review.resubmit">La submission {$articleId} è stata di presentata di nuovo per la review.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} ha rifiutato il ciclo di review nr. {$round} per la submission {$articleId}.</message>
+	<message key="log.review.reviewerAssigned">A {$reviewerName} è stato assegnato il compito di revisionare la proposta #{$articleId} per il {$round} ciclo di revisione.</message>
+	<message key="log.review.reviewerUnassigned">A {$reviewerName} è stato tolto l'incarico di revisore della proposta {$articleId} per il {$round} ciclo di revisione.</message>
+	<message key="log.review.reviewInitiated">È iniziato il {$round} ciclo di revisione per la proposta {$articleId} assegnata a {$reviewerName}.</message>
+	<message key="log.review.reviewReinitiated">Il {$round} ciclo di revisione, assegnato a {$reviewerName} per la proposta {$articleId} è riniziato.</message>
+	<message key="log.review.reviewCancelled">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la proposta {$articleId} è stato cancellato.</message>
+	<message key="log.review.reviewCleared">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la proposta {$articleId} è stato portato a termine.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} è stato preso in considerazione per il ciclo di review nr. {$round} della proposta {$articleId}.</message>
+	<message key="log.review.reviewDueDateSet">La data di scadenza per il ciclo di review nr. {$round} della proposta {$articleId} assegnata a {$reviewerName} è il {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">È disponibile il parere per il {$round} ciclo di revisione della proposta {$articleId} assegnata a {$reviewerName}.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">La raccomandazione per la tornata {$round} di revisione della proposta {$articleId} è stata inviata all'editor, {$editorName}, per conto del revisore, {$reviewerName}.</message>
+	<message key="log.review.resubmit">La proposta {$articleId} è stata di presentata di nuovo per la review.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} ha rifiutato il ciclo di review nr. {$round} per la proposta {$articleId}.</message>
 	<message key="log.review.reviewAccepted">{$reviewerName} ha accettato il ciclo di review nr. {$round} per la {$articleId}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} ha accettato il ciclo di review nr. {$round} per la submission {$articleId} per conto di {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">L'editor, {$userName}, ha caricato un file di revisione per la tornata {$round} della submission {$articleId} per conto del revisore, {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} ha accettato il ciclo di review nr. {$round} per la proposta {$articleId} per conto di {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">L'editor, {$userName}, ha caricato un file di revisione per la tornata {$round} della proposta {$articleId} per conto del revisore, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">È disponibile il file della recensione.</message>
 
 
-	<message key="log.copyedit.initiate">La revisione della submission {$articleId} è stata iniziata da {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">La revisione della proposta {$articleId} è stata iniziata da {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">È stato scelto il file di revisione di default.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ha completato la revisione iniziale della submission {$articleId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ha completato la revisione finale della submission {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} è stata assegnata la revisione della submission {$articleId}.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ha completato la revisione iniziale della proposta {$articleId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ha completato la revisione finale della proposta {$articleId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} è stata assegnata la revisione della proposta {$articleId}.</message>
 	<message key="log.copyedit.copyeditorFile">È disponibile una versione revisionata.</message>
 	<message key="log.copyedit.authorFile">È disponibile la versione revisionata dall'autore.</message>
 
 	<message key="log.layout.layoutEditorAssigned">{$editorName} è stato scelto come editor del layout della {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} è stato tolto dall'incarico di layout editor della submission {$articleId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} ha completato l'editing del layout della submission {$articleId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} è stato tolto dall'incarico di layout editor della proposta {$articleId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} ha completato l'editing del layout della proposta {$articleId}.</message>
 
 	<message key="log.editor.metadataModified">I metadati di questo articolo sono stati modificati da {$editorName}.</message>
 	<message key="log.editor.editorFile">È disponibile una versione modificata dall'editor.</message>
-	<message key="log.editor.archived">La submission {$articleId} è stata archiviata.</message>
-	<message key="log.editor.restored">La submission {$articleId} è stata reinserita nella coda.</message>
-	<message key="log.editor.editorAssigned">{$editorName} è stato scelto come editor della submission {$articleId}.</message>
+	<message key="log.editor.archived">La proposta {$articleId} è stata archiviata.</message>
+	<message key="log.editor.restored">La proposta {$articleId} è stata reinserita nella coda.</message>
+	<message key="log.editor.editorAssigned">{$editorName} è stato scelto come editor della proposta {$articleId}.</message>
 	<message key="log.editor.submissionExpedited">{$editorName} ha accelerato il processo di editing per l'articolo {$articleId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} ha scelto {$proofreaderName} come correttore di bozze della submission {$articleId}.</message>
+	<message key="log.proofread.assign">{$assignerName} ha scelto {$proofreaderName} come correttore di bozze della proposta {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} ha inviato {$articleId} per l'inserimento nella scaletta.</message>
 
 	<message key="log.imported">{$userName} ha un articolo importato {$articleId}.</message>
@@ -991,7 +991,7 @@ Titolo dello schema di classificazione]]></message>
 	<li>Gli elementi evidenziati richiedono l'intervento dell'editor.</li>
 	<li>"Scadenza" viene valorizzato quando il revisore accetta l'incarico; mostra il numero di settimane rimaste prima della data di scadenza dell'incarico di revisione oppure (-) le settimane trascorse dalla scadenza.</li>
 </ol>]]></message>
-	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Le linee guida per la revisione indicano ai revisori i criteri per giudicare una submission e possono includere ulteriori istruzioni per la redazione di una revisione efficace e utile. Nel condurre la revisione, ai revisono vengono presentate due box per l'inserimento di testi liberi, il primo "per l'autore e per l'editor", il secondo "per l'editor". In alternativa, l'amministratore &#242; creare un modulo per la revisione. In ogni caso, gli editor avranno la possibilit&#224; di includere le revisioni nella corrispondenza con gli autori.]]></message>
+	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Le linee guida per la revisione indicano ai revisori i criteri per giudicare una proposta e possono includere ulteriori istruzioni per la redazione di una revisione efficace e utile. Nel condurre la revisione, ai revisono vengono presentate due box per l'inserimento di testi liberi, il primo "per l'autore e per l'editor", il secondo "per l'editor". In alternativa, l'amministratore &#242; creare un modulo per la revisione. In ogni caso, gli editor avranno la possibilit&#224; di includere le revisioni nella corrispondenza con gli autori.]]></message>
 	<message key="notification.mailListDescription"><![CDATA[Inserisci il tuo indirizzo email per ricevere notifiche delle novit&#224; della rivista.]]></message>
 	<message key="notification.type.articleSubmitted"><![CDATA[&#200; stato proposto un nuovo articolo, "{$title}"]]></message>
 	<message key="notification.type.editing">Eventi modificati</message>
@@ -1006,7 +1006,7 @@ Titolo dello schema di classificazione]]></message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Questa pagina mostra aggiornamenti importanti alla rivista, come avvisi o nuovi fascicoli. Puoi ricevere queste notifiche anche attraverso feed RSS (cliccando sulle immagini a destra o <a href="{$emailUrl}">viaemail.</a>]]></message>
 	<message key="notification.type.reviewing">Eventi legati alle revisioni</message>
 	<message key="notification.type.submissionComment">Un editor ha commentato  "{$title}".</message>
-	<message key="notification.type.submissions">Eventi legati alle submission</message>
+	<message key="notification.type.submissions">Eventi legati alle proposta</message>
 	<message key="notification.type.userComment">Un lettore ha commentato  "{$title}"</message>
 	<message key="user.subscriptions.subscriptionStatus">Stato dell'abbonamento</message>
 	<message key="user.subscriptions.status">Stato</message>
@@ -1034,7 +1034,7 @@ Titolo dello schema di classificazione]]></message>
 	<message key="issue.fullIssue">Fascicolo completo</message>
 	<message key="issue.nonpdf.title">Scarica fascicolo</message>
 	<message key="issue.viewIssue">Vedi il fascicolo</message>
-	<message key="issue.viewIssueDescription">Vedi o scarica l'intero fascicolo</message>
+	<message key="issue.viewIssueDescription">Leggi l'intero fascicolo</message>
 	<message key="site.noJournals">Non ci sono riviste disponibili.</message>
 	<message key="gifts.buyer">Da</message>
 	<message key="gifts.buyerDescription">Chi fa il regalo?</message>
