@@ -16,8 +16,8 @@
 	  -    reliably done by ADODB.
 	  -->
 	<sql>
-		<query driver="mysql">ALTER TABLE published_articles CHANGE COLUMN date_published date_published DATETIME</query>
-		<query driver="postgres7">ALTER TABLE published_articles ALTER COLUMN date_published DROP NOT NULL</query>
+		<query driver="mysql">ALTER TABLE published_submissions CHANGE COLUMN date_published date_published DATETIME</query>
+		<query driver="postgres7">ALTER TABLE published_submissions ALTER COLUMN date_published DROP NOT NULL</query>
 	</sql>
 
 	<!--
@@ -27,7 +27,7 @@
 	  -    submit.)
 	  -->
 	<sql>
-		<query driver="mysql">UPDATE published_articles pa, articles a SET pa.date_published = NULL WHERE a.article_id = pa.article_id AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) &lt; 300 AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) &gt;= 0</query>
-		<query driver="postgres7">UPDATE published_articles SET date_published = NULL WHERE article_id IN (SELECT a.article_id FROM published_articles pa, articles a WHERE a.article_id = pa.article_id AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) &lt; 300 AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) &gt;= 0)</query>
+		<query driver="mysql">UPDATE published_submissions pa, submissions a SET pa.date_published = NULL WHERE a.submission_id = pa.submission_id AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) &lt; 300 AND UNIX_TIMESTAMP(pa.date_published) - UNIX_TIMESTAMP(a.date_submitted) &gt;= 0</query>
+		<query driver="postgres7">UPDATE published_submissions SET date_published = NULL WHERE submission_id IN (SELECT a.submission_id FROM published_submissions pa, submissions a WHERE a.submission_id = pa.submission_id AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) &lt; 300 AND EXTRACT(EPOCH FROM pa.date_published) - EXTRACT(EPOCH FROM a.date_submitted) &gt;= 0)</query>
 	</sql>
 </data>
