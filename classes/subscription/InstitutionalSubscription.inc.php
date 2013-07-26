@@ -1,7 +1,8 @@
 <?php
 
 /**
- * @defgroup subscription
+ * @defgroup subscription Subscription
+ * Implement subscriptions, subscription management, and subscription checking.
  */
  
 /**

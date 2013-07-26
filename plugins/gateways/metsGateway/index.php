@@ -1,7 +1,8 @@
 <?php
 
 /**
- * @defgroup plugins
+ * @defgroup metsGatewayPlugin METS Gateway Plugin
+ * Implements the METS Gateway Plugin.
  */
  
 /**
@@ -10,7 +11,7 @@
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup plugins
+ * @ingroup metsGatewayPlugin
  * @brief Wrapper for Journal Export gateway plugin.
  *
  */

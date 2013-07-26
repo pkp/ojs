@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup donations
- */
- 
-/**
  * @file pages/donations/DonationsHandler.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DonationsHandler
- * @ingroup donations
+ * @ingroup pages_donations
  *
  * @brief Display a form for accepting donations
  *

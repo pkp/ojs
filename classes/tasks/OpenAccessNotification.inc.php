@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup tasks
- */
- 
-/**
  * @file classes/tasks/OpenAccessNotification.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

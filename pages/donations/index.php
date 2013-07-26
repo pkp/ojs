@@ -1,7 +1,8 @@
 <?php
 
 /**
- * @defgroup pages_donations
+ * @defgroup pages_donations "Donations" page
+ * Implements the donation page, which can be used to contribute to the journal.
  */
  
 /**
