@@ -19,6 +19,8 @@
  * - Page classes, which receive requests from users' web browsers, delegate
  *   any required processing to various other classes, and call up the
  *   appropriate Smarty template to generate a response;
+ * - Controllers, which implement reusable pieces of content e.g. for AJAX
+ *   subrequests.
  * - Action classes, which are used by the Page classes to perform non-trivial
  *   processing of user requests;
  * - Model classes, which implement PHP objects representing the system's
@@ -27,8 +29,6 @@
  *   update, create, and delete functions for their associated Model classes,
  *   are responsible for all database interaction;
  * - Support classes, which provide core functionalities, miscellaneous common;
- * - Controllers, which implement reusable pieces of content e.g. for AJAX
- *   subrequests.
  *
  * Additionally, many of the concerns shared by multiple PKP applications are
  * implemented in the shared "pkp-lib" library, shipped in the lib/pkp
@@ -46,8 +46,7 @@
  * that may be useful:
  * - The docs/README document
  * - The PKP support forum at http://pkp.sfu.ca/support/forum
- * - The technical reference (and other documents), available at
- *   http://pkp.sfu.ca/ojs_documentation
+ * - Documentation available at http://pkp.sfu.ca/ojs_documentation
  *
  * @file index.php
  *
