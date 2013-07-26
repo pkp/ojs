@@ -16,60 +16,60 @@
 	<sql>
 		<!-- Syntax for MySQL. -->
 		<query driver="mysql">
-			UPDATE article_files SET file_type = 'application/pdf' WHERE original_file_name RLIKE '\\.pdf$'
+			UPDATE submission_files SET file_type = 'application/pdf' WHERE original_file_name RLIKE '\\.pdf$'
 		</query>
 
 		<query driver="mysql">
-			UPDATE article_files SET file_type = 'application/msword' WHERE original_file_name RLIKE '\\.doc$'
+			UPDATE submission_files SET file_type = 'application/msword' WHERE original_file_name RLIKE '\\.doc$'
 		</query>
 
 		<query driver="mysql">
-			UPDATE article_files SET file_type = 'application/vnd.ms-powerpoint' WHERE original_file_name RLIKE '\\.ppt$'
+			UPDATE submission_files SET file_type = 'application/vnd.ms-powerpoint' WHERE original_file_name RLIKE '\\.ppt$'
 		</query>
 
 		<query driver="mysql">
-			UPDATE article_files SET file_type = 'application/vnd.ms-powerpoint' WHERE original_file_name RLIKE '\\.pps$'
+			UPDATE submission_files SET file_type = 'application/vnd.ms-powerpoint' WHERE original_file_name RLIKE '\\.pps$'
 		</query>
 
 		<query driver="mysql">
-			UPDATE article_files SET file_type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' WHERE original_file_name RLIKE '\\.docx$'
+			UPDATE submission_files SET file_type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' WHERE original_file_name RLIKE '\\.docx$'
 		</query>
 
 		<query driver="mysql">
-			UPDATE article_files SET file_type = 'application/vnd.openxmlformats-officedocument.presentationml.presentation' WHERE original_file_name RLIKE '\\.pptx$'
+			UPDATE submission_files SET file_type = 'application/vnd.openxmlformats-officedocument.presentationml.presentation' WHERE original_file_name RLIKE '\\.pptx$'
 		</query>
 
 		<query driver="mysql">
-			UPDATE article_files SET file_type = 'application/vnd.openxmlformats-officedocument.presentationml.slideshow' WHERE original_file_name RLIKE '\\.ppsx$'
+			UPDATE submission_files SET file_type = 'application/vnd.openxmlformats-officedocument.presentationml.slideshow' WHERE original_file_name RLIKE '\\.ppsx$'
 		</query>
 
 		<!-- Syntax for PostgreSQL. -->
 		<query driver="postgres">
-			UPDATE article_files SET file_type = 'application/pdf' WHERE original_file_name ~* '.pdf$'
+			UPDATE submission_files SET file_type = 'application/pdf' WHERE original_file_name ~* '.pdf$'
 		</query>
 
 		<query driver="postgres">
-			UPDATE article_files SET file_type = 'application/msword' WHERE original_file_name ~* '.doc$'
+			UPDATE submission_files SET file_type = 'application/msword' WHERE original_file_name ~* '.doc$'
 		</query>
 
 		<query driver="postgres">
-			UPDATE article_files SET file_type = 'application/vnd.ms-powerpoint' WHERE original_file_name ~* '.ppt$'
+			UPDATE submission_files SET file_type = 'application/vnd.ms-powerpoint' WHERE original_file_name ~* '.ppt$'
 		</query>
 
 		<query driver="postgres">
-			UPDATE article_files SET file_type = 'application/vnd.ms-powerpoint' WHERE original_file_name ~* '.pps$'
+			UPDATE submission_files SET file_type = 'application/vnd.ms-powerpoint' WHERE original_file_name ~* '.pps$'
 		</query>
 
 		<query driver="postgres">
-			UPDATE article_files SET file_type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' WHERE original_file_name ~* '.docx$'
+			UPDATE submission_files SET file_type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' WHERE original_file_name ~* '.docx$'
 		</query>
 
 		<query driver="postgres">
-			UPDATE article_files SET file_type = 'application/vnd.openxmlformats-officedocument.presentationml.presentation' WHERE original_file_name ~* '.pptx$'
+			UPDATE submission_files SET file_type = 'application/vnd.openxmlformats-officedocument.presentationml.presentation' WHERE original_file_name ~* '.pptx$'
 		</query>
 
 		<query driver="postgres">
-			UPDATE article_files SET file_type = 'application/vnd.openxmlformats-officedocument.presentationml.slideshow' WHERE original_file_name ~* '.ppsx$'
+			UPDATE submission_files SET file_type = 'application/vnd.openxmlformats-officedocument.presentationml.slideshow' WHERE original_file_name ~* '.ppsx$'
 		</query>
 	</sql>
 
