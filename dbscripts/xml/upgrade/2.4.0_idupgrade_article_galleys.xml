@@ -14,7 +14,7 @@
 <data>
 	<!-- Prepare migration of public ids and DOIs to settings tables -->
 	<sql>
-		<rename table="article_galleys" to="article_galleys_old" />
+		<query>CREATE TABLE tmp_public_galley_ids AS SELECT galley_id, public_galley_id FROM article_galleys</query>
 
 		<query driver="postgres7">
 			DROP INDEX article_galleys_article_id

@@ -14,7 +14,8 @@
 <data>
 	<!-- Prepare migration of public ids and DOIs to settings tables -->
 	<sql>
-		<rename table="published_articles" to="published_articles_old" />
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT article_id, 'pub-id::publisher-id', public_article_id, 'string', '' FROM published_articles</query>
+		<rename table="published_articles" column="pub_id" to="published_article_id" />
 
 		<query driver="postgres7">
 			DROP INDEX published_articles_article_id

@@ -156,12 +156,7 @@
 		<code function="installEmailTemplate" key="REVIEW_REQUEST_SUBSEQUENT" locales="en_US,de_DE,eu_ES,it_IT,nl_NL,pt_BR,tr_TR,uk_UA,zh_CN" />
 
 		<!-- ID upgrade -->
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issues2.xml" condition="return $installer->tableExists('issues_old');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_articles2.xml" condition="return $installer->tableExists('articles_old');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_published_articles2.xml" condition="return $installer->tableExists('published_articles_old');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_issue_galleys2.xml" condition="return $installer->tableExists('issue_galleys_old');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_article_galleys2.xml" condition="return $installer->tableExists('article_galleys_old');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_supp_files2.xml" condition="return $installer->tableExists('article_supp_files_old');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_idupgrade_article_galleys2.xml" condition="return $installer->tableExists('tmp_public_galley_ids');" />
 
 		<!-- Mutex helper table. -->
 		<data file="lib/pkp/xml/mutexData.xml" />
