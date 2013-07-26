@@ -62,6 +62,7 @@
 
 	<upgrade minversion="2.3.0.0" maxversion="2.9.9.9">
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics.xml" condition="return $installer->columnExists('article_galleys', 'views');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics_issueGalleys.xml" condition="return $installer->tableExists('issue_galleys');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate.xml" condition="return $installer->columnExists('edit_decisions', 'article_id');" />	
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptTimedViews.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptReferrals.xml" condition="return $installer->tableExists('referrals');" />
@@ -185,6 +186,7 @@
 		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration_issueGalleys.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
 	</upgrade>

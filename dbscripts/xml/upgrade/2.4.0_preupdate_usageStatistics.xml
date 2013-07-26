@@ -8,7 +8,8 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 2.4.0 database updates XML file; Make a copy of all tables
-  * that has ojs default usage statistics.
+  * that has ojs default usage statistics. (Excludes issue_galleys,
+  * which may not be present in all versions and is handled elsewhere.)
   *
   -->
 
@@ -18,11 +19,6 @@
 		<!-- Article galleys -->
 		<query>
 			CREATE TABLE article_galleys_stats_migration AS (SELECT * FROM article_galleys)
-		</query>
-		
-		<!-- Issue galleys -->
-		<query>
-			CREATE TABLE issue_galleys_stats_migration AS (SELECT * FROM issue_galleys)
 		</query>
 		
 		<!-- Published articles -->
