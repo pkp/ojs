@@ -23,14 +23,14 @@ class CategorySettingsForm extends Form {
 	}
 
 	/**
-	 * @see Form::fetch
+	 * @copydoc Form::fetch()
 	 */
 	function fetch($request, $params = array()) {
 		return parent::fetch($request);
 	}
 
 	/**
-	 * @see Form::initData
+	 * @copydoc Form::initData()
 	 */
 	function initData($request) {
 		$site = $request->getSite();
@@ -40,14 +40,14 @@ class CategorySettingsForm extends Form {
 	}
 
 	/**
-	 * @see Form::readUserVars
+	 * @copydoc Form::readUserVars()
 	 */
 	function readInputData() {
 		$this->readUserVars(array('categoriesEnabled'));
 	}
 
 	/**
-	 * @see Form::execute
+	 * @copydoc Form::execute()
 	 */
 	function execute($request) {
 		$site = $request->getSite();

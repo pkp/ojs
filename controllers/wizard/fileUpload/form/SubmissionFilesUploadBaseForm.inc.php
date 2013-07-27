@@ -35,8 +35,8 @@ class SubmissionFilesUploadBaseForm extends PKPSubmissionFilesUploadBaseForm {
 	}
 
 	/**
-	 * @see PKPSubmissionFilesUploadBaseForm::getSubmissionFiles() for the rest of this.  This function
-	 * exists in this subclass for OJS-specific submission files.
+	 * @copydoc PKPSubmissionFilesUploadBaseForm::getSubmissionFiles()
+	 * This function exists in this subclass for OJS-specific submission files.
 	 *
 	 * For now, this simply uses the parent method.  Having this allows for different sets of submission files
 	 * depending on stageId or fileStage.  See e.g. this class in the OMP codebase as an example.

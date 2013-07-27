@@ -29,7 +29,7 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	}
 
 	/**
-	 * @see PKPHandler::authorize()
+	 * @copydoc PKPHandler::authorize()
 	 * @param $request PKPRequest
 	 * @param $args array
 	 * @param $roleAssignments array
@@ -42,7 +42,7 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	// Overridden template methods
 	//
 	/**
-	 * @see SetupGridHandler::initialize()
+	 * @copydoc SetupGridHandler::initialize()
 	 */
 	function initialize($request) {
 		parent::initialize($request);
@@ -84,14 +84,14 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	// Overridden methods from GridHandler
 	//
 	/**
-	 * @see GridHandler::getRowInstance()
+	 * @copydoc GridHandler::getRowInstance()
 	 */
 	function getRowInstance() {
 		return new AdminCategoriesGridRow();
 	}
 
 	/**
-	 * @see GridHandler::loadData()
+	 * @copydoc GridHandler::loadData()
 	 */
 	function loadData($request, $filter) {
 		// Elements to be displayed in the grid

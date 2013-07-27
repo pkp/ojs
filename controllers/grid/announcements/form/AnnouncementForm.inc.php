@@ -53,7 +53,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	// Extended methods from Form
 	//
 	/**
-	 * @see Form::fetch()
+	 * @copydoc Form::fetch()
 	 */
 	function fetch($request) {
 		$templateMgr = TemplateManager::getManager($request);
@@ -85,7 +85,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	// Extended methods from PKPAnnouncementForm
 	//
 	/**
-	 * @see PKPAnnouncementForm::readInputData()
+	 * @copydoc PKPAnnouncementForm::readInputData()
 	 */
 	function readInputData() {
 		parent::readInputData();
@@ -93,7 +93,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	}
 
 	/**
-	 * @see PKPAnnouncementForm::execute()
+	 * @copydoc PKPAnnouncementForm::execute()
 	 */
 	function execute($request) {
 		$announcement = parent::execute();
@@ -128,7 +128,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	// Implement protected methods from PKPAnnouncementForm.
 	//
 	/**
-	 * @see PKPAnnouncementForm::setDateExpire()
+	 * @copydoc PKPAnnouncementForm::setDateExpire()
 	 */
 	function setDateExpire(&$announcement) {
 		/* @var $announcement Announcement */
@@ -148,7 +148,7 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	// Private helper methdos.
 	//
 	/**
-	 * @see PKPAnnouncementForm::_getAnnouncementTypesAssocId()
+	 * @copydoc PKPAnnouncementForm::_getAnnouncementTypesAssocId()
 	 */
 	function _getAnnouncementTypesAssocId() {
 		$journalId = $this->getContextId();

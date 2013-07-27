@@ -23,7 +23,7 @@ class AppSiteSetupForm extends SiteSetupForm {
 	}
 
 	/**
-	 * @see SiteSetupForm::fetch()
+	 * @copydoc SiteSetupForm::fetch()
 	 */
 	function fetch($request, $params = null) {
 		$application = PKPApplication::getApplication();
@@ -34,7 +34,7 @@ class AppSiteSetupForm extends SiteSetupForm {
 	}
 
 	/**
-	 * @see SiteSetupForm::initData()
+	 * @copydoc SiteSetupForm::initData()
 	 */
 	function initData($request) {
 		parent::initData($request);
@@ -50,7 +50,7 @@ class AppSiteSetupForm extends SiteSetupForm {
 	}
 
 	/**
-	 * @see SiteSetupForm::readInputData()
+	 * @copydoc SiteSetupForm::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(array('defaultMetricType', 'showTitle', 'showThumbnail', 'showDescription'));
@@ -58,7 +58,7 @@ class AppSiteSetupForm extends SiteSetupForm {
 	}
 
 	/**
-	 * @see SiteSetupForm::execute()
+	 * @copydoc SiteSetupForm::execute()
 	 */
 	function execute() {
 		parent::execute();

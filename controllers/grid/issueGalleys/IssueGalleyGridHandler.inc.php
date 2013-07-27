@@ -35,7 +35,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	// Implement template methods from PKPHandler
 	//
 	/**
-	 * @see PKPHandler::authorize()
+	 * @copydoc PKPHandler::authorize()
 	 * @param $request PKPRequest
 	 * @param $args array
 	 * @param $roleAssignments array
@@ -57,14 +57,14 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @see lib/pkp/classes/controllers/grid/GridHandler::getDataElementSequence()
+	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementSequence($issueGalley) {
 		return $issueGalley->getSequence();
 	}
 
 	/**
-	 * @see lib/pkp/classes/controllers/grid/GridHandler::setDataElementSequence()
+	 * @copydoc GridHandler::setDataElementSequence()
 	 */
 	function setDataElementSequence($request, $rowId, &$issueGalley, $newSequence) {
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
@@ -73,7 +73,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @see GridHandler::addFeatures()
+	 * @copydoc GridHandler::addFeatures()
 	 */
 	function initFeatures($request, $args) {
 		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
@@ -81,7 +81,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @see GridDataProvider::getRequestArgs()
+	 * @copydoc GridDataProvider::getRequestArgs()
 	 */
 	function getRequestArgs() {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -93,7 +93,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @see PKPHandler::initialize()
+	 * @copydoc PKPHandler::initialize()
 	 */
 	function initialize($request, $args) {
 		parent::initialize($request, $args);
@@ -274,7 +274,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @see GridHandler::loadData
+	 * @copydoc GridHandler::loadData
 	 */
 	function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);

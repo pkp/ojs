@@ -43,7 +43,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	}
 
 	/**
-	 * @see SettingsTabHandler::showTab
+	 * @copydoc SettingsTabHandler::showTab()
 	 */
 	function showTab($args, $request) {
 		$workingContexts = $this->getWorkingContexts($request);

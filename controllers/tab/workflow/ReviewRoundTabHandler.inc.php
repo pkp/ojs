@@ -35,7 +35,7 @@ class ReviewRoundTabHandler extends PKPReviewRoundTabHandler {
 	// Extended methods from Handler
 	//
 	/**
-	 * @see PKPHandler::authorize()
+	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		$stageId = (int) $request->getUserVar('stageId'); // This is validated in WorkflowStageAccessPolicy.

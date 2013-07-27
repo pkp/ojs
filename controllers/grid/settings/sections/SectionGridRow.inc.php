@@ -70,7 +70,7 @@ class SectionGridRow extends GridRow {
 	}
 
 	/**
-	 * @see PKPHandler::setupTemplate()
+	 * @copydoc PKPHandler::setupTemplate()
 	 */
 	function setupTemplate($request) {
 		// Load manager translations. FIXME are these needed?

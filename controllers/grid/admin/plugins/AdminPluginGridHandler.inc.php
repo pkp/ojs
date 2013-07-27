@@ -30,7 +30,7 @@ class AdminPluginGridHandler extends PluginGridHandler {
 	// Overriden template methods.
 	//
 	/**
-	 * @see GridHandler::getRowInstance()
+	 * @copydoc GridHandler::getRowInstance()
 	 */
 	function getRowInstance() {
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
@@ -40,7 +40,7 @@ class AdminPluginGridHandler extends PluginGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::authorize()
+	 * @copydoc GridHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		$category = $request->getUserVar('category');

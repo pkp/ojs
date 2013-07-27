@@ -33,7 +33,7 @@ class AnnouncementTypeForm extends PKPAnnouncementTypeForm {
 	// Extended methods from Form
 	//
 	/**
-	 * @see Form::fetch()
+	 * @copydoc Form::fetch()
 	 */
 	function fetch($request) {
 		$templateMgr = TemplateManager::getManager($request);

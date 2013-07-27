@@ -36,7 +36,7 @@ class TocGridHandler extends CategoryGridHandler {
 	// Implement template methods from PKPHandler.
 	//
 	/**
-	 * @see PKPHandler::authorize()
+	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');
@@ -49,7 +49,7 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @see PKPHandler::initialize()
+	 * @copydoc PKPHandler::initialize()
 	 */
 	function initialize($request) {
 		parent::initialize($request);
@@ -75,21 +75,21 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::initFeatures()
+	 * @copydoc GridHandler::initFeatures()
 	 */
 	function initFeatures($request, $args) {
 		return array(new OrderCategoryGridItemsFeature(ORDER_CATEGORY_GRID_CATEGORIES_AND_ROWS));
 	}
 
 	/**
-	 * @see CategoryGridHandler::getCategoryRowIdParameterName()
+	 * @copydoc CategoryGridHandler::getCategoryRowIdParameterName()
 	 */
 	function getCategoryRowIdParameterName() {
 		return 'sectionId';
 	}
 
 	/**
-	 * @see GridDataProvider::getRequestArgs()
+	 * @copydoc GridDataProvider::getRequestArgs()
 	 */
 	function getRequestArgs() {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -109,21 +109,21 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @see CategoryGridHandler::getCategoryRowInstance()
+	 * @copydoc CategoryGridHandler::getCategoryRowInstance()
 	 */
 	function getCategoryRowInstance() {
 		return new TocGridCategoryRow();
 	}
 
 	/**
-	 * @see CategoryGridHandler::getCategoryData()
+	 * @copydoc CategoryGridHandler::getCategoryData()
 	 */
 	function getCategoryData($section) {
 		return $this->publishedArticlesBySectionId[$section->getId()];
 	}
 
 	/**
-	 * @see GridHandler::loadData
+	 * @copydoc GridHandler::loadData()
 	 */
 	function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -144,7 +144,7 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::getDataElementSequence()
+	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementSequence($section) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -158,7 +158,7 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::setDataElementSequence()
+	 * @copydoc GridHandler::setDataElementSequence()
 	 */
 	function setDataElementSequence($request, $sectionId, $section, $newSequence) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -170,14 +170,14 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::getDataElementSequence()
+	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementInCategorySequence($categoryId, $publishedArticle) {
 		return $publishedArticle->getSeq();
 	}
 
 	/**
-	 * @see GridHandler::setDataElementSequence()
+	 * @copydoc GridHandler::setDataElementSequence()
 	 */
 	function setDataElementInCategorySequence($sectionId, $publishedArticle, $newSequence) {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');

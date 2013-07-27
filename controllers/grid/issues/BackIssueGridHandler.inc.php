@@ -27,7 +27,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	// Implement template methods from PKPHandler
 	//
 	/**
-	 * @see PKPHandler::initialize()
+	 * @copydoc PKPHandler::initialize()
 	 */
 	function initialize($request, $args) {
 		parent::initialize($request, $args);
@@ -54,7 +54,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	}
 
 	/**
-	 * @see GridHandler::loadData
+	 * @copydoc GridHandler::loadData()
 	 */
 	function loadData($request, $filter) {
 		$journal = $request->getJournal();
