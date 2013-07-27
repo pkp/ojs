@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup controllers_grid_issues_form
- */
-
-/**
  * @file controllers/grid/issues/form/CoverForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

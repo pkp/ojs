@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationOutput_apa
- */
-
-/**
  * @file plugins/citationOutput/apa/ApaCitationOutputPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

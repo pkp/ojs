@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup subscription_form
- */
-
-/**
  * @file classes/subscription/form/SubscriptionForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionForm
- * @ingroup subscription_form
+ * @ingroup subscription
  *
  * @brief Base form class for subscription create/edits.
  */

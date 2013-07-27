@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_metadata_dc11_schema
- */
-
-/**
  * @file plugins/metadata/dc11/schema/Dc11Schema.inc.php
  *
  * Copyright (c) 2000-2013 John Willinsky

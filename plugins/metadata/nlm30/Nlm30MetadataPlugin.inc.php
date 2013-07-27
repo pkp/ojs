@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_metadata_nlm30
- */
-
-/**
  * @file plugins/metadata/nlm30/Nlm30MetadataPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

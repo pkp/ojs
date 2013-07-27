@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup pages_submission
- */
-
-/**
  * @file pages/submission/index.php
  *
  * Copyright (c) 2003-2013 John Willinsky

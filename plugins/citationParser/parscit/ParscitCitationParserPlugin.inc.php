@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationParser_parscit
- */
-
-/**
  * @file plugins/citationParser/parscit/ParscitCitationParserPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

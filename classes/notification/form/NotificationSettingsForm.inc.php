@@ -1,7 +1,4 @@
 <?php
-/**
- * @defgroup notification_form
- */
 
 /**
  * @file classes/notification/form/NotificationSettingsForm.inc.php
@@ -10,7 +7,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NotificationSettingsForm
- * @ingroup notification_form
+ * @ingroup notification
  *
  * @brief Form to edit notification settings.
  */

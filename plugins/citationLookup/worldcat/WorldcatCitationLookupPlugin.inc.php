@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup plugins_citationLookup_worldcat
- */
-
-/**
  * @file plugins/citationLookup/worldcat/WorldcatCitationLookupPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

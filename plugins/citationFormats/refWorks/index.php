@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_proCite
+ * @defgroup plugins_citationFormats_refWorks
  */
  
 /**
@@ -10,7 +10,7 @@
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup plugins_citationFormats_proCite
+ * @ingroup plugins_citationFormats_refWorks
  * @brief Wrapper for RefWorks citation plugin.
  *
  */
