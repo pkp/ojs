@@ -96,7 +96,7 @@
 	<message key="article.suppFilesAbbrev">Files supp.</message>
 	<message key="article.discipline">Settore scientifico-disciplinare (MIUR)</message>
 	<message key="article.subjectClassification">Classificazione</message>
-	<message key="article.subject">Keyword</message>
+	<message key="article.subject">Keywords</message>
 	<message key="article.coverage">Ambito</message>
 	<message key="article.coverageGeo">Ambito geografico</message>
 	<message key="article.coverageChron">Ambito temporale/storico</message>

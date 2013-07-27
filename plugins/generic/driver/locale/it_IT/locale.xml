@@ -12,5 +12,5 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">Il plugin DRIVER estende l'interfaccia OAI-PMH in accordo con le the DRIVER Guidelines 2.0, permettendo alle riviste OJS di essere DRIVER compliant.</message>
+	<message key="plugins.generic.driver.description">Il plugin DRIVER estende l'interfaccia OAI-PMH in accordo con le the DRIVER Guidelines 2.0, permettendo alle riviste OJS di essere compatibili con le specifiche DRIVER.</message>
 </locale>

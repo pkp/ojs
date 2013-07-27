@@ -25,7 +25,7 @@
 	<message key="plugins.generic.lucene.faceting.publicationDate">Data di pubblicazione</message>
 	
 	<message key="plugins.generic.lucene.message.coreNotFound">Il core richiesto '{$core}' non è stato trovato sul server Solr. Verifica che sia online</message>
-	<message key="plugins.generic.lucene.message.indexingIncomplete">Si è verificato un errore durante: indicizzati {$numIndexed} documenti su un totale di {$batchCount}.</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">Si è verificato un errore durante l'indicizzazione: Processati {$numProcessed} su un totale di {$batchCount} ({$numDeleted} documenti eliminati in questo blocco).</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Indice con {$numDocs} documenti online.</message>
 	<message key="plugins.generic.lucene.message.pullIndexingDisabled">L'indicizzazione pull non è abilitata. Abilitala nella configurazione del plugin Lucene.</message>
 	<message key="plugins.generic.lucene.message.searchServiceOffline">Sfortunatamente, il servizio di ricerca in OJS al momento è offline.</message>
