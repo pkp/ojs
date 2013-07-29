@@ -79,10 +79,14 @@ class AppLocale extends PKPLocale {
 			} else {
 				$sessionManager =& SessionManager::getManager();
 				$session =& $sessionManager->getUserSession();
-				$locale = $session->getSessionVar('currentLocale');
+				$locale = Request::getUserVar('setLocale');
 
 				$journal =& Request::getJournal();
 				$site =& Request::getSite();
+
+				if (!isset($locale)) {
+					$session->getSessionVar('currentLocale');
+				}
 
 				if (!isset($locale)) {
 					$locale = Request::getCookieVar('currentLocale');
