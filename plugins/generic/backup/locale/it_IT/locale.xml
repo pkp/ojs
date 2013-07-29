@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * plugins/generic/backup/locale.xml
+  *
+  * Copyright (c) 2000-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  * Contributed by Andrea Marchitelli - CINECA
+  *
+  -->
+ 
+<locale name="en_US" full_name="Italian">
+	<message key="plugins.generic.backup.name">Plugin per il backup</message>
+	<message key="plugins.generic.backup.description">Questo plugin esegue il backup dell'installazione.</message>
+
+	<message key="plugins.generic.backup.link">Scarica il backup</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>I link sottostanti permettono all'amministratore del sito di scaricare un backup completo dei vari componenti dell'installazione. Un backup completo contiene <strong>tutti</strong> i seguenti componenti. Consultare la documentazione tecnica per maggiori informazioni sulle funzionalità dei componenti stessi.</p>]]></message>
+	<message key="plugins.generic.backup.db">Database</message>
+	<message key="plugins.generic.backup.files">Files</message>
+	<message key="plugins.generic.backup.code">Codice</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>ATTENZIONE:</strong> Il servizio di dump del database non è stato configurato nel file config.inc.php. La configurazione dipende da quella del server e dal tipo di database in uso. Questa va specificato in una sezione chiamata [cli], in un'opzione di configurazione chiamata "dump". Per MySQL, usa il tool mysqldump, cioè:<br/>
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+La variabile "%s" verrà valorizzata, in ordine, con:<ol>
+	<li>Database hostname</li>
+	<li>Database username</li>
+	<li>Database password</li>
+	<li>Database name</li>
+</ol>
+Si noti che ciò richiede di specificare la password del database nella linea di comando, cosa che potrebbe comprometterne la sicurezza.<br/><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>ATTENZIONE:</strong> Il servizio "tar" non è stato configurato nel file config.inc.php. La configurazione dipende da quella del server. Questa va specificata in una sezione chiamata [cli], in un'opzione di configurazione chiamata "tar", specificando il percorso dell'utility "tar", cioè:<br/>
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br/>]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>ATTENZIONE: </strong>Potrebbe essersi verificato un errore durante il processo. La causa più frequente è un'errata attribuzione dei permessi dei file.]]></message>
+</locale>
