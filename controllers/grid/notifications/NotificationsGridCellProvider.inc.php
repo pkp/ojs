@@ -49,7 +49,7 @@ class NotificationsGridCellProvider extends PKPNotificationsGridCellProvider {
 						$signoff = $signoffDao->getById($notification->getAssocId());
 						if ($signoff->getAssocType() == ASSOC_TYPE_ARTICLE) {
 							$articleId = $signoff->getAssocId();
-						} elseif ($signoff->getAssocType() == ASSOC_TYPE_ARTICLE_FILE) {
+						} elseif ($signoff->getAssocType() == ASSOC_TYPE_SUBMISSION_FILE) {
 							$fileId = $signoff->getAssocId();
 						} else {
 							// Don't know of SIGNOFFs with other ASSOC types for TASKS
