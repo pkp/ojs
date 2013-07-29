@@ -571,6 +571,8 @@ class SectionEditorSubmission extends Article {
 				strtotime($finalSignoff->getDateUnderway()) : 0;
 			$dateCopyeditorFinalCompleted = $finalSignoff->getDateCompleted() ?
 				strtotime($finalSignoff->getDateCompleted()) : 0;
+			$dateCopyeditorFinalAcknowledged = $finalSignoff->getDateAcknowledged() ?
+				strtotime($finalSignoff->getDateAcknowledged()) : 0;
 			$dateLastCopyeditorFinal = max($dateCopyeditorFinalNotified, $dateCopyeditorUnderway);
 
 			// Check if round 3 is awaiting notification.
