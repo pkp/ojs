@@ -168,7 +168,11 @@ function updateAbstractRequired() {
 		</tr>
 		{else}
 		<tr valign="top">
-			<td colspan="2" class="nodata">{translate key="plugins.importexport.quickSubmit.submissionDescription"}</td>
+			{if $journal->getPath() == 'limn'}
+				<td colspan="2" class="nodata">{translate key="plugins.importexport.quickSubmit.submissionDescriptionPdfOrHtml"}</td>
+			{else}
+				<td colspan="2" class="nodata">{translate key="plugins.importexport.quickSubmit.submissionDescription"}</td>
+			{/if}
 		</tr>
 		{/if}
 		</table>
@@ -179,10 +183,18 @@ function updateAbstractRequired() {
 		<table class="data" width="100%">
 		<tr>
 			<td width="30%" class="label">
-				{if $submissionFile}
-					{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.replaceSubmissionFile"}
+				{if $journal->getPath() == 'limn'}
+                                        {if $submissionFile}
+                                                {fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.replaceSubmissionFilePdfOrHtml"}
+                                        {else}
+                                                {fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.uploadSubmissionFilePdfOrHtml"}
+                                        {/if}
 				{else}
-					{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.uploadSubmissionFile"}
+					{if $submissionFile}
+						{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.replaceSubmissionFile"}
+					{else}
+						{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.uploadSubmissionFile"}
+					{/if}
 				{/if}
 			</td>
 			<td width="70%" class="value">
