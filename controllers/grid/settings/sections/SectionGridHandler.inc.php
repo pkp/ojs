@@ -79,7 +79,7 @@ class SectionGridHandler extends SetupGridHandler {
 				'seq' => $section->getSequence()
 			);
 		}
-		uasort($gridData, create_function('$a,$b', 'return $b[\'seq\']-$a[\'seq\'];'));
+		uasort($gridData, create_function('$a,$b', 'return $a[\'seq\']-$b[\'seq\'];'));
 
 		$this->setGridDataElements($gridData);
 
