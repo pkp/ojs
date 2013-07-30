@@ -24,18 +24,6 @@ class AuthorGridRow extends PKPAuthorGridRow {
 	}
 
 	/**
-	 * Get the base arguments that will identify the data in the grid
-	 * In this case, the article.
-	 * @return array
-	 */
-	function getRequestArgs() {
-		$submission =& $this->getSubmission();
-		return array(
-			'articleId' => $submission->getId()
-		);
-	}
-
-	/**
 	 * Determines whether the current user can create user accounts from authors present
 	 * in the grid.
 	 * @param PKPRequest $request
