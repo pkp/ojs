@@ -21,7 +21,7 @@
 		);
 	{rdelim});
 </script>
-<form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="update" issueId=$issueId issueGalleyId=$galleyId}">
+<form class="pkp_form" id="issueGalleyForm" method="post" action="{url op="update" issueId=$issueId issueGalleyId=$issueGalleyId}">
 	{fbvFormArea id="file"}
 		{fbvFormSection title="editor.issues.galley"}
 			<div id="plupload"></div>
