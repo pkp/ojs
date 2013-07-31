@@ -47,10 +47,12 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$result = $this->retrieve(
 			'SELECT	a.*,
 				r.*,
+				ps.date_published,
 				u.first_name, u.last_name,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	submissions a
+				LEFT JOIN published_submissions ps ON (a.submission_id = ps.submission_id)
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
@@ -192,11 +194,13 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$locale = AppLocale::getLocale();
 		$sql = 'SELECT	a.*,
 				r.*,
+				ps.date_published,
 				u.first_name, u.last_name,
 				atl.setting_value AS submission_title,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	submissions a
+				LEFT JOIN published_submissions ps ON (a.submission_id = ps.submission_id)
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN submission_settings atl ON (atl.submission_id = a.submission_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
