@@ -41,7 +41,7 @@ class NotificationsGridCellProvider extends PKPNotificationsGridCellProvider {
 					case ASSOC_TYPE_ARTICLE:
 						$articleId = $notification->getAssocId();
 						break;
-					case ASSOC_TYPE_ARTICLE_FILE:
+					case ASSOC_TYPE_SUBMISSION_FILE:
 						$fileId = $notification->getAssocId();
 						break;
 					case ASSOC_TYPE_SIGNOFF:
