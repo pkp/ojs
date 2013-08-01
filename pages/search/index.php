@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_search
+ * @defgroup pages_search Search Pages
  */
 
 /**

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_sitemap
+ * @defgroup pages_sitemap Site Map Pages
  */
  
 /**

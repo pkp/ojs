@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_user
+ * @defgroup pages_user User Pages
  */
 
 /**

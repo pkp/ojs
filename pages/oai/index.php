@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_oai
+ * @defgroup pages_oai OAI Pages
  */
  
 /**

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_header
+ * @defgroup pages_header Header Pages
  */
 
 /**

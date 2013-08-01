@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_gifts
+ * @defgroup pages_gifts Gift Pages
  */
 
 /**

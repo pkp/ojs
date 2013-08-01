@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_about
+ * @defgroup pages_about About Pages
  */
  
 /**

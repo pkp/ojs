@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_gateway
+ * @defgroup pages_gateway Gateway Pages
  */
  
 /**

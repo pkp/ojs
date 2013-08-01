@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_article
+ * @defgroup pages_article Article Pages
  */
  
 /**

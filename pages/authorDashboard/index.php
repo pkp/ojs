@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_authorDashboard
+ * @defgroup pages_authorDashboard Author Dashboard Pages
  */
 
 /**

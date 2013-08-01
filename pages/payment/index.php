@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_payment
+ * @defgroup pages_payment Payment Pages
  */
  
 /**

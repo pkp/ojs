@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_subscriptionManager
+ * @defgroup pages_subscriptionManager Subscription Manager Pages
  */
  
 /**

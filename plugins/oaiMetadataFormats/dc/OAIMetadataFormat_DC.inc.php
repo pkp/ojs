@@ -1,7 +1,6 @@
 <?php
-
 /**
- * @defgroup oai_format
+ * @defgroup oai_format OAI Formats
  */
 
 /**

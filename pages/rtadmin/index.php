@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_rtadmin
+ * @defgroup pages_rtadmin Reading Tools Administration Pages
  */
 
 /**

@@ -1,6 +1,6 @@
 <?php
 /**
- * @defgroup pages_dashboard
+ * @defgroup pages_dashboard Editorial Dashboard Pages
  */
 
  /**

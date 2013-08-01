@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_reviewer
+ * @defgroup pages_reviewer Reviewer Pages
  */
 
 /**

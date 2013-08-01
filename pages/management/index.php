@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_settings
+ * @defgroup pages_settings Settings Pages
  */
 
 /**

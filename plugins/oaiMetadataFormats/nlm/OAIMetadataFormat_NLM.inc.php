@@ -1,10 +1,6 @@
 <?php
 
 /**
- * @defgroup oai_format_nlm
- */
-
-/**
  * @file plugins/oaiMetadataFormats/nlm/OAIMetadataFormat_NLM.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky

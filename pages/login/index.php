@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_login
+ * @defgroup pages_login Login Pages
  */
  
 /**

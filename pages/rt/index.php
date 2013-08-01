@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_rt
+ * @defgroup pages_rt Reading Tools Pages
  */
  
 /**

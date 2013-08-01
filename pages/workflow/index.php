@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_workflow
+ * @defgroup pages_workflow Workflow Pages
  */
 
 /**

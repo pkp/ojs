@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_sidebar
+ * @defgroup pages_sidebar Sidebar Pages
  */
 
 /**

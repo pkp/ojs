@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_admin
+ * @defgroup pages_admin Administration Pages
  */
  
 /**

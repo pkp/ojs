@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup pages_manager
+ * @defgroup pages_manager Manager Pages
  */
 
 /**
