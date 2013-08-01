@@ -1,4 +1,9 @@
 <?php
+/**
+ * @defgroup issue_galley Issue Galleys
+ * Issue galleys allow for the representation of an entire journal issue with
+ * a single file, typically a PDF.
+ */
 
 /**
  * @file classes/issue/IssueGalley.inc.php
@@ -7,7 +12,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalley
- * @ingroup issue
+ * @ingroup issue_galley
  * @see IssueGalleyDAO
  *
  * @brief A galley is a final presentation version of the full-text of an issue.

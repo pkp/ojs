@@ -7,7 +7,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyDAO
- * @ingroup issue
+ * @ingroup issue_galley
  * @see IssueGalley
  *
  * @brief Operations for retrieving and modifying IssueGalley objects.

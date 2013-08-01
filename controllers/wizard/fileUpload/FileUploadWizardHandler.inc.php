@@ -1,6 +1,8 @@
 <?php
 /**
- * @defgroup controllers_wizard_fileUpload
+ * @defgroup controllers_wizard_fileUpload File Upload Wizard
+ * The file upload wizard implements the 3-step wizard used to manage
+ * uploads of submission files.
  */
 
 /**

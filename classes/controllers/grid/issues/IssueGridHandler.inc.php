@@ -1,4 +1,9 @@
 <?php
+/**
+ * @defgroup controllers_grid_issues Issues Grid
+ * The Issues Grid implements the management interface allowing editors to
+ * manage future and archived issues.
+ */
 
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php

@@ -7,7 +7,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyGridHandler
- * @ingroup controllers_grid_issues
+ * @ingroup issue_galley
  *
  * @brief Handle issues grid requests.
  */

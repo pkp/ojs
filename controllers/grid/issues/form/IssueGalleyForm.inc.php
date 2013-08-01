@@ -1,17 +1,13 @@
 <?php
 
 /**
- * @defgroup issue_galley_form
- */
-
-/**
  * @file classes/issue/form/IssueGalleyForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyForm
- * @ingroup issue_galley_form
+ * @ingroup issue_galley
  * @see IssueGalley
  *
  * @brief Issue galley editing form.
