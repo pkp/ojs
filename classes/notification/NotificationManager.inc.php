@@ -16,7 +16,7 @@
 import('lib.pkp.classes.notification.PKPNotificationManager');
 
 class NotificationManager extends PKPNotificationManager {
-	/* @var $privilegedRoles array Cache each user's most privileged role for each article */
+	/* @var $privilegedRoles array Cache each user's most privileged role for each submission */
 	var $privilegedRoles;
 
 	/**
@@ -36,15 +36,9 @@ class NotificationManager extends PKPNotificationManager {
 	function getNotificationUrl($request, $notification) {
 		$router = $request->getRouter();
 		$dispatcher = $router->getDispatcher();
-		$type = $notification->getType();
 		$context = $request->getContext();
 
-		switch ($type) {
-			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
-			case NOTIFICATION_TYPE_METADATA_MODIFIED:
-			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
-				assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE && is_numeric($notification->getAssocId()));
-				return $dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'workflow', 'submission', $notification->getAssocId());
+		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_REVIEW_ASSIGNMENT:
 				$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO'); /* @var $reviewAssignmentDao ReviewAssignmentDAO */
 				$reviewAssignment = $reviewAssignmentDao->getById($notification->getAssocId());
@@ -75,7 +69,7 @@ class NotificationManager extends PKPNotificationManager {
 	}
 
 	function _getCachedRole($request, $notification, $validRoles = null) {
-		assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE);
+		assert($notification->getAssocType() == ASSOC_TYPE_SUBMISSION);
 		$articleId = (int) $notification->getAssocId();
 		$userId = $notification->getUserId();
 
@@ -155,18 +149,12 @@ class NotificationManager extends PKPNotificationManager {
 	 * @return string
 	 */
 	function getNotificationMessage($request, $notification) {
-		$type = $notification->getType();
-		assert(isset($type));
-
+		// Allow hooks to override default behavior
 		$message = null;
 		HookRegistry::call('NotificationManager::getNotificationMessage', array(&$notification, &$message));
 		if($message) return $message;
 
-		switch ($type) {
-			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
-				return __('notification.type.articleSubmitted', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_METADATA_MODIFIED:
-				return __('notification.type.metadataModified', array('title' => $this->_getArticleTitle($notification)));
+		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				return __('notification.type.galleyModified', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
@@ -175,9 +163,6 @@ class NotificationManager extends PKPNotificationManager {
 				return __('notification.type.reviewerComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_REVIEW_ASSIGNMENT:
 				return __('notification.type.reviewAssignment');
-			case NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED:
-				assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE && is_numeric($notification->getAssocId()));
-				return __('notification.type.editorAssignmentTask');
 			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
 				return __('notification.type.reviewerFormComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
@@ -229,7 +214,7 @@ class NotificationManager extends PKPNotificationManager {
 	 * @return string
 	 */
 	function _getArticleTitle($notification) {
-		assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE);
+		assert($notification->getAssocType() == ASSOC_TYPE_SUBMISSION);
 		assert(is_numeric($notification->getAssocId()));
 		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		$article = $articleDao->getById($notification->getAssocId());
@@ -273,9 +258,6 @@ class NotificationManager extends PKPNotificationManager {
 	 */
 	function getIconClass($notification) {
 		switch ($notification->getType()) {
-			case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
-				return 'notifyIconNewPage';
-			case NOTIFICATION_TYPE_METADATA_MODIFIED:
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				return 'notifyIconEdit';
 			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
