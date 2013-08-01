@@ -149,7 +149,7 @@ class Upgrade extends Installer {
 				case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
 				case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
 					$id = array_pop($matches[0]);
-					$notification->setAssocType(ASSOC_TYPE_ARTICLE);
+					$notification->setAssocType(ASSOC_TYPE_SUBMISSION);
 					$notification->setAssocId($id);
 					break;
 				case NOTIFICATION_TYPE_USER_COMMENT:
@@ -157,7 +157,7 @@ class Upgrade extends Installer {
 					//  galley and parent, which we no longer use
 					$matches = array_slice($matches[0], -3);
 					$id = array_shift($matches);
-					$notification->setAssocType(ASSOC_TYPE_ARTICLE);
+					$notification->setAssocType(ASSOC_TYPE_SUBMISSION);
 					$notification->setAssocId($id);
 					$notification->setType(NOTIFICATION_TYPE_USER_COMMENT);
 					break;
@@ -722,7 +722,7 @@ class Upgrade extends Installer {
 				$assocType = ASSOC_TYPE_GALLEY;
 				$assocId = $row['galley_id'];
 			} else {
-				$assocType = ASSOC_TYPE_ARTICLE;
+				$assocType = ASSOC_TYPE_SUBMISSION;
 				$assocId = $row['submission_id'];
 			};
 
@@ -732,7 +732,7 @@ class Upgrade extends Installer {
 		}
 
 		// Articles.
-		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_ARTICLE);
+		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_SUBMISSION);
 		$tempStatsDao->update(
 					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
 					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.context_id, pa.issue_id
@@ -823,7 +823,7 @@ class Upgrade extends Installer {
 		}
 
 		// Published articles.
-		$params = array(null, $loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, ASSOC_TYPE_ARTICLE);
+		$params = array(null, $loadId, OJS_METRIC_TYPE_LEGACY_DEFAULT, ASSOC_TYPE_SUBMISSION);
 		$metricsDao->update($insertIntoClause .
 			' SELECT ?, ?, ?, ?, pa.article_id, pa.article_id, pa.views, i.journal_id, pa.issue_id
 			FROM published_articles_stats_migration as pa
