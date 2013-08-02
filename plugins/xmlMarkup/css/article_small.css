@@ -1,0 +1,107 @@
+h1 {
+/**
+ * @file plugins/generic/markup/css/article.css
+ *
+ * Copyright (c) 2003-2013 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup plugins_generic_markup
+ *
+ * @brief css for display of document.html
+ * Adapted from https://github.com/hubgit/macrodocs/tree/gh-pages/css 
+ */
+	font-size: 2rem;
+}
+
+header {
+	padding: 0 1rem;
+}
+
+header .context {
+	font-size: 1.25rem;
+	color: #444;
+}
+
+header time {
+	white-space: nowrap;
+}
+
+figcaption p {
+	line-height: 1.3em;
+	text-align: left;
+}
+
+section > p,
+section > div,
+footer > p,
+footer > div,
+h1, h2, h3, h4, h5, h6 {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 1rem;
+}
+
+section > p,
+footer > p {
+	margin-bottom: 0.5rem;
+}
+
+section section > figure,
+section section .table-wrap {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+figure {
+	padding: 1rem 1rem 0.5rem;
+	margin: 1rem 0;
+}
+
+figure img {
+	margin: 0 0 1rem 0;
+}
+
+figcaption .heading {
+	font-size: 1.2rem;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+section p > figure, section p > .table-wrap {
+  margin-left: -1rem !important;
+  margin-right: -1rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.body > section > section {
+	margin: 1rem 0;
+	/*border-radius: 0;*/
+}
+
+.body > section > section h3 {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin: 1rem 0;
+}
+
+.body > section > section p {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	padding: 0;
+}
+
+.body > section > section figcaption p {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+nav {
+	margin-left: 0;
+}
+
+#related-articles ul {
+	margin-left: 1rem;
+}
