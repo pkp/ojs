@@ -33,7 +33,8 @@ class SubscriptionForm extends Form {
 
 	/**
 	 * Constructor
-	 * @param subscriptionId int leave as default for new subscription
+	 * @param subscriptionId int The subscription ID for this subscription; null for new subscription
+	 * @param $userId int The user ID for this subscription; null for new subscription
 	 */
 	function SubscriptionForm($subscriptionId = null, $userId = null) {
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;

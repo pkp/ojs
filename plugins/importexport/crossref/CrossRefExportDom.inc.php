@@ -55,7 +55,7 @@ class CrossRefExportDom {
 	}
 
 	/**
-	 * Generate the <head> tag that accompanies each submission
+	 * @verbatim Generate the <head> tag that accompanies each submission @endverbatim
 	 * @param $doc XMLNode
 	 * @param $journal Journal
 	 * @return XMLNode

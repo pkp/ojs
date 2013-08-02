@@ -25,7 +25,7 @@ class JournalOAI extends OAI {
 	/** @var Journal associated journal object */
 	var $journal;
 
-	/** @var int null if no journal */
+	/** @var int|null Journal ID; null if no journal */
 	var $journalId;
 
 	/** @var OAIDAO DAO for retrieving OAI records/tokens from database */
@@ -33,7 +33,7 @@ class JournalOAI extends OAI {
 
 
 	/**
-	 * @see OAI#OAI
+	 * @copydoc OAI::OAI()
 	 */
 	function JournalOAI($config) {
 		parent::OAI($config);
@@ -102,7 +102,7 @@ class JournalOAI extends OAI {
 	//
 
 	/**
-	 * @see OAI#repositoryInfo
+	 * @copydoc OAI::repositoryInfo()
 	 */
 	function &repositoryInfo() {
 		$info = new OAIRepository();
@@ -129,14 +129,14 @@ class JournalOAI extends OAI {
 	}
 
 	/**
-	 * @see OAI#validIdentifier
+	 * @copydoc OAI::validIdentifier()
 	 */
 	function validIdentifier($identifier) {
 		return $this->identifierToArticleId($identifier) !== false;
 	}
 
 	/**
-	 * @see OAI#identifierExists
+	 * @copydoc OAI::identifierExists()
 	 */
 	function identifierExists($identifier) {
 		$recordExists = false;
@@ -148,7 +148,7 @@ class JournalOAI extends OAI {
 	}
 
 	/**
-	 * @see OAI#record
+	 * @copydoc OAI::record()
 	 */
 	function &record($identifier) {
 		$articleId = $this->identifierToArticleId($identifier);
@@ -162,7 +162,7 @@ class JournalOAI extends OAI {
 	}
 
 	/**
-	 * @see OAI#records
+	 * @copydoc OAI::records()
 	 */
 	function &records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$records = null;
@@ -179,7 +179,7 @@ class JournalOAI extends OAI {
 	}
 
 	/**
-	 * @see OAI#identifiers
+	 * @copydoc OAI::identifiers()
 	 */
 	function &identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$records = null;
@@ -196,7 +196,7 @@ class JournalOAI extends OAI {
 	}
 
 	/**
-	 * @see OAI#sets
+	 * @copydoc OAI::sets()
 	 */
 	function &sets($offset, $limit, &$total) {
 		$sets = null;
@@ -207,7 +207,7 @@ class JournalOAI extends OAI {
 	}
 
 	/**
-	 * @see OAI#resumptionToken
+	 * @copydoc OAI::resumptionToken()
 	 */
 	function &resumptionToken($tokenId) {
 		$this->dao->clearTokens();
@@ -219,7 +219,7 @@ class JournalOAI extends OAI {
 	}
 
 	/**
-	 * @see OAI#saveResumptionToken
+	 * @copydoc OAI::saveResumptionToken()
 	 */
 	function &saveResumptionToken($offset, $params) {
 		$token = new OAIResumptionToken(null, $offset, $params, time() + $this->config->tokenLifetime);

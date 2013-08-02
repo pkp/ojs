@@ -9,9 +9,9 @@
  * @class Request
  * @ingroup core
  *
- * @brief Class providing operations associated with HTTP requests.
+ * @brief @verbatim Class providing operations associated with HTTP requests.
  * Requests are assumed to be in the format http://host.tld/index.php/<journal_id>/<page_name>/<operation_name>/<arguments...>
- * <journal_id> is assumed to be "index" for top-level site requests.
+ * <journal_id> is assumed to be "index" for top-level site requests. @endverbatim
  */
 
 

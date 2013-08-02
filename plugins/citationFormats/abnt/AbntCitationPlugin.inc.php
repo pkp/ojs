@@ -18,7 +18,7 @@ import('classes.plugins.CitationPlugin');
 
 class AbntCitationPlugin extends CitationPlugin {
 	/**
-	 * @see Plugin::register
+	 * @copydoc Plugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
@@ -36,21 +36,21 @@ class AbntCitationPlugin extends CitationPlugin {
 	}
 
 	/**
-	 * @see Plugin::getDisplayName
+	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.citationFormats.abnt.displayName');
 	}
 
 	/**
-	 * @see CitationFormatPlugin::getCitationFormatName
+	 * @copydoc CitationFormatPlugin::getCitationFormatName()
 	 */
 	function getCitationFormatName() {
 		return __('plugins.citationFormats.abnt.citationFormatName');
 	}
 
 	/**
-	 * @see Plugin::getDescription
+	 * @copydoc Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.citationFormats.abnt.description');
@@ -100,7 +100,7 @@ class AbntCitationPlugin extends CitationPlugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @copydoc PKPPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$request = $this->getRequest();

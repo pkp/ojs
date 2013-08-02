@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @defgroup pages_settings Settings Pages
+ * @defgroup pages_management Management Pages
  */
 
 /**
- * @file pages/settings/index.php
+ * @file pages/management/index.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup pages_settings
+ * @ingroup pages_management
  * @brief Handle requests for settings pages.
  *
  */
