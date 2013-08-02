@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * @defgroup plugins_generic_translator
+ * @defgroup plugins_generic_translator Translator Plugin
  */
  
 /**

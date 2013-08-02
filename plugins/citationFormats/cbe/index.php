@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_cbe
+ * @defgroup plugins_citationFormats_cbe CBE Citation Format
  */
  
 /**

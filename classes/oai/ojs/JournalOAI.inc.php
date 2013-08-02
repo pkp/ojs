@@ -19,16 +19,16 @@ import('lib.pkp.classes.oai.OAI');
 import('classes.oai.ojs.OAIDAO');
 
 class JournalOAI extends OAI {
-	/** @var $site Site associated site object */
+	/** @var Site associated site object */
 	var $site;
 
-	/** @var $journal Journal associated journal object */
+	/** @var Journal associated journal object */
 	var $journal;
 
-	/** @var $journalId int null if no journal */
+	/** @var int null if no journal */
 	var $journalId;
 
-	/** @var $dao OAIDAO DAO for retrieving OAI records/tokens from database */
+	/** @var OAIDAO DAO for retrieving OAI records/tokens from database */
 	var $dao;
 
 

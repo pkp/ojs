@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_mla
+ * @defgroup plugins_citationFormats_mla MLA Citation Format
  */
  
 /**

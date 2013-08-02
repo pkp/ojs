@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_erudit
+ * @defgroup plugins_importexport_erudit Erudit Export Plugin
  */
  
 /**

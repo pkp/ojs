@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_browse
+ * @defgroup plugins_generic_browse Browse Plugin
  */
  
 /**

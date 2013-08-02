@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/grid/settings/issue/TocGridRow.inc.php
+ * @file controllers/grid/toc/TocGridRow.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -20,7 +20,7 @@ class TocGridRow extends GridRow {
 
 	/**
 	 * Constructor
-	 * @var $issueId int
+	 * @param $issueId int
 	 */
 	function TocGridRow($issueId) {
 		parent::GridRow();

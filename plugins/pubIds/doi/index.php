@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_pubIds_doi
+ * @defgroup plugins_pubIds_doi DOI Pub ID Plugin
  */
 
 /**

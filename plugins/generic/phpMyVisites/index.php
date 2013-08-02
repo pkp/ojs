@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_phpMyVisites
+ * @defgroup plugins_generic_phpMyVisites phpMyVisites Plugin
  */
  
 /**

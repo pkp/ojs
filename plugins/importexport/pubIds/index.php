@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_pubIds
+ * @defgroup plugins_importexport_pubIds Pub ID Export Plugin
  */
 
 /**

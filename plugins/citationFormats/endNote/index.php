@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_endNote
+ * @defgroup plugins_citationFormats_endNote EndNote Citation Format
  */
  
 /**

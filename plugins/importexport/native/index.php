@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_native
+ * @defgroup plugins_importexport_native Native XML Import/Export Plugin
  */
  
 /**

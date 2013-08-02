@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_externalFeed
+ * @defgroup plugins_generic_externalFeed External Feed Plugin
  */
  
 /**

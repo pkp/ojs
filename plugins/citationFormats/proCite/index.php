@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_proCite
+ * @defgroup plugins_citationFormats_proCite ProCite Citation Format
  */
  
 /**

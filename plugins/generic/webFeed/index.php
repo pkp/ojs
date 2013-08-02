@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_webFeed
+ * @defgroup plugins_generic_webFeed Web Feed Plugin
  */
  
 /**

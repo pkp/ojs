@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_pubmed
+ * @defgroup plugins_importexport_pubmed PubMed Export Plugin
  */
  
 /**

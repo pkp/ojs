@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_users
+ * @defgroup plugins_importexport_users Users Import/Export Plugin
  */
  
 /**

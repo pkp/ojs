@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file @file classes/subscription/Subscription.inc.php
+ * @file classes/subscription/Subscription.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -13,12 +13,12 @@
  * @brief Basic class describing a subscription.
  */
 
-define('SUBSCRIPTION_STATUS_ACTIVE', 					0x01);
-define('SUBSCRIPTION_STATUS_NEEDS_INFORMATION', 		0x02);
-define('SUBSCRIPTION_STATUS_NEEDS_APPROVAL', 			0x03);
+define('SUBSCRIPTION_STATUS_ACTIVE', 			0x01);
+define('SUBSCRIPTION_STATUS_NEEDS_INFORMATION', 	0x02);
+define('SUBSCRIPTION_STATUS_NEEDS_APPROVAL', 		0x03);
 define('SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT', 	0x04);
 define('SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT',	0x05);
-define('SUBSCRIPTION_STATUS_OTHER', 					0x10);
+define('SUBSCRIPTION_STATUS_OTHER', 			0x10);
 
 define('SUBSCRIPTION_DATE_START',	0x01);
 define('SUBSCRIPTION_DATE_END',		0x02);

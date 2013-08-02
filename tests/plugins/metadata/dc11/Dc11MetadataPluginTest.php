@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/plugins/metadata/dc11/Dc11MetadataPluginTest.inc.php
+ * @file tests/plugins/metadata/dc11/Dc11MetadataPluginTest.php
  *
  * Copyright (c) 2000-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

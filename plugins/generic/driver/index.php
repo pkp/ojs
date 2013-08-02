@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_driver
+ * @defgroup plugins_generic_driver Driver Plugin
  */
  
 /**

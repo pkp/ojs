@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/functional/plugins/importexport/pubIds/FunctionalPubIdsImportExportTest.inc.php
+ * @file tests/functional/plugins/importexport/pubIds/FunctionalPubIdsImportExportTest.php
  *
  * Copyright (c) 2000-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

@@ -16,19 +16,19 @@ import('lib.pkp.classes.form.Form');
 
 class SubscriptionForm extends Form {
 
-	/** @var subscription the subscription being created/edited */
+	/** @var Subscription the subscription being created/edited */
 	var $subscription;
 
-	/** @var userId int the user associated with the subscription */
+	/** @var int the user associated with the subscription */
 	var $userId;
 
-	/** @var subscriptionTypes Array of subscription types */
+	/** @var array of subscription types */
 	var $subscriptionTypes;
 
-	/** @var validStatus array valid subscription status values */
+	/** @var array valid subscription status values */
 	var $validStatus;
 
-	/** @var validCountries array valid user country values */
+	/** @var array valid user country values */
 	var $validCountries;
 
 	/**

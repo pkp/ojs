@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_datacite
+ * @defgroup plugins_importexport_datacite DataCite Plugin
  */
 
 /**

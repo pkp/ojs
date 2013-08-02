@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_implicitAuth_shibboleth
+ * @defgroup plugins_implicitAuth_shibboleth Shibboleth Plugin
  */
 
 /**

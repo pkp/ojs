@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_reports_views
+ * @defgroup plugins_reports_views View Report Plugin
  */
 
 /**

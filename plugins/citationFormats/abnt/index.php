@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_abnt
+ * @defgroup plugins_citationFormats_abnt ABNT Citation Format
  */
  
 /**

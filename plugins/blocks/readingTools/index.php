@@ -1,7 +1,6 @@
 <?php
-
 /**
- * @defgroup plugins_blocks_reading_tools
+ * @defgroup plugins_blocks_reading_tools Reading Tools Block Plugin
  */
 
 /**

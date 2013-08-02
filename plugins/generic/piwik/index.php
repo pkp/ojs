@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_piwik
+ * @defgroup plugins_generic_piwik Piwik Plugin
  */
 
 /**

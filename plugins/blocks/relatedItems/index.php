@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_blocks_related_items
+ * @defgroup plugins_blocks_related_items Related Items Block Plugin
  */
 
 /**

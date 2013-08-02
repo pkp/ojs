@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_quickSubmit
+ * @defgroup plugins_importexport_quickSubmit QuickSubmit Plugin
  */
  
 /**

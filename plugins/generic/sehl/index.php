@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_sehl
+ * @defgroup plugins_generic_sehl SEHL (Search Engine HighLighting) Plugin
  */
  
 /**

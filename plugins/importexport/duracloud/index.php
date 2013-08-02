@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_duracloud
+ * @defgroup plugins_importexport_duracloud DuraCloud Plugin
  */
  
 /**

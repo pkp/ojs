@@ -1,7 +1,6 @@
 <?php
-
 /**
- * @defgroup plugins_blocks_languageToggle
+ * @defgroup plugins_blocks_languageToggle Language Toggle Block Plugin
  */
  
 /**

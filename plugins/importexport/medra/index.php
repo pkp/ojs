@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_medra
+ * @defgroup plugins_importexport_medra MEDRA Export Plugin
  */
 
 /**

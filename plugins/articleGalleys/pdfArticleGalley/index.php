@@ -1,7 +1,6 @@
 <?php
-
 /**
- * @defgroup plugins_articleGalleys_pdfArticleGalley
+ * @defgroup plugins_articleGalleys_pdfArticleGalley PDF Article Galley Plugin
  */
 
 /**

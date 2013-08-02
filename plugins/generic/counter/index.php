@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_counter
+ * @defgroup plugins_generic_counter Counter Plugin
  */
  
 /**

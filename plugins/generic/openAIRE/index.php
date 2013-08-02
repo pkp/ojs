@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_openAIRE
+ * @defgroup plugins_generic_openAIRE OpenAIRE Plugin
  */
  
 /**

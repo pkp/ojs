@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_reports_article
+ * @defgroup plugins_reports_article Article Report Plugin
  */
  
 /**

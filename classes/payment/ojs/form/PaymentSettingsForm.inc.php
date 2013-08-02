@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/payments/ojs/form/PaymentSettingsForm.inc.php
+ * @file classes/payment/ojs/form/PaymentSettingsForm.inc.php
  *
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

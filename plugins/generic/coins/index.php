@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_coins
+ * @defgroup plugins_generic_coins COinS Plugin
  */
  
 /**

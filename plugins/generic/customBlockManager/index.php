@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_customBlockManager
+ * @defgroup plugins_generic_customBlockManager Custom Block Manager Plugin
  */
  
 /**

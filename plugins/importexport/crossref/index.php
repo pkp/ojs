@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_crossref
+ * @defgroup plugins_importexport_crossref CrossRef Plugin
  */
  
 /**

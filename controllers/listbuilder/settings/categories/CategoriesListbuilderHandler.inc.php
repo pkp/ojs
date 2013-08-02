@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/listbuilder/settings/CategoriesListbuilderHandler.inc.php
+ * @file controllers/listbuilder/settings/categories/CategoriesListbuilderHandler.inc.php
  *
  * Copyright (c) 2000-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

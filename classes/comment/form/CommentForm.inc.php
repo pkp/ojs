@@ -29,7 +29,7 @@ class CommentForm extends Form {
 	/** @var Comment current comment */
 	var $comment;
 
-	/** @var Comment parent comment ID if applicable */
+	/** @var int parent comment ID if applicable */
 	var $parentId;
 
 	/** @var int Galley view by which the user entered the comments pages */

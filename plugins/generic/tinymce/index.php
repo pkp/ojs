@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_tinymce
+ * @defgroup plugins_generic_tinymce TinyMCE Plugin
  */
  
 /**

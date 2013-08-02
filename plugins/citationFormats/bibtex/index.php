@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_bibtex
+ * @defgroup plugins_citationFormats_bibtex BibTeX Citation Format
  */
  
 /**

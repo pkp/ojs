@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_turabian
+ * @defgroup plugins_citationFormats_turabian Turabian Citation Format
  */
  
 /**

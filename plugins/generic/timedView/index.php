@@ -1,11 +1,11 @@
 <?php
 
 /**
- * @defgroup plugins_reports_timedView
+ * @defgroup plugins_reports_timedView Timed Views Plugin
  */
 
 /**
- * @file plugins/reports/timedView/index.php
+ * @file plugins/generic/timedView/index.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_doaj
+ * @defgroup plugins_importexport_doaj DOAJ Plugin
  */
  
 /**

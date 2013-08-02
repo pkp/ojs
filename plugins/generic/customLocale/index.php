@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * @defgroup plugins_generic_customLocale
+ * @defgroup plugins_generic_customLocale Custom Locale Plugin
  */
  
 /**

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_recommendBySimilarity
+ * @defgroup plugins_generic_recommendBySimilarity Recommend Similar Plugin
  */
 
 /**

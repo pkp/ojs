@@ -1,7 +1,6 @@
 <?php
-
 /**
- * @defgroup plugins_blocks_navigation
+ * @defgroup plugins_blocks_navigation Navigation Block Plugin
  */
  
 /**

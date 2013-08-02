@@ -1,11 +1,11 @@
 <?php
 
 /**
- * @defgroup tests_plugins_oaiMetadataFormats_dc
+ * @defgroup tests_plugins_oaiMetadataFormats_dc Dublin Core OAI Plugin
  */
 
 /**
- * @file tests/plugins/oaiMetadataFormats/dc/OAIMetadataFormat_DCTest.inc.php
+ * @file tests/plugins/oaiMetadataFormats/dc/OAIMetadataFormat_DCTest.php
  *
  * Copyright (c) 2000-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

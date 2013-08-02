@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/tab/settings/contextIndexing/form/ContentIndexingForm.inc.php
+ * @file controllers/tab/settings/contentIndexing/form/ContentIndexingForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

@@ -139,7 +139,7 @@ class IssueGalley extends IssueFile {
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-	 * @var $preview boolean If true, generate a non-persisted preview only.
+	 * @param $preview boolean If true, generate a non-persisted preview only.
 	 */
 	function getPubId($pubIdType, $preview = false) {
 		// If we already have an assigned ID, use it.

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/tab/settings/siteIdentifiersOptions/form/IdentifiersForm.inc.php
+ * @file controllers/tab/settings/identifiers/form/IdentifiersForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

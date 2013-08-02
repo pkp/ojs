@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_recommendByAuthor
+ * @defgroup plugins_generic_recommendByAuthor Recommend Articles From The Same Author Plugin
  */
 
 /**

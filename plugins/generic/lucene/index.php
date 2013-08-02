@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_lucene
+ * @defgroup plugins_generic_lucene Lucene Plugin
  */
 
 /**

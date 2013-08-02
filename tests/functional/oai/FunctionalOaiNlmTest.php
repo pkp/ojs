@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/functional/oai/FunctionalOaiNlmTest.inc.php
+ * @file tests/functional/oai/FunctionalOaiNlmTest.php
  *
  * Copyright (c) 2000-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

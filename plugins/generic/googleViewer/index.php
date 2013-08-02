@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_googleViewer
+ * @defgroup plugins_generic_googleViewer Google Viewer Plugin
  */
 
 /**

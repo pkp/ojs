@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_usageEvent
+ * @defgroup plugins_generic_usageEvent Usage Event Plugin
  */
 
 /**

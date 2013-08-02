@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_citationFormats_refWorks
+ * @defgroup plugins_citationFormats_refWorks RefWorks Citation Format
  */
  
 /**

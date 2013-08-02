@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_referral
+ * @defgroup plugins_generic_referral Referral Plugin
  */
  
 /**

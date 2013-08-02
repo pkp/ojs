@@ -1,7 +1,6 @@
 <?php
-
 /**
- * @defgroup plugins_auth_ldap
+ * @defgroup plugins_auth_ldap LDAP Authentication Plugin
  */
  
 /**

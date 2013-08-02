@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_booksForReview
+ * @defgroup plugins_generic_booksForReview Books For Review Plugin
  */
  
 /**

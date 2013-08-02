@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_gateways_resolver
+ * @defgroup plugins_gateways_resolver Resolver Gateway Plugin
  */
  
 /**

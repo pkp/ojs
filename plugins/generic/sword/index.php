@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_sword
+ * @defgroup plugins_generic_sword SWORD Deposit Plugin
  */
 
 /**

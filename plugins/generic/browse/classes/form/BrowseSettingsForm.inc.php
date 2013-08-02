@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/browse/BrowseSettingsForm.inc.php
+ * @file plugins/generic/browse/classes/form/BrowseSettingsForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

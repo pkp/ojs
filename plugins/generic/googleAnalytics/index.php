@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_googleAnalytics
+ * @defgroup plugins_generic_googleAnalytics Google Analytics Plugin
  */
  
 /**

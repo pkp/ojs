@@ -1,7 +1,6 @@
 <?php
-
 /**
- * @defgroup plugins_articleGalleys_downloadableFileArticleGalley
+ * @defgroup plugins_articleGalleys_downloadableFileArticleGalley Downloadable File Article Galley Plugin
  */
 
 /**

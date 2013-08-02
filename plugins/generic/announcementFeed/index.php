@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_announcementFeed
+ * @defgroup plugins_generic_announcementFeed Announcement Feed Plugin
  */
  
 /**

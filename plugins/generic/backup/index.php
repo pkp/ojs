@@ -1,11 +1,11 @@
 <?php
 
 /**
- * @defgroup plugins_generic_backup
+ * @defgroup plugins_generic_backup Backup Plugin
  */
  
 /**
- * @file plugins/generic/back/up/index.php
+ * @file plugins/generic/backup/index.php
  *
  * Copyright (c) 2000-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

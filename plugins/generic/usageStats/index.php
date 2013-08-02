@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup plugins_generic_usageStats
+ * @defgroup plugins_generic_usageStats Usage Statistics Plugin
  */
 
 /**
