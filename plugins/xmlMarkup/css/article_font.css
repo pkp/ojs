@@ -1,0 +1,51 @@
+body {
+ /**
+ * @file plugins/generic/markup/css/article.css
+ *
+ * Copyright (c) 2003-2013 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup plugins_generic_markup
+ *
+ * @brief css for display of document.html
+ * Adapted from https://github.com/hubgit/macrodocs/tree/gh-pages/css 
+ */	
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+h1 {}
+
+h2 {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-weight: 100;
+}
+
+section > h3 {}
+
+main p {
+	font-family: "Georgia", serif;
+}
+
+.btn {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+figure,
+.table-wrap,
+figure p,
+.table-wrap p {
+	font-family: inherit;
+}
+
+#introduction > p:first-of-type:first-letter {
+  /* font-family: "Lustria", sans-serif; */
+  float: left;
+  font-size: 4rem;
+  line-height: 1em;
+  margin: -0.2rem 0.5rem 0 0;
+}
+

@@ -1,0 +1,146 @@
+@page {
+ /**
+ * @file plugins/generic/markup/css/article.css
+ *
+ * Copyright (c) 2003-2013 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup plugins_generic_markup
+ *
+ * @brief css for print of document.html
+ * Adapted from https://github.com/hubgit/macrodocs/tree/gh-pages/css 
+ */	
+	prince-shrink-to-fit: auto;
+	size: A4;
+}
+
+.popover,
+[download] {
+	display: none !important;
+}
+
+html {
+	font-size: 8pt;
+}
+
+body {
+	background: none;
+	line-height: 1;
+}
+
+p {
+	text-align: justify;
+	margin-bottom: 0rem !important;
+	line-height: 1.2;
+}
+
+p:not(:first-of-type) {
+  text-indent: 1em;
+}
+
+.sup, .sub {
+	font-size: inherit;
+}
+
+.body > section > section {
+	margin: 0;
+	background: none;
+	box-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: "Helvetica Neue";
+	font-weight: bold;
+}
+
+h1.article-title {
+	margin-top: 1em !important;
+}
+
+h2 {
+	margin-top: 2rem;
+	background: inherit;
+	color: inherit;
+	line-height: 1rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+p {
+	orphans: 3;
+	widows: 3;
+}
+
+figure img {
+	max-height: 300pt;
+	max-width: 100% !important;
+	float: none !important;
+	prince-image-resolution: normal;
+}
+
+figure {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	float: top unless-fit;
+	border: none;
+	page-break-inside: avoid;
+	text-align: center;
+	padding: 1rem 1rem 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #999;
+	display: block;
+}
+
+figure .image-container {
+  	text-align: center;
+}
+
+[position="float"] {
+	clear: none;
+}
+
+figcaption {
+	text-align: left;
+	margin-bottom: 1rem;
+	padding: 0 1rem;
+}
+
+figcaption .heading {
+	font-size: 1rem;
+}
+
+.ref-list {
+	font-size: 80%;
+}
+
+section.collapsed > * {
+  	display: block;
+}
+
+section.collapsed .show {
+  	display: none;
+}
+
+#related-articles,
+.toc {
+	display: none;
+}
+
+table { page-break-inside:auto; page-break-after:auto }
+tr    { page-break-inside:avoid; page-break-after:auto }
+td    { page-break-inside:avoid; page-break-after:auto }
+thead { display:table-header-group }
+tfoot { display:table-footer-group }
+
+.heading {
+	page-break-after:avoid;
+}
+
+
