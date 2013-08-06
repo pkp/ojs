@@ -55,7 +55,7 @@ function toggleChecked() {
 		<td>{$referral->getLinkCount()|escape}</td>
 		<td><a href="{$referral->getUrl()|escape}">{$referral->getUrl()|truncate:50|escape}</a></td>
 		<td>{$articleTitles[$articleId]|strip_unsafe_html}</td>
-		<td>{$referral->getReferralName()|truncate:50|escape}</td>
+		<td>{$referral->getReferralName()|truncate:50|escape|default:"&mdash;"}</td>
 		<td>{translate key=$referral->getStatusKey()}</td>
 		<td align="right">
 			<a class="action" href="{url page="referral" op="editReferral" path=$referral->getId()}">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.referral.confirmDelete"}')" href="{url page="referral" op="deleteReferral" path=$referral->getId()}">{translate key="common.delete"}</a>
