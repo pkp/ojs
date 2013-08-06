@@ -39,20 +39,12 @@ class NotificationManager extends PKPNotificationManager {
 		$context = $request->getContext();
 
 		switch ($notification->getType()) {
-			case NOTIFICATION_TYPE_REVIEW_ASSIGNMENT:
-				$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO'); /* @var $reviewAssignmentDao ReviewAssignmentDAO */
-				$reviewAssignment = $reviewAssignmentDao->getById($notification->getAssocId());
-				return $dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'reviewer', 'submission', $reviewAssignment->getSubmissionId());
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'layout');
 			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'editorDecision');
-			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
-			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'peerReview');
 			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
 				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'editorDecision');
@@ -60,9 +52,6 @@ class NotificationManager extends PKPNotificationManager {
 				return $dispatcher->url($request, ROUTE_PAGE, null, 'comment', 'view', $notification->getAssocId());
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
 				return $dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'current');
-			case NOTIFICATION_TYPE_NEW_ANNOUNCEMENT:
-				assert($notification->getAssocType() == ASSOC_TYPE_ANNOUNCEMENT);
-				return $dispatcher->url($request, ROUTE_PAGE, null, 'announcement', 'view', array($notification->getAssocId()));
 			default:
 				return parent::getNotificationUrl($request, $notification);
 		}
@@ -161,8 +150,6 @@ class NotificationManager extends PKPNotificationManager {
 				return __('notification.type.submissionComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
 				return __('notification.type.reviewerComment', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_REVIEW_ASSIGNMENT:
-				return __('notification.type.reviewAssignment');
 			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
 				return __('notification.type.reviewerFormComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
