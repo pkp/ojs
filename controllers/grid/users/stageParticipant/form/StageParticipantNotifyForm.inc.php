@@ -1,27 +1,27 @@
 <?php
 
 /**
- * @file controllers/informationCenter/form/InformationCenterNotifyForm.inc.php
+ * @file controllers/grid/users/stageParticipant/form/StageParticipantNotifyForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class InformationCenterNotifyForm
- * @ingroup informationCenter_form
+ * @class StageParticipantNotifyForm
+ * @ingroup grid_users_stageParticipant_form
  *
  * @brief Form to notify a user regarding a file
  */
 
 import('classes.mail.ArticleMailTemplate');
-import('lib.pkp.controllers.informationCenter.form.PKPInformationCenterNotifyForm');
+import('lib.pkp.controllers.grid.users.stageParticipant.form.PKPStageParticipantNotifyForm');
 
-class InformationCenterNotifyForm extends PKPInformationCenterNotifyForm {
+class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm {
 
 	/**
 	 * Constructor.
 	 */
-	function InformationCenterNotifyForm($itemId, $itemType) {
-		parent::PKPInformationCenterNotifyForm($itemId, $itemType);
+	function StageParticipantNotifyForm($itemId, $itemType, $template = null) {
+		parent::PKPStageParticipantNotifyForm($itemId, $itemType, $template);
 	}
 
 	/**
