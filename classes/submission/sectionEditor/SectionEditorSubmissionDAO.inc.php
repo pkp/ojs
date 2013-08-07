@@ -121,7 +121,7 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 		while ($reviewRound = $reviewRounds->next()) {
 			$round = $reviewRound->getRound();
 			$sectionEditorSubmission->setReviewAssignments(
-				$this->reviewAssignmentDao->getBySubmissionId($row['submission_id'], $round),
+				$this->reviewAssignmentDao->getBySubmissionId($row['submission_id'], $reviewRound->getId()),
 				$round
 			);
 		}
