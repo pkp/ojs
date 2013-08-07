@@ -149,7 +149,7 @@ class Application extends PKPApplication {
 			'PluginSettingsDAO' => 'classes.plugins.PluginSettingsDAO',
 			'PublishedArticleDAO' => 'classes.article.PublishedArticleDAO',
 			'QueuedPaymentDAO' => 'lib.pkp.classes.payment.QueuedPaymentDAO',
-			'ReviewAssignmentDAO' => 'classes.submission.reviewAssignment.ReviewAssignmentDAO',
+			'ReviewAssignmentDAO' => 'lib.pkp.classes.submission.reviewAssignment.ReviewAssignmentDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
 			'ReviewFormDAO' => 'lib.pkp.classes.reviewForm.ReviewFormDAO',
 			'ReviewFormElementDAO' => 'lib.pkp.classes.reviewForm.ReviewFormElementDAO',

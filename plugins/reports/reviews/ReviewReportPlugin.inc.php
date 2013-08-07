@@ -73,7 +73,14 @@ class ReviewReportPlugin extends ReportPlugin {
 		$yesnoMessages = array( 0 => __('common.no'), 1 => __('common.yes'));
 
 		import('classes.submission.reviewAssignment.ReviewAssignment');
-		$recommendations = ReviewAssignment::getReviewerRecommendationOptions();
+		$recommendations = array(
+			SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT => 'reviewer.article.decision.accept',
+			SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS => 'reviewer.article.decision.pendingRevisions',
+			SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE => 'reviewer.article.decision.resubmitHere',
+			SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE => 'reviewer.article.decision.resubmitElsewhere',
+			SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE => 'reviewer.article.decision.decline',
+			SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS => 'reviewer.article.decision.seeComments'
+		);
 
 		$columns = array(
 			'round' => __('plugins.reports.reviews.round'),
