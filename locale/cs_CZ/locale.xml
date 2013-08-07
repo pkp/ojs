@@ -807,7 +807,7 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="log.review.reviewAcceptedByProxy">{$userName} přijal recenzní kolo {$round} pro příspěvek {$articleId} v zastoupení recenzenta {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">Editor, {$userName}, nahrál soubor s recenzí pro kolo {$round} příspěvku {$articleId} v zastoupení recenzenta {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Soubor recenzenta byl nahrán.</message>
-	<message key="log.editor.decision">Rozhodnutí editora ({$decision}) pro článek {$articleId} zaznamenal {$editorName}.</message>
+	<message key="log.editor.decision">Rozhodnutí editora ({$decision}) pro článek {$submissionId} zaznamenal {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Redigování příspěvku {$articleId} zahájil {$copyeditorName}.</message>

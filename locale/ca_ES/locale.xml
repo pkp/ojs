@@ -861,7 +861,7 @@ El camp Actives llista les revisions en curs.]]></message>
 	<message key="log.review.reviewAcceptedByProxy">{$userName} ha acceptat en nom de {$reviewerName} la ronda {$round} de revisió per a la tramesa {$articleId}.</message>
 	<message key="log.review.reviewFileByProxy">L’editor/a, {$userName}, ha penjat un fitxer de revisió per a la ronda {$round} de la tramesa {$articleId} en nom del revisor/a, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">S’ha penjat un fitxer del revisor.</message>
-	<message key="log.editor.decision">{$editorName} ha registrat una decisió ({$decision}) per a l’editor/a {$articleId}.</message>
+	<message key="log.editor.decision">{$editorName} ha registrat una decisió ({$decision}) per a l’editor/a {$submissionId}.</message>
 
 
 	<message key="log.copyedit.initiate">{$copyeditorName} ha començat la revisió de la tramesa {$articleId}.</message>

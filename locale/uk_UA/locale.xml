@@ -969,7 +969,7 @@
        <message key="log.review.reviewAcceptedByProxy">{$userName} прийняв {$round} раунд рецензування подання {$articleId} від імені фахівця {$reviewerName}.</message>
        <message key="log.review.reviewFileByProxy">Редактор {$userName} вивантажив файл рецензії для {$round} раунду рецензування подання {$articleId} від імені рецензента {$reviewerName}.</message>
        <message key="log.review.reviewerFile">Файл рецензента був вивантажений.</message>
-       <message key="log.editor.decision">Рішення редактора ({$decision}) щодо статті {$articleId} було записане редактором {$editorName}.</message>
+       <message key="log.editor.decision">Рішення редактора ({$decision}) щодо статті {$submissionId} було записане редактором {$editorName}.</message>
 
        <message key="log.copyedit.initiate">Літературне редагування подання {$articleId} було розпочате редактором {$copyeditorName}.</message>
        <message key="log.copyedit.copyeditFileSet">Файл базової редакційної версії був визначений.</message>

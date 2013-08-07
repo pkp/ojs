@@ -850,7 +850,7 @@ artikulua ebaluatzeko {$round}. bueltan.</message>
 	<message key="log.review.reviewAcceptedByProxy">{$reviewerName} ebaluatzailearen izenean, {$userName}(e)k {$articleId} artikuluaren {$round}. ebaluazio-buelta egitea onartu du.</message>
 	<message key="log.review.reviewFileByProxy">{$userName} editoreak {$articleId} artikuluaren {$round}. bueltako ebaluazio-fitxategia kargatu du, {$reviewerName} ebaluatzailearen izenean.</message>
 	<message key="log.review.reviewerFile">Ebaluazio-fitxategi bat kargatu da.</message>
-	<message key="log.editor.decision">{$editorName} editoreak {$articleId} artikuluari buruzko erabakia ({$decision}) grabatu du.</message>
+	<message key="log.editor.decision">{$editorName} editoreak {$submissionId} artikuluari buruzko erabakia ({$decision}) grabatu du.</message>
 
 
 	<message key="log.copyedit.initiate">{$copyeditorName} hasi da {$articleId} artikulua zuzentzen.</message>

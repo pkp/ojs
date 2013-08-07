@@ -1042,7 +1042,7 @@ Note that if your site administrator has already registered this site with these
 	<message key="log.review.reviewAcceptedByProxy">{$userName}已经代表{$reviewerName}接受对稿件{$articleId}进行{$round}审.</message>
 	<message key="log.review.reviewFileByProxy">编辑{$userName}已经代表审稿人{$reviewerName}上传了稿件{$articleId}在{$round}审时的审稿意见书文件.</message>
 	<message key="log.review.reviewerFile">已上传一份审稿意见书.</message>
-	<message key="log.editor.decision">对于稿件{$articleId} 的编辑决策已经被{$editorName}记录.</message>
+	<message key="log.editor.decision">对于稿件{$submissionId} 的编辑决策已经被{$editorName}记录.</message>
 
 
 	<message key="log.copyedit.initiate">文字编辑{$copyeditorName}已对稿件{$articleId}提出文字编辑意见.</message>

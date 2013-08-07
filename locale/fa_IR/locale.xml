@@ -633,7 +633,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="payment.subscription.expires">منقضی میشود</message>
 	<message key="installer.databaseSettingsInstructions">او ج اس برای ذخیره داده های خود نیاز به دسترسی به یک بانک اطلاعاتی اس کیو ال دارد. لطفا شرایط مورد لزوم ذکر شده در بالای این صفحه را برای دیدن لیست بانک های اطلاعاتی سازگار ببینید. سپس در قسمت زیر تنظیمات لازم برای ایجاد ارتباط با بانک اطلاعاتی را وارد کنید</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} از طرف {$reviewerName} از قبول دعوت کارشناسی در راند {$round} خودداری کرده است</message>
-	<message key="log.editor.decision">یک تصمیم ادیتوریال ({$decision}) برای مقاله {$articleId} توسط {$editorName} اتخاذ گردید.</message>
+	<message key="log.editor.decision">یک تصمیم ادیتوریال ({$decision}) برای مقاله {$submissionId} توسط {$editorName} اتخاذ گردید.</message>
 	<message key="rt.admin.settings.addComment.authenticated">برای ارسال نظر خود لازم است که ثبت نام کرده و سپی وارد شوید. ارسال بصورت گمنام مقدور نیست</message>
 	<message key="rt.admin.settings.addComment.anonymous">برای ارسال نظر خود بصورت گمنام لازم است که ثبت نام کرده و سپی وارد شوید.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">برای ارسال نظرات بضورت گمنام احتیاج به ثبت نام نیست</message>

@@ -799,7 +799,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="log.review.reviewAcceptedByProxy">{$userName} heeft de review voor ronde  {$round} van inzending {$articleId} namens {$reviewerName} geaccepteerd.</message>
 	<message key="log.review.reviewFileByProxy">Redacteur, {$userName}, heeft een reviewbestand geladen voor ronde {$round} van inzending {$articleId} namens reviewer {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Een reviewbestand is geladen.</message>
-	<message key="log.editor.decision">Een redacteursbeslissing ({$decision}) voor artikel {$articleId} is vastgelegd door {$editorName}.</message>
+	<message key="log.editor.decision">Een redacteursbeslissing ({$decision}) voor artikel {$submissionId} is vastgelegd door {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Tekstredactie voor inzending  {$articleId} is gestart door {$copyeditorName}.</message>

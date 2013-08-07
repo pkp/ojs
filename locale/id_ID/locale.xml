@@ -909,7 +909,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="log.review.reviewAcceptedByProxy">{$userName} telah diterima pada tahapan {$round} review naskah {$articleId} atas nama {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">Editor, {$userName}, telah mengunggah file review untuk tahapan {$round} dari naskah {$articleId} atas nama Reviewer, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">File review telah diunggah.</message>
-	<message key="log.editor.decision">Keputusan editor ({$decision}) untuk artikel {$articleId} dicatat oleh {$editorName}.</message>
+	<message key="log.editor.decision">Keputusan editor ({$decision}) untuk artikel {$submissionId} dicatat oleh {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Copyediting naskah {$articleId} telah dimulai oleh {$copyeditorName}.</message>

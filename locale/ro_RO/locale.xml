@@ -1078,7 +1078,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="log.review.reviewAcceptedByProxy">{$userName} a acceptat sesiunea {$round} de evaluare pentru propunerea {$articleId} în numele lui {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">Redactorul {$userName} a încărcat un fişier de evaluare pentru sesiunea {$round} pentru propunerea {$articleId} în numele lui {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">A fost încărcat fişierul de evaluare.</message>
-	<message key="log.editor.decision">Decizia ({$decision}) unui redactor pentru articolul {$articleId} a fost înregistrată de {$editorName}.</message>
+	<message key="log.editor.decision">Decizia ({$decision}) unui redactor pentru articolul {$submissionId} a fost înregistrată de {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">(Tehno)redactarea propunerii {$articleId} a fost începută de {$copyeditorName}.</message>

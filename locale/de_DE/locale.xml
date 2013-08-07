@@ -1007,7 +1007,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="log.review.reviewAcceptedByProxy">{$userName} hat die Begutachtung von Beitrag {$articleId} in Durchgang {$round} im Auftrag von {$reviewerName} angenommen.</message>
 	<message key="log.review.reviewFileByProxy">Redakteur/in {$userName} hat die Begutachtungsdatei von Beitrag {$articleId} in Durchgang {$round} im Auftrag der Gutachterin/des Gutachters {$reviewerName} hochgeladen.</message>
 	<message key="log.review.reviewerFile">Begutachtungsdatei wurde hochgeladen.</message>
-	<message key="log.editor.decision">Eine Entscheidung ({$decision}) bezüglich Artikel {$articleId} wurde von Redakteur/in {$editorName} abgegeben.</message>
+	<message key="log.editor.decision">Eine Entscheidung ({$decision}) bezüglich Artikel {$submissionId} wurde von Redakteur/in {$editorName} abgegeben.</message>
 
 
 	<message key="log.copyedit.initiate">Lektorat von Beitrag {$articleId} wurde von {$copyeditorName} begonnen.</message>

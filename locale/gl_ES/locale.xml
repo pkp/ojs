@@ -968,7 +968,7 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<message key="plugins.categories.citationFormats.description">Os plugins de formatos de citación fornecen aos usuarios de varios formatos cos que acceder a citas de artigos.</message>
 	<message key="payment.membership.ends">Termo</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} non permitiu a rolda {$round} de revisión para a presentación do artigo {$articleId} en nome de {$reviewerName}.</message>
-	<message key="log.editor.decision">Unha decisión ({$decision}) dun editor para o artigo {$articleId} vai ser rexistrada por {$editorName}.</message>
+	<message key="log.editor.decision">Unha decisión ({$decision}) dun editor para o artigo {$submissionId} vai ser rexistrada por {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Angadir comentario (habilita aos lectores a enviar comentarios, co Administrador daa Revista con competencia para borralos).</message>
 	<message key="rt.metadata.pkp.doi">Identificador de Obxecto Digital</message>
 	<message key="notification.mailListDescription">Insire o teu enderezo de correo electrónico para recibir notificacións inmediatas de novo contido engadido á revista.</message>

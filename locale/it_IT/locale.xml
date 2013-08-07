@@ -857,7 +857,7 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.publication.publicationPaid">Contributo per la pubblicazione pagato</message>
 	<message key="payment.subscription.renew">Rinnova l'abbonamento</message>
 	<message key="installer.databaseSettingsInstructions">Ojs richiede l'accesso a un database SQL per memorizzare i dati. Vedi i requisiti di sistema sopra per un elenco dei DBMS supportati. Nei campi sotto, fornisci le impostazioni per connetterti al DB.</message>
-	<message key="log.editor.decision">Una decisione dell'editor ({$decision}) per l'articolo {$articleId} è stata registrata da {$editorName}.</message>
+	<message key="log.editor.decision">Una decisione dell'editor ({$decision}) per l'articolo {$submissionId} è stata registrata da {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Aggiungi un commento (abilita i lettori a inviare commenti, che l'amministratore della rivista potrà cancellare).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Gli utenti devono essere registrati e loggati per inviare, senza possibilità di anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Gli utenti devono essere registrati e autenticati per postare, con possibilità di anonimato.</message>

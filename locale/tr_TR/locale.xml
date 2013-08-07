@@ -916,7 +916,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="log.review.reviewAcceptedByProxy">{$userName} {$articleId} ile tanımlı başvurunun {$round} nolu değerlendirmesini {$reviewerName} adına kabul etti.</message>
 	<message key="log.review.reviewFileByProxy">Editör, {$userName}, {$articleId} ile tanımlı başvurunun {$round} nolu değerlendirmesi sonucunda {$reviewerName} adına bir değerlendirme dosyası yükledi.</message>
 	<message key="log.review.reviewerFile">Bir hakem değerlendirme dosyası yüklenmiş.</message>
-	<message key="log.editor.decision">An editor decision ({$decision}) for article {$articleId} was recorded by {$editorName}.</message>
+	<message key="log.editor.decision">An editor decision ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
 	
 	
 	<message key="log.copyedit.initiate">{$articleId} ile tanımlı başvurunun sayfa düzeni {$copyeditorName} tarafından kabul edilmiştir.</message>

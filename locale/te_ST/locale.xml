@@ -1982,7 +1982,7 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="log.review.reviewAcceptedByProxy">{$userName} håþ åççèptèð thè róüñð {$round} rèvîèw fór þübmîþþîóñ {$articleId} óñ bèhålf óf {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">Thè Éðîtór, {$userName}, håþ üplóåðèð å rèvîèw fîlè fór róüñð {$round} óf þübmîþþîóñ {$articleId} óñ bèhålf óf thè rèvîèwèr, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Æ rèvîèwèr fîlè håþ bèèñ üplóåðèð.</message>
-	<message key="log.editor.decision">Æñ èðîtór ðèçîþîóñ ({$decision}) fór årtîçlè {$articleId} wåþ rèçórðèð bý {$editorName}.</message>
+	<message key="log.editor.decision">Æñ èðîtór ðèçîþîóñ ({$decision}) fór årtîçlè {$submissionId} wåþ rèçórðèð bý {$editorName}.</message>
 	<message key="log.copyedit.initiate">Çópýèðîtîñg óñ þübmîþþîóñ {$articleId} håþ bèèñ çómmèñçèð bý {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Thè ðèfåült çópýèðît fîlè håþ bèèñ çhóþèñ.</message>
 	<message key="log.copyedit.initialEditComplete">{$copyeditorName} håþ çómplètèð thè îñîtîål çópý èðît óf þübmîþþîóñ {$articleId}.</message>

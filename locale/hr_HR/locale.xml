@@ -1012,7 +1012,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="payment.subscription.expires">Istječe</message>
 	<message key="installer.databaseSettingsInstructions">OJS sa spremanje svojih podataka zahtjeva pristup SQL bazi. Pregledajte gorenavedene sistemske zahtjeve za popis baza koje OJS podržava. U niže priloženim poljima navedite postavke koje će se koristiti za povezivanje s bazom.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} je odbio/la {$round} recenziju priloga {$articleId} u ime {$reviewerName}.</message>
-	<message key="log.editor.decision">{$editorName} je evidentirao uredničku odluku ({$decision}) za članak {$articleId}.</message>
+	<message key="log.editor.decision">{$editorName} je evidentirao uredničku odluku ({$decision}) za članak {$submissionId}.</message>
 	<message key="rt.admin.settings.addComment.authenticated">Anonimni komentari nisu dozvoljeni. Korisnici moraju biti registrirani i prijavljeni da bi mogli ostavljati komentare.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Anonimni komentari su dozvoljeni, ali korisnici moraju biti registrirani i prijavljeni kako bi ostavili komentar.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Anonimni komentari su dopušteni, a korisnici se ne trebaju registrirati da bi ih ostavljali.</message>

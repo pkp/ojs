@@ -867,7 +867,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.subscription.expires">Vencimento</message>
 	<message key="installer.databaseSettingsInstructions">O sistema exige acesso a uma base de dados SQL para armazenar seus dados. Verifique os requisitos do sistema para a lista de bases de dados suportadas. Nos campos a seguir, informe as configurações a serem utilizadas para conexão ao servidor de bases de dados.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} marcou indisponibilidade na rodada {$round} para avaliar a submissão {$articleId} em nome de {$reviewerName}.</message>
-	<message key="log.editor.decision">A Decisão Editorial ({$decision}) sobre a submissão {$articleId} foi registrada por {$editorName}.</message>
+	<message key="log.editor.decision">A Decisão Editorial ({$decision}) sobre a submissão {$submissionId} foi registrada por {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Incluir comentários (Permite a publicação de comentários pelos leitores, permitindo a exclusão pelo Editor-Gerente).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Usuários devem estar cadastrados e logados para comentar, sem permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Usuários devem estar cadastrados e logados para comentar, com permissão de anonimato.</message>

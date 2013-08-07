@@ -785,7 +785,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="submission.layout.noLayoutFile">Aucun (Télécharger la version de révision finale comme version de mise en page avant d'envoyer une demande)</message>
 	<message key="installer.databaseSettingsInstructions">OJS nécessite l'accès à une base de données SQL pour stocker ses données. Voir la configuration nécessaire ci-dessus pour une liste des base de données prises en cahrge. Dans les champs ci-dessus, fournir les paramètres à utiliser pour se connecter à la base de données.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} a refusé le cycle {$round} d'évaluation pour la soumission {$articleId} au nom de {$reviewerName}.</message>
-	<message key="log.editor.decision">Une décision du rédacteur ({$decision}) pour l'article {$articleId} a été enregistré par {$editorName}.</message>
+	<message key="log.editor.decision">Une décision du rédacteur ({$decision}) pour l'article {$submissionId} a été enregistré par {$editorName}.</message>
 	<message key="rt.admin.settings.addComment.authenticated">Les utilisateurs doivent être inscrits et connectés pour publier, et l'anonymat n'est pas autorisé.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Les utilisateurs doivent être inscrits et connectés pour publier, et l'anonymat est autorisé.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Les utilisateurs n'ont pas besoin d'être inscrits pour publier, et l'anonymat est autorisé.</message>

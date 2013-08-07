@@ -724,7 +724,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="payment.subscription.expires">期限切れ</message>
 	<message key="installer.databaseSettingsInstructions">OJSはデータを保管するためにSQLデータベースへのアクセスを必要とします。サポートしているデータベースの一覧は上のシステム要件を参照してください。</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} は{$reviewerName}の代理として投稿物「{$articleId} 」の{$round} 回目の査読を謝絶しました。</message>
-	<message key="log.editor.decision">An editor decisionfor 論文「{$articleId} 」に対する編集者の判断 ({$decision}) を{$editorName}が記録しました。</message>
+	<message key="log.editor.decision">An editor decisionfor 論文「{$submissionId} 」に対する編集者の判断 ({$decision}) を{$editorName}が記録しました。</message>
 	<message key="rt.admin.settings.addComment">コメントの追加（読者がコメントをつけられるようにする。雑誌管理者はこれを削除できる）</message>
 	<message key="rt.admin.settings.addComment.authenticated">コメントをつけるには、ユーザ登録してログインする必要がある。匿名によるコメントを許可しない。</message>
 	<message key="rt.admin.settings.addComment.anonymous">コメントをつけるには、ユーザ登録してログインする必要がある。匿名によるコメントを許可する。</message>

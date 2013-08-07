@@ -799,7 +799,7 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="log.review.reviewAcceptedByProxy">{$userName} har accepteret rundebedømmelsen {$round} for manuskriptet {$articleId} på vegne af {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">Redaktøren, {$userName}, har overført en bedømmelsesfil for runde {$round} for manuskriptet {$articleId} på vegne af bedømmeren, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Der er blevet overført en bedømmelsesfil.</message>
-	<message key="log.editor.decision">Der blev registreret en redaktørbeslutning ({$decision}) for artiklen {$articleId} af {$editorName}.</message>
+	<message key="log.editor.decision">Der blev registreret en redaktørbeslutning ({$decision}) for artiklen {$submissionId} af {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Redigering af manuskriptet {$articleId} er påbegyndt af {$copyeditorName}.</message>

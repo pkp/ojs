@@ -962,7 +962,7 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="plugins.categories.citationFormats.description">Los plugins de formatos de citación proveen a los usuarios de varios formatos con los que acceder a citas de artículos.</message>
 	<message key="payment.membership.ends">Termino</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} no ha permitido la ronda {$round} de revisión para la presentación del artículo {$articleId} en nombre de {$reviewerName}.</message>
-	<message key="log.editor.decision">Una decisión ({$decision}) de un editor para el artículo {$articleId} fué registrada por {$editorName}.</message>
+	<message key="log.editor.decision">Una decisión ({$decision}) de un editor para el artículo {$submissionId} fué registrada por {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Añadir comentario (habilita a los lectores a enviar comentarios, con el Administrador de la Revista capaz de borrarlos).</message>
 	<message key="rt.metadata.pkp.doi">Identificador de Objeto Digital</message>
 	<message key="notification.mailListDescription">Introduce tu dirección de correo electrónico para recibir notificaciones inmediatas de nuevo contenido añadido a la revista.</message>

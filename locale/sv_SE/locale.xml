@@ -914,7 +914,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="log.review.reviewAcceptedByProxy">{$userName} har accepterats omgång {$round} för granskning av manuskript {$articleId} av {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">Redaktören, {$userName}, har laddat upp en granskningsfil för granskningsomgång {$round} av manuskriptet {$articleId} i enlighet med granskaren, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">En fil för granskning har laddats upp.</message>
-	<message key="log.editor.decision">Ett beslut av redaktören({$decision}) för artikel {$articleId} skapades av {$editorName}.</message>
+	<message key="log.editor.decision">Ett beslut av redaktören({$decision}) för artikel {$submissionId} skapades av {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Manusredigering av manuskriptet {$articleId} har påbörjats av {$copyeditorName}.</message>

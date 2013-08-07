@@ -808,7 +808,7 @@
         <message key="log.review.reviewAcceptedByProxy">Ο/Η {$userName} έχει αποδεκτεί τον γύρο  {$round} της αξιολόγησης για την υποβολή  {$articleId} για λογαριασμό του/της {$reviewerName}.</message>
         <message key="log.review.reviewFileByProxy">Ο επιλητής του περιοδικού, {$userName}, έχει φορτώσει ένα αναθεωρημένο αρχείο αξιολόγησης για τον γύρο {$round} της υποβολής {$articleId} για λογαριασμό του αξιολογητή, {$reviewerName}.</message>
         <message key="log.review.reviewerFile">Έχει φορτωθεί αρχείο αξιολογητή.</message>
-				<message key="log.editor.decision">Μια απόφαση του Επιμελητή του Περιοδικού ({$decision}) για το άρθρο  {$articleId} καταχωρήθηκε από τον/την  {$editorName}.</message>
+				<message key="log.editor.decision">Μια απόφαση του Επιμελητή του Περιοδικού ({$decision}) για το άρθρο  {$submissionId} καταχωρήθηκε από τον/την  {$editorName}.</message>
 
 
         <message key="log.copyedit.initiate">Η επιμέλεια των κειμένων στην υποβολή {$articleId} έχει ξεκινήσει από τον/την {$copyeditorName}.</message>

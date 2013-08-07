@@ -1042,7 +1042,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.alreadyPaidMessage">Chọn hộp này nếu quý vị đã trả tiền cho tạp chí nhằm kết thúc quá trình nộp bài. Bài nộp sẽ không được phản biện cho tới khi tạp chí nhận được tiền thanh toán. Nhấp chuột vào nút TRẢ TIỀN trên đây để biết hướng dẫn trả tiền.</message>
 	<message key="rt.admin.settings.addComment">Thêm lời bình</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} đã từ chối phản biện vòng {$round} cho bài viết {$articleId} thay {$reviewerName}.</message>
-	<message key="log.editor.decision">Quyết định của biên tập viên ({$decision}) đối với bài viết {$articleId} đã được {$editorName} ghi lại.</message>
+	<message key="log.editor.decision">Quyết định của biên tập viên ({$decision}) đối với bài viết {$submissionId} đã được {$editorName} ghi lại.</message>
 	<message key="debug.notes.currencyListLoad">Danh sách tiền tệ "{$filename}" được tải từ XML</message>
 	<message key="default.journalSettings.waiverPolicy">Nếu quý vị không tiền để trả những khoản phí này, quý vị có cơ hội để được miễn từng loại phí. Chúng tôi không muốn vì lệ phí mà không xuất bản tác phẩm có giá trị.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Việc trả khoản phí này sẽ giúp quý vị trở thành hội viên của hiệp hội trong một năm và truy cập miễn phí tạp chí này.</message>
