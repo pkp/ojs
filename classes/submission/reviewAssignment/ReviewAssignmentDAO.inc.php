@@ -17,139 +17,11 @@ import('classes.submission.reviewAssignment.ReviewAssignment');
 import('lib.pkp.classes.submission.reviewAssignment.PKPReviewAssignmentDAO');
 
 class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
-	var $articleFileDao;
-	var $submissionCommentsDao;
-
 	/**
 	 * Constructor.
 	 */
 	function ReviewAssignmentDAO() {
 		parent::PKPReviewAssignmentDAO();
-		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		$this->submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
-	}
-
-	/**
-	 * Get a review file for an article for each round.
-	 * @param $articleId int
-	 * @return array ArticleFiles
-	 */
-	function &getReviewFilesByRound($articleId) {
-		$returner = array();
-
-		$result = $this->retrieve(
-			'SELECT	f.*, r.round as round
-			FROM	review_rounds r,
-				submission_files f,
-				submissions a
-			WHERE	a.submission_id = r.submission_id AND
-				r.submission_id = ? AND
-				r.submission_id = f.submission_id AND
-				f.file_id = a.review_file_id AND
-				f.revision = r.review_revision',
-			(int) $articleId
-		);
-
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$returner[$row['round']] =& $this->articleFileDao->_returnArticleFileFromRow($row);
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		return $returner;
-	}
-
-	/**
-	 * Get all author-viewable reviewer files for an article for each round.
-	 * @param $articleId int
-	 * @return array returned[round][reviewer_index] = array of ArticleFiles
-	 */
-	function &getAuthorViewableFilesByRound($articleId) {
-		$files = array();
-
-		$result = $this->retrieve(
-			'SELECT	f.*, r.reviewer_id, r.review_id
-			FROM	review_assignments r,
-				submission_files f
-			WHERE	reviewer_file_id = file_id AND
-				viewable = 1 AND
-				r.submission_id = ?
-			ORDER BY r.round, r.reviewer_id, r.review_id',
-			array((int) $articleId)
-		);
-
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			if (!isset($files[$row['round']]) || !is_array($files[$row['round']])) {
-				$files[$row['round']] = array();
-				$thisReviewerId = $row['reviewer_id'];
-				$reviewerIndex = 0;
-			} else if ($thisReviewerId != $row['reviewer_id']) {
-				$thisReviewerId = $row['reviewer_id'];
-				$reviewerIndex++;
-			}
-
-			$thisArticleFile =& $this->articleFileDao->_returnArticleFileFromRow($row);
-			$files[$row['round']][$reviewerIndex][$row['review_id']][] = $thisArticleFile;
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		return $files;
-	}
-
-	/**
-	 * Get the average quality ratings and number of ratings for all users of a journal.
-	 * @return array
-	 */
-	function getAverageQualityRatings($journalId) {
-		$averageQualityRatings = Array();
-		$result = $this->retrieve(
-			'SELECT	r.reviewer_id, AVG(r.quality) AS average, COUNT(r.quality) AS count
-			FROM	review_assignments r, submissions a
-			WHERE	r.submission_id = a.submission_id AND
-				a.context_id = ?
-			GROUP BY r.reviewer_id',
-			(int) $journalId
-			);
-
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$averageQualityRatings[$row['reviewer_id']] = array('average' => $row['average'], 'count' => $row['count']);
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		return $averageQualityRatings;
-	}
-
-	/**
-	 * Get the average quality ratings and number of ratings for all users of a journal.
-	 * @return array
-	 */
-	function getCompletedReviewCounts($journalId) {
-		$returner = array();
-		$result = $this->retrieve(
-			'SELECT	r.reviewer_id, COUNT(r.review_id) AS count
-			FROM	review_assignments r,
-				submissions a
-			WHERE	r.submission_id = a.submission_id AND
-				a.context_id = ? AND
-				r.date_completed IS NOT NULL AND
-				r.cancelled = 0
-			GROUP BY r.reviewer_id',
-			(int) $journalId
-			);
-
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$returner[$row['reviewer_id']] = $row['count'];
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		return $returner;
 	}
 
 	/**
@@ -163,23 +35,8 @@ class ReviewAssignmentDAO extends PKPReviewAssignmentDAO {
 	}
 
 	/**
-	 * Internal function to return a review assignment object from a row.
-	 * @param $row array
-	 * @return ReviewAssignment
+	 * @see PKPReviewAssignmentDAO::getReviewRoundJoin()
 	 */
-	function _fromRow($row) {
-		$reviewAssignment = parent::_fromRow($row);
-
-		// Comments
-		$reviewAssignment->setMostRecentPeerReviewComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
-
-		HookRegistry::call('ReviewAssignmentDAO::_fromRow', array(&$reviewAssignment, &$row));
-		return $reviewAssignment;
-	}
-
-	/**
-	* @see PKPReviewAssignmentDAO::getReviewRoundJoin()
-	*/
 	function getReviewRoundJoin() {
 		return 'r.submission_id = r2.submission_id AND r.round = r2.round';
 	}
