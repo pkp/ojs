@@ -717,7 +717,6 @@ vaš korisnički račun, unesite u polja ispod vašu sadašnju i novu lozinku.</
 
 	<!--  Article Logs  --><message key="log.author.submitted">{$authorName} je prijavio novi prilog, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} je revidirao svoj prilog {$articleId}. ID nove datoteke je {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} je dodijeljen(a) kao recenzent priloga {$articleId} u {$round}. krugu recenzije.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} je povučen(a) iz recenzijskog postupka priloga {$articleId} u {$round}. krugu recenzije.</message>
 	<message key="log.review.reviewInitiated">Recenzent {$reviewerName} pokrenuo je  {$round}. krug recenzije priloga {$articleId}.</message>
 	<message key="log.review.reviewReinitiated">{$round}. krug recenzije recenzenta {$reviewerName} za prilog {$articleId} je iznova pokrenut.</message>

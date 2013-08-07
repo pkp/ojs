@@ -790,7 +790,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} vložil nový příspěvek, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} pozměnil článek {$articleId}. Nové ID souboru je {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} byl přidělen pro recenzování příspěvku {$articleId} v recenzním kole {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} byl odebrán z recenzování příspěvku {$articleId} v recenzním kole {$round}.</message>
 	<message key="log.review.reviewInitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$articleId} bylo zahájeno.</message>
 	<message key="log.review.reviewReinitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$articleId} bylo znovu zahájeno.</message>

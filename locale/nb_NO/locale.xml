@@ -714,7 +714,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} har levert et nytt manuskript, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} har omarbeidet artikkel {$articleId}. Den nye filens ID er {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} er oppnevnt for å vurdere manuskriptet {$articleId} for vurderingsrunde {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} er avløst fra vurdering av manuskriptet {$articleId} for vurderingsrunde {$round}.</message>
 	<message key="log.review.reviewInitiated">Vurderingsrunde {$round} av manuskriptet {$articleId} ved {$reviewerName} er igangsatt.</message>
  	<message key="log.review.reviewReinitiated">Vurderingsrunde {$round} av manuskript {$articleId} ved {$reviewerName}  er igangsatt på nytt.</message>

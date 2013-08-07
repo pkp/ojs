@@ -702,7 +702,6 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} ha realizado un nuevo envío, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} ha revisado el artículo {$articleId}. El nuevo ID del fichero es {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} ha sido asignado/a para revisar el envío {$articleId} en la ronda de revisión {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} ha sido desasignado/a de la revisión de envíos {$articleId} en la ronda de revisión {$round}.</message>
 	<message key="log.review.reviewInitiated">Ha comenzado la ronda {$round} de revisión por {$reviewerName} para el envío {$articleId}.</message>
 	<message key="log.review.reviewReinitiated">Se ha reiniciado la ronda {$round} de revisión por {$reviewerName} para el envío {$articleId}.</message>

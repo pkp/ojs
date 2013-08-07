@@ -696,7 +696,6 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} ha inserito una nuova proposta, con il seguente ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} ha modificato l'articolo {$articleId}. Il nuovo ID è {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">A {$reviewerName} è stato assegnato il compito di revisionare la proposta #{$articleId} per il {$round} ciclo di revisione.</message>
 	<message key="log.review.reviewerUnassigned">A {$reviewerName} è stato tolto l'incarico di revisore della proposta {$articleId} per il {$round} ciclo di revisione.</message>
 	<message key="log.review.reviewInitiated">È iniziato il {$round} ciclo di revisione per la proposta {$articleId} assegnata a {$reviewerName}.</message>
 	<message key="log.review.reviewReinitiated">Il {$round} ciclo di revisione, assegnato a {$reviewerName} per la proposta {$articleId} è riniziato.</message>

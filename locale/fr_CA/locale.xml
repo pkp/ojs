@@ -680,7 +680,6 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} a saisi une nouvelle soumission, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} a révisé l'article {$articleId}. Le nouvel ID du fichier est {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} a été assigné à l'évaluation de la soumission {$articleId} pour le cycle d'évaluation {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} n'a pas été assigné à l'évaluation de la soumission {$articleId} pour le cycle d'évaluation {$round}.</message>
 	<message key="log.review.reviewInitiated">Le cycle {$round} d'évaluation par {$reviewerName} pour la soumission {$articleId} a été commencé.</message>
 	<message key="log.review.reviewReinitiated">Le cycle {$round} d'évaluation par {$reviewerName} pour la soumission {$articleId} a été recommencé.</message>

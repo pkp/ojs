@@ -782,7 +782,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} heeft een nieuwe inzending gedaan, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} heeft artikel {$articleId} herzien. Het nieuwe bestands-ID is {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} is toegekend voor het reviewen van inzending {$articleId} voor reviewronde {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} is teruggetrokken als reviewer van inzending {$articleId} voor reviewronde {$round}.</message>
 	<message key="log.review.reviewInitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is gestart.</message>
 	<message key="log.review.reviewReinitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$articleId} is opnieuw gestart.</message>

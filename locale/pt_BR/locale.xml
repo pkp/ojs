@@ -704,7 +704,6 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} submeteu um novo documento, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} revisou o artigo {$articleId}. O novo ID é {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} designada(o) para a rodada {$round} de avaliação da submissão {$articleId} .</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da rodada {$round} de avaliação da submissão {$articleId}.</message>
 	<message key="log.review.reviewInitiated">Iniciada a rodada {$round} de avaliação da submissão {$articleId}, designada a {$reviewerName}.</message>
 	<message key="log.review.reviewReinitiated">Iniciada novamente a rodada {$round} de avaliação da submissão {$articleId}, designada a {$reviewerName}.</message>

@@ -1965,7 +1965,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="installer.checkNo"><![CDATA[<span class="formError">ÑÒ</span>]]></message>
 	<message key="log.author.submitted">{$authorName} håþ èñtèrèð å ñèw þübmîþþîóñ, ÎÐ {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} håþ rèvîþèð årtîçlè {$articleId}. Thè ñèw fîlè ÎÐ îþ {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} håþ bèèñ åþþîgñèð tó rèvîèw þübmîþþîóñ {$articleId} fór rèvîèw róüñð {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} håþ bèèñ üñåþþîgñèð fróm rèvîèwîñg þübmîþþîóñ {$articleId} fór rèvîèw róüñð {$round}.</message>
 	<message key="log.review.reviewInitiated">Thè róüñð {$round} rèvîèw bý {$reviewerName} fór þübmîþþîóñ {$articleId} håþ bèèñ îñîtîåtèð.</message>
 	<message key="log.review.reviewReinitiated">Thè róüñð {$round} rèvîèw bý {$reviewerName} fór þübmîþþîóñ {$articleId} håþ bèèñ rèîñîtîåtèð.</message>

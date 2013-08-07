@@ -708,7 +708,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} submeteu um novo documento, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} reviu o artigo {$articleId}. O novo ID é {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} designada(o) para a ronda {$round} de revisão da submissão {$articleId} .</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da ronda {$round} de revisão da submissão {$articleId}.</message>
 	<message key="log.review.reviewInitiated">A ronda {$round} de revisão da submissão {$articleId}, designada a {$reviewerName}, foi iniciada.</message>
 	<message key="log.review.reviewReinitiated">A ronda {$round} de revisão da submissão {$articleId}, designada a {$reviewerName}, foi iniciada novamente.</message>

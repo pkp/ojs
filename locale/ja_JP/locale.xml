@@ -574,7 +574,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Article Logs -->
   <message key="log.author.submitted">{$authorName}が新規投稿ID {$submissionId} を行った。</message>
   <message key="log.author.documentRevised">{$authorName}が論文 {$articleId} を改訂した。新しいファイルIDは {$fileId} である。</message>
-  <message key="log.review.reviewerAssigned">{$reviewerName}が投稿物 {$articleId} の{$round}回目の査読の査読者に任命された。</message>
   <message key="log.review.reviewerUnassigned">{$reviewerName}が投稿物 {$articleId} の{$round}回目の査読の査読者を解除された。</message>
   <message key="log.review.reviewInitiated">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読が開始された。</message>
   <message key="log.review.reviewReinitiated">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読が再開された。</message>

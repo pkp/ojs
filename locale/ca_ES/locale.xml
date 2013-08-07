@@ -844,7 +844,6 @@ El camp Actives llista les revisions en curs.]]></message>
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} ha introduït una tramesa nova amb l’identificador {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} ha revisat l’article {$articleId}. El nou identificador per al fitxer és {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} ha estat assignat a la tramesa de revisió {$articleId} per a la ronda de revisió {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} ha estat desassignat de la tramesa de revisió {$articleId} per a la ronda de revisió {$round}.</message>
 	<message key="log.review.reviewInitiated">S’ha començat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$articleId}.</message>
 	<message key="log.review.reviewReinitiated">S’ha reiniciat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$articleId}.</message>

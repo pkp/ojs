@@ -782,7 +782,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} har angivet et nyt manuskript, Id {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} har revideret artikel {$articleId}. Det nye fil-id er {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} er blevet tildelt til at bedømme manuskriptet {$articleId} for bedømmelsesrunde {$round}.</message>
 	<message key="log.review.reviewerUnassigned">Tildelingen af {$reviewerName} til bedømmelse af manuskriptet {$articleId} for bedømmelsesrunde {$round} er fjernet.</message>
 	<message key="log.review.reviewInitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$articleId} er startet.</message>
 	<message key="log.review.reviewReinitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$articleId} er startet igen.</message>

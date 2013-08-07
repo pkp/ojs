@@ -1010,7 +1010,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} has entered a new submission, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} has revised article {$articleId}. The new file ID is {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} has been assigned to review submission {$articleId} for review round {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} has been unassigned from reviewing submission {$articleId} for review round {$round}.</message>
 	<message key="log.review.reviewInitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been initiated.</message>
 	<message key="log.review.reviewReinitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been reinitiated.</message>

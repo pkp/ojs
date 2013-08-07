@@ -892,7 +892,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} telah memasukkan naskah baru, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} telah merevisi artikel {$articleId}. ID file baru adalah {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} telah ditugaskan untuk mereview naskah {$articleId} untuk tahapan review {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} telah dibebastugaskan untuk mereview naskah {$articleId} untuk tahapan review {$round}.</message>
 	<message key="log.review.reviewInitiated">Tahapan {$round} direview oleh {$reviewerName} untuk naskah {$articleId} telah dimulai.</message>
 	<message key="log.review.reviewReinitiated">Tahapan {$round} direview oleh {$reviewerName} untuk naskah {$articleId} telah dimulai ulang.</message>

@@ -818,7 +818,6 @@
 	<!-- Article Logs 文章記錄 -->
 	<message key="log.author.submitted">{$authorName}已經輸入一份新的投稿稿件， ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName}已經修改過文章{$articleId}。新檔案的 ID為{$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName}已經被指派審查稿件{$articleId} ，進行{$round}審。</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName}已經被取消指派對稿件{$articleId}進行{$round}審。</message>
 	<message key="log.review.reviewInitiated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經開始進行。</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經重新開始進行。</message>

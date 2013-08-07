@@ -478,7 +478,6 @@ http://journals.mui.ac.ir/index.php/index/index
 <p>چنانچه تا کنون ثبت نام نکرده اید و مایل هستید تا اخبار و تازه ها را دریافت کنید ، <strong>لطفا در سایت  <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> ثبت نام کنید.</strong>  چنانچه سوال ویا نظری دارید لطفا از  <a href="http://pkp.sfu.ca/support/forum" target="_new">فوروم حمایت </a> دیدن کنید.</p>]]></message>
 <!-- لاگ مقالات -->  <message key="log.author.submitted">{$authorName} یک ساب میشن جدید وارد کرد ، ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} مقاله  {$articleId} را اصلاح کرد. ID فایل جدید  {$fileId} میباشد.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} برای کارشناسی مقاله  {$articleId} در دور {$round} اول کارشناسی انتساب یافت.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} از کارشناسی مقاله {$articleId} برای درو  {$round} معزول شد.</message>
 	<message key="log.review.reviewInitiated">درور  {$round} کارشناسی {$reviewerName} برای مقاله  {$articleId} شروع شد.</message>
 	<message key="log.review.reviewReinitiated">دور {$round} کارشناسی {$reviewerName} برای مقاله  {$articleId} از نو شروع شد.</message>

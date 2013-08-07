@@ -990,7 +990,6 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<!-- Protokolle - Beiträge -->
 	<message key="log.author.submitted">{$authorName} hat einen neuen Beitrag eingereicht, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} hat den Artikel bearbeitet {$articleId}. Die neue Datei-ID ist {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">Der Beitrag {$articleId} wurde {$reviewerName} zur Begutachtung im Durchgang {$round} zugewiesen.</message>
 	<message key="log.review.reviewerUnassigned">Der Beitrag {$articleId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet.</message>
 	<message key="log.review.reviewInitiated">Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} hat begonnen.</message>
 	<message key="log.review.reviewReinitiated">Durchgang {$round} der Begutachtung von Beitrag {$articleId} durch {$reviewerName} wurde erneut begonnen.</message>

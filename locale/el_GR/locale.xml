@@ -791,7 +791,6 @@
         <!-- Article Logs -->
         <message key="log.author.submitted">O/H {$authorName} καταχώρισε νέα υποβολή, ID {$submissionId}.</message>
         <message key="log.author.documentRevised">O/H {$authorName} αναθεώρησε το άρθρο {$articleId}. Το νεό ID του αρχείου είναι {$fileId}.</message>
-        <message key="log.review.reviewerAssigned">O/H {$reviewerName} έχει αναλάβει την αξιολόγηση της υποβολής {$articleId} για τo γύρο αξιολόγησης {$round}.</message>
         <message key="log.review.reviewerUnassigned">Έχει ακυρωθεί η ανάθεση της αξιολόγησης της υποβολής {$articleId} στον/ην {$reviewerName} για το γύρο αξιολόγησης {$round}.</message>
         <message key="log.review.reviewInitiated">Ξεκίνησε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>
         <message key="log.review.reviewReinitiated"> Ξεκίνησε εκ νέου ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$articleId}.</message>

@@ -899,7 +899,6 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} yeni bir gönderi yaptı, deyat: {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} {$articleId} numaralı gönderisini değiştirdi. Yeni dosya tanımı : {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} {$articleId} numaralı gönderiyi değerlendirmeyi {$round}. kez kabul etti.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} {$articleId} numaralı gönderiyi değerlendirme görevinden çekildi ({$round}. değerlendirme turu).</message>
 	<message key="log.review.reviewInitiated">{$articleId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından başlatıldı.</message>
 	<message key="log.review.reviewReinitiated">{$articleId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından yeniden başlatıldı.</message>

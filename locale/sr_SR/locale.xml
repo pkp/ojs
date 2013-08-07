@@ -597,7 +597,6 @@ Sadržaj priloženog fajla možete proveriti ukoliko kliknete na njegovo ime. Um
 
 	<!--  Article Logs  --><message key="log.author.submitted">{$authorName} je prijavio novi prilog, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} je revidirao svoj prilog {$articleId}. ID novog fajla je {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} je dodeljen(a) kao recenzent priloga {$articleId} u {$round}. krugu recenzije.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} je povučen(a) iz recenzijskog postupka priloga {$articleId} u {$round}. krugu recenzije.</message>
 	<message key="log.review.reviewInitiated">Recenzent {$reviewerName} je pokrenuo  {$round}. krug recenzije priloga {$articleId}.</message>
 	<message key="log.review.reviewReinitiated">{$round}. krug recenzije recenzenta {$reviewerName} za prilog {$articleId} je iznova pokrenut.</message>

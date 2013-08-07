@@ -897,7 +897,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} har lämnat ett nytt manuskript, ID {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} har omarbetat artikeln {$articleId}. Nytt fil-ID är {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} har tilldelats ett manuskript att granska {$articleId} för granskningsomgång {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} har avlösts som granskare för manuskript {$articleId} för granskningsomgång {$round}.</message>
 	<message key="log.review.reviewInitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$articleId} har påbörjats.</message>
 	<message key="log.review.reviewReinitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$articleId} har åter påbörjats.</message>

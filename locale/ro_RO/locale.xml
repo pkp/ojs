@@ -1061,7 +1061,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} a introdus o nouă propunere cu ID-ul {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} a revizuit articolul {$articleId}. Noul ID al fişierului este {$fileId}.</message>
-	<message key="log.review.reviewerAssigned">{$reviewerName} a fost angajat în evaluarea propunerii {$articleId} pentru sesiunea de evaluare {$round}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} a fost dezangajat din evaluarea propunerii {$articleId} pentru sesiunea de evaluare {$round}.</message>
 	<message key="log.review.reviewInitiated">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$articleId} a fost iniţializată.</message>
 	<message key="log.review.reviewReinitiated">Sesiunea {$round} de evaluare făcută de {$reviewerName} pentru propunerea {$articleId} a fost reiniţializată.</message>
