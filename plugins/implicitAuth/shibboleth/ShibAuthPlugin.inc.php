@@ -234,14 +234,14 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 			// and if they are not already an admin
 
-			if(!$roleDao->userHasRole(0, $userID, ROLE_ID_SITE_ADMIN)) {
+			if(!$roleDao->userHasRole(CONTEXT_SITE, $userID, ROLE_ID_SITE_ADMIN)) {
 
 				syslog(LOG_ERR, "Implicit Auth - Making Admin: " . $userID);
 
 				// make them an admin
 
 				$role = new Role();
-				$role->setJournalId(0);
+				$role->setJournalId(CONTEXT_SITE);
 				$role->setUserId($userID);
 				$role->setRoleId(ROLE_ID_SITE_ADMIN);
 				$roleDao->insertRole($role);
@@ -252,7 +252,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 			syslog(LOG_ERR, "removing admin for: " . $userID);
 
-			$roleDao->deleteRoleByUserId($userID,0, ROLE_ID_SITE_ADMIN);
+			$roleDao->deleteRoleByUserId($userID, CONTEXT_SITE, ROLE_ID_SITE_ADMIN);
 		}
 
 	}
