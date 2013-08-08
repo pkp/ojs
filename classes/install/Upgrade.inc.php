@@ -142,24 +142,10 @@ class Upgrade extends Installer {
 
 			switch($type) {
 				case NOTIFICATION_TYPE_METADATA_MODIFIED:
-				case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
 				case NOTIFICATION_TYPE_SUBMISSION_SUBMITTED:
-				case NOTIFICATION_TYPE_GALLEY_MODIFIED:
-				case NOTIFICATION_TYPE_REVIEWER_COMMENT:
-				case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
-				case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
 					$id = array_pop($matches[0]);
 					$notification->setAssocType(ASSOC_TYPE_SUBMISSION);
 					$notification->setAssocId($id);
-					break;
-				case NOTIFICATION_TYPE_USER_COMMENT:
-					// Remove the last two elements of the array.  They refer to the
-					//  galley and parent, which we no longer use
-					$matches = array_slice($matches[0], -3);
-					$id = array_shift($matches);
-					$notification->setAssocType(ASSOC_TYPE_SUBMISSION);
-					$notification->setAssocId($id);
-					$notification->setType(NOTIFICATION_TYPE_USER_COMMENT);
 					break;
 				case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
 					// We do nothing here, as our URL points to the current issue

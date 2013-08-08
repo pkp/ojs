@@ -39,17 +39,6 @@ class NotificationManager extends PKPNotificationManager {
 		$context = $request->getContext();
 
 		switch ($notification->getType()) {
-			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'layout');
-			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'editorDecision');
-			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
-				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'editorDecision');
-			case NOTIFICATION_TYPE_USER_COMMENT:
-				return $dispatcher->url($request, ROUTE_PAGE, null, 'comment', 'view', $notification->getAssocId());
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
 				return $dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'current');
 			default:
@@ -144,18 +133,6 @@ class NotificationManager extends PKPNotificationManager {
 		if($message) return $message;
 
 		switch ($notification->getType()) {
-			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
-				return __('notification.type.galleyModified', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
-				return __('notification.type.submissionComment', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
-				return __('notification.type.reviewerComment', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
-				return __('notification.type.reviewerFormComment', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
-				return __('notification.type.editorDecisionComment', array('title' => $this->_getArticleTitle($notification)));
-			case NOTIFICATION_TYPE_USER_COMMENT:
-				return __('notification.type.userComment', array('title' => $this->_getArticleTitle($notification)));
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
 				return __('notification.type.issuePublished');
 			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS:
@@ -245,14 +222,6 @@ class NotificationManager extends PKPNotificationManager {
 	 */
 	function getIconClass($notification) {
 		switch ($notification->getType()) {
-			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
-				return 'notifyIconEdit';
-			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
-			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
-			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
-			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
-			case NOTIFICATION_TYPE_USER_COMMENT:
-				return 'notifyIconNewComment';
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
 				return 'notifyIconPublished';
 			case NOTIFICATION_TYPE_NEW_ANNOUNCEMENT:

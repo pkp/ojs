@@ -16,6 +16,11 @@
 		<query>DELETE FROM notifications WHERE type=16777225</query><!-- NOTIFICATION_TYPE_COPYEDIT_COMMENT -->
 		<query>DELETE FROM notifications WHERE type=16777232</query><!-- NOTIFICATION_TYPE_PROOFREAD_COMMENT -->
 		<query>DELETE FROM notifications WHERE type=16777220</query><!-- NOTIFICATION_TYPE_SUPP_FILE_MODIFIED WARNING: This type ID conflicts with others! -->
+		<query>DELETE FROM notifications WHERE type=16777222</query><!-- NOTIFICATION_TYPE_GALLEY_MODIFIED WARNING: This type ID conflicts with others! -->
+		<query>DELETE FROM notifications WHERE type=16777223</query><!-- NOTIFICATION_TYPE_SUBMISSION_COMMENT WARNING: This type ID conflicts with others! -->
+		<query>DELETE FROM notifications WHERE type=16777234</query><!-- NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT WARNING: This type ID conflicts with others! -->
+		<query>DELETE FROM notifications WHERE type=16777235</query><!-- NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT WARNING: This type ID conflicts with others! -->
+		<query>DELETE FROM notifications WHERE type=268435476</query><!-- NOTIFICATION_TYPE_USER_COMMENT WARNING: This type ID conflicts with others! -->
 	</sql>
 	<!-- Bug #6324: Issue Access Status = 0 -->
 	<sql>
