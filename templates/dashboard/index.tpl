@@ -22,7 +22,7 @@
 	<ul>
 		<li><a href="{url op="tasks"}">{translate key="dashboard.tasks"}</a></li>
 		<li><a href="{url op="submissions"}">{translate key="dashboard.submissions"}</a></li>
-		{if array_intersect(array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_SERIES_EDITOR, ROLE_ID_REVIEWER, ROLE_ID_PRESS_ASSISTANT), $userRoles)}
+		{if array_intersect(array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_SERIES_EDITOR, ROLE_ID_REVIEWER, ROLE_ID_ASSISTANT), $userRoles)}
 			<li><a href="{url op="archives"}">{translate key="navigation.archives"}</a></li>
 		{/if}
 	</ul>
