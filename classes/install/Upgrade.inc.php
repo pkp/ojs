@@ -689,6 +689,9 @@ class Upgrade extends Installer {
 	*/
 	function migrateTimedViewsUsageStatistics() {
 		$metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+		$result =& $metricsDao->retrieve('SELECT * FROM timed_views_log');
+		if ($result->EOF) return true;
+
 		$loadId = '3.0.0-upgrade-timedViews';
 		$metricsDao->purgeLoadBatch($loadId);
 
@@ -700,7 +703,6 @@ class Upgrade extends Installer {
 		import('plugins.generic.usageStats.GeoLocationTool');
 		$geoLocationTool = new GeoLocationTool();
 
-		$result = $metricsDao->retrieve('SELECT * FROM timed_views_log');
 		while(!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			list($countryId, $cityName, $region) = $geoLocationTool->getGeoLocation($row['ip_address']);

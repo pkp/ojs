@@ -187,12 +187,38 @@ class MetricsDAO extends DAO {
 	}
 
 	/**
+	 * Check for the presence of any record
+	 * that has the passed metric type.
+	 * @param $metricType string
+	 * @return boolean
+	 */
+	function hasRecord($metricType) {
+		$result = $this->retrieve('SELECT load_id FROM metrics WHERE metric_type = ? LIMIT 1', array($metricType));
+		$row =& $result->GetRowAssoc();
+		if ($row) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
 	 * Purge a load batch before re-loading it.
 	 *
 	 * @param $loadId string
 	 */
 	function purgeLoadBatch($loadId) {
 		$this->update('DELETE FROM metrics WHERE load_id = ?', $loadId); // Not a number.
+	}
+
+	/**
+	 * Purge all records associated with the passed metric type
+	 * until the passed date.
+	 * @param $metricType string
+	 * @param $toDate string
+	 */
+	function purgeRecords($metricType, $toDate) {
+		$this->update('DELETE FROM metrics WHERE metric_type = ? AND day IS NOT NULL AND day <= ?', array($metricType, $toDate));
 	}
 
 	/**

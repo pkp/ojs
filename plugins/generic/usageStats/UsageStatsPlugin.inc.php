@@ -173,7 +173,7 @@ class UsageStatsPlugin extends GenericPlugin {
 			$seq = $plugin->getSeq();
 			$plugins =& $args[1];
 			if (!isset($plugins[$seq])) $plugins[$seq] = array();
-			$plugins[$seq][$plugin->getPluginPath()] = $plugin;
+			$plugins[$seq][$this->getPluginPath()] = $plugin;
 		}
 
 		return false;
