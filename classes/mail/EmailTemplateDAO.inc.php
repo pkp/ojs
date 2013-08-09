@@ -19,24 +19,22 @@ import('lib.pkp.classes.mail.EmailTemplate');
 class EmailTemplateDAO extends PKPEmailTemplateDAO {
 	/**
 	 * Retrieve a base email template by key.
-	 * @param $emailKey string
-	 * @param $journalId int
-	 * @return BaseEmailTemplate
+	 * @param $emailKey string Email key
+	 * @param $journalId int Journal ID
+	 * @return BaseEmailTemplate Email template
 	 */
-	function &getBaseEmailTemplate($emailKey, $journalId) {
-		$returner =& parent::getBaseEmailTemplate($emailKey, ASSOC_TYPE_JOURNAL, $journalId);
-		return $returner;
+	function getBaseEmailTemplate($emailKey, $journalId) {
+		return parent::getBaseEmailTemplate($emailKey, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
 	 * Retrieve localized email template by key.
-	 * @param $emailKey string
-	 * @param $journalId int
-	 * @return LocaleEmailTemplate
+	 * @param $emailKey string Email key
+	 * @param $journalId int Journal ID
+	 * @return LocaleEmailTemplate Email template
 	 */
-	function &getLocaleEmailTemplate($emailKey, $journalId) {
-		$returner =& parent::getLocaleEmailTemplate($emailKey, ASSOC_TYPE_JOURNAL, $journalId);
-		return $returner;
+	function getLocaleEmailTemplate($emailKey, $journalId) {
+		return parent::getLocaleEmailTemplate($emailKey, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
@@ -46,9 +44,8 @@ class EmailTemplateDAO extends PKPEmailTemplateDAO {
 	 * @param $journalId int
 	 * @return EmailTemplate
 	 */
-	function &getEmailTemplate($emailKey, $locale, $journalId) {
-		$returner =& parent::getEmailTemplate($emailKey, $locale, ASSOC_TYPE_JOURNAL, $journalId);
-		return $returner;
+	function getEmailTemplate($emailKey, $locale, $journalId) {
+		return parent::getEmailTemplate($emailKey, $locale, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
@@ -67,9 +64,8 @@ class EmailTemplateDAO extends PKPEmailTemplateDAO {
 	 * @param $rangeInfo object optional
 	 * @return array Email templates
 	 */
-	function &getEmailTemplates($locale, $journalId, $rangeInfo = null) {
-		$returner =& parent::getEmailTemplates($locale, ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
-		return $returner;
+	function getEmailTemplates($locale, $journalId, $rangeInfo = null) {
+		return parent::getEmailTemplates($locale, ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
 	}
 
 	/**
