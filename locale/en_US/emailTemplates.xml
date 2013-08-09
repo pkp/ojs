@@ -154,7 +154,7 @@ Thank you,
 
 Thank you for submitting the manuscript, "{$submissionTitle}" to {$contextName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:
 
-Manuscript URL: {$submissionUrl}
+Submission URL: {$submissionUrl}
 Username: {$authorUsername}
 
 If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.
@@ -465,7 +465,7 @@ Username: {$authorUsername}
 
 The editing of your submission, "{$submissionTitle}," is complete.  We are now sending it to production.
 
-Manuscript URL: {$submissionUrl}
+Submission URL: {$submissionUrl}
 Username: {$authorUsername}
 
 {$editorialContactSignature}
