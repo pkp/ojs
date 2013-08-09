@@ -15,15 +15,15 @@
   -->
 <genres>
 	<genre key="SUBMISSION" sortable="0" category="1" dependent="0" localeKey="default.genres.submission"/>
-	<genre key="RESEARCHINSTRUMENT" sortable="0" category="1" dependent="1" localeKey="default.genres.researchInstrument"/>
-	<genre key="RESEARCHMATERIALS" sortable="0" category="1" dependent="1" localeKey="default.genres.researchMaterials"/>
-	<genre key="RESEARCHRESULTS" sortable="0" category="1" dependent="1" localeKey="default.genres.researchResults"/>
-	<genre key="TRANSCRIPTS" sortable="0" category="1" dependent="1" localeKey="default.genres.transcripts"/>
-	<genre key="DATAANALYSIS" sortable="0" category="1" dependent="1" localeKey="default.genres.dataAnalysis"/>
-	<genre key="DATASET" sortable="0" category="1" dependent="1" localeKey="default.genres.dataSet"/>
-	<genre key="SOURCETEXTS" sortable="0" category="1" dependent="1" localeKey="default.genres.sourceTexts"/>
+	<genre key="RESEARCHINSTRUMENT" sortable="0" category="1" dependent="0" localeKey="default.genres.researchInstrument"/>
+	<genre key="RESEARCHMATERIALS" sortable="0" category="1" dependent="0" localeKey="default.genres.researchMaterials"/>
+	<genre key="RESEARCHRESULTS" sortable="0" category="1" dependent="0" localeKey="default.genres.researchResults"/>
+	<genre key="TRANSCRIPTS" sortable="0" category="1" dependent="0" localeKey="default.genres.transcripts"/>
+	<genre key="DATAANALYSIS" sortable="0" category="1" dependent="0" localeKey="default.genres.dataAnalysis"/>
+	<genre key="DATASET" sortable="0" category="1" dependent="0" localeKey="default.genres.dataSet"/>
+	<genre key="SOURCETEXTS" sortable="0" category="1" dependent="0" localeKey="default.genres.sourceTexts"/>
 	<genre key="MULTIMEDIA" sortable="0" category="1" dependent="1" localeKey="default.genres.multimedia"/>
 	<genre key="IMAGE" sortable="0" category="2" dependent="1" localeKey="default.genres.image"/>
 	<genre key="STYLE" sortable="0" category="1" dependent="1" localeKey="default.genres.styleSheet" />
-	<genre key="OTHER" sortable="1" category="1" dependent="1" localeKey="default.genres.other"/>
+	<genre key="OTHER" sortable="1" category="1" dependent="0" localeKey="default.genres.other"/>
 </genres>
