@@ -10,6 +10,19 @@
 {include file="workflow/header.tpl"}
 {/strip}
 
+<script type="text/javascript">
+	// Initialise JS handler.
+	$(function() {ldelim}
+		$('#production').pkpHandler(
+			'$.pkp.pages.workflow.ProductionHandler',
+			{ldelim}
+				formatsTabContainerSelector: '#galleyTabsContainer',
+				submissionProgressBarSelector: '#submissionProgressBarDiv'
+			{rdelim}
+		);
+	{rdelim});
+</script>
+
 <div id="production">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions}
 
@@ -23,7 +36,7 @@
 			{fbvFormSection}
 				<!--  Galleys -->
 				{url|assign:galleyGridUrl router=$smarty.const.ROUTE_COMPONENT  component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId()}
-				{load_url_in_div id="galleysGridContainer"|uniqid url=$galleyGridUrl}
+				{load_url_in_div id="formatsGridContainer"|uniqid url=$galleyGridUrl}
 			{/fbvFormSection}
 		{/fbvFormArea}
 	{else}

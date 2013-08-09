@@ -105,7 +105,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$galleys =& $galleyDao->getGalleysByArticle($submission->getId());
 		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('galleys', $galleys->toAssociativeArray());
+		$templateMgr->assign_by_ref('galleys', $galleys);
 		$templateMgr->assign('currentGalleyTabId', (int) $request->getUserVar('currentGalleyTabId'));
 
 		return $templateMgr->fetchJson('workflow/galleysTab.tpl');
