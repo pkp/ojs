@@ -22,8 +22,6 @@
 	<email key="LOCKSS_NEW_ARCHIVE" can_edit="1" can_disable="0"/>
 	<email key="SUBMISSION_ACK" can_edit="1" can_disable="1" to_role_id="65536"/>
 	<email key="SUBMISSION_UNSUITABLE" can_edit="1" can_disable="1" to_role_id="65536" from_role_id="512"/>
-	<email key="SUBMISSION_COMMENT" can_edit="1" can_disable="0"/>
-	<email key="SUBMISSION_DECISION_REVIEWERS" can_edit="1" can_disable="0" from_role_id="512" to_role_id="4096"/>
 	<email key="EDITOR_ASSIGN" can_edit="1" can_disable="1" from_role_id="256" to_role_id="512"/>
 	<email key="REVIEW_CANCEL" can_edit="1" can_disable="1" from_role_id="512" to_role_id="4096"/>
 	<email key="REVIEW_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="4096"/>
@@ -47,26 +45,8 @@
 	<email key="EDITOR_DECISION_RESUBMIT" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_DECLINE" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
 	<email key="COPYEDIT_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="8192"/>
-	<email key="COPYEDIT_COMPLETE" can_edit="1" can_disable="1" from_role_id="8192" to_role_id="65536"/>
-	<email key="COPYEDIT_ACK" can_edit="1" can_disable="1" from_role_id="512" to_role_id="8192"/>
-	<email key="COPYEDIT_AUTHOR_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="65536"/>
-	<email key="COPYEDIT_AUTHOR_COMPLETE" can_edit="1" can_disable="1" from_role_id="65536" to_role_id="512"/>
-	<email key="COPYEDIT_AUTHOR_ACK" can_edit="1" can_disable="1" from_role_id="512" to_role_id="65536"/>
-	<email key="COPYEDIT_FINAL_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="8192"/>
-	<email key="COPYEDIT_FINAL_COMPLETE" can_edit="1" can_disable="1" from_role_id="8192" to_role_id="512"/>
-	<email key="COPYEDIT_FINAL_ACK" can_edit="1" can_disable="1" from_role_id="512" to_role_id="8192"/>
 	<email key="LAYOUT_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="768"/>
 	<email key="LAYOUT_COMPLETE" can_edit="1" can_disable="1" from_role_id="768" to_role_id="512"/>
-	<email key="LAYOUT_ACK" can_edit="1" can_disable="1" from_role_id="512" to_role_id="768"/>
-	<email key="PROOFREAD_AUTHOR_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="65536"/>
-	<email key="PROOFREAD_AUTHOR_COMPLETE" can_edit="1" can_disable="1" from_role_id="65536" to_role_id="512"/>
-	<email key="PROOFREAD_AUTHOR_ACK" can_edit="1" can_disable="1" from_role_id="512" to_role_id="65536"/>
-	<email key="PROOFREAD_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="12288"/>
-	<email key="PROOFREAD_COMPLETE" can_edit="1" can_disable="1" from_role_id="12288" to_role_id="512"/>
-	<email key="PROOFREAD_ACK" can_edit="1" can_disable="1" from_role_id="512" to_role_id="12288"/>
-	<email key="PROOFREAD_LAYOUT_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="768"/>
-	<email key="PROOFREAD_LAYOUT_COMPLETE" can_edit="1" can_disable="1" from_role_id="768" to_role_id="512"/>
-	<email key="PROOFREAD_LAYOUT_ACK" can_edit="1" can_disable="1" from_role_id="512" to_role_id="768"/>
 	<email key="EMAIL_LINK" can_edit="1" can_disable="0" from_role_id="1048576"/>
 	<email key="SUBSCRIPTION_NOTIFY" can_edit="1" can_disable="0" to_role_id="1048576"/>
 	<email key="OPEN_ACCESS_NOTIFY" can_edit="1" can_disable="0" to_role_id="1048576"/>
