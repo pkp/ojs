@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file plugins/generic/timedView/TimedViewReportPlugin.inc.php
+ * @file plugins/reports/timedView/TimedViewReportPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TimedViewReportPlugin
- * @ingroup plugins_generic_timedView
+ * @ingroup plugins_reports_timedView
  *
  * @brief Timed View report plugin
  */
 
 define('TIMED_VIEW_REPORT_YEAR_OFFSET_PAST', '-20');
 define('TIMED_VIEW_REPORT_YEAR_OFFSET_FUTURE', '+0');
+define('OJS_METRIC_TYPE_TIMED_VIEWS', 'ojs::timedViews');
 
 import('classes.plugins.ReportPlugin');
 
@@ -22,7 +23,7 @@ class TimedViewReportPlugin extends ReportPlugin {
 	 * Constructor
 	 * @param $parentPluginName Name of parent plugin
 	 */
-	function TimedViewReportPlugin($parentPluginName) {
+	function TimedViewReportPlugin() {
 		parent::ReportPlugin();
 	}
 
@@ -33,9 +34,15 @@ class TimedViewReportPlugin extends ReportPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
+		$metricsDao =& DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+		if (!$metricsDao->hasRecord(OJS_METRIC_TYPE_TIMED_VIEWS)) {
+			return false;
+		}
+
 		$success = parent::register($category, $path);
 
 		if($success) {
+			$this->import('TimedViewReportForm');
 			$this->addLocaleData();
 		}
 		return $success;
@@ -51,11 +58,11 @@ class TimedViewReportPlugin extends ReportPlugin {
 	}
 
 	function getDisplayName() {
-		return __('plugins.generic.timedView.displayName');
+		return __('plugins.reports.timedView.displayName');
 	}
 
 	function getDescription() {
-		return __('plugins.generic.timedView.description');
+		return __('plugins.reports.timedView.description');
 	}
 
 	/**
@@ -97,10 +104,10 @@ class TimedViewReportPlugin extends ReportPlugin {
 				$form->display();
 			}
 		} elseif ($request->getUserVar('clearLogs')) {
-			$dateClear = (int) $request->getUserVar('dateClearYear') . '-' . (int) $request->getUserVar('dateClearMonth') . '-' . (int) $request->getUserVar('dateClearDay') . ' 00:00:00';
-			$timedViewReportDao =& DAORegistry::getDAO('TimedViewReportDAO');
+			$dateClear = date('Ymd', mktime(0, 0, 0, $request->getUserVar('dateClearMonth'), $request->getUserVar('dateClearDay'), $request->getUserVar('dateClearYear')));
 			$journal =& $request->getJournal();
-			$timedViewReportDao->clearLogs($dateClear, $journal->getId());
+			$metricsDao =& DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+			$metricsDao->purgeRecords(OJS_METRIC_TYPE_TIMED_VIEWS, $dateClear);
 			$form->display();
 		} else {
 			$form->initData();

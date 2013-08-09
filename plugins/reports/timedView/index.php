@@ -15,8 +15,8 @@
  *
  */
 
-require_once(dirname(__FILE__) . '/TimedViewPlugin.inc.php');
+require_once(dirname(__FILE__) . '/TimedViewReportPlugin.inc.php');
 
-return new TimedViewPlugin();
+return new TimedViewReportPlugin();
 
 ?>
