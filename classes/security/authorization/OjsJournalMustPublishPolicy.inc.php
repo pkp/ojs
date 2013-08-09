@@ -40,6 +40,7 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 		if (count(array_intersect(
 			$userRoles,
 			array(
+				ROLE_ID_MANAGER,
 				ROLE_ID_EDITOR,
 				ROLE_ID_SITE_ADMIN,
 				ROLE_ID_ASSISTANT,
