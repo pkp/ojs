@@ -104,6 +104,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				break;
 			case 'import':
 				$this->import('UserXMLParser');
+				$roleDao = DAORegistry::getDAO('RoleDAO');
 				$userKeys = $request->getUserVar('userKeys');
 				if (!is_array($userKeys)) $userKeys = array();
 				$sendNotify = (bool) $request->getUserVar('sendNotify');
@@ -147,8 +148,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 						foreach ($newUserRoles as $newUserRole) {
 							if ($newUserRole != '') {
 								$role = new Role();
-								$role->setRoleId(RoleDAO::getRoleIdFromPath($newUserRole));
-								$newUser->AddRole($role);
+								$role->setRoleId($roleDao->getRoleIdFromPath($newUserRole));
+								$newUser->addRole($role);
 							}
 						}
 					}
