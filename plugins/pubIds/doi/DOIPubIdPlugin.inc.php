@@ -88,7 +88,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			$journalId = $article->getJournalId();
 		}
 
-		$journal =& $this->_getJournal($journalId);
+		$journal =& $this->getJournal($journalId);
 		if (!$journal) return null;
 		$journalId = $journal->getId();
 

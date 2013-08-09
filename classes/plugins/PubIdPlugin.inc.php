@@ -230,6 +230,28 @@ class PubIdPlugin extends Plugin {
 		assert(false); // Should be overridden
 	}
 
+	/**
+	 * Get the journal object.
+	 * @param $journalId integer
+	 * @return Journal
+	 */
+	function &getJournal($journalId) {
+		assert(is_numeric($journalId));
+
+		// Get the journal object from the context (optimized).
+		$request =& Application::getRequest();
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request); /* @var $journal Journal */
+
+		// Check whether we still have to retrieve the journal from the database.
+		if (!$journal || $journal->getId() != $journalId) {
+			unset($journal);
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journal =& $journalDao->getById($journalId);
+		}
+
+		return $journal;
+	}
 
 	//
 	// Public API
@@ -410,29 +432,6 @@ class PubIdPlugin extends Plugin {
 	//
 	// Private helper methods
 	//
-	/**
-	 * Get the journal object.
-	 * @param $journalId integer
-	 * @return Journal
-	 */
-	function &_getJournal($journalId) {
-		assert(is_numeric($journalId));
-
-		// Get the journal object from the context (optimized).
-		$request =& Application::getRequest();
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request); /* @var $journal Journal */
-
-		// Check whether we still have to retrieve the journal from the database.
-		if (!$journal || $journal->getId() != $journalId) {
-			unset($journal);
-			$journalDao =& DAORegistry::getDAO('JournalDAO');
-			$journal =& $journalDao->getById($journalId);
-		}
-
-		return $journal;
-	}
-
 	/**
 	 * Return an array of the corresponding DAOs.
 	 * @return array
