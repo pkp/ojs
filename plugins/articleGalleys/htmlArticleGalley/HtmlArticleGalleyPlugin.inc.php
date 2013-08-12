@@ -57,8 +57,8 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 	 * @param array $args
 	 */
 	function headerCallback($hookName, $args) {
-		$templateMgr =& $args[0];
-		$template =& $args[1];
+		$templateMgr = $args[0];
+		$template = $args[1];
 		$request = Application::getRequest();
 		$router = $request->getRouter();
 
@@ -79,7 +79,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 				}
 
 				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-				$journal =& Request::getJournal();
+				$journal = $request->getJournal();
 				$styleFiles = $this->_getStyleFiles($galley, $fileId, $journal);
 				if (is_array($styleFiles)) {
 					foreach ($styleFiles as $file) {
@@ -107,7 +107,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 		$fileId = (isset($params['fileId']) && is_numeric($params['fileId'])) ? (int) $fileId : null;
 
 		$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
-		$templateMgr->assign('htmlGalleyContents', $this->_getHTMLContents($galley, $fileId));
+		$templateMgr->assign('htmlGalleyContents', $this->_getHTMLContents($request, $galley, $fileId));
 		return parent::getArticleGalley($templateMgr, $request, $params);
 	}
 
@@ -117,7 +117,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 	 * @param $fileId int optional file id, otherwise the 'best' file will be chosen.
 	 * @return string
 	 */
-	function _getHTMLContents($galley, $fileId = null) {
+	function _getHTMLContents($request, $galley, $fileId = null) {
 		import('classes.file.ArticleFileManager');
 		$fileManager = new ArticleFileManager($galley->getSubmissionId());
 		if (!$fileId) {
@@ -131,13 +131,13 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 		}
 		$contents = $fileManager->readFile($fileId);
 
-		$journal =& Request::getJournal();
+		$journal = $request->getJournal();
 
 		// Replace media file references
 		$images = $this->_getImageFiles($galley, $fileId, $journal);
 
 		foreach ($images as $image) {
-			$imageUrl = Request::url(null, 'article', 'viewFile', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $image->getFileId()));
+			$imageUrl = $request->url(null, 'article', 'viewFile', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $image->getFileId()));
 			$pattern = preg_quote($image->getOriginalFileName());
 
 			$contents = preg_replace(
@@ -170,17 +170,17 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 		);
 
 		// Perform variable replacement for journal, issue, site info
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issue =& $issueDao->getIssueByArticleId($galley->getSubmissionId());
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getIssueByArticleId($galley->getSubmissionId());
 
-		$journal =& Request::getJournal();
-		$site =& Request::getSite();
+		$journal = $request->getJournal();
+		$site = $request->getSite();
 
 		$paramArray = array(
 				'issueTitle' => $issue?$issue->getIssueIdentification():__('editor.article.scheduleForPublication.toBeAssigned'),
 				'journalTitle' => $journal->getLocalizedName(),
 				'siteTitle' => $site->getLocalizedTitle(),
-				'currentUrl' => Request::getRequestUrl()
+				'currentUrl' => $request->getRequestUrl()
 		);
 
 		foreach ($paramArray as $key => $value) {
@@ -191,6 +191,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 	}
 
 	function _handleOjsUrl($matchArray) {
+		$request = Application::getRequest();
 		$url = $matchArray[2];
 		$anchor = null;
 		if (($i = strpos($url, '#')) !== false) {
@@ -200,10 +201,10 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 		$urlParts = explode('/', $url);
 		if (isset($urlParts[0])) switch(strtolower_codesafe($urlParts[0])) {
 			case 'journal':
-				$url = Request::url(
+				$url = $request->url(
 				isset($urlParts[1]) ?
 				$urlParts[1] :
-				Request::getRequestedJournalPath(),
+				$request->getRequestedJournalPath(),
 				null,
 				null,
 				null,
@@ -213,7 +214,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 				break;
 			case 'article':
 				if (isset($urlParts[1])) {
-					$url = Request::url(
+					$url = $request->url(
 							null,
 							'article',
 							'view',
@@ -225,7 +226,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 				break;
 			case 'issue':
 				if (isset($urlParts[1])) {
-					$url = Request::url(
+					$url = $request->url(
 							null,
 							'issue',
 							'view',
@@ -234,7 +235,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 							$anchor
 					);
 				} else {
-					$url = Request::url(
+					$url = $request->url(
 							null,
 							'issue',
 							'current',
@@ -246,7 +247,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 				break;
 			case 'suppfile':
 				if (isset($urlParts[1]) && isset($urlParts[2])) {
-					$url = Request::url(
+					$url = $request->url(
 							null,
 							'article',
 							'downloadSuppFile',
@@ -260,14 +261,14 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 				array_shift($urlParts);
 				import ('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$url = Request::getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
+				$url = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 			case 'public':
 				array_shift($urlParts);
-				$journal =& Request::getJournal();
+				$journal = $request->getJournal();
 				import ('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
+				$url = $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 		}
 		return $matchArray[1] . $url . $matchArray[3];
