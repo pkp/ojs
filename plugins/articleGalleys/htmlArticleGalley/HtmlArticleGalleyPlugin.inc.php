@@ -67,7 +67,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 			$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
 			$fileId = $templateMgr->get_template_vars('fileId');
 
-			if ($galley) {
+			if ($galley && $galley->getGalleyType() == $this->getName()) {
 				if (!$fileId) {
 					$file = $galley->getFirstGalleyFile('text/html');
 					if ($file) {
