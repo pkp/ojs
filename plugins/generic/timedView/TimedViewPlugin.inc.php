@@ -40,15 +40,6 @@ class TimedViewPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Get the name of the settings file to be installed on new journal
-	 * creation.
-	 * @return string
-	 */
-	function getContextSpecificPluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
-	}
-
-	/**
 	 * Hide this plugin from the generic plugin management interface
 	 */
 	function getHideManagement() {
