@@ -51,7 +51,7 @@ class ArticleGalleyPlugin extends GenericPlugin {
 	 * @param $request PKPRequest (Optional for legacy plugins)
 	 * @return string
 	 */
-	function getArticleGalley(&$templateMgr, $request = null, $params) {
+	function getArticleGalley($templateMgr, $request = null, $params) {
 		$templateFilename = $this->getTemplateFilename();
 		if ($templateFilename === null) return '';
 		return $templateMgr->fetch($this->getTemplatePath() . $templateFilename);
