@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_admin Administration Pages
  */
- 
+
 /**
  * @file pages/admin/index.php
  *
@@ -11,7 +11,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_admin
- * @brief Handle requests for site administration functions. 
+ * @brief Handle requests for site administration functions.
  *
  */
 
@@ -22,13 +22,6 @@ switch ($op) {
 	case 'contexts':
 		define('HANDLER_CLASS', 'AdminContextHandler');
 		import('lib.pkp.pages.admin.AdminContextHandler');
-		break;
-	//
-	// Merge users
-	//
-	case 'mergeUsers':
-		define('HANDLER_CLASS', 'AdminPeopleHandler');
-		import('lib.pkp.pages.admin.AdminPeopleHandler');
 		break;
 	//
 	// Administrative functions
