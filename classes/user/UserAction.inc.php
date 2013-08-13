@@ -77,7 +77,9 @@ class UserAction {
 		$articleEventLogDao->changeUser($oldUserId, $newUserId);
 
 		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
-		foreach ($submissionCommentDao->getArticleCommentsByUserId($oldUserId) as $submissionComment) {
+		$submissionComments = $submissionCommentDao->getByUserId($oldUserId);
+
+		while ($submissionComment = $submissionComments->next()) {
 			$submissionComment->setAuthorId($newUserId);
 			$submissionCommentDao->updateArticleComment($submissionComment);
 		}
@@ -142,17 +144,17 @@ class UserAction {
 		$sectionEditorsDao->deleteByUserId($oldUserId);
 
 		// Transfer old user's roles
-		$roleDao = DAORegistry::getDAO('RoleDAO');
-
-		$roles = $roleDao->getRolesByUserId($oldUserId);
-		foreach ($roles as $role) {
-			if (!$roleDao->userHasRole($role->getJournalId(), $newUserId, $role->getRoleId())) {
-				$role->setUserId($newUserId);
-				$roleDao->insertRole($role);
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$userGroups = $userGroupDao->getByUserId($oldUserId);
+		while(!$userGroups->eof()) {
+			$userGroup = $userGroups->next();
+			if (!$userGroupDao->userInGroup($newUserId, $userGroup->getId())) {
+				$userGroupDao->assignUserToGroup($newUserId, $userGroup->getId());
 			}
 		}
-		$roleDao->deleteRoleByUserId($oldUserId);
+		$userGroupDao->deleteAssignmentsByUserId($oldUserId);
 
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$userDao->deleteUserById($oldUserId);
 
 		return true;
