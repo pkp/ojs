@@ -271,7 +271,7 @@ class ArticleHandler extends Handler {
 
 		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
 			if (!$fileId) {
-				$submissionFile = $this->galley->getFirstGalleyFile(SUBMISSION_FILE_PROOF);
+				$submissionFile = $this->galley->getFirstGalleyFile();
 				if ($submissionFile) {
 					$fileId = $submissionFile->getFileId();
 				} else { // no proof files assigned to this galley!
