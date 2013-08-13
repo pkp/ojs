@@ -44,7 +44,7 @@ class CommentForm extends Form {
 		$this->articleId = $articleId;
 
 		$commentDao = DAORegistry::getDAO('CommentDAO');
-		$this->comment =& $commentDao->getById($commentId, $articleId);
+		$this->comment = $commentDao->getById($commentId, $articleId);
 
 		$this->captchaEnabled = Config::getVar('captcha', 'captcha_on_comments') && Config::getVar('captcha', 'recaptcha');
 
@@ -67,7 +67,7 @@ class CommentForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->comment)) {
-			$comment =& $this->comment;
+			$comment = $this->comment;
 			$this->_data = array(
 				'title' => $comment->getTitle(),
 				'body' => $comment->getBody(),
@@ -76,7 +76,7 @@ class CommentForm extends Form {
 			);
 		} else {
 			$commentDao = DAORegistry::getDAO('CommentDAO');
-			$comment =& $commentDao->getById($this->parentId, $this->articleId);
+			$comment = $commentDao->getById($this->parentId, $this->articleId);
 			$this->_data = array();
 			$user = Request::getUser();
 			if ($user) {
@@ -96,7 +96,7 @@ class CommentForm extends Form {
 		$templateMgr = TemplateManager::getManager();
 
 		if (isset($this->comment)) {
-			$templateMgr->assign_by_ref('comment', $this->comment);
+			$templateMgr->assign('comment', $this->comment);
 			$templateMgr->assign('commentId', $this->commentId);
 		}
 

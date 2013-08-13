@@ -100,7 +100,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		}
 
 		$templateMgr->assign('subscriptionId', $subscriptionId);
-		$templateMgr->assign_by_ref('subscriptionTypes', $this->subscriptionTypes);
+		$templateMgr->assign('subscriptionTypes', $this->subscriptionTypes);
 		parent::display();
 	}
 

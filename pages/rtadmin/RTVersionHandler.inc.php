@@ -1,4 +1,4 @@
-?php
+<?php
 
 /**
  * @file pages/rtadmin/RTVersionHandler.inc.php
@@ -49,11 +49,11 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 
 		if ($version) {
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign_by_ref('version', $version);
+			$templateMgr->assign('version', $version);
 
 			$templateMgr->display('rtadmin/exportXml.tpl', 'application/xml');
 		}
@@ -102,7 +102,7 @@ class RTVersionHandler extends RTAdminHandler {
 		$rangeInfo = $this->getRangeInfo($request, 'versions');
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign_by_ref('versions', $rtDao->getVersions($journal->getId(), $rangeInfo));
+		$templateMgr->assign('versions', $rtDao->getVersions($journal->getId(), $rangeInfo));
 		$templateMgr->display('rtadmin/versions.tpl');
 	}
 
@@ -113,7 +113,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 
 		if (isset($version)) {
 			import('classes.rt.ojs.form.VersionForm');
@@ -145,7 +145,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$journal = Request::getJournal();
 		$versionId = isset($args[0])?$args[0]:0;
-		$version =& $rtDao->getVersion($versionId, $journal->getId());
+		$version = $rtDao->getVersion($versionId, $journal->getId());
 
 		if (isset($version)) {
 			import('classes.rt.ojs.form.VersionForm');

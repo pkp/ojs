@@ -57,7 +57,7 @@ class ManagerHandler extends Handler {
 				// Get contact information for site administrator
 				$roleDao = DAORegistry::getDAO('RoleDAO');
 				$siteAdmins = $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
-				$templateMgr->assign_by_ref('siteAdmin', $siteAdmins->next());
+				$templateMgr->assign('siteAdmin', $siteAdmins->next());
 			}
 		}
 

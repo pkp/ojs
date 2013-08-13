@@ -90,7 +90,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 	 */
 	function displayAllUnregisteredObjects(&$templateMgr, &$journal) {
 		// Prepare information specific to this plug-in.
-		$templateMgr->assign_by_ref('suppFiles', $this->_getUnregisteredSuppFiles($journal));
+		$templateMgr->assign('suppFiles', $this->_getUnregisteredSuppFiles($journal));
 		parent::displayAllUnregisteredObjects($templateMgr, $journal);
 	}
 
@@ -157,7 +157,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$iterator = new VirtualArrayIterator($suppFileData, $totalSuppFiles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the supp file template.
-		$templateMgr->assign_by_ref('suppFiles', $iterator);
+		$templateMgr->assign('suppFiles', $iterator);
 		$templateMgr->display($this->getTemplatePath() . 'suppFiles.tpl');
 	}
 

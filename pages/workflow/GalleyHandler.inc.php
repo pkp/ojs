@@ -72,14 +72,14 @@ class GalleyHandler extends Handler {
 
 		$templateMgr = TemplateManager::getManager($request);
 
-		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
-		$galley =& $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
+		$galley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 
 		// Assign the authorized submission.
-		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('stageId', $stageId);
-		$templateMgr->assign_by_ref('galley', $galley);
+		$templateMgr->assign('galley', $galley);
 	}
 
 

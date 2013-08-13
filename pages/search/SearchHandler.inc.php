@@ -179,7 +179,7 @@ class SearchHandler extends Handler {
 		// Result set display.
 		$templateMgr->assign('jsLocaleKeys', array('search.noKeywordError'));
 		$this->_assignSearchFilters($request, $templateMgr, $searchFilters);
-		$templateMgr->assign_by_ref('results', $results);
+		$templateMgr->assign('results', $results);
 		$templateMgr->assign('error', $error);
 		$templateMgr->display('search/search.tpl');
 	}
@@ -272,11 +272,11 @@ class SearchHandler extends Handler {
 			}
 
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
-			$templateMgr->assign_by_ref('issues', $issues);
+			$templateMgr->assign('publishedArticles', $publishedArticles);
+			$templateMgr->assign('issues', $issues);
 			$templateMgr->assign('issuesUnavailable', $issuesUnavailable);
-			$templateMgr->assign_by_ref('sections', $sections);
-			$templateMgr->assign_by_ref('journals', $journals);
+			$templateMgr->assign('sections', $sections);
+			$templateMgr->assign('journals', $journals);
 			$templateMgr->assign('firstName', $firstName);
 			$templateMgr->assign('middleName', $middleName);
 			$templateMgr->assign('lastName', $lastName);
@@ -301,7 +301,7 @@ class SearchHandler extends Handler {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('searchInitial', $request->getUserVar('searchInitial'));
 			$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
-			$templateMgr->assign_by_ref('authors', $authors);
+			$templateMgr->assign('authors', $authors);
 			$templateMgr->display('search/authorIndex.tpl');
 		}
 	}
@@ -388,8 +388,8 @@ class SearchHandler extends Handler {
 		uasort($journals, create_function('$a, $b', 'return strcasecmp($a->getLocalizedTitle(), $b->getLocalizedTitle());'));
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign_by_ref('journals', $journals);
-		$templateMgr->assign_by_ref('category', $category);
+		$templateMgr->assign('journals', $journals);
+		$templateMgr->assign('category', $category);
 		$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 		$templateMgr->display('search/category.tpl');
 	}

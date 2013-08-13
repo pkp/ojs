@@ -60,7 +60,7 @@ class MedraSettingsForm extends DOIExportSettingsForm {
 		$templateMgr->assign('exportIssueOptions', $exportIssueOptions);
 
 		// Countries.
-		$templateMgr->assign_by_ref('countries', $this->_getCountries());
+		$templateMgr->assign('countries', $this->_getCountries());
 		parent::display();
 	}
 

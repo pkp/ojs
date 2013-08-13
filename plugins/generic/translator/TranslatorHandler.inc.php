@@ -266,7 +266,7 @@ class TranslatorHandler extends Handler {
 		$templateMgr->assign('filename', $filename);
 		$templateMgr->assign('locale', $locale);
 		import('lib.pkp.classes.core.ArrayItemIterator');
-		$templateMgr->assign_by_ref('localeContents', new ArrayItemIterator($localeContents, $localeContentsRangeInfo->getPage(), $localeContentsRangeInfo->getCount()));
+		$templateMgr->assign('localeContents', new ArrayItemIterator($localeContents, $localeContentsRangeInfo->getPage(), $localeContentsRangeInfo->getCount()));
 		$templateMgr->assign('referenceLocaleContents', EditableLocaleFile::load(TranslatorAction::determineReferenceFilename($locale, $filename)));
 
 		$templateMgr->display($plugin->getTemplatePath() . 'localeFile.tpl');

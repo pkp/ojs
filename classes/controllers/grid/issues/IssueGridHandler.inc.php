@@ -294,7 +294,7 @@ class IssueGridHandler extends GridHandler {
 	function issueToc($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign('issue', $issue);
 		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
 		return $json->getString();
 	}
@@ -312,7 +312,7 @@ class IssueGridHandler extends GridHandler {
 		import('classes.issue.IssueAction');
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign('unpublished',!$issue->getPublished());
-		$templateMgr->assign_by_ref('issue', $issue);
+		$templateMgr->assign('issue', $issue);
 
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		$templateMgr->assign('issueGalleys', $issueGalleyDao->getByIssueId($issue->getId()));

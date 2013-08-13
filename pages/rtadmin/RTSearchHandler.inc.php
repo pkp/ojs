@@ -69,10 +69,10 @@ class RTSearchHandler extends RTAdminHandler {
 			$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 			$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 
-			$templateMgr->assign_by_ref('version', $version);
-			$templateMgr->assign_by_ref('context', $context);
+			$templateMgr->assign('version', $version);
+			$templateMgr->assign('context', $context);
 			import('lib.pkp.classes.core.ArrayItemIterator');
-			$templateMgr->assign_by_ref('searches', new ArrayItemIterator($context->getSearches(), $rangeInfo->getPage(), $rangeInfo->getCount()));
+			$templateMgr->assign('searches', new ArrayItemIterator($context->getSearches(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
 			$templateMgr->display('rtadmin/searches.tpl');
 		}

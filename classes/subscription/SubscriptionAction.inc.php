@@ -47,8 +47,8 @@ class SubscriptionAction {
 		}
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign_by_ref('individualStatus', $individualStatus);
-		$templateMgr->assign_by_ref('institutionalStatus', $institutionalStatus);
+		$templateMgr->assign('individualStatus', $individualStatus);
+		$templateMgr->assign('institutionalStatus', $institutionalStatus);
 
 		$templateMgr->display('subscription/subscriptionsSummary.tpl');
 	}
@@ -88,7 +88,7 @@ class SubscriptionAction {
 		$subscriptions =& $subscriptionDao->getSubscriptionsByJournalId($journal->getId(), $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign_by_ref('subscriptions', $subscriptions);
+		$templateMgr->assign('subscriptions', $subscriptions);
 
 		// Set search parameters
 		foreach (SubscriptionAction::getSearchFormDuplicateParameters() as $param)
@@ -301,7 +301,7 @@ class SubscriptionAction {
 			USER_FIELD_USERNAME => 'user.username',
 			USER_FIELD_EMAIL => 'user.email'
 		));
-		$templateMgr->assign_by_ref('users', $users);
+		$templateMgr->assign('users', $users);
 		$templateMgr->assign('subscriptionId', $request->getUserVar('subscriptionId'));
 		$templateMgr->assign('pageTitle', $pageTitle);
 		$templateMgr->assign('redirect', $redirect);

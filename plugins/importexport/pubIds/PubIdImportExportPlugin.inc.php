@@ -96,7 +96,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
-				$templateMgr->assign_by_ref('issues', $issues);
+				$templateMgr->assign('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'selectIssue.tpl');
 				break;
 			case 'import':
@@ -120,8 +120,8 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				$doc =& $this->getDocument($temporaryFile->getFilePath());
 				@set_time_limit(0);
 				$this->handleImport($context, $doc, $errors, $pubIds, $false);
-				$templateMgr->assign_by_ref('errors', $errors);
-				$templateMgr->assign_by_ref('pubIds', $pubIds);
+				$templateMgr->assign('errors', $errors);
+				$templateMgr->assign('pubIds', $pubIds);
 				return $templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
 				break;
 			default:

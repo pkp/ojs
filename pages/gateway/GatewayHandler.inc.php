@@ -105,7 +105,7 @@ class GatewayHandler extends Handler {
 		} else {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journals = $journalDao->getAll(true);
-			$templateMgr->assign_by_ref('journals', $journals);
+			$templateMgr->assign('journals', $journals);
 		}
 
 		$templateMgr->display('gateway/lockss.tpl');
@@ -172,8 +172,8 @@ class GatewayHandler extends Handler {
 				list($nextYear) = $result->fields;
 			}
 
-			$templateMgr->assign_by_ref('journal', $journal);
-			$templateMgr->assign_by_ref('issues', $issues);
+			$templateMgr->assign('journal', $journal);
+			$templateMgr->assign('issues', $issues);
 			$templateMgr->assign('year', $year);
 			$templateMgr->assign('prevYear', $prevYear);
 			$templateMgr->assign('nextYear', $nextYear);
@@ -185,7 +185,7 @@ class GatewayHandler extends Handler {
 				$primaryLocale = AppLocale::getPrimaryLocale();
 				$locales = array($primaryLocale => $localeNames[$primaryLocale]);
 			}
-			$templateMgr->assign_by_ref('locales', $locales);
+			$templateMgr->assign('locales', $locales);
 
 		} else {
 			$journalDao = DAORegistry::getDAO('JournalDAO');

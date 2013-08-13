@@ -134,7 +134,7 @@ class CustomLocaleHandler extends Handler {
 		$templateMgr->assign('filename', $filename);
 		$templateMgr->assign('locale', $locale);
 		import('lib.pkp.classes.core.ArrayItemIterator');
-		$templateMgr->assign_by_ref('referenceLocaleContents', new ArrayItemIterator($referenceLocaleContents, $referenceLocaleContentsRangeInfo->getPage(), $referenceLocaleContentsRangeInfo->getCount()));
+		$templateMgr->assign('referenceLocaleContents', new ArrayItemIterator($referenceLocaleContents, $referenceLocaleContentsRangeInfo->getPage(), $referenceLocaleContentsRangeInfo->getCount()));
 		$templateMgr->assign('localeContents', $localeContents);
 
 		$templateMgr->display($plugin->getTemplatePath() . 'localeFile.tpl');

@@ -48,7 +48,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	 */
 	function production(&$args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
-		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$notificationRequestOptions = array(
 			NOTIFICATION_LEVEL_NORMAL => array(
 				NOTIFICATION_TYPE_VISIT_CATALOG => array(ASSOC_TYPE_SUBMISSION, $submission->getId()),
@@ -58,9 +58,9 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		);
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleys =& $galleyDao->getGalleysByArticle($submission->getId());
-		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('galleys', $galleys);
+		$galleys = $galleyDao->getGalleysByArticle($submission->getId());
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('galleys', $galleys);
 
 		$templateMgr->assign('productionNotificationRequestOptions', $notificationRequestOptions);
 		$templateMgr->display('workflow/production.tpl');
@@ -102,10 +102,10 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	function galleysTab(&$args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$galleys =& $galleyDao->getGalleysByArticle($submission->getId());
-		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('galleys', $galleys);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$galleys = $galleyDao->getGalleysByArticle($submission->getId());
+		$templateMgr->assign('submission', $submission);
+		$templateMgr->assign('galleys', $galleys);
 		$templateMgr->assign('currentGalleyTabId', (int) $request->getUserVar('currentGalleyTabId'));
 
 		return $templateMgr->fetchJson('workflow/galleysTab.tpl');
@@ -119,7 +119,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	 */
 	function _notificationOptionsByStage(&$user, $stageId, $contextId) {
 
-		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$notificationDao = DAORegistry::getDAO('NotificationDAO');
 
 		$signOffNotificationType = $this->_getSignoffNotificationTypeByStageId($stageId);

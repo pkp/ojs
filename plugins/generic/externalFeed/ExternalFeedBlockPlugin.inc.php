@@ -117,7 +117,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 
 		if (!isset($externalFeeds)) return '';
 
-		$templateMgr->assign_by_ref('externalFeeds', $externalFeeds);
+		$templateMgr->assign('externalFeeds', $externalFeeds);
 		return parent::getContents($templateMgr, $request);
 	}
 }

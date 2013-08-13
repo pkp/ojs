@@ -66,10 +66,10 @@ class OJSPaymentAction {
 		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$templateMgr->assign('isJournalManager', Validation::isJournalManager($journal->getId()));
-		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
-		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
-		$templateMgr->assign_by_ref('userDao', $userDao);
-		$templateMgr->assign_by_ref('payments', $payments);
+		$templateMgr->assign('individualSubscriptionDao', $individualSubscriptionDao);
+		$templateMgr->assign('institutionalSubscriptionDao', $institutionalSubscriptionDao);
+		$templateMgr->assign('userDao', $userDao);
+		$templateMgr->assign('payments', $payments);
 
 		$templateMgr->display('payments/viewPayments.tpl');
 	}
@@ -89,10 +89,10 @@ class OJSPaymentAction {
 		$userDao = DAORegistry::getDAO('UserDAO');
 
 		$templateMgr->assign('isJournalManager', Validation::isJournalManager($journal->getId()));
-		$templateMgr->assign_by_ref('individualSubscriptionDao', $individualSubscriptionDao);
-		$templateMgr->assign_by_ref('institutionalSubscriptionDao', $institutionalSubscriptionDao);
-		$templateMgr->assign_by_ref('userDao', $userDao);
-		$templateMgr->assign_by_ref('payment', $payment);
+		$templateMgr->assign('individualSubscriptionDao', $individualSubscriptionDao);
+		$templateMgr->assign('institutionalSubscriptionDao', $institutionalSubscriptionDao);
+		$templateMgr->assign('userDao', $userDao);
+		$templateMgr->assign('payment', $payment);
 
 		$templateMgr->display('payments/viewPayment.tpl');
 	}

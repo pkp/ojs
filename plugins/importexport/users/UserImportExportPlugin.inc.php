@@ -92,8 +92,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 						$i++;
 					}
 
-					$templateMgr->assign_by_ref('users', $users);
-					$templateMgr->assign_by_ref('usersRoles', $usersRoles);
+					$templateMgr->assign('users', $users);
+					$templateMgr->assign('usersRoles', $usersRoles);
 					$templateMgr->assign('sendNotify', $sendNotify);
 					$templateMgr->assign('continueOnError', $continueOnError);
 					$templateMgr->assign('errors', $parser->errors);

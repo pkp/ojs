@@ -78,7 +78,7 @@ class RTAdminHandler extends Handler {
 
 			$this->setupTemplate($request);
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign_by_ref('journals', $journals);
+			$templateMgr->assign('journals', $journals);
 			$templateMgr->display('rtadmin/journals.tpl');
 		} else {
 			// Not logged in.
@@ -115,7 +115,7 @@ class RTAdminHandler extends Handler {
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->register_modifier('validate_url', 'smarty_rtadmin_validate_url');
-		$templateMgr->assign_by_ref('versions', $versions);
+		$templateMgr->assign('versions', $versions);
 		$templateMgr->display('rtadmin/validate.tpl');
 	}
 

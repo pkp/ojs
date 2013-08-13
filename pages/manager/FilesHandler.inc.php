@@ -66,7 +66,7 @@ class FilesHandler extends ManagerHandler {
 				closedir($dh);
 			}
 			ksort($files);
-			$templateMgr->assign_by_ref('files', $files);
+			$templateMgr->assign('files', $files);
 			$templateMgr->assign('currentDir', $currentDir);
 			$templateMgr->assign('parentDir', $parentDir);
 			$templateMgr->display('manager/files/index.tpl');

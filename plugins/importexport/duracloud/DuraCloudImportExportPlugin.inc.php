@@ -84,7 +84,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				$results = $this->exportIssues($journal, $issues);
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
-				$templateMgr->assign_by_ref('issues', $issues);
+				$templateMgr->assign('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'exportResults.tpl');
 				return;
 			case 'exportIssue':
@@ -103,7 +103,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
-				$templateMgr->assign_by_ref('issues', $issues);
+				$templateMgr->assign('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'exportableIssues.tpl');
 				return;
 			case 'importableIssues':

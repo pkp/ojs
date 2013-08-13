@@ -198,13 +198,13 @@ class ArticleHandler extends Handler {
 				$templateMgr->assign('citationFactory', $citationFactory);
 			}
 
-			$templateMgr->assign_by_ref('issue', $issue);
-			$templateMgr->assign_by_ref('article', $article);
-			$templateMgr->assign_by_ref('galley', $galley);
-			$templateMgr->assign_by_ref('section', $section);
-			$templateMgr->assign_by_ref('journalRt', $journalRt);
-			$templateMgr->assign_by_ref('version', $version);
-			$templateMgr->assign_by_ref('journal', $journal);
+			$templateMgr->assign('issue', $issue);
+			$templateMgr->assign('article', $article);
+			$templateMgr->assign('galley', $galley);
+			$templateMgr->assign('section', $section);
+			$templateMgr->assign('journalRt', $journalRt);
+			$templateMgr->assign('version', $version);
+			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('postingAllowed', (
 				($article->getEnableComments()) && (
@@ -225,15 +225,15 @@ class ArticleHandler extends Handler {
 			if($journalRt->getSharingEnabled()) {
 				$templateMgr->assign('sharingRequestURL', $request->getRequestURL());
 				$templateMgr->assign('sharingArticleTitle', $article->getLocalizedTitle());
-				$templateMgr->assign_by_ref('sharingUserName', $journalRt->getSharingUserName());
-				$templateMgr->assign_by_ref('sharingButtonStyle', $journalRt->getSharingButtonStyle());
-				$templateMgr->assign_by_ref('sharingDropDownMenu', $journalRt->getSharingDropDownMenu());
-				$templateMgr->assign_by_ref('sharingBrand', $journalRt->getSharingBrand());
-				$templateMgr->assign_by_ref('sharingDropDown', $journalRt->getSharingDropDown());
-				$templateMgr->assign_by_ref('sharingLanguage', $journalRt->getSharingLanguage());
-				$templateMgr->assign_by_ref('sharingLogo', $journalRt->getSharingLogo());
-				$templateMgr->assign_by_ref('sharingLogoBackground', $journalRt->getSharingLogoBackground());
-				$templateMgr->assign_by_ref('sharingLogoColor', $journalRt->getSharingLogoColor());
+				$templateMgr->assign('sharingUserName', $journalRt->getSharingUserName());
+				$templateMgr->assign('sharingButtonStyle', $journalRt->getSharingButtonStyle());
+				$templateMgr->assign('sharingDropDownMenu', $journalRt->getSharingDropDownMenu());
+				$templateMgr->assign('sharingBrand', $journalRt->getSharingBrand());
+				$templateMgr->assign('sharingDropDown', $journalRt->getSharingDropDown());
+				$templateMgr->assign('sharingLanguage', $journalRt->getSharingLanguage());
+				$templateMgr->assign('sharingLogo', $journalRt->getSharingLogo());
+				$templateMgr->assign('sharingLogoBackground', $journalRt->getSharingLogoBackground());
+				$templateMgr->assign('sharingLogoColor', $journalRt->getSharingLogoColor());
 				list($btnUrl, $btnWidth, $btnHeight) = SharingRT::sharingButtonImage($journalRt);
 				$templateMgr->assign('sharingButtonUrl', $btnUrl);
 				$templateMgr->assign('sharingButtonWidth', $btnWidth);
@@ -264,7 +264,7 @@ class ArticleHandler extends Handler {
 	 * @param array $args
 	 * @param PKPRequest $request
 	 */
-	function viewFile($args, $request) {
+	function viewFile($args, $request, $hookName = 'ArticleHandler::viewFile', $inline = true) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
@@ -274,17 +274,16 @@ class ArticleHandler extends Handler {
 				$submissionFile = $this->galley->getFirstGalleyFile(SUBMISSION_FILE_PROOF);
 				if ($submissionFile) {
 					$fileId = $submissionFile->getFileId();
-				}
-				else { // no proof files assigned to this galley!
+				} else { // no proof files assigned to this galley!
 					assert(false);
 					return null;
 				}
 			}
 
-			if (!HookRegistry::call('ArticleHandler::viewFile', array($this->article, &$this->galley, &$fileId))) {
+			if (!HookRegistry::call($hookName, array($this->article, &$this->galley, &$fileId))) {
 				import('classes.file.ArticleFileManager');
 				$articleFileManager = new ArticleFileManager($articleId);
-				$file =  $articleFileManager->downloadFile($fileId, null, true);
+				$file = $articleFileManager->downloadFile($fileId, null, $inline);
 			}
 		}
 	}
@@ -295,28 +294,7 @@ class ArticleHandler extends Handler {
 	 * @param PKPRequest $request
 	 */
 	function download($args, $request) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		$fileId = isset($args[2]) ? (int) $args[2] : 0;
-
-		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
-			if (!$fileId) {
-				$submissionFile = $this->galley->getFirstGalleyFile(SUBMISSION_FILE_PROOF);
-				if ($submissionFile) {
-					$fileId = $submissionFile->getFileId();
-				}
-				else { // no files assigned to this galley!
-					assert(false);
-					return null;
-				}
-			}
-
-			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
-				import('classes.file.ArticleFileManager');
-				$articleFileManager = new ArticleFileManager($articleId);
-				$file =  $articleFileManager->downloadFile($fileId, null, false);
-			}
-		}
+		return $this->viewFile($args, $request, 'ArticleHandler::download', false);
 	}
 
 	/**
@@ -349,8 +327,8 @@ class ArticleHandler extends Handler {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('galleyId', $galleyId);
-			$templateMgr->assign_by_ref('galley', $galley);
-			$templateMgr->assign_by_ref('article', $article);
+			$templateMgr->assign('galley', $galley);
+			$templateMgr->assign('article', $article);
 
 			$templateMgr->display('article/interstitial.tpl');
 		}

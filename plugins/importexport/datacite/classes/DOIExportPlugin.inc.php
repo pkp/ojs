@@ -453,9 +453,9 @@ class DOIExportPlugin extends ImportExportPlugin {
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
 		// Prepare and display the template.
-		$templateMgr->assign_by_ref('issues', $this->_getUnregisteredIssues($journal));
-		$templateMgr->assign_by_ref('articles', $this->_getUnregisteredArticles($journal));
-		$templateMgr->assign_by_ref('galleys', $this->_getUnregisteredGalleys($journal));
+		$templateMgr->assign('issues', $this->_getUnregisteredIssues($journal));
+		$templateMgr->assign('articles', $this->_getUnregisteredArticles($journal));
+		$templateMgr->assign('galleys', $this->_getUnregisteredGalleys($journal));
 		$templateMgr->display($this->getTemplatePath() . 'all.tpl');
 	}
 
@@ -954,10 +954,10 @@ class DOIExportPlugin extends ImportExportPlugin {
 			}
 		}
 
-		$templateMgr->assign_by_ref('configurationErrors', $configurationErrors);
+		$templateMgr->assign('configurationErrors', $configurationErrors);
 
 		// Prepare and display the index page template.
-		$templateMgr->assign_by_ref('journal', $journal);
+		$templateMgr->assign('journal', $journal);
 		$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 	}
 
@@ -988,7 +988,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$iterator = new ArrayItemIterator($issues, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the issue template.
-		$templateMgr->assign_by_ref('issues', $iterator);
+		$templateMgr->assign('issues', $iterator);
 		$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 	}
 
@@ -1036,7 +1036,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$iterator = new VirtualArrayIterator($articleData, $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the article template.
-		$templateMgr->assign_by_ref('articles', $iterator);
+		$templateMgr->assign('articles', $iterator);
 		$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 	}
 
@@ -1094,7 +1094,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$iterator = new VirtualArrayIterator($galleyData, $totalGalleys, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the galley template.
-		$templateMgr->assign_by_ref('galleys', $iterator);
+		$templateMgr->assign('galleys', $iterator);
 		$templateMgr->display($this->getTemplatePath() . 'galleys.tpl');
 	}
 

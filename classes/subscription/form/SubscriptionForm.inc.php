@@ -111,9 +111,9 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('userCountry', $user->getCountry());
 		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 
-		$templateMgr->assign_by_ref('validStatus', $this->validStatus);
-		$templateMgr->assign_by_ref('subscriptionTypes', $this->subscriptionTypes);
-		$templateMgr->assign_by_ref('validCountries', $this->validCountries);
+		$templateMgr->assign('validStatus', $this->validStatus);
+		$templateMgr->assign('subscriptionTypes', $this->subscriptionTypes);
+		$templateMgr->assign('validCountries', $this->validCountries);
 
 		parent::display();
 	}

@@ -90,7 +90,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issues = $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
-				$templateMgr->assign_by_ref('issues', $issues);
+				$templateMgr->assign('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 				break;
 			case 'articles':
@@ -103,7 +103,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				import('lib.pkp.classes.core.VirtualArrayIterator');
 				$articleSearch = new ArticleSearch();
 				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
-				$templateMgr->assign_by_ref('articles', $iterator);
+				$templateMgr->assign('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
 			default:

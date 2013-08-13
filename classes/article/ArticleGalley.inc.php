@@ -200,14 +200,13 @@ class ArticleGalley extends Representation {
 	function getLatestGalleyFiles($fileType = null) {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$submissionFiles = $submissionFileDao->getLatestRevisionsByAssocId(
-				ASSOC_TYPE_GALLEY, $this->getId(),
-				$this->getSubmissionId(), SUBMISSION_FILE_PROOF
-			);
+			ASSOC_TYPE_GALLEY, $this->getId(),
+			$this->getSubmissionId(), SUBMISSION_FILE_PROOF
+		);
 
 		if (!$fileType) {
 			return $submissionFiles;
-		}
-		else {
+		} else {
 			$filteredFiles = array();
 			foreach ($submissionFiles as $id => $file) {
 				if ($file->getFileType() == $fileType) {
@@ -226,7 +225,7 @@ class ArticleGalley extends Representation {
 	 * @return SubmissionFile or null
 	 */
 	function getFirstGalleyFile($fileType = null, $allFiles = false) {
-		$submissionFiles = $this->getLatestGalleyFiles(	$fileType);
+		$submissionFiles = $this->getLatestGalleyFiles($fileType);
 		if (is_array($submissionFiles) && sizeof($submissionFiles) > 0) {
 			if ($allFiles) {
 				return array_shift($submissionFiles);

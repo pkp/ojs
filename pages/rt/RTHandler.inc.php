@@ -190,7 +190,7 @@ class RTHandler extends ArticleHandler {
 
 		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
 		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
-		$templateMgr->assign_by_ref('citationPlugins', $citationPlugins);
+		$templateMgr->assign('citationPlugins', $citationPlugins);
 		if (isset($citationPlugins[$citeType])) {
 			// A citation type has been selected; display citation.
 			$citationPlugin =& $citationPlugins[$citeType];
@@ -376,8 +376,8 @@ class RTHandler extends ArticleHandler {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
-		$templateMgr->assign_by_ref('journalRt', $journalRt);
-		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->assign('journalRt', $journalRt);
+		$templateMgr->assign('article', $article);
 		$templateMgr->display('rt/findingReferences.tpl');
 	}
 

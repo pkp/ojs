@@ -43,7 +43,7 @@ class BrowseHandler extends Handler {
 				$results = new VirtualArrayIterator($articleSearch->formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->assign_by_ref('results', $results);
+				$templateMgr->assign('results', $results);
 				$templateMgr->assign('title', $section->getLocalizedTitle());
 				$templateMgr->assign('sectionId', $sectionId);
 				$templateMgr->assign('enableBrowseBySections', $enableBrowseBySections);
@@ -111,7 +111,7 @@ class BrowseHandler extends Handler {
 				$results = new VirtualArrayIterator($articleSearch->formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->assign_by_ref('results', $results);
+				$templateMgr->assign('results', $results);
 				$templateMgr->assign('title', $identifyType);
 				$templateMgr->assign('enableBrowseByIdentifyTypes', $enableBrowseByIdentifyTypes);
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchDetails.tpl');

@@ -64,7 +64,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('submissionId', $this->getSubmission()->getId());
 		$templateMgr->assign('stageId', $this->getStageId());
 		$templateMgr->assign('formParams', $this->getFormParams());
-		$templateMgr->assign_by_ref('context', $context);
+		$templateMgr->assign('context', $context);
 
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$enablePublicArticleId = $journalSettingsDao->getSetting($context->getId(),'enablePublicArticleId');
@@ -77,9 +77,9 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$issueAction = new IssueAction();
 		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
 
-		$publishedArticle =& $this->getPublishedArticle();
+		$publishedArticle = $this->getPublishedArticle();
 		if ($publishedArticle) {
-			$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
+			$templateMgr->assign('publishedArticle', $publishedArticle);
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getById($publishedArticle->getIssueId());
 			if ($issue) {
@@ -99,7 +99,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
 		if ($publicationFeeEnabled) {
-			$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $subission->getId()));
+			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $subission->getId()));
 		}
 
 		return parent::fetch($request);

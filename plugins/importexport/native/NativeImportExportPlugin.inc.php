@@ -94,7 +94,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
 
-				$templateMgr->assign_by_ref('issues', $issues);
+				$templateMgr->assign('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 				break;
 			case 'articles':
@@ -107,7 +107,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				import('lib.pkp.classes.core.VirtualArrayIterator');
 				$articleSearch = new ArticleSearch();
 				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
-				$templateMgr->assign_by_ref('articles', $iterator);
+				$templateMgr->assign('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
 			case 'import':
@@ -151,7 +151,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					// prompt them for the.
 					if (!isset($context['issue']) || !isset($context['section'])) {
 						$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
-						$templateMgr->assign_by_ref('issues', $issues);
+						$templateMgr->assign('issues', $issues);
 						$templateMgr->assign('sectionOptions', array('0' => __('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getId(), false));
 						$templateMgr->assign('temporaryFileId', $temporaryFile->getId());
 						return $templateMgr->display($this->getTemplatePath() . 'articleContext.tpl');
@@ -161,11 +161,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				@set_time_limit(0);
 
 				if ($this->handleImport($context, $doc, $errors, $issues, $articles, false)) {
-					$templateMgr->assign_by_ref('issues', $issues);
-					$templateMgr->assign_by_ref('articles', $articles);
+					$templateMgr->assign('issues', $issues);
+					$templateMgr->assign('articles', $articles);
 					return $templateMgr->display($this->getTemplatePath() . 'importSuccess.tpl');
 				} else {
-					$templateMgr->assign_by_ref('errors', $errors);
+					$templateMgr->assign('errors', $errors);
 					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
 				}
 				break;

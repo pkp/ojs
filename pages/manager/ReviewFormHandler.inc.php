@@ -41,7 +41,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
-		$templateMgr->assign_by_ref('reviewForms', $reviewForms);
+		$templateMgr->assign('reviewForms', $reviewForms);
 		$templateMgr->assign('completeCounts', $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), true));
 		$templateMgr->assign('incompleteCounts', $reviewFormDao->getUseCounts(ASSOC_TYPE_JOURNAL, $journal->getId(), false));
 		$templateMgr->display('manager/reviewForms/reviewForms.tpl');
@@ -159,7 +159,7 @@ class ReviewFormHandler extends ManagerHandler {
 		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('pageTitle', 'manager.reviewForms.preview');
-		$templateMgr->assign_by_ref('reviewForm', $reviewForm);
+		$templateMgr->assign('reviewForm', $reviewForm);
 		$templateMgr->assign('reviewFormElements', $reviewFormElements);
 		$templateMgr->assign('completeCounts', $completeCounts);
 		$templateMgr->assign('incompleteCounts', $incompleteCounts);
@@ -344,11 +344,11 @@ class ReviewFormHandler extends ManagerHandler {
 		$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 		$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 
-		$templateMgr->assign_by_ref('unusedReviewFormTitles', $unusedReviewFormTitles);
-		$templateMgr->assign_by_ref('reviewFormElements', $reviewFormElements);
+		$templateMgr->assign('unusedReviewFormTitles', $unusedReviewFormTitles);
+		$templateMgr->assign('reviewFormElements', $reviewFormElements);
 		$templateMgr->assign('reviewFormId', $reviewFormId);
 		import('lib.pkp.classes.reviewForm.ReviewFormElement');
-		$templateMgr->assign_by_ref('reviewFormElementTypeOptions', ReviewFormElement::getReviewFormElementTypeOptions());
+		$templateMgr->assign('reviewFormElementTypeOptions', ReviewFormElement::getReviewFormElementTypeOptions());
 		$templateMgr->display('manager/reviewForms/reviewFormElements.tpl');
 	}
 

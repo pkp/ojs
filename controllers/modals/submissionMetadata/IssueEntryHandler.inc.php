@@ -46,7 +46,7 @@ class IssueEntryHandler extends PublicationEntryHandler {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleys = $galleyDao->getGalleysByArticle($submission->getId());
 
-		$templateMgr->assign_by_ref('galleys', $articleGalleys);
+		$templateMgr->assign('galleys', $articleGalleys);
 
 		$application = Application::getApplication();
 		$request = $application->getRequest();

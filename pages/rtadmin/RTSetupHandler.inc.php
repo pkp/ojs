@@ -17,7 +17,7 @@ import('pages.rtadmin.RTAdminHandler');
 class RTSetupHandler extends RTAdminHandler {
 	/**
 	 * Constructor
-	 **/
+	 */
 	function RTSetupHandler() {
 		parent::RTAdminHandler();
 	}
@@ -41,7 +41,7 @@ class RTSetupHandler extends RTAdminHandler {
 			}
 
 			$templateMgr->assign('versionOptions', $versionOptions);
-			$templateMgr->assign_by_ref('version', $rt->getVersion());
+			$templateMgr->assign('version', $rt->getVersion());
 			$templateMgr->assign('enabled', $rt->getEnabled());
 			$templateMgr->assign('abstract', $rt->getAbstract());
 			$templateMgr->assign('captureCite', $rt->getCaptureCite());
@@ -55,7 +55,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign('viewReviewPolicy', $rt->getviewReviewPolicy());
 
 			// Bring in the comments constants.
-			$commentDao =& DAORegistry::getDao('CommentDAO');
+			$commentDao = DAORegistry::getDao('CommentDAO');
 
 			$templateMgr->assign('commentsOptions', array(
 				'COMMENTS_DISABLED' => COMMENTS_DISABLED,
@@ -75,7 +75,7 @@ class RTSetupHandler extends RTAdminHandler {
 		$this->validate();
 
 		// Bring in the comments constants.
-		$commentDao =& DAORegistry::getDao('CommentDAO');
+		$commentDao = DAORegistry::getDao('CommentDAO');
 
 		$journal = $request->getJournal();
 

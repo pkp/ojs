@@ -117,7 +117,7 @@ class BooksForReviewEditorHandler extends Handler {
 		);
 		$templateMgr->assign('fieldOptions', $fieldOptions);
 		$templateMgr->assign('editorOptions', $filterEditorOptions);
-		$templateMgr->assign_by_ref('counts', $bfrDao->getStatusCounts($journalId));
+		$templateMgr->assign('counts', $bfrDao->getStatusCounts($journalId));
 
 		$templateMgr->display($bfrPlugin->getTemplatePath() . 'editor' . '/' . $template);
 	}
@@ -337,7 +337,7 @@ class BooksForReviewEditorHandler extends Handler {
 		}
 
 		$bfrDao = DAORegistry::getDAO('BookForReviewDAO');
-		$templateMgr->assign_by_ref('counts', $bfrDao->getStatusCounts($journalId));
+		$templateMgr->assign('counts', $bfrDao->getStatusCounts($journalId));
 		if ($request->getUserVar('save')) {
 			$form->readInputData();
 			if ($form->validate()) {
@@ -419,7 +419,7 @@ class BooksForReviewEditorHandler extends Handler {
 			USER_FIELD_EMAIL => 'user.email'
 		));
 
-		$templateMgr->assign_by_ref('users', $users);
+		$templateMgr->assign('users', $users);
 		$templateMgr->assign('bookId', $bookId);
 		$templateMgr->assign('returnPage', $returnPage);
 		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
@@ -493,7 +493,7 @@ class BooksForReviewEditorHandler extends Handler {
 			SUBMISSION_FIELD_AUTHOR => 'user.role.author'
 		));
 
-		$templateMgr->assign_by_ref('submissions', $submissions);
+		$templateMgr->assign('submissions', $submissions);
 		$templateMgr->assign('bookId', $bookId);
 		$templateMgr->assign('returnPage', $returnPage);
 		$templateMgr->display($bfrPlugin->getTemplatePath() . 'editor' . '/' . 'submissions.tpl');

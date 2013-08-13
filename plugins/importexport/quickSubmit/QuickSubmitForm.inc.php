@@ -75,8 +75,7 @@ class QuickSubmitForm extends Form {
 		$templateMgr->assign('sectionAbstractsRequired', $sectionAbstractsRequired);
 
 		$countryDao = DAORegistry::getDAO('CountryDAO');
-		$countries =& $countryDao->getCountries();
-		$templateMgr->assign_by_ref('countries', $countries);
+		$templateMgr->assign('countries', $countryDao->getCountries());
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
@@ -87,7 +86,7 @@ class QuickSubmitForm extends Form {
 		$tempFileId = $this->getData('tempFileId');
 		if (isset($tempFileId[$formLocale]) && $tempFileId[$formLocale] > 0) {
 			$submissionFile = $temporaryFileManager->getFile($tempFileId[$formLocale], $user->getId());
-			$templateMgr->assign_by_ref('submissionFile', $submissionFile);
+			$templateMgr->assign('submissionFile', $submissionFile);
 		}
 
 		if ($request->getUserVar('addAuthor') || $request->getUserVar('delAuthor')  || $request->getUserVar('moveAuthor')) {

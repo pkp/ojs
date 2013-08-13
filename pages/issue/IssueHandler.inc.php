@@ -398,7 +398,7 @@ class IssueHandler extends Handler {
 			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
 
 			$publicFileManager = new PublicFileManager();
-			$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
+			$templateMgr->assign('publishedArticles', $publishedArticles);
 			$showToc = true;
 		}
 		$templateMgr->assign('showToc', $showToc);
@@ -430,7 +430,7 @@ class IssueHandler extends Handler {
 				if (!$partial) $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
 				$articleExpiryPartial[$publishedArticle->getId()] = $partial;
 			}
-			$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);
+			$templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
 		}
 
 		$templateMgr->assign('subscriptionRequired', $subscriptionRequired);

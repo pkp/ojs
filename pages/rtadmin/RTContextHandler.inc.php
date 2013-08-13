@@ -62,10 +62,10 @@ class RTContextHandler extends RTAdminHandler {
 			$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
 			$templateMgr->addJavaScript('lib/pkp/js/functions/tablednd.js');
 
-			$templateMgr->assign_by_ref('version', $version);
+			$templateMgr->assign('version', $version);
 
 			import('lib.pkp.classes.core.ArrayItemIterator');
-			$templateMgr->assign_by_ref('contexts', new ArrayItemIterator($version->getContexts(), $rangeInfo->getPage(), $rangeInfo->getCount()));
+			$templateMgr->assign('contexts', new ArrayItemIterator($version->getContexts(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
 			$templateMgr->display('rtadmin/contexts.tpl');
 		}

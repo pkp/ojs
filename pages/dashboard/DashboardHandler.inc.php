@@ -79,7 +79,7 @@ class DashboardHandler extends Handler {
 		$journalCount = count($accessibleJournals);
 		$templateMgr->assign('journalCount', $journalCount);
 		if ($journalCount == 1) {
-			$templateMgr->assign_by_ref('journal', $accessibleJournals[0]);
+			$templateMgr->assign('journal', $accessibleJournals[0]);
 		} elseif ($journalCount > 1) {
 			$journals = array();
 			foreach ($accessibleJournals as $journal) {
@@ -87,7 +87,7 @@ class DashboardHandler extends Handler {
 				$url = $request->url($journal->getPath(), 'submission');
 				$journals[$url] = $journal->getLocalizedName();
 			}
-			$templateMgr->assign_by_ref('journals', $journals);
+			$templateMgr->assign('journals', $journals);
 		}
 
 		return $templateMgr->fetchJson('dashboard/tasks.tpl');

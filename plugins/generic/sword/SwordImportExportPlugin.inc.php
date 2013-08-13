@@ -192,9 +192,9 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 							$depositPoints["$collection->sac_href"] = "$collection->sac_colltitle";
 						}
 					}
-					$templateMgr->assign_by_ref('swordDepositPoints', $depositPoints);
+					$templateMgr->assign('swordDepositPoints', $depositPoints);
 				}
-				$templateMgr->assign_by_ref('articles', $iterator);
+				$templateMgr->assign('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
 		}

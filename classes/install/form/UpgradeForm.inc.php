@@ -30,7 +30,7 @@ class UpgradeForm extends Form {
 	 */
 	function display() {
 		$templateMgr = TemplateManager::getManager();
-		$templateMgr->assign_by_ref('version', VersionCheck::getCurrentCodeVersion());
+		$templateMgr->assign('version', VersionCheck::getCurrentCodeVersion());
 
 		parent::display();
 	}
@@ -54,7 +54,7 @@ class UpgradeForm extends Form {
 			}
 
 			$templateMgr->assign('notes', $installer->getNotes());
-			$templateMgr->assign_by_ref('newVersion', $installer->getNewVersion());
+			$templateMgr->assign('newVersion', $installer->getNewVersion());
 			$templateMgr->display('install/upgradeComplete.tpl');
 
 		} else {
