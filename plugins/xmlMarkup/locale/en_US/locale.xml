@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/markup/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Document Markup plugin localization strings for the en_US (U.S. English) locale.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+
+	<message key="plugins.generic.markup.displayName">Document Markup Plugin</message>
+	
+	<message key="plugins.generic.markup.settings">Settings</message>
+	
+	<message key="plugins.generic.markup.description">When an author, copyeditor or editor uploads a new version (odt, doc, docx, or pdf format) of an article, this module submits it to the document markup server specified in the configuration file, and receives a zipped file containing pdf, xml, and html versions of the article, as well as bibliography information automatically styled per the journal's guidelines.  This zipped file is kept in the supplementary files folder for inspection during the review process.  When ready to publish the article, the pdf, xml, and html galley files are extracted and made available from the journal table of contents.</message>
+	
+	<message key="plugins.generic.markup.errors.errorMessage">Unable to fetch article xml and html versions. The Document Markup plugin needs to be enabled and the citation style needs to be provided in Journal Settings.</message>
+	
+	<message key="plugins.generic.markup.settings.cslStyle">Select Citation Style (CSL):</message>
+	
+	<message key="plugins.generic.markup.settings.cslStyleFieldHelp">Type part of an organization or publication name to lookup the citation style from the local CSL database. Our database is updated regularly from its http://citationstyles.org/styles/ source.</message>
+
+	<message key="plugins.generic.markup.settings.markupHostURL">Document Markup Server:</message>
+	
+	<message key="plugins.generic.markup.settings.markupHostURLHelp">The journal will retrieve converted documents from this server URL.  Normally you should not change this setting.</message>
+	
+	<message key="plugins.generic.markup.settings.markupHostUser">User ID:</message>
+	
+	<message key="plugins.generic.markup.settings.markupHostPass">Password:</message>
+	
+	<message key="plugins.generic.markup.settings.markupHostAccountHelp">This plugin can use either a guest account (limited to 10 conversions per week) or an unlimited use account.  Leave the User ID field blank for guest account use.  For more information, visit <![CDATA[<a href="https://pkpservices.sfu.ca/" target="_blank">PKP Document Markup Service</a>]]>.</message>
+	
+	<message key="plugins.generic.markup.settings.reviewVersion">Reviewer Version:</message>
+	
+	<message key="plugins.generic.markup.settings.reviewVersionHelp">Select this if you want a separate document-review.pdf version prepared for reviewers.  It is stripped of author information and is available in the "Document Markup Files" supplementary file archive.</message>
+	
+	<message key="plugins.generic.markup.settings.requirements">Installation Requirements</message>
+		
+	<message key="plugins.generic.markup.settings.curlSupport">PHP Curl Support:</message>
+	
+	<message key="plugins.generic.markup.settings.curlSupportHelp">PHP Curl needs to be installed on your OJS server.  This plugin uses curl to send and receive the article files to the Document Markup Server service for processing.</message>
+
+	
+	<message key="plugins.generic.markup.settings.zipSupport">PHP Unzip Support:</message>
+	
+	<message key="plugins.generic.markup.settings.zipSupportHelp">PHP zlib needs to be installed on your OJS server.  This plugin uses zlib to unzip the Document Markup Server files.</message>
+	
+	
+	<message key="plugins.generic.markup.settings.cssStyles">Stylesheets:</message>
+	
+	<message key="plugins.generic.markup.settings.cssStylesHelp">These HTML stylesheets control the display of articles when presented by this plugin.  Default files are automatically created.  You may replace these with your own customized versions using the</message>
+	
+	<message key="plugins.generic.markup.settings.cssFileManager">file manager</message>
+
+	<message key="plugins.generic.markup.settings.cssHeaderImageURL">Header Image:</message>
+	
+	<message key="plugins.generic.markup.settings.cssHeaderImageURLHelp">When this plugin displays an article, it can have a png or jpg header image at top of first page that shows the journal branding.  Upload this header image here.  The image should be a maximum of 800px wide and 100px tall.  To remove it, use the </message> <!-- file manager -->
+	
+	<message key="plugins.generic.markup.archive.description">This file archive includes converted XML, HTML and standardized PDF versions.  Also includes extracted graphics files and citation information.</message>
+	
+	<!-- Processing status messages -->
+	<message key="plugins.generic.markup.archive.no_url">Plugin's Document Markup Server parameter is not set!</message>
+	
+	<message key="plugins.generic.markup.archive.status">Document Markup Server. STATUS: </message>
+		
+	<message key="plugins.generic.markup.archive.processing">Document Markup Server.  Status: IN PROCESS</message>
+	<message key="plugins.generic.markup.archive.downloaded">Document Markup Server.  Status: DOWNLOADED, PROCESSING ...</message>
+
+	<message key="plugins.generic.markup.archive.no_job">Software Error: No Job Id was generated: </message>
+	
+	<message key="plugins.generic.markup.archive.bad_zip">Zip issue:</message>
+	
+	<message key="plugins.generic.markup.archive.portalTitle">PKP Open Journal Systems Document Markup Plugin</message>
+	<message key="plugins.generic.markup.archive.portalSubTitle">Document Status</message>
+
+	<message key="plugins.generic.markup.archive.enable">Document Markup Plugin needs to be enabled!</message>
+	<message key="plugins.generic.markup.archive.no_journal">Request needs a Journal.</message>
+	<message key="plugins.generic.markup.archive.no_articleID">"Article Id parameter is invalid or missing."</message>
+	<message key="plugins.generic.markup.archive.no_article">No such article!</message>
+	<message key="plugins.generic.markup.archive.bad_filename">File name is missing or misformatted.  Should be: .../markup/[article Id]/0/[file name]</message>
+	<message key="plugins.generic.markup.archive.no_file">That file does not exist.</message>
+	<message key="plugins.generic.markup.archive.login">You need to login to get access to this file!</message>
+	<message key="plugins.generic.markup.archive.no_access">Your current login does not permit access to this file!</message>	
+
+	<message key="plugins.generic.markup.archive.supp_missing">Article or its "Document Markup Files" supplementary file RECORD is missing.  Try re-uploading the article to regenerate the markup files.</message>
+	
+	<message key="plugins.generic.markup.archive.supp_file_missing">Although a "Document Markup Files" supplementary record exists, its file is missing.</message>
+	<message key="plugins.generic.markup.archive.is_zip">Supplementary file is already a zip archive.</message>
+
+</locale>

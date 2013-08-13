@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * @file plugins/generic/markup/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Document Markup plugin localization strings for the en_US (U.S. English) locale.
+  -->
+<locale name="fr_FR" full_name="French">
+
+	<message key="plugins.generic.markup.displayName"/>
+	
+	<message key="plugins.generic.markup.settings"/>
+	
+	<message key="plugins.generic.markup.description"/>
+	
+	<message key="plugins.generic.markup.errors.errorMessage">Unable to fetch article xml and html versions. The Document Markup plugin needs to be enabled and the citation style needs to be provided in Journal Settings.</message>
+	
+	<message key="plugins.generic.markup.settings.cslStyle">Select Citation Style (CSL):</message>
+	
+	<message key="plugins.generic.markup.settings.cslStyleFieldHelp">Type part of an organization or publication name to lookup the citation style from the local CSL database. Our database is updated regularly from its http://citationstyles.org/styles/ source.</message>
+
+	<message key="plugins.generic.markup.settings.markupHostURL">Document Markup Server:</message>
+	
+	<message key="plugins.generic.markup.settings.markupHostURLHelp">The journal will retrieve converted documents from this server URL.  Normally you should not change this setting.</message>
+	
+	<message key="plugins.generic.markup.settings.markupHostUser">User ID:</message>
+	
+	<message key="plugins.generic.markup.settings.markupHostPass">Password:</message>
+	
+	<message key="plugins.generic.markup.settings.markupHostAccountHelp">This plugin can use either a guest account (limited to 10 conversions per week) or an unlimited use account.  Leave the user id and password fields blank for guest account use.  For more information, visit <![CDATA[<a href="https://pkpservices.sfu.ca/" target="_blank">PKP Document Markup Service</a>]]>.</message>
+	
+	<message key="plugins.generic.markup.settings.reviewVersion">Reviewer Version:</message>
+	
+	<message key="plugins.generic.markup.settings.reviewVersionHelp">Select this if you want a separate document-review.pdf version prepared for reviewers.  It is stripped of author information and is available in the "Document Markup Files" supplementary file archive.</message>
+	
+	<message key="plugins.generic.markup.settings.requirements">Installation Requirements</message>
+		
+	<message key="plugins.generic.markup.settings.curlSupport">PHP Curl Support:</message>
+	
+	<message key="plugins.generic.markup.settings.curlSupportHelp">PHP Curl needs to be installed on your OJS server.  This plugin uses curl to send and receive the article files to the [pdfx] web server service for processing.</message>
+
+	
+	<message key="plugins.generic.markup.settings.zipSupport">PHP Unzip Support:</message>
+	
+	<message key="plugins.generic.markup.settings.zipSupportHelp">PHP zlib needs to be installed on your OJS server.  This plugin uses zlib to unzip the Document Markup Server files.</message>
+	
+	
+	<message key="plugins.generic.markup.settings.cssStyles">Stylesheets:</message>
+	
+	<message key="plugins.generic.markup.settings.cssStylesHelp">These HTML stylesheets control the display of articles when presented by this plugin.  Default files are automatically created.  You may replace these with your own customized versions using the</message>
+	
+	<message key="plugins.generic.markup.settings.cssFileManager">file manager</message>
+
+	<message key="plugins.generic.markup.settings.cssHeaderImageURL">Header Image:</message>
+	
+	<message key="plugins.generic.markup.settings.cssHeaderImageURLHelp">When this plugin displays an article, it can have a png or jpg header image at top of first page that shows the journal branding.  Upload this header image here.  The image should be a maximum of 800px wide and 100px tall.  To remove it, use the </message> <!-- file manager -->
+	
+<message key="plugins.generic.markup.displayName">Le markup des <a href="here">documents</a></message>
+	
+	</locale>
