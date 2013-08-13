@@ -32,7 +32,7 @@
 	
 	<message key="plugins.generic.markup.settings.markupHostPass">Password:</message>
 	
-	<message key="plugins.generic.markup.settings.markupHostAccountHelp">This plugin can use either a guest account (limited to 10 conversions per week) or an unlimited use account.  Leave the user id and password fields blank for guest account use.  For more information, visit <![CDATA[<a href="https://pkpservices.sfu.ca/" target="_blank">PKP Document Markup Service</a>]]>.</message>
+	<message key="plugins.generic.markup.settings.markupHostAccountHelp">This plugin can use either a guest account (limited to 10 conversions per week) or an unlimited use account.  Leave the User ID field blank for guest account use.  For more information, visit <![CDATA[<a href="https://pkpservices.sfu.ca/" target="_blank">PKP Document Markup Service</a>]]>.</message>
 	
 	<message key="plugins.generic.markup.settings.reviewVersion">Reviewer Version:</message>
 	
@@ -42,7 +42,7 @@
 		
 	<message key="plugins.generic.markup.settings.curlSupport">PHP Curl Support:</message>
 	
-	<message key="plugins.generic.markup.settings.curlSupportHelp">PHP Curl needs to be installed on your OJS server.  This plugin uses curl to send and receive the article files to the [pdfx] web server service for processing.</message>
+	<message key="plugins.generic.markup.settings.curlSupportHelp">PHP Curl needs to be installed on your OJS server.  This plugin uses curl to send and receive the article files to the Document Markup Server service for processing.</message>
 
 	
 	<message key="plugins.generic.markup.settings.zipSupport">PHP Unzip Support:</message>
@@ -60,4 +60,35 @@
 	
 	<message key="plugins.generic.markup.settings.cssHeaderImageURLHelp">When this plugin displays an article, it can have a png or jpg header image at top of first page that shows the journal branding.  Upload this header image here.  The image should be a maximum of 800px wide and 100px tall.  To remove it, use the </message> <!-- file manager -->
 	
+	<message key="plugins.generic.markup.archive.description">This file archive includes converted XML, HTML and standardized PDF versions.  Also includes extracted graphics files and citation information.</message>
+	
+	<!-- Processing status messages -->
+	<message key="plugins.generic.markup.archive.no_url">Plugin's Document Markup Server parameter is not set!</message>
+	
+	<message key="plugins.generic.markup.archive.status">Document Markup Server. STATUS: </message>
+		
+	<message key="plugins.generic.markup.archive.processing">Document Markup Server.  Status: IN PROCESS</message>
+	<message key="plugins.generic.markup.archive.downloaded">Document Markup Server.  Status: DOWNLOADED, PROCESSING ...</message>
+
+	<message key="plugins.generic.markup.archive.no_job">Software Error: No Job Id was generated: </message>
+	
+	<message key="plugins.generic.markup.archive.bad_zip">Zip issue:</message>
+	
+	<message key="plugins.generic.markup.archive.portalTitle">PKP Open Journal Systems Document Markup Plugin</message>
+	<message key="plugins.generic.markup.archive.portalSubTitle">Document Status</message>
+
+	<message key="plugins.generic.markup.archive.enable">Document Markup Plugin needs to be enabled!</message>
+	<message key="plugins.generic.markup.archive.no_journal">Request needs a Journal.</message>
+	<message key="plugins.generic.markup.archive.no_articleID">"Article Id parameter is invalid or missing."</message>
+	<message key="plugins.generic.markup.archive.no_article">No such article!</message>
+	<message key="plugins.generic.markup.archive.bad_filename">File name is missing or misformatted.  Should be: .../markup/[article Id]/0/[file name]</message>
+	<message key="plugins.generic.markup.archive.no_file">That file does not exist.</message>
+	<message key="plugins.generic.markup.archive.login">You need to login to get access to this file!</message>
+	<message key="plugins.generic.markup.archive.no_access">Your current login does not permit access to this file!</message>	
+
+	<message key="plugins.generic.markup.archive.supp_missing">Article or its "Document Markup Files" supplementary file RECORD is missing.  Try re-uploading the article to regenerate the markup files.</message>
+	
+	<message key="plugins.generic.markup.archive.supp_file_missing">Although a "Document Markup Files" supplementary record exists, its file is missing.</message>
+	<message key="plugins.generic.markup.archive.is_zip">Supplementary file is already a zip archive.</message>
+
 </locale>

@@ -10,11 +10,11 @@
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>{$selfUrl|escape}</id>
-	<title type="text">PKP Open Journal Systems Document Markup Plugin</title>
+	<title type="text">{translate key="plugins.generic.markup.archive.portalTitle"}</title>
 	<updated>{$dateUpdated|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	<generator uri="http://pkp.sfu.ca/ojs/" >PKP Open Journal Systems Server</generator>
 	<entry>
-		<title>Document Status</title>
+		<title>{translate key="plugins.generic.markup.archive.portalSubTitle"}</title>
 		<summary>{$description}</summary>
 	</entry>
 </feed>

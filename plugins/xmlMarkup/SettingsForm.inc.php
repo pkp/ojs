@@ -22,7 +22,7 @@ class SettingsForm extends Form {
 	/** @var $plugin object */
 	var $plugin;
 
-	var $pdfxServerURLDefault = 'http://pkp-udev.lib.sfu.ca/';//HARDCODED DEFAULT!!!
+	var $pdfxServerURLDefault = 'http://pkp-udev.lib.sfu.ca/';// HARDCODED DEFAULT!!!
 	var $cslStyleDefault = 'chicago-author-date.csl';
 	var $cslStyleNameDefault = 'Chicago Manual of Style (author-date)';
 	var $reviewVersionDefault = "yes";
@@ -51,11 +51,17 @@ class SettingsForm extends Form {
 	}
 
 	/**
-	 * Initialize form data.
-	 * .cslStyle holds the basic name (without .csl suffix) of the selected csl style 
-	 * .cslStyleName holds the plain english name of the style
-	 * .markupHostURL holds URL of pdfx server (e.g. DEVELOPMENT SERVER:  http://pkp-udev.lib.sfu.ca/ )
-	 * .curlSupport indicates whether or not php curl has been installed
+	 * Initialize plugin settings form data.
+	 *
+	 * @var cslStyle string holds the file name (including .csl suffix) of the selected csl style 
+	 * @var cslStyleName string holds the plain english name of the above style
+	 * @var cssFolder string is used to show links to the plugin's stylesheets for this journal
+	 * @var cssHeaderImageName string holds name of banner image to appear at top of html and pdf articles.
+	 * @var reviewVersion boolean indicates if a reviewer version of article (without author info) should be made
+	 
+	 * @var markupHostUser string (optional)
+	 * @var markupHostPass string (optional) 	 
+	 * @var markupHostURL string holds URL of document markup server (e.g. http://pkp-udev.lib.sfu.ca/ )
 	 */
 	function initData() {
 		$journalId = $this->journalId;
@@ -73,7 +79,7 @@ class SettingsForm extends Form {
 		if ($plugin->getSetting($journalId, 'reviewVersion') == null) {
 			$plugin->updateSetting($journalId, 'reviewVersion', $this->reviewVersionDefault );
 		}	
-*/
+		*/
 
 		$this->setData('cslStyle', $plugin->getSetting($journalId, 'cslStyle'));
 		$this->setData('cslStyleName', $plugin->getSetting($journalId, 'cslStyleName'));
@@ -87,20 +93,22 @@ class SettingsForm extends Form {
 		}
 		
 		$this->setData('markupHostUser', $plugin->getSetting($journalId, 'markupHostUser'));
-		$this->setData('markupHostPass', $plugin->getSetting($journalId, 'markupHostPass'));
+		// Security note: Not sending markupHostPass to browser.
 		
 		$this->setData('reviewVersion', $plugin->getSetting($journalId, 'reviewVersion'));
 		
 		//User assigned but should never change (view only).
 		$this->setData('markupHostURL', $plugin->getSetting($journalId, 'markupHostURL'));
 		
-/*
-		// Signals indicating plugin compatibility		
-		$this->setData('curlSupport', function_exists('curl_init') ? "Installed": "Not Installed");
-		$this->setData('zipSupport', extension_loaded('zlib') ? "Installed": "Not Installed");
-*/
 	}
 
+	
+	/**
+	 * Populate and display settings form.
+	 *
+	 * @var curlSupport indicates whether or not php curl has been installed
+	 * @var zipSupport indicates whether or not zip library has been installed
+	 */ 
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
 		// Signals indicating plugin compatibility		
@@ -129,8 +137,21 @@ class SettingsForm extends Form {
 		$plugin->updateSetting($journalId, 'cslStyle', $this->getData('cslStyle'));
 		$plugin->updateSetting($journalId, 'cslStyleName', $this->getData('cslStyleName'));
 		$plugin->updateSetting($journalId, 'markupHostURL', $this->getData('markupHostURL'));
-		$plugin->updateSetting($journalId, 'markupHostUser', $this->getData('markupHostUser'));
-		$plugin->updateSetting($journalId, 'markupHostPass', $this->getData('markupHostPass'));		
+		
+		$markupHostUser = $this->getData('markupHostUser');
+		$plugin->updateSetting($journalId, 'markupHostUser', $markupHostUser);
+
+		if (strlen($markupHostUser) > 0) {
+			$markupHostPass = $this->getData('markupHostPass');
+			// Only update password if account exists and password exists.
+			if (strlen($markupHostPass) > 0) {
+				$plugin->updateSetting($journalId, 'markupHostPass', $markupHostPass);
+			}
+		}
+		else {
+			$plugin->updateSetting($journalId, 'markupHostPass','');
+		}
+
 		$plugin->updateSetting($journalId, 'reviewVersion', $this->getData('reviewVersion'));
 		
 		// Upload article header image if any given.
