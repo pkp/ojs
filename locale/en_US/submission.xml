@@ -12,6 +12,7 @@
 
 <locale name="en_US" full_name = "English">
 	<!-- Submission wizard -->
+	<message key="submission.submit.title">Submit an Article</message>
 	<message key="submission.submit.userGroup">Submit in my role as...</message>
 	<message key="submission.submit.userGroupDescription">Choose the capacity under which you are submitting this article.</message>
 	<message key="submission.upload.selectBookElement">Select article element</message>
