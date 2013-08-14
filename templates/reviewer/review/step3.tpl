@@ -6,7 +6,6 @@
  *
  * Show the step 3 review page
  *}
-
 {capture assign="additionalFormFields"}
 	{include file="reviewer/review/reviewerRecommendations.tpl"}
 {/capture}
