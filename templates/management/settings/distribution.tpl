@@ -8,7 +8,7 @@
  *}
 
 {strip}
-{assign var="pageTitle" value="navigation.distributionProcess"}
+{assign var="pageTitle" value="manager.distribution.title"}
 {include file="common/header.tpl"}
 {/strip}
 

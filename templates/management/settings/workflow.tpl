@@ -8,7 +8,7 @@
  *}
 
 {strip}
-{assign var="pageTitle" value="navigation.workflow"}
+{assign var="pageTitle" value="manager.workflow.title"}
 {include file="common/header.tpl"}
 {/strip}
 
