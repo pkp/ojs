@@ -177,7 +177,7 @@ Tak for din overvejelse af denne forespørgsel.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled} {$submissionAbstract}</body>
+ {$submissionAbstract}</body>
 		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2. (Se ellers REVIEW_REQUEST_ATTACHED).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
@@ -200,7 +200,7 @@ Tak for din overvejelse af denne forespørgsel.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled} {$submissionAbstract}</body>
+ {$submissionAbstract}</body>
 		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2, og adgang for bedømmere ved hjælp af ét klik er aktiveret.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">

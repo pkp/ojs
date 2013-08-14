@@ -189,7 +189,6 @@ Dank u voor het overwegen van dit verzoek.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift (zie verder REVIEW_REQUEST_ATTACHED)</description>
 	</email_text>
@@ -213,7 +212,6 @@ Dank u voor het overwegen van dit verzoek.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift en de een-klik toegang voor de reviewer is ingeschakeld.</description>
 	</email_text>
@@ -902,7 +900,6 @@ Hartelijk dank voor het overwegen van dit verzoek.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Deze e-mail van de sectieredacteur aan de reviewer vraagt de reviewer een inzending voor een tweede of latere ronde te reviewen. Het bevat informatie over de inzending zoals titel en samenvatting, de uiterste datum voor de review en de gegevens om de inzending te benaderen. Dit bericht wordt gebruikt bij het standaard review proces, zoals gekozen in instellen, stap 2 (zie verder REVIEW_REQUEST_ATTACHED_SUBSEQUENT)</description>
 	</email_text>
@@ -927,7 +924,6 @@ Dan ku voor het overwegen van dit verzoek.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Deze e-mail van een sectieredacteur aan een reviewer vraagt de reviewer een review van een inzending in een tweede of latere ronde te accepteren of te weigeren. Het bevat informatie over de inzending zoals titel en samenvatting, een verloopdatum en hoe de inzending te vinden. Dit bericht wordt  gebruikt in Stap 2 van het instellen van een tijdschrift als een-klik reviewer toegang is ingeschakeld.</description>
 	</email_text>

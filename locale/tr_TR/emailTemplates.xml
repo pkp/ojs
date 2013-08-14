@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
@@ -738,7 +738,6 @@ Thank you for considering this request.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
@@ -764,7 +763,6 @@ Thank you for considering this request.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
 	</email_text>

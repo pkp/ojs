@@ -227,7 +227,6 @@ Vă mulțumim pentru că luați în considerare această solicitare.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Acest email este trimis de către un redactor de secțiune ca răspuns la solicitarea făcută unui evaluator de a accepta sau refuza misiunea de a evalua o propunere. Conține informații despre propunere precum titlul și abstractul, data limită pentru evaluare și cum poate fi accesată propunerea. Acest mesaj este trimis atunci când este selectat procesul standard de evaluare din setările revistei la pasul 2. (Altfel, vezi REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
@@ -251,7 +250,6 @@ Vă mulțumim pentru că luați în considerare această solicitare.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Acest email este trimis de către un redactor de secțiune ca răspuns la solicitarea făcută unui evaluator de a accepta sau refuza misiunea de a evalua o propunere. Sunt incluse informații despre propunere precum titlul și abstractul, data limită pentru evaluare și cum poate fi accesat materialul în sine. Acest mesaj este trimis atunci când este selectat procesul standard de evaluare din setările revistei la pasul 2 fiind oferit evaluatorului accesul printr-un singur clic.</description>
 	</email_text>

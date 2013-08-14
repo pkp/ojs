@@ -980,7 +980,6 @@ Ti ringrazio della considerazione
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Questo messaggio viene inviato dall'editor a un revisore chiedendogli di accettare o rifiutare l'incarico di revisione di una proposta per un secondo o successivo round di revisione. Esso fornisce informazioni come il titolo e l'abstract, una data di scadenza e modalità di accesso alla stessa proposta. Questo messaggio viene utilizzato quando il processo di revisione standard è stato selezionato nel Setup, Step 2. (In caso contrario vedi REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
@@ -1006,7 +1005,6 @@ Ti ringrazio per la disponibilità
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Questo messaggio viene inviato dall'editor a un revisore chiedendogli di accettare o rifiutare l'incarico di revisione di una proposta per un secondo o successivo round di revisione. Esso fornisce informazioni come il titolo e l'abstract, una data di scadenza e modalità di accesso alla stessa proposta. Questo messaggio viene utilizzato quando il processo di revisione standard è stato selezionato nel Setup, Step 2 ed è abilitato l'accesso oneclick</description>
 	</email_text>

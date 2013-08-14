@@ -166,7 +166,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 
 « {$submissionTitle} »
 
-{$abstractTermIfEnabled}
+
 {$submissionAbstract}]]></body>
 		<description><![CDATA[Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir « Demande d'évaluation », en pièce jointe).]]></description>
 	</email_text>
@@ -190,7 +190,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 
 « {$submissionTitle} »
 
-{$abstractTermIfEnabled}
+
 {$submissionAbstract}]]></body>
 		<description><![CDATA[Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou décline la tâche d'évaluation d'une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » a été sélectionné à l'Étape 2  de la Configuration de la revue, et que l'accès en « un clic » de l'évaluateur a été activé.]]></description>
 	</email_text>

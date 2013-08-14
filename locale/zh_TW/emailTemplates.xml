@@ -162,7 +162,7 @@
 
 〈{$submissionTitle}〉
 
-{$abstractTermIfEnabled}
+
 {$submissionAbstract}</body>
 		<description>這封電子郵件是由區段編輯寄發給審查人一份邀請函，詢問審查人接受或婉謝一份稿件的審查工作。郵件中含有關於稿件標題和摘要的資訊，一個審查工作到期日，以及如何存取稿件的說明資訊。在「期刊設定」之步驟2中選擇「標準審查流程」選項時，才會用到這份訊息。(否則請見：REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
@@ -185,7 +185,7 @@
 
 〈{$submissionTitle}〉
 
-{$abstractTermIfEnabled}
+
 {$submissionAbstract}</body>
 		<description>這封電子郵件這封電子郵件是由區段編輯寄發給審查人一份邀請函，詢問審查人接受或婉謝一份稿件的審查工作。郵件中含有關於稿件標題和摘要的資訊，一個審查工作到期日，以及如何存取稿件的說明資訊。在「期刊設定」之步驟2中選擇「標準審查流程」選項，並且啟用「審查人一點即往」的功能，才會用到這份訊息。</description>
 	</email_text>

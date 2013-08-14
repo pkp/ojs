@@ -186,7 +186,6 @@ Děkujeme za zvážení této žádosti.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Tento email od editora sekce pro recenzenta žádá, aby recenzent přijal nebo odmítl úkol zpracovat recenzi příspěvku. Obsahuje informace o příspěvku, jako je název a abstrakt, termín pro zpracování recenze a jak se dostat k samotnému příspěvku. Tato zpráva je používána, pokud je zvoleno Standardní recenzí řízení ve druhém kroku  Nastavení časopisu. (V jiném případě viz REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
@@ -210,7 +209,6 @@ Děkujeme za zvážení této žádosti.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Tento email od editora sekce pro recenzenta žádá, aby recenzent přijal nebo odmítl úkol zpracovat recenzi příspěvku. Obsahuje informace o příspěvku, jako je název a abstrakt, termín pro zpracování recenze a jak se dostat k samotnému příspěvku. Tato zpráva je používána, pokud je zvoleno Standardní recenzí řízení ve druhém kroku  Nastavení časopisu a je povolen přístup recenzenta na jedno kliknutí.</description>
 	</email_text>

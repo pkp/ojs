@@ -161,7 +161,6 @@ Cảm ơn vì đã xem xét đề nghị này.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Email này được gửi từ BTV Chuyên mục tới một Người phản biện đề nghị cho biết ý kiến đồng ý hay từ chối phản biện một bài nộp. Nó cung cấp thông tin về bài nộp như tiêu đề và tóm tắt, thời hạn phản biện và các truy cập vào bài nộp. Email này được sử dụng khi Quá trình Phản biện chuẩn lựa chọn khi Thiết lập Tạp chí, Bước 2. (Nếu không, xem REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
@@ -185,7 +184,6 @@ Cảm ơn vì đã xem xét đề nghị này.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Email này được gửi từ BTV Chuyên mục tới một Người phản biện đề nghị cho biết ý kiến đồng ý hay từ chối phản biện một bài nộp. Nó cung cấp thông tin về bài nộp như tiêu đề và tóm tắt, thời hạn phản biện và các truy cập vào bài nộp. Email này được sử dụng khi Quá trình Phản biện chuẩn lựa chọn khi Thiết lập Tạp chí, Bước 2, và chức năng truy cập bằng một nhấp chuột dành cho người phản biện được kích hoạt.</description>
 	</email_text>

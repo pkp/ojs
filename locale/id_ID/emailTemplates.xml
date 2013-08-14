@@ -236,7 +236,6 @@ Terima kasih untuk mempertimbangkan permintaan ini.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Email ini dari Editor Bagian untuk Reviewer yang meminta Reviewer untuk menerima atau menolak tugas mereview naskah. Email ini memberikan informasi tentang naskah seperti judul dan abstrak, tanggal jatuh tempo review, dan bagaimana mengakses naskah itu sendiri. Pesan ini digunakan saat proses review standar dipilih di Setup Jurnal, Langkah 2. (Jika tidak, lihat  REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
@@ -260,7 +259,6 @@ Terima kasih untuk mempertimbangkan permintaan ini.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Email ini dari Editor Bagian untuk Reviewer yang meminta Reviewer untuk menerima atau menolak tugas mereview naskah. Email ini memberikan informasi tentang naskah seperti judul dan abstrak, tanggal jatuh tempo tijauan, dan bagaimana mengakses naskah itu sendiri. Pesan ini digunakan saat proses review standar dipilih di Setup Jurnal, Langkah 2 dan akses Reviewer satu kali klik dapat digunakan. </description>
 	</email_text>

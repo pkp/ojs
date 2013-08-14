@@ -190,7 +190,7 @@ Tack för hjälp, vänligen
 
 				"{$submissionTitle}"
 
-				{$abstractTermIfEnabled}
+				
 				{$submissionAbstract}</body>
 		<description>Det här meddelandet från Sektionsredaktören till Sakkuniggbedömare innehåller begäran om att mottagaren ska acceptera eller avböja att granska ett manuskript. Mailet innehåller information om manuskriptet, titel och sammanfattning, sista-datum för bedömning, samt information om inloggning till tidskriften. Meddelandet används när Standardbedömningsprocessen är vald i Tidskriftsinställningar, Steg 2. (Annars, se mailet: REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
@@ -215,7 +215,7 @@ Tack för hjälp, vänligen
 
 				"{$submissionTitle}"
 
-				{$abstractTermIfEnabled}
+				
 				{$submissionAbstract}</body>
 		<description>Det här meddelandet från Sektionsredaktören till Sakkunnigbedömare innehåller begäran om att mottagaren ska acceptera eller avböja att granska ett manuskript. Meddelandet innehåller information om manuskriptet, titel och sammanfattning, ett sista-datum för bedömning och inloggningsinformation. Meddelandet används när Standardbedömningsprocessen är vald i Tidskriftsinställningar, Steg 2, och med one-click bedömning är aktiverad.</description>
 	</email_text>

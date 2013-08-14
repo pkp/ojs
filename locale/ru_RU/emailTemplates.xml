@@ -597,7 +597,6 @@ Thank you for completing the proofreading corrections for the galleys associated
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">

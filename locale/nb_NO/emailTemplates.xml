@@ -161,7 +161,6 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en ventet-ferdig dato for oppdraget, og 3) informasjon om pålogging og tilgang til manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er valgt i Tidsskriftoppsett, Trinn 2. (Ellers: se e-posten REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
@@ -185,7 +184,6 @@ Takk for at du har sagt deg villig til å bidra til arbeidet vårt.
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en ventet-ferdig dato for oppdraget, og 3) informasjon om pålogging og tilgang til manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er valgt i Tidsskriftoppsett, Trinn 2., og ettklikks tilgang for fagkonsulenter er slått på.</description>
 	</email_text>

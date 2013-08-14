@@ -223,7 +223,6 @@ In der Hoffnung auf eine positive Antwort,
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Diese E-Mail von der/dem Rubrikredakteur/in an eine/n Gutachter/in bittet darum, dass diese/r die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie liefert Informationen über die Einreichung wie Titel und Abstract, ein Fälligkeitsdatum für das Gutachten und darüber, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
@@ -247,7 +246,6 @@ In der Hoffnung auf eine positive Antwort,
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Diese E-Mail von der/dem Rubrikredakteur/in an eine/n Gutachter/in bittet darum, dass diese/r die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie liefert Informationen über die Einreichung wie Titel und Abstract, ein Fälligkeitsdatum für das Gutachten und darüber, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist und wenn der One-Click-Zugang für Gutachter/innen aktiviert ist.</description>
 	</email_text>
@@ -294,7 +292,6 @@ In der Hoffnung auf eine positive Antwort,
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, damit diese/r die Aufgabe, eine Einreichung in einer zweiten oder weiteren Begutachtungsrunde zu beurteilen, übernimmt oder ablehnt. Sie übermittelt Informationen über die Einreichung wie den Titel und das Abstract, ein Fälligkeitsdatum für das Gutachten und Informationen, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
@@ -320,7 +317,6 @@ In der Hoffnung auf eine positive Antwort,
 
 "{$submissionTitle}"
 
-{$abstractTermIfEnabled}
 {$submissionAbstract}</body>
 		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, damit diese/r die Aufgabe, eine Einreichung in einer zweiten oder weiteren Begutachtungsrunde zu beurteilen, übernimmt oder ablehnt. Sie übermittelt Informationen über die Einreichung wie den Titel und das Abstract, ein Fälligkeitsdatum für das Gutachten und Informationen, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist und wenn der One-Click-Zugang für Gutachter/innen aktiviert ist.</description>
 	</email_text>

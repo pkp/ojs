@@ -179,7 +179,7 @@
 
 「{$submissionTitle}」
 
-{$abstractTermIfEnabled}
+
 {$submissionAbstract}</body>
 		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQUEST_ATTACHEDを参照してください）。</description>
 	</email_text>
@@ -203,7 +203,7 @@
 
 「{$submissionTitle}」
 
-{$abstractTermIfEnabled}
+
 {$submissionAbstract}</body>
 		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択され、ワンクリック査読者アクセスが有効な場合に使用されます。</description>
 	</email_text>
