@@ -33,8 +33,6 @@
 
 	{include file="submission/form/section.tpl" readOnly=$formParams.readOnly}
 
-	<p class="pkp_help">{translate key="common.issueInformation"}</p>
-
 	{include file="core:submission/submissionMetadataFormTitleFields.tpl" readOnly=$formParams.readOnly}
 
 	<!--  Contributors -->
