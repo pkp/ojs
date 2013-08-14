@@ -34,6 +34,7 @@
 				<li><a href="{url page="dashboard"}">{translate key="navigation.dashboard"}</a></li>
 			{/if}
 			{if $currentJournal}
+				<li><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>
 				<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a>
 				{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR), $userRoles)}
 					<li>
