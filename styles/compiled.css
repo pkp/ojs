@@ -1119,7 +1119,7 @@ body {
 }
 .pkp_structure_sidebar div.block span.blockTitle {
   display:list-item;
-  list-style:disc inside;
+  list-style:none inside;
   color:#569bbe;
   color:#569bbe;
   font:120% "Courier New", Courier, mono;
