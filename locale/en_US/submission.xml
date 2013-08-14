@@ -18,7 +18,7 @@
 	<message key="submission.title">Article Title</message>
 	<message key="submission.title.tip"><![CDATA[The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
 	<message key="submission.submit.newSubmissionMultiple">Start a New Submission in</message>
-	<message key="submission.submit.newSubmissionSingle">Start a New Submission in {$journalName}</message>
+	<message key="submission.submit.newSubmissionSingle">Start a New Submission in {$contextName}</message>
 	<message key="grid.action.workflow">Submission Workflow</message>
 
 	<message key="submission.issueEntry">Submission Metadata</message>

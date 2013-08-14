@@ -20,7 +20,7 @@ switch($op) {
 	case 'submissions':
 	case 'archives':
 		define('HANDLER_CLASS', 'DashboardHandler');
-		import('pages.dashboard.DashboardHandler');
+		import('lib.pkp.pages.dashboard.DashboardHandler');
 		break;
 }
 
