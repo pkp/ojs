@@ -11,6 +11,26 @@
   -->
 
 <email_texts locale="en_US">
+	<email_text key="AUDITOR_REQUEST">
+		<subject>Manuscript Audit Request</subject>
+		<body>{$auditorName}:
+
+New files have been uploaded for the manuscript "{$submissionTitle}," and I am asking that you audit them. It is important to the journal that participants review the manuscript at each stage.
+
+You can find the files to review at: 
+
+{$auditUrl}
+
+Username: {$auditorUserName}
+
+Please indicate in a return email if you are not able to complete the audit by {$weekLaterDate}.
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+</body>
+		<description>This email is sent by the Section Editor to an Auditor to request that they accept or decline the task of auditing a submission.</description>
+	</email_text>
 	<email_text key="NOTIFICATION">
 		<subject>New notification from {$siteTitle}</subject>
 		<body>You have a new notification from {$siteTitle}:
@@ -510,11 +530,10 @@ Our decision is to:
 
 I would ask that you undertake the copyediting of "{$submissionTitle}" for {$contextName} by following these steps.
 1. Click on the Submission URL below.
-2. Log into the journal and click on the File that appears in Step 1.
-3. Consult Copyediting Instructions posted on webpage.
-4. Open the downloaded file and copyedit, while adding Author Queries as needed.
-5. Save copyedited file, and upload to Step 1 of Copyediting.
-6. Send the COMPLETE email to the editor.
+2. Consult Copyediting Instructions posted on webpage.
+3. Open any files available under Final Draft Files and copyedit, while adding Author Queries as needed.
+4. Save copyedited file(s), and upload to Copyediting.
+5. Notify the Editor that all files have been prepared, and that the auditing process may begin.
 
 {$contextName} URL: {$journalUrl}
 Submission URL: {$submissionCopyeditingUrl}
