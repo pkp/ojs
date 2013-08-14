@@ -432,6 +432,7 @@ ul.tagit input[type="text"] {
 .pkp_helpers_text_right { text-align:right; }
 .pkp_helpers_text_center { text-align:center; }
 .pkp_helpers_text_justify { text-align:justify; }
+.pkp_helpers_title_padding { padding:5px !important; }
 .pkp_helpers_image_left {
   float:left;
   margin:4px 10px 4px 0;
