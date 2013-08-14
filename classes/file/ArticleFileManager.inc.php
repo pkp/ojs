@@ -96,28 +96,6 @@ class ArticleFileManager extends FileManager {
 	}
 
 	/**
-	 * Upload a section editor's layout editing file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 * @return int file ID, is null if failure
-	 */
-	function uploadLayoutFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, SUBMISSION_FILE_LAYOUT, $fileId, $overwrite);
-	}
-
-	/**
-	 * Upload a public file.
-	 * @param $fileName string the name of the file used in the POST form
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 * @return int file ID, is false if failure
-	 */
-	function uploadPublicFile($fileName, $fileId = null, $overwrite = true) {
-		return $this->handleUpload($fileName, SUBMISSION_FILE_PUBLIC, $fileId, $overwrite);
-	}
-
-	/**
 	 * Upload a note file.
 	 * @param $fileName string the name of the file used in the POST form
 	 * @param $fileId int
@@ -126,29 +104,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadSubmissionNoteFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, SUBMISSION_FILE_NOTE, $fileId, $overwrite);
-	}
-
-	/**
-	 * Write a public file.
-	 * @param $fileName string The original filename
-	 * @param $contents string The contents to be written to the file
-	 * @param $mimeType string The mime type of the original file
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 */
-	function writePublicFile($fileName, &$contents, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleWrite($fileName, $contents, $mimeType, SUBMISSION_FILE_PUBLIC, $fileId, $overwrite);
-	}
-
-	/**
-	 * Copy a public file.
-	 * @param $url string The source URL/filename
-	 * @param $mimeType string The mime type of the original file
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 */
-	function copyPublicFile($url, $mimeType, $fileId = null, $overwrite = true) {
-		return $this->handleCopy($url, $mimeType, SUBMISSION_FILE_PUBLIC, $fileId, $overwrite);
 	}
 
 	/**
@@ -282,29 +237,16 @@ class ArticleFileManager extends FileManager {
 	}
 
 	/**
-	 * Copies an existing file to create a layout file.
-	 * @param $fileId int the file id of the copyedit file.
-	 * @param $revision int the revision of the copyedit file.
-	 * @return int the file id of the new file.
-	 */
-	function copyToLayoutFile($fileId, $revision = null) {
-		return $this->copyAndRenameFile($fileId, $revision, SUBMISSION_FILE_LAYOUT);
-	}
-
-	/**
 	 * Return path associated with a file stage code.
 	 * @param $fileStage int
 	 * @return string
 	 */
 	function fileStageToPath($fileStage) {
 		switch ($fileStage) {
-			case SUBMISSION_FILE_PUBLIC: return 'public';
-			case SUBMISSION_FILE_SUPP: return 'supp';
 			case SUBMISSION_FILE_NOTE: return 'note';
 			case SUBMISSION_FILE_REVIEW_FILE: return 'submission/review';
 			case SUBMISSION_FILE_EDITOR: return 'submission/editor';
 			case SUBMISSION_FILE_COPYEDIT: return 'submission/copyedit';
-			case SUBMISSION_FILE_LAYOUT: return 'submission/layout';
 			case SUBMISSION_FILE_ATTACHMENT: return 'attachment';
 			case SUBMISSION_FILE_DEPENDENT:
 			case SUBMISSION_FILE_PROOF: return 'submission/proof';
@@ -319,13 +261,10 @@ class ArticleFileManager extends FileManager {
 	 */
 	function fileStageToAbbrev($fileStage) {
 		switch ($fileStage) {
-			case SUBMISSION_FILE_PUBLIC: return 'PB';
-			case SUBMISSION_FILE_SUPP: return 'SP';
 			case SUBMISSION_FILE_NOTE: return 'NT';
 			case SUBMISSION_FILE_REVIEW_FILE: return 'RV';
 			case SUBMISSION_FILE_EDITOR: return 'ED';
 			case SUBMISSION_FILE_COPYEDIT: return 'CE';
-			case SUBMISSION_FILE_LAYOUT: return 'LE';
 			case SUBMISSION_FILE_ATTACHMENT: return 'AT';
 			case SUBMISSION_FILE_DEPENDENT:
 			case SUBMISSION_FILE_PROOF: return 'PR';

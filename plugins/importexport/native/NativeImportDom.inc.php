@@ -997,6 +997,7 @@ class NativeImportDom {
 					$url = PWD . '/' . $url;
 				}
 
+				assert(false); // copyPublicFile was removed. Needs fixing.
 				if (($fileId = $articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type')))===false) {
 					$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 					return false;
@@ -1009,6 +1010,7 @@ class NativeImportDom {
 				return false;
 			}
 			$originalName = $embed->getAttribute('filename');
+			assert(false); // writePublicFile was removed. Needs fixing.
 			if (($fileId = $articleFileManager->writePublicFile($originalName, base64_decode($embed->getValue()), $embed->getAttribute('mime_type')))===false) {
 				$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
 				return false;
@@ -1051,6 +1053,7 @@ class NativeImportDom {
 						$url = PWD . '/' . $url;
 					}
 
+k					assert(false); // copyPublicFile was removed. Needs fixing.
 					if (($fileId = $articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type')))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						return false;
@@ -1063,6 +1066,7 @@ class NativeImportDom {
 					return false;
 				}
 				$originalName = $embed->getAttribute('filename');
+				assert(false); // writePublicFile was removed. Needs fixing.
 				if (($fileId = $articleFileManager->writePublicFile($originalName, base64_decode($embed->getValue()), $embed->getAttribute('mime_type')))===false) {
 					$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
 					return false;
