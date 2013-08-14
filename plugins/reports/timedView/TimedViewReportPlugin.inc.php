@@ -34,11 +34,6 @@ class TimedViewReportPlugin extends ReportPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		$metricsDao =& DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
-		if (!$metricsDao->hasRecord(OJS_METRIC_TYPE_TIMED_VIEWS)) {
-			return false;
-		}
-
 		$success = parent::register($category, $path);
 
 		if($success) {

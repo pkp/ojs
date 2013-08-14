@@ -17,7 +17,6 @@ import('classes.plugins.ReportPlugin');
 
 define('OJS_METRIC_TYPE_COUNTER', 'ojs::counter');
 
-define('OJS_METRIC_TYPE_LEGACY_COUNTER', 'ojs::legacyCounterPlugin');
 class UsageStatsReportPlugin extends ReportPlugin {
 
 	/**
