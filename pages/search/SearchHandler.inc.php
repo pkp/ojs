@@ -307,33 +307,6 @@ class SearchHandler extends Handler {
 	}
 
 	/**
-	 * Show index of published articles by title.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function titles($args, $request) {
-		$this->validate(null, $request);
-		$this->setupTemplate($request);
-
-		$journal = $request->getJournal();
-
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-
-		$rangeInfo = $this->getRangeInfo($request, 'search');
-
-		$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal(isset($journal)?$journal->getId():null);
-		$totalResults = count($articleIds);
-		$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-		import('lib.pkp.classes.core.VirtualArrayIterator');
-		$articleSearch = new ArticleSearch();
-		$results = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
-
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('results', $results);
-		$templateMgr->display('search/titleIndex.tpl');
-	}
-
-	/**
 	 * Display categories.
 	 * @param $args array
 	 * @param $request PKPRequest
