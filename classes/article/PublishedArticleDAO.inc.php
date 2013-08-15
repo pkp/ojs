@@ -84,7 +84,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND o.issue_id = ?)
 			WHERE	ps.submission_id = s.submission_id
 				AND ps.issue_id = ?
-				AND s.status <> ' . STATUS_ARCHIVED . '
+				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY section_seq ASC, ps.seq ASC';
 
 		$result = $this->retrieve($sql, $params);
@@ -104,7 +104,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function getPublishedArticleCountByJournalId($journalId) {
 		$result = $this->retrieve(
-			'SELECT count(*) FROM published_submissions ps, submissions s WHERE ps.submission_id = s.submission_id AND s.context_id = ? AND s.status <> ' . STATUS_ARCHIVED,
+			'SELECT count(*) FROM published_submissions ps, submissions s WHERE ps.submission_id = s.submission_id AND s.context_id = ? AND s.status <> ' . STATUS_DECLINED,
 			(int) $journalId
 		);
 		list($count) = $result->fields;
@@ -132,7 +132,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . $this->_getFetchJoins() . '
 			WHERE 	i.published = 1
 				' . ($journalId?'AND s.context_id = ?':'') . '
-				AND s.status <> ' . STATUS_ARCHIVED . '
+				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY ps.date_published '. ($reverse?'DESC':'ASC'),
 			$params,
 			$rangeInfo
@@ -169,7 +169,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . $this->_getFetchJoins() . '
 				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND ps.issue_id = o.issue_id)
 			WHERE	ps.issue_id = ?
-				AND s.status <> ' . STATUS_ARCHIVED . '
+				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY section_seq ASC, ps.seq ASC',
 			array_merge(
 				$this->_getFetchParameters(),
@@ -219,7 +219,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . $this->_getFetchJoins() . '
 			WHERE	se.section_id = ?
 				AND ps.issue_id = ?
-				AND s.status <> ' . STATUS_ARCHIVED . '
+				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY ps.seq ASC',
 			array_merge(
 				$this->_getFetchParameters(),
