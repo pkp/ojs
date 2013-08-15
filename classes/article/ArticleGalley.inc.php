@@ -194,10 +194,10 @@ class ArticleGalley extends Representation {
 
 	/**
 	 * Convenience method for fetching the latest revisions of the files for this galley.
-	 * @param $fileType string optional limit to specific file type.
+	 * @param $fileExtensionMatch string optional limit to specific file type.
 	 * @return array SubmissionFile
 	 */
-	function getLatestGalleyFiles($fileType = null) {
+	function getLatestGalleyFiles($fileExtensionMatch = null) {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$submissionFiles = $submissionFileDao->getLatestRevisionsByAssocId(
 			ASSOC_TYPE_GALLEY, $this->getId(),
@@ -209,7 +209,7 @@ class ArticleGalley extends Representation {
 		} else {
 			$filteredFiles = array();
 			foreach ($submissionFiles as $id => $file) {
-				if ($file->getFileType() == $fileType) {
+				if (preg_match('/\.' . preg_quote($fileExtensionMatch) . '[^\.]*$/', $file->getOriginalFileName())) {
 					$filteredFiles[$id] = $file;
 				}
 			}
