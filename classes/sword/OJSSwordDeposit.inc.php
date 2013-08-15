@@ -114,6 +114,7 @@ class OJSSwordDeposit {
 	function addEditorial() {
 		// Move through signoffs in reverse order and try to use them.
 		foreach (array('SIGNOFF_LAYOUT', 'SIGNOFF_COPYEDITING_FINAL', 'SIGNOFF_COPYEDITING_AUTHOR', 'SIGNOFF_COPYEDITING_INITIAL') as $signoffName) {
+			assert(false); // Signoff implementation has changed; needs fixing.
 			$file =& $this->article->getFileBySignoffType($signoffName);
 			if ($file) {
 				$this->_addFile($file);
