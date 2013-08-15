@@ -1,6 +1,12 @@
 Upgrading an OJS Installation
 -----------------------------
 
+===============================================================================
+NOTE: THIS IS AN ALPHA RELEASE OF OJS AND IS NOT INTENDED FOR PRODUCTION USE.
+The upgrade process has NOT been completed and is intended for experimental
+purposes only.
+===============================================================================
+
 Note: backing up your current data files and database is strongly recommended
 prior to upgrading OJS.
 

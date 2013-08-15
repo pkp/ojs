@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE version SYSTEM "../../lib/pkp/dtd/version.dtd">
 <!--
-  * version.xml
+  * dbscripts/xml/version.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -12,35 +12,9 @@
 <version>
 	<application>ojs2</application>
 	<type>core</type>
-	<release>3.0.0.0</release>
-	<tag>ojs-3_0_0</tag>
-	<date>2012-08-31</date>
+	<release>2.9.0.0</release>
+	<tag>ojs-3_0a1</tag>
+	<date>2013-08-15</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
-	<package>http://pkp.sfu.ca/ojs/download/ojs-3.0.0.tar.gz</package>
-	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.4.0.patch.gz</patch>
-	<patch from="2.0.1.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.1_to_2.4.0.patch.gz</patch>
-	<patch from="2.0.2.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.2_to_2.4.0.patch.gz</patch>
-	<patch from="2.0.2.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.2-1_to_2.4.0.patch.gz</patch>
-	<patch from="2.1.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.1_to_2.4.0.patch.gz</patch>
-	<patch from="2.1.0.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.1.0-1_to_2.4.0.patch.gz</patch>
-	<patch from="2.1.1.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.1.1_to_2.4.0.patch.gz</patch>
-	<patch from="2.2.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.2_to_2.3.3.patch.gz</patch>
-	<patch from="2.2.1.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.2.1_to_2.4.0.patch.gz</patch>
-	<patch from="2.2.2.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.2.2_to_2.4.0.patch.gz</patch>
-	<patch from="2.2.3.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.2.3_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.0_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.0.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.0-1_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.1.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.1_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.1.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.1-1_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.1.2">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.1-2_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.2.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.2_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.2.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.2-1_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.3.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.3_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.3.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.3-1_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.3.2">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.3-2_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.3.3">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.3-3_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.4.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.4_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.5.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.5_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.6.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.6_to_2.4.0.patch.gz</patch>
-	<patch from="2.3.7.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.3.7_to_2.4.0.patch.gz</patch>
+	<package>http://pkp.sfu.ca/ojs/download/ojs-3.0a1.tar.gz</package>
 </version>
