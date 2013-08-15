@@ -121,7 +121,13 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 		import('classes.file.ArticleFileManager');
 		$fileManager = new ArticleFileManager($galley->getSubmissionId());
 		if (!$fileId) {
-			$file = $galley->getFirstGalleyFile('text/html');
+
+			// Note: Some HTML file uploads may be stored with incorrect file_type settings
+			// due to incorrect finfo or mime.magic entries.  As such, we examine the file extension
+			// of the original file name for 'htm'. This will match .html, .htm, .xhtml, etc.
+			// The file_type isn't important since the plugin includes the HTML content inline rather
+			// than including a URL loaded in an iframe.
+			$file = $galley->getFirstGalleyFile('htm');
 			if ($file) {
 				$fileId = $file->getFileId();
 			} else {
@@ -311,7 +317,12 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 		$dependentFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $fileId, $galley->getSubmissionId(), SUBMISSION_FILE_DEPENDENT);
 
 		foreach ($dependentFiles as $file) {
+
 			if ($file->getGenreId() == $styleGenre->getId()) {
+				if ($file->getFileType() != 'text/css') {
+					$file->setFileType('text/css');
+					$submissionFileDao->updateObject($file);
+				}
 				$styleFiles[] = $file;
 			}
 		}
