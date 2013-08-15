@@ -221,8 +221,6 @@ Thank you for considering this request.
 
 {$editorialContactSignature}
 
-
-
 "{$submissionTitle}"
 
 {$submissionAbstract}</body>
@@ -243,8 +241,6 @@ Submission URL: {$submissionReviewUrl}
 Thank you for considering this request.
 
 {$editorialContactSignature}
-
-
 
 "{$submissionTitle}"
 
@@ -290,8 +286,6 @@ Thank you for considering this request.
 
 {$editorialContactSignature}
 
-
-
 "{$submissionTitle}"
 
 {$submissionAbstract}</body>
@@ -314,8 +308,6 @@ Submission URL: {$submissionReviewUrl}
 Thank you for considering this request.
 
 {$editorialContactSignature}
-
-
 
 "{$submissionTitle}"
 
@@ -548,8 +540,9 @@ Username: {$copyeditorUsername}
 
 The submission "{$submissionTitle}" to {$contextName} now needs galleys laid out by following these steps.
 1. Click on the Submission URL below.
-2. Log into the journal and use the Layout Version file to create the galleys according to the journal's standards.
-3. Send the COMPLETE email to the editor.
+2. Log into the journal and use the Production Ready files to create the galleys according to the journal's standards.
+3. Upload the galleys to the Galley Files section.
+4. Notify the Editor that the galleys are uploaded and ready to be audited.
 
 {$contextName} URL: {$journalUrl}
 Submission URL: {$submissionLayoutUrl}
