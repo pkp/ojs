@@ -153,7 +153,7 @@ class FilesHandler extends ManagerHandler {
 	}
 
 	function fileNameFilter($var) {
-		return (!empty($var) && $var != '..' && $var != '.');
+		return (!empty($var) && $var != '..' && $var != '.' && strpos($var, '/')===false);
 	}
 
 	function cleanFileName($var) {
