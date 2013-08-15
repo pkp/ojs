@@ -274,6 +274,8 @@ class ArticleHandler extends Handler {
 				$submissionFile = $this->galley->getFirstGalleyFile();
 				if ($submissionFile) {
 					$fileId = $submissionFile->getFileId();
+					// The file manager expects the real article id.  Extract it from the submission file.
+					$articleId = $submissionFile->getSubmissionId();
 				} else { // no proof files assigned to this galley!
 					assert(false);
 					return null;
