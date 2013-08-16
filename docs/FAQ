@@ -210,8 +210,8 @@ A: This may indicate that your server does not have the selected PHP database
    extension does not appear to be loaded in brackets (e.g., "[MySQL]").
    
    Most Linux distributions offer a separate package that can be installed for
-   each supported PHP database module -- e.g., php4-mysql or php-mysql (for
-   MySQL support), or php4-pgsql or php-pgsql (for PostgreSQL support).
+   each supported PHP database module -- e.g. php-mysql (for MySQL support), or
+   php-pgsql (for PostgreSQL support).
    
    Note also that even with the module installed it may be necessary to modify
    your php.ini configuration to load the module, by adding "extension=mysql.so"

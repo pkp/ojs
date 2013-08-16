@@ -1,1 +1,0 @@
-Este software é lançado sobre o GNU General Public License. Veja os termos desta licença no arquivo COPYING(_pt) incluso nesta distribuição.

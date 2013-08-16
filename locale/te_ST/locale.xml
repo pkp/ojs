@@ -1867,7 +1867,7 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (including PHP 5.x)</lî>
-	<lî><å hrèf="http://www.mýþql.çóm/" tårgèt="_blåñk">MySQL</å> >= 3.23.23 (including MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (including PostgreSQL 8.x)</li>
+	<lî><å hrèf="http://www.mýþql.çóm/" tårgèt="_blåñk">MySQL</å> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>
 	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
@@ -2463,8 +2463,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.subscription.renew">Renew Subscription</message>
 	<message key="payment.subscription.expires">Expires</message>
 	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>WARNING: Your current version of PHP does not meet the minimum requirements for installation. It is recommended to upgrade to a more recent release of PHP.</strong>]]></message>
-	<message key="installer.connectionCharsetInstructions"><![CDATA[The encoding to use for data sent to and received from the database. This should be the same as the client character set.]]></message>
-	<message key="installer.databaseCharsetInstructions"><![CDATA[The encoding to use for data stored in the database.]]></message>
 	<message key="rt.admin.settings.printerFriendly">Print version (provides a printer-friendly version of an item).</message>
 	<message key="rt.admin.settings.addComment">Add comment (enables readers to post comments, with Journal Manager able to delete).</message>
 	<message key="rt.admin.settings.findingReferences">Find References</message>

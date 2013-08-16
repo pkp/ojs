@@ -212,7 +212,7 @@ Database Queries
 	$result = $dbconn->execute('SELECT x FROM mytable WHERE y = ?', array($y));
 	$result = $dbconn->execute('INSERT INTO mytable (x, y) VALUES (?, ?)', array($x, $y));
 * Only portable, standards compliant SQL should be used - compatibility with
-  MySQL >= 3.23 (including 4.x), and PostgreSQL >= 7.3 is required. If database
+  MySQL >= 4.1.1 and PostgreSQL >= 9.1.5 is required. If database
   specific logic cannot be avoided it should be abstracted into DBConnection or
   ADOdb.
 

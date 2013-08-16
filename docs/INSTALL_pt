@@ -1,1 +1,0 @@
-Veja o README para instruções de instalações.

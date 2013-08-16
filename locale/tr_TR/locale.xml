@@ -833,7 +833,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (PHP 5.x sürümleri dahil). Şu halde PHP'nin {$phpVersion}{$wrongPhpText} sürümünü kullanıyorsunuz</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (MySQL 4.x sürümleri de olur) veya  <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (PostgreSQL 8.x sürümleri de olur)</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 veya  <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x veya >= 2.0.4x veya Microsoft IIS 6</li>
 	<li>İşletim sistemi: Yukarıdaki yazılımları destekleyen herhengi bir işletim sistemi <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>

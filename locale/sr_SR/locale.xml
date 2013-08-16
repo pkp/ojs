@@ -545,7 +545,7 @@ Sadržaj priloženog fajla možete proveriti ukoliko kliknete na njegovo ime. Um
 
 <ul>
  <li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (uključujući PHP 5.x); trenutno koristite PHP {$phpVersion}{$wrongPhpText}</li>
- <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (uključujući MySQL 4.x) ili <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (uključujući PostgreSQL 8.x)</li>
+ <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 ili <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
  <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x ili >= 2.0.4x ili Microsoft IIS 6</li>
  <li>Operativni sistem: bilo koji OS koji podržava gore navedene programe, uključujući <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>

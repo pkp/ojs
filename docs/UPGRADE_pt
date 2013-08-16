@@ -1,1 +1,0 @@
-Veja instruções para atualização no arquivo README(_pt).
