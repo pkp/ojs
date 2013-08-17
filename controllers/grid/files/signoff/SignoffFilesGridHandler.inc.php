@@ -53,7 +53,7 @@ class SignoffFilesGridHandler extends PKPSignoffFilesGridHandler {
 	 * Get galley, if any.
 	 * @return Galley
 	 */
-	function &getGalley() {
+	function getGalley() {
 		return $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 	}
 

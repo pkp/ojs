@@ -153,7 +153,7 @@ class ArticleGalleyForm extends Form {
 			$articleGalley->setGalleyType($this->getData('galleyType'));
 
 			// Update galley in the db
-			$articleGalleyDao->updateGalley($articleGalley);
+			$articleGalleyDao->updateObject($articleGalley);
 		} else {
 			// Create a new galley
 			$articleGalley = $articleGalleyDao->newDataObject();
@@ -167,7 +167,7 @@ class ArticleGalleyForm extends Form {
 			$articleGalley->setGalleyType($this->getData('galleyType'));
 
 			// Insert new galley into the db
-			$articleGalleyDao->insertGalley($articleGalley);
+			$articleGalleyDao->insertObject($articleGalley);
 			$this->_articleGalley = $articleGalley;
 		}
 

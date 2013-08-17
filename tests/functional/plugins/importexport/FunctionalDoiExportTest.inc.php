@@ -434,7 +434,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$galleys = $galleyDao->getGalleysByArticle(1, 1);
 		foreach($galleys as $galley) {
 			$galley->setData('doiSuffix', '');
-			$galleyDao->updateGalley($galley);
+			$galleyDao->updateObject($galley);
 		}
 		$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
 		$suppFiles = $suppFileDao->getSuppFilesByArticle(1);
@@ -845,7 +845,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$configurations = array(
 			'Issue' => array('IssueDAO', 'updateObject', 'getById', 1),
 			'Article' => array('ArticleDAO', 'updateObject', 'getArticle', 1),
-			'ArticleGalley' => array('ArticleGalleyDAO', 'updateGalley', 'getGalley', array(1,2,3)),
+			'ArticleGalley' => array('ArticleGalleyDAO', 'updateObject', 'getById', array(1,2,3)),
 			'SuppFile' => array('SuppFileDAO', 'updateSuppFile', 'getSuppFile', 1)
 		);
 		$pluginInstance = $this->instantiatePlugin($pluginName);

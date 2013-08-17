@@ -292,17 +292,15 @@ class NativeExportDom {
 
 		/* --- Galleys --- */
 		foreach ($article->getGalleys() as $galley) {
-			$galleyNode =& NativeExportDom::generateGalleyDom($doc, $journal, $issue, $article, $galley);
+			$galleyNode = NativeExportDom::generateGalleyDom($doc, $journal, $issue, $article, $galley);
 			if ($galleyNode !== null) XMLCustomWriter::appendChild($root, $galleyNode);
-			unset($galleyNode);
 
 		}
 
 		/* --- Supplementary Files --- */
 		foreach ($article->getSuppFiles() as $suppFile) {
-			$suppNode =& NativeExportDom::generateSuppFileDom($doc, $journal, $issue, $article, $suppFile);
+			$suppNode = NativeExportDom::generateSuppFileDom($doc, $journal, $issue, $article, $suppFile);
 			if ($suppNode !== null) XMLCustomWriter::appendChild($root, $suppNode);
-			unset($suppNode);
 		}
 
 		return $root;

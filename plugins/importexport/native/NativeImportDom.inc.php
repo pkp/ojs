@@ -961,7 +961,7 @@ class NativeImportDom {
 		}
 
 		$galley->setArticleId($article->getId());
-		$galley->setSequence($galleyCount);
+		$galley->setSeq($galleyCount);
 
 		/* --- Set IDs --- */
 		if (!NativeImportDom::handlePubIds($galleyNode, $galley, $journal, $issue, $article, $errors)) return false;
@@ -1021,7 +1021,7 @@ class NativeImportDom {
 			return false;
 		}
 		$galley->setFileId($fileId);
-		$galleyDao->insertGalley($galley);
+		$galleyDao->insertObject($galley);
 
 		if ($isHtml) {
 			$result = NativeImportDom::handleHtmlGalleyNodes($galleyNode, $articleFileManager, $galley, $errors, $isCommandLine);
@@ -1077,9 +1077,9 @@ k					assert(false); // copyPublicFile was removed. Needs fixing.
 
 			if ($isStylesheet) {
 				$galley->setStyleFileId($fileId);
-				$articleGalleyDao->updateGalley($galley);
+				$articleGalleyDao->updateObject($galley);
 			} else {
-				$articleGalleyDao->insertGalleyImage($galley->getId(), $fileId);
+				$articleGalleyDao->insertImage($galley->getId(), $fileId);
 			}
 		}
 		return true;

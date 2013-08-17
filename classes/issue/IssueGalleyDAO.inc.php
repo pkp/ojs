@@ -54,7 +54,7 @@ class IssueGalleyDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		} else {
-			HookRegistry::call('IssueGalleyDAO::getGalley', array(&$galleyId, &$issueId, &$returner));
+			HookRegistry::call('IssueGalleyDAO::getById', array(&$galleyId, &$issueId, &$returner));
 		}
 		$result->Close();
 		return $returner;
@@ -271,7 +271,7 @@ class IssueGalleyDAO extends DAO {
 		$galley->setId($this->getInsertId());
 		$this->updateLocaleFields($galley);
 
-		HookRegistry::call('IssueGalleyDAO::insertGalley', array(&$galley, $galley->getId()));
+		HookRegistry::call('IssueGalleyDAO::insertObject', array(&$galley, $galley->getId()));
 
 		return $galley->getId();
 	}

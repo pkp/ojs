@@ -824,7 +824,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$configurations = array(
 			'Issue' => array('IssueDAO', 'updateObject'),
 			'Article' => array('ArticleDAO', 'updateObject'),
-			'ArticleGalley' => array('ArticleGalleyDAO', 'updateGalley'),
+			'ArticleGalley' => array('ArticleGalleyDAO', 'updateObject'),
 			'SuppFile' => array('SuppFileDAO', 'updateSuppFile')
 		);
 		$foundConfig = false;
@@ -897,7 +897,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$daoNames = array(
 			DOI_EXPORT_ISSUES => array('IssueDAO', 'getById'),
 			DOI_EXPORT_ARTICLES => array('PublishedArticleDAO', 'getPublishedArticleByArticleId'),
-			DOI_EXPORT_GALLEYS => array('ArticleGalleyDAO', 'getGalley'),
+			DOI_EXPORT_GALLEYS => array('ArticleGalleyDAO', 'getById'),
 		);
 		assert(isset($daoNames[$exportType]));
 		return $daoNames[$exportType];

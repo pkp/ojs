@@ -63,7 +63,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	 * @param PKPRequest $request
 	 */
 	function initialize($request) {
-		$galley =& $this->getGalley();
+		$galley = $this->getGalley();
 		$this->setAssocId($galley->getId());
 
 		parent::initialize($request);

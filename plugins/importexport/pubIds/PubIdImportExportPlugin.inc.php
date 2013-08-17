@@ -202,7 +202,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 						$pubObject = $dao->getById($pubObjectId, $journal->getId());
 						break;
 					case 'Galley':
-						$pubObject = $dao->getGalley($pubObjectId);
+						$pubObject = $dao->getById($pubObjectId);
 						break;
 					case 'SuppFile':
 						$pubObject = $dao->getSuppFile($pubObjectId);

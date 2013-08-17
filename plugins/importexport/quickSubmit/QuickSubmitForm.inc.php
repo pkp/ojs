@@ -290,7 +290,7 @@ class QuickSubmitForm extends Form {
 				}
 
 				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-				$galleyDao->insertGalley($galley);
+				$galleyDao->insertObject($galley);
 
 				if (!$designatedPrimary) {
 					$article->setSubmissionFileId($fileId);

@@ -440,7 +440,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		$daos = array(
 			'Issue' => array('IssueDAO', 'getById', 'updateObject'),
 			'Article' => array('PublishedArticleDAO', 'getPublishedArticleByArticleId', 'updateObject'),
-			'Galley' => array('ArticleGalleyDAO', 'getGalley', 'updateGalley'),
+			'Galley' => array('ArticleGalleyDAO', 'getById', 'updateObject'),
 			'SuppFile' => array('SuppFileDAO', 'getSuppFile', 'updateSuppFile')
 		);
 

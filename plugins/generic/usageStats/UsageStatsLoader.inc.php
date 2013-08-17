@@ -110,7 +110,7 @@ class UsageStatsLoader extends FileLoader {
 			switch($assocType) {
 				case ASSOC_TYPE_GALLEY:
 					$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-					$galley = $articleGalleyDao->getGalley($assocId);
+					$galley = $articleGalleyDao->getById($assocId);
 					break;
 				case ASSOC_TYPE_ISSUE_GALLEY;
 					$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
@@ -348,9 +348,9 @@ class UsageStatsLoader extends FileLoader {
 						} else {
 							$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 							if ($journal->getSetting('enablePublicGalleyId')) {
-								$galley =& $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
+								$galley = $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
 							} else {
-								$galley =& $galleyDao->getGalley($assocId, $articleId);
+								$galley = $galleyDao->getById($assocId, $articleId);
 							}
 							if (is_a($galley, 'ArticleGalley')) {
 								$assocId = $galley->getId();

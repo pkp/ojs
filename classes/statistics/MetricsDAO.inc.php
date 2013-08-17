@@ -247,7 +247,7 @@ class MetricsDAO extends DAO {
 			case ASSOC_TYPE_SUPP_FILE:
 				if ($recordToStore['assoc_type'] == ASSOC_TYPE_GALLEY) {
 					$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-					$articleFile = $galleyDao->getGalley($recordToStore['assoc_id']);
+					$articleFile = $galleyDao->getById($recordToStore['assoc_id']);
 					if (!is_a($articleFile, 'ArticleGalley')) {
 						throw new Exception('Cannot load record: invalid galley id.');
 					}

@@ -86,7 +86,7 @@ class ArticleHandler extends Handler {
 		if ($this->journal->getSetting('enablePublicGalleyId')) {
 			$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $this->article->getId());
 		} else {
-			$galley = $galleyDao->getGalley($galleyId, $this->article->getId());
+			$galley = $galleyDao->getById($galleyId, $this->article->getId());
 		}
 		$this->galley = $galley;
 	}
@@ -137,7 +137,7 @@ class ArticleHandler extends Handler {
 			if ($journal->getSetting('enablePublicGalleyId')) {
 				$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 			} else {
-				$galley = $galleyDao->getGalley($galleyId, $article->getId());
+				$galley = $galleyDao->getById($galleyId, $article->getId());
 			}
 
 			if ($galley) {
@@ -320,7 +320,7 @@ class ArticleHandler extends Handler {
 				if ($journal->getSetting('enablePublicGalleyId')) {
 					$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 				} else {
-					$galley = $galleyDao->getGalley($galleyId, $article->getId());
+					$galley = $galleyDao->getById($galleyId, $article->getId());
 				}
 			}
 

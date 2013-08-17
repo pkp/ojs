@@ -41,7 +41,7 @@ class GalleyRequiredPolicy extends DataObjectRequiredPolicy {
 
 		// Make sure the galley belongs to the submission.
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley =& $articleGalleyDao->getGalley($galleyId, $submission->getId());
+		$galley = $articleGalleyDao->getById($galleyId, $submission->getId());
 		if (!is_a($galley, 'ArticleGalley')) return AUTHORIZATION_DENY;
 
 		// Save the Galley to the authorization context.

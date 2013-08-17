@@ -41,7 +41,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int optional
 	 * @return ArticleGalley
 	 */
-	function &getGalley($galleyId, $articleId = null) {
+	function getById($galleyId, $articleId = null) {
 		$params = array((int) $galleyId);
 		if ($articleId !== null) $params[] = (int) $articleId;
 		$result = $this->retrieve(
@@ -218,10 +218,10 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 * @return galley object
 	 */
-	function &getGalleyByBestGalleyId($galleyId, $articleId) {
-		if ($galleyId != '') $galley =& $this->getGalleyByPubId('publisher-id', $galleyId, $articleId);
-		if (!isset($galley) && ctype_digit("$galleyId")) $galley =& $this->getGalley((int) $galleyId, $articleId);
-		return $galley;
+	function getGalleyByBestGalleyId($galleyId, $articleId) {
+		if ($galleyId != '') return $this->getGalleyByPubId('publisher-id', $galleyId, $articleId);
+		if (!isset($galley) && ctype_digit("$galleyId")) return $this->getById((int) $galleyId, $articleId);
+		return null;
 	}
 
 	/**
@@ -267,7 +267,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setSubmissionId($row['submission_id']);
 		$galley->setLocale($row['locale']);
 		$galley->setLabel($row['label']);
-		$galley->setSequence($row['seq']);
+		$galley->setSeq($row['seq']);
 		$galley->setRemoteURL($row['remote_url']);
 		$galley->setIsAvailable($row['is_available']);
 		$galley->setGalleyType($row['galley_type']);
@@ -283,7 +283,7 @@ class ArticleGalleyDAO extends DAO {
 	 * Insert a new ArticleGalley.
 	 * @param $galley ArticleGalley
 	 */
-	function insertGalley(&$galley) {
+	function insertObject($galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
 				(submission_id, file_id, label, locale, seq, remote_url, is_available, galley_type)
@@ -294,7 +294,7 @@ class ArticleGalleyDAO extends DAO {
 				0,
 				$galley->getLabel(),
 				$galley->getLocale(),
-				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSequence(),
+				$galley->getSeq() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSeq(),
 				$galley->getRemoteURL(),
 				$galley->getIsAvailable(),
 				$galley->getGalleyType(),
@@ -312,7 +312,7 @@ class ArticleGalleyDAO extends DAO {
 	 * Update an existing ArticleGalley.
 	 * @param $galley ArticleGalley
 	 */
-	function updateGalley(&$galley) {
+	function updateObject($galley) {
 		$this->update(
 			'UPDATE submission_galleys
 				SET
@@ -328,7 +328,7 @@ class ArticleGalleyDAO extends DAO {
 				0,
 				$galley->getLabel(),
 				$galley->getLocale(),
-				$galley->getSequence(),
+				$galley->getSeq(),
 				$galley->getRemoteURL(),
 				(int) $galley->getIsAvailable(),
 				$galley->getGalleyType(),

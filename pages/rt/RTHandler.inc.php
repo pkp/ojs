@@ -227,9 +227,9 @@ class RTHandler extends ArticleHandler {
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getSetting('enablePublicGalleyId')) {
-			$galley =& $articleGalleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
+			$galley = $articleGalleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 		} else {
-			$galley =& $articleGalleyDao->getGalley($galleyId, $article->getId());
+			$galley = $articleGalleyDao->getById($galleyId, $article->getId());
 		}
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');

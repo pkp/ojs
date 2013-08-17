@@ -61,7 +61,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementSequence($articleGalley) {
-		return $articleGalley->getSequence();
+		return $articleGalley->getSeq();
 	}
 
 	/**
@@ -69,7 +69,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 */
 	function setDataElementSequence($request, $rowId, &$articleGalley, $newSequence) {
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-		$articleGalley->setSequence($newSequence);
+		$articleGalley->setSeq($newSequence);
 		$articleGalleyDao->updateObject($articleGalley);
 	}
 
@@ -267,7 +267,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		if ($articleGalley) {
 			$newAvailableState = (int) $request->getUserVar('newAvailableState');
 			$articleGalley->setIsAvailable($newAvailableState);
-			$articleGalleyDao->updateGalley($articleGalley);
+			$articleGalleyDao->updateObject($articleGalley);
 
 			// log the state changing of the format.
 			import('lib.pkp.classes.log.SubmissionLog');
