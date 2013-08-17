@@ -82,7 +82,7 @@ Naming Conventions
   E.g., MyClassName
 * Constant names should be capitalized with words separated by an underscore. In
   general, constant names should also be prefixed with the package/class name to
-  avoid collisions. E.g., ROLE_ID_EDITOR
+  avoid collisions. E.g., ROLE_ID_MANAGER
 
 
 Comments

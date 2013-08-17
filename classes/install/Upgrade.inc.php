@@ -576,7 +576,8 @@ class Upgrade extends Installer {
 
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.editor') {
-					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_EDITOR));
+					// 0x00000100 is the old ROLE_ID_EDITOR constant which has been removed from the code
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), 0x00000100));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());

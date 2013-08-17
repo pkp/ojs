@@ -46,7 +46,6 @@ class RoleDAO extends PKPRoleDAO {
 
 		$journalRoleNames = array(
 			ROLE_ID_MANAGER => 'user.role.manager',
-			ROLE_ID_EDITOR => 'user.role.editor',
 			ROLE_ID_GUEST_EDITOR => 'user.role.guestEditor',
 			ROLE_ID_ASSISTANT => 'user.role.journalAssistant',
 			ROLE_ID_SECTION_EDITOR => 'user.role.sectionEditor',
@@ -72,8 +71,6 @@ class RoleDAO extends PKPRoleDAO {
 	 */
 	function getRoleIdFromPath($rolePath) {
 		switch ($rolePath) {
-			case 'editor':
-				return ROLE_ID_EDITOR;
 			case 'sectionEditor':
 				return ROLE_ID_SECTION_EDITOR;
 			case 'subscriptionManager':

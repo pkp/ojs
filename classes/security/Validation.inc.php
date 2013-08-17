@@ -27,15 +27,6 @@ class Validation extends PKPValidation {
 	}
 
 	/**
-	 * Shortcut for checking authorization as editor.
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	static function isEditor($journalId = -1) {
-		return Validation::isAuthorized(ROLE_ID_EDITOR, $journalId);
-	}
-
-	/**
 	 * Shortcut for checking authorization as section editor.
 	 * @param $journalId int
 	 * @return boolean

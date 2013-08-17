@@ -60,7 +60,7 @@ class ReferralHandler extends Handler {
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$journal = $request->getJournal();
 			$article = $publishedArticleDao->getPublishedArticleByArticleId((int) $request->getUserVar('articleId'));
-			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId()))) {
+			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isJournalManager($journal->getId()))) {
 				$request->redirect(null, 'author');
 			}
 		}
@@ -112,7 +112,7 @@ class ReferralHandler extends Handler {
 			if (!$article || !$journal) $request->redirect(null, 'index');
 			if ($article->getJournalId() != $journal->getId()) $request->redirect(null, 'index');
 			// The article's submitter, journal SE, and journal Editors are allowed.
-			if ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId())) $request->redirect(null, 'index');
+			if ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isJournalManager($journal->getId())) $request->redirect(null, 'index');
 		} else {
 			$referral = $article = null;
 		}
