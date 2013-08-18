@@ -396,7 +396,7 @@ class Application extends PKPApplication {
 
 		$metric = $this->getMetrics(null, array(), $filter);
 		if (is_array($metric)) {
-			return $metric[0]['metric'];
+			return $metric[0][STATISTICS_METRIC];
 		} else {
 			return 0;
 		}
