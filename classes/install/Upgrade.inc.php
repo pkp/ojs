@@ -644,6 +644,9 @@ class Upgrade extends Installer {
 	 */
 	function migrateCounterPluginUsageStatistics() {
 		$metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+		$result = $metricsDao->retrieve('SELECT * FROM counter_monthly_log');
+		if ($result->EOF) return true;
+
 		$loadId = '3.0.0-upgrade-counter';
 		$metricsDao->purgeLoadBatch($loadId);
 
@@ -652,8 +655,6 @@ class Upgrade extends Installer {
 			'count_pdf' => USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_PDF,
 			'count_other' => USAGE_STATS_REPORT_PLUGIN_FILE_TYPE_OTHER
 		);
-
-		$result = $metricsDao->retrieve('SELECT * FROM counter_monthly_log');
 
 		while(!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
