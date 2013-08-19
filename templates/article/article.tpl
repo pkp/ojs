@@ -5,6 +5,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article View.
+ * Custom template by Jason Nugent
  *}
 {if $galley}
 	{assign var=pubObject value=$galley}
