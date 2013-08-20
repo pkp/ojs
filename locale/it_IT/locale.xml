@@ -1027,9 +1027,14 @@ Titolo dello schema di classificazione]]></message>
 	<message key="navigation.categories">Categorie</message>
 	<message key="navigation.categories.browse">Naviga</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
-	<![CDATA[<ol>
 	<li>Gli elementi evidenziati richiedono un intervento dell'editor, di questo tenore:
-		<ul>]]></message>
+		<ul>
+			<li class="highlightCopyediting">Intervento richiesto in fase di copyediting</li>
+			<li class="highlightLayoutEditing">Intervento richiesto in fase di layout editing</li>
+			<li class="higlightProofreading">Intervento richiesto in fase di correzione delle bozze</li>
+		</ul>
+	</li>
+	</ol>]]></message>
 	<message key="issue.fullIssue">Fascicolo completo</message>
 	<message key="issue.nonpdf.title">Scarica fascicolo</message>
 	<message key="issue.viewIssue">Vedi il fascicolo</message>
