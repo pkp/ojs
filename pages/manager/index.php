@@ -188,6 +188,7 @@ switch ($op) {
 	case 'saveStatisticsSettings':
 	case 'savePublicStatisticsList':
 	case 'report':
+	case 'generateReport':
 		define('HANDLER_CLASS', 'StatisticsHandler');
 		import('pages.manager.StatisticsHandler');
 		break;

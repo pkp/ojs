@@ -156,6 +156,193 @@ class StatisticsHandler extends ManagerHandler {
 		$plugin =& $reportPlugins[$pluginName];
 		$plugin->display($args, $request);
 	}
+
+	/**
+	 * Generate statistics reports from passed
+	 * request arguments.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function generateReport(&$args, &$request) {
+		$this->validate();
+		$this->setupTemplate(true);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
+
+		$metricType = $request->getUserVar('metricType');
+		if (is_scalar($metricType)) $metricType = array($metricType);
+
+		// Retrieve site-level report plugins.
+		$reportPlugins =& PluginRegistry::loadCategory('reports', true, CONTEXT_SITE);
+		if (!is_array($reportPlugins) || empty($metricType)) {
+			$request->redirect(null, null, 'statistics');
+		}
+
+		$foundReportPlugin = false;
+		foreach ($reportPlugins as $reportPlugin) {
+			/* @var $reportPlugin ReportPlugin */
+			$pluginMetricTypes = $reportPlugin->getMetricTypes();
+			$metricTypeMatches = array_intersect($pluginMetricTypes, $metricType);
+			if (!empty($metricTypeMatches)) {
+				$foundReportPlugin = true;
+				break;
+			}
+		}
+
+		if (!$foundReportPlugin) $request->redirect(null, null, 'statistics');
+
+		$columns = $request->getUserVar('columns');
+		$filters = unserialize($request->getUserVar('filters'));
+		if (!$filters) $filters = $request->getUserVar('filters');
+
+		$orderBy = $request->getUserVar('orderBy');
+		if ($orderBy) {
+			$orderBy = unserialize($orderBy);
+			if (!$orderBy) $orderBy = $request->getUserVar('orderBy');
+		} else {
+			$orderBy = array();
+		}
+
+		$metrics = $reportPlugin->getMetrics($metricType, $columns, $filters, $orderBy);
+
+		$allColumnNames = $this->_getColumnNames();
+		$columnOrder = array_keys($allColumnNames);
+		$columnNames = array();
+
+		foreach ($columnOrder as $column) {
+			if (in_array($column, $columns)) {
+				$columnNames[$column] = $allColumnNames[$column];
+			}
+
+			if ($column == STATISTICS_DIMENSION_ASSOC_TYPE && in_array(STATISTICS_DIMENSION_ASSOC_ID, $columns)) {
+				$columnNames['common.title'] = __('common.title');
+			}
+		}
+
+		// Make sure the metric column will always be present.
+		if (!in_array(STATISTICS_METRIC, $columnNames)) $columnNames[STATISTICS_METRIC] = $allColumnNames[STATISTICS_METRIC];
+
+		header('content-type: text/comma-separated-values');
+		header('content-disposition: attachment; filename=statistics-' . date('Ymd') . '.csv');
+		$fp = fopen('php://output', 'wt');
+		fputcsv($fp, array($reportPlugin->getDisplayName()));
+		fputcsv($fp, array($reportPlugin->getDescription()));
+		fputcsv($fp, array(''));
+
+		fputcsv($fp, $columnNames);
+		foreach ($metrics as $record) {
+			$row = array();
+			foreach ($columnNames as $key => $name) {
+				switch ($key) {
+					case 'common.title':
+						$assocId = $record[STATISTICS_DIMENSION_ASSOC_ID];
+						$assocType = $record[STATISTICS_DIMENSION_ASSOC_TYPE];
+						$row[] = $this->_getObjectTitle($assocId, $assocType);
+						break;
+					case STATISTICS_DIMENSION_ASSOC_TYPE:
+						$assocType = $record[STATISTICS_DIMENSION_ASSOC_TYPE];
+						$row[] = $this->_getObjectTypeString($assocType);
+						break;
+					case STATISTICS_DIMENSION_CONTEXT_ID:
+						$assocId = $record[STATISTICS_DIMENSION_CONTEXT_ID];
+						$assocType = ASSOC_TYPE_JOURNAL;
+						$row[] = $this->_getObjectTitle($assocId, $assocType);
+						break;
+					case STATISTICS_DIMENSION_ISSUE_ID:
+						$assocId = $record[STATISTICS_DIMENSION_ISSUE_ID];
+						$assocType = ASSOC_TYPE_ISSUE;
+						$row[] = $this->_getObjectTitle($assocId, $assocType);
+						break;
+					case STATISTICS_DIMENSION_SUBMISSION_ID:
+						$assocId = $record[STATISTICS_DIMENSION_SUBMISSION_ID];
+						$assocType = ASSOC_TYPE_ARTICLE;
+						$row[] = $this->_getObjectTitle($assocId, $assocType);
+						break;
+					default:
+						$row[] = $record[$key];
+				}
+			}
+			fputcsv($fp, $row);
+		}
+		fclose($fp);
+	}
+
+	/**
+	 * Get report column names in correct order.
+	 * @return array
+	 */
+	function _getColumnNames() {
+		return array(
+			STATISTICS_DIMENSION_ASSOC_ID => __('common.id'),
+			STATISTICS_DIMENSION_ASSOC_TYPE => __('common.type'),
+			STATISTICS_DIMENSION_SUBMISSION_ID => __('article.article'),
+			STATISTICS_DIMENSION_ISSUE_ID => __('issue.issue'),
+			STATISTICS_DIMENSION_CONTEXT_ID => __('common.journal'),
+			STATISTICS_DIMENSION_CITY => __('manager.statistics.city'),
+			STATISTICS_DIMENSION_REGION => __('manager.statistics.region'),
+			STATISTICS_DIMENSION_COUNTRY => __('common.country'),
+			STATISTICS_DIMENSION_DAY => __('common.day'),
+			STATISTICS_DIMENSION_MONTH => __('common.month'),
+			STATISTICS_DIMENSION_FILE_TYPE => __('common.fileType'),
+			STATISTICS_DIMENSION_METRIC_TYPE => __('common.metric'),
+			STATISTICS_METRIC => __('submission.views'),
+		);
+	}
+
+	/**
+	 * Get data object title based on passed
+	 * assoc type and id.
+	 * @param $assocId int
+	 * @param $assocType int
+	 * @return string
+	 */
+	function _getObjectTitle($assocId, $assocType) {
+		switch ($assocType) {
+			case ASSOC_TYPE_JOURNAL:
+				$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+				$journal =& $journalDao->getJournal($assocId);
+				return $journal->getLocalizedTitle();
+			case ASSOC_TYPE_ISSUE:
+				$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+				$issue =& $issueDao->getIssueById($assocId, null, true);
+				return $issue->getLocalizedTitle();
+			case ASSOC_TYPE_ISSUE_GALLEY:
+				$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+				$issue =& $issueGalleyDao->getGalley($assocId);
+				return $issue->getFileName();
+			case ASSOC_TYPE_ARTICLE:
+				$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+				$article =& $articleDao->getArticle($assocId, null, true);
+				return $article->getLocalizedTitle();
+			case ASSOC_TYPE_GALLEY:
+				$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+				$galley =& $articleGalleyDao->getGalley($assocId);
+				return $galley->getFileName();
+			default:
+				assert(false);
+		}
+	}
+
+	/**
+	 * Get object type string
+	 * @param $assocType int
+	 * @return string
+	 */
+	function _getObjectTypeString($assocType) {
+		switch ($assocType) {
+			case ASSOC_TYPE_JOURNAL:
+				return __('journal.journal');
+			case ASSOC_TYPE_ISSUE:
+				return __('issue.issue');
+			case ASSOC_TYPE_ISSUE_GALLEY:
+				return __('editor.issues.galley');
+			case ASSOC_TYPE_ARTICLE:
+				return __('article.article');
+			case ASSOC_TYPE_GALLEY:
+				return __('submission.galley');
+			default:
+				assert(false);
+		}
+	}
 }
 
 ?>
