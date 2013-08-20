@@ -182,6 +182,7 @@
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" />
 		<schema file="plugins/generic/usageStats/schema.xml" />
+		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
 		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />

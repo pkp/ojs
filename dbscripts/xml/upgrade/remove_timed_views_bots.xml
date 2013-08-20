@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * remove_timed_views_bots.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Remove the timed view entries that have the user agent
+  * listed in COUNTER's bot list, using COUNTER_robot_txt_list_Jan_2011.txt 
+  *
+  -->
+
+<data>
+	<!-- Bug #3219: Public issue ID indexing fix -->
+	<sql>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Alexandria( |\\+)prototype( |\\+)project';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'AllenTrack';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Arachmo';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Brutus\\/AET';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'China Local Browse 2\\.6';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Code Sample Web Client';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ContentSmartz';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'DSurf';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'DataCha0s\\/2\\.0';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Demo Bot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'EmailSiphon';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'EmailWolf';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'FDM( |\\+)1';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Fetch( |\\+)API( |\\+)Request';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'GetRight';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Goldfire( |\\+)Server';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Googlebot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'HTTrack';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'LOCKSS';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'LWP\\:\\:Simple';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'MSNBot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Microsoft( |\\+)URL( |\\+)Control';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Milbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'MuscatFerre';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'NABOT';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'NaverBot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Offline( |\\+)Navigator';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'OurBrowser';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Python\\-urllib';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Readpaper';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Strider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'T\\-H\\-U\\-N\\-D\\-E\\-R\\-S\\-T\\-O\\-N\\-E';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Teleport( |\\+)Pro';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Teoma';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Wanadoo';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Web( |\\+)Downloader';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebCloner';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebCopier';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebReaper';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebStripper';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebZIP';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Webinator';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Webmetrics';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Wget';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Xenu( |\\+)Link( |\\+)Sleuth';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP '[+:,\\.\\;\\/\\\\-]bot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP '[^a]fish';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP '^voyager\\/';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'acme\\.spider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'alexa';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'almaden';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'appie';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'architext';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'archive\\.org_bot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'arks';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'asterias';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'atomz';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'autoemailspider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'awbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'baiduspider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'biadu';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'biglotron';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bjaaland';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'blaiz\\-bee';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bloglines';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'blogpulse';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'boitho\\.com\\-dc';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bookmark\\-manager';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bot[+:,\\.\\;\\/\\\\-]';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bspider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bwh3_user_agent';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'celestial';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'cfnetwork|checkbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'combine';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'commons\\-httpclient';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'contentmatch';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'core';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'crawl';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'crawler';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'cursor';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'custo';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'daumoa';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'docomo';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'dtSearchSpider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'dumbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'easydl';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'exabot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'fast-webcrawler';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'favorg';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'feedburner';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'feedfetcher\\-google';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ferret';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'findlinks';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'gaisbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'geturl';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'gigabot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'girafabot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'gnodspider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'google';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'grub';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'gulliver';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'harvest';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'heritrix';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'hl_ftien_spider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'holmes';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'htdig';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'htmlparser';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'httpget\\-5\\.2\\.2';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'httpget\\?5\\.2\\.2';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'httrack';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'iSiloX';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ia_archiver';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ichiro';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'iktomi';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ilse';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'internetseer';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'intute';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'java';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'java\\/';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'jeeves';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'jobo';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'kyluka';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'larbin';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'libwww';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'libwww\\-perl';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lilina';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkcheck';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkchecker';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkscan';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkwalker';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'livejournal\\.com';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lmspider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-request';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-tivial';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-trivial';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lycos[_+]';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mail.ru';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mediapartners\\-google';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'megite';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'milbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mimas';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mj12bot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mnogosearch';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'moget';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mojeekbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'momspider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'motor';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'msiecrawler';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'msnbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'myweb';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'nagios';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'netcraft';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'netluchs';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ng\\/2\\.';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'no_user_agent';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'nomad';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'nutch';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ocelli';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'onetszukaj';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'perman';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'pioneer';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'playmusic\\.com';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'playstarmusic\\.com';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'powermarks';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'psbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'python';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'qihoobot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'rambler';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'redalert|robozilla';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'robot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'robots';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'rss';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'scan4mail';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'scientificcommons';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'scirus';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'scooter';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'seekbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'seznambot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'shoutcast';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'slurp';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'sogou';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'speedy';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'spider';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'spiderman';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'spiderview';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'sunrise';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'superbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'surveybot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'tailrank';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'technoratibot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'titan';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'turnitinbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'twiceler';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ucsd';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ultraseek';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'urlaliasbuilder';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'urllib';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'virus[_+]detector';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'voila';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'w3c\\-checklink';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'webcollage';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'weblayers';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'webmirror';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'webreaper';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'wordpress';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'worm';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'xenu';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'y!j';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yacy';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoo';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoo\\-mmcrawler';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoofeedseeker';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahooseeker';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yandex';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yodaobot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'zealbot';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'zeus';</query>
+		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'zyborg';</query>
+	</sql>
+</data>
