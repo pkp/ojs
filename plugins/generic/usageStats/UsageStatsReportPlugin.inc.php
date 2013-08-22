@@ -53,7 +53,18 @@ class UsageStatsReportPlugin extends ReportPlugin {
 	 * @see ReportPlugin::display()
 	 */
 	function display(&$args) {
-		return parent::display($args);
+		parent::display($args);
+		$journal =& Request::getJournal();
+
+		$reportArgs = array(
+			'metricType' => OJS_METRIC_TYPE_COUNTER,
+			'columns' => array(
+				STATISTICS_DIMENSION_ASSOC_ID, STATISTICS_DIMENSION_ASSOC_TYPE, STATISTICS_DIMENSION_CONTEXT_ID,
+				STATISTICS_DIMENSION_ISSUE_ID, STATISTICS_DIMENSION_MONTH, STATISTICS_DIMENSION_COUNTRY),
+			'filters' => serialize(array(STATISTICS_DIMENSION_CONTEXT_ID => $journal->getId())),
+			'orderBy' => serialize(array(STATISTICS_DIMENSION_MONTH => STATISTICS_ORDER_ASC))
+		);
+		Request::redirect(null, null, 'generateReport', null, $reportArgs);
 	}
 
 	/**
