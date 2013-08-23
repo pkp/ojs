@@ -1,0 +1,58 @@
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * @file plugins/generic/markup/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Document Markup plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  -->
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+<message key="plugins.generic.markup.displayName">Dokumenten-Markup-Plug-In</message>
+<message key="plugins.generic.markup.settings">Einstellungen</message>
+<message key="plugins.generic.markup.description">Wenn ein/e Autor/in, Lektor/in oder Redakteur/in eine neue Version (im Format odt, doc, docx oder pdf) eines Artikels hochlädt, übermittelt dieses Modul sie an den in der Konfigurationsdatei genannten Dokumenten-Markup-Server und erhält eine gezippte Datei mit PDF-, XML- und HTML-Versionen dieses Artikels zusammen mit einem Literaturverzeichnis, das nach den Richtlinien der Zeitschrift formatiert ist. Diese gezippte Datei wird in dem Zusatzdateienordner aufbewahrt, damit sie im Begutachtungsprozess untersucht werden kann. Wenn der Artikel veröffentlicht werden kann, werden die PDF-, XML- und HTML-Fahnen ausgepackt und über das Inhaltsverzeichnis der Zeitschrift zugänglich gemacht.</message>
+<message key="plugins.generic.markup.errors.errorMessage">Kann keine XML- und HTML-Versionen von Artikeln holen. Das Dokumenten-Markup-Plug-In muss aktiviert sein, und der Zitationsstil muss in den Zeitschrifteneinstellungen angegeben werden.</message>
+<message key="plugins.generic.markup.settings.cslStyle">Zitationsstil (CSL) auswählen:</message>
+<message key="plugins.generic.markup.settings.cslStyleFieldHelp">Geben Sie einen Teil des Namens einer Organisation oder Publikation ein, um den Zitationsstil aus der lokalen CSL-Datenbank zu suchen. Unsere Datenbank wird regelmäßig aus ihrer Quelle http://citationstyles.org/styles/ aktualisiert.</message>
+<message key="plugins.generic.markup.settings.markupHostURL">Dokumenten-Markup-Server:</message>
+<message key="plugins.generic.markup.settings.markupHostURLHelp">Die Zeitschrift wird konvertierte Dokumente von der URL dieses Servers beziehen. Normalerweise sollten Sie diese Einstellung nicht ändern.</message>
+<message key="plugins.generic.markup.settings.markupHostUser">Nutzer/innen-ID:</message>
+<message key="plugins.generic.markup.settings.markupHostPass">Passwort:</message>
+<message key="plugins.generic.markup.settings.markupHostAccountHelp">Dieses Plug-In kann entweder einen Gastaccount benutzen (beschränkt auf 10 Konvertierungen pro Woche) oder einen unbegrenzten Benutzer/innen-Account. Lassen Sie die Nutzer/innen-ID- und Passwort-Felder leer, um den Gastaccount zu benutzen. Um mehr Informationen zu erhalten, besuchen Sie den <![CDATA[Dieses Plug-In kann entweder einen Gastaccount benutzen (beschränkt auf 10 Konvertierungen pro Woche) oder einen unbegrenzten Benutzer/innen-Account. Lassen Sie die Nutzer/innen-ID- und Passwort-Felder leer, um den Gastaccount zu benutzen. Um mehr Informationen zu erhalten, besuchen Sie den <a href="https://pkpservices.sfu.ca/" target="_blank">PKP Document Markup Service</a>.]]>.</message>
+<message key="plugins.generic.markup.settings.reviewVersion">Gutachter/innen-Version:</message>
+<message key="plugins.generic.markup.settings.reviewVersionHelp">Wählen Sie diese Option aus, wenn Sie eine gesonderte Version document-review.pdf für Gutachter/innen erstellen lassen möchten. Sie wird um Autor/inneninformationen bereinigt und ist im "Document Markup Files"-Archiv unter Zusatzdateien verfügbar.</message>
+<message key="plugins.generic.markup.settings.requirements">Installations-Anforderungen</message>
+<message key="plugins.generic.markup.settings.curlSupport">PHP-Curl-Unterstützung:</message>
+<message key="plugins.generic.markup.settings.curlSupportHelp">PHP Curl muss auf Ihrem OJS-Server installiert sein. Dieses Plug-In benutzt curl, um die Artikeldateien an den Dokumenten-Markup-Server zur Verarbeitung zu schicken und von diesem zu empfangen.</message>
+<message key="plugins.generic.markup.settings.zipSupport">PHP-Unzip-Unterstützung:</message>
+<message key="plugins.generic.markup.settings.zipSupportHelp">PHP zlib muss auf Ihrem OJS-Server installiert sein. Dieses Plug-In benutzt zlib, um die Dateien des Dokumenten-Markup-Servers zu entpacken.</message>
+<message key="plugins.generic.markup.settings.php5Support">PHP 5.x:</message>
+<message key="plugins.generic.markup.settings.php5SupportHelp">This plugin has only been tested with php 5.x, so earlier versions may not work.</message>
+<message key="plugins.generic.markup.settings.pathInfo">[URL Paths]</message>
+<message key="plugins.generic.markup.settings.pathInfoHelp">["Enabled" is the preferred and common selection.  It means OJS pages and documents are accessed as folder paths in URLs.  "Disabled" means OJS uses URL parameters to access pages and documents.  Currently a limitation with the disabled mode is that viewing (View Proof link) HTML galley files generated by the plugin might not display some prepared media.]</message>
+<message key="plugins.generic.markup.settings.cssStyles">Vorlagen:</message>
+<message key="plugins.generic.markup.settings.cssStylesHelp">Diese HTML-Vorlagen kontrollieren die Anzeige von Artikeln, die über dieses Plug-In angezeigt werden. Standarddateien werden automatisch erzeugt. Sie können diese mit Ihren eigenen angepassten Versionen ersetzen über den <![CDATA[Diese HTML-Vorlagen kontrollieren die Anzeige von Artikeln, die über dieses Plug-In angezeigt werden. Standarddateien werden automatisch erzeugt. Sie können diese mit Ihren eigenen angepassten Versionen ersetzen über den <a href="{$url}" class="action" target="_blank">Dateimanager</a>]]></message>
+<message key="plugins.generic.markup.settings.cssHeaderImageURL">Header-Bild:</message>
+<message key="plugins.generic.markup.settings.cssHeaderImageURLHelp">Wenn dieses Plug-In einen Artikel anzeigt, kann dieser ein Header-Bild im PNG- oder JPG-Format am Anfang der ersten Seite erhalten, das das Branding der Zeitschrift anzeigt. Laden Sie dieses Header-Bild hier hoch. Das Bild sollte maximal 800 Pixel breit und 100 Pixel hoch sein. Um es zu entfernen, benutzen Sie den <![CDATA[Wenn dieses Plug-In einen Artikel anzeigt, kann dieser ein Header-Bild im PNG- oder JPG-Format am Anfang der ersten Seite erhalten, das das Branding der Zeitschrift anzeigt. Laden Sie dieses Header-Bild hier hoch. Das Bild sollte maximal 800 Pixel breit und 100 Pixel hoch sein. Um es zu entfernen, benutzen Sie den <a href="{$url}" class="action" target="_blank">Dateimanager</a>]]></message>
+<message key="plugins.generic.markup.archive.description">Dieses Dateiarchiv enthält konvertierte XML-, HTML- und standardisierte PDF-Versionen. Sie enthält außerdem extrahierte Grafiken und Zitationsinformationen.</message>
+<!-- Processing status messages -->
+<message key="plugins.generic.markup.archive.no_url">Der Dokumenten-Markup-Server des Plug-Ins ist nicht gesetzt!</message>
+<message key="plugins.generic.markup.archive.status">Dokumenten-Marku-Server. STATUS: </message>
+<message key="plugins.generic.markup.archive.processing">Dokumenten-Markup-Server. Status: IN BEARBEITUNG</message>
+<message key="plugins.generic.markup.archive.downloaded">Dokumenten-Markup-Server: HERUNTERGELADEN, IN BEARBEITUNG ...</message>
+<message key="plugins.generic.markup.archive.no_job">Software-Fehler: Es wurde keine Job-Id generiert: </message>
+<message key="plugins.generic.markup.archive.bad_zip">Zip-Ereignis:</message>
+<message key="plugins.generic.markup.archive.portalTitle">PKP Open Journal Systems Dokumenten-Markup-Plug-In</message>
+<message key="plugins.generic.markup.archive.portalSubTitle">Dokument-Status</message>
+<message key="plugins.generic.markup.archive.enable">Dokumenten-Markup-Plug-In muss aktiviert werden!</message>
+<message key="plugins.generic.markup.archive.no_journal">Anfrage erfordert eine Zeitschrift.</message>
+<message key="plugins.generic.markup.archive.no_articleID">"Der Paramter der Artikel-ID ist ungültig oder fehlt."</message>
+<message key="plugins.generic.markup.archive.no_article">Kein solcher Artikel!</message>
+<message key="plugins.generic.markup.archive.bad_filename">Dateiname fehlt oder ist falsch formatiert. Er sollte sein: .../markup/[Artikel-ID]/0/[Dateiname]</message>
+<message key="plugins.generic.markup.archive.no_file">Diese Datei existiert nicht.</message>
+<message key="plugins.generic.markup.archive.login">Sie müssen sich einloggen, um Zugriff auf diese Datei zu erhalten!</message>
+<message key="plugins.generic.markup.archive.no_access">Ihr derzeitiger Benutzer/innenstatus erlaubt keinen Zugriff auf diese Datei!</message>
+<message key="plugins.generic.markup.archive.supp_missing">Der Artikel oder der Eintrag seiner "Document Markup Files"-Zusatzdatei  fehlen. Versuchen Sie, den Artikel erneut hochzuladen, um die Markup-Dateien zu erzeugen.</message>
+<message key="plugins.generic.markup.archive.supp_file_missing">Obwohl ein Eintrag einer "Document Markup Files"-Zusatzdatei existiert, fehlt seine Datei.</message>
+<message key="plugins.generic.markup.archive.is_zip">Die Zusatzdatei ist bereits ein Zip-Archiv.</message>
+</locale>
