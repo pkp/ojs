@@ -51,6 +51,14 @@ session_lifetime = 30
 ; execute periodically
 scheduled_tasks = Off
 
+; Site time zone
+; Please refer to lib/pkp/registry/timeZones.xml for a full list of supported
+; time zones.
+; I.e.:
+; <entry key="Europe/Amsterdam" name="Amsterdam" />
+; time_zone="Amsterdam"
+time_zone = "UTC"
+
 ; Short and long date formats
 date_format_trunc = "%m-%d"
 date_format_short = "%Y-%m-%d"
