@@ -627,7 +627,7 @@ class SubscriptionAction {
 				break;
 			case 'SUBSCRIPTION_PURCHASE_INSTL':
 			case 'SUBSCRIPTION_RENEW_INSTL':
-				$paramArray['subscriptionUrl'] = $request->rl($journal->getPath(), $rolePath, 'editSubscription', 'institutional', array($subscription->getId()));
+				$paramArray['subscriptionUrl'] = $request->url($journal->getPath(), $rolePath, 'editSubscription', 'institutional', array($subscription->getId()));
 				$paramArray['institutionName'] = $subscription->getInstitutionName();
 				$paramArray['institutionMailingAddress'] = $subscription->getInstitutionMailingAddress();
 				$paramArray['domain'] = $subscription->getDomain();
