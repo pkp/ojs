@@ -85,6 +85,22 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 		return $this->update('DELETE from usage_stats_temporary_records WHERE load_id = ?', array($loadId));
 	}
 
+	/**
+	 * Delete the record with the passed assoc id and type with
+	 * the most recent day value.
+	 * @param $assocType int
+	 * @param $assocId int
+	 * @param $loadId string
+	 * @return boolean
+	 */
+	function deleteRecord($assocType, $assocId, $loadId) {
+		return $this->update('DELETE from usage_stats_temporary_records
+			WHERE assoc_type = ? AND assoc_id = ? AND load_id = ?
+			ORDER BY day DESC
+			LIMIT 1',
+			array($assocType, $assocId, $loadId));
+	}
+
 
 	//
 	// Private helper methods.

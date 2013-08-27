@@ -265,6 +265,7 @@ class UsageStatsPlugin extends GenericPlugin {
 
 		$desiredParams = array_merge($desiredParams,
 		array('"' . $usageEvent['time'] . '"', $usageEvent['canonicalUrl'],
+						'200', // The usage event plugin always log requests that returned this code.
 						'"' . $usageEvent['userAgent'] . '"'));
 
 		$usageLogEntry = implode(' ', $desiredParams) . PHP_EOL;

@@ -80,6 +80,7 @@ class UsageStatsLoader extends FileLoader {
 
 		$loadId = basename($filePath);
 		$statsDao = DAORegistry::getDAO('UsageStatsTemporaryRecordDAO'); /* @var $statsDao UsageStatsTemporaryRecordDAO */
+
 		// Make sure we don't have any temporary records associated
 		// with the current load id in database.
 		$statsDao->deleteByLoadId($loadId);
@@ -98,7 +99,17 @@ class UsageStatsLoader extends FileLoader {
 					array('file' => $filePath, 'lineNumber' => $lineNumber)));
 			}
 
-			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $entryData['userAgent']);
+			// Avoid non system requests.
+			if (strpos($entryData['url'], '/index.php/') == false) continue;
+
+			// Avoid non sucessful requests.
+			$sucessfulReturnCodes = array(200, 304);
+			if (!in_array($entryData['returnCode'], $sucessfulReturnCodes)) continue;
+
+			// Avoid bots.
+			if (Core::isUserAgentBot($entryData['userAgent'], $this->_counterRobotsListFile)) continue;
+
+			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url']);
 			if(!$assocId || !$assocType) continue;
 
 			list($countryCode, $cityName, $region) = $this->_geoLocationTool->getGeoLocation($entryData['ip']);
@@ -132,6 +143,7 @@ class UsageStatsLoader extends FileLoader {
 				}
 			}
 
+			// Implement double click filtering.
 			$entryHash = $assocType . $assocId . $entryData['ip'];
 
 			// Clean the last inserted entries, removing the entries that have
@@ -144,22 +156,23 @@ class UsageStatsLoader extends FileLoader {
 			}
 
 			// Time between requests check.
-			if (!isset($lastInsertedEntries[$entryHash])) {
-				 $lastInsertedEntries[$entryHash] = $entryData['date'];
-			} else {
+			if (isset($lastInsertedEntries[$entryHash])) {
 				// Decide what time filter to use, depending on object type.
 				if ($type == STATISTICS_FILE_TYPE_PDF || $type == STATISTICS_FILE_TYPE_OTHER) {
 					$timeFilter = COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_OTHER;
 				} else {
 					$timeFilter = COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_HTML;
 				}
-				if ($entryData['date'] - $lastInsertedEntries[$entryHash] > $timeFilter) {
-					$lastInsertedEntries[$entryHash] = $entryData['date'];
-				} else {
-					continue;
+
+				$secondsBetweenRequests = $entryData['date'] - $lastInsertedEntries[$entryHash];
+				if ($secondsBetweenRequests < $timeFilter) {
+					// We have to store the last access,
+					// so we delete the most recent one.
+					$statsDao->deleteRecord($assocType, $assocId, $loadId);
 				}
 			}
 
+			$lastInsertedEntries[$entryHash] = $entryData['date'];
 			$statsDao->insert($assocType, $assocId, $day, $countryCode, $region, $cityName, $type, $loadId);
 		}
 
@@ -203,23 +216,25 @@ class UsageStatsLoader extends FileLoader {
 	 */
 	private function _getDataFromLogEntry($entry) {
 		$plugin = $this->_plugin; /* @var $plugin Plugin */
-		if (!$plugin->getSetting(0, 'createLogFiles')) {
+		$createLogFiles = $plugin->getSetting(0, 'createLogFiles');
+		if (!$createLogFiles) {
 			// User defined regex to parse external log files.
 			$parseRegex = $plugin->getSetting(0, 'accessLogFileParseRegex');
 		} else {
 			// Regex to parse this plugin's log access files.
-			$parseRegex = '/^(\S+) \S+ \S+ "(.*?)" (\S+) "(.*?)"/';
+			$parseRegex = '/^(\S+) \S+ \S+ "(.*?)" (\S+) (\S+) "(.*?)"/';
 		}
 
 		// The default regex will parse only apache log files in combined format.
-		if (!$parseRegex) $parseRegex = '/^(\S+) \S+ \S+ \[(.*?)\] "\S+ (\S+).*?" \S+ \S+ ".*?" "(.*?)"/';
+		if (!$parseRegex) $parseRegex = '/^(\S+) \S+ \S+ \[(.*?)\] "\S+ (\S+).*?" (\S+) \S+ ".*?" "(.*?)"/';
 
 		$returner = array();
 		if (preg_match($parseRegex, $entry, $m)) {
 			$returner['ip'] = $m[1];
 			$returner['date'] = strtotime($m[2]);
 			$returner['url'] = urldecode($m[3]);
-			$returner['userAgent'] = $m[4];
+			$returner['returnCode'] = $m[4];
+			$returner['userAgent'] = $m[5];
 		}
 
 		// Make sure url matchs the path info enabled mode.
@@ -260,9 +275,8 @@ class UsageStatsLoader extends FileLoader {
 
 	/**
 	 * Get the assoc type and id of the object that
-	 * is accessed through the passed url, skiping bots.
+	 * is accessed through the passed url.
 	 * @param $url string
-	 * @param $userAgent string
 	 * @return array
 	 */
 	private function _getAssocFromUrl($url, $userAgent) {
@@ -271,135 +285,129 @@ class UsageStatsLoader extends FileLoader {
 		$expectedUrl = $this->_getExpectedUrl();
 
 		// We are looking for system access only.
-		if (strpos($url, '/index.php/') !== false) {
-			$urlCheck = false;
-			// It matches the expected ones?
-			foreach ($expectedUrl as $workingAssocType => $workingUrls) {
-				foreach($workingUrls as $workingUrl) {
-					if (strpos($url, $workingUrl) !== false) {
-						// Expected url, don't look any futher.
-						$urlCheck = true;
-						break 2;
-					}
+
+		$urlCheck = false;
+		// It matches the expected ones?
+		foreach ($expectedUrl as $workingAssocType => $workingUrls) {
+			foreach($workingUrls as $workingUrl) {
+				if (strpos($url, $workingUrl) !== false) {
+					// Expected url, don't look any futher.
+					$urlCheck = true;
+					break 2;
 				}
 			}
+		}
 
-			if ($urlCheck) {
-				// Get the assoc id inside the passed url.
-				$explodedString = explode($workingUrl, $url);
+		if ($urlCheck) {
+			// Get the assoc id inside the passed url.
+			$explodedString = explode($workingUrl, $url);
+			$assocId = $explodedString[1];
+
+			// Check if we have more than one url parameter.
+			$explodedString = explode('/', $assocId);
+			if (isset($explodedString[1]) && !is_null($explodedString[1])) {
+				// Ŝet the correct object type.
+				if ($workingAssocType == ASSOC_TYPE_ARTICLE) {
+					$assocType = ASSOC_TYPE_GALLEY;
+				} elseif ($workingAssocType == ASSOC_TYPE_ISSUE) {
+					$assocType = ASSOC_TYPE_ISSUE_GALLEY;
+				}
+
+				$parentObjectId = $explodedString[0];
 				$assocId = $explodedString[1];
+			}
 
-				// Check if we have more than one url parameter.
-				$explodedString = explode('/', $assocId);
-				if (isset($explodedString[1]) && !is_null($explodedString[1])) {
-					// Ŝet the correct object type.
-					if ($workingAssocType == ASSOC_TYPE_ARTICLE) {
-						$assocType = ASSOC_TYPE_GALLEY;
-					} elseif ($workingAssocType == ASSOC_TYPE_ISSUE) {
-						$assocType = ASSOC_TYPE_ISSUE_GALLEY;
-					}
+			if (!$assocType) {
+				$assocType = $workingAssocType;
+			}
 
-					$parentObjectId = $explodedString[0];
-					$assocId = $explodedString[1];
-				}
+			// Get the journal object.
+			$journalPath = explode('index.php/', $url);
+			$journalPath = explode('/', $journalPath[1]);
+			$journalPath = $journalPath[0];
+			if (isset($this->_journalsByPath[$journalPath])) {
+				$journal = $this->_journalsByPath[$journalPath];
+				$journalId = $journal->getId();
+			} else {
+				return array(false, false);
+			}
 
-				if (!$assocType) {
-					$assocType = $workingAssocType;
-				}
-
-				// Get the journal object.
-				$journalPath = explode('index.php/', $url);
-				$journalPath = explode('/', $journalPath[1]);
-				$journalPath = $journalPath[0];
-				if (isset($this->_journalsByPath[$journalPath])) {
-					$journal = $this->_journalsByPath[$journalPath];
-					$journalId = $journal->getId();
-				} else {
-					return array(false, false);
-				}
-
-				// Skip bots.
-				if (Core::isUserAgentBot($userAgent, $this->_counterRobotsListFile)) {
-					return array(false, false);
-				}
-
-				// Get the internal object id (avoiding public ids).
-				switch ($assocType) {
-					case ASSOC_TYPE_SUPP_FILE:
-					case ASSOC_TYPE_GALLEY:
-						$articleId = $this->_getInternalArticleId($parentObjectId, $journal);
-						if (!$articleId) {
-							$assocId = false;
-							break;
-						}
-						if ($assocType == ASSOC_TYPE_SUPP_FILE) {
-							$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
-							if ($journal->getSetting('enablePublicSuppFileId')) {
-								$suppFile = $suppFileDao->getSuppFileByBestSuppFileId($assocId, $articleId);
-							} else {
-								$suppFile = $suppFileDao->getSuppFile((int) $assocId, $articleId);
-							}
-							if (is_a($suppFile, 'SuppFile')) {
-								$assocId = $suppFile->getId();
-							} else {
-								$assocId = false;
-							}
-							break;
-						} else {
-							$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-							if ($journal->getSetting('enablePublicGalleyId')) {
-								$galley = $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
-							} else {
-								$galley = $galleyDao->getById($assocId, $articleId);
-							}
-							if (is_a($galley, 'ArticleGalley')) {
-								$assocId = $galley->getId();
-								break;
-							}
-						}
-
-						// Couldn't retrieve galley,
-						// count as article view.
-						$assocType = ASSOC_TYPE_ARTICLE;
-						$assocId = $articleId;
-					case ASSOC_TYPE_ARTICLE:
-						$assocId = $this->_getInternalArticleId($assocId, $journal);
+			// Get the internal object id (avoiding public ids).
+			switch ($assocType) {
+				case ASSOC_TYPE_SUPP_FILE:
+				case ASSOC_TYPE_GALLEY:
+					$articleId = $this->_getInternalArticleId($parentObjectId, $journal);
+					if (!$articleId) {
+						$assocId = false;
 						break;
-					case ASSOC_TYPE_ISSUE_GALLEY:
-						$issueId = $this->_getInternalIssueId($parentObjectId, $journal);
-						if (!$issueId) {
-							$assocId = false;
-							break;
-						}
-						$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-						if ($journal->getSetting('enablePublicGalleyId')) {
-							$galley = $galleyDao->getByBestId($assocId, $issueId);
+					}
+					if ($assocType == ASSOC_TYPE_SUPP_FILE) {
+						$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
+						if ($journal->getSetting('enablePublicSuppFileId')) {
+							$suppFile = $suppFileDao->getSuppFileByBestSuppFileId($assocId, $articleId);
 						} else {
-							$galley = $galleyDao->getById($assocId, $issueId);
+							$suppFile = $suppFileDao->getSuppFile((int) $assocId, $articleId);
 						}
-						if (is_a($galley, 'IssueGalley')) {
+						if (is_a($suppFile, 'SuppFile')) {
+							$assocId = $suppFile->getId();
+						} else {
+							$assocId = false;
+						}
+						break;
+					} else {
+						$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+						if ($journal->getSetting('enablePublicGalleyId')) {
+							$galley = $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
+						} else {
+							$galley = $galleyDao->getById($assocId, $articleId);
+						}
+						if (is_a($galley, 'ArticleGalley')) {
 							$assocId = $galley->getId();
 							break;
-						} else {
-							// Count as a issue view. Don't break
-							// so the issue case will be handled.
-							$assocType = ASSOC_TYPE_ISSUE;
-							$assocId = $issueId;
 						}
-					case ASSOC_TYPE_ISSUE:
-						$assocId = $this->_getInternalIssueId($assocId, $journal);
-						break;
-				}
+					}
 
-				// Don't count article/view access with an html or pdf galley,
-				// otherwise we would be counting access before user really
-				// access the object. If user really access the object, a download
-				// operation will be also logged and that's the one we have to count.
-				$articleViewAccessUrls = array('/article/view/', '/article/viewArticle/');
-				if (in_array($workingUrl, $articleViewAccessUrls) && $assocType == ASSOC_TYPE_GALLEY &&
-				$galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
-					$assocId = $assocType = false;
-				}
+					// Couldn't retrieve galley,
+					// count as article view.
+					$assocType = ASSOC_TYPE_ARTICLE;
+					$assocId = $articleId;
+				case ASSOC_TYPE_ARTICLE:
+					$assocId = $this->_getInternalArticleId($assocId, $journal);
+					break;
+				case ASSOC_TYPE_ISSUE_GALLEY:
+					$issueId = $this->_getInternalIssueId($parentObjectId, $journal);
+					if (!$issueId) {
+						$assocId = false;
+						break;
+					}
+					$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+					if ($journal->getSetting('enablePublicGalleyId')) {
+						$galley = $galleyDao->getByBestId($assocId, $issueId);
+					} else {
+						$galley = $galleyDao->getById($assocId, $issueId);
+					}
+					if (is_a($galley, 'IssueGalley')) {
+						$assocId = $galley->getId();
+						break;
+					} else {
+						// Count as a issue view. Don't break
+						// so the issue case will be handled.
+						$assocType = ASSOC_TYPE_ISSUE;
+						$assocId = $issueId;
+					}
+				case ASSOC_TYPE_ISSUE:
+					$assocId = $this->_getInternalIssueId($assocId, $journal);
+					break;
+			}
+
+			// Don't count article/view access with an html or pdf galley,
+			// otherwise we would be counting access before user really
+			// access the object. If user really access the object, a download
+			// operation will be also logged and that's the one we have to count.
+			$articleViewAccessUrls = array('/article/view/', '/article/viewArticle/');
+			if (in_array($workingUrl, $articleViewAccessUrls) && $assocType == ASSOC_TYPE_GALLEY &&
+			$galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
+				$assocId = $assocType = false;
 			}
 		}
 
