@@ -39,7 +39,7 @@ class AuthorGridRow extends PKPAuthorGridRow {
 		$stageAssignments = $stageAssignmentDao->getBySubmissionAndStageId($submission->getId(), $submission->getStageId(), null, $user->getId());
 		while ($stageAssignment = $stageAssignments->next()) {
 			$userGroup = $userGroupDao->getById($stageAssignment->getUserGroupId());
-			if (in_array($userGroup->getRoleId(), array(ROLE_ID_MANAGER, ROLE_ID_EDITOR))) {
+			if ($userGroup->getRoleId() == ROLE_ID_MANAGER) {
 				return true;
 				break;
 			}

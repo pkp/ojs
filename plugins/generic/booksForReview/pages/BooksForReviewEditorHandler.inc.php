@@ -968,7 +968,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 		if (!$bfrPlugin->getEnabled()) return false;
 
-		if (!Validation::isEditor($journal->getId())) Validation::redirectLogin();;
+		if (!Validation::isJournalManager($journal->getId())) Validation::redirectLogin();;
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}

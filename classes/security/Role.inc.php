@@ -16,7 +16,6 @@
 import('lib.pkp.classes.security.PKPRole');
 
 /** ID codes for all user roles */
-define('ROLE_ID_EDITOR',		0x00000100);
 define('ROLE_ID_SECTION_EDITOR',	0x00000011);
 define('ROLE_ID_SUBSCRIPTION_MANAGER',	0x00200000);
 define('ROLE_ID_GUEST_EDITOR',		0x00000201);
@@ -42,8 +41,6 @@ class Role extends PKPRole {
 	 */
 	function getRoleName($plural = false) {
 		switch ($this->getId()) {
-			case ROLE_ID_EDITOR:
-				return 'user.role.editor' . ($plural ? 's' : '');
 			case ROLE_ID_GUEST_EDITOR:
 				return 'user.role.guestEditor' . ($plural ? 's' : '');
 			case ROLE_ID_SECTION_EDITOR:
@@ -61,8 +58,6 @@ class Role extends PKPRole {
 	 */
 	function getPath() {
 		switch ($this->getId()) {
-			case ROLE_ID_EDITOR:
-				return 'editor';
 			case ROLE_ID_GUEST_EDITOR:
 				return 'guestEditor';
 			case ROLE_ID_SECTION_EDITOR:
