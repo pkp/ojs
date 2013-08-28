@@ -35,9 +35,62 @@ class ReviewerHandler extends PKPReviewerHandler {
 	 * @param $roleAssignments array
 	 */
 	function authorize($request, &$args, $roleAssignments) {
+		$context = $request->getContext();
+		if ($context->getSetting('reviewerAccessKeysEnabled')) {
+			$this->_validateAccessKey($request);
+		}
+
 		import('classes.security.authorization.SubmissionAccessPolicy');
 		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
+
+
 		return parent::authorize($request, $args, $roleAssignments);
+	}
+
+	/**
+	 * Tests if the request contains a valid access token. If this is the case
+	 * the regular login process will be skipped
+	 *
+	 * @param $request PKPRequest
+	 * @return void
+	 */
+	function _validateAccessKey($request) {
+		$accessKeyCode = $request->getUserVar('key');
+		$reviewId = $request->getUserVar('reviewId');
+		if (!($accessKeyCode && $reviewId)) { return false; }
+
+		// Check if the user is already logged in
+		$sessionManager = SessionManager::getManager();
+		$session = $sessionManager->getUserSession();
+		if ($session->getUserId()) { return false; }
+
+		import('lib.pkp.classes.security.AccessKeyManager');
+		$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
+
+		// Validate the access key
+		$context = $request->getContext();
+		$accessKeyManager = new AccessKeyManager();
+		$accessKeyHash = AccessKeyManager::generateKeyHash($accessKeyCode);
+		$accessKey = $accessKeyManager->validateKey(
+			$context->getId(),
+			$reviewerSubmission->getReviewerId(),
+			$accessKeyHash
+		);
+		if (!$accessKey) { return false; }
+
+		// Get the reviewer user object
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$user = $userDao->getById($accessKey->getUserId());
+		if (!$user) { return false; }
+
+		// Register the user object in the session
+		import('lib.pkp.classes.security.PKPValidation');
+		$reason = null;
+		if (PKPValidation::registerUserSession($user, $reason)) {
+			$this->submission = $reviewerSubmission;
+			$this->user = $user;
+		}
 	}
 }
 
