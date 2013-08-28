@@ -37,7 +37,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 	function authorize($request, &$args, $roleAssignments) {
 		$context = $request->getContext();
 		if ($context->getSetting('reviewerAccessKeysEnabled')) {
-			$this->validateAccessKey($request);
+			$this->_validateAccessKey($request);
 		}
 
 		import('classes.security.authorization.SubmissionAccessPolicy');
@@ -54,7 +54,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 	 * @param $request PKPRequest
 	 * @return void
 	 */
-	function validateAccessKey(&$request) {
+	function _validateAccessKey($request) {
 		$accessKeyCode = $request->getUserVar('key');
 		$reviewId = $request->getUserVar('reviewId');
 		if (!($accessKeyCode && $reviewId)) { return false; }
@@ -86,7 +86,8 @@ class ReviewerHandler extends PKPReviewerHandler {
 
 		// Register the user object in the session
 		import('lib.pkp.classes.security.PKPValidation');
-		if (PKPValidation::registerUserSession($user)) {
+		$reason = null;
+		if (PKPValidation::registerUserSession($user, $reason)) {
 			$this->submission = $reviewerSubmission;
 			$this->user = $user;
 		}
