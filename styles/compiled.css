@@ -720,7 +720,7 @@ table.pkp_listing td.separator {
   line-height:1%;
 }
 .pkp_controllers_fontController_smallFont {
-  background:url(../lib/pkp/templates/images/icons/font-down.png);
+  background:url(../lib/pkp/templates/images/icons/font-down.png) !important;
   outline:none;
   text-indent:-9999px;
   display:block;
@@ -729,7 +729,7 @@ table.pkp_listing td.separator {
   height:23px;
 }
 .pkp_controllers_fontController_defaultFont {
-  background:url(../lib/pkp/templates/images/icons/font-default.png);
+  background:url(../lib/pkp/templates/images/icons/font-default.png) !important;
   outline:none;
   text-indent:-9999px;
   display:block;
@@ -738,7 +738,7 @@ table.pkp_listing td.separator {
   height:23px;
 }
 .pkp_controllers_fontController_largeFont {
-  background:url(../lib/pkp/templates/images/icons/font-up.png);
+  background:url(../lib/pkp/templates/images/icons/font-up.png) !important;
   outline:none;
   text-indent:-9999px;
   display:block;
