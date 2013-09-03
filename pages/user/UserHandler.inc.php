@@ -511,6 +511,7 @@ class UserHandler extends Handler {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getUser($userId);
 
+		$this->setupTemplate($request, false);
 		$templateMgr->assign_by_ref('user', $user);
 		$templateMgr->display('user/publicProfile.tpl');
 	}
