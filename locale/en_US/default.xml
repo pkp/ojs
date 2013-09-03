@@ -85,12 +85,12 @@ Please follow the following protocol for making electronic revisions to your man
 	<h4>A. When the Author Provides a Link with the Reference</h4>
 	<ol>
 	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared above.</li>
 	</ol>
 	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
 	<ol>
 		<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., "Peace"—then copy author and title).</li>
-		<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search.</li>
+		<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22</li>
 
 	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
 	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
