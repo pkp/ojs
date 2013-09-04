@@ -25,9 +25,8 @@ class PiwikPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		if (!Config::getVar('general', 'installed')) return false;
-		$this->addLocaleData();
-		if ($success) {
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
+		if ($success && $this->getEnabled()) {
 			// Insert Piwik page tag to common footer
 			HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertFooter'));
 
