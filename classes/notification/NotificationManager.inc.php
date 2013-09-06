@@ -36,11 +36,12 @@ class NotificationManager extends PKPNotificationManager {
 	function getNotificationUrl($request, $notification) {
 		$router = $request->getRouter();
 		$dispatcher = $router->getDispatcher();
-		$context = $request->getContext();
+		$contextDao = Application::getContextDAO();
+		$context = $contextDao->getById($notification->getContextId());
 
 		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
-				return $dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'current');
+				return $dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'issue', 'current');
 			default:
 				return parent::getNotificationUrl($request, $notification);
 		}
