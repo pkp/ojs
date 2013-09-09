@@ -85,7 +85,7 @@ class AppLocale extends PKPLocale {
 				$site =& Request::getSite();
 
 				if (!isset($locale)) {
-					$session->getSessionVar('currentLocale');
+					$locale = $session->getSessionVar('currentLocale');
 				}
 
 				if (!isset($locale)) {
