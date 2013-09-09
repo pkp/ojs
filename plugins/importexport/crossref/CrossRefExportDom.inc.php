@@ -155,8 +155,8 @@ class CrossRefExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $journalIssueNode, 'issue', $issue->getNumber());
 
-		if ($issue->getDatePublished()) {
-			$issueDoiNode =& CrossRefExportDom::generateDOIdataDom($doc, $issue->getPubId('doi'), Request::url(null, 'issue', 'view', $issue->getBestIssueId($journal)));
+		if ($issue->getDatePublished() && $issue->getPubId('doi')) {
+			$issueDoiNode = CrossRefExportDom::generateDOIdataDom($doc, $issue->getPubId('doi'), Request::url(null, 'issue', 'view', $issue->getBestIssueId($journal)));
 			XMLCustomWriter::appendChild($journalIssueNode, $issueDoiNode);
 		}
 
@@ -258,12 +258,14 @@ class CrossRefExportDom {
 				}
 
 				// DOI data node
-				$suppFileUrl = Request::url(
-					null, 'article', 'downloadSuppFile',
-					array($article->getId(), $suppFile->getBestSuppFileId($journal))
-				);
-				$suppFileDoiNode =& CrossRefExportDom::generateDOIdataDom($doc, $suppFile->getPubId('doi'), $suppFileUrl);
-				XMLCustomWriter::appendChild($componentNode, $suppFileDoiNode);
+				if ($suppFile->getPubId('doi')) {
+					$suppFileUrl = Request::url(
+						null, 'article', 'downloadSuppFile',
+						array($article->getId(), $suppFile->getBestSuppFileId($journal))
+					);
+					$suppFileDoiNode = CrossRefExportDom::generateDOIdataDom($doc, $suppFile->getPubId('doi'), $suppFileUrl);
+					XMLCustomWriter::appendChild($componentNode, $suppFileDoiNode);
+				}
 
 				XMLCustomWriter::appendChild($componentListNode, $componentNode);
 				unset($componentNode);
