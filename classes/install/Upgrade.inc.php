@@ -894,7 +894,7 @@ class Upgrade extends Installer {
 					$token = $accessKey->getKeyHash();
 
 					// Delete the access key -- we don't need it anymore
-					$accessKeyDao->deleteAccessKey($accessKey);
+					$accessKeyDao->deleteObject($accessKey);
 
 					$notificationDao->update(
 						'INSERT INTO notification_mail_list
