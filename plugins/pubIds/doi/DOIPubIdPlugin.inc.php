@@ -151,6 +151,10 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				// %j - journal initials
 				$doiSuffix = String::regexp_replace('/%j/', String::strtolower($journal->getLocalizedSetting('initials', $journal->getPrimaryLocale())), $doiSuffix);
 
+				// %x - custom identifier
+				if ($pubObject->getStoredPubId('publisher-id')) {
+					$doiSuffix = String::regexp_replace('/%x/', $pubObject->getStoredPubId('publisher-id'), $doiSuffix);
+				}
 				if ($issue) {
 					// %v - volume number
 					$doiSuffix = String::regexp_replace('/%v/', $issue->getVolume(), $doiSuffix);
@@ -159,19 +163,18 @@ class DOIPubIdPlugin extends PubIdPlugin {
 					// %Y - year
 					$doiSuffix = String::regexp_replace('/%Y/', $issue->getYear(), $doiSuffix);
 				}
-
 				if ($article) {
 					// %a - article id
 					$doiSuffix = String::regexp_replace('/%a/', $article->getId(), $doiSuffix);
 					// %p - page number
-					$doiSuffix = String::regexp_replace('/%p/', $article->getPages(), $doiSuffix);
+					if ($article->getPages()) {
+						$doiSuffix = String::regexp_replace('/%p/', $article->getPages(), $doiSuffix);
+					}
 				}
-
 				if ($galley) {
 					// %g - galley id
 					$doiSuffix = String::regexp_replace('/%g/', $galley->getId(), $doiSuffix);
 				}
-
 				if ($suppFile) {
 					// %s - supp file id
 					$doiSuffix = String::regexp_replace('/%s/', $suppFile->getId(), $doiSuffix);
