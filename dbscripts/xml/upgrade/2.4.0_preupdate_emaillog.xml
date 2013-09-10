@@ -14,8 +14,8 @@
 <data>
 	<!-- Bug #6021: port logs to pkp-lib -->
 	<sql>
-		<!-- article_email_log -->
-		<rename table="article_email_log" column="article_id" to="assoc_id" />
+		<!-- Reuse existing assoc_id column; see #8420 -->
+		<query>UPDATE article_email_log SET assoc_id=article_id</query>
 		<rename table="article_email_log" to="email_log" />
 	</sql>
 </data>
