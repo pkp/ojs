@@ -115,7 +115,7 @@ class RegistrationHandler extends UserHandler {
 	 */
 	function registrationDisabled($args, $request) {
 		$this->setupTemplate($request, true);
-		$templateMgr = TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'user.register');
 		$templateMgr->assign('errorMsg', 'user.register.registrationDisabled');
 		$templateMgr->assign('backLink', $request->url(null, 'login'));
