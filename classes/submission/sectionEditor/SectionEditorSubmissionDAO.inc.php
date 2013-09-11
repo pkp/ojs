@@ -784,39 +784,39 @@ class SectionEditorSubmissionDAO extends DAO {
 				break;
 		}
 
-                $interestJoinSql = ($joinInterests ? '
-                                        LEFT JOIN user_interests ui ON (ui.user_id = u.user_id)
-                                        LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = ui.controlled_vocab_entry_id) ':'');
+		$interestJoinSql = ($joinInterests ? '
+					LEFT JOIN user_interests ui ON (ui.user_id = u.user_id)
+					LEFT JOIN controlled_vocab_entry_settings cves ON (cves.controlled_vocab_entry_id = ui.controlled_vocab_entry_id) ':'');
 
-                $result =& $this->retrieveRange(
-                        'SELECT DISTINCT
-                                u.user_id,
-                                u.last_name,
-                                ar.review_id,
-                                (SELECT AVG(ra.quality) FROM review_assignments ra WHERE ra.reviewer_id = u.user_id) AS average_quality,
-                                (SELECT COUNT(ac.review_id) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS completed,
-                                (SELECT COUNT(ac.review_id) FROM review_assignments ac, articles a WHERE
-                                        ac.reviewer_id = u.user_id AND
-                                        ac.submission_id = a.article_id AND
-                                        ac.date_notified IS NOT NULL AND
-                                        ac.date_completed IS NULL AND
-                                        ac.cancelled = 0 AND
-                                        ac.declined = 0 AND
-                                        a.status <> '.STATUS_QUEUED.') AS incomplete,
-                                (SELECT MAX(ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS latest,
-                                (SELECT AVG(ac.date_completed-ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS average
-                         FROM users u
-                                LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
-                                LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
-                                LEFT JOIN roles r ON (r.user_id = u.user_id)
-                                LEFT JOIN articles a ON (ra.submission_id = a.article_id)
-                                '.$interestJoinSql.'
-                                WHERE u.user_id = r.user_id AND
-                                r.journal_id = ? AND
-                                r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, u.last_name, ar.review_id' .
-                        ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
-                        $paramArray, $rangeInfo
-                );
+		$result =& $this->retrieveRange(
+			'SELECT DISTINCT
+				u.user_id,
+				u.last_name,
+				ar.review_id,
+				(SELECT AVG(ra.quality) FROM review_assignments ra WHERE ra.reviewer_id = u.user_id) AS average_quality,
+				(SELECT COUNT(ac.review_id) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS completed,
+				(SELECT COUNT(ac.review_id) FROM review_assignments ac, articles a WHERE
+					ac.reviewer_id = u.user_id AND
+					ac.submission_id = a.article_id AND
+					ac.date_notified IS NOT NULL AND
+					ac.date_completed IS NULL AND
+					ac.cancelled = 0 AND
+					ac.declined = 0 AND
+					a.status <> '.STATUS_QUEUED.') AS incomplete,
+				(SELECT MAX(ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS latest,
+				(SELECT AVG(ac.date_completed-ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS average
+			 FROM users u
+				LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
+				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
+				LEFT JOIN roles r ON (r.user_id = u.user_id)
+				LEFT JOIN articles a ON (ra.submission_id = a.article_id)
+				'.$interestJoinSql.'
+				WHERE u.user_id = r.user_id AND
+				r.journal_id = ? AND
+				r.role_id = ? ' . $searchSql . 'GROUP BY u.user_id, u.last_name, ar.review_id' .
+			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
+			$paramArray, $rangeInfo
+		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnReviewerUserFromRow');
 		return $returner;
@@ -1027,19 +1027,19 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		// Get completion status
 		$result =& $this->retrieve(
-                        'SELECT r.reviewer_id, COUNT(*) AS incomplete
-                        FROM    review_assignments r,
-                                articles a
-                        WHERE   r.submission_id = a.article_id AND
-                                r.date_notified IS NOT NULL AND
-                                r.date_completed IS NULL AND
-                                r.cancelled = 0 AND
-                                r.declined = 0 AND
-                                a.status != '.STATUS_QUEUED.' AND
-                                a.journal_id = ?
-                        GROUP BY r.reviewer_id',
-                        (int) $journalId
-                );
+			'SELECT r.reviewer_id, COUNT(*) AS incomplete
+			FROM    review_assignments r,
+				articles a
+			WHERE   r.submission_id = a.article_id AND
+				r.date_notified IS NOT NULL AND
+				r.date_completed IS NULL AND
+				r.cancelled = 0 AND
+				r.declined = 0 AND
+				a.status != '.STATUS_QUEUED.' AND
+				a.journal_id = ?
+			GROUP BY r.reviewer_id',
+			(int) $journalId
+		);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['reviewer_id']])) $statistics[$row['reviewer_id']] = array();
