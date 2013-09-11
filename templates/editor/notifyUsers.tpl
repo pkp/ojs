@@ -76,6 +76,12 @@
 	</td>
 </tr>
 {/if}{* publishingMode is PUBLISHING_MODE_SUBSCRIPTION *}
+<tr valign="top">
+	<td><input type="checkbox" name="sendToMailList" /></td>
+	<td class="label">
+		{translate key="editor.notifyUsers.allMailingList" count=$allMailListCount|default:0}
+	</td>
+</tr>
 {if $senderEmail}
 	<tr valign="top">
 		<td><input type="checkbox" name="ccSelf" /></td>
