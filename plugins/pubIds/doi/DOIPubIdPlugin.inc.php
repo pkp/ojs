@@ -159,6 +159,11 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				// %j - journal initials
 				$doiSuffix = String::regexp_replace('/%j/', String::strtolower($journal->getAcronym($journal->getPrimaryLocale())), $doiSuffix);
 
+				// %x - custom identifier
+				if ($pubObject->getStoredPubId('publisher-id')) {
+					$doiSuffix = String::regexp_replace('/%x/', $pubObject->getStoredPubId('publisher-id'), $doiSuffix);
+				}
+
 				if ($issue) {
 					// %v - volume number
 					$doiSuffix = String::regexp_replace('/%v/', $issue->getVolume(), $doiSuffix);
@@ -172,7 +177,9 @@ class DOIPubIdPlugin extends PubIdPlugin {
 					// %a - article id
 					$doiSuffix = String::regexp_replace('/%a/', $article->getId(), $doiSuffix);
 					// %p - page number
-					$doiSuffix = String::regexp_replace('/%p/', $article->getPages(), $doiSuffix);
+					if ($article->getPages()) {
+						$doiSuffix = String::regexp_replace('/%p/', $article->getPages(), $doiSuffix);
+					}
 				}
 
 				if ($galley) {
