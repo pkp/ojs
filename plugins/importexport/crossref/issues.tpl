@@ -54,11 +54,12 @@ function toggleChecked() {
 	</tr>
 
 	{iterate from=issues item=issue}
+	{assign var="issueId" value=$issue->getId()}
 	<tr>
 		<td><input type="checkbox" name="issueId[]" value="{$issue->getId()}"/></td>
 		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"|default:"&mdash;"}</td>
-		<td>{$issue->getNumArticles()|escape}</td>
+		<td>{$numArticles[$issueId]|escape}</td>
 		<td align="right"><a href="{plugin_url path="exportIssue"|to_array:$issue->getId()}" class="action">{translate key="common.export"}</a></td>
 	</tr>
 	<tr>

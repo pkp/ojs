@@ -86,24 +86,48 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				break;
 			case 'issues':
 				// Display a list of issues for export
+				// that contain an article with DOI
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 				$issueDao = DAORegistry::getDAO('IssueDAO');
-				$issues = $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
-
-				$templateMgr->assign('issues', $issues);
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$allIssues =& $issueDao->getPublishedIssues($journal->getId());
+				$issues = array();
+				$numArticles = array();
+				while ($issue = $allIssues->next()) {
+					$issueArticles =& $publishedArticleDao->getPublishedArticles($issue->getId());
+					$issueArticlesNo = 0;
+					foreach ($issueArticles as $issueArticle) {
+						if ($issueArticle->getPubId('doi')) {
+							if (!in_array($issue, $issues)) $issues[] = $issue;
+							$issueArticlesNo++;
+						}
+					}
+					$numArticles[$issue->getId()] = $issueArticlesNo;
+				}
+				// Paginate issues.
+				$rangeInfo = Handler::getRangeInfo('issues');
+				import('lib.pkp.classes.core.VirtualArrayIterator');
+				$iterator = VirtualArrayIterator::factory($issues, $rangeInfo);
+				$templateMgr->assign('issues', $iterator);
+				$templateMgr->assign('numArticles', $numArticles);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 				break;
 			case 'articles':
-				// Display a list of articles for export
+				// Display a list of articles with DOI for export
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo($this->getRequest, 'articles');
-				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getId(), false);
-				$totalArticles = count($articleIds);
-				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+				$articleIterator = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
+				$articleIds = array();
+				while ($article = $articleIterator->next()) {
+					// Check whether there is a DOI.
+					if ($article->getPubId('doi')) {
+						$articleIds[] = $article->getId();
+					}
+				}
+				// Paginate articles.
+				$rangeInfo = Handler::getRangeInfo('articles');
 				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$articleSearch = new ArticleSearch();
-				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
-				$templateMgr->assign('articles', $iterator);
+				$iterator = VirtualArrayIterator::factory(ArticleSearch::formatResults($articleIds), $rangeInfo);
+				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 				break;
 			default:
@@ -196,21 +220,23 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		foreach ($issues as $issue) {
 			foreach ($sectionDao->getByIssueId($issue->getId()) as $section) {
 				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getId()) as $article) {
-					// Create the metadata node
-					// this does not need to be repeated for every article
-					// but its allowed to be and its simpler to do so
-					$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
-					$journalMetadataNode =& CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
-					XMLCustomWriter::appendChild($journalNode, $journalMetadataNode);
+					if ($article->getPubId('doi')) {
+						// Create the metadata node
+						// this does not need to be repeated for every article
+						// but its allowed to be and its simpler to do so
+						$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
+						$journalMetadataNode =& CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
+						XMLCustomWriter::appendChild($journalNode, $journalMetadataNode);
 
-					$journalIssueNode =& CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
-					XMLCustomWriter::appendChild($journalNode, $journalIssueNode);
+						$journalIssueNode =& CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
+						XMLCustomWriter::appendChild($journalNode, $journalIssueNode);
 
-					// Article node
-					$journalArticleNode =& CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
-					XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
+						// Article node
+						$journalArticleNode =& CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
+						XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 
-					XMLCustomWriter::appendChild($bodyNode, $journalNode);
+						XMLCustomWriter::appendChild($bodyNode, $journalNode);
+					}
 				}
 			}
 		}
