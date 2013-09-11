@@ -37,7 +37,10 @@
 	{elseif $storedPubId}
 		{$storedPubId|escape}
 	{else}
-		{$pubIdPlugin->getPubId($pubObject, true)|escape}
+		{$pubIdPlugin->getPubId($pubObject, true)|escape}<br />
+		<br />
+		{capture assign=translatedObjectType}{translate key="plugins.pubIds.urn.editor.urnObjectType"|cat:$pubObjectType}{/capture}
+		{translate key="plugins.pubIds.urn.editor.urnNotYetGenerated" pubObjectType=$translatedObjectType}
 	{/if}
 	<div class="separator"></div>
 	<!-- /URN -->
