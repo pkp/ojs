@@ -166,7 +166,7 @@ class Issue extends DataObject {
 		return $this->setData('current', $current);
 	}
 
- 	/**
+	/**
 	 * get date published
 	 * @return date
 	 */
@@ -182,7 +182,7 @@ class Issue extends DataObject {
 		return $this->setData('datePublished', $datePublished);
 	}
 
- 	/**
+	/**
 	 * get date the users were last notified
 	 * @return date
 	 */
@@ -198,7 +198,7 @@ class Issue extends DataObject {
 		return $this->setData('dateNotified', $dateNotified);
 	}
 
- 	/**
+	/**
 	 * get date the issue was last modified
 	 * @return date
 	 */
@@ -237,7 +237,7 @@ class Issue extends DataObject {
 		return $this->setData('accessStatus', $accessStatus);
 	}
 
- 	/**
+	/**
 	 * get open access date
 	 * @return date
 	 */
