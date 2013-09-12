@@ -54,7 +54,7 @@ class FunctionalLucenePluginInstantSearchTest extends FunctionalLucenePluginBase
 	 *   GIVEN I enabled the instant search feature
 	 */
 	private function enableInstantSearch() {
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		// Enable the search feature.
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'instantSearch', true);
 	}

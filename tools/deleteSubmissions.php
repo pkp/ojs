@@ -47,7 +47,7 @@ class SubmissionDeletionTool extends CommandLineTool {
 	 * Delete submission data and associated files
 	 */
 	function execute() {
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 
 		foreach($this->parameters as $articleId) {
 			$article = $articleDao->getById($articleId);

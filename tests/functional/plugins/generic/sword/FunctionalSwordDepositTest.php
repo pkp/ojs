@@ -49,8 +49,8 @@ class FunctionalSwordDepositTest extends PKPTestCase {
 		Registry::set('request', $mockRequest);
 
 		// Retrieve test article from test database.
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId(1);
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId(1);
 
 		// Create a SWORD deposit package.
 		$deposit = new OJSSwordDeposit($publishedArticle);

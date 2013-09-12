@@ -58,7 +58,7 @@ class FunctionalLucenePluginSimDocTest extends FunctionalLucenePluginBaseTestCas
 	 */
 	public function testSimilarDocuments() {
 		// Enable the "similar documents" feature.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'simdocs', true);
 
 		// Execute a simple search that returns at least one result.

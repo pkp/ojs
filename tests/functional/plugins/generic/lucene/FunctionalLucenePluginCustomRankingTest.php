@@ -47,7 +47,7 @@ class FunctionalLucenePluginCustomRankingTest extends FunctionalLucenePluginBase
 	 */
 	function testRankingWeightSelector() {
 		// Enable the custom ranking feature.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'customranking', true);
 
 		// Go to the section editing page.
@@ -91,7 +91,7 @@ class FunctionalLucenePluginCustomRankingTest extends FunctionalLucenePluginBase
 	 */
 	function testRankingWeightEffect() {
 		// Disable the custom ranking feature.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'customranking', false);
 
 		// Execute a search that shows four articles from four

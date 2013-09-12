@@ -363,7 +363,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	 */
 	function testPullIndexing() {
 		// Enable pull indexing.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullIndexing', true);
 
 		// Publish an article.
@@ -371,7 +371,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->publishArticle($this->_articleId);
 
 		// Check that the article is "dirty".
-		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
+		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		$article = $articleDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_DIRTY, $article->getData('indexingState'));
 
@@ -410,7 +410,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	 * immediately check indexing success.
 	 */
 	function _enablePushProcessing() {
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullIndexing', false);
 	}
 

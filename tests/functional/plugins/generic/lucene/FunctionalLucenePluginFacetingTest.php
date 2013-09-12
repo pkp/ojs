@@ -53,7 +53,7 @@ class FunctionalLucenePluginFacetingTest extends FunctionalLucenePluginBaseTestC
 	 *   GIVEN I enabled all facet categories
 	 */
 	private function enableFaceting() {
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		// Enable all available facet categories.
 		foreach($this->getAvailableFacetCategories() as $facetCategory) {
 			$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'facetCategory' . ucfirst($facetCategory), true);
@@ -86,7 +86,7 @@ class FunctionalLucenePluginFacetingTest extends FunctionalLucenePluginBaseTestC
 		$this->assertFacetCategoriesPresent($this->getAvailableFacetCategories());
 
 		// Disable one category.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'facetCategoryDiscipline', false);
 
 		// Repeat the same search query but now the discipline category should

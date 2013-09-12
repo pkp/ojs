@@ -53,7 +53,7 @@ class FunctionalLucenePluginSpellingTest extends FunctionalLucenePluginBaseTestC
 	 *   GIVEN I enabled the alternative spelling feature
 	 */
 	private function enableSpellcheck() {
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		// Enable the alternative spelling feature.
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'spellcheck', true);
 	}

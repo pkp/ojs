@@ -89,8 +89,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				// that contain an article with DOI
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 				$issueDao = DAORegistry::getDAO('IssueDAO');
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$allIssues =& $issueDao->getPublishedIssues($journal->getId());
+				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+				$allIssues = $issueDao->getPublishedIssues($journal->getId());
 				$issues = array();
 				$numArticles = array();
 				while ($issue = $allIssues->next()) {

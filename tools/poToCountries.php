@@ -69,8 +69,8 @@ class poToCountries extends CommandLineTool {
 		fclose($ih);
 
 		// Get the English map
-		$countryDao =& DAORegistry::getDAO('CountryDAO');
-		$countries =& $countryDao->getCountries();
+		$countryDao = DAORegistry::getDAO('CountryDAO');
+		$countries = $countryDao->getCountries();
 
 		// Generate a map of code => translation
 		$outputMap = array();

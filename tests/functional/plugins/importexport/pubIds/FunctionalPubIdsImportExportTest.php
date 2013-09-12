@@ -51,7 +51,7 @@ class FunctionalPubIdsImportExportTest extends FunctionalImportExportBaseTestCas
 	}
 
 	public function testPubIdsImport() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
 		PKPTestHelper::xdebugScream(false);
 		$journalDao->deleteAllPubIds(1, 'other::urn');
 		PKPTestHelper::xdebugScream(true);

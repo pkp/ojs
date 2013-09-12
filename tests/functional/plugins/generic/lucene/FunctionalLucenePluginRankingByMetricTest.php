@@ -40,7 +40,7 @@ class FunctionalLucenePluginRankingByMetricTest extends FunctionalLucenePluginBa
 		parent::setUp();
 
 		// Make sure that pull indexing is disabled by default.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'pullIndexing', false);
 
 		// Move existing external field files to a temporary directory.
@@ -120,7 +120,7 @@ class FunctionalLucenePluginRankingByMetricTest extends FunctionalLucenePluginBa
 		}
 
 		// Disable the ranking-by-metric feature.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'rankingByMetric', false);
 
 		// Check that the boost file is empty.
@@ -155,7 +155,7 @@ class FunctionalLucenePluginRankingByMetricTest extends FunctionalLucenePluginBa
 	 */
 	function testUpdateBoostFile() {
 		// Disable the ranking-by-metric feature.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'rankingByMetric', false);
 
 		// Open the plugin settings page.
@@ -230,7 +230,7 @@ class FunctionalLucenePluginRankingByMetricTest extends FunctionalLucenePluginBa
 		$this->copyTestRankingFile();
 
 		// Disable the ranking-by-metric feature.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'rankingByMetric', false);
 
 		// Check the initial ranking.

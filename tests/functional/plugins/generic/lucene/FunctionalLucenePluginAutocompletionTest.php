@@ -61,7 +61,7 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 	 *   GIVEN I enabled the auto-completion feature
 	 */
 	private function enableAutocompletion() {
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		// Enable the search feature.
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'autosuggest', true);
 		// Use the faceting implementation so that our scope tests will work.

@@ -49,7 +49,7 @@ class FunctionalLucenePluginHighlightingTest extends FunctionalLucenePluginBaseT
 	 */
 	public function testHighlighting() {
 		// Enable the "highlighting" feature.
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(0, 'luceneplugin', 'highligthing', true);
 
 		// Execute a simple search that returns at least one result.
