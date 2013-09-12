@@ -15,7 +15,7 @@
 
 
 class PluginSettingsDAO extends DAO {
-	function &_getCache($journalId, $pluginName) {
+	function _getCache($journalId, $pluginName) {
 		static $settingCache;
 
 		if (!isset($settingCache)) {
@@ -25,7 +25,7 @@ class PluginSettingsDAO extends DAO {
 			$settingCache[$journalId] = array();
 		}
 		if (!isset($settingCache[$journalId][$pluginName])) {
-			$cacheManager =& CacheManager::getManager();
+			$cacheManager = CacheManager::getManager();
 			$settingCache[$journalId][$pluginName] =& $cacheManager->getFileCache(
 				'pluginSettings-' . $journalId, $pluginName,
 				array($this, '_cacheMiss')
@@ -45,14 +45,14 @@ class PluginSettingsDAO extends DAO {
 		$pluginName = strtolower_codesafe($pluginName);
 
 		// Retrieve the setting.
-		$cache =& $this->_getCache($journalId, $pluginName);
+		$cache = $this->_getCache($journalId, $pluginName);
 		return $cache->get($name);
 	}
 
 	function _cacheMiss($cache, $id) {
 		$contextParts = explode('-', $cache->getContext());
 		$journalId = array_pop($contextParts);
-		$settings =& $this->getPluginSettings($journalId, $cache->getCacheId());
+		$settings = $this->getPluginSettings($journalId, $cache->getCacheId());
 		if (!isset($settings[$id])) {
 			// Make sure that even null values are cached
 			$cache->setCache($id, null);
@@ -102,7 +102,7 @@ class PluginSettingsDAO extends DAO {
 		// Normalize the plug-in name to lower case.
 		$pluginName = strtolower_codesafe($pluginName);
 
-		$cache =& $this->_getCache($journalId, $pluginName);
+		$cache = $this->_getCache($journalId, $pluginName);
 		$cache->setCache($name, $value);
 
 		$result = $this->retrieve(
@@ -143,7 +143,7 @@ class PluginSettingsDAO extends DAO {
 		// Normalize the plug-in name to lower case.
 		$pluginName = strtolower_codesafe($pluginName);
 
-		$cache =& $this->_getCache($journalId, $pluginName);
+		$cache = $this->_getCache($journalId, $pluginName);
 		$cache->setCache($name, null);
 
 		return $this->update(
@@ -162,7 +162,7 @@ class PluginSettingsDAO extends DAO {
 		$pluginName = strtolower_codesafe($pluginName);
 
 		if ( $journalId ) {
-			$cache =& $this->_getCache($journalId, $pluginName);
+			$cache = $this->_getCache($journalId, $pluginName);
 			$cache->flush();
 
 			return $this->update(
@@ -170,7 +170,7 @@ class PluginSettingsDAO extends DAO {
 				array($journalId, $pluginName)
 			);
 		} else {
-			$cacheManager =& CacheManager::getManager();
+			$cacheManager = CacheManager::getManager();
 			// NB: this actually deletes all plugins' settings cache
 			$cacheManager->flush('pluginSettings', CACHE_TYPE_FILE);
 

@@ -69,8 +69,8 @@ class poToCurrencies extends CommandLineTool {
 		fclose($ih);
 
 		// Get the English map
-		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
-		$currencies =& $currencyDao->getCurrencies();
+		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
+		$currencies = $currencyDao->getCurrencies();
 
 		// Generate a map of code => translation
 		$outputMap = array();

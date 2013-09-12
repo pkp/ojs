@@ -37,7 +37,7 @@ class SubscriptionTypeForm extends Form {
 		);
 
 		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
-		$currencies =& $currencyDao->getCurrencies();
+		$currencies = $currencyDao->getCurrencies();
 		$this->validCurrencies = array();
 		while (list(, $currency) = each($currencies)) {
 			$this->validCurrencies[$currency->getCodeAlpha()] = $currency->getName() . ' (' . $currency->getCodeAlpha() . ')';

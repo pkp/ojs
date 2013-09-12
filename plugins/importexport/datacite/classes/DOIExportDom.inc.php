@@ -114,7 +114,7 @@ class DOIExportDom {
 	 * Get the object cache.
 	 * @return PubObjectCache
 	 */
-	function &getCache() {
+	function getCache() {
 		return $this->_cache;
 	}
 
@@ -305,7 +305,7 @@ class DOIExportDom {
 	 * @return array
 	 */
 	function &retrieveArticlesByIssue(&$issue) {
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 		$issueId = $issue->getId();
 		if (!$cache->isCached('articlesByIssue', $issueId)) {
 			$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
@@ -326,7 +326,7 @@ class DOIExportDom {
 	 * @return array
 	 */
 	function &retrieveGalleysByArticle(&$article) {
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 		$articleId = $article->getId();
 		if (!$cache->isCached('galleysByArticle', $articleId)) {
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */

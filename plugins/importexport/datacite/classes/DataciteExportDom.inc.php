@@ -267,7 +267,7 @@ class DataciteExportDom extends DOIExportDom {
 	 * @return array
 	 */
 	function &_retrieveSuppFilesByArticle(&$article) {
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 		$articleId = $article->getId();
 		if (!$cache->isCached('suppFilesByArticle', $articleId)) {
 			$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
@@ -306,7 +306,7 @@ class DataciteExportDom extends DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_creatorsElement(&$object, $objectLocalePrecedence, $publisher) {
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 
 		$creators = array();
 		switch (true) {
@@ -366,7 +366,7 @@ class DataciteExportDom extends DOIExportDom {
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_titlesElement(&$object, $objectLocalePrecedence) {
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 
 		// Get an array of localized titles.
 		$alternativeTitle = null;

@@ -148,7 +148,7 @@ class SubscriptionType extends DataObject {
 	 */
 	function getCurrencyString() {
 		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
-		$currency =& $currencyDao->getCurrencyByAlphaCode($this->getData('currencyCodeAlpha'));
+		$currency = $currencyDao->getCurrencyByAlphaCode($this->getData('currencyCodeAlpha'));
 
 		if ($currency != null) {
 			return $currency->getName();
@@ -163,7 +163,7 @@ class SubscriptionType extends DataObject {
 	 */
 	function getCurrencyStringShort() {
 		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
-		$currency =& $currencyDao->getCurrencyByAlphaCode($this->getData('currencyCodeAlpha'));
+		$currency = $currencyDao->getCurrencyByAlphaCode($this->getData('currencyCodeAlpha'));
 
 		if ($currency != null) {
 			return $currency->getCodeAlpha();

@@ -639,7 +639,7 @@ class SolrWebService extends XmlWebService {
 	 * @return array
 	 */
 	function getAvailableFields($fieldType) {
-		$cache =& $this->_getCache();
+		$cache = $this->_getCache();
 		$fieldCache = $cache->get($fieldType);
 		return $fieldCache;
 	}
@@ -648,7 +648,7 @@ class SolrWebService extends XmlWebService {
 	 * Flush the field cache.
 	 */
 	function flushFieldCache() {
-		$cache =& $this->_getCache();
+		$cache = $this->_getCache();
 		$cache->flush();
 	}
 
@@ -850,10 +850,10 @@ class SolrWebService extends XmlWebService {
 	 * Get the field cache.
 	 * @return FileCache
 	 */
-	function &_getCache() {
+	function _getCache() {
 		if (!isset($this->_fieldCache)) {
 			// Instantiate a file cache.
-			$cacheManager =& CacheManager::getManager();
+			$cacheManager = CacheManager::getManager();
 			$this->_fieldCache = $cacheManager->getFileCache(
 				'plugins-lucene', 'fieldCache',
 				array($this, '_cacheMiss')

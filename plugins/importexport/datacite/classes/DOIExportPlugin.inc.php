@@ -44,7 +44,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	/** @var PubObjectCache */
 	var $_cache;
 
-	function &getCache() {
+	function getCache() {
 		if (!is_a($this->_cache, 'PubObjectCache')) {
 			// Instantiate the cache.
 			if (!class_exists('PubObjectCache')) { // Bug #7848
@@ -512,7 +512,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		}
 
 		// Add the article file to the cache.
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 		$cache->add($articleFile, $articleData['article']);
 
 		return $articleData;
@@ -1108,7 +1108,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Filter and cache issues.
 		$nullVar = null;
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 		$issueData = array();
 		foreach ($issues as $issue) {
 			$cache->add($issue, $nullVar);
@@ -1203,7 +1203,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function &_prepareArticleDataByArticleId($articleId, &$journal) {
 		// Get the cache.
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 
 		// Retrieve article if not yet cached.
 		$article = null;
@@ -1237,7 +1237,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$nullVar = null;
 
 		// Add the article to the cache.
-		$cache =& $this->getCache();
+		$cache = $this->getCache();
 		$cache->add($article, $nullVar);
 
 		// Retrieve the issue.

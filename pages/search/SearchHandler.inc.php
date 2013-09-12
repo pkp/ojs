@@ -348,7 +348,7 @@ class SearchHandler extends Handler {
 		$journal = $request->getJournal();
 
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');
-		$cache =& $categoryDao->getCache();
+		$cache = $categoryDao->getCache();
 
 		if ($journal || !$site->getSetting('categoriesEnabled') || !$cache || !isset($cache[$categoryId])) {
 			$request->redirect('index');
