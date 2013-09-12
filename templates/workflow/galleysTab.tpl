@@ -34,7 +34,7 @@ $(function() {ldelim}
 					submissionId=$galley->getSubmissionId()
 					stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION}">{$galley->getLabel()|escape}</a>
 			</li>
-		{/foreach}
+		{/iterate}
 	</ul>
 </div>
 
