@@ -1519,10 +1519,10 @@ class SolrWebService extends XmlWebService {
 		$router = $request->getRouter(); /* @var $router PageRouter */
 
 		// Add galley files
-		$fileDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleys = $fileDao->getGalleysByArticle($article->getId());
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleys = $articleGalleyDao->getBySubmissionId($article->getId());
 		$galleyList = null;
-		foreach ($galleys as $galley) { /* @var $galley ArticleGalley */
+		while ($galley = $galleys->next()) { /* @var $galley ArticleGalley */
 			$locale = $galley->getLocale();
 			$galleyUrl = $router->url($request, $journal->getPath(), 'article', 'download', array(intval($article->getId()), intval($galley->getId())));
 			if (!empty($locale) && !empty($galleyUrl)) {

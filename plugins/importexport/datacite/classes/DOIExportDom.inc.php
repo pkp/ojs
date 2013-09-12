@@ -330,10 +330,9 @@ class DOIExportDom {
 		$articleId = $article->getId();
 		if (!$cache->isCached('galleysByArticle', $articleId)) {
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-			$galleys =& $galleyDao->getGalleysByArticle($articleId);
-			foreach($galleys as $galley) {
+			$galleys = $galleyDao->getBySubmissionId($articleId);
+			while ($galley = $galleys->next()) {
 				$cache->add($galley, $article);
-				unset($galley);
 			}
 			$cache->markComplete('galleysByArticle', $articleId);
 		}

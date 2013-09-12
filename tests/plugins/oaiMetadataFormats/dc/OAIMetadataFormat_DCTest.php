@@ -177,11 +177,12 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 
 		// Create a mocked ArticleGalleyDAO that returns our test data.
 		import('classes.article.ArticleGalleyDAO');
-		$articleGalleyDao = $this->getMock('ArticleGalleyDAO', array('getGalleysByArticle'));
+		$articleGalleyDao = $this->getMock('ArticleGalleyDAO', array('getBySubmissionId'));
 		$articleGalleyDao->expects($this->any())
-		                 ->method('getGalleysByArticle')
+		                 ->method('getBySubmissionId')
 		                 ->will($this->returnValue($galleys));
 		DAORegistry::registerDAO('ArticleGalleyDAO', $articleGalleyDao);
+		// FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
 
 		// Create a mocked PublishedArticleDAO that returns our test article.
 		import('classes.article.PublishedArticleDAO');

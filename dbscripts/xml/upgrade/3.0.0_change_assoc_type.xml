@@ -19,6 +19,16 @@
 		<query>UPDATE event_log SET assoc_type = 1048585 WHERE assoc_type = 257</query>
 		<query>UPDATE signoffs SET assoc_type = 1048585 WHERE assoc_type = 257</query>
 	</sql>
+	<!-- synchronize the ASSOC_TYPE_GALLEY constant to ASSOC_TYPE_REPRESENTATION defined in PKPApplication -->
+	<sql>
+		<query>UPDATE controlled_vocabs SET assoc_type = 521 WHERE assoc_type = 260</query>
+		<query>UPDATE notifications SET assoc_type = 521 WHERE assoc_type = 260</query>
+		<query>UPDATE notes SET assoc_type = 521 WHERE assoc_type = 260</query>
+		<query>UPDATE submission_files SET assoc_type = 521 WHERE assoc_type = 260</query>
+		<query>UPDATE email_log SET assoc_type = 521 WHERE assoc_type = 260</query>
+		<query>UPDATE event_log SET assoc_type = 521 WHERE assoc_type = 260</query>
+		<query>UPDATE signoffs SET assoc_type = 521 WHERE assoc_type = 260</query>
+	</sql>
 	<!-- synchronize the ASSOC_TYPE_ANNOUNCEMENT constant change -->
 	<sql>
 		<query>UPDATE notifications SET assoc_type = 522 WHERE assoc_type = 258</query>

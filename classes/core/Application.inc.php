@@ -21,11 +21,11 @@ define('PHP_REQUIRED_VERSION', '5.2.0');
 
 define('ASSOC_TYPE_ARTICLE',		ASSOC_TYPE_SUBMISSION);
 define('ASSOC_TYPE_PUBLISHED_ARTICLE',	ASSOC_TYPE_PUBLISHED_SUBMISSION);
+define('ASSOC_TYPE_GALLEY',		ASSOC_TYPE_REPRESENTATION);
 
 define('ASSOC_TYPE_JOURNAL',		0x0000100);
 define('ASSOC_TYPE_SECTION',		0x0000103);
 define('ASSOC_TYPE_ISSUE',		0x0000103);
-define('ASSOC_TYPE_GALLEY',		0x0000104);
 define('ASSOC_TYPE_ISSUE_GALLEY',	0x0000105);
 define('ASSOC_TYPE_SUPP_FILE',		0x0000106);
 
@@ -217,6 +217,13 @@ class Application extends PKPApplication {
 	 */
 	static function getSubmissionDAO() {
 		return DAORegistry::getDAO('ArticleDAO');
+	}
+
+	/**
+	 * Get the representation DAO.
+	 */
+	static function getRepresentationDAO() {
+		return DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
 	/**

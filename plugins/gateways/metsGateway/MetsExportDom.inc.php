@@ -69,7 +69,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($pDiv, 'DMDID', 'A-'.$article->getId());
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$i = 0;
-		$galleysArray =& $articleGalleyDao->getGalleysByArticle($article->getId());
+		$galleysArray = $articleGalleyDao->getBySubmissionId($article->getId())->toArray();
 		while ($i < sizeof($galleysArray)) {
 			MetsExportDom::generateArticleFileDiv($doc, $pDiv, $galleysArray[$i]);
 			if($galleysArray[$i]->isHTMLGalley()) {
@@ -434,7 +434,7 @@ class MetsExportDom {
 	function generateArticleFilesDom(&$doc, $root, $article, &$issue) {
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$i = 0;
-		$galleysArray =& $articleGalleyDao->getGalleysByArticle($article->getId());
+		$galleysArray = $articleGalleyDao->getBySubmissionId($article->getId())->toArray();
 		while ($i < sizeof($galleysArray)) {
 			if(!$galleysArray[$i]->isHTMLGalley()) MetsExportDom::generateArticleFileDom($doc, $root, $article, $galleysArray[$i], null);
 			$i++;
@@ -451,7 +451,7 @@ class MetsExportDom {
 	function generateArticleHtmlGalleyFilesDom(&$doc, $root, $article, &$issue) {
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$i = 0;
-		$galleysArray =& $articleGalleyDao->getGalleysByArticle($article->getId());
+		$galleysArray = $articleGalleyDao->getBySubmissionId($article->getId())->toArray();
 		while ($i < sizeof($galleysArray)) {
 			if($galleysArray[$i]->isHTMLGalley()) {
 				MetsExportDom::generateArticleFileDom($doc, $root, $article, $galleysArray[$i], 'html');

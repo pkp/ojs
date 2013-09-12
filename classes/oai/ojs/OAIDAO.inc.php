@@ -234,9 +234,9 @@ class OAIDAO extends PKPOAIDAO {
 		$record->sets = array(urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev()));
 
 		if ($isRecord) {
-			$publishedArticle =& $this->publishedArticleDao->getPublishedArticleByArticleId($articleId);
-			$issue =& $this->getIssue($row['issue_id']);
-			$galleys =& $this->articleGalleyDao->getGalleysByArticle($articleId);
+			$publishedArticle = $this->publishedArticleDao->getPublishedArticleByArticleId($articleId);
+			$issue = $this->getIssue($row['issue_id']);
+			$galleys = $this->articleGalleyDao->getBySubmissionId($articleId)->toArray();
 
 			$record->setData('article', $publishedArticle);
 			$record->setData('journal', $journal);

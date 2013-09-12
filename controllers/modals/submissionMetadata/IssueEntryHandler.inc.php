@@ -44,9 +44,9 @@ class IssueEntryHandler extends PublicationEntryHandler {
 
 		// load in any galley formats assigned to this published article
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalleys = $galleyDao->getGalleysByArticle($submission->getId());
+		$articleGalleys = $galleyDao->getBySubmissionId($submission->getId());
 
-		$templateMgr->assign('galleys', $articleGalleys);
+		$templateMgr->assign('galleys', $articleGalleys->toArray());
 
 		$application = Application::getApplication();
 		$request = $application->getRequest();
@@ -73,9 +73,9 @@ class IssueEntryHandler extends PublicationEntryHandler {
 		$json = new JSONMessage();
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleys = $galleyDao->getGalleysByArticle($submission->getId());
+		$galleys = $galleyDao->getBySubmissionId($submission->getId());
 		$formats = array();
-		foreach ($galleys as $galley) {
+		while ($galley = $galleys->next()) {
 			$formats[$galley->getId()] = $galley->getLocalizedName();
 		}
 		$json->setStatus(true);

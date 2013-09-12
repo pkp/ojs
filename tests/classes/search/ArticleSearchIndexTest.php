@@ -421,7 +421,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	private function registerFileDAOs($expectMethodCall) {
 		// Mock file DAOs.
 		$suppFileDao = $this->getMock('SuppFileDAO', array('getSuppFilesByArticle'), array(), '', false);
-		$articleGalleyDao = $this->getMock('ArticleGalleyDAO', array('getGalleysByArticle'), array(), '', false);
+		$articleGalleyDao = $this->getMock('ArticleGalleyDAO', array('getBySubmissionId'), array(), '', false);
 
 		// Make sure that the DAOs are being called.
 		if ($expectMethodCall) {
@@ -433,8 +433,9 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		            ->method('getSuppFilesByArticle')
 		            ->will($this->returnValue(array()));
 		$articleGalleyDao->expects($expectation)
-		                 ->method('getGalleysByArticle')
+		                 ->method('getBySubmissionId')
 		                 ->will($this->returnValue(array()));
+		// FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
 		DAORegistry::registerDAO('SuppFileDAO', $suppFileDao);
 		DAORegistry::registerDAO('ArticleGalleyDAO', $articleGalleyDao);
 	}

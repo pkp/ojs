@@ -143,9 +143,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Format
 		if (is_a($article, 'PublishedArticle')) {
 			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-			$galleys = $articleGalleyDao->getGalleysByArticle($article->getId());
+			$galleys = $articleGalleyDao->getBySubmissionId($article->getId());
 			$formats = array();
-			foreach ($galleys as $galley) {
+			while ($galley = $galleys->next()) {
 				$dc11Description->addStatement('dc:format', $galley->getFileType());
 			}
 		}
@@ -178,7 +178,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$suppFiles = array();
 		if (is_a($article, 'PublishedArticle')) {
 			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-			$galleys = $articleGalleyDao->getGalleysByArticle($article->getId());
+			$galleys = $articleGalleyDao->getBySubmissionId($article->getId())->toArray();
 			$suppFiles = $article->getSuppFiles();
 		}
 

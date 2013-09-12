@@ -451,7 +451,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	 */
 	private function _registerMockArticleGalleyDAO() {
 		// Mock an ArticleGalleyDAO.
-		$galleyDao = $this->getMock('ArticleGalleyDAO', array('getGalleysByArticle'), array(), '', false);
+		$galleyDao = $this->getMock('ArticleGalleyDAO', array('getBySubmissionId'), array(), '', false);
 
 		// Mock a list of supplementary files.
 		$galley1 = new ArticleGalley();
@@ -470,6 +470,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		$galleyDao->expects($this->any())
 		          ->method('getGalleysByArticle')
 		          ->will($this->returnValue($galleys));
+		// FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
 
 		// Register the mock DAO.
 		DAORegistry::registerDAO('ArticleGalleyDAO', $galleyDao);

@@ -1055,16 +1055,14 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$galleys = array();
 		foreach($allArticles as $article) {
 			// Retrieve galleys for the article.
-			$articleGalleys =& $galleyDao->getGalleysByArticle($article->getId());
+			$galleys = $galleyDao->getBySubmissionId($article->getId());
 
 			// Filter only galleys that have a DOI assigned.
-			foreach ($articleGalleys as $galley) {
+			while ($galley = $galleys->next()) {
 				if ($galley->getPubId('doi')) {
-					$galleys[] =& $galley;
+					$galleys[] = $galley;
 				}
-				unset($galley);
 			}
-			unset($article, $articleGalleys);
 		}
 		unset($allArticles);
 

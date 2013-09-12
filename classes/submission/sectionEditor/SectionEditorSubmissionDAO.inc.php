@@ -127,7 +127,7 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 		}
 
 		// Layout Editing
-		$sectionEditorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['submission_id']));
+		$sectionEditorSubmission->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'])->toArray());
 
 		// Proof Assignment
 		HookRegistry::call('SectionEditorSubmissionDAO::_returnSectionEditorSubmissionFromRow', array(&$sectionEditorSubmission, &$row));

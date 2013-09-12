@@ -58,7 +58,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		);
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleys = $galleyDao->getGalleysByArticle($submission->getId());
+		$galleys = $galleyDao->getBySubmissionId($submission->getId());
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('galleys', $galleys);
 
@@ -103,7 +103,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$templateMgr = TemplateManager::getManager($request);
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$galleys = $galleyDao->getGalleysByArticle($submission->getId());
+		$galleys = $galleyDao->getBySubmissionId($submission->getId());
 		$templateMgr->assign('submission', $submission);
 		$templateMgr->assign('galleys', $galleys);
 		$templateMgr->assign('currentGalleyTabId', (int) $request->getUserVar('currentGalleyTabId'));

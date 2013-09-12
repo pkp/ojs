@@ -26,7 +26,7 @@ $(function() {ldelim}
 </script>
 <div id="galleyTabs">
 	<ul>
-		{foreach from=$galleys item=galley}
+		{iterate from=galleys item=galley}
 			<li>
 				<a id="galley{$galley->getId()|escape}"
 					href="{url router=$smarty.const.ROUTE_PAGE op="fetchGalley"

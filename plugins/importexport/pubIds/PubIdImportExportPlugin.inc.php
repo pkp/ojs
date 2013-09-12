@@ -148,8 +148,9 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				$this->generatePubId($doc, $pubIdsNode, $publishedArticle, $journal->getId());
 
 				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-				foreach ($articleGalleyDao->getGalleysByArticle($publishedArticle->getId()) as $articleGalley) {
-					$this->generatePubId($doc, $pubIdsNode, $articleGalley, $journal->getId());
+				$galleys = $articleGalleyDao->getBySubmissionId($publishedArticle->getId());
+				while ($galley = $galleys->next()) {
+					$this->generatePubId($doc, $pubIdsNode, $galley, $journal->getId());
 				}
 
 				$suppFileDao = DAORegistry::getDAO('SuppFileDAO');

@@ -516,7 +516,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$publishedArticle->setSeq($row['seq']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 
-		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['submission_id']));
+		$publishedArticle->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'])->toArray());
 
 		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
 		return $publishedArticle;

@@ -176,6 +176,7 @@
 
 	<upgrade minversion="2.3.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type_metrics.xml" condition="return $installer->tableExists('metrics');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
 		<code function="migrateArticleMetadata" />
 		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" condition="return !$installer->tableExists('user_user_groups');" />

@@ -16,15 +16,11 @@
 import('classes.article.ArticleGalley');
 
 class ArticleGalleyDAO extends DAO {
-	/** Helper file DAOs. */
-	var $articleFileDao;
-
 	/**
 	 * Constructor.
 	 */
 	function ArticleGalleyDAO() {
 		parent::DAO();
-		$this->articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 	}
 
 	/**
@@ -38,28 +34,26 @@ class ArticleGalleyDAO extends DAO {
 	/**
 	 * Retrieve a galley by ID.
 	 * @param $galleyId int
-	 * @param $articleId int optional
+	 * @param $submissionId int optional
 	 * @return ArticleGalley
 	 */
-	function getById($galleyId, $articleId = null) {
+	function getById($galleyId, $submissionId = null) {
 		$params = array((int) $galleyId);
-		if ($articleId !== null) $params[] = (int) $articleId;
+		if ($articleId !== null) $params[] = (int) $submissionId;
 		$result = $this->retrieve(
-			'SELECT	g.*
-			FROM	submission_galleys g
-			WHERE	g.galley_id = ?' .
-			($articleId !== null?' AND g.submission_id = ?':''),
+			'SELECT	*
+			FROM	submission_galleys
+			WHERE	galley_id = ?' .
+			($submissionId !== null?' AND submission_id = ?':''),
 			$params
 		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnGalleyFromRow($result->GetRowAssoc(false));
-		} else {
-			HookRegistry::call('ArticleGalleyDAO::getNewGalley', array(&$galleyId, &$articleId, &$returner));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
-
 		$result->Close();
+		HookRegistry::call('ArticleGalleyDAO::getById', array(&$galleyId, &$submissionId, &$returner));
 		return $returner;
 	}
 
@@ -148,7 +142,7 @@ class ArticleGalleyDAO extends DAO {
 		$sql .= ' ORDER BY a.context_id, pa.issue_id, g.galley_id';
 		$result = $this->retrieve($sql, $params);
 
-		return new DAOResultFactory($result, $this, '_returnGalleyFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -156,41 +150,20 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 * @return array ArticleGalleys
 	 */
-	function getGalleysByArticle($articleId) {
-		$galleys = array();
-
+	function getBySubmissionId($articleId) {
 		$result = $this->retrieve(
-			'SELECT g.*
-			FROM submission_galleys g
-			WHERE g.submission_id = ? ORDER BY g.seq',
+			'SELECT *
+			FROM submission_galleys
+			WHERE submission_id = ? ORDER BY seq',
 			(int) $articleId
 		);
 
 		while (!$result->EOF) {
-			$galleys[] = $this->_returnGalleyFromRow($result->GetRowAssoc(false));
+			$galleys[] = $this->_fromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
-		$result->Close();
-		HookRegistry::call('ArticleGalleyDAO::getArticleGalleys', array(&$galleys, &$articleId)); // FIXME: XMLGalleyPlugin uses this; should convert to DAO auto call
-
-		return $galleys;
-	}
-
-	/**
-	 * Retrieve all galleys for an article.
-	 * @param $articleId int
-	 * @return array ArticleGalleys
-	 */
-	function getByArticleId($articleId) {
-		$result = $this->retrieve(
-				'SELECT g.*
-				FROM submission_galleys g
-				WHERE g.submission_id = ? ORDER BY g.seq',
-				(int) $articleId
-		);
-
-		return new DAOResultFactory($result, $this, '_returnGalleyFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -198,17 +171,16 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $journalId int
 	 * @return DAOResultFactory
 	 */
-	function getGalleysByJournalId($journalId) {
+	function getByJournalId($journalId) {
 		$result = $this->retrieve(
-			'SELECT
-				g.*
-			FROM submission_galleys g
+			'SELECT	g.*
+			FROM	submission_galleys g
 			INNER JOIN submissions a ON (g.submission_id = a.submission_id)
-			WHERE a.context_id = ?',
+			WHERE	a.context_id = ?',
 			(int) $journalId
 		);
 
-		return new DAOResultFactory($result, $this, '_returnGalleyFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -259,9 +231,8 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $row array
 	 * @return ArticleGalley
 	 */
-	function &_returnGalleyFromRow($row) {
-
-		$galley = new ArticleGalley();
+	function _fromRow($row) {
+		$galley = $this->newDataObject();
 
 		$galley->setId($row['galley_id']);
 		$galley->setSubmissionId($row['submission_id']);
@@ -274,7 +245,7 @@ class ArticleGalleyDAO extends DAO {
 
 		$this->getDataObjectSettings('submission_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
-		HookRegistry::call('ArticleGalleyDAO::_returnGalleyFromRow', array(&$galley, &$row));
+		HookRegistry::call('ArticleGalleyDAO::_fromRow', array(&$galley, &$row));
 
 		return $galley;
 	}
@@ -385,8 +356,8 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function deleteGalleysByArticle($articleId) {
-		$galleys =& $this->getGalleysByArticle($articleId);
-		foreach ($galleys as $galley) {
+		$galleys = $this->getBySubmissionId($articleId);
+		while ($galley = $galleys->next()) {
 			$this->deleteGalleyById($galley->getId(), $articleId);
 		}
 	}
@@ -488,7 +459,7 @@ class ArticleGalleyDAO extends DAO {
 		$journalId = (int) $journalId;
 		$settingName = 'pub-id::'.$pubIdType;
 
-		$galleys =& $this->getGalleysByJournalId($journalId);
+		$galleys = $this->getByJournalId($journalId);
 		while ($galley = $galleys->next()) {
 			$this->update(
 				'DELETE FROM submission_galley_settings WHERE setting_name = ? AND galley_id = ?',

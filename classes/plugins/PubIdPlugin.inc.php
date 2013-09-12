@@ -299,7 +299,7 @@ class PubIdPlugin extends Plugin {
 
 				case 'ArticleGalley':
 					$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-					$objectsToCheck =& $galleyDao->getGalleysByJournalId($journalId);
+					$objectsToCheck = $galleyDao->getByJournalId($journalId);
 					break;
 			}
 
