@@ -58,6 +58,14 @@ class URNPubIdPlugin extends PubIdPlugin {
 		return parent::getTemplatePath() . 'templates/';
 	}
 
+	/**
+	 * returns the file name for the JS Handler for this plugin's settings form.
+	 * @param $request PKPRequest
+	 * @return string
+	 */
+	function getJSFileUrl($request) {
+		return $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js/URNSettingsFormHandler.js';
+	}
 
 	//
 	// Implement template methods from PubIdPlugin.
