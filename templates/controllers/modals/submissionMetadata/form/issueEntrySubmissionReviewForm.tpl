@@ -47,6 +47,11 @@
 
 	{include file="core:submission/submissionMetadataFormFields.tpl" readOnly=$formParams.readOnly}
 
+	{foreach from=$pubIdPlugins item=pubIdPlugin}
+		{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
+		{include file="$pubIdMetadataFile" pubObject=$article}
+	{/foreach}
+
 	{if !$formParams.hideSubmit}
 		{fbvFormButtons id="submissionMetadataFormSubmit" submitText="common.save"}
 	{else}
