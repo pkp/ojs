@@ -170,6 +170,8 @@ class ReferralPlugin extends GenericPlugin {
 		$templateMgr =& $args[0];
 		$template =& $args[1];
 
+		assert(false); // Template names no longer apply (e.g. interstitial)
+
 		switch ($template) {
 			case 'article/article.tpl':
 				HookRegistry::register ('TemplateManager::include', array($this, 'handleReaderTemplateInclude'));

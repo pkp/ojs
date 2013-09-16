@@ -17,7 +17,6 @@
 
 switch ($op) {
 	case 'view':
-	case 'viewDownloadInterstitial':
 	case 'viewArticle':
 	case 'viewRST':
 	case 'viewFile':

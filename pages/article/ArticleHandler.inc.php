@@ -300,43 +300,6 @@ class ArticleHandler extends Handler {
 	}
 
 	/**
-	 * Article interstitial page before a non-PDF, non-HTML galley is
-	 * downloaded
-	 * @param $args array
-	 * @param $request Request
-	 * @param $galley ArticleGalley
-	 */
-	function viewDownloadInterstitial($args, $request, $galley = null) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
-			$journal = $this->journal;
-			$issue = $this->issue;
-			$article = $this->article;
-			$this->setupTemplate($request);
-
-			if (!$galley) {
-				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-				if ($journal->getSetting('enablePublicGalleyId')) {
-					$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
-				} else {
-					$galley = $galleyDao->getById($galleyId, $article->getId());
-				}
-			}
-
-			if (!$galley) $request->redirect(null, null, 'view', $articleId);
-
-			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('galleyId', $galleyId);
-			$templateMgr->assign('galley', $galley);
-			$templateMgr->assign('article', $article);
-
-			$templateMgr->display('article/interstitial.tpl');
-		}
-	}
-
-	/**
 	 * Determines whether a user can view this article galley or not.
 	 * @param $request Request
 	 * @param $articleId string

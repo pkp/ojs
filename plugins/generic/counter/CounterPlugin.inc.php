@@ -102,6 +102,7 @@ class CounterPlugin extends GenericPlugin {
 		if ($request->isBot()) return false;
 
 		// TODO: consider the effect of LOCKSS on COUNTER recording
+		assert(false); // Template names no longer apply (e.g. interstitial)
 
 		switch ($template) {
 			case 'article/article.tpl':
