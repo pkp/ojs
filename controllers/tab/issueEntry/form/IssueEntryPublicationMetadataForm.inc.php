@@ -49,6 +49,12 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$this->_formParams = $formParams;
 		$this->_userId = $userId;
 		$this->addCheck(new FormValidatorPost($this));
+		if ($formParams['expeditedSubmission']) {
+			// make choosing an issue mandatory for expedited submissions.
+			$request = Application::getRequest();
+			$context = $request->getContext();
+			$this->addCheck(new FormValidatorCustom($this, 'issueId', 'required', 'author.submit.form.issueRequired', array(DAORegistry::getDAO('IssueDAO'), 'issueIdExists'), array($context->getId())));
+		}
 	}
 
 	/**
@@ -248,7 +254,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticle->setDatePublished(Core::getCurrentDate());
 					$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 					$publishedArticle->setAccessStatus($accessStatus);
-					$publishedArticle->setDatePublished($this->getData('datePublished'));
 
 					$publishedArticleDao->insertPublishedArticle($publishedArticle);
 

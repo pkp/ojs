@@ -32,7 +32,8 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				'externalReview', // review
 				'editorial',
 				'production', 'galleysTab', // Production
-				'submissionProgressBar'
+				'submissionProgressBar',
+				'expedite'
 			)
 		);
 	}
@@ -99,7 +100,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	 * @param $request PKPRequest
 	 * @param $args array
 	 */
-	function galleysTab(&$args, $request) {
+	function galleysTab($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
@@ -109,6 +110,77 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$templateMgr->assign('currentGalleyTabId', (int) $request->getUserVar('currentGalleyTabId'));
 
 		return $templateMgr->fetchJson('workflow/galleysTab.tpl');
+	}
+
+	/**
+	 * Expedites a submission through the submission process, if the submitter is a manager or editor.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function expedite($args, $request) {
+
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
+		$user = $request->getUser();
+		$form = new IssueEntryPublicationMetadataForm($submission->getId(), $user, null, array('expeditedSubmission' => true));
+		if ($submission && (int) $request->getUserVar('issueId') > 0) {
+
+			// Process our submitted form in order to create the published article entry.
+			$form->readInputData();
+			if($form->validate()) {
+				$form->execute($request);
+				// Create trivial notification in place on the form, and log the event.
+				$notificationManager = new NotificationManager();
+				$user = $request->getUser();
+				import('lib.pkp.classes.log.SubmissionLog');
+				SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_ISSUE_METADATA_UPDATE, 'submission.event.issueMetadataUpdated');
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __('notification.savedIssueMetadata')));
+
+				// Now, create a galley for this submission.  Assume PDF, and set to 'available'.
+				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				$articleGalley = $articleGalleyDao->newDataObject();
+				$articleGalley->setGalleyType('pdfarticlegalleyplugin');
+				$articleGalley->setIsAvailable(true);
+				$articleGalley->setSubmissionId($submission->getId());
+				$articleGalley->setLocale($submission->getLocale());
+				$articleGalley->setLabel('PDF');
+				$articleGalley->setSeq($articleGalleyDao->getNextGalleySequence($submission->getId()));
+				$articleGalleyId = $articleGalleyDao->insertObject($articleGalley);
+
+				// Next, create a galley PROOF file out of the submission file uploaded.
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				$submissionFiles = $submissionFileDao->getLatestRevisions($submission->getId(), SUBMISSION_FILE_SUBMISSION);
+				// Assume a single file was uploaded, but check for something that's PDF anyway.
+				foreach ($submissionFiles as $submissionFile) {
+					// test both mime type and file extension in case the mime type isn't correct after uploading.
+					if ($submissionFile->getFileType() == 'application/pdf' || preg_match('/\.pdf$/', $submissionFile->getOriginalFileName())) {
+
+						// Get the path of the current file because we change the file stage in a bit.
+						$currentFilePath = $submissionFile->getFilePath();
+
+						// this will be a new file based on the old one.
+						$submissionFile->setFileId(null);
+						$submissionFile->setRevision(1);
+						$submissionFile->setFileStage(SUBMISSION_FILE_PROOF);
+						$submissionFile->setAssocType(ASSOC_TYPE_GALLEY);
+						$submissionFile->setAssocId($articleGalleyId);
+
+						$submissionFileDao->insertObject($submissionFile, $currentFilePath);
+						break;
+					}
+				}
+
+				// no errors, close the modal.
+				$json = new JSONMessage(true);
+				return $json->getString();
+			} else {
+			$json = new JSONMessage(true, $form->fetch($request));
+			return $json->getString();
+		}
+		} else {
+			$json = new JSONMessage(true, $form->fetch($request));
+			return $json->getString();
+		}
 	}
 
 	/**
