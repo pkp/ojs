@@ -45,6 +45,19 @@ class PdfArticleGalleyPlugin extends ArticleGalleyPlugin {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 
+		$fileId = (isset($params['fileId']) && is_numeric($params['fileId'])) ? (int) $fileId : null;
+		if (!$fileId) {
+			// unfortunate, but occasionally browsers upload PDF files as application/octet-stream.
+			// Even setting the file type in the display template will not cause a correct render in this case.
+			// So, update the file type if this is the case.
+			$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
+			$file = $galley->getFirstGalleyFile('pdf');
+			if (!preg_match('/\.pdf$/', $file->getFileType())) {
+				$file->setFileType('application/pdf');
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				$submissionFileDao->updateObject($file);
+			}
+		}
 		$templateMgr->assign('pluginJSPath', $this->getJSPath($request));
 
 		return parent::getArticleGalley($templateMgr, $request, $params);
