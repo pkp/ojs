@@ -188,7 +188,7 @@ class ArticleGalley extends Representation {
 			$this->getSubmissionId(), SUBMISSION_FILE_PROOF
 		);
 
-		if (!$fileType) {
+		if (!$fileExtensionMatch) {
 			return $submissionFiles;
 		} else {
 			$filteredFiles = array();
