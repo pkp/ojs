@@ -2,7 +2,7 @@
 <!DOCTYPE plugin_settings SYSTEM "../../../lib/pkp/dtd/pluginSettings.dtd">
 
 <!--
-  * plugins/generic/referral/settings.xml
+  * plugins/themes/default/settings.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -12,13 +12,8 @@
   -->
 
 <plugin_settings>
-	<!-- <setting type="bool">
+	<setting type="bool">
 		<name>enabled</name>
 		<value>true</value>
-	</setting> --><!-- Automatic enabling disabled until the plugin is fixed -->
-	<setting type="string">
-		<name>exclusions</name>
-		<value>#^http://www.google.#
-#^http://www.yahoo.#</value>
 	</setting>
 </plugin_settings>

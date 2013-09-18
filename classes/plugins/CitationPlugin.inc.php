@@ -12,7 +12,7 @@
  * @brief Abstract class for citation plugins
  */
 
-import('classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.Plugin');
 
 class CitationPlugin extends Plugin {
 	function CitationPlugin() {

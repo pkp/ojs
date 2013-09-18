@@ -32,9 +32,6 @@ class CitationsForm extends ContextSettingsForm {
 	 */
 	function fetch($request) {
 		$templateMgr = TemplateManager::getManager($request);
-		// Add extra style sheets required for ajax components
-		// FIXME: Must be removed after OMP->OJS backporting
-		$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/ojs.css');
 
 		// Add extra java script required for ajax components
 		// FIXME: Must be removed after OMP->OJS backporting

@@ -12,7 +12,7 @@
  * @brief Abstract class for import/export plugins
  */
 
-import('classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.Plugin');
 
 class ImportExportPlugin extends Plugin {
 	function ImportExportPlugin() {

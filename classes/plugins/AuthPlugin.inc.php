@@ -16,7 +16,7 @@
  */
 
 define('AUTH_PLUGIN_CATEGORY', 'auth');
-import('classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.Plugin');
 
 class AuthPlugin extends Plugin {
 

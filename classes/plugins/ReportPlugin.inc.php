@@ -12,7 +12,7 @@
  * @brief Abstract class for report plugins
  */
 
-import('classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.Plugin');
 
 class ReportPlugin extends Plugin {
 

@@ -37,10 +37,16 @@ class InstallForm extends Form {
 	/** @var array database drivers supported by this system */
 	var $supportedDatabaseDrivers;
 
+	/** @var $request PKPRequest */
+	var $_request;
+
 	/**
 	 * Constructor.
+	 * @param $request PKPRequest
 	 */
-	function InstallForm() {
+	function InstallForm($request) {
+		$this->_request = $request;
+
 		parent::Form('install/install.tpl');
 
 		// FIXME Move the below options to an external configuration file?
@@ -106,7 +112,7 @@ class InstallForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager($this->_request);
 		$templateMgr->assign('localeOptions', $this->supportedLocales);
 		$templateMgr->assign('localesComplete', $this->localesComplete);
 		$templateMgr->assign('clientCharsetOptions', $this->supportedClientCharsets);
@@ -154,7 +160,7 @@ class InstallForm extends Form {
 			'databasePassword' => '',
 			'databaseName' => 'ojs',
 			'createDatabase' => 1,
-			'oaiRepositoryId' => 'ojs.' . Request::getServerHost(),
+			'oaiRepositoryId' => 'ojs.' . $this->_request->getServerHost(),
 		);
 	}
 

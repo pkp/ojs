@@ -110,14 +110,6 @@ class TemplateManager extends PKPTemplateManager {
 				if (isset($displayPageHeaderTitle['altText'])) $this->assign('displayPageHeaderTitleAltText', $displayPageHeaderTitle['altText']);
 
 				$this->assign('siteTitle', $site->getLocalizedTitle());
-
-				// Load and apply theme plugin, if chosen
-				$themePluginPath = $site->getSetting('siteTheme');
-				if (!empty($themePluginPath)) {
-					// Load and activate the theme
-					$themePlugin =& PluginRegistry::loadPlugin('themes', $themePluginPath);
-					if ($themePlugin) $themePlugin->activate($this);
-				}
 			}
 
 			if (!$site->getRedirect()) {

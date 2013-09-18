@@ -1053,7 +1053,7 @@ class NativeImportDom {
 						$url = PWD . '/' . $url;
 					}
 
-k					assert(false); // copyPublicFile was removed. Needs fixing.
+					assert(false); // copyPublicFile was removed. Needs fixing.
 					if (($fileId = $articleFileManager->copyPublicFile($url, $href->getAttribute('mime_type')))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotCopy', array('url' => $url));
 						return false;

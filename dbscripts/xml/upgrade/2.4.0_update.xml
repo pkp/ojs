@@ -39,12 +39,12 @@
 			NB: We maintain idempotency by left-joining to the plugin settings table and only inserting the
 			new value if there is no existing value for this journal, plugin and setting.  
 		-->
-		<query>INSERT INTO plugin_settings (plugin_name, locale, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', '', js.journal_id, 'enabled', '1', 'bool' FROM journal_settings js LEFT JOIN plugin_settings ps ON js.journal_id = ps.journal_id AND ps.plugin_name = 'doipubidplugin' AND ps.setting_name = 'enabled' WHERE js.setting_name = 'doiPrefix' AND js.setting_value != '' AND ps.plugin_name IS NULL</query>
-		<query>INSERT INTO plugin_settings (plugin_name, locale, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', '', js.journal_id, 'enableArticleDoi', '1', 'bool' FROM journal_settings js LEFT JOIN plugin_settings ps ON js.journal_id = ps.journal_id AND ps.plugin_name = 'doipubidplugin' AND ps.setting_name = 'enableArticleDoi' WHERE js.setting_name = 'doiPrefix' AND js.setting_value != '' AND ps.plugin_name IS NULL</query>
+		<query>INSERT INTO plugin_settings (plugin_name, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', js.journal_id, 'enabled', '1', 'bool' FROM journal_settings js LEFT JOIN plugin_settings ps ON js.journal_id = ps.journal_id AND ps.plugin_name = 'doipubidplugin' AND ps.setting_name = 'enabled' WHERE js.setting_name = 'doiPrefix' AND js.setting_value != '' AND ps.plugin_name IS NULL</query>
+		<query>INSERT INTO plugin_settings (plugin_name, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', js.journal_id, 'enableArticleDoi', '1', 'bool' FROM journal_settings js LEFT JOIN plugin_settings ps ON js.journal_id = ps.journal_id AND ps.plugin_name = 'doipubidplugin' AND ps.setting_name = 'enableArticleDoi' WHERE js.setting_name = 'doiPrefix' AND js.setting_value != '' AND ps.plugin_name IS NULL</query>
 		
 		<!-- Copy all existing DOI configuration from the journal settings table to the plugin settings table. -->
-		<query>INSERT INTO plugin_settings(plugin_name, locale, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', '', journal_id, setting_name, setting_value, setting_type FROM journal_settings WHERE setting_name IN ('doiPrefix', 'doiSuffix')</query>
-		<query>INSERT INTO plugin_settings(plugin_name, locale, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', '', journal_id, 'doiArticleSuffixPattern', setting_value, setting_type FROM journal_settings WHERE setting_name = 'doiSuffixPattern'</query>
+		<query>INSERT INTO plugin_settings(plugin_name, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', journal_id, setting_name, setting_value, setting_type FROM journal_settings WHERE setting_name IN ('doiPrefix', 'doiSuffix')</query>
+		<query>INSERT INTO plugin_settings(plugin_name, journal_id, setting_name, setting_value, setting_type) SELECT 'doipubidplugin', journal_id, 'doiArticleSuffixPattern', setting_value, setting_type FROM journal_settings WHERE setting_name = 'doiSuffixPattern'</query>
 		
 		<!-- Delete all existing DOI configuration from the journal settings table. -->
 		<query>DELETE FROM journal_settings WHERE setting_name IN ('doiPrefix', 'doiSuffix', 'doiSuffixPattern')</query>

@@ -12,7 +12,7 @@
  * @brief Abstract class for paymethod plugins
  */
 
-import('classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.Plugin');
 
 class PaymethodPlugin extends Plugin {
 	/**

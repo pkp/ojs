@@ -14,7 +14,7 @@
  * Contributed by Dan Galewsky, University of Texas
  */
 
-import('classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.Plugin');
 
 class ImplicitAuthPlugin extends Plugin {
 	function ImplicitAuthPlugin() {

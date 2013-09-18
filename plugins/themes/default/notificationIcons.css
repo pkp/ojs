@@ -1,0 +1,74 @@
+/**
+ * @file styles/themes/default/notificationIcons.css
+ *
+ * Copyright (c) 2000-2013 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * PKP default styles for the Pines Notify jQuery plugin.
+ */
+
+/* PNotify Icons */
+
+.notifyIcon {
+	width: 16px;
+	height: 16px;
+	background-image: url(../../lib/jqueryUi/images/ui-icons_222222_256x240.png);
+}
+
+.notifyIconSuccess {
+	background-position: -64px -144px;
+}
+
+.notifyIconWarning {
+	background-position: -32px -144px;
+}
+
+.notifyIconError {
+	background-position: 0 -144px;
+}
+
+.notifyIconInfo {
+	background-position: -16px -144px;
+}
+
+.notifyIconForbidden {
+	background-position: -192px -96px;
+}
+
+.notifyIconHelp {
+	background-position: -48px -144px;
+}
+
+.ui-pnotify-closer .ui-icon {
+	background-image: url(../../lib/jqueryUi/images/ui-icons_222222_256x240.png);
+}
+
+/* Page icons */
+
+.notifyIconNewPage {
+	background-image: url(../../../templates/images/icons/page_new.gif);
+}
+
+.notifyIconPageAttachment {
+	background-image: url(../../../templates/images/icons/page_attachment.gif);
+}
+
+.notifyIconEdit {
+	background-image: url(../../../templates/images/icons/edit.gif);
+}
+
+.notifyIconNewComment {
+	background-image: url(../../../templates/images/icons/comment_new.gif);
+}
+
+.notifyIconPublished {
+	background-image: url(../../../templates/images/icons/list_world.gif);
+}
+
+.notifyIconNewAnnouncement {
+	background-image: url(../../../templates/images/icons/note_new.gif);
+}
+
+.notifyIconPageAlert {
+	background-image: url(../../../templates/images/icons/page_alert.gif);
+}

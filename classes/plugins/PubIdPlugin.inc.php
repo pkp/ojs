@@ -13,7 +13,7 @@
  */
 
 
-import('classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.Plugin');
 
 class PubIdPlugin extends Plugin {
 

@@ -12,7 +12,7 @@
  * @brief Abstract class for gateway plugins
  */
 
-import('classes.plugins.Plugin');
+import('lib.pkp.classes.plugins.Plugin');
 
 class GatewayPlugin extends Plugin {
 	function GatewayPlugin() {

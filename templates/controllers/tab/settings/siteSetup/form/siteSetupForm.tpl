@@ -79,7 +79,7 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormArea id="appearance"}
-		{fbvFormSection title="admin.settings.siteStyleSheet"}
+		{fbvFormSection title="admin.settings.siteStyleSheet" inline=true size=$fbvStyles.size.MEDIUM}
 			<div id="{$uploadCssLinkAction->getId()}" class="pkp_linkActions">
 				{include file="linkAction/linkAction.tpl" action=$uploadCssLinkAction contextId="siteSetupForm"}
 			</div>
@@ -87,6 +87,10 @@
 				{$cssView}
 			</div>
 		{/fbvFormSection}
+		{fbvFormSection title="manager.setup.layout.theme" description="manager.setup.layout.themeDescription" size=$fbvStyles.size.MEDIUM inline=true}
+			{fbvElement type="select" id="themePluginPath" from=$themePluginOptions selected=$themePluginPath translate=false size=$fbvStyles.size.MEDIUM}
+		{/fbvFormSection}
+		{fbvFormSection}{/fbvFormSection}{* FIXME: Clear inline fbvFormSections *}
 	{/fbvFormArea}
 	<h4>{translate key="admin.settings.oaiRegistration"}</h4>
 	{url|assign:"oaiUrl" router=$smarty.const.ROUTE_PAGE page="oai"}

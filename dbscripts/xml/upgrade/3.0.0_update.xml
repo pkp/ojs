@@ -99,7 +99,6 @@
 		<query>UPDATE author_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE data_object_tombstone_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE journal_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
-		<query>UPDATE plugin_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE section_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE issue_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE issue_galleys SET locale='nb_NO' WHERE locale='no_NO'</query>

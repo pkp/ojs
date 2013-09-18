@@ -163,7 +163,6 @@
 	<message key="manager.setup.pageFooter">Journal Page Footer</message>
 	<message key="manager.setup.pageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
 	<message key="manager.setup.layout">Journal Layout</message>
-	<message key="manager.setup.layoutDescription">Choose a journal theme and select layout components here. A journal style sheet may also be uploaded, which can be used to override style data in the system-wide style sheets and theme style sheet (if a theme is chosen).</message>
 	<message key="manager.setup.useStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.contextName">Journal Name</message>
 	<message key="manager.setup.pageHeader">Journal Page Header</message>

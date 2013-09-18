@@ -78,7 +78,7 @@ class CustomBlockEditForm extends Form {
 			theme_advanced_buttons3 : "cut,copy,paste,pastetext,pasteword,|,cleanup,help,code,jbimages",
 			theme_advanced_toolbar_location : "bottom",
 			theme_advanced_toolbar_align : "left",
-			content_css : "' . Request::getBaseUrl() . '/styles/common.css", 
+			content_css : "' . Request::getBaseUrl() . '/styles/common.css",
 			relative_urls : false, 		
 			document_base_url : "'. Request::getBaseUrl() .'/'.$publicFileManager->getJournalFilesPath($journalId) .'/", 
 			extended_valid_elements : "span[*], div[*]"

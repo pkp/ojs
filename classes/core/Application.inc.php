@@ -146,7 +146,6 @@ class Application extends PKPApplication {
 			'NoteDAO' => 'classes.note.NoteDAO',
 			'OAIDAO' => 'classes.oai.ojs.OAIDAO',
 			'OJSCompletedPaymentDAO' => 'classes.payment.ojs.OJSCompletedPaymentDAO',
-			'PluginSettingsDAO' => 'classes.plugins.PluginSettingsDAO',
 			'PublishedArticleDAO' => 'classes.article.PublishedArticleDAO',
 			'QueuedPaymentDAO' => 'lib.pkp.classes.payment.QueuedPaymentDAO',
 			'ReviewAssignmentDAO' => 'lib.pkp.classes.submission.reviewAssignment.ReviewAssignmentDAO',
