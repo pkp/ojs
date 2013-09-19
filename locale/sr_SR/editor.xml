@@ -104,7 +104,6 @@ Da li ste sigurni da želite da nastavite?</message>
 	<message key="editor.issues.noLiveIssues">No Live Issues</message>
 	<message key="editor.issues.open">Open</message>
 	<message key="editor.issues.pages">Pages</message>
-	<message key="editor.navigation.issues">Issues</message>
 	<message key="editor.navigation.futureIssues">Future Issues</message>
 	<message key="grid.action.addIssue">Create Issue</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>

@@ -1102,5 +1102,8 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 		</ul>
 	</li>
 </ol>]]></message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Zenbakiak</message>
 </locale>
 

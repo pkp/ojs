@@ -93,7 +93,6 @@
 	<message key="editor.issues.noLiveIssues">Geen actuele nummers</message>
 	<message key="editor.issues.open">Open</message>
 	<message key="editor.issues.pages">Pagina's</message>
-	<message key="editor.navigation.issues">Issues</message>
 	<message key="editor.navigation.futureIssues">Toekomstige nummers</message>
 	<message key="grid.action.addIssue">Nummer aanmaken</message>
 	<message key="editor.navigation.issueArchive">Oude nummers</message>

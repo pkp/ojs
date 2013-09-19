@@ -1211,4 +1211,7 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="article.pdf.download">Descarcă acest fișier PDF</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>Fișierul PDF pe care l-ai selectat ar trebui încărcat aici dacă browserul web are un modul specific instalat (de exemplu, o versiune recentă <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Poți descărca fișierul direct pe computerul propriu, de unde pot fi deschise. Pentru a descărca PDF-ul, clic pe linkul pentru descărcare de mai jos.</p>]]></message>
 	<message key="payment.authorFees">Taxe pentru autori</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Numere de revistă</message>
 </locale>

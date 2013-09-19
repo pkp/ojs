@@ -100,7 +100,6 @@
 	<message key="editor.issues.noLiveIssues"> Tidak Ada Terbitan Terbaru </message> 
 	<message key="editor.issues.open"> Buka </message> 
 	<message key="editor.issues.pages"> Halaman </message> 
-	<message key="editor.navigation.issues">Terbitan</message> 
 	<message key="editor.navigation.futureIssues">Terbitan Akan Datang</message> 
 	<message key="grid.action.addIssue">Buat Terbitan Baru</message>	<message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
 	<message key="editor.article.designateReviewVersion"> Merancang file asli sebagai Versi Review</message>	

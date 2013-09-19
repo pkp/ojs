@@ -1145,4 +1145,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<!-- Grid Actions -->
 	<message key="grid.action.createContext">Create a New Journal</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Issues</message>
 </locale>

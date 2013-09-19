@@ -93,7 +93,6 @@
 	<message key="editor.issues.noLiveIssues">Non hai números en curso</message>
 	<message key="editor.issues.open">Aberto</message>
 	<message key="editor.issues.pages">Páxinas</message>
-	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.navigation.futureIssues">Edicións futuras</message>
 	<message key="grid.action.addIssue">Crear edición</message>
 	<message key="editor.navigation.issueArchive">Edicións anteriores</message>

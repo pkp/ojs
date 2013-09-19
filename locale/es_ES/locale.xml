@@ -1017,4 +1017,7 @@ Los autores que publican en esta revista están de acuerdo con los siguientes t�
 	 <li>Los autores pueden establecer por separado acuerdos adicionales para la distribución no exclusiva de la versión de la obra publicada en la revista (por ejemplo, situarlo en un repositorio institucional o publicarlo en un libro), con un reconocimiento de su publicación inicial en esta revista.</li>
 	 <li>Se permite y se anima a los autores a difundir sus trabajos electrónicamente (por ejemplo, en repositorios institucionales o en su propio sitio web) antes y durante el proceso de envío, ya que puede dar lugar a intercambios productivos, así como a una citación más temprana y mayor de los trabajos publicados (Véase <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>) (en inglés).</li>
 </ol>]]></message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Números</message>
 </locale>

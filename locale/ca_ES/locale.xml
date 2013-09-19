@@ -1063,4 +1063,7 @@ El paràgraf que comença per &#171;Aquest darrer tema...&#187; no està sagnat.
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Si opteu per aquesta tarifa podreu visualitzar, baixar i imprimir aquest article.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Si opteu per aquesta tarifa us donareu d’alta com a membre d’aquesta associació per un any i tindreu accés a la revista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Qualsevol donació que feu a aquesta revista serà molt benvinguda i ajudarà els editors/es a seguir oferint una obra de la millor qualitat possible als seus lectors/es.</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Números</message>
 </locale>

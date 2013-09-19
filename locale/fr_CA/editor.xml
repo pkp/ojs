@@ -94,7 +94,6 @@
 	<message key="editor.issues.noLiveIssues">Aucun numéro en ligne</message>
 	<message key="editor.issues.open">Ouvert</message>
 	<message key="editor.issues.pages">Pages</message>
-	<message key="editor.navigation.issues">Numéros</message>
 	<message key="editor.navigation.futureIssues">Numéros à venir</message>
 	<message key="grid.action.addIssue">Créer un numéro</message>
 	<message key="editor.navigation.issueArchive">Numéros précédents</message>

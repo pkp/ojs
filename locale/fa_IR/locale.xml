@@ -890,4 +890,7 @@ lib.sfu.ca]]></message>
 همچنین می توانید فایل پی دی اف را دالود کرده و با یک برنامه مخصوص خواندن فایلهای پی دی اف آن را باز کنید. برای دان لود فایل پی دی اف بر روی لینک دانلود کلیک گنید.
 </p>]]></message>
 	<message key="payment.authorFees">نرخ نویسنده</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">شماره های مجله</message>
 </locale>

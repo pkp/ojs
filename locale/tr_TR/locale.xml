@@ -1111,4 +1111,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="gifts.subscriptionNonExpiring">The gift was not redeemed since you already have a non-expiring subscription with this journal.</message>
 	<message key="payment.loginRequired.forIssue">Subscription or issue purchase required to access item. To verify subscription, access previous purchase, or purchase issue, log in to journal.</message>
 	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Sayılar</message>
 </locale>

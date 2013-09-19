@@ -96,7 +96,6 @@
 	<message key="editor.issues.noLiveIssues">没有活动的刊期</message>
 	<message key="editor.issues.open">开放</message>
 	<message key="editor.issues.pages">页</message>
-	<message key="editor.navigation.issues">刊期</message>
 	<message key="editor.navigation.futureIssues">计划中刊期</message>
 	<message key="grid.action.addIssue">创建刊期</message>
 	<message key="editor.navigation.issueArchive">过刊</message>

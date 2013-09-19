@@ -113,7 +113,6 @@
        <message key="editor.issues.noLiveIssues">Немає опублікованих випусків</message>
        <message key="editor.issues.open">Відкритий</message>
        <message key="editor.issues.pages">Сторінки</message>
-       <message key="editor.navigation.issues">Випуски</message>
        <message key="editor.navigation.futureIssues">Майбутні випуски</message>
        <message key="grid.action.addIssue">Створити випуск</message>
        <message key="editor.navigation.issueArchive">Попередні випуски</message>

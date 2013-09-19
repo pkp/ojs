@@ -1138,4 +1138,7 @@
 	<message key="installer.allowFileUploads"><![CDATA[Ваш сервер зараз дозволяє вивантаження файлів: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Ваш сервер зараз дозволяє вивантаження файлів розміром не більше: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="submissions.editorRuling">Правила редактора</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+       <message key="editor.navigation.issues">Випуски</message>
 </locale>

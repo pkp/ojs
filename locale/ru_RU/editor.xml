@@ -70,7 +70,6 @@
 	<message key="editor.issues.noLiveIssues">Нет опубликованных выпусков</message>
 	<message key="editor.issues.open">Открыть</message>
 	<message key="editor.issues.pages">Страницы</message>
-	<message key="editor.navigation.issues">Выпуски</message>
 	<message key="editor.navigation.futureIssues">Будущие выпуски</message>
 	<message key="grid.action.addIssue">Создать выпуск</message>
 	<message key="editor.navigation.issueArchive">Старые выпуски</message>

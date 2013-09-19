@@ -1033,4 +1033,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="article.pdf.download">Transferir este ficheiro PDF</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>O ficheiro PDF seleccionado deveria ser carregado no se browser como um plugin de leitura de PDF previamente instalado (por exemplo, uma versão recente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Em alternativa, pode transferir o ficheiro PDF directamente para o seu computador, onde pode ser aberto com um leitor PDF. Para transferir o PDF, clique sobre o link em baixo.</p>]]></message>
 	<message key="payment.authorFees">Taxas de Autor</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Edições</message>
 </locale>

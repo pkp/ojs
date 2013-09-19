@@ -18,7 +18,7 @@
 			$('#simpleSearchForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 		{rdelim});
 	</script>
-	<form class="pkp_form" id="simpleSearchForm" method="post" action="{url page="search" op="search"}">
+	<form class="pkp_form" id="simpleSearchForm" method="post" action="{url router=$smarty.const.ROUTE_PAGE page="search" op="search"}">
 		<table id="simpleSearchInput">
 			<tr>
 				<td>
@@ -46,12 +46,12 @@
 	{if $currentJournal}
 	<span class="blockSubtitle">{translate key="navigation.browse"}</span>
 	<ul>
-		<li><a href="{url page="issue" op="archive"}">{translate key="navigation.browseByIssue"}</a></li>
-		<li><a href="{url page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
+		<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">{translate key="navigation.browseByIssue"}</a></li>
+		<li><a href="{url router=$smarty.const.ROUTE_PAGE page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
 		{call_hook name="Plugins::Blocks::Navigation::BrowseBy"}
 		{if $hasOtherJournals}
-			<li><a href="{url journal="index"}">{translate key="navigation.otherJournals"}</a></li>
-			{if $siteCategoriesEnabled}<li><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>{/if}
+			<li><a href="{url router=$smarty.const.ROUTE_PAGE journal="index"}">{translate key="navigation.otherJournals"}</a></li>
+			{if $siteCategoriesEnabled}<li><a href="{url router=$smarty.const.ROUTE_PAGE journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>{/if}
 		{/if}
 	</ul>
 	{/if}

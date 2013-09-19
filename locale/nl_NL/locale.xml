@@ -1081,4 +1081,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 		</ul>
 	</li>
 </ol>]]></message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Issues</message>
 </locale>

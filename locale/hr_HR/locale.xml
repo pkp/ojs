@@ -407,7 +407,6 @@ Opcionalno možete proslijediti korisniku razlog zašto ste mu onemogućili rač
 
 	<!--  Live Issues  --><message key="editor.issues.issueData">Podaci o broju časopisa</message>
 
-	<!--  Navigation sidebar menu  --><message key="editor.navigation.issues">Brojevi časopisa</message>
 	
 	<!--  Used by editor in submission review / editing  --><message key="editor.article.designateReviewVersion">Odredite originalnu datoteku kao recenzijsku verziju</message>
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Poveznica na imenu vodi do recenzentova profila.<br/>
@@ -1104,4 +1103,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="author.submissions.queuedReviewRevisions">U recenziji: potrebne izmjene</message>
 	<message key="author.submissions.queuedEditingCopyedit">U uređivanju: potreban pregled lekture</message>
 	<message key="author.submissions.queuedEditingProofread">U uređivanju: potreban pregled korekture</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<!--  Navigation sidebar menu  --><message key="editor.navigation.issues">Brojevi časopisa</message>
 </locale>

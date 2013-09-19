@@ -1052,5 +1052,8 @@ Authors who publish with this journal agree to the following terms:
 	<message key="user.subscriptions.status.needsApprovalDescription">Abonnementet må vurderes før det kan aktiviseres.</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manuell betaling er initiert men ennå ikke mottatt</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">En nettbetaling har blitt initiert men har blitt kansellert eller ikke fullført</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Utgaver</message>
 </locale>
 

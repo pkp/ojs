@@ -760,4 +760,7 @@
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">XML-ല്‍ നിന്നും കറന്‍സി ലിസ്റ്റ് "{$filename}"  ലോഡ് ചെയ്തിരിക്കുന്നു</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">പതിപ്പുകള്‍</message>
 </locale>

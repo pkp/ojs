@@ -1044,4 +1044,7 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="gifts.recipientDescription">Hvem er gaven til?</message>
 	<message key="gifts.thankYou">Tak</message>
 	<message key="gifts.thankYouMessage">Dit gavebevis er færdigudfyldt. Du vil modtage en kopi af gave-e-mailen, der er sendt til modtageren, så snart betalingen har fundet sted.</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Udgaver</message>
 </locale>

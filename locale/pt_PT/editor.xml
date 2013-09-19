@@ -93,7 +93,6 @@
 	<message key="editor.issues.noLiveIssues">Nenhuma edição em produção</message>
 	<message key="editor.issues.open">Aberto</message>
 	<message key="editor.issues.pages">Páginas</message>
-	<message key="editor.navigation.issues">Edições</message>
 	<message key="editor.navigation.futureIssues">Edições Futuras</message>
 	<message key="grid.action.addIssue">Criar Edição</message>
 	<message key="editor.navigation.issueArchive">Edições Anteriores</message>

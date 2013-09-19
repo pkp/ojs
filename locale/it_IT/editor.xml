@@ -95,7 +95,6 @@
 	<message key="editor.issues.noLiveIssues">Nessun numero attivo</message>
 	<message key="editor.issues.open">Aperto</message>
 	<message key="editor.issues.pages">Paginazione</message>
-	<message key="editor.navigation.issues">Fascicoli</message>
 	<message key="editor.navigation.futureIssues">Fascicoli futuri</message>
 	<message key="grid.action.addIssue">Crea un fascicolo</message>
 	<message key="editor.navigation.issueArchive">Fascicoli pubblicati</message>

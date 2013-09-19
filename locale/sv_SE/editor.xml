@@ -90,7 +90,6 @@
 	<message key="editor.issues.noLiveIssues">Inga aktiva nummer</message>
 	<message key="editor.issues.open">Öppen</message>
 	<message key="editor.issues.pages">Sidor</message>
-	<message key="editor.navigation.issues">Nummer</message>
 	<message key="editor.navigation.futureIssues">Kommande nummer</message>
 	<message key="grid.action.addIssue">Skapa nummer</message>
 	<message key="editor.navigation.issueArchive">Äldre nummer</message>

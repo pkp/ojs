@@ -1007,4 +1007,7 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Un paiement en ligne a été initié mais annulé ou non complété</message>
 	<message key="article.pdf.download">Télécharger ce fichier PDF</message>
 	<message key="payment.authorFees">Droits d'auteur</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Numéros</message>
 </locale>

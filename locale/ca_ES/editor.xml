@@ -93,7 +93,6 @@
 	<message key="editor.issues.noLiveIssues">No hi ha cap número en curs.</message>
 	<message key="editor.issues.open">Oberts</message>
 	<message key="editor.issues.pages">Pàgines</message>
-	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.navigation.futureIssues">Propers números</message>
 	<message key="grid.action.addIssue">Crea el número</message>
 	<message key="editor.navigation.issueArchive">Números anteriors</message>

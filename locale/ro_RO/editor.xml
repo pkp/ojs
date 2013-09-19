@@ -98,7 +98,6 @@
 	<message key="editor.issues.noLiveIssues">Nu există numere publicate live</message>
 	<message key="editor.issues.open">Deschide</message>
 	<message key="editor.issues.pages">Pagini</message>
-	<message key="editor.navigation.issues">Numere de revistă</message>
 	<message key="editor.navigation.futureIssues">Numere de revistă viitoare</message>
 	<message key="grid.action.addIssue">Creează un număr de revistă</message>
 	<message key="editor.navigation.issueArchive">Numere anterioare</message>

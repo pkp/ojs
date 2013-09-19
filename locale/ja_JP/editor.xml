@@ -84,7 +84,6 @@
 	<message key="editor.issues.noLiveIssues">処理中の巻号はありません</message>
 	<message key="editor.issues.open">オープン</message>
 	<message key="editor.issues.pages">ページ</message>
-	<message key="editor.navigation.issues">巻号</message>
 	<message key="editor.navigation.futureIssues">出版予定号</message>
 	<message key="grid.action.addIssue">巻号作成</message>
 	<message key="editor.navigation.issueArchive">バックナンバー</message>

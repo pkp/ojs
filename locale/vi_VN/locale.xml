@@ -1093,4 +1093,7 @@ Các số ở Bảng 3 không thẳng hàng trong cột thứ ba.</pre>
 <br />
 <pre>4. ĐỊNH DẠNG
 Đoạn bắt đầu bằng "Chủ đề cuối cùng này..." chưa được lùi vào.</pre>]]></message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Các số tạp chí</message>
 </locale>

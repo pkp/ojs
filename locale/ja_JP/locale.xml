@@ -861,4 +861,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">オンライン支払は開始されましたが，キャンセルあるいは完了していません。</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a> の最新版）をインストールしていれば，選択したPDFファイルがここにロードされるはずです。</p><p>また，PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 ダウンロードする場合は下記のリンクをクリックしてください。</p>]]></message>
 	<message key="user.subscriptions.statusInformation">アクティベートあるいは有効期限切れの講読が有効期限順に下記に表示されます。また，次のようなステータス情報がそれぞれの講読ごとに表示される場合があります。</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">巻号</message>
 </locale>

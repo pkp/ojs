@@ -27,7 +27,7 @@
 						<ul class="plain">
 						{foreach from=$version->getContexts() item=context}
 							{if !$context->getDefineTerms()}
-								<li><a href="javascript:openRTWindowWithToolbar('{url page="rt" op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
+								<li><a href="javascript:openRTWindowWithToolbar('{url router=$smarty.const.ROUTE_PAGE page="rt" op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 							{/if}
 						{/foreach}
 						</ul>

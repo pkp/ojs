@@ -92,7 +92,6 @@
 	<message key="editor.issues.noLiveIssues">هیچ شماره مجله ای وجود ندارد</message>
 	<message key="editor.issues.open">باز کردن</message>
 	<message key="editor.issues.pages">صفحات</message>
-	<message key="editor.navigation.issues">شماره های مجله</message>
 	<message key="editor.navigation.futureIssues">ضماره های آتی مجله</message>
 	<message key="grid.action.addIssue">ایجاد شماره مجله</message>
 	<message key="editor.navigation.issueArchive">شماره های گذشته مجله</message>

@@ -1093,4 +1093,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="installer.maxFileUploadSize"><![CDATA[Seu servidor permite atualmente envio de arquivos no tamanho máximo de: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a> para baixar a nova versão e para instruções sobre atualização.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Entre em contato com o Administrador do Sistema ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificá-lo deste lançamento. Para maiores informações, acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a>.]]></message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Edições</message>
 </locale>

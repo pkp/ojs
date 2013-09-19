@@ -890,4 +890,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="user.authorization.sectionAssignment">Pokušavate da pristupite članku koji nije u vašoj sekciji.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Neispravna lektorska predaja ili predaja nije zahtevana!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Neispravna predaja urednika sekcije ili predaja nije zahtevana!</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Issues</message>
 </locale>

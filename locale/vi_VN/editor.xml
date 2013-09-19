@@ -94,7 +94,6 @@
 	<message key="editor.issues.noLiveIssues">Không có nào.</message>
 	<message key="editor.issues.open">Mở</message>
 	<message key="editor.issues.pages">Trang</message>
-	<message key="editor.navigation.issues">Các số tạp chí</message>
 	<message key="editor.navigation.futureIssues">Các số sắp XB</message>
 	<message key="grid.action.addIssue">Tạo số tạp chí</message>
 	<message key="editor.navigation.issueArchive">Các số đã xuất bản</message>

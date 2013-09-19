@@ -85,7 +85,6 @@
 	<message key="editor.issues.noLiveIssues">Δεν υπάρχουν ενεργά τεύχη (live issues)</message>
 	<message key="editor.issues.open">Άνοιγμα</message>
 	<message key="editor.issues.pages">Σελίδες</message>
-	<message key="editor.navigation.issues">Τεύχη</message>
 	<message key="editor.navigation.futureIssues">Μελλοντικά τεύχη</message>
 	<message key="grid.action.addIssue">Δημιουργία τεύχους</message>
 	<message key="editor.navigation.issueArchive">Παλαιά Τεύχη</message>

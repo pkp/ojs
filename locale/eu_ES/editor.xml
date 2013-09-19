@@ -92,7 +92,6 @@
 	<message key="editor.issues.noLiveIssues">Ez dago hasitako zenbakirik</message>
 	<message key="editor.issues.open">Irekia</message>
 	<message key="editor.issues.pages">Orrialdeak</message>
-	<message key="editor.navigation.issues">Zenbakiak</message>
 	<message key="editor.navigation.futureIssues">Etorkizuneko zenbakiak</message>
 	<message key="grid.action.addIssue">Sortu zenbakia</message>
 	<message key="editor.navigation.issueArchive">Aurreko zenbakiak</message>

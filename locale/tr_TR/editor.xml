@@ -102,7 +102,6 @@
 	<message key="editor.issues.noLiveIssues">Yayınlanan Sayı Yok</message>
 	<message key="editor.issues.open">Aç</message>
 	<message key="editor.issues.pages">Sayfalar</message>
-	<message key="editor.navigation.issues">Sayılar</message>
 	<message key="editor.navigation.futureIssues">Gelecek Sayılar</message>
 	<message key="grid.action.addIssue">Sayı Çıkar</message>
 	<message key="editor.navigation.issueArchive">Önceki Sayılar</message>

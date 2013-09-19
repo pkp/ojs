@@ -103,7 +103,6 @@
 	<message key="editor.issues.noLiveIssues">ലൈവ് പതിപ്പുകള്‍ ഒന്നും ഇല്ല</message>
 	<message key="editor.issues.open">ഓപ്പണ്‍</message>
 	<message key="editor.issues.pages">പേജുകള്‍</message>
-	<message key="editor.navigation.issues">പതിപ്പുകള്‍</message>
 	<message key="editor.navigation.futureIssues">വരാനുള്ള പതിപ്പുകള്‍</message>
 	<message key="grid.action.addIssue">പതിപ്പ് സൃഷ്ടിക്കുക</message>
 	<message key="editor.navigation.issueArchive">കഴിഞ്ഞ പതിപ്പുകള്‍</message>

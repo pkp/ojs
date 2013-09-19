@@ -1021,4 +1021,7 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 	
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Memuat daftar mata uang "{$filename}" dari XML</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Terbitan</message> 
 </locale>

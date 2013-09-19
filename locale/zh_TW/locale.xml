@@ -1034,4 +1034,6 @@ Malinowski
 	<message key="default.journalSettings.forLibrarians"><![CDATA[我們鼓勵圖書館員將這份期刊加入其圖書館的電子期刊資料庫之中。同時，這份期刊的開源碼出版系統或許會適合圖書館放置他們的職員正在編輯的期刊。(請見<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[這份期刊使用LOCKSS系統建立一份在參與之圖書館之間流通的典藏系統，並且允許那些圖書館基於保存和儲藏的目的，建立本期刊的永久性典藏檔案<a href="http://lockss.org/">更多資訊...</a>]]></message>
 
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">期數</message>
 </locale>

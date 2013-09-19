@@ -1149,4 +1149,7 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="default.journalSettings.payPerViewFeeDescription">Betalning av den här avgiften innebär att du kan läsa, ladda ner och skriva ut artikeln.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Betalning av den här avgiften innebär ett ettårsmedlemskap i föreningen, under vilken period du kommer att ha fri tillgänglighet till tidskriften.</message>
 	<message key="default.journalSettings.donationFeeDescription">Donationer till tidskriften tas emot tacksamt för att säkra ett fortsatt kvalificerat redaktörsskap av tidskriften.</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Nummer</message>
 </locale>

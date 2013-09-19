@@ -1121,4 +1121,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!-- Meldungen: Fehlerbehebung -->
 	<message key="debug.notes.currencyListLoad">Währungsliste "{$filename}" aus XML geladen</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Ausgaben</message>
 </locale>

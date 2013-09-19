@@ -93,7 +93,6 @@
 	<message key="editor.issues.noLiveIssues">Ingen Live-udgaver</message>
 	<message key="editor.issues.open">Åbn</message>
 	<message key="editor.issues.pages">Sider</message>
-	<message key="editor.navigation.issues">Udgaver</message>
 	<message key="editor.navigation.futureIssues">Fremtidige udgaver</message>
 	<message key="grid.action.addIssue">Opret udgave</message>
 	<message key="editor.navigation.issueArchive">Tidligere udgaver</message>

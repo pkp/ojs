@@ -115,7 +115,6 @@
 	<message key="editor.issues.backToIssueGalleys">Zurück zu den Ausgabenfahnen</message>
 	<message key="editor.issues.viewingGalley">Ausgabenfahne ansehen</message>
 	<message key="editor.issues.confirmDeleteGalley">Sind Sie sicher, dass Sie diese Ausgabenfahne löschen möchten?</message>
-	<message key="editor.navigation.issues">Ausgaben</message>
 	<message key="editor.navigation.futureIssues">Zukünftige Ausgaben</message>
 	<message key="grid.action.addIssue">Ausgabe erstellen</message>
 	<message key="grid.action.viewIssue">Ausgabe ansehen</message>

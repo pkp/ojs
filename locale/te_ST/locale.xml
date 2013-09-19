@@ -1323,7 +1323,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="editor.issues.noLiveIssues">Ñó Lîvè Îþþüèþ</message>
 	<message key="editor.issues.open">Òpèñ</message>
 	<message key="editor.issues.pages">Pågèþ</message>
-	<message key="editor.navigation.issues">Îþþüèþ</message>
 	<message key="editor.navigation.futureIssues">Fütürè Îþþüèþ</message>
 	<message key="editor.navigation.createIssue">Çrèåtè Îþþüè</message>
 	<message key="editor.navigation.issueArchive">Båçk Îþþüèþ</message>
@@ -2492,4 +2491,7 @@ Authors who publish with this journal agree to the following terms:
 	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
 	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
 	</ol>]]></message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Îþþüèþ</message>
 </locale>

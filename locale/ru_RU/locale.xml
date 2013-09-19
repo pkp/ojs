@@ -780,4 +780,7 @@
 	<message key="gifts.subscriptions">Подписки</message>
 	<message key="payment.type.gift">Подарок</message>
 	<message key="payment.type.gift.subscription">Подписка</message>
+
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Выпуски</message>
 </locale>
