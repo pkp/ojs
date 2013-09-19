@@ -19,7 +19,7 @@ class ReferralForm extends Form {
 	/** @var referralId int the ID of the referral being edited */
 	var $referralId;
 
-	/** @var $article object the article this referral refers to */
+	/** @var object the article this referral refers to */
 	var $article;
 
 	/**

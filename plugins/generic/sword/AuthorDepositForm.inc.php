@@ -15,10 +15,10 @@
 import('lib.pkp.classes.form.Form');
 
 class AuthorDepositForm extends Form {
-	/** @var $article object */
+	/** @var object */
 	var $article;
 
-	/** @var $swordPlugin object */
+	/** @var object */
 	var $swordPlugin;
 
 	/**

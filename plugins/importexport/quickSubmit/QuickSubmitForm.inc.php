@@ -16,7 +16,7 @@
 import('lib.pkp.classes.form.Form');
 
 class QuickSubmitForm extends Form {
-	/** @var $request object */
+	/** @var object */
 	var $request;
 
 	/**

@@ -15,7 +15,7 @@
 import('lib.pkp.classes.controllers.tab.settings.form.ContextSettingsForm');
 
 class MastheadForm extends ContextSettingsForm {
-	/** @var $categories array Used to unpack categories listbuilder */
+	/** @var array Used to unpack categories listbuilder */
 	var $categories;
 
 	/**

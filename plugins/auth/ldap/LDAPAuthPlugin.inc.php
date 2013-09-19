@@ -36,7 +36,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	// - pwhash
 	// - SASL: sasl, saslmech, saslrealm, saslauthzid, saslprop
 
-	/** @var $conn resource the LDAP connection */
+	/** @var resource the LDAP connection */
 	var $conn;
 
 	/**

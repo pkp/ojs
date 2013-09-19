@@ -16,16 +16,16 @@ import('lib.pkp.classes.form.Form');
 
 class IssueEntryPublicationMetadataForm extends Form {
 
-	/** @var $_submission Submission The submission used to show metadata information */
+	/** @var Submission The submission used to show metadata information */
 	var $_submission;
 
-	/** @var $_publishedArticle PublishedArticle The published article associated with this submission */
+	/** @var PublishedArticle The published article associated with this submission */
 	var $_publishedArticle;
 
-	/** @var $_stageId int The current stage id */
+	/** @var int The current stage id */
 	var $_stageId;
 
-	/** @var $_userId int The current user ID */
+	/** @var int The current user ID */
 	var $_userId;
 
 	/**

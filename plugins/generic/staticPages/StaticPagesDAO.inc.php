@@ -14,7 +14,7 @@
 import('lib.pkp.classes.db.DAO');
 
 class StaticPagesDAO extends DAO {
-	/** @var $parentPluginName Name of parent plugin */
+	/** @var Name of parent plugin */
 	var $parentPluginName;
 
 	/**

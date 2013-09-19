@@ -17,7 +17,7 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class UsageStatsPlugin extends GenericPlugin {
 
-	/** @var $_currentUsageEvent array */
+	/** @var array */
 	var $_currentUsageEvent;
 
 

@@ -18,7 +18,7 @@ import('lib.pkp.classes.form.Form');
 
 class ReviewFormForm extends Form {
 
-	/** @var $reviewFormId int The ID of the review form being edited */
+	/** @var int The ID of the review form being edited */
 	var $reviewFormId;
 
 	/**

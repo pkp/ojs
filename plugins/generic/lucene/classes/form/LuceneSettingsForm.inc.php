@@ -22,10 +22,10 @@ define('LUCENE_PLUGIN_PASSWORD_PLACEHOLDER', '##5ca39841ab##');
 
 class LuceneSettingsForm extends Form {
 
-	/** @var $_plugin LucenePlugin */
+	/** @var LucenePlugin */
 	var $_plugin;
 
-	/** @var $_embeddedServer EmbeddedServer */
+	/** @var EmbeddedServer */
 	var $_embeddedServer;
 
 	/**

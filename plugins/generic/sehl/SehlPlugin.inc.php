@@ -15,7 +15,7 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class SehlPlugin extends GenericPlugin {
-	/** @var $queryTerms string */
+	/** @var string */
 	var $queryTerms;
 
 	function register($category, $path) {

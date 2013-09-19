@@ -17,7 +17,7 @@
 import('classes.plugins.ImportExportPlugin');
 
 class SwordImportExportPlugin extends ImportExportPlugin {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	/**

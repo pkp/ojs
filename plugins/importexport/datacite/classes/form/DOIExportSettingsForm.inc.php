@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/.../classes/form/DOIExportSettingsForm.inc.php
+ * @file classes/form/DOIExportSettingsForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

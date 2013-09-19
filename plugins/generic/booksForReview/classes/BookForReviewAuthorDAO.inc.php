@@ -14,7 +14,7 @@
  */
 
 class BookForReviewAuthorDAO extends DAO {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	/**

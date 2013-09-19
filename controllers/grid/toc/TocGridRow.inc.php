@@ -15,7 +15,7 @@
 import('lib.pkp.classes.controllers.grid.GridRow');
 
 class TocGridRow extends GridRow {
-	/** @var $issueId int */
+	/** @var int */
 	var $issueId;
 
 	/**

@@ -15,7 +15,7 @@
 import('lib.pkp.classes.form.Form');
 
 class GiftIndividualSubscriptionForm extends Form {
-	/** @var $request PKPRequest */
+	/** @var PKPRequest */
 	var $request;
 
 	/** @var userId int the buyer associated with the gift purchase */

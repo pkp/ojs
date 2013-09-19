@@ -16,10 +16,10 @@
 import('lib.pkp.classes.form.Form');
 
 class AdminCategoryForm extends Form {
-	/** @var $categoryId int The id for the submissionChecklist being edited */
+	/** @var int The id for the submissionChecklist being edited */
 	var $categoryId;
 
-	/** @var $category Object The category being edited */
+	/** @var Object The category being edited */
 	var $category;
 
 	/**

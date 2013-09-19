@@ -14,7 +14,7 @@
 import('lib.pkp.classes.security.authorization.DataObjectRequiredPolicy');
 
 class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
-	/** @var $journal Journal */
+	/** @var Journal */
 	var $journal;
 
 	/**

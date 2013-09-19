@@ -15,7 +15,7 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class WebFeedBlockPlugin extends BlockPlugin {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	function WebFeedBlockPlugin($parentPluginName) {

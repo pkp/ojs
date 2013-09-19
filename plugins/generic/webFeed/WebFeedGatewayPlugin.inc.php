@@ -16,7 +16,7 @@
 import('classes.plugins.GatewayPlugin');
 
 class WebFeedGatewayPlugin extends GatewayPlugin {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	function WebFeedGatewayPlugin($parentPluginName) {

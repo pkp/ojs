@@ -18,10 +18,10 @@ import('lib.pkp.classes.form.Form');
 
 class AbntSettingsForm extends Form {
 
-	/** @var $journalId int */
+	/** @var int */
 	var $journalId;
 
-	/** @var $plugin object */
+	/** @var object */
 	var $plugin;
 
 	/**

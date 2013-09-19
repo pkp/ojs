@@ -18,13 +18,13 @@ import('lib.pkp.classes.form.Form');
 
 class DepositPointForm extends Form {
 
-	/** @var $journalId int */
+	/** @var int */
 	var $journalId;
 
-	/** @var $depositPointId int */
+	/** @var int */
 	var $depositPointId;
 
-	/** @var $plugin object */
+	/** @var object */
 	var $plugin;
 
 	/**

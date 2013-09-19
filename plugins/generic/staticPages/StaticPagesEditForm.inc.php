@@ -16,13 +16,13 @@
 import('lib.pkp.classes.form.Form');
 
 class StaticPagesEditForm extends Form {
-	/** @var $journalId int */
+	/** @var int */
 	var $journalId;
 
-	/** @var $plugin object */
+	/** @var object */
 	var $plugin;
 
-	/** @var $staticPageId **/
+	/** @var **/
 	var $staticPageId;
 
 	/** $var $errors string */

@@ -16,7 +16,7 @@
 import('lib.pkp.classes.notification.PKPNotificationManager');
 
 class NotificationManager extends PKPNotificationManager {
-	/* @var $privilegedRoles array Cache each user's most privileged role for each submission */
+	/* @var array Cache each user's most privileged role for each submission */
 	var $privilegedRoles;
 
 	/**

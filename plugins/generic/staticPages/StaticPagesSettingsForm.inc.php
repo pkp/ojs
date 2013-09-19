@@ -16,10 +16,10 @@
 import('lib.pkp.classes.form.Form');
 
 class StaticPagesSettingsForm extends Form {
-	/** @var $journalId int */
+	/** @var int */
 	var $journalId;
 
-	/** @var $plugin object */
+	/** @var object */
 	var $plugin;
 
 	/** $var $errors string */

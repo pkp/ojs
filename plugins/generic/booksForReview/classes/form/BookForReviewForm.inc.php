@@ -17,7 +17,7 @@ import('lib.pkp.classes.form.Form');
 define('BFR_COVER_PAGE_IMAGE_NAME', 'coverPage');
 
 class BookForReviewForm extends Form {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	/** @var book BookForReview the book being edited */

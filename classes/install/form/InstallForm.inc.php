@@ -37,7 +37,7 @@ class InstallForm extends Form {
 	/** @var array database drivers supported by this system */
 	var $supportedDatabaseDrivers;
 
-	/** @var $request PKPRequest */
+	/** @var PKPRequest */
 	var $_request;
 
 	/**

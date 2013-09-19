@@ -16,10 +16,10 @@
 import('lib.pkp.classes.form.Form');
 
 class PayMethodSettingsForm extends Form {
-	/** @var $errors string */
+	/** @var string */
 	var $errors;
 
-	/** @var $plugins array */
+	/** @var array */
 	var $plugins;
 
 	/**

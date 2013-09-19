@@ -18,7 +18,7 @@ import('lib.pkp.classes.plugins.BlockPlugin');
 class CustomBlockPlugin extends BlockPlugin {
 	var $blockName;
 
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	/**

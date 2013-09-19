@@ -15,7 +15,7 @@
 import('lib.pkp.classes.form.Form');
 
 class UserInstitutionalSubscriptionForm extends Form {
-	/** @var $request PKPRequest */
+	/** @var PKPRequest */
 	var $request;
 
 	/** @var userId int the user associated with the subscription */

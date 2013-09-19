@@ -17,7 +17,7 @@ import('lib.pkp.classes.note.PKPNoteDAO');
 import('classes.note.Note');
 
 class NoteDAO extends PKPNoteDAO {
-	/** @var $articleFileDao Object */
+	/** @var Object */
 	var $articleFileDao;
 
 	/**

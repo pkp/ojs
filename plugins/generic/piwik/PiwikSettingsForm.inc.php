@@ -16,10 +16,10 @@ import('lib.pkp.classes.form.Form');
 
 class PiwikSettingsForm extends Form {
 
-	/** @var $journalId int */
+	/** @var int */
 	var $journalId;
 
-	/** @var $plugin object */
+	/** @var object */
 	var $plugin;
 
 	/**

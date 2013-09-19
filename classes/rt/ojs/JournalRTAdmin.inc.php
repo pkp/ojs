@@ -20,10 +20,10 @@ define('DEFAULT_RT_LOCALE', 'en_US');
 
 class JournalRTAdmin extends RTAdmin {
 
-	/** @var $journalId int */
+	/** @var int */
 	var $journalId;
 
-	/** @var $dao DAO */
+	/** @var DAO */
 	var $dao;
 
 

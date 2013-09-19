@@ -16,13 +16,13 @@
 import('lib.pkp.classes.payment.QueuedPayment');
 
 class OJSQueuedPayment extends QueuedPayment {
-	/** @var $journalId int journal ID this payment applies to */
+	/** @var int journal ID this payment applies to */
 	var $journalId;
 
-	/** @var $type int PAYMENT_TYPE_... */
+	/** @var int PAYMENT_TYPE_... */
 	var $type;
 
-	/** @var $requestUrl string URL associated with this payment */
+	/** @var string URL associated with this payment */
 	var $requestUrl;
 
 	/**

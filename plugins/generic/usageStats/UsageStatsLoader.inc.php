@@ -29,13 +29,13 @@ class UsageStatsLoader extends FileLoader {
 	/** @var A GeoLocationTool object instance to provide geo location based on ip. */
 	var $_geoLocationTool;
 
-	/** @var $_plugin Plugin */
+	/** @var Plugin */
 	var $_plugin;
 
-	/** @var $_counterRobotsListFile string */
+	/** @var string */
 	var $_counterRobotsListFile;
 
-	/** @var $_journalsByPath array */
+	/** @var array */
 	var $_journalsByPath;
 
 	/**

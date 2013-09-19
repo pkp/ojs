@@ -25,10 +25,10 @@ define('BFR_FIELD_NONE', 		null);
 
 
 class BookForReviewDAO extends DAO {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	/** @var $bookForReviewAuthorDao object Book for review author DAO */
+	/** @var object Book for review author DAO */
 	var $bookForReviewAuthorDao;
 
 	/**

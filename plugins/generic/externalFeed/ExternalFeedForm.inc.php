@@ -16,13 +16,13 @@ import('lib.pkp.classes.form.Form');
 
 class ExternalFeedForm extends Form {
 
-	/** @var $plugin object */
+	/** @var object */
 	var $plugin;
 
-	/** @var $feedId int */
+	/** @var int */
 	var $feedId;
 
-	/** @var $journalId int */
+	/** @var int */
 	var $journalId;
 
 	/**

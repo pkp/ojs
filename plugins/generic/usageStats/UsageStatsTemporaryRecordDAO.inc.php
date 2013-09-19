@@ -15,10 +15,10 @@
 
 class UsageStatsTemporaryRecordDAO extends DAO {
 
-	/** @var $_result ADORecordSet */
+	/** @var ADORecordSet */
 	var $_result;
 
-	/** @var $_loadId string */
+	/** @var string */
 	var $_loadId;
 
 	/**

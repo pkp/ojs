@@ -19,13 +19,13 @@ class SectionForm extends Form {
 	/** the id for the section being edited **/
 	var $_sectionId;
 
-	/** @var $_userId int The current user ID */
+	/** @var int The current user ID */
 	var $_userId;
 
-	/** @var $_imageExtension string Cover image extension */
+	/** @var string Cover image extension */
 	var $_imageExtension;
 
-	/** @var $_sizeArray array Cover image information from getimagesize */
+	/** @var array Cover image information from getimagesize */
 	var $_sizeArray;
 
 	/**

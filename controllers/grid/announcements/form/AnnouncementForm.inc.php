@@ -16,7 +16,7 @@ import('lib.pkp.classes.manager.form.PKPAnnouncementForm');
 
 class AnnouncementForm extends PKPAnnouncementForm {
 
-	/** @var $_readOnly boolean */
+	/** @var boolean */
 	var $_readOnly;
 
 	/**

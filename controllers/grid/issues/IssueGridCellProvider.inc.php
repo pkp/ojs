@@ -15,7 +15,7 @@
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
 class IssueGridCellProvider extends GridCellProvider {
-	/** @var $dateFormatShort string */
+	/** @var string */
 	var $dateFormatShort;
 
 	/**

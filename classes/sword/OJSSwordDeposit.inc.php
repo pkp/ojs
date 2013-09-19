@@ -17,19 +17,19 @@ require_once('./lib/pkp/lib/swordapp/swordappentry.php');
 require_once('./lib/pkp/lib/swordapp/packager_mets_swap.php');
 
 class OJSSwordDeposit {
-	/** @var $package SWORD deposit METS package */
+	/** @var SWORD deposit METS package */
 	var $package;
 
-	/** @var $outPath Complete path and directory name to use for package creation files */
+	/** @var Complete path and directory name to use for package creation files */
 	var $outPath;
 
-	/** @var $journal */
+	/** @var Journal */
 	var $journal;
 
-	/** @var $section */
+	/** @var Section */
 	var $section;
 
-	/** @var $issue */
+	/** @var Issue */
 	var $issue;
 
 	/**

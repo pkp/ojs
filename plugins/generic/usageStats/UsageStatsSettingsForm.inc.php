@@ -16,7 +16,7 @@ import('lib.pkp.classes.form.Form');
 
 class UsageStatsSettingsForm extends Form {
 
-	/** @var $plugin object */
+	/** @var object */
 	var $plugin;
 
 	/**

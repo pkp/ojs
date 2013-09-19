@@ -20,10 +20,10 @@ import('lib.pkp.classes.plugins.Plugin');
 
 class AuthPlugin extends Plugin {
 
-	/** @var $settings array settings for this plugin instance */
+	/** @var array settings for this plugin instance */
 	var $settings;
 
-	/** @var $authId int auth source ID for this plugin instance */
+	/** @var int auth source ID for this plugin instance */
 	var $authId;
 
 	/**

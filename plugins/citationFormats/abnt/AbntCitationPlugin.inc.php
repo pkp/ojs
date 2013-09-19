@@ -43,7 +43,7 @@ class AbntCitationPlugin extends CitationPlugin {
 	}
 
 	/**
-	 * @copydoc CitationFormatPlugin::getCitationFormatName()
+	 * @copydoc CitationPlugin::getCitationFormatName()
 	 */
 	function getCitationFormatName() {
 		return __('plugins.citationFormats.abnt.citationFormatName');
