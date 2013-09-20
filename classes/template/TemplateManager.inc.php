@@ -51,7 +51,7 @@ class TemplateManager extends PKPTemplateManager {
 			$this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
 
 			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
-			if (file_exists($siteStyleFilename)) $this->addStyleSheet($this->request->getBaseUrl() . '/' . $siteStyleFilename);
+			if (file_exists($siteStyleFilename)) $this->addStyleSheet($this->request->getBaseUrl() . '/' . $siteStyleFilename, STYLE_SEQUENCE_LAST);
 
 			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
 
@@ -88,7 +88,7 @@ class TemplateManager extends PKPTemplateManager {
 				// Assign stylesheets and footer
 				$contextStyleSheet = $context->getSetting('journalStyleSheet');
 				if ($contextStyleSheet) {
-					$this->addStyleSheet($this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName']);
+					$this->addStyleSheet($this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'], STYLE_SEQUENCE_LAST);
 				}
 
 				import('classes.payment.ojs.OJSPaymentManager');
@@ -116,6 +116,16 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('hasOtherJournals', true);
 			}
 		}
+	}
+
+	/**
+	 * Initialize the template manager.
+	 */
+	function initialize() {
+		// Add uncompilable styles
+		$this->addStyleSheet($this->request->getBaseUrl() . '/styles/lib.css', STYLE_SEQUENCE_CORE);
+
+		parent::initialize();
 	}
 
 	/**

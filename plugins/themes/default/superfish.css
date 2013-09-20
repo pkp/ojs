@@ -64,7 +64,7 @@ trigger IE7 hasLayout so spans position accurately */
 	height: 10px;
 	text-indent: -999em;
 	overflow: hidden;
-	background: url(../../../templates/images/structure/superfish/arrows-ffffff.png) no-repeat -10px -100px;
+	background: url({$baseUrl}/lib/pkp/templates/images/structure/superfish/arrows-ffffff.png) no-repeat -10px -100px;
 /* 8-bit in dexed alpha png. IE6 gets solid image only */
 }
 
@@ -118,7 +118,7 @@ li.sfHover > a > .sf-sub-indicator {
 /*** shadows for all but IE6 ***/
 
 .sf-shadow ul {
-	background: url('../../../templates/images/structure/superfish/shadow.png') no-repeat bottom right;
+	background: url({$baseUrl}/lib/pkp/templates/images/structure/superfish/shadow.png) no-repeat bottom right;
 	padding: 0 8px 9px 0;
 	-moz-border-radius-bottomleft: 17px;
 	-moz-border-radius-topright: 17px;
