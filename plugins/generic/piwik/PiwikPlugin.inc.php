@@ -166,7 +166,7 @@ class PiwikPlugin extends GenericPlugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$request = $this->getRequest();

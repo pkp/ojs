@@ -36,9 +36,6 @@ class IssueGalleyGridHandler extends GridHandler {
 	//
 	/**
 	 * @copydoc PKPHandler::authorize()
-	 * @param $request PKPRequest
-	 * @param $args array
-	 * @param $roleAssignments array
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		import('lib.pkp.classes.security.authorization.PkpContextAccessPolicy');

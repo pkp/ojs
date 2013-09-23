@@ -34,7 +34,7 @@ class FilterGridHandler extends PKPFilterGridHandler {
 	// Implement template methods from PKPHandler
 	//
 	/**
-	 * @see PKPHandler::authorize()
+	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		// Make sure the user can change the journal setup.

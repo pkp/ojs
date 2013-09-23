@@ -22,7 +22,7 @@ define('USAGE_EVENT_PLUGIN_CLASSIFICATION_ADMIN', 'administrative');
 class UsageEventPlugin extends GenericPlugin {
 
 	//
-	// Implement methods from PKPPlugin.
+	// Implement methods from Plugin.
 	//
 	/**
 	* @see LazyLoadPlugin::register()
@@ -44,14 +44,14 @@ class UsageEventPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getDisplayName()
+	 * @see Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.generic.usageEvent.displayName');
 	}
 
 	/**
-	 * @see PKPPlugin::getDescription()
+	 * @see Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.generic.usageEvent.description');
@@ -65,7 +65,7 @@ class UsageEventPlugin extends GenericPlugin {
 	}
 
 	/**
-	* @see PKPPlugin::isSitePlugin()
+	* @see Plugin::isSitePlugin()
 	*/
 	function isSitePlugin() {
 		return true;

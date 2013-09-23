@@ -17,10 +17,10 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 class ArticleGalleyPlugin extends GenericPlugin {
 
 	/*
-	 * Override public methods from PKPPlugin
+	 * Override public methods from Plugin
 	 */
 	/**
-	 * @see PKPPlugin::register()
+	 * @see Plugin::register()
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {

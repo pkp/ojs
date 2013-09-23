@@ -95,7 +95,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$templateMgr = TemplateManager::getManager();

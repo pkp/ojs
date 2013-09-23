@@ -93,7 +93,7 @@ class GatewayPlugin extends Plugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$templateManager = TemplateManager::getManager($this->getRequest());

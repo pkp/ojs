@@ -18,7 +18,7 @@ import('classes.plugins.PubIdPlugin');
 class URNPubIdPlugin extends PubIdPlugin {
 
 	//
-	// Implement template methods from PKPPlugin.
+	// Implement template methods from Plugin.
 	//
 	/**
 	 * @see PubIdPlugin::register()
@@ -30,28 +30,28 @@ class URNPubIdPlugin extends PubIdPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getName()
+	 * @see Plugin::getName()
 	 */
 	function getName() {
 		return 'URNPubIdPlugin';
 	}
 
 	/**
-	 * @see PKPPlugin::getDisplayName()
+	 * @see Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.pubIds.urn.displayName');
 	}
 
 	/**
-	 * @see PKPPlugin::getDescription()
+	 * @see Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.pubIds.urn.description');
 	}
 
 	/**
-	 * @see PKPPlugin::getTemplatePath()
+	 * @see Plugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';

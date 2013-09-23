@@ -30,9 +30,6 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 
 	/**
 	 * @copydoc PKPHandler::authorize()
-	 * @param $request PKPRequest
-	 * @param $args array
-	 * @param $roleAssignments array
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		return parent::authorize($request, $args, $roleAssignments, false);

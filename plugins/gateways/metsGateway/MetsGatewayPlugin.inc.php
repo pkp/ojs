@@ -56,7 +56,7 @@ class METSGatewayPlugin extends GatewayPlugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (parent::manage($verb, $args)) return true;

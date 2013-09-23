@@ -242,7 +242,7 @@ class AuthPlugin extends Plugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if ($verb === 'authSources') {

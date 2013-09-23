@@ -72,10 +72,10 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 
 	//
-	// Implement template methods from PKPPlugin
+	// Implement template methods from Plugin
 	//
 	/**
-	 * @see PKPPlugin::register()
+	 * @see Plugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
@@ -84,21 +84,21 @@ class DOIExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getTemplatePath()
+	 * @see Plugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates' . DIRECTORY_SEPARATOR;
 	}
 
 	/**
-	 * @see PKPPlugin::getInstallSitePluginSettingsFile()
+	 * @see Plugin::getInstallSitePluginSettingsFile()
 	 */
 	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'settings.xml';
 	}
 
 	/**
-	 * @see PKPPlugin::getLocaleFilename($locale)
+	 * @see Plugin::getLocaleFilename($locale)
 	 */
 	function getLocaleFilename($locale) {
 		$localeFilenames = parent::getLocaleFilename($locale);
@@ -377,7 +377,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		parent::manage($verb, $args, $message, $messageParams, $pluginModalContent);

@@ -100,7 +100,7 @@ class AbntCitationPlugin extends CitationPlugin {
 	}
 
  	/**
-	 * @copydoc PKPPlugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$request = $this->getRequest();
@@ -138,6 +138,8 @@ class AbntCitationPlugin extends CitationPlugin {
 
 	/**
 	 * Extend the {url ...} smarty to support this plugin.
+	 * @param $params array
+	 * @param $smarty Smarty
 	 */
 	function smartyPluginUrl($params, &$smarty) {
 		$path = array($this->getCategory(), $this->getName());

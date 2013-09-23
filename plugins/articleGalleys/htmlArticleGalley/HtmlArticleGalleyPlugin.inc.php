@@ -16,7 +16,7 @@ import('classes.plugins.ArticleGalleyPlugin');
 
 class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 	/**
-	 * @see PKPPlugin::register()
+	 * @see Plugin::register()
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {

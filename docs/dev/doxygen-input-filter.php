@@ -3,13 +3,13 @@
 $source = file_get_contents($argv[1]);
 
 /**
- * For @var declarations; adapted from:
+ * For var declarations; adapted from:
  *  http://stackoverflow.com/questions/4325224/doxygen-how-to-describe-class-member-variables-in-php
  */
 // @var (one)( notslash)/ (var|public|protected|private) ($symbolic)
 $source = preg_replace(
 	// (@var)   (type)  (descr*)/   (access flag?)                     ($variableName)
-	'#(\@var)\s+([^\s]+)(.*?)\*/\s+(var|public|protected|private)\s+(\$[^\s;=]+)#s',
+	'#(\@var)\s+([^\s]+)(.*?)\*/\s+(var|public|protected|private|static)\s+(\$[^\s;=]+)#s',
 	// @var type variableName descr
 	'
 	 *${3}

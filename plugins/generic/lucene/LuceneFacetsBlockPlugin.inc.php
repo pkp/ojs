@@ -31,38 +31,38 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 
 
 	//
-	// Implement template methods from PKPPlugin.
+	// Implement template methods from Plugin.
 	//
 	/**
-	 * @see PKPPlugin::getHideManagement()
+	 * @see Plugin::getHideManagement()
 	 */
 	function getHideManagement() {
 		return true;
 	}
 
 	/**
-	 * @see PKPPlugin::getName()
+	 * @see Plugin::getName()
 	 */
 	function getName() {
 		return 'LuceneFacetsBlockPlugin';
 	}
 
 	/**
-	 * @see PKPPlugin::getDisplayName()
+	 * @see Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.generic.lucene');
 	}
 
 	/**
-	 * @see PKPPlugin::getDescription()
+	 * @see Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.generic.lucene.description');
 	}
 
 	/**
-	 * @see PKPPlugin::getPluginPath()
+	 * @see Plugin::getPluginPath()
 	 */
 	function getPluginPath() {
 		$plugin =& $this->_getLucenePlugin();
@@ -70,7 +70,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getTemplatePath()
+	 * @see Plugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
 		$plugin =& $this->_getLucenePlugin();
@@ -78,7 +78,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getSeq()
+	 * @see Plugin::getSeq()
 	 */
 	function getSeq() {
 		// Identify the position of the faceting block.

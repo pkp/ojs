@@ -24,7 +24,7 @@ class AboutContextHandler extends Handler {
 	}
 
 	/**
-	 * @see PKPHandler::authorize()
+	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		$context = $request->getContext();

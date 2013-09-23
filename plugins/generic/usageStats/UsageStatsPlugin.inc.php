@@ -22,7 +22,7 @@ class UsageStatsPlugin extends GenericPlugin {
 
 
 	//
-	// Implement methods from PKPPlugin.
+	// Implement methods from Plugin.
 	//
 	/**
 	* @see LazyLoadPlugin::register()
@@ -52,42 +52,42 @@ class UsageStatsPlugin extends GenericPlugin {
 	}
 
 	/**
-	* @see PKPPlugin::getDisplayName()
+	* @see Plugin::getDisplayName()
 	*/
 	function getDisplayName() {
 		return __('plugins.generic.usageStats.displayName');
 	}
 
 	/**
-	 * @see PKPPlugin::getDescription()
+	 * @see Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.generic.usageStats.description');
 	}
 
 	/**
-	* @see PKPPlugin::isSitePlugin()
+	* @see Plugin::isSitePlugin()
 	*/
 	function isSitePlugin() {
 		return true;
 	}
 
 	/**
-	* @see PKPPlugin::getInstallSitePluginSettingsFile()
+	* @see Plugin::getInstallSitePluginSettingsFile()
 	*/
 	function getInstallSitePluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
 	}
 
 	/**
-	* @see PKPPlugin::getTemplatePath()
+	* @see Plugin::getTemplatePath()
 	*/
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';
 	}
 
 	/**
-	* @see PKPPlugin::getManagementVerbLinkAction()
+	* @see Plugin::getManagementVerbLinkAction()
 	*/
 	function getManagementVerbLinkAction($request, $verb) {
 		$router = $request->getRouter();
@@ -107,7 +107,7 @@ class UsageStatsPlugin extends GenericPlugin {
 	}
 
 	/**
-	* @see PKPPlugin::manage()
+	* @see Plugin::manage()
 	*/
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;

@@ -181,7 +181,7 @@ class ResolverPlugin extends GatewayPlugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		switch ($verb) {

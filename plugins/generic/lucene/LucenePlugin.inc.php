@@ -100,10 +100,10 @@ class LucenePlugin extends GenericPlugin {
 
 
 	//
-	// Implement template methods from PKPPlugin.
+	// Implement template methods from Plugin.
 	//
 	/**
-	 * @see PKPPlugin::register()
+	 * @see Plugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
@@ -168,49 +168,49 @@ class LucenePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getDisplayName()
+	 * @see Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.generic.lucene.displayName');
 	}
 
 	/**
-	 * @see PKPPlugin::getDescription()
+	 * @see Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.generic.lucene.description');
 	}
 
 	/**
-	 * @see PKPPlugin::getInstallSitePluginSettingsFile()
+	 * @see Plugin::getInstallSitePluginSettingsFile()
 	 */
 	function getInstallSitePluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
 	}
 
 	/**
-	 * @see PKPPlugin::getInstallEmailTemplatesFile()
+	 * @see Plugin::getInstallEmailTemplatesFile()
 	 */
 	function getInstallEmailTemplatesFile() {
 		return ($this->getPluginPath() . '/emailTemplates.xml');
 	}
 
 	/**
-	 * @see PKPPlugin::getInstallEmailTemplateDataFile()
+	 * @see Plugin::getInstallEmailTemplateDataFile()
 	 */
 	function getInstallEmailTemplateDataFile() {
 		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
 	}
 
 	/**
-	 * @see PKPPlugin::isSitePlugin()
+	 * @see Plugin::isSitePlugin()
 	 */
 	function isSitePlugin() {
 		return true;
 	}
 
 	/**
-	 * @see PKPPlugin::getTemplatePath()
+	 * @see Plugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';
@@ -231,7 +231,7 @@ class LucenePlugin extends GenericPlugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;

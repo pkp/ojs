@@ -25,7 +25,7 @@ define('OJS_METRIC_TYPE_LEGACY_DEFAULT', 'ojs::legacyDefault');
 class UsageStatsReportPlugin extends ReportPlugin {
 
 	/**
-	 * @see PKPPlugin::register()
+	 * @see Plugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
@@ -34,21 +34,21 @@ class UsageStatsReportPlugin extends ReportPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getName()
+	 * @see Plugin::getName()
 	 */
 	function getName() {
 		return 'UsageStatsReportPlugin';
 	}
 
 	/**
-	 * @see PKPPlugin::getDisplayName()
+	 * @see Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.reports.usageStats.report.displayName');
 	}
 
 	/**
-	 * @see PKPPlugin::getDescription()
+	 * @see Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.reports.usageStats.report.description');

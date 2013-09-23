@@ -26,10 +26,10 @@ class PubIdPlugin extends Plugin {
 
 
 	//
-	// Implement template methods from PKPPlugin
+	// Implement template methods from Plugin
 	//
 	/**
-	 * @see PKPPlugin::register()
+	 * @see Plugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
@@ -43,7 +43,7 @@ class PubIdPlugin extends Plugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getManagementVerbs()
+	 * @see Plugin::getManagementVerbs()
 	 */
 	function getManagementVerbs() {
 		if ($this->getEnabled()) {
@@ -69,7 +69,7 @@ class PubIdPlugin extends Plugin {
 	}
 
  	/**
-	 * @see PKPPlugin::manage()
+	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
 		$request = $this->getRequest();

@@ -22,7 +22,7 @@ class StaticPagesEditForm extends Form {
 	/** @var object */
 	var $plugin;
 
-	/** @var **/
+	/** @var int */
 	var $staticPageId;
 
 	/** $var $errors string */

@@ -23,10 +23,10 @@ define('PID_DTD_ID', '-//PKP//OJS PubIds XML//EN');
 class PubIdImportExportPlugin extends ImportExportPlugin {
 
 	//
-	// Implement template methods from ImportExportPlugin and PKPPlugin.
+	// Implement template methods from ImportExportPlugin and Plugin.
 	//
 	/**
-	 * @see PKPPlugin::register()
+	 * @see Plugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
@@ -56,7 +56,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getTemplatePath()
+	 * @see Plugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';
