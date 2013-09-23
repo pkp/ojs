@@ -39,7 +39,8 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	// Overridden template methods
 	//
 	/**
-	 * @copydoc SetupGridHandler::initialize()
+	 * @see SetupGridHandler::initialize()
+	 * @param $request PKPRequest
 	 */
 	function initialize($request) {
 		parent::initialize($request);

@@ -25,7 +25,8 @@ class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
 	}
 
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @see PKPHandler::initialize()
+	 * @param $request PKPRequest
 	 */
 	function initialize($request) {
 		parent::initialize($request);

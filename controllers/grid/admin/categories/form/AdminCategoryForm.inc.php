@@ -24,6 +24,7 @@ class AdminCategoryForm extends Form {
 
 	/**
 	 * Constructor.
+	 * @param $categoryId int Optional ID of category to administer
 	 */
 	function AdminCategoryForm($categoryId = null) {
 		$this->categoryId = $categoryId;
