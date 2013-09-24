@@ -151,18 +151,15 @@ class AnnouncementForm extends PKPAnnouncementForm {
 	 * @copydoc PKPAnnouncementForm::_getAnnouncementTypesAssocId()
 	 */
 	function _getAnnouncementTypesAssocId() {
-		$journalId = $this->getContextId();
-		return array(ASSOC_TYPE_JOURNAL, $journalId);
+		return array(ASSOC_TYPE_JOURNAL, $this->getContextId());
 	}
 
 	/**
-	 * Helper function to assign the AssocType and the AssocId
-	 * @param Announcement the announcement to be modified
+	 * @copydoc PKPAnnouncementForm::_setAnnouncementAssocId()
 	 */
-	function _setAnnouncementAssocId(&$announcement) {
-		$journalId = $this->getContextId();
+	function _setAnnouncementAssocId($announcement) {
 		$announcement->setAssocType(ASSOC_TYPE_JOURNAL);
-		$announcement->setAssocId($journalId);
+		$announcement->setAssocId($this->getContextId());
 	}
 }
 
