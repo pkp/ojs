@@ -81,7 +81,7 @@ class UserAction {
 
 		while ($submissionComment = $submissionComments->next()) {
 			$submissionComment->setAuthorId($newUserId);
-			$submissionCommentDao->updateArticleComment($submissionComment);
+			$submissionCommentDao->updateObject($submissionComment);
 		}
 
 		$accessKeyDao = DAORegistry::getDAO('AccessKeyDAO');
