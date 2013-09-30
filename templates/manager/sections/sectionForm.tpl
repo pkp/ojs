@@ -106,17 +106,17 @@ function checkEditorAssignments() {
 	</td>
 </tr>
 <tr valign="top">
-	<td class="value">
+	<!--<td class="value">
 		<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
 		{fieldLabel name="metaIndexed" key="manager.sections.submissionIndexing"}
-	</td>
+	</td>-->
 </tr>
 <tr valign="top">
-	<td class="value">
+	<!--<td class="value">
 		{fieldLabel name="identifyType" key="manager.sections.identifyType"} <input type="text" name="identifyType[{$formLocale|escape}]" id="identifyType" value="{$identifyType[$formLocale]|escape}" size="20" maxlength="60" class="textField" />
 		<br />
 		<span class="instruct">{translate key="manager.sections.identifyTypeExamples"}</span>
-	</td>
+	</td>-->
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel suppressId="true" key="submission.restrictions"}</td>
@@ -131,27 +131,28 @@ function checkEditorAssignments() {
 		{fieldLabel name="wordCount" key="manager.sections.wordCountInstructions"}&nbsp;&nbsp;<input type="text" name="wordCount" id="abbrev" value="{$wordCount}" size="10" maxlength="20" class="textField" />
 	</td>
 </tr>
-<tr valign="top">
+<!--<tr valign="top">
 	<td class="label">{fieldLabel name="hideTitle" key="issue.toc"}</td>
 	<td class="value">
 		<input type="checkbox" name="hideTitle" id="hideTitle" value="1" {if $hideTitle}checked="checked"{/if} />
 		{fieldLabel name="hideTitle" key="manager.sections.hideTocTitle"}
 	</td>
-</tr>
+</tr>-->
 <tr valign="top">
-	<td class="label">&nbsp;</td>
+	<!--<td class="label">&nbsp;</td>-->
+	<td class="label">{fieldLabel name="hideTitle" key="issue.toc"}</td>
 	<td class="value">
 		<input type="checkbox" name="hideAuthor" id="hideAuthor" value="1" {if $hideAuthor}checked="checked"{/if} />
 		{fieldLabel name="hideAuthor" key="manager.sections.hideTocAuthor"}
 	</td>
 </tr>
-<tr valign="top">
+<!--<tr valign="top">
 	<td class="label">{fieldLabel name="hideAbout" key="navigation.about"}</td>
 	<td class="value">
 		<input type="checkbox" name="hideAbout" id="hideAbout" value="1" {if $hideAbout}checked="checked"{/if} />
 		{fieldLabel name="hideAbout" key="manager.sections.hideAbout"}
 	</td>
-</tr>
+</tr>-->
 {if $commentsEnabled}
 <tr valign="top">
 	<td class="label">{fieldLabel name="disableComments" key="comments.readerComments"}</td>
