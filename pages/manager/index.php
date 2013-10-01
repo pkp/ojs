@@ -40,16 +40,6 @@ switch ($op) {
 		import('pages.manager.ReviewFormHandler');
 		break;
 	//
-	// Files Browser
-	//
-	case 'files':
-	case 'fileUpload':
-	case 'fileMakeDir':
-	case 'fileDelete':
-		define('HANDLER_CLASS', 'FilesHandler');
-		import('pages.manager.FilesHandler');
-		break;
-	//
 	// Subscription Policies
 	//
 	case 'subscriptionPolicies':
