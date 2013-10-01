@@ -12,8 +12,7 @@
  * @brief Timed view report DAO
  */
 
-
-import('submission.common.Action');
+import('classes.submission.common.Action');
 
 class TimedViewReportDAO extends DAO {
 	/**
