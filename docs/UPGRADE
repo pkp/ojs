@@ -174,10 +174,13 @@ This script can be executed from the command-line or via the OJS web interface.
 1. Command-line
 
 If you have the CLI version of PHP installed (e.g., /usr/bin/php), you can
-upgrade the database by running the following command from the OJS directory:
+upgrade the database as follows:
 
-    $ php tools/upgrade.php upgrade
-
+    - Edit config.inc.php and change "installed = On" to "installed = Off"
+    - Run the following command from the OJS directory (not including the $):
+      $ php tools/upgrade.php upgrade
+    - Re-edit config.inc.php and change "installed = Off" back to
+       "installed = On"
 
 2. Web
 
