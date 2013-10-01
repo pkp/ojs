@@ -19,6 +19,14 @@ import('classes.plugins.ReportPlugin');
 
 class TimedViewReportPlugin extends ReportPlugin {
 	/**
+	 * Constructor
+	 * @param $parentPluginName Name of parent plugin
+	 */
+	function TimedViewReportPlugin($parentPluginName) {
+		parent::ReportPlugin();
+	}
+
+	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
 	 * @return boolean True if plugin initialized successfully; if false,
