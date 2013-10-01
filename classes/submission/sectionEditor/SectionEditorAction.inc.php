@@ -273,7 +273,7 @@ class SectionEditorAction extends Action {
 						}
 					}
 				}
-				$email->displayEditForm(Request::url(null, null, 'notifyReviewer'), array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
+				$email->displayEditForm(Request::url(null, null, 'notifyReviewer'), array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()), 'sectionEditor/notifyReviewerEmail.tpl', array('reviewerAccessKeysEnabled' => $reviewerAccessKeysEnabled));
 				return false;
 			}
 		}
