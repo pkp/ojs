@@ -46,7 +46,7 @@ class TimedViewReportDAO extends DAO {
 				array((int) $journalId)
 			);
 		}
-		$abstractViewCount =& new DBRowIterator($result);
+		$abstractViewCount = new DBRowIterator($result);
 		unset($result);
 
 		return $abstractViewCount;
@@ -85,7 +85,7 @@ class TimedViewReportDAO extends DAO {
 				array((int) $articleId)
 			);
 		}
-		$abstractViewCount =& new DBRowIterator($result);
+		$abstractViewCount = new DBRowIterator($result);
 		unset($result);
 
 		return $abstractViewCount;
