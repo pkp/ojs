@@ -202,9 +202,24 @@ class UsageStatsPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Get the plugin's files path.
-	 * @return string
+	 * Get the geolocation tool to process geo localization
+	 * data.
+	 * @return GeoLocationTool
 	 */
+	function &getGeoLocationTool() {
+		/** Geo location tool wrapper class. If changing the geo location tool
+		* is required, change the code inside this class, keeping the public
+		* interface. */
+		$this->import('GeoLocationTool');
+
+		$tool = new GeoLocationTool();
+		return $tool;
+	}
+
+	/**
+	* Get the plugin's files path.
+	* @return string
+	*/
 	function getFilesPath() {
 		import('lib.pkp.classes.file.PrivateFileManager');
 		$fileMgr = new PrivateFileManager();

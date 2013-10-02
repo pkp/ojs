@@ -69,6 +69,37 @@ class GeoLocationTool {
 			$record->region
 		);
 	}
+
+	/**
+	 * Get all country codes.
+	 * @return mixed array or null
+	 */
+	function getAllCountryCodes() {
+		if (!$this->_geoLocationTool) return null;
+
+		$tool =& $this->_geoLocationTool;
+		$countryCodes = $tool->GEOIP_COUNTRY_CODES;
+
+		// Overwrite the first empty record with the code to
+		// unknow country.
+		$countryCodes[0] = STATISTICS_UNKNOWN_COUNTRY_ID;
+		return $countryCodes;
+	}
+
+	/**
+	 * Get regions by country.
+	 * @param $countryId int
+	 * @return array
+	 */
+	function getRegions($countryId) {
+		$regions = array();
+		$database = $this->_regionName;
+		if (isset($database[$countryId])) {
+			$regions = $database[$countryId];
+		}
+
+		return $regions;
+	}
 }
 
 ?>

@@ -14,11 +14,6 @@
 
 import('lib.pkp.classes.task.FileLoader');
 
-/** Geo location tool wrapper class. If you want to change the geo location tool,
- * change the code inside this class, keeping the public interface, so this ETL tool
- * will work with no modification required. */
-include('GeoLocationTool.inc.php');
-
 /** These are rules defined by the COUNTER project.
  * See http://www.projectcounter.org/code_practice.htmlcode */
 define('COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS_HTML', 10);
@@ -56,14 +51,15 @@ class UsageStatsLoader extends FileLoader {
 
 		parent::FileLoader($args);
 
-		$this->_geoLocationTool = new GeoLocationTool();
 		$this->_baseSystemUrl = Config::getVar('general', 'base_url');
 		$this->_baseSystemEscapedPath = str_replace('/', '\/', parse_url($this->_baseSystemUrl, PHP_URL_PATH));
 
-		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin');
+		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
 		// Load the metric type constant.
 		PluginRegistry::loadCategory('reports');
 		$this->_plugin =& $plugin;
+
+		$this->_geoLocationTool = $plugin->getGeoLocationTool();
 
 		$plugin->import('UsageStatsTemporaryRecordDAO');
 		$statsDao = new UsageStatsTemporaryRecordDAO();
