@@ -112,23 +112,6 @@ class StatisticsHandler extends ManagerHandler {
 		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
 	}
 
-	function _getPublicStatisticsNames() {
-		return array(
-			'statNumPublishedIssues',
-			'statItemsPublished',
-			'statNumSubmissions',
-			'statPeerReviewed',
-			'statCountAccept',
-			'statCountDecline',
-			'statCountRevise',
-			'statDaysPerReview',
-			'statDaysToPublication',
-			'statRegisteredUsers',
-			'statRegisteredReaders',
-			'statSubscriptions',
-		);
-	}
-
 	function savePublicStatisticsList() {
 		$this->validate();
 
@@ -140,6 +123,12 @@ class StatisticsHandler extends ManagerHandler {
 		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
 	}
 
+	/**
+	 * Delegates to plugins operations
+	 * related to report generation.
+	 * @param $args array
+	 * @param $request Request
+	 */
 	function report($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
@@ -158,6 +147,25 @@ class StatisticsHandler extends ManagerHandler {
 	}
 
 	/**
+	 * Display page to generate custom reports.
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function reportGenerator(&$args, &$request) {
+		$this->validate();
+		$this->setupTemplate();
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR);
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('columns', serialize($this->_getColumnNames()));
+		$templateMgr->assign('objects', serialize($this->_getObjectTypeString()));
+		$templateMgr->assign('fileTypes', serialize($this->_getFileTypeString()));
+		$templateMgr->assign('metricType', OJS_METRIC_TYPE_COUNTER);
+		$templateMgr->display('manager/statistics/reportGenerator.tpl');
+	}
+
+	/**
 	 * Generate statistics reports from passed
 	 * request arguments.
 	 * @param $args array
@@ -168,8 +176,16 @@ class StatisticsHandler extends ManagerHandler {
 		$this->setupTemplate(true);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
 
+		$router =& $request->getRouter();
+		$context =& $router->getContext($request); /* @var $context Journal */
+
 		$metricType = $request->getUserVar('metricType');
+		if (is_null($metricType)) {
+			$metricType = $context->getDefaultMetricType();
+		}
+
 		if (is_scalar($metricType)) $metricType = array($metricType);
+
 
 		// Retrieve site-level report plugins.
 		$reportPlugins =& PluginRegistry::loadCategory('reports', true, CONTEXT_SITE);
@@ -226,12 +242,22 @@ class StatisticsHandler extends ManagerHandler {
 		$fp = fopen('php://output', 'wt');
 		fputcsv($fp, array($reportPlugin->getDisplayName()));
 		fputcsv($fp, array($reportPlugin->getDescription()));
+		fputcsv($fp, array(__('common.metric') . ': ' . current($metricType)));
+		fputcsv($fp, array(__('manager.statistics.reports.reportUrl') . ': ' . $request->getCompleteUrl()));
 		fputcsv($fp, array(''));
+
+		// Just for better displaying.
+		$columnNames = array_merge(array(''), $columnNames);
 
 		fputcsv($fp, $columnNames);
 		foreach ($metrics as $record) {
 			$row = array();
 			foreach ($columnNames as $key => $name) {
+				if (empty($name)) {
+					// Column just for better displaying.
+					$row[] = '';
+					continue;
+				}
 				switch ($key) {
 					case 'common.title':
 						$assocId = $record[STATISTICS_DIMENSION_ASSOC_ID];
@@ -248,17 +274,41 @@ class StatisticsHandler extends ManagerHandler {
 						$row[] = $this->_getObjectTitle($assocId, $assocType);
 						break;
 					case STATISTICS_DIMENSION_ISSUE_ID:
-						$assocId = $record[STATISTICS_DIMENSION_ISSUE_ID];
-						$assocType = ASSOC_TYPE_ISSUE;
-						$row[] = $this->_getObjectTitle($assocId, $assocType);
+						if (isset($record[STATISTICS_DIMENSION_ISSUE_ID])) {
+							$assocId = $record[STATISTICS_DIMENSION_ISSUE_ID];
+							$assocType = ASSOC_TYPE_ISSUE;
+							$row[] = $this->_getObjectTitle($assocId, $assocType);
+						} else {
+							$row[] = '';
+						}
 						break;
 					case STATISTICS_DIMENSION_SUBMISSION_ID:
-						$assocId = $record[STATISTICS_DIMENSION_SUBMISSION_ID];
-						$assocType = ASSOC_TYPE_ARTICLE;
-						$row[] = $this->_getObjectTitle($assocId, $assocType);
+						if (isset($record[STATISTICS_DIMENSION_SUBMISSION_ID])) {
+							$assocId = $record[STATISTICS_DIMENSION_SUBMISSION_ID];
+							$assocType = ASSOC_TYPE_ARTICLE;
+							$row[] = $this->_getObjectTitle($assocId, $assocType);
+						} else {
+							$row[] = '';
+						}
+						break;
+					case STATISTICS_DIMENSION_REGION:
+						if (isset($record[STATISTICS_DIMENSION_REGION]) && isset($record[STATISTICS_DIMENSION_COUNTRY])) {
+							$geoLocationTool =& $this->_getGeoLocationTool();
+							if ($geoLocationTool) {
+								$regions = $geoLocationTool->getRegions($record[STATISTICS_DIMENSION_COUNTRY]);
+								$regionId = $record[STATISTICS_DIMENSION_REGION];
+								if (strlen($regionId) == 1) $regionId = '0' . $regionId;
+								if (isset($regions[$regionId])) {
+									$row[] = $regions[$regionId];
+									break;
+								}
+							}
+						}
+						$row[] = '';
 						break;
 					default:
 						$row[] = $record[$key];
+						break;
 				}
 			}
 			fputcsv($fp, $row);
@@ -266,10 +316,35 @@ class StatisticsHandler extends ManagerHandler {
 		fclose($fp);
 	}
 
+
+	//
+	// Private helper methods.
+	//
 	/**
-	 * Get report column names in correct order.
+	 * Get public statistics names.
 	 * @return array
 	 */
+	function _getPublicStatisticsNames() {
+		return array(
+			'statNumPublishedIssues',
+			'statItemsPublished',
+			'statNumSubmissions',
+			'statPeerReviewed',
+			'statCountAccept',
+			'statCountDecline',
+			'statCountRevise',
+			'statDaysPerReview',
+			'statDaysToPublication',
+			'statRegisteredUsers',
+			'statRegisteredReaders',
+			'statSubscriptions',
+		);
+	}
+
+	/**
+	* Get report column names in correct order.
+	* @return array
+	*/
 	function _getColumnNames() {
 		return array(
 			STATISTICS_DIMENSION_ASSOC_ID => __('common.id'),
@@ -284,7 +359,7 @@ class StatisticsHandler extends ManagerHandler {
 			STATISTICS_DIMENSION_MONTH => __('common.month'),
 			STATISTICS_DIMENSION_FILE_TYPE => __('common.fileType'),
 			STATISTICS_DIMENSION_METRIC_TYPE => __('common.metric'),
-			STATISTICS_METRIC => __('submission.views'),
+			STATISTICS_METRIC => __('submission.views')
 		);
 	}
 
@@ -304,7 +379,11 @@ class StatisticsHandler extends ManagerHandler {
 			case ASSOC_TYPE_ISSUE:
 				$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 				$issue =& $issueDao->getIssueById($assocId, null, true);
-				return $issue->getLocalizedTitle();
+				$title = $issue->getLocalizedTitle();
+				if (!$title) {
+					$title = $issue->getIssueIdentification();
+				}
+				return $title;
 			case ASSOC_TYPE_ISSUE_GALLEY:
 				$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 				$issue =& $issueGalleyDao->getGalley($assocId);
@@ -323,25 +402,87 @@ class StatisticsHandler extends ManagerHandler {
 	}
 
 	/**
-	 * Get object type string
-	 * @param $assocType int
-	 * @return string
+	 * Get object type string.
+	 * @param $assocType mixed int or null (optional)
+	 * @return mixed string or array
 	 */
-	function _getObjectTypeString($assocType) {
-		switch ($assocType) {
-			case ASSOC_TYPE_JOURNAL:
-				return __('journal.journal');
-			case ASSOC_TYPE_ISSUE:
-				return __('issue.issue');
-			case ASSOC_TYPE_ISSUE_GALLEY:
-				return __('editor.issues.galley');
-			case ASSOC_TYPE_ARTICLE:
-				return __('article.article');
-			case ASSOC_TYPE_GALLEY:
-				return __('submission.galley');
-			default:
+	function _getObjectTypeString($assocType = null) {
+		$objectTypeStrings = array(
+			ASSOC_TYPE_JOURNAL => __('journal.journal'),
+			ASSOC_TYPE_ISSUE => __('issue.issue'),
+			ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
+			ASSOC_TYPE_ARTICLE => __('article.article'),
+			ASSOC_TYPE_GALLEY => __('submission.galley')
+		);
+
+		if (is_null($assocType)) {
+			return $objectTypeStrings;
+		} else {
+			if (isset($objectTypeStrings[$assocType])) {
+				return $objectTypeStrings[$assocType];
+			} else {
 				assert(false);
+			}
 		}
+	}
+
+	/**
+	 * Get file type string.
+	 * @param $fileType mixed int or null (optional)
+	 * @return mixed string or array
+	 */
+	function _getFileTypeString($fileType = null) {
+		$fileTypeStrings = array(
+			STATISTICS_FILE_TYPE_PDF => 'PDF',
+			STATISTICS_FILE_TYPE_HTML => 'HTML',
+			STATISTICS_FILE_TYPE_OTHER => __('common.other')
+		);
+
+		if (is_null($fileType)) {
+			return $fileTypeStrings;
+		} else {
+			if (isset($fileTypeStrings[$fileType])) {
+				return $fileTypeStrings[$fileType];
+			} else {
+				assert(false);
+			}
+		}
+	}
+
+	/**
+	 * Get report generator form object.
+	 * @return ReportGeneratorForm
+	 */
+	function &_getReportGeneratorForm() {
+		// Import form required locale components.
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR);
+
+		import('classes.statistics.form.ReportGeneratorForm');
+		$columns = $this->_getColumnNames();
+		// Metric column is always present in reports.
+		unset($columns[STATISTICS_METRIC]);
+		// Metric type will be presented in header.
+		unset($columns[STATISTICS_DIMENSION_METRIC_TYPE]);
+
+		$reportGeneratorForm =& new ReportGeneratorForm($columns,
+			$this->_getObjectTypeString(),
+			$this->_getFileTypeString(),
+			OJS_METRIC_TYPE_COUNTER);
+
+		return $reportGeneratorForm;
+	}
+
+	/**
+	 * Get the geo location tool.
+	 * @return GeoLocationTool
+	 */
+	function &_getGeoLocationTool() {
+		$geoLocationTool = null;
+		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
+		if (is_a($plugin, 'UsageStatsPlugin')) {
+			$geoLocationTool =& $plugin->getGeoLocationTool();
+		}
+		return $geoLocationTool;
 	}
 }
 

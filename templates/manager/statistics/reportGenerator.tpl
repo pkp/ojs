@@ -4,35 +4,16 @@
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Subtemplate defining the report generator.
+ * Report generator page.
  *
  *}
-<div id="statistics">
-<h3>{translate key="manager.statistics.reports"}</h3>
-<p>{translate key="manager.statistics.reports.description"}</p>
+{strip}
+{assign var="pageTitle" value="manager.statistics.reports"}
+{assign var="pageCrumbTitle" value="manager.statistics.reports"}
+{include file="common/header.tpl"}
+{/strip}
 
-<form method="post" action="{url op="reportGenerator"}">
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="25%" class="label">{translate key="manager.statistics.reports.reportType"}</td>
-		<td width="75%" class="value"><select name="reportType" id="reportType" class="selectMenu">{html_options_translate options=$reportTypes}</select></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="search.dateFrom"}</td>
-		<td class="value">{html_select_date prefix="dateFrom" time="--" all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{translate key="search.dateTo"}</td>
-		<td class="value">
-			{html_select_date prefix="dateTo" time="--" all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}
-			<input type="hidden" name="dateToHour" value="23" />
-			<input type="hidden" name="dateToMinute" value="59" />
-			<input type="hidden" name="dateToSecond" value="59" />
-		</td>
-	</tr>
-</table>
+{url|assign:reportGeneratorUrl router=$smarty.const.ROUTE_COMPONENT component="statistics.ReportGeneratorHandler" op="fetchReportGenerator" columns=$columns objects=$objects fileTypes=$fileTypes metricType=$metricType escape=false}
+{load_url_in_div id="reportGeneratorContainer" url="$reportGeneratorUrl"}
 
-<input type="submit" class="button defaultButton" value="{translate key="manager.statistics.reports.generate"}"/>
-
-</form>
-</div>
+{include file="common/footer.tpl"}
