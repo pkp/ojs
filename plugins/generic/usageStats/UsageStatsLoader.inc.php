@@ -332,7 +332,12 @@ class UsageStatsLoader extends FileLoader {
 		if ($pageAndOpMatch) {
 			// Get the assoc id inside the passed url.
 			$args = Core::getArgs($url, $isPathInfo);
+			if (empty($args)) {
+				return array(false, false);
+			}
+
 			$assocId = $args[0];
+			$parentObjectId = null;
 
 			// Check if we have more than one url parameter.
 			if (isset($args[1])) {
@@ -434,7 +439,7 @@ class UsageStatsLoader extends FileLoader {
 			// operation will be also logged and that's the one we have to count.
 			$articleViewAccessPageAndOp = array('article/view', 'article/viewArticle', 'article/viewFile');
 			if (in_array($workingPageAndOp, $articleViewAccessPageAndOp) && $assocType == ASSOC_TYPE_GALLEY &&
-			$galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
+			isset($galley) && $galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
 				$assocId = $assocType = false;
 			}
 		}
