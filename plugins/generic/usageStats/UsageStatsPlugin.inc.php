@@ -201,6 +201,17 @@ class UsageStatsPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Get the plugin's files path.
+	 * @return string
+	 */
+	function getFilesPath() {
+		import('lib.pkp.classes.file.PrivateFileManager');
+		$fileMgr = new PrivateFileManager();
+
+		return realpath($fileMgr->getBasePath()) . DIRECTORY_SEPARATOR . 'usageStats';
+	}
+
 
 	//
 	// Private helper methods.
@@ -237,8 +248,7 @@ class UsageStatsPlugin extends GenericPlugin {
 		$filename = 'usage_events_' . date("Ymd") . '.log';
 
 		// Check the plugin file directory.
-		$usageEventFilesPath = realpath($fileMgr->getBasePath()) .
-		DIRECTORY_SEPARATOR . 'usageStats' .
+		$usageEventFilesPath = $this->getFilesPath() .
 		DIRECTORY_SEPARATOR . 'usageEventLogs';
 		if (!$fileMgr->fileExists($usageEventFilesPath, 'dir')) {
 			$success = $fileMgr->mkdirtree($usageEventFilesPath);

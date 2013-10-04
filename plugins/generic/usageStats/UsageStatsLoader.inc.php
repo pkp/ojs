@@ -49,6 +49,11 @@ class UsageStatsLoader extends FileLoader {
 	 * @param $argv array task arguments
 	 */
 	function UsageStatsLoader($args) {
+		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
+
+		// Define the base filesystem path.
+		$args[0] = $plugin->getFilesPath();
+
 		parent::FileLoader($args);
 
 		$this->_geoLocationTool = new GeoLocationTool();
