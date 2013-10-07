@@ -234,7 +234,7 @@ class ArticleGalleyForm extends Form {
 				} else if ($createRemote) {
 					$galley->setLabel(__('common.remote'));
 					$galley->setRemoteURL(__('common.remoteURL'));
-					if ($enablePublicGalleyId) $galley->setPublicGalleyId(strtolower(__('common.remote')));
+					if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', strtolower(__('common.remote')));
 				} else if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
 						$galley->setLabel('PDF');
