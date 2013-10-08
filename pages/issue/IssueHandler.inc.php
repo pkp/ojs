@@ -364,7 +364,9 @@ class IssueHandler extends Handler {
 
 		$prePublicationAccess = false;
 
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		if (!$issue) {
+			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		}
 		$issueHeadingTitle = $issue->getIssueIdentification(false, true);
 		$locale = AppLocale::getLocale();
 
