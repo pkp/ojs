@@ -28,6 +28,7 @@ class NativeExportDom {
 			(int) $issue->getShowYear() .
 			(int) $issue->getShowTitle()
 		) {
+			case '1111': $idType = 'num_vol_year_title'; break;
 			case '1110': $idType = 'num_vol_year'; break;
 			case '1010': $idType = 'vol_year'; break;
 			case '0010': $idType = 'year'; break;
@@ -358,35 +359,41 @@ class NativeExportDom {
 		/* --- Galley file --- */
 		$fileNode =& XMLCustomWriter::createElement($doc, 'file');
 		XMLCustomWriter::appendChild($root, $fileNode);
-		$embedNode =& XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($galley->getFileId())));
-		$articleFile =& $articleFileDao->getArticleFile($galley->getFileId());
-		if (!$articleFile) return $articleFile; // Stupidity check
-		XMLCustomWriter::setAttribute($embedNode, 'filename', $articleFile->getOriginalFileName());
-		XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
-		XMLCustomWriter::setAttribute($embedNode, 'mime_type', $articleFile->getFileType());
+		if ($galley->getRemoteURL()) {
+			$remoteNode =& XMLCustomWriter::createElement($doc, 'remote');
+			XMLCustomWriter::appendChild($fileNode, $remoteNode);
+			XMLCustomWriter::setAttribute($remoteNode, 'src', $galley->getRemoteURL());
+		} else {
+			$embedNode =& XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($galley->getFileId())));
+			$articleFile =& $articleFileDao->getArticleFile($galley->getFileId());
+			if (!$articleFile) return $articleFile; // Stupidity check
+			XMLCustomWriter::setAttribute($embedNode, 'filename', $articleFile->getOriginalFileName());
+			XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
+			XMLCustomWriter::setAttribute($embedNode, 'mime_type', $articleFile->getFileType());
 
-		/* --- HTML-specific data: Stylesheet and/or images --- */
+			/* --- HTML-specific data: Stylesheet and/or images --- */
 
-		if ($isHtml) {
-			$styleFile = $galley->getStyleFile();
-			if ($styleFile) {
-				$styleNode =& XMLCustomWriter::createElement($doc, 'stylesheet');
-				XMLCustomWriter::appendChild($root, $styleNode);
-				$embedNode =& XMLCustomWriter::createChildWithText($doc, $styleNode, 'embed', base64_encode($articleFileManager->readFile($styleFile->getFileId())));
-				XMLCustomWriter::setAttribute($embedNode, 'filename', $styleFile->getOriginalFileName());
-				XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
-				XMLCustomWriter::setAttribute($embedNode, 'mime_type', 'text/css');
-			}
+			if ($isHtml) {
+				$styleFile = $galley->getStyleFile();
+				if ($styleFile) {
+					$styleNode =& XMLCustomWriter::createElement($doc, 'stylesheet');
+					XMLCustomWriter::appendChild($root, $styleNode);
+					$embedNode =& XMLCustomWriter::createChildWithText($doc, $styleNode, 'embed', base64_encode($articleFileManager->readFile($styleFile->getFileId())));
+					XMLCustomWriter::setAttribute($embedNode, 'filename', $styleFile->getOriginalFileName());
+					XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
+					XMLCustomWriter::setAttribute($embedNode, 'mime_type', 'text/css');
+				}
 
-			foreach ($galley->getImageFiles() as $imageFile) {
-				$imageNode =& XMLCustomWriter::createElement($doc, 'image');
-				XMLCustomWriter::appendChild($root, $imageNode);
-				$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getFileId())));
-				XMLCustomWriter::setAttribute($embedNode, 'filename', $imageFile->getOriginalFileName());
-				XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
-				XMLCustomWriter::setAttribute($embedNode, 'mime_type', $imageFile->getFileType());
-				unset($imageNode);
-				unset($embedNode);
+				foreach ($galley->getImageFiles() as $imageFile) {
+					$imageNode =& XMLCustomWriter::createElement($doc, 'image');
+					XMLCustomWriter::appendChild($root, $imageNode);
+					$embedNode =& XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getFileId())));
+					XMLCustomWriter::setAttribute($embedNode, 'filename', $imageFile->getOriginalFileName());
+					XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
+					XMLCustomWriter::setAttribute($embedNode, 'mime_type', $imageFile->getFileType());
+					unset($imageNode);
+					unset($embedNode);
+				}
 			}
 		}
 
@@ -479,11 +486,16 @@ class NativeExportDom {
 		$articleFileManager = new ArticleFileManager($article->getId());
 		$fileNode =& XMLCustomWriter::createElement($doc, 'file');
 		XMLCustomWriter::appendChild($root, $fileNode);
-		$embedNode =& XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($suppFile->getFileId())));
-		XMLCustomWriter::setAttribute($embedNode, 'filename', $suppFile->getOriginalFileName());
-		XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
-		XMLCustomWriter::setAttribute($embedNode, 'mime_type', $suppFile->getFileType());
-
+		if ($suppFile->getRemoteURL()) {
+			$remoteNode =& XMLCustomWriter::createElement($doc, 'remote');
+			XMLCustomWriter::appendChild($fileNode, $remoteNode);
+			XMLCustomWriter::setAttribute($remoteNode, 'src', $suppFile->getRemoteURL());
+		} else {
+			$embedNode =& XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($suppFile->getFileId())));
+			XMLCustomWriter::setAttribute($embedNode, 'filename', $suppFile->getOriginalFileName());
+			XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
+			XMLCustomWriter::setAttribute($embedNode, 'mime_type', $suppFile->getFileType());
+		}
 		return $root;
 	}
 

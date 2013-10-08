@@ -143,6 +143,12 @@ class NativeImportDom {
 		/* --- Set attributes: Identification type, published, current, public ID --- */
 
 		switch(($value = $issueNode->getAttribute('identification'))) {
+			case 'num_vol_year_title':
+				$issue->setShowVolume(1);
+				$issue->setShowNumber(1);
+				$issue->setShowYear(1);
+				$issue->setShowTitle(1);
+				break;
 			case 'num_vol_year':
 				$issue->setShowVolume(1);
 				$issue->setShowNumber(1);
@@ -1042,6 +1048,11 @@ class NativeImportDom {
 				return false;
 			}
 		}
+		if (($remote = $node->getChildByName('remote'))) {
+			$url = $remote->getAttribute('src');
+			$galley->setRemoteURL($url);
+			$fileId = 0;
+		}
 		if (!isset($fileId)) {
 			$errors[] = array('plugins.importexport.native.import.error.galleyFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 			return false;
@@ -1311,8 +1322,13 @@ class NativeImportDom {
 				return false;
 			}
 		}
+		if (($remote = $fileNode->getChildByName('remote'))) {
+			$url = $remote->getAttribute('src');
+			$suppFile->setRemoteURL($url);
+			$fileId = 0;
+		}
 
-		if (!$fileId) {
+		if (!isset($fileId)) {
 			$errors[] = array('plugins.importexport.native.import.error.suppFileMissing', array('articleTitle' => $article->getLocalizedTitle(), 'sectionTitle' => $section->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification()));
 			return false;
 		}
