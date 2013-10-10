@@ -18,11 +18,6 @@ class BibtexCitationPlugin extends CitationPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
-
-		$request = $this->getRequest();
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->register_modifier('bibtex_escape', array($this, 'bibtexEscape'));
-
 		return $success;
 	}
 
@@ -45,6 +40,19 @@ class BibtexCitationPlugin extends CitationPlugin {
 
 	function getDescription() {
 		return __('plugins.citationFormats.bibtex.description');
+	}
+
+	/**
+	 * Return an HTML-formatted citation. Default implementation displays
+	 * an HTML-based citation using the citation.tpl template in the plugin
+	 * path.
+	 * @param $article object
+	 * @param $issue object
+	 */
+	function fetchCitation($article, $issue, $journal) {
+		$templateMgr = TemplateManager::getManager($this->getRequest());
+		$templateMgr->register_modifier('bibtex_escape', array($this, 'bibtexEscape'));
+		return parent::fetchCitation($article, $issue, $journal);
 	}
 
 	/**
