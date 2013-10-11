@@ -185,7 +185,6 @@ class AuthorSubmissionDAO extends DAO {
 			($active?('a.status = ' . STATUS_QUEUED):('(a.status <> ' . STATUS_QUEUED . ' AND a.submission_progress = 0)')) .
 			($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			array(
-				$locale,
 				'cleanTitle',
 				'cleanTitle',
 				$locale,
