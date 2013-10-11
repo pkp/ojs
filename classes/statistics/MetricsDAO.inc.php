@@ -140,6 +140,18 @@ class MetricsDAO extends DAO {
 			unset($currentClause);
 		}
 
+		// Replace the current time constant by time values
+		// inside the parameters array.
+		$currentTime = array(
+			STATISTICS_CURRENT_DAY => date('Ymd', time()),
+			STATISTICS_CURRENT_MONTH => date('Ym', time()));
+		foreach ($currentTime as $constant => $time) {
+			$currentTimeKeys = array_keys($params, $constant);
+			foreach ($currentTimeKeys as $key) {
+				$params[$key] = $time;
+			}
+		}
+
 		// Build the order-by clause.
 		$orderByClause = '';
 		if (count($orderBy) > 0) {
@@ -151,6 +163,7 @@ class MetricsDAO extends DAO {
 					$orderByClause .= ', ';
 				}
 				$orderByClause .= "$orderColumn $direction";
+				$isFirst = false;
 			}
 		}
 
