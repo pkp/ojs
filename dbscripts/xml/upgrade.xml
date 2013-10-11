@@ -178,7 +178,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
 		<code function="migrateArticleMetadata" />
-		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" condition="return !$installer->tableExists('user_user_groups');" />
+		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" />
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" />
 		<schema file="plugins/generic/usageStats/schema.xml" />
