@@ -227,9 +227,11 @@ function moveAuthor(dir, authorIndex) {
 {if $section->getMetaIndexed()==1}
 <div id="indexing">
 	<h3>{translate key="submission.indexing"}</h3>
+	<!--{**
 	{if $currentJournal->getSetting('metaDiscipline') || $currentJournal->getSetting('metaSubjectClass') || $currentJournal->getSetting('metaSubject') || $currentJournal->getSetting('metaCoverage') || $currentJournal->getSetting('metaType')}<p>{translate key="author.submit.eScholsubmissionIndexingDescription"}</p>{/if}
+	**}-->
 	<table width="100%" class="data">
-	{if $currentJournal->getSetting('metaDiscipline')}
+	<!--{**{if $currentJournal->getSetting('metaDiscipline')}**}-->
 	<tr valign="top">
 		<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.eScholdiscipline" required="true"}</td>
 		<td width="80%" class="value">		
@@ -252,7 +254,7 @@ function moveAuthor(dir, authorIndex) {
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
-	{/if}
+	<!--{**{/if}**}-->
 
 	{if $currentJournal->getSetting('metaSubjectClass')}
 	<tr valign="top">

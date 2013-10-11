@@ -354,10 +354,12 @@ function updateAbstractRequired() {
 	</div> <!-- /titleAndAbstract -->
 	
 	<div id="indexing">
+		<!--{**
 		<h4>{translate key="submission.indexing"}</h4>
 		{if $journal->getSetting('metaDiscipline') || $journal->getSetting('metaSubjectClass') || $journal->getSetting('metaSubject') || $journal->getSetting('metaCoverage') || $journal->getSetting('metaType')}<p>{translate key="author.submit.eScholsubmissionIndexingDescription"}</p>{/if}
+		**}-->
 		<table width="100%" class="data">
-		{if $journal->getSetting('metaDiscipline')}
+		<!--{**{if $journal->getSetting('metaDiscipline')}**}-->
 		<tr valign="top">
 			<td{if $journal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="30%" class="label">{fieldLabel name="discipline" key="article.eScholdiscipline" required="true"}</td>
 			<td width="80%" class="value">		
@@ -379,7 +381,7 @@ function updateAbstractRequired() {
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 		</tr>
-		{/if}
+		<!--{**{/if}**}-->
 		
 		{if $journal->getSetting('metaSubjectClass')}
 		<tr valign="top">
