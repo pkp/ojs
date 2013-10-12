@@ -93,7 +93,11 @@ class ReportGeneratorForm extends Form {
 		$this->setData('orderDirectionsOptions', array(
 			STATISTICS_ORDER_ASC => __('manager.statistics.reports.orderDir.asc'),
 			STATISTICS_ORDER_DESC => __('manager.statistics.reports.orderDir.desc')));
-		$this->setData('columnsOptions', $this->_columns);
+
+		$columnsOptions = $this->_columns;
+		// Reports will always include this column.
+		unset($columnsOptions[STATISTICS_METRIC]);
+		$this->setData('columnsOptions', $columnsOptions);
 
 		return parent::fetch($request);
 	}

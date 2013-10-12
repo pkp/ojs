@@ -148,8 +148,6 @@ class ReportGeneratorHandler extends Handler {
 		$fileTypes = unserialize($request->getUserVar('fileTypes'));
 		$metricType = $request->getUserVar('metricType');
 
-		// Metric column is always present in reports.
-		unset($columns[STATISTICS_METRIC]);
 		// Metric type will be presented in header.
 		unset($columns[STATISTICS_DIMENSION_METRIC_TYPE]);
 
