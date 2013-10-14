@@ -32,7 +32,7 @@
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI-Suffix</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Ein DOI-Suffix kann in beliebiger Form sein, muss aber eindeutig unter allen Publikationsobjekten, denen derselbe DOI-Präfix zugewiesen wird:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %s für die OJS-Zusatzdatei-ID und %p für die Seitenzahl.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %s für die OJS-Zusatzdatei-ID, %p für die Seitenzahl und %x für die "benutzerdefinierte Kennung" (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden).</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">für Ausgaben</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">für Artikel</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">für Fahnen</message>
@@ -40,7 +40,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">vol%viss%ipp%p würde z.B. einen DOI 10.1234/vol3iss2pp230 erzeugen.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Die Standardmuster benutzen.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i für Ausgaben<br />%j.v%vi%i.%a für Artikel<br />%j.v%vi%i.%a.g%g für Fahnen <br />%j.v%vi%i.%a.s%s für Zusatzdateien.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Die eindeutige Kennung für Elemente als DOI-Suffix benutzen (muss in Schritt 4 zugelassen werden). Dies ist dieselbe Kennung, die für öffentliche URL verwendet werden wird.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Die eindeutige Kennung für Elemente als DOI-Suffix benutzen (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden). Dies ist dieselbe Kennung, die für öffentliche URL verwendet werden wird.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Für jedes veröffentlichte Element einen individuellen DOI-Suffix unabhängig und verschieden von der "benutzerdefinierten Kennung" aus der vorherigen Option vergeben. Sie werden ein zusätzliches DOI-Eingabefeld auf der Metadatenseite jedes Elements finden.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Bitte geben Sie das DOI-Suffix-Muster für Ausgaben ein.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Bitte geben Sie das DOI-Suffix-Muster für Artikel ein.</message>
