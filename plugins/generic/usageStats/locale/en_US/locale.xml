@@ -27,5 +27,5 @@
 	<message key="plugins.reports.usageStats.report.description">OJS default usage statistics report (COUNTER ready)</message>
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
-	<message key="plugins.reports.usageStats.metricType.full">Open Journal System statistics (COUNTER ready)</message>
+	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (COUNTER ready)</message>
 </locale>

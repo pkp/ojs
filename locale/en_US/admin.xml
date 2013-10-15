@@ -25,7 +25,7 @@
     <message key="admin.settings.journalsList.showDescription">Journal description</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in severeral contexts.
-		There are cases where a single usage statistic must be used, e.g. to display an orderd list of most-used articles or to rank
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
 		search results. Please select one of the configured metrics as a default.
 	</message>
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
