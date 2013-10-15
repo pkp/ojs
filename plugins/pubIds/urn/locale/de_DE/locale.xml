@@ -9,7 +9,7 @@
   *
   * URN plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
   -->
- 
+
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.pubIds.urn.urns">URN</message>
 
@@ -25,14 +25,14 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN-Suffix</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">Die Standardmuster benutzen.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i für Ausgaben<br />%j.v%vi%i.%a für Artikel<br />%j.v%vi%i.%a.g%g für Fahnen <br />%j.v%vi%i.%a.s%s für Zusatzdateien.]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Verwenden Sie das unten angegebene Muster, um URN-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %s für die OJS-Zusatzdatei-ID und %p für die Seitenzahl.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Verwenden Sie das unten angegebene Muster, um URN-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %s für die OJS-Zusatzdatei-ID,  %p für die Seitenzahl und %x für die "benutzerdefinierte Kennung" (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden).</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">für Ausgaben</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">für Artikel</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">für Fahnen</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">für Zusatzdateien</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">vol%viss%ipp%p würde z.B. einen URN-Suffix "vol3iss2pp230" erzeugen.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Ein URN-Suffix kann in beliebiger Form sein, muss aber eindeutig für jedes veröffentlichte Element sein.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Die eindeutige Kennung für veröffentlichte Elemente als URN-Suffix verwenden (muss in Step 4.3 aktiviert werden). Dies ist dieselbe Kennung, die für öffentliche URL verwendet werden wird.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Die eindeutige Kennung für veröffentlichte Elemente als URN-Suffix verwenden (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden). Dies ist dieselbe Kennung, die für öffentliche URL verwendet werden wird.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Für jedes veröffentlichte Element einen individuellen URN-Suffix unabhängig und verschieden von der "benutzerdefinierten Kennung" aus der vorherigen Option vergeben. Sie werden ein zusätzliches URN-Eingabefeld auf der Metadatenseite jedes Elements finden.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">URN löschen</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Wenn Sie Ihre URN-Konfiguration ändern, werden bereits zugewiesene URN nicht betroffen sein. Sobald die geänderte URN-Konfiguration gespeichert worden ist, nutzen Sie bitte diesen Knopf, um alle bestehenden URN zu löschen, so dass die neuen Einstellungen für bestehende Artikel gelten.</message>
@@ -57,6 +57,13 @@
 	<message key="plugins.pubIds.urn.urnSuffix">URN-Suffix</message>
 	<message key="plugins.pubIds.urn.urnSuffix.description">Benutzerdefinierter URN-Suffix für diesen Artikel.</message>
 	<message key="plugins.pubIds.urn.calculateCheckNo">Prüfziffer berechnen</message>
+
+	<!--  metadata form -->
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">Ausgabe</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">Artikel</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">Fahne</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">Zusatzdatei</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Sie sehen eine Vorschau der URN, die eventuell unvollständig ist. Der URN ist noch nicht erzeugt worden. Wenn die Ausgabe erzeugt wird und die öffentliche {$pubObjectType}-Seite aufgerufen wird, wird automatisch ein eindeutiger URN für dieses {$pubObjectType}-Objekt erzeugt.</message>
 
 	<!-- consider URNs at other places in the system -->
 	<message key="plugins.pubIds.urn.rt.metadata.urn">Uniform Resource Name</message>

@@ -462,8 +462,40 @@
 	<message key="manager.setup.userRegistration">Registrierung von Benutzer/innen</message>
 	<message key="manager.setup.useTextTitle">Titeltext</message>
 	<message key="manager.setup.volumePerYear">Bände pro Jahr</message>
+	<message key="manager.statistics.defaultMetricDescription">
+		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
+		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
+		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.</message>
+	</message>
 	<message key="manager.statistics.reports">Berichterstellung</message>
 	<message key="manager.statistics.reports.description">OJS erstellt Berichte, die die Details der Verarbeitung von Beiträgen aus der Perspektive von Beiträgen, Redakteur/innen, Gutachter/innen sowie Rubriken über einen festgelegten Zeitraum nachzeichnen. Die Berichte werden im CSV-Format erstellt, die mit einer Tabellenkalkulation betrachtet werden können.</message>
+	<message key="manager.statistics.reports.generateReport">Benutzerdefinierten Bericht erzeugen</message>
+	<message key="manager.statistics.reports.columns">Spalten</message>
+	<message key="manager.statistics.reports.columns.description">Definieren Sie die Spalten, die zum Erzeugen des Berichts benutzt werden. Die Spalten, die Sie auswählen legen nicht nur fest, welche Daten im Bericht angzeigt werden, sondern definieren auch die Aggregationsstufe der Statistik. Wenn Sie zum Beispiel die Spalten ID, Typ und Monat auswählen, wird der Repurt alle Aufrufe eines Objekts in einem Monat summieren und diese Information in einer Zeile anzeigen. Wenn Sie stattdessen Tag statt Monat auswählen, wird jedes Objekt eine Zeile für jeden Tag erhalten.</message>
+	<message key="manager.statistics.reports.filters">Filter</message>
+	<message key="manager.statistics.reports.objectType">Objekttyp</message>
+	<message key="manager.statistics.reports.objectId">Objekt-ID</message>
+	<message key="manager.statistics.reports.objectId.label">Definieren Sie eine oder mehrere Objekt-ID, jeweils mit Komma getrennt (z.B. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.today">Heute</message>
+	<message key="manager.statistics.reports.currentMonth">Aktueller Monat</message>
+	<message key="manager.statistics.reports.orderBy">Sortieren nach</message>
+	<message key="manager.statistics.reports.orderDir">Richtung</message>
+	<message key="manager.statistics.reports.orderDir.asc">Aufsteigend</message>
+	<message key="manager.statistics.reports.orderDir.desc">Absteigend</message>
+	<message key="manager.statistics.reports.month.label">Benutzen Sie das YYYYMM-Format.</message>
+	<message key="manager.statistics.reports.day.label">Benutzen Sie das YYYYMMDD-Format.</message>
+	<message key="manager.statistics.reports.cities.label">Ein oder mehrere Städtenamen, jeweils mit Komma getrennt (z.B. Stadt 1,Stadt2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Sie müssen mindestens eine Spalte auswählen, um den Bericht zu erzeugen.</message>
+	<message key="manager.statistics.reports.reportUrl">Bericht-URL</message>
+	<message key="manager.statistics.reports.reportUrl.label">Die folgende URL kann benutzt werden, um den Bericht mit diesen aktuellen Einstellungen zu erzeugen. Kopieren Sie ihn einfach und geben Sie ihn in Ihren Browser ein. Sie können die URL zur Berichterzeugung in Ihren Bookmarks speichern.</message>
+	<message key="manager.statistics.reports.filters.byContext">Nach Kontext</message>
+	<message key="manager.statistics.reports.filters.byContext.label">Ergebnisse nach Kontext filtern (Ausgabe und/oder Artikel).</message>
+	<message key="manager.statistics.reports.filters.byObject">Nach Objekttyp oder Objekt-ID</message>
+	<message key="manager.statistics.reports.filters.byObject.label">Ergenisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern.</message>
+	<message key="manager.statistics.reports.filters.byTime">Nach Zeit</message>
+	<message key="manager.statistics.reports.filters.byTime.label">Ergenisse nach einer bestimmten Zeit oder Periode (Monat oder Tag) filtern.</message>
+	<message key="manager.statistics.reports.filters.byLocation">Nach Standort</message>
+	<message key="manager.statistics.reports.filters.byLocation.label">Ergebnisse nach Land, Region und/oder Stadt filtern..</message>
 	<message key="manager.statistics.statistics">Zeitschriftenstatistik</message>
 	<message key="manager.statistics.statistics.articleViews">Artikel angesehen (nur für Autor/innen)</message>
 	<message key="manager.statistics.statistics.count.accept">Annehmen</message>
