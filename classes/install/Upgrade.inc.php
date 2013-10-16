@@ -640,6 +640,118 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * For 3.0.0 upgrade.  Genres are required to migrate files.
+	 */
+	function installDefaultGenres() {
+		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
+		$contextsResult = $genreDao->retrieve('SELECT journal_id FROM journals');
+		while (!$contextsResult->EOF) {
+
+			$row = $contextsResult->GetRowAssoc(false);
+			$genreDao->installDefaults($row['journal_id'], $site->getInstalledLocales());
+			$contextsResult->MoveNext();
+		}
+
+		return true;
+	}
+
+	/**
+	 * For 3.0.0 upgrade.  Migrates submission files to new paths.
+	 */
+	function migrateSubmissionFilePaths() {
+
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		import('lib.pkp.classes.submission.SubmissionFile');
+		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+
+		$submissionFile = new SubmissionFile();
+
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
+
+		$articleFilesResult = $submissionFileDao->retrieve('SELECT af.*, s.submission_id, s.context_id FROM article_files_migration af, submissions s WHERE af.article_id = s.submission_id');
+		$filesDir = Config::getVar('files', 'files_dir') . '/journals/';
+		while (!$articleFilesResult->EOF){
+			$row = $articleFilesResult->GetRowAssoc(false);
+			$articleFileName = $row['file_name'];
+			// Assemble the old file path.
+			$oldFilePath = $filesDir . $row['context_id'] . '/articles/' . $row['submission_id'] . '/';
+			if (isset($row['type'])) { // pre 2.4 upgrade.
+				$oldFilePath .= $row['type'];
+			} else { // post 2.4, we have file_stage instead.
+				switch ($row['file_stage']) {
+					case 1:
+						$oldFilePath .= 'submission/original';
+						break;
+					case 2:
+						$oldFilePath .= 'submission/review';
+						break;
+					case 3:
+						$oldFilePath .= 'submission/editor';
+						break;
+					case 4:
+						$oldFilePath .= 'submission/copyedit';
+						break;
+					case 5:
+						$oldFilePath .= 'submission/layout';
+						break;
+					case 6:
+						$oldFilePath .= 'supp';
+						break;
+					case 7:
+						$oldFilePath .= 'public';
+						break;
+					case 8:
+						$oldFilePath .= 'note';
+						break;
+					case 9:
+						$oldFilePath .= 'attachment';
+						break;
+				}
+			}
+
+			$oldFilePath .= '/' . $row['file_name'];
+			if (file_exists($oldFilePath)) { // sanity check.
+
+				$newFilePath = $filesDir . $row['context_id'] . '/articles/' . $row['submission_id'] . '/';
+
+				// Since we cannot be sure that we had a file_stage column before, query the new submission_files table.
+				$submissionFileResult = $submissionFileDao->retrieve('SELECT genre_id, file_stage, date_uploaded, original_file_name
+							FROM submission_files WHERE file_id = ? and revision = ?', array($row['file_id'], $row['revision']));
+				$submissionFileRow = $submissionFileResult->GetRowAssoc(false);
+
+				$newFilePath .= $submissionFile->_fileStageToPath($submissionFileRow['file_stage']);
+
+				$genre = $genreDao->getById($submissionFileRow['genre_id']);
+				// pull in the primary locale for this journal without loading the whole object.
+				$localeResult = $journalDao->retrieve('SELECT primary_locale FROM journals WHERE journal_id = ?', array($row['context_id']));
+				$localeRow = $localeResult->GetRowAssoc(false);
+
+				$newFilePath .= '/' . $row['submission_id'] . '-' . $genre->getDesignation($localeRow['primary_locale']) . '_' . $genre->getName($localeRow['primary_locale']) . '-' .
+					$row['file_id'] . '-' . $row['revision'] . '-' . $submissionFileRow['file_stage'] . '-' . date('Ymd', strtotime($submissionFileRow['date_uploaded'])) . '.' .
+					strtolower_codesafe($fileManager->parseFileExtension($submissionFileRow['original_file_name']));
+
+				$fileManager->copyFile($oldFilePath, $newFilePath);
+				if (file_exists($newFilePath)) {
+					$fileManager->deleteFile($oldFilePath);
+				}
+			}
+
+			$articleFilesResult->MoveNext();
+			unset($localeResult);
+			unset($submissionFileResult);
+			unset($localeRow);
+			unset($submissionFileRow);
+		}
+
+		return true;
+	}
+
+	/**
 	 * For 2.4 upgrade: migrate COUNTER statistics to the metrics table.
 	 */
 	function migrateCounterPluginUsageStatistics() {

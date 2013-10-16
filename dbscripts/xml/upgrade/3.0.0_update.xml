@@ -41,7 +41,7 @@
 		<!-- supplement files -->
 		<query>UPDATE submission_files SET file_stage = '16' WHERE file_stage = '6'</query>
 		<!-- layout files -->
-		<query>UPDATE submission_files SET file_stage = '12' WHERE file_stage = '5'</query>
+		<query>UPDATE submission_files SET file_stage = '10' WHERE file_stage = '5'</query>
 		<!-- copyedit files -->
 		<query>UPDATE submission_files SET file_stage = '9' WHERE file_stage = '4'</query>
 		<!-- editor files -->

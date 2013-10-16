@@ -114,50 +114,6 @@ class ArticleFile extends SubmissionFile {
 	function setFileName($fileName) {
 		return $this->setData('fileName', $fileName);
 	}
-
-	/**
-	 * Generate the unique filename for this submission file.
-	 * Overridden from SubmissionFile in PKP-lib specificall for Article files.
-	 * @return string
-	 */
-	function _generateFileName() {
-		// Remember the ID information we generated the file name
-		// on so that we only have to re-generate the name if the
-		// relevant information changed.
-		static $lastIds = array();
-		static $fileName = null;
-
-		// Retrieve the current id information.
-		$currentIds = array(
-				'genreId' => $this->getGenreId(),
-				'dateUploaded' => $this->getDateUploaded(),
-				'submissionId' => $this->getSubmissionId(),
-				'fileId' => $this->getFileId(),
-				'revision' => $this->getRevision(),
-				'fileStage' => $this->getFileStage(),
-				'extension' => strtolower_codesafe($this->getExtension())
-		);
-
-		// Check whether we need a refresh.
-		$refreshRequired = false;
-		foreach($currentIds as $key => $currentId) {
-			if (!isset($lastIds[$key]) || $lastIds[$key] !== $currentId) {
-				$refreshRequired = true;
-				$lastIds = $currentIds;
-				break;
-			}
-		}
-
-		// Refresh the file name if required.
-		if ($refreshRequired) {
-			// Make the file name unique across all files and file revisions.
-			// Also make sure that files can be ordered sensibly by file name.
-			$fileName = $currentIds['submissionId'].'-'.$currentIds['fileId'].'-'.$currentIds['revision'].'-'.$currentIds['fileStage'].'.'.$currentIds['extension'];
-		}
-
-		return $fileName;
-	}
-
 }
 
 ?>
