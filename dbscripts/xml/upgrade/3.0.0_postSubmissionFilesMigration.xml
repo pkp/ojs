@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.0_postSubmissionFilesMigration.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.0 Deletes temporary tables used in files migration.
+  *
+  -->
+
+<data>
+	<!-- Article Files to Submission Files migration -->
+	<sql>
+		<drop table="article_files_migration" />
+	</sql>
+</data>

@@ -20,6 +20,11 @@
 		<rename table="edit_decisions" column="article_id" to="submission_id" />
 	</sql>
 
+	<!-- Article files migration -->
+	<sql>
+		<query>CREATE TABLE article_files_migration AS (SELECT * FROM article_files)</query>
+	</sql>
+
 	<!-- Bug #8235: Rename article* submission* -->
 	<sql>
 		<!-- article_files to submission_files -->

@@ -182,6 +182,8 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" />
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" />
+		<code function="installDefaultGenres" />
+		<code function="migrateSubmissionFilePaths" />
 		<schema file="plugins/generic/usageStats/schema.xml" />
 		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
@@ -191,6 +193,7 @@
 		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration_issueGalleys.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
+		<data file="dbscripts/xml/upgrade/3.0.0_postSubmissionFilesMigration.xml" condition="return $installer->tableExists('article_files_migration');" />
 	</upgrade>
 
 	<upgrade minversion="2.3.0.0" maxversion="2.8.9.9"><!-- 2.9.0.0 is OJS 3.0a1 -->
