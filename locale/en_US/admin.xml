@@ -84,4 +84,19 @@
 	<message key="admin.categories.confirmDelete">Are you sure you wish to delete this category?</message>
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">A category name is required.</message>
+	
+	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
+to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
+
+This tool will only copy files that aren't already inside the usageStats file\n loader directories (stage, processing, archive, reject).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory 
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: can't create temporary folder {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: File {$filePath} don't exists or can't be accessed.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: can't copy file from {$filePath} to {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: can't delete file {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Warning: file {$filePath} already exists inside the usage stats directory.</message>
+	<message key="admin.copyAccessLogFileTool.success">Success: {$filePath} to {$destinationPath}</message>
 </locale>
