@@ -33,29 +33,6 @@ class StageParticipantGridHandler extends PKPStageParticipantGridHandler {
 	}
 
 	/**
-	 * Fetches an email template's message body and returns it via AJAX.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function fetchTemplateBody($args, $request) {
-		$templateId = $request->getUserVar('template');
-		import('lib.pkp.classes.mail.SubmissionMailTemplate');
-		$template = new SubmissionMailTemplate($this->getSubmission(), $templateId);
-		if ($template) {
-			$user = $request->getUser();
-			$dispatcher = $request->getDispatcher();
-			$context = $request->getContext();
-			$template->assignParams(array(
-					'editorialContactSignature' => $user->getContactSignature(),
-					'signatureFullName' => $user->getFullname(),
-			));
-
-			$json = new JSONMessage(true, $template->getBody() . "\n" . $context->getSetting('emailSignature'));
-			return $json->getString();
-		}
-	}
-
-	/**
 	 * Log an event for this file
 	 * @param $request PKPRequest
 	 * @param $eventType SUBMISSION_LOG_...

@@ -245,6 +245,13 @@ class Application extends PKPApplication {
 		);
 	}
 
+	/**
+	 * Returns the context type for this application.
+	 */
+	static function getContextAssocType() {
+		return ASSOC_TYPE_JOURNAL;
+	}
+
 	//
 	// Statistics API
 	//
