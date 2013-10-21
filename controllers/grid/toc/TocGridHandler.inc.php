@@ -218,6 +218,7 @@ class TocGridHandler extends CategoryGridHandler {
 			$sectionId = $article->getSectionId();
 			$publishedArticleArray = $publishedArticleDao->getPublishedArticlesBySectionId($sectionId, $issue->getId());
 			if (sizeof($publishedArticleArray) == 1) {
+				$sectionDao = DAORegistry::getDAO('SectionDAO');
 				$sectionDao->deleteCustomSection($issue->getId(), $sectionId);
 			}
 			$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
