@@ -87,6 +87,26 @@ class GeoLocationTool {
 	}
 
 	/**
+	 * Return the 3 letters version of country codes
+	 * based on the passed 2 letters version.
+	 * @param $countryCode string
+	 * @return mixed string or null
+	 */
+	function get3LettersCountryCode($countryCode) {
+		return $this->_getCountryCodeOnList($countryCode, 'GEOIP_COUNTRY_CODES3');
+	}
+
+	/**
+	 * Return the 2 letter version of country codes
+	 * based on the passed 3 letters version.
+	 * @param $countryCode3 string
+	 * @return mixed string or null
+	 */
+	function get2LettersCountryCode($countryCode3) {
+		return $this->_getCountryCodeOnList($countryCode3, 'GEOIP_COUNTRY_CODES');
+	}
+
+	/**
 	 * Get regions by country.
 	 * @param $countryId int
 	 * @return array
@@ -99,6 +119,42 @@ class GeoLocationTool {
 		}
 
 		return $regions;
+	}
+
+	/**
+	 * Get the passed country code inside the passed
+	 * list.
+	 * @param $countryCode The 2 letters country code.
+	 * @param $countryCodeList array Any geoip country
+	 * code list.
+	 * @return mixed String or null.
+	 */
+	function _getCountryCodeOnList($countryCode, $countryCodeListName) {
+		$returner = null;
+
+		if (!$this->_geoLocationTool) return $returner;
+		$tool =& $this->_geoLocationTool;
+
+		if (isset($tool->$countryCodeListName)) {
+			$countryCodeList = $tool->$countryCodeListName;
+		} else {
+			return $returner;
+		}
+
+		$countryCodesIndex = $tool->GEOIP_COUNTRY_CODE_TO_NUMBER;
+		$countryCodeIndex = null;
+
+		if (isset($countryCodesIndex[$countryCode])) {
+			$countryCodeIndex = $countryCodesIndex[$countryCode];
+		}
+
+		if ($countryCodeIndex) {
+			if (isset($countryCodeList[$countryCodeIndex])) {
+				$returner = $countryCodeList[$countryCodeIndex];
+			}
+		}
+
+		return $returner;
 	}
 }
 
