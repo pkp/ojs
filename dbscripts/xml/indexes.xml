@@ -17,7 +17,7 @@
 		</query>
 		
 		<query driver="postgres7">
-			CREATE INDEX issue_settings_name_value ON issue_settings (setting_name, setting_value)
+			CREATE INDEX issue_settings_name_value ON issue_settings (setting_name, setting_value) WHERE setting_name IN ('medra::registeredDoi', 'datacite::registeredDoi')
 		</query>
 		<query driver="postgres7">
 			CREATE INDEX submission_settings_name_value ON submission_settings (setting_name, setting_value) WHERE setting_name IN ('indexingState', 'medra::registeredDoi', 'datacite::registeredDoi')
