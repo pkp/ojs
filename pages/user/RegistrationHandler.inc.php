@@ -113,7 +113,7 @@ class RegistrationHandler extends UserHandler {
 	 * Show error message if user registration is not allowed.
 	 * @param $request PKPRequest
 	 */
-	function registrationDisabled($args, $request) {
+	function registrationDisabled($request) {
 		$this->setupTemplate($request, true);
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'user.register');
