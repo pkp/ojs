@@ -29,6 +29,14 @@
                         {else}{literal}currentTags: []{/literal}{/if}{literal}
                 });
         });
+
+        function toggleAffiliationOther(value) {
+                if (value == 'Other') {
+                        document.getElementById('affiliationOther').style.display = 'block';
+                } else {
+                        document.getElementById('affiliationOther').style.display = 'none';
+                }
+        }
 </script>
 {/literal}
 
@@ -62,9 +70,27 @@
         <tr valign="top">
                 <td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
                 <td class="value">
+                        <select name="affiliation[{$formLocale|escape}]" id="affiliation" class="selectMenu" onchange="toggleAffiliationOther(this.value)">
+                                <option value="">Select Institution</option>
+                                {html_options options=$institutionList selected=$affiliation[$formLocale]|escape}
+                                <option value="Other" {if not in_array($affiliation[$formLocale], $institutionList) and $affiliation[$formLocale] != ''}selected{/if}>Other:</option>
+                        </select>
+                        <!--{** Only show "other" field if appropriate **} -->
+                        {if not in_array($affiliation[$formLocale], $institutionList) and $affiliation[$formLocale] != ''}
+                                {assign var="displayStyle" value=""}
+                                {assign var="affiliationOther" value=$affiliation[$formLocale]|escape}
+                        {else}
+                                {assign var="displayStyle" value='style="display:none"'}
+                                {assign var="affiliationOther" value=""}
+                        {/if}
+                        <input type="text" name="affiliationOther" id="affiliationOther" value="{$affiliationOther}" size="70" class="textField" {$displayStyle} />
+                </td>
+<!--{**
+                <td class="value">
                         <textarea name="affiliation[{$formLocale|escape}]" id="affiliation" rows="5" cols="40" class="textArea">{$affiliation[$formLocale]|escape}</textarea><br/>
                         <span class="instruct">{translate key="user.affiliation.description"}</span>
                 </td>
+**}-->
         </tr>
         <tr valign="top">
                 <td class="label">{fieldLabel name="email" required="true" key="user.email"}</td>

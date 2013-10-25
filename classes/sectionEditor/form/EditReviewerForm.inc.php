@@ -89,6 +89,24 @@ class EditReviewerForm extends Form {
 
 		$templateMgr->assign('userId', $userId);
 		$templateMgr->assign('articleId', $articleId);
+
+                // Set list of institutions for eSchol
+                $institutionList = array(
+                        'UC Berkeley' => 'UC Berkeley',
+                        'UC Davis' => 'UC Davis',
+                        'UC Irvine' => 'UC Irvine',
+                        'UC Los Angeles' => 'UC Los Angeles',
+                        'UC Merced' => 'UC Merced',
+                        'UC Riverside' => 'UC Riverside',
+                        'UC San Diego' => 'UC San Diego',
+                        'UC San Francisco' => 'UC San Francisco',
+                        'UC Santa Barbara' => 'UC Santa Barbara',
+                        'UC Santa Cruz' => 'UC Santa Cruz',
+                        'UC Office of the President' => 'UC Office of the President',
+                        'Lawrence Berkeley National Lab' => 'Lawrence Berkeley National Lab'
+                );
+                $templateMgr->assign('institutionList', $institutionList);
+
 		parent::display();
 	}
 
@@ -98,6 +116,7 @@ class EditReviewerForm extends Form {
         function readInputData() {
                 $this->readUserVars(array(
                         'affiliation',
+			'affiliationOther',
                         'userUrl',
                         'phone',
                         'fax',
@@ -127,7 +146,15 @@ class EditReviewerForm extends Form {
 			$userDao =& DAORegistry::getDAO('UserDAO');
                 	$user =& $userDao->getUser($userId);
 
-                	$user->setAffiliation($this->getData('affiliation'), null); // Localized
+	                // set value of affiliation
+        	        // BLH 20131018 I'm not sure how to best deal with the localization here. This is a bit of a kluge since we're only going to use this locally at CDL.
+                	$affiliation = $this->getData('affiliation');
+                	if ($affiliation['en_US'] == 'Other') {
+                        	$affiliationOther = $this->getData('affiliationOther');
+                        	$affiliation = array('en_US' => $affiliationOther);
+                	}
+
+			$user->setAffiliation($affiliation, null); // Localized
                 	$user->setUrl($this->getData('userUrl'));
                 	$user->setPhone($this->getData('phone'));
                 	$user->setFax($this->getData('fax'));

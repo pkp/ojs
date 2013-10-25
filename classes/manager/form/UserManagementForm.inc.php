@@ -138,6 +138,23 @@ class UserManagementForm extends Form {
 		if (!empty($authSourceOptions)) {
 			$templateMgr->assign('authSourceOptions', $authSourceOptions);
 		}
+
+		// Set list of institutions for eSchol
+		$institutionList = array(
+			'UC Berkeley' => 'UC Berkeley', 
+			'UC Davis' => 'UC Davis', 
+			'UC Irvine' => 'UC Irvine', 
+			'UC Los Angeles' => 'UC Los Angeles', 
+			'UC Merced' => 'UC Merced', 
+			'UC Riverside' => 'UC Riverside', 
+			'UC San Diego' => 'UC San Diego', 
+			'UC San Francisco' => 'UC San Francisco', 
+			'UC Santa Barbara' => 'UC Santa Barbara', 
+			'UC Santa Cruz' => 'UC Santa Cruz', 
+			'UC Office of the President' => 'UC Office of the President', 
+			'Lawrence Berkeley National Lab' => 'Lawrence Berkeley National Lab'
+		);
+		$templateMgr->assign('institutionList', $institutionList);
 		parent::display();
 	}
 
@@ -216,6 +233,7 @@ class UserManagementForm extends Form {
 			'initials',
 			'signature',
 			'affiliation',
+			'affiliationOther',
 			'email',
 			'userUrl',
 			'phone',
@@ -271,13 +289,21 @@ class UserManagementForm extends Form {
 			$user = new User();
 		}
 
+		// set value of affiliation
+		// BLH 20131018 I'm not sure how to best deal with the localization here. This is a bit of a kluge since we're only going to use this locally at CDL.
+		$affiliation = $this->getData('affiliation');
+		if ($affiliation['en_US'] == 'Other') {
+			$affiliationOther = $this->getData('affiliationOther');
+			$affiliation = array('en_US' => $affiliationOther);
+		}
+
 		$user->setSalutation($this->getData('salutation'));
 		$user->setFirstName($this->getData('firstName'));
 		$user->setMiddleName($this->getData('middleName'));
 		$user->setLastName($this->getData('lastName'));
 		$user->setInitials($this->getData('initials'));
 		$user->setGender($this->getData('gender'));
-		$user->setAffiliation($this->getData('affiliation'), null); // Localized
+		$user->setAffiliation($affiliation, null); // Localized
 		$user->setSignature($this->getData('signature'), null); // Localized
 		$user->setEmail($this->getData('email'));
 		$user->setUrl($this->getData('userUrl'));
