@@ -362,8 +362,29 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 
 
 
-	<!-- Scheduling Queue -->
-
+	<message key="editor.submissionReview.notes">
+        <![CDATA[<ol>
+        <li>Gli elementi evidenziati richiedono l'attenzione dell'editor, per i motivi indicati sotto:
+                <ul>
+                        <li class="highlightReviewerNotNotified">Un revisore è stato assegnato ma non gli è stata inviata l'email di notifica</li>
+                        <li class="highlightNoDecision">Tutti i revisori hanno completato l'incarico, ma non è stata registrata ancora alcuna decisione</li>
+                        <li class="highlightRevisedCopyUploaded">L'autore ha caricato una versione aggiornata del manoscritto</li>
+                        <li class="highlightReviewerConfirmationOverdue">Un revisore è in ritardo nel rispondere all'invito a revisionare il manoscritto</li>
+                        <li class="highlightReviewerCompletionOverdue">Un revisore è in ritardo nel completare l'incarico assegnatogli.</li>
+                </ul>
+        </li>
+        <li>"Scadenza" viene compilato dopo l'accettazione da parte del revisore; mostra il numero delle settimane mancanti alla scadenza dell'incarico, oppure (-) le settimane di ritardo.</li>
+</ol>]]></message>
+        <message key="editor.submissionEditing.notes">
+        <![CDATA[<ol>
+        <li>Gli elementi evidenziati richiedono l'attenzione dell'editor, per i motivi indicati sotto:
+                <ul>
+                        <li class="highlightCopyediting">È necessario intervenire nel passaggio di copyediting </li>
+                        <li class="highlightLayoutEditing">È necessario intervenire nell'impaginazione</li>
+                        <li class="higlightProofreading">È necessario intervenire nel passaggio di correzione delle bozze</li>
+                </ul>
+        </li>
+</ol>]]></message>
 
 
 	<!-- Editor Index Page -->
