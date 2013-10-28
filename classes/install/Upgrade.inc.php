@@ -547,9 +547,13 @@ class Upgrade extends Installer {
 			// Reviewers.  All existing OJS reviewers get mapped to external reviewers.
 			// There should only be one user group with ROLE_ID_REVIEWER in the external review stage.
 			$userGroups = $userGroupDao->getUserGroupsByStage($journal->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, true, false, ROLE_ID_REVIEWER);
+			$reviewerUserGroup = null; // keep this in scope for later.
+
 			while ($group = $userGroups->next()) {
 				// make sure.
 				if ($group->getRoleId() != ROLE_ID_REVIEWER) continue;
+				$reviewerUserGroup = $group;
+
 				$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_REVIEWER));
 				while (!$userResult->EOF) {
 					$row = $userResult->GetRowAssoc(false);
@@ -564,6 +568,7 @@ class Upgrade extends Installer {
 			// Guest editors.
 			$userGroupIds = $userGroupDao->getUserGroupIdsByRoleId(ROLE_ID_GUEST_EDITOR, $journal->getId());
 			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_GUEST_EDITOR));
+
 			while (!$userResult->EOF) {
 				$row = $userResult->GetRowAssoc(false);
 				// there should only be one guest editor group id.
@@ -573,9 +578,10 @@ class Upgrade extends Installer {
 
 			// regular Editors.  NOTE:  this involves a role id change from 0x100 to 0x10 (old OJS _EDITOR to PKP-lib _MANAGER).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
-
+			$editorUserGroup = null;
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.editor') {
+					$editorUserGroup = $group; // stash for later.
 					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_EDITOR));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
@@ -586,19 +592,21 @@ class Upgrade extends Installer {
 			}
 
 			// Section Editors.
-			$group = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_SECTION_EDITOR);
+			$sectionEditorGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_SECTION_EDITOR);
 			$userResult = $journalDao->retrieve('SELECT DISTINCT user_id FROM section_editors WHERE journal_id = ?', array((int) $journal->getId()));;
 			while (!$userResult->EOF) {
 				$row = $userResult->GetRowAssoc(false);
-				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+				$userGroupDao->assignUserToGroup($row['user_id'], $sectionEditorGroup->getId());
 				$userResult->MoveNext();
 			}
 
 			// Layout Editors. NOTE:  this involves a role id change from 0x300 to 0x1001 (old OJS _LAYOUT_EDITOR to PKP-lib _ASSISTANT).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
 			define('ROLE_ID_LAYOUT_EDITOR',	0x00000300);
+			$layoutEditorGroup = null;
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.layoutEditor') {
+					$layoutEditorGroup = $group;
 					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_LAYOUT_EDITOR));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
@@ -611,8 +619,10 @@ class Upgrade extends Installer {
 			// Copyeditors. NOTE:  this involves a role id change from 0x2000 to 0x1001 (old OJS _COPYEDITOR to PKP-lib _ASSISTANT).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
 			define('ROLE_ID_COPYEDITOR', 0x00002000);
+			$copyEditorGroup = null;
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.copyeditor') {
+					$copyEditorGroup = $group;
 					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_COPYEDITOR));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
@@ -625,8 +635,10 @@ class Upgrade extends Installer {
 			// Proofreaders. NOTE:  this involves a role id change from 0x3000 to 0x1001 (old OJS _PROOFREADER to PKP-lib _ASSISTANT).
 			define('ROLE_ID_PROOFREADER', 0x00003000);
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
+			$proofreaderGroup = null;
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.proofreader') {
+					$proofreaderGroup = $group;
 					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_PROOFREADER));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
@@ -635,7 +647,101 @@ class Upgrade extends Installer {
 					}
 				}
 			}
+
+			// Now, migrate stage assignments. This code is based on the default stage assignments outlined in registry/userGroups.xml
+			$submissionDao = Application::getSubmissionDAO();
+			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+			$submissionResult = $submissionDao->retrieve('SELECT submission_id, user_id FROM submissions');
+			$authorGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
+			while (!$submissionResult->EOF) {
+				$submissionRow = $submissionResult->GetRowAssoc(false);
+				$submissionId = $submissionRow['submission_id'];
+				$submissionUserId = $submissionRow['user_id'];
+				unset($submissionRow);
+
+				// Authors get access to all stages.
+				$stageAssignmentDao->build($submissionId, $authorGroup->getId(), $submissionUserId);
+
+				// Reviewers get access to the external review stage.
+				$reviewersResult = $stageAssignmentDao->retrieve('SELECT reviewer_id FROM review_assignments WHERE submission_id = ?', array($submissionId));
+				while (!$reviewersResult->EOF) {
+					$reviewerRow = $reviewersResult->GetRowAssoc(false);
+					$stageAssignmentDao->build($submissionId, $reviewerUserGroup->getId(), $reviewerRow['reviewer_id']);
+					$reviewersResult->MoveNext();
+				}
+				unset($reviewersResult);
+
+				// Journal Editors
+				// First, full editors.
+				$editorsResult = $stageAssignmentDao->retrieve('SELECT e.* FROM submissions s, edit_assignments e, users u, roles r WHERE r.user_id = e.editor_id AND r.role_id = ' .
+							ROLE_ID_EDITOR . ' AND e.article_id = ? AND r.journal_id = s.context_id AND s.submission_id = e.article_id AND e.editor_id = u.user_id', array($submissionId));
+				while (!$editorsResult->EOF) {
+					$editorRow = $editorsResult->GetRowAssoc(false);
+					$stageAssignmentDao->build($submissionId, $editorUserGroup->getId(), $editorRow['editor_id']);
+					$editorsResult->MoveNext();
+				}
+				unset($editorsResult);
+
+				// Section Editors.
+				$editorsResult = $stageAssignmentDao->retrieve('SELECT e.* FROM submissions s LEFT JOIN edit_assignments e ON (s.submission_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id)
+							LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = s.context_id) WHERE e.article_id = ? AND s.submission_id = e.article_id
+							AND r.role_id IS NULL AND (e.can_review = 1 OR e.can_edit = 1)', array($submissionId));
+				while (!$editorsResult->EOF) {
+					$editorRow = $editorsResult->GetRowAssoc(false);
+					$stageAssignmentDao->build($submissionId, $sectionEditorGroup->getId(), $editorRow['editor_id']);
+					$editorsResult->MoveNext();
+				}
+				unset($editorsResult);
+
+				// Copyeditors.  Pull from the signoffs for SIGNOFF_COPYEDITING_INITIAL.
+				// there should only be one (or no) copyeditor for each submission.
+				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
+
+				$copyEditorResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
+								array(257, $submissionId, 'SIGNOFF_COPYEDITING_INITIAL'));
+
+				if ($copyEditorResult->NumRows() == 1) { // the signoff exists.
+					$copyEditorRow = $copyEditorResult->GetRowAssoc(false);
+					$copyEditorId = (int) $copyEditorRow['user_id'];
+					if ($copyEditorId > 0) { // there is a user assigned.
+						$stageAssignmentDao->build($submissionId, $copyEditorGroup->getId(), $copyEditorId);
+					}
+				}
+
+				// Layout editors.  Pull from the signoffs for SIGNOFF_LAYOUT.
+				// there should only be one (or no) layout editor for each submission.
+				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
+
+				$layoutEditorResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
+						array(257, $submissionId, 'SIGNOFF_LAYOUT'));
+
+				if ($layoutEditorResult->NumRows() == 1) { // the signoff exists.
+					$layoutEditorRow = $layoutEditorResult->GetRowAssoc(false);
+					$layoutEditorId = (int) $layoutEditorRow['user_id'];
+					if ($layoutEditorId > 0) { // there is a user assigned.
+						$stageAssignmentDao->build($submissionId, $layoutEditorGroup->getId(), $layoutEditorId);
+					}
+				}
+
+				// Proofreaders.  Pull from the signoffs for SIGNOFF_PROOFREADING_PROOFREADER.
+				// there should only be one (or no) layout editor for each submission.
+				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
+
+				$proofreaderResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
+						array(257, $submissionId, 'SIGNOFF_PROOFREADING_PROOFREADER'));
+
+				if ($proofreaderResult->NumRows() == 1) { // the signoff exists.
+					$proofreaderRow = $proofreaderResult->GetRowAssoc(false);
+					$proofreaderId = (int) $proofreaderRow['user_id'];
+					if ($proofreaderId > 0) { // there is a user assigned.
+						$stageAssignmentDao->build($submissionId, $proofreaderGroup->getId(), $proofreaderId);
+					}
+				}
+
+				$submissionResult->MoveNext();
+			}
 		}
+
 		return true;
 	}
 
