@@ -31,6 +31,7 @@ class NativeExportDom {
 			case '1111': $idType = 'num_vol_year_title'; break;
 			case '1110': $idType = 'num_vol_year'; break;
 			case '1010': $idType = 'vol_year'; break;
+			case '0111': $idType = 'num_year_title'; break;
 			case '0010': $idType = 'year'; break;
 			case '1000': $idType = 'vol'; break;
 			case '0001': $idType = 'title'; break;
@@ -328,12 +329,12 @@ class NativeExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'email', $author->getEmail());
 		XMLCustomWriter::createChildWithText($doc, $root, 'url', $author->getUrl(), false);
 		if (is_array($author->getCompetingInterests(null))) foreach ($author->getCompetingInterests(null) as $locale => $competingInterests) {
-			$competingInterestsNode =& XMLCustomWriter::createChildWithText($doc, $root, 'competing_interests', strip_tags($competingInterests), false);
+			$competingInterestsNode =& XMLCustomWriter::createChildWithText($doc, $root, 'competing_interests', $competingInterests, false);
 			if ($competingInterestsNode) XMLCustomWriter::setAttribute($competingInterestsNode, 'locale', $locale);
 			unset($competingInterestsNode);
 		}
 		if (is_array($author->getBiography(null))) foreach ($author->getBiography(null) as $locale => $biography) {
-			$biographyNode =& XMLCustomWriter::createChildWithText($doc, $root, 'biography', strip_tags($biography), false);
+			$biographyNode =& XMLCustomWriter::createChildWithText($doc, $root, 'biography', $biography, false);
 			if ($biographyNode) XMLCustomWriter::setAttribute($biographyNode, 'locale', $locale);
 			unset($biographyNode);
 		}

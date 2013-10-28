@@ -161,6 +161,12 @@ class NativeImportDom {
 				$issue->setShowYear(1);
 				$issue->setShowTitle(0);
 				break;
+			case 'num_year_title':
+				$issue->setShowVolume(0);
+				$issue->setShowNumber(1);
+				$issue->setShowYear(1);
+				$issue->setShowTitle(1);
+				break;
 			case 'vol':
 				$issue->setShowVolume(1);
 				$issue->setShowNumber(0);
