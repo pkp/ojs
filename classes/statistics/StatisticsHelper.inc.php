@@ -134,6 +134,88 @@ class StatisticsHelper {
 		return $metricType;
 	}
 
+	/**
+	* Get report column names.
+	* @return array
+	*/
+	function getColumnNames() {
+		return array(
+			STATISTICS_DIMENSION_ASSOC_ID => __('common.id'),
+			STATISTICS_DIMENSION_ASSOC_TYPE => __('common.type'),
+			STATISTICS_DIMENSION_SUBMISSION_ID => __('article.article'),
+			STATISTICS_DIMENSION_ISSUE_ID => __('issue.issue'),
+			STATISTICS_DIMENSION_CONTEXT_ID => __('common.journal'),
+			STATISTICS_DIMENSION_CITY => __('manager.statistics.city'),
+			STATISTICS_DIMENSION_REGION => __('manager.statistics.region'),
+			STATISTICS_DIMENSION_COUNTRY => __('common.country'),
+			STATISTICS_DIMENSION_DAY => __('common.day'),
+			STATISTICS_DIMENSION_MONTH => __('common.month'),
+			STATISTICS_DIMENSION_FILE_TYPE => __('common.fileType'),
+			STATISTICS_DIMENSION_METRIC_TYPE => __('common.metric'),
+			STATISTICS_METRIC => __('submission.views')
+		);
+	}
+
+	/**
+	* Get object type string.
+	* @param $assocType mixed int or null (optional)
+	* @return mixed string or array
+	*/
+	function getObjectTypeString($assocType = null) {
+		$objectTypeStrings = array(
+			ASSOC_TYPE_JOURNAL => __('journal.journal'),
+			ASSOC_TYPE_ISSUE => __('issue.issue'),
+			ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
+			ASSOC_TYPE_ARTICLE => __('article.article'),
+			ASSOC_TYPE_GALLEY => __('submission.galley')
+		);
+
+		if (is_null($assocType)) {
+			return $objectTypeStrings;
+		} else {
+			if (isset($objectTypeStrings[$assocType])) {
+				return $objectTypeStrings[$assocType];
+			} else {
+				assert(false);
+			}
+		}
+	}
+
+	/**
+	 * Get file type string.
+	 * @param $fileType mixed int or null (optional)
+	 * @return mixed string or array
+	 */
+	function getFileTypeString($fileType = null) {
+		$fileTypeStrings = array(
+			STATISTICS_FILE_TYPE_PDF => 'PDF',
+			STATISTICS_FILE_TYPE_HTML => 'HTML',
+			STATISTICS_FILE_TYPE_OTHER => __('common.other')
+		);
+
+		if (is_null($fileType)) {
+			return $fileTypeStrings;
+		} else {
+			if (isset($fileTypeStrings[$fileType])) {
+				return $fileTypeStrings[$fileType];
+			} else {
+				assert(false);
+			}
+		}
+	}
+
+	/**
+	* Get the geo location tool.
+	* @return GeoLocationTool
+	*/
+	function &getGeoLocationTool() {
+		$geoLocationTool = null;
+		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
+		if (is_a($plugin, 'UsageStatsPlugin')) {
+			$geoLocationTool =& $plugin->getGeoLocationTool();
+		}
+		return $geoLocationTool;
+	}
 }
 
 ?>

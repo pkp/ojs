@@ -106,19 +106,16 @@ class ReportGeneratorHandler extends Handler {
 		$json = new JSONMessage(false);
 
 		if ($countryId) {
-			$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
-			if (is_a($plugin, 'UsageStatsPlugin')) {
-				$geoLocationTool =& $plugin->getGeoLocationTool();
-				if ($geoLocationTool) {
-					$regions = $geoLocationTool->getRegions($countryId);
-					if (!empty($regions)) {
-						$regionsData = array();
-						foreach ($regions as $id => $name) {
-							$regionsData[] = array('id' => $id, 'name' => $name);
-						}
-						$json->setStatus(true);
-						$json->setContent($regionsData);
+			$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
+			if ($geoLocationTool) {
+				$regions = $geoLocationTool->getRegions($countryId);
+				if (!empty($regions)) {
+					$regionsData = array();
+					foreach ($regions as $id => $name) {
+						$regionsData[] = array('id' => $id, 'name' => $name);
 					}
+					$json->setStatus(true);
+					$json->setContent($regionsData);
 				}
 			}
 		}

@@ -45,6 +45,7 @@ class UsageStatsLoader extends FileLoader {
 	 */
 	function UsageStatsLoader($args) {
 		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
+		$this->_plugin =& $plugin;
 
 		// Define the base filesystem path.
 		$args[0] = $plugin->getFilesPath();
@@ -54,12 +55,11 @@ class UsageStatsLoader extends FileLoader {
 		$this->_baseSystemUrl = Config::getVar('general', 'base_url');
 		$this->_baseSystemEscapedPath = str_replace('/', '\/', parse_url($this->_baseSystemUrl, PHP_URL_PATH));
 
-		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
 		// Load the metric type constant.
 		PluginRegistry::loadCategory('reports');
-		$this->_plugin =& $plugin;
 
-		$this->_geoLocationTool = $plugin->getGeoLocationTool();
+		$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
+		$this->_geoLocationTool =& $geoLocationTool;
 
 		$plugin->import('UsageStatsTemporaryRecordDAO');
 		$statsDao = new UsageStatsTemporaryRecordDAO();

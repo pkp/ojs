@@ -61,14 +61,11 @@ class ReportGeneratorForm extends Form {
 			$issueIdAndTitles[$issue->getId()] = $issue->getIssueIdentification();
 		}
 
-		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
-		if (is_a($plugin, 'UsageStatsPlugin')) {
-			$geoLocationTool =& $plugin->getGeoLocationTool();
-			if ($geoLocationTool) {
-				$countryCodes = $geoLocationTool->getAllCountryCodes();
-				$countryCodes = array_combine($countryCodes, $countryCodes);
-				$this->setData('countriesOptions', $countryCodes);
-			}
+		$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
+		if ($geoLocationTool) {
+			$countryCodes = $geoLocationTool->getAllCountryCodes();
+			$countryCodes = array_combine($countryCodes, $countryCodes);
+			$this->setData('countriesOptions', $countryCodes);
 		}
 
 		$orderColumns = $this->_columns;
