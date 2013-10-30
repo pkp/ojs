@@ -837,7 +837,7 @@ class Upgrade extends Installer {
 				$localeResult = $journalDao->retrieve('SELECT primary_locale FROM journals WHERE journal_id = ?', array($row['context_id']));
 				$localeRow = $localeResult->GetRowAssoc(false);
 
-				$newFilePath .= '/' . $row['submission_id'] . '-' . $genre->getDesignation($localeRow['primary_locale']) . '_' . $genre->getName($localeRow['primary_locale']) . '-' .
+				$newFilePath .= '/' . $row['submission_id'] . '-' . $genre->getDesignation() . '_' . $genre->getName($localeRow['primary_locale']) . '-' .
 					$row['file_id'] . '-' . $row['revision'] . '-' . $submissionFileRow['file_stage'] . '-' . date('Ymd', strtotime($submissionFileRow['date_uploaded'])) . '.' .
 					strtolower_codesafe($fileManager->parseFileExtension($submissionFileRow['original_file_name']));
 
