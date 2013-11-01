@@ -226,6 +226,32 @@ class Application extends PKPApplication {
 	}
 
 	/**
+	 * returns the name of the context column in plugin_settings
+	 */
+	static function getPluginSettingsContextColumnName() {
+		if (defined('SESSION_DISABLE_INIT')) {
+			$database = Config::getVar('database', 'driver');
+			$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
+			switch ($database) {
+				case 'mysql':
+					$checkResult = $pluginSettingsDao->retrieve('SHOW COLUMNS FROM plugin_settings LIKE ?', array('context_id'));
+					if ($checkResult->NumRows() == 0) {
+						return 'journal_id';
+					}
+					break;
+					case 'postgres':
+						$checkResult = $pluginSettingsDao->retrieve('SELECT column_name FROM information_schema.columns WHERE table_name= ? AND column_name= ?', array('plugin_settings', 'context_id'));
+					if ($checkResult->NumRows() == 0) {
+						return 'journal_id';
+					}
+					break;
+			}
+		} else {
+			return 'context_id';
+		}
+	}
+
+	/**
 	 * Get the DAO for ROLE_ID_SUB_EDITOR roles.
 	 */
 	static function getSubEditorDAO() {
