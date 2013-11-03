@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleViewer/locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="da_DK" full_name="Danish">
+	<message key="plugins.generic.googleViewer.name">Indlejret Googlefremviser Plugin</message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Dette plugin anvender <a href="https://docs.google.com/viewer">Google dokumentfremviser</a> service til indlejring af PDF-filer på artikelsiden.]]></message>
+</locale>

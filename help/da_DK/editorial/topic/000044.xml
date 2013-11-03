@@ -15,9 +15,49 @@
 <topic id="editorial/topic/000044" locale="da_DK" title="Sikring af en blind peer review (blindbedømmelse)" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
 	<section>
 		<![CDATA[<p>Med henblik på at sikre integriteten i forbindelse med blind peer review af manuskripter til dette tidsskrift skal der gøres alt for at forhindre, at forfatternes og bedømmernes identiteter afsløres for hinanden. Dette indebærer, at forfatterne, redaktørerne og bedømmerne (der overfører dokumenter som en del af deres bedømmelse) kontrollerer, at følgende trin er udført med hensyn til teksten og filegenskaberne:
-<ol><li>Dokumentets forfattere har slettet deres navne i teksten, og "Forfatter" og år benyttes i referencerne og fodnoterne i stedet for forfatternes navne, artiklens titel osv.</li>
-<li>I forbindelse med Microsoft Office-dokumenter skal forfatteridentifikationen også fjernes fra filens egenskaber (se under Filer i Word) ved at klikke på følgende, idet du starter med Filer i hovedmenuen i Microsoft-programmet: Filer &gt; Gem som &gt; Funktioner (eller Indstillinger i forbindelse med en Mac) &gt; Sikkerhed &gt; Fjern personlige oplysninger fra filens egenskaber, når den gemmes &gt; Gem.</li>
-<li>I forbindelse med PDF'er skal forfatternes navne også fjernes under Dokumentegenskaber, der findes under Filer i hovedmenuen i Adobe Acrobat.</li>
-</ol></p>]]>
+<ol><li>Dokumentets forfattere har slettet deres navne i teksten, og "Forfatter" og år benyttes i referencerne og fodnoterne i stedet for forfatternes navne, artiklens titel osv.<p></p></li>
+<li><p>I forbindelse med Microsoft Office-dokumenter skal forfatteridentifikationen også fjernes fra filens egenskaber.</p>
+<ul>
+	<li><p>Til <strong>Microsoft 2003</strong> og tidligere versioner, og <strong>
+	Macintosh</strong> versioner af Word</p>
+	Se under Filer i topmenuen i Word &gt; Gem som &gt; Funktioner (eller 
+	Indstillinger i forbindelse med en Mac) &gt; Sikkerhed &gt; Fjern personlige 
+	oplysninger fra filens egenskaber, når den gemmes &gt; Gem<br></br></li>
+	<li><p>Til <strong>MacIntosh Word 2008</strong> (og senere versioner)</p>
+	<ol>
+		<li>Under Filer vælg &#39;Egenskaber&#39;</li>
+		<li>Under fanebladet vælg &#39;Resume&#39; og fjern alle de informationer, der 
+		afslører persondata</li>
+		<li>Gem filen<br></br>
+		</li>
+	</ol>
+	</li>
+	<li><p>Til <strong>Microsoft 2007</strong> (Windows)</p>
+	<ol>
+		<li>Klik på Office-knappen øverst til venstre</li>
+		<li>Vælg &#39;Forbered&#39; og dernæst &#39;Egenskaber&#39;</li>
+		<li>Fjern alle de informationer, der afslører persondata</li>
+		<li>Gem dokumentet og luk egenskabssektionen<br></br></li>
+	</ol>
+	</li>
+	<li><p>Til <strong>Microsoft 2010</strong> (Windows)</p>
+	<ol>
+		<li>Under Filer i topmenuen vælg &#39;Oplysninger&#39;</li>
+		<li>Klik på ikonet &#39;Kontrollér, om der er problemer&#39;</li>
+		<li>Vælg &#39;Undersøg dokument&#39;</li>
+		<li>Fjern alle markeringer i &#39;Dokumentinspektionsvinduet&#39; på nær 
+		markøren ud for &#39;Dokumentegenskaber og personlige oplysninger&#39;</li>
+		<li>Klik på knappen &#39;Undersøg&#39;</li>
+		<li>Hvis der fremfindes informationer, meddeles det, og du vil kunne 
+		vælge muligheden &#39;Fjern alle&#39;, hvilket du skal gøre i dette tilfælde<br></br>
+		</li>
+	</ol>
+	</li>
+</ul>
+	</li>
+	<p><li>I forbindelse med PDF'er skal forfatternes navne også fjernes under Dokumentegenskaber, der findes under Filer i hovedmenuen i Adobe Acrobat.</li></p>
+</ol>
+</p>
+]]>
 	</section>
 </topic>

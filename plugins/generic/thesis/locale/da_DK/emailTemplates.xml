@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="da_DK">
+	<email_text key="THESIS_ABSTRACT_CONFIRM">
+		<subject>Indsendelse af afhandligsresumé</subject>
+		<body>Denne e-mail blev automatisk genereret af den til {$journalName} opkoblede indsendelsesformular til afhandlingsresuméer.
+
+Bekræft venligst, at den indleverede information er korrekt. Når vi har modtaget din bekræftelse, vil resuméet blive publiceret i tidsskriftets onlineudgave.
+
+Send venligst svar til {$thesisName} ({$thesisEmail}) med indholdet af denne besked og din bekræftelse, såvel som eventuelle afklarelser eller rettelser.
+
+Tak.
+
+
+Titel : {$title} 
+Forfatter : {$studentName}
+Eksamensgrad : {$degree}
+Gradstitel: {$degreeName}
+Afdeling : {$department}
+Universitet : {$university}
+Accepteringsdato : {$dateApproved}
+Vejleder : {$supervisorName}
+
+Resumét
+--------
+{$abstract}
+
+{$thesisContactSignature}</body>
+		<description>Denne e-mailskabelon bruges til at bekræfte indleveringen af en students afhandlingsresumé. Den bliver sendt til studentens vejleder, som bliver bedt om at bekræfte detaljerne i det indsendte resumé.</description>
+	</email_text>
+</email_texts>

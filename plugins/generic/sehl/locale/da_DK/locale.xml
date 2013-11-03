@@ -7,11 +7,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Dutch) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.generic.sehl.name">SEHL Plugin</message>
 	<message key="plugins.generic.sehl.description">Dette plugin implementerer Search Engine HighLighting (SEHL) sådan at de eftersøgte nøgleord highlightes, når en søgemaskine finder en relevant HTML artikel.</message>
 </locale>

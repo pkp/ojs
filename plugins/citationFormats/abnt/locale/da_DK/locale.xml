@@ -11,9 +11,13 @@
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.citationFormats.abnt.displayName">ABNT citeringsformat plugin</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Dette plugin implementerer ABNT citeringsformatet.</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tilgængelig: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Åbnet, dato: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Indstillinger</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">ABNT citationsformat-plug-in-indstillinger</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Indstillinger benyttet til at formatere henvisninger i overensstemmelse med ABNT.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Lokation</message>
 </locale>

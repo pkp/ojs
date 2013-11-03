@@ -7,11 +7,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Dutch) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.generic.translator.name">Oversættelses plugin</message>
 	<message key="plugins.generic.translator.description">Dette plugin tillader web-baseret vedligeholdelse af oversættelsesfiler.</message>
 	<message key="plugins.generic.translator.longdescription">Dette område tillader Site Administrator at udarbejde, ændre og checke oversættelser af OJS. Det gælder hele sitet og skal derfor ikke bruges til at ændre et enkelt OJS-tidsskrift. Hvis du retter eller udarbejder en oversættelse, så husk at indsende den til Public Knowledge Project, så den kan distribueres i fremtidige opdateringer.</message>
@@ -46,7 +46,7 @@
 	<message key="plugins.generic.translator.localeFiles">Lokaliseringsfiler</message>
 	<message key="plugins.generic.translator.miscFiles">Diverse filer</message>
 	<message key="plugins.generic.translator.emails">Email skabeloner</message>
-	<message key="plugins.generic.translator.file.filename">Filenavn</message>
+	<message key="plugins.generic.translator.file.filename">Filnavn</message>
 	<message key="plugins.generic.translator.file.edit">Redigering {$filename}</message>
 	<message key="plugins.generic.translator.email.edit">Redigering {$emailKey}</message>
 	<message key="plugins.generic.translator.file.reference">Reference version</message>

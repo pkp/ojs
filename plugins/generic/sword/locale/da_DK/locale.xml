@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
 
@@ -49,4 +49,5 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Deponering gennemført</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">Den eller de valgte artikler er blevet deponeret.</message>
 	<message key="plugins.importexport.sword.depositFailed">Deponeringen lykkedes ikke</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Tillad tidsskriftschefen og (eventuelt) forfattere at overføre og deponere artikler via SWORD protokollen. Bemærk, at dette plug-in kræver et zip-udpakningsformat, der endnu IKKE er installeret.</message>
 </locale>

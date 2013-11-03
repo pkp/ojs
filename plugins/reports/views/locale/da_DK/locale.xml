@@ -7,11 +7,16 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
 
 <locale name="da_DK" full_name="Danish">
 	<message key="plugins.reports.views.displayName">Se rapport</message>
 	<message key="plugins.reports.views.description">Dette plugin genererer en CSV-rapport om antal læsere for hver enkelt artikel.</message>
+	<message key="plugins.reports.views.articleId">Artikel-ID</message>
+	<message key="plugins.reports.views.articleTitle">Artikeltitel</message>
+	<message key="plugins.reports.views.datePublished">Publiceringsdato</message>
+	<message key="plugins.reports.views.abstractViews">Resuméer</message>
+	<message key="plugins.reports.views.galleyViews">Alle satsskibe</message>
 </locale>

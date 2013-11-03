@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.citationFormats.proCite.displayName">ProCite citeringsformat plugin</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite - RIS format (Macintosh  Windows)</message>
 	<message key="plugins.citationFormats.proCite.description">Dette plugin implementerer ProCite citeringsformatet.</message>

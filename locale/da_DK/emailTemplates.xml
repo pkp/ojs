@@ -815,4 +815,149 @@ På forhånd tak!
 Manuskriptredaktør, {$journalName}</body>
 		<description>Denne e-mail gør manuskriptredaktører i stand til at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Forespørgsel om bedømmelse af artikel</subject>
+		<body>{$reviewerName}:
+
+Dette gælder manuskriptet "{$articleTitle}," der er under vurdering i  {$journalName}.
+
+Efter at have modtaget bedømmelsen af den tidligere manuskriptversion, har forfatterne nu indsendt en revideret udgave af deres artikel. Jeg vil sætte stor pris på, hvis du vil hjælpe med at vurdere den.
+
+Log på tidsskriftets websted inden den {$weekLaterDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet findes her: {$journalUrl}
+
+Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.
+
+Hvis du ikke kan huske dit brugernavn og adgangskode til tidsskriftets hjemmeside, kan du klikke på efterfølgende link, hvor du kan vælge ny adgangskode (som vil blive sendt til dig med mail sammen med dit brugernavn). {$passwordResetUrl}
+
+Manuskriptets URL-adresse: {$submissionReviewUrl}
+
+Tak for dine overvejelser af denne forespørgsel.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Forespørgsel om bedømmelse af artikel</subject>
+		<body>{$reviewerName}:
+
+Dette gælder manuskriptet "{$articleTitle}," der er under vurdering i  {$journalName}.
+
+Efter at have modtaget bedømmelsen af den tidligere manuskriptversion, har forfatterne nu indsendt en revideret udgave af deres artikel. Jeg vil sætte stor pris på, hvis du vil hjælpe med at vurdere den.
+
+Log på tidsskriftets websted inden den {$weekLaterDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling.
+
+Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.
+
+Manuskriptets URL-adresse: {$submissionReviewUrl}
+
+Tak for dine overvejelser af denne forespørgsel.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Forespørgsel om bedømmelse af artikel</subject>
+		<body>{$reviewerName}:
+
+Dette gælder manuskriptet "{$articleTitle}," der er under vurdering i  {$journalName}.
+
+Efter at have modtaget bedømmelsen af den tidligere manuskriptversion, har forfatterne nu indsendt en revideret udgave af deres artikel. Jeg vil sætte stor pris på, hvis du vil hjælpe med at vurdere den.
+
+Tidsskriftets retningslinjer i forbindelse med bedømmelsen er vedhæftet nedenfor, og manuskriptet er vedhæftet denne e-mail. Din bedømmelse af manuskriptet, sammen med din anbefaling, bedes sendt til mig senest  {$reviewDueDate}.
+
+Underet mig venligst om du vil og kan foretage bedømmelsen i en svarmail {$weekLaterDate}.
+
+Tak for dine overvejelser af denne forespørgsel.
+
+{$editorialContactSignature}
+
+
+Review Guidelines
+
+{$reviewGuidelines}</body>
+		<description></description>
+	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body>Dear {$recipientFirstName},
+
+{$buyerFullName} vilgerne dele en gave med dig fra {$giftJournalName}:
+
+{$giftDetails}
+
+
+{$giftNote}
+
+
+Du vil modtage en e-mail, der indeholder loginoplysninger og instruktioner om, hvordan du indløser gaven.
+
+Vi håber, du bliver glad for din gave.
+
+{$giftContactSignature}</body>
+		<description>Denne e-mail giver gavemodtageren besked om, at en gave er blevet købt og er klar til at blive indløst.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>Indløs din gave: Loginoplysninger</subject>
+		<body>Kære {$recipientFirstName},
+
+{$buyerFullName} vil gerne give dig en gave fra {$giftJournalName}:
+
+{$giftDetails}
+
+
+For at indløse din gave, skal du logge dig ind på tidsskriftets webside {$giftUrl}
+
+Your username: {$username}
+Your password: {$password}
+
+Så snart du er logget ind, kan du til enhver tid ændre dit password.
+
+Håber du bliver glad for din gave.
+
+{$giftContactSignature}</body>
+		<description>Denne e-mail giver gavemodtageren besked om loginoplysninger.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Indløs din gave: Loginoplysninger</subject>
+		<body>Kære {$recipientFirstName},
+
+{$buyerFullName} vil gerne give dig en gave fra {$giftJournalName}:
+
+{$giftDetails}
+
+
+For at indløse gaven, skal du logge dig ind på tidsskriftets hjemmeside {$giftUrl}
+
+Dit brugernavn: {$username}
+
+Vi håber, du bliver glad for din gave.
+
+{$giftContactSignature}</body>
+		<description>Denne e-mail giver gavemodtageren besked om brugernavn.</description>
+	</email_text>
+	<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>Revideret udgave er uploaded</subject>
+		<body>{$editorialContactName}:
+
+En revideret udgave af "{$articleTitle}" er blevet oploaded af forfatteren {$authorName}.
+
+Manuskriptets URL-adresse: {$submissionUrl}
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail bliver automatisk sendt til den valgte redaktør, når forfatteren uploader en revideret udgave af en artikel.</description>
+	</email_text>
 </email_texts>
