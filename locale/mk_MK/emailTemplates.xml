@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * locale/mk_MK/emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  -->
+
+<email_texts locale="mk_MK">
+	<email_text key="NOTIFICATION">
+		<subject>Ново известување од {$siteTitle}</subject>
+		<body>Имате ново известување {$siteTitle}:
+
+{$notificationContents}
+
+Link: {$url}
+
+{$principalContactSignature}</body>
+		<description>Оваа порака е пратена до регистрираните корисници кои го имаат избрано овој тип на известување.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Ново известување од {$siteTitle}</subject>
+		<body>Имате ново известување {$siteTitle}:
+--
+{$notificationContents}
+
+Link: {$url}
+--
+
+If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.
+
+{$principalContactSignature}</body>
+		<description>Оваа порака е испратена до новорегистрираните корисници.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Добродојдовте до{$siteTitle} поштенска листа!</subject>
+		<body>Сте пријавени да добивате известување од {$siteTitle}.
+
+Ве молиме, кликните на следниот линк за да го потврдите Вашето барање и додадете ја Вашата email адреса на поштенскиот лист: {$confirmLink}
+
+Ако сакате повеќе да не добивате известувања, Ве молиме одите до {$unsubscribeLink}.
+
+{$principalContactSignature}</body>
+		<description>Оваа порака е испратена до нерегистрираните корисници, кои штотоку се регистрирале на поштенскиот лист.</description>
+	</email_text>
+	<email_text key="PASSWORD_RESET_CONFIRM">
+		<subject>Потврда за ресетирање на лозинката</subject>
+		<body>Добивме барање за промена на Вашата лозинка за {$siteTitle} веб страницата.
+
+Ако не сте го направиле оваа барање, ќе Ве замолиме да ја игнорирате оваа порака и Вашата лозинка нема да биде променета. Ако сакате да ја промените Вашата лозинка, кликните на следниот линк.
+
+Reset my password: {$url}
+
+{$principalContactSignature}</body>
+		<description>Оваа порака е испратена до регистрираните корисници кои не можат да се најават бидејќи ја заборавиле лозинката. </description>
+	</email_text>
+	<email_text key="PASSWORD_RESET">
+		<subject>Промена на лозинка</subject>
+		<body>Вашата лозинка беше успешно променета за оваа {$siteTitle} веб страница . Ве молиме задржете го ова корисничко име и лозинка, за да можете да ја извршувате работата.
+
+Корисничко име: {$username}
+Нова лозинка: {$password}
+
+{$principalContactSignature}</body>
+		<description>Оваа порака е испартена до регистрираните корисници кои успешно ја имаат променето нивната лозонка следејќи го процесот опишан во пораката PASSWORD_RESET_CONFIRM .</description>
+	</email_text>
+	<email_text key="USER_REGISTER">
+		<subject>Регистрација за списание</subject>
+		<body>{$userFullName}
+
+Сега сте регистрирани како корисник {$journalName}. Ние го вклучивме Вашето корисничко име и лозинка во пораката, бидејќи се потребни за работа со списанијата. Во било кој момент можете да побарате да бидете отстранети од листата на корисници, потребно е само да ме контактирате.
+
+Username: {$username}
+Password: {$password}
+
+Ви благодариме,
+{$principalContactSignature}</body>
+		<description>Оваа порака е испратена до новорегистрираните корисници за да им посака добредојде на системот и да им обезбеди евиденција на корисничкото име и лозинка.</description>
+	</email_text>
+	<email_text key="USER_VALIDATE">
+		<subject>Валидирајте ја вашата сметка</subject>
+		<body>{$userFullName}
+
+Имате креирано сметка со {$journalName}, но пред да почнете да ја користете, потребно е да извршете валидација на Вашата e-mail сметка. За до го сторите тоа, едноставно следете го линкот подолу:
+
+{$activateUrl}
+
+Ви благодариме,
+{$principalContactSignature}</body>
+		<description>Оваа порака е испратена до новорегистрираните корисници за да им посака добредојде на системот и да им обезбеди евиденција на корисничкото име и лозинка.</description>
+	</email_text>
+	<email_text key="REVIEWER_REGISTER">
+		<subject>Регистрација како прегледувач со {$journalName}</subject>
+		<body>Вашето име е регистрирано во базата на податоци {$journalName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.
+
+Ви обезбедивме корисничко име и лозинка кое ќе можете да го користите во сите интеракции со списанието преку веб - страницата. Можеби ќе сакате, на пример, да го обновите Вашиот профил, вклучувајќи ги и Ваште интереси.
+
+Username: {$username}
+Password: {$password}
+
+Ви благодариме,
+{$principalContactSignature}</body>
+		<description>Оваа порака е испратена до новорегистрираните корисници за да им посака добредојде на системот и да им обезбеди евиденција на корисничкото име и лозинка.</description>
+	</email_text>
+	<email_text key="PUBLISH_NOTIFY">
+		<subject>Објавено ново издание</subject>
+		<body>Читатели:
+
+{$journalName} Тукушто е објавено најдовото издание на {$journalUrl}. Ве покануваме да ја видете содржината тука и да ја посетете веб - страницата за да ги видете сите статии и предмети кои Ве интересираат.
+
+Ви благодариме за покажаниот интерес во работата,
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испартена до регистрираните корисници преку линкот "Notify Users". </description>
+	</email_text>
+	<email_text key="LOCKSS_EXISTING_ARCHIVE">
+		<subject>Архивирано баарње за {$journalName}</subject>
+		<body>Почитувани [University Librarian]
+
+{$journalName} &lt;{$journalUrl}&gt;, е списание на член од Вашиот факултет [name of member], кој служи како [title of position]. Списанието се обидува да ставе LOCKSS (Lots of Copies Keep Stuff Safe) во согласност со архивата на универзитетската библиотека.
+
+[Brief description of journal]
+
+The URL to the LOCKSS Publisher Manifest for our journal is: {$journalUrl}/gateway/lockss
+
+We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.
+
+Ви благодариме,
+{$principalContactSignature}</body>
+		<description>Оваа порака бара зачувување на LOCKSS архивата.</description>
+	</email_text>
+	<email_text key="LOCKSS_NEW_ARCHIVE">
+		<subject>Архивирано баарње за {$journalName}</subject>
+		<body>Почитувани [University Librarian]
+
+{$journalName} &lt;{$journalUrl}&gt;, е списание на член од Вашиот факултет, [name of member] кој служи како [title of position]. Списанието се обидува да ставе LOCKSS (Lots of Copies Keep Stuff Safe) во согласност со архивата на универзитетската библиотека.
+
+[Brief description of journal]
+
+LOCKSS програмата &lt;http://lockss.org/&gt;, е интернационална library/publisher иницијатива, е работен пример за дистрибуирано чуавње и архивирање на складиштето, за повеќе информации погледајте подолу. Софтверот, кој работи на обичен персонален компјутер е слободен.
+
+To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.
+
+Ви благодариме,
+{$principalContactSignature}</body>
+		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK">
+		<subject>Submission Acknowledgement</subject>
+		<body>{$authorName}:
+
+Thank you for submitting the manuscript, "{$articleTitle}" to {$journalName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:
+
+Manuscript URL: {$submissionUrl}
+Username: {$authorUsername}
+
+Ако имате било какви прашања, ве молиме да не контактирате, Ви благодариме за Вашата работа во оваа списание.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака автоматски е испартена до авторот кој го завршил процесот на ажурирање на списанието</description>
+	</email_text>
+	<email_text key="SUBMISSION_UNSUITABLE">
+		<subject>Несоодветно поднесување</subject>
+		<body>{$authorName}:
+
+Почетен преглед на "{$articleTitle}" has made it clear that this submission does not fit within the scope and focus of {$journalName}. Ви препорачуваме да се консултирате за описот на оваа списание како и за неговите моментални содржини, за да научете повеќе за работите кои можат да се објават.
+
+{$editorialContactSignature}</body>
+	</email_text>
+	<email_text key="SUBMISSION_COMMENT">
+		<subject>Поднесување на коментар</subject>
+		<body>{$name}:
+
+{$commentName} додаде коментар на поднесуавње, "{$articleTitle}" во {$journalName}:
+
+{$comments}</body>
+		<description>Оваа порака известува различни луѓе кои се вклучени во процесот на уредување</description>
+	</email_text>
+	<email_text key="SUBMISSION_DECISION_REVIEWERS">
+		<subject>Одлука за "{$articleTitle}"</subject>
+		<body>Како еден од рецензентите за поднесување, "{$articleTitle}," до {$journalName},Оваа порака ги содржи коментарите и уредувачката одлука испратена до авторот. Ви благодариме за Вашиот значаен придонес кон овој процес.
+
+{$editorialContactSignature}
+
+{$comments}</body>
+		<description>Оваа порака ги извества рецензентите на поднесување, дека процесот на проверка е завршен.</description>
+	</email_text>
+	<email_text key="EDITOR_ASSIGN">
+		<subject>Уредувачко назначување</subject>
+		<body>{$editorialContactName}:
+
+Поднесуавње, "{$articleTitle}," до {$journalName} е назначен за да го следи Вашиот уредувачки процес во секцијата за уредуавње.
+
+Submission URL: {$submissionUrl}
+Username: {$editorUsername}
+
+Ви благодариме,
+{$editorialContactSignature}</body>
+		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST">
+		<subject>Преглед на статија</subject>
+		<body>{$reviewerName}:
+
+Веруваме дека Вие ќе бидете одличен рецензент на ракописот "{$articleTitle}," кој е доставен до {$journalName}.Поднесувањето на абстракти се наоѓа подолу,се надевам дека превземањето на оваа задача ќе биде важна за Вас.
+
+Ве молиме најавете се на веб-страницата на списанието со {$weekLaterDate} за да се покаже Вашата наредна постапка на преглед и зачувување {$journalUrl}
+
+Прегледот се должи на {$reviewDueDate}.
+
+Ако немате корисничко име и лозинка за оваа веб-страница, можете да го користете овој линк за реситирање на лозинката (which will then be emailed to you along with your username). {$passwordResetUrl}
+
+Поднесување на URL: {$submissionReviewUrl}
+
+Ви благодариме за разгледувањето на ова барање.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, каде рецензентот ја прифаќа или одбива задачата која е пратена за преглед. Таа обезбедува информации за поднесување, како на пример насловот и апстрактите, рок за преглед... Оваа порака се користи кога списанието е одобрено од чекор. 2 (Otherwise see REVIEW_REQUEST_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK">
+		<subject>Преглед на статија</subject>
+		<body>{$reviewerName}:
+
+Веруваме дека Вие ќе бидете одличен рецензент на ракописот "{$articleTitle}," кој е доставен до {$journalName}. Поднесувањето на апстракти се наоѓа подолу,се надевам дека превземањето на оваа задача ќе биде важна за Вас.
+
+Ве молиме најавете се на веб-страницата на списанието со {$weekLaterDate} за да се покаже Вашата наредна постапка на преглед и зачувување.
+
+Прегледот се должи на {$reviewDueDate}.
+
+Поднесување на URL: {$submissionReviewUrl}
+
+Ви благодариме за разгледувањето на ова барање.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, каде рецензентот ја прифаќа или одбива задачата која е пратена за преглед. Таа обезбедува информации за поднесување, како на пример насловот и апстрактите, рок за преглед... Оваа порака се користи кога списанието е одобрено од чекор. 2 </description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED">
+		<subject>Преглед на статија</subject>
+		<body>{$reviewerName}:
+
+Веруваме дека Вие ќе бидете одличен рецензент на ракописот, "{$articleTitle}," Ви потенцираме дека превземаната активност е од големо значење за нас. Повеќе насоки за оваа списание се покажани подолу, и начинот на поднесување е прикажан во овој прилог. Вашиот преглед на поднесување, заедно со Вашата препорака, треба да биде испратено до мене од страна на {$reviewDueDate}.
+
+Ве молиме наведете во Вашата повратна порака {$weekLaterDate} дали сте во можност да го направите овој преглед.
+
+Ви благодариме за разгледувањето на ова барање.
+
+{$editorialContactSignature}
+
+
+Преглед на упатство
+
+{$reviewGuidelines}
+</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, каде рецензентот ја прифаќа или одбива задачата која е пратена за преглед.Таа го вклучува начинот на прикачување во прилог. Оваа порака се користи кога email процесот, е избран за преглен во чекор 2. (Otherwise see REVIEW_REQUEST.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Преглед на статија</subject>
+		<body>{$reviewerName}:
+
+Овој дел е показател кон статијата "{$articleTitle}," кој е преглед на разгледување од страна на {$journalName}.
+
+Следејќи ги прегледите од претходните чекори, авторите сега доставуваат ревидирана верзија на нивниот труд.
+
+Ве молиме најавете се на веб страницата на списанието {$weekLaterDate} за да се покаже Вашата наредна постапка на преглед и зачувување.  {$journalUrl}
+
+Прегледот се должи на {$reviewDueDate}.
+
+Ако немате корисничко име и лозинка за оваа веб-страница, можете да го користете овој линк за реситирање на лозинката (потоа ќе биде испратена до Вас, заедно со Вашето корисничко име). {$passwordResetUrl}
+
+Поднесување на URL: {$submissionReviewUrl}
+
+Ви благодариме за разгледувањето на ова барање.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Оваа порака е испратена од едиторите, кои треба да ја прифанат или одбијат поднесената задача во даден временски интервал. Таа обезбедува информации за поднесување, како на пример насловот и апстрактите, рок за преглед... Оваа порака се користи кога процесот на преглед е одобрен во чекор 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Преглед на статија</subject>
+		<body>{$reviewerName}:
+
+Овој дел е показатен кон статијата "{$articleTitle}," кој е преглед на разгледување од страна на {$journalName}.
+
+Следејќи ги прегледите од претходните чекори, авторите сега доставуваат ревидирана верзија на нивниот труд.
+
+Ве молиме најавете се на веб страницата на списанието {$weekLaterDate} за да се покаже Вашата наредна постапка на преглед и зачувување.
+
+Прегледот се должи на {$reviewDueDate}.
+
+Поднесување на URL: {$submissionReviewUrl}
+
+Ви благодариме за разгледувањето на ова барање.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, каде рецензентот ја прифаќа или одбива задачата која е пратена за преглед. Таа обезбедува информации за поднесување, како на пример насловот и апстрактите, рок за преглед... Оваа порака се користи кога email процесот, е избран за преглен во чекор 2.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Преглед на статија</subject>
+		<body>{$reviewerName}:
+
+Овој дел е показатен кон статијата "{$articleTitle}," кој е преглед на разгледување од страна на {$journalName}.
+
+Следејќи ги прегледите од претходните чекори, авторите сега доставуваат ревидирана верзија на нивниот труд. 
+
+Останатите насоки за поднесување се приложени подолу. Вашиот преглед на статијата заедно со препораката треба да биде испартена до мене {$reviewDueDate}.
+
+Во повратната порака, Ве молиме да наведете {$weekLaterDate} дали сте во можност да го направите овој преглед.
+
+Ви благодариме за разгледувањето на ова барање.
+
+{$editorialContactSignature}
+
+
+Преглед на упатства
+
+{$reviewGuidelines}
+</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, каде рецензентот ја прифаќа или одбива задачата која е пратена за преглед. Во прилог се наоѓа начинот на доставување. Оваа порака се користи кога email процесот, е избран за преглен во чекор 2. (Otherwise see REVIEW_REQUEST_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="REVIEW_CANCEL">
+		<subject>Барање за откажување на преглед</subject>
+		<body>{$reviewerName}:
+
+Во овој чекор решивме да го откажеме Вашето барање, за да иамте преглед на поднесувањето "{$articleTitle}," за {$journalName}. Ние Ви се извинуваме за непријатностите кои можат да настанат и се надеваме дека ќе бидеме во можност да Ви помогнеме со процесот на ревизија во иднина.
+
+Ако имате било какви прашања, Ве молиме да не контактирајте.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, и Ве известуваме дека Вашиот преглед е откажан.</description>
+	</email_text>
+	<email_text key="REVIEW_CONFIRM">
+		<subject>Можност за преглед</subject>
+		<body>{$editorialContactName}:
+
+Ние сме во состојба и подготвени да го разгледаме Вашето поднесување "{$articleTitle}," за {$journalName}. Ви благодариме за соработката, {$reviewDueDate}
+
+{$reviewerName}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, со цел да Ве извести дека Вашето барање ќе биде прифатено и завршено до одреден датум.</description>
+	</email_text>
+	<email_text key="REVIEW_DECLINE">
+		<subject>Не е во можност да се изврши преглед</subject>
+		<body>{$editorialContactName}:
+
+Во овој момент не сте во можност да извршите преглед на вашите поднесувања, "{$articleTitle}," за {$journalName}. Ви благодариме за соработката.
+
+{$reviewerName}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, и Ве известуваме дека Вашиот преглед е откажан.</description>
+	</email_text>
+	<email_text key="REVIEW_COMPLETE">
+		<subject>Прегледот на статијата е завршен</subject>
+		<body>{$editorialContactName}:
+
+Го завршив прегледот на"{$articleTitle}" за {$journalName}, и ја доставувам мојата препорака, "{$recommendation}."
+
+{$reviewerName}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор за да Ве извести дека ревизијата е завршена и дека Вашите препораки се зачувани на оваа страница</description>
+	</email_text>
+	<email_text key="REVIEW_ACK">
+		<subject>Преглед на признание</subject>
+		<body>{$reviewerName}:
+
+Ви благодариме за извршувањето на овој преглед, "{$articleTitle}," за{$journalName}. Ние го цениме Вашиот придонес и квалитетот на работата.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор за да се потврди завршениот преглед и да се заблагодари на рецензентите за нивниот придонес</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND">
+		<subject>Потсетник</subject>
+		<body>{$reviewerName}:
+
+Потсетување дека поднесовте барање за преглед, "{$articleTitle}," за {$journalName}. Ние го очекуваме овој преглед {$reviewDueDate}, и ќе бидеме благодарни доколку во најбрзо време го добиеме.
+
+Ако немате корисничко име и лозинка за оваа веб-страница, можете да го користете овој линк за реситирање на лозинката (потоа ќе биде испратена до Вас, заедно со Вашето корисничко име). {$passwordResetUrl}
+
+Поднесување на URL: {$submissionReviewUrl}
+
+Ве молиме да го порврдите Вашиот интерес за соработка со нас.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, за да го потсети рецензентот дека неговата постапка за преглед сеуште е во тек</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_ONECLICK">
+		<subject>Потсетник</subject>
+		<body>{$reviewerName}:
+
+Потсетување дека поднесовте барање за преглед, "{$articleTitle}," за {$journalName}.Ние го очекуваме овој преглед {$reviewDueDate},  и ќе бидеме благодарни доколку во најбрзо време го добиеме.
+
+Поднесување на URL: {$submissionReviewUrl}
+
+Ве молиме да го порврдите Вашиот интерес за соработка со нас.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од уредувачкиот сектор, за да го потсети рецензентот дека неговата постапка за преглед сеуште е во тек</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO">
+		<subject>Автоматски потсетник</subject>
+		<body>{$reviewerName}:
+
+Потсетување дека поднесовте барање за преглед, "{$articleTitle}," за {$journalName}. Ние го очекуваме овој преглед {$reviewDueDate}, оваа порака автоматски е генерирана до дадената дата, и ќе бидеме благодарни доколку во најбрзо време ја добиеме прегледаната статија.
+
+Ако немате корисничко име и лозинка за оваа веб-страница, можете да го користете овој линк за реситирање на лозинката (потоа ќе биде испратена до Вас, заедно со Вашето корисничко име). {$passwordResetUrl}
+
+Поднесување на URL: {$submissionReviewUrl}
+
+Ве молиме да го порврдите Вашиот интерес за соработка со нас.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака автоматски се испраќа кога дадената активност не е извршена во дадениот временски рок.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
+		<subject>Автоматски потсетник</subject>
+		<body>{$reviewerName}:
+
+Потсетување дека поднесовте барање за преглед, "{$articleTitle}," за {$journalName}. Ние го очекуваме овој преглед {$reviewDueDate}, оваа порака автоматски е генерирана до дадената дата, и ќе бидеме благодарни доколку во најбрзо време ја добиеме прегледаната статија.
+
+Поднесување на URL: {$submissionReviewUrl}
+
+Ве молиме да го порврдите Вашиот интерес за соработка со нас.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака автоматски се испраќа кога дадената активност не е извршена во дадениот временски рок.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Процедура на уредување</subject>
+		<body>{$authorName}:
+
+Известување за Вашето поднесување на статијата {$journalTitle}, "{$articleTitle}".
+
+Нашата одлука е да:
+
+{$editorialContactSignature}
+</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор и нејзина цел е да го извести авторот за последната одлука во врска со неговото поднесување.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Процедура на уредување</subject>
+		<body>{$authorName}:
+
+Известување за Вашето поднесување на статијата {$journalTitle}, "{$articleTitle}".
+
+Нашата одлука е да:
+
+{$editorialContactSignature}
+</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор и нејзина цел е да го извести авторот за последната одлука во врска со неговото поднесување.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Процедура на уредување</subject>
+		<body>{$authorName}:
+
+Известување за Вашето поднесување на статијата {$journalTitle}, "{$articleTitle}".
+
+Нашата одлука е да:
+
+{$editorialContactSignature}
+</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор и нејзина цел е да го извести авторот за последната одлука во врска со неговото поднесување.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Процедура на уредување</subject>
+		<body>{$authorName}:
+
+Известување за Вашето поднесување на статијата {$journalTitle}, "{$articleTitle}".
+
+Нашата одлука е да:
+
+{$editorialContactSignature}
+</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор и нејзина цел е да го извести авторот за последната одлука во врска со неговото поднесување.</description>
+	</email_text>
+	<email_text key="COPYEDIT_REQUEST">
+		<subject>Барање за уредување на копија</subject>
+		<body>{$copyeditorName}:
+
+Барам да се превземе уредувањето на "{$articleTitle}" за {$journalName} преку следните чекори.
+1. За рачно поднесување кликнете на линкот подолу.
+2. Најавете се во списанието и кликнете на датотеката која се појавува во чекор 1.
+3. Консултирајте се за инструкциите на процедурата за едитирање.
+4. Отворете ја превземаната датотека и упатствата за уредување, со истовремено додаавње на пребарувањето за автор.
+5. Зачувате ја датодеката од процесот на уредување во чекор 1.
+6. Испрати комплетна порака до уредникот.
+
+{$journalName} URL: {$journalUrl}
+Поднесување на URL: {$submissionCopyeditingUrl}
+Корисничко име: {$copyeditorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од страна на Уредувачкиот Одбор, која има за цел да Ве извести дека постапката за уредување штотоку е започната. Таа обезбедува информации и инструкции за поднесувањето на статијата.</description>
+	</email_text>
+	<email_text key="COPYEDIT_COMPLETE">
+		<subject>Копијата за уредување е завршена</subject>
+		<body>{$editorialContactName}:
+
+Сега ја имаме копијата од Вашата уредувачка статија "{$articleTitle}" за {$journalName}. За да ги видете предложените измени, Ве молиме да ги следете следниве чекори:
+
+1. Најавете се во списанието, користејќи го линкот подолу, со Вашето корисничко име и лозинка.
+2. Кликнете на датотеката 1, со цел да ја превземете и отворете новата верзија од уредената статија.
+3. Преглед на уредувачката копија, правење на потребните промени и одговор на прашањата.
+4. Зачувајте ја датотеката на Вашиот десктоп и прикачете ја во чекор 2.
+5. Кликнете ја пораката под полето COMPLETE и испратете порака на уредникот.
+
+Оваа последната можност за да направите промени. Во некој од наредните чекори ќе Ви биде побарано да лекторирате Galleys, но тогаш ќе можете да корегирате мали печатни грешки.
+
+Manuscript URL: {$submissionEditingUrl}
+Корисничко име: {$authorUsername}
+
+Ако не сте во можност да ја извршите оваа работа или мате било какви прашања, Ве молам контактирајте не. Ви благодариме за соработката.
+
+{$copyeditorName}</body>
+	</email_text>
+	<email_text key="COPYEDIT_ACK">
+		<subject>Уредувачко признание</subject>
+		<body>{$copyeditorName}:
+
+Ви благодариме за уредувањето на ракописот, "{$articleTitle}," за {$journalName}. Вашата работа е од голем придонес за квалитетот на ова списание.
+
+{$editorialContactSignature}</body>
+		<description>Ова порака е испартена од страна на Уредувачкиот Одбор, за да Ве извети дека Вашата работа е успешно завршена, воедно да Ви се заблагодари за Вашиот придонес во работата.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_REQUEST">
+		<subject>Барање за уредување</subject>
+		<body>{$authorName}:
+
+Вашата публикација "{$articleTitle}" за {$journalName} е првиот чекор во уредуавњето и е достапан преку следниве чекори:
+
+1. За рачно поднесување кликнете на линкот подолу.
+2. Најавете се во списанието и кликнете на датотеката која се појавува во чекор 1.
+3. Отворете ја превземаната датотека.
+4. Извршите преглед на текстот, вклучите го уредуавњето на предлозите и можноста за авторски пребарувања.
+5. Направете уредувачки промени кои дополнително ќе го подобрат текстот.
+6. Кога ќе завршете со работата, следете ги деталите во чекор 2.
+7. Кликнете на метаподатоците за да провери индекирањето на информациите за комплетноста и точноста.
+8. Испатете порака до уредувачите.
+
+Поднесување на URL: {$submissionCopyeditingUrl}
+Корисничко име: {$authorUsername}
+
+Оваа последната можност за да направите промени. Во некој од наредните чекори ќе Ви биде побарано да лекторирате Galleys, но тогаш ќе можете да корегирате мали печатни грешки.
+
+Ако не сте во можност да ја извршите оваа работа или мате било какви прашања, Ве молам контактирајте не. Ви благодариме за соработката.
+
+{$editorialContactSignature}</body>
+		<description>Ова порака е испартена од страна на Уредувачкиот Одбор, за да Ве извети дека Вашата работа е успешно завршена, воедно да Ви се заблагодари за Вашиот придонес во работата.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
+		<subject>Успешно извршен преглед</subject>
+		<body>{$editorialContactName}:
+
+Вашиот ракопис е разгледан, "{$articleTitle}," за {$journalName}, и е подготвен за финалниот круг на уредување.
+
+Ви благодариме за интересот кој го покажавте,
+{$authorName}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да го извести авторот дека неговата публикација е во процес на прикачуавње.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_ACK">
+		<subject>Copyediting Review Acknowledgement</subject>
+		<body>{$authorName}:
+
+Ви благодариме за разгледувањето уредуавњето на Вашиот ракопис, "{$articleTitle}," за {$journalName}. Очекуваме Вашата публикација наскоро да биде објавена.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да го извести авторот дека финалниот процес на неговата публикација е завршен.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_REQUEST">
+		<subject>Финален преглед на публикацијата</subject>
+		<body>{$copyeditorName}:
+
+Авторот и уредникот го извришија последниот преглед "{$articleTitle}" за {$journalName}. Треба да се обезбеди "clean copy" преку слдниве чекори:
+1. За рачно поднесување кликнете на линкот подолу.
+2. Најавете се во списанието и кликнете на датотеката која се појавува во чекор 2.
+3. Отворете ја превземаната датотека.
+4. Зачувајте ја датотеката на Вашиот десктоп и прикачете ја во чекор 3.
+5. Кликнете на метаподатоците за да провери индекирањето на информациите за комплетноста и точноста.
+6. Испатете порака до уредувачите.
+
+{$journalName} URL: {$journalUrl}
+Поднесување на URL: {$submissionCopyeditingUrl}
+Корисничко име: {$copyeditorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да го извести авторот дека финалниот процес на неговата публикација е завршен.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_COMPLETE">
+		<subject>Финален преглед</subject>
+		<body>{$editorialContactName}:
+
+Во прилог е финалната верзија на публикацијата "{$articleTitle}," за {$journalName}. Таа е подготвена за распределба и изработка на galleys.
+
+{$copyeditorName}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да го извести авторот дека финалниот процес на неговата публикација е завршен.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_ACK">
+		<subject>Финален преглед на публикацијата</subject>
+		<body>{$copyeditorName}:
+
+Ви благодариме за разгледувањето уредуавњето на Вашиот ракопис, "{$articleTitle}," за {$journalName}. Треба да се обезбеди "clean copy" преку слдниве чекори:
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да го извести авторот дека финалниот процес на неговата публикација е завршен.</description>
+	</email_text>
+	<email_text key="LAYOUT_REQUEST">
+		<subject>Барање за Galleys</subject>
+		<body>{$layoutEditorName}:
+
+Поднесувањето "{$articleTitle}" за {$journalName} има потреба за galleys преку следнив чекори:
+1. За рачно поднесување кликнете на линкот подолу.
+2. Најавете се во списанието и искористете ја Layout верзијата на датотеката за да создадете Galley според стандардите на списанието.
+3. Испатете порака до уредувачите.
+
+{$journalName} URL: {$journalUrl}
+Поднесување на URL: {$submissionLayoutUrl}
+Корисничко име: {$layoutEditorUsername}
+
+Ако не сте во состојба да ја извршите оваа работа или имате било какви прашања Ве молиме да не контактирате. Ви благодариме за соработката.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испартена од Уредувачкоит Одбор за да ги извести авторите дека тие се одговорни за уредувањето на списанието. Таа обезберува информации со инструкции за наредните чекори.</description>
+	</email_text>
+	<email_text key="LAYOUT_COMPLETE">
+		<subject>Galleys Complete</subject>
+		<body>{$editorialContactName}:
+
+Galleys се сега подготвени за наредниот чекор, "{$articleTitle}," за{$journalName} и се подготвени за лекторирање.
+
+Ако имате било какви прашања, ве молиме да не контактирате.
+
+{$layoutEditorName}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да го извести авторот дека финалниот процес на неговата публикација е завршен.</description>
+	</email_text>
+	<email_text key="LAYOUT_ACK">
+		<subject>Layout Acknowledgement</subject>
+		<body>{$layoutEditorName}:
+
+Ве благодариме за подготовката на galleys за вашиот ракопис, "{$articleTitle}," за {$journalName}. This is an important contribution to the publishing process.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор со цел да им се заблагодари на авторите за успешно извршената работа.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_REQUEST">
+		<subject>Барање за лекторирање (Author)</subject>
+		<body>{$authorName}:
+
+Вашата публикација "{$articleTitle}" to {$journalName} сега треба да биде лекторирана со следниве чекори:
+1. За рачно поднесување кликнете на линкот подолу.
+2. Најаветесе на списанието за да ги видете следниве инструкции.
+3. Click on VIEW PROOF in Layout and proof the galley in the one or more formats used.
+4. Внесете ги потребните корекции (типографски).
+5. Зачувате ги направените корекции.
+6. Испатете порака до уредувачите.
+
+Поднесување на URL: {$submissionUrl}
+Корисничко име: {$authorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
+		<subject>Завршено лекторирање (Author)</subject>
+		<body>{$editorialContactName}:
+
+Galleys се сега подготвени за наредниот чекор, "{$articleTitle}," за {$journalName}. Galleys се сега подготвени за последните корекции од страна на уредувачите и авторите.
+
+{$authorName}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_ACK">
+		<subject>Proofreading Acknowledgement (Author)</subject>
+		<body>{$authorName}:
+
+Ви благодариме за лекторирањето на galleys во Вашата публикација, "{$articleTitle}," во {$journalName}. Ги очекуваме резултатите од вашата работа наскоро.
+
+Ако се приклучите на нашиот сервис за известување, постојано ќе добивате пораки со актуелните содржини. Ако имате било какви прашања Ве молиме да не контактирате.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="PROOFREAD_REQUEST">
+		<subject>Барање за лекторитање</subject>
+		<body>{$proofreaderName}:
+
+Пунликацијата "{$articleTitle}" to {$journalName} треба да ги има лекторирано следниве чекори:
+1. За рачно поднесување кликнете на линкот подолу.
+2. Најаветесе на списанието за да ги видете следниве инструкции.
+3. Click on VIEW PROOF in Layout and proof the galley in the one or more formats used.
+4. Внесете ги потребните корекции (типографски).
+5. Зачувате ги направените корекции.
+6. Испатете порака до уредувачите.
+
+Manuscript URL: {$submissionUrl}
+Корисничко име: {$proofreaderUsername}
+
+Ако не сте во состојба да ја извршите оваа работа или имате било какви прашања Ве молиме да не контактирате. Ви благодариме за соработката.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="PROOFREAD_COMPLETE">
+		<subject>Завршено лекторирање</subject>
+		<body>{$editorialContactName}:
+
+Galleys се сега подготвени за наредниот чекор, "{$articleTitle}," за {$journalName}. Galleys се сега подготвени за последните корекции од страна на уредувачите и авторите.
+
+{$proofreaderName}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="PROOFREAD_ACK">
+		<subject>Proofreading Acknowledgement</subject>
+		<body>{$proofreaderName}:
+
+Ви благодариме за лекторирањето на galleys во Вашата публикација, "{$articleTitle}," за {$journalName}. Ги очекуваме резултатите од вашата работа наскоро.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_REQUEST">
+		<subject>Proofreading Request (Layout Editor)</subject>
+		<body>{$layoutEditorName}:
+
+Публикацијата "{$articleTitle}" to {$journalName} е лекторирана од страна на авторот и лекторот, и наведените корекции треба да ги направете преку следниве чекори:
+1. За рачно поднесување кликнете на линкот подолу.
+2. Најавете се во списанието и искористете ја Layout верзијата на датотеката за да создадете Galley според стандардите на списанието.
+3. Испартете ги ревидираните galleys.
+4. Испратете ја комплетираната порака до уредувачот.
+
+{$journalName} URL: {$journalUrl}
+Поднесување на URL: {$submissionUrl}
+Корисничко име: {$layoutEditorUsername}
+
+Ако не сте во состојба да ја извршите оваа работа или имате било какви прашања Ве молиме да не контактирате. Ви благодариме за соработката.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
+		<subject>Завршено лекторирање (Layout Editor)</subject>
+		<body>{$editorialContactName}:
+
+Galleys се лекторирани и корегирани "{$articleTitle}," за {$journalName}. Оваа публикација сега е подготвена да се објави.
+
+{$layoutEditorName}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_ACK">
+		<subject>Proofreading Acknowledgement (Layout Editor)</subject>
+		<body>{$layoutEditorName}:
+
+Ви благодариме за лекторирањето на galleys во Вашата публикација, "{$articleTitle}," за {$journalName}. Ги очекуваме резултатите од вашата работа наскоро.
+
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена од Уредувачкиот Одбор, за да ги извести авторите дека galley се подготвени за лекторирање. Таа обезбедува дополнителни информации за публикацијата.</description>
+	</email_text>
+	<email_text key="EMAIL_LINK">
+		<subject>Статија што може да Ве интересира</subject>
+		<body>Можеби сте заинтересирани да погледнете "{$articleTitle}" од {$authorName} прикачено на Vol {$volume}, No {$number} ({$year}) од {$journalName} во "{$articleUrl}".</body>
+		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_NOTIFY">
+		<subject>Subscription Notification</subject>
+		<body>{$subscriberName}:
+
+Сега сте регистрирани како претплатник на нашето електронско списание за упарвување на системот со {$journalName}, со следнава претплата:
+
+{$subscriptionType}
+
+За да пристапите до содржината оја е достапна само за претплатници, едноставно најавете се на системот со Вашето корисничко име и лозинка "{$username}".
+
+Откако ќе се логирате во системот, ќе можеет да ги промените деталите во било која точка.
+
+Имајте во предвид, ако користите институционална претплата, нема потреба да си најавувате, бидејќи барањата за претплата на содржината ќе бидат автоматски внесени во системот.
+
+Ако имате било какви прашања, слободно не контактирајте.
+
+{$subscriptionContactSignature}</body>
+		<description>Оваа порака го известува регистрираниот читател дека, менаџерот ја има креирано нивната претплата. Таа обезбедува URL на списанието, заедно со инструкции за пристап.</description>
+	</email_text>
+	<email_text key="OPEN_ACCESS_NOTIFY">
+		<subject>Прашање за отворен пристап</subject>
+		<body>Readers:
+
+{$journalName} Штотоку Ви е обезбеден отворен пристап до следното списание. Ве покануваме да ги видете содржините ({$journalUrl}) да ги разгледате статиите и прегледите кои Ве интересираат.
+
+Ви благодариме за соработката,
+{$editorialContactSignature}</body>
+		<description>Оваа порака е испратена до регистриранит корисници кои имаат побарано да добиват известување кога станува збор за отворен пристап.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
+		<subject>Изевстување за истекување на чланарината</subject>
+		<body>{$subscriberName}:
+
+Вашата {$journalName} претплата истекува.
+
+{$subscriptionType}
+Датум на истекување: {$expiryDate}
+
+Ако сакате да обезбедите континуитет до пристапот на оваа списание, Ве молиме одете до страната за да ја обновите претплатата. Вие сте во можност да се најавите во системот со Вашето корисничко име "{$username}".
+
+Ако имате било какви прашања, слободно не контактирајте.
+
+{$subscriptionContactSignature}</body>
+		<description>Оваа порака го известува претпатникот дека неговата претплата наскоро истекува. Таа обезбедува URL на списанието, заедно со инструкции.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
+		<subject>Изевстување за истекување на чланарината</subject>
+		<body>{$subscriberName}:
+
+Вашата {$journalName} претплата истекува.
+
+{$subscriptionType}
+Датум на истекување: {$expiryDate}
+
+Ако сакате да обезбедите континуитет до пристапот на оваа списание, Ве молиме одете до страната за да ја обновите претплатата. Вие сте во можност да се најавите во системот со Вашето корисничко име "{$username}".
+
+Ако имате било какви прашања, слободно не контактирајте.
+
+{$subscriptionContactSignature}</body>
+		<description>Оваа порака го известува претпатникот дека неговата претплата наскоро истекува. Таа обезбедува URL на списанието, заедно со инструкции.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
+		<subject>Изевстување за истекување на чланарината - последно потсетување</subject>
+		<body>{$subscriberName}:
+
+Вашата {$journalName} претплата истекува.
+Имајте во предвид дека ова е последно потсетување до Вас.
+
+{$subscriptionType}
+Датум на истекување: {$expiryDate}
+
+Ако сакате да обезбедите континуитет до пристапот на оваа списание, Ве молиме одете до страната за да ја обновите претплатата. Вие сте во можност да се најавите во системот со Вашето корисничко име, "{$username}".
+
+Ако имате било какви прашања, слободно не контактирајте.
+
+{$subscriptionContactSignature}</body>
+		<description>Оваа порака го известува претпатникот дека неговата претплата наскоро истекува. Таа обезбедува URL на списанието, заедно со инструкции.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Subscription Purchase: Individual</subject>
+		<body>Индивидуална претплата е купна за интернет {$journalName} со следниве детали.
+
+Тип на претплата:
+{$subscriptionType}
+
+Корисник:
+{$userDetails}
+
+Информации за членство(доколку е предвидено):
+{$membership}
+
+За да ја видете или средете оваа претплата, следете го линкот подолу.
+
+Subscription URL: {$subscriptionUrl}
+</body>
+		<description>Оваа порака го известува менаџерот за купениот пакет. Таа обезбедува резиме на информациите и брз линк за пристап на купениот пакет.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Subscription Purchase: Institutional</subject>
+		<body>Институционалната претплата е купена на интернет за, {$journalName} со следниве детали. За да ја активитате оваа претплата преименете го рачно Вашиот статус во „Активен“.
+
+Тип на претплата:
+{$subscriptionType}
+
+Институција:
+{$institutionName}
+{$institutionMailingAddress}
+
+Домен (if provided):
+{$domain}
+
+IP Ranges (if provided):
+{$ipRanges}
+
+Лице за контакт:
+{$userDetails}
+
+Информации за членство (if provided):
+{$membership}
+
+За да ја видете или уредете оваа претплата, следете го линкот подолу.
+
+Subscription URL: {$subscriptionUrl}
+</body>
+		<description>Оваа порака го известува менаџерот за купениот пакет. Таа обезбедува резиме на информациите и брз линк за пристап на купениот пакет.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Subscription Renewal: Individual</subject>
+		<body>Индивидуална претплата е обновена online за {$journalName} со следниве детали.
+
+Тип на претплата:
+{$subscriptionType}
+
+Корисник:
+{$userDetails}
+
+Информации за членството (if provided):
+{$membership}
+
+За да ја видете или уредете оваа претплата, следете го линкот подолу.
+
+Subscription URL: {$subscriptionUrl}
+</body>
+		<description>Оваа порака го известува менаџерот за купениот пакет. Таа обезбедува резиме на информациите и брз линк за пристап на купениот пакет.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Subscription Renewal: Institutional</subject>
+		<body>Индивидуална претплата е обновена online за {$journalName} со следниве детали.
+
+Тип на претплата:
+{$subscriptionType}
+
+Институција:
+{$institutionName}
+{$institutionMailingAddress}
+
+Домен (if provided):
+{$domain}
+
+IP Ranges (if provided):
+{$ipRanges}
+
+Информации за корисникот:
+{$userDetails}
+
+Информации за членството (if provided):
+{$membership}
+
+За да ја видете или уредете оваа претплата, следете го линкот подолу..
+
+Subscription URL: {$subscriptionUrl}
+</body>
+		<description>Оваа порака го известува менаџерот за купениот пакет. Таа обезбедува резиме на информациите и брз линк за пристап на купениот пакет.</description>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Citation Editing</subject>
+		<body>{$authorFirstName},
+
+Можете ли да обезбедете соодветни цитати за следниве референци од Вашиот опис, {$articleTitle}:
+
+{$rawCitation}
+
+Ви благодариме!
+
+{$userFirstName}
+Copy-Editor, {$journalName}
+</body>
+		<description>Оваа порака им овозможува на уредниците да побараат дополнителни информации за референците од авторот</description>
+	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body>Почитувани {$recipientFirstName},
+
+{$buyerFullName} би сакал да го споделам овој подарок со Вас {$giftJournalName}:
+
+{$giftDetails}
+
+
+{$giftNote}
+
+
+Ќе добиете соодветна порака која вклучува детали и инструкции за тоа како ќе бидете наградени.
+
+Се надевам дека ќе уживате во Вашиот подарок!
+
+{$giftContactSignature}
+</body>
+		<description>Оваа порака го известува купувачот, дека неговиот поклон е достапен.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>Откуп на подарокот: Детали</subject>
+		<body>Dear {$recipientFirstName},
+
+{$buyerFullName} би сакал да го споделам овој подарок со Вас {$giftJournalName}:
+
+{$giftDetails}
+
+
+За да го превземете Вашиот подарок, најавете се на веб - страницата {$giftUrl}
+
+Вашето корисничко име: {$username}
+Вашата лозинка: {$password}
+
+Откако еднаш ќе се најавете, ќе можете да ја сменете лозинката во било кое време.
+
+Се надевам дека ќе уживате во Вашиот подарок!
+
+{$giftContactSignature}
+</body>
+		<description>Оваа порака го известува купувачот, дека неговиот поклон е достапен.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Откуп на подарокот: Детали</subject>
+		<body>Почитувани, {$recipientFirstName},
+
+{$buyerFullName} би сакал да го споделам овој подарок со Вас {$giftJournalName}:
+
+{$giftDetails}
+
+
+За да го превземете Вашиот подарок, најавете се на веб - страницата {$giftUrl}
+
+Корисничко име: {$username}
+
+Се надевам дека ќе уживате во Вашиот подарок!
+
+{$giftContactSignature}
+</body>
+		<description>Оваа порака го известува купувачот, дека неговиот поклон е достапен.</description>
+	</email_text>
+<email_text key="REVISED_VERSION_NOTIFY">
+        <subject>Прикачување на ревидирана верзија</subject>
+        <body>{$editorialContactName}:
+
+Ревидирана верзија на "{$articleTitle}" е прикачена од страна на авторот. {$authorName}.
+
+Submission URL: {$submissionUrl}
+
+{$editorialContactSignature}</body>
+        <description>Оваа порака автоматски се испраќа на уредникот, за да го извести дека авторот ја прикачил ревидираната верзија на статијата
+		
+</description>
+    </email_text>
+</email_texts>
