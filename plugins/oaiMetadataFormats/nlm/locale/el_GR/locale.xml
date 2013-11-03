@@ -12,6 +12,6 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.oaiMetadata.nlm.displayName">NLM Σχήμα Μεταδεδομένων</message>
-	<message key="plugins.oaiMetadata.nlm.description">Μορφοποιεί τα μεταδεδομένα ώστε να είναι συμβατά με τη μορφή άρθρων του περιοδικού NLM.</message>
+	<message key="plugins.oaiMetadata.nlm.displayName">Σχήμα Μεταδεδομένων NLM</message>
+	<message key="plugins.oaiMetadata.nlm.description">Μορφοποιεί τα μεταδεδομένα ώστε να είναι συμβατά με τη μορφή άρθρων περιοδικού NLM.</message>
 </locale>

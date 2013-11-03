@@ -15,5 +15,5 @@
  
 <locale name="el_GR" full_name="Greek">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Αυτό είναι ένα site-wide plugin και ενεργοποιείται από το OJS config αρχείο.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Αυτό είναι ένα πρόσθετο ιστοτόπου (και όχι περιοδικού) και ενεργοποιείται από το αρχείο ρυθμίσεων του OJS.</message>
 </locale>

@@ -20,28 +20,28 @@
  
 <locale name="el_GR" full_name="Greek">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">Το plugin αυτό υποστηρίζει την πιστοποίηση και τον συγχρονισμό των λογαριασμών χρηστών βάση μιας εξωτερικής LDAP πηγής.</message>
+	<message key="plugins.auth.ldap.description">Το πρόσθετο αυτό υποστηρίζει την πιστοποίηση και τον συγχρονισμό των λογαριασμών χρηστών βάση μιας εξωτερικής πηγής δεδομένων LDAP.</message>
 	
-	<message key="plugins.auth.ldap.settings">Ρυθμίσεις LDAP </message>
-	<message key="plugins.auth.ldap.settings.hostname">Server hostname</message>
-	<message key="plugins.auth.ldap.settings.hostname.description">Π.χ., "ldap.example.com", ή "ldaps://ldap.example.com" (για χρήση SSL)</message>
-	<message key="plugins.auth.ldap.settings.port">Server port</message>
+	<message key="plugins.auth.ldap.settings">Ρυθμίσεις LDAP</message>
+	<message key="plugins.auth.ldap.settings.hostname">Όνομα εξυπηρετητή</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">π.χ., "ldap.example.com", ή "ldaps://ldap.example.com" (για χρήση SSL)</message>
+	<message key="plugins.auth.ldap.settings.port">Θύρα εξυπηρετητή</message>
 	<message key="plugins.auth.ldap.settings.port.description">Προαιρετικό. Αυτόματα στο 389 (LDAP) ή 636 (LDAP over SSL)</message>
-	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
-	<message key="plugins.auth.ldap.settings.basedn.description">Π.χ., "ou=people,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.basedn">Βασικό DN</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">π.χ., "ou=people,dc=example,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerdn">Διαχειριστής DN</message>
-	<message key="plugins.auth.ldap.settings.managerdn.description">Π.χ., "cn=Manager,dc=example,dc=com"</message>
-	<message key="plugins.auth.ldap.settings.managerpwd">Κωδικός Πρόσβασης (password) Διαχειριστή</message>
-	<message key="plugins.auth.ldap.settings.managerpwd.description">Ο Διαχειριστής DN και ο κωδικός πρόσβασης απαιτούνται μόνο αν είναι ενεργοποιημένες οι επιλογές συγχρονισμός προφίλ/κωδικός πρόρσβασης χρήστη ή δημιουργία χρήστη. Αν το LDAP θα χρησιμοποιηθεί αποκλειστικά για πιστοποίηση τότε αυτές οι επιλογές μπορούν να παραβλεφθούν.</message>
-	<message key="plugins.auth.ldap.settings.pwhash">Password encryption</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description">Hash σχήμα για τους κωδικούς πρόσβασης που αποθηκεύονται στον κεντρικό υπολογιστή. Προτείνεται το SSHA (απαιτείται PHP >= 4.3.0).</message>
-	<message key="plugins.auth.ldap.settings.saslopt">SASL Ρυθμίσεις (προαιρετικό)</message>
-	<message key="plugins.auth.ldap.settings.sasl">Χρήση SASL αντί για απλή πιστοποίησης (απαιτείται PHP >= 5)</message>
-	<message key="plugins.auth.ldap.settings.saslmech">SASL Μηχανισμός</message>
-	<message key="plugins.auth.ldap.settings.saslmech.description">Π.χ., "DIGEST-MD5"</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">π.χ., "cn=Manager,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">Κωδικός Πρόσβασης Διαχειριστή</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">Ο Διαχειριστής DN και ο κωδικός πρόσβασης απαιτούνται μόνο αν είναι ενεργοποιημένες οι επιλογές συγχρονισμού προφίλ/κωδικού πρόσβασης χρήστη ή δημιουργίας χρήστη. Αν το LDAP χρησιμοποιηθεί αποκλειστικά για πιστοποίηση τότε αυτές οι επιλογές μπορούν να παραβλεφθούν.</message>
+	<message key="plugins.auth.ldap.settings.pwhash">Κρυπτογράφηση κωδικού πρόσβασης</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Τύπος σύνοψης (hash) για τους κωδικούς πρόσβασης που αποθηκεύονται στον εξυπηρετητή. Προτείνεται το SSHA (απαιτείται PHP >= 4.3.0).]]></message>
+	<message key="plugins.auth.ldap.settings.saslopt">Ρυθμίσεις SASL (προαιρετικό)</message>
+	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Χρήση SASL αντί απλής πιστοποίησης (απαιτείται PHP >= 5)]]></message>
+	<message key="plugins.auth.ldap.settings.saslmech">Μηχανισμός SASL</message>
+	<message key="plugins.auth.ldap.settings.saslmech.description">π.χ., "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
-	<message key="plugins.auth.ldap.settings.saslauthzid">Αίτηση ID πιστοποίησης</message>
-	<message key="plugins.auth.ldap.settings.saslprop">Ιδιότητες ασφαλείας SASL </message>
-	<message key="plugins.auth.ldap.settings.uid">Χαρακτηριστικό Λογαριασμού</message>
-	<message key="plugins.auth.ldap.settings.uid.description">Χαρακτηριστική ιδιότητα, η τιμή της οποίας χαρακτηρίζει μοναδικά ένα αντικείμενο χρήστη, όπως uid ή cn ή sAMAccountName.</message>
+	<message key="plugins.auth.ldap.settings.saslauthzid">Αίτηση για ID πιστοποίησης</message>
+	<message key="plugins.auth.ldap.settings.saslprop">Ιδιότητες ασφαλείας SASL</message>
+	<message key="plugins.auth.ldap.settings.uid">Ιδιότητα ονόματος λογαριασμού</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Η ιδιότητα, η τιμή της οποίας χαρακτηρίζει μοναδικά ένα αντικείμενο χρήστη, όπως uid ή cn ή sAMAccountName.</message>
 </locale>

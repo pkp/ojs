@@ -19,8 +19,8 @@
   -->
  
 <locale name="el_GR" full_name="Greek">	
-	<message key="plugins.citationFormats.refWorks.displayName">Plugin σχήματος παραπομπής RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.displayName">Πρόσθετο σχήματος παραπομπής RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
-	<message key="plugins.citationFormats.refWorks.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής RefWorks.</message>
+	<message key="plugins.citationFormats.refWorks.description">Το πρόσθετο αυτό υλοποιεί το σχήμα παραπομπής RefWorks.</message>
 	<message key="plugins.citationFormats.refWorks.export">Εξαγωγή στο RefWorks</message>
 </locale>

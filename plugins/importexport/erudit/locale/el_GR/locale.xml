@@ -19,11 +19,10 @@
   -->
  
 <locale name="el_GR" full_name="Greek">	
-	<message key="plugins.importexport.erudit.displayName">Plugin εξαγωγής άρθρου Erudit</message>
+	<message key="plugins.importexport.erudit.displayName">Πρόσθετο εξαγωγής άρθρου Erudit</message>
 	<message key="plugins.importexport.erudit.description">Εξαγωγή άρθρων με την χρήση του English Erudit DTD</message>
 
-	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Χρήση: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
-]]></message>
+	<message key="plugins.importexport.erudit.cliUsage">Χρήση: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]</message>
 	<message key="plugins.importexport.erudit.export">Εξαγωγή δεδομένων</message>
 	<message key="plugins.importexport.erudit.export.issues">Εξαγωγή Τευχών</message>
 	<message key="plugins.importexport.erudit.export.sections">Εξαγωγή Ενοτήτων</message>

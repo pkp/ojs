@@ -12,9 +12,9 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.relatedItems.displayName">Block σχετικών στοιχείων</message>
-	<message key="plugins.block.relatedItems.description">Αυτό το plugin εμφανίζει ένα block που περιέχει στοιχεία σχετικά με τα εργαλεία ανάγνωσης της πλαϊνής μπάρας.</message>
-	<message key="plugins.block.relatedItems.title">Σχετικά Στοιχεία</message>
+	<message key="plugins.block.relatedItems.displayName">Δομική Μονάδα Συναφών Τεκμηρίων</message>
+	<message key="plugins.block.relatedItems.description">Αυτό το πρόσθετο εμφανίζει μια δομική μονάδα, που περιέχει συναφή τεκμήρια, στην πλαϊνή μπάρα των εργαλείων μελέτης.</message>
+	<message key="plugins.block.relatedItems.title">Συναφή Τεκμήρια</message>
 	<message key="plugins.block.relatedItems.hide">Απόκρυψη</message>
 	<message key="plugins.block.relatedItems.show">Προβολή όλων</message>
 </locale>

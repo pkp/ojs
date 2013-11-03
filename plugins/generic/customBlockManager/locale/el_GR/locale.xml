@@ -12,20 +12,20 @@
   -->
  
 <locale name="el_GR" full_name="Greek">
-	<message key="plugins.generic.customBlockManager.displayName">Διαχείριση Custom Block</message>
-	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Μπορείτε να χρησιμοποιήτε το plugin αυτό για να προσθέτετε ή διαγράφετε προσαρμοσμένα (custom) block plugins.  Μπορείτε να επεξεργαστείτε το περιεχόμενο μέσα από την σελίδα  <a href="{$systemPluginsUrl}">Plugins Συστήματος</a> (στην ενότητα Blocks Plugin).  Για να τοποθετήσετε το plugin σας στην επιθυμητή θέση στην πλαϊνή μπάρα, πηγαίνετε στο <a href="{$setupStep56}">Βήμα 5.6</a>.]]></message>
+	<message key="plugins.generic.customBlockManager.displayName">Διαχειριστής Προσαρμοσμένων Δομικών Μονάδων</message>
+	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Μπορείτε να χρησιμοποιήσετε το πρόσθετο αυτό για να προσθέτετε ή διαγράφετε προσαρμοσμένα πρόσθετα δομικών μονάδων. Στην συνέχεια, μπορείτε να επεξεργαστείτε το περιεχόμενο μέσω της σελίδας <a href="{$systemPluginsUrl}">Πρόσθετα Συστήματος</a> (στην ενότητα Πρόσθετα Δομικών Μονάδων).  Για να τοποθετήσετε το πρόσθετό σας στην επιθυμητή θέση στην πλαϊνή μπάρα, πηγαίνετε στο <a href="{$setupStep56}">Βήμα 5.6</a>.]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Ρυθμίσεις</message>
-	<message key="plugins.generic.customBlockManager.blockName">Όνομα Block</message>	
+	<message key="plugins.generic.customBlockManager.blockName">Όνομα δομικής μονάδας</message>	
 	<message key="plugins.generic.customBlockManager.action">Ενέργεια</message>	
 	<message key="plugins.generic.customBlockManager.delete">Διαγραφή</message>	
-	<message key="plugins.generic.customBlockManager.addBlock">Προσθήκη Block</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Προσθήκη δομικής μονάδας</message>	
 
 	<message key="plugins.generic.customBlock.content">Περιεχόμενο</message>
-	<message key="plugins.generic.customBlock.saved">Το περιεχόμενο του Block έχει αποθηκευτεί.</message>
-	<message key="plugins.generic.customBlock.nameSuffix">(Custom Block Plugin)</message>
-	<message key="plugins.generic.customBlock.description">Αυτό είναι block δημιουργημένο από χρήστη.</message>
+	<message key="plugins.generic.customBlock.saved">Το περιεχόμενο της δομικής μονάδας έχει αποθηκευτεί.</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Προσαρμοσμένο πρόσθετο δομικής μονάδας)</message>
+	<message key="plugins.generic.customBlock.description">Αυτή είναι μια δομική μονάδα δημιουργημένη από χρήστη.</message>
 	<message key="plugins.generic.customBlock.editContent">Επεξεργασία περιεχομένου πλαϊνής μπάρας</message>
-	<message key="plugins.generic.customBlock.contentRequired">Απαιτείται η ύπαρξη περιεχομένου. Αν επιθυμείτε να διαγράψετε αυτό το block, μπορείτε να το κάνετε με το Block Manager Plugin ή απο-επιλέγοντας το block στο Βήμα 5 στην Οργάνωση του περιοδικού.</message>
+	<message key="plugins.generic.customBlock.contentRequired">Απαιτείται η ύπαρξη κάποιου περιεχομένου. Αν επιθυμείτε να διαγράψετε αυτή τη δομική μονάδα, μπορείτε να το κάνετε με το πρόσθετο Διαχειριστής Δομικών Μονάδων ή απο-επιλέγοντας αυτή τη δομική μονάδα στο Βήμα 5 του "Οργάνωση του περιοδικού".</message>
 	<message key="plugins.generic.customBlock.edit">Επεξεργασία</message>
-	<message key="plugins.generic.customBlockManager.description">Αυτό το Plugin σας επιτρέπει να διαμορφώνετε δικά σας block στην πλαϊνή μπάρα. Μπορείτε να διαμορφώσετε κατάλληλα τα block μέσω των ρυθμίσεων κάθε plugin που δημιουργείτε εδώ.</message>
+	<message key="plugins.generic.customBlockManager.description">Αυτό το πρόσθετο σας επιτρέπει να διαμορφώνετε δικές σας δομικές μονάδες στην πλαϊνή μπάρα. Μπορείτε να διαμορφώσετε κατάλληλα τις δομικές μονάδες μέσω των ρυθμίσεων κάθε πρόσθετου που δημιουργείτε εδώ.</message>
 </locale>

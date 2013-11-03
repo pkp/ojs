@@ -19,6 +19,6 @@
   -->
  
 <locale name="el_GR" full_name="Greek">
-	<message key="plugins.block.help.displayName">Block Βοήθειας</message>
-	<message key="plugins.block.help.description">Το plugin αυτό παρέχει ένα σύνδεσμο Βοήθειας στην πλαϊνή μπάρα .</message>
+	<message key="plugins.block.help.displayName">Δομική Μονάδα Βοήθειας</message>
+	<message key="plugins.block.help.description">Το πρόσθετο αυτό παρέχει ένα σύνδεσμο Βοήθειας στην πλαϊνή μπάρα .</message>
 </locale>

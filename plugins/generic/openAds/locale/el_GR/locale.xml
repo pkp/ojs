@@ -19,9 +19,9 @@
   -->
  
 <locale name="el_GR" full_name="Greek">	
-	<message key="plugins.generic.openads.description">Το OpenAds plugin επιτρέπει την εισαγωγή δυναμικών διαφημίσεων στο OJS από τον OpenAds server.</message>
-	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Το OpenAds plugin επιτρέπει την εισαγωγή δυναμικών διαφημίσεων στο OJS από τον OpenAds server. <strong>Παρακαλούμε διαβάστε το αρχείο README στο plugins/generic/openAds για λεπτομέρειες σχετικά με την ενεργοποίηση αυτού του plugin.</strong>]]></message>
-	<message key="plugins.generic.openads">OpenAds Plugin</message>
+	<message key="plugins.generic.openads.description">Το πρόσθετο OpenAds επιτρέπει την εισαγωγή δυναμικών διαφημίσεων στο OJS από τον εξυπηρετητή OpenAds.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Το πρόσθετο OpenAds επιτρέπει την εισαγωγή δυναμικών διαφημίσεων στο OJS από τον εξυπηρετητή  OpenAds. <strong>Παρακαλούμε διαβάστε το αρχείο README στο plugins/generic/openAds για λεπτομέρειες σχετικά με την ενεργοποίηση αυτού του πρόσθετου.</strong>]]></message>
+	<message key="plugins.generic.openads">Πρόσθετο OpenAds</message>
 	<message key="plugins.generic.openads.settings.description">Χρησιμοποιήστε αυτή τη φόρμα για να επιλέξετε τις διαφημιστικές ζώνες του OpenAds οι οποίες θα εμφανιστούν στο OJS για κάθε πιθανή τοποθεσία.</message>
 	<message key="plugins.generic.openads.manager.settings">Ρυθμίσεις</message>
 

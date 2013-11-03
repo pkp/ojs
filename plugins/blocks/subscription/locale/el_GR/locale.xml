@@ -12,12 +12,12 @@
   -->
  
 <locale name="el_GR" full_name="Greek">
-	<message key="plugins.block.subscription.displayName">Block Συνδρομών</message>
-	<message key="plugins.block.subscription.description">Το plugin αυτό παρέχει πληροφορίες συνδρομών στην πλαϊνή μπάρα.</message>
+	<message key="plugins.block.subscription.displayName">Δομική Μονάδα Συνδρομών</message>
+	<message key="plugins.block.subscription.description">Το πρόσθετο αυτό παρέχει πληροφορίες συνδρομών στην πλαϊνή μπάρα.</message>
 	<message key="plugins.block.subscription.blockTitle">Συνδρομή</message>
 	<message key="plugins.block.subscription.expires">Λήγει</message>
 	<message key="plugins.block.subscription.providedBy">Η πρόσβαση παρέχετε από:</message>
-	<message key="plugins.block.subscription.comingFromIP">'Ελεγχος IP:</message>
+	<message key="plugins.block.subscription.comingFromIP">Από το</message>
 	<message key="plugins.block.subscription.about">Συνδρομές</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Συνδεθείτε για να επιβεβαιώσετε τη συνδρομή</message>
 </locale>

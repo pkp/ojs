@@ -12,13 +12,13 @@
   -->
 
 <locale name="el_GR" full_name="Greek">
-	<message key="plugins.importexport.doaj.displayName">DOAJ Export Plugin</message>
-	<message key="plugins.importexport.doaj.description">Εξαγωγή δεδομένων του περιοδικού στο DOAJ και αποστολή email με τα στοιχεία του περιοδικού.</message>
+	<message key="plugins.importexport.doaj.displayName">Πρόσθετο εξαγωγής DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Εξαγωγή περιεχομένων του περιοδικού στο DOAJ και παροχή πληροφοριών για αναφορά σε αυτό.</message>
 
 	
 	<message key="plugins.importexport.doaj.export">Εξαγωγή δεδομένων του περιοδικού στο DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Εξαγωγή περιοδικού</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Εξαγωγή πληροφοριών άρθρου σε XML για αρχειοθέτηση στο DOAJ</message>
-	<message key="plugins.importexport.doaj.export.contact">Επικοινωνήστε με το DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contact">Επικοινωνήστε με το DOAJ για να συμπεριλάβετε το περιοδικό</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Για να εξεταστεί η ευρετηρίαση του περιοδικού σας στο DOAJ, παρακαλούμε υποβάλλεται αυτή την μερικώς συμπληρωμένη φόρμα, αφού πρώτα συμπληρώσετε τα στοιχεία που λείπουν.</message>
 </locale>
