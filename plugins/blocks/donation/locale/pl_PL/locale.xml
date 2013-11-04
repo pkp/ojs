@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Polski">
+	<message key="plugins.block.donation.displayName">Darowizny</message>
+	<message key="plugins.block.donation.description">Wtyczka elementu blokowego systemu darowizn.</message>
+</locale>

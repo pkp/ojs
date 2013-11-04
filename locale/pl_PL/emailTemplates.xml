@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+<email_texts locale="pl_PL">
+	<email_text key="NOTIFICATION">
+		<subject>Nowe powiadomienie ze strony czasopisma {$siteTitle}</subject>
+		<body>Na stronie czasopisma {$siteTitle} oczekuje nowe powiadomienie:
+
+{$notificationContents}
+
+Link: {$url}
+
+{$principalContactSignature}</body>
+		<description>Wiadomość jest przesyłana do zarejestrowanych użytkowników, którzy zadeklarowali chęć otrzymywania określonego typu powiadomień.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Nowe powiadomienie ze strony czasopisma {$siteTitle}</subject>
+		<body>Na stronie czasopisma {$siteTitle} oczekuje nowe powiadomienie:
+
+{$notificationContents}
+
+Link: {$url}
+
+--
+
+W celu wyłączenia subskrypcji powiadomień na skrzynkę e-mail, należy przejść na stronę {$unsubscribeLink}, wprowadzić adres e-mail oraz hasło.
+
+{$principalContactSignature}</body>
+		<description>Wiadomość jest przesyłana do niezarejestrowanych użytkowników z listy mailingowej powiadomień.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Witamy na liście mailingowej czasopisma {$siteTitle}!</subject>
+		<body>Zarejestrował/a się Pan/Pani na stronie czasopisma {$siteTitle}, aby subskrybować powiadomienia.
+
+Aby potwierdzić należy subskrypcję powiadomień należy kliknąć w poniższy link:
+{$confirmLink}
+
+Aby zrezygnować z subskrypcji powiadomień, należy przejść na stronę {$unsubscribeLink}, wprowadzić e-mail i hasło.
+
+Hasło do rezygnacji z subskrypcji powiadomień: {$password}
+
+{$principalContactSignature}</body>
+		<description>Wiadomość jest przesyłana do niezarejestrowanych użytkowników, którzy właśnie dodali swoje adresy e-mail do listy mailingowej powiadomień.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
+		<subject>Nowe powiadomienie dla członka listy mailingowej czasopisma {$siteTitle}</subject>
+		<body>Nowe hasło dla rezygnacji z subskrypcji powiadomień: {$password}
+
+W celu rezygnacji z powiadomień, należy przejść na stronę {$unsubscribeLink}, wprowadź e-mail i hasło.
+
+{$principalContactSignature}</body>
+		<description>Wiadomość jest przesyłana do niezarejestrowanych użytkowników z listy mailingowej powiadomień, którzy mają problem z zalogowaniem. Do wiadomości załączony jest link służący do zresetowania hasła.</description>
+	</email_text>
+	<email_text key="PASSWORD_RESET_CONFIRM">
+		<subject>Potwierdzenie resetowania hasła</subject>
+		<body>Czy na pewno zresetować hasło na stronie czasopisma {$siteTitle}?
+
+Jeśli nie chce Pan/Pani zmieniać hasła, należy zignorować wiadomość. W celu potwierdzenia zmiany hasła należy kliknąć w link: {$url}
+
+{$principalContactSignature}</body>
+		<description>Wiadomość jest przesyłana do zarejestrowanych użytkowników w celu potwierdzenia chęci zresetowania hasła. Załączony jest link do strony resetowania hasła.</description>
+	</email_text>
+	<email_text key="PASSWORD_RESET">
+		<subject>Nowe hasło</subject>
+		<body>Zresetowano Pana/Pani hasło na stronie czasopisma {$siteTitle}. Należy zachować nowe dane do logowania:
+
+Nazwa użytkownika: {$username}
+Nowe hasło: {$password}
+
+{$principalContactSignature}</body>
+		<description>Wiadomość jest przesyłana do zarejestrowanych użytkowników po zmianie hasła.</description>
+	</email_text>
+	<email_text key="USER_REGISTER">
+		<subject>Rejestracja na stronie czasopisma</subject>
+		<body>{$userFullName}
+
+Jest Pan/Pani zarejestrowany/a na stronie czasopisma jako {$journalName}. W celu usunięcia swoich danych z bazy czasopisma prosimy o kontakt.
+
+Nazwa użytkownika: {$username}
+Hasło: {$password}
+
+Dziękujemy, 
+{$principalContactSignature}</body>
+		<description>Wiadomość jest wysyłana do nowych użytkowników systemu, celem powitania ich i dostarczenia danych do logowania.</description>
+	</email_text>
+	<email_text key="USER_VALIDATE">
+		<subject>Potwierdź założenie konta</subject>
+		<body>{$userFullName}
+
+Dla tego adresu e-mail zostało utworzone konto na stronie czasopisma {$journalName}. W celu potwierdzenia należy kliknąć w poniższy link:
+
+{$activateUrl}
+
+Dziękujemy,
+{$principalContactSignature}</body>
+		<description>Wiadomość jest wysyłana do nowych użytkowników systemu, celem potwierdzenia poprawności adresu e-mail, dla którego zarejestrowano konto.</description>
+	</email_text>
+	<email_text key="REVIEWER_REGISTER">
+		<subject>Rejestracja recenzenta na stronie czasopisma {$journalName}</subject>
+		<body>Dodaliśmy Pana/Panią do bazy recenzentów czasopisma {$journalName}. Dane w bazie uzupełnione są o zainteresowania naukowe zadeklarowane w procesie rejestracji. Rejestracja nie zobowiązuje do żadnych działań. Baza recenzentów wykorzystywana jest przez redakcję czasopisma do wysyłania zapytań dotyczących możliwości sporządzenia recenzji. Do zapytania załączany jest tytuł i abstrakt artykułu. Recenzent może przyjąć lub odrzucić prośbę redakcji. 
+W każdym momencie może Pan/Pani usunąć swoje dane z bazy recenzentów.
+
+Poniżej podajemy dane do logowania, niezbędne do pracy na stronie czasopisma. Po zalogowaniu się możliwa jest aktualizacja profilu, w tym zmiana "zainteresowań naukowych".
+
+Nazwa użytkownika: {$username}
+Hasło: {$password}
+
+Dziękujemy,
+{$principalContactSignature}</body>
+		<description>Wiadomość jest wysyłana do nowych recenzentów, celem powitania ich i przesłania danych do logowania.</description>
+	</email_text>
+	<email_text key="PUBLISH_NOTIFY">
+		<subject>Nowy numer czasopisma {$journalName}</subject>
+		<body>Szanowni Państwo,
+
+ukazał się nowy numer czasopisma {$journalName}. Zachęcamy do zapoznania się z jego zawartością na stronie: {$journalUrl}. 
+
+Dziękujemy za zainteresowanie działalnością czasopisma,
+{$editorialContactSignature}</body>
+		<description>Wiadomość jest wysyłana do zarejestrowanych czytelników. Zawiera informację o nowym numerze czasopisma.</description>
+	</email_text>
+	<email_text key="LOCKSS_EXISTING_ARCHIVE">
+		<subject>Archiving Request for {$journalName}</subject>
+		<body>Dear [University Librarian]
+
+{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+
+[Brief description of journal]
+
+The URL to the LOCKSS Publisher Manifest for our journal is: {$journalUrl}/gateway/lockss
+
+We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.
+
+Thank you,
+{$principalContactSignature}</body>
+		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
+	</email_text>
+	<email_text key="LOCKSS_NEW_ARCHIVE">
+		<subject>Archiving Request for {$journalName}</subject>
+		<body>Dear [University Librarian]
+
+{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+
+[Brief description of journal]
+
+The LOCKSS Program &lt;http://lockss.org/&gt;, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.
+
+To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.
+
+Thank you,
+{$principalContactSignature}</body>
+		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK">
+		<subject>Potwierdzenie zgłoszenia tekstu</subject>
+		<body>{$authorName}:
+
+Dziękujemy za zgłoszenie tekstu "{$articleTitle}" do opublikowania w czasopiśmie {$journalName}. 
+
+Nasz system umożliwia sprawdzenie, na jakim etapie znajduje się nadesłany tekst:
+
+WWW tekstu: {$submissionUrl}
+Nazwa użytkownika: {$authorUsername}
+
+W razie dodatkowych pytań, prosimy o kontakt.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość jest automatycznie wysyłana do autora po zgłoszeniu tekstu do opublikowania w czasopiśmie.</description>
+	</email_text>
+	<email_text key="SUBMISSION_UNSUITABLE">
+		<subject>Zgłoszony tekst niezgodny z zakresem czasopisma</subject>
+		<body>{$authorName}:
+
+Po wstępnym zapoznaniu się z treścią zgłoszonego tekstu pt. "{$articleTitle}", uznaliśmy że nie jest on zgodny z zakresem czasopisma {$journalName}. Prosimy o zapoznanie się z opisem czasopisma, jak również z treścią wybranych artykułów. 
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="SUBMISSION_COMMENT">
+		<subject>Komentarz do zgłoszenia</subject>
+		<body>{$name}:
+
+{$commentName} dodał/a komentarz do tekstu "{$articleTitle}" przesłanego celem opublikowania w czasopiśmie {$journalName}:
+
+{$comments}</body>
+		<description>To powiadomienie jest przesyłane do osób zaangażowanych w proces redakcyjny.</description>
+	</email_text>
+	<email_text key="SUBMISSION_DECISION_REVIEWERS">
+		<subject>Decyzja w sprawie "{$articleTitle}"</subject>
+		<body>Informuję, że proces recenzowania artykułu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}, zakończył się. Przesyłam Panu/Pani recenzje oraz decyzję redakcji w sprawie nadesłanego tekstu. 
+
+Dziękuję za wykonaną przez Pana/Panią pracę. 
+
+{$editorialContactSignature}
+
+{$comments}</body>
+		<description>Powiadomienie przesyłane do recenzentów, potwierdzające ukończenie procesu recenzowania.</description>
+	</email_text>
+	<email_text key="EDITOR_ASSIGN">
+		<subject>Zadanie dla redaktora</subject>
+		<body>{$editorialContactName}:
+
+Tekst "{$articleTitle}", zgłoszony do czasopisma {$journalName}, został przypisany do Pana/Pani jako redaktora działu.
+
+WWW tekstu: {$submissionUrl}
+Nazwa użytkownika: {$editorUsername}
+
+Dziękujemy,
+{$editorialContactSignature}</body>
+		<description>Powiadomienie wysyłane do redaktora działu, który został przypisany do artykułu i jest odpowiedzialny za przebieg procesu wydawniczego.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST">
+		<subject>Prośba o sporządzenie recenzji artykułu</subject>
+		<body>Szanowny/a Panie/Pani {$reviewerName}:
+
+w naszej opinii jest Pan/Pani właściwą osobą do sporządzenia recenzji artykułu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}. Poniżej zamieszczamy abstrakt artykułu. Mamy nadzieję, że weźmie Pan/Pani pod uwagę realizację tak ważnego dla nas zadania.
+
+Prosimy o zalogowanie się na stronie czasopisma nie później niż {$weekLaterDate} w celu przyjęcia lub odrzucenia naszej prośby. Po akceptacji otrzyma Pan/Pani dostęp do zgłoszonego tekstu oraz możliwość przesłania swojej recenzji i rekomendacji. 
+
+Strona czasopisma: {$journalUrl}
+
+Termin przygotowania recenzji: {$reviewDueDate}
+
+Jeśli nie posiada Pan/Pani danych niezbędnych do zalogowania się na stronie czasopisma, proszę o przejście na stronę:{$passwordResetUrl}
+
+WWW zgłoszonego tekstu: {$submissionReviewUrl}
+
+Dziękujemy za rozważenie naszej propozycji,
+{$editorialContactSignature}
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Wiadomość od redaktora działu przesyłana do recenzenta. Zawiera prośbę o przygotowanie recenzji artykułu, jego tytuł i abstrakt, a także zalecenie dot. zresetowania hasła w sytuacji, gdy recenzent nie pamięta danych do logowania. Wysyłana, jeśli recenzent pracować będzie w systemie.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK">
+		<subject>Prośba o sporządzenie recenzji artykułu</subject>
+		<body>Szanowny/a Panie/Pani {$reviewerName}:
+
+w naszej opinii jest Pan/Pani właściwą osobą do sporządzenia recenzji artykułu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}. Poniżej zamieszczamy abstrakt artykułu. Mamy nadzieję, że weźmie Pan/Pani pod uwagę realizację tak ważnego dla nas zadania.
+
+Prosimy o zalogowanie się na stronie czasopisma nie później niż {$weekLaterDate} w celu przyjęcia lub odrzucenia naszej prośby. Po akceptacji otrzyma Pan/Pani dostęp do zgłoszonego tekstu oraz możliwość przesłania swojej recenzji i rekomendacji. 
+
+Termin przygotowania recenzji: {$reviewDueDate}
+
+WWW tekstu: {$submissionReviewUrl}
+
+
+Dziękujemy za rozważenie naszej propozycji,
+{$editorialContactSignature}
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Wiadomość od redaktora działu przesyłana do recenzenta. Zawiera prośbę o przygotowanie recenzji artykułu, jego tytuł i abstrakt. Przesyłane, jeśli opcja one-click reviewer jest dostępna i jeśli recenzent nie jest mistrzem IT :)))</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED">
+		<subject>Prośba o sporządzenie recenzji artykułu</subject>
+		<body>Szanowny/a Panie/Pani {$reviewerName}:
+
+w naszej opinii jest Pan/Pani właściwą osobą do sporządzenia recenzji artykułu "{$articleTitle}". Proszę o rozważenie wykonania tego zadania dla nas. Opis procedury recenzowania zamieszczamy poniżej. Zgłoszony artykuł wysyłamy w załączeniu. Prosimy o przesłanie recenzji oraz rekomendacji pod ten adres do dnia {$reviewDueDate}.
+
+Prosimy rozważenie naszej propozycji i nadesłanie informacji zwrotnej (o jej przyjęciu lub odrzuceniu) do dnia {$weekLaterDate}.
+
+Dziękujemy za rozważenie naszej propozycji,
+{$editorialContactSignature}
+
+Opis procedury recenzowania:
+
+{$reviewGuidelines}</body>
+		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST.)</description>
+	</email_text>
+	<email_text key="REVIEW_CANCEL">
+		<subject>W sprawie recenzji artykułu</subject>
+		<body>Szanowny/a Panie/Pani {$reviewerName}:
+
+bardzo nam przykro, ale zostaliśmy zmuszeni do anulowania naszego zapytanie o przygotowanie recenzji zgłoszonego do czasopisma {$journalName} artykułu "{$articleTitle}". Przepraszamy za wszelkie niedogodności z tym związane. Mamy nadzieję na dalszą współpracę.
+
+W razie dodatkowych pytań, prosimy o kontakt.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do recenzenta w celu anulowania zapytania o przygotowanie recenzji.</description>
+	</email_text>
+	<email_text key="REVIEW_CONFIRM">
+		<subject>Przygotowanie recenzji - akceptacja</subject>
+		<body>{$editorialContactName}:
+
+Zgadzam się na przygotowanie recenzji artykułu "{$articleTitle}", zgłoszonego do opublikowania w czasopiśmie {$journalName}. 
+
+Recenzja będzie gotowa do dnia {$reviewDueDate}.
+
+{$reviewerName}</body>
+		<description>Wiadomość wysyłana przez recenzenta do redaktora działu, jako odpowiedź na zaproszenie do przygotowania recenzji. Recenzent zgadza się na wykonanie recenzji w określonym przez redakcję terminie.</description>
+	</email_text>
+	<email_text key="REVIEW_DECLINE">
+		<subject>Przygotowanie recenzji - odrzucenie</subject>
+		<body>{$editorialContactName}:
+
+Obawiam się, że w podanym czasie nie zdołam przygotować recenzji artykułu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}. 
+
+{$reviewerName}</body>
+		<description>Wiadomość wysyłana przez recenzenta do redaktora działu, w celu odrzucenia prośby o przygotowanie recenzji.</description>
+	</email_text>
+	<email_text key="REVIEW_COMPLETE">
+		<subject>Ukończono recenzję artykułu</subject>
+		<body>{$editorialContactName}:
+
+Ukończyłem/am recenzję artykułu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}, i przysłałam przesłałam moje rekomendacje, "{$recommendation}".
+
+{$reviewerName}</body>
+		<description>Wiadomość wysyłana przez recenzenta do redaktora działu, w celu zgłoszenia ukończenia recenzji oraz przesłania komentarzy i rekomendacji na stronie czasopisma.</description>
+	</email_text>
+	<email_text key="REVIEW_ACK">
+		<subject>Podziękowanie za przygotowanie recenzji</subject>
+		<body>{$reviewerName}:
+
+Dziękujemy za przygotowanie recenzji artykułu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}. 
+
+Doceniamy Państwa wkład w budowanie jakości naszego czasopisma.
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość jest przesyłana przez redaktora działu dla potwierdzenia otrzymania recenzji i podziękowania recenzentowi za wykonaną pracę.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND">
+		<subject>Przypomnienie o terminie przygotowania recenzji</subject>
+		<body>{$reviewerName}:
+
+Przypominamy, że w dniu {$reviewDueDate} mija termin przygotowania recenzji artykułu "{$articleTitle}" zgłoszonego do czasopisma {$journalName}. Prosimy o nadesłanie do tego czasu gotowej recenzji.
+
+Jeśli nie posiada Pan/Pani danych niezbędnych do zalogowania się na stronie czasopisma, prosimy zresetować hasło przechodząc na stronę: {$passwordResetUrl}
+
+WWW artykułu: {$submissionReviewUrl}
+
+Z wyrazami szacunku,
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do recenzenta celem przypomnienia o deadlinie dla recenzji.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_ONECLICK">
+		<subject>Przypomnienie o terminie przygotowania recenzji</subject>
+		<body>{$reviewerName}:
+
+{$reviewerName}:
+
+Przypominamy, że w dniu {$reviewDueDate} mija termin przygotowania recenzji artykułu "{$articleTitle}" zgłoszonego do czasopisma {$journalName}. Prosimy o nadesłanie do tego czasu gotowej recenzji.
+
+WWW artykułu: {$submissionReviewUrl}
+
+Z wyrazami szacunku,
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do recenzenta celem przypomnienia o deadlinie dla recenzji. Wysyłane do recenzenta nie będącego mistrzem IT :)))</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO">
+		<subject>Automatyczne przypomnienie o upłynięciu terminu przygotowania recenzji</subject>
+		<body>{$reviewerName}:
+
+Ta wiadomość została automatycznie wygenerowana.
+
+Przypominamy, że w dniu {$reviewDueDate} minął termin przygotowania recenzji artykułu "{$articleTitle}" zgłoszonego do czasopisma {$journalName}. Prosimy o jak najszybsze nadesłanie gotowej recenzji.
+
+Jeżeli nie posiada Pan/Pani danych do zalogowania na stronie czasopisma, prosimy o zresetowanie hasła na stronie: {$passwordResetUrl}
+
+WWW artykułu: {$submissionReviewUrl}
+
+Prosimy o potwierdzenie gotowości do przygotowania recenzji.
+
+Z wyrazami szacunku,
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość zostanie automatycznie wysłana po upłynięciu terminu nadesłania recenzji (Krok 2 w procesie wydawniczym) i dostęp recenzenta poprzez kliknięcie zostanie zablokowany. Zaplanowane zadania w systemie muszą zostać na nowo skonfigurowane.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
+		<subject>Automatyczne przypomnienie o upłynięciu terminu przygotowania recenzji</subject>
+		<body>{$reviewerName}:
+
+Ta wiadomość została automatycznie wygenerowana.
+
+Przypominamy, że w dniu {$reviewDueDate} minął termin przygotowania recenzji artykułu "{$articleTitle}" zgłoszonego do czasopisma {$journalName}. Prosimy o jak najszybsze nadesłanie gotowej recenzji.
+
+WWW artykułu: {$submissionReviewUrl}
+
+Prosimy o potwierdzenie gotowości do przygotowania recenzji.
+
+Z wyrazami szacunku,
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość zostanie automatycznie wysłana po upłynięciu terminu nadesłania recenzji (Krok 2 w procesie wydawniczym) i ustawiony jest dostęp przez jedno-kliknięcie do zgłoszonych tekstów. Zaplanowane zadania w systemie muszą zostać na nowo skonfigurowane.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Decyzja redaktora</subject>
+		<body>Szanowny/a {$authorName}:
+
+redakcja podjęła decyzję w sprawie artykułu "{$articleTitle}" zgłoszonego do czasopisma {$journalTitle}.
+
+Decyzja redakcji:
+
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora, celem powiadomienia go o finalnej decyzji dotyczącej zgłoszonego artykułu.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Decyzja redaktora</subject>
+		<body>Szanowny/a {$authorName}:
+
+redakcja podjęła decyzję w sprawie artykułu "{$articleTitle}" zgłoszonego do czasopisma {$journalTitle}.
+
+Decyzja redakcji:
+
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora, celem powiadomienia go o finalnej decyzji dotyczącej zgłoszonego artykułu.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Decyzja redaktora</subject>
+		<body>Szanowny/a {$authorName}:
+
+redakcja podjęła decyzję w sprawie artykułu "{$articleTitle}" zgłoszonego do czasopisma {$journalTitle}.
+
+Decyzja redakcji:
+
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora, celem powiadomienia go o finalnej decyzji dotyczącej zgłoszonego artykułu.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Decyzja redaktora</subject>
+		<body>Szanowny/a {$authorName}:
+
+redakcja podjęła decyzję w sprawie artykułu "{$articleTitle}" zgłoszonego do czasopisma {$journalTitle}.
+
+Decyzja redakcji:
+
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora, celem powiadomienia go o finalnej decyzji dotyczącej zgłoszonego artykułu.</description>
+	</email_text>
+	<email_text key="COPYEDIT_REQUEST">
+		<subject>Prośba do redaktora technicznego</subject>
+		<body>{$copyeditorName}:
+
+Prosimy o przygotowanie redakcji technicznej artykułu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}. Należy postępować zgodnie z poniższymi krokami:
+
+1. Kliknij na link do zgłoszonego tekstu.
+2. Zaloguj się w czasopiśmie i kliknij na linki do pliku, który pojawia się w "kroku 1"
+3. Zapoznaj się z zasadami redakcji tekstu zamieszczonymi na stronie.
+4. Pobierz plik i wykonaj korektę. Jeśli to konieczne przygotuj pytania do autora. 
+5. Zachowaj zedytowany plik i prześlij go w "kroku 1" redakcji technicznej.
+6. Wyślij uzupełniony e-mail do redaktora.
+
+WWW {$journalName}: {$journalUrl}
+WWW artykułu: {$submissionCopyeditingUrl}
+Nazwa użytkownika: {$copyeditorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość jest wysyłana przez redaktora działu lub redaktora do redaktora technicznego. Dotyczy prośby o przeprowadzenie redakcji technicznej tekstu.</description>
+	</email_text>
+	<email_text key="COPYEDIT_COMPLETE">
+		<subject>Zakończona redakcja techniczna</subject>
+		<body>{$editorialContactName}:
+
+Zakończyliśmy redakcję techniczną tekstu "{$articleTitle}" zgłoszonego do czasopisma {$journalName}. Aby zapoznać się z propozycjami zmian i pytaniami do autora, proszę postępować następująco:
+
+1. Zaloguj się na stronie czasopisma, używają poniższego linku i wprowadź nazwę użytkownika oraz hasło.
+2. Kliknij na plik przy "kroku 1". Zainicjuj redakcję techniczną, pobierz plik i otwórz zredagowaną wersję. 
+3. Przejrzyj redakcję, potwierdź zmiany i odpowiedz na pytania.
+4. Zachowaj plik na dysku komputera, a następnie prześlij go do systemu w "kroku 2".
+5. Kliknij na ikonkę e-mail przy "Gotowy", a następnie prześlij e-mail do redaktora. 
+
+To ostatnia okazja aby wprowadzić znaczące zmiany do tekstu. W dalszych krokach zmianie podlegać będą tylko układ typograficzny i błędy stylistyczne.
+
+WWW tekstu: {$submissionEditingUrl}
+Nazwa użytkownika: {$authorUsername}
+
+Jeśli nie może Pan/Pani wykonać pracy w terminie lub ma dodatkowe pytania prosimy o kontakt. 
+
+Dziękujemy za współpracę z czasopismem,
+{$copyeditorName}</body>
+		<description></description>
+	</email_text>
+	<email_text key="COPYEDIT_ACK">
+		<subject>Podziękowanie za redakcje techniczną</subject>
+		<body>{$copyeditorName}:
+
+Dziękujemy za wykonanie redakcji technicznej tekstu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}. Pana/Pani praca ma ogromne znaczenie dla jakości czasopisma.
+
+{$editorialContactSignature}</body>
+		<description>Ta wiadomość jest wysyłana przez redaktora działu do redaktora technicznego w celu podziękowania za wykonaną redakcję techniczną.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_REQUEST">
+		<subject>Prośba o przejrzenie tekstu po redakcji technicznej</subject>
+		<body>{$authorName}:
+
+Zgłoszony do czasopisma {$journalName} tekst "{$articleTitle}" przeszedł pierwszy etap redakcji technicznej. Należy zapoznać się z proponowanymi zmianami i wprowadzić ewentualne poprawki.
+
+1. Kliknij na link do zgłoszonego tekstu (poniżej).
+2. Zaloguj się na stronie czasopisma i przejdź do zakładki Moje konto. Otwórz plik ze statusem "W redakcji" (Krok 1).
+3. Pobierz plik.
+4. Zapoznaj się z propozycjami zmian i uwagami/pytaniami redakcji.
+5. Wprowadź zmiany do tekstu, stosownie do uwag.
+6. Po zakończeniu edycji zapisz plik i prześlij na stronę czasopisma (Krok 2).
+7. Przejdź do metadanych tekstu i sprawdź czy wpisane dane są kompletne i poprawne.
+8. Wyślij wiadomość do redakcji klikając na Ukończony.
+
+Adres WWW tekstu: {$submissionCopyeditingUrl}
+Nazwa użytkownika: {$authorUsername}
+
+Informujemy, że jest to ostatnia szansa na wprowadzenie zmian do tekstu. 
+
+Jeśli nie może Pan/Pani wykonać opisanego wyżej zadania w terminie lub ma dodatkowe pytania, proszę o kontakt. 
+
+Dziękuję za współpracę z czasopismem,
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do autora zgłoszonego tekstu,celem uzyskania od niego wersji tekstu z zaakceptowanymi zmianami i/lub poprawkami wprowadzonymi na podstawie uwag redakcji.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
+		<subject>Tekst po redakcji technicznej zaakceptowany przez autora</subject>
+		<body>{$editorialContactName}:
+
+Informuję, że przejrzałem/am tekst "{$articleTitle}" po redakcji technicznej i wprowadziłem/am zmiany. Tekst jest gotowy do dalszych prac.
+
+Dziękuję,
+{$authorName}</body>
+		<description>Wiadomość wysyłana przez autora do redaktora działu, celem poinformowania go o przejrzeniu tekstu po redakcji technicznej.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_ACK">
+		<subject>Potwierdzenie otrzymania przejrzanego tekstu</subject>
+		<body>{$authorName}:
+
+Dziękuję za nadesłany tekst "{$articleTitle}", przejrzany i poprawiony stosownie do uwag redakcji czasopisma {$journalName}.
+
+Tekst zostanie opublikowany niebawem,
+
+{$editorialContactSignature}</body>
+		<description>Potwierdzenie wysyłane przez redaktora działu do autora zgłoszonego tekstu po otrzymaniu zaakceptowanej i poprawionej wersji po redakcji technicznej.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_REQUEST">
+		<subject>Prośba o realizację finalnego etapu redakcji technicznej</subject>
+		<body>{$copyeditorName}:
+
+Autor zaakceptował/poprawił tekst "{$articleTitle}" zgodnie z zaleceniami redaktora technicznego czasopisma {$journalName}.
+
+Prosimy o przygotowanie finalnej korekty. Przygotowana wersja posłuży do składu.
+Należy postępować zgodnie z następującymi krokami:
+
+1. Kliknij na link do zgłoszonego tekstu.
+2. Zaloguj się w czasopiśmie i kliknij na linki do pliku, który pojawia się w "Kroku 2"
+3. Otwórz pobrany plik, a następnie sprawdź poprawność przesłanego tekstu. Zwróć uwagę czy autor wprowadził wymagane zmiany.
+4. Zapisz plik pozbawiony komentarzy i uwag. Prześlij go w "Kroku 3".
+5. Kliknij na metadane w formularzu zgłoszonego tekstu, aby sprawdzić i ewentualnie poprawić dane do indeksowania.
+6. Wyślij wiadomość o Ukończeniu zadania do redaktora.
+
+{$journalName} URL: {$journalUrl}
+Adres WWW zgłoszonego tekstu: {$submissionCopyeditingUrl}
+Nazwa użytkownika: {$copyeditorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość przesyłana przez redaktora działu do redaktora technicznego z prośbą i realizację ostatniego etapu redakcji technicznej, który przygotuje tekst do przygotowania wersji finalnych (PDF, html).</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_COMPLETE">
+		<subject>Potwierdzenie realizacji finalnego etapu redakcji technicznej</subject>
+		<body>{$editorialContactName}:
+
+Ukończyłem/am końcowy etap redakcji technicznej. Przygotowałem/am pozbawioną uwag i komentarzy wersję tekstu "{$articleTitle}" do opublikowania w {$journalName}. 
+
+Tekst jest gotowy do składu.
+
+{$copyeditorName}</body>
+		<description>Wiadomość jest przesyłana przez redaktora technicznego do redaktora działu, zawiera informację o ukończeniu redakcji technicznej tekstu, przygotowaniu wersji do składu.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_ACK">
+		<subject>Podziękowanie za realizację końcowego etapu redakcji technicznej</subject>
+		<body>{$copyeditorName}:
+
+Dziękuję za ukończenie prac redakcyjnych nad tekstem "{$articleTitle}" zgłoszonym do czasopisma {$journalName}. 
+
+Przygotowanie "czystej" kopii tekstu do składu jest bardzo ważnym elementem procesu redakcyjnego.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość od redaktora działu do redaktora technicznego zawierająca podziękowanie za realizację końcowego etapu redakcji technicznej.</description>
+	</email_text>
+	<email_text key="LAYOUT_REQUEST">
+		<subject>Prośba o przygotowanie składu</subject>
+		<body>{$layoutEditorName}:
+
+Proszę o przygotowanie składu tekstu "{$articleTitle}" przeznaczonego do opublikowania w czasopiśmie {$journalName}. Należy postępować zgodnie z następującymi krokami:
+
+1. Kliknij na link do zgłoszonego tekstu.
+2. Zaloguj się na stronie czasopisma i pobierz tekst (po ukończeniu redakcji technicznej). Wykonaj skład tekstu zgodnie z wytycznymi czasopisma.
+3. Po ukończeniu powiadom redaktora, wysyłając wiadomość Ukończone.
+
+Adres WWW czasopisma {$journalName}: {$journalUrl}
+Adres WWW tekstu: {$submissionLayoutUrl}
+Nazwa użytkownika: {$layoutEditorUsername}
+
+Jeśli nie możesz wykonać tej pracy w terminie lub masz dodatkowe pytania, proszę o kontakt. Dziękuję za Pana/Pani wkład w budowanie czasopisma.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość jest wysyłana przez redaktora działu do specjalisty DTP, zawiera prośbę o przygotowanie składu tekstu.</description>
+	</email_text>
+	<email_text key="LAYOUT_COMPLETE">
+		<subject>Ukończony skład</subject>
+		<body>{$editorialContactName}:
+
+Ukończyłem/am prace nad składem tekstu "{$articleTitle}" do opublikowania w czasopiśmie {$journalName}. Plik jest gotowy do końcowej korekty, tj. ponownego sprawdzenia i zaakceptowania przed opublikowaniem.
+
+Jeśli ma Pan/Pani jakiekolwiek pytania, proszę o kontakt.
+
+{$layoutEditorName}</body>
+		<description>Wiadomość jest wysyłana przez specjalistę DTP do redaktora działu, zawiera informację o ukończeniu składu.</description>
+	</email_text>
+	<email_text key="LAYOUT_ACK">
+		<subject>Podziękowanie za wykonanie składu tesktu</subject>
+		<body>{$layoutEditorName}:
+
+Dziękuję za wykonanie składu tekstu "{$articleTitle}" dla czasopisma {$journalName}. 
+
+Pana/Pani praca ma istotny wpływ na jakość czasopisma.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do specjalisty DTP, zawiera podziękowanie za wykonanie składu.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_REQUEST">
+		<subject>Prośba o sprawdzenie tekstu przez opublikowaniem (do autora)</subject>
+		<body>{$authorName}:
+
+Pana/Pani tekst "{$articleTitle}" jest gotowy do opublikowania w czasopiśmie {$journalName}. Prosimy o ponowne sprawdzenie końcowej wersji. Korekta ma na celu wyeliminowanie błędów o charakterze technicznym.
+
+Należy postępować zgodnie z poniższymi krokami:
+1. Kliknij na link do zgłoszonego tekstu.
+2. Zaloguj się na stronie czasopisma. Przejdź do zakładki Moje konto.
+3. Otwórz pliki ze statusem Korekta finalna.
+4. Przejrzyj tekst pod kątem poprawności technicznej.
+5. Zapisz i prześlij uwagi do specjalisty DTP i korektora.
+6. Wyślij powiadomienie o Ukończeniu zadania.
+
+Adres WWW tekstu: {$submissionUrl}
+Nazwa użytkownika: {$authorUsername}
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość od redaktora działu do autora, zawiera prośbę o sprawdzenie tekstu w wersji finalnej (do publikacji).</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
+		<subject>Tekst w wersji finalnej sprawdzony przez autora</subject>
+		<body>{$editorialContactName}:
+
+Informuję, że sprawdziłem/am mój tekst "{$articleTitle}", przygotowany do opublikowania w czasopiśmie {$journalName}. 
+
+{$authorName}</body>
+		<description>Wiadomość od autora do korektora i redaktora czasopisma, zawiera informację o sprawdzeniu wersji finalnej i ewentualne uwagi.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_ACK">
+		<subject>Podziękowanie za sprawdzenie wersji końcowej</subject>
+		<body>{$authorName}:
+
+Dziękuję za sprawdzenie wersji końcowej tekstu "{$articleTitle}" do opublikowania w {$journalName}. Zostanie on opublikowany niebawem.
+
+Jeśli subskrybuje Pan/Pani naszą stronę, na skrzynkę e-mail zostanie dostarczona wiadomość o opublikowaniu nowego numeru. 
+
+W razie dodatkowych pytań proszę o kontakt.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do autora, zawiera podziękowania za sprawdzenie wersji końcowej.</description>
+	</email_text>
+	<email_text key="PROOFREAD_REQUEST">
+		<subject>Prośba o sprawdzenie tekstu przez opublikowaniem (do korektora)</subject>
+		<body>{$proofreaderName}:
+
+Tekst "{$articleTitle}" jest gotowy do opublikowania w czasopiśmie {$journalName}. Prosimy o sprawdzenie końcowej wersji. Korekta ma na celu wyeliminowanie błędów o charakterze technicznym/językowym.
+
+Należy postępować zgodnie z poniższymi krokami:
+1. Kliknij na link do zgłoszonego tekstu.
+2. Zaloguj się na stronie czasopisma. Przejdź do zakładki Moje konto.
+3. Otwórz pliki ze statusem Korekta finalna.
+4. Przejrzyj tekst pod kątem poprawności technicznej.
+5. Zapisz i prześlij uwagi do specjalisty DTP.
+6. Wyślij powiadomienie o Ukończeniu zadania do redaktora.
+
+Adres WWW tekstu: {$submissionUrl}
+Nazwa użytkownika: {$proofreaderUsername}
+
+Manuscript URL: {$submissionUrl}
+Username: {$proofreaderUsername}
+
+Jeżeli nie może Pan/Pani wykonać zadania w terminie lub ma dodatkowe pytania, proszę o kontakt.
+
+Dziękuję za Pana/Pani wkład w budowanie czasopisma.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do korektora, zawiera prośbę o sprawdzenie końcowej wersji tekstu.</description>
+	</email_text>
+	<email_text key="PROOFREAD_COMPLETE">
+		<subject>Tekst w wersji finalnej sprawdzony przez korektora</subject>
+		<body>{$editorialContactName}:
+
+Informuję, że wykonałem/am korektę końcową tekstu "{$articleTitle}", przygotowanego do opublikowania w czasopiśmie {$journalName}. 
+
+{$proofreaderName}</body>
+		<description>Wiadomość wysyłana przez korektora do redaktora działu, zawiera informacje o ukończeniu korekty końcowej.</description>
+	</email_text>
+	<email_text key="PROOFREAD_ACK">
+		<subject>Podziękowanie za wykonanie korekty</subject>
+		<body>{$proofreaderName}:
+
+Dziękuję za wykonanie korekty tekstu "{$articleTitle}" przed opublikowaniem go w czasopiśmie {$journalName}. 
+
+Pana/Pani praca ma istotny wpływ na jakość naszego czasopisma.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do korektora, zawiera podziękowanie za wykonanie korekty.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_REQUEST">
+		<subject>Proofreading Request (Layout Editor)</subject>
+		<body>{$layoutEditorName}:
+
+Tekst "{$articleTitle}" jest gotowy do opublikowania w czasopiśmie {$journalName}. Został sprawdzony przez autora i korektora. Aby odczytać uwagi należy postępować wg następujących kroków:
+
+1. Kliknij na link do zgłoszonego tekstu.
+2. Zaloguj się na stronie czasopisma i przejdź do zakładki moje konto. Zapoznaj się z uwagami od korektora i autora. Przygotuj poprawioną wersję.
+3. Prześlij zaktualizowane pliki.
+4. Wyślij informację o Ukończeniu zadania (korekta, krok 3) do redaktora.
+
+Adres WWW czasopisma {$journalName}: {$journalUrl}
+Adres WWW tekstu: {$submissionUrl}
+Nazwa użytkownika: {$layoutEditorUsername}
+
+Jeśli nie może Pan/Pani wykonać opisanego wyżej zadania w terminie lub ma dodatkowe pytania, proszę o kontakt. 
+
+Dziękuję za Pana/Pani wkład w budowanie czasopisma.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do specjalisty DTP, zawiera prośbę o zapoznanie się z uwagami korektora i autora na temat końcowej wersji, przygotowanie i przesłanie zaktualizowanej wersji (do opublikowania na stronę czasopisma).</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
+		<subject>Tekst w wersji finalnej sprawdzony przez specjalistę DTP</subject>
+		<body>{$editorialContactName}:
+
+Informuję, że wykonałem/am korektę końcową tekstu "{$articleTitle}", przygotowanego do opublikowania w czasopiśmie {$journalName}. 
+
+{$layoutEditorName}</body>
+		<description>Wiadomość wysyłana przez specjalistę DTP do redaktora działu, zawiera informacje o ukończeniu korekty końcowej.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_ACK">
+		<subject>Podziękowanie za sprawdzenie wersji końcowej</subject>
+		<body>{$layoutEditorName}:
+
+Dziękuję za wykonanie korekty tekstu "{$articleTitle}" przed opublikowaniem go w czasopiśmie {$journalName}. 
+
+Pana/Pani praca ma istotny wpływ na jakość naszego czasopisma.
+
+{$editorialContactSignature}</body>
+		<description>Wiadomość wysyłana przez redaktora działu do specjalisty DTP, zawiera podziękowanie za wykonanie korekty.</description>
+	</email_text>
+	<email_text key="EMAIL_LINK">
+		<subject>Ciekawy artykuł</subject>
+		<body>Na stronie czasopisma {$journalName} dostępny jest artykuł, który - jak sądzę - może Cię zainteresować:
+
+Autor: {$authorName} 
+Tytuł: "{$articleTitle}" 
+Nr: {$year}, Vol. {$volume}({$number})
+
+Pozdrawiam</body>
+		<description>Wiadomość wysyłana przez zalogowanego na stronie czasopisma czytelnika, która zawiera zachętę do zapoznania się z treścią artykułu wraz z linkiem do tekstu.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_NOTIFY">
+		<subject>Subscription Notification</subject>
+		<body>{$subscriberName}:
+
+You have now been registered as a subscriber in our online journal management system for {$journalName}, with the following subscription:
+
+{$subscriptionType}
+
+To access content that is available only to subscribers, simply log in to the system with your username, "{$username}".
+
+Once you have logged in to the system you can change your profile details and password at any point.
+
+Please note that if you have an institutional subscription, there is no need for users at your institution to log in, since requests for subscription content will be automatically authenticated by the system.
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</body>
+		<description>This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</description>
+	</email_text>
+	<email_text key="OPEN_ACCESS_NOTIFY">
+		<subject>Issue Now Open Access</subject>
+		<body>Readers:
+
+{$journalName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site ({$journalUrl}) to review articles and items of interest.
+
+Thanks for the continuing interest in our work,
+{$editorialContactSignature}</body>
+		<description>This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
+		<subject>Notice of Subscription Expiry</subject>
+		<body>{$subscriberName}:
+
+Your {$journalName} subscription is about to expire.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To ensure the continuity of your access to this journal, please go to the journal website and renew your subscription. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</body>
+		<description>This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
+		<subject>Subscription Expired</subject>
+		<body>{$subscriberName}:
+
+Your {$journalName} subscription has expired.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</body>
+		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
+		<subject>Subscription Expired - Final Reminder</subject>
+		<body>{$subscriberName}:
+
+Your {$journalName} subscription has expired.
+Please note that this is the final reminder that will be emailed to you.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</body>
+		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Subscription Purchase: Individual</subject>
+		<body>An individual subscription has been purchased online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+User:
+{$userDetails}
+
+Membership Information (if provided):
+{$membership}
+
+To view or edit this subscription, please use the following URL.
+
+Subscription URL: {$subscriptionUrl}
+</body>
+		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Subscription Purchase: Institutional</subject>
+		<body>An institutional subscription has been purchased online for {$journalName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
+
+Subscription Type:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domain (if provided):
+{$domain}
+
+IP Ranges (if provided):
+{$ipRanges}
+
+Contact Person:
+{$userDetails}
+
+Membership Information (if provided):
+{$membership}
+
+To view or edit this subscription, please use the following URL.
+
+Subscription URL: {$subscriptionUrl}
+</body>
+		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Subscription Renewal: Individual</subject>
+		<body>An individual subscription has been renewed online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+User:
+{$userDetails}
+
+Membership Information (if provided):
+{$membership}
+
+To view or edit this subscription, please use the following URL.
+
+Subscription URL: {$subscriptionUrl}
+</body>
+		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Subscription Renewal: Institutional</subject>
+		<body>An institutional subscription has been renewed online for {$journalName} with the following details.
+
+Subscription Type:
+{$subscriptionType}
+
+Institution:
+{$institutionName}
+{$institutionMailingAddress}
+
+Domain (if provided):
+{$domain}
+
+IP Ranges (if provided):
+{$ipRanges}
+
+Contact Person:
+{$userDetails}
+
+Membership Information (if provided):
+{$membership}
+
+To view or edit this subscription, please use the following URL.
+
+Subscription URL: {$subscriptionUrl}
+</body>
+		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Redakcja bibliografii</subject>
+		<body>{$authorFirstName},
+
+Czy może Pan/Pani sprawdzić lub uzupełnić dane bibliograficzne dla następujących pozycji w tekście {$articleTitle}:
+
+{$rawCitation}
+
+Dziękuję,
+
+{$userFirstName}
+Redaktor techniczny, {$journalName}</body>
+		<description>Wiadomość od redaktora technicznego, zawiera prośbę do autora o dodatkowe informacje na temat bibliografii.</description>
+	</email_text>
+</email_texts>
+

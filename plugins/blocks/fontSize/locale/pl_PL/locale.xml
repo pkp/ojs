@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Polski">
+	<message key="plugins.block.fontSize.displayName">Rozmiar tekstu</message>
+	<message key="plugins.block.fontSize.description">Ta wtyczka umożliwia zmianę wielkości tekstu.</message>
+	<message key="plugins.block.fontSize.title">Wielkość tekstu</message>
+	<message key="plugins.block.fontSize.small">Mały</message>
+	<message key="plugins.block.fontSize.medium">Średni</message>
+	<message key="plugins.block.fontSize.large">Duży</message>
+</locale>

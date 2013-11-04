@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Polski">
+	<message key="plugins.generic.customLocale.name">Niestandardowe pliki języka</message>
+	<message key="plugins.generic.customLocale.description">Wtyczka umożliwia dostosowywanie do preferencji użytkownika część treści interfejsu OJS.</message>
+
+	<message key="plugins.generic.customLocale.longDescription">Strona zawiera informacje o wszystkich językach zainstalowanych obecnie w czasopiśmie.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Strona zawiera informacje o wszystkich plikach dostępnych dla wybranego języka.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Wpisz niestandardowy tekst w pole tekstowe. Pozostawienie pustego pola spowoduje wykorzystanie standardowego tekstu dla tego wyrażenia.</message>
+	<message key="plugins.generic.customLocale.localeName">Język</message>
+	<message key="plugins.generic.customLocale.localeKey">Klucz</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Wpisz klucz który chcesz wyszukać</message>
+	<message key="plugins.generic.customLocale.localeKeyValue">Wartość</message>
+	<message key="plugins.generic.customLocale.customize">Dostosuj</message>
+	<message key="plugins.generic.customLocale.availableLocales">Dostępne języki</message>
+
+	<message key="plugins.generic.customLocale.locale">Język {$locale}</message>
+	<message key="plugins.generic.customLocale.localeFiles">Pliki języka</message>
+	<message key="plugins.generic.customLocale.file.filename">Plik</message>
+	<message key="plugins.generic.customLocale.file.edit">Edycja {$filename}</message>
+	<message key="plugins.generic.customLocale.file.reference">Domyślny tekst</message>
+	<message key="plugins.generic.customLocale.file.custom">Niestandardowy tekst</message>
+</locale>
