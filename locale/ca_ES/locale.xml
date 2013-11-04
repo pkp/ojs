@@ -16,9 +16,9 @@
 	 * by comments like this one. These sections are called:
 	 *  COMMON - Contains frequently-used words
 	 *  ENTITIES - Contains terms pertaining to the system's major
-	 *             entities, e.g. Article, Journal, Section
+	 *	     entities, e.g. Article, Journal, Section
 	 *  INTERFACE - Contains phrases organized by the section of the
-	 *              user interface they appear in.
+	 *	      user interface they appear in.
 	 *  LOG - Contains phrases related to log entries
 	 *  MISC - Entries that don't belong elsewhere.
 	 *  DEFAULT - Default settings for configuration items.
@@ -98,7 +98,7 @@
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
-	 *            major entities, e.g. Article, Journal, Section
+	 *	    major entities, e.g. Article, Journal, Section
 	 *
 	-->
 
@@ -313,7 +313,7 @@
 	<!--
 	 *
 	 * INTERFACE - Contains phrases organized by the section of the
-	 *             user interface they appear in.
+	 *	     user interface they appear in.
 	 *
 	-->
 
@@ -399,21 +399,21 @@
 	
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[
-        <h3>Propostes d'avisos de drets d'autoria de Creative Commons</h3> 
-        <h4>1. La política proposada per revistes que ofereixen accés obert</h4> 
-            Els autors/ores que publiquen en aquesta revista estan d'acord amb els termes següents:
-            <ol type="a">
-                <li>Els autors/ores conserven els drets d'autoria i atorguen a la revista el dret de primera publicació, amb l'obra disponible simultàniament amb una<a target="_new" href="http://creativecommons.org/licenses/by/3.0/"> Llicència d'atribució de Creative Commons</a> que permet compartir l'obra amb tercers, sempre que aquests en reconeguin l'autoria i la publicació inicial en aquesta revista.</li> 
-                <li>Els autors/ores són lliures de fer acords contractuals addicionals independents per a la distribució no exclusiva de la versió de l'obra publicada a la revista (com ara la publicació en un repositori institucional o en un llibre), sempre que se'n reconegui la publicació inicial en aquesta revista.</li>
-                <li>Es permet i s'encoratja els autors/ores a publicar la seva obra en línia ( per exemple en repositoris institucionals o a la seva pàgina web) abans i durant el procés de la tramesa, amb l'objectiu d'aconseguir intercanvis productius i fer que l'obra obtingui més citacions (vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>, en anglès).</li>
-             </ol> 
-        <h4>2. La política proposada per revistes que ofereixen accés obert diferit</h4>
-            Els autors/ores que publiquen en aquesta revista estan d'acord amb els termes següents:
-            <ol type="a"> 
-                <li>Els autors/ores conserven els drets d'autoria i atorguen a la revista el dret de primera publicació [INDICAR DURADA], amb l'obra disponible simultàniament amb una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Llicència d'atribució de Creative Commons</a> que permet compartir l'obra amb tercers, sempre que aquests en reconeguin l'autoria i la publicació inicial en aquesta revista.</li>
-                <li>Els autors/ores són lliures de fer acords contractuals addicionals independents per a la distribució no exclusiva de la versió de l'obra publicada a la revista (com ara la publicació en un repositori institucional o en un llibre), sempre que se'n reconegui la publicació inicial en aquesta revista.</li>
-                <li>Es permet i s'encoratja els autors/ores a publicar la seva obra en línia (per exemple en repositoris institucionals o a la seva pàgina web) abans i durant el procés de la tramesa, amb l'objectiu d'aconseguir intercanvis productius i fer que l'obra obtingui més citacions (vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>, en anglès).</li>
-             </ol>]]>
+	<h3>Propostes d'avisos de drets d'autoria de Creative Commons</h3> 
+	<h4>1. La política proposada per revistes que ofereixen accés obert</h4> 
+	Els autors/ores que publiquen en aquesta revista estan d'acord amb els termes següents:
+		<ol type="a">
+		<li>Els autors/ores conserven els drets d'autoria i atorguen a la revista el dret de primera publicació, amb l'obra disponible simultàniament amb una<a target="_new" href="http://creativecommons.org/licenses/by/3.0/"> Llicència d'atribució de Creative Commons</a> que permet compartir l'obra amb tercers, sempre que aquests en reconeguin l'autoria i la publicació inicial en aquesta revista.</li> 
+		<li>Els autors/ores són lliures de fer acords contractuals addicionals independents per a la distribució no exclusiva de la versió de l'obra publicada a la revista (com ara la publicació en un repositori institucional o en un llibre), sempre que se'n reconegui la publicació inicial en aquesta revista.</li>
+		<li>Es permet i s'encoratja els autors/ores a publicar la seva obra en línia ( per exemple en repositoris institucionals o a la seva pàgina web) abans i durant el procés de la tramesa, amb l'objectiu d'aconseguir intercanvis productius i fer que l'obra obtingui més citacions (vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>, en anglès).</li>
+	     </ol> 
+	<h4>2. La política proposada per revistes que ofereixen accés obert diferit</h4>
+	    Els autors/ores que publiquen en aquesta revista estan d'acord amb els termes següents:
+	    <ol type="a"> 
+		<li>Els autors/ores conserven els drets d'autoria i atorguen a la revista el dret de primera publicació [INDICAR DURADA], amb l'obra disponible simultàniament amb una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Llicència d'atribució de Creative Commons</a> que permet compartir l'obra amb tercers, sempre que aquests en reconeguin l'autoria i la publicació inicial en aquesta revista.</li>
+		<li>Els autors/ores són lliures de fer acords contractuals addicionals independents per a la distribució no exclusiva de la versió de l'obra publicada a la revista (com ara la publicació en un repositori institucional o en un llibre), sempre que se'n reconegui la publicació inicial en aquesta revista.</li>
+		<li>Es permet i s'encoratja els autors/ores a publicar la seva obra en línia (per exemple en repositoris institucionals o a la seva pàgina web) abans i durant el procés de la tramesa, amb l'objectiu d'aconseguir intercanvis productius i fer que l'obra obtingui més citacions (vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>, en anglès).</li>
+	     </ol>]]>
     </message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[La revista utilitzarà un sistema de classificació de matèries disponible al web.<br /> Títol del sistema de classificació]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Per tenir indexats els continguts d'aquesta revista dins d'un sistema globalment distribuït de bases de dades de recerca, llegiu <a href="http://www.oaister.org/dataproviders.html" target="_blank">els passos per tal d'esdevenir un contribuent de dades</a> i registreu la vostra revista a l'<a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">arxiu oficial de la "Open Access Initiative"</a>. Per a registrar-vos, necessitareu un URL base per al vostre repositori: <span class="highlight">{$oaiUrl}</span>.  Després, podeu registrar la vostra revista al registre de <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI </a> i <a href="http://www.oaister.org/" target="_blank">OAIster</a>. <br /><br />  Si l'administrador/ora del lloc web ja ha registrat aquest lloc amb aquests serveis, la revista s'indexarà automàticament i no haureu de registrar-la.]]></message>
@@ -527,31 +527,31 @@
 	<message key="reviewer.article.uploadedFile">Fitxers penjats</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versió carregada pel revisor/a</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Si voleu introduir comentaris per a l’editor/a al fitxer, deseu-lo al disc dur i utilitzeu «Navega/Carrega».)</message>
-        <message key="reviewer.article.schedule.request">Sol·licitud de l’editor/a</message>
-        <message key="reviewer.article.schedule.response">La vostra resposta</message>
-        <message key="reviewer.article.schedule.submitted">Revisió tramesa</message>
-        <message key="reviewer.article.schedule.due">Venciment de la revisió</message>
+	<message key="reviewer.article.schedule.request">Sol·licitud de l’editor/a</message>
+	<message key="reviewer.article.schedule.response">La vostra resposta</message>
+	<message key="reviewer.article.schedule.submitted">Revisió tramesa</message>
+	<message key="reviewer.article.schedule.due">Venciment de la revisió</message>
 	<message key="reviewer.article.decision.accept">Accepta la tramesa</message>
 	<message key="reviewer.article.decision.pendingRevisions">Publicable amb modificacions</message>
 	<message key="reviewer.article.decision.resubmitHere">Torna a trametre per a la revisió</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Torna a trametre a un altre lloc</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Torna a trametre a un altre lloc</message>
 	<message key="reviewer.article.decision.decline">Rebutja la tramesa</message>
 	<message key="reviewer.article.decision.seeComments">Visualitza els comentaris</message>
 	<message key="reviewer.article.schedule">Planificació</message>
-        <message key="reviewer.article.submissionToBeReviewed">Tramesa per revisar</message>
-        <message key="reviewer.article.reviewSchedule">Planificació de la revisió</message>
-        <message key="reviewer.article.reviewSteps">Passos per a la revisió</message>
-        <message key="reviewer.article.reviewerGuidelines">Indicacions per als revisors/es</message>
+	<message key="reviewer.article.submissionToBeReviewed">Tramesa per revisar</message>
+	<message key="reviewer.article.reviewSchedule">Planificació de la revisió</message>
+	<message key="reviewer.article.reviewSteps">Passos per a la revisió</message>
+	<message key="reviewer.article.reviewerGuidelines">Indicacions per als revisors/es</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Les directrius de revisió proporcionen revisors amb criteri per jutjar la idoneïtat d'una tramesa per publicar a la revista, i poden incloure qualsevol instrucció especial per a la preparació d'una revisió eficaç i útil. En dur a terme la revisió, els revisors/ores es presenten amb dos requadres en blanc, el primer «per a l'autor/a i l'editor/a i el segon «per a l'editor/a». D'altra banda, el gestor/a de la revista pot crear una revisió de persones expertes a «Formularis de revisió». En tots els casos, els editors/ores tindran l'opció d'incloure les revisions en correspondència amb l'autor/a.</message>
-        <message key="reviewer.article.notifyEditorA">Notifica a l’editor/a de la tramesa</message>
-        <message key="reviewer.article.notifyEditorB">que accepto fer la revisió.</message>
-        <message key="reviewer.article.consultGuidelines">Si heu acceptat fer la revisió, consulteu les indicacions per als revisors.</message>
-        <message key="reviewer.article.downloadSubmission">Feu clic als noms dels fitxers que vulgueu descarregar i reviseu els fitxers associats amb aquesta tramesa. Podeu revisar els fitxers en pantalla o bé imprimint-los.</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Declareu si teniu algun conflicte d’interessos en relació amb aquesta recerca (vegeu<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}"> Política de CI</a>).]]></message>
+	<message key="reviewer.article.notifyEditorA">Notifica a l’editor/a de la tramesa</message>
+	<message key="reviewer.article.notifyEditorB">que accepto fer la revisió.</message>
+	<message key="reviewer.article.consultGuidelines">Si heu acceptat fer la revisió, consulteu les indicacions per als revisors.</message>
+	<message key="reviewer.article.downloadSubmission">Feu clic als noms dels fitxers que vulgueu descarregar i reviseu els fitxers associats amb aquesta tramesa. Podeu revisar els fitxers en pantalla o bé imprimint-los.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declareu si teniu algun conflicte d’interessos en relació amb aquesta recerca (vegeu<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}"> Política de CI</a>).]]></message>
 	<message key="reviewer.competingInterests">Conflicte d’interessos</message>
-        <message key="reviewer.article.enterReviewA">Feu clic a la icona per introduir (o enganxar) la vostra revisió d’aquesta tramesa.</message>
-        <message key="reviewer.article.uploadFile">A més, també podeu penjar fitxers de consulta per a l’editor/a i/o l’autor/a.</message>
-        <message key="reviewer.article.selectRecommendation">Seleccioneu una recomanació i trameteu la revisió per completar el procés. Heu d'introduir una revisió o carregar un arxiu abans de seleccionar una recomanació.</message>
+	<message key="reviewer.article.enterReviewA">Feu clic a la icona per introduir (o enganxar) la vostra revisió d’aquesta tramesa.</message>
+	<message key="reviewer.article.uploadFile">A més, també podeu penjar fitxers de consulta per a l’editor/a i/o l’autor/a.</message>
+	<message key="reviewer.article.selectRecommendation">Seleccioneu una recomanació i trameteu la revisió per completar el procés. Heu d'introduir una revisió o carregar un arxiu abans de seleccionar una recomanació.</message>
 	<message key="reviewer.article.mustSelectDecision">No s’ha seleccionat cap recomanació. Heu de seleccionar la recomanació que vulgueu trametre.</message>
 	<message key="reviewer.article.confirmDecision">Una vegada hagueu enregistrat una decisió, no podreu fer canvis en aquesta revisió. Esteu segur/a que voleu continuar?</message>
 	<message key="reviewer.article.ensuringBlindReview">Assegurar una avaluació anònima</message>
@@ -1012,14 +1012,14 @@
 	<message key="issue.viewIssueDescription">Veure o descarrega el número complet</message>
 	<message key="plugins.categories.pubIds">Connectors d'identificadors públics</message>
 	<message key="plugins.categories.pubIds.description">Aquests connectors implementen suport per als identificadors públics.</message>
-	<message key="editor.submissionEditing.notes"><![CDATA[<ol>                                                                                          
-  <li>Els ítems destacats indiquen que cal la intervenció d'un editor/a i s'etiqueten de la manera següent indicant l'etapa:
-    <ul>
-      <li class="highlightCopyediting">Correcció d'originals</li>
-      <li class="highlightLayoutEditing">Maquetació</li>
-      <li class="higlightProofreading">Correcció de proves</li>
-    </ul>
-  </li>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<li>Els ítems destacats indiquen que cal la intervenció d'un editor/a i s'etiqueten de la manera següent indicant l'etapa:
+		<ul>
+			<li class="highlightCopyediting">Correcció d'originals</li>
+			<li class="highlightLayoutEditing">Maquetació</li>
+			<li class="higlightProofreading">Correcció de proves</li>
+		</ul>
+	</li>
 </ol>]]></message>
 	<message key="site.noJournals">No hi ha revistes disponibles</message>
 	<message key="gifts.buyer">Des de</message>

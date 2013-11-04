@@ -305,7 +305,7 @@
 	<message key="manager.setup.journalDescription">Descripció de la revista</message>
 	<message key="manager.setup.journalDescriptionDescription">Afegiu una descripció breu d'unes 20 o 25 paraules en format de text o HTML. Aquesta descripció apareixerà just sota els enllaços de navegació.</message>
 	<message key="manager.setup.journalFavicon">Icona de web de la revista</message>
-  <message key="manager.setup.journalFaviconDescription"><![CDATA[Afegiu un <a href="http://ca.wikipedia.org/wiki/Favicon" target="_blank">favicon</a> a aquesta revista per mostrar al lateral de la barra de navegació quan els usuaris/àries visitin el lloc.]]></message>
+	<message key="manager.setup.journalFaviconDescription"><![CDATA[Afegiu un <a href="http://ca.wikipedia.org/wiki/Favicon" target="_blank">favicon</a> a aquesta revista per mostrar al lateral de la barra de navegació quan els usuaris/àries visitin el lloc.]]></message>
 	<message key="manager.setup.journalFaviconInvalid">Format de favicon invàlid. Els formats acceptats són .ico, .png, i .gif.</message>
 	<message key="manager.setup.journalHomepageContent">Contingut de la pàgina inicial de la revista</message>
 	<message key="manager.setup.journalHomepageContentDescription">Per defecte, la pàgina inicial està formada per una sèrie d'enllaços de navegació, però hi podeu afegir continguts addicionals mitjançant una o més de les opcions següents. Aquests continguts apareixeran en l'ordre mostrat. Observeu que sempre es pot accedir al número actual fent clic a l'enllaç «Actual» de la barra de navegació.</message>
