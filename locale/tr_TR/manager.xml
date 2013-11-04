@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -340,7 +340,7 @@
 	<message key="manager.setup.listsDescription">Sayfalarda öğeler (örneğin aboneler, kullanıcılar, düzenleme atamaları v.b.) gösterilirken bir kerede gösterilebilecek en fazla madde sayısını giriniz.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, dağıtmak ve <a href="{$lockssUrl}" target="_blank">Yayıncı Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS lisansı "Dergi Hakkında" sayfasında görünecektir:]]></message>
 	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">LOCKSS lisanslarının diğer versiyonları için bakınız</a>.]]></message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href="http://lockss.org/lockss/Libraries" target="_blank">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın.]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href="http://www.lockss.org/community/" target="_blank">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın.]]></message>
 	<message key="manager.setup.look">Görünüş</message>
 	<message key="manager.setup.look.description">Ana sayfa başlığı, içerik, dergi başlığı, altlık, yönlendirme çubuğu ve biçim sayfası.</message>
 	<message key="manager.setup.mailingAddressDescription">Derginin fiziksel konumu ve posta adresi.</message>
