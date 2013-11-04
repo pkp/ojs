@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -339,7 +339,7 @@
 	<message key="manager.setup.listsDescription">Introduïu el nombre màxim d'elements (per exemple, trameses, usuaris/àries o assignacions d'edició) que apareixeran a cada pàgina d'una llista, i també el nombre d'enllaços que es mostraran en cada pàgina.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Permetre al LOCKSS que emmagatzemi els continguts de la revista i els distribueixi a les biblioteques participants a través d'una pàgina del <a href="{$lockssUrl}" target="_blank">LOCKSS Publisher Manifest</a>. Es mostrarà una llicència LOCKSS a la secció «Sobre la revista», a «Arxivament»:]]></message>
 	<message key="manager.setup.lockssLicenses"><![CDATA[Vegeu <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">altres versions d'una llicència LOCKSS</a>.]]></message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Identificar entre 6 i 10 biblioteques que registraran la revista i l'emmagatzemaran a la memòria cau. Per exemple, cerqueu institucions on treballin els editors/ores o altres membres de l'equip editorial o bé institucions que ja participin en el LOCKSS. Vegeu les <a href="http://lockss.org/lockss/Libraries" target="_blank">biblioteques que participen</a> i utilitzeu les invitacions predefinides per a les (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">biblioteques que participen en el LOCKSS</a> o bé per a les (ii) <a href="{$lockssNewArchiveUrl}" target="_blank"> biblioteques que encara no participen en el LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identificar entre 6 i 10 biblioteques que registraran la revista i l'emmagatzemaran a la memòria cau. Per exemple, cerqueu institucions on treballin els editors/ores o altres membres de l'equip editorial o bé institucions que ja participin en el LOCKSS. Vegeu les <a href="http://www.lockss.org/community/" target="_blank">biblioteques que participen</a> i utilitzeu les invitacions predefinides per a les (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">biblioteques que participen en el LOCKSS</a> o bé per a les (ii) <a href="{$lockssNewArchiveUrl}" target="_blank"> biblioteques que encara no participen en el LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Aparença</message>
 	<message key="manager.setup.look.description">Capçalera, contingut, capçalera de revistes, peu, barra de navegació i full d'estil per a la pàgina inicial.</message>
 	<message key="manager.setup.mailingAddressDescription">Ubicació física i adreça postal de la revista.</message>

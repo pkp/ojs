@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -298,7 +298,7 @@
 	<message key="manager.setup.listsDescription">Insire o número máximo de elementos (por exemplo, envíos, usuarios/as, ou asignaciónss editoriaiss) que aparecen en cada páxina dunha listaxe, e o número de ligazóns que se mostran en cada página.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Active LOCKSS para armacenar e distribuir o contido da revista entre as bibliotecas participantes a través da páxina do <a href="{$lockssUrl}" target="_blank">Manifesto Editorial</a> LOCKSS. En Sobre a revista aparecerá unha licencia LOCKSS baixo arquivado:]]></message>
 	<message key="manager.setup.lockssLicenses"><![CDATA[Consulta <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">outras versións da licencia LOCKSS</a>.]]></message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Identificar 6-10 bibliotecas que rexistrarán e rastrexaran a revista. Por exemplo, procura institucións onde traballen os/as editores/as ou Membros do Consejllo e/ou institucións que xa estén a participar en LOCKSS. Visita <a href="http://lockss.org/lockss/Libraries" target="_blank">bibliotecas participantes</a>. Emprega os convites para (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliotecas participantes en LOCKSS</a> o (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotecas que ainda non estan participando en LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identificar 6-10 bibliotecas que rexistrarán e rastrexaran a revista. Por exemplo, procura institucións onde traballen os/as editores/as ou Membros do Consejllo e/ou institucións que xa estén a participar en LOCKSS. Visita <a href="http://www.lockss.org/community/" target="_blank">bibliotecas participantes</a>. Emprega os convites para (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliotecas participantes en LOCKSS</a> o (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotecas que ainda non estan participando en LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Aparencia</message>
 	<message key="manager.setup.look.description">Cabeceira da páxina principal, contido, cabeceira da revista, pé, barra de navegación e folla de estilo.</message>
 	<message key="manager.setup.mailingAddressDescription">Localización física da revista e enderezo postal.</message>
