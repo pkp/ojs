@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/referral/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.referral.name">Plugin de Referencias</message>
+	<message key="plugins.generic.referral.description">El plugin de referencias rastrea las URL que hacen referencias externas a los artículos (EJ: cuando un lector sigue un enlace externo al artículo). Permitiendo que los autores mantengan una lista auto-actualizable de los enlaces de referencia al artículo.</message>
+	
+	<message key="plugins.generic.referral.editReferral">Editar enlace de referencia.</message>
+	<message key="plugins.generic.referral.createReferral">Crear enlace de referencia.</message>
+	<message key="plugins.generic.referral.referrals">Enlaces de Referencia</message>
+	<message key="plugins.generic.referral.count">Cantidad</message>
+	<message key="plugins.generic.referral.dateAdded">Fecha de agregado</message>
+	<message key="plugins.generic.referral.all">Todos</message>
+	<message key="plugins.generic.referral.all.empty">Por el momento, no existen enlaces de referencia</message>
+	<message key="plugins.generic.referral.status.new">Nuevo</message>
+	<message key="plugins.generic.referral.status.new.empty">No existen enlaces de referencia nuevos por el momento.</message>
+	<message key="plugins.generic.referral.status.accept">Publicado</message>
+	<message key="plugins.generic.referral.status.accept.empty">No hay enlaces de referencia publicados por el momento</message>
+	<message key="plugins.generic.referral.status.decline">Ignorados</message>
+	<message key="plugins.generic.referral.status.decline.empty">No hay enlaces de referencia ignorados por el momento</message>
+	<message key="plugins.generic.referral.confirmDelete">¿Esta seguro de querer borrar este enlace de referencia?</message>
+	<message key="plugins.generic.referral.nameRequired">Un título para el enlace de referencia es requerido.</message>
+	<message key="plugins.generic.referral.urlRequired">Una URL para el enlace de referencia es requerido.</message>
+	<message key="plugins.generic.referral.settings">Configuración del Plugin de Referencias</message>
+	<message key="plugins.generic.referral.settings.description">El Plugin de Referencias captura todas las URL que enlacen con artículos publicados en esta revista, por lo que pueden ser chequeados por el autor y ,opcionalmente, publicados. Este formulario permite que el Gestor de la Revista controle como estos enlaces son capturados.</message>
+	<message key="plugins.generic.referral.excusions">Exclusiones</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Introduzca una lista de patrones de expresiones regulares, una por línea, para ser tratadas como exclusiones de la captura de referencias. Esto puede ser utilizado para prevenir que las búsquedas de los motores de búsqueda sobrecarguen las listas de referencias. Para más información sobre expresiones regulares ver <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">el manual</a>.]]></message>
+</locale>

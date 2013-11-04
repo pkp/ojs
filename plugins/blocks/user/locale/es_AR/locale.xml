@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_AR (Español (Argentina)) locale.
+  *
+  -->
+ 
+<locale name="es_AR" full_name="Español (Argentina)">
+	<message key="plugins.block.user.displayName">Bloque de usuarios</message>
+	<message key="plugins.block.user.description">Este Complemento proporciona una barra lateral con herramientas de cuenta de usuario (e.g. Acceder, Salir, perfil, etc).</message>
+	<message key="plugins.block.user.loggedInAs">Su identificación actual es...</message>
+	<message key="plugins.block.user.myJournals">Mis Revistas</message>
+	<message key="plugins.block.user.myProfile">Mi Perfil</message>
+	<message key="plugins.block.user.logout">Salir</message>
+	<message key="plugins.block.user.signOutAsUser">Cambiar de Usuario</message>
+	<message key="plugins.block.user.rememberMe">Recordar mis datos</message>
+</locale>

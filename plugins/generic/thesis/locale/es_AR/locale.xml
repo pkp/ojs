@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/thesis/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Thesis abstracts plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Thesis Abstract Management -->
+	<message key="plugins.generic.thesis.manager.settings">Configuración</message>
+	<message key="plugins.generic.thesis.manager.theses">Resumen de la Tesis</message>
+	<message key="plugins.generic.thesis.manager.status">Estado</message>
+	<message key="plugins.generic.thesis.manager.status.inactive">Inactiva</message>
+	<message key="plugins.generic.thesis.manager.status.active">Activa</message>
+	<message key="plugins.generic.thesis.manager.degree">Grado</message>
+	<message key="plugins.generic.thesis.manager.degree.masters">Master</message>
+	<message key="plugins.generic.thesis.manager.degree.doctorate">Doctorado</message>
+	<message key="plugins.generic.thesis.manager.dateApproved">Fecha de aprobación</message>
+	<message key="plugins.generic.thesis.manager.studentName">Nombre del estudiante</message>
+	<message key="plugins.generic.thesis.manager.title">Título</message>
+	<message key="plugins.generic.thesis.manager.keyword">Palabras Clave</message>
+	<message key="plugins.generic.thesis.manager.studentFirstName">Primer nombre</message>
+	<message key="plugins.generic.thesis.manager.studentLastName">Apellido</message>
+	<message key="plugins.generic.thesis.manager.studentEmail">Email</message>
+	<message key="plugins.generic.thesis.manager.department">Departamento</message>
+	<message key="plugins.generic.thesis.manager.university">Universidad</message>
+	<message key="plugins.generic.thesis.manager.abstract">Resumen</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">¿Estás seguro de querer borrar permanentemente este resumen de tesis?</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">No hay resumenes de tesis</message>
+	<message key="plugins.generic.thesis.manager.noResults">Sin resultados</message>
+	<message key="plugins.generic.thesis.manager.create">Crear un nuevo resumen de tesis</message>
+	<message key="plugins.generic.thesis.manager.createTitle">Crear</message>
+	<message key="plugins.generic.thesis.manager.edit">Editar Resumen de Tesis</message>
+	<message key="plugins.generic.thesis.manager.editTitle">Edit</message>
+	<message key="plugins.generic.thesis.manager.form.status">Estado</message>
+	<message key="plugins.generic.thesis.manager.form.statusRequired">Un estado del resumen de tesis es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.statusValid">Por favor seleccione un estado válido.</message>
+	<message key="plugins.generic.thesis.manager.form.degree">Grado</message>
+	<message key="plugins.generic.thesis.manager.form.degreeRequired">Un grado de tesis es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeValid">Por favor seleccione un grado de tesis válido.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeName">Nombre de Grado</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameRequired">Un nombre de grado para la tesis es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameInstructions">El nombre del grado (ej: Master en artes, Doctorado en Filosofía,etc).</message>
+	<message key="plugins.generic.thesis.manager.form.department">Departamento</message>
+	<message key="plugins.generic.thesis.manager.form.departmentRequired">Un departamento es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.university">Universidad</message>
+	<message key="plugins.generic.thesis.manager.form.universityRequired">Una universidad es requerida.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApproved">Fecha de aprobación</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedRequired">Una fecha de aprobación es requerida.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedValid">Por favor seleccione una fecha de aprobación  válida.</message>
+	<message key="plugins.generic.thesis.manager.form.title">Título</message>
+	<message key="plugins.generic.thesis.manager.form.titleRequired">Una título de tesis es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.comment">Comentarios</message>
+	<message key="plugins.generic.thesis.manager.form.author">Autor y Supervisión</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Email del estudiante Editor</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">Si esta chequeado, el email del estudiante será publicado con el resumen de la tesis.</message>
+	<message key="plugins.generic.thesis.manager.form.studentBio">Biografia del estudiante.</message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Inserte líneas en blanco para separar los párrafos. Puede utilizar texto entre las etiquetas &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, y &lt;u&gt;&lt;/u&gt; para ponerlo en negrita, cursiva o subrayado respectivamente . (EJ: esta &lt;i&gt;palabra&lt;/i&gt; va a estar en cursiva.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.indexing">Indexación</message>
+	<message key="plugins.generic.thesis.manager.form.indexingDescription">Escoja los términos que mejor describan el contenido de la tesis de acuerdo con las categorías usadas por la revista. Separe los términos con punto y coma (termino 1 ; termino 2 ; termino 3).</message>
+	<message key="plugins.generic.thesis.manager.form.discipline">Disciplina Académica y sub-disciplinas.</message>
+	<message key="plugins.generic.thesis.manager.form.subjectClass">Clasificación temática</message>
+	<message key="plugins.generic.thesis.manager.form.keyword">Palabras Clave</message>
+	<message key="plugins.generic.thesis.manager.form.coverageGeo">Cobertura  Geo-espacial</message>
+	<message key="plugins.generic.thesis.manager.form.coverageChron">Cobertura Cronológica e histórica</message>
+	<message key="plugins.generic.thesis.manager.form.coverageSample">Características de las muestras de investigación</message>
+	<message key="plugins.generic.thesis.manager.form.method">Tipo, método o enfoque</message>
+	<message key="plugins.generic.thesis.manager.form.language">Idioma</message>
+	<message key="plugins.generic.thesis.manager.form.languageInstructions"><![CDATA[Ingles=en; Frances=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Códigos Adicionales</a>.]]></message>
+	<message key="plugins.generic.thesis.manager.form.urlPrefixIncluded">Por favor introduzca la URL completa, incluyendo el http:// o el ftp:// en el principio.</message>
+	<message key="plugins.generic.thesis.manager.form.abstract">Resumen</message>
+	<message key="plugins.generic.thesis.manager.form.abstractRequired">Un resumen de tesis es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Inserte líneas en blanco para separar los párrafos. Puede introducir texto entre las etiquetas: &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, y &lt;u&gt;&lt;/u&gt; para usar negrita, cursiva o subrayado respectivamente (EJ: esta &lt;i&gt;palabra&lt;/i&gt; va a aparecer en cursiva.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.url">URL</message>
+	<message key="plugins.generic.thesis.manager.form.urlInstructions">Si la tesis esta publicada online. Incluya http://, ftp://, etc. en el comienzo. (EJ: http://www.myurl.com/path/a/la/tesis.pdf)</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstName">Primer nombre del Estudiante</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstNameRequired">El primer nombre del estudiante es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastName">Apellido del estudiante</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastNameRequired">Se requiere un apellido del estudiante.</message>
+	<message key="plugins.generic.thesis.manager.form.studentMiddleName">Segundo nombre del estudiante</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmail">Email del Estudiante</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailValid">Un mail del estudiante válido es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstName">Primer nombre del Supervisor</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstNameRequired">The supervisor's first name is required.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastName">Apellido del Supervisor</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastNameRequired">El apellido del supervisor es requerido.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorMiddleName">Segundo Nombre del supervisor</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmail">Email del Supervisor</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">Un mail válido del supervisor  es requerido</message>
+	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">Guardar y Crear Otra.</message>
+
+	<!-- Thesis Abstract Settings Management -->
+	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>Este plugin habilita a los estudiantes a subir sus resúmenes de tesis a la revista, usando un formulario de publicación online.</p><p>Una vez que esta subido, el supervisor de la tesis es notificado automáticamente para que confirme la veracidad de la información subida, a partir del envío de un correo  al contacto de resúmenes de tesis que se muestra debajo, que tiene que ser un editor de la revista. Una vez que la confirmación es recibida, el contacto de los resúmenes de tesis puede activar la tesis cambiando su estado desde "Inactiva" a "Activa". De esa forma, el resumen de tesis va a estar disponible para los lectores de la revista.</p>]]></message>
+	<message key="plugins.generic.thesis.settings.thesisContact">Contacto de resúmenes de tesis</message>
+	<message key="plugins.generic.thesis.settings.submissions">Publicaciones</message>
+	<message key="plugins.generic.thesis.settings.uploadCode">Usar el siguiente código de subida para las publicaciones de este departamento:</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeDescription">Un código de subida (una secuencia de letras y números) puede ser distribuido a los departamentos que quieran  subir los resúmenes de tesis en nombre de los estudiantes.Cuando el código de subida  es publicado por un departamento, el correo automático de verificación no será enviado al supervisor para validar la publicación.</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeRequired">Por favor introduzca un código de subida.</message>
+	<message key="plugins.generic.thesis.settings.publishing">Edición</message>
+	<message key="plugins.generic.thesis.settings.order">Orden de edición</message>
+	<message key="plugins.generic.thesis.settings.order.submissionDateAsc">Fecha de publicación (ascendiente)</message>
+	<message key="plugins.generic.thesis.settings.order.submissionDateDesc">Fecha de publicación (descendiente)</message>
+	<message key="plugins.generic.thesis.settings.order.approvalDateAsc">Fecha de aprobacion (ascendiente)</message>
+	<message key="plugins.generic.thesis.settings.order.approvalDateDesc">Fecha de aprobación (descendiente)</message>
+	<message key="plugins.generic.thesis.settings.order.lastNameAsc">Apellido del estudiante (ascendiente)</message>
+	<message key="plugins.generic.thesis.settings.order.lastNameDesc">Apellido del estudiante (descendiente)</message>
+	<message key="plugins.generic.thesis.settings.order.titleAsc">Título (ascendiente)</message>
+	<message key="plugins.generic.thesis.settings.order.titleDesc">Título (descendiente)</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroduction">Frase introductoria</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">Una frase introductoria aparecerá en el encabezado de la página de resúmenes de tesis .</message>
+	<message key="plugins.generic.thesis.settings.thesisNameRequired">Un contacto de resúmenes de tesis debe ser especificado.</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">Un email para el contacto de resúmenes de tesis debe ser especificado.</message>
+	<message key="plugins.generic.thesis.settings.thesisOrderValid">Por favor introduzca un orden de edición válido.</message>
+
+	<!-- Thesis Abstracts -->
+	<message key="plugins.generic.thesis.displayName">Resumenes de Tesis</message>
+	<message key="plugins.generic.thesis.description">Solicitar y publicar los resúmenes  de tesis.</message>
+	<message key="plugins.generic.thesis.searchLink">Buscar Resumenes de Tesis</message>
+	<message key="plugins.generic.thesis.theses">Resumenes de Tesis</message>
+	<message key="plugins.generic.thesis.headerLink"><![CDATA[Resumenes&nbsp; Tesis]]></message>
+	<message key="plugins.generic.thesis.submit">Publicar un resumen de Tesis</message>
+	<message key="plugins.generic.thesis.submitLink">Enlace al resumen publicado</message>
+	<message key="plugins.generic.thesis.submitButton">Publicar</message>
+	<message key="plugins.generic.thesis.view">Resumen</message>
+	<message key="plugins.generic.thesis.viewTitle">Resumen</message>
+	<message key="plugins.generic.thesis.noneExist">No hay resumenes de tesis</message>
+	<message key="plugins.generic.thesis.noResults">Sin resultados</message>
+	<message key="plugins.generic.thesis.title">T</message>
+	<message key="plugins.generic.thesis.keyword">Keyword</message>
+	<message key="plugins.generic.thesis.studentFirstName">First name</message>
+	<message key="plugins.generic.thesis.studentLastName">Last name</message>
+	<message key="plugins.generic.thesis.department">Department</message>
+	<message key="plugins.generic.thesis.university">University</message>
+	<message key="plugins.generic.thesis.abstract">Abstract</message>
+	<message key="plugins.generic.thesis.fullText">Full text (external site)</message>
+	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.studentFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
+	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
+	<message key="plugins.generic.thesis.form.introduction">Una vez que se envíe el siguiente formulario, el supervisor de tesis sera notificado y se le solicitará que verifique la veracidad de la información enviada. Cuando se produzca esta verificación y sea recibida por la revista, el resumen de la tesis estará habilitado par verse online.</message>
+	<message key="plugins.generic.thesis.form.status">Estado</message>
+	<message key="plugins.generic.thesis.form.statusValid">Por favor introduzca un estado válido.</message>
+	<message key="plugins.generic.thesis.form.degree">Grado</message>
+	<message key="plugins.generic.thesis.form.degreeRequired">Un grado de tesis es requerido.</message>
+	<message key="plugins.generic.thesis.form.degreeValid">Por favor introduzca un grado válido.</message>
+	<message key="plugins.generic.thesis.form.degreeName">Nombre de Grado</message>
+	<message key="plugins.generic.thesis.form.degreeNameRequired">Un nombre de grado para la tesis es requerido.</message>
+	<message key="plugins.generic.thesis.form.degreeNameInstructions">El nombre del grado (ej: Master en artes, Doctorado en Filosofía,etc).</message>
+	<message key="plugins.generic.thesis.form.department">Departamento</message>
+	<message key="plugins.generic.thesis.form.departmentRequired">Un departamento es requerido.</message>
+	<message key="plugins.generic.thesis.form.university">Universidad</message>
+	<message key="plugins.generic.thesis.form.universityRequired">Una universidad es requerida.</message>
+	<message key="plugins.generic.thesis.form.dateApproved">Fecha de aprobación</message>
+	<message key="plugins.generic.thesis.form.dateApprovedRequired">Una fecha de aprobación es requerida.</message>
+	<message key="plugins.generic.thesis.form.dateApprovedValid">Por favor selecciona una fecha de aprobación válida.</message>
+	<message key="plugins.generic.thesis.form.title">Título</message>
+	<message key="plugins.generic.thesis.form.titleRequired">Una título de tesis es requerido.</message>
+	<message key="plugins.generic.thesis.form.comment">Comentarios</message>
+	<message key="plugins.generic.thesis.form.commentInstructions">Por favor introduzca cualquier comentario adicional que puede ser importante para su publicación.</message>
+	<message key="plugins.generic.thesis.form.author">Autor y Supervisión</message>
+	<message key="plugins.generic.thesis.form.studentBio">Biografia del estudiante.</message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Inserte líneas en blanco para separar los párrafos. Introduzca texto entre las siguientes etiquetas: &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, y &lt;u&gt;&lt;/u&gt; para poner en negrita, cursiva o subrayado respectivamente. (EJ: esta &lt;i&gt;palabra&lt;/i&gt; va a estar en cursiva)]]></message>
+	<message key="plugins.generic.thesis.form.indexing">Indizado</message>
+	<message key="plugins.generic.thesis.form.indexingDescription">Elija los términos que describen de mejor forma el contenido de su tesis, siguiendo las categorías que son utilizadas por la revista. Separe los términos con punto y coma (término 1 ; término 2 ; término 3).</message>
+	<message key="plugins.generic.thesis.form.discipline">Disciplina Académica y sub-disciplinas.</message>
+	<message key="plugins.generic.thesis.form.subjectClass">Clasificación temática</message>
+	<message key="plugins.generic.thesis.form.keyword">Palabras Clave</message>
+	<message key="plugins.generic.thesis.form.coverageGeo">Cobertura  Geo-espacial</message>
+	<message key="plugins.generic.thesis.form.coverageChron">Cobertura Cronológica e histórica</message>
+	<message key="plugins.generic.thesis.form.coverageSample">Características de las muestras de investigación</message>
+	<message key="plugins.generic.thesis.form.method">Tipo, método o enfoque</message>
+	<message key="plugins.generic.thesis.form.language">Idioma</message>
+	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[Ingles=en; Frances=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Otros Códigos</a>.]]></message>
+	<message key="plugins.generic.thesis.form.urlPrefixIncluded">Por favor introduzca la URL completa, incluyendo el http:// o el ftp:// en el principio.</message>
+	<message key="plugins.generic.thesis.form.abstract">Resumen</message>
+	<message key="plugins.generic.thesis.form.abstractRequired">Un resumen de tesis es requerido.</message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Inserte espacios en blanco para separar los párrafos. Introduzca  texto entre las etiquetas: &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, y &lt;u&gt;&lt;/u&gt para poner negritas, cursivas y subrayados, respectivamente (ej: esta &lt;i&gt;PALABRA&lt;/i&gt; va a aparecer en cursiva).]]></message>
+	<message key="plugins.generic.thesis.form.url">URL</message>
+	<message key="plugins.generic.thesis.form.urlInstructions">Si la tesis esta pública online, incluya http:// o ftp:// en el comienzo.</message>
+	<message key="plugins.generic.thesis.form.uploadCode">Código de subida</message>
+	<message key="plugins.generic.thesis.form.uploadCodeInstructions">Solo para uso del departamento.</message>
+	<message key="plugins.generic.thesis.form.studentFirstName">Primer nombre del Estudiante</message>
+	<message key="plugins.generic.thesis.form.studentFirstNameRequired">El primer nombre del estudiante es requerido.</message>
+	<message key="plugins.generic.thesis.form.studentLastName">Apellido del estudiante</message>
+	<message key="plugins.generic.thesis.form.studentLastNameRequired">Se requiere el apellido del estudiante.</message>
+	<message key="plugins.generic.thesis.form.studentMiddleName">Segundo nombre del estudiante</message>
+	<message key="plugins.generic.thesis.form.studentEmail">Email del Estudiante</message>
+	<message key="plugins.generic.thesis.form.studentEmailValid">Un mail del estudiante válido es requerido.</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublish">Email del estudiante Editor</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Si esta chequeado, el email del estudiante será publicado con el resumen de la tesis.</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstName">Primer nombre del Supervisor</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">Se requiere el primer nombre del supervisor.</message>
+	<message key="plugins.generic.thesis.form.supervisorLastName">Apellido del Supervisor</message>
+	<message key="plugins.generic.thesis.form.supervisorLastNameRequired">El apellido del supervisor es requerido.</message>
+	<message key="plugins.generic.thesis.form.supervisorMiddleName">Segundo Nombre del supervisor</message>
+	<message key="plugins.generic.thesis.form.supervisorEmail">Email del Supervisor</message>
+	<message key="plugins.generic.thesis.form.supervisorEmailValid">Un mail válido del supervisor  es requerido</message>
+
+</locale>

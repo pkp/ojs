@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/browse/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Browse plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">Plugin Navegador</message>
+	<message key="plugins.generic.browse.description">Este plugin habilita la navegación por secciones y/o sus tipos identificadores.</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">Configuraciones</message>
+	<message key="plugins.generic.browse.manager.settings.description">Por favor configure las siguientes posibilidades de navegación adicionales:</message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Confuración de Navegación</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Navegar</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Escoja los objetos por los cuales va a ser posible navegar.</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Por sección</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Por tipo de indentificador</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Secciones Excluídas</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Escoja las secciones que no deberían ser consderadas.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Tipos de indetificador excluídos.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Escoja los tipos de identificador que no deberían ser considerados.</message>
+
+	<message key="plugins.generic.browse.search.sections">Por secciones</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Indice de navegación por secciones</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Detalles de la sección</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Por tipos de indentificador.</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Indice de navegación por tipos de identificador.</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Detalles de tipo de indentificador.</message>
+
+</locale>

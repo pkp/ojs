@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/googleViewer/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.googleViewer.name">Plugin de visor embebido de Google</message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Este plugin usa el servicio <a href="https://docs.google.com/viewer">Google Docs Viewer</a> para embeber los PDF en la pagina de vista de artículo.]]></message>
+</locale>
