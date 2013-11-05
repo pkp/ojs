@@ -28,8 +28,7 @@ class StageParticipantGridHandler extends PKPStageParticipantGridHandler {
 	 * @return int
 	 */
 	function _getIdForSubEditorFilter($submission) {
-		$seriesId = $submission->getSectionId();
-		return $seriesId;
+		return $submission->getSectionId();
 	}
 
 	/**
