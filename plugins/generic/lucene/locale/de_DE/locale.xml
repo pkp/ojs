@@ -90,7 +90,7 @@
 	<message key="plugins.generic.lucene.settings.password">Passwort</message>
 	<message key="plugins.generic.lucene.settings.passwordInstructions">Bitte geben Sie das Passwort des Solr-Servers ein.</message>
 	<message key="plugins.generic.lucene.settings.passwordRequired">Bitte geben Sie ein gültiges Passwort ein, um den Zugang zum Solr-Suchserver zu erhalten.</message>
-	<message key="plugins.generic.lucene.settings.pullIndexing">Pull-Indizierung (dies ist eine fortgeschrittenes Merkmal, die README-Datei enthält weitere Informationen)</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">Pull-Indizierung (dies ist ein fortgeschrittenes Merkmal, die README-Datei enthält weitere Informationen)</message>
 	<message key="plugins.generic.lucene.settings.searchEndpoint">URL des Endpunkts der Suche</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">Der Endpunkt der Solr-Suche besteht aus der URL des Servers und einem Suchpfad. Die Standardeinstellung liefert Ihnen ein Beispiel. Ändern Sie dies nur, wenn Sie einen zentralen Suchserver benutzen.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Bitte geben Sie eine gültige URL an, die den Endpunkt (Solr-Suchserver und Pfad zur Suche), mit dem Sie sich verbinden wollen, bezeichnet.</message>
