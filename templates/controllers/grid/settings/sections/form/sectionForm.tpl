@@ -19,6 +19,10 @@
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="sectionFormNotification"}
 
+	{if $sectionEditorCount == 0}
+		<span class="pkp_form_error"><p>{translate key="manager.section.noSectionEditors"}</p></span>
+	{/if}
+
 	{fbvFormArea id="sectionInfo"}
 		{fbvFormSection}
 			{fbvElement type="text" multilingual=true id="title" label="section.title" value=$title maxlength="80" size=$fbvStyles.size.MEDIUM inline=true}
@@ -57,6 +61,15 @@
 			{fbvElement type="text" id="identifyType" label="manager.sections.identifyTypeExamples" value=$identifyType multilingual=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 	{/fbvFormArea}
+
+	{fbvFormSection for="context" inline=true size=$fbvStyles.size.MEDIUM}
+		{if $sectionEditorCount > 0}{* only include the section editor listbuilder if there are section editors available *}
+			<div id="sectionEditorsContainer">
+				{url|assign:sectionEditorsUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.SectionEditorsListbuilderHandler" op="fetch" sectionId=$sectionId escape=false}
+				{load_url_in_div id="sectionEditorsContainer" url=$sectionEditorsUrl}
+			</div>
+		{/if}
+	{/fbvFormSection}
 
 	{fbvFormButtons submitText="common.save"}
 </form>

@@ -98,13 +98,12 @@ class SectionEditorsDAO extends DAO {
 		$result = $this->retrieve(
 			'SELECT	u.*
 			FROM	users u
-				LEFT JOIN roles r ON (r.user_id = u.user_id)
-				LEFT JOIN section_editors e ON (e.user_id = u.user_id AND e.journal_id = r.journal_id AND e.section_id = ?)
-			WHERE	r.journal_id = ? AND
-				r.role_id = ? AND
-				e.section_id IS NULL
+				JOIN user_user_groups uug ON (u.user_id = uug.user_id)
+				JOIN user_groups ug ON (uug.user_group_id = ug.user_group_id AND ug.role_id = ? AND ug.context_id = ?)
+				LEFT JOIN section_editors e ON (e.user_id = u.user_id AND e.journal_id = ug.context_id AND e.section_id = ?)
+			WHERE	e.section_id IS NULL
 			ORDER BY last_name, first_name',
-			array($sectionId, $journalId, ROLE_ID_SECTION_EDITOR)
+			array(ROLE_ID_SUB_EDITOR, (int) $journalId, (int) $sectionId)
 		);
 
 		while (!$result->EOF) {
