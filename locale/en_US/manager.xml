@@ -495,8 +495,19 @@
 		search results. Please select one of the configured metrics as a default.
 	</message>
 	<message key="manager.statistics.reports">Report Generator</message>
+	<message key="manager.statistics.reports.aggregationColumns">Aggregate stats by:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Default report templates</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Article file downloads</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Article abstract page views</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Article abstract and downloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Issue file downloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Issue table of contents page views</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Issue table of contents and downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Journal main page views</message>
 	<message key="manager.statistics.reports.description">OJS generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.</message>
 	<message key="manager.statistics.reports.generateReport">Generate custom report</message>
+	<message key="manager.statistics.reports.advancedOptions">Advanced Options</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Customize columns, filter and ordering options. Changing any of these options will change the report template setting to none.</message>
 	<message key="manager.statistics.reports.columns">Columns</message>
 	<message key="manager.statistics.reports.columns.description">Define the columns that will be used to build the report. The columns you select here not only define which data will be presented inside the reports, but also defines the aggregation level of the statistics. For example, if you choose ID, Type and Month columns, the report will sum all views from an object from one month and will present that data in one row. If you choose Day instead of Month, each object will have a row for each day.</message>
 	<message key="manager.statistics.reports.filters">Filters</message>
@@ -516,13 +527,13 @@
 	<message key="manager.statistics.reports.reportUrl">Report URL</message>
 	<message key="manager.statistics.reports.reportUrl.label">The following url can be used to generate the report with this current form settings. Just copy it, paste into your browser and enter. You can use your favorites to store your custom report url generator.</message>
 	<message key="manager.statistics.reports.filters.byContext">By context</message>
-	<message key="manager.statistics.reports.filters.byContext.label">Narrow results by context (issue and/or article).</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Narrow results by context (issue and/or article).</message>
 	<message key="manager.statistics.reports.filters.byObject">By object type and/or object id</message>
-	<message key="manager.statistics.reports.filters.byObject.label">Narrow results by object type (journal, issue, article, pdf galleys, other galleys) and/or by one or more object id(s).</message>
-	<message key="manager.statistics.reports.filters.byTime">By time</message>
-	<message key="manager.statistics.reports.filters.byTime.label">Narrow results by specific or period of time (month or day).</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Narrow results by object type (journal, issue, article, pdf galleys, other galleys) and/or by one or more object id(s).</message>
+	<message key="manager.statistics.reports.filters.byTime">Select report range</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Or select range by:</message>
 	<message key="manager.statistics.reports.filters.byLocation">By geo location</message>
-	<message key="manager.statistics.reports.filters.byLocation.label">Narrow results by country, region and/or city.</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Narrow results by country, region and/or city.</message>
 	<message key="manager.statistics.statistics">Journal Statistics</message>
 	<message key="manager.statistics.statistics.articleViews">Article View Counts (for Authors only)</message>
 	<message key="manager.statistics.statistics.count.accept">Accept</message>

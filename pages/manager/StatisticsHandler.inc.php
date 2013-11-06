@@ -158,10 +158,6 @@ class StatisticsHandler extends ManagerHandler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_OJS_EDITOR);
 
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('columns', serialize(StatisticsHelper::getColumnNames()));
-		$templateMgr->assign('objects', serialize(StatisticsHelper::getObjectTypeString()));
-		$templateMgr->assign('fileTypes', serialize(StatisticsHelper::getFileTypeString()));
-		$templateMgr->assign('metricType', OJS_METRIC_TYPE_COUNTER);
 		$templateMgr->display('manager/statistics/reportGenerator.tpl');
 	}
 
@@ -184,27 +180,13 @@ class StatisticsHandler extends ManagerHandler {
 			$metricType = $context->getDefaultMetricType();
 		}
 
-		if (is_scalar($metricType)) $metricType = array($metricType);
+		// Generates only one metric type report at a time.
+		if (!is_scalar($metricType)) $metricType = null;
 
-
-		// Retrieve site-level report plugins.
-		$reportPlugins =& PluginRegistry::loadCategory('reports', true, CONTEXT_SITE);
-		if (!is_array($reportPlugins) || empty($metricType)) {
+		$reportPlugin =& StatisticsHelper::getReportPluginByMetricType($metricType);
+		if (!$reportPlugin || is_null($metricType)) {
 			$request->redirect(null, null, 'statistics');
 		}
-
-		$foundReportPlugin = false;
-		foreach ($reportPlugins as $reportPlugin) {
-			/* @var $reportPlugin ReportPlugin */
-			$pluginMetricTypes = $reportPlugin->getMetricTypes();
-			$metricTypeMatches = array_intersect($pluginMetricTypes, $metricType);
-			if (!empty($metricTypeMatches)) {
-				$foundReportPlugin = true;
-				break;
-			}
-		}
-
-		if (!$foundReportPlugin) $request->redirect(null, null, 'statistics');
 
 		$columns = $request->getUserVar('columns');
 		$filters = unserialize($request->getUserVar('filters'));

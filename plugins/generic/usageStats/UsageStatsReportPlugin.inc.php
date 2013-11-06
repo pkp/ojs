@@ -104,6 +104,41 @@ class UsageStatsReportPlugin extends ReportPlugin {
 		if ($metricType !== OAS_METRIC_TYPE_COUNTER) return null;
 		return __('plugins.reports.usageStats.metricType.full');
 	}
+
+	/**
+	 * @see ReportPlugin::getColumns()
+	 */
+	function getColumns($metricType) {
+		if ($metricType !== OJS_METRIC_TYPE_COUNTER) return array();
+		return array(
+			STATISTICS_DIMENSION_ASSOC_ID,
+			STATISTICS_DIMENSION_ASSOC_TYPE,
+			STATISTICS_DIMENSION_SUBMISSION_ID,
+			STATISTICS_DIMENSION_ISSUE_ID,
+			STATISTICS_DIMENSION_CONTEXT_ID,
+			STATISTICS_DIMENSION_CITY,
+			STATISTICS_DIMENSION_REGION,
+			STATISTICS_DIMENSION_COUNTRY,
+			STATISTICS_DIMENSION_DAY,
+			STATISTICS_DIMENSION_MONTH,
+			STATISTICS_DIMENSION_FILE_TYPE,
+			STATISTICS_METRIC
+		);
+	}
+
+	/**
+	 * @see ReportPlugin::getObjectTypes()
+	 */
+	function getObjectTypes($metricType) {
+		if ($metricType !== OJS_METRIC_TYPE_COUNTER) return array();
+		return array(
+			ASSOC_TYPE_JOURNAL,
+			ASSOC_TYPE_ISSUE,
+			ASSOC_TYPE_ISSUE_GALLEY,
+			ASSOC_TYPE_ARTICLE,
+			ASSOC_TYPE_GALLEY
+		);
+	}
 }
 
 ?>

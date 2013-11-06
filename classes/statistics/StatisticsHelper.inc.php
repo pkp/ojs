@@ -135,11 +135,65 @@ class StatisticsHelper {
 	}
 
 	/**
+	 * Get the report plugin that implements
+	 * the passed metric type.
+	 * @param $metricType string
+	 * @return mixed ReportPlugin or null
+	 */
+	function &getReportPluginByMetricType($metricType) {
+		$returner = null;
+
+		// Retrieve site-level report plugins.
+		$reportPlugins =& PluginRegistry::loadCategory('reports', true, CONTEXT_SITE);
+		if (!is_array($reportPlugins) || empty($metricType)) {
+			return $returner;
+		}
+
+		if (is_scalar($metricType)) {
+			$metricType = array($metricType);
+		}
+
+		foreach ($reportPlugins as $reportPlugin) {
+			/* @var $reportPlugin ReportPlugin */
+			$pluginMetricTypes = $reportPlugin->getMetricTypes();
+			$metricTypeMatches = array_intersect($pluginMetricTypes, $metricType);
+			if (!empty($metricTypeMatches)) {
+				$returner =& $reportPlugin;
+				break;
+			}
+		}
+
+		return $returner;
+	}
+
+	/**
+	 * Get metric type display strings implemented by all
+	 * available report plugins.
+	 * @return array Metric type as index and the display string
+	 * as values.
+	 */
+	function getAllMetricTypeStrings() {
+		$allMetricTypes = array();
+		$reportPlugins =& PluginRegistry::loadCategory('reports', true, CONTEXT_SITE);
+		if (is_array($reportPlugins)) {
+			foreach ($reportPlugins as $reportPlugin) {
+				/* @var $reportPlugin ReportPlugin */
+				$reportMetricTypes = $reportPlugin->getMetricTypes();
+				foreach ($reportMetricTypes as $metricType) {
+					$allMetricTypes[$metricType] = $reportPlugin->getMetricDisplayType($metricType);
+				}
+			}
+		}
+
+		return $allMetricTypes;
+	}
+
+	/**
 	* Get report column names.
-	* @return array
+	* @return array|string|null
 	*/
-	function getColumnNames() {
-		return array(
+	function getColumnNames($column = null) {
+		$columns = array(
 			STATISTICS_DIMENSION_ASSOC_ID => __('common.id'),
 			STATISTICS_DIMENSION_ASSOC_TYPE => __('common.type'),
 			STATISTICS_DIMENSION_SUBMISSION_ID => __('article.article'),
@@ -152,8 +206,18 @@ class StatisticsHelper {
 			STATISTICS_DIMENSION_MONTH => __('common.month'),
 			STATISTICS_DIMENSION_FILE_TYPE => __('common.fileType'),
 			STATISTICS_DIMENSION_METRIC_TYPE => __('common.metric'),
-			STATISTICS_METRIC => __('submission.views')
+			STATISTICS_METRIC => __('common.count')
 		);
+
+		if ($column) {
+			if (isset($columns[$column])) {
+				return $columns[$column];
+			} else {
+				return null;
+			}
+		} else {
+			return $columns;
+		}
 	}
 
 	/**
@@ -203,6 +267,32 @@ class StatisticsHelper {
 			}
 		}
 	}
+
+	/**
+	 * Get an url that requests a statiscs report,
+	 * using the passed parameters as request arguments.
+	 * @param $request PKPRequest
+	 * @param $metricType string Report metric type.
+	 * @param $columns array Report columns
+	 * @param $filter array Report filters.
+	 * @param $orderBy array (optional) Report order by values.
+	 * @return string
+	 */
+	function getReportUrl(&$request, $metricType, $columns, $filter, $orderBy = array()) {
+		$dispatcher =& $request->getDispatcher(); /* @var $dispatcher Dispatcher */
+		$args = array(
+			'metricType' => $metricType,
+			'columns' => $columns,
+			'filters' => serialize($filter)
+		);
+
+		if (!empty($orderBy)) {
+			$args['orderBy'] = serialize($orderBy);
+		}
+
+		return $dispatcher->url($request, ROUTE_PAGE, null, 'manager', 'generateReport', null, $args);
+	}
+
 
 	/**
 	* Get the geo location tool.

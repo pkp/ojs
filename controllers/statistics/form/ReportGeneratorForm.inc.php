@@ -15,6 +15,11 @@
 
 import('lib.pkp.classes.form.Form');
 
+define('TIME_FILTER_OPTION_CURRENT_DAY', 0);
+define('TIME_FILTER_OPTION_CURRENT_MONTH', 1);
+define('TIME_FILTER_OPTION_RANGE_DAY', 2);
+define('TIME_FILTER_OPTION_RANGE_MONTH', 3);
+
 class ReportGeneratorForm extends Form {
 
 	/* @var $_columns array */
@@ -29,20 +34,34 @@ class ReportGeneratorForm extends Form {
 	/* @var $_metricType string */
 	var $_metricType;
 
+	/* @var $_defaultReportTemplates array */
+	var $_defaultReportTemplates;
+
+	/* @var $_reportTemplateIndex int */
+	var $_reportTemplateIndex;
+
 	/**
 	 * Constructor.
 	 * @param $columns array Report column names.
 	 * @param $objects array Object types.
 	 * @param $fileTypes array File types.
 	 * @param $metricType string The default report metric type.
+	 * @param $defaultReportTemplates array Default report templates that
+	 * defines columns and filters selections. The key for each array
+	 * item is expected to be a localized key that describes the
+	 * report Template.
+	 * @param $reportTemplateIndex int (optional) Current report template index
+	 * from the passed default report templates array.
 	 */
-	function ReportGeneratorForm($columns, $objects, $fileTypes, $metricType) {
+	function ReportGeneratorForm($columns, $objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplateIndex = null) {
 		parent::Form('controllers/statistics/form/reportGeneratorForm.tpl');
 
 		$this->_columns = $columns;
 		$this->_objects = $objects;
 		$this->_fileTypes = $fileTypes;
 		$this->_metricType = $metricType;
+		$this->_defaultReportTemplates = $defaultReportTemplates;
+		$this->_reportTemplateIndex = $reportTemplateIndex;
 
 		$this->addCheck(new FormValidatorArray($this, 'columns', 'required', 'manager.statistics.reports.form.columnsRequired'));
 		$this->addCheck(new FormValidatorPost($this));
@@ -54,19 +73,109 @@ class ReportGeneratorForm extends Form {
 	function fetch(&$request) {
 		$router =& $request->getRouter();
 		$context =& $router->getContext($request);
-		$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issueFactory =& $issueDao->getIssues($context->getId());
-		$issueIdAndTitles = array();
-		while ($issue =& $issueFactory->next()) { /* @var $issue Issue */
-			$issueIdAndTitles[$issue->getId()] = $issue->getIssueIdentification();
+		$columns = $this->_columns;
+
+		$availableMetricTypeStrings = StatisticsHelper::getAllMetricTypeStrings();
+		if (count($availableMetricTypeStrings) > 1) {
+			$this->setData('metricTypeOptions', $availableMetricTypeStrings);
 		}
 
-		$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
-		if ($geoLocationTool) {
-			$countryCodes = $geoLocationTool->getAllCountryCodes();
-			$countryCodes = array_combine($countryCodes, $countryCodes);
-			$this->setData('countriesOptions', $countryCodes);
+		$reportTemplateOptions = array();
+		$reportTemplates = $this->_defaultReportTemplates;
+		foreach($reportTemplates as $reportTemplate) {
+			$reportTemplateOptions[] = __($reportTemplate['nameLocaleKey']);
 		}
+
+		if (!empty($reportTemplateOptions)) $this->setData('reportTemplateOptions', $reportTemplateOptions);
+
+		$reportTemplateIndex = (int) $this->_reportTemplateIndex;
+		if (!is_null($reportTemplateIndex) && isset($reportTemplates[$reportTemplateIndex])) {
+			$reportTemplate = $reportTemplates[$reportTemplateIndex];
+			$reportColumns = $reportTemplate['columns'];
+			if (!is_array($reportColumns)) continue;
+
+			$this->setData('columns', $reportColumns);
+			$this->setData('reportTemplate', $reportTemplateIndex);
+			if (isset($reportTemplate['aggregationColumns'])) {
+				$aggreationColumns = $reportTemplate['aggregationColumns'];
+				if (!is_array($aggreationColumns)) continue;
+
+				$aggreationOptions = $selectedAggregationOptions = array();
+				foreach ($aggreationColumns as $column) {
+					$columnName = StatisticsHelper::getColumnNames($column);
+					if (!$columnName) continue;
+					$aggreationOptions[$column] = $columnName;
+				}
+				$this->setData('aggregationOptions', $aggreationOptions);
+				$this->setData('selectedAggregationOptions', array_intersect($aggreationColumns, $reportColumns));
+			}
+
+			if (isset($reportTemplate['filter']) && is_array($reportTemplate['filter'])) {
+				foreach ($reportTemplate['filter'] as $dimension => $filter) {
+					switch ($dimension) {
+						case STATISTICS_DIMENSION_ASSOC_TYPE:
+							$this->setData('objectTypes', $filter);
+							break;
+					}
+				}
+			}
+		}
+
+		$timeFilterSelectedOption = $request->getUserVar('timeFilterOption');
+		if (is_null($timeFilterSelectedOption)) {
+			$timeFilterSelectedOption = TIME_FILTER_OPTION_CURRENT_MONTH;
+		}
+		switch ($timeFilterSelectedOption) {
+			case TIME_FILTER_OPTION_CURRENT_DAY:
+				$this->setData('today', true);
+				break;
+			case TIME_FILTER_OPTION_CURRENT_MONTH:
+			default:
+				$this->setData('currentMonth', true);
+				break;
+			case TIME_FILTER_OPTION_RANGE_DAY:
+				$this->setData('byDay', true);
+				break;
+			case TIME_FILTER_OPTION_RANGE_MONTH:
+				$this->setData('byMonth', true);
+				break;
+		}
+
+		$startTime = $request->getUserDateVar('dateStart');
+		$endTime = $request->getUserDateVar('dateEnd');
+		if (!$startTime) $startTime = time();
+		if (!$endTime) $endTime = time();
+
+		$this->setData('dateStart', $startTime);
+		$this->setData('dateEnd', $endTime);
+
+		if (isset($columns[STATISTICS_DIMENSION_ISSUE_ID])) {
+			$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$issueFactory =& $issueDao->getIssues($context->getId());
+			$issueIdAndTitles = array();
+			while ($issue =& $issueFactory->next()) {
+				/* @var $issue Issue */
+				$issueIdAndTitles[$issue->getId()] = $issue->getIssueIdentification();
+			}
+			$this->setData('issuesOptions', $issueIdAndTitles);
+			$this->setData('showArticleInput', isset($columns[STATISTICS_DIMENSION_SUBMISSION_ID]));
+
+		}
+
+		if (isset($columns[STATISTICS_DIMENSION_COUNTRY])) {
+			$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
+			if ($geoLocationTool) {
+				$countryCodes = $geoLocationTool->getAllCountryCodes();
+				$countryCodes = array_combine($countryCodes, $countryCodes);
+				$this->setData('countriesOptions', $countryCodes);
+			}
+
+			$this->setData('showRegionInput', isset($columns[STATISTICS_DIMENSION_REGION]));
+			$this->setData('showCityInput', isset($columns[STATISTICS_DIMENSION_CITY]));
+		}
+
+		$this->setData('showMonthInputs', isset($columns[STATISTICS_DIMENSION_MONTH]));
+		$this->setData('showDayInputs', isset($columns[STATISTICS_DIMENSION_DAY]));
 
 		$orderColumns = $this->_columns;
 		$nonOrderableColumns = array(STATISTICS_DIMENSION_ASSOC_TYPE,
@@ -77,14 +186,16 @@ class ReportGeneratorForm extends Form {
 			STATISTICS_DIMENSION_FILE_TYPE,
 			STATISTICS_DIMENSION_METRIC_TYPE
 		);
+
 		foreach($nonOrderableColumns as $column) {
 			unset($orderColumns[$column]);
 		}
 
 		$this->setData('metricType', $this->_metricType);
-		$this->setData('issuesOptions', $issueIdAndTitles);
 		$this->setData('objectTypesOptions', $this->_objects);
-		$this->setData('fileTypesOptions', $this->_fileTypes);
+		if ($this->_fileTypes) {
+			$this->setData('fileTypesOptions', $this->_fileTypes);
+		}
 		$this->setData('fileAssocTypes', array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_ISSUE_GALLEY));
 		$this->setData('orderColumnsOptions', $orderColumns);
 		$this->setData('orderDirectionsOptions', array(
@@ -104,8 +215,8 @@ class ReportGeneratorForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array('columns', 'objectTypes', 'fileTypes', 'objectIds', 'issues',
-			'articles', 'month', 'monthFrom', 'monthTo', 'currentMonth', 'day', 'dayFrom', 'dayTo',
-			'today', 'countries', 'regions', 'cityNames', 'orderByColumn', 'orderByDirection'));
+			'articles', 'timeFilterOption', 'countries', 'regions', 'cityNames',
+			'orderByColumn', 'orderByDirection'));
 		return parent::readInputData();
 	}
 
@@ -142,46 +253,47 @@ class ReportGeneratorForm extends Form {
 			$filter[STATISTICS_DIMENSION_SUBMISSION_ID] = $this->getData('articles');
 		}
 
-		if ($this->getData('currentMonth')) {
-			$filter[STATISTICS_DIMENSION_MONTH] = STATISTICS_CURRENT_MONTH;
-		} else {
-			if ($this->getData('month')) {
-				$filter[STATISTICS_DIMENSION_MONTH] = $this->getData('month');
-			}
-
-			if ($this->getData('monthFrom')) {
-				// Erase any possible exact month definition.
-				$filter[STATISTICS_DIMENSION_MONTH] = array();
-				$filter[STATISTICS_DIMENSION_MONTH]['from'] = $this->getData('monthFrom');
-
-				if ($this->getData('monthTo')) {
-					$filter[STATISTICS_DIMENSION_MONTH]['to'] = $this->getData('monthTo');
-				} else {
-					// Use the current month.
-					$filter[STATISTICS_DIMENSION_MONTH]['to'] = date('Ym', time());
-				}
-			}
+		// Get the time filter data, if any.
+		$startTime = $request->getUserDateVar('dateStart', 1, 1, 1, 23, 59, 59);
+		$endTime = $request->getUserDateVar('dateEnd', 1, 1, 1, 23, 59, 59);
+		if ($startTime && $endTime) {
+			$startYear = date('Y', $startTime);
+			$endYear = date('Y', $endTime);
+			$startMonth = date('m', $startTime);
+			$endMonth = date('m', $endTime);
+			$startDay = date('d', $startTime);
+			$endDay = date('d', $endTime);
 		}
 
-		if ($this->getData('today')) {
-			$filter[STATISTICS_DIMENSION_DAY] = STATISTICS_CURRENT_DAY;
-		} else {
-			if ($this->getData('day')) {
-				$filter[STATISTICS_DIMENSION_DAY] = $this->getData('day');
-			}
-
-			if ($this->getData('dayFrom')) {
-				// Erase any possible exact month definition.
-				$filter[STATISTICS_DIMENSION_DAY] = array();
-				$filter[STATISTICS_DIMENSION_DAY]['from'] = $this->getData('dayFrom');
-
-				if ($this->getData('dayTo')) {
-					$filter[STATISTICS_DIMENSION_DAY]['to'] = $this->getData('dayTo');
+		$timeFilterOption = $this->getData('timeFilterOption');
+		switch($timeFilterOption) {
+			case TIME_FILTER_OPTION_CURRENT_DAY:
+				$filter[STATISTICS_DIMENSION_MONTH] = STATISTICS_CURRENT_DAY;
+				break;
+			case TIME_FILTER_OPTION_CURRENT_MONTH:
+				$filter[STATISTICS_DIMENSION_MONTH] = STATISTICS_CURRENT_MONTH;
+				break;
+			case TIME_FILTER_OPTION_RANGE_DAY:
+			case TIME_FILTER_OPTION_RANGE_MONTH:
+				if ($timeFilterOption == TIME_FILTER_OPTION_RANGE_DAY) {
+					$startDate = $startYear . $startMonth . $startDay;
+					$endDate = $endYear . $endMonth . $endDay;
 				} else {
-					// Use the current day.
-					$filter[STATISTICS_DIMENSION_DAY]['to'] = date('Ymd', time());
+					$startDate = $startYear . $startMonth;
+					$endDate = $endYear . $endMonth;
 				}
-			}
+
+				if ($startTime == $endTime) {
+					// The start and end date are the same, there is no range defined
+					// only one specific date. Use the start time.
+					$filter[STATISTICS_DIMENSION_MONTH] = $startDate;
+				} else {
+					$filter[STATISTICS_DIMENSION_MONTH]['from'] = $startDate;
+					$filter[STATISTICS_DIMENSION_MONTH]['to'] = $endDate;
+				}
+				break;
+			default:
+				break;
 		}
 
 		if ($this->getData('countries')) {
@@ -216,18 +328,7 @@ class ReportGeneratorForm extends Form {
 			}
 		}
 
-		$args = array(
-			'metricType' => $this->_metricType,
-			'columns' => $columns,
-			'filters' => serialize($filter)
-		);
-
-		if (!empty($orderBy)) {
-			$args['orderBy'] = serialize($orderBy);
-		}
-
-		$dispatcher =& $request->getDispatcher(); /* @var $dispatcher Dispatcher */
-		return $dispatcher->url($request, ROUTE_PAGE, null, 'manager', 'generateReport', null, $args);
+		return StatisticsHelper::getReportUrl($request, $this->_metricType, $columns, $filter, $orderBy);
 	}
 }
 

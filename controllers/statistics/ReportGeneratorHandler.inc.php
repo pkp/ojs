@@ -36,7 +36,15 @@ class ReportGeneratorHandler extends Handler {
 		$reportGeneratorForm =& $this->_getReportGeneratorForm($request);
 		$reportGeneratorForm->initData($request);
 
-		$json =& new JSONMessage(true, $reportGeneratorForm->fetch($request));
+		$formContent = $reportGeneratorForm->fetch($request);
+
+		$json =& new JSONMessage(true);
+		if ($request->getUserVar('refreshForm')) {
+			$json->setEvent('refreshForm', $formContent);
+		} else {
+			$json->setContent($formContent);
+		}
+
 		return $json->getString();
 	}
 
@@ -128,7 +136,8 @@ class ReportGeneratorHandler extends Handler {
 	 */
 	function setupTemplate() {
 		parent::setupTemplate();
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_OJS_MANAGER,
+			LOCALE_COMPONENT_OJS_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 	}
 
 
@@ -140,17 +149,43 @@ class ReportGeneratorHandler extends Handler {
 	 * @return ReportGeneratorForm
 	 */
 	function &_getReportGeneratorForm(&$request) {
-		$columns = unserialize($request->getUserVar('columns'));
-		$objects = unserialize($request->getUserVar('objects'));
-		$fileTypes = unserialize($request->getUserVar('fileTypes'));
-		$metricType = $request->getUserVar('metricType');
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request);
 
-		// Metric type will be presented in header.
-		unset($columns[STATISTICS_DIMENSION_METRIC_TYPE]);
+		$metricType = $request->getUserVar('metricType');
+		if (!$metricType) {
+			$metricType = $journal->getDefaultMetricType();
+		}
+
+		$reportPlugin =& StatisticsHelper::getReportPluginByMetricType($metricType);
+		if (!is_scalar($metricType) || !$reportPlugin) {
+			fatalError('Invalid metric type.');
+		}
+
+		$columns = $reportPlugin->getColumns($metricType);
+		$columns = array_flip(array_intersect(array_flip(StatisticsHelper::getColumnNames()), $columns));
+
+		$objects = $reportPlugin->getObjectTypes($metricType);
+		$objects = array_flip(array_intersect(array_flip(StatisticsHelper::getObjectTypeString()), $objects));
+
+		$defaultReportTemplates = $reportPlugin->getDefaultReportTemplates($metricType);
+
+		// If the report plugin doesn't works with the file type column,
+		// don't load file types.
+		if (isset($columns[STATISTICS_DIMENSION_FILE_TYPE])) {
+			$fileTypes = StatisticsHelper::getFileTypeString();
+		} else {
+			$fileTypes = null;
+		}
+
+		// Metric type will be presented in header, remove if any.
+		if (isset($columns[STATISTICS_DIMENSION_METRIC_TYPE])) unset($columns[STATISTICS_DIMENSION_METRIC_TYPE]);
+
+		$reportTemplate = $request->getUserVar('reportTemplate');
 
 		import('controllers.statistics.form.ReportGeneratorForm');
 		$reportGeneratorForm =& new ReportGeneratorForm($columns,
-			$objects, $fileTypes, $metricType);
+			$objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplate);
 
 		return $reportGeneratorForm;
 	}

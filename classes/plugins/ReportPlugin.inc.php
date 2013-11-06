@@ -73,6 +73,91 @@ class ReportPlugin extends Plugin {
 	}
 
 	/**
+	 * Get the columns used in reports by the passed
+	 * metric type.
+	 * @param $metricType string One of the values returned from getMetricTypes()
+	 * @return null|array Return an array with STATISTICS_DIMENSION_...
+	 * constants.
+	 */
+	function getColumns($metricType) {
+		return array();
+	}
+
+	/**
+	 * Get the object types that the passed metric type
+	 * counts statistics for.
+	 * @param $metricType string One of the values returned from getMetricTypes()
+	 * @return null|array Return an array with ASSOC_TYPE_...
+	 * constants.
+	 */
+	function getObjectTypes($metricType) {
+		return array();
+	}
+
+	/**
+	 * Get the default report templates that each report
+	 * plugin can implement, with an string to represent it.
+	 * Subclasses can override this method to add/remove
+	 * default formats.
+	 * @param $metricType string
+	 * @return array
+	 */
+	function getDefaultReportTemplates($metricType) {
+		$reports = array();
+
+		// Define aggregation columns, the ones that
+		// can be part of the reports not changing
+		// it's main purpose.
+		$aggregationColumns = array(STATISTICS_DIMENSION_COUNTRY,
+			STATISTICS_DIMENSION_REGION,
+			STATISTICS_DIMENSION_CITY,
+			STATISTICS_DIMENSION_MONTH,
+			STATISTICS_DIMENSION_DAY);
+
+		// Articles file downloads.
+		$columns = array(STATISTICS_DIMENSION_ISSUE_ID,
+			STATISTICS_DIMENSION_SUBMISSION_ID,
+			STATISTICS_DIMENSION_MONTH,
+			STATISTICS_DIMENSION_COUNTRY);
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_GALLEY);
+		$reports[] = array(	'nameLocaleKey' => 'manager.statistics.reports.defaultReport.articleDownloads',
+			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
+			'aggregationColumns' => $aggregationColumns);
+
+		// Articles abstract views.
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_ARTICLE);
+		$reports[] = array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.articleAbstract',
+			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
+			'aggregationColumns' => $aggregationColumns);
+
+		// Issues file downloads.
+		$columns = array(STATISTICS_DIMENSION_ISSUE_ID,
+			STATISTICS_DIMENSION_MONTH,
+			STATISTICS_DIMENSION_COUNTRY);
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_ISSUE_GALLEY);
+		$reports[] = array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.issueDownloads',
+			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
+			'aggregationColumns' => $aggregationColumns);
+
+		// Issue table of contents page views.
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_ISSUE);
+		$reports[] = array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.issueTableOfContents',
+			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
+			'aggregationColumns' => $aggregationColumns);
+
+		// Journal index page views.
+		$columns = array(STATISTICS_DIMENSION_CONTEXT_ID,
+			STATISTICS_DIMENSION_MONTH,
+			STATISTICS_DIMENSION_COUNTRY);
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_JOURNAL);
+		$reports[] = array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.journalIndexPageViews',
+			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
+			'aggregationColumns' => $aggregationColumns);
+
+		return $reports;
+	}
+
+	/**
 	 * Set the page's breadcrumbs, given the plugin's tree of items
 	 * to append.
 	 * @param $crumbs Array ($url, $name, $isTranslated)
