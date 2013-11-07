@@ -23,7 +23,7 @@ class NotificationsGridHandler extends PKPNotificationsGridHandler {
 		parent::PKPNotificationsGridHandler();
 
 		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER, ROLE_ID_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR, ROLE_ID_REVIEWER),
+			array(ROLE_ID_MANAGER, ROLE_ID_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR, ROLE_ID_REVIEWER, ROLE_ID_SUB_EDITOR),
 			array('fetchGrid')
 		);
 	}
