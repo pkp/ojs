@@ -97,6 +97,19 @@ class StopForumSpamPlugin extends GenericPlugin {
 		return parent::getManagementVerbs($verbs);
 	}
 
+	/**
+	 * Provides a hook against the validate() method in the RegistrationForm class.
+	 * This function initiates a curl() call to the Stop Forum Spam API and submits
+	 * the new user data for querying.  If there is a positive match, the method
+	 * inserts a form validation error and returns true, preventing the form from
+	 * validating successfully.
+	 *
+	 * The first element in the $params array is the form object being submitted.
+	 *
+	 * @param $hookName string
+	 * @param $params Array
+	 * @return boolean
+	 */
 	function validateExecute($hookName, $params) {
 
 		$form =& $params[0];
@@ -125,6 +138,20 @@ class StopForumSpamPlugin extends GenericPlugin {
 		curl_setopt($curlCh, CURLOPT_URL, $url);
 
 		$response = curl_exec($curlCh);
+
+		// The API call returns a small XML document that contains an <appears> element for each search parameter.
+		// A sample result would be:
+
+		//	<response success="true">
+		//	<type>ip</type>
+		//	<appears>no</appears>
+		//	<type>email</type>
+		//	<appears>yes</appears>
+		//	<lastseen>2009-06-25 00:24:29</lastseen>
+		//	</response>
+
+		// We can simply look for the element.  It isn't important which parameter matches.  Parameters that are
+		// empty always produce <appears>no</appears> elements.
 
 		if (preg_match('/<appears>yes<\/appears>/', $response)) {
 			$form->addError(__('plugins.generic.stopForumSpam.checkName'), __('plugins.generic.stopForumSpam.checkMessage'));
