@@ -8,66 +8,88 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
-  *
+  * Copyright (c) 2013 Pavel Pisklakov (editing and improving translation). 
   -->
 
 <locale name="ru_RU" full_name = "Russian">
 	<message key="admin.hostedJournals">Журналы на сайте</message>
 	<message key="admin.settings.journalRedirect">Перенаправить</message>
-	<message key="admin.settings.journalRedirectInstructions">Основной страницей сайта станет страница выбранного журнала, если у него основной статус или он единственный на сайте.</message>
+	<message key="admin.settings.options">Параметры</message>
+	<message key="admin.settings.usePaging">Для сайтов с большим количеством журналов разбивать список журналов на несколько страниц.</message>
+	<message key="admin.settings.journalRedirectInstructions">Основной страницей сайта станет главная страница этого журнала. Это полезно, например, если на сайте размещается только один журнал.</message>
 	<message key="admin.settings.noJournalRedirect">Не перенаправлять</message>
-	<message key="admin.languages.primaryLocaleInstructions">Это будет язык по умолчанию для всех журналов на сайте.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Выберите языки поддержки сайта. Выбранные языки будут доступны для всех журналов, расположенных на этом сайте, а также будут доступны для выбора пользователем на каждой странице сайта (что может быть изменено каждым из журналов). Если выбран только один язык, меню переключения языков не появится и журналы, расположенные на сайте, не смогут управлять языковыми настройкам.</message>
-	<message key="admin.locale.maybeIncomplete">Поддержка отмеченных языклв может быть неполной.</message>
-	<message key="admin.languages.confirmUninstall">Вы уверены, что хотите отключить язык? Это может затронуть журналы, которые используют этот язык.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Выберите дополнительные языки для интерфейса. Языки должны быть включены здесь с тем, чтобы можно было использовать их в журналах. Посмотрите документацию.</message>
-	<message key="admin.languages.downloadLocales">Загрузить языки по сети</message>
-	<message key="admin.languages.downloadFailed">Загрузка языков завершилась ошибкой, описанной в сообщениях ниже</message>
-	<message key="admin.languages.localeInstalled">Язык "{$locale}" установлен.</message>
-	<message key="admin.languages.download">Загрузить язык по сети</message>
-	<message key="admin.languages.download.cannotOpen">Невозможно открыть дескриптор языка с сайта PKP.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Невозможно добавить новый язык в каталог языков, обычно файл "registry/locales.xml".</message>
-	<message key="admin.auth.ojs">База пользователей OJS</message>
-	<message key="admin.auth.enableSyncProfiles">Включить синхронизацию учетных записей (если поддерживается этим модулем аутентификации). Учетная запись будет автоматически обновляться из внешнего источника при входе пользователя в систему, а изменения в учетной записи (включая смену пароля), сделанные внутри OJS, будут автоматически внесены во внешний источник. Если эта опция выключена, учетная запись OJS будет храниться независимо от внешнего источника учетных записей.</message>
-	<message key="admin.auth.enableSyncPasswords">Включить функцию изменения пароля (если поддерживается этим модулем аутентификации). Это включает возможность изменения пользователями пароля, используя возможности OJS, а так-же функцию "пароль утерян" для сброса забытого пароля. В противном случае эти функции не будут доступны для учетных записей из этого источника.</message>
-	<message key="admin.auth.enableCreateUsers">Включить создание новых пользователей (если поддерживается этим модулем аутентификации). Созданные средствами OJS пользователи будут автоматически добавлены к удаленной базе учетных записей, если они там еще не существуют. Вдобавок, если этот источник является основным источником учетных записей, пользователи, зарегистрировавшиеся самостоятельно, также будут добавлены к базе.</message>
-	<message key="admin.systemVersion">OJS версия</message>
-	<message key="admin.systemConfiguration">OJS конфигурация</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
-	<message key="admin.journals.journalSettings">Настройки журнала</message>
-	<message key="admin.journals.noneCreated">Нет созданных журналов.</message>
-	<message key="admin.contexts.confirmDelete">Стереть этот журнал навсегда?</message>
-	<message key="admin.contexts.create">Создать журнал</message>
-	<message key="admin.journals.urlWillBe"><![CDATA[Адрес журнала {$path}/&lt;path&gt;]]></message>
-	<message key="admin.contexts.form.titleRequired">Нужно название.</message>
-	<message key="admin.contexts.form.pathRequired">Нужен путь.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">Путь должен содержать только буквы или цифры в сочетании с дефисом.</message>
-	<message key="admin.contexts.form.pathExists">Выбранный путь уже забронирован другим пользователем системы.</message>
-	<message key="admin.journals.enableJournalInstructions">Активировать этот журнал и показать его в списке журналов, размещенных на сайте</message>
-	<message key="admin.journals.journalDescription">Описание журнала</message>
-	<message key="admin.journal.pathImportInstructions">Существующий или новый путь (например "ojs").</message>
-	<message key="admin.journals.importSubscriptions">Импортировать подписку</message>
-	<message key="admin.journals.transcode">Перекодировать метаданные из ISO8859-1</message>
-	<message key="admin.journals.redirect">Генерировать код для переназначения ссылок OJS 1 в ссылки OJS 2</message>
-	<message key="admin.journals.form.importPathRequired">Нужно указать путь.</message>
-	<message key="admin.journals.importErrors">Импорт завершился неудачно</message>
-	<message key="admin.mergeUsers.mergeUser">Объединить</message>
-	<message key="admin.mergeUsers.into.description">Выберите пользователя, которому будут переданы авторство предыдущего пользователя, его редакционные задания, и т.д.</message>
-	<message key="admin.mergeUsers.from.description">Выберите пользователя для слияния его данных с учетной записью другого пользователя (например, когда кто-то завел себе две учетные записи). Учетная запись, выбранная первой, будет стерта, а все связанные с ней статьи, редакционные задания и т.д. будут переданы второму пользователю.</message>
-	<message key="admin.mergeUsers.allUsers">Все пользователи</message>
-	<message key="admin.mergeUsers.confirm">Вы уверены, что хотите слить учетную запись "{$oldUsername}" с учетной записью "{$newUsername}"? Пользователь "{$oldUsername}" будет стерт. Это действие необратимо.</message>
-	<message key="admin.mergerUsers.noneEnrolled">Нет пользователей.</message>
-	<message key="admin.mergeUsers">Слияние пользователей</message>
 	<message key="admin.settings.journalsList">Элементы журнала</message>
+	<message key="admin.settings.journalsList.description">Пожалуйста, выберите элементы журнала, которые будут показываться для каждого журнала на странице сайта.</message>
 	<message key="admin.settings.journalsList.showThumbnail">Миниатюра журнала</message>
 	<message key="admin.settings.journalsList.showTitle">Название журнала</message>
 	<message key="admin.settings.journalsList.showDescription">Описание журнала</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Ваша инсталляция OJS настроена на запись нескольких метрик использования. Статистика использования будет отображаться в нескольких контекстах.
+		Есть случаи, когда должна быть применена только одна статистика использования, например, чтобы отобразить упорядоченный список наиболее используемых статей или отранжировать
+		результаты поиска. Пожалуйста, выберите одну из настроенных метрик в качестве метрики по умолчанию.
+	</message>
+	<message key="admin.languages.confirmDisable">Вы уверены, что хотите отключить этот язык? Это может повлиять на все размещенные журналы, которые сейчас используют его.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Загрузка языковых пакетов с веб-сервера Public Knowledge Project сейчас недоступна, так как:</p>
+	<ul>
+		<li>На вашем сервере утилита «tar» не установлена или не разрешено ее выполнение сервером</li>
+		<li>OJS не может изменить файл списка языков, обычно расположенный «registry/locales.xml».</li>
+	</ul>
+<p>Языковые пакеты могут быть вручную загружены с <a href="http://pkp.sfu.ca">веб-сайта PKP</a>.</p>]]></message>
+
+	<message key="admin.languages.primaryLocaleInstructions">Это будет язык по умолчанию для сайта и всех размещенных на нем журналов.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Выберите все языки для использования на сайте. Выбранные языки будут доступны для всех журналов, расположенных на этом сайте, а также появятся в меню выбора языков на каждой странице сайта (эта настройка может быть изменена на страницах конкретного журнала). Если выбран только один язык, меню переключения языков не появится и дополнительные настройки языка не будут доступны журналам.</message>
+	<message key="admin.locale.maybeIncomplete">Поддержка отмеченных языков может быть неполной.</message>
+	<message key="admin.languages.confirmUninstall">Вы уверены, что хотите удалить этот язык? Это может повлиять на все размещенные журналы, которые сейчас используют его.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Выберите дополнительные языки для установки их поддержки в этой системе. Языки должны быть установлены до того, как их можно будет использовать в размещенных журналах. Смотрите в документации OJS информацию о том, как добавить поддержку новых языков.</message>
+	<message key="admin.languages.downloadFailed">Загрузка языка завершилась ошибкой. Сообщения ниже описывают эту ошибку.</message>
+	<message key="admin.languages.localeInstalled">Язык "{$locale}" был установлен.</message>
+	<message key="admin.languages.download">Загрузить язык</message>
+	<message key="admin.languages.download.cannotOpen">Невозможно открыть дескриптор языка с веб-сайта PKP.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Невозможно добавить новый язык в файл списка языков, обычно расположенный «registry/locales.xml».</message>
+	<message key="admin.auth.ojs">База пользователей OJS</message>
+	<message key="admin.auth.enableSyncProfiles">Включить синхронизацию профилей пользователей (если поддерживается этим модулем аутентификации). Информация профиля пользователя будет автоматически обновляться из внешнего источника при входе пользователя в систему, а изменения в профиле (включая смену пароля), сделанные внутри OJS, будут автоматически внесены во внешний источник. Если эта опция выключена, информация профиля пользователя OJS будет храниться независимо от внешнего источника информации о профиле пользователя.</message>
+	<message key="admin.auth.enableSyncPasswords">Включить изменение пароля пользователя (если поддерживается этим модулем аутентификации). Если эта опция включена, пользователи могут изменять свой пароль в OJS и использовать возможность восстановления пароля OJS для сброса забытого пароля. В противном случае эти функции не будут доступны для пользователей из этого источника аутентификации.</message>
+	<message key="admin.auth.enableCreateUsers">Включить создание новых пользователей (если поддерживается этим модулем аутентификации). Пользователи, созданные средствами OJS с этим источником аутентификации, будут автоматически добавлены во внешний источник аутентификации, если они там отсутствуют. Кроме того, если этот источник является источником аутентификации по умолчанию, учетные записи OJS, созданные путем регистрации пользователей, также будут добавлены к внешнему источнику аутентификации.</message>
+	<message key="admin.systemVersion">Версия OJS</message>
+	<message key="admin.systemConfiguration">Конфигурация OJS</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[Параметры конфигурации OJS из <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.createInstructions">Вы будете автоматически записаны менеджером этого журнала. После создания нового журнала вы будете перенаправлены на мастер настройки, чтобы выполнить первоначальную настройку журнала.</message>
+	<message key="admin.journals.journalSettings">Настройки журнала</message>
+	<message key="admin.journals.noneCreated">Ни один журнал не был создан.</message>
+	<message key="admin.contexts.confirmDelete">Вы уверены, что хотите навсегда удалить этот журнал и все его содержимое?</message>
+	<message key="admin.contexts.create">Создать журнал</message>
+	<message key="admin.journals.urlWillBe">Это должно быть одно короткое слово или аббревиатура, которая идентифицирует журнал. Ажрес журнала будет {$sampleUrl}</message>
+	<message key="admin.contexts.form.titleRequired">Название журнала обязательно.</message>
+	<message key="admin.contexts.form.pathRequired">Путь обязателен.</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">Путь может содержать только буквы и цифры английского алфавита, подчеркивания и дефисы; путь должен начинаться с буквы или цифры.</message>
+	<message key="admin.contexts.form.pathExists">Выбранный путь уже используется другим журналом.</message>
+	<message key="admin.journals.enableJournalInstructions">Активировать этот журнал и показать его в списке журналов, размещенных на сайте</message>
+	<message key="admin.journals.journalDescription">Описание журнала</message>
+	<message key="admin.journal.pathImportInstructions">Существующий путь журнала или новый путь для создания (например, «ojs»).</message>
+	<message key="admin.journals.importSubscriptions">Импортировать подписки</message>
+	<message key="admin.journals.transcode">Перекодировать метаданные статьи из ISO8859-1</message>
+	<message key="admin.journals.redirect">Генерировать код для переназначения адресов OJS 1 в адреса OJS 2</message>
+	<message key="admin.journals.form.importPathRequired">Путь импорта обязателен.</message>
+	<message key="admin.journals.importErrors">Импортирование завершилось неудачей.</message>
+	<message key="admin.mergeUsers">Объединение пользователей</message>
+	<message key="admin.mergeUsers.mergeUser">Объединить</message>
+	<message key="admin.mergeUsers.into.description">Выберите пользователя, которому будут переданы авторство предыдущего пользователя, его редакционные задания, и&nbsp;т.&nbsp;д.</message>
+	<message key="admin.mergeUsers.from.description">Выберите пользователя (или нескольких) для слияния в другую учетную запись пользователя (например, когда кто-то завел себе две учетные записи). Учетная запись (записи), выбранная первой, будет удалена, а все связанные с ней статьи, редакционные задания и&nbsp;т.&nbsp;д. будут присоединены к второй учетной записи.</message>
+	<message key="admin.mergeUsers.allUsers">Все записанные пользователи</message>
+	<message key="admin.mergeUsers.confirm">Вы уверены, что хотите слить выбранные {$oldAccountCount} учетных записей в учетную запись с именем пользователя «{$newUsername}»? Выбранные {$oldAccountCount} учетные записи после этого не будут существовать. Это действие необратимо.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Нет записанных пользователей.</message>
+
+	<!-- Категории -->
 	<message key="admin.categories">Категории</message>
-	<message key="admin.categories.disableCategories">Не организовывать журналы по категориям.</message>
+	<message key="admin.categories.enable.description">Администратор сайта может определить здесь набор категорий, чтобы упростить упорядочение большого количества журналов. Менеджеры журналов затем могут выбрать некоторые из этих категорий для каждого журнала, а читатели смогут просматривать коллекции журналов по категориям.</message>
+	<message key="admin.categories.disableCategories">Не упорядочивать журналы по категориям.</message>
+	<message key="admin.categories.enableCategories">Разрешить менеджерам журналов упорядочивать журналы по категориям.</message>
 	<message key="admin.categories.editTitle">Редактировать категорию</message>
 	<message key="admin.categories.createTitle">Создать категорию</message>
 	<message key="admin.categories.create">Создать новую категорию</message>
+	<message key="admin.categories.noneCreated">Ни одна категория не была создана.</message>
 	<message key="admin.categories.confirmDelete">Вы уверены, что хотите удалить эту категорию?</message>
 	<message key="admin.categories.name">Название</message>
-	<message key="admin.categories.nameRequired">Необходимо указать название категории.</message>
+	<message key="admin.categories.nameRequired">Название категории обязательно.</message>
+	<message key="admin.presses.createInstructions">Вы будете автоматически записаны менеджером этого журнала. После создания нового журнала вы будете перенаправлены на мастер настройки, чтобы выполнить первоначальную настройку журнала.</message>
 </locale>
