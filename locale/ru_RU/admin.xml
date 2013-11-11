@@ -58,7 +58,7 @@
 	<message key="admin.journals.noneCreated">Ни один журнал не был создан.</message>
 	<message key="admin.contexts.confirmDelete">Вы уверены, что хотите навсегда удалить этот журнал и все его содержимое?</message>
 	<message key="admin.contexts.create">Создать журнал</message>
-	<message key="admin.journals.urlWillBe">Это должно быть одно короткое слово или аббревиатура, которая идентифицирует журнал. Ажрес журнала будет {$sampleUrl}</message>
+	<message key="admin.journals.urlWillBe">Это должно быть одно короткое слово или аббревиатура, которая идентифицирует журнал. Адрес журнала будет {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Название журнала обязательно.</message>
 	<message key="admin.contexts.form.pathRequired">Путь обязателен.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Путь может содержать только буквы и цифры английского алфавита, подчеркивания и дефисы; путь должен начинаться с буквы или цифры.</message>
