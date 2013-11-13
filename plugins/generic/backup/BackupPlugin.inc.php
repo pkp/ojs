@@ -166,7 +166,7 @@ class BackupPlugin extends GenericPlugin {
 	/**
 	 * @see Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
+	function manage($verb, $args, &$message, &$messageParams) {
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting(0, 'enabled', true);
