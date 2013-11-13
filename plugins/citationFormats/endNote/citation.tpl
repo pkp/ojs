@@ -34,7 +34,7 @@
 {/if}
 {if $issue->getShowNumber()}%N {$issue->getNumber()|escape}
 {/if}
-{if $currentJournal->getSetting('onlineIssn')}%@ {$currentJournal->getSetting('onlineIssn')}|escape}
-{elseif $currentJournal->getSetting('printIssn')}%@ {$currentJournal->getSetting('printIssn')}|escape}
+{if $currentJournal->getSetting('onlineIssn')}%@ {$currentJournal->getSetting('onlineIssn')|escape}
+{elseif $currentJournal->getSetting('printIssn')}%@ {$currentJournal->getSetting('printIssn')|escape}
 {/if}
 
