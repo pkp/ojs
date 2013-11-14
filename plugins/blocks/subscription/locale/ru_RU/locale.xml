@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.block.subscription.displayName">Блок подписки</message>
 	<message key="plugins.block.subscription.description">Показывает информацию о подписке на боковой панели.</message>
 	<message key="plugins.block.subscription.blockTitle">Подписка</message>

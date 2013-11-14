@@ -208,4 +208,15 @@
 	<message key="editor.issues.galley">Гранка выпуска</message>
 	<message key="editor.issues.viewingGalley">Просмотр гранки выпуска</message>
 	<message key="editor.issues.issueGalleysDescription">Публиковать гранки с полным содержанием выпуска</message>
+	<message key="editor.reassign">Reassign</message>
+	<message key="editor.publicIdentificationExists">The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or supplementary file). Please choose unique identifiers within your journal.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</message>
+	<message key="editor.submissionReview.sendToCopyediting">Send to Copyediting</message>
+	<message key="editor.notifyUsers.allMailingList">Include all emails on the mailing list ({$count} emails)</message>
+	<message key="editor.issues.noneIssueGalleys">No issue galleys have been published.</message>
+	<message key="editor.issues.galleyLabelRequired">An issue galley label is required.</message>
+	<message key="editor.issues.galleyLocaleRequired">An issue galley locale is required.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Public issue galley identification already exists.</message>
+	<message key="editor.issues.backToIssueGalleys">Back to issue galleys</message>
+	<message key="editor.issues.confirmDeleteGalley">Are you sure you want to delete this issue galley?</message>
 </locale>

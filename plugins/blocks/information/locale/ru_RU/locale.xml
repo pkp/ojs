@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.block.information.displayName">Информационный блок</message>
 	<message key="plugins.block.information.description">Добавляет к боковой панели ссылку на информацию.</message>
 	<message key="plugins.block.information.link">Информация</message>

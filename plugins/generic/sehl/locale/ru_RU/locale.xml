@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.sehl.name">Модуль SEHL</message>
 	<message key="plugins.generic.sehl.description">Этот модуль реализует подстветку ключевых слов, использованных при поиске страницы. При его использовании и нахождении статьи в журнале через поисковик, использованные ключевые слова будут подсвечены.</message>
 </locale>

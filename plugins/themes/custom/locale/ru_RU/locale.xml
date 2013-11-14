@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.theme.custom.name">Модуль тем</message>
 	<message key="plugins.theme.custom.description">Этот модуль реализует настраиваемую тему.</message>
 	<message key="plugins.theme.custom.notWritable">Примечание: Стилевой файл этого модуля "{$stylesheetFileLocation}" защищен от записи. Для работы должна быть возможность его изменения.</message>

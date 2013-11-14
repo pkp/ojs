@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.roundedcorners.displayName">Скругленные углы</message>
 	<message key="plugins.generic.roundedcorners.description">Этот модуль устанавливает фон на каждом блоке боковых панелей и скругляет его углы. Цвета можно изменить путем редактирования стилевого CSS файла, поставляемого с модулем.</message>
 </locale>

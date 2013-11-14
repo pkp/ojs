@@ -109,4 +109,11 @@ XML документа.
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">Источник дополнительного файла  ("{$suppFileTitle}") к статье "{$articleTitle}"  выпуска "{$issueTitle}" указан на языке  ("{$locale}"), который данным журналом не поддерживается.</message>
 	<message key="plugins.importexport.native.import.success">Импорт успешно завершен</message>
 	<message key="plugins.importexport.native.import.success.description">Импорт успешно завершен. Импортированные элементы указаны ниже.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">The public ID given for the import galley "{$publicId}" is already in use by another galley for the same article, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">The public ID given for the import supplementary file "{$suppFileTitle}" is already in use by another supplementary file for the same article, "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">The public ID given for the import article "{$articleTitle}" is already in use by another article, "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">An author affiliation was provided for the author "{$authorFullName}" of the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.invalidPubId">Your import file contains a dataset with an invalid {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Your import file contains a dataset with {$pubIdType} '{$pubId}' that already exists for another object in the database. Please make sure that you never import objects with IDs that already exist in the database.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Your import file contains a dataset with an ID-type '{$pubIdType}' that no ID-plugin can handle. Please install and/or activate the corresponding ID plug-in before trying to import this dataset.</message>
 </locale>

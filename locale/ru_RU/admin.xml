@@ -28,9 +28,9 @@
 	<message key="admin.languages.download.cannotOpen">Невозможно открыть дескриптор языка с сайта PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Невозможно добавить новый язык в каталог языков, обычно файл "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">База пользователей OJS</message>
-	<message key="admin.auth.enableSyncProfiles">Включить синхронизацию учетных записей (если поддерживается этим модулем аутентификации). Учетная запись будет автоматически обновляться из внешнего источника при входе пользователя в систему, а изменения в учетной записи (включая смену пароля), сделанные внутри OJS, будут автоматически внесены во внешний источник. Если эта опция выключена, учетная запись OJS будет храниться независимо от внешнего источника учетных записей.</message>
-	<message key="admin.auth.enableSyncPasswords">Включить функцию изменения пароля (если поддерживается этим модулем аутентификации). Это включает возможность изменения пользователями пароля, используя возможности OJS, а так-же функцию "пароль утерян" для сброса забытого пароля. В противном случае эти функции не будут доступны для учетных записей из этого источника.</message>
-	<message key="admin.auth.enableCreateUsers">Включить создание новых пользователей (если поддерживается этим модулем аутентификации). Созданные средствами OJS пользователи будут автоматически добавлены к удаленной базе учетных записей, если они там еще не существуют. Вдобавок, если этот источник является основным источником учетных записей, пользователи, зарегистрировавшиеся самостоятельно, также будут добавлены к базе.</message>
+	<message key="admin.auth.enableSyncProfiles">Включить синхронизацию учётных записей (если поддерживается этим модулем аутентификации). Учётная запись будет автоматически обновляться из внешнего источника при входе пользователя в систему, а изменения в учётной записи (включая смену пароля), сделанные внутри OJS, будут автоматически внесены во внешний источник. Если эта опция выключена, учётная запись OJS будет храниться независимо от внешнего источника учётных записей.</message>
+	<message key="admin.auth.enableSyncPasswords">Включить функцию изменения пароля (если поддерживается этим модулем аутентификации). Это включает возможность изменения пользователями пароля, используя возможности OJS, а так-же функцию "пароль утерян" для сброса забытого пароля. В противном случае эти функции не будут доступны для учётных записей из этого источника.</message>
+	<message key="admin.auth.enableCreateUsers">Включить создание новых пользователей (если поддерживается этим модулем аутентификации). Созданные средствами OJS пользователи будут автоматически добавлены к удаленной базе учётных записей, если они там еще не существуют. Вдобавок, если этот источник является основным источником учётных записей, пользователи, зарегистрировавшиеся самостоятельно, также будут добавлены к базе.</message>
 	<message key="admin.systemVersion">OJS версия</message>
 	<message key="admin.systemConfiguration">OJS конфигурация</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
@@ -53,10 +53,10 @@
 	<message key="admin.journals.form.importPathRequired">Нужно указать путь.</message>
 	<message key="admin.journals.importErrors">Импорт завершился неудачно</message>
 	<message key="admin.mergeUsers.mergeUser">Объединить</message>
-	<message key="admin.mergeUsers.into.description">Выберите пользователя, которому будут переданы авторство предыдущего пользователя, его редакционные задания, и т.д.</message>
-	<message key="admin.mergeUsers.from.description">Выберите пользователя для слияния его данных с учетной записью другого пользователя (например, когда кто-то завел себе две учетные записи). Учетная запись, выбранная первой, будет стерта, а все связанные с ней статьи, редакционные задания и т.д. будут переданы второму пользователю.</message>
+	<message key="admin.mergeUsers.into.description">Выберите пользователя, которому будут переданы авторство предыдущего пользователя, его редакционные задания, и т. д.</message>
+	<message key="admin.mergeUsers.from.description">Выберите пользователя для слияния его данных с учётной записью другого пользователя (например, когда кто-то завёл себе две учётные записи). Учётная запись, выбранная первой, будет стёрта, а все связанные с ней статьи, редакционные задания и т. д. будут переданы второму пользователю.</message>
 	<message key="admin.mergeUsers.allUsers">Все пользователи</message>
-	<message key="admin.mergeUsers.confirm">Вы уверены, что хотите слить учетную запись "{$oldUsername}" с учетной записью "{$newUsername}"? Пользователь "{$oldUsername}" будет стерт. Это действие необратимо.</message>
+	<message key="admin.mergeUsers.confirm">Вы уверены, что хотите слить учётную запись "{$oldUsername}" с учётной записью "{$newUsername}"? Пользователь "{$oldUsername}" будет стерт. Это действие необратимо.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Нет пользователей.</message>
 	<message key="admin.mergeUsers">Слияние пользователей</message>
 	<message key="admin.settings.journalsList">Элементы журнала</message>
@@ -71,4 +71,14 @@
 	<message key="admin.categories.confirmDelete">Вы уверены, что хотите удалить эту категорию?</message>
 	<message key="admin.categories.name">Название</message>
 	<message key="admin.categories.nameRequired">Необходимо указать название категории.</message>
+	<message key="admin.settings.options">Настройки</message>
+	<message key="admin.settings.usePaging">На сайтах с большим количеством журналов разбить список журналов на несколько страниц.</message>
+	<message key="admin.settings.useAlphalist">На сайтах с большим количеством журналов показать алфавитный указатель на главной странице, что позволит быстрее найти нужный журнал.</message>
+	<message key="admin.settings.journalsList.description">Выберите элементы, которые будут показаны для каждого журнала на страницах сайта.</message>
+	<message key="admin.categories.noneCreated">Категории не были созданы.</message>
+	<message key="admin.settings.defaultMetricDescription">Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in severeral contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.</message>
+	<message key="admin.categories.enable.description">The Site Administrator may choose to define a set of categories here to help organize large sets of journals. Journal Managers may then choose several of these categories for each journal, and readers can browse journal collections by category.</message>
+	<message key="admin.categories.enableCategories">Permit Journal Managers to organize journals into categories.</message>
 </locale>

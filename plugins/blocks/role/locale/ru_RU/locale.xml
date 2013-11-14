@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.block.role.displayName">Блок, специфичный для роли</message>
 	<message key="plugins.block.role.description">Этот модуль добавляет на боковую панель информацию, имеющую отношение к роли пользователя (количество рукописей, быстрые ссылки для редакторов, авторов, и т.д.)</message>
 </locale>

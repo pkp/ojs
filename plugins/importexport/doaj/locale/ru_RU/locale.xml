@@ -11,7 +11,7 @@
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.importexport.doaj.displayName">Модуль экспорта в DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Экспортирвать журнал для DOAJ и сообщить представителю DOAJ информацию о журнале</message>
 
@@ -19,4 +19,6 @@
 	<message key="plugins.importexport.doaj.export">Экспортировать данные журнала в DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Экспортировать журнал</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Экспортировать статьи в XML для архивации в DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contact">Contact DOAJ for inclusion</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">For your journal's consideration in the DOAJ, please submit this partially autofilled form to the DOAJ, and fill out incomplete information as best you can.</message>
 </locale>

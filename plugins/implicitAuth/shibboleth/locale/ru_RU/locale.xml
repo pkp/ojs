@@ -13,7 +13,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
 	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Действие этого модуля распространяется на весь сайт, он включается в файле конфигурации OJS.</message>
 </locale>

@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.referral.name">Модуль обратных ссылок</message>
 	<message key="plugins.generic.referral.description">Модуль обратных ссылок отслеживает ссылки, приведшие на статьи в журнале (например, когда читатель приходит на статью с другого сайта), позволяя авторам смотреть и, по желанию, публиковать автоматический список тех, кто сослался на статью.</message>
 	
@@ -31,4 +31,12 @@
 	<message key="plugins.generic.referral.confirmDelete">Уверены, что хотите удалить эту обратную ссылку?</message>
 	<message key="plugins.generic.referral.nameRequired">Требуется ввести имя ссылки.</message>
 	<message key="plugins.generic.referral.urlRequired">Требуется ввести URL.</message>
+	<message key="plugins.generic.referral.status.accepted">Опубликовано</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Are you sure you wish to publish the selected refback(s)?</message>
+	<message key="plugins.generic.referral.status.declined">Ignored</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Are you sure you wish to ignore the selected refback(s)?</message>
+	<message key="plugins.generic.referral.settings">Referral Plugin Settings</message>
+	<message key="plugins.generic.referral.settings.description">The Referral Plugin captures URLs that link to articles published within this journal so that they can be curated by the author and optionally published. This form allows the Journal Manager to control how these links are captured.</message>
+	<message key="plugins.generic.referral.excusions">Исключения</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Enter a list of regular expression patterns, one per line, to be treated as exclusions for referral logging. This can be used to prevent search engine requests from cluttering the list of referrals. For more information on regular expressions, see <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
 </locale>

@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.gateways.metsGateway.displayName">Модуль интерфейса METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Настройки</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Этот модуль генерирует данные в XML формате METS для указанного журнала. <strong>ПРИМЕЧАНИЕ: Этот модуль предназначен для внутреннего пользования, его включение предоставляет неограниченный доступ к журналу в формате XML (содержимое кодировано base64).</strong>]]></message>

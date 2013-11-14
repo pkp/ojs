@@ -69,4 +69,5 @@
 	<message key="plugins.generic.translator.saveBeforeContinuing">Перед тем как продолжить, удостоверьтесь, что Вы сохранили все изменения на этой странице, иначе они будут утеряны. Хотите продолжить? Если да, все несохраненные изменения будут утеряны.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Этот файл перевода защищен от записи на сервере, изменения не могут быть сохранены.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Эти файлы перевода защищены от записи на сервере, изменения не могут быть сохранены.</message>
+	<message key="plugins.generic.translator.tarMissing">Функция экспорта этого плагина была отключена потому что указанная в конфигурационном файле программа tar не найдена в системе. Убедитесь, что программа tar установлена, после чего укажите путь к ней в секции [cli] файла config.inc.php.</message>
 </locale>

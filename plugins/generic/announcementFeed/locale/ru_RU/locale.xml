@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.announcementfeed.displayName">Модуль ленты объявлений</message>
 	<message key="plugins.generic.announcementfeed.description">Модуль производит ленту в формате RSS/Atom, которая содержит объявления журнала.</message>
 	

@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.thesisfeed.displayName">Модуль тезисов диссертаций</message>
 	<message key="plugins.generic.thesisfeed.description">Модуль производит новостную ленту в формате RSS/Atom, содержащую тезисы диссертаций.</message>
 

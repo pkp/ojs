@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.openads.description">Модуль OpenAds позволяет вставлять динамическую рекламу с сервера OpenAds на страницы OJS.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Модуль OpenAds позволяет вставлять динамическую рекламу с сервера OpenAds на страницы OJS. <strong>Пожалуйста ознакомьтесь с файлом README в plugins/generic/openAds для информации по работе этого модуля.</strong>]]></message>
 	<message key="plugins.generic.openads">Модуль OpenAds</message>

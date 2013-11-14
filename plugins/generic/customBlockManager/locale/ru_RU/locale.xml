@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.customBlockManager.displayName">Модуль собственных блоков</message>
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Вы можете использовать этот модуль для создания и удаления собственных модулей блоков.  После этого содержание блока можно отредактировать на странице <a href="{$systemPluginsUrl}">Системные Модули</a> (в разделе модулей блоков).  Для размещения Вашего модуля в требуемое место на боковой панели смотрите <a href="{$setupStep56}">Шаг 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Настройки</message>
@@ -27,4 +27,5 @@
 	<message key="plugins.generic.customBlock.editContent">Редактировать содержимое боковой панели</message>
 	<message key="plugins.generic.customBlock.contentRequired">Требуется некоторое содержимое. Если хотите удалить блок, это можно сделать при помощи модуля собственных блоков или выключением этого блока на шаге 5 установки журнала.</message>
 	<message key="plugins.generic.customBlock.edit">Редактировать</message>
+	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
 </locale>

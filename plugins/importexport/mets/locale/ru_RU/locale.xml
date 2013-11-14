@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.importexport.METSExport.displayName">Модуль экспорта в METS XML</message>
 	<message key="plugins.importexport.METSExport.description">Экспортирует журналы в METS XML</message>
 	<message key="plugins.importexport.METSExport.settings">Настройки</message>

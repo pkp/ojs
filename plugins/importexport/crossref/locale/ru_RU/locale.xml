@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.importexport.crossref.displayName">Экспорт в формате CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Экспорт метаданны статей в формате CrossRef XML.</message>
 	

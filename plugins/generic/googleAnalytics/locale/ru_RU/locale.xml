@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Модуль Google Analytics</message>
@@ -29,4 +29,6 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Старый код (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Новый код (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Номер учетной записи Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">To track published article readership using Google Analytics, enter an account number here (e.g. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">One or more Google Analytics account numbers entered for submission authors are not valid.</message>
 </locale>

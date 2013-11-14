@@ -121,4 +121,9 @@
 	<message key="author.article.copyeditedFile">Редактированный Файл</message>
 	<message key="author.article.authorRevisedFile">Авторский Файл</message>
 	<message key="author.submit.authorSubmitLoginMessage">Для отправки статьи в этот журнал требуется регистрация. Это позволяет нашим редакторам связаться с Вами, когда статус Ваших статей меняется или требуется дополнительная информация.</message>
+	<message key="author.submit.submissionLocale">Submission Language</message>
+	<message key="author.submit.submissionLocaleDescription">This journal accepts submissions in several languages. Choose the primary language of the submission from the pulldown below.</message>
+	<message key="author.submit.form.localeRequired">Please select a submission language.</message>
+	<message key="author.submit.submissionSupportingAgencies">Contributors and Supporting Agencies</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies (a person, an organization, or a service) that made contributions to the content or provided funding or support for the work presented in this submission. Separate them with a semi-colon (e.g. John Doe, Metro University; Master University, Department of Computer Science).</message>
 </locale>

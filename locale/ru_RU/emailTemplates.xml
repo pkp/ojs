@@ -541,16 +541,15 @@ Thank you for completing the proofreading corrections for the galleys associated
 {$principalContactSignature}</body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Добро пожаловать в список рассылки {$siteTitle} !</subject>
+		<subject>Добро пожаловать в список рассылки {$siteTitle}!</subject>
 		<body>Вы подписались на получение извещений с сайта {$siteTitle}.
 
 Пожалуйста нажмите на ссылку для подтверждения своего запроса и добавления Вашего почтового адреса в список рассылки: {$confirmLink}
 
 Если не хотите получать извещения, пожалуйста нажмите на ссылку {$unsubscribeLink}  и введите свой почтовый адрес и пароль.
 
-Пароль для отключения извещений: {$password}
-
 {$principalContactSignature}</body>
+		<description>Это письмо послано незарегистрированному пользователю, который только что registered with the notification mailing list.</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>Подтвердите свой электронный адрес</subject>
@@ -816,5 +815,33 @@ IP адреса (если указаны):
 Для просмотра или изменения этой подписки используйте следующую ссылку.
 
 Ссылка на подписку: {$subscriptionUrl}</body>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Article Review Request</subject>
+		<body>{$reviewerName}:
+
+This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+
+Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
+
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
+
+The review itself is due {$reviewDueDate}.
+
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+
+Submission URL: {$submissionReviewUrl}
+
+Thank you for considering this request.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
 </email_texts>
