@@ -408,13 +408,13 @@
 	<message key="manager.plugins.deleteConfirm">Вы уверены, что хотите удалить этот модуль с файловой системы ?</message>
 	<message key="manager.plugins.uploadError">Ошибка загрузки файла</message>
 	<message key="manager.plugins.fileSelectError">Пожалуйста выберите сначала файл</message>
-	<message key="manager.plugins.versionFileNotFound">В директории модуля не найден файл Version.xml .</message>
-	<message key="manager.plugins.copyError">Копирование модуля завершилось с ошибкой</message>
+	<message key="manager.plugins.versionFileNotFound">В директории модуля не найден файл version.xml .</message>
+	<message key="manager.plugins.copyError">Копирование модуля завершилось с ошибкой. This may be a permissions problem. Please make sure that the web server is able to write to the plugins directory (including subdirectories) but don't forget to secure it again later.</message>
 	<message key="manager.plugins.pleaseUpgrade">Такой модуль уже установлен, но его версия старше загружаемой. Пожалуйста воспользуйтесь функцией обновления.</message>
 	<message key="manager.plugins.installedVersionOlder">Модуль уже установлен и его версия более старая (или такая-же), чем загружаемая.</message>
 	<message key="manager.plugins.installedVersionNewer">Модуль уже установлен и его версия более новая (или такая-же), чем загружаемая.</message>
 	<message key="manager.plugins.pleaseInstall">Модуль не установлен. Пожалуйста воспользуйтесь функцией установки</message>
-	<message key="manager.plugins.deleteError">Не удается удалить модуль с файловой системы</message>
+	<message key="manager.plugins.deleteError">Не удается удалить модуль с файловой системы. This may be a permissions problem. Please make sure that the web server is able to write to the plugins directory (including subdirectories) but don't forget to secure it again later.</message>
 	<message key="manager.plugins.doesNotExist">Модуль не существует</message>
 	<message key="manager.plugins.installSuccessful">Модуль успешно установлен</message>
 	<message key="manager.plugins.upgradeSuccessful">Модуль успешно обновлен</message>
