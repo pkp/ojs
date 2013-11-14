@@ -7,11 +7,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Deutsch (Deutschland)) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Deutsch (Deutschland)">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.theme.custom.name">Redigerbart tema plugin</message>
 	<message key="plugins.theme.custom.description">Dette plugin implementerer et redigerbart tema.</message>
 	<message key="plugins.theme.custom.notWritable">NOTE: Dette plugin's stylesheet fil, "{$stylesheetFileLocation}", er ikke redigerbar for nærværende. Denne fil skal gøres redigerbar før plugin'et kan bruges.</message>

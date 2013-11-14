@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Polski">
+	<message key="plugins.generic.translator.name">Translator</message>
+	<message key="plugins.generic.translator.description"><![CDATA[<span style="color: #00F";>Wtyczka umożliwia zarządzanie oraz edycję tłumaczeń z poziomu systemu (przeglądarki)</span>]]></message>
+	<message key="plugins.generic.translator.longdescription">This area allows the Site Administrator to build, modify and check translations of OJS. This is site-wide and should not be used to customize a single OJS journal. If you correct or create a translation, please consider submitting it to the Public Knowledge Project for distribution with future releases.</message>
+	<message key="plugins.generic.translator.localeDescription">This page lists all components of an OJS translation and provides the translator with the opportunity to edit each. A full translation of a translation should contain complete translations of all components.</message>
+	
+	<message key="plugins.generic.translator.tarMissing">The export function of this plugin has been deactivated because the configured tar binary cannot be found on this system. Please make sure that you have the tar program installed and then configure the path to the tar binary in config.inc.php's [cli] section!</message>
+	
+	<message key="plugins.generic.translator.localeName">Język</message>
+	<message key="plugins.generic.translator.localeKey">Klucz</message>
+	<message key="plugins.generic.translator.localeKey.description">Wpisz cały klucz aby wyszukać.</message>
+	<message key="plugins.generic.translator.localeKeyValue">Wartość</message>
+	<message key="plugins.generic.translator.translate">Przetłumacz</message>
+	<message key="plugins.generic.translator.availableLocales">Dostępne języki</message>
+	<message key="plugins.generic.translator.check">Sprawdź</message>
+
+	<message key="plugins.generic.translator.errors">Błędy tłumaczenia</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Brakujące klucze</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Nadmiarowe klucze</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Differing Parameter Lists</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Brakujące pliki tłumaczeń</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Brakujące e-maile</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Nadmiarowe e-maile</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Differing Email Parameter Lists</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Klucz "{$key}" jest nieobecny w pliku "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Klucz "{$key}" nie jest już używany i może zostać usunięty z "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Klucz "{$key}" w pliku "{$filename}" różni się od wersji referencyjnej sposobem wykorzystania parametrów. Błędne wpisy to:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Plik tłumaczenia "{$filename}" nie istnieje.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Wiadomość e-mail "{$key}" nie istnieje.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">Wiadomość e-mail "{$key}" nie jest używana i może zostać usunięta.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Wiadomość e-mail "{$key}" różni się od wersji referencyjnej sposobem wykorzystania parametrów. Błędy występują w:</message>
+
+	<message key="plugins.generic.translator.locale">Język {$locale}</message>
+	<message key="plugins.generic.translator.localeFiles">Pliki języka</message>
+	<message key="plugins.generic.translator.miscFiles">Dodatkowe pliki</message>
+	<message key="plugins.generic.translator.emails">Szablony e-mail</message>
+	<message key="plugins.generic.translator.file.filename">Nazwa pliku</message>
+	<message key="plugins.generic.translator.file.edit">Edycja {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Edycja {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Wersja referencyjna</message>
+	<message key="plugins.generic.translator.file.translation">Tłumaczenie</message>
+	<message key="plugins.generic.translator.email.reference">Wersja referencyjna</message>
+	<message key="plugins.generic.translator.email.translation">Tłumaczenie</message>
+	<message key="plugins.generic.translator.file.reset">Resetuj</message>
+	<message key="plugins.generic.translator.file.resetToReference">Resetuj do wersji referencyjnej</message>
+	<message key="plugins.generic.translator.email.reset">Resetuj</message>
+	<message key="plugins.generic.translator.email.resetToReference">Resetuj do wersji referencyjnej</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Zresetować zawartość pliku?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Zresetować zwartość e-mail?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Plik nie został jeszcze przetłumaczony.</message>
+	<message key="plugins.generic.translator.file.confirmCreate">Plik "{$filename}" utworzony według wersji angielskiej. Będziesz musiał przetłumaczyć wszystkie klucze widoczne w pliku. Kontynuować?</message>
+	<message key="plugins.generic.translator.email.description">Przetłumacz tytuł, treść oraz opis dla szablonu.</message>
+	<message key="plugins.generic.translator.confirmDelete">Usunąć element?</message>
+	<message key="plugins.generic.translator.deleteKey">Usuń klucz</message>
+	<message key="plugins.generic.translator.deleteEmail">Usuń e-mail</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Upewnij się, że zapisałeś wszystkie zmiany wprowadzone na tej stronie. W innym wypadku zostaną one utracone.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Serwer nie może zapisać pliku tłumaczeń. Wszystkie wprowadzone zmiany zostaną utracone.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">Serwer nie może zapisać plików tłumaczeń. Wszystkie wprowadzone zmiany zostaną utracone.</message>
+</locale>

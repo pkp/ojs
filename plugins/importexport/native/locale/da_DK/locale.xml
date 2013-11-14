@@ -7,11 +7,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Dutch) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
 
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.importexport.native.displayName">Artikler og numre XML Plugin</message>
 	<message key="plugins.importexport.native.description">Importer og eksporter artikler og numre</message>
 
@@ -124,4 +124,10 @@ De følgende formater accepteres:
 	<message key="plugins.importexport.native.import.success.description">Importen lykkedes. De importerede elementer er listet fornneden.</message>
 
 	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Der blev angivet et forfattertilhørsforhold for forfatteren "{$authorFullName}" til artiklen "{$articleTitle}" i nummeret "{$issueTitle}" i en landestandard ("{$locale}"), som denne journal ikke understøtter.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">Det importerede satsskibs ID "{$publicId}" er allerede anvendt på et andet satsskib i den samme artikel, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">Den importerede supplerende fils ID "{$suppFileTitle}" er allerede anvendt på en anden supplerende fil fra samme artikel, "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">Den importerede artikels ID "{$articleTitle}" er allerede anvendt på an anden artikel, "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidPubId">Den importerede fil indeholder data med en ugyldig {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Den importerede fil indeholder data med {$pubIdType} '{$pubId}', der allerede er anvendt på andet materiale i databasen. Vær opmærksom på, at du aldrig importerer materiale med ID, der allerede eksisterer i databasen.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Den importerede fil indeholder data med en ID-type '{$pubIdType}', som intet ID-plug-in kan håndtere. Installér og/eller aktivér et plug-in, der er i overensstemmelse med filens data, inden du igen prøver at importere filen.</message>
 </locale>

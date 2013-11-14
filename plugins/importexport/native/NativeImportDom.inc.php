@@ -661,7 +661,7 @@ class NativeImportDom {
 				$errors[] = array('plugins.importexport.native.import.error.duplicatePublicArticleId', array('articleTitle' => $article->getLocalizedTitle(), 'otherArticleTitle' => $anotherArticle->getLocalizedTitle()));
 				$hasErrors = true;
 			} else {
-				$issue->setStoredPubId('publisher-id', $value);
+				$article->setStoredPubId('publisher-id', $value);
 			}
 		}
 

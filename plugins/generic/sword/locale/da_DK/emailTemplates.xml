@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="da_DK">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>Deponeringsmeddelelse</subject>
+		<body>Tillykke med, at dit bidrag "{$articleTitle}" er blevet accepteret til udgivelse i {$journalName}. Hvis du ønsker det, kan du automatisk deponere dit bidrag på et eller flere lagringssteder.
+
+Gå til {$swordDepositUrl} for at fortsætte.
+
+Denne e-mail blev genereret af SWORD-deponerings-plugin i Open Journal Systems.</body>
+		<description>Denne e-mail-skabelon anvendes til at underrette en forfatter om deponeringssteder til valgfri SWORD-deponeringer.</description>
+	</email_text>
+</email_texts>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/pubIds/doi/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOI plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Este plugin habilita la asignación de Identificadores de Objetos Digitales para números, artículos, versiones galeradas y archivos complementarios en OJS.</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Configuración de Plugin DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Por favor configure el plugin DOI para poder gestionar y utilizar DOIs en OJS:</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Contenido de la Revista</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Por favor escoja los objetos a los que les será asignado un DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">Por favor seleccione los objetos publicados que tendrán asignados Identificadores de Objetos Digitales (DOI):</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Números</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Artículos</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Versiones Galeradas</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Archivos Complementarios</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Prefijos DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[Los prefijos DOI asignados por agencias de registro (e.g. <a href="http://www.crossref.org" target="_new">CrossRef</a>) y que están en formato  10.xxxx (e.g. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">El prefijo DOI es mandatario y debe ser en el formato 10.xxxx.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Sufijo DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Un sufijo DOI puede tomar cualquier formato, pero debe ser único entre todos los objetos publicados con el mismo prefijo DOI asignado:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Use el patrón introducido a continuación para generar los sufijos DOI. Use %j para las iniciales de las revistas, %v para el número de volumen, %i para el número, %Y para el año, %a para el ID de artículo en OJS, %g para el ID de versión galerada en OJS, %s para el ID de archivo complementario en OJS y %p para el número de página.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">para números</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">para artículos</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">para versiones galeradas.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">para archivos complementarios.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Por ejemplo, vol%viss%ipp%p puede crear un DOI tal como 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Usar los patrones por defecto.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i para números<br />%j.v%vi%i.%a para artículos<br />%j.v%vi%i.%a.g%g para versiones galeradas <br />%j.v%vi%i.%a.s%s para artículos complementarios.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Use el "Identificador Personalizado" para items publicados como el sufijo DOI ( debe ser habilitado en el paso 4). Este es el mismo identificador que será usado para las URLs públicas.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Introduzca un sufijo DOI individual para cada item publicado, independiente  y diferente del "Identificador personalizado" mencionado en la opción previa. Encontrará un campo adicional para el DOI en cada página de metadatos de item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Por favor introduzca el patrón de sufijos DOI para los números.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Por favor introduzca el patrón de sufijos DOI para los artículos.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Por favor introduzca el patrón de sufijos DOI para las versiones galeradas.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Por favor introduzca el patrón de sufijos DOI para los archivos complementarios.</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Reasignar DOIs</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Si cambia la configuración DOI, aquellos DOI que ya fueron asignados no se verán afectados. Una vez que la configuración DOI es guardada, use este botón para borrar todos los DOIs existentes para que las configuraciones nuevas tengan efecto en los artículos existentes.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">¿Está seguro de querer eliminar todos los DOIs existentes?</message>	
+
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">numero</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">artículo</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">versión galerada</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">artículo complementario</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Lo que está viendo es una vista previa del DOI, que puede estar incompleto.El DOI todavía no fue generado. Al publicar el número y al ver la página pública ({$pubObjectType}) se generará automáticamente un DOI único para este {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">El sufijo DOI introducido ya esta en uso para otro item público. Por favor introduzca un sufijo DOI único para cada item</message>
+</locale>

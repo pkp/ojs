@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/lucene/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS solr/lucene search plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.lucene.displayName">Plugin de Búsqueda Lucene</message>
+	<message key="plugins.generic.lucene.description">El plugin Lucene provee soporte multi-lenguaje, resultados relevantes de búsqueda avanzada, indexación rápida, mejor escalabilidad y más.</message>
+	<message key="plugins.generic.lucene.settings">Configuración</message>
+	<message key="plugins.generic.lucene.settings.description"><![CDATA[<p>El plugin Lucene accede al índice de búsqueda Lucene a través de un servidor Solr. </p>
+		<p><strong>Por favor, asegúrese de leer el archivo README del plugin (plugins/generic/lucene/README) antes de intentar cambiar la configuración por defecto</strong></p>
+		<p>Si esta usando el escenario embebido detrás de un firewall, como se explica en el README, probablemente debería dejar todas las configuraciones por defecto.</p>]]></message>
+	<message key="plugins.generic.lucene.settings.instId">ID de instalación única</message>
+	<message key="plugins.generic.lucene.settings.instIdRequired">Por favor introduzca el ID que identifica univocamente esta instalación de OJS en el servidor de búsqueda Solr.</message>
+	<message key="plugins.generic.lucene.settings.instIdInstructions">Si esta usando un servidor central de búsqueda, entonces debería proveer de un ID único de instalación para toda instalación de OJS que comparta el mismo índice de búsqueda. Esta puede ser un texto arbitrario, pero debe ser diferente para cada servidor OJS participante. (EJ: la IP estática del servidor si se tiene una sola instalación de OJS por servidor).</message>
+	<message key="plugins.generic.lucene.settings.luceneSettings">Plugin Lucene: Configuraciones de servidor Solr</message>
+	<message key="plugins.generic.lucene.settings.password">Clave</message>
+	<message key="plugins.generic.lucene.settings.passwordInstructions">Por favor introduzca  una clave para el serivdor Sorlr.</message>
+	<message key="plugins.generic.lucene.settings.passwordRequired">Por favor introduzca una clave válida para autentificarse en el servidor Solr.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpoint">Url de punto de finalización de búsqueda</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">El punto de finalización  de búsqueda Solr consiste en la URL del servidor y un manejador de búsqueda. Ver las configuraciones por defecto para obtener un ejemplo. Solo cambie estas configuraciones si esta usando un servidor central de búsqueda.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Por favor introduzca una URL válida, para representar el punto de finalización de búsqueda (servidor de búsqueda Solr y manejador de búsqueda) al que querría conectarse.</message>
+	<message key="plugins.generic.lucene.settings.username">Nombre de Usuario</message>
+	<message key="plugins.generic.lucene.settings.usernameInstructions">El servidor de búsqueda Solr usa una autentificación HTTP Básica. Por favor introduzca el nombre de usuario.</message>
+	<message key="plugins.generic.lucene.settings.usernameRequired">Por favor introduzca un nombre de usuario válido para autentificarse en el servidor de búsqueda Solr.(dos puntos no  permitidos)</message>
+	
+	<message key="plugins.generic.lucene.results.orderBy">Ordenar resultados por</message>
+	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevancia</message>
+	<message key="plugins.generic.lucene.results.orderBy.author">Autor</message>
+	<message key="plugins.generic.lucene.results.orderBy.issue">Número de Revista</message>
+	<message key="plugins.generic.lucene.results.orderBy.date">Fecha de publicación</message>
+	<message key="plugins.generic.lucene.results.orderBy.journal">Título de la Revista</message>
+	<message key="plugins.generic.lucene.results.orderBy.article">Titulo del Artículo</message>
+	<message key="plugins.generic.lucene.results.orderDir.asc">Ascendiente</message>
+	<message key="plugins.generic.lucene.results.orderDir.desc">Descendiente</message>
+
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Tips de búsqueda: <ul>
+<li>Los términos de búsqueda no son sensibles a mayúsculas</li>
+<li>Las palabras comunes son ignoradas</li>
+<li>Por defecto, son retornados artículos que contengan <em>ALGÚN</em> término en la búsqueda (EJ:, <em>OR</em> es implicado)</li>
+<li>Asegurese de que la palabra exista en el artículo, agregándole el símbolo <strong>+</strong>; EJ: <em>+Revista +acceso universitario académico</em></li>
+<li>Combine varias palabas con  <em>AND</em> para encontrar los artículos que contengan todos esos términos; EJ: <em>educación e investigación</em></li>
+<li>Excluya una palabra, agregando adelante un  <strong>-</strong> o un <em>NOT</em>; EJ: <em>en línea -políticas</em> o <em>en línea NOT políticas</em></li>
+<li>Busque una frase exacta agregándole comillas; EJ: <em>"publicación de acceso abierto"</em></li>
+<li>Use los paréntesis para crear búsquedas más complejas EJ: <em>Archivo ((revista AND conferencia) NOT tesis)</em></li>
+</ul>]]></message>
+	
+	<message key="plugins.generic.lucene.error.searchServiceOffline">Desafortunadamente el servicio de búsqueda de OJS esta actualmente deshabilitada. El administrador técnico de la revista fue informado acerca del problema.</message>
+	<message key="plugins.generic.lucene.error.coreNotFound">El núcleo requerido '{$core}' no fue encontrado en el servidor Solr. Asegúrese de que esté en línea</message>
+	<message key="plugins.generic.lucene.message.indexOnline">Índices con  {$numDocs} documentos online.</message>
+</locale>

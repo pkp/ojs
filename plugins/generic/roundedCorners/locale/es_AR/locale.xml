@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/roundedCorners/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.roundedcorners.displayName">Plugin de Esquinas Redondeadas</message>
+	<message key="plugins.generic.roundedcorners.description">Este plugin pone un fondo en cada bloque de la barra de navegación para redondear sus esquinas. Permite hacerles cambios en los colores que se usan, con solo editar la hoja de estilos CSS que se puede encontrar en el plugin.</message>
+</locale>

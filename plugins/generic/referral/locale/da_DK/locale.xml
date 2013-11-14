@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
  
@@ -24,15 +24,19 @@
 	<message key="plugins.generic.referral.all.empty">Der er p.t. ingen refbacks.</message>
 	<message key="plugins.generic.referral.status.new">Nye</message>
 	<message key="plugins.generic.referral.status.new.empty">Der er p.t. ingen nye refbacks.</message>
-	<message key="plugins.generic.referral.status.accept">Publiceret</message>
+	<message key="plugins.generic.referral.status.accept">Publicér</message>
 	<message key="plugins.generic.referral.status.accept.empty">Der er p.t. ingen publicerede refbacks.</message>
-	<message key="plugins.generic.referral.status.decline">Ignoreret</message>
+	<message key="plugins.generic.referral.status.decline">Ignorér</message>
 	<message key="plugins.generic.referral.status.decline.empty">Der er p.t. ingen ignorerede refbacks.</message>
 	<message key="plugins.generic.referral.confirmDelete">Er du sikker på, at du vil slette denne refback?</message>
 	<message key="plugins.generic.referral.nameRequired">En titel på denne refback er påkrævet.</message>
 	<message key="plugins.generic.referral.urlRequired">En URL på denne refback er påkrævet.</message>
-	<message key="plugins.generic.referral.settings">Henvisningsplugin- indstillinger</message>
+	<message key="plugins.generic.referral.settings">Henvisningsplugin-indstillinger</message>
 	<message key="plugins.generic.referral.settings.description">Referenceplugin’et  indsamler URL’er, der peger på artikler i dette tidsskrift, så de kan administreres af forfatteren og eventuelt publiceres. Tidsskriftschefen har mulighed for at vælge hvordan indsamlingen skal ske.</message>
 	<message key="plugins.generic.referral.excusions">Udeladelser</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Indsæt en oversigt over faste vendinger, én pr. linje, der skal udelukkes under logningen af eksterne referencer. Dette anvendes for at forhindre søgemaskinerne i at levere overfyldte resultatlister. For yderligere information om faste vendinger se:  <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
+	<message key="plugins.generic.referral.status.accepted">Publiceret</message>
+	<message key="plugins.generic.referral.status.declined">Ignoreret</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Er du sikker på at du vil publicere de(n) valgte refback(s)?</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Er du sikker på at du vil ignorere de(n) valgte refback(s)?</message>
 </locale>

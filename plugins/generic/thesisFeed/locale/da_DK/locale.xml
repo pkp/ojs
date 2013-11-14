@@ -7,11 +7,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the da_DK (Dutch) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.generic.thesisfeed.displayName">Feed Plugin for abstracts af afhandlinger</message>
 	<message key="plugins.generic.thesisfeed.description">Dette plugin opretter et RSS/Atom web syndication feeds for abstracts af afhandlinger.</message>
 

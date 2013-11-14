@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Polski">
+	<message key="plugins.block.user.displayName">Użytkownik</message>
+	<message key="plugins.block.user.description">Ta wtyczka wyświetla narzędzia logowania.</message>
+	<message key="plugins.block.user.loggedInAs">Jesteś zalogowany jako...</message>
+	<message key="plugins.block.user.myJournals">Moje czasopisma</message>
+	<message key="plugins.block.user.myProfile">Mój profil</message>
+	<message key="plugins.block.user.logout">Wyloguj</message>
+	<message key="plugins.block.user.signOutAsUser">Wyloguj jako użytkownik</message>
+	<message key="plugins.block.user.rememberMe">Zapamiętaj mnie</message>
+</locale>

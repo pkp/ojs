@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/pubIds/urn/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * URN plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.pubIds.urn.urns">URNs</message>
+
+	<!-- plugin -->
+	<message key="plugins.pubIds.urn.displayName">Plugin URN</message>
+	<message key="plugins.pubIds.urn.description">Este plugin habilita la asignación de Nombres de Recursos Uniformes para los objetos (números, artículos, versiones galeradas y archivos complementarios)</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.pubIds.urn.manager.settings.description">Por favor siga los siguientes pasos de configuración para gestionar y usar URN en OJS.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSettings">Configuración URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">Prefijo URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">El prefijo URN es la parte que nunca cambia de un URN (e.g. "urn:nbn:de:0000-").</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">Sufijo URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">Patrones por defecto.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i para números<br />%j.v%vi%i.%a para artículos<br />%j.v%vi%i.%a.g%g para versiones galeradas <br />%j.v%vi%i.%a.s%s para archivos complementarios.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Use el patrón introducido a continuación para generar sufijos URN. Use %j para las iniciales de la revista, %v para el número de volumen, %i para el número, %Y para el año, %a para el ID del artículo en OJS, %g para el ID de versión galerada en OJS, %s para el ID de archivo complementario en OJS and %p para el número de página.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">para números</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">para artículos</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">para versiones galeradas.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">para archivos complementarios.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">Por ejemplo, vol%viss%ipp%p puede crear el sufijo URN "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Un sufijo URN puede tomar cualquier formato, pero debe ser único para cada item publicado</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Use este "identificador personalizado" para sufijos URN para los items publicados (debe ser habilitado en paso 4.3). Este es el mismo identificador que será usado para las URLs públicas.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Introduzca un sufijo URN individual para cada item publicado, independiente y diferente al "identificador personalizado" mencionado en la opción previa. Encontrará un campo adicional para la URN en cada página de metadatos de cada item.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Borrar todos los URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Si cambia su configuración de URN , aquellos URN que ya fueron asignados no se verán afectados. Una vez que cambie su configuración de URN, use este botón para borrar todos los URN ya existentes para que las nuevas configuraciones tengan efecto en los objetos existentes.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">¿Está seguro de  eliminar todos los URN existente?</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Número de certificación</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">El número de certificación se va a calcular automáticamente y se va a adherir al final, como el último dígito del URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Namespace</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Escojer</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">El namespace de identificador persistente usualmente requerido para el registro (EJ: en alemán Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">URL de resolución</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(EJ: http://nbn-resolving.de/)</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.journalContent">Contenido de la Revista</message>
+	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Escoja los objetos a los que se les asignara los  URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Los URNs serán asignados a números.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">Los URNs serán asignados a artículos.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">Los URNs serán asignados a las versiones galeradas (EJ: archivos HTML o PDF ).</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">Los URNs serán asignados a los archivos complementarios.</message>
+
+	<!-- custom URN suffix for an object -->
+	<message key="plugins.pubIds.urn.metadata">Metadatos URN</message>
+	<message key="plugins.pubIds.urn.urnSuffix">Sufijo URN</message>
+	<message key="plugins.pubIds.urn.urnSuffix.description">Sufijo URN personalizado para este artículo</message>
+	<message key="plugins.pubIds.urn.calculateCheckNo">Calcular número de certificación</message>
+
+	<!-- consider URNs at other places in the system -->
+	<message key="plugins.pubIds.urn.rt.metadata.urn">Nombre Uniforme de Recurso</message>
+
+	<!-- errors -->
+	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Por favor escoja los objetos a los que se les asignará un URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixRequired">Por favor introduzca un prefijo URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[El patrón de prefijo URN debe ser en el formato "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired">Por favor introduzca el patrón de sufijos URN para los números.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnArticleSuffixPatternRequired">Por favor introduzca el patrón de prefijos sufijos URN para los artículos.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">Por favor introduzca el patrón de prefijos sufijos URN para las versiones galeradas.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">Por favor introduzca el patrón de prefijos sufijos URN para los archivos complementarios.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Por favor escoja un namespace.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Por favor introduzca la URL de resolución</message>
+
+	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">El sufijo URN dado ya está en uso para otro item publicado. Por favor introduzca un sufijo URN único para cada item.</message>
+	<message key="plugins.pubIds.urn.form.checkNoRequired">Falta el número de certificación.</message>
+
+</locale>

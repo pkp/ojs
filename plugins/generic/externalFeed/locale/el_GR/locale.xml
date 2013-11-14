@@ -15,8 +15,8 @@
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Εξωτερικές Ροές</message>
-	<message key="plugins.generic.externalFeed.block.displayName">Block εξωτερικών ροών</message>
-	<message key="plugins.generic.externalFeed.description">Δημοσίευση περιεχομένου από εξωτερικές Atom/RSS ροές. Για παράδειγμα από μια εξωτερική εγκατάσταση WordPress, Drupal, ή OCS.</message>
+	<message key="plugins.generic.externalFeed.block.displayName">Δομική μονάδα εξωτερικών ροών</message>
+	<message key="plugins.generic.externalFeed.description">Δημοσίευση περιεχομένου από εξωτερικές Atom/RSS διαδικτυακές ροές. Για παράδειγμα από μια εξωτερική εγκατάσταση WordPress, Drupal, ή OCS.</message>
 	<message key="plugins.generic.externalFeed.noneExist">Καμία εξωτερική ροή</message>
 	<message key="plugins.generic.externalFeed.title">Τίτλος</message>
 	<message key="plugins.generic.externalFeed.posted">Καταχωρημένο</message>
@@ -25,44 +25,44 @@
 	<!-- External Feed Management -->
 	<message key="plugins.generic.externalFeed.manager.feeds">Εξωτερικές ροές</message>
 	<message key="plugins.generic.externalFeed.manager.settings">Ρυθμίσεις</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[Για να εμφανίσεται το περιεχόμενο ροών στην πλαϊνή μπάρα, πηγαίνεται στο μενού  <a href="{$setupStep56}" target="_blank">Οργάνωση Περιοδικού Βήμα 5.6</a>]]></message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[Για να εμφανίσετε το περιεχόμενο μιας ροής σε δομική μονάδα της πλαϊνής μπάρας, πηγαίνετε στο μενού  <a href="{$setupStep56}" target="_blank">Οργάνωση Περιοδικού Βήμα 5.6</a>]]></message>
 	<message key="plugins.generic.externalFeed.manager.title">Τίτλος</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage">Εμφάνιση Αρχικής Σελίδας</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Εμφάνιση Αρχικής Σελίδας</message>
-	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Μη Εμφάνιση Αρχικής Σελίδας</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlock">Εμφάνιση Block</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Απόκρυψη Αρχικής Σελίδας</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlock">Εμφάνιση Δομικής Μονάδας</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Όλες οι σελίδες</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Block σε όλες τις σελίδες</message>
-	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Όχι Block σε όλες τις σελίδες</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Εμφάνιση δομικής μονάδας σε όλες τις σελίδες</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Απόκρυψη δομικής μονάδας σε όλες τις σελίδες</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Αρχική Σελίδα</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Block μόνο στην αρχική σελίδα</message>
-	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Όχι Block μόνο στην αρχική σελίδα</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Εμφάνιση δομικής μονάδας μόνο στην αρχική σελίδα</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Απόκρυψη δομικής μονάδας μόνο στην αρχική σελίδα</message>
 	<message key="plugins.generic.externalFeed.manager.noneCreated">Καμία εξωτερική ροή</message>
 	<message key="plugins.generic.externalFeed.manager.create">Δημιουργία νέας εξωτερικής ροής</message>
-	<message key="plugins.generic.externalFeed.manager.edit">Επεξεργασίας εξωτερικής ροής</message>
+	<message key="plugins.generic.externalFeed.manager.edit">Επεξεργασία εξωτερικής ροής</message>
 	<message key="plugins.generic.externalFeed.manager.confirmDelete">Είστε σίγουροι ότι θέλετα να διαγράψετε για πάντα αυτή τη ροή;</message>
 
 	<!-- External Feed Settings -->
 	<message key="plugins.generic.externalFeed.settings">Ρυθμίσεις</message>
 	<message key="plugins.generic.externalFeed.settings.description">Διαμόρφωσης εμφάνισης της εξωτερικής ροής</message>
 	<message key="plugins.generic.externalFeed.settings.styleSheet">Εμφάνιση</message>
-	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Style Sheet εξωτερικής ροής</message>
-	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Ένα κατάλληλα διαμορφωμένο style sheet μπορεί να αντικαταστήσει το εξ'ορισμού style sheet που χρησιμοποιείται για αυτό το plugin. Μπορείτε να δείτε το εξ'ορισμού style sheet εδώ</message>
-	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Διαμορφωμένο style sheet</message>
+	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Αρχείο στυλ εξωτερικής ροής</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Ένα κατάλληλα διαμορφωμένο αρχείο στυλ μπορεί να χρησιμοποιηθεί για να αντικαταστήσει το προκαθορισμένο αρχείο στυλ που χρησιμοποιείται για αυτό το πρόσθετο. Μπορείτε να δείτε το προκαθορισμένο αρχείο στυλ εδώ</message>
+	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Διαμορφωμένο αρχείο στυλ</message>
 
 
 	<!-- External Feed Form-->
 	<message key="plugins.generic.externalFeed.form.title">Τίτλος</message>
-	<message key="plugins.generic.externalFeed.form.titleDescription">Ο τίτλος για την αρχική σελίδα ή/και την εμφάνιση του block</message>
-	<message key="plugins.generic.externalFeed.form.titleRequired">Παρακαλούμε δώστε έναν τίτλος για αυτή τη ροή</message>
+	<message key="plugins.generic.externalFeed.form.titleDescription">Ο τίτλος για την αρχική σελίδα ή/και την εμφάνιση της δομικής μονάδας</message>
+	<message key="plugins.generic.externalFeed.form.titleRequired">Παρακαλούμε δώστε έναν τίτλο για αυτή τη ροή</message>
 	<message key="plugins.generic.externalFeed.form.feedUrl">URL</message>
-	<message key="plugins.generic.externalFeed.form.feedUrlValid">Please provide a valid feed URL (include http://)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlValid">Παρακαλώ εισάγεται ένα έγκυροURL ροής (συμπεριλάβετε το http://)</message>
 	<message key="plugins.generic.externalFeed.form.feedUrlDescription">Το URL της εξωτερικής Atom/RSS ροής (π.χ. http://pkp.sfu.ca/blog/feed)</message>
 	<message key="plugins.generic.externalFeed.form.display">Εμφάνιση</message>
 	<message key="plugins.generic.externalFeed.form.displayHomepage">Εμφάνιση στην αρχική σελίδα</message>
-	<message key="plugins.generic.externalFeed.form.displayBlockNone">Να μην εμφανίζεται σε block</message>
-	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Εμφάνιση σε block μόνο στην αρχική σελίδα</message>
-	<message key="plugins.generic.externalFeed.form.displayBlockAll">Εμφάνιση block σε όλες τις σελίδες</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockNone">Να μην εμφανίζεται σε δομική μονάδα</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Εμφάνιση σε δομική μονάδα μόνο στην αρχική σελίδα</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockAll">Εμφάνιση σε δομική μονάδα σε όλες τις σελίδες</message>
 	<message key="plugins.generic.externalFeed.form.recentItems1">Περιορισμός σε</message>
 	<message key="plugins.generic.externalFeed.form.recentItems2">στοιχεία ροών</message>
 	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Αποθήκευση και δημιουργία νέου</message>

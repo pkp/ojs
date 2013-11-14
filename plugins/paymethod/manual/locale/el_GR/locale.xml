@@ -15,19 +15,20 @@
   * Giannis Tsakonas (john@lis.upatras.gr),
   * Kiriazis Vasilis (vaskir@lis.upatras.gr),
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
   -->
  
 <locale name="el_GR" full_name="Greek">	
-	<message key="plugins.paymethod.manual.displayName">Μη αυτόματη Πληρωμή Εισφορών</message>
+	<message key="plugins.paymethod.manual.displayName">Χειρωνακτική Πληρωμή Εισφορών</message>
 	<message key="plugins.paymethod.manual.description">Ο διαχεριστής του περιοδικού θα καταγράφει χειρωνακτικά τις εισπράξεις πληρωμών των χρηστών (ανεξάρτητα από το OJS).</message>
-	<message key="plugins.paymethod.manual">Μη αυτόματη Πληρωμή Εισφορώνt</message>
-	<message key="plugins.paymethod.manual.settings">Ρυθμίσεις Μη αυτόματης Πληρωμής Εισφορών</message>
+	<message key="plugins.paymethod.manual">Χειρωνακτική Πληρωμή Εισφορών</message>
+	<message key="plugins.paymethod.manual.settings">Ρυθμίσεις Χειρωνακτικής Πληρωμής Εισφορών</message>
 	<message key="plugins.paymethod.manual.settings.instructions">Οδηγίες</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Οδηγίες πληρωμήες εισφορών για τους χρήστες που επιλέγουν τη μη αυτόματη Πληρωμή των Εισφορών τους.</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Οδηγίες πληρωμής εισφορών για τους χρήστες που επιλέγουν τη χειρωνακτική πληρωμή των Εισφορών τους.</message>
 	
 	<message key="plugins.paymethod.manual.purchase.title">Τίτλος</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Εισφορά</message>	
-	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Αποστολή γνωστοποίησης πληρωμής</message>
-	<message key="plugins.paymethod.manual.paymentNotification">Γνωστοποίηση πληρωμής</message>
-	<message key="plugins.paymethod.manual.notificationSent">Η γνωστοποίηση πληρωμής απεστάλλει.</message>
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Αποστολή ειδοποίησης πληρωμής</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Ειδοποίηση πληρωμής</message>
+	<message key="plugins.paymethod.manual.notificationSent">Η ειδοποίηση πληρωμής απεστάλλει.</message>
 </locale>

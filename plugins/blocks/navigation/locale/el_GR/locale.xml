@@ -19,7 +19,7 @@
   -->
  
 <locale name="el_GR" full_name="Greek">
-	<message key="plugins.block.navigation.displayName">Block Πλοήγησης</message>
-	<message key="plugins.block.navigation.description">Το plugin αυτό παρέχει συνδέσμους Πλοήγησης στην πλαϊνή μπάρα.</message>
+	<message key="plugins.block.navigation.displayName">Δομική Μονάδα Πλοήγησης</message>
+	<message key="plugins.block.navigation.description">Το πρόσθετο αυτό παρέχει συνδέσμους Πλοήγησης στην πλαϊνή μπάρα.</message>
 	<message key="plugins.block.navigation.journalContent">Περιεχόμενα Περιοδικού</message>
 </locale>

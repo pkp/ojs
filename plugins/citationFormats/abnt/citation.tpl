@@ -23,12 +23,12 @@
 	{assign var=firstName value=$authors[0]->getFirstName()}
 	{assign var=middleName value=$authors[0]->getMiddleName()}
 	{$authors[0]->getLastName()|escape|mb_upper}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if} et al.
-{/if} 
+{/if}
 {$article->getLocalizedTitle()|strip_unsafe_html}.
 <strong>{$journal->getLocalizedTitle()|escape}</strong>, {$location|default:"[S.l.]"|escape}{if $issue}{if $issue->getShowVolume()}, v. {$issue->getVolume()|escape}{/if}{if $issue->getShowNumber()}, n. {$issue->getNumber()|escape}{/if}{/if}
-{if $article->getPages()}, p. {$article->getPages()|escape}{/if}, {if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%b. %Y'|lower}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%b. %Y'}{else}{$issue->getYear()|escape}{/if}. 
-{if $currentJournal->getSetting('onlineIssn')}ISSN {$currentJournal->getSetting('onlineIssn')|escape}.  
+{if $article->getPages()}, p. {$article->getPages()|escape}{/if}, {if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%b. %Y'|lower}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%b. %Y'}{else}{$issue->getYear()|escape}{/if}.
+{if $currentJournal->getSetting('onlineIssn')}ISSN {$currentJournal->getSetting('onlineIssn')|escape}.
 {elseif $currentJournal->getSetting('printIssn')}ISSN {$currentJournal->getSetting('printIssn')|escape}. {/if}
 {translate key="plugins.citationFormats.abnt.retrieved" retrievedDate=$smarty.now|date_format:'%d %b. %Y' url=$articleUrl}
-{if $article->getPubId('doi')}doi:{$article->getPubId('doi')|escape}. {/if}
+{if $article->getPubId('doi')}doi:<a href="http://dx.doi.org/{$article->getPubId('doi')|escape}">http://dx.doi.org/{$article->getPubId('doi')|escape}</a>. {/if}
 </div>

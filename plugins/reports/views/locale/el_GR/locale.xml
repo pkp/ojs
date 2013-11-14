@@ -13,5 +13,5 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.reports.views.displayName">Προβολή Αναφοράς</message>
-	<message key="plugins.reports.views.description">Αυτό το plugin δημιουργεί μια αναφορά σε μορφή CSV περιγράφοντας την αναγνωσιμότητα κάθε άρθρου.</message>
+	<message key="plugins.reports.views.description">Αυτό το πρόσθετο δημιουργεί μια αναφορά σε μορφή CSV περιγράφοντας την αναγνωσιμότητα κάθε άρθρου.</message>
 </locale>

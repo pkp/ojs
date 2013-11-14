@@ -19,6 +19,6 @@
   -->
  
 <locale name="el_GR" full_name="Greek">
-	<message key="plugins.block.developedBy.displayName">"Αναπτύχθηκε από" Block</message>
-	<message key="plugins.block.developedBy.description">Το plugin αυτό παρέχει ένα σύνδεσμο "Αναπτύχθηκε από" στην πλαϊνή μπάρα.</message>
+	<message key="plugins.block.developedBy.displayName">Δομική μονάδα "Αναπτύχθηκε από"</message>
+	<message key="plugins.block.developedBy.description">Το πρόσθετο αυτό παρέχει ένα σύνδεσμο "Αναπτύχθηκε από" στην πλαϊνή μπάρα.</message>
 </locale>

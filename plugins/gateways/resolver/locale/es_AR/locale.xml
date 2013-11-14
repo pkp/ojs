@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_AR locale.
+  *
+	*
+	* Traducción de la versión original 1.3 por Juan Pablo Alperin - 2006/06/29
+  -->
+ 
+<locale name="es_AR" full_name="Español (Argentina)">
+	<message key="plugins.gateways.resolver.displayName">Plugin para Resolver</message>
+	<message key="plugins.gateways.resolver.description">Este plugin obtiene números y artículos basado en  información de citas.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">No se ha podido resolver una entidad basada en la información de la cita especificada.  Por favor asegúrese que la información de la cita es comprensible y se refiere a una entidad de este despliegue de OJS.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Exportar Participaciones</message>
+</locale>

@@ -19,6 +19,6 @@
   -->
  
 <locale name="el_GR" full_name="Greek">
-	<message key="plugins.block.languageToggle.displayName">Block Αλλαγής Γλώσσας</message>
-	<message key="plugins.block.languageToggle.description">Το plugin αυτό παρέχει ένα εργαλείο Αλλαγής γλώσσας στην πλαϊνή μπάρα.</message>
+	<message key="plugins.block.languageToggle.displayName">Δομική Μονάδα Αλλαγής Γλώσσας</message>
+	<message key="plugins.block.languageToggle.description">Το πρόσθετο αυτό παρέχει ένα εργαλείο αλλαγής γλώσσας στην πλαϊνή μπάρα.</message>
 </locale>

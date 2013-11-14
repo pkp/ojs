@@ -19,23 +19,22 @@
   -->
  
 <locale name="el_GR" full_name="Greek">	
-	<message key="plugins.importexport.crossref.displayName">Plugin εξαγωγής CrossRef XML </message>
+	<message key="plugins.importexport.crossref.displayName">Πρόσθετο εξαγωγής CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Εξαγωγή των μεταδεδομένων του άρθρου σε μορφή CrossRef XML .</message>
 	
 	<message key="plugins.importexport.crossref.export">Εξαγωγή δεδομένων</message>
 	<message key="plugins.importexport.crossref.export.issues">Εξαγωγή Τευχών</message>
 	<message key="plugins.importexport.crossref.export.selectIssue">Επιλέξτε ένα τεύχος για εξαγωγή.</message>
 	<message key="plugins.importexport.crossref.export.articles">Εξαγωγή Άρθρων</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Επιλέξτε ένα άρθρο για εξαγωγή.</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Επιλέξτε άρθρα για εξαγωγή.</message>
 	
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
+	<message key="plugins.importexport.crossref.cliUsage">Χρήση: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
-]]></message>
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
 	<message key="plugins.importexport.crossref.cliError">ΣΦΑΛΜΑ:</message>
 
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Δεν βρέθηκε τεύχος που να ταιριάζει με το συγκεκριμένο ID τεύχους "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Δεν βρέθηκε άρθρο που να ταιριάζει με το συγκεκριμένο ID άρθρου "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Ένα έγκυρο πρόθημα DOI (DOI Prefix) πρέπει να καθοριστεί στην Οργάνωση του Περιοδικού ώστε να μπορέσετε να χρησιμοποιήσετε αυτό το plugin.</message>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Ένα έγκυρο πρόθεμα DOI πρέπει να καθοριστεί στην "Οργάνωση του Περιοδικού" ώστε να μπορέσετε να χρησιμοποιήσετε αυτό το πρόσθετο.</message>
 </locale>

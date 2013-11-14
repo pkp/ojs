@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/booksForReview/locale/el_GR/locale.xml
+  * @file plugins/generic/booksForReview/locale/el_GR/locale.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -14,7 +14,7 @@
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Αίτημα βιβλίου. Αναμονή επιβεβαίωσης από τον Επιμελητή.</message>
-	<message key="plugins.generic.booksForReview.notification.bookCreated">Ένα νέο βιβλίο για αξιολόγηση δημιουργήθηκε.</message>
+	<message key="plugins.generic.booksForReview.notification.bookCreated">Δημιουργήθηκε Ένα νέο βιβλίο για αξιολόγηση.</message>
 	<message key="plugins.generic.booksForReview.notification.bookUpdated">Ενημέρωση βιβλίου για αξιολόγηση.</message>
 	<message key="plugins.generic.booksForReview.notification.bookMailed">Βιβλίο για αξιολόγηση - Καταγράφηκε ως απεσταλμένο.</message>
 	<message key="plugins.generic.booksForReview.notification.bookDeleted">Βιβλίο για αξιολόγηση - Διαγράφηκε</message>

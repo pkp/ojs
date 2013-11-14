@@ -59,4 +59,23 @@
 	<message key="admin.mergeUsers.confirm">Er du sikker på, at du vil flette kontoen med brugernavnet {$oldAccountCount} til kontoen med brugernavnet "{$newUsername}"? Kontoen med brugernavnet {$oldAccountCount} vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Ingen tilmeldte brugere.</message>
 	<message key="admin.locale.maybeIncomplete">De markerede landestandarder kan være ufuldstændige</message>
+	<message key="admin.categories">Kategorier</message>
+	<message key="admin.categories.editTitle">Redigér kategori</message>
+	<message key="admin.categories.createTitle">Opret kategori</message>
+	<message key="admin.categories.create">Opret en ny kategori</message>
+	<message key="admin.categories.noneCreated">Der er ikke oprettet nogen kategorier</message>
+	<message key="admin.categories.confirmDelete">Er du sikker på, at du vil slette denne kategori?</message>
+	<message key="admin.categories.name">Navn</message>
+	<message key="admin.categories.nameRequired">Et kategorinavn er påkrævet</message>
+	<message key="admin.categories.enable.description">Websiteadministratoren kan her vælge at definere en række kategorier, så en større samling af tidsskrifter lettere kan overskues. Tidsskriftschefen kan vælge flere kategorier for hvert tidsskrift, og læseren kan browse gennem samlingen via kategorierne.</message>
+	<message key="admin.categories.disableCategories">Undlad at kategorisere tidsskrifterne</message>
+	<message key="admin.categories.enableCategories">Tillad tidsskriftchefer at rubricere tidsskrifterne under kategorier</message>
+	<message key="admin.settings.options">Valgmuligheder</message>
+	<message key="admin.settings.useAlphalist">Vis en alfabetisk liste til websites med mange tidsskrifter, så man kan foretage en alfabetisk navigation mellem tidsskrifterne.</message>
+	<message key="admin.settings.usePaging">Opdel listen over tidsskrifterne på flere sider for websites med mange tidsskrifter.</message>
+	<message key="admin.settings.journalsList">Tidsskriftselementer</message>
+	<message key="admin.settings.journalsList.description">Vælg de tidsskriftselementer, der skal vises for hvert tidsskrift på websiden.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Tidsskrifts-thumbnail</message>
+	<message key="admin.settings.journalsList.showTitle">Tidsskriftstitel</message>
+	<message key="admin.settings.journalsList.showDescription">Tidsskriftsbeskrivelse</message>
 </locale>

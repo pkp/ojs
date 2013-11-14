@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -52,9 +52,9 @@
 	<message key="admin.journals.form.importPathRequired">Cal indicar el camí d'importació.</message>
 	<message key="admin.journals.importErrors">La importació no s'ha pogut completar satisfactòriament</message>
 	<message key="admin.mergeUsers">Fusiona els usuaris</message>
-  <message key="admin.mergeUsers.mergeUser">Fusiona l'usuari/ària</message>
+	<message key="admin.mergeUsers.mergeUser">Fusiona l'usuari/ària</message>
 	<message key="admin.mergeUsers.into.description">Escull un usuari al qual atribuir les autories, les assignacions d'edició, etc. del l'usuari previ.</message>
-  <message key="admin.mergeUsers.from.description">Escull un usuari/ària (o més d'un) per fusionar-lo a un altre compte d'usuari (p.e.: en el cas d'una persona que tingui més d'un compte a la teva revista). Els comptes que escullis primer s'eliminaran i totes les seves tramesses, assignacions, etc. s'atribuiran al segon compte.</message>
+	<message key="admin.mergeUsers.from.description">Escull un usuari/ària (o més d'un) per fusionar-lo a un altre compte d'usuari (p.e.: en el cas d'una persona que tingui més d'un compte a la teva revista). Els comptes que escullis primer s'eliminaran i totes les seves tramesses, assignacions, etc. s'atribuiran al segon compte.</message>
 	<message key="admin.mergeUsers.allUsers">Tots els usuaris vinculats</message>
 	<message key="admin.mergeUsers.confirm">Estàs segur que vols unir el/ls compte(s) {$oldAccountCount} amb el compte de l'usuari "{$newUsername}"? Els comptes {$oldAccountcount} no existiran un cop finalitzat el procés. Aquesta acció no és reversible.</message>
 	<message key="admin.mergerUsers.noneEnrolled">No hi ha usuaris vinculats.</message>
@@ -77,4 +77,4 @@
 	<message key="admin.categories.confirmDelete">Estas segur que vols esborrar aquesta categoria?</message>
 	<message key="admin.categories.name">Nom</message>
 	<message key="admin.categories.nameRequired">Es requereix un nom de categoria.</message>
-</locale> 
+</locale>

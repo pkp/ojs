@@ -95,7 +95,7 @@
 	<message key="manager.reviewFormElements.copyTo">Kopier til:</message>
 	<message key="manager.reviewFormElements.create">Opret nyt element</message>
 	<message key="manager.reviewFormElements.dropdownbox">Rullegardin</message>
-	<message key="manager.reviewFormElements.edit">rediger formular element</message>
+	<message key="manager.reviewFormElements.edit">Rediger formularelement</message>
 	<message key="manager.reviewFormElements.elementType">Element type</message>
 	<message key="manager.reviewFormElements.form.elementTypeRequired">En element-type er krævet for formular-elementet</message>
 	<message key="manager.reviewFormElements.form.questionRequired">Der kræves et spørgsmål til formular-elementet.</message>
@@ -122,6 +122,7 @@
 	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Kræv ikke abstracts</message>
 	<message key="manager.sections.assigned">Redaktører for denne sektion</message>
+	<message key="manager.sections.confirmDelete">Er du sikker på, at du vil slette denne sektion permanent? Du bliver nødt til at publicere artiklerne i denne sektion igen.</message>
 	<message key="manager.sections.create">Opret sektion</message>
 	<message key="manager.sections.disableComments">Deaktiver mulighed for læserkommentarer i denne sektion</message>
 	<message key="manager.section.sectionEditorInstructions">Vælg blandt de tilgængelige sektionsredaktører, og "Tildel redaktør" til denne sektion.</message>
@@ -261,7 +262,7 @@
 	<message key="manager.setup.institution">Institution</message>
 	<message key="manager.setup.issnDescription"><![CDATA[Det internationale standardserienummer, ISSN (International Standard Serial Number), er et ottecifret tal, der identificerer tidsskriftspublikationer, herunder elektroniske tidsskrifter. Det administreres af et verdensomspændende netværk af nationale centre koordineret af et internationalt center i Paris og støttes af Unesco og den franske regering. Du kan få fat på et nummer på <a href="http://www.issn.org" target="_new">ISSN-webstedet</a>. Det kan du gøre på et hvilket som helst tidspunkt under driften af tidsskriftet.]]></message>
 	<message key="manager.setup.issuePerVolume">Udgaver pr. årgang</message>
-	<message key="manager.setup.itemsDescription">Elementer på navigationslinjen kan føjes til det aktuelle sæt (Startside, Om, Brugerstartside osv.), der vises øverst på siden.</message>
+	<message key="manager.setup.itemsDescription">Elementer på navigationslinjen kan føjes til det aktuelle sæt (Startside, Om, Min side osv.), der vises øverst på siden.</message>
 	<message key="manager.setup.itemsPerPage">Elementer pr. side</message>
 	<message key="manager.setup.journalAbbreviation">Forkortelse for tidsskrift</message>
 	<message key="manager.setup.journalArchiving">Tidsskriftsarkivering</message>
@@ -673,4 +674,17 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.subscriptionTypes.form.subscriptions">Abonnementer</message>
 	<message key="manager.subscriptionTypes.form.individual">Individuelle (brugere valideres via login)</message>
 	<message key="manager.subscriptionTypes.form.options">Alternativer</message>
+	<message key="manager.setup.journalThumbnail">Tidsskrifts-thumbnail</message>
+	<message key="manager.setup.useThumbnail">Thumbnail</message>
+	<message key="manager.setup.categories">Kategorier</message>
+	<message key="manager.payment.options.purchaseIssueFee">Køb nummer</message>
+	<message key="manager.payment.giftFees">Gavegebyr</message>
+	<message key="manager.payment.giftFeesDescription">Et link til gaveabonnement vil fremkomme på siden 'Abonnementer' under 'Om tidsskriftet' og som del af abonnementsoplysningerne i sidemenuen.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dette vil gøre det muligt for læserne at købe gaveabonnementer til andre læsere.</message>
+	<message key="manager.plugins.wrongCategory">Det uploadede plug-in passer ikke til det opgraderede plug-ins kategoti.</message>
+	<message key="manager.plugins.wrongName">"The version.xml" i det uploadede plug-in indeholder et plug-in-navn, der ikke passer til det opgraderede plug-ins navn.</message>
+	<message key="manager.plugins.settings">Indstillinger</message>
+	<message key="manager.sections.alertDelete">Før denne sektion kan slettes, skal de artikler, der er publiceret i sektionen overføres til andre sektioner.</message>
+	<message key="manager.setup.subjectClassificationURLValid">Anfør gyldig URL (inkludér http://)</message>
+	<message key="manager.setup.categories.description">Vælg den mest passende kategori blandt de ovenfor anførte. Læserne kan herefter browse gennem hele tidsskriftet via kategorier.</message>
 </locale>

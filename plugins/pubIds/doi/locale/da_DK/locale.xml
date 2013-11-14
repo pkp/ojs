@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/doi/locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOI plugin localization strings
+  -->
+ 
+<locale name="da_DK" full_name="Danish">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Dette plug-in gør det muligt at tildele DOI’er (Digital Object Identifiers) til numre, artikler, satsskibe og supplerende filer i OJS.</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">DOI plug-in-indstillinger</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Konfigurer dette DOI plug-in, så det bliver muligt at administrere og bruge DOI’er i OJS:</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Tidsskriftsindhold</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Vælg de elementer, der skal DOI-registreres.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">Vælg de publicerede elementer, der skal have tildelt et DOI:</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Numre</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Artikler</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Satsskibe</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Supplerende filer</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI præfiks</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[DOI-præfikset tildeles af registreringsorganisationer (f.eks. <a href="http://www.crossref.org" target="_new">CrossRef</a>) og er i formatet 10.xxxx (f.eks. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">DOI-præfikset er obligatorisk og skal være af typen 10.xxxx.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI-suffiks</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Et DOI-suffiks kan antage en hvilken som helst form, men det skal være unikt for hvert enkelt udgivet element under samme DOI-præfiksgruppe:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Brug nedenstående format til at generere DOI-suffikser ud fra. Anvend %j til tidsskriftsinitialer, %v til årgangsnummer, %i til nummeret i årgangen, %Y til året, %a til OJS-artikel-id, %g til OJS-satsskibs-id, %s til OJS-supplerende fil-id %p til sidenummer.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">til numre</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">til artikler</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">til satsskibe</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">til supplerende filer</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">For eksempel ville vol%viss%ipp%p kunne generere en DOI som 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Anvend standardformaterne.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g til satsskibe <br />%j.v%vi%i.%a.s%s til supplerende filer.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Brug “Brugerdefinerede id'er” for udgivne elementer som DOI-suffiks (skal være aktiveret under Trin 4). Dette er det samme id, som vil blive anvendt i de offentligt tilgængelige URL’er.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Indskriv et særskilt DOI-suffiks for hvert publiceret element, forskelligt fra det brugerdefinerede id nævnt ovenfor. Der findes et ekstra DOI-felt på hvert elements metadataside.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Indskriv DOI-suffiksformatet til numrene.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Indskriv DOI-suffiksformatet til artiklerne.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Indskriv DOI-suffiksformatet til satsskibene.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Indskriv DOI-suffiksformatet til supplerende filer.</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Tildel nye DOI’er</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Hvis du ændrer din DOI-konfiguration, vil DOI’er, som allerede er blevet tildelt, ikke blive påvirket. Når DOI-konfigurationen gemmes, anvender du denne knap til at rydde alle eksisterende DOI’er, således at de nye indstillinger omfatter eksisterende artikler.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Er du skikker på, at du vil slette alle eksisterende DOI’er?</message>	
+
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">nummer</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">artikel</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">satsskib</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">supplerende fil</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Det du ser, er en forhåndsvisning (preview) af DOI’en, som måske ikke er komplet. DOI’en er endnu ikke blevet generet. Når nummeret publiceres og ’the public {$pubObjectType} page’ hentes frem, bliver der automatisk genereret et unikt DOI til denne {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Det valgte DOI-suffiks er allerede brugt til et andet publiceret element. Indskriv et unikt DOI-suffiks for hvert element.</message>
+</locale>

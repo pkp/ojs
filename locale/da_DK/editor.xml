@@ -206,4 +206,16 @@
 	<message key="editor.issues.unpublishIssue">Træk udgivet nummer tilbage</message>
 	<message key="editor.issues.confirmUnpublish">Er du sikker på, at du vil trække dette udgivne nummer tilbage?</message>
 	<message key="editor.article.archiveSubmission">Afvis og arkiver indlevering</message>
+	<message key="editor.issues.galleys">Hele numre</message>
+	<message key="editor.issues.galley">Hele numre</message>
+	<message key="editor.issues.viewingGalley">Se hele nummeret</message>
+	<message key="editor.issues.issueGalleysDescription">Publicér fil med hele nummerets indhold</message>
+	<message key="editor.issues.noneIssueGalleys">Ingen fil med hele nummeret er blevet publiceret</message>
+	<message key="editor.issues.galleyLabelRequired">En nummerbetegnelse er nødvendig</message>
+	<message key="editor.issues.galleyLocaleRequired">En nummersprogkode er nødvendig</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Nummerbetegnelsen er allerede publiceret</message>
+	<message key="editor.issues.backToIssueGalleys">Tilbage til hele numre</message>
+	<message key="editor.issues.confirmDeleteGalley">Er du sikker på, at du vil slette dette nummer?</message>
+	<message key="editor.reassign">Overfør</message>
+	<message key="editor.publicIdentificationExists">Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet materiale (nummer, artikel, satsskib eller supplerende filer). Vælg et unikt filnavn inden for dit tidsskrift.</message>
 </locale>

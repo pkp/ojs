@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="da_DK">
+	<email_text key="BFR_REVIEW_REMINDER">
+		<subject>Boganmeldelse: Deadline nærmer sig</subject>
+		<body>Kære {$authorName}:
+
+Dette er blot for at minde dig om, at din anmeldelse af bogen {$bookForReviewTitle} skal være os i hænde senest {$bookForReviewDueDate}.
+
+For at indsende din boganmeldelse skal du logge dig ind på tidsskriftets hjemmeside og der gennemføre onlineindleveringen af manuskriptet. For nemheds skyld finder du din manuskript-URL her:
+
+Manuskript-URL: {$submissionUrl}
+
+Kontakt mig endelig, hvis du har spørgsmål eller problemer i forbindelse med denne boganmeldelse
+
+Tak for dit bidrag. Jeg ser frem til modtagelsen af dit manuskript.
+
+{$editorialContactSignature}</body>
+		<description>Dette er en automatisk genereret e-mail, der sendes til en boganmelder for at gøre opmærksom på, at deadline for aflevering snart indtræder.</description>
+	</email_text>
+	<email_text key="BFR_REVIEW_REMINDER_LATE">
+		<subject>Bog til bedømmelse: Afleveringsfrist</subject>
+		<body>Kære {$authorName}:
+
+Hermed en venlig påmindelse om, at din bedømmelse af bogen {$bookForReviewTitle} skulle have været afleveret {$bookForReviewDueDate}.
+
+Du kan indlevere din bedømmelse af bogen ved at logge ind på tidsskriftets websted og gennemføre onlineproceduren for indlevering af artikler. For at gøre det enkelt for dig har vi indsat et indleveringslink herunder.
+
+Indleveringslink: {$submissionUrl}
+
+Du er velkommen til at kontakte mig, hvis du har nogen spørgsmål eller er i tvivl om denne bogbedømmelse.
+
+Tak for dit bidrag til tidsskriftet – jeg ser frem til at modtage din bedømmelse.
+
+{$editorialContactSignature}</body>
+		<description>Dette er en automatisk genereret e-mail, der bliver sendt til forfattere af bogbedømmelser, når afleveringsfristen er overskredet.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_ASSIGNED">
+		<subject>Bog til bedømmelse: Bog tildelt</subject>
+		<body>Kære {$authorName}:
+
+Denne e-mail er en bekræftelse af, at du er blevet valgt til at skrive en bedømmelse af  {$bookForReviewTitle} , som skal afleveres senest {$bookForReviewDueDate}.
+
+Kontrollér, at adressen i din online brugerprofil er opdateret. Der vil blive sendt et eksemplar af den bog, du skal bedømme, til denne adresse.
+
+Den adresse, som vi har registreret nu, er:
+{$authorMailingAddress}
+
+Hvis denne adresse er ufuldstændig, eller hvis du ikke længere opholder dig på denne adresse, skal du opdatere din adresse via følgende link til din brugerprofil:
+
+Link til brugerprofil: {$userProfileUrl}
+
+Du kan indlevere din bedømmelse af bogen ved at logge ind på tidsskriftets websted og gennemføre onlineproceduren for indlevering af artikler.
+
+Indleveringslink: {$submissionUrl}
+
+Du er velkommen til at kontakte mig, hvis du har nogen spørgsmål eller er i tvivl om denne bogbedømmelse.
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail sendes af en redaktør til en bogbedømmer, når en redaktør har udvalgt forfatteren til en bogbedømmelse.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_DENIED">
+		<subject>Bog til bedømmelse</subject>
+		<body>Kære {$authorName}:
+
+Desværre er du ikke blevet valgt til at bedømme {$bookForReviewTitle}.
+
+Jeg håber, at du vil overveje at bedømme en anden bog fra vores liste – enten nu eller ved en senere lejlighed.
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail sendes af en redaktør til en interesseret forfatter, når en bog ikke længere er tilgængelig til bedømmelse.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_REQUESTED">
+		<subject>Bog til bedømmelse: Boganmodning</subject>
+		<body>Kære {$editorName}:
+
+Jeg er interesseret i at skrive en bedømmelse af {$bookForReviewTitle}.
+
+Kan du bekræfte, at denne bog stadig er ledig til bedømmelse?
+
+{$authorContactSignature}</body>
+		<description>Denne e-mail sendes til en redaktør fra en forfatter, der er interesseret i at skrive en bedømmelse af en bog fra listen.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_MAILED">
+		<subject>Bog til bedømmelse: Bog afsendt</subject>
+		<body>Kære {$authorName}:
+
+Denne e-mail er en bekræftelse af, at jeg har sendt et eksemplar af {$bookForReviewTitle} til den følgende adresse i din online brugerprofil:
+{$authorMailingAddress}
+
+Du kan indlevere din bedømmelse af bogen ved at logge ind på tidsskriftets websted og gennemføre onlineproceduren for indlevering af artikler.
+
+Indleveringslink: {$submissionUrl}
+
+Du er velkommen til at kontakte mig, hvis du har nogen spørgsmål eller er i tvivl om denne bogbedømmelse.
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail sendes af en redaktør til en bedømmer, når redaktøren har sendt et eksemplar af bogen til bedømmeren.</description>
+	</email_text>
+	<email_text key="BFR_REVIEWER_REMOVED">
+		<subject>Bog til bedømmelse</subject>
+		<body>Kære {$authorName}:
+
+Denne e-mail er en bekræftelse af, at du er blevet slettet som bedømmer af bogen {$bookForReviewTitle}, der vil blive stillet til rådighed for andre forfattere, som er interesserede i at bedømme bogen.
+
+Jeg håber, at du vil overveje at bedømme en anden bog fra vores liste – enten nu eller ved en senere lejlighed.
+
+{$editorialContactSignature}</body>
+		<description>Denne e-mail sendes af en redaktør til en interesseret bedømmer, når en bog ikke længere er tilgængelig til bedømmelse.</description>
+	</email_text>
+</email_texts>

@@ -12,13 +12,13 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.readingTools.displayName">Block Εργαλείων Ανάγνωσης</message>
-	<message key="plugins.block.readingTools.description">Αυτό το plugin εμφανίζει ένα block που περιέχει εργαλεία ανάγνωσης στα εργαλεία ανάγνωσης στην πλαϊνή μπάρα.</message>
-	<message key="plugins.block.readingTools.title">Εργαλεία ανάγνωσης</message>
+	<message key="plugins.block.readingTools.displayName">Δομική Μονάδα Εργαλείων Μελέτης</message>
+	<message key="plugins.block.readingTools.description">Αυτό το πρόσθετο εμφανίζει μια δομική μονάδα που περιέχει εργαλεία μελέτης στην πλαϊνή μπάρα εργαλείων μελέτης.</message>
+	<message key="plugins.block.readingTools.title">Εργαλεία μελέτης</message>
 	<message key="plugins.block.readingTools.aboutTheAuthor">Σχετικά με τον Συγγραφέα</message>
 	<message key="plugins.block.readingTools.aboutTheAuthors">Σχετικά με τους Συγγραφείς</message>
 	<message key="plugins.block.readingTools.articleTools">Εργαλεία άρθρων</message>
-	<message key="plugins.block.readingTools.emailThisArticle">Στείλτε αυτό το άρθρο με Email</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Στείλτε αυτό το άρθρο με email</message>
 	<message key="plugins.block.readingTools.loginRequired">Απαιτείται σύνδεση</message>
 	<message key="plugins.block.readingTools.printThisArticle">Εκτυπώστε αυτό το άρθρο</message>
 	<message key="plugins.block.readingTools.postComment">Καταχωρήστε ένα σχόλιο</message>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/importexport/medra/locale/en_US/common.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Shared localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para usar este plugin por favor vaya hacia la categoría  de plugins de "Identificadores Públicos", habilite y configure el plugin DOI y especifique un prefijo DOI válido ahí.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">El plugin no esta completamente configurado.</message>
+
+	<message key="plugins.importexport.common.settings">Configuración</message>
+
+	<message key="plugins.importexport.common.settings.form.password">Clave</message>
+	<message key="plugins.importexport.common.settings.form.passwordRequired">Por favor ingrese una clave.</message>
+	
+	<message key="plugins.importexport.common.register">Registrar</message>
+	<message key="plugins.importexport.common.registerDescription">Click en este botón par registrar un objeto en la agencia de registro por primera vez. Esto solo funciona cuando nunca antes ha registrado el objeto!.</message>
+	<message key="plugins.importexport.common.registerDescription.multi">Click en este botón para registrar o actualizar los metadatos de los objetos seleccionados con la agencia de registro.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">El registro no pudo completarse! El server de registro DOI ha retornado un error: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registro exitoso!.</message>
+	<message key="plugins.importexport.common.register.warning">Registrar muchos objetos puede tomar tiempo. Así que, por favor sea paciente después de hacer click en el botón de "Registrar". Será notificado cuando el registro se haya completado.</message>
+	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[El registro directo está actualmente deshabilitado. Por favor <a href="{$settingsUrl}">configure</a> un nombre de usuario  y una contraseña para que se le permita registrar objetos directamente con la agencia de registro.]]></message>
+
+	<message key="plugins.importexport.common.update">Actualizar</message>
+	<message key="plugins.importexport.common.updateDescription">Click en este botón para actualizar los  metadatos del objeto en la agencia de registro. Esto solo funciona si ha registrado el objeto exitosamente antes!.</message>
+		
+	<message key="plugins.importexport.common.export">Exportar Datos</message>
+	<message key="plugins.importexport.common.export.unregistered">Exportar todos los números, artículos o versiones galeradas sin registrar</message>
+	<message key="plugins.importexport.common.export.selectUnregistered">Seleccionar números, Artículos o versiones galeradas sin registrar</message>
+	<message key="plugins.importexport.common.export.noUnregistered">Todos los artículos, números y versiones galeradas ya han sido registrados (o no poseen asignado un DOI).</message>
+	<message key="plugins.importexport.common.export.issues">Exportar números específicos.</message>
+	<message key="plugins.importexport.common.export.selectIssue">Seleccionar Números</message>
+	<message key="plugins.importexport.common.export.noIssues">No hay números que tengan un DOI asignado por el momento.</message>
+	<message key="plugins.importexport.common.export.articles">Exportar Artículos específicos.</message>
+	<message key="plugins.importexport.common.export.selectArticle">Seleccionar Artículos</message>
+	<message key="plugins.importexport.common.export.noArticles">No hay artículos que tengan un DOI asignado por el momento</message>
+	<message key="plugins.importexport.common.export.galleys">Exportar versiones galeradas específicas</message>
+	<message key="plugins.importexport.common.export.selectGalley">Seleccionar versiones galeradas</message>
+	<message key="plugins.importexport.common.export.noGalleys">No hay versiones galeradas que tengan un DOI asignado por el momento.</message>
+	<message key="plugins.importexport.common.exportDescription">Click en este botón para exportar los datos en XML para el/los objeto(s) seleccionados en un archivo local, sin registrarlo con la agencia de registro. Esto podría ser útil si quiere tener una versión del registro de DOI para usted o si quiere inspeccionar el formato XML antes de registrarlo.</message>
+ 
+	<message key="plugins.importexport.common.export.error.issueNotFound">Ningun número se ha asociado con el ID especificado: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.articleNotFound">Ningun artículo se ha asociado con el ID especificado: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.galleyNotFound">Ningua versión galerada se ha asociado con el ID especificado: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.noDoiAssigned">El objeto con ID {$param} no tiene asignado un DOI.</message>
+	<message key="plugins.importexport.common.export.error.unknownJournal">Ninguna revista esta asociada con el path especificado: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.unknownObjectType">El tipo de objeto {$param} no puede ser exportado.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">El archivo de salida {$param} no puede ser escrito.</message>
+ 
+	<message key="plugins.importexport.common.notification.exportSuccessful">Los objetos seleccionados fueron exportados con éxito '{$param}'</message>
+ 
+	<message key="plugins.importexport.common.cliError">ERROR:</message>
+</locale>

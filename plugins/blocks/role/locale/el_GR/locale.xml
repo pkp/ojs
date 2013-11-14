@@ -19,6 +19,6 @@
   -->
  
 <locale name="el_GR" full_name="Greek">
-	<message key="plugins.block.role.displayName">Block Πληροφοριών Ρόλων</message>
-	<message key="plugins.block.role.description">Το plugin αυτό εμφανίζει στην πλαϊνή μπάρα ένα block συγκεκριμένες πληροφορίες κατά ρόλο όπως πλήθος υποβολών, γρήγορες συνδέσεις προς τους Επιμελητές, Συγγραφείς κλπ.</message>
+	<message key="plugins.block.role.displayName">Δομική Μονάδα Ρόλων</message>
+	<message key="plugins.block.role.description">Το πρόσθετο αυτό εμφανίζει στην πλαϊνή μπάρα μια δομική μονάδα η οποία περιέχει πληροφορίες σχετικά με τους ρόλους όπως πλήθος υποβολών, γρήγορες συνδέσεις προς τους Επιμελητές, Συγγραφείς κλπ.</message>
 </locale>

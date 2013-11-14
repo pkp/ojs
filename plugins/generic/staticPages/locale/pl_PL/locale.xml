@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Polski">
+	<message key="plugins.generic.staticPages.displayName">Strony statyczne</message>
+	<message key="plugins.generic.staticPages.description">Wtyczka umożliwia zarządzanie stronami statycznymi</message>
+	<message key="plugins.generic.staticPages.pageTitle">Tytuł</message>
+	<message key="plugins.generic.staticPages.content">Zawartość</message>
+
+	<message key="plugins.generic.staticPages.path">Ścieżka</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Wtyczma TinyMCE musi być zainstalowana i włączona aby edytować zawartość.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Edytuj/dodaj zawartość</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Dodaj statyczną stronę</message>
+	<message key="plugins.generic.staticPages.addNewPage">Dodaj stronę</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Edytuj statyczną stronę</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Formularz wyświetla wszystkie strony statyczne które utworzyłeś.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Użyj formularza poniżej aby dodać/edytować zawartość strony.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Dostęp do strony możliwy jest przez: {$pagesPath}, gdzie %PATH% jest wartością podaną przez ciebie. <strong>Uwaga:</strong> Dwie strony nie mogą mieć tej samej ścieżki.]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">Ścieżka istnieje już dla innej statycznej strony.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Strona zapisana.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Strona usunięta.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Żadne strony nie zostały utworzone</message>
+</locale>

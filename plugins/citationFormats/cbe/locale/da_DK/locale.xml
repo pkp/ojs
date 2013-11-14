@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="da_DK" full_name="Dutch">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.citationFormats.cbe.displayName">CBE citeringsformat plugin</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
 	<message key="plugins.citationFormats.cbe.description">Dette plugin implementerer CBE citeringsformatet.</message>

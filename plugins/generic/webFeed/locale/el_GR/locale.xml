@@ -19,18 +19,18 @@
   -->
  
 <locale name="el_GR" full_name="Greek">	
-	<message key="plugins.generic.webfeed.displayName">Web Feed Plugin</message>
-	<message key="plugins.generic.webfeed.description">Το plugin αυτό παράγει RSS/Atom web syndication feeds για το τρέχον τεύχος.</message>
+	<message key="plugins.generic.webfeed.displayName">Πρόσθετο Ροών Παγκοσμίου Ιστού</message>
+	<message key="plugins.generic.webfeed.description">Το πρόσθετο αυτό παράγει RSS/Atom web syndication ροές για το τρέχον τεύχος.</message>
 
 	<message key="plugins.generic.webfeed.settings">Ρυθμίσεις</message>
-	<message key="plugins.generic.webfeed.settings.issue">Εμφάνιση web feed συνδέσμους μόνο στις σελίδες του τεύχους.</message>
-	<message key="plugins.generic.webfeed.settings.all">Εμφάνιση web feed συνδέσμους σε όλες τις σελίδες του περιοδικού.</message>
+	<message key="plugins.generic.webfeed.settings.issue">Εμφάνιση συνδέσμων ροών παγκοσμίου ιστού μόνο στις σελίδες του τεύχους.</message>
+	<message key="plugins.generic.webfeed.settings.all">Εμφάνιση συνδέσμων ροών παγκοσμίου ιστού σε όλες τις σελίδες του περιοδικού.</message>
 
 	<message key="plugins.generic.webfeed.settings.currentIssue">Εμφάνιση στοιχείων στο τρέχον τεύχος.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">πιο πρόφαστα δημοσιευμένα στοιχεία.</message>
-	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Παρακαλούμε εισάγετε έναν θετικό ακέραιο αριθμό για πρόσφατα δημοσιευμένα στοιχεία.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Παρακαλούμε εισάγετε έναν θετικό ακέραιο αριθμό για τα πιο πρόσφατα δημοσιευμένα στοιχεία.</message>
 	<message key="plugins.generic.webfeed.settings.homepage">Εμφάνιση συνδέσμων web feed μόνο στην αρχική σελίδα και στις σελίδες του τεύχους.</message>
-	<message key="plugins.generic.webfeed.atom.altText">Atom logo</message>
-	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logo</message>
-	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logo</message>
+	<message key="plugins.generic.webfeed.atom.altText">Λογότυπο Atom</message>
+	<message key="plugins.generic.webfeed.rss1.altText">Λογότυπο RSS1</message>
+	<message key="plugins.generic.webfeed.rss2.altText">Λογότυπο RSS2</message>
 </locale>

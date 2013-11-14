@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/browse/locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Browse plugin localization strings
+  -->
+ 
+<locale name="da_DK" full_name="Danish">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">Browse</message>
+	<message key="plugins.generic.browse.description">Dette plugin gør det muligt at browse gennem sektioner og/eller id-typer.</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">Indstillinger</message>
+	<message key="plugins.generic.browse.manager.settings.description">Vælg blandt følgende browsemuligheder:</message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Browseindstillinger</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Browse</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Vælg de enheder man skal kunne browse igennem.</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Via sektion</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Via id-type</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Ikke medregnede sektioner</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Vælg de sektioner, der ikke kommer i betragtning.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Ikke medregnede id-typer</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Vælg de id-typer, der ikke kommer i betragtning.</message>
+
+	<message key="plugins.generic.browse.search.sections">Efter sektioner</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Browse sektionsindeks</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Sektionsdetaljer</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Via id-typer</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Browse id-typeindeks</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Id-typedetaljer</message>
+
+</locale>

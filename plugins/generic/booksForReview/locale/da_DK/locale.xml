@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Books for review plugin localization strings for the en_US (U.S. English) locale.
+  * Books for review plugin localization strings for the da_DK (Danish) locale.
   -->
  
 <locale name="da_DK" full_name="Danish">
@@ -56,7 +56,7 @@
 	<message key="plugins.generic.booksForReview.editor.confirmRemove">Er du sikker på, at denne forfatter skal fjernes og bogens anmeldelseshistorik slettes?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Vælg&nbsp;Indsendelse]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">Vælg</message>
-	<message key="plugins.generic.booksForReview.editor.edit">Edit</message>
+	<message key="plugins.generic.booksForReview.editor.edit">Rediger</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Indsendelse</message>
 	<message key="plugins.generic.booksForReview.editor.bookReviewer">Boganmelder</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Tildel</message>

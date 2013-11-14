@@ -21,6 +21,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Journal Content</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Please choose the objects DOIs should be assigned to.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Please select the publishing objects that will have Digital Object Identifiers (DOI) assigned:</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTE:</strong> When using the <a href="http://www.crossref.org" target="_new">CrossRef</a> DOIs, please select articles. Article is seen as work, i.e. entity of intellectual and artistic content. Thus, article is the publishing object the CrossRef DOI export and registration is based upon.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Issues</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Articles</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Galleys</message>

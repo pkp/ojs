@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
  
@@ -24,7 +24,7 @@
 
 	<message key="plugins.generic.staticPages.addStaticPage">Tilføj statisk side</message>
 	<message key="plugins.generic.staticPages.addNewPage">Tilføj ny side</message>
-	<message key="plugins.generic.staticPages.editStaticPage">Redigér statisk side</message>	
+	<message key="plugins.generic.staticPages.editStaticPage">Redigér statisk side	</message>	
 
 	<message key="plugins.generic.staticPages.settingInstructions">Skemaet nedenfor viser alle de statiske sider, du har oprettet. Du kan redigere eller slette siderne ved at anvende linkene til højre.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Vælg skemaet nedenfor for at tilføje/redigere sideindhold.</message>
