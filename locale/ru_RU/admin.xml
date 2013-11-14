@@ -8,7 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
-  * Copyright (c) 2013 Pavel Pisklakov (editing and improving translation). 
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
 
 <locale name="ru_RU" full_name = "Russian">

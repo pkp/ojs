@@ -8,7 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
-  * Copyright (c) 2013 Pavel Pisklakov (editing and improving translation). 
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
 
 <locale name="ru_RU" full_name = "Russian">
@@ -125,5 +125,5 @@
 	<message key="author.article.uploadAuthorVersion">Загрузить авторскую версию</message>
 	<message key="author.article.copyeditedFile">Файл после литературного редактирования</message>
 	<message key="author.article.authorRevisedFile">Файл автора</message>
-	<message key="author.submit.authorSubmitLoginMessage">Для отправки статьи в этот журнал требуется учетная запись. Это позволит нашим редакторам отследивать отправленные вами статьи и связаться с вами, когда статус статьи меняется или от вас требуется дополнительная информация.</message>
+	<message key="author.submit.authorSubmitLoginMessage">Для отправки статьи в этот журнал требуется учетная запись. Это позволит нашим редакторам отслеживать отправленные вами статьи и связаться с вами, когда статус статьи меняется или от вас требуется дополнительная информация.</message>
 </locale>
