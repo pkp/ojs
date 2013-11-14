@@ -25,6 +25,27 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
+	<!-- review froms start -->
+
+	<!-- common -->
+	<message key="common.journal">Journal</message>
+
+	<!-- Journal Management -->
+
+	<!-- Categories -->
+	<message key="navigation.categories">Categories</message>
+	<message key="navigation.categories.browse">Browse</message>
+
+	<!--  peer review -->
+	<message key="submission.reviewForm">Review Form</message>
+	<message key="submission.reviewFormResponse">Review Form Response</message>
+
+
+	<message key="reviewer.article.enterReviewForm">Click on icon to fill in the review form.</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>
+
+	<!-- review forms end -->
+
 	<!--
 	 *
 	 * COMMON - This section contains the most frequently-used words
@@ -32,73 +53,49 @@
 	-->
 
 	<!-- Common Messages -->
-
 	<message key="common.openJournalSystems">Open Journal Systems</message>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<message key="common.confirmComplete">Are you sure you wish to mark this task as completed? You may not be able to make changes afterwards.</message>
+	<message key="common.payment">Payment</message>
+	<message key="common.payments">Payments</message>
+	<message key="common.pageHeader.altText">Page Header</message>
+	<message key="common.homePageHeader.altText">Homepage Header</message>
+	<message key="common.journalHomepageImage.altText">Journal Homepage Image</message>
 
 	<!-- Common Form Messages -->
 
-
-	
 	<!-- Common Email Messages -->
-
-
-
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Помощь</message>
-
-
 	<message key="navigation.archives">Архивы</message>
 	<message key="navigation.current">Последний выпуск</message>
 	<message key="navigation.otherJournals">другие журналы</message>
-
 	<message key="navigation.browseByIssue">по выпускам</message>
 	<message key="navigation.browseByAuthor">по авторам</message>
-
 	<message key="navigation.infoForAuthors">Для авторов</message>
 	<message key="navigation.infoForLibrarians">Для библиотек</message>
+	<message key="navigation.competingInterestGuidelines">Описание Конфликта Интересов</message>
 	<message key="navigation.infoForAuthors.long">Информация для авторов</message>
-
 	<message key="navigation.infoForLibrarians.long">Информация для работников библиотек</message>
 
-	
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Не назначена</message>
 	<message key="common.queue.short.submissionsUnassigned">Новых</message>
 	<message key="common.queue.long.submissionsInEditing">Статья редактируется</message>
 	<message key="common.queue.short.submissionsInEditing">В редакции</message>
 	<message key="common.queue.long.submissionsInReview">Статья рецензируется</message>
-
 	<message key="common.queue.short.submissionsInReview">На рецензии</message>
 	<message key="common.queue.long.submissionsArchives">Архивы</message>
 	<message key="common.queue.short.submissionsArchives">Архивы</message>
 	<message key="common.queue.long.active">Активные статьи</message>
-
 	<message key="common.queue.short.active">Активные</message>
 	<message key="common.queue.long.completed">Архив</message>
 	<message key="common.queue.short.completed">Архив</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -108,906 +105,39 @@
 
 	<!-- Common Section Terms -->
 	<message key="section.section">Раздел</message>
-
 	<message key="section.sections">Разделы</message>
 	<message key="section.title">Название раздела</message>
 	<message key="section.abbreviation">Сокращение</message>
 	<message key="section.abbreviation.example">(напр. Articles=ART)</message>
+
 	<!-- Common Article Terms -->
+	<message key="article.article">Статья</message>
 	<message key="article.articles">Статьи</message>
 	<message key="article.submissionId">ID статьи</message>
 	<message key="article.title">Название</message>
 	<message key="article.authors">Авторы</message>
-
 	<message key="article.indexingInformation">Индексирование</message>
 	<message key="article.metadata">Метаданные</message>
 	<message key="article.journalSection">Раздел журнала</message>
 	<message key="article.file">Файл</message>
 	<message key="article.suppFile">Дополн. файл</message>
 	<message key="article.suppFiles">Дополн. файлы</message>
-
 	<message key="article.suppFilesAbbrev">Доп. файлы</message>
 	<message key="article.discipline">Академические дисциплины</message>
 	<message key="article.subjectClassification">Классификация</message>
 	<message key="article.subject">Ключ. слова</message>
 	<message key="article.coverage">Предм. область</message>
 	<message key="article.coverageGeo">География</message>
-
 	<message key="article.coverageChron">Хронология</message>
 	<message key="article.coverageSample">Примеры исслед. подхода</message>
 	<message key="article.type">Методика</message>
 	<message key="article.language">Язык</message>
 	<message key="article.sectionEditor">РР</message>
 	<message key="article.commentsToEditor">Комментарии автора</message>
-
 	<message key="article.submission">Статья</message>
 	<message key="article.submissions">Статьи</message>
-	<message key="article.abstract">Аннотация</message>
 	<message key="article.details">Подробности</message>
-
-	<!-- Submission Tracking - Common -->
-
-
-	<message key="submission.submissionEditing">Редакция статьи</message>
-
-	<message key="submission.changeSection">Изменить на</message>
-
-
-
-	<message key="submission.editorDecision">Решение редактора</message>
-
-	<message key="submission.round">Раунд&amp;nbsp;{$round}</message>
-	<message key="submission.editorReview">Отзыв редактора</message>
-	<message key="submission.reviewersVersion">Аннот. версия рецензии</message>
-	<message key="submission.postReviewVersion">Послеред. версия файла</message>
-	<message key="submission.editorVersion">Ред. версия</message>
-
-	<message key="submission.authorsRevisedVersion">Исправленная автором версия</message>
-	<message key="submission.authorVersion">Авторская версия</message>
-	<message key="submission.copyediting">Правка</message>
-	<message key="submission.copyedit">Править</message>
-	<message key="submission.proofreading">Корректировка</message>
-
-
-	<message key="submissions.sec">Sec</message>
-
-	<message key="submissions.step1">Шаг 1</message>
-	<message key="submissions.step3">Шаг 3</message>
-
-	<message key="submissions.queuedReview">Ждет рецензента</message>
-	<message key="submissions.scheduled">Запланирована</message>
-	<message key="submissions.published">Опубликована</message>
-
-	<message key="submissions.initial">Начало</message>
-	<message key="submissions.proofread">Коррекции</message>
-	<message key="submissions.initialProof">Первая коррекция</message>
-	<message key="submissions.postAuthor">После автора</message>
-	<message key="submissions.reviewRound">Рецензии</message>
-
-	<message key="submissions.proof">Коррекции</message>
-	<message key="submissions.editorDecision">Решение редактора</message>
-	<message key="submissions.editorRuling">Правила редактора</message>
-
-	<message key="submission.eventLog">Дневник действий</message>
-
-
-	<!-- Submission list search engine -->
-	<message key="submissions.copyeditComplete">Отредактирована</message>
-	<message key="submissions.layoutComplete">Отформатирована</message>
-	<message key="submissions.proofreadingComplete">Откорректирована</message>
-
-	<!-- Submission Notes -->
-
-
-
-	
-	<!-- Common Journal Terms -->
-	<message key="journal.currentIssue">Текущий выпуск</message>
-	<message key="journal.journals">Журналы</message>
-	<message key="journal.path">Путь</message>
-	<message key="journal.journal">Журнал</message>
-
-	<!-- User -->
-
-	<message key="user.showAllJournals">Показать мои журналы</message>
-
-
-
-	<message key="user.registerForOtherJournals">Другие журналы</message>
-
-	<message key="user.myJournals">Мои журналы</message>
-	
-	<!-- Roles -->
-
-	<message key="user.role.manager">Издатель</message>
-	<message key="user.role.editor">Редактор</message>
-	<message key="user.role.sectionEditor">Редактор раздела</message>
-	<message key="user.role.layoutEditor">Худ. редактор</message>
-	<message key="user.role.copyeditor">Лит. редактор</message>
-
-	<message key="user.role.proofreader">Корректор</message>
-	<message key="user.role.author">Автор</message>
-	<message key="user.role.managers">Издатель</message>
-	<message key="user.role.editors">Редакторы</message>
-
-	<message key="user.role.sectionEditors">Редакторы разделов</message>
-	<message key="user.role.layoutEditors">Худ. редакторы</message>
-	<message key="user.role.copyeditors">Лит. редакторы</message>
-	<message key="user.role.proofreaders">Корректоры</message>
-	<message key="user.role.authors">Авторы</message>
-
-	
-	<!-- Common Issue Terms -->
-	<message key="issue.issue">Выпуск</message>
-	<message key="issue.issues">Выпуски</message>
-	<message key="issue.title">Название</message>
-	<message key="issue.volume">Том</message>
-
-	<message key="issue.number">Номер</message>
-	<message key="issue.vol">Том</message>
-	<message key="issue.no">№</message>
-	<message key="issue.year">Год</message>
-	<message key="issue.noIssues">Нет выпусков</message>
-	<message key="issue.toc">Содержание</message>
-
-	<message key="issue.abstract">Аннотация</message>
-
-	<!--
-	 *
-	 * LOG - This section contains entries related to log entries.
-	 *
-	-->
-	<message key="submission.event.general.defaultEvent">Действия</message>
-	<message key="submission.event.general.articleSubmitted">Статья прислана</message>
-	<message key="submission.event.general.issueScheduled">Статья запланирована</message>
-
-	<message key="submission.event.general.issueAssigned">Статья назначена к выпуску</message>
-	<message key="submission.event.general.articlePublished">Статья опубликована</message>
-
-	<message key="submission.event.author.authorRevision">Автор прислал исправл. версию</message>
-
-	<message key="submission.event.general.authorRevision">Авторская версия обновлена</message>
-	
-	<message key="submission.event.editor.editorAssigned">Редактор определен</message>
-
-	<message key="submission.event.editor.editorUnassigned">Редактор отозван</message>
-	<message key="submission.event.editor.editorDecision">Решение редактора послано</message>
-	<message key="submission.event.editor.editorFile">Редакторский файл обновлен</message>
-	<message key="submission.event.editor.submissionArchived">Статья послана в архив</message>
-	<message key="submission.event.editor.submissionRestored">Статья восстановлена из архива</message>
-	
-
-
-
-	
-	<message key="submission.event.copyedit.copyeditorAssigned">Назначен стилистический редактор</message>
-	<message key="submission.event.copyedit.copyeditorUnassigned">Стилистический редактор отказался от назначения</message>
-	<message key="submission.event.copyedit.copyeditInitiated">Стилистический редактор начал работу</message>
-	<message key="submission.event.copyedit.copyeditRevision">Новые поправки стилистического редактора</message>
-	<message key="submission.event.copyedit.copyeditInitialCompleted">Начальная стилистическая правка закончена</message>
-
-	<message key="submission.event.copyedit.copyeditFinalCompleted">Окончательная стилистическая правка завершена</message>
-	<message key="submission.event.copyedit.copyeditSetFile">Стилистическая редакция обновлена</message>
-	
-	<message key="submission.event.proofread.proofreaderAssigned">Назначен корректор</message>
-	<message key="submission.event.proofread.proofreaderUnassigned">Корректор отказался от назначения</message>
-	<message key="submission.event.proofread.proofreadInitiated">Корректор начал работу</message>
-	<message key="submission.event.proofread.proofreadRevision">Добавлены новые коррекции</message>
-
-	<message key="submission.event.proofread.proofreadCompleted">Корректор закончил работу</message>
-	
-	<message key="submission.event.layout.layoutEditorAssigned">Назначен оформитель</message>
-	<message key="submission.event.layout.layoutEditorUnassigned">Оформитель отказался от назначения</message>
-	<message key="submission.event.layout.layoutInitiated">Оформитель начал работу</message>
-	<message key="submission.event.layout.layoutGalleyCreated">Формат обновлен</message>
-	<message key="submission.event.layout.layoutComplete">Оформление закончено</message>
-
-	<!--
-	 *
-	 * INTERFACE - Contains phrases organized by the section of the
-	 *             user interface they appear in.
-	 *
-	-->
-
-	<!-- Reader article view -->
-
-	<!-- Reader Comments -->
-	<message key="comments.commentsOnArticle">Комментарии к статье</message>
-
-	<message key="comments.authenticated">{$userName}</message>
-
-
-
-
-	<!-- Site Administration -->
-
-	
-
-
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[To have the contents of all journals hosted on this site indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your site's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.
-<br /><br />
-Note that the OAI interface can be disabled for this site by editing the OJS system configuration. Future versions of OJS will allow the OAI interface to be enabled or disabled for individual journals within the site.]]></message>
-
-	
-
-	
-	<!-- Languages -->
-
-
-
-	
-	<!-- System Information -->
-
-	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ВНИМАНИЕ!</div>
-<p>Система не сможет автоматически переписать конфиг файл. Чтобы применить настройки, Вам нужно открыть  <tt>config.inc.php</tt> в соотв. текстовом редакторе и заполнить все нужные поля.</p>]]></message>
-	
-	<!-- Journal Management -->
-
-	<!-- Files Browser -->
-
-
-	<!-- Journal Setup -->
-
-
-
-	
-	<!-- Setup Step 1 -->
-
-	<!-- Setup Step 2 -->
-
-
-
-
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
-<br /><br />
-Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
-	
-	<!-- Setup Step 3 -->
-
-
-
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Journal will use a subject classification system available on the web.<br />
-Title of classification system]]></message>
-
-
-
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your journal's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-Note that if your site administrator has already registered this site with the PKP Harvester, your journal will be indexed automatically and you do not need to register your journal.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.]]></message>
-
-	<!-- Setup Step 4 -->
-
-
-
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Scheduling Queue &gt; Table of Contents.<br /><br />
-Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Journal Management.)]]></message>
-
-
-
-
-
-	<!-- Setup Step 5 -->
-
-
-
-
-
-
-
-
-
-
-	<!-- Languages -->
-
-	
-	
-	<!-- Section Management -->
-
-
-
-
-	<!-- Import/Export -->
-	<!-- People Management -->
-
-
-	<message key="manager.people.confirmDisable">Disable this user? This will prevent the user from logging into the system.
-
-You may optionally provide the user with a reason for disabling their account.</message>
-
-
-	<message key="manager.people.noAdministrativeRights"><![CDATA[Sorry, you do not have administrative rights over this user. This may be because:
-		<ul>
-			<li>Этот пользователь администратор сайта</li>
-			<li>The user is active in journals you do not manage</li>
-		</ul>
-	This task must be performed by a site administrator.
-	]]></message>
-
-
-
-
-
-	
-	<!-- Email Management -->
-
-
-
-
-	<!-- Subscription Type Management -->
-
-
-
-
-
-
-
-
-	<!-- Subscription Management -->
-
-
-
-
-
-
-
-
-	<!-- Editor -->
-
-
-	<!-- Scheduling Queue -->
-
-	<!-- Editor Index Page -->
-
-
-	<!-- Back Issues -->
-
-	<!-- Create Issue / Issue Data -->
-
-
-
-
-
-	<!-- Live Issues -->
-
-
-
-	<!-- Navigation sidebar menu -->
-
-	
-	<!-- Used by editor in submission review / editing -->
-
-
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
-Высшая оценка 5 (Отлично).<br/>
-Сколько дней нужно рецензентам для завершения работы.<br />
-Latest is date of most recently accepted review,<br/>
-with a plus sign (+) indicating review-in-progress.]]></message>
-
-
-
-
-
-	<!-- Section Editor -->
-	<message key="sectionEditor.activeEditorialAssignments">Редакторские назначения</message>
-
-	<message key="sectionEditor.completedEditorialAssignments">Исполненные редакторские задачи</message>
-	<message key="sectionEditor.noneAssigned">Нет назначенных статей.</message>
-	<message key="sectionEditor.copyedit.confirmRenotify">Оповещение данного редактора повторит его назначение. Вы уверены, что это нужно сделать?</message>
-	<message key="sectionEditor.author.confirmRenotify">Оповещение автора повторит процесс. Вы уверены, что это нужно сделать?</message>
-	<message key="sectionEditor.layout.confirmRenotify">Оповещение худ. редактора подновит его назначение. Вы уверены, что это нужно сделать?</message>
-	<message key="sectionEditor.proofreader.confirmRenotify">Оповещение корректора подновит его назначение. Вы уверены, что это нужно сделать?</message>
-
-	<message key="sectionEditor.regrets.breadcrumb">Сожаления</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Сожаления рецензента, Отмены &amp; Прежние раунды</message>
-	<message key="sectionEditor.regrets">Сожаления</message>
-	<message key="sectionEditor.regrets.link">Сожаления рецензента, Отмены &amp; Прежние раунды</message>
-
-	<message key="sectionEditor.regrets.reviewRound">Спецрецензия, Раунд {$round}</message>
-	<message key="sectionEditor.regrets.decisionRound">Решение редактора, Раунд {$round}</message>
-	<message key="sectionEditor.regrets.regretsAndCancels">Сожаления рецензента &amp; Отмены</message>
-	<message key="sectionEditor.regrets.regret">Сожаление</message>
-	<message key="sectionEditor.regrets.result">Результат</message>
-
-	<!-- Layout Editor -->
-	<message key="layoutEditor.activeEditorialAssignments">Действующие редакторские назначения</message>
-	<message key="layoutEditor.completedEditorialAssignments">Исполненные редакторские задачи</message>
-	<message key="layoutEditor.noActiveAssignments">Нет редакторских назначений.</message>
-	<message key="layoutEditor.layoutEditingAssignments">Задачи по форматированию</message>
-
-	<message key="layoutEditor.galley.uploadGalleyFormat">Загрузить формат</message>
-	<message key="layoutEditor.galley.replaceGalley">Заменить файл</message>
-	<message key="layoutEditor.galley.uploadSuppFile">Загрузить доп. файл</message>
-	
-	<!-- Reviewer -->
-	<message key="reviewer.pendingReviews">Articles Pending Review</message>
-
-	<message key="reviewer.completedReviews">Done</message>
-	<message key="reviewer.averageQuality">Rating</message>
-	
-	<!-- Used in submission review -->
-	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
-	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
-
-	<message key="reviewer.article.canDoReview">Will do the review</message>
-	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
-	<message key="reviewer.article.submissionEditor">Submission Editor</message>
-	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
-	<message key="reviewer.article.editorToEnter">Editor To Enter</message>
-
-	<message key="reviewer.article.sendReminder">Send Reminder</message>
-	<message key="reviewer.article.automatic">(Auto)</message>
-	<message key="reviewer.article.selectRecommendation">Select a recommendation</message>
-	<message key="reviewer.article.recommendation">Recommendation</message>
-	<message key="reviewer.article.submitReview">Submit Review To Editor</message>
-	<message key="reviewer.article.reviewerComments">Comments</message>
-
-	<message key="reviewer.article.uploadedFile">Uploaded files</message>	
-	<message key="reviewer.article.reviewersAnnotatedVersion">Version uploaded by reviewer</message>
-	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
-        <message key="reviewer.article.schedule.request">Editor's Request</message>
-        <message key="reviewer.article.schedule.response">Your Response</message>
-        <message key="reviewer.article.schedule.submitted">Review Submitted</message>
-
-        <message key="reviewer.article.schedule.due">Review Due</message>
-	<message key="reviewer.article.decision.accept">Accept Submission</message>
-	<message key="reviewer.article.decision.pendingRevisions">Revisions Required</message>
-	<message key="reviewer.article.decision.resubmitHere">Resubmit for Review</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Resubmit Elsewhere</message>
-	<message key="reviewer.article.decision.decline">Decline Submission</message>
-
-	<message key="reviewer.article.decision.seeComments">See Comments</message>
-	<message key="reviewer.article.schedule">Schedule</message>
-        <message key="reviewer.article.submissionToBeReviewed">Submission To Be Reviewed</message>
-        <message key="reviewer.article.reviewSchedule">Review Schedule</message>
-        <message key="reviewer.article.reviewSteps">Review Steps</message>
-
-        <message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
-        <message key="reviewer.article.notifyEditorA">Notify the submission's editor</message>
-        <message key="reviewer.article.notifyEditorB">as to whether you will undertake the review.</message>
-        <message key="reviewer.article.consultGuidelines">If you are going to do the review, consult Reviewer Guidelines below.</message>
-        <message key="reviewer.article.downloadSubmission">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
-        <message key="reviewer.article.enterReviewA">Click on icon to enter (or paste) your review of this submission.</message>
-
-        <message key="reviewer.article.uploadFile">In addition, you can upload files for the editor and/or author to consult.</message>
-        <message key="reviewer.article.selectRecommendation">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
-	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
-	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
-
-	<!-- Used in submission editing -->
-
-	<message key="copyeditor.article.fileToCopyedit">Файл для верстки</message>
-	<message key="copyeditor.article.copyeditorFile">Файл</message>
-	<message key="copyeditor.article.uploadedFile">Загруженный файл</message>
-	<message key="copyeditor.article.copyeditorFinalFile">Файл верстки</message>
-	
-	<!-- Proofreader -->
-	<message key="proofreader.noProofreadingAssignments">Нет корректорских назначений</message>
-
-	<!-- Author -->
-	<!-- Article Submission Step 1 -->
-	
-
-	
-	<!-- Article Submission Step 2 -->
-
-
-
-
-	
-	<!-- Article Submission Step 3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[
-<p>Чтобы прислать статью для публикации в этом журнале, нужно сделать следующее:</p>
-
-<ol>
-<li>Нажать на кнопку Browse (или Выбрать файл), после чего откроется диалоговое окошко для выбора директории на Вашем компьютере.</li>
-<li>Выбрать мышкой файл.</li>
-<li>Нажать Open.</li>
-<li>Нажать Загрузить (Upload) файл.</li>
-<li>Когда материал загрузится, нажать Сохранить и Продолжить (Save and Continue) внизу страницы.</li>
-</ol>]]></message>
-	
-	<!-- Article Submission Step 4 -->
-
-	
-	<!-- Article Submission Step 4a: Дополнительные файлы -->
-
-
-
-
-
-	
-	<!-- Article Submission Step 5 -->
-
-	<!-- Used in submission review / editing -->
-	<message key="submission.review.mustUploadFileForReview">Request email cannot be sent until a Review Version is in place.</message>
-
-	<!-- Submission Tracking - Copyedit Specific -->
-
-	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Request email cannot be sent until file is selected for copyediting in Editor Decision, Review page.</message>
-	<message key="submission.copyedit.mustUploadFileForCopyedit">Request email cannot be sent until file is uploaded for copyediting.</message>
-	<message key="submission.copyedit.initialCopyedit">Initial Copyedit</message>
-	<message key="submission.copyedit.editorsCopyedit">Editor's Copyedit</message>
-	<message key="submission.copyedit.editorAuthorReview">Author Copyedit</message>
-	<message key="submission.copyedit.finalCopyedit">Final Copyedit</message>
-
-	<message key="submission.copyedit.copyeditVersion">C/E Version</message>
-	<message key="submission.copyedit.selectCopyeditor">Assign Copyeditor</message>
-	<message key="submission.copyedit.useFile">Use File</message>
-	<message key="submission.copyedit.copyeditComments">Copyedit Comments</message>
-	<message key="submission.copyedit.instructions">Copyedit Instructions</message>
-	
-	<!-- Submission Tracking - Layout Specific -->
-
-	<message key="submission.layout.assignLayoutEditor">Назначить худ. редактора</message>
-
-	<message key="submission.layout.replaceLayoutEditor">Заменить худ. редактора</message>
-	<message key="submission.layout.layoutComments">Комментарии по формату</message>
-
-
-
-
-	<message key="submission.layout.instructions">Указания по форматиронию</message>
-	
-	
-	<!-- Submission Tracking - Proofread Specific -->
-	<message key="submission.proofreadingComments">Комментарии по правке</message>
-	<message key="submission.proofread.corrections">Правки</message>
-
-	<message key="submission.proofread.instructions">Указания корректорам</message>
-
-	<!-- Submission History -->
-
-	
-	<message key="submission.logType.article">Статья</message>
-	<message key="submission.logType.author">Автор</message>
-	<message key="submission.logType.editor">Редактор</message>
-
-	<message key="submission.logType.review">Рецензия</message>
-	<message key="submission.logType.copyedit">Верстка</message>
-	<message key="submission.logType.layout">Формат</message>
-	<message key="submission.logType.proofread">Правка</message>
-	
-	<!-- Submission Event Log -->
-
-
-	<!-- Submission Email Log -->
-
-	
-	<!-- Submission Comments -->
-	<message key="submission.comments.editorAuthorCorrespondence">Редактор-Автор корреспонденция</message>
-
-	<message key="submission.comments.copyeditComments">Комментарии по верстке</message>
-	<message key="submission.comments.viewableDescription"><![CDATA[These comments can be shared with the author.<br />
-(After saving, further comments can be added.)]]></message>
-
-	<message key="submission.comments.canShareWithAuthor">Для автора и редактора</message>
-	<message key="submission.comments.cannotShareWithAuthor">Для редактора</message>
-
-	<message key="submission.comments.forAuthorEditor">Для автора и редактора</message>
-	<message key="submission.comments.forEditor">Для редактора</message>
-	<message key="submission.comments.saveAndEmailAuthor">Сохранить и послать автору</message>
-	<message key="submission.comments.saveAndEmailEditor">Сохранить и послать редактору</message>
-	
-	<!-- Login -->
-
-	<message key="user.login.registerNewAccount">Регистрация нового пользователя</message>
-
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Мы посылаем новый пароль, а не старый.<br /><br />Введите ваш мейл адрес и получите новый пароль.]]></message>
-
-	
-	<!-- Profile -->
-
-
-	<!-- Registration -->
-	<message key="user.register.selectJournal">Выбрать журнал для регистрации</message>
-
-	<message key="user.register.privacyStatement">Конфиденциальность</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a>, если Вы зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a> если Вы <strong>не</strong> зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
-	<message key="user.register.loginToRegister">Введите Ваше имя и пароль, чтобы получить доступ к этому журналу.</message>
-	<message key="user.register.registrationDisabled">Этот журнал пока не регистрирует новых пользователей.</message>
-
-	<message key="user.register.form.passwordLengthTooShort">Ваш пароль не достаточно длинный.</message>
-	<message key="user.register.readerDescription">Оповещение мейлом о выходе новых статей или журнальных номеров.</message>
-	<message key="user.register.authorDescription">Разрешается отправлять статьи в журнал.</message>
-	<message key="user.register.reviewerDescription">Желаю быть спецрецензентом журнала. В мою компетенцию входят следующие темы:</message>
-
-
-
-	<!-- Search -->
-	<message key="search.browseAuthorIndex">Список авторов</message>
-	<message key="search.searchFor">Поиск статей</message>
-	<message key="search.author">Авторы</message>
-	<message key="search.withinJournal">В журнале</message>
-
-	<message key="search.allJournals">Все журналы</message>
-
-	<message key="search.authorIndex">По авторам</message>
-
-	<message key="search.authorDetails">Информация об авторе</message>
-
-	<message key="search.syntaxInstructions"><![CDATA[Подсказки: <ul>
-<li>Ключевые слова чувствительны к регистру</li>
-<li>Английские предлоги и союзы игнорируются</li>
-<li>По умолчанию поиск проводится <em>по всем</em> ключевым словам (агенс <strong>AND</strong> экспериенцер)</li>
-<li>Используйте <strong>OR</strong> для поиска того или иного термина, напр. <em>образование OR обучение</em></li>
-<li>Используйте скобки для создания сложных фраз, напр. <em>архив ((журналов OR конференций) NOT диссертаций)</em></li>
-<li>Для поиска точной фразы используйте кавычки, напр. <em>"научные исследования"</em></li>
-<li>Исключайте слово при помощи знака <strong>-</strong> (дефис) или оператора <strong>NOT</strong>; напр. <em>конкурс -красоты</em> или же <em>конкурс NOT красоты</em></li>
-<li>Используйте <strong>*</strong> в качестве версификатора, напр. <em>научн*</em> охватит слова "научный", "научные" и т.д.</li>
-</ul>]]></message>
-
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Скачать статью</message>
-	<message key="article.nonpdf.note"><![CDATA[Выбранный Вами файл должен скачаться автоматически. Если не получается, <a href="{$pdfUrl}">нажмите здесь</a>.]]></message>
-
-	
-	<!-- Site index -->
-	<message key="site.journalsHosted">Журналы на этом сайте</message>
-	<message key="site.journalView">Посмотреть</message>
-	<message key="site.journalRegister">Регистрация</message>
-	<message key="site.journalCurrent">Текущий выпуск</message>
-	
-
-	<!-- Current index -->
-	<message key="current.current">Текущий</message>
-
-	<message key="current.noCurrentIssue">Нет текущего выпуска</message>
-	<message key="current.noCurrentIssueDesc">У этого журнала нет опубликованных выпусков.</message>
-
-	<!-- Archive index -->
-	<message key="archive.archives">Архивы</message>
-	<message key="archive.browse">Пролистать старые номера</message>
-	<message key="archive.issueUnavailable">Выпуск недоступен</message>
-
-	
-	<!-- About The Journal -->
-
-	<message key="about.journalContact">Контакты</message>
-	<message key="about.aboutTheJournal">О журнале</message>
-	<message key="about.editorialTeam">Ответственные редакторы</message>
-	<message key="about.editorialPolicies">Редакционная политика</message>
-
-	<message key="about.focusAndScope">Цели и задачи</message>
-	<message key="about.sectionPolicies">Разделы и редакторы</message>
-	<message key="about.submissions">Прием статей</message>
-	<message key="about.sponsors">Спонсоры</message>
-	<message key="about.contributors">Источники поддержки</message>
-	<message key="about.onlineSubmissions">Отправка статей</message>
-
-	<message key="about.onlineSubmissions.haveAccount">У Вас уже есть логин для журнала {$journalTitle}?</message>
-	<message key="about.onlineSubmissions.login">Логин</message>
-	<message key="about.onlineSubmissions.needAccount">Нужен логин?</message>
-	<message key="about.onlineSubmissions.registration">Регистрироваться</message>
-	<message key="about.onlineSubmissions.registrationRequired">Если Вы зарегистрировались и вошли в свой акаунт, Вы можете начать процесс отправки статьи. Для этого нужно выбрать роль Автора.</message>
-	<message key="about.authorGuidelines">Указания для авторов</message>
-
-	<message key="about.submissionPreparationChecklist">Подготовка статей</message>
-	<message key="about.copyrightNotice">Авторские права</message>
-	<message key="about.privacyStatement">Приватность</message>
-	<message key="about.peerReviewProcess">Процесс рецензирования</message>
-	<message key="about.publicationFrequency">Периодичность</message>
-	<message key="about.openAccessPolicy">Политика свободного доступа</message>
-
-	<message key="about.archiving">Архивация</message>
-	<message key="about.subscriptions">Подписки</message>
-	<message key="about.subscriptionsContact">Контакт для подписки</message>
-	<message key="about.availableSubscriptionTypes">Типы подписок</message>
-	<message key="about.journalSponsorship">Издатель и спонсоры</message>
-
-	<message key="about.aboutThisPublishingSystem">Об издательской системе</message>
-	<message key="about.aboutOJSJournal"><![CDATA[Этот журнал является частью издательской системы, которая предлагает академическим и научным издательствам инструменты для онлайн публикаций на основе <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> при GNU General Public License.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[Этот журнал является частью издательской системы, которая предлагает академическим и научным издательствам инструменты для онлайн публикаций на основе <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> при GNU General Public License.]]></message>
-	
-	<!-- Help -->
-
-	<message key="help.ojsHelp">OJS - помощь</message>
-	<message key="help.ojsHelpAbbrev">OJS Help</message>	
-
-
-	
-	<!-- Installer -->
-	<message key="installer.ojsInstallation">OJS Installation</message>
-	<message key="installer.ojsUpgrade">OJS Upgrade</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
-
-<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://pkp.sfu.ca/support/forum">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-
-<h4>Upgrade</h4>
-
-<p>If you are upgrading an existing installation of OJS 2.x, <a href="{$pageUrl}/install/upgrade">click here</a> to proceed.</p>
-
-<h4>Recommended system requirements</h4>
-
-<ul>
-	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (including PHP 5.x)</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (including PostgreSQL 8.x)</li>
-	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>
-	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
-</ul>
-
-<p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>
-
-<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory, or using the site administration web interface.</p>
-
-<h4>Supported database systems</h4>
-
-<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
-
-<h4>Pre-Installation Steps</h4>
-
-<p>1. The following files and directories (and their contents) must be made writable:</p>
-<ul>
-	<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
-	<li><tt>help/cache/</tt> is writable: {$writable_help}</li>
-	<li><tt>locale/cache/</tt> is writable: {$writable_locale}</li>
-	<li><tt>public/</tt> is writable: {$writable_public}</li>
-	<li><tt>templates/t_cache/</tt> is writable: {$writable_templates_cache}</li>
-	<li><tt>templates/t_compile/</tt> is writable: {$writable_templates_compile}</li>
-</ul>
-
-<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
-	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
-	
-<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> and <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://pkp.sfu.ca/support/forum">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>
-<p>If you are running in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>]]></message>
-
-	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
-<br /><br />
-Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
-	<message key="installer.localeInstructions">The primary language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here.</message>
-	<message key="installer.additionalLocalesInstructions">Select any additional languages to support in this system. These languages will be available for use by journals hosted on the site. Additional languages can also be installed at any time from the site administration interface.</message>
-
-
-	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
-
-
-
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
-
-	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
-<p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
-	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
-<p>To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.</p>]]></message>
-	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>
-<p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <em>On</em>.</p>]]></message>
-
-
-
-	<!-- Article Logs -->
-	<message key="log.author.submitted">{$authorName} has entered a new submission, ID {$submissionId}.</message>
-	<message key="log.author.documentRevised">{$authorName} has revised article {$articleId}. The new file ID is {$fileId}.</message>
-
-	<message key="log.review.reviewerAssigned">{$reviewerName} has been assigned to review submission {$articleId} for review round {$round}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} has been unassigned from reviewing submission {$articleId} for review round {$round}.</message>
-	<message key="log.review.reviewInitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been initiated.</message>
-	<message key="log.review.reviewReinitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been reinitiated.</message>
-	<message key="log.review.reviewCancelled">The round {$round} review by {$reviewerName} for submission {$articleId} has been cancelled.</message>
-	<message key="log.review.reviewCleared">The round {$round} review by {$reviewerName} for submission {$articleId} has been cleared.</message>
-
-	<message key="log.review.reviewerRated">{$reviewerName} has been rated for the round {$round} review of submission {$articleId}.</message>
-	<message key="log.review.reviewDueDateSet">The due date for the round {$round} review of submission {$articleId} by {$reviewerName} has been set to {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">The recommendation for the round {$round} review of submission {$articleId} by {$reviewerName} has been set.</message>
-	<message key="log.review.resubmit">The submission {$articleId} has been resubmitted for review.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$articleId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$articleId}.</message>
-
-	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
-	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
-
-
-	<message key="log.copyedit.initiate">Copyediting on submission {$articleId} has been commenced by {$copyeditorName}.</message>
-	<message key="log.copyedit.copyeditFileSet">The default copyedit file has been chosen.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the initial copy edit of submission {$articleId}.</message>
-
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} has completed the final copy edit of submission {$articleId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
-	<message key="log.copyedit.copyeditorFile">A copyeditor version of the submission file has been uploaded.</message>
-	<message key="log.copyedit.authorFile">A version of the submission file copyedited by the author has been uploaded.</message>
-
-	<message key="log.layout.layoutEditorAssigned">{$editorName} has been assigned as layout editor for submission {$articleId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} has been unassigned as layout editor for submission {$articleId}.</message>
-
-	<message key="log.layout.layoutEditComplete">{$editorName} has completed layout editing for submission {$articleId}.</message>
-
-	<message key="log.editor.metadataModified">The metadata for this article was modified by {$editorName}.</message>
-	<message key="log.editor.editorFile">An editor version of the submission file has been uploaded.</message>
-	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
-	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
-	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
-
-	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
-
-	<message key="log.imported">{$userName} has imported article {$articleId}.</message>
-
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Настройки</message>
-
-	<message key="rt.admin.options">Опции</message>
-
-	<!-- RT Versions -->
-
-
-
-	<!-- RT Contexts -->
-
-
-	<!-- RT Searches -->
-
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
-You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
-Validation may fail on search URLs that require posted form data.]]></message>
-
-	
-	<!-- RT Entities -->
-
-
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Создатель</message>
-
-
-
-
-	<message key="rt.metadata.pkp.primaryAuthor">Автор, учреждение</message>
-
-
-	<message key="rt.metadata.pkp.peerReviewed">Рецензированная статья</message>
-
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Получить уведомление, если...</message>
-
-	<message key="rt.thisJournal">Найти в этом журнале</message>
-	
-
-	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
-
-
-	<!--
-	 *
-	 * MISC - Entries that do not belong in the other sections.
-	 *
-	-->
-	<!-- Icons: Default "alt" text -->
-
-	
-	<!-- Debug messages -->
-
-	<!--
-	 *
-	 * DEFAULT - Default settings for setup items.
-	 *
-	-->
-	<message key="submission.reviewForm">Форма Рецензента</message>
-	<message key="reviewer.article.enterReviewForm">Нажмите, чтобы заполнить форму рецензента</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Пожалуйста заполните необходимые поля.</message>
-	<message key="common.confirmComplete">Вы уверены, что хотите завершить эту задачу ? Впоследствии она будет закрыта для изменений.</message>
-	<message key="common.payment">Платеж</message>
-	<message key="common.payments">Платежи</message>
-	<message key="common.pageHeader.altText">Заголовок Страницы</message>
-	<message key="common.homePageHeader.altText">Заголовок Домашней Страницы</message>
-	<message key="common.journalHomepageImage.altText">Картинка на домашней странице Журнала</message>
-	<message key="article.article">Статья</message>
+	<message key="article.abstract">Аннотация</message>
 	<message key="article.coverPage.altText">Изображение на обложке</message>
 	<message key="article.accessLogoOpen.altText">Доступ Открыт</message>
 	<message key="article.accessLogoRestricted.altText">Доступ Закрыт</message>
@@ -1018,13 +148,63 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="article.fontSize.small.altText">Мелкий</message>
 	<message key="article.fontSize.medium.altText">Средний</message>
 	<message key="article.fontSize.large.altText">Крупный</message>
+
+	<!-- Submission Tracking - Common -->
+	<message key="submission.submissionEditing">Редакция статьи</message>
+	<message key="submission.changeSection">Изменить на</message>
 	<message key="submission.sent">Отправлено</message>
+	<message key="submission.editorDecision">Решение редактора</message>
+	<message key="submission.round">Раунд&amp;nbsp;{$round}</message>
+	<message key="submission.editorReview">Отзыв редактора</message>
 	<message key="submission.notifyAuthor">Уведомить Автора</message>
 	<message key="submission.notifyEditor">Уведомить Редактора</message>
+	<message key="submission.editorAuthorRecord">Запись переписки Редактор/Автор</message>
+	<message key="submission.reviewersVersion">Аннот. версия рецензии</message>
+	<message key="submission.postReviewVersion">Послеред. версия файла</message>
+	<message key="submission.editorVersion">Ред. версия</message>
+	<message key="submission.authorsRevisedVersion">Исправленная автором версия</message>
+	<message key="submission.authorVersion">Авторская версия</message>
+	<message key="submission.copyediting">Правка</message>
+	<message key="submission.copyedit">Править</message>
+	<message key="submission.proofreading">Корректировка</message>
 	<message key="submission.scheduling">Назначение</message>
 	<message key="submission.scheduledIn">Назначено к публикации в {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">в процессе</message>
+	<message key="submissions.sec">Sec</message>
+	<message key="submissions.step1">Шаг 1</message>
+	<message key="submissions.step3">Шаг 3</message>
+	<message key="submissions.queuedReview">Ждет рецензента</message>
+	<message key="submissions.scheduled">Запланирована</message>
+	<message key="submissions.published">Опубликована</message>
+	<message key="submissions.initial">Начало</message>
+	<message key="submissions.proofread">Коррекции</message>
+	<message key="submissions.initialProof">Первая коррекция</message>
+	<message key="submissions.postAuthor">После автора</message>
+	<message key="submissions.reviewRound">Рецензии</message>
+	<message key="submissions.proof">Коррекции</message>
+	<message key="submissions.editorDecision">Решение редактора</message>
+	<message key="submissions.editorRuling">Правила редактора</message>
+	<message key="submission.eventLog">Дневник действий</message>
+
+	<!-- Submission list search engine -->
+	<message key="submissions.copyeditComplete">Отредактирована</message>
+	<message key="submissions.layoutComplete">Отформатирована</message>
+	<message key="submissions.proofreadingComplete">Откорректирована</message>
+
+	<!-- Submission Notes -->
+
+	<!-- Common Journal Terms -->
+	<message key="journal.currentIssue">Текущий выпуск</message>
+	<message key="journal.journals">Журналы</message>
+	<message key="journal.path">Путь</message>
+	<message key="journal.journal">Журнал</message>
 	<message key="journal.issn">ISSN</message>
+
+	<!-- User -->
+	<message key="user.profile.profileImage">Profile Image</message>
+	<message key="user.showAllJournals">Показать мои журналы</message>
+	<message key="user.registerForOtherJournals">Другие журналы</message>
+	<message key="user.myJournals">Мои журналы</message>
 	<message key="user.manageMySubscriptions">Изменить параметры подписки</message>
 	<message key="user.noRoles.chooseJournal">Ваша учетная запись сейчас не ассоциирована ни с одним журналом. Пожалуйста выберите журнал:</message>
 	<message key="user.noRoles.noRolesForJournal">Ваша роль в этом журнале не определена. Пожалуйста выберите из предложенных вариантов дальнейших действий:</message>
@@ -1032,9 +212,44 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="user.noRoles.submitArticleRegClosed">Отправить Статью: Регистрация авторов сейчас отключена.</message>
 	<message key="user.noRoles.regReviewer">Зарегистрироваться в качестве Рецензента</message>
 	<message key="user.noRoles.regReviewerClosed">Зарегистрироваться в качестве Рецензента: регистрация рецензентов сейчас отключена.</message>
+
+	<!-- Roles -->
+	<message key="user.role.manager">Издатель</message>
+	<message key="user.role.editor">Редактор</message>
+	<message key="user.role.sectionEditor">Редактор раздела</message>
+	<message key="user.role.layoutEditor">Худ. редактор</message>
+	<message key="user.role.copyeditor">Лит. редактор</message>
+	<message key="user.role.proofreader">Корректор</message>
+	<message key="user.role.author">Автор</message>
 	<message key="user.role.subscriptionManager">Менеджер Подписки</message>
+	<message key="user.role.managers">Издатель</message>
+	<message key="user.role.editors">Редакторы</message>
+	<message key="user.role.sectionEditors">Редакторы разделов</message>
+	<message key="user.role.layoutEditors">Худ. редакторы</message>
+	<message key="user.role.copyeditors">Лит. редакторы</message>
+	<message key="user.role.proofreaders">Корректоры</message>
+	<message key="user.role.authors">Авторы</message>
 	<message key="user.role.subscriptionManagers">Менеджеры Подписки</message>
+
+	<!-- Common Issue Terms -->
+	<message key="issue.issue">Выпуск</message>
+	<message key="issue.issues">Выпуски</message>
+	<message key="issue.title">Название</message>
+	<message key="issue.volume">Том</message>
+	<message key="issue.number">Номер</message>
+	<message key="issue.vol">Том</message>
+	<message key="issue.no">№</message>
+	<message key="issue.year">Год</message>
+	<message key="issue.noIssues">Нет выпусков</message>
+	<message key="issue.toc">Содержание</message>
+	<message key="issue.abstract">Аннотация</message>
 	<message key="issue.coverPage.altText">Титульный Лист</message>
+	<message key="issue.fullIssue">Весь выпуск</message>
+	<message key="issue.nonpdf.title">Загрузка выпуска</message>
+	<message key="issue.viewIssue">Смотреть выпуск</message>
+	<message key="issue.viewIssueDescription">Посмотреть или загрузить весь выпуск</message>
+
+	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Валюта</message>
 	<message key="subscriptionTypes.year">год</message>
 	<message key="subscriptionTypes.years">годы</message>
@@ -1045,6 +260,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="subscriptionTypes.format.online">Электронная</message>
 	<message key="subscriptionTypes.format.print">Печатная</message>
 	<message key="subscriptionTypes.format.printOnline">Печатная и Электронная</message>
+
+	<!-- Common Subscription Terms -->
 	<message key="subscriptions.inactive">Неактивна</message>
 	<message key="subscriptions.status">Сострояние</message>
 	<message key="subscriptions.status.active">Активна</message>
@@ -1056,24 +273,112 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="subscriptions.individualDescription">Идивидуальным подписчикам для доступа к содержимому необходимы логин и пароль.</message>
 	<message key="subscriptions.institutionalDescription">Институциональные подписчики не требуют логина. Для их индентификации используется доменное имя и/или IP адрес.</message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Примечание:</strong> Институциональный доступ, приобретенный онлайн, требует подтверждения домена и диапазона IP адресов в редакции перед тем как подписка будет активирована.]]></message>
+
+	<!--
+	 *
+	 * LOG - This section contains entries related to log entries.
+	 *
+	-->
+	<message key="submission.event.general.defaultEvent">Действия</message>
+	<message key="submission.event.general.articleSubmitted">Статья прислана</message>
+	<message key="submission.event.general.issueScheduled">Статья запланирована</message>
+	<message key="submission.event.general.issueAssigned">Статья назначена к выпуску</message>
+	<message key="submission.event.general.articlePublished">Статья опубликована</message>
+
+	<message key="submission.event.author.authorRevision">Автор прислал исправл. версию</message>
+
+	<message key="submission.event.general.authorRevision">Авторская версия обновлена</message>
+
+	<message key="submission.event.editor.editorAssigned">Редактор определен</message>
+	<message key="submission.event.editor.editorUnassigned">Редактор отозван</message>
+	<message key="submission.event.editor.editorDecision">Решение редактора послано</message>
+	<message key="submission.event.editor.editorFile">Редакторский файл обновлен</message>
+	<message key="submission.event.editor.submissionArchived">Статья послана в архив</message>
+	<message key="submission.event.editor.submissionRestored">Статья восстановлена из архива</message>
+
+
+	<message key="submission.event.copyedit.copyeditorAssigned">Назначен стилистический редактор</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">Стилистический редактор отказался от назначения</message>
+	<message key="submission.event.copyedit.copyeditInitiated">Стилистический редактор начал работу</message>
+	<message key="submission.event.copyedit.copyeditRevision">Новые поправки стилистического редактора</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">Начальная стилистическая правка закончена</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">Окончательная стилистическая правка завершена</message>
+	<message key="submission.event.copyedit.copyeditSetFile">Стилистическая редакция обновлена</message>
+
+	<message key="submission.event.proofread.proofreaderAssigned">Назначен корректор</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">Корректор отказался от назначения</message>
+	<message key="submission.event.proofread.proofreadInitiated">Корректор начал работу</message>
+	<message key="submission.event.proofread.proofreadRevision">Добавлены новые коррекции</message>
+	<message key="submission.event.proofread.proofreadCompleted">Корректор закончил работу</message>
+
+	<message key="submission.event.layout.layoutEditorAssigned">Назначен оформитель</message>
+	<message key="submission.event.layout.layoutEditorUnassigned">Оформитель отказался от назначения</message>
+	<message key="submission.event.layout.layoutInitiated">Оформитель начал работу</message>
+	<message key="submission.event.layout.layoutGalleyCreated">Формат обновлен</message>
+	<message key="submission.event.layout.layoutComplete">Оформление закончено</message>
+	<!--
+	 *
+	 * INTERFACE - Contains phrases organized by the section of the
+	 *             user interface they appear in.
+	 *
+	-->
+
+	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Только для подписчиков</message>
 	<message key="reader.subscriptionRequiredLoginText">Для доступа нужна подписка. Войдите в систему для подтверждения ее наличия.</message>
 	<message key="reader.openAccess">Открытый Доступ</message>
 	<message key="reader.subscriptionAccess">Только для Подписчиков</message>
 	<message key="reader.subscriptionOrFeeAccess">Доступ Платный или Только для Подписчиков</message>
+
+	<!-- Reader Comments -->
+	<message key="comments.commentsOnArticle">Комментарии к статье</message>
+	<message key="comments.authenticated">{$userName}</message>
+
+	<!-- Site Administration -->
+
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[To have the contents of all journals hosted on this site indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your site's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
+<br /><br />
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.
+<br /><br />
+Note that the OAI interface can be disabled for this site by editing the OJS system configuration. Future versions of OJS will allow the OAI interface to be enabled or disabled for individual journals within the site.]]></message>
+
+
+
+	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Загрузка дополнительных языков с сервера Public Knowledge Project сейчас невозможна, поскольку:</p>
 	<ul>
 		<li>Ваш сервер не имеет или не позволяет выполнить программу GNU "tar"</li>
 		<li>у OJS нет возможности изменить список поддерживаемых языков, обычно "registry/locales.xml".</li>
 	</ul>
 <p>Языки можно установить вручную с <a href="http://pkp.sfu.ca">сайта PKP</a>.</p>]]></message>
+
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Указание основного хранилища регистрационных записей, отличного от OJS имеет следующий эффект:</p>
 <ul>
 	<li>Если пользователь пытается зарегистрироватьса на сайте с новым именем, которое уже занято в хранилище (но не в базе данных OJS), регистрация разрешается только в том случае, если указанный пользователем пароль соответствует записи в хранилище.</li>
 </ul>]]></message>
+
+	<!-- System Information -->
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ВНИМАНИЕ!</div>
+<p>Система не сможет автоматически переписать конфиг файл. Чтобы применить настройки, Вам нужно открыть  <tt>config.inc.php</tt> в соотв. текстовом редакторе и заполнить все нужные поля.</p>]]></message>
+
+
+	<!-- Site Administrator Merge Users -->
+
+	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Управление подпиской</message>
 	<message key="subscriptionManager.individualSubscriptions">Индивидуальные подписчики</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Институциональные подписки</message>
 	<message key="subscriptionManager.subscriptionTypes">Типы подписки</message>
+
+	<!-- Journal Management -->
+
+	<!-- Statistics & Reports -->
+
+	<!-- Plugin Management -->
+
+	<!-- Payment Management -->
+
+	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Авторизационные модули позволяют делегировать задачу авторизации пользователей другим системам (напр. LDAP).</message>
 	<message key="plugins.categories.citationFormats.description">Модули форматов ссылок позволяют использовать различные форматы представления ссылок.</message>
 	<message key="plugins.categories.generic.description">Системные модули служат для расширения возможностей OJS, не попадающего под другие перечисленные категории.</message>
@@ -1081,7 +386,27 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="plugins.categories.implicitAuth.description">Неявные модули авторизации реализуют поддержку авторизации пользователей на основе заголовков протокола http.</message>
 	<message key="plugins.categories.oaiMetadataFormats">Модули Форматов Метаданных OAI</message>
 	<message key="plugins.categories.oaiMetadataFormats.description">Эти модули представляют метеданные при связи с другими архивами.</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Редакторы высылают Рецензентам запрос на рецензию по E-mail с копией статьи в приложении. Рецензенты отвечают согласием (или с сожалением отказываются) и своей рецензией с рекоммендацией. Редакторы вводят эти согласие (или отказ),  рецензию и рекоммендацию на странице "Рецензия" рассматриваемой статьи, создавая протокол процесса рецензирования.</message>
+	<message key="plugins.categories.pubIds">Модули публичных идентификаторов</message>
+	<message key="plugins.categories.pubIds.description">Эти модули обеспечивают поддержку публичных идентификаторов.</message>
+
+	<!-- Files Browser -->
+
+	<!-- Journal Setup -->
+
+	<!-- Setup Step 1 -->
+
+	<!-- Setup Step 2 -->
+
+
+	<message key="manager.setup.reviewProcessEmailDescription">Редакторы высылают 
+	Рецензентам запрос на рецензию по E-mail с копией статьи в приложении. Рецензенты отвечают согласием (или с сожалением отказываются) и своей рецензией с рекоммендацией. Редакторы вводят эти согласие (или отказ),  рецензию и рекоммендацию на странице "Рецензия" рассматриваемой статьи, создавая протокол процесса рецензирования.</message>
+
+
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
+<br /><br />
+Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
+	
+	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Предлагаемые уведомления об авторских правах в стиле Creative Commons</h3>
 <h4>1. Предлагаемая политика для журналов, распространяющих статьи в Открытом Доступе</h4>
 Авторы, публикующие в данном журнале, соглашаются со следующим:
@@ -1097,36 +422,315 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<li>Авторы сохраняют за собой автороские права и предоставляют журналу право первой публикации работы, которая по истечении [УКАЖИТЕ ПЕРИОД ВРЕМЕНИ] после публикации автоматически лицензируется на условиях <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> , которая позволяет другим распространять данную работу с обязательным сохранением ссылок на авторов оригинальной работы и оригинальную публикацию в этом журнале.</li>
 	<li>Авторы имеют право размещать их работу в сети Интернет (например в институтском хранилище или персональном сайте) до и во время процесса рассмотрения ее данным журналом, так как это может привести к продуктивному обсуждению и большему количеству ссылок на данную работу (См. <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Journal will use a subject classification system available on the web.<br />
+Title of classification system]]></message>
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oaister.org/dataproviders.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
+<br /><br />
+Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>
 	<message key="manager.setup.citations">Дать авторам возможность предоставлять специально оформленный список использованной литературы (ссылок) как часть рукописи.</message>
-	<message key="submission.editorAuthorRecord">Запись переписки Редактор/Автор</message>
-	<message key="subscriptionManager.institutionalSubscriptions">Институциональные подписки</message>
+
+	<!-- Setup Step 4 -->
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Scheduling Queue &gt; Table of Contents.<br /><br />
+Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Journal Management.)]]></message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Чтобы помочь читалелям легко находить в сети использованную автором литературу, есть следующие возможности:</p>
 
 <ol>
 	<li><strong>добавить пункт меню</strong><p>Главный редактор может добавить утилиту "Найти ссылки" к меню инструментов читателя, сопровождающему опубликованные статьи, что позволяет читателю осуществить поиск ссылок по названию в специально отобранных базах данных научных работ .</p></li>
 	<li><strong>Вставить ссылки</strong><p>Разметчик (Layout Editor) может добавить ссылки в статью, позволяющими находить использованную литературу онлайн, руководствуясь следующим алгоритмом (его можно отредактировать).</p></li>
 </ol>]]></message>
-	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+
+	<!-- Setup Step 5 -->
+
+	<!-- Languages -->
+
+	<!-- Section Management -->
+
+	<!-- Import/Export -->
+
+	<!-- Groups / Editorial Team -->
+
+
+
+	<!-- People Management -->
+	<message key="manager.people.confirmDisable">Disable this user? This will prevent the user from logging into the system.
+
+You may optionally provide the user with a reason for disabling their account.</message>
+	<message key="manager.people.noAdministrativeRights"><![CDATA[Sorry, you do not have administrative rights over this user. This may be because:
+		<ul>
+			<li>Этот пользователь администратор сайта</li>
+			<li>The user is active in journals you do not manage</li>
+		</ul>
+	This task must be performed by a site administrator.
+	]]></message>
+
+
+
+	<!-- Email Management -->
+
+	<!-- Subscription Policy Management -->
+
+	<!-- Subscription Type Management -->
+
+	<!-- Subscription Management -->
+
+	<!-- Announcement Type Management -->
+
+	<!-- Announcements Management -->
+
+	<!-- Editor -->
+	<message key="editor.submissionReview.notes">
+	<![CDATA[<ol>
 	<li>Подсветка элементов означает, что от редактора требуются некоторые действия.</li>
+		<ul>
+			<li class="highlightReviewerNotNotified">A Reviewer has been assigned but not notified by email</li>
+			<li class="highlightNoDecision">All Reviewers have returned with their comments, but no decision is recorded</li>
+			<li class="highlightRevisedCopyUploaded">Author has uploaded a revised manuscript</li>
+			<li class="highlightReviewerConfirmationOverdue">Reviewer is overdue to confirm peer review invitation</li>
+			<li class="highlightReviewerCompletionOverdue">Reviewer is overdue to complete review</li>
+		</ul>
+	</li>
 	<li>Поле "срок" заполняется когда рецензент принимает запрос о рецензировании; оно показывает количество недель до истечения срока, отведенного на рецензирования, или (со знаком минус) недель, на которые рецензия просрочена.</li>
 </ol>]]></message>
-	<message key="sectionEditor.review.enrollReviewer">Назначить Пользователя Рецензентом</message>
-	<message key="sectionEditor.review.createReviewer">Создать нового Рецензента.</message>
+	<message key="editor.submissionEditing.notes">
+	<![CDATA[<ol>
+	<li>Highlighted items indicate action is required by an editor, labelled as follows:
+		<ul>
+			<li class="highlightCopyediting">An action is required in the copyediting stage</li>
+			<li class="highlightLayoutEditing">An action is required in the layout editing stage</li>
+			<li class="higlightProofreading">An action is required in the proofreading stage</li>
+		</ul>
+	</li>
+</ol>]]></message>
+
+	<!-- Editor Index Page -->
+
+	<!-- Back Issues -->
+
+	<!-- Create Issue / Issue Data -->
+
+	<!-- Live Issues -->
+
+	<!-- Navigation sidebar menu -->
+
+	<!-- Used by editor in submission review / editing -->
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
+Высшая оценка 5 (Отлично).<br/>
+Сколько дней нужно рецензентам для завершения работы.<br />
+Latest is date of most recently accepted review,<br/>
+Active is how many reviews are currently being considered or underway.]]></message>
+
+
+
+
+
+
+	<!-- Section Editor -->
+	<message key="sectionEditor.activeEditorialAssignments">Редакторские назначения</message>
+	<message key="sectionEditor.completedEditorialAssignments">Исполненные редакторские задачи</message>
+	<message key="sectionEditor.noneAssigned">Нет назначенных статей.</message>
+	<message key="sectionEditor.copyedit.confirmRenotify">Оповещение данного редактора повторит его назначение. Вы уверены, что это нужно сделать?</message>
+	<message key="sectionEditor.author.confirmRenotify">Оповещение автора повторит процесс. Вы уверены, что это нужно сделать?</message>
+	<message key="sectionEditor.layout.confirmRenotify">Оповещение худ. редактора подновит его назначение. Вы уверены, что это нужно сделать?</message>
+	<message key="sectionEditor.proofreader.confirmRenotify">Оповещение корректора подновит его назначение. Вы уверены, что это нужно сделать?</message>
+
+	<message key="sectionEditor.regrets.breadcrumb">Сожаления</message>
+	<message key="sectionEditor.regrets.title">#{$articleId} Сожаления рецензента, Отмены &amp; Прежние раунды</message>
+	<message key="sectionEditor.regrets">Сожаления</message>
+	<message key="sectionEditor.regrets.link">Сожаления рецензента, Отмены &amp; Прежние раунды</message>
+	<message key="sectionEditor.regrets.reviewRound">Спецрецензия, Раунд {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">Решение редактора, Раунд {$round}</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">Сожаления рецензента &amp; Отмены</message>
+	<message key="sectionEditor.regrets.regret">Сожаление</message>
+	<message key="sectionEditor.regrets.result">Результат</message>
+	<message key="sectionEditor.review.enrollReviewer">Enroll an Existing User As Reviewer</message>
+	<message key="sectionEditor.review.createReviewer">Create New Reviewer</message>
+
+	<!-- Layout Editor -->
+	<message key="layoutEditor.activeEditorialAssignments">Действующие редакторские назначения</message>
+	<message key="layoutEditor.completedEditorialAssignments">Исполненные редакторские задачи</message>
+	<message key="layoutEditor.noActiveAssignments">Нет редакторских назначений.</message>
+	<message key="layoutEditor.layoutEditingAssignments">Задачи по форматированию</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">Загрузить формат</message>
+	<message key="layoutEditor.galley.replaceGalley">Заменить файл</message>
+	<message key="layoutEditor.galley.uploadSuppFile">Загрузить доп. файл</message>
 	<message key="submission.layout.imageInvalid">Неверный формат изображения. Принимаются .gif, .jpg, и .png.</message>
+
+	<!-- Reviewer -->
+	<message key="reviewer.pendingReviews">Articles Pending Review</message>
+	<message key="reviewer.completedReviews">Done</message>
+	<message key="reviewer.averageQuality">Rating</message>
+	
+	<!-- Used in submission review -->
+	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>
+	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
+	<message key="reviewer.article.canDoReview">Will do the review</message>
+	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
 	<message key="reviewer.article.restrictedFileAccess">Рукопись будет доступна когда (и если) потенциальный рецензент согласится на рецензирование.</message>
+	<message key="reviewer.article.submissionEditor">Submission Editor</message>
+	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
+	<message key="reviewer.article.editorToEnter">Editor To Enter</message>
+	<message key="reviewer.article.sendReminder">Send Reminder</message>
+	<message key="reviewer.article.automatic">(Auto)</message>
+	<message key="reviewer.article.recommendation">Recommendation</message>
+	<message key="reviewer.article.submitReview">Submit Review To Editor</message>
+	<message key="reviewer.article.reviewerComments">Comments</message>
+	<message key="reviewer.article.uploadedFile">Uploaded files</message>
+	<message key="reviewer.article.reviewersAnnotatedVersion">Version uploaded by reviewer</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)</message>
+        <message key="reviewer.article.schedule.request">Editor's Request</message>
+        <message key="reviewer.article.schedule.response">Your Response</message>
+        <message key="reviewer.article.schedule.submitted">Review Submitted</message>
+        <message key="reviewer.article.schedule.due">Review Due</message>
+	<message key="reviewer.article.decision.accept">Accept Submission</message>
+	<message key="reviewer.article.decision.pendingRevisions">Revisions Required</message>
+	<message key="reviewer.article.decision.resubmitHere">Resubmit for Review</message>
+        <message key="reviewer.article.decision.resubmitElsewhere">Resubmit Elsewhere</message>
+	<message key="reviewer.article.decision.decline">Decline Submission</message>
+	<message key="reviewer.article.decision.seeComments">See Comments</message>
+	<message key="reviewer.article.schedule">Schedule</message>
+        <message key="reviewer.article.submissionToBeReviewed">Submission To Be Reviewed</message>
+        <message key="reviewer.article.reviewSchedule">Review Schedule</message>
+        <message key="reviewer.article.reviewSteps">Review Steps</message>
+        <message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Руководство Рецензента должно содержать критерии для принятия решения о соответствии рукописи стандартам данного журнала, они могут включать и дополнительные советы для эффективной и полезной для автора рецензии. Рецензентам предлагается заполнить два текстовых поля: "для автора и редактора" и "для редактора". Главный Редактор может создать форму для рецензий на соответствующей страничке. Во всех случаях, редакторы будут иметь возможность использования рецензий в переписке с автором.</message>
-	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Задекларируйте, пожалуйста, наличие/отсутствие конфликта интересов в отношении рассматриваемой работі (см. <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Конфликт&nbsp;Интересов</a>).]]></message>
+        <message key="reviewer.article.notifyEditorA">Notify the submission's editor</message>
+        <message key="reviewer.article.notifyEditorB">as to whether you will undertake the review.</message>
+        <message key="reviewer.article.consultGuidelines">If you are going to do the review, consult Reviewer Guidelines below.</message>
+        <message key="reviewer.article.downloadSubmission">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
+		<message key="reviewer.article.enterCompetingInterests"><![CDATA[Задекларируйте, пожалуйста, наличие/отсутствие конфликта интересов в отношении рассматриваемой работі (см. <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Конфликт&nbsp;Интересов</a>).]]></message>
 	<message key="reviewer.competingInterests">Конфликт Интересов</message>
+        <message key="reviewer.article.enterReviewA">Click on icon to enter (or paste) your review of this submission.</message>
+        <message key="reviewer.article.uploadFile">In addition, you can upload files for the editor and/or author to consult.</message>
+        <message key="reviewer.article.selectRecommendation">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
+	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
+	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
 	<message key="reviewer.article.ensuringBlindReview">Обеспечение Рецензирования Вслепую</message>
+
+	<!-- Used in submission editing -->
+	<message key="copyeditor.article.fileToCopyedit">Файл для верстки</message>
+	<message key="copyeditor.article.copyeditorFile">Файл</message>
+	<message key="copyeditor.article.uploadedFile">Загруженный файл</message>
+	<message key="copyeditor.article.copyeditorFinalFile">Файл верстки</message>
+	
+	<!-- Proofreader -->
+	<message key="proofreader.noProofreadingAssignments">Нет корректорских назначений</message>
+
+	<!-- Author -->
+
+
+	<!-- Article Submission Step 1 -->
+
+
+	<!-- Article Submission Step 2 -->
+
+	<!-- Article Submission Step 3 -->
+	<message key="author.submit.uploadInstructions"><![CDATA[
+<p>Чтобы прислать статью для публикации в этом журнале, нужно сделать следующее:</p>
+
+<ol>
+<li>Нажать на кнопку Browse (или Выбрать файл), после чего откроется диалоговое окошко для выбора директории на Вашем компьютере.</li>
+<li>Выбрать мышкой файл.</li>
+<li>Нажать Open.</li>
+<li>Нажать Загрузить (Upload) файл.</li>
+<li>Когда материал загрузится, нажать Сохранить и Продолжить (Save and Continue) внизу страницы.</li>
+</ol>]]></message>
+
+	<!-- Article Submission Step 4 -->
+
+	<!-- Article Submission Step 4a: Дополнительные файлы -->
+
+	<!-- Article Submission Step 5 -->
+
+	<!-- Used in submission review / editing -->
+	<message key="submission.review.mustUploadFileForReview">Request email cannot be sent until a Review Version is in place.</message>
+
+	<!-- Submission Tracking - Copyedit Specific -->
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Request email cannot be sent until file is selected for copyediting in Editor Decision, Review page.</message>
+	<message key="submission.copyedit.mustUploadFileForCopyedit">Request email cannot be sent until file is uploaded for copyediting.</message>
+	<message key="submission.copyedit.initialCopyedit">Initial Copyedit</message>
+	<message key="submission.copyedit.editorsCopyedit">Editor's Copyedit</message>
+	<message key="submission.copyedit.editorAuthorReview">Author Copyedit</message>
+	<message key="submission.copyedit.finalCopyedit">Final Copyedit</message>
+	<message key="submission.copyedit.copyeditVersion">C/E Version</message>
+	<message key="submission.copyedit.selectCopyeditor">Assign Copyeditor</message>
+	<message key="submission.copyedit.useFile">Use File</message>
+	<message key="submission.copyedit.copyeditComments">Copyedit Comments</message>
+	<message key="submission.copyedit.instructions">Copyedit Instructions</message>
+
+	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Отсутствует (Используйте в запросе Корректуру в качестве Гранок)</message>
 	<message key="submission.layout.publicGalleyId">Идентификатор Гранок</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Идентификатор гранок уже существует.</message>
+	<message key="submission.layout.assignLayoutEditor">Назначить худ. редактора</message>
+	<message key="submission.layout.replaceLayoutEditor">Заменить худ. редактора</message>
+	<message key="submission.layout.layoutComments">Комментарии по формату</message>
+	<message key="submission.layout.instructions">Указания по форматиронию</message>
 	<message key="submission.layout.referenceLinking">Привязка ссылок</message>
+
+
+	<!-- Submission Tracking - Proofread Specific -->
+	<message key="submission.proofreadingComments">Комментарии по правке</message>
+	<message key="submission.proofread.corrections">Правки</message>
+	<message key="submission.proofread.instructions">Указания корректорам</message>
+
+	<!-- Submission History -->
+
+	<message key="submission.logType.article">Статья</message>
+	<message key="submission.logType.author">Автор</message>
+	<message key="submission.logType.editor">Редактор</message>
+	<message key="submission.logType.review">Рецензия</message>
+	<message key="submission.logType.copyedit">Верстка</message>
+	<message key="submission.logType.layout">Формат</message>
+	<message key="submission.logType.proofread">Правка</message>
+
+	<!-- Submission Event Log -->
+
+	<!-- Submission Email Log -->
+
+	<!-- Submission Comments -->
+	<message key="submission.comments.editorAuthorCorrespondence">Редактор-Автор корреспонденция</message>
+	<message key="submission.comments.copyeditComments">Комментарии по верстке</message>
+	<message key="submission.comments.viewableDescription"><![CDATA[These comments can be shared with the author.<br />
+(After saving, further comments can be added.)]]></message>
+	<message key="submission.comments.canShareWithAuthor">Для автора и редактора</message>
+	<message key="submission.comments.cannotShareWithAuthor">Для редактора</message>
 	<message key="submission.comments.blindCcReviewers">После отправки, отправьте по BCC редактируемую копию рецензентам.</message>
+	<message key="submission.comments.forAuthorEditor">Для автора и редактора</message>
+	<message key="submission.comments.forEditor">Для редактора</message>
+	<message key="submission.comments.saveAndEmailAuthor">Сохранить и послать автору</message>
+	<message key="submission.comments.saveAndEmailEditor">Сохранить и послать редактору</message>
+
+	<!-- Login -->
+	<message key="user.login.registerNewAccount">Регистрация нового пользователя</message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[For security reasons, this system emails a reset password to registered users, rather than recalling the
+current password.<br /><br />Enter your email address below to reset your password. A confirmation will be sent to this email address.]]></message>
+
+	<!-- Registration -->
+	<message key="user.register.selectJournal">Выбрать журнал для регистрации</message>
 	<message key="user.register.noJournals">На сайте нет журналов в которых Вы могли бы зарегистрироваться.</message>
+	<message key="user.register.privacyStatement">Конфиденциальность</message>
+	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a>, если Вы зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a> если Вы <strong>не</strong> зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
+	<message key="user.register.loginToRegister">Введите Ваше имя и пароль, чтобы получить доступ к этому журналу.</message>
+	<message key="user.register.registrationDisabled">Этот журнал пока не регистрирует новых пользователей.</message>
+	<message key="user.register.form.passwordLengthTooShort">Ваш пароль не достаточно длинный.</message>
+	<message key="user.register.readerDescription">Оповещение мейлом о выходе новых статей или журнальных номеров.</message>
 	<message key="user.register.openAccessNotificationDescription">Уведомление по электронной почте, когда выпуск журнала выкладывается в открытый доступ.</message>
+	<message key="user.register.authorDescription">Разрешается отправлять статьи в журнал.</message>
 	<message key="user.register.reviewerDescriptionNoInterests">Согласен учавствовать в рецензировании рукописей, отправленных в этот журнал.</message>
+	<message key="user.register.reviewerDescription">Желаю быть спецрецензентом журнала. В мою компетенцию входят следующие темы:</message>
+	<message key="user.register.reviewerInterests">Identify reviewing interests (substantive areas and research methods):</message>
+
+	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Мои Подписки</message>
+	<message key="user.subscriptions.subscriptionStatus">Статус подписки</message>
+	<message key="user.subscriptions.statusInformation">Active and expired subscriptions are displayed below along with their expiration date. In addition, the following status information may be included with each subscription.</message>
+	<message key="user.subscriptions.status">Статус</message>
+	<message key="user.subscriptions.statusDescription">Описание</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Additional information is needed before the subscription can be activated</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Subscription must be reviewed before it can be activated</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manual payment has been initiated but not yet received</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">An online payment has been initiated but canceled or not completed</message>
 	<message key="user.subscriptions.individualSubscriptions">Индивидуальная Подписка</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Институциональные Подписки</message>
 	<message key="user.subscriptions.renew">Продлить</message>
@@ -1156,30 +760,156 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="user.subscriptions.form.ipRangeValid">Пожалуйста введите правильный диапазон IP адресов.</message>
 	<message key="user.subscriptions.form.deleteIpRange">Удалить</message>
 	<message key="user.subscriptions.form.addIpRange">Добавить</message>
+
+
+	<!-- Search -->
+	<message key="search.browseAuthorIndex">Список авторов</message>
+	<message key="search.searchFor">Поиск статей</message>
+	<message key="search.author">Авторы</message>
+	<message key="search.withinJournal">В журнале</message>
+	<message key="search.allJournals">Все журналы</message>
+	<message key="search.authorIndex">По авторам</message>
+	<message key="search.authorDetails">Информация об авторе</message>
+	<message key="search.syntaxInstructions"><![CDATA[Подсказки: <ul>
+<li>Ключевые слова чувствительны к регистру</li>
+<li>Английские предлоги и союзы игнорируются</li>
+<li>По умолчанию поиск проводится <em>по всем</em> ключевым словам (агенс <strong>AND</strong> экспериенцер)</li>
+<li>Используйте <strong>OR</strong> для поиска того или иного термина, напр. <em>образование OR обучение</em></li>
+<li>Используйте скобки для создания сложных фраз, напр. <em>архив ((журналов OR конференций) NOT диссертаций)</em></li>
+<li>Для поиска точной фразы используйте кавычки, напр. <em>"научные исследования"</em></li>
+<li>Исключайте слово при помощи знака <strong>-</strong> (дефис) или оператора <strong>NOT</strong>; напр. <em>конкурс -красоты</em> или же <em>конкурс NOT красоты</em></li>
+<li>Используйте <strong>*</strong> в качестве версификатора, напр. <em>научн*</em> охватит слова "научный", "научные" и т.д.</li>
+</ul>]]></message>
+
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+	<message key="article.pdf.download">Загрузить этот файл PDF</message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p> <p>Alternatively, you can download the PDF file directly to your computer, from where it can be opened using a PDF reader. To download the PDF, click the Download link above.</p>]]></message>
+
+
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+	<message key="article.nonpdf.title">Скачать статью</message>
+	<message key="article.nonpdf.note"><![CDATA[Выбранный Вами файл должен скачаться автоматически. Если не получается, <a href="{$pdfUrl}">нажмите здесь</a>.]]></message>
+
+	<!-- Site index -->
+	<message key="site.journalsHosted">Журналы на этом сайте</message>
+	<message key="site.journalView">Посмотреть</message>
+	<message key="site.journalRegister">Регистрация</message>
+	<message key="site.journalCurrent">Текущий выпуск</message>
+	<message key="site.noJournals">There are no journals available.</message>
+
+	<!-- Current index -->
+	<message key="current.current">Текущий</message>
+	<message key="current.noCurrentIssue">Нет текущего выпуска</message>
+	<message key="current.noCurrentIssueDesc">У этого журнала нет опубликованных выпусков.</message>
+
+	<!-- Archive index -->
+	<message key="archive.archives">Архивы</message>
+	<message key="archive.browse">Пролистать старые номера</message>
+	<message key="archive.issueUnavailable">Выпуск недоступен</message>
+
+	<!-- About The Journal -->
 	<message key="about.statistics">Статистика</message>
+	<message key="about.journalContact">Контакты</message>
+	<message key="about.aboutTheJournal">О журнале</message>
 	<message key="about.history">История Журнала</message>
+	<message key="about.editorialTeam">Ответственные редакторы</message>
 	<message key="about.editorialTeam.biography">Биография</message>
+	<message key="about.editorialPolicies">Редакционная политика</message>
+	<message key="about.focusAndScope">Цели и задачи</message>
+	<message key="about.sectionPolicies">Разделы и редакторы</message>
+	<message key="about.submissions">Прием статей</message>
+	<message key="about.sponsors">Спонсоры</message>
+	<message key="about.contributors">Источники поддержки</message>
+	<message key="about.onlineSubmissions">Отправка статей</message>
+	<message key="about.onlineSubmissions.haveAccount">У Вас уже есть логин для журнала {$journalTitle}?</message>
+	<message key="about.onlineSubmissions.login">Логин</message>
+	<message key="about.onlineSubmissions.needAccount">Нужен логин?</message>
+	<message key="about.onlineSubmissions.registration">Регистрироваться</message>
+	<message key="about.onlineSubmissions.registrationRequired">Если Вы зарегистрировались и вошли в свой акаунт, Вы можете начать процесс отправки статьи. Для этого нужно выбрать роль Автора.</message>
+	<message key="about.authorGuidelines">Указания для авторов</message>
+	<message key="about.submissionPreparationChecklist">Подготовка статей</message>
 	<message key="about.submissionPreparationChecklist.description">Как часть процесса передачи статьи на рассмотрение, авторам прийдется согласиться со всеми следующими пунктами. Рукопись может быть возвращена авторам, если она им не соответствует.</message>
+	<message key="about.copyrightNotice">Авторские права</message>
+	<message key="about.privacyStatement">Приватность</message>
 	<message key="about.authorFees">Плата за публикацию</message>
 	<message key="about.authorFeesMessage">Плата за публикацию представляет собой следующее.</message>
+	<message key="about.peerReviewProcess">Процесс рецензирования</message>
+	<message key="about.publicationFrequency">Периодичность</message>
+	<message key="about.openAccessPolicy">Политика свободного доступа</message>
 	<message key="about.delayedOpenAccess">Отложенный Открытый Доступ</message>
 	<message key="about.delayedOpenAccessDescription1">Содержанию этого журнала будет в открытом доступе через</message>
 	<message key="about.delayedOpenAccessDescription2">месяцев после публикации номера.</message>
 	<message key="about.authorSelfArchive">Само-архивирование автором</message>
+	<message key="about.archiving">Архивация</message>
+	<message key="about.subscriptions">Подписки</message>
 	<message key="about.subscriptions.individual">Индивидуальные Подписки</message>
 	<message key="about.subscriptions.institutional">Институциональные Подписки</message>
+	<message key="about.subscriptionsContact">Контакт для подписки</message>
 	<message key="about.subscriptionTypes.name">Имя</message>
 	<message key="about.subscriptionTypes.format">Формат</message>
 	<message key="about.subscriptionTypes.duration">Продолжительность</message>
 	<message key="about.subscriptionTypes.cost">Цена</message>
+	<message key="about.availableSubscriptionTypes">Типы подписок</message>
 	<message key="about.memberships">Членства</message>
+	<message key="about.journalSponsorship">Издатель и спонсоры</message>
+	<message key="about.aboutThisPublishingSystem">Об издательской системе</message>
 	<message key="about.aboutThisPublishingSystem.altText">Редакционный процесс</message>
+	<message key="about.aboutOJSJournal"><![CDATA[Этот журнал является частью издательской системы, которая предлагает академическим и научным издательствам инструменты для онлайн публикаций на основе <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> при GNU General Public License.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[Этот журнал является частью издательской системы, которая предлагает академическим и научным издательствам инструменты для онлайн публикаций на основе <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> при GNU General Public License.]]></message>
+
+	<!-- Announcement -->
+
+	<!-- Help -->
+	<message key="help.ojsHelp">OJS - помощь</message>
+	<message key="help.ojsHelpAbbrev">OJS Help</message>	
 	<message key="help.searchReturnResults">Вернуться к результатам поиска</message>
+
+	<!-- Donations -->
 	<message key="donations.thankYou">Спасибо</message>
 	<message key="donations.thankYouMessage">Огромное спасибо за Ваш вклад.</message>
+
+	<!-- Gifts -->
+	<message key="gifts.buyer">От</message>
+	<message key="gifts.buyerDescription">От кого этот подарок?</message>
+	<message key="gifts.recipient">Кому</message>
+	<message key="gifts.recipientDescription">Кому этот подарок?</message>
+	<message key="gifts.thankYou">Спасибо</message>
+	<message key="gifts.thankYouMessage">Your gift purchase has been completed. You will receive a copy of the gift email sent to the recipient once your payment has been processed.</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Подарочная подписка</message>
+	<message key="gifts.subscriptionFormIntroduction">Please fill out the form below. The provided contact information, along with your gift note, will be used to email the recipient and inform them of their new gift subscription (you will also receive a copy of this email).</message>
+	<message key="gifts.details">Информация о подарке</message>
+	<message key="gifts.detailsDescription">Please select the gift below and include a personalized message that will be emailed to the recipient (you will receive a copy of this email).</message>
+	<message key="gifts.gift">Подарок</message>
+	<message key="gifts.noteTitle">Title</message>
+	<message key="gifts.note">Gift Note</message>
+	<message key="gifts.noteTitleRequired">Please provide a title for your personalized message.</message>
+	<message key="gifts.noteRequired">Please provide a personalized message.</message>
+	<message key="gifts.localeRequired">Please select a language for your personalized message.</message>
+	<message key="gifts.myGifts">Мои подарки</message>
+	<message key="gifts.manageMyGifts">Manage My Gifts</message>
+	<message key="gifts.redeemGift">Активировать подарок</message>
+	<message key="gifts.status.notRedeemed">Available</message>
+	<message key="gifts.status.redeemed">Redeemed</message>
+	<message key="gifts.status.redeemGift">Активировать подарок</message>
+	<message key="gifts.subscriptions">Подписки</message>
+	<message key="gifts.subscriptionsDescription">A gift subscription redeemed here will replace your existing subscription (if you have one). Subscriptions will begin on the redemption date and will be valid for the duration of the subscription type.</message>
+	<message key="gifts.purchaseGiftSubscription">Give a gift subscription</message>
+	<message key="gifts.giftSubscriptionsAvailable">Gift subscriptions are also available. Gift subscriptions can be redeemed at any time by the recipient and are a great way to support this journal.</message>
+	<message key="gifts.noSubscriptions">No gift subscriptions</message>
+	<message key="gifts.giftRedeemed">The gift was successfully redeemed.</message>
+	<message key="gifts.noGiftToRedeem">This gift is not available to be redeemed.</message>
+	<message key="gifts.giftAlreadyRedeemed">This gift has already been redeemed.</message>
+	<message key="gifts.giftNotValid">This gift is not valid and could not be redeemed.</message>
+	<message key="gifts.subscriptionTypeNotValid">The subscription type for this gift is not valid. Please contact the subscription manager.</message>
+	<message key="gifts.subscriptionNonExpiring">The gift was not redeemed since you already have a non-expiring subscription with this journal.</message>
+
+	<!-- Payments -->
 	<message key="payment.loginRequired">Для осуществления платежа необходимо войти в систему.</message>
 	<message key="payment.loginRequired.forArticle">Для доступа к статье требуется подписка или приобретенный доступ к этой статье. Чтобы подтвердить подписку и доступ, либо приобрести статью, пожалуйста войдите в систему.</message>
+	<message key="payment.loginRequired.forIssue">Subscription or issue purchase required to access item. To verify subscription, access previous purchase, or purchase issue, log in to journal.</message>
 	<message key="payment.loginRequired.forDonation">Для внесения пожертвования необходимо войти в систему.</message>
+
 	<message key="payment.paid">Оплачено</message>
 	<message key="payment.payNow">Оплатить</message>
 	<message key="payment.waive">Уклониться</message>
@@ -1187,44 +917,214 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="payment.alreadyPaidMessage">Выберите если Вы уже отправили свой платеж в журнал для завершения процесса подачи статьи. Рукопись не будет рассматриваться до прихода платежа. Нажмите ОПЛАТИТЬ СЕЙЧАС для получения инструкций по оплате.</message>
 	<message key="payment.paymentReceived">Платеж получен</message>
 	<message key="payment.paymentSent">Платеж уже отправлен</message>
+	<message key="payment.authorFees">Author Fees</message>
 	<message key="payment.type.submission">Плата за подачу</message>
 	<message key="payment.type.publication">Плата за публикацию</message>
 	<message key="payment.type.fastTrack">Плата за рецензирование вне очереди</message>
 	<message key="payment.type.membership">Плата за индивидуальное членство</message>
 	<message key="payment.type.purchaseArticle">Плата за покупку статьи</message>
+	<message key="payment.type.purchaseIssue">Purchase Issue Fee</message>
 	<message key="payment.type.subscription">Плата за подписку</message>
 	<message key="payment.type.donation">Пожертвования</message>
+	<message key="payment.type.gift">Подарок</message>
+	<message key="payment.type.gift.subscription">Подписка</message>
+
 	<message key="payment.donation.makeDonation">Сделать пожертвование</message>
+
 	<message key="payment.submission.paySubmission">Оплатить подачу статьи</message>
 	<message key="payment.fastTrack.payFastTrack">Оплатить рецензию вне очереди</message>
 	<message key="payment.fastTrack.inFastTrack">вне очереди</message>
 	<message key="payment.publication.payPublication">Оплатить публикацию</message>
 	<message key="payment.publication.publicationPaid">Публикация оплачена</message>
+
 	<message key="payment.membership.buyMembership">Приобрести индивидуальное членство</message>
 	<message key="payment.membership.renewMembership">Продолжить индивидуальное членство</message>
 	<message key="payment.membership.ends">Заканчивается</message>
+
 	<message key="payment.subscription.purchase">Приобрести подписку</message>
 	<message key="payment.subscription.renew">Продолжить подписку</message>
 	<message key="payment.subscription.expires">Истекает</message>
+
+	<!-- Installer -->
+	<message key="installer.ojsInstallation">OJS Installation</message>
+	<message key="installer.ojsUpgrade">OJS Upgrade</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
+
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://pkp.sfu.ca/support/forum" target="_blank">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+
+<h4>Upgrade</h4>
+
+<p>If you are upgrading an existing installation of OJS 2.x, <a href="{$upgradeUrl}">click here</a> to proceed.</p>
+
+<h4>Recommended system requirements</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (including PHP 5.x); you are currently using PHP {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (including PostgreSQL 8.x)</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>
+	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+</ul>
+
+<p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>
+
+<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory, or using the site administration web interface.</p>
+
+<h4>Supported database systems</h4>
+
+<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
+
+<h4>Pre-Installation Steps</h4>
+
+<p>1. The following files and directories (and their contents) must be made writable:</p>
+<ul>
+	<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
+	<li><tt>public/</tt> is writable: {$writable_public}</li>
+	<li><tt>cache/</tt> is writable: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> is writable: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>
+</ul>
+
+<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
+
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README">README</a> and <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://pkp.sfu.ca/support/forum" target="_blank">support forum</a> or visit PKP's online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>
+<p>If you are running in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Note that this support currently requires a MySQL >= 4.1.1 or PostgreSQL >= 7.1 database server. Please also note that full Unicode support requires PHP >= 4.3.0 compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
+<br /><br />
+Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
+	<message key="installer.allowFileUploads"><![CDATA[Your server currently allows file uploads: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Your server currently allows a maximum file upload size of: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="installer.localeInstructions">The primary language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here.</message>
+	<message key="installer.additionalLocalesInstructions">Select any additional languages to support in this system. These languages will be available for use by journals hosted on the site. Additional languages can also be installed at any time from the site administration interface.</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
 	<message key="installer.databaseSettingsInstructions">OJS хранит свои данные в базе данных, поддерживающей язык SQL. В списке выше указаны поддерживаемые базы данных. В следующих полях укажите установки, которые будут использованы для соединения с базой.</message>
 	<message key="installer.installApplication">Установить Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Обновить Open Journal Systems</message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
+<p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
+	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
+<p>To begin using the system, <a href="{$loginUrl}">login</a> with the username and password entered on the previous page.</p>
+<p>If you wish to receive news and updates, you can:</p>
+<ol>
+	<li><a href="http://pkp.sfu.ca/ojs/register" target="_new">Register</a> your journal, conference, or harvester and receive updates on software upgrades, security patches, and more.</li>
+	<li>Join our <a href="http://pkp.sfu.ca/informed" target="_new">discussion list</a> for OJS, OCS, the Harvester, Lemon8-XML, OMP, or all of the above.</li>
+	<li>Subscribe to the <a href="http://pkp.sfu.ca/blog" target="_new">PKP blog</a> <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a>.</li>
+</ol>
+<p>If you have questions or comments, please visit the <a href="http://pkp.sfu.ca/support/forum" target="_new">support forum</a>.</p>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>
+<p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <em>On</em>.</p>
+<p>If you haven't already registered and wish to receive news and updates, <strong>please register at <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> If you have questions or comments, please visit the <a href="http://pkp.sfu.ca/support/forum" target="_new">support forum</a>.</p>]]></message>
+
+	<!-- Installation upgrade warnings -->
+	<message key="site.upgradeAvailable.admin"><![CDATA[There is a new version of OJS available! You are currently using OJS {$currentVersion}. The most recent version is OJS {$latestVersion}. Please visit <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> to download the most recent version and find upgrade instructions.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[There is a new version of OJS available! You are currently using OJS {$currentVersion}. The most recent version is OJS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href="http://pkp.sfu.ca/ojs_download" target="_new">here</a>.]]></message>
+
+	<!-- Article Logs -->
+	<message key="log.author.submitted">{$authorName} has entered a new submission, ID {$submissionId}.</message>
+	<message key="log.author.documentRevised">{$authorName} has revised article {$articleId}. The new file ID is {$fileId}.</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} has been assigned to review submission {$articleId} for review round {$round}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} has been unassigned from reviewing submission {$articleId} for review round {$round}.</message>
+	<message key="log.review.reviewInitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been initiated.</message>
+	<message key="log.review.reviewReinitiated">The round {$round} review by {$reviewerName} for submission {$articleId} has been reinitiated.</message>
+	<message key="log.review.reviewCancelled">The round {$round} review by {$reviewerName} for submission {$articleId} has been cancelled.</message>
+	<message key="log.review.reviewCleared">The round {$round} review by {$reviewerName} for submission {$articleId} has been cleared.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} has been rated for the round {$round} review of submission {$articleId}.</message>
+	<message key="log.review.reviewDueDateSet">The due date for the round {$round} review of submission {$articleId} by {$reviewerName} has been set to {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">The recommendation for the round {$round} review of submission {$articleId} by {$reviewerName} has been set.</message>
 	<message key="log.review.reviewRecommendationSetByProxy">Рекомендация для {$round} раунда рецензирования рукописи {$articleId} была введена редактором, {$editorName}, от имени рецензента, {$reviewerName}.</message>
+	<message key="log.review.resubmit">The submission {$articleId} has been resubmitted for review.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$articleId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$articleId}.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} отказался от рецензирования {$articleId} на {$round}-м раунде от имени {$reviewerName}.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">Редактор, {$userName}, ввел файл рецензии для {$round}-го раунда рецензирования рукописи {$articleId} от имени рецензента, {$reviewerName}.</message>
+	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
 	<message key="log.editor.decision">Решение ({$decision}) для статьи {$articleId} было введено {$editorName}.</message>
+
+
+	<message key="log.copyedit.initiate">Copyediting on submission {$articleId} has been commenced by {$copyeditorName}.</message>
+	<message key="log.copyedit.copyeditFileSet">The default copyedit file has been chosen.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} has completed the initial copy edit of submission {$articleId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} has completed the final copy edit of submission {$articleId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} has been assigned to copyedit submission {$articleId}.</message>
+	<message key="log.copyedit.copyeditorFile">A copyeditor version of the submission file has been uploaded.</message>
+	<message key="log.copyedit.authorFile">A version of the submission file copyedited by the author has been uploaded.</message>
+
+	<message key="log.layout.layoutEditorAssigned">{$editorName} has been assigned as layout editor for submission {$articleId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} has been unassigned as layout editor for submission {$articleId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} has completed layout editing for submission {$articleId}.</message>
+
+	<message key="log.editor.metadataModified">The metadata for this article was modified by {$editorName}.</message>
+	<message key="log.editor.editorFile">An editor version of the submission file has been uploaded.</message>
+	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
+	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
+	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
 	<message key="log.editor.submissionExpedited">{$editorName} ускорил процесс редактирования статьи {$articleId}.</message>
+
+	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>
+
+	<message key="log.imported">{$userName} has imported article {$articleId}.</message>
+
+	<!-- Reading Tools entries -->
+
+
+	<!-- RT Settings -->
+	<message key="rt.admin.settings">Настройки</message>
 	<message key="rt.admin.settings.description">Инструменты читателя появляются в рамке рядом с опубликованными статьями в индексируемых разделах журнала. Они состоят из нижеперечисленного набора инструментов, а также инструментов, осуществляющих поиск по подобию, организованных в соответствии с разделом науки и дисциплиной.</message>
 	<message key="rt.admin.settings.enableReadingTools">Включить инструменты читателя для некоторых разделов журнала.</message>
 	<message key="rt.admin.settings.relatedItems">Раздел науки</message>
 	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Смотрите <a href="{$relatedItemsLink}" class="action">Наборы Близких Статей</a> для просмотра, изменения, дополнения и удаления близких статей для каждой области.]]></message>
+
+	<message key="rt.admin.options">Опции</message>
 	<message key="rt.admin.relatedItems">Близкие Статьи</message>
+
 	<message key="rt.admin.settings.addComment">Добавить комментарий (позволяет читателям оставлять комментарии, с возможностью для редакции их удалить).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Пользователи должны войти в систему перед тем как комментировать, анонимность не допускается.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Пользователи должны войти в систему перед тем как комментировать, анонимность допускается.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Пользователи не обязаны входить в систему перед тем как комментировать, анонимность допускается.</message>
+
+
+	<!-- RT Versions -->
+
+	<!-- RT Contexts -->
+
+	<!-- RT Searches -->
+
+	<message key="rt.admin.validateUrls.description"><![CDATA[Possibly invalid URLs for search sites are displayed below.<br/>
+You should manually verify any URLs marked as invalid, as this test is not 100% accurate.<br/>
+Validation may fail on search URLs that require posted form data.]]></message>
+
+	<!-- RT Entities -->
+
+
+
+
+	<message key="rt.metadata.dublinCore.primaryAuthor">Создатель</message>
+
+	<message key="rt.metadata.pkp.primaryAuthor">Автор, учреждение</message>
+	<message key="rt.metadata.pkp.peerReviewed">Рецензированная статья</message>
+
+
+
+
+
+	<message key="rt.beNotifiedWhen">Получить уведомление, если...</message>
+
+	<message key="rt.thisJournal">Найти в этом журнале</message>
+
+
+	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+
+
+
+	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Введите свой электронный адрес, чтобы получать уведомления о новостях журнала.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[На этой странице показан список новостей этого журнала, таких как выход новых номеров и обьявления. Вы можете получать эти новости в формате RSS (нажав на иконки справа), или <a href="{$emailUrl}">по электронной почте.</a>]]></message>
+
 	<message key="notification.type.articleSubmitted">Представлена новая статья, "{$param}".</message>
 	<message key="notification.type.copyeditComment">Редактор оставил комментарий о "{$param}".</message>
 	<message key="notification.type.editing">Процесс редактирования</message>
@@ -1243,33 +1143,22 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.type.submissions">Процесс отправки</message>
 	<message key="notification.type.suppFileModified">Изменились дополнительные файлы "{$param}".</message>
 	<message key="notification.type.userComment">Читатель добавил комментарий о "{$param}"</message>
+
+	<!--
+	 *
+	 * MISC - Entries that do not belong in the other sections.
+	 *
+	-->
+	<!-- Authorization -->
+	<message key="user.authorization.copyeditorAssignmentMissing">Access denied! You have not been assigned as a copyeditor to this article.</message>
+	<message key="user.authorization.noJournal">No journal in context!</message>
+	<message key="user.authorization.sectionAssignment">You are trying to access an article that is not part of your section.</message>
+	<message key="user.authorization.invalidCopyditorSubmission">Invalid copyeditor submission or no copyeditor submission requested!</message>
+	<message key="user.authorization.invalidSectionEditorSubmission">Invalid section editor submission or no section editor submission requested!</message>
+
+	<!-- Icons: Default "alt" text -->
+
+	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Загружен список валют "{$filename}" в XML</message>
 	<message key="debug.notes.helpMappingLoad">Перезагружен XML файл подсказки {$filename} в поиске {$id}.</message>
-	<message key="submission.reviewFormResponse">Заполненная Форма Рецензента</message>
-	<message key="navigation.competingInterestGuidelines">Описание Конфликта Интересов</message>
-	<message key="navigation.categories">Категории</message>
-	<message key="issue.fullIssue">Весь выпуск</message>
-	<message key="issue.nonpdf.title">Загрузка выпуска</message>
-	<message key="issue.viewIssue">Смотреть выпуск</message>
-	<message key="issue.viewIssueDescription">Посмотреть или загрузить весь выпуск</message>
-	<message key="plugins.categories.pubIds">Модули публичных идентификаторов</message>
-	<message key="plugins.categories.pubIds.description">Эти модули обеспечивают поддержку публичных идентификаторов.</message>
-	<message key="user.subscriptions.subscriptionStatus">Статус подписки</message>
-	<message key="user.subscriptions.status">Статус</message>
-	<message key="user.subscriptions.statusDescription">Описание</message>
-	<message key="article.pdf.download">Загрузить этот файл PDF</message>
-	<message key="gifts.buyer">От</message>
-	<message key="gifts.buyerDescription">От кого этот подарок?</message>
-	<message key="gifts.recipient">Кому</message>
-	<message key="gifts.recipientDescription">Кому этот подарок?</message>
-	<message key="gifts.thankYou">Спасибо</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Подарочная подписка</message>
-	<message key="gifts.details">Информация о подарке</message>
-	<message key="gifts.gift">Подарок</message>
-	<message key="gifts.myGifts">Мои подарки</message>
-	<message key="gifts.redeemGift">Активировать подарок</message>
-	<message key="gifts.status.redeemGift">Активировать подарок</message>
-	<message key="gifts.subscriptions">Подписки</message>
-	<message key="payment.type.gift">Подарок</message>
-	<message key="payment.type.gift.subscription">Подписка</message>
 </locale>
