@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/authorBios/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.authorBios.displayName">Author biography Block</message>
+	<message key="plugins.block.authorBios.description">This plugin displays a block containing author biographies in the reading tools sidebar.</message>
+	<message key="plugins.block.authorBios.title">Об авторах</message>
+	<message key="plugins.block.authorBios.aboutTheAuthor">Об авторе</message>
+	<message key="plugins.block.authorBios.aboutTheAuthors">Об авторах</message>
+</locale>
