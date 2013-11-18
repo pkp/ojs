@@ -49,15 +49,23 @@ class AuthorDAO extends PKPAuthorDAO {
 			'SELECT DISTINCT
 				aa.submission_id
 			FROM	authors aa
-				LEFT JOIN articles a ON (aa.submission_id = a.article_id)
-				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ?)
+				LEFT JOIN articles a
+					ON (aa.submission_id = a.article_id)
+				LEFT JOIN author_settings asl
+					ON (asl.author_id = aa.author_id AND asl.setting_name = ?)
 			WHERE	aa.first_name = ?
 				AND a.status = ' . STATUS_PUBLISHED . '
-				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
+				AND (aa.middle_name = ?'
+					. (empty($middleName) ? ' OR aa.middle_name IS NULL' : '')
+				. ')
 				AND aa.last_name = ?
-				AND (asl.setting_value = ?' . (empty($affiliation)?' OR asl.setting_value IS NULL':'') . ')
-				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' .
-				($journalId!==null?(' AND a.journal_id = ?'):''),
+				AND (asl.setting_value = ?'
+					. (empty($affiliation) ? ' OR asl.setting_value IS NULL' : '')
+				. ')
+				AND (aa.country = ?'
+					. (empty($country) ? ' OR aa.country IS NULL' : '')
+				. ') '
+				. ( $journalId !== null ? (' AND a.journal_id = ?') : ''),
 			$params
 		);
 
@@ -115,17 +123,36 @@ class AuthorDAO extends PKPAuthorDAO {
 				aa.first_name,
 				aa.middle_name,
 				aa.last_name,
-				CASE WHEN asl.setting_value = \'\' THEN NULL ELSE SUBSTRING(asl.setting_value FROM 1 FOR 255) END AS affiliation_l,
+				CASE WHEN asl.setting_value = \'\'
+					THEN NULL
+					ELSE SUBSTRING(asl.setting_value FROM 1 FOR 255)
+					END AS affiliation_l,
 				asl.locale,
-				CASE WHEN aspl.setting_value = \'\' THEN NULL ELSE SUBSTRING(aspl.setting_value FROM 1 FOR 255) END AS affiliation_pl,
+				CASE WHEN aspl.setting_value = \'\'
+					THEN NULL
+					ELSE SUBSTRING(aspl.setting_value FROM 1 FOR 255)
+					END AS affiliation_pl,
 				aspl.locale AS primary_locale,
-				CASE WHEN aa.country = \'\' THEN NULL ELSE aa.country END AS country
+				CASE WHEN aa.country = \'\'
+					THEN NULL
+					ELSE aa.country
+					END AS country
 			FROM	authors aa
-				LEFT JOIN author_settings aspl ON (aa.author_id = aspl.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
-				LEFT JOIN author_settings asl ON (aa.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
-				JOIN articles a ON (a.article_id = aa.submission_id AND a.status = ' . STATUS_PUBLISHED . ')
-				JOIN published_articles pa ON (pa.article_id = a.article_id)
-				JOIN issues i ON (pa.issue_id = i.issue_id AND i.published = 1)
+				LEFT JOIN author_settings aspl
+					ON (aa.author_id = aspl.author_id
+						AND aspl.setting_name = ?
+						AND aspl.locale = ?)
+				LEFT JOIN author_settings asl
+					ON (aa.author_id = asl.author_id
+						AND asl.setting_name = ?
+						AND asl.locale = ?)
+				JOIN articles a
+					ON (a.article_id = aa.submission_id
+						AND a.status = ' . STATUS_PUBLISHED . ')
+				JOIN published_articles pa
+					ON (pa.article_id = a.article_id)
+				JOIN issues i
+					ON (pa.issue_id = i.issue_id AND i.published = 1)
 			WHERE ' . (isset($journalId)?'a.journal_id = ? AND ':'') . '
 				(aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
 				$initialSql . '
@@ -153,7 +180,8 @@ class AuthorDAO extends PKPAuthorDAO {
 	function insertAuthor(&$author) {
 		$this->update(
 			'INSERT INTO authors
-				(submission_id, first_name, middle_name, last_name, country, email, url, primary_contact, seq)
+				(submission_id, first_name, middle_name, last_name,
+					country, email, url, primary_contact, seq)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
