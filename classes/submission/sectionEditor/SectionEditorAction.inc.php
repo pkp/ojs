@@ -1227,16 +1227,19 @@ class SectionEditorAction extends Action {
 		$articleFileManager = new ArticleFileManager($sectionEditorSubmission->getArticleId());
 		$sourceFileId = $sectionEditorSubmission->getReviewFileId();
 		$reviewFileId = $articleFileManager->copyToReviewFileAsPdf($sourceFileId, $sectionEditorSubmission->getReviewRevision(), $sourceFileId);
-		// MRH: Previously this code was simply incrementing the revision number, when it really 
-		//      needs to be getting it dynamically from the uploaded file.
-		$sectionEditorSubmission->setReviewRevision($articleFileManager->getFile($reviewFileId)->getRevision());
-		$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
+		$newReviewFile = $articleFileManager->getFile($reviewFileId);
+		if (isset($newReviewFile)) {
+			// MRH: Previously this code was simply incrementing the revision number, when it really 
+			//      needs to be getting it dynamically from the uploaded file.
+			$sectionEditorSubmission->setReviewRevision($articleFileManager->getFile($reviewFileId)->getRevision());
+			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, $sectionEditorSubmission->getReviewRevision(), $sectionEditorSubmission->getEditorFileId());
 		
-		if (isset($reviewFileId) && $reviewFileId != 0 && isset($editorFileId) && $editorFileId != 0) {
-			$sectionEditorSubmission->setReviewFileId($reviewFileId);
-			$sectionEditorSubmission->setEditorFileId($editorFileId);
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			if (isset($reviewFileId) && $reviewFileId != 0 && isset($editorFileId) && $editorFileId != 0) {
+				$sectionEditorSubmission->setReviewFileId($reviewFileId);
+				$sectionEditorSubmission->setEditorFileId($editorFileId);
+				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+				$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			}
 		}
 		
 		return $reviewFileId;
