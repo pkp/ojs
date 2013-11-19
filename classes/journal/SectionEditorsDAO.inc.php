@@ -28,9 +28,9 @@ class SectionEditorsDAO extends DAO {
 				VALUES
 				(?, ?, ?, ?, ?)',
 			array(
-				$journalId,
-				$sectionId,
-				$userId,
+				(int) $journalId,
+				(int) $sectionId,
+				(int) $userId,
 				$canReview?1:0,
 				$canEdit?1:0
 			)
@@ -47,9 +47,9 @@ class SectionEditorsDAO extends DAO {
 		return $this->update(
 			'DELETE FROM section_editors WHERE journal_id = ? AND section_id = ? AND user_id = ?',
 			array(
-				$journalId,
-				$sectionId,
-				$userId
+				(int) $journalId,
+				(int) $sectionId,
+				(int) $userId
 			)
 		);
 	}
@@ -67,7 +67,7 @@ class SectionEditorsDAO extends DAO {
 
 		$result = $this->retrieve(
 			'SELECT u.*, e.can_review AS can_review, e.can_edit AS can_edit FROM users AS u, section_editors AS e WHERE u.user_id = e.user_id AND e.journal_id = ? AND e.section_id = ? ORDER BY last_name, first_name',
-			array($journalId, $sectionId)
+			array((int) $journalId, (int) $sectionId)
 		);
 
 		while (!$result->EOF) {
@@ -127,7 +127,7 @@ class SectionEditorsDAO extends DAO {
 		);
 		else return $this->update(
 			'DELETE FROM section_editors WHERE section_id = ?',
-			$sectionId
+			(int) $sectionId
 		);
 	}
 
@@ -137,7 +137,7 @@ class SectionEditorsDAO extends DAO {
 	 */
 	function deleteEditorsByJournalId($journalId) {
 		return $this->update(
-			'DELETE FROM section_editors WHERE journal_id = ?', $journalId
+			'DELETE FROM section_editors WHERE journal_id = ?', (int) $journalId
 		);
 	}
 
@@ -150,9 +150,9 @@ class SectionEditorsDAO extends DAO {
 	function deleteByUserId($userId, $journalId  = null, $sectionId = null) {
 		return $this->update(
 			'DELETE FROM section_editors WHERE user_id = ?' . (isset($journalId) ? ' AND journal_id = ?' : '') . (isset($sectionId) ? ' AND section_id = ?' : ''),
-			isset($journalId) && isset($sectionId) ? array($userId, $journalId, $sectionId)
-			: (isset($journalId) ? array($userId, $journalId)
-			: (isset($sectionId) ? array($userId, $sectionId) : $userId))
+			isset($journalId) && isset($sectionId) ? array((int) $userId, (int) $journalId, (int) $sectionId)
+			: (isset($journalId) ? array((int) $userId, (int) $journalId)
+			: (isset($sectionId) ? array((int) $userId, (int) $sectionId) : (int) $userId))
 		);
 	}
 
@@ -165,7 +165,8 @@ class SectionEditorsDAO extends DAO {
 	 */
 	function editorExists($journalId, $sectionId, $userId) {
 		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM section_editors WHERE journal_id = ? AND section_id = ? AND user_id = ?', array($journalId, $sectionId, $userId)
+			'SELECT COUNT(*) FROM section_editors WHERE journal_id = ? AND section_id = ? AND user_id = ?',
+			array((int) $journalId, (int) $sectionId, (int) $userId)
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 
