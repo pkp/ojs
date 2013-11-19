@@ -12,7 +12,11 @@
 <br/>
 <table width="100%">
 	<tr>
-		<td style="background: yellow; padding: 15px;">Authors: To access peer review and editorial decision information, or to upload a revised draft, click on the <strong>2. REVIEW</strong> link above.</td>
+		<td style="background: yellow; padding: 15px;">
+			<strong>Attention Authors</strong><br />
+			Use the <strong>2. REVIEW</strong> link above to access peer review and editorial decision information, or to upload a new draft for review.<br />
+			Use the <strong>3. EDITING</strong> link above to upload a <em>copyedited</em> version, or to record proofreading comments.
+		</td>
 	</tr>
 </table>
 <h3>{translate key="article.submission"}</h3>
