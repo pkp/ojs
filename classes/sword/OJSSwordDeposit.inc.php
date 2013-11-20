@@ -12,9 +12,9 @@
  * @brief Class providing a SWORD deposit wrapper for OJS articles
  */
 
-require_once('./lib/pkp/lib/swordapp/swordappclient.php');
-require_once('./lib/pkp/lib/swordapp/swordappentry.php');
-require_once('./lib/pkp/lib/swordapp/packager_mets_swap.php');
+require_once('./lib/pkp/lib/swordappv2/swordappclient.php');
+require_once('./lib/pkp/lib/swordappv2/swordappentry.php');
+require_once('./lib/pkp/lib/swordappv2/packager_mets_swap.php');
 
 class OJSSwordDeposit {
 	/** @var SWORD deposit METS package */
@@ -57,6 +57,12 @@ class OJSSwordDeposit {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$this->section = $sectionDao->getById($article->getSectionId());
 
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
+
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		if ($publishedArticle) $this->issue = $issueDao->getById($publishedArticle->getIssueId());
+
 		$this->article = $article;
 	}
 
@@ -84,7 +90,7 @@ class OJSSwordDeposit {
 
 		// The article can be published or not. Support either.
 		if (is_a($this->article, 'PublishedArticle')) {
-			$plugin =& PluginRegistry::loadPlugin('citationFormats', 'bibtex');
+			$plugin = PluginRegistry::loadPlugin('citationFormats', 'bibtex');
 			$this->package->setCitation(html_entity_decode(strip_tags($plugin->fetchCitation($this->article, $this->issue, $this->journal)), ENT_QUOTES, 'UTF-8'));
 		}
 	}
@@ -115,7 +121,7 @@ class OJSSwordDeposit {
 		// Move through signoffs in reverse order and try to use them.
 		foreach (array('SIGNOFF_LAYOUT', 'SIGNOFF_COPYEDITING_FINAL', 'SIGNOFF_COPYEDITING_AUTHOR', 'SIGNOFF_COPYEDITING_INITIAL') as $signoffName) {
 			assert(false); // Signoff implementation has changed; needs fixing.
-			$file =& $this->article->getFileBySignoffType($signoffName);
+			$file = $this->article->getFileBySignoffType($signoffName);
 			if ($file) {
 				$this->_addFile($file);
 				return true;
@@ -125,8 +131,8 @@ class OJSSwordDeposit {
 
 		// If that didn't work, try the Editor Version.
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($this->article->getId());
-		$file =& $sectionEditorSubmission->getEditorFile();
+		$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($this->article->getId());
+		$file = $sectionEditorSubmission->getEditorFile();
 		if ($file) {
 			$this->_addFile($file);
 			return true;
@@ -135,7 +141,7 @@ class OJSSwordDeposit {
 
 		// Try the Review Version.
 		/* FIXME for OJS 3.0
-		$file =& $sectionEditorSubmission->getReviewFile();
+		$file = $sectionEditorSubmission->getReviewFile();
 		if ($file) {
 			$this->_addFile($file);
 			return true;
