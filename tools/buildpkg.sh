@@ -37,7 +37,9 @@ tools/genTestLocale.php						\
 tools/test							\
 lib/pkp/tests							\
 .git								\
-lib/pkp/.git"
+lib/pkp/.git							\
+lib/pkp/lib/swordappv2/.git					\
+lib/pkp/lib/swordappv2/test"
 
 
 cd $TMPDIR
@@ -50,6 +52,12 @@ echo "Done"
 
 echo -n "Checking out corresponding submodule ... "
 git submodule -q update --init >/dev/null || exit 1
+echo "Done"
+
+echo -n "Checking out submodule submodules ... "
+cd lib/pkp
+git submodule -q update --init >/dev/null || exit 1
+cd ../..
 echo "Done"
 
 echo -n "Preparing package ... "
