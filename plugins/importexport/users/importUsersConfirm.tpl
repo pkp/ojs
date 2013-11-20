@@ -80,7 +80,7 @@
 			<input type="hidden" name="{$userKey|escape}_unencryptedPassword" value="{$user->getUnencryptedPassword()|escape}" />
 			<input type="hidden" name="{$userKey|escape}_mustChangePassword" value="{$user->getMustChangePassword()|escape}" />
 		</td>
-		<td><input type="text" name="{$userKey|escape}_firstName" value="{$user->getFirstName()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey|escape}_firstName" value="{$user->getLocalizedFirstName()|escape}" size="9" class="textField" /></td>
 		<td><input type="text" name="{$userKey|escape}_middleName" value="{$user->getMiddleName()|escape}" size="9" class="textField" /></td>
 		<td><input type="text" name="{$userKey|escape}_lastName" value="{$user->getLastName()|escape}" size="9" class="textField" /></td>
 		<td><input type="text" name="{$userKey|escape}_username" value="{$user->getUsername()|escape}" size="9" class="textField" /></td>

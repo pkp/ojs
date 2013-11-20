@@ -89,13 +89,19 @@ class UserXMLParser {
 								$newUser->setSalutation($attrib->getValue());
 								break;
 							case 'first_name':
-								$newUser->setFirstName($attrib->getValue());
+								$locale = $attrib->getAttribute('locale');
+								if (empty($locale)) $locale = $journalPrimaryLocale;
+								$newUser->setFirstName($attrib->getValue(), $locale);
 								break;
 							case 'middle_name':
-								$newUser->setMiddleName($attrib->getValue());
+								$locale = $attrib->getAttribute('locale');
+								if (empty($locale)) $locale = $journalPrimaryLocale;
+								$newUser->setMiddleName($attrib->getValue(), $locale);
 								break;
 							case 'last_name':
-								$newUser->setLastName($attrib->getValue());
+								$locale = $attrib->getAttribute('locale');
+								if (empty($locale)) $locale = $journalPrimaryLocale;
+								$newUser->setLastName($attrib->getValue(), $locale);
 								break;
 							case 'initials':
 								$newUser->setInitials($attrib->getValue());

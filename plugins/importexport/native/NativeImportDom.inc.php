@@ -934,9 +934,12 @@ class NativeImportDom {
 
 		$journalSupportedLocales = array_keys($journal->getSupportedLocaleNames()); // => journal locales must be set up before
 		$author = new Author();
-		if (($node = $authorNode->getChildByName('firstname'))) $author->setFirstName((string)$node->getValue());
-		if (($node = $authorNode->getChildByName('middlename'))) $author->setMiddleName($node->getValue());
-		if (($node = $authorNode->getChildByName('lastname'))) $author->setLastName((string)$node->getValue());
+		if (($node = $authorNode->getChildByName('firstname')))
+			$author->setFirstName((string)$node->getValue());
+		if (($node = $authorNode->getChildByName('middlename')))
+			$author->setMiddleName($node->getValue());
+		if (($node = $authorNode->getChildByName('lastname')))
+			$author->setLastName((string)$node->getValue());
 		$author->setSequence($authorIndex+1); // 1-based
 		for ($index=0; ($node = $authorNode->getChildByName('affiliation', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
@@ -956,7 +959,15 @@ class NativeImportDom {
 			if ($locale == '') {
 				$locale = $article->getLocale();
 			} elseif (!in_array($locale, $journalSupportedLocales)) {
-				$errors[] = array('plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported', array('authorFullName' => $author->getFullName(), 'articleTitle' => $article->getLocalizedTitle(), 'issueTitle' => $issue->getIssueIdentification(), 'locale' => $locale));
+				$errors[] = array(
+					 'plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported',
+					array(
+						'authorFullName' => $author->getLocalizedFullName(),
+						'articleTitle' => $article->getLocalizedTitle(),
+						'issueTitle' => $issue->getIssueIdentification(),
+						'locale' => $locale
+					)
+				);
 				return false;
 			}
 			$author->setCompetingInterests($node->getValue(), $locale);
