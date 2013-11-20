@@ -52,9 +52,18 @@ class ArticleSearchIndex {
 			$authors = $article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
 				$author =& $authors[$i];
-				array_push($authorText, $author->getFirstName());
-				array_push($authorText, $author->getMiddleName());
-				array_push($authorText, $author->getLastName());
+				$firstnames = $author->getFirstName(null);
+				if (is_array($firstnames)) foreach ($firstnames as $firstname) { // Localized
+					array_push($authorText, strip_tags($firstname));
+				}
+				$middlenames = $author->getMiddleName(null);
+				if (is_array($middlenames)) foreach ($middlenames as $middlename) { // Localized
+					array_push($authorText, strip_tags($middlename));
+				}
+				$lastnames = $author->getLastName(null);
+				if (is_array($lastnames)) foreach ($lastnames as $lastname) { // Localized
+					array_push($authorText, strip_tags($lastname));
+				}
 				$affiliations = $author->getAffiliation(null);
 				if (is_array($affiliations)) foreach ($affiliations as $affiliation) { // Localized
 					array_push($authorText, $affiliation);

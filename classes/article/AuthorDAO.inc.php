@@ -101,13 +101,19 @@ class AuthorDAO extends PKPAuthorDAO {
 		$authors = array();
 		$params = array(
 			'affiliation', AppLocale::getPrimaryLocale(),
-			'affiliation', AppLocale::getLocale()
+			'affiliation', AppLocale::getLocale(),
+			'firstName',   AppLocale::getPrimaryLocale(),
+			'firstName',   AppLocale::getLocale(),
+			'middleName',  AppLocale::getPrimaryLocale(),
+			'middleName',  AppLocale::getLocale(),
+			'lastName',    AppLocale::getPrimaryLocale(),
+			'lastName',    AppLocale::getLocale()
 		);
 
 		if (isset($journalId)) $params[] = $journalId;
 		if (isset($initial)) {
 			$params[] = String::strtolower($initial) . '%';
-			$initialSql = ' AND LOWER(aa.last_name) LIKE LOWER(?)';
+			$initialSql = 'HAVING LOWER(last_name_l) LIKE LOWER(?)';
 		} else {
 			$initialSql = '';
 		}
@@ -120,19 +126,46 @@ class AuthorDAO extends PKPAuthorDAO {
 				' . ($includeEmail?'aa.email AS email,':'CAST(\'\' AS CHAR) AS email,') . '
 				0 AS primary_contact,
 				0 AS seq,
-				aa.first_name,
-				aa.middle_name,
-				aa.last_name,
+				asl.locale,
+				aspl.locale AS primary_locale,
+				asfnl.locale fn_locale,
+				asfnpl.locale AS fn_primary_locale,
+				asmnl.locale mn_locale,
+				asmnpl.locale AS mn_primary_locale,
+				aslnl.locale ln_locale,
+				aslnpl.locale AS ln_primary_locale,
 				CASE WHEN asl.setting_value = \'\'
 					THEN NULL
 					ELSE SUBSTRING(asl.setting_value FROM 1 FOR 255)
 					END AS affiliation_l,
-				asl.locale,
 				CASE WHEN aspl.setting_value = \'\'
 					THEN NULL
 					ELSE SUBSTRING(aspl.setting_value FROM 1 FOR 255)
 					END AS affiliation_pl,
-				aspl.locale AS primary_locale,
+				CASE WHEN asfnl.setting_value = \'\'
+					THEN NULL
+					ELSE SUBSTRING(asfnl.setting_value FROM 1 FOR 255)
+					END AS first_name_l,
+				CASE WHEN asfnpl.setting_value = \'\'
+					THEN NULL
+					ELSE SUBSTRING(asfnpl.setting_value FROM 1 FOR 255)
+					END AS first_name_pl,
+				CASE WHEN asmnl.setting_value = \'\'
+					THEN NULL
+					ELSE SUBSTRING(asmnl.setting_value FROM 1 FOR 255)
+					END AS middle_name_l,
+				CASE WHEN asmnpl.setting_value = \'\'
+					THEN NULL
+					ELSE SUBSTRING(asmnpl.setting_value FROM 1 FOR 255)
+					END AS middle_name_pl,
+				CASE WHEN aslnl.setting_value = \'\'
+					THEN NULL
+					ELSE SUBSTRING(aslnl.setting_value FROM 1 FOR 255)
+					END AS last_name_l,
+				CASE WHEN aslnpl.setting_value = \'\'
+					THEN NULL
+					ELSE SUBSTRING(aslnpl.setting_value FROM 1 FOR 255)
+					END AS last_name_pl,
 				CASE WHEN aa.country = \'\'
 					THEN NULL
 					ELSE aa.country
@@ -146,6 +179,30 @@ class AuthorDAO extends PKPAuthorDAO {
 					ON (aa.author_id = asl.author_id
 						AND asl.setting_name = ?
 						AND asl.locale = ?)
+				LEFT JOIN author_settings asfnpl
+					ON (aa.author_id = asfnpl.author_id
+						AND asfnpl.setting_name = ?
+						AND asfnpl.locale = ?)
+				LEFT JOIN author_settings asfnl
+					ON (aa.author_id = asfnl.author_id
+						 AND asfnl.setting_name = ?
+						 AND asfnl.locale = ?)
+				LEFT JOIN author_settings asmnpl
+					ON (aa.author_id = asmnpl.author_id
+						AND asmnpl.setting_name = ?
+						AND asmnpl.locale = ?)
+				LEFT JOIN author_settings asmnl
+					ON (aa.author_id = asmnl.author_id
+						 AND asmnl.setting_name = ?
+						 AND asmnl.locale = ?)
+				LEFT JOIN author_settings aslnpl
+					ON (aa.author_id = aslnpl.author_id
+						AND aslnpl.setting_name = ?
+						AND aslnpl.locale = ?)
+				LEFT JOIN author_settings aslnl
+					ON (aa.author_id = aslnl.author_id
+						 AND aslnl.setting_name = ?
+						 AND aslnl.locale = ?)
 				JOIN articles a
 					ON (a.article_id = aa.submission_id
 						AND a.status = ' . STATUS_PUBLISHED . ')
@@ -155,8 +212,8 @@ class AuthorDAO extends PKPAuthorDAO {
 					ON (pa.issue_id = i.issue_id AND i.published = 1)
 			WHERE ' . (isset($journalId)?'a.journal_id = ? AND ':'') . '
 				(aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
-				$initialSql . '
-			ORDER BY aa.last_name, aa.first_name',
+			$initialSql . '
+			ORDER BY last_name_l, last_name_pl, first_name_l, first_name_pl',
 			$params,
 			$rangeInfo
 		);
@@ -186,9 +243,9 @@ class AuthorDAO extends PKPAuthorDAO {
 				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$author->getSubmissionId(),
-				$author->getFirstName(),
-				$author->getMiddleName() . '', // make non-null
-				$author->getLastName(),
+				$author->getFirstName(null), // for compatibility
+				$author->getMiddleName(null) . '', // make non-null
+				$author->getLastName(null), // for compatibility
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),
@@ -220,9 +277,9 @@ class AuthorDAO extends PKPAuthorDAO {
 				seq = ?
 			WHERE	author_id = ?',
 			array(
-				$author->getFirstName(),
-				$author->getMiddleName() . '', // make non-null
-				$author->getLastName(),
+				$author->getFirstName(null), // for compatibility
+				$author->getMiddleName(null) . '', // make non-null
+				$author->getLastName(null), // for compatibility
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),
