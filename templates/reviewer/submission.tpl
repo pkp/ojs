@@ -126,14 +126,12 @@ function confirmSubmissionCheck() {
 			{url|assign:"declineUrl" op="confirmReview" reviewId=$reviewId declineReview=1}
 
 			{if !$submission->getCancelled()}
-				{translate key="reviewer.article.canDoReview"} {icon name="mail" url=$acceptUrl}
+				<a href="{$acceptUrl}">{translate key="reviewer.article.canDoReview"}</a> {icon name="mail" url=$acceptUrl}
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" url=$declineUrl}
+				<a href="{$declineUrl}">{translate key="reviewer.article.cannotDoReview"}</a> {icon name="mail" url=$declineUrl}
 			{else}
-				{url|assign:"url" op="confirmReview" reviewId=$reviewId}
 				{translate key="reviewer.article.canDoReview"} {icon name="mail" disabled="disabled" url=$acceptUrl}
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				{url|assign:"url" op="confirmReview" reviewId=$reviewId declineReview=1}
 				{translate key="reviewer.article.cannotDoReview"} {icon name="mail" disabled="disabled" url=$declineUrl}
 			{/if}
 		{else}
