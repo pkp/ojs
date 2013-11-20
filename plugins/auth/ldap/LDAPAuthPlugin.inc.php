@@ -310,9 +310,9 @@ class LDAPAuthPlugin extends AuthPlugin {
 
 		// Only update fields that exist
 		if (isset($firstName))
-			$user->setFirstName($firstName);
+			$user->setFirstName($firstName, AppLocale::getLocale());
 		if (isset($middleName))
-			$user->setMiddleName($middleName);
+			$user->setMiddleName($middleName, AppLocale::getLocale());
 		if (isset($initials))
 			$user->setInitials($initials);
 		if (isset($lastName))
@@ -341,12 +341,12 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 */
 	function userToAttr(&$user, &$attr) {
 		// FIXME empty strings for unset fields?
-		if ($user->getFullName())
-			$attr['cn'] = $user->getFullName();
-		if ($user->getFirstName())
-			$attr['givenName'] = $user->getFirstName();
-		if ($user->getLastName())
-			$attr['sn'] = $user->getLastName();
+		if ($user->getFullName(null))
+			$attr['cn'] = $user->getFullName(AppLocale::getLocale());
+		if ($user->getFirstName(null))
+			$attr['givenName'] = $user->getFirstName(AppLocale::getLocale());
+		if ($user->getLastName(null))
+			$attr['sn'] = $user->getLastName(AppLocale::getLocale());
 		if ($user->getAffiliation())
 			$attr['organizationName'] = $user->getAffiliation(AppLocale::getLocale());
 		if ($user->getEmail())
