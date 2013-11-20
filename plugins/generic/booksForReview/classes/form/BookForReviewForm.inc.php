@@ -169,9 +169,9 @@ class BookForReviewForm extends Form {
 					$this->_data['authors'],
 					array(
 						'authorId' => $authors[$i]->getId(),
-						'firstName' => $authors[$i]->getFirstName(),
-						'middleName' => $authors[$i]->getMiddleName(),
-						'lastName' => $authors[$i]->getLastName(),
+						'firstName'  => $authors[$i]->getFirstName(null),
+						'middleName' => $authors[$i]->getMiddleName(null),
+						'lastName'   => $authors[$i]->getLastName(null),
 						'seq' => $authors[$i]->getSequence()
 					)
 				);

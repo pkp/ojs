@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/timedView/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.timedView.displayName">Informes de lectura en el temps</message>
+	<message key="plugins.generic.timedView.description">Aquest connector ofereix un informe en format CSV detallant el número de lectors per article, filtrats per la finestra de temps que s'indiqui.</message>
+
+	<message key="plugins.generic.timedView.form.dateStartRequired">Es necessaria una data d'inici.</message>
+	<message key="plugins.generic.timedView.form.dateStartValid">Si us plau, escull una data d'inici vàlida.</message>
+	<message key="plugins.generic.timedView.form.dateEndRequired">Es necessaria una data de finalització.</message>
+	<message key="plugins.generic.timedView.form.dateEndValid">Si us plau, escull una data de finalització vàlida.</message>
+	<message key="plugins.generic.timedView.form.generate">Genereu informe</message>
+	<message key="plugins.generic.timedView.form.clearLogs">Neteja el registre</message>
+	<message key="plugins.generic.timedView.form.clearLogs.description">Escolliu una data per a eliminar les entrades prèvies al registre. Qualsevol entrada al registre feta abans de la data escollida serà eliminada. Tingueu en compte que això només afecta al connector d'informes de lectura en el temps i no al cómput de lectures fets per altres complements (p.e.: El complement general de lectures).</message>
+	<message key="plugins.generic.timedView.form.clearLogs.confirm">Esteu segurs de voler eliminar aquestes entrades? Aquest procés NO és reversible.</message>
+
+	<message key="plugins.generic.timedView.report.articleId">ID d'article</message>
+	<message key="plugins.generic.timedView.report.articleTitle">Títol d'article</message>
+	<message key="plugins.generic.timedView.report.datePublished">Data de publicació</message>
+	<message key="plugins.generic.timedView.report.abstractViews">Lectures d'abstract</message>
+	<message key="plugins.generic.timedView.report.galleyViews">Total de lectures de l'article</message>
+</locale>

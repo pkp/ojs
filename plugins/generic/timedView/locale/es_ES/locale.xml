@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/timedView/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.timedView.displayName">Informe de lectures en el tiempo</message>
+	<message key="plugins.generic.timedView.description">Este conector ofrece un informe en formato CSV detallando el número de lectores por artículo, filtrados por la ventana de tiempo que se indique.</message>
+
+	<message key="plugins.generic.timedView.form.dateStartRequired">Se requiere una fecha de inicio.</message>
+	<message key="plugins.generic.timedView.form.dateStartValid">Por favor, indique una fecha de inicio válida</message>
+	<message key="plugins.generic.timedView.form.dateEndRequired">Se requiere una fehca de finalización.</message>
+	<message key="plugins.generic.timedView.form.dateEndValid">Por favor, indique una fecha de finalización válida.</message>
+	<message key="plugins.generic.timedView.form.generate">Generar informe</message>
+	<message key="plugins.generic.timedView.form.clearLogs">Limpiar registro.</message>
+	<message key="plugins.generic.timedView.form.clearLogs.description">Indica una fecha para eliminar las entradas previas a la misma en el registro. Ten en cuenta que esto sólo afecta al conector de informes en el tiempo y no al cómputo realizado en otros lugares (p.e.: El complemento general de lecturas)</message>
+	<message key="plugins.generic.timedView.form.clearLogs.confirm">Estás seguro/a de querer eleminar estas entradas? Este proceso NO es reversible.</message>
+
+	<message key="plugins.generic.timedView.report.articleId">ID de artículo</message>
+	<message key="plugins.generic.timedView.report.articleTitle">Título de artículo</message>
+	<message key="plugins.generic.timedView.report.datePublished">Fecha de publicación</message>
+	<message key="plugins.generic.timedView.report.abstractViews">Lecturas del resumen</message>
+	<message key="plugins.generic.timedView.report.galleyViews">Total de lecturas del artículo</message>
+</locale>

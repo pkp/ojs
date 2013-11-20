@@ -90,7 +90,7 @@ class BookForReview extends DataObject {
 			if (!empty($str)) {
 				$str .= $separator;
 			}
-			$str .= $lastOnly ? $a->getLastName() : $a->getFullName();
+			$str .= $lastOnly ? $a->getLocalizedLastName() : $a->getLocalizedFullName();
 		}
 		return $str;
 	}
@@ -242,7 +242,7 @@ class BookForReview extends DataObject {
 			if (!empty($initials)) {
 				return $initials;
 			} else {
-				return substr($editor->getFirstName(), 0, 1) . substr($editor->getLastName(), 0, 1);
+				return mb_substr($editor->getLocalizedFirstName(), 0, 1) . mb_substr($editor->getLocalizedLastName(), 0, 1);
 			}
 		}
 	}

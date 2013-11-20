@@ -128,9 +128,9 @@ class BookForReviewAuthorDAO extends DAO {
 				(?, ?, ?, ?, ?)',
 			array(
 				$author->getBookId(),
-				$author->getFirstName(),
-				$author->getMiddleName() . '', // make non-null
-				$author->getLastName(),
+				$author->getFirstName(null),
+				$author->getMiddleName(null) . '', // make non-null
+				$author->getLastName(null),
 				$author->getSequence()
 			)
 		);
@@ -153,9 +153,9 @@ class BookForReviewAuthorDAO extends DAO {
 					seq = ?
 				WHERE author_id = ?',
 			array(
-				$author->getFirstName(),
-				$author->getMiddleName() . '', // make non-null
-				$author->getLastName(),
+				$author->getFirstName(null),
+				$author->getMiddleName(null) . '', // make non-null
+				$author->getLastName(null),
 				$author->getSequence(),
 				$author->getId()
 			)
