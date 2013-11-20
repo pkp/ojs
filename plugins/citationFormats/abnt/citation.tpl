@@ -16,13 +16,13 @@
 {assign var=location value=$citationPlugin->getLocalizedLocation($journal)}
 {if $authorCount <= 3}
 	{foreach from=$authors item=author name=authors key=i}
-		{assign var=firstName value=$author->getFirstName()}
-		{assign var=middleName value=$author->getMiddleName()}
-		{$author->getLastName()|escape|mb_upper}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $i<$authorCount-1}; {/if}{/foreach}.
+		{assign var=firstName value=$author->getLocalizedFirstName()}
+		{assign var=middleName value=$author->getLocalizedMiddleName()}
+		{$author->getLocalizedLastName()|escape|mb_upper}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $i<$authorCount-1}; {/if}{/foreach}.
 {else}
-	{assign var=firstName value=$authors[0]->getFirstName()}
-	{assign var=middleName value=$authors[0]->getMiddleName()}
-	{$authors[0]->getLastName()|escape|mb_upper}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if} et al.
+	{assign var=firstName value=$authors[0]->getLocalizedFirstName()}
+	{assign var=middleName value=$authors[0]->getLocalizedMiddleName()}
+	{$authors[0]->getLocalizedLastName()|escape|mb_upper}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if} et al.
 {/if}
 {$article->getLocalizedTitle()|strip_unsafe_html}.
 <strong>{$journal->getLocalizedTitle()|escape}</strong>, {$location|default:"[S.l.]"|escape}{if $issue}{if $issue->getShowVolume()}, v. {$issue->getVolume()|escape}{/if}{if $issue->getShowNumber()}, n. {$issue->getNumber()|escape}{/if}{/if}
