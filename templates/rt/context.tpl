@@ -89,7 +89,7 @@
 					<input type="checkbox" checked="checked" style="checkbox" name="searchTerm{$key+1}Check" value="1" />
 				</td>
 				<td width="80%" class="value">
-					<input name="searchTerm{$key+1}" value="{$author->getFullName()|escape}" length="40" class="textField" />
+					<input name="searchTerm{$key+1}" value="{$author->getLocalizedFullName()|escape}" length="40" class="textField" />
 				</td>
 			</tr>
 		{/foreach}

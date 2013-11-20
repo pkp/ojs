@@ -14,7 +14,7 @@
 
 {if !$section.hideAuthor}
 {foreach from=$article->getAuthors() item=author name=authorList}
-	{$author->getFullName()}{if !$smarty.foreach.authorList.last},{/if}
+	{$author->getLocalizedFullName()}{if !$smarty.foreach.authorList.last},{/if}
 {/foreach}
 {/if}
 

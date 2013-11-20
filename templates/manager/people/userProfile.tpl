@@ -29,15 +29,15 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.firstName"}</td>
-		<td class="value">{$user->getFirstName()|escape|default:"&mdash;"}</td>
+		<td class="value">{$user->getLocalizedFirstName()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.middleName"}</td>
-		<td class="value">{$user->getMiddleName()|escape|default:"&mdash;"}</td>
+		<td class="value">{$user->getLocalizedMiddleName()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.lastName"}</td>
-		<td class="value">{$user->getLastName()|escape|default:"&mdash;"}</td>
+		<td class="value">{$user->getLocalizedLastName()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>

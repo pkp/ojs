@@ -52,7 +52,7 @@
 				{translate key="user.role.editors"}
 				<ul class="plain">
 				{/if}
-				<li>{$sectionEditor->getFirstName()|escape} {$sectionEditor->getLastName()|escape}{if $sectionEditor->getLocalizedAffiliation()}, {$sectionEditor->getLocalizedAffiliation()|escape}{/if}</li>
+				<li>{$sectionEditor->getLocalizedFirstName()|escape} {$sectionEditor->getLocalizedLastName()|escape}{if $sectionEditor->getLocalizedAffiliation()}, {$sectionEditor->getLocalizedAffiliation()|escape}{/if}</li>
 			{/foreach}
 		{/if}
 	{/foreach}

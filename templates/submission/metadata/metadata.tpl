@@ -22,9 +22,9 @@
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="user.name"}</td>
 		<td width="80%" class="value">
-			{assign var=emailString value=$author->getFullName()|concat:" <":$author->getEmail():">"}
+			{assign var=emailString value=$author->getLocalizedFullName()|concat:" <":$author->getEmail():">"}
 			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getLocalizedTitle()|strip_tags articleId=$submission->getId()}
-			{$author->getFullName()|escape} {icon name="mail" url=$url}
+			{$author->getLocalizedFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
 	{if $author->getUrl()}
