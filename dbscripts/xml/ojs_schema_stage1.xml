@@ -134,13 +134,9 @@
 			<NOTNULL/>
 		</field>
 		<field name="salutation" type="C2" size="40"/>
-		<field name="first_name" type="C2" size="40">
-			<NOTNULL/>
-		</field>
-		<field name="middle_name" type="C2" size="40"/>
-		<field name="last_name" type="C2" size="90">
-			<NOTNULL/>
-		</field>
+		<field name="first_name" type="X"/>
+		<field name="middle_name" type="X"/>
+		<field name="last_name" type="X"/>
 		<field name="signature" type="X"/>
 		<field name="gender" type="C" size="1"/>
 		<field name="initials" type="C2" size="5"/>
@@ -760,13 +756,9 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="first_name" type="C2" size="40">
-			<NOTNULL/>
-		</field>
-		<field name="middle_name" type="C2" size="40"/>
-		<field name="last_name" type="C2" size="90">
-			<NOTNULL/>
-		</field>
+		<field name="first_name" type="X"/>
+		<field name="middle_name" type="X"/>
+		<field name="last_name" type="X"/>
 		<field name="affiliation" type="C2" size="255"/>
 		<field name="country" type="C2" size="90"/>
 		<field name="email" type="C2" size="90">
