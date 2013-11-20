@@ -819,9 +819,9 @@ class PublishedArticleDAO extends DAO {
 			$author = new Author();
 			$author->setId($row['author_id']);
 			$author->setSubmissionId($row['article_id']);
-			$author->setFirstName($row['first_name']);
-			$author->setMiddleName($row['middle_name']);
-			$author->setLastName($row['last_name']);
+			$author->setFirstName($row['first_name'],   $locale);
+			$author->setMiddleName($row['middle_name'], $locale);
+			$author->setLastName($row['last_name'],     $locale);
 			$author->setAffiliation($row['affiliation_pl'], $primaryLocale);
 			$author->setAffiliation($row['affiliation_l'], $locale);
 			$author->setEmail($row['email']);

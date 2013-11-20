@@ -70,9 +70,9 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 					$this->_data['authors'],
 					array(
 						'authorId' => $authors[$i]->getId(),
-						'firstName' => $authors[$i]->getFirstName(),
-						'middleName' => $authors[$i]->getMiddleName(),
-						'lastName' => $authors[$i]->getLastName(),
+						'firstName' => $authors[$i]->getFirstName(null),
+						'middleName' => $authors[$i]->getMiddleName(null),
+						'lastName' => $authors[$i]->getLastName(null),
 						'affiliation' => $authors[$i]->getAffiliation(null),
 						'country' => $authors[$i]->getCountry(),
 						'email' => $authors[$i]->getEmail(),
@@ -196,9 +196,9 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
 			if ($author != null) {
 				$author->setSubmissionId($article->getId());
-				$author->setFirstName($authors[$i]['firstName']);
-				$author->setMiddleName($authors[$i]['middleName']);
-				$author->setLastName($authors[$i]['lastName']);
+				$author->setFirstName($authors[$i]['firstName'],     null);
+				$author->setMiddleName($authors[$i]['middleName'],   null);
+				$author->setLastName($authors[$i]['lastName'],       null);
 				$author->setAffiliation($authors[$i]['affiliation'], null);
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);

@@ -149,10 +149,10 @@ class UserManagementForm extends Form {
 					'authId' => $user->getAuthId(),
 					'username' => $user->getUsername(),
 					'salutation' => $user->getSalutation(),
-					'firstName' => $user->getFirstName(),
-					'middleName' => $user->getMiddleName(),
-					'lastName' => $user->getLastName(),
-					'signature' => $user->getSignature(null), // Localized
+					'firstName'  => $user->getFirstName(null),  // Localized
+					'middleName' => $user->getMiddleName(null), // Localized
+					'lastName'   => $user->getLastName(null),   // Localized
+					'signature'  => $user->getSignature(null),  // Localized
 					'initials' => $user->getInitials(),
 					'gender' => $user->getGender(),
 					'affiliation' => $user->getAffiliation(null), // Localized
@@ -257,9 +257,9 @@ class UserManagementForm extends Form {
 		}
 
 		$user->setSalutation($this->getData('salutation'));
-		$user->setFirstName($this->getData('firstName'));
-		$user->setMiddleName($this->getData('middleName'));
-		$user->setLastName($this->getData('lastName'));
+		$user->setFirstName($this->getData('firstName'),     null); // Localized
+		$user->setMiddleName($this->getData('middleName'),   null); // Localized
+		$user->setLastName($this->getData('lastName'),       null); // Localized
 		$user->setInitials($this->getData('initials'));
 		$user->setGender($this->getData('gender'));
 		$user->setAffiliation($this->getData('affiliation'), null); // Localized

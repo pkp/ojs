@@ -149,9 +149,9 @@ class MetadataForm extends Form {
 					$this->_data['authors'],
 					array(
 						'authorId' => $authors[$i]->getId(),
-						'firstName' => $authors[$i]->getFirstName(),
-						'middleName' => $authors[$i]->getMiddleName(),
-						'lastName' => $authors[$i]->getLastName(),
+						'firstName'   => $authors[$i]->getFirstName(null),   // Localized
+						'middleName'  => $authors[$i]->getMiddleName(null),  // Localized
+						'lastName'    => $authors[$i]->getLastName(null),    // Localized
 						'affiliation' => $authors[$i]->getAffiliation(null), // Localized
 						'country' => $authors[$i]->getCountry(),
 						'countryLocalized' => $authors[$i]->getCountryLocalized(),
@@ -399,9 +399,9 @@ class MetadataForm extends Form {
 
 			if ($author != null) {
 				$author->setSubmissionId($article->getId());
-				$author->setFirstName($authors[$i]['firstName']);
-				$author->setMiddleName($authors[$i]['middleName']);
-				$author->setLastName($authors[$i]['lastName']);
+				$author->setFirstName($authors[$i]['firstName'],     null); // Localized
+				$author->setMiddleName($authors[$i]['middleName'],   null); // Localized
+				$author->setLastName($authors[$i]['lastName'],       null); // Localized
 				$author->setAffiliation($authors[$i]['affiliation'], null); // Localized
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);

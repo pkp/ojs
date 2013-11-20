@@ -232,10 +232,10 @@ class RegistrationForm extends Form {
 
 			$user->setUsername($this->getData('username'));
 			$user->setSalutation($this->getData('salutation'));
-			$user->setFirstName($this->getData('firstName'));
-			$user->setMiddleName($this->getData('middleName'));
+			$user->setFirstName($this->getData('firstName'),     null); // Localized
+			$user->setMiddleName($this->getData('middleName'),   null); // Localized
 			$user->setInitials($this->getData('initials'));
-			$user->setLastName($this->getData('lastName'));
+			$user->setLastName($this->getData('lastName'),       null); // Localized
 			$user->setGender($this->getData('gender'));
 			$user->setAffiliation($this->getData('affiliation'), null); // Localized
 			$user->setSignature($this->getData('signature'), null); // Localized

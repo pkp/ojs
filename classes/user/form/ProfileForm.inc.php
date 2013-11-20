@@ -165,10 +165,10 @@ class ProfileForm extends Form {
 
 		$this->_data = array(
 			'salutation' => $user->getSalutation(),
-			'firstName' => $user->getFirstName(),
-			'middleName' => $user->getMiddleName(),
-			'initials' => $user->getInitials(),
-			'lastName' => $user->getLastName(),
+			'firstName'  => $user->getFirstName(null), // Localized
+			'middleName' => $user->getMiddleName(null), // Localized
+			'initials'   => $user->getInitials(),
+			'lastName'   => $user->getLastName(null), // Localized
 			'gender' => $user->getGender(),
 			'affiliation' => $user->getAffiliation(null), // Localized
 			'signature' => $user->getSignature(null), // Localized
@@ -234,13 +234,13 @@ class ProfileForm extends Form {
 		$user =& Request::getUser();
 
 		$user->setSalutation($this->getData('salutation'));
-		$user->setFirstName($this->getData('firstName'));
-		$user->setMiddleName($this->getData('middleName'));
-		$user->setLastName($this->getData('lastName'));
+		$user->setFirstName($this->getData('firstName'),     null); // Localized
+		$user->setMiddleName($this->getData('middleName'),   null); // Localized
+		$user->setLastName($this->getData('lastName'),       null); // Localized
 		$user->setGender($this->getData('gender'));
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'), null); // Localized
-		$user->setSignature($this->getData('signature'), null); // Localized
+		$user->setSignature($this->getData('signature'),     null); // Localized
 		$user->setEmail($this->getData('email'));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));

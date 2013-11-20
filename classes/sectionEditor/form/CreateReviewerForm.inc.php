@@ -52,7 +52,7 @@ class CreateReviewerForm extends Form {
 	}
 
 	function getLocaleFieldNames() {
-		return array('biography', 'gossip');
+		return array('firstName', 'middleName', 'lastName', 'biography', 'gossip');
 	}
 
 	/**
@@ -127,9 +127,9 @@ class CreateReviewerForm extends Form {
 		$user = new User();
 
 		$user->setSalutation($this->getData('salutation'));
-		$user->setFirstName($this->getData('firstName'));
-		$user->setMiddleName($this->getData('middleName'));
-		$user->setLastName($this->getData('lastName'));
+		$user->setFirstName($this->getData('firstName'),     null); // Localized
+		$user->setMiddleName($this->getData('middleName'),   null); // Localized
+		$user->setLastName($this->getData('lastName'),       null); // Localized
 		$user->setGender($this->getData('gender'));
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'), null); // Localized
