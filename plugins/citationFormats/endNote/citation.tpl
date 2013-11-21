@@ -30,6 +30,11 @@
 %X {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}
 %U {$articleUrl}
 %J {$currentJournal->getLocalizedName()|escape}
+%0 Journal Article
+{if $article->getPubId('doi')}%R {$article->getPubId('doi')|escape}
+{/if}
+{if $article->getPages()}%R {$article->getPages()|escape}
+{/if}
 {if $issue->getShowVolume()}%V {$issue->getVolume()|escape}
 {/if}
 {if $issue->getShowNumber()}%N {$issue->getNumber()|escape}
