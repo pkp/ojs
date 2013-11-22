@@ -21,7 +21,7 @@
 		<value>true</value>
 	</setting>
 	<setting type="string">
-		<name>logFileParseRegex</name>
+		<name>accessLogFileParseRegex</name>
 		<value>/^(\S+) \S+ \S+ \[(.*?)\] "(\S+).*?" \d+ \d+ "(.*?)" "(.*?)"/</value>
 	</setting>
 </plugin_settings>
