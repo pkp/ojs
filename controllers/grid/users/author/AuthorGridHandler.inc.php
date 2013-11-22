@@ -71,11 +71,11 @@ class AuthorGridHandler extends PKPAuthorGridHandler {
 	//
 
 	/**
-	 * Determines if there should be an 'add user' action on this grid.
+	 * Determines if there should be administration actions on this grid.
 	 * @return boolean
 	 */
-	function hasAddAction() {
-		$article =& $this->getSubmission();
+	function canAdminister() {
+		$article = $this->getSubmission();
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 		if ($article->getDateSubmitted() == null || array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR), $userRoles))
 			return true;
