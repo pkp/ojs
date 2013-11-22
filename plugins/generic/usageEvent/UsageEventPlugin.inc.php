@@ -144,9 +144,23 @@ class UsageEventPlugin extends GenericPlugin {
 
 			// Article abstract, HTML galley and remote galley.
 			case 'TemplateManager::display':
-				// We are interested in access to the article abstract/galley and issue view page.
 				$page = $router->getRequestedPage($request);
 				$op = $router->getRequestedOp($request);
+
+				// First check for a journal index page view.
+				if ($page == 'index' && $op == 'index') {
+					$pubObject =& $templateMgr->get_template_vars('currentJournal');
+					if (is_a($pubObject, 'Journal')) {
+						$assocType = ASSOC_TYPE_JOURNAL;
+						$canonicalUrlOp = '';
+						$downloadSuccess = true;
+						break;
+					} else {
+						return false;
+					}
+				}
+
+				// We are interested in access to the article abstract/galley, issue view page.
 				$wantedPages = array('article', 'issue');
 				$wantedOps = array('view', 'articleView');
 
@@ -224,7 +238,8 @@ class UsageEventPlugin extends GenericPlugin {
 		$time = Core::getCurrentDate();
 
 		// Actual document size, MIME type.
-		if ($assocType == ASSOC_TYPE_ARTICLE || $assocType == ASSOC_TYPE_ISSUE) {
+		$htmlPageAssocTypes = array(ASSOC_TYPE_ARTICLE, ASSOC_TYPE_ISSUE, ASSOC_TYPE_JOURNAL);
+		if (in_array($assocType, $htmlPageAssocTypes)) {
 			// Article abstract or issue view page.
 			$docSize = 0;
 			$mimeType = 'text/html';
@@ -235,11 +250,21 @@ class UsageEventPlugin extends GenericPlugin {
 		}
 
 		// Canonical URL.
-		if ($assocType == ASSOC_TYPE_ISSUE_GALLEY || $assocType == ASSOC_TYPE_ISSUE) {
-			$canonicalUrlPage = 'issue';
-		} else {
-			$canonicalUrlPage = 'article';
+		switch ($assocType) {
+			case ASSOC_TYPE_ISSUE:
+			case ASSOC_TYPE_ISSUE_GALLEY:
+				$canonicalUrlPage = 'issue';
+				break;
+			case ASSOC_TYPE_ARTICLE:
+			case ASSOC_TYPE_GALLEY:
+			case ASSOC_TYPE_SUPP_FILE:
+				$canonicalUrlPage = 'article';
+				break;
+			case ASSOC_TYPE_JOURNAL:
+				$canonicalUrlPage = 'index';
+				break;
 		}
+
 		$canonicalUrl = $router->url(
 			$request, null, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams
 		);
@@ -262,7 +287,7 @@ class UsageEventPlugin extends GenericPlugin {
 		$identifiers = array('other::ojs' => $ojsId);
 
 		// 2) Standardized public identifiers, e.g. DOI, URN, etc.
-		if (!is_a($pubObject, 'IssueGalley')) {
+		if (!is_a($pubObject, 'IssueGalley') && !is_a($pubObject, 'Journal')) {
 			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 			if (is_array($pubIdPlugins)) {
 				foreach ($pubIdPlugins as $pubIdPlugin) {
