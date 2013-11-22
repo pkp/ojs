@@ -273,7 +273,9 @@ class UsageStatsLoader extends FileLoader {
 				'issue/view'),
 			ASSOC_TYPE_ISSUE_GALLEY => array(
 				'issue/viewFile',
-				'issue/download')
+				'issue/download'),
+			ASSOC_TYPE_JOURNAL => array(
+				'index/index')
 			);
 	}
 
@@ -329,11 +331,17 @@ class UsageStatsLoader extends FileLoader {
 			// Get the assoc id inside the passed url.
 			$args = Core::getArgs($url, $isPathInfo);
 			if (empty($args)) {
-				return array(false, false);
+				if ($page == 'index' && $operation == 'index') {
+					// Can be a journal index page access,
+					// let further checking.
+					$assocType = ASSOC_TYPE_JOURNAL;
+				} else {
+					return array(false, false);
+				}
+			} else {
+				$assocId = $args[0];
+				$parentObjectId = null;
 			}
-
-			$assocId = $args[0];
-			$parentObjectId = null;
 
 			// Check if we have more than one url parameter.
 			if (isset($args[1])) {
@@ -357,6 +365,10 @@ class UsageStatsLoader extends FileLoader {
 			if (isset($this->_journalsByPath[$journalPath])) {
 				$journal =& $this->_journalsByPath[$journalPath];
 				$journalId = $journal->getId();
+
+				if ($assocType == ASSOC_TYPE_JOURNAL) {
+					$assocId = $journalId;
+				}
 			} else {
 				return array(false, false);
 			}
