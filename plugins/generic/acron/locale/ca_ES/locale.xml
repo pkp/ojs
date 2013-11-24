@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * $Id$
+  *
+  * Cadenes per a ca_ES (català Espanya) acron.
+  * Traduït per Fermín Cueva Doñate 2008/06/13 17:02.
+  -->
+ 
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.generic.acron.name">Acron Plugin</message>
+	<message key="plugins.generic.acron.description"><![CDATA[Aquest plugin pretén reduir la dependència de l'OCS de les tasques periòdiques de programació, tals com el 'cron.']]></message>
+
+	<message key="plugins.generic.acron.reload">Recarrega les tasques programades</message>
+</locale>

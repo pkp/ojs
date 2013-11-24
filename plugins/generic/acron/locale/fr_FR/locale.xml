@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.generic.acron.name">Plugin Acron</message>
+	<message key="plugins.generic.acron.description"><![CDATA[This plugin attempts to reduce the dependance of OCS on periodic scheduling tools such as 'cron.']]></message>
+
+	<message key="plugins.generic.acron.reload">Recharger des tâches programmées</message>
+</locale>

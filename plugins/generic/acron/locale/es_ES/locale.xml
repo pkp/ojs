@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="es_ES" full_name="España Castellano">
+	<message key="plugins.generic.acron.name">Acron Plugin</message>
+	<message key="plugins.generic.acron.description"><![CDATA[Este plugin pretende reducir la dependencia de OCS de las tareas periódicas de programación tales como 'cron.']]></message>
+
+	<message key="plugins.generic.acron.reload">Recargar las tareas programadas</message>
+	<message key="plugins.generic.acron.enabled">El plugin Acron ha sido habilitado.</message>
+	<message key="plugins.generic.acron.disabled">El plugin Acron ha sido deshabilitado.</message>
+</locale>

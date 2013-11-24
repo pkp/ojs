@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the zh_TW (正體中文) locale.
+  *正體中文由 陳文誌 (長庚大學工業設計系) 與 莊惠茹 共同翻譯 (V1 @ 20080515)
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="正體中文">
+	<message key="plugins.generic.acron.name">Acron 外掛程式</message>
+	<message key="plugins.generic.acron.description">這個外掛程式可以用來降低 OCS 系統對於周期性行事曆工具 (例如 cron)的依賴性。</message>
+
+	<message key="plugins.generic.acron.reload">重新載入行事曆中的工作</message>
+</locale>
