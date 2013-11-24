@@ -76,6 +76,33 @@ class UsageStatsLoader extends FileLoader {
 		$this->_journalsByPath = $journalsByPath;
 
 		$this->checkFolderStructure(true);
+
+		if ($plugin->getSetting(0, 'createLogFiles')) {
+			// Copy all log files to stage directory, except the current day one.
+			$fileMgr = new FileManager();
+			$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
+			$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
+
+			if (is_array($logsDirFiles) && is_array($processingDirFiles)) {
+				// It's possible that the processing directory have files that
+				// were being processed but the php process was stopped before
+				// finishing the processing. Just copy them to the stage directory too.
+				$dirFiles = array_merge($logsDirFiles, $processingDirFiles);
+				foreach ($dirFiles as $filePath) {
+					// Make sure it's a file.
+					if ($fileMgr->fileExists($filePath)) {
+						// Avoid current day file.
+						$filename = pathinfo($filePath, PATHINFO_BASENAME);
+						$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
+						if ($filename == $currentDayFilename) continue;
+
+						if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
+							$fileMgr->deleteFile($filePath);
+						}
+					}
+				}
+			}
+		}
 	}
 
 	/**

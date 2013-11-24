@@ -46,6 +46,7 @@ class UsageStatsPlugin extends GenericPlugin {
 			$app =& PKPApplication::getApplication();
 			$version = $app->getCurrentVersion();
 
+			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 
 			// If the plugin will provide the access logs,
@@ -170,6 +171,16 @@ class UsageStatsPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * @see AcronPlugin::parseCronTab()
+	 */
+	function callbackParseCronTab($hookName, $args) {
+		$taskFilesPath =& $args[0];
+		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
+
+		return false;
+	}
+
+	/**
 	 * Log the usage event into a file.
 	 * @param $hookName string
 	 * @param $args array
@@ -227,6 +238,22 @@ class UsageStatsPlugin extends GenericPlugin {
 		return realpath($fileMgr->getBasePath()) . DIRECTORY_SEPARATOR . 'usageStats';
 	}
 
+	/**
+	 * Get the plugin's usage event logs path.
+	 * @return string
+	 */
+	function getUsageEventLogsPath() {
+		return $this->getFilesPath() . DIRECTORY_SEPARATOR . 'usageEventLogs';
+	}
+
+	/**
+	 * Get current day usage event log name.
+	 * @return string
+	 */
+	function getUsageEventCurrentDayLogName() {
+		return 'usage_events_' . date("Ymd") . '.log';
+	}
+
 
 	//
 	// Private helper methods.
@@ -260,11 +287,10 @@ class UsageStatsPlugin extends GenericPlugin {
 		$fileMgr = new PrivateFileManager();
 
 		// Get the current day filename.
-		$filename = 'usage_events_' . date("Ymd") . '.log';
+		$filename = $this->getUsageEventCurrentDayLogName();
 
 		// Check the plugin file directory.
-		$usageEventFilesPath = $this->getFilesPath() .
-		DIRECTORY_SEPARATOR . 'usageEventLogs';
+		$usageEventFilesPath = $this->getUsageEventLogsPath();
 		if (!$fileMgr->fileExists($usageEventFilesPath, 'dir')) {
 			$success = $fileMgr->mkdirtree($usageEventFilesPath);
 			if (!$success) {
