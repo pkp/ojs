@@ -175,7 +175,7 @@ class UsageStatsPlugin extends GenericPlugin {
 	 */
 	function callbackParseCronTab($hookName, $args) {
 		$taskFilesPath =& $args[0];
-		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
+		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasksAutoStage.xml';
 
 		return false;
 	}

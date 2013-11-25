@@ -39,6 +39,12 @@ class UsageStatsLoader extends FileLoader {
 	/** @var $_baseSystemEscapedPath string */
 	var $_baseSystemEscapedPath;
 
+	/** @var $_autoStage string */
+	var $_autoStage;
+
+	/** @var $_externalLogFiles string */
+	var $_externalLogFiles;
+
 	/**
 	 * Constructor.
 	 * @param $argv array task arguments
@@ -46,6 +52,20 @@ class UsageStatsLoader extends FileLoader {
 	function UsageStatsLoader($args) {
 		$plugin =& PluginRegistry::getPlugin('generic', 'usagestatsplugin'); /* @var $plugin UsageStatsPlugin */
 		$this->_plugin =& $plugin;
+
+		$arg = current($args);
+
+		switch ($arg) {
+			case 'autoStage':
+				if ($plugin->getSetting(0, 'createLogFiles')) {
+					$this->_autoStage = true;
+				}
+				break;
+			case 'externalLogFiles':
+				$this->_externalLogFiles = true;
+				break;
+		}
+
 
 		// Define the base filesystem path.
 		$args[0] = $plugin->getFilesPath();
@@ -77,7 +97,7 @@ class UsageStatsLoader extends FileLoader {
 
 		$this->checkFolderStructure(true);
 
-		if ($plugin->getSetting(0, 'createLogFiles')) {
+		if ($this->_autoStage) {
 			// Copy all log files to stage directory, except the current day one.
 			$fileMgr = new FileManager();
 			$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
@@ -258,8 +278,10 @@ class UsageStatsLoader extends FileLoader {
 	function _getDataFromLogEntry($entry) {
 		$plugin = $this->_plugin; /* @var $plugin Plugin */
 		$createLogFiles = $plugin->getSetting(0, 'createLogFiles');
-		if (!$createLogFiles) {
-			// User defined regex to parse external log files.
+		if (!$createLogFiles || $this->_externalLogFiles) {
+			// User wants to process log files that were not created by
+			// the usage stats plugin. Try to get a user defined regex to
+			// parse those external log files then.
 			$parseRegex = $plugin->getSetting(0, 'accessLogFileParseRegex');
 		} else {
 			// Regex to parse this plugin's log access files.
