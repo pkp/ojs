@@ -115,7 +115,8 @@ class ReportPlugin extends Plugin {
 			STATISTICS_DIMENSION_DAY);
 
 		// Articles file downloads.
-		$columns = array(STATISTICS_DIMENSION_ISSUE_ID,
+		$columns = array(STATISTICS_DIMENSION_ASSOC_TYPE,
+			STATISTICS_DIMENSION_ISSUE_ID,
 			STATISTICS_DIMENSION_SUBMISSION_ID,
 			STATISTICS_DIMENSION_MONTH,
 			STATISTICS_DIMENSION_COUNTRY);
@@ -131,7 +132,8 @@ class ReportPlugin extends Plugin {
 			'aggregationColumns' => $aggregationColumns);
 
 		// Issues file downloads.
-		$columns = array(STATISTICS_DIMENSION_ISSUE_ID,
+		$columns = array(STATISTICS_DIMENSION_ASSOC_TYPE,
+			STATISTICS_DIMENSION_ISSUE_ID,
 			STATISTICS_DIMENSION_MONTH,
 			STATISTICS_DIMENSION_COUNTRY);
 		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_ISSUE_GALLEY);
@@ -146,7 +148,8 @@ class ReportPlugin extends Plugin {
 			'aggregationColumns' => $aggregationColumns);
 
 		// Journal index page views.
-		$columns = array(STATISTICS_DIMENSION_CONTEXT_ID,
+		$columns = array(STATISTICS_DIMENSION_ASSOC_TYPE,
+			STATISTICS_DIMENSION_CONTEXT_ID,
 			STATISTICS_DIMENSION_MONTH,
 			STATISTICS_DIMENSION_COUNTRY);
 		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_JOURNAL);
