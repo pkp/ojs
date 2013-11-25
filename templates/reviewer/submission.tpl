@@ -230,11 +230,14 @@ function confirmSubmissionCheck() {
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td>
-			{translate key="submission.reviewForm"}
 			{if $confirmedStatus and not $declined}
-				<a href="{url op="editReviewFormResponse" path=$reviewId|to_array:$reviewAssignment->getReviewFormId()}" class="icon">{icon name="comment"}</a>
+				<a href="{url op="editReviewFormResponse" path=$reviewId|to_array:$reviewAssignment->getReviewFormId()}" class="icon">
+					{translate key="submission.reviewForm"}
+					{icon name="comment"}
+				</a>
 			{else}
-				 {icon name="comment" disabled="disabled"}
+				{translate key="submission.reviewForm"}
+				{icon name="comment" disabled="disabled"}
 			{/if}
 		</td>
 	</tr>
@@ -249,11 +252,14 @@ function confirmSubmissionCheck() {
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td>
-			{translate key="submission.logType.review"}
 			{if $confirmedStatus and not $declined}
-				<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$articleId|to_array:$reviewId}');" class="icon">{icon name="comment"}</a>
+				<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$articleId|to_array:$reviewId}');" class="icon">
+					{translate key="submission.logType.review"}
+					{icon name="comment"}
+				</a>
 			{else}
-				 {icon name="comment" disabled="disabled"}
+				{translate key="submission.logType.review"}
+				{icon name="comment" disabled="disabled"}
 			{/if}
 		</td>
 	</tr>
