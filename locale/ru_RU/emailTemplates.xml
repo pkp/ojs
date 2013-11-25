@@ -7,216 +7,216 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
-  *
+  * Localized email templates XML file for ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
 
 <email_texts locale="ru_RU">
 	<email_text key="NOTIFICATION">
-		<subject>извещение сайта {$siteTitle}</subject>
-		<body>У Вас новое извещение на сайте {$siteTitle}:
+		<subject>Новое информационное сообщение с сайта «{$siteTitle}»</subject>
+		<body>Вам пришло новое информационное сообщение от сайта «{$siteTitle}»:
 
 {$notificationContents}
 
 Ссылка: {$url}
 
 {$principalContactSignature}</body>
-		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
+		<description>Это письмо отправляется зарегистрированным пользователям, которые указали, что данный тип уведомления отправляется им электронной почтой.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>извещение сайта {$siteTitle}</subject>
-		<body>У Вас новое извещение на сайте  {$siteTitle}:
+		<subject>Новое информационное сообщение с сайта «{$siteTitle}»</subject>
+		<body>Вам пришло новое информационное сообщение от сайта «{$siteTitle}»:
 --
 {$notificationContents}
 
 Ссылка: {$url}
 --
 
-Если хотите прекратить получение извещений, пожалуйста перейдите по ссылке  {$unsubscribeLink} и введите свой почтовый адрес и пароль.
+Если Вы хотите прекратить получение информационных сообщений, пожалуйста, перейдите по ссылке {$unsubscribeLink}.
 
 {$principalContactSignature}</body>
-		<description>This email is sent to unregistered users on the notification mailing list.</description>
+		<description>Это письмо отправляется незарегистрированным пользователям в списке рассылки уведомлений.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Добро пожаловать в список рассылки {$siteTitle} !</subject>
-		<body>Вы подписались на получение извещений с сайта {$siteTitle}.
+		<subject>Добро пожаловать в список рассылки сайта «{$siteTitle}»!</subject>
+		<body>Вы подписались на получение информационных сообщений с сайта «{$siteTitle}».
 
-Пожалуйста нажмите на ссылку для подтверждения своего запроса и добавления Вашего почтового адреса в список рассылки: {$confirmLink}
+Пожалуйста щелкните на этой ссылке для подтверждения своего запроса и добавления Вашего почтового адреса в список рассылки: {$confirmLink}
 
-Если не хотите получать извещения, пожалуйста нажмите на ссылку {$unsubscribeLink}  и введите свой почтовый адрес и пароль.
+Если Вы хотите прекратить получение информационных сообщений, пожалуйста, перейдите по ссылке {$unsubscribeLink}.
 
 {$principalContactSignature}</body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
+		<description>Это письмо отправляется незарегистрированному пользователю, который только что зарегистрировался в списке рассылки.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Password Reset Confirmation</subject>
-		<body>We have received a request to reset your password for the {$siteTitle} web site.
+		<subject>Подтверждение сброса пароля</subject>
+		<body>Мы получили запрос на сброс Вашего пароля на веб-сайте «{$siteTitle}».
 
-If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.
+Если Вы не отправляли этот запрос, пожалуйста, проигнорирйте это письмо и Ваш пароль не будет изменен. Если Вы хотите сбросить свой пароль, то щелкните по ссылке ниже.
 
-Reset my password: {$url}
+Сброс моего пароля: {$url}
 
 {$principalContactSignature}</body>
-		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
+		<description>Это письмо отправляется зарегистрированному пользователю, когда он сообщает, что забыл пароль или не может войти на сайт. В письме содержится ссылка (URL), перейдя по которой пользователь сбросит свой пароль.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Password Reset</subject>
-		<body>Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.
+		<subject>Пароль сброшен</subject>
+		<body>Ваш пароль на сайте «{$siteTitle}» был успешно сброшен. Пожалуйста, сохраните имя пользователя и пароль, так как они требуются для работы с журналом.
 
-Your username: {$username}
-Your new password: {$password}
+Ваше имя пользователя: {$username}
+Ваш новый пароль: {$password}
 
 {$principalContactSignature}</body>
-		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
+		<description>Это письмо отправляется зарегистрированному пользователю, когда он успешно сбросил свой пароль в соответствии с процедурой, описанной в письме PASSWORD_RESET_CONFIRM.</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Journal Registration</subject>
-		<body>{$userFullName}
+		<subject>Регистрация в журнале</subject>
+		<body>{$userFullName}!
 
-You have now been registered as a user with {$journalName}. We have included your username and password in this email, which are needed for all work with this journal through its website. At any point, you can ask to be removed from the journal's list of users by contacting me.
+Вы только что были зарегистрированы как пользователь в журнале «{$journalName}». В этом письме Вы найдете имя пользователя и пароль, которые потребуются Вам для работы с этим журналом через веб-сайт. Вы в любой момент можете обратиться, чтобы Вас удалили из списка пользователей журнала, для этого просто свяжитесь со мной.
 
-Username: {$username}
-Password: {$password}
+Имя пользователя: {$username}
+Пароль: {$password}
 
-Thank you,
+С уважением,
 {$principalContactSignature}</body>
-		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+		<description>Это письмо отправляется вновь зарегистрированному пользователю, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту.</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>Подтвердите свой электронный адрес</subject>
-		<body>{$userFullName}
+		<subject>Подтвердите свою учетную запись</subject>
+		<body>{$userFullName}!
 
-Вы зарегистрировались в журнале {$journalName}, но перед тем как начать пользоваться своей учетной записью, нужно подтвердить правильность Вашего электронного адреса. Чтобы это сделать просто пройдите по ссылке:
+Вы создали учетную запись в журнале «{$journalName}», но перед тем как начать ее использовать, Вам нужно подтвердить ваш адрес электронной почты. Чтобы сделать это, просто пройдите по ссылке ниже:
 
 {$activateUrl}
 
-Спасибо !
+С уважением,
 {$principalContactSignature}</body>
-		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+		<description>Это письмо отправляется вновь зарегистрированному пользователю для подтверждения его адреса электронной почты.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Регистрация в качестве рецензента журнала {$journalName}</subject>
-		<body>Принимая во внимание Ваш высокий научный уровень и опыт, мы зарегистрировали Вас в базе данных потенциальных рецензентов журнала {$journalName}. Это ни в коем случае не налагает на Вас никаких обязательств, но лишь помогает нам связываться с Вами при подаче нам рукописей, рецензетом которых Вы могли бы стать. Получив приглашение к рецензированию Вы увидите название и тезисы рукописи и возможность принять или отклонить приглашение. В любой момент, если захотите, Ваше имя будет убрано из списка потенциальных рецензентов.
+		<subject>Регистрация в качестве рецензента журнала «{$journalName}»</subject>
+		<body>Принимая во внимание Ваш опыт, мы взяли на себя смелость зарегистрировать Вас в базе данных потенциальных рецензентов журнала «{$journalName}». Это никак не налагает на Вас никаких обязательств, а просто позволяет нам обращаться к Вам при поступлении в наш журнал рукописей, рецензентом которых Вы могли бы стать. Получив предложение дать рецензию, Вы получите возможность увидеть название и аннотацию рукописи, о которой идет речь. Вы всегда имеете возможность принять или отклонить это предложение. В также, в любой момент можете обратиться, чтобы Ваше имя было убрано из списка потенциальных рецензентов.
 
-Мы даем Вам имя пользователя и пароль, необходимые для любого взаимодействия с нашим журналом через его сайт. Например, Вы можете уточнить свои данные и темы рукописей, которые Вы могли бы рассмотреть.
+Мы высылаем Вам имя пользователя и пароль, которые используются при любом взаимодействии с нашим журналом через веб-сайт. Например, Вы можете уточнить свои данные в профиле пользователя, указав интересующую Вас как рецензента тематику.
 
-Логин: {$username}
+Имя пользователя: {$username}
 Пароль: {$password}
 
-Спасибо !
+С уважением,
 {$principalContactSignature}</body>
-		<description>This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password.</description>
+		<description>Это письмо отправляется вновь зарегистрированному рецензенту, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>New Issue Published</subject>
-		<body>Readers:
+		<subject>Опубликован новый выпуск журнала</subject>
+		<body>Уважаемые читатели!
 
-{$journalName} has just published its latest issue at {$journalUrl}. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.
+«{$journalName}» только что опубликовал свой последний выпуск на сайте {$journalUrl}. Мы предлагаем вам ознакомиться здесь с содержанием выпуска, а затем посетить наш веб-сайт, чтобы прочитать статьи и сообщения на интересующие вас темы.
 
-Thanks for the continuing interest in our work,
+Благодарю вас за постоянный интерес к нашей работе,
 {$editorialContactSignature}</body>
-		<description>This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</description>
+		<description>Это письмо отправляется зарегистрированным читателям по ссылке «Уведомить пользователей» на главной странице редактора. Оно сообшает читателям о выходе нового выпуска и приглашает их посетить сайт журнала по указанному адресу (URL).</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Archiving Request for {$journalName}</subject>
-		<body>Dear [University Librarian]
+		<subject>Запрос на архивацию для журнала «{$journalName}»</subject>
+		<body>Уважаемый [библиотекарь университета]!
 
-{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+Журнал «{$journalName}» ({$journalUrl}) — является журналом, в котором сотрудник Вашего университета, [имя сотрудника], занимает должность [название должности]. Наш журнал хотел бы создать LOCKSS(Lots of Copies Keep Stuff Safe)-совместимый архив с библиотеками Вашего и других университетов.
 
-[Brief description of journal]
+[Краткое описание журнала]
 
-The URL to the LOCKSS Publisher Manifest for our journal is: {$journalUrl}/gateway/lockss
+URL манифеста издателя LOCKSS для нашего журнала: {$journalUrl}/gateway/lockss
 
-We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.
+Мы знаем, что Вы уже участвуете в LOCKSS. Если мы можем предоставить любые дополнительные метаданные для регистрации нашего журнала в Вашей версии LOCKSS, мы будем рады это сделать.
 
-Thank you,
+С уважением,
 {$principalContactSignature}</body>
-		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
+		<description>Это письмо является обращением к владельцу LOCKSS архива с просьбой рассмотреть возможность включения этого журнала в их архив. В письме сообщается адрес (URL) манифеста издателя LOCKSS для этого журнала.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Archiving Request for {$journalName}</subject>
-		<body>Dear [University Librarian]
+		<subject>Запрос на архивацию для журнала «{$journalName}»</subject>
+		<body>Уважаемый [библиотекарь университета]!
 
-{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
+Журнал «{$journalName}» ({$journalUrl}) — является журналом, в котором сотрудник Вашего университета, [имя сотрудника], занимает должность [название должности]. Наш журнал хотел бы создать LOCKSS(Lots of Copies Keep Stuff Safe)-совместимый архив с библиотеками Вашего и других университетов.
 
-[Brief description of journal]
+[Краткое описание журнала]
 
-The LOCKSS Program &lt;http://lockss.org/&gt;, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.
+Программа LOCKSS (http://lockss.org/) — международная инициатива библиотек и издателей, работающий пример распределенного архивного хранилища. Программное обеспечение, запускаемое на обычном персональном компьютере, является бесплатным; система легко подключается к сети Интернет; практически не требует усилий под поддержанию в рабочем состоянии.
 
-To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.
+Чтобы помочь в архивации нашего журнала, мы приглашаем Вас стать членом сообщества LOCKSS, чтобы помочь собирать и сохранять статьи, созданные сотрудниками Вашего университета и другими учеными по всему миру. Чтобы сделать это, пожалуйста, поручите кому-то из Вашего персонала зайти на сайт LOCKSS, чтобы узнать информацию о том, как работает эта система. Жду Вашего ответа о возможности предоставить эту архивную поддержку для нашего журнала.
 
-Thank you,
+С уважением,
 {$principalContactSignature}</body>
-		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
+		<description>Это письмо предлагает получателю принять участие в инициативе LOCKSS и включить этот журнал в архив. В письме содержится информация об инициативе LOCKSS initiative и способах к ней присоединиться.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>Submission Acknowledgement</subject>
-		<body>{$authorName}:
+		<subject>Подтверждение отправки рукописи</subject>
+		<body>{$authorName}!
 
-Thank you for submitting the manuscript, "{$articleTitle}" to {$journalName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:
+Благодарим Вас за отправку рукописи статьи «{$articleTitle}» в журнал «{$journalName}». С помощью онлайн-системы управления журналом, которую мы используем, Вы сможете отслеживать прохождение вашей статьи через редакционный процесс, заходя на сайт журнала:
 
-Manuscript URL: {$submissionUrl}
-Username: {$authorUsername}
+Адрес рукописи: {$submissionUrl}
+Имя пользователя: {$authorUsername}
 
-If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.
+Если у Вас возникнут какие-то вопросы, пожалуйста, свяжитесь со мной. Спасибо за выбор нашего журнала для публикации Вашей работы.
 
 {$editorialContactSignature}</body>
-		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
+		<description>Это письмо (если эта возможность включена) автоматически отправляется автору, когда он завершает процесс отправки рукописи в журнал. В письме содержится информация об отслеживании прохождения рукописи через редакционный процесс и благодарность автору за отправку.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Unsuitable Submission</subject>
-		<body>{$authorName}:
+		<subject>Неподходящая статья</subject>
+		<body>{$authorName}!
 
-An initial review of "{$articleTitle}" has made it clear that this submission does not fit within the scope and focus of {$journalName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.
+Первоначальное знакомство со статьей «{$articleTitle}» дало понять, что эта статья не соответствует тематике и направленности журнала «{$journalName}». Я рекомендую Вам внимательно ознакомиться с разделом «О журнале», а также с содержанием свежих выпусков журнала, чтобы составить более полное представление о работах, которые мы публикуем. Вы также можете подумать об отправке этой статьи в другой, более подходящий журнал.
 
 {$editorialContactSignature}</body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
-		<subject>Submission Comment</subject>
-		<body>{$name}:
+		<subject>Комментарий к рукописи</subject>
+		<body>{$name}!
 
-{$commentName} has added a comment to the submission, "{$articleTitle}" in {$journalName}:
+Пользователем {$commentName} был добавлен комментарий к рукописи статьи «{$articleTitle}» для журнала «{$journalName}»:
 
 {$comments}</body>
-		<description>This email notifies the various people involved in a submission's editing process that a new comment has been posted.</description>
+		<description>Это письмо уведомляет различных людей, участвующих в процессе редакционной работы над статьей, что был опубликован новый комментарий.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Decision on "{$articleTitle}"</subject>
-		<body>As one of the reviewers for the submission, "{$articleTitle}," to {$journalName}, I am sending you the reviews and editorial decision sent to the author of this piece. Thank you again for your important contribution to this process.
+		<subject>Решение по статье «{$articleTitle}»</subject>
+		<body>Как одному из рецензентов статьи «{$articleTitle}» для журнала «{$journalName}», я отправляю Вам рецензии и решение редакции, направленные автору по данной статье. Снова благодарю Вас за Ваш весомый вклад в редакционную работу над этой статьей.
 
 {$editorialContactSignature}
 
 {$comments}</body>
-		<description>This email notifies the reviewers of a submission that the review process has been completed. It includes information about the article and the decision reached, and thanks the reviewers for their contributions.</description>
+		<description>Это письмо уведомляет рецензентов статьи о том, что процесс рецензирования был завершен. В письме содержится информация о статье и принятом решении, а также благодарность рецензентам за их вклад.</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
-		<subject>Editorial Assignment</subject>
-		<body>{$editorialContactName}:
+		<subject>Редакционное задание</subject>
+		<body>{$editorialContactName}!
 
-The submission, "{$articleTitle}," to {$journalName} has been assigned to you to see through the editorial process in your role as Section Editor.
+Вам поручен контроль проходения через редакционный процесс рукописи «{$articleTitle}» для журнала «{$journalName}» в соответствии с Вашей ролью редактора раздела.
 
-Submission URL: {$submissionUrl}
-Username: {$editorUsername}
+Адрес рукописи: {$submissionUrl}
+Имя пользователя: {$editorUsername}
 
-Thank you,
+С уважением,
 {$editorialContactSignature}</body>
-		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</description>
+		<description>Это письмо уведомляет редактора раздела, что редактор поручил ему контроль прохождения статьи через редакционный процесс. В письме содержится информация о статье и о том, как войти на сайт журнала.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
-		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
+		<subject>Запрос на рецензирование статьи</subject>
+		<body>{$reviewerName}!
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
+Я полагаю, что Вы могли бы быть прекрасным рецензентом для рукописи статьи «{$articleTitle}», которая была направлена в журнал «{$journalName}». Аннотация статьи приведена ниже, и я надеюсь, что Вы возьметесь выполнить эту важную задачу для нас.
 
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
+Пожалуйста, войдите на сайт журнала до {$weekLaterDate}, чтобы подтвердить Ваше согласие на рецензирование этой статьи или отказаться от рецензирования, а также получить доступ к рукописи и оставить свою рецензию и рекомендацию. Адрес сайта журнала — {$journalUrl}
 
-The review itself is due {$reviewDueDate}.
+Сама рецензия должна быть предоставлена до {$reviewDueDate}.
 
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+Если у Вас нет имени пользователя и пароля для доступа к сайту журнала, Вы можете воспользоваться эту ссылку для сброса Вашего пароля (он будет направлен Вам вместе с Вашим именем пользователя. {$passwordResetUrl}
 
-Submission URL: {$submissionReviewUrl}
+Адрес рукописи: {$submissionReviewUrl}
 
-Thank you for considering this request.
+Заранее благодарю Вас,
 
 {$editorialContactSignature}
 
@@ -226,21 +226,21 @@ Thank you for considering this request.
 
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)</description>
+		<description>Это письмо редактора раздела, направляемое рецензенту, с запросом согласия или отказа от выполнения рецензирования статьи. В письме приводится информация о статье, такая как название и аннотация, срок выполнения рецензии и как получить доступ к самой статье. Это сообщение используется, если выбран стандартный процесс рецензирования на шаге 2 процесса настройки журнала. (В ином случае, смотри REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Запрос на рецензию</subject>
-		<body>{$reviewerName}:
+		<subject>Запрос на рецензирование статьи</subject>
+		<body>{$reviewerName}!
 
-Я уверен, Вы могли бы стать очень хорошим рецензентом для рукописи, "{$articleTitle}," (ее резюме Вы найдете ниже) присланной для публикации в журнале {$journalName}. Надеюсь, на Вашу помощь в столь важной для нас задаче.
+Я полагаю, что Вы могли бы быть прекрасным рецензентом для рукописи статьи «{$articleTitle}», которая была направлена в журнал «{$journalName}». Аннотация статьи приведена ниже, и я надеюсь, что Вы возьметесь выполнить эту важную задачу для нас.
 
-Пожалуйста войдите на сайт нашего журнала до {$weekLaterDate}, чтобы согласиться (или отклонить) это предложение, либо чтобы получить доступ к полному тексту рукописи и передать Вашу рецензию и рекомендации.
+Пожалуйста, войдите на сайт журнала до {$weekLaterDate}, чтобы подтвердить Ваше согласие на рецензирование этой статьи или отказаться от рецензирования, а также получить доступ к рукописи и оставить свою рецензию и рекомендацию.
 
-Если Вы согласны, рецензию требуется отправить до {$reviewDueDate}.
+Сама рецензия должна быть предоставлена до {$reviewDueDate}.
 
-Ссылка на рукопись: {$submissionReviewUrl}
+Адрес рукописи: {$submissionReviewUrl}
 
-Спасибо за Ваше рассмотрение !
+Заранее благодарю Вас,
 
 {$editorialContactSignature}
 
@@ -250,44 +250,44 @@ Thank you for considering this request.
 
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
+		<description>Это письмо редактора раздела, направляемое рецензенту, с запросом согласия или отказа от выполнения рецензирования статьи. В письме приводится информация о статье, такая как название и аннотация, срок выполнения рецензии и как получить доступ к самой статье. Это сообщение используется, если выбран стандартный процесс рецензирования на шаге 2 процесса настройки журнала и включен прямой доступ для рецензента по ссылке.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
+		<subject>Запрос на рецензирование статьи</subject>
+		<body>{$reviewerName}!
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
+Я полагаю, что Вы могли бы быть прекрасным рецензентом для рукописи статьи «{$articleTitle}», и я прошу Вас взяться выполнить эту важную задачу для нас. Руководство по рецензированию для нашего журнала добавлено ниже, а статья приложена к этому письму. Ваша рецензия на статью вместе с Вашей рекомендацией должны быть направлены мне до {$reviewDueDate}.
 
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
+Пожалуйста, подтвердите в ответном письме до {$weekLaterDate} Ваше согласие на рецензирование этой статьи или сообщите о своем отказе.
 
-Thank you for considering this request.
+Заранее благодарю Вас,
 
 {$editorialContactSignature}
 
 
-Review Guidelines
+Руководство по рецензированию
 
 {$reviewGuidelines}
 </body>
-		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST.)</description>
+		<description>Это письмо редактора раздела, направляемое рецензенту, с запросом согласия или отказа от выполнения рецензирования статьи. К письму приложен текст статьи. Это сообщение используется, если выбран процесс рецензирования через электронную почту на шаге 2 процесса настройки журнала. (В ином случае, смотри REVIEW_REQUEST.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
+		<subject>Запрос на рецензирование статьи</subject>
+		<body>{$reviewerName}!
 
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+Это письмо касается статьи «{$articleTitle}», которая рассматривается журналом «{$journalName}».
 
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
+По результатам рецензирования предыдущей версии статьи авторы прислали откорректированную версию их статьи. Мы были бы рады, если бы Вы могли помочь оценить ее.
 
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
+Пожалуйста, войдите на сайт журнала до {$weekLaterDate}, чтобы подтвердить Ваше согласие на рецензирование этой статьи или отказаться от рецензирования, а также получить доступ к рукописи и оставить свою рецензию и рекомендацию. Адрес сайта журнала — {$journalUrl}
 
-The review itself is due {$reviewDueDate}.
+Сама рецензия должна быть предоставлена до {$reviewDueDate}.
 
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+Если у Вас нет имени пользователя и пароля для доступа к сайту журнала, Вы можете воспользоваться эту ссылку для сброса Вашего пароля (он будет направлен Вам вместе с Вашим именем пользователя. {$passwordResetUrl}
 
-Submission URL: {$submissionReviewUrl}
+Адрес рукописи: {$submissionReviewUrl}
 
-Thank you for considering this request.
+Заранее благодарю Вас,
 
 {$editorialContactSignature}
 
@@ -297,23 +297,23 @@ Thank you for considering this request.
 
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+		<description>Это письмо редактора раздела, направляемое рецензенту, с запросом согласия или отказа от выполнения рецензирования статьи во втором или последующих раундах рецензирования. В письме приводится информация о статье, такая как название и аннотация, срок выполнения рецензии и как получить доступ к самой статье. Это сообщение используется, если выбран стандартный процесс рецензирования на шаге 2 процесса настройки журнала. (В ином случае, смотри REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
+		<subject>Запрос на рецензирование статьи</subject>
+		<body>{$reviewerName}!
 
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+Это письмо касается статьи «{$articleTitle}», которая рассматривается журналом «{$journalName}».
 
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
+По результатам рецензирования предыдущей версии статьи авторы прислали откорректированную версию их статьи. Мы были бы рады, если бы Вы могли помочь оценить ее.
 
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
+Пожалуйста, войдите на сайт журнала до {$weekLaterDate}, чтобы подтвердить Ваше согласие на рецензирование этой статьи или отказаться от рецензирования, а также получить доступ к рукописи и оставить свою рецензию и рекомендацию.
 
-The review itself is due {$reviewDueDate}.
+Сама рецензия должна быть предоставлена до {$reviewDueDate}.
 
-Submission URL: {$submissionReviewUrl}
+Адрес рукописи: {$submissionReviewUrl}
 
-Thank you for considering this request.
+Заранее благодарю Вас,
 
 {$editorialContactSignature}
 
@@ -323,550 +323,550 @@ Thank you for considering this request.
 
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
+		<description>Это письмо редактора раздела, направляемое рецензенту, с запросом согласия или отказа от выполнения рецензирования статьи во втором или последующих раундах рецензирования. В письме приводится информация о статье, такая как название и аннотация, срок выполнения рецензии и как получить доступ к самой статье. Это сообщение используется, если выбран стандартный процесс рецензирования на шаге 2 процесса настройки журнала и включен прямой доступ для рецензента по ссылке.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
+		<subject>Запрос на рецензирование статьи</subject>
+		<body>{$reviewerName}!
 
-This regards the manuscript "{$articleTitle}," which is under consideration by {$journalName}.
+Это письмо касается статьи «{$articleTitle}», которая рассматривается журналом «{$journalName}».
 
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
+По результатам рецензирования предыдущей версии статьи авторы прислали откорректированную версию их статьи. Мы были бы рады, если бы Вы могли помочь оценить ее.
 
-The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
+Руководство по рецензированию для нашего журнала добавлено ниже, а статья приложена к этому письму. Ваша рецензия на статью вместе с Вашей рекомендацией должны быть направлены мне до {$reviewDueDate}.
 
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
+Пожалуйста, подтвердите в ответном письме до {$weekLaterDate} Ваше согласие на рецензирование этой статьи или сообщите о своем отказе.
 
-Thank you for considering this request.
+Заранее благодарю Вас,
 
 {$editorialContactSignature}
 
 
-Review Guidelines
+Руководство по рецензированию
 
 {$reviewGuidelines}
 </body>
-		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission for a second or greater round of review. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_SUBSEQUENT.)</description>
+		<description>Это письмо редактора раздела, направляемое рецензенту, с запросом согласия или отказа от выполнения рецензирования статьи во втором или последующих раундах рецензирования. К письму приложен текст статьи. Это сообщение используется, если выбран процесс рецензирования через электронную почту на шаге 2 процесса настройки журнала. (В ином случае, смотри REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
-		<subject>Request for Review Cancelled</subject>
-		<body>{$reviewerName}:
+		<subject>Отмена запроса на рецензирование статьи</subject>
+		<body>{$reviewerName}!
 
-We have decided at this point to cancel our request for you to review the submission, "{$articleTitle}," for {$journalName}. We apologize for any inconvenience this may cause you and hope that we will be able to call on you to assist with this journal's review process in the future.
+На данный момент мы решили отменить наш запрос на рецензирование Вами статьи «{$articleTitle}» для журнала «{$journalName}». Мы приносим свои извинения за причиненное Вам беспокойство и надеемся, что в будущем мы сможем к Вам обратиться за помощью в рецензировании статей для нашего журнала.
 
-If you have any questions, please contact me.
+Если у Вас есть вопросы, пожалуйста, свяжитесь со мной.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</description>
+		<description>Это письмо редактора раздела, направляемое рецензенту, который рецензирует статью, с уведомлением о том, что рецензирование этой статьи отменено.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
-		<subject>Able to Review</subject>
-		<body>{$editorialContactName}:
+		<subject>Согласен дать рецензию</subject>
+		<body>{$editorialContactName}!
 
-I am able and willing to review the submission, "{$articleTitle}," for {$journalName}. Thank you for thinking of me, and I plan to have the review completed by its due date, {$reviewDueDate}, if not before.
+Я могу и хочу дать рецензию на статью «{$articleTitle}» для журнала «{$journalName}». Благодарю Вас, что обратились ко мне, и я планирую завершить рецензирование этой статьи к указанному сроку, {$reviewDueDate}, а возможно и раньше.
 
 {$reviewerName}</body>
-		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.</description>
+		<description>Это письмо рецензента, направляемое редактору раздела, в ответ на запрос на рецензирование статьи, чтобы уведомить редактора раздела о том, что запрос на рецензирование принят и рецензия будет предоставлена к указанной дате.</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>Unable to Review</subject>
-		<body>{$editorialContactName}:
+		<subject>Не могу дать рецензию</subject>
+		<body>{$editorialContactName}!
 
-I am afraid that at this time I am unable to review the submission, "{$articleTitle}," for {$journalName}. Thank you for thinking of me, and another time feel free to call on me.
+Боюсь, что в данный момент я не могу дать рецензию на статью «{$articleTitle}» для журнала «{$journalName}». Благодарю Вас, что обратились ко мне, в другой раз также не стесняйтесь, обращайтесь ко мне.
 
 {$reviewerName}</body>
-		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.</description>
+		<description>Это письмо рецензента, направляемое редактору раздела, в ответ на запрос на рецензирование статьи, чтобы уведомить редактора раздела о том, что запрос на рецензирование отклонен.</description>
 	</email_text>
 	<email_text key="REVIEW_COMPLETE">
-		<subject>Article Review Completed</subject>
-		<body>{$editorialContactName}:
+		<subject>Рецензирование статьи завершено</subject>
+		<body>{$editorialContactName}!
 
-I have now completed my review of "{$articleTitle}" for {$journalName}, and submitted my recommendation, "{$recommendation}."
+Я закончил рецензирование статьи «{$articleTitle}» для журнала «{$journalName}» и отправил свою рекомендацию «{$recommendation}».
 
 {$reviewerName}</body>
-		<description>This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.</description>
+		<description>Это письмо рецензента, направляемое редактору раздела, с уведомлением об окончании рецензирования и размещении комментариев и рекомендаций на сайте журнала.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
-		<subject>Article Review Acknowledgement</subject>
-		<body>{$reviewerName}:
+		<subject>Подтверждение получения рецензии</subject>
+		<body>{$reviewerName}!
 
-Thank you for completing the review of the submission, "{$articleTitle}," for {$journalName}. We appreciate your contribution to the quality of the work that we publish.
+Благодарю Вас за рецензирование статьи «{$articleTitle}» для журнала «{$journalName}». Мы ценим Ваш вклад в качество работы, которую мы издаем.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</description>
+		<description>Это письмо отправляется редактором раздела в качестве подтверждения получения рецензии на статью и благодарности рецензенту за его вклад.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
-		<subject>Submission Review Reminder</subject>
-		<body>{$reviewerName}:
+		<subject>Напоминание о рецензии на статью</subject>
+		<body>{$reviewerName}!
 
-Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
+Мы хотели бы Вам напомнить о нашем запросе рецензии на статью «{$articleTitle}» для журнала «{$journalName}». Мы надеемся получить эту рецензию к {$reviewDueDate} и будем рады, если Вы как можно скорее ее подготовите.
 
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+Если у Вас нет имени пользователя и пароля для доступа к сайту журнала, Вы можете воспользоваться эту ссылку для сброса Вашего пароля (он будет направлен Вам вместе с Вашим именем пользователя. {$passwordResetUrl}
 
-Submission URL: {$submissionReviewUrl}
+Адрес рукописи: {$submissionReviewUrl}
 
-Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
+Пожалуйста, подтвердите Вашу возможность выполнить эту важную работу для нашего журнала. Жду вашего ответа.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by a Section Editor to remind a reviewer that their review is due.</description>
+		<description>Это письмо отправляется редактором раздела в качестве напоминания рецензенту о сроке предоставления рецензии.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>Напоминание о запросе на рецензию</subject>
-		<body>{$reviewerName}:
+		<subject>Напоминание о рецензии на статью</subject>
+		<body>{$reviewerName}!
 
-Просим прощение за напоминание о нашем запросе на рецензию рукописи "{$articleTitle}," для журнала {$journalName}. Мы надеялись получить рецензию до {$reviewDueDate}, и были бы очень благодарны получить ее как только Вы ее сможете приготовить.
+Мы хотели бы Вам напомнить о нашем запросе рецензии на статью «{$articleTitle}» для журнала «{$journalName}». Мы надеемся получить эту рецензию к {$reviewDueDate} и будем рады, если Вы как можно скорее ее подготовите.
 
-Ссылка на рукопись: {$submissionReviewUrl}
+Адрес рукописи: {$submissionReviewUrl}
 
-Пожалуйста подтвердите возможность закончить эту важную для журнала задачу. Надеюсь на Ваш ответ.
+Пожалуйста, подтвердите Вашу возможность выполнить эту важную работу для нашего журнала. Жду вашего ответа.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by a Section Editor to remind a reviewer that their review is due.</description>
+		<description>Это письмо отправляется редактором раздела в качестве напоминания рецензенту о сроке предоставления рецензии.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>Automated Submission Review Reminder</subject>
-		<body>{$reviewerName}:
+		<subject>Автоматическое напоминание о рецензии на статью</subject>
+		<body>{$reviewerName}!
 
-Just a gentle reminder of our request for your review of the submission, "{$articleTitle}," for {$journalName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
+Мы хотели бы Вам напомнить о нашем запросе рецензии на статью «{$articleTitle}» для журнала «{$journalName}». Мы надеялись получить эту рецензию к {$reviewDueDate}, и это письмо было автоматически сгенерировано и отправлено Вам в связи с тем, что этот срок прошел. Все же мы будем рады, если Вы как можно скорее ее подготовите.
 
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
+Если у Вас нет имени пользователя и пароля для доступа к сайту журнала, Вы можете воспользоваться эту ссылку для сброса Вашего пароля (он будет направлен Вам вместе с Вашим именем пользователя. {$passwordResetUrl}
 
-Submission URL: {$submissionReviewUrl}
+Адрес рукописи: {$submissionReviewUrl}
 
-Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
+Пожалуйста, подтвердите Вашу возможность выполнить эту важную работу для нашего журнала. Жду вашего ответа.
 
 {$editorialContactSignature}</body>
-		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
+		<description>Это письмо автоматически отправляется, когда проходит срок предоставления рецензии (смотрите «Настройки рецензирования» на шаге 2 процесса настройки журнала) и прямой доступ для рецензента по ссылке отключен. Выполнение задач по расписанию должно быть включено и настроено (смотрите конфигурационный файл сайта).</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>автоматическоне напоминание о рецензии</subject>
-		<body>{$reviewerName}:
+		<subject>Автоматическое напоминание о рецензии на статью</subject>
+		<body>{$reviewerName}!
 
-Просим прощение за напоминание о нашем запросе на рецензию рукописи "{$articleTitle}," для журнала {$journalName}. Мы надеялись получить рецензию до {$reviewDueDate} и это письмо было сгенерировано нашей системой автоматически по прошествии этой даты. Несмотря на это, мы были бы очень благодарны получить рецензию как только Вы ее сможете приготовить.
+Мы хотели бы Вам напомнить о нашем запросе рецензии на статью «{$articleTitle}» для журнала «{$journalName}». Мы надеялись получить эту рецензию к {$reviewDueDate}, и это письмо было автоматически сгенерировано и отправлено Вам в связи с тем, что этот срок прошел. Все же мы будем рады, если Вы как можно скорее ее подготовите.
 
-Ссылка на рукопись: {$submissionReviewUrl}
+Адрес рукописи: {$submissionReviewUrl}
 
-Пожалуйста подтвердите возможность закончить эту важную для журнала задачу. Надеюсь на Ваш ответ.
+Пожалуйста, подтвердите Вашу возможность выполнить эту важную работу для нашего журнала. Жду вашего ответа.
 
 {$editorialContactSignature}</body>
-		<description>Это письмо высылается автоматически если рецензент не высылает рецензию вовремя (см. опции рецензирования в настройках журнала, Шаг 2) и включен прямой доступ рецензентов к рукописям. Для работы в конфигурационном файле должны быть включены периодические задачи.</description>
+		<description>Это письмо автоматически отправляется, когда проходит срок предоставления рецензии (смотрите «Настройки рецензирования» на шаге 2 процесса настройки журнала) и прямой доступ для рецензента по ссылке включен. Выполнение задач по расписанию должно быть включено и настроено (смотрите конфигурационный файл сайта).</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
-		<subject>Редакционное решение</subject>
-		<body>{$authorName}:
+		<subject>Решение редакции</subject>
+		<body>{$authorName}!
 
-Мы приняли решение относительно Вашей рукописи "{$articleTitle}", отправленной для публикации в наш журнал {$journalTitle}.
+Мы приняли решение относительно Вашей статьи «{$articleTitle}», направленной для публикации в журнал «{$journalTitle}».
 
 Наше решение:
 
 {$editorialContactSignature}
 </body>
-		<description>Это письмо высылается редактором или редактором секции, чтобы уведомить автора об окончательном решении относительно его рукописи.</description>
+		<description>Это письмо высылается автору редактором или редактором раздела, чтобы уведомить его об окончательном решении относительно его рукописи.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
-		<subject>Редакционное решение</subject>
-		<body>{$authorName}:
+		<subject>Решение редакции</subject>
+		<body>{$authorName}!
 
-Мы приняли решение относительно Вашей рукописи "{$articleTitle}", отправленной для публикации в наш журнал {$journalTitle}.
+Мы приняли решение относительно Вашей статьи «{$articleTitle}», направленной для публикации в журнал «{$journalTitle}».
 
 Наше решение:
 
 {$editorialContactSignature}
 </body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
+		<description>Это письмо высылается автору редактором или редактором раздела, чтобы уведомить его об окончательном решении относительно его рукописи.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
-		<subject>Редакционное решение</subject>
-		<body>{$authorName}:
+		<subject>Решение редакции</subject>
+		<body>{$authorName}!
 
-Мы приняли решение относительно Вашей рукописи "{$articleTitle}", отправленной для публикации в наш журнал {$journalTitle}.
+Мы приняли решение относительно Вашей статьи «{$articleTitle}», направленной для публикации в журнал «{$journalTitle}».
 
 Наше решение:
 
 {$editorialContactSignature}
 </body>
-		<description>Это письмо высылается редактором или редактором секции, чтобы уведомить автора об окончательном решении относительно его рукописи.</description>
+		<description>Это письмо высылается автору редактором или редактором раздела, чтобы уведомить его об окончательном решении относительно его рукописи.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
-		<subject>Редакционное решение</subject>
-		<body>{$authorName}:
+		<subject>Решение редакции</subject>
+		<body>{$authorName}!
 
-Мы приняли решение относительно Вашей рукописи "{$articleTitle}", отправленной для публикации в наш журнал {$journalTitle}.
+Мы приняли решение относительно Вашей статьи «{$articleTitle}», направленной для публикации в журнал «{$journalTitle}».
 
 Наше решение:
 
 {$editorialContactSignature}
 </body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
+		<description>Это письмо высылается автору редактором или редактором раздела, чтобы уведомить его об окончательном решении относительно его рукописи.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
-		<subject>Copyediting Request</subject>
-		<body>{$copyeditorName}:
+		<subject>Запрос на литературное редактирование</subject>
+		<body>{$copyeditorName}!
 
-I would ask that you undertake the copyediting of "{$articleTitle}" for {$journalName} by following these steps.
-1. Click on the Submission URL below.
-2. Log into the journal and click on the File that appears in Step 1.
-3. Consult Copyediting Instructions posted on webpage.
-4. Open the downloaded file and copyedit, while adding Author Queries as needed.
-5. Save copyedited file, and upload to Step 1 of Copyediting.
-6. Send the COMPLETE email to the editor.
+Я хотел бы попросить Вас выполнить литературное редактирование статьи «{$articleTitle}» для журнала «{$journalName}», выполнив следующие шаги.
+1. Щелкните на адресе рукописи ниже.
+2. Войдите на сайт журнала под своей учетной записью и щелкните на файле, который появился на шаге 1.
+3. Изучите «Инструкции по литературному редактированию», размещенные на веб-странице.
+4. Откройте загруженный файл и выполните литературное редактирование, добавляя вопросы автору при необходимости.
+5. Сохраните файл с правкой и загрузите его на сайт на шаг 1 литературного редактирования.
+6. Отправьте письмо «ЗАВЕРШЕНО» редактору.
 
-{$journalName} URL: {$journalUrl}
-Submission URL: {$submissionCopyeditingUrl}
-Username: {$copyeditorUsername}
+Адрес журнала «{$journalName}»: {$journalUrl}
+Адрес рукописи: {$submissionCopyeditingUrl}
+Имя пользователя: {$copyeditorUsername}
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
+		<description>Это письмо отправляется редактором раздела литературному редактору статьи с запросом о начале процесса литературного редактирования. В письме содержится информация о рукописи и о том, как получить к ней доступ.</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Copyediting Completed</subject>
-		<body>{$editorialContactName}:
+		<subject>Литературное редактирование завершено</subject>
+		<body>{$editorialContactName}!
 
-We have now copyedited your submission "{$articleTitle}" for {$journalName}. To review the proposed changes and respond to Author Queries, please follow these steps:
+Мы завершили литературное редактирование Вашей статьи «{$articleTitle}» для журнала «{$journalName}». Чтобы просмотреть предлагаемые изменения и ответить на вопросы автору, пожалуйста, выполните следующие шаги:
 
-1. Log into the journal using URL below with your username and password (use Forgot link if needed).
-2. Click on the file at 1. Initial Copyedit File to download and open copyedited version.
-3. Review the copyediting, making changes using Track Changes in Word, and answer queries.
-4. Save file to desktop and upload it in 2. Author Copyedit.
-5. Click the email icon under COMPLETE and send email to the editor.
+1. Зайдите на сайт журнала по адресу, приведенному ниже, используя свое имя пользователя и пароль (при необходимости воспользуйтесь ссылкой «Забыли пароль?»).
+2. Щелкните на файле в 1. Файл первоначального литературного редактирования, чтобы скачать и открыть отредактированную версию.
+3. Просмотрите правки литературного редактора, внесите изменения, используя функцию отслеживания исправлений в Word, и ответьте на вопросы.
+4. Сохраните файл на своем компьютере и загрузите его в 2. Авторское литературное редактирование.
+5. Щелкните на значке письма под «ЗАВЕРШЕНО» и отправьте письмо редактору.
 
-This is the last opportunity that you have to make substantial changes. You will be asked at a later stage to proofread the galleys, but at that point only minor typographical and layout errors can be corrected.
+Это последняя возможность для Вас внести существенные изменения. На следующем этапе Вам будет предложено вычитать гранки, но на этой стадии могут быть исправлены лишь небольшие типографические ошибки и ошибки верстки.
 
-Manuscript URL: {$submissionEditingUrl}
-Username: {$authorUsername}
+Адрес рукописи: {$submissionEditingUrl}
+Имя пользователя: {$authorUsername}
 
-If you are unable to undertake this work at this time or have any questions,
-please contact me. Thank you for your contribution to this journal.
+Если Вы не можете выполнить эту работу сейчас или у Вас есть какие-либо вопросы,
+пожалуйста, свяжитесь со мной. Спасибо Вам за то, что выбрали наш журнал для опубликования Вашей работы.
 
 {$copyeditorName}</body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
-		<subject>Copyediting Acknowledgement</subject>
-		<body>{$copyeditorName}:
+		<subject>Подтверждение получения правки от литературного редактора</subject>
+		<body>{$copyeditorName}!
 
-Thank you for copyediting the manuscript, "{$articleTitle}," for {$journalName}. It will make an important contribution to the quality of this journal.
+Благодарю Вас за литературное редактирование статьи «{$articleTitle}» для журнала «{$journalName}». Это весомый вклад в качество нашего журнала.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by the Section Editor to a submission's Copyeditor to acknowledge that the Copyeditor has successfully completed the copyediting process and thank them for their contribution.</description>
+		<description>Это письмо редактора раздела, направляемое литературному редактору рукописи, с подтверждением того , что литературный редактор успешно завершил процесс литературного редактирования, и благодарностью за его вклад.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Copyediting Review Request</subject>
-		<body>{$authorName}:
+		<subject>Запрос на просмотр правки статьи литературным редактором</subject>
+		<body>{$authorName}!
 
-Your submission "{$articleTitle}" for {$journalName} has been through the first step of copyediting, and is available for you to review by following these steps.
+Ваша статья «{$articleTitle}» для журнала «{$journalName}» прошла первый этап литературного редактирования и доступна Вам для просмотра, для этого выполните следующие шаги.
 
-1. Click on the Submission URL below.
-2. Log into the journal and click on the File that appears in Step 1.
-3. Open the downloaded submission.
-4. Review the text, including copyediting proposals and Author Queries.
-5. Make any copyediting changes that would further improve the text.
-6. When completed, upload the file in Step 2.
-7. Click on METADATA to check indexing information for completeness and accuracy.
-8. Send the COMPLETE email to the editor and copyeditor.
+1. Щелкните по адресу статьи, приведенному ниже.
+2. Войдите на сайт журнала под своей учетной записью и щелкните на файле, который появляется на шаге 1.
+3. Откройте загруженный на Ваш компьютер вариант статьи.
+4. Просмотрите текст, включая предложения литературного редактора и вопросы автору.
+5. Сделайте свои литературные правки, которые могут еще улучшить текст.
+6. После завершения загрузите файл на сервер, в шаг 2.
+7. Щелкните на ссылке МЕТАДАННЫЕ, чтобы проверить информацию для индексирования на полноту и точность.
+8. Отправьте письма «ЗАВЕРШЕНО» редактору и литературному редактору.
 
-Submission URL: {$submissionCopyeditingUrl}
-Username: {$authorUsername}
+Адрес статьи: {$submissionCopyeditingUrl}
+Имя пользователя: {$authorUsername}
 
-This is the last opportunity to make substantial copyediting changes to the submission. The proofreading stage, that follows the preparation of the galleys, is restricted to correcting typographical and layout errors.
+Это последняя возможность внести существенные литературные правки в статью. Стадия корректуры, которая будет проходить после подготовки гранок, позволит исправить только типографические ошибки и ошибки верстки.
 
-If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
+Если Вы не можете выполнить эту работу сейчас или у Вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной. Спасибо Вам за то, что выбрали наш журнал для опубликования Вашей работы.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by the Section Editor to a submission's Author to request that they proofread the work of the copyeditor. It provides access information for the manuscript and warns that this is the last opportunity the author has to make substantial changes.</description>
+		<description>Это письмо редактора раздела, направляемое автору статьи, с запросом на вычитывание работы литературного редактора. В письме содержится информация о доступе к рукописи и предупреждение о том, что это последняя возможность для автора внести значительные изменения.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Copyediting Review Completed</subject>
-		<body>{$editorialContactName}:
+		<subject>Просмотр правки литературного редактора завершен</subject>
+		<body>{$editorialContactName}!
 
-I have now reviewed the copyediting of the manuscript, "{$articleTitle}," for {$journalName}, and it is ready for the final round of copyediting and preparation for Layout.
+Я просмотрел правку статьи «{$articleTitle}» для журнала «{$journalName}», выполненную литературным редактором, и она готова для финального этапа литературного редактирования и подготовки к верстке.
 
-Thank you for this contribution to my work,
+Благодарю Вас за этот вклад в мою работу,
 {$authorName}</body>
-		<description>This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed.</description>
+		<description>Это письмо автора, направляемое редактору раздела, с уведомлением о том, что процесс литературного редактирования автором завершен.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Copyediting Review Acknowledgement</subject>
-		<body>{$authorName}:
+		<subject>Подтверждение просмотра литературной правки автора</subject>
+		<body>{$authorName}!
 
-Thank you for reviewing the copyediting of your manuscript, "{$articleTitle}," for {$journalName}. We look forward to publishing this work.
+Благодарю Вас за просмотр литературной правки Вашей статьи «{$articleTitle}» для журнала «{$journalName}». Мы собираемся опубликовать эту работу.
 
 {$editorialContactSignature}</body>
-		<description>This email is sent by the Section Editor to a submission's Author to confirm completion of the Author's copyediting process and thank them for their contribution.</description>
+		<description>Это письмо редактора раздела, направляемое автору статьи, с подтверждением завершения процесса литературного редактирования автором и благодарностью за его вклад.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Copyediting Final Review</subject>
-		<body>{$copyeditorName}:
+		<subject>Запрос на финальный просмотр литературной правки статьи</subject>
+		<body>{$copyeditorName}!
 
-The author and editor have now completed their copyediting review of "{$articleTitle}" for {$journalName}. A "clean copy" now needs to be prepared for Layout by going through the following steps.
-1. Click on the Submission URL below.
-2. Log into the journal and click on the File that appears in Step 2.
-3. Open the downloaded file and incorporate all copyedits and query responses.
-4. Save clean file, and upload to Step 3 of Copyediting.
-5. Click on METADATA to check indexing information (saving any corrections).
-6. Send the COMPLETE email to the editor.
+Автор и редактор завершили свой просмотр литературной правки статьи «{$articleTitle}» для журнала «{$journalName}». Теперь нужно подготовить «чистовую копию» для верстки, выполнив следующие шаги.
+1. Щелкните по адресу статьи, приведенному ниже.
+2. Войдите на сайт журнала под своей учетной записью и щелкните на файле, который появляется на шаге 2.
+3. Откройте загруженный на Ваш компьютер файл и примите все исправления — правки и ответы на вопросы.
+4. Сохраните готовый «чистовой» файл и загрузите его на сервер, в шаг 3 литературного редактирования.
+5. Щелкните на ссылке МЕТАДАННЫЕ, чтобы проверить информацию для индексирования (сохраняйте все изменения).
+6. Отправьте письмо «ЗАВЕРШЕНО» редактору.
 
-{$journalName} URL: {$journalUrl}
-Submission URL: {$submissionCopyeditingUrl}
-Username: {$copyeditorUsername}
+Адрес журнала «{$journalName}»: {$journalUrl}
+Адрес статьи: {$submissionCopyeditingUrl}
+Имя пользователя: {$copyeditorUsername}
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process.</description>
+		<description>Это письмо редактора раздела, направляемое литературному редактору, с запросом на выполнение финального этапа литературного редактирования статьи, после чего начнется процесс верстки статьи.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Copyediting Final Review Completed</subject>
-		<body>{$editorialContactName}:
+		<subject>Финальный просмотр литературной правки статьи завершен</subject>
+		<body>{$editorialContactName}!
 
-I have now prepared a clean, copyedited version of the manuscript, "{$articleTitle}," for {$journalName}. It is ready for Layout and the preparation of the galleys.
+Я подготовил чистовую версию статьи «{$articleTitle}» для журнала «{$journalName}», прошедшую процесс литературного редактирования. Статья готова для верстки и подготовки гранок.
 
 {$copyeditorName}</body>
-		<description>This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</description>
+		<description>Это письмо литературного редактора, направляемое редактору раздела, с уведомлением о том, что финальный этап литературного редактирования завершен и можно начинать процесс верстки.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Copyediting Final Review Acknowledgement</subject>
+		<subject>Подтверждение просмотра финальной версии литературной правки статьи</subject>
 		<body>{$copyeditorName}:
 
-Thank you for completing the copyediting of the manuscript, "{$articleTitle}," for {$journalName}. This preparation of a "clean copy" for Layout is an important step in the editorial process.
+Благодарю Вас за выполнение литературного редактирования статьи «{$articleTitle}» для журнала «{$journalName}». Подготовка «чистовой версии» для верстки является важным этапом редакционного процесса.
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Copyeditor acknowledges completion of the final round of copyediting and thanks them for their contribution.</description>
+		<description>Это письмо редактора раздела, направляемое литературному редактору, с подтверждением завершения финального этапа литературного редактирования и благодарностью за его вклад.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>Request Galleys</subject>
-		<body>{$layoutEditorName}:
+		<subject>Запрос гранок</subject>
+		<body>{$layoutEditorName}!
 
-The submission "{$articleTitle}" to {$journalName} now needs galleys laid out by following these steps.
-1. Click on the Submission URL below.
-2. Log into the journal and use the Layout Version file to create the galleys according to the journal's standards.
-3. Send the COMPLETE email to the editor.
+Необходимо сверстать гранки статьи «{$articleTitle}» для журнала «{$journalName}». Для этого нужно выполнить следующие шаги.
+1. Щелкните по адресу статьи, приведенному ниже.
+2. Войдите на сайт журнала под своей учетной записью и используйте файл с версией для верстки для подготовки гранок в соответствии со стандартами журнала.
+3. Отправьте письмо «ЗАВЕРШЕНО» редактору.
 
-{$journalName} URL: {$journalUrl}
-Submission URL: {$submissionLayoutUrl}
-Username: {$layoutEditorUsername}
+Адрес журнала «{$journalName}»: {$journalUrl}
+Адрес статьи: {$submissionLayoutUrl}
+Имя пользователя: {$layoutEditorUsername}
 
-If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
+Если Вы не можете выполнить эту работу сейчас или у Вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной. Спасибо Вам за то, что выбрали наш журнал для опубликования Вашей работы.
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</description>
+		<description>Это письмо редактора раздела, направляемое верстальщику, с уведомлением о том, что ему поручена верстка статьи. В письме содержится информация о статье и о том, как получить к ней доступ.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
-		<subject>Galleys Complete</subject>
-		<body>{$editorialContactName}:
+		<subject>Гранки завершены</subject>
+		<body>{$editorialContactName}!
 
-Galleys have now been prepared for the manuscript, "{$articleTitle}," for {$journalName} and are ready for proofreading.
+К статье «{$articleTitle}» для журнала «{$journalName}» подготовлены гранки, можно начинать корректуру.
 
-If you have any questions, please contact me.
+Если у Вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной.
 
 {$layoutEditorName}</body>
-		<description>This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</description>
+		<description>Это письмо верстальщика, направляемое редактору раздела, c уведомлением о том, что верстка завершена.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
-		<subject>Layout Acknowledgement</subject>
-		<body>{$layoutEditorName}:
+		<subject>Подтверждение получения верстки</subject>
+		<body>{$layoutEditorName}!
 
-Thank you for preparing the galleys for the manuscript, "{$articleTitle}," for {$journalName}. This is an important contribution to the publishing process.
+Благодарю Вас за верстку и подготовку гранок статьи «{$articleTitle}» для журнала «{$journalName}». Это важный вклад в издательский процесс.
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Layout Editor acknowledges completion of the layout editing process and thanks the layout editor for their contribution.</description>
+		<description>Это письмо редактора раздела, направляемое верстальщику, с подтверждением того, что процесс верстки завершен, и благодарностью верстальщику за его вклад.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Proofreading Request (Author)</subject>
-		<body>{$authorName}:
+		<subject>Запрос на корректуру (Автор)</subject>
+		<body>{$authorName}!
 
-Your submission "{$articleTitle}" to {$journalName} now needs to be proofread by folllowing these steps.
-1. Click on the Submission URL below.
-2. Log into the journal and view PROOFING INSTRUCTIONS
-3. Click on VIEW PROOF in Layout and proof the galley in the one or more formats used.
-4. Enter corrections (typographical and format) in Proofreading Corrections.
-5. Save and email corrections to Layout Editor and Proofreader.
-6. Send the COMPLETE email to the editor.
+Вашу статью «{$articleTitle}» для журнала «{$journalName}» необходимо вычитать на предмет ошибок, выполнив следующие шаги.
+1. Щелкните по адресу статьи, приведенному ниже.
+2. Войдите на сайт журнала под своей учетной записью и прочитайте «Инструкции по корректуре».
+3. Щелкните на ПОКАЗАТЬ ВЫЧИТКУ в разделе «Верстка» и внимательно прочитайте гранки во всех использованных форматах.
+4. Введите типографические правки и правки оформления в окно «Корректорские правки».
+5. Сохраните и отправьте правки электронной почтой верстальщику и корректору.
+6. Отправьте письмо «ЗАВЕРШЕНО» редактору.
 
-Submission URL: {$submissionUrl}
-Username: {$authorUsername}
+Адрес статьи: {$submissionUrl}
+Имя пользователя: {$authorUsername}
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it.</description>
+		<description>Это письмо редактора раздела, направляемое автору, с уведомлением о том, что гранки статьи готовы для вычитки. В письме содержится информация о статье и о том, как получить к ней доступ.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Proofreading Completed (Author)</subject>
-		<body>{$editorialContactName}:
+		<subject>Корректура завершена (Автор)</subject>
+		<body>{$editorialContactName}!
 
-I have completed proofreading the galleys for my manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Proofreader and Layout Editor.
+Я завершил вычитку гранок моей статьи «{$articleTitle}» для журнала «{$journalName}». Гранки готовы для финальной правки, выполняемой корректором и верстальщиком.
 
 {$authorName}</body>
-		<description>This email from the Author to the Proofreader and Editor notifies them that the Author's round of proofreading is complete and that details can be found in the article comments.</description>
+		<description>Это письмо автора, направляемое корректору и редактору, с уведомлением о том, что этап авторской корректуры завершен и детали можно найти в комментариях к статье.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Proofreading Acknowledgement (Author)</subject>
-		<body>{$authorName}:
+		<subject>Подтверждение вычитки (Автор)</subject>
+		<body>{$authorName}!
 
-Thank you for proofreading the galleys for your manuscript, "{$articleTitle}," in {$journalName}. We are looking forward to publishing your work shortly.
+Благодарю Вас за вычитку гранок Вашей статьи «{$articleTitle}» для журнала «{$journalName}». Мы вскоре опубликуем Вашу работу.
 
-If you subscribe to our notification service, you will receive an email of the Table of Contents as soon as it is published. If you have any questions, please contact me.
+Если Вы подписаны на нашу рассылку информационных сообщений, Вы получите письмо с содержанием выпуска, как только он будет опубликован. Если у вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной.
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Author acknowledges completion of the initial proofreading process and thanks them for their contribution.</description>
+		<description>Это письмо редактора раздела, направляемое автору, с подтверждение окончания первоначального этаа вычитки и благодарностью за его вклад.</description>
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
-		<subject>Proofreading Request</subject>
-		<body>{$proofreaderName}:
+		<subject>Запрос на корректуру</subject>
+		<body>{$proofreaderName}!
 
-The submission "{$articleTitle}" to {$journalName} now needs to be proofread by following these steps.
-1. Click on the Submission URL below.
-2. Log into the journal and view PROOFING INSTRUCTIONS.
-3. Click on VIEW PROOF in Layout and proof the galley in the one or more formats used.
-4. Enter corrections (typographical and format) in Proofreading Corrections.
-5. Save and email corrections to Layout Editor.
-6. Send the COMPLETE email to the editor.
+Статью «{$articleTitle}» для журнала «{$journalName}» необходимо вычитать на предмет ошибок, выполнив следующие шаги.
+1. Щелкните по адресу статьи, приведенному ниже.
+2. Войдите на сайт журнала под своей учетной записью и прочитайте «Инструкции по корректуре».
+3. Щелкните на ПОКАЗАТЬ ВЫЧИТКУ в разделе «Верстка» и внимательно прочитайте гранки во всех использованных форматах.
+4. Введите типографические правки и правки оформления в окно «Корректорские правки».
+5. Сохраните и отправьте правки электронной почтой верстальщику.
+6. Отправьте письмо «ЗАВЕРШЕНО» редактору.
 
-Manuscript URL: {$submissionUrl}
-Username: {$proofreaderUsername}
+Адрес статьи: {$submissionUrl}
+Имя пользователя: {$proofreaderUsername}
 
-If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
+Если Вы не можете выполнить эту работу сейчас или у Вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной. Благодарю Вас за Ваш вклад в наш журнал.
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Proofreader requests that they perform proofreading of an article's galleys. It provides information about the article and how to access it.</description>
+		<description>Это письмо редактора раздела, направляемое корректору, с запросом на выполнение вычитки гранок статьи. В письме содержится информация о статье и о том, как получить к ней доступ.</description>
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Proofreading Completed</subject>
-		<body>{$editorialContactName}:
+		<subject>Корректура завершена</subject>
+		<body>{$editorialContactName}!
 
-I have completed proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}. The galleys are now ready to have any final corrections made by the Layout Editor.
+Я завершил вычитку гранок статьи «{$articleTitle}» для журнала «{$journalName}». Гранки готовы для финальной правки, выполняемой верстальщиком.
 
 {$proofreaderName}</body>
-		<description>This email from the Proofreader to the Section Editor notifies them that the Proofreader has completed the proofreading process.</description>
+		<description>Это письмо корректора, направляемое редактору раздела, с уведомлением о том, что корректор завершил вычитку статьи.</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
-		<subject>Proofreading Acknowledgement</subject>
-		<body>{$proofreaderName}:
+		<subject>Подтверждение вычитки</subject>
+		<body>{$proofreaderName}!
 
-Thank you for proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}. This work makes an important contribution to the quality of this journal.
+Благодарю Вас за вычитку гранок статьи «{$articleTitle}» для журнала «{$journalName}». Эта работа — важный вклад в качество нашего журнала.
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Proofreader confirms completion of the proofreader's proofreading process and thanks them for their contribution.</description>
+		<description>Это письмо редактора раздела, направляемое корректору, с подтверждением завершения процесса корректуры корректором и благодарностью за его вклад.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Proofreading Request (Layout Editor)</subject>
-		<body>{$layoutEditorName}:
+		<subject>Запрос на корректуру (Верстальщик)</subject>
+		<body>{$layoutEditorName}!
 
-The submission "{$articleTitle}" to {$journalName} has been proofread by the author and proofreader, and any corrections should now be made by following these steps.
-1. Click on the Submission URL below.
-2. Log into the journal consult Proofreading Corrections to create corrected galleys.
-3. Upload the revised galleys.
-4. Send the COMPLETE email in Proofreading Step 3 to the editor.
+Статья «{$articleTitle}» для журнала «{$journalName}» была вычитана автором и корректором, теперь необходимо внести все корректировки, выполнив следующие шаги.
+1. Щелкните по адресу статьи, приведенному ниже.
+2. Войдите на сайт журнала и просмотрите «Корректорские правки», чтобы выполнить корректуру гранок.
+3. Загрузите исправленные гранки на сайт.
+4. Отправьте письмо «ЗАВЕРШЕНО» редактору на шаге 3 процесса корректуры.
 
-{$journalName} URL: {$journalUrl}
-Subnmission URL: {$submissionUrl}
-Username: {$layoutEditorUsername}
+Адрес журнала «{$journalName}»: {$journalUrl}
+Адрес статьи: {$submissionUrl}
+Имя пользователя: {$layoutEditorUsername}
 
-If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
+Если Вы не можете выполнить эту работу сейчас или у Вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной. Благодарю Вас за Ваш вклад в наш журнал.
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Layout Editor notifies them that an article's galleys are ready for final proofreading. It provides information on the article and how to access it.</description>
+		<description>Это письмо редактора раздела, направляемое верстальщику, с уведомлением о том, что гранки статьи готов к финальному этапу корректуры. В письме содержится информация о статье и о том, как получить к ней доступ.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Proofreading Completed (Layout Editor)</subject>
-		<body>{$editorialContactName}:
+		<subject>Корректура завершена (Верстальщик)</subject>
+		<body>{$editorialContactName}!
 
-The galleys have now been corrected, following their proofreading, for the manuscript, "{$articleTitle}," for {$journalName}. This piece is now ready to publish.
+Гранки статьи «{$articleTitle}» для журнала «{$journalName}» были изменены в соответствии с корректорскими правками. Эта статья готова к публикации.
 
 {$layoutEditorName}</body>
-		<description>This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</description>
+		<description>Это письмо верстальщика, направляемое редактору раздела, с уведомлением о том, что финальный этап корректуры завершен и статья готова к публикации.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Proofreading Acknowledgement (Layout Editor)</subject>
-		<body>{$layoutEditorName}:
+		<subject>Подтверждение правки (Верстальщик)</subject>
+		<body>{$layoutEditorName}!
 
-Thank you for completing the proofreading corrections for the galleys associated with the manuscript, "{$articleTitle}," for {$journalName}. This represents an important contribution to the work of this journal.
+Благодарю Вас за выполнение правки гранок статьи «{$articleTitle}» для журнала «{$journalName}». Эта работа — важный вклад в качество нашего журнала.
 
 {$editorialContactSignature}</body>
-		<description>This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution.</description>
+		<description>Это письмо редактора раздела, направляемое верстальщику, с подтверждением завершения финального этапа корректуры и благодарностью за его вклад.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
-		<subject>Article of Possible Interest</subject>
-		<body>Thought you might be interested in seeing "{$articleTitle}" by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$journalName} at "{$articleUrl}".</body>
-		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
+		<subject>Эта статья будет Вам интересна</subject>
+		<body>Я полагаю, что Вам будет интересно посмотреть статью «{$articleTitle}» (авторы: {$authorName}), опубликованную в Томе {$volume}, № {$number} ({$year}) журнала «{$journalName}» по адресу {$articleUrl}.</body>
+		<description>Этот шаблон письма позволяет зарегистрированному читателю возможность отправить информацию о статье тому, кому она может быть интересна. Она доступна через «Инструменты читателя»  и должна быть включена управляющим журнала на странице «Инструменты читателя: Администрирование».</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Subscription Notification</subject>
-		<body>{$subscriberName}:
+		<subject>Уведомление о подписке</subject>
+		<body>{$subscriberName}!
 
-You have now been registered as a subscriber in our online journal management system for {$journalName}, with the following subscription:
+Вы зарегистрированы как подписчик журнала «{$journalName}» в нашей онлайн-системе управления журналом со следующей подпиской:
 
 {$subscriptionType}
 
-To access content that is available only to subscribers, simply log in to the system with your username, "{$username}".
+Чтобы получить доступ к контенту, который доступен только для подписчиков, просто войдите на сайт журнала со своим именем пользователя «{$username}».
 
-Once you have logged in to the system you can change your profile details and password at any point.
+Как только Вы войдете на сайт журнала, Вы можете в любой момент изменить Ваш профиль пользователя и пароль.
 
-Please note that if you have an institutional subscription, there is no need for users at your institution to log in, since requests for subscription content will be automatically authenticated by the system.
+Пожалуйста, обратите внимание, что если у Вас есть подписка на всю организацию, то пользователям Вашей организации не нужно будет входить в систему, так как запросы на контент, предоставляемый по подписке, автоматически будут аутентифицированы системой.
 
-If you have any questions, please feel free to contact me.
+Если у Вас есть какие-либо вопросы, пожалуйста, не стесняйтесь, связывайтесь со мной.
 
 {$subscriptionContactSignature}</body>
-		<description>This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</description>
+		<description>Это письмо уведомляет зарегистрированного читателя, что менеджер создал подписку для него. В письме содержится адрес журнала и инструкции по доступу.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>выпуск в открытом доступе</subject>
-		<body>Читатели:
+		<subject>Выпуск в открытом доступе</subject>
+		<body>Уважаемые читатели!
 
-{$journalName} открывает свободный доступ к следующему выпуску. Мы приглашаем Вас ознакомиться с его оглавлением здесь и посетить наш сайт ({$journalUrl}) для получения доступа к полному тексту статей.
+Журнал «{$journalName}» только что предоставил открытый доступ к следующему выпуску. Мы предлагаем вам ознакомиться здесь с содержанием выпуска, а затем посетить наш веб-сайт ({$journalUrl}), чтобы прочитать статьи и сообщения на интересующие вас темы.
 
-Спасибо за интерес !
+Благодарю вас за постоянный интерес к нашей работе,
 {$editorialContactSignature}</body>
-		<description>This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</description>
+		<description>Это письмо отправляется тем зарегистрированным читателям, которые подписались на отправку информационных сообщений, когда номер появляется в открытом доступе.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>уведомление об окончании срока подписки</subject>
-		<body>{$subscriberName}:
+		<subject>Уведомление об окончании срока подписки</subject>
+		<body>{$subscriberName}!
 
-Ваша подписка на {$journalName} истекает.
+Ваша подписка на журнал «{$journalName}» истекает в ближайшее время.
 
 {$subscriptionType}
-Дата окончания: {$expiryDate}
+Дата окончания подписки: {$expiryDate}
 
-Для обеспечения непрерывности Вашего доступа к журналу, пожалуйста посетите наш сайт и продлите подписку. Вы сможете войти под своим именем как "{$username}".
+Чтобы Ваш доступ к этому журналу не прерывался, пожалуйста, перейдите на сайт журнала и продлите Вашу подписку. Вы можете войти на сайт журнала со своим именем пользователя «{$username}».
 
-Свяжитесь со мной, если у Вас есть вопросы.
+Если у Вас есть какие-либо вопросы, пожалуйста, не стесняйтесь, связывайтесь со мной.
 
 {$subscriptionContactSignature}</body>
-		<description>Уведомляет подписчика, что его подписка скоро закончится.</description>
+		<description>Это письмо уведомляет подписчика о том, что его подписка вскоре закончится. В письме содержится адрес журнала и инструкции по доступу.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>уведомление об окончании срока подписки</subject>
-		<body>{$subscriberName}:
+		<subject>Срока подписки истек</subject>
+		<body>{$subscriberName}!
 
-Срок Вашей подписки на журнал {$journalName} истек.
+Срок Вашей подписки на журнал «{$journalName}» истек.
 
 {$subscriptionType}
-Дата окончания: {$expiryDate}
+Дата окончания подписки: {$expiryDate}
 
-Для продления пожалуйста посетите наш сайт. Вы сможете войти под своим именем как "{$username}".
+Для продления Вашей подписки, пожалуйста, перейдите на сайт журнала. Вы можете войти на сайт журнала со своим именем пользователя «{$username}».
 
-Свяжитесь со мной, если у Вас есть вопросы.
+Если у Вас есть какие-либо вопросы, пожалуйста, не стесняйтесь, связывайтесь со мной.
 
 {$subscriptionContactSignature}</body>
-		<description>Уведомляет подписчика, что срок его подписки истек.</description>
+		<description>Это письмо уведомляет подписчика о том, что срок его подписки закончился. В письме содержится адрес журнала и инструкции по доступу.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>срок подписки истек -- последнее напоминание</subject>
-		<body>{$subscriberName}:
+		<subject>Срок подписки истек — последнее напоминание</subject>
+		<body>{$subscriberName}!
 
-Срок Вашей подписки на журнал {$journalName} истек.
-Заметьте, это последнее напоминание.
+Срок Вашей подписки на журнал «{$journalName}» истек.
+Пожалуйста, обратите внимание, что это — последнее напоминание, которое будет отправлено Вам электронной почтой.
 
 {$subscriptionType}
-Дата окончания: {$expiryDate}
+Дата окончания подписки: {$expiryDate}
 
-Для продления пожалуйста посетите наш сайт. Вы сможете войти под своим именем как "{$username}".
+Для продления Вашей подписки, пожалуйста, перейдите на сайт журнала. Вы можете войти на сайт журнала со своим именем пользователя «{$username}».
 
-Свяжитесь со мной, если у Вас есть вопросы.
+Если у Вас есть какие-либо вопросы, пожалуйста, не стесняйтесь, связывайтесь со мной.
 
 {$subscriptionContactSignature}</body>
-		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
+		<description>Это письмо уведомляет подписчика о том, что срок его подписки закончился. В письме содержится адрес журнала и инструкции по доступу.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>подписка: индивидуальная</subject>
-		<body>В журнале {$journalName} приобретена индивидуальная подписка со следующими деталями.
+		<subject>Покупка подписки: индивидуальная</subject>
+		<body>На сайте была приобретена индивидуальная подписка на журнал «{$journalName}» со следующими деталями.
 
 Тип подписки:
 {$subscriptionType}
@@ -877,15 +877,15 @@ If you have any questions, please feel free to contact me.
 Информация о членстве (если указана):
 {$membership}
 
-Для просмотра или изменения этой подписки используйте следующую ссылку.
+Для просмотра или редактирования этой подписки, пожалуйста, используйте следующий адрес.
 
-Ссылка на подписку: {$subscriptionUrl}
+Адрес подписки: {$subscriptionUrl}
 </body>
-		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
+		<description>Это письмо уведомляет менеджера по подписке, что через сайт была куплена индивидуальная подписка. В письме содержится общая информация о подписке и ссылка на быстрый доступ к приобретенной подписке.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>подписка: институциональная</subject>
-		<body>В журнале {$journalName} приобретена институциональнаяподписка со следующими деталями. Для ее активации посетите приведенную в конце ссылку и установите там "статус подписки" -- "активный".
+		<subject>Покупка подписки: на организацию</subject>
+		<body>На сайте была приобретена для организации подписка на журнал «{$journalName}» со следующими деталями. Для активации подписки, пожалуйста, используйте приведенный адрес подписки и установите статус подписки в «Активна».
 
 Тип подписки:
 {$subscriptionType}
@@ -897,24 +897,24 @@ If you have any questions, please feel free to contact me.
 Доменное имя (если указано):
 {$domain}
 
-IP адреса (если указаны):
+IP-диапазоны (если указаны):
 {$ipRanges}
 
-Контакт:
+Контактное лицо:
 {$userDetails}
 
 Информация о членстве (если указана):
 {$membership}
 
-Для просмотра или изменения этой подписки используйте следующую ссылку.
+Для просмотра или редактирования этой подписки, пожалуйста, используйте следующий адрес.
 
-Ссылка на подписку: {$subscriptionUrl}
+Адрес подписки: {$subscriptionUrl}
 </body>
-		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
+		<description>Это письмо уведомляет менеджера по подписке, что через сайт была куплена подписка на организацию. В письме содержится общая информация о подписке и ссылка на быстрый доступ к приобретенной подписке.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>продление подписки: индивидуальная</subject>
-		<body>В журнале {$journalName} продлена индивидуальная подписка со следующими деталями.
+		<subject>Продление подписки: индивидуальная</subject>
+		<body>На сайте была индивидуальная подписка на журнал «{$journalName}» была продлена со следующими деталями.
 
 Тип подписки:
 {$subscriptionType}
@@ -925,15 +925,15 @@ IP адреса (если указаны):
 Информация о членстве (если указана):
 {$membership}
 
-Для просмотра или изменения этой подписки используйте следующую ссылку.
+Для просмотра или редактирования этой подписки, пожалуйста, используйте следующий адрес.
 
-Ссылка на подписку: {$subscriptionUrl}
+Адрес подписки: {$subscriptionUrl}
 </body>
-		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
+		<description>Это письмо уведомляет менеджера по подписке, что через сайт была продлена индивидуальная подписка. В письме содержится общая информация о подписке и ссылка на быстрый доступ к приобретенной подписке.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>продление подписки: институциональная</subject>
-		<body>В журнале {$journalName} продлена институциональнаяподписка со следующими деталями.
+		<subject>Покупка подписки: на организацию</subject>
+		<body>На сайте была продлена подписка на журнал «{$journalName}» для организации со следующими деталями.
 
 Тип подписки:
 {$subscriptionType}
@@ -945,41 +945,41 @@ IP адреса (если указаны):
 Доменное имя (если указано):
 {$domain}
 
-IP адреса (если указаны):
+IP-диапазоны (если указаны):
 {$ipRanges}
 
-Контакт:
+Контактное лицо:
 {$userDetails}
 
 Информация о членстве (если указана):
 {$membership}
 
-Для просмотра или изменения этой подписки используйте следующую ссылку.
+Для просмотра или редактирования этой подписки, пожалуйста, используйте следующий адрес.
 
-Ссылка на подписку: {$subscriptionUrl}
+Адрес подписки: {$subscriptionUrl}
 </body>
-		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
+		<description>Это письмо уведомляет менеджера по подписке, что через сайт была продлена подписка на организацию. В письме содержится общая информация о подписке и ссылка на быстрый доступ к приобретенной подписке.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Citation Editing</subject>
-		<body>{$authorFirstName},
+		<subject>Редактирование ссылок</subject>
+		<body>{$authorFirstName}!
 
-Could you please verify or provide us with the proper citation for the following reference from your article, {$articleTitle}:
+Пожалуйста, проверьте или пришлите нам правильно оформленную запись для следующей ссылки из Вашей статьи «{$articleTitle}»:
 
 {$rawCitation}
 
-Thanks!
+Заранее балгодарю Вас!
 
 {$userFirstName}
-Copy-Editor, {$journalName}
+Литературный редактор, журнал «{$journalName}»
 </body>
-		<description>This email allows copyeditors to request additional information about references from authors.</description>
+		<description>Это письмо позволяет литературным редакторам запрашивать дополнительную информацию о ссылках у авторов.</description>
 	</email_text>
 	<email_text key="GIFT_AVAILABLE">
 		<subject>{$giftNoteTitle}</subject>
-		<body>Dear {$recipientFirstName},
+		<body>Dear {$recipientFirstName}!
 
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
+{$buyerFullName} хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:
 
 {$giftDetails}
 
@@ -987,64 +987,64 @@ Copy-Editor, {$journalName}
 {$giftNote}
 
 
-You will receive a follow-up email that includes login details and instructions for redeeming your gift.
+Вы получите еще одно письмо, в котором будет информация о входе на сайт журнала и инструкции по получению Вашего подарка.
 
-We hope that you enjoy your gift!
+Мы надеемся, что Вам понравится этот подарок!
 
 {$giftContactSignature}
 </body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
+		<description>Это письмо уведомляет получателя подарка о том, что подарок был куплен и доступен для получения.</description>
 	</email_text>
 	<email_text key="GIFT_USER_REGISTER">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body>Dear {$recipientFirstName},
+		<subject>Получите Ваш подарок: информация о входе</subject>
+		<body>Dear {$recipientFirstName}!
 
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
+{$buyerFullName} хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:
 
 {$giftDetails}
 
 
-To redeem your gift, please login to the journal website at {$giftUrl}
+Для получения Вашего подарка войдите на сайт журнала по адресу {$giftUrl}
 
-Your username: {$username}
-Your password: {$password}
+Ваше имя пользователя: {$username}
+Ваш пароль: {$password}
 
-Once logged in, you can change your password at any time.
+После входа на сайт Вы можете в любой момент изменить свой пароль.
 
-We hope that you enjoy your gift!
+Мы надеемся, что Вам понравится этот подарок!
 
 {$giftContactSignature}
 </body>
-		<description>This email notifies a gift recipient of their login details for a new account.</description>
+		<description>Это письмо уведомляет получателя подарка о данных для входа на сайт для созданной учетной записи.</description>
 	</email_text>
 	<email_text key="GIFT_USER_LOGIN">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body>Dear {$recipientFirstName},
+		<subject>Получите Ваш подарок: информация о входе</subject>
+		<body>Dear {$recipientFirstName}!
 
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
+{$buyerFullName} хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:
 
 {$giftDetails}
 
 
-To redeem your gift, please login to the journal website at {$giftUrl}
+Для получения Вашего подарка войдите на сайт журнала по адресу {$giftUrl}
 
-Your username: {$username}
+Ваше имя пользователя: {$username}
 
-We hope that you enjoy your gift!
+Мы надеемся, что Вам понравится этот подарок!
 
 {$giftContactSignature}
 </body>
-		<description>This email notifies a gift recipient of their login details.</description>
+		<description>Это письмо уведомляет получателя подарка о данных для входа на сайт.</description>
 	</email_text>
 <email_text key="REVISED_VERSION_NOTIFY">
-        <subject>Revised Version Uploaded</subject>
-        <body>{$editorialContactName}:
+        <subject>Исправленная версия загружена</subject>
+        <body>{$editorialContactName}!
 
-A revised version of "{$articleTitle}" has been uploaded by the author {$authorName}.
+Исправленная версия статьи «{$articleTitle}» была загружена на сайт (автор — {$authorName}).
 
-Submission URL: {$submissionUrl}
+Адрес статьи: {$submissionUrl}
 
 {$editorialContactSignature}</body>
-        <description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
+        <description>Это письмо автоматически отправляется назначенному редактору, когда автор загружает исправленную версию статьи на сайт.</description>
     </email_text>
 </email_texts>

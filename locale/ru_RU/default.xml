@@ -14,7 +14,7 @@
 <locale name="ru_RU" full_name="Russian">
 	<!-- Раздел по умолчанию -->
 	<message key="section.default.title">Статьи</message>
-	<message key="section.default.abbrev">СТАТЬИ</message>
+	<message key="section.default.abbrev">СТ</message>
 	<message key="section.default.policy"></message>
 
 	<!--
