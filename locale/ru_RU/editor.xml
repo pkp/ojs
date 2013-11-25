@@ -120,7 +120,7 @@
 	<message key="editor.navigation.futureIssues">Будущие выпуски</message>
 	<message key="editor.navigation.createIssue">Создать выпуск</message>
 	<message key="editor.navigation.issueArchive">Старые выпуски</message>
-	<message key="editor.article.designateReviewVersion">Отметить оригинальный файл как версию для рецензирования</message>
+	<message key="editor.article.designateReviewVersion">Обозначить оригинальный файл как версию для рецензирования</message>
 	<message key="editor.article.uploadReviewVersion">Загрузить измененную версию для рецензирования</message>
 	<message key="editor.article.showSuppFile">Предоставить файл рецензентам</message>
 	<message key="editor.article.layoutAndProof">Верстка и корректура</message>
@@ -134,8 +134,8 @@
 	<message key="editor.article.initiateReview">Начать рецензирование</message>
 	<message key="editor.article.cancelReview">Отменить запрос</message>
 	<message key="editor.article.clearReview">Удалить рецензента</message>
-	<message key="editor.article.enterRecommendation">Ввести рекомендации</message>
-	<message key="editor.article.enterReviewerRecommendation">Ввести рекомендации рецензенту</message>
+	<message key="editor.article.enterRecommendation">Ввести рекомендацию</message>
+	<message key="editor.article.enterReviewerRecommendation">Ввести рекомендацию рецензента</message>
 	<message key="editor.article.recommendation">Рекомендация</message>
 	<message key="editor.article.selectReviewer">Выбрать рецензента</message>
 	<message key="editor.article.replaceReviewer">Заменить рецензента</message>
@@ -147,7 +147,7 @@
 	<message key="editor.article.recordDecision">Записать решение</message>
 	<message key="editor.article.cannotRecord">Редактор секции еще не назначен или не предоставлен файл рецензии.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Рецензенты, которые могут увидеть авторскую версию</message>
-	<message key="editor.article.designateDueDate">Отметить срок выполнения</message>
+	<message key="editor.article.designateDueDate">Обозначить срок выполнения</message>
 	<message key="editor.article.designateDueDateDescription">Введите дату или количество недель, чтобы обозначить новый срок выполнения.</message>
 	<message key="editor.article.todaysDate">Сегодня</message>
 	<message key="editor.article.requestedByDate">Срок выполнения</message>

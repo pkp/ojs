@@ -51,7 +51,7 @@
 	<message key="admin.journals.noneCreated">Ни один журнал не был создан.</message>
 	<message key="admin.journals.confirmDelete">Вы уверены, что хотите навсегда удалить этот журнал и все его содержимое?</message>
 	<message key="admin.journals.create">Создать журнал</message>
-	<message key="admin.journals.createInstructions">Вы будете автоматически записаны менеджером этого журнала. После создания нового журнала вы будете перенаправлены на мастер настройки, чтобы выполнить первоначальную настройку журнала.</message>
+	<message key="admin.journals.createInstructions">Вы будете автоматически записаны управляющим этого журнала. После создания нового журнала войдите в него как управляющий и продолжите его настройку и запись пользователей.</message>
 	<message key="admin.journals.urlWillBe">Это должно быть одно короткое слово или аббревиатура, которая идентифицирует журнал. Адрес журнала будет {$sampleUrl}</message>
 	<message key="admin.journals.form.titleRequired">Название журнала обязательно.</message>
 	<message key="admin.journals.form.pathRequired">Путь обязателен.</message>
@@ -77,7 +77,7 @@
 	<message key="admin.categories">Категории</message>
 	<message key="admin.categories.enable.description">Администратор сайта может определить здесь набор категорий, чтобы упростить упорядочение большого количества журналов. Менеджеры журналов затем могут выбрать некоторые из этих категорий для каждого журнала, а читатели смогут просматривать коллекции журналов по категориям.</message>
 	<message key="admin.categories.disableCategories">Не упорядочивать журналы по категориям.</message>
-	<message key="admin.categories.enableCategories">Разрешить менеджерам журналов упорядочивать журналы по категориям.</message>
+	<message key="admin.categories.enableCategories">Разрешить управляющим журналов упорядочивать журналы по категориям.</message>
 	<message key="admin.categories.editTitle">Редактировать категорию</message>
 	<message key="admin.categories.createTitle">Создать категорию</message>
 	<message key="admin.categories.create">Создать новую категорию</message>

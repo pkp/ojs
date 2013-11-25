@@ -14,7 +14,7 @@
 <locale name="ru_RU" full_name = "Russian">
 	<message key="author.submit">Новая статья</message>
 	<message key="author.track">Статьи в процессе отправки</message>
-	<message key="author.competingInterests"><![CDATA[Конфликт&nbsp;интересов <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Политика разрешения конфликта интересов</a>]]></message>
+	<message key="author.competingInterests"><![CDATA[Конфликт&nbsp;интересов <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Руководство по заполнению Декларации о конфликте интересов</a>]]></message>
 	<message key="author.submit.submitArticle">Отправить статью</message>
 	<message key="author.submit.stepsToSubmit">Пять шагов к отправке</message>
 	<message key="author.submit.startHereTitle">Начать отправку новой статьи</message>
@@ -52,7 +52,7 @@
 	<message key="author.submit.selectSection">Пожалуйста, выберите раздел...</message>
 	<message key="author.submit.submissionLocale">Язык отправляемой статьи</message>
 	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает статьи на нескольких языках. Выберите основной язык отправляемой статьи из раскрывающегося списка ниже.</message>
-	<message key="author.submit.submissionChecklist">Контрольный список отправки</message>
+	<message key="author.submit.submissionChecklist">Контрольный список подготовки статьи к отправке</message>
 	<message key="author.submit.submissionChecklistDescription">Подтвердите, что отправляемая статья готова для рассмотрения этим журналом, отметив следующие пункты (комментарии для редактора могут быть добавлены ниже).</message>
 	<message key="author.submit.verifyChecklist">Перед продолжением отправки вы должны убедиться, что все пункты в контрольном списке отправки выполнены</message>
 	<message key="author.submit.copyrightNoticeAgree">Авторы согласны с Условиями передачи авторских прав, которые будут применены к этой статье в случае, если эта статья будет опубликована этим журналом (комментарии для редактора могут быть добавлены ниже).</message>
@@ -70,7 +70,7 @@
 	<message key="author.submit.submissionIndexingDescription">Укажите ключевые слова для индексирования этой статьи; ключевые слова разделяйте точками с запятой (слово1; слово2; слово3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Благодарность и поддержка</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Укажите агентства (лицо, организацию или службу), которые внесли свой вклад в содержание, обеспечили финансирование или поддержку работы, представленной в этой статье. Разделяйте их точками с запятой (например, Иван Иванов, Университет Метро; Master University, Department of Computer Science).</message>
-	<message key="author.submit.coverageInstructions">Опишите географический, хронологический или исторический охват вашего исследования и/или характеристики исследуемого объекта.</message>
+	<message key="author.submit.coverageInstructions">Опишите геопространственный, хронологический или исторический охват вашего исследования и/или характеристики исследуемого объекта.</message>
 	<message key="author.submit.subjectClassInstructions">Используйте гиперссылки в системе классификации для выбора подходящих классификационных категорий и их номеров (если эти номера существуют).</message>
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнительные коды</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Минимум один автор обязателен.</message>

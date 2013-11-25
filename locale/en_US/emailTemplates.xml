@@ -91,7 +91,7 @@ You have created an account with {$journalName}, but before you can start using 
 
 Thank you,
 {$principalContactSignature}</body>
-		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+		<description>This email is sent to a newly registered user to validate their email account.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
 		<subject>Registration as Reviewer with {$journalName}</subject>
