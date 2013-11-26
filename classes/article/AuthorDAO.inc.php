@@ -237,15 +237,12 @@ class AuthorDAO extends PKPAuthorDAO {
 	function insertAuthor(&$author) {
 		$this->update(
 			'INSERT INTO authors
-				(submission_id, first_name, middle_name, last_name,
+				(submission_id,
 					country, email, url, primary_contact, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?)',
 			array(
 				$author->getSubmissionId(),
-				$author->getFirstName(null), // for compatibility
-				$author->getMiddleName(null) . '', // make non-null
-				$author->getLastName(null), // for compatibility
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),
@@ -267,9 +264,7 @@ class AuthorDAO extends PKPAuthorDAO {
 	function updateAuthor(&$author) {
 		$returner = $this->update(
 			'UPDATE authors
-			SET	first_name = ?,
-				middle_name = ?,
-				last_name = ?,
+			SET
 				country = ?,
 				email = ?,
 				url = ?,
@@ -277,9 +272,6 @@ class AuthorDAO extends PKPAuthorDAO {
 				seq = ?
 			WHERE	author_id = ?',
 			array(
-				$author->getFirstName(null), // for compatibility
-				$author->getMiddleName(null) . '', // make non-null
-				$author->getLastName(null), // for compatibility
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),
