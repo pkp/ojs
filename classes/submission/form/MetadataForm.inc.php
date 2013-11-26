@@ -80,10 +80,23 @@ class MetadataForm extends Form {
 					$supportedSubmissionLocales
 				))
 			);
-			$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired', $this->getRequiredLocale()));
-			$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName')));
-			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'), array(ValidatorEmail::getRegexp()), false, array('email')));
-			$this->addCheck(new FormValidatorArrayCustom($this, 'authors', 'required', 'user.profile.form.urlInvalid', create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'), array(ValidatorUrl::getRegexp()), false, array('url')));
+			$this->addCheck(new FormValidatorLocale(
+					$this, 'title', 'required', 'author.submit.form.titleRequired',
+					$this->getRequiredLocale()
+			));
+			$this->addCheck(new FormValidatorArray(
+					$this, 'authors', 'required', 'author.submit.form.authorRequiredFields',
+					array('firstName', 'lastName')
+			));
+			$this->addCheck(new FormValidatorArrayCustom(
+					$this, 'authors', 'required', 'author.submit.form.authorRequiredFields',
+					create_function('$email, $regExp', 'return String::regexp_match($regExp, $email);'),
+					array(ValidatorEmail::getRegexp()), false, array('email')
+			));
+			$this->addCheck(new FormValidatorArrayCustom(
+					$this, 'authors', 'required', 'user.profile.form.urlInvalid',
+					create_function('$url, $regExp', 'return empty($url) ? true : String::regexp_match($regExp, $url);'),
+					array(ValidatorUrl::getRegexp()), false, array('url')));
 		} else {
 			parent::Form('submission/metadata/metadataView.tpl');
 		}
@@ -175,8 +188,12 @@ class MetadataForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		return array(
-			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
-			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor', 'citations'
+			'title', 'abstract',
+			'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract',
+			'originalFileName', 'fileName', 'width', 'height',
+			'discipline', 'subjectClass', 'subject',
+			'coverageGeo', 'coverageChron', 'coverageSample',
+			'type', 'sponsor', 'citations'
 		);
 	}
 
@@ -399,9 +416,9 @@ class MetadataForm extends Form {
 
 			if ($author != null) {
 				$author->setSubmissionId($article->getId());
-				$author->setFirstName($authors[$i]['firstName'],     null); // Localized
-				$author->setMiddleName($authors[$i]['middleName'],   null); // Localized
-				$author->setLastName($authors[$i]['lastName'],       null); // Localized
+				$author->setFirstName(  $authors[$i]['firstName'],   null); // Localized
+				$author->setMiddleName( $authors[$i]['middleName'],  null); // Localized
+				$author->setLastName(   $authors[$i]['lastName'],    null); // Localized
 				$author->setAffiliation($authors[$i]['affiliation'], null); // Localized
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
