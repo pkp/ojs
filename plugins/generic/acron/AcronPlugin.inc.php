@@ -25,15 +25,13 @@ class AcronPlugin extends GenericPlugin {
 	 * @see LazyLoadPlugin::register()
 	 */
 	function register($category, $path) {
-		if (!Config::getVar('general', 'installed')) return false;
-		if (parent::register($category, $path)) {
-
+		$success = parent::register($category, $path);
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+		if ($success) {
 			$this->addLocaleData();
 			HookRegistry::register('LoadHandler',array(&$this, 'callbackLoadHandler'));
-
-			return true;
 		}
-		return false;
+		return $success;
 	}
 
 	/**
@@ -48,7 +46,7 @@ class AcronPlugin extends GenericPlugin {
 	 * @see LazyLoadPlugin::getName()
 	 */
 	function getName() {
-		return 'AcronPlugin';
+		return 'acronPlugin';
 	}
 
 	/**
@@ -63,6 +61,13 @@ class AcronPlugin extends GenericPlugin {
 	 */
 	function getDescription() {
 		return __('plugins.generic.acron.description');
+	}
+
+	/**
+	* @see PKPPlugin::getInstallSitePluginSettingsFile()
+	*/
+	function getInstallSitePluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
 	}
 
 	/**
@@ -133,6 +138,12 @@ class AcronPlugin extends GenericPlugin {
 						$baseClassName = substr($className, $pos+1);
 					}
 
+					$taskArgs = array();
+					if (isset($task['args'])) {
+						$taskArgs = $task['args'];
+					}
+
+
 					// There's a race here. Several requests may come in closely spaced.
 					// Each may decide it's time to run scheduled tasks, and more than one
 					// can happily go ahead and do it before the "last run" time is updated.
@@ -144,7 +155,7 @@ class AcronPlugin extends GenericPlugin {
 
 					// Load and execute the task
 					import($className);
-					$task = new $baseClassName($args);
+					$task = new $baseClassName($taskArgs);
 					$task->execute();
 				}
 			}

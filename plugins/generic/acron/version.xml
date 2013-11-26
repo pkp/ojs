@@ -10,8 +10,10 @@
   * Plugin version information.
   -->
 <version>
-	<application>acron</application>
+	<application>acronPlugin</application>
 	<type>plugins.generic</type>
 	<release>1.1.0.0</release>
 	<date>2013-11-26</date>
+	<lazy-load>1</lazy-load>
+	<class>AcronPlugin</class>
 </version>
