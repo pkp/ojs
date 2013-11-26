@@ -19,5 +19,6 @@ Veuillez confirmer que l'information soumise est correcte. Sur réception de vot
 Répondre à {$thesisName} ({$thesisEmail}) avec le contenu de ce message et votre confirmation, ainsi qu'avec toutes les recommendations de clarification ou de correction.
 
 Merci.</body>
+		<description>Ce courriel est utilisé pour confirmer la soumission d'un résumé de thèse d'un étudiant. Cette confirmation est envoyée au superviseur de l'étudiant à qui il est demandé de confirmer les détails du résumé soumis.</description>
 	</email_text>
 </email_texts>

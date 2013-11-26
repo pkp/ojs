@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/implicitAuth/shibboleth/locale/fr_CA/locale.xml
+  * locale.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -15,5 +15,5 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Plugiciel ShibAuth</message>
-	<message key="plugins.implicitAuth.shibboleth.description">Plugiciel ShibAuth. Il s'agit d'un plugiciel global pour le l'ensemble du site et qui est activé dans le fichier de configuration OJS.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">Plugiciel ShibAuth. Il s'agit d'un plugiciel global pour l'ensemble du site et qui est activé dans le fichier de configuration OJS.</message>
 </locale>

@@ -86,11 +86,10 @@
 	<message key="editor.issues.order">Classer</message>
 	<message key="editor.issues.publicId">Identifiant public</message>
 	<message key="editor.issues.publishIssue">Publier le numéro</message>
-	<message key="editor.issues.previewIssue">Prévisualiser du numéro</message>
+	<message key="editor.issues.previewIssue">Prévisualiser le numéro</message>
 	<message key="editor.issues.preview">(Prévisualiser)</message>
 	<message key="editor.issues.confirmPublish">Êtes-vous certain de vouloir publier le nouveau numéro?</message>
 	<message key="editor.issues.publicArticleIdExists">Impossible d'enregistrer l'identifiant public pour cet article :</message>
-	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà.</message>	
 	<message key="editor.issues.noLiveIssues">Aucun numéro en ligne</message>
 	<message key="editor.issues.open">Ouvert</message>
 	<message key="editor.issues.pages">Pages</message>
@@ -199,7 +198,7 @@
 	<message key="editor.article.remove">Supprimer</message>
 	<message key="editor.article.confirmChangeReviewForm">Avertissement : Changer le formulaire d'évaluation supprimera toutes les réponses que les évaluateurs ont fait en utilisant ce formulaire. Êtes-vous certain que vous souhaitez poursuivre?</message>
 	<message key="editor.issues.enableOpenAccessDate">Activer l'accès libre différé</message>
-	<message key="editor.issues.unpublishIssue">Numéro non publié</message>
+	<message key="editor.issues.unpublishIssue">Dépublier le numéro</message>
 	<message key="editor.issues.confirmUnpublish">Êtes-vous certain que vous souhaitez retirer ce numéro publié?</message>
 	<message key="editor.article.archiveSubmission">Rejeter et archiver la soumission</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer une soumission en Révision, utiliser le lien Aviser l'auteur pour informer l'auteur de la décision et sélectionner la version à envoyer.</message>

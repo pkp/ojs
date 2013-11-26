@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/googleAnalytics/locale/fr_CA/locale.xml
+  * locale.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -20,7 +20,7 @@
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Paramètres</message>
 	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Paramètres de Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p> Au moyen de ce plugiciel, vous pouvez utiliser Google Analytics pour collecter et analyser l'utilisation et le trafic sur ce site Web pour cette revue. Veuillez noter que pour utiliser ce plugiciel, vous devez déjà avoir un compte Google Analytics. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.</p><p>Veuillez noter que Google Analytics peut nécessiter jusqu'à 24 heures avant que les statistiques soient colligées et analysées. Durant cette période, la fonction 'Vérifier l'état' peut ne pas indiquer correctement s'il a détecter le code de repérage de la revue.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p> Au moyen de ce plugiciel, vous pouvez utiliser Google Analytics pour collecter et analyser l'utilisation et le trafic sur ce site Web pour cette revue. Veuillez noter que pour utiliser ce plugiciel, vous devez déjà avoir un compte Google Analytics. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.</p><p>Veuillez noter que Google Analytics peut nécessiter jusqu'à 24 heures avant que les statistiques soient colligées et analysées. Durant cette période, la fonction 'Vérifier l'état' peut ne pas indiquer correctement s'il a détecté le code de repérage de la revue.</p>]]></message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Numéro de compte</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">À partir de Google Analytics, cliquez sur Vérifier l'état pour voir le code de repérage de votre site. Le numéro de compte est affiché dans le code de repérage : _uacct = "###". Pour un nouveau code de repérage, le numéro de compte est affiché dans le code de repérage : var pageTracker = _gat._getTracker("###"). Entrez le texte correspondant à ###.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Veuillez entrer un numéro de compte.</message>

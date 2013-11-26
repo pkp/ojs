@@ -59,7 +59,6 @@
 	<message key="author.submit.addAuthor">Ajouter un auteur</message>
 	<message key="author.submit.deleteAuthor">Supprimer un auteur</message>
 	<message key="author.submit.submissionIndexingDescription">Fournir les termes pour l'indexation de la soumission; séparer les termes par un point-virgule (terme1; terme2; terme3).</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Nommez les  (individu, organisation ou service) ayant participé à l'élaboration du contenu, au financement ou à la promotion des travaux présentés. Séparez chaque entité d'un point-virgule (ex. : Pierre Gagnon, Université Métropolitaine; Université Master, Département d'informatique).</message>	
 	<message key="author.submit.coverageInstructions">Renvoie à une lieu géo-spatial, une couverture historique ou chronologique, et/ou à des caractéristiques d'un échantillon de recherche.</message>
 	<message key="author.submit.subjectClassInstructions">Utiliser le système de classification par liens pour sélectionner les termes de la classification et, s'il y a lieu, les numéros.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[anglais=en; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codes supplémentaires</a>.]]></message>
@@ -72,7 +71,7 @@
 	<message key="author.submit.replaceSubmissionFile">Remplacer le fichier de soumission</message>
 	<message key="author.submit.noSubmissionFile">Aucun fichier de soumission téléchargé.</message>
 	<message key="author.submit.noSubmissionConfirm">Êtes-vous certain de vouloir continuer sans télécharger le fichier de soumission?</message>
-	<message key="author.submit.supplementaryFilesInstructions">Cette étape facultative permet l'ajout de fichiers supplémentaires à la soumission. Les fichiers, qui peuvent être sous n'importe quel format, peuvent comprendre (a) des instruments de recherche, (b) des ensembles de données se conformant aux conditions de la révision déontologique de la recherche de l'étude, (c) des sources qui autrement ne seraient pas disponibles aux lecteurs, (d) des nombres et des tableaux qui ne peuvent être intégrés dans le texte en soi, ou autres documents qui ajoutent une contribution au travail.</message>
+	<message key="author.submit.supplementaryFilesInstructions">Cette étape facultative permet l'ajout de fichiers supplémentaires à la soumission. Les fichiers, qui peuvent être de n'importe quel format, peuvent comprendre (a) des instruments de recherche, (b) des ensembles de données se conformant aux conditions de la révision déontologique de la recherche de l'étude, (c) des sources qui autrement ne seraient pas disponibles aux lecteurs, (d) des nombres et des tableaux qui ne peuvent être intégrés dans le texte en soi, ou autres documents qui ajoutent une contribution au travail.</message>
 	<message key="author.submit.supplementaryFiles.saveToUpload">Cliquer sur Enregistrer pour télécharger le fichier (après cela, des fichiers supplémentaires peuvent être téléchargés).</message>
 	<message key="author.submit.forgottenSubmitSuppFile">Êtes-vous certain de vouloir continuer sans télécharger le fichier supplémentaire que vous avez choisi?</message>
 	<message key="author.submit.noSupplementaryFiles">Aucun fichier supplémentaire n'a été ajouté à cette soumission.</message>
@@ -105,7 +104,7 @@
 	<message key="author.submit.suppFile.form.descriptionRequired">Veuillez entrer une description.</message>
 	<message key="author.suppFile.suppFilePublicIdentificationExists">L'identification publique du fichier supplémentaire existe déjà.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Identifiant public du fichier supplémentaire.</message>
-	<message key="author.submit.confirmationDescription">Pour soumettre votre manuscrit à {$journalTitle}, cliquer sur Terminer la soumission. Le contact principal de la soumission recevra un accusé de réception par courriel et sera en mesure d'afficher le progrès du processus éditorial de la soumission en se connectant dans le site Web de la revue. Merci de votre intérêt à publier dans {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">Pour soumettre votre manuscrit à {$journalTitle}, cliquer sur Terminer la soumission. Le contact principal de la soumission recevra un accusé de réception par courriel et sera en mesure d'afficher l'avancement du processus éditorial de la soumission en se connectant dans le site Web de la revue. Merci de votre intérêt à publier dans {$journalTitle}.</message>
 	<message key="author.submit.noFiles">Aucun fichier n'a été attaché à cette soumission.</message>
 	<message key="author.submit.filesSummary">Sommaire du fichier</message>
 	<message key="author.submit.finishSubmission">Terminer la soumission</message>
@@ -126,5 +125,5 @@
 	<message key="author.submit.submissionLocaleDescription">La revue accepte les soumissions dans plusieurs langues. Choisir la langue principale de la soumission à partir de la liste déroulante ci-dessous.</message>
 	<message key="author.submit.form.localeRequired">Veuillez sélectionner une langue de soumission.</message>
 	<message key="author.submit.submissionSupportingAgencies">Contributeurs et institutions commanditaires</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Nommez les institutions (individu, organisation ou service) ayant participé à l'élaboration du contenu, au financement ou à la promotion des travaux présentés (??). Séparez chaque entité d'un point-virgule (ex. : Pierre Gagnon, Université Métropolitaine; Université Master, Département d'informatique).</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Nommez les institutions (individu, organisation ou service) ayant participé à l'élaboration du contenu, au financement ou à la promotion des travaux présentés dans cette soumission. Séparez chaque entité d'un point-virgule (ex. : Pierre Gagnon, Université Métropolitaine; Université Master, Département d'informatique).</message>
 </locale>
