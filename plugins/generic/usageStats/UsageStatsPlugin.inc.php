@@ -88,6 +88,13 @@ class UsageStatsPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * @see PKPPlugin::getInstallSchemaFile()
+	 */
+	function getInstallSchemaFile() {
+		return $this->getPluginPath() . '/schema.xml';
+	}
+
+	/**
 	* @see PKPPlugin::getTemplatePath()
 	*/
 	function getTemplatePath() {
