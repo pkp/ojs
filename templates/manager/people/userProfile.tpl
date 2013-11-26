@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<h3 id="userFullName">{$user->getFullName()|escape}</h3>
+<h3 id="userFullName">{$user->getLocalizedFullName()|escape}</h3>
 <div id="profile">
 <h4>{translate key="user.profile"}</h4>
 
