@@ -14,4 +14,6 @@
 	<type>plugins.generic</type>
 	<release>1.0.0.0</release>
 	<date>2013-04-15</date>
+	<sitewide>1</sitewide>
+	<class>UsageEventPlugin</class>
 </version>
