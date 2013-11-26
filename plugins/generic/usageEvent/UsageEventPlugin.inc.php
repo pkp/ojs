@@ -140,6 +140,8 @@ class UsageEventPlugin extends GenericPlugin {
 
 		// Prepare request information.
 		$downloadSuccess = false;
+		$idParams = array();
+		$canonicalUrlParams = array();
 		switch ($hookName) {
 
 			// Article abstract, HTML galley and remote galley.
@@ -148,7 +150,7 @@ class UsageEventPlugin extends GenericPlugin {
 				$op = $router->getRequestedOp($request);
 
 				// First check for a journal index page view.
-				if ($page == 'index' && $op == 'index') {
+				if (($page == 'index' || empty($page)) && $op == 'index') {
 					$pubObject =& $templateMgr->get_template_vars('currentJournal');
 					if (is_a($pubObject, 'Journal')) {
 						$assocType = ASSOC_TYPE_JOURNAL;
