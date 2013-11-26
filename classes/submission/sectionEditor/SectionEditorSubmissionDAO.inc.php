@@ -195,16 +195,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 
 	}
 
-	function createReviewRound($articleId, $round, $reviewRevision) {
-		$this->update(
-			'INSERT INTO review_rounds
-				(submission_id, round, review_revision)
-				VALUES
-				(?, ?, ?)',
-			array($articleId, $round, $reviewRevision)
-		);
-	}
-
 	/**
 	 * FIXME Move this into somewhere common (SubmissionDAO?) as this is used in several classes.
 	 */
@@ -229,22 +219,6 @@ class SectionEditorSubmissionDAO extends ArticleDAO {
 	//
 	// Miscellaneous
 	//
-
-	/**
-	 * Check if a review round exists for a specified article.
-	 * @param $articleId int
-	 * @param $round int
-	 * @return boolean
-	 */
-	function reviewRoundExists($articleId, $round) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM review_rounds WHERE submission_id = ? AND round = ?', array($articleId, $round)
-		);
-		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
-
-		$result->Close();
-		return $returner;
-	}
 
 	/**
 	 * Map a column heading value to a database value for sorting
