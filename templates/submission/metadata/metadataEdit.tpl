@@ -47,6 +47,15 @@ function moveAuthor(dir, authorIndex) {
 						{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][competingInterests][{$thisLocale|escape}]" value="{$thisCompetingInterests|escape}" />{/if}
 					{/foreach}
 				{/if}
+				{foreach from=$author.firstName key="thisLocale" item="thisFirstName"}
+					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][firstName][{$thisLocale|escape}]" value="{$thisFirstName|escape}" />{/if}
+				{/foreach}
+				{foreach from=$author.middleName key="thisLocale" item="thisMiddleName"}
+					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][middleName][{$thisLocale|escape}]" value="{$thisMiddleName|escape}" />{/if}
+				{/foreach}
+				{foreach from=$author.lastName key="thisLocale" item="thisLastName"}
+					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][lastName][{$thisLocale|escape}]" value="{$thisLastName|escape}" />{/if}
+				{/foreach}
 				{foreach from=$author.biography key="thisLocale" item="thisBiography"}
 					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][biography][{$thisLocale|escape}]" value="{$thisBiography|escape}" />{/if}
 				{/foreach}
@@ -81,15 +90,15 @@ function moveAuthor(dir, authorIndex) {
 			{/if}
 			{fieldLabel name="authors-$authorIndex-firstName" required="true" key="user.firstName"}
 		</td>
-		<td width="80%" class="value"><input type="text" name="authors[{$authorIndex|escape}][firstName]" id="authors-{$authorIndex|escape}-firstName" value="{$author.firstName|escape}" size="20" maxlength="40" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="authors[{$authorIndex|escape}][firstName][{$formLocale|escape}]" id="authors-{$authorIndex|escape}-firstName" value="{$author.firstName[$formLocale]|escape}" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-$authorIndex-middleName" key="user.middleName"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][middleName]" id="authors-{$authorIndex|escape}-middleName" value="{$author.middleName|escape}" size="20" maxlength="40" class="textField" /></td>
+		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][middleName][{$formLocale|escape}]" id="authors-{$authorIndex|escape}-middleName" value="{$author.middleName[$formLocale]|escape}" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-$authorIndex-lastName" required="true" key="user.lastName"}</td>
-		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][lastName]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" class="textField" /></td>
+		<td class="value"><input type="text" name="authors[{$authorIndex|escape}][lastName][{$formLocale|escape}]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName[$formLocale]|escape}" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
@@ -155,15 +164,15 @@ function moveAuthor(dir, authorIndex) {
 	<input type="hidden" name="authors[0][seq]" value="1" />
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="authors-0-firstName" required="true" key="user.firstName"}</td>
-		<td width="80%" class="value"><input type="text" name="authors[0][firstName]" id="authors-0-firstName" size="20" maxlength="40" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="authors[0][firstName][{$formLocale|escape}]" id="authors-0-firstName" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-0-middleName" key="user.middleName"}</td>
-		<td class="value"><input type="text" name="authors[0][middleName]" id="authors-0-middleName" size="20" maxlength="40" class="textField" /></td>
+		<td class="value"><input type="text" name="authors[0][middleName][{$formLocale|escape}]" id="authors-0-middleName" size="20" maxlength="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-0-lastName" required="true" key="user.lastName"}</td>
-		<td class="value"><input type="text" name="authors[0][lastName]" id="authors-0-lastName" size="20" maxlength="90" class="textField" /></td>
+		<td class="value"><input type="text" name="authors[0][lastName][{$formLocale|escape}]" id="authors-0-lastName" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>
