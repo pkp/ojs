@@ -29,6 +29,7 @@
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
+			<descr>Used to order lists of journals</descr>
 		</field>
 		<field name="primary_locale" type="C2" size="5">
 			<NOTNULL/>
@@ -36,6 +37,7 @@
 		<field name="enabled" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/>
+			<descr>Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)</descr>
 		</field>
 		<descr>Journals and basic journal settings.</descr>
 		<index name="journals_path">
