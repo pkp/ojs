@@ -81,7 +81,7 @@ class ArticleSearch extends SubmissionSearch {
  			$orderKey = null;
 			switch ($orderBy) {
 				case 'authors':
-					$authors = $authorDao->getAuthorsBySubmissionId($submissionId);
+					$authors = $authorDao->getBySubmissionId($submissionId);
 					$authorNames = array();
 					foreach ($authors as $author) { /* @var $author Author */
 						$authorNames[] = $author->getFullName(true);
