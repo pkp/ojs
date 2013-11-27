@@ -194,22 +194,6 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Return boolean indicating whether or not submissions are restricted to [section]Editors.
-	 * @return boolean
-	 */
-	function getEditorRestricted() {
-		return $this->getData('editorRestricted');
-	}
-
-	/**
-	 * Set whether or not submissions are restricted to [section]Editors.
-	 * @param $editorRestricted boolean
-	 */
-	function setEditorRestricted($editorRestricted) {
-		return $this->setData('editorRestricted', $editorRestricted);
-	}
-
-	/**
 	 * Return boolean indicating if title should be hidden in issue ToC.
 	 * @return boolean
 	 */
