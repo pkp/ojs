@@ -1095,10 +1095,23 @@ class Upgrade extends Installer {
 		import('plugins.generic.usageStats.GeoLocationTool');
 		$geoLocationTool = new GeoLocationTool();
 
+		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+
 		while(!$result->EOF) {
 			$row =& $result->GetRowAssoc(false);
 			list($countryId, $cityName, $region) = $geoLocationTool->getGeoLocation($row['ip_address']);
+			$fileType = null;
 			if ($row['galley_id']) {
+				// Get the file type.
+				$galley =& $articleGalleyDao->getGalley($row['galley_id']);
+				if (is_a($galley, 'ArticleGalley')) {
+					if ($galley->isHTMLGalley()) $fileType = STATISTICS_FILE_TYPE_HTML;
+					if ($galley->isPdfGalley()) $fileType = STATISTICS_FILE_TYPE_PDF;
+					if (!$fileType) $fileType = STATISTICS_FILE_TYPE_OTHER;
+				} else {
+					// No galley.
+					continue;
+				}
 				$assocType = ASSOC_TYPE_GALLEY;
 				$assocId = $row['galley_id'];
 			} else {
@@ -1107,7 +1120,7 @@ class Upgrade extends Installer {
 			};
 
 			$day = date('Ymd', strtotime($row['date']));
-			$tempStatsDao->insert($assocType, $assocId, $day, $countryId, $region, $cityName, null, $loadId);
+			$tempStatsDao->insert($assocType, $assocId, $day, $countryId, $region, $cityName, $fileType, $loadId);
 			$result->MoveNext();
 		}
 
@@ -1126,8 +1139,8 @@ class Upgrade extends Installer {
 		// Galleys.
 		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_GALLEY);
 		$tempStatsDao->update(
-			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
-			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.article_id, count(tr.metric), a.journal_id, pa.issue_id
+			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id, file_type)
+			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.article_id, count(tr.metric), a.journal_id, pa.issue_id, tr.file_type
 			FROM usage_stats_temporary_records AS tr
 			LEFT JOIN article_galleys AS ag ON ag.galley_id = tr.assoc_id
 			LEFT JOIN articles AS a ON a.article_id = ag.article_id
