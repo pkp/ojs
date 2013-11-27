@@ -77,7 +77,9 @@ class AuthorGridHandler extends PKPAuthorGridHandler {
 	function canAdminister() {
 		$article = $this->getSubmission();
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-		if ($article->getDateSubmitted() == null || array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR), $userRoles))
+		// N.B.: $article will not be defined yet for feature
+		// initialization, which happens prior to fetching.
+		if (!$article || $article->getDateSubmitted() == null || array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR), $userRoles))
 			return true;
 		else
 			return false;
