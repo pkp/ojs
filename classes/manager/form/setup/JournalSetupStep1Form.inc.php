@@ -70,7 +70,12 @@ class JournalSetupStep1Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'initials', 'abbreviation', 'contactTitle', 'contactAffiliation', 'contactMailingAddress', 'sponsorNote', 'publisherNote', 'contributorNote', 'history', 'searchDescription', 'searchKeywords', 'customHeaders');
+		return array(
+			'title', 'initials', 'abbreviation', 'mailingAddress',
+			'contactName', 'contactTitle', 'contactAffiliation', 'contactMailingAddress',
+			'supportName', 'publisherInstitution',
+			'sponsorNote', 'publisherNote', 'contributorNote',
+			'history', 'searchDescription', 'searchKeywords', 'customHeaders');
 	}
 
 	/**

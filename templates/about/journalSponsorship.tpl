@@ -18,7 +18,8 @@
 
 {if $publisherNote}<p>{$publisherNote|nl2br}</p>{/if}
 
-<p><a href="{$publisherUrl}">{$publisherInstitution|escape}</a></p>
+{assign var=s value=$currentJournal->getLocalizedSetting('publisherInstitution')}
+<p><a href="{$publisherUrl}">{$s|escape}</a></p>
 </div>
 <div class="separator"></div>
 {/if}

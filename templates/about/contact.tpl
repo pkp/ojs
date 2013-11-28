@@ -12,22 +12,27 @@
 {include file="common/header.tpl"}
 {/strip}
 <div id="contact">
-{if !empty($journalSettings.mailingAddress)}
+{assign var=s value=$currentJournal->getLocalizedSetting('mailingAddress')}
+{if $s}
 <div id="mailingAddress">
 <h3>{translate key="common.mailingAddress"}</h3>
-<p>
-	{$journalSettings.mailingAddress|nl2br}
-</p>
+<p>{$s|nl2br}</p>
 </div>
 {/if}
 
-{if not ($currentJournal->getLocalizedSetting('contactTitle') == '' && $currentJournal->getLocalizedSetting('contactAffiliation') == '' && $currentJournal->getLocalizedSetting('contactMailingAddress') == '' && empty($journalSettings.contactPhone) && empty($journalSettings.contactFax) && empty($journalSettings.contactEmail))}
+{if not (
+	$currentJournal->getLocalizedSetting('contactTitle') == ''
+	&& $currentJournal->getLocalizedSetting('contactAffiliation') == ''
+	&& $currentJournal->getLocalizedSetting('contactMailingAddress') == ''
+	&& empty($journalSettings.contactPhone)
+	&& empty($journalSettings.contactFax)
+	&& empty($journalSettings.contactEmail)
+)}
 <div id="principalContact">
 <h3>{translate key="about.contact.principalContact"}</h3>
 <p>
-	{if !empty($journalSettings.contactName)}
-		<strong>{$journalSettings.contactName|escape}</strong><br />
-	{/if}
+	{assign var=s value=$currentJournal->getLocalizedSetting('contactName')}
+	{if $s}<strong>{$s|escape}</strong><br />{/if}
 
 	{assign var=s value=$currentJournal->getLocalizedSetting('contactTitle')}
 	{if $s}{$s|escape}<br />{/if}
@@ -51,13 +56,16 @@
 </div>
 {/if}
 
-{if not (empty($journalSettings.supportName) && empty($journalSettings.supportPhone) && empty($journalSettings.supportEmail))}
+{if not (
+	empty($journalSettings.supportName)
+	&& empty($journalSettings.supportPhone)
+	&& empty($journalSettings.supportEmail)
+)}
 <div id="supportContact">
 <h3>{translate key="about.contact.supportContact"}</h3>
 <p>
-	{if !empty($journalSettings.supportName)}
-		<strong>{$journalSettings.supportName|escape}</strong><br />
-	{/if}
+	{assign var=s value=$currentJournal->getLocalizedSetting('supportName')}
+	{if $s}<strong>{$s|escape}</strong><br />{/if}
 	{if !empty($journalSettings.supportPhone)}
 		{translate key="about.contact.phone"}: {$journalSettings.supportPhone|escape}<br />
 	{/if}
