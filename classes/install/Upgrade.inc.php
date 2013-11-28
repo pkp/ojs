@@ -1124,11 +1124,21 @@ class Upgrade extends Installer {
 			$result->MoveNext();
 		}
 
+		switch (Config::getVar('database', 'driver')) {
+			case 'mysql':
+			default:
+				$monthSql = 'extract(YEAR_MONTH from tr.day)';
+				break;
+			case 'postgres':
+				$monthSql = 'to_char(to_date(tr.day, "YYYYMMDD"), "YYYYMM")';
+				break;
+		}
+
 		// Articles.
 		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_ARTICLE);
 		$tempStatsDao->update(
-			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
-			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.journal_id, pa.issue_id
+			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, month, country_id, region, city, submission_id, metric, context_id, issue_id)
+			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, ' . $monthSql . ', tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.journal_id, pa.issue_id
 			FROM usage_stats_temporary_records AS tr
 			LEFT JOIN articles AS a ON a.article_id = tr.assoc_id
 			LEFT JOIN published_articles AS pa ON pa.article_id = tr.assoc_id
@@ -1139,8 +1149,8 @@ class Upgrade extends Installer {
 		// Galleys.
 		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_GALLEY);
 		$tempStatsDao->update(
-			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id, file_type)
-			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.article_id, count(tr.metric), a.journal_id, pa.issue_id, tr.file_type
+			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, month, country_id, region, city, submission_id, metric, context_id, issue_id, file_type)
+			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, ' . $monthSql . ', tr.country_id, tr.region, tr.city, ag.article_id, count(tr.metric), a.journal_id, pa.issue_id, tr.file_type
 			FROM usage_stats_temporary_records AS tr
 			LEFT JOIN article_galleys AS ag ON ag.galley_id = tr.assoc_id
 			LEFT JOIN articles AS a ON a.article_id = ag.article_id
