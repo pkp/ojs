@@ -238,25 +238,32 @@ class CrossRefExportDom {
 	 */
 	function &generateComponentListDom(&$doc, &$journal, &$article) {
 		$suppFiles =& $article->getSuppFiles();
-		if ($suppFiles) {
+		$createComponentList = false;
+		foreach ($suppFiles as $suppFile) {
+			if ($suppFile->getPubId('doi')) {
+				$createComponentList = true;
+				break;
+			}
+		}
+		if ($createComponentList) {
 			// Create the base node
 			$componentListNode =& XMLCustomWriter::createElement($doc, 'component_list');
 
 			// Run through supp files and add component nodes.
 			foreach($suppFiles as $suppFile) {
-				$componentNode =& XMLCustomWriter::createElement($doc, 'component');
-				XMLCustomWriter::setAttribute($componentNode, 'parent_relation', 'isPartOf');
-
-				/* Titles */
-				$suppFileTitle = $suppFile->getSuppFileTitle();
-				if (!empty($suppFileTitle)) {
-					$titlesNode =& XMLCustomWriter::createElement($doc, 'titles');
-					XMLCustomWriter::createChildWithText($doc, $titlesNode, 'title', $suppFileTitle);
-					XMLCustomWriter::appendChild($componentNode, $titlesNode);
-				}
-
-				// DOI data node
 				if ($suppFile->getPubId('doi')) {
+					$componentNode =& XMLCustomWriter::createElement($doc, 'component');
+					XMLCustomWriter::setAttribute($componentNode, 'parent_relation', 'isPartOf');
+
+					/* Titles */
+					$suppFileTitle = $suppFile->getSuppFileTitle();
+					if (!empty($suppFileTitle)) {
+						$titlesNode =& XMLCustomWriter::createElement($doc, 'titles');
+						XMLCustomWriter::createChildWithText($doc, $titlesNode, 'title', $suppFileTitle);
+						XMLCustomWriter::appendChild($componentNode, $titlesNode);
+					}
+
+					// DOI data node
 					$suppFileUrl = Request::url(
 						null, 'article', 'downloadSuppFile',
 						array($article->getId(), $suppFile->getBestSuppFileId($journal))
