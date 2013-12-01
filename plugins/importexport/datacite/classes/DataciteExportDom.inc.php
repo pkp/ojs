@@ -267,18 +267,22 @@ class DataciteExportDom extends DOIExportDom {
 	 * @return array
 	 */
 	function &_retrieveSuppFilesByArticle(&$article) {
+		$suppFilesByArticle = array();
 		$cache =& $this->getCache();
 		$articleId = $article->getId();
 		if (!$cache->isCached('suppFilesByArticle', $articleId)) {
 			$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
 			$suppFiles =& $suppFileDao->getSuppFilesByArticle($articleId);
-			foreach($suppFiles as $suppFile) {
-				$cache->add($suppFile, $article);
-				unset($suppFile);
+			if (!empty($suppFiles)) {
+				foreach($suppFiles as $suppFile) {
+					$cache->add($suppFile, $article);
+					unset($suppFile);
+				}
+				$cache->markComplete('suppFilesByArticle', $articleId);
+				$suppFilesByArticle = $cache->get('suppFilesByArticle', $articleId);
 			}
-			$cache->markComplete('suppFilesByArticle', $articleId);
 		}
-		return $cache->get('suppFilesByArticle', $articleId);
+		return $suppFilesByArticle;
 	}
 
 	/**
