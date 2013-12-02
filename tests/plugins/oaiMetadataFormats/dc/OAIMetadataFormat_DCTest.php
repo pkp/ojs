@@ -155,9 +155,9 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 
 		// Create a mocked AuthorDAO that returns our test author.
 		import('classes.article.AuthorDAO');
-		$authorDao = $this->getMock('AuthorDAO', array('getAuthorsBySubmissionId'));
+		$authorDao = $this->getMock('AuthorDAO', array('getBySubmissionId'));
 		$authorDao->expects($this->any())
-		          ->method('getAuthorsBySubmissionId')
+		          ->method('getBySubmissionId')
 		          ->will($this->returnValue(array($author)));
 		DAORegistry::registerDAO('AuthorDAO', $authorDao);
 

@@ -518,7 +518,7 @@ class SolrWebServiceTest extends PKPTestCase {
 	 */
 	private function _registerMockAuthorDAO() {
 		// Mock an AuthorDAO.
-		$authorDao = $this->getMock('AuthorDAO', array('getAuthorsBySubmissionId'), array(), '', false);
+		$authorDao = $this->getMock('AuthorDAO', array('getBySubmissionId'), array(), '', false);
 
 		// Mock a list of authors.
 		$author1 = new Author();
@@ -530,9 +530,9 @@ class SolrWebServiceTest extends PKPTestCase {
 		$author2->setLastName('Name');
 		$authors = array($author1, $author2);
 
-		// Mock the getAuthorsBySubmissionId() method.
+		// Mock the getBySubmissionId() method.
 		$authorDao->expects($this->any())
-		          ->method('getAuthorsBySubmissionId')
+		          ->method('getBySubmissionId')
 		          ->will($this->returnValue($authors));
 
 		// Register the mock DAO.
