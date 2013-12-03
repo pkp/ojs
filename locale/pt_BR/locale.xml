@@ -561,6 +561,8 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="search.allJournals">Todas as Revistas</message>
 	<message key="search.authorIndex">Índice de autores</message>
 	<message key="search.authorDetails">Perfil do autor</message>
+	<message key="search.advancedSearchMore">Opções adicionais de pesquisa (clique para exibir)</message>
+	<message key="search.advancedSearchLess">Opções adicionais de pesquisa (clique para ocultar)</message>
 	<message key="search.syntaxInstructions"><![CDATA[Dicas para pesquisa: <ul>
 <li>O sistema de busca não diferencia maiúsculas ou minúsculas</li>
 <li>Termos irrelevantes são ignorados pelo sistema de busca</li>
