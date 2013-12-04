@@ -30,7 +30,7 @@ function toggleChecked() {
 
 <br/>
 
-<div id="issues">
+<div id="issuesDiv">
 <form action="{plugin_url path="exportIssues"}" method="post" id="issues">
 <table width="100%" class="listing">
 	<tr>
