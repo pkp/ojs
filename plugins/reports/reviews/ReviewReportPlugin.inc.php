@@ -24,7 +24,7 @@ class ReviewReportPlugin extends ReportPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		if ($success) {
+		if ($success && Config::getVar('general', 'installed')) {
 			$this->import('ReviewReportDAO');
 			$reviewReportDAO = new ReviewReportDAO();
 			DAORegistry::registerDAO('ReviewReportDAO', $reviewReportDAO);
