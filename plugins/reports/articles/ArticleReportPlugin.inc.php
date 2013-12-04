@@ -23,7 +23,7 @@ class ArticleReportPlugin extends ReportPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		if ($success) {
+		if ($success && Config::getVar('general', 'installed')) {
 			$this->import('ArticleReportDAO');
 			$articleReportDAO = new ArticleReportDAO();
 			DAORegistry::registerDAO('ArticleReportDAO', $articleReportDAO);
