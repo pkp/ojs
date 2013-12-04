@@ -81,7 +81,7 @@ class JournalOAI extends OAI {
 	 * @return int
 	 */
 	function setSpecToSectionId($setSpec, $journalId = null) {
-		$tmpArray = split(':', $setSpec);
+		$tmpArray = preg_split('/:/', $setSpec);
 		if (count($tmpArray) == 1) {
 			list($journalSpec) = $tmpArray;
 			$journalSpec = urldecode($journalSpec);
