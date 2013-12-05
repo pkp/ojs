@@ -18,8 +18,8 @@ if (!class_exists('DOIExportDom')) { // Bug #7848
 }
 
 // XML attributes
-define('DATACITE_XMLNS' , 'http://datacite.org/schema/kernel-2.2');
-define('DATACITE_XSI_SCHEMALOCATION' , 'http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd');
+define('DATACITE_XMLNS' , 'http://datacite.org/schema/kernel-3');
+define('DATACITE_XSI_SCHEMALOCATION' , 'http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd');
 
 // Date types
 define('DATACITE_DATE_AVAILABLE', 'Available');
@@ -144,7 +144,7 @@ class DataciteExportDom extends DOIExportDom {
 		XMLCustomWriter::appendChild($rootElement, $this->_datesElement($issue, $article, $articleFile, $suppFile, $publicationDate));
 
 		// Language
-		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'language', AppLocale::get3LetterIsoFromLocale($objectLocalePrecedence[0]));
+		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'language', AppLocale::getIso1FromLocale($objectLocalePrecedence[0]));
 
 		// Resource Type
 		if (!is_a($object, 'SuppFile')) {
@@ -167,7 +167,14 @@ class DataciteExportDom extends DOIExportDom {
 
 		// Rights
 		$rights = $this->getPrimaryTranslation($journal->getSetting('copyrightNotice', null), $objectLocalePrecedence);
-		if (!empty($rights)) XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'rights', String::html2text($rights));
+		if (!empty($rights)) {
+			$request = $this->_request;
+			$rightsURI = $request->url(null, 'about', 'submissions', null, null, 'copyrightNotice');
+			$rightsListElement =& XMLCustomWriter::createElement($this->getDoc(), 'rightsList');
+			$rightsElement = $this->createElementWithText('rights', String::html2text($rights), array('rightsURI' => $rightsURI));
+			XMLCustomWriter::appendChild($rightsListElement, $rightsElement);
+			XMLCustomWriter::appendChild($rootElement, $rightsListElement);
+		}
 
 		// Descriptions
 		$descriptionsElement =& $this->_descriptionsElement($issue, $article, $suppFile, $objectLocalePrecedence, $articlesByIssue);
