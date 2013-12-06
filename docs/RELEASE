@@ -23,6 +23,7 @@ New Features
 	#8243# Add Google Viewer support to issue galleys
 	#8143# Lucene improvements/fixes from FUB
 	#7984# Show archived items on author home pages
+	#8254# Statistics overhaul
 
 Bug Fixes
 ---------
