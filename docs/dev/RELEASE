@@ -36,6 +36,7 @@ OJS release:
 
     docs/README
     docs/release-notes/README-<VERSION>
+    docs/dev/ojs2.doxygen
 
 
 3. Generate ChangeLog for the release:
