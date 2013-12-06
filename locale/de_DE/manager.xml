@@ -529,8 +529,8 @@
 	<message key="manager.statistics.reports.filters.byContext">Nach Kontext</message>
 	<message key="manager.statistics.reports.filters.byContext.description">Ergebnisse nach Kontext filtern (Ausgabe und/oder Artikel).</message>
 	<message key="manager.statistics.reports.filters.byObject">Nach Objekttyp oder Objekt-ID</message>
-	<message key="manager.statistics.reports.filters.byObject.description">Ergenisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern.</message>
-	<message key="manager.statistics.reports.filters.byTime">Währe Berichtszeitraum</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Ergebnisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern.</message>
+	<message key="manager.statistics.reports.filters.byTime">Wähle Berichtszeitraum</message>
 	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Oder wähle Zeitraum nach:</message>
 	<message key="manager.statistics.reports.filters.byLocation">Nach Standort</message>
 	<message key="manager.statistics.reports.filters.byLocation.description">Ergebnisse nach Land, Region und/oder Stadt filtern..</message>
