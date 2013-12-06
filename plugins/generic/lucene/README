@@ -222,7 +222,7 @@ a Solr search server.
 
        Execute something like (from the OJS application directory):
           #> cd plugins/generic/lucene/lib
-          #> wget http://www.eu.apache.org/dist/lucene/solr/3.6.2/
+          #> wget http://archive.apache.org/dist/lucene/solr/3.6.2/
                                                           apache-solr-3.6.2.zip
           #> unzip apache-solr-3.6.2.zip
 
@@ -652,6 +652,11 @@ following configuration:
 If you are searching in mixed-language fields (e.g. titles that contain both
 English and Chinese versions of the same text) then searching for words with
 quotes (e.g. '+China +"中国"') may be helpful to avoid false positives.
+
+The Polish language is treated in a language-agnostic way per default, because 
+the filter StempelPolishStemFilterFactory that Solr provides (s. schema.xml) 
+requires additional jars (lucene-stempel-3.6.2.jar and solr-analysis-extras-3.6.2.jar) 
+that you will have to add to solr/lib. 
 
 12) Subscription-Based Publications
 -----------------------------------

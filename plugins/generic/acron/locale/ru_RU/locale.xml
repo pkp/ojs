@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/acron/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2000-2012 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  *
+  * $Id$
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.acron.name">Плагин «Acron»</message>
+	<message key="plugins.generic.acron.description"><![CDATA[Этот плагин пытается уменьшить зависимость OCS от инструментов периодического запуска по расписанию, таких как cron.]]></message>
+	<message key="plugins.generic.acron.enabled">Плагин «Acron» был включен.</message>
+	<message key="plugins.generic.acron.disabled">Плагин «Acron» был отключен.</message>
+
+	<message key="plugins.generic.acron.reload">Перезагрузить запланированные задачи</message>
+</locale>

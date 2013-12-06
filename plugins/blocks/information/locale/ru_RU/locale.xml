@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.information.displayName">Информационный блок</message>
-	<message key="plugins.block.information.description">Добавляет к боковой панели ссылку на информацию.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.information.displayName">Блок «Информация»</message>
+	<message key="plugins.block.information.description">Этот плагин добавляет на боковую панель ссылку на информацию.</message>
 	<message key="plugins.block.information.link">Информация</message>
 </locale>

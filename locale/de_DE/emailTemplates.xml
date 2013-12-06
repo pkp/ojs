@@ -91,7 +91,7 @@ Sie haben ein Benutzer/innenkonto bei {$journalName} angelegt, aber bevor Sie es
 
 Vielen Dank,
 {$principalContactSignature}</body>
-		<description>Diese E-Mail wird an neu registrierte Benutzer/innen gesendet, um sie aufzufordern, die angegebene E-Mail-Adresse zu verifizieren. </description>
+		<description>Diese E-Mail wird an neu registrierte Benutzer/innen gesendet, um die angegebene E-Mail-Adresse zu verifizieren. </description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
 		<subject>Registrierung als Gutachter/in bei {$journalName}</subject>

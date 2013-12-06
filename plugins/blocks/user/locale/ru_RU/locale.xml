@@ -8,16 +8,16 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
-  *
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
 <locale name="ru_RU" full_name="Russian">
-	<message key="plugins.block.user.displayName">Блок пользователя</message>
-	<message key="plugins.block.user.description">Этот модуль реализует инструменты управления учетной записью с боковой панели (в т.ч. вход в систему, выход, ссылку на профиль, и т.д.).</message>
-	<message key="plugins.block.user.loggedInAs">Вы вошли как...</message>
-	<message key="plugins.block.user.myJournals">Журналы</message>
-	<message key="plugins.block.user.myProfile">Профиль</message>
-	<message key="plugins.block.user.logout">Выход</message>
+	<message key="plugins.block.user.displayName">Блок «Пользователь»</message>
+	<message key="plugins.block.user.description">Этот плагин добавляет на боковую панель инструменты для работы с учетной записью (например, вход в систему, выход, ссылка на профиль пользователя и т. д.).</message>
+	<message key="plugins.block.user.loggedInAs">Вы вошли в систему как...</message>
+	<message key="plugins.block.user.myJournals">Мои журналы</message>
+	<message key="plugins.block.user.myProfile">Мой профиль</message>
+	<message key="plugins.block.user.logout">Выйти</message>
 	<message key="plugins.block.user.signOutAsUser">Выйти как пользователь</message>
 	<message key="plugins.block.user.rememberMe">Запомнить меня</message>
 </locale>

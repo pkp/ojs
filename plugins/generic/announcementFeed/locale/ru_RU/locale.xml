@@ -7,21 +7,21 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.announcementfeed.displayName">Модуль ленты объявлений</message>
-	<message key="plugins.generic.announcementfeed.description">Модуль производит ленту в формате RSS/Atom, которая содержит объявления журнала.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.announcementfeed.displayName">Плагин «Лента объявлений»</message>
+	<message key="plugins.generic.announcementfeed.description">Плагин создает ленту в форматах RSS/Atom, содержащую объявления журнала.</message>
 	
 	<message key="plugins.generic.announcementfeed.settings">Настройки</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Показать ссылки на ленту на всех страницах журнала.</message>
-	<message key="plugins.generic.announcementfeed.settings.homepage">Показать ссылки на ленту только на домашней странице и на странице объявлений.</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Показать ссылки на ленту только на главной странице и на странице объявлений.</message>
 	<message key="plugins.generic.announcementfeed.settings.announcement">Показать ссылки на ленту только на странице объявлений.</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Ограничить ленту</message>
-	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">наиболее свежими объявлениями.</message>
-	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Пожалуйста введите положительное целое число.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">последними объявлениями.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Пожалуйста, введите положительное целое число для количества последних объявлений.</message>
 	<message key="plugins.generic.announcementfeed.atom.altText">Логотип Atom</message>
 	<message key="plugins.generic.announcementfeed.rss1.altText">Логотип RSS1</message>
 	<message key="plugins.generic.announcementfeed.rss2.altText">Логотип RSS2</message>

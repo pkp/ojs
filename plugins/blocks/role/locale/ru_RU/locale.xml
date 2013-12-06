@@ -7,11 +7,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.role.displayName">Блок, специфичный для роли</message>
-	<message key="plugins.block.role.description">Этот модуль добавляет на боковую панель информацию, имеющую отношение к роли пользователя (количество рукописей, быстрые ссылки для редакторов, авторов, и т.д.)</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.role.displayName">Блок «Информация о роли»</message>
+	<message key="plugins.block.role.description">Этот плагин добавляет на боковую панель блок, содержащий информацию, связанную с ролью пользователя, такую как количество отправленных статей и набор ссылок для редакторов, авторов и т. д.).</message>
 </locale>

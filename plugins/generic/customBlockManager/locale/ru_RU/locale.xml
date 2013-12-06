@@ -7,24 +7,25 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.customBlockManager.displayName">Модуль собственных блоков</message>
-	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Вы можете использовать этот модуль для создания и удаления собственных модулей блоков.  После этого содержание блока можно отредактировать на странице <a href="{$systemPluginsUrl}">Системные Модули</a> (в разделе модулей блоков).  Для размещения Вашего модуля в требуемое место на боковой панели смотрите <a href="{$setupStep56}">Шаг 5.6</a>]]></message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.customBlockManager.displayName">Плагин «Управление блоками пользователя»</message>
+	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Вы можете использовать этот плагин для создания и удаления плагинов блоков пользователя. Затем вы можете отредактировать содержимое на странице <a href="{$systemPluginsUrl}">Системные плагины</a> (в Разделе «Плагины блоков»).  Для размещения вашего плагина в нужном месте на боковой панели, перейдите к <a href="{$setupStep56}">шагу 5.6 установки</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Настройки</message>
+	<message key="plugins.generic.customBlockManager.description">Этот плагин позволяет вам управлять блоками пользователя на боковой панели. Вы можете отредактировать блоки в настройках каждого плагина, который вы создали здесь.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Имя блока</message>	
 	<message key="plugins.generic.customBlockManager.action">Действие</message>	
 	<message key="plugins.generic.customBlockManager.delete">Удалить</message>	
 	<message key="plugins.generic.customBlockManager.addBlock">Добавить блок</message>	
 
-	<message key="plugins.generic.customBlock.content">Содержание</message>
-	<message key="plugins.generic.customBlock.saved">Содержание блока сохранено.</message>
-	<message key="plugins.generic.customBlock.nameSuffix">(модуль собственных блоков)</message>
-	<message key="plugins.generic.customBlock.description">Это пользовательский блок.</message>
+	<message key="plugins.generic.customBlock.content">Контент</message>
+	<message key="plugins.generic.customBlock.saved">Контент блока был сохранен.</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Плагин блока пользователя)</message>
+	<message key="plugins.generic.customBlock.description">Это блок, созданный пользователем.</message>
 	<message key="plugins.generic.customBlock.editContent">Редактировать содержимое боковой панели</message>
-	<message key="plugins.generic.customBlock.contentRequired">Требуется некоторое содержимое. Если хотите удалить блок, это можно сделать при помощи модуля собственных блоков или выключением этого блока на шаге 5 установки журнала.</message>
+	<message key="plugins.generic.customBlock.contentRequired">Требуется некоторый контент. Если вы хотите удалить этот блок, вы можете это сделать при помощи плагина «Управление блоками пользователя» или убрав отметку этого блока на шаге 5 установки журнала.</message>
 	<message key="plugins.generic.customBlock.edit">Редактировать</message>
 </locale>

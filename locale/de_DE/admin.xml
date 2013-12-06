@@ -84,4 +84,19 @@
 	<message key="admin.categories.confirmDelete">Sind Sie sicher, dass Sie diese Kategorie löschen wollen?</message>
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">Ein Kategorienname ist notwendig.</message>
+
+	<message key="admin.copyAccessLogFileTool.usage">Kopiere die übergebenen Apache-Zugriffsdatei(en), woraus die mit dieser Installation zusammenhängenden Einträge ausgewählt werden,
+in das aktuelle Dateiverzeichnis innerhalb des Vorbereitungs-Verzeichnisses des UsageStats-Plug-Ins. Muss unter einem Benutzer mit ausreichenden Rechten für den Lesezugriff auf Apache-Log-Dateien ausgeführt werden.
+
+Dieses Werkzeug wird nur Dateien kopieren, die nicht bereits in den usageStats-Verzeichnissen (Vorbereitung, Bearbeitung, Archiv, zurückgewiesen) sind.
+
+Benutzung: {$scriptName} path/to/apache/log/file.log
+Benutzung (verarbeite alle Dateien in einem Verzeichnis): {$scriptName} path/to/apache/directory 
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fehler: kann temporären Ordner {$tmpDir} nicht anlegen</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fehler: Datei {$filePath} existiert nicht, oder es kann nicht auf sie zugegriffen werden.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Fehler: kann Datei nicht von {$filePath} nach {$tmpFilePath} kopieren</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fehler: kann Datei {$tmpFilePath} nicht löschen</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Warnung: Datei {$filePath} gibt es bereits im Verzeichnis der Nutzungsstatistiken.</message>
+	<message key="admin.copyAccessLogFileTool.success">Erfolgreich kopiert: {$filePath} nach {$destinationPath}</message>
 </locale>

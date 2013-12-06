@@ -158,6 +158,27 @@ function updateAbstractRequired() {
 		{/if}{* if count($sectionOptions) == 2 *}
 	</div> <!-- /section -->
 
+{if count($supportedSubmissionLocaleNames) == 1}
+	{* There is only one supported submission locale; choose it invisibly *}
+	{foreach from=$supportedSubmissionLocaleNames item=localeName key=locale}
+		<input type="hidden" name="locale" value="{$locale|escape}" />
+	{/foreach}
+{else}
+	{* There are several submission locales available; allow choice *}
+	<div id="submissionLocale">
+
+	<h4>{translate key="author.submit.submissionLocale"}</h4>
+	<p>{translate key="author.submit.submissionLocaleDescription"}</p>
+
+	<table class="data" width="100%">
+		<tr valign="top">
+			<td width="30%" class="label">{fieldLabel name="locale" required="true" key="article.language"}</td>
+			<td width="70%" class="value"><select name="locale" id="locale" size="1" class="selectMenu">{html_options options=$supportedSubmissionLocaleNames selected=$locale}</select></td>
+		</tr>
+	</table>
+	</div>{* submissionLocale *}
+{/if}{* count($supportedSubmissionLocaleNames) == 1 *}
+
 	<div id="submissionFile">
 		<h4>{translate key="author.submit.submissionFile"}</h4>
 		<table class="data" width="100%">

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/stopForumSpam/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+
+	<message key="plugins.generic.stopForumSpam.displayName">Плагин «Stop Forum Spam»</message>
+	<message key="plugins.generic.stopForumSpam.description"><![CDATA[Это плагин интегрирует OJS с системой предотвращения спама Stop Forum Spam, которая позволяет уменьшить количество регистраций спамеров.]]></message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">Настройки</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Настройки Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>При включении этого плагина OJS будет проверять, содержатся ли данные регистрируемого пользователя элементы, попадающие в список Stop Forum Spam. Если элементы окажутся из этого списка, регистрация будет запрещена.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">Проверить IP при регистрации</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Проверить адрес электронной почты при регистрации</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Проверить имя пользователя при регистрации (использовать острожно!)</message>
+	<message key="plugins.generic.stopForumSpam.checkName">stopForumSpamPlugin</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[Плагин <a href="http://www.stopforumspam.com" target="_blank">Stop Forum Spam</a> заблокировал эту регистрацию.]]></message>
+</locale>

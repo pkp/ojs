@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/externalFeed/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+
+	<!-- Внешняя лента -->
+	<message key="plugins.generic.externalFeed.displayName">Плагин «Внешние ленты»</message>
+	<message key="plugins.generic.externalFeed.block.displayName">Блок «Внешняя лента»</message>
+	<message key="plugins.generic.externalFeed.description">Этот плагин публикует контент из внешних лент новостей Atom/RSS. Например, из внешней инсталляции WordPress, Drupal или OCS.</message>
+	<message key="plugins.generic.externalFeed.noneExist">Нет внешних лент</message>
+	<message key="plugins.generic.externalFeed.title">Заголовок</message>
+	<message key="plugins.generic.externalFeed.posted">Опубликовано</message>
+	<message key="plugins.generic.externalFeed.more">Подробнее...</message>
+
+	<!-- Управление внешней лентой -->
+	<message key="plugins.generic.externalFeed.manager.feeds">Внешние ленты</message>
+	<message key="plugins.generic.externalFeed.manager.settings">Настройки</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[To display feed content in sidebar blocks, go to <a href="{$setupStep56}" target="_blank">Setup Step 5.6</a>]]></message>
+	<message key="plugins.generic.externalFeed.manager.title">Заголовок</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage">Показывать на главной странице</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Показывать на главной странице</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Не показывать на главной странице</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlock">Показывать блок</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Все страницы</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Показывать блок на всех страницах</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Не показывать блок на всех страницах</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Главная страница</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Показывать блок только на главной странице</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Не показывать блок только на главной странице</message>
+	<message key="plugins.generic.externalFeed.manager.noneCreated">Нет внешних лент</message>
+	<message key="plugins.generic.externalFeed.manager.create">Создать новую внешнюю ленту</message>
+	<message key="plugins.generic.externalFeed.manager.edit">Редактировать внешнюю ленту</message>
+	<message key="plugins.generic.externalFeed.manager.confirmDelete">Вы уверены, что хотите навсегда удалить эту ленту?</message>
+
+	<!-- Настройки внешней ленты -->
+	<message key="plugins.generic.externalFeed.settings">Настройки</message>
+	<message key="plugins.generic.externalFeed.settings.description">Настройте отображение элементов внешней ленты.</message>
+	<message key="plugins.generic.externalFeed.settings.styleSheet">Показывать</message>
+	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Таблица стилей внешней ленты</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Таблица стилей пользователя может использоваться для замены таблицы стилей по умолчанию для этого плагина. Таблицу стилей по умолчанию можно просмотреть здесь</message>
+	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Таблица стилей пользователя</message>
+
+
+	<!-- Форма внешней ленты -->
+	<message key="plugins.generic.externalFeed.form.title">Заголовок</message>
+	<message key="plugins.generic.externalFeed.form.titleDescription">Заголовок для отображения на главной странице и/или в блоке</message>
+	<message key="plugins.generic.externalFeed.form.titleRequired">Пожалуйста, введите заголовок для этой ленты</message>
+	<message key="plugins.generic.externalFeed.form.feedUrl">Адрес (URL)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlValid">Пожалуйста, введите правильный адрес (URL) ленты (включая http://)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlDescription">Адрес (URL) внешней ленты новостей в формате Atom/RSS (например, http://pkp.sfu.ca/blog/feed)</message>
+	<message key="plugins.generic.externalFeed.form.display">Показывать</message>
+	<message key="plugins.generic.externalFeed.form.displayHomepage">Показывать на главной странице</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockNone">Не показывать в блоке</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Показывать в блоке только на главной странице</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockAll">Показывать в блоке на всех страницах</message>
+	<message key="plugins.generic.externalFeed.form.recentItems1">Ограничить</message>
+	<message key="plugins.generic.externalFeed.form.recentItems2">элементами ленты</message>
+	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Сохранить и создать новую</message>
+
+</locale>

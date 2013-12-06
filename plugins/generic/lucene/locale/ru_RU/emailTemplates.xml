@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/lucene/locale/ru_RU/emailTemplates.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<email_texts locale="ru_RU">
+	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
+		<subject>Ошибка индексации статьи</subject>
+		<body>При обновления индекса статьи произошла ошибка индексации.
+
+Сообщение об ошибке, сгенерированое веб-службой (если оно было): «{$error}»
+
+Это письмо было сгенерирован плагином поиска «Lucene» системы Open Journal Systems.</body>
+		<description>Этот шаблон письма используется для уведомления контактного лица технической поддержки
+журнала о том, что произошла ошибка во время индексирования статьи.</description>
+	</email_text>
+	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
+		<subject>Ошибка индексации журнала</subject>
+		<body>При индексации журнала «{$journalName}» произошла ошибка индексации.
+
+Сообщение об ошибке, сгенерированое веб-службой (если оно было): «{$error}»
+
+Это письмо было сгенерирован плагином поиска «Lucene» системы Open Journal Systems.</body>
+		<description>Этот шаблон письма используется для уведомления контактного лица технической поддержки
+журнала о том, что произошла ошибка во время индексирования журнала.</description>
+	</email_text>
+	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
+		<subject>Ошибка службы поиска журнала</subject>
+		<body>При попытке воспользоваться поиском на инсталляции «{$siteName}» произошла ошибка.
+
+Сообщение об ошибке, сгенерированое веб-службой (если оно было): «{$error}»
+
+Это письмо было сгенерирован плагином поиска «Lucene» системы Open Journal Systems.</body>
+		<description>Этот шаблон письма используется для уведомления контактного лица технической поддержки
+журнала о том, что при попытке обращения к поисковой службе Solr произошла ошибка.</description>
+	</email_text>
+</email_texts>

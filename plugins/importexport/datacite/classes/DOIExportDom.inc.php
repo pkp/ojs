@@ -305,18 +305,22 @@ class DOIExportDom {
 	 * @return array
 	 */
 	function &retrieveArticlesByIssue(&$issue) {
+		$articlesByIssue = array();
 		$cache =& $this->getCache();
 		$issueId = $issue->getId();
 		if (!$cache->isCached('articlesByIssue', $issueId)) {
 			$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
 			$articles =& $articleDao->getPublishedArticles($issueId);
-			foreach ($articles as $article) {
-				$cache->add($article, $nullVar);
-				unset($article);
+			if (!empty($articles)) {
+				foreach ($articles as $article) {
+					$cache->add($article, $nullVar);
+					unset($article);
+				}
+				$cache->markComplete('articlesByIssue', $issueId);
+				$articlesByIssue = $cache->get('articlesByIssue', $issueId);
 			}
-			$cache->markComplete('articlesByIssue', $issueId);
 		}
-		return $cache->get('articlesByIssue', $issueId);
+		return $articlesByIssue;
 	}
 
 	/**
@@ -326,18 +330,22 @@ class DOIExportDom {
 	 * @return array
 	 */
 	function &retrieveGalleysByArticle(&$article) {
+		$galleysByArticle = array();
 		$cache =& $this->getCache();
 		$articleId = $article->getId();
 		if (!$cache->isCached('galleysByArticle', $articleId)) {
 			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 			$galleys =& $galleyDao->getGalleysByArticle($articleId);
-			foreach($galleys as $galley) {
-				$cache->add($galley, $article);
-				unset($galley);
+			if (!empty($galleys)) {
+				foreach($galleys as $galley) {
+					$cache->add($galley, $article);
+					unset($galley);
+				}
+				$cache->markComplete('galleysByArticle', $articleId);
+				$galleysByArticle = $cache->get('galleysByArticle', $articleId);
 			}
-			$cache->markComplete('galleysByArticle', $articleId);
 		}
-		return $cache->get('galleysByArticle', $articleId);
+		return $galleysByArticle;
 	}
 
 	/**

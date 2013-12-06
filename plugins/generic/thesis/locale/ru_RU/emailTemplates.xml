@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * emailTemplateData.xml
+  * @file plugins/generic/thesis/locale/en_US/emailTemplates.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
+
 <email_texts locale="ru_RU">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
-		<subject>Подача тезисов диссертации</subject>
-		<body>Это письмо было автоматически сгенерировано формой подачи тезисов диссертации для публикации в журнале {$journalName}.
+		<subject>Отправка автореферата диссертации</subject>
+		<body>Это письмо было автоматически сгенерировано формой отправки на публикацию в журнале «{$journalName}» автореферата диссертации.
 
-Пожалуйста подтвердите правильность введенной информации. После Вашего подтверждения, тезисы будут опубликованы в онлайн-редакции журнала.
+Пожалуйста подтвердите правильность полученной нами информации. После получения Вашего подтверждения, автореферат будет опубликован в онлайн-версии журнала.
 
-Просто ответьте {$thesisName} ({$thesisEmail}), включив содержание этого письма и Ваше подтверждение (а также необходимые уточнения и дополнения).
+Просто напишите письмо на адрес {$thesisEmail} ({$thesisName}), включив в него содержание этого письма, Ваше подтверждение, а также все необходимые уточнения и дополнения.
 
-Спасибо !
+Заранее спасибо!
 
-Название : {$title} 
-Автор : {$studentName}
-Степень : {$degree}
-Степень полностью: {$degreeName}
-Совет : {$department}
-Организация : {$university}
-Дата защиты : {$dateApproved}
-Руководитель : {$supervisorName}
 
-Тезисы
---------
+Название: {$title} 
+Автор: {$studentName}
+Степень: {$degree}
+Название степени: {$degreeName}
+Подразделение: {$department}
+Университет: {$university}
+Дата защиты: {$dateApproved}
+Руководитель: {$supervisorName}
+
+Автореферат
+-----------
 {$abstract}
 
 {$thesisContactSignature}</body>
+		<description>Этот шаблон письма используется для подтверждения отправленного соискателем автореферата диссертации. Оно отправляется руководителю соискателя, которого просят подтвердить информацию о предоставленном в редакцию автореферате диссертации.</description>
 	</email_text>
 </email_texts>

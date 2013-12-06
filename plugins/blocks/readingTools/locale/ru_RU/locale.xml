@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/readingTools/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.readingTools.displayName">Блок «Инструменты читателя»</message>
+	<message key="plugins.block.readingTools.description">Этот плагин отображает блок, содержащий инструменты читателя, в боковой панели инструментов читателя.</message>
+	<message key="plugins.block.readingTools.title">Инструменты читателя</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">Об авторе</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">Об авторах</message>
+	<message key="plugins.block.readingTools.articleTools">Инструменты для статьи</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Отправить эту статью по почте</message>
+	<message key="plugins.block.readingTools.loginRequired">Требуется вход в систему</message>
+	<message key="plugins.block.readingTools.printThisArticle">Напечатать эту статью</message>
+	<message key="plugins.block.readingTools.postComment">Написать комментарий</message>
+</locale>

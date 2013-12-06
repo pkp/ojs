@@ -7,17 +7,17 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.subscription.displayName">Блок подписки</message>
-	<message key="plugins.block.subscription.description">Показывает информацию о подписке на боковой панели.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.subscription.displayName">Блок «Подписка»</message>
+	<message key="plugins.block.subscription.description">Этот плагин добавляет информацию о подписке на боковую панель.</message>
 	<message key="plugins.block.subscription.blockTitle">Подписка</message>
 	<message key="plugins.block.subscription.expires">Дата окончания</message>
 	<message key="plugins.block.subscription.providedBy">Доступ предоставлен</message>
-	<message key="plugins.block.subscription.comingFromIP">От</message>
+	<message key="plugins.block.subscription.comingFromIP">IP-адрес</message>
 	<message key="plugins.block.subscription.about">Подписки</message>
-	<message key="plugins.block.subscription.loginToVerifySubscription">Войдите, чтобы подтвердить подписку</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Войти в систему, чтобы проверить подписку</message>
 </locale>

@@ -7,13 +7,13 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.citationFormats.refWorks.displayName">Модуль формата ссылок RefWorks</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.citationFormats.refWorks.displayName">Плагин форматирования ссылок RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
-	<message key="plugins.citationFormats.refWorks.description">Реализует формат ссылок RefWorks.</message>
+	<message key="plugins.citationFormats.refWorks.description">Этот плагин реализует формат ссылок RefWorks.</message>
 	<message key="plugins.citationFormats.refWorks.export">Экспортировать в RefWorks</message>
 </locale>

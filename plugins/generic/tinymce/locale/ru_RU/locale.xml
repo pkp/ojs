@@ -7,14 +7,13 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ru_RU locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
 <locale name="ru_RU" full_name="Russian">
-	<!-- FIXME: We need a Russian translation. -->
-	<message key="plugins.generic.tinymce.name">Модуль TinyMCE</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Модуль позволяет визуальное (WYSIWYG) редактирование текстовых полей в OJS с использованием редактора <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Модуль позволяет визуальное (WYSIWYG) редактирование текстовых полей в OJS с использованием редактора <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.<strong>редактор TinyMCE сейчас не уствновлен; пожалуйста установите его в {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.name">Плагин «TinyMCE»</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Этот плагин включает визуальное редактирование (WYSIWYG) текстовых полей в OJS с использованием редактора <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Этот плагин включает визуальное редактирование (WYSIWYG) текстовых полей в OJS с использованием редактора <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.<strong>TinyMCE сейчас не установлен; пожалуйста, установите его в {$tinyMcePath}.</strong>]]></message>
 	<message key="plugins.generic.tinymce.settings">Настройки</message>
 </locale>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/authorBios/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.authorBios.displayName">Блок «Биография автора»</message>
+	<message key="plugins.block.authorBios.description">Этот плагин отображает блок, содержащий биографии авторов, в инструментах читателя на боковой панели.</message>
+	<message key="plugins.block.authorBios.title">Об авторах</message>
+	<message key="plugins.block.authorBios.aboutTheAuthor">Об авторе</message>
+	<message key="plugins.block.authorBios.aboutTheAuthors">Об авторах</message>
+</locale>
