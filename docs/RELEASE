@@ -1,54 +1,100 @@
-OJS 2.4.2 Release Notes
-GIT tag: ojs-2_4_2-0
-Release date: March 4, 2013
-=============================
+OJS 2.4.3 Release Notes
+GIT tag: ojs-2_4_3-0
+Release date: December 6, 2013
+==============================
+
+NOTE: Users who have configured a cron job for their journal should be aware
+that upgrading to OJS 2.4.3 will automatically enable the acron plugin, which
+is a cron alternative that occasionally processes scheduled tasks using regular
+web requests as the trigger. If you are using cron, you should disable the
+acron plugin and setup a cron job to process statistics from log files. See
+pkp.sfu.ca/wiki/index.php?title=PKP_Statistics_Framework
 
 New Features
 ------------
+	#8249# Add Macedonian
+	#8466# Add Polish (pl_PL) locale
+	#8471# Introduce plugin to reduce spam registrations
+	#8500# DataCite Metadata Version 3.0 Support
+	#4259# Allow for sorting of Announcements
+	#8477# Move swordapp library to v2
+	#8259# a pubIds plugins improvement
+	#8257# FUB: introduce and consider issue last_modified via OAI
+	#8243# Add Google Viewer support to issue galleys
+	#8143# Lucene improvements/fixes from FUB
+	#7984# Show archived items on author home pages
 
 Bug Fixes
 ---------
-	#7166# Investigate web cache file name generation algorithm
-	#6670# Redirects are broken by Firefox's redirect blocking
-	#7824# Stats & Reports "Resubmit" count is misleading/incorrect
-	#8107# fr_CA (French) updates
-	#8102# Custom Locale Plugin settings fatal error / custom strings do not display
-	#6324# Issue Access Status = 0
-	#6527# Change LegacyLinkAction to new LinkAction
-	#6942# native supp file import/export incomplete
-	#6968# Check review_type constant behavior
-	#7147# Extend Zotero/Coins plugin to TOC
-	#7205# Text fields have maximum lengths shorter than their database field type
-	#7392# Add ISSNs to DC / maybe other OAI fields
-	#7814# Survey and remove password echoing
-	#7834# Standardize/clean up locale file headers
-	#7837# Add facility to help with updating default email text if distributed body changes
-	#7935# Look into tag stripping e.g. in Atom feed
-	#7962# Web feed gatway plugin references announcement feed plugin
-	#7966# ID values in css not unique
-	#7967# Paging bug in DOI/MEDRA plugins
-	#7978# Layout Editor download file results in error
-	#8002# Fix translation plugin warning.
-	#8005# Deleting article should delete associated notifications too
-	#8009# Email node should be required on export
-	#8017# view layout comments generates a fatal error
-	#8018# SEHL plugin doesn't handle empty search gracefully
-	#8021# Refback improvements
-	#8031# Attachment-based reviews cannot attach review file
-	#8041# own Navbar Menu items in about/sitemap incorrect
-	#8060# Can not delete announcement types
-	#8068# Author cannot complete copyediting
-	#8084# Incorrect headers set when using "View Issue" feature
-	#8088# Can't edit review comment
-	#8100# Update DataCite plugin for API changes
-	#8113# sort direction for users
-	#8116# Bug in _getUnfilteredEditorSubmissions
-	#8120# Public ID plugin(s) cause error on supplementary files upload upate
-	#8124# Update copyright dates to 2013
-	#6013# DOI / CrossRef tune-ups
-	#5939# Copyeditor queue enhancement
-	#4846# Add backup plugin to CVS
-	#4865# Add public identifier information to articles & issues import/export
-	#5908# Improving style and structure of article visualization
-	#6007# PostgreSQL: error while searching for reviewers
-	#6009# Add warning for SWORD plugin if Zip extension missing 
+	#8396# File manager with path_info_disabled can explore outside path
+	#8420# Submission email log assoc_id clobbered in 2.4.0 upgrade
+	#8439# JM's reviewing interests search does not return results
+	#8450# Fix/inhibit JS validation on issue form
+	#8452# Assess spam registrations with ReCAPTCHA enabled
+	#4194# DOI display on table of contents
+	#8199# upgrade uses too much memory
+	#6564# Allow editor to mark proofreading as complete
+	#8266# Editors receiving reviewer notifications get incorrect URLs
+	#8407# Active review count on reviewer selection page incorrect
+	#6204# overflow-setting gets in the way of printing long HTML content
+	#6749# broken link
+	#6923# Maxlength of title fields set to 255
+	#7011# Supplementary files should be modifiable (+ downloadable) by C/LE
+	#8149# #8192# #8226# #8158# #8272# #7340# #8460# Localization
+	#6180# Rename books for review tables
+	#8233# Purchased issue should grant access to individual articles
+	#6517# RSS 1 feed is missing <prism:number> element
+	#6523# email address comparison in PayPal Plugin is case sensitive
+	#6999# Add mailing list emails to Notify Users email
+	#7529# editorial process overview: image needs to be localized
+	#8129# Referral plugin prone to race conditions
+	#8151# Investigate APC bug workaround
+	#8155# Add facility for multiple DOI prefixes
+	#8160# Call to a member function getRouter() on a non-object
+	#8169# Problems with quick submit plugin running multilanguage
+	#8173# Browse by Author fix
+	#8183# JBImage Plugin Locale Detection Fails
+	#8190# urlencoded DOIs return display issue
+	#8206# notification mailing list confirmation does not have password
+	#8209# Use article publication date for DOAJ export
+	#8210# One-click reviewer access not validating
+	#8221# locale keys missing on viewPublicProfile
+	#8244# XML galley MIME type tune-ups
+	#8247# Upgrade fails with not-null constraint on review_round_id (psql)
+	#8248# Unable to create index on article_settings with postgres
+	#8250# PostgreSQL error when saving entry in sectioneditor
+	#8251# Term search window open with no keyword to search
+	#8252# Non-standard sequence naming leads to PostgreSQL error
+	#8256# URN/DOI extracts attempt to fetch initials in unsupported lang
+	#8263# Author info form in submission changes with locale resubmit
+	#8264# Upgrade bug with article_files transition and "temp" file type
+	#8310# Boolean true mistakenly used instead of string 'true'
+	#8338# 2.4.0 upgrade scripts disrupt 2.3.x upgrade scripts
+	#8353# Allow URL override of current locale
+	#8359# Possible to "display" refbacks without title
+	#8403# logs contain errors: "Undefined index: remote_url"
+	#8406# Piwik traking code not properly shown
+	#8411# Font sizer images hover to background colour
+	#8412# empty issue and supp file DOI element in CrossRef XML export
+	#8428# allow longer DOI custom suffixes
+	#8431# Announcement and type form locale selectors don't work
+	#8436# Upgrade sometimes complains about version downgrade
+	#8437# Reviewer interests autocomplete does not use filter in query
+	#8440# Supplementary files labelled as submission files
+	#8443# custom identifiers and create remote galley error
+	#8449# ISBNdb plugin incorrectly self-identifies as CrossRef
+	#8453# Mass notification unsubscribe link is missing token
+	#8454# Unable to create index on issue_settings with postgres
+	#8468# Native import article publisher ID ends up stored with issue
+	#8472# Author dashboard emails not listed
+	#8473# Fix EndNote template typos
+	#8475# Backup plugin includes reference parameter with default value
+	#8478# Add link to confirm/decline text labels
+	#8487# Section editor issueToc link may lead to 404
+	#8489# Error assigning reviewer to submission without review version
+	#8494# Undefined Index/Assertion Failed at DataCite Export/Registration
+	#8497# Import/export "select all" ID clashes
+	#8498# Prevent report plugins from registering DAOs before installation
+	#8499# Add new OJS languages to Lucene/Solr
+	#5941# limit "Look up Terms" click functionality
+	#4709# Errors in en_US locale file: reference keys
