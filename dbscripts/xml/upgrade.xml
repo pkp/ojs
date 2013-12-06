@@ -129,6 +129,11 @@
 		<data file="dbscripts/xml/upgrade/2.3.3_preaffiliations2.xml" condition="return $installer->columnExists('authors', 'affiliation');" />
 	</upgrade>
 	
+	<upgrade minversion="2.2.3.0" maxversion="2.3.2.0">
+		<!-- COUNTER - counter_monthly_log update.-->
+		<data file="plugins/reports/counter/counter_monthly_log_1_1.xml" />
+	</upgrade>
+	
 	<upgrade minversion="2.0.0.0" maxversion="2.4.2.0">
 		<data file="dbscripts/xml/upgrade/2.4.3_preupdate_usageStatistics.xml" condition="return $installer->columnExists('published_articles', 'views');" />
 		<data file="dbscripts/xml/upgrade/2.4.3_preupdate_usageStatistics2.xml" condition="return $installer->columnExists('issue_galleys', 'views');" />
@@ -291,11 +296,6 @@
 		<data file="dbscripts/xml/upgrade/2.3.7_update.xml" />
 		<code function="removeAuthorRevisedFilesFromSignoffs" />
 		<note file="docs/release-notes/README-2.3.7" />
-	</upgrade>
-
-	<upgrade minversion="2.2.3.0" maxversion="2.3.2.0">
-		<!-- COUNTER - counter_monthly_log update.-->
-		<data file="plugins/generic/counter/counter_monthly_log_1_1.xml" />
 	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
