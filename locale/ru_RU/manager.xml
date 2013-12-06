@@ -517,13 +517,13 @@
 	<message key="manager.statistics.reports.reportUrl">Адрес отчета (URL)</message>
 	<message key="manager.statistics.reports.reportUrl.label">Следующий URL может быть использован для генерации отчета с заданными на текущий момент настройками в форме. Просто скопируйте его, вставьте в ваш браузер и нажмите Enter. Вы можете использовать закладки в браузере для хранения URL генератора вашего пользовательского отчета.</message>
 	<message key="manager.statistics.reports.filters.byContext">По контексту</message>
-	<message key="manager.statistics.reports.filters.byContext.label">Фильтровать результаты по контексту (выпуску и/или статье).</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Фильтровать результаты по контексту (выпуску и/или статье).</message>
 	<message key="manager.statistics.reports.filters.byObject">По типу объекта и/или ID объекта</message>
-	<message key="manager.statistics.reports.filters.byObject.label">Фильтровать результаты по типу объекта (журнал, выпуск, статья, гранки в pdf, другие гранки) и/или по одному или нескольким ID объектов.</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Фильтровать результаты по типу объекта (журнал, выпуск, статья, гранки в pdf, другие гранки) и/или по одному или нескольким ID объектов.</message>
 	<message key="manager.statistics.reports.filters.byTime">По времени</message>
 	<message key="manager.statistics.reports.filters.byTime.label">Фильтровать результаты по заданной дате или по заданному периоду времени (месяцы или дни).</message>
 	<message key="manager.statistics.reports.filters.byLocation">По географическому положению</message>
-	<message key="manager.statistics.reports.filters.byLocation.label">Фильтровать результаты по странам, регионам и/или городам.</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Фильтровать результаты по странам, регионам и/или городам.</message>
 	<message key="manager.statistics.statistics">Статистика журнала</message>
 	<message key="manager.statistics.statistics.articleViews">Количество просмотров статьи (только для авторов)</message>
 	<message key="manager.statistics.statistics.count.accept">Принято</message>

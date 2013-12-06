@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/stopForumSpam/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Stop Forum Spam plugin localization strings
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+
+	<message key="plugins.generic.stopForumSpam.displayName">Plugin "Stop Forum Spam"</message>
+	<message key="plugins.generic.stopForumSpam.description"><![CDATA[Verbinde OJS mit dem Stop-Forum-Spam-Präventionssystem, das die Menge an Spam-Registrierungen reduzieren soll.]]></message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">Einstellungen</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Stop-Forum-Spam-Einstellungen</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>Wenn dieses Plug-In aktiviert ist, wird OJS überprüfen, ob eine eingegebene Benutzer/innenregistrierung Elemente enthält, die auf der Stop-Forum-Spam-Liste stehen. In diesem Fall werden Registrierungen abgelehnt.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">IP der Registrierung überprüfen</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">E-Mail-Adresse der Registrierung überprüfen</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Benutzer/innenname der Registrierung überprüfen (nur mit Vorsicht aktivieren!)</message>
+	<message key="plugins.generic.stopForumSpam.checkName">stopForumSpamPlugin</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[Das <a href="http://www.stopforumspam.com" target="_blank">Stop-Forum-Spam</a>-Plug-In hat diese Registrierung blockiert.]]></message>
+</locale>
