@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="pt_BR">
+	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
+		<subject>Erro de indexação do artigo</subject>
+		<body>Ocorreu um erro ao atualizar o índice do artigo.
+
+A mensagem de erro gerada pelo serviço (caso exista): "{$error}"
+
+Esta mensagem foi gerada automaticamente pelo plugin de pesquisa Lucene, do Open Journal Systems.</body>
+		<description>Este modelo de mensagem é usado para notificar o contato técnico de que um erro ocorreu ao indexar um artigo.</description>
+	</email_text>
+	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
+		<subject>Erro de indexação de periódico</subject>
+		<body>Ocorreu um erro ao indexar o periódico "{$journalName}".
+
+A mensagem de erro gerada pelo serviço (caso exista) "{$error}"
+
+Esta mensagem foi gerada pelo plugin de pesquisa Lucene, do Open Journal Systems</body>
+		<description>Este modelo de mensagem é usado para notificar o contato técnico de erro ocorrido durante a indexação de um periódico.</description>
+	</email_text>
+	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
+		<subject>Erro no serviço de pesquisa do periódico</subject>
+		<body>Ocorreu um erro ao tentar pesquisar na instalação "{$siteName}".
+
+A mensagem de erro gerada pelo serviço (caso exista) "{$error}"
+
+Esta mensagem foi gerada pelo plugin de pesquisa Lucene, do Open Journal Systems</body>
+		<description>Este modelo de mensagem é usado para notificar o contato técnico de erro ocorrido ao tentar acessar o serviço de pesquisa Solr.</description>
+	</email_text>
+</email_texts>

@@ -114,4 +114,6 @@
 	<message key="plugins.generic.lucene.sectionForm.ranking.low">Rank Lower</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normal</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.high">Rank Higher</message>
+	<message key="plugins.generic.lucene.faceting.displayName">Lucene Faceting</message>
+	<message key="plugins.generic.lucene.faceting.description">Bloque del plugin de Lucene Faceting</message>
 </locale>

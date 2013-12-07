@@ -28,5 +28,5 @@
 	<message key="plugins.reports.counter.1a.ytdHtml">HTML YTD</message>
 	<message key="plugins.reports.counter.1a.ytdPdf">PDF YTD</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total para todas as revistas</message>
-	<message key="plugins.reports.counter.migrate">Migrar arquivo de log.</message>
+	<message key="plugins.reports.counter.legacyStats">Os links a seguir geram relatórios usando dados antigos do plugin COUNTER. Caso deseje relatórios COUNTER com a nova métrica COUNTER do OJS, use os links anteriores.</message>
 </locale>

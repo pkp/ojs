@@ -77,4 +77,19 @@
 	<message key="admin.categories.confirmDelete">¿Estás seguro/a de querer eliminar esta categoría?</message>
 	<message key="admin.categories.name">Nombre</message>
 	<message key="admin.categories.nameRequired">Es necesario un nombre de categoría.</message>
+	<message key="admin.settings.defaultMetricDescription">Su instalación de OJS está configurada para almacenar más de una métrica de uso. Las estadísticas de uso se mostrarán en múltiples contextos.
+		Hay casos en los que se debe utilizar una sola estadística de uso, por ejemplo, para mostrar una lista ordenada de los artículos más utilizados
+		resultados de la búsqueda. Por favor selecciona una de las métricas configuradas como opción por defecto.</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copie el archivo(s) de registro de acceso apache, filtrando las entradas relacionadas con esta instalación en el directorio de archivos en curso, dentro del directorio "stage" en "UsageStatsPlugin". Debe ejecutarse bajo un usuario con suficientes privilegies para leer los archivos de registro de acceso de apache.
+
+Esta herramienta sólo copiará los archivos que no se encuentren ya dentro de los directorios de carga del archivo usageStats (estadio, procesamiento, archivo, rechazar).
+
+Uso: {$scriptName} ruta/a/apache/log/file.log
+Uso (para todo un directorio): {$scriptName} ruta/a/apache/directorio</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: no se puede crear el directorio temporal {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: El archivo {$filePath} no existe o no es accesible.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: no se puede copiar el archivo {$filePath} a {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no se puede eliminar el archivo {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Aviso: El fichero {$filePath} ya existe en el directorio de estadísticas de uso.</message>
+	<message key="admin.copyAccessLogFileTool.success">Èxito: {$filePath} a {$destinationPath}</message>
 </locale> 

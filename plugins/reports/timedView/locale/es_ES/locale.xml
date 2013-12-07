@@ -29,4 +29,5 @@
 	<message key="plugins.reports.timedView.report.datePublished">Fecha de publicación</message>
 	<message key="plugins.reports.timedView.report.abstractViews">Lecturas del resumen</message>
 	<message key="plugins.reports.timedView.report.galleyViews">Total de lecturas del artículo</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">Marque la casilla para utilizar las estadísticas generadas por el viejo módulo "Timed View". Si desea generar un informe con nuevos datos estadísticos, deje este campo sin seleccionar.</message>
 </locale>

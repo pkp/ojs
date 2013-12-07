@@ -220,4 +220,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà???</message>
 	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
 	<message key="editor.issues.confirmDeleteGalley">Voulez-vous vraiment supprimer les épreuves de ce numéro?</message>
+	<message key="editor.notifyUsers.allMailingList">Inclus tous les courriel de la liste de courriel</message>
 </locale>

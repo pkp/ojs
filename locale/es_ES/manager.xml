@@ -685,4 +685,45 @@
 	<message key="manager.setup.useThumbnail">Miniatura</message>
 	<message key="manager.setup.categories">Categorías</message>
 	<message key="manager.setup.categories.description">Escoge las categorías más apropiadas de la siguiente lista. Los lectores podrán navegar por categorías entre todas las revistas del sitio.</message>
+	<message key="manager.statistics.defaultMetricDescription">La revista está configurada para almacenar más de una métrica de uso. Las estadísticas de uso se mostrarán en varios contextos.
+		Hay casos en los que se muestra una única estadística de uso, pe. para mostrar una lista ordenada de los artículos más empleados o 
+		para establecer un ranking de resultados de búsqueda. Por favor, escoja una de las métricas configuradas como opción por defecto.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Agregar estadísticas por:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Plantillas de informes por defecto</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Descargas del archivo</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Visionados del resumen</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Visionados del resumen y descargas</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Descargas del archivo del número</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Visionados de la tabla de contenidos del número</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Visionados de la tabla de contenidos y descargas del número</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Visionados de la la página principal de la revista</message>
+	<message key="manager.statistics.reports.generateReport">Generar informe personalizado</message>
+	<message key="manager.statistics.reports.advancedOptions">Opciones avanzadas</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Personaliza columnas, filtros y opciones de pedido. Los cambios en cualquiera de estas opciones podría cambiar el resultado esperado en el informe de plantilla.</message>
+	<message key="manager.statistics.reports.columns">Columnas</message>
+	<message key="manager.statistics.reports.columns.description">Definir las columnas que se utilizarán para construir el informe. Las columnas que seleccione aquí no sólo definen los datos que se presentarán dentro de los informes, sino que también define el nivel de agregación de las estadísticas. Por ejemplo, si usted elige ID, Tipo y Mes columnas, el informe sumará todas las vistas de un objeto a partir de un mes y presentará los datos en una fila. Si decide Día en lugar de mes, cada objeto tendrá una fila para cada día.</message>
+	<message key="manager.statistics.reports.filters">Filtros</message>
+	<message key="manager.statistics.reports.objectType">Tipo de objeto</message>
+	<message key="manager.statistics.reports.objectId">Id de objeto</message>
+	<message key="manager.statistics.reports.objectId.label">Define uno o más Ids de objeto, separados por comas (e.g. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.today">Hoy</message>
+	<message key="manager.statistics.reports.currentMonth">Mes actual</message>
+	<message key="manager.statistics.reports.orderBy">Ordenado por</message>
+	<message key="manager.statistics.reports.orderDir">Dirección</message>
+	<message key="manager.statistics.reports.orderDir.asc">Ascendente</message>
+	<message key="manager.statistics.reports.orderDir.desc">Descendiente</message>
+	<message key="manager.statistics.reports.month.label">Utiliza el formato YYYYMM.</message>
+	<message key="manager.statistics.reports.day.label">Utiliza el formato YYYYMMDD.</message>
+	<message key="manager.statistics.reports.cities.label">Uno o más nombres de ciudad, separados por comas (pe. Ciudad 1, Ciudad 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Es necesario escoger al menos una columna para generar el informe.</message>
+	<message key="manager.statistics.reports.reportUrl">URL del informe</message>
+	<message key="manager.statistics.reports.reportUrl.label">La siguiente url se puede utilizar para generar el informe con estos ajustes de formulario. Puede conservar esta url en sus favoritos.</message>
+	<message key="manager.statistics.reports.filters.byContext">Por contexto</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Filtrar resultados por contexto (número y/o artículo).</message>
+	<message key="manager.statistics.reports.filters.byObject">Por tipo y/o identificador de objeto</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Restringir los resultados por tipo de objeto (revista, número, artículo, galeradas pdf, otras galeradas) y/o por uno o más Id(s) de objeto.</message>
+	<message key="manager.statistics.reports.filters.byTime">Escoger el rango del informe</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">O seleccionar el rango de:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Por geolocalización</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Filtrar resultados por país, región y/o ciudad.</message>
 </locale> 

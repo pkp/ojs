@@ -29,4 +29,5 @@
 	<message key="plugins.reports.timedView.report.datePublished">Data de publicação</message>
 	<message key="plugins.reports.timedView.report.abstractViews">Acessos ao resumo</message>
 	<message key="plugins.reports.timedView.report.galleyViews">Acessos às composições finais</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">Marque para usar estatísticas retiradas pelo antigo plugin Visão Temporal. Caso deseje gerar um relatório de visão temporal com novos dados estatísticos, deixe esta opção desmarcada.</message>
 </locale>

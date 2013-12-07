@@ -219,4 +219,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Identificação pública de composição final de edição já existe.</message>
 	<message key="editor.issues.backToIssueGalleys">Voltar para composições de edição</message>
 	<message key="editor.issues.confirmDeleteGalley">Deseja realmente excluir esta composição?</message>
+	<message key="editor.notifyUsers.allMailingList">Incluir todas as mensagens na lista de correio ({$count} mensagens)</message>
 </locale>

@@ -218,4 +218,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">El identificador público de esta galerada ya existe.</message>
 	<message key="editor.issues.backToIssueGalleys">Volver a las galeradas</message>
 	<message key="editor.issues.confirmDeleteGalley">¿Estás seguro/a de querer eliminar esta galerada?</message>
+	<message key="editor.notifyUsers.allMailingList">Incluir todos los correos en la lista de correo ({$count} correos)</message>
 </locale> 
