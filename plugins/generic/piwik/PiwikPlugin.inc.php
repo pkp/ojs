@@ -93,7 +93,7 @@ class PiwikPlugin extends GenericPlugin {
 	 * @param $subclass boolean
 	 */
 	function setBreadcrumbs($isSubclass = false) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
 				Request::url(null, 'user'),
@@ -148,7 +148,7 @@ class PiwikPlugin extends GenericPlugin {
 	 * Set the enabled/disabled state of this plugin
 	 */
 	function setEnabled($enabled) {
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
 			return true;
@@ -161,9 +161,9 @@ class PiwikPlugin extends GenericPlugin {
 	 */
 	function insertFooter($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty = &$params[1];
-			$output = &$params[2];
-			$journal = &Request::getJournal();
+			$smarty =& $params[1];
+			$output =& $params[2];
+			$journal =& Request::getJournal();
 			$journalId = $journal->getJournalId();
 			$journalPath = $journal->getPath();
 			$piwikSiteId = $this->getSetting($journalId, 'piwikSiteId');
@@ -191,9 +191,9 @@ class PiwikPlugin extends GenericPlugin {
 	 * Perform management functions
 	 */
 	function manage($verb, $args) {
-		$templateMgr = &TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$journal = &Request::getJournal();
+		$journal =& Request::getJournal();
 		$returner = true;
 
 		switch ($verb) {
@@ -208,7 +208,7 @@ class PiwikPlugin extends GenericPlugin {
 			case 'settings':
 				if ($this->getEnabled()) {
 					$this->import('PiwikSettingsForm');
-					$form = &new PiwikSettingsForm($this, $journal->getJournalId());
+					$form = new PiwikSettingsForm($this, $journal->getJournalId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {

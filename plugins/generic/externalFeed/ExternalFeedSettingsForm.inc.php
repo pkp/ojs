@@ -80,7 +80,7 @@ class ExternalFeedSettingsForm extends Form {
 		$settingName = 'externalFeedStyleSheet';
 
 		import('classes.file.PublicFileManager');
-		$fileManager =& new PublicFileManager();
+		$fileManager = new PublicFileManager();
 
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
@@ -115,7 +115,7 @@ class ExternalFeedSettingsForm extends Form {
 		$setting = $plugin->getSetting($journalId, $settingName);
 
 		import('classes.file.PublicFileManager');
-		$fileManager =& new PublicFileManager();
+		$fileManager = new PublicFileManager();
 
 		if ($fileManager->removeJournalFile($journalId, $setting['uploadName'])) {
 			$plugin->updateSetting($journalId, $settingName, null);
