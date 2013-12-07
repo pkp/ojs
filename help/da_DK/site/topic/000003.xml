@@ -4,12 +4,12 @@
 <!--
   * 000003.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *Translation: Niels Erik Frederiksen
   * Site Administration - Administration Functions 
   *
-  * $Id: 000003.xml,v 1.10 2007/04/10 20:57:26 asmecher Exp $
   -->
 
 <topic id="site/topic/000003" locale="da_DK" title="Administrative funktioner" toc="site/toc/000000" key="site.administrativeFunctions">

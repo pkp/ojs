@@ -1,6 +1,7 @@
 {**
  * plugins/citationFormats/abnt/citation.tpl
  *
+ * Copyright (c) 2013 Simon Fraser University Library
  * Copyright (c) 2003-2013 John Willinsky
  * With contributions from by Lepidus Tecnologia
  *

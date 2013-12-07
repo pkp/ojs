@@ -4,12 +4,12 @@
 <!--
   * 000013.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Users - Import Users
   *
-  * $Id: 000013.xml,v 1.6 2007/04/10 20:57:26 asmecher Exp $
   -->
 
 <topic id="journal/topic/000013" locale="da_DK" title="Importér brugere" toc="journal/toc/000002" key="journal.users.importUsers">

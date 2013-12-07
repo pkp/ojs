@@ -1,6 +1,7 @@
 {**
  * settingsForm.tpl
  *
+ * Copyright (c) 2013 Simon Fraser University Library
  * Copyright (c) 2003-2013 John Willinsky
  * Contributed by Lepidus Tecnologia
  *

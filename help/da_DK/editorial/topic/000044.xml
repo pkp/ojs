@@ -4,12 +4,12 @@
 <!--
   * 000044.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Ensuring a blind peer review
   *
-  * $Id: 000044.xml,v 1.4 2007/04/10 20:57:25 asmecher Exp $
   -->
 
 <topic id="editorial/topic/000044" locale="da_DK" title="Sikring af en blind peer review (blindbedømmelse)" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">

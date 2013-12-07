@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000031.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -28,4 +31,4 @@
 	<section title="Conector Crossref XML Export">
 			<![CDATA[<p>El conector de exportación XML Crossref permite crear información de metadatos para artículos y números para indexarlos en CrossRef. Dispone de detalles sobre el formato XML y de requisitos de datos en: <a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>. Para más información sobre este conector, véase "plugins/importexport/crossref".</p>]]>
 	</section>
-</topic> 
+</topic>

@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000003.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>L'editor/a utilitza la pàgina de resum de cada tramesa per gestionar els fitxers que la componen i també les seves metadades associades i la seva informació d'indexació.</p>]]>	
 	</section>
-</topic> 
+</topic>

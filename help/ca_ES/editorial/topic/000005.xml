@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000005.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>Les trameses a la revista que l'editor/a ha assignat a l'editor/a de secció apareixen a la cua de revisió de trameses d'aquest editor/a de secció. Els editors/ores de secció només tenen accés a les trameses que els han estat assignades. Segons les polítiques establertes per la revista, els editors/ores de secció poden encarregar-se només de l'etapa de revisió de la tramesa o també de l'etapa d'edició.</p>]]>	
 	</section>
-</topic> 
+</topic>

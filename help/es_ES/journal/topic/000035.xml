@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000035.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -22,6 +25,6 @@
 </section>
 
 <section title="Registros">
-<![CDATA[<p>La página Registros contiene información de los usuarios/as que han pagado, el tipo de pago y otros detalles.</p>]]>
+	<![CDATA[<p>La página Registros contiene información de los usuarios/as que han pagado, el tipo de pago y otros detalles.</p>]]>
 </section>
-</topic> 
+</topic>

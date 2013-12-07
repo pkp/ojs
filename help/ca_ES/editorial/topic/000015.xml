@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000015.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>Les trameses per a la revista comencen el procés d'edició a la cua de trameses no assignades de l'editor/a. Per assignar una tramesa d'aquesta llista a un editor/a de secció, l'editor/a ha de fer clic al títol de la tramesa. Això porta a l'editor/a a la pàgina de tramesa apropiada on està assignat l'editor/a de secció. Quan una tramesa és assignada a un editor/a de secció, desapareix de la cua de trameses no assignades i passa a mostrar-se a la cua de revisió.</p>]]>	
 	</section>
-</topic> 
+</topic>
