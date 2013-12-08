@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.sehl.name">Модуль SEHL</message>
-	<message key="plugins.generic.sehl.description">Этот модуль реализует подстветку ключевых слов, использованных при поиске страницы. При его использовании и нахождении статьи в журнале через поисковик, использованные ключевые слова будут подсвечены.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.sehl.name">Плагин «SEHL»</message>
+	<message key="plugins.generic.sehl.description">Этот плагин реализует подсветку для поисковых машин (Search Engine HighLighting, SEHL), таким образом, когда поисковая машина находит статью HTML, искомые ключевые слова будут подсвечены.</message>
 </locale>

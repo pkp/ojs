@@ -497,8 +497,19 @@
 		результаты поиска. Пожалуйста, выберите одну из настроенных метрик в качестве метрики по умолчанию.
 	</message>
 	<message key="manager.statistics.reports">Генератор отчетов</message>
+	<message key="manager.statistics.reports.aggregationColumns">Агрегировать статистику по:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Щаблоны отчетов по умолчанию</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Скачивания файла статьи</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Просмотры страницы аннотации статьи</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Скачивания и просмотры аннотации статьи</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Скачивания файла выпуска</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Просмотры страницы содержания выпуска</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Скачивания и просмотры главной страницы выпуска</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Просмотры главной страницы журнала</message>
 	<message key="manager.statistics.reports.description">OJS генерирует отчеты, которые помогают отследить детали, связанные с обработкой статей в журнале с точки зрения рукописей, редакторов, рецензентов и разделов за заданный период времени. Отчеты генерируются в формате CSV, который требует для просмотра наличия табличного процессора.</message>
 	<message key="manager.statistics.reports.generateReport"> Сгенерировать пользовательский отчет</message>
+	<message key="manager.statistics.reports.advancedOptions">Дополнительные настройки</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Настройка столбцов, фильтров и параметров сортировки. Изменение любой из этих настроек может изменить ожидаемый результат, который выдает шаблон отчета.</message>
 	<message key="manager.statistics.reports.columns">Столбцы</message>
 	<message key="manager.statistics.reports.columns.description">Укажите столбцы, которые будут испоьзоваться для построения отчета. Столбцы, которые вы выберете здесь, не только определяют то, какие данные будут в отчетах, но также определяют уровень агрегирования статистики. Например, если вы выберите столбцы «ID», «Тип» и «Месяц», отчет будет суммировать все просмотры объекта, которые были в один месяц, и представлять данные в одной строке. Если вы выберите «День» вместо «Месяц», каждый объект будет иметь отдельную строку для каждого дня.</message>
 	<message key="manager.statistics.reports.filters">Фильтры</message>
@@ -522,7 +533,7 @@
 	<message key="manager.statistics.reports.filters.byObject">По типу объекта и/или ID объекта</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Фильтровать результаты по типу объекта (журнал, выпуск, статья, гранки в pdf, другие гранки) и/или по одному или нескольким ID объектов.</message>
 	<message key="manager.statistics.reports.filters.byTime">По времени</message>
-	<message key="manager.statistics.reports.filters.byTime.label">Фильтровать результаты по заданной дате или по заданному периоду времени (месяцы или дни).</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Или выбирать диапазон по:</message>
 	<message key="manager.statistics.reports.filters.byLocation">По географическому положению</message>
 	<message key="manager.statistics.reports.filters.byLocation.description">Фильтровать результаты по странам, регионам и/или городам.</message>
 	<message key="manager.statistics.statistics">Статистика журнала</message>

@@ -8,22 +8,22 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.thesisfeed.displayName">Модуль тезисов диссертаций</message>
-	<message key="plugins.generic.thesisfeed.description">Модуль производит новостную ленту в формате RSS/Atom, содержащую тезисы диссертаций.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.thesisfeed.displayName">Плагин «Лента авторефератов диссертаций»</message>
+	<message key="plugins.generic.thesisfeed.description">Этот плагин создает новостную ленту в формате RSS/Atom, содержащую авторефераты диссертаций.</message>
 
 	<message key="plugins.generic.thesisfeed.settings">Настройки</message>
-	<message key="plugins.generic.thesisfeed.settings.all">Поместить ссылки на ленту на всех страницах журнала.</message>
-	<message key="plugins.generic.thesisfeed.settings.homepage">Поместить ссылки на ленту на домашней странице и на странице тезисов диссертаций.</message>
-	<message key="plugins.generic.thesisfeed.settings.thesis">Поместить ссылки на ленту только на странице тезисов диссертаций.</message>
+	<message key="plugins.generic.thesisfeed.settings.all">Показать ссылки на ленту на всех страницах журнала.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">Показать ссылки на ленту только на главной странице и на странице авторефератов диссертаций.</message>
+	<message key="plugins.generic.thesisfeed.settings.thesis">Показать ссылки на ленту только на странице авторефератов диссертаций.</message>
 	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Ограничить ленту</message>
-	<message key="plugins.generic.thesisfeed.settings.recentThesis2">наиболее свежими тезисами.</message>
-	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Пожалуйста введите положительное целое число.</message>
-	<message key="plugins.generic.thesisfeed.atom.altText">Логитип Atom</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis2">последними отправленными авторефератами диссертаций.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Пожалуйста, введите положительное целое число для количества авторефератов диссертаций.</message>
+	<message key="plugins.generic.thesisfeed.atom.altText">Логотип Atom</message>
 	<message key="plugins.generic.thesisfeed.rss1.altText">Логотип RSS1</message>
 	<message key="plugins.generic.thesisfeed.rss2.altText">Логотип RSS2</message>
 </locale>

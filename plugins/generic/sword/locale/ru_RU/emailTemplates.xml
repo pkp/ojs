@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/sword/locale/ru_RU/emailTemplates.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<email_texts locale="ru_RU">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>Уведомление о передаче на хранение</subject>
+		<body>Поздравляем Вас с принятием вашего материала «{$articleTitle}» для публикации в журнале «{$journalName}». Если вы выберите, то можете автоматически передать ваш материал на хранение в один или несколько репозиториев.
+
+Для продолжения перейдите по адресу {$swordDepositUrl}.
+
+Это письмо было сгенерировано плагином передачи на хранение «SWORD» Open Journal Systems.</body>
+		<description>Этот шаблон письма используется для уведомления автора о возможных точках хранения для передачи по протоколу SWORD.</description>
+	</email_text>
+</email_texts>

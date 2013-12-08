@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.developedBy.displayName">Блок "Разработчики"</message>
-	<message key="plugins.block.developedBy.description">Этот модуль добавляет ссылку "Разработчики".</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.developedBy.displayName">Блок «Разработчики»</message>
+	<message key="plugins.block.developedBy.description">Этот плагин добавляет ссылку «Разработчики» на боковую панель.</message>
 </locale>

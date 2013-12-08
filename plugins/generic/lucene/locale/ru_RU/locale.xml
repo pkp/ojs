@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/lucene/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.lucene.displayName">Плагин поиска «Lucene»</message>
+	<message key="plugins.generic.lucene.description">Плагин «Lucene» обеспечивает поддержку нескольких языков, улучшает релевантность результатов поиска, ускоряет индексацию, улучшает масштабирование и многое другое.</message>
+
+	<message key="plugins.generic.lucene.faceting.displayName">Плагин фасетизации «Lucene»</message>
+	<message key="plugins.generic.lucene.faceting.description">Плагин блока фасетизации для Lucene</message>
+	<message key="plugins.generic.lucene.faceting.title">уточните поисковый запрос</message>
+	<message key="plugins.generic.lucene.faceting.discipline">Дисциплина</message>
+	<message key="plugins.generic.lucene.faceting.subject">Ключевое слово</message>
+	<message key="plugins.generic.lucene.faceting.type">Метод/Подход</message>
+	<message key="plugins.generic.lucene.faceting.coverage">Охват</message>
+	<message key="plugins.generic.lucene.faceting.journalTitle">Журнал</message>
+	<message key="plugins.generic.lucene.faceting.authors">Автор</message>
+	<message key="plugins.generic.lucene.faceting.publicationDate">Дата публикации</message>
+	
+	<message key="plugins.generic.lucene.message.coreNotFound">Запрошенное ядро «{$core}» не было найдено на сервере Solr. Оно подключено?</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">Произошла ошибка в процессе индексации: Обработано {$numProcessed} из пакета в {$batchCount} ({$numDeleted} удаленных документов в этом пакете).</message>
+	<message key="plugins.generic.lucene.message.indexOnline">Индекс с {$numDocs} документами подключен.</message>
+	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Самостоятельная индексация сервером отключена. Пожалуйста, включите ее в настройках плагина «Lucene».</message>
+	<message key="plugins.generic.lucene.message.searchServiceOffline">К сожалению, служба поиска OJS сейчас отключена.</message>
+	<message key="plugins.generic.lucene.message.techAdminInformed">Технический администратор этого журнала был проинформирован о проблеме.</message>
+	<message key="plugins.generic.lucene.message.webServiceError">Веб-служба Lucene вернула ошибку.</message>
+
+	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} статей помечено для обновления</message>
+	
+	<message key="plugins.generic.lucene.results.didYouMean">Вы хотели</message>
+	<message key="plugins.generic.lucene.results.orderBy">Упорядочить результат по </message>
+	<message key="plugins.generic.lucene.results.orderBy.relevance">Релевантности</message>
+	<message key="plugins.generic.lucene.results.orderBy.author">Авторам</message>
+	<message key="plugins.generic.lucene.results.orderBy.issue">Выпускам</message>
+	<message key="plugins.generic.lucene.results.orderBy.date">Дате публикации</message>
+	<message key="plugins.generic.lucene.results.orderBy.journal">Названию журнала</message>
+	<message key="plugins.generic.lucene.results.orderBy.article">Названию статьи</message>
+	<message key="plugins.generic.lucene.results.orderDir.asc">По возрастанию</message>
+	<message key="plugins.generic.lucene.results.orderDir.desc">По убыванию</message>
+	<message key="plugins.generic.lucene.results.similarDocuments">похожие документы</message>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
+		Советы по поиску: <ul>
+			<li>Поиск производится независимо от регистра (заглавные и строчные буквы не различаются)</li>
+			<li>Общие слова игнорируются</li>
+			<li>По умолчанию, в результатах поиска возвращаются статьи, содержащие <em>любое</em> слово из запроса (то есть, предполагается условие <em>OR</em>)</li>
+			<li>Если слово должно обязательно присутствовать в статье, поставьте в начале знак <strong>+</strong>, например, <em>+журнал +доступ научный академический</em></li>
+			<li>Чтобы найти статьи, содержащие все слова, соединяйте их с помощью <em>AND</em>, например, <em>образование AND исследование</em></li>
+			<li>Чтобы слово не попадало в результаты поиска, поставьте перед ним знак <strong>-</strong> или <em>NOT</em>, например, <em>онлайн -политика</em> или <em>онлайн NOT политика</em></li>
+			<li>Для поиска точной фразы, заключите ее в кавычки, например, <em>"Открытый доступ к изданиям"</em>. Подсказка: заключение в кавычки китайских или японских слов поможет вам найти точное совпадение в полях с несколькими языками, например, "中国".</li> 
+			<li>Используйте круглые скобки для построения более сложных запросов, например, <em>архив ((журнал AND конференция) NOT тезисы)</em></li>
+		 </ul>
+	]]></message>
+
+	<message key="plugins.generic.lucene.settings">Настройки</message>
+	<message key="plugins.generic.lucene.settings.autosuggest">Автоподстановка (показывать раскрывающийся список с динамически меняющимися предлагаемыми поисковыми терминами в процессе ввода поискового запроса)</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[
+		<strong>Проверять термины на результат</strong>: Предлагаются только термины, которые действительно дадут результаты при поиске. Предложения будут перепроверены по конкретному журналу и терминам, уже введенным в другие поисковые поля.<br />
+		<strong>Использовать глобальный словарь</strong>: Этот вариант быстрее, требует меньше ресурсов сервера при поиске и, следовательно, лучше масштабируется на больших инсталляциях. Хотя предложения могут содержать неподходящие термины, то есть термины из других журналов или термины, которые не дают результатов при поиске.
+	]]></message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">Проверять термины на результат</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">Использовать глобальный словарь</message>
+	<message key="plugins.generic.lucene.settings.customRanking">Пользовательское ранжирование (установить индивидуальные веса ранжирования для разделов журнала)</message>
+	<message key="plugins.generic.lucene.settings.description"><![CDATA[
+		Плагин «Lucene» получает доступ к индексу поиска Lucene через сервер Solr. Эта страница конфигурации позволяет вам настроить доступ к серверу Solr.
+		<strong>Пожалуйста убедитесь, что вы прочитали файл README плагина (plugins/generic/lucene/README) до того, как попытаетесь изменить конфигурацию по умолчанию.</strong>
+		Если вы используете сценарий встраивания, находясь за брандмауэром, как описано в файле README, то возможно вам стоит оставить все параметры настройки без изменений.
+	]]></message>
+	<message key="plugins.generic.lucene.settings.faceting">Фасетизация (отобразить блок навигации с дополнительными фильтрами для уточнения вашего поиска)</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">Вы можете выбрать конкретные категории фасетов (соответствующие метаданные должны быть выбраны для индексирования на шаге 3.4 установки журнала)</message>
+	<message key="plugins.generic.lucene.settings.featureDescription"><![CDATA[
+		Плагин «Lucene» предоставляет несколько дополнительных возможностей для поиска, Большинство из этих возможностей включены по умолчанию, но могут быть отключены или настроены.
+	]]></message>
+	<message key="plugins.generic.lucene.settings.highlighting">Выделение (показывать небольшой фрагмент полного текста каждой статьи, содержащий ключевые слова из поискового запроса)</message>
+	<message key="plugins.generic.lucene.settings.instId">Уникальный ID инсталляции</message>
+	<message key="plugins.generic.lucene.settings.instIdRequired">Пожалуйста, введите ID, который уникальным образом идентифицирует эту инсталляцию OJS для поискового сервера Solr.</message>
+	<message key="plugins.generic.lucene.settings.instIdInstructions">Если вы используете централизованный поисковый сервер, то вам необходимо будет задать уникальный ID инсталляции для каждой из инсталляций OJS, использующих одинаковый поисковый индекс. Это может быть любой произвольный текст, но он должен быть разным для каждого из участвующих серверов OJS (например, статический IP-адрес сервера, если у вас на каждом сервере установлена одна инсталляция OJS).</message>
+	<message key="plugins.generic.lucene.settings.internalError">Неправильный выбор.</message>
+	<message key="plugins.generic.lucene.settings.luceneSettings">Плагин «Lucene»: Настройки</message>
+	<message key="plugins.generic.lucene.settings.password">Пароль</message>
+	<message key="plugins.generic.lucene.settings.passwordInstructions">Пожалуйста, введите пароль сервера Solr.</message>
+	<message key="plugins.generic.lucene.settings.passwordRequired">Пожалуйста, введите правильный пароль для аутентификации сервера поиска Solr.</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">Самостоятельная индексация сервером (pull indexing — это расширенная возможность, более подробную информацию можно найти в файле README)</message>
+	<message key="plugins.generic.lucene.settings.searchEndpoint">Адрес (URL) конечной точки поиска</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">Конечная точка поиска Solr состоит из адреса (URL) сервера и обработчика поиска. В качестве примера воспользуйтесь настройкой по умолчанию. Измените ее только в том случае, если вы используете централизованный поисковый сервер.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Пожалуйста, введите правильный адрес (URL), представляющий конечную точку поиска (поисковый сервер Solr и обработчик поиска), к которой вы хотите подключиться.</message>
+	<message key="plugins.generic.lucene.settings.searchFeatures">Настройка возможностей поиска</message>
+	<message key="plugins.generic.lucene.settings.simdocs">«Еще похожих (показывать ссылку «похожие документы» для каждого результата поиска)</message>
+	<message key="plugins.generic.lucene.settings.solrServerSettings">Настройки сервера Solr</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">Предложения альтернативного написания (показывать альтернативные поисковые термины)</message>
+	<message key="plugins.generic.lucene.settings.username">Имя пользователя</message>
+	<message key="plugins.generic.lucene.settings.usernameInstructions">Поисковый сервер Solr использует аутентификацию HTTP BASIC. Пожалуйста, введите имя пользователя.</message>
+	<message key="plugins.generic.lucene.settings.usernameRequired">Пожалуйста, введите правильное имя пользователя для аутентификации поискового сервера Solr (двоеточия запрещены).</message>
+
+	<message key="plugins.generic.lucene.sectionForm.rankingBoost">Пользовательский вес ранжирования</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">
+		Плагин поиска Lucene/Solr позволяет вам изменять относительную важность статей в списке результатов
+		поискового запроса. Настройка более высокого (или низкого) веса ранжирования не приведет к тому, что статьи из этого 
+		раздела окажутся выше (или ниже) всех остальных статей. Однако, это приведет к тому, что эти статьи будут оказываться в результатах поиска выше (или ниже), чем если бы они оказались
+		без выполнения этой настройки. Установка этого параметра в значение «Никогда не показывать» приведет к полному исключению статей
+		этого раздела из результатов поиска.
+	</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Пожалуйста, введите правильный пользовательский вес ранжирования.</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.never">Никогда не показывать</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.low">Понизить ранг</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Нормально</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.high">Повысить ранг</message>
+</locale>

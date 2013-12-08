@@ -9,52 +9,53 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
-  *
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
 <locale name="ru_RU" full_name="Russian">
-	<!-- FIXME: We need a Russian translation. -->
-	<message key="plugins.importexport.users.displayName">Модуль учетных записей в XML</message>
-	<message key="plugins.importexport.users.description">Импорт и экспорт пользователей в формате XML.</message>
-	<message key="plugins.importexport.users.cliUsage">Вызов: {$scriptName} {$pluginName} [command] ...
+	<message key="plugins.importexport.users.displayName">Плагин «Пользователи в XML»</message>
+	<message key="plugins.importexport.users.description">Этот плагин импортирует и экспортирует пользователей.</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Вызов: {$scriptName} {$pluginName} [команда] ...
 Команды:
-	import [xmlFileName] [journal_path] [optional flags]
+	import [xmlFileName] [journal_path] [дополнительные флаги]
 	export [xmlFileName] [journal_path]
 	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
 
 Дополнительные флаги:
-	continue_on_error: Если указано, предотвращает остановку при ошибке
+	continue_on_error: Если задан, не останавливает импорт пользователей при возникновении ошибки
 
-	send_notify: Если указано, импортированные пользователи получат уведомления по 
-                электронной почте с указанием их имен и паролей
+	send_notify: Если задан, отправляет импортированным пользователям уведомления по электронной
+                 почте с указанием их имен пользователей и паролей
 
 Примеры:
-	Импортировать пользователей в myJournal из файла myImportFile.xml, продолжая
-        при ошибке:
+	Импортировать пользователей в myJournal из файла myImportFile.xml, не останавливаясь при ошибке:
 	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
 
-	Экспортировать всех пользователей myJournal:
+	Экспортировать всех пользователей из myJournal:
 	{$scriptName} {$pluginName} export myExportFile.xml myJournal
 
-	Экспортировать всех рецензентов, с указанием только их роли в качестве рецензентов:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer</message>
-	<message key="plugins.importexport.users.import.importUsers">Импортировать записи</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[Выберите файл XML, содержащий пользовательские данные, для импорта в этот журнал. Относительно деталей формата этого файла смотрите подсказку.<br /><br />Заметьте, что если импортируемый файл содержит имена пользователей или почтовые адреса уже присутствующие в системе, профили этих пользователей импортированы не будут, а любые новые роли будут назначены существующим пользователям.]]></message>
+	Экспортировать всех пользователей, зарегистрированных как рецензенты, вместе с указанием их роли только в качестве рецензентов:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">Импортировать пользователей</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Выберите файл данных XML, содержащий информацию о пользователях, для импорта в этот журнал. Подробности о формате этого файла смотрите в помощи журнала.<br /><br />Обратите внимание, что если импортируемый файл содержит имена пользователей или почтовые адреса уже существующие в системе, то данные для этих пользователей не будут импортированы, а все новые роли, которые должны были быть созданы, будут назначены существующим пользователям.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Ошибка при импорте пользователя</message>
 	<message key="plugins.importexport.users.import.failedToImportRole">Ошибка при назначении пользователя на роль</message>
-	<message key="plugins.importexport.users.import.dataFile">Файл данных пользователей</message>
-	<message key="plugins.importexport.users.import.sendNotify">Отправить уведомления импортированным пользователям с указанием их имен и паролей.</message>
-	<message key="plugins.importexport.users.import.continueOnError">Продолжить импорт остальных пользователей при ошибке.</message>
-	<message key="plugins.importexport.users.import.noFileError">Файл не был загружен!</message>
-	<message key="plugins.importexport.users.import.usersWereImported">Следующие пользователи были успешно добавлены в систему</message>
+	<message key="plugins.importexport.users.import.dataFile">Файл с данными пользователей</message>
+	<message key="plugins.importexport.users.import.sendNotify">Отправить каждому импортированному пользователю уведомление по электронной почте с указанием его имени пользователя и пароля.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Продолжить импорт остальных пользователей при возникновении ошибки.</message>
+	<message key="plugins.importexport.users.import.noFileError">Файл не был загружен на сервер!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Следующие пользователи были успешно импортированы в систему</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">При импорте произошли ошибки</message>
-	<message key="plugins.importexport.users.import.confirmUsers">Подтвердите, что это и есть пользователи, которых Вы хотите импортировать</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Подтвердите, что это те самые пользователи, которых вы хотите импортировать в систему</message>
 	<message key="plugins.importexport.users.import.warning">Предупреждение</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Невозможно использовать пароли, кодированные {$importHash}; OJS использует сейчас {$ojsHash}. Если Вы продолжите, прийдется сбросить пароли импортированных пользователей.</message>
-	<message key="plugins.importexport.users.unknownJournal">Был указан неизвестный путь "{$journalPath}" в журнале.</message>
-	<message key="plugins.importexport.users.export.exportUsers">Экспортировать записи</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Нельзя использовать пароли, хэшированные алгоритмом {$importHash}; OJS сейчас настроен на использование {$ojsHash}. Если вы продолжите, то вам будет необходимо сбросить пароли импортированных пользователей.</message>
+	<message key="plugins.importexport.users.unknownJournal">Был указан неизвестный путь журнала «{$journalPath}».</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Экспортировать пользователей</message>
 	<message key="plugins.importexport.users.export.exportByRole">Экспортировать по ролям</message>
 	<message key="plugins.importexport.users.export.exportAllUsers">Экспортировать всех</message>
-	<message key="plugins.importexport.users.export.errorsOccurred">При экспорте произошла ошибка</message>
-	<message key="plugins.importexport.users.export.couldNotWriteFile">Невозможно записать файл "{$fileName}".</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">При экспорте произошли ошибки</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Не могу записать в файл «{$fileName}».</message>
 </locale>

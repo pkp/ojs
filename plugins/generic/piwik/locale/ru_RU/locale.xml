@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/piwik/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+
+	<!-- Piwik -->
+	<message key="plugins.generic.piwik.displayName">Плагин «Piwik»</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Этот плагин интегрирует OJS с Piwik, свободным программным обеспечением с открытым кодом для анализа трафика веб-сайта. Требует, чтобы Piwik уже было установлено. Дополнительную информацию смотрите на <a href="http://piwik.org/" title="Сайт Piwik">сайте Piwik</a>.]]></message>
+
+	<!-- Управление настройками Piwik -->
+	<message key="plugins.generic.piwik.manager.settings">Настройки</message>
+	<message key="plugins.generic.piwik.manager.piwikSettings">Настройки Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>При включении этого плагина можно использовать Piwik для сбора и анализа использования сайта и трафика для данного журнала. Пожалуйста, обратите внимание, что этот плагин требует, чтобы Piwik уже было установлено. Дополнительную информацию смотрите на <a href="http://piwik.org/" title="Сайт Piwik">сайте Piwik</a>.</p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Адрес (URL) Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">Полный адрес (URL) вашей инсталляции Piwik (то есть http://myserver.net/piwik).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Пожалуйста, введите правильный адрес (URL). Он должен начинаться с http://.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">ID профиля сайта</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">В Piwik щелкните на Settings -> Websites. ID профиля сайта будет показан рядом с именем профиля Вашего сайта.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Пожалуйста, введите ID профиля сайта.</message>
+
+</locale>

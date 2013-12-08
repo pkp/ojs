@@ -8,14 +8,14 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.theme.custom.name">Модуль тем</message>
-	<message key="plugins.theme.custom.description">Этот модуль реализует настраиваемую тему.</message>
-	<message key="plugins.theme.custom.notWritable">Примечание: Стилевой файл этого модуля "{$stylesheetFileLocation}" защищен от записи. Для работы должна быть возможность его изменения.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.theme.custom.name">Плагин «Пользовательская тема оформления»</message>
+	<message key="plugins.theme.custom.description">Этот плагин реализует настраиваемую тему оформления.</message>
+	<message key="plugins.theme.custom.notWritable">ОБРАТИТЕ ВНИМАНИЕ: файл таблицы стилей этого плагина «{$stylesheetFileLocation}» в настоящий момент не доступен для записи. Для использования этого плагина необходимо сделать этот файл доступным для записи.</message>
 	<message key="plugins.theme.custom.settings">Настройки</message>
 	<message key="plugins.theme.custom.pickColour">Выберите цвет</message>
 	<message key="plugins.theme.custom.header">Заголовок</message>

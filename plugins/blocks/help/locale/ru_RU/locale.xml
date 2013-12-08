@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.help.displayName">Блок подсказки</message>
-	<message key="plugins.block.help.description">Добавляет ссылку на подсказку.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.help.displayName">Блок «Помощь»</message>
+	<message key="plugins.block.help.description">Этот плагин добавляет на боковую панель ссылку на помощь.</message>
 </locale>

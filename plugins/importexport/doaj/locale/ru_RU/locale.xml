@@ -8,16 +8,19 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
-
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.importexport.doaj.displayName">Модуль экспорта в DOAJ</message>
-	<message key="plugins.importexport.doaj.description">Экспортирвать журнал для DOAJ и сообщить представителю DOAJ информацию о журнале</message>
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.importexport.doaj.displayName">Плагин «Экспорт в DOAJ»</message>
+	<message key="plugins.importexport.doaj.description">Этот плагин позволяет экспортировать журнал для DOAJ и предоставить информацию о журнале для добавления в DOAJ</message>
 
 	
 	<message key="plugins.importexport.doaj.export">Экспортировать данные журнала в DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Экспортировать журнал</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Экспортировать статьи в XML для архивации в DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contact">Связаться с DOAJ для добавления журнала</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Экспортировать информацию статьи в XML для архивации в DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">Для рассмотрения вашего журнала в DOAJ, пожалуйста, отправьте в DOAJ эту форму, частично заполненную автоматически, и заполните остальную информацию в форме подробно настолько, насколько это возможно.</message>
+
 </locale>

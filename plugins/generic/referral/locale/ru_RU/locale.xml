@@ -8,28 +8,36 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.referral.name">Модуль обратных ссылок</message>
-	<message key="plugins.generic.referral.description">Модуль обратных ссылок отслеживает ссылки, приведшие на статьи в журнале (например, когда читатель приходит на статью с другого сайта), позволяя авторам смотреть и, по желанию, публиковать автоматический список тех, кто сослался на статью.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.referral.name">Плагин «Обратные ссылки»</message>
+	<message key="plugins.generic.referral.description">Плагин «Обратные ссылки» отслеживает входящие обратные ссылки (URL), приведшие на статьи в журнале (то есть, когда читатель приходит на статью в журнале с другого сайта), позволяя авторам поддерживать и, по желанию, публиковать автоматически обновляемый список ссылок на статью.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Редактировать ссылку</message>
 	<message key="plugins.generic.referral.createReferral">Создать ссылку</message>
 	<message key="plugins.generic.referral.referrals">Ссылки</message>
 	<message key="plugins.generic.referral.count">Посещения</message>
-	<message key="plugins.generic.referral.dateAdded">Добавлено</message>
+	<message key="plugins.generic.referral.dateAdded">Дата добавления</message>
 	<message key="plugins.generic.referral.all">Все</message>
-	<message key="plugins.generic.referral.all.empty">Ссылки не определены.</message>
+	<message key="plugins.generic.referral.all.empty">На текущий момент ссылки отсутствуют.</message>
 	<message key="plugins.generic.referral.status.new">Новые</message>
-	<message key="plugins.generic.referral.status.new.empty">Нет новых обратных ссылок.</message>
-	<message key="plugins.generic.referral.status.accept">Опубликованные</message>
-	<message key="plugins.generic.referral.status.accept.empty">Нет опубликованных обратных ссылок.</message>
-	<message key="plugins.generic.referral.status.decline">Игнорируемые</message>
-	<message key="plugins.generic.referral.status.decline.empty">Нет игнорируемых обратных ссылок.</message>
-	<message key="plugins.generic.referral.confirmDelete">Уверены, что хотите удалить эту обратную ссылку?</message>
-	<message key="plugins.generic.referral.nameRequired">Требуется ввести имя ссылки.</message>
-	<message key="plugins.generic.referral.urlRequired">Требуется ввести URL.</message>
+	<message key="plugins.generic.referral.status.new.empty">Нет новых ссылок.</message>
+	<message key="plugins.generic.referral.status.accepted">Опубликованные</message>
+	<message key="plugins.generic.referral.status.accept">Опубликовать</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Вы уверены, что хотите опубликовать выбранные ссылки?</message>
+	<message key="plugins.generic.referral.status.accept.empty">На текущий момент нет опубликованных ссылок.</message>
+	<message key="plugins.generic.referral.status.decline">Игнорировать</message>
+	<message key="plugins.generic.referral.status.declined">Игнорируемые</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Вы уверены, что хотите игнорировать выбранные ссылки?</message>
+	<message key="plugins.generic.referral.status.decline.empty">На текущий момент нет игнорируемых ссылок.</message>
+	<message key="plugins.generic.referral.confirmDelete">Вы уверены, что хотите удалить выбранные ссылки?</message>
+	<message key="plugins.generic.referral.nameRequired">Название ссылки обязательно.</message>
+	<message key="plugins.generic.referral.urlRequired">Адрес (URL) ссылки обязателен.</message>
+	<message key="plugins.generic.referral.settings">Настройки плагина «Обратные ссылки»</message>
+	<message key="plugins.generic.referral.settings.description">Плагие «Обратные ссылки» сохраняет адреса (URL), которые ведут на опубликованные в этом журнале статьи, таким образом, чтобы они могли отслеживаться автором и, при необходимости, публиковаться. Эта форма позволяет управляющему журналом контролировать процесс сохранения этих ссылок.</message>
+	<message key="plugins.generic.referral.excusions">Исключения</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Введите список шаблонов регулярных выражений, по одному в строке, которые будут рассматриваться как исключения при записи ссылок на статью. Это может использоваться для предотвращения попадания запросов поисковых машин в список ссылок. Более подробную информацию о регулярных выражениях можно найти по адресу <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
 </locale>

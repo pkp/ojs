@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/oaiMetadataFormats/marcxml/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.OAIMetadata.marcxml.displayName">Плагин «Формат метаданных MARC21»</message>
+	<message key="plugins.OAIMetadata.marcxml.description">Этот плагин структурирует метаданные таким образом, чтобы они соответствовали формату MARC21.</message>
+</locale>

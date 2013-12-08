@@ -86,4 +86,19 @@
 	<message key="admin.categories.confirmDelete">Вы уверены, что хотите удалить эту категорию?</message>
 	<message key="admin.categories.name">Название</message>
 	<message key="admin.categories.nameRequired">Название категории обязательно.</message>
+
+	<message key="admin.copyAccessLogFileTool.usage">Копирует прошедшие файлы журнала доступа apache, отфильтровывая записи, связанные с этой инсталляцией,
+в каталог текущих файлов, находящийся внутри каталога stage плагина «Статистика использования». Должен запускаться под пользователем с достаточными правами для чтения файлов журнала доступа apache.
+
+Этот инструмент будет только копировать те файлы, которые еще не скопированы в каталоги загрузки файлов плагина «Статистика использования» (stage, processing, archive, reject).
+
+Вызов: {$scriptName} path/to/apache/log/file.log
+Вызов (обработка всех файлов в каталоге): {$scriptName} path/to/apache/directory 
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Ошибка: не могу создать временный каталог {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Ошибка: Файл {$filePath} не существует или к нему нет доступа.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Ошибка: не могу скопировать файл из {$filePath} в {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Ошибка: не могу удалить файл {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Предупреждение: файл {$filePath} уже существует в каталоге статистики использования.</message>
+	<message key="admin.copyAccessLogFileTool.success">Успех: {$filePath} в {$destinationPath}</message>
 </locale>

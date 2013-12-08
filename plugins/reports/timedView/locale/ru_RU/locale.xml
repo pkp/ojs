@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/timedView/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.reports.timedView.displayName">Плагин «Отчет о просмотрах за период»</message>
+	<message key="plugins.reports.timedView.description">Этот плагин реализует отчет в формате CSV, описывающий читательский интерес к каждой статье за указанный пользователем период времени.</message>
+
+	<message key="plugins.reports.timedView.form.dateStartRequired">Дата начала обязательна.</message>
+	<message key="plugins.reports.timedView.form.dateStartValid">Пожалуйста, выберите правильную дату начала.</message>
+	<message key="plugins.reports.timedView.form.dateEndRequired">Дата окончания обязательна.</message>
+	<message key="plugins.reports.timedView.form.dateEndValid">Пожалуйста, выберите правильную дату окончания.</message>
+	<message key="plugins.reports.timedView.form.generate">Генерировать отчет</message>
+	<message key="plugins.reports.timedView.form.clearLogs">Очистить журналы</message>
+	<message key="plugins.reports.timedView.form.clearLogs.description">Выберите дату для удаления записей из журналов. Все записи журналов, сделанные до указанной даты, будут удалены. Обратите внимание, что это влияет только на плагин «Отчет о просмотрах за период» и не учитывает статистику, которая ведется в другом месте (например, в плагине «Отчет о просмотрах»).</message>
+	<message key="plugins.reports.timedView.form.clearLogs.confirm">Вы уверены, что хотите удалить эти записи? Это действие нельзя отменить.</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">Поставьте галочку для использования статистики, получаемой старым плагином «Отчет о просмотрах за период». Если вы хотите сгенерировать отчет за период времени с новыми статистическими данными, не ставьте эту галочку.</message>
+
+	<message key="plugins.reports.timedView.report.articleId">ID статьи</message>
+	<message key="plugins.reports.timedView.report.articleTitle">Заголовок статьи</message>
+	<message key="plugins.reports.timedView.report.datePublished">Дата опубликования</message>
+	<message key="plugins.reports.timedView.report.abstractViews">Просмотры аннотации</message>
+	<message key="plugins.reports.timedView.report.galleyViews">Все просмотры гранок</message>
+</locale>

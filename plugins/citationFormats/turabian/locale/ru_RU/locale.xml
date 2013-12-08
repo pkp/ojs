@@ -8,12 +8,12 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.citationFormats.turabian.displayName">Модуль формата ссылок Turabian</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.citationFormats.turabian.displayName">Плагин форматирования ссылок Turabian</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
-	<message key="plugins.citationFormats.turabian.description">Реализует формат ссылок Turabian.</message>
+	<message key="plugins.citationFormats.turabian.description">Этот плагин реализует формат ссылок Turabian.</message>
 </locale>

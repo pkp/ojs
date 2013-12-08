@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/booksForReview/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+
+	<!-- Уведомления «Книги на рецензию» -->
+	<message key="plugins.generic.booksForReview.notification.bookRequested">Книга запрошена. Ждем подтверждение редактора.</message>
+	<message key="plugins.generic.booksForReview.notification.bookCreated">Создана новая книга на рецензию.</message>
+	<message key="plugins.generic.booksForReview.notification.bookUpdated">Обновлена книга на рецензию.</message>
+	<message key="plugins.generic.booksForReview.notification.bookMailed">Книга на рецензию отмечена как отправленная.</message>
+	<message key="plugins.generic.booksForReview.notification.bookDeleted">Удалена книга на рецензию.</message>
+	<message key="plugins.generic.booksForReview.notification.submissionAssigned">Назначен материал для книги на рецензию.</message>
+	<message key="plugins.generic.booksForReview.notification.authorAssigned">Назначен автор для книги на рецензию.</message>
+	<message key="plugins.generic.booksForReview.notification.authorDenied">Запрос автора запрещен. Книга на рецензию возвращена в первоначальное состояние.</message>
+	<message key="plugins.generic.booksForReview.notification.authorRemoved">Автор удален. Книга на рецензию возвращена в первоначальное состояние.</message>
+	<message key="plugins.generic.booksForReview.notification.settingsSaved">Сохранены настройки книги на рецензию.</message>
+
+	<!-- Управление «Книги на рецензию» -->
+	<message key="plugins.generic.booksForReview.editor.booksForReview"><![CDATA[Книги&nbsp;на&nbsp;рецензию]]></message>
+	<message key="plugins.generic.booksForReview.editor.all">Все</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAll">Книги на рецензию — Все</message>
+	<message key="plugins.generic.booksForReview.editor.available">Доступные</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAvailable">Книги на рецензию — Доступные</message>
+	<message key="plugins.generic.booksForReview.editor.requested">Запрошены</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewRequested">Книги на рецензию — Запрошены</message>
+	<message key="plugins.generic.booksForReview.editor.assigned">Назначены</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAssigned">Книги на рецензию — Назначены</message>
+	<message key="plugins.generic.booksForReview.editor.mailed">Отправлены</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewMailed">Книги на рецензию — Отправлены</message>
+	<message key="plugins.generic.booksForReview.editor.submitted">Предоставлены</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">Книги на рецензию — Предоставлены</message>
+	<message key="plugins.generic.booksForReview.editor.create">Создать книгу на рецензию</message>
+	<message key="plugins.generic.booksForReview.editor.createNewUser">Создать нового пользователя</message>
+	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">Редактировать метаданные книги</message>
+	<message key="plugins.generic.booksForReview.editor.delete">Удалить книгу на рецензию</message>
+	<message key="plugins.generic.booksForReview.editor.bookDetails">Информация о книге</message>
+	<message key="plugins.generic.booksForReview.editor.notes">Дополнительные примечания</message>
+	<message key="plugins.generic.booksForReview.editor.notesInstructions">Только для редактора. Не будут публиковаться как часть рецензии на книгу.</message>
+	<message key="plugins.generic.booksForReview.editor.title">Название</message>
+	<message key="plugins.generic.booksForReview.editor.editor">Редактор</message>
+	<message key="plugins.generic.booksForReview.editor.status">Статус</message>
+	<message key="plugins.generic.booksForReview.editor.dueDate">Срок</message>
+	<message key="plugins.generic.booksForReview.editor.noMailingAddress">Нет почтового адреса в файле.</message>
+	<message key="plugins.generic.booksForReview.editor.editSubmission"><![CDATA[Редактировать&nbsp;материал]]></message>
+	<message key="plugins.generic.booksForReview.editor.confirmDelete">Вы уверены, что хотите навсегда удалить эту книгу на рецензию?</message>
+	<message key="plugins.generic.booksForReview.editor.confirmRemove">Вы уверены, что хотите удалить этого автора и очистить историю рецензирования этой книги?</message>
+	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Выбрать&nbsp;материал]]></message>
+	<message key="plugins.generic.booksForReview.editor.select">Вырать</message>
+	<message key="plugins.generic.booksForReview.editor.edit">Редактировать</message>
+	<message key="plugins.generic.booksForReview.editor.submission">Материал</message>
+	<message key="plugins.generic.booksForReview.editor.bookReviewer">Рецензент книги</message>
+	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Назначить</message>
+	<message key="plugins.generic.booksForReview.editor.removeBookReviewer">Удалить</message>
+	<message key="plugins.generic.booksForReview.editor.acceptBookReviewer">Принять</message>
+	<message key="plugins.generic.booksForReview.editor.denyBookReviewer">Отклонить</message>
+	<message key="plugins.generic.booksForReview.editor.notifyBookMailed"><![CDATA[Книга&nbsp;отправлена]]></message>
+	<message key="plugins.generic.booksForReview.editor.noneCreated">Нет книш на рецензию</message>
+	<message key="plugins.generic.booksForReview.editor.noResults">Ничего не найдено</message>
+	<message key="plugins.generic.booksForReview.editor.assignAuthor">Назначить автора</message>
+	<message key="plugins.generic.booksForReview.editor.assign">Назначить</message>
+	<message key="plugins.generic.booksForReview.editor.form.status">Статус</message>
+	<message key="plugins.generic.booksForReview.editor.form.title">Название</message>
+	<message key="plugins.generic.booksForReview.editor.form.addAuthor">Добавить автора</message>
+	<message key="plugins.generic.booksForReview.editor.form.deleteAuthor">Удалить</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorType"><![CDATA[Тип&nbsp;автора]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.copy">Доступна копия</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisher">Издатель</message>
+	<message key="plugins.generic.booksForReview.editor.form.year">Год</message>
+	<message key="plugins.generic.booksForReview.editor.form.language">Язык</message>
+	<message key="plugins.generic.booksForReview.editor.form.edition">Издание</message>
+	<message key="plugins.generic.booksForReview.editor.form.pages">Страниц</message>
+	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.editor.form.url"><![CDATA[Адрес (URL)&nbsp;издателя]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.description">Описание</message>
+	<message key="plugins.generic.booksForReview.editor.form.notes">примечания</message>
+	<message key="plugins.generic.booksForReview.editor.form.dateRequested"><![CDATA[Дата&nbsp;запроса]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateAssigned"><![CDATA[Дата&nbsp;назначения]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateMailed"><![CDATA[Дата&nbsp;отправки]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateDue"><![CDATA[Срок&nbsp;сдачи]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateSubmitted"><![CDATA[Дата&nbsp;представления]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.user"><![CDATA[Рецензент&nbsp;книги]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.article">Материал</message>
+	<message key="plugins.generic.booksForReview.editor.form.saveAndCreateAnother">Созранить и создать другой</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorTypeValid">Пожалуйста, выберите правильный тип автора.</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisherRequired">Пожалуйста, введите издателя этой книги.</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearRequired">Пожалуйста, введите год издания этой книги.</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearValid">Пожалуйста, введите правильный год издания.</message>
+	<message key="plugins.generic.booksForReview.editor.form.pagesValid">Пожалуйста, введите число страниц.</message>
+	<message key="plugins.generic.booksForReview.editor.form.urlPrefixIncluded">Пожалуйста, введите полный адрес (URL), включая префикс (то есть http://).</message>
+	<message key="plugins.generic.booksForReview.editor.form.titleRequired">Пожалуйста, введите название книги.</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorRequiredFields">Пожалуйста убедитесь, что имя и фамилия указаны для каждого автора.</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPage">Обложка</message>
+	<message key="plugins.generic.booksForReview.editor.form.image">Изображение</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageInstructions">(Разрешенные форматы: .gif, .jpg или .png )</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageUploaded">Загружено</message>
+	<message key="plugins.generic.booksForReview.editor.form.removeCoverPage">Удалить изображение обложки?</message>
+	<message key="plugins.generic.booksForReview.editor.form.remove">Удалить</message>
+
+
+	<!-- Управление настройками «Книги на рецензию» -->
+	<message key="plugins.generic.booksForReview.settings">Настройки</message>
+	<message key="plugins.generic.booksForReview.booksForReviewSettings">Настройки «Книги на рецензию»</message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Режим 1</h5><p>Реализует следующий рабочий процесс:</p><ul><li>Редактор добавляет книги, доступные для рецензирования.</li><li>Авторы, заинтересованные в рецензировании книги, могут запросить разрешение на рецензирование, уведомив редактроа.</li><li>Редактор может принять или отклонить запрос на рецензию, уведомив автора.</li><li>Если запрос на рецензирование принят<ul><li>Книга убирается из списка доступных для рецензирования.</li><li>Устанавливается срок выполнения рецензии.</li><li>Редактор может отправить копию книги автору.</li></ul></li><li>Автор отправляет рецензию на книгу через стандартный процесс отправки материала.</li><li>Метаданные книги публикуются как часть отправленной рецензии на книгу.</li></ul><p>Этот плагин поддерживает журналы с множеством редакторов. Когда редактор добавляет новую книгу для рецензирования, он становится основным редактором и контактным лицом по этой книге.</p><h5>Режим 2</h5><p>Реализует следующий рабочий процесс:</p><ul><li>Редактор добавляет книги.</li><li>Редактор сопоставляет отправленные авторами рецензии на книги с каждой книгой.</li><li>Метаданные книги публикуются как часть отправленной рецензии на книгу.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">Управление</message>
+	<message key="plugins.generic.booksForReview.settings.modeFull">Режим 1: Составлять список книг на рецензию, управлять рецензентами книг и публиковать метаданные книг.</message>
+	<message key="plugins.generic.booksForReview.settings.modeMetadata">Режим 2: Только публиковать метаданные книг.</message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewDue">Сроки рецензирования книг</message>
+	<message key="plugins.generic.booksForReview.settings.coverImages">Изображения обложек</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageIssue">Показывать изображения обложек книг для рецензий на книги в содержании выпуска.</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageAbstract">Показывать изображения обложек книг для рецензий на книги на страницах аннотаций статей.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks1">Рецензии должны быть готовы через</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks2">недель после того, как книга будет назначена автору.</message>
+	<message key="plugins.generic.booksForReview.settings.emailReminders">Отправить напоминания электронной почтой</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays1">Отправить авторам письмо-напоминание за</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">дней до срока сдачи рецензии.</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Отправить авторам письмо-напоминание через</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">дней после окночания срока сдачи рецензии.</message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Обратите внимание:</strong> Для использования этих возможностей администратор сайта должен включить параметр <tt>scheduled_tasks</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера для поддержки этой возможности (выполнить такую настройку может быть невозможно на конкретном сервере), описание этой настройки приведено в документации OJS.]]></message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformation">Дополнительная информация</message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Дополнительная информация, публикуемая вместе с книгами на рецензию.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Пожалуйста, укажите число недель, за которые необходимо подготовить рецензию.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksValid">Пожалуйста, укажите правильное число недель, за которые необходимо подготовить рецензию.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysBeforeDueReminderValid">Пожалуйста, укажите правильное число дней для отправки письма-напоминания.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysAfterDueReminderValid">Пожалуйста, укажите правильное число дней для отправки письма-напоминания.</message>
+
+	<!-- Для автора «Книги на рецензию» -->
+	<message key="plugins.generic.booksForReview.author.title">Название</message>
+	<message key="plugins.generic.booksForReview.author.editor">Редактор</message>
+	<message key="plugins.generic.booksForReview.author.status">Статус</message>
+	<message key="plugins.generic.booksForReview.author.submit">Отправить</message>
+	<message key="plugins.generic.booksForReview.author.dueDate">Срок выполнения</message>
+	<message key="plugins.generic.booksForReview.author.noneCreated">Нет книг для рецензии</message>
+	<message key="plugins.generic.booksForReview.author.booksForReview">Книги на рецензию</message>
+	<message key="plugins.generic.booksForReview.author.myBooksForReview">Мои книги</message>
+	<message key="plugins.generic.booksForReview.author.availableBooksForReview">Доступные книги</message>
+	<message key="plugins.generic.booksForReview.author.requestBookForReview">Запросить эту книгу для рецензии</message>
+	<message key="plugins.generic.booksForReview.author.submitInstructions">Пожалуйста укажите, если этот материал — рецензия на одну из следующих книг, назначенных вам на рецензирование</message>
+	<message key="plugins.generic.booksForReview.author.requested">Запрошена</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewRequested">Книги на рецензию - Запрошена</message>
+	<message key="plugins.generic.booksForReview.author.assigned">Назначена</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewAssigned">Книги на рецензию - Назначена</message>
+	<message key="plugins.generic.booksForReview.author.mailed">Отправлена</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewMailed">Книги на рецензию - Отправлена</message>
+	<message key="plugins.generic.booksForReview.author.submitted">Предоставлена</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewSubmitted">Книги на рецензию - Предоставлена</message>
+
+	<!-- Общая информация «Книги на рецензию» -->
+	<message key="plugins.generic.booksForReview.public.booksForReview">Книги на рецензию</message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Чтобы запросить книгу на рецензию:</p><ul><li><a href="{$registerUrl}" target="_parent">Зарегистрируйтесь</a> как автор в этом журнале.</li><li><a href="{$loginAuthorUrl}" target="_parent">Войите в систему</a> как автор.</li><li>Щелкните на ссылке запроса, которая соответствует интересующей вас книге.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.public.copy">Доступна копия</message>
+	<message key="plugins.generic.booksForReview.public.copyYes">Да</message>
+	<message key="plugins.generic.booksForReview.public.copyNo">Нет</message>
+	<message key="plugins.generic.booksForReview.public.language">Язык</message>
+	<message key="plugins.generic.booksForReview.public.edition">Издание</message>
+	<message key="plugins.generic.booksForReview.public.pages">Страниц</message>
+	<message key="plugins.generic.booksForReview.public.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.public.externalSite">внешний сайт</message>
+	<message key="plugins.generic.booksForReview.public.noneCreated">Нет книг для рецензии</message>
+	<message key="plugins.generic.booksForReview.public.noResults">Ничего не найдено</message>
+	<message key="plugins.generic.booksForReview.public.coverPage.altText">Изображение обложки</message>
+	<message key="plugins.generic.booksForReview.public.bookDetails">Информация о книге</message>
+
+	<!-- Книги на рецензию -->
+	<message key="plugins.generic.booksForReview.displayName">Плагин «Книги на рецензию»</message>
+	<message key="plugins.generic.booksForReview.description">Этот плагин запрашивает рецензии на интересующие вас книги или книги, полученные от издателей, а также позволяет управлять рецензентами книг и процессом рецензирования книг.</message>
+	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Книги&nbsp;на&nbsp;рецензию]]></message>
+	<message key="plugins.generic.booksForReview.status.available">Доступна</message>
+	<message key="plugins.generic.booksForReview.status.requested">Запрошена</message>
+	<message key="plugins.generic.booksForReview.status.assigned">Назначена</message>
+	<message key="plugins.generic.booksForReview.status.mailed">Отправлена</message>
+	<message key="plugins.generic.booksForReview.status.submitted">Предоставлена</message>
+	<message key="plugins.generic.booksForReview.authorType.by">Автор:</message>
+	<message key="plugins.generic.booksForReview.authorType.editedBy">Под редакцией:</message>
+	<message key="plugins.generic.booksForReview.authorType.editedByShort">Ред.</message>
+	<message key="plugins.generic.booksForReview.editionShort">изд.</message>
+	<message key="plugins.generic.booksForReview.field.status">Статус</message>
+	<message key="plugins.generic.booksForReview.field.publisher">Издатель</message>
+	<message key="plugins.generic.booksForReview.field.year">Год</message>
+	<message key="plugins.generic.booksForReview.field.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.field.title">Название</message>
+	<message key="plugins.generic.booksForReview.field.description">Описание</message>
+
+</locale>

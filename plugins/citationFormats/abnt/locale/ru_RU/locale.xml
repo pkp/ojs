@@ -8,14 +8,19 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.citationFormats.abnt.displayName">Модуль формата ссылок ABNT</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.citationFormats.abnt.displayName">Плагин форматирования ссылок ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
-	<message key="plugins.citationFormats.abnt.description">Реализует формат ссылок ABNT.</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Доступно на: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Дата получения: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.description">Этот плагин реализует формат ссылок ABNT.</message>
+	
 	<message key="plugins.citationFormats.abnt.manager.settings">Настройки</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Настройки плагина форматирования ссылок ABNT</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Настройки используются для создания ссылок в соответствии с требованиями ABNT.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Место</message>
+	
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Доступно на: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Дата доступа: {$retrievedDate}.]]></message>
 </locale>

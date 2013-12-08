@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/driver/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.driver.displayName">Плагин «DRIVER»</message>
+	<message key="plugins.generic.driver.description">Плагин «DRIVER» расширяет интерфейс OAI-PMH в соответствии с DRIVER Guidelines 2.0, помогая журналам OJS становиться DRIVER-совместимыми.</message>
+</locale>
