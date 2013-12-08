@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/urn/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.pubIds.urn.urns">URN</message>
+
+	<!-- плагин -->
+	<message key="plugins.pubIds.urn.displayName">Плагин «URN»</message>
+	<message key="plugins.pubIds.urn.description">Этот плагин включает назначение единообразных имен ресурсов (Uniform Resource Name, URN) для объектов (выпуски, статьи, гранки и дополнительные файлы) в OJS.</message>
+
+	<!-- Настройки параметров для менеджера URN -->
+	<message key="plugins.pubIds.urn.manager.settings.description"><![CDATA[Пожалуйста, выполните следующие шаги установки, чтобы иметь возможность управлять и использовать URN в OJS:]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSettings">Настройки URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">Префикс URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description"><![CDATA[Префикс URN является постоянной, никогда не меняющейся частью URN (например, «urn:nbn:de:0000-»).]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">Суффикс URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">Использовать шаблоны по умолчанию.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i для выпусков<br />%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок <br />%j.v%vi%i.%a.s%s для дополнительных файлов.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Использовать шаблон, введенный ниже, для генерации суффиксов URN. Используйте %j для аббревиатуры журнала, %v для номера тома, %i для номера выпуска, %Y для года, %a для ID статьи в OJS, %g для ID гранки в OJS, %s для ID дополнительного файла в OJS, %p для номера страницы и %x для «пользовательского идентификатора» (должен быть включен на шаге 4.3 установки журнала).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">для выпусков</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">для статей</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">для гранок</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">для длполнительных файлов.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">Например, vol%viss%ipp%p cможет создать суффикс URN «vol3iss2pp230».</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Суффикс URN может принимать любую форму, но должен быть уникальным для каждого публикуемого объекта.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Использовать «Пользовательский идентификатор» для опубликованных элементов как суффикс URN (должно быть включено на шаге 4.3 установки журнала). Это тот же самый идентификатор, который будет использоваться для публичных адресов (URL).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Ввести индивидуальный суффикс URN для каждого опубликованного элемента, независимый и отличающийся от «Пользовательского идентификатора», который упоминается в предыдущей настройке. Вы увидите дополнительное поле ввода URN на странице метаданных для каждого элемента.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Очистить URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Если вы измените вашу конфигурацию URN, то она не затронет URN, которые уже были назначены. После сохранения конфигурации URN используйте эту кнопку, чтобы удалить все существующие URN для того, чтобы новые настройки повлияли на существующие объекты.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Вы уверены, что хотите удалить все существующие URN?</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Контрольное число</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Контрольное число будет автоматически рассчитано и добавлено в конец в качестве последнего числа в URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Пространство имен</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Выбрать</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Постоянный идентификатор пространства имен обычно необходим для регистрации (например, в Национальной библиотеке Германии).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Адрес (URL) преобразователя</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(например, http://nbn-resolving.de/)</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.journalContent">Контент журнала</message>
+	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Выберите объекты, которым должны будут назначаться URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URN будут назначаться выпускам.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">URN будут назначаться статьям.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">URN будут назначаться гранкам (например HTML или PDF файлам).</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">URN будут назначаться дополнительным файлам.</message>
+
+	<!-- пользовательский суффикс URN для объекта -->
+	<message key="plugins.pubIds.urn.metadata">Метаданные URN</message>
+	<message key="plugins.pubIds.urn.urnSuffix">Суффикс URN</message>
+	<message key="plugins.pubIds.urn.urnSuffix.description">Пользовательский суффикс URN для этой статьи.</message>
+	<message key="plugins.pubIds.urn.calculateCheckNo">Рассчитать контрольное число</message>
+	
+	<!--  форма метаданных -->
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">выпуск</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">статья</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">гранка</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">дополнительный файл</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Вы видите, как будет выглядеть URN (этот вид может быть неполным). URN еще не был сгенерирован. Опубликование выпуска и просмотр страницы объекта типа «{$pubObjectType}» приведет к автоматической генерации уникального URN для этого объекта типа «{$pubObjectType}».</message>
+
+	<!-- consider URNs at other places in the system -->
+	<message key="plugins.pubIds.urn.rt.metadata.urn">Единообразное имя ресурса (Uniform Resource Name)</message>
+
+	<!-- ошибки -->
+	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Пожалуйста, выберите объекты, которым должны будут назначаться URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixRequired">Пожалуйста, введите префикс URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Шаблон префикса URN должен быть в форме "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired">Пожалуйста, введите шаблон суффикса URN для выпусков.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnArticleSuffixPatternRequired">Пожалуйста, введите шаблон суффикса URN для статей.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">Пожалуйста, введите шаблон суффикса URN для гранок.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">Пожалуйста, введите шаблон суффикса URN для дополнительных файлов.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Пожалуйста, выберите пространство имен.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Пожалуйста, введите адрес (URL) преобразователя.</message>
+
+	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">Заданный суффикс URN уже используется для другого опубликованного элемента. Пожалуйста, введите уникальный суффикс URN для каждого элемента.</message>
+	<message key="plugins.pubIds.urn.form.checkNoRequired">Контрольное число отсутствует.</message>
+
+</locale>

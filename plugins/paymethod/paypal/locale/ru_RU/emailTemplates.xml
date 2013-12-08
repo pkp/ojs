@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * plugins/paymethod/paypal/locale/ru_RU/emailTemplateData.xml
+  * @file plugins/paymethod/paypal/locale/ru_RU/emailTemplates.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
+
 <email_texts locale="ru_RU">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Необычная активность PayPal</subject>
-		<body>Система OJS обнаружила необычную активность, свящанную с поддержкой платежей в системе PayPal для журнала {$journalName}.  Может потребоваться внимание и вмешательство в ручном режиме.
-
-Письмо было сгенерировано модулем платежей PayPal.
+		<body>Система Open Journal Systems обнаружила необычную активность, связанную с поддержкой платежей через PayPal для журнала «{$journalName}». Эта активность может требовать дополнительного изучения или вмешательства в ручном режиме.
+                       
+Это письмо было сгенерировано плагином «Платежи через PayPal» системы Open Journal Systems.
 
 Полная информация о запросе:
 {$postInfo}
 
-Дополнительная информация (если указана):
+Дополнительная информация (если есть):
 {$additionalInfo}
 
 Переменные сервера:
-{$serverVars}</body>
+{$serverVars}
+</body>
+		<description>Этот шаблон письма используется для уведомления контактного лица редакции о том, что была зарегистрирована подозрительная активность или активность, требующая вмешательства в ручном режиме. вызванная плагином «Платежи через PayPal».</description>
 	</email_text>
 </email_texts>

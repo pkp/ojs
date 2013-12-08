@@ -7,27 +7,28 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.importexport.pubmed.displayName">Модуль экспорта в PubMed XML</message>
-	<message key="plugins.importexport.pubmed.description">Экспортирует метаданные статей в формате PubMed XML для индекстривания MEDLINE.</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.importexport.pubmed.displayName">Плагин «Экспорт в PubMed XML»</message>
+	<message key="plugins.importexport.pubmed.description">Этот плагин экспортирует метаданные статей в формате PubMed XML для индексирования в MEDLINE.</message>
 	
-	<message key="plugins.importexport.pubmed.export">Экспорт данных</message>
-	<message key="plugins.importexport.pubmed.export.issues">Экспорт выпусков</message>
+	<message key="plugins.importexport.pubmed.export">Экспортировать данные</message>
+	<message key="plugins.importexport.pubmed.export.issues">Экспортировать выпуски</message>
 	<message key="plugins.importexport.pubmed.export.selectIssue">Выберите выпуск для экспорта.</message>
-	<message key="plugins.importexport.pubmed.export.articles">Экспорт статей</message>
+	<message key="plugins.importexport.pubmed.export.articles">Экспортировать статьи</message>
 	<message key="plugins.importexport.pubmed.export.selectArticle">Выберите статьи для экспорта.</message>
 	
-	<message key="plugins.importexport.pubmed.cliUsage">Вызов: 
+	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Вызов: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
 	<message key="plugins.importexport.pubmed.cliError">ОШИБКА:</message>
 
-	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Нет выпуска с идентификатором "{$issueId}".</message>
-	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Нет статьи с идентификатором "{$articleId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Нет выпуска с указанным ID выпуска «{$issueId}».</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Нет статьи с указанным ID статьи «{$articleId}».</message>
 
 
 </locale>

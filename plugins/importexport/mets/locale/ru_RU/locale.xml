@@ -7,22 +7,22 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.importexport.METSExport.displayName">Модуль экспорта в METS XML</message>
-	<message key="plugins.importexport.METSExport.description">Экспортирует журналы в METS XML</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.importexport.METSExport.displayName">Плагин «Экспорт в METS XML»</message>
+	<message key="plugins.importexport.METSExport.description">Этот плагин экспортирует журналы в METS XML</message>
 	<message key="plugins.importexport.METSExport.settings">Настройки</message>
 	<message key="plugins.importexport.METSExport.export">Экспортировать данные</message>
 	<message key="plugins.importexport.METSExport.export.issues">Экспортировать выпуски</message>
 	<message key="plugins.importexport.METSExport.export.selectIssue">Выберите выпуски для экспорта.</message>
-	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Нет тома, который соответствовал бы указанному идентификатору "{$issueId}".</message>
-	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Неизвестный путь в журнале {$journalPath}</message>
-	<message key="plugins.importexport.METSExport.settings.FContent">Использовать base64 для содержимого</message>
-	<message key="plugins.importexport.METSExport.settings.FLocat">Использовать bitstream для содержимого</message>
-	<message key="plugins.importexport.METSExport.settings.organization">METS:agent element organization attribute</message>
-	<message key="plugins.importexport.METSExport.settings.preservationLevel">PREMIS preservation Level</message>
+	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Нет выпуска с указанным ID выпуска «{$issueId}».</message>
+	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Неизвестный путь журнала {$journalPath}</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">Использовать кодирование base64 для контента</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Использовать адрес (URL) битового потока для контента</message>
+	<message key="plugins.importexport.METSExport.settings.organization">Элемент атрибута организации METS:agent</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">Уровень сохранения PREMIS</message>
 	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Экспортировать дополнительные файлы</message>
 </locale>

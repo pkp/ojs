@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * plugins/paymethod/manual/locale/ru_RU/emailTemplateData.xml
+  * @file plugins/paymethod/manual/locale/ru_RU/emailTemplates.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
+
 <email_texts locale="ru_RU">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Уведомление о платеже</subject>
-		<body>Необходимо обработать платеж на имя журнала  {$journalName} от {$userFullName} (пользователь "{$userName}").
+		<body>Необходимо вручную обработать платеж для журнала «{$journalName}» и пользователя {$userFullName} (имя пользователя «{$userName}»).
 
-Оплачивается "{$itemName}".
-Цена {$itemCost} ({$itemCurrencyCode}).
+Пользователь платит за «{$itemName}».
+Сумма {$itemCost} ({$itemCurrencyCode}).
 
-Это письмо отправлено модулем платежей OJS.</body>
+Это письмо сгенерировано плагином «Ввод оплаты вручную» системы Open Journal Systems.</body>
+		<description>Этот шаблон письма используется для уведомления управляющего журналом о том, что был запрошен ввод оплаты вручную.</description>
 	</email_text>
 </email_texts>

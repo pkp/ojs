@@ -7,15 +7,15 @@
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
-  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
 
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.reports.reviews.displayName">Отчет о рецензентах</message>
-	<message key="plugins.reports.reviews.description">Этот модуль выдает отчет о рецензиях в формате CSV.</message>
-	<message key="plugins.reports.reviews.round">Круг</message>
-	<message key="plugins.reports.reviews.reviewerId">Reviewer ID</message>
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.reports.reviews.displayName">Плагин «Отчет о рецензиях»</message>
+	<message key="plugins.reports.reviews.description">Этот плагин реализует отчет в формате CSV, содержащий список заданий на рецензирование для журнала.</message>
+	<message key="plugins.reports.reviews.round">Раунд</message>
+	<message key="plugins.reports.reviews.reviewerId">ID рецензента</message>
 	<message key="plugins.reports.reviews.reviewer">Рецензент</message>
 	<message key="plugins.reports.reviews.dateAssigned">Дата назначения</message>
 	<message key="plugins.reports.reviews.dateNotified">Дата уведомления</message>

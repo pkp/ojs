@@ -8,9 +8,13 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
-  *
+  * With updates from Pavel Pisklakov (revising translation). 
   -->
  
 <locale name="ru_RU" full_name="Russian">
-	<!-- FIXME: We need a Russian translation. -->
+	<message key="plugins.importexport.sample.displayName">Плагин «Образец импорта/экспорта»</message>
+	<message key="plugins.importexport.sample.description">Этот плагин является примером реализации, который может использоваться при разработке плагинов импорта/экспорта. Сам по себе этот плагин не очень полезен.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Выбрать выпуск</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Выберите выпуск для экспорта.</message>
 </locale>
