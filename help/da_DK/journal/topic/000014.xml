@@ -4,12 +4,12 @@
 <!--
   * 000014.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Users - Email Users
   *
-  * $Id: 000014.xml,v 1.7 2007/04/10 20:57:26 asmecher Exp $
   -->
 
 <topic id="journal/topic/000014" locale="da_DK" title="E-mail-brugere" toc="journal/toc/000002" key="journal.users.emailUsers">

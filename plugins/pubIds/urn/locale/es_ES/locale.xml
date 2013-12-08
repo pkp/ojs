@@ -4,6 +4,7 @@
 <!--
   * plugins/pubIds/urn/locale/en_US/locale.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -75,4 +76,9 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">The check number is missing.</message>
 
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">número</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">artículo</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">galería</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">fichero suplementario</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Lo que ve es una vista previa de la URN que pueden estar incompleta. La URN todavía no se ha generado. La publicación del número y el visionado de la página púbica {$pubObjectType} generará automáticamente una URN única para este {$pubObjectType}.</message>
 </locale>

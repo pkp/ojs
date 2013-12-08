@@ -4,6 +4,7 @@
 <!--
   * locale/pt_BR/editor.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -218,4 +219,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Identificação pública de composição final de edição já existe.</message>
 	<message key="editor.issues.backToIssueGalleys">Voltar para composições de edição</message>
 	<message key="editor.issues.confirmDeleteGalley">Deseja realmente excluir esta composição?</message>
+	<message key="editor.notifyUsers.allMailingList">Incluir todas as mensagens na lista de correio ({$count} mensagens)</message>
 </locale>

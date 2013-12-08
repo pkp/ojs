@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000004.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>Els editors/ores de secció s'acostumen a encarregar de gestionar l'etapa de revisió de totes les trameses i també l'etapa d'edició de les trameses acceptades. No obstant això, segons les polítiques establertes per la revista, l'editor/a pot demanar a l'editor/a de secció inicialment assignat a una tramesa que només s'encarregui de supervisar l'etapa de revisió. Això vol dir que si s'accepta la tramesa l'editor/a és l'encarregat de supervisar la resta del procés (és a dir, que adopta el rol d'editor/a de secció). Els editors/ores envien sol·licituds als editors/ores de secció perquè supervisin el procés editorial d'una tramesa.</p>]]>	
 	</section>
-</topic> 
+</topic>

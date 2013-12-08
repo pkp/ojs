@@ -3,6 +3,7 @@
 /**
  * @file plugins/generic/browse/pages/BrowseHandler.inc.php
  *
+ * Copyright (c) 2013 Simon Fraser University Library
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -39,7 +40,7 @@ class BrowseHandler extends Handler {
 				$rangeInfo = Handler::getRangeInfo('search');
 				$totalResults = count($publishedArticleIds);
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-				$results =& new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$results = new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign_by_ref('results', $results);
@@ -62,7 +63,7 @@ class BrowseHandler extends Handler {
 				$rangeInfo = Handler::getRangeInfo('search');
 				$totalResults = count($sections);
 				$sections = array_slice($sections, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-				$results =& new VirtualArrayIterator($sections, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$results = new VirtualArrayIterator($sections, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('results', $results);
@@ -106,7 +107,7 @@ class BrowseHandler extends Handler {
 				$rangeInfo = Handler::getRangeInfo('search');
 				$totalResults = count($publishedArticleIds);
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-				$results =& new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$results = new VirtualArrayIterator(ArticleSearch::formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign_by_ref('results', $results);
@@ -128,7 +129,7 @@ class BrowseHandler extends Handler {
 				$rangeInfo = Handler::getRangeInfo('search');
 				$totalResults = count($sectionidentifyTypes);
 				$sectionidentifyTypes = array_slice($sectionidentifyTypes, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-				$results =& new VirtualArrayIterator($sectionidentifyTypes, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
+				$results = new VirtualArrayIterator($sectionidentifyTypes, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('results', $results);

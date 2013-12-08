@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000029.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -19,4 +22,4 @@
 	<section title="Generar el equipo editorial usando títulos personalizados">
 		<![CDATA[<p>Si el gestor/a de la revista desea tener mayor control sobre la información que aparece en la página Equipo editorial, bajo Acerca de la revista, pueden activar tal opción desde la página consejo editorial (véase Gestión de la revista). Al activar esta opción, los diversos títulos creados en la página consejo editorial se usarán para crear información pública sobre el equipo editorial y sobre otras personas relacionadas a la revista si se desea.</p><p>Para crear un título personalizado, el gestor/a de la revista hace clic en Crear un título de posición, introduce el Nombre del título (redactor/a jefe, editor/a de sección, consejo editorial, etc.) y decide si el título aparecerá bajo Equipo editorial en Acerca de la revista o bajo Gente, en la misma sección. El gestor/a de la revista puede ordenar cómo se verán los títulos editoriales en la página principal de consejo editorial, mediante las flechas arriba y abajo, y podrá editar y eliminar aquellos que crea convenientes.</p><p>Para ver, añadir y quitar un título determinado de un usuario/a, debe hacer clic en el enlace Afiliación al lado del nombre del título. De este modo se mostrará una lista de los usuarios/as actuales de ese título en concreto. El gestor/a de la revista puede ordenar la lista de miembros y eliminar aquellos que considere necesario. Para añadir un miembro, el gestor/a de la revista hace clic en Añadir miembro e inscribir un usuario/a de la lista de miembros de la revista.</p>]]>
 	</section>
-</topic> 
+</topic>

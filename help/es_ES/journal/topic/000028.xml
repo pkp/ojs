@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000028.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -19,4 +22,4 @@
 	<section title="Formularios POST">
 		<![CDATA[<p>Los formularios POST resultan más complicados. De nuevo en Google, puede mirar la fuente de la página y ver que<samp class="code">&lt;form action="/search" ...&gt;</samp> ofrece la URL base de inicio<samp class="code">http://www.google.com/search</samp>. Entonces podrá mirar cada<samp class="code">&lt;input ...&gt;</samp> y<samp class="code">&lt;select ... &gt;</samp> de los elementos del formulario y añadirlos como pares<samp class="code">name=value</samp> separados<samp class="code">&</samp> al final de la URL. El elemento que especifica la caja de texto que acepta texto introducido por el usuario/a (en el caso de Google, denominado<samp class="code">q</samp>) debe tener también el valor &#123;$formKeywords&#125;, que será reemplazado por el valor correspondiente.</p><p>Una manera más fácil de tratar con los formularios POST es copiar el HTML original en un archivo, cambiar<samp class="code">method=post</samp> a<samp class="code">method=get</samp> en el campo apropiado, y cambiar el valor<samp class="code">action=</samp> del formulario para que sea una URL completa como<samp class="code">http://www.google.com/search</samp> en vez de<samp class="code">/search</samp>. Puede visualizar el archivo HTML modificado en su buscador y usar el método GET para construir la URL.</p><p>Algunos motores de búsqueda no soportan consultas GET, por lo que si el método mencionado anteriormente no funciona, puede introducir datos de formulario POST en el campo "Buscar datos post". Si el ejemplo anterior requiriera datos POST, usted debería introducir<samp class="code">http://www.google.com/search</samp> para la URL de búsqueda y<samp class="code">q=&#123;$formKeywords&#125;</samp> para los datos POST.</p><p>Asegúrese de comprobar que las URL funcionan correctamente reemplazando &#123;$formKeywords&#125; por un término de la URL y comprobándolo para ver si muestra los resultados de búsqueda esperados. Tenga en cuenta que esto no siempre es posible con los formularios POST y que depende de la página. En el caso de URL que no tienen un motor de búsqueda apropiado otra posibilidad es usar Google y restringir por página. Puede hacer consultas como<samp class="code">site:mysite.com FOOBAR</samp> en Google para buscar el término "FOOBAR" sólo en mysite.com. Esto se usa para los RT actuales para varias páginas.</p>]]>
 	</section>
-</topic> 
+</topic>

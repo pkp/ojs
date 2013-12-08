@@ -4,6 +4,7 @@
 <!--
   * locale/fr_CA/manager.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -700,4 +701,10 @@
 	<message key="manager.setup.useThumbnail">Vignette</message>
 	<message key="manager.setup.categories">Catégories</message>
 	<message key="manager.setup.categories.description">Choisir les catégories les plus appropriées dans la liste ci-dessus. Les lecteurs pourront naviguer par catégorie parmi l'ensemble des revues disponibles.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Statistiques agrégées par :</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Modèle de rapport par défaut</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Téléchargement d'article</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Nombre de vues de résumé d'article</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Résumé d'article et téléchargements</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Problème de téléchargement de fichier</message>
 </locale>

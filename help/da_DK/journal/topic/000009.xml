@@ -4,12 +4,12 @@
 <!--
   * 000009.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Management Pages - Reading Tools
   *
-  * $Id: 000009.xml,v 1.11 2007/12/05 00:44:28 asmecher Exp $
   -->
 
 <topic id="journal/topic/000009" locale="da_DK" title="Læseværktøjer" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">

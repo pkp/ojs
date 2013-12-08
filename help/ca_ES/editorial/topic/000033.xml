@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000033.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>En aquesta pàgina es recullen diverses dates, incloses la data en què l'editor/a envia la sol·licitud als revisors/ores, la data en què els revisors/ores comencen a treballar i la data en què cada revisor/a acaba el seu encàrrec. L'autor/a pot consultar la política de revisió a {help_topic key="user.about" text="Sobre la revista"} per conèixer amb més detall el procés de revisió de trameses de la revista. Els revisors/ores poden penjar fitxers per als autors/ores, com ara versions de la tramesa amb anotacions. (Per consultar aquests fitxers, l'autor/a ha de fer clic al nom de fitxer que es mostra sota l'enllaç «Fitxer penjat» per obrir directament el fitxer o bé per desar-lo al seu ordinador i obrir-lo des d'allà.)</p>]]>	
 	</section>
-</topic> 
+</topic>

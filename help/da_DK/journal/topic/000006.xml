@@ -4,12 +4,12 @@
 <!--
   * 000006.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Management Pages - Prepared Emails 
   *
-  * $Id: 000006.xml,v 1.12 2007/12/05 00:44:28 asmecher Exp $
   -->
 
 <topic id="journal/topic/000006" locale="da_DK" title="Forberedte e-mails" toc="journal/toc/000001" key="journal.managementPages.emails">

@@ -4,6 +4,7 @@
 <!--
   * locale/pt_BR/manager.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -691,4 +692,44 @@ Exemplo:
 	<message key="manager.setup.useThumbnail">Miniatura</message>
 	<message key="manager.setup.categories">Categorias</message>
 	<message key="manager.setup.categories.description">Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido.</message>
+	<message key="manager.statistics.defaultMetricDescription">O periódico está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos.
+Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir uma lista ordenada dos artigos mais usados ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Agregar estatísticas por:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Modelos de relatório padrão</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Download de arquivos do artigo</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Acessos à página de resumo</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Resumos e downloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Downloads de arquivos de edição</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Acessos ao sumário</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Sumário e downloads de edição</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Acessos à capa do periódico</message>
+	<message key="manager.statistics.reports.generateReport">Gerar relatório personalizado</message>
+	<message key="manager.statistics.reports.advancedOptions">Opções avançadas</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Personalize as opções de colunas, filtros e ordenação. Alterar qualquer opção pode alterar o resultado esperado do modelo de relatório.</message>
+	<message key="manager.statistics.reports.columns">Colunas</message>
+	<message key="manager.statistics.reports.columns.description">Defina as colunas que serão usadas para construir o relatório. As colunas escolhidas aqui definem os dados apresentados, bem como o nível de agregação das estatísticas. Por exemplo, caso escolha ID, Tipo e Mês para as colunas, o relatório somará todos os acessos de um objeto em um mês e apresentará os dados em uma linha. Caso escolha Dia, em vez de Mês, cada objeto terá uma linha para cada dia.</message>
+	<message key="manager.statistics.reports.filters">Filtros</message>
+	<message key="manager.statistics.reports.objectType">Tipo de objeto</message>
+	<message key="manager.statistics.reports.objectId">ID do objeto</message>
+	<message key="manager.statistics.reports.objectId.label">Defina um ou mais IDs de objetos, separados por vírgula (ex.: 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.today">Hoje</message>
+	<message key="manager.statistics.reports.currentMonth">Mês atual</message>
+	<message key="manager.statistics.reports.orderBy">Ordenar por</message>
+	<message key="manager.statistics.reports.orderDir">Ordem</message>
+	<message key="manager.statistics.reports.orderDir.asc">Crescente</message>
+	<message key="manager.statistics.reports.orderDir.desc">Decrescente</message>
+	<message key="manager.statistics.reports.day.label">Usar formato YYYYMMDD.</message>
+	<message key="manager.statistics.reports.month.label">Usar formato YYYYMMDD.</message>
+	<message key="manager.statistics.reports.cities.label">Uma ou mais cidades, separadas por vírgula (ex.: Cidade 1, Cidade 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">É necessário escolher pelo menos uma coluna para gerar o relatório.</message>
+	<message key="manager.statistics.reports.reportUrl">URL do relatório</message>
+	<message key="manager.statistics.reports.reportUrl.label">O endereço a seguir pode ser usado para gerar o relatório com as configurações atuais. Basta copiá-lo e abrí-lo no navegador de sua preferência. Use os favoritos do navegador para guardar o endereço do gerador de relatórios personalizados.</message>
+	<message key="manager.statistics.reports.filters.byContext">Por contexto</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Restringir resultados por contexto</message>
+	<message key="manager.statistics.reports.filters.byObject">Por tipo de objeto e/ou id</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Restrinja os resultados por tipo de objeto (periódico, edição, artigo, composições finais em pdf, ou outros tipos) e/ou por um ou mais IDs de objeto.</message>
+	<message key="manager.statistics.reports.filters.byTime">Escolha a ordenação do relatório</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Ou escolha ordenar por:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Localização geográfica</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Restringir resultados por país, região e/ou cidade.</message>
 </locale>

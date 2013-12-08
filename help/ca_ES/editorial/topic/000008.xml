@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000008.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>El revisor/a rep per correu electrònic una sol·licitud per revisar una tramesa. Aquesta sol·licitud inclou el títol i el resum de la tramesa, l'URL de la revista, un nom d'usuari/ària i una contrasenya que li permeten accedir a la revista. A més, la revista també disposa d'una opció que permet enviar la tramesa com a fitxer adjunt en un missatge de correu electrònic al revisor/a, juntament amb la sol·licitud perquè dugui a terme aquesta tasca. En aquest cas, el revisor/a ha de respondre per correu electrònic. No obstant això, en aquest apartat de l'ajuda es descriu el mètode de revisió principal (que assegura l'obtenció d'un registre complet del procés), en el qual el revisor/a revisa la tramesa des del lloc web de la revista.</p>]]>	
 	</section>
-</topic> 
+</topic>

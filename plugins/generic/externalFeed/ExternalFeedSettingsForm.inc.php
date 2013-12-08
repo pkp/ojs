@@ -3,6 +3,7 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedSettingsForm.inc.php
  *
+ * Copyright (c) 2013 Simon Fraser University Library
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -79,7 +80,7 @@ class ExternalFeedSettingsForm extends Form {
 		$settingName = 'externalFeedStyleSheet';
 
 		import('classes.file.PublicFileManager');
-		$fileManager =& new PublicFileManager();
+		$fileManager = new PublicFileManager();
 
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
@@ -114,7 +115,7 @@ class ExternalFeedSettingsForm extends Form {
 		$setting = $plugin->getSetting($journalId, $settingName);
 
 		import('classes.file.PublicFileManager');
-		$fileManager =& new PublicFileManager();
+		$fileManager = new PublicFileManager();
 
 		if ($fileManager->removeJournalFile($journalId, $setting['uploadName'])) {
 			$plugin->updateSetting($journalId, $settingName, null);

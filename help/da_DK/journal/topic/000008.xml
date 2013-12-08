@@ -4,12 +4,12 @@
 <!--
   * 000008.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Management Pages - Stats & Reports
   *
-  * $Id: 000008.xml,v 1.10 2007/04/10 20:57:26 asmecher Exp $
   -->
 
 <topic id="journal/topic/000008" locale="da_DK" title="Statistikker og rapporter" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">

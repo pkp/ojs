@@ -4,6 +4,7 @@
 <!--
   * plugins/pubIds/doi/locale/en_US/locale.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -60,4 +61,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">supplementary file</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">What you see is a preview of the DOI that may be incomplete. A DOI has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique DOI for this {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTA:</ strong> Cuando esté disponible el DOI de <a href="http://www.crossref.org" target="_new"> CrossRef</a>, por favor indíquelo en los artículos. El artículo es visto como trabajo, es decir, la entidad de contenido intelectual y artístico. Así, el artículo es el objeto de publicación sobre el que se basa la exportación e inscripción del DOI de CrossRef.]]></message>
 </locale>

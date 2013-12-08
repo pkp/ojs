@@ -3,6 +3,7 @@
 <!--
   * locale.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -1046,4 +1047,6 @@
 	<message key="installer.maxFileUploadSize"><![CDATA[El servidor admite la carga de ficheros de un tamaño máximo de: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Existe una nueva versión de OJS! Actualmente estás usando OJS {$currentVersion}. La versión más reciente de OJS es {$latestVersion}. Por favor visita <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a> para descargar la última versión disponible y obtener instrucciones de actualización.]]></message>
   <message key="site.upgradeAvailable.manager"><![CDATA[Existe una nueva versión de OJS! La versión actual de este OJS es {$currentVersion}. La versión más reciente de OJS es {$latestVersion}. Por favor contacta con tu administrador/a del sitio ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificar sobre la nueva versión. Puedes obtener más información <a href="http://pkp.sfu.ca/ojs_download" target="_new">aquí</a>.]]></message>
+	<message key="common.journal">Revista</message>
+	<message key="user.profile.profileImage">Imagen del perfil</message>
 </locale> 

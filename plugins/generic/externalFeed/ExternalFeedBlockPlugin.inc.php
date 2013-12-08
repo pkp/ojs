@@ -3,6 +3,7 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedBlockPlugin.inc.php
  *
+ * Copyright (c) 2013 Simon Fraser University Library
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -97,7 +98,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 				(!empty($requestedPage)) && $requestedPage != 'index'))
 			) continue;
 
-			$feed =& new SimplePie();
+			$feed = new SimplePie();
 			$feed->set_feed_url($currentFeed->getUrl());
 			$feed->enable_order_by_date(false);
 			$feed->set_cache_location(CacheManager::getFileCachePath());

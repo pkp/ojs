@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000027.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>Los gestores/as de la revista pueden editar, añadir y comprobar cualquier herramienta de lectura basada en una disciplina o área. Estas herramientas usan bases de datos seleccionadas por su relevancia y accesibilidad por parte de los lectores/as. Debido a que la ubicación y las URL de dichas bases de datos varían, el gestor/a de la revista deberá cambiar o incluso eliminar listados. Las herramientas se agrupan por categorías (p. ej.: Estudios relacionados, Disertaciones, etc.) y cada una contiene un determinado número de bases de datos.</p><p><em>Validar las herramientas de lectura</em>. Esta función comprueba la validez de las URL de búsqueda que se usan con cada base de datos para encontrar elementos relevantes para el que incluye la herramienta (mediante los términos de indización del autor/a). Si la URL es inválida, el gestor/a de la revista puede arreglar la configuración introduciendo la nueva URL, solicitando ayuda a otra persona o eliminando la base de datos del set de herramientas de lectura. Esta función se aplica a todas las bases de datos y por ello conlleva cierto tiempo completarla. Se emite un comunicado de cada una que avala su validez o indica la raíz del problema.</p><p><em>Metadatos de cada set de herramientas de lectura</em>. Los metadatos de cada set de herramientas incluyen el título y una breve descripción que permiten al gestor/a de la revista modificar su organización o crear nuevos sets.</p><p><em>Contextos del set</em>. Un set de herramientas consiste en varias agrupaciones, o contextos, de un número bases de datos relevantes (p. ej.: Estudios relacionados, Foros en línea, etc.). Estas bases de datos se pueden crear, editar y eliminar. Las agrupaciones se pueden reordenar.</p><p><em>Exportar los datos</em>. Si el gestor/a de la revista desarrolla herramientas de lectura adicionales, puede exportarlas a Public Knowledge Project para que puedan usarlas otras revistas de temáticas relacionadas.</p>]]>
 	</section>
-</topic> 
+</topic>

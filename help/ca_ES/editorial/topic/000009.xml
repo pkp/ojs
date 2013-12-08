@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000009.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>L'autor/a pot iniciar la sessió al lloc web de la revista per controlar el progrés de la seva tramesa i participar en el procés editorial. En cas que hi hagi més d'un autor/a, se sol·licita a l'autor/a que ha tramès l'element que identifiqui el contacte principal. Aquesta persona és qui rep tota la correspondència editorial i qui obté accés al lloc web de la revista.</p>]]>	
 	</section>
-</topic> 
+</topic>

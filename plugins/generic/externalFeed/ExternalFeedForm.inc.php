@@ -3,6 +3,7 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedForm.inc.php
  *
+ * Copyright (c) 2013 Simon Fraser University Library
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -129,7 +130,7 @@ class ExternalFeedForm extends Form {
 		}
 
 		if (!isset($feed)) {
-			$feed =& new ExternalFeed();
+			$feed = new ExternalFeed();
 		}
 
 		$feed->setJournalId($journalId);

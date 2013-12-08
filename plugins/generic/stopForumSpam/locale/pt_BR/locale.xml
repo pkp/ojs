@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/stopForumSpam/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Stop Forum Spam plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<message key="plugins.generic.stopForumSpam.displayName">Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.description">Integre o OJS com o sistema de prevenção Stop Forum Spam, que busca reduzir a quantidade de cadastros fantasmas.</message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">Configurações</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Configurações do Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>Ao habilitar o plugin, o OJS verificará se o cadastro realizado contém elementos contidos na lista do Stop Forum Spam. Em caso positivo, os cadastros serão negados.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">Verificar IP</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Verificar e-mail</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Verificar login (cuidado ao habilitar!)</message>
+	<message key="plugins.generic.stopForumSpam.checkName">stopForumSpamPlugin</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[O plugin <a href="http://www.stopforumspam.com" target="_blank">Stop Forum Spam</a> bloqueou este cadastro.]]></message>
+</locale>

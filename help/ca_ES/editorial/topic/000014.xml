@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000014.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>L'editor/a de secció envia un missatge de correu electrònic al corrector/a de proves per sol·licitar-li que s'encarregui d'una o més rondes de correcció. En aquest punt el corrector/a de proves ha de notificar si accepta o rebutja l'encàrrec. En cas d'acceptar-lo, ha d'iniciar la sessió i començar el procés de correcció des de la seva pàgina inicial d'usuari/ària.</p>]]>	
 	</section>
-</topic> 
+</topic>

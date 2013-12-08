@@ -4,6 +4,7 @@
 <!--
   * plugins/pubIds/urn/locale/pt_BR/locale.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -72,4 +73,12 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">O sufixo URN informado já está em uso por outro item publicado. Informe um sufixo URN único para cada item.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Número de verificação faltando.</message>
 
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">URL do resolvedor</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(ex.: http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">edição</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">artigo</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">composição</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">arquivo suplementar</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Informe o endereço do resolvedor.</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">A seguir uma prévia do URN que pode estar incompleto. Um URN pode não ter sido gerado ainda. Publicar a edição e visualizando a página pública do objeto {$pubObjectType} gerará automaticamente um URN único para o objeto {$pubObjectType}.</message>
 </locale>

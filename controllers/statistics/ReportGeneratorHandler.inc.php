@@ -3,6 +3,7 @@
 /**
  * @file controllers/statistics/ReportGeneratorHandler.inc.php
  *
+ * Copyright (c) 2013 Simon Fraser University Library
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -38,7 +39,7 @@ class ReportGeneratorHandler extends Handler {
 
 		$formContent = $reportGeneratorForm->fetch($request);
 
-		$json =& new JSONMessage(true);
+		$json = new JSONMessage(true);
 		if ($request->getUserVar('refreshForm')) {
 			$json->setEvent('refreshForm', $formContent);
 		} else {
@@ -184,7 +185,7 @@ class ReportGeneratorHandler extends Handler {
 		$reportTemplate = $request->getUserVar('reportTemplate');
 
 		import('controllers.statistics.form.ReportGeneratorForm');
-		$reportGeneratorForm =& new ReportGeneratorForm($columns,
+		$reportGeneratorForm = new ReportGeneratorForm($columns,
 			$objects, $fileTypes, $metricType, $defaultReportTemplates, $reportTemplate);
 
 		return $reportGeneratorForm;

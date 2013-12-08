@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
   * 000037.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,4 +16,4 @@
 	<section>
 		<![CDATA[<p>En iniciar la sessió a la revista i fer clic a l'enllaç «Corrector/a d'originals» de la pàgina inicial d'usuari/ària, el corrector/a d'originals accedeix a la cua de trameses, on s'enumeren tots els encàrrecs de correcció que té assignats. A més, fent clic a l'enllaç «Arxiu» pot accedir a encàrrecs ja completats.</p><p>Per accedir a la pàgina de correcció d'originals d'una tramesa determinada, el corrector/a d'originals ha de fer clic al títol que es mostra a la llista de trameses actives.</p>]]>	
 	</section>
-</topic> 
+</topic>

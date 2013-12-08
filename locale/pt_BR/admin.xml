@@ -4,6 +4,7 @@
 <!--
   * locale/pt_BR/admin.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -78,4 +79,12 @@
 	<message key="admin.categories.confirmDelete">Deseja realmente excluir esta categoria?</message>
 	<message key="admin.categories.name">Nome</message>
 	<message key="admin.categories.nameRequired">O nome da categoria é obrigatório.</message>
+	<message key="admin.settings.defaultMetricDescription">O OJS está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma estatística única deve ser usada, como, por exemplo, para exibir listas ordenadas dos artigos mais usados, ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão.</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copie o(s) arquivo(s) de log de acessos do apache, filtrando as entradas relacionadas com esta instalação, ao diretório de arquivos atual, dentro do diretório de estágio do UsageStatsPlugin. Deve ser executado por um usuário do servidor com privilégios suficientes para ler arquivos de log do servidor de aplicação Apache.</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Erro: impossível criar arquivo temporário {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Erro: Arquivo {$filePath} não existe ou não está disponível.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Erro: impossível copiar arquivo de {$filePath} para {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Erro: impossível excluir arquivo {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Aviso: arquivo {$filePath} já existe na pasta de estatísticas de uso.</message>
+	<message key="admin.copyAccessLogFileTool.success">Sucesso: {$filePath} para {$destinationPath}</message>
 </locale>

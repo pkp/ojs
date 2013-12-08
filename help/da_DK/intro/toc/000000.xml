@@ -4,12 +4,12 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2003-2007 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Translation: Niels Erik Frederiksen
   * Table of contents for Introduction to OJS. 
   *
-  * $Id: 000000.xml,v 1.8 2007/04/10 20:57:25 asmecher Exp $
   -->
 
 <toc id="intro/toc/000000" locale="da_DK" title="Introduktion til OJS" parent_topic="intro/topic/000000">
