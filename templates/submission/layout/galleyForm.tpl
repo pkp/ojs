@@ -81,7 +81,8 @@
 {if $galley->isHTMLGalley()}
 <div id="htmlGalley">
 <h3>{translate key="submission.layout.galleyHTMLData"}</h3>
-
+{* Removing stylesheers *}
+{*
 <h4>{translate key="submission.layout.galleyStylesheet"}</h4>
 
 {assign var=styleFile value=$galley->getStyleFile()}
@@ -122,6 +123,7 @@
 	</td>
 </tr>
 </table>
+*}
 </div>
 <br />
 <div id="galleyImages">
