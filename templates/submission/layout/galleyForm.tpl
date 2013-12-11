@@ -82,8 +82,6 @@
 <div id="htmlGalley">
 <h3>{translate key="submission.layout.galleyHTMLData"}</h3>
 
-{* LS hiding per PT https://www.pivotaltracker.com/story/show/54715992 12/11/2013 *}
-{*
 <h4>{translate key="submission.layout.galleyStylesheet"}</h4>
 
 {assign var=styleFile value=$galley->getStyleFile()}
@@ -102,8 +100,6 @@
 	<td class="label">{translate key="common.dateUploaded"}</td>
 	<td class="value">{$styleFile->getDateUploaded()|date_format:$dateFormatShort}</td>
 </tr>
-
-
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
@@ -112,13 +108,10 @@
 	</td>
 </tr>
 {else}
-
 <tr valign="top">
 	<td class="nodata">{translate key="submission.layout.noStyleFile"}</td>
 </tr>
-	
 {/if}
-
 </table>
 
 <table class="data" width="100%">
@@ -129,7 +122,6 @@
 	</td>
 </tr>
 </table>
-	*}
 </div>
 <br />
 <div id="galleyImages">
