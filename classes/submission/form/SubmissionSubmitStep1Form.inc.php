@@ -61,6 +61,22 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	}
 
 	/**
+	 * Perform additional validation checks
+	 * @copydoc Form::validate
+	 */
+	function validate() {
+		if (!parent::validate()) return false;
+
+		// Validate that the section ID is attached to this journal.
+		$context = Application::getContext();
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($this->getData('sectionId'), $context->getId());
+		if (!$section) return false;
+
+		return true;
+	}
+
+	/**
 	 * Set the submission data from the form.
 	 * @param $submission Submission
 	 */
