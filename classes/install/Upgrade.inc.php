@@ -1100,6 +1100,8 @@ class Upgrade extends Installer {
 
 		while(!$result->EOF) {
 			$row =& $result->GetRowAssoc(false);
+			$result->MoveNext();
+
 			list($countryId, $cityName, $region) = $geoLocationTool->getGeoLocation($row['ip_address']);
 			$fileType = null;
 			if ($row['galley_id']) {
@@ -1122,7 +1124,6 @@ class Upgrade extends Installer {
 
 			$day = date('Ymd', strtotime($row['date']));
 			$tempStatsDao->insert($assocType, $assocId, $day, $countryId, $region, $cityName, $fileType, $loadId);
-			$result->MoveNext();
 		}
 
 		switch (Config::getVar('database', 'driver')) {
