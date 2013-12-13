@@ -211,7 +211,8 @@ class ProfileForm extends Form {
 			'isReader' => Validation::isReader(),
 			'isReviewer' => Validation::isReviewer(),
 			'existingInterests' => $existingInterests,
-			'interestsKeywords' => $currentInterests
+			'interestsKeywords' => $currentInterests,
+                        'professionalTitle' => $user->getProfessionalTitle()
 		);
 	}
 
@@ -241,7 +242,8 @@ class ProfileForm extends Form {
 			'userLocales',
 			'readerRole',
 			'authorRole',
-			'reviewerRole'
+			'reviewerRole',
+                        'professionalTitle'
 		));
 
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
@@ -284,6 +286,7 @@ class ProfileForm extends Form {
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
+		$user->setProfessionalTitle($this->getData('professionalTitle'), null); // Localized
 		$userId = $user->getId();
 
 		// Insert the user interests

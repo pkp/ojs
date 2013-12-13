@@ -179,6 +179,10 @@
 	<td class="value"><textarea name="biography[{$formLocale|escape}]" id="biography" rows="5" cols="40" class="textArea">{$biography[$formLocale]|escape}</textarea></td>
 </tr>
 <tr valign="top">
+	<td class="label">{fieldLabel name="professionalTitle" key="user.professionalTitle"}<br />{translate key="user.professionalTitle.description"}</td>
+	<td class="value"><textarea name="professionalTitle[{$formLocale|escape}]" id="professionalTitle" rows="5" cols="40" class="textArea">{$professionalTitle[$formLocale]|escape}</textarea></td>
+</tr>
+<tr valign="top">
 	<td class="label">
 		{fieldLabel name="profileImage" key="user.profile.form.profileImage"}
 	</td>

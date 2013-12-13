@@ -57,6 +57,24 @@ class User extends PKPUser {
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
 		return $userSettingsDao->updateSetting($this->getId(), $name, $value, $type, $journalId);
 	}
+
+	/**
+	 * Gets the professional title
+	 * @param $locale string
+	 * @return string
+	 */
+	function getProfessionalTitle($locale) {
+		return $this->getData("eschol_profTitle", $locale);
+	}
+
+	/**
+	 * Sets the professional title
+	 * @param $locale string
+	 * @return string
+	 */
+	function setProfessionalTitle($title, $locale) {
+		return $this->setData('eschol_profTitle', $title, $locale);
+	}
 }
 
 ?>

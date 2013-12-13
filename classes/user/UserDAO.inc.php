@@ -94,6 +94,14 @@ class UserDAO extends PKPUserDAO {
 		$returner = new DAOResultFactory($result, $this, '_returnUserFromRowWithData');
 		return $returner;
 	}
+
+	function getLocaleFieldNames() {
+		$fieldNames = parent::getLocaleFieldNames();
+		//return array('biography', 'signature', 'gossip', 'affiliation', 'eschol_profTitle');
+		array_push($fieldNames, 'eschol_profTitle');
+		return $fieldNames;
+	}
+
 }
 
 ?>
