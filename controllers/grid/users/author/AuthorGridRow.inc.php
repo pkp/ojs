@@ -36,6 +36,9 @@ class AuthorGridRow extends PKPAuthorGridRow {
 		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 
+		// If the submission hasn't been finalized, allow.
+		if (!$submission->getDateSubmitted()) return true;
+
 		$stageAssignments = $stageAssignmentDao->getBySubmissionAndStageId($submission->getId(), $submission->getStageId(), null, $user->getId());
 		while ($stageAssignment = $stageAssignments->next()) {
 			$userGroup = $userGroupDao->getById($stageAssignment->getUserGroupId());
