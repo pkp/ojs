@@ -217,7 +217,7 @@ class QuickSubmitForm extends Form {
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]['authorId'] > 0) {
 				// Update an existing author
-				$author =& $authorDao->getAuthor($authors[$i]['authorId'], $articleId);
+				$author = $authorDao->getById($authors[$i]['authorId'], $articleId);
 				$isExistingAuthor = true;
 			} else {
 				// Create a new author
