@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/tab/settings/reviewStage/form/OJSReviewStageForm.inc.php
+ * @file controllers/tab/settings/reviewStage/form/ReviewStageForm.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -12,15 +12,15 @@
  * @brief Form to edit review stage settings.
  */
 
-import('lib.pkp.controllers.tab.settings.reviewStage.form.ReviewStageForm');
+import('lib.pkp.controllers.tab.settings.reviewStage.form.PKPReviewStageForm');
 
-class OJSReviewStageForm extends ReviewStageForm {
+class ReviewStageForm extends PKPReviewStageForm {
 
 	/**
 	 * Constructor.
 	 */
-	function OJSReviewStageForm($wizardMode = false) {
-		parent::ReviewStageForm(
+	function ReviewStageForm($wizardMode = false) {
+		parent::PKPReviewStageForm(
 			$wizardMode,
 			array(
 				'restrictReviewerFileAccess' => 'bool',
