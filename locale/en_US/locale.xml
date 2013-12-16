@@ -1181,6 +1181,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
         <!-- Extra eScholarship Authorization -->
 	<message key="user.authorization.roleValidatorFailure">You appear to have entered a link for our submission management system, but you do not have sufficient privileges to view the content of this page. Please contact the journal editor for assistance.</message>
 	<message key="user.authorization.journalValidatorFailure">The link you've entered appears invalid. Please check your link and try again. (If you've copied this link from an email, make sure it does not contain any spaces or line breaks.) If you continue to experience difficulty, <![CDATA[<a href="http://escholarship.org/help_contact.html">contact eScholarship support</a>]]>.</message>
+        <!-- Additions to the user profile -->
+        <message key="user.professionalTitle">Professional Title</message>
 	
 	<!-- Icons: Default "alt" text -->
 	

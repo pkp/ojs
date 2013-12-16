@@ -113,6 +113,10 @@
 **}-->
 </tr>
 <tr valign="top">
+	<td class="label">{fieldLabel name="professionalTitle" key="user.professionalTitle"}</td>
+	<td class="value"><input type="text" name="professionalTitle[{$formLocale|escape}]" id="professionalTitle" value="{$professionalTitle[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
+</tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="signature" key="user.signature"}</td>
 	<td class="value"><textarea name="signature[{$formLocale|escape}]" id="signature" rows="5" cols="40" class="textArea">{$signature[$formLocale]|escape}</textarea></td>
 </tr>
@@ -177,10 +181,6 @@
 <tr valign="top">
 	<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td class="value"><textarea name="biography[{$formLocale|escape}]" id="biography" rows="5" cols="40" class="textArea">{$biography[$formLocale]|escape}</textarea></td>
-</tr>
-<tr valign="top">
-	<td class="label">{fieldLabel name="professionalTitle" key="user.professionalTitle"}<br />{translate key="user.professionalTitle.description"}</td>
-	<td class="value"><textarea name="professionalTitle[{$formLocale|escape}]" id="professionalTitle" rows="5" cols="40" class="textArea">{$professionalTitle[$formLocale]|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td class="label">
