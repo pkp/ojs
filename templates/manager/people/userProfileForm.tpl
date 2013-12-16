@@ -412,6 +412,10 @@
 **}-->
 	</tr>
 	<tr valign="top">
+		<td class="label">{fieldLabel name="professionalTitle" key="user.professionalTitle"}</td>
+		<td class="value"><input type="text" name="professionalTitle[{$formLocale|escape}]" id="professionalTitle" value="{$professionalTitle[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{fieldLabel name="signature" key="user.signature"}</td>
 		<td class="value"><textarea name="signature[{$formLocale|escape}]" id="signature" rows="5" cols="40" class="textArea">{$signature[$formLocale]|escape}</textarea></td>
 	</tr>

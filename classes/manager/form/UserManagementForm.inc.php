@@ -195,6 +195,7 @@ class UserManagementForm extends Form {
 					'mailingAddress' => $user->getMailingAddress(),
 					'country' => $user->getCountry(),
 					'biography' => $user->getBiography(null), // Localized
+					'professionalTitle' => $user->getProfessionalTitle(null), // Localized
 					'existingInterests' => $existingInterests,
 					'interestsKeywords' => $currentInterests,
 					'gossip' => $user->getGossip(null), // Localized
@@ -241,6 +242,7 @@ class UserManagementForm extends Form {
 			'mailingAddress',
 			'country',
 			'biography',
+			'professionalTitle',
 			'interestsKeywords',
 			'interests',
 			'gossip',
@@ -312,6 +314,7 @@ class UserManagementForm extends Form {
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
+		$user->setProfessionalTitle($this->getData('professionalTitle'), null); // Localized
 		$user->setGossip($this->getData('gossip'), null); // Localized
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 		$user->setAuthId((int) $this->getData('authId'));
