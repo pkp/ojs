@@ -178,6 +178,7 @@ class JournalSiteSettingsForm extends Form {
 			$section->setHideTitle(false);
 			$sectionDao->insertSection($section);
 		}
+		$journal->updateSetting('supportedLocales', $site->getSupportedLocales());
 		$journal->updateSetting('title', $this->getData('title'), 'string', true);
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);
 
