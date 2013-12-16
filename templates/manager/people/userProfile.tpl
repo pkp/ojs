@@ -45,6 +45,10 @@
 		<td class="value">{$user->getLocalizedAffiliation()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="user.professionalTitle"}</td>
+		<td class="value">{$user->getLocalizedProfessionalTitle()|escape|nl2br|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="user.signature"}</td>
 		<td class="value">{$user->getLocalizedSignature()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>

@@ -59,6 +59,13 @@ class User extends PKPUser {
 	}
 
 	/**
+	 * Get localized professional title.
+	 */
+	function getLocalizedProfessionalTitle() {
+		return $this->getLocalizedData('eschol_profTitle');
+	}
+
+	/**
 	 * Gets the professional title
 	 * @param $locale string
 	 * @return string
