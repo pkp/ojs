@@ -35,7 +35,7 @@ $(document).ready(function() {
 	        confirm(param1);
 	      }
 	      else{
-	        alert('The Issue Level Deposit Agreement checkbox must be filled out in order to publish an issue.');  
+	      alert('You must acknowledge the Deposit Agreement before publishing this issue.');  
 	        return false;
 	      }	
 	}
@@ -45,7 +45,7 @@ $(document).ready(function() {
 	         confirmAction(param1, param2);
 	      }
 	      else{
-	         alert('The Issue Level Deposit Agreement checkbox must be filled out in order to publish an issue.');  
+	      alert('You must acknowledge the Deposit Agreement before publishing this issue.');  
 	          return false;
 	       }		
 	}
@@ -162,6 +162,11 @@ $(document).ready(function() {
 {/foreach}
 
 <br/>
+	
+	<h2>Deposit Agreement</h2>
+	<p><input type="checkbox" id="issueRights"/>* I have received permission from at least one author of each article in this issue to publish the items listed above. For articles submitted by the author using eScholarship's submission management system, I understand that the submitter granted permission at the time of deposit. For all other items, I have received paper or electronic documentation that an author has agreed to the journal’s author agreement. (If you have questions about this agreement, contact <a href="mailto:help@escholarship.org">help@escholarship.org</a>.)</strong></p>
+	<br/><br/>
+	
 {if $unpublished}
 	<input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
 {else}
@@ -185,9 +190,7 @@ $(document).ready(function() {
 				{if $isSiteAdmin}<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />{/if}
 			{/if}
 					<br /><br />
-			        <h2>Required Issue Level Deposit Agreement</h2>
-					<p><input type="checkbox" id="issueRights"/>* By clicking this checkbox I warrant that the OJS submission workflow includes a requirement that authors agree to the journal's publishing agreement (called "Copyright Notice" in the author's view) as a condition of submitting an article to the journal. <strong>If any articles in this issue have been added to the system by journal staff rather than by an author using the OJS submission workflow, I warrant that I have received a signed copy of the journal's publishing agreement from at least one of the authors of each of those articles.</strong></p>
-			<br/><br/>
+
 			<strong>Having trouble publishing this issue? <a href="https://getsatisfaction.com/cdl/topics/i_just_tried_to_publish_a_journal_issue_but_it_isnt_showing_up_on_escholarship_org_or_only_some_of" target="_blank">Click here for help</a>.</strong> 
 		{/if}
 	{/if}
