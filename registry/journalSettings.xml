@@ -87,14 +87,6 @@
 		<value>{translate key="default.journalSettings.clockssLicense"}</value>
 	</setting>
 	<setting type="object" locale="0">
-		<name>supportedLocales</name>
-		<value>
-			<array>
-				<element>{$primaryLocale}</element>
-			</array>
-		</value>
-	</setting>
-	<setting type="object" locale="0">
 		<name>supportedFormLocales</name>
 		<value>
 			<array>

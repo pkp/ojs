@@ -123,6 +123,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$section->setHideTitle(false);
 			$sectionDao->insertObject($section);
 		}
+		$journal->updateSetting('supportedLocales', $site->getSupportedLocales());
 		$journal->updateSetting('name', $this->getData('name'), 'string', true);
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);
 
