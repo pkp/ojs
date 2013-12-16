@@ -25,8 +25,31 @@ $(document).ready(function() {
 	{/literal}{foreach from=$sections key=sectionKey item=section}{literal}
 	setupTableDND("#issueToc-{/literal}{$sectionKey|escape}{literal}", "{/literal}{url|escape:"jsparam" op=moveArticleToc escape=false}{literal}");
 	{/literal}{/foreach}{literal}
-});
+}); 
 {/literal}
+</script>
+<script type="text/javascript">
+	{literal}
+	function validateAndConfirm(param1){
+	     if ($('#issueRights').is(":checked")){	
+	        confirm(param1);
+	      }
+	      else{
+	      alert('You must acknowledge the Deposit Agreement before publishing this issue.');  
+	        return false;
+	      }	
+	}
+	
+	function validateAnd_confirmAction(param1, param2){
+	     if ($('#issueRights').is(":checked")){	
+	         confirmAction(param1, param2);
+	      }
+	      else{
+	      alert('You must acknowledge the Deposit Agreement before publishing this issue.');  
+	          return false;
+	       }		
+	}
+	{/literal}
 </script>
 
 {if !$isLayoutEditor}{* Layout Editors can also access this page. *}
@@ -72,7 +95,7 @@ $(document).ready(function() {
 	{assign var="updateCheckKey" value="editor.issues.saveAndPublishChanges"}
 {/if}
 
-<form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"jsparam" key="$updateCheckKey"}')">
+<form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return validateAndConfirm('{translate|escape:"jsparam" key="$updateCheckKey"}')">
 
 {assign var=numCols value=5}
 {if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}{assign var=numCols value=$numCols+1}{/if}
@@ -139,6 +162,11 @@ $(document).ready(function() {
 {/foreach}
 
 <br/>
+	
+	<h2>Deposit Agreement</h2>
+	<p><input type="checkbox" id="issueRights"/>* I have received permission from at least one author of each article in this issue to publish the items listed above. For articles submitted by the author using eScholarship's submission management system, I understand that the submitter granted permission at the time of deposit. For all other items, I have received paper or electronic documentation that an author has agreed to the journal’s author agreement. (If you have questions about this agreement, contact <a href="mailto:help@escholarship.org">help@escholarship.org</a>.)</strong></p>
+	<br/><br/>
+	
 {if $unpublished}
 	<input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
 {else}
@@ -148,19 +176,21 @@ $(document).ready(function() {
 {* BLH 20111027 Do not allow non-siteAdmins to publish issues with title 'Unpublished' *}
 {* BLH 20111130 Do not display publish/unpublish buttons for Pacific Review of Ethnomusicology *}
 {* BLH 20111130 Do display publish/unpublish buttons on stage for site admins only *}
+{* LS 20121213 Adding a checkbox to assert rights to publish the issue *}
 {if !$escholInStage || ($escholInStage && $isSiteAdmin)}
 	{if $journalPath != 'ethnomusic_pre' || ($journalPath == 'ethnomusic_pre' && $isSiteAdmin)}
 		{if !$isLayoutEditor}
 			{if $unpublished && ($issueTitle != 'Unpublished' || ($issueTitle == 'Unpublished' && $isSiteAdmin))}
 				{* Unpublished; give the option to publish it. *}
-				<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />
+				<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="validateAnd_confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />
 			{/if}
 			{if $published}
 				{* Published; give the option to unpublish it. *}
 				{* BLH 20111021 Hide 'unpublish' button for all users except siteAdmin *}
 				{if $isSiteAdmin}<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />{/if}
 			{/if}
-			<br/><br/>
+					<br /><br />
+
 			<strong>Having trouble publishing this issue? <a href="https://getsatisfaction.com/cdl/topics/i_just_tried_to_publish_a_journal_issue_but_it_isnt_showing_up_on_escholarship_org_or_only_some_of" target="_blank">Click here for help</a>.</strong> 
 		{/if}
 	{/if}
