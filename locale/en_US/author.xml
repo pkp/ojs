@@ -58,7 +58,9 @@
 	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing.</message>
 	<message key="author.submit.copyrightNoticeAgree">The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">You must agree to the terms of the Copyright Notice before continuing.</message>
-	<message key="author.submit.commentsForEditor">Comments for the Editor</message>
+	<!-- LS Changing label per https://www.pivotaltracker.com/s/projects/62141/stories/40973935 -->
+	<!--<message key="author.submit.commentsForEditor">Comments for the Editor</message>-->
+	<message key="author.submit.commentsForEditor">Cover Letter</message>
 	<message key="author.submit.comments">Enter text (optional)</message>
 	<message key="author.submit.form.sectionRequired">Please select an appropriate journal section for this submission.</message>
 	<message key="author.submit.form.localeRequired">Please select a submission language.</message>
