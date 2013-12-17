@@ -149,7 +149,9 @@
 	<message key="article.type">Type, method or approach</message>
 	<message key="article.language">Language</message>
 	<message key="article.sectionEditor">SE</message>
-	<message key="article.commentsToEditor">Author comments</message>
+	<!-- LS Changing label per https://www.pivotaltracker.com/s/projects/62141/stories/40973935 -->
+	<!--<message key="article.commentsToEditor">Author comments</message>-->
+	<message key="article.commentsToEditor">Cover letter</message>
 	<message key="article.publicationDate">Publication Date</message>
 	<message key="article.submission">Submission</message>
 	<message key="article.submissionDate">Submission Date</message>	
