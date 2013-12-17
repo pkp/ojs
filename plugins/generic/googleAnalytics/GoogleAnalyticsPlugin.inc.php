@@ -201,7 +201,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 		return false;
 	}
 
- 	/*
+ 	/**
  	 * Execute a management verb on this plugin
  	 * @param $verb string
  	 * @param $args array
