@@ -290,6 +290,10 @@
 		</td>
 **}-->
 	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="professionalTitle" key="user.professionalTitle"}</td>
+		<td class="value"><input type="text" name="professionalTitle[{$formLocale|escape}]" id="professionalTitle" value="{$professionalTitle[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
+	</tr>
 	{** BLH 20110822 using email address as username **}
 	{** 
 	<tr valign="top">

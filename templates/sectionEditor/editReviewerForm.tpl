@@ -93,6 +93,10 @@
 **}-->
         </tr>
         <tr valign="top">
+                <td class="label">{fieldLabel name="professionalTitle" required="true" key="user.professionalTitle"}</td>
+                <td class="value"><input type="text" name="professionalTitle[{$formLocale|escape}]" id="professionalTitle" value="{$professionalTitle[$formLocale]|escape}" size="30" maxlength="90" class="textField" /></td>
+        </tr>
+        <tr valign="top">
                 <td class="label">{fieldLabel name="email" required="true" key="user.email"}</td>
                 <td class="value"><input type="text" name="email" id="email" value="{$email|escape}" size="30" maxlength="90" class="textField" /></td>
         </tr>

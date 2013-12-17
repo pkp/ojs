@@ -9,3 +9,4 @@ files
 .settings
 ojs_db_connect.php
 eschol/utilities/reports/*.csv
+*.swp

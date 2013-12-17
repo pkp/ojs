@@ -62,6 +62,7 @@ class EditReviewerForm extends Form {
                                         'mailingAddress' => $user->getMailingAddress(),
                                         'country' => $user->getCountry(),
                                         'biography' => $user->getBiography(null), // Localized
+                                        'professionalTitle' => $user->getProfessionalTitle(null), // Localized
                                         'existingInterests' => $existingInterests,
                                         'interestsKeywords' => $currentInterests,
                                         'gossip' => $user->getGossip(null), // Localized
@@ -125,7 +126,8 @@ class EditReviewerForm extends Form {
 			'gossip',
                         'mailingAddress',
                         'country',
-                        'biography'
+                        'biography',
+                        'professionalTitle'
                 ));
 
                 $interests = $this->getData('interestsKeywords');
@@ -162,6 +164,7 @@ class EditReviewerForm extends Form {
                 	$user->setMailingAddress($this->getData('mailingAddress'));
                 	$user->setCountry($this->getData('country'));
                 	$user->setBiography($this->getData('biography'), null); // Localized
+			$user->setProfessionalTitle($this->getData('professionalTitle'), null); // Localized
 
 			$userDao->updateObject($user);
 
