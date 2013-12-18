@@ -128,7 +128,7 @@ function setRegAllowOpts(form) {
 		<td width="95%" class="value"><label for="restrictSiteAccess">{translate key="manager.setup.restrictSiteAccess"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="restrictArticleAccess" id="restrictArticleAccess" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input checked type="checkbox" name="restrictArticleAccess" id="restrictArticleAccess" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="restrictArticleAccess">{translate key="manager.setup.restrictArticleAccess"}</label></td>
 	</tr>
 </table>
@@ -139,27 +139,28 @@ function setRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="setRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
+		<!-- LS 12/17/2013 Reversed the logic of these radio buttons. JG wants the second one selected as a default-->
+		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="setRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
 			<label for="disableUserReg-0">{translate key="manager.setup.enableUserRegistration"}</label>
 			<table width="100%">
 				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegReader" id="allowRegReader" value="1"{if $allowRegReader} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
+					<td width="5%"><input type="checkbox" name="allowRegReader" id="allowRegReader" value="1"{if !$allowRegReader} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
 					<td width="95%"><label for="allowRegReader">{translate key="manager.setup.enableUserRegistration.reader"}</label></td>
 				</tr>
 				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegAuthor" id="allowRegAuthor" value="1"{if $allowRegAuthor} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
+					<td width="5%"><input type="checkbox" name="allowRegAuthor" id="allowRegAuthor" value="1"{if !$allowRegAuthor} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
 					<td width="95%"><label for="allowRegAuthor">{translate key="manager.setup.enableUserRegistration.author"}</label></td>
 				</tr>
 				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegReviewer" id="allowRegReviewer" value="1"{if $allowRegReviewer} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
+					<td width="5%"><input type="checkbox" name="allowRegReviewer" id="allowRegReviewer" value="1"{if !$allowRegReviewer} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
 					<td width="95%"><label for="allowRegReviewer">{translate key="manager.setup.enableUserRegistration.reviewer"}</label></td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="setRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="setRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="disableUserReg-1">{translate key="manager.setup.disableUserRegistration"}</label></td>
 	</tr>
 </table>
@@ -199,15 +200,15 @@ function setRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="publicationFormatVolume" id="publicationFormatVolume" value="1"{if ($publicationFormatVolume)} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input checked type="checkbox" name="publicationFormatVolume" id="publicationFormatVolume" value="1"{if ($publicationFormatVolume)} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="publicationFormatVolume">{translate key="manager.setup.publicationFormatVolume"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="publicationFormatNumber" id="publicationFormatNumber" value="1"{if ($publicationFormatNumber)} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input checked type="checkbox" name="publicationFormatNumber" id="publicationFormatNumber" value="1"{if ($publicationFormatNumber)} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="publicationFormatNumber">{translate key="manager.setup.publicationFormatNumber"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="publicationFormatYear" id="publicationFormatYear" value="1"{if ($publicationFormatYear)} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input checked type="checkbox" name="publicationFormatYear" id="publicationFormatYear" value="1"{if ($publicationFormatYear)} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="publicationFormatYear">{translate key="manager.setup.publicationFormatYear"}</label></td>
 	</tr>
 	<tr valign="top">
@@ -437,7 +438,7 @@ function setRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="provideRefLinkInstructions" id="provideRefLinkInstructions" value="1"{if $provideRefLinkInstructions} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input checked type="checkbox" name="provideRefLinkInstructions" id="provideRefLinkInstructions" value="1"{if $provideRefLinkInstructions} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="provideRefLinkInstructions">{translate key="manager.setup.provideRefLinkInstructions"}</label></td>
 	</tr>
 </table>

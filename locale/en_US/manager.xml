@@ -202,7 +202,9 @@
 	<message key="manager.setup.announcementsIntroduction">Additional Information</message>
 	<message key="manager.setup.announcementsIntroductionDescription">Enter any additional information that should be displayed to readers on the Announcements page.</message>
 	<message key="manager.setup.appearInAboutJournal">(To appear in About the Journal) </message>
-	<message key="manager.setup.authorCopyrightNotice">Copyright Notice</message>
+	<!-- 12/17/2013 LS changing per https://www.pivotaltracker.com/story/show/44397569 -->
+	<!--<message key="manager.setup.authorCopyrightNotice">Copyright Notice</message>-->
+	<message key="manager.setup.authorCopyrightNotice">Author Agreement</message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Require authors to agree to Copyright Notice as part of the submission process.</message>
 	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[The Copyright Notice entered below will appear in About the Journal and in each published item's metadata. While it is up to the journal to determine the nature of its copyright agreement with authors, the Public Knowledge Project recommends the use of the <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> license. To that end, it provides <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">sample Copyright Notice wording</a> that can be cut and pasted into the space below for journals that (a) offer open access, (b) offer delayed open access, or (c) do not offer open access.]]></message>
 	<message key="manager.setup.authorGuidelines">Author Guidelines</message>

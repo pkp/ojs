@@ -75,12 +75,25 @@
 {url|assign:"sampleCopyrightWordingUrl" page="information" op="sampleCopyrightWording"}
 <p>{translate key="manager.setup.authorCopyrightNoticeDescription" sampleCopyrightWordingUrl=$sampleCopyrightWordingUrl}</p>
 
-<p><textarea name="copyrightNotice[{$formLocale|escape}]" id="copyrightNotice" rows="12" cols="60" class="textArea">{$copyrightNotice[$formLocale]|escape}</textarea></p>
+<p><textarea name="copyrightNotice[{$formLocale|escape}]" id="copyrightNotice" rows="12" cols="60" class="textArea">
+     I, the author or co-author of this submission (the "Author") grant the journal to which I am submitting this work (the "Journal") on behalf of The Regents of the University of California ("The Regents") the non-exclusive right to make any material submitted by the Author to the Journal (the "Work") available in eScholarship  in any format in perpetuity. The Author grants the Journal and eScholarship the right to redistribute the Work to external non-commercial recipients.<br /><br />
+	
+     The Author warrants as follows:<br /><br />
+	
+	(a) that the Author has the full power and authority to make this agreement;<br />
+	(b) that the Work does not infringe any copyrights or trademarks, nor violate any proprietary rights, nor contain any libelous matter, nor invade the privacy of any person or third party; and<br />
+	(c) that no right in the Work has in any way been sold, mortgaged, or otherwise disposed of, and that the Work is free from all liens and claims.<br /><br />
+	
+	The Author understands that once the Work is deposited in eScholarship, a full bibliographic citation to the Work will remain visible in perpetuity, even if the Work is updated or removed.<br /><br />
+	
+	<strong>For authors who are not employees of the University of California:</strong><br />
+	The Author agrees to hold The Regents of the University of California, the California Digital Library, the Journal, and its agents harmless for any losses, claims, damages, awards, penalties, or injuries incurred, including any reasonable attorney's fees that arise from any breach of warranty or for any claim by any third party of an alleged infringement of copyright or any other intellectual property rights arising from the Depositor’s submission of materials with the California Digital Library or of the use by the University of California or other users of such materials.	
+</textarea></p>
 
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%" class="label">
-			<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />
+			<input checked type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value"><label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label>
 		</td>
@@ -134,7 +147,7 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaDiscipline" id="metaDiscipline" value="1"{if $metaDiscipline} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input checked type="checkbox" name="metaDiscipline" id="metaDiscipline" value="1"{if $metaDiscipline} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
 			<h4>{fieldLabel name="metaDiscipline" key="manager.setup.discipline"}</h4>
 		</td>
@@ -183,7 +196,7 @@
 	</tr>
 	
 	<tr valign="top">
-		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input checked type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
 			<h4>{fieldLabel name="metaSubject" key="manager.setup.subjectKeywordTopic"}</h4>
 		</td>
@@ -291,7 +304,7 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact}checked="checked"{/if}/></td>
+		<td class="label"><input checked {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact}checked="checked"{/if}/></td>
 		<td class="value">{fieldLabel name="copySubmissionAckPrimaryContact" key="manager.setup.notifications.copyPrimaryContact"}</td>
 	</tr>
 	<tr valign="top">
