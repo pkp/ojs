@@ -206,7 +206,8 @@
 		<td class="value">
 			<span class="instruct">{translate key="manager.setup.subjectProvideExamples"}:</span>
 			<br />
-			<input type="text" name="metaSubjectExamples[{$formLocale|escape}]" id="metaSubjectExamples" value="{$metaSubjectExamples[$formLocale]|escape}" size="60" maxlength="255" class="textField" />
+			<!--<input type="text" name="metaSubjectExamples[{$formLocale|escape}]" id="metaSubjectExamples" value="{$metaSubjectExamples[$formLocale]|escape}" size="60" maxlength="255" class="textField" />-->
+			<input type="text" name="metaSubjectExamples[{$formLocale|escape}]" id="metaSubjectExamples" value="Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory" size="60" maxlength="255" class="textField" />
 			<br />
 			<span class="instruct">{translate key="manager.setup.subjectExamples"}</span>
 		</td>
