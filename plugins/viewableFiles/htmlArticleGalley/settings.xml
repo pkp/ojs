@@ -2,7 +2,7 @@
 <!DOCTYPE plugin_settings SYSTEM "../../../lib/pkp/dtd/pluginSettings.dtd">
 
 <!--
-  * plugins/articleGalleys/downloadableFileArticleGalley/settings.xml
+  * plugins/viewableFiles/htmlArticleGalley/settings.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.

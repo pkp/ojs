@@ -1,15 +1,15 @@
 <?php
 /**
- * @defgroup plugins_articleGalleys_htmlArticleGalley HTML Article Galley Plugin
+ * @defgroup plugins_viewableFiles_htmlArticleGalley HTML Article Galley Plugin
  */
 
 /**
- * @file plugins/articleGalleys/htmlArticleGalley/index.php
+ * @file plugins/viewableFiles/htmlArticleGalley/index.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup plugins_articleGalleys_htmlArticleGalley
+ * @ingroup plugins_viewableFiles_htmlArticleGalley
  * @brief Wrapper for html article galley plugin.
  *
  */

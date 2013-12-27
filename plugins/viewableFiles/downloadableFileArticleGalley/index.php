@@ -1,15 +1,15 @@
 <?php
 /**
- * @defgroup plugins_articleGalleys_downloadableFileArticleGalley Downloadable File Article Galley Plugin
+ * @defgroup plugins_viewableFiles_downloadableFileArticleGalley Downloadable File Article Galley Plugin
  */
 
 /**
- * @file plugins/articleGalleys/downloadableFileArticleGalley/index.php
+ * @file plugins/viewableFiles/downloadableFileArticleGalley/index.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup plugins_articleGalleys_downloadableFileArticleGalley
+ * @ingroup plugins_viewableFiles_downloadableFileArticleGalley
  * @brief Wrapper for downloadable file article galley plugin.
  *
  */

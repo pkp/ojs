@@ -177,11 +177,11 @@ class Application extends PKPApplication {
 	function getPluginCategories() {
 		return array(
 			// NB: Meta-data plug-ins are first in the list as this
-			// will make them being loaded (and installed) first.
+			// will make them load (and install) first.
 			// This is necessary as several other plug-in categories
 			// depend on meta-data. This is a very rudimentary type of
 			// dependency management for plug-ins.
-			'articleGalleys',
+			'viewableFiles',
 			'metadata',
 			'auth',
 			'blocks',

@@ -168,7 +168,7 @@ class IssueHandler extends Handler {
 			// Display PDF galley inline
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->addJavaScript('js/inlinePdf.js');
-			$templateMgr->addJavaScript('js/pdfobject.js');
+			$templateMgr->addJavaScript('lib/pkp/lib/pdfobject/js/pdfobject.js');
 			$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/pdfView.css');
 
 			$templateMgr->assign('issue', $issue);

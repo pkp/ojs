@@ -71,7 +71,7 @@ class ArticleGalleyForm extends Form {
 		$templateMgr->assign('enablePublicGalleyId', $journal->getSetting('enablePublicGalleyId'));
 
 		// load the Article Galley plugins.
-		$plugins = PluginRegistry::loadCategory('articleGalleys');
+		$plugins = PluginRegistry::loadCategory('viewableFiles');
 		$enabledPlugins = array();
 		foreach ($plugins as $plugin) {
 			if ($plugin->getEnabled()) { // plugins must be enabled to be used by article galleys.

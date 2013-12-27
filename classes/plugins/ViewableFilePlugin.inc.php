@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file classes/plugins/ArticleGalleyPlugin.inc.php
+ * @file classes/plugins/ViewableFilePlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ArticleGalleyPlugin
+ * @class ViewableFilePlugin
  * @ingroup plugins
  *
  * @brief Abstract class for article galley plugins
@@ -14,11 +14,12 @@
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
-class ArticleGalleyPlugin extends GenericPlugin {
+class ViewableFilePlugin extends GenericPlugin {
 
-	/*
+	/**
 	 * Override public methods from Plugin
 	 */
+
 	/**
 	 * @see Plugin::register()
 	 */
@@ -77,4 +78,5 @@ class ArticleGalleyPlugin extends GenericPlugin {
 		return false;
 	}
 }
+
 ?>

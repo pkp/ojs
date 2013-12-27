@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @file plugins/articleGalleys/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
+ * @file plugins/viewableFiles/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
- * @ingroup plugins_articleGalleys_htmlArticleGalley
+ * @ingroup plugins_viewableFiles_htmlArticleGalley
  *
  * @brief Class for HtmlArticleGalley plugin
  */
 
-import('classes.plugins.ArticleGalleyPlugin');
+import('classes.plugins.ViewableFilePlugin');
 
-class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
+class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 	/**
 	 * @see Plugin::register()
 	 */
@@ -41,14 +41,14 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return __('plugins.articleGalleys.htmlArticleGalley.displayName');
+		return __('plugins.viewableFiles.htmlArticleGalley.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return __('plugins.articleGalleys.htmlArticleGalley.description');
+		return __('plugins.viewableFiles.htmlArticleGalley.description');
 	}
 
 	/**
@@ -97,7 +97,7 @@ class HtmlArticleGalleyPlugin extends ArticleGalleyPlugin {
 	}
 
 	/**
-	 * @see ArticleGalleyPlugin::getArticleGalley
+	 * @see ViewableFilePlugin::getArticleGalley
 	 */
 	function getArticleGalley(&$templateMgr, $request = null, $params) {
 		$journal = $request->getJournal();

@@ -2,7 +2,7 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * plugins/articleGalleys/pdfArticleGalley/version.xml
+  * plugins/viewableFiles/pdfArticleGalley/version.xml
   *
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -11,7 +11,7 @@
   -->
 <version>
 	<application>pdfArticleGalley</application>
-	<type>plugins.articleGalleys</type>
+	<type>plugins.viewableFiles</type>
 	<release>1.0.0.0</release>
 	<date>2013-07-02</date>
 	<lazy-load>1</lazy-load>

@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @file plugins/articleGalleys/pdfArticleGalley/PdfArticleGalleyPlugin.inc.php
+ * @file plugins/viewableFiles/pdfArticleGalley/PdfArticleGalleyPlugin.inc.php
  *
  * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DownloadableFileArticleGalleyPlugin
- * @ingroup plugins_articleGalleys_downloadableFileArticleGalley
+ * @ingroup plugins_viewableFiles_downloadableFileArticleGalley
  *
  * @brief Class for DownloadableFileArticleGalleyPlugin plugin
  */
 
-import('classes.plugins.ArticleGalleyPlugin');
+import('classes.plugins.ViewableFilePlugin');
 
-class DownloadableFileArticleGalleyPlugin extends ArticleGalleyPlugin {
+class DownloadableFileArticleGalleyPlugin extends ViewableFilePlugin {
 	/**
 	 * Install default settings on journal creation.
 	 * @return string
@@ -28,18 +28,18 @@ class DownloadableFileArticleGalleyPlugin extends ArticleGalleyPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return __('plugins.articleGalleys.downloadableFileArticleGalley.displayName');
+		return __('plugins.viewableFiles.downloadableFileArticleGalley.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return __('plugins.articleGalleys.downloadableFileArticleGalley.description');
+		return __('plugins.viewableFiles.downloadableFileArticleGalley.description');
 	}
 
 	/**
-	 * @see ArticleGalleyPlugin::getArticleGalley
+	 * @see ViewableFilePlugin::getArticleGalley
 	 */
 	function getArticleGalley(&$templateMgr, $request = null, $params) {
 		$journal = $request->getJournal();

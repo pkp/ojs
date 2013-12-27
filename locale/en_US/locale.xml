@@ -370,8 +370,8 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<!-- Payment Management -->
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.articleGalleys">Article Galley Plugins</message>
-	<message key="plugins.categories.articleGalleys.description">Article Galley Plugins add support for displaying different document types as article galleys.</message>
+	<message key="plugins.categories.viewableFiles">Article Galley Plugins</message>
+	<message key="plugins.categories.viewableFiles.description">Article Galley Plugins add support for displaying different document types as article galleys.</message>
 	<message key="plugins.categories.auth.description">Authorization Plugins allow Open Journal Systems to delegate user authentication tasks to other systems, such as LDAP servers.</message>
 	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
 	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>

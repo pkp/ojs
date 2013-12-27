@@ -1,6 +1,6 @@
 {if $galley}
 	<script src="{$pluginJSPath}/inlinePdf.js"></script>
-	<script src="{$pluginJSPath}/pdfobject.js"></script>
+	<script src="{$baseUrl}/lib/pkp/lib/pdfobject/pdfobject.js"></script>
 
 	{url|assign:"pdfUrl" op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal) escape=false}
 
