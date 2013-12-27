@@ -39,13 +39,13 @@ class DownloadableFileArticleGalleyPlugin extends ViewableFilePlugin {
 	}
 
 	/**
-	 * @see ViewableFilePlugin::getArticleGalley
+	 * @see ViewableFilePlugin::displayArticleGalley
 	 */
-	function getArticleGalley(&$templateMgr, $request = null, $params) {
+	function displayArticleGalley($templateMgr, $request, $params) {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 
-		return parent::getArticleGalley($templateMgr, $request, $params);
+		return parent::displayArticleGalley($templateMgr, $request, $params);
 	}
 }
 

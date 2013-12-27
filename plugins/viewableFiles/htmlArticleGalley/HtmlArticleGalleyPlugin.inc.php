@@ -97,9 +97,9 @@ class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 	}
 
 	/**
-	 * @see ViewableFilePlugin::getArticleGalley
+	 * @see ViewableFilePlugin::displayArticleGalley
 	 */
-	function getArticleGalley(&$templateMgr, $request = null, $params) {
+	function displayArticleGalley($templateMgr, $request, $params) {
 		$journal = $request->getJournal();
 		$router = $request->getRouter();
 
@@ -108,7 +108,7 @@ class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 
 		$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
 		$templateMgr->assign('htmlGalleyContents', $this->_getHTMLContents($request, $galley, $fileId));
-		return parent::getArticleGalley($templateMgr, $request, $params);
+		return parent::displayArticleGalley($templateMgr, $request, $params);
 	}
 
 	/**

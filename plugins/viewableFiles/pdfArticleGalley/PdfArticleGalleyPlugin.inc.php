@@ -39,9 +39,9 @@ class PdfArticleGalleyPlugin extends ViewableFilePlugin {
 	}
 
 	/**
-	 * @see ViewableFilePlugin::getArticleGalley
+	 * @see ViewableFilePlugin::displayArticleGalley
 	 */
-	function getArticleGalley(&$templateMgr, $request = null, $params) {
+	function displayArticleGalley($templateMgr, $request, $params) {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 
@@ -60,7 +60,7 @@ class PdfArticleGalleyPlugin extends ViewableFilePlugin {
 		}
 		$templateMgr->assign('pluginJSPath', $this->getJSPath($request));
 
-		return parent::getArticleGalley($templateMgr, $request, $params);
+		return parent::displayArticleGalley($templateMgr, $request, $params);
 	}
 
 	/**

@@ -36,7 +36,7 @@ class ViewableFilePlugin extends GenericPlugin {
 	/**
 	 * Get the filename of the template. (Default behavior may
 	 * be overridden through some combination of this function and the
-	 * getArticleGalley function.)
+	 * displayArticleGalley function.)
 	 * Returning null from this function results in an empty display.
 	 *
 	 * @return string
@@ -49,10 +49,11 @@ class ViewableFilePlugin extends GenericPlugin {
 	 * Display this galley in some manner.
 	 *
 	 * @param $templateMgr object
-	 * @param $request PKPRequest (Optional for legacy plugins)
+	 * @param $request PKPRequest
+	 * @param $params array
 	 * @return string
 	 */
-	function getArticleGalley($templateMgr, $request = null, $params) {
+	function displayArticleGalley($templateMgr, $request, $params) {
 		$templateFilename = $this->getTemplateFilename();
 		if ($templateFilename === null) return '';
 		return $templateMgr->fetch($this->getTemplatePath() . $templateFilename);
@@ -72,7 +73,7 @@ class ViewableFilePlugin extends GenericPlugin {
 
 		$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
 		if ($galley && $galley->getGalleyType() == $this->getName()) {
-			$output .= $this->getArticleGalley($templateMgr, $this->getRequest(), $params);
+			$output .= $this->displayArticleGalley($templateMgr, $this->getRequest(), $params);
 		}
 
 		return false;
