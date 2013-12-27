@@ -1,3 +1,11 @@
+{**
+ * plugins/viewableFile/pdfArticleGalley/display.tpl
+ *
+ * Copyright (c) 2003-2013 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Embedded viewing of a PDF galley.
+ *}
 {if $galley}
 	<script src="{$pluginJSPath}/inlinePdf.js"></script>
 	<script src="{$baseUrl}/lib/pkp/lib/pdfobject/pdfobject.js"></script>

@@ -254,7 +254,7 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
 
 			// load Article galley plugins
-			$galleyPlugins = PluginRegistry::loadCategory('viewableFiles', true);
+			PluginRegistry::loadCategory('viewableFiles', true);
 
 			$templateMgr->display('article/article.tpl');
 		}
