@@ -33,11 +33,11 @@
 	<group roleId="0x00001001" stages="5" name="default.groups.name.proofreader" plural="default.groups.plural.proofreader" abbrev="default.groups.abbrev.proofreader" />
 
 	<!-- Author Role -->
-	<group roleId="0x00010000" stages="1,3,4,5" name="default.groups.name.author" plural="default.groups.plural.author" abbrev="default.groups.abbrev.author" />
+	<group roleId="0x00010000" stages="1,3,4,5" name="default.groups.name.author" plural="default.groups.plural.author" abbrev="default.groups.abbrev.author" permitSelfRegistration="true" />
 	<group roleId="0x00010000" stages="1,3,4,5" name="default.groups.name.translator" plural="default.groups.plural.translator" abbrev="default.groups.abbrev.translator" />
 
 	<!-- Reviewer Role -->
-	<group roleId="0x00001000" stages="3" name="default.groups.name.externalReviewer" plural="default.groups.plural.externalReviewer" abbrev="default.groups.abbrev.externalReviewer" />
+	<group roleId="0x00001000" stages="3" name="default.groups.name.externalReviewer" plural="default.groups.plural.externalReviewer" abbrev="default.groups.abbrev.externalReviewer" permitSelfRegistration="true" />
 
 	<!-- Reader Role -->
 	<group roleId="0x00100000" stages="" name="default.groups.name.reader" plural="default.groups.plural.reader" abbrev="default.groups.abbrev.reader" />
