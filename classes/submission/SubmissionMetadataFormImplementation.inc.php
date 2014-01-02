@@ -23,21 +23,6 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 	function SubmissionMetadataFormImplementation($parentForm = null) {
 		parent::PKPSubmissionMetadataFormImplementation($parentForm);
 	}
-
-	/**
-	 * Save changes to submission.
-	 * @param $submission Submission
-	 * @param $request PKPRequest
-	 * @return Submission
-	 */
-	function execute($submission, $request) {
-		parent::execute($submission, $request);
-
-		// Log the modification event.
-		import('lib.pkp.classes.log.SubmissionLog');
-		import('classes.log.SubmissionEventLogEntry');
-		SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_METADATA_UPDATE, 'submission.event.general.metadataUpdated');
-	}
 }
 
 ?>
