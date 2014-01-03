@@ -191,7 +191,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
@@ -225,9 +224,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				}
 			}
 		}
-
-		// get journal published review form titles
-		$reviewFormTitles =& $reviewFormDao->getTitlesByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), 1);
 
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
 		$reviewFormResponses = array();
