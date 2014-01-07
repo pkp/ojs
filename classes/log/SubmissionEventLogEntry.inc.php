@@ -85,35 +85,6 @@ class SubmissionEventLogEntry extends PKPSubmissionEventLogEntry {
 	function SubmissionEventLogEntry() {
 		parent::PKPSubmissionEventLogEntry();
 	}
-
-	//
-	// Getters/setters
-	//
-	/**
-	 * Set the article ID
-	 * @param $articleId int
-	 */
-	function setArticleId($articleId) {
-		return $this->setAssocId($articleId);
-	}
-
-
-	/**
-	 * Get the article ID
-	 * @return int
-	 */
-	function getArticleId() {
-		return $this->getAssocId();
-	}
-
-
-	/**
-	 * Get the assoc ID
-	 * @return int
-	 */
-	function getAssocType() {
-		return ASSOC_TYPE_SUBMISSION;
-	}
 }
 
 ?>
