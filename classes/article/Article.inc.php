@@ -227,6 +227,25 @@ class Article extends Submission {
 		);
 		return $commentsStatusOptions;
 	}
+	/**
+	 * Get string representing the starting page of an article (for pages format x or xx-xx, e.g. 1 or 12-120 ).
+	 * @return string
+	 */
+	 
+	function getStartingPage() {
+		preg_match("/(\d+)(-(\d+))?/", $this->getPages(), $pages);
+		return $pages[1];
+		}
+		
+	/**
+	 * Get string representing the ending page of an article (for pages format xx-xx, e.g. 1-66 ).
+	 * @return string
+	 */
+	 
+	function getEndingPage() {
+		preg_match("/(\d+)(-(\d+))?/", $this->getPages(), $pages);
+		return $pages[3];
+		}
 }
 
 ?>
