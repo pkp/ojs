@@ -147,6 +147,10 @@ class NativeExportDom {
 			unset($policyNode);
 		}
 
+		$metaReviewedNode =& XMLCustomWriter::createChildWithText($doc, $root, 'meta_reviewed', 
+			$section->getMetaReviewed() ? "yes" : "no", false);
+		unset($metaReviewedNode);
+
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getId()) as $article) {
 			$articleNode =& NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article, $embedFiles);
