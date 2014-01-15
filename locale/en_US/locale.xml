@@ -195,6 +195,7 @@
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
+	<message key="user.noRoles.selectUsersWithoutRoles">Include users with no roles in this journal.</message>
 	<message key="user.profile.profileImage">Profile Image</message>
 	<message key="user.showAllJournals">Show My Journals</message>
 	<message key="user.registerForOtherJournals">Register for Other Journals</message>
