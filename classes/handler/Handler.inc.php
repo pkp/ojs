@@ -26,6 +26,7 @@ class Handler extends PKPHandler {
 	 * @return ItemIterator
 	 */
 	function getWorkingContexts($request) {
+		// For installation process
 		if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
 			return null;
 		}
