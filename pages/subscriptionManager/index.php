@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_subscriptionManager
  */
- 
+
 /**
  * @file pages/subscriptionManager/index.php
  *
@@ -12,7 +12,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_subscriptionManager
- * @brief Handle requests for journal management functions. 
+ * @brief Handle requests for journal management functions.
  *
  */
 
@@ -43,6 +43,7 @@ switch ($op) {
 	case 'payMethodSettings':
 	case 'savePayMethodSettings':
 	case 'suggestUsername':
+	case 'userProfile':
 		define('HANDLER_CLASS', 'SubscriptionManagerHandler');
 		import('pages.subscriptionManager.SubscriptionManagerHandler');
 		break;

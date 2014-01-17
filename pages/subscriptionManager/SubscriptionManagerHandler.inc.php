@@ -500,6 +500,53 @@ class SubscriptionManagerHandler extends Handler {
 	}
 
 	/**
+	 * Display a user's profile.
+	 * @param $args array first parameter is the ID or username of the user to display
+	 */
+	function userProfile($args) {
+		$this->validate();
+		$this->setupTemplate();
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('currentUrl', Request::url(null, null, 'viewPayments'));
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
+
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$userId = isset($args[0]) ? $args[0] : 0;
+		if (is_numeric($userId)) {
+			$userId = (int) $userId;
+			$user = $userDao->getById($userId);
+		} else {
+			$user = $userDao->getUserByUsername($userId);
+		}
+
+		if ($user == null) {
+			// Non-existent user requested
+			$templateMgr->assign('pageTitle', 'user.profile');
+			$templateMgr->assign('errorMsg', 'manager.people.invalidUser');
+			$templateMgr->assign('backLink', Request::url(null, null, 'viewPayments'));
+			$templateMgr->assign('backLinkLabel', 'manager.payment.feePaymentOptions');
+			$templateMgr->display('common/error.tpl');
+		} else {
+			$site =& Request::getSite();
+			$journal =& Request::getJournal();
+
+			$countryDao =& DAORegistry::getDAO('CountryDAO');
+			$country = null;
+			if ($user->getCountry() != '') {
+				$country = $countryDao->getCountry($user->getCountry());
+			}
+			$templateMgr->assign('country', $country);
+
+			$templateMgr->assign('userInterests', $user->getInterestString());
+
+			$templateMgr->assign_by_ref('user', $user);
+			$templateMgr->assign('localeNames', AppLocale::getAllLocales());
+			$templateMgr->display('subscription/userProfile.tpl');
+		}
+	}
+
+	/**
 	 * Setup common template variables.
 	 */
 	function setupTemplate($subclass = false, $institutional = false) {
