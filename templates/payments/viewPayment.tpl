@@ -37,7 +37,7 @@
 			<td>
 			{assign var=user value=$userDao->getById($payment->getUserId())}
 			{if $isJournalManager}
-				<a class="action" href="{url page="user" op="profile" path=$payment->getUserId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a>
+				<a class="action" href="{url op="userProfile" path=$payment->getUserId()}">{$user->getUsername()|escape|wordwrap:15:" ":true}</a>
 			{else}
 				{$user->getUsername()|escape|wordwrap:15:" ":true}
 			{/if}
