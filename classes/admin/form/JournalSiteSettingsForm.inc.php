@@ -101,6 +101,7 @@ class JournalSiteSettingsForm extends Form {
 	 * Save journal settings.
 	 */
 	function execute() {
+		$site =& Request::getSite();
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		if (isset($this->journalId)) {
@@ -120,7 +121,6 @@ class JournalSiteSettingsForm extends Form {
 			$section = null;
 		} else {
 			$isNewJournal = true;
-			$site =& Request::getSite();
 
 			// Give it a default primary locale
 			$journal->setPrimaryLocale ($site->getPrimaryLocale());
