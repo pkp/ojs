@@ -69,10 +69,12 @@ class NativeExportDom {
 				if ($coverFile != '') {
 					$imageNode =& XMLCustomWriter::createElement($doc, 'image');
 					XMLCustomWriter::appendChild($coverNode, $imageNode);
+
 					import('classes.file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
 					$coverPagePath = $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
 					$coverPagePath .= $coverFile;
+					$coverPagePath = realpath($coverPagePath);
 					$imageData = $embedFiles ? $publicFileManager->readFile($coverPagePath) : '';
 					$embedNode =& NativeExportDom::createEmbedElement($doc, $imageNode, $embedFiles, $imageData, $coverPagePath);
 					XMLCustomWriter::setAttribute($embedNode, 'filename', $issue->getOriginalFileName($locale));
