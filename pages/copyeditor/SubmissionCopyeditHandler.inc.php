@@ -53,6 +53,10 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$templateMgr->display('copyeditor/submission.tpl');
 	}
 
+	function submissionEditing($args, &$request) {
+		$this->submission($args, &$request);
+	}
+
 	function completeCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
 		$this->validate($articleId);

@@ -23,6 +23,7 @@ switch ($op) {
 	// Assignment Tracking
 	//
 	case 'submission':
+	case 'submissionEditing':
 	case 'completeCopyedit':
 	case 'completeAuthorCopyedit':
 	case 'completeFinalCopyedit':
