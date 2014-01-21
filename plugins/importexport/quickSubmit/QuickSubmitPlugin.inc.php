@@ -149,8 +149,21 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 			$form->execute();
 			Request::redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 		} else if (!isset($editData) && $form->validate()) {
-			$form->execute();
-			$templateMgr->display($this->getTemplatePath() . 'submitSuccess.tpl');
+			$galley = $form->execute();
+/***
+			$galleyLabel = $galley->getLabel();
+			error_log(print_r($galley,1));
+			error_log("galleyLabel: " . $galleyLabel);
+			if($galleyLabel == 'HTML') {
+				$articleId = $galley->getArticleId();
+				$galleyId = $galley->getId();
+				error_log("articleId: $articleId");
+				error_log("galleyId: $galleyId");
+				Request::redirect(null, 'editor', 'editGalley', array($articleId, $galleyId));
+			} else { ***/
+				$templateMgr->assign_by_ref('galley', $galley);
+				$templateMgr->display($this->getTemplatePath() . 'submitSuccess.tpl');
+			/* } */
 		} else {
 			$form->display();
 		}

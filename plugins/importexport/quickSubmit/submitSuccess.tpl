@@ -13,6 +13,13 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<p>{translate key="plugins.importexport.quickSubmit.successDescription"}  <a href="{plugin_url}">{translate key="plugins.importexport.quickSubmit.successReturn"}</a></p>
+<p>{translate key="plugins.importexport.quickSubmit.successDescription"}</p>  
+
+<p>
+	If you uploaded an HTML file, you can add associated image files on the <a href="{url op="editGalley" page="editor" path=$galley->getArticleId()|to_array:$galley->getId()}" class="action">Edit Layout Galley</a> screen.</p>
+
+<p>
+	Or return to the <a href="{plugin_url}" class="action">QuickSubmit Plugin</a> to add another article.
+</p>
 
 {include file="common/footer.tpl"}

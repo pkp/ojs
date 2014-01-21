@@ -23,8 +23,8 @@
 	<message key="plugins.importexport.quickSubmit.leaveUnpublished">Leave unpublished</message>
 	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Save and Create Another</message>
 	<message key="plugins.importexport.quickSubmit.submissionData">Submission Data</message>	
-	<message key="plugins.importexport.quickSubmit.submissionDescription">Choose a PDF file to be used as the final galley file for this submission.</message>	
-	<message key="plugins.importexport.quickSubmit.submissionDescriptionPdfOrHtml">Choose a PDF or HTML file to be used as the final galley file for this submission.</message>
+	<message key="plugins.importexport.quickSubmit.submissionDescription">Choose a PDF file to be used as the final galley file for this submission.</message>	`
+	<message key="plugins.importexport.quickSubmit.submissionDescriptionPdfOrHtml">Choose a PDF or HTML file to be used as the final galley file for this submission. Please note that if you upload an HTML file, you will be given the opportunity to upload associated image files after clicking the 'Save and Continue' button at the bottom of the page.</message>
 	<message key="plugins.importexport.quickSubmit.uploadSubmissionFile">Upload submission file (PDF format only)</message>
 	<message key="plugins.importexport.quickSubmit.replaceSubmissionFile">Replace submission file (PDF format only)</message>
         <message key="plugins.importexport.quickSubmit.uploadSubmissionFilePdfOrHtml">Upload submission file (PDF or HTML format only)</message>

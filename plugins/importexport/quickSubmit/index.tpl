@@ -168,11 +168,7 @@ function updateAbstractRequired() {
 		</tr>
 		{else}
 		<tr valign="top">
-			{if $journal->getPath() == 'limn'}
-				<td colspan="2" class="nodata">{translate key="plugins.importexport.quickSubmit.submissionDescriptionPdfOrHtml"}</td>
-			{else}
-				<td colspan="2" class="nodata">{translate key="plugins.importexport.quickSubmit.submissionDescription"}</td>
-			{/if}
+				<td colspan="2" class="nodata">{translate key="plugins.importexport.quickSubmit.submissionDescriptionPdfOrHtml"}<br/><br/></td>
 		</tr>
 		{/if}
 		</table>
@@ -183,19 +179,11 @@ function updateAbstractRequired() {
 		<table class="data" width="100%">
 		<tr>
 			<td width="30%" class="label">
-				{if $journal->getPath() == 'limn'}
                                         {if $submissionFile}
                                                 {fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.replaceSubmissionFilePdfOrHtml"}
                                         {else}
                                                 {fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.uploadSubmissionFilePdfOrHtml"}
                                         {/if}
-				{else}
-					{if $submissionFile}
-						{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.replaceSubmissionFile"}
-					{else}
-						{fieldLabel name="submissionFile" key="plugins.importexport.quickSubmit.uploadSubmissionFile"}
-					{/if}
-				{/if}
 			</td>
 			<td width="70%" class="value">
 				<input type="file" class="uploadField" name="submissionFile" id="submissionFileUpload" /> <input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" />
@@ -513,7 +501,8 @@ function updateAbstractRequired() {
 <div class="separator"></div>
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" />   
-<input type="submit" class="button" name="createAnother" value="{translate key="plugins.importexport.quickSubmit.saveAndCreateAnother"}" />    
+<!-- 2014016 BLH removed 'Save and Create Another' button so that people have a chance to add image files in the case of HTML galleys -->
+<!--<input type="submit" class="button" name="createAnother" value="{translate key="plugins.importexport.quickSubmit.saveAndCreateAnother"}" /> -->
 <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}')" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
