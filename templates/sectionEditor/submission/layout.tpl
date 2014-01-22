@@ -208,11 +208,11 @@
 {if $currentJournal->getLocalizedSetting('layoutInstructions')}
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="layout"}')" class="action">{translate key="submission.layout.instructions"}</a>
-{/if}
+<!--{/if}
 {if $currentJournal->getSetting('provideRefLinkInstructions')}
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="referenceLinking"}')" class="action">{translate key="submission.layout.referenceLinking"}</a>
-{/if}
+{/if}-->
 </div>
 </div>
 
