@@ -133,7 +133,7 @@
 		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
 
-<!--	<tr bgcolor="#FFFF99">
+<tr bgcolor="#FFFF99">
 		<td colspan="2">{translate key="submission.layout.galleyFormat"}</td>
 		<td colspan="2" class="heading">{translate key="common.file"}</td>
 		<td class="heading">{translate key="common.order"}</td>
@@ -145,7 +145,7 @@
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr bgcolor="#FFFF99">
 		<td width="2%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="26%">{$galley->getGalleyLabel()|escape} &nbsp; <a href="{url op="proofGalley" path=$submission->getId()|to_array:$galley->getId()}" class="action">{translate key="submission.layout.viewProof"}</a></td>
+		<td width="26%">{$galley->getGalleyLabel()|escape} &nbsp; <!--<a href="{url op="proofGalley" path=$submission->getId()|to_array:$galley->getId()}" class="action">{translate key="submission.layout.viewProof"}</a>--></td>
 		<td colspan="2"><a href="{url op="downloadFile" path=$submission->getId()|to_array:$galley->getFileId()}" class="file">{$galley->getFileName()|escape}</a>&nbsp;&nbsp;{$galley->getDateModified()|date_format:$dateFormatShort}</td>
 		<td><a href="{url op="orderGalley" d=u articleId=$submission->getId() galleyId=$galley->getId()}" class="plain">&uarr;</a> <a href="{url op="orderGalley" d=d articleId=$submission->getId() galleyId=$galley->getId()}" class="plain">&darr;</a></td>
 		<td>
@@ -162,7 +162,7 @@
 	{/foreach}
 	<tr>
 		<td colspan="7" class="separator">&nbsp;</td>
-	</tr>-->
+	</tr>
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.supplementaryFiles"}</td>
 		<td width="34%" colspan="2" class="heading">{translate key="common.file"}</td>
