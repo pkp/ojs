@@ -133,7 +133,7 @@
 		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
 
-	<tr bgcolor="#FFFF99">
+<!--	<tr bgcolor="#FFFF99">
 		<td colspan="2">{translate key="submission.layout.galleyFormat"}</td>
 		<td colspan="2" class="heading">{translate key="common.file"}</td>
 		<td class="heading">{translate key="common.order"}</td>
@@ -162,7 +162,7 @@
 	{/foreach}
 	<tr>
 		<td colspan="7" class="separator">&nbsp;</td>
-	</tr>
+	</tr>-->
 	<tr>
 		<td width="28%" colspan="2">{translate key="submission.supplementaryFiles"}</td>
 		<td width="34%" colspan="2" class="heading">{translate key="common.file"}</td>
