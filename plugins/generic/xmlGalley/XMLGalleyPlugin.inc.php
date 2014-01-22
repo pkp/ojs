@@ -138,6 +138,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$articleXMLGalley->setLocale($galley->getLocale());
 
 		$articleXMLGalley->setType('public');
+		$articleXMLGalley->setFileStage($galley->getFileStage());
 
 		// Copy CSS and image file references from source galley
 		if ($galley->isHTMLGalley()) {
