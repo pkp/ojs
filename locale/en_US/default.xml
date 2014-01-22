@@ -176,17 +176,10 @@ ________________________________________________________________________</messag
 
 	<!-- Genre Defaults -->
 	<message key="default.genres.researchInstrument">Research Instrument</message>
-	<message key="default.genres.researchInstrument.designation">##</message>
 	<message key="default.genres.researchMaterials">Research Materials</message>
-	<message key="default.genres.researchMaterials.designation">##</message>
 	<message key="default.genres.researchResults">Research Results</message>
-	<message key="default.genres.researchResults.designation">##</message>
 	<message key="default.genres.transcripts">Transcripts</message>
-	<message key="default.genres.transcripts.designation">##</message>
 	<message key="default.genres.dataAnalysis">Data Analysis</message>
-	<message key="default.genres.dataAnalysis.designation">##</message>
 	<message key="default.genres.dataSet">Data Set</message>
-	<message key="default.genres.dataSet.designation">##</message>
 	<message key="default.genres.sourceTexts">Source Texts</message>
-	<message key="default.genres.sourceTexts.designation">##</message>
 </locale>
