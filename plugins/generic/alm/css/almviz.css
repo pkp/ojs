@@ -1,0 +1,120 @@
+.alm {
+    font-size: 1em;
+
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 1.5em;
+    color: #789aa1;
+    text-decoration: underline;
+}
+
+.alm-chart-area {
+    font-size: 11px;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: black;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+.barsForTooltip {
+    fill: ffffff;
+    fill-opacity: 0;
+}
+
+.bar.main{
+    fill: #789aa1;
+}
+
+.bar.alt{
+    fill: #304345;
+}
+
+.alm-row {
+    margin-bottom: 1em;
+}
+
+.alm-category-row-heading {
+    font-size: 1.2em;
+}
+
+.alm-category-row-info {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    top: -5px;
+    left: 2px;
+    margin-top: 5px;
+}
+
+.alm-count-label {
+    width: 100px;
+    float: left;
+    margin-top: .5em;
+    margin-right: 2em;
+    padding: 0.8em;
+    text-align: center;
+    border: 1px solid #c5dbec;
+    background: #c8d7d7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: #304345;
+
+}
+
+.alm-count-label a {
+    text-decoration: none;
+}
+
+.alm-count-label a:hover {
+    background-color: transparent !important;
+    color: #555555 !important;
+}
+
+.alm-count-label img {
+    padding-right:0.5em;
+}
+
+.alm-count {
+    font-size: 1.15em;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.alm-control {
+    text-decoration: underline;
+    color: blue;
+}
+
+.alm-control.active {
+    text-decoration: none;
+}
+
+.alm-control.disabled {
+    cursor: default;
+    text-decoration: none;
+    color: grey;
+}
+
+.alm-control:hover {
+    background-color: transparent;
+}
+
+.label-img {
+    vertical-align: middle;
+}
+
+#built-with {
+    float: right;
+    font-size: .75em;
+}
