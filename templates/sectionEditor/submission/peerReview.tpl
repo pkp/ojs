@@ -150,6 +150,12 @@
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
 {assign var="reviewId" value=$reviewAssignment->getId()}
 
+{$smarty->clear_assign($isEditor)}
+{foreach from=$reviewerEditorStatus item=status}
+	{if $status.reviewerId = $reviewAssignment->getReviewerId()}
+		{assign var="isEditor" value=$status.isEditor}
+	{/if}
+{/foreach}
 {if not $reviewAssignment->getCancelled() and not $reviewAssignment->getDeclined()}
 	{assign var="reviewIndex" value=$reviewIndexes[$reviewId]}
 	<div class="separator"></div>
@@ -166,6 +172,11 @@
 				{/if}
 		</td>
 	</tr>
+	{if $isEditor}
+	<tr>
+		<td colspan="100%" style="padding: 5px; background: #F0B1A8;">Warning: This reviewer is also enrolled as an editor or journal manager and therefore has access to all details related to this submission.</td>
+	</tr>
+	{/if}
 	</table>
 
 	<table width="100%" class="data">

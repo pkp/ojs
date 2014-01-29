@@ -270,6 +270,28 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
 		$templateMgr->assign('round', $round);
 		$templateMgr->assign_by_ref('reviewAssignments', $submission->getReviewAssignments($round));
+
+		// determine whether or not a reviewer is also a JM, editor, section editor, copyeditor, layout editor or proofreader
+		$reviewerEditorStatus = array();
+		$reviewAssignments = $submission->getReviewAssignments($round);
+		foreach ($reviewAssignments as $reviewAssignment) {
+			$reviewerId = $reviewAssignment->getReviewerId();
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			if ($roleDao->roleExists($journal->getId(), $reviewerId, ROLE_ID_EDITOR) 
+				OR $roleDao->roleExists($journal->getId(), $reviewerId, ROLE_ID_JOURNAL_MANAGER) 
+				OR $roleDao->roleExists($journal->getId(), $reviewerId, ROLE_ID_SECTION_EDITOR)
+				OR $roleDao->roleExists($journal->getId(), $reviewerId, ROLE_ID_COPYEDITOR)
+				OR $roleDao->roleExists($journal->getId(), $reviewerId, ROLE_ID_LAYOUT_EDITOR)
+				OR $roleDao->roleExists($journal->getId(), $reviewerId, ROLE_ID_PROOFREADER)				
+			) {
+				$reviewerIsEditor = 1;
+			} else {
+				$reviewerIsEditor = 0;
+			}
+			$reviewerEditorStatus[] = array('reviewerId' => $reviewerId, 'isEditor' => $reviewerIsEditor);
+		}
+		$templateMgr->assign_by_ref('reviewerEditorStatus', $reviewerEditorStatus);
+
 		$templateMgr->assign('reviewFormResponses', $reviewFormResponses);
 		$templateMgr->assign('reviewFormTitles', $reviewFormTitles);
 		$templateMgr->assign_by_ref('notifyReviewerLogs', $notifyReviewerLogs);
