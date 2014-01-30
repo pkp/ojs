@@ -256,6 +256,17 @@ class ArticleCommentDAO extends DAO {
 			)
 		);
 	}
+
+	 * Check how many comments each article has.
+	 * @param $articleId int The ID of the article to check
+	 * @return boolean
+	 */
+	function attributedCommentsExistForArticle($articleId) {
+		$result =& $this->retrieve('SELECT count(*) FROM comments WHERE article_id = ?', (int) $articleId);
+		$returner = $result->fields[0];
+		$result->Close();
+		return $returner;
+	}
 }
 
 ?>

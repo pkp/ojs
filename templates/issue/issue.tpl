@@ -9,76 +9,42 @@
  *
  *}
 {foreach name=sections from=$publishedArticles item=section key=sectionId}
-{if $section.title}<h4 class="tocSectionTitle">{$section.title|escape}</h4>{/if}
+	{if $section.title}<div class="toc-Title2">{$section.title|escape}</div>{/if}
 
-{foreach from=$section.articles item=article}
-	{assign var=articlePath value=$article->getBestArticleId($currentJournal)}
+	{foreach from=$section.articles item=article}
+		{assign var=issue2 value=$issueDao->getIssueById($article->getIssueId())}
+		{assign var=articlePath value=$article->getBestArticleId($currentJournal)}
+		{assign var=articleId value=$article->getArticleId()}
 
-<table class="tocArticle" width="100%">
-<tr valign="top">
-	{if $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getHideCoverPageToc($locale)}
-	<td rowspan="2">
-		<div class="tocArticleCoverImage">
-		<a href="{url page="article" op="view" path=$articlePath}" class="file">
-		<img src="{$coverPagePath|escape}{$article->getFileName($locale)|escape}"{if $article->getCoverPageAltText($locale) != ''} alt="{$article->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}/></a></div>
-	</td>
-	{/if}
-	{call_hook name="Templates::Issue::Issue::ArticleCoverImage"}
+		<div class="toc-title">{$article->getArticleTitle()|strip_unsafe_html}</div>
+		<div class="toc-date">{$article->getDatePublished()|date_format:"%B %e, %Y"}. Vol. {$issue2->getVolume()}({$issue2->getNumber()}){if $article->getPages()|escape}, pp.{$article->getPages()|escape}{/if}</div>
 
-	{if $article->getLocalizedAbstract() == ""}
-		{assign var=hasAbstract value=0}
-	{else}
-		{assign var=hasAbstract value=1}
-	{/if}
-
-	{assign var=articleId value=$article->getId()}
-	{if (!$subscriptionRequired || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $articleExpiryPartial.$articleId))}
-		{assign var=hasAccess value=1}
-	{else}
-		{assign var=hasAccess value=0}
-	{/if}
-
-	<td class="tocTitle">{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$articlePath}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>{else}{$article->getLocalizedTitle()|strip_unsafe_html}{/if}</td>
-	<td class="tocGalleys">
-		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
+		<div class="toc-byline">
+			{if (!$section.hideAuthor && $article->getHideAuthor() == 0) || $article->getHideAuthor() == 2}
+				{foreach from=$article->getAuthors() item=author name=authorList}
+					{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
+				{/foreach}
+			{else}
+				&nbsp;
+			{/if}
+		</div>
+		<div class="toc-links">
 			{foreach from=$article->getGalleys() item=galley name=galleyList}
 				<a href="{url page="article" op="view" path=$articlePath|to_array:$galley->getBestGalleyId($currentJournal)}" {if $galley->getRemoteURL()}target="_blank" {/if}class="file">{$galley->getGalleyLabel()|escape}</a>
-				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
-					{if $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || !$galley->isPdfGalley()}
-						<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
-					{else}
-						<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
-					{/if}
-				{/if}
 			{/foreach}
-			{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
-				{if $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN}
-					<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
+			{if $ArticleCommentDAO->attributedCommentsExistForArticle($article->getArticleId())}
+				{if $ArticleCommentDAO->attributedCommentsExistForArticle($article->getArticleId()) == 1}
+					<a href="{$baseUrl}/comment/view/{$article->getArticleId()}/0" class="file">Comment ({$ArticleCommentDAO->attributedCommentsExistForArticle($article->getArticleId())})</a>
 				{else}
-					<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
+					<a href="{$baseUrl}/comment/view/{$article->getArticleId()}/0" class="file">Comments ({$CommentDAO->attributedCommentsExistForArticle($article->getArticleId())})</a>
 				{/if}
 			{/if}
-		{/if}
-	</td>
-</tr>
-<tr>
-	<td class="tocAuthors">
-		{if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
-			{foreach from=$article->getAuthors() item=author name=authorList}
-				{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
-			{/foreach}
-		{else}
-			&nbsp;
-		{/if}
-	</td>
-	<td class="tocPages">{$article->getPages()|escape}</td>
-</tr>
-</table>
-{call_hook name="Templates::Issue::Issue::Article"}
-{/foreach}
+			{else}
+				<a href="{$baseUrl}/comment/view/{$article->getArticleId()}/0" class="file">Add a comment</a>
+			{/if}
+		</div>
+	{/foreach}
 
 {if !$smarty.foreach.sections.last}
-<div class="separator"></div>
 {/if}
 {/foreach}
-

@@ -73,6 +73,8 @@ class IndexHandler extends Handler {
 					$templateMgr->assign('enableAnnouncementsHomepage', $enableAnnouncementsHomepage);
 				}
 			}
+			$CommentDAO =& DAORegistry::getDAO('ArticleCommentDAO');
+			$templateMgr->assign('ArticleCommentDAO', $ArticleCommentDAO);
 			$templateMgr->display('index/journal.tpl');
 		} else {
 			$site =& Request::getSite();
