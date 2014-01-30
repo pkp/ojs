@@ -259,6 +259,73 @@ class PublishedArticleDAO extends DAO {
 		return $publishedArticles;
 	}
 
+	function &getallPublishedArticlesInSections($simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
+		$publishedArticles = array();
+
+		$result = &$this->retrieve(
+			'SELECT DISTINCT
+				pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
+				s.abstracts_not_required AS abstracts_not_required,
+				s.hide_title AS section_hide_title,
+				s.hide_author AS section_hide_author,
+				COALESCE(o.seq, s.seq) AS section_seq,
+				pa.seq
+			FROM	published_articles pa,
+				articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	pa.article_id = a.article_id
+				AND a.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY section_seq ASC, pa.date_published DESC',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale
+			)
+		);
+
+		$currSectionId = 0;
+		while (!$result->EOF) {
+			$row = &$result->GetRowAssoc(false);
+			$publishedArticle = &$this->$func($row);
+			if ($publishedArticle->getSectionId() != $currSectionId) {
+				$currSectionId = $publishedArticle->getSectionId();
+				$publishedArticles[$currSectionId] = array(
+					'articles'=> array(),
+					'title' => '',
+					'abstractsNotRequired' => $row['abstracts_not_required'],
+					'hideAuthor' => $row['section_hide_author']
+				);
+
+				if (!$row['section_hide_title']) {
+					$publishedArticles[$currSectionId]['title'] = $publishedArticle->getSectionTitle();
+				}
+			}
+			$publishedArticles[$currSectionId]['articles'][] = $publishedArticle;
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $publishedArticles;
+	}
+
 	/**
 	 * Retrieve Published Articles by section id
 	 * @param $sectionId int
@@ -307,6 +374,102 @@ class PublishedArticleDAO extends DAO {
 		$currSectionId = 0;
 		while (!$result->EOF) {
 			$publishedArticle =& $this->$func($result->GetRowAssoc(false));
+			$publishedArticles[] = $publishedArticle;
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $publishedArticles;
+	}
+	function &getRecentPublishedArticles($simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
+		$publishedArticles = array();
+
+		$result = &$this->retrieve(
+			'SELECT	pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	published_articles pa,
+				articles a,
+				sections s
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.section_id = s.section_id
+				AND pa.article_id = a.article_id
+				AND a.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY pa.date_published DESC
+			LIMIT 3',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale
+			)
+		);
+
+		$currSectionId = 0;
+		while (!$result->EOF) {
+			$publishedArticle = &$this->$func($result->GetRowAssoc(false));
+			$publishedArticles[] = $publishedArticle;
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $publishedArticles;
+	}
+
+	function &getallPublishedArticlesBySectionId($sectionId, $simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
+		$publishedArticles = array();
+
+		$result = &$this->retrieve(
+			'SELECT	pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	published_articles pa,
+				articles a,
+				sections s
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.section_id = s.section_id
+				AND pa.article_id = a.article_id
+				AND a.section_id = ?
+				AND a.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY pa.date_published DESC',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$sectionId,
+			)
+		);
+
+		$currSectionId = 0;
+		while (!$result->EOF) {
+			$publishedArticle = &$this->$func($result->GetRowAssoc(false));
 			$publishedArticles[] = $publishedArticle;
 			$result->moveNext();
 		}

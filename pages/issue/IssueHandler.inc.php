@@ -90,6 +90,9 @@ class IssueHandler extends Handler {
 		$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
 		$templateMgr->assign('issueId', $issue->getBestIssueId());
 
+		$ArticleCommentDAO =& DAORegistry::getDAO('ArticleCommentDAO');
+		$templateMgr->assign('ArticleCommentDAO', $ArticleCommentDAO);
+		
 		// Display creative commons logo/licence if enabled
 		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'archive'), 'archive.archives')));
@@ -127,6 +130,30 @@ class IssueHandler extends Handler {
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
+	}
+
+	function section($args) {
+		parent::validate(true);
+		$sectionId = isset($args[0]) ? $args[0] : 0;
+
+		$journal = &Request::getJournal();
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticles = &$publishedArticleDao->getallPublishedArticlesBySectionId($sectionId, false);
+		$SectionDao = &DAORegistry::getDAO('SectionDAO');
+		$Section = &$SectionDao->getSection($sectionId);
+		$SectionTitle = $Section->getTitle(Locale::getLocale());
+		$CommentDAO =& DAORegistry::getDAO('CommentDAO');
+ 		$templateMgr = &TemplateManager::getManager();
+
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$templateMgr->assign('issueDao', $issueDao);
+
+		$templateMgr->assign('CommentDAO', $CommentDAO);
+		$templateMgr->assign('locale', Locale::getLocale());
+		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
+		$templateMgr->assign('SectionTitle', $SectionTitle);
+		$templateMgr->assign('publishedArticles', $publishedArticles);
+		$templateMgr->display('issue/section.tpl');
 	}
 
 	/**
@@ -443,13 +470,19 @@ class IssueHandler extends Handler {
 				// Published articles
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
+				$allpublishedArticles = &$publishedArticleDao->getallPublishedArticlesInSections($issue->getIssueId(), true);
 
 				$publicFileManager = new PublicFileManager();
 				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
+				$templateMgr->assign_by_ref('allpublishedArticles', $allpublishedArticles);
+				$templateMgr->assign_by_ref('recentpublishedArticles', $recentpublishedArticles);
 				$showToc = true;
 			}
 			$templateMgr->assign('showToc', $showToc);
 			$templateMgr->assign_by_ref('issue', $issue);
+
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$templateMgr->assign('issueDao', $issueDao);
 
 			// Subscription Access
 			import('classes.issue.IssueAction');
