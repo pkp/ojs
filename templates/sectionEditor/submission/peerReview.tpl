@@ -152,7 +152,7 @@
 
 {$smarty->clear_assign($isEditor)}
 {foreach from=$reviewerEditorStatus item=status}
-	{if $status.reviewerId = $reviewAssignment->getReviewerId()}
+	{if $status.reviewerId == $reviewAssignment->getReviewerId()}
 		{assign var="isEditor" value=$status.isEditor}
 	{/if}
 {/foreach}
