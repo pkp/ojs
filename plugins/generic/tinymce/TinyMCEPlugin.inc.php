@@ -104,7 +104,9 @@ class TinyMCEPlugin extends GenericPlugin {
 				theme : "advanced",
 				theme_advanced_buttons1 : "cut,copy,paste,|,bold,italic,underline,bullist,numlist,|,link,unlink,help,code,fullscreen,jbimages",
 				theme_advanced_buttons2 : "",
-				theme_advanced_buttons3 : ""
+				theme_advanced_buttons3 : "",
+				init_instance_callback: $.pkp.controllers.SiteHandler.prototype.triggerTinyMCEInitialized,
+				setup: $.pkp.controllers.SiteHandler.prototype.triggerTinyMCESetup
 			});
 		</script>';
 
