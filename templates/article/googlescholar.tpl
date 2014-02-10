@@ -42,7 +42,13 @@
 {/if}
 
 {if $article->getPages()}
-	<meta name="citation_firstpage" content="{$article->getPages()|escape}"/>
+	{if $article->getStartingPage()}
+		<meta name="citation_firstpage" content="{$article->getStartingPage()|escape}"/>
+	{/if}
+	{if $article->getEndingPage()}
+		<meta name="citation_lastpage" content="{$article->getEndingPage()|escape}"/>
+	{/if}
+	
 {/if}
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{if $issue->getPublished()}
