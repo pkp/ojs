@@ -89,7 +89,9 @@
 			{if $issue->getNumber()}<prism:number>{$issue->getNumber()|escape}</prism:number>{/if}
 			
 			{if $article->getPages()}
-				<prism:startingPage>{$article->getStartingPage()|escape}</prism:startingPage>
+				{if $article->getStartingPage()}
+					<prism:startingPage>{$article->getStartingPage()|escape}</prism:startingPage>
+				{/if}
 				{if $article->getEndingPage()}
 					<prism:endingPage>{$article->getEndingPage()|escape}</prism:endingPage>
 				{/if}

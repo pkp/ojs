@@ -34,7 +34,7 @@
 {if $article->getPubId('doi')}%R {$article->getPubId('doi')|escape}
 {/if}
 {if $article->getPages()}
-%& {$article->getStartingPage()|escape}
+{if $article->getStartingPage()}%& {$article->getStartingPage()|escape}{/if}
 {if $article->getEndingPage()}
 {math equation="end - start + 1" end=$article->getEndingPage() start=$article->getStartingPage() assign=pages}
 %P {$pages}
