@@ -227,6 +227,7 @@ class Article extends Submission {
 		);
 		return $commentsStatusOptions;
 	}
+
 	/**
 	 * Get starting page of an article.
 	 * @return int
@@ -234,17 +235,16 @@ class Article extends Submission {
 	function getStartingPage() {
 		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
 		return $pages[1];
-		}
-		
+	}
+
 	/**
 	 * Get ending page of an article.
 	 * @return int
 	 */
-	 
 	function getEndingPage() {
 		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
 		return $pages[2];
-		}
+	}
 }
 
 ?>

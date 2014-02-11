@@ -87,7 +87,7 @@
 			{/if}
 			{if $issue->getVolume()}<prism:volume>{$issue->getVolume()|escape}</prism:volume>{/if}
 			{if $issue->getNumber()}<prism:number>{$issue->getNumber()|escape}</prism:number>{/if}
-			
+
 			{if $article->getPages()}
 				{if $article->getStartingPage()}
 					<prism:startingPage>{$article->getStartingPage()|escape}</prism:startingPage>
@@ -96,7 +96,7 @@
 					<prism:endingPage>{$article->getEndingPage()|escape}</prism:endingPage>
 				{/if}
 			{/if}
-			
+
 			{if $article->getPubId('doi')}
 				<prism:doi>{$article->getPubId('doi')|escape}</prism:doi>
 			{/if}

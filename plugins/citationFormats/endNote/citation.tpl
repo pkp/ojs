@@ -56,4 +56,3 @@
 %7 {$issue->getDatePublished()|date_format:"%Y-%m-%d"}
 {/if}
 
-
