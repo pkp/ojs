@@ -280,6 +280,8 @@ class ProfileForm extends Form {
 		$user->setAffiliation($affiliation, null); // Localized
 		$user->setSignature($this->getData('signature'), null); // Localized
 		$user->setEmail($this->getData('email'));
+                // MCH 20140211: In our OJS, email is the same as username.
+		$user->setUsername(strtolower($this->getData('email')));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));

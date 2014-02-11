@@ -125,6 +125,10 @@
 	<td class="value"><input type="text" name="email" id="email" value="{$email|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
 <tr valign="top">
+	<td class="label"></td>
+	<td class="value"><b>Important note:</b> If you change your email address, you will need to reset your password before logging in again.</td>
+</tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="userUrl" key="user.url"}</td>
 	<td class="value"><input type="text" name="userUrl" id="userUrl" value="{$userUrl|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
