@@ -88,7 +88,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 		return $verbs;
 	}
 
- 	/**
+	/**
 	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {

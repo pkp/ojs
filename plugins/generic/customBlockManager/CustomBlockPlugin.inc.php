@@ -94,7 +94,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		return $verbs;
 	}
 
- 	/**
+	/**
 	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
