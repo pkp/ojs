@@ -48,7 +48,6 @@
 	{if $article->getEndingPage()}
 		<meta name="citation_lastpage" content="{$article->getEndingPage()|escape}"/>
 	{/if}
-	
 {/if}
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{if $issue->getPublished()}
