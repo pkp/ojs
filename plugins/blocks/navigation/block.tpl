@@ -19,16 +19,19 @@
 				<td>
 				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="simpleQuery" filterValue="" size=15}{/capture}
 				{if empty($filterInput)}
-					<input type="text" id="simpleQuery" name="simpleQuery" size="15" maxlength="255" value="" class="textField" />
+					<label for="simpleQuery">{translate key="navigation.search"} <br />
+					<input type="text" id="simpleQuery" name="simpleQuery" size="15" maxlength="255" value="" class="textField" /></label>
 				{else}
 					{$filterInput}
 				{/if}
 				</td>
 			</tr>
 			<tr>
-				<td><select id="searchField" name="searchField" size="1" class="selectMenu">
+				<td><label for="searchField">
+				<select id="searchField" name="searchField" size="1" class="selectMenu">
 					{html_options_translate options=$articleSearchByOptions}
-				</select></td>
+				</select></label>
+				</td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="{translate key="common.search"}" class="button" /></td>
