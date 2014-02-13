@@ -41,7 +41,7 @@
 <ul class="menu">
 	<li><a href="{url op="issueToc" path=$issueId}">{translate key="issue.toc"}</a></li>
 	<li class="current"><a href="{url op="issueData" path=$issueId}">{translate key="editor.issues.issueData"}</a></li>
-	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
+	{*{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}*}
 </ul>
 
 <form name="issue" method="post" action="{url op="editIssue" path=$issueId}" enctype="multipart/form-data">
