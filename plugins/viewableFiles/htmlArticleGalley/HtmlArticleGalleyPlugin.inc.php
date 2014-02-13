@@ -319,7 +319,7 @@ class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 		foreach ($dependentFiles as $file) {
 
 			if ($file->getGenreId() == $styleGenre->getId()) {
-				if ($file->getFileType() != 'text/css') {
+				if ($file->getFileType() != 'text/css' && preg_match('/\.css$/', $file->getOriginalFileName())) {
 					$file->setFileType('text/css');
 					$submissionFileDao->updateObject($file);
 				}
