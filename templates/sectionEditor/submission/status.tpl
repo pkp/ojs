@@ -24,7 +24,7 @@
 		</td>
 		<td width="50%" class="value">
 			{if $status != STATUS_ARCHIVED}
-			    {if $isSiteAdmin == 1}
+			    {if $isSiteAdmin == 1 or $status != STATUS_PUBLISHED}
 				    <a href="{url op="unsuitableSubmission" articleId=$submission->getId()}" class="action">{translate key="editor.article.archiveSubmission"}</a>
 					
 					{else}
