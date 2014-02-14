@@ -28,7 +28,7 @@
 				    <a href="{url op="unsuitableSubmission" articleId=$submission->getId()}" class="action">{translate key="editor.article.archiveSubmission"}</a>
 					
 					{else}
-					 <span title="Cannot reject published items." style="color:#F0F0F0;">{translate key="editor.article.archiveSubmission"}</span>
+					 <span title="Cannot reject published items." style="color:#A0A0A0;">{translate key="editor.article.archiveSubmission"}</span>
 				{/if}
 			{else}
 				<a href="{url op="restoreToQueue" path=$submission->getId()}" class="action">{translate key="editor.article.restoreToQueue"}</a>
