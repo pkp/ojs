@@ -162,11 +162,11 @@ $(document).ready(function() {
 	<input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
 	{if $isSiteAdmin || (!$isLayoutEditor && !$escholInStage && $journalPath != 'ethnomusic_pre' && $issueTitle != 'Unpublished')}
 		<!-- publish -->
-		<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="validateAnd_confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />
+		<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="return validateAnd_confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />
 	{/if}
 {else}
 	<!-- 'update published issue' button -->
-	<input type="submit" value="{translate key="editor.issues.saveAndPublishIssue"}" onclick="validateAnd_confirmAction('{url op="updateIssueToc" path=$issueId}', 'Are you sure you want to update this published issue?')" class="button defaultButton" />
+	<input type="button" value="{translate key="editor.issues.saveAndPublishIssue"}" onclick="return validateAnd_confirmAction('{url op="updateIssueToc" path=$issueId}', 'Are you sure you want to update this published issue?')" class="button defaultButton" />
 	{if $isSiteAdmin}
 		<!-- unpublish button -->
 		<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />	
