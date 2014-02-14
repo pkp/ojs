@@ -88,6 +88,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('isEditor', $isEditor);
 		$templateMgr->assign('enableComments', $enableComments);
 		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20140214 LS Added
 		$templateMgr->assign('submittedByProxy', $submittedByProxy);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
@@ -183,6 +184,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->display('sectionEditor/submissionRegrets.tpl');
 		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20140214 LS Added
 	}
 
 	function submissionReview($args) {
@@ -306,7 +308,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('sections', $sections->toArray());
 		$templateMgr->assign('editorDecisionOptions',SectionEditorSubmission::getEditorDecisionOptions());
 		$templateMgr->assign_by_ref('lastDecision', $lastDecision);
-
+		
 		// need review file extension for determining whether or not to display
 		// PDF conversion button
 		if($submission->getReviewFile()) {
@@ -332,6 +334,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('journalPath', $journal->getPath()); // 2011-11-09 BLH Added
 
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.review');
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20140214 LS Added
 		$templateMgr->assign('isEditor',$isEditor); //20120508 LS Added
 		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
 		$templateMgr->assign('journalContact',$journalContact); //20120831 LS Added
@@ -405,6 +408,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
 		$templateMgr->assign('isSectionEditor',$isSectionEditor); //20120508 LS Added
+		$templateMgr->assign('isSiteAdmin',Validation::isSiteAdmin()); //20140214 LS Added
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
