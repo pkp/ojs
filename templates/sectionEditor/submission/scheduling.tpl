@@ -26,9 +26,9 @@
 				{/if}
 				<select name="issueId" id="issueId" class="selectMenu">
 				    {assign var="status" value=$submission->getStatus()}
-					{if $status == STATUS_PUBLISHED}
+					{if $isSiteAdmin != 1 or $status == STATUS_PUBLISHED}
 					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}
-						{else}
+					{else}
 					    <option value="">{translate key="editor.article.scheduleForPublication.toBeAssigned"}</option>
 					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}
 					{/if}
