@@ -30,6 +30,8 @@
                     {if $isSiteAdmin == 1}
 					    <option value="">{translate key="editor.article.scheduleForPublication.toBeAssigned"}</option>
 					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}
+					{elseif $status == STATUS_PUBLISHED}
+					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}	
 					{elseif $status != STATUS_PUBLISHED or $status != STATUS_ARCHIVED}
 					    <option value="">{translate key="editor.article.scheduleForPublication.toBeAssigned"}</option>
 					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}					
