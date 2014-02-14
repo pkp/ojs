@@ -37,11 +37,19 @@
 		<td align="right">
 			{assign var="status" value=$submission->getStatus()}
 			{if $status == STATUS_ARCHIVED}
-				{translate key="submissions.archived"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			   {if $isSiteAdmin == 1}
+				    {translate key="submissions.archived"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+					{else}
+					{translate key="submissions.archived"}
+				{/if}
 			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}	
 			{elseif $status == STATUS_DECLINED}
-				{translate key="submissions.declined"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			    {if $isSiteAdmin == 1}
+			  	    {translate key="submissions.declined"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			        {else}
+					{translate key="submissions.declined"}
+				{/if}
 			{/if}
 		</td>
 	</tr>
