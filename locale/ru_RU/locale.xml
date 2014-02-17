@@ -92,8 +92,8 @@
 	<message key="common.queue.short.submissionsInReview">На рецензии</message>
 	<message key="common.queue.long.submissionsArchives">Архивы</message>
 	<message key="common.queue.short.submissionsArchives">Архивы</message>
-	<message key="common.queue.long.active">Статьи в процессе отправки</message>
-	<message key="common.queue.short.active">В процессе отправки</message>
+	<message key="common.queue.long.active">Статьи в работе</message>
+	<message key="common.queue.short.active">В работе</message>
 	<message key="common.queue.long.completed">Архив</message>
 	<message key="common.queue.short.completed">Архив</message>
 
