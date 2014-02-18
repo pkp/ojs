@@ -1,7 +1,8 @@
 {**
  * plugins/importexport/pubIds/templates/importResults.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display the import results: the errors occured and the list of the successfully-imported public identifiers.
