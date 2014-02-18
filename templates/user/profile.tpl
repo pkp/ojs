@@ -126,7 +126,7 @@
 </tr>
 <tr valign="top">
 	<td class="label"></td>
-	<td class="value"><b>Important note:</b> If you change your email address, you will need to reset your password before logging in again.</td>
+	<td class="value"><b>Important note:</b> If you change your email address, you will receive a password reset email at the new address. You must complete the reset process before you will be able to log in again.</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="userUrl" key="user.url"}</td>

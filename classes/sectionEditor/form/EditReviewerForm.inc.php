@@ -18,8 +18,12 @@ class EditReviewerForm extends Form {
 		$this->userId = $userId;
 		$this->articleId = $articleId;
 
-		// Validation checks
-		// None of the fields on this form need validation, but here's where they would go.
+		// Validation checks for this form
+		$this->addCheck(new FormValidatorUrl($this, 'userUrl', 'optional', 'user.profile.form.urlInvalid'));
+		$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
+		$user =& Request::getUser();
+		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($user->getId(), true), true));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 
 
@@ -119,6 +123,7 @@ class EditReviewerForm extends Form {
                         'affiliation',
 			'affiliationOther',
                         'userUrl',
+			'email',
                         'phone',
                         'fax',
                         'interests',
@@ -158,6 +163,10 @@ class EditReviewerForm extends Form {
 
 			$user->setAffiliation($affiliation, null); // Localized
                 	$user->setUrl($this->getData('userUrl'));
+			$user->setEmail($this->getData('email'));
+			// MCH 20140211: In our OJS, email is the same as username.
+			$user->setUsername(strtolower($this->getData('email')));
+
                 	$user->setPhone($this->getData('phone'));
                 	$user->setFax($this->getData('fax'));
 			$user->setGossip($this->getData('gossip'), null); // Localized
