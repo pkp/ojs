@@ -224,6 +224,7 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
+<!-- {*
 <div id="cover">
 <h3>{translate key="editor.article.cover"}</h3>
 
@@ -256,8 +257,8 @@ function moveAuthor(dir, authorIndex) {
 	</tr>
 </table>
 </div>
-
 <div class="separator"></div>
+*}-->
 
 <div id="indexing">
 <h3>{translate key="submission.indexing"}</h3>

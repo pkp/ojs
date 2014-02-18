@@ -25,8 +25,19 @@
 					{assign var=issueId value=0}
 				{/if}
 				<select name="issueId" id="issueId" class="selectMenu">
-					<option value="">{translate key="editor.article.scheduleForPublication.toBeAssigned"}</option>
-					{html_options options=$issueOptions|truncate:40:"..." selected=$issueId}
+				    {assign var="status" value=$submission->getStatus()}
+                    {if $isSiteAdmin == 1}
+					    <option value="">{translate key="editor.article.scheduleForPublication.toBeAssigned"}</option>
+					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}
+					{elseif $status == STATUS_PUBLISHED or $status == STATUS_ARCHIVED}
+					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}	
+					{elseif $status != STATUS_PUBLISHED or $status != STATUS_ARCHIVED}
+					    <option value="">{translate key="editor.article.scheduleForPublication.toBeAssigned"}</option>
+					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}					
+					{else}
+					    {html_options options=$issueOptions|truncate:40:"..." selected=$issueId}
+					{/if}
+
 				</select>
 			</td>
 			<td width="50%" class="value">
