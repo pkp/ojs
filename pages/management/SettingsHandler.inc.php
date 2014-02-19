@@ -14,7 +14,7 @@
  */
 
 // Import the base ManagementHandler.
-import('pages.management.ManagementHandler');
+import('lib.pkp.pages.management.ManagementHandler');
 
 class SettingsHandler extends ManagementHandler {
 	/**
