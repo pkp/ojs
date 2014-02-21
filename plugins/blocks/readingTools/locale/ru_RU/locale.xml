@@ -4,22 +4,25 @@
 <!--
   * plugins/blocks/readingTools/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
-  * With updates from Pavel Pisklakov (revising translation). 
+  *
+  * Translated by Alex Yefimov, 2014
+  * Ural Federal Univercity
   -->
- 
-<locale name="ru_RU" full_name="Russian">
-	<message key="plugins.block.readingTools.displayName">Блок «Инструменты читателя»</message>
-	<message key="plugins.block.readingTools.description">Этот плагин отображает блок, содержащий инструменты читателя, в боковой панели инструментов читателя.</message>
-	<message key="plugins.block.readingTools.title">Инструменты читателя</message>
-	<message key="plugins.block.readingTools.aboutTheAuthor">Об авторе</message>
-	<message key="plugins.block.readingTools.aboutTheAuthors">Об авторах</message>
-	<message key="plugins.block.readingTools.articleTools">Инструменты для статьи</message>
-	<message key="plugins.block.readingTools.emailThisArticle">Отправить эту статью по почте</message>
-	<message key="plugins.block.readingTools.loginRequired">Требуется вход в систему</message>
-	<message key="plugins.block.readingTools.printThisArticle">Напечатать эту статью</message>
-	<message key="plugins.block.readingTools.postComment">Написать комментарий</message>
+
+<locale name="ru_RU" full_name="Ukrainian">
+       <message key="plugins.block.readingTools.displayName">Блок инструментов для чтения</message>
+       <message key="plugins.block.readingTools.description">Этот модуль отображает блок инструментов для чтения, сгруппированных в едином панели.</message>
+       <message key="plugins.block.readingTools.title">Инструменты для чтения</message>
+       <message key="plugins.block.readingTools.aboutTheAuthor">Об авторе</message>
+       <message key="plugins.block.readingTools.aboutTheAuthors">Об авторах</message>
+       <message key="plugins.block.readingTools.articleTools">Полезные инструменты</message>
+       <message key="plugins.block.readingTools.emailThisArticle">Отправить по почте</message>
+       <message key="plugins.block.readingTools.loginRequired">Необходимо войти</message>
+       <message key="plugins.block.readingTools.printThisArticle">Распечатать статью</message>
+       <message key="plugins.block.readingTools.postComment">Отправить комментарий</message>
 </locale>
