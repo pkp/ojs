@@ -121,6 +121,7 @@
 	<message key="manager.reviewForms.preview">Preview Form</message>
 	<message key="manager.reviewForms.title">Title</message>
 	<message key="manager.sections.abstractsNotRequired">Do not require abstracts</message>
+	<message key="manager.section.noSectionEditors"><![CDATA[There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first.]]></message>
 	<message key="manager.sections.assigned">This Section's Editors</message>
 	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section?</message>
 	<message key="manager.sections.alertDelete">Before this section can be deleted, you must move articles published within it into other sections.</message>
