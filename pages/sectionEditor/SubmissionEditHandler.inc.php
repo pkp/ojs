@@ -705,7 +705,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$editReviewerForm->execute();
 				Request::redirect(null, null, 'userProfile', array($userId, $articleId));
 			} else {
-				$editReviewerForm->display($args, $request);
+				// MH/CDL: This was causing the form to display twice in the case of validation probs.
+				//$editReviewerForm->display($args, $request);
 			}
 		} else {
 			$editReviewerForm->initData($args, $request);
