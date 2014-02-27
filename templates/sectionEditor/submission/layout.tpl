@@ -29,7 +29,7 @@
 {assign var=layoutEditor value=$submission->getUserBySignoffType('SIGNOFF_LAYOUT')}
 
 <div id="layout">
-<h3>{translate key="submission.layout"}</h3>
+<h3>{translate key="submission.layout"} <a href="https://submit.escholarship.org/help/journals/editors_r.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3>
 
 {if $useLayoutEditors}
 <div id="layoutEditors">

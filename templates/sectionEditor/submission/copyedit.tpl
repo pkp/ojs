@@ -9,7 +9,7 @@
  * $Id$
  *}
 <div id="copyedit">
-<h3>{translate key="submission.copyediting"}</h3>
+<h3>{translate key="submission.copyediting"} <a href="https://submit.escholarship.org/help/journals/editors_o.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3>
 
 {if $useCopyeditors}
 <table width="100%" class="data">

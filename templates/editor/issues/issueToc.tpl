@@ -76,7 +76,7 @@ $(document).ready(function() {
 	{call_hook name="Templates::Editor::Issues::IssueToc::IssuePages"}
 </ul>
 
-<h3>{translate key="issue.toc"}</h3>
+<h3>{translate key="issue.toc"} <a href="https://submit.escholarship.org/help/journals/editors_x.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3>
 {url|assign:"url" op="resetSectionOrder" path=$issueId}
 {if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br/>{/if}
 {if $unpublished}

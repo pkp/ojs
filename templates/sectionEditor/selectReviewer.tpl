@@ -26,7 +26,7 @@ function sortSearch(heading, direction) {
 </script>
 
 <div id="selectReviewer">
-<h3>{translate key="editor.article.selectReviewer"}</h3>
+<h3>{translate key="editor.article.selectReviewer"} <a href="https://submit.escholarship.org/help/journals/editors_h.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></h3>
 <form name="submit" method="post" action="{url op="selectReviewer" path=$articleId}">
 	<input type="hidden" name="sort" value="name"/>
 	<input type="hidden" name="sortDirection" value="ASC"/>

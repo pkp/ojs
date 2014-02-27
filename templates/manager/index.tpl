@@ -12,7 +12,9 @@
  *		20110817	BLH	Changed the order of some menu items. Removed "enrollSearch" link for all site users.
  *}
 {strip}
-{assign var="pageTitle" value="manager.journalManagement"}
+{assign var="helpLink" value='<a href="https://submit.escholarship.org/help/journals/journal_managers.html" target="_blank"><img src="'|concat:$baseUrl:'/eschol/images/help_A.png"></a>'}
+{translate|assign:"pageTitleTranslated" key="manager.journalManagement.with.help" helpLink=$helpLink}
+{assign var="pageCrumbTitle" value="manager.journalManagement"}
 {include file="common/header.tpl"}
 {/strip}
 <div id="managementPages">

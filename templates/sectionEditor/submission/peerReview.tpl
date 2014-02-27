@@ -24,7 +24,7 @@
 {/literal}
 
 <div id="submission">
-<h3>{translate key="article.submission"}</h3>
+<h3>{translate key="article.submission"} <a href="https://submit.escholarship.org/help/journals/editors_g.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3>
 
 <table width="100%" class="data">
 	<tr>
@@ -137,7 +137,7 @@
 <div id="peerReview">
 <table class="data" width="100%">
 	<tr id="reviewersHeader" valign="middle">
-		<td width="22%"><h3>{translate key="submission.peerReview"}</h3></td>
+		<td width="22%"><h3>{translate key="submission.peerReview"} <a href="https://submit.escholarship.org/help/journals/editors_i.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3></td>
 		<td width="14%"><h4>{translate key="submission.round" round=$round}</h4></td>
 		<td width="64%" class="nowrap">
 			<a href="{url op="selectReviewer" path=$submission->getId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -162,7 +162,7 @@
 
 	<table class="data" width="100%">
 	<tr class="reviewer">
-		<td class="r1" width="20%"><h4>{translate key="user.role.reviewer"} {$reviewIndex+$start|chr}</h4></td>
+		<td class="r1" width="20%"><h4>{translate key="user.role.reviewer"} {$reviewIndex+$start|chr} <a href="https://submit.escholarship.org/help/journals/editors_l.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_B.png"></a></h4></td>
 		<td class="r2" width="34%"><h4>{$reviewAssignment->getReviewerFullName()|escape}</h4></td>
 		<td class="r3" width="46%">
 				{if not $reviewAssignment->getDateNotified()}

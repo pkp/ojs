@@ -23,7 +23,7 @@
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%">
-			{translate key="submission.reviewVersion"}
+			{translate key="submission.reviewVersion"}<a href="https://submit.escholarship.org/help/journals/editors_f.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a>
 		</td>
 		<td class="value" width="80%">
 			{assign var="reviewFile" value=$reviewFilesByRound[$round]}
