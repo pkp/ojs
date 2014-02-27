@@ -2,59 +2,15 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/users/locale/ru_RU/locale.xml
+  * locale.xml
   *
   * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
-  *
   -->
- 
+
 <locale name="ru_RU" full_name="Russian">
 	<!-- FIXME: We need a Russian translation. -->
-	<message key="plugins.importexport.users.displayName">Модуль учетных записей в XML</message>
-	<message key="plugins.importexport.users.description">Импорт и экспорт пользователей в формате XML.</message>
-	<message key="plugins.importexport.users.cliUsage">Вызов: {$scriptName} {$pluginName} [command] ...
-Команды:
-	import [xmlFileName] [journal_path] [optional flags]
-	export [xmlFileName] [journal_path]
-	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
-
-Дополнительные флаги:
-	continue_on_error: Если указано, предотвращает остановку при ошибке
-
-	send_notify: Если указано, импортированные пользователи получат уведомления по 
-                электронной почте с указанием их имен и паролей
-
-Примеры:
-	Импортировать пользователей в myJournal из файла myImportFile.xml, продолжая
-        при ошибке:
-	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
-
-	Экспортировать всех пользователей myJournal:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal
-
-	Экспортировать всех рецензентов, с указанием только их роли в качестве рецензентов:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer</message>
-	<message key="plugins.importexport.users.import.importUsers">Импортировать записи</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[Выберите файл XML, содержащий пользовательские данные, для импорта в этот журнал. Относительно деталей формата этого файла смотрите подсказку.<br /><br />Заметьте, что если импортируемый файл содержит имена пользователей или почтовые адреса уже присутствующие в системе, профили этих пользователей импортированы не будут, а любые новые роли будут назначены существующим пользователям.]]></message>
-	<message key="plugins.importexport.users.import.failedToImportUser">Ошибка при импорте пользователя</message>
-	<message key="plugins.importexport.users.import.failedToImportRole">Ошибка при назначении пользователя на роль</message>
-	<message key="plugins.importexport.users.import.dataFile">Файл данных пользователей</message>
-	<message key="plugins.importexport.users.import.sendNotify">Отправить уведомления импортированным пользователям с указанием их имен и паролей.</message>
-	<message key="plugins.importexport.users.import.continueOnError">Продолжить импорт остальных пользователей при ошибке.</message>
-	<message key="plugins.importexport.users.import.noFileError">Файл не был загружен!</message>
-	<message key="plugins.importexport.users.import.usersWereImported">Следующие пользователи были успешно добавлены в систему</message>
-	<message key="plugins.importexport.users.import.errorsOccurred">При импорте произошли ошибки</message>
-	<message key="plugins.importexport.users.import.confirmUsers">Подтвердите, что это и есть пользователи, которых Вы хотите импортировать</message>
-	<message key="plugins.importexport.users.import.warning">Предупреждение</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Невозможно использовать пароли, кодированные {$importHash}; OJS использует сейчас {$ojsHash}. Если Вы продолжите, прийдется сбросить пароли импортированных пользователей.</message>
-	<message key="plugins.importexport.users.unknownJournal">Был указан неизвестный путь "{$journalPath}" в журнале.</message>
-	<message key="plugins.importexport.users.export.exportUsers">Экспортировать записи</message>
-	<message key="plugins.importexport.users.export.exportByRole">Экспортировать по ролям</message>
-	<message key="plugins.importexport.users.export.exportAllUsers">Экспортировать всех</message>
-	<message key="plugins.importexport.users.export.errorsOccurred">При экспорте произошла ошибка</message>
-	<message key="plugins.importexport.users.export.couldNotWriteFile">Невозможно записать файл "{$fileName}".</message>
 </locale>

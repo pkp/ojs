@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @defgroup plugins_importexport_users Users Import/Export Plugin
+ * @defgroup plugins_importexport_users User import/export plugin
  */
- 
+
 /**
  * @file plugins/importexport/users/index.php
  *
@@ -15,6 +15,7 @@
  * @brief Wrapper for XML user import/export plugin.
  *
  */
+
 
 require_once('UserImportExportPlugin.inc.php');
 

@@ -2,26 +2,25 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/users/locale/it_IT/locale.xml
+  * locale.xml
   *
   * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the it_IT (Italian) locale.
+  * Localization strings for the en_US (Italian) locale.
   * Contributed by AePIC Team CILEA.
-  *
   -->
- 
-<locale name="it_IT" full_name="Italiano">
-	<message key="plugins.importexport.users.displayName">Utenti</message>
-	<message key="plugins.importexport.users.description">Importa/esporta utenti</message>
 
-	<message key="plugins.importexport.users.cliUsage">Uso: {$scriptName} {$pluginName} [command] ...
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.importexport.users.displayName">XML Plugin Utenti</message>
+	<message key="plugins.importexport.users.description">Importa e esporta utenti</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
 Commands:
-	import [xmlFileName] [journal_path] [optional flags]
-	export [xmlFileName] [journal_path]
-	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+	import [xmlFileName] [press_path] [optional flags]
+	export [xmlFileName] [press_path]
+	export [xmlFileName] [press_path] [role_path1] [role_path2] ...
 
 Optional flags:
 	continue_on_error: If specified, do not stop importing users if an error occurs
@@ -30,32 +29,33 @@ Optional flags:
 		and passwords to imported users
 
 Examples:
-	Import users into myJournal from myImportFile.xml, continuing on error:
-	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+	Import users into myPress from myImportFile.xml, continuing on error:
+	{$scriptName} {$pluginName} import myImportFile.xml myPress continue_on_error
 
-	Export all users from myJournal:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+	Export all users from myPress:
+	{$scriptName} {$pluginName} export myExportFile.xml myPress
 
 	Export all users registered as reviewers, along with their reviewer roles only:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer</message>
+	{$scriptName} {$pluginName} export myExportFile.xml myPress reviewer
+]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Importa Utenti</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleziona un file XML contenente informazioni sugli utenti da importare in questa rivista. Vedi la guida per dettagli sul formato di questo file.<br />Nota che se il file contiene username o indirizzi email gi&#x00E0; esistente nel sistema, i dati per quegli utenti non saranno importati e agli utenti esisenti verranno assegnati anche i nuovi ruoli.]]></message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleziona un file di dati XML contenente informazioni sull'utente da importare in questo press. Vedi l'help del press per dettagli sul formato di questo file.<br /><br />Nota che se il importato file contiene ogni username o indirizzo email gi&#x00E0; esistente nel sistema, i dati per quegli utenti non saranno importati e ogni nuovo ruolo da creare sar&#x00E0; assegnato agli utenti esisenti.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Importazione utente fallita</message>
-	<message key="plugins.importexport.users.import.failedToImportRole">Assegnazione del ruolo all'utente fallita</message>
-	<message key="plugins.importexport.users.import.dataFile">File dei dati utente</message>
-	<message key="plugins.importexport.users.import.sendNotify">Invia un email di notifica contenente username e password a ogni utente importato .</message>
-	<message key="plugins.importexport.users.import.continueOnError">Continua a importare altri utenti anche se si presenta un erore.</message>
-	<message key="plugins.importexport.users.import.noFileError">Nessun file caricato!</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Assegnazionee ruolo all'utene fallita</message>
+	<message key="plugins.importexport.users.import.dataFile">File di Dati utente</message>
+	<message key="plugins.importexport.users.import.sendNotify">invia un email di notifica ad ogni utente importato contenente la username e password.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Continua a importare altri utenti se si presenta un erore.</message>
+	<message key="plugins.importexport.users.import.noFileError">Nessun file uploaded!</message>
 	<message key="plugins.importexport.users.import.usersWereImported">I seguenti utenti sono stati importati nel sistema con successo.</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">Si sono presentati errori durante l'importazione</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Conferma che questi sono gli utenti che vuoi importare nel sistema</message>
-	<message key="plugins.importexport.users.unknownJournal">È stata specificata un path sconosciuto "{$journalPath}".</message>
+	<message key="plugins.importexport.users.unknownPress">&#x00C8; stata specificata una path del press sconosciuta "{$pressPath}".</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Esporta Utenti</message>
 	<message key="plugins.importexport.users.export.exportByRole">Esporta per ruolo</message>
 	<message key="plugins.importexport.users.export.exportAllUsers">Esporta tutti</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">Si sono presentati errori durante l'esportazione</message>
-	<message key="plugins.importexport.users.export.couldNotWriteFile">Non si può scrivere sul file "{$fileName}".</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Non si pu&#x00F2; scrivere sul file "{$fileName}".</message>
 	<message key="plugins.importexport.users.import.warning">Attenzione</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Non si possono usare password criptate con {$importHash}; OJS è configurato per usare {$ojsHash}. Se continui, dovrai resettare le password degli utenti importati.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Non si possono usare password criptate con {$importHash}; OMP è configurato per usare {$ompHash}. Se continui, dovrai resettare le password degli utenti importati.</message>
 </locale>

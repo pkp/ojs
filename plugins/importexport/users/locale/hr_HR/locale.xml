@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-<!-- 
-  * plugins/importexport/users/locale/hr_HR/locale.xml
+<!--
+  * locale.xml
   *
   * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,8 +11,7 @@
   *
   * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
    -->
-<locale name="hr_HR"
-        full_name="Hrvatski">
+<locale name="hr_HR" full_name="Hrvatski">
 	<message key="plugins.importexport.users.displayName">Dodatak za XML korisnika</message>
 	<message key="plugins.importexport.users.description">Unošenje i iznošenje korisnika.</message>
 
@@ -47,7 +46,7 @@ Primjeri:
 	<message key="plugins.importexport.users.import.usersWereImported">Sljedeći korisnici su uspješno uneseni u sustav</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">Pogreške koje su se pojavile prilikom unošenja</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Molim potvrdite da su ovo korisnici koje želite unijeti u sustav</message>
-	<message key="plugins.importexport.users.unknownJournal">Navedena je nepoznata putanja "{$journalPath}".</message>
+	<message key="plugins.importexport.users.unknownPress">Navedena je nepoznata putanja "{$pressPath}".</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Iznesi korisnike</message>
 	<message key="plugins.importexport.users.export.exportByRole">Iznesi po ulozi</message>
@@ -55,5 +54,5 @@ Primjeri:
 	<message key="plugins.importexport.users.export.errorsOccurred">Pogreške koje su se pojavile prilikom iznošenja</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">Nije moguće pisati po datoteci "{$fileName}".</message>
 	<message key="plugins.importexport.users.import.warning">Upozorenje</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Nije moguće koristiti lozinke pohranjene hash funkcijom {$importHash}; OJS je podešen da koristi {$ojsHash}. Ukoliko nastavite, morat ćete ponovno postaviti lozinke ovako unesenih korisnika.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Nije moguće koristiti lozinke pohranjene hash funkcijom {$importHash}; OMP je podešen da koristi {$ompHash}. Ukoliko nastavite, morat ćete ponovno postaviti lozinke ovako unesenih korisnika.</message>
 </locale>

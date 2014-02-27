@@ -2,19 +2,18 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/users/locale/de_DE/locale.xml
+  * locale.xml
   *
   * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
   *
-  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  *
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
   -->
 
-<locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.users.displayName">Benutzer/innen-XML-Plug-In</message>
-	<message key="plugins.importexport.users.description">Benutzer/innen-Import und -Export</message>
+<locale name="de_DE" full_name="German">
+	<message key="plugins.importexport.users.displayName">Benutzer XML Einschub</message>
+	<message key="plugins.importexport.users.description">Benutzer Import und Export</message>
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Gebrauch: {$scriptName} {$pluginName} [Befehl] ...
 Befehle:
@@ -22,38 +21,35 @@ Befehle:
 	export [xmlDateiname] [Zeitschriftpfad]
 	export [xmlDateiname] [Zeitschriftpfad] [Funktionspfad1] [Funktionspfad2] ...
 
-Optionale Schalter:
+Optionale Kennzeichen:
 	continue_on_error: bei Auftreten eines Fehlers nicht anhalten
 
-	send_notify: Benachrichtigung über Benutzer/innennamen und Passwörter 
-        an importierte Benutzer/innen senden
+	send_notify: Benachrichtigung über Benutzernamen und Passwörter an importierte Benutzer senden
 
 Beispiele:
-	Benutzer/in in MeineZeitschrift aus MeineImportDatei.xml importieren, bei Fehler nicht anhalten:
+	Benutzer in MeineZeitschrift aus MeineImportDatei.xml importieren, bei Fehler nicht anhalten:
 	{$scriptName} {$pluginName} import MeineImportDatei.xml MeineZeitschrift continue_on_error
 
-	Alle Benutzer/innen von MeineZeitschrift exportieren:
+	Alle Benutzer von MeineZeitschrift exportieren:
 	{$scriptName} {$pluginName} export MeineExportDatei.xml MeineZeitschrift
 
-	Alle Benutzer/innen, die als Gutachter/innen registiert sind, nur mit ihren Begutachtungsfunktionen exportieren:
+	Alle Benutzer die als Gutachter registiert sind nur mit ihren Gutachterfunktionen exportieren:
 	{$scriptName} {$pluginName} export MeineExportDatei.xml MeineZeitschrift Gutachter
 ]]></message>
-	<message key="plugins.importexport.users.import.importUsers">Benutzer/innen importieren</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[XML-Datendatei mit der in die Zeitschrift zu importierenden Benutzer/inneninformation auswählen. Siehe Hilfe der Zeitschrift zum Format dieser Datei im Einzelnen.<br /><br />Beachten Sie, dass für in der Datei enthaltene Benutzer/innennamen und Mailadressen, die im System bereits existieren, kein Datenimport stattfindet, und neue Funktionen den existierenden Benutzer/innen zugeschrieben werden.]]></message>
-	<message key="plugins.importexport.users.import.failedToImportUser">Benutzer/in wurde nicht importiert</message>
-	<message key="plugins.importexport.users.import.failedToImportRole">Funktion wurde dem Benutzer/der Benutzerin nicht zugewiesen</message>
-	<message key="plugins.importexport.users.import.dataFile">Benutzer/innendatendatei</message>
-	<message key="plugins.importexport.users.import.sendNotify">Allen importierten Benutzer/innen eine E-Mail mit Benutzer/innennamen und Passwort senden.</message>
-	<message key="plugins.importexport.users.import.continueOnError">Mit dem Import anderer Benutzer/innen fortfahren, wenn Fehler auftritt.</message>
+	<message key="plugins.importexport.users.import.importUsers">Benutzer importieren</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[XML-Datendatei mit der in die Zeitschrift zu importierenden Benutzerinformation auswählen. S. Hilfe der Zeitschrift zum Format dieser Datei im Einzelnen.<br /><br />Beachten Sie, dass für in der Datei enthaltene Benutzernamen und Emailadressen, die im System bereits existieren kein Datenimport stattfindet und neue Funktionen den existierenden Benutzern zugeschrieben werden.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Benutzer wurde nicht importiert</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Funktion wurde dem Benutzer nicht zugewiesen</message>
+	<message key="plugins.importexport.users.import.dataFile">Benutzerdatendatei</message>
+	<message key="plugins.importexport.users.import.sendNotify">Jedem importierten Benutzer eine Email mit Benutzernamen und Passwort senden.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Mit dem Import anderer Benutzer fortfahren, wenn Fehler auftritt.</message>
 	<message key="plugins.importexport.users.import.noFileError">Keine Datei hochgeladen!</message>
-	<message key="plugins.importexport.users.import.usersWereImported">Die folgenden Benutzer/innen wurden erfolgreich importiert</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Die folgenden Benutzer wurden erfolgreich importiert</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">Import fehlerhaft</message>
-	<message key="plugins.importexport.users.import.confirmUsers">Bestätigen Sie, dass Sie diese Benutzer/innen in das System importieren wollen</message>
-	<message key="plugins.importexport.users.import.warning">Warnung</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">{$importHash} Passworte können nicht genutzt werden; OJS ist für {$ojsHash} konfiguriert. Wenn Sie fortfahren, müssen Sie die importierten Passworte zurücksetzen.</message>
-	<message key="plugins.importexport.users.unknownJournal">Unbekannter Zeitschriftpfad "{$journalPath}".</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Bestätigen Sie, dass Sie diese Benutzer in das System importieren wollen</message>
+	<message key="plugins.importexport.users.unknownPress">Unbekannter Zeitschriftpfad "{$pressPath}".</message>
 
-	<message key="plugins.importexport.users.export.exportUsers">Benutzer/innen exportieren</message>
+	<message key="plugins.importexport.users.export.exportUsers">Benutzer exportieren</message>
 	<message key="plugins.importexport.users.export.exportByRole">Nach Funktion exportieren</message>
 	<message key="plugins.importexport.users.export.exportAllUsers">Alle exportieren</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">Fehlerhafter Export</message>

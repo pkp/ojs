@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/users/locale/el_GR/locale.xml
+  * locale.xml
   *
   * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -16,18 +16,17 @@
   * Giannis Tsakonas (john@lis.upatras.gr),
   * Kiriazis Vasilis (vaskir@lis.upatras.gr),
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
-  *
   -->
- 
-<locale name="el_GR" full_name="Greek">	
+
+<locale name="el_GR" full_name="Greek">
 	<message key="plugins.importexport.users.displayName">XML Plugin Χρηστών</message>
 	<message key="plugins.importexport.users.description">Εισαγωγή και εξαγωγή χρηστών</message>
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
 Commands:
-	import [xmlFileName] [journal_path] [optional flags]
-	export [xmlFileName] [journal_path]
-	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+	import [xmlFileName] [press_path] [optional flags]
+	export [xmlFileName] [press_path]
+	export [xmlFileName] [press_path] [role_path1] [role_path2] ...
 
 Προαιρετικά flags:
 	continue_on_error: Αν οριστεί, δεν θα σταματάει η εισαγωγή χρηστών αν εμφανιστεί ένα σφάλμα
@@ -35,14 +34,14 @@ Commands:
 	send_notify: Αν οριστεί, θα αποστέλλεται ενημερωτικό email με τα ονόματα χρηστών και του κωδικούς πρόσβασης στους εισηγμένους χρήστες
 
 Παραδείγματα:
-	Εισαγωγή χρηστών στο myJournal από το myImportFile.xml, continuing on error:
-	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+	Εισαγωγή χρηστών στο myPress από το myImportFile.xml, continuing on error:
+	{$scriptName} {$pluginName} import myImportFile.xml myPress continue_on_error
 
-	Εξαγωγή όλων των χρηστών από το myJournal:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+	Εξαγωγή όλων των χρηστών από το myPress:
+	{$scriptName} {$pluginName} export myExportFile.xml myPress
 
 	Εξαγωγή όλων των χρηστών που έναι εγγεγραμμένοι ως αξιολογητές, μαζί μόνο με τον ρόλο του αξιολογητή :
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+	{$scriptName} {$pluginName} export myExportFile.xml myPress reviewer
 ]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Εισαγωγή Χρηστών</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Επιλέξτε ένα αρχείο δεδομένων XML που περιέχει τις πληροφορίες των χρηστών για εισαγωγή σε αυτό το περιοδικό. Δείτε την βοήθεια του περιοδικου για πληροφορίες σχετικά με την μορφή του αρχείου αυτού.<br /><br />Σημειώστε ότι αν το αρχείο αυτό περιέχει ονόματα χρηστών και διευθύνσεις email που ήδη υπάρχουν στο σύστημα, τα δεδομένα για αυτούς τους χρήστες δεν θα εισαχθούν και κάθε νέος ρόλος που θα πρέπει να δημιουργηθού θα ανατεθούν στους υφιστάμενους χρήστες.]]></message>
@@ -56,8 +55,8 @@ Commands:
 	<message key="plugins.importexport.users.import.errorsOccurred">Εμφανίστηκαν σφάλματα κατά την διάρκεια της εισαγωγής</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Επιβεβαιώστε ότι αυτοί είναι οι χρήστες που θέλετε να εισάγετε στο σύστημα</message>
 	<message key="plugins.importexport.users.import.warning">Προειδοποίηση</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Δεν μπορείτε να χρησιμοποιήσετε κωδικούς πρόσβασης κρυπτογραφημένους με το  {$importHash}. Το OJS έχει ρυθμιστεί ώστε να χρησιμοποιεί το {$ojsHash}. Αν συνεχίσετε θα πρέπει να επναφέρετε τους κωδικούς πρόσβασης των εισηγμένων χρηστών.</message>
-	<message key="plugins.importexport.users.unknownJournal">Ορίστηκε μια άγνωστη διαδρομή περιοδικού "{$journalPath}".</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Δεν μπορείτε να χρησιμοποιήσετε κωδικούς πρόσβασης κρυπτογραφημένους με το  {$importHash}. Το OMP έχει ρυθμιστεί ώστε να χρησιμοποιεί το {$ompHash}. Αν συνεχίσετε θα πρέπει να επναφέρετε τους κωδικούς πρόσβασης των εισηγμένων χρηστών.</message>
+	<message key="plugins.importexport.users.unknownPress">Ορίστηκε μια άγνωστη διαδρομή περιοδικού "{$pressPath}".</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Εξαγωγή χρηστών </message>
 	<message key="plugins.importexport.users.export.exportByRole">Εξαγωγή κατά ρόλο</message>
