@@ -139,7 +139,39 @@ class EditReviewerForm extends Form {
                         // The interests are coming in encoded -- Decode them for DB storage
                         $this->setData('interestsKeywords', array_map('urldecode', $interests));
                 }
-        }
+	}
+
+	/*
+	 * Calculate the proper URL to reach Subi on this server
+	 */
+	function subi_url()
+	{
+		$s = $_SERVER;
+		$ssl = (!empty($s['HTTPS']) && $s['HTTPS'] == 'on') ? true:false;
+		$sp = strtolower($s['SERVER_PROTOCOL']);
+		$protocol = substr($sp, 0, strpos($sp, '/')) . (($ssl) ? 's' : '');
+		$port = $s['SERVER_PORT'];
+		$port = ((!$ssl && $port=='80') || ($ssl && $port=='443')) ? '' : ':'.$port;
+		$host = isset($s['HTTP_X_FORWARDED_HOST']) ? $s['HTTP_X_FORWARDED_HOST'] : isset($s['HTTP_HOST']) ? $s['HTTP_HOST'] : $s['SERVER_NAME'];
+		// Hack to get to proper subi on localhost
+		if ($host == 'localhost' && $port == '') {
+			$port = ':8080';
+			$protocol = "http";
+		}
+		return $protocol . '://' . $host . $port . '/subi';
+	}
+
+	/* gets the data from a URL */
+	function get_data($url) {
+		$ch = curl_init();
+		$timeout = 5;
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+		$data = curl_exec($ch);
+		curl_close($ch);
+		return $data;
+	}
 
 	/**
 	 * Update reviewer profile
@@ -161,11 +193,11 @@ class EditReviewerForm extends Form {
                 	}
 
 			$user->setAffiliation($affiliation, null); // Localized
-                	$user->setUrl($this->getData('userUrl'));
-			error_log("Hello, we're in execute.");
+			$user->setUrl($this->getData('userUrl'));
+			$emailChanged = false;
 			if ($user->getEmail() != $this->getData('email')) {
-				error_log("Email has changed.");
 				$user->setEmail($this->getData('email'));
+				$emailChanged = true;
 			}
 			// MCH 20140211: In our OJS, email is the same as username.
 			$user->setUsername(strtolower($this->getData('email')));
@@ -183,7 +215,15 @@ class EditReviewerForm extends Form {
 			// update reviewer interests
                 	import('lib.pkp.classes.user.InterestManager');
                 	$interestManager = new InterestManager();
-                	$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
+			$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
+
+			// If email has changed, send a password reset link to the new address.
+			if ($emailChanged) {
+				// To do that, we need Subi to calculate the link.
+				$url = $this->subi_url() . '/ojsResetPwd?email=' . urlencode($user->getEmail());
+				$this->get_data($url);
+			}
+
 		}
 	}
 }
