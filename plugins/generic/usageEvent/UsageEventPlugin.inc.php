@@ -172,6 +172,10 @@ class UsageEventPlugin extends GenericPlugin {
 				$issue =& $templateMgr->get_template_vars('issue');
 				$galley =& $templateMgr->get_template_vars('galley'); /* @var $galley ArticleGalley */
 				$article =& $templateMgr->get_template_vars('article');
+
+				// If there is no published object, there is no usage event.
+				if (!$issue && !$galley && !$article) return false;
+
 				if ($galley) {
 					if ($galley->isHTMLGalley() || $galley->getRemoteURL()) {
 						$pubObject =& $galley;
