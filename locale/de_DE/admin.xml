@@ -23,9 +23,9 @@
 	<message key="admin.settings.journalsList.showTitle">Titel der Zeitschrift</message>
 	<message key="admin.settings.journalsList.showDescription">Beschreibung der Zeitschrift</message>
 	<message key="admin.settings.defaultMetricDescription">
-		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden verschiedenen Kontexten angezeigt werden.
-		Es gibt Fälle, wo eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
-		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
+		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
+		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
+		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.</message>
 	</message>
 	<message key="admin.languages.confirmDisable">Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren möchten? Dies wird alle gehosteten Zeitschriften betreffen, die diese Regionaleinstellung momentan benutzen.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Das Herunterladen von Regionalpaketen von dem Webserver des Public Knowledge Projects ist momentan nicht möglich, da:</p>
@@ -35,11 +35,6 @@
 	</ul>
 <p>Regionalpakete können manuell von der <a href="http://pkp.sfu.ca">PKP-Website</a> heruntergeladen werden.</p>]]></message>
 
-	<message key="admin.settings.defaultMetricDescription">
-		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
-		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
-		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
-	</message>
 	<message key="admin.languages.primaryLocaleInstructions">Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten soll. Die gewählten Parameter können von allen Zeitschriften, die auf der Website angeboten werden, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (die Seiten bestimmter Zeitschriften können davon ausgenommen werden). Wenn nur eine Regionaleinstellung ausgewählt wird, erscheint das Sprachenmenü nicht, und den Zeitschriften stehen keine erweiterten Spracheinstellungen zur Verfügung.</message>
 	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>	
@@ -57,6 +52,7 @@
 	<message key="admin.systemVersion">OJS-Version</message>
 	<message key="admin.systemConfiguration">OJS-Konfiguration</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-Konfigurationsdatei <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.createInstructions">Sie werden automatisch als Zeitschriftenverwalter/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift angelegt haben, werden Sie zu deren Einstellungsassistenten weitergeleitet, damit Sie die Einrichtung abschließen können.</message>
 	<message key="admin.journals.journalSettings">Zeitschriften-Einstellungen</message>
 	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
 	<message key="admin.contexts.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>
@@ -94,4 +90,5 @@
 	<message key="admin.categories.confirmDelete">Sind Sie sicher, dass Sie diese Kategorie löschen wollen?</message>
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">Ein Kategorienname ist notwendig.</message>
+	<message key="admin.presses.createInstructions">Sie werden automatisch als Zeitschriftenverwalter/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift angelegt haben, werden Sie zu deren Einstellungsassistenten weitergeleitet, damit Sie die Einrichtung abschließen können.</message>
 </locale>
