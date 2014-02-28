@@ -177,17 +177,10 @@ ________________________________________________________________________</messag
 
 	<!-- Genre Defaults -->
 	<message key="default.genres.researchInstrument">Forschungsinstrument</message>
-	<message key="default.genres.researchInstrument.designation">##</message>
 	<message key="default.genres.researchMaterials">Forschungsmaterial</message>
-	<message key="default.genres.researchMaterials.designation">##</message>
 	<message key="default.genres.researchResults">Forschungsergebnisse</message>
-	<message key="default.genres.researchResults.designation">##</message>
 	<message key="default.genres.transcripts">Transkripte</message>
-	<message key="default.genres.transcripts.designation">##</message>
 	<message key="default.genres.dataAnalysis">Datenanalyse</message>
-	<message key="default.genres.dataAnalysis.designation">##</message>
 	<message key="default.genres.dataSet">Datensatz</message>
-	<message key="default.genres.dataSet.designation">##</message>
 	<message key="default.genres.sourceTexts">Quelltexte</message>
-	<message key="default.genres.sourceTexts.designation">##</message>
 </locale>
