@@ -25,7 +25,7 @@
 	<message key="admin.settings.defaultMetricDescription">
 		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
-		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.</message>
+		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
 	</message>
 	<message key="admin.languages.confirmDisable">Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren möchten? Dies wird alle gehosteten Zeitschriften betreffen, die diese Regionaleinstellung momentan benutzen.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Das Herunterladen von Regionalpaketen von dem Webserver des Public Knowledge Projects ist momentan nicht möglich, da:</p>
