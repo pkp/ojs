@@ -436,8 +436,6 @@
 	<message key="manager.setup.userRegistration">Inscription de l'utilisateur</message>
 	<message key="manager.setup.useTextTitle">Texte du titre</message>
 	<message key="manager.setup.volumePerYear">Volumes par année</message>
-	<message key="manager.statistics.reports">Générateur de rapports</message>
-	<message key="manager.statistics.reports.description">OJS génère des rapports qui font le suivi des détails associés avec le traitement des soumissions à la revue, de la perspective des rédacteurs, des évaluateurs, et rubriques, au cours d'une période donnée. Les rapports sont produits en format CSV qui nécessite un tableur pour être affiché correctement.</message>
 	<message key="manager.statistics.statistics">Statistiques de la revue</message>
 	<message key="manager.statistics.statistics.articleViews">Nombre de vues de l'article (pour les Auteurs seulement)</message>
 	<message key="manager.statistics.statistics.count.accept">Accepter</message>

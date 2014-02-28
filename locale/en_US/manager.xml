@@ -453,8 +453,6 @@
 		There are cases where a single usage statistic must be used, e.g. to display an orderd list of most-used articles or to rank
 		search results. Please select one of the configured metrics as a default.
 	</message>
-	<message key="manager.statistics.reports">Report Generator</message>
-	<message key="manager.statistics.reports.description">OJS generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.</message>
 	<message key="manager.statistics.statistics">Journal Statistics</message>
 	<message key="manager.statistics.statistics.articleViews">Article View Counts (for Authors only)</message>
 	<message key="manager.statistics.statistics.count.accept">Accept</message>

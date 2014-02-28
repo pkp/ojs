@@ -438,8 +438,6 @@ Exemplo:
 	<message key="manager.setup.userRegistration">Cadastro de usuários</message>
 	<message key="manager.setup.useTextTitle">Título em formato de texto</message>
 	<message key="manager.setup.volumePerYear">Volumes por ano</message>
-	<message key="manager.statistics.reports">Relatórios</message>
-	<message key="manager.statistics.reports.description">O sistema gera relatórios que registram os detalhes associados com os procedimentos da submissão, da perspectiva de submissões, editores, avaliadores e seções, em um dado período. Relatórios são gerados no formato CSV, que exigem um aplicativo de planilha eletrônica para serem visualizados.</message>
 	<message key="manager.statistics.statistics">Estatísticas</message>
 	<message key="manager.statistics.statistics.articleViews">Visualizações de artigo (apenas para autores)</message>
 	<message key="manager.statistics.statistics.count.accept">Aceito</message>

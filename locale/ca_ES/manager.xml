@@ -446,8 +446,6 @@
 	<message key="manager.setup.userRegistration">Registre d’usuaris</message>
 	<message key="manager.setup.useTextTitle">Text del títol</message>
 	<message key="manager.setup.volumePerYear">Volums per any</message>
-	<message key="manager.statistics.reports">Generador d’informes</message>
-	<message key="manager.statistics.reports.description">L’OJS genera informes de seguiment que detallen el processament de les trameses a la revista des de la perspectiva de les trameses, els editors, els revisors i les seccions durant un període de temps determinat. Aquests informes es generen en format CSV, per la qual cosa necessitareu una aplicació de fulls de càlcul per a visualitzar-los.</message>
 	<message key="manager.statistics.statistics">Estadístiques de la revista</message>
 	<message key="manager.statistics.statistics.articleViews">Nombre de visualitzacions de l’article (només d’autors/es)</message>
 	<message key="manager.statistics.statistics.count.accept">Acceptats</message>

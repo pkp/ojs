@@ -435,9 +435,7 @@
 	<message key="manager.setup.useProofreaders">Se asiganará un Lector de Pruebas para revisar (junto a los autores) las galeradas antes de su publicación.</message>
 	<message key="manager.setup.userRegistration">Registro de usuario/a</message>
 	<message key="manager.setup.useTextTitle">Título del texto</message>
-	<message key="manager.setup.volumePerYear">Volúmenes por año</message>
-	<message key="manager.statistics.reports">Generador de informes</message>
-	<message key="manager.statistics.reports.description">OJS genera informes que detallan el proceso de los envíos a la revista durante un período de tiempo. Los informes se generan en formato CSV, que puede abrirse en una hoja de cálculo.</message>
+	<message key="manager.setup.volumePerYear">Volúmenes por año</message>	
 	<message key="manager.statistics.statistics">Estadísticas</message>
 	<message key="manager.statistics.statistics.articleViews">Número de visitas al artículo (sólo para autores)</message>
 	<message key="manager.statistics.statistics.count.accept">Aceptados</message>

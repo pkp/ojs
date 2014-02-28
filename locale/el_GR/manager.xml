@@ -395,8 +395,6 @@
 	<message key="manager.setup.userRegistration">Εγγραφή χρήστη</message>
 	<message key="manager.setup.useTextTitle">Κείμενο τίτλου</message>
 	<message key="manager.setup.volumePerYear">Τόμοι ανά έτος</message>
-	<message key="manager.statistics.reports">Δημιουργία  Εκθέσεων</message>
-	<message key="manager.statistics.reports.description">Το OJS παράγει  εκθέσεις που καταγράφουν λεπτομέρειες  σχετικά με την διαδικασία υποβολής άρθρων  στο περιοδικό σε σχέση με τις υποβολές, τους  επιμελητές, τους αξιολογητές και τις  ενότητες σε μια δεδομένη χρονική περίοδο. Οι  εκθέσεις παράγονται σε μορφή CSV για την  προβολή και επεξεργασία των οποίων  απαιτείται μια εφαρμογή λογιστικών  φύλλων.</message>
 	<message key="manager.statistics.statistics">Στατιστικά  Περιοδικού</message>
 	<message key="manager.statistics.statistics.articleViews">Προβολές Άρθρων (μόνο για Συγγραφείς)</message>
 	<message key="manager.statistics.statistics.count.accept">Αποδοχή</message>
