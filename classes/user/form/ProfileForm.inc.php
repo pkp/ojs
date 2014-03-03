@@ -301,6 +301,7 @@ class ProfileForm extends Form {
 		$user->setSignature($this->getData('signature'), null); // Localized
 		$emailChanged = false;
 		if ($user->getEmail() != $this->getData('email')) {
+			$oldEmail = $user->getEmail();
 			$user->setEmail($this->getData('email'));
 			$emailChanged = true;
 		}
@@ -395,7 +396,8 @@ class ProfileForm extends Form {
 		// If email has changed, send a password reset link to the new address.
 		if ($emailChanged) {
 			// To do that, we need Subi to calculate the link.
-			$url = $this->subi_url() . '/ojsResetPwd?email=' . urlencode($user->getEmail());
+			$url = $this->subi_url() . '/ojsResetPwd?oldEmail=' . urlEncode($oldEmail) .
+			       '&newEmail=' . urlencode($user->getEmail());
 			file_get_contents($url);
 		}
 	}
