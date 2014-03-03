@@ -277,18 +277,6 @@ class ProfileForm extends Form {
 		return $protocol . '://' . $host . $port . '/subi';
 	}
 
-	/* gets the data from a URL */
-	function get_data($url) {
-		$ch = curl_init();
-		$timeout = 5;
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-		$data = curl_exec($ch);
-		curl_close($ch);
-		return $data;
-	}
-
 	/**
 	 * Save profile settings.
 	 */
@@ -360,12 +348,6 @@ class ProfileForm extends Form {
 				$role->setRoleId(ROLE_ID_REVIEWER);
 				$hasRole = Validation::isReviewer();
 				$wantsRole = Request::getUserVar('reviewerRole');
-			// If email has changed, send a password reset link to the new address.
-			if ($emailChanged) {
-				// To do that, we need Subi to calculate the link.
-				$url = $this->subi_url() . '/ojsResetPwd?email=' . urlencode($user->getEmail());
-				$this->get_data($url);
-			}
 				if ($hasRole && !$wantsRole) $roleDao->deleteRole($role);
 				if (!$hasRole && $wantsRole) $roleDao->insertRole($role);
 			}
@@ -414,7 +396,7 @@ class ProfileForm extends Form {
 		if ($emailChanged) {
 			// To do that, we need Subi to calculate the link.
 			$url = $this->subi_url() . '/ojsResetPwd?email=' . urlencode($user->getEmail());
-			$this->get_data($url);
+			file_get_contents($url);
 		}
 	}
 }

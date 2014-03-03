@@ -161,18 +161,6 @@ class EditReviewerForm extends Form {
 		return $protocol . '://' . $host . $port . '/subi';
 	}
 
-	/* gets the data from a URL */
-	function get_data($url) {
-		$ch = curl_init();
-		$timeout = 5;
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-		$data = curl_exec($ch);
-		curl_close($ch);
-		return $data;
-	}
-
 	/**
 	 * Update reviewer profile
 	 */
@@ -221,7 +209,7 @@ class EditReviewerForm extends Form {
 			if ($emailChanged) {
 				// To do that, we need Subi to calculate the link.
 				$url = $this->subi_url() . '/ojsResetPwd?email=' . urlencode($user->getEmail());
-				$this->get_data($url);
+				file_get_contents($url);
 			}
 
 		}
