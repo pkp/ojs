@@ -18,8 +18,11 @@ class EditReviewerForm extends Form {
 		$this->userId = $userId;
 		$this->articleId = $articleId;
 
-		// Validation checks
-		// None of the fields on this form need validation, but here's where they would go.
+		// Validation checks for this form
+		$this->addCheck(new FormValidatorUrl($this, 'userUrl', 'optional', 'user.profile.form.urlInvalid'));
+		$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($userId, true), true));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 
 
@@ -119,6 +122,7 @@ class EditReviewerForm extends Form {
                         'affiliation',
 			'affiliationOther',
                         'userUrl',
+			'email',
                         'phone',
                         'fax',
                         'interests',
@@ -135,7 +139,27 @@ class EditReviewerForm extends Form {
                         // The interests are coming in encoded -- Decode them for DB storage
                         $this->setData('interestsKeywords', array_map('urldecode', $interests));
                 }
-        }
+	}
+
+	/*
+	 * Calculate the proper URL to reach Subi on this server
+	 */
+	function subi_url()
+	{
+		$s = $_SERVER;
+		$ssl = (!empty($s['HTTPS']) && $s['HTTPS'] == 'on') ? true:false;
+		$sp = strtolower($s['SERVER_PROTOCOL']);
+		$protocol = substr($sp, 0, strpos($sp, '/')) . (($ssl) ? 's' : '');
+		$port = $s['SERVER_PORT'];
+		$port = ((!$ssl && $port=='80') || ($ssl && $port=='443')) ? '' : ':'.$port;
+		$host = isset($s['HTTP_X_FORWARDED_HOST']) ? $s['HTTP_X_FORWARDED_HOST'] : isset($s['HTTP_HOST']) ? $s['HTTP_HOST'] : $s['SERVER_NAME'];
+		// Hack to get to proper subi on localhost
+		if ($host == 'localhost' && $port == '') {
+			$port = ':8080';
+			$protocol = "http";
+		}
+		return $protocol . '://' . $host . $port . '/subi';
+	}
 
 	/**
 	 * Update reviewer profile
@@ -157,7 +181,16 @@ class EditReviewerForm extends Form {
                 	}
 
 			$user->setAffiliation($affiliation, null); // Localized
-                	$user->setUrl($this->getData('userUrl'));
+			$user->setUrl($this->getData('userUrl'));
+			$emailChanged = false;
+			if ($user->getEmail() != $this->getData('email')) {
+				$oldEmail = $user->getEmail();
+				$user->setEmail($this->getData('email'));
+				$emailChanged = true;
+			}
+			// MCH 20140211: In our OJS, email is the same as username.
+			$user->setUsername(strtolower($this->getData('email')));
+
                 	$user->setPhone($this->getData('phone'));
                 	$user->setFax($this->getData('fax'));
 			$user->setGossip($this->getData('gossip'), null); // Localized
@@ -171,7 +204,16 @@ class EditReviewerForm extends Form {
 			// update reviewer interests
                 	import('lib.pkp.classes.user.InterestManager');
                 	$interestManager = new InterestManager();
-                	$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
+			$interestManager->insertInterests($userId, $this->getData('interestsKeywords'), $this->getData('interests'));
+
+			// If email has changed, send a password reset link to the new address.
+			if ($emailChanged) {
+				// To do that, we need Subi to calculate the link.
+				$url = $this->subi_url() . '/ojsResetPwd?oldEmail=' . urlEncode($oldEmail) .
+				       '&newEmail=' . urlencode($user->getEmail());
+				file_get_contents($url);
+			}
+
 		}
 	}
 }
