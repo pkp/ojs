@@ -16,6 +16,10 @@
 		<code function="abort" message="installer.unsupportedUpgradeError" />
 	</upgrade>
 
+	<upgrade minversion="2.3.0.0" maxversion="2.9.0.0"><!-- 2.9.0.0 is OJS 3.0a1 -->
+		<code function="syncSeriesAssocType" />
+	</upgrade>
+
 	<!--
 	  - The 2.3.3 preupdate scripts have been broken into pieces because
 	  - the features they affect were added in different versions of OJS.
