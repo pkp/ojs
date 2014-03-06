@@ -69,7 +69,8 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 		if (!parent::validate()) return false;
 
 		// Validate that the section ID is attached to this journal.
-		$context = Application::getContext();
+		$request = Application::getRequest();
+		$context = $request->getContext();
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getById($this->getData('sectionId'), $context->getId());
 		if (!$section) return false;
