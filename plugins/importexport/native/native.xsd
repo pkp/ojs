@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<!--
+  * plugins/importexport/native/native.xsd
+  *
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Schema describing native XML import/export elements specific to OJS
+  -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://pkp.sfu.ca" xmlns:pkp="http://pkp.sfu.ca" elementFormDefault="qualified">
+
+	<!--
+	  - Base the native import/export schema on the PKP submission model.
+	  -->
+	<include schemaLocation="../../../lib/pkp/plugins/importexport/native/pkp-native.xsd" />
+
+	<!-- Allow the use of "article" in place of "submission" -->
+	<element name="article" substitutionGroup="pkp:submission">
+		<complexType>
+			<complexContent>
+				<extension base="pkp:submission">
+					<attribute name="section" type="int" />
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+	<element name="articles" substitutionGroup="pkp:submissions" />
+
+	<!-- Configure the use of the "article_galley" representation -->
+	<element name="article_galley" substitutionGroup="pkp:representation">
+		<complexType>
+			<complexContent>
+				<extension base="pkp:representation">
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+
+	<!-- Add "artwork_file" extension to submission files -->
+	<element name="artwork_file" substitutionGroup="pkp:submission_file">
+		<complexType>
+			<complexContent>
+				<extension base="pkp:submission_file">
+					<sequence>
+						<element maxOccurs="1" minOccurs="0" name="caption" type="string" />
+						<element maxOccurs="1" minOccurs="0" name="credit" type="string" />
+						<element maxOccurs="1" minOccurs="0" name="copyright_owner" type="string" />
+						<element maxOccurs="1" minOccurs="0" name="copyright_owner_contact" type="string" />
+						<element maxOccurs="1" minOccurs="0" name="permission_terms" type="string" />
+					</sequence>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+</schema>

@@ -1,64 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE issues SYSTEM "native.dtd">
-<!--
-  * plugins/importexport/native/sample.xml
-  *
-  * Copyright (c) 2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Sample import document for the OJS 2.x native XML import/export format.
-  *
-  -->
-<issues>
-	<issue published="true" current="false" identification="title">
-		<title locale="en_US">Test Issue</title>
-		<access_date>01-01-2001</access_date>
-		<section>
-			<title locale="en_US">Articles</title>
-			<abbrev locale="en_US">ART</abbrev>
-			<article>
-				<title locale="en_US">Jane Doe's Article Title</title>
-				<abstract locale="en_US">Jane Doe's Article Abstract...</abstract>
-				<indexing>
-					<discipline locale="en_US">Education; Literature Education</discipline>
-					<subject locale="en_US">Young adult literature; Holocaust</subject>
-					<coverage>
-						<geographical locale="en_US">North America</geographical>
-						<chronological locale="en_US">Contempoary</chronological>
-						<sample locale="en_US">Adolescent readers</sample>
-					</coverage>
-				</indexing>
-				<author primary_contact="true">
-					<firstname>Jane</firstname>
-					<lastname>Doe</lastname>
-					<email>JaneDoe@sample.test</email>
-					<biography locale="en_US">Jane Doe's  Bio statement...</biography>
-				</author>
-				<date_published>2004-10-05</date_published>
-				<htmlgalley locale="en_US">
-					<label>HTML</label>
-					<file>
-						<href src="myfile.html" mime_type="text/html"/>
-					</file>
-					<stylesheet>
-						<href src="myfile.xsl" mime_type="text/xsl"/>
-					</stylesheet>
-					<image>
-						<embed encoding="base64" filename="myfilename.png" mime_type="application/png">(base64-encoded data would appear here)
-      </embed>
-					</image>
-					<image>
-						<href src="myimage2.png" mime_type="application/png"/>
-					</image>
-				</htmlgalley>
-				<galley locale="en_US">
-					<label>PDF</label>
-					<file>
-						<href src="mygalley.pdf" mime_type="application/pdf"/>
-					</file>
-				</galley>
-			</article>
-		</section>
-	</issue>
-</issues>
+<article xmlns="http://pkp.sfu.ca" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	locale="en_US" section="1" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+	<id type="internal">1</id>
+	<title locale="en_US">Article Title</title>
+	<prefix locale="en_US">The</prefix>
+	<subtitle locale="en_US">Subtitle</subtitle>
+	<abstract locale="en_US">the abstract</abstract>
+	<comments_to_editor>the comments to the editor</comments_to_editor>
+	<authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+		<author primary_contact="true" user_group_ref="Journal manager">
+			<firstname>John</firstname>
+			<lastname>Smith</lastname>
+			<email>john.smith@your-domain.com</email>
+		</author>
+	</authors>
+	<submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		stage="submission" id="1" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+		<revision number="1" genre="Submission"
+			filename="article.docx" viewable="true"
+			date_uploaded="2014-03-06" date_modified="2014-03-06" filesize="18675"
+			filetype="application/octet-stream" user_group_ref="Journal manager"
+			uploader="admin">
+			<name locale="en_US">book reviews</name>
+			<embed encoding="base64">.. base64 encoded data is here ...</embed>
+		</revision>
+	</submission_file>
+</article>
