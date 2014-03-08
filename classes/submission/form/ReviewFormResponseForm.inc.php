@@ -50,11 +50,11 @@ class ReviewFormResponseForm extends Form {
 	function display() {
 		$journal = Request::getJournal();
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForm =& $reviewFormDao->getReviewForm($this->reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
+		$reviewForm =& $reviewFormDao->getById($this->reviewFormId, ASSOC_TYPE_JOURNAL, $journal->getId());
 		$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
-		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($this->reviewFormId);
+		$reviewFormElements = $reviewFormElementDao->getByReviewFormId($this->reviewFormId);
 		$reviewFormResponseDao = DAORegistry::getDAO('ReviewFormResponseDAO');
-		$reviewFormResponses =& $reviewFormResponseDao->getReviewReviewFormResponseValues($this->reviewId);
+		$reviewFormResponses = $reviewFormResponseDao->getReviewReviewFormResponseValues($this->reviewId);
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getById($this->reviewId);
 
@@ -99,7 +99,7 @@ class ReviewFormResponseForm extends Form {
 				$reviewFormResponse = new ReviewFormResponse();
 			}
 			$reviewFormElementDao = DAORegistry::getDAO('ReviewFormElementDAO');
-			$reviewFormElement = $reviewFormElementDao->getReviewFormElement($reviewFormElementId);
+			$reviewFormElement = $reviewFormElementDao->getById($reviewFormElementId);
 			$elementType = $reviewFormElement->getElementType();
 			switch ($elementType) {
 				case REVIEW_FORM_ELEMENT_TYPE_SMALL_TEXT_FIELD:
