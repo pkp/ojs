@@ -1071,7 +1071,7 @@ class Upgrade extends Installer {
 
 		foreach ($tablesToUpdate as $tableName) {
 			if ($this->tableExists($tableName)) {
-				$dao->update('UPDATE ' . $tableName . ' SET assoc_type = ' . ASSOC_TYPE_SERIES . ' WHERE assoc_type = ' . "'526'");
+				$dao->update('UPDATE ' . $tableName . ' SET assoc_type = ' . ASSOC_TYPE_SECTION . ' WHERE assoc_type = ' . "'526'");
 			}
 		}
 
