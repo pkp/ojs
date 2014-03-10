@@ -89,7 +89,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleById($submission->getId());
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
 		if ($publishedArticle) { // check to see if there os a published article
 			$templateMgr->assign('submissionIsReady', true);
 		}
