@@ -17,9 +17,9 @@
 {if count($editors) > 0}
 	<div id="editors">
 	{if count($editors) == 1}
-		<h4>{translate key="user.role.editor"}</h4>
+		<h3>{translate key="user.role.editor"}</h3>
 	{else}
-		<h4>{translate key="user.role.editors"}</h4>
+		<h3>{translate key="user.role.editors"}</h3>
 	{/if}
 
 	<ol class="editorialTeam">
@@ -33,9 +33,9 @@
 {if count($sectionEditors) > 0}
 	<div id="sectionEditors">
 	{if count($sectionEditors) == 1}
-		<h4>{translate key="user.role.sectionEditor"}</h4>
+		<h3>{translate key="user.role.sectionEditor"}</h3>
 	{else}
-		<h4>{translate key="user.role.sectionEditors"}</h4>
+		<h3>{translate key="user.role.sectionEditors"}</h3>
 	{/if}
 
 	<ol class="editorialTeam">
@@ -49,9 +49,9 @@
 {if count($layoutEditors) > 0}
 	<div id="layoutEditors">
 	{if count($layoutEditors) == 1}
-		<h4>{translate key="user.role.layoutEditor"}</h4>
+		<h3>{translate key="user.role.layoutEditor"}</h3>
 	{else}
-		<h4>{translate key="user.role.layoutEditors"}</h4>
+		<h3>{translate key="user.role.layoutEditors"}</h3>
 	{/if}
 
 	<ol class="editorialTeam">
@@ -65,9 +65,9 @@
 {if count($copyEditors) > 0}
 	<div id="copyEditors">
 	{if count($copyEditors) == 1}
-		<h4>{translate key="user.role.copyeditor"}</h4>
+		<h3>{translate key="user.role.copyeditor"}</h3>
 	{else}
-		<h4>{translate key="user.role.copyeditors"}</h4>
+		<h3>{translate key="user.role.copyeditors"}</h3>
 	{/if}
 
 	<ol class="editorialTeam">
@@ -81,9 +81,9 @@
 {if count($proofreaders) > 0}
 	<div id="proofreaders">
 	{if count($proofreaders) == 1}
-		<h4>{translate key="user.role.proofreader"}</h4>
+		<h3>{translate key="user.role.proofreader"}</h3>
 	{else}
-		<h4>{translate key="user.role.proofreaders"}</h4>
+		<h3>{translate key="user.role.proofreaders"}</h3>
 	{/if}
 
 	<ol class="editorialTeam">
