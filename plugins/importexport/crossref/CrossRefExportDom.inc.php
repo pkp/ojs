@@ -219,8 +219,7 @@ class CrossRefExportDom {
 		}
 
 		// DOI data node
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getPubId('doi'), Request::url(null, 'article', 'view', $article->getBestArticleId()), $articleGalleyDao->getGalleysByArticle($article->getId()));
+		$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getPubId('doi'), Request::url(null, 'article', 'view', $article->getBestArticleId()));
 		XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);
 
 		/* Component list (supplementary files) */
@@ -291,28 +290,10 @@ class CrossRefExportDom {
 	 * @param $DOI string
 	 * @param $url string
 	 */
-	function &generateDOIdataDom(&$doc, $DOI, $url, $galleys = null) {
-		$request = Application::getRequest();
-		$journal = $request->getJournal();
+	function &generateDOIdataDom(&$doc, $DOI, $url) {
 		$DOIdataNode =& XMLCustomWriter::createElement($doc, 'doi_data');
 		XMLCustomWriter::createChildWithText($doc, $DOIdataNode, 'doi', $DOI);
 		XMLCustomWriter::createChildWithText($doc, $DOIdataNode, 'resource', $url);
-
-		/* article galleys */
-		if ($galleys) {
-			$collectionNode = XMLCustomWriter::createElement($doc, 'collection');
-			XMLCustomWriter::setAttribute($collectionNode, 'property', 'text-mining');
-			XMLCustomWriter::appendChild($DOIdataNode, $collectionNode);
-			foreach ($galleys as $galley) {
-				$itemNode = XMLCustomWriter::createElement($doc, 'item');
-				XMLCustomWriter::appendChild($collectionNode, $itemNode);
-				$resourceNode = XMLCustomWriter::createElement($doc, 'resource');
-				XMLCustomWriter::appendChild($itemNode, $resourceNode);
-				XMLCustomWriter::setAttribute($resourceNode, 'mime_type', $galley->getFileType());
-				$urlNode = XMLCustomWriter::createTextNode($doc, $request->url(null, 'article', 'viewFile', array($galley->getArticleId(), $galley->getBestGalleyId($journal))));
-				XMLCustomWriter::appendChild($resourceNode, $urlNode);
-			}
-		}
 
 		return $DOIdataNode;
 	}
