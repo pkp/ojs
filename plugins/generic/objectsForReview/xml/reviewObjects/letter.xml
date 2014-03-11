@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="letter">plugins.generic.objectsForReview.object.letter</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.letter.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.letter.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.letter.person.recepient</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="letter_type">
+		<name>plugins.generic.objectsForReview.object.letter.type</name>
+	</metadata>
+	</objectMetadata>	
+</object>

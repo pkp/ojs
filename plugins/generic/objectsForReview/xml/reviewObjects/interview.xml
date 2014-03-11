@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="interview">plugins.generic.objectsForReview.object.interview</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.interview.person.interviewWith</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.interview.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.interview.person.interviewer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.interview.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="interview_medium">
+		<name>plugins.generic.objectsForReview.object.interview.medium</name>
+	</metadata>
+	</objectMetadata>	
+</object>

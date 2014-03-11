@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="radioBroadcast">plugins.generic.objectsForReview.object.radioBroadcast</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.radioBroadcast.person.director</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.radioBroadcast.person.castMember</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.radioBroadcast.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.radioBroadcast.person.guest</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.radioBroadcast.person.producer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.radioBroadcast.person.scriptwriter</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="radioBroadcast_program_title">
+		<name>plugins.generic.objectsForReview.object.radioBroadcast.programTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="radioBroadcast_episode_no">
+		<name>plugins.generic.objectsForReview.object.radioBroadcast.episodeNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="radioBroadcast_format">
+		<name>plugins.generic.objectsForReview.object.radioBroadcast.format</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="radioBroadcast_place">
+		<name>plugins.generic.objectsForReview.object.radioBroadcast.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="radioBroadcast_network">
+		<name>plugins.generic.objectsForReview.object.radioBroadcast.network</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="radioBroadcast_running_time">
+		<name>plugins.generic.objectsForReview.object.radioBroadcast.runningTime</name>
+	</metadata>
+	</objectMetadata>
+</object>

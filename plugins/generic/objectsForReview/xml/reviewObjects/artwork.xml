@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="artwork">plugins.generic.objectsForReview.object.artwork</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.artwork.person.artist</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.artwork.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="artwork_medium">
+		<name>plugins.generic.objectsForReview.object.artwork.medium</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="artwork_size">
+		<name>plugins.generic.objectsForReview.object.artwork.size</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="newspaperArticle">plugins.generic.objectsForReview.object.newspaperArticle</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.newspaperArticle.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.newspaperArticle.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.newspaperArticle.person.reviewedAuthor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.newspaperArticle.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="newspaperArticle_publication">
+		<name>plugins.generic.objectsForReview.object.newspaperArticle.publication</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="newspaperArticle_edition">
+		<name>plugins.generic.objectsForReview.object.newspaperArticle.edition</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="newspaperArticle_place">
+		<name>plugins.generic.objectsForReview.object.newspaperArticle.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="newspaperArticle_section">
+		<name>plugins.generic.objectsForReview.object.newspaperArticle.section</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="newspaperArticle_pages">
+		<name>plugins.generic.objectsForReview.object.newspaperArticle.pages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="newspaperArticle_issn">
+		<name>plugins.generic.objectsForReview.object.newspaperArticle.issn</name>
+	</metadata>
+	</objectMetadata>
+</object>

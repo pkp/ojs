@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="webPage">plugins.generic.objectsForReview.object.webPage</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.webPage.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.webPage.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.webPage.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="webPage_website_title">
+		<name>plugins.generic.objectsForReview.object.webPage.websiteTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="webPage_website_type">
+		<name>plugins.generic.objectsForReview.object.webPage.websiteType</name>
+	</metadata>
+	</objectMetadata>
+</object>

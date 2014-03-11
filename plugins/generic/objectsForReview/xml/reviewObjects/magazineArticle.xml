@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="magazineArticle">plugins.generic.objectsForReview.object.magazineArticle</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.magazineArticle.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.magazineArticle.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.magazineArticle.person.reviewedAuthor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.magazineArticle.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="magazineArticle_publication">
+		<name>plugins.generic.objectsForReview.object.magazineArticle.publication</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="magazineArticle_volume">
+		<name>plugins.generic.objectsForReview.object.magazineArticle.volume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="magazineArticle_issue">
+		<name>plugins.generic.objectsForReview.object.magazineArticle.issue</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="magazineArticle_pages">
+		<name>plugins.generic.objectsForReview.object.magazineArticle.pages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="magazineArticle_issn">
+		<name>plugins.generic.objectsForReview.object.magazineArticle.issn</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="blogPost">plugins.generic.objectsForReview.object.blogPost</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.blogPost.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.blogPost.person.commenter</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.blogPost.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="blogPost_blog_title">
+		<name>plugins.generic.objectsForReview.object.blogPost.blogTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="blogPost_website_title">
+		<name>plugins.generic.objectsForReview.object.blogPost.websiteTitle</name>
+	</metadata>
+	</objectMetadata>
+</object>

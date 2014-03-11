@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="podcast">plugins.generic.objectsForReview.object.podcast</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.podcast.person.podcaster</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.podcast.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.podcast.person.guest</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="podcast_series_title">
+		<name>plugins.generic.objectsForReview.object.podcast.seriesTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="podcast_episode_no">
+		<name>plugins.generic.objectsForReview.object.podcast.episodeNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="podcast_file_type">
+		<name>plugins.generic.objectsForReview.object.podcast.fileType</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="podcast_running_time">
+		<name>plugins.generic.objectsForReview.object.podcast.runningTime</name>
+	</metadata>
+	</objectMetadata>
+</object>

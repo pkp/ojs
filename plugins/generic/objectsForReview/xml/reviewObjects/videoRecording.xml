@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="videoRecording">plugins.generic.objectsForReview.object.videoRecording</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.videoRecording.person.director</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.videoRecording.person.castMember</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.videoRecording.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.videoRecording.person.producer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.videoRecording.person.screenWriter</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="videoRecording_format">
+		<name>plugins.generic.objectsForReview.object.videoRecording.format</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="videoRecording_series_title">
+		<name>plugins.generic.objectsForReview.object.videoRecording.seriesTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="videoRecording_volume">
+		<name>plugins.generic.objectsForReview.object.videoRecording.volume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="videoRecording_volume_no">
+		<name>plugins.generic.objectsForReview.object.videoRecording.numberOfVolumes</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="videoRecording_place">
+		<name>plugins.generic.objectsForReview.object.videoRecording.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="videoRecording_studio">
+		<name>plugins.generic.objectsForReview.object.videoRecording.studio</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="videoRecording_running_time">
+		<name>plugins.generic.objectsForReview.object.videoRecording.runningTime</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="videoRecording_isbn">
+		<name>plugins.generic.objectsForReview.object.videoRecording.isbn</name>
+	</metadata>
+	</objectMetadata>
+</object>

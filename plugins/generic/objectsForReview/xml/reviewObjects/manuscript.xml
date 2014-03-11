@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="manuscript">plugins.generic.objectsForReview.object.manuscript</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.manuscript.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.manuscript.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.manuscript.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="manuscript_type">
+		<name>plugins.generic.objectsForReview.object.manuscript.type</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="manuscript_place">
+		<name>plugins.generic.objectsForReview.object.manuscript.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="manuscript_pages_no">
+		<name>plugins.generic.objectsForReview.object.manuscript.numberOfPages</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="journalArticle">plugins.generic.objectsForReview.object.journalArticle</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.journalArticle.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.journalArticle.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.journalArticle.person.editor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.journalArticle.person.reviewedAuthor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.journalArticle.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_publication">
+		<name>plugins.generic.objectsForReview.object.journalArticle.publication</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_volume">
+		<name>plugins.generic.objectsForReview.object.journalArticle.volume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_issue">
+		<name>plugins.generic.objectsForReview.object.journalArticle.issue</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_pages">
+		<name>plugins.generic.objectsForReview.object.journalArticle.pages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_series">
+		<name>plugins.generic.objectsForReview.object.journalArticle.series</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_series_title">
+		<name>plugins.generic.objectsForReview.object.journalArticle.seriesTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_series_text">
+		<name>plugins.generic.objectsForReview.object.journalArticle.seriesText</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_journal_abbr">
+		<name>plugins.generic.objectsForReview.object.journalArticle.journalAbbr</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="journalArticle_issn">
+		<name>plugins.generic.objectsForReview.object.journalArticle.issn</name>
+	</metadata>
+	</objectMetadata>
+</object>

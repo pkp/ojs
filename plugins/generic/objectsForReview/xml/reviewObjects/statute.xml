@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="statute">plugins.generic.objectsForReview.object.statute</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.statute.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.statute.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="statute_code">
+		<name>plugins.generic.objectsForReview.object.statute.code</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="statute_code_no">
+		<name>plugins.generic.objectsForReview.object.statute.codeNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="statute_public_law_no">
+		<name>plugins.generic.objectsForReview.object.statute.publicLawNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="statute_pages">
+		<name>plugins.generic.objectsForReview.object.statute.pages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="statute_section">
+		<name>plugins.generic.objectsForReview.object.statute.section</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="statute_session">
+		<name>plugins.generic.objectsForReview.object.statute.session</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="case_history">
+		<name>plugins.generic.objectsForReview.object.case.history</name>
+	</metadata>
+	</objectMetadata>
+</object>
