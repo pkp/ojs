@@ -212,7 +212,7 @@ class ProfileForm extends Form {
 			'isReviewer' => Validation::isReviewer(),
 			'existingInterests' => $existingInterests,
 			'interestsKeywords' => $currentInterests,
-                        'professionalTitle' => $user->getProfessionalTitle()
+                        'professionalTitle' => $user->getProfessionalTitle(null)
 		);
 	}
 
@@ -257,6 +257,26 @@ class ProfileForm extends Form {
 		}
 	}
 
+	/*
+	 * Calculate the proper URL to reach Subi on this server
+	 */
+	function subi_url()
+	{
+		$s = $_SERVER;
+		$ssl = (!empty($s['HTTPS']) && $s['HTTPS'] == 'on') ? true:false;
+		$sp = strtolower($s['SERVER_PROTOCOL']);
+		$protocol = substr($sp, 0, strpos($sp, '/')) . (($ssl) ? 's' : '');
+		$port = $s['SERVER_PORT'];
+		$port = ((!$ssl && $port=='80') || ($ssl && $port=='443')) ? '' : ':'.$port;
+		$host = isset($s['HTTP_X_FORWARDED_HOST']) ? $s['HTTP_X_FORWARDED_HOST'] : isset($s['HTTP_HOST']) ? $s['HTTP_HOST'] : $s['SERVER_NAME'];
+		// Hack to get to proper subi on localhost
+		if ($host == 'localhost' && $port == '') {
+			$port = ':8080';
+			$protocol = "http";
+		}
+		return $protocol . '://' . $host . $port . '/subi';
+	}
+
 	/**
 	 * Save profile settings.
 	 */
@@ -279,7 +299,14 @@ class ProfileForm extends Form {
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($affiliation, null); // Localized
 		$user->setSignature($this->getData('signature'), null); // Localized
-		$user->setEmail($this->getData('email'));
+		$emailChanged = false;
+		if ($user->getEmail() != $this->getData('email')) {
+			$oldEmail = $user->getEmail();
+			$user->setEmail($this->getData('email'));
+			$emailChanged = true;
+		}
+                // MCH 20140211: In our OJS, email is the same as username.
+		$user->setUsername(strtolower($this->getData('email')));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));
@@ -364,6 +391,14 @@ class ProfileForm extends Form {
 
 		if (isset($auth)) {
 			$auth->doSetUserInfo($user);
+		}
+
+		// If email has changed, send a password reset link to the new address.
+		if ($emailChanged) {
+			// To do that, we need Subi to calculate the link.
+			$url = $this->subi_url() . '/ojsResetPwd?oldEmail=' . urlEncode($oldEmail) .
+			       '&newEmail=' . urlencode($user->getEmail());
+			file_get_contents($url);
 		}
 	}
 }

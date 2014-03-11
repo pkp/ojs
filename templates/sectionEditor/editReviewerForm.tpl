@@ -100,7 +100,10 @@
                 <td class="label">{fieldLabel name="email" required="true" key="user.email"}</td>
                 <td class="value"><input type="text" name="email" id="email" value="{$email|escape}" size="30" maxlength="90" class="textField" /></td>
         </tr>
-        <input type="hidden" name="email" id="email" value="{$email|escape}" />
+        <tr valign="top">
+          <td class="label"></td>
+          <td class="value"><b>Important note:</b> If you change your email address, you will receive a password reset email at the new address. You must complete the reset process before you will be able to log in again.</td>
+        </tr>
         <tr valign="top">
                 <td class="label">{fieldLabel name="userUrl" key="user.url"}</td>
                 <td class="value"><input type="text" name="userUrl" id="userUrl" value="{$userUrl|escape}" size="30" maxlength="255" class="textField" /></td>
