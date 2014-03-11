@@ -109,12 +109,13 @@
 			inGroup="native-xml=>SubmissionFile"
 			class="plugins.importexport.native.filter.NativeXmlArticleFileFilter"
 			isTemplate="0" />
-		<!-- Native XML artwork file input -->
+		<!-- Commenting until is ready for OJS 	
+		Native XML artwork file input 
 		<filter
 			inGroup="native-xml=>ArtworkFile"
 			class="plugins.importexport.native.filter.NativeXmlArtworkFileFilter"
 			isTemplate="0" />
-		<!-- Native XML submission file output -->
+		<!-- Native XML submission file output
 		<filter
 			inGroup="ArtworkFile=>native-xml"
 			class="plugins.importexport.native.filter.ArtworkFileNativeXmlFilter"
@@ -123,15 +124,16 @@
 			inGroup="ArticleFile=>native-xml"
 			class="lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter"
 			isTemplate="0" />
-		<!-- Native XML article galley output -->
+		<!-- Native XML article galley output
 		<filter
 			inGroup="article-galley=>native-xml"
 			class="plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter"
 			isTemplate="0" />
-		<!-- Native XML article galley input -->
+		<!-- Native XML article galley input
 		<filter
 			inGroup="native-xml=>article-galley"
 			class="plugins.importexport.native.filter.NativeXmlArticleGalleyFilter"
 			isTemplate="0" />
+		-->
 	</filters>
 </filterConfig>
