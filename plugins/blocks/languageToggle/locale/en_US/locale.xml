@@ -12,6 +12,7 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.languageToggle.selectLabel">Select Language</message>
 	<message key="plugins.block.languageToggle.displayName">Language Toggle Block</message>
 	<message key="plugins.block.languageToggle.description">This plugin provides the sidebar language toggler.</message>
 </locale>
