@@ -40,7 +40,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function getById($galleyId, $submissionId = null) {
 		$params = array((int) $galleyId);
-		if ($articleId !== null) $params[] = (int) $submissionId;
+		if ($submissionId !== null) $params[] = (int) $submissionId;
 		$result = $this->retrieve(
 			'SELECT	*
 			FROM	submission_galleys
