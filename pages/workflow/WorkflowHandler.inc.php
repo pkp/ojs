@@ -33,6 +33,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				'externalReview', // review
 				'editorial',
 				'production', 'galleysTab', // Production
+				'submissionHeader',
 				'submissionProgressBar',
 				'expedite'
 			)
@@ -66,34 +67,6 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$templateMgr->assign('productionNotificationRequestOptions', $notificationRequestOptions);
 		$templateMgr->display('workflow/production.tpl');
-	}
-
-	/**
-	 * Fetch the JSON-encoded submission progress bar.
-	 * @param $args array
-	 * @param $request Request
-	 */
-	function submissionProgressBar($args, $request) {
-		// Assign the actions to the template.
-		$templateMgr = TemplateManager::getManager($request);
-		$context = $request->getContext();
-
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-		$workflowStages = $userGroupDao->getWorkflowStageKeysAndPaths();
-		$stageNotifications = array();
-		foreach (array_keys($workflowStages) as $stageId) {
-			$stageNotifications[$stageId] = $this->_notificationOptionsByStage($request->getUser(), $stageId, $context->getId());
-		}
-
-		$templateMgr->assign('stageNotifications', $stageNotifications);
-
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
-		if ($publishedArticle) { // check to see if there os a published article
-			$templateMgr->assign('submissionIsReady', true);
-		}
-		return $templateMgr->fetchJson('workflow/submissionProgressBar.tpl');
 	}
 
 	/**
@@ -184,55 +157,6 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		}
 	}
 
-	/**
-	 * Determine if a particular stage has a notification pending.  If so, return true.
-	 * This is used to set the CSS class of the submission progress bar.
-	 * @param PKPUser $user
-	 * @param int $stageId
-	 */
-	function _notificationOptionsByStage(&$user, $stageId, $contextId) {
-
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$notificationDao = DAORegistry::getDAO('NotificationDAO');
-
-		$signOffNotificationType = $this->_getSignoffNotificationTypeByStageId($stageId);
-		$editorAssignmentNotificationType = $this->_getEditorAssignmentNotificationTypeByStageId($stageId);
-
-		$editorAssignments = $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), null, $editorAssignmentNotificationType, $contextId);
-		if (isset($signOffNotificationType)) {
-			$signoffAssignments = $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), $user->getId(), $signOffNotificationType, $contextId);
-		}
-
-		// if the User has assigned TASKs in this stage check, return true
-		if (!$editorAssignments->wasEmpty() || (isset($signoffAssignments) && !$signoffAssignments->wasEmpty())) {
-			return true;
-		}
-
-		// check for more specific notifications on those stages that have them.
-		if ($stageId == WORKFLOW_STAGE_ID_PRODUCTION) {
-			$submissionApprovalNotification = $notificationDao->getByAssoc(ASSOC_TYPE_SUBMISSION, $submission->getId(), null, NOTIFICATION_TYPE_APPROVE_SUBMISSION, $contextId);
-			if (!$submissionApprovalNotification->wasEmpty()) {
-				return true;
-			}
-		}
-
-		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) {
-			$reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
-			$reviewRounds = $reviewRoundDao->getBySubmissionId($submission->getId(), $stageId);
-			$notificationTypes = array(NOTIFICATION_TYPE_REVIEW_ROUND_STATUS, NOTIFICATION_TYPE_ALL_REVIEWS_IN);
-			while ($reviewRound = $reviewRounds->next()) {
-				foreach ($notificationTypes as $type) {
-					$notifications = $notificationDao->getByAssoc(ASSOC_TYPE_REVIEW_ROUND, $reviewRound->getId(), null, $type, $contextId);
-					if (!$notifications->wasEmpty()) {
-						return true;
-					}
-				}
-			}
-		}
-
-		return false;
-	}
-
 	//
 	// Protected helper methods
 	//
@@ -241,7 +165,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	 * @param $stageId int
 	 * @return int
 	 */
-	protected function _getEditorAssignmentNotificationTypeByStageId($stageId) {
+	protected function getEditorAssignmentNotificationTypeByStageId($stageId) {
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_SUBMISSION:
 				return NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_SUBMISSION;
@@ -253,6 +177,19 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				return NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_PRODUCTION;
 		}
 		return null;
+	}
+
+	/**
+	 * @see PKPWorkflowHandler::isSubmissionReady()
+	 */
+	protected function isSubmissionReady($submission) {
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId());
+		if ($publishedArticle) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
 

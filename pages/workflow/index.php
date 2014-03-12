@@ -24,6 +24,7 @@ switch ($op) {
 	case 'production':
 	case 'galleysTab':
 	case 'editorDecisionActions':
+	case 'submissionHeader':
 	case 'submissionProgressBar':
 	case 'expedite':
 		define('HANDLER_CLASS', 'WorkflowHandler');
