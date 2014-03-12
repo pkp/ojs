@@ -203,10 +203,6 @@ class CrossRefExportDom {
 		} else {
 			echo __('plugins.importexport.crossref.articleDatePublishedError', array('articleId' => $article->getId())) . "\n\n";
 		}
-		else {
-			$publicationDateNode =& CrossRefExportDom::generatePublisherDateDom($doc, $issue->getdatePublished());
-                }
-		XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 
 		/* publisher_item is the article pages */
 		if ($article->getPages() != '') {
