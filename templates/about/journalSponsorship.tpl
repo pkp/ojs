@@ -30,15 +30,17 @@
 
 {if $sponsorNote}<p>{$sponsorNote|nl2br}</p>{/if}
 
-<ul>
-	{foreach from=$sponsors item=sponsor}
-	{if $sponsor.url}
-		<li><a href="{$sponsor.url|escape}">{$sponsor.institution|escape}</a></li>
-	{else}
-		<li>{$sponsor.institution|escape}</li>
-	{/if}
-	{/foreach}
-</ul>
+{if $sponsors}
+  <ul>
+    {foreach from=$sponsors item=sponsor}
+      {if $sponsor.url}
+        <li><a href="{$sponsor.url|escape}">{$sponsor.institution|escape}</a></li>
+        {else}
+        <li>{$sponsor.institution|escape}</li>
+        {/if}
+      {/foreach}
+  </ul>
+{/if}
 </div>
 <div class="separator"></div>
 {/if}
@@ -49,17 +51,19 @@
 
 {if $contributorNote}<p>{$contributorNote|nl2br}</p>{/if}
 
-<ul>
-	{foreach from=$contributors item=contributor}
-	{if $contributor.name}
-		{if $contributor.url}
-			<li><a href="{$contributor.url|escape}">{$contributor.name|escape}</a></li>
-		{else}
-			<li>{$contributor.name|escape}</li>
-		{/if}
-	{/if}
-	{/foreach}
-</ul>
+{if $contributors}
+  <ul>
+    {foreach from=$contributors item=contributor}
+      {if $contributor.name}
+        {if $contributor.url}
+          <li><a href="{$contributor.url|escape}">{$contributor.name|escape}</a></li>
+          {else}
+          <li>{$contributor.name|escape}</li>
+          {/if}
+        {/if}
+      {/foreach}
+  </ul>
+{/if}
 </div>
 {/if}
 
