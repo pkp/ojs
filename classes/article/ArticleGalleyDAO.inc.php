@@ -159,11 +159,6 @@ class ArticleGalleyDAO extends DAO {
 			(int) $articleId
 		);
 
-		while (!$result->EOF) {
-			$galleys[] = $this->_fromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
