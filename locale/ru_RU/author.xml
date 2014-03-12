@@ -14,7 +14,7 @@
 
 <locale name="ru_RU" full_name = "Russian">
 	<message key="author.submit">Новая статья</message>
-	<message key="author.track">Статьи в процессе отправки</message>
+	<message key="author.track">Статьи в работе</message>
 	<message key="author.competingInterests"><![CDATA[Конфликт&nbsp;интересов <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Руководство по заполнению Декларации о конфликте интересов</a>]]></message>
 	<message key="author.submit.submitArticle">Отправить статью</message>
 	<message key="author.submit.stepsToSubmit">Пять шагов к отправке</message>
@@ -26,12 +26,12 @@
 	<message key="author.submit.step4">Шаг 4. Загрузка дополнительных файлов</message>
 	<message key="author.submit.step4a">Шаг 4a. Добавить дополнительный файл</message>
 	<message key="author.submit.step5">Шаг 5. Подтверждение отправки</message>
-	<message key="author.submit.start">1. Старт</message>
-	<message key="author.submit.upload">2. Загрузить статью</message>
-	<message key="author.submit.metadata">3. Ввести метаданные</message>
-	<message key="author.submit.supplementaryFiles">4. Загрузить дополнительные файлы</message>
+	<message key="author.submit.start">1. Начало</message>
+	<message key="author.submit.upload">2. Статья</message>
+	<message key="author.submit.metadata">3. Метаданные</message>
+	<message key="author.submit.supplementaryFiles">4. Дополнительные файлы</message>
 	<message key="author.submit.confirmation">5. Подтверждение</message>
-	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Статьи в процессе отправки» на домашней странице автора.</message>
+	<message key="author.submit.cancelSubmission">Вы можете закончить эту отправку позже, выбрав «Статьи в работе» на домашней странице автора.</message>
 	<message key="author.submit.notAccepting">Этот журнал сейчас не принимает статьи.</message>
 	<message key="author.submit.requestWaiver">Запрос отмены оплаты</message>
 	<message key="author.submit.qualifyForWaiver">Пожалуйста рассмотрите возможность сделать исключение и отменить плату за отправку данной статьи</message>
@@ -49,7 +49,7 @@
 	<message key="author.submit.howToSubmit"><![CDATA[Столкнулись с трудностями? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь ({$supportPhone}).]]></message>
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Столкнулись с трудностями? Свяжитесь с <a href="mailto:{$supportEmail}">{$supportName}</a>, чтобы получить помощь.]]></message>
 	<message key="author.submit.journalSection">Раздел журнала</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этой статьи (смотрите «Разделы и политики» на странице <a href="{$aboutUrl}" target="_new">«О журнале»</a>).]]></message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Выберите подходящий раздел для этой статьи (смотрите «Политика разделов журнала» на странице <a href="{$aboutUrl}" target="_new">«О журнале»</a>).]]></message>
 	<message key="author.submit.selectSection">Пожалуйста, выберите раздел...</message>
 	<message key="author.submit.submissionLocale">Язык отправляемой статьи</message>
 	<message key="author.submit.submissionLocaleDescription">Этот журнал принимает статьи на нескольких языках. Выберите основной язык отправляемой статьи из раскрывающегося списка ниже.</message>
@@ -117,11 +117,11 @@
 	<message key="author.submit.suppFile.form.descriptionRequired">Пожалуйста, введите описание.</message>
 	<message key="author.suppFile.suppFilePublicIdentificationExists">Открытая идентификация дополнительного файла уже задана.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Открытый идентификатор дополнительного файла</message>
-	<message key="author.submit.confirmationDescription">Нажмите «Завершить отправку», чтобы отправить вашу статью в журнал {$journalTitle}. Основной автор, указанный для переписки с редакцией, получит подтверждение по электронной почте и будет иметь возможность следить за прохождением статьи через редакционный процесс на веб-сайте журнала. Спасибо за интерес к публикации в журнале {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">Нажмите «Завершить отправку», чтобы отправить вашу статью в журнал «{$journalTitle}». Основной автор, указанный для переписки с редакцией, получит подтверждение по электронной почте и будет иметь возможность следить за прохождением статьи через редакционный процесс на веб-сайте журнала. Спасибо за интерес к публикации в журнале «{$journalTitle}».</message>
 	<message key="author.submit.noFiles">Ни один файл не был прикреплен к этой отправке статьи.</message>
 	<message key="author.submit.filesSummary">Сведения о файлах</message>
 	<message key="author.submit.finishSubmission">Завершить отправку</message>
-	<message key="author.submit.submissionComplete">Статья отправлена. Спасибо за интерес к публикации в журнале {$journalTitle}.</message>
+	<message key="author.submit.submissionComplete">Статья отправлена. Спасибо за интерес к публикации в журнале «{$journalTitle}».</message>
 	<message key="author.submit.expedite"><![CDATA[Если эта статья уже представлена в формате, готовом для публикации, и не требует  рецензирования, редактирования или форматирования, ее можно поместить непосредственно на последнюю стадию процесса редактирования, <a href="{$expediteUrl}" class="action">нажав на эту ссылку</a>. (Замечание: только редакторы журнала могут воспользоваться этой возможностью для своих статей.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Загрузить авторскую версию</message>
 	<message key="author.article.copyeditedFile">Файл после литературного редактирования</message>
