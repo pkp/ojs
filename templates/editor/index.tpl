@@ -9,7 +9,8 @@
  * $Id$
  *}
 {strip}
-{assign var="pageTitle" value="editor.home"}
+{assign var="helpLink" value='<a href="https://submit.escholarship.org/help/journals/editors_c.html" target="_blank"><img src="'|concat:$baseUrl:'/eschol/images/help_A.png"></a>'}
+{translate|assign:"pageTitleTranslated" key="editor.home" helpLink=$helpLink}
 {assign var="pageCrumbTitle" value="user.role.editor"}
 {include file="common/header.tpl"}
 {/strip}

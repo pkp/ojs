@@ -36,7 +36,7 @@
 		{/if}{* $isUserLoggedIn *}
 		
 		{* 20110824 BLH moved ABOUT link - makes more sense in this order *}
-		<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
+		{* <li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li> *}
 		
 		{* 20110915 BLH remove "SEARCH" from top navbar *}
 		{*
@@ -45,15 +45,18 @@
 		{/if}
 		*}
 
+		{*
 		{if $currentJournal && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 			<li id="current"><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>
 			<li id="archives"><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
 		{/if}
+		*}
 
 		{if $enableAnnouncements}
 			<li id="announcements"><a href="{url page="announcement"}">{translate key="announcement.announcements"}</a></li>
 		{/if}{* enableAnnouncements *}
 
+		<li id="eschol_help"><a href="https://submit.escholarship.org/help/journals/" target="_blank">HELP CENTER</a></li>
 		{call_hook name="Templates::Common::Header::Navbar::CurrentJournal"}
 
 		{foreach from=$navMenuItems item=navItem}

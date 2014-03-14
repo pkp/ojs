@@ -9,7 +9,8 @@
  * $Id$
  *}
 {strip}
-{translate|assign:"pageTitleTranslated" key="submission.page.review" id=$submission->getId()}{assign var="pageCrumbTitle" value="submission.review"}
+{assign var="helpLink" value='<a href="https://submit.escholarship.org/help/journals/editors_g.html" target="_blank"><img src="'|concat:$baseUrl:'/eschol/images/help_A.png"></a>'}
+{translate|assign:"pageTitleTranslated" key="submission.page.review" id=$submission->getId() helpLink=$helpLink}{assign var="pageCrumbTitle" value="submission.review"}
 {include file="common/header.tpl"}
 {/strip}
 

@@ -12,7 +12,7 @@
 {if $disableSectionEditorDecisions && $isEditor !=1}
 	<h3>{translate key="submission.submissionEditorDecision"}</h3>
 {else}
-	<h3>{translate key="submission.editorDecision"}</h3>
+	<h3>{translate key="submission.editorDecision"} <a href="https://submit.escholarship.org/help/journals/editors_m.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3>
 {/if}
 
 <table id="table1" width="100%" class="data">
@@ -209,6 +209,7 @@
 		<td width="20%">&nbsp;</td>
 		<td width="80%">
 			{if !($editorRevisionExists or $authorRevisionExists or $reviewVersionExists) or !$submission->getMostRecentEditorDecisionComment()}{assign var=copyeditingUnavailable value=1}{else}{assign var=copyeditingUnavailable value=0}{/if}
+			<a href="https://submit.escholarship.org/help/journals/editors_n.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_B.png"></a>
 			<input type="submit" {if $copyeditingUnavailable}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="editor.submissionReview.sendToCopyediting"}" {if $copyeditingUnavailable}class="button"{else}class="defaultButton"{/if} />
 			{if $copyeditingUnavailable}
 				<span class="instruct">{translate key="editor.submissionReview.cannotSendToCopyediting"}</span>

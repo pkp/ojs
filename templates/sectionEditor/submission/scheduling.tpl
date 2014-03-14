@@ -9,7 +9,7 @@
  * $Id$
  *}
 <div id="scheduling">
-<h3>{translate key="submission.scheduling"}</h3>
+<h3>{translate key="submission.scheduling"} <a href="https://submit.escholarship.org/help/journals/editors_w.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3>
 
 <table class="data" width="100%">
 {if !$publicationFeeEnabled || $publicationPayment}

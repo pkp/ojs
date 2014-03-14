@@ -12,7 +12,7 @@
 {assign var=proofreader value=$submission->getUserBySignoffType('SIGNOFF_PROOFREADING_PROOFREADER')}
 
 <div id="proofread">
-<h3>{translate key="submission.proofreading"}</h3>
+<h3>{translate key="submission.proofreading"} <a href="https://submit.escholarship.org/help/journals/editors_s.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3>
 
 {if $useProofreaders}
 <table class="data" width="100%">
