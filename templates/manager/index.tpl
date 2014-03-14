@@ -13,7 +13,7 @@
  *}
 {strip}
 {assign var="helpLink" value='<a href="https://submit.escholarship.org/help/journals/journal_managers.html" target="_blank"><img src="'|concat:$baseUrl:'/eschol/images/help_A.png"></a>'}
-{translate|assign:"pageTitleTranslated" key="manager.journalManagement.with.help" helpLink=$helpLink}
+{translate|assign:"pageTitleTranslated" key="manager.journalManagement" helpLink=$helpLink}
 {assign var="pageCrumbTitle" value="manager.journalManagement"}
 {include file="common/header.tpl"}
 {/strip}

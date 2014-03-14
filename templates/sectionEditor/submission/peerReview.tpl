@@ -24,7 +24,7 @@
 {/literal}
 
 <div id="submission">
-<h3>{translate key="article.submission"} <a href="https://submit.escholarship.org/help/journals/editors_g.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></h3>
+<h3>{translate key="article.submission"}</h3>
 
 <table width="100%" class="data">
 	<tr>

@@ -11,11 +11,11 @@
 {strip}
 {if $pageToDisplay == 'active'}
         {assign var="helpLink" value='<a href="https://submit.escholarship.org/help/journals/authors.html" target="_blank"><img src="'|concat:$baseUrl:'/eschol/images/help_A.png"></a>'}
-        {translate|assign:"pageTitleTranslated" key="common.queue.long.$pageToDisplay.with.help" helpLink=$helpLink}
-	{assign var="pageCrumbTitle" value="common.queue.long.$pageToDisplay}
 {else}
-	{assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
+	{assign var="helpLink" value=""}
 {/if}
+{assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
+
 {include file="common/header.tpl"}
 {/strip}
 

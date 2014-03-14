@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="helpLink" value='<a href="https://submit.escholarship.org/help/journals/editors_c.html" target="_blank"><img src="'|concat:$baseUrl:'/eschol/images/help_A.png"></a>'}
-{translate|assign:"pageTitleTranslated" key="editor.home.with.help" helpLink=$helpLink}
+{translate|assign:"pageTitleTranslated" key="editor.home" helpLink=$helpLink}
 {assign var="pageCrumbTitle" value="user.role.editor"}
 {include file="common/header.tpl"}
 {/strip}
@@ -18,8 +18,8 @@
 <h3>{translate key="article.submissions"}</h3>
 
 <ul class="plain">
-	<li>&#187; <a href="{url op="submissions" path="submissionsUnassigned"}">{translate key="common.queue.short.submissionsUnassigned"}</a>&nbsp;({if $submissionsCount[0]}{$submissionsCount[0]}{else}0{/if}) <a href="https://submit.escholarship.org/help/journals/editors_e.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_B.png"></a></li>
-	<li>&#187; <a href="{url op="submissions" path="submissionsInReview"}">{translate key="common.queue.short.submissionsInReview"}</a>&nbsp;({if $submissionsCount[1]}{$submissionsCount[1]}{else}0{/if}) <a href="https://submit.escholarship.org/help/journals/editors_k.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_B.png"></a></li>
+	<li>&#187; <a href="{url op="submissions" path="submissionsUnassigned"}">{translate key="common.queue.short.submissionsUnassigned"}</a>&nbsp;({if $submissionsCount[0]}{$submissionsCount[0]}{else}0{/if})</li>
+	<li>&#187; <a href="{url op="submissions" path="submissionsInReview"}">{translate key="common.queue.short.submissionsInReview"}</a>&nbsp;({if $submissionsCount[1]}{$submissionsCount[1]}{else}0{/if})</li>
 	<li>&#187; <a href="{url op="submissions" path="submissionsInEditing"}">{translate key="common.queue.short.submissionsInEditing"}</a>&nbsp;({if $submissionsCount[2]}{$submissionsCount[2]}{else}0{/if})</li>
 	<li>&#187; <a href="{url op="submissions" path="submissionsArchives"}">{translate key="common.queue.short.submissionsArchives"}</a></li>
 	{call_hook name="Templates::Editor::Index::Submissions"}

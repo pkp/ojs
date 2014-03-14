@@ -53,7 +53,6 @@
 	<message key="reviewer.article.enterReviewForm">Click on icon to fill in the review form.</message>	
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>	
 	<message key="submission.page.review">#{$id} Review</message>
-	<message key="submission.page.review.with.help">#{$id} Review {$helpLink}</message>	
 	<!-- review forms end -->
 
 	<!--
@@ -103,7 +102,6 @@
 	<message key="common.queue.long.submissionsArchives">Archives</message>
 	<message key="common.queue.short.submissionsArchives">Archives</message>
 	<message key="common.queue.long.active">Active Submissions</message>
-	<message key="common.queue.long.active.with.help">Active Submissions {$helpLink}</message>
 	<message key="common.queue.short.active">Active</message>
 	<message key="common.queue.long.completed">Archive</message>
 	<message key="common.queue.short.completed">Archive</message>
