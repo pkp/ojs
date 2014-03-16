@@ -9,7 +9,7 @@
  *
  *}
 <div id="copyedit">
-<h3>{translate key="submission.copyedit"}</h3>
+<h3>{translate key="submission.copyediting"}</h3>
 
 {if $currentJournal->getLocalizedSetting('copyeditInstructions') != ''}
 <p><a href="javascript:openHelp('{url op="instructions" path="copy"}')" class="action">{translate key="submission.copyedit.instructions"}</a></p>
