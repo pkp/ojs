@@ -9,7 +9,7 @@
  *
  *}
 <div id="copyedit">
-<h3>{translate key="submission.copyedit"}</h3>
+<h3>{translate key="submission.copyediting"}</h3>
 
 <table width="100%" class="data">
 	<tr>
