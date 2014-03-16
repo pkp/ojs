@@ -166,7 +166,7 @@
 	<message key="submission.authorsRevisedVersion">Версия файла, исправленная автором</message>
 	<message key="submission.authorVersion">Версия автора</message>
 	<message key="submission.copyediting">Литературное редактирование</message>
-	<message key="submission.copyedit">Править</message>
+	<message key="submission.copyedit">Лит.Ред.</message>
 	<message key="submission.proofreading">Корректура</message>
 	<message key="submission.scheduling">Планирование</message>
 	<message key="submission.scheduledIn">Запланировано к публикации в выпуске «{$issueName}».</message>
@@ -182,7 +182,7 @@
 	<message key="submissions.initialProof">Первоначальная корректура</message>
 	<message key="submissions.postAuthor">После автора</message>
 	<message key="submissions.reviewRound">Раунд рецензирования</message>
-	<message key="submissions.proof">Правки</message>
+	<message key="submissions.proof">Корр.</message>
 	<message key="submissions.editorDecision">Решение редактора</message>
 	<message key="submissions.editorRuling">Правила редактора</message>
 	<message key="submission.eventLog">Журнал действий</message>
@@ -517,9 +517,9 @@
 	<!-- Используются редактором в процессе рецензирования / редактирования статьи -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Имя является ссылкой на профиль рецензента.<br/>
 Высшая оценка в рейтинге — 5 (Отлично).<br/>
-Недели показывают средний срок выполнения рецензии рецензентом.<br />
+Недель — показывает средний срок выполнения рецензии рецензентом.<br />
 Последняя — дата последней принятой рецензии от данного рецензента,<br/>
-Активно — количество рецензий, запросы на которые сейчас рассматривает или выполняет рецензент.]]></message>
+Активны — количество рецензий, запросы на которые сейчас рассматривает или выполняет рецензент.]]></message>
 
 
 
@@ -537,7 +537,7 @@
 
 	<message key="sectionEditor.regrets.breadcrumb">Отказы</message>
 	<message key="sectionEditor.regrets.title">#{$articleId} Отказы рецензентов, отмены и предыдущие раунды</message>
-	<message key="sectionEditor.regrets">Отказы</message>
+	<message key="sectionEditor.regrets">Отказ</message>
 	<message key="sectionEditor.regrets.link">Просмотреть отказы, отмены и предыдущие раунды</message>
 	<message key="sectionEditor.regrets.reviewRound">Рецензирование, раунд {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Решение редактора, раунд {$round}</message>
