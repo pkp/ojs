@@ -1,0 +1,8 @@
+language: php
+php:
+  - 5.3
+before_install:
+  - mysql -u root -e 'create database omp'
+  - mysql -u root omp < tests/functional/testserver.sql
+  - mv config.TRAVIS.inc.php config.inc.php
+script: ./lib/pkp/tools/runAllTests.sh -C
