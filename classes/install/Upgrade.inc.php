@@ -502,6 +502,10 @@ class Upgrade extends Installer {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_PKP_DEFAULT);
 
+		define('ROLE_ID_LAYOUT_EDITOR',	0x00000300);
+		define('ROLE_ID_COPYEDITOR', 0x00002000);
+		define('ROLE_ID_PROOFREADER', 0x00003000);
+
 		while ($journal = $journals->next()) {
 			// Install default user groups so we can assign users to them.
 			$userGroupDao->installSettings($journal->getId(), 'registry/userGroups.xml');
@@ -603,7 +607,6 @@ class Upgrade extends Installer {
 
 			// Layout Editors. NOTE:  this involves a role id change from 0x300 to 0x1001 (old OJS _LAYOUT_EDITOR to PKP-lib _ASSISTANT).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
-			define('ROLE_ID_LAYOUT_EDITOR',	0x00000300);
 			$layoutEditorGroup = null;
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.layoutEditor') {
@@ -619,7 +622,6 @@ class Upgrade extends Installer {
 
 			// Copyeditors. NOTE:  this involves a role id change from 0x2000 to 0x1001 (old OJS _COPYEDITOR to PKP-lib _ASSISTANT).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
-			define('ROLE_ID_COPYEDITOR', 0x00002000);
 			$copyEditorGroup = null;
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.copyeditor') {
@@ -634,7 +636,6 @@ class Upgrade extends Installer {
 			}
 
 			// Proofreaders. NOTE:  this involves a role id change from 0x3000 to 0x1001 (old OJS _PROOFREADER to PKP-lib _ASSISTANT).
-			define('ROLE_ID_PROOFREADER', 0x00003000);
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
 			$proofreaderGroup = null;
 			while ($group = $userGroups->next()) {
