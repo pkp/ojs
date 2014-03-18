@@ -15,4 +15,5 @@
 	<message key="plugins.block.navigation.displayName">Блок «Навигация»</message>
 	<message key="plugins.block.navigation.description">Этот плагин добавляет навигационные ссылки на боковую панель.</message>
 	<message key="plugins.block.navigation.journalContent">Контент журнала</message>
+	<message key="plugins.block.navigation.searchScope">Область поиска</message>
 </locale>
