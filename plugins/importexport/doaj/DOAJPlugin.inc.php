@@ -17,7 +17,7 @@ import('lib.pkp.classes.xml.XMLCustomWriter');
 
 import('classes.plugins.ImportExportPlugin');
 
-define('DOAJ_XSD_URL', 'http://www.doaj.org/schemas/doajArticles.xsd');
+define('DOAJ_XSD_URL', 'http://doaj.org/static/doaj/doajArticles.xsd');
 
 class DOAJPlugin extends ImportExportPlugin {
 	/**
@@ -71,10 +71,6 @@ class DOAJPlugin extends ImportExportPlugin {
 				// export an xml file with the journal's information
 				$this->exportJournal($journal);
 				break;
-			case 'contact':
-				// present a form autofilled with journal information to send to the DOAJ representative
-				$this->contact($journal);
-				break;
 			default:
 				$this->setBreadcrumbs();
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
@@ -106,37 +102,6 @@ class DOAJPlugin extends ImportExportPlugin {
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;
-	}
-
-	/**
-	 * Auto-fill the DOAJ form.
-	 * @param $journal object
-	 */
-	function contact(&$journal, $send = false) {
-		$user =& Request::getUser();
-
-		$issn = $journal->getSetting('printIssn');
-
-		$paramArray = array(
-			'name' => $user->getFullName(),
-			'email' => $user->getEmail(),
-			'title' => $journal->getLocalizedTitle(),
-			'description' => String::html2text($journal->getLocalizedSetting('focusScopeDesc')),
-			'url' => $journal->getUrl(),
-			'charging' => $journal->getSetting('submissionFee') > 0 ? 'Y' : 'N',
-			'issn' => $issn,
-			'eissn' => $journal->getSetting('onlineIssn'),
-			'pub' => $journal->getSetting('publisherInstitution'),
-			'language' => AppLocale::getLocale(),
-			'keywords' => $journal->getLocalizedSetting('searchKeywords'),
-			'contact_person' => $journal->getSetting('contactName'),
-			'contact_email' => $journal->getSetting('contactEmail')
-		);
-		$url = 'http://www.doaj.org/doaj?func=suggest&owner=1';
-		foreach ($paramArray as $name => $value) {
-			$url .= '&' . urlencode($name) . '=' . urlencode($value);
-		}
-		Request::redirectUrl($url);
 	}
 }
 

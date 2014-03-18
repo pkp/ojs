@@ -94,6 +94,10 @@
 		<td class="label">{fieldLabel name="minPasswordLength" key="admin.settings.minPasswordLength" required="true"}</td>
 		<td colspan="2" class="value"><input type="text" id="minPasswordLength" name="minPasswordLength" value="{$minPasswordLength|escape}" size="4" maxlength="2" class="textField" /> {translate key="admin.settings.passwordCharacters"}</td>
 	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="oneStepReset" key="admin.settings.oneStepReset"}</td>
+		<td class="value" colspan="2"><input type="checkbox" id="oneStepReset" name="oneStepReset" {if $oneStepReset}checked="checked" {/if}/></td>
+	</tr>
 	<tr>
 		<td class="label"><label for="journalTheme">{translate key="admin.settings.siteTheme"}</label></td>
 		<td colspan="2" class="value">
@@ -144,7 +148,7 @@
 <br />
 <div id="oaiRegistration">
 	<h4>{translate key="admin.settings.oaiRegistration"}</h4>
-	
+
 	{url|assign:"oaiUrl" page="oai"}
 	{url|assign:"siteUrl" page="index"}
 	<p>{translate key="admin.settings.oaiRegistrationDescription" siteUrl=$siteUrl oaiUrl=$oaiUrl}</p>

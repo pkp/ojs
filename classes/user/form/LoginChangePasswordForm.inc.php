@@ -17,15 +17,23 @@ import('lib.pkp.classes.form.Form');
 
 class LoginChangePasswordForm extends Form {
 
+	var $_confirmHash = null;
 	/**
 	 * Constructor.
 	 */
-	function LoginChangePasswordForm() {
+	function LoginChangePasswordForm($confirmHash = null) {
 		parent::Form('user/loginChangePassword.tpl');
 		$site =& Request::getSite();
+		$this->_confirmHash = $confirmHash;
 
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorCustom($this, 'oldPassword', 'required', 'user.profile.form.oldPasswordInvalid', create_function('$password,$form', 'return Validation::checkCredentials($form->getData(\'username\'),$password);'), array(&$this)));
+		if (!$confirmHash) {
+			$this->addCheck(new FormValidatorCustom($this, 'oldPassword', 'required', 'user.profile.form.oldPasswordInvalid', create_function('$password,$form', 'return Validation::checkCredentials($form->getData(\'username\'),$password);'), array(&$this)));
+		} else {
+			$userDao = DAORegistry::getDAO('UserDAO');
+			$this->addCheck(new FormValidatorCustom($this, 'confirmHash', 'required', 'user.profile.form.hashInvalid',
+							create_function('$confirmHash,$form,$userDao', '$user = $userDao->getByUsername($form->getData(\'username\')); return $user && (Validation::generatePasswordResetHash($user->getId()) == $form->getData(\'confirmHash\'));'), array(&$this, $userDao)));
+		}
 		$this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
 		$this->addCheck(new FormValidator($this, 'password', 'required', 'user.profile.form.newPasswordRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
@@ -38,6 +46,9 @@ class LoginChangePasswordForm extends Form {
 	function display() {
 		$templateMgr =& TemplateManager::getManager();
 		$site =& Request::getSite();
+		if ($this->_confirmHash) {
+			$templateMgr->assign('confirmHash', $this->_confirmHash);
+		}
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
 		parent::display();
 	}
@@ -46,7 +57,7 @@ class LoginChangePasswordForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('username', 'oldPassword', 'password', 'password2'));
+		$this->readUserVars(array('username', 'oldPassword', 'password', 'password2', 'confirmHash'));
 	}
 
 	/**
