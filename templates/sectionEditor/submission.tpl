@@ -9,13 +9,14 @@
  * $Id$
  *}
 {strip}
+{assign var="helpLink" value='<a href="https://submit.escholarship.org/help/journals/editors_f.html" target="_blank"><img src="'|concat:$baseUrl:'/eschol/images/help_A.png"></a>'}
 {translate|assign:"pageTitleTranslated" key="submission.page.summary" id=$submission->getId()}
 {assign var="pageCrumbTitle" value="submission.summary"}
 {include file="common/header.tpl"}
 {/strip}
 
 <ul class="menu">
-	<li class="current"><a href="{url op="submission" path=$submission->getId()}">{literal}1. {/literal}{translate key="submission.summary"}</a> <a href="https://submit.escholarship.org/help/journals/editors_f.html" target="_blank"><img src="{$baseUrl}/eschol/images/help_A.png"></a></li>
+	<li class="current"><a href="{url op="submission" path=$submission->getId()}">{literal}1. {/literal}{translate key="submission.summary"}</a></li>
 	{if $canReview}<li><a href="{url op="submissionReview" path=$submission->getId()}">{literal}2. {/literal}{translate key="submission.review"}</a></li>{/if}
 	{if $canEdit}<li><a href="{url op="submissionEditing" path=$submission->getId()}">{literal}3. {/literal}{translate key="submission.editing"}</a></li>{/if}
 	&nbsp;&nbsp;{literal}|{/literal}&nbsp;&nbsp;
