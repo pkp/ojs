@@ -14,7 +14,7 @@
 {/strip}
 
 {if $journalDescription}
-	<div>{$journalDescription}</div>
+	<div id="journalDescription">{$journalDescription}</div>
 {/if}
 
 {call_hook name="Templates::Index::journal"}
@@ -26,7 +26,7 @@
 
 {if $additionalHomeContent}
 <br />
-{$additionalHomeContent}
+<div id="additionalHomeContent">{$additionalHomeContent}</div>
 {/if}
 
 {if $enableAnnouncementsHomepage}
