@@ -99,6 +99,19 @@ class ArticleGalley extends Representation {
 	}
 
 	/**
+	 * @see Representation::getName()
+	 *
+	 * This override exists to provide a functional getName() in order to make
+	 * native XML export work correctly.  It is only used in that single instance.
+	 *
+	 * @param $locale string unused, except to match the function prototype in Representation.
+	 * @return array
+	 */
+	function getName($locale) {
+		return array($this->getLocale() => $this->getLabel());
+	}
+
+	/**
 	 * Get locale.
 	 * @return string
 	 */
