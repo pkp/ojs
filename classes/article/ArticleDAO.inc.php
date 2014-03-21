@@ -51,7 +51,8 @@ class ArticleDAO extends DAO {
 	function getLocaleFieldNames() {
 		return array(
 			'title', 'cleanTitle', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
-			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor'
+			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor',
+			'copyrightHolder'
 		);
 	}
 
@@ -64,6 +65,8 @@ class ArticleDAO extends DAO {
 		$additionalFields = parent::getAdditionalFieldNames();
 		// FIXME: Move this to a PID plug-in.
 		$additionalFields[] = 'pub-id::publisher-id';
+		$additionalFields[] = 'copyrightYear';
+		$additionalFields[] = 'licenseURL';
 		return $additionalFields;
 	}
 
@@ -705,6 +708,28 @@ class ArticleDAO extends DAO {
 			'UPDATE articles SET section_id = null WHERE section_id = ?', $sectionId
 		);
 
+		$this->flushCache();
+	}
+
+	/**
+	 * Delete the attached licenses of all articles in a journal.
+	 * @param $journalId int
+	 */
+	function deletePermissions($journalId) {
+		$journalId = (int) $journalId;
+		$articles =& $this->getArticlesByJournalId($journalId);
+		while ($article =& $articles->next()) {
+			$this->update(
+				'DELETE FROM article_settings WHERE (setting_name = ? OR setting_name = ? OR setting_name = ?) AND article_id = ?',
+				array(
+					'licenseURL',
+					'copyrightHolder',
+					'copyrightYear',
+					(int) $article->getId()
+				)
+			);
+			unset($article);
+		}
 		$this->flushCache();
 	}
 

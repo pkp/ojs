@@ -288,7 +288,6 @@
 	<message key="manager.setup.guidingSubmissions">Pas 3. Guia per a les trameses</message>
 	<message key="manager.setup.homepageImage">Imatge per a la pàgina inicial</message>
 	<message key="manager.setup.homepageImageDescription">Afegiu una imatge o un fitxer gràfic per a la pàgina.</message>
-	<message key="manager.setup.includeCreativeCommons">Per a les revistes que ofereixin accés obert immediat o diferit, inclou una llicència de Creative Commons per a totes les obres publicades quan escaigui.</message>
 	<message key="manager.setup.information">Informació</message>
 	<message key="manager.setup.information.description">La secció «Informació» de la barra lateral inclou descripcions breus de la revista per a bibliotecaris/àries i per a autors/ores i lectors/ores potencials.</message>
 	<message key="manager.setup.information.forAuthors">Per a autors/ores</message>

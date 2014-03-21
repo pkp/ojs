@@ -292,7 +292,6 @@
 	<message key="manager.setup.guidingSubmissions">Pasul 3. Îndrumarea propunerilor</message>
 	<message key="manager.setup.homepageImage">Imaginea care apare în pagina principală</message>
 	<message key="manager.setup.homepageImageDescription">Adaugă o imagine sau un fişier grafic la partea mediană a paginii.</message>
-	<message key="manager.setup.includeCreativeCommons">Pentru revistele care oferă acces deschis imediat sau cu embargo, includeţi la timpul potrivit o licenţă Creative Commons care să cuprindă toate articolele publicate.</message>
 	<message key="manager.setup.information">Informaţie</message>
 	<message key="manager.setup.information.description">Descrierea pe scurt a revistei necesară bibliotecarilor, autorilor şi cititorilor care prospectează, este disponibilă în secţiunea „Informaţii” din bara laterale.</message>
 	<message key="manager.setup.information.forAuthors">Pentru autori</message>

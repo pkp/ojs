@@ -556,7 +556,6 @@
 	<message key="manager.setup.enableUserRegistration.author">Forfattere (kan sende inn bidrag og tilleggsmateriell til tidsskriftet)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Lesere (vil motta varslinger og bli tellet på linje med abonnenter)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Fagkonsulenter (tilgjengelige for vurderingsoppdrag)</message>
-	<message key="manager.setup.includeCreativeCommons"><![CDATA[Inkluder en <i>Creative Commons</i>-lisens i alt som publiseres i tidsskriftet når de enten gir umiddelbar eller utsatt <i>Open Access</i>.]]></message>
 	<message key="manager.setup.journalHomepageHeader.altText">Tidsskrifthjemmeside topptekst</message>
 	<message key="manager.setup.journalLayout">Tidsskriftnettsidenes layout</message>
 	<message key="manager.setup.journalLayoutDescription">Velg et designtema og velg layout-komponenter her. Det går også an å laste opp et egenprodusert stilark for tidsskriftet (CSS-stylesheet). Dette kan i så fall overstyre både stildata i systemet og tema-stilark for designtema (hvis et tema er valgt).</message>

@@ -95,7 +95,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 			$this->formatElement('546', ' ', ' ', 'a', $article->getLanguage()) .
 			$this->formatElement('787', '0', ' ', 'n', $relation) .
 			$this->formatElement('500', ' ', ' ', 'a', $coverage) .
-			$this->formatElement('540', ' ', ' ', 'a', strip_tags($journal->getLocalizedSetting('copyrightNotice'))) .
+			$this->formatElement('540', ' ', ' ', 'a', __('submission.copyrightStatement', array('copyrightYear' => $article->getCopyrightYear(), 'copyrightHolder' => $article->getLocalizedCopyrightHolder()))) .
 			"</oai_marc>\n";
 
 		return $response;

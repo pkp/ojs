@@ -166,6 +166,11 @@ class MetadataForm extends Form {
 					$this->setData('primaryContact', $i);
 				}
 			}
+			if ($this->isEditor) {
+				$this->setData('copyrightHolder', $article->getCopyrightHolder(null));
+				$this->setData('copyrightYear', $article->getCopyrightYear());
+				$this->setData('licenseURL', $article->getLicenseURL());
+			}
 		}
 		return parent::initData();
 	}
@@ -177,7 +182,8 @@ class MetadataForm extends Form {
 	function getLocaleFieldNames() {
 		return array(
 			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
-			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor', 'citations'
+			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor', 'citations',
+			'copyrightHolder'
 		);
 	}
 
@@ -258,6 +264,9 @@ class MetadataForm extends Form {
 				'hideAuthor'
 			)
 		);
+		if ($this->isEditor) {
+			$this->readUserVars(array('copyrightHolder', 'copyrightYear', 'licenseURL'));
+		}
 		// consider the additional field names from the public identifer plugins
 		import('classes.plugins.PubIdPluginHelper');
 		$pubIdPluginHelper = new PubIdPluginHelper();
@@ -429,6 +438,12 @@ class MetadataForm extends Form {
 		$deletedAuthors = preg_split('/:/', $this->getData('deletedAuthors'), -1, PREG_SPLIT_NO_EMPTY);
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
 			$authorDao->deleteAuthorById($deletedAuthors[$i], $article->getId());
+		}
+
+		if ($this->isEditor) {
+			$article->setStoredCopyrightHolder($this->getData('copyrightHolder'), null);
+			$article->setStoredCopyrightYear($this->getData('copyrightYear'));
+			$article->setStoredLicenseURL($this->getData('licenseURL'));
 		}
 
 		parent::execute();

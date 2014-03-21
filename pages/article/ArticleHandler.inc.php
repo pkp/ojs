@@ -56,7 +56,7 @@ class ArticleHandler extends Handler {
 		$journal =& $this->journal;
 		$issue =& $this->issue;
 		$article =& $this->article;
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
@@ -237,7 +237,7 @@ class ArticleHandler extends Handler {
 		$journal =& $this->journal;
 		$issue =& $this->issue;
 		$article =& $this->article;
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		if (!$galley) {
 			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
@@ -273,7 +273,7 @@ class ArticleHandler extends Handler {
 		$journal =& $this->journal;
 		$issue =& $this->issue;
 		$article =& $this->article;
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		if (!$galley) {
 			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
@@ -533,9 +533,17 @@ class ArticleHandler extends Handler {
 		return true;
 	}
 
-	function setupTemplate() {
+	/**
+	 * Set up the template
+	 * @param $request PKPRequest
+	 */
+	function setupTemplate($request) {
 		parent::setupTemplate();
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
+		if ($this->article) {
+			$templateMgr =& TemplateManager::getManager($request);
+			$templateMgr->assign('ccLicenseBadge', Application::getCCLicenseBadge($this->article->getLicenseURL()));
+		}
 	}
 }
 

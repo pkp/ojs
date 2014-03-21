@@ -250,7 +250,6 @@
 	<message key="manager.setup.guidingSubmissions">Paso 3. Axuda de envíos</message>
 	<message key="manager.setup.homepageImage">Imaxe de home</message>
 	<message key="manager.setup.homepageImageDescription">Engade un gráfico ou imaxe no meio da páxina.</message>
-	<message key="manager.setup.includeCreativeCommons">Para as revistas que ofrecen acceso aberto inmediato ou diferido, inserir cando proceda unha licencia "Creative Commons" para todo o traballo publicado.</message>
 	<message key="manager.setup.information">Información</message>
 	<message key="manager.setup.information.description">Na sección "Información" da barra lateral hai unha breve descrición da revista para bibliotecarios/as, autores/as e lectoras/es prospectivos/as</message>
 	<message key="manager.setup.information.forAuthors">Para autores/as</message>

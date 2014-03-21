@@ -64,9 +64,8 @@
 	<meta name="DC.Language" scheme="ISO639-1" content="{$article->getLanguage()|strip_tags|escape}"/>
 {* DC.Publisher (publishing institution) *}
 {* DC.Publisher.Address (email addr) *}
-{if $currentJournal->getLocalizedSetting('copyrightNotice')}
-	<meta name="DC.Rights" content="{$currentJournal->getLocalizedSetting('copyrightNotice')|strip_tags|escape}"/>
-{/if}
+	<meta name="DC.Rights" content="{translate key="submission.copyrightStatement" copyrightHolder=$article->getLocalizedCopyrightHolder()|escape copyrightYear=$article->getCopyrightYear()|escape}" />
+	<meta name="DC.Rights" content="{$article->getLicenseURL()|escape}"/>
 {* DC.Rights.accessRights *}
 	<meta name="DC.Source" content="{$currentJournal->getLocalizedTitle()|strip_tags|escape}"/>
 {if $currentJournal->getSetting('onlineIssn')}{assign var="issn" value=$currentJournal->getSetting('onlineIssn')}

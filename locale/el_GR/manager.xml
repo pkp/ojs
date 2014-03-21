@@ -211,7 +211,6 @@
 	<message key="manager.setup.guidingSubmissions">Βήμα 3. Οδηγίες υποβολής</message>
 	<message key="manager.setup.homepageImage">Εικόνα αρχικής σελίδας</message>
 	<message key="manager.setup.homepageImageDescription">Προσθήκη εικόνας ή αρχείου γραφικών στο μέσο της σελίδας.</message>
-	<message key="manager.setup.includeCreativeCommons">Για τα περιοδικά που προσφέρουν άμεση ή καθυστερημένη ανοικτή πρόσβαση στα περιεχόμενα τους, συμπεριλάβετε μια άδεια Creative Commons με το σύνολο του δημοσιευμένου έργου την κατάλληλη χρονική στιγμή.</message>
 	<message key="manager.setup.information">Πληροφορίες</message>
 	<message key="manager.setup.information.description">Σύντομες περιγραφές του περιοδικού για τους βιβλιοθηκονόμους, τους πιθανούς συγγραφείς και τους αναγνώστες είναι διαθέσιμες στην ενότητα “Πληροφορίες” στην δεξιά πλαϊνή στήλη της ιστοσελίδας.</message>
 	<message key="manager.setup.information.forAuthors">Για συγγραφείς</message>

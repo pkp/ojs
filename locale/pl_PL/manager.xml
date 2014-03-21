@@ -298,7 +298,6 @@
 	<message key="manager.setup.guidingSubmissions">Krok 3. Przesyłanie tekstów</message>
 	<message key="manager.setup.homepageImage">Obraz strony głównej</message>
 	<message key="manager.setup.homepageImageDescription">Dodaj grafikę dla strony głownej.</message>
-	<message key="manager.setup.includeCreativeCommons">Dla czasopism, które oferują dostęp na zasadach open access: dołącz licencję Creative Commons dla wszystkich opublikowanych tekstów.</message>
 	<message key="manager.setup.information">Informacje</message>
 	<message key="manager.setup.information.description">Krótki opis czasopisma dla bibliotekarzy oraz ewentualnych autorów i czytelników, dostępny w dziale "Informacje" panelu bocznego.</message>
 	<message key="manager.setup.information.forAuthors">dla autorów</message>

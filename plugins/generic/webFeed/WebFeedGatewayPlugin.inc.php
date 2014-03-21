@@ -98,6 +98,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 * Handle fetch requests for this plugin.
 	 */
 	function fetch($args) {
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
+
 		// Make sure we're within a Journal context
 		$journal =& Request::getJournal();
 		if (!$journal) return false;

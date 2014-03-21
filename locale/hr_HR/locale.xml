@@ -1126,16 +1126,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="help.searchReturnResults">Povratak na rezultate pretraživanja</message>
 	<message key="payment.type.purchaseArticle">Cijena pristupa pojedinom članku</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Plaćanje ove naknade omogućit će vam neograničen pristup, preuzimanje i štampanje ovog članka.</message>
-	<message key="common.ccLicense"><![CDATA[<br /><br />
-	<a rel="licenca" href="http://creativecommons.org/licenses/by/3.0/hr/" target="_new"><img alt="Creative Commons licenca" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
-	<br />
-	Ovaj je rad licenciran <a rel="licencom" href="http://creativecommons.org/licenses/by/3.0/hr/" target="_new">Creative Commons imenovanje 3.0</a>.]]></message>
-	<message key="common.ccLicense.rt"><![CDATA[<div class="rtBlock">
-		<br />
-	<a rel="licenca" href="http://creativecommons.org/licenses/by/3.0/hr/" target="_new"><img alt="Creative Commons licenca" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
-	<br />
-	Ovaj je rad licenciran <a rel="licencom" href="http://creativecommons.org/licenses/by/3.0/hr/" target="_new">Creative Commons imenovanje 3.0</a>.
-	</div>]]></message>
 	<message key="journal.issn">ISSN</message>
 	<message key="manager.setup.doiSuffix">DOI sufiks</message>
 	<message key="manager.setup.doiSuffixDefault">Koristi osnovnu shemu (%j.v%vi%i.%a).</message>

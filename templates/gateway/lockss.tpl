@@ -98,12 +98,6 @@
 	<td class="value">{$journal->getLocalizedSetting('copyrightNotice')|nl2br}</td>
 </tr>
 {/if}
-{if $journal->getLocalizedSetting('openAccessPolicy')}
-<tr valign="top">
-	<td class="label">Rights</td>
-	<td class="value">{$journal->getLocalizedSetting('openAccessPolicy')|nl2br}</td>
-</tr>
-{/if}
 </table>
 {/if}
 

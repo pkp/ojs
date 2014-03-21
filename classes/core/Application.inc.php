@@ -349,6 +349,43 @@ class Application extends PKPApplication {
 
 	 	return 0;
 	}
+
+	/**
+	 * Get a mapping of license URL to license locale key for common
+	 * creative commons licenses.
+	 * @return array
+	 */
+	function getCCLicenseOptions() {
+		return array(
+			'http://creativecommons.org/licenses/by-nc-nd/4.0' => 'submission.license.cc.by-nc-nd4',
+			'http://creativecommons.org/licenses/by-nc/4.0' => 'submission.license.cc.by-nc4',
+			'http://creativecommons.org/licenses/by-nc-sa/4.0' => 'submission.license.cc.by-nc-sa4',
+			'http://creativecommons.org/licenses/by-nd/4.0' => 'submission.license.cc.by-nd4',
+			'http://creativecommons.org/licenses/by/4.0' => 'submission.license.cc.by4',
+			'http://creativecommons.org/licenses/by-sa/4.0' => 'submission.license.cc.by-sa4'
+		);
+	}
+
+	/**
+	 * Get the Creative Commons license badge associated with a given
+	 * license URL.
+	 * @param $ccLicenseURL URL to creative commons license
+	 * @return string HTML code for CC license
+	 */
+	function getCCLicenseBadge($ccLicenseURL) {
+		$licenseKeyMap = array(
+			'http://creativecommons.org/licenses/by-nc-nd/4.0' => 'submission.license.cc.by-nc-nd4.footer',
+			'http://creativecommons.org/licenses/by-nc/4.0' => 'submission.license.cc.by-nc4.footer',
+			'http://creativecommons.org/licenses/by-nc-sa/4.0' => 'submission.license.cc.by-nc-sa4.footer',
+			'http://creativecommons.org/licenses/by-nd/4.0' => 'submission.license.cc.by-nd4.footer',
+			'http://creativecommons.org/licenses/by/4.0' => 'submission.license.cc.by4.footer',
+			'http://creativecommons.org/licenses/by-sa/4.0' => 'submission.license.cc.by-sa4.footer'
+		);
+		if (isset($licenseKeyMap[$ccLicenseURL])) {
+			return __($licenseKeyMap[$ccLicenseURL]);
+		}
+		return null;
+	}
 }
 
 ?>

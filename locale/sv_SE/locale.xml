@@ -33,7 +33,6 @@
 	-->
 
         <!-- Missing Messages -->
-	<message key="common.ccLicense">CC licens</message>    
 	<message key="journal.issn">Tidskriftens ISSN</message>
 	<message key="manager.setup.doiSuffix">DOI Suffix</message>
 	<message key="manager.setup.doiSuffixPattern">Till exempel, vol 3, häfte 2, sidor 2-30 kan skapa en DOI som 10.1234/vol3iss2pp230</message>

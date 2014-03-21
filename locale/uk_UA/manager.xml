@@ -291,7 +291,6 @@
        <message key="manager.setup.guidingSubmissions">Крок 3. Керівництва щодо подань</message>
        <message key="manager.setup.homepageImage">Зображення для домашньої сторінки</message>
        <message key="manager.setup.homepageImageDescription">Додайте графічний файл зображення для середини сторінки.</message>
-       <message key="manager.setup.includeCreativeCommons">Для журналів, які пропонують відкритий доступ (негайний або з затримкою), включати ліцензію Creative Commons до сторінок всіх опублікованих робіт під час їх появи у відкритому доступі.</message>
        <message key="manager.setup.information">Інформація</message>
        <message key="manager.setup.information.description">Короткий опис журналу для бібліотекарів, потенційних авторів та читачів, який буде доступний на бічній панелі у розділі "Інформація".</message>
        <message key="manager.setup.information.forAuthors">Для авторів</message>

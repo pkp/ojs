@@ -250,7 +250,6 @@
 	<message key="manager.setup.guidingSubmissions">Étape 3. Orienter les soumissions</message>
 	<message key="manager.setup.homepageImage">Image de la page d'accueil</message>
 	<message key="manager.setup.homepageImageDescription">Ajouter un fichier image ou graphique dans le milieu de la page.</message>
-	<message key="manager.setup.includeCreativeCommons">Pour les revues offrant l'accès libre immédiat ou différé, inclure la licence Creative Commons dans tous les ouvrages publiés, au moment opportun.</message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">De brèves descriptions de la revue pour les bibliothécaires, les auteurs et lecteurs potentiels sont disponibles dans la rubrique " Renseignements " du menu latéral.</message>
 	<message key="manager.setup.information.forAuthors">Pour les auteurs</message>

@@ -28,8 +28,12 @@ class JournalSetupStep3Form extends JournalSetupForm {
 				'authorGuidelines' => 'string',
 				'submissionChecklist' => 'object',
 				'copyrightNotice' => 'string',
-				'includeCreativeCommons' => 'bool',
+				'includeCopyrightStatement' => 'bool',
+				'licenseURL' => 'string',
+				'includeLicense' => 'bool',
 				'copyrightNoticeAgree' => 'bool',
+				'copyrightHolderType' => 'string',
+				'copyrightHolderOther' => 'string',
 				'requireAuthorCompetingInterests' => 'bool',
 				'requireReviewerCompetingInterests' => 'bool',
 				'competingInterestGuidelines' => 'string',
@@ -56,6 +60,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 
 		$this->addCheck(new FormValidatorEmail($this, 'copySubmissionAckAddress', 'optional', 'user.profile.form.emailRequired'));
 		$this->addCheck(new FormValidatorLocaleURL($this, 'metaSubjectClassUrl', 'optional', 'manager.setup.subjectClassificationURLValid'));
+		$this->addCheck(new FormValidatorURL($this, 'licenseURL', 'optional', 'submission.licenseURLValid'));
 	}
 
 	/**
@@ -63,7 +68,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('authorGuidelines', 'submissionChecklist', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples', 'competingInterestGuidelines');
+		return array('authorGuidelines', 'submissionChecklist', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples', 'competingInterestGuidelines', 'copyrightHolderOther');
 	}
 
 	/**
@@ -118,6 +123,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 			$templateMgr->assign_by_ref('metaCitationOutputFilters', $metaCitationOutputFilters);
 		}
 
+		$templateMgr->assign('ccLicenseOptions', Application::getCCLicenseOptions());
 		parent::display($request, $dispatcher);
 	}
 }

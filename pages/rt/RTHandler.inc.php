@@ -66,6 +66,7 @@ class RTHandler extends ArticleHandler {
 		// consider public identifiers
 		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
+		$templateMgr->assign('ccLicenseBadge', Application::getCCLicenseBadge($article->getLicenseURL()));
 		$templateMgr->display('rt/metadata.tpl');
 	}
 

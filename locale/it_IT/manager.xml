@@ -253,7 +253,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.guidingSubmissions">Fase 3. Guidare le proposte</message>
 	<message key="manager.setup.homepageImage">Immagine dell'homepage</message>
 	<message key="manager.setup.homepageImageDescription">Aggiungi un'immagine che comparirà al centro della pagina..</message>
-	<message key="manager.setup.includeCreativeCommons">Per le riviste ad accesso aperto (immediato o differito), inserisci una  licenza Creative Commons per tutti gli articoli che verrà mostrata al momento della pubblicazione.</message>
 	<message key="manager.setup.information">Informazioni</message>
 	<message key="manager.setup.information.description">Una breve descrizione della rivista per i bibliotecari e i potenziali autori e lettori, è disponibile nella sezione "Informazioni" del menu laterale.</message>
 	<message key="manager.setup.information.forAuthors">Per gli autori</message>

@@ -194,7 +194,14 @@
 	<td>15.</td>
 	<td>{translate key="rt.metadata.dublinCore.rights"}</td>
 	<td>{translate key="rt.metadata.pkp.copyright"}</td>
-	<td>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</td>
+	<td>
+		{translate key="submission.copyrightStatement" copyrightHolder=$article->getLocalizedCopyrightHolder()|escape copyrightYear=$article->getCopyrightYear()|escape}<br/>
+		{if $ccLicenseBadge}
+			{$ccLicenseBadge}
+		{elseif $article->getLicenseURL()}
+			<a href="{$article->getLicenseURL()|escape}">{$article->getLicenseURL()|escape}</a>
+		{/if}
+	</td>
 </tr>
 </table>
 

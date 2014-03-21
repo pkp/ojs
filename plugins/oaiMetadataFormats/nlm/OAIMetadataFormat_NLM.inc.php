@@ -29,6 +29,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 	 *   Article order in the issue's Table of Contents
 	 */
 	function toXml(&$record, $format = null) {
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APPLICATION_COMMON));
 		$article =& $record->getData('article');
 		$journal =& $record->getData('journal');
 		$section =& $record->getData('section');
@@ -151,8 +152,11 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 
 		$response .=
 			"\t\t\t<permissions>\n" .
-			((($s = $journal->getLocalizedSetting('copyrightNotice')) != '')?"\t\t\t\t<copyright-statement>" . htmlspecialchars(Core::cleanVar($s)) . "</copyright-statement>\n":'') .
-			($datePublished?"\t\t\t\t<copyright-year>" . strftime('%Y', $datePublished) . "</copyright-year>\n":'') .
+			"\t\t\t\t<copyright-statement>" . htmlspecialchars(__('submission.copyrightStatement', array('copyrightYear' => $article->getCopyrightYear(), 'copyrightHolder' => $article->getLocalizedCopyrightHolder()))) . "</copyright-statement>\n" .
+			($datePublished?"\t\t\t\t<copyright-year>" . $article->getCopyrightYear() . "</copyright-year>\n":'') .
+			"\t\t\t\t<license xlink:href=\"" . $article->getLicenseURL() . "\">\n" .
+			(($s = Application::getCCLicenseBadge($article->getLicenseURL()))?"\t\t\t\t\t<license-p>" . strip_tags($s) . "</license-p>\n":'') .
+			"\t\t\t\t</license>\n" .
 			"\t\t\t</permissions>\n" .
 			"\t\t\t<self-uri xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', $article->getBestArticleId()))) . "\" />\n";
 

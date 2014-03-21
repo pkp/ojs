@@ -226,7 +226,6 @@
 	<message key="manager.setup.homepageImage">Hemsidebild</message>
 	<message key="manager.setup.homepageImageDescription">Lägg till en bild till mitten av sidan</message>
 	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML kan användas i fälten för textredigering (fontstorlek, färg etc.), observera att "return" behandlas som <tt>&lt;br&gt;</tt>; HTML redigerare fungerar med Firefox.]]></message>
-	<message key="manager.setup.includeCreativeCommons">För tidskrifter som stöder omedelbar eller försenad Open Access, lägg till en Creatice Commons-licens till publikationerna.</message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">En kortfattad beskrivning av tidskriftens innehåll för bibliotekarier, potentiella författare och läsare finns under "Information" i sidomenyn.</message>
 	<message key="manager.setup.information.forAuthors">För författare</message>

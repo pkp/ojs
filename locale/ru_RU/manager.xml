@@ -297,7 +297,6 @@
 	<message key="manager.setup.guidingSubmissions">Шаг 3. Указания для авторов</message>
 	<message key="manager.setup.homepageImage">Изображение на главной странице</message>
 	<message key="manager.setup.homepageImageDescription">Добавьте изображение в центр страницы.</message>
-	<message key="manager.setup.includeCreativeCommons">Для журналов, предлагающих немедленный или отложенный открытый доступ, включить в соответствующий момент времени лицензию Creative Commons во все опубликованные работы.</message>
 	<message key="manager.setup.information">Информация</message>
 	<message key="manager.setup.information.description">Краткое описание журнала для библиотек, потенциальных авторов и читателей, которое будет доступно а разделе «Информация» боковой панели.</message>
 	<message key="manager.setup.information.forAuthors">Для авторов</message>

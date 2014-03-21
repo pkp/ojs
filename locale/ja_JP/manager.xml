@@ -202,7 +202,6 @@
 	<message key="manager.setup.guidingSubmissions">ステップ 3. 投稿の手引き</message>
 	<message key="manager.setup.homepageImage">ホームページ画像</message>
 	<message key="manager.setup.homepageImageDescription">ページの中央に画像または図形を追加する。</message>
-	<message key="manager.setup.includeCreativeCommons">オープンアクセスを提供する（エンバーゴ付きを含む）雑誌については、適当な時点で発表される全ての作品にクリエイティブ･コモンズライセンスを与えてください。</message>
 	<message key="manager.setup.information">ご案内</message>
 	<message key="manager.setup.information.description">図書館員、潜在的著者および読者向けの雑誌に関する簡潔な説明で、サイドバーの"ご案内"欄に表示されます。</message>
 	<message key="manager.setup.information.forAuthors">著者向け</message>

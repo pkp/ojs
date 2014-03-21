@@ -287,7 +287,6 @@
 	<message key="manager.setup.guidingSubmissions">Paso 3. Proporcionar indicaciones en los envíos</message>
 	<message key="manager.setup.homepageImage">Imagen de la página de inicio</message>
 	<message key="manager.setup.homepageImageDescription">Añada una imagen o un archivo gráfico para que se muestre en el centro de la página.</message>
-	<message key="manager.setup.includeCreativeCommons">Para las revistas que ofrecen un acceso abierto inmediato o diferido, incluya una licencia de Creative Commons junto con todos los trabajos publicados en momento apropiado.</message>
 	<message key="manager.setup.information">Información</message>
 	<message key="manager.setup.information.description">En la sección Información de la barra lateral, se facilita una pequeña descripción de la revista para los bibliotecarios/as, futuros autores/as y lectores/as.</message>
 	<message key="manager.setup.information.forAuthors">Para los autores/as</message>

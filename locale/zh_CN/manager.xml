@@ -282,7 +282,6 @@
 	<message key="manager.setup.guidingSubmissions">步骤 3：投稿导引</message>
 	<message key="manager.setup.homepageImage">首页图像</message>
 	<message key="manager.setup.homepageImageDescription">加一个图片到网页中。</message>
-	<message key="manager.setup.includeCreativeCommons">对于那些提供直接开放存取或者延后开放存取的期刊，包含一个Creative Commons license.</message>
 	<message key="manager.setup.information">信息</message>
 	<message key="manager.setup.information.description">给图书馆馆员、未来的作者和读者的简要说明，在侧边栏的「信息」区段中显示。</message>
 	<message key="manager.setup.information.forAuthors">给作者</message>

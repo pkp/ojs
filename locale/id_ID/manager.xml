@@ -301,7 +301,6 @@
 	<message key="manager.setup.guidingSubmissions"> Langkah 3. Memandu Penyerahan </message> 
 	<message key="manager.setup.homepageImage"> Gambar Beranda </message> 
 	<message key="manager.setup.homepageImageDescription"> Tambahkan gambar atau file grafis ke tengah halaman.</message>
-	<message key="manager.setup.includeCreativeCommons"> Untuk jurnal yang menawarkan akses terbuka yang langsung ataupun delayed open access , termasuk lisensi Creative Commons dengan semua naskah yang telah diterbitkan di waktu yang tepat.</message> 
 	<message key="manager.setup.information">Informasi</message>
 	<message key="manager.setup.information.description"> Deskripsi singkat jurnal untuk pustakawan dan calon penulis dan pembaca yang tersedia di bagian "Informasi".</message> 
 	<message key="manager.setup.information.forAuthors"> Untuk Penulis </message> 

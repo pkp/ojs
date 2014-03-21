@@ -63,8 +63,6 @@ class IssueHandler extends Handler {
 			$issueHeadingTitle = __('current.noCurrentIssue');
 		}
 
-		// Display creative commons logo/licence if enabled
-		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'current'), 'current.current')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		// consider public identifiers
@@ -90,8 +88,6 @@ class IssueHandler extends Handler {
 		$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
 		$templateMgr->assign('issueId', $issue->getBestIssueId());
 
-		// Display creative commons logo/licence if enabled
-		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'archive'), 'archive.archives')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		// consider public identifiers

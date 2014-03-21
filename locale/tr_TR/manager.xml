@@ -289,7 +289,6 @@
 	<message key="manager.setup.guidingSubmissions">Adım 3: Gönderi Rehberi</message>
 	<message key="manager.setup.homepageImage">Ana Sayfa Görseli</message>
 	<message key="manager.setup.homepageImageDescription">Sayfanın ortasına bir görsel veya grafik ekle.</message>
-	<message key="manager.setup.includeCreativeCommons">Açık erişim veya gecikmeli açık erişim sunan dergiler için, uygun zamanda yayımlanmış tüm çalışmalar için kâr amacı gütmeyen (Creative Commons) bir lisans içerir.</message>
 	<message key="manager.setup.information">Bilgi</message>
 	<message key="manager.setup.information.description">Kütüphaneciler, potansiyel yazarlar ve okuyucular için derginin kısa açıklamsı yan taraftaki "Bilgi" kısmında yer almaktadır.</message>
 	<message key="manager.setup.information.forAuthors">Yazarlar İçin</message>

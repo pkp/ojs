@@ -296,7 +296,6 @@
 	<message key="manager.setup.guidingSubmissions">Чекор 3. Поднесувања</message>
 	<message key="manager.setup.homepageImage">Почетна слика</message>
 	<message key="manager.setup.homepageImageDescription">Додадете слика или графичка датотека во средината на оваа страница.</message>
-	<message key="manager.setup.includeCreativeCommons">За списанија кои нудат непосреден или одложен отворен пристап, вклучуваат Creative Commons лиценца со сите објавени работи во соодветно време.</message>
 	<message key="manager.setup.information">Информации</message>
 	<message key="manager.setup.information.description">Кратки описи на списанието за библиотекарите и потенцијалните автори и читатели се достапни во "Информации" делот од страничната лента.</message>
 	<message key="manager.setup.information.forAuthors">За авторите</message>

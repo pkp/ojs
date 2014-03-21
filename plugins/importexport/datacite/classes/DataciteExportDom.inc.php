@@ -167,15 +167,11 @@ class DataciteExportDom extends DOIExportDom {
 		if (!empty($articleFile)) XMLCustomWriter::appendChild($rootElement, $this->_formatsElement($articleFile));
 
 		// Rights
-		$rights = $this->getPrimaryTranslation($journal->getSetting('copyrightNotice', null), $objectLocalePrecedence);
-		if (!empty($rights)) {
-			$request = $this->_request;
-			$rightsURI = $request->url(null, 'about', 'submissions', null, null, 'copyrightNotice');
-			$rightsListElement =& XMLCustomWriter::createElement($this->getDoc(), 'rightsList');
-			$rightsElement = $this->createElementWithText('rights', String::html2text($rights), array('rightsURI' => $rightsURI));
-			XMLCustomWriter::appendChild($rightsListElement, $rightsElement);
-			XMLCustomWriter::appendChild($rootElement, $rightsListElement);
-		}
+		$rightsURL = $article->getLicenseURL();
+		$rightsListElement =& XMLCustomWriter::createElement($this->getDoc(), 'rightsList');
+		$rightsElement = $this->createElementWithText('rights', strip_tags(Application::getCCLicenseBadge($rightsURL)), array('rightsURI' => $rightsURL));
+		XMLCustomWriter::appendChild($rightsListElement, $rightsElement);
+		XMLCustomWriter::appendChild($rootElement, $rightsListElement);
 
 		// Descriptions
 		$descriptionsElement =& $this->_descriptionsElement($issue, $article, $suppFile, $objectLocalePrecedence, $articlesByIssue);

@@ -296,7 +296,6 @@
 	<message key="manager.setup.guidingSubmissions">3. Schritt: Beitragseinreichung</message>
 	<message key="manager.setup.homepageImage">Startseitengrafik </message>
 	<message key="manager.setup.homepageImageDescription">Fügen Sie in die Mitte der Seite ein Bild oder eine Grafikdatei ein.</message>
-	<message key="manager.setup.includeCreativeCommons">Für Zeitschriften, die sofortigen oder verzögerten freien Zugang (Open Access) zu ihren Inhalten anbieten: Fügen Sie allen Beiträgen eine Creative-Commons-Lizenz zum entsprechenden Beitrag bei.</message>
 	<message key="manager.setup.information">Informationen</message>
 	<message key="manager.setup.information.description">Kurzbeschreibungen der Zeitschrift für Bibliothekar/innen, potentielle Autor/innen und Leser/innen finden sich unter "Informationen" in der Seitenleiste.</message>
 	<message key="manager.setup.information.forAuthors">Für Autor/innen</message>
