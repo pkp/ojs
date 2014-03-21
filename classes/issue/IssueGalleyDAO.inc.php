@@ -232,7 +232,7 @@ class IssueGalleyDAO extends DAO {
 		$galley->setSequence($row['seq']);
 
 		// IssueFile set methods
-		$galley->setFileName($row['file_name']);
+		$galley->setServerFileName($row['file_name']);
 		$galley->setOriginalFileName($row['original_file_name']);
 		$galley->setFileType($row['file_type']);
 		$galley->setFileSize($row['file_size']);

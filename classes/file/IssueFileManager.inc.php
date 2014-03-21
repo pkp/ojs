@@ -161,7 +161,7 @@ class IssueFileManager extends FileManager {
 		$issueFile->setIssueId($issueId);
 		$issueFile->setDateUploaded($temporaryFile->getDateUploaded());
 		$issueFile->setDateModified(Core::getCurrentDate());
-		$issueFile->setFileName(''); // Blank until we insert to generate a file ID
+		$issueFile->setServerFileName(''); // Blank until we insert to generate a file ID
 		$issueFile->setFileType($temporaryFile->getFileType());
 		$issueFile->setFileSize($temporaryFile->getFileSize());
 		$issueFile->setOriginalFileName($temporaryFile->getOriginalFileName());
@@ -171,7 +171,7 @@ class IssueFileManager extends FileManager {
 
 		$extension = $this->parseFileExtension($issueFile->getOriginalFileName());
 		$newFileName = $issueFile->getIssueId().'-'.$issueFile->getId().'-'.$this->contentTypeToAbbrev($contentType).'.'.$extension;
-		$issueFile->setFileName($newFileName);
+		$issueFile->setServerFileName($newFileName);
 
 		// Copy the actual file
 		if (!$this->copyFile($temporaryFile->getFilePath(), $dir . $newFileName)) {
