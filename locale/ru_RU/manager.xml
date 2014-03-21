@@ -211,7 +211,7 @@
 	<message key="manager.setup.appearInAboutJournal">(появится в разделе «О журнале») </message>
 	<message key="manager.setup.authorCopyrightNotice">Условия передачи авторских прав</message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Требовать от авторов принятия Условий передачи авторских прав в процессе отправки статьи в журнал.</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Введенные ниже Условия передачи авторских прав появятся на странице «О журнале» и в метаданных каждой опубликованной статьи. Хотя определение условий соглашения об авторских правах с авторам является прерогативой журнала, Public Knowledge Project рекомендует использовать лицензию <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. В связи с этим, PKP предоставляет <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">пример Условий передачи авторских прав</a>, которые можно скопировать и вставить в поле ниже для журналов (a) предоставляющих открытый доступ, (b) предоставляющих отложенный открытый доступ или (c) не предоставляющих открытый доступ.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Условия передачи авторских прав появятся на странице «О нас». Они должны описывать для читателей и авторов, кто является владельцем авторского права: автор, журнал или третьи лица. Условия должны включать дополнительные лицензионные соглашения (например, <a href="http://creativecommons.org" target="_new" class="action">лицензии Creative Commons</a>), которые дают права читателям (смотри <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">примеры</a>), и они должны, при необходимости, обеспечивать средства для защиты прав для использования контента журнала.]]></message>
 	<message key="manager.setup.authorGuidelines">Руководство для авторов</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Устанавливает для авторов стандарты оформления текста и библиографических ссылок для статей, отправляемых в журнал (например, <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). Очень полезно привести здесь примеры оформления ссылок на журналы и книги, которые будут использоваться в статьях. Также укажите типы подходящих дополнительных файлов (например, наборы данных, инструменты для исследования и т. д.), которые авторы могут загрузить в качестве дополнения к своей статье, чтобы увеличить интерес читателей к их работе.]]></message>
 	<message key="manager.setup.competingInterests">Конфликт интересов</message>
@@ -228,6 +228,14 @@
 	<message key="manager.setup.copyediting">Литературные редакторы</message>
 	<message key="manager.setup.copyeditInstructions">Руководство для литературного редактора</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Руководство для литературного редактора будет доступно литературным редакторам, авторам и редакторам разделов на этапе редактирования статьи. Ниже приведен набор инструкций по умолчанию в формате HTML, который может быть изменен или заменен управляющим журнала в любой момент (в формате HTML или простого текста).</message>
+	<message key="manager.setup.permissions.priorAgreement">Предварительное соглашение</message>
+	<message key="manager.setup.permissions.display">Просмотр</message>
+	<message key="manager.setup.licenseURLDescription">Укажите адрес (URL) веб-страницы с лицензией, если она имеется.</message>
+	<message key="manager.setup.includeCopyrightStatement">Показывать строку копирайта с контентом (рекомендуется в случае, когда автор является владельцем авторского права).</message>
+	<message key="manager.setup.includeLicense">Показывать лицензию с опубликованной работой.</message>
+	<message key="manager.setup.resetPermissions">Сбросить разрешения для статей</message>
+	<message key="manager.setup.resetPermissions.description">Строка копирайта и информация о лицензии будет добавлена к опубликованному контенту, чтобы эти данные не могли измениться в случае смены политики журнала по отношению к новым статьям. Для сброса хранящейся информации о разрешениях, уже прикрепленной к опубликованному контенту, воспользуйтесь кнопкой ниже.</message>
+	<message key="manager.setup.confirmResetLicense">Вы уверены, что хотите заменить информацию о лицензии и авторских правах, уже прикрепленную к опубликованному контенту, на лицензию, указанную в разделе «Настройка журнала»?</message>
 	<message key="manager.setup.copyrightNotice">Условия передачи авторских прав</message>
 	<message key="manager.setup.coverage">Охват</message>
 	<message key="manager.setup.coverageChronExamples">(Например, Эпоха Возрожения; Юрский период; Третий триместр; и т. д.)</message>

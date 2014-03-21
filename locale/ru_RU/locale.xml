@@ -41,6 +41,27 @@
 	<message key="submission.reviewForm">Форма рецензии</message>
 	<message key="submission.reviewFormResponse">Сообщение формы рецензии</message>
 
+	<!-- Permissions -->
+	<message key="submission.permissions">Разрешения</message>
+	<message key="submission.license">Лицензия</message>
+	<message key="submission.copyright">Авторское право</message>
+	<message key="submission.copyrightHolder">Владелец авторского права</message>
+	<message key="submission.copyrightYear">Год авторского права</message>
+	<message key="submission.copyrightStatement">(c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Пожалуйста, укажите правильный адрес URL (включая http://).</message>
+	<message key="submission.licenseURL">URL лицензии</message>
+	<message key="submission.license.cc.by-nc-nd4">CC «Attribution-NonCommercial-NoDerivatives» («Атрибуция — Некоммерческое использование — Без производных произведений») 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC «Attribution-NonCommercial-ShareAlike» («Атрибуция — Некоммерческое использование — На тех же условиях») 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC «Attribution-NoDerivatives» («Атрибуция — Без производных произведений») 4.0</message>
+	<message key="submission.license.cc.by4">CC «Attribution» («Атрибуция») 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC «Attribution-ShareAlike» («Атрибуция — На тех же условиях») 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">лицензии Creative Commons «Attribution-NonCommercial-NoDerivatives» («Атрибуция — Некоммерческое использование — Без производных произведений») 4.0 Всемирная</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">лицензии Creative Commons «Attribution-NonCommercial-ShareAlike» («Атрибуция — Некоммерческое использование — На тех же условиях») 4.0 Всемирная</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">лицензии Creative Commons «Attribution-NoDerivatives» («Атрибуция — Без производных произведений») 4.0 Всемирная</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">лицензии Creative Commons «Attribution» («Атрибуция») 4.0 Всемирная</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">лицензии Creative Commons «Attribution-ShareAlike» («Атрибуция — На тех же условиях») 4.0 Всемирная</a>.]]></message>
 
 	<message key="reviewer.article.enterReviewForm">Щелкните на значке, чтобы заполнить форму рецензии.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Пожалуйста, заполните обязательные поля.</message>
@@ -408,7 +429,7 @@
 Настройка поддержки LOCKSS для Open Journal Systems не обязательна до тех пор, пока не начнется активная работа над изданием. Для настройки необходимо выполнить два шага:]]></message>
 	
 	<!-- Настройка (Шаг 3) -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Примерные Уведомления о передачи авторских прав на основе лицензии Creative Commons</h3>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Примеры уведомлений о передаче авторских прав на основе лицензии Creative Commons</h3>
 <h4>1. Предлагаемая политика для журналов, предлагающих открытый доступ к статьям</h4>
 Авторы, которые публикуются в данном журнале, соглашаются со следующими условиями:
 <ol type="a">
