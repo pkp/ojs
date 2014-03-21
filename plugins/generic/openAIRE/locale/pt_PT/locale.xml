@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/openAIRE/locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OpenAIRE plugin localization strings
+  -->
+ 
+<locale name="pt_PT" full_name="Português">
+	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.description">O Plugin OpenAIRE adiciona o ID do projeto aos metadados do trabalho e extende o interface OAI-PMH de acordo com as diretrizes OpenAIRE 1.1, tornando as revistas compatíveis.</message>
+	<message key="plugins.generic.openAIRE.projectID">ID do Projeto</message>
+	<message key="plugins.generic.openAIRE.metadata">Compatibilidade OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.projectID.description">(O ID do projeto corresponde ao número do Grant Agreement)</message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Insira um ID de projeto válido (6 números)</message>
+</locale>
