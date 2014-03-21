@@ -18,29 +18,6 @@
 
 switch ($op) {
 	//
-	// Review Form Management
-	//
-	case 'reviewForms':
-	case 'createReviewForm':
-	case 'editReviewForm':
-	case 'updateReviewForm':
-	case 'previewReviewForm':
-	case 'deleteReviewForm':
-	case 'activateReviewForm':
-	case 'deactivateReviewForm':
-	case 'copyReviewForm':
-	case 'moveReviewForm':
-	case 'reviewFormElements':
-	case 'createReviewFormElement':
-	case 'editReviewFormElement':
-	case 'deleteReviewFormElement':
-	case 'updateReviewFormElement':
-	case 'moveReviewFormElement':
-	case 'copyReviewFormElement':
-		define('HANDLER_CLASS', 'ReviewFormHandler');
-		import('pages.manager.ReviewFormHandler');
-		break;
-	//
 	// Subscription Policies
 	//
 	case 'subscriptionPolicies':
