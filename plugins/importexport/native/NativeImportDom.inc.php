@@ -790,6 +790,7 @@ class NativeImportDom {
 		}
 
 		if (($node = $articleNode->getChildByName('pages'))) $article->setPages($node->getValue());
+		if (($node = $articleNode->getChildByName('citations'))) $article->setCitations($node->getValue());
 		if (($language = $articleNode->getAttribute('language'))) $article->setLanguage($language);
 
 		/* --- Handle covers --- */
