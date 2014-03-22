@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/colobokPlugin/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 Artem Gusarenko
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+
+<locale name="ru_RU" full_name="U.S. English">
+	<message key="plugins.importexport.colobok.displayName">Модуль экспорта в DOAJ Колобок</message>
+	<message key="plugins.importexport.colobok.description">Экспортирвать журнал для DOAJ и сообщить представителю DOAJ информацию о журнале</message>
+	<message key="plugins.importexport.colobok.selectIssue">Выберите выпуск для экспорта</message>
+	
+	<message key="plugins.importexport.colobok.export">Экспортировать данные журнала в DOAJ Колобок</message>
+	<message key="plugins.importexport.colobok.export.journal">Колобок Экспорт</message>
+	<message key="plugins.importexport.colobok.export.contact">Свяжитесь с DOAJ для включения журнала</message>
+	<message key="plugins.importexport.colobok.export.journalInfo">Экспортировать статьи в XML для архивации DOAJ Колобок</message>
+	<message key="plugins.importexport.colobok.export.contactInfo">Для рассморения вашего журнала в DOAJ, пожалуйста отравьте эту частично заполненную форму в DOAJ</message>
+</locale>

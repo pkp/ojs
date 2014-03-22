@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * vplugins/importexport/colobokPlugin/ersion.xml
+  *
+  * Copyright (c) 2003-2013 Artem Gusarenko
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>colobokPlugin</application>
+	<type>plugins.importexport</type>
+	<release>1.0.0.0</release>
+	<date>2013-11-13</date>
+</version>

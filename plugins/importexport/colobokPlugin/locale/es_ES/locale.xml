@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_ES (España) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.importexport.doaj.displayName">Conector de exportación DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Exportar la revista al DOAJ y añadir información sobre ella para incluirla.</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Exportar datos de la revista al DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Exportar la revista</message>
+	<message key="plugins.importexport.doaj.export.contact">Contactar con el DOAJ para inclusiones</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">exportar la información de un artículo en XML para archivarla en el DOAJ.</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">para que su revista sea considerada en el DOAJ, envíe este formulario parcialmente rellenado al DOAJ completando toda la información posible.</message>
+
+</locale> 

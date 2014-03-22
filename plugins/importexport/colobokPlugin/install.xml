@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "../../../lib/pkp/dtd/install.dtd">
+<!--
+  * plugins/importexport/colobokPlugin/install.xml
+  *
+  * Copyright (c) 2003-2013 Artem Gusarenko
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Installation descriptor file.
+  -->
+
+<install version="1.0.0">
+	<!-- colobok schema -->
+	<schema file="plugins/importexport/colobokPlugin/schema.xml" />
+</install>
