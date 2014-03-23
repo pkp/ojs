@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.native.displayName">Connector XML per a articles i números</message>
+	<message key="plugins.importexport.native.description">Importa i exporta els articles i els números.</message>
+
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Ús: {$scriptName} {$pluginName} [command] ... Ordres: importar [xmlFileName] [journal_path] [user_name] ... exportar [xmlFileName] [journal_path] articles [articleId1] [articleId2] ... exportar [xmlFileName] [journal_path] article [articleId] exportar [xmlFileName] [journal_path] números [issueId1] [issueId2] ... exportar [xmlFileName] [journal_path] número [issueId] Caldran paràmetres addicionals per a la importació de dades, segons el node arrel del document XML. Si el node arrel és <article> o <articles>, caldran paràmetres addicionals. S'accepten els formats següents: {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] issue_id [issueId] section_id [sectionId] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] issue_id [issueId] section_name [name] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] issue_id [issueId] section_abbrev [abbrev]]]></message>
+	<message key="plugins.importexport.native.export">Exporta les dades</message>
+	<message key="plugins.importexport.native.export.issues">Exporta els números</message>
+	<message key="plugins.importexport.native.export.sections">Exporta les seccions</message>
+	<message key="plugins.importexport.native.export.articles">Exporta els articles</message>
+
+	<message key="plugins.importexport.native.selectIssue">Selecciona un número</message>
+	<message key="plugins.importexport.native.selectArticle">Selecciona un article</message>
+
+	<message key="plugins.importexport.native.import.articles">Importa els articles</message>
+	<message key="plugins.importexport.native.import.articles.description">El fitxer que esteu important conté un o més articles. Heu de triar el número i la secció als quals voleu importar aquests articles. Si no voleu importar tots els articles a la mateixa secció i número, heu de separar-los en fitxers XML diferents o moure'ls als números i les seccions adequats després d'importar-los.</message>
+
+	<message key="plugins.importexport.native.import">Importa les dades</message>
+	<message key="plugins.importexport.native.import.description"><![CDATA[Aquest connector admet la importació de dades basada en la definició de tipus de document native.dtd. Els nodes arrel compatibles són &lt;article&gt;, &lt;articles&gt;, &lt;issue&gt;, i &lt;issues&gt;.]]></message>
+
+	<message key="plugins.importexport.native.import.error">Error d'importació</message>
+	<message key="plugins.importexport.native.import.error.description">S'han produït un o més errors durant la importació. Comproveu que el format del fitxer d'importació coincideixi amb l'especificació. A continuació hi ha una llista dels detalls de l'error o dels errors d'importació.</message>
+
+	<message key="plugins.importexport.native.cliError">ERROR:</message>
+	<message key="plugins.importexport.native.error.uploadFailed">S'ha produït un error durant la càrrega. Comproveu que el vostre servidor admeti càrregues i que el fitxer no sigui massa gran per al PHP i la configuració del servidor web.</message>
+	<message key="plugins.importexport.native.error.unknownUser">L'usuari indicat "{$userName}" no existeix.</message>
+	<message key="plugins.importexport.native.error.unknownJournal">La ruta indicada de la revista "{$journalPath}" no existeix.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">No s'ha pogut escriure al fitxer "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">No hi ha cap secció que coincideixi amb l'especificador "{$sectionIdentifier}".</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">No hi ha cap número que coincideixi amb l'id. de número indicat "{$issueId}".</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">No hi ha cap article que coincideixi amb l'id. d'article indicat "{$articleId}".</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Aquest connector no admet el node arrel indicat, "{$rootName}". Comproveu que el fitxer estigui ben format i torneu-ho a intentar.</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">Falta el títol d'un número.</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">FALTA EL TÍTOL</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">S'ha indicat un tipus d'identificació desconegut, "{$identificationType}", a l'atribut «identificació» per a l'element «número» del número "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">S'ha indicat un valor booleà no vàlid, "{$value}". Utilitzeu «vertader» o «fals».</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">S'ha indicat una data no vàlida, "{$value}".</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">Les dades s'han incrustat amb un tipus de codificació desconegut, "{$type}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">No s'ha pogut desar una còpia local de "{$originalName}".</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">L'URL indicat "{$url}" per al número "{$issueTitle}" no és vàlid. Les importacions enviades per web només admeten els mètodes http, https, ftp o ftps.</message>
+	<message key="plugins.importexport.native.import.error.unknownSuppFileType">S'ha indicat un tipus de fitxer addicional desconegut, "{$suppFileType}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">No s'ha pogut copiar l'URL "{$url}" a un fitxer local.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Falta un títol de secció del número "{$issueTitle}". Comproveu que el document XML s'adeqüi a les especificacions de la DTD corresponent.</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">La secció "{$sectionTitle}" del número "{$issueTitle}" coincideix amb una secció existent de la revista, però l'abreviació indicada ("{$sectionAbbrev}") coincideix amb una altra secció.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">Falta un títol d'article per al número "{$issueTitle}" a la secció "{$sectionTitle}". Comproveu que el document XML s'adeqüi a les especificacions de la DTD corresponent i que s'hagi indicat un títol per a la configuració regional de la revista.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">S'ha proporcionat un títol d'article ("{$articleTitle}") per al número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">S'ha proporcionat un resum de l'article "{$articleTitle}" per al número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">Falta una etiqueta de galerades per a l'article "{$articleTitle}" de la secció "{$sectionTitle}" del número "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">Falta un fitxer addicional per a l'article "{$articleTitle}" de la secció "{$sectionTitle}" del número "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">Falta un fitxer de galerades per a l'article "{$articleTitle}" de la secció "{$sectionTitle}" del número "{$issueTitle}".</message>
+
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">S'ha proporcionat un títol del número ("{$issueTitle}") en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">S'ha proporcionat una descripció del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">S'ha proporcionat una portada del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">S'ha proporcionat un títol de secció ("{$sectionTitle}") del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">S'ha proporcionat una abreviació de secció ("{$sectionAbbrev}") del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">S'ha proporcionat un tipus d'identificació de secció ("{$sectionIdentifyType}") del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">S'ha proporcionat una política de secció ("{$sectionPolicy}") del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">El títol de secció "{$section1Title}" i el títol de secció "{$section2Title}" del número "{$issueTitle}" corresponen a diferents seccions existents i de la revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">El títol de secció "{$sectionTitle}" del número "{$issueTitle}" coincideix amb una secció existent de la revista, però un altre títol d'aquesta secció no coincideix amb un altre títol de la secció existent de la revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">L'abreviació de secció "{$section1Abbrev}" i l'abreviació de secció "{$section2Abbrev}" del número "{$issueTitle}" corresponen a diferents seccions existents de la revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">L'abreviació de secció "{$sectionAbbrev}" del número "{$issueTitle}" coincideix amb una secció existent de la revista, però una altra abreviació d'aquesta secció no coincideix amb una altra abreviació de la secció existent de la revista.</message>
+
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">S'ha proporcionat una disciplina d'article per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">S'ha proporcionat un tipus d'article per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">S'ha proporcionat un tema d'article per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">S'ha proporcionat una classificació de temes d'article per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">S'ha proporcionat una cobertura geogràfica per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">S'ha proporcionat una cobertura cronològica per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">S'ha proporcionat una cobertura de mostra per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">S'ha proporcionat un patrocinador d'article per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">S'ha proporcionat un interès per a l'autor "{$authorFullName}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">S'ha proporcionat una biografia per a l'autor "{$authorFullName}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">S'ha proporcionat una afiliació per a l'autor "{$authorFullName}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">S'han proporcionat unes galerades per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admeses per aquesta revista.</message>
+
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">S'ha proporcionat un títol de fitxer addicional ("{$suppFileTitle}") de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">S'ha proporcionat un creador del fitxer addicional "{$suppFileTitle}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">S'ha proporcionat un tema del fitxer addicional "{$suppFileTitle}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">S'ha proporcionat un tipus personalitzat del fitxer addicional "{$suppFileTitle}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">S'ha proporcionat una descripció del fitxer addicional "{$suppFileTitle}" per a l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">S'ha proporcionat una institució publicadora del fitxer addicional "{$suppFileTitle}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">S'ha proporcionat un patrocinador del fitxer addicional "{$suppFileTitle}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admès per aquesta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">S'ha proporcionat una font del fitxer addicional "{$suppFileTitle}" de l'article "{$articleTitle}" del número "{$issueTitle}" en una configuració regional ("{$locale}") no admesa per aquesta revista.</message>
+
+	<message key="plugins.importexport.native.import.success">Importació completa</message>
+	<message key="plugins.importexport.native.import.success.description">La importació s'ha fet amb èxit. A continuació hi ha una llista dels elements importats correctament.</message>
+
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">El ID públic "{$publicId}" indicat per la galerada importada, ja l'utilitza una altre galerada del mateix article ("{$articleTitle}").</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">El ID públic indicat pel fitxer suplementari importat "{$suppFileTitle}", ja l'utilitza una altre fitxer suplementari del mateix article ("{$otherSuppFileTitle}").</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">El ID públic per l'article importat "{$articleTitle}", ja l'utilitza una altre article ("{$otherArticleTitle}").</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">L'ID públic del número importat "{$issueTitle}" l'utilitza actualment el número "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidPubId">El teu fitxer d'importació conté un grup de dades invàlides a {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">El fitxer d'importació conté un conjunt de dades a {$pubIdType} '{$pubId}' que ja existeixen en un altre objecte de la base de dades. Si us plau, confirma que anteriorment no has importat aquests ID a la base de dades.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">El fitxer d'importació conté un conjunt de dades amb un tipus d'ID {$pubIdType} que cap connector ID pot processar. Si us plau, instal·la i/o activa el corresponent connector ID abans d'importar aquest grup de dades.</message>
+</locale> 

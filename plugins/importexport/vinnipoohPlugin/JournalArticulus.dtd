@@ -1,0 +1,109 @@
+<!ELEMENT journal		( operCard, issn, codeNEB, journalInfo+, issue )>
+
+
+<!ELEMENT i		( #PCDATA )>
+<!ELEMENT b		( #PCDATA )>
+<!ELEMENT sup		( #PCDATA )>
+<!ELEMENT sub		( #PCDATA )>
+<!ENTITY % text		'( #PCDATA|i|b|sub|sup )*'>
+
+<!ENTITY % langAtt		'( RUS|ENG|BEL|UKR|FRE|GER|GEO|TAT|ESP|ITA|LAT|SRB ) #REQUIRED'>
+<!ENTITY % numAtt		' CDATA #REQUIRED'>
+<!ENTITY % typeAtt		'( RAR|EDI|BRV|CNF|SCO|REV|ABS|REP|COR|PER|MIS|UNK ) #REQUIRED'>
+
+<!ELEMENT operCard	( operator, date, cntArticle, cntNode?, cs? )>
+<!ELEMENT operator	( #PCDATA )>
+<!ELEMENT date		( #PCDATA )>
+<!ELEMENT cntArticle	( #PCDATA )>
+<!ELEMENT cntNode	( #PCDATA )>
+<!ELEMENT cs		( #PCDATA )>
+
+<!ELEMENT issn		( #PCDATA )>
+<!ELEMENT codeNEB	( #PCDATA )>
+
+<!ELEMENT journalInfo	( title, abbrTitle?, publ?, placePubl?, address? )>
+<!ELEMENT title		( #PCDATA )>
+<!ELEMENT abbrTitle	( #PCDATA )>
+<!ELEMENT publ		( #PCDATA )>
+<!ELEMENT placePubl	( #PCDATA )>
+<!ELEMENT address		( #PCDATA )>
+<!ATTLIST journalInfo lang	%langAtt;>
+
+<!ELEMENT issue		( (volume|number)+ , part?, dateUni, issTitle?, pages, articles )>
+<!ELEMENT volume		( #PCDATA )>
+<!ELEMENT number		( #PCDATA )>
+<!ELEMENT part		( #PCDATA )>
+<!ELEMENT dateUni		( #PCDATA )>
+<!ELEMENT issTitle		( #PCDATA )>
+<!ELEMENT pages		( #PCDATA )>
+
+<!ELEMENT articles		( section?, article+ )+ >
+
+<!ELEMENT section		( secTitle+ )>
+<!ELEMENT secTitle		( #PCDATA )>
+<!ATTLIST secTitle lang	%langAtt;>
+
+<!ELEMENT article		( pages, artType, authors*, artTitles, abstracts?, text?, codes?, keywords?, references?, files?, artFunding?, dates? )>
+<!ELEMENT artType		( #PCDATA )>
+
+<!ELEMENT authors		( author+ )>
+<!ELEMENT author		( correspondent?, spin?, individInfo+ )>
+<!ATTLIST author num	%numAtt;>
+<!ELEMENT correspondent	( #PCDATA )>
+<!ELEMENT spin	( #PCDATA )>
+<!ELEMENT individInfo	( surname, initials, orgName?, email?, address?, otherInfo? )>
+<!ATTLIST individInfo lang	%langAtt;>
+<!ELEMENT surname	( #PCDATA )>
+<!ELEMENT initials		( #PCDATA )>
+<!ELEMENT orgName	( #PCDATA )>
+<!ELEMENT email		( #PCDATA )>
+<!ELEMENT otherInfo	( #PCDATA )>
+
+<!ELEMENT artTitles		( artTitle+ )>
+<!ELEMENT artTitle		%text;>
+<!ATTLIST artTitle lang	%langAtt;>
+
+<!ELEMENT abstracts	( abstract+ )>
+<!ELEMENT abstract		%text;>
+<!ATTLIST abstract lang	%langAtt;>
+
+<!ELEMENT text		%text;>
+<!ATTLIST text lang		%langAtt;>
+
+<!ELEMENT codes		( isbn?, udk?, bbk?, gsnti?, otherCode? )>
+<!ELEMENT isbn		( #PCDATA )>
+<!ELEMENT udk		( #PCDATA )>
+<!ELEMENT bbk		( #PCDATA )>
+<!ELEMENT gsnti		( #PCDATA )>
+<!ELEMENT otherCode	( #PCDATA )>
+
+<!ELEMENT keywords	( kwdGroup+ )>
+<!ELEMENT kwdGroup	( keyword+ )>
+<!ATTLIST kwdGroup lang	%langAtt;>
+<!ELEMENT keyword	%text;>
+
+<!ELEMENT references	( reference+ )>
+<!ELEMENT reference	%text;>
+
+<!ELEMENT files		( fpdf?, fhtml?, furl?, file* )>
+<!ELEMENT fpdf		( #PCDATA )>
+<!ELEMENT fhtml		( #PCDATA )>
+<!ELEMENT furl		( #PCDATA )>
+<!ELEMENT file		( #PCDATA )>
+
+<!ELEMENT artFunding	( funding+ )>
+<!ELEMENT funding		%text;>
+<!ATTLIST funding lang	%langAtt;>
+
+<!ELEMENT dates	( dateReceived )>
+<!ELEMENT dateReceived		( #PCDATA )>
+
+
+
+
+
+
+
+
+
+
