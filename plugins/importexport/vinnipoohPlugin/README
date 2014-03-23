@@ -1,0 +1,7 @@
+vinnipoohPlugin for PKP software
+by Artem Gusarenko
+
+To install it, extract it (including the vinnipoohPlugin directory) into the
+plugins/importexport directory of your PKP software installation.
+
+This plugin for export metadata by issue/article to elibrary.

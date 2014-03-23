@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+  xmlns:xs ="http://www.w3.org/2001/XMLSchema"
+  xmlns:iso_639-2b="http://www.it.ojp.gov/jxdm/iso_639-2b/1.0">
+
+ <xs:import namespace="http://www.it.ojp.gov/jxdm/iso_639-2b/1.0" 
+       schemaLocation="http://www.it.ojp.gov/jxdm/iso_639-2b/1.0/iso_639-2b.xsd">
+
+  <xs:annotation>
+    <xs:documentation>
+
+    This schema determines allowable xml file formats
+    for upload into the DOAJ database.
+
+    The schema uses imported codes for the representation 
+    of names of languages devised by the International 
+    Organization for Standardization (ISO) 639-2/B 
+    (bibliographic codes). Please note that when two 
+    codes separated by a dash occurs in the iso 639-2 
+    table then only the first code is used, the 
+    bibliographic one. The terminology code that comes 
+    second is omitted.
+
+    </xs:documentation>
+  </xs:annotation>
+ </xs:import>
+
+ <xs:element name="records">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="record" type="recordType" 
+                maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:complexType name="recordType">
+  <xs:sequence>
+   <xs:element name="language" 
+               type="iso_639-2b:LanguageCodeType" 
+               minOccurs="0"/>
+
+   <xs:element name="publisher" type="xs:string" minOccurs="0"/>
+
+   <xs:element name="journalTitle" type="xs:string" />
+
+   <xs:element name="issn" minOccurs="0">
+    <xs:simpleType>
+     <xs:restriction base="xs:string">
+      <xs:pattern value="[d0-9]{4}-{0,1}[0-9]{3}[0-9xX]{1}"/> 
+     </xs:restriction>
+    </xs:simpleType>
+   </xs:element>
+	   
+   <xs:element name="eissn" minOccurs="0">
+    <xs:simpleType>
+     <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{4}-{0,1}[0-9]{3}[0-9xX]{1}"/> 
+     </xs:restriction>
+    </xs:simpleType>
+   </xs:element>
+
+   <xs:element name="publicationDate">
+    <xs:simpleType>
+     <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?"/>
+     </xs:restriction>
+    </xs:simpleType>
+   </xs:element>
+
+   <xs:element name="volume" type="xs:string" minOccurs="0"/>
+   <xs:element name="issue" type="xs:string" minOccurs="0"/>
+   <xs:element name="startPage" type="xs:string" minOccurs="0"/>
+   <xs:element name="endPage" type="xs:string" minOccurs="0"/>
+
+   <xs:element name="doi" type="xs:string"  minOccurs="0"/>
+            
+   <xs:element name="publisherRecordId" type="xs:string" minOccurs="0"/>
+
+   <xs:element name="documentType" type="xs:string" minOccurs="0"/>
+
+   <xs:element name="title" minOccurs="1" maxOccurs="unbounded"> 
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute name="language" type="iso_639-2b:LanguageCodeType" />
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element> 
+
+   <xs:element name="authors" minOccurs="0" maxOccurs="1">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="author" 
+                  minOccurs="0" maxOccurs="unbounded">
+       <xs:complexType>
+        <xs:sequence>
+         <xs:element name="name" type="xs:string" />
+         <xs:element name="email" type="xs:string"
+                     minOccurs="0" />
+         <xs:element name="affiliationId" 
+                     minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+       </xs:complexType>
+      </xs:element>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+
+   <xs:element name="affiliationsList" minOccurs="0" maxOccurs="1">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="affiliationName"  minOccurs="0"  maxOccurs="unbounded">
+       <xs:complexType>
+        <xs:simpleContent>
+         <xs:extension base="xs:string">
+          <xs:attribute name="affiliationId" type="xs:string"/>
+         </xs:extension>
+        </xs:simpleContent>
+       </xs:complexType>
+      </xs:element>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+ 
+   <xs:element name="abstract" minOccurs="0" maxOccurs="unbounded">
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute name="language" type="iso_639-2b:LanguageCodeType" />
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element>
+ 
+   <xs:element name="fullTextUrl">
+    <xs:complexType> 
+     <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+       <xs:attribute name="format" />  
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element>
+ 
+   <xs:element name="keywords"
+               minOccurs="0"  maxOccurs="unbounded">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="keyword"   type="xs:string"
+                   minOccurs="0"    maxOccurs="unbounded"/>
+     </xs:sequence>
+     <xs:attribute name="language" type="iso_639-2b:LanguageCodeType"
+                   use="optional"/>
+    </xs:complexType>
+   </xs:element>
+
+  </xs:sequence>
+ </xs:complexType>
+</xs:schema>

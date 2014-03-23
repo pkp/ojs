@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/doaj/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Swedish) locale.
+  * 
+  * Translated by per@funke.com 2010-02-04
+  * 
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.doaj.displayName">DOAJ export plugin</message>
+	<message key="plugins.importexport.doaj.description">Exportera tidskrift för DOAJ och eposta DOAJs representant tidskriftsinformationen</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Exportera tidskriftsdata till DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Exportera tisdskrift</message>
+	<message key="plugins.importexport.doaj.export.email">Eposta DOAJ representatnten</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Export artikelinformation i XML till arkiveringen i DOAJ</message>
+	<message key="plugins.importexport.doaj.export.emailInfo">Vänligen komplettera detta delvis ifyllda formulär och sänd det till DOAJ så er tidskrift kan komma med i DOAJ-katalogen.</message>
+
+</locale>

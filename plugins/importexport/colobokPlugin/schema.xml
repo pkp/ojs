@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * plugins/importexport/colobokPlugin/schema.xml
+  *
+  * Copyright (c) 2003-2013 Artem Gusarenko
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * COUNTER statistics plugin schema in XML.
+  -->
+
+<schema version="0.1">
+
+  <!--
+   *
+   * TABLE colobokPlugin
+   *
+   -->
+  <table name="colobok">
+    <field name="year" type="I8">
+      <NOTNULL/>
+    </field>
+    <field name="month" type="I8">
+      <NOTNULL/>
+    </field>
+    <field name="journal_id" type="I8">
+      <NOTNULL/>
+    </field>
+    <field name="count_html" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="0"/>
+    </field>
+    <field name="count_pdf" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="0"/>
+    </field>
+    <field name="count_other" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="0"/>
+    </field>
+    <descr>colobokPlugin</descr>
+    <index name="colobok">
+      <col>year</col>
+      <col>month</col>
+      <col>journal_id</col>
+      <UNIQUE/>
+    </index>
+  </table>
+</schema>

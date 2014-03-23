@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/vinnipoohPlugin/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2003-2013 Artem Gusarenko
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  *
+  -->
+ 
+<locale name="ru_RU" full_name="U.S. English">
+	<!-- FIXME: We need a Russian translation. -->
+	<message key="plugins.importexport.vinnipoohPlugin.displayName">Модуль статей и выпусков Винни Пух</message>
+	<message key="plugins.importexport.vinnipoohPlugin.description">Пчёлы Винни Пуху шарик прокололи, но он всё равно без мёда не остался</message>
+	<message key="plugins.importexport.vinnipoohPlugin.cliUsage"><![CDATA[Использование: {$scriptName} {$pluginName} [command] ...
+Команды:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Для импорта требуются дополнительные параметры в зависимости от корневого узла
+XML документа.
+
+Если корневой узел <article> или <articles>, требуются дополнительные параметры.
+Допустимы следующие форматы:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]]]></message>
+	<message key="plugins.importexport.vinnipoohPlugin.export">Экспортировать данные</message>
+	<message key="plugins.importexport.vinnipoohPlugin.export.issues">Экспортировать выпуски</message>
+	<message key="plugins.importexport.vinnipoohPlugin.export.sections">Экспортировать секции</message>
+	<message key="plugins.importexport.vinnipoohPlugin.export.articles">Экспортировать статьи</message>
+	<message key="plugins.importexport.vinnipoohPlugin.selectIssue">Выберите выпуск</message>
+	<message key="plugins.importexport.vinnipoohPlugin.selectArticle">Выберите статью</message>
+	<message key="plugins.importexport.vinnipoohPlugin.cliError">ОШИБКА:</message>
+	<message key="plugins.importexport.vinnipoohPlugin.error.uploadFailed">Загрузка завершилась неудачно; пожалуйста убедитесь, что загрузки разрешены на сервере и что файл не слишком большой для текущей конфигурации сервера и PHP.</message>
+	<message key="plugins.importexport.vinnipoohPlugin.error.unknownUser">Указанный пользователь, "{$userName}", не известен.</message>
+	<message key="plugins.importexport.vinnipoohPlugin.error.unknownJournal">Указанный путь в журнале, "{$journalPath}", отсутствует.</message>
+	<message key="plugins.importexport.vinnipoohPlugin.export.error.couldNotWrite">Невозможно записать в файл "{$fileName}".</message>
+	<message key="plugins.importexport.vinnipoohPlugin.export.error.sectionNotFound">Нет секции, соответствующей спецификации "{$sectionIdentifier}".</message>
+	<message key="plugins.importexport.vinnipoohPlugin.export.error.issueNotFound">Нет выпуска с идентификатором "{$issueId}".</message>
+	<message key="plugins.importexport.vinnipoohPlugin.export.error.articleNotFound">Нет статьи с идентификатором "{$articleId}".</message>
+</locale>

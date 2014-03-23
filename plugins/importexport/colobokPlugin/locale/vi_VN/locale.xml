@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/doaj/locale/vi_VN/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
+  *
+  -->
+
+<locale name="vi_VN" full_name="Tiếng Việt">
+	<message key="plugins.importexport.doaj.displayName">Công cụ xuất sang DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Xuất tạp chí sang DOAJ và email cho đại diện DOAJ các thông tin của tạp chí.</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Xuất dữ liệu tạp chí sang DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Xuất tạp chí</message>
+	<message key="plugins.importexport.doaj.export.email">Email cho đại diện của DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Xuất thông tin về bài viết dưới dạng XML để lưu trong DOAJ</message>
+	<message key="plugins.importexport.doaj.export.emailInfo">Để tạp chí của quý vị được xem xét đưa vào DOAJ, gửi mẫu đơn điền sẵn một phần này cho DOAJ và điền các thông tin còn thiếu càng đầy đủ càng tốt.</message>
+
+</locale>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/doaj/locale/zh_CN/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+
+<locale name="zh_CN" full_name="China">
+	<message key="plugins.importexport.doaj.displayName">DOAJ导出插件</message>
+	<message key="plugins.importexport.doaj.description">将期刊导出给DAOJ，并且将期刊信息电邮给DAOJ的成员</message>
+
+	
+	<message key="plugins.importexport.doaj.export">将期刊数据导出给DAOJ</message>
+	<message key="plugins.importexport.doaj.export.journal">导出期刊</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">将信息以XML格式导出，以便在DAOJ存档</message>
+	<message key="plugins.importexport.doaj.export.contact">联系DOAJ列入</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">为了使您的期刊能够收录到DOAJ，请将该部分自动生成的表格提交到DOAJ,并尽您所能填写不完整的信息。</message>
+</locale>

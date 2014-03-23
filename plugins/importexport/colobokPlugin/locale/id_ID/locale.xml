@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/doaj/locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+
+<locale name="id_ID" full_name="Indonesia">
+	<message key="plugins.importexport.doaj.displayName">Plugin Ekspor DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Ekspor Jurnal untuk DOAJ dan sediakan informasi jurnal untuk pencantuman</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Ekspor Data Jurnal ke DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Ekspor Jurnal</message>
+	<message key="plugins.importexport.doaj.export.contact">Kontak DOAJ untuk pencantuman</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Ekspor informasi artikel dalam XML untuk pengarsipan dalam DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">sebagai bahan pertimbangan, silahkan menyerahkan sebagian formulir yang telah diisi ke DOAJ, dan isi informasi yang belum lengkap sebaik yang kamu bisa.</message>
+
+</locale>

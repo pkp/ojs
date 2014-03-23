@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.1.4.1284 (http://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="journal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="operCard">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="operator" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="pid" type="xs:unsignedInt" />
+              <xs:element minOccurs="1" maxOccurs="1" name="date" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="cntArticle" type="xs:unsignedInt" />
+              <xs:element minOccurs="0" maxOccurs="1" name="cntNode" type="xs:unsignedInt" />
+              <xs:element minOccurs="0" maxOccurs="1" name="cs" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="titleid" type="xs:unsignedInt" />
+        <xs:element minOccurs="1" maxOccurs="1" name="issn" type="typeISSN" />
+        <xs:element minOccurs="1" maxOccurs="1" name="codeNEB" type="typeCodeNEB" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" name="journalInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="title" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="abbrTitle" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="publ" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="placePubl" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="address" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="lang" type="typeLang" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="issue">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="1" name="volume" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="number" type="typeNumber" />
+              <xs:element minOccurs="0" maxOccurs="1" name="altNumber" type="typeNumber" />
+              <xs:element minOccurs="0" maxOccurs="1" name="part" type="xs:unsignedByte" />
+              <xs:element minOccurs="1" maxOccurs="1" name="dateUni" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="1" name="issTitle" type="string500" />
+              <xs:element minOccurs="1" maxOccurs="1" name="pages" type="typePages" />
+              <xs:element minOccurs="1" maxOccurs="1" name="articles">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:choice maxOccurs="unbounded">
+                      <xs:element minOccurs="0" maxOccurs="unbounded" name="section">
+                        <xs:complexType>
+                          <xs:sequence>
+			                      <xs:element minOccurs="1" maxOccurs="unbounded" name="secTitle">
+				                      <xs:complexType>
+				                        <xs:simpleContent>
+				                          <xs:extension base="string200">
+				                            <xs:attribute name="lang" type="typeLang" use="required" />
+				                          </xs:extension>
+				                        </xs:simpleContent>
+				                      </xs:complexType>
+			                      </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element minOccurs="1" maxOccurs="unbounded" name="article">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element minOccurs="1" maxOccurs="1" name="pages" type="typePages" />
+                            <xs:element minOccurs="1" maxOccurs="1" name="artType" type="typeArticleType" />
+                            <xs:element minOccurs="0" maxOccurs="1" name="authors">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="1" maxOccurs="unbounded" name="author">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element minOccurs="0" maxOccurs="1" name="correspondent" type="xs:boolean" />
+                                        <xs:element minOccurs="0" maxOccurs="1" name="spin" type="typeISSN" />
+                                        <xs:element minOccurs="1" maxOccurs="unbounded" name="individInfo">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element minOccurs="1" maxOccurs="1" name="surname" type="string200" />
+                                              <xs:element minOccurs="1" maxOccurs="1" name="initials" type="string200" />
+                                              <xs:element minOccurs="0" maxOccurs="1" name="orgName" type="string900" />
+                                              <xs:element minOccurs="0" maxOccurs="1" name="email" type="string100" />
+                                              <xs:element minOccurs="0" maxOccurs="1" name="address" type="string900" />
+                                              <xs:element minOccurs="0" maxOccurs="1" name="otherInfo" type="string900" />
+                                            </xs:sequence>
+                                            <xs:attribute name="lang" type="typeLang" use="required" />
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                      <xs:attribute name="num" type="xs:unsignedByte" use="required" />
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="1" name="artTitles">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="1" maxOccurs="unbounded" name="artTitle">
+                                    <xs:complexType>
+                                      <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                          <xs:attribute name="lang" type="typeLang" use="required" />
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="1" name="abstracts">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="1" maxOccurs="unbounded" name="abstract">
+                                    <xs:complexType>
+                                      <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                          <xs:attribute name="lang" type="typeLang" use="required" />
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="unbounded" name="text">
+                              <xs:complexType>
+                                <xs:simpleContent>
+                                  <xs:extension base="xs:string">
+                                    <xs:attribute name="lang" type="typeLang" use="required" />
+                                  </xs:extension>
+                                </xs:simpleContent>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="1" name="codes">
+                              <xs:complexType mixed="true">
+                                <xs:sequence minOccurs="0">
+                                  <xs:element minOccurs="0" maxOccurs="1" name="udk" type="xs:string" />
+                                  <xs:element minOccurs="0" maxOccurs="1" name="bbk" type="xs:string" />
+                                  <xs:element minOccurs="0" maxOccurs="1" name="gsnti" type="xs:string" />
+                                  <xs:element minOccurs="0" maxOccurs="1" name="otherCode" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="1" name="keywords">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="1" maxOccurs="unbounded" name="kwdGroup">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element minOccurs="1" maxOccurs="unbounded" name="keyword" type="string200" />
+                                      </xs:sequence>
+                                      <xs:attribute name="lang" type="typeLang" use="required" />
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="1" name="references">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="1" maxOccurs="unbounded" name="reference" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="1" name="files">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="0" maxOccurs="1" name="fpdf" type="typeFile" />
+                                  <xs:element minOccurs="0" maxOccurs="1" name="fhtml" type="typeFile" />
+                                  <xs:element minOccurs="0" maxOccurs="1" name="furl" type="xs:string" />
+                                  <xs:element minOccurs="0" maxOccurs="unbounded" name="file" type="typeFile" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+
+                            <xs:element minOccurs="0" maxOccurs="1" name="artFunding">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="funding">
+                                    <xs:complexType>
+                                      <xs:simpleContent>
+                                        <xs:extension base="string500">
+                                          <xs:attribute name="lang" type="typeLang" use="required" />
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>                                                    
+                            
+                            <xs:element minOccurs="0" maxOccurs="1" name="dates">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="0" maxOccurs="1" name="dateReceived" type="typeDates" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>                            
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:choice>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Unit Block -->
+
+
+  <xs:simpleType name="typeISSN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d\d\d\d-\d\d\d(\d|X)\s*" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeCodeNEB">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\d\d\d\d\d\d\d(\d|X)|9999\d\d\d\d)" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeCountry">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="ru|ai|aj|at|au|bw|enk|er|fr|gs|gw|it|kg|kz|li|lv|mv|sp|ta|tk|un|uz|xxk|xxu|vp|xx" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeArticleType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="RAR|EDI|BRV|CNF|SCO|REV|ABS|REP|COR|PER|MIS|UNK" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeNumber">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(S|((S)?\d+(-\d+)?))" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeDateUni">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19\d\d|20[0-1]\d)(0[1-9]|1[0-2]|(2|3)[1-4])?(/(19\d\d|20[0-1]\d)(0[1-9]|1[0-2]|(2|3)[1-4])?)?" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeDates">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d\d\.\d\d\.\d\d\d\d" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typePages">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\d\w]+(-[\d\w]+)?" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeLang">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="RUS|ENG|BEL|UKR|FRE|DEU|GEO|TAT|ESP|ITA|LAT|SRB|TJK|BGR|ANY" />
+    </xs:restriction>
+  </xs:simpleType> 
+
+  <xs:simpleType name="typeFile">
+    <xs:restriction base="xs:string">
+      <xs:pattern value=".+\.[\d\w]{2,4}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="string100">
+    <xs:restriction base="xs:string">
+     <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+    <xs:simpleType name="string200">
+    <xs:restriction base="xs:string">
+     <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+
+    <xs:simpleType name="string500">
+    <xs:restriction base="xs:string">
+     <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="string900">
+    <xs:restriction base="xs:string">
+     <xs:maxLength value="900" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
