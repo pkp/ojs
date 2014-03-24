@@ -13,7 +13,7 @@
 .notifyIcon {
 	width: 16px;
 	height: 16px;
-	background-image: url(../../lib/jqueryUi/images/ui-icons_222222_256x240.png);
+	background-image: url({$baseUrl}/lib/pkp/styles/lib/jqueryUi/images/ui-icons_222222_256x240.png);
 }
 
 .notifyIconSuccess {
@@ -41,7 +41,7 @@
 }
 
 .ui-pnotify-closer .ui-icon {
-	background-image: url(../../lib/jqueryUi/images/ui-icons_222222_256x240.png);
+	background-image: url({$baseUrl}/lib/pkp/styles/lib/jqueryUi/images/ui-icons_222222_256x240.png);
 }
 
 /* Page icons */
