@@ -197,6 +197,10 @@ class CrossRefExportDom {
 		if ($article->getDatePublished()) {
 			$publicationDateNode =& CrossRefExportDom::generatePublisherDateDom($doc, $article->getDatePublished());
 		}
+		else {
+			$publicationDateNode =& CrossRefExportDom::generatePublisherDateDom($doc, $issue->getdatePublished());
+		}
+		XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 
 		/* publisher_item is the article pages */
 		if ($article->getPages() != '') {
