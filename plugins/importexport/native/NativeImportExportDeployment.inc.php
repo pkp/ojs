@@ -17,6 +17,9 @@
 import('lib.pkp.plugins.importexport.native.PKPNativeImportExportDeployment');
 
 class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
+
+	var $_issue;
+
 	/**
 	 * Constructor
 	 * @param $context Context
@@ -58,6 +61,22 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 	 */
 	function getSchemaFilename() {
 		return 'native.xsd';
+	}
+
+	/**
+	 * Set the import/export issue.
+	 * @param $issue Issue
+	 */
+	function setIssue($issue) {
+		$this->_issue = $issue;
+	}
+
+	/**
+	 * Get the import/export issue.
+	 * @return Issue
+	 */
+	function getIssue() {
+		return $this->_issue;
 	}
 }
 
