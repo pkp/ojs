@@ -11,6 +11,19 @@ for an overview of data publication workflows supported by the plugin in OJS.
 
 ## Installing the plugin
 
+### System requirements
+
+The Dataverse plugin uses the [SWORD v2 PHP API library](https://github.com/swordapp/swordappv2-php-library/), which requires 
+** PHP version 5 ** and the following extensions:
+
++ cURL
++ SimpleXML
++ Zip
+
+### OJS 2.4.4
+
+The Dataverse plugin is included in OJS 2.4.4. Enable the plugin as usual and configure settings according to the [Dataverse Plugin Guide](https://docs.google.com/document/d/1QgxtxMaWdSZ8gI3wHDkE5EfP4W3M2Za-4DhmX_x3pY0/edit?disco=AAAAAGd77n8#).
+
 ### OJS 2.4.3
 
 Download [dataverse-1.1.1.0.tar.gz](https://github.com/jwhitney/dataverse/releases). Use the web plugin installer 

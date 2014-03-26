@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/dataverse/pages/DataverseHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataverseHandler
@@ -19,7 +19,7 @@ class DataverseHandler extends Handler {
 	/**
 	 * Index handler: redirect to journal page.
 	 */
-	function index($args = array(), &$request) {
+  function index($args, &$request) {
     $request->redirect(null, 'index');
 	}
   
@@ -28,7 +28,7 @@ class DataverseHandler extends Handler {
    * @param array $args
    * @param Request $request
    */
-  function dataAvailabilityPolicy($args=array(), &$request) {
+  function dataAvailabilityPolicy($args, &$request) {
     $journal =& $request->getJournal();
     $dataversePlugin =& PluginRegistry::getPlugin('generic', DATAVERSE_PLUGIN_NAME);
     $templateMgr =& TemplateManager::getManager();
@@ -42,7 +42,7 @@ class DataverseHandler extends Handler {
    * @param array $args
    * @param Request $request
    */
-  function termsOfUse($args = array(), &$request) {
+  function termsOfUse($args, &$request) {
     $journal =& $request->getJournal();
     $dataversePlugin =& PluginRegistry::getPlugin('generic', DATAVERSE_PLUGIN_NAME);
     $templateMgr =& TemplateManager::getManager();

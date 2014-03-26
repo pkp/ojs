@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/dataverse/DataverseFileDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataverseFileDAO
@@ -39,10 +39,10 @@ class DataverseFileDAO extends DAO {
 				VALUES
 				(?, ?, ?, ?)',
 			array(
-				$dvFile->getSuppFileId(),
-				$dvFile->getSubmissionId(),
+        (int)$dvFile->getSuppFileId(),
+        (int)$dvFile->getSubmissionId(),
         // Parent study and Dataverse Uri may not exist when record is inserted          
-        $dvFile->getStudyId() ? $dvFile->getStudyId() : 0,
+        $dvFile->getStudyId() ? (int)$dvFile->getStudyId() : 0,
         $dvFile->getContentSourceUri() ? $dvFile->getContentSourceUri() : ''
 			)
 		);
@@ -65,11 +65,11 @@ class DataverseFileDAO extends DAO {
               content_source_uri = ?
               WHERE dvfile_id = ?',
             array(
-                $dvFile->getSuppFileId(),
-                $dvFile->getStudyId(),
-                $dvFile->getSubmissionId(),
+                (int)$dvFile->getSuppFileId(),
+                (int)$dvFile->getStudyId(),
+                (int)$dvFile->getSubmissionId(),
                 $dvFile->getContentSourceUri(),
-                $dvFile->getId()
+                (int)$dvFile->getId()
             )
     );
 		return $returner;
@@ -99,10 +99,10 @@ class DataverseFileDAO extends DAO {
 	 */
 	function deleteDataverseFileById($dvFileId, $submissionId = null) {
 		if (isset($submissionId)) {
-			$returner = $this->update('DELETE FROM dataverse_files WHERE dvfile_id = ? AND submission_id = ?', array($dvFileId, $submissionId));
+      $returner = $this->update('DELETE FROM dataverse_files WHERE dvfile_id = ? AND submission_id = ?', array((int)$dvFileId, (int)$submissionId));
 			return $returner;
 		}
-		return $this->update('DELETE FROM dataverse_files WHERE dvfile_id = ?', $dvFileId);
+    return $this->update('DELETE FROM dataverse_files WHERE dvfile_id = ?', (int)$dvFileId);
 	}
   
 	/**
@@ -124,8 +124,8 @@ class DataverseFileDAO extends DAO {
    * @return DataverseFile
    */
   function &getDataverseFileBySuppFileId($suppFileId, $submissionId = null) {
-		$params = array($suppFileId);
-		if ($submissionId) $params[] = $submissionId;
+    $params = array((int)$suppFileId);
+    if ($submissionId) $params[] = (int)$submissionId;
 
     $result =& $this->retrieve(
 			'SELECT * FROM dataverse_files WHERE supp_id = ?' . ($submissionId?' AND submission_id = ?':''),
@@ -219,7 +219,7 @@ class DataverseFileDAO extends DAO {
 			'supp_id', 'locale', 'setting_name'
 		);
 		$updateArray = array(
-			'supp_id' => $suppFileId,
+      'supp_id' => (int)$suppFileId,
 			'locale' => '',
 			'setting_name' => 'dataverseDeposit',
 			'setting_type' => 'bool',
@@ -233,7 +233,7 @@ class DataverseFileDAO extends DAO {
 			'supp_id', 'locale', 'setting_name'
 		);
 		$updateArray = array(
-			'supp_id' => $suppFileId,
+      'supp_id' => (int)$suppFileId,
 			'locale' => '',
 			'setting_name' => 'dataverseContentSourceUri',
 			'setting_type' => 'string',

@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/dataverse/dataversePlugin.inc.php
  *
- * Copyright (c) 2003-2012 John Willinsky
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class dataversePlugin
@@ -235,7 +235,7 @@ class DataversePlugin extends GenericPlugin {
 	}
   
   /**
-	 * Callback invoked to set up public access to data files
+   * Hook callback: register pages for terms of use & data policy
 	 */
 	function setupPublicHandler($hookName, $params) {
 		$page =& $params[0];
@@ -416,7 +416,9 @@ class DataversePlugin extends GenericPlugin {
   }  
   
   /**
-   * Form validator: do not submit metadata, suppfile forms if associated study is locked
+   * Form validator: do not submit metadata, suppfile forms if submission has
+   * files in Dataverse & study is locked for processing
+   * @return boolean 
    */
   function formValidateStudyState($field, $form) {
     $articleId = isset($form->article) ? $form->article->getId() : $form->articleId;    
@@ -473,8 +475,9 @@ class DataversePlugin extends GenericPlugin {
   }
   
   /**
-   * Custom form validator, suppfile forms: if Dataverse deposit selected, 
-   * verify file has been uploaded
+   * Form validator: return false if Dataverse deposit selected but no suppfile
+   * has been uploaded
+   * @return boolean
    */
   function suppFileFormValidateDeposit($publishData, $form) {
     if ($publishData == 'dataverse') {
@@ -491,8 +494,9 @@ class DataversePlugin extends GenericPlugin {
   }
   
   /**
-   * Custom form validator, suppfile forms: if Dataverse deposit selected *and*
-   * external citatin provided, ask author to pick one.
+   * Form validator: return false if Dataverse deposit selected and and an 
+   * external citation has been provided (must choose one or the other)
+   * @return boolean
    */
   function suppFileFormValidateCitations($externalCitation, $form) {
     if ($externalCitation && $form->getData('publishData') == 'dataverse') {
@@ -1224,7 +1228,7 @@ class DataversePlugin extends GenericPlugin {
         ''); // on behalf of
 
     /** @fixme warn when we expect but don't receive a 200 response */
-    if ($depositReciept->sac_status != 200) return false;
+    if ($depositReciept->sac_status != DATAVERSE_PLUGIN_HTTP_STATUS_OK) return false;
           
     $depositReceiptXml = @new SimpleXMLElement($depositReciept->sac_xml);
     $releasedNodes = $depositReceiptXml->children('http://purl.org/net/sword/terms/state')->dataverseHasBeenReleased;
@@ -1338,7 +1342,7 @@ class DataversePlugin extends GenericPlugin {
             $this->getSetting($journal->getId(), 'password'),
             '' // on behalf of
             );
-    $fileDeleted = ($response->sac_status == 204);
+    $fileDeleted = ($response->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_NO_CONTENT);
 
     import('classes.notification.NotificationManager');
     $notificationManager = new NotificationManager();

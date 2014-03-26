@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/dataverse/DataverseStudyDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataverseStudyDAO
@@ -34,7 +34,7 @@ class DataverseStudyDAO extends DAO {
 	 */
 	function &getStudy($studyId) {
 		$result =& $this->retrieve(
-			'SELECT * FROM dataverse_studies WHERE study_id = ?', $studyId
+      'SELECT * FROM dataverse_studies WHERE study_id = ?', (int)$studyId
 		);
 
 		$returner = null;
@@ -52,7 +52,7 @@ class DataverseStudyDAO extends DAO {
 	 */
 	function &getStudyBySubmissionId($submissionId) {
 		$result =& $this->retrieve(
-			'SELECT * FROM dataverse_studies WHERE submission_id = ?', $submissionId
+      'SELECT * FROM dataverse_studies WHERE submission_id = ?', (int)$submissionId
 		);
 
 		$returner = null;
@@ -75,7 +75,7 @@ class DataverseStudyDAO extends DAO {
 				VALUES
 				(?, ?, ?, ?, ?, ?)',
 			array(
-				$study->getSubmissionId(),
+        (int)$study->getSubmissionId(),
 				$study->getEditUri(),
 				$study->getEditMediaUri(),
         $study->getStatementUri(),
@@ -107,7 +107,7 @@ class DataverseStudyDAO extends DAO {
         $study->getStatementUri(),
         $study->getPersistentUri(),
         $study->getDataCitation(),
-        $study->getId()
+        (int)$study->getId()
 			)
 		);
 		return $returner;
@@ -137,7 +137,7 @@ class DataverseStudyDAO extends DAO {
 	 */
 	function deleteStudyById($studyId) {
 		$this->update(
-			'DELETE FROM dataverse_studies WHERE study_id = ?', $studyId
+      'DELETE FROM dataverse_studies WHERE study_id = ?', (int)$studyId
 		);
 	}
   
