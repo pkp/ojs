@@ -2,7 +2,24 @@ language: php
 php:
   - 5.3
 before_install:
+before_install:
+  # Start Virtual Framebuffer to imitate a monitor.
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3 # give xvfb some time to start.
+  
+  # Donwload selenium server.
+  - wget http://selenium-release.storage.googleapis.com/2.40/selenium-server-standalone-2.40.0.jar
+  # Start it using the xvfb port, and reusing browser session.
+  - java -jar selenium-server-standalone-2.40.0.jar -port "99" -browserSessionReuse
+  - sleep 3 # give selenium server time to start.
+
+  # Install the test database.
   - mysql -u root -e 'create database ojs'
   - mysql -u root ojs < tests/functional/testserver.sql
   - mv config.TRAVIS.inc.php config.inc.php
+# Testing the functional testing environment only.
+script: php ./lib/pkp/tests/phpunit.php --verbose --bootstrap "./lib/pkp/tests/phpunit-bootstrap.php" "./tests/functional/TestTestingEnvironment.inc.php"
+
 script: ./lib/pkp/tools/runAllTests.sh -Cc
+
