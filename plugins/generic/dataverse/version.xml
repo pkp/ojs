@@ -15,5 +15,5 @@
 	<release>1.1.1.0</release>
 	<date>2014-03-18</date>
 	<lazy-load>1</lazy-load>
-	<class>dataversePlugin</class>
+	<class>DataversePlugin</class>
 </version>

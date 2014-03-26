@@ -46,13 +46,13 @@ class DataversePlugin extends GenericPlugin {
 	 * @return boolean True iff plugin initialized successfully; if false,
 	 * 	the plugin will not be registered.
 	 */
-	function register($category, $path) {
+  function register($category, $path) {
     $success = parent::register($category, $path);
     if ($success && $this->getEnabled()) {
       // Dataverse Study objects
       $this->import('classes.DataverseStudyDAO');
       $dataverseStudyDao = new DataverseStudyDAO($this->getName());
-			$returner =& DAORegistry::registerDAO('DataverseStudyDAO', $dataverseStudyDao);
+      $returner =& DAORegistry::registerDAO('DataverseStudyDAO', $dataverseStudyDao);
 
       // Files associated with Dataverse studies
       $this->import('classes.DataverseFileDAO');      
@@ -83,7 +83,7 @@ class DataversePlugin extends GenericPlugin {
       HookRegistry::register('suppfileform::execute', array(&$this, 'suppFileFormExecute'));
       
       // Notify ArticleDAO of article metadata field (external data citation) in suppfile form
-			HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'articleMetadataFormFieldNames'));
+      HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'articleMetadataFormFieldNames'));
       
       // Validate suppfile forms: warn if Dataverse deposit selected but no file uploaded
       HookRegistry::register('authorsubmitsuppfileform::Constructor', array(&$this, 'suppFileFormConstructor'));
@@ -111,7 +111,7 @@ class DataversePlugin extends GenericPlugin {
       HookRegistry::register('NotificationManager::getNotificationContents', array(&$this, 'getNotificationContents'));
     }
     return $success;
-	}
+  }
 
 	function getDisplayName() {
 		return __('plugins.generic.dataverse.displayName');
@@ -136,7 +136,7 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Display verbs for the management interface.
 	 */
-	function getManagementVerbs() {
+  function getManagementVerbs() {
 		$verbs = array();
     if ($this->getEnabled()) {
       $verbs[] = array('connect', __('plugins.generic.dataverse.settings.connect'));
@@ -144,7 +144,7 @@ class DataversePlugin extends GenericPlugin {
       $verbs[] = array('settings', __('plugins.generic.dataverse.settings'));
     }
 		return parent::getManagementVerbs($verbs);
-	}
+  }
 
 	/**
      * Execute a management verb on this plugin
@@ -217,9 +217,6 @@ class DataversePlugin extends GenericPlugin {
 
     }
 
-	/**
-	 * Extend the {url ...} smarty to support externalFeed plugin.
-	 */
 	function smartyPluginUrl($params, &$smarty) {
 		$path = array($this->getCategory(), $this->getName());
 		if (is_array($params['path'])) {
@@ -246,8 +243,8 @@ class DataversePlugin extends GenericPlugin {
 			$op =& $params[1];
 			if ($op) {
 				$publicPages = array(
-          'index',
-          'dataAvailabilityPolicy',
+					'index',
+					'dataAvailabilityPolicy',
 					'termsOfUse',
 				);
 
@@ -266,15 +263,15 @@ class DataversePlugin extends GenericPlugin {
 	 * Hook callback: add data citation to submissions, published articles, and
    * reading tools.
 	 */
-	function handleTemplateDisplay($hookName, $args) {
-		$templateMgr =& $args[0];
-		$template =& $args[1];
+  function handleTemplateDisplay($hookName, $args) {
+    $templateMgr =& $args[0];
+    $template =& $args[1];
 
-		switch ($template) {
+    switch ($template) {
       case 'author/submission.tpl':      
       case 'sectionEditor/submission.tpl':
         $templateMgr->register_outputfilter(array(&$this, 'submissionOutputFilter'));
-				break;      
+        break;      
       case 'rt/suppFiles.tpl':
       case 'rt/suppFilesView.tpl':        
       case 'rt/metadata.tpl':
@@ -293,9 +290,9 @@ class DataversePlugin extends GenericPlugin {
         $templateMgr->assign('dataCitation', $study->getDataCitation());
         $templateMgr->display($this->getTemplatePath() .'/'. $template);
         return true;
-		}
-		return false;
-	}
+    }
+    return false;
+  }
 
   /**
    * Output filter: add data citation to editor & author view of submission summary
