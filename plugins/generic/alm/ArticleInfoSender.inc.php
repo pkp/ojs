@@ -3,6 +3,7 @@
 /**
  * @file plugins/generic/alm/ArticleInfoSender.php
  *
+ * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -60,7 +61,6 @@ class ArticleInfoSender extends ScheduledTask {
 
 		$plugin = $this->_plugin;
 
-		$journals = array();
 		$journals = $this->_getJournals();
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
@@ -99,7 +99,10 @@ class ArticleInfoSender extends ScheduledTask {
 		$journals = array();
 		while($journal =& $journalFactory->next()) {
 			$journalId = $journal->getId();
-			if (!$plugin->getSetting($journalId, 'enabled')) continue;
+			if (!$plugin->getSetting($journalId, 'enabled')) {
+                unset($journal);
+                continue;
+            }
 
 			$doiPrefix = null;
 			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journalId);
@@ -114,6 +117,7 @@ class ArticleInfoSender extends ScheduledTask {
 				$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_WARNING,
 					__('plugins.generic.alm.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())));
 			}
+            unset($journal);
 		}
 
 		return $journals;

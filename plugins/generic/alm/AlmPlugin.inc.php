@@ -3,6 +3,7 @@
 /**
  * @file plugins/generic/alm/AlmPlugin.inc.php
  *
+ * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -16,12 +17,13 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 import('lib.pkp.classes.webservice.WebService');
 import('lib.pkp.classes.core.JSONManager');
 
+DEFINE('ALM_BASE_URL', 'http://pkp-alm.lib.sfu.ca/');
 DEFINE('ALM_API_URL', 'http://pkp-alm.lib.sfu.ca/api/v3/articles/');
 
 class AlmPlugin extends GenericPlugin {
 
-    /** @var $apiKey string */
-    var $_apiKey;
+	/** @var $apiKey string */
+	var $_apiKey;
 
 
 	/**
@@ -117,41 +119,41 @@ class AlmPlugin extends GenericPlugin {
 		}
 	}
 
-    /**
-     * Template manager hook callback.
-     * @param $hookName string
-     * @param $params array
-     */
+	/**
+	 * Template manager hook callback.
+	 * @param $hookName string
+	 * @param $params array
+	 */
 	function templateManagerCallback($hookName, $params) {
 		if ($this->getEnabled()) {
-			$templateMgr = &$params[0];
+			$templateMgr =& $params[0];
 			$template = $params[1];
-	        if ($template == 'article/article.tpl') {
-	            $additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
-	            $baseImportPath = Request::getBaseUrl() . DIRECTORY_SEPARATOR . $this->getPluginPath() . DIRECTORY_SEPARATOR;
+			if ($template == 'article/article.tpl') {
+				$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
+				$baseImportPath = Request::getBaseUrl() . DIRECTORY_SEPARATOR . $this->getPluginPath() . DIRECTORY_SEPARATOR;
 				$scriptImportString = '<script language="javascript" type="text/javascript" src="';
 
-	            $d3import = $scriptImportString . $baseImportPath .
-	            	'js' . DIRECTORY_SEPARATOR . 'd3.v3.min.js"></script>';
-	            $controllerImport = $scriptImportString . $baseImportPath .
-	            	'js' . DIRECTORY_SEPARATOR . 'alm.js"></script>';
+				$d3import = $scriptImportString . $baseImportPath .
+					'js/d3.v3.min.js"></script>';
+				$controllerImport = $scriptImportString . $baseImportPath .
+					'js/alm.js"></script>';
 
 				$templateMgr->assign('additionalHeadData', $additionalHeadData . "\n" . $d3import . "\n" . $controllerImport);
 
-				$templateMgr->addStyleSheet($baseImportPath . 'css' . DIRECTORY_SEPARATOR . 'bootstrap.tooltip.min.css');
-				$templateMgr->addStyleSheet($baseImportPath . 'css' . DIRECTORY_SEPARATOR . 'almviz.css');
+				$templateMgr->addStyleSheet($baseImportPath . 'css/bootstrap.tooltip.min.css');
+				$templateMgr->addStyleSheet($baseImportPath . 'css/almviz.css');
 			}
 		}
 	}
 
-    /**
-     * Template manager filter callback. Adds the article
-     * level metrics markup, if any stats.
-     * @param $output string The rendered page markup.
-     * @param $smarty Smarty
-     * @return boolean
-     */
-    function articleMoreInfoCallback($hookName, $params) {
+	/**
+	 * Template manager filter callback. Adds the article
+	 * level metrics markup, if any stats.
+	 * @param $output string The rendered page markup.
+	 * @param $smarty Smarty
+	 * @return boolean
+	 */
+	function articleMoreInfoCallback($hookName, $params) {
 		$smarty =& $params[1];
 		$output =& $params[2];
 
@@ -166,7 +168,7 @@ class AlmPlugin extends GenericPlugin {
 		$downloadJson = $this->_buildDownloadStatsJson($totalHtml, $totalPdf, $byMonth, $byYear);
 
 		$almStatsJson = $this->_getAlmStats($article);
-        $json = @json_decode($almStatsJson); // to be used to check for errors
+		$json = @json_decode($almStatsJson); // to be used to check for errors
 		if (!$almStatsJson || property_exists($json, 'error')) {
 			// The ALM stats answer comes with needed article info,
 			// so we build this information if no ALM stats response.
@@ -189,15 +191,15 @@ class AlmPlugin extends GenericPlugin {
 			$output .= $metricsHTML;
 		}
 
-	    return false;
+		return false;
 	}
 
-    /**
-     * @see PKPPlugin::getInstallSitePluginSettingsFile()
-     */
-    function getInstallSitePluginSettingsFile() {
-        return $this->getPluginPath() . '/settings.xml';
-    }
+	/**
+	 * @see PKPPlugin::getInstallSitePluginSettingsFile()
+	 */
+	function getInstallSitePluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
 
 	/**
 	* @see AcronPlugin::parseCronTab()
@@ -227,7 +229,7 @@ class AlmPlugin extends GenericPlugin {
 		}
 
 		$params['api_key'] = $this->_apiKey;
-		$webServiceRequest = new WebServiceRequest($url, $params, $method, '5');
+		$webServiceRequest = new WebServiceRequest($url, $params, $method);
 		// Can't strip slashes from the result, we have a JSON
 		// response with escaped characters.
 		$webServiceRequest->setCleanResult(false);
@@ -285,23 +287,23 @@ class AlmPlugin extends GenericPlugin {
 			$daysToStale = 29;
 		}
 
-        $cachedJson = false;
-        // if cache is stale, save the stale results and flush the cache
+		$cachedJson = false;
+		// if cache is stale, save the stale results and flush the cache
 		if (time() - $cache->getCacheTime() > 60 * 60 * 24 * $daysToStale) {
-            $cachedJson = $cache->getContents();
+			$cachedJson = $cache->getContents();
 			$cache->flush();
 		}
 
-        $resultJson = $cache->getContents();
+		$resultJson = $cache->getContents();
 
-        // In cases where server is down (we get a false response)
-        // it is better to show an old (successful) response than nothing
-        if (!$resultJson && $cachedJson) {
-            $resultJson = $cachedJson;
-            $cache->setEntireCache($cachedJson);
-        } elseif (!$resultJson) {
-            $cache->flush();
-        }
+		// In cases where server is down (we get a false response)
+		// it is better to show an old (successful) response than nothing
+		if (!$resultJson && $cachedJson) {
+			$resultJson = $cachedJson;
+			$cache->setEntireCache($cachedJson);
+		} elseif (!$resultJson) {
+			$cache->flush();
+		}
 
 		return $resultJson;
 	}
@@ -391,7 +393,8 @@ class AlmPlugin extends GenericPlugin {
 	/**
 	 * Get statistics by time dimension (month or year)
 	 * for JSON response.
-	 * @param $
+	 * @param array the download statistics in an array by dimension
+     * @param string month | year
 	 */
 	function _getStatsByTime($data, $dimension) {
 		switch ($dimension) {
@@ -408,11 +411,11 @@ class AlmPlugin extends GenericPlugin {
 		if (count($data)) {
 			$byTime = array();
 			foreach ($data as $date => $fileTypes) {
-                // strtotime sometimes fails on just a year (YYYY) (it treats it as a time (HH:mm))
+				// strtotime sometimes fails on just a year (YYYY) (it treats it as a time (HH:mm))
 				// and sometimes on YYYYMM
-                // So make sure $date has all 3 parts 
+				// So make sure $date has all 3 parts
 				$date = str_pad($date, 8, "01");
-                $year = date('Y', strtotime($date));
+				$year = date('Y', strtotime($date));
 				if ($isMonthDimension) {
 					$month = date('n', strtotime($date));
 				}
@@ -420,10 +423,10 @@ class AlmPlugin extends GenericPlugin {
 				$htmlViews = isset($fileTypes[STATISTICS_FILE_TYPE_HTML])? $fileTypes[STATISTICS_FILE_TYPE_HTML] : 0;
 
 				$partialStats = array(
-			   		'year' => $year,
-			   		'pdf' => $pdfViews,
-			   		'html' => $htmlViews,
-			   		'total' => $pdfViews + $htmlViews
+					'year' => $year,
+					'pdf' => $pdfViews,
+					'html' => $htmlViews,
+					'total' => $pdfViews + $htmlViews
 				);
 
 				if ($isMonthDimension) {
@@ -445,12 +448,12 @@ class AlmPlugin extends GenericPlugin {
 	 */
 	function _getAlmMetricsTemplate() {
 		return array(
-	    	'shares' => null,
-	    	'groups' => null,
-	    	'comments' => null,
-	    	'likes' => null,
-	    	'citations' => 0
-	    );
+			'shares' => null,
+			'groups' => null,
+			'comments' => null,
+			'likes' => null,
+			'citations' => 0
+		);
 	}
 
 	/**

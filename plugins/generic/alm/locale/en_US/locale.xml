@@ -4,6 +4,7 @@
 <!--
   * @file plugins/generic/alm/locale/en_US/locale.xml
   *
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,7 +14,7 @@
 <locale name="en_US" full_name="U.S. English">
 
     <message key="plugins.generic.alm.displayName">ALM Plugin</message>
-    <message key="plugins.generic.alm.description">Plugin to pull in Article Level Metrics</message>
+    <message key="plugins.generic.alm.description">Plugin to display in Article Level Metrics. To use the ALM service, you need to have use DOIs. This requirement may be relaxed in the future.</message>
     <message key="plugins.generic.alm.title">Article Metrics</message>
     <message key="plugins.generic.alm.loading">Metrics Loading ...</message>
 
@@ -25,7 +26,7 @@
     <message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[To be able to access the article level metrics from ALM server, you need an API key. You can create one by login in (using Mozilla Persona) on the <a href="http://pkp-alm.lib.sfu.ca/">PKP ALM page</a>.]]></message>
     <message key="plugins.generic.alm.settings.depositUrl">Article information deposit url</message>
     <message key="plugins.generic.alm.settings.depositUrl.description">URL provided by PKP for depositing articles.</message>
-    <message key="plugins.generic.alm.settings.ipAddress">This is your ip address: {$ip}</message>
+    <message key="plugins.generic.alm.settings.ipAddress">When contacting PKP to set up the ALM service, please provide this IP address: {$ip}</message>
 
     <message key="plugins.generic.alm.thisJournal">This journal</message>
     <message key="plugins.generic.alm.categories.html">HTML Views.</message>
