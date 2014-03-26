@@ -23,14 +23,14 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="100%" colspan=2>
-            {translate key="plugins.generic.alm.settings.apiKey.description"}
+			{translate key="plugins.generic.alm.settings.apiKey.description"}
 		</td>
 	</tr>
-    <tr>
-        <td colspan="2">
-            &nbsp;
-        </td>
-    </tr>
+	<tr>
+		<td colspan="2">
+			&nbsp;
+		</td>
+	</tr>
 	<tr valign="top">
 		<td width="40%" class="label">{fieldLabel required="true" key="plugins.generic.alm.settings.apiKey"}</td>
 		<td width="60%" class="value"><input type="text" name="apiKey" value="{$apiKey|escape}" id="apiKey" size="40" maxlength="40" class="textField" /></td>

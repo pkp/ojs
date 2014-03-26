@@ -394,7 +394,7 @@ class AlmPlugin extends GenericPlugin {
 	 * Get statistics by time dimension (month or year)
 	 * for JSON response.
 	 * @param array the download statistics in an array by dimension
-     * @param string month | year
+	 * @param string month | year
 	 */
 	function _getStatsByTime($data, $dimension) {
 		switch ($dimension) {
