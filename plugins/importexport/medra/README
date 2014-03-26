@@ -2,7 +2,7 @@
 === OJS mEDRA Export Plugin
 === Version: 1.0
 === Author: Florain Grandel <jerico.dev@gmail.com>
-=== Last update: 20. February 2012  
+=== Last update: 30. November 2013  
 ================================
 
 About
@@ -18,13 +18,14 @@ complete terms of this license.
 System Requirements
 -------------------
 Same requirements as the OJS 2.4 core.
+Additionaly CURL library.
 
 Note
 ---------
 In order to register DOIs with mEDRA from within OJS you will have to enter your username and password. 
 If you do not enter or have your own username and password you'll still be able to export into the 
 Onix for DOI (O4DOI) format, but you cannot register your DOIs from within OJS.
-Please note, that the passowrd will be saved as plain text, i.e. not encripted, due to mEDRA registration service requirements.
+Please note, that the password will be saved as plain text, i.e. not encrypted, due to mEDRA registration service requirements.
 
 Version History
 ---------------

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * plugins/generic/alm/scheduledTasks.xml
+  *
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Crossref Plugin Deposit
+  *
+  * This file describes the schedule task that will send deposits to Crossref in the background.
+  *
+  -->
+
+<!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
+
+<scheduled_tasks>
+	<task class="plugins.importexport.crossref.ArticleInfoSender">
+		<descr>Send DOI deposit to Crossref server.</descr>
+		<frequency minute="0"/>
+	</task>
+</scheduled_tasks>

@@ -20,6 +20,7 @@ define('DOI_EXPORT_FILETYPE_PDF', 'PDF');
 define('DOI_EXPORT_FILETYPE_HTML', 'HTML');
 define('DOI_EXPORT_FILETYPE_XML', 'XML');
 define('DOI_EXPORT_FILETYPE_PS', 'PostScript');
+define('DOI_EXPORT_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
 
 class DOIExportDom {
 
@@ -31,7 +32,7 @@ class DOIExportDom {
 
 	/**
 	 * Retrieve export error details.
-     * @return array
+	 * @return array
 	 */
 	function getErrors() {
 		return $this->_errors;
@@ -184,6 +185,14 @@ class DOIExportDom {
 	}
 
 	/**
+	 * Return the XML schema version.
+	 * @return string
+	 */
+	function getXmlSchemaVersion() {
+		return '';
+	}
+
+	/**
 	 * Return the XML schema location.
 	 * @return string
 	 */
@@ -206,7 +215,10 @@ class DOIExportDom {
 
 		// Add root-level attributes.
 		XMLCustomWriter::setAttribute($rootElement, 'xmlns', $this->getNamespace());
-		XMLCustomWriter::setAttribute($rootElement, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
+		XMLCustomWriter::setAttribute($rootElement, 'xmlns:xsi', DOI_EXPORT_XMLNS_XSI);
+		if ($this->getXMLSchemaVersion() != '') {
+			XMLCustomWriter::setAttribute($rootElement, 'version', $this->getXMLSchemaVersion());
+		}
 		XMLCustomWriter::setAttribute($rootElement, 'xsi:schemaLocation', $this->getXmlSchemaLocation());
 
 		return $rootElement;
