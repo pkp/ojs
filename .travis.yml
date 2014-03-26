@@ -5,4 +5,4 @@ before_install:
   - mysql -u root -e 'create database ojs'
   - mysql -u root ojs < tests/functional/testserver.sql
   - mv config.TRAVIS.inc.php config.inc.php
-script: ./lib/pkp/tools/runAllTests.sh -C
+script: ./lib/pkp/tools/runAllTests.sh -Cc
