@@ -178,6 +178,9 @@ class AcronPlugin extends GenericPlugin {
 
 		$taskFilesPath = array();
 
+		// Load all plugins so any plugin can register a crontab
+		PluginRegistry::loadAllPlugins();
+
 		// Let plugins register their scheduled tasks too.
 		HookRegistry::call('AcronPlugin::parseCronTab', array(&$taskFilesPath));
 
