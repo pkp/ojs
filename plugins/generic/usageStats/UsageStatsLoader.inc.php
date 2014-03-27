@@ -34,17 +34,12 @@ class UsageStatsLoader extends FileLoader {
 	/** @var $_journalsByPath array */
 	var $_journalsByPath;
 
-	/** @var $_baseSystemUrl string */
-	var $_baseSystemUrl;
-
-	/** @var $_baseSystemEscapedPath string */
-	var $_baseSystemEscapedPath;
-
 	/** @var $_autoStage string */
 	var $_autoStage;
 
 	/** @var $_externalLogFiles string */
 	var $_externalLogFiles;
+
 
 	/**
 	 * Constructor.
@@ -72,9 +67,6 @@ class UsageStatsLoader extends FileLoader {
 		$args[0] = $plugin->getFilesPath();
 
 		parent::FileLoader($args);
-
-		$this->_baseSystemUrl = Config::getVar('general', 'base_url');
-		$this->_baseSystemEscapedPath = str_replace('/', '\/', parse_url($this->_baseSystemUrl, PHP_URL_PATH));
 
 		// Load the metric type constant.
 		PluginRegistry::loadCategory('reports');
@@ -339,16 +331,6 @@ class UsageStatsLoader extends FileLoader {
 		// Check the passed url.
 		$assocId = $assocType = $journalId = false;
 		$expectedPageAndOp = $this->_getExpectedPageAndOp();
-
-		// Remove base system url from url, if any.
-		$url = str_replace($this->_baseSystemUrl, '', $url);
-
-		// If url don't have the entire protocol and host part,
-		// remove any possible base url path from url.
-		$url = preg_replace('/^' . $this->_baseSystemEscapedPath . '/', '', $url);
-
-		// Remove possible index.php page from url.
-		$url = str_replace('/index.php', '', $url);
 
 		// Check whether it's path info or not.
 		$pathInfo = parse_url($url, PHP_URL_PATH);
