@@ -88,7 +88,7 @@
 	<message key="plugins.generic.thesis.viewTitle">Resumo</message>
 	<message key="plugins.generic.thesis.noneExist">Nenhum resumo de tese publicado.</message>
 	<message key="plugins.generic.thesis.abstract">Resumo</message>
-	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
+	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.form.introduction">Ao concluir a submissão, o Orientador da tese é automaticamente notificado via e-mail e solicitado a confirmar a veracidade e qualidade da informação, através de um resposta via e-mail ao Editor de Resumos de Teses, que deve ser um Editor-Gestor Recebida a verificação, o resumo estará disponível online.</message>
 	<message key="plugins.generic.thesis.form.status">Situação</message>
 	<message key="plugins.generic.thesis.form.statusValid">Escolha uma Situação válida.</message>
