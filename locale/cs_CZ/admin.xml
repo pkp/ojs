@@ -46,7 +46,7 @@
 	<message key="admin.auth.enableCreateUsers">Umožnit vytvoření uživatele (pokud je podporováno tímto ověřovacím plug-inem). Uživatelé vytvoření v rámci OJS tímto zdrojem ověření budou, pokud již neexistují, automaticky přidáni do vzdáleného zdroje ověření. Navíc, pokud je tento zdroj výchozím zdrojem ověření, OJS účty vytvořené v průběhu registrace uživatele budou přidány do vzdáleného zdroje ověření.</message>
 	<message key="admin.systemVersion">Verze OJS</message>
 	<message key="admin.systemConfiguration">Konfigurace OJS</message>
-	<message key="admin.systemConfigurationDescription	<![CDATA[Nastavení konfigurace OJS z <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[Nastavení konfigurace OJS z <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Nastavení časopisu</message>
 	<message key="admin.journals.noneCreated">Žádné časopisy nebyly vytvořeny.</message>
 	<message key="admin.journals.confirmDelete">Jste si jistý, že chcete trvale odstranit tento časopis a veškerý jeho obsah?</message>
@@ -93,7 +93,8 @@ This tool will only copy files that aren't already inside the usageStats file lo
 
 Usage: {$scriptName} path/to/apache/log/file.log
 Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory 
-	</message>	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Chyba: nelze vytvořit dočasný adresář {$tmpDir}</message>
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Chyba: nelze vytvořit dočasný adresář {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Chyba: soubor {$filePath} neexistuje nebo není přístupný.</message>
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">Chyba: nelze kopírovat soubor z {$filePath} do {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Chyba: nelze smazat soubor {$tmpFilePath}</message>
