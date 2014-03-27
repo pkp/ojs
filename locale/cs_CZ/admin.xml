@@ -99,4 +99,6 @@ Usage (processing all files inside a directory): {$scriptName} path/to/apache/di
 	<message key="admin.copyAccessLogFileTool.error.copyingFile">Chyba: nelze kopírovat soubor z {$filePath} do {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Chyba: nelze smazat soubor {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Upozornění: soubor {$filePath} již uvnitř adresáře použití statistiky existuje.</message>
-	<message key="admin.copyAccessLogFileTool.success">Úspěch: {$filePath} do {$destinationPath}</message></locale>
+	<message key="admin.copyAccessLogFileTool.success">Úspěch: {$filePath} do {$destinationPath}</message>
+		
+</locale>
