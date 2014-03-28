@@ -19,11 +19,11 @@
 	<message key="admin.settings.usePaging">Pro web s více časopisy rozdělit seznam časopisů do několika stran.</message>
 	<message key="admin.settings.journalRedirectInstructions">Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis.</message>
 	<message key="admin.settings.noJournalRedirect">Nepřesměrovávat</message>
-		<message key="admin.settings.journalsList">Prvky časopisu</message>
-		<message key="admin.settings.journalsList.description">Vyberte informace o jednotlivých časopisech, které budou zobrazeny pro každý časopis na této stránce.</message>
-		<message key="admin.settings.journalsList.showThumbnail">Náhled časopisu</message>
-		<message key="admin.settings.journalsList.showTitle">Název časopisu</message>
-		<message key="admin.settings.journalsList.showDescription">Popis časopisu</message>
+	<message key="admin.settings.journalsList">Prvky časopisu</message>
+	<message key="admin.settings.journalsList.description">Vyberte informace o jednotlivých časopisech, které budou zobrazeny pro každý časopis na této stránce.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Náhled časopisu</message>
+	<message key="admin.settings.journalsList.showTitle">Název časopisu</message>
+	<message key="admin.settings.journalsList.showDescription">Popis časopisu</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Vaše instalace OJS umožňuje záznam ve více metrikách. Statistiky přístupů budou zobrazeny v píslušném kontextu.
 		Ovšem existují případy, kdy je potřeba použít pouze jednu metriku. Např. zobrazení seznamu nejčtenějších článků
@@ -100,5 +100,4 @@ Usage (processing all files inside a directory): {$scriptName} path/to/apache/di
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Chyba: nelze smazat soubor {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Upozornění: soubor {$filePath} již uvnitř adresáře použití statistiky existuje.</message>
 	<message key="admin.copyAccessLogFileTool.success">Úspěch: {$filePath} do {$destinationPath}</message>
-		
 </locale>
