@@ -165,7 +165,7 @@ class JournalStatisticsDAO extends DAO {
 			'SELECT r.role_id, COUNT(r.user_id) AS role_count FROM roles r LEFT JOIN users u ON (r.user_id = u.user_id) WHERE r.journal_id = ?' .
 			($dateStart !== null ? ' AND u.date_registered >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND u.date_registered <= ' . $this->datetimeToDB($dateEnd) : '') .
-			'GROUP BY r.role_id',
+			' GROUP BY r.role_id',
 			$journalId
 		);
 
