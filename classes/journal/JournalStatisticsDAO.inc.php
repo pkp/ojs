@@ -20,6 +20,34 @@ define('REPORT_TYPE_SECTION',	0x00004);
 
 class JournalStatisticsDAO extends DAO {
 	/**
+	 * Determine the first date the journal was active.
+	 * (This is an approximation but needs to run quickly.)
+	 * @param $journalId int Journal ID
+	 * @return int|null Date in seconds since the UNIX epoch, or null
+	 *  if it could not be determined
+	 */
+	function getFirstActivityDate($journalId) {
+		$result =& $this->retrieve(
+			'SELECT	LEAST(a.date_submitted, COALESCE(pa.date_published, NOW()), COALESCE(i.date_published, NOW())) AS first_date
+			FROM	articles a
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
+				LEFT JOIN articles a2 ON (a2.article_id < a.article_id AND a2.date_submitted IS NOT NULL)
+			WHERE	a2.article_id IS NULL AND
+				a.date_submitted IS NOT NULL AND
+				a.journal_id = ?',
+			(int) $journalId
+		);
+
+		$row = $result->GetRowAssoc(false);
+		$firstActivityDate = $this->datetimeFromDB($row['first_date']);
+		$result->Close();
+		if (!$firstActivityDate) return null;
+		return strtotime($firstActivityDate);
+
+	}
+
+	/**
 	 * Get statistics about articles in the system.
 	 * Returns a map of name => value pairs.
 	 * @param $journalId int The journal to fetch statistics for
