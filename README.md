@@ -31,7 +31,7 @@ Specific requirements : [PHPunit][php-unit]. Installing with pear for example :
 Setting up test environment :
 
     mysql -u root -e 'create database ojs_test'
-    mysql -u root ojs_test < tests/functional/testserver.sql
+    mysql -u root ojs < tests/functional/testserver.sql
     cp config.TRAVIS.inc.php config.inc.php
 
 Running the tests :
