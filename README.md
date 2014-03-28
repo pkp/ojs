@@ -32,7 +32,7 @@ Setting up test environment :
 
     mysql -u root -e 'create database ojs_test'
     mysql -u root ojs_test < tests/functional/testserver.sql
-    mv config.TRAVIS.inc.php config.inc.php
+    cp config.TRAVIS.inc.php config.inc.php
 
 Running the tests :
 
