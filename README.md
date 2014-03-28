@@ -36,7 +36,7 @@ Setting up test environment :
 
 Running the tests :
 
-    ./lib/pkp/tools/runAllTests.sh -C
+    ./lib/pkp/tools/runAllTests.sh -Cc
 
 ## License
 
