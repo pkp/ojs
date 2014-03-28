@@ -14,10 +14,24 @@
 <locale name="cs_CZ" full_name = "Czech">
 	<message key="admin.hostedJournals">Hostované časopisy</message>
 	<message key="admin.settings.journalRedirect">Přesměrování časopisu</message>
+	<message key="admin.settings.options">Volby</message>
+	<message key="admin.settings.useAlphalist">Pro web s více časopisy ukázat abecední seznam na domovské stránce dovolující rychlou abecední navigaci mezi časopisy.</message>
+	<message key="admin.settings.usePaging">Pro web s více časopisy rozdělit seznam časopisů do několika stran.</message>
 	<message key="admin.settings.journalRedirectInstructions">Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis.</message>
 	<message key="admin.settings.noJournalRedirect">Nepřesměrovávat</message>
+		<message key="admin.settings.journalsList">Prvky časopisu</message>
+		<message key="admin.settings.journalsList.description">Vyberte informace o jednotlivých časopisech, které budou zobrazeny pro každý časopis na této stránce.</message>
+		<message key="admin.settings.journalsList.showThumbnail">Náhled časopisu</message>
+		<message key="admin.settings.journalsList.showTitle">Název časopisu</message>
+		<message key="admin.settings.journalsList.showDescription">Popis časopisu</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Vaše instalace OJS umožňuje záznam ve více metrikách. Statistiky přístupů budou zobrazeny v píslušném kontextu.
+		Ovšem existují případy, kdy je potřeba použít pouze jednu metriku. Např. zobrazení seznamu nejčtenějších článků
+		nebo pořadí výsldků vyhledávání. Vyberte prosím jednu metriku jako výchozí.
+	</message>
 	<message key="admin.languages.primaryLocaleInstructions">Toto bude výchozí jazyk pro stránku a všechny hostované časopisy.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Vyberte všechny lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné.</message>
+	<message key="admin.locale.maybeIncomplete">Označené soubory lokalizace mohou být nekompletní.</message>
 	<message key="admin.languages.confirmUninstall">Jste si jistý, že chcete odinstalovat tuto lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně lokalizaci používají.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Vyberte další lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS.</message>
 	<message key="admin.languages.downloadLocales">Stáhnout lokalizace</message>
@@ -35,13 +49,14 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[Nastavení konfigurace OJS z <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Nastavení časopisu</message>
 	<message key="admin.journals.noneCreated">Žádné časopisy nebyly vytvořeny.</message>
-	<message key="admin.contexts.confirmDelete">Jste si jistý, že chcete trvale odstranit tento časopis a veškerý jeho obsah?</message>
-	<message key="admin.contexts.create">Vytvořit časopis</message>
+	<message key="admin.journals.confirmDelete">Jste si jistý, že chcete trvale odstranit tento časopis a veškerý jeho obsah?</message>
+	<message key="admin.journals.create">Vytvořit časopis</message>
+	<message key="admin.journals.createInstructions">Budete automaticky zaregistrován jako manažer tohoto časopisu. Poté, co vytvoříte nový časopis, vstupte do něj jako manažer a pokračujte v jeho nastavení a zápisu uživatelů.</message>
 	<message key="admin.journals.urlWillBe">URL časopisu bude {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">Je vyžadován název.</message>
-	<message key="admin.contexts.form.pathRequired">Je vyžadována cesta.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem.</message>
-	<message key="admin.contexts.form.pathExists">Zvolená cesta již je využívána jiným časopisem.</message>
+	<message key="admin.journals.form.titleRequired">Je vyžadován název.</message>
+	<message key="admin.journals.form.pathRequired">Je vyžadována cesta.</message>
+	<message key="admin.journals.form.pathAlphaNumeric">Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem.</message>
+	<message key="admin.journals.form.pathExists">Zvolená cesta již je využívána jiným časopisem.</message>
 	<message key="admin.journals.enableJournalInstructions">Povolte pro tento časopis, aby byl na této stránce veřejně zobrazen</message>
 	<message key="admin.journals.journalDescription">Popis časopisu</message>
 	<message key="admin.journal.pathImportInstructions">Existující cesta časopisu nebo cesta, která má být vytvořena (např. "ojs").</message>
@@ -57,5 +72,33 @@
 	<message key="admin.mergeUsers.allUsers">Všichni zaregistrovaní uživatelé</message>
 	<message key="admin.mergeUsers.confirm">Jste si jistý, že chcete sloučit účet s uživatelským jménem "{$oldUsername}" do účtu s uživatelským jménem "{$newUsername}"? Účet s uživatelským jménem "{$oldUsername}" poté přestane existovat. Tato akce je nevratná.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Žádní zapsaní uživatelé.</message>
-	<message key="admin.locale.maybeIncomplete">Označené soubory lokalizace mohou být nekompletní.</message>
+
+	<!-- Categories -->
+	<message key="admin.categories">Kategorie</message>
+	<message key="admin.categories.enable.description">Administrátor stránky může definovat kategorie zde pro usnadnění správy velkého množství časopisů. Manažeři časopisů potom mohou vybrat vhodné kategorie pro každý časopis a čtenáři mohou prohlížet časopisy podle jednotlivých kategorií.</message>
+	<message key="admin.categories.disableCategories">Neorganizovat časopis do kategorií.</message>
+	<message key="admin.categories.enableCategories">Povolit manažerům časopisu organizovat články do sekcí.</message>
+	<message key="admin.categories.editTitle">Editovat kategorii</message>
+	<message key="admin.categories.createTitle">Vytvořit kategorii</message>
+	<message key="admin.categories.create">Vytvořit novou kategorii</message>
+	<message key="admin.categories.noneCreated">Vytvořit kategorii</message>
+	<message key="admin.categories.confirmDelete">Opravdu si přejete vymazat tuto kategorii?</message>
+	<message key="admin.categories.name">Jméno</message>
+	<message key="admin.categories.nameRequired">Název kategorie je povinný.</message>
+
+	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
+to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
+
+This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory 
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Chyba: nelze vytvořit dočasný adresář {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Chyba: soubor {$filePath} neexistuje nebo není přístupný.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Chyba: nelze kopírovat soubor z {$filePath} do {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Chyba: nelze smazat soubor {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Upozornění: soubor {$filePath} již uvnitř adresáře použití statistiky existuje.</message>
+	<message key="admin.copyAccessLogFileTool.success">Úspěch: {$filePath} do {$destinationPath}</message>
+		
 </locale>
