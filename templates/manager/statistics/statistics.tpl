@@ -50,7 +50,17 @@
 	<tr valign="top">
 		<td width="25%" class="label"><h4>{translate key="common.year"}</h4></td>
 		<td width="75%" colspan="2" class="value">
-			<h4><a class="action" href="{url statisticsYear=$statisticsYear-1}">{translate key="navigation.previousPage"}</a>&nbsp;{$statisticsYear|escape}&nbsp;<a class="action" href="{url statisticsYear=$statisticsYear+1}">{translate key="navigation.nextPage"}</a></h4>
+			{strip}
+			<h4>
+				{if $statisticsYear > $firstYear}
+					<a class="action" href="{url statisticsYear=$statisticsYear-1}">{translate key="navigation.previousPage"}</a>&nbsp;
+				{/if}
+				{$statisticsYear|escape}
+				{if $statisticsYear < $lastYear}
+					&nbsp;<a class="action" href="{url statisticsYear=$statisticsYear+1}">{translate key="navigation.nextPage"}</a>
+				{/if}
+			</h4>
+			{/strip}
 		</td>
 	</tr>
 

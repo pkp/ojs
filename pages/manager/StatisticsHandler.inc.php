@@ -27,16 +27,30 @@ class StatisticsHandler extends ManagerHandler {
 	 * WARNING: This implementation should be kept roughly synchronized
 	 * with the reader's statistics view in the About pages.
 	 */
-	function statistics() {
+	function statistics($args, $request) {
 		$this->validate();
 		$this->setupTemplate(true);
 
-		$journal =& Request::getJournal();
-		$templateMgr =& TemplateManager::getManager();
+		$journal =& $request->getJournal();
+		$templateMgr =& TemplateManager::getManager($request);
 
-		$statisticsYear = Request::getUserVar('statisticsYear');
-		if (empty($statisticsYear)) $statisticsYear = date('Y');
+		// Get the statistics year
+		$statisticsYear = (int) $request->getUserVar('statisticsYear');
+
+		// Ensure that the requested statistics year is within a sane range
+		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
+		$lastYear = strftime('%Y');
+		$firstDate = $journalStatisticsDao->getFirstActivityDate($journal->getId());
+		if (!$firstDate) $firstYear = $lastYear;
+		else $firstYear = strftime('%Y', $firstDate);
+		if ($statisticsYear < $firstYear || $statisticsYear > $lastYear) {
+			// Request out of range; redirect to the current year's statistics
+			return $request->redirect(null, null, null, null, array('statisticsYear' => strftime('%Y')));
+		}
+
 		$templateMgr->assign('statisticsYear', $statisticsYear);
+		$templateMgr->assign('firstYear', $firstYear);
+		$templateMgr->assign('lastYear', $lastYear);
 
 		$sectionIds = $journal->getSetting('statisticsSectionIds');
 		if (!is_array($sectionIds)) $sectionIds = array();
@@ -50,7 +64,6 @@ class StatisticsHandler extends ManagerHandler {
 		$fromDate = mktime(0, 0, 0, 1, 1, $statisticsYear);
 		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
 
-		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
 		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getId(), null, $fromDate, $toDate);
 		$templateMgr->assign('articleStatistics', $articleStatistics);
 
