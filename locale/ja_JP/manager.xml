@@ -126,7 +126,7 @@
 	<message key="manager.setup.authorCopyrightNoticeAgree">投稿プロセスの一部として著者に著作権表示への同意を要求する。</message>
 	<message key="manager.setup.authorGuidelines">著者の手引き（執筆要項）</message>
 	<message key="manager.setup.competingInterests">利害の競合</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[生物学系の雑誌は、通常著者と査読者に対して、研究上の利害の競合があるか否かを宣言することを要求しています（see <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoSポリシー</a>を参照のこと）。]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[生物学系の雑誌は、通常著者と査読者に対して、研究上の利害の競合があるか否かを宣言することを要求しています（see <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoSポリシー</a>を参照のこと）。]]></message>
 	<message key="manager.setup.competingInterests.guidelines">利害の競合声明添付のガイドライン</message>
 	<message key="manager.setup.competingInterests.requireAuthors">著者に投稿物に利害の競合（CI）声明を添付することを求める。</message>
 	<message key="manager.setup.competingInterests.requireReviewers">査読者に彼らが行う各査読に利害の競合（CI）声明を添付することを求める。</message>

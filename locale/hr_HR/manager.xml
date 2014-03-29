@@ -165,7 +165,7 @@
 	<message key="manager.setup.authorGuidelines">Smjernice za autore</message>
 	<message key="manager.setup.authorGuidelinesDescription">Ovim tekstom autori se upoznaju sa standardima citiranja i opreme teksta koji se očekuju od priloga prijavljenih za časopis.  Od velike je pomoći ukoliko se prilože i konkretni primjeri označavanja referenci za knjige, časopise i druge izvore. Također, ovdje se mogu naznačiti i prikladni tipovi dopunskih datoteka (npr. baze podataka, istraživački instrumenti itd.) koje autori mogu priložiti uz svoje prijave.</message>
 	<message key="manager.setup.competingInterests">Sukob interesa</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Časopisi iz područja biomedicinskih znanosti obično traže od autora i recenzenata da obznane ukoliko imaju ikakvih sukoba interesa vezanih uz svoje istraživanje (vidi <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Časopisi iz područja biomedicinskih znanosti obično traže od autora i recenzenata da obznane ukoliko imaju ikakvih sukoba interesa vezanih uz svoje istraživanje (vidi <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Smjernice za izjavu o sukobu interesa</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Zahtijevaj od autora da prilikom prijave svog rukopisa ispune izjavu o sukobu interesa.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Zahtijevaj od recenzenata da prilikom izrade svake recenzije ispune izjavu o sukobu interesa.</message>

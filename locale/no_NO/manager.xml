@@ -547,7 +547,7 @@
 	<message key="manager.sections.hideTocAuthor">Utelat forfatternavn for seksjonselementer fra utgavens innholdsoversikt.</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Legg til en ny databaselenke</message>
 	<message key="manager.setup.competingInterests">Erklæring om interessekonflikter</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[I biomedisinske tidsskrift er det vanlig å kreve at både forfattere og fagkonsulenter avgir en erklæring om de befinner seg i roller eller posisjoner som kan føre til motstridende interesser eller interessekonflikter knyttet til forskningsarbeidet (se <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[I biomedisinske tidsskrift er det vanlig å kreve at både forfattere og fagkonsulenter avgir en erklæring om de befinner seg i roller eller posisjoner som kan føre til motstridende interesser eller interessekonflikter knyttet til forskningsarbeidet (se <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines"><![CDATA[Retningslinjer for innsending av en <I>Erklæring om interessekonflikter</I>.]]></message>
 	<message key="manager.setup.competingInterests.requireAuthors"><![CDATA[Krev at forfattere som sender inn manuskript samtidig sender inn en <I>Erklæring om interessekonflikter</I>.]]></message>
 	<message key="manager.setup.competingInterests.requireReviewers"><![CDATA[Krev at fagkonsulenter sender inn en <I>Erklæring om interessekonflikter</I> sammen med hver fagvurdering de sender inn.]]></message>
