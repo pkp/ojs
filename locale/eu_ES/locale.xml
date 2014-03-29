@@ -823,7 +823,7 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (PHP 5.x barne); orain PHP {$phpVersion}{$wrongPhpText} daukazu.</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 edo <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (PostgreSQL 8.x barne)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x edo >= 2.0.4x edo Microsoft IIS 6</li>
-	<li>Sistema eragilea: Goiko softwarea onartzen duen edozein SE, besteak beste: <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Sistema eragilea: Goiko softwarea onartzen duen edozein SE, besteak beste: <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Hala ere, PKPk ez dauka software-bertsio eta plataforma konbinazio posible guztiak probatzeko adina baliabide eta, beraz, ezin du bermatu denek ondo funtzionatuko dutenik.</p>

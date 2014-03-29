@@ -985,7 +985,7 @@
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (включая PHP 5.x); вы сейчас используете PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 или <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (включая PostgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x или >= 2.0.4x или Microsoft IIS 6</li>
-	<li>Операционная система: любая ОС, которая поддерживает перечисленное выше программное обеспечение, включая <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Операционная система: любая ОС, которая поддерживает перечисленное выше программное обеспечение, включая <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Поскольку у PKP нет ресурсов, чтобы тестировать все возможные комбинации версий программного обеспечения и платформ, то не предполагается никаких гарантий правильной работы или поддержки.</p>

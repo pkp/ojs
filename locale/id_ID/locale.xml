@@ -884,7 +884,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (termasuk PHP 5.x); saat ini Anda menggunakan PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 atau <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (termasuk PostgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x atau >= 2.0.4x atau Microsoft IIS 6</li>
-	<li>Sistem operasi: Semua sistem operasi support OJS, termasuk <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Sistem operasi: Semua sistem operasi support OJS, termasuk <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Upgrade OJS dapat dilakukan setelah instalasi dengan mengedit file <tt>config.inc.php</tt> di direktori OJS, atau menggunakan antarmuka Administrasi Situs.</p>

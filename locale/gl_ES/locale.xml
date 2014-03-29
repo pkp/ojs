@@ -700,7 +700,7 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (incluye PHP 5.x)</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x o >= 2.0.4x  o Microsoft IIS 6</li>
-	<li>Sistema operativo: Calquera SO que suporte o software mencionado, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Sistema operativo: Calquera SO que suporte o software mencionado, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Como PKP non conta cons recursos para probar cualquera combinación posibel de software e plataformas, no se ofrece garantía de correcto funcionamiento nen suporte técnico.</p>

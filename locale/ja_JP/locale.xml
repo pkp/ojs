@@ -566,7 +566,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> 4.2.x以降 （PHP 5.xを含む）</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> 4.1を含む）、または、<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> 7.1以降（PostgreSQL 8.xを含む）</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> 1.3.2x以降、または、2.0.4x以降、または、Microsoft IIS 6</li>
-	<li>OS: <a href="http://www.linux.org/" target="_blank">Linux</a>、<a href="http://www.bsd.org/" target="_blank">BSD</a>、<a href="http://www.sun.com/" target="_blank">Solaris</a>、<a href="http://www.apple.com/" target="_blank">Mac OS X</a>、<a href="http://www.microsoft.com/">Windows</a>など、上記のソフトウェアをサポートするすべてのOS。</li>
+	<li>OS: <a href="http://www.linux.org/" target="_blank">Linux</a>、<a href="http://www.bsd.org/" target="_blank">BSD</a>、<a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>、<a href="http://www.apple.com/" target="_blank">Mac OS X</a>、<a href="http://www.microsoft.com/">Windows</a>など、上記のソフトウェアをサポートするすべてのOS。</li>
 </ul>
 
 <p>PKPは、上記のソフトウェアバージョンとプラットフォームの可能なすべての組み合わせについてテストする資源を持っていませんので、正常な動作やサポートを保証するものではありません。</p>
