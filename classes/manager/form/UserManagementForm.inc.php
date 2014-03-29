@@ -158,6 +158,7 @@ class UserManagementForm extends Form {
 					'gender' => $user->getGender(),
 					'affiliation' => $user->getAffiliation(null), // Localized
 					'email' => $user->getEmail(),
+					'orcid' => $user->getData('orcid'),
 					'userUrl' => $user->getUrl(),
 					'phone' => $user->getPhone(),
 					'fax' => $user->getFax(),
@@ -203,6 +204,7 @@ class UserManagementForm extends Form {
 			'signature',
 			'affiliation',
 			'email',
+			'orcid',
 			'userUrl',
 			'phone',
 			'fax',
@@ -242,6 +244,11 @@ class UserManagementForm extends Form {
 		return $userDao->getLocaleFieldNames();
 	}
 
+	function getAdditionalFieldNames() {
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		return $userDao->getAdditionalFieldNames();
+	}
+
 	/**
 	 * Register a new user.
 	 */
@@ -266,6 +273,7 @@ class UserManagementForm extends Form {
 		$user->setAffiliation($this->getData('affiliation'), null); // Localized
 		$user->setSignature($this->getData('signature'), null); // Localized
 		$user->setEmail($this->getData('email'));
+		$user->setData('orcid', $this->getData('orcid'));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));

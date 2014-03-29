@@ -155,6 +155,11 @@
 		</tr>
 
 		<tr valign="top">
+			<td class="label">{fieldLabel name="orcid" key="user.orcid"}</td>
+			<td class="value"><input type="text" id="orcid" name="orcid" value="{$orcid|escape}" size="40" maxlength="255" class="textField" /><br />{translate key="user.orcid.description"}</td>
+		</tr>
+
+		<tr valign="top">
 			<td class="label">{fieldLabel name="userUrl" key="user.url"}</td>
 			<td class="value"><input type="text" id="userUrl" name="userUrl" value="{$userUrl|escape}" size="30" maxlength="255" class="textField" /></td>
 		</tr>

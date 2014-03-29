@@ -89,6 +89,7 @@ class CreateReviewerForm extends Form {
 			'initials',
 			'affiliation',
 			'email',
+			'orcid',
 			'userUrl',
 			'phone',
 			'fax',
@@ -135,6 +136,7 @@ class CreateReviewerForm extends Form {
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'), null); // Localized
 		$user->setEmail($this->getData('email'));
+		$user->setData('orcid', $this->getData('orcid'));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));
