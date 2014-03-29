@@ -816,7 +816,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[این مجله از یک سیستم طبقه بندی موضوعی موجود بر روی وب استفاده میکند.<br />
 عنوان سیستم طبقه بندی]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[چنانچه مایل باشید محتوای این مجله در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، ابتدا 
-<a href="http://www.oaister.org/dataproviders.html" target="_blank">
+<a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">
 اقدامات لازم برای تبدیل شدن به یک فراهم کننده داده
 </a> 
 را مطالعه کنید و سپس مجله خود را در سایت رسمی 
