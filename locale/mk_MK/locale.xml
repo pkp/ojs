@@ -783,7 +783,7 @@
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Превземи го овој PDF документ</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF датотеката која ја избравте треба да се вчита тука ако вашиот веб прелистувач има инсталирано PDF додаток за читач (на пример, понова верзија на <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Ако сакате повеќе информации за тоа како да принтате, зачувате, и работите со PDFs, Highwire Press обезбедува корисни <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">најчесто поставувани прашања за PDFs</a>.</p> <p>Алтернативно, можете да ја преземете PDF датотеката директно на вашиот компјутер, од каде што може да се отвори со помош на PDF читач. За да го преземете PDF, кликнете на линкот преземи погоре.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF датотеката која ја избравте треба да се вчита тука ако вашиот веб прелистувач има инсталирано PDF додаток за читач (на пример, понова верзија на <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Ако сакате повеќе информации за тоа како да принтате, зачувате, и работите со PDFs, Highwire Press обезбедува корисни <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">најчесто поставувани прашања за PDFs</a>.</p> <p>Алтернативно, можете да ја преземете PDF датотеката директно на вашиот компјутер, од каде што може да се отвори со помош на PDF читач. За да го преземете PDF, кликнете на линкот преземи погоре.</p>]]></message>
 
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->

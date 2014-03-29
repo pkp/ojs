@@ -715,7 +715,7 @@
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Descarrega aquest fitxer en PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>El fitxer PDF que heu seleccionat es carregarà aquí si el vostre navegador web té instal·lat un complement lector d'arxius PDF (per exemple, una versió recent d'<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>També podeu descarregar el fitxer en PDF directament al vostre ordinador, des d'on el podeu obrir amb un lector de PDF. Per descarregar-se el PDF, feu clic a l'enllaç «Descarregar».</p> <p>Si voleu més informació sobre com imprimir, desar i treballar amb fitxers PDF, Highwire Press proporciona <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Preguntes més freqüents sobre els fitxers PDF</a>.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>El fitxer PDF que heu seleccionat es carregarà aquí si el vostre navegador web té instal·lat un complement lector d'arxius PDF (per exemple, una versió recent d'<a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>També podeu descarregar el fitxer en PDF directament al vostre ordinador, des d'on el podeu obrir amb un lector de PDF. Per descarregar-se el PDF, feu clic a l'enllaç «Descarregar».</p> <p>Si voleu més informació sobre com imprimir, desar i treballar amb fitxers PDF, Highwire Press proporciona <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Preguntes més freqüents sobre els fitxers PDF</a>.</p>]]></message>
 
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->

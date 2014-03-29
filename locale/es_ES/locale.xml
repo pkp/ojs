@@ -715,7 +715,7 @@
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Descargar este archivo PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>El archivo PDF que ha seleccionado se debe cargar aquí si su navegador tiene instalado un conector de lectura de PDF (por ejemplo, una versión reciente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Asimismo, también puede descargar el archivo PDF directamente a su ordenador para abrirlo con un lector de PDF. Para descargar el PDF, haga clic en el enlace de descarga.</p> <p>Si desea obtener más información acerca de cómo imprimir, guardar y trabajar con archivos PDF, Highwire Press cuenta con una útil <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">lista de preguntas frecuentes sobre archivos PDF</a>.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>El archivo PDF que ha seleccionado se debe cargar aquí si su navegador tiene instalado un conector de lectura de PDF (por ejemplo, una versión reciente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Asimismo, también puede descargar el archivo PDF directamente a su ordenador para abrirlo con un lector de PDF. Para descargar el PDF, haga clic en el enlace de descarga.</p> <p>Si desea obtener más información acerca de cómo imprimir, guardar y trabajar con archivos PDF, Highwire Press cuenta con una útil <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">lista de preguntas frecuentes sobre archivos PDF</a>.</p>]]></message>
 
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->

@@ -764,7 +764,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Pobierz plik PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF powinien wyświetlić się w przeglądarce, jeżeli posiadasz zainstalowaną wtyczkę Adobe Reader (najnowsza wersja dostępna jest na stronie <a href="http://www.adobe.com/products/acrobat/readstep2.html">adobe.com</a>).</p> <p>Możesz również pobrać plik na dysk i otworzyć go lokalnie. Aby pobrać plik PDF, kliknij w łącze widoczne poniżej.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF powinien wyświetlić się w przeglądarce, jeżeli posiadasz zainstalowaną wtyczkę Adobe Reader (najnowsza wersja dostępna jest na stronie <a href="https://get.adobe.com/reader/">adobe.com</a>).</p> <p>Możesz również pobrać plik na dysk i otworzyć go lokalnie. Aby pobrać plik PDF, kliknij w łącze widoczne poniżej.</p>]]></message>
 
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
