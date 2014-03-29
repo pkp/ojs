@@ -297,7 +297,7 @@ Merk at OAI-grensesnittet kan slås av for dette nettstedet ved å redigere OJS'
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems støtter <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), som er et system for sikker og permanent arkivering av tidsskriftet. LOCKSS er open source programvare utviklet ved Stanford University Library. LOCKSS gjør det mulig for bibliotek å bevare valgte nettidsskrift ved automatisk søking i registrerte tidsskriftnettsted etter nylig publisert innhold, og hente det for arkivering. Hvert arkiv blir kontinuerlig validert mot andre biblioteks cacher, og hvis innholdet viser seg å være ødelagt eller tapt, vil de andre cachene eller tidsskriftet bli brukt til å gjenopprette det.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems støtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), som er et system for sikker og permanent arkivering av tidsskriftet. LOCKSS er open source programvare utviklet ved Stanford University Library. LOCKSS gjør det mulig for bibliotek å bevare valgte nettidsskrift ved automatisk søking i registrerte tidsskriftnettsted etter nylig publisert innhold, og hente det for arkivering. Hvert arkiv blir kontinuerlig validert mot andre biblioteks cacher, og hvis innholdet viser seg å være ødelagt eller tapt, vil de andre cachene eller tidsskriftet bli brukt til å gjenopprette det.
 <br /><br />
 Oppsetting av LOCKSS' støtte for Open Journal Systems trenger ikke skje før etter at publiseringen er godt i gang. Da gjøres det ved å følge disse to trinnene:]]></message>
 	
