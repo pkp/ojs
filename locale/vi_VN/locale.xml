@@ -680,7 +680,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (gồm cả PHP 5.x)</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 hoặc <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x hoặc Microsoft IIS 6</li>
-	<li>Hệ điều hành: Bất kỳ HĐH nào hỗ trợ các phần mềm trên đây, bao gồm <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Hệ điều hành: Bất kỳ HĐH nào hỗ trợ các phần mềm trên đây, bao gồm <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Vì PKP không có nguồn lực để thử tất cả các phức hợp các phiên bản phần mềm và hệ điều hành trên đây, PKP không cam kết hỗ trợ và không đảm bảo rằng phức hợp nào cũng hoạt động trơn tru.</p>
