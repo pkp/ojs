@@ -2,24 +2,43 @@ language: php
 php:
   - 5.3
 before_install:
-before_install:
-  # Start Virtual Framebuffer to imitate a monitor.
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3 # give xvfb some time to start.
+  # Start apache and configure a virtual host.
+  - sudo apt-get update > /dev/null
+  - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl php5-mysql php5-intl
+  - sudo sed -i -e "s,/var/www,$(pwd)/,g" /etc/apache2/sites-available/default 
+  - sudo sed -i -e "s,\${APACHE_LOG_DIR},$(pwd),g" /etc/apache2/sites-available/default  
+  - sudo /etc/init.d/apache2 restart
   
-  # Donwload selenium server.
-  - wget http://selenium-release.storage.googleapis.com/2.40/selenium-server-standalone-2.40.0.jar
-  # Start it using the xvfb port, and reusing browser session.
-  - java -jar selenium-server-standalone-2.40.0.jar -browserSessionReuse
-  - sleep 3 # give selenium server time to start.
+  # Install php unit selenium extension.
+  - pear channel-discover pear.phpunit.de
+  - pear install phpunit/PHPUnit_Selenium
+ 
+  # Start Virtual Framebuffer to imitate a monitor.
+  - sudo Xvfb :10 -ac > xvfb-output & 
+  - export DISPLAY=:10
+  - sleep 3 # Give xvfb time to start.
+
+  # Start selenium server.
+  - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
+  - nohup java -jar selenium-server-standalone-2.41.0.jar -browserSessionReuse -debug > selenium-output & 
+  - sleep 3 # Give selenium server time to start.
 
   # Install the test database.
   - mysql -u root -e 'create database ojs'
   - mysql -u root ojs < tests/functional/testserver.sql
+
+  # Files dependency.
   - mv config.TRAVIS.inc.php config.inc.php
-# Testing the functional testing environment only.
-script: php ./lib/pkp/tests/phpunit.php --verbose --bootstrap "./lib/pkp/tests/phpunit-bootstrap.php" "./tests/functional/TestTestingEnvironment.inc.php"
 
-script: ./lib/pkp/tools/runAllTests.sh -Cc
+  # Make sure permissions are ok.
+  - sudo chown -R travis:www-data .
 
+script: ./lib/pkp/tools/runAllTests.sh -Ccf
+
+after_script: 
+  # Print logs and outputs for debugging.
+  - cat access.log
+  - cat error.log
+  - cat xvfb-output
+  - cat selenium-output
+  - cat ./lib/pkp/tests/results/error.log

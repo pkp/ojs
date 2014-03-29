@@ -17,7 +17,7 @@
 
 import('lib.pkp.tests.WebTestCase');
 
-class FunctionalEditingBaseTestCase extends WebTestCase {
+class FunctionalTestingEnvironmentTest extends WebTestCase {
 
 	function testTestingEnvironment() {
 		$this->logIn('admin', 'ojsojs');
