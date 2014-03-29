@@ -617,7 +617,7 @@
 	<message key="manager.plugins.upgradeFailed">بروزرسانی شکست خورد</message>
 	<message key="manager.sections.wordCount">شمارش لغت</message>
 	<message key="manager.sections.wordCountInstructions">حداکثر تعداد کلمات برای این نوع مقاله صفر تا بدون سقف</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[در مجلات بیومدیکال معمولا نویسنده و کارشناس در صورت داشتن تضاد منافع خاصی از لحاظ پژوهش خود میبایست آنرا اعلام کنند برای اطلاعات بیشتر به <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">سیاست PLoS</a> مراجعه کنید.]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[در مجلات بیومدیکال معمولا نویسنده و کارشناس در صورت داشتن تضاد منافع خاصی از لحاظ پژوهش خود میبایست آنرا اعلام کنند برای اطلاعات بیشتر به <a href="http://www.plosbiology.org/static/competing.action" target="_new">سیاست PLoS</a> مراجعه کنید.]]></message>
 	<message key="manager.setup.contributorNoteDescription">این متن در محلی پائین تر از عنوان منابع حمایت و بالاتر از لیست نامها و آدرسهای سازمانهای حامی تحت عنوان اسپانسر مجله ظاهر میشود.</message>
 	<message key="manager.setup.history">تاریخچه مجله</message>
 	<message key="manager.setup.historyDescription">این متن در قسمت درباره مجله ظاهر میشود و از آن میتوان برای توصیف تغییرات در عنوان، شورای سردبیری و دیگر موارد تغییر مربوط به تاریخچه انتشاراتی مجله استفاده کرد.</message>
