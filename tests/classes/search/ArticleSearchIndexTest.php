@@ -54,6 +54,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 * @covers ArticleSearchIndex
 	 */
 	public function testUpdateFileIndexViaPluginHook() {
+		$this->markTestSkipped();
 		// Diverting to the search plugin hook.
 		HookRegistry::register('ArticleSearchIndex::articleFileChanged', array($this, 'callbackUpdateFileIndex'));
 
@@ -89,6 +90,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 * @covers ArticleSearchIndex
 	 */
 	public function testDeleteTextIndexViaPluginHook() {
+		$this->markTestSkipped();
 		// Diverting to the search plugin hook.
 		HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array($this, 'callbackDeleteTextIndex'));
 
@@ -169,6 +171,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 * @covers ArticleSearchIndex
 	 */
 	public function testIndexArticleMetadataViaPluginHook() {
+		$this->markTestSkipped();
 		// Diverting to the search plugin hook.
 		HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array($this, 'callbackIndexArticleMetadata'));
 
@@ -202,6 +205,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 * @covers ArticleSearchIndex
 	 */
 	public function testIndexSuppFileMetadataViaPluginHook() {
+		$this->markTestSkipped();
 		// Diverting to the search plugin hook.
 		HookRegistry::register('ArticleSearchIndex::suppFileMetadataChanged', array($this, 'callbackIndexSuppFileMetadata'));
 
@@ -236,6 +240,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 * @covers ArticleSearchIndex
 	 */
 	public function testIndexArticleFilesViaPluginHook() {
+		$this->markTestSkipped();
 		// Diverting to the search plugin hook.
 		HookRegistry::register('ArticleSearchIndex::articleFilesChanged', array($this, 'callbackIndexArticleFiles'));
 
