@@ -1116,12 +1116,8 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.subscriptionPolicies.expiryReminders">ßübþçrîptîóñ Éxpîrý Rèmîñðèrþ</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Æütómåtèð èmåîl rèmîñðèrþ (åvåîlåblè fór èðîtîñg bý Jóürñål Måñågèrþ îñ ÒJß'þ Prèpårèð Émåîlþ) çåñ bè þèñt tó þübþçrîbèrþ bóth bèfórè åñð åftèr å þübþçrîptîóñ håþ èxpîrèð.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Ñótè:</strong> Tó åçtîvåtè thèþè óptîóñþ, thè þîtè åðmîñîþtråtór müþt èñåblè thè <tt>þçhèðülèð_tåþkþ</tt> óptîóñ îñ thè ÒJß çóñfîgüråtîóñ fîlè. Æððîtîóñål þèrvèr çóñfîgüråtîóñ måý bè rèqüîrèð tó þüppórt thîþ füñçtîóñålîtý (whîçh måý ñót bè póþþîblè óñ åll þèrvèrþ), åþ îñðîçåtèð îñ thè ÒJß ðóçümèñtåtîóñ.]]></message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Ñótîfý þübþçrîbèrþ bý èmåîl</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">móñth(þ) bèfórè þübþçrîptîóñ èxpîrý.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Ñótîfý þübþçrîbèrþ bý èmåîl</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">wèèk(þ) bèfórè þübþçrîptîóñ èxpîrý.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Ñótîfý þübþçrîbèrþ bý èmåîl</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">móñth(þ) åftèr þübþçrîptîóñ èxpîrý.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Ñótîfý þübþçrîbèrþ bý èmåîl</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">wèèk(þ) åftèr þübþçrîptîóñ èxpîrý.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Plèåþè èñtèr å vålîð èmåîl.</message>

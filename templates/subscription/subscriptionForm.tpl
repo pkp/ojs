@@ -101,3 +101,26 @@ function chooseEndDate() {
 		<input type="text" name="referenceNumber" value="{$referenceNumber|escape}" id="referenceNumber" size="30" maxlength="40" class="textField" />
 	</td>
 </tr>
+{if $subscriptionId}
+	{if is_a($subscription,'InstitutionalSubscription')}
+		{assign var=subscriptionClass value="institutional"}
+	{else}
+		{assign var=subscriptionClass value="individual"}
+	{/if}
+	<tr valign="top">
+		<td class="label">{translate key="manager.subscriptions.form.dateRemindedBefore"}</td>
+		<td class="value">
+			{$dateRemindedBefore|date_format:$dateFormatShort|default:"&mdash;"}
+			&nbsp;
+			<a href="{url op="resetDateReminded" type="before" path=$subscriptionClass|to_array:$subscriptionId}" class="action">{translate key="common.reset"}</a>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="manager.subscriptions.form.dateRemindedAfter"}</td>
+		<td class="value">
+			{$dateRemindedAfter|date_format:$dateFormatShort|default:"&mdash;"}
+			&nbsp;
+			<a href="{url op="resetDateReminded" type="after" path=$subscriptionClass|to_array:$subscriptionId}" class="action">{translate key="common.reset"}</a>
+		</td>
+	</tr>
+{/if}

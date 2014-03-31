@@ -1267,6 +1267,10 @@
 		</field>
 		<field name="date_end" type="T">
 		</field>
+		<field name="date_reminded_before" type="T">
+		</field>
+		<field name="date_reminded_after" type="T">
+		</field>
 		<field name="status" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/>

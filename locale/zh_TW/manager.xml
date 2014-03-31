@@ -353,13 +353,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">一期期刊出版過後幾個月</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">請選擇一個有效的時間長度</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">下列的說明會發佈在「期刊介紹」之中的「稍後開放閱讀」下面</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">請使用所提供之核取框</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">以電子郵件通知訂閱者</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">訂閱期滿後幾個月</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">以電子郵件通知訂閱者</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">訂閱期滿後幾週</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">以電子郵件通知訂閱者</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">訂閱期滿前幾個月</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">以電子郵件通知訂閱者</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">訂閱期滿前幾週</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">訂閱期滿提醒函</message>

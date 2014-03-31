@@ -781,34 +781,32 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 	/**
 	 * Retrieve active institutional subscriptions matching a particular end date and journal ID.
-	 * @param $dateEnd date (YYYY-MM-DD)
+	 * @param $dateEnd date
 	 * @param $journalId int
+	 * @param $reminderType int SUBSCRIPTION_REMINDER_FIELD_..._EXPIRY
 	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
 	 */
-	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
-		$dateEnd = explode('-', $dateEnd);
-
+	function &getSubscriptionsToRemind($dateEnd, $journalId, $reminderType, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
-			'SELECT s.*, iss.*
-			FROM
-			subscriptions s,
-			subscription_types st,
-			institutional_subscriptions iss
-			WHERE s.type_id = st.type_id
-			AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . ' ' . 
-			'AND st.institutional = 1
-			AND s.subscription_id = iss.subscription_id AND
-			EXTRACT(YEAR FROM s.date_end) = ? AND
-			EXTRACT(MONTH FROM s.date_end) = ? AND
-			EXTRACT(DAY FROM s.date_end) = ? AND
-			s.journal_id = ?
-			ORDER BY iss.institution_name ASC, s.subscription_id',
-			array(
-				$dateEnd[0],
-				$dateEnd[1],
-				$dateEnd[2],
-				$journalId
-			), $rangeInfo
+			sprintf(
+				'SELECT	s.*, iss.*
+				FROM	subscriptions s,
+					subscription_types st,
+					institutional_subscriptions iss
+				WHERE	s.type_id = st.type_id
+					AND s.status = ?
+					AND st.institutional = 1
+					AND s.subscription_id = iss.subscription_id
+					AND s.date_end <= %s
+					AND s.' . ($reminderType==SUBSCRIPTION_REMINDER_FIELD_BEFORE_EXPIRY?'date_reminded_before':'date_reminded_after') . ' IS NULL
+					AND s.journal_id = ?
+				ORDER BY iss.institution_name ASC, s.subscription_id',
+				$this->datetimeToDB($dateEnd)
+			), array(
+				SUBSCRIPTION_STATUS_ACTIVE,
+				(int) $journalId
+			),
+			$rangeInfo
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');

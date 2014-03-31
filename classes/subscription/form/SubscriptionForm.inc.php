@@ -86,6 +86,8 @@ class SubscriptionForm extends Form {
 
 		if (isset($this->subscription)) {
 			$subscriptionId = $this->subscription->getId();
+			$templateMgr->assign('dateRemindedBefore', $this->subscription->getDateRemindedBefore());
+			$templateMgr->assign('dateRemindedAfter', $this->subscription->getDateRemindedAfter());
 		} else {
 			$subscriptionId = null;
 		}

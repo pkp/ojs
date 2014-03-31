@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
+define('SECONDS_PER_WEEK', 7 * 24 * 60 * 60);
+
 class SubscriptionExpiryReminder extends ScheduledTask {
 
 	/**
@@ -31,7 +33,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 		$journalName = $journal->getLocalizedTitle();
 		$journalId = $journal->getId();
-		$user =& $userDao->getUser($subscription->getUserId());
+		$user =& $userDao->getById($subscription->getUserId());
 		if (!isset($user)) return false;
 
 		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
@@ -77,147 +79,60 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$mail->send();
 	}
 
-	function sendJournalReminders ($journal, $curDate) {
+	function sendJournalReminders ($journal) {
 
 		// Only send reminders if subscriptions are enabled
 		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 
-			$curYear = $curDate['year'];
-			$curMonth = $curDate['month'];
-			$curDay = $curDate['day'];
-
-			// Check if expiry notification before months is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderBeforeMonths')) {
-
-				$beforeMonths = $journal->getSetting('numMonthsBeforeSubscriptionExpiryReminder');
-				$beforeYears = (int)floor($beforeMonths/12);
-				$beforeMonths = (int)fmod($beforeMonths,12);
-
-				$expiryYear = $curYear + $beforeYears + (int)floor(($curMonth+$beforeMonths)/12);
-				$expiryMonth = (int)fmod($curMonth+$beforeMonths,12);
-				$expiryDay = $curDay;
-
-				// Retrieve all subscriptions that match expiry date
-				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-
-				while (!$individualSubscriptions->eof()) {
-					$subscription =& $individualSubscriptions->next();
-					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
-				}
-
-				while (!$institutionalSubscriptions->eof()) {
-					$subscription =& $institutionalSubscriptions->next();
-					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
-				}
-			}
-
 			// Check if expiry notification before weeks is enabled
 			if ($journal->getSetting('enableSubscriptionExpiryReminderBeforeWeeks')) {
-
 				$beforeWeeks = $journal->getSetting('numWeeksBeforeSubscriptionExpiryReminder');
-				$beforeDays = $beforeWeeks * 7;
+				$expiryTime = time() + (SECONDS_PER_WEEK * $beforeWeeks);
 
-				$expiryMonth = $curMonth + (int)floor(($curDay+$beforeDays)/31);
-				$expiryYear = $curYear + (int)floor($expiryMonth/12);
-				$expiryDay = (int)fmod($curDay+$beforeDays,31);
-				$expiryMonth = (int)fmod($expiryMonth,12);				
 
 				// Retrieve all subscriptions that match expiry date
 				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsToRemind($expiryTime, $journal->getId(), SUBSCRIPTION_REMINDER_FIELD_BEFORE_EXPIRY); 
+				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsToRemind($expiryTime, $journal->getId(), SUBSCRIPTION_REMINDER_FIELD_BEFORE_EXPIRY); 
 
 				while (!$individualSubscriptions->eof()) {
 					$subscription =& $individualSubscriptions->next();
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
+					$individualSubscriptionDao->flagReminded($subscription->getId(), SUBSCRIPTION_REMINDER_FIELD_BEFORE_EXPIRY);
+					unset($subscription);
 				}
 
 				while (!$institutionalSubscriptions->eof()) {
 					$subscription =& $institutionalSubscriptions->next();
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
-				}
-			}
-
-			// Check if expiry notification after months is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderAfterMonths')) {
-
-				$afterMonths = $journal->getSetting('numMonthsAfterSubscriptionExpiryReminder');
-				$afterYears = (int)floor($afterMonths/12);
-				$afterMonths = (int)fmod($afterMonths,12);
-
-				if (($curMonth - $afterMonths) <= 0) {
-					$afterYears++;
-					$expiryMonth = 12 + ($curMonth - $afterMonths);
-				} else {
-					$expiryMonth = $curMonth - $afterMonths;
-				}
-
-				$expiryYear = $curYear - $afterYears;
-				$expiryDay = $curDay;
-
-				// Retrieve all subscriptions that match expiry date
-				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-
-				while (!$individualSubscriptions->eof()) {
-					$subscription =& $individualSubscriptions->next();
-					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY_LAST');
-				}
-
-				while (!$institutionalSubscriptions->eof()) {
-					$subscription =& $institutionalSubscriptions->next();
-					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY_LAST');
+					$institutionalSubscriptionDao->flagReminded($subscription->getId(), SUBSCRIPTION_REMINDER_FIELD_BEFORE_EXPIRY);
+					unset($subscription);
 				}
 			}
 
 			// Check if expiry notification after weeks is enabled
 			if ($journal->getSetting('enableSubscriptionExpiryReminderAfterWeeks')) {
-
 				$afterWeeks = $journal->getSetting('numWeeksAfterSubscriptionExpiryReminder');
-				$afterDays = $afterWeeks * 7;
-
-				if (($curDay - $afterDays) <= 0) {
-					$afterMonths = 1;
-					$expiryDay = 31 + ($curDay - $afterDays);
-				} else {
-					$afterMonths = 0;
-					$expiryDay = $curDay - $afterDays;
-				}
-
-				if (($curMonth - $afterMonths) == 0) {
-					$afterYears = 1;
-					$expiryMonth = 12;
-				} else {
-					$afterYears = 0;
-					$expiryMonth = $curMonth - $afterMonths;
-				}
-
-				$expiryYear = $curYear - $afterYears;
-
+				$expiryTime = time() - (SECONDS_PER_WEEK * $afterWeeks);
 				// Retrieve all subscriptions that match expiry date
 				$individualSubscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsToRemind($expiryTime, $journal->getId(), SUBSCRIPTION_REMINDER_FIELD_AFTER_EXPIRY); 
+				$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsToRemind($expiryTime, $journal->getId(), SUBSCRIPTION_REMINDER_FIELD_AFTER_EXPIRY); 
 
 				while (!$individualSubscriptions->eof()) {
 					$subscription =& $individualSubscriptions->next();
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY');
+					$individualSubscriptionDao->flagReminded($subscription->getId(), SUBSCRIPTION_REMINDER_FIELD_AFTER_EXPIRY);
+					unset($subscription);
 				}
 
 				while (!$institutionalSubscriptions->eof()) {
 					$subscription =& $institutionalSubscriptions->next();
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY');
+					$institutionalSubscriptionDao->flagReminded($subscription->getId(), SUBSCRIPTION_REMINDER_FIELD_AFTER_EXPIRY);
+					unset($subscription);
 				}
 			}
 		}
@@ -227,80 +142,12 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournals(true);
 
-		$todayDate = array(
-						'year' => date('Y'),
-						'month' => date('n'),
-						'day' => date('j')
-					);
-
 		while (!$journals->eof()) {
 			$journal =& $journals->next();
 
 			// Send reminders based on current date
-			$this->sendJournalReminders($journal, $todayDate);
+			$this->sendJournalReminders($journal);
 			unset($journal);
-		}
-
-		// If it is the first day of a month but previous month had only
-		// 30 days then simulate 31st day for expiry dates that end on
-		// that day.
-		$shortMonths = array(2,4,6,8,10,12);
-
-		if (($todayDate['day'] == 1) && in_array(($todayDate['month'] - 1), $shortMonths)) {
-
-			$curDate['day'] = 31;
-			$curDate['month'] = $todayDate['month'] - 1;
-
-			if ($curDate['month'] == 12) {
-				$curDate['year'] = $todayDate['year'] - 1;
-			} else {
-				$curDate['year'] = $todayDate['year'];
-			}
-
-			$journals =& $journalDao->getJournals(true);
-
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
-
-				// Send reminders for simulated 31st day of short month
-				$this->sendJournalReminders($journal, $curDate);
-				unset($journal);
-			}
-		}
-
-		// If it is the first day of March, simulate 29th and 30th days for February
-		// or just the 30th day in a leap year.
-		if (($todayDate['day'] == 1) && ($todayDate['month'] == 3)) {
-
-			$curDate['day'] = 30;
-			$curDate['month'] = 2;
-			$curDate['year'] = $todayDate['year'];
-
-			$journals =& $journalDao->getJournals(true);
-
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
-
-				// Send reminders for simulated 30th day of February
-				$this->sendJournalReminders($journal, $curDate);
-				unset($journal);
-			}
-
-			// Check if it's a leap year
-			if (date("L", mktime(0,0,0,0,0,$curDate['year'])) != '1') {
-
-				$curDate['day'] = 29;
-
-				$journals =& $journalDao->getJournals(true);
-
-				while (!$journals->eof()) {
-					$journal =& $journals->next();
-
-					// Send reminders for simulated 29th day of February
-					$this->sendJournalReminders($journal, $curDate);
-					unset($journal);
-				}
-			}
 		}
 	}
 }

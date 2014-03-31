@@ -428,13 +428,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">μήνας (-ες) μετά από την έκδοση ενός τεύχους.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Επιλέξτε μια έγκυρη χρονική διάρκεια.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Η ακόλουθη πολιτική Καθυστερημένης ανοικτής πρόσβασης θα καταχωρηθεί στην ενότητα "Πολιτικές" της σελίδας "Σχετικά με το περιοδικό".</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Χρησιμοποιήστε το κουτί επιλογής που παρέχεται.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Υπενθύμιση συνδρομητών μέσω email</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">μήνα (-ες) μετά από τη λήξη της συνδρομής.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Υπενθύμιση συνδρομητών μέσω email</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">εβδομάδα (-ες) μετά από τη λήξη της συνδρομής.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Υπενθύμιση συνδρομητών μέσω email</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">μήνα (-ες) πριν από τη λήξη της συνδρομής.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Υπενθύμιση συνδρομητών μέσω email</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">εβδομάδα (-ες) πριν από τη λήξη της συνδρομής.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Υπενθυμίσεις λήξης συνδρομής</message>

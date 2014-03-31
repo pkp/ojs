@@ -445,13 +445,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">månad(er)efter att ett nummer har publicerats.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Vänligen välj en giltig tidsperiod.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Följande Försenad Open Access-Policy kommer att synas under Policies under Om tidskriften.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Vänligen klicka i obligatorisk checkbox.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Meddela abonnenter via E-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">månad(er) kvar av abonnemanget.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Meddela abonnenter via E-post</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">vecka/veckor kvar av abonnemanget.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Meddela abonnenter via E-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">månad(er) innan abonnemanget upphör.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Meddela abonnenter via E-post</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">vecka/veckor innan abonnemanget upphör.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Påminnelse om upphörande av abonnemang</message>

@@ -17,10 +17,13 @@
 import('classes.subscription.Subscription');
 import('classes.subscription.SubscriptionType');
 
-define('SUBSCRIPTION_USER',				0x01);
+define('SUBSCRIPTION_USER',			0x01);
 define('SUBSCRIPTION_MEMBERSHIP',		0x02);
-define('SUBSCRIPTION_REFERENCE_NUMBER',	0x03);
+define('SUBSCRIPTION_REFERENCE_NUMBER',		0x03);
 define('SUBSCRIPTION_NOTES',			0x04);
+
+define('SUBSCRIPTION_REMINDER_FIELD_BEFORE_EXPIRY',	1);
+define('SUBSCRIPTION_REMINDER_FIELD_AFTER_EXPIRY',	2);
 
 class SubscriptionDAO extends DAO {
 
@@ -50,6 +53,22 @@ class SubscriptionDAO extends DAO {
 		unset($result);
 
 		return $returner;
+	}
+
+	/**
+	 * Flag a subscription reminder as having been sent.
+	 * @param $subscriptionId int
+	 * @param $reminderType int SUBSCRIPTION_REMINDER_FIELD_..._EXPIRY
+	 */
+	function flagReminded($subscriptionId, $reminderType) {
+		$this->update(
+			sprintf(
+				'UPDATE subscriptions SET %s=%s WHERE subscription_id=?',
+				$reminderType==SUBSCRIPTION_REMINDER_FIELD_BEFORE_EXPIRY?'date_reminded_before':'date_reminded_after',
+				$this->datetimeToDB(Core::getCurrentDate())
+			),
+			array((int) $subscriptionId)
+		);
 	}
 
 	/**
@@ -209,9 +228,10 @@ class SubscriptionDAO extends DAO {
 	 * Retrieve subscriptions matching a particular end date and journal ID.
 	 * @param $dateEnd date (YYYY-MM-DD)
 	 * @param $journalId int
+	 * @param $reminderType int SUBSCRIPTION_REMINDER_FIELD_..._EXPIRY
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
-	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
+	function &getSubscriptionsToRemind($dateEnd, $journalId, $reminderType, $rangeInfo = null) {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -347,6 +367,8 @@ class SubscriptionDAO extends DAO {
 		$subscription->setTypeId($row['type_id']);
 		$subscription->setDateStart($this->dateFromDB($row['date_start']));
 		$subscription->setDateEnd($this->dateFromDB($row['date_end']));
+		$subscription->setDateRemindedBefore($this->datetimeFromDB($row['date_reminded_before']));
+		$subscription->setDateRemindedAfter($this->datetimeFromDB($row['date_reminded_after']));
 		$subscription->setStatus($row['status']);
 		$subscription->setMembership($row['membership']);
 		$subscription->setReferenceNumber($row['reference_number']);
@@ -365,11 +387,14 @@ class SubscriptionDAO extends DAO {
 	function _insertSubscription(&$subscription) {
 		$returner = $this->update(
 			sprintf('INSERT INTO subscriptions
-				(journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes)
+				(journal_id, user_id, type_id, date_start, date_end, date_reminded_before, date_reminded_after, status, membership, reference_number, notes)
 				VALUES
-				(?, ?, ?, %s, %s, ?, ?, ?, ?)',
-				$this->dateToDB($subscription->getDateStart()), $this->datetimeToDB($subscription->getDateEnd())),
-			array(
+				(?, ?, ?, %s, %s, %s, %s, ?, ?, ?, ?)',
+				$this->dateToDB($subscription->getDateStart()),
+				$this->datetimeToDB($subscription->getDateEnd()),
+				$this->datetimeToDB($subscription->getDateRemindedBefore()),
+				$this->datetimeToDB($subscription->getDateRemindedAfter())
+			), array(
 				$subscription->getJournalId(),
 				$subscription->getUserId(),
 				$subscription->getTypeId(),
@@ -400,13 +425,18 @@ class SubscriptionDAO extends DAO {
 					type_id = ?,
 					date_start = %s,
 					date_end = %s,
+					date_reminded_before = %s,
+					date_reminded_after = %s,
 					status = ?,
 					membership = ?,
 					reference_number = ?,
 					notes = ?
 				WHERE subscription_id = ?',
-				$this->dateToDB($subscription->getDateStart()), $this->datetimeToDB($subscription->getDateEnd())),
-			array(
+				$this->dateToDB($subscription->getDateStart()),
+				$this->datetimeToDB($subscription->getDateEnd()),
+				$this->datetimeToDB($subscription->getDateRemindedBefore()),
+				$this->datetimeToDB($subscription->getDateRemindedAfter())
+			), array(
 				$subscription->getJournalId(),
 				$subscription->getUserId(),
 				$subscription->getTypeId(),
@@ -441,6 +471,11 @@ class SubscriptionDAO extends DAO {
 		if ($dateEnd < $time ) $dateEnd = $time;
 
 		$subscription->setDateEnd(mktime(23, 59, 59, date("m", $dateEnd)+$duration, date("d", $dateEnd), date("Y", $dateEnd)));
+
+		// Reset reminder dates
+		$subscription->setDateRemindedBefore(null);
+		$subscription->setDateRemindedAfter(null);
+
 		$this->updateSubscription($subscription);
 	}
 }

@@ -524,18 +524,13 @@
 <message key="manager.subscriptionPolicies.delayedOpenAccessDescription2"> bulan setelah sebuah terbitan diterbitkan.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid"> Pilih panjang durasi yang valid.</message> 
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"> Kebijakan delayed open access berikut ini akan dikirimkan di Tentang Kami di bawah Kebijakan.</message> 
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"> Gunakan checkbox yang tersedia.</message>	
 <message key="manager.subscriptionPolicies.expiry"> Masa Berakhirnya Langganan</message> 
 	<message key="manager.subscriptionPolicies.expiryDescription"> Saat berakhirnya langganan, pembaca ditolak aksesnya ke semua isi langganan atau mungkin bisa mengakses ke isi langganan yang diterbitkan sebelum tanggal kadaluwarsa.</message> 
 	<message key="manager.subscriptionPolicies.expiryFull"> Masa berakhir penuh</message> 
 	<message key="manager.subscriptionPolicies.expiryFullDescription"> Pembaca ditolak aksesnya ke isi langganan saat masa berakhir langganan.</message>	<message key="manager.subscriptionPolicies.expiryPartial"> Masa berakhir sebagian</message> 
 	<message key="manager.subscriptionPolicies.expiryPartialDescription"> Pembaca ditolak aksesnya ke isi langganan yang diterbitkan baru-baru ini, tetapi masih bisa mengakses ke isi langganan yang diterbitkan sebelum tanggal kadaluwarsa.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1"> Memberitahu pelanggan melalui email</message> 
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2"> bulan setelah masa berakhir langganan.</message> 
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1"> Beritahu pelanggan melalui email</message> 
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2"> minggu setelah masa berakhir langganan.</message> 
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Beritahu pelanggan melalui email</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">bulan sebelum masa berakhir langganan.</message> 
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Beritahu pelanggan melalui email</message> 
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">minggu sebelum masa berakhir langganan.</message> 
 	<message key="manager.subscriptionPolicies.expiryReminders">Pengingat masa berakhir langganan</message> 

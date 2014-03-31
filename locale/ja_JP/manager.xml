@@ -409,13 +409,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ヵ月からオープンアクセスで利用できるようにする。</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">正式なエンバーゴ期間を選択してください。</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">次の文が、エンバーゴ付きオープンアクセス雑誌の「この雑誌について」ページに表示されます。</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">チェックボックスをチェックしてください。</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">購読期間満了</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">ヶ月後に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">購読期間満了</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">週間後に購読者にメールで通知する。</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">購読期間満了</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">ヶ月前に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">購読期間満了</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">週間前に購読者にメールで通知する。</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">購読期間満了通知</message>

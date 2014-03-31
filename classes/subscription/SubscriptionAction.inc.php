@@ -384,6 +384,33 @@ class SubscriptionAction {
 	}
 
 	/**
+	 * Reset a subscription's reminded date.
+	 */
+	function resetDateReminded($args, $institutional = false) {
+		$journal =& Request::getJournal();
+		$subscriptionId = (int) array_shift($args);
+
+		if ($institutional) {
+			$subscriptionDao =& DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		} else {
+			$subscriptionDao =& DAORegistry::getDAO('IndividualSubscriptionDAO');
+		}
+
+		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) {
+			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
+			switch (Request::getUserVar('type')) {
+				case 'before':
+					$subscription->setDateRemindedBefore(null);
+					break;
+				case 'after':
+					$subscription->setDateRemindedAfter(null);
+					break;
+			}
+			$subscriptionDao->updateSubscription($subscription);
+		}
+	}
+
+	/**
 	 * Display a list of subscription types for the current journal.
 	 */
 	function subscriptionTypes() {

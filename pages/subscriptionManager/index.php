@@ -26,6 +26,7 @@ switch ($op) {
 	case 'createSubscription':
 	case 'selectSubscriber':
 	case 'updateSubscription':
+	case 'resetDateReminded':
 	case 'subscriptionTypes':
 	case 'moveSubscriptionType':
 	case 'deleteSubscriptionType':

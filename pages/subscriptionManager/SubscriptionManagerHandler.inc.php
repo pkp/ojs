@@ -207,6 +207,32 @@ class SubscriptionManagerHandler extends Handler {
 	}
 
 	/**
+	 * Reset a subscription reminder date.
+	 */
+	function resetDateReminded($args, &$request) {
+		if (isset($args) && !empty($args)) {
+			if ($args[0] == 'individual') {
+				$institutional  = false;
+				$redirect = 'individual';
+			} else {
+				$institutional = true;
+				$redirect = 'institutional';
+			}
+		} else {
+			Request::redirect(null, 'subscriptionManager');
+		}
+
+		$this->validate();
+		$this->setupTemplate(true, $institutional);
+
+		array_shift($args);
+		$subscriptionId = (int) $args[0];
+		import('classes.subscription.SubscriptionAction');
+		SubscriptionAction::resetDateReminded($args, $institutional);
+
+		Request::redirect(null, null, 'editSubscription', array($redirect, $subscriptionId));
+	}
+	/**
 	 * Display a list of subscription types for the current journal.
 	 */
 	function subscriptionTypes() {

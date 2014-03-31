@@ -3,7 +3,7 @@
 /**
  * @defgroup subscription
  */
- 
+
 /**
  * @file @file classes/subscription/Subscription.inc.php
  *
@@ -12,18 +12,18 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Subscription
- * @ingroup subscription 
+ * @ingroup subscription
  * @see SubscriptionDAO
  *
  * @brief Basic class describing a subscription.
  */
 
-define('SUBSCRIPTION_STATUS_ACTIVE', 					0x01);
-define('SUBSCRIPTION_STATUS_NEEDS_INFORMATION', 		0x02);
-define('SUBSCRIPTION_STATUS_NEEDS_APPROVAL', 			0x03);
+define('SUBSCRIPTION_STATUS_ACTIVE', 			0x01);
+define('SUBSCRIPTION_STATUS_NEEDS_INFORMATION', 	0x02);
+define('SUBSCRIPTION_STATUS_NEEDS_APPROVAL', 		0x03);
 define('SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT', 	0x04);
 define('SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT',	0x05);
-define('SUBSCRIPTION_STATUS_OTHER', 					0x10);
+define('SUBSCRIPTION_STATUS_OTHER', 			0x10);
 
 define('SUBSCRIPTION_DATE_START',	0x01);
 define('SUBSCRIPTION_DATE_END',		0x02);
@@ -95,7 +95,7 @@ class Subscription extends DataObject {
 
 	/**
 	 * Get the user's full name of the subscription.
-	 * @return string 
+	 * @return string
 	 */
 	function getUserFullName() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -104,7 +104,7 @@ class Subscription extends DataObject {
 
 	/**
 	 * Get the user's email of the subscription.
-	 * @return string 
+	 * @return string
 	 */
 	function getUserEmail() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -182,7 +182,7 @@ class Subscription extends DataObject {
 
 	/**
 	 * Get subscription end date.
-	 * @return date (YYYY-MM-DD) 
+	 * @return date (YYYY-MM-DD)
 	 */
 	function getDateEnd() {
 		return $this->getData('dateEnd');
@@ -194,6 +194,38 @@ class Subscription extends DataObject {
 	 */
 	function setDateEnd($dateEnd) {
 		return $this->setData('dateEnd', $dateEnd);
+	}
+
+	/**
+	 * Get the "reminder last sent before expiry" date.
+	 * @return date (YYYY-MM-DD)
+	 */
+	function getDateRemindedBefore() {
+		return $this->getData('dateRemindedBefore');
+	}
+
+	/**
+	 * Set the "reminder last sent before expiry" date.
+	 * @param $dateRemindedBefore (YYYY-MM-DD)
+	 */
+	function setDateRemindedBefore($dateRemindedBefore) {
+		return $this->setData('dateRemindedBefore', $dateRemindedBefore);
+	}
+
+	/**
+	 * Get the "reminder last sent after expiry" date.
+	 * @return date (YYYY-MM-DD)
+	 */
+	function getDateRemindedAfter() {
+		return $this->getData('dateRemindedAfter');
+	}
+
+	/**
+	 * Set the "reminder last sent after expiry" date.
+	 * @param $dateRemindedAfter (YYYY-MM-DD)
+	 */
+	function setDateRemindedAfter($dateRemindedAfter) {
+		return $this->setData('dateRemindedAfter', $dateRemindedAfter);
 	}
 
 	/**

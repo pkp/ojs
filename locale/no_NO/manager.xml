@@ -348,13 +348,8 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">måned(er) etter en utgave er publisert.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Vennligst velg en gyldig varighet.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Følgende erklæring vil bli skrevet inn i 'Om' tidsskriftet under Utsatt Open Access.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Vennligst bruk avkrysningsboksen.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Send beskjed til abonnenter med e-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">måned(er) etter at abonnementet utløper.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Send beskjed til abonnenter med e-post</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">uke(r) etter at abonnementet utløper.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Send beskjed til abonnenter med e-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">måned(er) før abonnementet utløper.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Send beskjed til abonnenter med e-post</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">uke(r) før abonnementet utløper.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Varsel om abonnementsutløp</message>

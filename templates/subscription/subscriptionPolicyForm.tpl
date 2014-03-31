@@ -37,14 +37,8 @@
 			function toggleAllowSetDelayedOpenAccessDuration(form) {
 				form.delayedOpenAccessDuration.disabled = !form.delayedOpenAccessDuration.disabled;
 			}
-			function toggleAllowSetBeforeMonthsReminder(form) {
-				form.numMonthsBeforeSubscriptionExpiryReminder.disabled = !form.numMonthsBeforeSubscriptionExpiryReminder.disabled;
-			}
 			function toggleAllowSetBeforeWeeksReminder(form) {
 				form.numWeeksBeforeSubscriptionExpiryReminder.disabled = !form.numWeeksBeforeSubscriptionExpiryReminder.disabled;
-			}
-			function toggleAllowSetAfterMonthsReminder(form) {
-				form.numMonthsAfterSubscriptionExpiryReminder.disabled = !form.numMonthsAfterSubscriptionExpiryReminder.disabled;
 			}
 			function toggleAllowSetAfterWeeksReminder(form) {
 				form.numWeeksAfterSubscriptionExpiryReminder.disabled = !form.numWeeksAfterSubscriptionExpiryReminder.disabled;
@@ -143,28 +137,16 @@
 <h3>{translate key="manager.subscriptionPolicies.expiryReminders"}</h3>
 <p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
 <p>
-	<input type="checkbox" name="enableSubscriptionExpiryReminderBeforeMonths" id="enableSubscriptionExpiryReminderBeforeMonths" value="1" onclick="toggleAllowSetBeforeMonthsReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderBeforeMonths} checked="checked"{/if} />&nbsp;
-	{fieldLabel name="enableSubscriptionExpiryReminderBeforeMonths" key="manager.subscriptionPolicies.expiryReminderBeforeMonths1"}
-	<select name="numMonthsBeforeSubscriptionExpiryReminder" id="numMonthsBeforeSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderBeforeMonths || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validNumMonthsBeforeExpiry selected=$numMonthsBeforeSubscriptionExpiryReminder}</select>
-	{fieldLabel name="numMonthsBeforeSubscriptionExpiryReminder" key="manager.subscriptionPolicies.expiryReminderBeforeMonths2"}
-</p>
-<p>
 	<input type="checkbox" name="enableSubscriptionExpiryReminderBeforeWeeks" id="enableSubscriptionExpiryReminderBeforeWeeks" value="1" onclick="toggleAllowSetBeforeWeeksReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderBeforeWeeks} checked="checked"{/if} />&nbsp;
 	{fieldLabel name="enableSubscriptionExpiryReminderBeforeWeeks" key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1"}
-	<select name="numWeeksBeforeSubscriptionExpiryReminder" id="numWeeksBeforeSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderBeforeWeeks || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validNumWeeksBeforeExpiry selected=$numWeeksBeforeSubscriptionExpiryReminder}</select>
+	<select name="numWeeksBeforeSubscriptionExpiryReminder" id="numWeeksBeforeSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderBeforeWeeks || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validWeeks selected=$numWeeksBeforeSubscriptionExpiryReminder}</select>
 	{fieldLabel name="numWeeksBeforeSubscriptionExpiryReminder" key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2"}
 </p>
 <p>
 	<input type="checkbox" name="enableSubscriptionExpiryReminderAfterWeeks" id="enableSubscriptionExpiryReminderAfterWeeks" value="1" onclick="toggleAllowSetAfterWeeksReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderAfterWeeks} checked="checked"{/if} />&nbsp;
 	{fieldLabel name="enableSubscriptionExpiryReminderAfterWeeks" key="manager.subscriptionPolicies.expiryReminderAfterWeeks1"}
-	<select name="numWeeksAfterSubscriptionExpiryReminder" id="numWeeksAfterSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderAfterWeeks || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validNumWeeksAfterExpiry selected=$numWeeksAfterSubscriptionExpiryReminder}</select>
+	<select name="numWeeksAfterSubscriptionExpiryReminder" id="numWeeksAfterSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderAfterWeeks || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validWeeks selected=$numWeeksAfterSubscriptionExpiryReminder}</select>
 	{fieldLabel name="numWeeksAfterSubscriptionExpiryReminder" key="manager.subscriptionPolicies.expiryReminderAfterWeeks2"}
-</p>
-<p>
-	<input type="checkbox" name="enableSubscriptionExpiryReminderAfterMonths" id="enableSubscriptionExpiryReminderAfterMonths" value="1" onclick="toggleAllowSetAfterMonthsReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderAfterMonths} checked="checked"{/if} />&nbsp;
-	{fieldLabel name="enableSubscriptionExpiryReminderAfterMonths" key="manager.subscriptionPolicies.expiryReminderAfterMonths1"}
-	<select name="numMonthsAfterSubscriptionExpiryReminder" id="numMonthsAfterSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderAfterMonths || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validNumMonthsAfterExpiry selected=$numMonthsAfterSubscriptionExpiryReminder}</select>
-	{fieldLabel name="numMonthsAfterSubscriptionExpiryReminder" key="manager.subscriptionPolicies.expiryReminderAfterMonths2"}
 </p>
 
 {if !$scheduledTasksEnabled}

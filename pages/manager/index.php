@@ -144,6 +144,7 @@ switch ($op) {
 	case 'createSubscription':
 	case 'editSubscription':
 	case 'updateSubscription':
+	case 'resetDateReminded':
 		define('HANDLER_CLASS', 'SubscriptionHandler');
 		import('pages.manager.SubscriptionHandler');
 		break;
