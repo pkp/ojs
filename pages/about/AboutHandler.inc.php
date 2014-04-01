@@ -535,6 +535,7 @@ class AboutHandler extends Handler {
 	 * with the journal manager's statistics view.
 	 */
 	function statistics($args, $request) {
+		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 		$this->setupTemplate(true);
 

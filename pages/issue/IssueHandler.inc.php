@@ -86,7 +86,7 @@ class IssueHandler extends Handler {
 
 		$templateMgr =& TemplateManager::getManager();
 		$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
-		$templateMgr->assign('issueId', $issue->getBestIssueId());
+		if ($issue) $templateMgr->assign('issueId', $issue->getBestIssueId());
 
 		$templateMgr->assign('pageHierarchy', array(array($request->url(null, 'issue', 'archive'), 'archive.archives')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
@@ -494,7 +494,7 @@ class IssueHandler extends Handler {
 			$issueHeadingTitle = __('archive.issueUnavailable');
 		}
 
-		if ($styleFileName = $issue->getStyleFileName()) {
+		if ($issue && $styleFileName = $issue->getStyleFileName()) {
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$templateMgr->addStyleSheet(
