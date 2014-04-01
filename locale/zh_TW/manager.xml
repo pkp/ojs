@@ -191,7 +191,7 @@
 	<message key="manager.setup.lists">列表</message>
 	<message key="manager.setup.listsDescription">.輸入每頁顯示項目的最大數字（例如投稿數、使用者數或者編輯作業指派人數），以及顯示每個頁面的連結數目。</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[啟用LOCKSS，在加入LOCKSS的圖書館中儲存與散佈期刊的內容。<a href="{$lockssUrl}" target="_blank">Publisher Manifest</a>頁面。 A LOCKSS的認證資訊會顯示在「期刊典藏」的「期刊介紹」中：]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">其他版本的LOCKSS認證</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">其他版本的LOCKSS認證</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[列出6-10個會註冊並且快取這份期刊的圖書館。比方說，指派編輯或者編委成員工作的機構，以及＼或者已經加入LOCKSS的機構。見 <a href="http://www.lockss.org/community/" target="_blank">participating libraries</a>. 用預備好的邀請函寄給(i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a>或者 (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">外觀</message>
 	<message key="manager.setup.look.description">首頁標題、內容、期刊標題、尾標、瀏覽列、和樣式。</message>
