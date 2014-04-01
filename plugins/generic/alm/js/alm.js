@@ -172,7 +172,7 @@ function AlmViz(options) {
 
 		$countLabel.append("br");
 
-		if (source.name == 'pkpTimedViews') {
+		if (source.name == 'ojsViews') {
 			$countLabel.append("span")
 				.text(source.display_name);
 		} else {
