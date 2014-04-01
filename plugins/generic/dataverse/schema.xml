@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * plugins/generic/dataverse/schema.xml
+  *
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Dataverse plugin schema in XML.
+  *
+  -->
+
+<schema version="0.2">
+
+	<!--
+	 *
+	 * TABLE dataverse_studies
+	 *
+	 -->
+	<table name="dataverse_studies">
+		<field name="study_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="edit_uri" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="edit_media_uri" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="statement_uri" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+    <field name="persistent_uri" type="C2" size="255">
+      <NOTNULL/>
+    </field>
+    <field name="data_citation" type="X">
+      <NOTNULL/>
+    </field>
+		<descr>Dataverse studies</descr>
+		<index name="dataverse_studies_submission_id">
+			<col>submission_id</col>
+		</index>
+	</table>
+  
+	<table name="dataverse_files">
+		<field name="dvfile_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="supp_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="study_id" type="I8">
+			<NOTNULL/>
+      <DEFAULT value="0"/>
+		</field>
+    <field name="content_source_uri" type="C2" size="255">
+      <NOTNULL/>
+      <DEFAULT value=""/>      
+    </field>
+		<descr>Dataverse files</descr>
+		<index name="dataverse_files_supp_id">
+			<col>supp_id</col>
+		</index>
+		<index name="dataverse_files_submission_id">
+			<col>submission_id</col>
+		</index>
+		<index name="dataverse_files_study_id">
+			<col>study_id</col>
+		</index>
+	</table>  
+  
+</schema>
