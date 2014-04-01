@@ -258,7 +258,8 @@ class AlmPlugin extends GenericPlugin {
 		);
 
 		// Call the web service (URL defined at top of this file)
-		$resultJson =& $this->_callWebService(ALM_API_URL . 'info:doi/' . $article->getPubId('doi'), $searchParams);
+		$resultJson =& $this->_callWebService(ALM_API_URL . 'info:doi/10.13165/SD-13-12-2-06', $searchParams);
+		//$resultJson =& $this->_callWebService(ALM_API_URL . 'info:doi/' . $article->getPubId('doi'), $searchParams);
 		if (!$resultJson) $resultJson = false;
 
 		$cache->setEntireCache($resultJson);
@@ -488,9 +489,17 @@ class AlmPlugin extends GenericPlugin {
 	 * @return string JSON response
 	 */
 	function _buildRequiredArticleInfoJson($article) {
+		if ($article->getDatePublished()) {
+			$datePublished = $article->getDatePublished();
+		} else {
+			// Sometimes there is no article getDatePublished, so fallback on the issue's
+			$issueDao =& DAORegistry::getDAO('IssueDAO');  /* @var $issueDao IssueDAO */
+			$issue =& $issueDao->getIssueByArticleId($article->getId(), $article->getJournalId());
+			$datePublished = $issue->getDatePublished();
+		}
 		$response = array(
 			array(
-				'publication_date' => date('c', strtotime($article->getDatePublished())),
+				'publication_date' => date('c', strtotime($datePublished)),
 				'doi' => $article->getPubId('doi'),
 				'title' => $article->getLocalizedTitle(),
 				'sources' => array()
