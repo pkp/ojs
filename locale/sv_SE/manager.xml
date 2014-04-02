@@ -85,17 +85,6 @@
 	<message key="manager.people.roleEnrollment">{$roll} Lägg till</message>
 	<message key="manager.people.syncUserDescription">Synkroniserad inläggning innebär att samtliga användare inom en specifik tidskrift kan tilldelas samma roll/funktion. Den här funktionen möjliggör att en vald grupp av användare/funktioner (ex., Granskare) kan synkroniseras mellan olika tidskrifter.</message>
 	<message key="manager.plugins.description">På den här sidan kan tidskriftsansvariga konfigurera installerade plugins. Plugins är uppdelade i kategorier baserade på dess funktioner. Kategorierna listas nedan och intill varje kategori tillhörande plugins.</message>
-	<message key="manager.reviewFormElements">Komponenter</message>
-	<message key="manager.reviewForms">Granskningsformulär </message>
-	<message key="manager.reviewForms.completed">Avslutade</message>
-	<message key="manager.reviewForms.create">Skapa granskningsformulär</message>
-	<message key="manager.reviewForms.description">Beskrivning och instruktion</message>
-	<message key="manager.reviewForms.edit">Formulär</message>
-	<message key="manager.reviewForms.inReview">Under granskning</message>
-	<message key="manager.reviewForms.list.description">Granskningsformulären som skapas här kommer bli tillgängliga för Granskare att och ersätta standardformuläret som består av två text-rutor, den ena för både Författare och Redaktör och den andra för enbart Redaktör. Granskningsformulär kan utformas för en speciell tidskriftssektion och Redaktörer har möjlighet att välja vilket formulär som skall användas när Granskare allokeras.  I båda fall, har Redaktörer möjlighet att inkludera rapporten i korrespondensen med Författaren.</message>
-	<message key="manager.reviewForms.noneChosen">Ingen/Standard granskningsformulär</message>
-	<message key="manager.reviewForms.preview">Förhandsgranska</message>
-	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Kräver inte abstract</message>
 	<message key="manager.sections.assigned">Den här sektionens redaktörer</message>
 	<message key="manager.sections.create">Skapa sektion</message>
