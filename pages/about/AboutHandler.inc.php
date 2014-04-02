@@ -439,6 +439,7 @@ class AboutHandler extends Handler {
 	 * Display Journal Sponsorship page.
 	 */
 	function journalSponsorship() {
+		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 		$this->setupTemplate(true);
 
@@ -497,6 +498,7 @@ class AboutHandler extends Handler {
 	 * Display journal history.
 	 */
 	function history() {
+		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 		$this->setupTemplate(true);
 
