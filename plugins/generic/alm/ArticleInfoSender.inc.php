@@ -139,7 +139,7 @@ class ArticleInfoSender extends ScheduledTask {
 		foreach ($articles as $article) {
 			$doi = $article->getPubId('doi');
 			$publishedDate = date('Y-m-d', strtotime($article->getDatePublished()));
-			$title = $article->getLocalizedTitle();
+			$title = preg_replace('/s+/', ' ', $article->getLocalizedTitle());
 			if ($doi && $publishedDate && $title)
 			$payload .= "$doi $publishedDate $title\n";
 		}
