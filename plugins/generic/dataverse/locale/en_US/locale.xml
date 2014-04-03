@@ -170,4 +170,7 @@
     
  <!-- Field labels -->
  <message key="plugins.generic.dataverse.dataCitation">Data citation</message>
+
+ <!-- Citation "in press" info -->
+ <message key="plugins.generic.dataverse.citationAPA.inPress">(in press).</message>
 </locale>

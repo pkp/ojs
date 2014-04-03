@@ -56,7 +56,7 @@ class DataversePackager extends PackagerAtomTwoStep {
   
   /**
    * Function name disambiguator to distinguish parent::create() from creation
-   * methods in this clasa.
+   * methods in this class.
    */
   function createAtomEntry() {
     $this->create();
