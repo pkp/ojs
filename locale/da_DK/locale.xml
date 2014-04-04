@@ -887,8 +887,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	 *
 	-->
 	<!-- Default settings for payment items. -->
-	<message key="submission.reviewForm">Review formular</message>
-	<message key="submission.reviewFormResponse">Review formular respons</message>
 	<message key="reviewer.article.enterReviewForm">Klik på ikonet for at udfylde review formularen.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Udfyld de obligatoriske felter.</message>
 	<message key="common.pageHeader.altText">Sidehovede</message>

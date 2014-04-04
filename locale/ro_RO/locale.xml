@@ -38,9 +38,6 @@
 
 
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">Formular de Evaluare</message>
-	<message key="submission.reviewFormResponse">Formular de răspuns la evaluare</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Dă clic pe pictogramă pentru a completa formularul de evaluare.</message>	

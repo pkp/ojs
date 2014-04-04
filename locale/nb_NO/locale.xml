@@ -815,8 +815,6 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="submission.reviewForm">Vurderingsskjema</message>
-	<message key="submission.reviewFormResponse">Vurderingsskjema-respons</message>
 	<message key="reviewer.article.enterReviewForm">Klikk på ikonet for å fylle ut vurderingsskjemaet.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vær vennlig å fylle inn de påkrevde feltene.</message>
 	<message key="common.payment">Betaling</message>

@@ -57,7 +57,6 @@
 	<message key="plugins.generic.staticPages.editInstructions">Använd formuläret nedan för att lägga till eller redigera innehåll</message> 
 	<message key="plugins.generic.staticPages.content">Innehåll</message> 
 	<message key="reviewer.article.enter.ReviewForm">Klicka på ikonen för att komma till Granskningsformuläret</message> 
-	<message key="submission.reviewForm">Granskningsformulär</message> 
 	<message key="article.fontSize">Fontstorlek</message>
 	<message key="editor.article.ShowCoverPage">Skapa ett omslag för den här artikeln med följande element</message>
 

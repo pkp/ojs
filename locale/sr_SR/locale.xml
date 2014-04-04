@@ -755,8 +755,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="rt.admin.settings.addComment.unauthenticated">Anonimni komentari su dozvoljeni.</message>
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
-	<message key="submission.reviewForm">Recenzijski obrazac</message>
-	<message key="submission.reviewFormResponse">Odgovor na recenziju</message>
 	<message key="reviewer.article.enterReviewForm">Kliknite na ikonu kako biste ispunili recenzijski obrazac.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Molimo popunite obavezna polja.</message>
 	<message key="common.pageHeader.altText">Zaglavlje stranice</message>

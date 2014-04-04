@@ -37,9 +37,6 @@
 
 
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">അവലോകനാരൂപം</message>
-	<message key="submission.reviewFormResponse">അവലോകനാരൂപത്തിന്റെ പ്രതികരണം</message>
 
 
 	<message key="reviewer.article.enterReviewForm">അവലോകനാരൂപം പൂരിപ്പിക്കാന്‍ ഐകണില്‍ ക്ലിക്ക് ചെയ്യുക</message>	

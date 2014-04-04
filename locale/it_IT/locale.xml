@@ -903,8 +903,6 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="payment.membership.ends">Finisce</message>
 	<message key="payment.subscription.expires">Scade</message>
 	<message key="plugins.categories.implicitAuth">Plugin per l'autenticazione implicita</message>
-	<message key="submission.reviewForm">Modulo di revisione</message>
-	<message key="submission.reviewFormResponse">Risposta del modulo di revisione</message>
 	<message key="plugins.categories.implicitAuth.description">I plugins di autenticazione implicita possono autenticare gli utenti basandosi sulle intestazioni http.</message>
 	<message key="submission.layout.publicGalleyId">Identificativo pubblico</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Identificativo pubblico già esistente</message>

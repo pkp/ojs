@@ -893,8 +893,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="payment.type.purchaseArticle">Prijs van dit artikel</message>
 	<message key="submission.layout.publicGalleyId">Publieke proefdruk identiicatie</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publieke proefdruk identificatie bestaat al.</message>
-	<message key="submission.reviewForm">Reviewformulier</message>
-	<message key="submission.reviewFormResponse">Reactie reviewformulier</message>
 	<message key="reviewer.article.enterReviewForm">Klik op het ikoon om het reviewformulier in te vullen</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
 	<message key="common.pageHeader.altText">Paginakop</message>

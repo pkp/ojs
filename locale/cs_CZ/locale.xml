@@ -904,8 +904,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<!-- Default settings for payment items. -->
 	<message key="about.aboutThisPublishingSystem.altText">OJS ediční a vydavatelský proces</message>
 	<message key="help.searchReturnResults">Zpět k výsledkům vyhledávání</message>
-	<message key="submission.reviewForm">Formulář posudku</message>
-	<message key="submission.reviewFormResponse">Odpovědi na formulář posudku</message>
 	<message key="reviewer.article.enterReviewForm">Pro vyplnění formuláře posudku klikněte na ikonu.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vyplňte prosím požadované položky.</message>
 	<message key="common.pageHeader.altText">Záhlaví stránky</message>

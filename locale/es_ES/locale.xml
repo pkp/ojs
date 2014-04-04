@@ -799,8 +799,6 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<!-- Debug messages -->
 
 
-	<message key="submission.reviewForm">Formulario de revisión</message>
-	<message key="submission.reviewFormResponse">Respuesta al Formulario de Revisión</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Por favor llene los campos requeridos</message>
 	<message key="reviewer.article.enterReviewForm">Haga "click" en el ícono para llenar el formulario de revisión</message>
 	<message key="common.pageHeader.altText">Título de página</message>

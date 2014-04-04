@@ -728,8 +728,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="rt.admin.settings.addComment.unauthenticated">コメントをつけるには、ユーザ登録の必要がない。匿名によるコメントを許可する。</message>
 	<message key="rt.metadata.pkp.doi">DOI</message>
 	<message key="debug.notes.currencyListLoad">XMLから通貨リスト"{$filename}" をロードしました。</message>
-	<message key="submission.reviewForm">査読フォーム</message>
-	<message key="submission.reviewFormResponse">査読フォームレスポンス</message>
 	<message key="reviewer.article.enterReviewForm">アイコンをクリックして、査読フォームに記入してください。</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">必須フィールドに記入してください。</message>
 	<message key="common.pageHeader.altText">ページヘッダー</message>

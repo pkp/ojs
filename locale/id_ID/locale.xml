@@ -19,9 +19,6 @@
 
 	<!-- Journal Management -->
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">Form Review</message>
-	<message key="submission.reviewFormResponse">Respon Form Review</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Klik di ikon untuk mengisi form review.</message>	

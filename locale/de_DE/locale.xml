@@ -36,9 +36,6 @@
 	<message key="navigation.categories">Kategorien</message>
 	<message key="navigation.categories.browse">Durchblättern</message>
 
-	<!-- peer review -->
-	<message key="submission.reviewForm">Begutachtungsformular</message>
-	<message key="submission.reviewFormResponse">Antwort zum Begutachtungsformular</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Klicken Sie auf das Symbol, um das Begutachtungsformular auszufüllen.</message>

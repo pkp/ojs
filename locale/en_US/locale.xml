@@ -32,9 +32,6 @@
 	<message key="navigation.categories">Categories</message>
 	<message key="navigation.categories.browse">Browse</message>
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">Review Form</message>
-	<message key="submission.reviewFormResponse">Review Form Response</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Click on icon to fill in the review form.</message>

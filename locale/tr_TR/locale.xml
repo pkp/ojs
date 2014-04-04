@@ -37,9 +37,6 @@
 
 
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">Değerlendirme Formu</message>
-	<message key="submission.reviewFormResponse">Değerlendirme Formu Yanıtı</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Değerlendirme formunu doldurmak için simgeye tıklayınız:</message>	

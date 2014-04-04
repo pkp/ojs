@@ -898,8 +898,6 @@
 				<message key="debug.notes.currencyListLoad">Η λίστα νομισματικών μονάδων  "{$filename}" φορτώθηκε από XML</message>
 
 	<!-- Default settings for payment items. -->
-	<message key="submission.reviewForm">Φόρμα αξιολόγησης</message>
-	<message key="submission.reviewFormResponse">Απόκριση Φόρμας Αξιολόγησης</message>
 	<message key="reviewer.article.enterReviewForm">Πατήστε το εικονίδιο για να συμπληρώσετε την φόρμα αξιολόγησης</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Σας παρακαλούμε συμπληρώστε τα υποχρεωτικά πεδία.</message>
 	<message key="common.pageHeader.altText">Κεφαλίδα Σελίδας</message>

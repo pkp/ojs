@@ -805,8 +805,6 @@ A validación pode fallar en URLs de pescuda que precisan o envío de formulario
 	<!-- Debug messages -->
 
 
-	<message key="submission.reviewForm">Formulario de revisión</message>
-	<message key="submission.reviewFormResponse">Resposta ao Formulario de Revisión</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Por favor preenche os campos que se precisan</message>
 	<message key="reviewer.article.enterReviewForm">Fai "clic" no ícono para preencher o formulario de revisión</message>
 	<message key="common.pageHeader.altText">Título de páxina</message>

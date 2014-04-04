@@ -36,9 +36,6 @@
 
 
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">Ebaluazio-inprimakia</message>
-	<message key="submission.reviewFormResponse">Ebaluazio-inprimakiaren erantzuna</message>
 
 
 	<message key="reviewer.article.enterReviewForm">Egin klik ikono batean ebaluazio-inprimakia betetzeko.</message>	

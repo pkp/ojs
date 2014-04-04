@@ -960,8 +960,6 @@ Authors who publish with this journal agree to the following terms:
 <li><strong>Thêm một Công cụ đọc</strong><p>Tổng biên tập có thể thêm "Tìm các bài trích dẫn" vào các Công cụ đọc đi kèm với bài viết được xuất bản, giúp cho bạn đọc dùng tiêu đề của một bài viết được trích dẫn để tìm bài viết đó trong các cơ sở dữ liệu đã được lựa chọn trước</p></li>
 </li><strong>Đường dẫn gắn sẵn trong Danh mục Tài liệu trích dẫn</strong>BTV trình bày có thể thêm một đường dẫn vào các tài liệu được trích dẫn có thể tìm thấy trên mạng bằng cách sử dụng các hướng dẫn sau đây (có thể sửa được).</p></li>
 </ol>]]></message>
-	<message key="submission.reviewForm">Mẫu phiếu Phản biện</message>
-	<message key="submission.reviewFormResponse">Phản hồi Mẫu phiếu Phản biện</message>
 	<message key="reviewer.article.enterReviewForm">Nhập chuột vào biểu tượng để điền vào mẫu phiếu phản biện.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vui lòng điền vào các trường bắt buộc.</message>
 	<message key="common.pageHeader.altText">Măng-séc trang</message>

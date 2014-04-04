@@ -37,9 +37,6 @@
 
 
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">审稿单</message>
-	<message key="submission.reviewFormResponse">审稿单答复</message>
 
 
 	<message key="reviewer.article.enterReviewForm">点击图标以填写审查表。</message>	

@@ -639,8 +639,6 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="rt.admin.settings.addComment.unauthenticated">برای ارسال نظرات بضورت گمنام احتیاج به ثبت نام نیست</message>
 	<message key="rt.metadata.pkp.doi">شناسه دیژیتال شیئ</message>
 	<message key="debug.notes.currencyListLoad">لیست واحد پولهای لود شده از فایل ایکس ام ال &quot;{$filename}&quot;</message>
-	<message key="submission.reviewForm">فرم کارشناسی</message>
-	<message key="submission.reviewFormResponse">پاسخ فرم کارشناسی</message>
 	<message key="reviewer.article.enterReviewForm">لطفا بر روی  شکلک کلیک کنید تا به فرم کارشناسی بروید</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">لطفا فیلد های الزامی را پر کنید</message>
 	<message key="common.pageHeader.altText">هدر صفحه</message>
