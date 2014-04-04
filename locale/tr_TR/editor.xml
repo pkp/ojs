@@ -220,4 +220,5 @@
 	<message key="editor.issues.backToIssueGalleys">Sayı dizgilerine geri dön</message>
 	<message key="editor.issues.confirmDeleteGalley">Bu sayı dizgisini silmek istediğinizden emin misiniz?</message>
 	<message key="editor.article.remove">Kaldır</message>
+	<message key="editor.notifyUsers.allMailingList">Posta listesinde tüm e-postalar dahil ({$count} e-posta)</message>
 </locale>

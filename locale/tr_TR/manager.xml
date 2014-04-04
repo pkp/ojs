@@ -15,7 +15,7 @@
 	<message key="manager.emails.confirmResetAll">Bu dergide yer alan bütün e-posta şablonlarını varsayılan biçime döndürmek istediğinizden emin misiniz? Bu işlemi yaparsanız, özelleştirdiğiniz tüm şablonları kaybedeceksiniz!</message>
 	<message key="manager.files.note">Not: Dosya tarayıcı dergi ile ilişkilendirilmiş dosyalar ve dizinlerin doğrudan görülür ve yönetilebilir olmasını sağlayan, gelişmiş bir özelliktir.</message>
 	<message key="manager.groups">Yönetici Listesi</message>
-	<message key="manager.groups.publishEmails">Üye e-posta adresini yayınla</message>
+	<message key="manager.groups.publishEmails">Kullanıcı e-posta adresini yayınla</message>
 	<message key="manager.groups.context.editorialTeam">Başlıklar, "Hakkında" sayfasının "Kişiler" kısmı altında görüntülenir (Örneğin: Editör)</message>
 	<message key="manager.groups.context.editorialTeam.short">Editörler</message>
 	<message key="manager.groups.context.people">Başlık kendi kategorisi içinde "Kişiler" kategorisi altında görüntülenir (Örneğin: Yayın Kurulu)</message>
@@ -77,17 +77,17 @@
 	<message key="manager.payment.records">Kayıtlar</message>
 	<message key="manager.payments">Ödemeler</message>
 	<message key="manager.payment.userName">Ödeme Numarası</message>
-	<message key="manager.people.allEnrolledUsers">Bu Dergideki Kayıtlı Üyeler</message>
+	<message key="manager.people.allEnrolledUsers">Bu Dergideki Kayıtlı Kullanıcılar</message>
 	<message key="manager.people.allJournals">Tüm Dergiler</message>
-	<message key="manager.people.allSiteUsers">Bu Dergide Üye Yetkilendir</message>
-	<message key="manager.people.showNoRole">Rolü Olmayan Üyeleri Göster</message>
-	<message key="manager.people.allUsers">Tüm Aktif Üyeler</message>
-	<message key="manager.people.confirmRemove">Bu üyeyi bu dergiden çıkar. Bu işlem üyenin bu dergideki tüm görevlerini iptal edecektir.</message>
+	<message key="manager.people.allSiteUsers">Bu Dergide Kullanıcı Yetkilendir</message>
+	<message key="manager.people.showNoRole">Rolü Olmayan Kullanıcıları Göster</message>
+	<message key="manager.people.allUsers">Tüm Aktif Kullanıcılar</message>
+	<message key="manager.people.confirmRemove">Bu kullanıcıyı bu dergiden çıkar. Bu işlem kullanıcının bu dergideki tüm görevlerini iptal edecektir.</message>
 	<message key="manager.people.emailUsers.selectTemplate">Şablon seç</message>
-	<message key="manager.people.enrollExistingUser">TÜM KAYITLI ÜYELER</message>
+	<message key="manager.people.enrollExistingUser">TÜM KAYITLI KULLANICILAR</message>
 	<message key="manager.people.enrollSyncJournal">Dergi ile</message>
-	<message key="manager.people.mergeUsers.from.description">Başka bir üye hesabı ile birleştirmek için bir ya da  birden çok üye seç (Örneğin; iki kullanıcı hesabı olan kişiler için). Birincil olarak seçilen hesap silinecek ve üyenin gönderileri, görevleri, atamaları gibi tüm kayıtları ikinci seçilen hesaba aktarılacaktır.</message>
-	<message key="manager.people.mergeUsers.into.description">Önceki seçtiğiniz üyenin yazarlık, atama gibi görvlerinin bağlanacağı bir kullanıcı seçiniz.</message>
+	<message key="manager.people.mergeUsers.from.description">Başka bir kullanıcı hesabı ile birleştirmek için bir ya da  birden çok kullanıcı seç (Örneğin; iki kullanıcı hesabı olan kişiler için). Birincil olarak seçilen hesap silinecek ve kullanıcının gönderileri, görevleri, atamaları gibi tüm kayıtları ikinci seçilen hesaba aktarılacaktır.</message>
+	<message key="manager.people.mergeUsers.into.description">Önceki seçtiğiniz kullanıcının yazarlık, atama gibi görvlerinin bağlanacağı bir kullanıcı seçiniz.</message>
 	<message key="manager.people.roleEnrollment">{$role} Kayıt</message>
 	<message key="manager.people.syncUserDescription">Eşzamanlı kayıt belirli dergide belirli rol şeklinde kaydolmuş tüm kullanıcıları bu dergide kaydeder. Bu fonksiyon ortak kullanıcı gruplarını (Örneğin; Hakemler) dergiler arasında senkronize eder.</message>
 	<message key="manager.sections.assigned">Bu Bölümün Editörleri</message>
@@ -289,6 +289,7 @@
 	<message key="manager.setup.guidingSubmissions">Adım 3: Gönderi Rehberi</message>
 	<message key="manager.setup.homepageImage">Ana Sayfa Görseli</message>
 	<message key="manager.setup.homepageImageDescription">Sayfanın ortasına bir görsel veya grafik ekle.</message>
+	<message key="manager.setup.includeCreativeCommons">Açık erişim veya gecikmeli açık erişim sunan dergiler için, uygun zamanda yayımlanmış tüm çalışmalar için kâr amacı gütmeyen (Creative Commons) bir lisans içerir.</message>
 	<message key="manager.setup.information">Bilgi</message>
 	<message key="manager.setup.information.description">Kütüphaneciler, potansiyel yazarlar ve okuyucular için derginin kısa açıklamsı yan taraftaki "Bilgi" kısmında yer almaktadır.</message>
 	<message key="manager.setup.information.forAuthors">Yazarlar İçin</message>
@@ -299,7 +300,7 @@
 	<message key="manager.setup.institution">Kurum</message>
 	<message key="manager.setup.issnDescription"><![CDATA[ISSN (Uluslararası Standart Süreli Yayın Numarası) elektronik kısım dahil süreli yayınları tanımlayan sekiz haneli bir sayıdır. UNESCO tarafından desteklenen, merkezi Paris'te bulunan bu Uluslararası Merkez, Fransız Hükümeti tarafından koordine edilmektedir ve dünya çapında bir ağ tarafından yönetilmektedir. ISSN Numarası, <a href="http://www.issn.org" target="_new"> ISSN web sitesi</a>den elde edilebilir. ISSN numarası yayın sürecinin herhangi bir aşamasından alınabilir.]]></message>	
 	<message key="manager.setup.issuePerVolume">Her cilt başına sayı</message>
-	<message key="manager.setup.itemsDescription">Sayfa üstünde oluşan Yönlendirme çubuğuna başka maddeler eklenebilir (Giriş Sayfası, Hakkında, Üye, Üye Ana Sayfası, v.b.).</message>
+	<message key="manager.setup.itemsDescription">Sayfa üstünde oluşan Yönlendirme çubuğuna başka maddeler eklenebilir (Giriş Sayfası, Hakkında, Kullanıcı, Kullanıcı Ana Sayfası, v.b.).</message>
 	<message key="manager.setup.itemsPerPage">Sayfa başına madde</message>
 	<message key="manager.setup.journalAbbreviation">Dergi Kısaltması</message>
 	<message key="manager.setup.journalArchiving">Dergi Arşivi</message>
@@ -340,7 +341,7 @@
 	<message key="manager.setup.listsDescription">Sayfalarda öğeler (örneğin aboneler, kullanıcılar, düzenleme atamaları v.b.) gösterilirken bir kerede gösterilebilecek en fazla madde sayısını giriniz.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, dağıtmak ve <a href="{$lockssUrl}" target="_blank">Yayıncı Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS lisansı "Dergi Hakkında" sayfasında görünecektir:]]></message>
 	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">LOCKSS lisanslarının diğer versiyonları için bakınız</a>.]]></message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href="http://www.lockss.org/community/" target="_blank">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın.]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href="http://lockss.org/lockss/Libraries" target="_blank">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın.]]></message>
 	<message key="manager.setup.look">Görünüş</message>
 	<message key="manager.setup.look.description">Ana sayfa başlığı, içerik, dergi başlığı, altlık, yönlendirme çubuğu ve biçim sayfası.</message>
 	<message key="manager.setup.mailingAddressDescription">Derginin fiziksel konumu ve posta adresi.</message>
@@ -367,7 +368,7 @@
 	<message key="manager.setup.noUseProofreaders">Atanmış bir editör veya bölüm editörü gönderilerin dizgisini kontrol edebilir.</message>
 	<message key="manager.setup.numPageLinks">Sayfa bağlantıları</message>
 	<message key="manager.setup.onlineAccessManagement">Dergi İçeriğine Erişim</message>
-	<message key="manager.setup.onlineIssn">Çevrimiçi ISSN</message>
+	<message key="manager.setup.onlineIssn">eISSN</message>
 	<message key="manager.setup.openAccess">Dergi açık erişime izin verir.</message>
 	<message key="manager.setup.openAccessPolicy">Açık Erişim Politikası</message>
 	<message key="manager.setup.openAccessPolicyDescription">Derginin Açık Erişim Politikası konusunda açıklama giriniz. Bu açıklama Dergi Hakkında sayfasında Politikalar altında gösterilecektir.</message>
@@ -379,7 +380,7 @@
 	<message key="manager.setup.policies.description">Odak, hakem değerlendirmesi, bölümler, gizlilik, güvenlik ve erişim öğeler hakkında ekler.</message>
 	<message key="manager.setup.principalContact">Temel Bağlantı</message>
 	<message key="manager.setup.principalContactDescription">Bu pozisyon, birincil editörlük, yönetsel editörlük veya yönetici personel pozisyonu olarak değerlendirilebilir, derginin ana sayfasında Teknik Destek Bağlantısı ile beraber listelenir.</message>
-	<message key="manager.setup.printIssn">Basılı ISSN</message>
+	<message key="manager.setup.printIssn">ISSN</message>
 	<message key="manager.setup.privacyStatement">Gizlilik Beyanı</message>
 	<message key="manager.setup.privacyStatement2">Gizlilik beyanı</message>
 	<message key="manager.setup.privacyStatementDescription">Bu beyan "Dergi Hakkında" bölümünde yer alacak ve yazarlara başvuru için giriş yaptıklarında da gösterilecektir. Aşağıda önerilen gizlilik beyanı istenildiğinde değiştirilebilir.</message>
@@ -478,7 +479,7 @@
 	<message key="manager.setup.useProofreaders">Bir düzeltmen yayından önce dizgiyi yazarlarla birlikte kontrol etmek üzer atanır.</message>
 	<message key="manager.setup.userRegistration">Üye Kayıdı</message>
 	<message key="manager.setup.useTextTitle">Başlık metni</message>
-	<message key="manager.setup.volumePerYear">Yol başına cilt sayısı</message>
+	<message key="manager.setup.volumePerYear">Yıl başına cilt sayısı</message>
 	<message key="manager.statistics.reports">Rapor Oluşturucu</message>
 	<message key="manager.statistics.reports.description">ADS tarafından, belirli bir süre içinde yapılan gönderiler, editörler, hakemler ve bölümler açısından değerlendirilir ve başvurularla ilgili ayrıntılı raporlar üretir. Raporlar CSV formatında bir tablo uygulaması biçimindedir.</message>
 	<message key="manager.statistics.statistics">Dergi İstatistikleri</message>
@@ -496,7 +497,7 @@
 	<message key="manager.statistics.statistics.numSubmissions">Toplam başvuru sayısı:</message>
 	<message key="manager.statistics.statistics.peerReviewed">Dğerlendirmeden geçmiş:</message>
 	<message key="manager.statistics.statistics.registeredReaders">Kayıtlı okuyucular</message>
-	<message key="manager.statistics.statistics.registeredUsers">Kayıtlı üyeler:</message>
+	<message key="manager.statistics.statistics.registeredUsers">Kayıtlı kullanıcılar:</message>
 	<message key="manager.statistics.statistics.reviewerCount">Görevlendirme Sayısı:</message>
 	<message key="manager.statistics.statistics.reviewers">Hakemler:</message>
 	<message key="manager.statistics.statistics.reviewerScore">Editör Puanı:</message>
@@ -512,14 +513,19 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ay sonra açık erişime sunulur.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Lütfen geçerli bir gecikme süresi seçiniz.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Aşağıdaki Geciktirilmiş Açık Erişim Politikası Dergi Hakkında sayfasında Politikalar altında yer alacaktır.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Lütfen verilen seçme kutularını kullanınız.</message>
 	<message key="manager.subscriptionPolicies.expiry">Abonelik Sonu</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Abonelik bitiminden sonra, okuyucunun tüm abonelik içeriğine erişim reddedilebilir ancak abonelik sonuna kadar yayınlanan içeriğe erişimi korunabilir.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Tümünü Sonladır</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Abonelik bitiminden sonra okuyucuların tüm abonelik içeriğine erişimini engelle.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Kısmen Sonlandır</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Okuyucuların son yayınlanan abonelik içeriğine erişimi engelle ancak abonelik sonuna kadar yayınlanan içeriğe erişimini koru.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Aboneleri e-posta ile uyar</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">ay sonra (abonelik bitince).</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Aboneleri e-posta ile uyar</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">hafta sonra (abonelik bitince).</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Aboneleri e-posta ile uyar</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">ay önce (abonelik bitmeden).</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Aboneleri e-posta ile uyar</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">hafta önce (abonelik bitmeden).</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Abonelik Sonu Uyarısı</message>
@@ -579,12 +585,12 @@
 	<message key="manager.subscriptions.form.dateEndRequired">Abonelik bitiş tarihi gerekli.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Lütfen geçerli bir abonelik bitiş tarihi seçiniz.</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Not: Aşağıdaki tüm değişiklikler sistem genelindeki kullanıcının profilinde vardır.</message>
-	<message key="manager.subscriptions.form.userId">Üye</message>
+	<message key="manager.subscriptions.form.userId">Kullanıcı</message>
 	<message key="manager.subscriptions.form.userContact">İletişim</message>
-	<message key="manager.subscriptions.form.userIdRequired">Bir üye gerekli.</message>
-	<message key="manager.subscriptions.form.userIdValid">Lütfen geçerli bir üye seçiniz.</message>
+	<message key="manager.subscriptions.form.userIdRequired">Bir kullanıcı gerekli.</message>
+	<message key="manager.subscriptions.form.userIdValid">Lütfen geçerli bir kullanıcı seçiniz.</message>
 	<message key="manager.subscriptions.form.userCountryValid">Lütfen geçerli bir ülke seçiniz.</message>
-	<message key="manager.subscriptions.form.notifyEmail">Üye adı ve abonelik detaylarını bir e-mail ile üyeye gönder.</message>
+	<message key="manager.subscriptions.form.notifyEmail">Kullanıcı adı ve abonelik detaylarını bir e-mail ile kullanıcıya gönder.</message>
 	<message key="manager.subscriptions.form.notifyEmailValid">Lütfen verilen onay kutularını kullanınız.</message>
 	<message key="manager.subscriptions.form.membership">Üyelik</message>
 	<message key="manager.subscriptions.form.referenceNumber">Referans Numarası</message>
@@ -684,4 +690,45 @@
 	<message key="manager.setup.useThumbnail">Küçük Görsel</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Lütfen verilen seçenekleri kullanınız.</message>
 	<message key="manager.setup.categories">Kategoriler</message>
+	<message key="manager.statistics.reports.aggregationColumns">Toplam istatistiklere göre</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Standart rapor şablonları</message>
+	<message key="manager.statistics.reports.advancedOptions">Gelişmiş Seçenekler</message>
+	<message key="manager.statistics.reports.columns">Sütunlar</message>
+	<message key="manager.statistics.reports.filters">Filitreler</message>
+	<message key="manager.statistics.reports.objectType">Nesne Türü</message>
+	<message key="manager.statistics.reports.objectId">Nesne ID'si</message>
+	<message key="manager.statistics.reports.today">Bugün</message>
+	<message key="manager.statistics.reports.currentMonth">Bu ay</message>
+	<message key="manager.statistics.reports.orderBy">Sırala</message>
+	<message key="manager.statistics.reports.orderDir">Yön</message>
+	<message key="manager.statistics.reports.orderDir.asc">Artan</message>
+	<message key="manager.statistics.reports.orderDir.desc">Azalan</message>
+	<message key="manager.statistics.reports.month.label">YYYYAA biçimini kullan.</message>
+	<message key="manager.statistics.reports.day.label">YYYYAAGG biçimini kullan.</message>
+	<message key="manager.statistics.reports.cities.label">Bir veya daha fazla şehir adı, virgülle ayrılmış (ör. Şehir Adı 1, Şehir Adı 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Rapor oluşuturmak için en azından bir sütun seçmelisiniz.</message>
+	<message key="manager.statistics.reports.reportUrl">Rapor Adresi (URL)</message>
+	<message key="manager.statistics.reports.filters.byContext">Bağlam</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Sonuçları (sayı ve/veya makale) bağlamıyla daralt.</message>
+	<message key="manager.statistics.reports.filters.byObject">Nesne türü ve/veya nesne ID'si ile</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Sonuçları nesne türüne (dergi, sayı, makale, pdf dizgisi, diğer dizgiler) ve/veya bir veya daha fazla nesne ID'sine göre daralt.</message>
+	<message key="manager.statistics.reports.filters.byTime">Rapor aralığı seç</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">veya aralığa göre seç:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Coğrafi konuma göre</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Sonuçları ülkeye, bölgeye ve/veya şehre göre daralt.</message>
+	<message key="manager.statistics.defaultMetricDescription">Your journal is configured to record more than one usage metric. Usage statistics will be displayed in severeral contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">İndirilen makale dosyaları</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Makale özet sayfası gösterimi</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Makale özeti ve indirmeleri</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Sayı indirmeleri</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">İçindekiler sayfası görüntülemeleri</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Issue table of contents and downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Dergi ana sayfa görüntülemeleri</message>
+	<message key="manager.statistics.reports.generateReport">Özel rapor oluştur</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Customize columns, filter and ordering options. Changing any of these options might change the expected report template result.</message>
+	<message key="manager.statistics.reports.columns.description">Define the columns that will be used to build the report. The columns you select here not only define which data will be presented inside the reports, but also defines the aggregation level of the statistics. For example, if you choose ID, Type and Month columns, the report will sum all views from an object from one month and will present that data in one row. If you choose Day instead of Month, each object will have a row for each day.</message>
+	<message key="manager.statistics.reports.objectId.label">Virgülle ayırılmış (ör. 1,2,3,4,5) bir veya birden çok nesne ID'si belirleyin.</message>
+	<message key="manager.statistics.reports.reportUrl.label">The following url can be used to generate the report with this current form settings. Just copy it, paste into your browser and enter. You can use your favorites to store your custom report url generator.</message>
 </locale>

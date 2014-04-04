@@ -69,4 +69,9 @@
 	<message key="plugins.pubIds.urn.urnSuffix.description">Custom URN Suffix for this article.</message>
 	<message key="plugins.pubIds.urn.calculateCheckNo">Calculate Check Number</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Please choose the objects URNs should be assigned to.</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">sayı</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">makale</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">dizgi</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">ek dosya</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">What you see is a preview of the URN that may be incomplete. A URN has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique URN for this {$pubObjectType}.</message>
 </locale>

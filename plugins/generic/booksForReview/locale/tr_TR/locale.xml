@@ -77,7 +77,7 @@
 	<message key="plugins.generic.booksForReview.editor.form.copy">Mevcut Kopya</message>
 	<message key="plugins.generic.booksForReview.editor.form.publisher">Yayıncı</message>
 	<message key="plugins.generic.booksForReview.editor.form.year">Yıl</message>
-	<message key="plugins.generic.booksForReview.editor.form.language">Dil</message>
+	<message key="plugins.generic.booksForReview.editor.form.language">Form Dili</message>
 	<message key="plugins.generic.booksForReview.editor.form.edition">Basım</message>
 	<message key="plugins.generic.booksForReview.editor.form.pages">Sayfalar</message>
 	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>
