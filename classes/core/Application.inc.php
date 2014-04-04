@@ -181,6 +181,14 @@ class Application extends PKPApplication {
 	}
 
 	/**
+	 * Get the section DAO.
+	 * @return SectionDAO
+	 */
+	static function getSectionDAO() {
+		return DAORegistry::getDAO('SectionDAO');
+	}
+
+	/**
 	 * Get the representation DAO.
 	 */
 	static function getRepresentationDAO() {
