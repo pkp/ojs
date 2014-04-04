@@ -89,22 +89,6 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Get sequence of section.
-	 * @return float
-	 */
-	function getSequence() {
-		return $this->getData('sequence');
-	}
-
-	/**
-	 * Set sequence of section.
-	 * @param $sequence float
-	 */
-	function setSequence($sequence) {
-		return $this->setData('sequence', $sequence);
-	}
-
-	/**
 	 * Get open archive setting of section.
 	 * @return boolean
 	 */
