@@ -521,7 +521,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Bu araştırma ile ilgili rekabet koşullarını kabul edip etmediğinizi bildiriniz (bkz. <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Politikası</a>).]]></message>
 	<message key="reviewer.competingInterests">Çıkar Çelişkisi</message>
 	<message key="reviewer.article.enterReviewA">Makaleyle ilgili görüş ve yorumlarınızı editöre iletmek için simgeye tıklayınız.</message>
-		<message key="reviewer.article.uploadFile">İsteğe bağlı olarak, editörün ve/veya yazarın bilgisine sunmak üzere görüşlerinizi, düzeltmelerinizi içeren dosya/dosyaları yükleyebilirsiniz.</message>
+	<message key="reviewer.article.uploadFile">İsteğe bağlı olarak, editörün ve/veya yazarın bilgisine sunmak üzere görüşlerinizi, düzeltmelerinizi içeren dosya/dosyaları yükleyebilirsiniz.</message>
 	<message key="reviewer.article.selectRecommendation">Alttaki karar seçeneklerinin aktif hale gelmesi için dördüncü adımdaki sürecin tamamlanması gerekir. Değerlendirmenin editöre iletilebilmesi için "Hakem Kararı" kutusundaki seçereklerden uygun olanının seçilmesi ve kaydedilmesi gerekir.</message>
 	<message key="reviewer.article.mustSelectDecision">Başvurunun kabülüne yönelik bir öneride bulunmadınız. İşlemin tamamlanması için bir öneride bulunmanız gerekiyor.</message>
 	<message key="reviewer.article.confirmDecision">Kararınızı kaydettikten sonra bu değerlendirmede başka bir değişiklik yapamazsınız! Devam etmek istiyor musunuz?</message>
