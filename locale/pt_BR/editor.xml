@@ -13,9 +13,6 @@
   -->
 
 <locale name="pt_BR" full_name = "Português (Brasil)">
-	<message key="editor.article.reviewForms">Formulários de avaliação</message>
-	<message key="editor.article.selectReviewForm">Escolher formulário de avaliação</message>
-	<message key="editor.article.clearReviewForm">Retirar formulário designado</message>
 	<message key="editor.home">Página Inicial do Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissões e Publicações</message>
 	<message key="editor.submissionQueue">Fila de submissões</message>

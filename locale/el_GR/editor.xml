@@ -171,10 +171,6 @@
 	<message key="editor.article.scheduleForPublication">Προγραμματισμένο για δημοσίευση σε</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Προς ανάθεση</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Η εισφορά για την δημοσίευση δεν έχει πληρωθεί. Για να προγραμματιστεί το άρθρο για δημοσίευση ενημερώστε τον συγγραφέα για την πληρωμή ή για τις δυνατότητες παράβλεψης της εισφοράς.</message>
-	<message key="editor.article.reviewForms">Φόρμες Αξιολόγησης</message>
-	<message key="editor.article.selectReviewForm">Επιλέξτε Φόρμα Αξιολόγησης</message>
-	<message key="editor.article.clearReviewForm">Καθαρισμός Φόρμας Αξιολόγησης</message>
-	<message key="editor.article.confirmChangeReviewForm">Προσοχή: Η αλλαγή της φόρμας αξιολόγησης θα επηρεάσει όλες τις απαντήσεις των αξιολογητών που έχουν γίνει με την χρήση αυτής της φόρμας. Είστε σίγουροι ότι επιθυμείτε να συνεχίσετε?</message>
 	<message key="editor.allEditors">Όλοι οι επιμελητές</message>
 	<message key="editor.me">Εγώ</message>
 	<message key="editor.issues.coverPageDisplay">Εμφάνιση</message>
