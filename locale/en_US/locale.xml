@@ -1147,4 +1147,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Issues</message>
+
+	<message key="notification.type.approveSubmission">This submission is currently awaiting approval before it will appear in the issue.</message>
+	<message key="notification.type.approveSubmissionTitle">Awaiting approval.</message>
 </locale>
