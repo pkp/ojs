@@ -532,7 +532,7 @@ class IssueDAO extends DAO {
 	 * Get issue by article id
 	 * @param articleId int
 	 * @param journalId int optional
-	 * @return issue object
+	 * @return Issue object
 	 */
 	function getIssueByArticleId($articleId, $journalId = null) {
 		$params = array((int) $articleId);
@@ -563,7 +563,7 @@ class IssueDAO extends DAO {
 	 * Get all issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange (optional)
-	 * @return issues object ItemIterator
+	 * @return ItemIterator
 	 */
 	function getIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -578,7 +578,7 @@ class IssueDAO extends DAO {
 	 * Get published issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange
-	 * @return issues ItemIterator
+	 * @return ItemIterator
 	 */
 	function getPublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -593,7 +593,7 @@ class IssueDAO extends DAO {
 	 * Get unpublished issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange
- 	 * @return issues ItemIterator
+	 * @return ItemIterator
 	 */
 	function getUnpublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(

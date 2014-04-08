@@ -170,7 +170,7 @@ class IssueGalleyDAO extends DAO {
 	 * internal galley ID; public galley ID takes precedence.
 	 * @param $galleyId string
 	 * @param $issueId int
-	 * @return galley object
+	 * @return ArticleGalley object
 	 */
 	function getByBestId($galleyId, $issueId) {
 		if ($galleyId != '') $galley =& $this->getByPubId('publisher-id', $galleyId, $issueId);

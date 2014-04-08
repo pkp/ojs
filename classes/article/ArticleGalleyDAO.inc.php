@@ -184,7 +184,7 @@ class ArticleGalleyDAO extends DAO {
 	 * internal galley ID; public galley ID takes precedence.
 	 * @param $galleyId string
 	 * @param $articleId int
-	 * @return galley object
+	 * @return ArticleGalley object
 	 */
 	function getGalleyByBestGalleyId($galleyId, $articleId) {
 		$galley = null;
