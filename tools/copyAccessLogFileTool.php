@@ -36,7 +36,7 @@ class CopyAccessLogFileTool extends CommandLineTool {
 	function CopyAccessLogFileTool($argv = array()) {
 		parent::CommandLineTool($argv);
 
-		if (sizeof($this->argv) !== 1) {
+		if (count($this->argv) < 1 || count($this->argv) > 2)  {
 			$this->usage();
 			exit(1);
 		}
@@ -57,6 +57,7 @@ class CopyAccessLogFileTool extends CommandLineTool {
 				foreach ($dirFiles as $file) {
 					if (!is_file($file)) continue;
 					$fileBasename = pathinfo($file, PATHINFO_BASENAME);
+
 					if (pathinfo($file, PATHINFO_EXTENSION) == 'gz') {
 						// Always save the filename without compression extension.
 						$fileBasename = substr($fileBasename, 0, -3);
@@ -114,6 +115,14 @@ class CopyAccessLogFileTool extends CommandLineTool {
 			// Directory.
 			$filesToCopy = glob($filePath . DIRECTORY_SEPARATOR . '*.*');
 			foreach ($filesToCopy as $file) {
+				// If a base filename is given as a parameter, check it.
+				if (count($this->argv) == 2) {
+					$baseFilename = $this->argv[1];
+					if (strpos(pathinfo($file, PATHINFO_BASENAME), $baseFilename) !== 0) {
+						continue;
+					}
+				}
+
 				$this->_copyFile($file);
 			}
 		} else {

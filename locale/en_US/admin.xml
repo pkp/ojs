@@ -92,7 +92,8 @@ to the current files directory, inside the UsageStatsPlugin stage directory. Mus
 This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
 
 Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory 
+Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory
+Usage (processing all files inside a directory that starts with the passed string): {$scriptName} path/to/apache/directory starts_with_string  
 	</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: can't create temporary folder {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: File {$filePath} don't exist or can't be accessed.</message>
