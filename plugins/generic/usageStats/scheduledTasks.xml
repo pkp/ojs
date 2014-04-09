@@ -22,6 +22,5 @@
 <scheduled_tasks>
 	<task class="plugins.generic.usageStats.UsageStatsLoader">
 		<descr>Extract transform and load usage statistics data into database.</descr>
-		<frequency hour="24"/>
 	</task>
 </scheduled_tasks>
