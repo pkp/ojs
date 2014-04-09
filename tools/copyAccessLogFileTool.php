@@ -36,6 +36,8 @@ class CopyAccessLogFileTool extends CommandLineTool {
 	function CopyAccessLogFileTool($argv = array()) {
 		parent::CommandLineTool($argv);
 
+		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_ADMIN);
+
 		if (count($this->argv) < 1 || count($this->argv) > 2)  {
 			$this->usage();
 			exit(1);
@@ -79,8 +81,6 @@ class CopyAccessLogFileTool extends CommandLineTool {
 		}
 		$journalPaths = implode('/|/', $journalPaths);
 		$this->_journalPaths = $journalPaths;
-
-		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_ADMIN);
 	}
 
 	/**
