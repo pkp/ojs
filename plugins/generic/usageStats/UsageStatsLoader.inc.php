@@ -143,6 +143,7 @@ class UsageStatsLoader extends FileLoader {
 			$lineNumber++;
 			$line = fgets($fhandle);
 			if ($line == '') continue;
+			if (substr($line, 0, 1) === "#") continue; // Comment lines.
 			$entryData = $this->_getDataFromLogEntry($line);
 			if (!$this->_isLogEntryValid($entryData, $lineNumber)) {
 				$errorMsg = __('plugins.generic.usageStats.invalidLogEntry',
