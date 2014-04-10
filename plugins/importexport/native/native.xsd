@@ -22,7 +22,7 @@
 		<complexType>
 			<complexContent>
 				<extension base="pkp:submission">
-					<attribute name="section" type="int" />
+					<attribute name="section_ref" type="string" />
 				</extension>
 			</complexContent>
 		</complexType>
@@ -82,10 +82,12 @@
 			<element name="date_notified" type="date" minOccurs="0" maxOccurs="1" />
 			<element name="last_modified" type="date" minOccurs="0" maxOccurs="1" />
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
+			<!-- sub elements -->
 			<element ref="pkp:issue_style" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_cover" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_galleys" minOccurs="1" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
+			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
 		</sequence>
 		<attribute name="journal_id" type="int" use="optional" />
 		<attribute name="volume" type="int" use="optional" />
@@ -149,6 +151,35 @@
 		</complexType>
 	</element>
 
+	<element name="sections">
+		<complexType>
+			<sequence>
+				<element ref="pkp:section" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="section">
+		<sequence>
+			<element ref="pkp:id" minOccurs="0" maxOccurs="unbounded" />
+			<element name="abbrev" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="policy" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="title" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="journal_id" type="int" />
+		<attribute name="review_form_id" type="int" />
+		<attribute name="seq" type="string" />
+		<attribute name="editor_restricted" type="int" />
+		<attribute name="meta_indexed" type="int" />
+		<attribute name="meta_reviewed" type="int" />
+		<attribute name="abstracts_not_required" type="int" />
+		<attribute name="hide_title" type="int" />
+		<attribute name="hide_author" type="int" />
+		<attribute name="hide_about" type="int" />
+		<attribute name="disable_comments" type="int" />
+		<attribute name="abstract_word_count" type="int" />
+	</complexType>
+
 	<!-- Permit "issue" as a root element -->
 	<element name="issue" type="pkp:issue" />
 
@@ -163,4 +194,7 @@
 
 	<!-- Permit "issue_style" as a root element -->
 	<element name="issue_style" type="pkp:issue_style" />
+
+	<!-- Permit "section" as a root element -->
+	<element name="section" type="pkp:section" />
 </schema>

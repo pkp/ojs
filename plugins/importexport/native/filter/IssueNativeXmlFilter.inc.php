@@ -100,6 +100,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$this->addCoverImage($doc, $issueNode, $issue);
 		$this->addIssueGalleys($doc, $issueNode, $issue);
 		$this->addArticles($doc, $issueNode, $issue);
+		$this->addSections($doc, $issueNode, $issue);
 
 		return $issueNode;
 	}
@@ -146,7 +147,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			$clone = $doc->importNode($articlesDoc->documentElement, true);
 			$issueNode->appendChild($clone);
 		}
-
 	}
 
 	/**
@@ -168,7 +168,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			$clone = $doc->importNode($issueGalleysDoc->documentElement, true);
 			$issueNode->appendChild($clone);
 		}
-
 	}
 
 	/**
@@ -227,6 +226,44 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 			$issueNode->appendChild($issueStyleNode);
 		}
+	}
+
+	/**
+	 * Add the sections to the Issue DOM element.
+	 * @param $doc DOMDocument
+	 * @param $issueNode DOMElement
+	 * @param $issue Issue
+	 */
+	function addSections($doc, $issueNode, $issue) {
+
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sections = $sectionDao->getByIssueId($issue->getId());
+		$deployment = $this->getDeployment();
+
+		$sectionsNode = $doc->createElementNS($deployment->getNamespace(), 'sections');
+		foreach ($sections as $section) {
+			$sectionNode = $doc->createElementNS($deployment->getNamespace(), 'section');
+			$sectionNode->setAttribute('journal_id', $section->getJournalId());
+			$sectionNode->setAttribute('review_form_id', $section->getReviewFormId());
+			$sectionNode->setAttribute('seq', $section->getSequence());
+			$sectionNode->setAttribute('editor_restricted', $section->getEditorRestricted());
+			$sectionNode->setAttribute('meta_indexed', $section->getMetaIndexed());
+			$sectionNode->setAttribute('meta_reviewed', $section->getMetaReviewed());
+			$sectionNode->setAttribute('abstracts_not_required', $section->getAbstractsNotRequired());
+			$sectionNode->setAttribute('hide_title', $section->getHideTitle());
+			$sectionNode->setAttribute('hide_author', $section->getHideAuthor());
+			$sectionNode->setAttribute('hide_about', $section->getHideAbout());
+			$sectionNode->setAttribute('disable_comments', $section->getDisableComments());
+			$sectionNode->setAttribute('abstract_word_count', $section->getAbstractWordCount());
+
+			$this->createLocalizedNodes($doc, $sectionNode, 'abbrev', $section->getAbbrev(null));
+			$this->createLocalizedNodes($doc, $sectionNode, 'policy', $section->getPolicy(null));
+			$this->createLocalizedNodes($doc, $sectionNode, 'title', $section->getTitle(null));
+
+			$sectionsNode->appendChild($sectionNode);
+		}
+
+		$issueNode->appendChild($sectionsNode);
 	}
 }
 
