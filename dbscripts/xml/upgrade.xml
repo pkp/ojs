@@ -205,6 +205,11 @@
 		<note file="docs/release-notes/README-3.0a1" />
 	</upgrade>
 
+	<upgrade minversion="2.3.0.0" maxversion="2.9.9.9"><!-- 2.9.9.0 is OJS 3.0b -->
+		<code function="fixReviewForms" />
+		<note file="docs/release-notes/README-3.0b" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
