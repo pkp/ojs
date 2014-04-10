@@ -199,7 +199,7 @@ class CrossRefExportDom {
 		}
 		else {
 			$publicationDateNode =& CrossRefExportDom::generatePublisherDateDom($doc, $issue->getdatePublished());
-                }
+		}
 		XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 
 		/* publisher_item is the article pages */
