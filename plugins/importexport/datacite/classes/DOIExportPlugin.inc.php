@@ -161,7 +161,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 				$action = 'register';
 			} elseif ($request->isPost() && !is_null($request->getUserVar('export'))) {
 				$action = 'export';
-			}elseif ($request->isPost() && !is_null($request->getUserVar('markRegistered'))) {
+			} elseif ($request->isPost() && !is_null($request->getUserVar('markRegistered'))) {
 				$action = 'markRegistered';
 			}
 			$target = $multiSelect ? substr($op, 6, -1) : substr($op, 6);
