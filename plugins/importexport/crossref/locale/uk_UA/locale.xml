@@ -15,23 +15,23 @@
   -->
  
 <locale name="uk_UA" full_name="Ukrainian">
-       <message key="plugins.importexport.crossref.displayName">Модуль експорту у CrossRef XML</message>
-       <message key="plugins.importexport.crossref.description">Експорт метаданих статті у формат CrossRef XML.</message>
-       
-       <message key="plugins.importexport.crossref.export">Експорт даних</message>
-       <message key="plugins.importexport.crossref.export.issues">Експорт випусків</message>
-       <message key="plugins.importexport.crossref.export.selectIssue">Оберіть випуск для експорту.</message>
-       <message key="plugins.importexport.crossref.export.articles">Експорт статей</message>
-       <message key="plugins.importexport.crossref.export.selectArticle">Оберіть статті для експорту.</message>
-       
-       <message key="plugins.importexport.crossref.cliUsage"><![CDATA[Використання: 
+	   <message key="plugins.importexport.crossref.displayName">Модуль експорту у CrossRef XML</message>
+	   <message key="plugins.importexport.crossref.description">Експорт метаданих статті у формат CrossRef XML.</message>
+
+	   <message key="plugins.importexport.crossref.export">Експорт даних</message>
+	   <message key="plugins.importexport.crossref.export.issues">Експорт випусків</message>
+	   <message key="plugins.importexport.crossref.export.selectIssue">Оберіть випуск для експорту.</message>
+	   <message key="plugins.importexport.crossref.export.articles">Експорт статей</message>
+	   <message key="plugins.importexport.crossref.export.selectArticle">Оберіть статті для експорту.</message>
+
+	   <message key="plugins.importexport.crossref.cliUsage"><![CDATA[Використання:
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
 ]]></message>
-       <message key="plugins.importexport.crossref.cliError">ПОМИЛКА:</message>
+	   <message key="plugins.importexport.crossref.cliError">ПОМИЛКА:</message>
 
-       <message key="plugins.importexport.crossref.export.error.issueNotFound">Немає випусків з визначеним issue ID "{$issueId}".</message>
-       <message key="plugins.importexport.crossref.export.error.articleNotFound">Немає статей з визначеним article ID "{$articleId}".</message>
+	   <message key="plugins.importexport.crossref.export.error.issueNotFound">Немає випусків з визначеним issue ID "{$issueId}".</message>
+	   <message key="plugins.importexport.crossref.export.error.articleNotFound">Немає статей з визначеним article ID "{$articleId}".</message>
 
-       <message key="plugins.importexport.crossref.errors.noDOIprefix">Для використання цього модуля у налаштуваннях журналу необхідно вказати коректний префікс DOI.</message>
+	   <message key="plugins.importexport.crossref.errors.noDOIprefix">Для використання цього модуля у налаштуваннях журналу необхідно вказати коректний префікс DOI.</message>
 </locale>
