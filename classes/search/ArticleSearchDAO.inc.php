@@ -108,8 +108,9 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-	}
 
+		return $returner;
+	}
 }
 
 ?>
