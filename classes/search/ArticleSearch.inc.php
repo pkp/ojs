@@ -28,9 +28,9 @@ class ArticleSearch extends SubmissionSearch {
 	 * See SubmissionSearch::getSparseArray()
 	 */
 	function &getSparseArray(&$unorderedResults, $orderBy, $orderDir, $exclude) {
-    	// Calculate a well-ordered (unique) score.
-    	$resultCount = count($unorderedResults);
-    	$i = 0;
+		// Calculate a well-ordered (unique) score.
+		$resultCount = count($unorderedResults);
+		$i = 0;
 		foreach ($unorderedResults as $submissionId => &$data) {
 			$data['score'] = ($resultCount * $data['count']) + $i++;
 			unset($data);
@@ -64,11 +64,11 @@ class ArticleSearch extends SubmissionSearch {
 					STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_ARTICLE),
 					STATISTICS_DIMENSION_ARTICLE_ID => array(array_keys($unorderedResults))
 				);
-		        if ($orderBy == 'popularityMonth') {
-		          $oneMonthAgo = date('Ymd', strtotime('-1 month'));
-		          $today = date('Ymd');
-		          $filter[STATISTICS_DIMENSION_DAY] = array('from' => $oneMonthAgo, 'to' => $today);
-		        }
+				if ($orderBy == 'popularityMonth') {
+					$oneMonthAgo = date('Ymd', strtotime('-1 month'));
+					$today = date('Ymd');
+					$filter[STATISTICS_DIMENSION_DAY] = array('from' => $oneMonthAgo, 'to' => $today);
+				}
 				$rawReport = $application->getMetrics($metricType, $column, $filter);
 				foreach ($rawReport as $row) {
 					$unorderedResults[$row['submission_id']]['metric'] = (int)$row['metric'];
@@ -79,7 +79,7 @@ class ArticleSearch extends SubmissionSearch {
 			// Exclude unwanted IDs.
 			if (in_array($submissionId, $exclude)) continue;
 
- 			$orderKey = null;
+			$orderKey = null;
 			switch ($orderBy) {
 				case 'authors':
 					$authors = $authorDao->getBySubmissionId($submissionId);
@@ -109,8 +109,8 @@ class ArticleSearch extends SubmissionSearch {
 					$orderKey = $data[$orderBy];
 					break;
 
-		        case 'popularityAll':
-		        case 'popularityMonth':
+				case 'popularityAll':
+				case 'popularityMonth':
 					$orderKey = (isset($data['metric']) ? $data['metric'] : 0);
 					break;
 
@@ -358,8 +358,8 @@ class ArticleSearch extends SubmissionSearch {
 		$application = PKPApplication::getApplication();
 		$metricType = $application->getDefaultMetricType();
 		if (!is_null($metricType)) {
-        	$resultSetOrderingOptions['popularityAll'] = __('search.results.orderBy.popularityAll');
-        	$resultSetOrderingOptions['popularityMonth'] = __('search.results.orderBy.popularityMonth');
+			$resultSetOrderingOptions['popularityAll'] = __('search.results.orderBy.popularityAll');
+			$resultSetOrderingOptions['popularityMonth'] = __('search.results.orderBy.popularityMonth');
 		}
 
 		// Only show the "journal title" option if we have several journals.

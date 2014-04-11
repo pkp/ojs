@@ -172,12 +172,12 @@ class BackupPlugin extends GenericPlugin {
 			case 'enable':
 				$this->updateSetting(0, 'enabled', true);
 				$message = NOTIFICATION_TYPE_PLUGIN_ENABLED;
-                                $messageParams = array('pluginName' => $this->getDisplayName());
+				$messageParams = array('pluginName' => $this->getDisplayName());
 				break;
 			case 'disable':
 				$this->updateSetting(0, 'enabled', false);
 				$message = NOTIFICATION_TYPE_PLUGIN_DISABLED;
-                                $messageParams = array('pluginName' => $this->getDisplayName());
+				$messageParams = array('pluginName' => $this->getDisplayName());
 				break;
 		}
 		return false;
