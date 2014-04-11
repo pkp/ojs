@@ -16,7 +16,7 @@
 <!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
 
 <scheduled_tasks>
-	<task class="plugins.importexport.crossref.ArticleInfoSender">
+	<task class="plugins.importexport.crossref.CrossrefInfoSender">
 		<descr>Send DOI deposit to Crossref server.</descr>
 		<frequency minute="0"/>
 	</task>

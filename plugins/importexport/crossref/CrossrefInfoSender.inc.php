@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file plugins/importexport/crossref/ArticleInfoSender.php
+ * @file plugins/importexport/crossref/CrossrefInfoSender.php
  *
  * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ArticleInfoSender
+ * @class CrossrefInfoSender
  * @ingroup plugins_importexport_crossref
  *
  * @brief Scheduled task to send article information to the ALM server.
@@ -17,7 +17,7 @@ import('lib.pkp.classes.scheduledTask.ScheduledTask');
 import('lib.pkp.classes.core.JSONManager');
 
 
-class ArticleInfoSender extends ScheduledTask {
+class CrossrefInfoSender extends ScheduledTask {
 
 	/** @var $_plugin CrossRefExportPlugin */
 	var $_plugin;
@@ -26,7 +26,7 @@ class ArticleInfoSender extends ScheduledTask {
 	 * Constructor.
 	 * @param $argv array task arguments
 	 */
-	function ArticleInfoSender($args) {
+	function CrossrefInfoSender($args) {
 		PluginRegistry::loadCategory('importexport');
 		$plugin =& PluginRegistry::getPlugin('importexport', 'CrossRefExportPlugin'); /* @var $plugin CrossRefExportPlugin */
 		$this->_plugin =& $plugin;
