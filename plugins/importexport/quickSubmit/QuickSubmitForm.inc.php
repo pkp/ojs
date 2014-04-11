@@ -255,6 +255,7 @@ class QuickSubmitForm extends Form {
 		$articleId = $article->getId();
 
 		// Add authors
+		$authorDao =& DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 		$authors = $this->getData('authors');
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]['authorId'] > 0) {
@@ -286,7 +287,6 @@ class QuickSubmitForm extends Form {
 				$author->setSequence($authors[$i]['seq']);
 
 				if ($isExistingAuthor == false) {
-					$authorDao =& DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 					$authorDao->insertAuthor($author);
 				}
 			}
