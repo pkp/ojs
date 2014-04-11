@@ -300,11 +300,11 @@ class ArticleSearch extends SubmissionSearch {
 	}
 
 	/**
-	* Identify similarity terms for a given submission.
-	* @param $submissionId integer
-	* @return null|array An array of string keywords or null
-	* if some kind of error occurred.
-	*/
+	 * Identify similarity terms for a given submission.
+	 * @param $submissionId integer
+	 * @return null|array An array of string keywords or null
+	 * if some kind of error occurred.
+	 */
 	function getSimilarityTerms($submissionId) {
 		// Check whether a search plugin provides terms for a similarity search.
 		$searchTerms = array();
