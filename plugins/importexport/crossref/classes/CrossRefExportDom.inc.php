@@ -20,7 +20,7 @@ if (!class_exists('DOIExportDom')) { // Bug #7848
 // XML attributes
 define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
 define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.3');
-define('CROSSREF_VERSION' , '4.3.3');
+define('CROSSREF_XSI_SCHEMAVERSION' , '4.3.3');
 define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.3 http://www.crossref.org/schema/deposit/crossref4.3.3.xsd');
 
 class CrossRefExportDom extends DOIExportDom {
@@ -431,7 +431,6 @@ class CrossRefExportDom extends DOIExportDom {
 	 */
 	function &_generateDOIdataDom(&$doc, $DOI, $url, $galleys = null) {
 		$request = Application::getRequest();
-		$journal = $request->getJournal();
 		$DOIdataNode =& XMLCustomWriter::createElement($doc, 'doi_data');
 		XMLCustomWriter::createChildWithText($doc, $DOIdataNode, 'doi', $DOI);
 		XMLCustomWriter::createChildWithText($doc, $DOIdataNode, 'resource', $url);
@@ -447,7 +446,7 @@ class CrossRefExportDom extends DOIExportDom {
 				$resourceNode = XMLCustomWriter::createElement($doc, 'resource');
 				XMLCustomWriter::appendChild($itemNode, $resourceNode);
 				XMLCustomWriter::setAttribute($resourceNode, 'mime_type', $galley->getFileType());
-				$urlNode = XMLCustomWriter::createTextNode($doc, $request->url(null, 'article', 'viewFile', array($galley->getArticleId(), $galley->getBestGalleyId($journal))));
+				$urlNode = XMLCustomWriter::createTextNode($doc, $request->url(null, 'article', 'viewFile', array($galley->getArticleId(), $galley->getBestGalleyId())));
 				XMLCustomWriter::appendChild($resourceNode, $urlNode);
 			}
 		}
