@@ -850,7 +850,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
 	 * @parem $testPrefix string
 	 */
-	function markRegistered(&$request, &$object, $testPrefix) {
+	function markRegistered(&$request, &$object, $testPrefix = '10.1234') {
 		$registeredDoi = $object->getPubId('doi');
 		assert(!empty($registeredDoi));
 		if ($this->isTestMode($request)) {
