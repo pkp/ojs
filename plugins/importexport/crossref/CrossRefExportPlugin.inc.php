@@ -19,11 +19,12 @@ if (!class_exists('DOIExportPlugin')) { // Bug #7848
 }
 
 // DataCite API
+define('CROSSREF_API_DEPOSIT_OK', 303);
 define('CROSSREF_API_RESPONSE_OK', 200);
-//define('CROSSREF_API_URL', 'http://doi.crossref.org/servlet/deposit');
-define('CROSSREF_API_URL_DEV', 'http://test.crossref.org/servlet/deposit');
+define('CROSSREF_API_URL', 'https://api.crossref.org/deposits');
+define('CROSSREF_SEARCH_API', 'http://search.crossref.org/dois');
 
-// The name of the setting used to save the registered DOI.
+// The name of the settings used to save the registered DOI and the URL with the deposit status.
 define('CROSSREF_DEPOSIT_STATUS', 'depositStatus');
 
 // Test DOI prefix
@@ -162,6 +163,7 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 		// Prepare and display the template.
 		$templateMgr->assign_by_ref('articles', $this->_getUnregisteredArticles($journal));
 		$templateMgr->assign('depositStatusSettingName', $this->getDepositStatusSettingName());
+		$templateMgr->assign('depositStatusUrlSettingName', $this->getDepositStatusUrlSettingName());
 		$templateMgr->display($this->getTemplatePath() . 'all.tpl');
 	}
 
@@ -231,12 +233,12 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 				$articlesByIssue =& $dom->retrieveArticlesByIssue($object);
 				foreach ($articlesByIssue as $article) {
 					if ($article->getPubId('doi')) {
-						$this->markRegistered($request, $article, CROSSREF_API_TESTPREFIX);
+						$this->markRegistered($request, $article);
 					}
 				}
 			} else {
 				if ($object->getPubId('doi')) {
-					$this->markRegistered($request, $object, CROSSREF_API_TESTPREFIX);
+					$this->markRegistered($request, $object);
 				}
 			}
 		}
@@ -245,74 +247,116 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 	/**
 	 * @see DOIExportPlugin::registerDoi()
 	 */
-	function registerDoi(&$request, &$journal, &$objects, $file) {
-		// Prepare HTTP session.
+	function registerDoi(&$request, &$journal, &$objects, $filename) {
 		$curlCh = curl_init ();
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curlCh, CURLOPT_POST, true);
+		curl_setopt($curlCh, CURLOPT_HEADER, 1);
+		curl_setopt($curlCh, CURLOPT_BINARYTRANSFER, true);
 
 		$username = $this->getSetting($journal->getId(), 'username');
 		$password = $this->getSetting($journal->getId(), 'password');
 
+		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_API_URL);
+		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
+
 		// Transmit XML data.
-		assert(is_readable($file));
+		assert(is_readable($filename));
+		$fh = fopen($filename, 'rb');
 
-		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_API_URL_DEV . '?operation=doMDUpload&login_id='.$username.'&login_passwd='.$password);
-		curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: multipart/form-data'));
-		curl_setopt($curlCh, CURLOPT_POSTFIELDS, array('fname' => '@/'.realpath($file)));
+		$httpheaders = array();
+		$httpheaders[] = 'Content-Type: application/vnd.crossref.deposit+xml';
+		$httpheaders[] = 'Content-Length: ' . filesize($filename);
 
-		$result = true;
+		curl_setopt($curlCh, CURLOPT_HTTPHEADER, $httpheaders);
+		curl_setopt($curlCh, CURLOPT_INFILE, $fh);
+		curl_setopt($curlCh, CURLOPT_INFILESIZE, filesize($filename));
+
 		$response = curl_exec($curlCh);
 		if ($response === false) {
 			$result = array(array('plugins.importexport.common.register.error.mdsError', 'No response from server.'));
+		} elseif ( $status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE) != CROSSREF_API_DEPOSIT_OK ) {
+			$result = array(array('plugins.importexport.common.register.error.mdsError', "$status - $response"));
 		} else {
-			$status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
-			if ($status != CROSSREF_API_RESPONSE_OK) {
-				$result = array(array('plugins.importexport.common.register.error.mdsError', "$status - $response"));
+			// Deposit was received
+			$result = true;
+			$depositLocation = $this->_http_parse_headers($response)['Location'];
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
+			foreach ($objects as $article) {
+				// its possible that issues, galleys, or other things are being registered
+				// but we're only going to be going back to check in on articles
+				if (is_a($article, 'Article')) {
+					// we only save the URL of the last deposit so it can be checked later on
+					$articleDao->updateSetting($article->getId(), $this->getDepositStatusUrlSettingName(), $depositLocation, 'string');
+				}
 			}
 		}
 
 		curl_close($curlCh);
-
 		return $result;
 	}
 
 	/**
-	 * TODO: this function still needs work
+	 * This method checks the CrossRef APIs and checks if deposits have been successful
+	 * @param $request Request
+	 * @param $journal Journal The journal associated with the deposit
+	 * @param $article Article The article getting deposited
 	 */
 	function updateDepositStatus(&$request, &$journal, $article) {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
+		$jsonManager = new JSONManager();
 
 		// Prepare HTTP session.
 		$curlCh = curl_init ();
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curlCh, CURLOPT_POST, true);
 
 		$username = $this->getSetting($journal->getId(), 'username');
 		$password = $this->getSetting($journal->getId(), 'password');
+		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
 
-		// FIXME: use Karl's new API
+		$doi = urlencode($article->getPubId('doi'));
+		$params = 'filter=doi:' . $doi ;
+		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_API_URL . '?' . $params);
 
-		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_API_URL_DEV . '?operation=doMDUpload&login_id='.$username.'&login_passwd='.$password);
-
-		$result = true;
+		// try to fetch from the new API
 		$response = curl_exec($curlCh);
-		if ($response === false) {
-			$result = array(array('plugins.importexport.common.register.error.mdsError', 'No response from server.'));
-		} else {
-			$status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
-			if ($status != CROSSREF_API_RESPONSE_OK) {
-				$result = array(array('plugins.importexport.common.register.error.mdsError', "$status - $response"));
+
+		// try the new API with the filter completed (should only return successes)
+		if ( $response && curl_getinfo($curlCh, CURLINFO_HTTP_CODE) == CROSSREF_API_RESPONSE_OK ) {
+			$response = $jsonManager->decode($response);
+			$pastDeposits = array();
+			foreach ($response->message->items as $item) {
+				$pastDeposits[strtotime($item->{'submitted-at'})] = $item->status;
+				if ( $item->status == 'completed' ) {
+					$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), 'completed', 'string');
+					$this->markRegistered($request, $article);
+					return true;
+				}
+			}
+
+			// if there have been past attempts, save the most recent one's status for display to user
+			if (count($pastDeposits) > 0) {
+				$lastStatus = $pastDeposits[max(array_keys($pastDeposits))];
+				$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), $lastStatus, 'string');
+			}
+		}
+
+		// now try the old crossref API and just search for the DOI
+		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_SEARCH_API . '?q=' . $doi);
+		$response = curl_exec($curlCh);
+		if ( $response && curl_getinfo($curlCh, CURLINFO_HTTP_CODE) == CROSSREF_API_RESPONSE_OK ) {
+			$response = $jsonManager->decode($response);
+			if ( count($response) > 0 ) {
+				// inventing a new status "found" for when we find it in the search API (as opposed to deposit API)
+				$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), 'found', 'string');
+				$this->markRegistered($request, $article);
+				return true;
 			}
 		}
 
 		curl_close($curlCh);
 
-		$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), $result, 'string');
-		// if successful, mark as registered
-		if (false) {
-			$this->markRegistered($request, $article, CROSSREFBB_API_TESTPREFIX);
-		}
+		return false;
 	}
 
 	/**
@@ -329,6 +373,40 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 	function getDepositStatusSettingName() {
 		return $this->getPluginId() . '::' . CROSSREF_DEPOSIT_STATUS;
 	}
+
+	function getDepositStatusUrlSettingName() {
+		return $this->getPluginId() . '::' . CROSSREF_DEPOSIT_STATUS . 'Url';
+	}
+
+
+	/**
+	 * Parse HTTP headers into an associative array
+	 * Taken from: http://www.php.net/manual/en/function.http-parse-headers.php#112917
+	 * @param $raw_headers
+	 * @return array
+	 */
+	function _http_parse_headers ($raw_headers) {
+		$headers = array(); // $headers = [];
+
+		foreach (explode("\n", $raw_headers) as $i => $h) {
+			$h = explode(':', $h, 2);
+
+			if (isset($h[1])) {
+				if(!isset($headers[$h[0]])) {
+					$headers[$h[0]] = trim($h[1]);
+				} else if(is_array($headers[$h[0]])) {
+					$tmp = array_merge($headers[$h[0]],array(trim($h[1])));
+					$headers[$h[0]] = $tmp;
+				} else {
+					$tmp = array_merge(array($headers[$h[0]]),array(trim($h[1])));
+					$headers[$h[0]] = $tmp;
+				}
+			}
+		}
+
+		return $headers;
+	}
+
 }
 
 ?>

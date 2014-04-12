@@ -18,7 +18,6 @@ import('lib.pkp.classes.core.JSONManager');
 
 
 class CrossrefInfoSender extends ScheduledTask {
-
 	/** @var $_plugin CrossRefExportPlugin */
 	var $_plugin;
 
@@ -69,21 +68,16 @@ class CrossrefInfoSender extends ScheduledTask {
 
 			$toBeDepositedIds = array();
 			foreach ($unregisteredArticlesIds as $id => $article) {
-				$status = $plugin->updateDepositStatus($request, $journal, $article->getPubId('doi'));
-
-				if ('not registered') {
-
-				} else {
+				if (!$plugin->updateDepositStatus($request, $journal, $article)) {
 					array_push($toBeDepositedIds, $id);
 				}
-
 			}
 
 			// If there are unregistered things and we want automatic deposits
 			if (count($toBeDepositedIds) && $plugin->getSetting($journal->getId(), 'automaticRegistration')) {
-				$exportSpec = array(DOI_EXPORT_ARTICLES => $unregisteredArticlesIds);
+				$exportSpec = array(DOI_EXPORT_ARTICLES => $toBeDepositedIds);
 
-				$result = $plugin->registerObjects($request, $exportSpec, $journal);
+				$plugin->registerObjects($request, $exportSpec, $journal);
 			}
 		}
 
