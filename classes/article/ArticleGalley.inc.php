@@ -156,7 +156,14 @@ class ArticleGalley extends ArticleFile {
 	 * @param $journal Object the journal this galley is in
 	 * @return string
 	 */
-	function getBestGalleyId(&$journal) {
+	function getBestGalleyId(&$journal = null) {
+		if (is_null($journal)) {
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
+			$journalDao =& DAORegistry::getDAO('JournalDAO');  /* @var $journalDao JournalDAO */
+			$journalId = $articleDao->getArticleJournalId($this->getArticleId());
+			$journal =& $journalDao->getById($journalId);
+		}
+
 		if ($journal->getSetting('enablePublicGalleyId')) {
 			$publicGalleyId = $this->getPubId('publisher-id');
 			if (!empty($publicGalleyId)) return $publicGalleyId;
