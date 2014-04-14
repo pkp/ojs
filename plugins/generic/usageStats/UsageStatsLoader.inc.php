@@ -453,13 +453,15 @@ class UsageStatsLoader extends FileLoader {
 					break;
 			}
 
-			// Don't count some view access operations for html or pdf galley,
+			// Don't count some view access operations for pdf galleys,
 			// otherwise we would be counting access before user really
-			// access the object. If user really access the object, a download
-			// operation will be also logged and that's the one we have to count.
-			$articleViewAccessPageAndOp = array('article/view', 'article/viewArticle', 'article/viewFile');
+			// access the object. If user really access the object, a download or
+			// viewFile operation will be also logged and that's the one we have
+			// to count.
+			$articleViewAccessPageAndOp = array('article/view', 'article/viewArticle');
+
 			if (in_array($workingPageAndOp, $articleViewAccessPageAndOp) && $assocType == ASSOC_TYPE_GALLEY &&
-			isset($galley) && $galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
+			isset($galley) && $galley && ($galley->isPdfGalley())) {
 				$assocId = $assocType = false;
 			}
 		}
