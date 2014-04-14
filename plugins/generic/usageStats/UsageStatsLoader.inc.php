@@ -318,6 +318,11 @@ class UsageStatsLoader extends FileLoader {
 		$page = Core::getPage($url, $isPathInfo);
 		$operation = Core::getOp($url, $isPathInfo);
 
+		// See bug #8698#.
+		if (is_array($contextPaths) && !$page && $operation == 'index') {
+			$page = 'index';
+		}
+
 		if (empty($contextPaths) || !$page || !$operation) return array(false, false);
 
 		$pageAndOperation = $page . '/' . $operation;
