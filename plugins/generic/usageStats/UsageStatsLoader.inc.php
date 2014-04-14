@@ -170,33 +170,7 @@ class UsageStatsLoader extends FileLoader {
 			list($countryCode, $cityName, $region) = $geoTool->getGeoLocation($entryData['ip']);
 			$day = date('Ymd', $entryData['date']);
 
-			// Check downloaded file type, if any.
-			$galley = null;
-			$type = null;
-			switch($assocType) {
-				case ASSOC_TYPE_GALLEY:
-					$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-					$galley =& $articleGalleyDao->getGalley($assocId);
-					break;
-				case ASSOC_TYPE_ISSUE_GALLEY;
-					$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-					$galley =& $issueGalleyDao->getGalley($assocId);
-					break;
-			}
-
-			if ($galley && !is_a($galley, 'ArticleGalley') && !is_a($galley, 'IssueGalley')) {
-				// This object id was tested before, why
-				// it is not the type we expect now?
-				assert(false);
-			} else if ($galley) {
-				if ($galley->isPdfGalley()) {
-					$type = STATISTICS_FILE_TYPE_PDF;
-				} else if (is_a($galley, 'ArticleGalley') && $galley->isHtmlGalley()) {
-					$type = STATISTICS_FILE_TYPE_HTML;
-				} else {
-					$type = STATISTICS_FILE_TYPE_OTHER;
-				}
-			}
+			$type = $this->_getFileType($assocType, $assocId);
 
 			// Implement double click filtering.
 			$entryHash = $assocType . $assocId . $entryData['ip'];
@@ -534,6 +508,62 @@ class UsageStatsLoader extends FileLoader {
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * Get the file type of the object represented
+	 * by the passed assoc type and id.
+	 * @param $assocType int
+	 * @param $assocId int
+	 * @return int One of the STATISTICS_FILE_TYPE... constants value.
+	 */
+	function _getFileType($assocType, $assocId) {
+		$file = null;
+		$type = null;
+
+		// Get the file.
+		switch($assocType) {
+			case ASSOC_TYPE_GALLEY:
+				$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+				$file =& $articleGalleyDao->getGalley($assocId);
+				break;
+			case ASSOC_TYPE_ISSUE_GALLEY;
+				$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+				$file =& $issueGalleyDao->getGalley($assocId);
+				break;
+			case ASSOC_TYPE_SUPP_FILE:
+				$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
+				$file =& $suppFileDao->getSuppFile($assocId);
+				break;
+		}
+
+		if ($file) {
+			if (is_a($file, 'SuppFile')) {
+				switch($file->getFileType()) {
+					case 'application/pdf':
+						$type = STATISTICS_FILE_TYPE_PDF;
+						break;
+					case 'text/html':
+						$type = STATISTICS_FILE_TYPE_HTML;
+						break;
+					default:
+						$type = STATISTICS_FILE_TYPE_OTHER;
+					break;
+				}
+			}
+
+			if (is_a($file, 'ArticleGalley') || is_a($file, 'IssueGalley')) {
+				if ($file->isPdfGalley()) {
+					$type = STATISTICS_FILE_TYPE_PDF;
+				} else if (is_a($file, 'ArticleGalley') && $file->isHtmlGalley()) {
+					$type = STATISTICS_FILE_TYPE_HTML;
+				} else {
+					$type = STATISTICS_FILE_TYPE_OTHER;
+				}
+			}
+		}
+
+		return $type;
 	}
 
 	/**
