@@ -23,6 +23,8 @@
 			<complexContent>
 				<extension base="pkp:submission">
 					<attribute name="section_ref" type="string" />
+					<attribute name="seq" type="int" />
+					<attribute name="access_status" type="int" />
 				</extension>
 			</complexContent>
 		</complexType>
@@ -77,17 +79,18 @@
 		<sequence>
 			<element ref="pkp:id" minOccurs="0" maxOccurs="unbounded" />
 			<element name="description" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="title" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
 			<!-- Metadata -->
 			<element name="date_published" type="date" minOccurs="0" maxOccurs="1" />
 			<element name="date_notified" type="date" minOccurs="0" maxOccurs="1" />
 			<element name="last_modified" type="date" minOccurs="0" maxOccurs="1" />
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
 			<!-- sub elements -->
+			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
 			<element ref="pkp:issue_style" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_cover" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_galleys" minOccurs="1" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
-			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
 		</sequence>
 		<attribute name="journal_id" type="int" use="optional" />
 		<attribute name="volume" type="int" use="optional" />
