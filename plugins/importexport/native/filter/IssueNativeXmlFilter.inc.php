@@ -94,13 +94,14 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issueNode->setAttribute('show_title', $issue->getShowTitle());
 
 		$this->createLocalizedNodes($doc, $issueNode, 'description', $issue->getDescription(null));
+		$this->createLocalizedNodes($doc, $issueNode, 'title', $issue->getTitle(null));
 
 		$this->addDates($doc, $issueNode, $issue);
+		$this->addSections($doc, $issueNode, $issue);
 		$this->addStyleFile($doc, $issueNode, $issue);
 		$this->addCoverImage($doc, $issueNode, $issue);
 		$this->addIssueGalleys($doc, $issueNode, $issue);
 		$this->addArticles($doc, $issueNode, $issue);
-		$this->addSections($doc, $issueNode, $issue);
 
 		return $issueNode;
 	}

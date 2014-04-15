@@ -44,18 +44,26 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
+	 * Get the method name for inserting a published submission.
+	 * @return string
+	 */
+	function getPublishedSubmissionInsertMethod(){
+		return 'insertPublishedArticle';
+	}
+
+	/**
 	 * Populate the submission object from the node
 	 * @param $submission Submission
 	 * @param $node DOMElement
 	 * @return Submission
 	 */
 	function populateObject($submission, $node) {
-		$sectionPath = $node->getAttribute('section');
-		if ($sectionPath !== '') {
+		$sectionAbbrev = $node->getAttribute('section_ref');
+		if ($sectionAbbrev !== '') {
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$section = $sectionDao->getByPath($sectionPath, $submission->getContextId());
+			$section = $sectionDao->getByAbbrev($sectionAbbrev, $submission->getContextId());
 			if (!$section) {
-				fatalError('Could not find a section with the path "' . $sectionPath . '"!');
+				fatalError('Could not find a section with the path "' . $sectionAbbrev . '"!');
 			}
 			$submission->setSectionId($section->getId());
 		}
@@ -121,6 +129,21 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$articleGalleyDoc = new DOMDocument();
 		$articleGalleyDoc->appendChild($articleGalleyDoc->importNode($n, true));
 		return $importFilter->execute($articleGalleyDoc);
+	}
+
+	/**
+	 * Class-specific methods for published submissions.
+	 * @param PublishedArticle $submission
+	 * @param DOMElement $node
+	 * @return PublishedArticle
+	 */
+	function populatePublishedSubmission($submission, $node) {
+		$deployment = $this->getDeployment();
+		$issue = $deployment->getIssue();
+		$submission->setSeq($node->getAttribute('seq'));
+		$submission->setAccessStatus($node->getAttribute('access_status'));
+		$submission->setIssueId($issue->getId());
+		return $submission;
 	}
 }
 

@@ -200,7 +200,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Get the XML for a set of submissions.
+	 * Get the XML for a set of submissions wrapped in a(n) issue(s).
 	 * @param $importXml string XML contents to import
 	 * @param $context Context
 	 * @param $user User
@@ -208,7 +208,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 */
 	function importSubmissions($importXml, $context, $user) {
 		$filterDao = DAORegistry::getDAO('FilterDAO');
-		$nativeImportFilters = $filterDao->getObjectsByGroup('native-xml=>article');
+		$nativeImportFilters = $filterDao->getObjectsByGroup('native-xml=>issue');
 		assert(count($nativeImportFilters) == 1); // Assert only a single unserialization filter
 		$importFilter = array_shift($nativeImportFilters);
 		$importFilter->setDeployment(new NativeImportExportDeployment($context, $user));
