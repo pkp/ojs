@@ -280,7 +280,8 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 		} else {
 			// Deposit was received
 			$result = true;
-			$depositLocation = $this->_http_parse_headers($response)['Location'];
+			$depositLocationArray = $this->_http_parse_headers($response);
+			$depositLocation = $depositLocationArray['Location'];
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
 			foreach ($objects as $article) {
 				// its possible that issues, galleys, or other things are being registered
