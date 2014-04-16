@@ -124,6 +124,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			case 'issue_cover':
 				$this->parseIssueCover($n, $issue);
 				break;
+			case 'issue_style':
+				$this->parseIssueStyle($n, $issue);
+				break;
 			default:
 				fatalError('Unknown element ' . $n->tagName);
 		}
@@ -270,6 +273,28 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();
 						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getLocalizedFileName();
+						file_put_contents($filePath, base64_decode($n->textContent));
+						break;
+				}
+			}
+		}
+	}
+
+	/**
+	 * Parse out the issue style sheet and store it in an issue.
+	 * @param DOMElement $node
+	 * @param Issue $issue
+	 */
+	function parseIssueStyle($node, $issue) {
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'style_file_name': $issue->setStyleFileName($n->textContent); break;
+					case 'original_style_file_name': $issue->setOriginalStyleFileName($n->textContent); break;
+					case 'embed':
+						import('classes.file.PublicFileManager');
+						$publicFileManager = new PublicFileManager();
+						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getStyleFileName();
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 				}
