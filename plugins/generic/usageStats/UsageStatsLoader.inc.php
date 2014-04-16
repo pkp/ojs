@@ -230,12 +230,12 @@ class UsageStatsLoader extends FileLoader {
 				if ($secondsBetweenRequests < $timeFilter) {
 					// We have to store the last access,
 					// so we delete the most recent one.
-					$statsDao->deleteRecord($assocType, $assocId, $loadId);
+					$statsDao->deleteRecord($assocType, $assocId, $lastInsertedEntries[$entryHash], $loadId);
 				}
 			}
 
 			$lastInsertedEntries[$entryHash] = $entryData['date'];
-			$statsDao->insert($assocType, $assocId, $day, $countryCode, $region, $cityName, $type, $loadId);
+			$statsDao->insert($assocType, $assocId, $day, $entryData['date'], $countryCode, $region, $cityName, $type, $loadId);
 		}
 
 		fclose($fhandle);
