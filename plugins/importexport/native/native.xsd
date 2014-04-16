@@ -134,6 +134,7 @@
 			<element name="hide_cover_page_cover" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
 			<element name="show_cover_page" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
 			<element name="cover_page_description" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="cover_page_alt_text" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
 			<element name="embed" type="pkp:embed" />
 		</sequence>
 	</complexType>

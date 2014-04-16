@@ -121,6 +121,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			case 'sections':
 				$this->parseSections($n, $issue);
 				break;
+			case 'issue_cover':
+				$this->parseIssueCover($n, $issue);
+				break;
 			default:
 				fatalError('Unknown element ' . $n->tagName);
 		}
@@ -244,6 +247,34 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 
 		$sectionDao->insertObject($section);
 
+	}
+
+	/**
+	 * Parse out the issue cover and store it in an issue.
+	 * @param DOMElement $node
+	 * @param Issue $issue
+	 */
+	function parseIssueCover($node, $issue) {
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				list($locale, $value) = $this->parseLocalizedContent($n);
+				switch ($n->tagName) {
+					case 'file_name': $issue->setFileName($value, $locale); break;
+					case 'original_file_name': $issue->setOriginalFileName($value, $locale); break;
+					case 'hide_cover_page_archives': $issue->setHideCoverPageArchives($value, $locale); break;
+					case 'hide_cover_page_cover': $issue->setHideCoverPageCover($value, $locale); break;
+					case 'show_cover_page': $issue->setShowCoverPage($value, $locale); break;
+					case 'cover_page_description': $issue->setCoverPageDescription($value, $locale); break;
+					case 'cover_page_alt_text': $issue->setCoverPageAltText($value, $locale); break;
+					case 'embed':
+						import('classes.file.PublicFileManager');
+						$publicFileManager = new PublicFileManager();
+						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getLocalizedFileName();
+						file_put_contents($filePath, base64_decode($n->textContent));
+						break;
+				}
+			}
+		}
 	}
 
 	//

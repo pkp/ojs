@@ -189,6 +189,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			$this->createLocalizedNodes($doc, $issueCoverNode, 'hide_cover_page_cover', $issue->getHideCoverPageCover(null));
 			$this->createLocalizedNodes($doc, $issueCoverNode, 'show_cover_page', $issue->getShowCoverPage(null));
 			$this->createLocalizedNodes($doc, $issueCoverNode, 'cover_page_description', $issue->getCoverPageDescription(null));
+			$this->createLocalizedNodes($doc, $issueCoverNode, 'cover_page_alt_text', $issue->getCoverPageAltText(null));
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
