@@ -40,6 +40,27 @@
 	<message key="submission.reviewForm">Begutachtungsformular</message>
 	<message key="submission.reviewFormResponse">Antwort zum Begutachtungsformular</message>
 
+	<!-- Permissions -->
+	<message key="submission.permissions">Rechte</message>
+	<message key="submission.license">Lizenz</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Copyright-Inhaber/in</message>
+	<message key="submission.copyrightYear">Copyright-Jahr</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Bitte geben Sie einen gültigen URL (außerhalb der Zeitschrift) an (inklusive http://).</message>
+	<message key="submission.licenseURL">Lizenz-URL</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Namensnennung - Nicht kommerziell 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Namensnennung - Keine Bearbeitungen 4.0</message>
+	<message key="submission.license.cc.by4">CC Namensnennung 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Namensnennung - Weitergabe unter gleichen Bedingungen 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dieses Werk steht unter der a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell - Keine Bearbeitungen 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell -Weitergabe unter gleichen Bedingungen 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Lizenz Creative Commons Namensnennung - Keine Bearbeitungen 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Lizenz Creative Commons Namensnennung 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Lizenz Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International</a>.]]></message>
 
 	<message key="reviewer.article.enterReviewForm">Klicken Sie auf das Symbol, um das Begutachtungsformular auszufüllen.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Bitte füllen Sie die benötigten Felder aus.</message>
@@ -407,7 +428,7 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 LOCKSS muss erst dann eingerichtet werden, wenn die Zeitschrift vollständig in Betrieb genommen wurde. Dann führen Sie bitte die folgenden beiden Schritte aus:]]></message>
 
 	<!-- 3. Einrichtungsschritt -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Empfohlene Creative-Commons-Lizenz</h3>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Beispiele für die Anzeige von Creative-Commons-Lizenzen in den Copyright-Vermerken</h3>
 <h4>1. Empfohlene Copyright-Regelungen für Zeitschriften mit Open Access</h4>
 Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:
 <ol type="a">
