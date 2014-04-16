@@ -633,6 +633,8 @@
 	<message key="manager.subscriptions.form.typeId">Abonnementtyp</message>
 	<message key="manager.subscriptions.form.typeIdRequired">Ein Abonnementtyp ist erforderlich.</message>
 	<message key="manager.subscriptions.form.typeIdValid">Wählen Sie einen gültigen Abonnementtyp.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Erinnerung vor Ablauf</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Erinnerung nach Ablauf</message>
 	<message key="manager.subscriptions.form.dateStart">Anfangsdatum</message>
 	<message key="manager.subscriptions.form.dateStartRequired"> Ein Anfangsdatum des Abonnements ist erforderlich.</message>
 	<message key="manager.subscriptions.form.dateStartValid">Wählen Sie ein gültiges Anfangsdatum des Abonnements.</message>
