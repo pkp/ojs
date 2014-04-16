@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * lcoale/de_DE/locale.xml
+  * locale/de_DE/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -419,7 +419,7 @@ Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgend
 <h4>2. Empfohlene Copyright-Regelungen für Zeitschriften mit verzögertem Open Access</h4>
 Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:
 <ol type="a">
-	<li>Die Autor/innen behalten das Copyright und erlauben der Zeitschrift die Erstveröffentlichung, womit die Arbeit [ZEITSPANNE FESTLEGEN] nach der Veröffentlichung zugleich unter einer <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Namensnennung Lizenz</a> lizensiert wird, die es anderen erlaubt, die Arbeit unter Nennung der Autor/innenschaft und der Erstpublikation in dieser Zeitschrift zu verwenden.</li>
+	<li>Die Autor/innen behalten das Copyright und erlauben der Zeitschrift die Erstveröffentlichung, womit die Arbeit [ZEITSPANNE FESTLEGEN] nach der Veröffentlichung zugleich unter einer <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Namensnennung Lizenz</a> lizenziert wird, die es anderen erlaubt, die Arbeit unter Nennung der Autor/innenschaft und der Erstpublikation in dieser Zeitschrift zu verwenden.</li>
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
@@ -598,7 +598,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="reviewer.article.notifyEditorB">des Beitrags benachrichtigen, ob Sie die Begutachtung übernehmen wollen.</message>
 	<message key="reviewer.article.consultGuidelines">Falls Sie die Begutachtung vornehmen wollen, beachten Sie bitte die nachfolgenden Richtlinien für Gutachter/innen.</message>
 	<message key="reviewer.article.downloadSubmission">Klicken Sie auf die Dateinamen, um die zur Einreichung gehörenden Dateien herunterzuladen und zu begutachten (auf dem Bildschirm oder im Ausdruck).</message>
-	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Erklären Sie, ob Sie bezüglich dieser Forschung einen Interessenskonflikt haben (Siehe <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Richtlinien für Interessenkonflikte</a>).]]></message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Erklären Sie, ob Sie bezüglich dieser Forschung einen Interessenkonflikt haben (Siehe <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Richtlinien für Interessenkonflikte</a>).]]></message>
 	<message key="reviewer.competingInterests">Interessenkonflikte</message>
 	<message key="reviewer.article.enterReviewA">Bitte klicken Sie auf das Symbol, um Ihr Gutachten zu diesem Beitrag einzugeben.</message>
 	<message key="reviewer.article.uploadFile">Zusätzlich können Sie Dateien für die Redakteurin/den Redakteur und/oder die Autorin/den Autor hochladen.</message>
