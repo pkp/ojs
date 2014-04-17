@@ -316,8 +316,6 @@ class PayPalPlugin extends PaymethodPlugin {
 					$mail->send();
 					exit();
 				}
-
-				break;
 			case 'cancel':
 				Handler::setupTemplate();
 				$templateMgr->assign(array(
@@ -329,7 +327,6 @@ class PayPalPlugin extends PaymethodPlugin {
 				));
 				$templateMgr->display('common/message.tpl');
 				exit();
-				break;
 		}
 		parent::handle($args, $request); // Don't know what to do with it
 	}

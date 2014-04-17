@@ -58,10 +58,8 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 
 		// Sources contains journal title, issue ID, and pages
 		$source = $journal->getLocalizedName() . '; ' . $issue->getIssueIdentification();
-		$pages = $article->getPages();
 
 		// Relation
-		$relation = array();
 		foreach ($article->getSuppFiles() as $suppFile) {
 			$record->relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
 		}

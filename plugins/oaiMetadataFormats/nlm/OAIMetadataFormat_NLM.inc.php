@@ -30,7 +30,6 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$section =& $record->getData('section');
 		$issue =& $record->getData('issue');
 		$galleys =& $record->getData('galleys');
-		$articleId = $article->getId();
 
 		// Cache issue ordering information.
 		static $issueId;
@@ -47,7 +46,6 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			unset($sections);
 		}
 
-		$abbreviation = $journal->getLocalizedSetting('abbreviation');
 		$printIssn = $journal->getSetting('printIssn');
 		$onlineIssn = $journal->getSetting('onlineIssn');
 		$primaryLocale = $journal->getPrimaryLocale();
