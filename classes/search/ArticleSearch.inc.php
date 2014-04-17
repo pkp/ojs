@@ -79,7 +79,6 @@ class ArticleSearch extends SubmissionSearch {
 			// Exclude unwanted IDs.
 			if (in_array($submissionId, $exclude)) continue;
 
-			$orderKey = null;
 			switch ($orderBy) {
 				case 'authors':
 					$authors = $authorDao->getBySubmissionId($submissionId);
@@ -369,7 +368,7 @@ class ArticleSearch extends SubmissionSearch {
 		}
 
 		// Let plugins mangle the search ordering options.
-		$results = HookRegistry::call(
+		HookRegistry::call(
 			'SubmissionSearch::getResultSetOrderingOptions',
 			array($journal, &$resultSetOrderingOptions)
 		);

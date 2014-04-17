@@ -212,7 +212,6 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function acceptGiftPayments() {
-		$journal = $this->request->getJournal();
 		return $this->acceptGiftSubscriptionPayments();
 	}
 

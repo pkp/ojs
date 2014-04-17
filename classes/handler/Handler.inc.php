@@ -55,7 +55,6 @@ class Handler extends PKPHandler {
 		// Get the requested path.
 		$router = $request->getRouter();
 		$requestedPath = $router->getRequestedContextPath($request);
-		$journal = null;
 
 		if ($requestedPath === 'index' || $requestedPath === '') {
 			// No journal requested. Check how many journals the site has.
@@ -72,7 +71,6 @@ class Handler extends PKPHandler {
 				$journal = $this->getSiteRedirectContext($request);
 			}
 		} else {
-			$contextCount = null;
 			// Return the requested journal.
 			$journal = $router->getContext($request);
 		}

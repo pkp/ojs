@@ -21,9 +21,6 @@ class OJSPaymentAction {
 		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$form = new PaymentSettingsForm();
 
-		$journal = $request->getJournal();
-		$templateMgr = TemplateManager::getManager($request);
-
 		if ($form->isLocaleResubmit()) {
 			$form->readInputData();
 		} else {
@@ -38,9 +35,6 @@ class OJSPaymentAction {
 	function savePaymentSettings($args, $request) {
 		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$settingsForm = new PaymentSettingsForm();
-
-		$journal = $request->getJournal();
-		$templateMgr = TemplateManager::getManager($request);
 
 		$settingsForm->readInputData();
 
@@ -102,11 +96,7 @@ class OJSPaymentAction {
 	 * Display form to edit program settings.
 	 */
 	function payMethodSettings($request) {
-		$templateMgr = TemplateManager::getManager($request);
-
-		$journal = $request->getJournal();
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
-
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->initData();
 		$settingsForm->display();
@@ -116,9 +106,7 @@ class OJSPaymentAction {
 	 * Save changes to payment settings.
 	 */
 	function savePayMethodSettings($request) {
-		$journal = $request->getJournal();
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
-
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->readInputData();
 

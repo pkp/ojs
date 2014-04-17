@@ -68,9 +68,7 @@ class ContextForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = Request::getJournal();
 		$templateMgr = TemplateManager::getManager();
-
 		$templateMgr->assign('versionId', $this->versionId);
 
 		if (isset($this->context)) {

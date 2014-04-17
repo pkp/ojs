@@ -779,8 +779,8 @@ class IssueDAO extends DAO {
 	 * Flush the issue cache.
 	 */
 	function flushCache() {
-		$cache = $this->_getCache('issues')->flush();
-		$cache = $this->_getCache('current')->flush();
+		$this->_getCache('issues')->flush();
+		$this->_getCache('current')->flush();
 	}
 }
 

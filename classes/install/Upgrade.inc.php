@@ -777,7 +777,6 @@ class Upgrade extends Installer {
 
 		$submissionFile = new SubmissionFile();
 
-		$primaryLocale = AppLocale::getPrimaryLocale();
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 
@@ -785,7 +784,6 @@ class Upgrade extends Installer {
 		$filesDir = Config::getVar('files', 'files_dir') . '/journals/';
 		while (!$articleFilesResult->EOF){
 			$row = $articleFilesResult->GetRowAssoc(false);
-			$articleFileName = $row['file_name'];
 			// Assemble the old file path.
 			$oldFilePath = $filesDir . $row['context_id'] . '/articles/' . $row['submission_id'] . '/';
 			if (isset($row['type'])) { // pre 2.4 upgrade.
@@ -993,7 +991,6 @@ class Upgrade extends Installer {
 
 		foreach ($galleyUpdateCases as $case) {
 			$skipQuery = false;
-			$params = array();
 			if ($case['fileType'] == STATISTICS_FILE_TYPE_PDF) {
 				$pdfFileTypeWhereCheck = 'IN';
 			} else {
