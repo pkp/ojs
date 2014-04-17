@@ -1,3 +1,5 @@
+before_commands:
+  - 'git submodule update --init --recursive'
 filter:
   excluded_paths:
     - 'lib/pkp/lib/*'
