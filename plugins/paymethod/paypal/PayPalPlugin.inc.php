@@ -243,10 +243,16 @@ class PayPalPlugin extends PaymethodPlugin {
 
 							//NB: if/when paypal subscriptions are enabled, these checks will have to be adjusted
 							// because subscription prices may change over time
+							$queuedAmount = $queuedPayment->getAmount();
+							$grantedAmount = $request->getUserVar('mc_gross');
+							$queuedCurrency = $queuedPayment->getCurrencyCode();
+							$grantedCurrency = $request->getUserVar('mc_currency');
+							$grantedEmail = String::strtolower($request->getUserVar('receiver_email'));
+							$queuedEmail = String::strtolower($this->getSetting($journal->getId(), 'selleraccount'));
 							if (
-								(($queuedAmount = $queuedPayment->getAmount()) != ($grantedAmount = $request->getUserVar('mc_gross')) && $queuedAmount > 0) ||
-								($queuedCurrency = $queuedPayment->getCurrencyCode()) != ($grantedCurrency = $request->getUserVar('mc_currency')) ||
-								($grantedEmail = String::strtolower($request->getUserVar('receiver_email'))) != ($queuedEmail = String::strtolower($this->getSetting($journal->getId(), 'selleraccount')))
+								($queuedAmount != $grantedAmount && $queuedAmount > 0) ||
+								$queuedCurrency != $grantedCurrency ||
+								$grantedEmail != $queuedEmail
 							) {
 								// The integrity checks for the transaction failed. Complain.
 								$mail->assignParams(array(

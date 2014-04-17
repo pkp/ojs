@@ -72,7 +72,7 @@ class DuraCloudLoginForm extends Form {
 			$this->getData('duracloudPassword')
 		);
 		$ds = new DuraStore($dcc);
-		if ($ds->getSpaces($storeId) === false) {
+		if ($ds->getSpaces() === false) {
 			// Could not get a list of spaces.
 			$this->addError('duracloudUrl', __('plugins.importexport.duracloud.configuration.credentialsInvalid'));
 			return false;

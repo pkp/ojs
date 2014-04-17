@@ -97,6 +97,8 @@ class WebFeedPlugin extends GenericPlugin {
 				$currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
 				$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
 				$journalTitle = $this->sanitize($currentJournal->getLocalizedName());
+			} else {
+				$displayPage = null; // Suppress scrutinizer
 			}
 
 			if (isset($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {

@@ -106,6 +106,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				$importClass='ArticleGalley';
 				break;
 			default:
+				$importClass=null; // Suppress scrutinizer warn
 				fatalError('Unknown node ' . $elementName);
 		}
 		// Caps on class name for consistency with imports, whose filter

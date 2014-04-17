@@ -16,7 +16,7 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class SehlPlugin extends GenericPlugin {
-	/** @var string */
+	/** @var array */
 	var $queryTerms;
 
 	function register($category, $path) {
@@ -102,9 +102,9 @@ class SehlPlugin extends GenericPlugin {
 		$startIndex = strlen($output) - strlen($fromDiv) + $endOfBodyTagOffset + 1;
 		$scanPart = substr($output, $startIndex);
 
+		$newOutput = '';
 		foreach ($this->queryTerms as $q) {
 			// Thanks to Brian Suda http://suda.co.uk/projects/SEHL/
-			$newOutput = '';
 			$pat = '/((<[^!][\/]*?[^<>]*?>)([^<]*))|<!---->|<!--(.*?)-->|((<!--[ \r\n\t]*?)(.*?)[ \r\n\t]*?-->([^<]*))/si';
 			preg_match_all($pat, $scanPart, $tag_matches);
 
