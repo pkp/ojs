@@ -502,7 +502,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$return new DAOResultFactory($result, $this, '_fromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**

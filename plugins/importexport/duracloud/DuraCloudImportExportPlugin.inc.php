@@ -300,6 +300,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		// Verify that the configuration and space ID are valid
 		$dcc =& $this->getDuraCloudConnection();
 		$ds = new DuraStore($dcc);
+		$metadata = null;
 		if ($ds->getSpace($spaceId, $metadata) === false) {
 			echo __('plugins.importexport.duracloud.cliError') . "\n";
 			echo __('plugins.importexport.duracloud.configuration.credentialsInvalid') . "\n";
@@ -447,6 +448,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		$dcc =& $this->getDuraCloudConnection();
 		$duraStore = new DuraStore($dcc);
 		$spaceId = $this->getDuraCloudSpace();
+		$metadata = null;
 		$contents = $duraStore->getSpace($spaceId, $metadata, null, 'issue-');
 		if (!$contents) return $contents;
 
