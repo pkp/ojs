@@ -1,0 +1,5 @@
+filter:
+  excluded_paths:
+    - 'lib/pkp/lib/*'
+    - 'tests/*'
+    - 'plugins/generic/externalFeed/simplepie/*'

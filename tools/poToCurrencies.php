@@ -31,8 +31,7 @@ class poToCurrencies extends CommandLineTool {
 	function poToCurrencies($argv = array()) {
 		parent::CommandLineTool($argv);
 
-		$toolName = array_shift($argv);
-
+		array_shift($argv); // Shift tool name off the top
 		$this->locale = array_shift($argv);
 		$this->translationFile = array_shift($argv);
 
@@ -77,8 +76,6 @@ class poToCurrencies extends CommandLineTool {
 		$outputMap = array();
 		foreach ($currencies as $currency) {
 			$english = $currency->getName();
-			$codeAlpha = $currency->getCodeAlpha();
-			$codeNumeric = $currency->getCodeNumeric();
 
 			if (!isset($translationMap[$english])) {
 				echo "WARNING: Unknown currency \"$english\"! Using English as default.\n";

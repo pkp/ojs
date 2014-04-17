@@ -18,6 +18,13 @@ require(dirname(__FILE__) . '/bootstrap.inc.php');
 import('classes.search.ArticleSearchIndex');
 
 class rebuildSearchIndex extends CommandLineTool {
+	/**
+	 * Constructor
+	 * @param $argv array
+	 */
+	function rebuildSearchIndex($argv) {
+		parent::CommandLineTool($argv);
+	}
 
 	/**
 	 * Print command usage information.
@@ -67,7 +74,7 @@ class rebuildSearchIndex extends CommandLineTool {
 	 * when constructing galley/supp file download URLs.
 	 * @see PKPRequest::getBaseUrl()
 	 */
-	function callbackBaseUrl($hookName, $params) {
+	function callbackBaseUrl($hookName, &$params) {
 		$baseUrl =& $params[0];
 		$baseUrl = Config::getVar('general', 'base_url');
 		return true;

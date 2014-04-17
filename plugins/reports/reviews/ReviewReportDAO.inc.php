@@ -24,7 +24,6 @@ class ReviewReportDAO extends DAO {
 	 * @return array
 	 */
 	function getReviewReport($journalId) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 
 		$result = $this->retrieve(
