@@ -161,7 +161,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		$importFilter = array_shift($importFilters);
 		$importFilter->setDeployment($this->getDeployment());
 		$issueGalleyDoc = new DOMDocument();
-		$issueGalleyDoc->appendChild($articleDoc->importNode($n, true));
+		$issueGalleyDoc->appendChild($issueGalleyDoc->importNode($n, true));
 		return $importFilter->execute($issueGalleyDoc);
 	}
 
