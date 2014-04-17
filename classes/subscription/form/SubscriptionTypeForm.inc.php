@@ -146,6 +146,7 @@ class SubscriptionTypeForm extends Form {
 	function execute() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$journal = Request::getJournal();
+		$nonExpiring = null; // Suppress scrutinizer warn
 
 		if (isset($this->typeId)) {
 			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->typeId);

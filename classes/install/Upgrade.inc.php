@@ -980,6 +980,7 @@ class Upgrade extends Installer {
 		$loadId = '3.0.0-upgrade-ojsViews';
 		$metricsDao = DAORegistry::getDAO('MetricsDAO');
 		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, context_id, issue_id)';
+		$selectClause = null; // Conditionally set later
 
 		// Galleys.
 		$galleyUpdateCases = array(

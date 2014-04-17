@@ -39,6 +39,7 @@ class StageParticipantGridHandler extends PKPStageParticipantGridHandler {
 	 */
 	function _logEvent ($request, $eventType) {
 		// Get the log event message
+		$logMessage = null; // Suppress scrutinizer message
 		switch($eventType) {
 			case SUBMISSION_LOG_MESSAGE_SENT:
 				$logMessage = 'informationCenter.history.messageSent';

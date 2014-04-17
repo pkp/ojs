@@ -85,6 +85,8 @@ class ResolverPlugin extends GatewayPlugin {
 				} elseif ($scheme == 'ynp') {
 					$year = (int) array_shift($args);
 					$volume = null;
+				} else {
+					return; // Suppress scrutinizer warn
 				}
 				$number = array_shift($args);
 				$page = (int) array_shift($args);
@@ -193,7 +195,7 @@ class ResolverPlugin extends GatewayPlugin {
 				}
 				break;
 		}
-		return parent::manage($verb, $args);
+		return parent::manage($verb, $args, $message, $messageParams, $pluginModalContent);
 	}
 }
 

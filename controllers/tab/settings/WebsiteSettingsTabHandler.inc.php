@@ -221,6 +221,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 				$fileUploadForm = new NewContextCssFileForm($settingName);
 				break;
 			default:
+				$fileUploadForm = null; // Suppress scrutinizer
 				assert(false);
 				break;
 		}

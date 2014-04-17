@@ -146,9 +146,10 @@ class IssueFileManager extends FileManager {
 	 * Create an issue galley based on a temporary file.
 	 * @param $temporaryFile TemporaryFile
 	 * @param $contentType int Issue file content type
-	 * @return int the file ID
+	 * @return IssueFile the resulting issue file
 	 */
 	function fromTemporaryFile($temporaryFile, $contentType = ISSUE_FILE_PUBLIC) {
+		$result = null;
 		if (HookRegistry::call('IssueFileManager::fromTemporaryFile', array(&$temporaryFile, &$contentType, &$result))) return $result;
 
 		$issueId = $this->getIssueId();

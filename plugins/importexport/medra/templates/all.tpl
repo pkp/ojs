@@ -9,7 +9,6 @@
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.common.export.selectUnregistered"}
-{assign var="pageCrumbTitle" value="plugins.importexport.common.export.selectUnregistered"}
 {include file="common/header.tpl"}
 {/strip}
 

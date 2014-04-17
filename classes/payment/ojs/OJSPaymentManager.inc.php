@@ -259,12 +259,11 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 				$subscriptionId = $queuedPayment->getAssocId();
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
 					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = true;
 				} else {
-					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = false;
 				}
@@ -356,6 +355,7 @@ class OJSPaymentManager extends PaymentManager {
 				$giftDao = DAORegistry::getDAO('GiftDAO');
 				$gift =& $giftDao->getGift($giftId);
 				if (!$gift) return false;
+				$password = null; // Suppress scrutinizer warn
 
 				$journalDao = DAORegistry::getDAO('JournalDAO');
 				$journalId = $gift->getAssocId();

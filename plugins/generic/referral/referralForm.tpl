@@ -9,7 +9,6 @@
  *
  *}
 {strip}
-{assign var="pageCrumbTitle" value="$referralTitle"}
 {if $referralId}
 	{assign var="pageTitle" value="plugins.generic.referral.editReferral"}
 {else}

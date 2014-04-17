@@ -17,7 +17,7 @@
 import('lib.pkp.classes.form.Form');
 
 class IssueGalleyForm extends Form {
-	/** @var int the ID of the issue */
+	/** @var Issue the issue the galley belongs to */
 	var $_issue = null;
 
 	/** @var IssueGalley current galley */

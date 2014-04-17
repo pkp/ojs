@@ -82,13 +82,12 @@ class ArticleHandler extends Handler {
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($this->journal->getSetting('enablePublicGalleyId')) {
-			$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $this->article->getId());
+			$this->galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $this->article->getId());
 		}
 
-		if (!$galley) {
-			$galley = $galleyDao->getById($galleyId, $this->article->getId());
+		if (!$this->galley) {
+			$this->galley = $galleyDao->getById($galleyId, $this->article->getId());
 		}
-		$this->galley = $galley;
 	}
 
 	/**
@@ -130,7 +129,7 @@ class ArticleHandler extends Handler {
 			$enableComments = $journal->getSetting('enableComments');
 
 			if (($article->getEnableComments()) && ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS)) {
-				$comments == $commentDao->getRootCommentsBySubmissionId($article->getId());
+				$comments = $commentDao->getRootCommentsBySubmissionId($article->getId());
 			}
 
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
@@ -138,11 +137,11 @@ class ArticleHandler extends Handler {
 				$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 			}
 
-			if (!$galley) {
+			if (!isset($galley)) {
 				$galley = $galleyDao->getById($galleyId, $article->getId());
 			}
 
-			if ($galley) {
+			if (!isset($galley)) {
 				if ($galley->getRemoteURL()) {
 					$request->redirectUrl($galley->getRemoteURL());
 				}

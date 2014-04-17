@@ -151,6 +151,7 @@ class UserHandler extends PKPUserHandler {
 
 		$user = $request->getUser();
 		$userId = $user->getId();
+		$templateMgr = TemplateManager::getManager($request);
 
 		// Subscriptions contact and additional information
 		$subscriptionName = $journal->getSetting('subscriptionName');
@@ -163,11 +164,13 @@ class UserHandler extends PKPUserHandler {
 		if ($individualSubscriptionTypesExist) {
 			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 			$userIndividualSubscription = $subscriptionDao->getSubscriptionByUserForJournal($userId, $journalId);
+			$templateMgr->assign('userIndividualSubscription', $userIndividualSubscription);
 		}
 
 		if ($institutionalSubscriptionTypesExist) {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			$userInstitutionalSubscriptions = $subscriptionDao->getSubscriptionsByUserForJournal($userId, $journalId);
+			$templateMgr->assign('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -175,7 +178,6 @@ class UserHandler extends PKPUserHandler {
 		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 
 		$this->setupTemplate($request);
-		$templateMgr = TemplateManager::getManager($request);
 
 		$templateMgr->assign('subscriptionName', $subscriptionName);
 		$templateMgr->assign('subscriptionEmail', $subscriptionEmail);
@@ -188,8 +190,6 @@ class UserHandler extends PKPUserHandler {
 		$templateMgr->assign('acceptSubscriptionPayments', $acceptSubscriptionPayments);
 		$templateMgr->assign('individualSubscriptionTypesExist', $individualSubscriptionTypesExist);
 		$templateMgr->assign('institutionalSubscriptionTypesExist', $institutionalSubscriptionTypesExist);
-		$templateMgr->assign('userIndividualSubscription', $userIndividualSubscription);
-		$templateMgr->assign('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
 		$templateMgr->display('user/subscriptions.tpl');
 
 	}
@@ -229,7 +229,7 @@ class UserHandler extends PKPUserHandler {
 				$deniedKey = 'user.noRoles.regReviewerClosed';
 				break;
 			default:
-				$request->redirect(null, null, 'index');
+				return $request->redirect(null, null, 'index');
 		}
 
 		if ($journal->getSetting($setting)) {

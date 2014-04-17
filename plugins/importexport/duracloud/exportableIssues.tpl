@@ -10,7 +10,6 @@
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.duracloud.selectIssue"}
-{assign var="pageCrumbTitle" value="plugins.importexport.duracloud.selectIssue"}
 {include file="common/header.tpl"}
 {/strip}
 

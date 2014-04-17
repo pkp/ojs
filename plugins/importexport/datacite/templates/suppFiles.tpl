@@ -9,7 +9,6 @@
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.datacite.export.selectSuppFile"}
-{assign var="pageCrumbTitle" value="plugins.importexport.datacite.export.selectSuppFile"}
 {include file="common/header.tpl"}
 {/strip}
 

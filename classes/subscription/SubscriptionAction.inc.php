@@ -251,7 +251,7 @@ class SubscriptionAction {
 	 * Display form to create new subscription.
 	 */
 	function createSubscription($args, $request, $institutional = false) {
-		SubscriptionAction::editSubscription($args, $requset, $institutional);
+		SubscriptionAction::editSubscription($args, $request, $institutional);
 	}
 
 	/**

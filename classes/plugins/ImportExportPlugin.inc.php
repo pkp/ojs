@@ -63,7 +63,7 @@ class ImportExportPlugin extends Plugin {
 	 * @param $args Parameters to the plugin
 	 */
 	function executeCLI($scriptName, &$args) {
-		$this->usage();
+		$this->usage($scriptName);
 		// Implemented by subclasses
 	}
 
@@ -103,6 +103,7 @@ class ImportExportPlugin extends Plugin {
 	 * Extend the {url ...} smarty to support import/export plugins.
 	 */
 	function smartyPluginUrl($params, &$smarty) {
+		$path = null;
 		if (!empty($params['path'])) $path = $params['path'];
 		if (!is_array($path)) $path = array($params['path']);
 

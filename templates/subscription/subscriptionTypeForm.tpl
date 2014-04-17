@@ -16,7 +16,6 @@
 	{assign var="pageTitle" value="manager.subscriptionTypes.create"}
 {/if}
 {assign var="pageId" value="manager.subscriptionTypes.subscriptionTypeForm"}
-{assign var="pageCrumbTitle" value=$subscriptionTypeTitle}
 {include file="common/header.tpl"}
 {/strip}
 

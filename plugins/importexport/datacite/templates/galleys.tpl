@@ -9,7 +9,6 @@
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.common.export.selectGalley"}
-{assign var="pageCrumbTitle" value="plugins.importexport.common.export.selectGalley"}
 {include file="common/header.tpl"}
 {/strip}
 

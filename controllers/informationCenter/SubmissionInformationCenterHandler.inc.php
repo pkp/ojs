@@ -81,6 +81,7 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 	 */
 	function _logEvent ($request, $eventType) {
 		// Get the log event message
+		$logMessage = null; // Suppress scrutinizer warn
 		switch($eventType) {
 			case SUBMISSION_LOG_NOTE_POSTED:
 				$logMessage = 'informationCenter.history.notePosted';

@@ -106,7 +106,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
 		if ($publicationFeeEnabled) {
-			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $subission->getId()));
+			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $this->getSubission()->getId()));
 		}
 
 		return parent::fetch($request);
@@ -278,10 +278,10 @@ class IssueEntryPublicationMetadataForm extends Form {
 					// This was published elsewhere; make sure we don't
 					// mess up sequencing information.
 					$issueId = $publishedArticle->getIssueId();
-					$publishedArticleDao->deletePublishedArticleByArticleId($ubmission->getId());
+					$publishedArticleDao->deletePublishedArticleByArticleId($submission->getId());
 
 					// Delete the article from the search index.
-					$articleSearchIndex->articleFileDeleted($ubmission->getId());
+					$articleSearchIndex->articleFileDeleted($submission->getId());
 				}
 			}
 

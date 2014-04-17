@@ -56,7 +56,6 @@ class GatewayHandler extends Handler {
 			}
 
 			if (!isset($year)) {
-				$showInfo = true;
 				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
 					$journal->getId()
@@ -66,11 +65,10 @@ class GatewayHandler extends Handler {
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
-			} else {
-				$showInfo = false;
+				$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
+				$templateMgr->assign('issues', $issues);
+				$templateMgr->assign('showInfo', true);
 			}
-
-			$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
 
 			$prevYear = null;
 			$nextYear = null;
@@ -89,11 +87,9 @@ class GatewayHandler extends Handler {
 			}
 
 			$templateMgr->assign('journal', $journal);
-			$templateMgr->assign('issues', $issues);
 			$templateMgr->assign('year', $year);
 			$templateMgr->assign('prevYear', $prevYear);
 			$templateMgr->assign('nextYear', $nextYear);
-			$templateMgr->assign('showInfo', $showInfo);
 
 			$locales = $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
@@ -141,7 +137,6 @@ class GatewayHandler extends Handler {
 			}
 
 			if (!isset($year)) {
-				$showInfo = true;
 				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
 					$journal->getId()
@@ -151,11 +146,10 @@ class GatewayHandler extends Handler {
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
-			} else {
-				$showInfo = false;
+				$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
+				$templateMgr->assign('issues', $issues);
+				$templateMgr->assign('showInfo', true);
 			}
-
-			$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
 
 			$prevYear = null;
 			$nextYear = null;
@@ -174,11 +168,9 @@ class GatewayHandler extends Handler {
 			}
 
 			$templateMgr->assign('journal', $journal);
-			$templateMgr->assign('issues', $issues);
 			$templateMgr->assign('year', $year);
 			$templateMgr->assign('prevYear', $prevYear);
 			$templateMgr->assign('nextYear', $nextYear);
-			$templateMgr->assign('showInfo', $showInfo);
 
 			$locales =& $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {

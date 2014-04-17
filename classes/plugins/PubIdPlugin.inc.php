@@ -283,6 +283,8 @@ class PubIdPlugin extends Plugin {
 		// (e.g. through import) even if the suffix itself is not in the
 		// database.
 		$typesToCheck = array('Issue', 'PublishedArticle', 'ArticleGalley');
+		$objectsToCheck = null; // Suppress scrutinizer warn
+
 		foreach($typesToCheck as $pubObjectType) {
 			switch($pubObjectType) {
 				case 'Issue':

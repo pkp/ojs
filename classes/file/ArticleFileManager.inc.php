@@ -281,6 +281,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $destFileId int (optional)
 	 */
 	function copyAndRenameFile($sourceFileId, $sourceRevision, $fileStage, $destFileId = null) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::copyAndRenameFile', array(&$sourceFileId, &$sourceRevision, &$fileStage, &$destFileId, &$result))) return $result;
 
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
@@ -334,7 +335,7 @@ class ArticleFileManager extends FileManager {
 		copy($sourceDir.$sourceArticleFile->getFileName(), $destDir.$newFileName);
 
 		$articleFile->setFileName($newFileName);
-		$articleFileDao->updateArticleFile($articleFile);
+		$submissionFileDao->updateArticleFile($articleFile);
 
 		return $fileId;
 	}
@@ -399,6 +400,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleUpload($fileName, $fileStage, $fileId = null, $overwrite = false) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::handleUpload', array(&$fileName, &$fileStage, &$fileId, &$overwrite, &$result))) return $result;
 
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
@@ -454,6 +456,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleWrite($fileName, &$contents, $mimeType, $fileStage, $fileId = null, $overwrite = false) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::handleWrite', array(&$fileName, &$contents, &$mimeType, &$fileId, &$overwrite, &$result))) return $result;
 
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
@@ -508,6 +511,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleCopy($url, $mimeType, $fileStage, $fileId = null, $overwrite = false) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::handleCopy', array(&$url, &$mimeType, &$fileStage, &$fileId, &$overwrite, &$result))) return $result;
 
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
@@ -559,6 +563,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function temporaryFileToArticleFile(&$temporaryFile, $fileStage, $assocId = null) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::temporaryFileToArticleFile', array(&$temporaryFile, &$fileStage, &$assocId, &$result))) return $result;
 
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');

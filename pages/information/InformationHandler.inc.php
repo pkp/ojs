@@ -39,33 +39,29 @@ class InformationHandler extends Handler {
 			case 'readers':
 				$content = $journal->getLocalizedSetting('readerInformation');
 				$pageTitle = 'navigation.infoForReaders.long';
-				$pageCrumbTitle = 'navigation.infoForReaders';
 				break;
 			case 'authors':
 				$content = $journal->getLocalizedSetting('authorInformation');
 				$pageTitle = 'navigation.infoForAuthors.long';
-				$pageCrumbTitle = 'navigation.infoForAuthors';
 				break;
 			case 'librarians':
 				$content = $journal->getLocalizedSetting('librarianInformation');
 				$pageTitle = 'navigation.infoForLibrarians.long';
-				$pageCrumbTitle = 'navigation.infoForLibrarians';
 				break;
 			case 'competingInterestGuidelines':
 				$content = $journal->getLocalizedSetting('competingInterestsPolicy');
-				$pageTitle = $pageCrumbTitle = 'navigation.competingInterestGuidelines';
+				$pageTitle = 'navigation.competingInterestGuidelines';
 				break;
 			case 'sampleCopyrightWording':
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 				$content = __('manager.setup.authorCopyrightNotice.sample');
-				$pageTitle = $pageCrumbTitle = 'manager.setup.copyrightNotice';
+				$pageTitle = 'manager.setup.copyrightNotice';
 				break;
 			default:
-				$request->redirect($journal->getPath());
+				return $request->redirect($journal->getPath());
 		}
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('pageCrumbTitle', $pageCrumbTitle);
 		$templateMgr->assign('pageTitle', $pageTitle);
 		$templateMgr->assign('content', $content);
 		$templateMgr->display('information/information.tpl');
