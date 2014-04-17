@@ -15,10 +15,10 @@
  *
  */
 
-
 import('lib.pkp.classes.core.PKPApplication');
 
 define('PHP_REQUIRED_VERSION', '5.2.0');
+define('REQUIRES_XSL', false);
 
 define('ASSOC_TYPE_ARTICLE',		ASSOC_TYPE_SUBMISSION);
 define('ASSOC_TYPE_PUBLISHED_ARTICLE',	ASSOC_TYPE_PUBLISHED_SUBMISSION);
