@@ -176,11 +176,10 @@
 			inGroup="article-galley=>native-xml"
 			class="plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter"
 			isTemplate="0" />
-		<!-- Native XML article galley input
+		<!-- Native XML article galley input -->
 		<filter
 			inGroup="native-xml=>article-galley"
 			class="plugins.importexport.native.filter.NativeXmlArticleGalleyFilter"
 			isTemplate="0" />
-		-->
 	</filters>
 </filterConfig>
