@@ -23,7 +23,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $subscriptionId int
 	 * @return IndividualSubscription
 	 */
-	function &getSubscription($subscriptionId) {
+	function getSubscription($subscriptionId) {
 		$result = $this->retrieve(
 			'SELECT s.*
 			FROM
@@ -37,7 +37,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -50,7 +50,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @return IndividualSubscriptions
 	 */
-	function &getSubscriptionByUserForJournal($userId, $journalId) {
+	function getSubscriptionByUserForJournal($userId, $journalId) {
 		$result = $this->retrieveRange(
 			'SELECT s.*
 			FROM
@@ -68,7 +68,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -80,7 +80,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $userId int
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
-	function &getSubscriptionsByUser($userId, $rangeInfo = null) {
+	function getSubscriptionsByUser($userId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT s.*
 			FROM
@@ -93,7 +93,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+		$returner = new DAOResultFactory($result, $this, '_fromRow');
 
 		return $returner;
 	}
@@ -244,7 +244,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * Generator function to create object.
 	 * @return IndividualSubscription
 	 */
-	function createObject() {
+	function newDataObject() {
 		return new IndividualSubscription();
 	}
 
@@ -253,9 +253,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $row array
 	 * @return IndividualSubscription
 	 */
-	function &_returnSubscriptionFromRow($row) {
-		$individualSubscription = parent::_returnSubscriptionFromRow($row);
-		HookRegistry::call('IndividualSubscriptionDAO::_returnSubscriptionFromRow', array(&$individualSubscription, &$row));
+	function _fromRow($row) {
+		$individualSubscription = parent::_fromRow($row);
+		HookRegistry::call('IndividualSubscriptionDAO::_fromRow', array(&$individualSubscription, &$row));
 
 		return $individualSubscription;
 	}
@@ -265,7 +265,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $individualSubscription IndividualSubscription
 	 * @return int 
 	 */
-	function insertSubscription(&$individualSubscription) {
+	function insertSubscription($individualSubscription) {
 		return $this->_insertSubscription($individualSubscription);
 	}
 
@@ -274,7 +274,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $individualSubscription IndividualSubscription
 	 * @return boolean
 	 */
-	function updateSubscription(&$individualSubscription) {
+	function updateSubscription($individualSubscription) {
 		return $this->_updateSubscription($individualSubscription);
 	}
 
@@ -426,7 +426,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * Retrieve all individual subscriptions.
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
-	function &getSubscriptions($rangeInfo = null) {
+	function getSubscriptions($rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT s.*
 			FROM
@@ -443,16 +443,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
 	 * Retrieve all individual subscribed users.
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
-	function &getSubscribedUsers($journalId, $rangeInfo = null) {
+	function getSubscribedUsers($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT	u.*
 			FROM	subscriptions s,
@@ -468,9 +466,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		);
 
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$returner = new DAOResultFactory($result, $userDao, '_returnUserFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $userDao, '_returnUserFromRow');
 	}
 
 	/**
@@ -485,7 +481,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $dateTo String date to search to
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
-	function &getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+	function getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 
 		$params = array($journalId);
 		$searchSql = parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
@@ -506,9 +502,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		$return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -579,7 +573,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
-	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
+	function getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
 		$dateEnd = explode('-', $dateEnd);
 
 		$result = $this->retrieveRange(
@@ -605,9 +599,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			), $rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -616,7 +608,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $individualSubscription IndividualSubscription
 	 * @return boolean
 	 */	
-	function renewSubscription(&$individualSubscription) {
+	function renewSubscription($individualSubscription) {
 		return $this->_renewSubscription($individualSubscription);
 	}
 }

@@ -41,16 +41,16 @@ class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm {
 
 	/**
 	 * return app-specific mail template.
-	 * @param Submission $submission
-	 * @param String $templateKey
-	 * @param boolean $includeSignature
+	 * @param $submission Submission
+	 * @param $templateKey string
+	 * @param $includeSignature boolean optional
 	 * @return array
 	 */
-	protected function _getMailTemplate($article, $templateKey, $includeSignature = true) {
+	protected function _getMailTemplate($submission, $templateKey, $includeSignature = true) {
 		if ($includeSignature)
-			return new ArticleMailTemplate($article, $templateKey);
+			return new ArticleMailTemplate($submission, $templateKey);
 		else
-			return new ArticleMailTemplate($article, $templateKey, null, null, null, false);
+			return new ArticleMailTemplate($submission, $templateKey, null, null, null, false);
 	}
 }
 

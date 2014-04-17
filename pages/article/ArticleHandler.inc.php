@@ -141,7 +141,7 @@ class ArticleHandler extends Handler {
 				$galley = $galleyDao->getById($galleyId, $article->getId());
 			}
 
-			if (!isset($galley)) {
+			if (isset($galley)) {
 				if ($galley->getRemoteURL()) {
 					$request->redirectUrl($galley->getRemoteURL());
 				}

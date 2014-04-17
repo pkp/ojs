@@ -22,7 +22,7 @@ class SubscriptionAction {
 		$journalId = $journal->getId();
 
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$statusOptions =& $individualSubscriptionDao->getStatusOptions();
+		$statusOptions = $individualSubscriptionDao->getStatusOptions();
 		$individualStatus = array();
 
 		foreach ($statusOptions as $status => $localeKey) {
@@ -35,7 +35,7 @@ class SubscriptionAction {
 		}
 
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$statusOptions =& $institutionalSubscriptionDao->getStatusOptions();
+		$statusOptions = $institutionalSubscriptionDao->getStatusOptions();
 		$institutionalStatus = array();
 
 		foreach ($statusOptions as $status => $localeKey) {
@@ -59,7 +59,7 @@ class SubscriptionAction {
 	 */
 	function subscriptions($request, $institutional = false) {
 		$journal = $request->getJournal();
-		$rangeInfo =& PKPHandler::getRangeInfo($request, 'subscriptions');
+		$rangeInfo = PKPHandler::getRangeInfo($request, 'subscriptions');
 
 		if ($institutional) {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
@@ -72,7 +72,7 @@ class SubscriptionAction {
 		}
 
 		// Subscription status
-		$statusOptions =& $subscriptionDao->getStatusOptions();
+		$statusOptions = $subscriptionDao->getStatusOptions();
 		$filterStatus = $request->getUserVar('filterStatus') == 0 ? null : $request->getUserVar('filterStatus');
 
 		// Get the user's search conditions, if any
@@ -86,7 +86,7 @@ class SubscriptionAction {
 		$toDate = $request->getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
 
-		$subscriptions =& $subscriptionDao->getSubscriptionsByJournalId($journal->getId(), $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
+		$subscriptions = $subscriptionDao->getSubscriptionsByJournalId($journal->getId(), $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
 
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('subscriptions', $subscriptions);
@@ -196,7 +196,7 @@ class SubscriptionAction {
 
 		// Ensure subscription is for this journal
 		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) {
-			$subscription =& $subscriptionDao->getSubscription($subscriptionId);
+			$subscription = $subscriptionDao->getSubscription($subscriptionId);
 			if ($subscription) $subscriptionDao->renewSubscription($subscription);
 		}
 	}
@@ -385,9 +385,9 @@ class SubscriptionAction {
 	 */
 	function subscriptionTypes($request) {
 		$journal = $request->getJournal();
-		$rangeInfo =& Handler::getRangeInfo($request, 'subscriptionTypes');
+		$rangeInfo = Handler::getRangeInfo($request, 'subscriptionTypes');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getId(), $rangeInfo);
+		$subscriptionTypes = $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getId(), $rangeInfo);
 
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
@@ -403,7 +403,7 @@ class SubscriptionAction {
 		$journal = $request->getJournal();
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
+		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscriptionTypeId);
 
 		if ($subscriptionType && $subscriptionType->getJournalId() == $journal->getId()) {
 			$direction = $request->getUserVar('dir');
@@ -576,8 +576,11 @@ class SubscriptionAction {
 
 	/**
 	 * Send notification email to Subscription Manager when online payment is completed.
+	 * @param $request PKPRequest
+	 * @param $subscription Subscription
+	 * @param $mailTemplateKey string
 	 */
-	function sendOnlinePaymentNotificationEmail($request, &$subscription, $mailTemplateKey) {
+	function sendOnlinePaymentNotificationEmail($request, $subscription, $mailTemplateKey) {
 		$validKeys = array(
 			'SUBSCRIPTION_PURCHASE_INDL',
 			'SUBSCRIPTION_PURCHASE_INSTL',
@@ -603,7 +606,7 @@ class SubscriptionAction {
 		$user = $userDao->getById($subscription->getUserId());
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$role = $roleDao->newDataObject();

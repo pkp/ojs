@@ -33,6 +33,9 @@ class OJSSwordDeposit {
 	/** @var Issue */
 	var $issue;
 
+	/** @var Article */
+	var $article;
+
 	/**
 	 * Constructor.
 	 * Create a SWORD deposit object for an OJS article.
@@ -62,7 +65,10 @@ class OJSSwordDeposit {
 		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		if ($publishedArticle) $this->issue = $issueDao->getById($publishedArticle->getIssueId());
+		if ($publishedArticle) {
+			$this->issue = $issueDao->getById($publishedArticle->getIssueId());
+			$this->article = $publishedArticle;
+		}
 	}
 
 	/**

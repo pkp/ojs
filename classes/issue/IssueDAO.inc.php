@@ -19,6 +19,12 @@ import ('classes.issue.Issue');
 class IssueDAO extends DAO {
 	var $caches;
 
+	/**
+	 * Handle a cache miss.
+	 * @param $cache GenericCache
+	 * @param $id string
+	 * @return Issue
+	 */
 	function _cacheMiss($cache, $id) {
 		if ($cache->getCacheId() === 'current') {
 			$issue = $this->getCurrent($id, false);
@@ -29,6 +35,11 @@ class IssueDAO extends DAO {
 		return $issue;
 	}
 
+	/**
+	 * Get an issue cache by cache ID.
+	 * @param $cacheId string
+	 * @return GenericCache
+	 */
 	function _getCache($cacheId) {
 		if (!isset($this->caches)) $this->caches = array();
 		if (!isset($this->caches[$cacheId])) {

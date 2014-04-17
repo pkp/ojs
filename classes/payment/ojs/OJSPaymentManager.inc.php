@@ -309,11 +309,11 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$subscriptionId = $queuedPayment->getAssocId();
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
 					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = true;
 				} else {
-					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = false;
 				}

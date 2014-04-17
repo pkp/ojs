@@ -17,9 +17,9 @@
 import('classes.subscription.Subscription');
 import('classes.subscription.SubscriptionType');
 
-define('SUBSCRIPTION_USER',				0x01);
+define('SUBSCRIPTION_USER',			0x01);
 define('SUBSCRIPTION_MEMBERSHIP',		0x02);
-define('SUBSCRIPTION_REFERENCE_NUMBER',	0x03);
+define('SUBSCRIPTION_REFERENCE_NUMBER',		0x03);
 define('SUBSCRIPTION_NOTES',			0x04);
 
 class SubscriptionDAO extends DAO {
@@ -29,7 +29,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $subscriptionId int
 	 * @return Subscription
 	 */
-	function &getSubscription($subscriptionId) {
+	function getSubscription($subscriptionId) {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -54,7 +54,7 @@ class SubscriptionDAO extends DAO {
 	 * Retrieve subscription status options as associative array.
 	 * @return array
 	 */
-	function &getStatusOptions() {
+	function getStatusOptions() {
 		$statusOptions = array(
 			SUBSCRIPTION_STATUS_ACTIVE => 'subscriptions.status.active',
 			SUBSCRIPTION_STATUS_NEEDS_INFORMATION => 'subscriptions.status.needsInformation',
@@ -114,7 +114,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $subscription Subscription
 	 * @return int
 	 */
-	function insertSubscription(&$subscription) {
+	function insertSubscription($subscription) {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -132,7 +132,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $subscription Subscription
 	 * @return boolean
 	 */
-	function updateSubscription(&$subscription) {
+	function updateSubscription($subscription) {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -181,7 +181,7 @@ class SubscriptionDAO extends DAO {
 	 * Retrieve all subscriptions.
 	 * @return object DAOResultFactory containing Subscriptions
 	 */
-	function &getSubscriptions($rangeInfo = null) {
+	function getSubscriptions($rangeInfo = null) {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -198,7 +198,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $dateTo String date to search to
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
-	function &getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+	function getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -209,7 +209,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $journalId int
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
-	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
+	function getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -220,7 +220,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $subscription Subscription
 	 * @return boolean
 	 */
-	function renewSubscription(&$subscription) {
+	function renewSubscription($subscription) {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -327,7 +327,7 @@ class SubscriptionDAO extends DAO {
 	 * Generator function to create object.
 	 * @return Subscription
 	 */
-	function createObject() {
+	function newDataObject() {
 		// must be implemented by sub-classes
 		assert(false);
 	}
@@ -337,8 +337,8 @@ class SubscriptionDAO extends DAO {
 	 * @param $row array
 	 * @return Subscription
 	 */
-	function &_returnSubscriptionFromRow($row) {
-		$subscription = $this->createObject();
+	function _fromRow($row) {
+		$subscription = $this->newDataObject();
 		$subscription->setId($row['subscription_id']);
 		$subscription->setJournalId($row['journal_id']);
 		$subscription->setUserId($row['user_id']);
@@ -350,7 +350,7 @@ class SubscriptionDAO extends DAO {
 		$subscription->setReferenceNumber($row['reference_number']);
 		$subscription->setNotes($row['notes']);
 
-		HookRegistry::call('SubscriptionDAO::_returnSubscriptionFromRow', array(&$subscription, &$row));
+		HookRegistry::call('SubscriptionDAO::_fromRow', array(&$subscription, &$row));
 
 		return $subscription;
 	}
@@ -360,7 +360,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $subscription Subscription
 	 * @return int
 	 */
-	function _insertSubscription(&$subscription) {
+	function _insertSubscription($subscription) {
 		$returner = $this->update(
 			sprintf('INSERT INTO subscriptions
 				(journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes)
@@ -389,7 +389,7 @@ class SubscriptionDAO extends DAO {
 	 * @param $subscription Subscription
 	 * @return boolean
 	 */
-	function _updateSubscription(&$subscription) {
+	function _updateSubscription($subscription) {
 		$returner = $this->update(
 			sprintf('UPDATE subscriptions
 				SET
@@ -425,11 +425,11 @@ class SubscriptionDAO extends DAO {
 	 * @param $subscription Subscription
 	 * @return boolean
 	 */
-	function _renewSubscription(&$subscription) {
+	function _renewSubscription($subscription) {
 		if ($subscription->isNonExpiring()) return;
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
 
 		$duration = $subscriptionType->getDuration();
 		$dateEnd = strtotime($subscription->getDateEnd());

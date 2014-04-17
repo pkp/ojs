@@ -18,8 +18,8 @@ import('classes.subscription.SubscriptionDAO');
 import('classes.subscription.InstitutionalSubscription');
 
 define('SUBSCRIPTION_INSTITUTION_NAME',	0x20);
-define('SUBSCRIPTION_DOMAIN',			0x21);
-define('SUBSCRIPTION_IP_RANGE',			0x22);
+define('SUBSCRIPTION_DOMAIN',		0x21);
+define('SUBSCRIPTION_IP_RANGE',		0x22);
 
 class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	/**
@@ -27,7 +27,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $subscriptionId int
 	 * @return InstitutionalSubscription
 	 */
-	function &getSubscription($subscriptionId) {
+	function getSubscription($subscriptionId) {
 		$result = $this->retrieve(
 			'SELECT s.*, iss.*
 			FROM
@@ -43,7 +43,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnSubscriptionFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -55,7 +55,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $userId int
 	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
 	 */
-	function &getSubscriptionsByUser($userId, $rangeInfo = null) {
+	function getSubscriptionsByUser($userId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT s.*, iss.*
 			FROM
@@ -70,9 +70,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -81,7 +79,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
 	 */
-	function &getSubscriptionsByUserForJournal($userId, $journalId, $rangeInfo = null) {
+	function getSubscriptionsByUserForJournal($userId, $journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT s.*, iss.*
 			FROM
@@ -100,9 +98,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -112,7 +108,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $exactMatch boolean
 	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
 	 */
-	function &getSubscriptionsByInstitutionName($institutionName, $journalId, $exactMatch = true, $rangeInfo = null) {
+	function getSubscriptionsByInstitutionName($institutionName, $journalId, $exactMatch = true, $rangeInfo = null) {
 		$sql = 'SELECT s.*, iss.*
 				FROM
 				subscriptions s,
@@ -134,9 +130,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -291,7 +285,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $institutionalSubscription InstitutionalSubscription
 	 * @return int 
 	 */
-	function insertSubscription(&$institutionalSubscription) {
+	function insertSubscription($institutionalSubscription) {
 		$subscriptionId = null;
 		if ($this->_insertSubscription($institutionalSubscription)) {
 			$subscriptionId = $institutionalSubscription->getId();
@@ -320,7 +314,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $institutionalSubscription InstitutionalSubscription
 	 * @return boolean
 	 */
-	function updateSubscription(&$institutionalSubscription) {
+	function updateSubscription($institutionalSubscription) {
 		$returner = false;
 		if ($this->_updateSubscription($institutionalSubscription)) {
 
@@ -504,7 +498,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * Retrieve all institutional subscriptions.
 	 * @return object DAOResultFactory containing InstitutionalSubscriptions
 	 */
-	function &getSubscriptions($rangeInfo = null) {
+	function getSubscriptions($rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT s.*, iss.*
 			FROM
@@ -521,16 +515,14 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
 	 * Retrieve all institutional subscription contacts.
 	 * @return object DAOResultFactory containing Users
 	 */
-	function &getSubscribedUsers($journalId, $rangeInfo = null) {
+	function getSubscribedUsers($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT	u.*
 			FROM	subscriptions s,
@@ -546,9 +538,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		);
 
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$returner = new DAOResultFactory($result, $userDao, '_returnUserFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $userDao, '_returnUserFromRow');
 	}
 
 	/**
@@ -563,7 +553,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $dateTo String date to search to
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
-	function &getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+	function getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 
 		$params = array($journalId);
 		$ipRangeSql1 = $ipRangeSql2 = '';
@@ -631,9 +621,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -763,7 +751,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @return object DAOResultFactory containing matching InstitutionalSubscriptions
 	 */
-	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
+	function getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
 		$dateEnd = explode('-', $dateEnd);
 
 		$result = $this->retrieveRange(
@@ -789,9 +777,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			), $rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
-
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -800,7 +786,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $institutionalSubscription InstitutionalSubscription
 	 * @return boolean
 	 */	
-	function renewSubscription(&$institutionalSubscription) {
+	function renewSubscription($institutionalSubscription) {
 		return $this->_renewSubscription($institutionalSubscription);
 	}
 
@@ -808,7 +794,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * Generator function to create object.
 	 * @return InstitutionalSubscription
 	 */
-	function createObject() {
+	function newDataObject() {
 		return new InstitutionalSubscription();
 	}
 
@@ -817,14 +803,14 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $row array
 	 * @return InstitutionalSubscription
 	 */
-	function &_returnSubscriptionFromRow($row) {
-		$institutionalSubscription = parent::_returnSubscriptionFromRow($row);
+	function _fromRow($row) {
+		$institutionalSubscription = parent::_fromRow($row);
 
 		$institutionalSubscription->setInstitutionName($row['institution_name']);
 		$institutionalSubscription->setInstitutionMailingAddress($row['mailing_address']);
 		$institutionalSubscription->setDomain($row['domain']);
 
-		$ipResult =& $this->retrieve(
+		$ipResult = $this->retrieve(
 			'SELECT ip_string
 			FROM
 			institutional_subscription_ip
@@ -843,7 +829,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		$institutionalSubscription->setIPRanges($ipRanges);
 		$ipResult->Close();
 
-		HookRegistry::call('InstitutionalSubscriptionDAO::_returnSubscriptionFromRow', array(&$institutionalSubscription, &$row));
+		HookRegistry::call('InstitutionalSubscriptionDAO::_fromRow', array(&$institutionalSubscription, &$row));
 
 		return $institutionalSubscription;
 	}

@@ -253,8 +253,9 @@ class SubscriptionForm extends Form {
 
 	/**
 	 * Internal function to prepare notification email
+	 * @param $emailTemplateKey string
 	 */
-	function &_prepareNotificationEmail($mailTemplateKey) {
+	function _prepareNotificationEmail($mailTemplateKey) {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
