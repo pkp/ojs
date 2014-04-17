@@ -29,7 +29,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 */
 	 function payments($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::payments($args, $request);
@@ -40,7 +40,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function savePaymentSettings($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		$success = OJSPaymentAction::savePaymentSettings($args, $request);
@@ -63,7 +63,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function viewPayments($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::viewPayments($args, $request);
@@ -74,7 +74,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	  */
 	 function viewPayment($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::viewPayment($args, $request);
@@ -85,7 +85,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 */
 	function payMethodSettings($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::payMethodSettings($request);
@@ -96,7 +96,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 	 */
 	function savePayMethodSettings($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		import('classes.payment.ojs.OJSPaymentAction');
 		$success = OJSPaymentAction::savePayMethodSettings($request);

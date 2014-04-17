@@ -109,7 +109,7 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		$editSuccess = SubscriptionAction::editSubscription($args, $request, $institutional);
@@ -139,7 +139,7 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::selectSubscriber($args, $request, $institutional);
@@ -158,7 +158,7 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		$updateSuccess = SubscriptionAction::updateSubscription($args, $request, $institutional);

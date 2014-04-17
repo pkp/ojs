@@ -78,15 +78,13 @@ class SubscriptionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = TemplateManager::getManager();
-		$journal = Request::getJournal();
-
 		if (isset($this->subscription)) {
 			$subscriptionId = $this->subscription->getId();
 		} else {
 			$subscriptionId = null;
 		}
 
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('subscriptionId', $subscriptionId);
 		$templateMgr->assign('yearOffsetPast', SUBSCRIPTION_YEAR_OFFSET_PAST);
 		$templateMgr->assign('yearOffsetFuture', SUBSCRIPTION_YEAR_OFFSET_FUTURE);

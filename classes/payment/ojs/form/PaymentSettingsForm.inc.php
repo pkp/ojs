@@ -104,10 +104,10 @@ class PaymentSettingsForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	function display($request) {
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('validCurrencies', $this->validCurrencies);
-		parent::display();
+		parent::display($request);
 	}
 
 	/**

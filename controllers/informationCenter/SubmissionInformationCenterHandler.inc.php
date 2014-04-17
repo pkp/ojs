@@ -60,7 +60,7 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 		$json = new JSONMessage();
 
 		// Try to save the form data.
-		$submissionMetadataViewForm->readInputData($request);
+		$submissionMetadataViewForm->readInputData();
 		if($submissionMetadataViewForm->validate()) {
 			$submissionMetadataViewForm->execute($request);
 			// Create trivial notification.

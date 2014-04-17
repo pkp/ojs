@@ -32,7 +32,7 @@ class ImportExportHandler extends ManagerHandler {
 	 * @param $request PKPRequest
 	 */
 	function importexport($args, $request) {
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		PluginRegistry::loadCategory(IMPORTEXPORT_PLUGIN_CATEGORY);
 		$templateMgr = TemplateManager::getManager($request);

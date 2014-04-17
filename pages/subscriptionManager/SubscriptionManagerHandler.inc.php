@@ -123,7 +123,7 @@ class SubscriptionManagerHandler extends Handler {
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		$editSuccess = SubscriptionAction::editSubscription($args, $request, $institutional);
@@ -146,14 +146,12 @@ class SubscriptionManagerHandler extends Handler {
 	function selectSubscriber($args, $request) {
 		if (array_shift($args) == 'individual') {
 			$institutional = false;
-			$redirect = 'individual';
 		} else {
 			$institutional = true;
-			$redirect = 'institutional';
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::selectSubscriber($args, $request, $institutional);
@@ -172,7 +170,7 @@ class SubscriptionManagerHandler extends Handler {
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		$updateSuccess = SubscriptionAction::updateSubscription($args, $request, $institutional);
@@ -299,9 +297,7 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function createUser($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
-
-		$journal = $request->getJournal();
+		$this->setupTemplate($request);
 
 		$templateMgr = TemplateManager::getManager($request);
 
@@ -322,9 +318,7 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function updateUser($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
-
-		$journal = $request->getJournal();
+		$this->setupTemplate($request);
 
 		import('classes.manager.form.UserManagementForm');
 
@@ -335,7 +329,7 @@ class SubscriptionManagerHandler extends Handler {
 			$userForm->execute();
 
 			if ($request->getUserVar('createAnother')) {
-				$this->setupTemplate($request, true);
+				$this->setupTemplate($request);
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('currentUrl', $request->url(null, null, 'index'));
 				$templateMgr->assign('userCreated', true);

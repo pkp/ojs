@@ -26,7 +26,7 @@ class OJSPaymentAction {
 		} else {
 			$form->initData();
 		}
-		$form->display();
+		$form->display($request);
 	}
 
 	/**
@@ -42,7 +42,7 @@ class OJSPaymentAction {
 			$settingsForm->save();
 			return true;
 		} else {
-			$settingsForm->display();
+			$settingsForm->display($request);
 			return false;
 		}
 	}
@@ -99,7 +99,7 @@ class OJSPaymentAction {
 		import('classes.payment.ojs.form.PayMethodSettingsForm');
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->initData();
-		$settingsForm->display();
+		$settingsForm->display($request);
 	}
 
 	/**
@@ -114,7 +114,7 @@ class OJSPaymentAction {
 			$settingsForm->execute();
 			return true;
 		} else {
-			$settingsForm->display();
+			$settingsForm->display($request);
 			return false;
 		}
 	}

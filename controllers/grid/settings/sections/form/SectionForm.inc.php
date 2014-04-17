@@ -97,7 +97,6 @@ class SectionForm extends Form {
 		$sectionEditorCount = $userGroupDao->getContextUsersCount($journal->getId(), null, ROLE_ID_SUB_EDITOR);
 		$templateMgr->assign('sectionEditorCount', $sectionEditorCount);
 		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForms = $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
@@ -190,7 +189,6 @@ class SectionForm extends Form {
 	 */
 	function insertSectionEditorEntry($request, $newRowId) {
 		$journal = $request->getJournal();
-		$sectionId = $this->getSectionId();
 		$userId = array_shift($newRowId);
 
 		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');

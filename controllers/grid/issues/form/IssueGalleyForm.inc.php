@@ -131,7 +131,6 @@ class IssueGalleyForm extends Form {
 	 */
 	function execute($request) {
 		import('classes.file.IssueFileManager');
-		$issueId = $this->_issueGalley?$this->_issueGalley->getId():null;
 		$issueFileManager = new IssueFileManager($this->_issue->getId());
 
 		$journal = $request->getJournal();

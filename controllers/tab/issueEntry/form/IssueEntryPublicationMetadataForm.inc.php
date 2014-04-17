@@ -195,7 +195,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$markAsPaid ? $context->getSetting('currency') : ''
 			);
 
-			$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+			$paymentManager->queuePayment($queuedPayment);
 
 			// Since this is a waiver, fulfill the payment immediately
 			$paymentManager->fulfillQueuedPayment($request, $queuedPayment, $markAsPaid?'ManualPayment':'Waiver');

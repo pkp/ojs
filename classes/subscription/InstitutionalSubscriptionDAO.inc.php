@@ -343,30 +343,27 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Delete an institutional subscription by subscription ID.
 	 * @param $subscriptionId int
-	 * @return boolean
 	 */
 	function deleteSubscriptionById($subscriptionId) {
-		$returner = false;
 		if ($this->subscriptionExists($subscriptionId)) {
-			$returner = $this->update(
+			$this->update(
 				'DELETE
 				FROM
 				subscriptions
 				WHERE subscription_id = ?',
-				$subscriptionId
+				(int) $subscriptionId
 			);
 
-			$returner = $this->update(
+			$this->update(
 				'DELETE
 				FROM
 				institutional_subscriptions
 				WHERE subscription_id = ?',
-				$subscriptionId
+				(int) $subscriptionId
 			);
 
 			$this->_deleteSubscriptionIPRanges($subscriptionId);
 		} 
-		return $returner;
 	}
 
 	/**
@@ -387,10 +384,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
-					break;
-				}
+				$this->deleteSubscriptionById($subscriptionId);
 				$result->MoveNext();
 			}
 		}
@@ -417,10 +411,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
-					break;
-				}
+				$this->deleteSubscriptionById($subscriptionId);
 				$result->MoveNext();
 			}
 		}
@@ -452,10 +443,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
-					break;
-				}
+				$this->deleteSubscriptionById($subscriptionId);
 				$result->MoveNext();
 			}
 		}
@@ -482,10 +470,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
-					break;
-				}
+				$this->deleteSubscriptionById($subscriptionId);
 				$result->MoveNext();
 			}
 		}

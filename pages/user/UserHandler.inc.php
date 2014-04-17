@@ -508,8 +508,6 @@ class UserHandler extends PKPUserHandler {
 		$this->setupTemplate($request);
 		$user = $request->getUser();
 		$userId = $user->getId();
-		$journalId = $journal->getId();
-
 		$institutional = array_shift($args);
 		$subscriptionId = (int) array_shift($args);
 
@@ -559,8 +557,6 @@ class UserHandler extends PKPUserHandler {
 		$this->setupTemplate($request);
 		$user = $request->getUser();
 		$userId = $user->getId();
-		$journalId = $journal->getId();
-
 		$institutional = array_shift($args);
 		$subscriptionId = (int) array_shift($args);
 

@@ -41,7 +41,6 @@ class AppSiteSetupForm extends SiteSetupForm {
 		parent::initData($request);
 
 		$site = $request->getSite();
-		$siteDao = DAORegistry::getDAO('SiteDAO');
 		$this->setData('defaultMetricType', $site->getSetting('defaultMetricType'));
 
 		// Journal list display options

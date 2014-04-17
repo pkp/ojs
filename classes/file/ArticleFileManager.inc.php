@@ -108,17 +108,6 @@ class ArticleFileManager extends FileManager {
 	}
 
 	/**
-	 * Copy an attachment file.
-	 * @param $url string The source URL/filename
-	 * @param $mimeType string The mime type of the original file
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 */
-	function copyAttachmentFile($url, $mimeType, $fileId = null, $overwrite = true, $assocId = null) {
-		return $this->handleCopy($url, $mimeType, SUBMISSION_FILE_ATTACHMENT, $fileId, $overwrite, $assocId);
-	}
-
-	/**
 	 * Retrieve file information by file ID.
 	 * @return ArticleFile
 	 */

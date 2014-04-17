@@ -60,7 +60,6 @@ class GiftsHandler extends Handler {
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
 		$this->setupTemplate();
-		$journalId = $journal->getId();
 		$user = $request->getUser();
 
 		// If buyer is logged in, save buyer user id as part of gift details

@@ -575,7 +575,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $articleId int
 	 */
 	function deletePublishedArticleByArticleId($articleId) {
-		return $this->update(
+		$this->update(
 			'DELETE FROM published_submissions WHERE submission_id = ?', (int) $articleId
 		);
 		$this->flushCache();

@@ -140,7 +140,6 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Delete subscription by subscription ID.
 	 * @param $subscriptionId int
-	 * @return boolean
 	 */
 	function deleteSubscriptionById($subscriptionId) {
 		// must be implemented by sub-classes
@@ -358,10 +357,10 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Internal function to insert a new Subscription.
 	 * @param $subscription Subscription
-	 * @return int
+	 * @return int Subscription ID
 	 */
 	function _insertSubscription($subscription) {
-		$returner = $this->update(
+		$this->update(
 			sprintf('INSERT INTO subscriptions
 				(journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes)
 				VALUES

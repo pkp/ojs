@@ -45,7 +45,6 @@ class SubscriptionTypeForm extends Form {
 		}
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
-		$journal = Request::getJournal();
 
 		parent::Form('subscription/subscriptionTypeForm.tpl');
 
@@ -145,7 +144,6 @@ class SubscriptionTypeForm extends Form {
 	 */
 	function execute() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$journal = Request::getJournal();
 		$nonExpiring = null; // Suppress scrutinizer warn
 
 		if (isset($this->typeId)) {
@@ -160,6 +158,7 @@ class SubscriptionTypeForm extends Form {
 			$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
 		}
 
+		$journal = Request::getJournal();
 		$subscriptionType->setJournalId($journal->getId());
 		$subscriptionType->setName($this->getData('name'), null); // Localized
 		$subscriptionType->setDescription($this->getData('description'), null); // Localized

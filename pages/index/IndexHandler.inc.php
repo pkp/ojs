@@ -48,7 +48,6 @@ class IndexHandler extends Handler {
 		$router = $request->getRouter();
 		$templateMgr = TemplateManager::getManager($request);
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journalPath = $router->getRequestedContextPath($request);
 		$this->setupTemplate($request);
 
 		if ($journal) {

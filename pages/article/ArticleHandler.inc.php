@@ -37,8 +37,8 @@ class ArticleHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function ArticleHandler($request) {
-		parent::Handler($request);
+	function ArticleHandler() {
+		parent::Handler();
 	}
 
 	/**
@@ -96,7 +96,6 @@ class ArticleHandler extends Handler {
 	 * @param $request Request
 	 */
 	function view($args, $request) {
-		$router = $request->getRouter();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? $args[2] : 0;
@@ -177,7 +176,6 @@ class ArticleHandler extends Handler {
 				}
 
 				// Article cover page.
-				$locale = AppLocale::getLocale();
 				if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract()) {
 					import('classes.file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
@@ -286,7 +284,7 @@ class ArticleHandler extends Handler {
 			if (!HookRegistry::call($hookName, array($this->article, &$this->galley, &$fileId))) {
 				import('classes.file.ArticleFileManager');
 				$articleFileManager = new ArticleFileManager($articleId);
-				$file = $articleFileManager->downloadFile($fileId, null, $inline);
+				$articleFileManager->downloadFile($fileId, null, $inline);
 			}
 		}
 	}
@@ -311,7 +309,6 @@ class ArticleHandler extends Handler {
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 
-		$router = $request->getRouter();
 		$journal = $this->journal;
 		$publishedArticle = $this->article;
 		$issue = $this->issue;

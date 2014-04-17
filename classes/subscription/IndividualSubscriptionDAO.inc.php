@@ -281,20 +281,15 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Delete an individual subscription by subscription ID.
 	 * @param $subscriptionId int
-	 * @return boolean
 	 */
 	function deleteSubscriptionById($subscriptionId) {
-		if ($this->subscriptionExists($subscriptionId)) {
-			return $this->update(
-				'DELETE
-				FROM
-				subscriptions
-				WHERE subscription_id = ?',
-				$subscriptionId
-			);
-		} else {
-			return false;
-		}
+		$this->update(
+			'DELETE
+			FROM
+			subscriptions
+			WHERE subscription_id = ?',
+			(int) $subscriptionId
+		);
 	}
 
 	/**
