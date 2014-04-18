@@ -18,9 +18,13 @@ import('classes.article.PublishedArticle');
 import('classes.article.ArticleDAO');
 
 class PublishedArticleDAO extends ArticleDAO {
+	/** @var ArticleGalleyDAO */
 	var $galleyDao;
 
+	/** @var GenericCache */
 	var $articleCache;
+
+	/** @var GenericCache */
 	var $articlesInSectionsCache;
 
  	/**
@@ -31,12 +35,22 @@ class PublishedArticleDAO extends ArticleDAO {
 		$this->galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
+	/**
+	 * Handle an article cache miss
+	 * @param $cache GenericCache
+	 * @param $id mixed Article ID (potentially non-numeric)
+	 * @return PublishedArticle
+	 */
 	function _articleCacheMiss($cache, $id) {
 		$publishedArticle = $this->getPublishedArticleByBestArticleId(null, $id, null);
 		$cache->setCache($id, $publishedArticle);
 		return $publishedArticle;
 	}
 
+	/**
+	 * Get a the published article cache
+	 * @return GenericCache
+	 */
 	function _getPublishedArticleCache() {
 		if (!isset($this->articleCache)) {
 			$cacheManager = CacheManager::getManager();
@@ -45,12 +59,22 @@ class PublishedArticleDAO extends ArticleDAO {
 		return $this->articleCache;
 	}
 
+	/**
+	 * Handle a cache miss from the "articles in sections" cache
+	 * @param $cache GenericCache
+	 * @param $id int Issue ID
+	 * @return array
+	 */
 	function _articlesInSectionsCacheMiss($cache, $id) {
 		$articlesInSections = $this->getPublishedArticlesInSections($id, null);
 		$cache->setCache($id, $articlesInSections);
 		return $articlesInSections;
 	}
 
+	/**
+	 * Get a the "articles in sections" article cache
+	 * @return GenericCache
+	 */
 	function _getArticlesInSectionsCache() {
 		if (!isset($this->articlesInSectionsCache)) {
 			$cacheManager = CacheManager::getManager();
@@ -102,6 +126,7 @@ class PublishedArticleDAO extends ArticleDAO {
 
 	/**
 	 * Retrieve a count of published articles in a journal.
+	 * @param $journalId int
 	 */
 	function getPublishedArticleCountByJournalId($journalId) {
 		$result = $this->retrieve(
@@ -118,7 +143,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $journalId int
 	 * @param $rangeInfo object
 	 * @param $reverse boolean Whether to reverse the sort order
-	 * @return object
+	 * @return DAOResultFactory
 	 */
 	function getPublishedArticlesByJournalId($journalId = null, $rangeInfo = null, $reverse = false) {
 		$params = $this->_getFetchParameters();
@@ -146,7 +171,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * Retrieve Published Articles by issue id
 	 * @param $issueId int
 	 * @param $useCache boolean optional
-	 * @return PublishedArticle objects array
+	 * @return array Array of PublishedArticle objects
 	 */
 	function getPublishedArticlesInSections($issueId, $useCache = false) {
 		if ($useCache) {
@@ -314,7 +339,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
+	function getPublishedArticleByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
 		if ($useCache && $pubIdType == 'publisher-id') {
 			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($pubId);
@@ -440,8 +465,9 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * by reverse publish date.
 	 * Note that if journalId is null, alphabetized article IDs for all
 	 * journals are returned.
-	 * @param $journalId int
-	 * @return Array
+	 * @param $journalId int Journal ID (optional)
+	 * @param $useCache boolean (optional; default true)
+	 * @return array
 	 */
 	function getPublishedArticleIdsByJournal($journalId = null, $useCache = true) {
 		$functionName = $useCache?'retrieveCached':'retrieve';
@@ -470,7 +496,8 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * Retrieve "submission_id"s for published articles for a journal section, sorted
 	 * by reverse publish date.
 	 * @param $sectionId int
-	 * @return Array
+	 * @param $useCache boolean Optional (default true)
+	 * @return array
 	 */
 	function getPublishedArticleIdsBySection($sectionId, $useCache = true) {
 		$functionName = $useCache?'retrieveCached':'retrieve';
@@ -529,8 +556,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param PublishedArticle object
 	 * @return pubId int
 	 */
-
-	function insertPublishedArticle(&$publishedArticle) {
+	function insertPublishedArticle($publishedArticle) {
 		$this->update(
 			sprintf('INSERT INTO published_submissions
 				(submission_id, issue_id, date_published, seq, access_status)
@@ -645,7 +671,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * updates a published article field
+	 * Updates a published article field
 	 * @param $publishedArticleId int
 	 * @param $field string
 	 * @param $value mixed
@@ -660,6 +686,8 @@ class PublishedArticleDAO extends ArticleDAO {
 
 	/**
 	 * Sequentially renumber published articles in their sequence order.
+	 * @param $sectionId int
+	 * @param $issueId int
 	 */
 	function resequencePublishedArticles($sectionId, $issueId) {
 		$result = $this->retrieve(
@@ -693,8 +721,8 @@ class PublishedArticleDAO extends ArticleDAO {
 
 	/**
 	 * Return years of oldest/youngest published article on site or within a journal
-	 * @param $journalId int
-	 * @return array
+	 * @param $journalId int Optional
+	 * @return array (maximum date published, minimum date published)
 	 */
 	function getArticleYearRange($journalId = null) {
 		$result = $this->retrieve(
