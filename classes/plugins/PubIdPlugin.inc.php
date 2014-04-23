@@ -13,14 +13,13 @@
  * @brief Abstract class for public identifiers plugins
  */
 
-
 import('lib.pkp.classes.plugins.Plugin');
 
-class PubIdPlugin extends Plugin {
+abstract class PubIdPlugin extends Plugin {
 
-	//
-	// Constructor
-	//
+	/**
+	 * Constructor
+	 */
 	function PubIdPlugin() {
 		parent::Plugin();
 	}
@@ -137,34 +136,26 @@ class PubIdPlugin extends Plugin {
 	 *  when true, the public identifier will not be stored
 	 * @return string
 	 */
-	function getPubId($pubObject, $preview = false) {
-		assert(false); // Should always be overridden
-	}
+	abstract function getPubId($pubObject, $preview = false);
 
 	/**
 	 * Public identifier type, see
 	 * http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html
 	 * @return string
 	 */
-	function getPubIdType() {
-		assert(false); // Should always be overridden
-	}
+	abstract function getPubIdType();
 
 	/**
 	 * Public identifier type that will be displayed to the reader.
 	 * @return string
 	 */
-	function getPubIdDisplayType() {
-		assert(false); // Should always be overridden
-	}
+	abstract function getPubIdDisplayType();
 
 	/**
 	 * Full name of the public identifier.
 	 * @return string
 	 */
-	function getPubIdFullName() {
-		assert(false); // Should always be overridden
-	}
+	abstract function getPubIdFullName();
 
 	/**
 	 * Get the whole resolving URL.
@@ -172,9 +163,7 @@ class PubIdPlugin extends Plugin {
 	 * @param $pubId string
 	 * @return string resolving URL
 	 */
-	function getResolvingURL($journalId, $pubId) {
-		assert(false); // Should always be overridden
-	}
+	abstract function getResolvingURL($journalId, $pubId);
 
 	/**
 	 * Get the file (path + filename)
@@ -182,17 +171,13 @@ class PubIdPlugin extends Plugin {
 	 * metadata pages.
 	 * @return string
 	 */
-	function getPubIdMetadataFile() {
-		assert(false); // Should be overridden
-	}
+	abstract function getPubIdMetadataFile();
 
 	/**
 	 * Get the class name of the settings form.
 	 * @return string
 	 */
-	function getSettingsFormName() {
-		assert(false); // Should be overridden
-	}
+	abstract function getSettingsFormName();
 
 	/**
 	 * Verify form data.
@@ -203,9 +188,7 @@ class PubIdPlugin extends Plugin {
 	 * @param $errorMsg string Return validation error messages here.
 	 * @return boolean
 	 */
-	function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg) {
-		assert(false); // Should be overridden
-	}
+	abstract function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg);
 
 	/**
 	 * Check whether the given pubId is valid.
@@ -220,17 +203,13 @@ class PubIdPlugin extends Plugin {
 	 * Get the additional form field names.
 	 * @return array
 	 */
-	function getFormFieldNames() {
-		assert(false); // Should be overridden
-	}
+	abstract function getFormFieldNames();
 
 	/**
 	 * Get additional field names to be considered for storage.
 	 * @return array
 	 */
-	function getDAOFieldNames() {
-		assert(false); // Should be overridden
-	}
+	abstract function getDAOFieldNames();
 
 	/**
 	 * Define management link actions for the settings verb.

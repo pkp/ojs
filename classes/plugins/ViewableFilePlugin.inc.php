@@ -13,13 +13,15 @@
  * @brief Abstract class for article galley plugins
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.PKPViewableFilePlugin');
 
-class ViewableFilePlugin extends GenericPlugin {
-
+class ViewableFilePlugin extends PKPViewableFilePlugin {
 	/**
-	 * Override public methods from Plugin
+	 * Constructor
 	 */
+	function ViewableFilePlugin() {
+		parent::PKPViewableFilePlugin();
+	}
 
 	/**
 	 * @see Plugin::register()
@@ -32,18 +34,6 @@ class ViewableFilePlugin extends GenericPlugin {
 			return true;
 		}
 		return false;
-	}
-
-	/**
-	 * Get the filename of the template. (Default behavior may
-	 * be overridden through some combination of this function and the
-	 * displayArticleGalley function.)
-	 * Returning null from this function results in an empty display.
-	 *
-	 * @return string
-	 */
-	function getTemplateFilename() {
-		return 'display.tpl';
 	}
 
 	/**
