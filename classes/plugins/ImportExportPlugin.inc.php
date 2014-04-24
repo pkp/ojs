@@ -16,6 +16,9 @@
 import('classes.plugins.Plugin');
 
 class ImportExportPlugin extends Plugin {
+	/**
+	 * Constructor
+	 */
 	function ImportExportPlugin() {
 		parent::Plugin();
 	}
