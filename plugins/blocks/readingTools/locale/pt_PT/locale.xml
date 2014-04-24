@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pt_PT (Português) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_PT" full_name="Português">
 	<message key="plugins.block.readingTools.displayName">Bloco de Ferramentas de Leitura</message>
 	<message key="plugins.block.readingTools.description">Este plugin mostra um bloco contendo ferramentas de leitura disponível na barra lateral.</message>
 	<message key="plugins.block.readingTools.title">Ferramentas de leitura</message>
