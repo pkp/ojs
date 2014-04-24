@@ -19,9 +19,11 @@
 		<li>&#187; <a href="{url op="contact"}">{translate key="about.contact"}</a></li>
 	{/if}
 	<li>&#187; <a href="{url op="editorialTeam"}">{translate key="about.editorialTeam"}</a></li>
-	{iterate from=peopleGroups item=peopleGroup}
-		<li>&#187; <a href="{url op="displayMembership" path=$peopleGroup->getId()}">{$peopleGroup->getLocalizedTitle()|escape}</a></li>
-	{/iterate}
+	{if $peopleGroups}
+		{iterate from=peopleGroups item=peopleGroup}
+			<li>&#187; <a href="{url op="displayMembership" path=$peopleGroup->getId()}">{$peopleGroup->getLocalizedTitle()|escape}</a></li>
+		{/iterate}
+	{/if}
 	{call_hook name="Templates::About::Index::People"}
 </ul>
 </div>
