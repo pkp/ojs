@@ -388,9 +388,9 @@
 	<message key="manager.setup.openAccessPolicy">Open-Access-Richtlinien</message>
 	<message key="manager.setup.openAccessPolicyDescription">Wenn die Zeitschrift ihren Leser/innen sofortigen freien Zugang (Open Access) zu allen veröffentlichten Inhalten gewährt, geben Sie eine Open-Access-Richtlinie ein, die in "Über uns" der Zeitschrift unter "Open-Access-Richtlinie" erscheint.</message>
 	<message key="manager.setup.pageNumberIdentifier">Seitenzahl-Option </message>
-	<message key="manager.setup.peerReviewDescription">Skizzieren Sie die Peer-Review-Richtlinien und -verfahren für Leser/innen und Autor/innen (inkl. der Anzahl von Gutachter/innen, die üblicherweise mit der Begutachtung eines Beitrags betraut sind, der Kriterien, an denen die Gutachter/innen ihre Bewertung ausrichten sollen, der Zeitspanne, die üblicherweise für eine Begutachtung benötigt wird, und der Grundsätze, nach denen die Gutachter/innen ausgewählt werden). Dieser Text erscheint dann unter "Über uns".</message>
-	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
-	<message key="manager.setup.peerReviewPolicy2">Peer-Review-Richtlinien</message>
+	<message key="manager.setup.peerReviewDescription">Skizzieren Sie die Begutachtungsgrundsätze und -verfahren für Leser/innen und Autor/innen (inkl. der Anzahl von Gutachter/innen, die üblicherweise mit der Begutachtung eines Beitrags betraut sind, der Kriterien, an denen die Gutachter/innen ihre Bewertung ausrichten sollen, der Zeitspanne, die üblicherweise für eine Begutachtung benötigt wird, und der Grundsätze, nach denen die Gutachter/innen ausgewählt werden). Dieser Text erscheint dann unter "Über uns".</message>
+	<message key="manager.setup.peerReviewPolicy">Begutachtung</message>
+	<message key="manager.setup.peerReviewPolicy2">Begutachtungsgrundsätze</message>
 	<message key="manager.setup.policies">Zur Zeitschrift</message>
 	<message key="manager.setup.policies.description">Schwerpunkt, Begutachtung, Rubriken, Schutz persönlicher Daten, Sicherheit und andere Themen.</message>
 	<message key="manager.setup.principalContactDescription">Der Hauptkontakt kann mit der Hauptredakion, mit leitenden Redaktions- oder mit Verwaltungsaufgaben betraut sein. Er erscheint auf der Startseite der Zeitschrift unter "Kontakt", zusammen mit dem Kontakt bei technischen Fragen.</message>
@@ -444,7 +444,7 @@
 	<message key="manager.setup.reviewOptions.reviewerReminders">Erinnerung für Gutachter/innen </message>
 	<message key="manager.setup.reviewOptions.reviewTime">Zeitaufwand der Begutachtung</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Bietet Links zu <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Anonyme Begutachtung sicherstellen</a> auf den Seiten, auf denen Autor/innen und Gutachter/innen Dateien hochladen.]]></message>
-	<message key="manager.setup.reviewPolicy">Richtlinien für die Begutachtung</message>
+	<message key="manager.setup.reviewPolicy">Begutachtungsgrundsätze</message>
 	<message key="manager.setup.reviewProcess">Begutachtungsverfahren</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS unterstützt zwei Modelle für die Verwaltung des Begutachtungsverfahrens. Es empfiehlt sich, das Standardbegutachtungsverfahren zu wählen, weil es die Gutachter/innen Schritt für Schritt durch das Verfahren führt und somit einen vollständigen Begutachtungsverlauf für jeden Beitrag garantiert. Außerdem enthält es eine automatische Erinnerungsfunktion sowie Standardempfehlungen zu den Beiträgen (Beitrag annehmen; Überarbeitung erforderlich; Erneut zur Begutachtung einreichen; Anderswo erneut einreichen; Beitrag ablehnen; Siehe Kommentare).<br /><br /> Wählen Sie unter den folgenden:]]></message>
 	<message key="manager.setup.reviewProcessEmail">Begutachtungsverfahren über E-Mail-Anhänge</message>
