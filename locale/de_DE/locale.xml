@@ -369,10 +369,10 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 
 
 	<!-- Sprachen -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Momentan ist das Herunterladen von Sprachpaketen vom Public Knowledge Project Server nicht möglich, weil:</p>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Momentan ist das Herunterladen von Sprachpaketen vom Server des Public Knowledge Project nicht möglich, weil:</p>
 	<ul>
-		<li>Ihr Server den Dienst GNU "tar" entweder nicht besitzt oder seine Ausführung nicht erlaubt.</li>
-		<li>OJS kann deshalb die Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") nicht verändern.</li>
+		<li>Ihr Server den Dienst GNU "tar" entweder nicht besitzt oder seine Ausführung nicht erlaubt</li>
+		<li>OJS die Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") nicht verändern kann.</li>
 	</ul>
 <p>Sprachpakete können manuell von der <a href="http://pkp.sfu.ca">PKP-Webseite</a> heruntergeladen werden.</p>]]></message>
 
@@ -1156,11 +1156,11 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$title}" wurde hinterlassen.</message>
 	<message key="notification.type.galleyModified">Für "{$title}" wurde eine Korrekturfahne geändert.</message>
 	<message key="notification.type.issuePublished">Eine Ausgabe wurde veröffentlicht.</message>
-	<message key="notification.type.layoutComment">Zum Layout von "{$title}'s" wurde ein Kommentar hinterlassen.</message>
-	<message key="notification.type.metadataModified">Die Metdadaten von "{$title}'s" wurden verändert.</message>
+	<message key="notification.type.layoutComment">Zum Layout von "{$title}" wurde ein Kommentar hinterlassen.</message>
+	<message key="notification.type.metadataModified">Die Metadaten von "{$title}" wurden verändert.</message>
 	<message key="notification.type.newAnnouncement">Eine neue Ankündigung wurde erstellt.</message>
 	<message key="notification.type.proofreadComment">Ein/e Korrekturlektor/in hat einen Kommentar zu "{$title}" hinterlassen.</message>
-	<message key="notification.type.reviewerComment">Ein/e Gutachter/in hat "{$title} kommentiert.</message>
+	<message key="notification.type.reviewerComment">Ein/e Gutachter/in hat "{$title}" kommentiert.</message>
 	<message key="notification.type.reviewerFormComment">Für "{$title}" wurde ein Begutachtungsformular eingereicht.</message>
 	<message key="notification.type.reviewing">Begutachtungsereignisse</message>
 	<message key="notification.type.site">Site-Ereignisse</message>
