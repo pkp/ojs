@@ -79,40 +79,6 @@ class ManagerPaymentHandler extends ManagerHandler {
 		import('classes.payment.ojs.OJSPaymentAction');
 		OJSPaymentAction::viewPayment($args, $request);
 	 }
-
-	/**
-	 * Display form to edit program settings.
-	 */
-	function payMethodSettings($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request);
-
-		import('classes.payment.ojs.OJSPaymentAction');
-		OJSPaymentAction::payMethodSettings($request);
-	}
-	
-	/**
-	 * Save changes to payment settings.
-	 */
-	function savePayMethodSettings($args, $request) {
-		$this->validate();
-		$this->setupTemplate($request);
-
-		import('classes.payment.ojs.OJSPaymentAction');
-		$success = OJSPaymentAction::savePayMethodSettings($request);
-
-		if ($success) {
- 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign(array(
-				'currentUrl' => $request->url(null, null, 'payMethodSettings'),
-				'pageTitle' => 'manager.payment.paymentMethods',
-				'message' => 'common.changesSaved',
-				'backLink' => $request->url(null, null, 'payMethodSettings'),
-				'backLinkLabel' => 'manager.payment.paymentMethods'
-			));
-			$templateMgr->display('common/message.tpl');		
-		}
-	}
 }
 
 ?>

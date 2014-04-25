@@ -91,33 +91,6 @@ class OJSPaymentAction {
 
 		$templateMgr->display('payments/viewPayment.tpl');
 	}
-
-	/**
-	 * Display form to edit program settings.
-	 */
-	function payMethodSettings($request) {
-		import('classes.payment.ojs.form.PayMethodSettingsForm');
-		$settingsForm = new PayMethodSettingsForm();
-		$settingsForm->initData();
-		$settingsForm->display($request);
-	}
-
-	/**
-	 * Save changes to payment settings.
-	 */
-	function savePayMethodSettings($request) {
-		import('classes.payment.ojs.form.PayMethodSettingsForm');
-		$settingsForm = new PayMethodSettingsForm();
-		$settingsForm->readInputData();
-
-		if ($settingsForm->validate()) {
-			$settingsForm->execute();
-			return true;
-		} else {
-			$settingsForm->display($request);
-			return false;
-		}
-	}
 }
 
 ?>

@@ -46,19 +46,10 @@ switch ($op) {
 		import('pages.manager.SubscriptionHandler');
 		break;
 	//
-	// Import/Export
-	//
-	case 'importexport':
-		define('HANDLER_CLASS', 'ImportExportHandler');
-		import('pages.manager.ImportExportHandler');
-		break;
-	//
 	// Payment
 	//
 	case 'payments':
 	case 'savePaymentSettings':
-	case 'payMethodSettings':
-	case 'savePayMethodSettings':
 	case 'viewPayments':
 	case 'viewPayment':
 		define('HANDLER_CLASS', 'ManagerPaymentHandler');
@@ -67,13 +58,6 @@ switch ($op) {
 	case 'index':
 		define('HANDLER_CLASS', 'ManagerHandler');
 		import('pages.manager.ManagerHandler');
-	//
-	// Plugin Management
-	//
-	case 'plugin':
-		define('HANDLER_CLASS', 'PluginHandler');
-		import('lib.pkp.pages.manager.PluginHandler');
-		break;
 }
 
 ?>
