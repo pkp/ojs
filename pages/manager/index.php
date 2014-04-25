@@ -55,9 +55,6 @@ switch ($op) {
 		define('HANDLER_CLASS', 'ManagerPaymentHandler');
 		import('pages.manager.ManagerPaymentHandler');
 		break;
-	case 'index':
-		define('HANDLER_CLASS', 'ManagerHandler');
-		import('pages.manager.ManagerHandler');
 }
 
 ?>
