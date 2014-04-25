@@ -15,7 +15,7 @@
 
 import('lib.pkp.classes.plugins.PKPViewableFilePlugin');
 
-class ViewableFilePlugin extends PKPViewableFilePlugin {
+abstract class ViewableFilePlugin extends PKPViewableFilePlugin {
 	/**
 	 * Constructor
 	 */

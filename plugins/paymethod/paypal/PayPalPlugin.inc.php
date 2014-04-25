@@ -115,7 +115,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @param $queuedPayment QueuedPayment
 	 * @param $request PKPRequest
 	 */
-	function displayPaymentForm($queuedPaymentId, &$queuedPayment, $request) {
+	function displayPaymentForm($queuedPaymentId, $queuedPayment, $request) {
 		if (!$this->isConfigured()) return false;
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 		$journal = $request->getJournal();

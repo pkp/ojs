@@ -215,6 +215,20 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		return $importFilter->execute($importXml);
 	}
+
+	/**
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
+
+	/**
+	 * @see PKPImportExportPlugin::executeCLI()
+	 */
+	function executeCLI($scriptName, &$args) {
+		fatalError('Not implemented');
+	}
 }
 
 ?>

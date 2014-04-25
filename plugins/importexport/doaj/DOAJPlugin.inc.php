@@ -138,6 +138,20 @@ class DOAJPlugin extends ImportExportPlugin {
 		}
 		$request->redirectUrl($url);
 	}
+
+	/**
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
+
+	/**
+	 * @see PKPImportExportPlugin::executeCLI()
+	 */
+	function executeCLI($scriptName, &$args) {
+		fatalError('Not implemented');
+	}
 }
 
 ?>
