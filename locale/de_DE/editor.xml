@@ -7,9 +7,9 @@
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  -->
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+-->
 
 <locale name="de_DE" full_name = "Deutsch (Deutschland)">
 	<message key="editor.article.reviewForms">Begutachtungsformulare</message>
@@ -40,7 +40,7 @@
 	<message key="editor.notifyUsers.allAuthors">Alle veröffentlichten Autor/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuellen Abonnent/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institutionellen Abonnent/innen ({$count} Nutzer/innen)</message>
-<message key="editor.notifyUsers.allMailingList">Alle E-Mail-Adressen auf der Mailing-Liste einschließen ({$count} E-Mail-Adr)</message>
+	<message key="editor.notifyUsers.allMailingList">Alle E-Mail-Adressen auf der Mailing-Liste einschließen ({$count} E-Mail-Adr)</message>
 	<message key="editor.notifyUsers.inProgress">Benutzer/innen werden benachrichtigt…</message>
 	<message key="editor.usersNotified">Benutzer/innen benachrichtigt</message>
 	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden</message>
