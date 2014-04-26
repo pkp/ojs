@@ -4,13 +4,12 @@
 <!--
   * 000000.xml
   *
-  * Weiterverbreitung nach GNU GPL v2. Die vollständigen Bedingungen für die Weiterverbreitung dieser Datei finden Sie unter docs/COPYING.
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
-  * Version, erstellt durch die Freie Universität Berlin, Redaktionen querelles-net und Forum Qualitative Sozialforschung (FQS).
-  *
-  * Index-Hilfeseite 
-  *
+  * Index Help Page 
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 
 <topic id="TranslatorPlugin/topic/000000" locale="de_DE" title="Übersetzungs-Plug-In" toc="index/toc/000000" key="TranslatorPlugin.index">
