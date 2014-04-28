@@ -320,6 +320,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
+		$templateMgr->assign('templates', $journal->getSetting('templates'));
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -2744,6 +2745,27 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$request->redirect(null, null, 'submission', array($articleId));
 		}
+	}
+
+	/**
+	 * Download a layout template.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function downloadLayoutTemplate($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+
+		$journal =& $request->getJournal();
+		$templates = $journal->getSetting('templates');
+		import('classes.file.JournalFileManager');
+		$journalFileManager = new JournalFileManager($journal);
+		$templateId = (int) array_shift($args);
+		if ($templateId >= count($templates) || $templateId < 0) $request->redirect(null, 'index');
+		$template =& $templates[$templateId];
+
+		$filename = "template-$templateId." . $journalFileManager->parseFileExtension($template['originalFilename']);
+		$journalFileManager->downloadFile($filename, $template['fileType']);
 	}
 }
 
