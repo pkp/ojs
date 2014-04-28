@@ -967,13 +967,13 @@ class SolrWebService extends XmlWebService {
 	 * Make a request
 	 *
 	 * @param $url string The request URL
-	 * @param $params array request parameters
+	 * @param $params mixed array (key value pairs) or string request parameters
 	 * @param $method string GET or POST
 	 *
 	 * @return DOMXPath An XPath object with the response loaded. Null if an error occurred.
 	 *  See _serviceMessage for more details about the error.
 	 */
-	function &_makeRequest($url, $params = array(), $method = 'GET') {
+	function &_makeRequest($url, $params, $method = 'GET') {
 		$webServiceRequest = new WebServiceRequest($url, $params, $method);
 		if ($method == 'POST') {
 			$webServiceRequest->setHeader('Content-Type', 'text/xml; charset=utf-8');
