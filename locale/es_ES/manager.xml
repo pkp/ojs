@@ -720,4 +720,14 @@
 	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">O seleccionar el rango de:</message>
 	<message key="manager.statistics.reports.filters.byLocation">Por geolocalización</message>
 	<message key="manager.statistics.reports.filters.byLocation.description">Filtrar resultados por país, región y/o ciudad.</message>
+	<message key="manager.setup.permissions.priorAgreement">Acuerdo previo</message>
+	<message key="manager.setup.permissions.display">Mostrar</message>
+	<message key="manager.setup.licenseURLDescription">Proveer URL para la página web de la licencia, si está disponible</message>
+	<message key="manager.setup.includeLicense">Mostrar la licencia con el trabajo publicado</message>
+	<message key="manager.setup.resetPermissions">Reiniciar Permisos del Artículo</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Pre-expirar Recordatorio de Envío</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Post-expirar Recordatorio de Envío</message>
+	<message key="manager.setup.includeCopyrightStatement">Mostrar la declaración de copyright con contenido (recomentable para afirmar un autor poseedor del copyright)</message>
+	<message key="manager.setup.resetPermissions.description">La declaración de Copyright y la información de la licencia serán adjuntadas permanentemente al contenido publicado, asegurando que este dato no cambie en caso de alterar las políticas de la revista para nuevos envíos. Para resetear información de permisos almacenados ya adjuntados a contenido publicado, utilice el botón de abajo.</message>
+	<message key="manager.setup.confirmResetLicense">Está seguro que desea resetear la información de licencia y copyright adjuntada al contenido publicado a la licencia configurada dese la Configuración de la Revista?</message>
 </locale> 

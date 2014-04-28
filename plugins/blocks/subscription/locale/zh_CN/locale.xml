@@ -18,7 +18,7 @@
 	<message key="plugins.block.subscription.blockTitle">订阅</message>
 	<message key="plugins.block.subscription.expires">过期</message>
 	<message key="plugins.block.subscription.providedBy">接入提供者是：</message>
-	<message key="plugins.block.subscription.comingFromIP">来自IP为： </message>
+	<message key="plugins.block.subscription.comingFromIP">来自IP为：</message>
 	<message key="plugins.block.subscription.about">订阅</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">登录验证订阅</message>
 </locale>

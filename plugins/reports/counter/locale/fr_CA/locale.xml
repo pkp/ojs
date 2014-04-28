@@ -29,4 +29,5 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">Cumulatif annuel - PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total pour toutes les revues</message>
 	<message key="plugins.reports.counter.migrate">Migrer le fichier de journalisation</message>
+	<message key="plugins.reports.counter.legacyStats">Les liens ci-dessous créent des rapports utilisant les données de l'ancien plugin COUNTER. Si vous désirez produire des rapports COUNTER à l'aide du nouvel indicateur COUNTER d'OJS, veuillez utiliser les liens ci-dessus.</message>
 </locale>

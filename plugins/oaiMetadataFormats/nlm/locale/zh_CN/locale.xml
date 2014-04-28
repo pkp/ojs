@@ -13,6 +13,6 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.oaiMetadata.nlm.displayName">NLM Metadata Format</message>
-	<message key="plugins.oaiMetadata.nlm.description">Structures metadata in a way that is consistent with the NLM Journal Article format.</message>
+	<message key="plugins.oaiMetadata.nlm.displayName">NLM 元数据格式</message>
+	<message key="plugins.oaiMetadata.nlm.description">Structures 元数据在某种程度上与NLM期刊文章格式一致。</message>
 </locale>

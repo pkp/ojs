@@ -13,7 +13,7 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.bibtex.displayName">BibTeX引文格式插件(BibTeX citation format plugin)</message>
+	<message key="plugins.citationFormats.bibtex.displayName">BibTeX引文格式插件</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
-	<message key="plugins.citationFormats.bibtex.description">本插件实现了BibTeX引文格式(This plugin implements the BibTeX citation format).</message>
+	<message key="plugins.citationFormats.bibtex.description">本插件实现了BibTeX引文格式.</message>
 </locale>

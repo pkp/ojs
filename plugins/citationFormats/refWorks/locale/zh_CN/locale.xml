@@ -13,8 +13,8 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.refWorks.displayName">RefWorks引文格式插件(RefWorks citation format plugin</message>
+	<message key="plugins.citationFormats.refWorks.displayName">RefWorks引文格式插件</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
-	<message key="plugins.citationFormats.refWorks.description">本插件实现了RefWorks引文格式(This plugin implements the RefWorks citation format).</message>
-	<message key="plugins.citationFormats.refWorks.export">导出为RefWorks格式(Export to RefWorks)</message>
+	<message key="plugins.citationFormats.refWorks.description">本插件实行RefWorks引文格式.</message>
+	<message key="plugins.citationFormats.refWorks.export">导出为RefWorks格式</message>
 </locale>

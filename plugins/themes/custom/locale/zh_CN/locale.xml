@@ -13,7 +13,7 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.theme.custom.name">自定义出题插件</message>
+	<message key="plugins.theme.custom.name">自定义主题插件</message>
 	<message key="plugins.theme.custom.description">本插件实现了一个可定制的主题.</message>
 	<message key="plugins.theme.custom.notWritable">注意:该插件样式文件"{$stylesheetFileLocation}"当前不可写。在插件被使用前该样式文件必须可写。</message>
 	<message key="plugins.theme.custom.settings">设置</message>

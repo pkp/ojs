@@ -13,9 +13,9 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.authorBios.displayName">Author biography Block</message>
-	<message key="plugins.block.authorBios.description">This plugin displays a block containing author biographies in the reading tools sidebar.</message>
-	<message key="plugins.block.authorBios.title">About The Authors</message>
-	<message key="plugins.block.authorBios.aboutTheAuthor">About The Author</message>
-	<message key="plugins.block.authorBios.aboutTheAuthors">About The Authors</message>
+	<message key="plugins.block.authorBios.displayName">作者传记单元</message>
+	<message key="plugins.block.authorBios.description">本插件在阅读工具栏中显示作者生平。</message>
+	<message key="plugins.block.authorBios.title">关于作者</message>
+	<message key="plugins.block.authorBios.aboutTheAuthor">关于作者</message>
+	<message key="plugins.block.authorBios.aboutTheAuthors">关于作者</message>
 </locale>

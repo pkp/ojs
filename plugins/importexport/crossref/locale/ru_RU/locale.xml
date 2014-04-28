@@ -16,20 +16,8 @@
 	<message key="plugins.importexport.crossref.displayName">Плагин «Экспорт в формате CrossRef XML»</message>
 	<message key="plugins.importexport.crossref.description">Этот плагин экспортирует метаданные статей в формате CrossRef XML.</message>
 	
-	<message key="plugins.importexport.crossref.export">Экспортировать данные</message>
-	<message key="plugins.importexport.crossref.export.issues">Экспортировать выпуски</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Выберите выпуск для экспорта.</message>
-	<message key="plugins.importexport.crossref.export.articles">Экспортировать статьи</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Выберите статьи для экспорта.</message>
-	
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Вызов: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">ОШИБКА:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Нет выпуска с указанным ID выпуска «{$issueId}».</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Нет статьи с указанным ID статьи «{$articleId}».</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Для того чтобы использовать этот плагин, пожалуйста, перейдите в категорию плагинов «Плагины открытых идентификаторов», включите и настройте плагин DOI и укажите там верный префикс DOI.</message>
 </locale>

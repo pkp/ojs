@@ -13,9 +13,9 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.relatedItems.displayName">Related Items Block</message>
-	<message key="plugins.block.relatedItems.description">This plugin displays a block containing related items in the reading tools sidebar.</message>
-	<message key="plugins.block.relatedItems.title">Related Items</message>
-	<message key="plugins.block.relatedItems.hide">Hide</message>
-	<message key="plugins.block.relatedItems.show">Show all</message>
+	<message key="plugins.block.relatedItems.displayName">相关文摘单元</message>
+	<message key="plugins.block.relatedItems.description">本插件在阅读工具栏中显示相关文摘单元。</message>
+	<message key="plugins.block.relatedItems.title">相关文摘</message>
+	<message key="plugins.block.relatedItems.hide">隐藏</message>
+	<message key="plugins.block.relatedItems.show">全部显示</message>
 </locale>

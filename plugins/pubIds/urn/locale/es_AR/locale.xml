@@ -76,4 +76,9 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">El sufijo URN dado ya está en uso para otro item publicado. Por favor introduzca un sufijo URN único para cada item.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Falta el número de certificación.</message>
 
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">número</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">artículo</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">galerada</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">archivo suplementario</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Lo que está viendo es una vista previa del URN que puede estar incompleta. Un URN no ha sido aún generado. Al publicar un número y visualizar la página pública ($pubObjectType) generará automáticamente un URN único para este {$pubObjectType}.</message>
 </locale>

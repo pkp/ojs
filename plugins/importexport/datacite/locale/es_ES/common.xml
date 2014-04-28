@@ -57,4 +57,6 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Successfully exported selected objects to '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="plugins.importexport.common.markRegistered">Marcar como registrado</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Haga clic en este botón para marcar los objetos registrados (ej. si fueron registrados antes o manualmente)</message>
 </locale>

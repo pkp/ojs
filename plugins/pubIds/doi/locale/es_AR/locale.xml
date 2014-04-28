@@ -61,4 +61,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">artículo complementario</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Lo que está viendo es una vista previa del DOI, que puede estar incompleto.El DOI todavía no fue generado. Al publicar el número y al ver la página pública ({$pubObjectType}) se generará automáticamente un DOI único para este {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">El sufijo DOI introducido ya esta en uso para otro item público. Por favor introduzca un sufijo DOI único para cada item</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTA:</strong> Cuando se utiliza el DOI de <a href="http://www.crossref.org" target="_new">CrossRef</a>, por favor seleccione artículos. Artículo es un trabajo visto, o sea una entidad de contenido artístico e intelectual. Por lo tanto, un artículo es el objeto de publicación en el que se basa la exportación y registro de CrossRef DOI.]]></message>
 </locale>

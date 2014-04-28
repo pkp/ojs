@@ -50,4 +50,5 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Depósito com Sucesso</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">O(s) item(s) seleccionados foram depositados.</message>
 	<message key="plugins.importexport.sword.depositFailed">Depósito Falhou</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Permitir Directores de Revista e (opcionalmente) Autores depositar artigos através do protocolo SWORD. Note-se que este plugin requer a extensão Zip, que actualmente não está instalado no sistema.</message>
 </locale>

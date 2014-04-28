@@ -13,6 +13,6 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Metadata Format</message>
-	<message key="plugins.OAIMetadata.rfc1807.description">Structures metadata in a way that is consistent with the RFC1807 format.</message>
+	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 元数据格式</message>
+	<message key="plugins.OAIMetadata.rfc1807.description">Structures 元数据在某种程度上和RFC1807格式一致。</message>
 </locale>

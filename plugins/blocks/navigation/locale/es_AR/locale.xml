@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Bloque de Navegación</message>
 	<message key="plugins.block.navigation.description">Este Complemento proporciona vínculos de navegación en el lateral.</message>
 	<message key="plugins.block.navigation.journalContent">Contenido de la Revista</message>
+	<message key="plugins.block.navigation.searchScope">Ámbito de búsqueda</message>
 </locale>
