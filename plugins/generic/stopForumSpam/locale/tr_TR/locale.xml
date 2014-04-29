@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/stopForumSpam/locale/en_US/locale.xml
+  * plugins/generic/stopForumSpam/locale/tr_TR/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Stop Forum Spam plugin localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
 
 	<message key="plugins.generic.stopForumSpam.displayName">Forum Spam Eklentisini Durdur</message>
 	<message key="plugins.generic.stopForumSpam.description">Integrate OJS with the Stop Forum Spam prevention system, which aims to reduce the amount of spam registrations.</message>
