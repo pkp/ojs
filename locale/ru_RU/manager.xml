@@ -634,6 +634,8 @@
 	<message key="manager.subscriptions.form.typeId">Тип подписки</message>
 	<message key="manager.subscriptions.form.typeIdRequired">Тип подписки обязателен.</message>
 	<message key="manager.subscriptions.form.typeIdValid">Пожалуйста, выберите правильный тип подписки.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Отправка напоминания перед окончанием подписки</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Отправка напоминания после окончания подписки</message>
 	<message key="manager.subscriptions.form.dateStart">Дата начала</message>
 	<message key="manager.subscriptions.form.dateStartRequired">Дата начала подписки обязательна.</message>
 	<message key="manager.subscriptions.form.dateStartValid">Пожалуйста, выберите правильную дату начала подписки.</message>
