@@ -18,7 +18,7 @@
 <h3>{translate key="plugins.importexport.doaj.export"}</h3>
 <ul class="plain">
 	<li>&#187; <a href="{plugin_url path="export"}">{translate key="plugins.importexport.doaj.export.journal"}</a>: {translate key="plugins.importexport.doaj.export.journalInfo"}</li>
-	<li>&#187; <a href="{plugin_url path="contact"}">{translate key="plugins.importexport.doaj.export.contact"}</a>: {translate key="plugins.importexport.doaj.export.contactInfo"}</li>
+	<li>&#187; <a href="http://doaj.org/application/new">{translate key="plugins.importexport.doaj.export.contact"}</a>: {translate key="plugins.importexport.doaj.export.contactInfo"}</li>
 </ul>
 
 {include file="common/footer.tpl"}
