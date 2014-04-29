@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/pubIds/doi/locale/en_US/locale.xml
+  * @file plugins/pubIds/doi/locale/es_AR/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * DOI plugin localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Este plugin habilita la asignación de Identificadores de Objetos Digitales para números, artículos, versiones galeradas y archivos complementarios en OJS.</message>
 

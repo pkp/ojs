@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/lucene/locale/en_US/locale.xml
+  * @file plugins/generic/lucene/locale/es_AR/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.generic.lucene.displayName">Plugin de Búsqueda Lucene</message>
 	<message key="plugins.generic.lucene.description">El plugin Lucene provee soporte multi-lenguaje, resultados relevantes de búsqueda avanzada, indexación rápida, mejor escalabilidad y más.</message>
 	<message key="plugins.generic.lucene.settings">Configuración</message>
