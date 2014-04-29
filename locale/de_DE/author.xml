@@ -7,11 +7,11 @@
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 
-<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="author.submit">Neuer Beitrag</message>
 	<message key="author.track">Beiträge im Begutachtungsverfahren</message>
 	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Richtlinie</a> für Interessenkonflikte]]></message>

@@ -8,7 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
-  *
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 <email_texts locale="de_DE">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
