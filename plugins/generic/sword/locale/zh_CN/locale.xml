@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="zh_CN" full_name="China">
 	<message key="plugins.generic.sword.displayName">SWORD插件</message>
 	<message key="plugins.generic.sword.description">允许期刊管理员和作者（可选）通过SWORD协议存文章</message>
 	<message key="plugins.generic.sword.enabled">The SWORD plugin has been enabled.</message>
