@@ -5,11 +5,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ca_ES (Català) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.webfeed.displayName">Connector de canals d'informació</message>
 	<message key="plugins.generic.webfeed.description">Aquest connector crea canals d'informació RSS/Atom per al número actual.</message>
 

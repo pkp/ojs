@@ -13,7 +13,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Canals de continguts externs</message>
