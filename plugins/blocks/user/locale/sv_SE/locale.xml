@@ -15,7 +15,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.block.user.displayName">Användar block</message>
 	<message key="plugins.block.user.description">Detta insticksprogram innehåller verktyg för användarkontohantering i sidokolumn (exempelvis in- och utloggning, profillänk osv.).</message>
 	<message key="plugins.block.user.loggedInAs">Du är inloggad som...</message>
