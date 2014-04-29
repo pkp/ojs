@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="zh_CN" full_name="China">
 	<message key="plugins.generic.referral.name">Referral 插件</message>
 	<message key="plugins.generic.referral.description">Referral插件追踪refback网址的文章（例如：读者跟随外部链接到一篇文章），实现作者维护和发报表潜在文章refback自动更新列表。</message>
 	<message key="plugins.generic.referral.editReferral">编辑 Refback</message>
