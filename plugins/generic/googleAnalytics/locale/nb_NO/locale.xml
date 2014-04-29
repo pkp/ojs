@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="nb_NO" full_name="Norwegian">
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Programutvidelse for Google Analytics</message>

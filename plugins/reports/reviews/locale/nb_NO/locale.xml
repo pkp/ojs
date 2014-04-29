@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the nb_NO (Norwegian) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="nb_NO" full_name="Norwegian">
 	<message key="plugins.reports.reviews.displayName">Rapport over fagfellevurderingsoppdrag</message>
 	<message key="plugins.reports.reviews.description">Denne programutvidelsen lager en kommeseparert fil med en liste over fagfellevurderingsoppdrag for et tidsskrift.</message>
 	<message key="plugins.reports.reviews.round">Runde</message>

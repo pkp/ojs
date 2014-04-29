@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ru_RU (Russian) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.customBlockManager.displayName">Модуль собственных блоков</message>
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Вы можете использовать этот модуль для создания и удаления собственных модулей блоков.  После этого содержание блока можно отредактировать на странице <a href="{$systemPluginsUrl}">Системные Модули</a> (в разделе модулей блоков).  Для размещения Вашего модуля в требуемое место на боковой панели смотрите <a href="{$setupStep56}">Шаг 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Настройки</message>

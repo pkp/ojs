@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ro_RO (Romanian) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ro_RO" full_name="Romanian">
 	<message key="plugins.reports.views.displayName">Vezi raportul</message>
 	<message key="plugins.reports.views.description">Acest modul implementează un raport CVS care descrie gradul de accesare și lecturare a articolului.</message>
 </locale>

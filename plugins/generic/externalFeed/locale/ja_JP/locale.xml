@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ja_JP" full_name="日本語">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">外部フィード</message>

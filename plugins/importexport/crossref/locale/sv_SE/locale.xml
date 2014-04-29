@@ -15,7 +15,7 @@
   * 
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML export plugin</message>
 	<message key="plugins.importexport.crossref.description">Export artikelmetadata i CrossRef XML format.</message>
 	

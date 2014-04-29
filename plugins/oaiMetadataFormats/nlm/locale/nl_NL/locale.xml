@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the nl_NL (Nederlands) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.oaiMetadata.nlm.displayName">NLM Metadata formaat</message>
 	<message key="plugins.oaiMetadata.nlm.description">Structureert metadata volgens het NLM Journal Article formaat.</message>
 </locale>

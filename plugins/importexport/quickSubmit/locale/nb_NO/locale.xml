@@ -8,11 +8,11 @@
   * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the nb_NO (Norwegian) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="nb_NO" full_name="Norwegian">
 	<message key="plugins.importexport.quickSubmit.addToExisting">Legg til i et eksisterende nummer:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Innlevering skal til</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Velg om den nye innleveringen skal inn i et eksisterende nummer, eller om den skal legges i kø for redaksjonell behandling.</message>

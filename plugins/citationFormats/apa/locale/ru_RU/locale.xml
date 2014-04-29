@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.citationFormats.apa.displayName">Модуль формата ссылок APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Этот модул реализует формат ссылок APA.</message>

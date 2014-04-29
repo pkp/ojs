@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fa_IR (Persian) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fa_IR" full_name="Persian">
 	<message key="plugins.oaiMetadata.nlm.displayName">فرمت متاداده ان ال ام</message>
 	<message key="plugins.oaiMetadata.nlm.description">ساختار متاداده باید با فرمت مقاله مجله ان ال ام سازگار باشد</message>
 </locale>

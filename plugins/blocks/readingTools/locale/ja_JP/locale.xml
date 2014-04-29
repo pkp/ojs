@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ja_JP (日本語) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ja_JP" full_name="日本語">
 	<message key="plugins.block.readingTools.displayName">読書ツールブロック</message>
 	<message key="plugins.block.readingTools.description">読書ツールのサイドバーに読書ツールブロックを表示します。</message>
 	<message key="plugins.block.readingTools.title">読書ツール</message>

@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the es_ES (Español) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español">
 	<message key="plugins.block.relatedItems.displayName">Bloque de ítems relacionados</message>
 	<message key="plugins.block.relatedItems.description">Este plugin muestra un bloque conteniendo ítems relacionados en la barra lateral de las herramientas de lectura.</message>
 	<message key="plugins.block.relatedItems.title">Ítems relacionados</message>

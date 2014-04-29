@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="zh_CN" full_name="China">
 	<message key="plugins.block.relatedItems.displayName">Related Items Block</message>
 	<message key="plugins.block.relatedItems.description">This plugin displays a block containing related items in the reading tools sidebar.</message>
 	<message key="plugins.block.relatedItems.title">Related Items</message>

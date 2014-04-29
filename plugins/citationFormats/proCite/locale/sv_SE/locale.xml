@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.citationFormats.proCite.displayName">ProCite citeringsformattillägg</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite - RIS format (Macintosh &amp; Windows)</message>
 	<message key="plugins.citationFormats.proCite.description">Detta tillägg implementerar ProCite citeringsformat.</message>
