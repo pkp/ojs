@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the nb_NO (Norwegian) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="nb_NO" full_name="Norwegian">
 	<message key="plugins.generic.customBlockManager.displayName">Administrasjon av tilpassede blokker</message>
 	<message key="plugins.generic.customBlockManager.description">Denne programutvidelsen lar deg administrere tilpassede blokker. Du kan redigere blokkene i innstillingene i hver programutvidelse du lager her.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Du kan bruke denne programutvidelsen til å legge til eller slette tilpassede blokker.  Du kan så redigere innholdet via <a href="{$systemPluginsUrl}">Programutvidelser</a>-siden (i blokk-programutvidelser).  For å plassere din programutvidelse på ønsket plass i sidemenyen, gå til <a href="{$setupStep56}">Oppsett steg 5.6</a>]]></message>
