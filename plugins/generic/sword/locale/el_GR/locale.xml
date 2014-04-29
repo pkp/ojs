@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the el_GR (Greek) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="el_GR" full_name="Greek">
 	<message key="plugins.generic.sword.displayName">SWORD Plugin</message>
 	<message key="plugins.generic.sword.description">Allow Journal Managers and (optionally) Authors to deposit articles via the SWORD protocol</message>
 	<message key="plugins.generic.sword.enabled">The SWORD plugin has been enabled.</message>
