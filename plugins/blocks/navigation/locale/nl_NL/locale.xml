@@ -18,4 +18,5 @@
 	<message key="plugins.block.navigation.displayName">Navigatie-blok</message>
 	<message key="plugins.block.navigation.description">Deze plugin verzorgt de navigatie-links in de sidebar.</message>
 	<message key="plugins.block.navigation.journalContent">Inhoud tijdschrift</message>
+	<message key="plugins.block.navigation.searchScope">Zoek scope</message>
 </locale>

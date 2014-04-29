@@ -15,4 +15,9 @@
 <locale name="pt_PT" full_name="Português">
 	<message key="plugins.reports.views.displayName">Visualizar Relatório</message>
 	<message key="plugins.reports.views.description">Este plugin implementa um relatório em formato CSV descrevendo as leituras feitas para cada artigo.</message>
+	<message key="plugins.reports.views.articleTitle">Título Artigo</message>
+	<message key="plugins.reports.views.datePublished">Data Publicação</message>
+	<message key="plugins.reports.views.abstractViews">Visualizações Resumo</message>
+	<message key="plugins.reports.views.galleyViews">Total Visualizações Galley</message>
+	<message key="plugins.reports.views.articleId">ID Artigo</message>
 </locale>

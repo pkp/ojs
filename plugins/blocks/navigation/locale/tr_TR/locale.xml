@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Yönlendirme Bloğu</message>
 	<message key="plugins.block.navigation.description">Bu eklenti yan taraf yönlendirme bağlantılarını sağlar.</message>
 	<message key="plugins.block.navigation.journalContent">DERGİ İÇERİĞİ</message>
+	<message key="plugins.block.navigation.searchScope">Arama Kapsamı</message>
 </locale>

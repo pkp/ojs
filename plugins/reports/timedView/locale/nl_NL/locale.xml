@@ -29,4 +29,5 @@
 	<message key="plugins.reports.timedView.report.datePublished">Publicatiedatum</message>
 	<message key="plugins.reports.timedView.report.abstractViews">Samenvatting bekeken</message>
 	<message key="plugins.reports.timedView.report.galleyViews">Totaal proeven bekeken</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">Aanvinken als u statistieken wilt volgens de oude Timed View Plugin. Als u een rapport wilt op basis van de nieuwe gegevens, dan dit veld niet aanvinken.</message>
 </locale>

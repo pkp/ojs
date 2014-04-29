@@ -13,7 +13,7 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.endNote.displayName">EndNote引文格式插件(EndNote citation format plugin</message>
-	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote - EndNote format (Macintosh &amp; Windows)</message>
-	<message key="plugins.citationFormats.endNote.description">本插件实现了EndNote引文格式(This plugin implements the EndNote citation format.</message>
+	<message key="plugins.citationFormats.endNote.displayName">EndNote引文格式插件</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - EndNote format (Macintosh & Windows)]]></message>
+	<message key="plugins.citationFormats.endNote.description">本插件实行EndNote引文格式。</message>
 </locale>

@@ -304,7 +304,6 @@ class Upgrade extends Installer {
 			'metaCoverageChronExamples' => 'metaCoverageChronExamples',
 			'metaCoverageResearchSampleExamples' => 'metaCoverageResearchSampleExamples',
 			'metaTypeExamples' => 'metaTypeExamples',
-			'metaCitations' => 'metaCitations',
 			// Setup page 4
 			'pubFreqPolicy' => 'pubFreqPolicy',
 			'copyeditInstructions' => 'copyeditInstructions',

@@ -179,6 +179,9 @@
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="referenceLinking"}')" class="action">{translate key="submission.layout.referenceLinking"}</a>
 {/if}
+{foreach name=templates from=$templates key=templateId item=template}
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="downloadLayoutTemplate" path=$submission->getId()|to_array:$templateId}" class="action">{$template.title|escape}</a>
+{/foreach}
 </div>
 </div>
 

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.backup.name">Connector de còpies de seguretat</message>
 	<message key="plugins.generic.backup.description">Aquest connector genera una còpia de seguretat de la instal·lació.</message>
 

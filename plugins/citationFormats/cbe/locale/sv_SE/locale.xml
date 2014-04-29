@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.citationFormats.cbe.displayName">CBE citeringsformattillägg</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
 	<message key="plugins.citationFormats.cbe.description">Det här tillägget implementerar CBE citeringsformat.</message>

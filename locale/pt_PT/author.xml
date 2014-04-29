@@ -125,4 +125,6 @@
 	<message key="author.submit.submissionLocale">Idioma de Submissão</message>
 	<message key="author.submit.submissionLocaleDescription">A revista aceita submissões em vários idiomas. Escolha o principal idioma de submissão a partir do botão em baixo.</message>
 	<message key="author.submit.form.localeRequired">Seleccione o idioma de submissão</message>
+	<message key="author.submit.submissionSupportingAgencies">Entidades Financiadoras</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identificar as entidades (uma pessoa, uma organização ou um serviço) que contribuiram para o conteúdo ou financiaram ou apoiaram o trabalho submetido. Separe-os com um ponto e vírgula (por exemplo, José Castro Silva, ISPA-Instituto Universitário; Departamento de Psicologia da Educação).</message>
 </locale>

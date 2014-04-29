@@ -13,8 +13,8 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.apa.displayName">APA引文格式插件(APA citation format plugin)</message>
+	<message key="plugins.citationFormats.apa.displayName">APA引用格式插件</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">本插件实现了APA引文格式(This plugin implements the APA citation format).</message>
+	<message key="plugins.citationFormats.apa.description">本插件实现了APA引文格式。</message>
 	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[检索(Retrieved) {$retrievedDate}, 来自(from) <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

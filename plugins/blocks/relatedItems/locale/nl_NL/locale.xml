@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the nl_NL (Nederlands) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.block.relatedItems.displayName">Gerelateerde onderdelen blok</message>
 	<message key="plugins.block.relatedItems.description">Deze plugin toont een blok met gerelateerde onderdelen in de leesgereedschappen sidebar.</message>
 	<message key="plugins.block.relatedItems.title">Gerelateerd</message>

@@ -28,6 +28,12 @@
 			{$author->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
+	{if $author->getData('orcid')}
+		<tr valign="top">
+			<td class="label">{translate key="user.orcid"}</td>
+			<td class="value"><a href="{$author->getData('orcid')|escape}" target="_blank">{$author->getData('orcid')|escape}</a></td>
+		</tr>
+	{/if}
 	{if $author->getUrl()}
 		<tr valign="top">
 			<td class="label">{translate key="user.url"}</td>

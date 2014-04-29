@@ -13,7 +13,7 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.cbe.displayName">CBE引文格式(CBE citation format plugin)</message>
+	<message key="plugins.citationFormats.cbe.displayName">CBE引用格式</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
-	<message key="plugins.citationFormats.cbe.description">本插件实现了CBE引文格式(This plugin implements the CBE citation format).</message>
+	<message key="plugins.citationFormats.cbe.description">本插件实行CBE引用格式.</message>
 </locale>

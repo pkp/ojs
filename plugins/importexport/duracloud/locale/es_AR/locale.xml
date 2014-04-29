@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/importexport/duracloud/locale/en_US/locale.xml
+  * @file plugins/importexport/duracloud/locale/es_AR/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.importexport.duracloud.displayName">Plugin de Importación/Exportación DuraCloud.</message>
 	<message key="plugins.importexport.duracloud.description">Guarda y Recupera los números usando un servicio externo de DuraCloud para almacenaje.</message>
 
