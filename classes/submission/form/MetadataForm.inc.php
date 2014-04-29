@@ -157,6 +157,7 @@ class MetadataForm extends Form {
 						'country' => $authors[$i]->getCountry(),
 						'countryLocalized' => $authors[$i]->getCountryLocalized(),
 						'email' => $authors[$i]->getEmail(),
+						'orcid' => $authors[$i]->getData('orcid'),
 						'url' => $authors[$i]->getUrl(),
 						'competingInterests' => $authors[$i]->getCompetingInterests(null), // Localized
 						'biography' => $authors[$i]->getBiography(null) // Localized
@@ -415,6 +416,7 @@ class MetadataForm extends Form {
 				$author->setAffiliation($authors[$i]['affiliation'], null); // Localized
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
+				$author->setData('orcid', $authors[$i]['orcid']);
 				$author->setUrl($authors[$i]['url']);
 				if (array_key_exists('competingInterests', $authors[$i])) {
 					$author->setCompetingInterests($authors[$i]['competingInterests'], null); // Localized
