@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Canales RSS</message>
