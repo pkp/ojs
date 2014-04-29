@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ja_JP (日本語) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ja_JP" full_name="日本語">
 	<message key="plugins.reports.views.displayName">アクセスレポート</message>
 	<message key="plugins.reports.views.description">論文のアクセス状況を含むCSV報告書を作成します。</message>
 </locale>

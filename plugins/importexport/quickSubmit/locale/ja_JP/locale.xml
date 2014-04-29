@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ja_JP (日本語) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ja_JP" full_name="日本語">
 	<message key="plugins.importexport.quickSubmit.addToExisting">既存の巻に追加</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">投稿先</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">既存の巻に新規に追加するか編集待ち状態にするか選択してください。</message>
