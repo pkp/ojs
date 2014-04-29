@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Модуль phpMyVisites</message>

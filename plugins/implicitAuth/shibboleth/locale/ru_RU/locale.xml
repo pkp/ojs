@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ru_RU (Russian) locale.
   *
   * Contributed by Dan Galewsky, University of Texas
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
 	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Действие этого модуля распространяется на весь сайт, он включается в файле конфигурации OJS.</message>
 </locale>

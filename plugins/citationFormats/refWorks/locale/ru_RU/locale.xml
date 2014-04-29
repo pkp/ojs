@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.citationFormats.refWorks.displayName">Модуль формата ссылок RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description">Реализует формат ссылок RefWorks.</message>
