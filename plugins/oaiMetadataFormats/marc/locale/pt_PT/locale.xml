@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pt_PT (Português) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_PT" full_name="Português">
 	<message key="plugins.OAIMetadata.marc.displayName">Formato de Meta-dados MARC</message>
 	<message key="plugins.OAIMetadata.marc.description">Estrutura os meta-dados de modo a serem consistentes com o formato MARC.</message>
 </locale>
