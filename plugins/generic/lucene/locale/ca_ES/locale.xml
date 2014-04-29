@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/lucene/locale/en_US/locale.xml
+  * plugins/generic/lucene/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.lucene.displayName">Connector de cerca Lucene</message>
 	<message key="plugins.generic.lucene.description">The Lucene plugin provides multi-language support, improved search result relevance, faster indexing, better scalability and more.</message>
 

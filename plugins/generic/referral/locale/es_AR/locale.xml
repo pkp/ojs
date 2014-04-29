@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/referral/locale/en_US/locale.xml
+  * @file plugins/generic/referral/locale/es_AR/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.generic.referral.name">Plugin de Referencias</message>
 	<message key="plugins.generic.referral.description">El plugin de referencias rastrea las URL que hacen referencias externas a los artículos (EJ: cuando un lector sigue un enlace externo al artículo). Permitiendo que los autores mantengan una lista auto-actualizable de los enlaces de referencia al artículo.</message>
 	

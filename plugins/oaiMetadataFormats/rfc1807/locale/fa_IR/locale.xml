@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fa_IR (Persian) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fa_IR" full_name="Persian">
 	<message key="plugins.OAIMetadata.rfc1807.displayName">فرمت متاداده آر اف سی ۱۸۰۷</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">ساختار متاداده باید با فرمت آر اف سی ۱۸۰۷ سازگار باشد</message>
 </locale>

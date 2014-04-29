@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ro_RO (Romanian) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ro_RO" full_name="Romanian">
 	<message key="plugins.generic.sword.displayName">Modul SWORD</message>
 	<message key="plugins.generic.sword.description">Permite managerilor revistei și (opțional) autorilor să-și depoziteze articolele prin intermediul protocolului SWORD</message>
 	<message key="plugins.generic.sword.enabled">Modulul SWORD a fost activat.</message>

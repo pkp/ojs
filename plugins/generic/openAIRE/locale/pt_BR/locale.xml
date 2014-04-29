@@ -11,7 +11,7 @@
   * OpenAIRE plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">O plugin OpenAIRE inclui o elemento projectID aos metadados do artigo e estende a interface OAI-PMH para se adequar às Orientações do OpenAIRE 1.1, auxiliando periódicos que usam o OJS a serem compatíveis com o OpenAIRE.</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>

@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the no_NO (Norwegian) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.generic.xmlGalley.displayName">Programutvidelse for XML korrekturutgave</message>
 	<message key="plugins.generic.xmlGalley.description">Denne programutvidelsen lager XHTML-korrekturutgaver av en XML-artikkel ved bruk av XSLT.</message>
 	<message key="plugins.generic.xmlGalley.manager.settings">Innstillinger</message>
