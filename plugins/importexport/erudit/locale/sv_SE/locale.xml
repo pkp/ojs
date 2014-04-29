@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.importexport.erudit.displayName">Erudit artikel export plugin</message>
 	<message key="plugins.importexport.erudit.description">Export artiklar med hjälp av den engelska Erudit DTD:n</message>
 

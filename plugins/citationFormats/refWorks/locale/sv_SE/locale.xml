@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.citationFormats.refWorks.displayName">RefWorks citeringsformattillägg</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description">Detta tillägg implementerar RefWorks citeringsformat.</message>
