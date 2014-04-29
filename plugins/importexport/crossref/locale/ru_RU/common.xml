@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/importexport/medra/locale/ru_RU/common.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Для того чтобы использовать этот плагин, пожалуйста, перейдите в категорию плагинов «Плагины открытых идентификаторов», включите и настройте плагин DOI и укажите там верный префикс DOI.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Плагин не полностью настроен.</message>
+
+	<message key="plugins.importexport.common.settings">Настройки</message>
+
+	<message key="plugins.importexport.common.settings.form.password">Пароль</message>
+	<message key="plugins.importexport.common.settings.form.passwordRequired">Пожалуйста, введите пароль.</message>
+	
+	<message key="plugins.importexport.common.register">Зарегистрировать</message>
+	<message key="plugins.importexport.common.registerDescription">Щелкните на этой кнопке, чтобы первый раз зарегистрировать этот объект в регистрационном агентстве. Это работает только если вы никогда не регистрировали этот объект ранее!</message>
+	<message key="plugins.importexport.common.registerDescription.multi">Щелкните на этой кнопке, чтобы зарегистрировать или обновить метаданные выбранных объектов в регистрационном агентстве.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Регистрация завершилась неудачей! Сервер регистрации DOI вернул ошибку: «{$param}».</message>
+	<message key="plugins.importexport.common.register.success">Регистрация прошла успешно!</message>
+	<message key="plugins.importexport.common.register.warning">Регистрация большого количества объектов может занять длительное время, поэтому подождите после щелчка на кнопке «Зарегистрировать». Вы будете уведомлены, когда регистрация будет завершена.</message>
+	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[Прямая регистрация сейчас отключена. Пожалуйста, <a href="{$settingsUrl}">настройте</a> имя пользователя и пароль, чтобы регистрировать объекты напрямую в регистрационном агентстве.]]></message>
+
+	<message key="plugins.importexport.common.update">Обновить</message>
+	<message key="plugins.importexport.common.updateDescription">Щелкните на этой кнопке, чтобы обновить метаданные этого объекта в регистрационном агентстве. Это работает только если вы ранее успешно зарегистрировали этот объект!</message>
+		
+	<message key="plugins.importexport.common.export">Экспортировать данные</message>
+	<message key="plugins.importexport.common.export.unregistered">Экспортировать все незарегистрированные выпуски, статьи и гранки</message>
+	<message key="plugins.importexport.common.export.selectUnregistered">Выбрать незарегистрированные выпуски, статьи и гранки</message>
+	<message key="plugins.importexport.common.export.noUnregistered">Все опубликованные выпуски, статьи и гранки уже были зарегистрированы (или ни одному из них не были присвоены DOI).</message>
+	<message key="plugins.importexport.common.export.issues">Экспортировать определенные выпуски</message>
+	<message key="plugins.importexport.common.export.selectIssue">Выбрать выпуски</message>
+	<message key="plugins.importexport.common.export.noIssues">На текущий момент нет выпусков с назначенными DOI.</message>
+	<message key="plugins.importexport.common.export.articles">Экспортировать определенные статьи</message>
+	<message key="plugins.importexport.common.export.selectArticle">Выбрать статьи</message>
+	<message key="plugins.importexport.common.export.noArticles">На текущий момент нет статей с назначенными DOI.</message>
+	<message key="plugins.importexport.common.export.galleys">Экспортировать определенные гранки</message>
+	<message key="plugins.importexport.common.export.selectGalley">Выбрать гранки</message>
+	<message key="plugins.importexport.common.export.noGalleys">На текущий момент нет гранок с назначенными DOI.</message>
+	<message key="plugins.importexport.common.exportDescription">Щелкните на этой кнопке, чтобы экспортировать XML-данные выбранных объектов в локальный файл без регистрации их в регистрационном агентстве. Это может быть полезно, если вы хотите использовать третью сторону для регистрации DOI для вас или если вы хотите проверить XML перед его регистрацией.</message>
+ 
+	<message key="plugins.importexport.common.export.error.issueNotFound">Нет выпуска с указанным ID выпуска: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.articleNotFound">Нет статьи с указанным ID статьи: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.galleyNotFound">Нет гранки с указанным ID гранки: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.noDoiAssigned">Объекту с ID {$param} не присвоен DOI.</message>
+	<message key="plugins.importexport.common.export.error.unknownJournal">Нет журнала с указанным путем к журналу: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.unknownObjectType">Тип объекта {$param} не может быть экспортирован.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Выходной файл {$param} не доступен для записи.</message>
+ 
+	<message key="plugins.importexport.common.notification.exportSuccessful">Успешно экспортированы выбранные объекты в «{$param}»</message>
+ 
+	<message key="plugins.importexport.common.cliError">ОШИБКА:</message>
+</locale>

@@ -13,6 +13,7 @@
   -->
  
 <locale name="ru_RU" full_name="Russian">
+	<message key="plugins.block.languageToggle.selectLabel">Выбрать язык</message>
 	<message key="plugins.block.languageToggle.displayName">Блок «Переключение языка»</message>
 	<message key="plugins.block.languageToggle.description">Этот плагин добавляет на боковую панель переключатель языка.</message>
 </locale>
