@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the nl_NL (Nederlands) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Metadata Formaat</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">Structureert metadata volgens het RFC1807 formaat.</message>
 </locale>
