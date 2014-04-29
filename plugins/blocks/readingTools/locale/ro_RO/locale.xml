@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ro_RO (Romanian) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ro_RO" full_name="Romanian">
 	<message key="plugins.block.readingTools.displayName">Blocul instrumentelor pentru lectură</message>
 	<message key="plugins.block.readingTools.description">Acest modul afișează un bloc care conține instrumente necesare lecturii în zona laterală</message>
 	<message key="plugins.block.readingTools.title">Instrumente pentru lectură</message>
