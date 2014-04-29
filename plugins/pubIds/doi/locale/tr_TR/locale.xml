@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DOI plugin localization strings
@@ -61,4 +61,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">ek dosya</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Gördüğünüz DOI ön izleme eksik olabilir. Bir DOI henüz tamamlanmamış olabilir. Sayı yayınlama ve {$pubObjectType} genel sayfasını görüntüleme otomatik olarak bu {$pubObjectType} için benzersiz bir DOI üretecektir.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Verilen DOI son eki yayınlanmış başka bir öğe için zaten kullanılıyor. Her öğe için benzersiz bir DOI sonek giriniz.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTE:</strong> When using the <a href="http://www.crossref.org" target="_new">CrossRef</a> DOIs, please select articles. Article is seen as work, i.e. entity of intellectual and artistic content. Thus, article is the publishing object the CrossRef DOI export and registration is based upon.]]></message>
 </locale>

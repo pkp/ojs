@@ -4,16 +4,16 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ca_ES (Català) locale.
   *
   * $Id$
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.authorBios.displayName">Bloc de biografia de l'autor/a</message>
 	<message key="plugins.block.authorBios.description">Aquest connector proporciona un bloc que conté biografies dels autors/ores a la barra lateral d'eines de lectura.</message>
 	<message key="plugins.block.authorBios.title">Sobre els autors/ores</message>

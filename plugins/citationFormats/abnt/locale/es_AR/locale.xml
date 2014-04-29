@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in es_AR.
@@ -16,7 +16,6 @@
 	<message key="plugins.citationFormats.abnt.displayName">Complemento de Formato de Citas ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Este complemento implementa el formato de citas ABNT.</message>
-	<message key="plugins.citationFormat.abnt.location">Norteamérica</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponible en: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Fecha de acceso: {$retrievedDate}]]></message>
 	<message key="plugins.citationFormats.abnt.manager.settings">Configuraciones</message>
 	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Configuracion del plugin del  formato de citas  ABNT</message>

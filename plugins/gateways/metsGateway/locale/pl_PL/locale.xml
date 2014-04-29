@@ -4,15 +4,15 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pl_PL (Polski) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pl_PL" full_name="Polski">
 	<message key="plugins.gateways.metsGateway.displayName">METS Gateway Plugin</message>
 	<message key="plugins.gateways.metsGateway.settings">Settings</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[This plugin provides raw XML data in METS format for a specified journal. <strong>NOTE: This is intended to be used by Web Services and enabling this plugin has a security issue in that it provides unrestricted access to the journal in XML form (content is base64 encoded).</strong>]]></message>

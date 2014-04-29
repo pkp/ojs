@@ -4,11 +4,11 @@
 <!--
   * plugins/blocks/subscription/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
  
@@ -18,7 +18,7 @@
 	<message key="plugins.block.subscription.blockTitle">订阅</message>
 	<message key="plugins.block.subscription.expires">过期</message>
 	<message key="plugins.block.subscription.providedBy">接入提供者是：</message>
-	<message key="plugins.block.subscription.comingFromIP">来自IP为： </message>
+	<message key="plugins.block.subscription.comingFromIP">来自IP为：</message>
 	<message key="plugins.block.subscription.about">订阅</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">登录验证订阅</message>
 </locale>

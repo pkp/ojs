@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/editor.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
@@ -219,6 +219,6 @@
 	<message key="editor.issues.galleyLocaleRequired">Veuillez préciser la langue utilisée dans les épreuves du numéro.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà???</message>
 	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
-	<message key="editor.issues.confirmDeleteGalley">Voulez-vous vraiment supprimer les épreuves de ce numéro?</message>
-	<message key="editor.notifyUsers.allMailingList">Inclus tous les courriel de la liste de courriel</message>
+	<message key="editor.issues.confirmDeleteGalley">Êtes-vous certain de vouloir supprimer les épreuves de ce numéro?</message>
+	<message key="editor.notifyUsers.allMailingList">Inclure tous les courriel de la liste de diffusion ({$count} courriels)</message>
 </locale>

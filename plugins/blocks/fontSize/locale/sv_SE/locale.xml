@@ -4,15 +4,15 @@
 <!--
   * plugins/blocks/fontSize/locale/sv_SE/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the sv_SE (Swedish) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.block.fontSize.displayName">Block för teckenstorlek</message>
 	<message key="plugins.block.fontSize.description">Det här tillägget möjliggör justering av teckenstorleken.</message>
 	<message key="plugins.block.fontSize.title">Teckenstorlek</message>

@@ -4,16 +4,16 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ca_ES (Català) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.OAIMetadata.marcxml.displayName">Format de metadades MARC21</message>
 	<message key="plugins.OAIMetadata.marcxml.description">Estructura les metadades segons el format MARC21.</message>
 </locale>

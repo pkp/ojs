@@ -4,35 +4,39 @@
 <!--
   * plugins/generic/referral/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.referral.name">Referral Plugin</message>
-	<message key="plugins.generic.referral.description">The Referral Plugin tracks incoming refback URLs to articles (i.e. when a reader follows an external link to an article), allowing Authors to maintain and potentially publish an automatically-updated list of refbacks to an article.</message>
-	<message key="plugins.generic.referral.editReferral">Edit Refback</message>
-	<message key="plugins.generic.referral.createReferral">Create Refback</message>
+<locale name="zh_CN" full_name="China">
+	<message key="plugins.generic.referral.name">Referral 插件</message>
+	<message key="plugins.generic.referral.description">Referral插件追踪refback网址的文章（例如：读者跟随外部链接到一篇文章），实现作者维护和发报表潜在文章refback自动更新列表。</message>
+	<message key="plugins.generic.referral.editReferral">编辑 Refback</message>
+	<message key="plugins.generic.referral.createReferral">创建 Refback</message>
 	<message key="plugins.generic.referral.referrals">Refbacks</message>
-	<message key="plugins.generic.referral.count">Hits</message>
-	<message key="plugins.generic.referral.dateAdded">Date Added</message>
-	<message key="plugins.generic.referral.all">All</message>
-	<message key="plugins.generic.referral.all.empty">There are currently no refbacks.</message>
-	<message key="plugins.generic.referral.status.new">New</message>
-	<message key="plugins.generic.referral.status.new.empty">There are currently no new refbacks.</message>
-	<message key="plugins.generic.referral.status.accept">Published</message>
-	<message key="plugins.generic.referral.status.accept.empty">There are currently no published refbacks.</message>
-	<message key="plugins.generic.referral.status.decline">Ignored</message>
-	<message key="plugins.generic.referral.status.decline.empty">There are currently no ignored refbacks.</message>
-	<message key="plugins.generic.referral.confirmDelete">Are you sure you wish to delete this refback?</message>
-	<message key="plugins.generic.referral.nameRequired">A refback name is required.</message>
-	<message key="plugins.generic.referral.urlRequired">A refback URL is required.</message>
+	<message key="plugins.generic.referral.count">点击数</message>
+	<message key="plugins.generic.referral.dateAdded">添加日期</message>
+	<message key="plugins.generic.referral.all">所有</message>
+	<message key="plugins.generic.referral.all.empty">当前没有refback。</message>
+	<message key="plugins.generic.referral.status.new">新品</message>
+	<message key="plugins.generic.referral.status.new.empty">当前没有新的refback。</message>
+	<message key="plugins.generic.referral.status.accept">发表</message>
+	<message key="plugins.generic.referral.status.accept.empty">当前没有发表的refback。</message>
+	<message key="plugins.generic.referral.status.decline">忽略</message>
+	<message key="plugins.generic.referral.status.decline.empty">当前没有被忽略掉的refbacks。</message>
+	<message key="plugins.generic.referral.confirmDelete">您确定删除所选的refback？</message>
+	<message key="plugins.generic.referral.nameRequired">需要一个refback标题。</message>
+	<message key="plugins.generic.referral.urlRequired">需要一个 refback 网址</message>
 	<message key="plugins.generic.referral.settings">转介插件设置</message>
 	<message key="plugins.generic.referral.excusions">排除</message>
 	<message key="plugins.generic.referral.settings.description">转介插件捕获同该期刊内发表的文章相连接的URL，以此其可以协助作者进行有选择的发表。这种形式允许期刊管理员对如何捕获这些连接进行控制。</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[输入一列常规的表达模式，每行一个，作为转介记录的不予计列。这能够防止搜索引擎从凌乱的转转介列表中请求索引。更多有关常规表达的详情，参阅<a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>。]]></message>
+	<message key="plugins.generic.referral.status.accepted">已发表</message>
+	<message key="plugins.generic.referral.status.accept.confirm">您确定发表选中的refback？</message>
+	<message key="plugins.generic.referral.status.declined">忽略</message>
+	<message key="plugins.generic.referral.status.decline.confirm">您确定忽略选中的refback?</message>
 </locale>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ca_ES (Català) locale.
   *
   * Contributed by Dan Galewsky, University of Texas
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
 	<message key="plugins.implicitAuth.shibboleth.description">Aquest connector s'utilitza a tot el lloc web i s'habilita al fitxer de configuració de l'OJS.</message>
 </locale> 

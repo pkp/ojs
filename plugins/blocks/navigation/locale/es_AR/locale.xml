@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español (Argentina)) locale.
@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Bloque de Navegación</message>
 	<message key="plugins.block.navigation.description">Este Complemento proporciona vínculos de navegación en el lateral.</message>
 	<message key="plugins.block.navigation.journalContent">Contenido de la Revista</message>
+	<message key="plugins.block.navigation.searchScope">Ámbito de búsqueda</message>
 </locale>

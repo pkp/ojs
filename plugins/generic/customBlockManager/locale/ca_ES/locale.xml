@@ -4,16 +4,16 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ca_ES (Català) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.customBlockManager.displayName">Administrador de blocs personalitzats</message>
 	<message key="plugins.generic.customBlockManager.description">Aquest connector permet administrar blocs personalitzats a la barra lateral. Podeu editar els blocs en la configuració de cada connector que es crea aquí.</message>	
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Podeu utilitzar aquest connector per a afegir o suprimir connectors de blocs personalitzats. A continuació, podeu editar el contingut a través dels complements del sistema <a href="{$systemPluginsUrl}">Connectors del sistema</a> (a la secció de connectors de bloc). Per col·locar el connector a la ubicació desitjada a la barra lateral, aneu al <a href="{$setupStep56}">pas d'instal·lació 5.6</a>.]]></message>

@@ -4,8 +4,8 @@
 <!--
   * @file plugins/importexport/datacite/locale/tr_TR/common.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
@@ -51,4 +51,6 @@
 	<message key="plugins.importexport.common.export.error.unknownObjectType">The object type {$param} cannot be exported.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
 	<message key="plugins.importexport.common.notification.exportSuccessful">Successfully exported selected objects to '{$param}'</message>
+	<message key="plugins.importexport.common.markRegistered">Kayıtlı Mark</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Kayıtlı öğelerin mark kaydı için için bu butona tıklayınız (Ör. eğer daha önce veya manuel olarak kaydedildi ise)</message>
 </locale>

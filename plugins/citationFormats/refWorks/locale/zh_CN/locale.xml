@@ -4,8 +4,8 @@
 <!--
   * plugins/citationFormats/refWorks/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in en_US.
@@ -13,8 +13,8 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.refWorks.displayName">RefWorks引文格式插件(RefWorks citation format plugin</message>
+	<message key="plugins.citationFormats.refWorks.displayName">RefWorks引文格式插件</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
-	<message key="plugins.citationFormats.refWorks.description">本插件实现了RefWorks引文格式(This plugin implements the RefWorks citation format).</message>
-	<message key="plugins.citationFormats.refWorks.export">导出为RefWorks格式(Export to RefWorks)</message>
+	<message key="plugins.citationFormats.refWorks.description">本插件实行RefWorks引文格式.</message>
+	<message key="plugins.citationFormats.refWorks.export">导出为RefWorks格式</message>
 </locale>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ca_ES (Català) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.gateways.metsGateway.displayName">Connector de passarel·la METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Configuració</message>
 	<message key="plugins.gateways.metsGateway.description"><![CDATA[Aquest connector proporciona dades XML sense processar en format METS per a una revista determinada. <strong>NOTA: Aquest connector ha estat dissenyat per utilitzar-se amb serveis web i la seva activació causa un problema de seguretat, ja que permet accedir a la revista en format XML sense restriccions (el contingut està codificat en base64).</strong>]]></message>

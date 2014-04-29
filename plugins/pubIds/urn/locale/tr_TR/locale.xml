@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/urn/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * URN plugin localization strings
@@ -69,4 +69,9 @@
 	<message key="plugins.pubIds.urn.urnSuffix.description">Custom URN Suffix for this article.</message>
 	<message key="plugins.pubIds.urn.calculateCheckNo">Calculate Check Number</message>
 	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Please choose the objects URNs should be assigned to.</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">sayı</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">makale</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">dizgi</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">ek dosya</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">What you see is a preview of the URN that may be incomplete. A URN has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique URN for this {$pubObjectType}.</message>
 </locale>

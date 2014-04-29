@@ -4,19 +4,18 @@
 <!--
   * plugins/generic/sword/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the nl_NL (Nederlands) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.sword.displayName">SWORD plugin</message>
 	<message key="plugins.generic.sword.description">Geef tijdschriftbeheerders en (optioneel) auteurs de mogelijkheid om een artikel-deposit via SWORD te doen</message>
 	<message key="plugins.generic.sword.enabled">De SWORD plugin is ingeschakeld</message>
-	<message key="plugins.generic.sword.disable">De SWORD plugin is uitgeschakeld.</message>
 	<message key="plugins.generic.sword.settings">Instellingen</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Geef de auteur de mogelijkheid om een plaats voor de deposit op te geven</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Plaatsen voor deposit</message>
@@ -51,4 +50,5 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Deposit succesvol</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">de deposit van de geselecteerde onderdelen is uitgevoerd.</message>
 	<message key="plugins.importexport.sword.depositFailed">Deposit mislukt</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Geef tijdschriftbeheerders en (optioneel) auteurs de mogelijkheid om een deposit van artikelen via het SWORD protocol te doen. Merk op dat deze plugin de ZIP extensie vereist, die momenteel NIET geïnstalleerd is.</message>
 </locale>

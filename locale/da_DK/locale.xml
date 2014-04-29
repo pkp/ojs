@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the Danish locale.
@@ -1135,4 +1135,28 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="installer.maxFileUploadSize"><![CDATA[Din server tillader på nuværende tidspunkt upload af dokument på maksimumstørrelse: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Besøg <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> og download den nyeste version og se opgraderingsinstruktionerne.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Kontakt din webstedsadministrator  ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) for at gøre ham opmærksom på den nye version. Få mere information <a href="http://pkp.sfu.ca/ojs_download" target="_new">her</a>.]]></message>
+	<message key="common.journal">Tidsskrift</message>
+	<message key="submission.permissions">Ophavsret</message>
+	<message key="submission.license">Licens</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Copyright-indehaveren</message>
+	<message key="submission.copyrightYear">Copyright-år</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Angiv en gyldig URL (inkludér http://).</message>
+	<message key="submission.licenseURL">Licens-URL</message>
+	<message key="submission.license.cc.by-nc-nd4">Navngivelse - Ikke-kommerciel - Ingen Bearbejdede Værker (by-nc-nd)</message>
+	<message key="submission.license.cc.by-nc4">Navngivelse - Ikke-kommerciel (by-nc)</message>
+	<message key="submission.license.cc.by-nc-sa4">Navngivelse - Ikke-kommerciel - Del på samme vilkår (ShareAlike) (by-nc-sa)</message>
+	<message key="submission.license.cc.by-nd4">Navngivelse - Ingen bearbejdelser (by-nd)</message>
+	<message key="submission.license.cc.by4">Navngivelse (by)</message>
+	<message key="submission.license.cc.by-sa4">Del på samme vilkår (ShareAlike) (by-sa)</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Navngivelse - Ikke-kommerciel - Ingen Bearbejdede Værker (by-nc-nd) international licens</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Navngivelse - Ikke-kommerciel (by-nc)</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Navngivelse - Ikke-kommerciel - Del på samme vilkår (ShareAlike) (by-nc-sa)</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Navngivelse - Ingen bearbejdelse (by-nd) international licens</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Navngivelse (by) international licens</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Del samme vilkåt (ShareAlike) (by-sa) internationel licens</a>.]]></message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.description"><![CDATA[ORCID iDs can only be assigned by <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. You must conform to their standards for expressing ORCID iDs, and include the full URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="user.profile.form.orcidInvalid">The ORCID iD you specified is invalid.</message>
 </locale>

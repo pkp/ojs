@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español Argentina) locale.
@@ -76,7 +76,6 @@ Se aceptan los siguientes formatos:
 	<message key="plugins.importexport.native.import.error.illegalUrl">La URL indicada "{$url}" para el número "{$issueTitle}" no era correcta. Las importaciones enviadas via web sólo soportan métodos http, https, ftp, o ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Se ha especificado un tipo de archivo suplementario desconocido "{$suppFileType}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">No se ha podido copiar una URL especificada "{$url}" a un archivo local".</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">La ID pública indicada para el número importado "{$issueTitle}" ya está en uso por otro número, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Falta un título de sección para el número "{$issueTitle}". Por favor, asegúrese de que el documento XML es conforme con la DTD apropiada.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">La sección "{$sectionTitle}" del número "{$issueTitle}" no coindice con una sección de la revista, pero la abreviatura especificada ("{$sectionAbbrev}") coincide con una sección diferente.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Falta un título de artículo para el número "{$issueTitle}" en la sección "{$sectionTitle}". Por favor, asegúrese de que el documento XML es conforme con la DTD apropiada, y que se ha proporcionado un título apropiado para el locale de la revista.</message>
@@ -123,4 +122,8 @@ Se aceptan los siguientes formatos:
 	<message key="plugins.importexport.native.import.error.invalidPubId">Tu archivo importado contiene un set de datos con un {$pubIdType}: '{$pubId}' inválido.</message>
 	<message key="plugins.importexport.native.import.error.duplicatePubId">Tu archivo importado contiene un set de datos con un {$pubIdType} '{$pubId}' que ya existe para otro objeto en la base de datos. Por favor, asegurate de nunca importar objetos con IDs que ya existen en la base de datos.</message>
 	<message key="plugins.importexport.native.import.error.unknownPubId">Tu archivo importado contiene un set de datos con un tipo-ID '{$pubIdType}' que no puede ser manejado por ningun ID-plugin instalado. Por favor instala/activa el correspondiente ID-plugin antes de importar este set de datos.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">El ID público dado para la galerada de importación "{$publicId}" ya está en uso por otra galerada para el mismo artículo, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">El ID público dado para el archivo simplementario de importación "{$suppFileTitle}" ya está en uso por otro archivo suplementario para el mismo artículo, "{$otherSuppFileTitle}"</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">El ID público dado para el artículo de importación "{$articleTitle}" ya está en uso por otro artículo, "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">El ID público dado para el número de importación '{$issueTitle}" a está en uso por otro número, "{$otherIssueTitle}".</message>
 </locale>

@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/booksForReview/locale/en_US/locale.xml
+  * @file plugins/generic/booksForReview/locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Books for review plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Livre demandé. En attente d'une confirmation du Rédacteur.</message>

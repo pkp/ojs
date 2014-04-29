@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/alm/ArticleInfoSender.php
  *
- * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -139,7 +139,7 @@ class ArticleInfoSender extends ScheduledTask {
 		foreach ($articles as $article) {
 			$doi = $article->getPubId('doi');
 			$publishedDate = date('Y-m-d', strtotime($article->getDatePublished()));
-			$title = $article->getLocalizedTitle();
+			$title = preg_replace('/s+/', ' ', $article->getLocalizedTitle());
 			if ($doi && $publishedDate && $title)
 			$payload .= "$doi $publishedDate $title\n";
 		}

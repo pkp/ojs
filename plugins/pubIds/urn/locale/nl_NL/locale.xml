@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/urn/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -73,4 +73,12 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">Het opgegeven URN achtervoegsel is al in gebruik bij een ander gepubliceerd item. Kies een uniek URN achtervoegsel voor ieder item.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Het controlegetal ontbreekt.</message>
 
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">artikel</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">aanvullend bestand</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Geef de URL van de resolver.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(bv. http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">nummer</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">proefdruk</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Wat u ziet is een voorvertoning van de URN die incompleet kan zijn. Er is nog geen URN gegenereerd. Publiceren van het artikel en het bekijken van de publieke {$pubObjectType} pagina genereert automatisch een unieke URN foor dit {$pubObjectType}.</message>
 </locale>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/stopForumSpam/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Stop Forum Spam plugin localization strings
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+
+	<message key="plugins.generic.stopForumSpam.displayName">Forum Spam Eklentisini Durdur</message>
+	<message key="plugins.generic.stopForumSpam.description">Integrate OJS with the Stop Forum Spam prevention system, which aims to reduce the amount of spam registrations.</message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">Ayarlar</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Forum Spam Ayarlarını Durdur</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>With this plugin enabled, OJS will check to see if a submitted user registration contains elements that are on the Stop Forum Spam list.  Registrations will be denied if this is the case.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">IP kayıt kontrolü</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Kayıt e-posta adresi kontrolü</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Kullanıcı adı kaydı kontrolü (dikkatli etkinleştirin!)</message>
+	<message key="plugins.generic.stopForumSpam.checkName">stopForumSpamPlugin</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[<a href="http://www.stopforumspam.com" target="_blank">Forum Spam durdurma</a> eklentisi bu kayıtta bloklandı.]]></message>
+</locale>

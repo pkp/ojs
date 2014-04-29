@@ -4,15 +4,15 @@
 <!--
   * plugins/themes/custom/locale/ro_RO/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ro_RO (Romanian) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ro_RO" full_name="Romanian">
 	<message key="plugins.theme.custom.name">Modulul pentru machete vizuale particularizate</message>
 	<message key="plugins.theme.custom.description">Acest modul implementează o machetă vizuală particularizată.</message>
 	<message key="plugins.theme.custom.notWritable">NOTĂ: Fișierul stylesheet al modulului, "{$stylesheetFileLocation}", este în acest moment inscripționabil. Acest fișier trebuie să fie inscripționabil înainte ca acest modul să fie utilizat.</message>

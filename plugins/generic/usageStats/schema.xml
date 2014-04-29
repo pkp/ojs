@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/counter/schema.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Usage stats plugin temporary table for storing temporary stats records.
@@ -39,6 +39,9 @@
       <NOTNULL/>
     </field>
     <field name="file_type" type="I1" />
+    <field name="entry_time" type="I8">
+      <NOTNULL/>
+    </field>
     <descr>Usage stats temporary records</descr>
   </table>
 </schema>

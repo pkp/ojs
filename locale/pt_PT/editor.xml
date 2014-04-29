@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/editor.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português) locale.
@@ -207,4 +207,17 @@
 	<message key="editor.notifyUsers.allAuthors">Todos os autores publicados ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos os assinantes institucionais ({$count} utilizadores)</message>
+	<message key="editor.reassign">Re-atribuir</message>
+	<message key="editor.publicIdentificationExists">O identificador público '{$ publicIdentifier}' já existe para outro objecto (número, artigo, galleys do número ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista.</message>
+	<message key="editor.notifyUsers.allMailingList">Incluir todos os e-mails na mailing list ({$count} emails)</message>
+	<message key="editor.issues.galleys">Galleys Número</message>
+	<message key="editor.issues.galley">Galley Número</message>
+	<message key="editor.issues.viewingGalley">Visualizando Galley do Número</message>
+	<message key="editor.issues.issueGalleysDescription">Publicar galleys com todos os conteúdos do número.</message>
+	<message key="editor.issues.noneIssueGalleys">Nenhum galley do número publicado.</message>
+	<message key="editor.issues.galleyLabelRequired">É obrigatório indicar uma categoria para o galley do número</message>
+	<message key="editor.issues.galleyLocaleRequired">É obrigatório indicar um galley local do número.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública do galley já existe.</message>
+	<message key="editor.issues.backToIssueGalleys">Voltar ao galley dos números</message>
+	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar este galley do número?</message>
 </locale>

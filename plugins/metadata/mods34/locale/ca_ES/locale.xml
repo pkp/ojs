@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/metadata/mods34/locale/en_US/locale.xml
+  * plugins/metadata/mods34/locale/ca_ES/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">Adaptador d'articles MODS 3.4</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Extreu/injecta metadades de/a articles</message>
 </locale>

@@ -4,15 +4,15 @@
 <!--
   * plugins/importexport/crossref/version.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Plugin version information.
   -->
 <version>
 	<application>crossref</application>
-	<type>plugins.importexport</type>
-	<release>1.1.0.0</release>
-	<date>2009-10-27</date>
+	<type>plugins.generic</type>
+	<release>2.0.0</release>
+	<date>2014-03-11</date>
 </version>

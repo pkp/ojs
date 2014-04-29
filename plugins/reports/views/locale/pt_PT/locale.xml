@@ -4,15 +4,20 @@
 <!--
   * plugins/reports/views/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pt_PT (Português) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_PT" full_name="Português">
 	<message key="plugins.reports.views.displayName">Visualizar Relatório</message>
 	<message key="plugins.reports.views.description">Este plugin implementa um relatório em formato CSV descrevendo as leituras feitas para cada artigo.</message>
+	<message key="plugins.reports.views.articleTitle">Título Artigo</message>
+	<message key="plugins.reports.views.datePublished">Data Publicação</message>
+	<message key="plugins.reports.views.abstractViews">Visualizações Resumo</message>
+	<message key="plugins.reports.views.galleyViews">Total Visualizações Galley</message>
+	<message key="plugins.reports.views.articleId">ID Artigo</message>
 </locale>

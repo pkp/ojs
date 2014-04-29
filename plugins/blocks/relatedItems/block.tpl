@@ -1,8 +1,8 @@
 {**
  * plugins/blocks/relatedItems/block.tpl
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Keyword cloud block plugin
@@ -21,7 +21,7 @@
 		<table width="100%">
 			<tr>
 				<td valign="top" style="width:26px;">
-					<img src="{$baseUrl}/plugins/blocks/relatedItems/icons/lookupTerms.png" class="articleToolIcon" />
+					<img src="{$baseUrl}/plugins/blocks/relatedItems/icons/lookupTerms.png" class="articleToolIcon" alt=""/>
 				</td>
 				<td valign="top">
 					<div id="relatedItems">
@@ -34,8 +34,14 @@
 						</ul>
 					</div>
 					<div id="toggleRelatedItems">
-						<span id="hideRelatedItems" style="display:none;"><img src="{$baseUrl}/plugins/blocks/relatedItems/icons/magnifier_zoom_out.png" /> {translate key="plugins.block.relatedItems.hide"}</span>
-						<span id="showRelatedItems"><img src="{$baseUrl}/plugins/blocks/relatedItems/icons/magnifier_zoom_in.png" /> {translate key="plugins.block.relatedItems.show"}</span>
+						<a id="hideRelatedItems" style="display:none;" href="javascript:void(0)">
+							<img src="{$baseUrl}/plugins/blocks/relatedItems/icons/magnifier_zoom_out.png" alt=""/> 
+							{translate key="plugins.block.relatedItems.hide"}
+						</a>
+						<a id="showRelatedItems" href="javascript:void(0)">
+							<img src="{$baseUrl}/plugins/blocks/relatedItems/icons/magnifier_zoom_in.png" alt=""/>
+							{translate key="plugins.block.relatedItems.show"}
+						</a>
 					</div>
 				</td>
 			</tr>

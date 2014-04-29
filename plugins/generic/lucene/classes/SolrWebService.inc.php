@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/classes/SolrWebService.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SolrWebService
@@ -917,13 +917,13 @@ class SolrWebService extends XmlWebService {
 	 * Make a request
 	 *
 	 * @param $url string The request URL
-	 * @param $params array request parameters
+	 * @param $params mixed array (key value pairs) or string request parameters
 	 * @param $method string GET or POST
 	 *
 	 * @return DOMXPath An XPath object with the response loaded. Null if an error occurred.
 	 *  See _serviceMessage for more details about the error.
 	 */
-	function &_makeRequest($url, $params = array(), $method = 'GET') {
+	function &_makeRequest($url, $params, $method = 'GET') {
 		$webServiceRequest = new WebServiceRequest($url, $params, $method);
 		if ($method == 'POST') {
 			$webServiceRequest->setHeader('Content-Type', 'text/xml; charset=utf-8');

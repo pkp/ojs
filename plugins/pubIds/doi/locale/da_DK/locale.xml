@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DOI plugin localization strings
@@ -61,4 +61,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">supplerende fil</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Det du ser, er en forhåndsvisning (preview) af DOI’en, som måske ikke er komplet. DOI’en er endnu ikke blevet generet. Når nummeret publiceres og ’the public {$pubObjectType} page’ hentes frem, bliver der automatisk genereret et unikt DOI til denne {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Det valgte DOI-suffiks er allerede brugt til et andet publiceret element. Indskriv et unikt DOI-suffiks for hvert element.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTE:</strong> When using the <a href="http://www.crossref.org" target="_new">CrossRef</a> DOIs, please select articles. Article is seen as work, i.e. entity of intellectual and artistic content. Thus, article is the publishing object the CrossRef DOI export and registration is based upon.]]></message>
 </locale>

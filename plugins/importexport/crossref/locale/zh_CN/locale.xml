@@ -4,31 +4,34 @@
 <!--
   * plugins/importexport/crossref/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.importexport.crossref.displayName">CrossRef XML导出插件(CrossRef XML Export Plugin)</message>
-	<message key="plugins.importexport.crossref.description">导出文章元数据为CrossRef XML格式。(Export article metadata in CrossRef XML format.)</message>
-	
-	<message key="plugins.importexport.crossref.export">导出数据</message>
-	<message key="plugins.importexport.crossref.export.issues">导出期(Export Issues)</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">选择要导出的一期(Select an Issue to export.)</message>
-	<message key="plugins.importexport.crossref.export.articles">导出文章(Export Articles)</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">选择要导出的文章。(Select Articles to export.)</message>
+	<message key="plugins.importexport.crossref.displayName">CrossRef XML导出插件</message>
+	<message key="plugins.importexport.crossref.description">导出文章元数据为CrossRef XML格式。</message>
 	
 	<message key="plugins.importexport.crossref.cliUsage">用法: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">错误:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">没有匹配id号"{$issueId}"为的期刊。</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">没有匹配id号为"{$articleId}"的文章。</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">使用本插件，需要为杂志指定一个有效的DOI前缀。(A valid DOI prefix must be specified in the Journal Setup in order to use this plugin.)</message>
+	<message key="plugins.importexport.crossref.settings.form.username">用户名</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">选择未注册的文章</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">使用自动登入</message>
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[第一次使用前请<a href="{$settingsUrl}">设定</a>CrossRef 导出/注册插件]]></message>
+	<message key="plugins.importexport.crossref.settings.form.description">请设定CrossRef 导出/注册插件：</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">请输入CrossRef为您配置的用户名</message>
+	<message key="plugins.importexport.crossref.export.unregistered">导出所有未注册的文章</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">请输入CrossRef DOI存储负责人的姓名和邮箱</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">存储名</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">存储邮箱</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">请输入存储名</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">请输入存储邮件</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">所有发表的文章已经注册（或者这些文章没有指定的DOI）。</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">ID号为{$param}的文章缺少出版日期。</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[如果您希望在CrossRef注册DOIs，请按照以下<a href="http://www.crossref.org" target="_blank">CrossRef 首页</a>的要求，您将收到一个用户名和密码。如果您不希望拥有自己的用户名和密码，您也可以导入CrossRef XML格式。但是您不能在OJS中CrossRef注册DOIs.请注意，由于CrossRef注册服务的要求，该密码将被保存为纯文本，即不加密的。]]></message>
 </locale>

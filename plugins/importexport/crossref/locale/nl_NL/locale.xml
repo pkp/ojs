@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -18,19 +18,28 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Exporteer metadata in CrossRef XML formaat.</message>
 	
-	<message key="plugins.importexport.crossref.export">Exporteer data</message>
-	<message key="plugins.importexport.crossref.export.issues">Exporteer nummers</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Selecteer het te exporteren nummer.</message>
-	<message key="plugins.importexport.crossref.export.articles">Exporteer artikelen</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Selecteer de te exporteren artikelen.</message>
-	
 	<message key="plugins.importexport.crossref.cliUsage">Gebruik: 
 {$scriptName} {$pluginName} [xmlFileName] [tijdschrift_pad] artikelen [artikelId1] [artikelId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [tijdschrift_pad] nummer [nummerId]</message>
-	<message key="plugins.importexport.crossref.cliError">FOUT:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Er is geen nummer dat overeenkomt met het opgegeven nummer-ID "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Er is geen artikel dat overeenkomt met het opgegeven artikel-ID "{$articleId}".</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Om deze plugin te kunnen gebruiken moet bij de instellingen van het tijdschrift een  geldig DOI voorvoegsel gespecificeerd worden.</message>
+	<message key="plugins.importexport.crossref.settings.form.description">Configureerd de CrossRef export/registratie plug-in:</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Gebruikersnaam</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Geeft de gebruikersnaam die u van CrossRefe kreeg.</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Exporteer alle ongeregistreerde artikelen</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Selecteer ongeregistreerd artikelen</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">Alle gepubliceerde artikelen zijn al geregistreerd (of geen ervan heeft een DOI).</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Geef de naam en het e-mailadres van degene die verantwoordlijk is voor de CrossRef DOI deposit.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor naam</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">E-mail depositor</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Geef de naam van de depositor.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Geef het e-mail adres van de deposito.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Gebruik automatische registratie</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">De publicatiedatum ontbreekt bij het artikel met ID {$param}.</message>
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[<a href="{$settingsUrl}">Configureer</a> de CrossRef export/registration plug-in voor u die de eerst keer gebruikt.]]></message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Als u DOIs bij CrossRef wilt registreren, volg dan de aanwijzingen op de 
+		<a href="http://www.crossref.org" target="_blank">CrossRef homepage</a>
+		om een gebruikersnaam en wachtwoord te verwerven. Als u geen eigen gebruikersnaam en wachtwoord hebt
+		kunt u wel exporter   CrossRef XML formaat
+		maar u kunt uw DOIs niet registeren bij  CrossRef vanuit OJS.
+		Merk op dat het wachtwoord als test wordt opgeslagen, dus niet versleutel, vanwege
+		de eisen van de CrossRef registratieservice.]]></message>
 </locale>

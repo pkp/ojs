@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/reports/timedView/locale/en_US/locale.xml
+  * plugins/reports/timedView/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español">
 	<message key="plugins.reports.timedView.displayName">Informe de lectures en el tiempo</message>
 	<message key="plugins.reports.timedView.description">Este conector ofrece un informe en formato CSV detallando el número de lectores por artículo, filtrados por la ventana de tiempo que se indique.</message>
 

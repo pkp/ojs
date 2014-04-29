@@ -1,8 +1,8 @@
 {**
  * templates/about/index.tpl
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * About the Journal index.
@@ -19,9 +19,11 @@
 		<li>&#187; <a href="{url op="contact"}">{translate key="about.contact"}</a></li>
 	{/if}
 	<li>&#187; <a href="{url op="editorialTeam"}">{translate key="about.editorialTeam"}</a></li>
-	{iterate from=peopleGroups item=peopleGroup}
-		<li>&#187; <a href="{url op="displayMembership" path=$peopleGroup->getId()}">{$peopleGroup->getLocalizedTitle()|escape}</a></li>
-	{/iterate}
+	{if $peopleGroups}
+		{iterate from=peopleGroups item=peopleGroup}
+			<li>&#187; <a href="{url op="displayMembership" path=$peopleGroup->getId()}">{$peopleGroup->getLocalizedTitle()|escape}</a></li>
+		{/iterate}
+	{/if}
 	{call_hook name="Templates::About::Index::People"}
 </ul>
 </div>

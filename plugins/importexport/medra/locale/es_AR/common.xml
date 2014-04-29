@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/importexport/medra/locale/en_US/common.xml
+  * @file plugins/importexport/medra/locale/es_AR/common.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para usar este plugin por favor vaya a la categoría de plugins de "Identificador Público" y habilite/configure el plugin DOI, especificando un  prefijo válido DOI allí.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Este plugin no esta completamente configurado.</message>
 
@@ -57,4 +57,6 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Los objetos seleccionados fueron exportados con éxito '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="plugins.importexport.common.markRegistered">Marca registrada</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Haga clic en este botón para marcar los objetos registrados (por ej. si fue registrado antes o manualmente)</message>
 </locale>

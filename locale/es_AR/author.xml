@@ -4,8 +4,8 @@
 <!--
   * ojs2-devel/locale/es_AR/author.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español (Argentina)) locale.
@@ -34,7 +34,6 @@
 	<message key="author.submit.cancelSubmission">Puede completar este envío más tarde seleccionando Envíos Activos en la home de autor/a.</message>
 	<message key="author.submit.notAccepting">Esta revista no acepta envíos en este momento.</message>
 	<message key="author.submit.requestWaiver">Solicitar exención de pago</message>
-	<message key="author.submit.qualityForWaiver">Por favor, considere eliminar la tarifa de envío de artículo en este caso</message>
 	<message key="author.submit.addReasonsForWaiver">Por favor, indique a continuación los motivos por los que solicita la exención de pago.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Subir versión corregida</message>
 	<message key="author.submissions.proofreadingCorrections">Corrección de pruebas</message>

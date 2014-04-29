@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DOI plugin localization strings
@@ -61,4 +61,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">aanvullend bestand</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">U ziet een voorvertoning van een DOI die mogelijk incompleet is. Eer is nog geen DOI gegenereerd. Het nummer publiceren en het bekijken van de publieke {$pubObjectType} pagina zorgt voor het automatisch genereren van een unieke DOI voor dit {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">het opgegeven DOI voorvoegsel is al in gebruik bij een ander gepubliceerd item. Kies een uniek DOI voorvoegsel voor ieder item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>Merk op:</strong> Als u <a href="http://www.crossref.org" target="_new">CrossRef</a> DOIs gebruikt, kies dan artikelen. Een artikel wordt gezien als een werk, een entiteit met intellectuele en artistieke inhoud.. Een artikel is derhalve het object waar de CrossRef DOI export en registratie op wordt gebaseerd.]]></message>
 </locale>

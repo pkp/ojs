@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/booksForReview/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Books for review plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português (Brasil)">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Revisão de literatura solicitada. Aguardando confirmação do editor.</message>

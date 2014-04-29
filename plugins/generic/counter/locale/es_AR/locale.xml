@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/counter/locale/en_US/locale.xml
+  * @file plugins/generic/counter/locale/es_AR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.generic.counter.description"><![CDATA[El plugin COUNTER permite grabar y hacer un reporte del tipo <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> sobre la actividad del sitio.]]></message>
 	<message key="plugins.generic.counter">Estadísitcas de COUNTER</message>
 	<message key="plugins.generic.counter.migrate">Migrar el archivo de Log</message>

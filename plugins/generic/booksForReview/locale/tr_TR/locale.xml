@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/booksForReview/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Books for review plugin localization strings for the tr_TR (Turkish) locale.
@@ -77,7 +77,7 @@
 	<message key="plugins.generic.booksForReview.editor.form.copy">Mevcut Kopya</message>
 	<message key="plugins.generic.booksForReview.editor.form.publisher">Yayıncı</message>
 	<message key="plugins.generic.booksForReview.editor.form.year">Yıl</message>
-	<message key="plugins.generic.booksForReview.editor.form.language">Dil</message>
+	<message key="plugins.generic.booksForReview.editor.form.language">Form Dili</message>
 	<message key="plugins.generic.booksForReview.editor.form.edition">Basım</message>
 	<message key="plugins.generic.booksForReview.editor.form.pages">Sayfalar</message>
 	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>

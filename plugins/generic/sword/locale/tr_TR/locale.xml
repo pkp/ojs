@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/sword/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Turkish) locale.
@@ -50,4 +50,5 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Deposit Successful</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">The item(s) selected have been deposited.</message>
 	<message key="plugins.importexport.sword.depositFailed">Deposit Failed</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Dergi Yöneticileri ve isteğe bağlı olarak Yazarlar SWORD protokolü aracılığıyla makalelerini arşivlemeyi kabul edebilirler. Bu eklenti şu halde yüklü DEĞIL. Eklentinin zip uzantılı olması gerektirdiğini unutmayın.</message>
 </locale>

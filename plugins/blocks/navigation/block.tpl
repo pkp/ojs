@@ -1,8 +1,8 @@
 {**
  * plugins/blocks/navigation/block.tpl
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Common site sidebar menu -- navigation links.
@@ -12,7 +12,6 @@
 <div class="block" id="sidebarNavigation">
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 
-	<span class="blockSubtitle">{translate key="navigation.search"}</span>
 	<form id="simpleSearchForm" method="post" action="{url page="search" op="search"}">
 		<table id="simpleSearchInput">
 			<tr>

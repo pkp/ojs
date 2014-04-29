@@ -4,8 +4,8 @@
 <!--
   * plugins/citationFormats/apa/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in en_US.
@@ -13,8 +13,8 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.apa.displayName">APA引文格式插件(APA citation format plugin)</message>
+	<message key="plugins.citationFormats.apa.displayName">APA引用格式插件</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">本插件实现了APA引文格式(This plugin implements the APA citation format).</message>
+	<message key="plugins.citationFormats.apa.description">本插件实现了APA引文格式。</message>
 	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[检索(Retrieved) {$retrievedDate}, 来自(from) <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

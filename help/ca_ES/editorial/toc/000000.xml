@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd"> <!--
   * 000000.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process. 
   *
-  * $Id$
   -->
 
 <toc id="editorial/toc/000000" locale="ca_ES" title="Procés editorial" parent_topic="editorial/topic/000000">

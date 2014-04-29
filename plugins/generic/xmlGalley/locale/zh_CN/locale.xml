@@ -4,15 +4,15 @@
 <!--
   * plugins/generic/xmlGalley/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="zh_CN" full_name="China">
 	<message key="plugins.generic.xmlGalley.displayName">XML展示插件</message>
 	<message key="plugins.generic.xmlGalley.description">本插件利用XSLT将XML文章生成XHTML.</message>
 	<message key="plugins.generic.xmlGalley.manager.settings">设置</message>

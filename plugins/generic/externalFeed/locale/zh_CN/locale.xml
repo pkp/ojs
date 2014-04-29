@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/externalFeed/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * External feed plugin localization strings for the en_US (U.S. English) locale.
@@ -27,7 +27,7 @@
 	<message key="plugins.generic.externalFeed.manager.feeds">所有的外部Feed</message>
 	<message key="plugins.generic.externalFeed.manager.settings">设置</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[如果实现在边栏显示Feed内容, 到 <a href="{$setupStep56}" target="_blank">配置的第5.6</a>进行设置]]></message>
-	<message key="plugins.generic.externalFeed.manager.title">Title</message>
+	<message key="plugins.generic.externalFeed.manager.title">标题</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage">首页显示</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">首页显示</message>
 	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">首页不显示</message>

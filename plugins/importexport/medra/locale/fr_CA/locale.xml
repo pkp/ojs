@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/importexport/medra/locale/en_US/locale.xml
+  * @file plugins/importexport/medra/locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.importexport.medra.displayName">Plugiciel d'exportation / d'enregistrement mEDRA</message>
 	<message key="plugins.importexport.medra.description">Exporte les métadonnées des numéros, articles et les épreuves dans Onix pour format DOI (O4GOI) et enregistre les DOI avec l'agence d'enregistrement mEDRA.</message>
 

@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/editor.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Danish) locale.
@@ -219,4 +219,5 @@
 	<message key="editor.issues.confirmDeleteGalley">Er du sikker på, at du vil slette dette nummer?</message>
 	<message key="editor.reassign">Overfør</message>
 	<message key="editor.publicIdentificationExists">Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet materiale (nummer, artikel, satsskib eller supplerende filer). Vælg et unikt filnavn inden for dit tidsskrift.</message>
+	<message key="editor.notifyUsers.allMailingList">Inkludér alle e-mails på mailinglisten  ({$count} e-mails)</message>
 </locale>

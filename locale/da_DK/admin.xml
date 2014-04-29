@@ -4,8 +4,8 @@
 <!--
   * /locale/da_DK/admin.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Danish) locale.
@@ -79,4 +79,20 @@
 	<message key="admin.settings.journalsList.showThumbnail">Tidsskrifts-thumbnail</message>
 	<message key="admin.settings.journalsList.showTitle">Tidsskriftstitel</message>
 	<message key="admin.settings.journalsList.showDescription">Tidsskriftsbeskrivelse</message>
+	<message key="admin.settings.defaultMetricDescription">Jeres OJS-installation er konfigureret til at registrere mere end en metrisk brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige sammenhænge.
+		Der er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved visning af en sorteret liste over mest anvendte artikler eller ved rangering af
+		søgeresultater. Vælg én af de konfigurerede metriske enheder som standard.</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
+to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
+
+This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fejl: Kan ikke oprette temporær mappe {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fejl: {$filePath} findes ikke eller kan ikke tilgås</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Fejl: Kan ikke kopiere fra {$filePath} til {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fejl: Kan ikke slette  {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Advarsel: {$filePath} eksisterer allerede i brugerstatistikmappen.</message>
+	<message key="admin.copyAccessLogFileTool.success">Succes: {$filePath} to {$destinationPath}</message>
 </locale>

@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/openAIRE/locale/en_US/locale.xml
+  * @file plugins/generic/openAIRE/locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OpenAIRE plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pl_PL" full_name="Polski">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">The OpenAIRE plugin adds the projectID element to the article metadata and extends the OAI-PMH interface according to the OpenAIRE Guidelines 1.1, helping OJS journals to become OpenAIRE compliant.</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>

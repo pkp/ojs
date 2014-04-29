@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2000-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT locale.
@@ -17,4 +17,6 @@
 	<message key="plugins.generic.acron.description">Este plugin tem por objectivo reduzir a dependência do OCS em ferramentas de agendamento periódico, tais como a 'cron.'</message>
 
 	<message key="plugins.generic.acron.reload">Recarregar Tarefas Agendadas</message>
+	<message key="plugins.generic.acron.enabled">O Plugin Acron foi activado.</message>
+	<message key="plugins.generic.acron.disabled">O Plugin Acron foi desactivado.</message>
 </locale>

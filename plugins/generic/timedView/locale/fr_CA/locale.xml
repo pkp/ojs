@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/timedView/locale/en_US/locale.xml
+  * @file plugins/generic/timedView/locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.timedView.displayName">Rapport de durée des vues</message>
 	<message key="plugins.generic.timedView.description">Ce plugiciel crée un rapport au format CSV décrivant le lectorat pour chaque article filtré par la durée des visites des utilisateurs.</message>
 

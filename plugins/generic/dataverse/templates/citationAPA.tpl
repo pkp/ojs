@@ -1,6 +1,7 @@
 {**
  * plugins/generic/dataverse/templates/citationAPA.tpl
  *
+ * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -16,7 +17,7 @@
 {if $article->getStatus()==$smarty.const.STATUS_PUBLISHED}
   ({if $publishedArticle->getDatePublished()}{$publishedArticle->getDatePublished()|date_format:'%Y'}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%Y'}{else}{$issue->getYear()|escape}{/if}).
 {else}
-  (in press).
+  {translate key="plugins.generic.dataverse.citationAPA.inPress"}
 {/if}
 {$article->getLocalizedTitle()}.
 <em>{$journal->getLocalizedTitle()|capitalize}{if $issue}, {$issue->getVolume()|escape}</em>{if $issue->getNumber()}({$issue->getNumber()|escape}){/if}{else}</em>{/if}{if $article->getPages()}, {$article->getPages()}{/if}.

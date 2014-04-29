@@ -4,8 +4,8 @@
 <!--
   * default.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español (Argentina) locale.
@@ -160,8 +160,6 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="default.journalSettings.donationFee">Donaciones a la revista</message>
 	<message key="default.journalSettings.fastTrackFee">Revisión Fast-Track</message>
 	<message key="section.default.policy"><![CDATA[&nbsp;]]></message>
-	<message key="default.journalSettings.emailHeader">El siguiente mensaje esta siendo enviado de parte de {$journalName}.
-________________________________________________________________________</message>
 	<message key="default.journalSettings.purchaseIssueFee">Comprar número</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">El pago de esta cuota le permitirá ver, descargar e imprimir este número</message>
 </locale>

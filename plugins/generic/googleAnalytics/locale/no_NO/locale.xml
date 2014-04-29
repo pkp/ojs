@@ -4,15 +4,15 @@
 <!--
   * plugins/generic/googleAnalytics/locale/no_NO/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="no_NO" full_name="Norwegian">
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Programutvidelse for Google Analytics</message>

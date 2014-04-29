@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Danish) locale.
@@ -16,19 +16,28 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Eksportér artikelmetadata i CrossRef XML format.</message>
 	
-	<message key="plugins.importexport.crossref.export">Eksporter data</message>
-	<message key="plugins.importexport.crossref.export.issues">Eksporter numre</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Vælg et nummer til eksport.</message>
-	<message key="plugins.importexport.crossref.export.articles">Eksportér artikler</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Vælg artikler til eksport.</message>
-	
 	<message key="plugins.importexport.crossref.cliUsage">Brug: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] nummer [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">FEJL:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Intet nummer mathede det specificerede nummer ID "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikel matchede det specificerede artikel ID "{$articleId}".</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Angiv et gyldigt DOI prefix i tidsskrift setupo for at bruge dette plugin.</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Indsæt navn og e-mail på den person, der er ansvarlig for CrossRef DOI-deponering.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Deponentens navn</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Deponentens e-mail</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Indsæt deponentens navn.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Indsæt deponentens e-mail.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Anvend automatisk registrering</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Hvis du ønsker at registrere DOI'er hos CrossRef, skal du følge anvisningerne på
+		<a href="http://www.crossref.org" target="_blank">CrossRef homepage</a>
+		for at modtage brugernavn og password. Selvom du ikke har eget brugernavn og
+		password kan du stadig eksportere i CrossRef XML format, men du kan 
+		ikke registrere DOIer med CrossRef inde fra OJS.
+		Bemærk, at password gemmes i tekstformat, altså ikke krypteret, 
+		grundet CrossRef serviceregistreringskrav.]]></message>
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[<a href="{$settingsUrl}">Konfigurér</a>CrossRef export/registration plug-in inden du bruger det første gang.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.description">Konfigurér CrossRef export/registration plug-in:</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Brugernavn</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Indsæt dit brugernavn fra CrossRef.</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Eksportér alle ikke-registrerede artikler</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Vælg ikke-registrerede artikler</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">Alle publicerede artikler er allerede blevet registreret (eller ingen af dem har fået tildelt et DOI).</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Publiceringsdatoen mangler for artiklen med følgende ID {$param}.</message>
 </locale>

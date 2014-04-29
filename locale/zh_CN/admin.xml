@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/admin.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -79,4 +79,16 @@
 	<message key="admin.categories.enable.description">网站管理员可以选择定义此处的一套类别来帮助其组织更大规模的期刊。期刊管理员可以随后从其中为每本期刊选择若干类别，读者可以通过类别分类来浏览期刊内容。</message>
 	<message key="admin.categories.disableCategories">不要将期刊组织成类。</message>
 	<message key="admin.categories.enableCategories">允许期刊管理员将期刊组织成类。</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">错误：无法创建当前文件夹{$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">错误：文件{$文件路径}不存在或无法访问。</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">错误：无法删除文件{$ tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">错误：文件无法从{$filePath}复制到{$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">提醒：文件{$filePath}已存在数据目录中。</message>
+	<message key="admin.copyAccessLogFileTool.success">成功： 从{$filePath} 到 {$destinationPath}</message>
+	<message key="admin.settings.defaultMetricDescription">您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。
+在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。</message>
+	<message key="admin.copyAccessLogFileTool.usage">把已经通过的apache访问日志文件（过滤相关的安装记录）复制到当前文件记录中的UsageStatsPlugin的子集目录里。只有拥有阅读apache访问日志文件权限的用户才能完成此操作。
+这个工具复制的文件不能存在于usageStats文件（当前状态，进行中，存档，拒绝）中。
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
 </locale>

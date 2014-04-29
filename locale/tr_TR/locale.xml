@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkiye Türkçesi) locale.
@@ -38,7 +38,7 @@
 
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">Değerlendirme Formu</message>
+	<message key="submission.reviewForm">Değerlendirme Formu:</message>
 	<message key="submission.reviewFormResponse">Değerlendirme Formu Yanıtı</message>
 
 
@@ -122,7 +122,7 @@
 	<message key="article.journalSection">Dergi Bölümü</message>
 	<message key="article.file">Dosya</message>
 	<message key="article.suppFile">Ek Dosya</message>
-	<message key="article.suppFiles">Ek Dosya(lar)</message>
+	<message key="article.suppFiles">Ek Dosya(lar):</message>
 	<message key="article.suppFilesAbbrev">Ek Dosyalar</message>
 	<message key="article.discipline">Akademik Bölüm ve Alt-Bölümler</message>
 	<message key="article.subjectClassification">Konu Sınıflaması</message>
@@ -491,7 +491,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="reviewer.article.editorToEnter">Editörün girmesi için</message>
 	<message key="reviewer.article.sendReminder">Uyarı Gönder</message>
 	<message key="reviewer.article.automatic">(Otomatik)</message>
-	<message key="reviewer.article.selectRecommendation">Değerlendirmenizi editöre göndermek için ya 3. seçenekte bağlantısı verilen simğeye tıklayarak açılacak değerlendirme formu doldurmanız ya da 4. seçenek yolu ile önerilerinizi içeren bir dosya yüklemeniz gerekmektedir. Bu seçenkelerden birini kullandıktan sonra Hakem Kararı seçeneği aktif hale gelecektir. Makale ile ilgili değerlendirmenin editöre iletilebilmesi için "Hakem Kararı" kutusundaki seçereklerden uygun olanını seçerek kaydediniz.</message>
+	<message key="reviewer.article.selectRecommendation">Alttaki karar seçeneklerinin aktif hale gelmesi için dördüncü adımdaki sürecin tamamlanması gerekir. Değerlendirmenin editöre iletilebilmesi için "Hakem Kararı" kutusundaki seçereklerden uygun olanının seçilmesi ve kaydedilmesi gerekir.</message>
 	<message key="reviewer.article.recommendation">Öneri</message>
 	<message key="reviewer.article.submitReview">Değerlendirmeyi Editöre Gönder</message>
 	<message key="reviewer.article.reviewerComments">Yorumlar</message>
@@ -512,17 +512,17 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="reviewer.article.submissionToBeReviewed">Değerlendirilecek Başvurular</message>
 	<message key="reviewer.article.reviewSchedule">Değerlendirme Zamanlaması</message>
 	<message key="reviewer.article.reviewSteps">Değerlendirme Basamakları</message>
-	<message key="reviewer.article.reviewerGuidelines">Hakem Kılavuzu</message>
+	<message key="reviewer.article.reviewerGuidelines">Hakem Rehberi</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Hakem Rehberleri dergide yayımlanmak üzere yapılan gönderilerin uygunluğunu denetlemek üzere hazırlanan kriterleri ve değerlendirmeye yardımcı olan anlaşılabilir kimi talimatları içermelidir. Değerlendirme sırasında hakeme iki açılabilir kutu sunulur. Bunlardan ilki "yazar ve editöre" ikincisi ise sadece "editöre" yorum ve mesaj göndermek içindir. Alternatif olarak Dergi Yöneticisi Değerlendirme Formları altında  özel bir değerlendirme formu oluşturabilir. Editörler her koşulda değerlendirme dahil tüm seçeneklere sahip olacaktır.</message>
-	<message key="reviewer.article.notifyEditorA">Başvurunun editörünü bilgilendir</message>
-	<message key="reviewer.article.notifyEditorB">lütfen değerlendirmeyi kabul edip-etmediğinizi simgeye tıklayarak, otomatik olarak oluşturulacak e-posta aracılığıyla bildiriniz.</message>
+	<message key="reviewer.article.notifyEditorA">Editörü bilgilendiriniz.</message>
+	<message key="reviewer.article.notifyEditorB">Değerlendirmeyi kabul edip-etmediğinizi otomatik olarak oluşturulacak e-posta aracılığıyla editöre iletmek için lütfen ilgili simgeye tıklayınız.</message>
 	<message key="reviewer.article.consultGuidelines">Değerlendirmeyi yapacaksanız, aşağıdaki Hakem Rehberine bakınız.</message>
-	<message key="reviewer.article.downloadSubmission">Değerlendirilmek üzere tarafınıza sunulan makaleyi ve varsa eklerini görüntülemek veya yazdırmak için dosya ismine tıklayınız. Değrlendirmenizi ekrandan yapabileceğiniz gibi bilgisayarınıza kaydederek veya çıktısını alarak da yapabilirsiniz. Dosyayı indirmeyi ya da yazdırmayı tercih ettiyseniz, isterseniz sistemden çıkış yapabilirsiniz. Değerlendirmeniz bittiğinde sisteme yeniden giriş yaparak işlem sürecine bir sonraki adımdan itibaren devem edebilirsiniz.</message>
+	<message key="reviewer.article.downloadSubmission">Makaleyi ve varsa eklerini görüntülemek veya yazdırmak için dosya ismine tıklayınız.</message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Bu araştırma ile ilgili rekabet koşullarını kabul edip etmediğinizi bildiriniz (bkz. <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Politikası</a>).]]></message>
 	<message key="reviewer.competingInterests">Çıkar Çelişkisi</message>
 	<message key="reviewer.article.enterReviewA">Makaleyle ilgili görüş ve yorumlarınızı editöre iletmek için simgeye tıklayınız.</message>
-		<message key="reviewer.article.uploadFile">İsteğe bağlı olarak, editörün ve/veya yazarın bilgisine sunmak üzere görüşlerinizi, düzeltmelerinizi içeren dosya da yükleyebilirsiniz.</message>
-	<message key="reviewer.article.selectRecommendation">Değerlendirmenizi editöre göndermek için ya 3. seçenekte bağlantısı verilen simğeye tıklayarak açılacak değerlendirme formu doldurmanız ya da 4. seçenek yolu ile önerilerinizi içeren bir dosya yüklemeniz gerekmektedir. Bu seçenkelerden birini kullandıktan sonra Hakem Kararı seçeneği aktif hale gelecektir. Makale ile ilgili değerlendirmenin editöre iletilebilmesi için "Hakem Kararı" kutusundaki seçereklerden uygun olanını seçerek kaydediniz.</message>
+	<message key="reviewer.article.uploadFile">İsteğe bağlı olarak, editörün ve/veya yazarın bilgisine sunmak üzere görüşlerinizi, düzeltmelerinizi içeren dosya/dosyaları yükleyebilirsiniz.</message>
+	<message key="reviewer.article.selectRecommendation">Alttaki karar seçeneklerinin aktif hale gelmesi için dördüncü adımdaki sürecin tamamlanması gerekir. Değerlendirmenin editöre iletilebilmesi için "Hakem Kararı" kutusundaki seçereklerden uygun olanının seçilmesi ve kaydedilmesi gerekir.</message>
 	<message key="reviewer.article.mustSelectDecision">Başvurunun kabülüne yönelik bir öneride bulunmadınız. İşlemin tamamlanması için bir öneride bulunmanız gerekiyor.</message>
 	<message key="reviewer.article.confirmDecision">Kararınızı kaydettikten sonra bu değerlendirmede başka bir değişiklik yapamazsınız! Devam etmek istiyor musunuz?</message>
 	<message key="reviewer.article.ensuringBlindReview">Yazara Kör Hakemlik Garanti Edilir</message>
@@ -741,7 +741,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="about.onlineSubmissions">Çevrimiçi Gönderi</message>
 	<message key="about.onlineSubmissions.haveAccount">{$journalTitle} için bir kullanıcı kaydınız var mı?</message>
 	<message key="about.onlineSubmissions.login">GİRİŞE GİDİNİZ</message>
-	<message key="about.onlineSubmissions.needAccount">Kullanıcı adı/Şifresine ihtiyacınız var mı?</message>
+	<message key="about.onlineSubmissions.needAccount">Kullanıcı Adı / Şifresine ihtiyacınız mı var?</message>
 	<message key="about.onlineSubmissions.registration">KAYIT SAYFASINA GİDİNİZ</message>
 	<message key="about.onlineSubmissions.registrationRequired">Site aracılığı ile gönderi yapmak ve süreci izlemek için bir kullanıcı kaydı yaptırmanız gerekmektedir.</message>
 	<message key="about.authorGuidelines">Yazar Rehberi</message>
@@ -836,7 +836,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (PHP 5.x sürümleri dahil). Şu halde PHP'nin {$phpVersion}{$wrongPhpText} sürümünü kullanıyorsunuz</li>
-	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 veya  <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (PostgreSQL 8.x sürümleri de olur)</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (MySQL 4.x sürümleri de olur) veya  <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (PostgreSQL 8.x sürümleri de olur)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x veya >= 2.0.4x veya Microsoft IIS 6</li>
 	<li>İşletim sistemi: Yukarıdaki yazılımları destekleyen herhengi bir işletim sistemi <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
@@ -1123,4 +1123,29 @@ Authors who publish with this journal agree to the following terms:
 	<message key="gifts.subscriptionNonExpiring">The gift was not redeemed since you already have a non-expiring subscription with this journal.</message>
 	<message key="payment.loginRequired.forIssue">Subscription or issue purchase required to access item. To verify subscription, access previous purchase, or purchase issue, log in to journal.</message>
 	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
+	<message key="user.profile.profileImage">Profil Resmi</message>
+	<message key="common.journal">Dergi</message>
+	<message key="submission.permissions">İzinler</message>
+	<message key="submission.license">Lisans</message>
+	<message key="submission.copyright">Telif Hakkı</message>
+	<message key="submission.copyrightHolder">Telif Hakkı Sahibi</message>
+	<message key="submission.copyrightYear">Telif Hakkı Yılı</message>
+	<message key="submission.licenseURLValid">Lütfen geçerli bir URL adresi verin (http:// dahil)</message>
+	<message key="submission.licenseURL">Lisans URL</message>
+	<message key="user.orcid">ORCID Numarası</message>
+	<message key="submission.copyrightStatement">Telif Hakkı (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="user.profile.form.orcidInvalid">Belirtmiş olduğunuz ORCID Numarası geçerli değil.</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="user.orcid.description"><![CDATA[ORCID iDs can only be assigned by <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. You must conform to their standards for expressing ORCID iDs, and include the full URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
 </locale>

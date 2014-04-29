@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/navigation/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Danish) locale.
@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Navigeringsfunktion</message>
 	<message key="plugins.block.navigation.description">Dette plugin indsætter funktion til navigationslinks i sidekolonnen.</message>
 	<message key="plugins.block.navigation.journalContent">Tidsskriftsindhold</message>
+	<message key="plugins.block.navigation.searchScope">Søgeområde</message>
 </locale>

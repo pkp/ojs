@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/native/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkiye Türkçesi) locale.
@@ -119,4 +119,7 @@ Aşağıdaki biçimler kabul edilir:
 	<message key="plugins.importexport.native.import.error.invalidPubId">Your import file contains a dataset with an invalid {$pubIdType}: '{$pubId}'.</message>
 	<message key="plugins.importexport.native.import.error.duplicatePubId">Your import file contains a dataset with {$pubIdType} '{$pubId}' that already exists for another object in the database. Please make sure that you never import objects with IDs that already exist in the database.</message>
 	<message key="plugins.importexport.native.import.error.unknownPubId">Your import file contains a dataset with an ID-type '{$pubIdType}' that no ID-plugin can handle. Please install and/or activate the corresponding ID plug-in before trying to import this dataset.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">İçe aktarılan {$publicId} numaralı dizgi genel ID'si , "{$articleTitle}" adlı aynı makale için başka bir dizgi için zaten kullanılıyor.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">İçeri aktarılan "{$suppFileTitle}" adlı ek dosya için verilen genel ID, hali hazırda "{$otherSuppFileTitle}" adlı başka bir ek dosya tarafından aynı makale için kullanılmkatadır.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">İçeri aktarılan "{$articleTitle}" adlı makale için verilen genel ID, hali hazırda "{$otherArticleTitle}" adlı başka bir makale için kullanılmaktadır.</message>
 </locale>

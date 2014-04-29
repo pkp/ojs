@@ -3,8 +3,8 @@
 <!--
   * plugins/generic/lucene/locale/nl_NL/emailTemplateData.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -27,7 +27,9 @@ Deze e-mail is gegenereerd door de Lucene zoekplugin van Open Journal Systems.</
 	</email_text>
 	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
 		<subject>Artikel indexeerfout</subject>
-		<body>Er is een indexeerfout opgetreden bij het indexeren van het artikel "{$articleTitle}" in tijdschrift "{$journalName}".
+		<body>Er is een indexeerfout opgetreden bij het bijwerken van de artikelindex".
+
+De foutboodschap die de webservice teruggaf is: "{$error}"
 
 Deze e-mail is gegenereerd door de Lucene zoekplugin van Open Journal Systems.</body>
 		<description>Dit e-mailsjabloon wordt gebruikt voor het op de hoogte brengen van  de technische contactpersoon van een tijdschrift van een indexeerfout van een artikel.</description>

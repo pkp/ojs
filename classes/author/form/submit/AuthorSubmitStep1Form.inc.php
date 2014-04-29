@@ -3,8 +3,8 @@
 /**
  * @file classes/author/form/submit/AuthorSubmitStep1Form.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorSubmitStep1Form
@@ -172,6 +172,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$author->setAffiliation($user->getAffiliation(null), null);
 			$author->setCountry($user->getCountry());
 			$author->setEmail($user->getEmail());
+			$author->setData('orcid', $user->getData('orcid'));
 			$author->setUrl($user->getUrl());
 			$author->setBiography($user->getBiography(null), null);
 			$author->setPrimaryContact(1);

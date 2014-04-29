@@ -4,14 +4,15 @@
 <!--
   * plugins/blocks/languageToggle/locale/en_US/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
  
 <locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.languageToggle.selectLabel">Select Language</message>
 	<message key="plugins.block.languageToggle.displayName">Language Toggle Block</message>
 	<message key="plugins.block.languageToggle.description">This plugin provides the sidebar language toggler.</message>
 </locale>

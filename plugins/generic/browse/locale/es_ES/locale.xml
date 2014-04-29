@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/browse/locale/en_US/locale.xml
+  * plugins/generic/browse/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Browse plugin localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Navegar</message>
 	<message key="plugins.generic.browse.description">Este conector activa la navegación por secciones y/o tipos de identificación.</message>

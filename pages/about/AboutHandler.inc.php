@@ -3,8 +3,8 @@
 /**
  * @file pages/about/AboutHandler.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AboutHandler
@@ -58,10 +58,12 @@ class AboutHandler extends Handler {
 			$paymentManager = new OJSPaymentManager($request);
 			$templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 
-			$groupDao =& DAORegistry::getDAO('GroupDAO');
-			$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId(), GROUP_CONTEXT_PEOPLE);
+			if ($journal->getSetting('boardEnabled')) {
+				$groupDao =& DAORegistry::getDAO('GroupDAO');
+				$groups =& $groupDao->getGroups(ASSOC_TYPE_JOURNAL, $journal->getId(), GROUP_CONTEXT_PEOPLE);
+				$templateMgr->assign_by_ref('peopleGroups', $groups);
+			}
 
-			$templateMgr->assign_by_ref('peopleGroups', $groups);
 			$templateMgr->assign('helpTopicId', 'user.about');
 			$templateMgr->display('about/index.tpl');
 		} else {

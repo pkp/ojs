@@ -4,7 +4,7 @@
 <!--
   * @file plugins/generic/alm/locale/en_US/locale.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -41,7 +41,7 @@
 	<message key="plugins.generic.alm.categories.citations.description">Citations of this article found in CrossRef, PubMed and Wikipedia. In most cases, clicking on the citation count will take you to a listing in the referencing service itself.</message>
 
 	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">ALM plugin is enabled but a valid DOI prefix must be specified in the journal path {$path} Setup in order to send article information.</message>
-	<message key="plugins.generic.alm.senderTask.warning.noApiKey">ALM plugin is enabled but no API key defined for journal path {$path}</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">ALM plugin is enabled but no API key defined for journal path {$path}.</message>
 	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Could not confirm that article information for journal path {$path} is sent. Server did not respond.</message>
 	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">No deposit url defined.</message>
 	<message key="plugins.generic.alm.senderTask.error.returnError">The server returned a message: {$error}

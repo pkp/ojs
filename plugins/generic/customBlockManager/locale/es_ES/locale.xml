@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the es_ES (Español) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español">
 	<message key="plugins.generic.customBlockManager.displayName">Gestor de bloques personalizados</message>
 	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Con este conector puede añadir o eliminar conectores de bloques personalizados. También puede editar el contenido a través de la página <a href="{$systemPluginsUrl}">Conectores del sistema</a> (en la sección Conector de bloques). Para colocar el conector en el lugar que desee de la barra lateral, vaya a <a href="{$setupStep56}">Paso de instalación 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Configuración</message>

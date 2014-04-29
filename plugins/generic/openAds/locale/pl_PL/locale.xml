@@ -4,15 +4,15 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pl_PL (Polski) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pl_PL" full_name="Polski">
 	<message key="plugins.generic.openads.description">The OpenAds plugin allows dynamic ads from the OpenAds ad server to be inserted into OJS.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[The OpenAds plugin allows dynamic ads from the OpenAds ad server to be inserted into OJS. <strong>Please read the README file in plugins/generic/openAds for information on enabling this plugin.</strong>]]></message>
 	<message key="plugins.generic.openads">OpenAds Plugin</message>

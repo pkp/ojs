@@ -2,15 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/stopForumSpam/locale/en_US/locale.xml
+  * plugins/generic/stopForumSpam/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Stop Forum Spam plugin localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español">
 
 	<message key="plugins.generic.stopForumSpam.displayName">Stop Forum Spam Plugin</message>
 	<message key="plugins.generic.stopForumSpam.description"><![CDATA[Integrate OJS with the Stop Forum Spam prevention system, which aims to reduce the amount of spam registrations.]]></message>

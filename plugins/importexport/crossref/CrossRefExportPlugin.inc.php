@@ -3,321 +3,411 @@
 /**
  * @file plugins/importexport/crossref/CrossRefExportPlugin.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossRefExportPlugin
  * @ingroup plugins_importexport_crossref
  *
- * @brief CrossRef/MEDLINE XML metadata export plugin
+ * @brief CrossRef export/registration plugin.
  */
 
-import('classes.plugins.ImportExportPlugin');
 
-class CrossRefExportPlugin extends ImportExportPlugin {
-	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True if plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
-	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		$this->addLocaleData();
-		return $success;
+if (!class_exists('DOIExportPlugin')) { // Bug #7848
+	import('plugins.importexport.crossref.classes.DOIExportPlugin');
+}
+
+// DataCite API
+define('CROSSREF_API_DEPOSIT_OK', 303);
+define('CROSSREF_API_RESPONSE_OK', 200);
+define('CROSSREF_API_URL', 'https://api.crossref.org/deposits');
+define('CROSSREF_SEARCH_API', 'http://search.crossref.org/dois');
+
+// The name of the settings used to save the registered DOI and the URL with the deposit status.
+define('CROSSREF_DEPOSIT_STATUS', 'depositStatus');
+
+// Test DOI prefix
+define('CROSSREF_API_TESTPREFIX', '10.1234');
+
+class CrossRefExportPlugin extends DOIExportPlugin {
+
+	//
+	// Constructor
+	//
+	function CrossRefExportPlugin() {
+		parent::DOIExportPlugin();
 	}
 
+
+	//
+	// Implement template methods from ImportExportPlugin
+	//
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
+	 * @see ImportExportPlugin::getName()
 	 */
 	function getName() {
 		return 'CrossRefExportPlugin';
 	}
 
+	/**
+	 * @see ImportExportPlugin::getDisplayName()
+	 */
 	function getDisplayName() {
 		return __('plugins.importexport.crossref.displayName');
 	}
 
+	/**
+	 * @see ImportExportPlugin::getDescription()
+	 */
 	function getDescription() {
 		return __('plugins.importexport.crossref.description');
 	}
 
-	function display(&$args, $request) {
-		$templateMgr =& TemplateManager::getManager();
-		parent::display($args, $request);
+	/**
+	 * @see LazyLoadPlugin::register()
+	 */
+	function register($category, $path) {
+		$success = parent::register($category, $path);
+		if (!Config::getVar('general', 'installed')) return false;
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-
-		$journal =& Request::getJournal();
-
-		switch (array_shift($args)) {
-			case 'exportIssues':
-				$issueIds = Request::getUserVar('issueId');
-				if (!isset($issueIds)) $issueIds = array();
-				$issues = array();
-				foreach ($issueIds as $issueId) {
-					$issue =& $issueDao->getIssueById($issueId);
-					if (!$issue) Request::redirect();
-					$issues[] =& $issue;
-				}
-				$this->exportIssues($journal, $issues);
-				break;
-			case 'exportIssue':
-				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueById($issueId);
-				if (!$issue) Request::redirect();
-				$issues = array($issue);
-				$this->exportIssues($journal, $issues);
-				break;
-			case 'exportArticle':
-				$articleIds = array(array_shift($args));
-				$result = ArticleSearch::formatResults($articleIds);
-				$this->exportArticles($journal, $result);
-				break;
-			case 'exportArticles':
-				$articleIds = Request::getUserVar('articleId');
-				if (!isset($articleIds)) $articleIds = array();
-				$results =& ArticleSearch::formatResults($articleIds);
-				$this->exportArticles($journal, $results);
-				break;
-			case 'issues':
-				// Display a list of issues for export
-				// that contain an article with DOI
-				$this->setBreadcrumbs(array(), true);
-				AppLocale::requireComponents(LOCALE_COMPONENT_OJS_EDITOR);
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$allIssues =& $issueDao->getPublishedIssues($journal->getId());
-				$issues = array();
-				$numArticles = array();
-				while ($issue = $allIssues->next()) {
-					$issueArticles =& $publishedArticleDao->getPublishedArticles($issue->getId());
-					$issueArticlesNo = 0;
-					foreach ($issueArticles as $issueArticle) {
-						if ($issueArticle->getPubId('doi')) {
-							if (!in_array($issue, $issues)) $issues[] = $issue;
-							$issueArticlesNo++;
-						}
-					}
-					$numArticles[$issue->getId()] = $issueArticlesNo;
-				}
-				// Paginate issues.
-				$rangeInfo = Handler::getRangeInfo('issues');
-				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$iterator = VirtualArrayIterator::factory($issues, $rangeInfo);
-				$templateMgr->assign('issues', $iterator);
-				$templateMgr->assign('numArticles', $numArticles);
-				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
-				break;
-			case 'articles':
-				// Display a list of articles with DOI for export
-				$this->setBreadcrumbs(array(), true);
-				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$articleIterator = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
-				$articleIds = array();
-				while ($article = $articleIterator->next()) {
-					// Check whether there is a DOI.
-					if ($article->getPubId('doi')) {
-						$articleIds[] = $article->getId();
-					}
-				}
-				// Paginate articles.
-				$rangeInfo = Handler::getRangeInfo('articles');
-				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$iterator = VirtualArrayIterator::factory(ArticleSearch::formatResults($articleIds), $rangeInfo);
-				$templateMgr->assign_by_ref('articles', $iterator);
-				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
-				break;
-			default:
-				$this->setBreadcrumbs();
-				$doiPrefix = null;
-				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-				if (isset($pubIdPlugins['DOIPubIdPlugin'])) {
-					$doiPrefix = $pubIdPlugins['DOIPubIdPlugin']->getSetting($journal->getId(), 'doiPrefix');
-				}
-				$templateMgr->assign('doiPrefix', $doiPrefix);
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+		if ($success) {
+			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 		}
+		return $success;
 	}
 
-	function exportArticles(&$journal, &$results, $outputFile = null) {
-		$this->import('CrossRefExportDom');
 
-		$doc =& CrossRefExportDom::generateCrossRefDom();
-		$doiBatchNode =& CrossRefExportDom::generateDoiBatchDom($doc);
-
-		// Create Head Node and all parts inside it
-		$head =& CrossRefExportDom::generateHeadDom($doc, $journal);
-
-		// attach it to the root node
-		XMLCustomWriter::appendChild($doiBatchNode, $head);
-
-		// the body node contains everything
-		$bodyNode =& XMLCustomWriter::createElement($doc, 'body');
-		XMLCustomWriter::appendChild($doiBatchNode, $bodyNode);
-
-		// now cycle through everything we want to submit in this batch
-		foreach ($results as $result) {
-			$journal =& $result['journal'];
-			$issue =& $result['issue'];
-			$section =& $result['section'];
-			$article =& $result['publishedArticle'];
-
-			// Create the metadata node
-			// this does not need to be repeated for every article
-			// but its allowed to be and its simpler to do so
-			$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
-			$journalMetadataNode =& CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
-			XMLCustomWriter::appendChild($journalNode, $journalMetadataNode);
-
-			// Create the journal_issue node
-			$journalIssueNode =& CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
-			XMLCustomWriter::appendChild($journalNode, $journalIssueNode);
-
-			// Create the article
-			$journalArticleNode =& CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
-			XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
-
-			XMLCustomWriter::appendChild($bodyNode, $journalNode);
-		}
-
-
-		// dump out the results
-		if (!empty($outputFile)) {
-			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLCustomWriter::getXML($doc));
-			fclose($h);
-		} else {
-			header("Content-Type: application/xml");
-			header("Cache-Control: private");
-			header("Content-Disposition: attachment; filename=\"crossref.xml\"");
-			XMLCustomWriter::printXML($doc);
-		}
-		return true;
+	//
+	// Implement template methods from DOIExportPlugin
+	//
+	/**
+	 * @see DOIExportPlugin::getPluginId()
+	 */
+	function getPluginId() {
+		return 'crossref';
 	}
 
-	function exportIssues(&$journal, &$issues, $outputFile = null) {
-		$this->import('CrossRefExportDom');
+	/**
+	 * @see DOIExportPlugin::getSettingsFormClassName()
+	 */
+	function getSettingsFormClassName() {
+		return 'CrossRefSettingsForm';
+	}
 
-		$doc =& CrossRefExportDom::generateCrossRefDom();
-		$doiBatchNode =& CrossRefExportDom::generateDoiBatchDom($doc);
+	/**
+	 * @see DOIExportPlugin::getAllObjectTypes()
+	 */
+	function getAllObjectTypes() {
+		return array(
+			'issue' => DOI_EXPORT_ISSUES,
+			'article' => DOI_EXPORT_ARTICLES
+		);
+	}
 
-		// Create Head Node and all parts inside it
-		$head =& CrossRefExportDom::generateHeadDom($doc, $journal);
+	/**
+	 * Display a list of issues for export.
+	 * @param $templateMgr TemplateManager
+	 * @param $journal Journal
+	 */
+	function displayIssueList(&$templateMgr, &$journal) {
+		$this->setBreadcrumbs(array(), true);
 
-		// attach it to the root node
-		XMLCustomWriter::appendChild($doiBatchNode, $head);
+		// Retrieve all published issues.
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+		$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+		$this->registerDaoHook('IssueDAO');
+		$issueIterator =& $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
 
-		$bodyNode =& XMLCustomWriter::createElement($doc, 'body');
-		XMLCustomWriter::appendChild($doiBatchNode, $bodyNode);
-
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		// Filter only issues that contain an article that have a DOI assigned.
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$issues = array();
+		$numArticles = array();
+		while ($issue =& $issueIterator->next()) {
+			$issueArticles =& $publishedArticleDao->getPublishedArticles($issue->getId());
+			$issueArticlesNo = 0;
+			$allArticlesRegistered = true;
+			foreach ($issueArticles as $issueArticle) {
+				$articleRegistered = $issueArticle->getData('crossref::registeredDoi');
+				if ($issueArticle->getPubId('doi') && !isset($articleRegistered)) {
+					if (!in_array($issue, $issues)) $issues[] = $issue;
+					$issueArticlesNo++;
+				}
+				if ($allArticlesRegistered && !isset($articleRegistered)) {
+					$allArticlesRegistered = false;
+				}
+			}
+			$numArticles[$issue->getId()] = $issueArticlesNo;
+		}
 
-		foreach ($issues as $issue) {
-			foreach ($sectionDao->getSectionsForIssue($issue->getId()) as $section) {
-				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getId()) as $article) {
-					if ($article->getPubId('doi')) {
-						// Create the metadata node
-						// this does not need to be repeated for every article
-						// but its allowed to be and its simpler to do so
-						$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
-						$journalMetadataNode =& CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
-						XMLCustomWriter::appendChild($journalNode, $journalMetadataNode);
+		// Instantiate issue iterator.
+		import('lib.pkp.classes.core.ArrayItemIterator');
+		$rangeInfo = Handler::getRangeInfo('articles');
+		$iterator = new ArrayItemIterator($issues, $rangeInfo->getPage(), $rangeInfo->getCount());
 
-						$journalIssueNode =& CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
-						XMLCustomWriter::appendChild($journalNode, $journalIssueNode);
+		// Prepare and display the issue template.
+		$templateMgr->assign_by_ref('issues', $iterator);
+		$templateMgr->assign('numArticles', $numArticles);
+		$templateMgr->assign('allArticlesRegistered', $allArticlesRegistered);
+		$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
+	}
 
-						// Article node
-						$journalArticleNode =& CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
-						XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
+	/**
+	 * @see DOIExportPlugin::displayAllUnregisteredObjects()
+	 */
+	function displayAllUnregisteredObjects(&$templateMgr, &$journal) {
+		// Prepare information specific to this plug-in.
+		$this->setBreadcrumbs(array(), true);
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_SUBMISSION));
 
-						XMLCustomWriter::appendChild($bodyNode, $journalNode);
+		// Prepare and display the template.
+		$templateMgr->assign_by_ref('articles', $this->_getUnregisteredArticles($journal));
+		$templateMgr->assign('depositStatusSettingName', $this->getDepositStatusSettingName());
+		$templateMgr->assign('depositStatusUrlSettingName', $this->getDepositStatusUrlSettingName());
+		$templateMgr->display($this->getTemplatePath() . 'all.tpl');
+	}
+
+	/**
+	 * The selected issue can be exported if it contains an article that has a DOI,
+	 * and the articles containing a DOI also have a date published.
+	 * The selected article can be exported if it has a DOI and a date published.
+	 * @param $foundObject Issue|PublishedArticle
+	 * @param $errors array
+	 * @return array|boolean
+	*/
+	function canBeExported($foundObject, &$errors) {
+		if (is_a($foundObject, 'Issue')) {
+			$export = false;
+			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$issueArticles =& $publishedArticleDao->getPublishedArticles($foundObject->getId());
+			foreach ($issueArticles as $issueArticle) {
+				if (!is_null($issueArticle->getPubId('doi'))) {
+					$export = true;
+					if (is_null($issueArticle->getDatePublished())) {
+						$errors[] = array('plugins.importexport.crossref.export.error.articleDatePublishedMissing', $issueArticle->getId());
+						return false;
 					}
+				}
+			}
+			return $export;
+		}
+		if (is_a($foundObject, 'PublishedArticle')) {
+			if (is_null($foundObject->getDatePublished())) {
+				$errors[] = array('plugins.importexport.crossref.export.error.articleDatePublishedMissing', $foundObject->getId());
+				return false;
+			}
+			return parent::canBeExported($foundObject, $errors);
+		}
+	}
+
+	/**
+	 * @see DOIExportPlugin::generateExportFiles()
+	 */
+	function generateExportFiles(&$request, $exportType, &$objects, $targetPath, &$journal, &$errors) {
+		// Additional locale file.
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
+
+		$this->import('classes.CrossRefExportDom');
+		$dom = new CrossRefExportDom($request, $this, $journal, $this->getCache());
+		$doc =& $dom->generate($objects);
+		if ($doc === false) {
+			$errors =& $dom->getErrors();
+			return false;
+		}
+
+		// Write the result to the target file.
+		$exportFileName = $this->getTargetFileName($targetPath, $exportType);
+		file_put_contents($exportFileName, XMLCustomWriter::getXML($doc));
+		$generatedFiles = array($exportFileName => &$objects);
+		return $generatedFiles;
+	}
+
+	/**
+	 * @see DOIExportPlugin::processMarkRegistered()
+	 */
+	function processMarkRegistered(&$request, $exportType, &$objects, &$journal) {
+		$this->import('classes.CrossRefExportDom');
+		$dom = new CrossRefExportDom($request, $this, $journal, $this->getCache());
+		foreach($objects as $object) {
+			if (is_a($object, 'Issue')) {
+				$articlesByIssue =& $dom->retrieveArticlesByIssue($object);
+				foreach ($articlesByIssue as $article) {
+					if ($article->getPubId('doi')) {
+						$this->markRegistered($request, $article);
+					}
+				}
+			} else {
+				if ($object->getPubId('doi')) {
+					$this->markRegistered($request, $object);
+				}
+			}
+		}
+	}
+
+	/**
+	 * @see DOIExportPlugin::registerDoi()
+	 */
+	function registerDoi(&$request, &$journal, &$objects, $filename) {
+		$curlCh = curl_init ();
+		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($curlCh, CURLOPT_POST, true);
+		curl_setopt($curlCh, CURLOPT_HEADER, 1);
+		curl_setopt($curlCh, CURLOPT_BINARYTRANSFER, true);
+
+		$username = $this->getSetting($journal->getId(), 'username');
+		$password = $this->getSetting($journal->getId(), 'password');
+
+		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_API_URL);
+		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
+
+		// Transmit XML data.
+		assert(is_readable($filename));
+		$fh = fopen($filename, 'rb');
+
+		$httpheaders = array();
+		$httpheaders[] = 'Content-Type: application/vnd.crossref.deposit+xml';
+		$httpheaders[] = 'Content-Length: ' . filesize($filename);
+
+		curl_setopt($curlCh, CURLOPT_HTTPHEADER, $httpheaders);
+		curl_setopt($curlCh, CURLOPT_INFILE, $fh);
+		curl_setopt($curlCh, CURLOPT_INFILESIZE, filesize($filename));
+
+		$response = curl_exec($curlCh);
+		if ($response === false) {
+			$result = array(array('plugins.importexport.common.register.error.mdsError', 'No response from server.'));
+		} elseif ( $status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE) != CROSSREF_API_DEPOSIT_OK ) {
+			$result = array(array('plugins.importexport.common.register.error.mdsError', "$status - $response"));
+		} else {
+			// Deposit was received
+			$result = true;
+			$depositLocationArray = $this->_http_parse_headers($response);
+			$depositLocation = $depositLocationArray['Location'];
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
+			foreach ($objects as $article) {
+				// its possible that issues, galleys, or other things are being registered
+				// but we're only going to be going back to check in on articles
+				if (is_a($article, 'Article')) {
+					// we only save the URL of the last deposit so it can be checked later on
+					$articleDao->updateSetting($article->getId(), $this->getDepositStatusUrlSettingName(), $depositLocation, 'string');
 				}
 			}
 		}
 
-		// dump out results
-		if (!empty($outputFile)) {
-			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLCustomWriter::getXML($doc));
-			fclose($h);
-		} else {
-			header("Content-Type: application/xml");
-			header("Cache-Control: private");
-			header("Content-Disposition: attachment; filename=\"crossref.xml\"");
-			XMLCustomWriter::printXML($doc);
-		}
-
-		return true;
+		curl_close($curlCh);
+		return $result;
 	}
 
 	/**
-	 * Execute import/export tasks using the command-line interface.
-	 * @param $args Parameters to the plugin
+	 * This method checks the CrossRef APIs and checks if deposits have been successful
+	 * @param $request Request
+	 * @param $journal Journal The journal associated with the deposit
+	 * @param $article Article The article getting deposited
 	 */
-	function executeCLI($scriptName, &$args) {
-//		$command = array_shift($args);
-		$xmlFile = array_shift($args);
-		$journalPath = array_shift($args);
+	function updateDepositStatus(&$request, &$journal, $article) {
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
+		$jsonManager = new JSONManager();
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$userDao =& DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		// Prepare HTTP session.
+		$curlCh = curl_init ();
+		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
 
-		$journal =& $journalDao->getJournalByPath($journalPath);
+		$username = $this->getSetting($journal->getId(), 'username');
+		$password = $this->getSetting($journal->getId(), 'password');
+		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
 
-		if (!$journal) {
-			if ($journalPath != '') {
-				echo __('plugins.importexport.crossref.cliError') . "\n";
-				echo __('plugins.importexport.crossref.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+		$doi = urlencode($article->getPubId('doi'));
+		$params = 'filter=doi:' . $doi ;
+		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_API_URL . '?' . $params);
+
+		// try to fetch from the new API
+		$response = curl_exec($curlCh);
+
+		// try the new API with the filter completed (should only return successes)
+		if ( $response && curl_getinfo($curlCh, CURLINFO_HTTP_CODE) == CROSSREF_API_RESPONSE_OK ) {
+			$response = $jsonManager->decode($response);
+			$pastDeposits = array();
+			foreach ($response->message->items as $item) {
+				$pastDeposits[strtotime($item->{'submitted-at'})] = $item->status;
+				if ( $item->status == 'completed' ) {
+					$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), 'completed', 'string');
+					$this->markRegistered($request, $article);
+					return true;
+				}
 			}
-			$this->usage($scriptName);
-			return;
+
+			// if there have been past attempts, save the most recent one's status for display to user
+			if (count($pastDeposits) > 0) {
+				$lastStatus = $pastDeposits[max(array_keys($pastDeposits))];
+				$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), $lastStatus, 'string');
+			}
 		}
 
-		if ($xmlFile != '') switch (array_shift($args)) {
-			case 'articles':
-				$results =& ArticleSearch::formatResults($args);
-				if (!$this->exportArticles($journal, $results, $xmlFile)) {
-					echo __('plugins.importexport.crossref.cliError') . "\n";
-					echo __('plugins.importexport.crossref.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
-				}
-				return;
-			case 'issue':
-				$issueId = array_shift($args);
-				$issue =& $issueDao->getIssueByBestIssueId($issueId, $journal->getId());
-				if ($issue == null) {
-					echo __('plugins.importexport.crossref.cliError') . "\n";
-					echo __('plugins.importexport.crossref.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
-					return;
-				}
-				$issues = array($issue);
-				if (!$this->exportIssues($journal, $issues, $xmlFile)) {
-					echo __('plugins.importexport.crossref.cliError') . "\n";
-					echo __('plugins.importexport.crossref.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
-				}
-				return;
+		// now try the old crossref API and just search for the DOI
+		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_SEARCH_API . '?q=' . $doi);
+		$response = curl_exec($curlCh);
+		if ( $response && curl_getinfo($curlCh, CURLINFO_HTTP_CODE) == CROSSREF_API_RESPONSE_OK ) {
+			$response = $jsonManager->decode($response);
+			if ( count($response) > 0 ) {
+				// inventing a new status "found" for when we find it in the search API (as opposed to deposit API)
+				$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), 'found', 'string');
+				$this->markRegistered($request, $article);
+				return true;
+			}
 		}
-		$this->usage($scriptName);
 
+		curl_close($curlCh);
+
+		return false;
 	}
 
 	/**
-	 * Display the command-line usage information
+	 * @see AcronPlugin::parseCronTab()
 	 */
-	function usage($scriptName) {
-		echo __('plugins.importexport.crossref.cliUsage', array(
-			'scriptName' => $scriptName,
-			'pluginName' => $this->getName()
-		)) . "\n";
+	function callbackParseCronTab($hookName, $args) {
+		$taskFilesPath =& $args[0];
+		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
+		error_log($this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml');
+
+		return false;
 	}
+
+	function getDepositStatusSettingName() {
+		return $this->getPluginId() . '::' . CROSSREF_DEPOSIT_STATUS;
+	}
+
+	function getDepositStatusUrlSettingName() {
+		return $this->getPluginId() . '::' . CROSSREF_DEPOSIT_STATUS . 'Url';
+	}
+
+
+	/**
+	 * Parse HTTP headers into an associative array
+	 * Taken from: http://www.php.net/manual/en/function.http-parse-headers.php#112917
+	 * @param $raw_headers
+	 * @return array
+	 */
+	function _http_parse_headers ($raw_headers) {
+		$headers = array(); // $headers = [];
+
+		foreach (explode("\n", $raw_headers) as $i => $h) {
+			$h = explode(':', $h, 2);
+
+			if (isset($h[1])) {
+				if(!isset($headers[$h[0]])) {
+					$headers[$h[0]] = trim($h[1]);
+				} else if(is_array($headers[$h[0]])) {
+					$tmp = array_merge($headers[$h[0]],array(trim($h[1])));
+					$headers[$h[0]] = $tmp;
+				} else {
+					$tmp = array_merge(array($headers[$h[0]]),array(trim($h[1])));
+					$headers[$h[0]] = $tmp;
+				}
+			}
+		}
+
+		return $headers;
+	}
+
 }
 
 ?>

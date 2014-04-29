@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.generic.usageStats.settings.logging">Erişim günlüğü seçenekleri</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Günlük dosyaları oluştur</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activating this option will make the plugin create access log files inside the files directory. Those files should be used to extract the usage statistics data. If you don't want to create more access log files you can leave this option disabled and use your own server log access files.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Parse log files regex</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">The default regex used can parse apache access log files in combined format and also the plugin's log files. If your access log files are in a different format you will have to insert a regex capable of parsing them and giving the expected values. See UsageStatsLoader::_getDataFromLogEntry() for more information.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Kullanım istatistikleri eklentisi ayarları kaydedildi</message>
+	
+	<message key="plugins.generic.usageStats.openFileFailed">{$file} dosyası açık olamayacağından dolayı reddedildi.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">The line number {$lineNumber} from the file {$file} is not a valid log entry and the file was rejected.</message>
+	<message key="plugins.generic.usageStats.displayName">Kullanım İstatisitikleri</message>
+	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">OJS kullanım istatisitkleri raporu</message>
+	<message key="plugins.reports.usageStats.report.description">ADS varsayılan kullanım istatistikleri raporu (COUNTER uyumlu)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">ADS/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Açık Dergi Sistemleri istatistikleri (COUNTER uyumlu)</message>
+</locale>

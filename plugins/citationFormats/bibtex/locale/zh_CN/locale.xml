@@ -4,8 +4,8 @@
 <!--
   * plugins/citationFormats/bibtex/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in en_US.
@@ -13,7 +13,7 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.bibtex.displayName">BibTeX引文格式插件(BibTeX citation format plugin)</message>
+	<message key="plugins.citationFormats.bibtex.displayName">BibTeX引文格式插件</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
-	<message key="plugins.citationFormats.bibtex.description">本插件实现了BibTeX引文格式(This plugin implements the BibTeX citation format).</message>
+	<message key="plugins.citationFormats.bibtex.description">本插件实现了BibTeX引文格式.</message>
 </locale>

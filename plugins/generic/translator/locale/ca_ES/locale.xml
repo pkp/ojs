@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ca_ES (Català) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.translator.name">Connector de traducció</message>
 	<message key="plugins.generic.translator.description">Aquest connector permet el manteniment web dels fitxers de traducció.</message>
 	<message key="plugins.generic.translator.longdescription">Aquesta àrea permet a l”administrador/a del lloc web crear, modificar i revisar les traduccions de l'OJS. Afecta tot el lloc web, per la qual cosa no s'ha d'utilitzar per personalitzar una única revista de l'OJS. Si corregiu o creeu una traducció, us recomanem que l'envieu al Public Knowledge Project perquè es pugui distribuir amb versions futures.</message>

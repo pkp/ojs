@@ -3,8 +3,8 @@
 <!--
   * emailTemplateData.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -769,16 +769,7 @@ Nuestra decisión es:
 {$editorialContactSignature}</body>
 		<description>Este email del Editor o Editor de Sección a un Autor les notifica sobre una decisión definitiva sobre su presentación.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_PASSWORD">
-		<subject>Tu lista de correo de notificaciones de {$siteTitle}</subject>
-		<body>Tu nueva contraseña para deshabilitar los emails de notificación es: {$password}
-
-Si deseas dejar de recibir emails de notificación, ve a {$unsubscribeLink} e introduce tu dirección de email y la citada contraseña.
-
-{$principalContactSignature}</body>
-		<description>Este email se envía a usuarios sin registrar cuando indican que han olvidado la contraseña o son incapaces de entrar. Proporciona una URL que pueden seguir para resetear su contraseña.</description>
-	</email_text>
-	<email_text key="EDITOR_DECISION_REVISIONS">
+		<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Decisión del Editor</subject>
 		<body>{$authorName}:
 

@@ -4,8 +4,8 @@
 <!--
   * ojs2-devel/locale/es_AR/admin.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español (Argentina)) locale.
@@ -79,4 +79,16 @@
 	<message key="admin.categories.confirmDelete">¿Está seguro de querer eliminar esta categoría?</message>
 	<message key="admin.categories.name">Nombre</message>
 	<message key="admin.categories.nameRequired">Un nombre de categoría es requerido</message>
+	<message key="admin.settings.defaultMetricDescription">Su instalación de OJS está configurada para registrar más de una estadística de uso. Las estadísticas de uso serán mostradas en numerosos contextos. 
+Hay casos en los que una sola estadísitica de uso debe ser usada, por ej. para mostrar una lista ordenada de los artículos más usados o para rankear resultados de búsqueda. Por favor seleccione una de la métricas como por defecto.</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copiar el archivo de log de acceso de apache, filtrando las entradas relacionadas con esta instalación, hacia el directorio de archivos actual, dentro del directorio UsageStatsPlugin. Debe ejecutarse con un usuario con suficientes privilegios para leer archivos de logs de accesos de apache.
+Esta herramiente sólo copiará archivos que no están ya dentro del directorio cargador de archivos usageStast (etapa, procesamiento, archiviado, rechazado)
+Uso: {$scriptName} ruta/al/archivo/de/log/de/apache.log
+Uso (procesamiento de todos los archivos en un directorio): {$scriptName} ruta/al/directorio/de/apache</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: no se puede crear la carpeta temportal {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: Archivo {$filePath} no existe o no se puede acceder</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: no se puede copiar el archivo desde {$filePath} hacia {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no se puede eliminar el archivo {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Alerta: el archivo {$filePath} ya existe dentro del directorio de estadísticas de uso.</message>
+	<message key="admin.copyAccessLogFileTool.success">Éxito: {$filePath} hacia {$destinationPath}</message>
 </locale>

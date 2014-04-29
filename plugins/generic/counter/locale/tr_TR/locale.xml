@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/counter/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Turkish) locale.
+  *
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.generic.counter.description"><![CDATA[COUNTER Eklentisi, site aktivitesini <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> uyumlu olarak raporlamak ve kayıt etmek için kullanılır.]]></message>
+	<message key="plugins.generic.counter">COUNTER İstatistikleri</message>
+	<message key="plugins.generic.counter.migrate">Günlük Dosyasını Göç Ettir</message>
+	<message key="plugins.generic.counter.1a.title">Dergi Raporu 1 (R2): Aylık Tam Metin Makale İstekleri</message>
+	<message key="plugins.generic.counter.1a.title1">Dergi Raporu 1 (R2)</message>
+	<message key="plugins.generic.counter.1a.title2">Aylık Başarılı Tam Metin Makale İstekleri Sayısı (Yıl {$year})</message>
+	<message key="plugins.generic.counter.1a.dateRun">Başlangıç tarihi:</message>
+	<message key="plugins.generic.counter.1a.publisher">Yayıncı</message>
+	<message key="plugins.generic.counter.1a.platform">Platform</message>
+	<message key="plugins.generic.counter.1a.printIssn">ISSN</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">eISSN</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">Bu Güne Kadar Yıllık Toplam</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">Bu Güne Kadar Yıllık HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">Bu Güne Kadar Yıllık PDF</message>
+	<message key="plugins.generic.counter.1a.totalForAllJournals">Tüm dergiler için toplam</message>
+</locale>

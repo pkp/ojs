@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/default.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português) locale (default journal settings).
@@ -161,4 +161,6 @@ O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]>
 	<message key="default.journalSettings.purchaseArticleFee">Adquirir artigo</message>
 	<message key="default.journalSettings.membershipFee">Registo em Entidade de Classe</message>
 	<message key="default.journalSettings.donationFee">Doações à revista</message>
+	<message key="default.journalSettings.purchaseIssueFee">Comprar Número</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento deste montante permite ver, descarregar e imprimir o número.</message>
 </locale>

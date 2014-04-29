@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the ca_ES (Català) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.tinymce.name">Connector TinyMCE</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[Aquest connector habilita l'edició WYSIWYG de les àrees de text de l'OJS mitjançant l'editor de continguts <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Aquest connector habilita l'edició WYSIWYG de les àrees de text de l'OJS mitjançant l'editor de continguts <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE no està instal·lat. Instaleu-lo a {$tinyMcePath}.</strong>]]></message>

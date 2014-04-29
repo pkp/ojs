@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/alm/AlmPlugin.inc.php
  *
- * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -488,9 +488,17 @@ class AlmPlugin extends GenericPlugin {
 	 * @return string JSON response
 	 */
 	function _buildRequiredArticleInfoJson($article) {
+		if ($article->getDatePublished()) {
+			$datePublished = $article->getDatePublished();
+		} else {
+			// Sometimes there is no article getDatePublished, so fallback on the issue's
+			$issueDao =& DAORegistry::getDAO('IssueDAO');  /* @var $issueDao IssueDAO */
+			$issue =& $issueDao->getIssueByArticleId($article->getId(), $article->getJournalId());
+			$datePublished = $issue->getDatePublished();
+		}
 		$response = array(
 			array(
-				'publication_date' => date('c', strtotime($article->getDatePublished())),
+				'publication_date' => date('c', strtotime($datePublished)),
 				'doi' => $article->getPubId('doi'),
 				'title' => $article->getLocalizedTitle(),
 				'sources' => array()

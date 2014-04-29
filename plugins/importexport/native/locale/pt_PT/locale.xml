@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/native/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT locale.
@@ -84,7 +84,7 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.unsupportedRoot">Este plugin não suporta o nodo raíz "{$rootName}". Certifique-se de que o documento está correctamente identificado e tente novamente.</message>
 
 	<message key="plugins.importexport.native.import.error.titleMissing">Título para edição não fornecido.</message>
-	<message key="plugins.importexport.native.import.error.defaultTitle">TÍTULO NÃO FORNECIDO</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">TÍTULO EM FALTA</message>
 	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Identificação "{$identificationType}" desconhecida informada no atributo "identification", do elemento "issue" da edição "{$issueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.invalidBooleanValue">O valor boleano "{$value}" é inválido. Utilize apenas "true" ou "false".</message>
 	<message key="plugins.importexport.native.import.error.invalidDate">A data "{$value}" é inválida.</message>
@@ -92,9 +92,9 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Não foi possivel guardar cópia de "{$originalName}".</message>
 	<message key="plugins.importexport.native.import.error.illegalUrl">URL "{$url}" da edição "{$issueTitle}" ilegal. Importações via Web suportam apenas métodos http, https, ftp, ou ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">O tipo de ficheiro suplementar "{$suppFileType}" é desconhecido.</message>
-	<message key="plugins.importexport.native.import.error.couldNotCopy">O URL "{$url}" não pode ser copiada para um ficheiro local.</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">O URL "{$url}" não pode ser copiado para um ficheiro local.</message>
 	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">O ID público para importar a edição "{$issueTitle}" já se encontra em uso pela edição "{$otherIssueTitle}".</message>
-	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Não foi fornecido im título de secção para a edição "{$issueTitle}". Certifique-se que o documento XML esteja em conformidade com a DTD apropriada.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Não foi fornecido im título de secção para a edição "{$issueTitle}". Certifique-se que o documento XML está em conformidade com a DTD apropriada.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">A secção "{$sectionTitle}" da edição "{$issueTitle}" é compatível com uma revista existente, mas a abreviatura ("{$sectionAbbrev}") é compatível com outra secção.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Não foi fornecido um título de artigo na edição "{$issueTitle}", secção "{$sectionTitle}". Certifique-se de que o documento XML está em conformidade com a DTD apropriada, e que um título foi fornecido para o idioma da revista.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">O idioma ("{$locale}") do título do artigo ("{$articleTitle}"), da edição "{$issueTitle}", não é suportado pela revista.</message>
@@ -120,7 +120,7 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">O tipo de artigo para "{$articleTitle}" na edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">O assunto do artigo "{$articleTitle}" da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">A classificação de assunto do artigo "{$articleTitle}"da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">A cobertura geoespacial do artigo "{$articleTitle}" da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">A cobertura geo-espacial do artigo "{$articleTitle}" da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">A cobertura cronológica do artigo "{$articleTitle}" da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">A cobertura de amostragem do artigo "{$articleTitle}" da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">O patrocinador do artigo "{$articleTitle}" da edição "{$issueTitle}"foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
@@ -137,4 +137,10 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">A fonte do documento suplementar "{$suppFileTitle}" do artigo "{$articleTitle}" da edição "{$issueTitle}" foi fornecido no idioma ("{$locale}"), não suportado por esta revista.</message>
 	<message key="plugins.importexport.native.error.uploadFailed">O envio falhou; certifique-se de que o envio de ficheiros está activado no servidor e que o ficheiro não é maior que o permitido pelo PHP e/ou a configuração do servidor.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Foi fornecida uma afiliação para o autor "{$authorFullName}" do artigo "{$articleTitle}" no número "{$issueTitle}" num local ("{$locale}") que esta revista não suporta.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">O ID público indicado para o galley importado "{$publicId}" está a ser usado por outro galley para o mesmo artigo, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">O ID público indicado para o ficheiro suplementar importado "{$suppFileTitle}" está a ser usado por outro ficheiro suplementar para o mesmo artigo, "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">O ID público indicado para o artigo importado "{$articleTitle}" está a ser usado por outro artigo, "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidPubId">O ficheiro importado contém dados com um inválido {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">O ficheiro importado contém um conjunto de dados com {$ pubIdType} '{$ PubID}' que já existe noutro objecto na base de dados. Por favor, certifique-se de que nunca importa objectos com IDs que já existem na base de dados.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">O ficheiro importado contém um conjunto de dados com um tipo ID '{$ pubIdType}' que nenhum ID-plugin pode manipular. Por favor, instale e / ou active o correspondente ID plugin antes de tentar importar este conjunto de dados.</message>
 </locale>

@@ -3,8 +3,8 @@
 /**
  * @file classes/author/form/submit/AuthorSubmitStep3Form.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorSubmitStep3Form
@@ -77,6 +77,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 						'affiliation' => $authors[$i]->getAffiliation(null),
 						'country' => $authors[$i]->getCountry(),
 						'email' => $authors[$i]->getEmail(),
+						'orcid' => $authors[$i]->getData('orcid'),
 						'url' => $authors[$i]->getUrl(),
 						'competingInterests' => $authors[$i]->getCompetingInterests(null),
 						'biography' => $authors[$i]->getBiography(null)
@@ -203,6 +204,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 				$author->setAffiliation($authors[$i]['affiliation'], null);
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
+				$author->setData('orcid', $authors[$i]['orcid']);
 				$author->setUrl($authors[$i]['url']);
 				if (array_key_exists('competingInterests', $authors[$i])) {
 					$author->setCompetingInterests($authors[$i]['competingInterests'], null);

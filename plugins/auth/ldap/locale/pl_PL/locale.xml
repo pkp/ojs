@@ -2,15 +2,15 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Plik językowy dla pl_PL
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pl_PL" full_name="Polski">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">Wtyczka umożliwia uwierzytelnianie użytkowników za pomocą zewnętrznych serwerów LDAP</message>
 	

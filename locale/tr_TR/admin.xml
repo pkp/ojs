@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/admin.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkiye Türkçesi) locale.
@@ -79,4 +79,20 @@
 	<message key="admin.categories.noneCreated">Herhangi bir kategori oluşturulamadı.</message>
 	<message key="admin.categories.confirmDelete">Bu kategoriyi silmek istediğinize emin misiniz?</message>
 	<message key="admin.categories.nameRequired">Bir kategori adı gerekli.</message>
+	<message key="admin.settings.defaultMetricDescription">Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in severeral contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
+to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
+
+This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Hata: {$filePath} geçici klasörü oluşturamıyor.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Hata: {$tmpFilePath} için {$filePath} geçici dosyası kopyalanamaz</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Hata: {$tmpFilePath} dosyası silinemez</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Uyarı: {$filePath} dosyası kullanıcı istatisikleri dizininde zaten var.</message>
+	<message key="admin.copyAccessLogFileTool.success">Başarı: {$destinationPath} kaynağından {$filePath} hedefine</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Hata: {$tmpDir} geçici klasörü oluşturuşamıyor</message>
 </locale>

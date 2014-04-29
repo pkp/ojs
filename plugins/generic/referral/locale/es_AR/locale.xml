@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/referral/locale/en_US/locale.xml
+  * @file plugins/generic/referral/locale/es_AR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.generic.referral.name">Plugin de Referencias</message>
 	<message key="plugins.generic.referral.description">El plugin de referencias rastrea las URL que hacen referencias externas a los artículos (EJ: cuando un lector sigue un enlace externo al artículo). Permitiendo que los autores mantengan una lista auto-actualizable de los enlaces de referencia al artículo.</message>
 	
@@ -35,4 +35,8 @@
 	<message key="plugins.generic.referral.settings.description">El Plugin de Referencias captura todas las URL que enlacen con artículos publicados en esta revista, por lo que pueden ser chequeados por el autor y ,opcionalmente, publicados. Este formulario permite que el Gestor de la Revista controle como estos enlaces son capturados.</message>
 	<message key="plugins.generic.referral.excusions">Exclusiones</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Introduzca una lista de patrones de expresiones regulares, una por línea, para ser tratadas como exclusiones de la captura de referencias. Esto puede ser utilizado para prevenir que las búsquedas de los motores de búsqueda sobrecarguen las listas de referencias. Para más información sobre expresiones regulares ver <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">el manual</a>.]]></message>
+	<message key="plugins.generic.referral.status.accepted">Publicado</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Está seguro que desea publicar la(s) referencia(s) seleccionada(s)?</message>
+	<message key="plugins.generic.referral.status.declined">Ignorado</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Está seguro que desea ignorar la(s) referencia(s) seleccionada(s)?</message>
 </locale>

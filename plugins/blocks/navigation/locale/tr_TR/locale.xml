@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/navigation/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Turkish) locale.
@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Yönlendirme Bloğu</message>
 	<message key="plugins.block.navigation.description">Bu eklenti yan taraf yönlendirme bağlantılarını sağlar.</message>
 	<message key="plugins.block.navigation.journalContent">DERGİ İÇERİĞİ</message>
+	<message key="plugins.block.navigation.searchScope">Arama Kapsamı</message>
 </locale>

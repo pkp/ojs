@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/referral/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT locale.
@@ -36,4 +36,8 @@
 	<message key="plugins.generic.referral.settings.description">O Plugin Referral captura os URL's que apontam para artigos publicados pela revista de modo a que possa revistos pelo autor e opcionalmente publicados. Este formulário permite ao Editor-Gestor controlar a forma como estes links são capturados.</message>
 	<message key="plugins.generic.referral.excusions">Exclusões</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Insira uma lista de expressões regulares padronizadas, uma por linha, para serem tratadas como exclusões para o histórico do referral. Para mais informações sobre expressões regulares, consulte href="http://ca.php.net/manual/en/ref.pcre.php" <a target="_new"> http://ca.php.net/manual / pt / ref.pcre.php </ a>.]]></message>
+	<message key="plugins.generic.referral.status.accepted">Publicado</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Tem a certeza que pretende publicar o seleccionado refback(s)?</message>
+	<message key="plugins.generic.referral.status.declined">Ignorado</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Tem a certeza que pretende ignorar o seleccionado refback(s)?</message>
 </locale>

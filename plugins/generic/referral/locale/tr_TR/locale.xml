@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/referral/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Turkish) locale.
@@ -36,4 +36,8 @@
 	<message key="plugins.generic.referral.settings.description">The Referral Plugin captures URLs that link to articles published within this journal so that they can be curated by the author and optionally published. This form allows the Journal Manager to control how these links are captured.</message>
 	<message key="plugins.generic.referral.excusions">Hariç Tutma</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Enter a list of regular expression patterns, one per line, to be treated as exclusions for referral logging. This can be used to prevent search engine requests from cluttering the list of referrals. For more information on regular expressions, see <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
+	<message key="plugins.generic.referral.status.accepted">Yayımlanmış</message>
+	<message key="plugins.generic.referral.status.declined">Yok Sayılan</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Seçilmiş RefBack'leri yayımlamak istediğinizden emin misiniz?</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Seçilmiş RefBack'leri gözardı etmek istediğinizden emin misiniz?</message>
 </locale>

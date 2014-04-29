@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -1234,4 +1234,29 @@ Note that if your site administrator has already registered this site with these
 	<message key="user.authorization.sectionAssignment">您正在试图访问不属于您文章栏目中的文章。</message>
 	<message key="user.authorization.invalidCopyditorSubmission">无效的排版编辑提交或没有要求的排版编辑提交！</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">无效的文章栏目编辑提交或没有要求的栏目编辑提交！</message>
+	<message key="common.journal">期刊</message>
+	<message key="submission.permissions">许可</message>
+	<message key="submission.license">许可证</message>
+	<message key="submission.copyright">版权</message>
+	<message key="submission.copyrightHolder">版权所有者</message>
+	<message key="submission.licenseURLValid">请提供一个有效的远程URL（包括 http://）</message>
+	<message key="submission.license.cc.by-nc-nd4">知识共享署名-非商业性使用-禁止演绎 4.0</message>
+	<message key="submission.license.cc.by-nc4">知识共享署名-非商业性使用 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">知识共享署名-非商业性使用-相同方式共享 4.0</message>
+	<message key="submission.license.cc.by-nd4">知识共享署名-禁止演绎 4.0</message>
+	<message key="submission.license.cc.by4">知识共享署名 4.0</message>
+	<message key="submission.license.cc.by-sa4">知识共享署名-相同方式共享 4.0</message>
+	<message key="submission.copyrightStatement">版权所有（c）{$ COPYRIGHTYEAR} {$ copyrightHolder}</message>
+	<message key="user.profile.form.orcidInvalid">您指定的ORCID ID无效。</message>
+	<message key="submission.licenseURL">许可 URL</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0国际许可协议</a>的许可。]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用 4.0国际许可协议</a>的许可。]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0国际许可协议</a>的许可。]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-禁止演绎 4.0国际许可协议</a>的许可。]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0国际许可协议</a>的许可]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />此作品已接受<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名-相同方式共享 4.0国际许可协议</a>的许可]]></message>
+	<message key="submission.copyrightYear">版权年限</message>
+	<message key="user.profile.profileImage">个人照片</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.description"><![CDATA[ORCID iDs只能通过<a href="http://orcid.org/" target="_blank"> ORCID注册</a>的指定。您必须符合ORCID iDs的标准，并且包括URI9（例如：<em>http://orcid.org/0000-0002-1825-0097</em>）]]></message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Turkish) locale.
@@ -16,19 +16,28 @@
 	<message key="plugins.importexport.crossref.displayName">Çapraz Referans XML İhraç Eklentisi</message>
 	<message key="plugins.importexport.crossref.description">Makale üst verilerini çapraz referans XML formatında ihraç et.</message>
 	
-	<message key="plugins.importexport.crossref.export">Veri ihracı</message>
-	<message key="plugins.importexport.crossref.export.issues">Sayı İracı</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">İhraç için bir sayı seçiniz.</message>
-	<message key="plugins.importexport.crossref.export.articles">Makale ihracı</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">İhraç için makale seçiniz.</message>
-	
 	<message key="plugins.importexport.crossref.cliUsage">Kullanım: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">HATA:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">"{$issueId}" özel sayı ID'si ile herhangi bir sayı eşlenmedi.</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">"{$articleId}" özel makale ID'si ile herhangi bir makale eşlenmedi.</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">bu eklentinin kullanımı için lütfen "Genel Belirleyici" eklenti kategorisini kullanınız. DOI eklentisini etkinleştirin, yapılandırın ve orada geçerli bir DOI ön eki belirleyin.</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Kayıtsız makaleleri seçiniz</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Kullanıcı adı</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Lütfen CrossRef'den aldığınız kullanıcı adını giriniz.</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Tüm kayıtsız makaleleri ihraç et</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Kaydı yapanın ismi</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Kaydı yapanın e-postası</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Lütfen kaydı yapanın adını giriniz.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Lütfen kaydı yapanın e-posta adresini giriniz.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Otomatik kaydı kullan</message>
+	<message key="plugins.importexport.crossref.settings.form.description">Lütfen CrossRef ihraç/kayıt eklentisi konfigürasyonunu yapınız:</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">Kayıtılı olan tüm yayımlanmış makaleler (veya DOI atanmamış hiçbiri)</message>
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Lütfen CrossRef ihraç/kayıt eklentisinin ilk kullanımdan önce  <a href="{$settingsUrl}">konfigürasyonunu</a> yapınız.]]></message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">{$param} numaralı makalenin yayın tarihi yok.</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Lütfen CrossRef DOI kaydı için sorumlu kişinin adını ve e-posta adresini giriniz.</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[If you want to register DOIs with CrossRef, please follow the directions on the
+		<a href="http://www.crossref.org" target="_blank">CrossRef homepage</a>
+		to receive a username and password. If you do not have your own username and
+		password you'll still be able to export into the CrossRef XML format
+		but you cannot register your DOIs with CrossRef from within OJS.
+		Please note that the password will be saved as plain text, i.e. not encrypted, due
+		to the CrossRef registration service requirements.]]></message>
 </locale>

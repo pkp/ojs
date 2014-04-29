@@ -2,15 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/usageStats/locale/en_US/locale.xml
+  * plugins/generic/usageStats/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español">
 	<message key="plugins.generic.usageStats.settings.logging">Opciones de acceso al registro</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Crear archivos de registro</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">La activación de esta opción hará que el plugin crear archivos de registro de acceso dentro del directorio de archivos. Estos archivos deben ser utilizados para extraer los datos de las estadísticas de uso. Si no desea crear más archivos de registro de acceso se puede dejar esta opción desactivada y utilizar sus propios archivos de registro del servidor de acceso.</message>

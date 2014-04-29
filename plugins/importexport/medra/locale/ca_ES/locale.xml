@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/medra/locale/en_US/locale.xml
+  * plugins/importexport/medra/locale/ca_ES/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.importexport.medra.displayName">Connector d'exportació/registre mEDRA</message>
 	<message key="plugins.importexport.medra.description">Export issue, article and galley metadata in Onix for DOI (O4DOI) format and register DOIs with the mEDRA registration agency.</message>
 

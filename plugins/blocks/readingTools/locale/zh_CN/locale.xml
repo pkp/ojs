@@ -4,23 +4,23 @@
 <!--
   * plugins/blocks/readingTools/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.block.readingTools.displayName">Reading Tools Block</message>
-	<message key="plugins.block.readingTools.description">This plugin displays a block containing reading tools in the reading tools sidebar.</message>
-	<message key="plugins.block.readingTools.title">Reading tools</message>
-	<message key="plugins.block.readingTools.aboutTheAuthor">About The Author</message>
-	<message key="plugins.block.readingTools.aboutTheAuthors">About The Authors</message>
-	<message key="plugins.block.readingTools.articleTools">Article Tools</message>
-	<message key="plugins.block.readingTools.emailThisArticle">Email this article</message>
-	<message key="plugins.block.readingTools.loginRequired">Login required</message>
-	<message key="plugins.block.readingTools.printThisArticle">Print this article</message>
-	<message key="plugins.block.readingTools.postComment">Post a Comment</message>
+<locale name="zh_CN" full_name="China">
+	<message key="plugins.block.readingTools.displayName">阅读工具单元</message>
+	<message key="plugins.block.readingTools.description">该插件在阅读工具栏中显示阅读工具。</message>
+	<message key="plugins.block.readingTools.title">阅读工具</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">关于作者</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">关于作者</message>
+	<message key="plugins.block.readingTools.articleTools">工具条</message>
+	<message key="plugins.block.readingTools.emailThisArticle">电邮这篇文章</message>
+	<message key="plugins.block.readingTools.loginRequired">需要登入</message>
+	<message key="plugins.block.readingTools.printThisArticle">打印此文章</message>
+	<message key="plugins.block.readingTools.postComment">发表评论</message>
 </locale>

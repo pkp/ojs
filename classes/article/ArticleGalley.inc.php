@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleGalley.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalley
@@ -156,7 +156,14 @@ class ArticleGalley extends ArticleFile {
 	 * @param $journal Object the journal this galley is in
 	 * @return string
 	 */
-	function getBestGalleyId(&$journal) {
+	function getBestGalleyId(&$journal = null) {
+		if (is_null($journal)) {
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
+			$journalDao =& DAORegistry::getDAO('JournalDAO');  /* @var $journalDao JournalDAO */
+			$journalId = $articleDao->getArticleJournalId($this->getArticleId());
+			$journal =& $journalDao->getById($journalId);
+		}
+
 		if ($journal->getSetting('enablePublicGalleyId')) {
 			$publicGalleyId = $this->getPubId('publisher-id');
 			if (!empty($publicGalleyId)) return $publicGalleyId;

@@ -1,8 +1,8 @@
 {**
  * templates/sectionEditor/submission/layout.tpl
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Subtemplate defining the layout editing table.
@@ -179,6 +179,9 @@
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="referenceLinking"}')" class="action">{translate key="submission.layout.referenceLinking"}</a>
 {/if}
+{foreach name=templates from=$templates key=templateId item=template}
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="downloadLayoutTemplate" path=$submission->getId()|to_array:$templateId}" class="action">{$template.title|escape}</a>
+{/foreach}
 </div>
 </div>
 

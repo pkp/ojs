@@ -4,17 +4,17 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pl_PL (Polski) locale.
   *
   * Contributed by Dan Galewsky, University of Texas
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pl_PL" full_name="Polski">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
 	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. This is a site-wide plugin and is enabled in the OJS config file.</message>
 </locale>

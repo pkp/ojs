@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/counter/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -30,5 +30,5 @@
 	<message key="plugins.reports.counter.1a.ytdHtml">YTD HTML</message>
 	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Totaal voor alle tijdschriften</message>
-	<message key="plugins.reports.counter.migrate">Migreer logbestand</message>
+	<message key="plugins.reports.counter.legacyStats">De links hieronder genereren rapporten met de oude COUNTER plugin gegevens. Gebruik de links hierboven om  COUNTER rapporten volgens de nieuwe OJS COUNTER methode te  genereren.</message>
 </locale>

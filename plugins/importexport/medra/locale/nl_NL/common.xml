@@ -4,8 +4,8 @@
 <!--
   * @file plugins/importexport/medra/locale/nl_NL/common.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
@@ -57,4 +57,6 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">De geselecteerde objecten met succes geëxporteerd naar '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">FOUT:</message>
+	<message key="plugins.importexport.common.markRegistered">Markeer als geregistreerd</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Klik op deze knop om geregistreerde objecten te markeren (bv. indien eerder of handmatig geregistreerd)</message>
 </locale>

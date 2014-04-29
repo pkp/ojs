@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/openAIRE/locale/en_US/locale.xml
+  * @file plugins/generic/openAIRE/locale/ca_ES/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OpenAIRE plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.openAIRE.displayName">Connector OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">Aquest connector afegeix l'element projectID a les metadades de l'article i estén la interfície del protocol OAI-PMH segons les Directrius OpenAIRE 1.1, i així facilita que les revistes de l'OJS siguin compatibles amb OpenAIRE.</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>

@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_ES (Español España) locale.
@@ -205,12 +205,6 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Nivel</message>
-	<message key="submission.event.logLevel.info">Información</message>
-	<message key="submission.event.logLevel.notice">Aviso</message>
-	<message key="submission.event.logLevel.warning">Advertencia</message>
-	<message key="submission.event.logLevel.error">Error</message>
-	
 	<message key="submission.event.general.defaultEvent">Evento de envío</message>
 	<message key="submission.event.general.articleSubmitted">Artículo enviado</message>
 	<message key="submission.event.general.issueScheduled">Envío agendado para publicación</message>
@@ -575,7 +569,6 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Repita la contraseña</message>
 	<message key="user.register.selectJournal">Seleccione una revista para registrarse</message>
 	<message key="user.register.noJournals">En este sitio no hay revistas en las que se pueda registrar.</message>
 	<message key="user.register.privacyStatement">Declaración de privacidad</message>
@@ -1011,7 +1004,6 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="log.review.reviewDeclinedByProxy">{$userName} no ha permitido la ronda {$round} de revisión para la presentación del artículo {$articleId} en nombre de {$reviewerName}.</message>
 	<message key="log.editor.decision">Una decisión ({$decision}) de un editor para el artículo {$articleId} fué registrada por {$editorName}.</message>
 	<message key="rt.admin.settings.addComment">Añadir comentario (habilita a los lectores a enviar comentarios, con el Administrador de la Revista capaz de borrarlos).</message>
-	<message key="rt.metadata.pkp.doi">Identificador de Objeto Digital</message>
 	<message key="notification.mailListDescription">Introduce tu dirección de correo electrónico para recibir notificaciones inmediatas de nuevo contenido añadido a la revista.</message>
 	<message key="notification.type.copyeditComment">Un corrector de estilo ha dejado un comentario en "{$param}".</message>
 	<message key="notification.type.editorDecisionComment">Un comentario ha sido dejado como decisión del editor para "{$param}".</message>
@@ -1133,4 +1125,29 @@ Los autores que publican en esta revista están de acuerdo con los siguientes t�
 	<message key="installer.maxFileUploadSize"><![CDATA[Su servidor actualmente permite un tamaño máximo de archivo subido de: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Hay una nueva versión de OJS disponible. Actualmente la versión de tu sistema es: {$currentVersion}. Mientras que la versión mas reciente de OJS es {$latestVersion}. Visita <a href="http://pkp.sfu.ca/js_download" target="_new">esta página</a> para descargar la versión nueva y encontrar instrucciones para actualizar desde la que uses.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Hay una nueva versión de OJS disponible. Actualmente la versión de tu sistema es: {$currentVersion}. Mientras que la versión mas resiente de OJS es {$latestVersion}. Por favor contacte a su administrador de sistema ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificarle acerca de esta nueva versión. Mas información puede encontrarse <a href="http://pkp.sfu.ca/ojs_download" target="_new">aquí</a>.]]></message>
+	<message key="common.journal">Revista</message>
+	<message key="submission.permissions">Permisos</message>
+	<message key="submission.license">Licencia</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Dueño de Copyright</message>
+	<message key="submission.copyrightYear">Año de Copyright</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Por favor introduzca una URL remota válida (include http://).</message>
+	<message key="submission.licenseURL">URL de la Licencia</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="user.profile.profileImage">Imagen de Perfil</message>
+	<message key="user.orcid">ID de ORCID</message>
+	<message key="user.orcid.description"><![CDATA[Los IDs de ORCID solo pueden ser asignador por <a href="http://orcid.org/" target="_blank">el ORCID Registry </a>. Usted puede conformar sus estándares para expresar IDs de ORCID, e incluir la URI completa (ej. <em>http://orcid.org/0000-0002-1825-0097</em>]]></message>
+	<message key="user.profile.form.orcidInvalid">El ID de ORCID especificado es inválido</message>
 </locale>

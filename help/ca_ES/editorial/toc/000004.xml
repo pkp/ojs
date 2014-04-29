@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd"> <!--
   * 000004.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Section Editor's Role
   *
-  * $Id$
   -->
 
 <toc id="editorial/toc/000004" locale="ca_ES" title="Rol d'editor/a de secció" parent_topic="editorial/topic/000004">

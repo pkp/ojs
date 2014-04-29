@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/NativeImportExportPlugin.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeImportExportPlugin
@@ -17,10 +17,26 @@ import('classes.plugins.ImportExportPlugin');
 
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
-define('NATIVE_DTD_URL', 'http://pkp.sfu.ca/ojs/dtds/2.4/native.dtd');
 define('NATIVE_DTD_ID', '-//PKP//OJS Articles and Issues XML//EN');
 
 class NativeImportExportPlugin extends ImportExportPlugin {
+	/**
+	 * Constructor
+	 */
+	function NativeImportExportPlugin() {
+		parent::ImportExportPlugin();
+	}
+
+	/**
+	 * Get the DTD URL for the export XML.
+	 * @return string
+	 */
+	function getDTDUrl() {
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$currentVersion =& $versionDao->getCurrentVersion();
+		return 'http://pkp.sfu.ca/ojs/dtds/' . urlencode($currentVersion->getMajor() . '.' . $currentVersion->getMinor() . '.' . $currentVersion->getRevision()) . '/native.dtd';
+	}
+
 	/**
 	 * Called as a plugin is registered to the registry
 	 * @param $category String Name of category plugin was registered to
@@ -177,7 +193,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportIssue(&$journal, &$issue, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc =& XMLCustomWriter::createDocument('issue', NATIVE_DTD_ID, NATIVE_DTD_URL);
+		$doc =& XMLCustomWriter::createDocument('issue', NATIVE_DTD_ID, $this->getDTDUrl());
 		$issueNode =& NativeExportDom::generateIssueDom($doc, $journal, $issue);
 		XMLCustomWriter::appendChild($doc, $issueNode);
 
@@ -196,7 +212,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportArticle(&$journal, &$issue, &$section, &$article, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc =& XMLCustomWriter::createDocument('article', NATIVE_DTD_ID, NATIVE_DTD_URL);
+		$doc =& XMLCustomWriter::createDocument('article', NATIVE_DTD_ID, $this->getDTDUrl());
 		$articleNode =& NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 		XMLCustomWriter::appendChild($doc, $articleNode);
 
@@ -215,7 +231,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportIssues(&$journal, &$issues, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc =& XMLCustomWriter::createDocument('issues', NATIVE_DTD_ID, NATIVE_DTD_URL);
+		$doc =& XMLCustomWriter::createDocument('issues', NATIVE_DTD_ID, $this->getDTDUrl());
 		$issuesNode =& XMLCustomWriter::createElement($doc, 'issues');
 		XMLCustomWriter::appendChild($doc, $issuesNode);
 
@@ -239,7 +255,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportArticles(&$results, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc =& XMLCustomWriter::createDocument('articles', NATIVE_DTD_ID, NATIVE_DTD_URL);
+		$doc =& XMLCustomWriter::createDocument('articles', NATIVE_DTD_ID, $this->getDTDUrl());
 		$articlesNode =& XMLCustomWriter::createElement($doc, 'articles');
 		XMLCustomWriter::appendChild($doc, $articlesNode);
 

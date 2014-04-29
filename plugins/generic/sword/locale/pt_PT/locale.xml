@@ -4,15 +4,15 @@
 <!--
   * plugins/generic/sword/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pt_PT (Português) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_PT" full_name="Português">
 	<message key="plugins.generic.sword.displayName">Plugin SWORD</message>
 	<message key="plugins.generic.sword.description">Permite aos Editores de Revistas e (opcionalmente) Autores depositar artigos via protocolo SWORD</message>
 	<message key="plugins.generic.sword.enabled">O plugin SWORD foi activado</message>
@@ -50,4 +50,5 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Depósito com Sucesso</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">O(s) item(s) seleccionados foram depositados.</message>
 	<message key="plugins.importexport.sword.depositFailed">Depósito Falhou</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Permitir Directores de Revista e (opcionalmente) Autores depositar artigos através do protocolo SWORD. Note-se que este plugin requer a extensão Zip, que actualmente não está instalado no sistema.</message>
 </locale>

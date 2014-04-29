@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/counter/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Turkish) locale.
@@ -15,7 +15,6 @@
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.reports.counter.description"><![CDATA[Sayaç Eklentisi, site aktivitesini <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> uyumlu olarak raporlamak ve kayıt etmek için kullanılır.]]></message>
 	<message key="plugins.reports.counter">SAYAÇ İstatistikleri</message>
-	<message key="plugins.reports.counter.migrate">Günlük Dosyasını Göç Ettir</message>
 	<message key="plugins.reports.counter.1a.title">Dergi Raporu 1 (R2): Aylık Tam Metin Makale İstekleri</message>
 	<message key="plugins.reports.counter.1a.title1">Dergi Raporu 1 (R2)</message>
 	<message key="plugins.reports.counter.1a.title2">Aylık Başarılı Tam Metin Makale İstekleri Sayısı (Yıl {$year})</message>
@@ -28,4 +27,5 @@
 	<message key="plugins.reports.counter.1a.ytdHtml">Bu Güne Kadar Yıllık HTML</message>
 	<message key="plugins.reports.counter.1a.ytdPdf">Bu Güne Kadar Yıllık PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Tüm dergiler için toplam</message>
+	<message key="plugins.reports.counter.legacyStats">The links below generate reports using the old COUNTER plugin data. If you want to generate COUNTER reports using the new OJS COUNTER metric type, use the links above.</message>
 </locale>

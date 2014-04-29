@@ -7,15 +7,15 @@
   * Translated to sv_SE per@funke.com 2010-03-15
   *
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in en_US.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.citationFormats.abnt.displayName">ABNT citationsformatstillägg (the Brazilian Association of Technical Standards, Associação Brasileira de Normas Técnicas)</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Det här tillägget implementerar ABNT citationsformat. Om det finns problem med formatet kontrollera bugrapport på adressen http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=4645</message>

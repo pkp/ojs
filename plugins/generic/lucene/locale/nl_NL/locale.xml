@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/lucene/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS solr/lucene search plugin localization strings
@@ -53,7 +53,51 @@
 <li>Gebruik ronde haakjes voor het construeren van  complex vragen, bv. <em>archive ((journal AND conference) NOT theses)</em></li>
 </ul>]]></message>
 	
-	<message key="plugins.generic.lucene.error.searchServiceOffline">De OJS zoek-service is momenteel offline. De technische beheerder van dit tijdschrift is op de hoogte gesteld van dit probleem.</message>
-	<message key="plugins.generic.lucene.error.coreNotFound">De gevraagde core '{$core}' is niet te vinden op de solr server. Is die online?</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index met {$numDocs} documenten online.</message>
+	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr server instellingen</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">Alternatieve spellingssuggesties (toon alternatieve zoektermen)</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoost">Aangepaste waardering</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Kies een geldige aangepaste waardering</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.never">Niet laten zien</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.low">Waardeer lager</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normaal</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.high">Waardeer hoger</message>
+	<message key="plugins.generic.lucene.faceting.displayName">Lucene Facting</message>
+	<message key="plugins.generic.lucene.faceting.description">Faceting block plugin voor Lucene</message>
+	<message key="plugins.generic.lucene.faceting.title">verfijn uw zoekopdracht</message>
+	<message key="plugins.generic.lucene.faceting.discipline">Discipline</message>
+	<message key="plugins.generic.lucene.faceting.subject">Sleutelwoord</message>
+	<message key="plugins.generic.lucene.faceting.type">Methode/benadering</message>
+	<message key="plugins.generic.lucene.faceting.coverage">Dekking</message>
+	<message key="plugins.generic.lucene.faceting.journalTitle">Tijdschrift</message>
+	<message key="plugins.generic.lucene.faceting.authors">Auteur</message>
+	<message key="plugins.generic.lucene.faceting.publicationDate">Publicatiedatum</message>
+	<message key="plugins.generic.lucene.settings.featureDescription">De Lucene plugin levert verschillende optionele zoekmogelijkheden. De meesten daarvan zijn standaard ingeschakeld maar kunnen uitgeschakeld of bijgesteld worden.</message>
+	<message key="plugins.generic.lucene.settings.highlighting">Uitlichten (toon een korte samenvatting van de inhoud van een artikel dat de gevraagde sleutelwoorden bevat)</message>
+	<message key="plugins.generic.lucene.settings.internalError">Ongeldige selectie</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">Pull indexing (dit is een geavanceerde optie, zie het README bestand voor meer informatie)</message>
+	<message key="plugins.generic.lucene.settings.searchFeatures">Zoek-configuratie</message>
+	<message key="plugins.generic.lucene.settings.simdocs">Meer-als-dit (toon een link "vergelijkbare documenten" bij ieder zoekresultaat)</message>
+	<message key="plugins.generic.lucene.message.webServiceError">De Lucene web service gaf een foutmelding.</message>
+	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} artikelen gemarkeerd voor bijwerken</message>
+	<message key="plugins.generic.lucene.results.didYouMean">Bedoelde u</message>
+	<message key="plugins.generic.lucene.results.similarDocuments">vergelijkbare documenten</message>
+	<message key="plugins.generic.lucene.settings.autosuggest">Auto-suggest (toon een dynamisch menu met zoekterm suggesties tijdens het invoeren van een zoekopdracht)</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">Controleer termen op resultaat</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">Gebruik algemeen woordenboek</message>
+	<message key="plugins.generic.lucene.settings.customRanking">Aangepaste weging (geef aangepast gewicht per tijdschrift sectie )</message>
+	<message key="plugins.generic.lucene.settings.faceting">Facetten (toon additionele filters om uw zoekopdracht te verfijnen)</message>
+	<message key="plugins.generic.lucene.message.coreNotFound">De opgevraagde core '{$core}' is niet aangetroffen op de Solr server. Is die online?</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">Er is een fout opgetreden bij het indexeren: {$numProcessed} verwerkt uit een batch van {$batchCount} ({$numDeleted} verwijderde documenten in deze batch).</message>
+	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Pull indexing is niet ingeschakeld. Schakel het in in de Lucene plug-in instellingen.</message>
+	<message key="plugins.generic.lucene.message.searchServiceOffline">De OJS zoekfunctie is momenteel helaas niet beschikbaar.</message>
+	<message key="plugins.generic.lucene.message.techAdminInformed">De technisch beheerder van dit tijdschrift is op de hoogte gesteld van het probleem.</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">U kunt specifieke facet-categorieën kiezen (de corresponderende metadata moet geselecteerd zijn voor indexeren in de tijdschriftinstellingen, stap 3.4)</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[<strong>Vink de termen voor resultaten aan</strong>: Alleen termen suggereren die zoekresultaten opleveren. Suggesties zullen
+		gecontroleerd worden tegen het huidige tijdschrift en termen die al in andere zoekvelden ingevoerd zijn.<br />
+		<strong>Gebruik algemeen woordenboek</strong>: Dit is sneller, vraagt minder resources en werkt beter voor
+		grote installaties. Suggesties kunne irrelevant termen bevatten, bv. uit andere tijdschriften of termen die geen zoekresultaten opleveren.]]></message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">De Lucene/Solr zoek plugin maakt het mogelijk het relatieve gewicht van artikelen in een resultaatlijst bij te stellen.
+		Het instellen van het gewicht plaatst de artikelen niet boven of onder alle artikelen maar ze komen hoger of lager dan ze anders
+		zouden staan. Door deze optie op '"nooit tonen" te zetten worden artikelen uit deze sectie weggelaten uit zoekresultaten.</message>
 </locale>

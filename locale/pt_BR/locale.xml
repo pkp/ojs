@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português do Brasil) locale.
@@ -1107,4 +1107,13 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="site.upgradeAvailable.manager"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Entre em contato com o Administrador do Sistema ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificá-lo deste lançamento. Para maiores informações, acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a>.]]></message>
 	<message key="common.journal">Periódico</message>
 	<message key="user.profile.profileImage">Imagem de perfil</message>
+	<message key="submission.permissions">Permissões</message>
+	<message key="submission.license">Licensa</message>
+	<message key="submission.copyright">Direitos autorais</message>
+	<message key="submission.copyrightHolder">Detentor dos direitos autorais</message>
+	<message key="submission.copyrightYear">Ano dos direitos autorais</message>
+	<message key="submission.copyrightStatement">Direitos autorais {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Informe uma URL válida  (inclua o http://).</message>
+	<message key="submission.licenseURL">URL da licensa</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
 </locale>

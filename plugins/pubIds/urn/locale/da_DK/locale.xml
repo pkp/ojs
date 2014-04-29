@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/urn/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * URN plugin localization strings
@@ -76,4 +76,9 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">The check number is missing.</message>
 
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">nummer</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">artikel</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">satsskib</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">supplerende filer</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Hvad du ser er en forhåndsvisning af URN'en som måske er ufuldstændig. En URN er endnu ikke genereret. Ved at publicere nummeret og se den offentliggjorte  {$pubObjectType} side genereres der automatisk en unik URN for denne  {$pubObjectType}.</message>
 </locale>

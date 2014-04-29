@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/.../classes/form/DOIExportSettingsForm.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOIExportSettingsForm
@@ -66,14 +66,6 @@ class DOIExportSettingsForm extends Form {
 	//
 	// Implement template methods from Form
 	//
-	/**
-	 * @see Form::getData()
-	 */
-	function getData($key) {
-		$value = parent::getData($key);
-		return $value;
-	}
-
 	/**
 	 * @see Form::initData()
 	 */

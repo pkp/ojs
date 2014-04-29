@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/oaiMetadataFormats/rfc1807/locale/en_US/locale.xml
+  * @file plugins/oaiMetadataFormats/rfc1807/locale/es_AR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.OAIMetadata.rfc1807.displayName">Formato de Metadatos RFC1807</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">Estructura los metadatos de forma que sean consistentes con el formato RFC1807.</message>
 </locale>

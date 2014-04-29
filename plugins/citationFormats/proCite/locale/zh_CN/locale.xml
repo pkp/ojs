@@ -4,8 +4,8 @@
 <!--
   * plugins/citationFormats/proCite/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for this citation plugin in en_US.
@@ -13,7 +13,7 @@
   -->
  
 <locale name="zh_CN" full_name="China">
-	<message key="plugins.citationFormats.proCite.displayName">ProCite引文格式插件(ProCite citation format plugin</message>
-	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite - RIS format (Macintosh &amp; Windows)</message>
-	<message key="plugins.citationFormats.proCite.description">本插件实现ProCite格式引文(This plugin implements the ProCite citation format).</message>
+	<message key="plugins.citationFormats.proCite.displayName">ProCite引文格式插件</message>
+	<message key="plugins.citationFormats.proCite.citationFormatName"><![CDATA[ProCite - RIS format (Macintosh & Windows)]]></message>
+	<message key="plugins.citationFormats.proCite.description">本插件实行ProCite引用格式。</message>
 </locale>

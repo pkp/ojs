@@ -3,8 +3,8 @@
 /**
  * @file pages/sectionEditor/SubmissionEditHandler.inc.php
  *
- * Copyright (c) 2013 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionEditHandler
@@ -320,6 +320,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
+		$templateMgr->assign('templates', $journal->getSetting('templates'));
 
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
@@ -2550,6 +2551,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if ($publishedArticle) {
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
+				if (!$publishedArticle->getDatePublished() && $issue->getPublished()) {
+					$publishedArticle->setDatePublished(Core::getCurrentDate());
+				}
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
 				// Re-index the published article metadata.
@@ -2598,7 +2602,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		if ($issue && $issue->getPublished()) {
 			$submission->setStatus(STATUS_PUBLISHED);
-			$submission->setDatePublished(Core::getCurrentDate());  // If the issue is published we set the pub date
 			// delete article tombstone
 			$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
 			$tombstoneDao->deleteByDataObjectId($submission->getId());
@@ -2742,6 +2745,27 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$request->redirect(null, null, 'submission', array($articleId));
 		}
+	}
+
+	/**
+	 * Download a layout template.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function downloadLayoutTemplate($args, &$request) {
+		$articleId = (int) array_shift($args);
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+
+		$journal =& $request->getJournal();
+		$templates = $journal->getSetting('templates');
+		import('classes.file.JournalFileManager');
+		$journalFileManager = new JournalFileManager($journal);
+		$templateId = (int) array_shift($args);
+		if ($templateId >= count($templates) || $templateId < 0) $request->redirect(null, 'index');
+		$template =& $templates[$templateId];
+
+		$filename = "template-$templateId." . $journalFileManager->parseFileExtension($template['originalFilename']);
+		$journalFileManager->downloadFile($filename, $template['fileType']);
 	}
 }
 

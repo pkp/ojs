@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/navigation/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português) locale.
@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Bloco Navegação</message>
 	<message key="plugins.block.navigation.description">Este plugin oferece links de navegação na barra lateral.</message>
 	<message key="plugins.block.navigation.journalContent">Conteúdo da Revista</message>
+	<message key="plugins.block.navigation.searchScope">Pesquisa SCOPE</message>
 </locale>

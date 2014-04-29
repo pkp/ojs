@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português) locale.
@@ -1038,4 +1038,93 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="article.pdf.download">Transferir este ficheiro PDF</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>O ficheiro PDF seleccionado deveria ser carregado no se browser como um plugin de leitura de PDF previamente instalado (por exemplo, uma versão recente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Em alternativa, pode transferir o ficheiro PDF directamente para o seu computador, onde pode ser aberto com um leitor PDF. Para transferir o PDF, clique sobre o link em baixo.</p> <p>Se pretende obter mais informação sobre como imprimir, guardar e guardar PDF's, Highwire Press fornece uma útil <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions sobre PDF's</a>.</p>]]></message>
 	<message key="payment.authorFees">Taxas de Autor</message>
+	<message key="common.journal">Revista</message>
+	<message key="navigation.categories">Categorias</message>
+	<message key="navigation.categories.browse">Localizar</message>
+	<message key="submission.permissions">Permissões</message>
+	<message key="submission.license">Licença</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Proprietário Copyright</message>
+	<message key="submission.copyrightYear">Ano Copyright</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Por favor indique um URL remoto válido (include http://).</message>
+	<message key="submission.licenseURL">Licença URL</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="user.profile.profileImage">Imagem Perfil</message>
+	<message key="user.orcid">ID ORCID</message>
+	<message key="user.orcid.description"><![CDATA[ORCID iDs can only be assigned by <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. You must conform to their standards for expressing ORCID iDs, and include the full URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="user.profile.form.orcidInvalid">O ID ORCID indicado é inválido.</message>
+	<message key="issue.fullIssue">Número Completo</message>
+	<message key="issue.nonpdf.title">Download Número</message>
+	<message key="issue.viewIssue">Ver Número</message>
+	<message key="issue.viewIssueDescription">Ver ou download o número completo</message>
+	<message key="plugins.categories.pubIds">Identificadores Públicos de Plugins</message>
+	<message key="plugins.categories.pubIds.description">Estes plugins implementam o suporte ao identificador público.</message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<li>Highlighted items indicate action is required by an editor, labelled as follows:
+		<ul>
+			<li class="highlightCopyediting">An action is required in the copyediting stage</li>
+			<li class="highlightLayoutEditing">An action is required in the layout editing stage</li>
+			<li class="higlightProofreading">An action is required in the proofreading stage</li>
+		</ul>
+	</li>
+</ol>]]></message>
+	<message key="site.noJournals">Não existem revistas.</message>
+	<message key="gifts.buyer">De</message>
+	<message key="gifts.buyerDescription">Quem oferece o donativo?</message>
+	<message key="gifts.recipient">Para</message>
+	<message key="gifts.recipientDescription">Para quem é o donativo?</message>
+	<message key="gifts.thankYou">Obrigado</message>
+	<message key="gifts.thankYouMessage">A oferta do seu donativo foi concluída. Receberá uma cópia da prenda através de e-mail logo que o pagamento seja processado.</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Subscrição de Donativo</message>
+	<message key="gifts.subscriptionFormIntroduction">Por favor preencha o formulário abaixo. A informação sobre o contacto, assim como a nota sobre o donativo, será usada para enviar ao destinatário e informá-lo que sobre o novo donativo subscrito (receberá também uma cópia deste e-mail).</message>
+	<message key="gifts.details">Detalhes Donativo</message>
+	<message key="gifts.detailsDescription">Por favor escolha o donativo em baixo e inclua uma mensagem personalisada que será enviada ao destinatário (receberá também uma cópia deste e-mail).</message>
+	<message key="gifts.gift">Donativo</message>
+	<message key="gifts.noteTitle">Título</message>
+	<message key="gifts.note">Nota Donativo</message>
+	<message key="gifts.noteTitleRequired">Por favor indique um título para a sua mensagem pernonalisada.</message>
+	<message key="gifts.noteRequired">Por favor indique uma mensagem pernonalisada.</message>
+	<message key="gifts.localeRequired">Por favor seleccione o idioma para a sua mensagem pernonalisada.</message>
+	<message key="gifts.myGifts">Meus Donativos</message>
+	<message key="gifts.manageMyGifts">Gerir Meus Donativos</message>
+	<message key="gifts.redeemGift">Resgatar Donativo</message>
+	<message key="gifts.status.notRedeemed">Disponível</message>
+	<message key="gifts.status.redeemed">Resgatadas</message>
+	<message key="gifts.status.redeemGift">Resgatar Donativo</message>
+	<message key="gifts.subscriptions">Subscrições</message>
+	<message key="gifts.subscriptionsDescription">A subscrição de donativo resgatado substituirá a sua actual subscrição (se possuir alguma). As subscrições têm início na data de resgate e serão válidas durante o período do tipo de subscrição.</message>
+	<message key="gifts.purchaseGiftSubscription">Fazer a subscrição de donativo</message>
+	<message key="gifts.giftSubscriptionsAvailable">As subscrições de donativos também estão disponíveis. As subscrições de donativos podem ser feitas em qualquer altura pelo destinatário e são uma excelente forma de apoiar esta revista.</message>
+	<message key="gifts.noSubscriptions">Nenhuma subscrição donativos</message>
+	<message key="gifts.giftRedeemed">O donativo foi resgatado com sucesso.</message>
+	<message key="gifts.noGiftToRedeem">O donativo não está disponível para resgate.</message>
+	<message key="gifts.giftAlreadyRedeemed">Este donativo já foi resgatado.</message>
+	<message key="gifts.giftNotValid">O donativo não é válido e não pode ser resgatado.</message>
+	<message key="gifts.subscriptionTypeNotValid">O tipo de subscrição para este donativo não é válida. Por favor contacte o gestor de assinaturas.</message>
+	<message key="gifts.subscriptionNonExpiring">O donativo não foi resgatado uma vez que possui uma assinatura vitalícia com esta revista.</message>
+	<message key="payment.loginRequired.forIssue">Subscrição ou compra de número necessários para acedero ao artigo. Para verificar a subscrição, aceda a compra anterior, ou compre número, faça login na revista.</message>
+	<message key="payment.type.purchaseIssue">Taxa Compra Número</message>
+	<message key="payment.type.gift">Donativo</message>
+	<message key="payment.type.gift.subscription">Subscrição</message>
+	<message key="installer.allowFileUploads"><![CDATA[O servidor actualmente permite uploads de ficheiros: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[O servidor actualmente permite o upload máximo de ficheiros com o tamanho de: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[Está disponível uma nova versão do OJS! Actualmente usa a versão do OJS {$currentVersion}. A versão mais recente do OJS {$latestVersion}. Por favor visite <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> para fazer download da versão mais recente e encontre as instruções para a actualização]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Está disponível uma nova versão do OJS! Actualmente usa a versão do OJS {$currentVersion}. A versão mais recente do OJS {$latestVersion}. Por favor contacte o Administrador ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificá-lo da última versão. Pode encontrar mais informação <a href="http://pkp.sfu.ca/ojs_download" target="_new">aqui</a>.]]></message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Acesso recusado! Não tem direitos de autor sobre este artigo.</message>
+	<message key="user.authorization.noJournal">Nenhuma revista em contexto!</message>
+	<message key="user.authorization.sectionAssignment">Está a tentar aceder a um artigo que não pertence à secção.</message>
+	<message key="user.authorization.invalidCopyditorSubmission">Submissão de cópia de editor inválida ou nenhuma de cópia de editor solicitada!</message>
+	<message key="user.authorization.invalidSectionEditorSubmission">Submissão de secção de editor inválida ou nenhuma de secção editor solicitada!</message>
 </locale>

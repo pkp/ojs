@@ -4,15 +4,15 @@
 <!--
   * plugins/oaiMetadataFormats/rfc1807/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the zh_CN (China) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
-	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Metadata Format</message>
-	<message key="plugins.OAIMetadata.rfc1807.description">Structures metadata in a way that is consistent with the RFC1807 format.</message>
+<locale name="zh_CN" full_name="China">
+	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 元数据格式</message>
+	<message key="plugins.OAIMetadata.rfc1807.description">Structures 元数据在某种程度上和RFC1807格式一致。</message>
 </locale>

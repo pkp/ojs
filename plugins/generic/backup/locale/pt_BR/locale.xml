@@ -4,14 +4,15 @@
 <!--
   * plugins/generic/backup/locale.xml
   *
-  * Copyright (c) 2000-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.backup.name">Cópia de segurança</message>
 	<message key="plugins.generic.backup.description">Este plugin gera uma cópia de segurança da instalaçaõ.</message>
 

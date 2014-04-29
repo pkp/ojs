@@ -4,15 +4,15 @@
 <!--
   * plugins/blocks/authorBios/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the nl_NL (Nederlands) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.block.authorBios.displayName">Auteursbiografie blok</message>
 	<message key="plugins.block.authorBios.description">Deze plugin toont een blok in de leesgereedschappen sidebar met de biografie van de auteurs.</message>
 	<message key="plugins.block.authorBios.title">Over de auteurs</message>

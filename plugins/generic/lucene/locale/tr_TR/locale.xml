@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/lucene/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS solr/lucene search plugin localization strings
@@ -50,7 +50,54 @@
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>
-	<message key="plugins.generic.lucene.error.searchServiceOffline">Unfortunately the OJS search service is currently offline. The technical administrator of this journal has been informed about the problem.</message>
-	<message key="plugins.generic.lucene.error.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
+	<message key="plugins.generic.lucene.faceting.title">aramanızı daraltın</message>
+	<message key="plugins.generic.lucene.faceting.discipline">Disiplin</message>
+	<message key="plugins.generic.lucene.faceting.subject">Anahtar Kelime</message>
+	<message key="plugins.generic.lucene.faceting.coverage">Kapsam</message>
+	<message key="plugins.generic.lucene.faceting.journalTitle">Dergi</message>
+	<message key="plugins.generic.lucene.faceting.authors">Yazar</message>
+	<message key="plugins.generic.lucene.faceting.publicationDate">Yayın Tarihi</message>
+	<message key="plugins.generic.lucene.faceting.type">Yöntem/Yaklaşım</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">Sonuç için terimleri kontrol et</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">Global sözlük kullan</message>
+	<message key="plugins.generic.lucene.settings.internalError">Hatalı seçim.</message>
+	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr sunucu ayarları</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">Alternatif heceleme önerileri (alternatif arama terimleri görüntüle)</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.never">Asla Gösterme</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normal</message>
+	<message key="plugins.generic.lucene.message.searchServiceOffline">Maalesef OJS arama servisi geçici olarak çevrimdışı.</message>
+	<message key="plugins.generic.lucene.message.webServiceError">Lucene web servisi bir hata verdi.</message>
+	<message key="plugins.generic.lucene.results.didYouMean">Bunumu demek istediniz</message>
+	<message key="plugins.generic.lucene.results.similarDocuments">basit dokümanlar</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Lütfen geçerli bir sıralama ağırlığı seçiniz.</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.low">Düşük Sıralama</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.high">Yüksek Sıralama</message>
+	<message key="plugins.generic.lucene.settings.searchFeatures">Arama Özelliği Ayarı</message>
+	<message key="plugins.generic.lucene.faceting.displayName">Lucene Görünüşü</message>
+	<message key="plugins.generic.lucene.faceting.description">Lucene İçin Görünüş Blok Eklentisi</message>
+	<message key="plugins.generic.lucene.message.techAdminInformed">Bu derginin teknik yöneticisi söz konusu problem  hakkında bilgilendirildi.</message>
+	<message key="plugins.generic.lucene.settings.featureDescription">Lucene eklentisi çeşitli arama özelliği seçenekleri sunar. Bu özelliklerden çoğu varsayılan olarak ayarlanmıştır, fakat kapatılabilir veya ayarlanabilir.</message>
+	<message key="plugins.generic.lucene.settings.highlighting">Vurgulama (Sorgulanan anahtar kelimeleri içeren her makale metninde kısa bir alıntı görüntüler)</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoost">Özelleştirilmiş Sıralama Ağırlığı</message>
+	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} makale güncelleme için işaretlendi</message>
+	<message key="plugins.generic.lucene.settings.customRanking">Özelleştirilmiş Sıralama (her dergi bölümü için bireysel sıralama ağırlığı düzenle)</message>
+	<message key="plugins.generic.lucene.settings.faceting">Görünüm (aramanızı daraltmak için ek filitreler ile bir yönlendirme kutusu görüntüle)</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">İndeksleme sırasında bir hata oluştu :Processed {$numProcessed} out of a batch of {$batchCount} ({$numDeleted} deleted documents in this batch).</message>
+	<message key="plugins.generic.lucene.message.coreNotFound">İstenen '{$core}' adlı çekirdek Solr sunucuda bulunamadı. Çevrim içi mi?</message>
+	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Pull indeksleme etkin değil. Lütfen bunu Lucene eklenti ayarları içinde etkinleştirin.</message>
+	<message key="plugins.generic.lucene.settings.autosuggest">Otomatik Öneri (bir arama sorgusu girerken arama terimi önerileri ile açılan bir dinamik menü göster)</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">Özel görüntü kategorisi seçebilirsiniz (dergi ayar kısmınının 3.4'üncü adımında indekleme için uygun üst veri seçilmiş olmalıdır)</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">Pull indeksleme (bu gelişmiş bir arama özelliğidir, daha fazla bilgi için BENİOKU dosyasına bakınız)</message>
+	<message key="plugins.generic.lucene.settings.simdocs">Daha-Bu-Gibi (her arama sonucu için "basit dokümanlar" linki görüntüle)</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[<strong>Check terms for results</strong>: Only suggest terms that will actually produce search results. Suggestions will be
+		cross-checked against the current journal and terms already entered into other search fields.<br />
+		<strong>Use global dictionary</strong>: This is faster, consumes less resources on the search server and therefore scales better
+		for large installations. Suggestions may contain irrelevant terms, though, e.g. from other journals or terms that produce no
+		search results.]]></message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">The Lucene/Solr search plugin allows you to adjust the relative weight of articles in the result list
+		of a search query. Setting the ranking weight higher (or lower) does not place articles in this
+		section above (or below) all other articles. But they will rank better (or worse) than they would
+		without the adjustment made. Setting this option to "never show" will completely exclude articles
+		in this section from search results.</message>
 </locale>

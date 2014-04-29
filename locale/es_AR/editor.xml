@@ -4,8 +4,8 @@
 <!--
   * ojs2-devel/locale/es_AR/editor.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español (Argentina)) locale.
@@ -57,7 +57,6 @@
 	<message key="editor.issues.accessStatus">Estado de acceso</message>
 	<message key="editor.issues.accessDate">Fecha de acceso libre</message>
 	<message key="editor.issues.invalidAccessDate">La fecha de acceso no es válida.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Ya existe identificación pública del número.</message>
 	<message key="editor.issues.coverPage">Imagen de cubierta</message>
 	<message key="editor.issues.coverPageInstructions">(Formatos permitidos: .gif, .jpg, o .png )</message>
 	<message key="editor.issues.uploaded">Subido</message>
@@ -220,4 +219,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">La identificación para la versión galerdad ya existe.</message>
 	<message key="editor.issues.backToIssueGalleys">De vuelta a versiones galeradas.</message>
 	<message key="editor.issues.confirmDeleteGalley">¿Está seguro que quiere borrar esta version galerada?</message>
+	<message key="editor.notifyUsers.allMailingList">Incluir todos los emails de la lista de correos ({$count} emails)</message>
 </locale>

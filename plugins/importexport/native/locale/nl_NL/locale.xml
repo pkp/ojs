@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/native/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -130,4 +130,7 @@ De follgende formaten worden geaccepteerd:
 	<message key="plugins.importexport.native.import.error.duplicatePubId">Uw importbestand bevat een dataset met {$pubIdType} '{$pubId}' dat al bestaat voor een ander object in uw database. Importeer geen objecten met een ID dat al bestaat in de database.</message>
 	<message key="plugins.importexport.native.import.error.unknownPubId">Uw importbestand bevat een dataset met ID-type '{$pubIdType}', dat door geen van de ID plugins verwerkt kan worden. Installeer en/of activeer de juiste ID plugin voor het importeren van deze dataset.</message>
 	<message key="plugins.importexport.native.import.error.invalidPubId">Uw importbestand bevat een dataset met een ongeldig {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">De publieke ID die is opgegeven voor de te importeren proefdruk "{$publicId}" is al in gebruik bij een andere proefdruk  van hetzelfde artikel, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">De publieke ID die is opgegeven voor het te importeren aanvullende bestand "{$suppFileTitle}" is al in gebruik bij een ander aanvullend bestand van hetzelfde artikel, "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">Het opgegeven publieke ID voor het arikel "{$articleTitle}" is al in gebruik bij een ander artikel, "{$otherArticleTitle}".</message>
 </locale>

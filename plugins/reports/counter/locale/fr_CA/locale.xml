@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/counter/locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA locale.
@@ -29,4 +29,5 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">Cumulatif annuel - PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total pour toutes les revues</message>
 	<message key="plugins.reports.counter.migrate">Migrer le fichier de journalisation</message>
+	<message key="plugins.reports.counter.legacyStats">Les liens ci-dessous créent des rapports utilisant les données de l'ancien plugin COUNTER. Si vous désirez produire des rapports COUNTER à l'aide du nouvel indicateur COUNTER d'OJS, veuillez utiliser les liens ci-dessus.</message>
 </locale>

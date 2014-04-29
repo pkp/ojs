@@ -3,8 +3,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -1049,4 +1049,27 @@
   <message key="site.upgradeAvailable.manager"><![CDATA[Existe una nueva versión de OJS! La versión actual de este OJS es {$currentVersion}. La versión más reciente de OJS es {$latestVersion}. Por favor contacta con tu administrador/a del sitio ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificar sobre la nueva versión. Puedes obtener más información <a href="http://pkp.sfu.ca/ojs_download" target="_new">aquí</a>.]]></message>
 	<message key="common.journal">Revista</message>
 	<message key="user.profile.profileImage">Imagen del perfil</message>
+	<message key="submission.permissions">Permisos</message>
+	<message key="submission.license">Licencia</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Titular del Copyright</message>
+	<message key="submission.copyrightYear">Año del Copyright</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Por favor provea una URL remota válida (incluya http://)</message>
+	<message key="submission.licenseURL">URL de la Licencia</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Atribución-NoComercial-SinDerivados 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Atribución-NoComercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Atribución-NoComercial-CompartirIgual 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Atribución-SinDerivados 4.0</message>
+	<message key="submission.license.cc.by4">CC Atribución 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Atribución-ComartirIgual 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este trabajo esta licenciado bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Internacional Creative Commons Atribución-NoComercial-SinDerivados 4.0</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este trabajo está licenciado bajo una  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Internacional Creative Commons Atribución-NoComercial 4.0</a>.]]></message>
+	<message key="user.orcid">iD de ORCID</message>
+	<message key="user.profile.form.orcidInvalid">El ID de ORCID especificado es inválido</message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Este trabajo está licenciado bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Internacional Creative Commons 4.0 Atribución-NoComercial-CompartirIgual </a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Este trabajo está licenciado bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Internacional Creative Commons 4.0 Atribución-SinDerivados </a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este trabajo está licenciado bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Internacional Creative Commons 4.0 Atribución </a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Este trabajo está licenciado bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Internacional Creative Commons 4.0 Atribución-CompartirIgual </a>.]]></message>
+	<message key="user.orcid.description"><![CDATA[Los iDs de ORCID sólo pueden ser asignados por <a href="http://orcid.org/" target="_blank">el Registro ORCID </a>. Usted debe ser compatible con sus estándares para expresar iDs ORCID e incluir la URI completa (por ej.. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 </locale> 

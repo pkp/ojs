@@ -2,10 +2,10 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * lcoale/de_DE/locale.xml
+  * locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
@@ -40,6 +40,27 @@
 	<message key="submission.reviewForm">Begutachtungsformular</message>
 	<message key="submission.reviewFormResponse">Antwort zum Begutachtungsformular</message>
 
+	<!-- Permissions -->
+	<message key="submission.permissions">Rechte</message>
+	<message key="submission.license">Lizenz</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Copyright-Inhaber/in</message>
+	<message key="submission.copyrightYear">Copyright-Jahr</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Bitte geben Sie einen gültigen URL (außerhalb der Zeitschrift) an (inklusive http://).</message>
+	<message key="submission.licenseURL">Lizenz-URL</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Namensnennung - Nicht kommerziell 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Namensnennung - Keine Bearbeitungen 4.0</message>
+	<message key="submission.license.cc.by4">CC Namensnennung 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Namensnennung - Weitergabe unter gleichen Bedingungen 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dieses Werk steht unter der a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell - Keine Bearbeitungen 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Lizenz Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Lizenz Creative Commons Namensnennung - Keine Bearbeitungen 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Lizenz Creative Commons Namensnennung 4.0 International</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative-Commons-Lizenz" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk steht unter der <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Lizenz Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International</a>.]]></message>
 
 	<message key="reviewer.article.enterReviewForm">Klicken Sie auf das Symbol, um das Begutachtungsformular auszufüllen.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Bitte füllen Sie die benötigten Felder aus.</message>
@@ -212,6 +233,9 @@
 	<message key="user.noRoles.submitArticleRegClosed">Einen Vorschlag einreichen: Registrierung als Autor/in ist momentan ausgeschaltet.</message>
 	<message key="user.noRoles.regReviewer">Als Gutachter/in registrieren</message>
 	<message key="user.noRoles.regReviewerClosed">Als Gutachter/in registrieren: Die Registrierung als Gutachter/in ist momentan ausgeschaltet..</message>
+<message key="user.orcid">ORCID-iD</message>
+	<message key="user.orcid.description"><![CDATA[ORCID-iDs können nur durch <a href="http://orcid.org/" target="_blank">die ORCID-Registrierung</a> vergeben werden. Sie müssen deren Vorgabe zum Schreiben von ORCID-iDs beachten und den vollen URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>) verwenden.]]></message>
+	<message key="user.profile.form.orcidInvalid">Die angegebene ORCID-iD ist ungültig.</message>
 
 	<!-- Funktionen -->
 	<message key="user.role.manager">Zeitschriftenverwalter/in</message>
@@ -345,10 +369,10 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 
 
 	<!-- Sprachen -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Momentan ist das Herunterladen von Sprachpaketen vom Public Knowledge Project Server nicht möglich, weil:</p>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Momentan ist das Herunterladen von Sprachpaketen vom Server des Public Knowledge Project nicht möglich, weil:</p>
 	<ul>
-		<li>Ihr Server den Dienst GNU "tar" entweder nicht besitzt oder seine Ausführung nicht erlaubt.</li>
-		<li>OJS kann deshalb die Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") nicht verändern.</li>
+		<li>Ihr Server den Dienst GNU "tar" entweder nicht besitzt oder seine Ausführung nicht erlaubt</li>
+		<li>OJS die Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") nicht verändern kann.</li>
 	</ul>
 <p>Sprachpakete können manuell von der <a href="http://pkp.sfu.ca">PKP-Webseite</a> heruntergeladen werden.</p>]]></message>
 
@@ -407,7 +431,7 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 LOCKSS muss erst dann eingerichtet werden, wenn die Zeitschrift vollständig in Betrieb genommen wurde. Dann führen Sie bitte die folgenden beiden Schritte aus:]]></message>
 
 	<!-- 3. Einrichtungsschritt -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Empfohlene Creative-Commons-Lizenz</h3>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Beispiele für die Anzeige von Creative-Commons-Lizenzen in den Copyright-Vermerken</h3>
 <h4>1. Empfohlene Copyright-Regelungen für Zeitschriften mit Open Access</h4>
 Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:
 <ol type="a">
@@ -419,7 +443,7 @@ Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgend
 <h4>2. Empfohlene Copyright-Regelungen für Zeitschriften mit verzögertem Open Access</h4>
 Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:
 <ol type="a">
-	<li>Die Autor/innen behalten das Copyright und erlauben der Zeitschrift die Erstveröffentlichung, womit die Arbeit [ZEITSPANNE FESTLEGEN] nach der Veröffentlichung zugleich unter einer <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Namensnennung Lizenz</a> lizensiert wird, die es anderen erlaubt, die Arbeit unter Nennung der Autor/innenschaft und der Erstpublikation in dieser Zeitschrift zu verwenden.</li>
+	<li>Die Autor/innen behalten das Copyright und erlauben der Zeitschrift die Erstveröffentlichung, womit die Arbeit [ZEITSPANNE FESTLEGEN] nach der Veröffentlichung zugleich unter einer <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Namensnennung Lizenz</a> lizenziert wird, die es anderen erlaubt, die Arbeit unter Nennung der Autor/innenschaft und der Erstpublikation in dieser Zeitschrift zu verwenden.</li>
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
@@ -598,7 +622,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="reviewer.article.notifyEditorB">des Beitrags benachrichtigen, ob Sie die Begutachtung übernehmen wollen.</message>
 	<message key="reviewer.article.consultGuidelines">Falls Sie die Begutachtung vornehmen wollen, beachten Sie bitte die nachfolgenden Richtlinien für Gutachter/innen.</message>
 	<message key="reviewer.article.downloadSubmission">Klicken Sie auf die Dateinamen, um die zur Einreichung gehörenden Dateien herunterzuladen und zu begutachten (auf dem Bildschirm oder im Ausdruck).</message>
-	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Erklären Sie, ob Sie bezüglich dieser Forschung einen Interessenskonflikt haben (Siehe <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Richtlinien für Interessenkonflikte</a>).]]></message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Erklären Sie, ob Sie bezüglich dieser Forschung einen Interessenkonflikt haben (Siehe <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Richtlinien für Interessenkonflikte</a>).]]></message>
 	<message key="reviewer.competingInterests">Interessenkonflikte</message>
 	<message key="reviewer.article.enterReviewA">Bitte klicken Sie auf das Symbol, um Ihr Gutachten zu diesem Beitrag einzugeben.</message>
 	<message key="reviewer.article.uploadFile">Zusätzlich können Sie Dateien für die Redakteurin/den Redakteur und/oder die Autorin/den Autor hochladen.</message>
@@ -1132,11 +1156,11 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$title}" wurde hinterlassen.</message>
 	<message key="notification.type.galleyModified">Für "{$title}" wurde eine Korrekturfahne geändert.</message>
 	<message key="notification.type.issuePublished">Eine Ausgabe wurde veröffentlicht.</message>
-	<message key="notification.type.layoutComment">Zum Layout von "{$title}'s" wurde ein Kommentar hinterlassen.</message>
-	<message key="notification.type.metadataModified">Die Metdadaten von "{$title}'s" wurden verändert.</message>
+	<message key="notification.type.layoutComment">Zum Layout von "{$title}" wurde ein Kommentar hinterlassen.</message>
+	<message key="notification.type.metadataModified">Die Metadaten von "{$title}" wurden verändert.</message>
 	<message key="notification.type.newAnnouncement">Eine neue Ankündigung wurde erstellt.</message>
 	<message key="notification.type.proofreadComment">Ein/e Korrekturlektor/in hat einen Kommentar zu "{$title}" hinterlassen.</message>
-	<message key="notification.type.reviewerComment">Ein/e Gutachter/in hat "{$title} kommentiert.</message>
+	<message key="notification.type.reviewerComment">Ein/e Gutachter/in hat "{$title}" kommentiert.</message>
 	<message key="notification.type.reviewerFormComment">Für "{$title}" wurde ein Begutachtungsformular eingereicht.</message>
 	<message key="notification.type.reviewing">Begutachtungsereignisse</message>
 	<message key="notification.type.site">Site-Ereignisse</message>

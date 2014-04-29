@@ -1,8 +1,9 @@
 <?php
 
 /**
- * @file plugins/generic/dataverse/dataversePlugin.inc.php
+ * @file plugins/generic/dataverse/DataversePlugin.inc.php
  *
+ * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -39,13 +40,13 @@ define('NOTIFICATION_TYPE_DATAVERSE_UNRELEASED',     NOTIFICATION_TYPE_PLUGIN_BA
 
 class DataversePlugin extends GenericPlugin {
 
-	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
+  /**
+   * Called as a plugin is registered to the registry
+   * @param $category String Name of category plugin was registered to
    * @param $path String
-	 * @return boolean True iff plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
-	 */
+   * @return boolean True iff plugin initialized successfully; if false,
+   * 	the plugin will not be registered.
+   */
   function register($category, $path) {
     $success = parent::register($category, $path);
     if ($success && $this->getEnabled()) {
@@ -122,7 +123,7 @@ class DataversePlugin extends GenericPlugin {
 	}
 
 	function getInstallSchemaFile() {
-    return $this->getPluginPath() . '/schema.xml';
+		return $this->getPluginPath() . '/schema.xml';
 	}
 
 	function getHandlerPath() {
@@ -130,20 +131,20 @@ class DataversePlugin extends GenericPlugin {
 	}
   
 	function getTemplatePath() {
-    return parent::getTemplatePath() . 'templates/';
+		return parent::getTemplatePath() . 'templates/';
 	}  
 	
 	/**
 	 * Display verbs for the management interface.
 	 */
   function getManagementVerbs() {
-		$verbs = array();
+    $verbs = array();
     if ($this->getEnabled()) {
       $verbs[] = array('connect', __('plugins.generic.dataverse.settings.connect'));
       $verbs[] = array('select', __('plugins.generic.dataverse.settings.selectDataverse')); 
       $verbs[] = array('settings', __('plugins.generic.dataverse.settings'));
     }
-		return parent::getManagementVerbs($verbs);
+    return parent::getManagementVerbs($verbs);
   }
 
 	/**
@@ -322,7 +323,7 @@ class DataversePlugin extends GenericPlugin {
       $newOutput .= substr($output, $index);
       $output =& $newOutput;
     }
-		$smarty->unregister_outputfilter('submissionSummaryOutputFilter');
+      $smarty->unregister_outputfilter('submissionSummaryOutputFilter');
     return $output;
 	}
   
@@ -332,10 +333,10 @@ class DataversePlugin extends GenericPlugin {
    * @param array $args
    */
   function addDataCitationArticle($hookName, $args) {
-		$smarty =& $args[1];
-		$output =& $args[2];
+    $smarty =& $args[1];
+    $output =& $args[2];
     
-		$templateMgr =& TemplateManager::getManager();    
+    $templateMgr =& TemplateManager::getManager();    
     $article =& $templateMgr->get_template_vars('article');
     
     $dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
@@ -348,7 +349,7 @@ class DataversePlugin extends GenericPlugin {
       $templateMgr->assign('dataCitation', $article->getLocalizedData('externalDataCitation'));
     }
     $output .= $templateMgr->fetch($this->getTemplatePath() . 'dataCitationArticle.tpl');
-		return false;
+    return false;
   }  
   
   /**
@@ -437,9 +438,9 @@ class DataversePlugin extends GenericPlugin {
    * suppfile forms
    */
   function articleMetadataFormFieldNames($hookName, $args) {
-		$fields =& $args[1];
-		$fields[] = 'externalDataCitation';
-		return false;    
+    $fields =& $args[1];
+    $fields[] = 'externalDataCitation';
+    return false;    
   }
   
   /**
@@ -1396,18 +1397,18 @@ class DataversePlugin extends GenericPlugin {
         $message = __('plugins.generic.dataverse.notification.studyDeleted');
         break;
       
-      case NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED:
+			case NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED:
 				$notificationSettingsDao =& DAORegistry::getDAO('NotificationSettingsDAO');
 				$params = $notificationSettingsDao->getNotificationSettings($notification->getId());
-        $message = __('plugins.generic.dataverse.notification.studyReleased', $notificationManager->getParamsForCurrentLocale($params));
-        break;
+				$message = __('plugins.generic.dataverse.notification.studyReleased', $notificationManager->getParamsForCurrentLocale($params));
+				break;
       
 			case NOTIFICATION_TYPE_DATAVERSE_UNRELEASED:
 				$notificationSettingsDao =& DAORegistry::getDAO('NotificationSettingsDAO');
 				$params = $notificationSettingsDao->getNotificationSettings($notification->getId());
 				$message = __('plugins.generic.dataverse.notification.releaseDataverse', $notificationManager->getParamsForCurrentLocale($params));
 				break;
-    }
+		}
 	}  
   
   /**
@@ -1457,14 +1458,14 @@ class DataversePlugin extends GenericPlugin {
     $issue =& $issueDao->getIssueByArticleId($article->getId(), $article->getJournalId());
 
     $templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign_by_ref('article', $article);
+    $templateMgr->assign_by_ref('article', $article);
     if ($article->getStatus() == STATUS_PUBLISHED) {
       $publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
       $publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId(), $article->getJournalId(), TRUE);
       $templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
     }
-		$templateMgr->assign_by_ref('issue', $issue);
-		$templateMgr->assign_by_ref('journal', $journal); 
+    $templateMgr->assign_by_ref('issue', $issue);
+    $templateMgr->assign_by_ref('journal', $journal); 
     
     return $templateMgr->fetch($this->getTemplatePath() .'citation'. $citationFormat .'.tpl');
   }

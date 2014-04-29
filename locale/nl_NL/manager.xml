@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/manager.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -681,4 +681,55 @@
 	<message key="manager.sections.alertDelete">Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde artikelen verplaatsen naar andere secties.</message>
 	<message key="manager.setup.categories.description">Kies de meest toepasselijke categorieën uit de hierboven getoonde set. Lezers kunnen op categorie door de tijdschriften bladeren.</message>
 	<message key="manager.payment.giftFees">Gift kosten</message>
+	<message key="manager.setup.permissions.display">Toon</message>
+	<message key="manager.setup.includeLicense">Toon de licentie bij het gepubliceerde werk.</message>
+	<message key="manager.statistics.reports.filters">Filters</message>
+	<message key="manager.statistics.reports.today">Vandaag</message>
+	<message key="manager.statistics.reports.currentMonth">Deze maand</message>
+	<message key="manager.statistics.reports.orderBy">Rangschik naar</message>
+	<message key="manager.statistics.reports.orderDir">Richting</message>
+	<message key="manager.statistics.reports.orderDir.asc">Oplopend</message>
+	<message key="manager.statistics.reports.orderDir.desc">Aflopend</message>
+	<message key="manager.statistics.reports.month.label">Gebruik het YYYYMM formaat</message>
+	<message key="manager.statistics.reports.day.label">Gebruik het YYYYMMDD formaat</message>
+	<message key="manager.statistics.reports.cities.label">Een of meer namen van stecen, gescheiden door een komma(bv. Stad 1, Stad 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">U moet minstens één kolom selecteren om het rapport te maken.</message>
+	<message key="manager.statistics.reports.reportUrl">Rapport URL</message>
+	<message key="manager.setup.permissions.priorAgreement">Eerdere overeenkomst</message>
+	<message key="manager.setup.licenseURLDescription">Geef de URL voor de webpagina van de licentie, indien beschikbaar.</message>
+	<message key="manager.setup.includeCopyrightStatement">Toon het copyright statement met inhoud (aan te raden als de auteur het copyright heeft).</message>
+	<message key="manager.setup.resetPermissions">Artikel-toestemmingen terugzetten</message>
+	<message key="manager.setup.resetPermissions.description">Het copyright statement en de licentie-informatie zullen permanent gekoppeld zijn aan de gepubliceerde inhoud, wat garandeert dat deze informatie niet wijzigt als het tijdschrift zijn beleid voor nieuwe inzendingen zou wijzigen. Klik op de knop hieronder om de reeds opgeslagen toestemmingen te terug te zetten</message>
+	<message key="manager.setup.confirmResetLicense">Weet u zeker dat u de licentie en copyright informatie van de gepubliceerde inhoud terug wilt zetten naar de licentie zoals die is vastgelegd bij de tijdschriftinstellingen?</message>
+	<message key="manager.statistics.defaultMetricDescription">Uw tijdschrift is geconfigureerd voor meer dan een gebruiksmeting Gebruiksstatistieken zullen getoond worden in verschillende contexten.
+		Er zijn situaties waar een enkele statistiek gebruikt moet worden, bv. om een geordende lijst van meestgebruikte artikelen te tonen of om 
+		zoekresultaten te ranngschikken. Kies een van de hieronder getoonde metrieken als standaard.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Aggregeer statistieken per:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Standaard rapportagesjablonen</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Artikel bestandsdownloads</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Atrikel samenvatting views</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Artikel samenvatting en downloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Nummer bestandsdownloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Views van de inhoudsopgave van een nummer</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Inhoudsopgave en downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Tijschrift voorpagina views</message>
+	<message key="manager.statistics.reports.generateReport">Genereer aangepast rapport</message>
+	<message key="manager.statistics.reports.advancedOptions">Geavanceerde opties</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Kolommen aanpassen, fiter en sorteeropties. Het veranderen van deze opties kan het resultaat van het rapportsjabloon doen veranderen.</message>
+	<message key="manager.statistics.reports.columns">Kolommen</message>
+	<message key="manager.statistics.reports.objectType">Object type</message>
+	<message key="manager.statistics.reports.objectId">Object id</message>
+	<message key="manager.statistics.reports.objectId.label">Geef een of meer object id's, gescheiden door een komma (bv. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.columns.description">Definieer de kolommen die in het rapport gebruikt worden. De kolommen die u kiest definiëren niet alleen welke gegevens getoond worden maar ook het aggregatieniveau van de statistiek. Bijvoorbeeld, als u de ID, type en maand kolommen kiest, zal het rapport alle views van een object in een maand optellen en dat in een rij tonen. Als u dag kiest in plaats van maand, zal ieder object een rij voor iedere dag hebben.</message>
+	<message key="manager.statistics.reports.reportUrl.label">De volgende URL kan gebruikt worden om het rapport met de huidige instellingen te genereren. Kopieer het en plak heit n uw browser. U kunt uw favorieten gebruiken om het te bewaren.</message>
+	<message key="manager.statistics.reports.filters.byContext">Naar context</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Verfijn resultaten naar context (nummer en/of artikel).</message>
+	<message key="manager.statistics.reports.filters.byObject">Naar objecttype en/of object id</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Verfijn de resultaten naar objecttype (tijdschrift, nummer, artikel, pdf proeven, andere proeven) en/of een of meerdere object id(s).</message>
+	<message key="manager.statistics.reports.filters.byTime">Kies rapportage reeks</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Of kies reeks per:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Per geolocatie</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Verfijn resultaten naar land, regio en/of stad.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Herinnering voorafgaand aan aflopen verstuurd</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Herinnering na aflopen verstuurd</message>
 </locale>

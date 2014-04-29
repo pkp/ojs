@@ -4,15 +4,15 @@
 <!--
   * plugins/blocks/relatedItems/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the el_GR (Greek) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="el_GR" full_name = "Greek">
 	<message key="plugins.block.relatedItems.displayName">Δομική Μονάδα Συναφών Τεκμηρίων</message>
 	<message key="plugins.block.relatedItems.description">Αυτό το πρόσθετο εμφανίζει μια δομική μονάδα, που περιέχει συναφή τεκμήρια, στην πλαϊνή μπάρα των εργαλείων μελέτης.</message>
 	<message key="plugins.block.relatedItems.title">Συναφή Τεκμήρια</message>

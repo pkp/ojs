@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA locale.
@@ -36,4 +36,8 @@
 	<message key="plugins.generic.referral.settings">Paramètres du plugiciel de référence</message>
 	<message key="plugins.generic.referral.settings.description">Le plugiciel de référence enregistre les URLs qui sont liés aux articles publiés dans la revue afin qu'il puissent être organisés par l'auteur et optionnellement publiés. Ce formulaire permet au Directeur de revue de contrôler comment ces liens sont enregistrés.</message>
 	<message key="plugins.generic.referral.excusions">Exclusions</message>
+	<message key="plugins.generic.referral.status.accepted">Publié</message>
+	<message key="plugins.generic.referral.status.declined">IGNORED</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Publié</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Êtes-vous certain de ne pas vouloir tenir en compte le(s) refback(s) sélectionné(s)?</message>
 </locale>
