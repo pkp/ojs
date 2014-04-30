@@ -74,8 +74,8 @@
 	<message key="admin.journals.importErrors">Импортирование завершилось неудачей.</message>
 	<message key="admin.mergeUsers">Объединение пользователей</message>
 	<message key="admin.mergeUsers.mergeUser">Объединить</message>
-	<message key="admin.mergeUsers.into.description">Выберите пользователя, которому будут переданы авторство предыдущего пользователя, его редакционные задания, и&nbsp;т.&nbsp;д.</message>
-	<message key="admin.mergeUsers.from.description">Выберите пользователя (или нескольких) для слияния в другую учетную запись пользователя (например, когда кто-то завел себе две учетные записи). Учетная запись (записи), выбранная первой, будет удалена, а все связанные с ней статьи, редакционные задания и&nbsp;т.&nbsp;д. будут присоединены к второй учетной записи.</message>
+	<message key="admin.mergeUsers.into.description">Выберите пользователя, которому будут переданы авторство предыдущего пользователя, его редакционные задания, и&amp;nbsp;т.&amp;nbsp;д.</message>
+	<message key="admin.mergeUsers.from.description">Выберите пользователя (или нескольких) для слияния в другую учетную запись пользователя (например, когда кто-то завел себе две учетные записи). Учетная запись (записи), выбранная первой, будет удалена, а все связанные с ней статьи, редакционные задания и&amp;nbsp;т.&amp;nbsp;д. будут присоединены к второй учетной записи.</message>
 	<message key="admin.mergeUsers.allUsers">Все записанные пользователи</message>
 	<message key="admin.mergeUsers.confirm">Вы уверены, что хотите слить выбранные {$oldAccountCount} учетных записей в учетную запись с именем пользователя «{$newUsername}»? Выбранные {$oldAccountCount} учетные записи после этого не будут существовать. Это действие необратимо.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Нет записанных пользователей.</message>
