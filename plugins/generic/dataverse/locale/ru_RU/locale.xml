@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/dataverse/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Dataverse plugin localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+
+<locale name="ru_RU" full_name="Russian">
+
+	<!-- Плагин «Dataverse» -->
+	<message key="plugins.generic.dataverse.displayName">Плагин «Dataverse»</message>
+	<message key="plugins.generic.dataverse.description">Размещает наборы данныъ и/или другие дополнительные файлы в Dataverse.</message>
+
+	<!-- Настройка Dataverse: DVN URL и детали аутентификации -->
+	<message key="plugins.generic.dataverse.settings.connect">Подключение</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">Адрес (URL) сети Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL сети Dataverse, которой принадлежит Dataverse вашего журнала</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Имя пользователя, которое будет использоваться для депонирования файлов в Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Пароль для имени пользователя, указанного выше</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">URL сети Dataverse обязателен.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">URL сети Dataverse является неправильным.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Пожалуйста, введите правильное имя пользователя для указанной сети Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.passwordRequired">Пожалуйста, введите правильный пароль для указанной сети Dataverse.</message>
+
+	<!-- Настройка Dataverse: выбор Dataverse --> 
+	<message key="plugins.generic.dataverse.settings.selectDataverse">Выбор Dataverse</message> 
+	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>  
+	<message key="plugins.generic.dataverse.settings.dataverseDescription">Выберите Dataverse для хранения файлов данных этого журнала.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseRequired">Пожалуйста, выберите Dataverse.</message>
+
+	<!-- Конфигурирование плагина: настройки -->    
+	<message key="plugins.generic.dataverse.settings">Настройки</message>
+	<message key="plugins.generic.dataverse.settings.dataPolicies">Политика данных</message>
+	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">Настройка политики данных.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">Политика доступности данных</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">Общая политика доступности данных для журнала. Она появится в разделе «О нас».</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">Пожалуйста, введите политику доступности данных.</message>        
+	<message key="plugins.generic.dataverse.settings.sectionPoliciesDescription">Добавить политики данных для конкретных разделов журнала.</message>
+	<message key="plugins.generic.dataverse.settings.authorGuidelinesDescription"><![CDATA[Отредактируйте <a href="{$authorGuidelinesUrl}" target="_blank">Руководство для автора</a>, включив в него правила отправки данных и указания ссылок на данные.]]></message>
+	<message key="plugins.generic.dataverse.settings.checklistDescription"><![CDATA[Отредактируйте <a href="{$checklistUrl}" target="_blank">Контрольный список подготовки статьи к отправке</a>, чтобы помочь авторам подготовить их данные и ссылки в соответствии с правилами.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewPolicyDescription"><![CDATA[Отредактируйте <a href="{$reviewPolicyUrl}" target="_blank">Политику рецензирования</a>, включив в нее наборы данных.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewGuidelinesUrl"><![CDATA[Отредактируйте <a href="{$reviewGuidelinesUrl}" target="_blank">Руководство для рецензента</a>, включив в него инструкции по рецензированию наборов данных.]]></message>
+	<message key="plugins.generic.dataverse.settings.copyeditInstructionsUrl"><![CDATA[Отредактируйте <a href="{$copyeditInstructionsUrl}" target="_blank">Руководство по литературному редактированию</a>, включив в него инструкции, касающиеся наборов данных.]]></message>
+	<message key="plugins.generic.dataverse.settings.termsOfUse">Условия использования</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseRequired">Введите условия использования или выберите загрузку условий использования из Dataverse.</message>    
+	<message key="plugins.generic.dataverse.settings.termsOfUseDescription">Введите условия использования, которые пользователи должны принять перед депонированием файлов данных.</message>
+	<message key="plugins.generic.dataverse.settings.fetchTermsOfUse">Загрузить условия использования из Dataverse для настройки этого журнала.</message>
+	<message key="plugins.generic.dataverse.settings.defineTermsOfUse">Введите свои условия использования в поле ниже.</message> 
+	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">Не могу получить условия использования для настроенного Dataverse. Пожалуйста, проверьте настройки соединения.</message>
+	<message key="plugins.generic.dataverse.settings.metadata">Настройки метаданных</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat">Формат ссылок</message> 
+	<message key="plugins.generic.dataverse.settings.citationFormatDescription">Выберите формат для отображения ссылок на публикации в информации в каталоге.</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat.apa">Стиль ссылок APA</message>
+	<message key="plugins.generic.dataverse.settings.pubIdType">Тип открытого идентификатора</message>  
+	<message key="plugins.generic.dataverse.settings.pubIdTypeDescription"><![CDATA[Выберите тип открытого идентификатора для ссылки на статью при цитировании публикации. Если ни один из <a href="{$pubIdsUrl}">плагинов открытых идентификаторов</a> не включен, ссылки на опубликованные статьи будут использовать адреса (URL) из OJS.]]></message>
+	<message key="plugins.generic.dataverse.settings.workflow">Настройки рабочего процесса</message> 
+	<message key="plugins.generic.dataverse.settings.requireData">Требовать файлы данных</message> 
+	<message key="plugins.generic.dataverse.settings.requireDataDescription">Отправляемая статья обязательно должна включать файлы данных, депонированные в Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.requireDataError">Авторы обязательно должны депонировать файлы данных, отправляемые со статьей, в Dataverse. Загрузите дополнительный файл для продолжения.</message>
+	<message key="plugins.generic.dataverse.settings.studyRelease">Выпускать черновики исследований</message>  
+	<message key="plugins.generic.dataverse.settings.studyReleaseSubmissionAccepted">Редактор принимает отправленную статью</message>   
+	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">Статья опубликована</message>
+
+	<!--  Настройки: значения по умолчанию -->
+	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[«{$journal}» требует, как одно из условий публикации, чтобы данные, использованные для получения результатов. приведенные в статье, были размещены в соответствующем открытом архиве. «{$journal}» рекомендует <a href="http://thedata.harvard.edu/">Harvard Dataverse</a>, который является свободным и открытым для исследователей всего мира, чтобы делиться, ссылаться, повторно использовать и размещать данные исследований. Данные являются важным продуктом научной деятельности, и они должны сохраняться и использоваться в будущем в течение десятилетий. Авторы могут выбрать размещение данных в открытом доступе во время публикации. Исключения могут быть сделаны на усмотрение редактора, особенно для такой информации как данные о людях или расположение исчезающих видов. Любые исключения должны быть задокументированы в описании опубликованной статьи. (По материалам <a href="http://datadryad.org/pages/jdap">Joint Data Archiving Policy</a> (JDAP)).]]></message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras">Пример руководства для автора</message> 
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras.label">Показать пример рекомендаций по отправке данных и цитированию</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines"><![CDATA[
+   <ol>
+     <li>
+       <p>Определение данных, которые должны быть отправлены</p>
+       <p>«Минимальный набор данных» может быть определен как содержащий набор данных, использованных для получения выводов, описанных в статье, с соответствующими метаданными и методами, а также любыми дополнительными данными, необходимыми для воспроизведения результатов исследования в полном объеме. Включает достаточную информацию, чтобы исследователь понял данные, и любые ссылки на источники данных, из которых набор данных для воспроизведения был сформирован. Основные описываемые данные, методы и результаты исследований должны быть включены в основную статью независимо от депонирования данных. Авторы, чьи наборы данных имеют слишком большой размер для размещения в репозиториях или загрузки на сервер, должны связаться с журналом «{$journal}». (На основе <a href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">PLOS’ Data Policy</a>)</p>
+     </li>
+     <li>
+       <p>Руководство по размещению наборов данных, полученных в результате исследований с участием людей</p>
+       <p>Журнал «{$journal}» понимает, что бывают случаи, в которых по соображениям конфиденциальности, национальной безопасности и коммерческой тайны полный набор данных не может быть размещен в открытом доступе. В таких случаях исследователи должны размещать свои данные с минимальными ограничениями, соответствующими требованиям законодательства, соблюдая этику исследования и принципы их сообщества. Такие данные включают раскрытие неконфиденциальных данных, сводных данных, метаданных и программного кода; и облегчают доступ, если владелец исходных данных дает разрешение использовать эти данные другим исследователям. (На основе <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf">Open Economics Priciples</a>, разработанных OKF)</p>
+     </li>
+     <li>
+       <p>Руководство по указанию ссылок на данные</p>
+       <p>Если данные вашего исследования были депонированы одновременно со статьей при помощи формы отправки рукописи OJS, то ссылка на данные автоматически была сгенерирована Harvard Dataverse. Однако, если данные вашего исследования уже находятся в репозитории, то злесь приведен предлагаемый формат ссылки на данные, которую вы можете использовать при отправке вашей статьи:</p>
+       <p>Автор(ы), год, название набора данных, глобальный постоянный идентификатор, репозиторий данных или архив, версия и подмножество.</p>
+       <p>Для получения более подробной информации о том, как лучше всего сделать ссылку на данные, познакомьтесь с <a href="http://www.force11.org/datacitation">Принципами указания ссылок на данные от Force11</a>.</p>   
+     </li>
+   </ol>]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras">Примеры для Контрольного списка подготовки статьи к отправке</message> 
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras.label">Показать примеры элементов контрольного списка для статей, отправляемых с наборами данных</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[
+   <ol>
+   <li><p>Если вы собираетесь разместить наборы данных, которые были получены в результате исследований с участием людей, пожалуйста. ознакомьтесь с материалом «Руководство по размещению наборов данных, полученных в результате исследований с участием людей», приведенным выше.</p></li>
+   <li><p>Подготовьте набор данных для депонирования в соответствии с руководством по репликации: <a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a></p></li>
+   <li><p>Если вы депонируете набор данных в Harvard Dataverse, то вы можете отправить ваш набор данных через OJS одновременно с отправкой статьи в «{$journal}». Он будет автоматически размещен в Harvard Dataverse и будет сгенерированна ссылка на набор данных с постоянным URL (DOI), котрую вы затем можете передавать другим для указания ссылок на ваш набор данных после публикации статьи.</p></li>
+   <li><p>Если ваш набор данных уже размещен в рекомендуемом открытом архиве, пожалуйста, добавьте ссылку на набор данных с постоянным URL. Рекомендации по указанию ссылок на набор данных вы можете найти в Руководстве для авторов.</p></li>         
+   </ol>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras">Примеры для Политики рецензирования</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras.label">Показать примеры политик рецензирования для наборов данных</message> 
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy"><![CDATA[
+   <ul>
+   <li><p>Депонированные наборы данных должны рассматриваться как часть статьи для целей рецензирования; ИЛИ</p></li>
+   <li><p>При принятии статьи к публикации (до окончательной версии статьи), должны быть предоставлены все данные с описанием того, как был создан набор данных (включая все отличия по сравнению с предыдущими версиями и названия всех использованных пакетов программного обеспечения).</p></li>
+   </ul>
+   <p>Политика рецензирования должна содержать формулировку относительно наборов данных, полученных в результате исследований с участием людей:</p>
+   <ul>
+   <li><p>Наборы данных, полученные в результате исследований с участием людей, должны демонстрировать, что конфиденциальность информации об участниках исследования была соблюдена в соответствии с Политикой доступности данных. Также желательно, чтобы эти наборы соответствовали требованию «минимального набора данных», описанному в Политике доступности данных.</p></li>
+   </ul>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras">Пример Руководства для рецензентов</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras.label">Показать пример Руководства для рецензентов относительно наборов данных</message> 
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[
+   <p>Данные, сопровождающие статью: рецензенты должны проверить, что статья и набор данных соответствуют требованиям журнала к отправке данных, а именно: данные соотносятся со статьей, статьи и дополнительной документации достаточно для понимания представленных данных, а также их происхождения и того, как они были использованы.</p>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras">Примеры инструкций для литературного редактора</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras.label">Показать примеры инструкций для литературного редактора, касающихся наборов данных</message> 
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions"><![CDATA[
+		<ul>
+			<li><p>Литературные редакторы проверяют правильность указания ссылко на наборы данных; ИЛИ</p></li>
+			<li><p>Литературные редакторы проверяют сопровождение эмпирических утверждений соответствующими ссылками на данные.</p></li>   
+		</ul>
+	]]></message>
+
+	<!-- Уведомления -->
+	<message key="plugins.generic.dataverse.notification.studyCreated">Отправленные данные были размещены в Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.studyUpdated">Отправленные данные были обновлены в Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileAdded">Дополнительный файл был размещен в Dataverse.</message> 
+	<message key="plugins.generic.dataverse.notification.fileDeleted">Дополнительный файл был удален из Dataverse.</message>  
+	<message key="plugins.generic.dataverse.notification.studyDeleted">Отправленные данные были удалены из Dataverse.</message> 
+	<message key="plugins.generic.dataverse.notification.releaseDataverse"><![CDATA[Данные, опубликованные в Dataverse этого журнала, не будут доступны до тех пор, пока Dataverse не будет опубликован. Пожалуйста, войдите в Dataverse журнала и опубликуйте его.]]></message>
+	<message key="plugins.generic.dataverse.notification.studyReleased"><![CDATA[<p>Отправленные данные были опубликованы в Dataverse:</p><p>{$dataCitation}</p>]]></message> 
+	<message key="plugins.generic.dataverse.notification.error">Произошла ошибка в процессе обновления этих отправленных данных в Dataverse.</message>
+
+	<!-- Метаданные статьи для выполненной отпрауки: ошибки формы -->
+	<message key="plugins.generic.dataverse.metadataForm.studyLocked">Исследование Dataverse для этой статьи заблокировано для обработки. Метаданные статьи не могут быть обновлены до окончания процесса обработки.</message> 
+
+	<!-- Дополнительные метаданные: форма дополнительных файлов -->
+	<message key="plugins.generic.dataverse.suppFile.title">Плагин «Dataverse»: Публикация данных</message>
+	<message key="plugins.generic.dataverse.suppFile.description">Данные исследования могут быть отправлены для публикации путем размещения дополнительных файлов в Dataverse журнала или путем указания ссылок на данные, уже размещенные в репозитории.</message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataNone"><![CDATA[Считать загруженный файл дополнительным файлом. Файл <strong>не будет</strong> размещен в Dataverse.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataDataverse"><![CDATA[Разместить файл в Dataverse. Автор принимает и соглашается с <a href="javascript:openWindow('{$dataverseTermsOfUseUrl}');">условиями использования</a> Dataverse.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishData.error">Пожалуйста, загрузите файл для размещения в Dataverse.</message>
+	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">Файл будет добавлен в исследование Dataverse, созданное для этой статьи:</message> 
+	<message key="plugins.generic.dataverse.suppFile.studyLocked">Это исследование заблокировано для обработки. Никакие изменения в отправляемые данные не могут быть внесены, пока обработка не будет завершена.</message> 
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">Внешняя ссылка на данные</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Если данные, которые должны быть опубликованы вместе с этой статьей, уже размещены в другом репозитории, пожалуйста укажите ссылку на данные.</message>   
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Пожалуйста, загрузите файлы для размещения в Dataverse ИЛИ укажите внешнюю ссылку на данные.</message>    
+
+	<!-- Условия использования -->
+	<message key="plugins.generic.dataverse.termsOfUse.title">Условия использования</message>      
+	<message key="plugins.generic.dataverse.termsOfUse.dataverse">Dataverse</message> 
+
+	<!-- Политика доступности данных --> 
+	<message key="plugins.generic.dataverse.dataAvailabilityPolicy.title">Политика доступности данных</message> 
+
+	<!-- Плагин блока -->    
+	<message key="plugins.generic.dataverse.block.displayName">Плагин блока «Dataverse»</message>      
+	<message key="plugins.generic.dataverse.block.title">Ссылка на данные</message>
+
+	<!-- Инструменты читателя: дополнительные файлы -->
+	<message key="plugins.generic.dataverse.suppFiles.view">Показать в Dataverse</message> 
+
+	<!-- Метки полей -->
+	<message key="plugins.generic.dataverse.dataCitation">Ссылка на данные</message>
+
+	<!-- Текст ссылки "in press" -->
+	<message key="plugins.generic.dataverse.citationAPA.inPress">(в печати).</message>
+</locale>
