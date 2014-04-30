@@ -396,7 +396,7 @@
 
        <message key="manager.setup.reviewProcessEmailDescription">Редактори надсилатимуть рецензентам листи-запрошення з доданими до них файлами авторських подань. Рецензенти поштою надсилатимуть редакторам свою згоду (або вибачення), а також зроблені рецензії та рекомендації. Для фіксації процесу рецензування редактори самостійно вводитимуть інформацію про згоду (або відмову) рецензентів до сторінок рецензування подань.</message>
 
-       <message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems підтримує систему <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) для захищеного та надійного архівування журналу. LOCKSS - це програмний засіб з відкритим вихідним кодом, розроблений Бібліотекою Стенфордського університету, який дозволяє бібліотекам забезпечувати збереження окремих веб-журналів, регулярно перевіряючи веб-сайти зареєстрованих журналів на наявність нового опублікованого змісту та архівуючи цей зміст. Кожний архів постійно перевіряються на відповідність з іншими; якщо зміст виявляється пошкодженим або втраченим, інші архіви використовуються для його відновлення.
+       <message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems підтримує систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) для захищеного та надійного архівування журналу. LOCKSS - це програмний засіб з відкритим вихідним кодом, розроблений Бібліотекою Стенфордського університету, який дозволяє бібліотекам забезпечувати збереження окремих веб-журналів, регулярно перевіряючи веб-сайти зареєстрованих журналів на наявність нового опублікованого змісту та архівуючи цей зміст. Кожний архів постійно перевіряються на відповідність з іншими; якщо зміст виявляється пошкодженим або втраченим, інші архіви використовуються для його відновлення.
 <br /><br />
 Встановлення підтримки LOCKSS для Open Journal Systems не повинно мати місця до того часу, поки процес видання не розгорнутий повністю. Коли це станеться, зробіть два наступні кроки:]]></message>
 
@@ -420,7 +420,7 @@
 </ol>]]></message>
        <message key="manager.setup.subjectClassificationDescription"><![CDATA[Журнал використовуватиме доступну у веб-середовищі класифікаційну систему.<br />
 Назва класифікаційної системи]]></message>
-       <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Для того, щоб зміст цього журналу відображався в глобальній розподіленій системі, що індексує наукові бази даних, будь ласка, прочитайте, <a href="http://www.oaister.org/dataproviders.html" target="_blank">як стати постачальником даних</a>, та зареєструйте свій журнал у офіційному <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реєстрі відкритих архівів</a>. Щоб зареєструватися, Вам потрібно буде вказати базовий URL свого сховища: <span class="highlight">{$oaiUrl}</span>.  Після цього Ви можете зареєструвати свій журнал також у <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> та <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
+       <message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Для того, щоб зміст цього журналу відображався в глобальній розподіленій системі, що індексує наукові бази даних, будь ласка, прочитайте, <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">як стати постачальником даних</a>, та зареєструйте свій журнал у офіційному <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реєстрі відкритих архівів</a>. Щоб зареєструватися, Вам потрібно буде вказати базовий URL свого сховища: <span class="highlight">{$oaiUrl}</span>.  Після цього Ви можете зареєструвати свій журнал також у <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> та <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Зауважте, якщо цей сайт вже зареєстрований адміністратором у цих системах, Ваш журнал буде індексуватись автоматично, окремо реєструвати його непотрібно.]]></message>
        <message key="manager.setup.citations.enable">Дозволити Помічник розмітки цитат</message>
@@ -754,7 +754,7 @@
        <!-- Interstitial page for PDFs -->
        <message key="article.pdf.title">Portable Document Format (PDF)</message>
        <message key="article.pdf.download">Завантажити цей PDF-файл</message>
-       <message key="article.pdf.pluginMissing"><![CDATA[<p>Якщо у Вашому браузері встановлений модуль читання PDF-файлів (наприклад, остання версія <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>), то обраний Вами файл PDF завантажиться у це вікно.</p> <p>Крім того, Ви можете завантажити PDF-файл безпосередньо на свій комп'ютер, де його можна буде відкрити за допомогою програми читання PDF-файлів. Щоб завантажити PDF-файл, натисніть посилання "Завантажити" нижче.</p>]]></message>
+       <message key="article.pdf.pluginMissing"><![CDATA[<p>Якщо у Вашому браузері встановлений модуль читання PDF-файлів (наприклад, остання версія <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>), то обраний Вами файл PDF завантажиться у це вікно.</p> <p>Крім того, Ви можете завантажити PDF-файл безпосередньо на свій комп'ютер, де його можна буде відкрити за допомогою програми читання PDF-файлів. Щоб завантажити PDF-файл, натисніть посилання "Завантажити" нижче.</p>]]></message>
        
        <!-- Interstitial page for non-PDF non-HTML galleys -->
        <message key="article.nonpdf.title">Завантаження статті</message>
@@ -891,7 +891,7 @@
        <li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (в тому числі, PHP 5.x); наразі Ви використовуєте PHP {$phpVersion}{$wrongPhpText}</li>
        <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 або <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
        <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x або >= 2.0.4x, або Microsoft IIS 6</li>
-       <li>Операційна система: Будь-яка ОС, що підтримує вказане вище програмне забезпечення, в тому числі, <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+       <li>Операційна система: Будь-яка ОС, що підтримує вказане вище програмне забезпечення, в тому числі, <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Оскільки PKP не має ресурсів для тестування всіх можливих комбінацій платформ та версій програмного забезпечення, ми не можемо гарантувати безпомилкову роботу OJS у всіх програмних середовищах.</p>

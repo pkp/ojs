@@ -336,7 +336,7 @@ Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigu
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[OJS podporuje technologii <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systém, aby zajistil bezpečnou a stálou archivaci časopisu. LOCKSS je open source software vyvinutý v Stanford University Library, který umožňuje knihovnám zabezpečovat vybrané webové časopisy tím, že se pravidelně dotazuje webových stránek časopisu na nově publikovaný obsah a archivuje ho. Každý archív je neustále kontrolován porovnáváním oproti archívům dalších knihoven, a pokud je zjištěno jeho poškození nebo ztráta jsou tyto archívy použity k jeho obnovení.
+	<message key="manager.setup.lockssDescription"><![CDATA[OJS podporuje technologii <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systém, aby zajistil bezpečnou a stálou archivaci časopisu. LOCKSS je open source software vyvinutý v Stanford University Library, který umožňuje knihovnám zabezpečovat vybrané webové časopisy tím, že se pravidelně dotazuje webových stránek časopisu na nově publikovaný obsah a archivuje ho. Každý archív je neustále kontrolován porovnáváním oproti archívům dalších knihoven, a pokud je zjištěno jeho poškození nebo ztráta jsou tyto archívy použity k jeho obnovení.
 <br /><br />
 Nastavení podpory technologie LOCKSS pro OJS nemusí být provedeno, dokud není publikování časopisu zaběhané. Potom následujte tyto dva kroky:]]></message>
 	

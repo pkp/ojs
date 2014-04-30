@@ -383,7 +383,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	Reviewers the request to review with the submission attached to the email. Reviewers email editors their assent (or regrets), as well as the review and recommendation. Editors enter Reviewers' assent (or regrets), as well as the review and recommendation on the submission's Review page, to record the review process.</message>
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
 <br /><br />
 Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
 
@@ -410,7 +410,7 @@ Authors who publish with this journal agree to the following terms:
 </ol>]]></message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Journal will use a subject classification system available on the web.<br />
 Title of classification system]]></message>
-	<message key="manager.setup.registerForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oaister.org/dataproviders.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
+	<message key="manager.setup.registerForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>
 	<message key="manager.setup.citations.enable">Enable the Citation Markup Assistant</message>
@@ -765,7 +765,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Download this PDF file</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Article Download</message>
@@ -942,7 +942,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; you are currently using PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>
-	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>

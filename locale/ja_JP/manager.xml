@@ -126,7 +126,7 @@
 	<message key="manager.setup.authorCopyrightNoticeAgree">投稿プロセスの一部として著者に著作権表示への同意を要求する。</message>
 	<message key="manager.setup.authorGuidelines">著者の手引き（執筆要項）</message>
 	<message key="manager.setup.competingInterests">利害の競合</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[生物学系の雑誌は、通常著者と査読者に対して、研究上の利害の競合があるか否かを宣言することを要求しています（see <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoSポリシー</a>を参照のこと）。]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[生物学系の雑誌は、通常著者と査読者に対して、研究上の利害の競合があるか否かを宣言することを要求しています（see <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoSポリシー</a>を参照のこと）。]]></message>
 	<message key="manager.setup.competingInterests.guidelines">利害の競合声明添付のガイドライン</message>
 	<message key="manager.setup.competingInterests.requireAuthors">著者に投稿物に利害の競合（CI）声明を添付することを求める。</message>
 	<message key="manager.setup.competingInterests.requireReviewers">査読者に彼らが行う各査読に利害の競合（CI）声明を添付することを求める。</message>
@@ -558,7 +558,7 @@
 	<message key="manager.setup.doiSuffixDescription">DOI サフィックスはどのような形式でも構いませんが，出版アイテムごとにユニークなものでなければなりません。</message>
 	<message key="manager.setup.doiSuffixPublisherId">出版アイテムに対してDOI サフィックスのような「カスタム識別子」を使用することができます（Step 4で有効にする必要があります）。</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS を有効にする。LOCKSS の<a href="{$lockssUrl}" target="_blank">出版者マニュフェスト</a>ページを通じてLOCKSSを有効にし、参加図書館にある雑誌コンテンツを保管・配布します。LOCKSSライセンスはアーカイブの「この雑誌について」ページに表示されます。]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">LOCKSS ライセンスのその他のバージョンはここ</a>を参照してください。]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS ライセンスのその他のバージョンはここ</a>を参照してください。]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[雑誌を登録･キャッシュする図書館を6館から10館見つけます。例えば、編集者や雑誌委員会委員が勤務する機関や既にLOCKSSに参加している機関に問い合わせてください。<a href="http://www.lockss.org/community/" target="_blank">参加図書館はここ</a>を参照してください。あらかじめ用意されている(1) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS参加図書館向け</a>、または、(2) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS未参加図書館向け</a> の招待状を使用してください。]]></message>
 	<message key="manager.setup.journalFavicon">雑誌ファビコン</message>
 	<message key="manager.setup.journalFaviconDescription">ユーザがあなたのサイトを訪れた際にナビゲーションバーに表示させるこの雑誌のファビコンを追加します。</message>

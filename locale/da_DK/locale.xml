@@ -330,7 +330,7 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford Universitetets bibliotek, og der gør bibliotekarer til stand til at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford Universitetets bibliotek, og der gør bibliotekarer til stand til at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
 <br /><br />
 Konfigurationen af LOCKSS-understøttelse for Open Journal Systems behøver ikke finde sted, før publiceringen er i fuld gang. På dette tidspunkt skal du følge disse to trin:]]></message>
 	
@@ -986,7 +986,7 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.subscriptions.form.deleteIpRange">Slet</message>
 	<message key="user.subscriptions.form.addIpRange">Tilføj</message>
 	<message key="article.pdf.download">Download denne pdf-fil</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Den valgte pdf-fil vil blive indlæst her, hvis din browser har en PDF reader-plugin installeret (for eksempel en nyere version af <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Du kan også downloade pdf-filen direkte til din computer, hvorfra den kan åbnes med en PDF reader. Klik på Download-linket herunder for at downloade pdf-filen.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Den valgte pdf-fil vil blive indlæst her, hvis din browser har en PDF reader-plugin installeret (for eksempel en nyere version af <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Du kan også downloade pdf-filen direkte til din computer, hvorfra den kan åbnes med en PDF reader. Klik på Download-linket herunder for at downloade pdf-filen.</p>]]></message>
 	<message key="about.history">Tidsskriftshistorik</message>
 	<message key="about.subscriptions.individual">Individuelle abonnementer</message>
 	<message key="about.subscriptions.institutional">Institutionsabonnementer</message>

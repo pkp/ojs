@@ -133,7 +133,7 @@
 	<message key="manager.setup.authorGuidelines">Författarinstruktioner</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Fastställ de bibliografiska riktlinjerna för författarnas manuskript. (ex., <i>Publication Manual of the American Psychological Association</i>, 5th edition, 2001). Gör också klart vilka typer av kompletterande filer författaren kan ladda upp för att öka förståelsen hos läsaren (ex.: rådata, forskningsinstrument, dokumentation etc.)]]></message>
 	<message key="manager.setup.competingInterests">Intressekonflikter</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[När det gäller biomedicinska tidskrifter brukar ofta författare och granskare behöva intyga att det inte föreligger några intressekonflikter i samband med forskningen (se: <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[När det gäller biomedicinska tidskrifter brukar ofta författare och granskare behöva intyga att det inte föreligger några intressekonflikter i samband med forskningen (se: <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Instruktioner för hur man fyller i Intressekonfliktsförklaringen.</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Författare måste göra en Intressekonfliktsförklaring i samband med att manuskriptet skickas in.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Granskare måste göra en Intressekonfliktsförklaring i samband med varje granskning som görs.</message>

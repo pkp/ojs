@@ -317,7 +317,7 @@ Ten en conta que a interface OAI pódese desactivar editando a configuración de
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems suporta o sistema <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) para asegurar un arquivo seguro e permanente da revista. LOCKSS é software libre desenvolvido pola Biblioteca da Universidade de Stanford que permite ás bibliotecas preservar revistas baseadas en web, seleccionadas recopilando regularmente os contidos das revistas rexistradas para recopilar o novo contido publicado e arquivalo. Cada arquivo é validado continuamente contra el caché doutras bibliotecas, e se o contido está estragado ou perdido, empréganse os outros cachés da revista para recuperalo.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems suporta o sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) para asegurar un arquivo seguro e permanente da revista. LOCKSS é software libre desenvolvido pola Biblioteca da Universidade de Stanford que permite ás bibliotecas preservar revistas baseadas en web, seleccionadas recopilando regularmente os contidos das revistas rexistradas para recopilar o novo contido publicado e arquivalo. Cada arquivo é validado continuamente contra el caché doutras bibliotecas, e se o contido está estragado ou perdido, empréganse os outros cachés da revista para recuperalo.
 <br /><br />
 Configurar o suporte LOCKSS para Open Journal Systems non é necesario até que se comeza a publicar, cando isto acontece compre seguir estes dous pasos:]]></message>
 	

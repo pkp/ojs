@@ -166,7 +166,7 @@
 	<message key="manager.setup.authorGuidelines">作者须知</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[配置让作者在投稿本期刊时要依循的书目和文件格式标准 (例如，<em>美国心理学会出版手册</em>, 第五版, 2001).。提供用在投稿文章中的一般期刊和书目引用格式的范例通常是很有用的。也请指明恰当的「补充文件」类型（例如资料集(data-sets)、研究器具等等），这些是应该要鼓励作者上传的东西，附加在他们的投稿文章上，提高读者对其作品的了解程度。]]></message>
 	<message key="manager.setup.competingInterests">利益冲突</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[对于生物医学期刊的作者与审稿人，一般需要声明一下他们的研究相关的利益冲突。(参看<a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[对于生物医学期刊的作者与审稿人，一般需要声明一下他们的研究相关的利益冲突。(参看<a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">利益冲突声明填写指南</message>
 	<message key="manager.setup.competingInterests.requireAuthors">要求投稿作者提供一个利益冲突（CI）的文字声明。</message>
 	<message key="manager.setup.competingInterests.requireReviewers">要求审稿人在每次提交同行评议的审稿的时候，提交一个利益冲突（CI）声明。</message>

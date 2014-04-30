@@ -297,14 +297,14 @@ Merk at OAI-grensesnittet kan slås av for dette nettstedet ved å redigere OJS'
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems støtter <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), som er et system for sikker og permanent arkivering av tidsskriftet. LOCKSS er open source programvare utviklet ved Stanford University Library. LOCKSS gjør det mulig for bibliotek å bevare valgte nettidsskrift ved automatisk søking i registrerte tidsskriftnettsted etter nylig publisert innhold, og hente det for arkivering. Hvert arkiv blir kontinuerlig validert mot andre biblioteks cacher, og hvis innholdet viser seg å være ødelagt eller tapt, vil de andre cachene eller tidsskriftet bli brukt til å gjenopprette det.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems støtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), som er et system for sikker og permanent arkivering av tidsskriftet. LOCKSS er open source programvare utviklet ved Stanford University Library. LOCKSS gjør det mulig for bibliotek å bevare valgte nettidsskrift ved automatisk søking i registrerte tidsskriftnettsted etter nylig publisert innhold, og hente det for arkivering. Hvert arkiv blir kontinuerlig validert mot andre biblioteks cacher, og hvis innholdet viser seg å være ødelagt eller tapt, vil de andre cachene eller tidsskriftet bli brukt til å gjenopprette det.
 <br /><br />
 Oppsetting av LOCKSS' støtte for Open Journal Systems trenger ikke skje før etter at publiseringen er godt i gang. Da gjøres det ved å følge disse to trinnene:]]></message>
 	
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tidsskriftet vil bruke et emneklassifiseringssystem som er tilgjengelig på nettet.<br />
 Klassifiseringssystemets navn]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[For å få innholdet i dette tidsskriftet indeksert i et verdensomspennende system av forskningsdatabaser, les <a href="http://www.oaister.org/dataproviders.html" target="_blank">the steps to becoming a data contributor</a> og registrer ditt tidsskrift hos det offisielle <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registeret</a>.  For å registrere tidsskriftet trenger du base-URLen til ditt arkiv: <span class="highlight">{$oaiUrl}</span>.  Etterpå kan du registrere tidsskriftet i <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI-registeret</a> og <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[For å få innholdet i dette tidsskriftet indeksert i et verdensomspennende system av forskningsdatabaser, les <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> og registrer ditt tidsskrift hos det offisielle <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registeret</a>.  For å registrere tidsskriftet trenger du base-URLen til ditt arkiv: <span class="highlight">{$oaiUrl}</span>.  Etterpå kan du registrere tidsskriftet i <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI-registeret</a> og <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Merk at om nettstedsadministratoren allerede har registrert nettstedet i disse tjenestene blir tidsskriftet automatisk indeksert og du trenger ikke å registrere det. 
 <br /><br />
@@ -580,7 +580,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Last ned denne PDF-filen</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF-filen du valgte skal nå lastes i denne rammen dersom din nettleser har en PDF-plugin installert (f.eks. en nyere versjon av <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Dersom du bare får opp denne meldingen så må du laste ned filen og åpne den lokalt på din egen maskin.</p><p>For å laste ned PDF-filen, trykk på linken under rammen.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>PDF-filen du valgte skal nå lastes i denne rammen dersom din nettleser har en PDF-plugin installert (f.eks. en nyere versjon av <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Dersom du bare får opp denne meldingen så må du laste ned filen og åpne den lokalt på din egen maskin.</p><p>For å laste ned PDF-filen, trykk på linken under rammen.</p>]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikkelnedlasting</message>
@@ -665,7 +665,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (herunder PHP 5.x), du benytter nå PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 eller <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.15</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x eller >= 2.0.4x eller Microsoft IIS 6</li>
-	<li>Operativsystem: Alle OS som støtter ovennevnte programvare, herunder <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Operativsystem: Alle OS som støtter ovennevnte programvare, herunder <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Ettersom PKP ikke har ressurser til å test alle mulige kombinasjoner av programvareversjoner og -plattformer, kan vi heller ikke garantere korrekt funksjon eller love teknisk støtte.</p>

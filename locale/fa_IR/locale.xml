@@ -254,7 +254,7 @@ http://journals.mui.ac.ir/index.php/index/index
 <!-- اطلاعات عمومی پلاگین -->	<message key="plugins.categories.generic.description">پلاگین های عمومی برای گسترش سیستم ژورنال های آزاد به روشهای مختلف که توسط پلاگین های دیگر پشتیبانی نمی شوند به کار می روند</message>
 	<message key="plugins.categories.auth.description">پلاگ این های تایید کننده هویت  عمل تایید هویت را به سیستم های خارجی تایید کننده هویت مانند سرور LDAP واگذار می کنند.</message>
 	<message key="plugins.categories.citationFormats.description">پلاگین الگوی مرجع نویسی , قالبهای مختلف مرجع نویسی را برای  کاربران فراهم می کند</message>
-<!-- مرورگر فایل -->	<message key="manager.setup.lockssDescription"><![CDATA[OJS از سیستم <a href="http://lockss.org/" target="_blank">LOCKSS</a> که علامت اختصاری Lots of Copies Keep Stuff Safe است  برای بایگانی امن و دائمی داده برای مجله پستیبانی میکند. LOCKSS یک نوم افزار کد آزاد است که توسط کتابخانه دانشگاه استانفورد تهیه شده است و کتابخانه ها را قادر می سازد داده های مجلات انتخابی خود را جمع آوری و حفاظت کنند. این کار از طریق استخراج مداوم داده ها از سایت های مجلات انتخاب شده صورت می گیرد. هر بایگانی یطور مداوم با کش های کتابخانه ای دیگر مقایسه و بروز رسانی میشود. 
+<!-- مرورگر فایل -->	<message key="manager.setup.lockssDescription"><![CDATA[OJS از سیستم <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> که علامت اختصاری Lots of Copies Keep Stuff Safe است  برای بایگانی امن و دائمی داده برای مجله پستیبانی میکند. LOCKSS یک نوم افزار کد آزاد است که توسط کتابخانه دانشگاه استانفورد تهیه شده است و کتابخانه ها را قادر می سازد داده های مجلات انتخابی خود را جمع آوری و حفاظت کنند. این کار از طریق استخراج مداوم داده ها از سایت های مجلات انتخاب شده صورت می گیرد. هر بایگانی یطور مداوم با کش های کتابخانه ای دیگر مقایسه و بروز رسانی میشود. 
 <br /><br /> نصب پشتیبانی LOCKSS برای OJS تا وقتی که مجله کاملا بصورت آنلاین چاپ نشود لازم نیست. پس از را افتادن سیستم چاپ آنلاین مجله این دو اقدام را انجام دهید تا حمایت LOCKSS برقرار شود:]]></message>
 <!-- واردات / صادرات--><!-- گروهها / تیم دبیری -->	<message key="manager.people.confirmDisable">آیا این کاربر غیر فعال شود؟ این اقدام از ورود کاربر به سیستم جلوگیری میکند.
 
@@ -766,7 +766,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[این مجله از یک سیستم طبقه بندی موضوعی موجود بر روی وب استفاده میکند.<br />
 عنوان سیستم طبقه بندی]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[چنانچه مایل باشید محتوای این مجله در یک سیستم گسترده از بانکهای اطلاعاتی پژوهشی اندکس شود ، ابتدا 
-<a href="http://www.oaister.org/dataproviders.html" target="_blank">
+<a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">
 اقدامات لازم برای تبدیل شدن به یک فراهم کننده داده
 </a> 
 را مطالعه کنید و سپس مجله خود را در سایت رسمی 
@@ -779,7 +779,7 @@ http://journals.mui.ac.ir/index.php/index/index
 در صورت تمایل مجله خود را در سایت
 <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a>
 و سایت
-<a href="http://www.oaister.org/" target="_blank">OAIster</a>
+<a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>
 ثبت نام کنید.
 <br /><br />
 البته چنانچه ادمین سایت قبلا کل سایت را در این سرویس ها ثبت کرده باشد، دیگر نیازی به این اقدام ندارید.]]></message>
@@ -883,7 +883,7 @@ lib.sfu.ca]]></message>
 	<message key="article.pdf.download">دانلود این فایل پی دی اف</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>
 در صورتی که مرورگر شما پلاگین خواندن پی دی اف را داشته باشد فایل پی دی اف خود را می تواندی در اینجا لود کنید. به عنوان مثال نسخه اخیر
-(<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>)
+(<a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>)
 </p>
 <p>
 همچنین می توانید فایل پی دی اف را دالود کرده و با یک برنامه مخصوص خواندن فایلهای پی دی اف آن را باز کنید. برای دان لود فایل پی دی اف بر روی لینک دانلود کلیک گنید.

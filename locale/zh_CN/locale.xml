@@ -520,7 +520,7 @@ Authors who publish with this journal agree to the following terms:
 </ol>]]></message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[期刊会使用一个可在网路上取得的主题分类系统。<br />
 分类系统的标题]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oaister.org/dataproviders.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[To have the contents of this journal indexed within a globally distributed system of research databases, please read <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> and register your journal with the official <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registry</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Note that if your site administrator has already registered this site with these services, your journal will be indexed automatically and you do not need to register your journal.]]></message>
 	<message key="manager.setup.citations.enable">Allow authors to separately provide a formatted list of references (citations) as part of their submission.</message>
@@ -977,7 +977,7 @@ Note that if your site administrator has already registered this site with these
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (包含 PHP 5.x); 您现在使用的是 PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 或者 <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x 或者 >= 2.0.4x or Microsoft IIS 6</li>
-	<li>操作系统: 任何操作系统支持的上述软件, 包含 <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>操作系统: 任何操作系统支持的上述软件, 包含 <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 <p>由于PKP没有资源来测试每一个可能的软件版本和平台的组合, 没有正确的操作或隐含保证支持.</p>
 <p>改变这些设置可以在安装后通过编辑在OJS根目录的文件 <tt>config.inc.php</tt> , 或者使用网站管理的WEB界面.</p>
@@ -1173,7 +1173,7 @@ Note that if your site administrator has already registered this site with these
 </ol>]]></message>
 	<message key="user.register.reviewerInterests">识别审稿利益冲突 （实质性领域和研究方法）：</message>
 	<message key="user.subscriptions.statusInformation">活跃和无效的订阅将会随着到期日列在下面。此外，下面的状态信息可以包含在每个订阅之中。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>如果您的Web浏览器安装了PDF阅读器插件（如，最新的版本<a href="http://www.adobe.com/products/acrobat/readstep2.html"> Adobe Acrobat Reader</a>).您所选择的PDF文件应加载到这里。</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>如果您的Web浏览器安装了PDF阅读器插件（如，最新的版本<a href="https://get.adobe.com/reader/"> Adobe Acrobat Reader</a>).您所选择的PDF文件应加载到这里。</p>]]></message>
 	<message key="site.noJournals">没有可用期刊。</message>
 	<message key="gifts.buyer">从</message>
 	<message key="gifts.buyerDescription">谁送来的礼品？</message>

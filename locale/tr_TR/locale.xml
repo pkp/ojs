@@ -379,13 +379,13 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Açık Dergi Sistemleri, dergi için güvenli ve kalıcı arşiv sistemi olan <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) uygulamasını destekler. LOCKSS uygulaması Stanford Üniversitesi Kütüphanesinde geliştirilmiştir. Kütüphanelerde düzenli olarak toplanan kayıtlı dergilerin web sitelerinde yeni yayınlanmış içerikleri arşivlemeyi sağlayan açık kaynak kodlu bir yazılımdır. Her arşiv kütüphane sisteminde meydana gelebilecek bir kayıba karşı veriyi korur. Eğer bozulur veya kaybolursa diğer önbellek verinin temini için kullanılır.
+	<message key="manager.setup.lockssDescription"><![CDATA[Açık Dergi Sistemleri, dergi için güvenli ve kalıcı arşiv sistemi olan <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) uygulamasını destekler. LOCKSS uygulaması Stanford Üniversitesi Kütüphanesinde geliştirilmiştir. Kütüphanelerde düzenli olarak toplanan kayıtlı dergilerin web sitelerinde yeni yayınlanmış içerikleri arşivlemeyi sağlayan açık kaynak kodlu bir yazılımdır. Her arşiv kütüphane sisteminde meydana gelebilecek bir kayıba karşı veriyi korur. Eğer bozulur veya kaybolursa diğer önbellek verinin temini için kullanılır.
 <br /><br />
 Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>
 	
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
 Sınıflama Sistemi Başlığı]]></message>
-<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oaister.org/dataproviders.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oaister.org/" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
+<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
 <br /><br />
 Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz otomatik olarak dizinlenecek ve dergi için özel bir kayıt gerekmeyecektir.]]></message>
 	<message key="manager.setup.citations.enable">Alıntı İşaretleme Yardımcısını Etkinleştir</message>
@@ -698,7 +698,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Taşınabilir Döküman Biçimi (PDF)</message>
 	<message key="article.pdf.download">PDF İndir</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Web tarayıcınıza bir PDF okuyucu eklentisi kuruluysa seçtiğiniz PDF dosyası buraya yüklenecetir. (örneğin; <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>'ın güncel sürümü).</p><p> Alternatif olarak, PDF okuyucusu kullanarak açmak için dosyayı doğrudan bilgisayarınıza yükleyebilirsiniz. PDF dosyayı indirmek için aşağıdaki indir bağlantısını tıklayın.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Web tarayıcınıza bir PDF okuyucu eklentisi kuruluysa seçtiğiniz PDF dosyası buraya yüklenecetir. (örneğin; <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>'ın güncel sürümü).</p><p> Alternatif olarak, PDF okuyucusu kullanarak açmak için dosyayı doğrudan bilgisayarınıza yükleyebilirsiniz. PDF dosyayı indirmek için aşağıdaki indir bağlantısını tıklayın.</p>]]></message>
 	
 	<!-- PDF ve HTML dışı gönderiler için ara sayfa -->
 	<message key="article.nonpdf.title">Makale İndir</message>
@@ -833,7 +833,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (PHP 5.x sürümleri dahil). Şu halde PHP'nin {$phpVersion}{$wrongPhpText} sürümünü kullanıyorsunuz</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 veya  <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x veya >= 2.0.4x veya Microsoft IIS 6</li>
-	<li>İşletim sistemi: Yukarıdaki yazılımları destekleyen herhengi bir işletim sistemi <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>İşletim sistemi: Yukarıdaki yazılımları destekleyen herhengi bir işletim sistemi <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>PKP, tüm yazılım sürümü ve platformlar için olası tüm kombinasyonlarını deneme olanaklarına sahip olmadığından doğru işleme veya destek garantisi verememektedir.</p>

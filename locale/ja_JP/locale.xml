@@ -263,7 +263,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <!-- Setup Step 1 -->
   <!-- Setup Step 2 -->
   <message key="manager.setup.lockssDescription">
-    <![CDATA[オープン･ジャーナル･システムは、雑誌の安全で永続的なアーカイブを保証する<a href="http://lockss.org/" target="_blank">LOCKSS</a>（Lots of Copies Keep Stuff Safe）システムをサポートしています。LOCKSSはスタンフォード大学図書館で開発されたオープンソースのソフトウェアです。あらかじめ選択･登録したWeb雑誌で新たに公開されたコンテンツを定期的にチェックしてアーカイブすることにより、雑誌の保存を可能にします。各アーカイブは常に他の図書館のキャッシュと比較され、コンテンツの破損や不足が見つかった場合は、他のキャッシュや雑誌を使ってそれを修復します。<br /><br />
+    <![CDATA[オープン･ジャーナル･システムは、雑誌の安全で永続的なアーカイブを保証する<a href="http://www.lockss.org/" target="_blank">LOCKSS</a>（Lots of Copies Keep Stuff Safe）システムをサポートしています。LOCKSSはスタンフォード大学図書館で開発されたオープンソースのソフトウェアです。あらかじめ選択･登録したWeb雑誌で新たに公開されたコンテンツを定期的にチェックしてアーカイブすることにより、雑誌の保存を可能にします。各アーカイブは常に他の図書館のキャッシュと比較され、コンテンツの破損や不足が見つかった場合は、他のキャッシュや雑誌を使ってそれを修復します。<br /><br />
 オープン･ジャーナル･システムにおけるLOCKSSサポートの設定は、出版が完全に軌道に乗るまでは行う必要がありませんが、設定は次の2段階で行います。]]>
   </message>
   <!-- Setup Step 3 -->
@@ -858,7 +858,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="payment.authorFees">投稿料</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">手作業による支払いは開始されましたが，まだ受け取っていません。</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">オンライン支払は開始されましたが，キャンセルあるいは完了していません。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a> の最新版）をインストールしていれば，選択したPDFファイルがここにロードされるはずです。</p><p>また，PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 ダウンロードする場合は下記のリンクをクリックしてください。</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a> の最新版）をインストールしていれば，選択したPDFファイルがここにロードされるはずです。</p><p>また，PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 ダウンロードする場合は下記のリンクをクリックしてください。</p>]]></message>
 	<message key="user.subscriptions.statusInformation">アクティベートあるいは有効期限切れの講読が有効期限順に下記に表示されます。また，次のようなステータス情報がそれぞれの講読ごとに表示される場合があります。</message>
 
 	<!-- Included here because it may be used in the navigation bar -->

@@ -482,7 +482,7 @@ Autorii care publică în această revistă să fie de acord cu următoarele con
 </ol>]]></message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Revista va folosi un sistem de clasificare al disciplinelor existent pe web.<br />
 Titlul sistemului de clasificare]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pentru a avea indexat conţinutul acestei reviste într-un sistem de baze de date pentru cercetare distribuite global, citiți <a href="http://www.oaister.org/dataproviders.html" target="_blank">pașii care sunt necesari pentru a deveni un contribuitor de date</a> și înregistrați revista în registrul oficial pentru <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Arhive Deschise</a>. Pentru a vă înregistra este necesar URL-ul de bază al depozitului: <span class="highlight">{$oaiUrl}</span>. Apoi, puteți înregistra revista proprie în <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registrul OAI al UIUC</a> și în <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pentru a avea indexat conţinutul acestei reviste într-un sistem de baze de date pentru cercetare distribuite global, citiți <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">pașii care sunt necesari pentru a deveni un contribuitor de date</a> și înregistrați revista în registrul oficial pentru <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Arhive Deschise</a>. Pentru a vă înregistra este necesar URL-ul de bază al depozitului: <span class="highlight">{$oaiUrl}</span>. Apoi, puteți înregistra revista proprie în <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registrul OAI al UIUC</a> și în <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 
 <br /><br />
 Trebuie spus că în cazul în care administratorul siteului l-a înregistrat la aceste servicii, revista va fi indexată automat și nu va mai trebui să procedați la încă o înregistrare.]]></message>
@@ -994,7 +994,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (incluzând PHP 5.x); în acest moment foloseşti PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 sau <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x sau Microsoft IIS 6</li>
-	<li>Sistem de operare: orice OS care suportă softwareul de mai sus, incluzând <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Sistem de operare: orice OS care suportă softwareul de mai sus, incluzând <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Pentru că PKP nu are resursele să testeze orice combinaţie posibilă de versiuni software şi de platforme, nu este implicată operarea corectă sau asistenţă.</p>
@@ -1207,7 +1207,7 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">A fost inițiată plata manuală, dar nu a fost primită încă</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">A fost inițiată plata online dar nu a fost încheiată</message>
 	<message key="article.pdf.download">Descarcă acest fișier PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Fișierul PDF pe care l-ai selectat ar trebui încărcat aici dacă browserul web are un modul specific instalat (de exemplu, o versiune recentă <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Poți descărca fișierul direct pe computerul propriu, de unde pot fi deschise. Pentru a descărca PDF-ul, clic pe linkul pentru descărcare de mai jos.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Fișierul PDF pe care l-ai selectat ar trebui încărcat aici dacă browserul web are un modul specific instalat (de exemplu, o versiune recentă <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Poți descărca fișierul direct pe computerul propriu, de unde pot fi deschise. Pentru a descărca PDF-ul, clic pe linkul pentru descărcare de mai jos.</p>]]></message>
 	<message key="payment.authorFees">Taxe pentru autori</message>
 
 	<!-- Included here because it may be used in the navigation bar -->

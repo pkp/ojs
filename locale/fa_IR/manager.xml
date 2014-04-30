@@ -267,7 +267,7 @@
 	<message key="manager.setup.lists">لیست ها</message>
 	<message key="manager.setup.listsDescription">حداکثر تعداد اقلامی که در هر صفحه از لیست میتوانند قرار گیرند و تعداد صفحاتی که لینک آنها در هر صفحه نمایش داده شود را مشخص کنید.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[فعال کردن  LOCKSS برای ذخیره و انتشار محتوای مجله در کتابخانه های ثبت نام کرده از طریق صفحه  <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> LOCKSS. در این صورت یک لیسانس LOCKSS در قسمت درباره مجله تحت عنوان بایگانی ظاهر میشود:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[مشاهده  <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">سایر نسخه های یک لیسانس LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[مشاهده  <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">سایر نسخه های یک لیسانس LOCKSS</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[6-10 کتابخانه را انتخاب کنید تا مجله شما را ثبت نام کرده و آنرا کش کنند. برای این کار میتوانید به دانشگاهها وسایر موسساتی که یک یا چند نفر از اعضای شورای نویسندگان مجله از آنجا هستند و کتابخانه آن دانشگاهها در سیستم LOCKSS شرکت دارد نامه نوشته واز آنها درخواست کنید. برای اطلاع بیشتر  <a href="http://www.lockss.org/community/" target="_blank">لیست کتابخانه های عضو </a> را ببینید. برای این منظور میتوانید از متن های آماده ایمیل برای دعوت از <a href="{$lockssExistingArchiveUrl}" target="_blank">کتابخانه های عضو LOCKSS </a> ویا <a href="{$lockssNewArchiveUrl}" target="_blank">کتابخانه های غیر عضو </a> LOCKSS استفاده کنید.]]></message>
 	<message key="manager.setup.look">منظره</message>
 	<message key="manager.setup.look.description">تیتر صفحه خانگی ، محتوی ، تیتر مجله ، پاورقی ، منوهای گشت وکذار ، و استیل شیت</message>
@@ -586,7 +586,7 @@
 	<message key="manager.plugins.upgradeFailed">بروزرسانی شکست خورد</message>
 	<message key="manager.sections.wordCount">شمارش لغت</message>
 	<message key="manager.sections.wordCountInstructions">حداکثر تعداد کلمات برای این نوع مقاله صفر تا بدون سقف</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[در مجلات بیومدیکال معمولا نویسنده و کارشناس در صورت داشتن تضاد منافع خاصی از لحاظ پژوهش خود میبایست آنرا اعلام کنند برای اطلاعات بیشتر به <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">سیاست PLoS</a> مراجعه کنید.]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[در مجلات بیومدیکال معمولا نویسنده و کارشناس در صورت داشتن تضاد منافع خاصی از لحاظ پژوهش خود میبایست آنرا اعلام کنند برای اطلاعات بیشتر به <a href="http://www.plosbiology.org/static/competing.action" target="_new">سیاست PLoS</a> مراجعه کنید.]]></message>
 	<message key="manager.setup.contributorNoteDescription">این متن در محلی پائین تر از عنوان منابع حمایت و بالاتر از لیست نامها و آدرسهای سازمانهای حامی تحت عنوان اسپانسر مجله ظاهر میشود.</message>
 	<message key="manager.setup.history">تاریخچه مجله</message>
 	<message key="manager.setup.historyDescription">این متن در قسمت درباره مجله ظاهر میشود و از آن میتوان برای توصیف تغییرات در عنوان، شورای سردبیری و دیگر موارد تغییر مربوط به تاریخچه انتشاراتی مجله استفاده کرد.</message>
