@@ -43,7 +43,7 @@
 	<message key="plugins.generic.alm.categories.citations.description">Цитирования этой статьи, найденные в CrossRef, PubMed и Wikipedia. В большинстве случаев, щелкнув на количестве цитирований, вы перейдете на список в самой службе ссылок.</message>
 
 	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">Плагин «ALM» включен, но должен быть задан правильный префикс DOI для журнала с адресом {$path} Настройте, что бы можно было отправлять информацию о статьях.</message>
-	<message key="plugins.generic.alm.senderTask.warning.noApiKey">Плагин «ALM» включен, но не задан ключ API для журнала по адресу {$path}</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">Плагин «ALM» включен, но не задан ключ API для журнала по адресу {$path}.</message>
 	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Не удается подтведить, что информация о статьях для журнала по адресу {$path} была отправлена. Сервер не отвечает.</message>
 	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">Не задан адрес (URL) депозитария.</message>
 	<message key="plugins.generic.alm.senderTask.error.returnError">Сервер вернул сообщение: {$error}

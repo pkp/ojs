@@ -234,6 +234,9 @@
 	<message key="user.noRoles.submitArticleRegClosed">Отправить статью: регистрация авторов сейчас отключена.</message>
 	<message key="user.noRoles.regReviewer">Зарегистрироваться в качестве рецензента</message>
 	<message key="user.noRoles.regReviewerClosed">Зарегистрироваться в качестве рецензента: регистрация рецензентов сейчас отключена.</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.description"><![CDATA[ORCID iD могут быть присвоен только <a href="http://orcid.org/" target="_blank">Регистром ORCID</a>. Вы должны соответствовать их стандартам для формирования ORCID iD и добавить полный адрес URI (например, <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="user.profile.form.orcidInvalid">Указанный вами ORCID iD является неправильным.</message>
 
 	<!-- Роли -->
 	<message key="user.role.manager">Управляющий журнала</message>
