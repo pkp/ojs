@@ -1,6 +1,9 @@
 language: php
 php:
   - 5.3
+python:
+  - 3.3
+
 before_install:
   # Start apache and configure a virtual host.
   - sudo apt-get update > /dev/null
@@ -33,9 +36,23 @@ before_install:
   # Make sure permissions are ok.
   - sudo chown -R travis:www-data .
 
+  # Install python, linter, closure compiler stuff
+  # - sudo apt-get install python-dev
+  # - sudo apt-get install python-setuptools
+  # - sudo apt-get install python-nose
+  - sudo easy_install "http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz"
+  - mkdir ~/bin
+  - wget -O compiler.zip "https://closure-compiler.googlecode.com/files/compiler-20120917.zip"
+  - unzip compiler.zip compiler.jar
+  - mv compiler.jar ~/bin
+  - wget "http://jslint4java.googlecode.com/files/jslint4java-2.0.2-dist.zip"
+  - unzip jslint4java-2.0.2-dist.zip
+  - mv jslint4java-2.0.2/jslint4java-2.0.2.jar ~/bin/jslint4java.jar
+
 script:
   - ./lib/pkp/tools/runAllTests.sh -Ccf
   - ./lib/pkp/tools/validatexml.sh
+  - ./lib/pkp/tools/buildjs.sh
 
 after_script: 
   # Print logs and outputs for debugging.
