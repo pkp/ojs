@@ -9,9 +9,8 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
-  *
   -->
-  
+ 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.webfeed.displayName">Web-Feed-Plug-In</message>
 	<message key="plugins.generic.webfeed.description">Dieses Plug-In erzeugt RSS/Atom-Feeds für die aktuelle Ausgabe.</message>

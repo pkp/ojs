@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * plugins/paymethod/manual/locale/de_DE/emailTemplates.xml
+  * @file plugins/paymethod/manual/locale/de_DE/emailTemplates.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -9,6 +10,7 @@
   * Localized email templates XML file.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
+
 <email_texts locale="de_DE">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Benachrichtigung über manuelle Zahlung</subject>
