@@ -36,7 +36,7 @@
 
 	<!-- Plugin configuration: Settings -->
 	<message key="plugins.generic.dataverse.settings">Einstellungen</message>
-	message key="plugins.generic.dataverse.settings.dataPolicies">Datenrichtlinien</message>
+	<message key="plugins.generic.dataverse.settings.dataPolicies">Datenrichtlinien</message>
 	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">Datenrichtlinien konfigurieren.</message>
 	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">Richtlinie zur Datenverfügbarkeit</message>
 	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">Allgemeine Richtlinie zur Datenverfügbarkeit der Zeitschrift. Die Richtlinie wird unter "Über uns" veröffentlicht.</message>
