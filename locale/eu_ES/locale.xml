@@ -829,7 +829,6 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<!-- Article Logs -->
 	<message key="log.author.submitted">{$authorName} egileak bidalketa berri bat sartu du. ID: {$submissionId}.</message>
 	<message key="log.author.documentRevised">{$authorName} egileak {$articleId} artikulua berrikusi du. Fitxategi ID berria {$fileId} da.</message>
-artikulua ebaluatzeko {$round}. bueltan.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} ebaluatzaileari {$articleId} artikulua ebaluatzeko esleipena kendu zaio {$round}. bueltan.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} {$articleId} artikula {$round}. bueltan ebaluatzen hasi da.</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName} berriro hasi da {$articleId} artikulua {$round}. bueltan ebaluatzen.</message>

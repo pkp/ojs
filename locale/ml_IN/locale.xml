@@ -191,7 +191,6 @@
 	<message key="user.registerForOtherJournals">മറ്റ് ജേണല്‍സിനു വേണ്ടി രെജിസ്റ്റര്‍ ചെയ്യുക</message>
 	<message key="user.myJournals">എന്റെ ജേണല്‍സ്</message>
 	<message key="user.manageMySubscriptions">എന്റെ സംഭാവനകള്‍ നിയന്ത്രണത്തില്‍ കൊണ്ടുവരിക</message>
-താങ്കളുടെ അക്കൗണ്ട് നിലവില്‍ മറ്റൊരു ജേണല്‍സുമായും പങ്കാളിത്തമില്.ദയവായി ഒരു ജേണല്‍ തിരഞ്ഞെടുക്കുക</message>
 	<message key="user.noRoles.noRolesForJournal">താങ്കളുടെ അക്കൗണ്ടിന് നിലവില്‍ ഈ ജേണലിനുവേണ്ടി ഏതൊരു കര്‍ത്തവ്യവുമില്ല . ദയവായി താഴെപറഞ്ഞിരിക്കുന്നവയില്‍നിന്നും ഒരു പ്രവൃത്തി  തിരഞ്ഞെടുക്കുക.</message>
 	<message key="user.noRoles.submitArticle">ഒരു നിര്‍ദ്ദേശം സമര്‍പ്പിക്കുക</message>
 	<message key="user.noRoles.submitArticleRegClosed">പ്രബന്ധം  സമര്‍പ്പിക്കുക: ഗ്രന്ധകര്‍ത്താവിന്റെ രജിസ്ട്രേഷന്‍ നിലവില്‍ നിയന്ത്രണത്തിലായിരിക്കണം</message>
