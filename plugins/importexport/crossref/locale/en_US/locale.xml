@@ -39,7 +39,7 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Please enter the username you got from CrossRef.</message>
 
 	<message key="plugins.importexport.crossref.export.unregistered">Export all unregistered articles</message>
-	<message key="plugins.importexport.crossref.export.selectUnregistered">Select unregistered Articles</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Select unregistered articles</message>
 	<message key="plugins.importexport.crossref.export.noUnregistered">All published articles with DOIs have already been registered.</message>
 
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage:
