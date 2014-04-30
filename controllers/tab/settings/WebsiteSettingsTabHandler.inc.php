@@ -49,7 +49,6 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	function showTab($args, $request) {
 		$workingContexts = $this->getWorkingContexts($request);
 
-		$multipleContexts = false;
 		if ($workingContexts && $workingContexts->getCount() > 1) {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('multipleContexts', true);
@@ -221,6 +220,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 				$fileUploadForm = new NewContextCssFileForm($settingName);
 				break;
 			default:
+				$fileUploadForm = null; // Suppress scrutinizer
 				assert(false);
 				break;
 		}

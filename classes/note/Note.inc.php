@@ -26,16 +26,16 @@ class Note extends PKPNote {
 	}
 
 	/**
-	 * get file
-	 * @return string
+	 * get note file
+	 * @return SubmissionFile
 	 */
 	function getFile() {
 		return $this->getData('file');
 	}
 
 	/**
-	 * set note
-	 * @param $note string
+	 * set note file
+	 * @param $file SubmissionFile
 	 */
 	function setFile($file) {
 		return $this->setData('file', $file);

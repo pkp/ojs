@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fa_IR (Persian) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="fa_IR" full_name="Persian">
 	<message key="plugins.reports.views.displayName">مشاهده گزارش</message>
 	<message key="plugins.reports.views.description">این افزونه یک گزارش سی اس وی تهیه می کند که نحوه حواندن مقالات به ازای هر مقاله را توصیف می نماید</message>
 </locale>

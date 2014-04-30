@@ -174,7 +174,33 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Get the XML for a set of submissions.
+	 * Get the XML for a set of issues.
+	 * @param $issueIds array Array of issue IDs
+	 * @param $context Context
+	 * @param $user User
+	 * @return string XML contents representing the supplied issue IDs.
+	 */
+	function exportIssues($issueIds, $context, $user) {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$xml = '';
+		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$nativeExportFilters = $filterDao->getObjectsByGroup('issue=>native-xml');
+		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
+		$exportFilter = array_shift($nativeExportFilters);
+		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user));
+		$issues = array();
+		foreach ($issueIds as $issueId) {
+			$issue = $issueDao->getById($issueId, $context->getId());
+			if ($issue) $issues[] = $issue;
+		}
+		$issueXml = $exportFilter->execute($issues);
+		if ($issueXml) $xml = $issueXml->saveXml();
+		else fatalError('Could not convert issues.');
+		return $xml;
+	}
+
+	/**
+	 * Get the XML for a set of submissions wrapped in a(n) issue(s).
 	 * @param $importXml string XML contents to import
 	 * @param $context Context
 	 * @param $user User
@@ -182,12 +208,26 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 */
 	function importSubmissions($importXml, $context, $user) {
 		$filterDao = DAORegistry::getDAO('FilterDAO');
-		$nativeImportFilters = $filterDao->getObjectsByGroup('native-xml=>article');
+		$nativeImportFilters = $filterDao->getObjectsByGroup('native-xml=>issue');
 		assert(count($nativeImportFilters) == 1); // Assert only a single unserialization filter
 		$importFilter = array_shift($nativeImportFilters);
 		$importFilter->setDeployment(new NativeImportExportDeployment($context, $user));
 
 		return $importFilter->execute($importXml);
+	}
+
+	/**
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
+
+	/**
+	 * @see PKPImportExportPlugin::executeCLI()
+	 */
+	function executeCLI($scriptName, &$args) {
+		fatalError('Not implemented');
 	}
 }
 

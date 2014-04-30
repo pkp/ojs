@@ -103,7 +103,6 @@ class AboutContextHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function submissions($args, $request) {
-		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$context = $request->getContext();
 		$templateMgr = TemplateManager::getManager($request);
 		$submissionChecklist = $context->getLocalizedSetting('submissionChecklist');

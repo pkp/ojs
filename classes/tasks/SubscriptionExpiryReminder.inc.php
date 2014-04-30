@@ -30,7 +30,6 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		$journalName = $journal->getLocalizedName();
-		$journalId = $journal->getId();
 		$user = $userDao->getById($subscription->getUserId());
 		if (!isset($user)) return false;
 

@@ -107,8 +107,6 @@ class RTDAO extends DAO {
 	 * @return array RTVersion
 	 */
 	function getVersions($journalId, $pagingInfo = null) {
-		$versions = array();
-
 		$result = $this->retrieveRange(
 			'SELECT * FROM rt_versions WHERE journal_id = ? ORDER BY version_key',
 			$journalId,
@@ -325,8 +323,6 @@ class RTDAO extends DAO {
 	 * @return array RTContext
 	 */
 	function getContexts($versionId, $pagingInfo = null) {
-		$contexts = array();
-
 		$result = $this->retrieveRange(
 			'SELECT * FROM rt_contexts WHERE version_id = ? ORDER BY seq',
 			array((int) $versionId),
@@ -495,8 +491,6 @@ class RTDAO extends DAO {
 	 * @return array RTSearch
 	 */
 	function getSearches($contextId, $pagingInfo = null) {
-		$searches = array();
-
 		$result = $this->retrieveRange(
 			'SELECT * FROM rt_searches WHERE context_id = ? ORDER BY seq',
 			array((int) $contextId),

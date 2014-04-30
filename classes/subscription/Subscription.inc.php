@@ -135,7 +135,7 @@ class Subscription extends DataObject {
 
 	/**
 	 * Check whether the subscription type is non-expiring for the subscription.
-	 * @return string
+	 * @return boolean
 	 */
 	function isNonExpiring() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');

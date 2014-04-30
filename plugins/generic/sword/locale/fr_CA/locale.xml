@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.sword.displayName">Plugiciel SWORD</message>
 	<message key="plugins.generic.sword.description">Permet aux directeurs et (optionnellement) aux auteurs de la revue de déposer des articles par l'intermédiaire du protocole SWORD</message>
 	<message key="plugins.generic.sword.enabled">Le plugiciel SWORD a été activé.</message>

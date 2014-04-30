@@ -209,6 +209,7 @@ class UsageEventPlugin extends GenericPlugin {
 				break;
 
 			default:
+				$assocType = $pubObject = $canonicalUrlOp = $canonicalUrlParams = null; // Suppress scrutinizer warn
 				// Why are we called from an unknown hook?
 				assert(false);
 		}

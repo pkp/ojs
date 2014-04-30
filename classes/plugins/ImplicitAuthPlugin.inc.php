@@ -17,7 +17,7 @@
 
 import('lib.pkp.classes.plugins.Plugin');
 
-class ImplicitAuthPlugin extends Plugin {
+abstract class ImplicitAuthPlugin extends Plugin {
 	function ImplicitAuthPlugin() {
 		parent::Plugin();
 	}

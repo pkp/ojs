@@ -42,6 +42,7 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 	 * @param $request PKPRequest
 	 */
 	function execute($request) {
+		$site = $request->getSite();
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 
 		if (isset($this->contextId)) {
@@ -67,7 +68,6 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$section = null;
 		} else {
 			$isNewJournal = true;
-			$site = $request->getSite();
 
 			// Give it a default primary locale
 			$journal->setPrimaryLocale ($site->getPrimaryLocale());

@@ -9,7 +9,6 @@
  *
  *}
 {strip}
-{assign var="pageCrumbTitle" value="$subscriptionTitle"}
 {if $subscriptionId}
 	{assign var="pageTitle" value="manager.subscriptions.edit"}
 	{url|assign:"currentUrl" op="editSubscription" path="institutional"|to_array:$subscriptionId userId=$userId}

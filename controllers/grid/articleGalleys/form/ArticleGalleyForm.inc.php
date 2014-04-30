@@ -137,11 +137,8 @@ class ArticleGalleyForm extends Form {
 	 */
 	function execute($request) {
 		import('classes.file.IssueFileManager');
-		$articleGalleyId = $this->_articleGalley?$this->_articleGalley->getId():null;
 
 		$journal = $request->getJournal();
-		$user = $request->getUser();
-
 		$articleGalley = $this->_articleGalley;
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 

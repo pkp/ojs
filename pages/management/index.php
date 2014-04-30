@@ -16,7 +16,6 @@
  *
  */
 
-
 switch ($op) {
 	//
 	// Settings
@@ -26,5 +25,11 @@ switch ($op) {
 		import('pages.management.SettingsHandler');
 		define('HANDLER_CLASS', 'SettingsHandler');
 		break;
+	case 'tools':
+	case 'importexport':
+		import('lib.pkp.pages.management.ToolsHandler');
+		define('HANDLER_CLASS', 'ToolsHandler');
+		break;
 }
+
 ?>

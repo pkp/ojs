@@ -134,6 +134,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 			import('lib.pkp.classes.db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
 			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo, true);
+			$publishedArticles = array();
 			while ($publishedArticle = $publishedArticleObjects->next()) {
 				$publishedArticles[]['articles'][] = $publishedArticle;
 			}

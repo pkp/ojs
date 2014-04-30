@@ -21,6 +21,13 @@ class SignoffFilesGridHandler extends PKPSignoffFilesGridHandler {
 
 	/**
 	 * Constructor
+	 * @param $stageId int WORKFLOW_STAGE_ID_...
+	 * @param $fileStage int SUBMISSION_FILE_...
+	 * @param $symbolic string
+	 * @param $eventType int
+	 * @param $eventType
+	 * @param $assocType int ASSOC_TYPE_...
+	 * @param $assocId int
 	 */
 	function SignoffFilesGridHandler($stageId, $fileStage, $symbolic, $eventType, $assocType = null, $assocId = null) {
 		parent::PKPSignoffFilesGridHandler($stageId, $fileStage, $symbolic, $eventType, $assocType, $assocId);

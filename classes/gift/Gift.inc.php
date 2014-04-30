@@ -42,7 +42,6 @@ class Gift extends PKPGift {
 				} else {
 					return __('payment.type.gift', null, $locale) . ' ' . __('payment.type.gift.subscription', null, $locale);
 				}
-				break;
 			default:
 				return __('payment.type.gift', null, $locale);
 		}

@@ -46,7 +46,7 @@ class PdfArticleGalleyPlugin extends ViewableFilePlugin {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 
-		$fileId = (isset($params['fileId']) && is_numeric($params['fileId'])) ? (int) $fileId : null;
+		$fileId = (isset($params['fileId']) && is_numeric($params['fileId'])) ? (int) $params['fileId'] : null;
 		if (!$fileId) {
 			// unfortunate, but occasionally browsers upload PDF files as application/octet-stream.
 			// Even setting the file type in the display template will not cause a correct render in this case.

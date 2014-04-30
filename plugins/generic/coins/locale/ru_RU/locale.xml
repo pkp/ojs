@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.coins.displayName">Модуль COinS</message>
 	<message key="plugins.generic.coins.description">Модуль COinS добавляет дескриптор OpenURL на страницы статей (резюме и HTML), это позволяет извлекать метаданные автоматически.</message>
 </locale>

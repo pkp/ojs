@@ -187,8 +187,6 @@ class TocGridHandler extends CategoryGridHandler {
 		}
 		$publishedArticle->setSeq($newSequence);
 		$publishedArticleDao->updatePublishedArticle($publishedArticle);
-
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 	}
 
 	//
@@ -205,7 +203,6 @@ class TocGridHandler extends CategoryGridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();

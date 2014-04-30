@@ -15,7 +15,7 @@
 
 import('lib.pkp.classes.plugins.Plugin');
 
-class ReportPlugin extends Plugin {
+abstract class ReportPlugin extends Plugin {
 
 	/**
 	 * Constructor

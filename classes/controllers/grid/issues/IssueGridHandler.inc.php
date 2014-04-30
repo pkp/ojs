@@ -251,7 +251,7 @@ class IssueGridHandler extends GridHandler {
 	function deleteIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueId = $issue->getId();
-
+		$journal = $request->getJournal();
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
 		// remove all published articles and return original articles to editing queue

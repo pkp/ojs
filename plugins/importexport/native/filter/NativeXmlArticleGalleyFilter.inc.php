@@ -67,12 +67,25 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 
 		$representation = parent::handleElement($node);
 
+		if ($node->getAttribute('available') == 'true') $representation->setIsAvailable(true);
+
+		$galleyType = $node->getAttribute('galley_type');
+		$representation->setGalleyType($galleyType);
+
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) if (is_a($n, 'DOMElement')) switch($n->tagName) {
+			case 'remote_url': $representation->setRemoteURL($n->textContent); break;
+			case 'name':
+				// Labels are not localized in OJS ArticleGalleys, but we use the <name locale="....">...</name> structure.
+				$representation->setLabel($n->textContent);
+				$representation->setLocale($n->getAttribute('locale'));
+				break;
+
+		}
+
 		$representationDao = Application::getRepresentationDAO();
 		$representationDao->insertObject($representation);
 
-		// Update the object.
-		$representationDao->updateObject($representation);
-
+		// representation proof files
 		return $representation;
 	}
 }

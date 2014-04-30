@@ -394,6 +394,13 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		}
 		return $url;
 	}
+
+	/**
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
 }
 
 ?>

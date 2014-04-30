@@ -8,8 +8,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReferralForm
- * @ingroup manager_form
- * @see AnnouncementForm
+ * @ingroup plugins_generic_referral
  *
  * @brief Form for authors to create/edit referrals.
  */

@@ -350,7 +350,7 @@
 	<message key="manager.setup.comments.unauthenticated">允許任何人以不具名方式貼文。</message>
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems 支持<a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe)洛克斯數位典藏系統，確保這份期刊有個安全與永久性的檔案記錄。LOCKSS是一個由史丹佛大學圖書館所開發的開源碼軟體，能夠讓圖書館以定期徵詢註冊之期刊網站是否有新內容並將之存檔的方式，保存所選擇的網路期刊。每份檔案都會持續性地透過其他圖書館的快取(caches)加以認證，而如果檔案內容被發現損毀或遺失，其他的快取或者這份期刊就會被用來備份它，
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems 支持<a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe)洛克斯數位典藏系統，確保這份期刊有個安全與永久性的檔案記錄。LOCKSS是一個由史丹佛大學圖書館所開發的開源碼軟體，能夠讓圖書館以定期徵詢註冊之期刊網站是否有新內容並將之存檔的方式，保存所選擇的網路期刊。每份檔案都會持續性地透過其他圖書館的快取(caches)加以認證，而如果檔案內容被發現損毀或遺失，其他的快取或者這份期刊就會被用來備份它，
 <br /><br />
 除非日後的出版工作完全還在準備階段，否則不需要設定 LOCKSS以支持OJS；在此階段請遵循這兩個步驟：]]></message>
 	
@@ -767,7 +767,7 @@
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (包括 PHP 5.x)</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x 或 Microsoft IIS 6</li>
-	<li>作業系統：任何支援上述軟體的作業系統，包括<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>作業系統：任何支援上述軟體的作業系統，包括<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>PKP沒有辦法測試所有可能的軟體版本和平台的組合，所以不保證運作正確或有效支援。</p>
@@ -1033,7 +1033,7 @@ Malinowski
 	<message key="default.journalSettings.forReaders"><![CDATA[我們鼓勵讀者使用本期刊的出版通知服務。請使用首頁上方的<a href="{$indexUrl}/{$journalPath}/user/register">註冊</a> 連結在本期刊註冊。這個註冊動作會讓讀者以電子郵件的方式收到每份當期期刊的目錄。這份清單也讓本期刊顯示出某種支持度或讀者群。請見本期刊的<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">隱私權聲明</a>， 保障讀者的姓名和電子郵件地址不會用於其他用途。]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[ 對這份期刊感興趣嗎？我們建議您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介紹</a>頁面，以瞭解期刊的文稿類型方針；也請同時看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在進行投稿之前必須在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">註冊</a>，而如果已經註冊的話，可以簡單地<a href="{$indexUrl}/index/login">登入</a>並且開始五個步驟的投稿流程。]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[我們鼓勵圖書館員將這份期刊加入其圖書館的電子期刊資料庫之中。同時，這份期刊的開源碼出版系統或許會適合圖書館放置他們的職員正在編輯的期刊。(請見<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[這份期刊使用LOCKSS系統建立一份在參與之圖書館之間流通的典藏系統，並且允許那些圖書館基於保存和儲藏的目的，建立本期刊的永久性典藏檔案<a href="http://lockss.org/">更多資訊...</a>]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[這份期刊使用LOCKSS系統建立一份在參與之圖書館之間流通的典藏系統，並且允許那些圖書館基於保存和儲藏的目的，建立本期刊的永久性典藏檔案<a href="http://www.lockss.org/">更多資訊...</a>]]></message>
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">期數</message>

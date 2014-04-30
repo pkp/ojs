@@ -21,15 +21,12 @@ class OJSPaymentAction {
 		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$form = new PaymentSettingsForm();
 
-		$journal = $request->getJournal();
-		$templateMgr = TemplateManager::getManager($request);
-
 		if ($form->isLocaleResubmit()) {
 			$form->readInputData();
 		} else {
 			$form->initData();
 		}
-		$form->display();
+		$form->display($request);
 	}
 
 	/**
@@ -39,16 +36,13 @@ class OJSPaymentAction {
 		import('classes.payment.ojs.form.PaymentSettingsForm');
 		$settingsForm = new PaymentSettingsForm();
 
-		$journal = $request->getJournal();
-		$templateMgr = TemplateManager::getManager($request);
-
 		$settingsForm->readInputData();
 
 		if ($settingsForm->validate()) {
 			$settingsForm->save();
 			return true;
 		} else {
-			$settingsForm->display();
+			$settingsForm->display($request);
 			return false;
 		}
 	}
@@ -96,39 +90,6 @@ class OJSPaymentAction {
 		$templateMgr->assign('payment', $payment);
 
 		$templateMgr->display('payments/viewPayment.tpl');
-	}
-
-	/**
-	 * Display form to edit program settings.
-	 */
-	function payMethodSettings($request) {
-		$templateMgr = TemplateManager::getManager($request);
-
-		$journal = $request->getJournal();
-		import('classes.payment.ojs.form.PayMethodSettingsForm');
-
-		$settingsForm = new PayMethodSettingsForm();
-		$settingsForm->initData();
-		$settingsForm->display();
-	}
-
-	/**
-	 * Save changes to payment settings.
-	 */
-	function savePayMethodSettings($request) {
-		$journal = $request->getJournal();
-		import('classes.payment.ojs.form.PayMethodSettingsForm');
-
-		$settingsForm = new PayMethodSettingsForm();
-		$settingsForm->readInputData();
-
-		if ($settingsForm->validate()) {
-			$settingsForm->execute();
-			return true;
-		} else {
-			$settingsForm->display();
-			return false;
-		}
 	}
 }
 

@@ -93,6 +93,7 @@ class genEmailUpdates extends CommandLineTool {
 
 			foreach ($oldEmails['email_text'] as $oi => $junk) {
 				$key = $junk['attributes']['key'];
+				$ni = null;
 
 				foreach ($newEmails['email_text'] as $ni => $junk) {
 					if ($key == $junk['attributes']['key']) break;

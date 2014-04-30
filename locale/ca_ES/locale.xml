@@ -38,10 +38,6 @@
 
 
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">Formulari de revisió</message>
-	<message key="submission.reviewFormResponse">Resposta al formulari de revisió</message>
-
 
 	<message key="reviewer.article.enterReviewForm">Feu clic a la icona per emplenar el formulari de revisió.</message>	
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Si us plau, empleneu els camps obligatoris.</message>	

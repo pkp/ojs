@@ -45,9 +45,9 @@ class RegistrationForm extends PKPRegistrationForm {
 	 * Register a new user.
 	 */
 	function execute($request) {
-		parent::execute($request);
-
+		$userId = parent::execute($request);
 		if ($this->getData('openAccessNotification')) {
+			$journal = $request->getJournal();
 			$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
 			$userSettingsDao->updateSetting($userId, 'openAccessNotification', true, 'bool', $journal->getId());
 		}

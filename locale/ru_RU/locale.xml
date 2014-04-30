@@ -514,7 +514,6 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="submission.reviewForm">Форма Рецензента</message>
 	<message key="reviewer.article.enterReviewForm">Нажмите, чтобы заполнить форму рецензента</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Пожалуйста заполните необходимые поля.</message>
 	<message key="common.confirmComplete">Вы уверены, что хотите завершить эту задачу ? Впоследствии она будет закрыта для изменений.</message>

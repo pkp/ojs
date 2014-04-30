@@ -170,7 +170,6 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 		// Get all categories
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');
 		$entryDao = $categoryDao->getEntryDAO();
-		$categories = $categoryDao->getCategories();
 		foreach ($categoryDao->getCategories() as $id => $name) {
 			if ($id == $rowId) {
 				$entryDao->deleteObjectById($id);

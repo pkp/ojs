@@ -60,6 +60,7 @@ class ReferralHandler extends Handler {
 		if (!isset($referral)) {
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$journal = $request->getJournal();
+			$user = $request->getUser();
 			$article = $publishedArticleDao->getPublishedArticleByArticleId((int) $request->getUserVar('articleId'));
 			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId()))) {
 				$request->redirect(null, 'author');

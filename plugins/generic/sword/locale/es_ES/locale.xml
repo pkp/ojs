@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the es_ES (Español) locale.
   *
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español">
 	<message key="plugins.generic.sword.displayName">Plugin SWORD</message>
 	<message key="plugins.generic.sword.description">Permite a Gestores de revista y (opcionalmente) a Autores depositar artículos mediante el protocolo SWORD.</message>
 	<message key="plugins.generic.sword.enabled">El plugin SWORD ha sido activado.</message>

@@ -97,10 +97,11 @@ class WebFeedPlugin extends GenericPlugin {
 				$currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
 				$displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
 				$journalTitle = $this->sanitize($currentJournal->getLocalizedName());
-
+			} else {
+				$displayPage = null; // Suppress scrutinizer
 			}
 
-			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
+			if (isset($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
 				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom')) . '" />';

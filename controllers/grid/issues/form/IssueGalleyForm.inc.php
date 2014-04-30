@@ -17,7 +17,7 @@
 import('lib.pkp.classes.form.Form');
 
 class IssueGalleyForm extends Form {
-	/** @var int the ID of the issue */
+	/** @var Issue the issue the galley belongs to */
 	var $_issue = null;
 
 	/** @var IssueGalley current galley */
@@ -131,7 +131,6 @@ class IssueGalleyForm extends Form {
 	 */
 	function execute($request) {
 		import('classes.file.IssueFileManager');
-		$issueId = $this->_issueGalley?$this->_issueGalley->getId():null;
 		$issueFileManager = new IssueFileManager($this->_issue->getId());
 
 		$journal = $request->getJournal();

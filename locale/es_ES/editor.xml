@@ -13,9 +13,6 @@
   -->
 
 <locale name="es_ES" full_name = "Español (España)">
-	<message key="editor.article.reviewForms">Formularios de Revisión</message>
-	<message key="editor.article.selectReviewForm">Escoger Formulario de Revisión</message>
-	<message key="editor.article.clearReviewForm">Limpiar Formulario de Revisión</message>
 	<message key="editor.home">Home de editor/a</message>
 	<message key="editor.submissionsAndPublishing">Envíos y publicación</message>
 	<message key="editor.submissionQueue">Cola de envíos</message>

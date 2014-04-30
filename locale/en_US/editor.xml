@@ -12,11 +12,7 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
-	<message key="editor.article.reviewForms">Review Forms</message>
-	<message key="editor.article.selectReviewForm">Select Review Form</message>
-	<message key="editor.article.clearReviewForm">Clear Review Form</message>
 	<message key="editor.home">Editor Home</message>
-	<message key="editor.article.confirmChangeReviewForm">Warning: Changing the review form will affect any answers reviewers have made using this form. Are you sure you wish to continue?</message>
 	<message key="editor.reassign">Reassign</message>
 	<message key="editor.submissionsAndPublishing">Submissions and Publishing</message>
 	<message key="editor.submissionQueue">Submission Queue</message>

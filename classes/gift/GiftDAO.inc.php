@@ -57,8 +57,7 @@ class GiftDAO extends PKPGiftDAO {
 		}
 
 		// Retrieve and try to redeem the gift
-		$gift =& $this->getGift($giftId);
-		$returner = GIFT_REDEEM_STATUS_SUCCESS;
+		$gift = $this->getGift($giftId);
 
 		switch ($gift->getGiftType()) {
 			case GIFT_TYPE_SUBSCRIPTION:

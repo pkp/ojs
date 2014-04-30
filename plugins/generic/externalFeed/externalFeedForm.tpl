@@ -9,7 +9,6 @@
  *
  *}
 {strip}
-{assign var="pageCrumbTitle" value="$feedTitle"}
 {if $feedId}
 	{assign var="pageTitle" value="plugins.generic.externalFeed.manager.edit"}
 {else}

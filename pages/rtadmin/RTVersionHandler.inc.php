@@ -26,8 +26,6 @@ class RTVersionHandler extends RTAdminHandler {
 	function createVersion($args, $request) {
 		$this->validate();
 
-		$rtDao = DAORegistry::getDAO('RTDAO');
-
 		$journal = Request::getJournal();
 
 		import('classes.rt.ojs.form.VersionForm');
@@ -38,7 +36,7 @@ class RTVersionHandler extends RTAdminHandler {
 			$versionForm->execute();
 			Request::redirect(null, null, 'versions');
 		} else {
-			$this->setupTemplate($request, true);
+			$this->setupTemplate($request);
 			$versionForm->display();
 		}
 	}
@@ -95,7 +93,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 	function versions($args, $request) {
 		$this->validate();
-		$this->setupTemplate($request, true);
+		$this->setupTemplate($request);
 
 		$journal = Request::getJournal();
 
@@ -118,7 +116,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		if (isset($version)) {
 			import('classes.rt.ojs.form.VersionForm');
-			$this->setupTemplate($request, true, $version);
+			$this->setupTemplate($request);
 			$versionForm = new VersionForm($versionId, $journal->getId());
 			$versionForm->initData();
 			$versionForm->display();

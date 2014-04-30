@@ -58,7 +58,6 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 
 		// Sources contains journal title, issue ID, and pages
 		$source = $journal->getLocalizedName() . '; ' . $issue->getIssueIdentification();
-		$pages = $article->getPages();
 
 		// Relation
 		$relation = array();

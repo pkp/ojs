@@ -52,11 +52,7 @@ class ArticleGalleyGridCellProvider extends GridCellProvider {
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
 	function getCellActions($request, $row, $column) {
-		$articleGalley =& $row->getData();
-		$actionArgs = array(
-				'submissionId' => $articleGalley->getSubmissionId(),
-				'articleGalleyId' => $articleGalley->getId()
-		);
+		$articleGalley = $row->getData();
 		$submissionId = $articleGalley->getSubmissionId();
 		$articleGalleyId = $articleGalley->getId();
 

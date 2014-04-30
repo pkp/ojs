@@ -11,11 +11,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the sv_SE (Swedish) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.gateways.resolver.displayName">Resolver tillägg</message>
 	<message key="plugins.gateways.resolver.description">Detta tillägg kopplar till artikel eller publikation baserat på citeringsinformation</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Kan inte koppla till sökt dokument m. h. a. given citeringsinformation. Vänligen kontrollera att citeringsinformationen är komplett och att den refererar till ett objekt som återfinns i denna OJS installation.</message>

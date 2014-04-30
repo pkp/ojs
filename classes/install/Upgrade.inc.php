@@ -777,7 +777,6 @@ class Upgrade extends Installer {
 
 		$submissionFile = new SubmissionFile();
 
-		$primaryLocale = AppLocale::getPrimaryLocale();
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 
@@ -785,7 +784,6 @@ class Upgrade extends Installer {
 		$filesDir = Config::getVar('files', 'files_dir') . '/journals/';
 		while (!$articleFilesResult->EOF){
 			$row = $articleFilesResult->GetRowAssoc(false);
-			$articleFileName = $row['file_name'];
 			// Assemble the old file path.
 			$oldFilePath = $filesDir . $row['context_id'] . '/articles/' . $row['submission_id'] . '/';
 			if (isset($row['type'])) { // pre 2.4 upgrade.
@@ -980,6 +978,7 @@ class Upgrade extends Installer {
 		$loadId = '3.0.0-upgrade-ojsViews';
 		$metricsDao = DAORegistry::getDAO('MetricsDAO');
 		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, context_id, issue_id)';
+		$selectClause = null; // Conditionally set later
 
 		// Galleys.
 		$galleyUpdateCases = array(
@@ -992,7 +991,6 @@ class Upgrade extends Installer {
 
 		foreach ($galleyUpdateCases as $case) {
 			$skipQuery = false;
-			$params = array();
 			if ($case['fileType'] == STATISTICS_FILE_TYPE_PDF) {
 				$pdfFileTypeWhereCheck = 'IN';
 			} else {
@@ -1075,6 +1073,77 @@ class Upgrade extends Installer {
 				$dao->update('UPDATE ' . $tableName . ' SET assoc_type = ' . ASSOC_TYPE_SECTION . ' WHERE assoc_type = ' . "'526'");
 			}
 		}
+
+		return true;
+	}
+
+	/**
+	 * Modernize review form storage from OJS 2.x
+	 * @return boolean
+	 */
+	function fixReviewForms() {
+		// 1. Review form possible options were stored with 'order'
+		//    and 'content' attributes. Just store by content.
+		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
+		$result = $reviewFormDao->retrieve(
+			'SELECT * FROM review_form_element_settings WHERE setting_name = ?',
+			'possibleResponses'
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$options = unserialize($row['setting_value']);
+			$newOptions = array();
+			foreach ($options as $key => $option) {
+				$newOptions[$key] = $option['content'];
+			}
+			$row['setting_value'] = serialize($newOptions);
+			$reviewFormDao->Replace('review_form_element_settings', $row, array('review_form_id', 'locale', 'setting_name'));
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// 2. Responses were stored with indexes offset by 1. Fix.
+		import('lib.pkp.classes.reviewForm.ReviewFormElement'); // Constants
+		$result = $reviewFormDao->retrieve(
+			'SELECT	rfe.element_type AS element_type,
+				rfr.response_value AS response_value,
+				rfr.review_id AS review_id,
+				rfe.review_form_element_id AS review_form_element_id
+			FROM	review_form_responses rfr
+				JOIN review_form_elements rfe ON (rfe.review_form_element_id = rfr.review_form_element_id)
+			WHERE	rfe.element_type IN (?, ?, ?)',
+			array(
+				REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES,
+				REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS,
+				REVIEW_FORM_ELEMENT_TYPE_DROP_DOWN_BOX
+			)
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$value = $row['response_value'];
+			switch ($row['element_type']) {
+				case REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES:
+					// Stored as a serialized object.
+					$oldValue = unserialize($value);
+					$value = array();
+					foreach ($oldValue as $k => $v) {
+						$value[$k] = $v-1;
+					}
+					$value = serialize($value);
+					break;
+				case REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS:
+				case REVIEW_FORM_ELEMENT_TYPE_DROP_DOWN_BOX:
+					// Stored as a simple number.
+					$value-=1;
+					break;
+			}
+			$reviewFormDao->update(
+				'UPDATE review_form_responses SET response_value = ? WHERE review_id = ? AND review_form_element_id = ?',
+				array($value, $row['review_id'], $row['review_form_element_id'])
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
 
 		return true;
 	}

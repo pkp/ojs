@@ -254,7 +254,7 @@ class SubscriptionType extends DataObject {
 
 	/**
 	 * Get subscription type format locale key.
-	 * @return int
+	 * @return string
 	 */
 	function getFormatString() {
 		switch ($this->getData('format')) {

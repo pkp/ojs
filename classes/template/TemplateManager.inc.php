@@ -139,7 +139,7 @@ class TemplateManager extends PKPTemplateManager {
 	 *	additional_param=myAdditionalParameterValue
 	 * }
 	 */
-	function smartyPageLinks($params, &$smarty) {
+	function smartyPageLinks($params, $smarty) {
 		$iterator = $params['iterator'];
 		$name = $params['name'];
 		if (isset($params['params']) && is_array($params['params'])) {

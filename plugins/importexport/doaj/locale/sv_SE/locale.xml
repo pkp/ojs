@@ -14,7 +14,7 @@
   * 
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="sv_SE" full_name="Swedish">
 	<message key="plugins.importexport.doaj.displayName">DOAJ export plugin</message>
 	<message key="plugins.importexport.doaj.description">Exportera tidskrift för DOAJ och eposta DOAJs representant tidskriftsinformationen</message>
 

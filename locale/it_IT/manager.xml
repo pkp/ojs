@@ -88,40 +88,6 @@
 	<message key="manager.people.roleEnrollment">{$role} Iscrizione</message>
 	<message key="manager.people.syncUserDescription">La sincronizzazione iscriverà tutti gli utenti inseriti nel ruolo e nella rivista specificati, all'interno dello stesso ruolo in questa rivista. Questa funzione permette a un insieme comune di utenti  (es. revisori) di essere sincronizzati tra due o più riviste.</message>
 	<message key="manager.plugins.description">Questa pagina permette all'amministratore della rivista di gestire i plugin installati. I plugin sono raggruppati per categorie, secondo le loro funzioni. Le categorie sono elencate sotto; ogni categoria contiene un certo gruppo di plugin.</message>
-	<message key="manager.reviewFormElement.changeType">Attenzione: Il cambiamento del tipo di elemento da 'scelta multipla' a 'risposta aperta' causerà la cancellazione delle opzioni della scelta multipla.</message>
-	<message key="manager.reviewFormElements">Componenti del modulo</message>
-	<message key="manager.reviewFormElements.addResponseItem">Aggiungi una selezione</message>
-	<message key="manager.reviewFormElements.checkboxes">Checkbox (Possibile una o più scelte)</message>
-	<message key="manager.reviewFormElements.chooseType">Scegli il tipo</message>
-	<message key="manager.reviewFormElements.confirmDelete">Conferma la cancellazione di un documento pubblicato</message>
-	<message key="manager.reviewFormElements.copyTo">Copia in:</message>
-	<message key="manager.reviewFormElements.create">Crea un nuovo elemento</message>
-	<message key="manager.reviewFormElements.dropdownbox">Menù a tendina</message>
-	<message key="manager.reviewFormElements.edit">Compila l'elemento</message>
-	<message key="manager.reviewFormElements.elementType">Tipo di elemento</message>
-	<message key="manager.reviewFormElements.form.elementTypeRequired">Inserisci il tipo di elemento</message>
-	<message key="manager.reviewFormElements.form.questionRequired">Inserisci una domanda</message>
-	<message key="manager.reviewFormElements.noneCreated">Non è stato creato nessun elemento.</message>
-	<message key="manager.reviewFormElements.possibleResponse">Selezione</message>
-	<message key="manager.reviewFormElements.question">Item</message>
-	<message key="manager.reviewFormElements.radiobuttons">Radio button (Una sola scelta possibile)</message>
-	<message key="manager.reviewFormElements.required">E' necessario che i revisori completino il documento</message>
-	<message key="manager.reviewFormElements.smalltextfield">Text box per una sola parola</message>
-	<message key="manager.reviewFormElements.textarea">Text box per testi lunghi</message>
-	<message key="manager.reviewFormElements.textfield">Text box su una linea</message>
-	<message key="manager.reviewForms">Moduli per la revisione</message>
-	<message key="manager.reviewForms.completed">Completato</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Conferma la cancellazione di un modulo di revisione non pubblicato ...</message>
-	<message key="manager.reviewForms.create">Crea un modulo di revisione</message>
-	<message key="manager.reviewForms.description">Descrizione e istruzioni</message>
-	<message key="manager.reviewForms.edit">Modulo di revisione</message>
-	<message key="manager.reviewForms.form.titleRequired">Inserisci un titolo per il modulo</message>
-	<message key="manager.reviewForms.inReview">In revisione</message>
-	<message key="manager.reviewForms.list.description">I moduli di peer review creati qui verranno presentati ai revisori per essere completati, invece del modulo di default che consiste di due caselle di testo vuote, la prima "per l'autore e per il curatore", e la seconda "per il curatore". I moduli di revisione possono essere designati per una sezione specifica della rivista, e i curatori avranno l'opzione di scegliere quale modulo usare nell'assegnare la revisione. In tutti i casi, i curatori avranno l'opzione di includere le revisioni in corrispondenza dell'autore.</message>
-	<message key="manager.reviewForms.noneChosen">Nessun modulo / Revisione libera</message>
-	<message key="manager.reviewForms.noneCreated">Non è stato creato nessun modulo di revisione</message>
-	<message key="manager.reviewForms.preview">Anteprima del modulo</message>
-	<message key="manager.reviewForms.title">Titolo</message>
 	<message key="manager.sections.abstractsNotRequired">Non richiedono abstract.</message>
 	<message key="manager.sections.assigned">Editor di questa sezione</message>
 	<message key="manager.sections.confirmDelete">Sei sicuro di voler cancellare definitivamente questa sezione? Se sì dovrete ripubblicare tutti gli articoli attualmente presenti.</message>
@@ -174,7 +140,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.authorGuidelines">Linee guida per gli autori</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Preparare per gli autori degli standard per le citazioni blibliografiche e la formattazione da utilizzare per gli articoli inviati alla rivista (ad esempio <em><a href="http://www.apa.org/pubs/books/4200060.aspx">Publication Manual of the American Psychological Association</a></em>, quinta edizione, 2001). Pu&#x00F2; essere utile fornire esempi dei formati comuni delle citazioni di riviste e libri da utilizzare negli articoli proposti alla rivista. &#x00C8; utile inoltre identificare il tipo di file supplementari appropriati (ad esempio dataset, strumenti di ricercaecc.) che gli autori sono incoraggiati ad inviare, insieme agli articoli, per aumentare il livello di coinvolgimento dei lettori con i loro lavori.]]></message>
 	<message key="manager.setup.competingInterests">Conflitto di interessi</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Le riviste biomediche solitamente richiedono agli autori e ai revisori una dichiarazione di assenza di conflitti di interesse sulla rivista (vedi <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Le riviste biomediche solitamente richiedono agli autori e ai revisori una dichiarazione di assenza di conflitti di interesse sulla rivista (vedi <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Linee guida per presentare una dichiarazione sul conflitto di interessi</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Richiedi agli autori di inviare una dichiarazione di assenza di conflitto di interessi durante l'invio della proposta.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Richiedi ai revisori di allegare una dichiarazione di assenza di conflitto di interessi per ogni revisione che invieranno.</message>
@@ -301,7 +267,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.lists">Liste</message>
 	<message key="manager.setup.listsDescription">Inserisci il numero massimo di voci delle liste che devono comparire nelle diverse pagine (es. fascicoli, utenti o incarichi) e il numero di link alle altre pagine da visualizzare.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Abilita  LOCKSS a conservare e distribuire il contenuto della rivista alle biblioteche partecipanti attivando il <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page. Una licenza LOCKSS apparir&#x00E0; nelle informazioni sulla rivista, sotto Archiviazione:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Vedi <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">altre versioni di una licenza LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Vedi <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">altre versioni di una licenza LOCKSS</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifica 6-10 biblioteche che registreranno e depositeranno la rivista. Per esempio, guarda alle istituzioni dove lavorano gli editor o i membri della direzione e/o istituzioni che gi&#x00E0; parteciapno al LOCKSS. Vedi <a href="http://www.lockss.org/community/" target="_blank">participating libraries</a>. Usa gli inviti preparati per (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">biblioteche partecipanti al LOCKSS</a> o (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Aspetto</message>
 	<message key="manager.setup.look.description">Testata dell'homepage, contenuto, testata della rivista, pie' di pagina, menu di navigazione e fogli di stile.</message>

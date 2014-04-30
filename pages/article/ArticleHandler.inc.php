@@ -37,8 +37,8 @@ class ArticleHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function ArticleHandler($request) {
-		parent::Handler($request);
+	function ArticleHandler() {
+		parent::Handler();
 	}
 
 	/**
@@ -82,13 +82,12 @@ class ArticleHandler extends Handler {
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($this->journal->getSetting('enablePublicGalleyId')) {
-			$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $this->article->getId());
+			$this->galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $this->article->getId());
 		}
 
-		if (!$galley) {
-			$galley = $galleyDao->getById($galleyId, $this->article->getId());
+		if (!$this->galley) {
+			$this->galley = $galleyDao->getById($galleyId, $this->article->getId());
 		}
-		$this->galley = $galley;
 	}
 
 	/**
@@ -97,7 +96,6 @@ class ArticleHandler extends Handler {
 	 * @param $request Request
 	 */
 	function view($args, $request) {
-		$router = $request->getRouter();
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? $args[2] : 0;
@@ -130,7 +128,7 @@ class ArticleHandler extends Handler {
 			$enableComments = $journal->getSetting('enableComments');
 
 			if (($article->getEnableComments()) && ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS)) {
-				$comments == $commentDao->getRootCommentsBySubmissionId($article->getId());
+				$comments = $commentDao->getRootCommentsBySubmissionId($article->getId());
 			}
 
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
@@ -138,11 +136,11 @@ class ArticleHandler extends Handler {
 				$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
 			}
 
-			if (!$galley) {
+			if (!isset($galley)) {
 				$galley = $galleyDao->getById($galleyId, $article->getId());
 			}
 
-			if ($galley) {
+			if (isset($galley)) {
 				if ($galley->getRemoteURL()) {
 					$request->redirectUrl($galley->getRemoteURL());
 				}
@@ -178,7 +176,6 @@ class ArticleHandler extends Handler {
 				}
 
 				// Article cover page.
-				$locale = AppLocale::getLocale();
 				if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract()) {
 					import('classes.file.PublicFileManager');
 					$publicFileManager = new PublicFileManager();
@@ -287,7 +284,7 @@ class ArticleHandler extends Handler {
 			if (!HookRegistry::call($hookName, array($this->article, &$this->galley, &$fileId))) {
 				import('classes.file.ArticleFileManager');
 				$articleFileManager = new ArticleFileManager($articleId);
-				$file = $articleFileManager->downloadFile($fileId, null, $inline);
+				$articleFileManager->downloadFile($fileId, null, $inline);
 			}
 		}
 	}
@@ -312,7 +309,6 @@ class ArticleHandler extends Handler {
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 
-		$router = $request->getRouter();
 		$journal = $this->journal;
 		$publishedArticle = $this->article;
 		$issue = $this->issue;

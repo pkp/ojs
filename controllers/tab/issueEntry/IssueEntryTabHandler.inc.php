@@ -50,7 +50,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId, array('displayedInContainer' => true));
 
-		$issueEntryPublicationMetadataForm->initData($args, $request);
+		$issueEntryPublicationMetadataForm->initData();
 		$json = new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
 		return $json->getString();
 	}

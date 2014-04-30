@@ -13,15 +13,15 @@
  * @brief Class that converts a Native XML document to an artwork file.
  */
 
-import('plugins.importexport.native.filter.NativeXmlMonographFileFilter');
+import('plugins.importexport.native.filter.NativeXmlArticleFileFilter');
 
-class NativeXmlArtworkFileFilter extends NativeXmlMonographFileFilter {
+class NativeXmlArtworkFileFilter extends NativeXmlArticleFileFilter {
 	/**
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
 	function NativeXmlArtworkFileFilter($filterGroup) {
-		parent::NativeXmlMonographFileFilter($filterGroup);
+		parent::NativeXmlArticleFileFilter($filterGroup);
 	}
 
 

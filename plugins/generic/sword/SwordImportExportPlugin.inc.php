@@ -202,11 +202,17 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Execute import/export tasks using the command-line interface.
-	 * @param $args Parameters to the plugin
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
+
+	/**
+	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		die('executeCLI unimplemented');
+		fatalError('Not implemented');
 	}
 }
 

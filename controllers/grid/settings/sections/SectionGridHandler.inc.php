@@ -188,7 +188,6 @@ class SectionGridHandler extends SetupGridHandler {
 	 */
 	function updateSection($args, $request) {
 		$sectionId = $request->getUserVar('sectionId');
-		$journal = $request->getJournal();
 
 		import('controllers.grid.settings.sections.form.SectionForm');
 		$sectionForm = new SectionForm($request, $sectionId);

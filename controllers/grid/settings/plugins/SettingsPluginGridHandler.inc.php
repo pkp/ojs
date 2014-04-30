@@ -34,14 +34,6 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	 */
 	function getCategoryData($categoryDataElement, $filter) {
 		$plugins = parent::getCategoryData($categoryDataElement, $filter);
-
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getAll();
-		$singleJournal = false;
-		if ($journals->getCount() == 1) {
-			$singleJournal = true;
-		}
-
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 
 		$showSitePlugins = false;

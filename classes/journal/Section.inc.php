@@ -55,22 +55,6 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Get ID of primary review form.
-	 * @return int
-	 */
-	function getReviewFormId() {
-		return $this->getData('reviewFormId');
-	}
-
-	/**
-	 * Set ID of primary review form.
-	 * @param $reviewFormId int
-	 */
-	function setReviewFormId($reviewFormId) {
-		return $this->setData('reviewFormId', $reviewFormId);
-	}
-
-	/**
 	 * Get section title abbreviation.
 	 * @param $locale string
 	 * @return string
@@ -102,22 +86,6 @@ class Section extends PKPSection {
 	 */
 	function setAbstractWordCount($wordCount) {
 		return $this->setData('wordCount', $wordCount);
-	}
-
-	/**
-	 * Get sequence of section.
-	 * @return float
-	 */
-	function getSequence() {
-		return $this->getData('sequence');
-	}
-
-	/**
-	 * Set sequence of section.
-	 * @param $sequence float
-	 */
-	function setSequence($sequence) {
-		return $this->setData('sequence', $sequence);
 	}
 
 	/**

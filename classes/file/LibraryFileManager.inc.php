@@ -24,49 +24,6 @@ class LibraryFileManager extends PKPLibraryFileManager {
 	function LibraryFileManager($contextId) {
 		parent::PKPLibraryFileManager($contextId);
 	}
-
-
-	/**
-	 * Get the file suffix for the given file type
-	 * @param $type int LIBRARY_FILE_TYPE_...
-	 */
-	function getFileSuffixFromType($type) {
-		$typeSuffixMap =& $this->getTypeSuffixMap();
-		return $typeSuffixMap[$type];
-	}
-
-	/**
-	 * Get the type => suffix mapping array
-	 * @return array
-	 */
-	function &getTypeSuffixMap() {
-		static $map = array();
-		$parent = parent::getTypeSuffixMap();
-		$map = array_merge($map, $parent);
-		return $map;
-	}
-
-	/**
-	 * Get the type => locale key mapping array
-	 * @return array
-	 */
-	function &getTypeTitleKeyMap() {
-		static $map = array();
-		$parent = parent::getTypeTitleKeyMap();
-		$map = array_merge($map, $parent);
-		return $map;
-	}
-
-	/**
-	 * Get the type => name mapping array
-	 * @return array
-	 */
-	function &getTypeNameMap() {
-		static $map = array();
-		$parent = parent::getTypeNameMap();
-		$map = array_merge($map, $parent);
-		return $map;
-	}
 }
 
 ?>

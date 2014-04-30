@@ -80,8 +80,6 @@ class IssueHandler extends Handler {
 	function current($args, $request) {
 		$this->setupTemplate($request);
 
-		$showToc = isset($args[0]) ? $args[0] : '';
-
 		$journal = $request->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -91,9 +89,6 @@ class IssueHandler extends Handler {
 
 		if ($issue != null) {
 			$request->redirect(null, 'issue', 'view', $issue->getId(), $request->getQueryArray());
-		} else {
-			$issueCrumbTitle = __('current.noCurrentIssue');
-			$issueHeadingTitle = __('current.noCurrentIssue');
 		}
 
 		// consider public identifiers
@@ -110,8 +105,6 @@ class IssueHandler extends Handler {
 		$showToc = isset($args[1]) ? $args[1] : '';
 
 		$this->setupTemplate($request);
-
-		$journal = $request->getJournal();
 
 		$templateMgr = TemplateManager::getManager($request);
 		$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
@@ -303,7 +296,6 @@ class IssueHandler extends Handler {
 							$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getSetting('purchaseIssueFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
-							$templateMgr = TemplateManager::getManager($request);
 							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 							exit;
 						}
@@ -337,8 +329,6 @@ class IssueHandler extends Handler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$galley = $this->getGalley();
 
-		$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-
 		if (!HookRegistry::call('IssueHandler::viewFile', array(&$issue, &$galley))) {
 			import('classes.file.IssueFileManager');
 			$issueFileManager = new IssueFileManager($issue->getId());
@@ -361,14 +351,11 @@ class IssueHandler extends Handler {
 
 		// Determine pre-publication access
 		// FIXME: Do that. (Bug #8278)
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-
-		$prePublicationAccess = false;
 
 		if (!$issue) {
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		}
-		$issueHeadingTitle = $issue->getIssueIdentification(false, true);
+		$templateMgr->assign('issueHeadingTitle', $issue->getIssueIdentification(false, true));
 		$locale = AppLocale::getLocale();
 
 		import('classes.file.PublicFileManager');
@@ -386,7 +373,6 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
 			$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
 
-			$showToc = false;
 		} else {
 			// Issue galleys
 			$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
@@ -397,7 +383,6 @@ class IssueHandler extends Handler {
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
 
-			$publicFileManager = new PublicFileManager();
 			$templateMgr->assign('publishedArticles', $publishedArticles);
 			$showToc = true;
 		}
@@ -454,8 +439,6 @@ class IssueHandler extends Handler {
 				$request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journalId) . '/' . $styleFileName
 			);
 		}
-
-		$templateMgr->assign('issueHeadingTitle', $issueHeadingTitle);
 	}
 }
 

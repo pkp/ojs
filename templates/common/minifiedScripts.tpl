@@ -30,7 +30,6 @@
 
 {* Our own functions (depend on plug-ins) *}
 <script src="{$baseUrl}/lib/pkp/js/functions/general.js"></script>
-<script src="{$baseUrl}/lib/pkp/js/functions/jqueryValidatorI18n.js"></script>
 
 {* Our own classes (depend on plug-ins) *}
 <script src="{$baseUrl}/lib/pkp/js/classes/Helper.js"></script>

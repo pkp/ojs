@@ -167,6 +167,19 @@ class QuickSubmitPlugin extends ImportExportPlugin {
 		return $smarty->smartyUrl($params, $smarty);
 	}
 
+	/**
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
+
+	/**
+	 * @see PKPImportExportPlugin::executeCLI()
+	 */
+	function executeCLI($scriptName, &$args) {
+		fatalError('Not implemented');
+	}
 }
 
 ?>

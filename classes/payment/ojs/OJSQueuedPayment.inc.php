@@ -27,6 +27,13 @@ class OJSQueuedPayment extends QueuedPayment {
 	var $requestUrl;
 
 	/**
+	 * @copydoc QueuedPayment::QueuedPayment
+	 */
+	function OJSQueuedPayment($amount, $currencyCode, $userId = null, $assocId = null) {
+		parent::QueuedPayment($amount, $currencyCode, $userId, $assocId);
+	}
+
+	/**
 	 * Get the journal ID of the payment.
 	 * @return int
 	 */

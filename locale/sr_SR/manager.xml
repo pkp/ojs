@@ -117,41 +117,6 @@
 	<message key="manager.plugins.uploadPluginDir">Select plugin file</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml in plugin directory contains invalid data.</message>
 	<message key="manager.plugins.versionFileNotFound">version.xml not found in plugin directory</message>
-	<message key="manager.reviewFormElement.changeType">Warning: Changing the review form element type from a multiple-choice type to an open-ended type will result in the deletion of the multiple choice options.</message>
-	<message key="manager.reviewFormElements">Form Items</message>
-	<message key="manager.reviewFormElements.addResponseItem">Add selection</message>
-	<message key="manager.reviewFormElements.checkboxes">Checkboxes (you can choose one or more)</message>
-	<message key="manager.reviewFormElements.chooseType">Choose item type</message>
-	<message key="manager.reviewFormElements.confirmDelete">Are you sure you wish to delete an element of a published review form?</message>
-	<message key="manager.reviewFormElements.copyTo">Copy to:</message>
-	<message key="manager.reviewFormElements.create">Create New Item</message>
-	<message key="manager.reviewFormElements.dropdownbox">Drop-down box</message>
-	<message key="manager.reviewFormElements.edit">Edit Form Item</message>
-	<message key="manager.reviewFormElements.elementType">Item type</message>
-	<message key="manager.reviewFormElements.form.elementTypeRequired">An item type is required for the form item.</message>
-	<message key="manager.reviewFormElements.form.questionRequired">A question is required for the form item.</message>
-	<message key="manager.reviewFormElements.noneCreated">No form items have been created.</message>
-	<message key="manager.reviewFormElements.possibleResponse">Selection</message>
-	<message key="manager.reviewFormElements.question">Item</message>
-	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (you can only choose one)</message>
-	<message key="manager.reviewFormElements.required">Reviewers required to complete item</message>
-	<message key="manager.reviewFormElements.included">Included in message to author</message>
-	<message key="manager.reviewFormElements.smalltextfield">Single word text box</message>
-	<message key="manager.reviewFormElements.textarea">Extended text box</message>
-	<message key="manager.reviewFormElements.textfield">Single line text box</message>
-	<message key="manager.reviewForms">Review Forms</message>
-	<message key="manager.reviewForms.completed">Completed</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Are you sure you wish to delete this unpublished review form?</message>
-	<message key="manager.reviewForms.create">Create Review Form</message>
-	<message key="manager.reviewForms.description">Description and Instructions</message>
-	<message key="manager.reviewForms.edit">Review Form</message>
-	<message key="manager.reviewForms.form.titleRequired">A title is required for the review form.</message>
-	<message key="manager.reviewForms.inReview">In Review</message>
-	<message key="manager.reviewForms.list.description">The peer review forms created here will be presented to reviewers to complete, instead of the default form which consists of two open text boxes, the first "for author and editor," and the second "for editor." Review forms can be designated for a specific journal section, and editors will have the option to choose which form to use in assigning the review. In all cases, editors will have the option of including the reviews in corresponding with the author.</message>
-	<message key="manager.reviewForms.noneChosen">None / Free Form Review</message>
-	<message key="manager.reviewForms.noneCreated">No review forms have been created.</message>
-	<message key="manager.reviewForms.preview">Preview Form</message>
-	<message key="manager.reviewForms.title">Title</message>
 	<message key="manager.sections.abstractsNotRequired">Do not require abstracts</message>
 	<message key="manager.sections.assigned">This Section's Editors</message>
 	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section? You will have to re-publish any articles in this section.</message>
@@ -206,7 +171,7 @@
 	<message key="manager.setup.authorGuidelines">Author Guidelines</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Set out for authors the bibliographic and formatting standards used for items submitted to the journal (e.g., <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). It is often helpful to provide examples of the common citation formats for journals and books to be used in submissions. Also identify the types of appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) which authors should be encouraged to upload, in addition to their submission, to enhance readers' engagement with their work.]]></message>
 	<message key="manager.setup.competingInterests">Competing Interests</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedical journals typically require authors and reviewers to declare if they have any competing interests with regard to their research (see <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedical journals typically require authors and reviewers to declare if they have any competing interests with regard to their research (see <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Guidelines for filing a Competing Interest statement</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Require submitting Authors to file a Competing Interest (CI) statement with their submission.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Require Reviewers to file a CI statement with each peer review they submit.</message>
@@ -339,7 +304,7 @@
 	<message key="manager.setup.lists">Lists</message>
 	<message key="manager.setup.listsDescription">Enter the maximum number of items (for example, submissions, users, or editing assignments) that appear on each page of a list, and the number of pages links to display on each page.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page. A LOCKSS license will appear in About the Journal under Archiving:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">other versions of a LOCKSS license</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">other versions of a LOCKSS license</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">participating libraries</a>. Use the prepared invitations for (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>

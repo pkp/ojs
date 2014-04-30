@@ -29,7 +29,7 @@
 installed = On
 
 ; The canonical URL to the OJS installation (excluding the trailing slash)
-base_url = "http://pkp.sfu.ca/ojs"
+base_url = "http://localhost"
 
 ; Path to the registry directory (containing various settings files)
 ; Although the files in this directory generally do not contain any
@@ -117,7 +117,7 @@ show_upgrade_warning = On
 driver = mysql
 host = localhost
 username = root
-password = 
+password =
 name = ojs
 
 ; Enable persistent connections
@@ -462,3 +462,6 @@ display_errors = Off
 
 ; Display deprecation warnings
 deprecation_warnings = Off
+
+webtest_base_url = http://localhost
+webtest_admin_pw = ojsojs

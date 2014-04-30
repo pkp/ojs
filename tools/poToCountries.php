@@ -31,7 +31,7 @@ class poToCountries extends CommandLineTool {
 	function poToCountries($argv = array()) {
 		parent::CommandLineTool($argv);
 
-		$toolName = array_shift($argv);
+		array_shift($argv); // Shift the tool name off the top
 
 		$this->locale = array_shift($argv);
 		$this->translationFile = array_shift($argv);

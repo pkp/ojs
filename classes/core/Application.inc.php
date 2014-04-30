@@ -15,10 +15,10 @@
  *
  */
 
-
 import('lib.pkp.classes.core.PKPApplication');
 
 define('PHP_REQUIRED_VERSION', '5.2.0');
+define('REQUIRES_XSL', false);
 
 define('ASSOC_TYPE_ARTICLE',		ASSOC_TYPE_SUBMISSION);
 define('ASSOC_TYPE_PUBLISHED_ARTICLE',	ASSOC_TYPE_PUBLISHED_SUBMISSION);
@@ -82,8 +82,6 @@ class Application extends PKPApplication {
 	 */
 	function getDAOMap() {
 		return array_merge(parent::getDAOMap(), array(
-			'AnnouncementDAO' => 'classes.announcement.AnnouncementDAO',
-			'AnnouncementTypeDAO' => 'classes.announcement.AnnouncementTypeDAO',
 			'SubmissionCommentDAO' => 'lib.pkp.classes.submission.SubmissionCommentDAO',
 			'ArticleDAO' => 'classes.article.ArticleDAO',
 			'ArticleFileDAO' => 'classes.article.ArticleFileDAO',
@@ -112,9 +110,6 @@ class Application extends PKPApplication {
 			'QueuedPaymentDAO' => 'lib.pkp.classes.payment.QueuedPaymentDAO',
 			'ReviewAssignmentDAO' => 'lib.pkp.classes.submission.reviewAssignment.ReviewAssignmentDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
-			'ReviewFormDAO' => 'lib.pkp.classes.reviewForm.ReviewFormDAO',
-			'ReviewFormElementDAO' => 'lib.pkp.classes.reviewForm.ReviewFormElementDAO',
-			'ReviewFormResponseDAO' => 'lib.pkp.classes.reviewForm.ReviewFormResponseDAO',
 			'RoleDAO' => 'classes.security.RoleDAO',
 			'RTDAO' => 'classes.rt.ojs.RTDAO',
 			'ScheduledTaskDAO' => 'lib.pkp.classes.scheduledTask.ScheduledTaskDAO',
@@ -178,6 +173,14 @@ class Application extends PKPApplication {
 	 */
 	static function getSubmissionDAO() {
 		return DAORegistry::getDAO('ArticleDAO');
+	}
+
+	/**
+	 * Get the section DAO.
+	 * @return SectionDAO
+	 */
+	static function getSectionDAO() {
+		return DAORegistry::getDAO('SectionDAO');
 	}
 
 	/**

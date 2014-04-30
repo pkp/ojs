@@ -115,7 +115,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @param $queuedPayment QueuedPayment
 	 * @param $request PKPRequest
 	 */
-	function displayPaymentForm($queuedPaymentId, &$queuedPayment, $request) {
+	function displayPaymentForm($queuedPaymentId, $queuedPayment, $request) {
 		if (!$this->isConfigured()) return false;
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 		$journal = $request->getJournal();
@@ -243,10 +243,16 @@ class PayPalPlugin extends PaymethodPlugin {
 
 							//NB: if/when paypal subscriptions are enabled, these checks will have to be adjusted
 							// because subscription prices may change over time
+							$queuedAmount = $queuedPayment->getAmount();
+							$grantedAmount = $request->getUserVar('mc_gross');
+							$queuedCurrency = $queuedPayment->getCurrencyCode();
+							$grantedCurrency = $request->getUserVar('mc_currency');
+							$grantedEmail = String::strtolower($request->getUserVar('receiver_email'));
+							$queuedEmail = String::strtolower($this->getSetting($journal->getId(), 'selleraccount'));
 							if (
-								(($queuedAmount = $queuedPayment->getAmount()) != ($grantedAmount = $request->getUserVar('mc_gross')) && $queuedAmount > 0) ||
-								($queuedCurrency = $queuedPayment->getCurrencyCode()) != ($grantedCurrency = $request->getUserVar('mc_currency')) ||
-								($grantedEmail = String::strtolower($request->getUserVar('receiver_email'))) != ($queuedEmail = String::strtolower($this->getSetting($journal->getId(), 'selleraccount')))
+								($queuedAmount != $grantedAmount && $queuedAmount > 0) ||
+								$queuedCurrency != $grantedCurrency ||
+								$grantedEmail != $queuedEmail
 							) {
 								// The integrity checks for the transaction failed. Complain.
 								$mail->assignParams(array(
@@ -310,8 +316,6 @@ class PayPalPlugin extends PaymethodPlugin {
 					$mail->send();
 					exit();
 				}
-
-				break;
 			case 'cancel':
 				Handler::setupTemplate();
 				$templateMgr->assign(array(
@@ -323,7 +327,6 @@ class PayPalPlugin extends PaymethodPlugin {
 				));
 				$templateMgr->display('common/message.tpl');
 				exit();
-				break;
 		}
 		parent::handle($args, $request); // Don't know what to do with it
 	}

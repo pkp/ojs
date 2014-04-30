@@ -175,6 +175,13 @@ class MedraExportPlugin extends DOIExportPlugin {
 
 		return null;
 	}
+
+	/**
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
 }
 
 ?>

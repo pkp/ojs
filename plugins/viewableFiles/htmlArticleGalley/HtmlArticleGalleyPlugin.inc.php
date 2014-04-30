@@ -79,7 +79,6 @@ class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 					}
 				}
 
-				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 				$journal = $request->getJournal();
 				$styleFiles = $this->_getStyleFiles($galley, $fileId, $journal);
 				if (is_array($styleFiles)) {
@@ -102,10 +101,9 @@ class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 	 */
 	function displayArticleGalley($templateMgr, $request, $params) {
 		$journal = $request->getJournal();
-		$router = $request->getRouter();
 
 		if (!$journal) return '';
-		$fileId = (isset($params['fileId']) && is_numeric($params['fileId'])) ? (int) $fileId : null;
+		$fileId = (isset($params['fileId']) && is_numeric($params['fileId'])) ? (int) $params['fileId'] : null;
 
 		$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
 		$templateMgr->assign('htmlGalleyContents', $this->_getHTMLContents($request, $galley, $fileId));

@@ -65,7 +65,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @see PubIdPlugin::getPubId()
 	 */
-	function getPubId(&$pubObject, $preview = false) {
+	function getPubId($pubObject, $preview = false) {
 		$urn = $pubObject->getStoredPubId($this->getPubIdType());
 		if (!$urn) {
 			// Determine the type of the publishing object

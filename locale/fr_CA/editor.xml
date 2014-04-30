@@ -13,9 +13,6 @@
   -->
 
 <locale name="fr_CA" full_name = "Français (Canada)">
-	<message key="editor.article.reviewForms">Formulaires d'évaluation</message>
-	<message key="editor.article.selectReviewForm">Sélectionner un formulaire d'évaluation</message>
-	<message key="editor.article.clearReviewForm">Réinitialiser le formulaire d'évaluation</message>
 	<message key="editor.home">Page d'accueil du rédacteur</message>
 	<message key="editor.submissionsAndPublishing">Soumissions et publication</message>
 	<message key="editor.submissionQueue">Soumission en attente</message>

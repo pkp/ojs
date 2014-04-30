@@ -119,41 +119,6 @@
 	<message key="manager.plugins.uploadPluginDir"> Pilih file plugin </message> 
 	<message key="manager.plugins.versionFileInvalid"> versi .xml di direktori plugin berisi data yang invalid</message>	
 <message key="manager.plugins.versionFileNotFound"> versi .xml tidak ditemukan di direktori plugin </message> 
-	<message key="manager.reviewFormElement.changeType"> Peringatan: mengubah tipe elemen form review dari tipe pilihan banyak ke tipe akhir terbuka akan berakibat ke penghapusan opsi pilihan banyak.</message>	
-<message key="manager.reviewFormElements"> Item Form</message>
-	<message key="manager.reviewFormElements.addResponseItem"> Tambahkan penyeleksian </message> 
-	<message key="manager.reviewFormElements.checkboxes"> Kotak cek? (Anda bisa memilih satu atau lebih)</message>
-	<message key="manager.reviewFormElements.chooseType"> Pilih Tipe Item </message> 
-	<message key="manager.reviewFormElements.confirmDelete"> Apakah Anda yakin ingin menghapus elemen dari form review yang diterbitkan?</message> 
-	<message key="manager.reviewFormElements.copyTo"> Salin ke:</message> 
-	<message key="manager.reviewFormElements.create"> Buat Item Baru </message> 
-	<message key="manager.reviewFormElements.dropdownbox">Kotak Drop-down</message>
-	<message key="manager.reviewFormElements.edit"> Edit Tipe Form </message> 
-	<message key="manager.reviewFormElements.elementType"> Tipe item </message> 
-	<message key="manager.reviewFormElements.form.elementTypeRequired"> Sebuah tipe item diperlukan untuk item form.</message> 
-	<message key="manager.reviewFormElements.form.questionRequired"> Pertanyaan diperlukan untuk item form.</message> 
-	<message key="manager.reviewFormElements.noneCreated"> Tidak ada item form telah dibuat.</message> 
-	<message key="manager.reviewFormElements.possibleResponse"> Penyeleksian </message> 
-	<message key="manager.reviewFormElements.question">Item</message> 
-	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (Anda hanya bisa memilih satu)</message> 
-<message key="manager.reviewFormElements.required"> Reviewer perlu melengkapi/ menyelesaikan item </message> 
-	<message key="manager.reviewFormElements.included"> Termasuk di pesan untuk penulis </message> 
-	<message key="manager.reviewFormElements.smalltextfield"> Kotak teks satu kata </message> 
-	<message key="manager.reviewFormElements.textarea"> Kotak teks lebih besar </message> 
-	<message key="manager.reviewFormElements.textfield"> Kotak teks satu garis </message> 
-	<message key="manager.reviewForms"> Form Review</message> 
-	<message key="manager.reviewForms.completed"> Selesai </message> 
-	<message key="manager.reviewForms.confirmDeleteUnpublished"> Apakah Anda yakin ingin menghapus form review yang belum diterbitkan ini?</message>  
-	<message key="manager.reviewForms.create"> Buat Form Review </message> 
-	<message key="manager.reviewForms.description"> Deskripsi dan Instruksi </message> 
-	<message key="manager.reviewForms.edit"> Form Review </message> 
-	<message key="manager.reviewForms.form.titleRequired"> Judul diperlukan untuk form review.</message> 
-	<message key="manager.reviewForms.inReview"> Dalam Review </message> 
-	<message key="manager.reviewForms.list.description"> Form peer review yang dibuat di sini akan ditampilkan kepada Reviewer untuk dilengkapi, bukan form default yang terdiri dari dua kotak teks terbuka, yang pertama "untuk Penulis dan Editor", dan yang kedua "untuk Editor". Form review dapat dipilih untuk bagian jurnal yang spesifik, dan Editor punya opsi untuk memilih form mana yang akan digunakan dalam penugasan review. Dalam semua kasus, editor punya opsi untuk memasukkan review dalam berkorespondensi dengan penulis.</message> 
-	<message key="manager.reviewForms.noneChosen"> Tidak ada form review </message> 
-	<message key="manager.reviewForms.noneCreated"> Tidak ada form review dibuat.</message> 
-	<message key="manager.reviewForms.preview"> Form Preview </message> 
-	<message key="manager.reviewForms.title"> Judul </message> 
 	<message key="manager.sections.abstractsNotRequired"> Tidak membutuhkan sari </message> 
 	<message key="manager.sections.assigned"> Editor Bagian ini </message> 
 	<message key="manager.sections.confirmDelete"> Apakah Anda yakin ingin menghapus bagian ini secara permanen? Anda akan harus menerbitkan ulang artikel apapun di bagian ini.</message> 
@@ -209,7 +174,7 @@
 	<message key="manager.setup.authorGuidelines"> Petunjuk untuk Penulis </message> 
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Mengatur bibliografi dan format standar untuk penulis yang digunakan untuk penyerahan naskah jurnal (contoh: Manual Penerbitan Asosiasi Psikologi Amerika, edisi 5, 2001). Manual ini sangat membantu karena menyediakan contoh format Sitiran umum untuk jurnal dan buku dalam penyerahan. Juga mengidentifikasi tipe-tipe file tambahan yang tepat (contoh: rangkaian data, instrumen riset, dll). Disarankan agar penulis mengunggah file tambahan tersebut sebagai tambahan ke penyerahan mereka, untuk meningkatkan keterlibatan pembaca pada karya mereka.]]></message> 
 	<message key="manager.setup.competingInterests">Minat Review</message> 
-	<message key="manager.setup.competingInterests.description"><![CDATA[Jurnal biomedis biasanya membutuhkan Penulis dan Reviewer untuk menyatakan apakah mereka memiliki minat review dengan riset mereka (lihat <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Jurnal biomedis biasanya membutuhkan Penulis dan Reviewer untuk menyatakan apakah mereka memiliki minat review dengan riset mereka (lihat <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines"> Petunjuk untuk minat review</message>
 	<message key="manager.setup.competingInterests.requireAuthors"> Membutuhkan Penulis untuk mengarsip file minat review dalam naskah mereka.</message>  
 	<message key="manager.setup.competingInterests.requireReviewers"> Membutuhkan Reviewer untuk mengarsipminat review dengan masing-masing peer review yang mereka serahkan.</message>
@@ -352,7 +317,7 @@
 	<message key="manager.setup.lists"> Daftar </message> 
 	<message key="manager.setup.listsDescription"> Masukkan jumlah maksimal item (sebagai contoh: penyerahan, pengguna, atau pengeditan tugas) yang ditampilkan di tiap halaman, dan jumlah tautan halaman ditampilkan di tiap halaman.</message> 
 	<message key="manager.setup.lockssEnable"><![CDATA[Mengaktifkan LOCKSS untuk menyimpan dan mendistribusikan konten jurnal ke perpustakaan yang berpartisipasi melalui halaman LOCKSS <a href="{$lockssUrl}" target="_blank">Manifestasi Penerbit</a>. Lisensi LOCKSS akan ditampilkan di Tentang Kami di bawah Arsip :]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Lihat <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">versi lain lisensi LOCKSS</a>.]]></message>  
+	<message key="manager.setup.lockssLicenses"><![CDATA[Lihat <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">versi lain lisensi LOCKSS</a>.]]></message>  
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifikasikan 6-10 perpustakaan yang akan mendaftarkan dan menyimpan jurnal. Sebagai contoh, beralih ke institusi di mana editor atau anggota dewan bekerja dan/ atau institusi yang berpartisipasi dalam LOCKSS. Lihat <a href="http://www.lockss.org/community/" target="_blank"> perpustakaan yang berpartisipasi</a>. Gunakan undangan yang telah disiapkan untuk (i) <a href="{$lockssExistingArchiveUrl}" target="_blank"> perpustakaan yang berpartisipasi dalam LOCKSS </a> atau (ii) <a href="{$lockssNewArchiveUrl}" target="_blank"> perpustakaan yang belum berpartisipasi dalam LOCKSS </a>.]]></message>
 	<message key="manager.setup.look">Tampilan</message> 
 	<message key="manager.setup.look.description">Header beranda, isi jurnal, header jurnal, footer, navigasi dan style sheet.</message>	

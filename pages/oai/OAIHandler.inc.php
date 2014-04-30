@@ -10,7 +10,7 @@
  * @class OAIHandler
  * @ingroup pages_oai
  *
- * @brief Handle OAI protocol requests. 
+ * @brief Handle OAI protocol requests.
  */
 
 define('SESSION_DISABLE_INIT', 1); // FIXME?
@@ -41,6 +41,13 @@ class OAIHandler extends Handler {
 		if (!Config::getVar('oai', 'oai')) {
 			Request::redirect(null, 'index');
 		}
+	}
+
+	/**
+	 * @see PKPHandler::requireSSL()
+	 */
+	function requireSSL() {
+		return false;
 	}
 }
 

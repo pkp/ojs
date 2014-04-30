@@ -16,7 +16,6 @@
 import('lib.pkp.classes.controllers.grid.citation.PKPCitationGridHandler');
 
 // import validation classes
-import('classes.handler.validation.HandlerValidatorJournal');
 import('lib.pkp.classes.handler.validation.HandlerValidatorRoles');
 
 class CitationGridHandler extends PKPCitationGridHandler {

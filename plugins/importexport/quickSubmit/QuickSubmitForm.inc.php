@@ -171,10 +171,8 @@ class QuickSubmitForm extends Form {
 	 */
 	function execute() {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$signoffDao = DAORegistry::getDAO('SignoffDAO');
 		$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
-		$application = PKPApplication::getApplication();
 		$request = $this->request;
 		$user = $request->getUser();
 		$router = $request->getRouter();
@@ -212,6 +210,7 @@ class QuickSubmitForm extends Form {
 		// Insert the article to get it's ID
 		$articleDao->insertObject($article);
 		$articleId = $article->getId();
+		$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 
 		// Add authors
 		$authors = $this->getData('authors');
@@ -245,7 +244,6 @@ class QuickSubmitForm extends Form {
 				$author->setSequence($authors[$i]['seq']);
 
 				if ($isExistingAuthor == false) {
-					$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 					$authorDao->insertObject($author);
 				}
 			}
@@ -260,7 +258,6 @@ class QuickSubmitForm extends Form {
 		$designatedPrimary = false;
 		foreach (array_keys($tempFileIds) as $locale) {
 			$temporaryFile = $temporaryFileManager->getFile($tempFileIds[$locale], $user->getId());
-			$fileId = null;
 			if ($temporaryFile) {
 				$fileId = $articleFileManager->temporaryFileToArticleFile($temporaryFile, SUBMISSION_FILE_SUBMISSION);
 				$fileType = $temporaryFile->getFileType();
@@ -324,7 +321,6 @@ class QuickSubmitForm extends Form {
 
 		// Accept the submission
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		$articleFileManager = new ArticleFileManager($articleId);
 		import('classes.submission.sectionEditor.SectionEditorAction');
 
 		assert(false); // FIXME: $decisionLabels missing from call below.

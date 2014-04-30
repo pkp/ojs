@@ -45,7 +45,6 @@ class AuthorGridRow extends PKPAuthorGridRow {
 			$userGroup = $userGroupDao->getById($stageAssignment->getUserGroupId());
 			if (in_array($userGroup->getRoleId(), array(ROLE_ID_MANAGER, ROLE_ID_EDITOR))) {
 				return true;
-				break;
 			}
 		}
 		return false;
