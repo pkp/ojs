@@ -33,7 +33,9 @@ before_install:
   # Make sure permissions are ok.
   - sudo chown -R travis:www-data .
 
-script: ./lib/pkp/tools/runAllTests.sh -Ccf
+script:
+  - ./lib/pkp/tools/runAllTests.sh -Ccf
+  - ./lib/pkp/tools/validatexml.sh
 
 after_script: 
   # Print logs and outputs for debugging.

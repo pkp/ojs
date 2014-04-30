@@ -1,0 +1,6 @@
+./files/
+./tests/
+./plugins/generic/lucene/embedded
+./plugins/importexport/native/sample.xml
+./plugins/importexport/users/sample.xml
+./lib/pkp/tests/
