@@ -1,0 +1,8 @@
+./files/
+./tests/
+./lib/pkp/tests/
+./plugins/importexport/users/sample.xml
+./plugins/importexport/native/sample.xml
+./plugins/generic/xmlGalley/transform/test.xml
+./plugins/generic/lucene/embedded/
+./plugins/generic/lucene/embedded/
