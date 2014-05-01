@@ -447,12 +447,7 @@ class QuickSubmitForm extends Form {
 				$publishedArticle = new PublishedArticle();
 				$publishedArticle->setId($submission->getId());
 				$publishedArticle->setIssueId($issueId);
-				if ($this->getData('datePublished')) {
-					$publishedArticle->setDatePublished($this->getData('datePublished'));
-				} else {
-					// if issue is not published, will be null anyway. So no need to check.
-					$publishedArticle->setDatePublished($issue->getDatePublished());
-				}
+				$publishedArticle->setDatePublished($this->getData('datePublished'));
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 				$publishedArticle->setAccessStatus(ARTICLE_ACCESS_ISSUE_DEFAULT);
 
@@ -483,6 +478,9 @@ class QuickSubmitForm extends Form {
 
 		if ($issue && $issue->getPublished()) {
 			$submission->setStatus(STATUS_PUBLISHED);
+			if ($submission && !$submission->getDatePublished()) {
+				$submission->setDatePublished($issue->getDatePublished());
+			}
 		} else {
 			$submission->setStatus(STATUS_QUEUED);
 		}
