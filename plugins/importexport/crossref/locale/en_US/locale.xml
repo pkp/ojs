@@ -10,9 +10,8 @@
   *
   * Localization strings
   -->
- 
+
 <locale name="en_US" full_name="U.S. English">
-<<<<<<< HEAD
 	<message key="plugins.importexport.crossref.displayName">CrossRef Export/Registration Plugin</message>
 	<message key="plugins.importexport.crossref.description">Export or register article metadata in CrossRef format.</message>
 
@@ -46,25 +45,7 @@
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage:
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
-=======
-	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
-	<message key="plugins.importexport.crossref.description">Export article metadata in CrossRef XML format.</message>
-	
-	<message key="plugins.importexport.crossref.export">Export Data</message>
-	<message key="plugins.importexport.crossref.export.issues">Export Issues</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Select an Issue to export.</message>
-	<message key="plugins.importexport.crossref.export.articles">Export Articles</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Select Articles to export.</message>
-	
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
->>>>>>> parent of ced03d3... *8648* New CrossRef Plugin (work in progress)
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">ERROR:</message>
 
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">No issue matched the specified issue ID "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">No article matched the specified article ID "{$articleId}".</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">In order to use this plug-in please go to the "Public Identifier" plug-in category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">The date published is missing for the article with ID {$param}.</message>
 </locale>
