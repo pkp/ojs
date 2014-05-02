@@ -44,11 +44,11 @@
 				{if $layoutSignoff->getUserId() && $layoutFile}
 					{url|assign:"url" op="notifyLayoutEditor" articleId=$submission->getId()}
 					{if $layoutSignoff->getDateUnderway()}
-                                        	{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.layout.confirmRenotify"}
-                                        	{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
-                                	{else}
-                                        	{icon name="mail" url=$url}
-                                	{/if}
+						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.layout.confirmRenotify"}
+						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
+					{else}
+						{icon name="mail" url=$url}
+					{/if}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}

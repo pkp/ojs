@@ -67,7 +67,7 @@ class PayPalDAO extends DAO {
 
 	/**
 	 * Check whether a given transaction exists.
- 	 * @param $txnId string
+	 * @param $txnId string
 	 * @return boolean
 	 */
 	function transactionExists($txnId) {

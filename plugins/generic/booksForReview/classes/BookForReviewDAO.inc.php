@@ -17,12 +17,12 @@
 import('lib.pkp.classes.db.DAO');
 
 /* These constants are used for user-selectable search fields. */
-define('BFR_FIELD_PUBLISHER', 	'publisher');
-define('BFR_FIELD_YEAR', 		'year');
-define('BFR_FIELD_ISBN', 		'isbn');
-define('BFR_FIELD_TITLE', 		'title');
+define('BFR_FIELD_PUBLISHER',	'publisher');
+define('BFR_FIELD_YEAR',		'year');
+define('BFR_FIELD_ISBN',		'isbn');
+define('BFR_FIELD_TITLE',		'title');
 define('BFR_FIELD_DESCRIPTION', 'description');
-define('BFR_FIELD_NONE', 		null);
+define('BFR_FIELD_NONE',		null);
 
 
 class BookForReviewDAO extends DAO {

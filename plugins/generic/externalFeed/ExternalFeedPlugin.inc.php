@@ -255,14 +255,14 @@ class ExternalFeedPlugin extends GenericPlugin {
 		return false;
 	}
 
- 	/*
- 	 * Execute a management verb on this plugin
- 	 * @param $verb string
- 	 * @param $args array
+	/**
+	 * Execute a management verb on this plugin
+	 * @param $verb string
+	 * @param $args array
 	 * @param $message string Result status message
 	 * @param $messageParams array Parameters for the message key
- 	 * @return boolean
- 	 */
+	 * @return boolean
+	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 

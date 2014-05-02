@@ -38,7 +38,7 @@ class Validation {
 
 				// Call the implicitAuth hook. It will set user.
 
-			 	HookRegistry::call('ImplicitAuthPlugin::implicitAuth', array(&$user));
+				HookRegistry::call('ImplicitAuthPlugin::implicitAuth', array(&$user));
 
 				$valid=true;
 			}

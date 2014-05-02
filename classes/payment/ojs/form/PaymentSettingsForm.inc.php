@@ -50,7 +50,7 @@ class PaymentSettingsForm extends Form {
 			'fastTrackFeeName' => 'string',
 			'fastTrackFeeDescription' => 'string',
 			'purchaseArticleFeeEnabled' => 'bool',
-		  	'purchaseArticleFee' => 'float',
+		 	'purchaseArticleFee' => 'float',
 			'purchaseArticleFeeName' => 'string',
 			'purchaseArticleFeeDescription' => 'string',
 			'purchaseIssueFeeEnabled' => 'bool',

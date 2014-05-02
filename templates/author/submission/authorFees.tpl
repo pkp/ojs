@@ -20,7 +20,7 @@
 		<td width="30%">{$currentJournal->getSetting('submissionFee')|string_format:"%.2f"} {$currentJournal->getSetting('currency')}</td> 
 		<td width="50%"><a class="action" href="{url op="paySubmissionFee" path=$submission->getId()}">{translate key="payment.payNow"}</a></td>
 	{/if}
- 	</tr>
+	</tr>
 {/if}
 {if $currentJournal->getSetting('fastTrackFeeEnabled')}
 	<tr>
@@ -31,7 +31,7 @@
 		<td width="30%">{$currentJournal->getSetting('fastTrackFee')|string_format:"%.2f"} {$currentJournal->getSetting('currency')}</td>
 		<td width="50%"><a class="action" href="{url op="payFastTrackFee" path=$submission->getId()}">{translate key="payment.payNow"}</a></td>
 	{/if}
- 	</tr>	
+	</tr>	
 {/if}
 {if $currentJournal->getSetting('publicationFeeEnabled')}
 	<tr>

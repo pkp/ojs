@@ -280,8 +280,8 @@ class O4DOIExportDom extends DOIExportDom {
 	function &retrievePublicationObjects(&$object) {
 		// Initialize local variables.
 		$nullVar = null;
- 		$journal =& $this->getJournal();
- 		$cache =& $this->getCache();
+		$journal =& $this->getJournal();
+		$cache =& $this->getCache();
 
 		// Retrieve basic OJS objects.
 		$publicationObjects = parent::retrievePublicationObjects($object);

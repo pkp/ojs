@@ -628,7 +628,7 @@ class IssueDAO extends DAO {
 	 * Get unpublished issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange
- 	 * @return issues ItemIterator
+	 * @return issues ItemIterator
 	 */
 	function &getUnpublishedIssues($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(

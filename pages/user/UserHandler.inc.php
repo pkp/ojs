@@ -602,7 +602,7 @@ class UserHandler extends Handler {
 
 	/**
 	 * Pay for a subscription purchase.
- 	 * @param $args array
+	 * @param $args array
 	 * @param $request PKPRequest
 	 */
 	function payPurchaseSubscription($args, &$request) {

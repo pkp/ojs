@@ -64,7 +64,7 @@ class IssueFileManager extends FileManager {
 	 * @return int
 	 */
 	function getIssueId() {
-	 	return $this->_issueId;
+		return $this->_issueId;
 	}
 
 	/**

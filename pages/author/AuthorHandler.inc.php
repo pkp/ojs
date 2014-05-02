@@ -96,7 +96,7 @@ class AuthorHandler extends Handler {
 			
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			$templateMgr->assign_by_ref('completedPaymentDAO', $completedPaymentDAO);
-		} 				
+		}
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();

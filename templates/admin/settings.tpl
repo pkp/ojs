@@ -131,8 +131,8 @@
 			{fieldLabel name="usePaging" key="admin.settings.usePaging"}
 		</td>
 	</tr>
-    <tr valign="top">
-    	<td class="label">{translate key="admin.settings.journalsList"}</td>
+	<tr valign="top">
+	<td class="label">{translate key="admin.settings.journalsList"}</td>
 		<td colspan="2" class="value">
 			{translate key="admin.settings.journalsList.description"}<br />
 			<input type="checkbox" name="showThumbnail" id="showThumbnail" value="1"{if $showThumbnail} checked="checked"{/if} />

@@ -64,7 +64,7 @@ class OJSPaymentManager extends PaymentManager {
 		$payment->setJournalId($journalId);
 		$payment->setType($type);
 
-	 	switch ($type) {
+		switch ($type) {
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				$payment->setRequestUrl($this->request->url(null, 'article', 'view', $assocId));
 				break;

@@ -342,7 +342,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 */
 	function getSortMapping($heading) {
 		switch ($heading) {
-	 		case 'id': return 'a.article_id';
+			case 'id': return 'a.article_id';
 			case 'assignDate': return 'notified_date';
 			case 'section': return 'section_abbrev';
 			case 'authors': return 'author_name';
