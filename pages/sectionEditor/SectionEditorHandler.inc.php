@@ -209,7 +209,7 @@ class SectionEditorHandler extends Handler {
 	function instructions($args, &$request) {
 		$this->setupTemplate();
 		import('classes.submission.proofreader.ProofreaderAction');
-		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof', 'referenceLinking'))) {
+		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'layout', 'proof', 'referenceLinking'))) {
 			$request->redirect(null, null, 'index');
 		}
 	}
