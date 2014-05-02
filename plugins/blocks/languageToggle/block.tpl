@@ -31,7 +31,7 @@
 	<form action="#">
 		<label for="languageSelect">{translate key="plugins.block.languageToggle.selectLabel"}</label>
 		<select id="languageSelect" {if $isPostRequest}disabled="disabled" {/if}size="1" name="locale" class="selectMenu">{html_options options=$languageToggleLocales selected=$currentLocale}</select>
-		<input type="submit" class="button" value="Submit" onclick="changeLanguage(); return false;" />
+		<input type="submit" class="button" value="{translate key='form.submit'}" onclick="changeLanguage(); return false;" />
 	</form>
 </div>
 {/if}
