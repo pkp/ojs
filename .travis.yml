@@ -15,7 +15,14 @@ before_install:
   # Install php unit selenium extension.
   - pear channel-discover pear.phpunit.de
   - pear install phpunit/PHPUnit_Selenium
- 
+
+  # Xvfb requirements.
+  - sudo apt-get install -y x11-xkb-utils
+  # Add fonts.
+  - sudo apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
+  - sudo apt-get install -y defoma x-ttcidfont-conf cabextract ttf-mscorefonts-installer
+  - sudo dpkg-reconfigure --default-priority x-ttcidfont-conf
+  - mkfontdir
   # Start Virtual Framebuffer to imitate a monitor.
   - sudo Xvfb :10 -ac > xvfb-output & 
   - export DISPLAY=:10
