@@ -543,7 +543,7 @@ class SubscriptionManagerHandler extends Handler {
 			$userId = (int) $userId;
 			$user = $userDao->getById($userId);
 		} else {
-			$user = $userDao->getUserByUsername($userId);
+			$user = $userDao->getByUsername($userId);
 		}
 
 		if ($user == null) {

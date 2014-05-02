@@ -948,7 +948,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$userId = (int) $userId;
 			$user = $userDao->getUser($userId);
 		} else {
-			$user = $userDao->getUserByUsername($userId);
+			$user = $userDao->getByUsername($userId);
 		}
 
 

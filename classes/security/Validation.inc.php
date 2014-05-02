@@ -158,7 +158,7 @@ class Validation {
 	 */
 	function checkCredentials($username, $password) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUserByUsername($username, false);
+		$user =& $userDao->getByUsername($username, false);
 
 		$valid = false;
 		if (isset($user)) {
