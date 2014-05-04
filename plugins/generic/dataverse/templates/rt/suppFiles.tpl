@@ -40,17 +40,17 @@
 <tr valign="top">
 	<td class="label" width="20%">{translate key="plugins.generic.dataverse.dataCitation"}</td>
 	<td class="value" width="80%">{$dataCitation|strip_unsafe_html}</td>
-</tr>  
+</tr>	 
 {/if}
 <tr valign="top">
 	<td class="label" width="20%">&nbsp;</td>
 	<td class="value" width="80%">
-    {if $suppFile->getId()|array_key_exists:$dvFileIndex}
-      <a href="{$study->getPersistentUri()}" class="action" target="_blank">{translate key="plugins.generic.dataverse.suppFiles.view"}</a>
-    {else}
-      <a href="{url page="article" op="downloadSuppFile" path=$article->getBestArticleId()|to_array:$suppFile->getBestSuppFileId($currentJournal)}" class="action">{if $suppFile->isInlineable() || $suppFile->getRemoteURL()}{translate key="common.view"}{else}{translate key="common.download"}{/if}</a> {if !$suppFile->getRemoteURL()}({$suppFile->getNiceFileSize()}){/if}
-    {/if}
-    &nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="suppFileMetadata" path=$articleId|to_array:$galleyId:$suppFile->getId()}" class="action">{translate key="rt.suppFiles.viewMetadata"}</a>
+		{if $suppFile->getId()|array_key_exists:$dvFileIndex}
+			<a href="{$study->getPersistentUri()}" class="action" target="_blank">{translate key="plugins.generic.dataverse.suppFiles.view"}</a>
+		{else}
+			<a href="{url page="article" op="downloadSuppFile" path=$article->getBestArticleId()|to_array:$suppFile->getBestSuppFileId($currentJournal)}" class="action">{if $suppFile->isInlineable() || $suppFile->getRemoteURL()}{translate key="common.view"}{else}{translate key="common.download"}{/if}</a> {if !$suppFile->getRemoteURL()}({$suppFile->getNiceFileSize()}){/if}
+		{/if}
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="suppFileMetadata" path=$articleId|to_array:$galleyId:$suppFile->getId()}" class="action">{translate key="rt.suppFiles.viewMetadata"}</a>
 	</td>
 </tr>
 </table>

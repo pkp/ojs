@@ -2,15 +2,15 @@
 <!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
 
 <!--
-  * plugins/generic/dataverse/schema.xml
-  *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Dataverse plugin schema in XML.
-  *
-  -->
+	* plugins/generic/dataverse/schema.xml
+	*
+	* Copyright (c) 2013-2014 Simon Fraser University Library
+	* Copyright (c) 2003-2014 John Willinsky
+	* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+	*
+	* Dataverse plugin schema in XML.
+	*
+	-->
 
 <schema version="0.2">
 
@@ -47,7 +47,7 @@
 			<col>submission_id</col>
 		</index>
 	</table>
-  
+	
 	<table name="dataverse_files">
 		<field name="dvfile_id" type="I8">
 			<KEY/>
@@ -65,7 +65,7 @@
 		</field>
 		<field name="content_source_uri" type="C2" size="255">
 			<NOTNULL/>
-			<DEFAULT VALUE=""/>      
+			<DEFAULT VALUE=""/>			 
 		</field>
 		<descr>Dataverse files</descr>
 		<index name="dataverse_files_supp_id">
@@ -77,6 +77,6 @@
 		<index name="dataverse_files_study_id">
 			<col>study_id</col>
 		</index>
-	</table>  
-  
+	</table>	
+	
 </schema>
