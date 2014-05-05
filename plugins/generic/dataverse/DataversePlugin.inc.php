@@ -220,6 +220,11 @@ class DataversePlugin extends GenericPlugin {
 					$form->display();
 				}
 				return true;
+        
+			default:
+				// Unknown management verb
+				assert(false);
+				return false;
 		}
 	}
 
