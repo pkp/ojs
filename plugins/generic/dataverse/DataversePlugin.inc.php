@@ -337,7 +337,7 @@ class DataversePlugin extends GenericPlugin {
 		if ($index !== false) {
 			$newOutput = substr($output,0,$index);
 			$newOutput .= '<td class="label">'.	 __('plugins.generic.dataverse.dataCitation') .'</td>';
-			$newOutput .= '<td class="value" colspan="2">'. $dataCitation .'</td></tr><tr>';
+			$newOutput .= '<td class="value" colspan="2">'. String::stripUnsafeHtml($dataCitation) .'</td></tr><tr>';
 			$newOutput .= substr($output, $index);
 			$output =& $newOutput;
 		}
