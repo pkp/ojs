@@ -303,7 +303,7 @@ class DataversePlugin extends GenericPlugin {
 				}
 				$templateMgr->assign_by_ref('study', $study);				 
 				$templateMgr->assign('dvFileIndex', $dvFileIndex);
-				$templateMgr->assign('dataCitation', $study->getDataCitation());
+				$templateMgr->assign('dataCitation', $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
 				$templateMgr->display($this->getTemplatePath() .'/'. $template);
 				return true;
 		}
@@ -325,7 +325,7 @@ class DataversePlugin extends GenericPlugin {
 
 		$dataCitation = '';
 		if (isset($study)) {
-			$dataCitation = $study->getDataCitation();
+			$dataCitation = $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri());
 		}
 		else {
 			// There may be an external data citation
@@ -341,7 +341,7 @@ class DataversePlugin extends GenericPlugin {
 			$newOutput .= substr($output, $index);
 			$output =& $newOutput;
 		}
-			$templateMgr->unregister_outputfilter('submissionSummaryOutputFilter');
+    $templateMgr->unregister_outputfilter('submissionSummaryOutputFilter');
 		return $output;
 	}
 	
@@ -359,7 +359,7 @@ class DataversePlugin extends GenericPlugin {
 		$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
 		$study =& $dataverseStudyDao->getStudyBySubmissionId($article->getId());
 		if (isset($study)) {
-			$templateMgr->assign('dataCitation', $study->getDataCitation());
+			$templateMgr->assign('dataCitation', $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
 		}
 		else {
 			// Article may have an external data citation
@@ -480,7 +480,7 @@ class DataversePlugin extends GenericPlugin {
 		$study = $dvStudyDao->getStudyBySubmissionId($articleId);
 
 		if (isset($study)) {
-			$smarty->assign('dataCitation', $study->getDataCitation());
+			$smarty->assign('dataCitation', $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
 			$smarty->assign('studyLocked', $this->studyIsLocked($study));
 		}
 		$output .= $smarty->fetch($this->getTemplatePath() . 'suppFileAdditionalMetadata.tpl');
@@ -1301,7 +1301,7 @@ class DataversePlugin extends GenericPlugin {
 		$notificationManager = new NotificationManager();
 
 		if ($studyReleased) {
-			$params = array('dataCitation' => $study->getDataCitation());
+			$params = array('dataCitation' => $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED, $params);
 		}
 		else {
@@ -1512,6 +1512,19 @@ class DataversePlugin extends GenericPlugin {
 		
 		return $templateMgr->fetch($this->getTemplatePath() .'citation'. $citationFormat .'.tpl');
 	}
+  
+  /**
+   * Deposit receipt sent back by Data Deposit API contains a plain-text data
+   * citation and a persistent URI. Replace URI in citation with markup to link
+   * to cited study.
+   * @param $dataCitation string Plain-text data citation
+   * @param $persistentUri string Persistent URI for study
+   * @return string HTML formatted citation
+   */
+  function _formatDataCitation($dataCitation, $persistentUri) {
+    return str_replace($persistentUri, '<a href="'. $persistentUri .'">'. $persistentUri .'</a>', strip_tags($dataCitation));
+
+  }
 }
 
 ?>

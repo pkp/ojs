@@ -119,17 +119,12 @@ class DataverseStudy extends DataObject {
 	}
 	
 	/**
-	 * Get data citation.
-	 * @param $markup boolean optional Add markup to citation.
+	 * Get data citation. 
+	 * @return string
 	 */
-	function getDataCitation($markup = true) {
-		$dataCitation = $this->getData('dataCitation');
-		if ($markup) {
-			// Add markup to link persistent URI.
-			$dataCitation = str_replace($this->getPersistentUri(), '<a href="'. $this->getPersistentUri() .'">'. $this->getPersistentUri() .'</a>', $dataCitation);
-		}
-		return $dataCitation;
-	}
+	function getDataCitation() {
+		return $this->getData('dataCitation');
+  }
 	
 	/**
 	 * Set data citation.
