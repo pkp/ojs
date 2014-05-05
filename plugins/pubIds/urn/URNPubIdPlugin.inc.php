@@ -189,7 +189,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 					}
 
 					if ($article) {
-		 				$urnSuffix .= '.' . $article->getId();
+						$urnSuffix .= '.' . $article->getId();
 					}
 
 					if ($galley) {
@@ -309,25 +309,25 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 *  the last number of the quotient before the decimal point is the check number.
 	 */
 	function _calculateCheckNo($urn) {
-	    $urnLower = strtolower_codesafe($urn);
+		$urnLower = strtolower_codesafe($urn);
 
-	    $conversionTable = array('9' => '41', '8' => '9', '7' => '8', '6' => '7', '5' => '6', '4' => '5', '3' => '4', '2' => '3', '1' => '2', '0' => '1', 'a' => '18', 'b' => '14', 'c' => '19', 'd' => '15', 'e' => '16', 'f' => '21', 'g' => '22', 'h' => '23', 'i' => '24', 'j' => '25', 'k' => '42', 'l' => '26', 'm' => '27', 'n' => '13', 'o' => '28', 'p' => '29', 'q' => '31', 'r' => '12', 's' => '32', 't' => '33', 'u' => '11', 'v' => '34', 'w' => '35', 'x' => '36', 'y' => '37', 'z' => '38', '-' => '39', ':' => '17', '_' => '43', '/' => '45', '.' => '47', '+' => '49');
+		$conversionTable = array('9' => '41', '8' => '9', '7' => '8', '6' => '7', '5' => '6', '4' => '5', '3' => '4', '2' => '3', '1' => '2', '0' => '1', 'a' => '18', 'b' => '14', 'c' => '19', 'd' => '15', 'e' => '16', 'f' => '21', 'g' => '22', 'h' => '23', 'i' => '24', 'j' => '25', 'k' => '42', 'l' => '26', 'm' => '27', 'n' => '13', 'o' => '28', 'p' => '29', 'q' => '31', 'r' => '12', 's' => '32', 't' => '33', 'u' => '11', 'v' => '34', 'w' => '35', 'x' => '36', 'y' => '37', 'z' => '38', '-' => '39', ':' => '17', '_' => '43', '/' => '45', '.' => '47', '+' => '49');
 
-	    $newURN = '';
-	    for ($i = 0; $i < strlen($urnLower); $i++) {
-	    	$char = $urnLower[$i];
-	    	$newURN .= $conversionTable[$char];
-	    }
-	    $sum = 0;
-	    for ($j = 1; $j <= strlen($newURN); $j++) {
-		    $sum = $sum + ($newURN[$j-1] * $j);
-	    }
-	    $lastNumber = $newURN[strlen($newURN)-1];
-	    $quot = $sum / $lastNumber;
-	    $quotRound = floor($quot);
-	    $quotString = (string)$quotRound;
+		$newURN = '';
+		for ($i = 0; $i < strlen($urnLower); $i++) {
+			$char = $urnLower[$i];
+			$newURN .= $conversionTable[$char];
+		}
+		$sum = 0;
+		for ($j = 1; $j <= strlen($newURN); $j++) {
+			$sum = $sum + ($newURN[$j-1] * $j);
+		}
+		$lastNumber = $newURN[strlen($newURN)-1];
+		$quot = $sum / $lastNumber;
+		$quotRound = floor($quot);
+		$quotString = (string)$quotRound;
 
-	    return $quotString[strlen($quotString)-1];
+		return $quotString[strlen($quotString)-1];
 	}
 }
 

@@ -429,7 +429,7 @@
 	<message key="manager.setup.reviewOptions.onQuality"> Editor akan menilai Reviewer dengan skala kualitas lima poin setelah masing-masing Reviewer selesai mereview.</message> 
 	<message key="manager.setup.reviewOptions.remindForInvite1"> Jika Reviewer belum merespon permintaan review dalam</message>
 	<message key="manager.setup.reviewOptions.remindForInvite2">hari.</message>	
-<message key="manager.setup.reviewOptions.remindForSubmit1"> Jika Reviewer belum menyerahkan rekomendasi dalam</message>  	
+<message key="manager.setup.reviewOptions.remindForSubmit1"> Jika Reviewer belum menyerahkan rekomendasi dalam</message>
 <message key="manager.setup.reviewOptions.remindForSubmit2">hari setelah tanggal jatuh tempo.</message> 
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess"> Reviewer akan memiliki akses ke file naskah hanya setelah setuju untuk mereviewnya.</message> 
 	<message key="manager.setup.reviewOptions.reviewerAccess"> Akses Review </message> 
@@ -617,7 +617,7 @@
 <message key="manager.subscriptions.form.saveAndCreateAnother">Simpan dan Buat yang Lain</message> 
 <message key="manager.subscriptions.form.subscriptionContactRequired"> Untuk mengirim pengguna email pemberitahuan, nama kontak dan alamat email langganan harus ditentukan di setup jurnal.</message>
 <message key="manager.subscriptions.form.subscriptionExists"> Pengguna ini sudah memiliki langganan untuk jurnal ini.</message>
-<message key="manager.subscriptions.form.typeRequired"> Tipe langganan harus dibuat sebelum langganan baru dapat dibuat.</message>  	
+<message key="manager.subscriptions.form.typeRequired"> Tipe langganan harus dibuat sebelum langganan baru dapat dibuat.</message>
 <message key="manager.subscriptions.ipRange">IP Range</message> 
 <message key="manager.subscriptions.membership">Keanggotaan</message> 
 <message key="manager.subscriptions.referenceNumber">Nomor Acuan</message> 

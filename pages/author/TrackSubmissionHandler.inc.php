@@ -381,7 +381,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	 * Save the modified metadata.
 	 * @param $args array
 	 * @param $request PKPRequest
- 	 */
+	 */
 	function saveMetadata($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
 		$this->validate($request, $articleId);
@@ -393,8 +393,8 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$initialSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_INITIAL', ASSOC_TYPE_ARTICLE, $submission->getId());
 		if ($initialSignoff->getDateCompleted() != null || AuthorAction::saveMetadata($submission, $request)) {
- 			$request->redirect(null, null, 'submission', $articleId);
- 		}
+			$request->redirect(null, null, 'submission', $articleId);
+		}
 	}
 
 	/**

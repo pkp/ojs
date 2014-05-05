@@ -11,28 +11,27 @@
 
 {if $enableLanguageToggle}
 <div class="block" id="sidebarLanguageToggle">
-  <script type="text/javascript">
-  	<!--
-    function changeLanguage() 
-    {ldelim}
-      var e = document.getElementById('languageSelect');
-      var new_locale = e.options[e.selectedIndex].value;
-      
-      var base_url = "{$currentUrl|escape}";
-      var current_url = document.URL;
-          
-      var redirect_url = '{url|escape:"javascript" page="user" op="setLocale" path="NEW_LOCALE" source=$smarty.server.REQUEST_URI}';
-      redirect_url = redirect_url.replace("NEW_LOCALE", new_locale);
+	<script type="text/javascript">
+		<!--
+		function changeLanguage() {ldelim}
+			var e = document.getElementById('languageSelect');
+			var new_locale = e.options[e.selectedIndex].value;
 
-      window.location.href = redirect_url;
-    {rdelim}
-    //-->
-  </script>
-  <span class="blockTitle">{translate key="common.language"}</span>
-  <form action="#">
-    <label for="languageSelect">{translate key="plugins.block.languageToggle.selectLabel"}</label>
-    <select id="languageSelect" {if $isPostRequest}disabled="disabled" {/if}size="1" name="locale" class="selectMenu">{html_options options=$languageToggleLocales selected=$currentLocale}</select>
-    <input type="submit" value="Submit" onclick="changeLanguage(); return false;" />
-  </form>
+			var base_url = "{$currentUrl|escape}";
+			var current_url = document.URL;
+
+			var redirect_url = '{url|escape:"javascript" page="user" op="setLocale" path="NEW_LOCALE" source=$smarty.server.REQUEST_URI}';
+			redirect_url = redirect_url.replace("NEW_LOCALE", new_locale);
+
+			window.location.href = redirect_url;
+		{rdelim}
+		//-->
+	</script>
+	<span class="blockTitle">{translate key="common.language"}</span>
+	<form action="#">
+		<label for="languageSelect">{translate key="plugins.block.languageToggle.selectLabel"}</label>
+		<select id="languageSelect" {if $isPostRequest}disabled="disabled" {/if}size="1" name="locale" class="selectMenu">{html_options options=$languageToggleLocales selected=$currentLocale}</select>
+		<input type="submit" class="button" value="{translate key='form.submit'}" onclick="changeLanguage(); return false;" />
+	</form>
 </div>
 {/if}

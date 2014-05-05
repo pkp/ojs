@@ -16,9 +16,9 @@
 
 class EmbeddedServer {
 
-	//
- 	// Constructor
- 	//
+	/**
+	 * Constructor
+	 */
 	function EmbeddedServer() {
 	}
 

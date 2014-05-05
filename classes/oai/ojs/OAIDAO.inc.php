@@ -19,21 +19,21 @@ import('classes.issue.Issue');
 
 class OAIDAO extends PKPOAIDAO {
 
- 	/** Helper DAOs */
- 	var $journalDao;
- 	var $sectionDao;
+	/** Helper DAOs */
+	var $journalDao;
+	var $sectionDao;
 	var $publishedArticleDao;
 	var $articleGalleyDao;
 	var $issueDao;
- 	var $authorDao;
- 	var $suppFileDao;
- 	var $journalSettingsDao;
+	var $authorDao;
+	var $suppFileDao;
+	var $journalSettingsDao;
 
- 	var $journalCache;
+	var $journalCache;
 	var $sectionCache;
 	var $issueCache;
 
- 	/**
+	/**
 	 * Constructor.
 	 */
 	function OAIDAO() {

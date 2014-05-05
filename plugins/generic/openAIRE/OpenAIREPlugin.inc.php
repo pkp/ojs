@@ -217,7 +217,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		return false;
 	}
 
- 	/**
+	/**
 	 * Change Dc11 Description to consider the OpenAIRE elements
 	 */
 	function changeDc11Desctiption($hookName, $params) {

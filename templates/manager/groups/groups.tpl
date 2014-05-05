@@ -48,24 +48,24 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveGroup"); });
 	</tr>
 {assign var="isFirstEditorialTeamEntry" value=1}
 {iterate from=groups item=group}
-		{if $group->getContext() == GROUP_CONTEXT_EDITORIAL_TEAM}
-			{if $isFirstEditorialTeamEntry}
-				{assign var="isFirstEditorialTeamEntry" value=0}
-    		  <tr valign="top">
- 						<td colspan="3">{translate key="manager.groups.context.editorialTeam.short"}</td>
-					</tr>
-					<tr>
-						<td colspan="3" class="separator">&nbsp;</td>
-					</tr>
+	{if $group->getContext() == GROUP_CONTEXT_EDITORIAL_TEAM}
+		{if $isFirstEditorialTeamEntry}
+			{assign var="isFirstEditorialTeamEntry" value=0}
+				<tr valign="top">
+					<td colspan="3">{translate key="manager.groups.context.editorialTeam.short"}</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="separator">&nbsp;</td>
+				</tr>
 			{/if}
-	    <tr valign="top" id=editorialteam-{$group->getId()} class="data">
+		<tr valign="top" id=editorialteam-{$group->getId()} class="data">
 			<td class="drag" width="5%">&nbsp;</td>
 			<td class="drag">
 				{url|assign:"url" page="manager" op="email" toGroup=$group->getId()}
 				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}
 			</td>
 		{else}
-		  <tr valign="top" id="other-{$group->getId()}" class="data">
+		<tr valign="top" id="other-{$group->getId()}" class="data">
 			<td class="drag" colspan="2">
 				{url|assign:"url" page="manager" op="email" toGroup=$group->getId()}
 				{$group->getLocalizedTitle()|escape}&nbsp;{icon name="mail" url=$url}

@@ -192,7 +192,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				}
 
 				if ($article) {
- 					$doiSuffix .= '.' . $article->getId();
+					$doiSuffix .= '.' . $article->getId();
 				}
 
 				if ($galley) {

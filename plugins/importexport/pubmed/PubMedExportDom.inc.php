@@ -99,7 +99,7 @@ class PubMedExportDom {
 		// use the "e-location ID" as the "page numbers" in PubMed
 		$pages = $article->getPages();
 		if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
-			// simple pagination (eg. "pp. 3- 		8")
+			// simple pagination (eg. "pp. 3-8")
 			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
 			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
 		} elseif (preg_match("/(e[0-9]+)\s*-\s*(e[0-9]+)/i", $pages, $matches)) { // e9 - e14, treated as page ranges

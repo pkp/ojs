@@ -948,7 +948,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$userId = (int) $userId;
 			$user = $userDao->getUser($userId);
 		} else {
-			$user = $userDao->getUserByUsername($userId);
+			$user = $userDao->getByUsername($userId);
 		}
 
 
@@ -1189,7 +1189,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Select a copyeditor.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 */
+ 	 */
 	function selectCopyeditor($args, $request) {
 		$articleId = (int) array_shift($args);
 		$userId = (int) array_shift($args);
@@ -1731,7 +1731,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $articleId);
 			if ($layoutSignoff) {
 				$templateMgr->assign('currentUser', $layoutSignoff->getUserId());
-			}
+ 			}
 
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -1788,7 +1788,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		import('classes.submission.form.ArticleGalleyForm');
-		$galleyForm = new ArticleGalleyForm($articleId);
+ 		$galleyForm = new ArticleGalleyForm($articleId);
 		$galleyId = $galleyForm->execute($fileName, $request->getUserVar('createRemote'));
 
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
@@ -2304,7 +2304,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$proofSignoff = $signoffDao->getBySymbolic('SIGNOFF_PROOFREADING_PROOFREADER', ASSOC_TYPE_ARTICLE, $articleId);
 			if ($proofSignoff) {
 				$templateMgr->assign('currentUser', $proofSignoff->getUserId());
-			}
+ 			}
 			$templateMgr->assign('statistics', $proofreaderStatistics);
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -2551,9 +2551,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if ($publishedArticle) {
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
-				if (!$publishedArticle->getDatePublished() && $issue->getPublished()) {
-					$publishedArticle->setDatePublished(Core::getCurrentDate());
-				}
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
 				// Re-index the published article metadata.
@@ -2622,7 +2619,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function setDatePublished($args, $request) {
 		$articleId = (int) array_shift($args);
+		$issueId = (int) $request->getUserVar('issueId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+
+		$journal =& $request->getJournal();
+		$submission =& $this->submission;
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);

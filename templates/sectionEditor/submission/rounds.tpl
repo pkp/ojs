@@ -155,7 +155,7 @@
 			{/if}
 		</td>
 	</tr>
- 	<tr valign="top">
+	<tr valign="top">
 		<td class="label">{translate key="reviewer.article.uploadedFile"}</td>
 		<td colspan="4">
 			<table width="100%" class="data">

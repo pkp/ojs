@@ -464,7 +464,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 	<!-- People Management -->
 	<message key="manager.people.confirmDisable">Wyłączyć tego użytkownika? Uniemożliwi to jego zalogowanie się do systemu.</message>
-	<message key="manager.people.noAdministrativeRights"><![CDATA[Nie posiadasz wystraczających praw administracyjnych aby usunąć tego użytkownika. 	Musisz posiadać uprawnienia administratora strony.
+	<message key="manager.people.noAdministrativeRights"><![CDATA[Nie posiadasz wystraczających praw administracyjnych aby usunąć tego użytkownika.	Musisz posiadać uprawnienia administratora strony.
 	]]></message>
 
 
@@ -802,7 +802,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="about.sponsors">Sponsorzy</message>
 	<message key="about.contributors">Wydawca</message>
 	<message key="about.onlineSubmissions">Przesyłanie tekstów</message>
-	<message key="about.onlineSubmissions.haveAccount">Posiadasz nazwę 	użytkownika oraz hasło do zalogowania się na stronie czasopisma {$journalTitle}?</message>
+	<message key="about.onlineSubmissions.haveAccount">Posiadasz nazwę użytkownika oraz hasło do zalogowania się na stronie czasopisma {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Przejdź do logowania</message>
 	<message key="about.onlineSubmissions.needAccount">Nie posiadasz nazwy użytkownika oraz hasła</message>
 	<message key="about.onlineSubmissions.registration">Przejdź do rejestracji</message>

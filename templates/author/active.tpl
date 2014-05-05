@@ -72,8 +72,8 @@
 						{if $completedPaymentDAO->hasPaidPublication($submission->getJournalId(), $submission->getId())}
 							{translate key="payment.publication.publicationPaid}
 						{else}
-						 	<a href="{url op="payPublicationFee" path="$articleId"}" class="action">{translate key="payment.publication.payPublication"}</a>
-						 {/if}
+							<a href="{url op="payPublicationFee" path="$articleId"}" class="action">{translate key="payment.publication.payPublication"}</a>
+						{/if}
 				{/if}		
 		{/if}
 			</td>

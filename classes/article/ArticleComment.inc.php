@@ -200,7 +200,7 @@ class ArticleComment extends DataObject {
 		return $this->setData('comments', $comments);
 	}
 
- 	/**
+	/**
 	 * get date posted
 	 * @return date
 	 */
@@ -216,7 +216,7 @@ class ArticleComment extends DataObject {
 		return $this->setData('datePosted', $datePosted);
 	}
 
- 	/**
+	/**
 	 * get date modified
 	 * @return date
 	 */
@@ -232,7 +232,7 @@ class ArticleComment extends DataObject {
 		return $this->setData('dateModified', $dateModified);
 	}
 
- 	/**
+	/**
 	 * get viewable
 	 * @return boolean
 	 */

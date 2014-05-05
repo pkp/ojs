@@ -38,7 +38,7 @@ class Validation {
 
 				// Call the implicitAuth hook. It will set user.
 
-			 	HookRegistry::call('ImplicitAuthPlugin::implicitAuth', array(&$user));
+				HookRegistry::call('ImplicitAuthPlugin::implicitAuth', array(&$user));
 
 				$valid=true;
 			}
@@ -158,7 +158,7 @@ class Validation {
 	 */
 	function checkCredentials($username, $password) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$user =& $userDao->getUserByUsername($username, false);
+		$user =& $userDao->getByUsername($username, false);
 
 		$valid = false;
 		if (isset($user)) {

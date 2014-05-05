@@ -45,7 +45,7 @@ class AbntSettingsForm extends Form {
 		$plugin =& $this->plugin;
 
 		$this->_data = array(
- 			'location' => $plugin->getSetting($journalId, 'location')
+			'location' => $plugin->getSetting($journalId, 'location')
 		);
 	}
 
@@ -61,7 +61,7 @@ class AbntSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
- 		$this->readUserVars(array('location'));
+		$this->readUserVars(array('location'));
 	}
 
 	/**

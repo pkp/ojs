@@ -477,10 +477,9 @@ function moveAuthor(dir, authorIndex) {
 
 </div>
 
-{/if}{* $isEditor *}
-
 <div class="separator"></div>
 
+{/if}{* $isEditor *}
 
 <p><input type="submit" value="{translate key="submission.saveMetadata"}" class="button defaultButton"/> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 

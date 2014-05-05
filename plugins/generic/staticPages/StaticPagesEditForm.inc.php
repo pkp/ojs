@@ -75,7 +75,7 @@ class StaticPagesEditForm extends Form {
 			if ($staticPage != null) {
 				$this->_data = array(
 					'staticPageId' => $staticPage->getId(),
- 					'pagePath' => $staticPage->getPath(),
+					'pagePath' => $staticPage->getPath(),
 					'title' => $staticPage->getTitle(null),
 					'content' => $staticPage->getContent(null)
 				);
@@ -159,8 +159,8 @@ class StaticPagesEditForm extends Form {
 		$staticPage->setJournalId($journalId);
 		$staticPage->setPath($this->getData('pagePath'));
 
-		$staticPage->setTitle($this->getData('title'), null); 		// Localized
-		$staticPage->setContent($this->getData('content'), null); 	// Localized
+		$staticPage->setTitle($this->getData('title'), null);		// Localized
+		$staticPage->setContent($this->getData('content'), null);	// Localized
 
 		if (isset($this->staticPageId)) {
 			$staticPagesDao->updateStaticPage($staticPage);
