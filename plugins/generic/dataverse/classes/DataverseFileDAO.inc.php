@@ -10,7 +10,7 @@
  * @class DataverseFileDAO
  * @ingroup plugins_generic_dataverse
  *
- * @brief Operations for adding Dataverse settings to article_supp_file_settings
+ * @brief Operations for retrieving and modifying DataverseFile objects.
  */
 
 import('lib.pkp.classes.db.DAO');
@@ -21,7 +21,7 @@ class DataverseFileDAO extends DAO {
 	var $_parentPluginName;
 
 	/**
-	 * Constructor
+	 * Constructor.
 	 */
 	function DataverseFileDAO($parentPluginName) {
 		$this->_parentPluginName = $parentPluginName;
@@ -29,9 +29,9 @@ class DataverseFileDAO extends DAO {
 	}
 	
 	/**
-	 * Insert a new Dataverse file 
+	 * Insert a new Dataverse file.
 	 * @param $dvFile DataverseFile
-	 * @return int inserted DataverseFile id
+	 * @return int 
 	 */
 	function insertDataverseFile(&$dvFile) {
 		$this->update(
@@ -52,9 +52,9 @@ class DataverseFileDAO extends DAO {
 	}
 	
 	/**
-	 * Update Dataverse File
-	 * @param DatverseFile $dvFile
-	 * @return int DataverseFile id
+	 * Update Dataverse file.
+	 * @param $dvFile
+	 * @return boolean 
 	 */
 	function updateDataverseFile(&$dvFile) {
 		$returner = $this->update(
@@ -77,7 +77,7 @@ class DataverseFileDAO extends DAO {
 	}	 
 	
 	/**
-	 * Get the ID of the last inserted Dataverse file.
+	 * Get ID of the last inserted Dataverse file.
 	 * @return int
 	 */
 	function getInsertDataverseFileId() {
@@ -86,8 +86,9 @@ class DataverseFileDAO extends DAO {
 	
 	
 	/**
-	 * Delete a DataverseFile
+	 * Delete a Dataverse file.
 	 * @param $dvFile DataverseFile
+   * @return boolean
 	 */
 	function deleteDataverseFile(&$dvFile) {
 		return $this->deleteDataverseFileById($dvFile->getId());
@@ -97,6 +98,7 @@ class DataverseFileDAO extends DAO {
 	 * Delete a Dataverse file by ID.
 	 * @param $dvFileId int
 	 * @param $submissionId int optional
+   * @return boolean
 	 */
 	function deleteDataverseFileById($dvFileId, $submissionId = null) {
 		if (isset($submissionId)) {
@@ -107,8 +109,9 @@ class DataverseFileDAO extends DAO {
 	}
 	
 	/**
-	 * Delete Dataverse files associated with a study
+	 * Delete Dataverse files associated with a study.
 	 * @param $studyId int
+   * @return boolean
 	 */
 	function deleteDataverseFilesByStudyId($studyId) {
 		$dvFiles =& $this->getDataverseFilesByStudyId($studyId);
@@ -119,7 +122,7 @@ class DataverseFileDAO extends DAO {
 	
 	
 	/**
-	 * Retrieve Dataverse file by supp id & optional submission 
+	 * Retrieve Dataverse file by supp id & optional submission.
 	 * @param int $suppFileId
 	 * @param int $submissionId
 	 * @return DataverseFile
@@ -145,9 +148,9 @@ class DataverseFileDAO extends DAO {
 	}
 	
 	/**
-	 * Retrieve Dataverse files for a submission
+	 * Retrieve Dataverse files for a submission.
 	 * @param $submissionId int
-	 * @return array DataverseFiles
+	 * @return array
 	 */
 	function &getDataverseFilesBySubmissionId($submissionId) {
 		$dvFiles = array();
@@ -169,9 +172,9 @@ class DataverseFileDAO extends DAO {
 	}	 
 	
 	/**
-	 * Retrieve Dataverse files for a study
+	 * Retrieve Dataverse files for a study.
 	 * @param $submissionId int
-	 * @return array DataverseFiles
+	 * @return array
 	 */
 	function &getDataverseFilesByStudyId($studyId) {
 		$dvFiles = array();
@@ -213,7 +216,7 @@ class DataverseFileDAO extends DAO {
 	 * Update the Dataverse deposit status of a supplementary file.
 	 * Files with deposit status = true will be deposited/updated in Dataverse.
 	 * @param $suppFileId int
-	 * @param $depositStatus bool
+	 * @param $depositStatus boolean
 	 */
 	function setDepositStatus($suppFileId, $depositStatus) {
 		$idFields = array(
@@ -229,6 +232,11 @@ class DataverseFileDAO extends DAO {
 		$this->replace('article_supp_file_settings', $updateArray, $idFields);
 	}	 
 
+  /** 
+   * Set content source URI of Dataverse file.
+   * @param $suppFileId int
+   * @param $contentSourceUri string
+   */
 	function setContentSourceUri($suppFileId, $contentSourceUri) {
 		$idFields = array(
 			'supp_id', 'locale', 'setting_name'

@@ -10,7 +10,7 @@
  * @class SettingsForm
  * @ingroup plugins_generic_dataverse
  *
- * @brief Form for journal managers to modify Dataverse plugin settings
+ * @brief Plugin settings: set data policies, define terms of use, configure workflows. 
  */
 
 import('lib.pkp.classes.form.Form');
@@ -25,9 +25,10 @@ class SettingsForm extends Form {
 	var $_plugin;
 
 	/**
-	 * Constructor
-	 * @param $plugin object
+	 * Constructor. 
+	 * @param $plugin DataversePlugin
 	 * @param $journalId int
+   * @see Form::Form()
 	 */
 	function settingsForm(&$plugin, $journalId) {
 		$this->_journalId = $journalId;
@@ -63,7 +64,7 @@ class SettingsForm extends Form {
 	}
 
 	/**
-	 * Initialize form data.
+	 * @see Form::initData()
 	 */
 	function initData() {
 		$plugin =& $this->_plugin;
@@ -103,7 +104,7 @@ class SettingsForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(
@@ -131,9 +132,7 @@ class SettingsForm extends Form {
 		$templateMgr->assign('sections', $sections->toArray());
 		$templateMgr->assign('citationFormats', $this->_citationFormats);
 		$templateMgr->assign('pubIdTypes', $this->_pubIdTypes); 
-		$templateMgr->assign('studyReleaseOptions', $this->_studyReleaseOptions);
-		
-		/** @fixme use language from OJS field instructions */
+    $templateMgr->assign('studyReleaseOptions', $this->_studyReleaseOptions);
 		$templateMgr->assign('authorGuidelinesContent',			__('plugins.generic.dataverse.settings.default.authorGuidelines', array('journal' => $journal->getLocalizedTitle())));
 		$templateMgr->assign('checklistContent',						__('plugins.generic.dataverse.settings.default.checklist', array('journal' => $journal->getLocalizedTitle())));		 
 		$templateMgr->assign('reviewPolicyContent',					__('plugins.generic.dataverse.settings.default.reviewPolicy'));
@@ -144,7 +143,7 @@ class SettingsForm extends Form {
 	}	 
 
 	/**
-	 * Save settings.
+	 * @see Form::execute()
 	 */
 	function execute() { 
 		$plugin =& $this->_plugin;
@@ -163,8 +162,8 @@ class SettingsForm extends Form {
 	}
 	
 	/**
-	 * Opt to fetch DV TOU *or* provide custom TOU.
-	 * @return bool
+	 * Form validator: provide terms of use OR fetch terms from configured Dataverse
+	 * @return boolean 
 	 */
 	function _validateTermsOfUse() {
 		// If JM chooses to define own terms, verify that terms of use are provided 
@@ -172,8 +171,9 @@ class SettingsForm extends Form {
 	}
 	
 	/**
-	 * If TOU to be fetched from DV, verify TOU are available
-	 * @return bool
+	 * Form validator: if terms of use to be fetched from Dataverse, verify terms
+   * can be retrieved. 
+	 * @return boolean true if terms can be retrieved from configured Dataverse
 	 */
 	function _validateDataverseTermsOfUse() {
 		if ($this->getData('fetchTermsOfUse') === "0") return true;

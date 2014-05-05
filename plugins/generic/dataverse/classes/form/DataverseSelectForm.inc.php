@@ -10,7 +10,8 @@
  * @class DataverseSelectForm
  * @ingroup plugins_generic_dataverse
  *
- * @brief Form for journal managers to provide DVN account for depositing files
+ * @brief Plugin settings: select Dataverse to hold studies created from journal submissions
+ * 
  */
 import('lib.pkp.classes.form.Form');
 
@@ -26,6 +27,7 @@ class DataverseSelectForm extends Form {
 	 * Constructor
 	 * @param $plugin DataversePlugin
 	 * @param $journalId int
+   * @see Form::Form()
 	 */
 	function DataverseSelectForm(&$plugin, $journalId) {
 		$this->_plugin =& $plugin;
@@ -36,7 +38,7 @@ class DataverseSelectForm extends Form {
 	}
 
 	/**
-	 * Initialize form data.
+	 * @see Form::initData()
 	 */
 	function initData() {
 		// Get service document
@@ -65,14 +67,14 @@ class DataverseSelectForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(array('dataverse'));
 	}
 
 	/**
-	 * Save settings.
+	 * @see Form::execute()
 	 */
 	function execute() {
 		$this->_plugin->updateSetting($this->_journalId, 'dvUri', $this->getData('dataverse'), 'string');

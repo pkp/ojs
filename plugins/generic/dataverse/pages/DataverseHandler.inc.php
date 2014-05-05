@@ -10,7 +10,7 @@
  * @class DataverseHandler
  * @ingroup plugins_generic_dataverse
  *
- * @brief Handle Dataverse requests
+ * @brief Handle Dataverse page requests.
  */
 
 import('classes.handler.Handler');
@@ -19,13 +19,15 @@ class DataverseHandler extends Handler {
 
 	/**
 	 * Index handler: redirect to journal page.
+   * @param $args array
+   * @param $request Request
 	 */
 	function index($args, &$request) {
 		$request->redirect(null, 'index');
 	}
 	
 	/**
-	 * Display data availability policy
+	 * Display data availability policy.
 	 * @param array $args
 	 * @param Request $request
 	 */
@@ -39,7 +41,7 @@ class DataverseHandler extends Handler {
 	}
 
 	/**
-	 * Display terms of use of Dataverse configured for journal
+	 * Display terms of use for Dataverse configured for journal.
 	 * @param array $args
 	 * @param Request $request
 	 */
@@ -62,7 +64,7 @@ class DataverseHandler extends Handler {
 		
 	/**
 	 * Set up common template variables.
-	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 * @param $subclass boolean set true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false) {
 		$templateMgr =& TemplateManager::getManager();

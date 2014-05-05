@@ -21,7 +21,7 @@ class DataverseStudyDAO extends DAO {
 	var $_parentPluginName;
 
 	/**
-	 * Constructor
+	 * Constructor.
 	 */
 	function DataverseStudyDAO($parentPluginName) {
 		$this->_parentPluginName = $parentPluginName;
@@ -47,7 +47,7 @@ class DataverseStudyDAO extends DAO {
 	}	 
 
 	/**
-	 * Retrieve study matching a particular submission ID.
+	 * Get study by submission ID.
 	 * @param $submissionId int
 	 * @return DataverseStudy
 	 */
@@ -65,7 +65,7 @@ class DataverseStudyDAO extends DAO {
 	}	 
 	
 	/**
-	 * Insert a new study
+	 * Insert a new study.
 	 * @param $study DataverseStudy
 	 * @return int 
 	 */
@@ -89,8 +89,9 @@ class DataverseStudyDAO extends DAO {
 	}
 	
 	/**
-	 * Update an existing study
+	 * Update an existing study.
 	 * @param $study DataverseStudy
+   * @return boolean
 	 */
 	function updateStudy(&$study) {
 		$returner = $this->update(

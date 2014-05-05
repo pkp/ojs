@@ -10,19 +10,22 @@
  * @class DataverseFile
  * @ingroup plugins_generic_dataverse
  *
- * @brief DataverseFile object associates suppfile with a Dataverse study
+ * @brief DataverseFile object associates suppfile with a Dataverse study.
  */
 
 import('classes.article.SuppFile');
 
 class DataverseFile extends DataObject {
 	
-	function DataverseFile() {
+  /**
+   * Constructor.
+   */
+  function DataverseFile() {
 		parent::DataObject();
 	}
 	
 	/**
-	 * Get suppfile ID
+	 * Get suppfile ID.
 	 * @return int
 	 */
 	function getSuppFileId() {
@@ -30,7 +33,7 @@ class DataverseFile extends DataObject {
 	}
 	
 	/**
-	 * Set suppfile ID
+	 * Set suppfile ID.
 	 * @param $suppFileId int
 	 */
 	function setSuppFileId($suppFileId) {
@@ -38,7 +41,7 @@ class DataverseFile extends DataObject {
 	}
 	
 	/**
-	 * Get Dataverse study ID
+	 * Get Dataverse study ID.
 	 * @return int
 	 */
 	function getStudyId() {
@@ -46,7 +49,7 @@ class DataverseFile extends DataObject {
 	}
 	
 	/**
-	 * Set Dataverse study ID
+	 * Set Dataverse study ID.
 	 * @param $studyId int
 	 */
 	function setStudyId($studyId) {
@@ -54,7 +57,7 @@ class DataverseFile extends DataObject {
 	}
 	
 	/**
-	 * Get submission ID
+	 * Get submission ID.
 	 * @return int
 	 */
 	function getSubmissionId() {
@@ -62,7 +65,7 @@ class DataverseFile extends DataObject {
 	}
 	
 	/**
-	 * Set submission ID
+	 * Set submission ID.
 	 * @param $submissionId int
 	 */
 	function setSubmissionId($submissionId) {
@@ -70,7 +73,7 @@ class DataverseFile extends DataObject {
 	}
 	
 	/**
-	 * Get content source URI for file in Dataverse
+	 * Get content source URI of Dataverse file.
 	 * @return string
 	 */
 	function getContentSourceUri() {
@@ -78,7 +81,7 @@ class DataverseFile extends DataObject {
 	}
 	
 	/**
-	 * Set content source URI for file in Dataverse
+	 * Set content source URI of Dataverse file.
 	 * @param $contentSourceUri string
 	 */
 	function setContentSourceUri($contentSourceUri) {

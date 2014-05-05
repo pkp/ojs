@@ -14,17 +14,16 @@
  */
 
 class DataverseStudy extends DataObject {
-	
+
+  /**
+   * Constructor.
+   */
 	function DataverseStudy() {
 		parent::DataObject();
 	}
 	
-	//
-	// Get/set methods
-	//
-
 	/**
-	 * Get the ID of the study.
+	 * Get study ID.
 	 * @return int
 	 */
 	function getId() {
@@ -32,7 +31,7 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set the ID of the study.
+	 * Set study ID.
 	 * @param $studyId int
 	 */
 	function setId($studyId) {
@@ -40,7 +39,7 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Get the study's submission ID 
+	 * Get ID of submission associated with study.
 	 * @return int
 	 */
 	function getSubmissionId() {
@@ -48,7 +47,7 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set the study's submission ID
+	 * Set submission ID for study.
 	 * @param $submissionId int
 	 */
 	function setSubmissionId($submissionId) {
@@ -56,7 +55,7 @@ class DataverseStudy extends DataObject {
 	}
 	
 	/**
-	 * Get study edit URI.
+	 * Get study's edit URI.
 	 * @return string
 	 */
 	function getEditUri() {
@@ -64,7 +63,7 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set study edit URI
+	 * Set study's edit URI.
 	 * @param $editUri string
 	 */
 	function setEditUri($editUri) {
@@ -80,7 +79,7 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set study's edit media URI
+	 * Set study's edit media URI.
 	 * @param $editMediaUri string
 	 */
 	function setEditMediaUri($editMediaUri) {
@@ -96,7 +95,7 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set study's statement URI
+	 * Set study's statement URI.
 	 * @param $statementUri string
 	 */
 	function setStatementUri($statementUri) {
@@ -104,7 +103,7 @@ class DataverseStudy extends DataObject {
 	} 
 	
 	/**
-	 * Get study persistent URI
+	 * Get study's persistent URI.
 	 * @return string
 	 */
 	function getPersistentUri() {
@@ -112,7 +111,7 @@ class DataverseStudy extends DataObject {
 	}
 	
 	/**
-	 * Set study persistent Uri
+	 * Set study's persistent URI.
 	 * @param string $persistentUri
 	 */
 	function setPersistentUri($persistentUri) {
@@ -120,8 +119,8 @@ class DataverseStudy extends DataObject {
 	}
 	
 	/**
-	 * Get data citation
-	 * @param boolean $markup add HTML to link persistent URI
+	 * Get data citation.
+	 * @param $markup boolean optional Add markup to citation.
 	 */
 	function getDataCitation($markup = true) {
 		$dataCitation = $this->getData('dataCitation');
@@ -133,7 +132,7 @@ class DataverseStudy extends DataObject {
 	}
 	
 	/**
-	 * Set data citation
+	 * Set data citation.
 	 * @param string $dataCitation
 	 */
 	function setDataCitation($dataCitation) {

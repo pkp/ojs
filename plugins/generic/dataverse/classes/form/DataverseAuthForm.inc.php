@@ -10,7 +10,7 @@
  * @class DataverseAuthForm
  * @ingroup plugins_generic_dataverse
  *
- * @brief Form for journal managers to provide DVN account for depositing files
+ * @brief Plugin settings: connect to a Dataverse Network 
  */
 define('DATAVERSE_PLUGIN_PASSWORD_SLUG', '********');
 
@@ -25,9 +25,10 @@ class DataverseAuthForm extends Form {
 	var $_journalId;
 
 	/**
-	 * Constructor
+	 * Constructor. 
 	 * @param $plugin DataversePlugin
 	 * @param $journalId int
+   * @see Form::Form()
 	 */
 	function DataverseAuthForm(&$plugin, $journalId) {
 		$this->_plugin =& $plugin;
@@ -42,7 +43,7 @@ class DataverseAuthForm extends Form {
 	}
 
 	/**
-	 * Initialize form data.
+	 * @see Form::initData()
 	 */
 	function initData() {
 		$plugin =& $this->_plugin;
@@ -59,7 +60,7 @@ class DataverseAuthForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(array('dvnUri', 'username', 'password'));
@@ -73,7 +74,7 @@ class DataverseAuthForm extends Form {
 	}
 
 	/**
-	 * Save settings.
+	 * @see Form::execute()
 	 */
 	function execute() {
 		$plugin =& $this->_plugin;
@@ -84,6 +85,11 @@ class DataverseAuthForm extends Form {
 		$plugin->updateSetting($this->_journalId, 'sdUri', $this->_getServiceDocumentUri($this->getData('dvnUri')));
 	}
 	
+  /**
+   * Form validator: verify Dataverse Network URL provided plugin settings by
+   * fetching service document
+   * @return boolean 
+   */
 	function _validateDvnUri() {
 		// Get service document
 		$sd = $this->_plugin->getServiceDocument(
@@ -95,7 +101,12 @@ class DataverseAuthForm extends Form {
 		/** @todo modify swordappservicedocument.php to provide better error messages */
 		return (isset($sd) && $sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK);
 	}
-	
+
+  /**
+   * Get URI of service document for Dataverse Network
+   * @param $dvnUri string Dataverse Network URI
+   * @return string Service document URI
+   */
 	function _getServiceDocumentUri($dvnUri) {
 		$sdUri = $dvnUri .
 						(preg_match("/\/$/", $dvnUri) ? '' : '/') . 

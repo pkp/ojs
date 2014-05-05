@@ -36,7 +36,10 @@ class DataversePackager extends PackagerAtomTwoStep {
 	
 	/** @var string package content type */
 	var $_contentType = 'application/zip';
-					
+
+  /**
+   * Constructor.
+   */
 	function DataversePackager() {
 		// Create temporary directory for Atom entry & deposit files
 		/** @fixme cumbersome but need separate args for parent constructor */
@@ -50,20 +53,24 @@ class DataversePackager extends PackagerAtomTwoStep {
 		parent::__construct($this->_outPath, $this->_fileDir, $this->_outPath, '');
 	}
 
+  /**
+   * Add file to deposit package.
+   * @param $suppFile 
+   */
 	function addFile($suppFile) {
 		$this->_files[] = $suppFile;
 	}
 	
 	/**
-	 * Function name disambiguator to distinguish parent::create() from creation
-	 * methods in this class.
+	 * Create Atom entry. Wrapper renames parent::create() to distinguish between
+   * Atom entry creation and deposit package creation.
 	 */
 	function createAtomEntry() {
 		$this->create();
 	}
 	
 	/**
-	 * Create deposit package of files added to packager
+	 * Create deposit package of files.
 	 */
 	function createPackage() {
 		$package = new ZipArchive();
@@ -76,7 +83,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 	}
 
 	/**
-	 * Get path to Atom entry file
+	 * Get path to Atom entry file.
 	 * @return string
 	 */
 	function getAtomEntryFilePath() {
@@ -85,7 +92,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 	}	 
 
 	/**
-	 * Get path to deposit package
+	 * Get path to deposit package.
 	 * @return string
 	 */
 	function getPackageFilePath() {
@@ -93,7 +100,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 	}	 
 	
 	/**
-	 * Get packaging format of deposit
+	 * Get packaging format of deposit.
 	 * @return string
 	 */
 	function getPackaging() {
@@ -101,7 +108,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 	}
 	
 	/**
-	 * Get content type of deposit
+	 * Get content type of deposit.
 	 * @return string
 	 */
 	function getContentType() {
