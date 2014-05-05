@@ -355,6 +355,10 @@
 		<data file="dbscripts/xml/upgrade/2.4.3_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="2.4.3.0">
+		<data file="dbscripts/xml/upgrade/2.4.4_update.xml" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
