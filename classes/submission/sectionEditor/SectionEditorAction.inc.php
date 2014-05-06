@@ -87,7 +87,7 @@ class SectionEditorAction extends Action {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$user =& $request->getUser();
 
-		$reviewer =& $userDao->getUser($reviewerId);
+		$reviewer =& $userDao->getById($reviewerId);
 
 		// Check to see if the requested reviewer is not already
 		// assigned to review this article.
@@ -145,7 +145,7 @@ class SectionEditorAction extends Action {
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 
 		if (isset($reviewAssignment) && $reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId() && !HookRegistry::call('SectionEditorAction::clearReview', array(&$sectionEditorSubmission, $reviewAssignment))) {
-			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 			if (!isset($reviewer)) return false;
 			$sectionEditorSubmission->removeReviewAssignment($reviewId);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
@@ -215,7 +215,7 @@ class SectionEditorAction extends Action {
 		}
 
 		if ($reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId() && $reviewAssignment->getReviewFileId()) {
-			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 			if (!isset($reviewer)) return true;
 
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -309,7 +309,7 @@ class SectionEditorAction extends Action {
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return true;
 
 		if ($reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId()) {
@@ -388,7 +388,7 @@ class SectionEditorAction extends Action {
 
 		if ($send && !$email->hasErrors()) {
 			HookRegistry::call('SectionEditorAction::remindReviewer', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
-			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 
 			if ($reviewerAccessKeysEnabled) {
 				import('lib.pkp.classes.security.AccessKeyManager');
@@ -413,7 +413,7 @@ class SectionEditorAction extends Action {
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 			return true;
 		} elseif ($reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId()) {
-			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 
 			if (!$request->getUserVar('continued')) {
 				if (!isset($reviewer)) return true;
@@ -478,7 +478,7 @@ class SectionEditorAction extends Action {
 		$email = new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_ACK');
 
 		if ($reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId()) {
-			$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+			$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 			if (!isset($reviewer)) return true;
 
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -522,7 +522,7 @@ class SectionEditorAction extends Action {
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 
 		if ($reviewAssignment->getSubmissionId() == $articleId && !HookRegistry::call('SectionEditorAction::rateReviewer', array(&$reviewAssignment, &$reviewer, &$quality))) {
@@ -607,7 +607,7 @@ class SectionEditorAction extends Action {
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
 
 		if ($reviewAssignment->getSubmissionId() == $articleId && !HookRegistry::call('SectionEditorAction::setDueDate', array(&$reviewAssignment, &$reviewer, &$dueDate, &$numWeeks))) {
@@ -677,7 +677,7 @@ class SectionEditorAction extends Action {
 		$journal =& $request->getJournal();
 		$user =& $request->getUser();
 
-		$author =& $userDao->getUser($sectionEditorSubmission->getUserId());
+		$author =& $userDao->getById($sectionEditorSubmission->getUserId());
 		if (!isset($author)) return true;
 
 		import('classes.mail.ArticleMailTemplate');
@@ -718,7 +718,7 @@ class SectionEditorAction extends Action {
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId(), true);
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId(), true);
 
 		if ($reviewAssignment->getSubmissionId() == $article->getId() && !HookRegistry::call('SectionEditorAction::setReviewerRecommendation', array(&$reviewAssignment, &$reviewer, &$recommendation, &$acceptOption))) {
 			$reviewAssignment->setRecommendation($recommendation);
@@ -922,7 +922,7 @@ class SectionEditorAction extends Action {
 			$copyeditInitialSignoff->setUserId($copyeditorId);
 			$signoffDao->updateObject($copyeditInitialSignoff);
 
-			$copyeditor =& $userDao->getUser($copyeditorId);
+			$copyeditor =& $userDao->getById($copyeditorId);
 
 			// Add log
 			import('classes.article.log.ArticleLog');
@@ -1061,7 +1061,7 @@ class SectionEditorAction extends Action {
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_REQUEST');
 
-		$author =& $userDao->getUser($sectionEditorSubmission->getUserId());
+		$author =& $userDao->getById($sectionEditorSubmission->getUserId());
 		if (!isset($author)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -1111,7 +1111,7 @@ class SectionEditorAction extends Action {
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($sectionEditorSubmission, 'COPYEDIT_AUTHOR_ACK');
 
-		$author =& $userDao->getUser($sectionEditorSubmission->getUserId());
+		$author =& $userDao->getById($sectionEditorSubmission->getUserId());
 		if (!isset($author)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -1553,7 +1553,7 @@ class SectionEditorAction extends Action {
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 		$layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
 		if ($layoutSignoff->getUserId()) {
-			$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
+			$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
 
 			// Add log entry
 			ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_UNASSIGN, 'log.layout.layoutEditorUnassigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName()));
@@ -1572,7 +1572,7 @@ class SectionEditorAction extends Action {
 		$signoffDao->updateObject($layoutSignoff);
 		$signoffDao->updateObject($layoutProofSignoff);
 
-		$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
+		$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
 
 		// Add log entry
 		ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_ASSIGN, 'log.layout.layoutEditorAssigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName()));
@@ -1595,7 +1595,7 @@ class SectionEditorAction extends Action {
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($submission, 'LAYOUT_REQUEST');
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
-		$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
+		$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
 		if (!isset($layoutEditor)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -1644,7 +1644,7 @@ class SectionEditorAction extends Action {
 		$email = new ArticleMailTemplate($submission, 'LAYOUT_ACK');
 
 		$layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
-		$layoutEditor =& $userDao->getUser($layoutSignoff->getUserId());
+		$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
 		if (!isset($layoutEditor)) return true;
 
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -2047,7 +2047,7 @@ class SectionEditorAction extends Action {
 			return true;
 		} else {
 			if (!$request->getUserVar('continued')) {
-				$authorUser =& $userDao->getUser($sectionEditorSubmission->getUserId());
+				$authorUser =& $userDao->getById($sectionEditorSubmission->getUserId());
 				$authorEmail = $authorUser->getEmail();
 				$email->assignParams(array(
 					'editorialContactSignature' => $user->getContactSignature(),
@@ -2148,7 +2148,7 @@ class SectionEditorAction extends Action {
 				$email->clearRecipients();
 				foreach ($reviewAssignments as $reviewAssignment) {
 					if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
-						$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId());
+						$reviewer =& $userDao->getById($reviewAssignment->getReviewerId());
 						if (isset($reviewer)) $email->addBcc($reviewer->getEmail(), $reviewer->getFullName());
 					}
 				}
@@ -2340,7 +2340,7 @@ class SectionEditorAction extends Action {
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId(), true);
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId(), true);
 
 		if (HookRegistry::call('SectionEditorAction::acceptReviewForReviewer', array(&$reviewAssignment, &$reviewer, &$accept))) return;
 
@@ -2373,7 +2373,7 @@ class SectionEditorAction extends Action {
 		$user =& $request->getUser();
 
 		$reviewAssignment =& $reviewAssignmentDao->getById($reviewId);
-		$reviewer =& $userDao->getUser($reviewAssignment->getReviewerId(), true);
+		$reviewer =& $userDao->getById($reviewAssignment->getReviewerId(), true);
 
 		if (HookRegistry::call('SectionEditorAction::uploadReviewForReviewer', array(&$reviewAssignment, &$reviewer))) return;
 
