@@ -62,12 +62,6 @@
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>
 	{/if}
 
-	<script type="text/javascript">{literal}
-		$(function(){
-			fontSize("#sizer", "body", 9, 16, 32, "{/literal}{$basePath|escape:"javascript"}{literal}"); // Initialize the font sizer
-		});
-	{/literal}</script>
-
 	<!-- Compiled scripts -->
 	{if $useMinifiedJavaScript}
 		<script type="text/javascript" src="{$baseUrl}/js/pkp.min.js"></script>
