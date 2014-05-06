@@ -307,16 +307,11 @@ class UsageStatsLoader extends FileLoader {
 		$assocId = $assocType = $journalId = false;
 		$expectedPageAndOp = $this->_getExpectedPageAndOp();
 
-		// Check whether it's path info or not.
-		$pathInfo = parse_url($url, PHP_URL_PATH);
-		$isPathInfo = false;
-		if ($pathInfo) {
-			$isPathInfo = true;
-		}
-
-		$contextPaths = Core::getContextPaths($url, $isPathInfo);
-		$page = Core::getPage($url, $isPathInfo);
-		$operation = Core::getOp($url, $isPathInfo);
+		$pathInfoDisabled = Config::getVar('general', 'disable_path_info');
+		$contextPaths = Core::getContextPaths($url, !$pathInfoDisabled);
+		$page = Core::getPage($url, !$pathInfoDisabled);
+		$operation = Core::getOp($url, !$pathInfoDisabled);
+		$args = Core::getArgs($url, !$pathInfoDisabled);
 
 		// See bug #8698#.
 		if (is_array($contextPaths) && !$page && $operation == 'index') {
@@ -341,7 +336,6 @@ class UsageStatsLoader extends FileLoader {
 
 		if ($pageAndOpMatch) {
 			// Get the assoc id inside the passed url.
-			$args = Core::getArgs($url, $isPathInfo);
 			if (empty($args)) {
 				if ($page == 'index' && $operation == 'index') {
 					// Can be a journal index page access,
