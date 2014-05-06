@@ -32,8 +32,8 @@ class FunctionalSubmissionTest extends FunctionalSubmissionBaseTestCase {
 		$this->isElementPresent("css=div.section");
 
 		// Select the section.
-		$this->click("css=div.section.");
-		$this->select("id=sectionId", "label=Articles");
+		$this->click("css=div.section");
+		$this->select("css=select#sectionId", "value=1");
 	}
 }
 ?>
