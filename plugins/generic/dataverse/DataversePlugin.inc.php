@@ -350,11 +350,10 @@ class DataversePlugin extends GenericPlugin {
 	 * @see templates/article/article.tpl
 	 */
 	function addDataCitationArticle($hookName, $args) {
-		$smarty =& $args[1];
-		$output =& $args[2];
-		
-		$templateMgr =& TemplateManager::getManager();		
-		$article =& $templateMgr->get_template_vars('article');
+		$templateMgr =& $args[1];
+    $output =& $args[2];
+
+    $article =& $templateMgr->get_template_vars('article');
 		
 		$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
 		$study =& $dataverseStudyDao->getStudyBySubmissionId($article->getId());
@@ -391,10 +390,9 @@ class DataversePlugin extends GenericPlugin {
 		$journal =& Request::getJournal();
 		$dataPAvailability = $this->getSetting($journal->getId(), 'dataAvailability');
 		if (!empty($dataPAvailability)) {
-			$smarty =& $args[1];
+			$templateMgr =& $args[1];
 			$output =& $args[2];
-			$templateMgr =& TemplateManager::getManager();		
-			$output .= '<li>&#187; <a href="'. $templateMgr->smartyUrl(array('page' => 'dataverse', 'op'=>'dataAvailabilityPolicy'), $smarty) .'">';
+			$output .= '<li>&#187; <a href="'. $templateMgr->smartyUrl(array('page' => 'dataverse', 'op'=>'dataAvailabilityPolicy'), $templateMgr) .'">';
 			$output .= __('plugins.generic.dataverse.settings.dataAvailabilityPolicy');
 			$output .= '</a></li>';
 		}
@@ -471,19 +469,19 @@ class DataversePlugin extends GenericPlugin {
    * @see templates/submission/suppFile/suppFile.tpl
 	 */
 	function suppFileAdditionalMetadata($hookName, $args) {
-		$smarty =& $args[1];
+		$templateMgr =& $args[1];
 		$output =& $args[2];
-		$articleId = $smarty->get_template_vars('articleId');				 
+		$articleId = $templateMgr->get_template_vars('articleId');				 
 
 		// Include Dataverse data citation, if a study exists for this submission.
 		$dvStudyDao = DAORegistry::getDAO('DataverseStudyDAO');
 		$study = $dvStudyDao->getStudyBySubmissionId($articleId);
 
 		if (isset($study)) {
-			$smarty->assign('dataCitation', $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
-			$smarty->assign('studyLocked', $this->studyIsLocked($study));
+			$templateMgr->assign('dataCitation', $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
+			$templateMgr->assign('studyLocked', $this->studyIsLocked($study));
 		}
-		$output .= $smarty->fetch($this->getTemplatePath() . 'suppFileAdditionalMetadata.tpl');
+		$output .= $templateMgr->fetch($this->getTemplatePath() . 'suppFileAdditionalMetadata.tpl');
 		return false;
 	}
 	
