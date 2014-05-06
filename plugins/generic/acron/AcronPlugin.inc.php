@@ -161,7 +161,8 @@ class AcronPlugin extends GenericPlugin {
 		ob_end_flush();
 		flush();
 
-		// Fix the current working directory.
+		// Fix the current working directory. See
+		// http://www.php.net/manual/en/function.register-shutdown-function.php#92657
 		chdir($this->_workingDir);
 
 		$taskDao =& DAORegistry::getDao('ScheduledTaskDAO');
