@@ -188,13 +188,21 @@ class AcronPlugin extends GenericPlugin {
 			// can happily go ahead and do it before the "last run" time is updated.
 
 			// By updating the last run time as soon as feasible, we can minimize
-			// the race window. TODO: there ought to be a safer way of doing this.
-			$taskDao->updateLastRunTime($className, time());
+			// the race window. See bug #8737.
+			$updateResult = $taskDao->updateLastRunTime($className, time());
 
-			// Load and execute the task
-			import($className);
-			$task = new $baseClassName($taskArgs);
-			$task->execute();
+			switch ($updateResult) {
+				case false: // DB doesn't support the get affected rows used inside update method.
+				case 1: // Introduced a new last run time.
+					// Load and execute the task.
+					import($className);
+					$task = new $baseClassName($taskArgs);
+					$task->execute();
+					break;
+				case 0: // Another simultaneously request came first.
+				default:
+					break;
+			}
 		}
 	}
 
