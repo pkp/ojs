@@ -32,10 +32,11 @@ class DataverseHandler extends Handler {
 	 * @param Request $request
 	 */
 	function dataAvailabilityPolicy($args, &$request) {
-		$journal =& $request->getJournal();
-		$dataversePlugin =& PluginRegistry::getPlugin('generic', DATAVERSE_PLUGIN_NAME);
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request);
+    $dataversePlugin =& PluginRegistry::getPlugin('generic', DATAVERSE_PLUGIN_NAME);
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'about'),'about.aboutTheJournal')));
+ 		$templateMgr->assign('pageHierarchy', array(array($router->url($request, null, 'about'), 'about.aboutTheJournal')));
 		$templateMgr->assign('dataAvailabilityPolicy', $dataversePlugin->getSetting($journal->getId(), 'dataAvailability'));
 		$templateMgr->display($dataversePlugin->getTemplatePath() .'/dataAvailabilityPolicy.tpl');
 	}
@@ -46,7 +47,8 @@ class DataverseHandler extends Handler {
 	 * @param Request $request
 	 */
 	function termsOfUse($args, &$request) {
-		$journal =& $request->getJournal();
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request);
 		$dataversePlugin =& PluginRegistry::getPlugin('generic', DATAVERSE_PLUGIN_NAME);
 		$templateMgr =& TemplateManager::getManager();
 		
@@ -60,24 +62,6 @@ class DataverseHandler extends Handler {
 			$templateMgr->assign('termsOfUse', $dataversePlugin->getSetting($journal->getId(), 'termsOfUse'));
 		}
 		$templateMgr->display($dataversePlugin->getTemplatePath() .'/termsOfUse.tpl');
-	}
-		
-	/**
-	 * Set up common template variables.
-	 * @param $subclass boolean set true if caller is below this handler in the hierarchy
-	 */
-	function setupTemplate($subclass = false) {
-		$templateMgr =& TemplateManager::getManager();
-		if ($subclass) {
-			$templateMgr->append(
-				'pageHierarchy',
-				array(
-					Request::url(null, 'dataverse'), 
-					AppLocale::Translate('plugins.generic.dataverse.displayName'),
-					true
-				)
-			);
-		}
 	}
 }
 
