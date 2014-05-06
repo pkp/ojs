@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/dataverse/DataverseAuthForm.inc.php
+ * @file plugins/generic/dataverse/classes/form/DataverseAuthForm.inc.php
  *
  * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky

@@ -1,5 +1,5 @@
 {**
- * plugins/generic/dataverse/dataverseAuthForm.tpl
+ * plugins/generic/dataverse/templates/dataverseAuthForm.tpl
  *
  * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
