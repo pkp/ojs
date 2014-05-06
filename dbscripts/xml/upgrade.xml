@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="2.4.3.0">
+<install version="2.4.4.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
@@ -353,10 +353,12 @@
 		<data file="dbscripts/xml/upgrade/2.4.3_postUsageStatsMigration2.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
 		<data file="dbscripts/xml/upgrade/2.4.3_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
 		<data file="dbscripts/xml/upgrade/2.4.3_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
+		<note file="docs/release-notes/README-2.4.3" />
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="2.4.3.0">
 		<data file="dbscripts/xml/upgrade/2.4.4_update.xml" />
+		<note file="docs/release-notes/README-2.4.4" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
