@@ -36,7 +36,7 @@ class RTHandler extends ArticleHandler {
 	 */
 	function metadata($args, &$request) {
 		$router =& $request->getRouter();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$this->validate($request, $articleId, $galleyId);
@@ -77,7 +77,7 @@ class RTHandler extends ArticleHandler {
 	 */
 	function context($args, &$request) {
 		$router =& $request->getRouter();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$contextId = Isset($args[2]) ? (int) $args[2] : 0;
@@ -169,7 +169,7 @@ class RTHandler extends ArticleHandler {
 	 */
 	function captureCite($args, &$request) {
 		$router =& $request->getRouter();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		$citeType = isset($args[2]) ? $args[2] : null;
@@ -218,7 +218,7 @@ class RTHandler extends ArticleHandler {
 		$issue =& $this->issue;
 		$article =& $this->article;
 
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$rtDao =& DAORegistry::getDAO('RTDAO');
 		$journalRt =& $rtDao->getJournalRTByJournal($journal);
@@ -265,7 +265,7 @@ class RTHandler extends ArticleHandler {
 	 */
 	function emailColleague($args, &$request) {
 		$router =& $request->getRouter();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
@@ -316,7 +316,7 @@ class RTHandler extends ArticleHandler {
 	 */
 	function emailAuthor($args, &$request) {
 		$router =& $request->getRouter();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
@@ -360,7 +360,7 @@ class RTHandler extends ArticleHandler {
 	 */
 	function suppFiles($args, &$request) {
 		$router =& $request->getRouter();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
@@ -391,7 +391,7 @@ class RTHandler extends ArticleHandler {
 	 */
 	function suppFileMetadata($args, &$request) {
 		$router =& $request->getRouter();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_OJS_AUTHOR);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -432,7 +432,7 @@ class RTHandler extends ArticleHandler {
 	 */
 	function findingReferences($args, &$request) {
 		$router =& $request->getRouter();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 
