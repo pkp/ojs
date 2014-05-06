@@ -339,7 +339,7 @@ class DataversePlugin extends GenericPlugin {
 			$newOutput .= '<td class="label">'.	 __('plugins.generic.dataverse.dataCitation') .'</td>';
 			$newOutput .= '<td class="value" colspan="2">'. String::stripUnsafeHtml($dataCitation) .'</td></tr><tr>';
 			$newOutput .= substr($output, $index);
-			$output =& $newOutput;
+			$output = $newOutput;
 		}
     $templateMgr->unregister_outputfilter('submissionSummaryOutputFilter');
 		return $output;
