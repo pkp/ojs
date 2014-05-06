@@ -374,10 +374,19 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function getTinyMCEEnabledFields($hookName, $args) {
 		$fields =& $args[1];
-		$fields = array(
-				'dataAvailability',
-				'termsOfUse',
-				);
+    
+    $application =& Application::getApplication();
+		$request =& $application->getRequest();
+		$router =& $request->getRouter();
+    
+    // TinyMCEPlugin::getEnableFields hook is only invoked on page requests.
+    $page = $router->getRequestedPage($request);
+    $op = $router->getRequestedOp($request);
+    $requestArgs = $router->getRequestedArgs($request);
+    
+    if ($page == 'manager' && $op == 'plugin' && in_array('dataverseplugin', $requestArgs)) {
+      $fields = array('dataAvailability', 'termsOfUse');
+    }
 		return false;
 	}
 
