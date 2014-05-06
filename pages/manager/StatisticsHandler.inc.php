@@ -195,6 +195,7 @@ class StatisticsHandler extends ManagerHandler {
 		}
 
 		// Generates only one metric type report at a time.
+		if (is_array($metricType)) $metricType = current($metricType);
 		if (!is_scalar($metricType)) $metricType = null;
 
 		$reportPlugin =& StatisticsHelper::getReportPluginByMetricType($metricType);
@@ -238,7 +239,7 @@ class StatisticsHandler extends ManagerHandler {
 		$fp = fopen('php://output', 'wt');
 		fputcsv($fp, array($reportPlugin->getDisplayName()));
 		fputcsv($fp, array($reportPlugin->getDescription()));
-		fputcsv($fp, array(__('common.metric') . ': ' . current($metricType)));
+		fputcsv($fp, array(__('common.metric') . ': ' . $metricType));
 		fputcsv($fp, array(__('manager.statistics.reports.reportUrl') . ': ' . $request->getCompleteUrl()));
 		fputcsv($fp, array(''));
 
