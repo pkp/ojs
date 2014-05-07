@@ -161,8 +161,22 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_ID:
-				$params[] = (int) $search;
-				$searchSql = ' AND a.article_id = ?';
+				switch ($searchMatch) {
+					case 'is':
+						$params[] = (int) $search;
+						$searchSql = ' AND a.article_id = ?';
+						break;
+					case 'contains':
+						$search = '%' . $search . '%';
+						$params[] = $search;
+						$searchSql = ' AND CONCAT(a.article_id) LIKE ?';
+						break;
+					case 'startsWith':
+						$search = $search . '%';
+						$params[] = $search;
+						$searchSql = 'AND CONCAT(a.article_id) LIKE ?';
+						break;
+				}
 				break;
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
