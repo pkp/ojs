@@ -661,10 +661,14 @@ class Article extends Submission {
 			case COMMENTS_SECTION_DEFAULT:
 				$sectionDao =& DAORegistry::getDAO('SectionDAO');
 				$section =& $sectionDao->getSection($this->getSectionId(), $this->getJournalId(), true);
-				if ($section->getDisableComments()) {
-					return false;
+				if($section){
+					if ($section->getDisableComments()) {
+						return false;
+					} else {
+						return true;
+					}
 				} else {
-					return true;
+					return false;
 				}
 		}
 	}
