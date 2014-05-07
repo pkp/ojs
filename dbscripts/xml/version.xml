@@ -14,7 +14,7 @@
 	<application>ojs2</application>
 	<type>core</type>
 	<release>2.4.4.0</release>
-	<tag>ojs-2_4_4</tag>
+	<tag>ojs-2_4_4-0</tag>
 	<date>2014-05-06</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
 	<package>http://pkp.sfu.ca/ojs/download/ojs-2.4.4.tar.gz</package>
