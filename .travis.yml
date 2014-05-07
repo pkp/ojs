@@ -39,6 +39,7 @@ before_install:
 
   # Files dependency.
   - mv config.TRAVIS.inc.php config.inc.php
+  - mkdir screenshots
 
   # Make sure permissions are ok.
   - sudo chown -R travis:www-data .
@@ -68,3 +69,4 @@ after_script:
   - cat xvfb-output
   - cat selenium-output
   - cat ./lib/pkp/tests/results/error.log
+  - for f in lib/pkp/tests/results/*.png; do cat $f | base64; done 
