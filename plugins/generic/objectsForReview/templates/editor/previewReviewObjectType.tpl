@@ -94,17 +94,18 @@
 			{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_CHECKBOXES}
 				{assign var=possibleOptions value=$metadata->getLocalizedPossibleOptions()}
 				{foreach name=options from=$possibleOptions key=optionId item=optionItem}
-					<input id="check-{$optionId|escape}" type="checkbox"/>
-					<label for="check-{$optionId|escape}">{$optionItem.content|escape}</label>
+					<input id="check-{$optionItem.order|escape}" type="checkbox"/>
+					<label for="check-{$optionItem.order|escape}">{$optionItem.content|escape}</label>
 					<br/>
 				{/foreach}
 			{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_RADIO_BUTTONS}
 				{assign var=possibleOptions value=$metadata->getLocalizedPossibleOptions()}
 				{foreach name=options from=$possibleOptions key=optionId item=optionItem}
-					<input id="radio-{$optionId|escape}" type="radio"/>
-					<label for="radio-{$optionId|escape}">{$optionItem.content|escape}</label>
+					<input name="radio" id="radio-{$optionItem.order|escape}" type="radio"/>
+					<label for="radio-{$optionItem.order|escape}">{$optionItem.content|escape}</label>
 					<br/>
 				{/foreach}
+				<input name="radio" id="radio-0" type="radio"/>{fieldLabel name="radio-0" key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer"}<br/>
 			{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_DROP_DOWN_BOX}
 				<select size="1" class="selectMenu">
 					<option label="{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption"}" value="">{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption"}</option>

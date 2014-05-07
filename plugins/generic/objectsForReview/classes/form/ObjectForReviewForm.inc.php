@@ -46,7 +46,7 @@ class ObjectForReviewForm extends Form {
 		parent::Form($ofrPlugin->getTemplatePath() . 'editor/objectForReviewForm.tpl');
 
 		// Check required and persons fields
-		$this->addCheck(new FormValidatorCustom($this, 'ofrSettings', 'required', 'plugins.generic.objectsForReview.editor.objectForReview.requiredFields', create_function('$ofrSettings, $requiredReviewObjectMetadataIds, $roleMetadataId', 'foreach ($requiredReviewObjectMetadataIds as $requiredReviewObjectMetadataId) { if ($requiredReviewObjectMetadataId != $roleMetadataId) { if (!isset($ofrSettings[$requiredReviewObjectMetadataId][AppLocale::getPrimaryLocale()]) || $ofrSettings[$requiredReviewObjectMetadataId][AppLocale::getPrimaryLocale()] == \'\') return false; } } return true;'), array($requiredReviewObjectMetadataIds, $roleMetadataId)));
+		$this->addCheck(new FormValidatorCustom($this, 'ofrSettings', 'required', 'plugins.generic.objectsForReview.editor.objectForReview.requiredFields', create_function('$ofrSettings, $requiredReviewObjectMetadataIds, $roleMetadataId', 'foreach ($requiredReviewObjectMetadataIds as $requiredReviewObjectMetadataId) { if ($requiredReviewObjectMetadataId != $roleMetadataId) { if (!isset($ofrSettings[$requiredReviewObjectMetadataId]) || $ofrSettings[$requiredReviewObjectMetadataId] == \'\') return false; } } return true;'), array($requiredReviewObjectMetadataIds, $roleMetadataId)));
 		// the role and either the first or the last name are required for a person
 		// if it is defined as required for this review object type
 		if (in_array($roleMetadataId, $requiredReviewObjectMetadataIds)) {
@@ -198,24 +198,30 @@ class ObjectForReviewForm extends Form {
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
 		$reviewObjectTypeMetadata = $reviewObjectMetadataDao->getArrayByReviewObjectTypeId($objectForReview->getReviewObjectTypeId());
 		foreach ($reviewObjectTypeMetadata as $metadataId => $reviewObjectMetadata) {
-			$ofrSettings = $this->getData('ofrSettings');
-			$ofrSettingValue = $ofrSettings[$metadataId];
-			$metadataType = $reviewObjectMetadata->getMetadataType();
-				switch ($metadataType) {
-					case REVIEW_OBJECT_METADATA_TYPE_SMALL_TEXT_FIELD:
-					case REVIEW_OBJECT_METADATA_TYPE_TEXT_FIELD:
-					case REVIEW_OBJECT_METADATA_TYPE_TEXTAREA:
-						$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'string');
-						break;
-					case REVIEW_OBJECT_METADATA_TYPE_RADIO_BUTTONS:
-					case REVIEW_OBJECT_METADATA_TYPE_DROP_DOWN_BOX:
-						$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'int');
-						break;
-					case REVIEW_OBJECT_METADATA_TYPE_CHECKBOXES:
-					case REVIEW_OBJECT_METADATA_TYPE_LANG_DROP_DOWN_BOX:
-						if (!isset($ofrSettingValue)) $ofrSettingValue = array();
-						$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'object');
-						break;
+			if (($reviewObjectMetadata->getMetadataType() != REVIEW_OBJECT_METADATA_TYPE_ROLE_DROP_DOWN_BOX) &&
+				($reviewObjectMetadata->getMetadataType() != REVIEW_OBJECT_METADATA_TYPE_COVERPAGE)) {
+					$ofrSettings = $this->getData('ofrSettings');
+					$ofrSettingValue = null;
+					if (isset($ofrSettings[$metadataId])) {
+							$ofrSettingValue = $ofrSettings[$metadataId];
+					}
+					$metadataType = $reviewObjectMetadata->getMetadataType();
+						switch ($metadataType) {
+							case REVIEW_OBJECT_METADATA_TYPE_SMALL_TEXT_FIELD:
+							case REVIEW_OBJECT_METADATA_TYPE_TEXT_FIELD:
+							case REVIEW_OBJECT_METADATA_TYPE_TEXTAREA:
+								$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'string');
+								break;
+							case REVIEW_OBJECT_METADATA_TYPE_RADIO_BUTTONS:
+							case REVIEW_OBJECT_METADATA_TYPE_DROP_DOWN_BOX:
+								$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'int');
+								break;
+							case REVIEW_OBJECT_METADATA_TYPE_CHECKBOXES:
+							case REVIEW_OBJECT_METADATA_TYPE_LANG_DROP_DOWN_BOX:
+								if (!isset($ofrSettingValue)) $ofrSettingValue = array();
+								$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'object');
+								break;
+						}
 				}
 		}
 
@@ -229,8 +235,8 @@ class ObjectForReviewForm extends Form {
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
 			$type = $publicFileManager->getUploadedFileType('coverPage');
 			$newFileName = 'cover_ofr_' . $objectForReview->getId() . $publicFileManager->getImageExtension($type);
-			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journalId) . '/' . $newFileName);
 			$publicFileManager->uploadJournalFile($journalId, 'coverPage', $newFileName);
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journalId) . '/' . $newFileName);
 			$coverPageSetting = array('originalFileName' => $publicFileManager->truncateFileName($originalFileName, 127), 'fileName' => $newFileName, 'width' => $width, 'height' => $height, 'altText' => $coverPageAltText);
 			$objectForReview->updateSetting((int) $coverPageMetadataId, $coverPageSetting, 'object');
 		} else {

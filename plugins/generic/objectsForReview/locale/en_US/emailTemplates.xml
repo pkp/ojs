@@ -112,7 +112,7 @@ Please feel free to contact me if you have any questions or concerns about this 
 		<subject>Object for Review</subject>
 		<body>Dear {$authorName}:
 
-This email confirms that you have been removed as the object reviewer for {$objectForReviewTitle}, which will be made available to other authors interested in reviewing the object.
+This email confirms that you have been removed as the object reviewer for {$objectForReviewTitle}.
 
 I hope you consider reviewing another object from our listing, either at this time or in the future.
 

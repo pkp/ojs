@@ -338,6 +338,8 @@ class ObjectsForReviewEditorHandler extends Handler {
 			$request->redirect(null, 'editor', 'objectsForReview');
 		}
 
+		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
+		$objectForReview =& $ofrDao->getById($objectId, $journalId);
 		$coverPageSetting = $objectForReview->getCoverPage();
 		if ($coverPageSetting) {
 			// Delete cover image file from the filesystem
@@ -351,7 +353,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 			$ofrSettingsDao =& DAORegistry::getDAO('ObjectForReviewSettingsDAO');
 			$ofrSettingsDao->deleteSetting($objectId, $metadataId);
 		}
-		$request->redirect(null, 'editor', 'editObjectForReview', $objectId, array('reviewObjectTypeId' => $reviewObjectTypeId));
+		$request->redirect(null, 'editor', 'editObjectForReview', $objectId, array('reviewObjectTypeId' => $objectForReview->getReviewObjectTypeId()));
 	}
 
 	/**
