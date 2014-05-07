@@ -34,17 +34,12 @@ class UsageStatsLoader extends FileLoader {
 	/** @var $_journalsByPath array */
 	var $_journalsByPath;
 
-	/** @var $_baseSystemUrl string */
-	var $_baseSystemUrl;
-
-	/** @var $_baseSystemEscapedPath string */
-	var $_baseSystemEscapedPath;
-
 	/** @var $_autoStage string */
 	var $_autoStage;
 
 	/** @var $_externalLogFiles string */
 	var $_externalLogFiles;
+
 
 	/**
 	 * Constructor.
@@ -72,9 +67,6 @@ class UsageStatsLoader extends FileLoader {
 		$args[0] = $plugin->getFilesPath();
 
 		parent::FileLoader($args);
-
-		$this->_baseSystemUrl = Config::getVar('general', 'base_url');
-		$this->_baseSystemEscapedPath = str_replace('/', '\/', parse_url($this->_baseSystemUrl, PHP_URL_PATH));
 
 		// Load the metric type constant.
 		PluginRegistry::loadCategory('reports');
@@ -149,8 +141,8 @@ class UsageStatsLoader extends FileLoader {
 
 		while(!feof($fhandle)) {
 			$lineNumber++;
-			$line = fgets($fhandle);
-			if ($line == '') continue;
+			$line = trim(fgets($fhandle));
+			if (empty($line) || substr($line, 0, 1) === "#") continue; // Spacing or comment lines.
 			$entryData = $this->_getDataFromLogEntry($line);
 			if (!$this->_isLogEntryValid($entryData, $lineNumber)) {
 				$errorMsg = __('plugins.generic.usageStats.invalidLogEntry',
@@ -177,33 +169,7 @@ class UsageStatsLoader extends FileLoader {
 			list($countryCode, $cityName, $region) = $geoTool->getGeoLocation($entryData['ip']);
 			$day = date('Ymd', $entryData['date']);
 
-			// Check downloaded file type, if any.
-			$galley = null;
-			$type = null;
-			switch($assocType) {
-				case ASSOC_TYPE_GALLEY:
-					$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-					$galley =& $articleGalleyDao->getGalley($assocId);
-					break;
-				case ASSOC_TYPE_ISSUE_GALLEY;
-					$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-					$galley =& $issueGalleyDao->getGalley($assocId);
-					break;
-			}
-
-			if ($galley && !is_a($galley, 'ArticleGalley') && !is_a($galley, 'IssueGalley')) {
-				// This object id was tested before, why
-				// it is not the type we expect now?
-				assert(false);
-			} else if ($galley) {
-				if ($galley->isPdfGalley()) {
-					$type = STATISTICS_FILE_TYPE_PDF;
-				} else if (is_a($galley, 'ArticleGalley') && $galley->isHtmlGalley()) {
-					$type = STATISTICS_FILE_TYPE_HTML;
-				} else {
-					$type = STATISTICS_FILE_TYPE_OTHER;
-				}
-			}
+			$type = $this->_getFileType($assocType, $assocId);
 
 			// Implement double click filtering.
 			$entryHash = $assocType . $assocId . $entryData['ip'];
@@ -340,26 +306,16 @@ class UsageStatsLoader extends FileLoader {
 		$assocId = $assocType = $journalId = false;
 		$expectedPageAndOp = $this->_getExpectedPageAndOp();
 
-		// Remove base system url from url, if any.
-		$url = str_replace($this->_baseSystemUrl, '', $url);
+		$pathInfoDisabled = Config::getVar('general', 'disable_path_info');
+		$contextPaths = Core::getContextPaths($url, !$pathInfoDisabled);
+		$page = Core::getPage($url, !$pathInfoDisabled);
+		$operation = Core::getOp($url, !$pathInfoDisabled);
+		$args = Core::getArgs($url, !$pathInfoDisabled);
 
-		// If url don't have the entire protocol and host part,
-		// remove any possible base url path from url.
-		$url = preg_replace('/^' . $this->_baseSystemEscapedPath . '/', '', $url);
-
-		// Remove possible index.php page from url.
-		$url = str_replace('/index.php', '', $url);
-
-		// Check whether it's path info or not.
-		$pathInfo = parse_url($url, PHP_URL_PATH);
-		$isPathInfo = false;
-		if ($pathInfo) {
-			$isPathInfo = true;
+		// See bug #8698#.
+		if (is_array($contextPaths) && !$page && $operation == 'index') {
+			$page = 'index';
 		}
-
-		$contextPaths = Core::getContextPaths($url, $isPathInfo);
-		$page = Core::getPage($url, $isPathInfo);
-		$operation = Core::getOp($url, $isPathInfo);
 
 		if (empty($contextPaths) || !$page || !$operation) return array(false, false);
 
@@ -379,7 +335,6 @@ class UsageStatsLoader extends FileLoader {
 
 		if ($pageAndOpMatch) {
 			// Get the assoc id inside the passed url.
-			$args = Core::getArgs($url, $isPathInfo);
 			if (empty($args)) {
 				if ($page == 'index' && $operation == 'index') {
 					// Can be a journal index page access,
@@ -491,13 +446,15 @@ class UsageStatsLoader extends FileLoader {
 					break;
 			}
 
-			// Don't count some view access operations for html or pdf galley,
+			// Don't count some view access operations for pdf galleys,
 			// otherwise we would be counting access before user really
-			// access the object. If user really access the object, a download
-			// operation will be also logged and that's the one we have to count.
-			$articleViewAccessPageAndOp = array('article/view', 'article/viewArticle', 'article/viewFile');
+			// access the object. If user really access the object, a download or
+			// viewFile operation will be also logged and that's the one we have
+			// to count.
+			$articleViewAccessPageAndOp = array('article/view', 'article/viewArticle');
+
 			if (in_array($workingPageAndOp, $articleViewAccessPageAndOp) && $assocType == ASSOC_TYPE_GALLEY &&
-			isset($galley) && $galley && ($galley->isHtmlGalley() || $galley->isPdfGalley())) {
+			isset($galley) && $galley && ($galley->isPdfGalley())) {
 				$assocId = $assocType = false;
 			}
 		}
@@ -551,6 +508,62 @@ class UsageStatsLoader extends FileLoader {
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * Get the file type of the object represented
+	 * by the passed assoc type and id.
+	 * @param $assocType int
+	 * @param $assocId int
+	 * @return int One of the STATISTICS_FILE_TYPE... constants value.
+	 */
+	function _getFileType($assocType, $assocId) {
+		$file = null;
+		$type = null;
+
+		// Get the file.
+		switch($assocType) {
+			case ASSOC_TYPE_GALLEY:
+				$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+				$file =& $articleGalleyDao->getGalley($assocId);
+				break;
+			case ASSOC_TYPE_ISSUE_GALLEY;
+				$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+				$file =& $issueGalleyDao->getGalley($assocId);
+				break;
+			case ASSOC_TYPE_SUPP_FILE:
+				$suppFileDao =& DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
+				$file =& $suppFileDao->getSuppFile($assocId);
+				break;
+		}
+
+		if ($file) {
+			if (is_a($file, 'SuppFile')) {
+				switch($file->getFileType()) {
+					case 'application/pdf':
+						$type = STATISTICS_FILE_TYPE_PDF;
+						break;
+					case 'text/html':
+						$type = STATISTICS_FILE_TYPE_HTML;
+						break;
+					default:
+						$type = STATISTICS_FILE_TYPE_OTHER;
+					break;
+				}
+			}
+
+			if (is_a($file, 'ArticleGalley') || is_a($file, 'IssueGalley')) {
+				if ($file->isPdfGalley()) {
+					$type = STATISTICS_FILE_TYPE_PDF;
+				} else if (is_a($file, 'ArticleGalley') && $file->isHtmlGalley()) {
+					$type = STATISTICS_FILE_TYPE_HTML;
+				} else {
+					$type = STATISTICS_FILE_TYPE_OTHER;
+				}
+			}
+		}
+
+		return $type;
 	}
 
 	/**

@@ -281,7 +281,7 @@ class MetricsDAO extends DAO {
 						return false;
 					}
 				}
-				$articleId = $articleFile->getSubmissionId();
+				$articleId = $articleFile->getArticleId();
 				$isArticleFile = true;
 				// Don't break but go on to retrieve the article.
 

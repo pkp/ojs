@@ -145,6 +145,8 @@ class JournalDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteJournalById($journalId) {
+		if (HookRegistry::call('JournalDAO::deleteJournalById', array(&$this, &$journalId))) return;
+
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao->deleteSettingsByJournal($journalId);
 

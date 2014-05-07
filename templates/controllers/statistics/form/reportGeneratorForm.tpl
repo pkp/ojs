@@ -47,9 +47,9 @@
 <form class="pkp_form" id="reportGeneratorForm" method="post" action="{url op="saveReportGenerator"}">
 	{if $metricTypeOptions}
 		{fbvFormArea id="columnsFormArea" title="defaultMetric.availableMetrics"}
-			{fbvSection inline=true size=$fbvStyles.size.SMALL}
+			{fbvFormSection inline=true size=$fbvStyles.size.SMALL}
 				{fbvElement type="select" name="metricType" id="metricType" from=$metricTypeOptions selected=$metricType translate=false}
-			{/fbvSection}
+			{/fbvFormSection}
 		{/fbvFormArea}
 	{else}
 		{fbvElement type="hidden" name="metricType" id="metricType" value=$metricType}
