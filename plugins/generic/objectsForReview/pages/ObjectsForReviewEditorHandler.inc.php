@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/pages/ObjectsForReviewEditorHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectsForReviewEditorHandler
@@ -19,7 +20,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Display objects for review listing pages.
 	 */
-	function objectsForReview($args = array(), &$request) {
+	function objectsForReview($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
@@ -65,7 +66,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 		// Filter by review object type
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
-		$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByJournal($journalId);
+		$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByContext($journalId);
 		$filterTypeOptions = array(0 => __('common.all'));
 		// Consider active types for the creation of a new object for review
 		$createTypeOptions = array();
@@ -148,14 +149,15 @@ class ObjectsForReviewEditorHandler extends Handler {
 		$templateMgr->assign('mode', $mode);
 		$templateMgr->assign('returnPage', $path);
 
-		$rangeInfo = Handler::getRangeInfo('objectForReview');
 		if ($path == '') {
+			$rangeInfo = Handler::getRangeInfo('objectsForReview');
 			$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
-			$objectsForReview =& $ofrDao->getAllByJournalId($journalId, $searchField, $search, $searchMatch, $status, $editorId, $filterType, $rangeInfo, $sort, $sortDirection);
+			$objectsForReview =& $ofrDao->getAllByContextId($journalId, $searchField, $search, $searchMatch, $status, $editorId, $filterType, $rangeInfo, $sort, $sortDirection);
 			$templateMgr->assign_by_ref('objectsForReview', $objectsForReview);
 		} else {
+			$rangeInfo = Handler::getRangeInfo('objectForReviewAssignments');
 			$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
-			$objectForReviewAssignments =& $ofrAssignmentDao->getAllByJournalId($journalId, $searchField, $search, $searchMatch, $status, null, $editorId, $filterType, $rangeInfo, $sort, $sortDirection);
+			$objectForReviewAssignments =& $ofrAssignmentDao->getAllByContextId($journalId, $searchField, $search, $searchMatch, $status, null, $editorId, $filterType, $rangeInfo, $sort, $sortDirection);
 			$templateMgr->assign_by_ref('objectForReviewAssignments', $objectForReviewAssignments);
 			$templateMgr->assign('counts', $ofrAssignmentDao->getStatusCounts($journalId));
 		}
@@ -167,7 +169,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Edit and update object for review (plug-in) settings.
 	 */
-	function objectsForReviewSettings($args = array(), &$request) {
+	function objectsForReviewSettings($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
@@ -197,37 +199,34 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Create/edit object for review.
 	 */
-	function createObjectForReview($args = array(), &$request) {
+	function createObjectForReview($args, &$request) {
 		$this->editObjectForReview($args, &$request);
 	}
 
 	/**
 	 * Create/edit object for review.
 	 */
-	function editObjectForReview($args = array(), &$request) {
-		$objectId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$reviewObjectTypeId = $request->getUserVar('reviewObjectTypeId') == null ? null : (int) $request->getUserVar('reviewObjectTypeId');
+	function editObjectForReview($args, &$request) {
+		$objectId = array_shift($args);
+		$reviewObjectTypeId = (int) $request->getUserVar('reviewObjectTypeId');
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		if (!$this->_ensureObjectExists($objectId, $journalId) && $reviewObjectTypeId == null) {
+		if (!$this->_ensureObjectExists($objectId, $journalId, $reviewObjectTypeId) && !isset($reviewObjectTypeId)) {
 			$request->redirect(null, 'editor', 'objectsForReview');
 		}
-		/*
-		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
-		$objectForReview =& $ofrDao->getById($objectId, $journalId);
-		if (isset($objectForReview) && $reviewObjectTypeId == null) {
-			$reviewObjectTypeId = $objectForReview->getReviewObjectTypeId();
+		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
+		if (!$reviewObjectTypeDao->reviewObjectTypeExists($reviewObjectTypeId, $journalId)) {
+			$request->redirect(null, 'editor', 'objectsForReview');
 		}
-		*/
 
 		$this->setupTemplate($request, true);
 		$templateMgr =& TemplateManager::getManager($request);
-		if ($objectId == null) {
-			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.create');
-		} else {
+		if ($objectId) {
 			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.edit');
+		} else {
+			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.create');
 		}
 		$ofrPlugin =& $this->_getObjectsForReviewPlugin();
 		$ofrPlugin->import('classes.form.ObjectForReviewForm');
@@ -239,16 +238,14 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Update object for review.
 	 */
-	function updateObjectForReview($args = array(), &$request) {
-		$objectId = $request->getUserVar('objectId') == null ? null : (int) $request->getUserVar('objectId');
+	function updateObjectForReview($args, &$request) {
+		$objectId = (int) $request->getUserVar('objectId');
 		$reviewObjectTypeId = (int) $request->getUserVar('reviewObjectTypeId');
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
-		$objectForReview =& $ofrDao->getById($objectId, $journalId);
-		if ($objectId && !$this->_ensureObjectExists($objectId, $journalId)) {
+		if ($objectId && !$this->_ensureObjectExists($objectId, $journalId, $reviewObjectTypeId)) {
 			$request->redirect(null, 'editor', 'objectsForReview');
 		}
 
@@ -302,10 +299,10 @@ class ObjectsForReviewEditorHandler extends Handler {
 		if (!isset($editData) && $ofrForm->validate()) {
 			$ofrForm->execute();
 			// Notification
-			if ($objectId == null) {
-				$notificationType = NOTIFICATION_TYPE_OFR_CREATED;
-			} else {
+			if ($objectId) {
 				$notificationType = NOTIFICATION_TYPE_OFR_UPDATED;
+			} else {
+				$notificationType = NOTIFICATION_TYPE_OFR_CREATED;
 			}
 			$this->_createTrivialNotification($notificationType, $request);
 
@@ -319,10 +316,10 @@ class ObjectsForReviewEditorHandler extends Handler {
 		} else {
 			$this->setupTemplate($request, true);
 			$templateMgr =& TemplateManager::getManager($request);
-			if ($objectId == null) {
-				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.create');
-			} else {
+			if ($objectId) {
 				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.edit');
+			} else {
+				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.create');
 			}
 			$ofrForm->display($request);
 		}
@@ -331,8 +328,8 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Remove object for review cover page image.
 	 */
-	function removeObjectForReviewCoverPage($args = array(), &$request) {
-		$objectId = !isset($args) || empty($args) ? null : (int) $args[0];
+	function removeObjectForReviewCoverPage($args, &$request) {
+		$objectId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -360,8 +357,8 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Delete object for review.
 	 */
-	function deleteObjectForReview($args = array(), &$request) {
-		$objectId = !isset($args) || empty($args) ? null : (int) $args[0];
+	function deleteObjectForReview($args, &$request) {
+		$objectId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -378,8 +375,8 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Display a list of authors from which to choose an object reviewer.
 	 */
-	function selectObjectForReviewAuthor($args = array(), &$request) {
-		$objectId = !isset($args) || empty($args) ? null : (int) $args[0];
+	function selectObjectForReviewAuthor($args, &$request) {
+		$objectId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -440,8 +437,8 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Assign an object for review author.
 	 */
-	function assignObjectForReviewAuthor($args = array(), &$request) {
-		$objectId = !isset($args) || empty($args) ? null : (int) $args[0];
+	function assignObjectForReviewAuthor($args, &$request) {
+		$objectId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -476,10 +473,10 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Accept an object for review author.
 	 */
-	function acceptObjectForReviewAuthor($args = array(), &$request) {
+	function acceptObjectForReviewAuthor($args, &$request) {
 		$returnPage = $this->_getReturnpage($request);
 
-		$assignmentId = !isset($args) || empty($args) ? null : (int) $args[0];
+		$assignmentId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -509,10 +506,10 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Deny an object for review request.
 	 */
-	function denyObjectForReviewAuthor($args = array(), &$request) {
+	function denyObjectForReviewAuthor($args, &$request) {
 		$returnPage = $this->_getReturnpage($request);
 
-		$assignmentId = !isset($args) || empty($args) ? null : (int) $args[0];
+		$assignmentId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -547,10 +544,10 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Mark an object for review assignment as mailed.
 	 */
-	function notifyObjectForReviewMailed($args = array(), &$request) {
+	function notifyObjectForReviewMailed($args, &$request) {
 		$returnPage = $this->_getReturnpage($request);
 
-		$assignmentId = !isset($args) || empty($args) ? null : (int) $args[0];
+		$assignmentId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -594,10 +591,10 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Remove object reviewer assignment.
 	 */
-	function removeObjectForReviewAssignment($args = array(), &$request) {
+	function removeObjectForReviewAssignment($args, &$request) {
 		$returnPage = $this->_getReturnpage($request);
 
-		$assignmentId = !isset($args) || empty($args) ? null : (int) $args[0];
+		$assignmentId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -634,7 +631,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Display a list of submissions from which to choose an object review submission.
 	 */
-	function selectObjectForReviewSubmission($args = array(), &$request) {
+	function selectObjectForReviewSubmission($args, &$request) {
 		$returnPage = $this->_getReturnpage($request);
 
 		$journal =& $request->getJournal();
@@ -643,7 +640,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 		$ofrPlugin =& $this->_getObjectsForReviewPlugin();
 		$mode = $ofrPlugin->getSetting($journalId, 'mode');
 
-		$assignmentId = !isset($args) || empty($args) ? null : (int) $args[0];
+		$assignmentId = array_shift($args);
 		if ($mode == OFR_MODE_FULL) {
 			if (!$this->_ensureAssignmentExists($assignmentId, $journalId)) {
 				$request->redirect(null, 'editor', 'objectsForReview', $returnPage);
@@ -713,7 +710,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Assign an object for review submission.
 	 */
-	function assignObjectForReviewSubmission($args = array(), &$request) {
+	function assignObjectForReviewSubmission($args, &$request) {
 		$returnPage = $this->_getReturnpage($request);
 
 		$journal =& $request->getJournal();
@@ -722,7 +719,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 		$ofrPlugin =& $this->_getObjectsForReviewPlugin();
 		$mode = $ofrPlugin->getSetting($journalId, 'mode');
 
-		$assignmentId = !isset($args) || empty($args) ? null : (int) $args[0];
+		$assignmentId = array_shift($args);
 		$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
 		$insert = false;
 		if ($mode == OFR_MODE_FULL) {
@@ -732,7 +729,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 			$ofrAssignment =& $ofrAssignmentDao->getById($assignmentId);
 			$objectId = $ofrAssignment->getObjectId();
 		} elseif ($mode == OFR_MODE_METADATA) {
-			$objectId = $request->getUserVar('objectId') == null ? null : $request->getUserVar('objectId');
+			$objectId = (int) $request->getUserVar('objectId');
 			if (!$this->_ensureObjectExists($objectId, $journalId)) {
 				$request->redirect(null, 'editor', 'objectsForReview', $returnPage);
 			}
@@ -762,15 +759,20 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Edit object for review assignment.
 	 */
-	function editObjectForReviewAssignment($args = array(), &$request) {
+	function editObjectForReviewAssignment($args, &$request) {
 		$returnPage = $this->_getReturnpage($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$assignmentId = !isset($args) || empty($args) ? null : (int) $args[0];
-		$objectId = $request->getUserVar('objectId') == null ? null : (int) $request->getUserVar('objectId');
+		$assignmentId = array_shift($args);
+		$objectId = (int) $request->getUserVar('objectId');
 		if (!$this->_ensureAssignmentExists($assignmentId, $journalId) || !$this->_ensureObjectExists($objectId, $journalId)) {
+			$request->redirect(null, 'editor', 'objectsForReview', $returnPage);
+		}
+		$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
+		$ofrAssignment =& $ofrAssignmentDao->getById($assignmentId, $objectId);
+		if (!isset($ofrAssignment)) {
 			$request->redirect(null, 'editor', 'objectsForReview', $returnPage);
 		}
 
@@ -791,15 +793,20 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Update object for review assignment.
 	 */
-	function updateObjectForReviewAssignment($args = array(), &$request) {
+	function updateObjectForReviewAssignment($args, &$request) {
 		$returnPage = $this->_getReturnpage($request);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$assignmentId = $request->getUserVar('assignmentId') == null ? null : (int) $request->getUserVar('assignmentId');
-		$objectId = $request->getUserVar('objectId') == null ? null : (int) $request->getUserVar('objectId');
+		$assignmentId = (int) $request->getUserVar('assignmentId');
+		$objectId = (int) $request->getUserVar('objectId');
 		if (!$this->_ensureAssignmentExists($assignmentId, $journalId) || !$this->_ensureObjectExists($objectId, $journalId)) {
+			$request->redirect(null, 'editor', 'objectsForReview', $returnPage);
+		}
+		$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
+		$ofrAssignment =& $ofrAssignmentDao->getById($assignmentId, $objectId);
+		if (!isset($ofrAssignment)) {
 			$request->redirect(null, 'editor', 'objectsForReview', $returnPage);
 		}
 
@@ -855,7 +862,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 * @param $subclass boolean (optional) set to true if caller is below this handler in the hierarchy
 	 * @param $objectId int (optional)
 	 */
@@ -902,7 +909,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	//
 	/**
 	 * Get the objectForReview plugin object
-	 * @return ObjectsForReviewPlugin
+	 * @return object ObjectsForReviewPlugin
 	 */
 	function &_getObjectsForReviewPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);
@@ -911,7 +918,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Get return page
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 * @return string
 	 */
 	function _getReturnpage(&$request) {
@@ -925,30 +932,37 @@ class ObjectsForReviewEditorHandler extends Handler {
 		return $returnPage;
 	}
 
-	/** Ensure object for review exists
+	/**
+	 * Ensure object for review exists
 	 * @param $objectId int
 	 * @param $journalId int
+	 * @param $reviewObjectTypeId int (optional)
 	 * @return boolean
 	 */
-	function _ensureObjectExists($objectId, $journalId) {
-		if ($objectId == null) {
+	function _ensureObjectExists($objectId, $journalId, $reviewObjectTypeId = null) {
+		if (!$objectId) {
 			return false;
 		}
 		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
-		if (!$ofrDao->objectForReviewExists($objectId, $journalId)) {
+		$objectForReview =& $ofrDao->getById($objectId, $journalId);
+		if (!isset($objectForReview)) {
+			return false;
+		}
+		if ($reviewObjectTypeId && ($objectForReview->getReviewObjectTypeId() != $reviewObjectTypeId)) {
 			return false;
 		}
 		return true;
 	}
 
-	/** Ensure object for review assignment exists
+	/**
+	 * Ensure object for review assignment exists
 	 * @param $assignmentId int
 	 * @param $journalId int
 	 * @param $status int (optional)
 	 * @return boolean
 	 */
 	function _ensureAssignmentExists($assignmentId, $journalId, $status = null) {
-		if ($assignmentId == null) {
+		if (!$assignmentId) {
 			return false;
 		}
 		$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
@@ -957,7 +971,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 			return false;
 		}
 		// Ensure status
-		if (isset($status) && ($ofrAssignment->getStatus() != $status)) {
+		if ($status && ($ofrAssignment->getStatus() != $status)) {
 			return false;
 		}
 		// Ensure the object exists
@@ -965,15 +979,14 @@ class ObjectsForReviewEditorHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * Assign an author to an object for review.
-	 * @param $ofrAssignment ObjectForReviewAssignment (optional)
-	 * @param $objectForReview ObjectForReview
-	 * @param $author User
+	 * @param $ofrAssignment object ObjectForReviewAssignment
+	 * @param $objectForReview object ObjectForReview
+	 * @param $author object User
 	 * @param $returnUrl string
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 */
-	function _assign($ofrAssignment = null, $objectForReview, $author, $returnUrl, &$request) {
+	function _assign($ofrAssignment, $objectForReview, $author, $returnUrl, &$request) {
 		import('classes.mail.MailTemplate');
 		$email = new MailTemplate('OFR_OBJECT_ASSIGNED');
 		$send = $request->getUserVar('send');
@@ -1012,7 +1025,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Is remove action allowed
-	 * @param $ofrAssignment ObjectForReviewAssignment
+	 * @param $ofrAssignment object ObjectForReviewAssignment
 	 * @return boolean
 	 */
 	function _canBeRemoved($ofrAssignment) {
@@ -1021,12 +1034,12 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Display email form for the editor
-	 * @param $email MailTemplate
-	 * @param $objectForReview ObjectForReview
-	 * @param $user User
+	 * @param $email object MailTemplate
+	 * @param $objectForReview object ObjectForReview
+	 * @param $user object User
 	 * @param $returnUrl string
 	 * @param $action string
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 */
 	function _displayEmailForm($email, $objectForReview, $user, $returnUrl, $action, $request) {
 		if (!$request->getUserVar('continued')) {
@@ -1094,7 +1107,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Create trivial notification
 	 * @param $notificationType int
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 */
 	function _createTrivialNotification($notificationType, &$request) {
 		$user =& $request->getUser();

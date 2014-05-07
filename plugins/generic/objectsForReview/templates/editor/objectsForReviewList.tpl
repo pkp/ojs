@@ -1,7 +1,8 @@
 {**
  * @file plugins/generic/objectsForReview/templates/editor/objectsForReview.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display list of objects for review for editor management.
@@ -33,7 +34,7 @@
 <br />
 
 {assign var=colspan value="6"}
-{assign var=colspanPage value="2"}
+{assign var=colspanPage value="3"}
 
 <table width="100%" class="listing">
 	<tr>
@@ -91,7 +92,7 @@
 {else}
 	<tr>
 		<td colspan="{$colspanPage}" align="left">{page_info iterator=$objectsForReview}</td>
-		<td colspan="{$colspanPage}" align="right">{page_links anchor="objectsForReview" name="objectsForReview" iterator=$objectsForReview sort=$sort sortDirection=$sortDirection}</td>
+		<td colspan="{$colspanPage}" align="right">{page_links anchor="objectsForReview" name="objectsForReview" iterator=$objectsForReview sort=$sort sortDirection=$sortDirection filterEditor=$filterEditor filterType=$filterType searchField=$searchField searchMatch=$searchMatch search=$search}</td>
 	</tr>
 {/if}
 </table>

@@ -4,7 +4,8 @@
 <!--
   * @file plugins/generic/objectsForReview/xml/schema.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Objects For Review plugin schema in XML.
@@ -23,7 +24,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="journal_id" type="I8">
+		<field name="context_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="is_active" type="I1">
@@ -139,7 +140,7 @@
 		<field name="review_object_type_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="journal_id" type="I8">
+		<field name="context_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="available" type="I1">

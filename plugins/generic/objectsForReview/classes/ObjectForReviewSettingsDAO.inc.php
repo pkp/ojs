@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewSettingsDAO.inc.php
  *
- * Copyright (c) 2000-2012 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewSettingsDAO
@@ -14,7 +15,7 @@
 
 
 class ObjectForReviewSettingsDAO extends DAO {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	/**
@@ -43,7 +44,6 @@ class ObjectForReviewSettingsDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $setting;
 	}
 
@@ -65,7 +65,6 @@ class ObjectForReviewSettingsDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $objectForReviewSettings;
 	}
 

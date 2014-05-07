@@ -4,12 +4,13 @@
 <!--
   * @file plugins/generic/objectsForReview/xml/scheduledTasks.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Objects for review plugin scheduled tasks registry file.
   *
-  * This file lists all scheduled tasks to be executed by the system.
+  * This file lists all plugin's scheduled tasks to be executed by the system.
   *
   * Note that this functionality requires scheduled task support to be enabled.
   * The degree of granularity supported for the task frequency depends on the

@@ -3,8 +3,8 @@
 <object locale="en_US">
 	<objectType key="thesis">plugins.generic.objectsForReview.object.thesis</objectType>
 	<roleSelectionOptions>
-			<selectionOption>plugins.generic.objectsForReview.object.thesis.person.author</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.thesis.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.thesis.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.thesis.person.contributor</selectionOption>
 	</roleSelectionOptions>
 	<objectMetadata>
 	<metadata type="singleLineTextBox" required="false" display="false" key="thesis_type">

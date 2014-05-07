@@ -1,7 +1,8 @@
 {**
- * plugins/generic/objectsForReview/templates/objectForReviewForm.tpl
+ * @file plugins/generic/objectsForReview/templates/objectForReviewForm.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Object for review form.
@@ -49,11 +50,11 @@ function movePerson(dir, personIndex) {
 		<tr valign="top">
 			<td width="20%" class="label">{$metadata->getLocalizedName()|escape} {if $metadata->getRequired() == 1}*{/if}</td>
 			<td width="80%" class="value">
-				<select name="persons[{$personIndex|escape}][role]" id="personss-{$personsIndex|escape}-role" size="1" class="selectMenu">
+				<select name="persons[{$personIndex|escape}][role]" id="persons-{$personIndex|escape}-role" size="1" class="selectMenu">
 					<option label="{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole"}" value="">{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole"}</option>
 					{assign var=possibleOptions value=$metadata->getLocalizedPossibleOptions()}
 					{foreach name=roleOptions from=$possibleOptions key=optionId item=optionItem}
-					<option label="{$optionItem.content|escape}" value="{$smarty.foreach.roleOptions.iteration}"{if $smarty.foreach.roleOptions.iteration == $person.role} selected="selected"{/if}>{$optionItem.content|escape}</option>
+					<option label="{$optionItem.content|escape}" value="{$optionItem.order|escape}"{if $optionItem.order == $person.role} selected="selected"{/if}>{$optionItem.content|escape}</option>
 					{/foreach}
 				</select>
 			</td>
@@ -93,7 +94,7 @@ function movePerson(dir, personIndex) {
 					<select name="persons[0][role]" id="persons-0-role" size="1" class="selectMenu">
 						<option label="{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole"}" value="">{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole"}</option>
 						{foreach name=roleOptions from=$possibleOptions key=optionId item=optionItem}
-						<option label="{$optionItem.content|escape}" value="{$smarty.foreach.roleOptions.iteration}">{$optionItem.content|escape}</option>
+						<option label="{$optionItem.content|escape}" value="{$optionItem.order|escape}">{$optionItem.content|escape}</option>
 						{/foreach}
 					</select>
 				</td>
@@ -158,15 +159,16 @@ function movePerson(dir, personIndex) {
 				{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_CHECKBOXES}
 					{assign var=possibleOptions value=$metadata->getLocalizedPossibleOptions()}
 					{foreach name=options from=$possibleOptions key=optionId item=optionItem}
-						<input type="checkbox" name="ofrSettings[{$metadataId|escape}][]" id="ofrSettings-{$metadataId|escape}-{$smarty.foreach.options.iteration}" value="{$smarty.foreach.options.iteration}"{if !empty($ofrSettingValue) && in_array($smarty.foreach.options.iteration, $ofrSettingValue)} checked="checked"{/if} />
-						<label for="ofrSettings-{$metadataId|escape}-{$smarty.foreach.options.iteration}">{$optionItem.content|escape}</label>
+						<input type="checkbox" name="ofrSettings[{$metadataId|escape}][]" id="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}" value="{$optionItem.order|escape}"{if !empty($ofrSettingValue) && in_array($optionItem.order, $ofrSettingValue)} checked="checked"{/if} />
+						<label for="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}">{$optionItem.content|escape}</label>
 						<br/>
 					{/foreach}
 				{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_RADIO_BUTTONS}
 					{assign var=possibleOptions value=$metadata->getLocalizedPossibleOptions()}
 					{foreach name=options from=$possibleOptions key=optionId item=optionItem}
-						<input type="radio" name="ofrSettings[{$metadataId|escape}]" id="ofrSettings-{$metadataId|escape}-{$smarty.foreach.options.iteration}" value="{$smarty.foreach.options.iteration}"{if $smarty.foreach.options.iteration == $ofrSettingValue} checked="checked"{/if}/><label for="ofrSettings-{$metadataId|escape}-{$smarty.foreach.options.iteration}">{$optionItem.content|escape}</label><br/>
+						<input type="radio" name="ofrSettings[{$metadataId|escape}]" id="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}" value="{$optionItem.order|escape}"{if $optionItem.order == $ofrSettingValue} checked="checked"{/if}/><label for="ofrSettings-{$metadataId|escape}-{$optionItem.order|escape}">{$optionItem.content|escape}</label><br/>
 					{/foreach}
+					<input type="radio" name="ofrSettings[{$metadataId|escape}]" id="ofrSettings-{$metadataId|escape}-0" value=""{if 0 == $ofrSettingValue} checked="checked"{/if}/><label for="ofrSettings-{$metadataId|escape}-0">{translate key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer"}</label><br/>
 				{elseif $metadata->getMetadataType() == REVIEW_OBJECT_METADATA_TYPE_LANG_DROP_DOWN_BOX}
 					<select name="ofrSettings[{$metadataId|escape}][]" id="ofrSettings-{$metadataId|escape}" size="5" class="selectMenu" multiple="multiple">
 						{html_options options=$validLanguages selected=$ofrSettingValue}
@@ -176,7 +178,7 @@ function movePerson(dir, personIndex) {
 						<option label="{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption"}" value="">{translate key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption"}</option>
 						{assign var=possibleOptions value=$metadata->getLocalizedPossibleOptions()}
 						{foreach name=options from=$possibleOptions key=optionId item=optionItem}
-							<option label="{$optionItem.content|escape}" value="{$smarty.foreach.options.iteration}"{if $smarty.foreach.options.iteration == $ofrSettingValue} selected="selected"{/if}>{$optionItem.content|escape}</option>
+							<option label="{$optionItem.content|escape}" value="{$optionItem.order}"{if $optionItem.order == $ofrSettingValue} selected="selected"{/if}>{$optionItem.content|escape}</option>
 						{/foreach}
 					</select>
 				{/if}

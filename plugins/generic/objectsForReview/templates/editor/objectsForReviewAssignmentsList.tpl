@@ -1,7 +1,8 @@
 {**
  * @file plugins/generic/objectsForReview/templates/editor/objectsForReviewAssignmentsList.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display the list of objects for review assignments for editor management.
@@ -131,7 +132,7 @@
 {else}
 	<tr>
 		<td colspan="{$colspanPage}" align="left">{page_info iterator=$objectForReviewAssignments}</td>
-		<td colspan="{$colspanPage}" align="right">{page_links anchor="objectForReviewAssignments" name="objectForReviewAssignments" iterator=$objectForReviewAssignments}</td>
+		<td colspan="{$colspanPage}" align="right">{page_links anchor="objectForReviewAssignments" name="objectForReviewAssignments" iterator=$objectForReviewAssignments sort=$sort sortDirection=$sortDirection filterEditor=$filterEditor filterType=$filterType searchField=$searchField searchMatch=$searchMatch search=$search}</td>
 	</tr>
 {/if}
 </table>

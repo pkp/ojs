@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReview.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReview
@@ -23,26 +24,8 @@ class ObjectForReview extends DataObject {
 	}
 
 	/**
-	 * Get specific person of this object for review.
-	 * @param $personId int
-	 * @return ObjectForReviewPerson
-	 */
-	function &getPerson($personId) {
-		$person = null;
-		$persons = $this->getPersons();
-		if ($personId != 0) {
-			for ($i=0, $count=count($persons); $i < $count && $person == null; $i++) {
-				if ($persons[$i]->getId() == $personId) {
-					$person =& $persons[$i];
-				}
-			}
-		}
-		return $person;
-	}
-
-	/**
 	 * Return string of person names, separated by the specified token
-	 * @param $lastOnly boolean return list of lastnames only (default false)
+	 * @param $lastOnly boolean return the list of lastnames only (default false)
 	 * @param $separator string separator for names (default comma+space)
 	 * @return string
 	 */
@@ -85,7 +68,7 @@ class ObjectForReview extends DataObject {
 
 	/**
 	 * Get editor assigned to the object for review.
-	 * @return Editor
+	 * @return object Editor
 	 */
 	function &getEditor() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -126,7 +109,7 @@ class ObjectForReview extends DataObject {
 
 	/**
 	 * Get review object type.
-	 * @return ReviewObjectType
+	 * @return object ReviewObjectType
 	 */
 	function &getReviewObjectType() {
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
@@ -134,19 +117,19 @@ class ObjectForReview extends DataObject {
 	}
 
 	/**
-	 * Get journal ID.
+	 * Get context ID.
 	 * @return int
 	 */
-	function getJournalId() {
-		return $this->getData('journalId');
+	function getContextId() {
+		return $this->getData('contextId');
 	}
 
 	/**
-	 * Set journal ID.
-	 * @param $journalId int
+	 * Set context ID.
+	 * @param $contextId int
 	 */
-	function setJournalId($journalId) {
-		return $this->setData('journalId', $journalId);
+	function setContextId($contextId) {
+		return $this->setData('contextId', $contextId);
 	}
 
 	/**
@@ -179,7 +162,7 @@ class ObjectForReview extends DataObject {
 
 	/**
 	 * Get dateCreated.
-	 * @return date
+	 * @return string
 	 */
 	function getDateCreated() {
 		return $this->getData('dateCreated');
@@ -187,7 +170,7 @@ class ObjectForReview extends DataObject {
 
 	/**
 	 * Set dateCreated.
-	 * @param $dateCreated date
+	 * @param $dateCreated string
 	 */
 	function setDateCreated($dateCreated) {
 		return $this->setData('dateCreated', $dateCreated);
@@ -277,7 +260,7 @@ class ObjectForReview extends DataObject {
 	 * Update object for review setting value.
 	 * @param $reviewObjectMetadataId int
 	 * @param $value mixed
-	 * @param $type string optional
+	 * @param $type string (optional)
 	 */
 	function updateSetting($reviewObjectMetadataId, $value, $type = null) {
 		$ofrSettingsDao =& DAORegistry::getDAO('ObjectForReviewSettingsDAO');

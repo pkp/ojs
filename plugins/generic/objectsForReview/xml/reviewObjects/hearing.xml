@@ -3,7 +3,7 @@
 <object locale="en_US">
 	<objectType key="hearing">plugins.generic.objectsForReview.object.hearing</objectType>
 	<roleSelectionOptions>
-			<selectionOption>plugins.generic.objectsForReview.object.hearing.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.hearing.person.contributor</selectionOption>
 	</roleSelectionOptions>
 	<objectMetadata>
 	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_committee">

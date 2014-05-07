@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/pages/ReviewObjectTypesEditorHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewObjectTypesEditorHandler
@@ -19,13 +20,13 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	/**
 	 * Display objects for review listing pages.
 	 */
-	function reviewObjectTypes($args = array(), &$request) {
+	function reviewObjectTypes($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$rangeInfo = $this->getRangeInfo('objectsForReview');
+		$rangeInfo = $this->getRangeInfo('reviewObjectTypes');
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
-		$types =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByJournal($journalId);
+		$types =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByContext($journalId);
 		$totalResults = count($types);
 		$types = array_slice($types, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 		import('lib.pkp.classes.core.VirtualArrayIterator');
@@ -44,34 +45,33 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	}
 
 	/**
-	 * Display form to create a new review object type.
+	 * Create a new review object type.
 	 */
-	function createReviewObjectType($args = array(), &$request) {
+	function createReviewObjectType($args, &$request) {
 		$this->editReviewObjectType($args, &$request);
 	}
 
 	/**
-	 * Display form to create/edit a review object type.
-	 * @param $args array optional, if set the first parameter is the ID of the review object type to edit
+	 * Create/edit a review object type.
 	 */
-	function editReviewObjectType($args = array(), &$request) {
-		$typeId = isset($args[0]) ? (int) $args[0] : null;
+	function editReviewObjectType($args, &$request) {
+		$typeId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
 		$reviewObjectType =& $reviewObjectTypeDao->getById($typeId, $journalId);
-		if ($typeId != null && (!isset($reviewObjectType))) {
+		if ($typeId && (!isset($reviewObjectType))) {
 			$request->redirect(null, null, 'reviewObjectTypes');
 		}
 
 		$this->setupTemplate($request, true, $reviewObjectType);
 		$templateMgr =& TemplateManager::getManager($request);
-		if ($typeId == null) {
-			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectType.create');
-		} else {
+		if ($typeId) {
 			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectType.edit');
+		} else {
+			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectType.create');
 		}
 
 		$plugin =& $this->_getObjectsForReviewPlugin();
@@ -88,15 +88,15 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	/**
 	 * Update a review object type.
 	 */
-	function updateReviewObjectType($args = array(), &$request) {
-		$typeId = $request->getUserVar('typeId') == null ? null : (int) $request->getUserVar('typeId');
+	function updateReviewObjectType($args, &$request) {
+		$typeId = (int) $request->getUserVar('typeId');
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
 		$reviewObjectType =& $reviewObjectTypeDao->getById($typeId, $journalId);
-		if ($typeId != null && (!isset($reviewObjectType))) {
+		if ($typeId && (!isset($reviewObjectType))) {
 				$request->redirect(null, null, 'reviewObjectTypes');
 		}
 
@@ -104,7 +104,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		$plugin->import('classes.form.ReviewObjectTypeForm');
 		$reviewObjectTypeForm = new ReviewObjectTypeForm(OBJECTS_FOR_REVIEW_PLUGIN_NAME, $typeId);
 		$reviewObjectTypeForm->readInputData();
-		if ($typeId == null) {
+		if (!$typeId) {
 			$formLocale = $reviewObjectTypeForm->getFormLocale();
 			// Reorder option items
 			$options = $reviewObjectTypeForm->getData('possibleOptions');
@@ -141,20 +141,20 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		if (!isset($editData) && $reviewObjectTypeForm->validate()) {
 			$reviewObjectTypeForm->execute();
 			// Notification
-			if ($typeId == null) {
-				$notificationType = NOTIFICATION_TYPE_OFR_OT_CREATED;
-			} else {
+			if ($typeId) {
 				$notificationType = NOTIFICATION_TYPE_OFR_OT_UPDATED;
+			} else {
+				$notificationType = NOTIFICATION_TYPE_OFR_OT_CREATED;
 			}
 			$this->_createTrivialNotification($notificationType, $request);
 			$request->redirect(null, 'editor', 'reviewObjectTypes');
 		} else {
 			$this->setupTemplate($request, true, $reviewObjectType);
 			$templateMgr =& TemplateManager::getManager($request);
-			if ($typeId == null) {
-				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectType.create');
-			} else {
+			if ($typeId) {
 				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectType.edit');
+			} else {
+				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectType.create');
 			}
 			$reviewObjectTypeForm->display($request);
 		}
@@ -162,10 +162,9 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Preview a review object type.
-	 * @param $args array first parameter is the ID of the review object type to preview
 	 */
-	function previewReviewObjectType($args = array(), &$request) {
-		$typeId = isset($args[0]) ? (int) $args[0] : null;
+	function previewReviewObjectType($args, &$request) {
+		$typeId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -198,10 +197,9 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Delete a review object type.
-	 * @param $args array first parameter is the ID of the review object type to delete
 	 */
-	function deleteReviewObjectType($args = array(), &$request) {
-		$typeId = isset($args[0]) ? (int) $args[0] : null;
+	function deleteReviewObjectType($args, &$request) {
+		$typeId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -218,10 +216,9 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Activate a review object type to be used.
-	 * @param $args array first parameter is the ID of the review object type to activate
 	 */
-	function activateReviewObjectType($args = array(), &$request) {
-		$typeId = isset($args[0]) ? (int) $args[0] : null;
+	function activateReviewObjectType($args, &$request) {
+		$typeId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -240,10 +237,9 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Deactivate a review object type.
-	 * @param $args array first parameter is the ID of the review object type to deactivate
 	 */
-	function deactivateReviewObjectType($args = array(), &$request) {
-		$typeId = isset($args[0]) ? (int) $args[0] : null;
+	function deactivateReviewObjectType($args, &$request) {
+		$typeId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -263,7 +259,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	/**
 	 * Update review object locale data.
 	 */
-	function updateOrInstallReviewObjectTypes($args = array(), &$request) {
+	function updateOrInstallReviewObjectTypes($args, &$request) {
 		$journal =& $request->getJournal();
 		$plugin =& $this->_getObjectsForReviewPlugin();
 
@@ -285,8 +281,8 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	/**
 	 * Display a list of the metadata within a review object type.
 	 */
-	function reviewObjectMetadata($args = array(), &$request) {
-		$typeId = isset($args[0]) ? (int) $args[0] : null;
+	function reviewObjectMetadata($args, &$request) {
+		$typeId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -296,11 +292,11 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		if (!isset($reviewObjectType)) {
 			$request->redirect(null, 'editor', 'reviewObjectTypes');
 		}
-		$rangeInfo = $this->getRangeInfo('objectsForReview');
-		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
-		$reviewObjectMetadata =& $reviewObjectMetadataDao->getByReviewObjectTypeId($typeId, $rangeInfo);
 
-		$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByJournal($journalId);
+		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
+		$reviewObjectMetadata =& $reviewObjectMetadataDao->getByReviewObjectTypeId($typeId);
+
+		$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByContext($journalId);
 		$typeOptions = array();
 		foreach ($allTypes as $type) {
 			$typeOptions[$type['typeId']] = $type['typeName'];
@@ -312,25 +308,23 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		$templateMgr->assign_by_ref('reviewObjectMetadata', $reviewObjectMetadata);
 		$templateMgr->assign_by_ref('typeOptions', $typeOptions);
 		$templateMgr->assign('typeId', $typeId);
-		//$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		$plugin =& $this->_getObjectsForReviewPlugin();
 		$templateMgr->display($plugin->getTemplatePath() . 'editor/reviewObjectMetadata.tpl');
 	}
 
 	/**
-	 * Display form to create a new review object metadata.
+	 * Create a new review object metadata.
 	 */
-	function createReviewObjectMetadata($args = array(), &$request) {
+	function createReviewObjectMetadata($args, &$request) {
 		$this->editReviewObjectMetadata($args, &$request);
 	}
 
 	/**
-	 * Display form to create/edit a review object metadata.
-	 * @param $args ($typeId, $metadataId)
+	 * Create/edit a review object metadata.
 	 */
-	function editReviewObjectMetadata($args = array(), &$request) {
-		$typeId = isset($args[0]) ? (int)$args[0] : null;
-		$metadataId = isset($args[1]) ? (int) $args[1] : null;
+	function editReviewObjectMetadata($args, &$request) {
+		$typeId = array_shift($args);
+		$metadataId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -338,16 +332,16 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
 		$reviewObjectType =& $reviewObjectTypeDao->getById($typeId, $journalId);
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
-		if (!isset($reviewObjectType) || ($metadataId != null && !$reviewObjectMetadataDao->reviewObjectMetadataExists($metadataId, $typeId))) {
+		if (!isset($reviewObjectType) || ($metadataId && !$reviewObjectMetadataDao->reviewObjectMetadataExists($metadataId, $typeId))) {
 			$request->redirect(null, 'editor', 'reviewObjectMetadata', array($typeId));
 		}
 
 		$this->setupTemplate($request, true, $reviewObjectType);
 		$templateMgr =& TemplateManager::getManager($request);
-		if ($metadataId == null) {
-			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectMetadata.create');
-		} else {
+		if ($metadataId) {
 			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectMetadata.edit');
+		} else {
+			$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectMetadata.create');
 		}
 
 		$plugin =& $this->_getObjectsForReviewPlugin();
@@ -361,17 +355,20 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		$reviewObjectMetadataForm->display($request);
 	}
 
-	function updateReviewObjectMetadata($args = array(), &$request) {
+	/**
+	 * Update a review object metadata.
+	 */
+	function updateReviewObjectMetadata($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$typeId = $request->getUserVar('reviewObjectTypeId') == null ? null : (int) $request->getUserVar('reviewObjectTypeId');
-		$metadataId = $request->getUserVar('metadataId') === null? null : (int) $request->getUserVar('metadataId');
+		$typeId = (int) $request->getUserVar('reviewObjectTypeId');
+		$metadataId = (int) $request->getUserVar('metadataId');
 
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
 		$reviewObjectType =& $reviewObjectTypeDao->getById($typeId, $journalId);
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
-		if (!isset($reviewObjectType) || ($metadataId != null && !$reviewObjectMetadataDao->reviewObjectMetadataExists($metadataId, $typeId))) {
+		if (!isset($reviewObjectType) || ($metadataId && !$reviewObjectMetadataDao->reviewObjectMetadataExists($metadataId, $typeId))) {
 			$request->redirect(null, null, 'reviewObjectMetadata', array($typeId));
 		}
 
@@ -418,10 +415,10 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		} else {
 			$this->setupTemplate($request, true, $reviewObjectType);
 			$templateMgr =& TemplateManager::getManager($request);
-			if ($metadataId == null) {
-				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectMetadata.create');
-			} else {
+			if ($metadataId) {
 				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectMetadata.edit');
+			} else {
+				$templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.objectMetadata.create');
 			}
 			$reviewObjectMetadataForm->display($request);
 		}
@@ -430,14 +427,13 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Delete a review object metadata.
-	 * @param $args array ($typeId, $metadataId)
 	 */
-	function deleteReviewObjectMetadata($args = array(), &$request) {
+	function deleteReviewObjectMetadata($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$typeId = isset($args[0]) ? (int)$args[0] : null;
-		$metadataId = isset($args[1]) ? (int) $args[1] : null;
+		$typeId = array_shift($args);
+		$metadataId = array_shift($args);
 
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
 		$reviewObjectMetadataDao->deleteById($metadataId, $typeId);
@@ -450,7 +446,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	/**
 	 * Change the sequence of a review object metadata.
 	 */
-	function moveReviewObjectMetadata($args = array(), &$request) {
+	function moveReviewObjectMetadata($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
@@ -494,8 +490,8 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	/**
 	 * Copy review object metadata to another review object.
 	 */
-	function copyOrUpdateReviewObjectMetadata($args = array(), &$request) {
-		$typeId = isset($args[0]) ? (int)$args[0] : null;
+	function copyOrUpdateReviewObjectMetadata($args, &$request) {
+		$typeId = array_shift($args);
 
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
@@ -559,9 +555,9 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 * @param $subclass boolean (optional) set to true if caller is below this handler in the hierarchy
-	 * @param $reviewObjectType ReviewObjectType (optional)
+	 * @param $reviewObjectType object (optional) ReviewObjectType
 	 */
 	function setupTemplate(&$request, $subclass = false, $reviewObjectType = null) {
 		$templateMgr =& TemplateManager::getManager($request);
@@ -602,7 +598,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	//
 	/**
 	 * Get the objectForReview plugin object
-	 * @return ObjectsForReviewPlugin
+	 * @return object ObjectsForReviewPlugin
 	 */
 	function &_getObjectsForReviewPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);
@@ -647,7 +643,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Update or install review objects
-	 * @param $journal Journal
+	 * @param $journal object Journal
 	 * @param $reviewObjects array of review object types keys or ids
 	 * @param $locales array of locales
 	 * @param $action string (install or update)
@@ -665,7 +661,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 			if ($action == 'install') {
 				// Create a new review object type
 				$reviewObjectType = $reviewObjectTypeDao->newDataObject();
-				$reviewObjectType->setJournalId($journalId);
+				$reviewObjectType->setContextId($journalId);
 				$reviewObjectType->setActive(0);
 				$reviewObjectType->setKey($keyOrId);
 			} elseif ($action == 'update') {
@@ -803,7 +799,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	/**
 	 * Create trivial notification
 	 * @param $notificationType int
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 */
 	function _createTrivialNotification($notificationType, &$request) {
 		$user =& $request->getUser();

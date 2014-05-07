@@ -1,7 +1,8 @@
 {**
- * plugins/generic/objectsForReview/templates/editor/reviewObjectMetadata.tpl
+ * @file plugins/generic/objectsForReview/templates/editor/reviewObjectMetadata.tpl
  *
- * Copyright (c) 2003-2012 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display list of review object metadata.
@@ -15,7 +16,7 @@
 {literal}
 $(document).ready(function() { setupTableDND("#reviewObjectMetadataTable",
 {/literal}
-"{url op=moveReviewObjectMetadata}"
+'{url|escape:"jsparam" op=moveReviewObjectMetadata}'
 {literal}
 ); });
 {/literal}
@@ -73,22 +74,11 @@ function toggleChecked() {
 			{if !$metadata->keyExists()}<a href="{url op="editReviewObjectMetadata" path=$metadata->getReviewObjectTypeId()|to_array:$metadata->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteReviewObjectMetadata" path=$metadata->getReviewObjectTypeId()|to_array:$metadata->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;{/if}<a href="{url op="moveReviewObjectMetadata" d=u id=$metadata->getId()}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveReviewObjectMetadata" d=d id=$metadata->getId()}" class="action">&darr;</a>
 		</td>
 	</tr>
-  {if $reviewObjectMetadata->eof()}
-    <tr><td class="endseparator" colspan="5"></td></tr>
-  {/if}
 {/iterate}
 
 {if $reviewObjectMetadata->wasEmpty()}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="plugins.generic.objectsForReview.editor.objectMetadata.none"}</td>
-	</tr>
-	<tr>
-		<td colspan="5" class="endseparator">&nbsp;</td>
-	</tr>
-{else}
-	<tr>
-		<td colspan="2" align="left">{page_info iterator=$reviewObjectMetadata}</td>
-		<td colspan="3" align="right">{page_links anchor="reviewObjectMetadata" name="reviewObjectMetadata" iterator=$reviewObjectMetadata}</td>
 	</tr>
 {/if}
 	<tr>

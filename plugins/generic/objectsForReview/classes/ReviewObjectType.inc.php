@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ReviewObjectType.inc.php
  *
- * Copyright (c) 2000-2012 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewObjectType
@@ -43,19 +44,19 @@ class ReviewObjectType extends DataObject {
 	// Get/set methods
 	//
 	/**
-	 * Get journal ID.
+	 * Get context ID.
 	 * @return int
 	 */
-	function getJournalId() {
-		return $this->getData('journalId');
+	function getContextId() {
+		return $this->getData('contextId');
 	}
 
 	/**
-	 * Set journal ID.
-	 * @param $journalId int
+	 * Set context ID.
+	 * @param $contextId int
 	 */
-	function setJournalId($journalId) {
-		return $this->setData('journalId', $journalId);
+	function setContextId($contextId) {
+		return $this->setData('contextId', $contextId);
 	}
 
 	/**

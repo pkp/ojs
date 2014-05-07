@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/form/ObjectForReviewForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewForm
@@ -17,13 +18,13 @@
 import('lib.pkp.classes.form.Form');
 
 class ObjectForReviewForm extends Form {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	/** @var int the ID of the object for review */
+	/** @var int ID of the object for review */
 	var $objectId;
 
-	/** @var int the ID of the review object type */
+	/** @var int ID of the review object type */
 	var $reviewObjectTypeId;
 
 	/**
@@ -46,9 +47,11 @@ class ObjectForReviewForm extends Form {
 
 		// Check required and persons fields
 		$this->addCheck(new FormValidatorCustom($this, 'ofrSettings', 'required', 'plugins.generic.objectsForReview.editor.objectForReview.requiredFields', create_function('$ofrSettings, $requiredReviewObjectMetadataIds, $roleMetadataId', 'foreach ($requiredReviewObjectMetadataIds as $requiredReviewObjectMetadataId) { if ($requiredReviewObjectMetadataId != $roleMetadataId) { if (!isset($ofrSettings[$requiredReviewObjectMetadataId][AppLocale::getPrimaryLocale()]) || $ofrSettings[$requiredReviewObjectMetadataId][AppLocale::getPrimaryLocale()] == \'\') return false; } } return true;'), array($requiredReviewObjectMetadataIds, $roleMetadataId)));
+		// the role and either the first or the last name are required for a person
+		// if it is defined as required for this review object type
 		if (in_array($roleMetadataId, $requiredReviewObjectMetadataIds)) {
 			$this->addCheck(new FormValidatorCustom($this, 'persons', 'required', 'plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields', create_function('$persons', 'foreach ($persons as $person) { if (   empty($person[\'role\']) || (empty($person[\'firstName\']) && empty($person[\'lastName\']))   ) return false; } return true;'), array()));
-		} else {
+		} else { // if one of the fields is entered
 			$this->addCheck(new FormValidatorCustom($this, 'persons', 'required', 'plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields', create_function('$persons', 'foreach ($persons as $person) { if ($person[\'personId\'] > 0 && (empty($person[\'role\']) || (empty($person[\'firstName\']) && empty($person[\'lastName\'])))) return false; } return true;'), array()));
 			$this->addCheck(new FormValidatorCustom($this, 'persons', 'required', 'plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields', create_function('$persons', 'foreach ($persons as $person) { if ($person[\'personId\'] <= 0) { if (   (empty($person[\'role\']) && empty($person[\'firstName\']) && empty($person[\'lastName\'])) || (!empty($person[\'role\']) && (!empty($person[\'firstName\']) || !empty($person[\'lastName\'])))   ) {} else return false; } } return true;'), array()));
 		}
@@ -59,20 +62,19 @@ class ObjectForReviewForm extends Form {
 	 * Display the form.
 	 */
 	function display($request) {
+		$journal =& $request->getJournal();
+		$journalId = $journal->getId();
 		// Get review object type
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
-		$reviewObjectType =& $reviewObjectTypeDao->getById($this->reviewObjectTypeId);
+		$reviewObjectType =& $reviewObjectTypeDao->getById($this->reviewObjectTypeId, $journalId);
 		// Get metadata of the review object type
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
 		$reviewObjectMetadata =& $reviewObjectMetadataDao->getArrayByReviewObjectTypeId($this->reviewObjectTypeId);
 		// Get journal editors
-		$journal =& $request->getJournal();
-		$journalId = $journal->getId();
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$editorsDAOResultFactory =& $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journalId, null, null, null, null, 'name');
 		$editors = array();
-		while (!$editorsDAOResultFactory->eof()) {
-			$result =& $editorsDAOResultFactory->next();
+		while ($result =& $editorsDAOResultFactory->next()) {
 			$editors[$result->getData('id')] =& $result->getFullName();
 			unset($result);
 		}
@@ -177,7 +179,7 @@ class ObjectForReviewForm extends Form {
 		$objectForReview =& $ofrDao->getById($this->objectId);
 		if ($objectForReview == null) {
 			$objectForReview = new ObjectForReview();
-			$objectForReview->setJournalId($journalId);
+			$objectForReview->setContextId($journalId);
 			$objectForReview->setReviewObjectTypeId($this->reviewObjectTypeId);
 			$objectForReview->setDateCreated(Core::getCurrentDate());
 		}
@@ -194,25 +196,27 @@ class ObjectForReviewForm extends Form {
 
 		// Update object for review settings
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
-		$ofrSettings = $this->getData('ofrSettings');
-		if (is_array($ofrSettings)) foreach ($ofrSettings as $metadataId => $ofrSettingValue) {
-			$reviewObjectMetadata = $reviewObjectMetadataDao->getById($metadataId);
+		$reviewObjectTypeMetadata = $reviewObjectMetadataDao->getArrayByReviewObjectTypeId($objectForReview->getReviewObjectTypeId());
+		foreach ($reviewObjectTypeMetadata as $metadataId => $reviewObjectMetadata) {
+			$ofrSettings = $this->getData('ofrSettings');
+			$ofrSettingValue = $ofrSettings[$metadataId];
 			$metadataType = $reviewObjectMetadata->getMetadataType();
-			switch ($metadataType) {
-				case REVIEW_OBJECT_METADATA_TYPE_SMALL_TEXT_FIELD:
-				case REVIEW_OBJECT_METADATA_TYPE_TEXT_FIELD:
-				case REVIEW_OBJECT_METADATA_TYPE_TEXTAREA:
-					$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'string');
-					break;
-				case REVIEW_OBJECT_METADATA_TYPE_RADIO_BUTTONS:
-				case REVIEW_OBJECT_METADATA_TYPE_DROP_DOWN_BOX:
-					$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'int');
-					break;
-				case REVIEW_OBJECT_METADATA_TYPE_CHECKBOXES:
-				case REVIEW_OBJECT_METADATA_TYPE_LANG_DROP_DOWN_BOX:
-					$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'object');
-					break;
-			}
+				switch ($metadataType) {
+					case REVIEW_OBJECT_METADATA_TYPE_SMALL_TEXT_FIELD:
+					case REVIEW_OBJECT_METADATA_TYPE_TEXT_FIELD:
+					case REVIEW_OBJECT_METADATA_TYPE_TEXTAREA:
+						$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'string');
+						break;
+					case REVIEW_OBJECT_METADATA_TYPE_RADIO_BUTTONS:
+					case REVIEW_OBJECT_METADATA_TYPE_DROP_DOWN_BOX:
+						$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'int');
+						break;
+					case REVIEW_OBJECT_METADATA_TYPE_CHECKBOXES:
+					case REVIEW_OBJECT_METADATA_TYPE_LANG_DROP_DOWN_BOX:
+						if (!isset($ofrSettingValue)) $ofrSettingValue = array();
+						$objectForReview->updateSetting((int) $metadataId, $ofrSettingValue, 'object');
+						break;
+				}
 		}
 
 		// Handle object for review cover image

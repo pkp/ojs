@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/form/ReviewObjectMetadataForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewObjectMetadataForm
@@ -17,13 +18,13 @@
 import('lib.pkp.classes.form.Form');
 
 class ReviewObjectMetadataForm extends Form {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	/** @var reviewObjectTypeId int ID of the ReviewObjectType being edited */
+	/** @var int ID of the ReviewObjectType being edited */
 	var $reviewObjectTypeId;
 
-	/** @var reviewObjectMetadata ReviewObjectMetadata being edited */
+	/** @var object ReviewObjectMetadata being edited */
 	var $reviewObjectMetadata;
 
 	/**

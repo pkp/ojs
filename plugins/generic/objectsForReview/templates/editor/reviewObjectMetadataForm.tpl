@@ -1,7 +1,8 @@
 {**
- * plugins/generic/objectsForReview/templates/editor/reviewObjectMetadataForm.tpl
+ * @file plugins/generic/objectsForReview/templates/editor/reviewObjectMetadataForm.tpl
  *
- * Copyright (c) 2003-2012 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to create/modify a review object metadata.
@@ -83,12 +84,12 @@ function togglePossibleOptions(newValue, multipleOptionsTypesString) {
 				{assign var=notFirstOptionItem value=1}
 				<table width="100%" class="data">
 				<tr valign="top">
-					<td width="5%">{translate key="common.order"}</td>
-					<td width="95%" colspan="2">{translate key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions"}</td>
+					<td width="8%">{translate key="common.order"}</td>
+					<td width="92%" colspan="2">{translate key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions"}</td>
 				</tr>
 			{/if}
 				<tr valign="top">
-					<td width="5%" class="label"><input type="text" name="possibleOptions[{$formLocale|escape}][{$optionId|escape}][order]" value="{$optionItem.order|escape}" size="3" maxlength="2" class="textField" /></td>
+					<td width="5%" class="label"><input type="hidden" name="possibleOptions[{$formLocale|escape}][{$optionId|escape}][order]" value="{$optionItem.order|escape}"/>{$optionItem.order|escape}</td>
 					<td class="value"><textarea name="possibleOptions[{$formLocale|escape}][{$optionId|escape}][content]" id="possibleOptions-{$optionId|escape}" rows="3" cols="40" class="textArea">{$optionItem.content|escape}</textarea></td>
 					<td width="100%"><input type="submit" name="delOption[{$optionId|escape}]" value="{translate key="common.delete"}" class="button" /></td>
 				</tr>

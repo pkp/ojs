@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewAssignmentDAO.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewAssignmentDAO
@@ -19,7 +20,7 @@ define('OFR_FIELD_ABSTRACT', 'description');
 
 
 class ObjectForReviewAssignmentDAO extends DAO {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	/**
@@ -34,7 +35,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * Retrieve assignment by ID.
 	 * @param $assignmentId int
 	 * @param $objectId int (optional)
-	 * @return ObjectForReviewAssignment
+	 * @return object ObjectForReviewAssignment
 	 */
 	function getById($assignmentId, $objectId = null) {
 		$params = array((int) $assignmentId);
@@ -56,9 +57,9 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 	/**
 	 * Determine if the assignment exists
-	 * @param int $objectId
-	 * @param int $userId (optional)
-	 * @param int $submissionId (optional)
+	 * @param $objectId int
+	 * @param $userId int (optional)
+	 * @param $submissionId int (optional)
 	 * @return boolean
 	 */
 	function assignmentExists($objectId, $userId = null, $submissionId = null) {
@@ -77,13 +78,12 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 		$returner = isset($result->fields[0]) && $result->fields[0] > 0 ? true : false;
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return ObjectForReviewAssignment
+	 * @return object ObjectForReviewAssignment
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -94,7 +94,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	/**
 	 * Internal function to return an ObjectForReviewAssignment object from a row.
 	 * @param $row array
-	 * @return ObjectForReviewAssignment
+	 * @return object ObjectForReviewAssignment
 	 */
 	function &_fromRow($row) {
 		$assignment = $this->newDataObject();
@@ -118,7 +118,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 	/**
 	 * Insert a new assignment.
-	 * @param $assignment ObjectForReviewAssignment
+	 * @param $assignment object ObjectForReviewAssignment
 	 * @return int
 	 */
 	function insertObject(&$assignment) {
@@ -149,7 +149,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 	/**
 	 * Update an existing assignment.
-	 * @param $assignment ObjectForReviewAssignment
+	 * @param $assignment object ObjectForReviewAssignment
 	 * @return boolean
 	 */
 	function updateObject(&$assignment) {
@@ -189,7 +189,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 	/**
 	 * Delete an assignment.
-	 * @param $assignment ObjectForReviewAssignment
+	 * @param $assignment object ObjectForReviewAssignment
 	 * @return boolean
 	 */
 	function deleteObject($assignment) {
@@ -230,7 +230,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * Retrieve the assignment matching the object and the user.
 	 * @param $objectId int
 	 * @param $userId int
-	 * @return ObjectForReviewAssignment
+	 * @return object ObjectForReviewAssignment
 	 */
 	function &getByObjectAndUserId($objectId, $userId) {
 		$params = array((int) $objectId, (int) $userId);
@@ -276,17 +276,17 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve all incomplete assignments matching a particular journal ID.
-	 * @param $journalId int
+	 * Retrieve all incomplete assignments matching a particular context ID.
+	 * @param $contextId int
 	 * @return array
 	 */
-	function getIncompleteAssignmentsByJournalId($journalId) {
-		$params = array((int) $journalId);
+	function getIncompleteAssignmentsByContextId($contextId) {
+		$params = array((int) $contextId);
 		$result =& $this->retrieve(
 			'SELECT ofra.*
 			FROM object_for_review_assignments ofra
             JOIN objects_for_review ofr ON (ofra.object_id = ofr.object_id)
-            WHERE ofr.journal_id = ? AND ofra.submission_id IS NULL AND (ofra.date_assigned IS NOT NULL OR ofra.date_mailed IS NOT NULL)',
+            WHERE ofr.context_id = ? AND ofra.submission_id IS NULL AND (ofra.date_assigned IS NOT NULL OR ofra.date_mailed IS NOT NULL)',
 			$params
 		);
 
@@ -296,14 +296,13 @@ class ObjectForReviewAssignmentDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $incompleteAssignements;
 	}
 
 
 	/**
-	 * Retrieve all assignments matching a particular journal ID.
-	 * @param $journalId int
+	 * Retrieve all assignments matching a particular context ID.
+	 * @param $contextId int
 	 * @param $searchType int (optional), which field to search
 	 * @param $search string (optional), string to match
 	 * @param $searchMatch string (optional), type of match ('is' vs. 'contains')
@@ -311,12 +310,12 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * @param $userId int (optional), user to match
 	 * @param $editorId int (optional), editor to match
 	 * @param $filterType int (optional), review object type ID to match
-	 * @param $rangeInfo DBResultRange (optional)
+	 * @param $rangeInfo object (optional), DBResultRange
 	 * @param $sortBy string (optional), sorting criteria
 	 * @param $sortDirection int (optional), sorting direction
-	 * @return DAOResultFactory containing matching ObjectForReviewAssignments
+	 * @return object DAOResultFactory containing matching ObjectForReviewAssignments
 	 */
- 	 function &getAllByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $status = null, $userId = null, $editorId = null, $filterType = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
+ 	 function &getAllByContextId($contextId, $searchType = null, $search = null, $searchMatch = null, $status = null, $userId = null, $editorId = null, $filterType = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$ofrPlugin->import('classes.ReviewObjectMetadata');
 		$ofrPlugin->import('classes.ObjectForReviewAssignment');
@@ -398,8 +397,8 @@ class ObjectForReviewAssignmentDAO extends DAO {
 			$params[] = (int) $filterType;
 		}
 
-		$sql .= " ofr.journal_id = ?";
-        $params[] = (int) $journalId;
+		$sql .= " ofr.context_id = ?";
+        $params[] = (int) $contextId;
 
         $sql .= ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
 
@@ -425,7 +424,6 @@ class ObjectForReviewAssignmentDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $objectIds;
 	}
 
@@ -446,7 +444,6 @@ class ObjectForReviewAssignmentDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $userIds;
 	}
 
@@ -468,18 +465,18 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve status counts for a particular journal (and optionally user).
-	 * @param $journalId int
+	 * Retrieve status counts for a particular context (and optionally user).
+	 * @param $contextId int
 	 * @param $status int (optional), objects and assignment status to match
 	 * @param $userId int (optional), user to match
 	 * @return int
 	 */
-	function getStatusCount($journalId, $status = null, $userId = null) {
-		$paramArray = array((int) $journalId);
+	function getStatusCount($contextId, $status = null, $userId = null) {
+		$paramArray = array((int) $contextId);
 		$sql = 'SELECT COUNT(*)
 				FROM objects_for_review ofr
 				LEFT JOIN object_for_review_assignments ofra ON ofr.object_id = ofra.object_id
-				WHERE ofr.journal_id = ?';
+				WHERE ofr.context_id = ?';
 
 		if ($status) {
 			if ($status == OFR_STATUS_AVAILABLE) {
@@ -500,20 +497,20 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve all status counts for a particular journal (and optionally user).
-	 * @param $journalId int
+	 * Retrieve all status counts for a particular context (and optionally user).
+	 * @param $contextId int
 	 * @param $userId int (optional), user to match
 	 * @return array, status as index
 	 */
-	function &getStatusCounts($journalId, $userId = null) {
+	function &getStatusCounts($contextId, $userId = null) {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$ofrPlugin->import('classes.ObjectForReviewAssignment');
 		$counts = array();
-		$counts[OFR_STATUS_AVAILABLE] = $this->getStatusCount($journalId, OFR_STATUS_AVAILABLE, $userId);
-		$counts[OFR_STATUS_REQUESTED] = $this->getStatusCount($journalId, OFR_STATUS_REQUESTED, $userId);
-		$counts[OFR_STATUS_ASSIGNED] = $this->getStatusCount($journalId, OFR_STATUS_ASSIGNED, $userId);
-		$counts[OFR_STATUS_MAILED] = $this->getStatusCount($journalId, OFR_STATUS_MAILED, $userId);
-		$counts[OFR_STATUS_SUBMITTED] = $this->getStatusCount($journalId, OFR_STATUS_SUBMITTED, $userId);
+		$counts[OFR_STATUS_AVAILABLE] = $this->getStatusCount($contextId, OFR_STATUS_AVAILABLE, $userId);
+		$counts[OFR_STATUS_REQUESTED] = $this->getStatusCount($contextId, OFR_STATUS_REQUESTED, $userId);
+		$counts[OFR_STATUS_ASSIGNED] = $this->getStatusCount($contextId, OFR_STATUS_ASSIGNED, $userId);
+		$counts[OFR_STATUS_MAILED] = $this->getStatusCount($contextId, OFR_STATUS_MAILED, $userId);
+		$counts[OFR_STATUS_SUBMITTED] = $this->getStatusCount($contextId, OFR_STATUS_SUBMITTED, $userId);
 		return $counts;
 	}
 
@@ -563,7 +560,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * @param $objectId int (optional)
 	 * @param $userId int (optional)
 	 * @param $submissionId int (optional)
-	 * @return DAOResultFactory
+	 * @return object DAOResultFactory
 	 */
 	function &_getAllInternally($objectId = null, $userId = null, $submissionId = null) {
 		$sql = 'SELECT * FROM object_for_review_assignments';
@@ -596,7 +593,6 @@ class ObjectForReviewAssignmentDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $assignments;
 	}
 

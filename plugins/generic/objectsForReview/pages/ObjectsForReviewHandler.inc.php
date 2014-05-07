@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/pages/ObjectsForReviewHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectsForReviewHandler
@@ -19,7 +20,7 @@ class ObjectsForReviewHandler extends Handler {
 	/**
 	 * Display objects for review public index page.
 	 */
-	function index($args = array(), &$request) {
+	function index($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
@@ -41,7 +42,7 @@ class ObjectsForReviewHandler extends Handler {
 
 		// Filter by review object type
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
-		$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByJournal($journalId);
+		$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByContext($journalId);
 		$typeOptions = array(0 => __('common.all'));
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
 		$allReviewObjectsMetadata = array();
@@ -70,7 +71,7 @@ class ObjectsForReviewHandler extends Handler {
 		// Get objects for review
 		$rangeInfo =& Handler::getRangeInfo('objectsForReview');
 		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
-		$objectsForReview =& $ofrDao->getAllByJournalId($journalId, $searchField, $search, $searchMatch, 1, null, $filterType, $rangeInfo, $sort, $sortDirection);
+		$objectsForReview =& $ofrDao->getAllByContextId($journalId, $searchField, $search, $searchMatch, 1, null, $filterType, $rangeInfo, $sort, $sortDirection);
 
 		// If the user is an author get her/his assignments
 		$isAuthor = Validation::isAuthor();
@@ -117,10 +118,10 @@ class ObjectsForReviewHandler extends Handler {
 	/**
 	 * Public view object for review details.
 	 */
-	function viewObjectForReview($args = array(), &$request) {
+	function viewObjectForReview($args, &$request) {
 		// Ensure the args (object ID) exists
-		$objectId = !isset($args) || empty($args) ? null : (int) $args[0];
-		if ($objectId == null) {
+		$objectId = array_shift($args);
+		if (!$objectId) {
 			$request->redirect(null, 'objectsForReview');
 		}
 
@@ -137,7 +138,7 @@ class ObjectsForReviewHandler extends Handler {
 		if ($objectForReview->getAvailable()) {
 			// Get all metadata for the objects for review
 			$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
-			$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByJournal($journalId);
+			$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByContext($journalId);
 			$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
 			$allReviewObjectsMetadata = array();
 			foreach ($allTypes as $type) {
@@ -202,7 +203,7 @@ class ObjectsForReviewHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate(&$request, $subclass = false) {
@@ -226,7 +227,7 @@ class ObjectsForReviewHandler extends Handler {
 	//
 	/**
 	 * Get the objectForReview plugin object
-	 * @return ObjectsForReviewPlugin
+	 * @return object ObjectsForReviewPlugin
 	 */
 	function &_getObjectsForReviewPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);

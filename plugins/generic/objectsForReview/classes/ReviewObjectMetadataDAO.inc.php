@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ReviewObjectMetadataDAO.inc.php
  *
- * Copyright (c) 2000-2012 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewObjectMetadataDAO
@@ -16,7 +17,7 @@
 
 
 class ReviewObjectMetadataDAO extends DAO {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	/**
@@ -31,7 +32,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	 * Retrieve a review object metadata by ID.
 	 * @param $metadataId int
 	 * @param $reviewObjectTypeId int (optional)
-	 * @return ReviewObjectMetadata
+	 * @return object ReviewObjectMetadata
 	 */
 	function &getById($metadataId, $reviewObjectTypeId = null) {
 		$params = array((int) $metadataId);
@@ -47,7 +48,6 @@ class ReviewObjectMetadataDAO extends DAO {
 			$returner =& $this->_fromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -55,7 +55,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	 * Retrieve review object metadata by key.
 	 * @param $key string
 	 * @param $reviewObjectTypeId int (optional)
-	 * @return ReviewObjectMetadata
+	 * @return object ReviewObjectMetadata
 	 */
 	function &getByKey($key, $reviewObjectTypeId = null) {
 		$params = array($key);
@@ -71,13 +71,12 @@ class ReviewObjectMetadataDAO extends DAO {
 			$returner =& $this->_fromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return ReviewObjectMetadata
+	 * @return object ReviewObjectMetadata
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -88,7 +87,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	/**
 	 * Internal function to return a ReviewObjectMetadata object from a row.
 	 * @param $row array
-	 * @return ReviewObjectMetadata
+	 * @return object ReviewObjectMetadata
 	 */
 	function &_fromRow(&$row) {
 		$reviewObjectMetadata = $this->newDataObject();
@@ -117,7 +116,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Update the localized fields for this table
-	 * @param $reviewObjectMetadata ReviewObjectMetadata
+	 * @param $reviewObjectMetadata object ReviewObjectMetadata
 	 */
 	function updateLocaleFields(&$reviewObjectMetadata) {
 		$this->updateDataObjectSettings('review_object_metadata_settings', $reviewObjectMetadata, array(
@@ -127,7 +126,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Insert a new review object metadata.
-	 * @param $reviewObjectMetadata ReviewObjectMetadata
+	 * @param $reviewObjectMetadata object ReviewObjectMetadata
 	 * @return int
 	 */
 	function insertObject(&$reviewObjectMetadata) {
@@ -152,7 +151,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Update an existing review object metadata.
-	 * @param $reviewObjectMetadata ReviewObjectMetadata
+	 * @param $reviewObjectMetadata object ReviewObjectMetadata
 	 * @return boolean
 	 */
 	function updateObject(&$reviewObjectMetadata) {
@@ -182,7 +181,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Delete a review object metadata.
-	 * @param $reviewObjectMetadata ReviewObjectMetadata
+	 * @param $reviewObjectMetadata object ReviewObjectMetadata
 	 */
 	function deleteObject(&$reviewObjectMetadata) {
 		return $this->deleteById($reviewObjectMetadata->getId());
@@ -195,9 +194,9 @@ class ReviewObjectMetadataDAO extends DAO {
 	 */
 	function deleteById($metadataId, $reviewObjectTypeId = null) {
 		$params = array((int) $metadataId);
-		if (isset($reviewObjectTypeId)) $params[] = (int) $reviewObjectTypeId;
+		if ($reviewObjectTypeId) $params[] = (int) $reviewObjectTypeId;
 
-		$this->update('DELETE FROM review_object_metadata WHERE metadata_id = ?' . (isset($reviewObjectTypeId) ? ' AND review_object_type_id = ?' : ''),
+		$this->update('DELETE FROM review_object_metadata WHERE metadata_id = ?' . ($reviewObjectTypeId ? ' AND review_object_type_id = ?' : ''),
 			$params
 		);
 		if ($this->getAffectedRows()) {
@@ -252,7 +251,6 @@ class ReviewObjectMetadataDAO extends DAO {
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -274,15 +272,14 @@ class ReviewObjectMetadataDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $allMetadata;
 	}
 
 	/**
 	 * Retrieve all metadata for a review object type.
 	 * @param $reviewObjectTypeId int
-	 * @param $rangeInfo DBResultRange (optional)
-	 * @return DAOResultFactory containing ReviewObjectMetadata ordered by sequence
+	 * @param $rangeInfo object (optional), DBResultRange
+	 * @return object DAOResultFactory containing ReviewObjectMetadata ordered by sequence
 	 */
 	function &getByReviewObjectTypeId($reviewObjectTypeId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
@@ -296,7 +293,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	/**
 	 * Retrieve IDs of all required metadata for a review object type.
 	 * @param $reviewObjectTypeId int
-	 * return array
+	 * @return array
 	 */
 	function getRequiredReviewObjectMetadataIds($reviewObjectTypeId) {
 		$result =& $this->retrieve(
@@ -310,7 +307,6 @@ class ReviewObjectMetadataDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $requiredReviewObjectMetadataIds;
 	}
 
@@ -318,7 +314,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	 * Retrieve IDs of all metadata that should be displayed for a review object type.
 	 * Except Title - it is always displayed.
 	 * @param $reviewObjectTypeId int (optional)
-	 * return array
+	 * @return array
 	 */
 	function getDisplayReviewObjectMetadataIds($reviewObjectTypeId = null) {
 		if ($reviewObjectTypeId) $params[] = (int) $reviewObjectTypeId;
@@ -333,14 +329,13 @@ class ReviewObjectMetadataDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $displayReviewObjectMetadataIds;
 	}
 
 	/**
 	 * Retrieve IDs of all metadata of the type textarea for a review object type.
 	 * @param $reviewObjectTypeId int
-	 * return array
+	 * @return array
 	 */
 	function getTextareaReviewObjectMetadataIds($reviewObjectTypeId) {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -357,7 +352,6 @@ class ReviewObjectMetadataDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $textareaReviewObjectMetadataIds;
 	}
 
@@ -369,7 +363,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	 */
 	function reviewObjectMetadataExists($metadataId, $reviewObjectTypeId = null) {
 		$params = array((int) $metadataId);
-		if (isset($reviewObjectTypeId)) $params[] = (int) $reviewObjectTypeId;
+		if ($reviewObjectTypeId) $params[] = (int) $reviewObjectTypeId;
 
 		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM review_object_metadata WHERE metadata_id = ?' . ($reviewObjectTypeId ? ' AND review_object_type_id = ?' : ''),
@@ -378,7 +372,6 @@ class ReviewObjectMetadataDAO extends DAO {
 
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -403,7 +396,6 @@ class ReviewObjectMetadataDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 	}
 
 	/**

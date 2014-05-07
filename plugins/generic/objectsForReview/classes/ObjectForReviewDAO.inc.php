@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewDAO.inc.php
  *
- * Copyright (c) 2003-2012 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewDAO
@@ -15,10 +16,10 @@
 
 
 class ObjectForReviewDAO extends DAO {
-	/** @var $parentPluginName string Name of the parent plugin */
+	/** @var string Name of the parent plugin */
 	var $parentPluginName;
 
-	/** @var $objectForReviewPersonDao object Object for review person DAO */
+	/** @var object Object for review person DAO */
 	var $objectForReviewPersonDao;
 
 	/**
@@ -33,14 +34,15 @@ class ObjectForReviewDAO extends DAO {
 	/**
 	 * Retrieve object for review by object ID.
 	 * @param $objectId int
-	 * @return ObjectForReview
+	 * @param $contextId int
+	 * @return object ObjectForReview
 	 */
-	function &getById($objectId, $journalId = null) {
+	function &getById($objectId, $contextId = null) {
 		$params = array((int) $objectId);
-		if ($journalId) $params[] = (int) $journalId;
+		if ($contextId) $params[] = (int) $contextId;
 
 		$result =& $this->retrieve(
-			'SELECT * FROM objects_for_review WHERE object_id = ?'. ($journalId ? ' AND journal_id = ?' : ''),
+			'SELECT * FROM objects_for_review WHERE object_id = ?'. ($contextId ? ' AND context_id = ?' : ''),
 			$params
 		);
 
@@ -54,7 +56,7 @@ class ObjectForReviewDAO extends DAO {
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return ObjectForReview
+	 * @return object ObjectForReview
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -65,13 +67,13 @@ class ObjectForReviewDAO extends DAO {
 	/**
 	 * Internal function to return an ObjectForReview object from a row.
 	 * @param $row array
-	 * @return ObjectForReview
+	 * @return object ObjectForReview
 	 */
 	function &_fromRow(&$row) {
 		$object = $this->newDataObject();
 		$object->setId($row['object_id']);
 		$object->setReviewObjectTypeId($row['review_object_type_id']);
-		$object->setJournalId($row['journal_id']);
+		$object->setContextId($row['context_id']);
 		$object->setAvailable($row['available']);
 		$object->setDateCreated($row['date_created']);
 		$object->setEditorId($row['editor_id']);
@@ -84,7 +86,7 @@ class ObjectForReviewDAO extends DAO {
 
 	/**
 	 * Insert a new ObjectForReview.
-	 * @param $objectForReview ObjectForReview
+	 * @param $objectForReview object ObjectForReview
 	 * @return int
 	 */
 	function insertObject(&$objectForReview) {
@@ -92,7 +94,7 @@ class ObjectForReviewDAO extends DAO {
 			sprintf('
 				INSERT INTO objects_for_review
 					(review_object_type_id,
-					journal_id,
+					context_id,
 					available,
 					date_created,
 					editor_id,
@@ -103,7 +105,7 @@ class ObjectForReviewDAO extends DAO {
 			),
 			array(
 				(int) $objectForReview->getReviewObjectTypeId(),
-				(int) $objectForReview->getJournalId(),
+				(int) $objectForReview->getContextId(),
 				(int) $objectForReview->getAvailable(),
 				(int) $objectForReview->getEditorId(),
 				$objectForReview->getNotes()
@@ -116,7 +118,7 @@ class ObjectForReviewDAO extends DAO {
 
 	/**
 	 * Update an existing object for review.
-	 * @param $objectForReview ObjectForReview
+	 * @param $objectForReview object ObjectForReview
 	 * @return boolean
 	 */
 	function updateObject(&$objectForReview) {
@@ -124,7 +126,7 @@ class ObjectForReviewDAO extends DAO {
 			sprintf('UPDATE objects_for_review
 				SET
 					review_object_type_id = ?,
-					journal_id = ?,
+					context_id = ?,
 					available = ?,
 					date_created = %s,
 					editor_id = ?,
@@ -134,7 +136,7 @@ class ObjectForReviewDAO extends DAO {
 			),
 			array(
 				(int) $objectForReview->getReviewObjectTypeId(),
-				(int) $objectForReview->getJournalId(),
+				(int) $objectForReview->getContextId(),
 				(int) $objectForReview->getAvailable(),
 				$this->nullOrInt($objectForReview->getEditorId()),
 				$objectForReview->getNotes(),
@@ -145,19 +147,19 @@ class ObjectForReviewDAO extends DAO {
 
 	/**
 	 * Delete an object for review.
-	 * @param $objectForReview ObjectForReview
+	 * @param $objectForReview object ObjectForReview
 	 */
 	function deleteObject(&$objectForReview) {
 		// Delete object
-		$this->update('DELETE FROM objects_for_review WHERE object_id = ? AND journal_id = ?',
-			array((int) $objectForReview->getId(), (int) $objectForReview->getJournalId())
+		$this->update('DELETE FROM objects_for_review WHERE object_id = ? AND context_id = ?',
+			array((int) $objectForReview->getId(), (int) $objectForReview->getContextId())
 		);
 		if ($this->getAffectedRows()) {
 			// Delete cover image files (for all locales) from the filesystem
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$coverPageSetting = $objectForReview->getCoverPage();
-			$publicFileManager->removeJournalFile($objectForReview->getJournalId(), $coverPageSetting['fileName']);
+			$publicFileManager->removeJournalFile($objectForReview->getContextId(), $coverPageSetting['fileName']);
 
 			// Delete settings
 			$ofrSettingsDao =& DAORegistry::getDAO('ObjectForReviewSettingsDAO');
@@ -171,14 +173,14 @@ class ObjectForReviewDAO extends DAO {
 	}
 
 	/**
-	 * Delete objects for review by journal ID.
-	 * @param $journalId int
+	 * Delete objects for review by context ID.
+	 * @param $contextId int
 	 */
-	function deleteByJournalId($journalId) {
-		$objectsForReview = $this->getByJournalId($journalId);
-		while (!$objectsForReview->eof()) {
-			$objectForReview =& $objectsForReview->next();
-			$this->deleteById($objectForReview->getId());
+	function deleteByContextId($contextId) {
+		$objectsForReview = $this->getAllByContextId($contextId);
+		while ($objectForReview =& $objectsForReview->next()) {
+			$this->deleteObject($objectForReview);
+			unset($objectForReview);
 		}
 	}
 
@@ -213,25 +215,24 @@ class ObjectForReviewDAO extends DAO {
 			unset($objectForReview);
 		}
 		$result->Close();
-		unset($result);
 		return $allObjectsForReview;
 	}
 
 	/**
-	 * Retrieve all objects for reivew matching a particular journal ID.
-	 * @param $journalId int
+	 * Retrieve all objects for reivew matching a particular context ID.
+	 * @param $contextId int
 	 * @param $searchType int (optional), which field to search
 	 * @param $search string (optional), string to match
 	 * @param $searchMatch string (optional), type of match ('is' vs. 'contains')
 	 * @param $available int (optional), status to match
 	 * @param $editorId int, (optional) editor to match
 	 * @param $filterType int (optional), review object type ID to match
-	 * @param $rangeInfo DBResultRange (optional)
+	 * @param $rangeInfo object (optional), DBResultRange
 	 * @param $sortBy string (optional), sorting criteria
 	 * @param $sortDirection int (optional), sorting direction
-	 * @return DAOResultFactory containing matching ObjectForReviewAssignments
+	 * @return object DAOResultFactory containing matching ObjectForReviewAssignments
 	 */
-	function &getAllByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $available = null, $editorId = null, $filterType = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
+	function &getAllByContextId($contextId, $searchType = null, $search = null, $searchMatch = null, $available = null, $editorId = null, $filterType = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$ofrPlugin->import('classes.ReviewObjectMetadata');
 
@@ -301,8 +302,8 @@ class ObjectForReviewDAO extends DAO {
 			$params[] = (int) $filterType;
 		}
 
-		$sql .= " ofr.journal_id = ?";
-		$params[] = (int) $journalId;
+		$sql .= " ofr.context_id = ?";
+		$params[] = (int) $contextId;
 
 		$sql .= ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
 
@@ -314,21 +315,20 @@ class ObjectForReviewDAO extends DAO {
 	/**
 	 * Check if the review object type exists with the specified ID.
 	 * @param $objectId int
-	 * @param $journalId int optional
+	 * @param $contextId int (optional)
 	 * @return boolean
 	 */
-	function objectForReviewExists($objectId, $journalId = null) {
+	function objectForReviewExists($objectId, $contextId = null) {
 		$params = array((int) $objectId);
-		if ($journalId) $params[] = (int) $journalId;
+		if ($contextId) $params[] = (int) $contextId;
 
 		$result =& $this->retrieve(
-			'SELECT COUNT(*) FROM objects_for_review WHERE object_id = ?' . ($journalId ? ' AND journal_id = ?' : ''),
+			'SELECT COUNT(*) FROM objects_for_review WHERE object_id = ?' . ($contextId ? ' AND context_id = ?' : ''),
 			$params
 		);
 
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 

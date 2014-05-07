@@ -1,7 +1,8 @@
 {**
  * @file plugins/generic/objectsForReview/templates/objectsForReview.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display public list of objects available for review.
@@ -62,7 +63,7 @@
 	{translate key="plugins.generic.objectsForReview.objectsForReview.noneCreated"}
 {else}
 	{page_info iterator=$objectsForReview}&nbsp;&nbsp;&nbsp;&nbsp;
-	{page_links anchor="objectsForReview" name="objectsForReview" iterator=$objectsForReview}
+	{page_links anchor="objectsForReview" name="objectsForReview" iterator=$objectsForReview sort=$sort sortDirection=$sortDirection filterType=$filterType searchField=$searchField searchMatch=$searchMatch search=$search}
 {/if}
 
 </div>

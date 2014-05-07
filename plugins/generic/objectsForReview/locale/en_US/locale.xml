@@ -4,7 +4,8 @@
 <!--
   * @file plugins/generic/objectsForReview/locale/en_US/locale.xml
   *
-  * Copyright (c) 2003-2012 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Objects for review plugin localization strings for the en_US (U.S. English) locale.
@@ -71,7 +72,7 @@
 	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">Management</message>
 	<message key="plugins.generic.objectsForReview.settings.modeFull">Mode 1: List available objects for review, manage object reviewers, and publish object metadata.</message>
 	<message key="plugins.generic.objectsForReview.settings.modeMetadata">Mode 2: Only publish object metadata.</message>
-	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>Mode 1</h5><p>The following workflow is supported:</p><ul><li>Editor adds objects available for review.</li><li>Authors interested in reviewing an object can request to write a review, notifying the Editor.</li><li>Editor can accept or deny the review request, notifying the Author.</li><li>For the accepted review request a due date is set for the review.</li><li>The Editor can mail a copy of the object to the Author. The due date for the review is set anew.</li><li>Author submits object review via the standard online submission process.</li><li>Object metadata is published as part of the object review submission.</li></ul><p>This plugin supports journals with multiple editors. When an Editor adds a new object for review, he or she becomes the primary editor and correspondence contact for the object.</p><h5>Mode 2</h5><p>The following workflow is supported:</p><ul><li>Editor adds objects.</li><li>Editor matches object review author submissions to each object.</li><li>Object metadata is published as part of the object review submission.</li></ul>]]></message>
+	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>Mode 1</h5><p>The following workflow is supported:</p><ul><li>Editor adds objects available for review.</li><li>Authors interested in reviewing an object can request to write a review, notifying the Editor.</li><li>Editor can accept or deny the review request, notifying the Author.</li><li>For the accepted review request a due date is set for the review.</li><li>The Editor can mail a copy of the object to the Author. The due date for the review is set anew.</li><li>Author submits review via the standard online submission process.</li><li>Object metadata is published as part of the object review submission.</li></ul><p>This plugin supports journals with multiple editors. When an Editor adds a new object for review, he or she becomes the primary editor and correspondence contact for the object.</p><h5>Mode 2</h5><p>The following workflow is supported:</p><ul><li>Editor adds objects for review.</li><li>Editor matches submissions (reviews) to each object.</li><li>Object metadata is published as part of the object review submission.</li></ul>]]></message>
 	<message key="plugins.generic.objectsForReview.settings.coverImages">Cover Images</message>
 	<message key="plugins.generic.objectsForReview.settings.coverPageIssue">Display cover images for object reviews in issue table of contents.</message>
 	<message key="plugins.generic.objectsForReview.settings.coverPageAbstract">Display cover images for object reviews on article abstract pages.</message>
@@ -162,6 +163,7 @@
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseLanguage">Choose language</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption">Choose option</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole">Choose role</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer">No answer</message>
 	<message key="plugins.generic.objectsForReview.editor.edit">Edit</message>
 	<message key="plugins.generic.objectsForReview.editor.create">Create Object For Review</message>
 	<message key="plugins.generic.objectsForReview.editor.saveAndCreateAnother">Save and Create Another</message>
@@ -237,7 +239,7 @@
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">A name is required for the review object metadata.</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">A type is required for the review object metadata.</message>
 	<!-- Object For Review Edit -->
-	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">Please fill in the required fields in journals primary locale.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">Please fill in the required fields.</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">Please choose the person role and fill either the first or the last name.</message>
 	<!-- Objects For Review Settings -->
 	<message key="plugins.generic.objectsForReview.settings.modeRequired">A mode is required.</message>

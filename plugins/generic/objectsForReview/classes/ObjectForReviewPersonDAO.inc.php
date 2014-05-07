@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewPersonDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewPersonDAO
@@ -15,7 +16,7 @@
 
 
 class ObjectForReviewPersonDAO extends DAO {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
 	/**
@@ -29,14 +30,14 @@ class ObjectForReviewPersonDAO extends DAO {
 	/**
 	 * Retrieve person by ID.
 	 * @param $personId int
-	 * @return ObjectForReviewPerson
+	 * @return object ObjectForReviewPerson
 	 */
 	function &getById($personId, $objectId = null) {
 		$params = array((int) $personId);
-		if (isset($objectId)) $params[] = (int) $objectId;
+		if ($objectId) $params[] = (int) $objectId;
 
 		$result =& $this->retrieve(
-			'SELECT * FROM object_for_review_persons WHERE person_id = ?'. (isset($objectId) ? ' AND object_id = ?' : ''),
+			'SELECT * FROM object_for_review_persons WHERE person_id = ?'. ($objectId ? ' AND object_id = ?' : ''),
 			$params
 		);
 
@@ -45,7 +46,6 @@ class ObjectForReviewPersonDAO extends DAO {
 			$returner =& $this->_fromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
-		unset($result);
 		return $returner;
 	}
 
@@ -66,13 +66,12 @@ class ObjectForReviewPersonDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 		return $persons;
 	}
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return ObjectForReviewPerson
+	 * @return object ObjectForReviewPerson
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -83,7 +82,7 @@ class ObjectForReviewPersonDAO extends DAO {
 	/**
 	 * Internal function to return an ObjectForReviewPerson object from a row.
 	 * @param $row array
-	 * @return ObjectForReviewPerson
+	 * @return object ObjectForReviewPerson
 	 */
 	function &_fromRow(&$row) {
 		$person = $this->newDataObject();
@@ -102,7 +101,7 @@ class ObjectForReviewPersonDAO extends DAO {
 
 	/**
 	 * Insert a new ObjectForReviewPerson.
-	 * @param $person ObjectForReviewPerson
+	 * @param $person object ObjectForReviewPerson
 	 * @return int
 	 */
 	function insertObject(&$person) {
@@ -126,7 +125,7 @@ class ObjectForReviewPersonDAO extends DAO {
 
 	/**
 	 * Update an existing ObjectForReviewPerson.
-	 * @param $person ObjectForReviewPerson
+	 * @param $person object ObjectForReviewPerson
 	 * @return boolean
 	 */
 	function updateObject(&$person) {
@@ -153,7 +152,7 @@ class ObjectForReviewPersonDAO extends DAO {
 
 	/**
 	 * Delete a person.
-	 * @param $person ObjectForReviewPerson
+	 * @param $person object ObjectForReviewPerson
 	 */
 	function deleteObject(&$person) {
 		return $this->deleteById($person->getId());
@@ -162,13 +161,13 @@ class ObjectForReviewPersonDAO extends DAO {
 	/**
 	 * Delete a person by ID.
 	 * @param $personId int
-	 * @param $objectId int optional
+	 * @param $objectId int (optional)
 	 */
 	function deleteById($personId, $objectId = null) {
 		$params = array((int) $personId);
-		if (isset($objectId)) $params[] = (int) $objectId;
+		if ($objectId) $params[] = (int) $objectId;
 		$returner = $this->update(
-			'DELETE FROM object_for_review_persons WHERE person_id = ?' . (isset($objectId) ? ' AND object_id = ?' : ''),
+			'DELETE FROM object_for_review_persons WHERE person_id = ?' . ($objectId ? ' AND object_id = ?' : ''),
 			$params
 		);
 	}
@@ -206,7 +205,6 @@ class ObjectForReviewPersonDAO extends DAO {
 			$result->MoveNext();
 		}
 		$result->Close();
-		unset($result);
 	}
 
 	/**

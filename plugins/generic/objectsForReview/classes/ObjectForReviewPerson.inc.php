@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewPerson.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewPerson
@@ -20,7 +21,6 @@ class ObjectForReviewPerson extends DataObject {
 	 */
 	function ObjectForReviewPerson() {
 		parent::DataObject();
-		$this->setId(0);
 	}
 
 	/**

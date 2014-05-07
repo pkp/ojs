@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/ObjectsForReviewPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewPlugin
@@ -17,23 +18,24 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 define('OFR_MODE_FULL',		0x01);
 define('OFR_MODE_METADATA',	0x02);
 
-define('NOTIFICATION_TYPE_OFR_OT_INSTALLED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000001);
+define('NOTIFICATION_TYPE_OFR_PLUGIN_BASE',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000000);
 // NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000002 was previously ..._DISABLED (#7825)
-define('NOTIFICATION_TYPE_OFR_OT_CREATED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000002);
-define('NOTIFICATION_TYPE_OFR_OT_UPDATED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000003);
-define('NOTIFICATION_TYPE_OFR_OT_ACTIVATED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000004);
-define('NOTIFICATION_TYPE_OFR_OT_DEACTIVATED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000005);
-define('NOTIFICATION_TYPE_OFR_OT_DELETED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000006);
-define('NOTIFICATION_TYPE_OFR_CREATED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000007);
-define('NOTIFICATION_TYPE_OFR_UPDATED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000008);
-define('NOTIFICATION_TYPE_OFR_DELETED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000009);
-define('NOTIFICATION_TYPE_OFR_REQUESTED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x100000A);
-define('NOTIFICATION_TYPE_OFR_AUTHOR_ASSIGNED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x100000B);
-define('NOTIFICATION_TYPE_OFR_AUTHOR_DENIED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x100000C);
-define('NOTIFICATION_TYPE_OFR_AUTHOR_MAILED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x100000D);
-define('NOTIFICATION_TYPE_OFR_AUTHOR_REMOVED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x100000E);
-define('NOTIFICATION_TYPE_OFR_SUBMISSION_ASSIGNED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x100000F);
-define('NOTIFICATION_TYPE_OFR_SETTINGS_SAVED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000010);
+define('NOTIFICATION_TYPE_OFR_OT_INSTALLED',		NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000001);
+define('NOTIFICATION_TYPE_OFR_OT_CREATED',		NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000002);
+define('NOTIFICATION_TYPE_OFR_OT_UPDATED',		NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000003);
+define('NOTIFICATION_TYPE_OFR_OT_ACTIVATED',		NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000004);
+define('NOTIFICATION_TYPE_OFR_OT_DEACTIVATED',		NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000005);
+define('NOTIFICATION_TYPE_OFR_OT_DELETED',		NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000006);
+define('NOTIFICATION_TYPE_OFR_CREATED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000007);
+define('NOTIFICATION_TYPE_OFR_UPDATED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000008);
+define('NOTIFICATION_TYPE_OFR_DELETED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000009);
+define('NOTIFICATION_TYPE_OFR_REQUESTED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x000000A);
+define('NOTIFICATION_TYPE_OFR_AUTHOR_ASSIGNED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x000000B);
+define('NOTIFICATION_TYPE_OFR_AUTHOR_DENIED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x000000C);
+define('NOTIFICATION_TYPE_OFR_AUTHOR_MAILED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x000000D);
+define('NOTIFICATION_TYPE_OFR_AUTHOR_REMOVED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x000000E);
+define('NOTIFICATION_TYPE_OFR_SUBMISSION_ASSIGNED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x000000F);
+define('NOTIFICATION_TYPE_OFR_SETTINGS_SAVED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000010);
 
 
 class ObjectsForReviewPlugin extends GenericPlugin {
@@ -44,8 +46,13 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
+
+		// sitewide function:
+		$this->registerDAOs();
+		// Delete all plug-in data for a journal when the journal is deleted
+		HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'deleteJournalById'));
+
 		if ($success && $this->getEnabled()) {
-			$this->registerDAOs();
 
 			// Editor links to reivew object types and objects for review pages
 			HookRegistry::register('Templates::Editor::Index::AdditionalItems', array($this, 'displayLink'));
@@ -64,6 +71,13 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 			$journal =& Request::getJournal();
 			if ($journal) {
+				// Register all supported/available locale/translation file
+				$availableLocales = $journal->getSupportedLocaleNames();
+				foreach ($availableLocales as $locale => $localeName) {
+					$localePath = $this->getPluginPath() . '/locale/'. $locale . '/locale.xml';
+					AppLocale::registerLocaleFile($locale, $localePath, true);
+				}
+
 				$mode = $this->getSetting($journal->getId(), 'mode');
 
 				// If the menagment of objects reviewers should be supported
@@ -339,6 +353,18 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 		$objectForReviewAssignments =& $ofrAssignmentDao->getAllByUserId($oldUserId);
 		// The user validation is presumed to happen earlier, before merge action is called
 		$ofrAssignmentDao->transferAssignments($oldUserId, $newUserId);
+		return false;
+	}
+
+	/**
+	 * Delete all plug-in data for a journal when the journal is deleted
+	 */
+	function deleteJournalById($hookName, $params) {
+		$journalId = $params[1];
+		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
+		$reviewObjectTypeDao->deleteByContextId($journalId);
+		$objectForReviewDao =& DAORegistry::getDAO('ObjectForReviewDAO');
+		$objectForReviewDao->deleteByContextId($journalId);
 		return false;
 	}
 

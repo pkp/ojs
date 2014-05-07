@@ -3,7 +3,8 @@
 <!--
   * plugins/generic/objectsForReview/install.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Installation descriptor file.
@@ -11,5 +12,5 @@
 
 <install version="1.0.0">
 	<!-- DB XML schema -->
-	<schema file="plugins/generic/objectsForReview/schema.xml" />
+	<schema file="plugins/generic/objectsForReview/xml/schema.xml" />
 </install>

@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/pages/ObjectsForReviewAuthorHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectsForReviewAuthorHandler
@@ -19,7 +20,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 	/**
 	 * Display objects for review author listing page.
 	 */
-	function objectsForReview($args = array(), &$request) {
+	function objectsForReview($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
@@ -63,7 +64,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 
 		$rangeInfo = Handler::getRangeInfo($request, 'objectForReview');
 		$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
-		$objectForReviewAssignments =& $ofrAssignmentDao->getAllByJournalId($journalId, null, null, null, $status, $userId, null, null, $rangeInfo, $sort, $sortDirection);
+		$objectForReviewAssignments =& $ofrAssignmentDao->getAllByContextId($journalId, null, null, null, $status, $userId, null, null, $rangeInfo, $sort, $sortDirection);
 
 		$this->setupTemplate($request);
 		$templateMgr =& TemplateManager::getManager($request);
@@ -80,7 +81,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 	/**
 	 * Author requests an object for review.
 	 */
-	function requestObjectForReview($args = array(), &$request) {
+	function requestObjectForReview($args, &$request) {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
@@ -145,7 +146,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 * @param $subclass boolean (optional) set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($request, $subclass = false) {
@@ -170,7 +171,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 	//
 	/**
 	 * Get the objectForReview plugin object
-	 * @return ObjectsForReviewPlugin
+	 * @return object ObjectsForReviewPlugin
 	 */
 	function &_getObjectsForReviewPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);
@@ -195,12 +196,12 @@ class ObjectsForReviewAuthorHandler extends Handler {
 
 	/**
 	 * Display email form for the author
-	 * @param $email MailTemplate
-	 * @param $objectForReview ObjectForReview
-	 * @param $user User
+	 * @param $email object MailTemplate
+	 * @param $objectForReview object ObjectForReview
+	 * @param $user object User
 	 * @param $returnUrl string
 	 * @param $action string
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 */
 	function _displayEmailForm($email, $objectForReview, $user, $returnUrl, $action, $request) {
 		if (!$request->getUserVar('continued')) {
@@ -224,7 +225,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 	/**
 	 * Create trivial notification
 	 * @param $notificationType int
-	 * @param $request PKPRequest
+	 * @param $request object PKPRequest
 	 */
 	function _createTrivialNotification($notificationType, &$request) {
 		$user =& $request->getUser();

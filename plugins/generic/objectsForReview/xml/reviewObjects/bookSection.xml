@@ -3,12 +3,12 @@
 <object locale="en_US">
 	<objectType key="bookSection">plugins.generic.objectsForReview.object.bookSection</objectType>
 	<roleSelectionOptions>
-			<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.author</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.bookAuthor</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.contributor</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.editor</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.seriesEditor</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.translator</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.bookAuthor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.editor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.seriesEditor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.bookSection.person.translator</selectionOption>
 	</roleSelectionOptions>
 	<objectMetadata>
 	<metadata type="singleLineTextBox" required="false" display="false" key="bookSection_book_title">

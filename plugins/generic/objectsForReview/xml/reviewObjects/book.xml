@@ -3,11 +3,11 @@
 <object locale="en_US">
 	<objectType key="book">plugins.generic.objectsForReview.object.book</objectType>
 	<roleSelectionOptions>
-			<selectionOption>plugins.generic.objectsForReview.object.book.person.author</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.book.person.contributor</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.book.person.editor</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.book.person.seriesEditor</selectionOption>
-			<selectionOption>plugins.generic.objectsForReview.object.book.person.translator</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.editor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.seriesEditor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.translator</selectionOption>
 	</roleSelectionOptions>
 	<objectMetadata>
 	<metadata type="singleLineTextBox" required="false" display="false" key="book_series">

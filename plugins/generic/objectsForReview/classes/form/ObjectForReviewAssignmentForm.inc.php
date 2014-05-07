@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/form/ObjectForReviewAssignmentForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewAssignmentForm
@@ -17,13 +18,13 @@
 import('lib.pkp.classes.form.Form');
 
 class ObjectForReviewAssignmentForm extends Form {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	/** @var int the ID of the object for review assignment */
+	/** @var int ID of the object for review assignment */
 	var $assignmentId;
 
-	/** @var int the ID of the object for review assignment */
+	/** @var int ID of the object for review assignment */
 	var $objectId;
 
 	/**
@@ -86,7 +87,6 @@ class ObjectForReviewAssignmentForm extends Form {
 				'dateDueYear',
 				'dateDueMonth',
 				'dateDueDay',
-				'submissionId',
 				'notes'
 			)
 		);
@@ -116,7 +116,6 @@ class ObjectForReviewAssignmentForm extends Form {
 				$ofrAssignment->setDateRemindedBefore(null);
 				$ofrAssignment->setDateRemindedAfter(null);
 			}
-			$ofrAssignment->setSubmissionId($this->getData('submissionId'));
 			$ofrAssignment->setNotes($this->getData('notes'));
 			$ofrAssignemntDao->updateObject($ofrAssignment);
 		}

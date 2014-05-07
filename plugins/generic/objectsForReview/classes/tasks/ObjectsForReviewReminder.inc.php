@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/tasks/ObjectsForReviewReminder.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectsForReviewReminder
@@ -24,8 +25,8 @@ class ObjectsForReviewReminder extends ScheduledTask {
 
 	/**
 	 * Send email to object for review author
-	 * @param $ofrAssignment ObjectForReviewAssignment
-	 * @param $journal Journal
+	 * @param $ofrAssignment object ObjectForReviewAssignment
+	 * @param $journal object Journal
 	 * @param $emailKey string
 	 */
 	function sendReminder($ofrAssignment, $journal, $emailKey) {
@@ -72,8 +73,7 @@ class ObjectsForReviewReminder extends ScheduledTask {
 			$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
 			$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
 			// For all journals
-			while (!$journals->eof()) {
-				$journal =& $journals->next();
+			while ($journal =& $journals->next()) {
 				$journalId = $journal->getId();
 				// If the plugin is enabled
 				$pluginEnabled = $pluginSettingsDao->getSetting($journalId, $ofrPluginName, 'enabled');
@@ -86,7 +86,7 @@ class ObjectsForReviewReminder extends ScheduledTask {
 					// If a reminder is set
 					if (($enableDueReminderBefore && $beforeDays > 0) || ($enableDueReminderAfter && $afterDays > 0)) {
 						// Retrieve all incomplete object for review assignments
-						$incompleteAssignments =& $ofrAssignmentDao->getIncompleteAssignmentsByJournalId($journalId);
+						$incompleteAssignments =& $ofrAssignmentDao->getIncompleteAssignmentsByContextId($journalId);
 						foreach ($incompleteAssignments as $incompleteAssignment) {
 							if ($incompleteAssignment->getDateDue() != null) {
 								$dueDate = strtotime($incompleteAssignment->getDateDue());
@@ -110,6 +110,7 @@ class ObjectsForReviewReminder extends ScheduledTask {
 						}
 					}
 				}
+				unset($journal);
 			}
 		}
 	}

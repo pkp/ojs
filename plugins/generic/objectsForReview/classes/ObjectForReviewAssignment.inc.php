@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewAssignment.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectForReviewAssignment
@@ -49,7 +50,7 @@ class ObjectForReviewAssignment extends DataObject {
 
 	/**
 	 * Get the associated object for review.
-	 * @return ObjectForReview
+	 * @return object ObjectForReview
 	 */
 	function &getObjectForReview() {
 		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
@@ -74,7 +75,7 @@ class ObjectForReviewAssignment extends DataObject {
 
 	/**
 	 * Get the user assigned to the object for review.
-	 * @return User
+	 * @return object User
 	 */
 	function &getUser() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -99,7 +100,7 @@ class ObjectForReviewAssignment extends DataObject {
 
 	/**
 	 * Get the article.
-	 * @return Article
+	 * @return object Article
 	 */
 	function &getArticle() {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
@@ -222,7 +223,7 @@ class ObjectForReviewAssignment extends DataObject {
 
 	/**
 	 * Get status of the object for review assignment.
-	 * @return int
+	 * @return int OFR_STATUS_...
 	 */
 	function getStatus() {
 		return $this->getData('status');
@@ -230,7 +231,7 @@ class ObjectForReviewAssignment extends DataObject {
 
 	/**
 	 * Set status of the object for review assignment.
-	 * @param $status int
+	 * @param $status int OFR_STATUS_...
 	 */
 	function setStatus($status) {
 		return $this->setData('status', $status);

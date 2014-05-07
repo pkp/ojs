@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/objectsForReview/classes/form/ReviewObjectTypeForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewObjectTypeForm
@@ -16,10 +17,10 @@
 import('lib.pkp.classes.form.Form');
 
 class ReviewObjectTypeForm extends Form {
-	/** @var $parentPluginName string Name of parent plugin */
+	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	/** @var reviewObjectType ReviewObjectType being edited */
+	/** @var object ReviewObjectType being edited */
 	var $reviewObjectType;
 
 	/**
@@ -45,7 +46,6 @@ class ReviewObjectTypeForm extends Form {
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'plugins.generic.objectsForReview.editor.objectType.form.nameRequired'));
 		$this->addCheck(new FormValidatorPost($this));
-
 	}
 
 	/**
@@ -63,7 +63,6 @@ class ReviewObjectTypeForm extends Form {
 	function display($request) {
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('reviewObjectType', $this->reviewObjectType);
-		//$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
 		parent::display($request);
 	}
 
@@ -99,7 +98,7 @@ class ReviewObjectTypeForm extends Form {
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
 		if ($this->reviewObjectType == null) {
 			$reviewObjectType = $reviewObjectTypeDao->newDataObject();
-			$reviewObjectType->setJournalId($journalId);
+			$reviewObjectType->setContextId($journalId);
 			$reviewObjectType->setActive(0);
 		} else {
 			$reviewObjectType =& $this->reviewObjectType;
@@ -117,13 +116,9 @@ class ReviewObjectTypeForm extends Form {
 			$dtdTypes = ReviewObjectMetadata::getMetadataDTDTypes();
 
 			$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
-			$availableLocales = $journal->getSupportedLocaleNames();
 			$reviewObjectMetadataArray = array();
+			$availableLocales = $journal->getSupportedLocaleNames();
 			foreach ($availableLocales as $locale => $localeName) {
-				// Register the locale/translation file
-				$localePath = $ofrPlugin->getPluginPath() . '/locale/'. $locale . '/locale.xml';
-				AppLocale::registerLocaleFile($locale, $localePath, true);
-
 				$xmlDao = new XMLDAO();
 				$commonDataPath = $ofrPlugin->getPluginPath() . DIRECTORY_SEPARATOR . 'xml' . DIRECTORY_SEPARATOR . 'commonMetadata.xml';
 				$commonData = $xmlDao->parse($commonDataPath);

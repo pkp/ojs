@@ -1,9 +1,10 @@
 <?php
 
 /**
- * @file plugins/generic/objectsForReview/classes/form/ObjectzForReviewSettingsForm.inc.php
+ * @file plugins/generic/objectsForReview/classes/form/ObjectForReviewSettingsForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ObjectsForReviewSettingsForm
@@ -15,16 +16,16 @@
 import('lib.pkp.classes.form.Form');
 
 class ObjectsForReviewSettingsForm extends Form {
-	/** @var $plugin object */
+	/** @var object */
 	var $plugin;
 
-	/** @var $journalId int */
+	/** @var int */
 	var $journalId;
 
-	/** @var validDueWeeks array keys are valid review due weeks values */
+	/** @var array Keys are valid review due weeks values */
 	var $validDueWeeks;
 
-	/** @var validNumDays array keys are valid email reminder days values */
+	/** @var array Keys are valid email reminder days values */
 	var $validNumDays;
 
 	/**
