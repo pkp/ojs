@@ -94,6 +94,7 @@
 
 Вызов: {$scriptName} path/to/apache/log/file.log
 Вызов (обработка всех файлов в каталоге): {$scriptName} path/to/apache/directory 
+Вызов (обработка всех файлов в каталоге, которые начинаются с переданной строки): {$scriptName} path/to/apache/directory starts_with_string
 	</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Ошибка: не могу создать временный каталог {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Ошибка: Файл {$filePath} не существует или к нему нет доступа.</message>
