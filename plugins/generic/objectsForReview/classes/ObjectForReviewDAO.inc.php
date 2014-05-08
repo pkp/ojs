@@ -35,7 +35,7 @@ class ObjectForReviewDAO extends DAO {
 	 * Retrieve object for review by object ID.
 	 * @param $objectId int
 	 * @param $contextId int
-	 * @return object ObjectForReview
+	 * @return ObjectForReview
 	 */
 	function &getById($objectId, $contextId = null) {
 		$params = array((int) $objectId);
@@ -56,7 +56,7 @@ class ObjectForReviewDAO extends DAO {
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return object ObjectForReview
+	 * @return ObjectForReview
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -67,7 +67,7 @@ class ObjectForReviewDAO extends DAO {
 	/**
 	 * Internal function to return an ObjectForReview object from a row.
 	 * @param $row array
-	 * @return object ObjectForReview
+	 * @return ObjectForReview
 	 */
 	function &_fromRow(&$row) {
 		$object = $this->newDataObject();
@@ -86,7 +86,7 @@ class ObjectForReviewDAO extends DAO {
 
 	/**
 	 * Insert a new ObjectForReview.
-	 * @param $objectForReview object ObjectForReview
+	 * @param $objectForReview ObjectForReview
 	 * @return int
 	 */
 	function insertObject(&$objectForReview) {
@@ -118,7 +118,7 @@ class ObjectForReviewDAO extends DAO {
 
 	/**
 	 * Update an existing object for review.
-	 * @param $objectForReview object ObjectForReview
+	 * @param $objectForReview ObjectForReview
 	 * @return boolean
 	 */
 	function updateObject(&$objectForReview) {
@@ -147,7 +147,7 @@ class ObjectForReviewDAO extends DAO {
 
 	/**
 	 * Delete an object for review.
-	 * @param $objectForReview object ObjectForReview
+	 * @param $objectForReview ObjectForReview
 	 */
 	function deleteObject(&$objectForReview) {
 		// Delete object
@@ -227,10 +227,10 @@ class ObjectForReviewDAO extends DAO {
 	 * @param $available int (optional), status to match
 	 * @param $editorId int, (optional) editor to match
 	 * @param $filterType int (optional), review object type ID to match
-	 * @param $rangeInfo object (optional), DBResultRange
+	 * @param $rangeInfo DBResultRange (optional)
 	 * @param $sortBy string (optional), sorting criteria
 	 * @param $sortDirection int (optional), sorting direction
-	 * @return object DAOResultFactory containing matching ObjectForReviewAssignments
+	 * @return DAOResultFactory containing matching ObjectForReviewAssignments
 	 */
 	function &getAllByContextId($contextId, $searchType = null, $search = null, $searchMatch = null, $available = null, $editorId = null, $filterType = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);

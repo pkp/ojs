@@ -555,9 +555,9 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 * @param $subclass boolean (optional) set to true if caller is below this handler in the hierarchy
-	 * @param $reviewObjectType object (optional) ReviewObjectType
+	 * @param $reviewObjectType ReviewObjectType (optional)
 	 */
 	function setupTemplate(&$request, $subclass = false, $reviewObjectType = null) {
 		$templateMgr =& TemplateManager::getManager($request);
@@ -598,7 +598,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	//
 	/**
 	 * Get the objectForReview plugin object
-	 * @return object ObjectsForReviewPlugin
+	 * @return ObjectsForReviewPlugin
 	 */
 	function &_getObjectsForReviewPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);
@@ -643,7 +643,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 
 	/**
 	 * Update or install review objects
-	 * @param $journal object Journal
+	 * @param $journal Journal
 	 * @param $reviewObjects array of review object types keys or ids
 	 * @param $locales array of locales
 	 * @param $action string (install or update)
@@ -799,7 +799,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	/**
 	 * Create trivial notification
 	 * @param $notificationType int
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 */
 	function _createTrivialNotification($notificationType, &$request) {
 		$user =& $request->getUser();

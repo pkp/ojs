@@ -25,8 +25,8 @@ class ObjectsForReviewReminder extends ScheduledTask {
 
 	/**
 	 * Send email to object for review author
-	 * @param $ofrAssignment object ObjectForReviewAssignment
-	 * @param $journal object Journal
+	 * @param $ofrAssignment ObjectForReviewAssignment
+	 * @param $journal Journal
 	 * @param $emailKey string
 	 */
 	function sendReminder($ofrAssignment, $journal, $emailKey) {

@@ -68,7 +68,7 @@ class ObjectForReview extends DataObject {
 
 	/**
 	 * Get editor assigned to the object for review.
-	 * @return object Editor
+	 * @return User
 	 */
 	function &getEditor() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -109,7 +109,7 @@ class ObjectForReview extends DataObject {
 
 	/**
 	 * Get review object type.
-	 * @return object ReviewObjectType
+	 * @return ReviewObjectType
 	 */
 	function &getReviewObjectType() {
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');

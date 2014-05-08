@@ -864,7 +864,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 * @param $subclass boolean (optional) set to true if caller is below this handler in the hierarchy
 	 * @param $objectId int (optional)
 	 */
@@ -911,7 +911,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	//
 	/**
 	 * Get the objectForReview plugin object
-	 * @return object ObjectsForReviewPlugin
+	 * @return ObjectsForReviewPlugin
 	 */
 	function &_getObjectsForReviewPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);
@@ -920,7 +920,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Get return page
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 * @return string
 	 */
 	function _getReturnpage(&$request) {
@@ -982,11 +982,11 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Assign an author to an object for review.
-	 * @param $ofrAssignment object ObjectForReviewAssignment
-	 * @param $objectForReview object ObjectForReview
-	 * @param $author object User
+	 * @param $ofrAssignment ObjectForReviewAssignment
+	 * @param $objectForReview ObjectForReview
+	 * @param $author User
 	 * @param $returnUrl string
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 */
 	function _assign($ofrAssignment, $objectForReview, $author, $returnUrl, &$request) {
 		import('classes.mail.MailTemplate');
@@ -1027,7 +1027,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Is remove action allowed
-	 * @param $ofrAssignment object ObjectForReviewAssignment
+	 * @param $ofrAssignment ObjectForReviewAssignment
 	 * @return boolean
 	 */
 	function _canBeRemoved($ofrAssignment) {
@@ -1036,12 +1036,12 @@ class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
 	 * Display email form for the editor
-	 * @param $email object MailTemplate
-	 * @param $objectForReview object ObjectForReview
-	 * @param $user object User
+	 * @param $email MailTemplate
+	 * @param $objectForReview ObjectForReview
+	 * @param $user User
 	 * @param $returnUrl string
 	 * @param $action string
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 */
 	function _displayEmailForm($email, $objectForReview, $user, $returnUrl, $action, $request) {
 		if (!$request->getUserVar('continued')) {
@@ -1109,7 +1109,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	/**
 	 * Create trivial notification
 	 * @param $notificationType int
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 */
 	function _createTrivialNotification($notificationType, &$request) {
 		$user =& $request->getUser();

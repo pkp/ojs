@@ -30,7 +30,7 @@ class ObjectForReviewPersonDAO extends DAO {
 	/**
 	 * Retrieve person by ID.
 	 * @param $personId int
-	 * @return object ObjectForReviewPerson
+	 * @return ObjectForReviewPerson
 	 */
 	function &getById($personId, $objectId = null) {
 		$params = array((int) $personId);
@@ -71,7 +71,7 @@ class ObjectForReviewPersonDAO extends DAO {
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return object ObjectForReviewPerson
+	 * @return ObjectForReviewPerson
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -82,7 +82,7 @@ class ObjectForReviewPersonDAO extends DAO {
 	/**
 	 * Internal function to return an ObjectForReviewPerson object from a row.
 	 * @param $row array
-	 * @return object ObjectForReviewPerson
+	 * @return ObjectForReviewPerson
 	 */
 	function &_fromRow(&$row) {
 		$person = $this->newDataObject();
@@ -101,7 +101,7 @@ class ObjectForReviewPersonDAO extends DAO {
 
 	/**
 	 * Insert a new ObjectForReviewPerson.
-	 * @param $person object ObjectForReviewPerson
+	 * @param $person ObjectForReviewPerson
 	 * @return int
 	 */
 	function insertObject(&$person) {
@@ -125,7 +125,7 @@ class ObjectForReviewPersonDAO extends DAO {
 
 	/**
 	 * Update an existing ObjectForReviewPerson.
-	 * @param $person object ObjectForReviewPerson
+	 * @param $person ObjectForReviewPerson
 	 * @return boolean
 	 */
 	function updateObject(&$person) {
@@ -152,7 +152,7 @@ class ObjectForReviewPersonDAO extends DAO {
 
 	/**
 	 * Delete a person.
-	 * @param $person object ObjectForReviewPerson
+	 * @param $person ObjectForReviewPerson
 	 */
 	function deleteObject(&$person) {
 		return $this->deleteById($person->getId());

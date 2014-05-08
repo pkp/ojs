@@ -32,7 +32,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	 * Retrieve a review object metadata by ID.
 	 * @param $metadataId int
 	 * @param $reviewObjectTypeId int (optional)
-	 * @return object ReviewObjectMetadata
+	 * @return ReviewObjectMetadata
 	 */
 	function &getById($metadataId, $reviewObjectTypeId = null) {
 		$params = array((int) $metadataId);
@@ -55,7 +55,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	 * Retrieve review object metadata by key.
 	 * @param $key string
 	 * @param $reviewObjectTypeId int (optional)
-	 * @return object ReviewObjectMetadata
+	 * @return ReviewObjectMetadata
 	 */
 	function &getByKey($key, $reviewObjectTypeId = null) {
 		$params = array($key);
@@ -76,7 +76,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return object ReviewObjectMetadata
+	 * @return ReviewObjectMetadata
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -87,7 +87,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	/**
 	 * Internal function to return a ReviewObjectMetadata object from a row.
 	 * @param $row array
-	 * @return object ReviewObjectMetadata
+	 * @return ReviewObjectMetadata
 	 */
 	function &_fromRow(&$row) {
 		$reviewObjectMetadata = $this->newDataObject();
@@ -116,7 +116,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Update the localized fields for this table
-	 * @param $reviewObjectMetadata object ReviewObjectMetadata
+	 * @param $reviewObjectMetadata ReviewObjectMetadata
 	 */
 	function updateLocaleFields(&$reviewObjectMetadata) {
 		$this->updateDataObjectSettings('review_object_metadata_settings', $reviewObjectMetadata, array(
@@ -126,7 +126,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Insert a new review object metadata.
-	 * @param $reviewObjectMetadata object ReviewObjectMetadata
+	 * @param $reviewObjectMetadata ReviewObjectMetadata
 	 * @return int
 	 */
 	function insertObject(&$reviewObjectMetadata) {
@@ -151,7 +151,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Update an existing review object metadata.
-	 * @param $reviewObjectMetadata object ReviewObjectMetadata
+	 * @param $reviewObjectMetadata ReviewObjectMetadata
 	 * @return boolean
 	 */
 	function updateObject(&$reviewObjectMetadata) {
@@ -181,7 +181,7 @@ class ReviewObjectMetadataDAO extends DAO {
 
 	/**
 	 * Delete a review object metadata.
-	 * @param $reviewObjectMetadata object ReviewObjectMetadata
+	 * @param $reviewObjectMetadata ReviewObjectMetadata
 	 */
 	function deleteObject(&$reviewObjectMetadata) {
 		return $this->deleteById($reviewObjectMetadata->getId());
@@ -278,8 +278,8 @@ class ReviewObjectMetadataDAO extends DAO {
 	/**
 	 * Retrieve all metadata for a review object type.
 	 * @param $reviewObjectTypeId int
-	 * @param $rangeInfo object (optional), DBResultRange
-	 * @return object DAOResultFactory containing ReviewObjectMetadata ordered by sequence
+	 * @param $rangeInfo DBResultRange (optional)
+	 * @return DAOResultFactory containing ReviewObjectMetadata ordered by sequence
 	 */
 	function &getByReviewObjectTypeId($reviewObjectTypeId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(

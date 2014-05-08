@@ -146,7 +146,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 * @param $subclass boolean (optional) set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($request, $subclass = false) {
@@ -171,7 +171,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 	//
 	/**
 	 * Get the objectForReview plugin object
-	 * @return object ObjectsForReviewPlugin
+	 * @return ObjectsForReviewPlugin
 	 */
 	function &_getObjectsForReviewPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);
@@ -196,12 +196,12 @@ class ObjectsForReviewAuthorHandler extends Handler {
 
 	/**
 	 * Display email form for the author
-	 * @param $email object MailTemplate
-	 * @param $objectForReview object ObjectForReview
-	 * @param $user object User
+	 * @param $email MailTemplate
+	 * @param $objectForReview ObjectForReview
+	 * @param $user User
 	 * @param $returnUrl string
 	 * @param $action string
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 */
 	function _displayEmailForm($email, $objectForReview, $user, $returnUrl, $action, $request) {
 		if (!$request->getUserVar('continued')) {
@@ -225,7 +225,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 	/**
 	 * Create trivial notification
 	 * @param $notificationType int
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 */
 	function _createTrivialNotification($notificationType, &$request) {
 		$user =& $request->getUser();

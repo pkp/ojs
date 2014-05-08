@@ -35,7 +35,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * Retrieve assignment by ID.
 	 * @param $assignmentId int
 	 * @param $objectId int (optional)
-	 * @return object ObjectForReviewAssignment
+	 * @return ObjectForReviewAssignment
 	 */
 	function getById($assignmentId, $objectId = null) {
 		$params = array((int) $assignmentId);
@@ -83,7 +83,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return object ObjectForReviewAssignment
+	 * @return ObjectForReviewAssignment
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -94,7 +94,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	/**
 	 * Internal function to return an ObjectForReviewAssignment object from a row.
 	 * @param $row array
-	 * @return object ObjectForReviewAssignment
+	 * @return ObjectForReviewAssignment
 	 */
 	function &_fromRow($row) {
 		$assignment = $this->newDataObject();
@@ -118,7 +118,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 	/**
 	 * Insert a new assignment.
-	 * @param $assignment object ObjectForReviewAssignment
+	 * @param $assignment ObjectForReviewAssignment
 	 * @return int
 	 */
 	function insertObject(&$assignment) {
@@ -149,7 +149,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 	/**
 	 * Update an existing assignment.
-	 * @param $assignment object ObjectForReviewAssignment
+	 * @param $assignment ObjectForReviewAssignment
 	 * @return boolean
 	 */
 	function updateObject(&$assignment) {
@@ -189,7 +189,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 
 	/**
 	 * Delete an assignment.
-	 * @param $assignment object ObjectForReviewAssignment
+	 * @param $assignment ObjectForReviewAssignment
 	 * @return boolean
 	 */
 	function deleteObject($assignment) {
@@ -230,7 +230,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * Retrieve the assignment matching the object and the user.
 	 * @param $objectId int
 	 * @param $userId int
-	 * @return object ObjectForReviewAssignment
+	 * @return ObjectForReviewAssignment
 	 */
 	function &getByObjectAndUserId($objectId, $userId) {
 		$params = array((int) $objectId, (int) $userId);
@@ -310,10 +310,10 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * @param $userId int (optional), user to match
 	 * @param $editorId int (optional), editor to match
 	 * @param $filterType int (optional), review object type ID to match
-	 * @param $rangeInfo object (optional), DBResultRange
+	 * @param $rangeInfo DBResultRange (optional)
 	 * @param $sortBy string (optional), sorting criteria
 	 * @param $sortDirection int (optional), sorting direction
-	 * @return object DAOResultFactory containing matching ObjectForReviewAssignments
+	 * @return DAOResultFactory containing matching ObjectForReviewAssignments
 	 */
  	 function &getAllByContextId($contextId, $searchType = null, $search = null, $searchMatch = null, $status = null, $userId = null, $editorId = null, $filterType = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -560,7 +560,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * @param $objectId int (optional)
 	 * @param $userId int (optional)
 	 * @param $submissionId int (optional)
-	 * @return object DAOResultFactory
+	 * @return DAOResultFactory
 	 */
 	function &_getAllInternally($objectId = null, $userId = null, $submissionId = null) {
 		$sql = 'SELECT * FROM object_for_review_assignments';

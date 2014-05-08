@@ -31,7 +31,7 @@ class ReviewObjectTypeDAO extends DAO {
 	 * Retrieve a review object type by ID.
 	 * @param $typeId int
 	 * @param $contextId int (optional)
-	 * @return object ReviewObjectType
+	 * @return ReviewObjectType
 	 */
 	function &getById($typeId, $contextId = null) {
 		$params = array((int) $typeId);
@@ -54,7 +54,7 @@ class ReviewObjectTypeDAO extends DAO {
 	 * Retrieve a review object type by key.
 	 * @param $typeKey string
 	 * @param $contextId int (optional)
-	 * @return object ReviewObjectType
+	 * @return ReviewObjectType
 	 */
 	function &getByKey($typeKey, $contextId = null) {
 		$params = array((int) $typeKey);
@@ -75,7 +75,7 @@ class ReviewObjectTypeDAO extends DAO {
 
 	/**
 	 * Construct a new data object corresponding to this DAO.
-	 * @return object ReviewObjectType
+	 * @return ReviewObjectType
 	 */
 	function newDataObject() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
@@ -86,7 +86,7 @@ class ReviewObjectTypeDAO extends DAO {
 	/**
 	 * Internal function to return a ReviewObjectType object from a row.
 	 * @param $row array
-	 * @return object ReviewObjectType
+	 * @return ReviewObjectType
 	 */
 	function &_fromRow(&$row) {
 		$reviewObjectType = $this->newDataObject();
@@ -112,7 +112,7 @@ class ReviewObjectTypeDAO extends DAO {
 
 	/**
 	 * Update the localized fields for this table
-	 * @param $reviewObjectType object ReviewObjectType
+	 * @param $reviewObjectType ReviewObjectType
 	 */
 	function updateLocaleFields(&$reviewObjectType) {
 		$this->updateDataObjectSettings('review_object_type_settings', $reviewObjectType, array(
@@ -122,7 +122,7 @@ class ReviewObjectTypeDAO extends DAO {
 
 	/**
 	 * Insert a new review object type.
-	 * @param $reviewObjectType object ReviewObjectType
+	 * @param $reviewObjectType ReviewObjectType
 	 */
 	function insertObject(&$reviewObjectType) {
 		$this->update(
@@ -143,7 +143,7 @@ class ReviewObjectTypeDAO extends DAO {
 
 	/**
 	 * Update an existing review object type.
-	 * @param $reviewObjectType object ReviewObjectType
+	 * @param $reviewObjectType ReviewObjectType
 	 */
 	function updateObject(&$reviewObjectType) {
 		$returner = $this->update(
@@ -166,7 +166,7 @@ class ReviewObjectTypeDAO extends DAO {
 
 	/**
 	 * Delete a review object type.
-	 * @param $reviewObjectType object ReviewObjectType
+	 * @param $reviewObjectType ReviewObjectType
 	 */
 	function deleteObject(&$reviewObjectType) {
 		return $this->deleteById($reviewObjectType->getId());
@@ -213,8 +213,8 @@ class ReviewObjectTypeDAO extends DAO {
 	/**
 	 * Get all review object types by jorunal ID.
 	 * @param $contextId int
-	 * @param $rangeInfo object (optional), DBResultRange
-	 * @return object DAOResultFactory containing matching ReviewForms
+	 * @param $rangeInfo DBResultRange (optional)
+	 * @return DAOResultFactory containing matching ReviewForms
 	 */
 	function &getByContextId($contextId, $rangeInfo = null) {
 		$params = array((int) $contextId);

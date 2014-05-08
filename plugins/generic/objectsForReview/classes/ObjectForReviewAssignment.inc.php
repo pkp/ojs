@@ -50,7 +50,7 @@ class ObjectForReviewAssignment extends DataObject {
 
 	/**
 	 * Get the associated object for review.
-	 * @return object ObjectForReview
+	 * @return ObjectForReview
 	 */
 	function &getObjectForReview() {
 		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
@@ -75,7 +75,7 @@ class ObjectForReviewAssignment extends DataObject {
 
 	/**
 	 * Get the user assigned to the object for review.
-	 * @return object User
+	 * @return User
 	 */
 	function &getUser() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
@@ -100,7 +100,7 @@ class ObjectForReviewAssignment extends DataObject {
 
 	/**
 	 * Get the article.
-	 * @return object Article
+	 * @return Article
 	 */
 	function &getArticle() {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');

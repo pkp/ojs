@@ -203,7 +203,7 @@ class ObjectsForReviewHandler extends Handler {
 
 	/**
 	 * Setup common template variables.
-	 * @param $request object PKPRequest
+	 * @param $request PKPRequest
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate(&$request, $subclass = false) {
@@ -227,7 +227,7 @@ class ObjectsForReviewHandler extends Handler {
 	//
 	/**
 	 * Get the objectForReview plugin object
-	 * @return object ObjectsForReviewPlugin
+	 * @return ObjectsForReviewPlugin
 	 */
 	function &_getObjectsForReviewPlugin() {
 		$plugin =& PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);
