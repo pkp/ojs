@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="book">plugins.generic.objectsForReview.object.book</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.editor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.seriesEditor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.book.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_series">
+		<name>plugins.generic.objectsForReview.object.book.series</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_series_no">
+		<name>plugins.generic.objectsForReview.object.book.seriesNumber</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_volume">
+		<name>plugins.generic.objectsForReview.object.book.volume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_volume_no">
+		<name>plugins.generic.objectsForReview.object.book.numberOfVolumes</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_edition">
+		<name>plugins.generic.objectsForReview.object.book.edition</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_place">
+		<name>plugins.generic.objectsForReview.object.book.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="true" key="book_publisher">
+		<name>plugins.generic.objectsForReview.object.book.publisher</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_publisher_url">
+		<name>plugins.generic.objectsForReview.object.book.publisherURL</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_pages_no">
+		<name>plugins.generic.objectsForReview.object.book.numberOfPages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="book_isbn">
+		<name>plugins.generic.objectsForReview.object.book.isbn</name>
+	</metadata>
+	</objectMetadata>
+</object>

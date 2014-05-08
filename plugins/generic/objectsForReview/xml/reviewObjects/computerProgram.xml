@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="computerProgram">plugins.generic.objectsForReview.object.computerProgram</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.computerProgram.person.programmer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.computerProgram.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="computerProgram_series_title">
+		<name>plugins.generic.objectsForReview.object.computerProgram.seriesTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="computerProgram_version">
+		<name>plugins.generic.objectsForReview.object.computerProgram.version</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="computerProgram_system">
+		<name>plugins.generic.objectsForReview.object.computerProgram.system</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="computerProgram_place">
+		<name>plugins.generic.objectsForReview.object.computerProgram.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="computerProgram_programming_language">
+		<name>plugins.generic.objectsForReview.object.computerProgram.programmingLanguage</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="computerProgram_isbn">
+		<name>plugins.generic.objectsForReview.object.computerProgram.isbn</name>
+	</metadata>
+	</objectMetadata>
+</object>

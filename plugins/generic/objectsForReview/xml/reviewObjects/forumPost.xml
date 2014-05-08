@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="forumPost">plugins.generic.objectsForReview.object.forumPost</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.forumPost.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.forumPost.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="forumPost_forum_title">
+		<name>plugins.generic.objectsForReview.object.forumPost.forumTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="forumPost_post_type">
+		<name>plugins.generic.objectsForReview.object.forumPost.postType</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="case">plugins.generic.objectsForReview.object.case</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.case.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.case.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.case.person.counsel</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="case_reporter">
+		<name>plugins.generic.objectsForReview.object.case.reporter</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="case_reporter_volume">
+		<name>plugins.generic.objectsForReview.object.case.reporterVolume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="case_court">
+		<name>plugins.generic.objectsForReview.object.case.court</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="case_docket_no">
+		<name>plugins.generic.objectsForReview.object.case.docketNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="case_first_page">
+		<name>plugins.generic.objectsForReview.object.case.firstPage</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="case_history">
+		<name>plugins.generic.objectsForReview.object.case.history</name>
+	</metadata>
+	</objectMetadata>
+</object>

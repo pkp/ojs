@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="dictionaryEntry">plugins.generic.objectsForReview.object.dictionaryEntry</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.dictionaryEntry.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.dictionaryEntry.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.dictionaryEntry.person.editor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.dictionaryEntry.person.seriesEditor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.dictionaryEntry.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryEntry_dictionary_title">
+		<name>plugins.generic.objectsForReview.object.dictionaryEntry.dictionaryTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryTitle_series">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitle.series</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryTitle_series_no">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitle.seriesNumber</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryTitle_volume">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitle.volume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryTitle_volume_no">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitle.numberOfVolumes</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryTitle_edition">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitle.edition</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryTitle_place">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitle.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="true" key="dictionaryTitle_publisher">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitle.publisher</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryTitle_pages_no">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitlek.numberOfPages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="dictionaryTitle_isbn">
+		<name>plugins.generic.objectsForReview.object.dictionaryTitle.isbn</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="bill">plugins.generic.objectsForReview.object.bill</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.bill.person.sponsor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.bill.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.bill.person.cosponsor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="bill_number">
+		<name>plugins.generic.objectsForReview.object.bill.number</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="bill_code">
+		<name>plugins.generic.objectsForReview.object.bill.code</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="bill_code_volume">
+		<name>plugins.generic.objectsForReview.object.bill.codeVolume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="bill_section">
+		<name>plugins.generic.objectsForReview.object.bill.section</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="bill_code_pages">
+		<name>plugins.generic.objectsForReview.object.bill.codePages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="bill_legislative_body">
+		<name>plugins.generic.objectsForReview.object.bill.legislativeBody</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="bill_session">
+		<name>plugins.generic.objectsForReview.object.bill.session</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="bill_history">
+		<name>plugins.generic.objectsForReview.object.bill.history</name>
+	</metadata>
+	</objectMetadata>
+</object>

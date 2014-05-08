@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="conferencePaper">plugins.generic.objectsForReview.object.conferencePaper</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.conferencePaper.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.conferencePaper.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.conferencePaper.person.editor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.conferencePaper.person.seriesEditor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.conferencePaper.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_proceedings_title">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.proceedingsTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_conference_name">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.conferenceName</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_place">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_publisher">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.publisher</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_publisher_url">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.publisherURL</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_volume">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.volume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_pages">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.pages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_series">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.series</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="conferencePaper_isbn">
+		<name>plugins.generic.objectsForReview.object.conferencePaper.isbn</name>
+	</metadata>
+	</objectMetadata>
+</object>

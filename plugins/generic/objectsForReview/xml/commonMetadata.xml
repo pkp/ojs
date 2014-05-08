@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "object.dtd">
+<object locale="en_US">
+	<objectType key="common"/>
+	<roleSelectionOptions>
+		<selectionOption/>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="true" display="true" key="title">
+		<name>plugins.generic.objectsForReview.object.metadata.title</name>
+	</metadata>
+	<metadata type="roleDropDownBox" required="false" display="true" key="role"> 
+		<name>plugins.generic.objectsForReview.object.metadata.person</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="date">
+		<name>plugins.generic.objectsForReview.object.metadata.date</name>
+	</metadata>
+	<metadata type="languageDropDownBox" required="false" display="false" key="language">
+		<name>plugins.generic.objectsForReview.object.metadata.language</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="shortTitle">
+		<name>plugins.generic.objectsForReview.object.metadata.shortTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="url">
+		<name>plugins.generic.objectsForReview.object.metadata.url</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="rights">
+		<name>plugins.generic.objectsForReview.object.metadata.rights</name>
+	</metadata>
+	<metadata type="extendedTextBox" required="false" display="false" key="abstract">
+		<name>plugins.generic.objectsForReview.object.metadata.abstract</name>
+	</metadata>
+	<metadata type="radioButtons" required="true" display="true" key="copy">
+		<name>plugins.generic.objectsForReview.object.metadata.copyAvailable</name>
+		<selectionOptions>
+			<selectionOption>plugins.generic.objectsForReview.object.metadata.copyAvailable.yes</selectionOption>
+			<selectionOption>plugins.generic.objectsForReview.object.metadata.copyAvailable.no</selectionOption>
+		</selectionOptions>
+	</metadata>
+	<metadata type="coverPage" required="false" display="true" key="coverPage"> 
+		<name>plugins.generic.objectsForReview.object.metadata.coverPage</name>
+	</metadata>
+	</objectMetadata>
+</object>

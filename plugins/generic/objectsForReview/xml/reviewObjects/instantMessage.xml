@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="instantMessage">plugins.generic.objectsForReview.object.instantMessage</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.instantMessage.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.instantMessage.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.instantMessage.person.recipient</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata/>
+</object>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="tvBroadcast">plugins.generic.objectsForReview.object.tvBroadcast</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.tvBroadcast.person.director</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.tvBroadcast.person.castMember</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.tvBroadcast.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.tvBroadcast.person.guest</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.tvBroadcast.person.producer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.tvBroadcast.person.scriptwriter</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="tvBroadcast_program_title">
+		<name>plugins.generic.objectsForReview.object.tvBroadcast.programTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="tvBroadcast_episode_no">
+		<name>plugins.generic.objectsForReview.object.tvBroadcast.episodeNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="tvBroadcast_format">
+		<name>plugins.generic.objectsForReview.object.tvBroadcast.format</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="tvBroadcast_place">
+		<name>plugins.generic.objectsForReview.object.tvBroadcast.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="tvBroadcast_network">
+		<name>plugins.generic.objectsForReview.object.tvBroadcast.network</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="tvBroadcast_running_time">
+		<name>plugins.generic.objectsForReview.object.tvBroadcast.runningTime</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="email">plugins.generic.objectsForReview.object.email</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.email.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.email.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.email.person.recipient</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata/>
+</object>

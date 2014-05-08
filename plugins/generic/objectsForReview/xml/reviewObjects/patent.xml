@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="patent">plugins.generic.objectsForReview.object.patent</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.patent.person.inventor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.patent.person.attorney</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.patent.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_place">
+		<name>plugins.generic.objectsForReview.object.patent.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_country">
+		<name>plugins.generic.objectsForReview.object.patent.country</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_assignee">
+		<name>plugins.generic.objectsForReview.object.patent.assignee</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_issuing_authority">
+		<name>plugins.generic.objectsForReview.object.patent.issuingAuthority</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_no">
+		<name>plugins.generic.objectsForReview.object.patent.number</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_pages">
+		<name>plugins.generic.objectsForReview.object.patent.pages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_app_no">
+		<name>plugins.generic.objectsForReview.object.patent.appNumber</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_priority_no">
+		<name>plugins.generic.objectsForReview.object.patent.priorityNumbers</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_filing_date">
+		<name>plugins.generic.objectsForReview.object.patent.filingDate</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_references">
+		<name>plugins.generic.objectsForReview.object.patent.references</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="patent_legal_status">
+		<name>plugins.generic.objectsForReview.object.patent.legalStatus</name>
+	</metadata>
+	</objectMetadata>
+</object>

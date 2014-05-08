@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="map">plugins.generic.objectsForReview.object.map</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.map.person.cartographer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.map.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.map.person.seriesEditor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="map_type">
+		<name>plugins.generic.objectsForReview.object.map.type</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="map_scale">
+		<name>plugins.generic.objectsForReview.object.map.scale</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="map_series_title">
+		<name>plugins.generic.objectsForReview.object.map.seriesTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="map_edition">
+		<name>plugins.generic.objectsForReview.object.map.edition</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="map_place">
+		<name>plugins.generic.objectsForReview.object.map.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="true" key="map_publisher">
+		<name>plugins.generic.objectsForReview.object.map.publisher</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="map_isbn">
+		<name>plugins.generic.objectsForReview.object.map.isbn</name>
+	</metadata>
+	</objectMetadata>
+</object>

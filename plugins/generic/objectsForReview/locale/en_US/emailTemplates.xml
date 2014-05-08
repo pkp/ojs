@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/en_US/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review email template localized default text.
+  *
+  -->
+<email_texts locale="en_US">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Object for Review: Due Date Reminder</subject>
+		<body>Dear {$authorName}:
+
+This is a friendly reminder that your object review of {$objectForReviewTitle} is due {$objectForReviewDueDate}.
+
+To submit your object review, please log into the journal website and complete the online article submission process. For your convenience, a submission URL has been provided below.
+
+Submission URL: {$submissionUrl}
+
+Please feel free to contact me if you have any questions or concerns about this object review.
+
+Thank you for your contribution to the journal and I look forward to receiving your submission.
+
+{$editorialContactSignature}</body>
+		<description>This is an automatically generated email that is sent to an object for review author as a reminder that the due date for the review is approaching.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Object for Review: Review Due</subject>
+		<body>Dear {$authorName}:
+
+This is a friendly reminder that your object review of {$objectForReviewTitle} was due {$objectForReviewDueDate} but has not been received yet.
+
+To submit your object review, please log into the journal website and complete the online article submission process. For your convenience, a submission URL has been provided below.
+
+Submission URL: {$submissionUrl}
+
+Please feel free to contact me if you have any questions or concerns about this object review.
+
+Thank you for your contribution to the journal and I look forward to receiving your submission.
+
+{$editorialContactSignature}</body>
+		<description>This is an automatically generated email that is sent to an object for review author after the review due date has passed.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Object for Review: Object Assigned</subject>
+		<body>Dear {$authorName}:
+
+This email confirms that {$objectForReviewTitle} has been assigned to you for an object review to be completed by {$objectForReviewDueDate}.
+
+Please ensure that your mailing address in your online user profile is up-to-date. This address will be used to mail a copy of the object to you for the review.
+
+The mailing address that we currently have on file is:
+{$authorMailingAddress}
+
+If this address is incomplete or you are no longer at this address, please use the following user profile URL to update your address:
+
+User Profile URL: {$userProfileUrl}
+ 
+To submit your object review, please log into the journal website and complete the online article submission process.
+
+Submission URL: {$submissionUrl}
+
+Please feel free to contact me if you have any questions or concerns about this object review.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an object review author when an editor assigns the object for review to the author.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Object for Review</subject>
+		<body>Dear {$authorName}:
+
+Unfortunately, I am not able to assign {$objectForReviewTitle} to you at this time for an object review.
+
+I hope you consider reviewing another object from our listing, either at this time or in the future.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an interested author when an object is no longer available for review.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Object for Review: Object Requested</subject>
+		<body>Dear {$editorName}:
+
+I am interested in writing an object review of {$objectForReviewTitle}.
+
+Can you please confirm whether this object is still available for review?
+
+{$authorContactSignature}</body>
+		<description>This email is sent to an editor by an author interested in writing an object review for a listed object.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Object for Review: Object Mailed</subject>
+		<body>Dear {$authorName}:
+
+This email confirms that I have mailed a copy of {$objectForReviewTitle} to the following mailing address from your online user profile:
+{$authorMailingAddress}
+ 
+To submit your object review, please log into the journal website and complete the online article submission process.
+
+Submission URL: {$submissionUrl}
+
+Please feel free to contact me if you have any questions or concerns about this object review.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an object review author when the editor has mailed a copy of the object to the author.</description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Object for Review</subject>
+		<body>Dear {$authorName}:
+
+This email confirms that you have been removed as the object reviewer for {$objectForReviewTitle}.
+
+I hope you consider reviewing another object from our listing, either at this time or in the future.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an interested author when an object is no longer available for review.</description>
+	</email_text>
+</email_texts>

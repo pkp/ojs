@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="film">plugins.generic.objectsForReview.object.film</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.film.person.director</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.film.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.film.person.producer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.film.person.scriptwriter</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="film_distributor">
+		<name>plugins.generic.objectsForReview.object.film.distributor</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="film_genre">
+		<name>plugins.generic.objectsForReview.object.film.genre</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="film_format">
+		<name>plugins.generic.objectsForReview.object.film.format</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="film_running_time">
+		<name>plugins.generic.objectsForReview.object.film.runningTime</name>
+	</metadata>
+	</objectMetadata>
+</object>
