@@ -12,10 +12,12 @@ before_install:
   - sudo sed -i -e "s,\${APACHE_LOG_DIR},$(pwd),g" /etc/apache2/sites-available/default  
   - sudo /etc/init.d/apache2 restart
   
-  # Install php unit selenium extension.
-  - pear channel-discover pear.phpunit.de
-  - pear install phpunit/PHPUnit_Selenium
-
+  # Install phpunit in a phar package with selenium extension already on it.
+  - sudo rm -R /home/travis/.phpenv/versions/5.3/bin/phpunit
+  - wget https://phar.phpunit.de/phpunit.phar
+  - chmod +x phpunit.phar
+  - sudo mv phpunit.phar /home/travis/.phpenv/versions/5.3/bin/phpunit
+  
   # Xvfb requirements.
   - sudo apt-get install -y x11-xkb-utils
   # Add fonts.
@@ -49,9 +51,9 @@ before_install:
   # - sudo apt-get install python-setuptools
   # - sudo apt-get install python-nose
   - sudo easy_install "http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz"
-  - mkdir ~/bin
   - wget -O compiler.zip "https://closure-compiler.googlecode.com/files/compiler-20120917.zip"
   - unzip compiler.zip compiler.jar
+  - mkdir ~/bin
   - mv compiler.jar ~/bin
   - wget "http://jslint4java.googlecode.com/files/jslint4java-2.0.2-dist.zip"
   - unzip jslint4java-2.0.2-dist.zip
