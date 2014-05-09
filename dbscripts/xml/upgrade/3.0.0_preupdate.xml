@@ -12,6 +12,10 @@
   *
   -->
 <data>
+	<!-- Bug #8744: Abstract series/section editor assignments -->
+	<sql>
+		<rename table="section_editors" column="journal_id" to="context_id" />
+	</sql>
 	<!-- Bug #8265: Rename plugin_settings.journal_id to context_id -->
 	<sql>
 		<rename table="plugin_settings" column="journal_id" to="context_id" />

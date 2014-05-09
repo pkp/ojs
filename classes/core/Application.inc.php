@@ -32,6 +32,9 @@ define('ASSOC_TYPE_SUPP_FILE',		0x0000106);
 define('CONTEXT_JOURNAL', 1);
 
 class Application extends PKPApplication {
+	/**
+	 * Constructor
+	 */
 	function Application() {
 		parent::PKPApplication();
 	}
@@ -47,6 +50,10 @@ class Application extends PKPApplication {
 		return 1;
 	}
 
+	/**
+	 * Get the list of context elements.
+	 * @return array
+	 */
 	function getContextList() {
 		return array('journal');
 	}
@@ -130,6 +137,7 @@ class Application extends PKPApplication {
 
 	/**
 	 * Get the list of plugin categories for this application.
+	 * @return array
 	 */
 	function getPluginCategories() {
 		return array(
@@ -163,6 +171,7 @@ class Application extends PKPApplication {
 
 	/**
 	 * Get the top-level context DAO.
+	 * @return ContextDAO
 	 */
 	static function getContextDAO() {
 		return DAORegistry::getDAO('JournalDAO');
@@ -170,6 +179,7 @@ class Application extends PKPApplication {
 
 	/**
 	 * Get the submission DAO.
+	 * @return SubmissionDAO
 	 */
 	static function getSubmissionDAO() {
 		return DAORegistry::getDAO('ArticleDAO');
@@ -185,13 +195,15 @@ class Application extends PKPApplication {
 
 	/**
 	 * Get the representation DAO.
+	 * @return RepresentationDAO
 	 */
 	static function getRepresentationDAO() {
 		return DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
 	/**
-	 * returns the name of the context column in plugin_settings
+	 * Returns the name of the context column in plugin_settings
+	 * @return string
 	 */
 	static function getPluginSettingsContextColumnName() {
 		if (defined('SESSION_DISABLE_INIT')) {
@@ -205,7 +217,7 @@ class Application extends PKPApplication {
 					}
 					break;
 				case 'postgres':
-					$checkResult = $pluginSettingsDao->retrieve('SELECT column_name FROM information_schema.columns WHERE table_name= ? AND column_name= ?', array('plugin_settings', 'context_id'));
+					$checkResult = $pluginSettingsDao->retrieve('SELECT column_name FROM information_schema.columns WHERE table_name = ? AND column_name = ?', array('plugin_settings', 'context_id'));
 					if ($checkResult->NumRows() == 0) {
 						return 'journal_id';
 					}
@@ -218,6 +230,7 @@ class Application extends PKPApplication {
 
 	/**
 	 * Get the DAO for ROLE_ID_SUB_EDITOR roles.
+	 * @return DAO
 	 */
 	static function getSubEditorDAO() {
 		return DAORegistry::getDAO('SectionEditorsDAO');
@@ -225,6 +238,7 @@ class Application extends PKPApplication {
 
 	/**
 	 * Get the stages used by the application.
+	 * @return array
 	 */
 	static function getApplicationStages() {
 		// We leave out WORKFLOW_STAGE_ID_PUBLISHED since it technically is not a 'stage'.
@@ -238,6 +252,7 @@ class Application extends PKPApplication {
 
 	/**
 	 * Returns the context type for this application.
+	 * @return int ASSOC_TYPE_...
 	 */
 	static function getContextAssocType() {
 		return ASSOC_TYPE_JOURNAL;

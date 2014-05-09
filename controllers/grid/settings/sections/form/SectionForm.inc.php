@@ -199,7 +199,7 @@ class SectionForm extends Form {
 		}
 
 		// Otherwise, insert the row.
-		$sectionEditorsDao->insertEditor($journal->getId(), $this->getSectionId(), $userId, true, true);
+		$sectionEditorsDao->insertEditor($journal->getId(), $this->getSectionId(), $userId);
 		return true;
 	}
 

@@ -55,13 +55,7 @@ class SectionEditorsListbuilderHandler extends SetupListbuilderHandler {
 		$sectionId = $this->getSectionId();
 
 		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
-		$assignedSectionEditors = $sectionEditorsDao->getEditorsBySectionId($sectionId, $press->getId());
-		$returner = array();
-		foreach ($assignedSectionEditors as $sectionEditorData) {
-			$sectionEditor = $sectionEditorData['user'];
-			$returner[$sectionEditor->getId()] = $sectionEditor;
-		}
-		return $returner;
+		return $sectionEditorsDao->getBySectionId($sectionId, $press->getId());
 	}
 
 	/**
