@@ -167,7 +167,7 @@ class DataciteExportDom extends DOIExportDom {
 		if (!empty($articleFile)) XMLCustomWriter::appendChild($rootElement, $this->_formatsElement($articleFile));
 
 		// Rights
-		$rightsURL = $article->getLicenseURL();
+		$rightsURL = $article?$article->getLicenseURL():$journal->getSetting('licenseURL');
 		$rightsListElement =& XMLCustomWriter::createElement($this->getDoc(), 'rightsList');
 		$rightsElement = $this->createElementWithText('rights', strip_tags(Application::getCCLicenseBadge($rightsURL)), array('rightsURI' => $rightsURL));
 		XMLCustomWriter::appendChild($rightsListElement, $rightsElement);
