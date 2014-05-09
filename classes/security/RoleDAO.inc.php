@@ -65,24 +65,6 @@ class RoleDAO extends PKPRoleDAO {
 			return $roleNames;
 		}
 	}
-
-	/**
-	 * Get a role's ID based on its path.
-	 * @param $rolePath string
-	 * @return int
-	 */
-	function getRoleIdFromPath($rolePath) {
-		switch ($rolePath) {
-			case 'editor':
-				return ROLE_ID_EDITOR;
-			case 'sectionEditor':
-				return ROLE_ID_SECTION_EDITOR;
-			case 'subscriptionManager':
-				return ROLE_ID_SUBSCRIPTION_MANAGER;
-			default:
-				return parent::getRoleIdFromPath($rolePath);
-		}
-	}
 }
 
 ?>
