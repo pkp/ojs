@@ -203,7 +203,7 @@
 	<message key="user.role.subscriptionManager">Manajer Langganan</message>
 	<message key="user.role.managers">Manajer Jurnal</message>
 	<message key="user.role.editors">Editor</message>
-	<message key="user.role.sectionEditors">Editor Bagian</message>
+	<message key="user.role.subEditors">Editor Bagian</message>
 	<message key="user.role.layoutEditors">Editor Layout</message>
 	<message key="user.role.copyeditors">Copy editor</message>
 	<message key="user.role.proofreaders">Proofreader</message>

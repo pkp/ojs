@@ -227,7 +227,7 @@
 	<message key="user.role.subscriptionManager">Manager pentru abonamente</message>
 	<message key="user.role.managers">Managerii revistei</message>
 	<message key="user.role.editors">Redactori</message>
-	<message key="user.role.sectionEditors">Redactori de secţiune</message>
+	<message key="user.role.subEditors">Redactori de secţiune</message>
 	<message key="user.role.layoutEditors">Redactori de machetă</message>
 	<message key="user.role.copyeditors">(Tehno)redactori</message>
 	<message key="user.role.proofreaders">Corectori</message>

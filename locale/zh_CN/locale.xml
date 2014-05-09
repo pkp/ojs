@@ -222,7 +222,7 @@
 	<message key="user.role.subscriptionManager">订阅管理员</message>
 	<message key="user.role.managers">期刊管理员</message>
 	<message key="user.role.editors">编辑</message>
-	<message key="user.role.sectionEditors">栏目编辑</message>
+	<message key="user.role.subEditors">栏目编辑</message>
 	<message key="user.role.layoutEditors">排版编辑</message>
 	<message key="user.role.copyeditors">文字编辑</message>
 	<message key="user.role.proofreaders">校对</message>

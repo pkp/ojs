@@ -180,7 +180,7 @@
 	<message key="user.role.subscriptionManager">Phụ trách phát hành</message>
 	<message key="user.role.managers">Tổng biên tập</message>
 	<message key="user.role.editors">BTV chính</message>
-	<message key="user.role.sectionEditors">BTV chuyên mục</message>
+	<message key="user.role.subEditors">BTV chuyên mục</message>
 	<message key="user.role.layoutEditors">BTV trình bày</message>
 	<message key="user.role.copyeditors">BTV bản thảo</message>
 	<message key="user.role.proofreaders">BTV soát lỗi</message>

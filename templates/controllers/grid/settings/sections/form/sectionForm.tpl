@@ -66,7 +66,7 @@
 	{fbvFormSection for="context" inline=true size=$fbvStyles.size.MEDIUM}
 		{if $sectionEditorCount > 0}{* only include the section editor listbuilder if there are section editors available *}
 			<div id="sectionEditorsContainer">
-				{url|assign:sectionEditorsUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.SectionEditorsListbuilderHandler" op="fetch" sectionId=$sectionId escape=false}
+				{url|assign:sectionEditorsUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.SubEditorsListbuilderHandler" op="fetch" sectionId=$sectionId escape=false}
 				{load_url_in_div id="sectionEditorsContainer" url=$sectionEditorsUrl}
 			</div>
 		{/if}

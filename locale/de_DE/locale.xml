@@ -220,7 +220,7 @@
 	<message key="user.role.subscriptionManager">Abonnementverwalter/in</message>
 	<message key="user.role.managers">Zeitschriftenverwalter/innen</message>
 	<message key="user.role.editors">Redakteur/innen</message>
-	<message key="user.role.sectionEditors">Rubrikredakteur/innen</message>
+	<message key="user.role.subEditors">Rubrikredakteur/innen</message>
 	<message key="user.role.layoutEditors">Layouter/innen</message>
 	<message key="user.role.copyeditors">Lektor/innen</message>
 	<message key="user.role.proofreaders">Korrekturlektor/innen</message>

@@ -159,7 +159,7 @@
   <message key="user.role.subscriptionManager">購読管理者</message>
   <message key="user.role.managers">雑誌管理者</message>
   <message key="user.role.editors">編集者</message>
-  <message key="user.role.sectionEditors">セクションエディタ</message>
+  <message key="user.role.subEditors">セクションエディタ</message>
   <message key="user.role.layoutEditors">レイアウトエディタ</message>
   <message key="user.role.copyeditors">コピーエディタ</message>
   <message key="user.role.proofreaders">校正者</message>

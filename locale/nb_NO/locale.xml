@@ -176,7 +176,7 @@
 	<message key="user.role.subscriptionManager">Abonnementskontakt</message>
 	<message key="user.role.managers">Redaksjonsledere</message>
 	<message key="user.role.editors">Redaktører</message>
-	<message key="user.role.sectionEditors">Seksjonsredaktører</message>
+	<message key="user.role.subEditors">Seksjonsredaktører</message>
 	<message key="user.role.layoutEditors">Layoutredaktører</message>
 	<message key="user.role.copyeditors">Manusredaktører</message>
 	<message key="user.role.proofreaders">Korrekturlesere</message>

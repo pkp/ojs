@@ -222,7 +222,7 @@
 	<message key="user.role.subscriptionManager">Administrador/a de subscripcions</message>
 	<message key="user.role.managers">Administradors/es de revistes</message>
 	<message key="user.role.editors">Editors/es</message>
-	<message key="user.role.sectionEditors">Editors/es de secció</message>
+	<message key="user.role.subEditors">Editors/es de secció</message>
 	<message key="user.role.layoutEditors">Maquetistes</message>
 	<message key="user.role.copyeditors">Correctors/es d’originals</message>
 	<message key="user.role.proofreaders">Correctors/es de proves</message>

@@ -211,7 +211,7 @@
 	<message key="user.role.sectionEditor">Section Editor</message>
 	<message key="user.role.subscriptionManager">Subscription Manager</message>
 	<message key="user.role.managers">Journal Managers</message>
-	<message key="user.role.sectionEditors">Section Editors</message>
+	<message key="user.role.subEditors">Section Editors</message>
 	<message key="user.role.subscriptionManagers">Subscription Managers</message>
 	<message key="user.role.journalAssistant">Journal Assistant</message>
 	<message key="user.role.journalAssistants">Journal Assistants</message>

@@ -221,7 +221,7 @@
 	<message key="user.role.subscriptionManager">Abone Yöneticisi</message>
 	<message key="user.role.managers">Dergi Yöneticileri</message>
 	<message key="user.role.editors">Editörler</message>
-	<message key="user.role.sectionEditors">Bölüm Editörleri</message>
+	<message key="user.role.subEditors">Bölüm Editörleri</message>
 	<message key="user.role.layoutEditors">Mizanpajcılar</message>
 	<message key="user.role.copyeditors">Sayfa Düzenleyiciler</message>
 	<message key="user.role.proofreaders">Düzeltmenler</message>

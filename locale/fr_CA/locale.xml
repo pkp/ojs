@@ -177,7 +177,7 @@
 	<message key="user.role.subscriptionManager">Responsable des abonnements</message>
 	<message key="user.role.managers">Directeurs de revue</message>
 	<message key="user.role.editors">Rédacteurs</message>
-	<message key="user.role.sectionEditors">Chefs de rubrique</message>
+	<message key="user.role.subEditors">Chefs de rubrique</message>
 	<message key="user.role.layoutEditors">Responsables de la mise en page</message>
 	<message key="user.role.copyeditors">Réviseurs</message>
 	<message key="user.role.proofreaders">Correcteurs d'épreuves</message>

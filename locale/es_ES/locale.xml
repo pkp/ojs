@@ -179,7 +179,7 @@
 	<message key="user.role.subscriptionManager">Gestor/a de suscripción</message>
 	<message key="user.role.managers">Gestores/as de revistas</message>
 	<message key="user.role.editors">Editores/as</message>
-	<message key="user.role.sectionEditors">Editores/as de sección</message>
+	<message key="user.role.subEditors">Editores/as de sección</message>
 	<message key="user.role.layoutEditors">Editores/as de composición</message>
 	<message key="user.role.copyeditors">Correctores/as</message>
 	<message key="user.role.proofreaders">Correctores</message>

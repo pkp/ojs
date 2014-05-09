@@ -183,7 +183,7 @@
 	<message key="user.role.subscriptionManager">Abonnementenbeheerder</message>
 	<message key="user.role.managers">Tijdschriftbeheerders</message>
 	<message key="user.role.editors">Redacteurs</message>
-	<message key="user.role.sectionEditors">Sectieredacteurs</message>
+	<message key="user.role.subEditors">Sectieredacteurs</message>
 	<message key="user.role.layoutEditors">Eindredacteurs</message>
 	<message key="user.role.copyeditors">Tekstredacteurs</message>
 	<message key="user.role.proofreaders">Proeflezers</message>
