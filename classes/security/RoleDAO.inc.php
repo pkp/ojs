@@ -14,7 +14,7 @@
  * @brief Operations for retrieving and modifying Role objects.
  */
 
-import('classes.security.Role');
+import('lib.pkp.classes.security.Role');
 import('lib.pkp.classes.security.PKPRoleDAO');
 
 /** ID codes for all user roles */
