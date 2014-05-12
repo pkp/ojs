@@ -201,7 +201,7 @@
 	<message key="user.role.managers">Издатель</message>
 	<message key="user.role.editors">Редакторы</message>
 
-	<message key="user.role.sectionEditors">Редакторы разделов</message>
+	<message key="user.role.subEditors">Редакторы разделов</message>
 	<message key="user.role.layoutEditors">Худ. редакторы</message>
 	<message key="user.role.copyeditors">Лит. редакторы</message>
 	<message key="user.role.proofreaders">Корректоры</message>

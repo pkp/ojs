@@ -176,7 +176,7 @@
 	<message key="user.role.subscriptionManager">Responsabile abbonamenti</message>
 	<message key="user.role.managers">Amministratori</message>
 	<message key="user.role.editors">Editor</message>
-	<message key="user.role.sectionEditors">Section editor</message>
+	<message key="user.role.subEditors">Section editor</message>
 	<message key="user.role.layoutEditors">Layout editor</message>
 	<message key="user.role.copyeditors">Copyeditor</message>
 	<message key="user.role.proofreaders">Correttori di bozze</message>

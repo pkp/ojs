@@ -222,7 +222,7 @@
        <message key="user.role.subscriptionManager">Менеджер передплати</message>
        <message key="user.role.managers">Менеджери журналів</message>
        <message key="user.role.editors">Редактори</message>
-       <message key="user.role.sectionEditors">Редактори розділів</message>
+       <message key="user.role.subEditors">Редактори розділів</message>
        <message key="user.role.layoutEditors">Редактори верстки</message>
        <message key="user.role.copyeditors">Літературні редактори</message>
        <message key="user.role.proofreaders">Коректори</message>

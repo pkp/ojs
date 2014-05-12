@@ -162,7 +162,7 @@
 	<message key="user.role.subscriptionManager">Menadžer pretplata</message>
 	<message key="user.role.managers">Glavni urednici</message>
 	<message key="user.role.editors">Urednici</message>
-	<message key="user.role.sectionEditors">Urednici rubrika</message>
+	<message key="user.role.subEditors">Urednici rubrika</message>
 	<message key="user.role.layoutEditors">Grafički urednici</message>
 	<message key="user.role.copyeditors">Lektori</message>
 	<message key="user.role.proofreaders">Korektori</message>

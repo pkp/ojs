@@ -188,7 +188,7 @@
         <message key="user.role.subscriptionManager">Διαχειριστής Συνδρομών</message>
         <message key="user.role.managers">Διαχειριστές Περιοδικών </message>
         <message key="user.role.editors">Επιμελητές</message>
-        <message key="user.role.sectionEditors">Επιμελητές Ενότητας</message>
+        <message key="user.role.subEditors">Επιμελητές Ενότητας</message>
         <message key="user.role.layoutEditors">Επιμελητές Σελιδοποίησης</message>
         <message key="user.role.copyeditors">Επιμελητές Κειμένων</message>
         <message key="user.role.proofreaders">Επιμελητές Τυπογραφικών Δοκιμίων</message>

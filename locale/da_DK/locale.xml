@@ -183,7 +183,7 @@
 	<message key="user.role.subscriptionManager">Abonnementschef</message>
 	<message key="user.role.managers">Tidsskriftschefer</message>
 	<message key="user.role.editors">Redaktører</message>
-	<message key="user.role.sectionEditors">Sektionsredaktører</message>
+	<message key="user.role.subEditors">Sektionsredaktører</message>
 	<message key="user.role.layoutEditors">Layoutredaktører</message>
 	<message key="user.role.copyeditors">Manuskriptredaktører</message>
 	<message key="user.role.proofreaders">Korrekturlæsere</message>

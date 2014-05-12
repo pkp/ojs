@@ -188,7 +188,7 @@
 	<message key="user.role.subscriptionManager">訂閱管理員</message>
 	<message key="user.role.managers">期刊管理員</message>
 	<message key="user.role.editors">編輯</message>
-	<message key="user.role.sectionEditors">文稿類型編輯</message>
+	<message key="user.role.subEditors">文稿類型編輯</message>
 	<message key="user.role.layoutEditors">版面編輯</message>
 	<message key="user.role.copyeditors">校樣編輯</message>
 	<message key="user.role.proofreaders">校對者</message>

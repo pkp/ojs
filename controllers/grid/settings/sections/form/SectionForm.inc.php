@@ -10,44 +10,30 @@
  * @class SectionForm
  * @ingroup controllers_grid_settings_section_form
  *
- * @brief Form for adding/edditing a section
- * stores/retrieves from an associative array
+ * @brief Form for adding/editing a section
  */
 
-import('lib.pkp.classes.form.Form');
+import('lib.pkp.controllers.grid.settings.sections.form.PKPSectionForm');
 
-class SectionForm extends Form {
-	/** the id for the section being edited **/
-	var $_sectionId;
-
-	/** @var int The current user ID */
-	var $_userId;
-
-	/** @var string Cover image extension */
-	var $_imageExtension;
-
-	/** @var array Cover image information from getimagesize */
-	var $_sizeArray;
+class SectionForm extends PKPSectionForm {
 
 	/**
 	 * Constructor.
+	 * @param $request Request
+	 * @param $sectionId int optional
 	 */
 	function SectionForm($request, $sectionId = null) {
-		$this->setSectionId($sectionId);
-
-		$journal = $request->getJournal();
-		$user = $request->getUser();
-		$this->_userId = $user->getId();
-
-		parent::Form('controllers/grid/settings/sections/form/sectionForm.tpl');
+		parent::PKPSectionForm(
+			$request,
+			'controllers/grid/settings/sections/form/sectionForm.tpl',
+			$sectionId
+		);
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.section.nameRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
-		$this->addCheck(new FormValidatorPost($this));
+		$journal = $request->getJournal();
 		$this->addCheck(new FormValidatorCustom($this, 'reviewFormId', 'optional', 'manager.sections.form.reviewFormId', array(DAORegistry::getDAO('ReviewFormDAO'), 'reviewFormExists'), array(ASSOC_TYPE_JOURNAL, $journal->getId())));
-
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_MANAGER);
 	}
 
 	/**
@@ -85,12 +71,13 @@ class SectionForm extends Form {
 	}
 
 	/**
-	 * @copydoc Form::fetch()
+	 * Fetch form contents
+	 * @param $request Request
+	 * @see Form::fetch()
 	 */
 	function fetch($request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionId', $this->getSectionId());
-
 
 		$journal = $request->getJournal();
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
@@ -113,7 +100,8 @@ class SectionForm extends Form {
 	 * @copydoc Form::readInputData()
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'disableComments', 'wordCount', 'sectionEditors'));
+		parent::readInputData();
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'disableComments', 'wordCount'));
 	}
 
 	/**
@@ -174,76 +162,13 @@ class SectionForm extends Form {
 		// Save the section editor associations.
 		ListbuilderHandler::unpack(
 			$request,
-			$this->getData('sectionEditors'),
-			array(&$this, 'deleteSectionEditorEntry'),
-			array(&$this, 'insertSectionEditorEntry'),
-			array(&$this, 'updateSectionEditorEntry')
+			$this->getData('subEditors'),
+			array(&$this, 'deleteSubEditorEntry'),
+			array(&$this, 'insertSubEditorEntry'),
+			array(&$this, 'updateSubEditorEntry')
 		);
 
 		return true;
-	}
-
-	/**
-	 * Persist a section editor association
-	 * @see ListbuilderHandler::insertEntry
-	 */
-	function insertSectionEditorEntry($request, $newRowId) {
-		$journal = $request->getJournal();
-		$userId = array_shift($newRowId);
-
-		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
-
-		// Make sure the membership doesn't already exist
-		if ($sectionEditorsDao->editorExists($journal->getId(), $this->getSectionId(), $userId)) {
-			return false;
-		}
-
-		// Otherwise, insert the row.
-		$sectionEditorsDao->insertEditor($journal->getId(), $this->getSectionId(), $userId, true, true);
-		return true;
-	}
-
-	/**
-	 * Delete a section editor association with this section.
-	 * @see ListbuilderHandler::deleteEntry
-	 * @param $request PKPRequest
-	 * @param $rowId int
-	 */
-	function deleteSectionEditorEntry($request, $rowId) {
-		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
-		$journal = $request->getJournal();
-
-		$sectionEditorsDao->deleteEditor($journal->getId(), $this->getSectionId(), $rowId);
-		return true;
-	}
-
-	/**
-	 * Update a section editor association with this section.
-	 * @see ListbuilderHandler::deleteEntry
-	 * @param $request PKPRequest
-	 * @param $rowId int the old section editor
-	 * @param $newRowId array the new section editor
-	 */
-	function updateSectionEditorEntry($request, $rowId, $newRowId) {
-		$this->deleteSectionEditorEntry($request, $rowId);
-		$this->insertSectionEditorEntry($request, $newRowId);
-		return true;
-	}
-
-	/**
-	 * Get the section ID for this section.
-	 * @return int
-	 */
-	function getSectionId() {
-		return $this->_sectionId;
-	}
-
-	/**
-	 * Set the section ID for this section.
-	 * @param $sectionId int
-	 */
-	function setSectionId($sectionId) {
-		$this->_sectionId = $sectionId;
 	}
 }
 

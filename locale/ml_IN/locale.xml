@@ -208,7 +208,7 @@
 	<message key="user.role.subscriptionManager">സബ്സ്ക്രിപ്ഷന്‍ മാനേജര്‍</message>
 	<message key="user.role.managers">ജേണല്‍ മാനേജര്‍സ്</message>
 	<message key="user.role.editors">ഗ്രന്ധപരിശോധകര്‍</message>
-	<message key="user.role.sectionEditors">വകുപ്പ് എഡിറ്റേര്‍സ്</message>
+	<message key="user.role.subEditors">വകുപ്പ് എഡിറ്റേര്‍സ്</message>
 	<message key="user.role.layoutEditors">ലേഔട്ട്  എഡിറ്റേര്‍സ്</message>
 	<message key="user.role.copyeditors">കോപ്പി എഡിറ്റേര്‍സ്</message>
 	<message key="user.role.proofreaders">അച്ചടിപ്പിഴ തിരുത്തുന്നവര്‍</message>

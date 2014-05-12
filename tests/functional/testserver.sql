@@ -2603,8 +2603,6 @@ CREATE TABLE `section_editors` (
   `journal_id` bigint(20) NOT NULL,
   `section_id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
-  `can_edit` tinyint(4) NOT NULL DEFAULT '1',
-  `can_review` tinyint(4) NOT NULL DEFAULT '1',
   UNIQUE KEY `section_editors_pkey` (`journal_id`,`section_id`,`user_id`),
   KEY `section_editors_journal_id` (`journal_id`),
   KEY `section_editors_section_id` (`section_id`),

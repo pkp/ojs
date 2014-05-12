@@ -164,7 +164,7 @@
 	<message key="user.role.subscriptionManager">Gestor de Subscrições</message>
 	<message key="user.role.managers">Editores-Gestores</message>
 	<message key="user.role.editors">Editores</message>
-	<message key="user.role.sectionEditors">Editores de Secção</message>
+	<message key="user.role.subEditors">Editores de Secção</message>
 	<message key="user.role.layoutEditors">Editores de Layout</message>
 	<message key="user.role.copyeditors">Editores de Texto</message>
 	<message key="user.role.proofreaders">Leitores de Prova</message>

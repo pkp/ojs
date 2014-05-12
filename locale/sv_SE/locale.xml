@@ -215,7 +215,7 @@
 	<message key="user.role.subscriptionManager">Abonnemangsansvarig</message>
 	<message key="user.role.managers">Tidskriftsansvariga</message>
 	<message key="user.role.editors">Redaktörer</message>
-	<message key="user.role.sectionEditors">Sektionsredaktörer</message>
+	<message key="user.role.subEditors">Sektionsredaktörer</message>
 	<message key="user.role.layoutEditors">Layoutredaktörer</message>
 	<message key="user.role.copyeditors">Manusredaktörer</message>
 	<message key="user.role.proofreaders">Korrekturläsare</message>

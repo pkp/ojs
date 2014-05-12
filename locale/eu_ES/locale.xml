@@ -218,7 +218,7 @@
 	<message key="user.role.subscriptionManager">Harpidetza-kudeatzailea</message>
 	<message key="user.role.managers">Aldizkariaren kudeatzaileak</message>
 	<message key="user.role.editors">Editoreak</message>
-	<message key="user.role.sectionEditors">Ataleko editoreak</message>
+	<message key="user.role.subEditors">Ataleko editoreak</message>
 	<message key="user.role.layoutEditors">Maketatzaileak</message>
 	<message key="user.role.copyeditors">Zuzentzaileak</message>
 	<message key="user.role.proofreaders">Proba-zuzentzaileak</message>

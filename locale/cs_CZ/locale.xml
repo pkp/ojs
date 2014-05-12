@@ -183,7 +183,7 @@
 	<message key="user.role.subscriptionManager">Manažer předplatného</message>
 	<message key="user.role.managers">Manažeři časopisu</message>
 	<message key="user.role.editors">Editoři</message>
-	<message key="user.role.sectionEditors">Editoři sekcí</message>
+	<message key="user.role.subEditors">Editoři sekcí</message>
 	<message key="user.role.layoutEditors">Typografové</message>
 	<message key="user.role.copyeditors">Redaktoři</message>
 	<message key="user.role.proofreaders">Korektoři</message>
