@@ -126,6 +126,7 @@ class UsageStatsLoader extends FileLoader {
 		$geoTool = $this->_geoLocationTool;
 		if (!$fhandle) {
 			$errorMsg = __('plugins.generic.usageStats.openFileFailed', array('file' => $filePath));
+			return false;
 		}
 
 		$loadId = basename($filePath);
@@ -147,6 +148,7 @@ class UsageStatsLoader extends FileLoader {
 			if (!$this->_isLogEntryValid($entryData, $lineNumber)) {
 				$errorMsg = __('plugins.generic.usageStats.invalidLogEntry',
 					array('file' => $filePath, 'lineNumber' => $lineNumber));
+				return false;
 			}
 
 			// Avoid internal apache requests.
@@ -163,7 +165,8 @@ class UsageStatsLoader extends FileLoader {
 			// Avoid bots.
 			if (Core::isUserAgentBot($entryData['userAgent'], $this->_counterRobotsListFile)) continue;
 
-			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url']);
+			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $errorMsg, $filePath, $lineNumber);
+			if (!is_null($errorMsg)) return false;
 			if(!$assocId || !$assocType) continue;
 
 			list($countryCode, $cityName, $region) = $geoTool->getGeoLocation($entryData['ip']);
@@ -205,10 +208,13 @@ class UsageStatsLoader extends FileLoader {
 		}
 
 		fclose($fhandle);
-		$loadResult = $this->_loadData($loadId);
+		$loadResult = $this->_loadData($loadId, $errorMsg);
 		$statsDao->deleteByLoadId($loadId);
 
 		if (!$loadResult) {
+			// Improve the error message.
+			$errorMsg = __('plugins.generic.usageStats.loadDataError',
+				array('file' => $filePath, 'error' => $errorMsg));
 			return FILE_LOADER_RETURN_TO_STAGING;
 		} else {
 			return true;
@@ -299,18 +305,33 @@ class UsageStatsLoader extends FileLoader {
 	 * Get the assoc type and id of the object that
 	 * is accessed through the passed url.
 	 * @param $url string
+	 * @param $errorMsg string
+	 * @param $filePath string
+	 * @param $lineNumber int
 	 * @return array
 	 */
-	function _getAssocFromUrl($url) {
+	function _getAssocFromUrl($url, &$errorMsg, $filePath, $lineNumber) {
 		// Check the passed url.
 		$assocId = $assocType = $journalId = false;
 		$expectedPageAndOp = $this->_getExpectedPageAndOp();
 
 		$pathInfoDisabled = Config::getVar('general', 'disable_path_info');
-		$contextPaths = Core::getContextPaths($url, !$pathInfoDisabled);
-		$page = Core::getPage($url, !$pathInfoDisabled);
-		$operation = Core::getOp($url, !$pathInfoDisabled);
-		$args = Core::getArgs($url, !$pathInfoDisabled);
+
+		// Apache and ojs log files comes with complete or partial
+		// base url, remove it so system can retrieve path, page,
+		// operation and args.
+		$url = Core::removeBaseUrl($url);
+		if ($url) {
+			$contextPaths = Core::getContextPaths($url, !$pathInfoDisabled);
+			$page = Core::getPage($url, !$pathInfoDisabled);
+			$operation = Core::getOp($url, !$pathInfoDisabled);
+			$args = Core::getArgs($url, !$pathInfoDisabled);
+		} else {
+			// Could not remove the base url, can't go on.
+			$errorMsg = __('plugins.generic.usageStats.removeUrlError',
+				array('file' => $filePath, 'lineNumber' => $lineNumber));
+			return array(false, false);
+		}
 
 		// See bug #8698#.
 		if (is_array($contextPaths) && !$page && $operation == 'index') {
@@ -571,10 +592,11 @@ class UsageStatsLoader extends FileLoader {
 	 * the passed load id to the metrics table.
 	 * @param $loadId string The current load id.
 	 * file path.
+	 * @param $errorMsg string
 	 * @return boolean Whether or not the process
 	 * was successful.
 	 */
-	function _loadData($loadId) {
+	function _loadData($loadId, &$errorMsg) {
 		$statsDao =& DAORegistry::getDAO('UsageStatsTemporaryRecordDAO'); /* @var $statsDao UsageStatsTemporaryRecordDAO */
 		$metricsDao =& DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
 		$metricsDao->purgeLoadBatch($loadId);
@@ -582,7 +604,9 @@ class UsageStatsLoader extends FileLoader {
 		while ($record =& $statsDao->getNextByLoadId($loadId)) {
 			$record['metric_type'] = OJS_METRIC_TYPE_COUNTER;
 			$errorMsg = null;
-			$metricsDao->insertRecord($record, $errorMsg);
+			if (!$metricsDao->insertRecord($record, $errorMsg)) {
+				return false;
+			}
 		}
 
 		return true;
