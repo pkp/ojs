@@ -21,6 +21,8 @@
 	
 	<message key="plugins.generic.usageStats.openFileFailed">The file {$file} could not be open and was rejected.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">The line number {$lineNumber} from the file {$file} is not a valid log entry and the file was rejected.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">The line number {$lineNumber} from the file {$file} has an url which the system can't remove it's base url. That usually happens when there are context base url settings inside the config.inc.php file that, combined with their context path equals to one of the other context base urls. See Core::_checkBaseUrl() for better understanding of this issue. The file was rejected.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Couldn't load data extracted from file {$file}. The error was: {$error}. The file was moved to stage again.</message>
 	<message key="plugins.generic.usageStats.displayName">Usage Statistics</message>
 	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
 	
