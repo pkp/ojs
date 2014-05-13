@@ -2,6 +2,10 @@ config.inc.php
 build
 temp
 files
+public.copy1
+files.copy1
+slider
+archivosre
 .htaccess
 .project
 .buildpath
