@@ -316,10 +316,22 @@ class UsageStatsLoader extends FileLoader {
 		$expectedPageAndOp = $this->_getExpectedPageAndOp();
 
 		$pathInfoDisabled = Config::getVar('general', 'disable_path_info');
-		$contextPaths = Core::getContextPaths($url, !$pathInfoDisabled);
-		$page = Core::getPage($url, !$pathInfoDisabled);
-		$operation = Core::getOp($url, !$pathInfoDisabled);
-		$args = Core::getArgs($url, !$pathInfoDisabled);
+
+		// Apache and ojs log files comes with complete or partial
+		// base url, remove it so system can retrieve path, page,
+		// operation and args.
+		$url = Core::removeBaseUrl($url);
+		if ($url) {
+			$contextPaths = Core::getContextPaths($url, !$pathInfoDisabled);
+			$page = Core::getPage($url, !$pathInfoDisabled);
+			$operation = Core::getOp($url, !$pathInfoDisabled);
+			$args = Core::getArgs($url, !$pathInfoDisabled);
+		} else {
+			// Could not remove the base url, can't go on.
+			$errorMsg = __('plugins.generic.usageStats.removeUrlError',
+				array('file' => $filePath, 'lineNumber' => $lineNumber));
+			return array(false, false);
+		}
 
 		// See bug #8698#.
 		if (is_array($contextPaths) && !$page && $operation == 'index') {
