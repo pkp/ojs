@@ -39,12 +39,12 @@ class TemplateManager extends PKPTemplateManager {
 			$site = $request->getSite();
 
 			$publicFileManager = new PublicFileManager();
-			$siteFilesDir = $this->request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
+			$siteFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
 			$this->assign('sitePublicFilesDir', $siteFilesDir);
 			$this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
 
 			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
-			if (file_exists($siteStyleFilename)) $this->addStyleSheet($this->request->getBaseUrl() . '/' . $siteStyleFilename, STYLE_SEQUENCE_LAST);
+			if (file_exists($siteStyleFilename)) $this->addStyleSheet($request->getBaseUrl() . '/' . $siteStyleFilename, STYLE_SEQUENCE_LAST);
 
 			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
 
@@ -52,7 +52,7 @@ class TemplateManager extends PKPTemplateManager {
 
 				$this->assign('currentJournal', $context);
 				$this->assign('siteTitle', $context->getLocalizedName());
-				$this->assign('publicFilesDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
+				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
 
 				$this->assign('primaryLocale', $context->getPrimaryLocale());
 				$this->assign('alternateLocales', $context->getSetting('alternateLocales'));
@@ -63,7 +63,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderTitleAltText', $context->getLocalizedSetting('pageHeaderTitleImageAltText'));
 				$this->assign('displayPageHeaderLogoAltText', $context->getLocalizedSetting('pageHeaderLogoImageAltText'));
 				$this->assign('displayFavicon', $context->getLocalizedFavicon());
-				$this->assign('faviconDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
+				$this->assign('faviconDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
 				$this->assign('alternatePageHeader', $context->getLocalizedSetting('journalPageHeader'));
 				$this->assign('metaSearchDescription', $context->getLocalizedSetting('searchDescription'));
 				$this->assign('metaSearchKeywords', $context->getLocalizedSetting('searchKeywords'));
@@ -81,11 +81,11 @@ class TemplateManager extends PKPTemplateManager {
 				// Assign stylesheets and footer
 				$contextStyleSheet = $context->getSetting('journalStyleSheet');
 				if ($contextStyleSheet) {
-					$this->addStyleSheet($this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'], STYLE_SEQUENCE_LAST);
+					$this->addStyleSheet($request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'], STYLE_SEQUENCE_LAST);
 				}
 
 				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = new OJSPaymentManager($this->request);
+				$paymentManager = new OJSPaymentManager($request);
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 
 				// Include footer links if they have been defined.
