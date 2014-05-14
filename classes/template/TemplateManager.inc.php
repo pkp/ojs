@@ -15,7 +15,6 @@
  *
  */
 
-
 import('classes.search.ArticleSearch');
 import('classes.file.PublicFileManager');
 import('lib.pkp.classes.template.PKPTemplateManager');
@@ -26,15 +25,8 @@ class TemplateManager extends PKPTemplateManager {
 	 * Initialize template engine and assign basic template variables.
 	 * @param $request PKPRequest
 	 */
-	function TemplateManager($request = null) {
+	function TemplateManager($request) {
 		parent::PKPTemplateManager($request);
-
-		// Retrieve the router
-		$router = $this->request->getRouter();
-		assert(is_a($router, 'PKPRouter'));
-
-		// Are we using implicit authentication?
-		$this->assign('implicitAuth', Config::getVar('security', 'implicit_auth'));
 
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**
@@ -43,16 +35,16 @@ class TemplateManager extends PKPTemplateManager {
 			 * installer pages).
 			 */
 
-			$context = $router->getContext($this->request);
-			$site = $this->request->getSite();
+			$context = $request->getContext();
+			$site = $request->getSite();
 
 			$publicFileManager = new PublicFileManager();
-			$siteFilesDir = $this->request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
+			$siteFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
 			$this->assign('sitePublicFilesDir', $siteFilesDir);
 			$this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
 
 			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
-			if (file_exists($siteStyleFilename)) $this->addStyleSheet($this->request->getBaseUrl() . '/' . $siteStyleFilename, STYLE_SEQUENCE_LAST);
+			if (file_exists($siteStyleFilename)) $this->addStyleSheet($request->getBaseUrl() . '/' . $siteStyleFilename, STYLE_SEQUENCE_LAST);
 
 			$this->assign('siteCategoriesEnabled', $site->getSetting('categoriesEnabled'));
 
@@ -60,7 +52,7 @@ class TemplateManager extends PKPTemplateManager {
 
 				$this->assign('currentJournal', $context);
 				$this->assign('siteTitle', $context->getLocalizedName());
-				$this->assign('publicFilesDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
+				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
 
 				$this->assign('primaryLocale', $context->getPrimaryLocale());
 				$this->assign('alternateLocales', $context->getSetting('alternateLocales'));
@@ -71,7 +63,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('displayPageHeaderTitleAltText', $context->getLocalizedSetting('pageHeaderTitleImageAltText'));
 				$this->assign('displayPageHeaderLogoAltText', $context->getLocalizedSetting('pageHeaderLogoImageAltText'));
 				$this->assign('displayFavicon', $context->getLocalizedFavicon());
-				$this->assign('faviconDir', $this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
+				$this->assign('faviconDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
 				$this->assign('alternatePageHeader', $context->getLocalizedSetting('journalPageHeader'));
 				$this->assign('metaSearchDescription', $context->getLocalizedSetting('searchDescription'));
 				$this->assign('metaSearchKeywords', $context->getLocalizedSetting('searchKeywords'));
@@ -89,11 +81,11 @@ class TemplateManager extends PKPTemplateManager {
 				// Assign stylesheets and footer
 				$contextStyleSheet = $context->getSetting('journalStyleSheet');
 				if ($contextStyleSheet) {
-					$this->addStyleSheet($this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'], STYLE_SEQUENCE_LAST);
+					$this->addStyleSheet($request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'], STYLE_SEQUENCE_LAST);
 				}
 
 				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = new OJSPaymentManager($this->request);
+				$paymentManager = new OJSPaymentManager($request);
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 
 				// Include footer links if they have been defined.
@@ -112,93 +104,7 @@ class TemplateManager extends PKPTemplateManager {
 
 				$this->assign('siteTitle', $site->getLocalizedTitle());
 			}
-
-			if (!$site->getRedirect()) {
-				$this->assign('hasOtherJournals', true);
-			}
 		}
-	}
-
-	/**
-	 * Initialize the template manager.
-	 */
-	function initialize() {
-		// Add uncompilable styles
-		$this->addStyleSheet($this->request->getBaseUrl() . '/styles/lib.css', STYLE_SEQUENCE_CORE);
-
-		parent::initialize();
-	}
-
-	/**
-	 * Display page links for a listing of items that has been
-	 * divided onto multiple pages.
-	 * Usage:
-	 * {page_links
-	 * 	name="nameMustMatchGetRangeInfoCall"
-	 * 	iterator=$myIterator
-	 *	additional_param=myAdditionalParameterValue
-	 * }
-	 */
-	function smartyPageLinks($params, $smarty) {
-		$iterator = $params['iterator'];
-		$name = $params['name'];
-		if (isset($params['params']) && is_array($params['params'])) {
-			$extraParams = $params['params'];
-			unset($params['params']);
-			$params = array_merge($params, $extraParams);
-		}
-		if (isset($params['anchor'])) {
-			$anchor = $params['anchor'];
-			unset($params['anchor']);
-		} else {
-			$anchor = null;
-		}
-		if (isset($params['all_extra'])) {
-			$allExtra = ' ' . $params['all_extra'];
-			unset($params['all_extra']);
-		} else {
-			$allExtra = '';
-		}
-
-		unset($params['iterator']);
-		unset($params['name']);
-
-		$numPageLinks = $smarty->get_template_vars('numPageLinks');
-		if (!is_numeric($numPageLinks)) $numPageLinks=10;
-
-		$page = $iterator->getPage();
-		$pageCount = $iterator->getPageCount();
-
-		$pageBase = max($page - floor($numPageLinks / 2), 1);
-		$paramName = $name . 'Page';
-
-		if ($pageCount<=1) return '';
-
-		$value = '';
-
-		if ($page>1) {
-			$params[$paramName] = 1;
-			$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&lt;&lt;</a>&nbsp;';
-			$params[$paramName] = $page - 1;
-			$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&lt;</a>&nbsp;';
-		}
-
-		for ($i=$pageBase; $i<min($pageBase+$numPageLinks, $pageCount+1); $i++) {
-			if ($i == $page) {
-				$value .= "<strong>$i</strong>&nbsp;";
-			} else {
-				$params[$paramName] = $i;
-				$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>' . $i . '</a>&nbsp;';
-			}
-		}
-		if ($page < $pageCount) {
-			$params[$paramName] = $page + 1;
-			$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&gt;</a>&nbsp;';
-			$params[$paramName] = $pageCount;
-			$value .= '<a href="' . $this->request->url(null, null, null, $this->request->getRequestedArgs(), $params, $anchor, true) . '"' . $allExtra . '>&gt;&gt;</a>&nbsp;';
-		}
-
-		return $value;
 	}
 }
 
