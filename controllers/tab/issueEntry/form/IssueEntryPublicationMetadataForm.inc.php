@@ -133,7 +133,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * Get the Submission
 	 * @return Submission
 	 */
-	function &getSubmission() {
+	function getSubmission() {
 		return $this->_submission;
 	}
 
@@ -141,7 +141,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * Get the PublishedArticle
 	 * @return PublishedArticle
 	 */
-	function &getPublishedArticle() {
+	function getPublishedArticle() {
 		return $this->_publishedArticle;
 	}
 
@@ -206,7 +206,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$issue = $issueDao->getById($issueId, $context->getId());
 
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
 
@@ -289,7 +288,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
 
 			$submission->stampStatusModified();
-			$articleDao->updateObject($submission);
 
 			if ($issue && $issue->getPublished()) {
 				$submission->setStatus(STATUS_PUBLISHED);
@@ -300,10 +298,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$submission->setStatus(STATUS_QUEUED);
 			}
 
-			$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($submission->getId());
-			if ($sectionEditorSubmission) {
-				$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-			}
+			$articleDao->updateObject($submission);
 			$articleSearchIndex->articleChangesFinished();
 		}
 	}

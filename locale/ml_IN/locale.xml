@@ -751,7 +751,6 @@
 	<message key="user.authorization.noJournal">കണ്‍ടെക്സില്‍ ജേണല്‍ ഒന്നുമില്ല!</message>
 	<message key="user.authorization.sectionAssignment">താങ്കളുടെ സെക്ഷന്റെ ഭാഗമായ ഒരു ലേഖനം അക്സസ് ചെയ്യാനാണ് താങ്കള്‍ ശ്രമിക്കുന്നത്.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">അസാധുവായ കോപ്പി എഡിറ്റര്‍ സബ്മിഷന്‍ അല്ലെങ്കില്‍ കോപ്പി എഡിറ്റര്‍ സബ്മിഷന്‍ അപേക്ഷിച്ചിട്ടില്ല!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">അസാധുവായ സിലക്ഷന്‍ എഡിറ്റര്‍ സബ്മിഷന്‍ അല്ലെങ്കില്‍ സിലക്ഷന്‍ എഡിറ്റര്‍ സബ്മിഷന്‍ അപേക്ഷിച്ചിട്ടില്ല!</message>
 	
 	<!-- Icons: Default "alt" text -->
 	

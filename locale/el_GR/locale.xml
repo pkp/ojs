@@ -1031,7 +1031,6 @@
 	<message key="user.authorization.noJournal">Δεν υπάρχει κανένα περιοδικό!</message>
 	<message key="user.authorization.sectionAssignment">Προσπαθείτε να προσπελάσετε ένα άρθρο που ανήκει στην ενότητά σας.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Μή έγκυρη υποβολή Επιμελητή Κειμένου ή Δεν έχει ζητηθεί υποβολή Επιμελητή Κειμένου</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Μή έγκυρη υποβολή Επιμελητή Ενότητας ή Δεν έχει ζητηθεί υποβολή Επιμελητή Ενότητας!</message>
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Τεύχη</message>

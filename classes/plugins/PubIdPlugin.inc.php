@@ -245,9 +245,9 @@ abstract class PubIdPlugin extends Plugin {
 	function checkDuplicate($pubId, &$pubObject, $journalId) {
 		// FIXME: Hack to ensure that we get a published article if possible.
 		// Remove this when we have migrated getBest...(), etc. to Article.
-		if (is_a($pubObject, 'SectionEditorSubmission')) {
-			$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-			$pubArticle =& $articleDao->getPublishedArticleByArticleId($pubObject->getId());
+		if (is_a($pubObject, 'Submission') && !is_a($pubObject, 'PublishedArticle')) {
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+			$pubArticle =& $publishedArticleDao->getPublishedArticleByArticleId($pubObject->getId());
 			if (is_a($pubArticle, 'PublishedArticle')) {
 				unset($pubObject);
 				$pubObject =& $pubArticle;

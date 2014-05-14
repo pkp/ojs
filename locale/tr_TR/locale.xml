@@ -1016,7 +1016,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="user.authorization.noJournal">İçerikte dergi yok!</message>
 	<message key="user.authorization.sectionAssignment">Erişmeye çalıştığınız makale size ait bölümün parça değil.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Hatalı sayfa düzenleyici gönderisi veya sayfa düzenleyici gönderi isteği yok.</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Hatalı bölüm editörü gönderisi veya bölüm editörü gönderi isteği yok.</message>
 	
 	<!-- Icons: Default "alt" text -->
 	

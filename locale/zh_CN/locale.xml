@@ -1220,7 +1220,6 @@ Note that if your site administrator has already registered this site with these
 	<message key="user.authorization.noJournal">在背景中没有期刊！</message>
 	<message key="user.authorization.sectionAssignment">您正在试图访问不属于您文章栏目中的文章。</message>
 	<message key="user.authorization.invalidCopyditorSubmission">无效的排版编辑提交或没有要求的排版编辑提交！</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">无效的文章栏目编辑提交或没有要求的栏目编辑提交！</message>
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">刊期</message>

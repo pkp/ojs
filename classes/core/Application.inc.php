@@ -121,7 +121,6 @@ class Application extends PKPApplication {
 			'ScheduledTaskDAO' => 'lib.pkp.classes.scheduledTask.ScheduledTaskDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
 			'SectionEditorsDAO' => 'classes.journal.SectionEditorsDAO',
-			'SectionEditorSubmissionDAO' => 'classes.submission.sectionEditor.SectionEditorSubmissionDAO',
 			'SocialMediaDAO' => 'classes.journal.SocialMediaDAO',
 			'StageAssignmentDAO' => 'lib.pkp.classes.stageAssignment.StageAssignmentDAO',
 			'SubmissionEventLogDAO' => 'classes.log.SubmissionEventLogDAO',

@@ -1038,7 +1038,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="user.authorization.noJournal">Ez dago aldizkaririk testuinguruan!</message>
 	<message key="user.authorization.sectionAssignment">Zure atalekoa ez den artikulu batean sartu nahi duzu.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Zuzentzailearen aurkezpena ez da baliozkoa edo ez da kontsultatu zuzentzailearen aurkezpenik!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Ataleko editorearen aurkezpena ez da baliozkoa edo ez da kontsultatu Ataleko editorearen aurkezpenik!</message>
 	<message key="gifts.recipientDescription">Norentzat da opari hau?</message>
 	<message key="gifts.thankYou">Mila esker</message>
 	<message key="gifts.details">Opariaren xehetasunak</message>
