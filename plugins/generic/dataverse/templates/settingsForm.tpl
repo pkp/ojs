@@ -8,7 +8,6 @@
  * Dataverse plugin settings
  *
  *}
-
 {strip}
 	{assign var="pageTitle" value="plugins.generic.dataverse.displayName"}
 	{include file="common/header.tpl"}
