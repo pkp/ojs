@@ -30,7 +30,6 @@ class WorkflowStageAccessPolicy extends PKPWorkflowStageAccessPolicy {
 	/**
 	 * Get the user-accessible workflow stage policy for this application
 	 * @param $request PKPRequest
-	 * @return UserAccessibleWorkflowStageRequiredPolicy
 	 */
 	protected function _addUserAccessibleWorkflowStageRequiredPolicy($request) {
 		import('classes.security.authorization.internal.UserAccessibleWorkflowStageRequiredPolicy');
