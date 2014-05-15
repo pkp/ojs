@@ -1139,8 +1139,15 @@ class DataversePlugin extends GenericPlugin {
 		if ($article->getStatus()==STATUS_PUBLISHED) {
 			// publication date
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId(), $article->getJournalId(), TRUE);
-			$packager->addMetadata('date', strftime('%Y-%m-%d', strtotime($publishedArticle->getDatePublished())));
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId(), $article->getJournalId());
+      $datePublished = $publishedArticle->getDatePublished();
+      if (!$datePublished) {
+        // If article has no pub date, use issue pub date
+        $issueDao =& DAORegistry::getDAO('IssueDAO');
+        $issue =& $issueDao->getIssueByArticleId($article->getId(), $article->getJournalId());
+        $datePublished = $issue->getDatePublished();        
+      }
+			$packager->addMetadata('date', strftime('%Y-%m-%d', strtotime($datePublished)));
 			// isReferencedBy: If article is published, add a persistent URL to citation using specified pubid plugin
 			$pubIdPlugin =& PluginRegistry::getPlugin('pubIds', $this->getSetting($article->getJournalId(), 'pubIdPlugin'));
 			if ($pubIdPlugin && $pubIdPlugin->getEnabled()) {
