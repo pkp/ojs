@@ -1032,7 +1032,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Uw server staat momenteel het laden van bestanden toe: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Uw server staat momenteel het laden toe van bestanden met een maximale grootte van: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="user.authorization.invalidCopyditorSubmission">Onjuiste tekstredacteur inzending of geen tekstredacteur inzending gevraagd!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Onjuiste sectieredacteur inzending of geen sectieredacteur inzending gevraagd!</message>
 	<message key="gifts.purchaseGiftSubscription">Schenk een abonnement</message>
 	<message key="gifts.giftSubscriptionsAvailable">U kunt ook een abonnement geven. Giften kunnen op ieder moment ingewisseld worden door de ontvanger en zijn een goede manier om dit tijdschrift te steunen.</message>
 	<message key="gifts.subscriptionTypeNotValid">De abonnementsoort voor deze gift is niet geldig. Neem contact op met de abonnementenbeheerder.</message>

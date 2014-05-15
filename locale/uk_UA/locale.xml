@@ -1069,7 +1069,6 @@
        <message key="user.authorization.noJournal">Немає асоціації з журналом!</message>
        <message key="user.authorization.sectionAssignment">Ви намагаєтеся отримати доступ до статті, яка не належить до Вашого розділу.</message>
        <message key="user.authorization.invalidCopyditorSubmission">Помилка призначення літературного редактора подання або запиту на літературне редагування!</message>
-       <message key="user.authorization.invalidSectionEditorSubmission">Помилка призначення редактора розділу подання або запиту до редактора розділу!</message>
        
        <!-- Icons: Default "alt" text -->
        

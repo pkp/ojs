@@ -1031,7 +1031,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.authorization.noJournal">Nenhum periódico no contexto!</message>
 	<message key="user.authorization.sectionAssignment">Está tentando acessar um artigo que não faz parte da sua seção.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Submissão do editor de texto inválida ou nenhuma submissão do editor de texto solicitada!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Submissão do editor de seção inválida ou nenhuma submissão do editor de seção solicitada!</message>
 	<message key="navigation.categories">Categorias</message>
 	<message key="navigation.categories.browse">Navegar</message>
 	<message key="issue.fullIssue">Edição completa</message>

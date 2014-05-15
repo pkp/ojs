@@ -1018,7 +1018,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.authorization.noJournal">Intet tidsskrift i denne kontekst!</message>
 	<message key="user.authorization.sectionAssignment">Du forsøger at få adgang til en artikel, som ikke er en del af din sektion.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Ugyldig manuskriptredaktør-indlevering eller ingen anmodning om manuskriptredaktør-indlevering!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Ugyldig sektionsredaktør-indlevering eller ingen anmodning om sektionsredaktør-indlevering!</message>
 	<message key="navigation.categories">Kategorier</message>
 	<message key="navigation.categories.browse">Browse</message>
 	<message key="issue.fullIssue">Hele numeret</message>

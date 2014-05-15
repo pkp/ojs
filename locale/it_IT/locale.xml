@@ -1022,7 +1022,6 @@ Titolo dello schema di classificazione]]></message>
 	<message key="user.authorization.noJournal">Nessuna rivista nel contesto!</message>
 	<message key="user.authorization.sectionAssignment">Stai cercando di accedere a un articolo che non appartiene alla tua sezione.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Invio del copyeditor non valido o nessun invio richiesto!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Invio del section editor non valido o nessun invio richiesto!</message>
 	<message key="navigation.categories">Categorie</message>
 	<message key="navigation.categories.browse">Naviga</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>

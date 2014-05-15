@@ -1013,7 +1013,6 @@ Validasi mungkin gagal dalam pencarian URL memerlukan form data yang diposting.]
 	<message key="user.authorization.noJournal">Tidak ada jurnal di konteks!</message>
 	<message key="user.authorization.sectionAssignment">Anda mencoba mengakses artikel yang bukan bagian Anda.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Penyerahan copy editor invalid atau tidak ada permintaan penyerahan copy editor!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Penyerahan editor bagian invalid atau tidak ada permintaan penyerahan editor bagian!</message>
 	
 	<!-- Icons: Default "alt" text -->
 	

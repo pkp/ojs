@@ -1114,7 +1114,6 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="user.authorization.noJournal">Keine Zeitschrift im Kontext!</message>
 	<message key="user.authorization.sectionAssignment">Sie versuchen auf einen Artikel zuzugreifen, der nicht Teil Ihrer Rubrik ist.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Ungültige Lektor/innenfassung oder keine Lektor/innenfassung angefordert!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">Ungültige Rubrikredakteur/innenfassung oder keine Rubrikredakteur/innenfassung angefordert!</message>
 
 	<!-- Symbole: Standard "alt" Text -->
 
