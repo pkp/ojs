@@ -34,13 +34,13 @@ class SubmissionAccessPolicy extends PKPSubmissionAccessPolicy {
 		//
 		if (isset($roleAssignments[ROLE_ID_SUB_EDITOR])) {
 			// 1) Series editors can access all operations on submissions ...
-			$sectionEditorSubmissionAccessPolicy = new PolicySet(COMBINING_DENY_OVERRIDES);
-			$sectionEditorSubmissionAccessPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_SUB_EDITOR, $roleAssignments[ROLE_ID_SUB_EDITOR]));
+			$subEditorSubmissionAccessPolicy = new PolicySet(COMBINING_DENY_OVERRIDES);
+			$subEditorSubmissionAccessPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_SUB_EDITOR, $roleAssignments[ROLE_ID_SUB_EDITOR]));
 
 			// 2) ... but only if the requested submission is part of their series.
 			import('classes.security.authorization.internal.SectionAssignmentPolicy');
-			$sectionEditorSubmissionAccessPolicy->addPolicy(new SectionAssignmentPolicy($request));
-			$submissionAccessPolicy->addPolicy($sectionEditorSubmissionAccessPolicy);
+			$subEditorSubmissionAccessPolicy->addPolicy(new SectionAssignmentPolicy($request));
+			$submissionAccessPolicy->addPolicy($subEditorSubmissionAccessPolicy);
 		}
 
 		$this->addPolicy($submissionAccessPolicy);
