@@ -1,0 +1,9 @@
+#sidebarLanguageToggle label {
+	float: left;
+	width: 100%;
+}
+
+#languageSelect {
+	float: left;
+	clear: both;
+}

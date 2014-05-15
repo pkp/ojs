@@ -8,7 +8,7 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the eu_ES (Basque (Euskara)) locale.
   *
   -->
  
@@ -26,7 +26,7 @@ Aukerako banderak:
 	continue_on_error: Erroreak gertatu arren, jarraitu erabiltzaileak inportatzen
 
 	send_notify: Bidali erabiltzaile-izena eta pasahitza posta elektronikoz
-    	inportatutako erabiltzaileei
+   	inportatutako erabiltzaileei
 
 Adibideak:
 	Inportatu erabiltzaileak myImportFile.xml fitxategitik myJournal aldizkarira, eta ez gelditu erroreak gertatu arren:

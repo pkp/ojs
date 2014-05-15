@@ -1,0 +1,25 @@
+<!--
+  * object.dtd
+  *
+  * DTD for review object information.
+  * Used by the objects for review plugin functionality.
+  *
+  -->
+<!ELEMENT object (objectType, roleSelectionOptions, objectMetadata)>
+<!ATTLIST object
+	locale CDATA #IMPLIED>
+<!ELEMENT objectType (#PCDATA)>
+<!ATTLIST objectType
+	key CDATA #REQUIRED>
+<!ELEMENT objectMetadata (metadata*)>
+<!ELEMENT roleSelectionOptions (selectionOption+)>
+<!ELEMENT metadata (name, selectionOptions?)>
+<!ATTLIST metadata
+	type (smallTextField | singleLineTextBox | extendedTextBox | checkBoxes | radioButtons | dropDownBox | roleDropDownBox | languageDropDownBox | coverPage) "singleLineTextBox"
+	required (true | false) "false"
+	display (true | false) "false"
+	key CDATA #REQUIRED
+>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT selectionOptions (selectionOption+)>
+<!ELEMENT selectionOption (#PCDATA)> 

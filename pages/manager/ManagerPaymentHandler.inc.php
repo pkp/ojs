@@ -46,7 +46,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$success = OJSPaymentAction::savePaymentSettings($args);
 
 		if ($success) {
- 			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payments'),
 				'pageTitle' => 'manager.payment.feePaymentOptions',
@@ -102,7 +102,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$success = OJSPaymentAction::savePayMethodSettings();
 
 		if ($success) {
- 			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',

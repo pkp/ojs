@@ -2,13 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * common.xml
+  * @file plugins/importexport/medra/locale/de_DE/common.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Shared localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
@@ -27,6 +27,9 @@
 	<message key="plugins.importexport.common.register.success">Registrierung erfolgreich!</message>
 	<message key="plugins.importexport.common.register.warning">Die Registrierung vieler Objekte kann lange dauern. Bitte haben Sie Geduld, nachdem Sie den "Registrieren"-Knopf gedrückt haben. Sie werden benachrichtigt werden, wenn die Registrierung vollständig ist.</message>
 	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[Die direkte Registrierung ist momentan deaktiviert. Bitte <a href="{$settingsUrl}">konfigurieren</a> Sie einen Benutzer/innennamen und ein Passwort, um Objekte direkt bei der Registrierungsagentur registrieren zu können.]]></message>
+
+	<message key="plugins.importexport.common.markRegistered">Als registriert markieren</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Mit dem Klicken des Knopfes markieren Sie die Objekte als registriert (z.B. wenn sie bereits früher oder manuell registriert worden sind).</message>
 
 	<message key="plugins.importexport.common.update">Update</message>
 	<message key="plugins.importexport.common.updateDescription">Klicken Sie diesen Button, um die Metadaten dieses Objekts bei der Registrierungsagentur zu aktualisieren. Dies funktioniert nur, wenn Sie dieses Objekt vorher erfolgreich registriert haben!</message>

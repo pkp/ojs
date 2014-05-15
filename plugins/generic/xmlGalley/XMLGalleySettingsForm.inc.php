@@ -97,9 +97,9 @@ class XMLGalleySettingsForm extends Form {
 
 		// get existing settings to see if any are changing that will affect the cache
 		$flushCache = false;
- 		foreach ($this->_data as $setting => $value) {
+		foreach ($this->_data as $setting => $value) {
 			if ($plugin->getSetting($journalId, $setting) != $value) $flushCache = true;
- 		}
+		}
 
 		// if there are changes, flush the XSLT cache
 		if ($flushCache == true) {

@@ -255,6 +255,7 @@ class QuickSubmitForm extends Form {
 		$articleId = $article->getId();
 
 		// Add authors
+		$authorDao =& DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 		$authors = $this->getData('authors');
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]['authorId'] > 0) {
@@ -286,7 +287,6 @@ class QuickSubmitForm extends Form {
 				$author->setSequence($authors[$i]['seq']);
 
 				if ($isExistingAuthor == false) {
-					$authorDao =& DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 					$authorDao->insertAuthor($author);
 				}
 			}
@@ -447,12 +447,7 @@ class QuickSubmitForm extends Form {
 				$publishedArticle = new PublishedArticle();
 				$publishedArticle->setId($submission->getId());
 				$publishedArticle->setIssueId($issueId);
-				if ($this->getData('datePublished')) {
-					$publishedArticle->setDatePublished($this->getData('datePublished'));
-				} else {
-					// if issue is not published, will be null anyway. So no need to check.
-					$publishedArticle->setDatePublished($issue->getDatePublished());
-				}
+				$publishedArticle->setDatePublished($this->getData('datePublished'));
 				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 				$publishedArticle->setAccessStatus(ARTICLE_ACCESS_ISSUE_DEFAULT);
 

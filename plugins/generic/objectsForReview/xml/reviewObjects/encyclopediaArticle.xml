@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="encyclopediaArticle">plugins.generic.objectsForReview.object.encyclopediaArticle</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.encyclopediaArticle.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.encyclopediaArticle.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.encyclopediaArticle.person.editor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.encyclopediaArticle.person.seriesEditor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.encyclopediaArticle.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_encyclopedia_title">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.encyclopediaTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_series">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.series</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_series_no">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.seriesNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_volume">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.volume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_volume_no">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.volumeNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_edition">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.edition</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_place">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="true" key="encyclopediaArticle_publisher">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.publisher</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_pages">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.pages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="encyclopediaArticle_isbn">
+		<name>plugins.generic.objectsForReview.object.encyclopediaArticle.isbn</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -60,4 +60,39 @@
 	<message key="admin.mergeUsers.confirm">Deseja realmente juntar o registo do utilizador "{$oldAccountCount}" no registo do utilizador "{$newUsername}"? O registo de "{$oldAccountCount}" será eliminado permanentemente. Esta acção é irreversível!</message>
 	<message key="admin.mergerUsers.noneEnrolled">Nenhum utilizador registado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
+	<message key="admin.settings.options">Opções</message>
+	<message key="admin.settings.useAlphalist">Para plataformas com muitas revistas, mostrar uma lista alfabética na página principal, permitindo uma navegação alfabética por revista.</message>
+	<message key="admin.settings.usePaging">Para plataformas cm muitas revistas, distribuir as revistas por diferentes páginas.</message>
+	<message key="admin.settings.journalsList">Elementos da revista</message>
+	<message key="admin.settings.journalsList.description">Por favor seleccione os elementos da revista que serão apresentados em cada página da respectiva revista.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Thumbnail da revista</message>
+	<message key="admin.settings.journalsList.showTitle">Título da revista</message>
+	<message key="admin.settings.journalsList.showDescription">Descrição da revista</message>
+	<message key="admin.settings.defaultMetricDescription">A instalação do OJS foi configurada para guardar mais do que uma métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
+		Nalgumas situações será usada apenas uma única métrica, e.g. mostrar uma lista ordenada dos artigos mais usados ou ordenar 
+		resultados da pesquisa. Por favor seleccione um das métricas configuradas como padrão.</message>
+	<message key="admin.categories">Categorias</message>
+	<message key="admin.categories.enable.description">O administrador pode escolher definir um mapa de categorias para ajudar na organização de plataformas que alojam muitas revistas. Os directores de revista poderão escolher diversas categorias para cada revista, e leitores pode pesquisar os conteúdos das revistas por categoria.</message>
+	<message key="admin.categories.disableCategories">Não organizar as revistas por categorias</message>
+	<message key="admin.categories.enableCategories">Permitir aos Directores da Revista organizar a revista por categorias.</message>
+	<message key="admin.categories.editTitle">Editar Categoria</message>
+	<message key="admin.categories.createTitle">Criar Categoria</message>
+	<message key="admin.categories.create">Criar uma nova Categoria</message>
+	<message key="admin.categories.noneCreated">Não foram criadas categorias</message>
+	<message key="admin.categories.confirmDelete">Tem a certeza que pretende eliminar esta categoria?</message>
+	<message key="admin.categories.name">Nome</message>
+	<message key="admin.categories.nameRequired">É obrigatório indicar um nome da categoria</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
+to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
+
+This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">ERRO: impossível criar uma pasta temporária {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">ERRO: Ficheiro {$filePath} não existe ou não está acessível.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">ERRO: não é possível copiar ficheiro de {$filePath} para {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">ERRO: não é possível eliminar o ficheiro {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">ADVERTÊNCIA: ficheiro {$filePath} já existente na pasta de estatísticas de utilização.</message>
+	<message key="admin.copyAccessLogFileTool.success">SUCESSO: {$filePath} para {$destinationPath}</message>
 </locale>

@@ -252,7 +252,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 	 * Callback for router url construction simulation.
 	 */
 	function routerUrl($request, $newContext = null, $handler = null, $op = null, $path = null) {
-       	return $handler.'-'.$op.'-'.implode('-', $path);
+		return $handler.'-'.$op.'-'.implode('-', $path);
 	}
 }
 ?>

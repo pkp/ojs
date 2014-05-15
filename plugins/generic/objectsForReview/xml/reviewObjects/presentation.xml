@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="presentation">plugins.generic.objectsForReview.object.presentation</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.presentation.person.presenter</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.presentation.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="presentation_type">
+		<name>plugins.generic.objectsForReview.object.presentation.type</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="presentation_place">
+		<name>plugins.generic.objectsForReview.object.presentation.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="presentation_meeting_name">
+		<name>plugins.generic.objectsForReview.object.presentation.meetingName</name>
+	</metadata>
+	</objectMetadata>
+</object>

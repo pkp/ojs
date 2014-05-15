@@ -44,11 +44,11 @@
 				{if $layoutSignoff->getUserId() && $layoutFile}
 					{url|assign:"url" op="notifyLayoutEditor" articleId=$submission->getId()}
 					{if $layoutSignoff->getDateUnderway()}
-                                        	{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.layout.confirmRenotify"}
-                                        	{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
-                                	{else}
-                                        	{icon name="mail" url=$url}
-                                	{/if}
+						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.layout.confirmRenotify"}
+						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
+					{else}
+						{icon name="mail" url=$url}
+					{/if}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
@@ -179,6 +179,9 @@
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="referenceLinking"}')" class="action">{translate key="submission.layout.referenceLinking"}</a>
 {/if}
+{foreach name=templates from=$templates key=templateId item=template}
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="downloadLayoutTemplate" path=$submission->getId()|to_array:$templateId}" class="action">{$template.title|escape}</a>
+{/foreach}
 </div>
 </div>
 

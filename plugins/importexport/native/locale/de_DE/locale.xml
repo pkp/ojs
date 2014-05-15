@@ -7,9 +7,8 @@
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
-  *
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
@@ -76,7 +75,10 @@ Folgende Formate sind gültig:
 	<message key="plugins.importexport.native.import.error.illegalUrl">Die angegebene URL "{$url}" für die Ausgabe "{$issueTitle}" war ungültig. Web-Importe unterstützen nur http, https, ftp oder ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Ein unbekannter Dateityp "{$suppFileType}" wurde für eine zusätzliche Datei angegeben.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">Angegebene URL "{$url}" konnte nicht in lokaler Datei gespeichert werden.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Die öffentliche Kennung für die zu importierende Ausgabe "{$issueTitle}" wird bereits von einer anderen Ausgabe "{$otherIssueTitle}" verwendet.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">Die öffentliche Kennung für die zu importierende Fahne "{$publicId}" wird bereits für eine anderen Fahne des gleichen Artikels "{$articleTitle}" benutzt.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">Die öffentliche Kennung für die zu importierende Zusatzdatei "{$suppFileTitle}" wird bereits für eine andere Zusatzdatei zum gleichen Artikel "{$otherSuppFileTitle}" benutzt.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">Die öffentliche Kennung für den zu importierenden Artikel "{$articleTitle}" wird bereits für einen anderen Artikel "{$otherArticleTitle}" benutzt.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Die öffentliche Kennung für die zu importierende Ausgabe "{$issueTitle}" wird bereits für eine anderen Ausgabe "{$otherIssueTitle}" verwendet.</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Ein Rubriktitel fehlte für Ausgabe "{$issueTitle}". Bitte stellen Sie sicher, dass das XML-Dokument der passenden DTD entspricht.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Die Rubrik "{$sectionTitle}" der Ausgabe "{$issueTitle}" existiert in der Zeitschrift, aber die angegebene Abkürzung ("{$sectionAbbrev}") gehört zu einer anderen Rubrik.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Ein Beitragtitel fehlte in Ausgabe "{$issueTitle}", Rubrik "{$sectionTitle}". Bitte stellen Sie sicher, dass das XML-Dokument der passenden DTD entspricht und dass ein Titel in der Regionaleinstellung der Zeitschrift eingegeben wurde.</message>
@@ -109,7 +111,7 @@ Folgende Formate sind gültig:
 	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">Eine Sample für Artikel "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">Eine Förderung für Artikel "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 
-	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Ein Interessenskonflikt für Autor/in "{$authorFullName}" des Artikels "{$articleTitle}" der Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Ein Interessenkonflikt für Autor/in "{$authorFullName}" des Artikels "{$articleTitle}" der Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">Biografische Informationen für Autor/in "{$authorFullName}" des Artikels "{$articleTitle}" der Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Für den Autor  "{$authorFullName}" des Artikels "{$articleTitle}" in der Ausgabe "{$issueTitle}" wurde eine Institution in einer Sprachversion ("{$locale}") angegeben, die diese Zeitschrift nicht unterstützt.</message>
 

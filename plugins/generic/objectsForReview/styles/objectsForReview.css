@@ -1,0 +1,32 @@
+/**
+ * @file plugins/generic/objectsForReview/styles/objectsForReview.css
+ *
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Objects For Review Plugin stylesheet.
+ *
+ */
+ 
+
+div.coverPage {
+	display:block;
+	float:left;
+	width:25%;
+}
+
+div.coverPageDetails {
+	float:right;
+	width:75%;
+}
+
+div.details {
+	width:100%;
+}
+
+div.coverPage img {
+	width: 150px;
+	margin: 1em 1em 1em 0;
+}
+

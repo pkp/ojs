@@ -292,7 +292,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[O sistema <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) para assegurar arquivamento seguro e permanente do cache da sua revista, é suportado pelo OJS. LOCKSS é um software livre desenvolvido pela Biblioteca da Universidade de Stanford, que permite preservar revistas online escolhidas ao sondar as páginas das mesmas por conteúdo recém publicado e arquivando-o. Cada arquivo é continuamente validado contra cópias de outras bibliotecas. Caso o conteúdo esteja corrompido ou perdido, as cópias são usadas para restauração.
+	<message key="manager.setup.lockssDescription"><![CDATA[O sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) para assegurar arquivamento seguro e permanente do cache da sua revista, é suportado pelo OJS. LOCKSS é um software livre desenvolvido pela Biblioteca da Universidade de Stanford, que permite preservar revistas online escolhidas ao sondar as páginas das mesmas por conteúdo recém publicado e arquivando-o. Cada arquivo é continuamente validado contra cópias de outras bibliotecas. Caso o conteúdo esteja corrompido ou perdido, as cópias são usadas para restauração.
 <br /><br />
 Configurar o suporte ao LOCKSS para o OJS é necessário somente após a publicação de uma edição estar quase completa, bastando seguir os passos a seguir:]]></message>
 	
@@ -659,7 +659,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (incluindo PHP 5.x). Sua versão atual do PHP é {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluindo PosgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x ou >= 2.0.4x ou Microsoft IIS 6</li>
-	<li>Sistema Operacional: Qualquer sistema operacional que suporte o software acima, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Sistema Operacional: Qualquer sistema operacional que suporte o software acima, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>A falta de recursos impossibilita testes completos em todas as possibilidades de configuração e versões de plataformas, não havendo garantia implícita de funcionamento ou de suporte. Solicita-se enviar comentários sobre problemas, sucessos, configurações de máquina, entre outros comentários e sugestões para os devidos fóruns de discussão</p>
@@ -1039,7 +1039,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.subscriptions.status.needsInformationDescription">Informações adicionais são necessárias para a ativação da assinatura</message>
 	<message key="user.subscriptions.status.needsApprovalDescription">A assinatura deve ser avaliada antes de poder ser ativada</message>
 	<message key="user.subscriptions.statusInformation">Assinaturas vencidas e ativas estão disponíveis a seguir, junto com a data de expiração. Além disso, as seguintes informações adicionais sobre a situação podem estar disponíveis para cada assinatura.</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>O arquivo PDF selecionado deve ser carregado no navegador caso tenha instalado um plugin de leitura de arquivos PDF (por exemplo, uma versão atual do <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Como alternativa, pode-se baixar o arquivo PDF para o computador, de onde poderá abrí-lo com o leitor PDF de sua preferência. Para baixar o PDF, clique no link abaixo.</p> <p>Caso deseje mais informações sobre como imprimir, salvar e trabalhar com PDFs, a Highwire Press oferece uma página de <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Perguntas Frequentes sobre PDFs</a> bastante útil.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>O arquivo PDF selecionado deve ser carregado no navegador caso tenha instalado um plugin de leitura de arquivos PDF (por exemplo, uma versão atual do <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Como alternativa, pode-se baixar o arquivo PDF para o computador, de onde poderá abrí-lo com o leitor PDF de sua preferência. Para baixar o PDF, clique no link abaixo.</p> <p>Caso deseje mais informações sobre como imprimir, salvar e trabalhar com PDFs, a Highwire Press oferece uma página de <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Perguntas Frequentes sobre PDFs</a> bastante útil.</p>]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Acesso negado! Você não foi designado como editor de texto deste artigo.</message>
 	<message key="user.authorization.noJournal">Nenhum periódico no contexto!</message>
 	<message key="user.authorization.sectionAssignment">Está tentando acessar um artigo que não faz parte da sua seção.</message>
@@ -1107,4 +1107,13 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="site.upgradeAvailable.manager"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Entre em contato com o Administrador do Sistema ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) para notificá-lo deste lançamento. Para maiores informações, acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a>.]]></message>
 	<message key="common.journal">Periódico</message>
 	<message key="user.profile.profileImage">Imagem de perfil</message>
+	<message key="submission.permissions">Permissões</message>
+	<message key="submission.license">Licensa</message>
+	<message key="submission.copyright">Direitos autorais</message>
+	<message key="submission.copyrightHolder">Detentor dos direitos autorais</message>
+	<message key="submission.copyrightYear">Ano dos direitos autorais</message>
+	<message key="submission.copyrightStatement">Direitos autorais {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Informe uma URL válida  (inclua o http://).</message>
+	<message key="submission.licenseURL">URL da licensa</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
 </locale>

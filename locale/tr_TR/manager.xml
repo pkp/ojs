@@ -207,7 +207,7 @@
 	<message key="manager.setup.authorGuidelines">Yazar Rehberleri</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Dergiye sunulan öğeler için bibliografik ve biçim standartlarını yazarlar için açıklayın. (örneğin., <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). Bu açıklama sunumlarda kullanılacak olan dergi ve kitaplar için yaygın atıf şekli ile ilgili örnekleri sağlaması açısından yararlı olur. Yazarların sunumlarına ilaveten, veri almak için teşvik edilmesini sağlayan uygun Ek Dosya tiplerini de tanımlayınız. (örneğin, veri-takımları, araştırma araçları, vb.]]></message>
 	<message key="manager.setup.competingInterests">Çıkar Çatışması</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedikal dergileri tipik olarak yazar ve hakemlerden araştırmaları için çıkar çatışmasına yönelik bir bildirimde bulunmalarını isterler. (Bakınız <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedikal dergileri tipik olarak yazar ve hakemlerden araştırmaları için çıkar çatışmasına yönelik bir bildirimde bulunmalarını isterler. (Bakınız <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Çıkar Çatışması Bildirimi Doldurma Rehberi</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Yazarların gönderileriyle birlikte bir Çıkar Çatışması bildirimi dosyası göndermeleri gereklidir.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Hakemlerin her bir değerlendirme gönderisi için Çıkar Çatışması bildirimi dosyası göndermeleri gereklidir.</message>
@@ -289,7 +289,6 @@
 	<message key="manager.setup.guidingSubmissions">Adım 3: Gönderi Rehberi</message>
 	<message key="manager.setup.homepageImage">Ana Sayfa Görseli</message>
 	<message key="manager.setup.homepageImageDescription">Sayfanın ortasına bir görsel veya grafik ekle.</message>
-	<message key="manager.setup.includeCreativeCommons">Açık erişim veya gecikmeli açık erişim sunan dergiler için, uygun zamanda yayımlanmış tüm çalışmalar için kâr amacı gütmeyen (Creative Commons) bir lisans içerir.</message>
 	<message key="manager.setup.information">Bilgi</message>
 	<message key="manager.setup.information.description">Kütüphaneciler, potansiyel yazarlar ve okuyucular için derginin kısa açıklamsı yan taraftaki "Bilgi" kısmında yer almaktadır.</message>
 	<message key="manager.setup.information.forAuthors">Yazarlar İçin</message>
@@ -340,7 +339,7 @@
 	<message key="manager.setup.lists">Listeler</message>
 	<message key="manager.setup.listsDescription">Sayfalarda öğeler (örneğin aboneler, kullanıcılar, düzenleme atamaları v.b.) gösterilirken bir kerede gösterilebilecek en fazla madde sayısını giriniz.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, dağıtmak ve <a href="{$lockssUrl}" target="_blank">Yayıncı Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS lisansı "Dergi Hakkında" sayfasında görünecektir:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">LOCKSS lisanslarının diğer versiyonları için bakınız</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS lisanslarının diğer versiyonları için bakınız</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href="http://lockss.org/lockss/Libraries" target="_blank">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın.]]></message>
 	<message key="manager.setup.look">Görünüş</message>
 	<message key="manager.setup.look.description">Ana sayfa başlığı, içerik, dergi başlığı, altlık, yönlendirme çubuğu ve biçim sayfası.</message>
@@ -513,19 +512,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ay sonra açık erişime sunulur.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Lütfen geçerli bir gecikme süresi seçiniz.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Aşağıdaki Geciktirilmiş Açık Erişim Politikası Dergi Hakkında sayfasında Politikalar altında yer alacaktır.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Lütfen verilen seçme kutularını kullanınız.</message>
 	<message key="manager.subscriptionPolicies.expiry">Abonelik Sonu</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Abonelik bitiminden sonra, okuyucunun tüm abonelik içeriğine erişim reddedilebilir ancak abonelik sonuna kadar yayınlanan içeriğe erişimi korunabilir.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Tümünü Sonladır</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Abonelik bitiminden sonra okuyucuların tüm abonelik içeriğine erişimini engelle.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Kısmen Sonlandır</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Okuyucuların son yayınlanan abonelik içeriğine erişimi engelle ancak abonelik sonuna kadar yayınlanan içeriğe erişimini koru.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Aboneleri e-posta ile uyar</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">ay sonra (abonelik bitince).</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Aboneleri e-posta ile uyar</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">hafta sonra (abonelik bitince).</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Aboneleri e-posta ile uyar</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">ay önce (abonelik bitmeden).</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Aboneleri e-posta ile uyar</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">hafta önce (abonelik bitmeden).</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Abonelik Sonu Uyarısı</message>
@@ -731,4 +725,14 @@
 	<message key="manager.statistics.reports.columns.description">Define the columns that will be used to build the report. The columns you select here not only define which data will be presented inside the reports, but also defines the aggregation level of the statistics. For example, if you choose ID, Type and Month columns, the report will sum all views from an object from one month and will present that data in one row. If you choose Day instead of Month, each object will have a row for each day.</message>
 	<message key="manager.statistics.reports.objectId.label">Virgülle ayırılmış (ör. 1,2,3,4,5) bir veya birden çok nesne ID'si belirleyin.</message>
 	<message key="manager.statistics.reports.reportUrl.label">The following url can be used to generate the report with this current form settings. Just copy it, paste into your browser and enter. You can use your favorites to store your custom report url generator.</message>
+	<message key="manager.setup.permissions.priorAgreement">Ön anlaşma</message>
+	<message key="manager.setup.permissions.display">Görüntüle</message>
+	<message key="manager.setup.resetPermissions">Makale İzinlerini Sıfırla</message>
+	<message key="manager.setup.licenseURLDescription">Eğer var ise lisans web sayfası için URL giriniz.</message>
+	<message key="manager.setup.includeCopyrightStatement">Telif hakkı bildirimini içeriği ile görüntüle (bir yazarın elinde olduğu belirtilen telif hakkı için tavsiye edilen)</message>
+	<message key="manager.setup.includeLicense">Yayımlanmış çalışma ile lisansı göster.</message>
+	<message key="manager.setup.resetPermissions.description">Copyright statement and license information will be permanently attached to published content, ensuring that this data will not change in the case of a journal changing policies for new submissions. To reset stored permissions information already attached to published content, use the button below.</message>
+	<message key="manager.setup.confirmResetLicense">Dergi ayarında belirlenmiş ve yayımlanmış içeriğe eklenmiş lisans telif hakkını  sıfırlamak istediğinizden emin misiniz?</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Ön-Süre Bitimi Hatırlatması Gönderildi</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Geçmiş-Süre Bitimi Hatırlatması Gönderildi</message>
 </locale>

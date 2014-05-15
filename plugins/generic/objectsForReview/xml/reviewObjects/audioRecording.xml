@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="audioRecording">plugins.generic.objectsForReview.object.audioRecording</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.audioRecording.person.performer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.audioRecording.person.composer</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.audioRecording.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.audioRecording.person.wordsBy</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="audioRecording_format">
+		<name>plugins.generic.objectsForReview.object.audioRecording.format</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="audioRecording_series_title">
+		<name>plugins.generic.objectsForReview.object.audioRecording.seriesTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="audioRecording_volume">
+		<name>plugins.generic.objectsForReview.object.audioRecording.volume</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="audioRecording_volume_no">
+		<name>plugins.generic.objectsForReview.object.audioRecording.numberOfVolumes</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="audioRecording_place">
+		<name>plugins.generic.objectsForReview.object.audioRecording.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="audioRecording_label">
+		<name>plugins.generic.objectsForReview.object.audioRecording.label</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="audioRecording_running_time">
+		<name>plugins.generic.objectsForReview.object.audioRecording.runningTime</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="audioRecording_isbn">
+		<name>plugins.generic.objectsForReview.object.audioRecording.isbn</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -99,6 +99,8 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 			$templateMgr->assign('languageToggleLocales', $locales);
 		}
 
+		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $this->getPluginPath() . '/styles/languageToggle.css', STYLE_SEQUENCE_CORE);
+
 		return parent::getContents($templateMgr);
 	}
 }

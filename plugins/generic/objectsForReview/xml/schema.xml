@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/xml/schema.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects For Review plugin schema in XML.
+  *
+  -->
+
+<schema version="0.2">
+
+	<!--
+	 *
+	 * TABLE review_object_types
+	 *
+	 -->
+	<table name="review_object_types">
+		<field name="type_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="is_active" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="type_key" type="C2" size="64" />
+		<descr>Review object types.</descr>
+		<index name="review_object_type_type_id">
+			<col>type_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_object_type_settings
+	  *
+	  -->
+	<table name="review_object_type_settings">
+		<field name="type_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Review object type settings.</descr>
+		<index name="review_object_type_settings_type_id">
+			<col>type_id</col>
+		</index>
+		<index name="review_object_type_settings_pkey">
+			<col>type_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	 *
+	 * TABLE review_object_metadata
+	 *
+	 -->
+	<table name="review_object_metadata">
+		<field name="metadata_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="review_object_type_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F" />
+		<field name="metadata_type" type="I8" />
+		<field name="required" type="I1" />
+		<field name="display" type="I1" />
+		<field name="metadata_key" type="C2" size="64" />
+		<descr>Review object metadata.</descr>
+		<index name="review_object_metadata_metadata_id">
+			<col>metadata_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_object_metadata_settings
+	  *
+	  -->
+	<table name="review_object_metadata_settings">
+		<field name="metadata_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Review object metadata settings.</descr>
+		<index name="review_object_metadata_settings_metadata_id">
+			<col>metadata_id</col>
+		</index>
+		<index name="review_object_metadata_settings_pkey">
+			<col>metadata_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+	
+	<!--
+	 *
+	 * TABLE objects_for_review
+	 *
+	 -->
+	<table name="objects_for_review">
+		<field name="object_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="review_object_type_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="available" type="I1">
+			<NOTNULL />
+			<DEFAULT VALUE="1" />
+		</field>
+		<field name="date_created" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="editor_id" type="I8"/>
+		<field name="notes" type="X"/>
+		<descr>Objects for review.</descr>
+		<index name="ofr_object_id">
+			<col>object_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE object_for_review_settings
+	  *
+	  -->
+	<table name="object_for_review_settings">
+		<field name="object_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="review_object_metadata_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Object for review settings.</descr>
+		<index name="ofr_settings_object_id">
+			<col>object_id</col>
+		</index>
+		<index name="ofr_settings_pkey">
+			<col>object_id</col>
+			<col>review_object_metadata_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE object_for_review_persons
+	  *
+	  -->
+	<table name="object_for_review_persons">
+		<field name="person_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="object_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="role" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="first_name" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="middle_name" type="C2" size="40"/>
+		<field name="last_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<descr>Persons metadata for object for review.</descr>
+		<index name="ofr_person_object_id">
+			<col>object_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE object_for_review_assignments
+	  *
+	  -->
+	<table name="object_for_review_assignments">
+		<field name="assignment_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="object_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="user_id" type="I8"/>
+		<field name="submission_id" type="I8" />
+		<field name="status" type="I2">
+			<NOTNULL/>
+		</field>
+		<field name="date_requested" type="T"/>
+		<field name="date_assigned" type="T"/>
+		<field name="date_mailed" type="T"/>
+		<field name="date_due" type="T"/>
+		<field name="date_reminded_before" type="T"/>
+		<field name="date_reminded_after" type="T"/>
+		<field name="notes" type="X"/>
+		<descr>Object for review assignments</descr>
+		<index name="ofr_assignments_pkey">
+			<col>object_id</col>
+			<col>user_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+	
+</schema>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE emails SYSTEM "../../../../lib/pkp/dtd/emailTemplates.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/xml/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review email templates.
+  *
+  -->
+<emails>
+		<!-- from ROLE_ID_EDITOR to ROLE_ID_AUTHOR -->
+		<email 
+			key="OFR_REVIEW_REMINDER"
+			can_edit="1"
+			can_disable="0"
+			to_role_id="65536"
+			from_role_id="256"
+		/>
+		<!-- from ROLE_ID_EDITOR to ROLE_ID_AUTHOR -->
+		<email 
+			key="OFR_REVIEW_REMINDER_LATE"
+			can_edit="1"
+			can_disable="0"
+			to_role_id="65536"
+			from_role_id="256"
+		/>
+		<!-- from ROLE_ID_EDITOR to ROLE_ID_AUTHOR -->
+		<email 
+			key="OFR_OBJECT_ASSIGNED"
+			can_edit="1"
+			can_disable="0"
+			to_role_id="65536"
+			from_role_id="256"
+		/>
+		<!-- from ROLE_ID_EDITOR to ROLE_ID_AUTHOR -->
+		<email 
+			key="OFR_OBJECT_DENIED"
+			can_edit="1"
+			can_disable="0"
+			to_role_id="65536"
+			from_role_id="256"
+		/>
+		<!-- from ROLE_ID_AUTHOR to ROLE_ID_EDITOR -->
+		<email 
+			key="OFR_OBJECT_REQUESTED"
+			can_edit="1"
+			can_disable="0"
+			to_role_id="256"
+			from_role_id="65536"
+		/>
+		<!-- from ROLE_ID_EDITOR to ROLE_ID_AUTHOR -->
+		<email 
+			key="OFR_OBJECT_MAILED"
+			can_edit="1"
+			can_disable="0"
+			to_role_id="65536"
+			from_role_id="256"
+		/>
+		<!-- from ROLE_ID_EDITOR to ROLE_ID_AUTHOR -->
+		<email 
+			key="OFR_REVIEWER_REMOVED"
+			can_edit="1"
+			can_disable="0"
+			to_role_id="65536"
+			from_role_id="256"
+		/>
+</emails>

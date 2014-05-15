@@ -205,7 +205,7 @@
 	<message key="manager.setup.authorGuidelines">Indicaciones para los autores/as</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Ponga a disposición de los autores/as los estándares de bibliografía y formato que deben seguir los elementos que se envíen a la revista (p. ej. la guía de estilo <em>Publication Manual of the American Psychological Association</em>, 5.ª edición, 2001). A menudo, resulta de gran ayuda proporcionar ejemplos del formato que deben tener las referencias a revistas y libros con el fin de aplicarlo en los envíos. Asimismo, es importante mencionar los archivos adicionales (p. ej. conjuntos de datos, herramientas de búsqueda, etc.) que los autores/as deberían cargar, además de su envío, para que los lectores/as se sientan más involucrados en el proyecto.]]></message>
 	<message key="manager.setup.competingInterests">Conflicto de intereses</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Las revistas biomédicas normalmente exigen a los autores/as y revisores/as que declaren si tienen algún tipo de conflicto de intereses en lo que respecta a su investigación. En este sentido, véase la <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">política de PLoS</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Las revistas biomédicas normalmente exigen a los autores/as y revisores/as que declaren si tienen algún tipo de conflicto de intereses en lo que respecta a su investigación. En este sentido, véase la <a href="http://www.plosbiology.org/static/competing.action" target="_new">política de PLoS</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Indicaciones para rellenar la declaración de conflicto de intereses</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Pedir a los autores/as que adjunten una declaración de conflicto de intereses a su envío.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Pedir a los revisores/as que adjunten una declaración de conflicto de intereses a cada evaluación por pares.</message>
@@ -337,7 +337,7 @@
 	<message key="manager.setup.lists">Listas</message>
 	<message key="manager.setup.listsDescription">Introduzca el número máximo de elementos (p. ej., envíos, usuarios/as o asignación de tareas de edición) que aparecerán en cada página de una lista, así como el número de enlaces de las páginas que se mostrarán en cada una de dichas páginas.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Activar LOCKSS para almacenar y distribuir el contenido de la revista en las bibliotecas que ya aplican este sistema, a través de la página <a href="{$lockssUrl}" target="_blank">Manifiesto de la editorial</a>. Puede encontrar la licencia de LOCKSS en la sección Archivo de la sección Acerca de la revista.]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Véanse <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">otras versiones de licencia de LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Véanse <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">otras versiones de licencia de LOCKSS</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifique de 6 a 10 bibliotecas que registrarán y almacenarán temporalmente la revista. P. ej., consulte las instituciones en las que trabajan los editores/as o los miembros del Consejo o las instituciones que ya emplean el sistema LOCKSS. Esta información puede encontrarla <a href="http://www.lockss.org/community/" target="_blank">aquí</a>. Además, puede enviar las invitaciones predeterminadas a <a href="{$lockssExistingArchiveUrl}" target="_blank"> bibliotecas que ya aplican el sistema LOCKSS</a> o a <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotecas que aún no lo emplean</a>.]]></message>
 	<message key="manager.setup.look">Apariencia</message>
 	<message key="manager.setup.look.description">Encabezado de la página de inicio y de la revista, contenido, pie de página, menú de navegación y hoja de estilo.</message>
@@ -720,4 +720,14 @@
 	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">O seleccionar el rango de:</message>
 	<message key="manager.statistics.reports.filters.byLocation">Por geolocalización</message>
 	<message key="manager.statistics.reports.filters.byLocation.description">Filtrar resultados por país, región y/o ciudad.</message>
+	<message key="manager.setup.permissions.priorAgreement">Acuerdo previo</message>
+	<message key="manager.setup.permissions.display">Mostrar</message>
+	<message key="manager.setup.licenseURLDescription">Proveer URL para la página web de la licencia, si está disponible</message>
+	<message key="manager.setup.includeLicense">Mostrar la licencia con el trabajo publicado</message>
+	<message key="manager.setup.resetPermissions">Reiniciar Permisos del Artículo</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Pre-expirar Recordatorio de Envío</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Post-expirar Recordatorio de Envío</message>
+	<message key="manager.setup.includeCopyrightStatement">Mostrar la declaración de copyright con contenido (recomentable para afirmar un autor poseedor del copyright)</message>
+	<message key="manager.setup.resetPermissions.description">La declaración de Copyright y la información de la licencia serán adjuntadas permanentemente al contenido publicado, asegurando que este dato no cambie en caso de alterar las políticas de la revista para nuevos envíos. Para resetear información de permisos almacenados ya adjuntados a contenido publicado, utilice el botón de abajo.</message>
+	<message key="manager.setup.confirmResetLicense">Está seguro que desea resetear la información de licencia y copyright adjuntada al contenido publicado a la licencia configurada dese la Configuración de la Revista?</message>
 </locale> 

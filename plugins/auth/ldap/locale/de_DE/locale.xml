@@ -7,11 +7,10 @@
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * LDAP authentication plugin localization strings for the de_DE (Deutsch(Deutschland)) locale.
-  *
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
-  
+ 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">Dieses Plug-In ermöglicht es, den Berechtigungsnachweis über eine externe LDAP-Datenquelle zu beziehen und Benutzer/innenkonten mit dieser Quelle zu synchronisieren.</message>

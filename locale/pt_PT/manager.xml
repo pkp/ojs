@@ -169,7 +169,7 @@
 	<message key="manager.setup.authorGuidelines">Directrizes para Autores</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Definição dos padrões bibliográficos e padrões de formatação de texto da revista (Ex.: <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). Recomenda-se oferecer exemplos de formatos de citação comuns para revistas e livros para uso nas submissões. É importante também identificar os tipos apropriados de Documentos Suplementares (Ex.: conjuntos de dados, instrumentos de pesquisas, entre outros) que os autores deveriam ser estimulados a enviar, além do documento de submissão, para aumentar o interesse dos leitores com o trabalho.]]></message>
 	<message key="manager.setup.competingInterests">Conflito de Interesses</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Periódicos da bio-medicina geralmente exigem que autores e revisores declarem se há qualquer possibilidade de conflito de interesses em relação à pesquisa (veja <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">Política PLoS</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Periódicos da bio-medicina geralmente exigem que autores e revisores declarem se há qualquer possibilidade de conflito de interesses em relação à pesquisa (veja <a href="http://www.plosbiology.org/static/competing.action" target="_new">Política PLoS</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Directrizes para registar Conflito de Interesses</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Exigir dos Autores o registo de Conflito de Interesses (CI) junto com a submissão.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Exigir dos revisores registo de Conflito de Interesses em cada revisão realizada.</message>
@@ -295,7 +295,7 @@
 	<message key="manager.setup.lists">Listas</message>
 	<message key="manager.setup.listsDescription">Indique o número máximo de itens (por exemplo, submissões, utilizadores ou tarefas editoriais) que aparecem em toda página de listagem, e o número de links por página a serem exibidos.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Permitir ao LOCKSS armazenar e distribuir o conteúdo da revista a bibliotecas participantes através do <a href="{$lockssUrl}" target="_blank">Manifesto de Publicação</a> do LOCKSS. Uma licença LOCKSS aparecerá em Sobre a Revista na secção Arquivamento:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Veja <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">outras versões de licença LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Veja <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">outras versões de licença LOCKSS</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifique 6 a 10 bibliotecas que registarão e guardarão a revista. Por exemplo, escolha instituições às quais os editores ou Membros do Equipa já sejam associados e/ou instituições já participantes do LOCKSS. Visite <a href="http://www.lockss.org/community/" target="_blank">bibliotecas participantes</a>. Utilize o convite preparado para (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">Bibliotecas participantes do LOCKSS</a> ou (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">Bibliotecas NÃO participantes do LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Visual</message>
 	<message key="manager.setup.look.description">Cabeçalho da Página Inicial, conteúdo, cabeçalho da revista, rodapé, barra de navegação e folha de estilo.</message>
@@ -667,4 +667,68 @@
 	<message key="manager.plugins.tarCommandNotFound">O comando tar não está disponível. Por favor, configure-o correctamente no config.inc.php.</message>
 	<message key="manager.plugins.versionFileInvalid">version.xml no directório do plugin contém dados inválidos.</message>
 	<message key="manager.reviewFormElements.included">Incluído na mensagem para o autor</message>
+	<message key="manager.payment.giftFees">Valores dos Donativos</message>
+	<message key="manager.payment.giftFeesDescription">Será exibido um link para donativos das assinaturas na página das Asssinaturas em Sobre a Revista e integrado no bloco lateral de assinaturas.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Esta acção activará os pagamentos para a assinatura de donativos, permitindo aos leitores oferecer assinaturas a outros leitores.</message>
+	<message key="manager.payment.options.purchaseIssueFee">Comprar Número</message>
+	<message key="manager.plugins.wrongCategory">O plugin transferido não corresponde à categoria de plugins carregados.</message>
+	<message key="manager.plugins.wrongName">A versão.xml do plugin transferido contém um nome que não corresponde ao nome do plugin carregado.</message>
+	<message key="manager.plugins.settings">Configurações</message>
+	<message key="manager.sections.confirmDelete">Tem a certeza que pretende eliminar permanentemente esta secção?</message>
+	<message key="manager.sections.alertDelete">Antes de ser eliminada esta secção, tem de remover os artigos publicados noutras secções.</message>
+	<message key="manager.setup.permissions.priorAgreement">Concordância Prévia</message>
+	<message key="manager.setup.permissions.display">Mostrar</message>
+	<message key="manager.setup.licenseURLDescription">Fornecer o URL da página da licença, caso exista.</message>
+	<message key="manager.setup.includeCopyrightStatement">Mostrar a declaração de direitos de autor com conteúdo (aconselhável para definir os direitos de um autor)</message>
+	<message key="manager.setup.includeLicense">Mostrar a licença com trabalho publicado.</message>
+	<message key="manager.setup.resetPermissions">Repor Permissões Artigo</message>
+	<message key="manager.setup.resetPermissions.description">A declaração de direitos de autor e informações sobre a licença estarão permanentemente ligados ao conteúdo publicado, garantindo que esses dados não serão alterado nas circunstância em que a revista modifique as políticas relativas a novas submissões. Para repor as permissões sobre informação armazenada previamente anexada ao conteúdo publicado, use o botão abaixo.</message>
+	<message key="manager.setup.confirmResetLicense">Tem a certeza que deseja repor as informações sobre licença e direitos de autor associados ao conteúdo publicado com a licença definida em Configurações da Revista?</message>
+	<message key="manager.setup.journalThumbnail">Thumbnail da Revista</message>
+	<message key="manager.setup.subjectClassificationURLValid">Por favor indique um URL remoto válido (include http://).</message>
+	<message key="manager.setup.useThumbnail">Thumbnail</message>
+	<message key="manager.statistics.defaultMetricDescription">A sua revista foi configurada para guardar mais do um tipo de métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
+		Existem situações em que um único tipo de estatística será usado, e.g. para mostrar uma lista ordenada dos artigos mais lidos ou para ordenar o resultado de pesquisas. Por favor, seleccione uma das métricas configuradas como padrão.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Agregar estatísticas por:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Templates padrão do relatório</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Downloads do ficheiro do artigo</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Visualizações da página do resumo do artigo</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Resumo do artigo e downloads</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Downloads do ficheiro do número</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Visualizações da página do índice do número</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Índice do número e downloads</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Visualizações da página principal da revista</message>
+	<message key="manager.statistics.reports.generateReport">Gerar relatório customizado</message>
+	<message key="manager.statistics.reports.advancedOptions">Opções Avançadas</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Personalizar coluna e opções do filtro e ordenação. A alteração de qualquer uma destas opções pode modificar o resultado do template do relatório esperado.</message>
+	<message key="manager.statistics.reports.columns">Colunas</message>
+	<message key="manager.statistics.reports.columns.description">Definir as colunas que serão usadas para elaborar o relatório. As colunas seleccionadas aqui estabelece os dados presentes no relatório, assim como define o nível de agregação das estatísticas. Por exemplo, se escolhe as colunas ID, Tipo e Mês, o relatório vai sumariar todas as visualizações mensais de um objecto e os dados serão apresentados em linha. Se escolher Dia em vez de Mês, cada objecto terá uma linha por cada dia.</message>
+	<message key="manager.statistics.reports.filters">Filtros</message>
+	<message key="manager.statistics.reports.objectType">Tipo de Objecto</message>
+	<message key="manager.statistics.reports.objectId">ID Objecto</message>
+	<message key="manager.statistics.reports.objectId.label">Definir um ou mais IDs de objectos, separados por vírgula (e.g. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.today">Hoje</message>
+	<message key="manager.statistics.reports.currentMonth">Mês actual</message>
+	<message key="manager.statistics.reports.orderBy">Ordenar por</message>
+	<message key="manager.statistics.reports.orderDir">Direcção</message>
+	<message key="manager.statistics.reports.orderDir.asc">Ascendente</message>
+	<message key="manager.statistics.reports.orderDir.desc">Descendente</message>
+	<message key="manager.statistics.reports.month.label">Usar o formato YYYYMM</message>
+	<message key="manager.statistics.reports.day.label">Usar o formato YYYYMMDD</message>
+	<message key="manager.statistics.reports.cities.label">Um ou mais nomes  de cidades, separados por vírgulas (e.g. Nome Cidade 1,Nome Cidade 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Tem de seleccionar pelo menos uma coluna para gerar o relatório.</message>
+	<message key="manager.statistics.reports.reportUrl">Reportar URL</message>
+	<message key="manager.statistics.reports.reportUrl.label">O URL seguinte pode ser usado para gerar o relatório através das configurações do actual formulário. Copie e cole no navegador e clique ENTER. Pode usar os seus favoritos para guardar o seu gerador URL de relatório personalizado.</message>
+	<message key="manager.statistics.reports.filters.byContext">Por contexto</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Restringir resultados por contexto (número e/ou artigo)</message>
+	<message key="manager.statistics.reports.filters.byObject">Por tipo objecto e/ou ID de objecto</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Restringir resultados por tipo de objecto (revista, número, artigo, pdf galles, outros galleys) e /ou por um mais IDs de objectos.</message>
+	<message key="manager.statistics.reports.filters.byTime">Seleccione um intervalo do relatório</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Ou seleccione intervalo por:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Por geo-localização</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Restringir resultados por país, região e/ou cidade.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Enviado Lembrete de Pré-Expiração</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Enviado Lembrete de Pós-Expiração</message>
+	<message key="manager.setup.categories">Categorias</message>
+	<message key="manager.setup.categories.description">Seleccionar as categorias mais adequadas da lista exibida em cima. Os leitores poderão procurar por categoria a partir da configuração concluída da revista.</message>
 </locale>

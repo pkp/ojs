@@ -25,7 +25,7 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">完整的URL到已经安装的phpMyVisites (i.e. http://myserver.net/phpmv).</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">请输入一个有效的URL，需要在开始包含 http://.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">网站设定档号码</message>
-	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">在phpMyVisites里，点击管理->修改的网站。该网站设定档号码旁边显示您的网站配置文件名称.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[在phpMyVisites里，点击管理->修改的网站。该网站设定档号码旁边显示您的网站配置文件名称.]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">请输入一个站点设定档号码。</message>
 
 </locale>

@@ -10,7 +10,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="Català">
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Connector phpMyVisites</message>

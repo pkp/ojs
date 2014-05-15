@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheduled_tasks SYSTEM "../../../../lib/pkp/dtd/scheduledTasks.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/xml/scheduledTasks.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review plugin scheduled tasks registry file.
+  *
+  * This file lists all plugin's scheduled tasks to be executed by the system.
+  *
+  * Note that this functionality requires scheduled task support to be enabled.
+  * The degree of granularity supported for the task frequency depends on the
+  * frequency the scheduled task script itself is scheduled to run (as
+  * configured in cron, for example).
+  *
+  -->
+
+<scheduled_tasks>
+	<task class="plugins.generic.objectsForReview.classes.tasks.ObjectsForReviewReminder">
+		<descr>Send automated reminders to object reviewers to complete their review.</descr>
+		<frequency hour="0"/>
+	</task>
+</scheduled_tasks>

@@ -347,7 +347,7 @@ class Application extends PKPApplication {
 			if (!is_null($metric[0][STATISTICS_METRIC])) return $metric[0][STATISTICS_METRIC];
 		}
 
-	 	return 0;
+		return 0;
 	}
 
 	/**

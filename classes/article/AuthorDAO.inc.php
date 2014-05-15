@@ -218,6 +218,10 @@ class AuthorDAO extends PKPAuthorDAO {
 			$this->deleteAuthor($author);
 		}
 	}
+
+	function getAdditionalFieldNames() {
+		return array('orcid');
+	}
 }
 
 ?>

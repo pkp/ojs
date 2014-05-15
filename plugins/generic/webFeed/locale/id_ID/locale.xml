@@ -23,6 +23,6 @@
 	<message key="plugins.generic.webfeed.settings.recentArticles"> item yang diterbitkan sekarang.</message> 
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired"> Masukkan bilnagan bulat positif untuk item yang diterbitkan sekarang.</message> 
 	<message key="plugins.generic.webfeed.atom.altText"> Logo atom </message> 
-	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message> 	
-<message key="plugins.generic.webfeed.rss2.altText"> Logo RSS2</message>
+	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
+	<message key="plugins.generic.webfeed.rss2.altText"> Logo RSS2</message>
 </locale> 

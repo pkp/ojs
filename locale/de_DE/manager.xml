@@ -7,11 +7,11 @@
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 
-<locale name="de_DE" full_name = "Deutsch (Deutschland)">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="manager.emails.confirmResetAll">Sind Sie sicher, dass Sie alle E-Mail-Vorlagen dieser Zeitschrift zurücksetzen wollen? Sie verlieren damit alle speziellen Einstellungen, die Sie vorgenommen haben.</message>
 	<message key="manager.files.note">Anmerkung: Der Dateinavigator ermöglicht die unmittelbare Betrachtung und Bearbeitung der mit einer Zeitschrift verbundenen Dateien und Verzeichnisse.</message>
 	<message key="manager.groups">Impressum</message>
@@ -208,13 +208,13 @@
 	<message key="manager.setup.announcementsIntroduction">Zusätzliche Informationen</message>
 	<message key="manager.setup.announcements">Mitteilungen</message>
 	<message key="manager.setup.appearInAboutJournal">(Erscheint unter "Über uns") </message>
-	<message key="manager.setup.authorCopyrightNoticeAgree">Fordern Sie die Autor/innen dazu auf, der Copyright-Lizenz als Teil des Einreichungsverfahrens zuzustimmen.</message>
+	<message key="manager.setup.authorCopyrightNoticeAgree">Autor/innen müssen im Einreichungsverfahren der Lizenz zustimmen.</message>
 	<message key="manager.setup.authorCopyrightNotice">Copyright-Vermerk</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Der hier angegebene Copyright-Vermerk erscheint in der "Über uns"-Sektion und in den Metadaten jedes publizierten Beitrags. Natürlich steht es jeder Zeitschrift frei, mit ihren Autor/innen je eigene Vereinbarungen zu treffen. Das Public Knowledge Project empfiehlt jedoch die Verwendung der <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>-Lizenz. Zu diesem Zweck bietet das Projekt <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">beispielhafte Copyright-Formulierungen</a> an, die in das Feld unten eingefügt werden können. Sie richten sich an Zeitschriften (a) mit Open Access, (b) mit verzögertem Open Access oder (c) ohne Open Access.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Der hier angegebene Copyright-Vermerk erscheint in der "Über uns"-Sektion. Er sollte Leser/innen und Autor/innen mitteilen, wer über die Rechte verfügt: Autor/in, Zeitschrift oder eine dritte Partei. Er sollte zusätzliche Lizenzhinweise enthalten (z.B. <a href="http://creativecommons.org" target="_new" class="action">Creative-Commons</a>-Lizenzen), die Leser/innen Rechte einräumen (vgl. <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">Beispiele</a>), und er sollte, falls notwendig, Wege benennen, um weitere Nutzungsrechte für die Zeitschrifteninhalte zu erhalten.]]></message>
 	<message key="manager.setup.authorGuidelines">Richtlinien für Autor/innen</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Bibliografische und Formatstandards für die Autor/innen (z.B. <em>Publication Manual of the American Psychological Association</em>, 5. Auflage 2001). Beispiele der wichtigsten Zitationsstandards für Zeitschriften und Bücher sind oft eine Hilfe. Ebenso Angaben zu infrage kommenden Zusatzdateien (z.B. Datensätze, Forschungsinstrumente, Grafiken usw.), die Autor/innen zu ihren Beiträgen hochladen sollten, wenn das Interesse der Leser/innen auf diese Weise gefördert wird.]]></message>
 	<message key="manager.setup.competingInterests">Interessenkonflikte</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedizinische Zeitschriften verlangen üblicherweise von ihren Autor/innen und Gutachter/innen, dass sie erklären, ob sie sich bezüglich ihrer Forschung in einem Interessenskonflikt befinden (siehe <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedizinische Zeitschriften verlangen üblicherweise von ihren Autor/innen und Gutachter/innen, dass sie erklären, ob sie sich bezüglich ihrer Forschung in einem Interessenkonflikt befinden (siehe <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Richtlinien für die Formulierung einer Erklärung zu Interessenkonflikten</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Verlangen Sie von Autor/innen, die einen Beitrag einreichen wollen, zusätzlich eine Erklärung zu möglicherweise bestehenden Interessenkonflikten.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Verlangen Sie von Gutachter/innen zusammen mit jeder Begutachtung eine Erklärung zu möglicherweise bestehenden Interessenkonflikten.</message>
@@ -227,6 +227,14 @@
 	<message key="manager.setup.copyediting">Lektor/in</message>
 	<message key="manager.setup.copyeditInstructions">Anweisungen für das Lektorat</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Die Anweisungen werden den Lektor/innen, Autor/innen und Redakteur/innen mit dem zu bearbeitenden Beitrag übermittelt. Nachstehend finden Sie eine Reihe von Standardanweisungen im HTML-Format. Sie können jederzeit von der Zeitschriftenverwaltung ersetzt oder geändert werden (in HTML oder einfachem Text).</message>
+	<message key="manager.setup.permissions.priorAgreement">Vorherige Vereinbarung</message>
+	<message key="manager.setup.permissions.display">Anzeigen</message>
+	<message key="manager.setup.licenseURLDescription">Bitte geben Sie einen URL zum Lizenztext an, sofern verfügbar.</message>
+	<message key="manager.setup.includeCopyrightStatement">Den Copyright-Vermerk zusammen mit den Inhalten anzeigen (ratsam, um durch Autor/innen gehaltenes Copyright geltend zu machen).</message>
+	<message key="manager.setup.includeLicense">Die Lizenz zusammen mit dem veröffentlichten Werk anzeigen.</message>
+	<message key="manager.setup.resetPermissions">Rechte zum Artikel zurücksetzen</message>
+	<message key="manager.setup.resetPermissions.description">Copyright-Vermerk und Lizenzinformation werden dauerhaft mit dem Inhalt verbunden, damit sie nicht geändert werden, wenn eine Zeitschrift die Regeln für neue Einreichungen ändert. Um bereits zusammen mit den veröffentlichten Inhalten gespeicherte Angaben zu den Rechten zurückzusetzen, benutzen Sie bitte den Knopf unten.</message>
+	<message key="manager.setup.confirmResetLicense">Sind Sie sicher, dass Sie die Informationen zu Lizenz und Copyright, die mit veröffentlichten Inhalten verknüpft sind, auf die in der Zeitschriftenverwaltung gespeicherte Lizenz zurücksetzen wollen?</message>
 	<message key="manager.setup.copyrightNotice">Copyright-Vermerk</message>
 	<message key="manager.setup.coverage">Themenbereich</message>
 	<message key="manager.setup.coverageChronExamples">(z.B. Europäische Renaissance; Erdzeitalter Jura; Drittes Trimester usw.)</message>
@@ -347,7 +355,7 @@
 	<message key="manager.setup.lists">Listen</message>
 	<message key="manager.setup.listsDescription">Maximalzahl der Elemente auf jeder Listenseite (z.B. Beiträge, Benutzer/innen oder redaktionelle Aufgaben) festlegen sowie die Anzahl der Links, die auf jeder Seite erscheinen sollen.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Aktivieren Sie LOCKSS und verteilen und lagern Sie den Inhalt der Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über eine LOCKSS <a href="{$lockssUrl}" target="_blank">Redakteur/innen-Erklärung-</a>Seite. Es erscheint dann eine Lizenz von LOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Siehe <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">andere Versionen einer LOCKSS-Lizenz</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Siehe <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">andere Versionen einer LOCKSS-Lizenz</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifizieren Sie 6 bis 10 Bibliotheken, die die Zeitschrift registrieren und archivieren sollen. Wenden Sie sich zum Beispiel an Einrichtungen, in denen Mitglieder der Redaktion oder des Beirats arbeiten und/oder Einrichtungen, die bereits an LOCKSS beteiligt sind. Siehe <a href="http://www.lockss.org/community/" target="_blank">The Community</a>. Verwenden Sie die vorgefertigten Anfragen für (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">an LOCKSS teilnehmende Bibliotheken</a> oder für (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">an LOCKSS noch nicht teilnehmende Bibliotheken</a>.]]></message>
 	<message key="manager.setup.look">Gestaltung</message>
 	<message key="manager.setup.look.description">Titel der Startseite, Inhalt, Kopfzeile der Zeitschrift, Fußzeile, Navigationsleiste und Style Sheet.</message>
@@ -380,9 +388,9 @@
 	<message key="manager.setup.openAccessPolicy">Open-Access-Richtlinien</message>
 	<message key="manager.setup.openAccessPolicyDescription">Wenn die Zeitschrift ihren Leser/innen sofortigen freien Zugang (Open Access) zu allen veröffentlichten Inhalten gewährt, geben Sie eine Open-Access-Richtlinie ein, die in "Über uns" der Zeitschrift unter "Open-Access-Richtlinie" erscheint.</message>
 	<message key="manager.setup.pageNumberIdentifier">Seitenzahl-Option </message>
-	<message key="manager.setup.peerReviewDescription">Skizzieren Sie die Peer-Review-Richtlinien und -verfahren für Leser/innen und Autor/innen (inkl. der Anzahl von Gutachter/innen, die üblicherweise mit der Begutachtung eines Beitrags betraut sind, der Kriterien, an denen die Gutachter/innen ihre Bewertung ausrichten sollen, der Zeitspanne, die üblicherweise für eine Begutachtung benötigt wird, und der Grundsätze, nach denen die Gutachter/innen ausgewählt werden). Dieser Text erscheint dann unter "Über uns".</message>
-	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
-	<message key="manager.setup.peerReviewPolicy2">Peer-Review-Richtlinien</message>
+	<message key="manager.setup.peerReviewDescription">Skizzieren Sie die Begutachtungsgrundsätze und -verfahren für Leser/innen und Autor/innen (inkl. der Anzahl von Gutachter/innen, die üblicherweise mit der Begutachtung eines Beitrags betraut sind, der Kriterien, an denen die Gutachter/innen ihre Bewertung ausrichten sollen, der Zeitspanne, die üblicherweise für eine Begutachtung benötigt wird, und der Grundsätze, nach denen die Gutachter/innen ausgewählt werden). Dieser Text erscheint dann unter "Über uns".</message>
+	<message key="manager.setup.peerReviewPolicy">Begutachtung</message>
+	<message key="manager.setup.peerReviewPolicy2">Begutachtungsgrundsätze</message>
 	<message key="manager.setup.policies">Zur Zeitschrift</message>
 	<message key="manager.setup.policies.description">Schwerpunkt, Begutachtung, Rubriken, Schutz persönlicher Daten, Sicherheit und andere Themen.</message>
 	<message key="manager.setup.principalContactDescription">Der Hauptkontakt kann mit der Hauptredakion, mit leitenden Redaktions- oder mit Verwaltungsaufgaben betraut sein. Er erscheint auf der Startseite der Zeitschrift unter "Kontakt", zusammen mit dem Kontakt bei technischen Fragen.</message>
@@ -436,7 +444,7 @@
 	<message key="manager.setup.reviewOptions.reviewerReminders">Erinnerung für Gutachter/innen </message>
 	<message key="manager.setup.reviewOptions.reviewTime">Zeitaufwand der Begutachtung</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Bietet Links zu <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Anonyme Begutachtung sicherstellen</a> auf den Seiten, auf denen Autor/innen und Gutachter/innen Dateien hochladen.]]></message>
-	<message key="manager.setup.reviewPolicy">Richtlinien für die Begutachtung</message>
+	<message key="manager.setup.reviewPolicy">Begutachtungsgrundsätze</message>
 	<message key="manager.setup.reviewProcess">Begutachtungsverfahren</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS unterstützt zwei Modelle für die Verwaltung des Begutachtungsverfahrens. Es empfiehlt sich, das Standardbegutachtungsverfahren zu wählen, weil es die Gutachter/innen Schritt für Schritt durch das Verfahren führt und somit einen vollständigen Begutachtungsverlauf für jeden Beitrag garantiert. Außerdem enthält es eine automatische Erinnerungsfunktion sowie Standardempfehlungen zu den Beiträgen (Beitrag annehmen; Überarbeitung erforderlich; Erneut zur Begutachtung einreichen; Anderswo erneut einreichen; Beitrag ablehnen; Siehe Kommentare).<br /><br /> Wählen Sie unter den folgenden:]]></message>
 	<message key="manager.setup.reviewProcessEmail">Begutachtungsverfahren über E-Mail-Anhänge</message>
@@ -625,6 +633,8 @@
 	<message key="manager.subscriptions.form.typeId">Abonnementtyp</message>
 	<message key="manager.subscriptions.form.typeIdRequired">Ein Abonnementtyp ist erforderlich.</message>
 	<message key="manager.subscriptions.form.typeIdValid">Wählen Sie einen gültigen Abonnementtyp.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Erinnerung vor Ablauf</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Erinnerung nach Ablauf</message>
 	<message key="manager.subscriptions.form.dateStart">Anfangsdatum</message>
 	<message key="manager.subscriptions.form.dateStartRequired"> Ein Anfangsdatum des Abonnements ist erforderlich.</message>
 	<message key="manager.subscriptions.form.dateStartValid">Wählen Sie ein gültiges Anfangsdatum des Abonnements.</message>

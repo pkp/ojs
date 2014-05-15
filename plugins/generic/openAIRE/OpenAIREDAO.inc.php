@@ -18,7 +18,7 @@ import('classes.oai.ojs.OAIDAO');
 
 class OpenAIREDAO extends OAIDAO {
 
- 	/**
+	/**
 	 * Constructor.
 	 */
 	function OpenAIREDAO() {

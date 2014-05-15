@@ -899,10 +899,6 @@ class IssueManagementHandler extends EditorHandler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 
-		$issue->setCurrent(1);
-		$issue->setPublished(1);
-		$issue->setDatePublished(Core::getCurrentDate());
-
 		$articleSearchIndex = null;
 		if (!$issue->getPublished()) {
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
@@ -913,9 +909,6 @@ class IssueManagementHandler extends EditorHandler {
 				$article =& $articleDao->getArticle($publishedArticle->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
 					$article->setStatus(STATUS_PUBLISHED);
-					if ($article && !$article->getDatePublished()) {
-						$article->setDatePublished($issue->getDatePublished());
-					}
 					$article->stampStatusModified();
 					$articleDao->updateArticle($article);
 					if (!$articleSearchIndex) {
@@ -931,6 +924,10 @@ class IssueManagementHandler extends EditorHandler {
 			}
 		}
 
+		$issue->setCurrent(1);
+		$issue->setPublished(1);
+		$issue->setDatePublished(Core::getCurrentDate());
+
 		// If subscriptions with delayed open access are enabled then
 		// update open access date according to open access delay policy
 		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $journal->getSetting('enableDelayedOpenAccess')) {
@@ -944,7 +941,7 @@ class IssueManagementHandler extends EditorHandler {
 			$curDay = date('j');
 
 			$delayOpenAccessYear = $curYear + $delayYears + (int)floor(($curMonth+$delayMonths)/12);
-			$delayOpenAccessMonth = (int)fmod($curMonth+$delayMonths,12);
+ 			$delayOpenAccessMonth = (int)fmod($curMonth+$delayMonths,12);
 
 			$issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
 			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$delayOpenAccessMonth,$curDay,$delayOpenAccessYear)));
@@ -1007,7 +1004,6 @@ class IssueManagementHandler extends EditorHandler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId);
 		foreach ($publishedArticles as $article) {
-			// TODO: unset publication dates on the articles?
 			$articleTombstoneManager->insertArticleTombstone($article, $journal);
 		}
 		$request->redirect(null, null, 'futureIssues');

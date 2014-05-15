@@ -444,7 +444,7 @@ class SubscriptionManagerHandler extends Handler {
 		$success = OJSPaymentAction::savePaymentSettings($args);
 
 		if ($success) {
- 			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payments'),
 				'pageTitle' => 'manager.payment.feePaymentOptions',
@@ -500,7 +500,7 @@ class SubscriptionManagerHandler extends Handler {
 		$success = OJSPaymentAction::savePayMethodSettings();
 
 		if ($success) {
- 			$templateMgr =& TemplateManager::getManager();
+			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',
@@ -543,7 +543,7 @@ class SubscriptionManagerHandler extends Handler {
 			$userId = (int) $userId;
 			$user = $userDao->getById($userId);
 		} else {
-			$user = $userDao->getUserByUsername($userId);
+			$user = $userDao->getByUsername($userId);
 		}
 
 		if ($user == null) {

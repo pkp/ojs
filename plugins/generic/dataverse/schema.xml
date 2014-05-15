@@ -36,12 +36,12 @@
 		<field name="statement_uri" type="C2" size="255">
 			<NOTNULL/>
 		</field>
-    <field name="persistent_uri" type="C2" size="255">
-      <NOTNULL/>
-    </field>
-    <field name="data_citation" type="X">
-      <NOTNULL/>
-    </field>
+		<field name="persistent_uri" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="data_citation" type="X">
+			<NOTNULL/>
+		</field>
 		<descr>Dataverse studies</descr>
 		<index name="dataverse_studies_submission_id">
 			<col>submission_id</col>
@@ -61,12 +61,12 @@
 		</field>
 		<field name="study_id" type="I8">
 			<NOTNULL/>
-      <DEFAULT value="0"/>
+			<DEFAULT VALUE="0"/>
 		</field>
-    <field name="content_source_uri" type="C2" size="255">
-      <NOTNULL/>
-      <DEFAULT value=""/>      
-    </field>
+		<field name="content_source_uri" type="C2" size="255">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>      
+		</field>
 		<descr>Dataverse files</descr>
 		<index name="dataverse_files_supp_id">
 			<col>supp_id</col>

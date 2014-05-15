@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/alm/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * ALM plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+
+	<message key="plugins.generic.alm.displayName">ALM-Plug-In</message>
+	<message key="plugins.generic.alm.description">Plug-In zur Anzeige von Article Level Metrics. Um den ALM-Dienst zu benutzen, müssen Sie DOI benutzen. Diese Anforderung wird zukünftig vielleicht aufgehoben.</message>
+	<message key="plugins.generic.alm.title">Artikelmetriken</message>
+	<message key="plugins.generic.alm.loading">Metriken werden geladen ...</message>
+
+	<message key="plugins.generic.alm.settings">Einstellungen</message>
+	<message key="plugins.generic.alm.settings.saved">Einstellungen des ALM-Plug-Ins gespeichert.</message>
+	<message key="plugins.generic.alm.apiKeyRequired">Sie müssen Ihren API-Key für Article Level Metrics angeben.</message>
+	<message key="plugins.generic.alm.depositUrlRequired">Sie müssen einen URL für die Ablieferung von Artikelinformationen angeben.</message>
+	<message key="plugins.generic.alm.settings.apiKey">API-Key für Article Level Metrics</message>
+	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[Um auf die Article Level Metrics des ALM-Servers zugreifen zu können, benötigen Sie einen API-Key. Sie können einen erzeugen, indem Sie sich (mittels Mozilla Persona) auf der <a href="http://pkp-alm.lib.sfu.ca/">PKP-ALM-Seite</a> einloggen.]]></message>
+	<message key="plugins.generic.alm.settings.depositUrl">URL zur Ablieferung von Artikelinformationen</message>
+	<message key="plugins.generic.alm.settings.depositUrl.description">Von PKP angegebener URL zur Ablieferung von Artikeln.</message>
+	<message key="plugins.generic.alm.settings.ipAddress">Wenn Sie PKP kontaktieren, um den ALM-Dienst einzurichten, geben Sie bitte diese IP-Adresse an: {$ip}</message>
+
+	<message key="plugins.generic.alm.thisJournal">Diese Zeitschrift</message>
+	<message key="plugins.generic.alm.categories.html">HTML-Zugriffe.</message>
+	<message key="plugins.generic.alm.categories.html.description">Gesamtzahl der Zugriffe auf HTML-Seiten dieses Artikels. Diese Zugriffe werden direkt im System gemessen. Monatsweise aggregierte Zugriffe können ebenfalls verfügbar sein.</message>
+	<message key="plugins.generic.alm.categories.pdf">PDF-Zugriffe.</message>
+	<message key="plugins.generic.alm.categories.pdf.description">Gesamtzahl der (Lese- und Download-)Zugriffe auf PDF-Fahnen dieses Artikels. Diese Zugriffe werden direkt im System gemessen. Monatsweise aggregierte Zugriffe können ebenfalls verfügbar sein.</message>
+	<message key="plugins.generic.alm.categories.shares">Shares</message>
+	<message key="plugins.generic.alm.categories.shares.description">Shares oder Bookmarks in sozialen Netzwerken wie Facebook, CiteULike und Mendeley. In den meisten Fällen gelangen Sie durch das Klicken auf die Zahl der Shares zu einer Auflistung in dem Netzwerk selbst.</message>
+	<message key="plugins.generic.alm.categories.likes">Likes</message>
+	<message key="plugins.generic.alm.categories.likes.description">Likes, die in sozialen Netzwerken wie z.B. Facebook gefunden wurden.</message>
+	<message key="plugins.generic.alm.categories.citations">Zitationen</message>
+	<message key="plugins.generic.alm.categories.citations.description">Zitationen dieses Artikels, die in CrossRef, PubMed und Wikipedia gefunden wurden. In den meisten Fällen gelangen Sie durch das Klicken auf die Zahl der Zitationen zu einer Auflistung im jeweiligen Dienst selbst..</message>
+
+	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">Das ALM-Plug-In ist aktiviert, aber ein gültiger DOI-Präfix muss im Setup zum Zeitschriftenpfad {$path} festgelegt werden, damit Artikelinformationen gesendet werden können.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">Das ALM-Plug-In ist aktiviert, aber es ist kein API-Key für den Zeitschriftenpfad {$path} definiert.</message>
+	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Übermittlung von Artikelinformationen für Zeitschriftenpfad {$path} konnte nicht bestätigt werden. Der Server hat nicht geantwortet.</message>
+	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">Kein Ablieferungs-URL definiert.</message>
+	<message key="plugins.generic.alm.senderTask.error.returnError">Der Server hat ein Resultat geliefert: {$error}
+	{$articlesNumber} Einträge zu Artikeln wurden gesendet.
+	{$payload}
+	</message>
+	<message key="plugins.generic.alm.senderTask.name">Absender/in der ALM-Artikelinformationen</message>
+	
+</locale>

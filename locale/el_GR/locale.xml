@@ -299,8 +299,8 @@
         <message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ΣΗΜΕΙΩΣΗ!</div>  
         <p>Δεν ήταν δυνατή η αυτόματη αντικατάσταση του αρχείου ρυθμίσεων από το σύστημα. Για να εφαρμόσετε τις αλλαγές στις ρυθμίσεις πρέπει να ανοίξετε το <tt>config.inc.php</tt> με έναν κατάλληλο επεξεργαστή κειμένου και να αντικαταστήσετε τα περιεχόμενά του με τα περιεχόμενου του παρακάτω πεδίου κειμένου.</p>]]></message>
         
-     		
-     		<!-- Site Administrator Merge Users -->	
+
+	<!-- Site Administrator Merge Users -->	
 
         <!-- Subscription Management -->
         <message key="subscriptionManager.subscriptionManagement">Διαχείριση  Συνδρομών</message>
@@ -339,12 +339,12 @@
 				
 
 
-        <message key="manager.setup.lockssDescription"><![CDATA[Το OJS υποστηρίζει το σύστημα <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots  of Copies Keep Stuff Safe) για την διασφάλιση ενός ασφαλούς και μόνιμου αρχείου για το περιοδικό. Το LOCKSS αποτελεί ανοικτό λογισμικό που δημιουργήθηκε στη Βιβλιοθήκη του Πανεπιστημίου του Stanford και παρέχει τη δυνατότητα στις βιβλιοθήκες να διατηρούν επιλεγμένα διαδικτυακά περιοδικά μέσω τακτικής σφυγμομέτρησης των εγγεγραμμένων ιστοτόπων των περιοδικών για περιεχόμενο που έχει δημοσιευτεί πρόσφατα και για αρχειοθέτηση αυτού. Κάθε αρχείο επικυρώνεται συνεχώς έναντι άλλων προσωρινών μνημών βιβλιοθηκών, και εάν εντοπιστούν κατεστραμμένα ή απολεσθέντα περιεχόμενα, χρησιμοποιούνται για την αποκατάστασή τους άλλες προσωρινές μνήμες ή το ίδιο το περιοδικό.
+        <message key="manager.setup.lockssDescription"><![CDATA[Το OJS υποστηρίζει το σύστημα <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots  of Copies Keep Stuff Safe) για την διασφάλιση ενός ασφαλούς και μόνιμου αρχείου για το περιοδικό. Το LOCKSS αποτελεί ανοικτό λογισμικό που δημιουργήθηκε στη Βιβλιοθήκη του Πανεπιστημίου του Stanford και παρέχει τη δυνατότητα στις βιβλιοθήκες να διατηρούν επιλεγμένα διαδικτυακά περιοδικά μέσω τακτικής σφυγμομέτρησης των εγγεγραμμένων ιστοτόπων των περιοδικών για περιεχόμενο που έχει δημοσιευτεί πρόσφατα και για αρχειοθέτηση αυτού. Κάθε αρχείο επικυρώνεται συνεχώς έναντι άλλων προσωρινών μνημών βιβλιοθηκών, και εάν εντοπιστούν κατεστραμμένα ή απολεσθέντα περιεχόμενα, χρησιμοποιούνται για την αποκατάστασή τους άλλες προσωρινές μνήμες ή το ίδιο το περιοδικό.
         <br /><br />  
         Δεν είναι αναγκαία η ρύθμιση της υποστήριξης LOCKSS για το περιοδικό σας μέχρι την πλήρη δρομολόγηση της δημοσίευσης. Στο σημείο αυτό ακολουθείστε τα ακόλουθα δύο βήματα:]]></message>
 
         <!-- Setup Step 3 -->
-       	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Προτεινόμενες Δηλώσεις Προστασίας Πνευματικών Δικαιωμάτων Creative Commons </h3>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Προτεινόμενες Δηλώσεις Προστασίας Πνευματικών Δικαιωμάτων Creative Commons </h3>
 <h4>1. Προτεινόμενη Πολιτική για περιοδικά Ανοικτής Πρόσβασης</h4>
 Οι Συγγραφείς που δημοσιεύουν εργασίες τους σε αυτό το περιοδικό συμφωνούν στους παρακάτω όρους:
 <ol type="a">
@@ -416,7 +416,7 @@
         <!-- Announcements Management -->
 
         <!-- Editor -->
-       	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 				<li>Τα τονισμένα τεκμήρια υποδεικνύουν κάποια απαιτούμενη ενέργεια από τον Επιμελητή του Περιοδικού.</li>
 				<li>Το πεδίο "Προθεσμία Αξιολόγησης" συμπληρώνεται όταν ο Αξιολογητής αποδέχεται το αίτημα για αξιολόγηση της υποβολής. Προβάλει τον αριθμό των εβδομάδων μέχρι την προθεσμία αξιολόγησης ή (στην περίπτωση που εμφανίζεται το "-") τον αριθμό των εβδομάδων που έχουν περάσει από την συγκεκριμένη προθεσμία.</li>
 				</ol>]]></message>
@@ -782,7 +782,7 @@
         <li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (συμπεριλαμβανομένης της PHP 5.x)</li>         
         <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (συμπεριλαμβανομένης της MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (συμπεριλαμβανομένου του PostgreSQL 8.x)</li>         
         <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x ή Microsoft IIS 6</li>         
-        <li>Λειτουργικό σύστημα: οποιοδήποτε λειτουργικό σύστημα υποστηρίζει το προαναφερόμενο λογισμικό, συμπεριλαμβανομένων των <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li> 
+        <li>Λειτουργικό σύστημα: οποιοδήποτε λειτουργικό σύστημα υποστηρίζει το προαναφερόμενο λογισμικό, συμπεριλαμβανομένων των <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li> 
         </ul>  
         
         <p>Εφόσον το PKP δεν διαθέτει τους πόρους για να δοκιμάσει κάθε πιθανό συνδυασμό εκδόσεων λογισμικού και πλατφορμών, δεν υπάρχει εγγύηση σωστής λειτουργίας ή υποστήριξης.</p>  
@@ -1085,7 +1085,7 @@
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Η χειρωνακτική πληρωμή έχει ξεκινήσει αλλά δεν έχει παραληφθεί ακόμα</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Μια διαδικτυακή πληρωμή έχει ξεκινήσει, αλλά ακυρώθηκε ή δεν ολοκληρώθηκε</message>
 	<message key="article.pdf.download">Μεταφορτώστε αυτό το αρχείο PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Το αρχείο PDF που επιλέξατε θα πρέπει να φορτωθεί εδώ αν ο περιηγητής ιστού που χρησιμοποιείται έχει εγκατεστημένο ένα πρόσθετο PDF  ανάγνωσης τέτοιων αρχείων (π.χ. μια πρόσφατη έκδοση του <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Εναλλακτικά μπορείτε να μεταφορτώσετε το αρχείο κατευθείαν στον υπολογιστή σας, όπου μπορείτε να το ανοίξετε με ένα πρόγραμμα ανάγνωσης PDF αρχείων. Για να μεταφορτώσετε το  αρχείο PDF, πατήστε τον σύνδεσμο μεταφόρτωσης παρακάτω .</p> <p>Αν θέλετε περισσότερες πληροφορίες σχετικά με την εκτύπωση, αποθήκευση και χρήση των PDF αρχείων, ο οίκος Highwire Press παρέχει ένα χρήσιμο <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Οδηγό</a> σχετικό με τα PDF.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Το αρχείο PDF που επιλέξατε θα πρέπει να φορτωθεί εδώ αν ο περιηγητής ιστού που χρησιμοποιείται έχει εγκατεστημένο ένα πρόσθετο PDF  ανάγνωσης τέτοιων αρχείων (π.χ. μια πρόσφατη έκδοση του <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Εναλλακτικά μπορείτε να μεταφορτώσετε το αρχείο κατευθείαν στον υπολογιστή σας, όπου μπορείτε να το ανοίξετε με ένα πρόγραμμα ανάγνωσης PDF αρχείων. Για να μεταφορτώσετε το  αρχείο PDF, πατήστε τον σύνδεσμο μεταφόρτωσης παρακάτω .</p> <p>Αν θέλετε περισσότερες πληροφορίες σχετικά με την εκτύπωση, αποθήκευση και χρήση των PDF αρχείων, ο οίκος Highwire Press παρέχει ένα χρήσιμο <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Οδηγό</a> σχετικό με τα PDF.</p>]]></message>
 	<message key="payment.authorFees">Εισφορές Συγγραφέων</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Η πρόσβαση δεν σας επιτρέπεται. Δεν σας έχει ανατεθεί ο ρόλος του Επιμελητή Κειμένου για αυτό το άρθρο.</message>
 	<message key="user.authorization.noJournal">Δεν υπάρχει κανένα περιοδικό!</message>

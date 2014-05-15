@@ -172,7 +172,7 @@ class Upgrade extends Installer {
 				case 3: // ISSUE_LABEL_YEAR
 					$settings['publicationFormatYear'] = true;
 					break;
- 				case 2: // ISSUE_LABEL_VOL_YEAR
+				case 2: // ISSUE_LABEL_VOL_YEAR
 					$settings['publicationFormatVolume'] = true;
 					$settings['publicationFormatYear'] = true;
 					break;
@@ -304,7 +304,6 @@ class Upgrade extends Installer {
 			'metaCoverageChronExamples' => 'metaCoverageChronExamples',
 			'metaCoverageResearchSampleExamples' => 'metaCoverageResearchSampleExamples',
 			'metaTypeExamples' => 'metaTypeExamples',
-			'metaCitations' => 'metaCitations',
 			// Setup page 4
 			'pubFreqPolicy' => 'pubFreqPolicy',
 			'copyeditInstructions' => 'copyeditInstructions',

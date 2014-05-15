@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/dataverse/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Dataverse plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+
+	<!-- Dataverse Plugin -->
+	<message key="plugins.generic.dataverse.displayName">Dataverse-Plug-In</message>
+	<message key="plugins.generic.dataverse.description">Legt Datensets und/oder andere Zusatzdateien in Dataverse ab.</message>
+
+	<!-- Set up Dataverse: DVN URL and authentication details -->
+	<message key="plugins.generic.dataverse.settings.connect">Verbinden</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">Dataverse Network URL</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL des Dataverse Network, zu dem das Dataverse der Zeitschrift gehört</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Benutzer/innenname des Accounts, der für die Archivierung von Dateien in Dataverse benutzt werden soll</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Passwort zum angegebenen Benutzer/innennamen</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">URL des Dataverse Networks wird benötigt.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">URL des Dataverse Networks ist ungültig.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Bitte geben Sie einen gültigen Benutzer/innennamen für das angegebene Dataverse Network an.</message>
+	<message key="plugins.generic.dataverse.settings.passwordRequired">Bitte geben Sie ein gültiges Passwort für das angegebene Dataverse Network an.</message>
+
+	<!-- Set up Dataverse: select Dataverse --> 
+	<message key="plugins.generic.dataverse.settings.selectDataverse">Dataverse auswählen</message>
+	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverseDescription">Wählen Sie ein Dataverse aus, um Dateien der Daten dieser Zeitschrift zu speichern.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseRequired">Bitte wählen Sie ein Dataverse aus.</message>
+
+	<!-- Plugin configuration: Settings -->
+	<message key="plugins.generic.dataverse.settings">Einstellungen</message>
+	<message key="plugins.generic.dataverse.settings.dataPolicies">Datenrichtlinien</message>
+	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">Datenrichtlinien konfigurieren.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">Richtlinie zur Datenverfügbarkeit</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">Allgemeine Richtlinie zur Datenverfügbarkeit der Zeitschrift. Die Richtlinie wird unter "Über uns" veröffentlicht.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">Bitte geben Sie eine Richtlinie zur Datenverfügbarkeit an.</message>
+	<message key="plugins.generic.dataverse.settings.sectionPoliciesDescription">Datenrichtlinien für besondere Rubriken der Zeitschrift hinzufügen.</message>
+	<message key="plugins.generic.dataverse.settings.authorGuidelinesDescription"><![CDATA[<a href="{$authorGuidelinesUrl}" target="_blank">Autor/innenrichtlinien</a> bearbeiten, um Richtlinien zur Dateneinreichung und -zitation aufzunehmen.]]></message>
+	<message key="plugins.generic.dataverse.settings.checklistDescription"><![CDATA[<a href="{$checklistUrl}" target="_blank">Checkliste zur Vorbereitung einer Einreichung</a> bearbeiten, um Autor/innen bei der Erfüllung der Richtlinien zur Dateneinreichung und -zitation zu unterstützen.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewPolicyDescription"><![CDATA[<a href="{$reviewPolicyUrl}" target="_blank">Begutachtungsgrundsätze</a> bearbeiten, um Forschungsdaten mit zu erwähnen.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewGuidelinesUrl"><![CDATA[<a href="{$reviewGuidelinesUrl}" target="_blank">Begutachtungsrichtlinien</a> bearbeiten, um Richtlinen für die Begutachtung von Datensätzen mit aufzunehmen.]]></message>
+	<message key="plugins.generic.dataverse.settings.copyeditInstructionsUrl"><![CDATA[<a href="{$copyeditInstructionsUrl}" target="_blank">Lektoratsanweisungen</a> bearbeiten, um Anweisungen für Datensätze mit aufzunehmen.]]></message>
+	<message key="plugins.generic.dataverse.settings.termsOfUse">Nutzungsbedingungen</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseRequired">Geben Sie Nutzungsbedingungen an oder entscheiden Sie sich dafür, Nutzungsbedingungen von Dataverse zu übernehmen.</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseDescription">Geben Sie die Nutzungsbedingungen an, denen die Benutzer/innen zustimmen müssen, bevor Sie Daten archivieren.</message>
+	<message key="plugins.generic.dataverse.settings.fetchTermsOfUse">Übernehmen Sie Nutzungsbedingungen von dem Dataverse, das für diese Zeitschrift eingerichtet worden ist.</message>
+	<message key="plugins.generic.dataverse.settings.defineTermsOfUse">Geben Sie angepasste Nutzungsbedingungen in das Feld unten ein.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">Nutzungsbedingungen des konfigurierten Dataverse konnten nicht gelesen werden. Bitte überprüfen Sie Ihre Verbindungseinstellungen.</message>
+	<message key="plugins.generic.dataverse.settings.metadata">Metadaten-Einstellungen</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat">Zitationsformat</message>
+	<message key="plugins.generic.dataverse.settings.citationFormatDescription">Wählen Sie das Zitationsformat für Publikationen aus, das in der Katalogisierung der Studien benutzt werden soll.</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat.apa">APA-Zitationsstil</message>
+	<message key="plugins.generic.dataverse.settings.pubIdType">Typ der öffentlichen Kennung</message>
+	<message key="plugins.generic.dataverse.settings.pubIdTypeDescription"><![CDATA[Wählen Sie einen Typ öffentlicher Kennungen (Identifier) aus, um aus der Zitation zum Artikel zu verlinken. Wenn keine <a href="{$pubIdsUrl}">Plug-Ins für öffentliche Kennungen</a> aktiviert sind, werden in den Zitationen OJS-URL benutzt.]]></message>
+	<message key="plugins.generic.dataverse.settings.workflow">Workflow-Einstellungen</message>
+	<message key="plugins.generic.dataverse.settings.requireData">Daten erfordern</message>
+	<message key="plugins.generic.dataverse.settings.requireDataDescription">Für Einreichungen müssen Dateien mit Forschungsdaten in Dataverse archiviert werden.</message>
+	<message key="plugins.generic.dataverse.settings.requireDataError">Autor/innen müssen Forschungsdaten in Dataverse archivieren. Bitte laden Sie eine Zusatzdatei hoch, um weiterzumachen.</message>
+	<message key="plugins.generic.dataverse.settings.studyRelease">Freigabe der Studie</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseSubmissionAccepted">Redakteur/in akzeptiert die Einreichung</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">Artikel ist veröffentlicht</message>
+
+	<!-- Settings: default values -->
+	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[{$journal} verlangt für eine Veröffentlichung, dass Forschungsdaten, die die Ergebnisse des Artikels stützen, in einem angemessenen öffentlichen Archiv abgelegt werden sollen. {$journal} empfiehlt das <a href="http://thedata.harvard.edu/">Harvard Dataverse</a>, das frei und offen von alle Forscher/innen weltweit zum Teilen, Zitieren, Nachnutzen und Archivieren von Forschungsdaten genutzt werden kann. Forschungsdaten sind wichtige Produkte der wissenschaftlichen Arbeit, und sie sollten erhalten werden und auch in einigen Jahrzehnten noch benutzbar sein. Die Autor/innen können sich dafür entscheiden, die Daten zum Zeitpunkt der Veröffentlichung öffentlich zugänglich zu machen. Die Genehmigung von Ausnahmen liegt im Ermessen des/der Redakteur/in, insbesondere bei sensiblen Informationen wie Daten zu Versuchspersonen oder die Orte von gefährdeten Spezies. Alle Ausnahmen sollten in einer Erklärung im veröffentlichten Artikel dokumentiert werden. (Adaption der <a href="http://datadryad.org/pages/jdap">Joint Data Archiving Policy</a> (JDAP)).]]></message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras">Beispiele für Autor/innenrichtlinien</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras.label">Beispiele für Richtlinien zur Dateneinreichung und -zitation anzeigen</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines"><![CDATA[
+   <ol>
+     <li>
+       <p>Definition von Daten, die geteilt werden müssen</p>
+       <p>Ein „minimaler Datensatz“ besteht aus dem Datensatz, der zu den Schlussfolgerungen im Manuskript gefährt hat, mit zugehörigen Metadaten und Methoden sowie allen zusätzlichen Daten, die nötig sind, um die vorgestellten Ergebnisse der Studie komplett zu reproduzieren. Fügen Sie ausreichende Informationen hinzu, damit ein/e Forscher/in die Daten verstehen kann, und alle Referenzen zu Daten, aus denen der Replikationssatz abgeleitet ist. Zentrale beschreibende Daten, Methoden und Studienergebnisse sollten unabhängig von der Archivierung der Forschungsdaten in den Hauptartikel aufgenommen werden. Autor/innen, deren Datensätze zu groß sind, um sie mittels Repositorien oder hochgeladenen Dateien zu teilen, sollten {$journal} um Rat fragen. (Adaption von <a href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">PLOS’ Data Policy</a>)</p>
+     </li>
+     <li>
+       <p>Anleitung zum Teilen von Datensätzen aus der Forschung an Menschen</p>
+       <p>{$journal} erkennt an, dass es Fälle gibt, wo aus Gründen der Privatsphäre, nationaler Sicherheit oder bei Geschäftsgeheimnissen nicht die kompletten Daten frei zugänglich gemacht werden können. In solchen Fällen sollten Forscher/innen ihre Datenauswertung unter den am wenigsten restriktiven Bedingungen teilen, die mit den rechtlichen Anforderungen vereinbar und mit der Forschungsethik und den Leitlinien ihrer Communitiy im Einklang sind. Dazu sollte gehören, nicht-sensible Daten, zusammenfassende Daten, Metadaten und Code zugänglich zu machen sowie den Zugang zu erleichtern, wenn der/die Besitzer/in der Originaldaten anderen Forscher/innen die Erlaubnis zur Datennutzung gibt. (Adaption der <a href="http://openeconomics.net/principles/">Open Economics Priciples</a> der OKF)</p>
+     </li>
+     <li>
+       <p>Anleitung zur Datenzitation</p>
+       <p>Wenn Sie Ihre Forschungsdaten zur gleichen Zeit archivieren, zu der Sie Ihr Manuskript über das Einreichungsformular von OJS einreichen, wird das Harvard Dataverse automatisch eine Datenzitation generieren. Wenn Ihre Forschungsdaten jedoch in einem Repository vorhanden sind, benutzen Sie bitte das hier vorgeschlagene Datenzitationsformat, wenn Sie Ihr Manuskript einreichen:</p>
+       <p>Autor/in(nen), Jahr, Titel des Datensatzes, globale dauerhafte Kennung (Identifier), Datenrepository oder -archiv, Version und Teilmenge.</p>
+       <p>Mehr Informationen zur Datenzitation finden Sie in den <a href="http://www.force11.org/datacitation">Force11’s Data Citation Priciples</a>.</p>   
+     </li>
+   </ol>]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras">Beispiele für Checkliste</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras.label">Beispielhafte Einträge einer Checkliste für Einreichungen mit Datensätzen anzeigen</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[
+   <ol>
+   <li><p>Wenn Sie Datensätze teilen möchten, die aus der Forschung an Menschen stammen, lesen Sie bitte die "Anleitung zum Teilen von Datensätzen aus der Forschung an Menschen" weiter oben.</p></li>
+   <li><p>Beachten Sie die Richtlinien zur Datenreplikation: <a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a>, wenn Sie Ihren Datensatz zur Archivierung vorbereiten</p></li>
+   <li><p>Wenn Sie etwas im Harvard Dataverse archivieren, können Sie Ihren Datensatz in OJS zeitgleich mit Ihrem Manuskript für {$journal} einreichen. Er wird dann automatisch im Harvard Dataverse archiviert , und es wird eine Datenzitation mit einem persistenten URL (DOI) erzeugt, den Sie anderen zur Zitation Ihrer Daten mitteilen können, wenn Ihr Artikel veröffentlicht worden ist.</p></li>
+   <li><p>Wenn Ihr Datensatz bereits in einem empfohlenen öffentlichen Archiv vorhanden ist, geben Sie bitte eine Datenzitation mit einem persistenten URL an. Hinweise zur Datenzitation köönnen Sie den Autor/innenrichtlinien entnehmen.</p></li>
+   </ol>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras">Beispiele für Begutachtungsgrundsätze</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras.label">Beispiele für Begutachtungsgrundsätze für Datensätze anzeigen</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy"><![CDATA[
+   <ul>
+   <li><p>Archivierte Datensätze sollten für den Zweck der Begutachtung als Teil des Artikels betrachtet werden; ODER</p></li>
+   <li><p>Nach der Annahme und vor der endgültigen Fasung des Manuskripts, müssen die zugrundeliegenden Daten zusammen mit einer Beschreibung, wie der Datensatz erzeugt worden ist (inklusive aller Unterschiede zu früheren Versionen und der Namen alle Programme, die benutzt worden sind) eingereicht werden.</p></li>
+   </ul>
+   <p>Eine Begutachtungsrichtlinie sollte eine Aussage zu Daten, die aus Forschung an Menschen stammen, enthalten:</p>
+   <ul>
+   <li><p>In Datensätzen, die aus Forschung an Menschen stammen, sollte nachgewiesen sein, dass die Privatsphäre der Teilnehmer/innen an der Studie gewahrt worden ist (wie in der Richtlinie zur Datenverfügbarkeit beschrieben). Sie sollten vorzugsweise auch die Anforderungen an "minimale Datensätze" aus der Richtlinie zur Datenverfügbarkeit erfüllen.</p></li>
+   </ul>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras">Beispiele für Begutachtungsrichtlinien</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras.label">Beispiele für Richtlinien zur Begutachtung von Datensätzen anzeigen</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[
+   <p>Soweit es die zu einem Artikel gehörenden Daten betrifft, sollten die Gutachter/innen verifizieren, dass Artikel und Datensatz die Richtlinie zur Dateneinreichung der Zeitschrift erfüllen, dass die Daten zum Artikel passen und dass der Artikel und ergänzende Dokumentation ausreichend sind, um die gelieferten Daten, ihre Herkunft und die Weise, in der sie benutzt worden sind, zu verstehen.</p>
+   ]]>
+	</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras">Beispiele für Lektoratsanweisungen</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras.label">Beispiele für Lektoratsanweisungen zum Umgang mit Datensätzen anzeigen</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions"><![CDATA[
+		<ul>
+			<li><p>Die Lektor/innen haben die Einhaltung der Richtlinie zur Datenzitation verifiziert; ODER</p></li>
+			<li><p>Die Lektor/innen haben verifiziert, dass die empirischen Aussagen von angemessenen Referenzen auf Forschungsdaten begleitet werden.</p></li>   
+		</ul>
+	]]></message>
+
+	<!-- Notifications -->
+	<message key="plugins.generic.dataverse.notification.studyCreated">Daten der Einreichung sind in Dataverse archiviert worden.</message>
+	<message key="plugins.generic.dataverse.notification.studyUpdated">Daten der Einreichung sind in Dataverse aktualisiert worden.</message>
+	<message key="plugins.generic.dataverse.notification.fileAdded">Zusatzdatei ist in Dataverse archiviert worden.</message>
+	<message key="plugins.generic.dataverse.notification.fileDeleted">Zusatzdatei ist aus Dataverse entfernt worden.</message>
+	<message key="plugins.generic.dataverse.notification.studyDeleted">Daten der Einreichung sind aus Dataverse entfernt worden.</message>
+	<message key="plugins.generic.dataverse.notification.releaseDataverse"><![CDATA[Daten, die im Dataverse dieser Zeitschrift veröffentlicht werden, ist nicht zugänglich, bis das Dataverse veröffentlicht wird. Bitte loggen Sie sich in das Dataverse der Zeitschrift ein und geben Sie es frei.]]></message>
+	<message key="plugins.generic.dataverse.notification.studyReleased"><![CDATA[<p>Die Daten der Einreichung sind in Dataverse veröffentlicht worden:</p><p>{$dataCitation}</p>]]></message>
+	<message key="plugins.generic.dataverse.notification.error">Bei der Aktualisierung der Daten dieser Einreichung in Dataverse ist ein Fehler aufgetreten.</message>
+
+	<!-- Article metadata for completed submissions: form errors -->
+	<message key="plugins.generic.dataverse.metadataForm.studyLocked">Die zu dieser Einreichung gehördende Dataverse-Studie ist zur Bearbeitung gesperrt. Die Metadaten der Einreichung können nicht aktualisiert werden, bis die Bearbeitung abgeschlossen ist.</message>
+
+	<!-- Additional metadata: suppfile form -->
+	<message key="plugins.generic.dataverse.suppFile.title">Dataverse-Plug-In: Daten veröffentlichen</message>
+	<message key="plugins.generic.dataverse.suppFile.description">Forschungsdaten können veröffentlicht werden, indem Zusatzdateien im Dataverse der Zeitschrift abgelegt werden oder durch Zitation von Daten, die bereits in einem Repository abgelegt worden sind.</message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataNone"><![CDATA[Hochgeladene Datei als Zusatzdatei behandeln. Die Datei <strong>wird nicht</strong> im Dataverse archiviert werden.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataDataverse"><![CDATA[Datei im Dataverse archivieren. Autor/in ist einverstanden und stimmt den <a href="javascript:openWindow('{$dataverseTermsOfUseUrl}');">Nutzungsbedingungen</a> von Dataverse zu.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishData.error">Bitte laden Sie eine Datei zur Archivierung in Dataverse hoch.</message>
+	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">Die Datei wird zur Dataverse-Studie, die für diese Einreichung angelegt worden ist, hinzugefügt:</message>
+	<message key="plugins.generic.dataverse.suppFile.studyLocked">Diese Studie ist für die Bearbeitung gesperrt. Bis die Bearbeitung abgeschlossen ist, können keine Änderungen der Einreichungsdaten vorgenommen werden.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">Externe Datenzitierung</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Wenn die Daten dieser Einreichung bereits in einem anderen Repository veröffentlicht worden sind, geben Sie bitte eine Datenzitierung an.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Bitte laden Sie Dateien zur Archivierung in Dataverse hoch ODER geben Sie eine externe Datenzitierung an.</message>
+
+	<!-- Terms of use -->
+	<message key="plugins.generic.dataverse.termsOfUse.title">Nutzungsbedingungen</message>
+	<message key="plugins.generic.dataverse.termsOfUse.dataverse">Dataverse</message>
+
+	<!-- Data availality policy --> 
+	<message key="plugins.generic.dataverse.dataAvailabilityPolicy.title">Regel zur Datenverfügbarkeit</message>
+
+	<!-- Block plugin -->
+	<message key="plugins.generic.dataverse.block.displayName">Dataverse-Block-Plug-In</message>
+	<message key="plugins.generic.dataverse.block.title">Datenzitierung</message>
+
+	<!-- Reading tools: suppfiles -->
+	<message key="plugins.generic.dataverse.suppFiles.view">In Dataverse ansehen</message>
+
+	<!-- Field labels -->
+	<message key="plugins.generic.dataverse.dataCitation">Datenzitierung</message>
+
+	<!-- Citation "in press" info -->
+	<message key="plugins.generic.dataverse.citationAPA.inPress">(im Erscheinen).</message>
+</locale>

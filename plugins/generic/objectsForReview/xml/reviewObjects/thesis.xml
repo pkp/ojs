@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="thesis">plugins.generic.objectsForReview.object.thesis</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.thesis.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.thesis.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="thesis_type">
+		<name>plugins.generic.objectsForReview.object.thesis.type</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="thesis_university">
+		<name>plugins.generic.objectsForReview.object.thesis.university</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="thesis_place">
+		<name>plugins.generic.objectsForReview.object.thesis.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="thesis_pages_no">
+		<name>plugins.generic.objectsForReview.object.thesis.numberOfPages</name>
+	</metadata>
+	</objectMetadata>
+</object>

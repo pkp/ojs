@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="nl_NL" full_name="Nederlands">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Externe feeds</message>

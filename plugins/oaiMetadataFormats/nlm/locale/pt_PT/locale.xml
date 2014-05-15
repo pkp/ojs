@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the pt_PT (Português) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_PT" full_name="Português">
 	<message key="plugins.oaiMetadata.nlm.displayName">Formato de Meta-dados NLM</message>
 	<message key="plugins.oaiMetadata.nlm.description">Estrutura os meta-dados de modo a serem consistentes com o formato de Artigos de Revista NLM.</message>
 </locale>

@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/usageStats/locale/en_US/locale.xml
+  * plugins/generic/usageStats/locale/tr_TR/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.generic.usageStats.settings.logging">Erişim günlüğü seçenekleri</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Günlük dosyaları oluştur</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activating this option will make the plugin create access log files inside the files directory. Those files should be used to extract the usage statistics data. If you don't want to create more access log files you can leave this option disabled and use your own server log access files.</message>

@@ -234,6 +234,9 @@
 	<message key="user.noRoles.submitArticleRegClosed">Отправить статью: регистрация авторов сейчас отключена.</message>
 	<message key="user.noRoles.regReviewer">Зарегистрироваться в качестве рецензента</message>
 	<message key="user.noRoles.regReviewerClosed">Зарегистрироваться в качестве рецензента: регистрация рецензентов сейчас отключена.</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.description"><![CDATA[ORCID iD могут быть присвоен только <a href="http://orcid.org/" target="_blank">Регистром ORCID</a>. Вы должны соответствовать их стандартам для формирования ORCID iD и добавить полный адрес URI (например, <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="user.profile.form.orcidInvalid">Указанный вами ORCID iD является неправильным.</message>
 
 	<!-- Роли -->
 	<message key="user.role.manager">Управляющий журнала</message>
@@ -424,7 +427,7 @@
 	рецензентам запрос на рецензирование по электронной почте, с прикрепленной к письму копией статьи. Рецензенты электронной почтой отправляют редакторам свое согласие (или свой отказ), а также свою рецензию и рекомендацию. Редакторы вносят согласие (или отказ) рецензента, рецензию и рекомендацию на странице «Рецензирование» этой статьи, чтобы отразить на сайте процесс рецензирования.</message>
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems поддерживает систему <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), которая обеспечивает безопасную и постоянную архивацию журнала. LOCKSS  — это программное обеспечение с открытым исходным кодом, разработанное в библиотеке Стенфордского университета, которое позволяет бибилотекам сохранять выбранные веб-журналы, регулярно просматривая веб-сайты зарегистрированные журналы на предмет нового опубликованного контента и архивируя его. Каждый архив постоянно сверяется с кэшами других библиотек и, если оказывается, что контент поврежден или утрачен, для его восстановления используются другие кэши или сам журнал.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems поддерживает систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), которая обеспечивает безопасную и постоянную архивацию журнала. LOCKSS  — это программное обеспечение с открытым исходным кодом, разработанное в библиотеке Стенфордского университета, которое позволяет бибилотекам сохранять выбранные веб-журналы, регулярно просматривая веб-сайты зарегистрированные журналы на предмет нового опубликованного контента и архивируя его. Каждый архив постоянно сверяется с кэшами других библиотек и, если оказывается, что контент поврежден или утрачен, для его восстановления используются другие кэши или сам журнал.
 <br /><br />
 Настройка поддержки LOCKSS для Open Journal Systems не обязательна до тех пор, пока не начнется активная работа над изданием. Для настройки необходимо выполнить два шага:]]></message>
 	
@@ -447,7 +450,7 @@
 </ol>]]></message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Журнал будет использовать систему тематической классификации, доступную через интернет.<br />
 Название системы классификации]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Чтобы контент этого журнала индексировался в глобальной распределенной системе баз данных исследований, пожалуйста, прочтите <a href="http://www.oaister.org/dataproviders.html" target="_blank">шаги, чтобы стать поставщиком данных,</a> и зарегистрируйте Ваш журнал в официальном <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реестре Open Archives</a>. Для регистрации вам потребуется базовый адрес (URL) для вашего хранилища: <span class="highlight">{$oaiUrl}</span>.  После этого вы можете зарегистрировать ваш журнал в <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">реестре UIUC OAI </a> и <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Чтобы контент этого журнала индексировался в глобальной распределенной системе баз данных исследований, пожалуйста, прочтите <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">шаги, чтобы стать поставщиком данных,</a> и зарегистрируйте Ваш журнал в официальном <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">реестре Open Archives</a>. Для регистрации вам потребуется базовый адрес (URL) для вашего хранилища: <span class="highlight">{$oaiUrl}</span>.  После этого вы можете зарегистрировать ваш журнал в <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">реестре UIUC OAI </a> и <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
 <br /><br />
 Обратите внимание, что если ваш администратор сайта уже зарегистрировал этот сайт в этих сервисах, ваш журнал автоматически будет индексироваться в глобальной распределенной системе баз данных исследований и вам не нужно регистрировать ваш журнал.]]></message>
 	<message key="manager.setup.citations">Включить Помощник разметки цитат</message>
@@ -807,7 +810,7 @@
 	<!-- Промежуточная страницв для PDF -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Скачать этот файл PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Выбранный файл PDF должен загрузиться здесь, если в вашем веб-браузере установлен плагин для чтения PDF (например, последняя версия <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Если вам нужна дополнительная информация о том, как распечатать, сохранить и работать с PDF-файлами, у издательства Highwire Press на сайте размещен полезный материал <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">«Frequently Asked Questions about PDFs»</a>.</p> <p>В качестве альтернативы, вы можете скачать файл PDF на свой компьютер, на котором файл может быть открыт любой программой для просмотра PDF. Для скачивания файла PDF щелкните на ссылке «Скачать» выше.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Выбранный файл PDF должен загрузиться здесь, если в вашем веб-браузере установлен плагин для чтения PDF (например, последняя версия <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Если вам нужна дополнительная информация о том, как распечатать, сохранить и работать с PDF-файлами, у издательства Highwire Press на сайте размещен полезный материал <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">«Frequently Asked Questions about PDFs»</a>.</p> <p>В качестве альтернативы, вы можете скачать файл PDF на свой компьютер, на котором файл может быть открыт любой программой для просмотра PDF. Для скачивания файла PDF щелкните на ссылке «Скачать» выше.</p>]]></message>
 
 
 	<!-- Промежуточная страница для гранок в форматах, отличных от PDF и HTML -->
@@ -985,7 +988,7 @@
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (включая PHP 5.x); вы сейчас используете PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 или <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (включая PostgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x или >= 2.0.4x или Microsoft IIS 6</li>
-	<li>Операционная система: любая ОС, которая поддерживает перечисленное выше программное обеспечение, включая <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Операционная система: любая ОС, которая поддерживает перечисленное выше программное обеспечение, включая <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Поскольку у PKP нет ресурсов, чтобы тестировать все возможные комбинации версий программного обеспечения и платформ, то не предполагается никаких гарантий правильной работы или поддержки.</p>

@@ -40,9 +40,9 @@ class PublicFileManager extends PKPPublicFileManager {
 	 * @param $destFileName string the destination file name
 	 * @return boolean
 	 */
- 	function uploadJournalFile($journalId, $fileName, $destFileName) {
- 		return $this->uploadFile($fileName, $this->getJournalFilesPath($journalId) . '/' . $destFileName);
- 	}
+	function uploadJournalFile($journalId, $fileName, $destFileName) {
+		return $this->uploadFile($fileName, $this->getJournalFilesPath($journalId) . '/' . $destFileName);
+	}
 
 	/**
 	 * Write a file to a journals's public directory.
@@ -51,9 +51,9 @@ class PublicFileManager extends PKPPublicFileManager {
 	 * @param $contents string the contents to write to the file
 	 * @return boolean
 	 */
- 	function writeJournalFile($journalId, $destFileName, &$contents) {
- 		return $this->writeFile($this->getJournalFilesPath($journalId) . '/' . $destFileName, $contents);
- 	}
+	function writeJournalFile($journalId, $destFileName, &$contents) {
+		return $this->writeFile($this->getJournalFilesPath($journalId) . '/' . $destFileName, $contents);
+	}
 
 	/**
 	 * Copy a file to a journals's public directory.
@@ -62,19 +62,19 @@ class PublicFileManager extends PKPPublicFileManager {
 	 * @param $destFileName string the destination file name
 	 * @return boolean
 	 */
- 	function copyJournalFile($journalId, $sourceFile, $destFileName) {
- 		return $this->copyFile($sourceFile, $this->getJournalFilesPath($journalId) . '/' . $destFileName);
- 	}
+	function copyJournalFile($journalId, $sourceFile, $destFileName) {
+		return $this->copyFile($sourceFile, $this->getJournalFilesPath($journalId) . '/' . $destFileName);
+	}
 
- 	/**
+	/**
 	 * Delete a file from a journal's public directory.
- 	 * @param $journalId int
- 	 * @param $fileName string the target file name
+	 * @param $journalId int
+	 * @param $fileName string the target file name
 	 * @return boolean
- 	 */
- 	function removeJournalFile($journalId, $fileName) {
- 		return $this->deleteFile($this->getJournalFilesPath($journalId) . '/' . $fileName);
- 	}
+	 */
+	function removeJournalFile($journalId, $fileName) {
+		return $this->deleteFile($this->getJournalFilesPath($journalId) . '/' . $fileName);
+	}
 }
 
 ?>

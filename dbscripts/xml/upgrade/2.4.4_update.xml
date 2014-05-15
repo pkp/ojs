@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.4_update.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.4 database updates XML file.
+  -->
+<data>
+	<!-- Bug #8599: Enable one-step password reset -->
+	<sql>
+		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type, locale) VALUES ('oneStepReset', '1', 'bool', '')</query>
+	</sql>
+</data>

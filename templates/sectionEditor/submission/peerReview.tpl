@@ -135,7 +135,7 @@
 	</table>
 
 	<table width="100%" class="data">
- 	<tr valign="top">
+	<tr valign="top">
 		<td class="label">{translate key="submission.reviewForm"}</td>
 		<td>
 		{if $reviewAssignment->getReviewFormId()}

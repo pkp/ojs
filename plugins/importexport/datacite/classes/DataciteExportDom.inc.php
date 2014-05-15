@@ -167,7 +167,7 @@ class DataciteExportDom extends DOIExportDom {
 		if (!empty($articleFile)) XMLCustomWriter::appendChild($rootElement, $this->_formatsElement($articleFile));
 
 		// Rights
-		$rightsURL = $article->getLicenseURL();
+		$rightsURL = $article?$article->getLicenseURL():$journal->getSetting('licenseURL');
 		$rightsListElement =& XMLCustomWriter::createElement($this->getDoc(), 'rightsList');
 		$rightsElement = $this->createElementWithText('rights', strip_tags(Application::getCCLicenseBadge($rightsURL)), array('rightsURI' => $rightsURL));
 		XMLCustomWriter::appendChild($rightsListElement, $rightsElement);
@@ -211,8 +211,8 @@ class DataciteExportDom extends DOIExportDom {
 	function &retrievePublicationObjects(&$object) {
 		// Initialize local variables.
 		$nullVar = null;
- 		$journal =& $this->getJournal();
- 		$cache =& $this->getCache();
+		$journal =& $this->getJournal();
+		$cache =& $this->getCache();
 
 		// Retrieve basic OJS objects.
 		$publicationObjects = parent::retrievePublicationObjects($object);

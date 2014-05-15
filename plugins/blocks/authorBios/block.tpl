@@ -21,6 +21,7 @@
 	<div id="authorBio">
 	<p>
 		<em>{$author->getFullName()|escape}</em><br />
+		{if $author->getData('orcid')}<a href="{$author->getData('orcid')|escape}" target="_blank">{translate key="user.orcid"}</a>{/if}
 		{if $author->getUrl()}<a href="{$author->getUrl()|escape:"quotes"}">{$author->getUrl()|escape}</a><br/>{/if}
 		{assign var=authorAffiliation value=$author->getLocalizedAffiliation()}
 		{if $authorAffiliation}{$authorAffiliation|escape}{/if}

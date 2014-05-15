@@ -39,6 +39,9 @@
       <NOTNULL/>
     </field>
     <field name="file_type" type="I1" />
+    <field name="entry_time" type="I8">
+      <NOTNULL/>
+    </field>
     <descr>Usage stats temporary records</descr>
   </table>
 </schema>

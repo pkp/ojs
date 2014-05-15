@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="document">plugins.generic.objectsForReview.object.document</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.document.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.document.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.document.person.editor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.document.person.reviewedAuthor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.document.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="true" key="bookSection_publisher">
+		<name>plugins.generic.objectsForReview.object.bookSection.publisher</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -384,13 +384,13 @@ Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasınd
 	<message key="plugins.categories.oaiMetadataFormats">OAI Üst Veri Eklentileri</message>
 	<message key="plugins.categories.oaiMetadataFormats.description">Bu biçim eklentileri OAI iletişiminde hızlı üst veri sağlar.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Açık Dergi Sistemleri, dergi için güvenli ve kalıcı arşiv sistemi olan <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) uygulamasını destekler. LOCKSS uygulaması Stanford Üniversitesi Kütüphanesinde geliştirilmiştir. Kütüphanelerde düzenli olarak toplanan kayıtlı dergilerin web sitelerinde yeni yayınlanmış içerikleri arşivlemeyi sağlayan açık kaynak kodlu bir yazılımdır. Her arşiv kütüphane sisteminde meydana gelebilecek bir kayıba karşı veriyi korur. Eğer bozulur veya kaybolursa diğer önbellek verinin temini için kullanılır.
+	<message key="manager.setup.lockssDescription"><![CDATA[Açık Dergi Sistemleri, dergi için güvenli ve kalıcı arşiv sistemi olan <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) uygulamasını destekler. LOCKSS uygulaması Stanford Üniversitesi Kütüphanesinde geliştirilmiştir. Kütüphanelerde düzenli olarak toplanan kayıtlı dergilerin web sitelerinde yeni yayınlanmış içerikleri arşivlemeyi sağlayan açık kaynak kodlu bir yazılımdır. Her arşiv kütüphane sisteminde meydana gelebilecek bir kayıba karşı veriyi korur. Eğer bozulur veya kaybolursa diğer önbellek verinin temini için kullanılır.
 <br /><br />
 Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>
 	
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
 Sınıflama Sistemi Başlığı]]></message>
-<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oaister.org/dataproviders.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oaister.org/" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
+<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
 <br /><br />
 Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz otomatik olarak dizinlenecek ve dergi için özel bir kayıt gerekmeyecektir.]]></message>
 	<message key="manager.setup.citations">Alıntı İşaretleme Yardımcısını Etkinleştir</message>
@@ -703,7 +703,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Taşınabilir Döküman Biçimi (PDF)</message>
 	<message key="article.pdf.download">PDF İndir</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Web tarayıcınıza bir PDF okuyucu eklentisi kuruluysa seçtiğiniz PDF dosyası buraya yüklenecetir. (örneğin; <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>'ın güncel sürümü).</p><p> Alternatif olarak, PDF okuyucusu kullanarak açmak için dosyayı doğrudan bilgisayarınıza yükleyebilirsiniz. PDF dosyayı indirmek için aşağıdaki indir bağlantısını tıklayın.</p> <p> Nasıl yazdırabileceğiniz, kaydedebileceğiniz ve PDF'le nasıl çalışabileceğiniz konusunda daha fazla yardıma ihtiyaç duyarsanız, Highwire Press <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDF'lerle ilgili Sıkça Sorulan Sorular</ a> desteği verir.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Web tarayıcınıza bir PDF okuyucu eklentisi kuruluysa seçtiğiniz PDF dosyası buraya yüklenecetir. (örneğin; <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>'ın güncel sürümü).</p><p> Alternatif olarak, PDF okuyucusu kullanarak açmak için dosyayı doğrudan bilgisayarınıza yükleyebilirsiniz. PDF dosyayı indirmek için aşağıdaki indir bağlantısını tıklayın.</p> <p> Nasıl yazdırabileceğiniz, kaydedebileceğiniz ve PDF'le nasıl çalışabileceğiniz konusunda daha fazla yardıma ihtiyaç duyarsanız, Highwire Press <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDF'lerle ilgili Sıkça Sorulan Sorular</ a> desteği verir.</p>]]></message>
 	
 	<!-- PDF ve HTML dışı gönderiler için ara sayfa -->
 	<message key="article.nonpdf.title">Makale İndir</message>
@@ -838,7 +838,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (PHP 5.x sürümleri dahil). Şu halde PHP'nin {$phpVersion}{$wrongPhpText} sürümünü kullanıyorsunuz</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (MySQL 4.x sürümleri de olur) veya  <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (PostgreSQL 8.x sürümleri de olur)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x veya >= 2.0.4x veya Microsoft IIS 6</li>
-	<li>İşletim sistemi: Yukarıdaki yazılımları destekleyen herhengi bir işletim sistemi <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>İşletim sistemi: Yukarıdaki yazılımları destekleyen herhengi bir işletim sistemi <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>PKP, tüm yazılım sürümü ve platformlar için olası tüm kombinasyonlarını deneme olanaklarına sahip olmadığından doğru işleme veya destek garantisi verememektedir.</p>
@@ -1125,4 +1125,27 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
 	<message key="user.profile.profileImage">Profil Resmi</message>
 	<message key="common.journal">Dergi</message>
+	<message key="submission.permissions">İzinler</message>
+	<message key="submission.license">Lisans</message>
+	<message key="submission.copyright">Telif Hakkı</message>
+	<message key="submission.copyrightHolder">Telif Hakkı Sahibi</message>
+	<message key="submission.copyrightYear">Telif Hakkı Yılı</message>
+	<message key="submission.licenseURLValid">Lütfen geçerli bir URL adresi verin (http:// dahil)</message>
+	<message key="submission.licenseURL">Lisans URL</message>
+	<message key="user.orcid">ORCID Numarası</message>
+	<message key="submission.copyrightStatement">Telif Hakkı (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="user.profile.form.orcidInvalid">Belirtmiş olduğunuz ORCID Numarası geçerli değil.</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="user.orcid.description"><![CDATA[ORCID iDs can only be assigned by <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. You must conform to their standards for expressing ORCID iDs, and include the full URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
 </locale>

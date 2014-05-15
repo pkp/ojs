@@ -45,7 +45,6 @@ class UsageStatsPlugin extends GenericPlugin {
 		if ($this->getEnabled() && $success) {
 			// Register callbacks.
 			$app =& PKPApplication::getApplication();
-			$version = $app->getCurrentVersion();
 
 			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));

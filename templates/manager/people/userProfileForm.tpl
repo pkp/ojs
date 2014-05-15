@@ -84,7 +84,7 @@
 <table width="100%" class="data">
 {if count($formLocales) > 1}
 	 <tr valign="top">
-	 	<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
+		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
 			{url|assign:"userFormUrl" page="manager" op="editUser" path=$userId escape=false}
 			{form_language_chooser form="userForm" url=$userFormUrl}

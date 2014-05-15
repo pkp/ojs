@@ -42,7 +42,7 @@
 {literal}
 <!--
 function sortSearch(heading, direction) {
- 	var submitForm = document.getElementById('submit');
+	var submitForm = document.getElementById('submit');
 	submitForm.sort.value = heading;
 	submitForm.sortDirection.value = direction;
 	submitForm.submit();

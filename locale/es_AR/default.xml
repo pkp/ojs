@@ -160,8 +160,6 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="default.journalSettings.donationFee">Donaciones a la revista</message>
 	<message key="default.journalSettings.fastTrackFee">Revisión Fast-Track</message>
 	<message key="section.default.policy"><![CDATA[&nbsp;]]></message>
-	<message key="default.journalSettings.emailHeader">El siguiente mensaje esta siendo enviado de parte de {$journalName}.
-________________________________________________________________________</message>
 	<message key="default.journalSettings.purchaseIssueFee">Comprar número</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">El pago de esta cuota le permitirá ver, descargar e imprimir este número</message>
 </locale>

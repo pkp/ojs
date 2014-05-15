@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="report">plugins.generic.objectsForReview.object.report</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.report.person.author</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.report.person.contributor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.report.person.seriesEditor</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.report.person.translator</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="report_no">
+		<name>plugins.generic.objectsForReview.object.report.no</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="report_type">
+		<name>plugins.generic.objectsForReview.object.report.type</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="report_series_title">
+		<name>plugins.generic.objectsForReview.object.report.seriesTitle</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="report_place">
+		<name>plugins.generic.objectsForReview.object.report.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="report_institution">
+		<name>plugins.generic.objectsForReview.object.report.institution</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="report_pages">
+		<name>plugins.generic.objectsForReview.object.report.pages</name>
+	</metadata>
+	</objectMetadata>
+</object>

@@ -330,7 +330,7 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford Universitetets bibliotek, og der gør bibliotekarer til stand til at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford Universitetets bibliotek, og der gør bibliotekarer til stand til at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
 <br /><br />
 Konfigurationen af LOCKSS-understøttelse for Open Journal Systems behøver ikke finde sted, før publiceringen er i fuld gang. På dette tidspunkt skal du følge disse to trin:]]></message>
 	
@@ -774,7 +774,7 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (herunder PHP 5.x). Du benytter i øjeblikket PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (herunder MySQL 4.x) eller <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (herunder PostgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x eller >= 2.0.4x eller Microsoft IIS 6</li>
-	<li>Operativsystem: Et hvilket som helst operativsystem, der understøtter ovennævnte software, herunder <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a> og <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Operativsystem: Et hvilket som helst operativsystem, der understøtter ovennævnte software, herunder <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a> og <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Da PKP ikke har tilstrækkelige ressourcer til at teste alle mulige kombinationer af softwareversioner og platforme, gives der ingen stiltiende garanti for korrekt drift eller support.</p>
@@ -1037,7 +1037,7 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.subscriptions.form.deleteIpRange">Slet</message>
 	<message key="user.subscriptions.form.addIpRange">Tilføj</message>
 	<message key="article.pdf.download">Download denne pdf-fil</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Den valgte pdf-fil vil blive indlæst her, hvis din browser har en PDF reader-plugin installeret (for eksempel en nyere version af <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Du kan også downloade pdf-filen direkte til din computer, hvorfra den kan åbnes med en PDF reader. Klik på Download-linket herunder for at downloade pdf-filen.</p> <p>Hvis du ønsker yderligere information om, hvordan du printer, gemmer og arbejder med pdf-filer, kan du få hjælp på Highwire Press' side <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Den valgte pdf-fil vil blive indlæst her, hvis din browser har en PDF reader-plugin installeret (for eksempel en nyere version af <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Du kan også downloade pdf-filen direkte til din computer, hvorfra den kan åbnes med en PDF reader. Klik på Download-linket herunder for at downloade pdf-filen.</p> <p>Hvis du ønsker yderligere information om, hvordan du printer, gemmer og arbejder med pdf-filer, kan du få hjælp på Highwire Press' side <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.</p>]]></message>
 	<message key="about.history">Tidsskriftshistorik</message>
 	<message key="about.subscriptions.individual">Individuelle abonnementer</message>
 	<message key="about.subscriptions.institutional">Institutionsabonnementer</message>
@@ -1135,4 +1135,28 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="installer.maxFileUploadSize"><![CDATA[Din server tillader på nuværende tidspunkt upload af dokument på maksimumstørrelse: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Besøg <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> og download den nyeste version og se opgraderingsinstruktionerne.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Kontakt din webstedsadministrator  ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) for at gøre ham opmærksom på den nye version. Få mere information <a href="http://pkp.sfu.ca/ojs_download" target="_new">her</a>.]]></message>
+	<message key="common.journal">Tidsskrift</message>
+	<message key="submission.permissions">Ophavsret</message>
+	<message key="submission.license">Licens</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Copyright-indehaveren</message>
+	<message key="submission.copyrightYear">Copyright-år</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Angiv en gyldig URL (inkludér http://).</message>
+	<message key="submission.licenseURL">Licens-URL</message>
+	<message key="submission.license.cc.by-nc-nd4">Navngivelse - Ikke-kommerciel - Ingen Bearbejdede Værker (by-nc-nd)</message>
+	<message key="submission.license.cc.by-nc4">Navngivelse - Ikke-kommerciel (by-nc)</message>
+	<message key="submission.license.cc.by-nc-sa4">Navngivelse - Ikke-kommerciel - Del på samme vilkår (ShareAlike) (by-nc-sa)</message>
+	<message key="submission.license.cc.by-nd4">Navngivelse - Ingen bearbejdelser (by-nd)</message>
+	<message key="submission.license.cc.by4">Navngivelse (by)</message>
+	<message key="submission.license.cc.by-sa4">Del på samme vilkår (ShareAlike) (by-sa)</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Navngivelse - Ikke-kommerciel - Ingen Bearbejdede Værker (by-nc-nd) international licens</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Navngivelse - Ikke-kommerciel (by-nc)</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Navngivelse - Ikke-kommerciel - Del på samme vilkår (ShareAlike) (by-nc-sa)</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Navngivelse - Ingen bearbejdelse (by-nd) international licens</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Navngivelse (by) international licens</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dette manuskript er licenseret under en <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Del samme vilkåt (ShareAlike) (by-sa) internationel licens</a>.]]></message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.description"><![CDATA[ORCID iDs can only be assigned by <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. You must conform to their standards for expressing ORCID iDs, and include the full URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="user.profile.form.orcidInvalid">The ORCID iD you specified is invalid.</message>
 </locale>

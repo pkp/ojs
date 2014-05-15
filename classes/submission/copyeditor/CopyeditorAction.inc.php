@@ -407,7 +407,7 @@ class CopyeditorAction extends Action {
 		} else if ($copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_AUTHOR', true) == $fileId) {
 			$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 			$authorSignoff = $signoffDao->build('SIGNOFF_COPYEDITING_AUTHOR', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
-		 	if($authorSignoff->getDateCompleted() != null) {
+			if($authorSignoff->getDateCompleted() != null) {
 				$canDownload = true;
 			}
 		} else if ($copyeditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_FINAL', true) == $fileId) {

@@ -118,7 +118,7 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	 */
 	function postLayoutComment($args, $request) {
 		$articleId = (int) $request->getUserVar('articleId');
-		$this->validate($request, $args, $articleId);
+		$this->validate($request, $articleId);
 		$this->setupTemplate($request, true);
 
 		// If the user pressed the "Save and email" button, then email the comment.

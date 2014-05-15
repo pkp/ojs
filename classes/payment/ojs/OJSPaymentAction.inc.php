@@ -127,7 +127,7 @@ class OJSPaymentAction {
 		$settingsForm = new PayMethodSettingsForm();
 		$settingsForm->readInputData();
 
- 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 
 		if ($settingsForm->validate()) {

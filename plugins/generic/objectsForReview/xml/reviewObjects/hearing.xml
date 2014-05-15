@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE object SYSTEM "../object.dtd">
+<object locale="en_US">
+	<objectType key="hearing">plugins.generic.objectsForReview.object.hearing</objectType>
+	<roleSelectionOptions>
+		<selectionOption>plugins.generic.objectsForReview.object.hearing.person.contributor</selectionOption>
+	</roleSelectionOptions>
+	<objectMetadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_committee">
+		<name>plugins.generic.objectsForReview.object.hearing.committee</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_place">
+		<name>plugins.generic.objectsForReview.object.hearing.place</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="true" key="hearing_publisher">
+		<name>plugins.generic.objectsForReview.object.hearing.publisher</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_volume_no">
+		<name>plugins.generic.objectsForReview.object.hearing.numberOfVolumes</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_document_no">
+		<name>plugins.generic.objectsForReview.object.hearing.documentNo</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_pages">
+		<name>plugins.generic.objectsForReview.object.hearing.pages</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_legislative_body">
+		<name>plugins.generic.objectsForReview.object.hearing.legislativeBody</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_session">
+		<name>plugins.generic.objectsForReview.object.hearing.session</name>
+	</metadata>
+	<metadata type="singleLineTextBox" required="false" display="false" key="hearing_history">
+		<name>plugins.generic.objectsForReview.object.hearing.history</name>
+	</metadata>
+	</objectMetadata>
+</object>
