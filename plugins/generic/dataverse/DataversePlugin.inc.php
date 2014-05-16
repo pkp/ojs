@@ -703,8 +703,7 @@ class DataversePlugin extends GenericPlugin {
 					$suppFileDao->updateSuppFile($form->suppFile);
 				}
 				// If, at this point, there is no file id, there is nothing to deposit
-				/** @fixme add a form validator to prevent deposit-in-Dataverse-but-no-file */
-				if (!$form->suppFile->getFileId()) return false;		 
+				if (!$form->suppFile->getFileId()) return false;
 				
 				/** @fixme clean up study create, update & move notifications. */
 				$user =& Request::getUser();
