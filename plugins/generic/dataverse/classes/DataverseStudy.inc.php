@@ -15,9 +15,9 @@
 
 class DataverseStudy extends DataObject {
 
-  /**
-   * Constructor.
-   */
+	/**
+	 * Constructor.
+	 */
 	function DataverseStudy() {
 		parent::DataObject();
 	}

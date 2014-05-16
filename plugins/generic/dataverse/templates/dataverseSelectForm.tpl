@@ -20,15 +20,12 @@
 </ul>
 
 <div style="margin: 1em 0;">
-
 	<form method="post" action="{plugin_url path="select"}" id="dvSelectForm">
 		{include file="common/formErrors.tpl"}
 		<table width="100%" class="data">
 			<tr valign="top">
 				<td class="label">{fieldLabel name="dataverse" required="true" key="plugins.generic.dataverse.settings.dataverse"}</td>
-				<td class="value">
-					{html_options name="dataverse" id="dataverse" options=$dataverses selected=$dataverseUri}
-			 </td>
+				<td class="value">{html_options name="dataverse" id="dataverse" options=$dataverses selected=$dataverseUri}</td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>

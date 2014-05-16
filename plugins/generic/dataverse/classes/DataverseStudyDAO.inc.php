@@ -91,7 +91,7 @@ class DataverseStudyDAO extends DAO {
 	/**
 	 * Update an existing study.
 	 * @param $study DataverseStudy
-   * @return boolean
+	 * @return boolean
 	 */
 	function updateStudy(&$study) {
 		$returner = $this->update(

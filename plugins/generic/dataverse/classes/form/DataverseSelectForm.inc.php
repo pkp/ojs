@@ -27,7 +27,7 @@ class DataverseSelectForm extends Form {
 	 * Constructor
 	 * @param $plugin DataversePlugin
 	 * @param $journalId int
-   * @see Form::Form()
+	 * @see Form::Form()
 	 */
 	function DataverseSelectForm(&$plugin, $journalId) {
 		$this->_plugin =& $plugin;

@@ -88,7 +88,7 @@ class DataverseFileDAO extends DAO {
 	/**
 	 * Delete a Dataverse file.
 	 * @param $dvFile DataverseFile
-   * @return boolean
+	 * @return boolean
 	 */
 	function deleteDataverseFile(&$dvFile) {
 		return $this->deleteDataverseFileById($dvFile->getId());
@@ -98,7 +98,7 @@ class DataverseFileDAO extends DAO {
 	 * Delete a Dataverse file by ID.
 	 * @param $dvFileId int
 	 * @param $submissionId int optional
-   * @return boolean
+	 * @return boolean
 	 */
 	function deleteDataverseFileById($dvFileId, $submissionId = null) {
 		if (isset($submissionId)) {
@@ -111,7 +111,7 @@ class DataverseFileDAO extends DAO {
 	/**
 	 * Delete Dataverse files associated with a study.
 	 * @param $studyId int
-   * @return boolean
+	 * @return boolean
 	 */
 	function deleteDataverseFilesByStudyId($studyId) {
 		$dvFiles =& $this->getDataverseFilesByStudyId($studyId);
@@ -130,20 +130,16 @@ class DataverseFileDAO extends DAO {
 	function &getDataverseFileBySuppFileId($suppFileId, $submissionId = null) {
 		$params = array((int)$suppFileId);
 		if ($submissionId) $params[] = (int)$submissionId;
-
 		$result =& $this->retrieve(
 			'SELECT * FROM dataverse_files WHERE supp_id = ?' . ($submissionId?' AND submission_id = ?':''),
 			$params
 		);
-
 		$returner = null;
 		if ($result->RecordCount() != 0) {
 			$returner =& $this->_returnDataverseFileFromRow($result->GetRowAssoc(false));
 		}
-
 		$result->Close();
 		unset($result);
-
 		return $returner;		 
 	}
 	
@@ -154,20 +150,16 @@ class DataverseFileDAO extends DAO {
 	 */
 	function &getDataverseFilesBySubmissionId($submissionId) {
 		$dvFiles = array();
-
 		$result =& $this->retrieve(
 			'SELECT * FROM dataverse_files WHERE submission_id = ?',
 			(int) $submissionId
 		);
-
 		while (!$result->EOF) {
 			$dvFiles[] =& $this->_returnDataverseFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
-
 		$result->Close();
 		unset($result);
-
 		return $dvFiles;
 	}	 
 	
@@ -178,22 +170,18 @@ class DataverseFileDAO extends DAO {
 	 */
 	function &getDataverseFilesByStudyId($studyId) {
 		$dvFiles = array();
-
 		$result =& $this->retrieve(
 			'SELECT * FROM dataverse_files WHERE study_id = ?',
 			(int) $studyId
 		);
-
 		while (!$result->EOF) {
 			$dvFiles[] =& $this->_returnDataverseFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
-
 		$result->Close();
 		unset($result);
-
 		return $dvFiles;
-	}		 
+	}
 	
 	/**
 	 * Internal function to return DataverseFile object from a row.
@@ -232,11 +220,11 @@ class DataverseFileDAO extends DAO {
 		$this->replace('article_supp_file_settings', $updateArray, $idFields);
 	}	 
 
-  /** 
-   * Set content source URI of Dataverse file.
-   * @param $suppFileId int
-   * @param $contentSourceUri string
-   */
+	/** 
+	 * Set content source URI of Dataverse file.
+	 * @param $suppFileId int
+	 * @param $contentSourceUri string
+	 */
 	function setContentSourceUri($suppFileId, $contentSourceUri) {
 		$idFields = array(
 			'supp_id', 'locale', 'setting_name'

@@ -17,10 +17,10 @@ import('classes.article.SuppFile');
 
 class DataverseFile extends DataObject {
 	
-  /**
-   * Constructor.
-   */
-  function DataverseFile() {
+	/**
+	 * Constructor.
+	 */
+	function DataverseFile() {
 		parent::DataObject();
 	}
 	

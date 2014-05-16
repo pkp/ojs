@@ -29,19 +29,19 @@ define('DATAVERSE_PLUGIN_RELEASE_ARTICLE_ACCEPTED',	 0x01);
 define('DATAVERSE_PLUGIN_RELEASE_ARTICLE_PUBLISHED', 0x02);
 
 // Notification types
-define('NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED',	 NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001001);
-define('NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED',	 NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001002);
-define('NOTIFICATION_TYPE_DATAVERSE_FILE_ADDED',		 NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001003);
-define('NOTIFICATION_TYPE_DATAVERSE_FILE_DELETED',	 NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001004);
-define('NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED',	 NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001005);
-define('NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED', NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001006);
-define('NOTIFICATION_TYPE_DATAVERSE_UNRELEASED',		 NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001007);
+define('NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001001);
+define('NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001002);
+define('NOTIFICATION_TYPE_DATAVERSE_FILE_ADDED',			NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001003);
+define('NOTIFICATION_TYPE_DATAVERSE_FILE_DELETED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001004);
+define('NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001005);
+define('NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001006);
+define('NOTIFICATION_TYPE_DATAVERSE_UNRELEASED',			NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001007);
 
 class DataversePlugin extends GenericPlugin {
 
-  /**
-   * @see LazyLoadPlugin::register()
-   */
+	/**
+	 * @see LazyLoadPlugin::register()
+	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if ($success && $this->getEnabled()) {
@@ -108,39 +108,39 @@ class DataversePlugin extends GenericPlugin {
 		}
 		return $success;
 	}
-  
-  /**
-   * @see PKPPlugin::getDisplayName()
-   */
+
+	/**
+	 * @see PKPPlugin::getDisplayName()
+	 */
 	function getDisplayName() {
 		return __('plugins.generic.dataverse.displayName');
 	}
 
-  /**
-   * @see PKPPlugin::getDescription()
-   */
+	/**
+	 * @see PKPPlugin::getDescription()
+	 */
 	function getDescription() {
 		return __('plugins.generic.dataverse.description');
 	}
 
-  /**
-   * @see PKPPlugin::getInstallSchemaFile()
-   */
+	/**
+	 * @see PKPPlugin::getInstallSchemaFile()
+	 */
 	function getInstallSchemaFile() {
 		return $this->getPluginPath() . '/schema.xml';
 	}
 
-  /**
-   * Get page handler path for this plugin.
-   * @return string Path to plugin's page handler
-   */
+	/**
+	 * Get page handler path for this plugin.
+	 * @return string Path to plugin's page handler
+	 */
 	function getHandlerPath() {
 		return $this->getPluginPath() . '/pages/';
 	}
 	
-  /**
-   * @see PKPPlugin::getTemplatePath()
-   */
+	/**
+	 * @see PKPPlugin::getTemplatePath()
+	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';
 	}	 
@@ -159,8 +159,8 @@ class DataversePlugin extends GenericPlugin {
 	}
 
 	/**
-   * @see GenericPlugin::manage()
-	 */
+	* @see GenericPlugin::manage()
+	*/
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
@@ -201,7 +201,7 @@ class DataversePlugin extends GenericPlugin {
 				} else {
 					$form->initData();
 					$form->display();
-				}					 
+				}
 				return true;
 			case 'settings':
 				$this->import('classes.form.SettingsForm');
@@ -228,9 +228,9 @@ class DataversePlugin extends GenericPlugin {
 		}
 	}
 
-  /**
-   * @see PKPPlugin::smartyPluginUrl()
-   */
+	/**
+	 * @see PKPPlugin::smartyPluginUrl()
+	 */
 	function smartyPluginUrl($params, &$smarty) {
 		$path = array($this->getCategory(), $this->getName());
 		if (is_array($params['path'])) {
@@ -249,9 +249,9 @@ class DataversePlugin extends GenericPlugin {
 	}
 	
 	/**
-   * Hook callback: register pages to display terms of use & data policy
-   * @see PKPPageRouter::route()
-	 */
+	* Hook callback: register pages to display terms of use & data policy
+	* @see PKPPageRouter::route()
+	*/
 	function setupPublicHandler($hookName, $params) {
 		$page =& $params[0];
 		if ($page == 'dataverse') {
@@ -275,10 +275,10 @@ class DataversePlugin extends GenericPlugin {
 	}	 
 	
 	/**
-   * Hook callback: register output filter to add data citation to submission
-   * summaries; add data citation to reading tools' suppfiles and metadata views.
-   * @see TemplateManager::display()
-   */
+	* Hook callback: register output filter to add data citation to submission
+	* summaries; add data citation to reading tools' suppfiles and metadata views.
+	* @see TemplateManager::display()
+	*/
 	function handleTemplateDisplay($hookName, $args) {
 		$templateMgr =& $args[0];
 		$template =& $args[1];
@@ -312,9 +312,9 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Output filter adds data citation to submission summary.
-   * @param $output string
-   * @param $templateMgr TemplateManager
-   * @return $string
+	 * @param $output string
+	 * @param $templateMgr TemplateManager
+	 * @return $string
 	 */
 	function submissionOutputFilter($output, &$templateMgr) {
 		$submission =& $templateMgr->get_template_vars('submission');
@@ -341,7 +341,7 @@ class DataversePlugin extends GenericPlugin {
 			$newOutput .= substr($output, $index);
 			$output = $newOutput;
 		}
-    $templateMgr->unregister_outputfilter('submissionSummaryOutputFilter');
+		$templateMgr->unregister_outputfilter('submissionSummaryOutputFilter');
 		return $output;
 	}
 	
@@ -351,9 +351,9 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function addDataCitationArticle($hookName, $args) {
 		$templateMgr =& $args[1];
-    $output =& $args[2];
+		$output =& $args[2];
 
-    $article =& $templateMgr->get_template_vars('article');
+		$article =& $templateMgr->get_template_vars('article');
 		
 		$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
 		$study =& $dataverseStudyDao->getStudyBySubmissionId($article->getId());
@@ -374,25 +374,25 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function getTinyMCEEnabledFields($hookName, $args) {
 		$fields =& $args[1];
-    
-    $application =& Application::getApplication();
+
+		$application =& Application::getApplication();
 		$request =& $application->getRequest();
 		$router =& $request->getRouter();
-    
-    // TinyMCEPlugin::getEnableFields hook is only invoked on page requests.
-    $page = $router->getRequestedPage($request);
-    $op = $router->getRequestedOp($request);
-    $requestArgs = $router->getRequestedArgs($request);
-    
-    if ($page == 'manager' && $op == 'plugin' && in_array('dataverseplugin', $requestArgs)) {
-      $fields = array('dataAvailability', 'termsOfUse');
-    }
+
+		// TinyMCEPlugin::getEnableFields hook is only invoked on page requests.
+		$page = $router->getRequestedPage($request);
+		$op = $router->getRequestedOp($request);
+		$requestArgs = $router->getRequestedArgs($request);
+
+		if ($page == 'manager' && $op == 'plugin' && in_array('dataverseplugin', $requestArgs)) {
+			$fields = array('dataAvailability', 'termsOfUse');
+		}
 		return false;
 	}
 
 	/**
 	 * Hook callback: add link to data availability policy to policies section of
-   * journal's About page
+	 * journal's About page
 	 * @see templates/about/index.tpl
 	 */
 	function addPolicyLinks($hookName, $args) {
@@ -410,7 +410,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: add validators to fields added to metadata form
-   * @see Form::Form()
+	* @see Form::Form()
 	 */
 	function metadataFormConstructor($hookName, $args) {
 		$form =& $args[0];
@@ -420,9 +420,9 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: update cataloguing information on form submission, if article
-   * has a Dataverse study
-   * @see Form::execute()
-	 */
+	* has a Dataverse study
+	* @see Form::execute()
+	*/
 	function metadataFormExecute($hookName, $args) {
 		$form =& $args[0];
 		$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
@@ -443,10 +443,10 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Form validator added to metadata and suppfile forms: prevents form submission
-   * if article has files in Dataverse that are locked for processing
-   * @param $field string Field value
-   * @param $form Article metadata or suppfile form
-   * @return boolean true if study is NOT locked
+	 * if article has files in Dataverse that are locked for processing
+	 * @param $field string Field value
+	 * @param $form Article metadata or suppfile form
+	 * @return boolean true if study is NOT locked
 	 */
 	function formValidateStudyState($field, $form) {
 		$articleId = isset($form->article) ? $form->article->getId() : $form->articleId;		
@@ -463,7 +463,7 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Hook callback: notify ArticleDAO of external data citation field added to
 	 * suppfile forms.
-   * @see ArticleDAO::getAdditionalFieldNames()
+	 * @see ArticleDAO::getAdditionalFieldNames()
 	 */
 	function articleMetadataFormFieldNames($hookName, $args) {
 		$fields =& $args[1];
@@ -473,9 +473,9 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: add data publication options to suppfile form templates for
-   * initial & completed submissions.
-   * @see templates/author/submit/suppFile.tpl
-   * @see templates/submission/suppFile/suppFile.tpl
+	 * initial & completed submissions.
+	 * @see templates/author/submit/suppFile.tpl
+	 * @see templates/submission/suppFile/suppFile.tpl
 	 */
 	function suppFileAdditionalMetadata($hookName, $args) {
 		$templateMgr =& $args[1];
@@ -496,7 +496,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: add validators to fields added to suppfile form
-   * @see Form::Form
+	 * @see Form::Form
 	 */
 	function suppFileFormConstructor($hookName, $args) {
 		$form =& $args[0];
@@ -508,9 +508,9 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Suppfile form validator: return false if Dataverse deposit selected but no
-   * suppfile has been uploaded.
-   * @param $publishData Field value
-   * @param $form Suppfile form
+	 * suppfile has been uploaded.
+	 * @param $publishData Field value
+	 * @param $form Suppfile form
 	 * @return boolean true if suppfile has been uploaded
 	 */
 	function suppFileFormValidateDeposit($publishData, $form) {
@@ -530,9 +530,9 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Suppfile form validator: return false if Dataverse deposit selected and an 
 	 * external citation has been provided. Submitters must provide one or the
-   * other, not both.
-   * @param $externalCitation string field value
-   * @param $form Suppfile form
+	 * other, not both.
+	 * @param $externalCitation string field value
+	 * @param $form Suppfile form
 	 * @return boolean true if data submitted OR external citation provided
 	 */
 	function suppFileFormValidateCitations($externalCitation, $form) {
@@ -544,7 +544,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: initialize fields added to suppfile form
-   * @see Form::initData()
+	 * @see Form::initData()
 	 */
 	function suppFileFormInitData($hookName, $args) {
 		$form =& $args[0];
@@ -575,7 +575,7 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Hook callback: read values submitted in fields added to suppfile form
-   * @see Form::readUserVars()
+	 * @see Form::readUserVars()
 	 */
 	function suppFileFormReadUserVars($hookName, $args) {
 		$form =& $args[0];
@@ -587,8 +587,8 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Hook callback: handle suppfile form execution for incomplete submissions
-   * @see Form::execute()
-   */
+	 * @see Form::execute()
+	 */
 	function authorSubmitSuppFileFormExecute($hookName, $args) {
 		$form =& $args[0];
 
@@ -611,10 +611,7 @@ class DataversePlugin extends GenericPlugin {
 
 		switch ($form->getData('publishData')) {
 			case 'none':
-				/**
-				 * Treat uploaded file as supplementary. If previously marked for 
-				 * Dataverse deposit, unmark it.
-				 */
+				// Treat uploaded file as supplementary. If previously marked for deposit, unmark it.
 				if (isset($dvFile)) {
 					/** @todo warn user file will be removed from Dataverse */
 					$dvFileDao->deleteDataverseFile($dvFile);
@@ -622,11 +619,8 @@ class DataversePlugin extends GenericPlugin {
 				break;
 
 			case 'dataverse':
-				/**
-				 *	Mark file for deposit, if not marked already. File will be deposited
-				 * in Dataverse when submission is completed or accepted for publication.
-				 * @see handleAuthorSubmission, handleEditorDecision
-				 */
+				// Mark file for deposit, if not marked already. File will be deposited
+				// in Dataverse when submission is completed or accepted for publication.
 				if (!isset($dvFile)) {
 					$this->import('classes.DataverseFile');
 					$dvFile = new DataverseFile();
@@ -641,7 +635,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: handle suppfile form execution for completed submissions
-   * @see Form::execute()
+	 * @see Form::execute()
 	 */
 	function suppFileFormExecute($hookName, $args) {	 
 		$form =& $args[0];
@@ -746,9 +740,9 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Hook callback: prevent re-insertion of suppfile already handled in suppfile
-   * form execution callback. 
-   * @see DataversePlugin::suppFileFormExecute()
-   * @see DAO::update()
+	 * form execution callback.
+	 * @see DataversePlugin::suppFileFormExecute()
+	 * @see DAO::update()
 	 */
 	function handleSuppFileInsertion($hookName, $args) {
 		$params =& $args[1];
@@ -761,8 +755,8 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: when suppfile deleted, remove data file from Dataverse
-   * study, if present
-   * @see DAO::update()
+	 * study, if present
+	 * @see DAO::update()
 	 */
 	function handleSuppFileDeletion($hookName, $args) {
 		$params =& $args[1];
@@ -799,9 +793,9 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Form validator: verify data files have been provided, if required in plugin
-   * settings.
-   * @param $fieldValue string field value
-   * @param $form Author submission form, step 4
+	 * settings.
+	 * @param $fieldValue string field value
+	 * @param $form Author submission form, step 4
 	 * @return boolean
 	 */
 	function validateRequiredData($fieldValue, $form) {
@@ -815,7 +809,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: create draft study if author has uploaded data files
-   * @see SubmitHandler::saveSubmit()
+	 * @see SubmitHandler::saveSubmit()
 	 */
 	function handleAuthorSubmission($hookName, $args) {
 		$step =& $args[0];
@@ -870,7 +864,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: release study on article publication
-   * @see DAO::update()
+	 * @see DAO::update()
 	 */
 	function handleArticleUpdate($hookName, $args) {
 		$journal =& Request::getJournal();
@@ -891,7 +885,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: delete study if editor rejects submission
-   * @see SectionEditorAction::unsuitableSubmission()
+	 * @see SectionEditorAction::unsuitableSubmission()
 	 */
 	function handleUnsuitableSubmission($hookName, $args) {
 		$submission =& $args[0];		
@@ -910,7 +904,7 @@ class DataversePlugin extends GenericPlugin {
 	 * @param $user string username 
 	 * @param $password string password
 	 * @param $onBehalfOf string send request on behalf of user
-   * @return SWORDAPPServiceDocument
+	* @return SWORDAPPServiceDocument
 	 */
 	function getServiceDocument($sdUrl, $user, $password, $onBehalfOf = NULL) {
 		// allow insecure SSL connections
@@ -957,9 +951,9 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Create a Dataverse study: create and deposit Atom entry; package and deposit
-   * files, if files submitted.
-	 * @param $article 
-   * @param $dvFiles array of files to deposit
+	* files, if files submitted.
+	 * @param $article
+	 * @param $dvFiles array of files to deposit
 	 * @return DataverseStudy
 	 */
 	function &createStudy(&$article, $dvFiles = array()) {
@@ -1102,7 +1096,7 @@ class DataversePlugin extends GenericPlugin {
 	 * Update cataloguing information for an existing study.
 	 * @param Article $article
 	 * @param DataverseStudy $study
-   * @return DataverseStudy
+	 * @return DataverseStudy
 	 */
 	function &updateStudy(&$article, &$study) {
 		$journal =& Request::getJournal();		
@@ -1140,13 +1134,13 @@ class DataversePlugin extends GenericPlugin {
 			// publication date
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId(), $article->getJournalId());
-      $datePublished = $publishedArticle->getDatePublished();
-      if (!$datePublished) {
-        // If article has no pub date, use issue pub date
-        $issueDao =& DAORegistry::getDAO('IssueDAO');
-        $issue =& $issueDao->getIssueByArticleId($article->getId(), $article->getJournalId());
-        $datePublished = $issue->getDatePublished();        
-      }
+			$datePublished = $publishedArticle->getDatePublished();
+			if (!$datePublished) {
+				// If article has no pub date, use issue pub date
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issue =& $issueDao->getIssueByArticleId($article->getId(), $article->getJournalId());
+				$datePublished = $issue->getDatePublished();        
+			}
 			$packager->addMetadata('date', strftime('%Y-%m-%d', strtotime($datePublished)));
 			// isReferencedBy: If article is published, add a persistent URL to citation using specified pubid plugin
 			$pubIdPlugin =& PluginRegistry::getPlugin('pubIds', $this->getSetting($article->getJournalId(), 'pubIdPlugin'));
@@ -1205,7 +1199,7 @@ class DataversePlugin extends GenericPlugin {
 	 * Add a file to an existing study
 	 * @param DataverseStudy $study
 	 * @param SuppFile $suppFile
-   * @return DataverseFile
+	 * @return DataverseFile
 	 */
 	function &addFileToStudy(&$study, &$suppFile) {
 		$packager = new DataversePackager();
@@ -1295,7 +1289,7 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Release draft study.
 	 * @param DataverseStudy $study
-   * @return boolean Study released
+	 * @return boolean Study released
 	 */
 	function releaseStudy(&$study) {
 		$journal =& Request::getJournal();
@@ -1344,7 +1338,7 @@ class DataversePlugin extends GenericPlugin {
 	 * Delete draft study or deaccession released study.
 	 * @fixme iff deleting a draft of a previously-released study, update citation.
 	 * @param DataverseStudy $study
-   * @return boolean Study deleted
+	 * @return boolean Study deleted
 	 */
 	function deleteStudy(&$study) {
 		$journal =& Request::getJournal();
@@ -1378,7 +1372,7 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Delete a file from a study
 	 * @param $dvFile DataverseFile
-   * @return boolean File deleted
+	 * @return boolean File deleted
 	 */
 	function deleteFile(&$dvFile) {
 		$journal =& Request::getJournal();
@@ -1416,7 +1410,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: add content to custom notifications
-   * @see NotificationManager::getNotificationContents()
+	* @see NotificationManager::getNotificationContents()
 	 */
 	function getNotificationContents($hookName, $args) {
 		$notification =& $args[0];
@@ -1468,10 +1462,10 @@ class DataversePlugin extends GenericPlugin {
 	}	 
 	
 	/**
-	 * Wrapper function initializes SWORDv2 client with cURL option to allow 
-   * connections to servers with self-signed certificates.
+	 * Wrapper function initializes SWORDv2 client with cURL option to allow
+	 * connections to servers with self-signed certificates.
 	 * @param $options array
-   * @return SWORDAPPClient
+	 * @return SWORDAPPClient
 	 */
 	function _initSwordClient($options = array(CURLOPT_SSL_VERIFYPEER => FALSE)) {
 		return new SWORDAPPClient($options);
@@ -1479,7 +1473,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Indicates whether study is locked for processing
-   * @param $study DataverseStudy
+	 * @param $study DataverseStudy
 	 * @return boolean
 	 */
 	function studyIsLocked($study) {
@@ -1527,18 +1521,17 @@ class DataversePlugin extends GenericPlugin {
 		return $templateMgr->fetch($this->getTemplatePath() .'citation'. $citationFormat .'.tpl');
 	}
   
-  /**
-   * Deposit receipt sent back by Data Deposit API contains a plain-text data
-   * citation and a persistent URI. Replace URI in citation with markup to link
-   * to cited study.
-   * @param $dataCitation string Plain-text data citation
-   * @param $persistentUri string Persistent URI for study
-   * @return string HTML formatted citation
-   */
-  function _formatDataCitation($dataCitation, $persistentUri) {
-    return str_replace($persistentUri, '<a href="'. $persistentUri .'">'. $persistentUri .'</a>', strip_tags($dataCitation));
-
-  }
+	/**
+	 * Deposit receipt sent back by Data Deposit API contains a plain-text data
+	 * citation and a persistent URI. Replace URI in citation with markup to link
+	 * to cited study.
+	 * @param $dataCitation string Plain-text data citation
+	 * @param $persistentUri string Persistent URI for study
+	 * @return string HTML formatted citation
+	 */
+	function _formatDataCitation($dataCitation, $persistentUri) {
+	 return str_replace($persistentUri, '<a href="'. $persistentUri .'">'. $persistentUri .'</a>', strip_tags($dataCitation));
+	}
 }
 
 ?>

@@ -28,7 +28,7 @@ class SettingsForm extends Form {
 	 * Constructor. 
 	 * @param $plugin DataversePlugin
 	 * @param $journalId int
-   * @see Form::Form()
+	 * @see Form::Form()
 	 */
 	function settingsForm(&$plugin, $journalId) {
 		$this->_journalId = $journalId;
@@ -53,7 +53,7 @@ class SettingsForm extends Form {
 				// Load the formatter
 				$this->_pubIdTypes[$pubIdPlugin->getName()] = $pubIdPlugin->getDisplayName();
 			}
-		}						 
+		}
 		
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
@@ -132,7 +132,7 @@ class SettingsForm extends Form {
 		$templateMgr->assign('sections', $sections->toArray());
 		$templateMgr->assign('citationFormats', $this->_citationFormats);
 		$templateMgr->assign('pubIdTypes', $this->_pubIdTypes); 
-    $templateMgr->assign('studyReleaseOptions', $this->_studyReleaseOptions);
+		$templateMgr->assign('studyReleaseOptions', $this->_studyReleaseOptions);
 		$templateMgr->assign('authorGuidelinesContent',			__('plugins.generic.dataverse.settings.default.authorGuidelines', array('journal' => $journal->getLocalizedTitle())));
 		$templateMgr->assign('checklistContent',						__('plugins.generic.dataverse.settings.default.checklist', array('journal' => $journal->getLocalizedTitle())));		 
 		$templateMgr->assign('reviewPolicyContent',					__('plugins.generic.dataverse.settings.default.reviewPolicy'));
@@ -172,7 +172,7 @@ class SettingsForm extends Form {
 	
 	/**
 	 * Form validator: if terms of use to be fetched from Dataverse, verify terms
-   * can be retrieved. 
+	 * can be retrieved. 
 	 * @return boolean true if terms can be retrieved from configured Dataverse
 	 */
 	function _validateDataverseTermsOfUse() {

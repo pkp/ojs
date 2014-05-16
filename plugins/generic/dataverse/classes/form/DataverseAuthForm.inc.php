@@ -28,7 +28,7 @@ class DataverseAuthForm extends Form {
 	 * Constructor. 
 	 * @param $plugin DataversePlugin
 	 * @param $journalId int
-   * @see Form::Form()
+	 * @see Form::Form()
 	 */
 	function DataverseAuthForm(&$plugin, $journalId) {
 		$this->_plugin =& $plugin;
@@ -85,11 +85,11 @@ class DataverseAuthForm extends Form {
 		$plugin->updateSetting($this->_journalId, 'sdUri', $this->_getServiceDocumentUri($this->getData('dvnUri')));
 	}
 	
-  /**
-   * Form validator: verify Dataverse Network URL provided plugin settings by
-   * fetching service document
-   * @return boolean 
-   */
+	/**
+	 * Form validator: verify Dataverse Network URL provided plugin settings by
+	 * fetching service document
+	 * @return boolean 
+	 */
 	function _validateDvnUri() {
 		// Get service document
 		$sd = $this->_plugin->getServiceDocument(
@@ -102,11 +102,11 @@ class DataverseAuthForm extends Form {
 		return (isset($sd) && $sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK);
 	}
 
-  /**
-   * Get URI of service document for Dataverse Network
-   * @param $dvnUri string Dataverse Network URI
-   * @return string Service document URI
-   */
+	/**
+	 * Get URI of service document for Dataverse Network
+	 * @param $dvnUri string Dataverse Network URI
+	 * @return string Service document URI
+	 */
 	function _getServiceDocumentUri($dvnUri) {
 		$sdUri = $dvnUri .
 						(preg_match("/\/$/", $dvnUri) ? '' : '/') . 

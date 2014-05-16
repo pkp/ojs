@@ -19,8 +19,8 @@ class DataverseHandler extends Handler {
 
 	/**
 	 * Index handler: redirect to journal page.
-   * @param $args array
-   * @param $request Request
+	 * @param $args array
+	 * @param $request Request
 	 */
 	function index($args, &$request) {
 		$request->redirect(null, 'index');
@@ -34,9 +34,9 @@ class DataverseHandler extends Handler {
 	function dataAvailabilityPolicy($args, &$request) {
 		$router =& $request->getRouter();
 		$journal =& $router->getContext($request);
-    $dataversePlugin =& PluginRegistry::getPlugin('generic', DATAVERSE_PLUGIN_NAME);
+		$dataversePlugin =& PluginRegistry::getPlugin('generic', DATAVERSE_PLUGIN_NAME);
 		$templateMgr =& TemplateManager::getManager();
- 		$templateMgr->assign('pageHierarchy', array(array($router->url($request, null, 'about'), 'about.aboutTheJournal')));
+		$templateMgr->assign('pageHierarchy', array(array($router->url($request, null, 'about'), 'about.aboutTheJournal')));
 		$templateMgr->assign('dataAvailabilityPolicy', $dataversePlugin->getSetting($journal->getId(), 'dataAvailability'));
 		$templateMgr->display($dataversePlugin->getTemplatePath() .'/dataAvailabilityPolicy.tpl');
 	}
