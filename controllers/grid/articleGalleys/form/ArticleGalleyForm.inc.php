@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/form/ArticleGalleyForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyForm
@@ -71,7 +72,7 @@ class ArticleGalleyForm extends Form {
 		$templateMgr->assign('enablePublicGalleyId', $journal->getSetting('enablePublicGalleyId'));
 
 		// load the Article Galley plugins.
-		$plugins = PluginRegistry::loadCategory('articleGalleys');
+		$plugins = PluginRegistry::loadCategory('viewableFiles');
 		$enabledPlugins = array();
 		foreach ($plugins as $plugin) {
 			if ($plugin->getEnabled()) { // plugins must be enabled to be used by article galleys.
@@ -136,11 +137,8 @@ class ArticleGalleyForm extends Form {
 	 */
 	function execute($request) {
 		import('classes.file.IssueFileManager');
-		$articleGalleyId = $this->_articleGalley?$this->_articleGalley->getId():null;
 
 		$journal = $request->getJournal();
-		$user = $request->getUser();
-
 		$articleGalley = $this->_articleGalley;
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 

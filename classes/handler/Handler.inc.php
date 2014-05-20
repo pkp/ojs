@@ -3,7 +3,8 @@
 /**
  * @file classes/handler/Handler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Handler
@@ -26,6 +27,7 @@ class Handler extends PKPHandler {
 	 * @return ItemIterator
 	 */
 	function getWorkingContexts($request) {
+		// For installation process
 		if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
 			return null;
 		}
@@ -53,7 +55,6 @@ class Handler extends PKPHandler {
 		// Get the requested path.
 		$router = $request->getRouter();
 		$requestedPath = $router->getRequestedContextPath($request);
-		$journal = null;
 
 		if ($requestedPath === 'index' || $requestedPath === '') {
 			// No journal requested. Check how many journals the site has.
@@ -70,7 +71,6 @@ class Handler extends PKPHandler {
 				$journal = $this->getSiteRedirectContext($request);
 			}
 		} else {
-			$contextCount = null;
 			// Return the requested journal.
 			$journal = $router->getContext($request);
 		}

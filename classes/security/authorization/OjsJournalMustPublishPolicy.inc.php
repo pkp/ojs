@@ -2,7 +2,8 @@
 /**
  * @file classes/security/authorization/OjsJournalMustPublishPolicy.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OjsAuthorDashboardAccessPolicy
@@ -36,7 +37,7 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 		if (!$this->_context) return AUTHORIZATION_DENY;
 
 		// Certain roles are allowed to see unpublished content.
-		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		$userRoles = (array) $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 		if (count(array_intersect(
 			$userRoles,
 			array(

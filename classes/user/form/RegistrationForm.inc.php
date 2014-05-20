@@ -3,7 +3,8 @@
 /**
  * @file classes/user/form/RegistrationForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RegistrationForm
@@ -44,9 +45,9 @@ class RegistrationForm extends PKPRegistrationForm {
 	 * Register a new user.
 	 */
 	function execute($request) {
-		parent::execute($request);
-
+		$userId = parent::execute($request);
 		if ($this->getData('openAccessNotification')) {
+			$journal = $request->getJournal();
 			$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
 			$userSettingsDao->updateSetting($userId, 'openAccessNotification', true, 'bool', $journal->getId());
 		}

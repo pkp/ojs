@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/users/author/AuthorGridRow.inc.php
  *
- * Copyright (c) 2000-2012 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorGridRow
@@ -36,12 +37,14 @@ class AuthorGridRow extends PKPAuthorGridRow {
 		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 
+		// If the submission hasn't been finalized, allow.
+		if (!$submission->getDateSubmitted()) return true;
+
 		$stageAssignments = $stageAssignmentDao->getBySubmissionAndStageId($submission->getId(), $submission->getStageId(), null, $user->getId());
 		while ($stageAssignment = $stageAssignments->next()) {
 			$userGroup = $userGroupDao->getById($stageAssignment->getUserGroupId());
 			if (in_array($userGroup->getRoleId(), array(ROLE_ID_MANAGER, ROLE_ID_EDITOR))) {
 				return true;
-				break;
 			}
 		}
 		return false;

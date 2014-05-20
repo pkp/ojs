@@ -4,7 +4,8 @@
 <!--
   * locale/ml_IN/locale.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ml_IN (Malayalam) locale.
@@ -36,9 +37,6 @@
 
 
 
-	<!--  peer review -->
-	<message key="submission.reviewForm">അവലോകനാരൂപം</message>
-	<message key="submission.reviewFormResponse">അവലോകനാരൂപത്തിന്റെ പ്രതികരണം</message>
 
 
 	<message key="reviewer.article.enterReviewForm">അവലോകനാരൂപം പൂരിപ്പിക്കാന്‍ ഐകണില്‍ ക്ലിക്ക് ചെയ്യുക</message>	
@@ -193,7 +191,6 @@
 	<message key="user.registerForOtherJournals">മറ്റ് ജേണല്‍സിനു വേണ്ടി രെജിസ്റ്റര്‍ ചെയ്യുക</message>
 	<message key="user.myJournals">എന്റെ ജേണല്‍സ്</message>
 	<message key="user.manageMySubscriptions">എന്റെ സംഭാവനകള്‍ നിയന്ത്രണത്തില്‍ കൊണ്ടുവരിക</message>
-താങ്കളുടെ അക്കൗണ്ട് നിലവില്‍ മറ്റൊരു ജേണല്‍സുമായും പങ്കാളിത്തമില്.ദയവായി ഒരു ജേണല്‍ തിരഞ്ഞെടുക്കുക</message>
 	<message key="user.noRoles.noRolesForJournal">താങ്കളുടെ അക്കൗണ്ടിന് നിലവില്‍ ഈ ജേണലിനുവേണ്ടി ഏതൊരു കര്‍ത്തവ്യവുമില്ല . ദയവായി താഴെപറഞ്ഞിരിക്കുന്നവയില്‍നിന്നും ഒരു പ്രവൃത്തി  തിരഞ്ഞെടുക്കുക.</message>
 	<message key="user.noRoles.submitArticle">ഒരു നിര്‍ദ്ദേശം സമര്‍പ്പിക്കുക</message>
 	<message key="user.noRoles.submitArticleRegClosed">പ്രബന്ധം  സമര്‍പ്പിക്കുക: ഗ്രന്ധകര്‍ത്താവിന്റെ രജിസ്ട്രേഷന്‍ നിലവില്‍ നിയന്ത്രണത്തിലായിരിക്കണം</message>
@@ -211,7 +208,7 @@
 	<message key="user.role.subscriptionManager">സബ്സ്ക്രിപ്ഷന്‍ മാനേജര്‍</message>
 	<message key="user.role.managers">ജേണല്‍ മാനേജര്‍സ്</message>
 	<message key="user.role.editors">ഗ്രന്ധപരിശോധകര്‍</message>
-	<message key="user.role.sectionEditors">വകുപ്പ് എഡിറ്റേര്‍സ്</message>
+	<message key="user.role.subEditors">വകുപ്പ് എഡിറ്റേര്‍സ്</message>
 	<message key="user.role.layoutEditors">ലേഔട്ട്  എഡിറ്റേര്‍സ്</message>
 	<message key="user.role.copyeditors">കോപ്പി എഡിറ്റേര്‍സ്</message>
 	<message key="user.role.proofreaders">അച്ചടിപ്പിഴ തിരുത്തുന്നവര്‍</message>
@@ -754,7 +751,6 @@
 	<message key="user.authorization.noJournal">കണ്‍ടെക്സില്‍ ജേണല്‍ ഒന്നുമില്ല!</message>
 	<message key="user.authorization.sectionAssignment">താങ്കളുടെ സെക്ഷന്റെ ഭാഗമായ ഒരു ലേഖനം അക്സസ് ചെയ്യാനാണ് താങ്കള്‍ ശ്രമിക്കുന്നത്.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">അസാധുവായ കോപ്പി എഡിറ്റര്‍ സബ്മിഷന്‍ അല്ലെങ്കില്‍ കോപ്പി എഡിറ്റര്‍ സബ്മിഷന്‍ അപേക്ഷിച്ചിട്ടില്ല!</message>
-	<message key="user.authorization.invalidSectionEditorSubmission">അസാധുവായ സിലക്ഷന്‍ എഡിറ്റര്‍ സബ്മിഷന്‍ അല്ലെങ്കില്‍ സിലക്ഷന്‍ എഡിറ്റര്‍ സബ്മിഷന്‍ അപേക്ഷിച്ചിട്ടില്ല!</message>
 	
 	<!-- Icons: Default "alt" text -->
 	

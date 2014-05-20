@@ -3,7 +3,8 @@
 /**
  * @file classes/article/ArticleGalleyDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyDAO
@@ -39,7 +40,7 @@ class ArticleGalleyDAO extends DAO {
 	 */
 	function getById($galleyId, $submissionId = null) {
 		$params = array((int) $galleyId);
-		if ($articleId !== null) $params[] = (int) $submissionId;
+		if ($submissionId !== null) $params[] = (int) $submissionId;
 		$result = $this->retrieve(
 			'SELECT	*
 			FROM	submission_galleys
@@ -158,11 +159,6 @@ class ArticleGalleyDAO extends DAO {
 			(int) $articleId
 		);
 
-		while (!$result->EOF) {
-			$galleys[] = $this->_fromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
@@ -188,7 +184,7 @@ class ArticleGalleyDAO extends DAO {
 	 * internal galley ID; public galley ID takes precedence.
 	 * @param $galleyId string
 	 * @param $articleId int
-	 * @return galley object
+	 * @return ArticleGalley object
 	 */
 	function getGalleyByBestGalleyId($galleyId, $articleId) {
 		$galley = null;

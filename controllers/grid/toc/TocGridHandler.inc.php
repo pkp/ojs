@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/toc/TocGridHandler.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TocGridHandler
@@ -186,8 +187,6 @@ class TocGridHandler extends CategoryGridHandler {
 		}
 		$publishedArticle->setSeq($newSequence);
 		$publishedArticleDao->updatePublishedArticle($publishedArticle);
-
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 	}
 
 	//
@@ -204,7 +203,6 @@ class TocGridHandler extends CategoryGridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();

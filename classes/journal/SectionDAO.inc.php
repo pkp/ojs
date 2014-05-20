@@ -3,7 +3,8 @@
 /**
  * @file classes/journal/SectionDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionDAO
@@ -14,9 +15,14 @@
  */
 
 import ('classes.journal.Section');
+import ('lib.pkp.classes.context.PKPSectionDAO');
 
-class SectionDAO extends DAO {
+class SectionDAO extends PKPSectionDAO {
 	var $cache;
+
+	function SectionDAO() {
+		parent::PKPSectionDAO();
+	}
 
 	function _cacheMiss($cache, $id) {
 		$section = $this->getById($id, null, false);
@@ -57,7 +63,7 @@ class SectionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnSectionFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 
@@ -89,7 +95,7 @@ class SectionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnSectionFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -120,7 +126,7 @@ class SectionDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnSectionFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -139,16 +145,14 @@ class SectionDAO extends DAO {
 	 * @param $row array
 	 * @return Section
 	 */
-	function _returnSectionFromRow($row) {
-		$section = $this->newDataObject();
+	function _fromRow($row) {
+		$section = parent::_fromRow($row);
+
 		$section->setId($row['section_id']);
 		$section->setJournalId($row['journal_id']);
-		$section->setReviewFormId($row['review_form_id']);
-		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
 		$section->setMetaReviewed($row['meta_reviewed']);
 		$section->setAbstractsNotRequired($row['abstracts_not_required']);
-		$section->setEditorRestricted($row['editor_restricted']);
 		$section->setHideTitle($row['hide_title']);
 		$section->setHideAuthor($row['hide_author']);
 		$section->setHideAbout($row['hide_about']);
@@ -157,7 +161,7 @@ class SectionDAO extends DAO {
 
 		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
 
-		HookRegistry::call('SectionDAO::_returnSectionFromRow', array(&$section, &$row));
+		HookRegistry::call('SectionDAO::_fromRow', array(&$section, &$row));
 
 		return $section;
 	}
@@ -167,7 +171,10 @@ class SectionDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'abbrev', 'policy', 'identifyType');
+		return array_merge(
+			parent::getLocaleFieldNames(),
+			array('abbrev', 'policy', 'identifyType')
+		);
 	}
 
 	/**
@@ -250,21 +257,13 @@ class SectionDAO extends DAO {
 	}
 
 	/**
-	 * Delete a section.
-	 * @param $section Section
-	 */
-	function deleteObject($section) {
-		return $this->deleteById($section->getId(), $section->getJournalId());
-	}
-
-	/**
 	 * Delete a section by ID.
 	 * @param $sectionId int
-	 * @param $journalId int optional
+	 * @param $contextId int optional
 	 */
-	function deleteById($sectionId, $journalId = null) {
+	function deleteById($sectionId, $contextId = null) {
 		$sectionEditorsDao = DAORegistry::getDAO('SectionEditorsDAO');
-		$sectionEditorsDao->deleteEditorsBySectionId($sectionId, $journalId);
+		$sectionEditorsDao->deleteBySectionId($sectionId, $contextId);
 
 		// Remove articles from this section
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
@@ -275,7 +274,7 @@ class SectionDAO extends DAO {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticlesBySectionId($sectionId);
 
-		if (isset($journalId) && !$this->sectionExists($sectionId, $journalId)) return false;
+		if (isset($contextId) && !$this->sectionExists($sectionId, $contextId)) return false;
 		$this->update('DELETE FROM section_settings WHERE section_id = ?', (int) $sectionId);
 		$this->update('DELETE FROM sections WHERE section_id = ?', (int) $sectionId);
 	}
@@ -287,10 +286,7 @@ class SectionDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteByJournalId($journalId) {
-		$sections = $this->getByJournalId($journalId);
-		while ($section = $sections->next()) {
-			$this->deleteObject($section);
-		}
+		$this->deleteByContextId($journalId);
 	}
 
 	/**
@@ -308,7 +304,7 @@ class SectionDAO extends DAO {
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$section = $this->_returnSectionFromRow($row);
+			$section = $this->_fromRow($row);
 			if (!isset($returner[$row['editor_id']])) {
 				$returner[$row['editor_id']] = array($section);
 			} else {
@@ -335,7 +331,7 @@ class SectionDAO extends DAO {
 		$returner = array();
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$returner[] = $this->_returnSectionFromRow($row);
+			$returner[] = $this->_fromRow($row);
 			$result->MoveNext();
 		}
 
@@ -348,12 +344,22 @@ class SectionDAO extends DAO {
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
 	function getByJournalId($journalId, $rangeInfo = null) {
+		return $this->getByContextId($journalId, $rangeInfo);
+	}
+
+	/**
+	 * Retrieve all sections for a journal.
+	 * @param $journalId int Journal ID
+	 * @param $rangeInfo Object
+	 * @return DAOResultFactory containing Sections ordered by sequence
+	 */
+	function getByContextId($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM sections WHERE journal_id = ? ORDER BY seq',
 			(int) $journalId, $rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnSectionFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -366,7 +372,7 @@ class SectionDAO extends DAO {
 			false, $rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnSectionFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**

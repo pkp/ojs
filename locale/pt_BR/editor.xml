@@ -4,7 +4,8 @@
 <!--
   * locale/pt_BR/editor.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
@@ -12,9 +13,6 @@
   -->
 
 <locale name="pt_BR" full_name = "Português (Brasil)">
-	<message key="editor.article.reviewForms">Formulários de avaliação</message>
-	<message key="editor.article.selectReviewForm">Escolher formulário de avaliação</message>
-	<message key="editor.article.clearReviewForm">Retirar formulário designado</message>
 	<message key="editor.home">Página Inicial do Editor</message>
 	<message key="editor.submissionsAndPublishing">Submissões e Publicações</message>
 	<message key="editor.submissionQueue">Fila de submissões</message>

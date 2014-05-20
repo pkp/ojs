@@ -1,7 +1,8 @@
 {**
  * templates/controllers/grid/issues/issue.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * The "edit issue" tabset.
@@ -9,8 +10,9 @@
 <script type="text/javascript">
 	// Attach the JS file tab handler.
 	$(function() {ldelim}
-		$('#editIssueTabs').pkpHandler(
-				'$.pkp.controllers.TabHandler');
+		$('#editIssueTabs').pkpHandler('$.pkp.controllers.TabHandler', {ldelim}
+				notScrollable: true
+		{rdelim});
 	{rdelim});
 </script>
 <div id="editIssueTabs">

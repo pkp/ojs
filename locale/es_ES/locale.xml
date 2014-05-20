@@ -4,7 +4,8 @@
 <!--
   * locale/es_ES/locale.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_ES (Español España) locale.
@@ -178,7 +179,7 @@
 	<message key="user.role.subscriptionManager">Gestor/a de suscripción</message>
 	<message key="user.role.managers">Gestores/as de revistas</message>
 	<message key="user.role.editors">Editores/as</message>
-	<message key="user.role.sectionEditors">Editores/as de sección</message>
+	<message key="user.role.subEditors">Editores/as de sección</message>
 	<message key="user.role.layoutEditors">Editores/as de composición</message>
 	<message key="user.role.copyeditors">Correctores/as</message>
 	<message key="user.role.proofreaders">Correctores</message>
@@ -313,7 +314,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems soporta el sistema <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) para asegurar un archivo seguro y permanente de la revista. LOCKSS es software libre desarrollado por la Biblioteca de la Universidad de Stanford que permite a las bibliotecas preservar revistas basadas en web seleccionadas recopilando regularmente los contenidos de las revistas registradas para recopilar el nuevo contenido publicado y archivarlo. Cada archivo es validado continuamente contra el cache de otras bibliotecas, y si el contenido está corrupto o se ha perdido, se usan los otros caches de la revista para recuperarlo.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems soporta el sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) para asegurar un archivo seguro y permanente de la revista. LOCKSS es software libre desarrollado por la Biblioteca de la Universidad de Stanford que permite a las bibliotecas preservar revistas basadas en web seleccionadas recopilando regularmente los contenidos de las revistas registradas para recopilar el nuevo contenido publicado y archivarlo. Cada archivo es validado continuamente contra el cache de otras bibliotecas, y si el contenido está corrupto o se ha perdido, se usan los otros caches de la revista para recuperarlo.
 <br /><br />
 Configurar el soporte LOCKSS para Open Journal Systems no es necesario hasta que se comienza a publicar, cuando esto ocurra es necesario que siga estos dos pasos:]]></message>
 	
@@ -798,8 +799,6 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<!-- Debug messages -->
 
 
-	<message key="submission.reviewForm">Formulario de revisión</message>
-	<message key="submission.reviewFormResponse">Respuesta al Formulario de Revisión</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Por favor llene los campos requeridos</message>
 	<message key="reviewer.article.enterReviewForm">Haga "click" en el ícono para llenar el formulario de revisión</message>
 	<message key="common.pageHeader.altText">Título de página</message>

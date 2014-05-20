@@ -3,7 +3,8 @@
 /**
  * @file classes/log/SubmissionEventLogDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionEventLogDAO
@@ -21,25 +22,6 @@ class SubmissionEventLogDAO extends PKPSubmissionEventLogDAO {
 	 */
 	function SubmissionEventLogDAO() {
 		parent::PKPSubmissionEventLogDAO();
-	}
-
-	/**
-	 * Generate a new DataObject
-	 * @return SubmissionEventLogEntry
-	 */
-	function newDataObject() {
-		$returner = new SubmissionEventLogEntry();
-		$returner->setAssocType(ASSOC_TYPE_SUBMISSION_FILE);
-		return $returner;
-	}
-
-	/**
-	 * Get article event log entries by article ID
-	 * @param $articleId int
-	 * @return DAOResultFactory
-	 */
-	function &getByArticleId($articleId) {
-		return $this->getByAssoc(ASSOC_TYPE_SUBMISSION, $articleId);
 	}
 }
 

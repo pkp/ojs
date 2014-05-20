@@ -3,7 +3,8 @@
 /**
  * @file classes/search/ArticleSearchIndex.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchIndex
@@ -148,7 +149,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 						if ($depFile->getFileId()) {
 							self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $depFile->getFileId());
 						}
-						self::suppFileMetadataChanged($dependentFile);
+						self::suppFileMetadataChanged($depFile);
 					}
 				}
 			}

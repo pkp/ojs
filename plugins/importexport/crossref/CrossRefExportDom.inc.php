@@ -3,7 +3,8 @@
 /**
  * @file plugins/importexport/crossref/CrossRefExportDom.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossRefExportDom
@@ -15,9 +16,9 @@
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
 define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
-define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.0');
-define('CROSSREF_VERSION' , '4.3.0');
-define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.0 http://www.crossref.org/schema/deposit/crossref4.3.0.xsd');
+define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.3');
+define('CROSSREF_VERSION' , '4.3.3');
+define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.3 http://www.crossref.org/schema/deposit/crossref4.3.3.xsd');
 
 class CrossRefExportDom {
 
@@ -196,6 +197,9 @@ class CrossRefExportDom {
 		if ($article->getDatePublished()) {
 			$publicationDateNode =& CrossRefExportDom::generatePublisherDateDom($doc, $article->getDatePublished());
 			XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
+		} elseif ($issue->getDatePublished()) {
+			$publicationDateNode =& CrossRefExportDom::generatePublisherDateDom($doc, $issue->getDatePublished());
+			XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 		} else {
 			echo __('plugins.importexport.crossref.articleDatePublishedError', array('articleId' => $article->getId())) . "\n\n";
 		}
@@ -217,7 +221,8 @@ class CrossRefExportDom {
 		}
 
 		// DOI data node
-		$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getPubId('doi'), Request::url(null, 'article', 'view', $article->getBestArticleId()));
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getPubId('doi'), Request::url(null, 'article', 'view', $article->getBestArticleId()), $articleGalleyDao->getGalleysByArticle($article->getId()));
 		XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);
 
 		/* Component list (supplementary files) */
@@ -281,10 +286,28 @@ class CrossRefExportDom {
 	 * @param $DOI string
 	 * @param $url string
 	 */
-	function &generateDOIdataDom(&$doc, $DOI, $url) {
+	function &generateDOIdataDom(&$doc, $DOI, $url, $galleys = null) {
+		$request = Application::getRequest();
+		$journal = $request->getJournal();
 		$DOIdataNode =& XMLCustomWriter::createElement($doc, 'doi_data');
 		XMLCustomWriter::createChildWithText($doc, $DOIdataNode, 'doi', $DOI);
 		XMLCustomWriter::createChildWithText($doc, $DOIdataNode, 'resource', $url);
+
+		/* article galleys */
+		if ($galleys) {
+			$collectionNode = XMLCustomWriter::createElement($doc, 'collection');
+			XMLCustomWriter::setAttribute($collectionNode, 'property', 'text-mining');
+			XMLCustomWriter::appendChild($DOIdataNode, $collectionNode);
+			foreach ($galleys as $galley) {
+				$itemNode = XMLCustomWriter::createElement($doc, 'item');
+				XMLCustomWriter::appendChild($collectionNode, $itemNode);
+				$resourceNode = XMLCustomWriter::createElement($doc, 'resource');
+				XMLCustomWriter::appendChild($itemNode, $resourceNode);
+				XMLCustomWriter::setAttribute($resourceNode, 'mime_type', $galley->getFileType());
+				$urlNode = XMLCustomWriter::createTextNode($doc, $request->url(null, 'article', 'viewFile', array($galley->getArticleId(), $galley->getBestGalleyId($journal))));
+				XMLCustomWriter::appendChild($resourceNode, $urlNode);
+			}
+		}
 
 		return $DOIdataNode;
 	}

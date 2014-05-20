@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/sword/SwordImportExportPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SwordPlugin
@@ -201,11 +202,17 @@ class SwordImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Execute import/export tasks using the command-line interface.
-	 * @param $args Parameters to the plugin
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
+
+	/**
+	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		die('executeCLI unimplemented');
+		fatalError('Not implemented');
 	}
 }
 

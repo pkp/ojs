@@ -3,7 +3,8 @@
 /**
  * @file classes/payment/ojs/OJSPaymentManager.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSPaymentManager
@@ -211,7 +212,6 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function acceptGiftPayments() {
-		$journal = $this->request->getJournal();
 		return $this->acceptGiftSubscriptionPayments();
 	}
 
@@ -258,12 +258,11 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 				$subscriptionId = $queuedPayment->getAssocId();
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
 					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = true;
 				} else {
-					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = false;
 				}
@@ -309,11 +308,11 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$subscriptionId = $queuedPayment->getAssocId();
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
 					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = true;
 				} else {
-					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
 					$institutional = false;
 				}
@@ -355,6 +354,7 @@ class OJSPaymentManager extends PaymentManager {
 				$giftDao = DAORegistry::getDAO('GiftDAO');
 				$gift =& $giftDao->getGift($giftId);
 				if (!$gift) return false;
+				$password = null; // Suppress scrutinizer warn
 
 				$journalDao = DAORegistry::getDAO('JournalDAO');
 				$journalId = $gift->getAssocId();

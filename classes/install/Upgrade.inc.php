@@ -3,7 +3,8 @@
 /**
  * @file classes/install/Upgrade.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Upgrade
@@ -501,6 +502,10 @@ class Upgrade extends Installer {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_PKP_DEFAULT);
 
+		define('ROLE_ID_LAYOUT_EDITOR',	0x00000300);
+		define('ROLE_ID_COPYEDITOR', 0x00002000);
+		define('ROLE_ID_PROOFREADER', 0x00003000);
+
 		while ($journal = $journals->next()) {
 			// Install default user groups so we can assign users to them.
 			$userGroupDao->installSettings($journal->getId(), 'registry/userGroups.xml');
@@ -602,7 +607,6 @@ class Upgrade extends Installer {
 
 			// Layout Editors. NOTE:  this involves a role id change from 0x300 to 0x1001 (old OJS _LAYOUT_EDITOR to PKP-lib _ASSISTANT).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
-			define('ROLE_ID_LAYOUT_EDITOR',	0x00000300);
 			$layoutEditorGroup = null;
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.layoutEditor') {
@@ -618,7 +622,6 @@ class Upgrade extends Installer {
 
 			// Copyeditors. NOTE:  this involves a role id change from 0x2000 to 0x1001 (old OJS _COPYEDITOR to PKP-lib _ASSISTANT).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
-			define('ROLE_ID_COPYEDITOR', 0x00002000);
 			$copyEditorGroup = null;
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.copyeditor') {
@@ -633,7 +636,6 @@ class Upgrade extends Installer {
 			}
 
 			// Proofreaders. NOTE:  this involves a role id change from 0x3000 to 0x1001 (old OJS _PROOFREADER to PKP-lib _ASSISTANT).
-			define('ROLE_ID_PROOFREADER', 0x00003000);
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_ASSISTANT);
 			$proofreaderGroup = null;
 			while ($group = $userGroups->next()) {
@@ -685,7 +687,7 @@ class Upgrade extends Installer {
 				// Section Editors.
 				$editorsResult = $stageAssignmentDao->retrieve('SELECT e.* FROM submissions s LEFT JOIN edit_assignments e ON (s.submission_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id)
 							LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND r.journal_id = s.context_id) WHERE e.article_id = ? AND s.submission_id = e.article_id
-							AND r.role_id IS NULL AND (e.can_review = 1 OR e.can_edit = 1)', array($submissionId));
+							AND r.role_id IS NULL', array($submissionId));
 				while (!$editorsResult->EOF) {
 					$editorRow = $editorsResult->GetRowAssoc(false);
 					$stageAssignmentDao->build($submissionId, $sectionEditorGroup->getId(), $editorRow['editor_id']);
@@ -775,7 +777,6 @@ class Upgrade extends Installer {
 
 		$submissionFile = new SubmissionFile();
 
-		$primaryLocale = AppLocale::getPrimaryLocale();
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 
@@ -783,7 +784,6 @@ class Upgrade extends Installer {
 		$filesDir = Config::getVar('files', 'files_dir') . '/journals/';
 		while (!$articleFilesResult->EOF){
 			$row = $articleFilesResult->GetRowAssoc(false);
-			$articleFileName = $row['file_name'];
 			// Assemble the old file path.
 			$oldFilePath = $filesDir . $row['context_id'] . '/articles/' . $row['submission_id'] . '/';
 			if (isset($row['type'])) { // pre 2.4 upgrade.
@@ -978,6 +978,7 @@ class Upgrade extends Installer {
 		$loadId = '3.0.0-upgrade-ojsViews';
 		$metricsDao = DAORegistry::getDAO('MetricsDAO');
 		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, context_id, issue_id)';
+		$selectClause = null; // Conditionally set later
 
 		// Galleys.
 		$galleyUpdateCases = array(
@@ -990,7 +991,6 @@ class Upgrade extends Installer {
 
 		foreach ($galleyUpdateCases as $case) {
 			$skipQuery = false;
-			$params = array();
 			if ($case['fileType'] == STATISTICS_FILE_TYPE_PDF) {
 				$pdfFileTypeWhereCheck = 'IN';
 			} else {
@@ -1040,6 +1040,110 @@ class Upgrade extends Installer {
 		// Set the site default metric type.
 		$siteSettingsDao = DAORegistry::getDAO('SiteSettingsDAO'); /* @var $siteSettingsDao SiteSettingsDAO */
 		$siteSettingsDao->updateSetting('defaultMetricType', OJS_METRIC_TYPE_COUNTER);
+
+		return true;
+	}
+
+	/**
+	 * Synchronize the ASSOC_TYPE_SERIES constant to ASSOC_TYPE_SECTION defined in PKPApplication.
+	 * @return boolean
+	 */
+	function syncSeriesAssocType() {
+		// Can be any DAO.
+		$dao =& DAORegistry::getDAO('UserDAO'); /* @var $dao DAO */
+		$tablesToUpdate = array(
+			'announcements',
+			'announcements_types',
+			'user_settings',
+			'notification',
+			'email_templates',
+			'email_templates_data',
+			'controlled_vocabs',
+			'gifts',
+			'event_log',
+			'email_log',
+			'metadata_descriptions',
+			'metrics',
+			'notes',
+			'item_views',
+			'data_object_tombstone_oai_set_objects');
+
+		foreach ($tablesToUpdate as $tableName) {
+			if ($this->tableExists($tableName)) {
+				$dao->update('UPDATE ' . $tableName . ' SET assoc_type = ' . ASSOC_TYPE_SECTION . ' WHERE assoc_type = ' . "'526'");
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Modernize review form storage from OJS 2.x
+	 * @return boolean
+	 */
+	function fixReviewForms() {
+		// 1. Review form possible options were stored with 'order'
+		//    and 'content' attributes. Just store by content.
+		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
+		$result = $reviewFormDao->retrieve(
+			'SELECT * FROM review_form_element_settings WHERE setting_name = ?',
+			'possibleResponses'
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$options = unserialize($row['setting_value']);
+			$newOptions = array();
+			foreach ($options as $key => $option) {
+				$newOptions[$key] = $option['content'];
+			}
+			$row['setting_value'] = serialize($newOptions);
+			$reviewFormDao->Replace('review_form_element_settings', $row, array('review_form_id', 'locale', 'setting_name'));
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// 2. Responses were stored with indexes offset by 1. Fix.
+		import('lib.pkp.classes.reviewForm.ReviewFormElement'); // Constants
+		$result = $reviewFormDao->retrieve(
+			'SELECT	rfe.element_type AS element_type,
+				rfr.response_value AS response_value,
+				rfr.review_id AS review_id,
+				rfe.review_form_element_id AS review_form_element_id
+			FROM	review_form_responses rfr
+				JOIN review_form_elements rfe ON (rfe.review_form_element_id = rfr.review_form_element_id)
+			WHERE	rfe.element_type IN (?, ?, ?)',
+			array(
+				REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES,
+				REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS,
+				REVIEW_FORM_ELEMENT_TYPE_DROP_DOWN_BOX
+			)
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$value = $row['response_value'];
+			switch ($row['element_type']) {
+				case REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES:
+					// Stored as a serialized object.
+					$oldValue = unserialize($value);
+					$value = array();
+					foreach ($oldValue as $k => $v) {
+						$value[$k] = $v-1;
+					}
+					$value = serialize($value);
+					break;
+				case REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS:
+				case REVIEW_FORM_ELEMENT_TYPE_DROP_DOWN_BOX:
+					// Stored as a simple number.
+					$value-=1;
+					break;
+			}
+			$reviewFormDao->update(
+				'UPDATE review_form_responses SET response_value = ? WHERE review_id = ? AND review_form_element_id = ?',
+				array($value, $row['review_id'], $row['review_form_element_id'])
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
 
 		return true;
 	}

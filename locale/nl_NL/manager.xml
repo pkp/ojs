@@ -4,7 +4,8 @@
 <!--
   * locale/nl_NL/manager.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -86,40 +87,6 @@
 	<message key="manager.people.roleEnrollment">{$role} Inschrijving</message>
 	<message key="manager.people.syncUserDescription">Synchronisatie zorgt ervoor dat alle gebruikers die ingeschreven staan in het gekozen tijdschrift in dezelfde rol ingeschreven worden in dit tijdschrift. Deze functie maakt het mogelijk om dezelfde groep gebruikers (bv. reviewers) te synchroniseren tussen tijdschriften</message>
 	<message key="manager.plugins.description">Deze pagina geeft de tijdschriftbeheerder de mogelijkheid om de plugins die momenteel geïnstalleerd zijn te bekijken en eventueel te configureren. Plugins zijn onderverdeeld in categorieën, afhankelijk van hun functies. De categorieën worden hieronder getoond met de bijbehorende plugins.</message>
-	<message key="manager.reviewFormElement.changeType">Waarschuwing: Het veranderen van elementtype van het reviewformulier van multiple-choice naar open vraag zal resulteren in het verwijderen van de multiple-choice opties.</message>
-	<message key="manager.reviewFormElements">Formulieritems</message>
-	<message key="manager.reviewFormElements.addResponseItem">Selectie toevoegen</message>
-	<message key="manager.reviewFormElements.checkboxes">Aankruisvelden (u kunt één of meer velden aankruisen)</message>
-	<message key="manager.reviewFormElements.chooseType">Kies itemtype</message>
-	<message key="manager.reviewFormElements.confirmDelete">Bevestig het verwijderen van een gepubliceerd item...</message>
-	<message key="manager.reviewFormElements.copyTo">Kopieer naar</message>
-	<message key="manager.reviewFormElements.create">Maak nieuw item</message>
-	<message key="manager.reviewFormElements.dropdownbox">Uitklapmenu</message>
-	<message key="manager.reviewFormElements.edit">Bewerk formulieritem</message>
-	<message key="manager.reviewFormElements.elementType">Elementtype</message>
-	<message key="manager.reviewFormElements.form.elementTypeRequired">Een elementtype is verplicht voor een formulierelement</message>
-	<message key="manager.reviewFormElements.form.questionRequired">En vraag is verplicht bij een formulierelement</message>
-	<message key="manager.reviewFormElements.noneCreated">Er zijn geen items aangemaakt</message>
-	<message key="manager.reviewFormElements.possibleResponse">Selectie</message>
-	<message key="manager.reviewFormElements.question">Item</message>
-	<message key="manager.reviewFormElements.radiobuttons">Radioknoppen (u kunt er slechts één kiezen)</message>
-	<message key="manager.reviewFormElements.required">Reviewers moeten dit item afronden</message>
-	<message key="manager.reviewFormElements.smalltextfield">Tekstveld voor één woord</message>
-	<message key="manager.reviewFormElements.textarea">Uitgebreid tekstveld</message>
-	<message key="manager.reviewFormElements.textfield">Tekstveld voor één regel</message>
-	<message key="manager.reviewForms">Reviewformulieren</message>
-	<message key="manager.reviewForms.completed">Afgerond</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Bevestig het verwijderen van een niet-gepubliceerd reviewformulier...</message>
-	<message key="manager.reviewForms.create">Maak reviewformulier aan</message>
-	<message key="manager.reviewForms.description">Beschrijving en instructies</message>
-	<message key="manager.reviewForms.edit">Reviewformulier</message>
-	<message key="manager.reviewForms.form.titleRequired">Een titel is verplicht voor het reviewformulier</message>
-	<message key="manager.reviewForms.inReview">Onder review</message>
-	<message key="manager.reviewForms.list.description">Hier aangemaakte reviewformulieren worden aangeboden aan reviewers om verder in te vullen. Ze komen in de plaats van het standaardformulier dat uit twee tekstvelden bestaat, het eerste "voor auteur en redacteur"  en het tweede "voor redacteur". Reviewformulieren kunnen ontworpen worden voor een specifieke sectie van het tijdschrift. Redacteuren kunnen kiezen welk formulier gebruikt moet worden bij het toekennen van de review. In alle gevallen hebben redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
-	<message key="manager.reviewForms.noneChosen">Geen / Vrije vorm review</message>
-	<message key="manager.reviewForms.noneCreated">Er zijn geen reviewformulieren aangemaakt</message>
-	<message key="manager.reviewForms.preview">Voorvertoningsformulier</message>
-	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Samenvattingen niet verplicht stellen</message>
 	<message key="manager.sections.assigned">De redacteuren van deze sectie</message>
 	<message key="manager.sections.create">Sectie aanmaken</message>
@@ -171,7 +138,7 @@
 	<message key="manager.setup.authorGuidelines">Richtlijnen voor auteurs</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Stel ten behoeve van de auteurs de bibliografische en formatteringsstandaard voor inzendingen voor het tijdschrift (bv., <em>Publication Manual of the American Psychological Association</em>, 5e editie, 2001) op. Het is aan te bevelen om voorbeelden te geven van de gangbare citatieformaten voor tijdschriften en boeken voor gebruik in inzendingen. Identificeer ook de bruikbare typen van aanvullende bestanden (bv. datasets, onderzoeksinstrumenten, enz.) die auteurs aangemoedigd worden om met hun inzendingen mee te leveren teneinde de betrokkenheid van de lezers met hun werk te vergroten.]]></message>
 	<message key="manager.setup.competingInterests">Strijdige belangen</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedische tijdschriften vragen hun auteurs en reviewers doorgaans te verklaren of ze strijdige belangen hebben met betrekking tot hun onderzoek (zie <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedische tijdschriften vragen hun auteurs en reviewers doorgaans te verklaren of ze strijdige belangen hebben met betrekking tot hun onderzoek (zie <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Richtlijnen voor het indienen van een verklaring inzake strijdige belangen</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Verplicht auteurs een verklaring omtrent  strijdige belangen in te dienen met hun inzending.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Verplicht reviewers een verklaring inzake strijdige belangen in te dienen met iedere review die ze insturen.</message>
@@ -298,7 +265,7 @@
 	<message key="manager.setup.lists">Lijsten</message>
 	<message key="manager.setup.listsDescription">Geef het maximale aantal onderdelen (zoals inzendingen, gebruikers of opmaaktaken) die op één pagina van een lijst getoond wordt en het aantal paginalinks dat op iedere pagina getoond wordt.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Gebruik LOCKSS voor het opslaan en distribueren van de inhoud van het tijdschrift bij deelnemende bibliotheken via een LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> pagina. Een LOCKSS licentie zal verschijnen bij Over dit Tijdschrift onder Archiveren:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Zie <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">voor andere versies van een LOCKSS licentie</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Zie <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">voor andere versies van een LOCKSS licentie</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Vind 6-10 bibliotheken die het tijdschrift willen registreren en een kopie bewaren. Denk aan instituten waar redacteuren of bestuursleden werken en die al in LOCKSS deelnemen. Zie <a href="http://www.lockss.org/community/" target="_blank">voor deelnemende bibliotheken</a>. Gebruik de voorbereide uitnodigingen voor (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliotheken die al deelnemen in LOCKSS</a> of (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotheken die nog niet deelnemen in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Uiterlijk</message>
 	<message key="manager.setup.look.description">Kop startpagina, inhoud, kop tijdschrift, voettekst, navigatiebalk en stylesheet.</message>

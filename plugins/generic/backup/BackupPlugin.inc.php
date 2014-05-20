@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/backup/BackupPlugin.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BackupPlugin
@@ -171,12 +172,12 @@ class BackupPlugin extends GenericPlugin {
 			case 'enable':
 				$this->updateSetting(0, 'enabled', true);
 				$message = NOTIFICATION_TYPE_PLUGIN_ENABLED;
-                                $messageParams = array('pluginName' => $this->getDisplayName());
+				$messageParams = array('pluginName' => $this->getDisplayName());
 				break;
 			case 'disable':
 				$this->updateSetting(0, 'enabled', false);
 				$message = NOTIFICATION_TYPE_PLUGIN_DISABLED;
-                                $messageParams = array('pluginName' => $this->getDisplayName());
+				$messageParams = array('pluginName' => $this->getDisplayName());
 				break;
 		}
 		return false;

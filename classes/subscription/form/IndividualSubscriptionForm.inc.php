@@ -3,7 +3,8 @@
 /**
  * @file classes/subscription/form/IndividualSubscriptionForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IndividualSubscriptionForm
@@ -80,7 +81,7 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 
 		// Send notification email
 		if ($this->_data['notifyEmail'] == 1) {
-			$mail =& $this->_prepareNotificationEmail('SUBSCRIPTION_NOTIFY');
+			$mail = $this->_prepareNotificationEmail('SUBSCRIPTION_NOTIFY');
 			$mail->send();
 		} 
 	}

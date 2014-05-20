@@ -3,7 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/marcxml/OAIMetadataFormat_MARC21.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_MARC21
@@ -57,10 +58,8 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 
 		// Sources contains journal title, issue ID, and pages
 		$source = $journal->getLocalizedName() . '; ' . $issue->getIssueIdentification();
-		$pages = $article->getPages();
 
 		// Relation
-		$relation = array();
 		foreach ($article->getSuppFiles() as $suppFile) {
 			$record->relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
 		}

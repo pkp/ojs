@@ -4,7 +4,8 @@
 <!--
   * /locale/cs_CZ/manager.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the cs_CZ (Czech) locale.
@@ -86,40 +87,6 @@
 	<message key="manager.people.roleEnrollment">{$role} Zapsání</message>
 	<message key="manager.people.syncUserDescription">Synchronizací zapsání uživatelů zapíšete všechny uživatele zapsané do určité role v určitém časopisu do stejné role i v tomto časopisu. Tato funkce umožňuje, aby byly běžné sady uživatelů (např. Recenzentů) synchronizovány mezi časopisy.</message>
 	<message key="manager.plugins.description">Tato stránka umožňuje manažerovi časopisu prohlížet a případně konfigurovat plug-iny, které jsou aktuálně nainstalované. Plug-iny jsou rozdělené do kategorií podle jejich funkcí. Níže jsou vypsané kategorie a v rámci každé z nich aktuální skupina plug-inů.</message>
-	<message key="manager.reviewFormElement.changeType">Změna typo položky formuláře...</message>
-	<message key="manager.reviewFormElements">Položky formuláře</message>
-	<message key="manager.reviewFormElements.addResponseItem">Přidat výběr</message>
-	<message key="manager.reviewFormElements.checkboxes">Zaškrtávací políčka (můžete vybrat jedno nebo více)</message>
-	<message key="manager.reviewFormElements.chooseType">Vybraz typ položky</message>
-	<message key="manager.reviewFormElements.confirmDelete">Potvrdit smazání publikované položky formuláře...</message>
-	<message key="manager.reviewFormElements.copyTo">Kopírovat do:</message>
-	<message key="manager.reviewFormElements.create">Vytvořit novou položku</message>
-	<message key="manager.reviewFormElements.dropdownbox">Pole se seznamem</message>
-	<message key="manager.reviewFormElements.edit">Editovat položku formuláře</message>
-	<message key="manager.reviewFormElements.elementType">Typ položky</message>
-	<message key="manager.reviewFormElements.form.elementTypeRequired">Pro položku formuláře je požadován typ položky.</message>
-	<message key="manager.reviewFormElements.form.questionRequired">Pro položku je vyžadována otázka.</message>
-	<message key="manager.reviewFormElements.noneCreated">Nebyly vytvořeny žádné položky formuláře.</message>
-	<message key="manager.reviewFormElements.possibleResponse">Výběr</message>
-	<message key="manager.reviewFormElements.question">Položka</message>
-	<message key="manager.reviewFormElements.radiobuttons">Přepínače (můžete vybrat pouze jeden)</message>
-	<message key="manager.reviewFormElements.required">Recenzenti musí vyplnit položku</message>
-	<message key="manager.reviewFormElements.smalltextfield">Textové pole pro jedno slovo</message>
-	<message key="manager.reviewFormElements.textarea">Rozšířené textové pole</message>
-	<message key="manager.reviewFormElements.textfield">Jednořádkové textové pole</message>
-	<message key="manager.reviewForms">Formuláře posudků</message>
-	<message key="manager.reviewForms.completed">Dokončeno</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Potvrdit smazání nepublikovaného formuláře posudku...</message>
-	<message key="manager.reviewForms.create">Vytvořit formulář posudku</message>
-	<message key="manager.reviewForms.description">Popis a instrukce</message>
-	<message key="manager.reviewForms.edit">Formulář posudku</message>
-	<message key="manager.reviewForms.form.titleRequired">Pro formulář posudku je vyžadován název.</message>
-	<message key="manager.reviewForms.inReview">V recenzi</message>
-	<message key="manager.reviewForms.list.description">Zde vytvořené formuláře posudků budou předloženy recenzetům k vyplnění namísto výchozího formuláře, který obsahuje dvě otevřená pole - první "pro autora a editora" a druhé "pro editora". Formuláře posudků mohou být vyhrazeny pro jednotlivé sekce a editoři budou mít možnost zvolit, který formulář použít při přidělování recenze. V každém případě budou mít editoři možnost zahrnout recenze do korespondence s autorem.</message>
-	<message key="manager.reviewForms.noneChosen">Žádný / Nepodléhá recenzování</message>
-	<message key="manager.reviewForms.noneCreated">Nebyly vytvořeny žádné formuláře posudků.</message>
-	<message key="manager.reviewForms.preview">Náhled formuláře</message>
-	<message key="manager.reviewForms.title">Název</message>
 	<message key="manager.sections.abstractsNotRequired">Nepožadovat abstrakta</message>
 	<message key="manager.sections.assigned">Editoři této sekce</message>
 	<message key="manager.sections.create">Vytvořit sekci</message>
@@ -171,7 +138,7 @@
 	<message key="manager.setup.authorGuidelines">Instrukce autorům</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Stanovte pro autory bibliografický standard a standard pro formátování textu, které mají použít ve svých příspěvcích do časopisu (například <i>Publication Manual of the American Psychological Association</i>, 5th edition, 2001). Většinou je užitečné, pokud poskytnete příklady běžných způsobů citování časopisů a knih, které budou v příspěvcích použity. Také vymezte patřičné typy doplňkových souborů (například souborů s daty, výzkumné nástroje atd.), k jejichž nahrání společně s příspěvkem by měli být autoři motivováni, aby ve větší míře zpřístupnili čtenářům svou práci.]]></message>
 	<message key="manager.setup.competingInterests">Střet zájmů</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedicínské časopisy obvykle požadují od autorů a recenzentů prohlášení o střetu zájmů ohledně jejich výzkumu (viz <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedicínské časopisy obvykle požadují od autorů a recenzentů prohlášení o střetu zájmů ohledně jejich výzkumu (viz <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Instrukce pro zasílání prohlášení o střetu zájmů</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Požadovat od autorů, aby spolu s příspěvkem zaslali soubor s prohlášením o střetu zájmů.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Požadovat od recenzentů, aby s každým svým posudkem zasílali soubor s prohlášením o střetu zájmů.</message>
@@ -300,7 +267,7 @@
 	<message key="manager.setup.lists">Seznamy</message>
 	<message key="manager.setup.listsDescription">Zadejte maximální počet položek (například příspěvků, uživatelů nebo úkolů), které se zobrzí na každé stránce seznamu a počet odkazů na stránky zobrazených na každé stránce.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Umožněte technologii LOCKSS ukládat a distribuovat obsah časopisu v zúčastněných knihovnách přes LOCKSS stránku <a href="{$lockssUrl}" target="_blank">Seznam vydavatelů</a>. LOCKSS licence se zobrazí v části O časopisu – Archivování:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Viz <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">další verze LOCKSS licence</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Viz <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">další verze LOCKSS licence</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifikujte 6–10 knihoven, které budou registrovat a uskladňovat časopis. Například se obraťte na instituce, kde pracují editoři nebo členové redakční rady a/nebo na instituce, které se již účastní LOCKSS. Viz <a href="http://www.lockss.org/community/" target="_blank">zúčastněné knihovny</a>. Využijte připravená pozvání pro (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">knihovny účastnící se LOCKSS</a> nebo (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">knihovny, které ještě nejsou zapojené v LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Vzhled</message>
 	<message key="manager.setup.look.description">Záhlaví domácí stránky, obsah, záhlaví časopisu, zápatí, navigační panel a kaskádové styly.</message>

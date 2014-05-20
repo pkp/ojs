@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueGalleyForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyForm
@@ -16,7 +17,7 @@
 import('lib.pkp.classes.form.Form');
 
 class IssueGalleyForm extends Form {
-	/** @var int the ID of the issue */
+	/** @var Issue the issue the galley belongs to */
 	var $_issue = null;
 
 	/** @var IssueGalley current galley */
@@ -130,7 +131,6 @@ class IssueGalleyForm extends Form {
 	 */
 	function execute($request) {
 		import('classes.file.IssueFileManager');
-		$issueId = $this->_issueGalley?$this->_issueGalley->getId():null;
 		$issueFileManager = new IssueFileManager($this->_issue->getId());
 
 		$journal = $request->getJournal();

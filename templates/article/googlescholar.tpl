@@ -1,7 +1,8 @@
 {**
  * templates/article/googlescholar.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Metadata elements for articles based on preferred types for Google Scholar
@@ -42,7 +43,12 @@
 {/if}
 
 {if $article->getPages()}
-	<meta name="citation_firstpage" content="{$article->getPages()|escape}"/>
+	{if $article->getStartingPage()}
+		<meta name="citation_firstpage" content="{$article->getStartingPage()|escape}"/>
+	{/if}
+	{if $article->getEndingPage()}
+		<meta name="citation_lastpage" content="{$article->getEndingPage()|escape}"/>
+	{/if}
 {/if}
 {foreach from=$pubIdPlugins item=pubIdPlugin}
 	{if $issue->getPublished()}

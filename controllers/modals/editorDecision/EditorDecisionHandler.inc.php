@@ -3,7 +3,8 @@
 /**
  * @file controllers/modals/editorDecision/EditorDecisionHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EditorDecisionHandler
@@ -60,13 +61,12 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 	 * @return string Serialized JSON object
 	 */
 	function saveNewReviewRound($args, $request) {
-		// Retrieve the authorized submission.
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		// FIXME: this can probably all be managed somewhere.
 		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
 		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) {
 			$redirectOp = WORKFLOW_STAGE_PATH_EXTERNAL_REVIEW;
 		} else {
+			$redirectOp = null; // Suppress scrutinizer warn
 			assert(false);
 		}
 

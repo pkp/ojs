@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/customBlockManager/CustomBlockManagerPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.customBlockManager
@@ -88,7 +89,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 		return $verbs;
 	}
 
- 	/**
+	/**
 	 * @see Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {

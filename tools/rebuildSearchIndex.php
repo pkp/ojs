@@ -3,7 +3,8 @@
 /**
  * @file tools/rebuildSearchIndex.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class rebuildSearchIndex
@@ -17,6 +18,13 @@ require(dirname(__FILE__) . '/bootstrap.inc.php');
 import('classes.search.ArticleSearchIndex');
 
 class rebuildSearchIndex extends CommandLineTool {
+	/**
+	 * Constructor
+	 * @param $argv array
+	 */
+	function rebuildSearchIndex($argv) {
+		parent::CommandLineTool($argv);
+	}
 
 	/**
 	 * Print command usage information.
@@ -66,7 +74,7 @@ class rebuildSearchIndex extends CommandLineTool {
 	 * when constructing galley/supp file download URLs.
 	 * @see PKPRequest::getBaseUrl()
 	 */
-	function callbackBaseUrl($hookName, $params) {
+	function callbackBaseUrl($hookName, &$params) {
 		$baseUrl =& $params[0];
 		$baseUrl = Config::getVar('general', 'base_url');
 		return true;

@@ -3,7 +3,8 @@
 /**
  * @file classes/article/ArticleGalley.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalley
@@ -95,6 +96,19 @@ class ArticleGalley extends Representation {
 	 */
 	function setLabel($label) {
 		return $this->setData('label', $label);
+	}
+
+	/**
+	 * @see Representation::getName()
+	 *
+	 * This override exists to provide a functional getName() in order to make
+	 * native XML export work correctly.  It is only used in that single instance.
+	 *
+	 * @param $locale string unused, except to match the function prototype in Representation.
+	 * @return array
+	 */
+	function getName($locale) {
+		return array($this->getLocale() => $this->getLabel());
 	}
 
 	/**

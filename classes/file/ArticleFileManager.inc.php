@@ -3,7 +3,8 @@
 /**
  * @file classes/file/ArticleFileManager.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleFileManager
@@ -104,17 +105,6 @@ class ArticleFileManager extends FileManager {
 	 */
 	function uploadSubmissionNoteFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, SUBMISSION_FILE_NOTE, $fileId, $overwrite);
-	}
-
-	/**
-	 * Copy an attachment file.
-	 * @param $url string The source URL/filename
-	 * @param $mimeType string The mime type of the original file
-	 * @param $fileId int
-	 * @param $overwrite boolean
-	 */
-	function copyAttachmentFile($url, $mimeType, $fileId = null, $overwrite = true, $assocId = null) {
-		return $this->handleCopy($url, $mimeType, SUBMISSION_FILE_ATTACHMENT, $fileId, $overwrite, $assocId);
 	}
 
 	/**
@@ -280,6 +270,7 @@ class ArticleFileManager extends FileManager {
 	 * @param $destFileId int (optional)
 	 */
 	function copyAndRenameFile($sourceFileId, $sourceRevision, $fileStage, $destFileId = null) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::copyAndRenameFile', array(&$sourceFileId, &$sourceRevision, &$fileStage, &$destFileId, &$result))) return $result;
 
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
@@ -333,7 +324,7 @@ class ArticleFileManager extends FileManager {
 		copy($sourceDir.$sourceArticleFile->getFileName(), $destDir.$newFileName);
 
 		$articleFile->setFileName($newFileName);
-		$articleFileDao->updateArticleFile($articleFile);
+		$submissionFileDao->updateArticleFile($articleFile);
 
 		return $fileId;
 	}
@@ -398,6 +389,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleUpload($fileName, $fileStage, $fileId = null, $overwrite = false) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::handleUpload', array(&$fileName, &$fileStage, &$fileId, &$overwrite, &$result))) return $result;
 
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
@@ -453,6 +445,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleWrite($fileName, &$contents, $mimeType, $fileStage, $fileId = null, $overwrite = false) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::handleWrite', array(&$fileName, &$contents, &$mimeType, &$fileId, &$overwrite, &$result))) return $result;
 
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
@@ -507,6 +500,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function handleCopy($url, $mimeType, $fileStage, $fileId = null, $overwrite = false) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::handleCopy', array(&$url, &$mimeType, &$fileStage, &$fileId, &$overwrite, &$result))) return $result;
 
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
@@ -558,6 +552,7 @@ class ArticleFileManager extends FileManager {
 	 * @return int the file ID (false if upload failed)
 	 */
 	function temporaryFileToArticleFile(&$temporaryFile, $fileStage, $assocId = null) {
+		$result = null;
 		if (HookRegistry::call('ArticleFileManager::temporaryFileToArticleFile', array(&$temporaryFile, &$fileStage, &$assocId, &$result))) return $result;
 
 		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');

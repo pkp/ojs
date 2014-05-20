@@ -1,7 +1,8 @@
 {**
  * templates/header/localnav.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Journal-Specific Navigation Bar
@@ -57,7 +58,7 @@
 							<li>
 								<a href="{url router=$smarty.const.ROUTE_PAGE page="management" op="tools" path="index"}">{translate key="navigation.tools"}</a>
 								<ul>
-									<li><a href="{url router=$smarty.const.ROUTE_PAGE page="manager" op="importexport"}">{translate key="navigation.tools.importExport"}</a></li>
+									<li><a href="{url router=$smarty.const.ROUTE_PAGE page="management" op="importexport"}">{translate key="navigation.tools.importExport"}</a></li>
 									<li><a href="{url router=$smarty.const.ROUTE_PAGE page="manager" op="statistics"}">{translate key="navigation.tools.statistics"}</a></li>
 								</ul>
 							</li>

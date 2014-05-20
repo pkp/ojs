@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageEventPlugin
@@ -208,6 +209,7 @@ class UsageEventPlugin extends GenericPlugin {
 				break;
 
 			default:
+				$assocType = $pubObject = $canonicalUrlOp = $canonicalUrlParams = null; // Suppress scrutinizer warn
 				// Why are we called from an unknown hook?
 				assert(false);
 		}

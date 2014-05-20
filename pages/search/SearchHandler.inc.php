@@ -3,7 +3,8 @@
 /**
  * @file pages/search/SearchHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SearchHandler
@@ -254,6 +255,7 @@ class SearchHandler extends Handler {
 					import('classes.issue.IssueAction');
 					$issue = $issueDao->getById($issueId);
 					$issues[$issueId] = $issue;
+					$issueAction = new IssueAction();
 					$issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue) && (!$issueAction->subscribedUser($journal, $issueId, $articleId) && !$issueAction->subscribedDomain($journal, $issueId, $articleId));
 				}
 				if (!isset($journals[$journalId])) {

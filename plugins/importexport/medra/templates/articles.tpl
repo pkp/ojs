@@ -1,14 +1,14 @@
 {**
  * @file plugins/importexport/medra/templates/articles.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Select articles for export.
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.common.export.selectArticle"}
-{assign var="pageCrumbTitle" value="plugins.importexport.common.export.selectArticle"}
 {include file="common/header.tpl"}
 {/strip}
 

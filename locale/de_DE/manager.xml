@@ -4,10 +4,11 @@
 <!--
   * locale/de_DE/manager.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
 
 <locale name="de_DE" full_name = "Deutsch (Deutschland)">
@@ -115,19 +116,6 @@
 	<message key="manager.reviewFormElements.smalltextfield">Textfeld für ein Wort</message>
 	<message key="manager.reviewFormElements.textarea">Erweitertes Textfeld</message>
 	<message key="manager.reviewFormElements.textfield">Textfeld für eine Zeile</message>
-	<message key="manager.reviewForms">Begutachtungsformulare</message>
-	<message key="manager.reviewForms.completed">Beendet</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Bestätigen Sie das Löschen eines nicht veröffentlichten Begutachtungsformulars...</message>
-	<message key="manager.reviewForms.create">Begutachtungsformular erstellen</message>
-	<message key="manager.reviewForms.description">Beschreibung und Anweisungen</message>
-	<message key="manager.reviewForms.edit">Review Begutachtungsformular</message>
-	<message key="manager.reviewForms.form.titleRequired">Die Angabe eines Titels für das Begutachtungsformular ist erforderlich.</message>
-	<message key="manager.reviewForms.inReview">In Begutachtung</message>
-	<message key="manager.reviewForms.list.description">Die Peer-Review-Formulare, die hier erzeugt werden, werden Gutachter/innen zum Vervollständigen gezeigt (statt der Voreinstellung, die zwei leere Textfelder vorsieht, das erste "für Autor/in und Redakteur/in", das zweite "für Redakteur/in"). Peer-Review-Formulare können spezifischen Zeitschriftenrubriken zugewiesen werden, und Redakteur/innen können wählen, welches Formular benutzt werden soll, wenn sie einen Text zur Begutachtung zuweisen. In jedem Fall haben Redakteur/innen die Möglichkeit, bei der Korrespondenz mit Autor/innen die Gutachten anzufügen.</message>
-	<message key="manager.reviewForms.noneChosen">Kein bzw. freies Formular</message>
-	<message key="manager.reviewForms.noneCreated">Es wurde kein Peer-Review-Formular erzeugt.</message>
-	<message key="manager.reviewForms.preview">Vorschau des Formulars</message>
-	<message key="manager.reviewForms.title">Titel</message>
 	<message key="manager.sections.abstractsNotRequired">Benötigt keine Abstracts.</message>
 	<message key="manager.sections.assigned">Rubrikredakteur/innen dieser Rubrik</message>
 	<message key="manager.sections.confirmDelete">Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen?</message>
@@ -183,7 +171,7 @@
 	<message key="manager.setup.authorGuidelines">Richtlinien für Autor/innen</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Bibliografische und Formatstandards für die Autor/innen (z.B. <em>Publication Manual of the American Psychological Association</em>, 5. Auflage 2001). Beispiele der wichtigsten Zitationsstandards für Zeitschriften und Bücher sind oft eine Hilfe. Ebenso Angaben zu infrage kommenden Zusatzdateien (z.B. Datensätze, Forschungsinstrumente, Grafiken usw.), die Autor/innen zu ihren Beiträgen hochladen sollten, wenn das Interesse der Leser/innen auf diese Weise gefördert wird.]]></message>
 	<message key="manager.setup.competingInterests">Interessenkonflikte</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedizinische Zeitschriften verlangen üblicherweise von ihren Autor/innen und Gutachter/innen, dass sie erklären, ob sie sich bezüglich ihrer Forschung in einem Interessenskonflikt befinden (siehe <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedizinische Zeitschriften verlangen üblicherweise von ihren Autor/innen und Gutachter/innen, dass sie erklären, ob sie sich bezüglich ihrer Forschung in einem Interessenskonflikt befinden (siehe <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Richtlinien für die Formulierung einer Erklärung zu Interessenkonflikten</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Verlangen Sie von Autor/innen, die einen Beitrag einreichen wollen, zusätzlich eine Erklärung zu möglicherweise bestehenden Interessenkonflikten.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Verlangen Sie von Gutachter/innen zusammen mit jeder Begutachtung eine Erklärung zu möglicherweise bestehenden Interessenkonflikten.</message>
@@ -317,7 +305,7 @@
 	<message key="manager.setup.lists">Listen</message>
 	<message key="manager.setup.listsDescription">Maximalzahl der Elemente auf jeder Listenseite (z.B. Beiträge, Benutzer/innen oder redaktionelle Aufgaben) festlegen sowie die Anzahl der Links, die auf jeder Seite erscheinen sollen.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Aktivieren Sie LOCKSS und verteilen und lagern Sie den Inhalt der Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über eine LOCKSS-<a href="{$lockssUrl}" target="_blank">Redakteur/innen-Erklärung-</a>Seite. Es erscheint dann eine Lizenz von LOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Siehe <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">andere Versionen einer LOCKSS-Lizenz</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Siehe <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">andere Versionen einer LOCKSS-Lizenz</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Benennen Sie 6 bis 10 Bibliotheken, die die Zeitschrift registrieren und archivieren sollen. Wenden Sie sich zum Beispiel an Einrichtungen, in denen Mitglieder der Redaktion oder des Beirats arbeiten und/oder Einrichtungen, die bereits an LOCKSS beteiligt sind. Siehe <a href="http://www.lockss.org/community/" target="_blank">Teilnehmende Bibliotheken</a>. Verwenden Sie die vorgefertigten Anfragen für (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">an LOCKSS teilnehmende Bibliotheken</a> oder für (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">an LOCKSS noch nicht teilnehmende Bibliotheken</a>.]]></message>
 	<message key="manager.setup.clockssEnable"><![CDATA[Aktivieren Sie CLOCKSS und verteilen und lagern Sie den Inhalt der Zeitschrift bei den an CLOCKSS teilnehmenden Bibliotheken über eine CLOCKSS-<a href="{$clockssUrl}" target="_blank">Redakteur/innen-Erklärung-</a>Seite. Es erscheint dann eine Lizenz von CLOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
 	<message key="manager.setup.clockssLicenses"><![CDATA[Siehe <a href="http://clockss.org/"target="_blank">andere Versionen einer CLOCKSS-Lizenz</a>.]]></message>
@@ -466,7 +454,6 @@
 		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
 		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.</message>
-	</message>
 	<message key="manager.statistics.reports">Berichterstellung</message>
 	<message key="manager.statistics.reports.description">OJS erstellt Berichte, die die Details der Verarbeitung von Beiträgen aus der Perspektive von Beiträgen, Redakteur/innen, Gutachter/innen sowie Rubriken über einen festgelegten Zeitraum nachzeichnen. Die Berichte werden im CSV-Format erstellt, die mit einer Tabellenkalkulation betrachtet werden können.</message>
 	<message key="manager.statistics.reports.generateReport">Benutzerdefinierten Bericht erzeugen</message>

@@ -3,7 +3,8 @@
 /**
  * @file controllers/tab/issueEntry/form/IssueEntryPublicationMetadataForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryPublicationMetadataForm
@@ -105,7 +106,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
 		if ($publicationFeeEnabled) {
-			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $subission->getId()));
+			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $this->getSubission()->getId()));
 		}
 
 		return parent::fetch($request);
@@ -132,7 +133,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * Get the Submission
 	 * @return Submission
 	 */
-	function &getSubmission() {
+	function getSubmission() {
 		return $this->_submission;
 	}
 
@@ -140,7 +141,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * Get the PublishedArticle
 	 * @return PublishedArticle
 	 */
-	function &getPublishedArticle() {
+	function getPublishedArticle() {
 		return $this->_publishedArticle;
 	}
 
@@ -194,7 +195,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$markAsPaid ? $context->getSetting('currency') : ''
 			);
 
-			$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+			$paymentManager->queuePayment($queuedPayment);
 
 			// Since this is a waiver, fulfill the payment immediately
 			$paymentManager->fulfillQueuedPayment($request, $queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
@@ -205,7 +206,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$issue = $issueDao->getById($issueId, $context->getId());
 
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
 
@@ -277,10 +277,10 @@ class IssueEntryPublicationMetadataForm extends Form {
 					// This was published elsewhere; make sure we don't
 					// mess up sequencing information.
 					$issueId = $publishedArticle->getIssueId();
-					$publishedArticleDao->deletePublishedArticleByArticleId($ubmission->getId());
+					$publishedArticleDao->deletePublishedArticleByArticleId($submission->getId());
 
 					// Delete the article from the search index.
-					$articleSearchIndex->articleFileDeleted($ubmission->getId());
+					$articleSearchIndex->articleFileDeleted($submission->getId());
 				}
 			}
 
@@ -288,7 +288,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
 
 			$submission->stampStatusModified();
-			$articleDao->updateObject($submission);
 
 			if ($issue && $issue->getPublished()) {
 				$submission->setStatus(STATUS_PUBLISHED);
@@ -299,10 +298,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$submission->setStatus(STATUS_QUEUED);
 			}
 
-			$sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($submission->getId());
-			if ($sectionEditorSubmission) {
-				$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-			}
+			$articleDao->updateObject($submission);
 			$articleSearchIndex->articleChangesFinished();
 		}
 	}

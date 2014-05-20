@@ -3,7 +3,8 @@
 /**
  * @file plugins/importexport/doaj/DOAJPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJPlugin
@@ -136,6 +137,20 @@ class DOAJPlugin extends ImportExportPlugin {
 			$url .= '&' . urlencode($name) . '=' . urlencode($value);
 		}
 		$request->redirectUrl($url);
+	}
+
+	/**
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
+	}
+
+	/**
+	 * @see PKPImportExportPlugin::executeCLI()
+	 */
+	function executeCLI($scriptName, &$args) {
+		fatalError('Not implemented');
 	}
 }
 

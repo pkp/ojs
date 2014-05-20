@@ -1,14 +1,14 @@
 {**
  * @file plugins/importexport/datacite/templates/galleys.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Select galleys for export.
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.common.export.selectGalley"}
-{assign var="pageCrumbTitle" value="plugins.importexport.common.export.selectGalley"}
 {include file="common/header.tpl"}
 {/strip}
 

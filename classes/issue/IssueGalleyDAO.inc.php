@@ -3,7 +3,8 @@
 /**
  * @file classes/issue/IssueGalleyDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyDAO
@@ -169,7 +170,7 @@ class IssueGalleyDAO extends DAO {
 	 * internal galley ID; public galley ID takes precedence.
 	 * @param $galleyId string
 	 * @param $issueId int
-	 * @return galley object
+	 * @return ArticleGalley object
 	 */
 	function getByBestId($galleyId, $issueId) {
 		if ($galleyId != '') $galley =& $this->getByPubId('publisher-id', $galleyId, $issueId);
@@ -231,7 +232,7 @@ class IssueGalleyDAO extends DAO {
 		$galley->setSequence($row['seq']);
 
 		// IssueFile set methods
-		$galley->setFileName($row['file_name']);
+		$galley->setServerFileName($row['file_name']);
 		$galley->setOriginalFileName($row['original_file_name']);
 		$galley->setFileType($row['file_type']);
 		$galley->setFileSize($row['file_size']);

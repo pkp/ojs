@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/citation/CitationGridHandler.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CitationGridHandler
@@ -15,7 +16,6 @@
 import('lib.pkp.classes.controllers.grid.citation.PKPCitationGridHandler');
 
 // import validation classes
-import('classes.handler.validation.HandlerValidatorJournal');
 import('lib.pkp.classes.handler.validation.HandlerValidatorRoles');
 
 class CitationGridHandler extends PKPCitationGridHandler {

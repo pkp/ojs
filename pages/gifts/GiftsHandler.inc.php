@@ -3,7 +3,8 @@
 /**
  * @file pages/gifts/GiftsHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GiftsHandler
@@ -59,7 +60,6 @@ class GiftsHandler extends Handler {
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
 		$this->setupTemplate();
-		$journalId = $journal->getId();
 		$user = $request->getUser();
 
 		// If buyer is logged in, save buyer user id as part of gift details

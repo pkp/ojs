@@ -3,7 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/marc/OAIMetadataFormat_MARC.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_MARC
@@ -57,7 +58,6 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 
 		// Sources contains journal title, issue ID, and pages
 		$source = $journal->getLocalizedName() . '; ' . $issue->getIssueIdentification();
-		$pages = $article->getPages();
 
 		// Relation
 		$relation = array();

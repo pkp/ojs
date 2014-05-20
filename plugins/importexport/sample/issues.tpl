@@ -1,7 +1,8 @@
 {**
  * plugins/importexport/sample/issues.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of issues to potentially export
@@ -9,7 +10,6 @@
  *}
 {strip}
 {assign var="pageTitle" value="plugins.importexport.sample.selectIssue.long"}
-{assign var="pageCrumbTitle" value="plugins.importexport.sample.selectIssue.short"}
 {include file="common/header.tpl"}
 {/strip}
 

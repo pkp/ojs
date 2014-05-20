@@ -3,7 +3,8 @@
 /**
  * @file plugins/pubIds/doi/DOIPubIdPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOIPubIdPlugin
@@ -72,7 +73,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @see PubIdPlugin::getPubId()
 	 */
-	function getPubId(&$pubObject, $preview = false) {
+	function getPubId($pubObject, $preview = false) {
 		// Determine the type of the publishing object.
 		$pubObjectType = $this->getPubObjectType($pubObject);
 

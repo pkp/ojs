@@ -3,7 +3,8 @@
 /**
  * @file pages/gateway/GatewayHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GatewayHandler
@@ -55,7 +56,6 @@ class GatewayHandler extends Handler {
 			}
 
 			if (!isset($year)) {
-				$showInfo = true;
 				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
 					$journal->getId()
@@ -65,11 +65,10 @@ class GatewayHandler extends Handler {
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
-			} else {
-				$showInfo = false;
+				$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
+				$templateMgr->assign('issues', $issues);
+				$templateMgr->assign('showInfo', true);
 			}
-
-			$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
 
 			$prevYear = null;
 			$nextYear = null;
@@ -88,11 +87,9 @@ class GatewayHandler extends Handler {
 			}
 
 			$templateMgr->assign('journal', $journal);
-			$templateMgr->assign('issues', $issues);
 			$templateMgr->assign('year', $year);
 			$templateMgr->assign('prevYear', $prevYear);
 			$templateMgr->assign('nextYear', $nextYear);
-			$templateMgr->assign('showInfo', $showInfo);
 
 			$locales = $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
@@ -140,7 +137,6 @@ class GatewayHandler extends Handler {
 			}
 
 			if (!isset($year)) {
-				$showInfo = true;
 				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
 					$journal->getId()
@@ -150,11 +146,10 @@ class GatewayHandler extends Handler {
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
-			} else {
-				$showInfo = false;
+				$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
+				$templateMgr->assign('issues', $issues);
+				$templateMgr->assign('showInfo', true);
 			}
-
-			$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
 
 			$prevYear = null;
 			$nextYear = null;
@@ -173,11 +168,9 @@ class GatewayHandler extends Handler {
 			}
 
 			$templateMgr->assign('journal', $journal);
-			$templateMgr->assign('issues', $issues);
 			$templateMgr->assign('year', $year);
 			$templateMgr->assign('prevYear', $prevYear);
 			$templateMgr->assign('nextYear', $nextYear);
-			$templateMgr->assign('showInfo', $showInfo);
 
 			$locales =& $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {

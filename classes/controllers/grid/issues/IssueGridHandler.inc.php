@@ -8,7 +8,8 @@
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridHandler
@@ -250,7 +251,7 @@ class IssueGridHandler extends GridHandler {
 	function deleteIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueId = $issue->getId();
-
+		$journal = $request->getJournal();
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
 		// remove all published articles and return original articles to editing queue

@@ -3,7 +3,8 @@
 /**
  * @file classes/issue/IssueDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueDAO
@@ -18,6 +19,12 @@ import ('classes.issue.Issue');
 class IssueDAO extends DAO {
 	var $caches;
 
+	/**
+	 * Handle a cache miss.
+	 * @param $cache GenericCache
+	 * @param $id string
+	 * @return Issue
+	 */
 	function _cacheMiss($cache, $id) {
 		if ($cache->getCacheId() === 'current') {
 			$issue = $this->getCurrent($id, false);
@@ -28,6 +35,11 @@ class IssueDAO extends DAO {
 		return $issue;
 	}
 
+	/**
+	 * Get an issue cache by cache ID.
+	 * @param $cacheId string
+	 * @return GenericCache
+	 */
 	function _getCache($cacheId) {
 		if (!isset($this->caches)) $this->caches = array();
 		if (!isset($this->caches[$cacheId])) {
@@ -531,7 +543,7 @@ class IssueDAO extends DAO {
 	 * Get issue by article id
 	 * @param articleId int
 	 * @param journalId int optional
-	 * @return issue object
+	 * @return Issue object
 	 */
 	function getIssueByArticleId($articleId, $journalId = null) {
 		$params = array((int) $articleId);
@@ -562,7 +574,7 @@ class IssueDAO extends DAO {
 	 * Get all issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange (optional)
-	 * @return issues object ItemIterator
+	 * @return ItemIterator
 	 */
 	function getIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -577,7 +589,7 @@ class IssueDAO extends DAO {
 	 * Get published issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange
-	 * @return issues ItemIterator
+	 * @return ItemIterator
 	 */
 	function getPublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -592,7 +604,7 @@ class IssueDAO extends DAO {
 	 * Get unpublished issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange
- 	 * @return issues ItemIterator
+	 * @return ItemIterator
 	 */
 	function getUnpublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -767,8 +779,8 @@ class IssueDAO extends DAO {
 	 * Flush the issue cache.
 	 */
 	function flushCache() {
-		$cache = $this->_getCache('issues')->flush();
-		$cache = $this->_getCache('current')->flush();
+		$this->_getCache('issues')->flush();
+		$this->_getCache('current')->flush();
 	}
 }
 

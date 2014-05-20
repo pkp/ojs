@@ -3,7 +3,8 @@
 /**
  * @file plugins/importexport/duracloud/DuraCloudImportExportPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DuraCloudImportExportPlugin
@@ -299,6 +300,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		// Verify that the configuration and space ID are valid
 		$dcc =& $this->getDuraCloudConnection();
 		$ds = new DuraStore($dcc);
+		$metadata = null;
 		if ($ds->getSpace($spaceId, $metadata) === false) {
 			echo __('plugins.importexport.duracloud.cliError') . "\n";
 			echo __('plugins.importexport.duracloud.configuration.credentialsInvalid') . "\n";
@@ -446,6 +448,7 @@ class DuraCloudImportExportPlugin extends ImportExportPlugin {
 		$dcc =& $this->getDuraCloudConnection();
 		$duraStore = new DuraStore($dcc);
 		$spaceId = $this->getDuraCloudSpace();
+		$metadata = null;
 		$contents = $duraStore->getSpace($spaceId, $metadata, null, 'issue-');
 		if (!$contents) return $contents;
 

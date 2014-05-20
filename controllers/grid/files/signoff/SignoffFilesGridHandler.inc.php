@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/files/signoff/SignoffFilesGridHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SignoffFilesGridHandler
@@ -20,6 +21,13 @@ class SignoffFilesGridHandler extends PKPSignoffFilesGridHandler {
 
 	/**
 	 * Constructor
+	 * @param $stageId int WORKFLOW_STAGE_ID_...
+	 * @param $fileStage int SUBMISSION_FILE_...
+	 * @param $symbolic string
+	 * @param $eventType int
+	 * @param $eventType
+	 * @param $assocType int ASSOC_TYPE_...
+	 * @param $assocId int
 	 */
 	function SignoffFilesGridHandler($stageId, $fileStage, $symbolic, $eventType, $assocType = null, $assocId = null) {
 		parent::PKPSignoffFilesGridHandler($stageId, $fileStage, $symbolic, $eventType, $assocType, $assocId);

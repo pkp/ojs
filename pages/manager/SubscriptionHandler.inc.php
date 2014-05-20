@@ -3,7 +3,8 @@
 /**
  * @file pages/manager/SubscriptionHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionHandler
@@ -108,7 +109,7 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		$editSuccess = SubscriptionAction::editSubscription($args, $request, $institutional);
@@ -138,7 +139,7 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		SubscriptionAction::selectSubscriber($args, $request, $institutional);
@@ -157,7 +158,7 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 
 		$this->validate();
-		$this->setupTemplate($request, true, $institutional);
+		$this->setupTemplate($request);
 
 		import('classes.subscription.SubscriptionAction');
 		$updateSuccess = SubscriptionAction::updateSubscription($args, $request, $institutional);

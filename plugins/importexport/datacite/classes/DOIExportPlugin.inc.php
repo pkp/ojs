@@ -3,7 +3,8 @@
 /**
  * @file classes/DOIExportPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOIExportPlugin
@@ -11,7 +12,6 @@
  *
  * @brief Base class for DOI export/registration plugins.
  */
-
 
 import('classes.plugins.ImportExportPlugin');
 
@@ -36,7 +36,13 @@ define('DOI_EXPORT_CONFIGERROR_SETTINGS', 0x02);
 // The name of the setting used to save the registered DOI.
 define('DOI_EXPORT_REGDOI', 'registeredDoi');
 
-class DOIExportPlugin extends ImportExportPlugin {
+abstract class DOIExportPlugin extends ImportExportPlugin {
+	/**
+	 * Constructor
+	 */
+	function DOIExportPlugin() {
+		parent::ImportExportPlugin();
+	}
 
 	//
 	// Protected Properties
@@ -44,6 +50,9 @@ class DOIExportPlugin extends ImportExportPlugin {
 	/** @var PubObjectCache */
 	var $_cache;
 
+	/**
+	 * Get the object cache
+	 */
 	function getCache() {
 		if (!is_a($this->_cache, 'PubObjectCache')) {
 			// Instantiate the cache.
@@ -61,14 +70,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 	//
 	/** @var boolean */
 	var $_checkedForTar = false;
-
-
-	//
-	// Constructor
-	//
-	function DOIExportPlugin() {
-		parent::ImportExportPlugin();
-	}
 
 
 	//

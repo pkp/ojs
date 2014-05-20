@@ -3,7 +3,8 @@
 /**
  * @file pages/rtadmin/RTAdminHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RTAdminHandler
@@ -151,7 +152,7 @@ function rtadmin_validate_url($url, $useGet = false, $redirectsAllowed = 5) {
 	if(!preg_match('!^HTTP/(\d\.?\d*) (\d+)\s*(.+)[\n\r]!m', $res, $matches)) {
 		return false;
 	}
-	list($match, $http_version, $http_status_no, $http_status_str) = $matches;
+	list(,,$http_status_no) = $matches;
 
 	// If HTTP status code 2XX (Success)
 	if(preg_match('!^2\d\d$!', $http_status_no)) return true;

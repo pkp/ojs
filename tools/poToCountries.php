@@ -3,7 +3,8 @@
 /**
  * @file tools/poToCountries.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class poToCountries
@@ -30,7 +31,7 @@ class poToCountries extends CommandLineTool {
 	function poToCountries($argv = array()) {
 		parent::CommandLineTool($argv);
 
-		$toolName = array_shift($argv);
+		array_shift($argv); // Shift the tool name off the top
 
 		$this->locale = array_shift($argv);
 		$this->translationFile = array_shift($argv);

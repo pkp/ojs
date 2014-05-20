@@ -7,14 +7,14 @@
 /**
  * @file pages/management/index.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_management
  * @brief Handle requests for settings pages.
  *
  */
-
 
 switch ($op) {
 	//
@@ -25,5 +25,11 @@ switch ($op) {
 		import('pages.management.SettingsHandler');
 		define('HANDLER_CLASS', 'SettingsHandler');
 		break;
+	case 'tools':
+	case 'importexport':
+		import('lib.pkp.pages.management.ToolsHandler');
+		define('HANDLER_CLASS', 'ToolsHandler');
+		break;
 }
+
 ?>

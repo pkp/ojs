@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/referral/ReferralHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReferralHandler
@@ -59,6 +60,7 @@ class ReferralHandler extends Handler {
 		if (!isset($referral)) {
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$journal = $request->getJournal();
+			$user = $request->getUser();
 			$article = $publishedArticleDao->getPublishedArticleByArticleId((int) $request->getUserVar('articleId'));
 			if (!$article || ($article->getUserId() != $user->getId() && !Validation::isSectionEditor($journal->getId()) && !Validation::isEditor($journal->getId()))) {
 				$request->redirect(null, 'author');

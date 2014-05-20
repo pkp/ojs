@@ -3,7 +3,8 @@
 /**
  * @file plugins/importexport/pubIds/PubIdImportExportPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubIdImportExportPlugin
@@ -119,7 +120,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 
 				$doc =& $this->getDocument($temporaryFile->getFilePath());
 				@set_time_limit(0);
-				$this->handleImport($context, $doc, $errors, $pubIds, $false);
+				$this->handleImport($context, $doc, $errors, $pubIds, false);
 				$templateMgr->assign('errors', $errors);
 				$templateMgr->assign('pubIds', $pubIds);
 				return $templateMgr->display($this->getTemplatePath() . 'importResults.tpl');
@@ -135,7 +136,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 	 * @param $issues array
 	 * @param $outputFile xml file containing the exported public identifiers
 	 */
-	function exportPubIdsForIssues(&$journal, &$issues, $outputFile = null) {
+	function exportPubIdsForIssues($journal, $issues, $outputFile = null) {
 		$doc =& XMLCustomWriter::createDocument('pubIds', PID_DTD_URL, PID_DTD_URL);
 		$pubIdsNode =& XMLCustomWriter::createElement($doc, 'pubIds');
 		XMLCustomWriter::appendChild($doc, $pubIdsNode);
@@ -443,7 +444,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 							}
 							$issues[] = $issue;
 						}
-						if (!$this->exportPubIdsForIssues($journal, array(&$issue), $xmlFile)) {
+						if (!$this->exportPubIdsForIssues($journal, $issues, $xmlFile)) {
 							echo __('plugins.importexport.pubIds.cliError') . "\n";
 							echo __('plugins.importexport.pubIds.cliError.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 						}

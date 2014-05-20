@@ -3,7 +3,8 @@
 /**
  * @file classes/controllers/grid/filter/FilterGridHandler.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FilterGridHandler
@@ -15,7 +16,6 @@
 import('lib.pkp.classes.controllers.grid.filter.PKPFilterGridHandler');
 
 // import validation classes
-import('classes.handler.validation.HandlerValidatorJournal');
 import('lib.pkp.classes.handler.validation.HandlerValidatorRoles');
 
 class FilterGridHandler extends PKPFilterGridHandler {

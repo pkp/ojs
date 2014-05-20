@@ -3,7 +3,8 @@
 /**
  * @file classes/file/IssueFileManager.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueFileManager
@@ -145,9 +146,10 @@ class IssueFileManager extends FileManager {
 	 * Create an issue galley based on a temporary file.
 	 * @param $temporaryFile TemporaryFile
 	 * @param $contentType int Issue file content type
-	 * @return int the file ID
+	 * @return IssueFile the resulting issue file
 	 */
 	function fromTemporaryFile($temporaryFile, $contentType = ISSUE_FILE_PUBLIC) {
+		$result = null;
 		if (HookRegistry::call('IssueFileManager::fromTemporaryFile', array(&$temporaryFile, &$contentType, &$result))) return $result;
 
 		$issueId = $this->getIssueId();
@@ -160,7 +162,7 @@ class IssueFileManager extends FileManager {
 		$issueFile->setIssueId($issueId);
 		$issueFile->setDateUploaded($temporaryFile->getDateUploaded());
 		$issueFile->setDateModified(Core::getCurrentDate());
-		$issueFile->setFileName(''); // Blank until we insert to generate a file ID
+		$issueFile->setServerFileName(''); // Blank until we insert to generate a file ID
 		$issueFile->setFileType($temporaryFile->getFileType());
 		$issueFile->setFileSize($temporaryFile->getFileSize());
 		$issueFile->setOriginalFileName($temporaryFile->getOriginalFileName());
@@ -170,7 +172,7 @@ class IssueFileManager extends FileManager {
 
 		$extension = $this->parseFileExtension($issueFile->getOriginalFileName());
 		$newFileName = $issueFile->getIssueId().'-'.$issueFile->getId().'-'.$this->contentTypeToAbbrev($contentType).'.'.$extension;
-		$issueFile->setFileName($newFileName);
+		$issueFile->setServerFileName($newFileName);
 
 		// Copy the actual file
 		if (!$this->copyFile($temporaryFile->getFilePath(), $dir . $newFileName)) {

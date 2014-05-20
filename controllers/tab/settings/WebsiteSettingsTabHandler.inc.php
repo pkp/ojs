@@ -3,7 +3,8 @@
 /**
  * @file controllers/tab/settings/WebsiteSettingsTabHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WebsiteSettingsTabHandler
@@ -48,7 +49,6 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	function showTab($args, $request) {
 		$workingContexts = $this->getWorkingContexts($request);
 
-		$multipleContexts = false;
 		if ($workingContexts && $workingContexts->getCount() > 1) {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign('multipleContexts', true);
@@ -220,6 +220,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 				$fileUploadForm = new NewContextCssFileForm($settingName);
 				break;
 			default:
+				$fileUploadForm = null; // Suppress scrutinizer
 				assert(false);
 				break;
 		}

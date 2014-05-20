@@ -3,7 +3,8 @@
 /**
  * @file classes/sword/OJSSwordDeposit.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSSwordDeposit
@@ -31,6 +32,9 @@ class OJSSwordDeposit {
 
 	/** @var Issue */
 	var $issue;
+
+	/** @var Article */
+	var $article;
 
 	/**
 	 * Constructor.
@@ -61,9 +65,10 @@ class OJSSwordDeposit {
 		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		if ($publishedArticle) $this->issue = $issueDao->getById($publishedArticle->getIssueId());
-
-		$this->article = $article;
+		if ($publishedArticle) {
+			$this->issue = $issueDao->getById($publishedArticle->getIssueId());
+			$this->article = $publishedArticle;
+		}
 	}
 
 	/**

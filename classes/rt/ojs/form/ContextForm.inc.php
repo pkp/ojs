@@ -3,7 +3,8 @@
 /**
  * @file classes/rt/ojs/form/ContextForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ContextForm
@@ -67,9 +68,7 @@ class ContextForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$journal = Request::getJournal();
 		$templateMgr = TemplateManager::getManager();
-
 		$templateMgr->assign('versionId', $this->versionId);
 
 		if (isset($this->context)) {

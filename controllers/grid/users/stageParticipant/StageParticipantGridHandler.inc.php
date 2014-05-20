@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/users/stageParticipant/StageParticipantGridHandler.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class StageParticipantGridHandler
@@ -38,6 +39,7 @@ class StageParticipantGridHandler extends PKPStageParticipantGridHandler {
 	 */
 	function _logEvent ($request, $eventType) {
 		// Get the log event message
+		$logMessage = null; // Suppress scrutinizer message
 		switch($eventType) {
 			case SUBMISSION_LOG_MESSAGE_SENT:
 				$logMessage = 'informationCenter.history.messageSent';

@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/customBlockManager/CustomBlockEditForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.customBlockManager
@@ -19,22 +20,23 @@ class CustomBlockEditForm extends Form {
 	/** @var int */
 	var $journalId;
 
-	/** @var object */
+	/** @var CustomBlockPlugin */
 	var $plugin;
 	
-	/** $var $errors string */
+	/** $var string */
 	var $errors;
 
 	/**
 	 * Constructor
+	 * @param $plugin CustomBlockPlugin
 	 * @param $journalId int
 	 */
-	function CustomBlockEditForm(&$plugin, $journalId) {
+	function CustomBlockEditForm($plugin, $journalId) {
 
 		parent::Form($plugin->getTemplatePath() . 'editCustomBlockForm.tpl');
 
 		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
+		$this->plugin = $plugin;
 
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidator($this, 'blockContent', 'required', 'plugins.generic.customBlock.contentRequired'));
@@ -46,7 +48,7 @@ class CustomBlockEditForm extends Form {
 	 */
 	function initData() {
 		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
+		$plugin = $this->plugin;
 
 		// add the tiny MCE script 
 		$this->addTinyMCE();
@@ -100,7 +102,7 @@ class CustomBlockEditForm extends Form {
 	 * Save page into DB
 	 */	 
 	function save() {
-		$plugin =& $this->plugin;
+		$plugin = $this->plugin;
 		$journalId = $this->journalId;
 		$plugin->updateSetting($journalId, 'blockContent', $this->getData('blockContent'));		
 	}

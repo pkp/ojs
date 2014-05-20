@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/sehl/SehlPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SehlPlugin
@@ -15,7 +16,7 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class SehlPlugin extends GenericPlugin {
-	/** @var string */
+	/** @var array */
 	var $queryTerms;
 
 	function register($category, $path) {
@@ -101,9 +102,9 @@ class SehlPlugin extends GenericPlugin {
 		$startIndex = strlen($output) - strlen($fromDiv) + $endOfBodyTagOffset + 1;
 		$scanPart = substr($output, $startIndex);
 
+		$newOutput = '';
 		foreach ($this->queryTerms as $q) {
 			// Thanks to Brian Suda http://suda.co.uk/projects/SEHL/
-			$newOutput = '';
 			$pat = '/((<[^!][\/]*?[^<>]*?>)([^<]*))|<!---->|<!--(.*?)-->|((<!--[ \r\n\t]*?)(.*?)[ \r\n\t]*?-->([^<]*))/si';
 			preg_match_all($pat, $scanPart, $tag_matches);
 

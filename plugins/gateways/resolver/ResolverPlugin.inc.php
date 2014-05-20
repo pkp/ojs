@@ -3,7 +3,8 @@
 /**
  * @file plugins/gateways/resolver/ResolverPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ResolverPlugin
@@ -67,7 +68,7 @@ class ResolverPlugin extends GatewayPlugin {
 				$doi = implode('/', $args);
 				$journal = $request->getJournal();
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-				$article =& $publishedArticleDao->getPublishedArticleByPubId('doi', $doi, $journal?$journal->getId():null);
+				$article = $publishedArticleDao->getPublishedArticleByPubId('doi', $doi, $journal?$journal->getId():null);
 				if(is_a($article, 'PublishedArticle')) {
 					$request->redirect(null, 'article', 'view', $article->getBestArticleId());
 				}
@@ -84,6 +85,8 @@ class ResolverPlugin extends GatewayPlugin {
 				} elseif ($scheme == 'ynp') {
 					$year = (int) array_shift($args);
 					$volume = null;
+				} else {
+					return; // Suppress scrutinizer warn
 				}
 				$number = array_shift($args);
 				$page = (int) array_shift($args);
@@ -192,7 +195,7 @@ class ResolverPlugin extends GatewayPlugin {
 				}
 				break;
 		}
-		return parent::manage($verb, $args);
+		return parent::manage($verb, $args, $message, $messageParams, $pluginModalContent);
 	}
 }
 

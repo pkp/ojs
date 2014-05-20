@@ -4,7 +4,8 @@
 <!--
   * locale/el_GR/manager.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR (Greek) locale.
@@ -129,7 +130,7 @@
 	<message key="manager.setup.authorGuidelines">Οδηγίες για τους συγγραφείς</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Διατύπωση προτύπων βιλιογραφίας και μορφοποίησης για συγγραφείς, που χρησιμοποιούνται για τεκμήρια που υποβάλλονται στο περιοδικό (π.χ., <em>Εγχειρίδιο έκδοσης της Αμερικανικής Ένωσης Ψυχολόγων (American Psychological Association)</em>,  5η έκδοση, 2001). Ιδιαίτερα βοηθητική είναι η παροχή παραδειγμάτων κοινών μορφών αναφορών και μορφοποίησης για περιοδικά και βιβλία. Επίσης, προσδιορίστε τους τύπους των κατάλληλων  «Συμπληρωματικών αρχείων» (π.χ., σύνολα δεδομένων, όργανα έρευνας, κτλ.)τα οποία οι συγγραφείς πρέπει να φορτώσουν μαζί με την υποβολή τους για να ενισχυθεί η ενασχόληση των αναγνωστών με το έργο τους.]]></message>
 	<message key="manager.setup.competingInterests">Συγκρουόμενα Συμφέροντα</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Βιοϊατρικά περιοδικά συνήθως απαιτούν από τους συγγραφείς και τους αξιολογητές να δηλώσουν αν υπάρχουν συγκρουόμενα συμφέροντα αναφορικά με τις ερευνητικές δραστηριότητες και ενδιαφέροντα (δείτε  <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Βιοϊατρικά περιοδικά συνήθως απαιτούν από τους συγγραφείς και τους αξιολογητές να δηλώσουν αν υπάρχουν συγκρουόμενα συμφέροντα αναφορικά με τις ερευνητικές δραστηριότητες και ενδιαφέροντα (δείτε  <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Οδηγίες για την συμπλήρωση μια Δήλωση Συγκρουόμενων Συμφερόντων (Competing Interest-CI)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Απαιτείται από τους Συγγραφείς να αποθηκεύουν μια Δήλωση Συγκρουόμενων Συμφερόντων (Competing Interest-CI) μαζί με την υποβολή τους.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Απαιτείται από τους Αξιολογητές να αποθηκεύουν μια Δήλωση Συγκρουόμενων Συμφερόντων (Competing Interest-CI) μαζί με κάθε αξιολόγηση διεκπεραιώνουν και υποβάλλουν.</message>
@@ -255,7 +256,7 @@
 	<message key="manager.setup.lists">Λίστες</message>
 	<message key="manager.setup.listsDescription">Εισαγάγετε τον μέγιστο αριθμό τεκμηρίων (για παράδειγμα, υποβολές, χρήστες, ή επιμέλεια αναθέσεων, δημοσιευμένα άρθρα κλπ) που εμφανίζονται σε κάθε σελίδα της λίστας, και ο αριθμός των συνδέσμων σελίδων που θα εμφανίζονται σε κάθε σελίδα.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Ενεργοποίηση του LOCKSS για αποθήκευση και διανομή περιεχομένου περιοδικού σε βιβλιοθήκες που συμμετέχουν στο σύστημα σύμφωνα με το LOCKSS <a  href="{$lockssUrl}" target="_blank">Μανιφέστο του Εκδότη</a>. Τα στοιχεία της άδειας LOCKSS θα εμφανιστούν στον σύνδεσμο «Αρχειοθέτηση περιοδικού στο μενού «Σχετικά με το περιοδικό»:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Ανατρέξτε <a  href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">για λοιπές εκδόσεις της άδειας του LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Ανατρέξτε <a  href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">για λοιπές εκδόσεις της άδειας του LOCKSS</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Προσδιορίστε 6-10 βιβλιοθήκες που θα καταχωρίσουν και θα φέρουν κρυφή μνήμη για το περιοδικό. Για παράδειγμα, μεταβείτε σε ιδρύματα όπου οι επιμελητές ή τα μέλη της επιτροπής εργάζονται ή/και σε ιδρύματα τα οποία δυμμετέχουν ήδη στο   LOCKSS.  Ανατρέξτε <a href="http://www.lockss.org/community/"  target="_blank">για τις βιβλιοθήκες που συμμετέχουν</a>. Χρησιμοποιήστε τις έτοιμες προσκλήσεις για (i)  <a href="{$lockssExistingArchiveUrl}" target="_blank"> βιβλιοθήκες που συμμετέχουν στο  LOCKSS</a> ή (ii) <a href="{$lockssNewArchiveUrl}" target="_blank"> βιβλιοθήκες που δεν συμμετέχουν στο LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Όψη Περιοδικού</message>
 	<message key="manager.setup.look.description">Κεφαλίδα αρχικής σελίδας, περιεχόμενο, κεφαλίδα περιοδικού, υποσέλιδο, μπάρα πλοήγησης και style sheet.</message>
@@ -394,8 +395,6 @@
 	<message key="manager.setup.userRegistration">Εγγραφή χρήστη</message>
 	<message key="manager.setup.useTextTitle">Κείμενο τίτλου</message>
 	<message key="manager.setup.volumePerYear">Τόμοι ανά έτος</message>
-	<message key="manager.statistics.reports">Δημιουργία  Εκθέσεων</message>
-	<message key="manager.statistics.reports.description">Το OJS παράγει  εκθέσεις που καταγράφουν λεπτομέρειες  σχετικά με την διαδικασία υποβολής άρθρων  στο περιοδικό σε σχέση με τις υποβολές, τους  επιμελητές, τους αξιολογητές και τις  ενότητες σε μια δεδομένη χρονική περίοδο. Οι  εκθέσεις παράγονται σε μορφή CSV για την  προβολή και επεξεργασία των οποίων  απαιτείται μια εφαρμογή λογιστικών  φύλλων.</message>
 	<message key="manager.statistics.statistics">Στατιστικά  Περιοδικού</message>
 	<message key="manager.statistics.statistics.articleViews">Προβολές Άρθρων (μόνο για Συγγραφείς)</message>
 	<message key="manager.statistics.statistics.count.accept">Αποδοχή</message>
@@ -535,40 +534,6 @@
 	<message key="manager.language.confirmDefaultSettingsOverwrite">Αυτό θα αντικαταστήσει όλες τις παραμέτρους τοπικής ρύθμισης που είχατε ορίσει για το περιοδικό σας</message>
 	<message key="manager.language.reloadLocalizedDefaultSettings">Επαναφόρτωση τις εξ'ορισμού παραμέτρους συγκεκριμένης τοπικής ρύθμισης</message>
 	<message key="manager.payment.options.purchaseArticleFee">Αγορά Άρθρου</message>
-	<message key="manager.reviewFormElement.changeType">Προσοχή: Η αλλαγή του τύπου πεδίου μιας φόρμας αξιολόγησης από τύπο πολλαπλής επιλογής σε τύπο ανοικτής επιλογής θα έχει ως αποτέλεσμα την διαγραφή των επιλογών πολλαπλής επιλογής.</message>
-	<message key="manager.reviewFormElements">Πεδία Φόρμας</message>
-	<message key="manager.reviewFormElements.addResponseItem">Προσθήκη επιλογής</message>
-	<message key="manager.reviewFormElements.checkboxes">Checkboxes (επιλέξτε ένα ή περισσότερα)</message>
-	<message key="manager.reviewFormElements.chooseType">Επιλέξτε τύπο πεδίου</message>
-	<message key="manager.reviewFormElements.confirmDelete">Είστε σίγουροι ότι επιθυμείτε να διαγράψετε ένα στοιχείο μιας δημοσιευμένης φόρμας αξιολόγησης?</message>
-	<message key="manager.reviewFormElements.copyTo">Αντιγραφή σε:</message>
-	<message key="manager.reviewFormElements.create">Δημιουργία νέου πεδίου</message>
-	<message key="manager.reviewFormElements.dropdownbox">Drop-down box</message>
-	<message key="manager.reviewFormElements.edit">Επεξεργασία Πεδίου Φόρμας</message>
-	<message key="manager.reviewFormElements.elementType">Τύπος πεδίου</message>
-	<message key="manager.reviewFormElements.form.elementTypeRequired">Απαιτείται ένα τύπος πεδίου για το πεδίο της φόρμας</message>
-	<message key="manager.reviewFormElements.form.questionRequired">Απαιτείται μια ερώτηση για το πεδίο της φόρμας</message>
-	<message key="manager.reviewFormElements.noneCreated">Δεν έχει δημιουργηθεί πεδίο</message>
-	<message key="manager.reviewFormElements.possibleResponse">Επιλογή</message>
-	<message key="manager.reviewFormElements.question">Πεδίο</message>
-	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (επιλέξτε ένα ή περισσότερα)</message>
-	<message key="manager.reviewFormElements.required">Απαιτείται οι αξιολογητές να συμπληρώσουν το πεδίο</message>
-	<message key="manager.reviewFormElements.smalltextfield">Πλαίσιο κειμένου μονής λέξης</message>
-	<message key="manager.reviewFormElements.textarea">Εκτεταμένο πλαίσιο κειμένου</message>
-	<message key="manager.reviewFormElements.textfield">Πλαίσιο κειμένου μονής γραμμής</message>
-	<message key="manager.reviewForms">Φόρμες αξιολόγησης</message>
-	<message key="manager.reviewForms.completed">Ολοκληρωμένη</message>
-	<message key="manager.reviewForms.confirmDeleteUnpublished">Είστε σίγουροι ότι επιθυμείτε να διαγράψετε αυτή την αδημοσίευτη φόρμα αξιολόγησης?</message>
-	<message key="manager.reviewForms.create">ΔΗμιουργία Φόρμας Αξιολόγησης</message>
-	<message key="manager.reviewForms.description">Περιγραφή και Οδηγίες</message>
-	<message key="manager.reviewForms.edit">Φόρμα αξιολόγησης</message>
-	<message key="manager.reviewForms.form.titleRequired">Ένας τίτλος απαιτείται για την φόρμα αξιολόγησης</message>
-	<message key="manager.reviewForms.inReview">Σε αξιολόγηση</message>
-	<message key="manager.reviewForms.list.description">Οι φόρμες αξιολόγησης αυτές θα εμφανιστούν στους αξιολογητές για να συμπληρωθούν, αντί για τις εξ΄ορισμού φόρμες που συνίστανται από δύο ανοικτά πλαίσια κειμένου, το πρώο "για τον συγγραφέα και τον επιμελητή" και το δεύτερο "για τον επιμελητή". Οι φόρμες αξιολόγησης μπορούν να χρησιμοποιηθούν σε μια συγκεκριμένη ενότητα του περιοδικού, και οι επιμελητές θα έχουν την επιλογή της φόρμας που θα επιλέξουν για την αξιολόγηση. Σε κάθε περίπτωση οι επιμελητές θα έχουν την επιλογή να συμπεριλάβουν τις αξιολογήσεις στην επικοινωνία τους με τους συγγραφείς.</message>
-	<message key="manager.reviewForms.noneChosen">Καμία/ Ελεύθερη Φόρμα Αξιολόγησης</message>
-	<message key="manager.reviewForms.noneCreated">Καμία φόρμα αξιολόγησης δεν έχει δημιουργηθεί</message>
-	<message key="manager.reviewForms.preview">Φόρμα Επισκόπησης</message>
-	<message key="manager.reviewForms.title">Τίτλος</message>
 	<message key="manager.sections.abstractsNotRequired">Μην απαιτείτε περιλήψεις</message>
 	<message key="manager.sections.disableComments">Απενεργοποιήστε τα σχόλια αναγνωστών για αυτή την ενότητα.</message>
 	<message key="manager.sections.form.mustAllowPermission">Σιγουρευτείτε ότι τουλάχιστον ένα checkbox έχει τσεκαριστεί για κάθε ανάθεση Επιμελητή Ενότητας.</message>

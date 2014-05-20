@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/SectionGridHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionGridHandler
@@ -60,14 +61,13 @@ class SectionGridHandler extends SetupGridHandler {
 		$gridData = array();
 		while ($section = $sectionIterator->next()) {
 			// Get the section editors data for the row
-			$assignedSectionEditors = $sectionEditorsDao->getEditorsBySectionId($section->getId(), $journal->getId());
+			$assignedSectionEditors = $sectionEditorsDao->getBySectionId($section->getId(), $journal->getId());
 			if(empty($assignedSectionEditors)) {
 				$editorsString = __('common.none');
 			} else {
 				$editors = array();
 				foreach ($assignedSectionEditors as $sectionEditor) {
-					$user = $sectionEditor['user'];
-					$editors[] = $user->getLastName();
+					$editors[] = $sectionEditor->getLastName();
 				}
 				$editorsString = implode(', ', $editors);
 			}
@@ -187,7 +187,6 @@ class SectionGridHandler extends SetupGridHandler {
 	 */
 	function updateSection($args, $request) {
 		$sectionId = $request->getUserVar('sectionId');
-		$journal = $request->getJournal();
 
 		import('controllers.grid.settings.sections.form.SectionForm');
 		$sectionForm = new SectionForm($request, $sectionId);

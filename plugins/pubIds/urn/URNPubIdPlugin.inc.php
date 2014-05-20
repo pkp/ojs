@@ -3,7 +3,8 @@
 /**
  * @file plugins/pubIds/urn/URNPubIdPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class URNPubIdPlugin
@@ -64,7 +65,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @see PubIdPlugin::getPubId()
 	 */
-	function getPubId(&$pubObject, $preview = false) {
+	function getPubId($pubObject, $preview = false) {
 		$urn = $pubObject->getStoredPubId($this->getPubIdType());
 		if (!$urn) {
 			// Determine the type of the publishing object

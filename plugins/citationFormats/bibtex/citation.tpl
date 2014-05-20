@@ -1,7 +1,8 @@
 {**
  * plugins/citationFormats/bibtex/citation.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article reading tools -- Capture Citation BibTeX format
@@ -22,7 +23,10 @@
 {/literal}{assign var=onlineIssn value=$journal->getSetting('onlineIssn')}
 {assign var=issn value=$journal->getSetting('issn')}{if $issn}{literal}	issn = {{/literal}{$issn|bibtex_escape}{literal}},{/literal}
 {elseif $onlineIssn}{literal}	issn = {{/literal}{$onlineIssn|bibtex_escape}{literal}},{/literal}{/if}
-{literal}	url = {{/literal}{url|bibtex_escape page="article" op="view" path=$article->getBestArticleId()}{literal}}
+{literal}
+	url = {{/literal}{url|bibtex_escape page="article" op="view" path=$article->getBestArticleId()}{literal}},{/literal}
+{if $article->getPages()}{if $article->getStartingPage()}	pages = {literal}{{/literal}{$article->getStartingPage()}{if $article->getEndingPage()}--{$article->getEndingPage()}{/if}{literal}}{/literal}{/if}{/if}
+{literal}
 }
 </pre>
 {/literal}

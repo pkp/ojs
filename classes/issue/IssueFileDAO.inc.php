@@ -3,7 +3,8 @@
 /**
  * @file classes/issue/IssueFileDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueFileDAO
@@ -86,7 +87,7 @@ class IssueFileDAO extends PKPFileDAO {
 		$issueFile = $this->newDataObject();
 		$issueFile->setId($row['file_id']);
 		$issueFile->setIssueId($row['issue_id']);
-		$issueFile->setFileName($row['file_name']);
+		$issueFile->setServerFileName($row['file_name']);
 		$issueFile->setFileType($row['file_type']);
 		$issueFile->setFileSize($row['file_size']);
 		$issueFile->setContentType($row['content_type']);
@@ -121,7 +122,7 @@ class IssueFileDAO extends PKPFileDAO {
 			),
 			array(
 				(int) $issueFile->getIssueId(),
-				$issueFile->getFileName(),
+				$issueFile->getServerFileName(),
 				$issueFile->getFileType(),
 				$issueFile->getFileSize(),
 				$issueFile->getContentType(),
@@ -155,7 +156,7 @@ class IssueFileDAO extends PKPFileDAO {
 			),
 			array(
 				(int) $issueFile->getIssueId(),
-				$issueFile->getFileName(),
+				$issueFile->getServerFileName(),
 				$issueFile->getFileType(),
 				$issueFile->getFileSize(),
 				$issueFile->getContentType(),

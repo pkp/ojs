@@ -3,7 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionTypeForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionTypeForm
@@ -44,7 +45,6 @@ class SubscriptionTypeForm extends Form {
 		}
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
-		$journal = Request::getJournal();
 
 		parent::Form('subscription/subscriptionTypeForm.tpl');
 
@@ -144,7 +144,7 @@ class SubscriptionTypeForm extends Form {
 	 */
 	function execute() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$journal = Request::getJournal();
+		$nonExpiring = null; // Suppress scrutinizer warn
 
 		if (isset($this->typeId)) {
 			$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->typeId);
@@ -158,6 +158,7 @@ class SubscriptionTypeForm extends Form {
 			$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
 		}
 
+		$journal = Request::getJournal();
 		$subscriptionType->setJournalId($journal->getId());
 		$subscriptionType->setName($this->getData('name'), null); // Localized
 		$subscriptionType->setDescription($this->getData('description'), null); // Localized

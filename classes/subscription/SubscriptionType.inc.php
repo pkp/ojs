@@ -3,7 +3,8 @@
 /**
  * @file classes/subscription/SubscriptionType.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Subscriptiontyoe
@@ -253,7 +254,7 @@ class SubscriptionType extends DataObject {
 
 	/**
 	 * Get subscription type format locale key.
-	 * @return int
+	 * @return string
 	 */
 	function getFormatString() {
 		switch ($this->getData('format')) {

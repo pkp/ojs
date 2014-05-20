@@ -3,7 +3,8 @@
 /**
  * @file classes/plugins/ReportPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReportPlugin
@@ -14,7 +15,7 @@
 
 import('lib.pkp.classes.plugins.Plugin');
 
-class ReportPlugin extends Plugin {
+abstract class ReportPlugin extends Plugin {
 
 	/**
 	 * Constructor

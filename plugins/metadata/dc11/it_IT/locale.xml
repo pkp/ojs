@@ -4,14 +4,15 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Contributed by Andrea Marchitelli
   *
   * Localization strings for the it_IT (Italiano) locale.
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.metadata.dc11.articleAdapter.displayName">DC 1.1 per gli articoli</message>
 	<message key="plugins.metadata.dc11.articleAdapter.description">Estrae e inserisce metadati da e negli articoli.</message>
 </locale>

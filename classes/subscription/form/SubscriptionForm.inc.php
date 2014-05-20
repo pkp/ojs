@@ -3,7 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionForm
@@ -77,15 +78,13 @@ class SubscriptionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = TemplateManager::getManager();
-		$journal = Request::getJournal();
-
 		if (isset($this->subscription)) {
 			$subscriptionId = $this->subscription->getId();
 		} else {
 			$subscriptionId = null;
 		}
 
+		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('subscriptionId', $subscriptionId);
 		$templateMgr->assign('yearOffsetPast', SUBSCRIPTION_YEAR_OFFSET_PAST);
 		$templateMgr->assign('yearOffsetFuture', SUBSCRIPTION_YEAR_OFFSET_FUTURE);
@@ -252,8 +251,9 @@ class SubscriptionForm extends Form {
 
 	/**
 	 * Internal function to prepare notification email
+	 * @param $emailTemplateKey string
 	 */
-	function &_prepareNotificationEmail($mailTemplateKey) {
+	function _prepareNotificationEmail($mailTemplateKey) {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');

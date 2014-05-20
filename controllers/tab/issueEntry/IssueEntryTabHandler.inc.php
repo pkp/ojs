@@ -3,7 +3,8 @@
 /**
  * @file controllers/tab/issueEntry/IssueEntryTabHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryTabHandler
@@ -49,7 +50,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId, array('displayedInContainer' => true));
 
-		$issueEntryPublicationMetadataForm->initData($args, $request);
+		$issueEntryPublicationMetadataForm->initData();
 		$json = new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
 		return $json->getString();
 	}

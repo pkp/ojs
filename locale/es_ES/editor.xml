@@ -4,7 +4,8 @@
 <!--
   * locale/es_ES/editor.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_ES (Español (España)) locale.
@@ -12,9 +13,6 @@
   -->
 
 <locale name="es_ES" full_name = "Español (España)">
-	<message key="editor.article.reviewForms">Formularios de Revisión</message>
-	<message key="editor.article.selectReviewForm">Escoger Formulario de Revisión</message>
-	<message key="editor.article.clearReviewForm">Limpiar Formulario de Revisión</message>
 	<message key="editor.home">Home de editor/a</message>
 	<message key="editor.submissionsAndPublishing">Envíos y publicación</message>
 	<message key="editor.submissionQueue">Cola de envíos</message>

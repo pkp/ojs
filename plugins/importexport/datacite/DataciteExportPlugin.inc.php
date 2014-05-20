@@ -3,7 +3,8 @@
 /**
  * @file plugins/importexport/datacite/DataciteExportPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataciteExportPlugin
@@ -392,6 +393,13 @@ class DataciteExportPlugin extends DOIExportPlugin {
 			$url = String::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
 		}
 		return $url;
+	}
+
+	/**
+	 * @copydoc PKPImportExportPlugin::usage
+	 */
+	function usage($scriptName) {
+		fatalError('Not implemented');
 	}
 }
 

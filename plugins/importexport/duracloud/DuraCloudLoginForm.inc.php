@@ -3,7 +3,8 @@
 /**
  * @file plugins/importexport/duracloud/DuraCloudLoginForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DuraCloudLoginForm
@@ -71,7 +72,7 @@ class DuraCloudLoginForm extends Form {
 			$this->getData('duracloudPassword')
 		);
 		$ds = new DuraStore($dcc);
-		if ($ds->getSpaces($storeId) === false) {
+		if ($ds->getSpaces() === false) {
 			// Could not get a list of spaces.
 			$this->addError('duracloudUrl', __('plugins.importexport.duracloud.configuration.credentialsInvalid'));
 			return false;

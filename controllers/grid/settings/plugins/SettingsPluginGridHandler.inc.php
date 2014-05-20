@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/settings/plugins/SettingsPluginGridHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SettingsPluginGridHandler
@@ -33,14 +34,6 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	 */
 	function getCategoryData($categoryDataElement, $filter) {
 		$plugins = parent::getCategoryData($categoryDataElement, $filter);
-
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journals = $journalDao->getAll();
-		$singleJournal = false;
-		if ($journals->getCount() == 1) {
-			$singleJournal = true;
-		}
-
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 
 		$showSitePlugins = false;

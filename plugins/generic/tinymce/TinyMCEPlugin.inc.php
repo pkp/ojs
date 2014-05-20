@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/tinymce/TinyMCEPlugin.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TinyMCEPlugin
@@ -104,7 +105,9 @@ class TinyMCEPlugin extends GenericPlugin {
 				theme : "advanced",
 				theme_advanced_buttons1 : "cut,copy,paste,|,bold,italic,underline,bullist,numlist,|,link,unlink,help,code,fullscreen,jbimages",
 				theme_advanced_buttons2 : "",
-				theme_advanced_buttons3 : ""
+				theme_advanced_buttons3 : "",
+				init_instance_callback: $.pkp.controllers.SiteHandler.prototype.triggerTinyMCEInitialized,
+				setup: $.pkp.controllers.SiteHandler.prototype.triggerTinyMCESetup
 			});
 		</script>';
 

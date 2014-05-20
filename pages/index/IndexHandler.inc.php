@@ -3,7 +3,8 @@
 /**
  * @file pages/index/IndexHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IndexHandler
@@ -47,7 +48,6 @@ class IndexHandler extends Handler {
 		$router = $request->getRouter();
 		$templateMgr = TemplateManager::getManager($request);
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journalPath = $router->getRequestedContextPath($request);
 		$this->setupTemplate($request);
 
 		if ($journal) {

@@ -3,7 +3,8 @@
 /**
  * @file classes/submission/form/SubmissionSubmitStep1Form.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionSubmitStep1Form
@@ -58,6 +59,23 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 			'sectionId',
 		));
 		parent::readInputData();
+	}
+
+	/**
+	 * Perform additional validation checks
+	 * @copydoc Form::validate
+	 */
+	function validate() {
+		if (!parent::validate()) return false;
+
+		// Validate that the section ID is attached to this journal.
+		$request = Application::getRequest();
+		$context = $request->getContext();
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($this->getData('sectionId'), $context->getId());
+		if (!$section) return false;
+
+		return true;
 	}
 
 	/**

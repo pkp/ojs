@@ -7,7 +7,8 @@
 ;
 ; config.TEMPLATE.inc.php
 ;
-; Copyright (c) 2003-2013 John Willinsky
+; Copyright (c) 2014 Simon Fraser University Library
+; Copyright (c) 2003-2014 John Willinsky
 ; Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 ;
 ; OJS Configuration settings.
@@ -50,6 +51,14 @@ session_lifetime = 30
 ; Set this to On if you have set up the scheduled tasks script to
 ; execute periodically
 scheduled_tasks = Off
+
+; Site time zone
+; Please refer to lib/pkp/registry/timeZones.xml for a full list of supported
+; time zones.
+; I.e.:
+; <entry key="Europe/Amsterdam" name="Amsterdam" />
+; time_zone="Amsterdam"
+time_zone = "UTC"
 
 ; Short and long date formats
 date_format_trunc = "%m-%d"
@@ -232,12 +241,10 @@ session_check_ip = On
 encryption = md5
 
 ; Allowed HTML tags for fields that permit restricted HTML.
-; For PHP 5.0.5 and greater, allowed attributes must be specified individually
-; e.g. <img src|alt> to allow "src" and "alt" attributes. Unspecified
-; attributes will be stripped. For PHP below 5.0.5 attributes may not be
-; specified in this way.
+; Use e.g. "img[src,alt],p" to allow "src" and "alt" attributes to the "img"
+; tag, and also to permit the "p" paragraph tag. Unspecified attributes will be
+; stripped.
 allowed_html = "a[href|target],em,strong,cite,code,ul,ol,li,dl,dt,dd,b,i,u,img[src|alt],sup,sub,br,p"
-
 
 ;Is implicit authentication enabled or not
 

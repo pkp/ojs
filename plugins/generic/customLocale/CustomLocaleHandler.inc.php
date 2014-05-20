@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/customLocale/CustomLocaleHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CustomLocaleHandler
@@ -26,7 +27,6 @@ class CustomLocaleHandler extends Handler {
 	function CustomLocaleHandler($parentPluginName) {
 		parent::Handler();
 
-		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->addCheck(new HandlerValidatorRoles($this, true, null, null, array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER)));
 
 		$this->plugin = PluginRegistry::getPlugin('generic', $parentPluginName);

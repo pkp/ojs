@@ -1,7 +1,8 @@
 {**
  * templates/submission/form/section.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Include section placement for submissions.
@@ -12,6 +13,6 @@
 {else}
 	{translate|assign:sectionDescription key="author.submit.journalSectionDescription" aboutUrl=$aboutUrl}
 {/if}
-{fbvFormSection label="section.section" description=$sectionDescription translate=false}
+{fbvFormSection label="section.section"|translate description=$sectionDescription translate=false}
 	{fbvElement type="select" id="sectionId" from=$sectionOptions selected=$sectionId translate=false disabled=$readOnly size=$fbvStyles.size.MEDIUM}
 {/fbvFormSection}

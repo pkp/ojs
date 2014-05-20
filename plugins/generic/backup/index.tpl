@@ -1,7 +1,8 @@
 {**
  * plugins/generic/backup/index.tpl
  *
- * Copyright (c) 2000-2009 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform

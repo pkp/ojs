@@ -3,12 +3,12 @@
 /**
  * @file plugins/generic/referral/ReferralForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReferralForm
- * @ingroup manager_form
- * @see AnnouncementForm
+ * @ingroup plugins_generic_referral
  *
  * @brief Form for authors to create/edit referrals.
  */

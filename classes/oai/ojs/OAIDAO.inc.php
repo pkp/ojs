@@ -3,7 +3,8 @@
 /**
  * @file classes/oai/ojs/OAIDAO.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIDAO
@@ -148,8 +149,6 @@ class OAIDAO extends PKPOAIDAO {
 	 * @return array (int, int)
 	 */
 	function getSetJournalSectionId($journalSpec, $sectionSpec, $restrictJournalId = null) {
-		$journalId = null;
-
 		$journal =& $this->journalDao->getByPath($journalSpec);
 		if (!isset($journal) || (isset($restrictJournalId) && $journal->getId() != $restrictJournalId)) {
 			return array(0, 0);

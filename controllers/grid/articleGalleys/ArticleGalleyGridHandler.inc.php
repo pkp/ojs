@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridHandler.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridHandler
@@ -205,7 +206,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
 		$articleGalleyForm = new ArticleGalleyForm($request, $submission, $articleGalley);
-		$articleGalleyForm->initData($request);
+		$articleGalleyForm->initData();
 		$json = new JSONMessage(true, $articleGalleyForm->fetch($request));
 		return $json->getString();
 	}
@@ -241,7 +242,6 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function delete($args, $request) {
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
-		$articleGalleyId = $articleGalley->getId();
 		$articleGalleyDao->deleteGalley($articleGalley);
 		return DAO::getDataChangedEvent();
 	}
@@ -253,12 +253,11 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function setAvailable($args, $request) {
-		$context = $request->getContext();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalley =& $articleGalleyDao->getGalleyByBestGalleyId(
-				$request->getUserVar('articleGalleyId'),
-				$submission->getId() // Make sure to validate the context.
+		$articleGalley = $articleGalleyDao->getGalleyByBestGalleyId(
+			$request->getUserVar('articleGalleyId'),
+			$submission->getId() // Make sure to validate the context.
 		);
 
 		if ($articleGalley) {

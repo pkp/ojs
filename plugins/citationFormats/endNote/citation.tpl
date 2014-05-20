@@ -1,7 +1,8 @@
 {**
  * plugins/citationFormats/endNote/citation.tpl
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * EndNote citation format generator
@@ -33,7 +34,14 @@
 %0 Journal Article
 {if $article->getPubId('doi')}%R {$article->getPubId('doi')|escape}
 {/if}
-{if $article->getPages()}%R {$article->getPages()|escape}
+{if $article->getPages()}
+{if $article->getStartingPage()}%& {$article->getStartingPage()|escape}{/if}
+{if $article->getEndingPage()}
+{math equation="end - start + 1" end=$article->getEndingPage() start=$article->getStartingPage() assign=pages}
+%P {$pages}
+{else}
+%P 1
+{/if}
 {/if}
 {if $issue->getShowVolume()}%V {$issue->getVolume()|escape}
 {/if}
@@ -41,5 +49,11 @@
 {/if}
 {if $currentJournal->getSetting('onlineIssn')}%@ {$currentJournal->getSetting('onlineIssn')|escape}
 {elseif $currentJournal->getSetting('printIssn')}%@ {$currentJournal->getSetting('printIssn')|escape}
+{/if}
+{if $article->getDatePublished()}
+%8 {$article->getDatePublished()|date_format:"%Y-%m-%d"}
+{/if}
+{if $issue->getDatePublished()}
+%7 {$issue->getDatePublished()|date_format:"%Y-%m-%d"}
 {/if}
 

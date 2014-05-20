@@ -4,7 +4,8 @@
 <!--
   * locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
@@ -200,7 +201,7 @@
 	<message key="user.role.managers">Издатель</message>
 	<message key="user.role.editors">Редакторы</message>
 
-	<message key="user.role.sectionEditors">Редакторы разделов</message>
+	<message key="user.role.subEditors">Редакторы разделов</message>
 	<message key="user.role.layoutEditors">Худ. редакторы</message>
 	<message key="user.role.copyeditors">Лит. редакторы</message>
 	<message key="user.role.proofreaders">Корректоры</message>
@@ -513,7 +514,6 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="submission.reviewForm">Форма Рецензента</message>
 	<message key="reviewer.article.enterReviewForm">Нажмите, чтобы заполнить форму рецензента</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Пожалуйста заполните необходимые поля.</message>
 	<message key="common.confirmComplete">Вы уверены, что хотите завершить эту задачу ? Впоследствии она будет закрыта для изменений.</message>

@@ -3,7 +3,8 @@
 /**
  * @file plugins/generic/counter/CounterHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CounterHandler
@@ -44,8 +45,12 @@ class CounterHandler extends Handler {
 	}
 
 	/**
-	* Internal function to collect structures for output
-	*/
+	 * Internal function to collect structures for output
+	 * @param $entries
+	 * @param $begin
+	 * @param $end
+	 * @return array
+	 */
 	function _arrangeEntries($entries, $begin, $end) {
 		$ret=null;
 
@@ -64,8 +69,8 @@ class CounterHandler extends Handler {
 
 
 	/**
-	* Internal function to assign information for the Counter part of a report
-	*/
+	 * Internal function to assign information for the Counter part of a report
+	 */
 	function _assignTemplateCounterXML($templateManager, $begin, $end='') {
 		$journal = Request::getJournal();
 		

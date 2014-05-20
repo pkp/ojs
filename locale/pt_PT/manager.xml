@@ -4,7 +4,8 @@
 <!--
   * locale/pt_PT/manager.xml
   *
-  * Copyright (c) 2003-2013 John Willinsky
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português) locale.
@@ -86,37 +87,6 @@
 	<message key="manager.people.roleEnrollment">{$role} Registo</message>
 	<message key="manager.people.syncUserDescription">Sincronizar Registo registará nesta revista todos os utilizadores com a função específica na revista especificada. Esta função permite que um grupo padrão de utilizadores (exemplo: revisores) seja partilhado entre revistas.</message>
 	<message key="manager.plugins.description">Esta página permite ao Editor-Gestor verificar e configurar os plugins actualmente instalados. Os Plugins estão divididos por categorias, de acordo com a sua função. As categorias estão listadas a seguir, cada uma com o seu conjunto de plugins.</message>
-	<message key="manager.reviewFormElements">Campos do formulário de revisão</message>
-	<message key="manager.reviewFormElements.addResponseItem">Adicionar resposta possível</message>
-	<message key="manager.reviewFormElements.checkboxes">Campo de selecção</message>
-	<message key="manager.reviewFormElements.chooseType">Escolher tipo de campo</message>
-	<message key="manager.reviewFormElements.copyTo">Copiar para</message>
-	<message key="manager.reviewFormElements.create">Criar novo campo</message>
-	<message key="manager.reviewFormElements.dropdownbox">Campo de menu de opções</message>
-	<message key="manager.reviewFormElements.edit">Editar campo</message>
-	<message key="manager.reviewFormElements.elementType">Tipo de campo</message>
-	<message key="manager.reviewFormElements.form.elementTypeRequired">O tipo do campo do formulário é obrigatório.</message>
-	<message key="manager.reviewFormElements.form.questionRequired">Uma pergunta para o campo do formulário é obrigatória</message>
-	<message key="manager.reviewFormElements.noneCreated">Nenhum campo de formulário criado .</message>
-	<message key="manager.reviewFormElements.possibleResponse">Resposta possível</message>
-	<message key="manager.reviewFormElements.question">Pergunta</message>
-	<message key="manager.reviewFormElements.radiobuttons">Campo de botão de rádio</message>
-	<message key="manager.reviewFormElements.required">Campo de revisão obrigatório</message>
-	<message key="manager.reviewFormElements.smalltextfield">Campo de texto pequeno</message>
-	<message key="manager.reviewFormElements.textarea">Campo de texto longo</message>
-	<message key="manager.reviewFormElements.textfield">Campo de texto de uma linha</message>
-	<message key="manager.reviewForms">Formulários de Revisão</message>
-	<message key="manager.reviewForms.completed">Concluído</message>
-	<message key="manager.reviewForms.create">Criar formulário de revisão</message>
-	<message key="manager.reviewForms.description">Descrição</message>
-	<message key="manager.reviewForms.edit">Editar formulário de revisão</message>
-	<message key="manager.reviewForms.form.titleRequired">Título do formulário de revisão obrigatório.</message>
-	<message key="manager.reviewForms.inReview">Em Revisão</message>
-	<message key="manager.reviewForms.list.description">Os formulários de revisão por pares criados aqui estarão disponíveis aos revisores para preenchimento, em vez do formulário padrão que consiste em duas caixas de texto de comentários com comentários exclusivos para o autor e outra para o  Editor e o Autor. Formulários de revisão podem ser designados a secções específicas e os editores poderão escolher qual o formulário utilizar no momento da revisão. Em todos os casos, os editores poderão incluir as revisões nas correspondências com o autor.</message>
-	<message key="manager.reviewForms.noneChosen">Nenhum / Formulário de revisão padrão</message>
-	<message key="manager.reviewForms.noneCreated">Nenhum formulário de revisão criado.</message>
-	<message key="manager.reviewForms.preview">Visualizar formulário de revisão</message>
-	<message key="manager.reviewForms.title">Título</message>
 	<message key="manager.sections.abstractsNotRequired">Não exigir resumos</message>
 	<message key="manager.sections.assigned">Editores desta Secção</message>
 	<message key="manager.sections.create">Criar Secção</message>
@@ -168,7 +138,7 @@
 	<message key="manager.setup.authorGuidelines">Directrizes para Autores</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Definição dos padrões bibliográficos e padrões de formatação de texto da revista (Ex.: <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). Recomenda-se oferecer exemplos de formatos de citação comuns para revistas e livros para uso nas submissões. É importante também identificar os tipos apropriados de Documentos Suplementares (Ex.: conjuntos de dados, instrumentos de pesquisas, entre outros) que os autores deveriam ser estimulados a enviar, além do documento de submissão, para aumentar o interesse dos leitores com o trabalho.]]></message>
 	<message key="manager.setup.competingInterests">Conflito de Interesses</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Periódicos da bio-medicina geralmente exigem que autores e revisores declarem se há qualquer possibilidade de conflito de interesses em relação à pesquisa (veja <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">Política PLoS</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Periódicos da bio-medicina geralmente exigem que autores e revisores declarem se há qualquer possibilidade de conflito de interesses em relação à pesquisa (veja <a href="http://www.plosbiology.org/static/competing.action" target="_new">Política PLoS</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Directrizes para registar Conflito de Interesses</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Exigir dos Autores o registo de Conflito de Interesses (CI) junto com a submissão.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Exigir dos revisores registo de Conflito de Interesses em cada revisão realizada.</message>
@@ -297,7 +267,7 @@
 	<message key="manager.setup.lists">Listas</message>
 	<message key="manager.setup.listsDescription">Indique o número máximo de itens (por exemplo, submissões, utilizadores ou tarefas editoriais) que aparecem em toda página de listagem, e o número de links por página a serem exibidos.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Permitir ao LOCKSS armazenar e distribuir o conteúdo da revista a bibliotecas participantes através do <a href="{$lockssUrl}" target="_blank">Manifesto de Publicação</a> do LOCKSS. Uma licença LOCKSS aparecerá em Sobre a Revista na secção Arquivamento:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Veja <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">outras versões de licença LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Veja <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">outras versões de licença LOCKSS</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifique 6 a 10 bibliotecas que registarão e guardarão a revista. Por exemplo, escolha instituições às quais os editores ou Membros do Equipa já sejam associados e/ou instituições já participantes do LOCKSS. Visite <a href="http://www.lockss.org/community/" target="_blank">bibliotecas participantes</a>. Utilize o convite preparado para (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">Bibliotecas participantes do LOCKSS</a> ou (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">Bibliotecas NÃO participantes do LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Visual</message>
 	<message key="manager.setup.look.description">Cabeçalho da Página Inicial, conteúdo, cabeçalho da revista, rodapé, barra de navegação e folha de estilo.</message>
@@ -436,8 +406,6 @@
 	<message key="manager.setup.userRegistration">Registo de Utilizadores</message>
 	<message key="manager.setup.useTextTitle">Texto Título</message>
 	<message key="manager.setup.volumePerYear">Volumes por ano</message>
-	<message key="manager.statistics.reports">Relatórios</message>
-	<message key="manager.statistics.reports.description">O sistema gera relatórios que registam os detalhes associados com os procedimentos da submissão, da perspectiva de submissões, editores, revisores e secções, em um dado período. Relatórios são gerados no formato CSV, que exigem um aplicativo de planilha eletrónica para serem visualizados.</message>
 	<message key="manager.statistics.statistics">Estatísticas da Revista</message>
 	<message key="manager.statistics.statistics.articleViews">Registo de visualização de artigo (Apenas para autores)</message>
 	<message key="manager.statistics.statistics.count.accept">Aceite</message>

@@ -3,7 +3,8 @@
 /**
  * @file pages/rtadmin/RTContextHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RTContextHandler
@@ -39,7 +40,7 @@ class RTContextHandler extends RTAdminHandler {
 			$contextForm->execute();
 			$request->redirect(null, null, 'contexts', $versionId);
 		} else {
-			$this->setupTemplate($request, true, $version);
+			$this->setupTemplate($request);
 			$contextForm->display();
 		}
 	}
@@ -56,7 +57,7 @@ class RTContextHandler extends RTAdminHandler {
 		$version =& $rtDao->getVersion($versionId, $journal->getId());
 
 		if ($version) {
-			$this->setupTemplate($request, true, $version);
+			$this->setupTemplate($request);
 
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->addJavaScript('lib/pkp/js/lib/jquery/plugins/jquery.tablednd.js');
@@ -85,7 +86,7 @@ class RTContextHandler extends RTAdminHandler {
 
 		if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
 			import('classes.rt.ojs.form.ContextForm');
-			$this->setupTemplate($request, true, $version, $context);
+			$this->setupTemplate($request);
 			$contextForm = new ContextForm($contextId, $versionId);
 			$contextForm->initData();
 			$contextForm->display();

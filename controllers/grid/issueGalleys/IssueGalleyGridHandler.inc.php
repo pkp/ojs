@@ -3,7 +3,8 @@
 /**
  * @file controllers/grid/issueGalleys/IssueGalleyGridHandler.inc.php
  *
- * Copyright (c) 2000-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyGridHandler
@@ -191,7 +192,7 @@ class IssueGalleyGridHandler extends GridHandler {
 
 		import('controllers.grid.issues.form.IssueGalleyForm');
 		$issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
-		$issueGalleyForm->initData($request);
+		$issueGalleyForm->initData();
 		$json = new JSONMessage(true, $issueGalleyForm->fetch($request));
 		return $json->getString();
 	}
@@ -265,7 +266,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	function delete($args, $request) {
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
-		$issueGalleyId = $issueGalley->getId();
+		$issueGalley->getId();
 		$issueGalleyDao->deleteObject($issueGalley);
 		return DAO::getDataChangedEvent();
 	}

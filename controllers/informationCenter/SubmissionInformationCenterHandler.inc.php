@@ -3,7 +3,8 @@
 /**
  * @file controllers/informationCenter/SubmissionInformationCenterHandler.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionInformationCenterHandler
@@ -59,7 +60,7 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 		$json = new JSONMessage();
 
 		// Try to save the form data.
-		$submissionMetadataViewForm->readInputData($request);
+		$submissionMetadataViewForm->readInputData();
 		if($submissionMetadataViewForm->validate()) {
 			$submissionMetadataViewForm->execute($request);
 			// Create trivial notification.
@@ -80,6 +81,7 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 	 */
 	function _logEvent ($request, $eventType) {
 		// Get the log event message
+		$logMessage = null; // Suppress scrutinizer warn
 		switch($eventType) {
 			case SUBMISSION_LOG_NOTE_POSTED:
 				$logMessage = 'informationCenter.history.notePosted';

@@ -3,6 +3,7 @@
 /**
  * @file classes/payment/ojs/form/PaymentSettingsForm.inc.php
  *
+ * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -103,10 +104,10 @@ class PaymentSettingsForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	function display($request) {
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('validCurrencies', $this->validCurrencies);
-		parent::display();
+		parent::display($request);
 	}
 
 	/**

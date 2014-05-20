@@ -3,7 +3,8 @@
 #
 # buildpkg.sh
 #
-# Copyright (c) 2003-2013 John Willinsky
+# Copyright (c) 2014 Simon Fraser University Library
+# Copyright (c) 2003-2014 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # Script to create an OJS package for distribution.
@@ -37,6 +38,7 @@ tools/genTestLocale.php						\
 tools/test							\
 lib/pkp/tests							\
 .git								\
+.openshift							\
 lib/pkp/.git							\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
@@ -88,10 +90,5 @@ if [ ! -z "$PATCHDIR" ]; then
 fi
 
 cd ..
-
-echo -n "Building doxygen documentation... "
-doxygen docs/dev/ojs2.doxygen > /dev/null && cd docs/dev/doxygen && tar czf ../../../${BUILD}-doxygen.tar.gz html && cd ../../..
-
-echo "Done"
 
 rm -r $TMPDIR
