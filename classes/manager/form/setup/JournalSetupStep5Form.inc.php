@@ -210,7 +210,12 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$fileManager = new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
-			if ($type != 'text/plain' && $type != 'text/css') {
+			if (substr($type, 0, 7) == 'text/x-') { 
+				// PHP's fileinfo frequently misidentifies CSS as text/x-something.  Allow for this if the file extension is .css
+				if (strtolower(end(explode('.',$fileManager->getUploadedFileName($settingName)))) != 'css') {
+					return false;
+				}
+			} elseif ($type != 'text/plain' && $type != 'text/css') {
 				return false;
 			}
 
