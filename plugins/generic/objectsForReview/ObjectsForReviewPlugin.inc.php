@@ -93,6 +93,12 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 					HookRegistry::register('Templates::Author::Submit::Step5::AdditionalItems', array($this, 'displayAuthorObjectsForReview'));
 
 				}
+
+				// Display object metadata on article abstract page
+				if ($this->getSetting($journal->getId(), 'displayAbstract')) {
+					HookRegistry::register ('TemplateManager::display', array(&$this, 'handleTemplateDisplay'));
+					HookRegistry::register ('Templates::Article::MoreInfo', array(&$this, 'displayAbstract'));
+				}
 			}
 		}
 		return $success;
@@ -375,6 +381,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty =& $params[1];
 			$output =& $params[2];
+			$journal =& Request::getJournal();
 			$templateMgr = TemplateManager::getManager();
 			if ($hookName == 'Templates::Editor::Index::AdditionalItems') { // On editor's home page
 				$output .= '<h3>' . __('plugins.generic.objectsForReview.editor.objectsForReview') . '</h3>
@@ -384,7 +391,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 							</ul>';
 			} elseif ($hookName == 'Templates::Author::Index::AdditionalItems') { // On author's home page
 				$output .= '<br /><div class="separator"></div><h3>' . __('plugins.generic.objectsForReview.author.objectsForReview') . '</h3><ul class="plain"><li>&#187; <a href="' . Request::url(null, 'author', 'objectsForReview', 'all') . '">' . __('plugins.generic.objectsForReview.author.myObjectsForReview') . '</a></li></ul><br />';
-			} elseif ($hookName == 'Templates::Common::Header::Navbar::CurrentJournal') { // In the main nav bar
+			} elseif ($hookName == 'Templates::Common::Header::Navbar::CurrentJournal' && $this->getSetting($journal->getId(), 'displayListing')) { // In the main nav bar
 				$output .= '<li><a href="' . Request::url(null, 'objectsForReview') . '" target="_parent">' . __('plugins.generic.objectsForReview.public.headerLink') . '</a></li>';
 			}
 		}
@@ -462,6 +469,71 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 		}
 	}
 
+	/**
+	 * Add the plug-in stylesheets before displaying the article template.
+	 */
+	function handleTemplateDisplay($hookName, $args) {
+		$templateMgr =& $args[0];
+		$template =& $args[1];
+
+		switch ($template) {
+			case 'article/article.tpl':
+				$templateMgr = TemplateManager::getManager();
+				$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $this->getStyleSheet());
+				break;
+		}
+		return false;
+	}
+
+	/**
+	 * Display object metadata on the article abstract pages.
+	 */
+	function displayAbstract($hookName, $params) {
+		$smarty =& $params[1];
+		$output =& $params[2];
+
+		// Get the journal and the article
+		$journal =& Request::getJournal();
+		$journalId = $journal->getId();
+		$article = $smarty->get_template_vars('article');
+		$pubObject = $smarty->get_template_vars('pubObject');
+		// Only consider the abstract page
+		if ($article && is_a($pubObject, 'Article')) {
+			// Get the assignemnts for this article
+			$objectsForReview = array();
+			$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
+			$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
+			$objectForReviewAssignments =& $ofrAssignmentDao->getAllBySubmissionId($article->getId());
+			foreach ($objectForReviewAssignments as $objectForReviewAssignment) {
+				$objectForReview = $ofrDao->getById($objectForReviewAssignment->getObjectId(), $journalId);
+				$objectsForReview[] = $objectForReview;
+			}
+
+			if (!empty($objectsForReview)) {
+				// Get metadata for the review type
+				$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
+				$allTypes =& $reviewObjectTypeDao->getTypeIdsAlphabetizedByContext($journalId);
+				$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
+				$allReviewObjectsMetadata = array();
+				foreach ($allTypes as $type) {
+					$typeId = $type['typeId'];
+					$typeMetadata = $reviewObjectMetadataDao->getArrayByReviewObjectTypeId($typeId);
+					$allReviewObjectsMetadata[$typeId] = $typeMetadata;
+				}
+
+				$publicFileManager = new PublicFileManager();
+				$coverPagePath = Request::getBaseUrl() . '/';
+				$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
+				$smarty->assign('coverPagePath', $coverPagePath);
+
+				$smarty->assign('objectsForReview', $objectsForReview);
+				$smarty->assign('allReviewObjectsMetadata', $allReviewObjectsMetadata);
+				$smarty->assign('multipleOptionsTypes', ReviewObjectMetadata::getMultipleOptionsTypes());
+				$smarty->assign('ofrListing', true);
+				$output .= $smarty->fetch($this->getTemplatePath() . '/' . 'articleObjectsForReview.tpl');
+			}
+		}
+	}
 
 	//
 	// Private helper methods

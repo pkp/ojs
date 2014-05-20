@@ -198,6 +198,8 @@ class ObjectsForReviewHandler extends Handler {
 		$mode = $ofrPlugin->getSetting($journal->getId(), 'mode');
 		if ($mode != OFR_MODE_FULL) return false;
 
+		if (!$ofrPlugin->getSetting($journal->getId(), 'displayListing')) return false;
+
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 

@@ -73,9 +73,9 @@
 	<message key="plugins.generic.objectsForReview.settings.modeFull">Mode 1: List available objects for review, manage object reviewers, and publish object metadata.</message>
 	<message key="plugins.generic.objectsForReview.settings.modeMetadata">Mode 2: Only publish object metadata.</message>
 	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>Mode 1</h5><p>The following workflow is supported:</p><ul><li>Editor adds objects available for review.</li><li>Authors interested in reviewing an object can request to write a review, notifying the Editor.</li><li>Editor can accept or deny the review request, notifying the Author.</li><li>For the accepted review request a due date is set for the review.</li><li>The Editor can mail a copy of the object to the Author. The due date for the review is set anew.</li><li>Author submits review via the standard online submission process.</li><li>Object metadata is published as part of the object review submission.</li></ul><p>This plugin supports journals with multiple editors. When an Editor adds a new object for review, he or she becomes the primary editor and correspondence contact for the object.</p><h5>Mode 2</h5><p>The following workflow is supported:</p><ul><li>Editor adds objects for review.</li><li>Editor matches submissions (reviews) to each object.</li><li>Object metadata is published as part of the object review submission.</li></ul>]]></message>
-	<message key="plugins.generic.objectsForReview.settings.coverImages">Cover Images</message>
-	<message key="plugins.generic.objectsForReview.settings.coverPageIssue">Display cover images for object reviews in issue table of contents.</message>
-	<message key="plugins.generic.objectsForReview.settings.coverPageAbstract">Display cover images for object reviews on article abstract pages.</message>
+	<message key="plugins.generic.objectsForReview.settings.displayMetadata">Display Object Metadata</message>
+	<message key="plugins.generic.objectsForReview.settings.displayAbstract">Display object metadata on the article abstract pages.</message>
+	<message key="plugins.generic.objectsForReview.settings.displayListing">Publish the list of all available objects for review using the navigation item "Objects For Review".</message>
 	<message key="plugins.generic.objectsForReview.settings.objectsForReviewDue">Object Reviews Due</message>
 	<message key="plugins.generic.objectsForReview.settings.dueWeeks1">Reviews are due</message>
 	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">week(s) after the object has been assigned to the author.</message>
@@ -200,6 +200,9 @@
 	<message key="plugins.generic.objectsForReview.public.objectsForReview">Objects For Review</message>
 	<message key="plugins.generic.objectsForReview.public.objectForReview">Object For Review</message>
 	<message key="plugins.generic.objectsForReview.public.objectsForReviewInstructions"><![CDATA[<p>To request an object for review:</p><ul><li><a href="{$registerUrl}" target="_parent">Register</a> as an author with this journal.</li><li><a href="{$loginAuthorUrl}" target="_parent">Log in</a> as an author.</li><li>Click on the request link that corresponds to the object of interest.</li></ul>]]></message>
+	
+	<!-- Article Abstract Page -->
+	<message key="plugins.generic.objectsForReview.public.articleObjectsForReview">Objects reviewed in this article</message>
 
 
 	<!-- Author -->

@@ -89,8 +89,8 @@ class ObjectsForReviewSettingsForm extends Form {
 		$plugin =& $this->plugin;
 		$this->_data = array(
 			'mode' => $plugin->getSetting($journalId, 'mode'),
-			'coverPageIssue' => $plugin->getSetting($journalId, 'coverPageIssue'),
-			'coverPageAbstract' => $plugin->getSetting($journalId, 'coverPageAbstract'),
+			'displayAbstract' => $plugin->getSetting($journalId, 'displayAbstract'),
+			'displayListing' => $plugin->getSetting($journalId, 'displayListing'),
 			'dueWeeks' => $plugin->getSetting($journalId, 'dueWeeks'),
 			'enableDueReminderBefore' => $plugin->getSetting($journalId, 'enableDueReminderBefore'),
 			'numDaysBeforeDueReminder' => $plugin->getSetting($journalId, 'numDaysBeforeDueReminder'),
@@ -107,8 +107,8 @@ class ObjectsForReviewSettingsForm extends Form {
 		$this->readUserVars(
 			array(
 				'mode',
-				'coverPageIssue',
-				'coverPageAbstract',
+				'displayAbstract',
+				'displayListing',
 				'dueWeeks',
 				'enableDueReminderBefore',
 				'numDaysBeforeDueReminder',
@@ -131,8 +131,8 @@ class ObjectsForReviewSettingsForm extends Form {
 		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 		$plugin->updateSetting($journalId, 'mode', $this->getData('mode'), 'int');
-		$plugin->updateSetting($journalId, 'coverPageIssue', $this->getData('coverPageIssue'), 'bool');
-		$plugin->updateSetting($journalId, 'coverPageAbstract', $this->getData('coverPageAbstract'), 'bool');
+		$plugin->updateSetting($journalId, 'displayAbstract', $this->getData('displayAbstract'), 'bool');
+		$plugin->updateSetting($journalId, 'displayListing', $this->getData('displayListing'), 'bool');
 		$plugin->updateSetting($journalId, 'dueWeeks', $this->getData('dueWeeks'), 'int');
 		$plugin->updateSetting($journalId, 'enableDueReminderBefore', $this->getData('enableDueReminderBefore'), 'bool');
 		$plugin->updateSetting($journalId, 'numDaysBeforeDueReminder', $this->getData('numDaysBeforeDueReminder'), 'int');
