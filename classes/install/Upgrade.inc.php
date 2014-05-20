@@ -1121,8 +1121,9 @@ class Upgrade extends Installer {
 				$assocId = $row['article_id'];
 			};
 
-			$day = date('Ymd', strtotime($row['date']));
-			$tempStatsDao->insert($assocType, $assocId, $day, $countryId, $region, $cityName, $fileType, $loadId);
+			$recordTimestamp = strtotime($row['date']);
+			$day = date('Ymd', $recordTimestamp);
+			$tempStatsDao->insert($assocType, $assocId, $day, $recordTimestamp, $countryId, $region, $cityName, $fileType, $loadId);
 		}
 
 		switch (Config::getVar('database', 'driver')) {
