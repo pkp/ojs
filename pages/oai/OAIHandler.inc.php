@@ -26,11 +26,11 @@ class OAIHandler extends Handler {
 		parent::Handler();
 	}
 
-	function index() {
+	function index($args, $request) {
 		$this->validate();
 		PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
-		$oai = new JournalOAI(new OAIConfig(Request::getRequestUrl(), Config::getVar('oai', 'repository_id')));
+		$oai = new JournalOAI(new OAIConfig($request->url(null, 'oai'), Config::getVar('oai', 'repository_id')));
 		$oai->execute();
 	}
 
