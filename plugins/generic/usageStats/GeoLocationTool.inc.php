@@ -62,7 +62,7 @@ class GeoLocationTool {
 
 		return array(
 			$record->country_code,
-			$record->city,
+			utf8_encode($record->city),
 			$record->region
 		);
 	}
