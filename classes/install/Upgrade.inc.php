@@ -1132,7 +1132,7 @@ class Upgrade extends Installer {
 				$monthSql = 'extract(YEAR_MONTH from tr.day)';
 				break;
 			case 'postgres':
-				$monthSql = 'to_char(to_date(tr.day, "YYYYMMDD"), "YYYYMM")';
+				$monthSql = 'to_char(to_date(to_char(tr.day, \'99999999\'), \'YYYYMMDD\'), \'YYYYMM\')';
 				break;
 		}
 
