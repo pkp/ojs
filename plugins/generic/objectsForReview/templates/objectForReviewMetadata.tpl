@@ -20,7 +20,7 @@
 {/if}
 	<h3>
 	{if $ofrListing}
-		<a href="{url op="viewObjectForReview" path=$objectForReview->getId()}">{$objectForReview->getTitle()|escape}</a>
+		<a href="{url page="objectsForReview" op="viewObjectForReview" path=$objectForReview->getId()}">{$objectForReview->getTitle()|escape}</a>
 	{else}
 		{$objectForReview->getTitle()|escape}
 	{/if}

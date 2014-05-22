@@ -29,6 +29,7 @@ class ObjectForReviewForm extends Form {
 
 	/**
 	 * Constructor
+	 * @param $parentPluginName sting
 	 * @param $objectId int (optional)
 	 * @param $reviewObjectTypeId int (optional)
 	 */
@@ -59,7 +60,7 @@ class ObjectForReviewForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @see Form::display()
 	 */
 	function display($request) {
 		$journal =& $request->getJournal();
@@ -96,7 +97,7 @@ class ObjectForReviewForm extends Form {
 	}
 
 	/**
-	 * Initialize form data from current object for review.
+	 * @see Form::initData()
 	 */
 	function initData() {
 		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
@@ -145,7 +146,7 @@ class ObjectForReviewForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(
@@ -164,7 +165,7 @@ class ObjectForReviewForm extends Form {
 	}
 
 	/**
-	 * Save the response.
+	 * @see Form::execute()
 	 */
 	function execute() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
