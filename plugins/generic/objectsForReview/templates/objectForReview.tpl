@@ -15,7 +15,7 @@
 
 <div id="objectForReviewDetails">
 
-{include file="../plugins/generic/objectsForReview/templates/objectForReviewMetadata.tpl"}
+{include file="$ofrTemplatePath/objectForReviewMetadata.tpl"}
 
 </div>
 

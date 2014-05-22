@@ -255,6 +255,8 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Enable TinyMCE support for object for review text fields.
+	 * @param $hookName string (TinyMCEPlugin::getEnableFields)
+	 * @param $params array (plugin, fields)
 	 */
 	function enableTinyMCE($hookName, $params) {
 		$fields =& $params[1];
@@ -285,8 +287,8 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Hook registry function to provide notification messages
-	 * @param $hookName string
-	 * @param $args array
+	 * @param $hookName string (NotificationManager::getNotificationContents)
+	 * @param $args array ($notification, $message)
 	 */
 	function callbackNotificationContents($hookName, $args) {
 		$notification =& $args[0];
@@ -348,6 +350,8 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Transfer object for review user assignments when merging users.
+	 * @param $hookName string (UserAction::mergeUsers)
+	 * @param $args array ($oldUserId, $newUserId)
 	 */
 	function mergeObjectsForReviewAuthors($hookName, $params) {
 		$oldUserId =& $params[0];
@@ -364,6 +368,8 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Delete all plug-in data for a journal when the journal is deleted
+	 * @param $hookName string (JournalDAO::deleteJournalById)
+	 * @param $args array (JournalDAO, journalId)
 	 */
 	function deleteJournalById($hookName, $params) {
 		$journalId = $params[1];
@@ -376,6 +382,11 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Display editor, author and public links.
+	 * @param $hookName string
+	 * (Templates::Editor::Index::AdditionalItems |
+	 * Templates::Common::Header::Navbar::CurrentJournal |
+	 * Templates::Author::Index::AdditionalItems)
+	 * @param $args array
 	 */
 	function displayLink($hookName, $params) {
 		if ($this->getEnabled()) {
@@ -400,6 +411,8 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Display author's objects for review during submission step 5.
+	 * @param $hookName string (Templates::Author::Submit::Step5::AdditionalItems)
+	 * @param $args array
 	 */
 	function displayAuthorObjectsForReview($hookName, $params) {
 		if ($this->getEnabled()) {
@@ -432,6 +445,8 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Allow author to specify objects for review during article submission.
+	 * @param $hookName string (Author::SubmitHandler::saveSubmit)
+	 * @param $args array (step, article, submitForm)
 	 */
 	function saveSubmitHandler($hookName, $params) {
 		$step =& $params[0];
@@ -467,10 +482,13 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 				}
 			}
 		}
+		return false;
 	}
 
 	/**
 	 * Add the plug-in stylesheets before displaying the article template.
+	 * @param $hookName string (TemplateManager::display)
+	 * @param $args array
 	 */
 	function handleTemplateDisplay($hookName, $args) {
 		$templateMgr =& $args[0];
@@ -487,6 +505,8 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Display object metadata on the article abstract pages.
+	 * @param $hookName string (Templates::Article::MoreInfo)
+	 * @param $args array
 	 */
 	function displayAbstract($hookName, $params) {
 		$smarty =& $params[1];
@@ -530,9 +550,11 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 				$smarty->assign('allReviewObjectsMetadata', $allReviewObjectsMetadata);
 				$smarty->assign('multipleOptionsTypes', ReviewObjectMetadata::getMultipleOptionsTypes());
 				$smarty->assign('ofrListing', true);
-				$output .= $smarty->fetch($this->getTemplatePath() . '/' . 'articleObjectsForReview.tpl');
+				$smarty->assign('ofrTemplatePath', $this->getTemplatePath());
+				$output .= $smarty->fetch($this->getTemplatePath() . 'articleObjectsForReview.tpl');
 			}
 		}
+		return false;
 	}
 
 	//
@@ -540,6 +562,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	//
 	/**
 	 * Get editor pages for review object types
+	 * @return array
 	 */
 	function _getReviewObjectTypesEditorPages() {
 		return array(
@@ -565,6 +588,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Get editor pages for objects for review
+	 * @return array
 	 */
 	function _getObjectsForReviewEditorPages() {
 		return array(
@@ -590,6 +614,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Get public pages for objects for review
+	 * @return array
 	 */
 	function _getObjectsForReviewPublicPages() {
 		return array(
@@ -600,6 +625,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Get author pages for objects for review
+	 * @return array
 	 */
 	function _getObjectsForReviewAuthorPages() {
 		return array(

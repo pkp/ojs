@@ -10,12 +10,12 @@
  *}
 
 <div class="separator"></div>
-<div id="ojectsForReviewListing">
+<div id="objectsForReviewListing">
 	<h3>{translate key="plugins.generic.objectsForReview.public.articleObjectsForReview"}</h3>
 	{foreach from=$objectsForReview item=objectForReview name=objectsForReview}
 		<div class="objectForReviewListing" style="clear:left;">
 
-			{include file="../plugins/generic/objectsForReview/templates/objectForReviewMetadata.tpl"}
+			{include file="$ofrTemplatePath/objectForReviewMetadata.tpl"}
 
 			<div{if not $smarty.foreach.objectsForReview.last} class="separator"{/if} style="clear:both;"></div>
 

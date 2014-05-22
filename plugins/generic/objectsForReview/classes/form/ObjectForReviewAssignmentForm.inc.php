@@ -29,6 +29,7 @@ class ObjectForReviewAssignmentForm extends Form {
 
 	/**
 	 * Constructor
+	 * @param $parentPluginName sting
 	 * @param $assignmentId int
 	 * @param $objectId int
 	 */
@@ -44,7 +45,7 @@ class ObjectForReviewAssignmentForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @see Form::display()
 	 */
 	function display($request) {
 		// get the assignment
@@ -79,7 +80,7 @@ class ObjectForReviewAssignmentForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(
@@ -99,7 +100,7 @@ class ObjectForReviewAssignmentForm extends Form {
 	}
 
 	/**
-	 * Save the response.
+	 * @see Form::execute()
 	 */
 	function execute() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);

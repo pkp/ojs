@@ -59,7 +59,7 @@ class ObjectsForReviewSettingsForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @see Form::display()
 	 */
 	function display($request) {
 		$templateMgr =& TemplateManager::getManager($request);
@@ -74,15 +74,14 @@ class ObjectsForReviewSettingsForm extends Form {
 	}
 
 	/**
-	 * Get the names of the fields for which localized settings are used
-	 * @return array
+	 * @see Form::getLocaleFieldNames()
 	 */
 	function getLocaleFieldNames() {
 		return array('additionalInformation');
 	}
 
 	/**
-	 * Initialize form data.
+	 * @see Form::initData()
 	 */
 	function initData() {
 		$journalId = $this->journalId;
@@ -101,7 +100,7 @@ class ObjectsForReviewSettingsForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(
@@ -125,7 +124,7 @@ class ObjectsForReviewSettingsForm extends Form {
 	}
 
 	/**
-	 * Save settings.
+	 * @see Form::execute()
 	 */
 	function execute() {
 		$plugin =& $this->plugin;
