@@ -38,7 +38,7 @@ before_install:
 
   # Start selenium server.
   - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
-  - nohup java -jar selenium-server-standalone-2.41.0.jar -browserSessionReuse -debug > selenium-output &
+  - nohup java -jar selenium-server-standalone-2.41.0.jar -browserSessionReuse > selenium-output & 
   - sleep 3 # Give selenium server time to start.
 
   # Install the test database.
