@@ -39,9 +39,16 @@ define('NOTIFICATION_TYPE_OFR_SETTINGS_SAVED',	NOTIFICATION_TYPE_OFR_PLUGIN_BASE
 
 
 class ObjectsForReviewPlugin extends GenericPlugin {
+	/**
+	 * Constructor
+	 */
+	function ObjectsForReviewPlugin() {
+		parent::GenericPlugin();
+	}
 
 	/**
 	 * @see PKPPlugin::register()
+	 * @return boolean true iff success
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
@@ -106,6 +113,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * @see PKPPlugin::getDisplayName()
+	 * @return string
 	 */
 	function getDisplayName() {
 		return __('plugins.generic.objectsForReview.displayName');
@@ -113,6 +121,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * @see PKPPlugin::getDescription()
+	 * @return string
 	 */
 	function getDescription() {
 		return __('plugins.generic.objectsForReview.description');
@@ -120,6 +129,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * @see PKPPlugin::getInstallSchemaFile()
+	 * @return string
 	 */
 	function getInstallSchemaFile() {
 		return $this->getPluginPath() . '/xml/schema.xml';
@@ -127,6 +137,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * @see PKPPlugin::getInstallEmailTemplatesFile()
+	 * @return string
 	 */
 	function getInstallEmailTemplatesFile() {
 		return $this->getPluginPath() . '/xml/emailTemplates.xml';
@@ -134,6 +145,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * @see PKPPlugin::getInstallEmailTemplateDataFile()
+	 * @return string
 	 */
 	function getInstallEmailTemplateDataFile() {
 		return $this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml';
@@ -141,6 +153,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * @see PKPPlugin::getTemplatePath()
+	 * @return string
 	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';
@@ -148,6 +161,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Get the handler path for this plugin.
+	 * @return string
 	 */
 	function getHandlerPath() {
 		return $this->getPluginPath() . '/pages/';
@@ -155,14 +169,15 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 
 	/**
 	 * Get the stylesheet for this plugin.
+	 * @return string
 	 */
 	function getStyleSheet() {
 		return $this->getPluginPath() . '/styles/objectsForReview.css';
 	}
 
 	/**
-	* Instantiate and register the DAOs.
-	*/
+	 * Instantiate and register the DAOs.
+	 */
 	function registerDAOs() {
 		$this->import('classes.ReviewObjectTypeDAO');
 		$this->import('classes.ReviewObjectMetadataDAO');
@@ -195,6 +210,9 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	//
 	/**
 	 * @see PKPPageRouter::route()
+	 * @param $hookName string Hook name
+	 * @param $params array Array of hook parameters
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function callbackLoadHandler($hookName, $params) {
 		$page =& $params[0];
@@ -257,6 +275,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Enable TinyMCE support for object for review text fields.
 	 * @param $hookName string (TinyMCEPlugin::getEnableFields)
 	 * @param $params array (plugin, fields)
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function enableTinyMCE($hookName, $params) {
 		$fields =& $params[1];
@@ -289,6 +308,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Hook registry function to provide notification messages
 	 * @param $hookName string (NotificationManager::getNotificationContents)
 	 * @param $args array ($notification, $message)
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function callbackNotificationContents($hookName, $args) {
 		$notification =& $args[0];
@@ -352,6 +372,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Transfer object for review user assignments when merging users.
 	 * @param $hookName string (UserAction::mergeUsers)
 	 * @param $args array ($oldUserId, $newUserId)
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function mergeObjectsForReviewAuthors($hookName, $params) {
 		$oldUserId =& $params[0];
@@ -370,6 +391,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Delete all plug-in data for a journal when the journal is deleted
 	 * @param $hookName string (JournalDAO::deleteJournalById)
 	 * @param $args array (JournalDAO, journalId)
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function deleteJournalById($hookName, $params) {
 		$journalId = $params[1];
@@ -387,6 +409,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Templates::Common::Header::Navbar::CurrentJournal |
 	 * Templates::Author::Index::AdditionalItems)
 	 * @param $args array
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function displayLink($hookName, $params) {
 		if ($this->getEnabled()) {
@@ -413,6 +436,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Display author's objects for review during submission step 5.
 	 * @param $hookName string (Templates::Author::Submit::Step5::AdditionalItems)
 	 * @param $args array
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function displayAuthorObjectsForReview($hookName, $params) {
 		if ($this->getEnabled()) {
@@ -447,6 +471,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Allow author to specify objects for review during article submission.
 	 * @param $hookName string (Author::SubmitHandler::saveSubmit)
 	 * @param $args array (step, article, submitForm)
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function saveSubmitHandler($hookName, $params) {
 		$step =& $params[0];
@@ -489,6 +514,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Add the plug-in stylesheets before displaying the article template.
 	 * @param $hookName string (TemplateManager::display)
 	 * @param $args array
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function handleTemplateDisplay($hookName, $args) {
 		$templateMgr =& $args[0];
@@ -507,6 +533,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 	 * Display object metadata on the article abstract pages.
 	 * @param $hookName string (Templates::Article::MoreInfo)
 	 * @param $args array
+	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function displayAbstract($hookName, $params) {
 		$smarty =& $params[1];
