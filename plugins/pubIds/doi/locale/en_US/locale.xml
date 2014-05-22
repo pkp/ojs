@@ -62,4 +62,9 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">supplementary file</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">What you see is a preview of the DOI that may be incomplete. A DOI has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique DOI for this {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">Exclude this {$pubObjectType} from assigning it a DOI.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Reassign DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Select this checkbox to clear the existing DOI for this {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Exclude Issue Objects</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Use this button to exclude the objects (articles, galleys and supp fiels) currently scheduled to this issue from assigning them a DOI. Note that the objects that are added/scheduled later will not be affected. You will still have the possibility to use the single object exclusion options.</message>
 </locale>

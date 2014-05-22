@@ -104,6 +104,10 @@ class DOISettingsForm extends Form {
 	//
 	// Private helper methods
 	//
+	/**
+	 * Get all form fields and their types
+	 * @return array
+	 */
 	function _getFormFields() {
 		return array(
 			'enableIssueDoi' => 'bool',

@@ -66,153 +66,155 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @see PubIdPlugin::getPubId()
 	 */
 	function getPubId(&$pubObject, $preview = false) {
-		// Determine the type of the publishing object.
-		$pubObjectType = $this->getPubObjectType($pubObject);
+		$doi = null;
+		if (!$this->isExcluded($pubObject)) {
+			// Determine the type of the publishing object.
+			$pubObjectType = $this->getPubObjectType($pubObject);
 
-		// Initialize variables for publication objects.
-		$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
-		$article = ($pubObjectType == 'Article' ? $pubObject : null);
-		$galley = ($pubObjectType == 'Galley' ? $pubObject : null);
-		$suppFile = ($pubObjectType == 'SuppFile' ? $pubObject : null);
+			// Initialize variables for publication objects.
+			$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
+			$article = ($pubObjectType == 'Article' ? $pubObject : null);
+			$galley = ($pubObjectType == 'Galley' ? $pubObject : null);
+			$suppFile = ($pubObjectType == 'SuppFile' ? $pubObject : null);
 
-		// Get the journal id of the object.
-		if (in_array($pubObjectType, array('Issue', 'Article'))) {
-			$journalId = $pubObject->getJournalId();
-		} else {
-			// Retrieve the published article.
-			assert(is_a($pubObject, 'ArticleFile'));
-			$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-			$article =& $articleDao->getPublishedArticleByArticleId($pubObject->getArticleId(), null, true);
-			if (!$article) return null;
+			// Get the journal id of the object.
+			if (in_array($pubObjectType, array('Issue', 'Article'))) {
+				$journalId = $pubObject->getJournalId();
+			} else {
+				// Retrieve the published article.
+				assert(is_a($pubObject, 'ArticleFile'));
+				$articleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
+				$article =& $articleDao->getPublishedArticleByArticleId($pubObject->getArticleId(), null, true);
+				if (!$article) return null;
 
-			// Now we can identify the journal.
-			$journalId = $article->getJournalId();
-		}
+				// Now we can identify the journal.
+				$journalId = $article->getJournalId();
+			}
 
-		$journal =& $this->getJournal($journalId);
-		if (!$journal) return null;
-		$journalId = $journal->getId();
+			$journal =& $this->getJournal($journalId);
+			if (!$journal) return null;
+			$journalId = $journal->getId();
 
-		// Check whether DOIs are enabled for the given object type.
-		$doiEnabled = ($this->getSetting($journalId, "enable${pubObjectType}Doi") == '1');
-		if (!$doiEnabled) return null;
+			// Check whether DOIs are enabled for the given object type.
+			$doiEnabled = ($this->getSetting($journalId, "enable${pubObjectType}Doi") == '1');
+			if (!$doiEnabled) return null;
 
-		// If we already have an assigned DOI, use it.
-		$storedDOI = $pubObject->getStoredPubId('doi');
-		if ($storedDOI) return $storedDOI;
+			// If we already have an assigned DOI, use it.
+			$storedDOI = $pubObject->getStoredPubId('doi');
+			if ($storedDOI) return $storedDOI;
 
-		// Retrieve the issue.
-		if (!is_a($pubObject, 'Issue')) {
-			assert(!is_null($article));
-			$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue =& $issueDao->getIssueByArticleId($article->getId(), $journal->getId(), true);
-		}
-		if ($issue && $journalId != $issue->getJournalId()) return null;
+			// Retrieve the issue.
+			if (!is_a($pubObject, 'Issue')) {
+				assert(!is_null($article));
+				$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+				$issue =& $issueDao->getIssueByArticleId($article->getId(), $journal->getId(), true);
+			}
+			if ($issue && $journalId != $issue->getJournalId()) return null;
 
-		// Retrieve the DOI prefix.
-		$doiPrefix = $this->getSetting($journalId, 'doiPrefix');
-		if (empty($doiPrefix)) return null;
+			// Retrieve the DOI prefix.
+			$doiPrefix = $this->getSetting($journalId, 'doiPrefix');
+			if (empty($doiPrefix)) return null;
 
-		// Generate the DOI suffix.
-		$doiSuffixGenerationStrategy = $this->getSetting($journalId, 'doiSuffix');
-		switch ($doiSuffixGenerationStrategy) {
-			case 'publisherId':
-				switch($pubObjectType) {
-					case 'Issue':
-						$doiSuffix = (string) $pubObject->getBestIssueId($journal);
-						break;
-					case 'Article':
-						$doiSuffix = (string) $pubObject->getBestArticleId($journal);
-						break;
-					case 'Galley':
-						$doiSuffix = (string) $pubObject->getBestGalleyId($journal);
-						break;
-					case 'SuppFile':
-						$doiSuffix = (string) $pubObject->getBestSuppFileId($journal);
-						break;
-					default:
-						assert(false);
-				}
-
-				// When the suffix equals the object's ID then
-				// require an object-specific prefix to be sure that
-				// the suffix is unique.
-				if ($pubObjectType != 'Article' && $doiSuffix === (string) $pubObject->getId()) {
-					$doiSuffix = strtolower_codesafe($pubObjectType{0}) . $doiSuffix;
-				}
-				break;
-
-			case 'customId':
-				$doiSuffix = $pubObject->getData('doiSuffix');
-				break;
-
-			case 'pattern':
-				$doiSuffix = $this->getSetting($journalId, "doi${pubObjectType}SuffixPattern");
-
-				// %j - journal initials
-				$doiSuffix = String::regexp_replace('/%j/', String::strtolower($journal->getLocalizedSetting('initials', $journal->getPrimaryLocale())), $doiSuffix);
-
-				// %x - custom identifier
-				if ($pubObject->getStoredPubId('publisher-id')) {
-					$doiSuffix = String::regexp_replace('/%x/', $pubObject->getStoredPubId('publisher-id'), $doiSuffix);
-				}
-				if ($issue) {
-					// %v - volume number
-					$doiSuffix = String::regexp_replace('/%v/', $issue->getVolume(), $doiSuffix);
-					// %i - issue number
-					$doiSuffix = String::regexp_replace('/%i/', $issue->getNumber(), $doiSuffix);
-					// %Y - year
-					$doiSuffix = String::regexp_replace('/%Y/', $issue->getYear(), $doiSuffix);
-				}
-				if ($article) {
-					// %a - article id
-					$doiSuffix = String::regexp_replace('/%a/', $article->getId(), $doiSuffix);
-					// %p - page number
-					if ($article->getPages()) {
-						$doiSuffix = String::regexp_replace('/%p/', $article->getPages(), $doiSuffix);
+			// Generate the DOI suffix.
+			$doiSuffixGenerationStrategy = $this->getSetting($journalId, 'doiSuffix');
+			switch ($doiSuffixGenerationStrategy) {
+				case 'publisherId':
+					switch($pubObjectType) {
+						case 'Issue':
+							$doiSuffix = (string) $pubObject->getBestIssueId($journal);
+							break;
+						case 'Article':
+							$doiSuffix = (string) $pubObject->getBestArticleId($journal);
+							break;
+						case 'Galley':
+							$doiSuffix = (string) $pubObject->getBestGalleyId($journal);
+							break;
+						case 'SuppFile':
+							$doiSuffix = (string) $pubObject->getBestSuppFileId($journal);
+							break;
+						default:
+							assert(false);
 					}
-				}
-				if ($galley) {
-					// %g - galley id
-					$doiSuffix = String::regexp_replace('/%g/', $galley->getId(), $doiSuffix);
-				}
-				if ($suppFile) {
-					// %s - supp file id
-					$doiSuffix = String::regexp_replace('/%s/', $suppFile->getId(), $doiSuffix);
-				}
-				break;
 
-			default:
-				$doiSuffix = String::strtolower($journal->getLocalizedSetting('initials', $journal->getPrimaryLocale()));
+					// When the suffix equals the object's ID then
+					// require an object-specific prefix to be sure that
+					// the suffix is unique.
+					if ($pubObjectType != 'Article' && $doiSuffix === (string) $pubObject->getId()) {
+						$doiSuffix = strtolower_codesafe($pubObjectType{0}) . $doiSuffix;
+					}
+					break;
 
-				if ($issue) {
-					$doiSuffix .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
-				} else {
-					$doiSuffix .= '.v%vi%i';
-				}
+				case 'customId':
+					$doiSuffix = $pubObject->getData('doiSuffix');
+					break;
 
-				if ($article) {
-					$doiSuffix .= '.' . $article->getId();
-				}
+				case 'pattern':
+					$doiSuffix = $this->getSetting($journalId, "doi${pubObjectType}SuffixPattern");
 
-				if ($galley) {
-					$doiSuffix .= '.g' . $galley->getId();
-				}
+					// %j - journal initials
+					$doiSuffix = String::regexp_replace('/%j/', String::strtolower($journal->getLocalizedSetting('initials', $journal->getPrimaryLocale())), $doiSuffix);
 
-				if ($suppFile) {
-					$doiSuffix .= '.s' . $suppFile->getId();
-				}
+					// %x - custom identifier
+					if ($pubObject->getStoredPubId('publisher-id')) {
+						$doiSuffix = String::regexp_replace('/%x/', $pubObject->getStoredPubId('publisher-id'), $doiSuffix);
+					}
+					if ($issue) {
+						// %v - volume number
+						$doiSuffix = String::regexp_replace('/%v/', $issue->getVolume(), $doiSuffix);
+						// %i - issue number
+						$doiSuffix = String::regexp_replace('/%i/', $issue->getNumber(), $doiSuffix);
+						// %Y - year
+						$doiSuffix = String::regexp_replace('/%Y/', $issue->getYear(), $doiSuffix);
+					}
+					if ($article) {
+						// %a - article id
+						$doiSuffix = String::regexp_replace('/%a/', $article->getId(), $doiSuffix);
+						// %p - page number
+						if ($article->getPages()) {
+							$doiSuffix = String::regexp_replace('/%p/', $article->getPages(), $doiSuffix);
+						}
+					}
+					if ($galley) {
+						// %g - galley id
+						$doiSuffix = String::regexp_replace('/%g/', $galley->getId(), $doiSuffix);
+					}
+					if ($suppFile) {
+						// %s - supp file id
+						$doiSuffix = String::regexp_replace('/%s/', $suppFile->getId(), $doiSuffix);
+					}
+					break;
+
+				default:
+					$doiSuffix = String::strtolower($journal->getLocalizedSetting('initials', $journal->getPrimaryLocale()));
+
+					if ($issue) {
+						$doiSuffix .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
+					} else {
+						$doiSuffix .= '.v%vi%i';
+					}
+
+					if ($article) {
+	 					$doiSuffix .= '.' . $article->getId();
+					}
+
+					if ($galley) {
+						$doiSuffix .= '.g' . $galley->getId();
+					}
+
+					if ($suppFile) {
+						$doiSuffix .= '.s' . $suppFile->getId();
+					}
+			}
+			if (empty($doiSuffix)) return null;
+
+			// Join prefix and suffix.
+			$doi = $doiPrefix . '/' . $doiSuffix;
+
+			if (!$preview) {
+				// Save the generated DOI.
+				$this->setStoredPubId($pubObject, $pubObjectType, $doi);
+			}
 		}
-		if (empty($doiSuffix)) return null;
-
-		// Join prefix and suffix.
-		$doi = $doiPrefix . '/' . $doiSuffix;
-
-		if (!$preview) {
-			// Save the generated DOI.
-			$this->setStoredPubId($pubObject, $pubObjectType, $doi);
-		}
-
 		return $doi;
 	}
 
@@ -253,7 +255,21 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @see PubIdPlugin::getFormFieldNames()
 	 */
 	function getFormFieldNames() {
-		return array('doiSuffix');
+		return array('doiSuffix', 'excludeDoi');
+	}
+
+	/**
+	 * @see PubIdPlugin::getExcludeFormFieldName()
+	 */
+	function getExcludeFormFieldName() {
+		return 'excludeDoi';
+	}
+
+	/**
+	 * @see PubIdPlugin::isEnabled()
+	 */
+	function isEnabled($pubObjectType, $journalId) {
+		return $this->getSetting($journalId, "enable${pubObjectType}Doi") == '1';
 	}
 
 	/**
@@ -282,20 +298,22 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 */
 	function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg) {
 		// Verify DOI uniqueness.
-		assert($fieldName == 'doiSuffix');
-		if (empty($fieldValue)) return true;
+		if ($fieldName == 'doiSuffix') {
+			if (empty($fieldValue)) return true;
 
-		// Construct the potential new DOI with the posted suffix.
-		$doiPrefix = $this->getSetting($journalId, 'doiPrefix');
-		if (empty($doiPrefix)) return true;
-		$newDoi = $doiPrefix . '/' . $fieldValue;
+			// Construct the potential new DOI with the posted suffix.
+			$doiPrefix = $this->getSetting($journalId, 'doiPrefix');
+			if (empty($doiPrefix)) return true;
+			$newDoi = $doiPrefix . '/' . $fieldValue;
 
-		if($this->checkDuplicate($newDoi, $pubObject, $journalId)) {
-			return true;
-		} else {
-			$errorMsg = __('plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique');
-			return false;
+			if($this->checkDuplicate($newDoi, $pubObject, $journalId)) {
+				return true;
+			} else {
+				$errorMsg = __('plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique');
+				return false;
+			}
 		}
+		return true;
 	}
 
 	/**

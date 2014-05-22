@@ -67,7 +67,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 */
 	function getPubId(&$pubObject, $preview = false) {
 		$urn = $pubObject->getStoredPubId($this->getPubIdType());
-		if (!$urn) {
+		if (!$urn && !$this->isExcluded($pubObject)) {
 			// Determine the type of the publishing object
 			$pubObjectType = $this->getPubObjectType($pubObject);
 
@@ -246,7 +246,21 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 * @see PubIdPlugin::getFormFieldNames()
 	 */
 	function getFormFieldNames() {
-		return array('urnSuffix');
+		return array('urnSuffix', 'excludeURN');
+	}
+
+	/**
+	 * @see PubIdPlugin::getExcludeFormFieldName()
+	 */
+	function getExcludeFormFieldName() {
+		return 'excludeURN';
+	}
+
+	/**
+	 * @see PubIdPlugin::isEnabled()
+	 */
+	function isEnabled($pubObjectType, $journalId) {
+		return $this->getSetting($journalId, "enable${pubObjectType}URN") == '1';
 	}
 
 	/**
@@ -274,24 +288,25 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 * @see PubIdPlugin::verifyData()
 	 */
 	function verifyData($fieldName, $fieldValue, &$pubObject, $journalId, &$errorMsg) {
-		assert($fieldName == 'urnSuffix');
-		if (empty($fieldValue)) return true;
+		if ($fieldName == 'urnSuffix') {
+			if (empty($fieldValue)) return true;
 
-		// Construct the potential new URN with the posted suffix.
-		$urnPrefix = $this->getSetting($journalId, 'urnPrefix');
-		if (empty($urnPrefix)) return true;
-		$newURN = $urnPrefix . $fieldValue;
-		if ($this->getSetting($journalId, 'checkNo')) {
-			$newURNWithoutCheckNo = substr($newURN, 0, -1);
-			$newURNWithCheckNo = $newURNWithoutCheckNo . $this->_calculateCheckNo($newURNWithoutCheckNo);
-			if ($newURN != $newURNWithCheckNo) {
-				$errorMsg = __('plugins.pubIds.urn.form.checkNoRequired');
+			// Construct the potential new URN with the posted suffix.
+			$urnPrefix = $this->getSetting($journalId, 'urnPrefix');
+			if (empty($urnPrefix)) return true;
+			$newURN = $urnPrefix . $fieldValue;
+			if ($this->getSetting($journalId, 'checkNo')) {
+				$newURNWithoutCheckNo = substr($newURN, 0, -1);
+				$newURNWithCheckNo = $newURNWithoutCheckNo . $this->_calculateCheckNo($newURNWithoutCheckNo);
+				if ($newURN != $newURNWithCheckNo) {
+					$errorMsg = __('plugins.pubIds.urn.form.checkNoRequired');
+					return false;
+				}
+			}
+			if(!$this->checkDuplicate($newURN, $pubObject, $journalId)) {
+				$errorMsg = __('plugins.pubIds.urn.form.customIdentifierNotUnique');
 				return false;
 			}
-		}
-		if(!$this->checkDuplicate($newURN, $pubObject, $journalId)) {
-			$errorMsg = __('plugins.pubIds.urn.form.customIdentifierNotUnique');
-			return false;
 		}
 		return true;
 	}
@@ -307,6 +322,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 *  the numbers' sum is calculated,
 	 *  the sum is devided by the last number,
 	 *  the last number of the quotient before the decimal point is the check number.
+	 * @param $urn string
 	 */
 	function _calculateCheckNo($urn) {
 		$urnLower = strtolower_codesafe($urn);

@@ -39,6 +39,8 @@ class PubIdPlugin extends Plugin {
 			foreach($this->_getDAOs() as $daoName) {
 				HookRegistry::register(strtolower_codesafe($daoName).'::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
 			}
+			// Exclude issue articles
+			HookRegistry::register('Editor::IssueManagementHandler::editIssue', array($this, 'excludeIssueObjects'));
 		}
 		return $success;
 	}
@@ -224,6 +226,36 @@ class PubIdPlugin extends Plugin {
 	}
 
 	/**
+	 * Get the checkbox form field name that is used to define
+	 * if a pub object should be excluded from assigning the pub id to it.
+	 * @return string
+	 */
+	function getExcludeFormFieldName() {
+		assert(false); // Should be overridden
+	}
+
+	/**
+	 * Should the object be excluded from assigning the pub id
+	 * @param $pubObject object
+	 * @return boolean
+	 */
+	function isExcluded($pubObject) {
+		$excludeFormFieldName = $this->getExcludeFormFieldName();
+		$excluded = $pubObject->getData($excludeFormFieldName);
+		return $excluded;
+	}
+
+	/**
+	 * Is this object type enabled in plugin settings
+	 * @param $pubObjectType object (Issue, Article, Galley, SuppFile)
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function isEnabled($pubObjectType, $journalId) {
+		assert(false); // Should be overridden
+	}
+
+	/**
 	 * Get additional field names to be considered for storage.
 	 * @return array
 	 */
@@ -322,8 +354,8 @@ class PubIdPlugin extends Plugin {
 	/**
 	 * Add the suffix element and the public identifier
 	 * to the object (issue, article, galley, supplementary file).
-	 * @param $hookName string
-	 * @param $params array ()
+	 * @param $hookName string (daoName::getAdditionalFieldNames)
+	 * @param $params array (DAO, array of additional fields)
 	 */
 	function getAdditionalFieldNames($hookName, $params) {
 		$fields =& $params[1];
@@ -334,6 +366,59 @@ class PubIdPlugin extends Plugin {
 		$daoFieldNames = $this->getDAOFieldNames();
 		foreach ($daoFieldNames as $daoFieldName) {
 			$fields[] = $daoFieldName;
+		}
+		return false;
+	}
+
+	/**
+	 * Exclude issue objects (articles, galley, supp files)
+	 * from assigning them the pubId
+	 * @param $hookName string (Editor::IssueManagementHandler::editIssue)
+	 * @param $params array (Issue, IssueForm)
+	 */
+	function excludeIssueObjects($hookName, $params) {
+		$issue =& $params[0];
+		$issueId = $issue->getId();
+		$submittName = 'excludeIssueObjects_' . $this->getPubIdType();
+		if (Request::getUserVar($submittName)) {
+			$settingName = $this->getExcludeFormFieldName();
+			$pubIdType = $this->getPubIdType();
+
+			$articlePubIdEnabled = $this->isEnabled('Article', $issue->getJournalId());
+			$galleyPubIdEnabled = $this->isEnabled('Galley', $issue->getJournalId());
+			$suppFilePubIdEnabled = $this->isEnabled('SuppFile', $issue->getJournalId());
+			if (!$articlePubIdEnabled && !$galleyPubIdEnabled && !$suppFilePubIdEnabled) return false;
+
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+			foreach ($publishedArticles as $publishedArticle) {
+				if ($articlePubIdEnabled && !$publishedArticle->getStoredPubId($pubIdType)) {
+					$publishedArticle->setData($settingName, 1);
+					$articleDao->updateArticle($publishedArticle);
+				}
+				if ($galleyPubIdEnabled) {
+					$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+					$articleGalleys =& $articleGalleyDao->getGalleysByArticle($publishedArticle->getId());
+					foreach ($articleGalleys as $articleGalley) {
+						if (!$articleGalley->getStoredPubId($pubIdType)) {
+							$articleGalley->setData($settingName, 1);
+							$articleGalleyDao->updateGalley($articleGalley);
+						}
+					}
+				}
+				if ($suppFilePubIdEnabled) {
+					$articleSuppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+					$articleSuppFiles =& $articleSuppFileDao->getSuppFilesByArticle($publishedArticle->getId());
+					foreach ($articleSuppFiles as $articleSuppFile) {
+						if (!$articleSuppFile->getStoredPubId($pubIdType)) {
+							$articleSuppFile->setData($settingName, 1);
+							$articleSuppFileDao->updateSuppFile($articleSuppFile);
+						}
+					}
+				}
+			}
+			return true;
 		}
 		return false;
 	}

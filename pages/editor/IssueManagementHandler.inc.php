@@ -255,9 +255,14 @@ class IssueManagementHandler extends EditorHandler {
 		}
 		$issueForm->readInputData();
 
-		if ($issueForm->validate($issue)) {
-			$issueForm->execute($issueId);
-			$issueForm->initData($issueId);
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		if (!HookRegistry::call('Editor::IssueManagementHandler::editIssue', array(&$issue, &$issueForm))) {
+			if ($issueForm->validate($issue)) {
+				$issueForm->execute($issueId);
+				$issueForm->initData($issueId);
+				$this->validate($issueId, true);
+				$issue =& $this->issue;
+			}
 		}
 
 		$templateMgr->assign_by_ref('issue', $issue);

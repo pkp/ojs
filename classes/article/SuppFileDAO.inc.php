@@ -478,6 +478,25 @@ class SuppFileDAO extends DAO {
 		}
 		$this->flushCache();
 	}
+
+	/**
+	 * Delete the public ID of a supp file.
+	 * @param $suppFileId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deletePubId($suppFileId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM article_supp_file_settings WHERE setting_name = ? AND supp_id = ?',
+			array(
+				$settingName,
+				(int)$suppFileId
+			)
+		);
+		$this->flushCache();
+	}
 }
 
 ?>

@@ -15,28 +15,50 @@
 	<div id="pub-id::doi">
 		<h3>{translate key="plugins.pubIds.doi.editor.doi"}</h3>
 		{assign var=storedPubId value=$pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}
-		{if $pubIdPlugin->getSetting($currentJournal->getId(), 'doiSuffix') == 'customId' || $storedPubId}
-			{if empty($storedPubId)}
-				<table width="100%" class="data">
-					<tr valign="top">
-						<td rowspan="2" width="10%" class="label">{fieldLabel name="doiSuffix" key="plugins.pubIds.doi.manager.settings.doiSuffix"}</td>
-						<td rowspan="2" width="10%" align="right">{$pubIdPlugin->getSetting($currentJournal->getId(), 'doiPrefix')|escape}/</td>
-						<td width="80%" class="value"><input type="text" class="textField" name="doiSuffix" id="doiSuffix" value="{$doiSuffix|escape}" size="20" maxlength="255" />
-					</tr>
-					<tr valign="top">
-						<td colspan="3"><span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixDescription"}</span></td>
-					</tr>
-				</table>
+		{if !$excludeDoi}
+			{if $pubIdPlugin->getSetting($currentJournal->getId(), 'doiSuffix') == 'customId' || $storedPubId}
+				{if empty($storedPubId)}
+					<table width="100%" class="data">
+						<tr valign="top">
+							<td rowspan="2" width="10%" class="label">{fieldLabel name="doiSuffix" key="plugins.pubIds.doi.manager.settings.doiSuffix"}</td>
+							<td rowspan="2" width="10%" align="right">{$pubIdPlugin->getSetting($currentJournal->getId(), 'doiPrefix')|escape}/</td>
+							<td width="80%" class="value"><input type="text" class="textField" name="doiSuffix" id="doiSuffix" value="{$doiSuffix|escape}" size="20" maxlength="255" />
+						</tr>
+						<tr valign="top">
+							<td colspan="3"><span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixDescription"}</span></td>
+						</tr>
+					</table>
+				{else}
+					<p>{$storedPubId|escape}</p>
+					<input type="checkbox" name="clear_doi" id="clear_doi" value="1" />
+					{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
+					{translate key="plugins.pubIds.doi.editor.doiReassign.description" pubObjectType=$translatedObjectType}<br />
+				{/if}
 			{else}
-				{$storedPubId|escape}
+				<p>{$pubIdPlugin->getPubId($pubObject, true)|escape}</p>
+				{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
+				{translate key="plugins.pubIds.doi.editor.doiNotYetGenerated" pubObjectType=$translatedObjectType}<br />
 			{/if}
-		{else}
-			{$pubIdPlugin->getPubId($pubObject, true)|escape} <br />
 			<br />
-			{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
-			{translate key="plugins.pubIds.doi.editor.doiNotYetGenerated" pubObjectType=$translatedObjectType}
 		{/if}
-		<br />
+
+		{if empty($storedPubId)}
+			<input type="checkbox" name="excludeDoi" id="excludeDoi" value="1"{if $excludeDoi} checked="checked"{/if} />
+			{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
+			{translate key="plugins.pubIds.doi.editor.excludePubObject" pubObjectType=$translatedObjectType}<br />
+		{/if}
+
+		{if $pubObjectType == 'Issue'}
+			{assign var=enableArticleDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableArticleDoi")}
+			{assign var=enableGalleyDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableGalleyDoi")}
+			{assign var=enableSuppFileDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableSuppFileDoi")}
+			{if $enableArticleDoi || $enableGalleyDoi || $enableSuppFileDoi}
+				<br />
+				<span class="instruct">{translate key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description"}</span><br/>
+				<input type="submit" name="excludeIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi"}" class="action" /><br />
+			{/if}
+		{/if}
+
 	</div>
 	<div class="separator"> </div>
 {/if}

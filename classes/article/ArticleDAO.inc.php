@@ -759,6 +759,25 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
+	 * Delete the public ID of an article.
+	 * @param $articleId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deletePubId($articleId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM article_settings WHERE setting_name = ? AND article_id = ?',
+			array(
+				$settingName,
+				(int)$articleId
+			)
+		);
+		$this->flushCache();
+	}
+
+	/**
 	 * Get the ID of the last inserted article.
 	 * @return int
 	 */

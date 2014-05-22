@@ -66,6 +66,8 @@ class PubIdPluginHelper {
 		if (is_array($pubIdPlugins)) {
 			foreach ($pubIdPlugins as $pubIdPlugin) {
 				$form->readUserVars($pubIdPlugin->getFormFieldNames());
+				$clearFormFieldName = 'clear_' . $pubIdPlugin->getPubIdType();
+				$form->readUserVars(array($clearFormFieldName));
 			}
 		}
 	}
@@ -86,7 +88,25 @@ class PubIdPluginHelper {
 					$fieldNames = $pubIdPlugin->getFormFieldNames();
 					foreach ($fieldNames as $fieldName) {
 						$data = $form->getData($fieldName);
+						$excludeFormFieldName = $pubIdPlugin->getExcludeFormFieldName();
+						// if the exclude checkbox is unselected
+						if ($fieldName == $excludeFormFieldName && !isset($data))  {
+							$data = 0;
+						}
 						$pubObject->setData($fieldName, $data);
+					}
+				} else {
+					$clearFormFieldName = 'clear_' . $pubIdPlugin->getPubIdType();
+					if ($form->getData($clearFormFieldName)) {
+						// clear the pubId:
+						// delte the pubId from the DB
+						$pubObjectType = $pubIdPlugin->getPubObjectType($pubObject);
+						$dao = $pubIdPlugin->getDAO($pubObjectType);
+						$dao->deletePubId($pubObject->getId(), $pubIdPlugin->getPubIdType());
+						// set the object setting/data 'pub-id::...' to null, in order
+						// not to be consideren in the DB object update later in the form
+						$settingName = 'pub-id::'.$pubIdPlugin->getPubIdType();
+						$pubObject->setData($settingName, null);
 					}
 				}
 			}
