@@ -57,7 +57,6 @@ class DataverseSelectForm extends Form {
 				}
 			}
 		}
-		/** @fixme add notice to check connection settings if no Dataverses found */
 		$this->setData('dataverses', $dataverses);
 		
 		$dataverseUri = $this->_plugin->getSetting($this->_journalId, 'dvUri');

@@ -98,7 +98,6 @@ class DataverseAuthForm extends Form {
 						$this->getData('password'),
 						'' // on behalf of
 					);
-		/** @todo modify swordappservicedocument.php to provide better error messages */
 		return (isset($sd) && $sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK);
 	}
 

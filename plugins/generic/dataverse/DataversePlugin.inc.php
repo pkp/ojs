@@ -436,8 +436,6 @@ class DataversePlugin extends GenericPlugin {
 		
 		// Update & notify
 		$study =& $this->updateStudy($form->article, $study);
-		
-		/** @fixme clean up study create, update & move notifications. */
 		$user =& Request::getUser();
 		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
@@ -618,7 +616,6 @@ class DataversePlugin extends GenericPlugin {
 			case 'none':
 				// Treat uploaded file as supplementary. If previously marked for deposit, unmark it.
 				if (isset($dvFile)) {
-					/** @todo warn user file will be removed from Dataverse */
 					$dvFileDao->deleteDataverseFile($dvFile);
 				}
 				break;
@@ -710,7 +707,6 @@ class DataversePlugin extends GenericPlugin {
 				// If, at this point, there is no file id, there is nothing to deposit
 				if (!$form->suppFile->getFileId()) return false;
 				
-				/** @fixme clean up study create, update & move notifications. */
 				$user =& Request::getUser();
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
@@ -829,7 +825,6 @@ class DataversePlugin extends GenericPlugin {
 				
 				import('classes.notification.NotificationManager');
 				$notificationManager = new NotificationManager();
-				/** @fixme clean up study create, update & move notifications. */
 				$notificationManager->createTrivialNotification($user->getId(), isset($study) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED : NOTIFICATION_TYPE_ERROR);
 			}
 		}
@@ -1051,7 +1046,6 @@ class DataversePlugin extends GenericPlugin {
 		for ($i=0; $i<sizeof($dvFiles); $i++) {
 			$dvFile =& $dvFiles[$i];
 			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $article->getId());
-			/** @fixme add path & original filename, not the object */
 			$dvFileIndex[str_replace(' ', '_', $suppFile->getOriginalFileName())] =& $dvFile;			 
 			$packager->addFile($suppFile);
 		}
@@ -1250,7 +1244,7 @@ class DataversePlugin extends GenericPlugin {
 				break;
 			}
 		}
-		/** @fixme what if we can't relate the file to a statement entry? */		 
+
 		if (!$dvFile->getContentSourceUri()) return false;
 		
 		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
@@ -1278,7 +1272,6 @@ class DataversePlugin extends GenericPlugin {
 				$this->getSetting($journal->getId(), 'password'), 
 				''); // on behalf of
 
-		/** @fixme warn when we expect but don't receive a 200 response */
 		if ($depositReciept->sac_status != DATAVERSE_PLUGIN_HTTP_STATUS_OK) return false;
 					
 		$depositReceiptXml = @new SimpleXMLElement($depositReciept->sac_xml);
@@ -1340,7 +1333,6 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Delete draft study or deaccession released study.
-	 * @fixme iff deleting a draft of a previously-released study, update citation.
 	 * @param DataverseStudy $study
 	 * @return boolean Study deleted
 	 */

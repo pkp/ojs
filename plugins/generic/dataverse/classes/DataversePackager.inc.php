@@ -42,14 +42,10 @@ class DataversePackager extends PackagerAtomTwoStep {
 	 */
 	function DataversePackager() {
 		// Create temporary directory for Atom entry & deposit files
-		/** @fixme cumbersome but need separate args for parent constructor */
 		$this->_outPath = tempnam('/tmp', 'dataverse');
 		unlink($this->_outPath);
 		mkdir($this->_outPath);
-		mkdir($this->_outPath .'/'. $this->_fileDir);		 
-		
-		/** @fixme no attribute to name Atom XML file written to outPath/files */
-		/** @fixme last argument in constructor is not actually used */
+		mkdir($this->_outPath .'/'. $this->_fileDir);		 		
 		parent::__construct($this->_outPath, $this->_fileDir, $this->_outPath, '');
 	}
 
@@ -87,7 +83,6 @@ class DataversePackager extends PackagerAtomTwoStep {
 	 * @return string
 	 */
 	function getAtomEntryFilePath() {
-		/** @fixme Atom entry file name hard-coded in packager_atom_twostep.php */
 		return $this->_outPath .'/'. $this->_fileDir .'/'. $this->_atomEntryFileName;
 	}	 
 
