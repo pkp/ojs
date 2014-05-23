@@ -238,7 +238,7 @@ session_check_ip = On
 ; The encryption (hashing) algorithm to use for encrypting user passwords
 ; Valid values are: md5, sha1
 ; Note that sha1 requires PHP >= 4.3.0
-encryption = md5
+encryption = sha1
 
 ; Allowed HTML tags for fields that permit restricted HTML.
 ; Use e.g. "img[src,alt],p" to allow "src" and "alt" attributes to the "img"
