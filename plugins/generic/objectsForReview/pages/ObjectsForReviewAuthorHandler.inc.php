@@ -19,6 +19,8 @@ class ObjectsForReviewAuthorHandler extends Handler {
 
 	/**
 	 * Display objects for review author listing page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function objectsForReview($args, &$request) {
 		$journal =& $request->getJournal();
@@ -80,6 +82,8 @@ class ObjectsForReviewAuthorHandler extends Handler {
 
 	/**
 	 * Author requests an object for review.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function requestObjectForReview($args, &$request) {
 		$journal =& $request->getJournal();
@@ -128,6 +132,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 
 	/**
 	 * Ensure that we have a journal, plugin is enabled, and user is author.
+	 * @see PKPHandler::authorize()
 	 */
 	function authorize(&$request, &$args, $roleAssignments) {
 		$journal =& $request->getJournal();

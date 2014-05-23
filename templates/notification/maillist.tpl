@@ -41,7 +41,14 @@
 		<td class="label" width="5%">{fieldLabel name="confirmEmail" key="user.confirmEmail"}</td>
 		<td class="value" width="45%"><input type="text" id="confirmEmail" name="confirmEmail" size="30" maxlength="90" class="textField" /></td>
 	</tr>
-	{if $captchaEnabled}
+	{if $captchaEnabled && $reCaptchaHtml}
+	<tr>
+		<td class="label" valign="top">{fieldLabel name="recaptcha_challenge_field" required="true" key="common.captchaField"}</td>
+		<td class="value">
+			{$reCaptchaHtml}
+		</td>
+	</tr>
+	{elseif $captchaEnabled}
 	<tr>
 		<td class="label" valign="top">{fieldLabel name="captcha" required="true" key="common.captchaField"}</td>
 		<td class="value">

@@ -25,6 +25,7 @@ class ReviewObjectTypeForm extends Form {
 
 	/**
 	 * Constructor.
+	 * @param $parentPluginName sting
 	 * @param $typeId int
 	 */
 	function ReviewObjectTypeForm($parentPluginName, $typeId = null) {
@@ -49,8 +50,7 @@ class ReviewObjectTypeForm extends Form {
 	}
 
 	/**
-	 * Get the names of fields for which localized data is allowed.
-	 * @return array
+	 * @see Form::getLocaleFieldNames()
 	 */
 	function getLocaleFieldNames() {
 		$reviewObjectTypeDao =& DAORegistry::getDAO('ReviewObjectTypeDAO');
@@ -58,7 +58,7 @@ class ReviewObjectTypeForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @see Form::display()
 	 */
 	function display($request) {
 		$templateMgr =& TemplateManager::getManager($request);
@@ -67,7 +67,7 @@ class ReviewObjectTypeForm extends Form {
 	}
 
 	/**
-	 * Initialize form data from current review object type.
+	 * @see Form::initData()
 	 */
 	function initData() {
 		if ($this->reviewObjectType != null) {
@@ -80,14 +80,14 @@ class ReviewObjectTypeForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(array('name', 'description', 'possibleOptions'));
 	}
 
 	/**
-	 * Save review form.
+	 * @see Form::execute()
 	 */
 	function execute() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);

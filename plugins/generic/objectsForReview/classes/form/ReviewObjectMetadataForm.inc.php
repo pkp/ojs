@@ -29,6 +29,7 @@ class ReviewObjectMetadataForm extends Form {
 
 	/**
 	 * Constructor.
+	 * @param $parentPluginName sting
 	 * @param $reviewObjectTypeId int
 	 * @param $metadataId int (optional)
 	 */
@@ -56,8 +57,7 @@ class ReviewObjectMetadataForm extends Form {
 	}
 
 	/**
-	 * Get the names of fields for which localized data is allowed.
-	 * @return array
+	 * @see Form::getLocaleFieldNames()
 	 */
 	function getLocaleFieldNames() {
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
@@ -65,7 +65,7 @@ class ReviewObjectMetadataForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @see Form::display()
 	 */
 	function display($request) {
 		$templateMgr =& TemplateManager::getManager($request);
@@ -82,7 +82,7 @@ class ReviewObjectMetadataForm extends Form {
 	}
 
 	/**
-	 * Initialize form data from current review metadata.
+	 * @see Form::initData()
 	 */
 	function initData() {
 		if ($this->reviewObjectMetadata != null) {
@@ -98,14 +98,14 @@ class ReviewObjectMetadataForm extends Form {
 	}
 
 	/**
-	 * Assign form data to user-submitted data.
+	 * @see Form::readInputData()
 	 */
 	function readInputData() {
 		$this->readUserVars(array('name', 'required', 'display', 'metadataType', 'possibleOptions'));
 	}
 
 	/**
-	 * Save review object metadata.
+	 * @see Form::execute()
 	 */
 	function execute() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);

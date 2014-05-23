@@ -1,3 +1,327 @@
+commit fe4ed9c47ac4b371a83ce3212618b1c04b57eaea
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Fri May 16 15:23:32 2014 -0700
+
+    Copyright notice tweaks
+
+commit f563b4974cbe9893d4759fc1aa08d5b0247c7494
+Merge: 4015b5c 57bf126
+Author: Jason Nugent <jason.nugent@gmail.com>
+Date:   Fri May 16 14:33:02 2014 -0300
+
+    Merge pull request #192 from ulsdevteam/notification-recaptcha-2_4
+    
+    *8757* Update lib/pkp submodule for latest RECAPTCHA for Notifications.
+
+commit 4015b5c163eef6a408dfc278b16ac5ebb367a047
+Merge: b5d7425 d1fad47
+Author: Jason Nugent <jason.nugent@gmail.com>
+Date:   Fri May 16 10:16:23 2014 -0300
+
+    Merge pull request #190 from ulsdevteam/notification-recaptcha-2_4
+    
+    *8757* Add RECAPTCHA to Notification subscription request
+
+commit 57bf1264e7bb5df6fa30d592af7620f58ee578b4
+Author: Clinton Graham <ctgraham@pitt.edu>
+Date:   Fri May 16 09:06:27 2014 -0400
+
+    Update lib/pkp submodule for latest RECAPTCHA for Notifications.
+
+commit d1fad47102a6d15e26eb287f022197dd13af39a9
+Author: Clinton Graham <ctgraham@pitt.edu>
+Date:   Wed May 14 12:55:26 2014 -0400
+
+    Add recaptcha support for Notification Mailing List
+    
+    Conflicts:
+    	lib/pkp
+
+commit b5d74258f5c6079a3d118a8b66dd3f82c241ff23
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Thu May 15 08:35:06 2014 -0700
+
+    *8756* Fix affiliations in articles report
+
+commit e0f18221471347b0b51fb667dcab3705a672b2e9
+Merge: 2e20a64 c7c47a5
+Author: Jason Nugent <jason.nugent@gmail.com>
+Date:   Thu May 15 11:19:24 2014 -0300
+
+    Merge pull request #189 from beghelli/8754-fix
+    
+    8754 fix review reminder task
+
+commit c7c47a5a1019f83b2b61861c57f0f2f87d129cfa
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Thu May 15 10:07:52 2014 -0300
+
+    *8754* Avoid non existing articles
+
+commit 2e20a648e92c8d4b70b658176d8c87e5d483084c
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Thu May 15 10:10:14 2014 -0300
+
+    Submodule changes track
+
+commit 45b805af61558c6ce90a91de1474144bd9aa350a
+Merge: 5fc6708 544e43e
+Author: Jason Nugent <jason.nugent@gmail.com>
+Date:   Tue May 13 19:54:39 2014 -0300
+
+    Merge pull request #186 from beghelli/ojs-stable-2_4
+    
+    Retrieving URL components bug fix
+
+commit 544e43efbedf8703b9554ff2a73b424ebedccdb0
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 13 11:53:16 2014 -0300
+
+    Submodule changes track
+
+commit 904d33e6469ea0aca971b4e591d8b7495327a05e
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 13 11:16:14 2014 -0300
+
+    *8748* Use core function to remove base url, check if it was succesfull, if not, reject file
+
+commit fb6869f0eda458af6bb40e9d4ce42096460ec0f6
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 13 11:12:00 2014 -0300
+
+    *8750* Make sure error notifications will be sent to managers
+
+commit 5fc67084b267bdde74580af1a7924194f43152a5
+Merge: cca490b c205373
+Author: Jason Nugent <jason.nugent@gmail.com>
+Date:   Fri May 9 10:54:06 2014 -0300
+
+    Merge pull request #183 from asmecher/8742-fix
+    
+    *8742* Check article object before calling
+
+commit cca490bbc5f4498574729094536f24491441cc5a
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Thu May 8 14:42:32 2014 -0700
+
+    *8743* Remove old article_..._log tables
+
+commit c20537337915935d9b73d95f650c59587d97bddd
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Thu May 8 14:03:45 2014 -0700
+
+    *8742* Check presence of article object
+
+commit 163939f280297e95202e8b11d345370c6b254c64
+Merge: 7e14e8b 216fc1f
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Thu May 8 10:10:35 2014 -0700
+
+    Merge pull request #182 from bozana/ofr
+    
+    *8741* Add Objects For Review Plug-In
+
+commit 216fc1fcc79998e56c3832ff74aab5332706db82
+Author: bozana <bozana.bokan@fu-berlin.de>
+Date:   Thu May 8 18:39:27 2014 +0200
+
+    function documentation beautification
+
+commit 9f3adc94bc8c66d22a663ca6f76a764a664f3db3
+Author: bozana <bozana.bokan@fu-berlin.de>
+Date:   Wed May 7 17:17:34 2014 +0200
+
+    ofr bug fixes
+
+commit 23ae36670b71a237ae83dd219849b7d20782a925
+Author: bozana <bozana.bokan@fu-berlin.de>
+Date:   Wed May 7 13:36:20 2014 +0200
+
+    changes according to alec comments
+
+commit e4ed6b9f45ae375fd33da01e52fee403762fdbfe
+Author: bozana <bozana.bokan@fu-berlin.de>
+Date:   Wed Mar 12 00:35:53 2014 +0100
+
+    objects for review plugin
+
+commit 7e14e8b58f6be72a944806cb8659b93e1a1a6392
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Tue May 6 18:58:23 2014 -0700
+
+    Patch filename typo
+
+commit 2f3b29f256ab22affd24a133b7e8f111869113b3
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Tue May 6 17:23:20 2014 -0700
+
+    Final final commit
+
+commit 05fd81aa07dc23f910d62ec1acc8f74985eea58a
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Tue May 6 17:21:43 2014 -0700
+
+    Final commit
+
+commit 9e891e8968a5a91b245d536c74c5fee1b8a17e27
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 6 20:17:28 2014 -0300
+
+    Submodule changes track
+
+commit b592b27851e05e2f0b85e3b935b13b2f11fb211f
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 6 20:16:09 2014 -0300
+
+    *8739* Make sure we handle only one metric type
+
+commit c0062ad9e37bbd88c829aef338e1f93d9f72c1c7
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 6 20:13:10 2014 -0300
+
+    *8738* Fixed fbv usage
+
+commit 9d1204757acc93c300764f58b3f8d80a9dfcc794
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 6 19:04:45 2014 -0300
+
+    *8649* Add link to the comment that documents this behavior
+
+commit 160d249f46ac9389912ea80c40fb1264f97808e7
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 6 18:57:25 2014 -0300
+
+    *8737* Check for updated rows to better handle race condition
+
+commit 56804b8ebb0b46ca22087ee1f21dee606f107062
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Mon Apr 14 14:08:44 2014 -0300
+
+    Submodule changes track
+
+commit 9864b9aceae8e5aee84342fce409c5fde4343b09
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 6 16:43:10 2014 -0300
+
+    *8688* Remove whitespace from lines and make sure we ignore empty ones
+
+commit 3cb4c55fcc662df0b6e3f8669e52aa75f9527e22
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 6 16:41:29 2014 -0300
+
+    *8735* Use the config setting to know about path info, drop the guessing code that wasnt working correctly for all cases
+
+commit f27460366e3af537c6eee2bdf12d191afa547e52
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Mon Apr 14 14:07:26 2014 -0300
+
+    *8701* Fixed rules to ignore some requests
+
+commit 809730fdf2c7aaa55b6a69dae0c9546a4ce34e64
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Mon Apr 14 14:01:05 2014 -0300
+
+    *8698* Handle requests that have no page
+
+commit 16ced6a28266702c0b723648ea36dd9576e56498
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Mon Apr 14 13:58:16 2014 -0300
+
+    *8700* Add supp file case when getting file type, move code to internal method
+
+commit 38f053a0fa8396d2b74206f2756ddca6d813181b
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Mon Apr 14 13:42:39 2014 -0300
+
+    *8699* Fixed get submission id call
+
+commit 149e67aff3c389b182a7669ed55198939c31365b
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Wed Apr 9 16:22:12 2014 -0300
+
+    *8678* Require locale component before usage possible call
+
+commit a40df5b680dc67efd29fbee72272cfe915f435fa
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Wed Apr 9 15:57:46 2014 -0300
+
+    *8690* Make it possible to filter files by their names
+
+commit 06bdb179da334fcae56475bf19bc80e788c2a838
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Wed Apr 9 15:45:12 2014 -0300
+
+    *8521* Remove unnecessary code
+
+commit 82032b9812bfccbc7c96c432053e3ffe21242f23
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Wed Apr 9 15:38:03 2014 -0300
+
+    *8688* Ignore lines with starting with #, so we can comment on our testing log files
+
+commit c982aba7eea2c6e142801b3b2b9da68852e0b659
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Wed Apr 9 15:36:39 2014 -0300
+
+    *8687* Removed frequency from scheduled tasks
+
+commit b5b26967cb7b63a11052e346e46c339cb69f4868
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Wed Apr 9 15:24:49 2014 -0300
+
+    *8686* Introduced hook for article supplementary file download operation
+
+commit 17db10969c0343b47b5f3c466ab2375579e54bd5
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Thu Mar 27 02:33:11 2014 -0300
+
+    *8664* Fix stats processing for context base url config cases
+
+commit 197520e054b64aa9b947d17ad8b1adacd5498dfc
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Fri Apr 25 07:15:02 2014 -0300
+
+    *8649* Use shutdown function to execute tasks
+
+commit 0f9b5948ca810558e092d5aec32464bf442e68f2
+Author: jmacgreg <jmacgreg@gmail.com>
+Date:   Tue May 6 15:26:05 2014 -0700
+
+    *8648* *8683* one further revert to fix Crossref plugin
+
+commit 12d566a871f51904592b1934ce3c9e3b2034a16e
+Author: jmacgreg <jmacgreg@gmail.com>
+Date:   Tue May 6 15:00:04 2014 -0700
+
+    *8683* one further revert to fix article publishing
+
+commit dac2767ebc6090d310e7ea8a5fb08a0733d1edb3
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Tue May 6 14:29:37 2014 -0700
+
+    Correct bugzilla ID
+
+commit 5521deca671a9d85d6d420a0f639ae14f47e9d25
+Merge: d43e0c9 656d72e
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Tue May 6 14:28:30 2014 -0700
+
+    Merge pull request #179 from mtub/20140506
+    
+    fixed bugzilla reference
+
+commit 656d72ed87b9ff4d872ca784c8316e6f56128838
+Author: mtub <marco.tullney@fu-berlin.de>
+Date:   Tue May 6 23:14:46 2014 +0200
+
+    fixed bugzilla reference
+
+commit d43e0c988b52d26780286bdb9d77ab9b725a0d3a
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Tue May 6 13:29:10 2014 -0700
+
+    Release prep
+
 commit a9a7aefe14528eb2059e1d38a1c88aa62c80aabe
 Author: Alec Smecher <alec@smecher.bc.ca>
 Date:   Tue May 6 13:27:19 2014 -0700
@@ -1701,6 +2025,85 @@ Author: Pavel Pisklakov <pavelpisklakov@Pavels-MacBook-Pro.local>
 Date:   Fri Nov 29 00:30:57 2013 +0600
 
     update lib/pkp commit
+commit 5c4bfad78e04227e07428d40b3a5e8783c521aa6
+Author: Alec Smecher <alec@smecher.bc.ca>
+Date:   Fri May 16 15:22:43 2014 -0700
+
+    Copyright notice tweaks
+
+commit b1da1a464359279736ccb7a57d3214f1a7dc26e6
+Merge: 766a208 dd654fb
+Author: Jason Nugent <jason.nugent@gmail.com>
+Date:   Fri May 16 10:06:19 2014 -0300
+
+    Merge pull request #93 from ulsdevteam/uls-install
+    
+    *8757* Add RECAPTCHA to Notification subscription request
+
+commit dd654fb4b8b8aea87b82c266bf7297b2a4d71a42
+Author: Clinton Graham <ctgraham@pitt.edu>
+Date:   Fri May 16 08:41:42 2014 -0400
+
+    Fix inline doc for RECAPTCHA for Notification subscription request.
+
+commit 766a208d6232f51867872070276c8e9c2537a7a7
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Thu May 15 09:40:33 2014 -0300
+
+    *8748* Fixed identation and add reference required comment
+
+commit 8909d65dd3b1153d8c79aa15cef2ebf9c153976b
+Merge: 061238b 341fa37
+Author: Clinton Graham <ctgraham@pitt.edu>
+Date:   Wed May 14 12:52:49 2014 -0400
+
+    Merge branch 'ojs-stable-2_4' of ssh://github.com/pkp/pkp-lib into uls-install
+
+commit 061238b938ef3dcd02a5987977d23db26573c558
+Author: Clinton Graham <ctgraham@pitt.edu>
+Date:   Wed May 14 11:55:42 2014 -0400
+
+    Add recaptcha support for Notification Mailing List
+
+commit 341fa37564cfb55af61239e88abe91874e513d66
+Merge: 9139001 c4ad62a
+Author: Jason Nugent <jason.nugent@gmail.com>
+Date:   Tue May 13 19:54:51 2014 -0300
+
+    Merge pull request #91 from beghelli/ojs-stable-2_4
+    
+    Retrieving URL components bug fix
+
+commit c4ad62a7fe0b3e25d659def125dc41acec78d111
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 13 11:18:21 2014 -0300
+
+    *8750* Make sure each file will receive an empty error message variable, send notification when returning to stage
+
+commit 5f21261636336c911042483975498f20d705c3e1
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Mon May 12 22:56:09 2014 -0300
+
+    *8748* Stop trying to remove base url by default, set remove base url method to public, fixed edge cases for log files urls, create tests
+
+commit 91390017ea49e9e48d6ef02eaf476ba40f675af4
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Tue May 6 19:09:14 2014 -0300
+
+    *8737* Return number of affected rows
+
+commit a657ea1d7ed20f41a942fb69dbf1289c6c01773c
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Mon Apr 14 16:08:33 2014 -0300
+
+    *8688* Introduced helper to backup config file
+
+commit 51e7b7c371848250b725ffd20e1c0b128ce47a25
+Author: Bruno Beghelli <bruno.beghelli@gmail.com>
+Date:   Sat Mar 29 02:03:28 2014 -0300
+
+    *8664* Prepare core to handle with URL override case
+
 commit 01389d27130a653dceb32053bd7aededc37c986f
 Author: Alec Smecher <alec@smecher.bc.ca>
 Date:   Tue May 6 09:46:51 2014 -0700

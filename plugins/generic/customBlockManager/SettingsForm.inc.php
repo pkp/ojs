@@ -3,8 +3,9 @@
 /**
  * @file plugins/generic/customBlockManager/SettingsForm.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky. For full terms see 13 Simon Fraser University Library
- * Copyright (c) 2003-2013 John Willinsky. For full terms see the file docs/COPYING.
+ * Copyright (c) 2003-2013 Simon Fraser University Library
+ * Copyright (c) 2003-2013 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SettingsForm
  *

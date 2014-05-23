@@ -1121,8 +1121,9 @@ class Upgrade extends Installer {
 				$assocId = $row['article_id'];
 			};
 
-			$day = date('Ymd', strtotime($row['date']));
-			$tempStatsDao->insert($assocType, $assocId, $day, $countryId, $region, $cityName, $fileType, $loadId);
+			$recordTimestamp = strtotime($row['date']);
+			$day = date('Ymd', $recordTimestamp);
+			$tempStatsDao->insert($assocType, $assocId, $day, $recordTimestamp, $countryId, $region, $cityName, $fileType, $loadId);
 		}
 
 		switch (Config::getVar('database', 'driver')) {
@@ -1131,7 +1132,7 @@ class Upgrade extends Installer {
 				$monthSql = 'extract(YEAR_MONTH from tr.day)';
 				break;
 			case 'postgres':
-				$monthSql = 'to_char(to_date(tr.day, "YYYYMMDD"), "YYYYMM")';
+				$monthSql = 'to_char(to_date(to_char(tr.day, \'99999999\'), \'YYYYMMDD\'), \'YYYYMM\')';
 				break;
 		}
 

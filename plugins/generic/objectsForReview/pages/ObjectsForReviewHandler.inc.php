@@ -19,6 +19,8 @@ class ObjectsForReviewHandler extends Handler {
 
 	/**
 	 * Display objects for review public index page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function index($args, &$request) {
 		$journal =& $request->getJournal();
@@ -117,6 +119,8 @@ class ObjectsForReviewHandler extends Handler {
 
 	/**
 	 * Public view object for review details.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function viewObjectForReview($args, &$request) {
 		// Ensure the args (object ID) exists
@@ -175,6 +179,7 @@ class ObjectsForReviewHandler extends Handler {
 			$templateMgr->assign('multipleOptionsTypes', ReviewObjectMetadata::getMultipleOptionsTypes());
 			$templateMgr->assign('locale', AppLocale::getLocale());
 			$templateMgr->assign('ofrListing', false);
+			$templateMgr->assign('ofrTemplatePath', $ofrPlugin->getTemplatePath());
 			$templateMgr->display($ofrPlugin->getTemplatePath() . 'objectForReview.tpl');
 
 		} else {
@@ -183,7 +188,9 @@ class ObjectsForReviewHandler extends Handler {
 	}
 
 	/**
-	 * Ensure that we have a selected journal, the plugin is enabled and in full mode
+	 * Ensure that we have a selected journal, the plugin is enabled,
+	 *  in full mode and the option 'displayListing' is selected
+	 * @see PKPHandler::authorize()
 	 */
 	function authorize(&$request, &$args, $roleAssignments) {
 		$journal =& $request->getJournal();
@@ -197,6 +204,8 @@ class ObjectsForReviewHandler extends Handler {
 
 		$mode = $ofrPlugin->getSetting($journal->getId(), 'mode');
 		if ($mode != OFR_MODE_FULL) return false;
+
+		if (!$ofrPlugin->getSetting($journal->getId(), 'displayListing')) return false;
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}

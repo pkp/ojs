@@ -16,227 +16,450 @@
 <data>
 	<!-- Bug #3219: Public issue ID indexing fix -->
 	<sql>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Alexandria( |\\+)prototype( |\\+)project';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'AllenTrack';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Arachmo';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Brutus\\/AET';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'China Local Browse 2\\.6';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Code Sample Web Client';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ContentSmartz';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'DSurf';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'DataCha0s\\/2\\.0';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Demo Bot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'EmailSiphon';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'EmailWolf';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'FDM( |\\+)1';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Fetch( |\\+)API( |\\+)Request';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'GetRight';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Goldfire( |\\+)Server';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Googlebot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'HTTrack';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'LOCKSS';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'LWP\\:\\:Simple';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'MSNBot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Microsoft( |\\+)URL( |\\+)Control';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Milbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'MuscatFerre';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'NABOT';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'NaverBot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Offline( |\\+)Navigator';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'OurBrowser';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Python\\-urllib';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Readpaper';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Strider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'T\\-H\\-U\\-N\\-D\\-E\\-R\\-S\\-T\\-O\\-N\\-E';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Teleport( |\\+)Pro';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Teoma';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Wanadoo';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Web( |\\+)Downloader';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebCloner';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebCopier';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebReaper';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebStripper';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebZIP';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Webinator';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Webmetrics';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Wget';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'Xenu( |\\+)Link( |\\+)Sleuth';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP '[+:,\\.\\;\\/\\\\-]bot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP '[^a]fish';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP '^voyager\\/';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'acme\\.spider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'alexa';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'almaden';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'appie';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'architext';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'archive\\.org_bot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'arks';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'asterias';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'atomz';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'autoemailspider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'awbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'baiduspider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'biadu';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'biglotron';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bjaaland';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'blaiz\\-bee';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bloglines';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'blogpulse';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'boitho\\.com\\-dc';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bookmark\\-manager';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bot[+:,\\.\\;\\/\\\\-]';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bspider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'bwh3_user_agent';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'celestial';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'cfnetwork|checkbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'combine';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'commons\\-httpclient';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'contentmatch';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'core';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'crawl';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'crawler';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'cursor';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'custo';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'daumoa';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'docomo';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'dtSearchSpider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'dumbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'easydl';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'exabot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'fast-webcrawler';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'favorg';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'feedburner';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'feedfetcher\\-google';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ferret';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'findlinks';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'gaisbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'geturl';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'gigabot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'girafabot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'gnodspider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'google';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'grub';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'gulliver';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'harvest';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'heritrix';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'hl_ftien_spider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'holmes';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'htdig';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'htmlparser';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'httpget\\-5\\.2\\.2';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'httpget\\?5\\.2\\.2';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'httrack';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'iSiloX';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ia_archiver';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ichiro';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'iktomi';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ilse';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'internetseer';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'intute';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'java';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'java\\/';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'jeeves';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'jobo';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'kyluka';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'larbin';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'libwww';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'libwww\\-perl';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lilina';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkcheck';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkchecker';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkscan';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkwalker';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'livejournal\\.com';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lmspider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-request';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-tivial';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-trivial';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'lycos[_+]';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mail.ru';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mediapartners\\-google';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'megite';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'milbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mimas';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mj12bot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mnogosearch';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'moget';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'mojeekbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'momspider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'motor';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'msiecrawler';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'msnbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'myweb';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'nagios';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'netcraft';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'netluchs';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ng\\/2\\.';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'no_user_agent';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'nomad';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'nutch';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ocelli';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'onetszukaj';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'perman';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'pioneer';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'playmusic\\.com';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'playstarmusic\\.com';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'powermarks';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'psbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'python';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'qihoobot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'rambler';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'redalert|robozilla';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'robot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'robots';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'rss';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'scan4mail';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'scientificcommons';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'scirus';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'scooter';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'seekbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'seznambot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'shoutcast';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'slurp';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'sogou';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'speedy';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'spider';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'spiderman';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'spiderview';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'sunrise';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'superbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'surveybot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'tailrank';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'technoratibot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'titan';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'turnitinbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'twiceler';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ucsd';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'ultraseek';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'urlaliasbuilder';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'urllib';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'virus[_+]detector';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'voila';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'w3c\\-checklink';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'webcollage';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'weblayers';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'webmirror';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'webreaper';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'wordpress';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'worm';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'xenu';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'y!j';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yacy';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoo';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoo\\-mmcrawler';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoofeedseeker';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahooseeker';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yandex';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'yodaobot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'zealbot';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'zeus';</query>
-		<query>DELETE FROM timed_views_log WHERE user_agent REGEXP 'zyborg';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Alexandria( |\\+)prototype( |\\+)project';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'AllenTrack';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Arachmo';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Brutus\\/AET';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'China Local Browse 2\\.6';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Code Sample Web Client';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ContentSmartz';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'DSurf';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'DataCha0s\\/2\\.0';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Demo Bot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'EmailSiphon';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'EmailWolf';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'FDM( |\\+)1';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Fetch( |\\+)API( |\\+)Request';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'GetRight';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Goldfire( |\\+)Server';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Googlebot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'HTTrack';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'LOCKSS';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'LWP\\:\\:Simple';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'MSNBot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Microsoft( |\\+)URL( |\\+)Control';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Milbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'MuscatFerre';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'NABOT';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'NaverBot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Offline( |\\+)Navigator';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'OurBrowser';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Python\\-urllib';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Readpaper';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Strider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'T\\-H\\-U\\-N\\-D\\-E\\-R\\-S\\-T\\-O\\-N\\-E';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Teleport( |\\+)Pro';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Teoma';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Wanadoo';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Web( |\\+)Downloader';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebCloner';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebCopier';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebReaper';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebStripper';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'WebZIP';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Webinator';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Webmetrics';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Wget';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'Xenu( |\\+)Link( |\\+)Sleuth';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP '[+:,\\.\\;\\/\\\\-]bot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP '[^a]fish';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP '^voyager\\/';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'acme\\.spider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'alexa';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'almaden';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'appie';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'architext';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'archive\\.org_bot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'arks';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'asterias';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'atomz';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'autoemailspider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'awbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'baiduspider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'bbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'biadu';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'biglotron';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'bjaaland';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'blaiz\\-bee';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'bloglines';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'blogpulse';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'boitho\\.com\\-dc';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'bookmark\\-manager';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'bot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'bot[+:,\\.\\;\\/\\\\-]';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'bspider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'bwh3_user_agent';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'celestial';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'cfnetwork|checkbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'combine';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'commons\\-httpclient';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'contentmatch';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'core';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'crawl';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'crawler';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'cursor';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'custo';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'daumoa';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'docomo';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'dtSearchSpider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'dumbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'easydl';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'exabot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'fast-webcrawler';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'favorg';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'feedburner';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'feedfetcher\\-google';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ferret';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'findlinks';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'gaisbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'geturl';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'gigabot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'girafabot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'gnodspider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'google';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'grub';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'gulliver';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'harvest';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'heritrix';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'hl_ftien_spider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'holmes';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'htdig';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'htmlparser';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'httpget\\-5\\.2\\.2';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'httpget\\?5\\.2\\.2';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'httrack';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'iSiloX';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ia_archiver';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ichiro';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'iktomi';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ilse';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'internetseer';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'intute';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'java';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'java\\/';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'jeeves';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'jobo';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'kyluka';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'larbin';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'libwww';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'libwww\\-perl';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'lilina';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkcheck';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkchecker';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkscan';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'linkwalker';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'livejournal\\.com';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'lmspider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-request';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-tivial';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'lwp\\-trivial';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'lycos[_+]';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'mail.ru';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'mediapartners\\-google';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'megite';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'milbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'mimas';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'mj12bot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'mnogosearch';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'moget';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'mojeekbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'momspider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'motor';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'msiecrawler';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'msnbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'myweb';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'nagios';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'netcraft';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'netluchs';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ng\\/2\\.';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'no_user_agent';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'nomad';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'nutch';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ocelli';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'onetszukaj';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'perman';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'pioneer';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'playmusic\\.com';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'playstarmusic\\.com';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'powermarks';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'psbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'python';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'qihoobot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'rambler';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'redalert|robozilla';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'robot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'robots';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'rss';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'scan4mail';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'scientificcommons';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'scirus';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'scooter';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'seekbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'seznambot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'shoutcast';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'slurp';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'sogou';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'speedy';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'spider';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'spiderman';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'spiderview';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'sunrise';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'superbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'surveybot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'tailrank';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'technoratibot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'titan';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'turnitinbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'twiceler';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ucsd';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'ultraseek';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'urlaliasbuilder';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'urllib';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'virus[_+]detector';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'voila';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'w3c\\-checklink';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'webcollage';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'weblayers';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'webmirror';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'webreaper';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'wordpress';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'worm';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'xenu';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'y!j';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'yacy';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoo';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoo\\-mmcrawler';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahoofeedseeker';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'yahooseeker';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'yandex';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'yodaobot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'zealbot';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'zeus';</query>
+		<query driver="mysql">DELETE FROM timed_views_log WHERE user_agent REGEXP 'zyborg';</query>
+		<!-- Syntax for PostgreSQL -->
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Alexandria( |\\+)prototype( |\\+)project';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'AllenTrack';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Arachmo';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Brutus\\/AET';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'China Local Browse 2\\.6';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Code Sample Web Client';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ContentSmartz';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'DSurf';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'DataCha0s\\/2\\.0';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Demo Bot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'EmailSiphon';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'EmailWolf';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'FDM( |\\+)1';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Fetch( |\\+)API( |\\+)Request';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'GetRight';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Goldfire( |\\+)Server';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Googlebot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'HTTrack';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'LOCKSS';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'LWP\\:\\:Simple';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'MSNBot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Microsoft( |\\+)URL( |\\+)Control';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Milbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'MuscatFerre';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'NABOT';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'NaverBot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Offline( |\\+)Navigator';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'OurBrowser';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Python\\-urllib';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Readpaper';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Strider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'T\\-H\\-U\\-N\\-D\\-E\\-R\\-S\\-T\\-O\\-N\\-E';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Teleport( |\\+)Pro';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Teoma';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Wanadoo';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Web( |\\+)Downloader';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'WebCloner';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'WebCopier';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'WebReaper';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'WebStripper';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'WebZIP';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Webinator';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Webmetrics';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Wget';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'Xenu( |\\+)Link( |\\+)Sleuth';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ '[+:,\\.\\;\\/\\\\-]bot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ '[^a]fish';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ '^voyager\\/';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'acme\\.spider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'alexa';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'almaden';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'appie';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'architext';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'archive\\.org_bot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'arks';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'asterias';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'atomz';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'autoemailspider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'awbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'baiduspider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'bbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'biadu';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'biglotron';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'bjaaland';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'blaiz\\-bee';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'bloglines';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'blogpulse';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'boitho\\.com\\-dc';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'bookmark\\-manager';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'bot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'bot[+:,\\.\\;\\/\\\\-]';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'bspider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'bwh3_user_agent';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'celestial';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'cfnetwork|checkbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'combine';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'commons\\-httpclient';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'contentmatch';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'core';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'crawl';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'crawler';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'cursor';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'custo';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'daumoa';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'docomo';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'dtSearchSpider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'dumbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'easydl';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'exabot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'fast-webcrawler';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'favorg';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'feedburner';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'feedfetcher\\-google';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ferret';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'findlinks';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'gaisbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'geturl';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'gigabot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'girafabot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'gnodspider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'google';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'grub';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'gulliver';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'harvest';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'heritrix';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'hl_ftien_spider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'holmes';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'htdig';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'htmlparser';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'httpget\\-5\\.2\\.2';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'httpget\\?5\\.2\\.2';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'httrack';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'iSiloX';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ia_archiver';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ichiro';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'iktomi';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ilse';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'internetseer';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'intute';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'java';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'java\\/';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'jeeves';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'jobo';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'kyluka';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'larbin';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'libwww';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'libwww\\-perl';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'lilina';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'linkbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'linkcheck';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'linkchecker';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'linkscan';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'linkwalker';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'livejournal\\.com';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'lmspider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'lwp';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'lwp\\-request';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'lwp\\-tivial';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'lwp\\-trivial';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'lycos[_+]';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'mail.ru';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'mediapartners\\-google';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'megite';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'milbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'mimas';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'mj12bot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'mnogosearch';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'moget';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'mojeekbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'momspider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'motor';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'msiecrawler';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'msnbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'myweb';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'nagios';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'netcraft';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'netluchs';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ng\\/2\\.';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'no_user_agent';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'nomad';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'nutch';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ocelli';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'onetszukaj';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'perman';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'pioneer';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'playmusic\\.com';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'playstarmusic\\.com';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'powermarks';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'psbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'python';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'qihoobot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'rambler';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'redalert|robozilla';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'robot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'robots';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'rss';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'scan4mail';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'scientificcommons';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'scirus';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'scooter';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'seekbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'seznambot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'shoutcast';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'slurp';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'sogou';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'speedy';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'spider';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'spiderman';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'spiderview';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'sunrise';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'superbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'surveybot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'tailrank';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'technoratibot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'titan';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'turnitinbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'twiceler';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ucsd';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'ultraseek';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'urlaliasbuilder';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'urllib';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'virus[_+]detector';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'voila';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'w3c\\-checklink';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'webcollage';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'weblayers';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'webmirror';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'webreaper';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'wordpress';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'worm';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'xenu';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'y!j';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'yacy';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'yahoo';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'yahoo\\-mmcrawler';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'yahoofeedseeker';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'yahooseeker';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'yandex';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'yodaobot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'zealbot';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'zeus';</query>
+		<query driver="postgres7">DELETE FROM timed_views_log WHERE user_agent ~ 'zyborg';</query>
 	</sql>
 </data>
