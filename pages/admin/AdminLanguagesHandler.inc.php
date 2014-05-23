@@ -180,6 +180,26 @@ class AdminLanguagesHandler extends AdminHandler {
 		$request->redirect(null, null, 'languages');
 	}
 
+		/**
+	 * Reload default email templates for a locale.
+	 * @param $args array
+	 * @param $request object
+	 */
+	function reloadDefaultEmailTemplates($args, &$request) {
+		$this->validate();
+
+		$site =& $request->getSite();
+		$locale = $request->getUserVar('locale');
+
+		if (in_array($locale, $site->getInstalledLocales())) {
+			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
+			$emailTemplateDao->deleteDefaultEmailTemplatesByLocale($locale);
+			$emailTemplateDao->installEmailTemplateData($emailTemplateDao->getMainEmailTemplateDataFilename($locale));
+		}
+
+		$request->redirect(null, null, 'languages');
+	}
+	
 	/**
 	 * Helper function to remove unsupported locales from journals.
 	 * @param $request object
