@@ -17,25 +17,30 @@ import('plugins.generic.dataverse.classes.DataversePackager');
 
 require('lib/pkp/lib/swordappv2/swordappclient.php');
 
-define('DATAVERSE_PLUGIN_HTTP_STATUS_OK', 200);
-define('DATAVERSE_PLUGIN_HTTP_STATUS_CREATED', 201);
+// HTTP status codes
+define('DATAVERSE_PLUGIN_HTTP_STATUS_OK',         200);
+define('DATAVERSE_PLUGIN_HTTP_STATUS_CREATED',    201);
 define('DATAVERSE_PLUGIN_HTTP_STATUS_NO_CONTENT', 204);
+
+// Dataverse field delimiters
 define('DATAVERSE_PLUGIN_TOU_POLICY_SEPARATOR', '---');
 define('DATAVERSE_PLUGIN_SUBJECT_SEPARATOR', ';');
+
+// Default format of publication citation in dataset metadata
 define('DATAVERSE_PLUGIN_CITATION_FORMAT_APA', 'APA');
 
 // Study release options
-define('DATAVERSE_PLUGIN_RELEASE_ARTICLE_ACCEPTED',	 0x01);
+define('DATAVERSE_PLUGIN_RELEASE_ARTICLE_ACCEPTED',  0x01);
 define('DATAVERSE_PLUGIN_RELEASE_ARTICLE_PUBLISHED', 0x02);
 
 // Notification types
-define('NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001001);
-define('NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001002);
-define('NOTIFICATION_TYPE_DATAVERSE_FILE_ADDED',			NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001003);
-define('NOTIFICATION_TYPE_DATAVERSE_FILE_DELETED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001004);
-define('NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001005);
-define('NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED',	NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001006);
-define('NOTIFICATION_TYPE_DATAVERSE_UNRELEASED',			NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001007);
+define('NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED',  NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001001);
+define('NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED',  NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001002);
+define('NOTIFICATION_TYPE_DATAVERSE_FILE_ADDED',     NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001003);
+define('NOTIFICATION_TYPE_DATAVERSE_FILE_DELETED',   NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001004);
+define('NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED',  NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001005);
+define('NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED', NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001006);
+define('NOTIFICATION_TYPE_DATAVERSE_UNRELEASED',     NOTIFICATION_TYPE_PLUGIN_BASE + 0x0001007);
 
 class DataversePlugin extends GenericPlugin {
 
@@ -159,8 +164,8 @@ class DataversePlugin extends GenericPlugin {
 	}
 
 	/**
-	* @see GenericPlugin::manage()
-	*/
+	 * @see GenericPlugin::manage()
+	 */
 	function manage($verb, $args, &$message, &$messageParams) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 
@@ -249,9 +254,9 @@ class DataversePlugin extends GenericPlugin {
 	}
 	
 	/**
-	* Hook callback: register pages to display terms of use & data policy
-	* @see PKPPageRouter::route()
-	*/
+	 * Hook callback: register pages to display terms of use & data policy
+	 * @see PKPPageRouter::route()
+	 */
 	function setupPublicHandler($hookName, $params) {
 		$page =& $params[0];
 		if ($page == 'dataverse') {
@@ -275,10 +280,10 @@ class DataversePlugin extends GenericPlugin {
 	}	 
 	
 	/**
-	* Hook callback: register output filter to add data citation to submission
-	* summaries; add data citation to reading tools' suppfiles and metadata views.
-	* @see TemplateManager::display()
-	*/
+	 * Hook callback: register output filter to add data citation to submission
+	 * summaries; add data citation to reading tools' suppfiles and metadata views.
+	 * @see TemplateManager::display()
+	 */
 	function handleTemplateDisplay($hookName, $args) {
 		$templateMgr =& $args[0];
 		$template =& $args[1];
@@ -410,7 +415,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: add validators to fields added to metadata form
-	* @see Form::Form()
+	 * @see Form::Form()
 	 */
 	function metadataFormConstructor($hookName, $args) {
 		$form =& $args[0];
@@ -420,9 +425,9 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: update cataloguing information on form submission, if article
-	* has a Dataverse study
-	* @see Form::execute()
-	*/
+	 * has a Dataverse study
+	 * @see Form::execute()
+	 */
 	function metadataFormExecute($hookName, $args) {
 		$form =& $args[0];
 		$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
@@ -903,7 +908,7 @@ class DataversePlugin extends GenericPlugin {
 	 * @param $user string username 
 	 * @param $password string password
 	 * @param $onBehalfOf string send request on behalf of user
-	* @return SWORDAPPServiceDocument
+	 * @return SWORDAPPServiceDocument
 	 */
 	function getServiceDocument($sdUrl, $user, $password, $onBehalfOf = NULL) {
 		// allow insecure SSL connections
@@ -950,7 +955,7 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Create a Dataverse study: create and deposit Atom entry; package and deposit
-	* files, if files submitted.
+	 * files, if files submitted.
 	 * @param $article
 	 * @param $dvFiles array of files to deposit
 	 * @return DataverseStudy
@@ -1409,7 +1414,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Hook callback: add content to custom notifications
-	* @see NotificationManager::getNotificationContents()
+	 * @see NotificationManager::getNotificationContents()
 	 */
 	function getNotificationContents($hookName, $args) {
 		$notification =& $args[0];

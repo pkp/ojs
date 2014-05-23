@@ -124,7 +124,7 @@ class DataverseStudy extends DataObject {
 	 */
 	function getDataCitation() {
 		return $this->getData('dataCitation');
-  }
+	}
 	
 	/**
 	 * Set data citation.
