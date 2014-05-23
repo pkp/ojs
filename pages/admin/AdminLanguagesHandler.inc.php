@@ -175,12 +175,18 @@ class AdminLanguagesHandler extends AdminHandler {
 
 		if (in_array($locale, $site->getInstalledLocales())) {
 			AppLocale::reloadLocale($locale);
+
+			$user =& $request->getUser();
+
+			import('classes.notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification($user->getId());
 		}
 
 		$request->redirect(null, null, 'languages');
 	}
 
-		/**
+	/**
 	 * Reload default email templates for a locale.
 	 * @param $args array
 	 * @param $request object
@@ -195,6 +201,12 @@ class AdminLanguagesHandler extends AdminHandler {
 			$emailTemplateDao =& DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplateDao->deleteDefaultEmailTemplatesByLocale($locale);
 			$emailTemplateDao->installEmailTemplateData($emailTemplateDao->getMainEmailTemplateDataFilename($locale));
+
+			$user =& $request->getUser();
+
+			import('classes.notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification($user->getId());
 		}
 
 		$request->redirect(null, null, 'languages');
