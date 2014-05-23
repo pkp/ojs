@@ -3,6 +3,8 @@ php:
   - 5.3
 python:
   - 3.3
+addons:
+  postgresql: "9.1"
 git:
   # We have to init submodules ourselves to make it recursive
   submodules: false
@@ -41,9 +43,13 @@ before_install:
   - nohup java -jar selenium-server-standalone-2.41.0.jar -browserSessionReuse > selenium-output & 
   - sleep 3 # Give selenium server time to start.
 
-  # Install the test database.
-  - mysql -u root -e 'create database ojs'
-  - mysql -u root ojs < tests/functional/testserver.sql
+  # Install the test MySQL database.
+  - mysql -u root -e 'CREATE DATABASE `ojs-ci` DEFAULT CHARACTER SET utf8'
+  - mysql -u root ojs-ci < tests/functional/testserver.sql
+  - mysql -u root -e "GRANT ALL ON \`ojs-ci\`.* TO \`ojs-ci\`@localhost IDENTIFIED BY 'ojs-ci'"
+
+  # Install the test PostgreSQL database, using data converted from MySQL
+  - psql -c 'CREATE DATABASE "ojs-ci";' -U postgres
 
   # Files dependency.
   - mv config.TRAVIS.inc.php config.inc.php

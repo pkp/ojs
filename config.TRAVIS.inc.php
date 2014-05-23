@@ -116,9 +116,9 @@ show_upgrade_warning = On
 
 driver = mysql
 host = localhost
-username = root
-password =
-name = ojs
+username = ojs-ci
+password = ojs-ci
+name = ojs-ci
 
 ; Enable persistent connections
 persistent = Off
