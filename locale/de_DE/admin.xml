@@ -92,7 +92,8 @@ in das aktuelle Dateiverzeichnis innerhalb des Vorbereitungs-Verzeichnisses des 
 Dieses Werkzeug wird nur Dateien kopieren, die nicht bereits in den usageStats-Verzeichnissen (Vorbereitung, Bearbeitung, Archiv, zurückgewiesen) sind.
 
 Benutzung: {$scriptName} path/to/apache/log/file.log
-Benutzung (verarbeite alle Dateien in einem Verzeichnis): {$scriptName} path/to/apache/directory 
+Benutzung (verarbeite alle Dateien eines Verzeichnisses): {$scriptName} path/to/apache/directory
+Benutzung (verarbeite alle Dateien eines Verzeichnisses, die mit der übergebenen Zeichenkette beginnen): {$scriptName} path/to/apache/directory starts_with_string  
 	</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fehler: kann temporären Ordner {$tmpDir} nicht anlegen</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fehler: Datei {$filePath} existiert nicht, oder es kann nicht auf sie zugegriffen werden.</message>
