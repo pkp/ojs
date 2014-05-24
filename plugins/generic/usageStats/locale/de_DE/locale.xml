@@ -21,6 +21,8 @@
 	
 	<message key="plugins.generic.usageStats.openFileFailed">Die Datei {$file} konnte nicht geöffnet werden und wurde zurückgewiesen.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">Die Zeile {$lineNumber} aus der Datei {$file} stellt keinen gültigen Logeintrag dar, und die Datei wurde zurückgewiesen.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">Die Zeile {$lineNumber} aus der Datei {$file} enthält eine Adresse, aus der das System nicht den Basis-URL entfernen kann. Dies passiert üblicherweise, wenn kontextbezogene Base-URL-Einstellungen in der Datei config.inc.php gesetzt sind, die zusammen mit ihrem Kontextpfad einem Basis-URL eines anderen Kontexts entsprechen. Vgl. Core::_checkBaseUrl() für mehr Informationen über dieses Problem. Die Datei wurde zurückgewiesen.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Konnte keine extrahierten Daten aus Datei {$file} laden. Der Fehler lautete: {$error}. Die Datei wurde entfernt, um sie erneut zu bearbeiten.</message>
 	<message key="plugins.generic.usageStats.displayName">Nutzungsstatistik</message>
 	<message key="plugins.generic.usageStats.description">Zeigt Nutzungsstatistik zu Objekten an. Kann Server-Logdateien benutzen, um Statistiken zu extrahieren.</message>
 	
