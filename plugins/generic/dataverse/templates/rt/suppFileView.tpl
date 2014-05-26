@@ -89,7 +89,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="plugins.generic.dataverse.dataCitation"}</td>
 		<td width="80%" class="value">{$dataCitation|strip_unsafe_html}</td>
-	</tr>  
+	</tr>	 
 {elseif $suppFile->getRemoteURL()}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="submission.layout.galleyRemoteURL"}</td>

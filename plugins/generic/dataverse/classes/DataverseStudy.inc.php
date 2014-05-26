@@ -14,17 +14,16 @@
  */
 
 class DataverseStudy extends DataObject {
-  
-  function DataverseStudy() {
-    parent::DataObject();
-  }
-  
-	//
-	// Get/set methods
-	//
 
 	/**
-	 * Get the ID of the study.
+	 * Constructor.
+	 */
+	function DataverseStudy() {
+		parent::DataObject();
+	}
+	
+	/**
+	 * Get study ID.
 	 * @return int
 	 */
 	function getId() {
@@ -32,15 +31,15 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set the ID of the study.
+	 * Set study ID.
 	 * @param $studyId int
 	 */
 	function setId($studyId) {
 		return $this->setData('studyId', $studyId);
 	}
 
-  /**
-	 * Get the study's submission ID 
+	/**
+	 * Get ID of submission associated with study.
 	 * @return int
 	 */
 	function getSubmissionId() {
@@ -48,15 +47,15 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set the study's submission ID
+	 * Set submission ID for study.
 	 * @param $submissionId int
 	 */
 	function setSubmissionId($submissionId) {
 		return $this->setData('submissionId', $submissionId);
 	}
-  
+	
 	/**
-	 * Get study edit URI.
+	 * Get study's edit URI.
 	 * @return string
 	 */
 	function getEditUri() {
@@ -64,13 +63,13 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set study edit URI
+	 * Set study's edit URI.
 	 * @param $editUri string
 	 */
 	function setEditUri($editUri) {
 		return $this->setData('editUri', $editUri);
-	}  
-  
+	}	 
+	
 	/**
 	 * Get study's edit media URI.
 	 * @return string
@@ -80,14 +79,14 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set study's edit media URI
+	 * Set study's edit media URI.
 	 * @param $editMediaUri string
 	 */
 	function setEditMediaUri($editMediaUri) {
 		return $this->setData('editMediaUri', $editMediaUri);
-	}  
+	}	 
 
-  /**
+	/**
 	 * Get study's statement URI.
 	 * @return string
 	 */
@@ -96,49 +95,44 @@ class DataverseStudy extends DataObject {
 	}
 
 	/**
-	 * Set study's statement URI
+	 * Set study's statement URI.
 	 * @param $statementUri string
 	 */
 	function setStatementUri($statementUri) {
 		return $this->setData('statementUri', $statementUri);
 	} 
-  
-  /**
-   * Get study persistent URI
-   * @return string
-   */
-  function getPersistentUri() {
-    return $this->getData('persistentUri');
-  }
-  
-  /**
-   * Set study persistent Uri
-   * @param string $persistentUri
-   */
-  function setPersistentUri($persistentUri) {
-    $this->setData('persistentUri', $persistentUri);
-  }
-  
-  /**
-   * Get data citation
-   * @param boolean $markup add HTML to link persistent URI
-   */
-  function getDataCitation($markup = true) {
-    $dataCitation = $this->getData('dataCitation');
-    if ($markup) {
-      // Add markup to link persistent URI.
-      $dataCitation = str_replace($this->getPersistentUri(), '<a href="'. $this->getPersistentUri() .'">'. $this->getPersistentUri() .'</a>', $dataCitation);
-    }
-    return $dataCitation;
-  }
-  
-  /**
-   * Set data citation
-   * @param string $dataCitation
-   */
-  function setDataCitation($dataCitation) {
-    $this->setData('dataCitation', $dataCitation);
-  }
+	
+	/**
+	 * Get study's persistent URI.
+	 * @return string
+	 */
+	function getPersistentUri() {
+		return $this->getData('persistentUri');
+	}
+	
+	/**
+	 * Set study's persistent URI.
+	 * @param string $persistentUri
+	 */
+	function setPersistentUri($persistentUri) {
+		$this->setData('persistentUri', $persistentUri);
+	}
+	
+	/**
+	 * Get data citation. 
+	 * @return string
+	 */
+	function getDataCitation() {
+		return $this->getData('dataCitation');
+	}
+	
+	/**
+	 * Set data citation.
+	 * @param string $dataCitation
+	 */
+	function setDataCitation($dataCitation) {
+		$this->setData('dataCitation', $dataCitation);
+	}
 
 }
 

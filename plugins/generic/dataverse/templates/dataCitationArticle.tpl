@@ -9,9 +9,9 @@
  *
  *}
 {if $dataCitation}
-  <div class="separator"></div>
-  <div id="dataCitation">
-    <h4>{translate key="plugins.generic.dataverse.dataCitation"}</h4>
-    <p>{$dataCitation|strip_unsafe_html}</p>
-  </div>
+	<div class="separator"></div>
+	<div id="dataCitation">
+		<h4>{translate key="plugins.generic.dataverse.dataCitation"}</h4>
+		<p>{$dataCitation|strip_unsafe_html}</p>
+	</div>
 {/if}
