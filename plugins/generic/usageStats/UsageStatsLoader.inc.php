@@ -166,7 +166,9 @@ class UsageStatsLoader extends FileLoader {
 			if (Core::isUserAgentBot($entryData['userAgent'], $this->_counterRobotsListFile)) continue;
 
 			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $errorMsg, $filePath, $lineNumber);
-			if (!is_null($errorMsg)) return false;
+			if (!is_null($errorMsg)) {
+				$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_WARNING, $errorMsg);
+			}
 			if(!$assocId || !$assocType) continue;
 
 			list($countryCode, $cityName, $region) = $geoTool->getGeoLocation($entryData['ip']);
