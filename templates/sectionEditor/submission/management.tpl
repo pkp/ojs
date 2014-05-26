@@ -43,6 +43,9 @@
 				{if $suppFile->getFileId()}
 					<a href="{url op="downloadFile" path=$submission->getId()|to_array:$suppFile->getFileId()}" class="file">{$suppFile->getFileName()|escape}</a>
 					&nbsp;&nbsp;
+				{elseif $suppFile->getRemoteURL() != ''}
+					<a href="{$suppFile->getRemoteURL()|escape}" target="_blank">{$suppFile->getRemoteURL()|truncate:20:"..."|escape}</a>
+					&nbsp;&nbsp;
 				{/if}
 				{if $suppFile->getDateModified()}
 					{$suppFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;
