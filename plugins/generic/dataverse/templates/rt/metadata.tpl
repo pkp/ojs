@@ -175,23 +175,23 @@
 	<td>{translate key="rt.metadata.pkp.suppFiles"}</td>
 	<td>
 		{foreach from=$article->getSuppFiles() item=suppFile}
-      {if $suppFile->getId()|array_key_exists:$dvFileIndex}
-        {$suppFile->getSuppFileTitle()|escape} <a href="{$study->getPersistentUri()}" target="_new" class="action">{translate key="plugins.generic.dataverse.suppFiles.view"}</a><br/>
-      {else}
-        <a href="{url page="article" op="downloadSuppFile" path=$articleId|to_array:$suppFile->getBestSuppFileId($currentJournal)}">{$suppFile->getSuppFileTitle()|escape}</a> ({$suppFile->getNiceFileSize()})<br />
-      {/if}
+			{if $suppFile->getId()|array_key_exists:$dvFileIndex}
+				{$suppFile->getSuppFileTitle()|escape} <a href="{$study->getPersistentUri()}" target="_new" class="action">{translate key="plugins.generic.dataverse.suppFiles.view"}</a><br/>
+			{else}
+				<a href="{url page="article" op="downloadSuppFile" path=$articleId|to_array:$suppFile->getBestSuppFileId($currentJournal)}">{$suppFile->getSuppFileTitle()|escape}</a> ({$suppFile->getNiceFileSize()})<br />
+			{/if}
 		{/foreach}
 	</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 {/if}
 {if $dataCitation}
-  <tr valign="top">
+	<tr valign="top">
 	<td>13.</td>
 	<td>{translate key="rt.metadata.dublinCore.relation"}</td>
 	<td>{translate key="plugins.generic.dataverse.dataCitation"}</td>
 	<td>{$dataCitation|strip_unsafe_html}</td>
-  </tr>  
+	</tr>	 
 {/if}
 <tr valign="top">
 	<td>14.</td>

@@ -89,12 +89,12 @@
 <h2>{translate key="plugins.generic.dataverse.termsOfUse.title"}</h2>
 
 <div id="content">
-  <div style="margin: 1em 0;">
-    {$termsOfUse|strip_unsafe_html}
-  </div>
-  <div>
-    <input type="button" onclick="window.close()" value="{translate key="common.close"}" class="button defaultButton" />  
-  </div>
+	<div style="margin: 1em 0;">
+		{$termsOfUse|strip_unsafe_html}
+	</div>
+	<div>
+		<input type="button" onclick="window.close()" value="{translate key="common.close"}" class="button defaultButton" />	
+	</div>
 </div>
 </div>
 </div>

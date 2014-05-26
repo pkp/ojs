@@ -9,12 +9,12 @@
  *
  *}
 {strip}
-  {assign var="pageTitle" value="plugins.generic.dataverse.dataAvailabilityPolicy.title"}
-  {include file="common/header.tpl"}
+	{assign var="pageTitle" value="plugins.generic.dataverse.dataAvailabilityPolicy.title"}
+	{include file="common/header.tpl"}
 {/strip}
 
 <div>
-  {$dataAvailabilityPolicy|strip_unsafe_html}
+	{$dataAvailabilityPolicy|strip_unsafe_html}
 </div>
 
 {include file="common/footer.tpl"}
