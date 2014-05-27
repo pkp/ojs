@@ -193,8 +193,10 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 				$trackingCode = $this->getSetting($journalId, 'trackingCode');
 				if ($trackingCode == "ga") {
 					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagGa.tpl');
-				} else {
+				} elseif ($trackingCode == "urchin") {
 					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagUrchin.tpl');
+				} elseif ($trackingCode == "analytics") {
+					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagAnalytics.tpl');
 				}
 			}
 		}
