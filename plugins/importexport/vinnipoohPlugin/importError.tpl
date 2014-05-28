@@ -1,7 +1,10 @@
 {**
- * plugins/importexport/vinnipooh/importError.tpl
+ * plugins/importexport/vinnipoohPlugin/importError.tpl
  *
+ * Copyright (c) 2013 Simon Fraser University Library
  * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Artem Gusarenko Ufa State Aviation Technical University (redactormail@gmail.com)
+ * Copyright (c) 2013-2014 Valeriy Mironov Ufa State Aviation Technical University
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display an error message for an aborted import process.

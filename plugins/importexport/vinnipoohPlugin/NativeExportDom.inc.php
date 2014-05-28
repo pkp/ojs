@@ -3,13 +3,16 @@
 /**
  * @file plugins/importexport/vinnipoohPlugin/NativeExportDom.inc.php
  *
- * Copyright (c) 2003-2013 Artem Gusarenko
+ * Copyright (c) 2013 Simon Fraser University Library
+ * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2014 Artem Gusarenko Ufa State Aviation Technical University (redactormail@gmail.com)
+ * Copyright (c) 2013-2014 Valeriy Mironov Ufa State Aviation Technical University
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeExportDom
  * @ingroup plugins_importexport_native
  *
- * @brief Native import/export plugin DOM functions for export
+ * @brief vinnipoohPlugin import/export plugin DOM functions for export
  */
 
 import('lib.pkp.classes.xml.XMLCustomWriter');
@@ -31,7 +34,7 @@ class NativeExportDom {
 		NativeExportDom::generatePubId($doc, $root, $issue, $issue);
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'titleid', '8564', false);
-		XMLCustomWriter::createChildWithText($doc, $root, 'issn', '1992-6502', false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'issn', $journal->getSetting('onlineIssn'), false);
 		XMLCustomWriter::createChildWithText($doc, $root, 'codeNEB', '19926502', false);
 		$journalinfoNode =& XMLCustomWriter::createElement($doc, 'journalInfo');
 		XMLCustomWriter::appendChild($root, $journalinfoNode);
@@ -138,7 +141,7 @@ class NativeExportDom {
 		$root =& $articleNode;
 		XMLCustomWriter::createChildWithText($doc, $root, 'pages',$article->getPages(), false);
 		foreach ($article->getGalleys() as $galley) {
-			XMLCustomWriter::createChildWithText($doc, $root, 'artType', $galley->getLabel(), false);
+			XMLCustomWriter::createChildWithText($doc, $root, 'artType', 'RAR', false);
 		}
 		
 		XMLCustomWriter::setAttribute($root, 'public_id', $article->getPubId('publisher-id'), false);
@@ -245,7 +248,6 @@ class NativeExportDom {
 		$stroka = $article->getCitations();
 		$pattern = '~\s*\r\n\s*~';
 		$pattern1 = '/^\d+.\s|\t/';
-		//$pattern3 = '/{(.*)}/';
 		$pattern3 = '/\[[^(?!Online)][^(?!Electronic resource)][^(?!Электронный ресурс)][^(?!и др.)](.*)\]/';
 		$stroka1 = array();
 		$stroka1 = preg_split ($pattern, $stroka);
