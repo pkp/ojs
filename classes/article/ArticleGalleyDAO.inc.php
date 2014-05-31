@@ -30,12 +30,44 @@ class ArticleGalleyDAO extends DAO {
 	}
 
 	/**
+	 * Get galley objects cache.
+	 * @return GenericCache
+	 */
+	function &_getGalleyCache() {
+		if (!isset($this->galleyCache)) {
+			$cacheManager =& CacheManager::getManager();
+			$this->galleyCache =& $cacheManager->getObjectCache('galley', 0, array(&$this, '_galleyCacheMiss'));
+		}
+		return $this->galleyCache;
+	}
+
+	/**
+	 * Callback when there is no object in cache.
+	 * @param $cache GenericCache
+	 * @param $id int The wanted object id.
+	 * @return ArticleGalley
+	 */
+	function &_galleyCacheMiss(&$cache, $id) {
+		$galley =& $this->getGalley($id, null, false);
+		$cache->setCache($id, $galley);
+		return $galley;
+	}
+
+	/**
 	 * Retrieve a galley by ID.
 	 * @param $galleyId int
 	 * @param $articleId int optional
+	 * @param $useCache boolean optional
 	 * @return ArticleGalley
 	 */
-	function &getGalley($galleyId, $articleId = null) {
+	function &getGalley($galleyId, $articleId = null, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getGalleyCache();
+			$returner = $cache->get($galleyId);
+			if ($returner && $articleId != null && $articleId != $returner->getArticleId()) $returner = null;
+			return $returner;
+		}
+
 		$params = array((int) $galleyId);
 		if ($articleId !== null) $params[] = (int) $articleId;
 		$result =& $this->retrieve(
