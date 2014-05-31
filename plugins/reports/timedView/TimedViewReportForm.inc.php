@@ -98,10 +98,10 @@ class TimedViewReportForm extends Form {
 		foreach ($abstractViewCounts as $row) {
 			$galleyViewTotal = 0;
 			$articleId = $row['assoc_id'];
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
 			if (!$publishedArticle) continue;
 			$issueId = $publishedArticle->getIssueId();
-			$issue =& $issueDao->getIssueById($issueId);
+			$issue =& $issueDao->getIssueById($issueId, null, true);
 
 			$articleData[$articleId] = array(
 				'id' => $articleId,
@@ -122,7 +122,7 @@ class TimedViewReportForm extends Form {
 			$galleyViewTotal = 0;
 			foreach ($galleyCounts as $record) {
 				$galleyId = $record['assoc_id'];
-				$galley =& $galleyDao->getGalley($galleyId);
+				$galley =& $galleyDao->getGalley($galleyId, null, true);
 				$label = $galley->getLabel();
 				$i = array_search($label, $galleyLabels);
 				if ($i === false) {
