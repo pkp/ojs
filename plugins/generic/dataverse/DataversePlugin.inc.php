@@ -289,6 +289,9 @@ class DataversePlugin extends GenericPlugin {
 		$template =& $args[1];
 
 		switch ($template) {
+			case $this->getTemplatePath() .'/termsOfUse.tpl':
+				$templateMgr->register_outputfilter(array(&$this, 'termsOfUseOutputFilter'));
+				break;
 			case 'author/submission.tpl':			 
 			case 'sectionEditor/submission.tpl':
 				$templateMgr->register_outputfilter(array(&$this, 'submissionOutputFilter'));
@@ -314,7 +317,28 @@ class DataversePlugin extends GenericPlugin {
 		}
 		return false;
 	}
+	
+	/**
+	 * Output filter alters title in Reading Tools' header template, re-used to 
+	 * display Dataverse Terms of Use
+	 * @param $output string
+	 * @param $templateMgr TemplateManager
+	 * @return $string
+	 */
+	function termsOfUseOutputFilter($output, &$templateMgr) {
+		$titlePattern = '/<title.*?\/title>/';
+		$title = '<title>'. __('plugins.generic.dataverse.termsOfUse.dataverse') .': '. __('plugins.generic.dataverse.termsOfUse.title') .'</title>';
+		$filteredOutput = preg_replace($titlePattern, $title, $output);
+		
+		$headingPattern = '/'. __('rt.readingTools') .'.*?<\/h1>/';
+		$heading = __('plugins.generic.dataverse.termsOfUse.dataverse') .'</h1>';
+		$filteredOutput = preg_replace($headingPattern, $heading, $filteredOutput);
 
+		$templateMgr->unregister_outputfilter('termsOfUseOutputFilter');
+		return $filteredOutput;
+	}
+		
+	
 	/**
 	 * Output filter adds data citation to submission summary.
 	 * @param $output string
