@@ -85,7 +85,10 @@ class ReviewReminder extends ScheduledTask {
 
 	}
 
-	function execute() {
+	/**
+	 * @see ScheduledTask::executeActions()
+	 */
+	function executeActions() {
 		$article = null;
 		$journal = null;
 

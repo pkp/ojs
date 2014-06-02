@@ -59,9 +59,9 @@ class ObjectsForReviewReminder extends ScheduledTask {
 	}
 
 	/**
-	 * @see ScheduledTask::execute()
+	 * @see ScheduledTask::executeActions()
 	 */
-	function execute() {
+	function executeActions() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', 'objectsforreviewplugin');
 		if ($ofrPlugin) {
 			$ofrPluginName = $ofrPlugin->getName();

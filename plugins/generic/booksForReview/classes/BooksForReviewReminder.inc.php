@@ -8,7 +8,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BooksForReviewReminder
- * @ingroup plugins_generic_booksForReview 
+ * @ingroup plugins_generic_booksForReview
  *
  * @brief Class to perform automated reminders for book reviewers.
  */
@@ -25,7 +25,7 @@ class BooksForReviewReminder extends ScheduledTask {
 	}
 
 	/**
-	 * Send email to a book for review author 
+	 * Send email to a book for review author
 	 */
 	function sendReminder($book, $journal, $emailKey) {
 		$journalId = $journal->getId();
@@ -50,7 +50,7 @@ class BooksForReviewReminder extends ScheduledTask {
 	}
 
 	/**
-	 * Send email to a journal's book for review authors 
+	 * Send email to a journal's book for review authors
 	 */
 	function sendJournalReminders($journal, $curDate) {
 		// FIXME: This shouldn't be hard-coded here
@@ -144,9 +144,9 @@ class BooksForReviewReminder extends ScheduledTask {
 	}
 
 	/**
-	 * Run this scheduled task. 
+	 * @see ScheduledTask::executeActions()
 	 */
-	function execute() {
+	function executeActions() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournals(true);
 

@@ -119,6 +119,13 @@ class UsageStatsLoader extends FileLoader {
 	}
 
 	/**
+	 * @see FileLoader::getName()
+	 */
+	function getName() {
+		return __('plugins.generic.usageStats.usageStatsLoaderName');
+	}
+
+	/**
 	 * @see FileLoader::processFile()
 	 */
 	function processFile($filePath, &$errorMsg) {
@@ -165,10 +172,7 @@ class UsageStatsLoader extends FileLoader {
 			// Avoid bots.
 			if (Core::isUserAgentBot($entryData['userAgent'], $this->_counterRobotsListFile)) continue;
 
-			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $errorMsg, $filePath, $lineNumber);
-			if (!is_null($errorMsg)) {
-				$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_WARNING, $errorMsg);
-			}
+			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $filePath, $lineNumber);
 			if(!$assocId || !$assocType) continue;
 
 			list($countryCode, $cityName, $region) = $geoTool->getGeoLocation($entryData['ip']);
@@ -307,12 +311,11 @@ class UsageStatsLoader extends FileLoader {
 	 * Get the assoc type and id of the object that
 	 * is accessed through the passed url.
 	 * @param $url string
-	 * @param $errorMsg string
 	 * @param $filePath string
 	 * @param $lineNumber int
 	 * @return array
 	 */
-	function _getAssocFromUrl($url, &$errorMsg, $filePath, $lineNumber) {
+	function _getAssocFromUrl($url, $filePath, $lineNumber) {
 		// Check the passed url.
 		$assocId = $assocType = $journalId = false;
 		$expectedPageAndOp = $this->_getExpectedPageAndOp();
@@ -330,8 +333,8 @@ class UsageStatsLoader extends FileLoader {
 			$args = Core::getArgs($url, !$pathInfoDisabled);
 		} else {
 			// Could not remove the base url, can't go on.
-			$errorMsg = __('plugins.generic.usageStats.removeUrlError',
-				array('file' => $filePath, 'lineNumber' => $lineNumber));
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.removeUrlError',
+				array('file' => $filePath, 'lineNumber' => $lineNumber)), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			return array(false, false);
 		}
 
