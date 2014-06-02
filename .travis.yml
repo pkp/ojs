@@ -1,7 +1,14 @@
 language: php
 php:
   - 5.3
+git:
+  # We have to init submodules ourselves
+  submodules: false
+
 before_install:
+  # Start submodules
+  - ./tools/startSubmodulesTRAVIS.sh
+
   # Start apache and configure a virtual host.
   - sudo apt-get update > /dev/null
   - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl php5-mysql php5-intl
