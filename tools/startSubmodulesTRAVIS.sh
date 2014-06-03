@@ -11,7 +11,7 @@ if [ \( -n "$libModuleHash" \) -a \( "$strLength" -eq 40 \) ]; then
 		echo "Updating pkp-lib with code from $gitUser repository, $branch branch."
 		git remote add "$gitUser" git://github.com/"$gitUser"/pkp-lib
 		git pull "$gitUser" "$branch"
-		exit 1
+		exit 0
 	fi
 fi
 git submodule update --init --recursive
