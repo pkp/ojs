@@ -1,15 +1,15 @@
 <?php
 
 /**
- * @file tests/functional/TestTestingEnvironment.inc.php
+ * @file tests/functional/TestTestingEnvironmentTest.inc.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class TestTestingEnvironment
+ * @class FunctionalTestingEnvironmentTest
  * @ingroup tests_functional
- * @see TestTestingEnvironment
+ * @see FunctionalTestingEnvironment
  *
  * @brief Integration/Functional test to make sure the testing environment is working.
  */
