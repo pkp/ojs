@@ -12,12 +12,14 @@ if [ \( -n "$libModuleHash" \) -a \( "$strLength" -eq 40 \) ]; then
 	userAndBranch=$(git log --pretty=oneline -n1 | grep -o "##.*##" | sed "s:^##\(.*\)##$:\1:")
 	gitUser=$(echo "$userAndBranch" | cut -f1 -d"/")
 	branch=$(echo "$userAndBranch" | cut -f2 -d"/")
-	git reset --hard HEAD^
-	git submodule update --init --recursive
-	cd lib/pkp
-	echo "Updating pkp-lib with code from $gitUser repository, $branch branch."
-	git remote add "$gitUser" git://github.com/"$gitUser"/pkp-lib
-	git pull "$gitUser" "$branch"
-	exit 0
+	if [ \( -n "$gitUser" \) -a \( -n "$branch" \) ]; then
+		git reset --hard HEAD^
+		git submodule update --init --recursive
+		cd lib/pkp
+		echo "Updating pkp-lib with code from $gitUser repository, $branch branch."
+		git remote add "$gitUser" git://github.com/"$gitUser"/pkp-lib
+		git pull "$gitUser" "$branch"
+		exit 0
+	fi
 fi
 git submodule update --init --recursive
