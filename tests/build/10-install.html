@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/git/ojs" />
+<title>10-install</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">10-install</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${baseUrl}</td>
+	<td></td>
+</tr>
+<!--Administrator-->
+<tr>
+	<td>type</td>
+	<td>css=[id^=adminUsername-]</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=adminPassword-]</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=adminPassword2-]</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=adminEmail-]</td>
+	<td>pkpadmin@mailinator.com</td>
+</tr>
+<!--Database-->
+<tr>
+	<td>select</td>
+	<td>id=databaseDriver</td>
+	<td>label=${dbtype}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=databaseHost-]</td>
+	<td>${dbhost}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=databasePassword-]</td>
+	<td>${dbpassword}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=databaseUsername-]</td>
+	<td>${dbusername}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=databaseName-]</td>
+	<td>${dbname}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=createDatabase</td>
+	<td></td>
+</tr>
+<!--Locale-->
+<tr>
+	<td>click</td>
+	<td>id=additionalLocales-en_US</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=additionalLocales-fr_CA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connectionCharset</td>
+	<td>label=Unicode (UTF-8)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=databaseCharset</td>
+	<td>label=Unicode (UTF-8)</td>
+</tr>
+<!--Files-->
+<tr>
+	<td>type</td>
+	<td>css=[id^=filesDir-]</td>
+	<td>${filesdir}</td>
+</tr>
+<!--Execute-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=[id^=submitFormButton-]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
