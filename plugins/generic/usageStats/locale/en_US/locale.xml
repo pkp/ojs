@@ -19,9 +19,10 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">The default regex used can parse apache access log files in combined format and also the plugin's log files. If your access log files are in a different format you will have to insert a regex capable of parsing them and giving the expected values. See UsageStatsLoader::_getDataFromLogEntry() for more information.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Usage statistics plugin settings saved</message>
 	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Usage statistics file loader task</message>
 	<message key="plugins.generic.usageStats.openFileFailed">The file {$file} could not be open and was rejected.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">The line number {$lineNumber} from the file {$file} is not a valid log entry and the file was rejected.</message>
-	<message key="plugins.generic.usageStats.removeUrlError">The line number {$lineNumber} from the file {$file} contains an url that the system can't remove the base url from. That usually happens when there are context base url settings inside the config.inc.php file that, combined with their context path equals to one of the other context base urls. See Core::_checkBaseUrl() for better understanding of this issue. The file was rejected.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">The line number {$lineNumber} from the file {$file} contains an url that the system can't remove the base url from.</message>
 	<message key="plugins.generic.usageStats.loadDataError">Couldn't load data extracted from file {$file}. The error was: {$error}. The file was moved to stage again.</message>
 	<message key="plugins.generic.usageStats.displayName">Usage Statistics</message>
 	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>

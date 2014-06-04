@@ -49,13 +49,13 @@ class ArticleInfoSender extends ScheduledTask {
 	}
 
 	/**
-	 * @see FileLoader::execute()
+	 * @see ScheduledTask::executeActions()
 	 */
-	function execute() {
+	function executeActions() {
 		if (!$this->_plugin) return false;
 
 		if (!$this->_depositUrl) {
-			$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_ERROR, __('plugins.generic.alm.senderTask.error.noDepositUrl'));
+			$this->addExecutionLogEntry(__('plugins.generic.alm.senderTask.error.noDepositUrl'), SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
 			return false;
 		}
 
@@ -84,6 +84,8 @@ class ArticleInfoSender extends ScheduledTask {
 				$plugin->updateSetting($journalId, 'lastExport', Core::getCurrentDate(), 'date');
 			}
 		}
+
+		return true;
 	}
 
 	/**
@@ -114,8 +116,8 @@ class ArticleInfoSender extends ScheduledTask {
 			if ($doiPrefix) {
 				$journals[] =& $journal;
 			} else {
-				$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_WARNING,
-				__('plugins.generic.alm.senderTask.warning.noDOIprefix', array('path' => $journal->getPath())));
+				$this->addExecutionLogEntry(__('plugins.generic.alm.senderTask.warning.noDOIprefix',
+						array('path' => $journal->getPath())), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			}
 			unset($journal);
 		}
@@ -148,8 +150,8 @@ class ArticleInfoSender extends ScheduledTask {
 
 		$apiKey = $plugin->getSetting($journalId, 'apiKey');
 		if (!$apiKey) {
-			$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_WARNING,
-				__('plugins.generic.alm.senderTask.warning.noApiKey', array('path' => $journalPath)));
+			$this->addExecutionLogEntry(__('plugins.generic.alm.senderTask.warning.noApiKey',
+					array('path' => $journalPath)), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 		}
 
 		$params = array(
@@ -168,19 +170,19 @@ class ArticleInfoSender extends ScheduledTask {
 			if ($result) $resultDecoded = $jsonManager->decode($result);
 
 			if (is_null($result)) {
-				$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_ERROR,
-					__('plugins.generic.alm.senderTask.error.noServerResponse', array('path' => $journalPath)));
+				$this->addExecutionLogEntry(__('plugins.generic.alm.senderTask.error.noServerResponse',
+						array('path' => $journalPath)), SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
 			}
 
 			if ($resultDecoded && isset($resultDecoded->success) && isset($resultDecoded->count)
 				&& $resultDecoded->count == count($articles)) {
 				return true;
 			} else {
-				$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_ERROR, __('plugins.generic.alm.senderTask.error.returnError', array(
-					'error' => $result,
-					'articlesNumber' => count($articles),
-					'payload' => $payload)
-				));
+				$this->addExecutionLogEntry(__('plugins.generic.alm.senderTask.error.returnError', array(
+						'error' => $result,
+						'articlesNumber' => count($articles),
+						'payload' => $payload)),
+					SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
 			}
 		}
 
