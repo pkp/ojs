@@ -326,16 +326,18 @@ class DataversePlugin extends GenericPlugin {
 	 * @return $string
 	 */
 	function termsOfUseOutputFilter($output, &$templateMgr) {
-		$titlePattern = '/<title.*?\/title>/';
-		$title = '<title>'. __('plugins.generic.dataverse.termsOfUse.dataverse') .': '. __('plugins.generic.dataverse.termsOfUse.title') .'</title>';
-		$filteredOutput = preg_replace($titlePattern, $title, $output);
-		
-		$headingPattern = '/'. __('rt.readingTools') .'.*?<\/h1>/';
-		$heading = __('plugins.generic.dataverse.termsOfUse.dataverse') .'</h1>';
-		$filteredOutput = preg_replace($headingPattern, $heading, $filteredOutput);
-
+		$title = '<title>'. __('rt.readingTools') .'</title>';
+		$titleIndex = strpos($output, $title);
+		if ($titleIndex !== false) {
+			$output = str_replace($title, '<title>'. __('plugins.generic.dataverse.termsOfUse.dataverse') .': '. __('plugins.generic.dataverse.termsOfUse.title') .'</title>', $output);
+		}
+		$header = __('rt.readingTools') .'</h1>';
+		$headerIndex = strpos($output, $header);
+		if ($headerIndex !== false) {
+			$output = str_replace($header, __('plugins.generic.dataverse.termsOfUse.dataverse') .'</h1>', $output);
+		}
 		$templateMgr->unregister_outputfilter('termsOfUseOutputFilter');
-		return $filteredOutput;
+		return $output;
 	}
 		
 	
