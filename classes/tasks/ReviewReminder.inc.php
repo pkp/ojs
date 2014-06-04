@@ -21,7 +21,14 @@ class ReviewReminder extends ScheduledTask {
 	 * Constructor.
 	 */
 	function ReviewReminder() {
-		$this->ScheduledTask();
+		parent::ScheduledTask();
+	}
+
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('admin.scheduledTask.reviewReminder');
 	}
 
 	function sendReminder ($reviewAssignment, $article, $journal) {
@@ -140,6 +147,8 @@ class ReviewReminder extends ScheduledTask {
 
 			if ($shouldRemind) $this->sendReminder ($reviewAssignment, $article, $journal);
 		}
+
+		return true;
 	}
 }
 

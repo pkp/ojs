@@ -23,7 +23,14 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	 * Constructor.
 	 */
 	function SubscriptionExpiryReminder() {
-		$this->ScheduledTask();
+		parent::ScheduledTask();
+	}
+
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('admin.scheduledTask.subscriptionExpiryReminder');
 	}
 
 	function sendReminder ($subscription, $journal, $emailKey) {
@@ -152,6 +159,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			$this->sendJournalReminders($journal);
 			unset($journal);
 		}
+
+		return true;
 	}
 }
 

@@ -84,6 +84,8 @@ class ArticleInfoSender extends ScheduledTask {
 				$plugin->updateSetting($journalId, 'lastExport', Core::getCurrentDate(), 'date');
 			}
 		}
+
+		return true;
 	}
 
 	/**

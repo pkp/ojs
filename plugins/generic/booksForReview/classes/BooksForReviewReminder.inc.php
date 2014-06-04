@@ -21,7 +21,14 @@ class BooksForReviewReminder extends ScheduledTask {
 	 * Constructor.
 	 */
 	function BooksForReviewReminder() {
-		$this->ScheduledTask();
+		parent::ScheduledTask();
+	}
+
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('plugins.generic.booksForReview.reminderTask.name');
 	}
 
 	/**
@@ -224,6 +231,8 @@ class BooksForReviewReminder extends ScheduledTask {
 				}
 			}
 		}
+
+		return true;
 	}
 }
 

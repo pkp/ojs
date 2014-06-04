@@ -25,7 +25,14 @@ class OpenAccessNotification extends ScheduledTask {
 	 * Constructor.
 	 */
 	function OpenAccessNotification() {
-		$this->ScheduledTask();
+		parent::ScheduledTask();
+	}
+
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('admin.scheduledTask.openAccessNotification');
 	}
 
 	function sendNotification ($users, $journal, $issue) {
@@ -180,6 +187,8 @@ class OpenAccessNotification extends ScheduledTask {
 				}
 			}
 		}
+
+		return true;
 	}
 }
 

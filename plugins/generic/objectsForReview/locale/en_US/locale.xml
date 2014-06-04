@@ -15,6 +15,7 @@
 
 	<!-- Objects For Review Plug-In -->
 	<message key="plugins.generic.objectsForReview.displayName">Objects For Review</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">Objects for review reminder</message>
 	<message key="plugins.generic.objectsForReview.description">Solicit reviews for objects of interest. Manage review objects and the review process.</message>
 
 	<!--  Editor -->
