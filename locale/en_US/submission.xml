@@ -54,5 +54,5 @@
 	<message key="submission.submit.titleAndSummary">Title and Abstract</message>
 	<message key="submission.submit.upload.description">Upload files associated with this submission, including the article, multimedia, data sets, artwork, etc.</message>
 	<message key="submission.pageProofs">Proofreading</message>
-	<message key="submission.confirmSubmit">Are you sure you wish to submit this manuscript to the press?</message>
+	<message key="submission.confirmSubmit">Are you sure you wish to submit this article to the journal?</message>
 </locale>
