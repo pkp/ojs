@@ -11,6 +11,11 @@
 <thead>
 <tr><td rowspan="1" colspan="3">00-environment</td></tr>
 </thead><tbody>
+<tr>
+	<td>setSpeed</td>
+	<td>0</td>
+	<td></td>
+</tr>
 <!--Bring server environment from user-extensions.js-->
 <tr>
 	<td>storeEval</td>
@@ -54,10 +59,12 @@
 	<td>baseUrl</td>
 </tr>
 <!--Notes-->
-<!--- To enter content into TinyMCE fields:tinyMCE.get('field_id').setContent('Here are the contents')-->
+<!--- To enter content into TinyMCE fields:-->
 <!--        Command: runScript-->
 <!--        Target: tinyMCE.get('field_id').setContent('Here are the contents')-->
 <!--        Value: (blank)-->
+<!--    ...or, when elements contain unique IDs...-->
+<!--        tinyMCE.get(document.evaluate('//textarea[contains(@id, \\'description-en_US\\')]', document, null, 9, null).singleNodeValue.id).setContent('The Journal of Public Knowledge is a peer-reviewed quarterly publication on the subject of public access to science.')-->
 <!--- To match input fields with uniqe IDs attended, use...-->
 <!--        Target: css=[id^=fieldPrefix-]-->
 </tbody></table>
