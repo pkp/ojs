@@ -7,10 +7,6 @@
  *
  * Production workflow stage
  *}
-{strip}
-{include file="workflow/header.tpl"}
-{/strip}
-
 <script type="text/javascript">
 	// Initialise JS handler.
 	$(function() {ldelim}
@@ -48,5 +44,3 @@
 		{include file="workflow/galleysTab.tpl" galleyTabsId=$galleyTabsId galleys=$galleys}
 	</div>
 </div>
-
-{include file="common/footer.tpl"}
