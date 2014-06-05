@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/git/ojs" />
+<title>40-users-dbuskins</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">40-users-dbuskins</td></tr>
+</thead><tbody>
+<!--Create User-->
+<tr>
+	<td>open</td>
+	<td>${baseUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users &amp; Roles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-grid-settings-user-usergrid-addUser-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-settings-user-usergrid-addUser-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=firstName-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=firstName-]</td>
+	<td>David</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=lastName-]</td>
+	<td>Buskins</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=username-]</td>
+	<td>dbuskins</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=email-]</td>
+	<td>dbuskins@mailinator.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password-]</td>
+	<td>dbuskinsdbuskins</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password2-]</td>
+	<td>dbuskinsdbuskins</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country</td>
+	<td>label=United States</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.ui-icon.ui-icon-triangle-1-e</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.ui-icon.ui-icon-triangle-1-e</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=affiliation-]</td>
+	<td>University of Chicago</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-listbuilder-users-userusergrouplistbuilder-addItem-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=[id^=component-listbuilder-users-userusergrouplistbuilder-addItem-button-]</td>
+	<td>10,10</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//option[text()='Section editor']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=newRowId[name]</td>
+	<td>label=Section editor</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Save']/..</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
