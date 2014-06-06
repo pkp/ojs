@@ -295,10 +295,12 @@ class DataversePlugin extends GenericPlugin {
 			case 'author/submission.tpl':			 
 			case 'sectionEditor/submission.tpl':
 				$templateMgr->register_outputfilter(array(&$this, 'submissionOutputFilter'));
-				break;			
+				break;
+			case 'rt/metadata.tpl':
+				$templateMgr->register_outputfilter(array(&$this, 'rtMetadataOutputFilter'));
+				break;
 			case 'rt/suppFiles.tpl':
 			case 'rt/suppFilesView.tpl':				
-			case 'rt/metadata.tpl':
 				$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');				 
 				$article =& $templateMgr->get_template_vars('article');
 				$study =& $dataverseStudyDao->getStudyBySubmissionId($article->getId());
@@ -339,8 +341,90 @@ class DataversePlugin extends GenericPlugin {
 		$templateMgr->unregister_outputfilter('termsOfUseOutputFilter');
 		return $output;
 	}
-		
 	
+	/**
+	 * Output filter adds Dataverse or external data citation and removes
+	 * local download links for suppfiles deposited in Dataverse.
+	 * @param $output string
+	 * @param $templateMgr TemplateManager
+	 * @return string
+	 */
+	function rtMetadataOutputFilter($output, &$templateMgr) {
+		$article =& $templateMgr->get_template_vars('article');
+		$currentJournal =& $templateMgr->get_template_vars('currentJournal');		
+		$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');		
+		$study =& $dataverseStudyDao->getStudyBySubmissionId($article->getId());
+		
+		// Add data citation, if study exists or if external data citation given
+		$dataCitation = isset($study) ? 
+						$this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()) :
+						$article->getLocalizedData('externalDataCitation');
+		
+		if ($dataCitation) {
+			$suppFileLabel = '<td>'. __('rt.metadata.pkp.suppFiles') .'</td>';
+			$suppFileLabelIndex = strpos($output, $suppFileLabel);
+			if ($suppFileLabelIndex !== false) {
+				$newOutput = substr($output, 0, $suppFileLabelIndex);
+				$newOutput .= '<td>'. __('plugins.generic.dataverse.dataCitation') .'</td>';
+				$newOutput .= '<td>'. String::stripUnsafeHtml($dataCitation) .'</td>';
+				$newOutput .= '</tr>';
+				$newOutput .= '<tr valign="top">';
+				$newOutput .= '<td>13.</td>';
+				$newOutput .= '<td>'. __('rt.metadata.dublinCore.relation') .'</td>';
+				$newOutput .= substr($output, $suppFileLabelIndex);
+				$output = $newOutput;
+			}
+		}
+			
+		// Don't display public links to supp files that have been deposited in Dataverse
+		$suppFiles = $article->getSuppFiles();		
+		if (isset($study) && !empty($suppFiles)) {
+			$suppFileOutput = '';
+			$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
+
+			foreach ($article->getSuppFiles() as $suppFile) {
+				$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($suppFile->getId(), $article->getId());
+				if (isset($dvFile)) { 
+					// File is in Dataverse. 
+					$suppFileOutput .= $templateMgr->smartyEscape($suppFile->getSuppFileTitle()) . ' ';
+					$suppFileOutput .= '<a href="'. $study->getPersistentUri() .'" target="_new" class="action">';
+					$suppFileOutput .= __('plugins.generic.dataverse.suppFiles.view');
+					$suppFileOutput .= '</a><br/>';
+				}
+				else {
+					$params = array(
+							'page' => 'article',
+							'op'   => 'downloadSuppFile',
+							'path' => array($article->getId(), $suppFile->getBestSuppFileId($currentJournal))
+						);
+					$suppFileOutput .= '<a href="'. $templateMgr->smartyUrl($params, $templateMgr) .'">'. $templateMgr->smartyEscape($suppFile->getSuppFileTitle()) .'</a> ';
+					$suppFileOutput .= '('. $suppFile->getNiceFileSize() .')<br />';
+				}
+			} // end foreach($suppFile)
+
+			// Match table row up to suppfile list
+			$preMatch = '<tr valign="top">\s*';
+			$preMatch .= '<td>13.<\/td>\s*';
+			$preMatch .= '<td>'. preg_quote(__('rt.metadata.dublinCore.relation'), '/') .'<\/td>\s*';
+			$preMatch .= '<td>'. preg_quote(__('rt.metadata.pkp.suppFiles'), '/') .'<\/td>\s*';
+			$preMatch .= '<td>';
+
+			// Match table row following suppfile list
+			$postMatch .= '<\/td>\s*<\/tr>';
+
+			if ($suppFileOutput) {
+				// Replace with edited list of suppfiles not in Dataverse
+				$output = preg_replace("/($preMatch).*?($postMatch)/s", "$1${suppFileOutput}$2", $output);
+			}
+			else {
+				// All suppfiles are in Dataverse. Remove table row.
+				$output = preg_replace("/($preMatch).*?($postMatch)/s", "", $output);
+			}
+		}  // end if (article has suppfiles in Dataverse)
+		$templateMgr->unregister_outputfilter('rtMetadataOutputFilter');
+		return $output;
+	}
+		
 	/**
 	 * Output filter adds data citation to submission summary.
 	 * @param $output string
