@@ -15,10 +15,12 @@ before_install:
   - sudo sed -i -e "s,/var/www,$(pwd)/,g" /etc/apache2/sites-available/default 
   - sudo sed -i -e "s,\${APACHE_LOG_DIR},$(pwd),g" /etc/apache2/sites-available/default  
   - sudo /etc/init.d/apache2 restart
-  
-  # Install php unit selenium extension.
-  - pear channel-discover pear.phpunit.de
-  - pear install phpunit/PHPUnit_Selenium
+
+  # Install phpunit in a phar package with selenium extension already on it. 
+  - sudo rm -R /home/travis/.phpenv/versions/5.3/bin/phpunit
+  - wget https://phar.phpunit.de/phpunit.phar
+  - chmod +x phpunit.phar
+  - sudo mv phpunit.phar /home/travis/.phpenv/versions/5.3/bin/phpunit
  
   # Start Virtual Framebuffer to imitate a monitor.
   - sudo Xvfb :10 -ac > xvfb-output & 
