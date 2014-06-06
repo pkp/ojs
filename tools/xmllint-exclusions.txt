@@ -4,3 +4,4 @@
 ./plugins/importexport/native/sample.xml
 ./plugins/importexport/users/sample.xml
 ./lib/pkp/tests/
+./lib/pkp/js/lib/plupload
