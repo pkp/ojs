@@ -180,7 +180,7 @@
 	<td>css=[id^=name-]</td>
 	<td>Learning Sustainable Design through Service</td>
 </tr>
-<!--It seems to be necessary to click off the control then back on again for validation to permit continuing.-->
+<!--    It seems to be necessary to click off the control then back on again for validation to permit continuing.-->
 <tr>
 	<td>click</td>
 	<td>//span[text()='Continue']/..</td>
@@ -232,6 +232,47 @@
 	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
 	<td>Development, engineering education, service learning, sustainability,</td>
 </tr>
+<!--    Add another author-->
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-users-author-authorgrid-addAuthor-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=firstName-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=firstName-]</td>
+	<td>Margaret</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=lastName-]</td>
+	<td>Morse</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country</td>
+	<td>label=United States</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=email-]</td>
+	<td>mmorse@mailinator.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[text()='Author']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Save']/..</td>
+	<td></td>
+</tr>
 <tr>
 	<td>pause</td>
 	<td>500</td>
@@ -244,7 +285,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>500</td>
+	<td>250</td>
 	<td></td>
 </tr>
 <tr>
@@ -252,6 +293,7 @@
 	<td>//span[text()='OK']/..</td>
 	<td></td>
 </tr>
+<!--Log out-->
 <tr>
 	<td>waitForElementPresent</td>
 	<td>link=Logout</td>
