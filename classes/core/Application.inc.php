@@ -205,9 +205,9 @@ class Application extends PKPApplication {
 	 */
 	static function getPluginSettingsContextColumnName() {
 		if (defined('SESSION_DISABLE_INIT')) {
-			$database = Config::getVar('database', 'driver');
 			$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
-			switch ($database) {
+			$driver = $pluginSettingsDao->getDriver();
+			switch ($driver) {
 				case 'mysql':
 					$checkResult = $pluginSettingsDao->retrieve('SHOW COLUMNS FROM plugin_settings LIKE ?', array('context_id'));
 					if ($checkResult->NumRows() == 0) {
