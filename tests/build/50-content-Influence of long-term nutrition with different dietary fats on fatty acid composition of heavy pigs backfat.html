@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/git/ojs" />
+<title>50-content-Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">50-content-Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</td></tr>
+</thead><tbody>
+<!--Register Author-->
+<tr>
+	<td>open</td>
+	<td>${baseUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=firstName-]</td>
+	<td>Rosanna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=lastName-]</td>
+	<td>Rossi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=username-]</td>
+	<td>rrossi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=email-]</td>
+	<td>rrossi@mailinator.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=confirmEmail-]</td>
+	<td>rrossi@mailinator.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password-]</td>
+	<td>rrossirrossi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password2-]</td>
+	<td>rrossirrossi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=affiliation-]</td>
+	<td>Barcelona University</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country</td>
+	<td>label=Spain</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[text()='Author']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='Register']/..</td>
+	<td></td>
+</tr>
+<!--Submit Article-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[starts-with(., 'Start a New Submission')]/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[starts-with(., 'Start a New Submission')]/..</td>
+	<td></td>
+</tr>
+<!--Step 1-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=sectionId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sectionId</td>
+	<td>label=Articles</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=submitFormButton-]</td>
+	<td></td>
+</tr>
+<!--Step 2-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=genreId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=genreId</td>
+	<td>label=Submission</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('.plupload.html5 input, .plupload.html5').attr('style', '');</td>
+	<td>${dummyFilePath}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.html5 input</td>
+	<td>${dummyfilepath}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Start Upload']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>100%</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=name-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=[id^=name-]</td>
+	<td>Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</td>
+</tr>
+<!--    It seems to be necessary to click off the control then back on again for validation to permit continuing.-->
+<tr>
+	<td>click</td>
+	<td>//span[text()='Continue']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Complete']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Complete']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Save and continue']/..</td>
+	<td></td>
+</tr>
+<!--Step 3-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=title-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=title-]</td>
+	<td>Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
+	<td>cattle, food security,</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Finish Submission']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>250</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--Log out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
