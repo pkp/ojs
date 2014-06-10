@@ -11,6 +11,17 @@
 <thead>
 <tr><td rowspan="1" colspan="3">50-content-Self-Organization in Multi-Level Institutions in Networked Environments</td></tr>
 </thead><tbody>
+<!--Set up variables-->
+<tr>
+	<td>store</td>
+	<td>Self-Organization in Multi-Level Institutions in Networked Environments</td>
+	<td>title</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>vwilliamson</td>
+	<td>alias</td>
+</tr>
 <!--Register Author-->
 <tr>
 	<td>open</td>
@@ -40,27 +51,27 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=username-]</td>
-	<td>vwilliamson</td>
+	<td>${alias}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=email-]</td>
-	<td>vwilliamson@mailinator.com</td>
+	<td>${alias}@mailinator.com</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=confirmEmail-]</td>
-	<td>vwilliamson@mailinator.com</td>
+	<td>${alias}@mailinator.com</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=password-]</td>
-	<td>vwilliamsonvwilliamson</td>
+	<td>${alias}${alias}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=password2-]</td>
-	<td>vwilliamsonvwilliamson</td>
+	<td>${alias}${alias}</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -183,9 +194,8 @@
 <tr>
 	<td>sendKeys</td>
 	<td>css=[id^=name-]</td>
-	<td>Self-Organization in Multi-Level Institutions in Networked Environments</td>
+	<td>${title}</td>
 </tr>
-<!--    It seems to be necessary to click off the control then back on again for validation to permit continuing.-->
 <tr>
 	<td>click</td>
 	<td>//span[text()='Continue']/..</td>
@@ -220,7 +230,7 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=title-]</td>
-	<td>Self-Organization in Multi-Level Institutions in Networked Environments</td>
+	<td>${title}</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -312,12 +322,12 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//a[text()='Self-Organization in Multi-Level Institutions in Networked Environments']</td>
+	<td>//a[text()='${title}']</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//a[text()='Self-Organization in Multi-Level Institutions in Networked Environments']</td>
+	<td>//a[text()='${title}']</td>
 	<td></td>
 </tr>
 <!--Decline the submission-->
