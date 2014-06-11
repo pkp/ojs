@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/git/ojs" />
+<title>45-section editors</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">45-section editors</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${baseUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Journal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Sections</td>
+	<td></td>
+</tr>
+<!--Edit Articles to add SEs-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]</td>
+	<td>10,10</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//option[text()='David Buskins']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=newRowId[name]</td>
+	<td>label=David Buskins</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]</td>
+	<td>10,10</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//option[text()='Stephanie Berardo']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('#sectionEditorsContainer * select:visible').val($('#sectionEditorsContainer * select:visible option:contains(&quot;Stephanie Berardo&quot;)').attr('value'));</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='sectionForm']//span[text()='Save']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--Create Reviews-->
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-settings-sections-sectiongrid-addSection-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=title-]</td>
+	<td>Reviews</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=title-]</td>
+	<td>Reviews</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=abbrev-]</td>
+	<td>REV</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=identifyType-]</td>
+	<td>Review Article</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]</td>
+	<td>10,10</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=newRowId[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=newRowId[name]</td>
+	<td>label=Minoti Inoue</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='sectionForm']//span[text()='Save']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

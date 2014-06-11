@@ -334,6 +334,120 @@
 	<td>link=Login</td>
 	<td></td>
 </tr>
+<!--Log in as Editor to deal with submission workflow status-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=username-]</td>
+	<td>dbarnes</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password-]</td>
+	<td>dbarnesdbarnes</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<!--Find the submission-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Submissions')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Submissions')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//a[text()='${title}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[text()='${title}']</td>
+	<td></td>
+</tr>
+<!--Assign the SE-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=participantToggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=participantToggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=userGroupId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=userGroupId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=userGroupId</td>
+	<td>label=Section editor</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=userId</td>
+	<td>label=David Buskins</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--Log out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
 
 </tbody></table>
 </body>
