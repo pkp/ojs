@@ -11,6 +11,12 @@
 <thead>
 <tr><td rowspan="1" colspan="3">40-users-sberardo</td></tr>
 </thead><tbody>
+<!--Set up variables-->
+<tr>
+	<td>store</td>
+	<td>sberardo</td>
+	<td>alias</td>
+</tr>
 <!--Create User-->
 <tr>
 	<td>open</td>
@@ -55,22 +61,22 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=username-]</td>
-	<td>sberardo</td>
+	<td>${alias}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=email-]</td>
-	<td>sberardo@mailinator.com</td>
+	<td>${alias}@mailinator.com</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=password-]</td>
-	<td>sberardosberardo</td>
+	<td>${alias}${alias}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=password2-]</td>
-	<td>sberardosberardo</td>
+	<td>${alias}${alias}</td>
 </tr>
 <tr>
 	<td>select</td>
