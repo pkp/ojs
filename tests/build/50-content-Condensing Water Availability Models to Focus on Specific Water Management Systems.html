@@ -4,22 +4,22 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost/git/ojs" />
-<title>50-content-Developing efficacy beliefs in the classroom</title>
+<title>50-content-Condensing Water Availability Models to Focus on Specific Water Management Systems</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">50-content-Developing efficacy beliefs in the classroom</td></tr>
+<tr><td rowspan="1" colspan="3">50-content-Condensing Water Availability Models to Focus on Specific Water Management Systems</td></tr>
 </thead><tbody>
 <!--Set up variables-->
 <tr>
 	<td>store</td>
-	<td>Developing efficacy beliefs in the classroom</td>
+	<td>Condensing Water Availability Models to Focus on Specific Water Management Systems</td>
 	<td>title</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>dsokoloff</td>
+	<td>jnovak</td>
 	<td>alias</td>
 </tr>
 <!--Register Author-->
@@ -41,12 +41,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=firstName-]</td>
-	<td>Domatilia</td>
+	<td>John</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=lastName-]</td>
-	<td>Sokoloff</td>
+	<td>Novak</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -76,12 +76,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=affiliation-]</td>
-	<td>University College Cork</td>
+	<td>Aalborg University</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=country</td>
-	<td>label=Ireland</td>
+	<td>label=Denmark</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -239,13 +239,13 @@
 </tr>
 <tr>
 	<td>runScript</td>
-	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.');</td>
+	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.');</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
 	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>education, citizenship,</td>
+	<td>water,</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -374,7 +374,7 @@
 <tr>
 	<td>select</td>
 	<td>id=userId</td>
-	<td>label=David Buskins</td>
+	<td>label=Stephanie Berardo</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -410,57 +410,6 @@
 <tr>
 	<td>click</td>
 	<td>//form[@id='initiateReview']//span[text()='Send to External Review']/..</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<!--Add reviewer-->
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=[id^=reviewerId_input-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>css=[id^=reviewerId_input-]</td>
-	<td>phudson</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//a[text()='Paul Hudson']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>mouseOver</td>
-	<td>//a[text()='Paul Hudson']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[text()='Paul Hudson']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[text()='Add Reviewer']/..</td>
 	<td></td>
 </tr>
 <tr>
@@ -585,12 +534,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=username-]</td>
-	<td>phudson</td>
+	<td>amccrae</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=password-]</td>
-	<td>phudsonphudson</td>
+	<td>amccraeamccrae</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -637,7 +586,106 @@
 <tr>
 	<td>select</td>
 	<td>id=recommendation</td>
-	<td>label=Decline Submission</td>
+	<td>label=Revisions Required</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Submit Review']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Submit Review']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#ui-tabs-4 &gt; h2</td>
+	<td>Review Submitted</td>
+</tr>
+<!--Log out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<!--Log in as reviewer-->
+<tr>
+	<td>type</td>
+	<td>css=[id^=username-]</td>
+	<td>agallego</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password-]</td>
+	<td>agallegoagallego</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<!--Find the reviewer's assignment-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[contains(text(),'${title}')]/../../..//a[@title='View this item']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'${title}')]/../../..//a[@title='View this item']</td>
+	<td></td>
+</tr>
+<!--Perform the review-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Accept Review, Continue to Step #2']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Accept Review, Continue to Step #2']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Continue to Step #3']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Continue to Step #3']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=recommendation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=recommendation</td>
+	<td>label=Resubmit for Review</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
