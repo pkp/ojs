@@ -74,9 +74,14 @@
 	<td>${alias}${alias}</td>
 </tr>
 <tr>
+	<td>type</td>
+	<td>css=[id^=affiliation-]</td>
+	<td>University College Cork</td>
+</tr>
+<tr>
 	<td>select</td>
 	<td>id=country</td>
-	<td>label=Italy</td>
+	<td>label=Ireland</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -338,6 +343,11 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
+	<td>//form[@id='initiateReview']//input[@type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
 	<td>//form[@id='initiateReview']//span[text()='Send to External Review']/..</td>
 	<td></td>
 </tr>
@@ -375,6 +385,11 @@
 <tr>
 	<td>pause</td>
 	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//a[text()='Paul Hudson']</td>
 	<td></td>
 </tr>
 <tr>
@@ -424,6 +439,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>//a[text()='Aisla McCrae']</td>
+	<td></td>
+</tr>
+<tr>
 	<td>mouseOver</td>
 	<td>//a[text()='Aisla McCrae']</td>
 	<td></td>
@@ -465,8 +485,8 @@
 	<td>agallego</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>waitForElementPresent</td>
+	<td>//a[text()='Adela Gallego']</td>
 	<td></td>
 </tr>
 <tr>
@@ -488,6 +508,100 @@
 	<td>pause</td>
 	<td>1000</td>
 	<td></td>
+</tr>
+<!--Log out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<!--Log in as reviewer-->
+<tr>
+	<td>type</td>
+	<td>css=[id^=username-]</td>
+	<td>phudson</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password-]</td>
+	<td>phudsonphudson</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<!--Find the reviewer's assignment-->
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'${title}')]/../../..//a[@title='View this item']</td>
+	<td></td>
+</tr>
+<!--Perform the review-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Accept Review, Continue to Step #2']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Accept Review, Continue to Step #2']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Continue to Step #3']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Continue to Step #3']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=recommendation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=recommendation</td>
+	<td>label=Decline Submission</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Submit Review']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Submit Review']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#ui-tabs-4 &gt; h2</td>
+	<td>Review Submitted</td>
 </tr>
 <!--Log out-->
 <tr>
