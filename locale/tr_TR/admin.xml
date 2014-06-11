@@ -26,6 +26,7 @@
 	<message key="admin.languages.downloadFailed">Dil indirme başarısız. Hata mesaj(lar)ı aşağıda belirtilmiştir.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" dili yüklendi.</message>
 	<message key="admin.languages.download">Dil İndir</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Varsayılan e-posta şablonları güncelle</message>
 	<message key="admin.languages.download.cannotOpen">PKP web sitesinden dil tanımlayıcısı açılamıyor.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Dil kayıt dosyasına yeni dil eklenemiyor, tipik "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">ADS Üye Veri Tabanı</message>

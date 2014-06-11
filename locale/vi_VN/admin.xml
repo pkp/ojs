@@ -25,6 +25,7 @@
 	<message key="admin.languages.downloadFailed">Ngôn ngữ không tải được. Thông báo lỗi dưới đây giải thích về sự cố này.</message>
 	<message key="admin.languages.localeInstalled">Ngôn ngữ "{$locale}" đã được cài đặt.</message>
 	<message key="admin.languages.download">Tải Ngôn ngữ</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Nạp lại mẫu email mặc định</message>
 	<message key="admin.languages.download.cannotOpen">Không mở được định danh ngôn ngữ từ website của PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Không thể thêm ngôn ngữ mới vào file đăng ký ngôn ngữ, thường là "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">CSDL người dùng OJS</message>

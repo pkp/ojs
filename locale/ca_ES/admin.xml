@@ -25,6 +25,7 @@
 	<message key="admin.languages.downloadFailed">La descàrrega d'idioma ha fallat. Els següents missatges d'error en descriuen el motiu.</message>
 	<message key="admin.languages.localeInstalled">S'ha instal·lat l'idioma "{$locale}".</message>
 	<message key="admin.languages.download">Descarregar l'dioma</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Actualitzar plantilles de correu electrònic per defecte</message>
 	<message key="admin.languages.download.cannotOpen">No es pot obrir el descriptor d'idioma del lloc web de PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">No es pot afegir el nou idioma al registre de llengües, normalment ubicat a "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Base de dades d'usuaris OJS</message>

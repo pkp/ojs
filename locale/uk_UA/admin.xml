@@ -28,6 +28,7 @@
        <message key="admin.languages.downloadFailed">Завантаження локалізації невдале. Причини невдачі деталізовані у списку нижче.</message>
        <message key="admin.languages.localeInstalled">"{$locale}" локалізація була встановлена.</message>
        <message key="admin.languages.download">Завантажити локалізацію</message>
+       <message key="admin.languages.reloadDefaultEmailTemplates">Перезавантаження шаблони листів за замовчуванням</message>
        <message key="admin.languages.download.cannotOpen">Не вдається відкрити мовний дескриптор з веб-сайту PKP.</message>
        <message key="admin.languages.download.cannotModifyRegistry">Не вдається додати нову локалізацію до реєстраційного файлу локалізацій, типово "registry/locales.xml".</message>
        <message key="admin.auth.ojs">База даних користувачів OJS</message>

@@ -26,6 +26,7 @@
 	<message key="admin.languages.downloadFailed">语言环境下载失败.错误提示信息描述如下.</message>
 	<message key="admin.languages.localeInstalled">语言环境 "{$locale}" 已经被安装. </message>
 	<message key="admin.languages.download">下载语言环境</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">加载默认的电子邮件模板</message>
 	<message key="admin.languages.download.cannotOpen">无法从PKP网站打开语言描述.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">无法添加一个新的语言环境到注册文件"registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS用户数据库</message>

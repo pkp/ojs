@@ -38,6 +38,7 @@
 	<message key="admin.languages.downloadFailed">Das Herunterladen der Regionaleinstellung ist fehlgeschlagen. Die Fehlernachricht(en) weiter unten beschreiben den Fehler.</message>
 	<message key="admin.languages.localeInstalled">Die Regionaleinstellung "{$locale}" wurde installiert.</message>
 	<message key="admin.languages.download">Regionaleinstellung herunterladen</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Seite neu laden Standard-E-Mail-Vorlagen</message>
 	<message key="admin.languages.download.cannotOpen">Die Sprachbeschreibung von der PKP-Webseite kann nicht geöffnet werden.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Die neue Regionaleinstellung kann nicht zu der Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") hinzugefügt werden.</message>
 	<message key="admin.auth.ojs">OJS-Benutzer/innen-Datenbank</message>

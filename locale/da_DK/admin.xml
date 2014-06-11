@@ -25,6 +25,7 @@
 	<message key="admin.languages.downloadFailed">Overførslen af landestandarden mislykkedes. Fejlen er beskrevet i nedenstående fejlmeddelelse(r).</message>
 	<message key="admin.languages.localeInstalled">Landestandarden "{$locale}" er blevet installeret.</message>
 	<message key="admin.languages.download">Hent landestandard</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Reload standard e-mail-skabeloner</message>
 	<message key="admin.languages.download.cannotOpen">Det er ikke muligt at åbne sprogbeskrivelsen fra PKP-webstedet.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Det er ikke muligt at føje den nye landestandard til landestandardens registreringsdatabasefil, normalt "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS-brugerdatabase</message>
