@@ -1115,7 +1115,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="submission.copyrightStatement">Direitos autorais {$copyrightYear} {$copyrightHolder}</message>
 	<message key="submission.licenseURLValid">Informe uma URL válida  (inclua o http://).</message>
 	<message key="submission.licenseURL">URL da licensa</message>
-	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Atribuição-NãoComercial-SemDerivações 4.0</message>
 	<message key="submission.license.cc.by-nc4">CC Atribuição-NãoComercial 4.0</message>
 	<message key="submission.license.cc.by-nc-sa4">CC Atribuição-NãoComercial-CompartilhaIgual 4.0</message>
 	<message key="submission.license.cc.by-nd4">CC Atribuição-SemDerivações 4.0</message>
