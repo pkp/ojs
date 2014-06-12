@@ -4,22 +4,22 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost/git/ojs" />
-<title>50-content-Traditions and Trends in the Study of the Commons</title>
+<title>60-content-Investigating the Shared Background Required for Argument</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">50-content-Traditions and Trends in the Study of the Commons</td></tr>
+<tr><td rowspan="1" colspan="3">60-content-Investigating the Shared Background Required for Argument</td></tr>
 </thead><tbody>
 <!--Set up variables-->
 <tr>
 	<td>store</td>
-	<td>Traditions and Trends in the Study of the Commons</td>
+	<td>Investigating the Shared Background Required for Argument: A Critique of Fogelin’s Thesis on Deep Disagreement</td>
 	<td>title</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>eostrom</td>
+	<td>dphillips</td>
 	<td>alias</td>
 </tr>
 <!--Register Author-->
@@ -41,12 +41,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=firstName-]</td>
-	<td>Elinor</td>
+	<td>Dana</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=lastName-]</td>
-	<td>Ostrom</td>
+	<td>Phillips</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -76,12 +76,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=affiliation-]</td>
-	<td>Indiana University</td>
+	<td>University of Toronto</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=country</td>
-	<td>label=United States</td>
+	<td>label=Canada</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -239,59 +239,13 @@
 </tr>
 <tr>
 	<td>runScript</td>
-	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('The study of the commons has experienced substantial growth and development over the past decades. Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sectors in their own region of interest, or in other regions of the world. ');</td>
+	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.');</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
 	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>Common pool resource, common property, intellectual developments,</td>
-</tr>
-<!--    Add another author-->
-<tr>
-	<td>click</td>
-	<td>css=[id^=component-grid-users-author-authorgrid-addAuthor-button-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=[id^=firstName-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=[id^=firstName-]</td>
-	<td>Frank</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=[id^=lastName-]</td>
-	<td>van Laerhoven</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=country</td>
-	<td>label=United States</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=[id^=email-]</td>
-	<td>fvanlaerhoven@mailinator.com</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=[id^=affiliation-]</td>
-	<td>Indiana University</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//label[text()='Author']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[text()='Save']/..</td>
-	<td></td>
+	<td>employees, survey,</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -420,7 +374,7 @@
 <tr>
 	<td>select</td>
 	<td>id=userId</td>
-	<td>label=David Buskins</td>
+	<td>label=Stephanie Berardo</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -430,6 +384,267 @@
 <tr>
 	<td>pause</td>
 	<td>1000</td>
+	<td></td>
+</tr>
+<!--Send to review-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Send to External Review']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Send to External Review']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//form[@id='initiateReview']//input[@type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//form[@id='initiateReview']//span[text()='Send to External Review']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='initiateReview']//span[text()='Send to External Review']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--Add reviewer-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td>jjanssen</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//a[text()='Julie Janssen']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//a[text()='Julie Janssen']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[text()='Julie Janssen']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Add Reviewer']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--Add reviewer-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td>agallego</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//a[text()='Adela Gallego']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//a[text()='Adela Gallego']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[text()='Adela Gallego']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Add Reviewer']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--Assign a Copyeditor-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Editorial</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=participantToggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=participantToggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=userGroupId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=userGroupId</td>
+	<td>label=Copyeditor</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=userId</td>
+	<td>label=Maria Fritz</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--Send to Production-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Send To Production']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Send To Production']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Record Editorial Decision']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Record Editorial Decision']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--Assign Layout Editor-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=participantToggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=participantToggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=userGroupId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=userGroupId</td>
+	<td>label=Layout Editor</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=userId</td>
+	<td>label=Graham Cox</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=submitFormButton-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <!--Log out-->
@@ -448,7 +663,6 @@
 	<td>link=Login</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

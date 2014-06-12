@@ -4,18 +4,35 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost/git/ojs" />
-<title>45-section editors</title>
+<title>50-section editors</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">45-section editors</td></tr>
+<tr><td rowspan="1" colspan="3">50-section editors</td></tr>
 </thead><tbody>
+<!--Log in as admin-->
 <tr>
-	<td>open</td>
-	<td>${baseUrl}</td>
+	<td>clickAndWait</td>
+	<td>link=Login</td>
 	<td></td>
 </tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=username-]</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password-]</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<!--Go to Setup-->
 <tr>
 	<td>waitForTextPresent</td>
 	<td>Administration</td>
@@ -129,8 +146,8 @@
 	<td>Review Article</td>
 </tr>
 <tr>
-	<td>uncheck</td>
-	<td>css=[id^=abstractsNotRequired-]</td>
+	<td>click</td>
+	<td>id=abstractsNotRequired</td>
 	<td></td>
 </tr>
 <tr>
@@ -166,6 +183,17 @@
 <tr>
 	<td>pause</td>
 	<td>1000</td>
+	<td></td>
+</tr>
+<!--Log out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
 	<td></td>
 </tr>
 </tbody></table>

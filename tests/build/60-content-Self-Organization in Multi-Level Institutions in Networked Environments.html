@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/git/ojs" />
+<title>60-content-Self-Organization in Multi-Level Institutions in Networked Environments</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">60-content-Self-Organization in Multi-Level Institutions in Networked Environments</td></tr>
+</thead><tbody>
+<!--Set up variables-->
+<tr>
+	<td>store</td>
+	<td>Self-Organization in Multi-Level Institutions in Networked Environments</td>
+	<td>title</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>vwilliamson</td>
+	<td>alias</td>
+</tr>
+<!--Register Author-->
+<tr>
+	<td>open</td>
+	<td>${baseUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=firstName-]</td>
+	<td>Valerie</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=lastName-]</td>
+	<td>Williamson</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=username-]</td>
+	<td>${alias}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=email-]</td>
+	<td>${alias}@mailinator.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=confirmEmail-]</td>
+	<td>${alias}@mailinator.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password-]</td>
+	<td>${alias}${alias}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password2-]</td>
+	<td>${alias}${alias}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=affiliation-]</td>
+	<td>University of Windsor</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country</td>
+	<td>label=Canada</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[text()='Author']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='Register']/..</td>
+	<td></td>
+</tr>
+<!--Submit Article-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[starts-with(., 'Start a New Submission')]/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[starts-with(., 'Start a New Submission')]/..</td>
+	<td></td>
+</tr>
+<!--Step 1-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=sectionId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=sectionId</td>
+	<td>label=Articles</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checklist-5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=[id^=submitFormButton-]</td>
+	<td></td>
+</tr>
+<!--Step 2-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=genreId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=genreId</td>
+	<td>label=Submission</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('.plupload.html5 input, .plupload.html5').attr('style', '');</td>
+	<td>${dummyFilePath}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.html5 input</td>
+	<td>${dummyfilepath}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Start Upload']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>100%</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=name-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=[id^=name-]</td>
+	<td>${title}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Continue']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Complete']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Complete']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Save and continue']/..</td>
+	<td></td>
+</tr>
+<!--Step 3-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=title-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=title-]</td>
+	<td>${title}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
+	<td>Self-Organization, Multi-Level Institutions, Goverance,</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Finish Submission']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>250</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='OK']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--Log out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<!--Log in as Editor to deal with submission workflow status-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=username-]</td>
+	<td>dbarnes</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=password-]</td>
+	<td>dbarnesdbarnes</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<!--Find the submission-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Submissions')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Submissions')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//a[text()='${title}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[text()='${title}']</td>
+	<td></td>
+</tr>
+<!--Decline the submission-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Decline Submission']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Decline Submission']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='Record Editorial Decision']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Record Editorial Decision']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--Log out-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

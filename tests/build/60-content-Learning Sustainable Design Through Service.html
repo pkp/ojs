@@ -4,22 +4,22 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost/git/ojs" />
-<title>50-content-Towards Designing an Intercultural Curriculum</title>
+<title>60-content-Learning Sustainable Design Through Service</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">50-content-Towards Designing an Intercultural Curriculum</td></tr>
+<tr><td rowspan="1" colspan="3">60-content-Learning Sustainable Design Through Service</td></tr>
 </thead><tbody>
 <!--Set up variables-->
 <tr>
 	<td>store</td>
-	<td>Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</td>
+	<td>Learning Sustainable Design through Service</td>
 	<td>title</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>pdaniel</td>
+	<td>kalkhafaji</td>
 	<td>alias</td>
 </tr>
 <!--Register Author-->
@@ -41,12 +41,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=firstName-]</td>
-	<td>Patricia</td>
+	<td>Karim</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=lastName-]</td>
-	<td>Daniel</td>
+	<td>Al-Khafaji</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -76,12 +76,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=affiliation-]</td>
-	<td>University of Wolverhampton</td>
+	<td>Stanford University</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=country</td>
-	<td>label=United Kingdom</td>
+	<td>label=United States</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -239,13 +239,59 @@
 </tr>
 <tr>
 	<td>runScript</td>
-	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.')</td>
+	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.')</td>
 	<td></td>
 </tr>
 <tr>
 	<td>sendKeys</td>
 	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>21st Century, Diversity, Multilingual, Multiethnic, Participatory Pedagogy, Language, Culture, Gender, Egalitarianism, Social Transformation,</td>
+	<td>Development, engineering education, service learning, sustainability,</td>
+</tr>
+<!--    Add another author-->
+<tr>
+	<td>click</td>
+	<td>css=[id^=component-grid-users-author-authorgrid-addAuthor-button-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=firstName-]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=firstName-]</td>
+	<td>Margaret</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=lastName-]</td>
+	<td>Morse</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country</td>
+	<td>label=United States</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=email-]</td>
+	<td>mmorse@mailinator.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id^=affiliation-]</td>
+	<td>Stanford University</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[text()='Author']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[text()='Save']/..</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>

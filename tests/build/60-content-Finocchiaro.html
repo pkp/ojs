@@ -4,22 +4,22 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost/git/ojs" />
-<title>50-content-Developing efficacy beliefs in the classroom</title>
+<title>60-content-Finocchiaro</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">50-content-Developing efficacy beliefs in the classroom</td></tr>
+<tr><td rowspan="1" colspan="3">60-content-Finocchiaro</td></tr>
 </thead><tbody>
 <!--Set up variables-->
 <tr>
 	<td>store</td>
-	<td>Developing efficacy beliefs in the classroom</td>
+	<td>Finocchiaro: Arguments About Arguments</td>
 	<td>title</td>
 </tr>
 <tr>
 	<td>store</td>
-	<td>dsokoloff</td>
+	<td>zwoods</td>
 	<td>alias</td>
 </tr>
 <!--Register Author-->
@@ -41,12 +41,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=firstName-]</td>
-	<td>Domatilia</td>
+	<td>Zita</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=[id^=lastName-]</td>
-	<td>Sokoloff</td>
+	<td>Woods</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -76,12 +76,12 @@
 <tr>
 	<td>type</td>
 	<td>css=[id^=affiliation-]</td>
-	<td>University College Cork</td>
+	<td>CUNY</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=country</td>
-	<td>label=Ireland</td>
+	<td>label=United States</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -113,7 +113,7 @@
 <tr>
 	<td>select</td>
 	<td>id=sectionId</td>
-	<td>label=Articles</td>
+	<td>label=Reviews</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -234,21 +234,6 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>runScript</td>
-	<td>tinyMCE.get(document.evaluate('//textarea[contains(@id, \'abstract\')]', document, null, 9, null).singleNodeValue.id).setContent('A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.');</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>education, citizenship,</td>
-</tr>
-<tr>
-	<td>pause</td>
 	<td>500</td>
 	<td></td>
 </tr>
@@ -269,7 +254,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>500</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <!--Log out-->
@@ -330,62 +315,6 @@
 	<td>//a[text()='${title}']</td>
 	<td></td>
 </tr>
-<!--Assign the SE-->
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=participantToggle</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=participantToggle</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=userGroupId</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=userGroupId</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=userGroupId</td>
-	<td>label=Section editor</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=userId</td>
-	<td>label=David Buskins</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[text()='OK']/..</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
 <!--Send to review-->
 <tr>
 	<td>waitForElementPresent</td>
@@ -437,11 +366,6 @@
 	<td>sendKeys</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>phudson</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -519,140 +443,51 @@
 	<td>2000</td>
 	<td></td>
 </tr>
-<!--Add reviewer-->
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=[id^=reviewerId_input-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>css=[id^=reviewerId_input-]</td>
-	<td>agallego</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//a[text()='Adela Gallego']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>mouseOver</td>
-	<td>//a[text()='Adela Gallego']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//a[text()='Adela Gallego']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[text()='Add Reviewer']/..</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<!--Log out-->
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
-</tr>
+<!--Assign a Copyeditor-->
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>link=Editorial</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=Login</td>
-	<td></td>
-</tr>
-<!--Log in as reviewer-->
-<tr>
-	<td>type</td>
-	<td>css=[id^=username-]</td>
-	<td>phudson</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=[id^=password-]</td>
-	<td>phudsonphudson</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[text()='Login']/..</td>
-	<td></td>
-</tr>
-<!--Find the reviewer's assignment-->
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//span[contains(text(),'${title}')]/../../..//a[@title='View this item']</td>
+	<td>id=participantToggle</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//span[contains(text(),'${title}')]/../../..//a[@title='View this item']</td>
+	<td>id=participantToggle</td>
 	<td></td>
 </tr>
-<!--Perform the review-->
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//span[text()='Accept Review, Continue to Step #2']/..</td>
+	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//span[text()='Accept Review, Continue to Step #2']/..</td>
+	<td>css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//span[text()='Continue to Step #3']/..</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//span[text()='Continue to Step #3']/..</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=recommendation</td>
+	<td>id=userGroupId</td>
 	<td></td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=recommendation</td>
-	<td>label=Decline Submission</td>
+	<td>id=userGroupId</td>
+	<td>label=Copyeditor</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>//span[text()='Submit Review']/..</td>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//span[text()='Submit Review']/..</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//span[text()='OK']/..</td>
-	<td></td>
+	<td>select</td>
+	<td>id=userId</td>
+	<td>label=Sarah Vogt</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -660,9 +495,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=#ui-tabs-4 &gt; h2</td>
-	<td>Review Submitted</td>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
 </tr>
 <!--Log out-->
 <tr>
@@ -680,7 +515,6 @@
 	<td>link=Login</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
