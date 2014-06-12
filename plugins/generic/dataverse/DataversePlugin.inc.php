@@ -300,6 +300,8 @@ class DataversePlugin extends GenericPlugin {
 				$templateMgr->register_outputfilter(array(&$this, 'rtMetadataOutputFilter'));
 				break;
 			case 'rt/suppFiles.tpl':
+				$templateMgr->register_outputfilter(array(&$this, 'rtSuppFilesOutputFilter'));
+				break;
 			case 'rt/suppFilesView.tpl':				
 				$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');				 
 				$article =& $templateMgr->get_template_vars('article');
@@ -325,7 +327,7 @@ class DataversePlugin extends GenericPlugin {
 	 * display Dataverse Terms of Use
 	 * @param $output string
 	 * @param $templateMgr TemplateManager
-	 * @return $string
+	 * @return $string Filtered output
 	 */
 	function termsOfUseOutputFilter($output, &$templateMgr) {
 		$title = '<title>'. __('rt.readingTools') .'</title>';
@@ -347,7 +349,7 @@ class DataversePlugin extends GenericPlugin {
 	 * local download links for suppfiles deposited in Dataverse.
 	 * @param $output string
 	 * @param $templateMgr TemplateManager
-	 * @return string
+	 * @return string Filtered output
 	 */
 	function rtMetadataOutputFilter($output, &$templateMgr) {
 		$article =& $templateMgr->get_template_vars('article');
@@ -424,7 +426,41 @@ class DataversePlugin extends GenericPlugin {
 		$templateMgr->unregister_outputfilter('rtMetadataOutputFilter');
 		return $output;
 	}
-		
+	
+	/**
+	 * Output filter. If suppfile is in Dataverse, filter replaces link to view
+	 * or download suppfiles from OJS with link to dataset in Dataverse.
+	 * @param $output string
+	 * @param $templateMgr TemplateManager
+	 * @return string Filtered output
+	 */
+	function rtSuppFilesOutputFilter($output, &$templateMgr) {
+		$article =& $templateMgr->get_template_vars('article');
+		$currentJournal =& $templateMgr->get_template_vars('currentJournal');		
+		$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');				
+		$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());
+		if (isset($study)) {
+			$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
+			foreach ($article->getSuppFiles() as $suppFile) {
+				$dvFile = $dvFileDao->getDataverseFileBySuppFileId($suppFile->getId(), $article->getId());
+				if (isset($dvFile)) {
+					// Find and replace local download link w/ dataset URI 
+					$params = array(
+							'page' => 'article',
+							'op'   => 'downloadSuppFile',
+							'path' => array($article->getBestArticleId(), $suppFile->getBestSuppFileId($currentJournal))
+					);
+					$suppFileUrl = $templateMgr->smartyUrl($params, $templateMgr);
+					$pattern = '/<a href="'. preg_quote($suppFileUrl, '/') .'" class="action">.+?<\/a>/';
+					$replace = '<a href="'. $study->getPersistentUri() .'" class="action">'. __('plugins.generic.dataverse.suppFiles.view') .'</a>';
+					$output = preg_replace($pattern, $replace, $output);
+				}
+			}
+		}
+		$templateMgr->unregister_outputfilter('rtSuppFilesOutputFilter');
+		return $output;
+	}
+	
 	/**
 	 * Output filter adds data citation to submission summary.
 	 * @param $output string
