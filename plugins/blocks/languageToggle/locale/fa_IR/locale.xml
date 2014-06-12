@@ -13,4 +13,5 @@
 <locale full_name="Farsi" name="fa_IR" >
 	<message key="plugins.block.languageToggle.displayName" >بلوک انتخاب زبان</message>
 	<message key="plugins.block.languageToggle.description" >این پلاگین بلوک حاشیه ای برای انتخاب زبان ایجاد میکند.</message>
+	<message key="plugins.block.languageToggle.selectLabel">انتخاب زبان</message>
 </locale>

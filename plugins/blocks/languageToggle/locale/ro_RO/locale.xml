@@ -15,4 +15,5 @@
 <locale name="ro_RO" full_name="Română">
 	<message key="plugins.block.languageToggle.displayName">Zona pentru schimbarea limbilor</message>
 	<message key="plugins.block.languageToggle.description">Acest modul oferă un instrument necesar schimbării limbii.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Selectați limba</message>
 </locale>

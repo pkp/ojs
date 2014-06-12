@@ -15,4 +15,5 @@
 <locale name="da_DK" full_name="Danish">
 	<message key="plugins.block.languageToggle.displayName">Sprogvælgerfunktion</message>
 	<message key="plugins.block.languageToggle.description">Dette plugin indsætter funktion til valg af sprog i sidekolonnen.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Vælg sprog</message>
 </locale>

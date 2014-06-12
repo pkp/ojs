@@ -15,4 +15,5 @@
 <locale name="sr_SR" full_name="Serbian">
 	<message key="plugins.block.languageToggle.displayName">Blok promene jezika</message>
 	<message key="plugins.block.languageToggle.description">Ovaj blok prikazuje alatku za promenu jezika interfejsa.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Odaberite jezik</message>
 </locale>
