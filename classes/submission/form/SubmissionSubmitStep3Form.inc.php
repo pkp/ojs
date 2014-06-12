@@ -29,6 +29,18 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 	}
 
 	/**
+	 * @copydoc SubmissionSubmitForm::fetch
+	 */
+	function fetch($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($this->submission->getSectionId());
+
+		$templateMgr->assign('abstractsNotRequired', $section->getAbstractsNotRequired());
+		return parent::fetch($request);
+	}
+
+	/**
 	 * Save changes to submission.
 	 * @param $args array
 	 * @param $request PKPRequest
