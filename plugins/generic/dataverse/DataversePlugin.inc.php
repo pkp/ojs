@@ -302,22 +302,9 @@ class DataversePlugin extends GenericPlugin {
 			case 'rt/suppFiles.tpl':
 				$templateMgr->register_outputfilter(array(&$this, 'rtSuppFilesOutputFilter'));
 				break;
-			case 'rt/suppFilesView.tpl':				
-				$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');				 
-				$article =& $templateMgr->get_template_vars('article');
-				$study =& $dataverseStudyDao->getStudyBySubmissionId($article->getId());
-				if (!isset($study)) return false;
-				$dataverseFileDao =& DAORegistry::getDAO('DataverseFileDAO');
-				$dvFiles =& $dataverseFileDao->getDataverseFilesBySubmissionId($article->getId());
-				$dvFileIndex = array();
-				foreach ($dvFiles as $dvFile) {
-					$dvFileIndex[$dvFile->getSuppFileId()] = true;
-				}
-				$templateMgr->assign_by_ref('study', $study);				 
-				$templateMgr->assign('dvFileIndex', $dvFileIndex);
-				$templateMgr->assign('dataCitation', $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
-				$templateMgr->display($this->getTemplatePath() .'/'. $template);
-				return true;
+			case 'rt/suppFileView.tpl':
+				$templateMgr->register_outputfilter(array(&$this, 'rtSuppFileViewOutputFilter'));
+				break;
 		}
 		return false;
 	}
@@ -460,7 +447,37 @@ class DataversePlugin extends GenericPlugin {
 		$templateMgr->unregister_outputfilter('rtSuppFilesOutputFilter');
 		return $output;
 	}
-	
+
+	/**
+	 * Output filter replaces local suppfile download link in RT suppfile metadata
+	 * page with link to dataset, if suppfile deposited in Dataverse.
+	 * @param $output string
+	 * @param $templateMgr TemplateManager
+	 * @return string Filtered output
+	 */
+	function rtSuppFileViewOutputFilter($output, &$templateMgr) {
+		$article =& $templateMgr->get_template_vars('article');
+		$suppFile =& $templateMgr->get_template_vars('suppFile');
+		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
+		$dvFile = $dvFileDao->getDataverseFileBySuppFileId($suppFile->getId(), $article->getId());
+		if (isset($dvFile)) {
+			// Get citation for dataset that contains the file
+			$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
+			$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());
+			if (isset($study)) {
+				// Replace local suppfile information with data citation & link to dataset
+				$preMatch = '(<div id="supplementaryFileUpload">.+?<table width="100%" class="data">)';
+				$postMatch = '(<\/table>\s*<\/div>)';
+				$replace = 	'<tr valign="top">';
+				$replace .= '<td width="20%" class="label">'. __('plugins.generic.dataverse.dataCitation') .'</td>';
+				$replace .= '<td width="80%" class="value">'. $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()) .'</td>';
+				$replace .= '</tr>';
+				$output = preg_replace("/$preMatch.+?$postMatch/s", "$1$replace$2", $output);
+			}
+		}
+		$templateMgr->unregister_outputfilter('rtSuppFileViewOutputFilter');
+		return $output;
+	}
 	/**
 	 * Output filter adds data citation to submission summary.
 	 * @param $output string
