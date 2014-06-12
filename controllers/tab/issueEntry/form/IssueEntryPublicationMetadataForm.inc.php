@@ -50,7 +50,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$this->_formParams = $formParams;
 		$this->_userId = $userId;
 		$this->addCheck(new FormValidatorPost($this));
-		if ($formParams['expeditedSubmission']) {
+		if (isset($formParams['expeditedSubmission']) && $formParams['expeditedSubmission']) {
 			// make choosing an issue mandatory for expedited submissions.
 			$request = Application::getRequest();
 			$context = $request->getContext();
