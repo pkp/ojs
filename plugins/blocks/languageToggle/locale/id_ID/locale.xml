@@ -14,4 +14,5 @@
 <locale name="id_ID" full_name="Indonesia">
 	<message key="plugins.block.languageToggle.displayName">Blok Pengaturan Bahasa</message>
 	<message key="plugins.block.languageToggle.description">Plugin ini menyediakan pengaturan bahasa.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Pilih bahasa</message>
 </locale>

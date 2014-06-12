@@ -15,5 +15,6 @@
 <locale name="eu_ES" full_name="Euskara">
 	<message key="plugins.block.languageToggle.displayName">Hizkuntza aldatzeko blokea</message>
 	<message key="plugins.block.languageToggle.description">Plugin honek hizkuntza-aldatzeko aukera ematen du alboko barran.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Aukeratu hizkuntza</message>
 </locale>
 

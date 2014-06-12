@@ -15,4 +15,5 @@
 <locale name="no_NO" full_name="Norwegian">
 	<message key="plugins.block.languageToggle.displayName">Språkvekslingsblokk</message>
 	<message key="plugins.block.languageToggle.description">Denne programutvidelsen oppretter en språkveksler i sidespalten.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Velg språk</message>
 </locale>

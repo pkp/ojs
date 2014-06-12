@@ -15,4 +15,5 @@
 <locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.block.languageToggle.displayName">Chuyển đổi ngôn ngữ</message>
 	<message key="plugins.block.languageToggle.description">Công cụ này tạo ra ô chuyển đổi ngôn ngữ ở cột bên.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Chọn ngôn ngữ</message>
 </locale>

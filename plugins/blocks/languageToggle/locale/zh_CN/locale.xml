@@ -15,4 +15,5 @@
 <locale name="zh_CN" full_name="China">
 	<message key="plugins.block.languageToggle.displayName">语言切换单元</message>
 	<message key="plugins.block.languageToggle.description">本插件在边栏提供语言切换.</message>
+	<message key="plugins.block.languageToggle.selectLabel">选择语言</message>
 </locale>
