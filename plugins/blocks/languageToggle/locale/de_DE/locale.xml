@@ -15,5 +15,4 @@
 	<message key="plugins.block.languageToggle.selectLabel">Sprache auswählen</message>
 	<message key="plugins.block.languageToggle.displayName">Sprachwechsel-Block</message>
 	<message key="plugins.block.languageToggle.description">Dieses Plug-In liefert die Sprachwechselmöglichkeit in der Sidebar.</message>
-	<message key="plugins.block.languageToggle.selectLabel">Wählen Sie die Sprache</message>
 </locale>
