@@ -39,6 +39,7 @@
 	<message key="admin.languages.downloadFailed">Загрузка языка завершилась ошибкой. Сообщения ниже описывают эту ошибку.</message>
 	<message key="admin.languages.localeInstalled">Язык "{$locale}" был установлен.</message>
 	<message key="admin.languages.download">Загрузить язык</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Перезагрузка шаблоны писем по умолчанию</message>
 	<message key="admin.languages.download.cannotOpen">Невозможно открыть дескриптор языка с веб-сайта PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Невозможно добавить новый язык в файл списка языков, обычно расположенный «registry/locales.xml».</message>
 	<message key="admin.auth.ojs">База пользователей OJS</message>

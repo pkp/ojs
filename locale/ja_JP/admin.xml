@@ -25,6 +25,7 @@
 	<message key="admin.languages.downloadFailed">ロケールのダウンロードに失敗しました。以下のエラーメッセージに失敗の理由が書かれています。</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" ロケールがインストールされました。</message>
 	<message key="admin.languages.download">ロケールのダウンロード</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">デフォルトのメールテンプレートをリロード</message>
 	<message key="admin.languages.download.cannotOpen">PKPウェブサイトの言語記述ファイルをオープンできません。</message>
 	<message key="admin.languages.download.cannotModifyRegistry">新しいロケールをロケールレジストリ（通常、"registry/locales.xml"）に追加できません。</message>
 	<message key="admin.auth.ojs">OJSユーザデータベース</message>

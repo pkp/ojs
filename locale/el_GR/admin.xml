@@ -25,6 +25,7 @@
 	<message key="admin.languages.downloadFailed">Η μεταφόρτωση της γλώσσας απέτυχε. Το παρακάτω μήνυμα σφάλματος περιγράφει την αιτία της αποτυχίας.</message>
 	<message key="admin.languages.localeInstalled">Η γλώσσα "{$locale}" εγκαταστάθηκε.</message>
 	<message key="admin.languages.download">Μεταφόρτωση γλώσσας</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Ανανέωση προεπιλεγμένα πρότυπα ηλεκτρονικού ταχυδρομείου</message>
 	<message key="admin.languages.download.cannotOpen">Το άνοιγμα της περιγραφής της γλώσσας από τον ιστότοπο του PKP δεν ήταν εφικτό.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Η νέα γλώσσα δεν μπορεί να προστεθεί στο μητρώο γλωσσικών ρυθμίσεων, συνήθως το "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Βάση Δεδομένων Χρηστών του OJS</message>

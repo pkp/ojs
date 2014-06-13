@@ -25,6 +25,7 @@
 	<message key="admin.languages.downloadFailed">Erro ao baixar idioma. A seguir, um detalhamento do(s) erro(s).</message>
 	<message key="admin.languages.localeInstalled">Idioma "{$locale}" instalado.</message>
 	<message key="admin.languages.download">Baixar idioma</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Atualizar modelos de e-mail padrão</message>
 	<message key="admin.languages.download.cannotOpen">Não é possível abrir a identificação de idioma do portal do PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Não é possível incluir novo idioma no arquivo de registro de idiomas, geralmente "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Base de dados de usuários</message>

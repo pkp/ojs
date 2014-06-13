@@ -21,6 +21,7 @@
 	<message key="admin.languages.supportedLocalesInstructions">選擇這個網站支援的所有地區設定。本網站上的所有期刊皆可使用所選擇的地區設定，而且會在每一期刊的網站出現(但是可以經由期刊特定的設定所覆蓋)。如果只有一種語言被設定，語言選擇表單將不會出現，而相關的語言設定也不會出現。</message>
 	<message key="admin.languages.confirmUninstall">您確定您要解除安裝這個地區設定？這可能會影響到任何使用這個地區設定的期刊。</message>
 	<message key="admin.languages.installNewLocalesInstructions">安裝額外的地區設定以在這個系統取得語言支援。地區設定必須先安裝，系統上的期刊才能使用該地區語言。請參考OJS文件以取得關於增加語言支援的資訊。</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">加載默認的電子郵件模板</message>
 	<message key="admin.auth.ojs">OJS 使用者資料庫</message>
 	<message key="admin.auth.enableSyncProfiles">啟用使用者檔案同步化（如果這個認證外掛元件支持的話）。使用者帳號資訊會在使用者登入時，自動從遠端來源更新，而OJS內部的帳號變更（包括密碼變更）會自動地在更新至遠端來源。如果這個選項未被啟用，OJS帳號資訊會和遠端來源保持分離。</message>
 	<message key="admin.auth.enableSyncPasswords">啟用使用者密碼修訂（如果這個認證外掛元件支持的話）。啟用這個選項會允許使用者修改他們在OJS中的密碼，並且使用OJS的「忘記密碼」功能來重新設定被忘掉的密碼。如果這個選項沒有被啟用的話，使用者將無法使用這些功能。</message>

@@ -24,6 +24,7 @@
 	<message key="admin.languages.downloadFailed">Fallo en la descarga de configuraciones regionales. El/los siguiente/s mensaje/s de error describen el fallo.</message>
 	<message key="admin.languages.localeInstalled">La configuración regional "{$locale}" se ha instalado.</message>
 	<message key="admin.languages.download">Descargar configuración regional</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Actualizar Defecto Plantillas de correo electrónico</message>
 	<message key="admin.languages.download.cannotOpen">No se puede abrir el descriptor de idiomas del sitio web PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">No se puede añadir la nueva configuración regional al archivo de registro de configuraciones locales, normalmente "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">BD de usuarios/as de OJS</message>
