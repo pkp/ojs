@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @file PubMedExportDom.inc.php
+ * @file plugins/importexport/pubmed/PubMedExportDom.inc.php
  *
- * Copyright (c) 2003-2011 John Willinsky
+ * Copyright (c) 2003-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubMedExportDom
@@ -11,9 +11,6 @@
  *
  * @brief PubMed XML export plugin DOM functions
  */
-
-// $Id$
-
 
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
@@ -26,10 +23,10 @@ class PubMedExportDom {
 	 * Build article XML using DOM elements
 	 * @param $args Parameters to the plugin
 	 *
-	 * The DOM for this XML was developed according to the NLM 
-	 * Standard Publisher Data Format: 
+	 * The DOM for this XML was developed according to the NLM
+	 * Standard Publisher Data Format:
 	 * http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html
-	 */ 
+	 */
 
 	function &generatePubMedDom() {
 		// create the output XML document in DOM with a root node
@@ -48,7 +45,7 @@ class PubMedExportDom {
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
 
 		// register the editor submission DAO for use later
-		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
+		$editorSubmissionDao = DAORegistry::getDAO('EditorSubmissionDAO');
 
 		/* --- Article --- */
 		$root =& XMLCustomWriter::createElement($doc, 'Article');
@@ -60,7 +57,7 @@ class PubMedExportDom {
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
 		$publisherNode = XMLCustomWriter::createChildWithText($doc, $journalNode, 'PublisherName', $publisherInstitution);
 
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'JournalTitle', $journal->getLocalizedTitle());
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'JournalTitle', $journal->getLocalizedName());
 
 		// check various ISSN fields to create the ISSN tag
 		if ($journal->getSetting('printIssn') != '') $ISSN = $journal->getSetting('printIssn');
@@ -85,7 +82,7 @@ class PubMedExportDom {
 //		XMLCustomWriter::createChildWithText($doc, $root, 'Replaces', '');
 
 		/* --- ArticleTitle / VernacularTitle --- */
-		// there is some ambiguity between whether to use 
+		// there is some ambiguity between whether to use
 		// article->getlanguage or journal->getlocale
 		// PubMed requires english titles for ArticleTitle
 		$language = $article->getLanguage();
@@ -102,36 +99,27 @@ class PubMedExportDom {
 		$pages = $article->getPages();
 		if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
 			// simple pagination (eg. "pp. 3- 		8")
-			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);			
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
-		}elseif (preg_match("/(e[0-9]+)/i", $pages, $matches)) {
-			// elocation-id (eg. "e12")
 			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[1]);	
-		} //else {
-			// LS 20140604: This is incorrect; IDs should not be used in lieu of page numbers, per feedback from NLM ref:_00Dd0elj6._500d0H3rkQ:ref
-            // we need to insert something, so use the best ID possible
-			//XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId($journal));			
-			//XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId($journal));			
-		//}
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
+		} elseif (preg_match("/(e[0-9]+)\s*-\s*(e[0-9]+)/i", $pages, $matches)) { // e9 - e14, treated as page ranges
+			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[2]);
+		} elseif (preg_match("/(e[0-9]+)/i", $pages, $matches)) {
+			// single elocation-id (eg. "e12")
+			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[1]);
+		} else {
+			// we need to insert something, so use the best ID possible
+			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId($journal));
+			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId($journal));
+		}
 
 		/* --- DOI --- */
-        /* --- If no DOI, use the eScholarship ARK instead -- */
-		/* Query the sqlite database arks.db to see 
-		 eschol@submit-dev db] $ sqlite3 arks.db "select id from arks where external_id='18123'"
-         ark:13030/qt40k809h6
-         */
-		 $articleID = $article->getArticleID;
-		if ($doi = $article->getDOI()) {
+		if ($doi = $article->getPubId('doi')) {
 			$doiNode =& XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $doi, false);
 			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
-		}else {
-           $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id='$articleID'"');
-		   $ark = preg_grep ("ark:13030\/qt(.+)/",$qualifiedArk);
-		   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
-           XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'ARK');
-        }
-		
+		}
+
 		/* --- Language --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'Language', strtoupper($article->getLanguage()), false);
 
@@ -139,8 +127,9 @@ class PubMedExportDom {
 		$authorListNode =& XMLCustomWriter::createElement($doc, 'AuthorList');
 		XMLCustomWriter::appendChild($root, $authorListNode);
 
+		$authorIndex = 0;
 		foreach ($article->getAuthors() as $author) {
-			$authorNode =& PubMedExportDom::generateAuthorDom($doc, $author);
+			$authorNode =& PubMedExportDom::generateAuthorDom($doc, $author, $authorIndex++);
 			XMLCustomWriter::appendChild($authorListNode, $authorNode);
 		}
 
@@ -149,11 +138,11 @@ class PubMedExportDom {
 		// how this is handled is journal-specific, and will require either
 		// configuration in the plugin, or an update to the core code.
 		// this is also related to DOI-handling within OJS
-		if ($article->getPublicArticleId()) {
+		if ($article->getPubId('publisher-id')) {
 			$articleIdListNode =& XMLCustomWriter::createElement($doc, 'ArticleIdList');
 			XMLCustomWriter::appendChild($root, $articleIdListNode);
 
-			$articleIdNode =& XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPublicArticleId());
+			$articleIdNode =& XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPubId('publisher-id'));
 			XMLCustomWriter::setAttribute($articleIdNode, 'IdType', 'pii');
 		}
 
@@ -181,7 +170,7 @@ class PubMedExportDom {
 		// check if there is a revised version; if so, generate a revised tag
 		$revisedFileID = $article->getRevisedFileId();
 		if (!empty($revisedFileID)) {
-			$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+			$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
 			$articleFile =& $articleFileDao->getArticleFile($revisedFileID);
 
 			if ($articleFile) {
@@ -198,14 +187,21 @@ class PubMedExportDom {
 		return $root;
 	}
 
-	function &generateAuthorDom(&$doc, &$author) {
+	/**
+	 * Generate the Author node DOM for the specified author.
+	 * @param $doc DOMDocument
+	 * @param $author PKPAuthor
+	 * @param $authorIndex 0-based index of current author
+	 */
+	function &generateAuthorDom(&$doc, &$author, $authorIndex) {
 		$root =& XMLCustomWriter::createElement($doc, 'Author');
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'FirstName', ucfirst($author->getFirstName()));
 		XMLCustomWriter::createChildWithText($doc, $root, 'MiddleName', ucfirst($author->getMiddleName()), false);
 		XMLCustomWriter::createChildWithText($doc, $root, 'LastName', ucfirst($author->getLastName()));
 
-		if ($author->getPrimaryContact()) {
+		if ($authorIndex == 0) {
+			// See http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=7774
 			XMLCustomWriter::createChildWithText($doc, $root, 'Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail(), false);
 		}
 
