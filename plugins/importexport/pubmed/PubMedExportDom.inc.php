@@ -108,17 +108,29 @@ class PubMedExportDom {
 			// elocation-id (eg. "e12")
 			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $matches[1]);
 			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $matches[1]);	
-		} else {
-			// we need to insert something, so use the best ID possible
-			XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId($journal));			
-			XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId($journal));			
-		}
+		} //else {
+			// LS 20140604: This is incorrect; IDs should not be used in lieu of page numbers, per feedback from NLM ref:_00Dd0elj6._500d0H3rkQ:ref
+            // we need to insert something, so use the best ID possible
+			//XMLCustomWriter::createChildWithText($doc, $root, 'FirstPage', $article->getBestArticleId($journal));			
+			//XMLCustomWriter::createChildWithText($doc, $root, 'LastPage', $article->getBestArticleId($journal));			
+		//}
 
 		/* --- DOI --- */
+        /* --- If no DOI, use the eScholarship ARK instead -- */
+		/* Query the sqlite database arks.db to see 
+		 eschol@submit-dev db] $ sqlite3 arks.db "select id from arks where external_id='18123'"
+         ark:13030/qt40k809h6
+         */
+		 $articleID = $article->getArticleID;
 		if ($doi = $article->getDOI()) {
 			$doiNode =& XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $doi, false);
 			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
-		}
+		}else {
+           $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id='$articleID'"');
+		   $ark = preg_grep ("ark:13030\/qt(.+)/",$qualifiedArk);
+		   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
+           XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'ARK');
+        }
 		
 		/* --- Language --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'Language', strtoupper($article->getLanguage()), false);
