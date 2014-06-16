@@ -227,11 +227,11 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 						Request::redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
-						$this->setBreadCrumbs(true);
+						$this->setBreadcrumbs(true);
 						$form->display();
 					}
 				} else {
-					$this->setBreadCrumbs(true);
+					$this->setBreadcrumbs(true);
 					$form->initData();
 					$form->display();
 				}
