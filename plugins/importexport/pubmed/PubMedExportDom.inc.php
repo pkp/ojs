@@ -124,8 +124,7 @@ class PubMedExportDom {
 			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
 		}
 		else {
-		   $articleID = $article->getID();
-           //This works		   	   
+		   $articleID = $article->getID();           
 		   $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
 		   error_log('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where source = "ojs" AND external_id=' .$articleID. '"');
 		   error_log($qualifiedArk);
@@ -133,10 +132,10 @@ class PubMedExportDom {
 		    if (!$qualifiedArk){
 		         error_log($articleID . " has no ARK in the database!");
 		      }
-		      else {
-			    $ark = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk); 				
-			    $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
-                XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
+		    else {
+			   $ark = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk); 				
+			   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
+               XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
 			  }
         }
 		
