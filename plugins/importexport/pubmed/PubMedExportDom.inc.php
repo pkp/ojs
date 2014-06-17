@@ -124,7 +124,7 @@ class PubMedExportDom {
 			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
 		}
 		else {
-           $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id="'.$articleID.'""');
+           $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=20587"');
 		   //$ark = preg_grep ("ark:13030\/qt(.+)/",$qualifiedArk);
 		   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $qualifiedArk, false);
            XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
