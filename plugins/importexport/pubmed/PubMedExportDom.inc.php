@@ -127,16 +127,15 @@ class PubMedExportDom {
 		   $articleID = $article->getID();
            //This works		   	   
 		   $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
-		   error_log('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
+		   error_log('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where source = "ojs" AND external_id=' .$articleID. '"');
 		   error_log($qualifiedArk);
           
 		    if (!$qualifiedArk){
 		         error_log($articleID . " has no ARK in the database!");
 		      }
 		      else {
-			    $ark = preg_grep ("ark:13030\/qt(.+)/",$qualifiedArk); 
-				$arkURL = "http://escholarship.org/uc/item/" . $ark;
-			    $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $arkURL, false);
+			    $ark = egrep_replace("ark:13030\/","http://www.escholarship.org/uc/item/",$qualifiedArk); 				
+			    $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
                 XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
 			  }
         }
