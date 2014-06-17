@@ -134,7 +134,7 @@ class PubMedExportDom {
 		         error_log($articleID . " has no ARK in the database!");
 		      }
 		      else {
-			    $ark = egrep_replace("ark:13030\/","http://www.escholarship.org/uc/item/",$qualifiedArk); 				
+			    $ark = ereg_replace("ark:13030\/","http://www.escholarship.org/uc/item/",$qualifiedArk); 				
 			    $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
                 XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
 			  }
