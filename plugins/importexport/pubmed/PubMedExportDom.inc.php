@@ -118,7 +118,7 @@ class PubMedExportDom {
 		/* --- DOI --- */
         /* --- If no DOI, use the eScholarship ARK instead -- */
 		
-		 $articleID = $article->getArticleID;
+		 $articleID = $article->getID;
 		if ($doi = $article->getDOI()) {
 			$doiNode =& XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $doi, false);
 			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
