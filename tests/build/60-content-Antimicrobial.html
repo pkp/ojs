@@ -202,8 +202,18 @@
 	<td>Antimicrobial, heavy metal resistance and plasmid profile of coliforms</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
 	<td></td>
 </tr>
 <tr>
@@ -419,7 +429,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <!--Add reviewer-->
@@ -439,9 +449,24 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>jjanssen</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td>jjanssen</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -485,13 +510,23 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>phudson</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td>phudson</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -791,9 +826,24 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=[id^=name-]</td>
 	<td>PDF</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('#metadataForm').valid();</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>

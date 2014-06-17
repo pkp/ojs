@@ -202,8 +202,18 @@
 	<td>${title}</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
 	<td></td>
 </tr>
 <tr>
@@ -253,9 +263,39 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>Integrating Technology, Computer Skills, Survey, Alberta, National, Provincial, Professional Development,</td>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Integrating Technology');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Computer Skills');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Survey');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Alberta');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'National');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Provincial');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Professional Development');</td>
+	<td></td>
 </tr>
 <!--    Add another author-->
 <tr>

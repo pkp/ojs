@@ -202,9 +202,19 @@
 	<td>${title}</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
 	<td>runScript</td>
-	<td>document.getElementById('metadataForm').submit();</td>
-	<td>${title}</td>
+	<td>$('#metadataForm').valid();</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -253,13 +263,68 @@
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>21st Century, Diversity, Multilingual, Multiethnic, Participatory Pedagogy, Language, Culture, Gender, Egalitarianism, Social Transformation,</td>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', '21st Century');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Diversity');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Multilingual');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Multiethnic');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Participatory Pedagogy');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Language');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Culture');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Gender');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Egalitarianism');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Social Transformation');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
 </tr>
 <tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
 	<td></td>
 </tr>
 <tr>

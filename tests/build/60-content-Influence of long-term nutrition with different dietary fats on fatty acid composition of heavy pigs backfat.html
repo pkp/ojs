@@ -202,8 +202,18 @@
 	<td>${title}</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
 	<td></td>
 </tr>
 <tr>
@@ -253,9 +263,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>cattle, food security,</td>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'cattle');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'food security');</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>

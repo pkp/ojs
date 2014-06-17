@@ -202,8 +202,18 @@
 	<td>${title}</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
 	<td></td>
 </tr>
 <tr>
@@ -253,9 +263,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>education, citizenship,</td>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'education');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'citizenship');</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -424,7 +439,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>2000</td>
 	<td></td>
 </tr>
 <!--Add reviewer-->
@@ -444,13 +459,23 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>phudson</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td>phudson</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -495,13 +520,23 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>amccrae</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>1000</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td>amccrae</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -546,9 +581,24 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>agallego</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>css=[id^=reviewerId_input-]</td>
+	<td>agallego</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -610,12 +660,12 @@
 <!--Find the reviewer's assignment-->
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//span[contains(text(),'${title}')]/../../..//a[@title='View this item']</td>
+	<td>//a[contains(text(),'${title}')]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>//span[contains(text(),'${title}')]/../../..//a[@title='View this item']</td>
+	<td>//a[contains(text(),'${title}')]</td>
 	<td></td>
 </tr>
 <!--Perform the review-->

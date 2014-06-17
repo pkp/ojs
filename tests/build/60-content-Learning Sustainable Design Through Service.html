@@ -202,8 +202,18 @@
 	<td>${title}</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>100</td>
 	<td></td>
 </tr>
 <tr>
@@ -253,9 +263,24 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
-	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
-	<td>Development, engineering education, service learning, sustainability,</td>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'Development');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'engineering education');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'service learning');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('[id^=\'keyword-\']').tagit('createTag', 'sustainability');</td>
+	<td></td>
 </tr>
 <!--    Add another author-->
 <tr>
