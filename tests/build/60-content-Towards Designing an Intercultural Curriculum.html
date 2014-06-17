@@ -187,13 +187,23 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>css=[id^=name-]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=[id^=name-]</td>
+	<td>${title}</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>document.getElementById('metadataForm').submit();</td>
 	<td>${title}</td>
 </tr>
 <tr>
@@ -243,9 +253,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=*[id^=keyword-] &gt; li.tagit-new &gt; input.ui-widget-content.ui-autocomplete-input</td>
 	<td>21st Century, Diversity, Multilingual, Multiethnic, Participatory Pedagogy, Language, Culture, Gender, Egalitarianism, Social Transformation,</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('#metadataForm').valid();</td>
+	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -281,6 +296,11 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>

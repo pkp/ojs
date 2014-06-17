@@ -187,14 +187,24 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>css=[id^=name-]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>sendKeys</td>
+	<td>type</td>
 	<td>css=[id^=name-]</td>
 	<td>${title}</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('#metadataForm').valid();</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -426,6 +436,11 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
