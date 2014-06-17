@@ -118,12 +118,13 @@ class PubMedExportDom {
 		/* --- DOI --- */
         /* --- If no DOI, use the eScholarship ARK instead -- */
 		
-		 $articleID = $article->getID;
+		 
 		if ($doi = $article->getDOI()) {
 			$doiNode =& XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $doi, false);
 			XMLCustomWriter::setAttribute($doiNode, 'EIdType', 'doi');
 		}
 		else {
+		    $articleID = $article->getID();
            //This works
 		   //$qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=20587"');
 		    //$qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=20587"');
