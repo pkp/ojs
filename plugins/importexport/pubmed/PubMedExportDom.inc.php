@@ -125,14 +125,20 @@ class PubMedExportDom {
 		}
 		else {
 		   $articleID = $article->getID();
-           //This works
-		   //$qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=20587"');		   
+           //This works		   	   
 		   $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
-		   //$ark = preg_grep ("ark:13030\/qt(.+)/",$qualifiedArk);
 		   error_log('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
 		   error_log($qualifiedArk);
-		   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $qualifiedArk, false);
-           XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
+          
+		    if (!$qualifiedArk){
+		         error_log($articleID . " has no ARK in the database!");
+		      }
+		      else {
+			    $ark = preg_grep ("ark:13030\/qt(.+)/",$qualifiedArk); 
+				$arkURL = "http://escholarship.org/uc/item/" . $ark;
+			    $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $arkURL, false);
+                XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
+			  }
         }
 		
 		/* --- Language --- */
