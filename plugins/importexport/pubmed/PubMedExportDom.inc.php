@@ -125,7 +125,8 @@ class PubMedExportDom {
 		}
 		else {
            $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=20587"');
-		   $ark = preg_grep ("ark:13030\/qt(.+)/",$qualifiedArk);
+		   //$ark = preg_grep ("ark:13030\/qt(.+)/",$qualifiedArk);
+		   $ark ="123456";
 		   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
            XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
         }
