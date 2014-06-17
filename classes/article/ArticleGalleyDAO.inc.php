@@ -264,7 +264,7 @@ class ArticleGalleyDAO extends DAO {
 				$galley->getLocale(),
 				$galley->getSeq() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSeq(),
 				$galley->getRemoteURL(),
-				$galley->getIsAvailable(),
+				$galley->getIsAvailable()?1:0,
 				$galley->getGalleyType(),
 			)
 		);
