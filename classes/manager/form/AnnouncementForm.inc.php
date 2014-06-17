@@ -63,29 +63,31 @@ class AnnouncementForm extends PKPAnnouncementForm {
 		$announcement = parent::execute();
 		$journalId = $this->getContextId();
 
-		// Send a notification to associated users
-		import('classes.notification.NotificationManager');
-		$notificationManager = new NotificationManager();
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$notificationUsers = array();
-		$allUsers = $roleDao->getUsersByJournalId($journalId);
-		while (!$allUsers->eof()) {
-			$user =& $allUsers->next();
-			$notificationUsers[] = array('id' => $user->getId());
-			unset($user);
-		}
-		foreach ($notificationUsers as $userRole) {
-			$notificationManager->createNotification(
-				$request, $userRole['id'], NOTIFICATION_TYPE_NEW_ANNOUNCEMENT,
-				$journalId, ASSOC_TYPE_ANNOUNCEMENT, $announcement->getId()
+		if ($this->getData('notificationToggle')) {
+			// Send a notification to associated users
+			import('classes.notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$notificationUsers = array();
+			$allUsers = $roleDao->getUsersByJournalId($journalId);
+			while (!$allUsers->eof()) {
+				$user =& $allUsers->next();
+				$notificationUsers[] = array('id' => $user->getId());
+				unset($user);
+			}
+			foreach ($notificationUsers as $userRole) {
+				$notificationManager->createNotification(
+					$request, $userRole['id'], NOTIFICATION_TYPE_NEW_ANNOUNCEMENT,
+					$journalId, ASSOC_TYPE_ANNOUNCEMENT, $announcement->getId()
+				);
+			}
+			$notificationManager->sendToMailingList($request,
+				$notificationManager->createNotification(
+					$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_NEW_ANNOUNCEMENT,
+					$journalId, ASSOC_TYPE_ANNOUNCEMENT, $announcement->getId()
+				)
 			);
 		}
-		$notificationManager->sendToMailingList($request,
-			$notificationManager->createNotification(
-				$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_NEW_ANNOUNCEMENT,
-				$journalId, ASSOC_TYPE_ANNOUNCEMENT, $announcement->getId()
-			)
-		);
 	}
 }
 
