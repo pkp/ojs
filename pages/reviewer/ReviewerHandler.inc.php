@@ -83,9 +83,9 @@ class ReviewerHandler extends PKPReviewerHandler {
 		if (!$user) { return false; }
 
 		// Register the user object in the session
-		import('lib.pkp.classes.security.PKPValidation');
+		import('lib.pkp.classes.security.Validation');
 		$reason = null;
-		if (PKPValidation::registerUserSession($user, $reason)) {
+		if (Validation::registerUserSession($user, $reason)) {
 			$this->submission = $reviewerSubmission;
 			$this->user = $user;
 		}
