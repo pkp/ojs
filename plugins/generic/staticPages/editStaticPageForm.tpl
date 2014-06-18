@@ -21,7 +21,7 @@
 <br />
 <br />
 
-<form method="post" name="editStaticPageForm" action="{if $staticPageId}{plugin_url path="save"|to_array:$staticPageId}{else}{plugin_url path="save"}{/if}" >
+<form method="post" id="editStaticPageForm" action="{if $staticPageId}{plugin_url path="save"|to_array:$staticPageId}{else}{plugin_url path="save"}{/if}" >
 <input type="hidden" name="edit" value="1" />
 {if $staticPageId}
 	<input type="hidden" name="staticPageId" value="{$staticPageId}" />
@@ -34,9 +34,9 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
-			{if $staticPageId}{plugin_url|assign:"staticPageEditPath" path="edit"|to_array:$staticPageId}
-			{else}{plugin_url|assign:"staticPageEditPath" path="edit"|to_array:$staticPageId}{/if}
-			{form_language_chooser form="editStaticPageForm" path=$staticPageEditPath}
+			{if $staticPageId}{plugin_url|assign:"staticPageEditUrl" path="edit"|to_array:$staticPageId}
+			{else}{plugin_url|assign:"staticPageEditUrl" path="edit"|to_array:$staticPageId}{/if}
+			{form_language_chooser form="editStaticPageForm" url=$staticPageEditUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
