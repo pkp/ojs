@@ -67,6 +67,10 @@ class PluginHandler extends ManagerHandler {
 		$templateMgr->assign('isSiteAdmin', Validation::isSiteAdmin());
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.plugins');
 
+		$site =& $request->getSite();
+		$preventManagerPluginManagement = $site->getSetting('preventManagerPluginManagement');
+		$templateMgr->assign('preventManagerPluginManagement', !Validation::isSiteAdmin() && $preventManagerPluginManagement);
+
 		$templateMgr->display('manager/plugins/plugins.tpl');
 	}
 

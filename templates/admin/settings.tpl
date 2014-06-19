@@ -143,6 +143,13 @@
 			{fieldLabel name="showDescription" key="admin.settings.journalsList.showDescription"}<br />
 		</td>
 	</tr>
+	<tr valign="top">
+	<td class="label">{translate key="admin.settings.security"}</td>
+		<td colspan="2" class="value">
+			<input type="checkbox" name="preventManagerPluginManagement" id="preventManagerPluginManagement" value="1"{if $preventManagerPluginManagement} checked="checked"{/if} />
+			{fieldLabel name="preventManagerPluginManagement" key="admin.settings.security.plugins"}<br />
+		</td>
+	</tr>
 </table>
 
 <br />
