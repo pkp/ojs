@@ -70,7 +70,7 @@ class GoogleAnalyticsSettingsForm extends Form {
 		$plugin->updateSetting($journalId, 'googleAnalyticsSiteId', trim($this->getData('googleAnalyticsSiteId'), "\"\';"), 'string');
 
 		$trackingCode = $this->getData('trackingCode');
-		if (($trackingCode != "urchin") && ($trackingCode != "ga")) {
+		if (($trackingCode != "urchin") && ($trackingCode != "ga") && ($trackingCode != "analytics")) {
 			$trackingCode = "urchin";
 		}
 		$plugin->updateSetting($journalId, 'trackingCode', $trackingCode, 'string');

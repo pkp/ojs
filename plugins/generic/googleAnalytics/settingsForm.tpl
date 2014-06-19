@@ -38,6 +38,10 @@
 		<td width="20%" class="label">&nbsp;</td>
 		<td width="80%" class="value"><input type="radio" name="trackingCode" id="trackingCode-ga" value="ga" {if $trackingCode eq "ga"}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.ga"}</td>
 	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;</td>
+		<td width="80%" class="value"><input type="radio" name="trackingCode" id="trackingCode-analytics" value="analytics" {if $trackingCode eq "analytics"}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.analytics"}</td>
+	</tr>
 </table>
 
 <br/>
