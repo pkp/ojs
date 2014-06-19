@@ -26,16 +26,12 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 	}
 
 	/**
-	 * @copydoc PKPSubmissionMetadataFormImplementation::addChecks
+	 * @copydoc PKPSubmissionMetadataFormImplementation::_getAbstractsRequired
 	 */
-	function addChecks($submission) {
-		parent::addChecks($submission);
-
+	function _getAbstractsRequired($submission) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getById($submission->getSectionId());
-		if (!$section->getAbstractsNotRequired()) {
-			$this->_parentForm->addCheck(new FormValidatorLocale($this->_parentForm, 'abstract', 'required', 'submission.submit.form.abstractRequired'));
-		}
+		return !$section->getAbstractsNotRequired();
 	}
 }
 
