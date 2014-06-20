@@ -49,6 +49,12 @@ session_lifetime = 30
 ; execute periodically
 scheduled_tasks = Off
 
+; Scheduled tasks will send email about processing
+; only in case of errors. Set to off to receive
+; all other kind of notification, including success,
+; warnings and notices.
+scheduled_tasks_report_error_only = On
+
 ; Short and long date formats
 date_format_trunc = "%m-%d"
 date_format_short = "%Y-%m-%d"
