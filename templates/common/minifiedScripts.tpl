@@ -102,6 +102,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/tab/settings/siteAccessOptions/form/SiteAccessOptionsFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/tab/settings/managementSettings/UsersAndRolesTabHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/tab/workflow/WorkflowTabHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/informationCenter/NotesHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/informationCenter/SignoffNotesHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js"></script>
