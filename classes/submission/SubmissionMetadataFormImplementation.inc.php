@@ -24,6 +24,15 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 	function SubmissionMetadataFormImplementation($parentForm = null) {
 		parent::PKPSubmissionMetadataFormImplementation($parentForm);
 	}
+
+	/**
+	 * @copydoc PKPSubmissionMetadataFormImplementation::_getAbstractsRequired
+	 */
+	function _getAbstractsRequired($submission) {
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($submission->getSectionId());
+		return !$section->getAbstractsNotRequired();
+	}
 }
 
 ?>
