@@ -144,7 +144,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 
 		// Make sure user has access to the workflow stage.
 		import('lib.pkp.classes.workflow.WorkflowStageDAO');
-		$redirectWorkflowStage = WorkflowStageDAO::etIdFromPath($redirectOp);
+		$redirectWorkflowStage = WorkflowStageDAO::getIdFromPath($redirectOp);
 		$userAccessibleWorkflowStages = $this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES);
 		if (!array_key_exists($redirectWorkflowStage, $userAccessibleWorkflowStages)) {
 			$redirectOp = null;
