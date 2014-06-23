@@ -7,10 +7,6 @@
  *
  * Production workflow stage
  *}
-{strip}
-{include file="workflow/header.tpl"}
-{/strip}
-
 <script type="text/javascript">
 	// Initialise JS handler.
 	$(function() {ldelim}
@@ -23,6 +19,7 @@
 		);
 	{rdelim});
 </script>
+{include file="controllers/tab/workflow/stageParticipants.tpl"}
 
 <div id="production">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions}
@@ -48,5 +45,3 @@
 		{include file="workflow/galleysTab.tpl" galleyTabsId=$galleyTabsId galleys=$galleys}
 	</div>
 </div>
-
-{include file="common/footer.tpl"}

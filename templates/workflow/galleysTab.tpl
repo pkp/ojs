@@ -30,7 +30,7 @@ $(function() {ldelim}
 		{iterate from=galleys item=galley}
 			<li>
 				<a id="galley{$galley->getId()|escape}"
-					href="{url router=$smarty.const.ROUTE_PAGE op="fetchGalley"
+					href="{url router=$smarty.const.ROUTE_PAGE page="workflow" op="fetchGalley"
 					articleGalleyId=$galley->getId()
 					submissionId=$galley->getSubmissionId()
 					stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION}">{$galley->getLabel()|escape}</a>

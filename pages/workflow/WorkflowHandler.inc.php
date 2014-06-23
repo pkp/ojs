@@ -28,7 +28,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER, ROLE_ID_ASSISTANT),
 			array(
-				'access', 'submission',
+				'access', 'index', 'submission',
 				'editorDecisionActions', // Submission & review
 				'externalReview', // review
 				'editorial',
@@ -44,30 +44,6 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	//
 	// Public handler methods
 	//
-	/**
-	 * Show the production stage
-	 * @param $request PKPRequest
-	 * @param $args array
-	 */
-	function production(&$args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$notificationRequestOptions = array(
-			NOTIFICATION_LEVEL_NORMAL => array(
-				NOTIFICATION_TYPE_VISIT_CATALOG => array(ASSOC_TYPE_SUBMISSION, $submission->getId()),
-				NOTIFICATION_TYPE_APPROVE_SUBMISSION => array(ASSOC_TYPE_SUBMISSION, $submission->getId()),
-			),
-			NOTIFICATION_LEVEL_TRIVIAL => array()
-		);
-
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleys = $galleyDao->getBySubmissionId($submission->getId());
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('galleys', $galleys);
-
-		$templateMgr->assign('productionNotificationRequestOptions', $notificationRequestOptions);
-		$templateMgr->display('workflow/production.tpl');
-	}
 
 	/**
 	 * Show the production stage accordion contents
