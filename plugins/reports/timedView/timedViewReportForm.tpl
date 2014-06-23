@@ -11,6 +11,9 @@
 {include file="common/header.tpl"}
 
 <br/>
+{translate key="plugins.reports.timedView.form.largeSetOfDataIssue"}
+<br/>
+<br/>
 
 <form method="post" action="{url path='TimedViewReportPlugin'}">
 	{include file="common/formErrors.tpl"}
