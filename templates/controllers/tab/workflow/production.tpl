@@ -42,6 +42,6 @@
 	{/if}
 
 	<div id='galleyTabsContainer'>
-		{include file="workflow/galleysTab.tpl" galleyTabsId=$galleyTabsId galleys=$galleys}
+		{include file="workflow/galleysTab.tpl" galleyTabsId=$galleyTabsId galleys=$representations}
 	</div>
 </div>
