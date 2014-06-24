@@ -390,7 +390,7 @@
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			updateArticleSelectCallback_ = function(ajaxContext, jsonData) {
-		var $articleSelectElement, limit, content;
+		var $articleSelectElement, limit, content, i;
 		$articleSelectElement = this.$articleSelectElement_;
 
 		jsonData = this.handleJson(jsonData);
@@ -478,7 +478,7 @@
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			updateRegionSelectCallback_ = function(ajaxContext, jsonData) {
-		var $regionSelectElement, limit, content;
+		var $regionSelectElement, limit, content, i;
 		$regionSelectElement = this.$regionSelectElement_;
 
 		$regionSelectElement.empty();
