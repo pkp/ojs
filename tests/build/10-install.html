@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/git/ojs/index.php" />
+<title>install</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">install</td></tr>
+</thead><tbody>
+<tr>
+	<td>setSpeed</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${baseUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>OJS Installation</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=additionalLocales-en_US</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=additionalLocales-es_ES</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=additionalLocales-fr_CA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connectionCharset</td>
+	<td>label=Unicode (UTF-8)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=databaseCharset</td>
+	<td>label=Unicode (UTF-8)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=filesDir</td>
+	<td>${filesdir}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=encryption</td>
+	<td>label=SHA1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=adminUsername</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=adminPassword</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=adminPassword2</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=adminEmail</td>
+	<td>pkpadmin@mailinator.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=databaseUsername</td>
+	<td>${dbusername}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=databasePassword</td>
+	<td>${dbpassword}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=databaseHost</td>
+	<td>${dbhost}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=databaseName</td>
+	<td>${dbname}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=createDatabase</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>${timeout}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=install</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p</td>
+	<td>Installation of OJS has completed successfully.</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
