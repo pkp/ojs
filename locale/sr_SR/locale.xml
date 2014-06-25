@@ -26,14 +26,16 @@
 	 *  LOG - Contains phrases related to log entries
 	 *  MISC - Entries that don't belong elsewhere.
 	 *  DEFAULT - Default settings for configuration items.
-	 --><!-- 
+	 -->
+	<!-- 
 	 *
 	 * COMMON - This section contains the most frequently-used words
 	 *
-	 --><!--  Common Messages  -->	<message key="common.openJournalSystems">Open Journal Systems</message>
+	 -->
+	<!--  Common Messages  -->
+	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="navigation.journalHelp">Pomoć</message>
 
-	<!--  Common Form Messages  -->	<!--  Common Email Messages  -->	<!--  Common Localization Terms  -->	<!--  Common Error Messages  -->	<!--  Navigation  --><message key="navigation.journalHelp">Pomoć</message>
-	
 	
 	<message key="navigation.archives">Arhiva</message>
 	<message key="navigation.current">Trenutni broj</message>
@@ -888,7 +890,4 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="user.authorization.copyeditorAssignmentMissing">Pristup nije dozvoljen! Niste dodati kao lektor za ovaj članak.</message>
 	<message key="user.authorization.sectionAssignment">Pokušavate da pristupite članku koji nije u vašoj sekciji.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Neispravna lektorska predaja ili predaja nije zahtevana!</message>
-
-	<!-- Included here because it may be used in the navigation bar -->
-	<message key="editor.navigation.issues">Issues</message>
 </locale>

@@ -70,15 +70,4 @@ Ukoliko imate bilo kakvih pitanja slobodno nas kontaktirajte.
 {$subscriptionContactSignature}</body>
 		<description>Ovaj imejl obaveštava registrovane čitaoce da je urednik napravio nalog za njihovu pretplatu. Imejl poruka sadrži URL časopisa kao i instrukcije za pristup.</description>
 	</email_text>
-	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Password Reset Confirmation</subject>
-		<body>We have received a request to reset your password for the {$siteTitle} web site.
-
-If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.
-
-Reset my password: {$url}
-
-{$principalContactSignature}</body>
-		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
-	</email_text>
 </email_texts>
