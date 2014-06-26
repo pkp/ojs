@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/git/ojs/index.php" />
+<title>20-create demo journal</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">20-create demo journal</td></tr>
+</thead><tbody>
+<!--Create journal-->
+<tr>
+	<td>open</td>
+	<td>${baseUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=User Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Site Administrator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Hosted Journals</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Create Journal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=journalPath</td>
+	<td>publicknowledge</td>
+</tr>
+
+<!-- English -->
+<tr>
+	<td>type</td>
+	<td>id=title</td>
+	<td>Journal of Public Knowledge</td>
+</tr>
+<tr>
+	<td>typeTinyMCE</td>
+	<td>description</td>
+	<td>The Journal of Public Knowledge is a peer-reviewed quarterly publication on the subject of public access to science.</td>
+</tr>
+
+<!-- French -->
+<tr>
+	<td>select</td>
+	<td>id=formLocale</td>
+	<td>label=Français</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#languageSelector &gt; input.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=title</td>
+	<td>Journal de la connaissance du public</td>
+</tr>
+<tr>
+	<td>typeTinyMCE</td>
+	<td>description</td>
+	<td>Le Journal de Public Knowledge est une publication trimestrielle évaluée par les pairs sur le thème de l\'accès du public à la science.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=saveJournal</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

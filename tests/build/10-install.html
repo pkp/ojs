@@ -107,11 +107,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>setTimeout</td>
-	<td>${timeout}</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
 	<td>name=install</td>
 	<td></td>
@@ -121,7 +116,27 @@
 	<td>css=p</td>
 	<td>Installation of OJS has completed successfully.</td>
 </tr>
-
+<!--Log in as administrator-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id=loginUsername]</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=[id=loginPassword]</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@value='Login'])[2]</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
