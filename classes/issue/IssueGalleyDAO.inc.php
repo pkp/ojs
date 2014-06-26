@@ -194,7 +194,7 @@ class IssueGalleyDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array();
+		return parent::getLocaleFieldNames();
 	}
 
 	/**

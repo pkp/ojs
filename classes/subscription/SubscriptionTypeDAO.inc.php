@@ -206,7 +206,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('name', 'description');
+		return parent::getLocaleFieldNames() + array('name', 'description');
 	}
 
 	/**

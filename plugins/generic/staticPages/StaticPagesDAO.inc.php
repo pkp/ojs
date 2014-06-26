@@ -127,7 +127,7 @@ class StaticPagesDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'content');
+		return parent::getLocaleFieldNames() + array('title', 'content');
 	}
 
 	/**

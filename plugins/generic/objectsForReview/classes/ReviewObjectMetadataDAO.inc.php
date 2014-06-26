@@ -111,7 +111,7 @@ class ReviewObjectMetadataDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('name', 'possibleOptions');
+		return parent::getLocaleFieldNames() + array('name', 'possibleOptions');
 	}
 
 	/**

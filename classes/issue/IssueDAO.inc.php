@@ -308,7 +308,7 @@ class IssueDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'coverPageDescription', 'coverPageAltText', 'showCoverPage', 'hideCoverPageArchives', 'hideCoverPageCover', 'originalFileName', 'fileName', 'width', 'height', 'description');
+		return parent::getLocaleFieldNames() + array('title', 'coverPageDescription', 'coverPageAltText', 'showCoverPage', 'hideCoverPageArchives', 'hideCoverPageCover', 'originalFileName', 'fileName', 'width', 'height', 'description');
 	}
 
 	/**

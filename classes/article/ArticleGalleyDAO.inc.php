@@ -259,7 +259,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array();
+		return parent::getLocaleFieldNames();
 	}
 
 	/**

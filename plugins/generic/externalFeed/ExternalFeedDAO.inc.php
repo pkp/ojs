@@ -126,7 +126,7 @@ class ExternalFeedDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title');
+		return parent::getLocaleFieldNames() + array('title');
 	}
 
 	/**

@@ -159,7 +159,7 @@ class SuppFileDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'creator', 'subject', 'typeOther', 'description', 'publisher', 'sponsor', 'source');
+		return parent::getLocaleFieldNames() + array('title', 'creator', 'subject', 'typeOther', 'description', 'publisher', 'sponsor', 'source');
 	}
 
 	/**

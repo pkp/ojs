@@ -46,7 +46,7 @@ class BookForReviewDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array(
+		return parent::getLocaleFieldNames() + array(
 			'title',
 			'description',
 			'coverPageAltText',

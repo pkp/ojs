@@ -38,7 +38,7 @@ class ReferralDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('name');
+		return parent::getLocaleFieldNames() + array('name');
 	}
 
 	/**

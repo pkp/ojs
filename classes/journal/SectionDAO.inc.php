@@ -182,7 +182,7 @@ class SectionDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'abbrev', 'policy', 'identifyType');
+		return parent::getLocaleFieldNames() + array('title', 'abbrev', 'policy', 'identifyType');
 	}
 
 	/**
