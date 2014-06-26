@@ -185,7 +185,7 @@ class BookForReviewForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array(
+		return parent::getLocaleFieldNames() + array(
 			'title',
 			'description',
 			'coverPageAltText', 

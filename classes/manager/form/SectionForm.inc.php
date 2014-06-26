@@ -97,7 +97,7 @@ class SectionForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		return $sectionDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $sectionDao->getLocaleFieldNames();
 	}
 
 	/**

@@ -79,7 +79,7 @@ class BooksForReviewSettingsForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('additionalInformation');
+		return parent::getLocaleFieldNames() + array('additionalInformation');
 	}
 
 	/**

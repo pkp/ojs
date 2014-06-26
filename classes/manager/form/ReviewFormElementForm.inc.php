@@ -48,7 +48,7 @@ class ReviewFormElementForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
-		return $reviewFormElementDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $reviewFormElementDao->getLocaleFieldNames();
 	}
 
 	/**

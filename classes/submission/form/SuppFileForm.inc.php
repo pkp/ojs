@@ -75,7 +75,7 @@ class SuppFileForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-		return $suppFileDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $suppFileDao->getLocaleFieldNames();
 	}
 
 	/**

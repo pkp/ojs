@@ -50,7 +50,7 @@ class ExternalFeedForm extends Form {
 	*/
 	function getLocaleFieldNames() {
 		$feedDao =& DAORegistry::getDAO('ExternalFeedDAO');
-		return $feedDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $feedDao->getLocaleFieldNames();
 	}
 
 	/**

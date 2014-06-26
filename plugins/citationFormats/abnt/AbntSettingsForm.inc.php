@@ -54,7 +54,7 @@ class AbntSettingsForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('location');
+		return parent::getLocaleFieldNames() + array('location');
 	}
 
 	/**

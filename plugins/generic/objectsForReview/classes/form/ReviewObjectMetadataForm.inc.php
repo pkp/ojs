@@ -61,7 +61,7 @@ class ReviewObjectMetadataForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		$reviewObjectMetadataDao =& DAORegistry::getDAO('ReviewObjectMetadataDAO');
-		return $reviewObjectMetadataDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $reviewObjectMetadataDao->getLocaleFieldNames();
 	}
 
 	/**

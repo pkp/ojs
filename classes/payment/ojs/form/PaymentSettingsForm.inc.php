@@ -95,7 +95,7 @@ class PaymentSettingsForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array(
+		return parent::getLocaleFieldNames() + array(
 			'submissionFeeName',
 			'submissionFeeDescription',
 			'publicationFeeName',

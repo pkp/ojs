@@ -39,7 +39,7 @@ class IssueForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		return $issueDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $issueDao->getLocaleFieldNames();
 	}
 
 	/**

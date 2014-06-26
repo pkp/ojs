@@ -116,7 +116,7 @@ class SubscriptionPolicyForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('subscriptionAdditionalInformation', 'delayedOpenAccessPolicy', 'authorSelfArchivePolicy');
+		return parent::getLocaleFieldNames() + array('subscriptionAdditionalInformation', 'delayedOpenAccessPolicy', 'authorSelfArchivePolicy');
 	}
 
 	/**

@@ -53,7 +53,7 @@ class CreateReviewerForm extends Form {
 	}
 
 	function getLocaleFieldNames() {
-		return array('biography', 'gossip');
+		return parent::getLocaleFieldNames() + array('biography', 'gossip');
 	}
 
 	/**

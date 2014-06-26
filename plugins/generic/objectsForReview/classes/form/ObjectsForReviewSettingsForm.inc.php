@@ -77,7 +77,7 @@ class ObjectsForReviewSettingsForm extends Form {
 	 * @see Form::getLocaleFieldNames()
 	 */
 	function getLocaleFieldNames() {
-		return array('additionalInformation');
+		return parent::getLocaleFieldNames() + array('additionalInformation');
 	}
 
 	/**

@@ -68,7 +68,7 @@ class JournalSetupStep4Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'refLinkInstructions', 'proofInstructions', 'openAccessPolicy', 'announcementsIntroduction');
+		return parent::getLocaleFieldNames() + array('pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'refLinkInstructions', 'proofInstructions', 'openAccessPolicy', 'announcementsIntroduction');
 	}
 }
 

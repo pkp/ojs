@@ -41,7 +41,7 @@ class CategoryForm extends Form {
 	function getLocaleFieldNames() {
 		$categoryDao =& DAORegistry::getDAO('CategoryDAO');
 		$categoryEntryDao =& $categoryDao->getEntryDAO();
-		return $categoryEntryDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $categoryEntryDao->getLocaleFieldNames();
 	}
 
 	/**

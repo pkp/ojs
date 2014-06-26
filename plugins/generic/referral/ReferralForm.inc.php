@@ -46,7 +46,7 @@ class ReferralForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		$referralDao =& DAORegistry::getDAO('ReferralDAO');
-		return $referralDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $referralDao->getLocaleFieldNames();
 	}
 
 	/**

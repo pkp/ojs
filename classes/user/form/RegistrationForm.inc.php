@@ -149,7 +149,7 @@ class RegistrationForm extends Form {
 
 	function getLocaleFieldNames() {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		return $userDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $userDao->getLocaleFieldNames();
 	}
 
 	/**

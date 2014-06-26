@@ -50,7 +50,7 @@ class QuickSubmitForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('tempFileId', 'title', 'abstract', 'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
+		return parent::getLocaleFieldNames() + array('tempFileId', 'title', 'abstract', 'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
 	}
 
 	/**

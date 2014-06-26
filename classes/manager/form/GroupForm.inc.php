@@ -44,7 +44,7 @@ class GroupForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
-		return $groupDao->getLocaleFieldNames();
+		return parent::getLocaleFieldNames() + $groupDao->getLocaleFieldNames();
 	}
 
 	/**
