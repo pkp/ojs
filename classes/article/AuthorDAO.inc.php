@@ -220,7 +220,7 @@ class AuthorDAO extends PKPAuthorDAO {
 	}
 
 	function getAdditionalFieldNames() {
-		return array('orcid');
+		return parent::getAdditionalFieldNames() + array('orcid');
 	}
 }
 
