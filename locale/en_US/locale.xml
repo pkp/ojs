@@ -687,7 +687,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.comments.saveAndEmailEditor">Save and Email Editor</message>
 
 	<!-- Registration -->
-	<message key="user.register.selectJournal">Select a journal to register with</message>
+	<message key="user.register.selectContext">Select a journal to register with</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
 	<message key="user.register.privacyStatement">Privacy Statement</message>
 	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Click here</a> if you are already registered with this or another journal on this site.]]></message>
