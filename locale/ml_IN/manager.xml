@@ -99,8 +99,6 @@
 	<message key="manager.plugins.description">This page allows the Journal Manager to review and potentially configure the plugins that are currently installed. Plugins are divided into categories, according to their function. The categories are listed below, and within each category, its current set of plugins.</message>
 	<message key="manager.plugins.doesNotExist">പ്ലഗിന്‍ നിലവിലില്ല</message>
 	<message key="manager.plugins.fileSelectError">ദയവായി ആദ്യം ഒരു ഫയല്‍ തിരഞ്ഞെടുക്കൂ</message>
-	<message key="manager.plugins.install">ഒരു പുതിയ പ്ലഗിന്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്യൂ</message>
-	<message key="manager.plugins.installDescription">ഒരു പുതിയ പ്ലഗിന്‍ അപ്പ്-ലോഡ് ചെയ്യുവാനും ഇന്‍സ്റ്റാള്‍ ചെയ്യുവാനും ഈ ഫോം താങ്കളെ അനുവദിക്കും. പ്ലഗിന്‍ .tar.gz ഫയല്‍ ആക്കി ചുരുക്കിയിട്ടുണ്ടെന്ന് ഉറപ്പു വരുത്തുക.</message>
 	<message key="manager.plugins.installedVersionNewer">പ്ലഗിന്‍ മുന്‍പേ നിലവിലുള്ളതും,പുതിയതും അല്ലെങ്കില്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്ത വേര്‍ഷനോട് സമാനവുമാണ്.</message>
 	<message key="manager.plugins.installedVersionOlder">പ്ലഗിന്‍ മുന്‍പേ നിലവിലുള്ളതും,പഴയതും അല്ലെങ്കില്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്ത വേര്‍ഷനോട് സമാനവുമാണ്.</message>
 	<message key="manager.plugins.installFailed">ഇന്‍സ്റ്റാളേഷന്‍ പരാജയപ്പെട്ടിരിക്കുന്നു</message>

@@ -100,8 +100,6 @@
 	<message key="manager.plugins.description">Bu sayfa, Dergi Yöneticisine güncel olarak yüklenen eklentileri gözden geçirmeyi ve potansiyel konfigürasyonlarını yapmayı sağlar. Eklentiler fonksiyonlarına göre iki kategoriye ayrılmıştır. Kategoriler aşağıda listelenmiştir ve her bir eklentinin güncel düzenlemesi kendi kategorisi içinde yapılır.</message>
 	<message key="manager.plugins.doesNotExist">Eklenti yok</message>
 	<message key="manager.plugins.fileSelectError">Lütfen öncelikle bir dosya seçiniz</message>
-	<message key="manager.plugins.install">Yeni Bir Eklenti Yükle</message>
-	<message key="manager.plugins.installDescription">Bu form yeni bir eklenti yüklemenizi sağlar. Lütfen eklentinin ".tar.gz" biçiminde sıkıştırılmış olduğundan emin olun.</message>
 	<message key="manager.plugins.installedVersionNewer">Bu eklenti var. Daha yeni ya da yüklü sürüm ile aynı.</message>
 	<message key="manager.plugins.installedVersionOlder">Bu eklenti var. Büyük veya yüklü sürüm ile aynı.</message>
 	<message key="manager.plugins.installFailed">Yükleme başarısız</message>

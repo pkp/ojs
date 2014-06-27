@@ -556,8 +556,6 @@
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.forms">Φόρμες</message>
 	<message key="manager.people.showNoRole">Προβολή χρηστών χωρίς ρόλο</message>
-	<message key="manager.plugins.install">Εγκατάσταση νέου plugin</message>
-	<message key="manager.plugins.installDescription">Αυτή η φόρμα σας επιτρέπει να ανεβάσετε και να εγκαταστήσετε ένα νέο plugin.  Σας παρακαλούμε βεβαιωθείτε ότι το αρχείο του plugin είναι συμπιεσμένο σε μορφή .tar.gz αρχείου.</message>
 	<message key="manager.plugins.upgrade">Αναφάθμιση Plugin</message>
 	<message key="manager.plugins.upgradeDescription">Αυτή η φόρμα σας επιτρέπει να αναβαθμίσετε ένα plugin.  Σας παρακαλούμε βεβαιωθείτε ότι το αρχείο του plugin είναι συμπιεσμένο σε μορφή .tar.gz αρχείου.</message>
 	<message key="manager.plugins.delete">Διαγραφή Plugin</message>

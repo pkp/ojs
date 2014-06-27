@@ -554,8 +554,6 @@
 	<message key="manager.language.ui">IU</message>
 	<message key="manager.language.forms">Formulaires</message>
 	<message key="manager.people.showNoRole">Afficher les utilisateurs qui n'ont aucun rôle</message>
-	<message key="manager.plugins.install">Installer un nouvel plugiciel</message>
-	<message key="manager.plugins.installDescription">Ce formulaire vous permet de télécharger et d'installer un nouveau plugiciel. Veuillez vous assurer que le plugiciel est compressé dans un fichier .tar.gz.</message>
 	<message key="manager.plugins.upgrade">Mettre à jour un plugiciel</message>
 	<message key="manager.plugins.upgradeDescription">Ce formulaire vous permet de mettre à jour un plugiciel. Veuillez vous assurer que le plugiciel est compressé dans un fichier .tar.gz.</message>
 	<message key="manager.plugins.delete">Supprimer un plugiciel</message>

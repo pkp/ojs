@@ -91,8 +91,6 @@
 	<message key="manager.people.roleEnrollment">{$role} Angajare</message>
 	<message key="manager.people.syncUserDescription">Sincronizarea angajării va implica toţi utilizatorii angajaţi la revista specificată la această revistă, având acelaşi rol. Această funcţie permite un set comun de utilizatori (de ex. evaluatori/referenţi) ca să poată fi sincronizaţi între reviste diferite.</message>
 	<message key="manager.plugins.description">Această pagină permite managerului revistei să evalueze şi eventual să configureze modulele care sunt instalate. Modulele sunt organizate pe categorii fiecare după funcţia lor. Categoriile sunt listate mai jos iar în fiecare categorie, setul corespondent de module.</message>
-	<message key="manager.plugins.install">Instalează un nou modul</message>
-	<message key="manager.plugins.installDescription">Acest formular permite încărcarea și instalarea unui nou modul. Fii sigur că modulul respectiv este comprimat ca fișier .tar.gz.</message>
 	<message key="manager.plugins.upgrade">Actualizează modul</message>
 	<message key="manager.plugins.upgradeDescription">Acest formular îți permite să actualizezi un modul. Fii sigur că modulul este comprimat ca fișier .tar.gz.</message>
 	<message key="manager.plugins.delete">Elimină modulul</message>

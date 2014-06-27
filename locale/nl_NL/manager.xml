@@ -596,7 +596,6 @@
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.forms">Formulieren</message>
 	<message key="manager.people.showNoRole">Toon gebruikers zonder rol</message>
-	<message key="manager.plugins.install">Installeer een nieuwe plugin</message>
 	<message key="manager.plugins.upgrade">Plugin opwaarderen</message>
 	<message key="manager.plugins.delete">Plugin verwijderen</message>
 	<message key="manager.plugins.deleteSuccess">Plugin met succes verwijderd</message>
@@ -608,7 +607,6 @@
 	<message key="manager.plugins.upgradeFailed">Opwaarderen mislukt</message>
 	<message key="manager.sections.wordCount">Aantal woorden</message>
 	<message key="manager.setup.journalFavicon">Favicon van het tijdschrift</message>
-	<message key="manager.plugins.installDescription">Dit formulier maakt het mogelijk om een nieuwe plugin te laden en installeren. Vergewis u ervan dat de plugin is gecomprimeerd als .tar.gz bestand.</message>
 	<message key="manager.plugins.upgradeDescription">Dit formulier maakt het mogelijk om een plugin op te waarderen. Vergewis u ervan dat de plugin is gecomprimeerd als .tar.gz bestand.</message>
 	<message key="manager.plugins.deleteDescription">Door op verwijder te klikken, verwijdert u de plugin uit het systeem.</message>
 	<message key="manager.plugins.deleteConfirm">Weet u zeker dat u deze plugin uit het systeem wilt verwijderen?</message>

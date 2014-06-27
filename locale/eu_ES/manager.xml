@@ -558,8 +558,6 @@
 	<message key="manager.plugins.deleteSuccess">Plugina ondo ezabatu da</message>
 	<message key="manager.plugins.doesNotExist">Plugina ez da existitzen</message>
 	<message key="manager.plugins.fileSelectError">Mesedez, lehenengo hautatu fitxategi bat</message>
-	<message key="manager.plugins.install">Instalatu plugin berri bat</message>
-	<message key="manager.plugins.installDescription">Inprimaki honek plugin berri bat kargatzeko eta instalatzeko aukera ematen du. Mesedez, ziurtatu plugina .tar.gz fitxategi gisa konprimatuta dagoela.</message>
 	<message key="manager.plugins.installedVersionNewer">Plugina existitzen da dagoeneko, eta instalatuta dagoen bertsioaren berdina edo berriagoa da.</message>
 	<message key="manager.plugins.installedVersionOlder">Plugina existitzen da dagoeneko, eta instalatuta dagoen bertsioaren berdina edo zaharragoa da.</message>
 	<message key="manager.plugins.installFailed">Instalazioak huts egin du</message>

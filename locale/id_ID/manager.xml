@@ -101,8 +101,6 @@
 	<message key="manager.plugins.description"> Di halaman ini Manajer Jurnal dapat mereview dan mengubah plugin yang saat ini diinstal. Plugin dibagi menjadi beberapa kategori, menurut fungsi mereka. Beberapa kategori tersebut seperti yang ada di daftar di bawah ini, dan di dalam masing-masing kategori, ada satu set plugin.</message> 
 	<message key="manager.plugins.doesNotExist"> Plugin tidak ada </message> 
 	<message key="manager.plugins.fileSelectError"> Pilih file dahulu </message> 
-	<message key="manager.plugins.install"> Instal Plugin Baru </message> 
-	<message key="manager.plugins.installDescription"> Form ini membuat Anda bisa mengunggah dan menginstal plugin baru. Pastikan plugin dikompres sebagai file .tar.gz.</message> 
 	<message key="manager.plugins.installedVersionNewer"> Plugin sudah ada dan lebih baru atau sama dengan versi yang sudah diinstal</message> 
 	<message key="manager.plugins.installedVersionOlder"> Plugin sudah ada dan lebih lama atau sama dengan versi yang sudah diinstal.</message> 
 <message key="manager.plugins.installFailed">Penginstalan gagal</message> 

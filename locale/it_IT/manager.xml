@@ -559,8 +559,6 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.forms">Moduli</message>
 	<message key="manager.people.showNoRole">Mostra gli utenti privi di ruolo</message>
-	<message key="manager.plugins.install">Installa un nuovo plugin</message>
-	<message key="manager.plugins.installDescription">Questo modulo permette di caricare e installare un nuovo plugin. Assicurati che il plugin sia in formato compresso  .tar.gz</message>
 	<message key="manager.plugins.upgrade">Aggiorna il plugin</message>
 	<message key="manager.plugins.upgradeDescription">Questo modulo permette di aggiornare un plugin. Assicurati che il plugin sia in formato compresso  .tar.gz</message>
 	<message key="manager.plugins.delete">Cancella il plugin</message>

@@ -398,8 +398,6 @@
 	<message key="manager.people.mergeUsers.into.description">Выберите пользователя, которому будут переназначено авторство, редакционные задания и т.д. удаляемого пользователя.</message>
 	<message key="manager.people.roleEnrollment">роль {$role}</message>
 	<message key="manager.plugins.description">Эта страница позволяет менеджеру журнала просмотреть и сконфигурировать установленные модули системы OJS. Модули разбиты по категориям в соотвествии с их функцией. Эти категории приведены ниже, нажав на них Вы перейдете к списку соответствущих модулей.</message>
-	<message key="manager.plugins.install">Установить новый модуль</message>
-	<message key="manager.plugins.installDescription">Эта форма позволяет загрузить и установить новый модуль. Пожалуйста убедитесь, что загружаемый файл сжат в формате .tar.gz.</message>
 	<message key="manager.plugins.upgrade">Обновить модуль</message>
 	<message key="manager.plugins.upgradeDescription">Эта форма позволяет обновить модуль. Пожалуйста убедитесь, что загружаемый файл сжат в формате .tar.gz.</message>
 	<message key="manager.plugins.delete">Удалить модуль</message>
