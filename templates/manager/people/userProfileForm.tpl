@@ -29,6 +29,7 @@
 		$("#interests").tagit({
 			{/literal}{if $existingInterests}{literal}
 			// This is the list of interests in the system used to populate the autocomplete
+                        // CDL note: ran across a weird bug if unicode 'line separator' character U+2028 is part of a string. We decided to replace with spaces in the DB.
 			availableTags: [{/literal}{foreach name=existingInterests from=$existingInterests item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.existingInterests.last}, {/if}{/foreach}{literal}],{/literal}{/if}
 			// This is the list of the user's interests that have already been saved
 			{if $interestsKeywords}{literal}currentTags: [{/literal}{foreach name=currentInterests from=$interestsKeywords item=interest}"{$interest|escape|escape:'javascript'}"{if !$smarty.foreach.currentInterests.last}, {/if}{/foreach}{literal}]{/literal}
