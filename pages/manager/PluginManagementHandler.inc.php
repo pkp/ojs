@@ -79,7 +79,7 @@ class PluginManagementHandler extends ManagerHandler {
 		if (!Validation::isSiteAdmin()) {
 			$site =& $request->getSite();
 			$preventManagerPluginManagement = $site->getSetting('preventManagerPluginManagement');
-			if (preventManagerPluginManagement) $request->redirect(null, 'manager', 'plugins');
+			if ($preventManagerPluginManagement) $request->redirect(null, 'manager', 'plugins');
 		}
 	}
 
