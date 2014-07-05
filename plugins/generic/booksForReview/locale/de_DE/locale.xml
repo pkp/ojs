@@ -171,6 +171,7 @@
 	<message key="plugins.generic.booksForReview.public.bookDetails">Buchdetails</message>
 
 	<!-- Books For Review -->
+	<message key="plugins.generic.booksForReview.reminderTask.name">Erinnerung an Bücher zur Rezension</message>
 	<message key="plugins.generic.booksForReview.displayName">Bücher zur Rezension</message>
 	<message key="plugins.generic.booksForReview.description">Rezensionsangebote für interessante oder von Verlagen zugesandte Bücher einholen. Rezensent/innen und Rezensionsvorgänge verwalten.</message>
 	<message key="plugins.generic.booksForReview.headerLink">Bücher zur Rezension</message>
