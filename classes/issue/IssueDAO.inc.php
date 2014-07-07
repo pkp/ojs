@@ -480,6 +480,7 @@ class IssueDAO extends DAO {
 		// Delete issue settings and issue
 		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', (int) $issueId);
 		$this->update('DELETE FROM issues WHERE issue_id = ?', (int) $issueId);
+		$this->update('DELETE FROM custom_issue_orders WHERE issue_id = ?', (int) $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
 
 		$this->flushCache();
