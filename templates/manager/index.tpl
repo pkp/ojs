@@ -64,7 +64,7 @@
 	<li>&#187; <a href="{url op="showNoRole"}">{translate key="manager.people.showNoRole"}</a></li>
 	{/if}
 	{url|assign:"managementUrl" page="manager"}
-	<li>&#187; <a href="{url op="createUser" source=$managementUrl}">{translate key="manager.people.createUser"}</a></li>
+	<li>&#187; <a href="{url op="createUser" source=$managementUrl}">{translate key="manager.people.createUserAddRole"}</a></li>
 	{* 20110830 BLH Display 'Merge Users' link only if user is Site Admin *}
 	{if $isSiteAdmin}
 		<li>&#187; <a href="{url op="mergeUsers"}">{translate key="manager.people.mergeUsers"}</a></li>

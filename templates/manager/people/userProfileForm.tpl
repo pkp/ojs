@@ -204,7 +204,7 @@
 <p>{translate key="manager.people.userCreatedSuccessfully"}</p>
 {/if}
 
-<h3>{if $userId}{translate key="manager.people.editProfile"}{else}{translate key="manager.people.createUser"}{/if}</h3>
+<h3>{if $userId}{translate key="manager.people.editProfile"}{else}{translate key="manager.people.createUserAddRole"}{/if}</h3>
 
 <div id="existingUserInfo">
 	<div id="existingUserMsg">

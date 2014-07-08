@@ -83,6 +83,8 @@
 	<message key="manager.people.allJournals">All Journals</message>
 	<message key="manager.people.allSiteUsers">Enroll a User from this Site in this Journal</message>
 	<message key="manager.people.showNoRole">Show Users with No Role</message>
+	<!-- Added Enroll User label here as opposed to in submodule to bring it all together with the other labels about managing people-->
+	<message key="manager.people.createUserAddRole">Enroll a New User/Add a New Role</message>
 	<message key="manager.people.allUsers">All Enrolled Users</message>
 	<message key="manager.people.confirmRemove">Remove this user from this journal? This action will unenroll the user from all roles within this journal.</message>
 	<message key="manager.people.emailUsers.selectTemplate">Select a template</message>
