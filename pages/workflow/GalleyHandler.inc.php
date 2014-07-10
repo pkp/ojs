@@ -95,7 +95,7 @@ class GalleyHandler extends Handler {
 	function fetchGalley($args, $request) {
 		// Fetch the template
 		$templateMgr = TemplateManager::getManager($request);
-		return $templateMgr->fetchJson('workflow/galley.tpl');
+		return $templateMgr->fetchJson('controllers/tab/workflow/galley.tpl');
 	}
 }
 
