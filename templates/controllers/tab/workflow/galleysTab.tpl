@@ -27,7 +27,7 @@ $(function() {ldelim}
 </script>
 <div id="galleyTabs">
 	<ul>
-		{iterate from=galleys item=galley}
+		{foreach from=$galleys item=galley}
 			<li>
 				<a id="galley{$galley->getId()|escape}"
 					href="{url router=$smarty.const.ROUTE_PAGE page="workflow" op="fetchGalley"
@@ -35,7 +35,7 @@ $(function() {ldelim}
 					submissionId=$galley->getSubmissionId()
 					stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION}">{$galley->getLabel()|escape}</a>
 			</li>
-		{/iterate}
+		{/foreach}
 	</ul>
 </div>
 
