@@ -22,7 +22,7 @@ before_install:
 
   # Install phpunit in a phar package with selenium extension already on it.
   - sudo rm -R /home/travis/.phpenv/versions/5.3/bin/phpunit
-  - wget https://phar.phpunit.de/phpunit.phar
+  - wget --no-check-certificate https://phar.phpunit.de/phpunit.phar
   - chmod +x phpunit.phar
   - sudo mv phpunit.phar /home/travis/.phpenv/versions/5.3/bin/phpunit
 
