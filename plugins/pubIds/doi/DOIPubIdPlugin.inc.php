@@ -297,8 +297,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @see PubIdPlugin::validatePubId()
 	 */
 	function validatePubId($pubId) {
-		$doiParts = explode('/', $pubId, 2);
-		return count($doiParts) == 2;
+		return preg_match('/^\d+(.\d+)+\//', $pubId);
 	}
 
 	/*
