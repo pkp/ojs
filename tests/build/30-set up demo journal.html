@@ -11,12 +11,6 @@
 <thead>
 <tr><td rowspan="1" colspan="3">30-set up demo journal</td></tr>
 </thead><tbody>
-<!--This load seems to have trouble completing at high speed-->
-<tr>
-	<td>setSpeed</td>
-	<td>1000</td>
-	<td></td>
-</tr>
 <tr>
 	<td>open</td>
 	<td>${baseUrl}</td>
@@ -29,7 +23,7 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>headerContainer</td>
+	<td>link=Journal</td>
 	<td></td>
 </tr>
 <tr>
@@ -38,8 +32,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>setSpeed</td>
-	<td>1000</td>
+	<td>waitForElementPresent</td>
+	<td>css=[id^=abbreviation-]</td>
 	<td></td>
 </tr>
 <tr>
@@ -90,11 +84,6 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Website</td>
-	<td></td>
-</tr>
-<tr>
-	<td>setSpeed</td>
-	<td>100</td>
 	<td></td>
 </tr>
 <tr>
