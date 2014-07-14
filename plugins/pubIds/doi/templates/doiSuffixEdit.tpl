@@ -56,6 +56,9 @@
 				<br />
 				<span class="instruct">{translate key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description"}</span><br/>
 				<input type="submit" name="excludeIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi"}" class="action" /><br />
+				<br />
+				<span class="instruct">{translate key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"}</span><br/>
+				<input type="submit" name="clearIssueObjects_{$pubIdPlugin->getPubIdType()|escape}" value="{translate key="plugins.pubIds.doi.editor.clearIssueObjectsDoi"}" class="action" /><br />
 			{/if}
 		{/if}
 

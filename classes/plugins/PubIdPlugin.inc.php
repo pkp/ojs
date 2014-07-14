@@ -40,7 +40,7 @@ class PubIdPlugin extends Plugin {
 				HookRegistry::register(strtolower_codesafe($daoName).'::getAdditionalFieldNames', array($this, 'getAdditionalFieldNames'));
 			}
 			// Exclude issue articles
-			HookRegistry::register('Editor::IssueManagementHandler::editIssue', array($this, 'excludeIssueObjects'));
+			HookRegistry::register('Editor::IssueManagementHandler::editIssue', array($this, 'editIssue'));
 		}
 		return $success;
 	}
@@ -371,54 +371,73 @@ class PubIdPlugin extends Plugin {
 	}
 
 	/**
-	 * Exclude issue objects (articles, galley, supp files)
-	 * from assigning them the pubId
+	 * Exclude all issue objects (articles, galley, supp files)
+	 * from assigning them the pubId or
+	 * clear DOIs of all issue objects (articles, galley, supp files)
 	 * @param $hookName string (Editor::IssueManagementHandler::editIssue)
 	 * @param $params array (Issue, IssueForm)
 	 */
-	function excludeIssueObjects($hookName, $params) {
+	function editIssue($hookName, $params) {
 		$issue =& $params[0];
 		$issueId = $issue->getId();
-		$submittName = 'excludeIssueObjects_' . $this->getPubIdType();
-		if (Request::getUserVar($submittName)) {
-			$settingName = $this->getExcludeFormFieldName();
-			$pubIdType = $this->getPubIdType();
 
-			$articlePubIdEnabled = $this->isEnabled('Article', $issue->getJournalId());
-			$galleyPubIdEnabled = $this->isEnabled('Galley', $issue->getJournalId());
-			$suppFilePubIdEnabled = $this->isEnabled('SuppFile', $issue->getJournalId());
-			if (!$articlePubIdEnabled && !$galleyPubIdEnabled && !$suppFilePubIdEnabled) return false;
+		$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true);
+		if (is_array($pubIdPlugins)) {
+			foreach ($pubIdPlugins as $pubIdPlugin) {
+				$excludeSubmittName = 'excludeIssueObjects_' . $pubIdPlugin->getPubIdType();
+				$clearSubmittName = 'clearIssueObjects_' . $pubIdPlugin->getPubIdType();
+				$exlude = $clear = false;
+				if (Request::getUserVar($excludeSubmittName)) $exclude = true;
+				if (Request::getUserVar($clearSubmittName)) $clear = true;
+				if ($exclude || $clear) {
+					$articlePubIdEnabled = $pubIdPlugin->isEnabled('Article', $issue->getJournalId());
+					$galleyPubIdEnabled = $pubIdPlugin->isEnabled('Galley', $issue->getJournalId());
+					$suppFilePubIdEnabled = $pubIdPlugin->isEnabled('SuppFile', $issue->getJournalId());
+					if (!$articlePubIdEnabled && !$galleyPubIdEnabled && !$suppFilePubIdEnabled) return false;
 
-			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
-			foreach ($publishedArticles as $publishedArticle) {
-				if ($articlePubIdEnabled && !$publishedArticle->getStoredPubId($pubIdType)) {
-					$publishedArticle->setData($settingName, 1);
-					$articleDao->updateArticle($publishedArticle);
-				}
-				if ($galleyPubIdEnabled) {
-					$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
-					$articleGalleys =& $articleGalleyDao->getGalleysByArticle($publishedArticle->getId());
-					foreach ($articleGalleys as $articleGalley) {
-						if (!$articleGalley->getStoredPubId($pubIdType)) {
-							$articleGalley->setData($settingName, 1);
-							$articleGalleyDao->updateGalley($articleGalley);
+					$settingName = $pubIdPlugin->getExcludeFormFieldName();
+					$pubIdType = $pubIdPlugin->getPubIdType();
+
+					$articleDao =& DAORegistry::getDAO('ArticleDAO');
+					$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+					$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+					foreach ($publishedArticles as $publishedArticle) {
+						if ($articlePubIdEnabled) {
+							if ($exclude && !$publishedArticle->getStoredPubId($pubIdType)) {
+								$publishedArticle->setData($settingName, 1);
+								$articleDao->updateArticle($publishedArticle);
+							} else if ($clear) {
+								$articleDao->deletePubId($publishedArticle->getId(), $pubIdType);
+							}
+						}
+						if ($galleyPubIdEnabled) {
+							$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+							$articleGalleys =& $articleGalleyDao->getGalleysByArticle($publishedArticle->getId());
+							foreach ($articleGalleys as $articleGalley) {
+								if ($exclude && !$articleGalley->getStoredPubId($pubIdType)) {
+									$articleGalley->setData($settingName, 1);
+									$articleGalleyDao->updateGalley($articleGalley);
+								} else if ($clear) {
+									$articleGalleyDao->deletePubId($articleGalley->getId(), $pubIdType);
+								}
+							}
+						}
+						if ($suppFilePubIdEnabled) {
+							$articleSuppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+							$articleSuppFiles =& $articleSuppFileDao->getSuppFilesByArticle($publishedArticle->getId());
+							foreach ($articleSuppFiles as $articleSuppFile) {
+								if ($exclude && !$articleSuppFile->getStoredPubId($pubIdType)) {
+									$articleSuppFile->setData($settingName, 1);
+									$articleSuppFileDao->updateSuppFile($articleSuppFile);
+								} else if ($clear) {
+									$articleSuppFileDao->deletePubId($articleGalley->getId(), $pubIdType);
+								}
+							}
 						}
 					}
-				}
-				if ($suppFilePubIdEnabled) {
-					$articleSuppFileDao =& DAORegistry::getDAO('SuppFileDAO');
-					$articleSuppFiles =& $articleSuppFileDao->getSuppFilesByArticle($publishedArticle->getId());
-					foreach ($articleSuppFiles as $articleSuppFile) {
-						if (!$articleSuppFile->getStoredPubId($pubIdType)) {
-							$articleSuppFile->setData($settingName, 1);
-							$articleSuppFileDao->updateSuppFile($articleSuppFile);
-						}
-					}
+					return true;
 				}
 			}
-			return true;
 		}
 		return false;
 	}
