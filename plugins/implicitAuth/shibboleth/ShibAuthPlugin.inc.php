@@ -208,7 +208,7 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
 		// Go put the user into the session and return it.
 
-		$sessionManager =& SessionManager::getManager();
+		$sessionManager = SessionManager::getManager();
 		$session = $sessionManager->getUserSession();
 		$session->setSessionVar('username', $user->getUsername());
 
