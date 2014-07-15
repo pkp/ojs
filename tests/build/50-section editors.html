@@ -13,6 +13,11 @@
 </thead><tbody>
 <!--Log in as admin-->
 <tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Login</td>
 	<td></td>
@@ -50,11 +55,6 @@
 </tr>
 <!--Edit Articles to add SEs-->
 <tr>
-	<td>setSpeed</td>
-	<td>1000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]</td>
 	<td></td>
@@ -76,7 +76,7 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//option[text()='David Buskins']</td>
+	<td>//select[@name='newRowId[name]']//option[text()='David Buskins']</td>
 	<td></td>
 </tr>
 <tr>
@@ -85,24 +85,25 @@
 	<td>label=David Buskins</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAt</td>
 	<td>css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]</td>
 	<td>10,10</td>
 </tr>
+<!--Clean point-->
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//option[text()='Stephanie Berardo']</td>
+	<td>css=span:contains('David Buskins')</td>
 	<td></td>
 </tr>
 <tr>
-	<td>runScript</td>
-	<td>$('#sectionEditorsContainer * select:visible').val($('#sectionEditorsContainer * select:visible option:contains(&quot;Stephanie Berardo&quot;)').attr('value'));</td>
-	<td></td>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//select[@name=&quot;newRowId[name]&quot;])[2]//option[text()='Stephanie Berardo']</td>
+	<td>label=Stephanie Berardo</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>xpath=(//select[@name=&quot;newRowId[name]&quot;])[2]</td>
+	<td>label=Stephanie Berardo</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -110,8 +111,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>setSpeed</td>
-	<td>100</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <tr>
@@ -162,12 +163,7 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>name=newRowId[name]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>//select[@name='newRowId[name]']//option[text()='Minoti Inoue']</td>
 	<td></td>
 </tr>
 <tr>
@@ -181,8 +177,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Log out-->
@@ -194,11 +190,6 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Logout</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
 	<td></td>
 </tr>
 </tbody></table>
