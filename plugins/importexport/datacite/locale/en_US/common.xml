@@ -28,6 +28,9 @@
 	<message key="plugins.importexport.common.register.warning">Registering many objects can take a long time. So please be patient after clicking the "Register" button. You'll be notified when registration is complete.</message>
 	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[Direct registration is currently disabled. Please <a href="{$settingsUrl}">configure</a> a username and password to be able to register objects directly with the registration agency.]]></message>
 
+	<message key="plugins.importexport.common.markRegistered">Mark registered</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Click this button to mark the objects registered (e.g. if registered earlier or manually).</message>
+
 	<message key="plugins.importexport.common.update">Update</message>
 	<message key="plugins.importexport.common.updateDescription">Click this button to update the meta-data of this object with the registration agency. This only works if you successfully registered the object before!</message>
 		

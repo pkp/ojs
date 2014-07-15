@@ -67,14 +67,6 @@ class DOIExportSettingsForm extends Form {
 	// Implement template methods from Form
 	//
 	/**
-	 * @see Form::getData()
-	 */
-	function getData($key) {
-		$value = parent::getData($key);
-		return $value;
-	}
-
-	/**
 	 * @see Form::initData()
 	 */
 	function initData() {
