@@ -70,7 +70,12 @@ class DOAJExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'eissn', $journal->getSetting('onlineIssn'), false);
 
 		/* --- Article's publication date, volume, issue, DOI --- */
-		XMLCustomWriter::createChildWithText($doc, $root, 'publicationDate', DOAJExportDom::formatDate($article->getDatePublished()), false);
+		if ($article->getDatePublished()) {
+			XMLCustomWriter::createChildWithText($doc, $root, 'publicationDate', DOAJExportDom::formatDate($article->getDatePublished()), false);			
+		}
+		else {
+			XMLCustomWriter::createChildWithText($doc, $root, 'publicationDate', DOAJExportDom::formatDate($issue->getDatePublished()), false);
+		}
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'volume',  $issue->getVolume(), false);
 
