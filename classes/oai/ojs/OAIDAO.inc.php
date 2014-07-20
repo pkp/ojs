@@ -208,8 +208,15 @@ class OAIDAO extends PKPOAIDAO {
 	/**
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getAccessibleRecordWhereClause()
 	 */
-	function getAccessibleRecordWhereClause() {
-		return 'WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_ARCHIVED . ') OR dot.data_object_id IS NOT NULL)';
+	function getAccessibleRecordWhereClause(setIds = NULL) {
+		if ($setIds && isset($setIds[1])) {
+                    list($journalId, $sectionId) = $setIds;
+                } else {
+                    list($journalId) = $setIds;
+                }
+                return 'WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND '
+                . 'a.status <> ' . STATUS_ARCHIVED . ') OR dot.data_object_id IS NOT NULL'
+                        . (isset($journalId)?' AND a.journal_id = '.$journalId:'').')';
 	}
 
 	/**
