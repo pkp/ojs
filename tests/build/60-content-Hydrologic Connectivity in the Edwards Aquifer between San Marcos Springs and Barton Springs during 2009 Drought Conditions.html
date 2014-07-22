@@ -187,11 +187,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>100</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>css=[id^=name-]</td>
 	<td></td>
@@ -202,18 +197,8 @@
 	<td>Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>100</td>
-	<td></td>
-</tr>
-<tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>100</td>
 	<td></td>
 </tr>
 <tr>
@@ -222,9 +207,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>100</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -235,6 +220,11 @@
 	<td>click</td>
 	<td>//span[text()='Complete']/..</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -263,8 +253,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <tr>
@@ -273,8 +263,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>250</td>
+	<td>waitForText</td>
+	<td>css=div.pkp_controllers_modal_titleBar &gt; h2</td>
+	<td>Confirm</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='OK']/..</td>
 	<td></td>
 </tr>
 <tr>
@@ -283,19 +278,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>css=#ui-tabs-4 &gt; h2</td>
+	<td>Submission complete</td>
 </tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 <tr>
@@ -322,6 +317,16 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 <!--Find the submission-->
@@ -367,14 +372,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=userGroupId</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=userGroupId</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -382,8 +382,13 @@
 	<td>label=Section editor</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//select[@name='userId']//option[text()='David Buskins']</td>
 	<td></td>
 </tr>
 <tr>
@@ -397,8 +402,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Send to review-->
@@ -427,11 +432,6 @@
 	<td>//form[@id='initiateReview']//span[text()='Send to External Review']/..</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
 <!--Add reviewer-->
 <tr>
 	<td>waitForElementPresent</td>
@@ -454,19 +454,9 @@
 	<td>amccrae</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>typeKeys</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>amccrae</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -489,8 +479,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Add reviewer-->
@@ -515,19 +505,9 @@
 	<td>jjanssen</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>typeKeys</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>jjanssen</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -550,8 +530,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Add reviewer-->
@@ -576,19 +556,9 @@
 	<td>agallego</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>typeKeys</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>agallego</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -611,19 +581,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 <tr>
@@ -647,6 +617,16 @@
 	<td>//span[text()='Login']/..</td>
 	<td></td>
 </tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
 <!--Find the reviewer's assignment-->
 <tr>
 	<td>waitForElementPresent</td>
@@ -714,20 +694,15 @@
 	<td>css=#ui-tabs-4 &gt; h2</td>
 	<td>Review Submitted</td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 <tr>
@@ -751,6 +726,16 @@
 	<td>//span[text()='Login']/..</td>
 	<td></td>
 </tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
 <!--Find the reviewer's assignment-->
 <tr>
 	<td>waitForElementPresent</td>
@@ -818,20 +803,15 @@
 	<td>css=#ui-tabs-4 &gt; h2</td>
 	<td>Review Submitted</td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 <tr>
@@ -853,6 +833,16 @@
 <tr>
 	<td>click</td>
 	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 <!--Find the reviewer's assignment-->
@@ -922,20 +912,15 @@
 	<td>css=#ui-tabs-4 &gt; h2</td>
 	<td>Review Submitted</td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 <tr>
@@ -962,6 +947,16 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 <!--Find the submission-->
@@ -1007,24 +1002,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 <tr>

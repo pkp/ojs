@@ -187,11 +187,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>100</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>css=[id^=name-]</td>
 	<td></td>
@@ -202,18 +197,8 @@
 	<td>Antimicrobial, heavy metal resistance and plasmid profile of coliforms</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>100</td>
-	<td></td>
-</tr>
-<tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>100</td>
 	<td></td>
 </tr>
 <tr>
@@ -222,9 +207,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>100</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -235,6 +220,11 @@
 	<td>click</td>
 	<td>//span[text()='Complete']/..</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -258,18 +248,18 @@
 	<td>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>//span[text()='Finish Submission']/..</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>250</td>
+	<td>waitForText</td>
+	<td>css=div.pkp_controllers_modal_titleBar &gt; h2</td>
+	<td>Confirm</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='OK']/..</td>
 	<td></td>
 </tr>
 <tr>
@@ -278,19 +268,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>css=#ui-tabs-4 &gt; h2</td>
+	<td>Submission complete</td>
 </tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 <tr>
@@ -317,6 +307,16 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>//span[text()='Login']/..</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 <!--Find the submission-->
@@ -362,14 +362,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=userGroupId</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=userGroupId</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -377,8 +372,13 @@
 	<td>label=Section editor</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//select[@name='userId']//option[text()='Stephanie Berardo']</td>
 	<td></td>
 </tr>
 <tr>
@@ -389,11 +389,6 @@
 <tr>
 	<td>click</td>
 	<td>//span[text()='OK']/..</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
 	<td></td>
 </tr>
 <!--Send to review-->
@@ -422,11 +417,6 @@
 	<td>//form[@id='initiateReview']//span[text()='Send to External Review']/..</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
 <!--Add reviewer-->
 <tr>
 	<td>waitForElementPresent</td>
@@ -449,19 +439,9 @@
 	<td>jjanssen</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>typeKeys</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>jjanssen</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -484,8 +464,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Add reviewer-->
@@ -510,19 +490,9 @@
 	<td>phudson</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>typeKeys</td>
 	<td>css=[id^=reviewerId_input-]</td>
 	<td>phudson</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>500</td>
-	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -545,9 +515,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <!--Assign a Copyeditor-->
 <tr>
@@ -556,11 +526,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>id=participantToggle</td>
 	<td></td>
@@ -581,9 +546,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=userGroupId</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -591,8 +556,13 @@
 	<td>label=Copyeditor</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//select[@name='userId']//option[text()='Maria Fritz']</td>
 	<td></td>
 </tr>
 <tr>
@@ -603,11 +573,6 @@
 <tr>
 	<td>click</td>
 	<td>//span[text()='OK']/..</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
 	<td></td>
 </tr>
 <!--Send to Production-->
@@ -632,9 +597,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <!--Assign Layout Editor-->
 <tr>
@@ -658,9 +623,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=userGroupId</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -668,8 +633,13 @@
 	<td>label=Layout Editor</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//select[@name='userId']//option[text()='Graham Cox']</td>
 	<td></td>
 </tr>
 <tr>
@@ -683,9 +653,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>css=div.ui-pnotify-text</td>
+	<td>User added as a stage participant.</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <!--Assign a proofreader-->
 <tr>
@@ -709,9 +684,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=userGroupId</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -719,8 +694,13 @@
 	<td>label=Proofreader</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//select[@name='userId']//option[text()='Catherine Turner']</td>
 	<td></td>
 </tr>
 <tr>
@@ -734,9 +714,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>2000</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>css=div.ui-pnotify-text</td>
+	<td>User added as a stage participant.</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <!--Create a galley-->
 <tr>
@@ -768,6 +753,11 @@
 	<td>click</td>
 	<td>//span[text()='Save']/..</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <!--Upload a galley file-->
 <tr>
@@ -816,11 +806,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>100</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>css=[id^=name-]</td>
 	<td></td>
@@ -831,18 +816,8 @@
 	<td>PDF</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>100</td>
-	<td></td>
-</tr>
-<tr>
 	<td>runScript</td>
 	<td>$('#metadataForm').valid();</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>100</td>
 	<td></td>
 </tr>
 <tr>
@@ -851,6 +826,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>//span[text()='Complete']/..</td>
 	<td></td>
@@ -860,25 +840,15 @@
 	<td>//span[text()='Complete']/..</td>
 	<td></td>
 </tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
-	<td></td>
-</tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 <tr>

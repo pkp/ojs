@@ -90,8 +90,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Create issue-->
@@ -103,11 +103,6 @@
 <tr>
 	<td>click</td>
 	<td>css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>1000</td>
 	<td></td>
 </tr>
 <tr>
@@ -141,19 +136,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>500</td>
+	<td>waitForElementNotPresent</td>
+	<td>css=.ui-widget-overlay</td>
 	<td></td>
 </tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 </tbody></table>

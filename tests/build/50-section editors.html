@@ -183,13 +183,13 @@
 </tr>
 <!--Log out-->
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Logout</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>10000</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>open</td>
+	<td>${baseUrl}/index.php/index/login/signOut</td>
 	<td></td>
 </tr>
 </tbody></table>
