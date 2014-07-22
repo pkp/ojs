@@ -336,6 +336,8 @@ class ArticleGalleyDAO extends DAO {
 		if ($this->getAffectedRows()) {
 			$this->update('DELETE FROM submission_galley_settings WHERE galley_id = ?', array((int) $galleyId));
 			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			// Import constants
+			import('lib.pkp.classes.submission.SubmissionFile');
 
 			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galleyId, $articleId, SUBMISSION_FILE_PROOF);
 			foreach ($galleyFiles as $file) {
