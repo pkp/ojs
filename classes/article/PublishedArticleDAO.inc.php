@@ -472,7 +472,7 @@ class PublishedArticleDAO extends DAO {
 			$sql .= 'LEFT JOIN article_settings ast ON a.article_id = ast.article_id AND ast.setting_name = ?
 				WHERE	(ast.setting_value IS NULL OR ast.setting_value = "")';
 		} else {
-			$params[] = $settingValue;
+			$params[] = (string) $settingValue; // Bug #8853
 			$sql .= 'INNER JOIN article_settings ast ON a.article_id = ast.article_id
 				WHERE	ast.setting_name = ? AND ast.setting_value = ?';
 		}
