@@ -209,7 +209,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -224,7 +224,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -276,7 +276,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>open</td>
@@ -364,7 +364,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -374,7 +374,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -390,6 +390,11 @@
 	<td>click</td>
 	<td>//span[text()='OK']/..</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Send to review-->
 <tr>
@@ -417,6 +422,11 @@
 	<td>//form[@id='initiateReview']//span[text()='Send to External Review']/..</td>
 	<td></td>
 </tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>${timeoutMicros}</td>
+</tr>
 <!--Add reviewer-->
 <tr>
 	<td>waitForElementPresent</td>
@@ -464,9 +474,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementNotPresent</td>
-	<td>css=.ui-widget-overlay</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Add reviewer-->
 <tr>
@@ -515,9 +525,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementNotPresent</td>
-	<td>css=.ui-widget-overlay</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Add reviewer-->
 <tr>
@@ -568,7 +578,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Assign a Copyeditor-->
 <tr>
@@ -599,7 +609,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -609,7 +619,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -625,6 +635,11 @@
 	<td>click</td>
 	<td>//span[text()='OK']/..</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Send to Production-->
 <tr>
@@ -648,9 +663,14 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForText</td>
+	<td>css=span.description &gt; p</td>
+	<td>This submission is currently awaiting approval before it will appear in the issue.</td>
+</tr>
+<tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Assign Layout Editor-->
 <tr>
@@ -674,9 +694,14 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=userGroupId</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -686,7 +711,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -711,7 +736,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Assign a proofreader-->
 <tr>
@@ -737,7 +762,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -747,7 +772,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -768,6 +793,11 @@
 	<td>waitForText</td>
 	<td>css=div.ui-pnotify-text</td>
 	<td>User added as a stage participant.</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>window.jQuery.active == 0</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Create a galley-->
 <tr>
@@ -808,7 +838,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <!--Upload a galley file-->
 <tr>
@@ -879,7 +909,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -941,7 +971,7 @@
 <tr>
 	<td>waitForCondition</td>
 	<td>window.jQuery.active == 0</td>
-	<td>10000</td>
+	<td>${timeoutMicros}</td>
 </tr>
 <tr>
 	<td>open</td>
