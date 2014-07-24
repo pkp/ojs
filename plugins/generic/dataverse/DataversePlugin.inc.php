@@ -1205,90 +1205,17 @@ class DataversePlugin extends GenericPlugin {
 	}
 	
 	/**
-	 * Update cataloguing information for an existing study.
+	 * Update cataloguing information for an existing study. Metadata in the Atom
+	 * entry overwrites all cataloguing information currently defined for the
+	 * study.
 	 * @param Article $article
 	 * @param DataverseStudy $study
-	 * @return DataverseStudy
+	 * @return boolean Cataloguing information updated
 	 */
-	function &updateStudy(&$article, &$study) {
-		$journal =& Request::getJournal();		
+	function replaceStudyMetadata($article, $study) {
 		$packager = new DataversePackager();
-		// Add article metadata
-		$packager->addMetadata('title', $article->getLocalizedTitle());
-		$packager->addMetadata('description', $article->getLocalizedAbstract());
-		foreach ($article->getAuthors() as $author) {
-			$packager->addMetadata('creator', $author->getFullName(true));
-		}
-		// subject: academic disciplines
-		$split = '/\s*'. DATAVERSE_PLUGIN_SUBJECT_SEPARATOR .'\s*/';
-		foreach(preg_split($split, $article->getLocalizedDiscipline(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$packager->addMetadata('subject', $subject);
-		}
-		// subject: subject classifications
-		foreach(preg_split($split, $article->getLocalizedSubjectClass(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$packager->addMetadata('subject', $subject);
-		}
-		// subject:	 keywords		 
-		foreach(preg_split($split, $article->getLocalizedSubject(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$packager->addMetadata('subject', $subject);
-		}		 
-		// geographic coverage
-		foreach(preg_split($split, $article->getLocalizedCoverageGeo(), NULL, PREG_SPLIT_NO_EMPTY) as $coverage) {
-			$packager->addMetadata('coverage', $coverage);
-		}
-		// rights
-		$packager->addMetadata('rights', $journal->getLocalizedSetting('copyrightNotice'));
-		// publisher
-		$packager->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
-		// metadata for published articles: public IDs, publication dates
-		$pubIdAttributes = array();		 
-		if ($article->getStatus()==STATUS_PUBLISHED) {
-			// publication date
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId(), $article->getJournalId());
-			$datePublished = $publishedArticle->getDatePublished();
-			if (!$datePublished) {
-				// If article has no pub date, use issue pub date
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issue =& $issueDao->getIssueByArticleId($article->getId(), $article->getJournalId());
-				$datePublished = $issue->getDatePublished();        
-			}
-			$packager->addMetadata('date', strftime('%Y-%m-%d', strtotime($datePublished)));
-			// isReferencedBy: If article is published, add a persistent URL to citation using specified pubid plugin
-			$pubIdPlugin =& PluginRegistry::getPlugin('pubIds', $this->getSetting($article->getJournalId(), 'pubIdPlugin'));
-			if ($pubIdPlugin && $pubIdPlugin->getEnabled()) {
-				$pubIdAttributes['agency'] = $pubIdPlugin->getDisplayName();
-				$pubIdAttributes['IDNo'] = $article->getPubId($pubIdPlugin->getPubIdType());
-				$pubIdAttributes['holdingsURI'] = $pubIdPlugin->getResolvingUrl($article->getJournalId(), $pubIdAttributes['IDNo']);
-			}
-			else {
-				// If no pub id plugin selected, use OJS URL
-				$pubIdAttributes['holdingsURI'] = Request::url($journal->getPath(), 'article', 'view', array($article->getId()));
-			}
-		}
-		// isReferencedBy
-		$packager->addMetadata('isReferencedBy', $this->getCitation($article), $pubIdAttributes);
-		// Include (some) suppfile metadata in study
-		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');		 
-		$dataverseFileDao =& DAORegistry::getDAO('DataverseFileDAO');
-		$dvFiles =& $dataverseFileDao->getDataverseFilesByStudyId($study->getId());
-		foreach ($dvFiles as $dvFile) {
-			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $article->getId());
-			if (isset($suppFile)) {
-				// subject
-				foreach(preg_split($split, $suppFile->getSuppFileSubject(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-					$packager->addMetadata('subject', $subject);
-				}
-				// Type of file
-				if ($suppFile->getType()) $packager->addMetadata('type', $suppFile->getType());
-				// Type of file, user-defined:
-				if ($suppFile->getSuppFileTypeOther()) $packager->addMetadata('type', $suppFile->getSuppFileTypeOther());
-			}
-		}		 
-		// Write atom entry to file
-		$packager->createAtomEntry();
+		$packager->createAtomEntry($article);
 		
-		// Update the study in Dataverse
 		$client = $this->_initSwordClient();
 		$depositReceipt = $client->replaceMetadata(
 						$study->getEditUri(),
@@ -1296,15 +1223,15 @@ class DataversePlugin extends GenericPlugin {
 						$this->getSetting($article->getJournalId(), 'password'),						
 						'', // on behalf of
 						$packager->getAtomEntryFilePath());
-		
-		if ($depositReceipt->sac_status != DATAVERSE_PLUGIN_HTTP_STATUS_OK) return false;
 
-		// Updating the metadata may have updated the data citation
-		$study->setDataCitation($depositReceipt->sac_dcterms['bibliographicCitation'][0]);
-		$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
-		$dataverseStudyDao->updateStudy($study);
-
-		return $study;
+		$metadataReplaced = ($depositReceipt->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK);
+		if ($metadataReplaced) {
+			// Data citation may have changed on updating cataloguing information
+			$study->setDataCitation($depositReceipt->sac_dcterms['bibliographicCitation'][0]);
+			$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
+			$dataverseStudyDao->updateStudy($study);
+		}
+		return $metadataReplaced;
 	}
 
 	/**
