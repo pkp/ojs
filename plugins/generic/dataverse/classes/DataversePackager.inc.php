@@ -58,10 +58,56 @@ class DataversePackager extends PackagerAtomTwoStep {
 	}
 	
 	/**
-	 * Create Atom entry. Wrapper renames parent::create() to distinguish between
-	 * Atom entry creation and deposit package creation.
+	 * Create Atom entry from journal-, article-, and suppfile-level metadata, then
+	 * write Atom entry to disk for later deposit. 
 	 */
-	function createAtomEntry() {
+	function createAtomEntry($article) {
+		// Article metadata
+		$this->addMetadata('title', $article->getLocalizedTitle());
+		$this->addMetadata('description', $article->getLocalizedAbstract());
+		foreach ($article->getAuthors() as $author) {
+			$this->addMetadata('creator', $author->getFullName(true));
+		}
+		// subject: academic disciplines
+		$split = '/\s*'. DATAVERSE_PLUGIN_SUBJECT_SEPARATOR .'\s*/';
+		foreach(preg_split($split, $article->getLocalizedDiscipline(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
+			$this->addMetadata('subject', $subject);
+		}
+		// subject: subject classifications
+		foreach(preg_split($split, $article->getLocalizedSubjectClass(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
+			$this->addMetadata('subject', $subject);
+		}
+		// subject:	 keywords		 
+		foreach(preg_split($split, $article->getLocalizedSubject(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
+			$this->addMetadata('subject', $subject);
+		}
+		// geographic coverage
+		foreach(preg_split($split, $article->getLocalizedCoverageGeo(), NULL, PREG_SPLIT_NO_EMPTY) as $coverage) {
+			$this->addMetadata('coverage', $coverage);
+		}
+		
+		// Journal metadata
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getById($article->getJournalId());
+		assert(!is_null($journal));
+		$this->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
+		$this->addMetadata('rights', $journal->getLocalizedSetting('copyrightNotice'));
+		$this->addMetadata('isReferencedBy', $this->getCitation($article));
+		
+		// Suppfile metadata
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
+		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
+		$dvFiles =& $dvFileDao->getDataverseFilesBySubmissionId($article->getId());
+		foreach ($dvFiles as $dvFile) {
+			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $article->getId());
+			assert(!is_null($suppFile));
+			foreach(preg_split($split, $suppFile->getSuppFileSubject(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
+				$this->addMetadata('subject', $subject);
+			}
+			if ($suppFile->getType()) $this->addMetadata('type', $suppFile->getType());
+			if ($suppFile->getSuppFileTypeOther()) $this->addMetadata('type', $suppFile->getSuppFileTypeOther());
+		}
+		// Write Atom entry file to /tmp		
 		$this->create();
 	}
 	
