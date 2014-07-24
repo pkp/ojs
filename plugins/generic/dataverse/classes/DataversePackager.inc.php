@@ -86,13 +86,43 @@ class DataversePackager extends PackagerAtomTwoStep {
 			$this->addMetadata('coverage', $coverage);
 		}
 		
-		// Journal metadata
+		// Fetch journal for published article and journal metadata
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal =& $journalDao->getById($article->getJournalId());
 		assert(!is_null($journal));
+		
+		// Published articles
+		$pubIdAttributes = array(); // Provide DC terms attributes for citation, if available
+		if ($article->getStatus() == STATUS_PUBLISHED) {
+			// publication date
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId(), $article->getJournalId());
+			$datePublished = $publishedArticle->getDatePublished();
+			if (!$datePublished) {
+				// If article has no pub date, use issue pub date
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issue =& $issueDao->getIssueByArticleId($article->getId(), $article->getJournalId());
+				$datePublished = $issue->getDatePublished();        
+			}
+			$this->addMetadata('date', strftime('%Y-%m-%d', strtotime($datePublished)));
+			
+			// isReferencedBy: add persistent URL to citation using specified pubid plugin
+			$pubIdPlugin =& PluginRegistry::getPlugin('pubIds', $this->getSetting($article->getJournalId(), 'pubIdPlugin'));
+			if ($pubIdPlugin && $pubIdPlugin->getEnabled()) {
+				$pubIdAttributes['agency'] = $pubIdPlugin->getDisplayName();
+				$pubIdAttributes['IDNo'] = $article->getPubId($pubIdPlugin->getPubIdType());
+				$pubIdAttributes['holdingsURI'] = $pubIdPlugin->getResolvingUrl($article->getJournalId(), $pubIdAttributes['IDNo']);
+			}
+			else {
+				// If no pub id plugin selected, use OJS URL
+				$pubIdAttributes['holdingsURI'] = Request::url($journal->getPath(), 'article', 'view', array($article->getId()));
+			}
+		}
+		
+		// Journal metadata
 		$this->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
 		$this->addMetadata('rights', $journal->getLocalizedSetting('copyrightNotice'));
-		$this->addMetadata('isReferencedBy', $this->getCitation($article));
+		$this->addMetadata('isReferencedBy', $this->getCitation($article), $pubIdAttributes);
 		
 		// Suppfile metadata
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
