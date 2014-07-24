@@ -830,7 +830,7 @@ class DataversePlugin extends GenericPlugin {
 
 				// Deleting a file may affect study cataloguing information
 				$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());
-				$this->updateStudy($article, $study);
+				$this->replaceStudyMetadata($article, $study);
 				break;
 
 			case 'dataverse':
@@ -887,7 +887,7 @@ class DataversePlugin extends GenericPlugin {
 
 				if (isset($dvFile)) {
 					// File is already in Dataverse. Update study with suppfile metadata. 
-					$studyUpdated = $this->updateStudy($article, $study);
+					$studyUpdated = $this->replaceStudyMetadata($article, $study);
 					$notificationManager->createTrivialNotification($user->getId(), $studyUpdated ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
 				}
 				else {
@@ -1240,7 +1240,7 @@ class DataversePlugin extends GenericPlugin {
 	 * @param SuppFile $suppFile
 	 * @return DataverseFile
 	 */
-	function &addFileToStudy(&$study, &$suppFile) {
+	function addFileToStudy($study, $suppFile) {
 		$packager = new DataversePackager();
 		$packager->addFile($suppFile);
 		$packager->createPackage();
@@ -1294,7 +1294,8 @@ class DataversePlugin extends GenericPlugin {
 		// Finally, file may have metadata that needs to be in study cataloguing information
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $articleDao->getArticle($study->getSubmissionId(), $journal->getId(), true);
-		$this->updateStudy($article, $study);
+		/** @fixme notify? */
+		$this->replaceStudyMetadata($article, $study);
 
 		return $dvFile;
 	}
