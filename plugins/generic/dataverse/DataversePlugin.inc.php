@@ -595,15 +595,14 @@ class DataversePlugin extends GenericPlugin {
 		$form =& $args[0];
 		$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
 		$study =& $dataverseStudyDao->getStudyBySubmissionId($form->article->getId());
-		if (!isset($study)) return false;
-		
-		// Update & notify
-		$study =& $this->updateStudy($form->article, $study);
-		$user =& Request::getUser();
-		import('classes.notification.NotificationManager');
-		$notificationManager = new NotificationManager();
-		$notificationManager->createTrivialNotification($user->getId(), isset($study) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
-
+		if (isset($study)) {
+			$metadataReplaced = $this->replaceStudyMetadata($form->article, $study);
+			// Notify success/failure
+			$user =& Request::getUser();
+			import('classes.notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification($user->getId(), $metadataReplaced ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
+		}
 		return false;
 	}	 
 	
@@ -929,18 +928,19 @@ class DataversePlugin extends GenericPlugin {
 		// Suppfile deposited in / marked for deposit in Dataverse?
 		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
 		$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($suppFileId, $submissionId ? $submissionId : '');
-		if (!isset($dvFile)) return false; // nope. 
-		
-		$this->deleteFile($dvFile);
+		if (isset($dvFile)) {
+			/** @fixme return boolean? */
+			$this->deleteFile($dvFile);
 
-		// Deleting the file may require an update to study metadata
-		$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
-		$study =& $dvStudyDao->getStudyBySubmissionId($dvFile->getSubmissionId());
-		if (isset($study)) {
+			// Replace cataloguing information: may have included metadata from deleted file
+			$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
+			$study =& $dvStudyDao->getStudyBySubmissionId($dvFile->getSubmissionId());
+			
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
-			$journal =& Request::getJournal();		
-			$article =& $articleDao->getArticle($study->getSubmissionId(), $journal->getId(), true);
-			$this->updateStudy($article, $study);
+			$journal =& Request::getJournal();
+			$article =& $articleDao->getArticle($study->getSubmissionId(), $journal->getId());
+			/** @fixme notify? */
+			$metdataReplaced = $this->replaceStudyMetadata($article, $study);
 		}
 		return false;
 	}
