@@ -43,19 +43,8 @@ before_install:
   - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse > selenium-output & 
   - sleep 3 # Give selenium server time to start.
 
-  # Create the test MySQL database.
-  - mysql -u root -e 'CREATE DATABASE `ojs-ci` DEFAULT CHARACTER SET utf8'
-  - mysql -u root -e "GRANT ALL ON \`ojs-ci\`.* TO \`ojs-ci\`@localhost IDENTIFIED BY 'ojs-ci'"
-
-  # Install the test PostgreSQL database, using data converted from MySQL
-  - psql -c 'CREATE DATABASE "ojs-ci";' -U postgres
-
   # Files dependency.
-  - mv config.TEMPLATE.inc.php config.inc.php
   - mkdir screenshots
-
-  # Make sure permissions are ok.
-  - sudo chown -R travis:www-data .
 
   # Install python, linter, closure compiler stuff
   - sudo easy_install "http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz"
@@ -75,10 +64,33 @@ before_install:
   - (sleep 590; cat access.log; cat error.log; cat xvfb-output; cat selenium-output cat ./lib/pkp/tests/results/error.log) &
 
 script:
+  # --------------- MySQL ---------------
+  # Create the test MySQL database.
+  - mysql -u root -e 'CREATE DATABASE `ojs-ci` DEFAULT CHARACTER SET utf8'
+  - mysql -u root -e "GRANT ALL ON \`ojs-ci\`.* TO \`ojs-ci\`@localhost IDENTIFIED BY 'ojs-ci'"
+
+  # Prep files
+  - mv config.TEMPLATE.inc.php config.inc.php
+  - mkdir files
+  - sudo chown -R travis:www-data .
+
   # Data build suite for MySQL
   - DUMMYFILE=dummy.pdf BASEURL="http://localhost" DBTYPE=MySQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
-  # Functional tests (-f) temporarily disabled
-  - ./lib/pkp/tools/runAllTests.sh -Cc
+
+  # --------------- PostgreSQL ---------------
+  # Install the test PostgreSQL database, using data converted from MySQL
+  - psql -c 'CREATE DATABASE "ojs-ci";' -U postgres
+
+  # Prep files
+  - mv config.TEMPLATE.inc.php config.inc.php
+  - rm -rf files/*
+
+  # Data build suite for MySQL
+  - DUMMYFILE=dummy.pdf BASEURL="http://localhost" DBTYPE=PostgreSQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
+
+
+  # Other tests temporarily disabled
+  # - ./lib/pkp/tools/runAllTests.sh -Ccf
   - ./lib/pkp/tools/validatexml.sh
   - ./lib/pkp/tools/buildjs.sh
 

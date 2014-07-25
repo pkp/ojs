@@ -56,8 +56,11 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->type('css=[id^=name-]', $data['fileTitle']);
 		$this->runScript('$(\'#metadataForm\').valid();');
 		$this->click('//span[text()=\'Continue\']/..');
+		$this->waitJQuery();
 		$this->waitForElementPresent('//span[text()=\'Complete\']/..');
 		$this->click('//span[text()=\'Complete\']/..');
+		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+		$this->waitJQuery();
 		$this->waitForElementPresent('//span[text()=\'Save and continue\']/..');
 		$this->click('//span[text()=\'Save and continue\']/..');
 
@@ -78,6 +81,7 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->waitForElementPresent("//span[text()='OK']/..");
 		$this->click("//span[text()='OK']/..");
 		$this->waitForText('css=#ui-tabs-4 > h2', 'Submission complete');
+		$this->waitJQuery();
 	}
 
 	/**
