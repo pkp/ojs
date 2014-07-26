@@ -59,7 +59,6 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->waitJQuery();
 		$this->waitForElementPresent('//span[text()=\'Complete\']/..');
 		$this->click('//span[text()=\'Complete\']/..');
-		$this->waitForElementNotPresent('css=.ui-widget-overlay');
 		$this->waitJQuery();
 		$this->waitForElementPresent('//span[text()=\'Save and continue\']/..');
 		$this->click('//span[text()=\'Save and continue\']/..');

@@ -38,10 +38,8 @@ before_install:
   - export DISPLAY=:10
   - sleep 3 # Give xvfb time to start.
 
-  # Start selenium server.
+  # Get Selenium
   - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
-  - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse > selenium-output & 
-  - sleep 3 # Give selenium server time to start.
 
   # Files dependency.
   - mkdir screenshots
@@ -65,28 +63,37 @@ before_install:
 
 script:
   # --------------- MySQL ---------------
+  - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse >> selenium-output & 
+
   # Create the test MySQL database.
   - mysql -u root -e 'CREATE DATABASE `ojs-ci` DEFAULT CHARACTER SET utf8'
   - mysql -u root -e "GRANT ALL ON \`ojs-ci\`.* TO \`ojs-ci\`@localhost IDENTIFIED BY 'ojs-ci'"
 
   # Prep files
-  - mv config.TEMPLATE.inc.php config.inc.php
+  - cp config.TEMPLATE.inc.php config.inc.php
   - mkdir files
   - sudo chown -R travis:www-data .
 
   # Data build suite for MySQL
-  - DUMMYFILE=dummy.pdf BASEURL="http://localhost" DBTYPE=MySQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
+  - sleep 15 # Give selenium server time to start.
+  - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE=MySQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
+  - killall java
+  - sleep 5 # Give Java time to shut down
 
   # --------------- PostgreSQL ---------------
+  - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse >> selenium-output & 
   # Install the test PostgreSQL database, using data converted from MySQL
   - psql -c 'CREATE DATABASE "ojs-ci";' -U postgres
 
   # Prep files
-  - mv config.TEMPLATE.inc.php config.inc.php
-  - rm -rf files/*
+  - cp config.TEMPLATE.inc.php config.inc.php
+  - sudo rm -rf files/*
 
-  # Data build suite for MySQL
-  - DUMMYFILE=dummy.pdf BASEURL="http://localhost" DBTYPE=PostgreSQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
+  # Data build suite for PostgreSQL
+  - sleep 15 # Give selenium server time to start.
+  - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE=PostgreSQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
+  - killall java
+  - sleep 5 # Give Java time to shut down
 
 
   # Other tests temporarily disabled
