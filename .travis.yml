@@ -1,6 +1,6 @@
 language: php
 php:
-  - 5.3
+  - 5.4
 python:
   - 3.3
 addons:
@@ -15,7 +15,7 @@ before_install:
 
   # Start apache and configure a virtual host.
   - sudo apt-get update > /dev/null
-  - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl php5-mysql php5-intl
+  - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl php5-mysql php5-pgsql php5-intl
   - sudo sed -i -e "s,/var/www,$(pwd)/,g" /etc/apache2/sites-available/default
   - sudo sed -i -e "s,\${APACHE_LOG_DIR},$(pwd),g" /etc/apache2/sites-available/default
   - sudo /etc/init.d/apache2 restart
@@ -38,8 +38,10 @@ before_install:
   - export DISPLAY=:10
   - sleep 3 # Give xvfb time to start.
 
-  # Get Selenium
+  # Start Selenium server
   - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
+  - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse >> selenium-output &
+  - sleep 5 # Give time for Selenium to start
 
   # Files dependency.
   - mkdir screenshots
@@ -63,8 +65,6 @@ before_install:
 
 script:
   # --------------- MySQL ---------------
-  - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse >> selenium-output & 
-
   # Create the test MySQL database.
   - mysql -u root -e 'CREATE DATABASE `ojs-ci` DEFAULT CHARACTER SET utf8'
   - mysql -u root -e "GRANT ALL ON \`ojs-ci\`.* TO \`ojs-ci\`@localhost IDENTIFIED BY 'ojs-ci'"
@@ -75,31 +75,26 @@ script:
   - sudo chown -R travis:www-data .
 
   # Data build suite for MySQL
-  - sleep 15 # Give selenium server time to start.
-  - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE=MySQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
-  - killall java
-  - sleep 5 # Give Java time to shut down
+  # - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE=MySQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
 
   # --------------- PostgreSQL ---------------
-  - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse >> selenium-output & 
-  # Install the test PostgreSQL database, using data converted from MySQL
-  - psql -c 'CREATE DATABASE "ojs-ci";' -U postgres
+  # Create the PostgreSQL database and user
+  - psql -c "CREATE DATABASE \"ojs-ci\";" -U postgres
+  - psql -c "CREATE USER \"ojs-ci\" WITH PASSWORD 'ojs-ci';" -U postgres
+  - psql -c "GRANT ALL PRIVILEGES ON DATABASE \"ojs-ci\" TO \"ojs-ci\";" -U postgres
 
   # Prep files
   - cp config.TEMPLATE.inc.php config.inc.php
   - sudo rm -rf files/*
 
   # Data build suite for PostgreSQL
-  - sleep 15 # Give selenium server time to start.
-  - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE=PostgreSQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
-  - killall java
-  - sleep 5 # Give Java time to shut down
-
+  - date
+  - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE="PostgreSQL" DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
 
   # Other tests temporarily disabled
   # - ./lib/pkp/tools/runAllTests.sh -Ccf
-  - ./lib/pkp/tools/validatexml.sh
-  - ./lib/pkp/tools/buildjs.sh
+  # - ./lib/pkp/tools/validatexml.sh
+  # - ./lib/pkp/tools/buildjs.sh
 
 after_script:
   # Print logs and outputs for debugging.
@@ -108,4 +103,4 @@ after_script:
   - cat xvfb-output
   - cat selenium-output
   - cat ./lib/pkp/tests/results/error.log
-  - for f in lib/pkp/tests/results/*.png; do cat $f | base64; done
+  - for f in lib/pkp/tests/results/*.png; do echo ============== START ${f} ================== ; cat $f | base64 ; echo ============== END ${f} ================== ; done
