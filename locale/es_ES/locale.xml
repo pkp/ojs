@@ -70,7 +70,7 @@
 	<!-- Common Error Messages -->
 		
 	<!-- Navigation -->
-	<message key="navigation.journalHelp">Ayuda de la revista</message>
+	<message key="navigation.journalHelp">Ayuda</message>
 	<message key="navigation.archives">Archivos</message>
 	<message key="navigation.current">Actual</message>
 	<message key="navigation.otherJournals">Otras revistas</message>
