@@ -29,16 +29,29 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 			'roles' => array('Author'),
 		));
 
+		$title = 'Traditions and Trends in the Study of the Commons';
 		$this->createSubmission(array(
-			'title' => 'Traditions and Trends in the Study of the Commons',
+			'title' => $title,
 			'abstract' => 'The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world. ',
 			'keywords' => array(
 				'Common pool resource',
 				'common property',
 				'intellectual developments',
 			),
+			'additionalAuthors' => array(
+				array(
+					'firstName' => 'Frank',
+					'lastName' => 'van Laerhoven',
+					'country' => 'United States',
+					'affiliation' => 'Indiana University',
+					'email' => 'fvanlaerhoven@mailinator.com',
+				)
+			),
 		));
 
+		$this->logOut();
+		$this->findSubmissionAsEditor($title);
+		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->logOut();
 	}
 }

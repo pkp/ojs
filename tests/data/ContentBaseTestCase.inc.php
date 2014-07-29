@@ -113,4 +113,47 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->waitForElementNotPresent('css=.ui-widget-overlay');
 		$this->waitJQuery();
 	}
+
+	/**
+	 * Log in as an Editor and find the specified submission.
+	 * @param $title string
+	 */
+	protected function findSubmissionAsEditor($title) {
+		$this->logIn('dbarnes', 'dbarnesdbarnes');
+		$this->waitForElementPresent('link=Dashboard');
+		$this->click('link=Dashboard');
+		$this->waitForElementPresent('xpath=(//a[contains(text(),\'Submissions\')])[2]');
+		$this->click('xpath=(//a[contains(text(),\'Submissions\')])[2]');
+		$this->waitForElementPresent('//a[text()=\'' . $title . '\']');
+		$this->click('//a[text()=\'' . $title . '\']');
+	}
+
+	/**
+	 * Record an editorial decision
+	 * @param $decision string
+	 */
+	protected function recordEditorialDecision($decision) {
+		$this->waitForElementPresent('//span[text()=\'' . $decision . '\']/..');
+		$this->click('//span[text()=\'' . $decision . '\']/..');
+		$this->waitForElementPresent('//span[text()=\'Record Editorial Decision\']/..');
+		$this->click('//span[text()=\'Record Editorial Decision\']/..');
+		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+	}
+
+	/**
+	 * Assign a participant
+	 * @param $role string
+	 * @param $name string
+	 */
+	protected function assignParticipant($role, $name) {
+		$this->waitForElementPresent('css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]');
+		$this->click('css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]');
+		$this->waitJQuery();
+		$this->select('id=userGroupId', 'label=' . $role);
+		$this->waitForElementPresent('//select[@name=\'userId\']//option[text()=\'' . $name . '\']');
+		$this->select('id=userId', 'label=' . $name);
+		$this->click('//span[text()=\'OK\']/..');
+		$this->waitForText('css=div.ui-pnotify-text', 'User added as a stage participant.');
+		$this->waitJQuery();
+	}
 }
