@@ -169,4 +169,22 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->waitForText('css=div.ui-pnotify-text', 'User added as a stage participant.');
 		$this->waitJQuery();
 	}
+
+	/**
+	 * Assign a reviewer.
+	 * @param $username string
+	 * @param $name string
+	 */
+	function assignReviewer($username, $name) {
+		$this->waitForElementPresent('css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]');
+		$this->click('css=[id^=component-grid-users-reviewer-reviewergrid-addReviewer-button-]');
+		$this->waitForElementPresent('css=[id^=reviewerId_input-]');
+		$this->type('css=[id^=reviewerId_input-]', $username);
+		$this->typeKeys('css=[id^=reviewerId_input-]', $username);
+		$this->waitForElementPresent('//a[text()=\'' . $name . '\']');
+		$this->mouseOver('//a[text()=\'' . $name . '\']');
+		$this->click('//a[text()=\'' . $name . '\']');
+		$this->click('//span[text()=\'Add Reviewer\']/..');
+		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+	}
 }
