@@ -141,6 +141,19 @@ class ContentBaseTestCase extends WebTestCase {
 	}
 
 	/**
+	 * Send to review.
+	 */
+	protected function sendToReview() {
+		$this->waitForElementPresent('//span[text()=\'Send to External Review\']/..');
+		$this->click('//span[text()=\'Send to External Review\']/..');
+		$this->waitForElementPresent('//form[@id=\'initiateReview\']//input[@type=\'checkbox\']');
+		$this->waitForElementPresent('//form[@id=\'initiateReview\']//span[text()=\'Send to External Review\']/..');
+		$this->click('//form[@id=\'initiateReview\']//span[text()=\'Send to External Review\']/..');
+		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+		$this->waitJQuery();
+	}
+
+	/**
 	 * Assign a participant
 	 * @param $role string
 	 * @param $name string
