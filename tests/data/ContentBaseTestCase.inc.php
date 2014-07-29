@@ -124,8 +124,8 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->click('link=Dashboard');
 		$this->waitForElementPresent('xpath=(//a[contains(text(),\'Submissions\')])[2]');
 		$this->click('xpath=(//a[contains(text(),\'Submissions\')])[2]');
-		$this->waitForElementPresent('//a[text()=\'' . $title . '\']');
-		$this->click('//a[text()=\'' . $title . '\']');
+		$this->waitForElementPresent('//a[text()=\'' . htmlspecialchars($title) . '\']');
+		$this->click('//a[text()=\'' . htmlspecialchars($title) . '\']');
 	}
 
 	/**
@@ -133,8 +133,8 @@ class ContentBaseTestCase extends WebTestCase {
 	 * @param $decision string
 	 */
 	protected function recordEditorialDecision($decision) {
-		$this->waitForElementPresent('//span[text()=\'' . $decision . '\']/..');
-		$this->click('//span[text()=\'' . $decision . '\']/..');
+		$this->waitForElementPresent('//span[text()=\'' . htmlspecialchars($decision) . '\']/..');
+		$this->click('//span[text()=\'' . htmlspecialchars($decision) . '\']/..');
 		$this->waitForElementPresent('//span[text()=\'Record Editorial Decision\']/..');
 		$this->click('//span[text()=\'Record Editorial Decision\']/..');
 		$this->waitForElementNotPresent('css=.ui-widget-overlay');
@@ -162,9 +162,9 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->waitForElementPresent('css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]');
 		$this->click('css=[id^=component-grid-users-stageparticipant-stageparticipantgrid-requestAccount-button-]');
 		$this->waitJQuery();
-		$this->select('id=userGroupId', 'label=' . $role);
-		$this->waitForElementPresent('//select[@name=\'userId\']//option[text()=\'' . $name . '\']');
-		$this->select('id=userId', 'label=' . $name);
+		$this->select('id=userGroupId', 'label=' . htmlspecialchars($role));
+		$this->waitForElementPresent('//select[@name=\'userId\']//option[text()=\'' . htmlspecialchars($name) . '\']');
+		$this->select('id=userId', 'label=' . htmlspecialchars($name));
 		$this->click('//span[text()=\'OK\']/..');
 		$this->waitForText('css=div.ui-pnotify-text', 'User added as a stage participant.');
 		$this->waitJQuery();
@@ -181,10 +181,38 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->waitForElementPresent('css=[id^=reviewerId_input-]');
 		$this->type('css=[id^=reviewerId_input-]', $username);
 		$this->typeKeys('css=[id^=reviewerId_input-]', $username);
-		$this->waitForElementPresent('//a[text()=\'' . $name . '\']');
-		$this->mouseOver('//a[text()=\'' . $name . '\']');
-		$this->click('//a[text()=\'' . $name . '\']');
+		$this->waitForElementPresent('//a[text()=\'' . htmlspecialchars($name) . '\']');
+		$this->mouseOver('//a[text()=\'' . htmlspecialchars($name) . '\']');
+		$this->click('//a[text()=\'' . htmlspecialchars($name) . '\']');
 		$this->click('//span[text()=\'Add Reviewer\']/..');
 		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+	}
+
+	/**
+	 * Log in as a reviewer and perform a review.
+	 */
+	function performReview($username, $password, $title, $recommendation) {
+		$this->logIn($username, $password);
+		$this->waitForElementPresent('link=Dashboard');
+		$this->click('link=Dashboard');
+		$this->waitForElementPresent('//a[contains(text(),\'' . htmlspecialchars($title) . '\')]');
+		$this->click('//a[contains(text(),\'' . htmlspecialchars($title) . '\')]');
+
+		$this->waitForElementPresent('//span[text()=\'Accept Review, Continue to Step #2\']/..');
+		$this->click('//span[text()=\'Accept Review, Continue to Step #2\']/..');
+
+		$this->waitForElementPresent('//span[text()=\'Continue to Step #3\']/..');
+		$this->click('//span[text()=\'Continue to Step #3\']/..');
+
+		$this->waitForElementPresent('id=recommendation');
+		$this->select('id=recommendation', 'label=' . htmlspecialchars($recommendation));
+
+		$this->waitForElementPresent('//span[text()=\'Submit Review\']/..');
+		$this->click('//span[text()=\'Submit Review\']/..');
+		$this->waitForElementPresent('//span[text()=\'OK\']/..');
+		$this->click('//span[text()=\'OK\']/..');
+		$this->waitForText('css=#ui-tabs-4 > h2', 'Review Submitted');
+		$this->waitJQuery();
+		$this->logOut();
 	}
 }
