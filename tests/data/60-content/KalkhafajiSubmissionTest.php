@@ -1,21 +1,21 @@
 <?php
 
 /**
- * @file tests/data/60-content/KhalkhafajiSubmissionTest.inc.php
+ * @file tests/data/60-content/KalkhafajiSubmissionTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class KhalkhafajiSubmissionTest
+ * @class KalkhafajiSubmissionTest
  * @ingroup tests_data
  *
- * @brief Data build suite: Create issues
+ * @brief Data build suite: Create submission
  */
 
 import('tests.data.ContentBaseTestCase');
 
-class KhalkhafajiSubmissionTest extends ContentBaseTestCase {
+class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 	/**
 	 * Create a submission.
 	 */

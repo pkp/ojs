@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/data/60-content/PdanielSubmissionTest.inc.php
+ * @file tests/data/60-content/PdanielSubmissionTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
@@ -10,7 +10,7 @@
  * @class PdanielSubmissionTest
  * @ingroup tests_data
  *
- * @brief Data build suite: Create issues
+ * @brief Data build suite: Create submission
  */
 
 import('tests.data.ContentBaseTestCase');
