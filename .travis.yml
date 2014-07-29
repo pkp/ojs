@@ -1,6 +1,6 @@
 language: php
 php:
-  - 5.4
+  - 5.3
 python:
   - 3.3
 addons:
@@ -38,7 +38,7 @@ before_install:
   - export DISPLAY=:10
   - sleep 3 # Give xvfb time to start.
 
-  # Start Selenium server
+  # Start Selenium server.
   - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
   - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse >> selenium-output &
   - sleep 5 # Give time for Selenium to start
@@ -75,7 +75,7 @@ script:
   - sudo chown -R travis:www-data .
 
   # Data build suite for MySQL
-  # - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE=MySQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
+  - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE=MySQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
 
   # --------------- PostgreSQL ---------------
   # Create the PostgreSQL database and user
@@ -88,13 +88,12 @@ script:
   - sudo rm -rf files/*
 
   # Data build suite for PostgreSQL
-  - date
   - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE="PostgreSQL" DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
 
   # Other tests temporarily disabled
   # - ./lib/pkp/tools/runAllTests.sh -Ccf
-  # - ./lib/pkp/tools/validatexml.sh
-  # - ./lib/pkp/tools/buildjs.sh
+  - ./lib/pkp/tools/validatexml.sh
+  - ./lib/pkp/tools/buildjs.sh
 
 after_script:
   # Print logs and outputs for debugging.
