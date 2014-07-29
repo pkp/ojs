@@ -380,7 +380,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			$sql .= 'LEFT JOIN submission_settings sst ON s.submission_id = sst.submission_id AND sst.setting_name = ?
 				WHERE	(sst.setting_value IS NULL OR sst.setting_value = \'\')';
 		} else {
-			$params[] = $settingValue;
+			$params[] = (string) $settingValue;
 			$sql .= 'INNER JOIN submission_settings sst ON s.submission_id = sst.submission_id
 				WHERE	sst.setting_name = ? AND sst.setting_value = ?';
 		}
