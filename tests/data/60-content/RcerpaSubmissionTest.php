@@ -32,7 +32,6 @@ class RcerpaSubmissionTest extends ContentBaseTestCase {
 		$this->createSubmission(array(
 			'section' => 'Reviews',
 			'title' => 'A Review of Object Oriented Database Concepts and their Implementation',
-			'abstract' => '',
 		));
 
 		$this->logOut();

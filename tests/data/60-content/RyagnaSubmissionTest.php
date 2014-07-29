@@ -31,7 +31,7 @@ class RyagnaSubmissionTest extends ContentBaseTestCase {
 
 		$this->createSubmission(array(
 			'title' => 'Whistleblowing: an ethical dilemma',
-			'abstract' => '',
+			'abstract' => 'ABSTRACT GOES HERE',
 		));
 
 		$this->logOut();

@@ -31,7 +31,7 @@ class JforchtSubmissionTest extends ContentBaseTestCase {
 
 		$this->createSubmission(array(
 			'title' => 'Cyclomatic Complexity: theme and variations',
-			'abstract' => '',
+			'abstract' => 'ABSTRACT GOES HERE',
 		));
 
 		$this->logOut();

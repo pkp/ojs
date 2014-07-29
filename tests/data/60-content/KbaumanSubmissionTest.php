@@ -31,7 +31,7 @@ class KbaumanSubmissionTest extends ContentBaseTestCase {
 
 		$this->createSubmission(array(
 			'title' => 'Data Modelling and Conceptual Modelling: a comparative analysis of functionality and roles',
-			'abstract' => '',
+			'abstract' => 'ABSTRACT GOES HERE',
 		));
 
 		$this->logOut();

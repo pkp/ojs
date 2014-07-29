@@ -31,7 +31,7 @@ class NpiersonSubmissionTest extends ContentBaseTestCase {
 
 		$this->createSubmission(array(
 			'title' => 'Cyberspace Versus Citizenship: IT and emerging non space communities',
-			'abstract' => '',
+			'abstract' => 'ABSTRACT GOES HERE',
 		));
 
 		$this->logOut();
