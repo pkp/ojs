@@ -25,7 +25,7 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 			'firstName' => 'Vajiheh',
 			'lastName' => 'Karbasizaed',
 			'affiliation' => 'University of Tehran',
-			'country' => 'Iran',
+			'country' => 'Iran, Islamic Republic of',
 			'roles' => array('Author'),
 		));
 
