@@ -40,7 +40,7 @@ class RrossiSubmissionTest extends ContentBaseTestCase {
 		));
 
 		$this->logOut();
-		$this->findSubmissionAsEditor($title);
+		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'Stephanie Berardo');
 		$this->logOut();
 	}

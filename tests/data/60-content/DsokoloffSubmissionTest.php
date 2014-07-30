@@ -40,13 +40,13 @@ class DsokoloffSubmissionTest extends ContentBaseTestCase {
 		));
 
 		$this->logOut();
-		$this->findSubmissionAsEditor($title);
+		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
 		$this->assignReviewer('agallego', 'Adela Gallego');
 		$this->logOut();
-		$this->performReview('phudson', 'phudsonphudson', $title, 'Decline Submission');
+		$this->performReview('phudson', null, $title, 'Decline Submission');
 	}
 }

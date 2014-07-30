@@ -116,10 +116,13 @@ class ContentBaseTestCase extends WebTestCase {
 
 	/**
 	 * Log in as an Editor and find the specified submission.
+	 * @param $username string
+	 * @param $password string (null to presume twice-username)
 	 * @param $title string
 	 */
-	protected function findSubmissionAsEditor($title) {
-		$this->logIn('dbarnes', 'dbarnesdbarnes');
+	protected function findSubmissionAsEditor($username, $password = null, $title) {
+		if ($password === null) $password = $username . $username;
+		$this->logIn($username, $password);
 		$this->waitForElementPresent('link=Dashboard');
 		$this->click('link=Dashboard');
 		$this->waitForElementPresent('xpath=(//a[contains(text(),\'Submissions\')])[2]');
@@ -190,8 +193,13 @@ class ContentBaseTestCase extends WebTestCase {
 
 	/**
 	 * Log in as a reviewer and perform a review.
+	 * @param $username string
+	 * @param $password string (or null to presume twice-username)
+	 * @param $title string
+	 * @param $recommendation string
 	 */
 	function performReview($username, $password, $title, $recommendation) {
+		if ($password===null) $password = $username . $username;
 		$this->logIn($username, $password);
 		$this->waitForElementPresent('link=Dashboard');
 		$this->click('link=Dashboard');
