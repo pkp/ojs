@@ -18,7 +18,6 @@ import('lib.pkp.tests.WebTestCase');
 class CreateJournalTest extends WebTestCase {
 	/**
 	 * Prepare for tests.
-	 * @depends InstallationTest::testInstallation
 	 */
 	function testCreateJournalLogin() {
 		parent::logIn('admin', 'admin');
@@ -26,7 +25,6 @@ class CreateJournalTest extends WebTestCase {
 
 	/**
 	 * Create and set up test data journal.
-	 * @depends testCreateJournalLogin
 	 */
 	function testCreateJournal() {
 		$this->open(self::$baseUrl);
@@ -51,7 +49,6 @@ class CreateJournalTest extends WebTestCase {
 
 	/**
 	 * Set up the test journal.
-	 * @depends testCreateJournal
 	 */
 	function testSetupJournal() {
 		$this->open(self::$baseUrl);
