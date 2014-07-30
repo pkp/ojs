@@ -160,7 +160,6 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->waitForElementPresent('//form[@id=\'initiateReview\']//span[text()=\'Send to External Review\']/..');
 		$this->click('//form[@id=\'initiateReview\']//span[text()=\'Send to External Review\']/..');
 		$this->waitForElementNotPresent('css=.ui-widget-overlay');
-		$this->waitJQuery();
 	}
 
 	/**
