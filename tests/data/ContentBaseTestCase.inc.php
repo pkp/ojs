@@ -35,8 +35,6 @@ class ContentBaseTestCase extends WebTestCase {
 			'additionalAuthors' => array(),
 		), $data);
 
-		sleep(1); // Avoid apparent race condition
-
 		// Find the "start a submission" button
 		$this->click('link=Dashboard');
 		$this->waitForElementPresent('//span[starts-with(., \'Start a New Submission\')]/..');
