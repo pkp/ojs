@@ -29,10 +29,40 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 			'roles' => array('Author'),
 		));
 
+		$title = 'Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence';
 		$this->createSubmission(array(
-			'title' => 'Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence',
+			'title' => $title,
 			'abstract' => 'The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.',
 		));
+
+		$this->logOut();
+		$this->findSubmissionAsEditor('dbarnes', null, $title);
+		$this->assignParticipant('Section editor', 'David Buskins');
+		$this->sendToReview();
+		$this->assignReviewer('jjanssen', 'Julie Janssen');
+		$this->assignReviewer('amccrae', 'Aisla McCrae');
+		$this->assignReviewer('agallego', 'Adela Gallego');
+		$this->recordEditorialDecision('Accept Submission');
+		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
+		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
+		$this->recordEditorialDecision('Send To Production');
+		$this->waitForText('css=a.production.stageId5 > div.stageState', 'Initiated');
+		$this->assignParticipant('Layout Editor', 'Stephen Hellier');
+		$this->assignParticipant('Proofreader', 'Sabine Kumar');
+
+		// Create a galley
+		$this->waitForElementPresent('css=[id^=component-grid-articlegalleys-articlegalleygrid-add-button-]');
+		$this->click('css=[id^=component-grid-articlegalleys-articlegalleygrid-add-button-]');
+		$this->waitForElementPresent('css=[id^=label-]');
+		$this->type('css=[id^=label-]', 'PDF');
+		$this->select('id=galleyType', 'PDF Article Galley');
+		$this->click('//span[text()=\'Save\']/..');
+		$this->waitJQuery();
+
+		// Upload a galley file
+		$this->waitForElementPresent('css=a[id^=component-articleGalleyFiles-][id*=-addFile-button-]');
+		$this->click('css=a[id^=component-articleGalleyFiles-][id*=-addFile-button-]');
+		$this->uploadWizardFile('PDF');
 
 		$this->logOut();
 	}
