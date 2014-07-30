@@ -29,12 +29,21 @@ class ZwoodsSubmissionTest extends ContentBaseTestCase {
 			'roles' => array('Author'),
 		));
 
+		$title = 'Finocchiaro: Arguments About Arguments';
 		$this->createSubmission(array(
 			'section' => 'Reviews',
-			'title' => 'Finocchiaro: Arguments About Arguments',
+			'title' => $title,
 			'abstract' => 'None.',
 		));
 
+		$this->logOut();
+		$this->findSubmissionAsEditor('dbarnes', null, $title);
+		$this->sendToReview();
+		$this->assignReviewer('phudson', 'Paul Hudson');
+		$this->assignReviewer('amccrae', 'Aisla McCrae');
+		$this->recordEditorialDecision('Accept Submission');
+		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
+		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
 		$this->logOut();
 	}
 }
