@@ -29,12 +29,25 @@ class FpaglieriSubmissionTest extends ContentBaseTestCase {
 			'roles' => array('Author'),
 		));
 
+		$title = 'Hansen & Pinto: Reason Reclaimed';
 		$this->createSubmission(array(
 			'section' => 'Reviews',
-			'title' => 'Hansen & Pinto: Reason Reclaimed',
+			'title' => $title,
 			'abstract' => 'None.',
 		));
 
+		$this->logOut();
+		$this->findSubmissionAsEditor('dbarnes', null, $title);
+		$this->sendToReview();
+		$this->assignReviewer('jjanssen', 'Julie Janssen');
+		$this->assignReviewer('agallego', 'Adela Gallego');
+		$this->recordEditorialDecision('Accept Submission');
+		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
+		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
+		$this->recordEditorialDecision('Send To Production');
+		$this->waitForText('css=a.production.stageId5 > div.stageState', 'Initiated');
+		$this->assignParticipant('Layout Editor', 'Stephen Hellier');
+		$this->assignParticipant('Proofreader', 'Sabine Kumar');
 		$this->logOut();
 	}
 }
