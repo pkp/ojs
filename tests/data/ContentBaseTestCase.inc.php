@@ -29,7 +29,7 @@ class ContentBaseTestCase extends WebTestCase {
 
 		$data = array_merge(array(
 			'section' => 'Articles',
-			'file' => getenv('DUMMYFILE'),
+			'file' => null,
 			'fileTitle' => $data['title'],
 			'keywords' => array(),
 			'additionalAuthors' => array(),
@@ -49,19 +49,8 @@ class ContentBaseTestCase extends WebTestCase {
 		for ($i=0; $i<6; $i++) $this->click('id=checklist-' . $i);
 		$this->click('css=[id^=submitFormButton-]');
 
-		// Page 2
-		$this->waitForElementPresent('id=genreId');
-		$this->select('id=genreId', 'label=Submission');
-		$this->uploadFile($data['file']);
-		$this->click('id=continueButton');
-		$this->waitForElementPresent('css=[id^=name-]');
-		$this->type('css=[id^=name-]', $data['fileTitle']);
-		$this->runScript('$(\'#metadataForm\').valid();');
-		$this->click('//span[text()=\'Continue\']/..');
-		$this->waitJQuery();
-		$this->waitForElementPresent('//span[text()=\'Complete\']/..');
-		$this->click('//span[text()=\'Complete\']/..');
-		$this->waitJQuery();
+		// Page 2: File wizard
+		$this->uploadWizardFile($data['fileTitle'], $data['file']);
 		$this->waitForElementPresent('//span[text()=\'Save and continue\']/..');
 		$this->click('//span[text()=\'Save and continue\']/..');
 
@@ -85,6 +74,26 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->waitJQuery();
 	}
 
+	/**
+	 * Upload a file via the file wizard.
+	 * @param $fileTitle string
+	 * @param $file string (Null to use dummy file)
+	 */
+	protected function uploadWizardFile($fileTitle, $file = null) {
+		if (!$file) $file = getenv('DUMMYFILE');
+		$this->waitForElementPresent('id=genreId');
+		$this->select('id=genreId', 'label=Submission');
+		$this->uploadFile($file);
+		$this->click('id=continueButton');
+		$this->waitForElementPresent('css=[id^=name-]');
+		$this->type('css=[id^=name-]', $fileTitle);
+		$this->runScript('$(\'#metadataForm\').valid();');
+		$this->click('//span[text()=\'Continue\']/..');
+		$this->waitJQuery();
+		$this->waitForElementPresent('//span[text()=\'Complete\']/..');
+		$this->click('//span[text()=\'Complete\']/..');
+		$this->waitJQuery();
+	}
 	/**
 	 * Add an author to the submission's author list.
 	 * @param $data array
