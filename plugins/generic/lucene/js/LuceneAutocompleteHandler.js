@@ -63,6 +63,7 @@
 	 * @param {Object} request The autocomplete search request.
 	 * @param {Function} response The response handler function.
 	 */
+	/*jslint unparam: true*/
 	$.pkp.plugins.generic.lucene.LuceneAutocompleteHandler.prototype.
 			fetchAutocomplete = function(callingElement, request, response) {
 		var $textInput;
@@ -75,6 +76,7 @@
 					response(data.content);
 				}, 'json');
 	};
+	/*jslint unparam: false*/
 
 /** @param {jQuery} $ jQuery closure. */
 }(jQuery));
