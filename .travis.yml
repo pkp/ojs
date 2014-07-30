@@ -90,8 +90,10 @@ script:
   # Data build suite for PostgreSQL
   - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE="PostgreSQL" DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
 
-  # Other tests temporarily disabled
-  # - ./lib/pkp/tools/runAllTests.sh -Ccf
+  # Data built. Run test suite.
+  - ./lib/pkp/tools/runAllTests.sh -Cc
+  # Functional tests temporarily disabled
+  # - ./lib/pkp/tools/runAllTests.sh -f
   - ./lib/pkp/tools/validatexml.sh
   - ./lib/pkp/tools/buildjs.sh
 
