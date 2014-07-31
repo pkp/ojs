@@ -47,11 +47,14 @@ class ContentBaseTestCase extends WebTestCase {
 		$this->click('css=[id^=submitFormButton-]');
 
 		// Page 2: File wizard
+		sleep(1); // Occasional race conditions in travis
 		$this->uploadWizardFile($data['fileTitle'], $data['file']);
+		sleep(1); // Occasional race conditions in travis
 		$this->waitForElementPresent('//span[text()=\'Save and continue\']/..');
 		$this->click('//span[text()=\'Save and continue\']/..');
 
 		// Page 3
+		sleep(1); // Occasional race conditions in travis
 		$this->waitForElementPresent('css=[id^=title-]');
 		$this->type('css=[id^=title-]', $data['title']);
 		if (isset($data['abstract'])) $this->typeTinyMCE('abstract', $data['abstract']);
@@ -129,8 +132,6 @@ class ContentBaseTestCase extends WebTestCase {
 	protected function findSubmissionAsEditor($username, $password = null, $title) {
 		if ($password === null) $password = $username . $username;
 		$this->logIn($username, $password);
-		$this->waitForElementPresent('link=Dashboard');
-		$this->click('link=Dashboard');
 		$this->waitForElementPresent('xpath=(//a[contains(text(),\'Submissions\')])[2]');
 		$this->click('xpath=(//a[contains(text(),\'Submissions\')])[2]');
 		$this->waitForElementPresent('//a[text()=\'' . $this->escapeJS($title) . '\']');
