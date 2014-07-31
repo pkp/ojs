@@ -1,3 +1,8 @@
+# Configure the build matrix
+env:
+  - TEST=validation
+  - TEST=pgsql
+  - TEST=mysql
 language: php
 php:
   - 5.3
@@ -13,89 +18,28 @@ before_install:
   # Start submodules
   - ./tools/startSubmodulesTRAVIS.sh
 
-  # Start apache and configure a virtual host.
-  - sudo apt-get update > /dev/null
-  - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl php5-mysql php5-pgsql php5-intl
-  - sudo sed -i -e "s,/var/www,$(pwd)/,g" /etc/apache2/sites-available/default
-  - sudo sed -i -e "s,\${APACHE_LOG_DIR},$(pwd),g" /etc/apache2/sites-available/default
-  - sudo /etc/init.d/apache2 restart
+  # Configure the webserver
+  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/prepare-webserver.sh; fi
 
-  # Install phpunit in a phar package with selenium extension already on it.
-  - sudo rm -R /home/travis/.phpenv/versions/5.3/bin/phpunit
-  - wget --no-check-certificate https://phar.phpunit.de/phpunit.phar
-  - chmod +x phpunit.phar
-  - sudo mv phpunit.phar /home/travis/.phpenv/versions/5.3/bin/phpunit
+  # Install phpunit
+  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/install-phpunit.sh; fi
 
-  # Xvfb requirements.
-  - sudo apt-get install -y x11-xkb-utils
-  # Add fonts.
-  - sudo apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
-  - sudo apt-get install -y defoma x-ttcidfont-conf cabextract ttf-mscorefonts-installer
-  - sudo dpkg-reconfigure --default-priority x-ttcidfont-conf
-  - mkfontdir
-  # Start Virtual Framebuffer to imitate a monitor.
-  - sudo Xvfb :10 -ac > xvfb-output &
-  - export DISPLAY=:10
-  - sleep 3 # Give xvfb time to start.
+  # Start xvfb
+  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/start-xvfb.sh; fi
 
-  # Start Selenium server.
-  - wget http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.2.jar
-  - nohup java -jar selenium-server-standalone-2.42.2.jar -browserSessionReuse >> selenium-output &
-  - sleep 5 # Give time for Selenium to start
+  # Start Selenium
+  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/start-selenium.sh; fi
 
-  # Files dependency.
-  - mkdir screenshots
-
-  # Install python, linter, closure compiler stuff
-  - sudo easy_install "http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz"
-  - wget -O compiler.zip "https://closure-compiler.googlecode.com/files/compiler-20120917.zip"
-  - unzip compiler.zip compiler.jar
-  - mkdir ~/bin
-  - mv compiler.jar ~/bin
-  - wget "http://jslint4java.googlecode.com/files/jslint4java-2.0.2-dist.zip"
-  - unzip jslint4java-2.0.2-dist.zip
-  - mv jslint4java-2.0.2/jslint4java-2.0.2.jar ~/bin/jslint4java.jar
-
-  # Generate a sample PDF file to use for testing.
-  - echo "This is a test" | a2ps -o - | ps2pdf - ~/dummy.pdf
+  # Install the JS linter
+  - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/install-linter.sh; fi
 
   # Sleep and output our logs, to avoid hanging build with no access to
   # logs. This is useful for debugging but too verbose to leave enabled.
-  # (sleep 590; cat access.log; cat error.log; cat xvfb-output; cat selenium-output; cat ./lib/pkp/tests/results/error.log) &
+  # - (sleep 590; cat access.log; cat error.log; cat xvfb-output; cat selenium-output; cat ./lib/pkp/tests/results/error.log) &
 
 script:
-  # --------------- MySQL ---------------
-  # Create the test MySQL database.
-  - mysql -u root -e 'CREATE DATABASE `ojs-ci` DEFAULT CHARACTER SET utf8'
-  - mysql -u root -e "GRANT ALL ON \`ojs-ci\`.* TO \`ojs-ci\`@localhost IDENTIFIED BY 'ojs-ci'"
-
-  # Prep files
-  - cp config.TEMPLATE.inc.php config.inc.php
-  - mkdir files
-  - sudo chown -R travis:www-data .
-
-  # Data build suite for MySQL
-  - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE=MySQL DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
-
-  # --------------- PostgreSQL ---------------
-  # Create the PostgreSQL database and user
-  - psql -c "CREATE DATABASE \"ojs-ci\";" -U postgres
-  - psql -c "CREATE USER \"ojs-ci\" WITH PASSWORD 'ojs-ci';" -U postgres
-  - psql -c "GRANT ALL PRIVILEGES ON DATABASE \"ojs-ci\" TO \"ojs-ci\";" -U postgres
-
-  # Prep files
-  - cp config.TEMPLATE.inc.php config.inc.php
-  - sudo rm -rf files/*
-
-  # Data build suite for PostgreSQL
-  - DUMMYFILE=~/dummy.pdf BASEURL="http://localhost" DBTYPE="PostgreSQL" DBHOST=localhost DBNAME=ojs-ci DBUSERNAME=ojs-ci DBPASSWORD=ojs-ci FILESDIR=files ./lib/pkp/tools/runAllTests.sh -b
-
-  # Data built. Run test suite.
-  - ./lib/pkp/tools/runAllTests.sh -Cc
-  # Functional tests temporarily disabled
-  # - ./lib/pkp/tools/runAllTests.sh -f
-  - ./lib/pkp/tools/validatexml.sh
-  - ./lib/pkp/tools/buildjs.sh
+  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/run-tests.sh; fi
+  - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/validate-xml.sh; ./lib/pkp/tools/buildjs.sh; fi
 
 after_script:
   # Print logs and outputs for debugging.
