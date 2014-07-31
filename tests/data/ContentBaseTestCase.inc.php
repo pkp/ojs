@@ -36,7 +36,6 @@ class ContentBaseTestCase extends WebTestCase {
 		), $data);
 
 		// Find the "start a submission" button
-		$this->click('link=Dashboard');
 		$this->waitForElementPresent('//span[starts-with(., \'Start a New Submission\')]/..');
 		$this->click('//span[starts-with(., \'Start a New Submission\')]/..');
 
