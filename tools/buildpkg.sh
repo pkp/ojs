@@ -36,6 +36,7 @@ tools/buildpkg.sh						\
 tools/genLocaleReport.sh					\
 tools/genTestLocale.php						\
 tools/test							\
+lib/pkp/tools/travis						\
 lib/pkp/tests							\
 .git								\
 .openshift							\
