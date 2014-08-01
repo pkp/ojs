@@ -13,7 +13,7 @@
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#urnSettingsForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+		$('#urnSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" id="urnSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="plugin" category="pubIds" plugin=$pluginName verb="settings" save="true"}">
@@ -58,7 +58,7 @@
 			{else}
 				{assign var="checked" value=false}
 			{/if}
-			{fbvElement type="radio" id="urnSuffixPattern" name="urnSuffix" required="true" value="pattern" checked=$checked label="plugins.pubIds.urn.manager.settings.urnSuffix.pattern"}
+			{fbvElement type="radio" id="urnSuffixPattern" name="urnSuffix" value="pattern" checked=$checked label="plugins.pubIds.urn.manager.settings.urnSuffix.pattern"}
 		{/fbvFormSection}
 		{fbvFormSection}
 			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues" id="urnIssueSuffixPattern" value=$urnIssueSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
