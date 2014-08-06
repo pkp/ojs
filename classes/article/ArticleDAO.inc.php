@@ -272,6 +272,11 @@ class ArticleDAO extends DAO {
 		);
 
 		$article->setId($this->getInsertArticleId());
+		$article->setLicenseURL($article->getDefaultLicenseURL());
+		$article->setCopyrightHolder($article->getDefaultCopyrightHolder(null), null);
+		if ($article->getStatus() == STATUS_PUBLISHED) {
+			$article->setCopyrightYear($article->getDefaultCopyrightYear());
+		}
 		$this->updateLocaleFields($article);
 
 		// Insert authors for this article
@@ -289,6 +294,12 @@ class ArticleDAO extends DAO {
 	 * @param $article Article
 	 */
 	function updateArticle(&$article) {
+		// if an article is being published, set the copyright year
+		$oldArticle = $this->getArticle($article->getArticleId());
+		if ($oldArticle && $oldArticle->getStatus() != STATUS_PUBLISHED && $article->getStatus() == STATUS_PUBLISHED) {
+			$article->setCopyrightYear($article->getDefaultCopyrightYear());
+		}
+
 		$article->stampModified();
 		$this->update(
 			sprintf('UPDATE articles
@@ -595,6 +606,12 @@ class ArticleDAO extends DAO {
 	 * @param $status int
 	 */
 	function changeArticleStatus($articleId, $status) {
+		// if an article is being published, set the copyright year
+		$oldArticle = $this->getArticle($article->getArticleId());
+		if ($oldArticle && $oldArticle->getStatus() != STATUS_PUBLISHED && $status == STATUS_PUBLISHED) {
+			$article->setCopyrightYear($article->getDefaultCopyrightYear());
+		}
+		
 		$this->update(
 			'UPDATE articles SET status = ? WHERE article_id = ?', array((int) $status, (int) $articleId)
 		);
@@ -728,6 +745,23 @@ class ArticleDAO extends DAO {
 					(int) $article->getId()
 				)
 			);
+			unset($article);
+		}
+		$this->flushCache();
+	}
+
+	/**
+	 * Insert attached licenses on all articles in a journal.
+	 * @param $journalId int
+	 */
+	function insertPermissions($journalId) {
+		$journalId = (int) $journalId;
+		$articles =& $this->getArticlesByJournalId($journalId);
+		while ($article =& $articles->next()) {
+			$article->setLicenseURL($article->getDefaultLicenseURL());
+			$article->setCopyrightHolder($article->getDefaultCopyrightHolder(null), null);
+			$article->setCopyrightYear($article->getDefaultCopyrightYear());
+			$this->updateLocaleFields($article);
 			unset($article);
 		}
 		$this->flushCache();

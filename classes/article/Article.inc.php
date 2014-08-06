@@ -133,10 +133,9 @@ class Article extends Submission {
 	/**
 	 * Get the localized copyright holder for this article, attaching it
 	 * from journal settings as necessary.
-	 * @param $preview boolean If true, preview the license; do not attach
 	 */
-	function getLocalizedCopyrightHolder($preview = false) {
-		$copyrightHolders = $this->getCopyrightHolder(null, $preview);
+	function getLocalizedCopyrightHolder() {
+		$copyrightHolders = $this->getCopyrightHolder(null);
 		foreach (AppLocale::getLocalePrecedence() as $locale) {
 			if (isset($copyrightHolders[$locale])) return $copyrightHolders[$locale];
 		}
@@ -145,57 +144,49 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get the license URL for this article, attaching it from journal
-	 * settings as necessary.
-	 * @param $preview boolean If true, preview the license; do not attach
-	 */
-	function getLicenseUrl($preview = false) {
-		return $this->_getLicenseFieldValue(null, PERMISSIONS_FIELD_LICENSE_URL, $preview);
+	* Get the license URL for this article
+	*/
+	function getDefaultLicenseUrl() {
+		return $this->_getDefaultLicenseFieldValue(null, PERMISSIONS_FIELD_LICENSE_URL);
 	}
 
 	/**
-	 * Get the copyright holder for this article, attaching it from journal
-	 * settings as necessary.
+	 * Get the copyright holder for this article
 	 * @param $locale string Locale
-	 * @param $preview boolean If true, preview the license; do not attach
 	 */
-	function getCopyrightHolder($locale, $preview = false) {
-		return $this->_getLicenseFieldValue($locale, PERMISSIONS_FIELD_COPYRIGHT_HOLDER, $preview);
+	function getDefaultCopyrightHolder($locale) {
+		return $this->_getDefaultLicenseFieldValue($locale, PERMISSIONS_FIELD_COPYRIGHT_HOLDER);
 	}
 
 	/**
-	 * Get the copyright year for this article, attaching it as necessary
-	 * @param $preview boolean If true, preview the license; do not attach
+	 * Get the copyright year for this article
 	 */
-	function getCopyrightYear($preview = false) {
-		return $this->_getLicenseFieldValue(null, PERMISSIONS_FIELD_COPYRIGHT_YEAR, $preview);
+	function getDefaultCopyrightYear() {
+		return $this->_getDefaultLicenseFieldValue(null, PERMISSIONS_FIELD_COPYRIGHT_YEAR);
 	}
 
 	/**
-	 * Get a license field for this article, attaching it from journal
-	 * settings as necessary.
+	 * Get the best guess license field for this article
 	 * @param $locale string Locale
 	 * @param $field int PERMISSIONS_FIELD_... Which to return
-	 * @param $preview boolean If true, preview the license; do not attach
 	 */
-	function _getLicenseFieldValue($locale, $field, $preview = false) {
-		// If possible, use the stored permissions info
+	function _getDefaultLicenseFieldValue($locale, $field) {
+		// If already set, use the stored permissions info
 		switch ($field) {
 			case PERMISSIONS_FIELD_LICENSE_URL:
-				$fieldValue = $this->getStoredLicenseURL();
+				$fieldValue = $this->getLicenseURL();
 				break;
 			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
-				$fieldValue = $this->getStoredCopyrightHolder($locale);
+				$fieldValue = $this->getCopyrightHolder($locale);
 				break;
 			case PERMISSIONS_FIELD_COPYRIGHT_YEAR:
-				$fieldValue = $this->getStoredCopyrightYear($locale);
+				$fieldValue = $this->getCopyrightYear($locale);
 				break;
 			default: assert(false);
 		}
 		if (!empty($fieldValue)) {
 			if ($locale === null || !is_array($fieldValue)) return $fieldValue;
 			if (isset($fieldValue[$locale])) return $fieldValue[$locale];
-			return null;
 		}
 
 		// Otherwise, get the permissions info from journal settings.
@@ -214,15 +205,24 @@ class Article extends Submission {
 				$copyrightHolder = $journal->getTitle(null);
 				break;
 		}
+		// Default copyright year to current year
 		$copyrightYear = date('Y');
-
-		if (!$preview) {
-			// If not previewing the license, attach to the article
-			$this->setStoredLicenseURL($licenseUrl);
-			$this->setStoredCopyrightHolder($copyrightHolder, null);
-			$this->setStoredCopyrightYear($copyrightYear);
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$articleDao->updateLocaleFields($this);
+		// Override based on journal settings
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($this->getArticleId());
+		if ($publishedArticle) {
+			$opt = $journal->getSetting('copyrightYearBasis');
+			if ($opt == 'article') {
+				// override to the article's year if published as you go
+				$copyrightYear = date('Y', strtotime($publishedArticle->getDatePublished()));
+			} else if ($publishedArticle->getIssueId()) {
+				// override to the issue's year if published as issue-based
+				$issueDao =& DAORegistry::getDAO('IssueDAO');
+				$issue = $issueDao->getIssueByArticleId($this->getArticleId());
+				if ($issue && $issue->getDatePublished()) {
+					$copyrightYear = date('Y', strtotime($issue->getDatePublished()));
+				}
+			}
 		}
 
 		switch ($field) {
@@ -333,7 +333,7 @@ class Article extends Submission {
 	 * @param $locale string locale
 	 * @return string
 	 */
-	function getStoredCopyrightHolder($locale) {
+	function getCopyrightHolder($locale) {
 		return $this->getData('copyrightHolder', $locale);
 	}
 
@@ -342,7 +342,7 @@ class Article extends Submission {
 	 * @param $copyrightHolder string Copyright holder
 	 * @param $locale string locale
 	 */
-	function setStoredCopyrightHolder($copyrightHolder, $locale) {
+	function setCopyrightHolder($copyrightHolder, $locale) {
 		return $this->setData('copyrightHolder', $copyrightHolder, $locale);
 	}
 
@@ -350,7 +350,7 @@ class Article extends Submission {
 	 * Get stored copyright year for the submission.
 	 * @return string
 	 */
-	function getStoredCopyrightYear() {
+	function getCopyrightYear() {
 		return $this->getData('copyrightYear');
 	}
 
@@ -358,7 +358,7 @@ class Article extends Submission {
 	 * Set the stored copyright year for the submission.
 	 * @param $copyrightYear string Copyright holder
 	 */
-	function setStoredCopyrightYear($copyrightYear) {
+	function setCopyrightYear($copyrightYear) {
 		return $this->setData('copyrightYear', $copyrightYear);
 	}
 
@@ -366,7 +366,7 @@ class Article extends Submission {
 	 * Get stored license URL for the submission content.
 	 * @return string
 	 */
-	function getStoredLicenseURL() {
+	function getLicenseURL() {
 		return $this->getData('licenseURL');
 	}
 
@@ -374,7 +374,7 @@ class Article extends Submission {
 	 * Set the stored license URL for the submission content.
 	 * @param $license string License of submission content
 	 */
-	function setStoredLicenseURL($licenseUrl) {
+	function setLicenseURL($licenseUrl) {
 		return $this->setData('licenseURL', $licenseUrl);
 	}
 

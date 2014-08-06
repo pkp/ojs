@@ -396,6 +396,7 @@ class SetupHandler extends ManagerHandler {
 
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$articleDao->deletePermissions($journal->getId());
+		$articleDao->insertPermissions($journal->getId());
 
 		$request->redirect(null, null, 'setup', array('3'));
 	}

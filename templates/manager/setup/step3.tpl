@@ -99,6 +99,19 @@
 		</td>
 	</tr>
 	<tr valign="top">
+		<td width="20%" class="label" rowspan="2">
+			{translate key="manager.setup.copyrightYearBasis"}
+		</td>
+		<td width="80%" class="data">
+			<input type="radio" value="issue" name="copyrightYearBasis" {if $copyrightYearBasis=="issue"}checked="checked" {/if}id="copyrightYearBasis-issue" />&nbsp;<label for="copyrightYearBasis-issue">{translate key="issue.issue"}</label> ({translate key="manager.setup.copyrightYearBasis.Issue"})
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="data">
+			<input type="radio" value="article" name="copyrightYearBasis" {if $copyrightYearBasis=="article"}checked="checked" {/if}id="copyrightYearBasis-article" />&nbsp;<label for="copyrightYearBasis-article">{translate key="article.article"}</label> ({translate key="manager.setup.copyrightYearBasis.Article"})
+		</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="manager.setup.permissions.priorAgreement"}</td>
 		<td class="label">
 			<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />&nbsp;<label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label>
