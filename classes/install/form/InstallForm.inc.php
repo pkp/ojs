@@ -99,6 +99,7 @@ class InstallForm extends Form {
 		$this->addCheck(new FormValidatorInSet($this, 'encryption', 'required', 'installer.form.encryptionRequired', array_keys($this->supportedEncryptionAlgorithms)));
 		$this->addCheck(new FormValidator($this, 'adminUsername', 'required', 'installer.form.usernameRequired'));
 		$this->addCheck(new FormValidatorAlphaNum($this, 'adminUsername', 'required', 'installer.form.usernameAlphaNumeric'));
+		$this->addCheck(new FormValidatorLength($this, 'adminPassword', 'required', 'user.register.form.passwordLengthTooShort', '>=', INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH));
 		$this->addCheck(new FormValidator($this, 'adminPassword', 'required', 'installer.form.passwordRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'adminPassword', 'required', 'installer.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'adminPassword2\');'), array(&$this)));
 		$this->addCheck(new FormValidatorEmail($this, 'adminEmail', 'required', 'installer.form.emailRequired'));
@@ -126,6 +127,7 @@ class InstallForm extends Form {
 		$templateMgr->assign('phpRequiredVersion', PHP_REQUIRED_VERSION);
 		$templateMgr->assign('phpVersion', PHP_VERSION);
 		$templateMgr->assign('version', VersionCheck::getCurrentCodeVersion());
+		$templateMgr->assign('passwordLength',INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH);
 
 		parent::display();
 	}
