@@ -92,7 +92,7 @@ class Article extends Submission {
 	//
 
 	/**
-	 * Get ID of article.
+	 * Get ID of article. DEPRECATED; use ::getId()
 	 * @return int
 	 */
 	function getArticleId() {
@@ -101,7 +101,7 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Set ID of article.
+	 * Set ID of article.  DEPRECATED; use ::setId($id)
 	 * @param $articleId int
 	 */
 	function setArticleId($articleId) {
@@ -131,8 +131,7 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get the localized copyright holder for this article, attaching it
-	 * from journal settings as necessary.
+	 * Get the localized copyright holder for this article.
 	 */
 	function getLocalizedCopyrightHolder() {
 		$copyrightHolders = $this->getCopyrightHolder(null);
@@ -144,14 +143,14 @@ class Article extends Submission {
 	}
 
 	/**
-	* Get the license URL for this article
-	*/
+	 * Get the license URL for this article.
+	 */
 	function getDefaultLicenseUrl() {
 		return $this->_getDefaultLicenseFieldValue(null, PERMISSIONS_FIELD_LICENSE_URL);
 	}
 
 	/**
-	 * Get the copyright holder for this article
+	 * Get the copyright holder for this article.
 	 * @param $locale string Locale
 	 */
 	function getDefaultCopyrightHolder($locale) {
@@ -159,14 +158,14 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get the copyright year for this article
+	 * Get the copyright year for this article.
 	 */
 	function getDefaultCopyrightYear() {
 		return $this->_getDefaultLicenseFieldValue(null, PERMISSIONS_FIELD_COPYRIGHT_YEAR);
 	}
 
 	/**
-	 * Get the best guess license field for this article
+	 * Get the best guess license field for this article.
 	 * @param $locale string Locale
 	 * @param $field int PERMISSIONS_FIELD_... Which to return
 	 */
@@ -209,19 +208,24 @@ class Article extends Submission {
 		$copyrightYear = date('Y');
 		// Override based on journal settings
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($this->getArticleId());
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($this->getId());
 		if ($publishedArticle) {
-			$opt = $journal->getSetting('copyrightYearBasis');
-			if ($opt == 'article') {
-				// override to the article's year if published as you go
-				$copyrightYear = date('Y', strtotime($publishedArticle->getDatePublished()));
-			} else if ($publishedArticle->getIssueId()) {
-				// override to the issue's year if published as issue-based
-				$issueDao =& DAORegistry::getDAO('IssueDAO');
-				$issue = $issueDao->getIssueByArticleId($this->getArticleId());
-				if ($issue && $issue->getDatePublished()) {
-					$copyrightYear = date('Y', strtotime($issue->getDatePublished()));
-				}
+			switch($journal->getSetting('copyrightYearBasis')) {
+				case 'article':
+					// override to the article's year if published as you go
+					$copyrightYear = date('Y', strtotime($publishedArticle->getDatePublished()));
+					break;
+				case 'issue':
+					if ($publishedArticle->getIssueId()) {
+						// override to the issue's year if published as issue-based
+						$issueDao =& DAORegistry::getDAO('IssueDAO');
+						$issue = $issueDao->getIssueByArticleId($this->getId());
+						if ($issue && $issue->getDatePublished()) {
+							$copyrightYear = date('Y', strtotime($issue->getDatePublished()));
+						}
+					}
+					break;
+				default: assert(false);
 			}
 		}
 
@@ -828,6 +832,19 @@ class Article extends Submission {
 	function getEndingPage() {
 		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
 		return $pages[2];
+	}
+	
+	/**
+	 * Initialize the copyright and license metadata for an article.
+	 * This should be called at creation and at publication, to setup license/copyright holder and copyright year, respectively.
+	 * This depends on the permissions configuration in Journal Setup, and (potentially) on the authors of a article being populated.
+	 */
+	function initializePermissions() {
+		$this->setLicenseURL($this->getDefaultLicenseURL());
+		$this->setCopyrightHolder($this->getDefaultCopyrightHolder(null), null);
+		if ($this->getStatus() == STATUS_PUBLISHED) {
+			$this->setCopyrightYear($this->getDefaultCopyrightYear());
+		}
 	}
 }
 

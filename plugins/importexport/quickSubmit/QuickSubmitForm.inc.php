@@ -292,6 +292,10 @@ class QuickSubmitForm extends Form {
 			}
 		}
 
+		// Setup default copyright/license metadata after status is set and authors are attached.
+		$article->initializePermissions();
+		$articleDao->updateLocaleFields($article);
+
 		// Add the submission files as galleys
 		import('classes.file.TemporaryFileManager');
 		import('classes.file.ArticleFileManager');
