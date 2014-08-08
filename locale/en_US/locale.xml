@@ -1149,4 +1149,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<message key="notification.type.approveSubmission">This submission is currently awaiting approval before it will appear in the issue.</message>
 	<message key="notification.type.approveSubmissionTitle">Awaiting approval.</message>
+
+	<message key="user.profile.form.showOtherContexts">Show Other Journals</message>
+	<message key="user.profile.form.hideOtherContexts">Hide Other Journals</message>
 </locale>
