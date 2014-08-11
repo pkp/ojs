@@ -424,7 +424,7 @@ class IssueHandler extends Handler {
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
 		$templateMgr =& TemplateManager::getManager();
-		if ($this->_isVisibleIssue($issue, $journalId)) {
+		if (IssueHandler::_isVisibleIssue($issue, $journalId)) {
 
 			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
