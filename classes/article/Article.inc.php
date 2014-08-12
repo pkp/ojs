@@ -92,7 +92,7 @@ class Article extends Submission {
 	//
 
 	/**
-	 * Get ID of article. DEPRECATED; use ::getId()
+	 * Get ID of article. DEPRECATED in favor of getId()
 	 * @return int
 	 */
 	function getArticleId() {
@@ -101,7 +101,7 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Set ID of article.  DEPRECATED; use ::setId($id)
+	 * Set ID of article. DEPRECATED in favor of setId($id)
 	 * @param $articleId int
 	 */
 	function setArticleId($articleId) {
@@ -166,6 +166,8 @@ class Article extends Submission {
 
 	/**
 	 * Get the best guess license field for this article.
+	 * Return the existing value if the field is already set,
+	 * otherwise calculate a best value based on the Journal Settings.
 	 * @param $locale string Locale
 	 * @param $field int PERMISSIONS_FIELD_... Which to return
 	 */
@@ -838,6 +840,7 @@ class Article extends Submission {
 	 * Initialize the copyright and license metadata for an article.
 	 * This should be called at creation and at publication, to setup license/copyright holder and copyright year, respectively.
 	 * This depends on the permissions configuration in Journal Setup, and (potentially) on the authors of a article being populated.
+	 * Only initializes empty fields because of the getDefault...() behaviour, so subsequent calls are safe.
 	 */
 	function initializePermissions() {
 		$this->setLicenseURL($this->getDefaultLicenseURL());
