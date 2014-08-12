@@ -55,7 +55,7 @@ class CreateJournalTest extends WebTestCase {
 
 		// Management > Settings > Journal
 		$this->waitForElementPresent('//ul[contains(@class, \'sf-js-enabled\')]//a[text()=\'Journal\']');
-		$this->click('//ul[contains(@class, \'sf-js-enabled\')]//a[text()=\'Journal\']');
+		$this->clickAndWait('//ul[contains(@class, \'sf-js-enabled\')]//a[text()=\'Journal\']');
     		$this->waitForElementPresent('css=[id^=abbreviation-]');
     		$this->type('css=[id^=abbreviation-]', 'PK');
 		$this->click('//form[@id=\'mastheadForm\']//span[text()=\'Save\']/..');

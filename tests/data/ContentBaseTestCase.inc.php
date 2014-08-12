@@ -30,6 +30,22 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 	}
 
 	/**
+	 * Get the number of items in the default submission checklist
+	 * @return int
+	 */
+	protected function _getChecklistLength() {
+		return 6;
+	}
+
+	/**
+	 * Get the submission element's name
+	 * @return string
+	 */
+	protected function _getSubmissionElementName() {
+		return 'Submission';
+	}
+
+	/**
 	 * Send to review.
 	 */
 	protected function sendToReview() {
