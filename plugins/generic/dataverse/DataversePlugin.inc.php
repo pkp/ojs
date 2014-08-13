@@ -876,25 +876,19 @@ class DataversePlugin extends GenericPlugin {
 				// Study may not exist, if this is the first file deposited
 				$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());	 
 				if (!isset($study)) {
-					$study =& $this->createStudy($article);
+					$study = $this->createStudy($article);
 					$notificationManager->createTrivialNotification($user->getId(), isset($study) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED : NOTIFICATION_TYPE_ERROR);					 
 				}
-
-				if (!isset($study)) return false;
+				assert(isset($study));
 				
 				// File already in Dataverse?
 				$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($form->suppFile->getId(), $article->getId());			
-
-				if (isset($dvFile)) {
-					// File is already in Dataverse. Update study with suppfile metadata. 
-					$studyUpdated = $this->replaceStudyMetadata($article, $study);
-					$notificationManager->createTrivialNotification($user->getId(), $studyUpdated ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
+				if (!isset($dvFile)) {
+					$dvFile = $this->addFileToStudy($study, $form->suppFile);
 				}
-				else {
-					// Add file to study
-					$fileAdded = $this->addFileToStudy($study, $form->suppFile);
-					$notificationManager->createTrivialNotification($user->getId(), $fileAdded ? NOTIFICATION_TYPE_DATAVERSE_FILE_ADDED : NOTIFICATION_TYPE_ERROR);
-				}
+				// Update study with suppfile metadata 
+				$this->replaceStudyMetadata($article, $study);
+				$notificationManager->createTrivialNotification($user->getId(), isset($dvFile) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
 				break;
 		}
 		return false;
@@ -983,10 +977,18 @@ class DataversePlugin extends GenericPlugin {
 			$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
 			$dvFiles =& $dvFileDao->getDataverseFilesBySubmissionId($article->getId());
 			if ($dvFiles) {
-				$study = $this->createStudy($article);
-				// If study creation successful, deposit files. 
-				$this->depositFilePackage();
-			}
+				import('classes.notification.NotificationManager');
+				$notificationManager = new NotificationManager();				
+				$user =& Request::getUser();
+				$study = $this->createStudy($article); 
+				if ($study) {
+					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED);
+					$this->addPackageToStudy($study, $dvFiles);
+				}
+				else {
+					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);
+				}
+			} 
 		}
 		return false;
 	}
@@ -1153,58 +1155,6 @@ class DataversePlugin extends GenericPlugin {
 	}
 	
 	/**
-	 * Deposit file package on initial article submission by author
-	 * @see DataversePlugin::addFileToStudy for suppfiles added or modified after initial submission
-	 * @fixme refactor code moved from createStudy() 
-	 * @fixme revise params
-	 */
-	function depositFilePackage() {
-		// Fine. Now add the files, if any are present.
-		for ($i=0; $i<sizeof($dvFiles); $i++) {
-			$dvFile =& $dvFiles[$i];
-			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $article->getId());
-			$dvFileIndex[str_replace(' ', '_', $suppFile->getOriginalFileName())] =& $dvFile;			 
-			$packager->addFile($suppFile);
-		}
-		
-		// Create the deposit package & add package to Dataverse
-		$packager->createPackage();
-		$depositReceipt = $client->deposit(
-						$study->getEditMediaUri(),
-						$this->getSetting($journal->getId(), 'username'),
-						$this->getSetting($journal->getId(), 'password'),
-						'', // on behalf of: no one
-						$packager->getPackageFilePath(),
-						$packager->getPackaging(),
-						$packager->getContentType(),
-						false); // in progress? false 
-		
-		if ($depositReceipt->sac_status != DATAVERSE_PLUGIN_HTTP_STATUS_CREATED) return false;
-		
-		// Get the study statement & update the local file list
-		$studyStatement = $client->retrieveAtomStatement(
-						$study->getStatementUri(),
-						$this->getSetting($journal->getId(), 'username'),
-						$this->getSetting($journal->getId(), 'password'),
-						'' // on behalf of
-					);
-		
-		if (!isset($studyStatement)) return false;
-
-		// Update each Dataverse file with study id & content source URI
-		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
-		foreach ($studyStatement->sac_entries as $entry) {
-			$dvUriFileName = substr($entry->sac_content_source, strrpos($entry->sac_content_source, '/')+1);
-			if (array_key_exists($dvUriFileName, $dvFileIndex)) {
-				$dvFile =& $dvFileIndex[$dvUriFileName];
-				$dvFile->setContentSourceUri($entry->sac_content_source);
-				$dvFile->setStudyId($study->getId());
-				$dvFileDao->updateDataverseFile($dvFile);
-			}
-		}
-	}
-	
-	/**
 	 * Update cataloguing information for an existing study. Metadata in the Atom
 	 * entry overwrites all cataloguing information currently defined for the
 	 * study.
@@ -1233,9 +1183,70 @@ class DataversePlugin extends GenericPlugin {
 		}
 		return $metadataReplaced;
 	}
+	
+	/**
+	 * Create deposit package of suppfiles selected for storage in Dataverse &
+	 * add package to study.
+	 * @param DataverseStudy $study Study associated with author submission
+	 * @param Array $dvFiles Array of DataverseFile objects
+	 * @return boolean Files deposited
+	 */
+	function addPackageToStudy($study, $dvFiles = array()) {
+		// Create deposit package
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		$packager = new DataversePackager();
+		for ($i=0; $i<sizeof($dvFiles); $i++) {
+			$dvFile =& $dvFiles[$i];
+			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $study->getSubmissionId());
+			$dvFileIndex[str_replace(' ', '_', $suppFile->getOriginalFileName())] =& $dvFile;			 
+			$packager->addFile($suppFile);
+		}
+		$packager->createPackage();
+
+		// Deposit the package
+		$journal =& Request::getJournal();
+		$client = $this->_initSwordClient();		
+		$depositReceipt = $client->deposit(
+						$study->getEditMediaUri(),
+						$this->getSetting($journal->getId(), 'username'),
+						$this->getSetting($journal->getId(), 'password'),
+						'', // on behalf of: no one
+						$packager->getPackageFilePath(),
+						$packager->getPackaging(),
+						$packager->getContentType(),
+						false); // in progress? false 
+		
+		assert(isset($depositReceipt) && is_a($depositReceipt, 'SWORDAPPEntry'));
+
+		$depositSuccess = ($depositReceipt->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_CREATED);
+		if ($depositSuccess) {
+			// Get the study statement & update the local file list
+			$studyStatement = $client->retrieveAtomStatement(
+						$study->getStatementUri(),
+						$this->getSetting($journal->getId(), 'username'),
+						$this->getSetting($journal->getId(), 'password'),
+						'' // on behalf of
+				);
+			
+			assert(isset($studyStatement) && is_a($studyStatement, 'SWORDAPPStatement'));
+			
+			// Update each Dataverse file with study id & content source URI
+			$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
+			foreach ($studyStatement->sac_entries as $entry) {
+				$dvUriFileName = substr($entry->sac_content_source, strrpos($entry->sac_content_source, '/')+1);
+				if (array_key_exists($dvUriFileName, $dvFileIndex)) {
+					$dvFile =& $dvFileIndex[$dvUriFileName];
+					$dvFile->setContentSourceUri($entry->sac_content_source);
+					$dvFile->setStudyId($study->getId());
+					$dvFileDao->updateDataverseFile($dvFile);
+				}
+			}
+		}
+		return $depositSuccess;
+	}	
 
 	/**
-	 * Add a file to an existing study
+	 * Add a supplementary file to an existing study.
 	 * @param DataverseStudy $study
 	 * @param SuppFile $suppFile
 	 * @return DataverseFile
@@ -1258,45 +1269,37 @@ class DataversePlugin extends GenericPlugin {
 						$packager->getContentType(),
 						false); // in progress? false 
 		
-		if ($depositReceipt->sac_status != DATAVERSE_PLUGIN_HTTP_STATUS_CREATED) return false;
-		
-		// Get the study statement & update the Dataverse file with content source URI
-		$studyStatement = $client->retrieveAtomStatement(
+		assert(isset($depositReceipt) && is_a($depositReceipt, 'SWORDAPPEntry'));
+
+		$dvFile = null;
+		if ($depositReceipt->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_CREATED) {
+			// Create a new Dataverse file for inserted suppfile
+			$this->import('classes.DataverseFile');
+			$dvFile = new DataverseFile();
+			$dvFile->setSuppFileId($suppFile->getId());
+			$dvFile->setStudyId($study->getId());
+			$dvFile->setSubmissionId($study->getSubmissionId());
+
+			// Get study statement & update DataverseFile content source URI
+			$studyStatement = $client->retrieveAtomStatement(
 						$study->getStatementUri(),
 						$this->getSetting($journal->getId(), 'username'),
 						$this->getSetting($journal->getId(), 'password'),
 						'' // on behalf of
 					);
-
-		// Need the study statement to update Dataverse files
-		if (!isset($studyStatement)) return false;
-
-		// Create a new Dataverse file for inserted suppfile
-		$this->import('classes.DataverseFile');
-		$dvFile = new DataverseFile();
-		$dvFile->setSuppFileId($suppFile->getId());
-		$dvFile->setStudyId($study->getId());
-		$dvFile->setSubmissionId($study->getSubmissionId());
-
-		foreach ($studyStatement->sac_entries as $entry) {
-			$dvUriFileName = substr($entry->sac_content_source, strrpos($entry->sac_content_source, '/')+1);
-			if ($dvUriFileName == str_replace(' ', '_', $suppFile->getOriginalFileName())) {
-				$dvFile->setContentSourceUri($entry->sac_content_source);
-				break;
+			assert(isset($studyStatement) && is_a($studyStatement, 'SWORDAPPStatement'));
+			
+			// Associate Dataverse-side file with OJS-side file
+			foreach ($studyStatement->sac_entries as $entry) {
+				$dvUriFileName = substr($entry->sac_content_source, strrpos($entry->sac_content_source, '/')+1);
+				if ($dvUriFileName == str_replace(' ', '_', $suppFile->getOriginalFileName())) {
+					$dvFile->setContentSourceUri($entry->sac_content_source);
+					break;
+				}
 			}
+			$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
+			$dvFileDao->insertDataverseFile($dvFile);			
 		}
-
-		if (!$dvFile->getContentSourceUri()) return false;
-		
-		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
-		$dvFileDao->insertDataverseFile($dvFile);
-		
-		// Finally, file may have metadata that needs to be in study cataloguing information
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
-		$article =& $articleDao->getArticle($study->getSubmissionId(), $journal->getId(), true);
-		/** @fixme notify? */
-		$this->replaceStudyMetadata($article, $study);
-
 		return $dvFile;
 	}
 	
