@@ -41,6 +41,14 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 
 	/**
+	 * Override currentVersion to prevent upgrade and delete management.
+	 * @return boolean
+	 */
+	function getCurrentVersion() {
+		return false;
+	}
+
+	/**
 	 * Get the symbolic name of the plugin.
 	 * @return string
 	 */
