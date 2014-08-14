@@ -21,6 +21,10 @@
 		<name>apiKey</name>
 		<value></value>
 	</setting>
+	<setting type="bool">
+		<name>depositArticles</name>
+		<value>true</value>
+	</setting>
 	<setting type="string">
 		<name>depositUrl</name>
 		<value>http://pkp-alm.lib.sfu.ca/load/deposit.php</value>

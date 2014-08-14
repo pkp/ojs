@@ -39,13 +39,10 @@ class AlmPlugin extends GenericPlugin {
 		$context = $router->getContext($request);
 
 		if ($success && $context) {
-			$apiKey = $this->getSetting($context->getId(), 'apiKey');
-			if ($apiKey) {
-				$this->_apiKey = $apiKey;
-				HookRegistry::register('TemplateManager::display',array(&$this, 'templateManagerCallback'));
-				HookRegistry::register('Templates::Article::MoreInfo',array(&$this, 'articleMoreInfoCallback'));
-				HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
-			}
+			$this->_apiKey = $this->getSetting($context->getId(), 'apiKey');
+			HookRegistry::register('TemplateManager::display',array(&$this, 'templateManagerCallback'));
+			HookRegistry::register('Templates::Article::MoreInfo',array(&$this, 'articleMoreInfoCallback'));
+			HookRegistry::register('AcronPlugin::parseCronTab', array(&$this, 'callbackParseCronTab'));
 		}
 		return $success;
 	}
@@ -167,7 +164,12 @@ class AlmPlugin extends GenericPlugin {
 		list($totalHtml, $totalPdf, $byMonth, $byYear) = $this->_aggregateDownloadStats($downloadStats);
 		$downloadJson = $this->_buildDownloadStatsJson($totalHtml, $totalPdf, $byMonth, $byYear);
 
-		$almStatsJson = $this->_getAlmStats($article);
+		if ($this->_apiKey) {
+			$almStatsJson = $this->_getAlmStats($article);
+		} else {
+			$almStatsJson = null;
+		}
+
 		$json = @json_decode($almStatsJson); // to be used to check for errors
 		if (!$almStatsJson || property_exists($json, 'error')) {
 			// The ALM stats answer comes with needed article info,
