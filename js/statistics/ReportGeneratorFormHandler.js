@@ -24,16 +24,41 @@
 	 * @constructor
 	 *
 	 * @extends $.pkp.controllers.form.AjaxFormHandler
-	 *
+	 *\
 	 * @param {jQueryObject} $form The wrapped HTML form element.
-	 * @param {Object} options Configuration of the form handler.
+	 * @param {{
+	 *   timeFilterWrapperSelector: string,
+	 *   rangeByDaySelector: string,
+	 *   rangeByMonthSelector: string,
+	 *   startDayElementSelector: string,
+	 *   endDayElementSelector: string,
+	 *   fetchFormUrl: string,
+	 *   metricTypeSelectSelector: string,
+	 *   reportTemplateSelectSelector: string,
+	 *   columnsSelector: string,
+	 *   aggregationOptionsSelector: string,
+	 *   currentMonthSelector: string,
+	 *   currentDaySelector: string,
+	 *   dateRangeWrapperSelector: string,
+	 *   fetchArticlesUrl: string,
+	 *   articleSelectSelector: string,
+	 *   issueSelectSelector: string,
+	 *   fileAssocTypes: Object,
+	 *   fileTypeSelectSelector: string,
+	 *   objectTypeSelectSelector: string,
+	 *   fetchRegionsUrl: string,
+	 *   regionSelectSelector: string,
+	 *   countrySelectSelector: string
+	 *   }} options Handler options.
+
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler = function($form, options) {
 
 		var $issueSelectElement, $objectTypeSelectElement,
 				$countrySelectElement, $metricTypeSelectElement,
 				$reportTemplateSelectElement, $currentTimeElements,
-				$rangeTimeElements, $aggregationOptions;
+				$rangeTimeElements, $aggregationOptions,
+				$currentDaySelectElement, $rangeByDaySelectElement;
 
 		// Configure the form handler.
 		options.trackFormChanges = false;
@@ -77,18 +102,20 @@
 		}
 
 		// Add click handler to current time filter selectors.
+		$currentDaySelectElement = $(options.currentDaySelector,
+				this.getHtmlElement());
 		$currentTimeElements = $(options.currentMonthSelector,
-				this.getHtmlElement()).add(options.currentDaySelector,
-						this.getHtmlElement());
+				this.getHtmlElement()).add($currentDaySelectElement);
 		if ($currentTimeElements.length == 2) {
 			$currentTimeElements.click(this.callbackWrapper(
 					this.currentTimeElementsClickHandler_));
 		}
 
 		// Add click handler to range time filter selectors.
+		$rangeByDaySelectElement = $(options.rangeByDaySelector,
+				this.getHtmlElement());
 		$rangeTimeElements = $(options.rangeByMonthSelector,
-				this.getHtmlElement()).add(options.rangeByDaySelector,
-						this.getHtmlElement());
+				this.getHtmlElement()).add($rangeByDaySelectElement);
 		if ($rangeTimeElements.length == 2) {
 			$rangeTimeElements.click(this.callbackWrapper(
 					this.rangeTimeElementsClickHandler_));
@@ -123,7 +150,7 @@
 		$objectTypeSelectElement = $(options.objectTypeSelectSelector,
 				this.getHtmlElement());
 		if (this.$fileTypeSelectElement_.length == 1) {
-			this.$fileTypeSelectElement_.attr('disabled', true);
+			this.$fileTypeSelectElement_.attr('disabled', 'true');
 			$objectTypeSelectElement.change(this.callbackWrapper(
 					this.updateFileTypeSelectHandler_));
 		}
@@ -285,6 +312,7 @@
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.handleResponse =
 			function(formElement, jsonData) {
+		/** @type {{reportUrl: string}|Object|boolean|null} data */
 		var data = this.handleJson(jsonData);
 		if (data !== false && data.reportUrl !== undefined) {
 			$('#reportUrlFormArea', this.getHtmlElement()).show().
@@ -293,7 +321,7 @@
 			window.location = data.reportUrl;
 		}
 
-		this.parent('handleResponse', formElement, jsonData);
+		return this.parent('handleResponse', formElement, jsonData);
 	};
 
 
@@ -307,13 +335,10 @@
 	 *
 	 * @private
 	 *
-	 * @param {Object} callingContext The calling element or object.
-	 * @param {Event=} opt_event The triggering event (e.g. a click on
-	 *  a button.
 	 * @return {boolean} Should return false to stop event processing.
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.fetchFormHandler_ =
-			function(callingContext, opt_event) {
+			function() {
 		var $metricTypeSelectedOption, $reportTemplateSelectedOption,
 				$timeFilterElements, timeFilterValues, args = {};
 
@@ -322,9 +347,11 @@
 		$timeFilterElements = $(this.timeFilterWrapperSelector_,
 				this.getHtmlElement());
 		timeFilterValues = $timeFilterElements.serializeArray();
+		/*jslint unparam: true*/
 		$.each(timeFilterValues, function(i, element) {
 			args[element.name] = element.value;
 		});
+		/*jslint unparam: false*/
 
 		$metricTypeSelectedOption = $('option:selected',
 				this.$metricTypeSelectElement_);
@@ -356,12 +383,10 @@
 	 * @private
 	 *
 	 * @param {Object} callingContext The calling element or object.
-	 * @param {Event=} opt_event The triggering event (e.g. a click on
-	 *  a button.
 	 * @return {boolean} Should return false to stop event processing.
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.fetchArticleInfoHandler_ =
-			function(callingContext, opt_event) {
+			function(callingContext) {
 		var $issueSelectElement, $issueSelectedOptions, issueId;
 
 		this.$articleSelectElement_.empty();
@@ -388,14 +413,17 @@
 	 * @param {Object} jsonData A parsed JSON response object.
 	 * @return {boolean} Should return false to stop event processing.
 	 */
+	/*jslint unparam: true*/
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			updateArticleSelectCallback_ = function(ajaxContext, jsonData) {
 		var $articleSelectElement, limit, content, i;
+		/** @type {{content: string}|Object|boolean|null} handledJson */
+		var handledJson;
 		$articleSelectElement = this.$articleSelectElement_;
 
-		jsonData = this.handleJson(jsonData);
-		if (jsonData !== false) {
-			content = jsonData.content;
+		handledJson = this.handleJson(jsonData);
+		if (handledJson !== false) {
+			content = handledJson.content;
 			for (i = 0, limit = content.length; i < limit; i++) {
 				$articleSelectElement.append(
 						$('<option />').val(content[i].id).text(content[i].title));
@@ -404,6 +432,7 @@
 
 		return false;
 	};
+	/*jslint unparam: false*/
 
 
 	/**
@@ -412,12 +441,10 @@
 	 * @private
 	 *
 	 * @param {Object} callingContext The calling element or object.
-	 * @param {Event=} opt_event The triggering event (e.g. a click on
-	 *  a button.
 	 * @return {boolean} Should return false to stop event processing.
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
-			updateFileTypeSelectHandler_ = function(callingContext, opt_event) {
+			updateFileTypeSelectHandler_ = function(callingContext) {
 		var $objectTypeElement, $objectTypeSelectedOptions, assocType, i;
 
 		$objectTypeElement = $(callingContext);
@@ -426,13 +453,13 @@
 			assocType = $objectTypeSelectedOptions[0].value;
 			for (i in this.fileAssocTypes_) {
 				if (this.fileAssocTypes_[i] == assocType) {
-					this.$fileTypeSelectElement_.attr('disabled', false);
+					this.$fileTypeSelectElement_.attr('disabled', 'false');
 					return false;
 				}
 			}
 		}
 
-		this.$fileTypeSelectElement_.attr('disabled', true);
+		this.$fileTypeSelectElement_.attr('disabled', 'true');
 		return false;
 	};
 
@@ -444,12 +471,10 @@
 	 * @private
 	 *
 	 * @param {Object} callingContext The calling element or object.
-	 * @param {Event=} opt_event The triggering event (e.g. a click on
-	 *  a button.
 	 * @return {boolean} Should return false to stop event processing.
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.fetchRegionHandler_ =
-			function(callingContext, opt_event) {
+			function(callingContext) {
 		var $countrySelectElement, $countrySelectedOptions, countryId;
 
 		this.$regionSelectElement_.empty();
@@ -476,16 +501,19 @@
 	 * @param {Object} jsonData A parsed JSON response object.
 	 * @return {boolean} Should return false to stop event processing.
 	 */
+	/*jslint unparam: true*/
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			updateRegionSelectCallback_ = function(ajaxContext, jsonData) {
 		var $regionSelectElement, limit, content, i;
+		/** @type {{content: string}|Object|boolean|null} handledJson */
+		var handledJson;
 		$regionSelectElement = this.$regionSelectElement_;
 
 		$regionSelectElement.empty();
 
-		jsonData = this.handleJson(jsonData);
-		if (jsonData !== false) {
-			content = jsonData.content;
+		handledJson = this.handleJson(jsonData);
+		if (handledJson !== false) {
+			content = handledJson.content;
 			for (i = 0, limit = content.length; i < limit; i++) {
 				$regionSelectElement.append(
 						$('<option />').val(content[i].id).text(content[i].name));
@@ -494,20 +522,17 @@
 
 		return false;
 	};
+	/*jslint unparam: false*/
 
 
 	/**
 	 * Callback called when current time selectors are clicked.
 	 *
 	 * @private
-	 *
-	 * @param {Object} callingContext The calling element or object.
-	 * @param {Event=} opt_event The triggering event (e.g. a click on
-	 *  a button.
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			currentTimeElementsClickHandler_ =
-					function(callingContext, opt_event) {
+					function() {
 		this.dateRangeElementsWrapper_.hide();
 	};
 
@@ -518,12 +543,10 @@
 	 * @private
 	 *
 	 * @param {Object} callingContext The calling element or object.
-	 * @param {Event=} opt_event The triggering event (e.g. a click on
-	 *  a button.
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			rangeTimeElementsClickHandler_ =
-					function(callingContext, opt_event) {
+					function(callingContext) {
 
 		var $dayElements = $(this.startDayElementSelector_).
 				add(this.endDayElementSelector_);
@@ -545,13 +568,11 @@
 	 * @private
 	 *
 	 * @param {Object} callingContext The calling element or object.
-	 * @param {Event=} opt_event The triggering event (e.g. a click on
-	 *  a button.
 	 * @return {boolean} Should return false to stop event processing.
 	 */
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			aggregationOptionsChangeHandler_ =
-					function(callingContext, opt_event) {
+					function(callingContext) {
 		var $aggregationOption, $columns, $column;
 		$columns = $(this.columnsSelector_);
 		$aggregationOption = $(callingContext);
