@@ -85,6 +85,10 @@ class ArticleInfoSender extends ScheduledTask {
 			}
 		}
 
+		if (empty($journals)) {
+			$this->addExecutionLogEntry(__('plugins.generics.alm.senderTask.warning.noJournal'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+		}
+
 		return true;
 	}
 
