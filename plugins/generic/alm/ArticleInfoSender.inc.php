@@ -105,7 +105,7 @@ class ArticleInfoSender extends ScheduledTask {
 		$journals = array();
 		while($journal =& $journalFactory->next()) {
 			$journalId = $journal->getId();
-			if (!$plugin->getSetting($journalId, 'enabled')) {
+			if (!$plugin->getSetting($journalId, 'enabled') || !$plugin->getSetting($journalId, 'depositArticles')) {
 				unset($journal);
 				continue;
 			}

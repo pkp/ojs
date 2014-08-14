@@ -17,40 +17,28 @@
 
 <div class="separator">&nbsp;</div>
 
-<form method="post" action="{plugin_url path="settings"}">
+<form class="pkp_form" method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="100%" colspan=2>
-			{translate key="plugins.generic.alm.settings.apiKey.description"}
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			&nbsp;
-		</td>
-	</tr>
-	<tr valign="top">
-		<td width="40%" class="label">{fieldLabel required="true" key="plugins.generic.alm.settings.apiKey"}</td>
-		<td width="60%" class="value"><input type="text" name="apiKey" value="{$apiKey|escape}" id="apiKey" size="40" maxlength="40" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td width="100%" colspan=2>
-			{translate key="plugins.generic.alm.settings.depositUrl.description"}
-		</td>
-	</tr>
-	<tr valign="top">
-		<td width="40%" class="label">{fieldLabel required="true" key="plugins.generic.alm.settings.depositUrl"}</td>
-		<td width="60%" class="value"><input type="text" name="depositUrl" value="{$depositUrl|escape}" id="depositUrl" size="40" maxlength="120" class="textField" /></td>
-	</tr>
-</table>
+{fbvFormArea id="almSettingsFormArea"}
+	{translate key="plugins.generic.alm.settings.apiKey.description"}
+	{fbvFormSection title="plugins.generic.alm.settings.apiKey" for="name" inline=true size=$fbvStyles.size.MEDIUM}
+		{fbvElement type="text" name="apiKey" id="apiKey" value=$apiKey}
+	{/fbvFormSection}
+	{fbvFormSection list=true}
+		{if $depositArticles}{assign var="deposit" value="checked"}{/if}
+		{fbvElement type="checkbox" id="depositArticles" value="1" checked=$deposit label="plugins.generic.alm.settings.depositArticles" }
+	{/fbvFormSection}
+	{fbvFormSection title="plugins.generic.alm.settings.depositUrl" for="depositUrl" inline=true size=$fbvStyles.size.MEDIUM}
+		{fbvElement type="text" name="depositUrl" id="depositUrl" value=$depositUrl label="plugins.generic.alm.settings.depositUrl.description"}
+	{/fbvFormSection}
+{/fbvFormArea}
 
 {translate key="plugins.generic.alm.settings.ipAddress"  ip=$smarty.server.SERVER_ADDR}
 
 <br/>
 <br/>
-<input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/> <input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
+<input type="submit" name="save" class="button defaultButton" style="width:auto" value="{translate key="common.save"}"/> <input type="button" class="button" style="width:auto" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
