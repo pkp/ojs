@@ -534,14 +534,12 @@
 	<message key="manager.subscriptions.dateStartSearch">開始日付</message>
 	<message key="manager.subscriptions.domain">ドメイン</message>
 	<message key="manager.subscriptions.membership">会費</message>
-	<message key="manager.plugins.install">新しいプラグインをインストールする</message>
 	<message key="manager.plugins.upgrade">プラグインをアップグレード</message>
 	<message key="manager.plugins.delete">プラグインを削除</message>
 	<message key="manager.plugins.deleteDescription">削除をクリックすると，サーバのファイルシステムからプラグインが削除されます。</message>
 	<message key="manager.plugins.deleteSuccess">プラグインは正常に削除されました。</message>
 	<message key="manager.plugins.uploadError">ファイルのアップロードに失敗しました。</message>
 	<message key="manager.plugins.copyError">プラグインは正常にコピーされませんでした。</message>
-	<message key="manager.plugins.installDescription">このフォームから新しいプラグインをアップロードあるいはインストールすることができます。プラグインファイルがプラグインファイルが 「.tar.gz」で圧縮されているか確認してください。</message>
 	<message key="manager.plugins.upgradeDescription">このフォームからプラグインをアップグレードできます。プラグインファイルが 「.tar.gz」で圧縮されているか確認してください。</message>
 	<message key="manager.plugins.uploadPluginDir">プラグインファイルを選択</message>
 	<message key="manager.plugins.deleteConfirm">本当にシステムからプラグインを削除してもよろしいですか？</message>

@@ -561,8 +561,6 @@
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.forms">فرم ها</message>
 	<message key="manager.people.showNoRole">کاربران فاقد رل را نشان بده</message>
-	<message key="manager.plugins.install">نصب یک پلاگین جدید</message>
-	<message key="manager.plugins.installDescription">با این فرم میتوانید یک پلاگین جدید را آپلود و نصب کنید. ابتدا مطمئن شوید که نوع فشرده سازی آن بصورت فایل .tar.gz میباشد.</message>
 	<message key="manager.plugins.upgrade">بروز رسانی پلاگین</message>
 	<message key="manager.plugins.upgradeDescription">با این فرم میتوانید یک پلاگین را بروزرسانی کنید.  ابتدا مطمئن شوید که نوع فشرده سازی آن بصورت فایل .tar.gz میباشد.</message>
 	<message key="manager.plugins.delete">حذف پلاگین</message>

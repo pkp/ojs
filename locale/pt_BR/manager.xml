@@ -560,8 +560,6 @@ Exemplo:
 	<message key="manager.language.ui">Interface do usuário</message>
 	<message key="manager.language.forms">Formulários</message>
 	<message key="manager.people.showNoRole">Exibir usuários sem papéis</message>
-	<message key="manager.plugins.install">Instalar um novo plugin</message>
-	<message key="manager.plugins.installDescription">Este formulário permite enviar e instalar um novo plugin. Certifique-se de que o arquivo esteja comprimido no formato tar.gz.</message>
 	<message key="manager.plugins.upgrade">Atualizar</message>
 	<message key="manager.plugins.upgradeDescription">Este formulário permite atualizar um plugin. Certifique-se de que o plugin está comprimido como um arquivo tar.gz.</message>
 	<message key="manager.plugins.delete">Excluir</message>

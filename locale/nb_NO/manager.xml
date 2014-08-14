@@ -553,8 +553,6 @@
 	<message key="manager.language.ui">Brukergrensesnitt</message>
 	<message key="manager.language.forms">Skjema</message>
 	<message key="manager.people.showNoRole">Vis brukere som ikke har rolle</message>
-	<message key="manager.plugins.install">Installer en ny programutvidelse</message>
-	<message key="manager.plugins.installDescription">Dette skjemaet gjør det mulig å laste opp og installere en ny programutvidelse. Forsikre deg om at programutvidelsen er komprimert som en .tar.gz file.</message>
 	<message key="manager.plugins.upgrade">Oppgrader programutvidelse</message>
 	<message key="manager.plugins.upgradeDescription">Dette skjemaet gjør det mulig oppgradere en programutvidelse. Forsikre deg om at programutvidelsen er komprimert som en .tar.gz file.</message>
 	<message key="manager.plugins.delete">Slett programutvidelse</message>

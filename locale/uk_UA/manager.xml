@@ -102,8 +102,6 @@
        <message key="manager.plugins.description">Ця сторінка дозволяє менеджеру журналу переглядати та, потенційно, змінювати встановлені модулі (plugins). Модулі системи об'єднані у категорії за їх функціональністю. Нижче наведено список категорій, усередині кожної категорії наведено набір встановлених модулів.</message>
        <message key="manager.plugins.doesNotExist">Модуль не існує</message>
        <message key="manager.plugins.fileSelectError">Будь ласка, спочатку вкажіть файл</message>
-       <message key="manager.plugins.install">Встановити новий модуль</message>
-       <message key="manager.plugins.installDescription">Ця форма дозволяє вивантажити та встановити новий модуль. Будь ласка, переконайтеся, що модуль заархівований у файл формату .tar.gz.</message>
        <message key="manager.plugins.installedVersionNewer">Модуль вже встановлений і його версія більш нова або така ж, як і вивантажена</message>
        <message key="manager.plugins.installedVersionOlder">Модуль вже встановлений і його версія більш стара або така ж, як і вивантажена</message>
        <message key="manager.plugins.installFailed">Встановлення не вдалося</message>

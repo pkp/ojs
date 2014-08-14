@@ -586,8 +586,6 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.plugins.deleteSuccess">Sletning a plugin gennemført</message>
 	<message key="manager.plugins.doesNotExist">Plugin eksisterer ikke</message>
 	<message key="manager.plugins.fileSelectError">Du skal først vælge en fil</message>
-	<message key="manager.plugins.install">Installer et nyt plugin</message>
-	<message key="manager.plugins.installDescription">Denne formular gør dig i stand til at uploade og installere et nyt plugin. Sørg for, at det pågældende plugin er komprimeret som en fil af typen .tar.gz.</message>
 	<message key="manager.plugins.installedVersionNewer">Plugin eksisterer allerede og er nyere eller lige så nyt som den installerede version</message>
 	<message key="manager.plugins.installedVersionOlder">Plugin eksisterer allerede og er ældre eller lige så gammel som den installerede version</message>
 	<message key="manager.plugins.installFailed">Installation mislykkedes</message>

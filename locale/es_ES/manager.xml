@@ -554,8 +554,6 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Tipo de suscripción creado.</message>
 	<message key="manager.language.forms">Formularios</message>
 	<message key="manager.people.showNoRole">Mostrar usuarios sin rol</message>
-	<message key="manager.plugins.install">Instalar un Nuevo Plugin</message>
-	<message key="manager.plugins.installDescription">Este formulario te permite instalar un nuevo plugin. Comprueba que el plugin está comprimido como un fichero .tar.gz.</message>
 	<message key="manager.plugins.upgrade">Plugin de Actualización</message>
 	<message key="manager.plugins.upgradeDescription">Este formulario te permite actualizar un plugin. Comprueba que el plugin está comprimido como un fichero .tar.gz.</message>
 	<message key="manager.plugins.delete">Borrar Plugin</message>

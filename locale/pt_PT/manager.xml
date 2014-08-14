@@ -559,8 +559,6 @@
 	<message key="manager.language.ui">Interface do utilizador</message>
 	<message key="manager.language.forms">Formulários</message>
 	<message key="manager.people.showNoRole">Exibir utilizadores sem papéis</message>
-	<message key="manager.plugins.install">Instalar um novo Plugin</message>
-	<message key="manager.plugins.installDescription">Este formulário permite enviar e instalar um novo plugin. Certifique-se de que o plugin está comprimido como um ficheiro tar.gz.</message>
 	<message key="manager.plugins.upgrade">Actualizar Plugin</message>
 	<message key="manager.plugins.upgradeDescription">Este formulário permite actualizar um plugin. Certifique-se de que o plugin está comprimido como um ficheiro tar.gz.</message>
 	<message key="manager.plugins.delete">Eliminar Plugin</message>

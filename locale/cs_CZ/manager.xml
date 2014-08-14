@@ -555,7 +555,6 @@
 	<message key="manager.subscriptionTypes.name">Typ předplatného</message>
 	<message key="manager.subscriptionTypes.noneCreated">Nebyly vytvořeny žádné typy předplatného.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Typ předplatného byl úspěšně vytvořen.</message>
-	<message key="manager.plugins.install">Instalovat nový plugin</message>
 	<message key="manager.plugins.upgrade">Opgradovat plugin</message>
 	<message key="manager.plugins.delete">Smazat plugin</message>
 	<message key="manager.plugins.uploadPluginDir">Zvolte soubor pluginu</message>
@@ -604,7 +603,6 @@
 	<message key="manager.subscriptions.institutionName">Název instituce</message>
 	<message key="manager.subscriptionTypes.form.nonExpiring.expiresAfter">Vyprší po</message>
 	<message key="manager.subscriptionTypes.form.subscriptions">Předplatné</message>
-	<message key="manager.plugins.installDescription">Tento formulář vám umožňuje nahrát a nainstalovat nový plugin. Ujistěte se prosím, že plugin je zkomprimovaný jako .tar.gz soubor.</message>
 	<message key="manager.plugins.upgradeDescription">Tento formulář vám umožňuje aktualizovat plugin. Ujistěte se prosím, že plugin je zkomprimovaný jako .tar.gz soubor.</message>
 	<message key="manager.plugins.deleteDescription">Kliknutím na smazat smažete plugin ze systému souborů serveru.</message>
 	<message key="manager.plugins.deleteConfirm">Jste si jistý, že chete odstranit tento plugin ze systému?</message>

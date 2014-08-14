@@ -90,8 +90,6 @@
 	<message key="manager.people.roleEnrollment">{$role}注册</message>
 	<message key="manager.people.syncUserDescription">角色同步化会在这份期刊中指派「在特定期刊中已经有特定角色的用户」同样的角色。这个功能允许一组常见的用户（例如，审稿人）在期刊之间进行同步化。</message>
 	<message key="manager.plugins.description">此页面允许期刊管理员审查和配置当前已经安装的插件。插件根据他们的功能被分成不同的类别。类别以及插件当前的配置在下面被列出：</message>
-	<message key="manager.plugins.install">安装一个新的插件</message>
-	<message key="manager.plugins.installDescription">该表格允许上传并安装一个新插件。请确保该插件是一个压缩的.tar.gz文件。</message>
 	<message key="manager.plugins.upgrade">升级插件</message>
 	<message key="manager.plugins.upgradeDescription">该表格允许升级一个插件，请确保该插件是一个压缩的.tar.gz文件。</message>
 	<message key="manager.plugins.delete">删除插件</message>

@@ -560,8 +560,6 @@
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirmar borrado do formulario de revisión non publicado...</message>
 	<message key="manager.language.forms">Formularios</message>
 	<message key="manager.people.showNoRole">Mostrar usuarios sen rol</message>
-	<message key="manager.plugins.install">Instalar un Novo Plugin</message>
-	<message key="manager.plugins.installDescription">Este formulario permíteche instalar un nuovo plugin. Comproba que o plugin está comprimido como un ficheiro .tar.gz.</message>
 	<message key="manager.plugins.upgrade">Plugin de Actualización</message>
 	<message key="manager.plugins.upgradeDescription">Este formulario permíteche actualizar un plugin. Comproba que o plugin está comprimido como un ficheiro .tar.gz.</message>
 	<message key="manager.plugins.delete">Borrar Plugin</message>
