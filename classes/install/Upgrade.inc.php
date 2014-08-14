@@ -1140,25 +1140,25 @@ class Upgrade extends Installer {
 		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_ARTICLE);
 		$tempStatsDao->update(
 			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, month, country_id, region, city, submission_id, metric, context_id, issue_id)
-			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, ' . $monthSql . ', tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.journal_id, pa.issue_id
+			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, ' . $monthSql . ', tr.country_id, tr.region, tr.city, tr.assoc_id, COUNT(tr.metric), a.journal_id, pa.issue_id
 			FROM usage_stats_temporary_records AS tr
-			LEFT JOIN articles AS a ON a.article_id = tr.assoc_id
-			LEFT JOIN published_articles AS pa ON pa.article_id = tr.assoc_id
-			WHERE tr.load_id = ? AND tr.assoc_type = ? AND a.journal_id IS NOT NULL AND pa.issue_id IS NOT NULL
-			GROUP BY tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.file_type, tr.load_id', $params
+			JOIN articles AS a ON a.article_id = tr.assoc_id
+			JOIN published_articles AS pa ON pa.article_id = tr.assoc_id
+			WHERE tr.load_id = ? AND tr.assoc_type = ?
+			GROUP BY tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.file_type, tr.load_id, a.journal_id, pa.issue_id', $params
 		);
 
 		// Galleys.
 		$params = array(OJS_METRIC_TYPE_TIMED_VIEWS, $loadId, ASSOC_TYPE_GALLEY);
 		$tempStatsDao->update(
 			'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, month, country_id, region, city, submission_id, metric, context_id, issue_id, file_type)
-			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, ' . $monthSql . ', tr.country_id, tr.region, tr.city, ag.article_id, count(tr.metric), a.journal_id, pa.issue_id, tr.file_type
+			SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, ' . $monthSql . ', tr.country_id, tr.region, tr.city, ag.article_id, COUNT(tr.metric), a.journal_id, pa.issue_id, tr.file_type
 			FROM usage_stats_temporary_records AS tr
-			LEFT JOIN article_galleys AS ag ON ag.galley_id = tr.assoc_id
-			LEFT JOIN articles AS a ON a.article_id = ag.article_id
-			LEFT JOIN published_articles AS pa ON pa.article_id = ag.article_id
-			WHERE tr.load_id = ? AND tr.assoc_type = ? AND a.journal_id IS NOT NULL AND pa.issue_id IS NOT NULL
-			GROUP BY tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.file_type, tr.load_id', $params
+			JOIN article_galleys AS ag ON ag.galley_id = tr.assoc_id
+			JOIN articles AS a ON a.article_id = ag.article_id
+			JOIN published_articles AS pa ON pa.article_id = ag.article_id
+			WHERE tr.load_id = ? AND tr.assoc_type = ?
+			GROUP BY tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.file_type, tr.load_id, ag.article_id, a.journal_id, pa.issue_id', $params
 		);
 
 		$tempStatsDao->deleteByLoadId($loadId);
