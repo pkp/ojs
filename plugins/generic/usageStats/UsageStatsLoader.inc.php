@@ -68,49 +68,51 @@ class UsageStatsLoader extends FileLoader {
 
 		parent::FileLoader($args);
 
-		// Load the metric type constant.
-		PluginRegistry::loadCategory('reports');
+		if ($plugin->getEnabled()) {
+			// Load the metric type constant.
+			PluginRegistry::loadCategory('reports');
 
-		$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
-		$this->_geoLocationTool =& $geoLocationTool;
+			$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
+			$this->_geoLocationTool =& $geoLocationTool;
 
-		$plugin->import('UsageStatsTemporaryRecordDAO');
-		$statsDao = new UsageStatsTemporaryRecordDAO();
-		DAORegistry::registerDAO('UsageStatsTemporaryRecordDAO', $statsDao);
+			$plugin->import('UsageStatsTemporaryRecordDAO');
+			$statsDao = new UsageStatsTemporaryRecordDAO();
+			DAORegistry::registerDAO('UsageStatsTemporaryRecordDAO', $statsDao);
 
-		$this->_counterRobotsListFile = $this->_getCounterRobotListFile();
+			$this->_counterRobotsListFile = $this->_getCounterRobotListFile();
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journalFactory =& $journalDao->getJournals(); /* @var $journalFactory DAOResultFactory */
-		$journalsByPath = array();
-		while ($journal =& $journalFactory->next()) { /* @var $journal Journal */
-			$journalsByPath[$journal->getPath()] =& $journal;
-		}
-		$this->_journalsByPath = $journalsByPath;
+			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journalFactory =& $journalDao->getJournals(); /* @var $journalFactory DAOResultFactory */
+			$journalsByPath = array();
+			while ($journal =& $journalFactory->next()) { /* @var $journal Journal */
+				$journalsByPath[$journal->getPath()] =& $journal;
+			}
+			$this->_journalsByPath = $journalsByPath;
 
-		$this->checkFolderStructure(true);
+			$this->checkFolderStructure(true);
 
-		if ($this->_autoStage) {
-			// Copy all log files to stage directory, except the current day one.
-			$fileMgr = new FileManager();
-			$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
-			$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
+			if ($this->_autoStage) {
+				// Copy all log files to stage directory, except the current day one.
+				$fileMgr = new FileManager();
+				$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
+				$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
 
-			if (is_array($logsDirFiles) && is_array($processingDirFiles)) {
-				// It's possible that the processing directory have files that
-				// were being processed but the php process was stopped before
-				// finishing the processing. Just copy them to the stage directory too.
-				$dirFiles = array_merge($logsDirFiles, $processingDirFiles);
-				foreach ($dirFiles as $filePath) {
-					// Make sure it's a file.
-					if ($fileMgr->fileExists($filePath)) {
-						// Avoid current day file.
-						$filename = pathinfo($filePath, PATHINFO_BASENAME);
-						$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
-						if ($filename == $currentDayFilename) continue;
+				if (is_array($logsDirFiles) && is_array($processingDirFiles)) {
+					// It's possible that the processing directory have files that
+					// were being processed but the php process was stopped before
+					// finishing the processing. Just copy them to the stage directory too.
+					$dirFiles = array_merge($logsDirFiles, $processingDirFiles);
+					foreach ($dirFiles as $filePath) {
+						// Make sure it's a file.
+						if ($fileMgr->fileExists($filePath)) {
+							// Avoid current day file.
+							$filename = pathinfo($filePath, PATHINFO_BASENAME);
+							$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
+							if ($filename == $currentDayFilename) continue;
 
-						if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
-							$fileMgr->deleteFile($filePath);
+							if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
+								$fileMgr->deleteFile($filePath);
+							}
 						}
 					}
 				}
@@ -123,6 +125,19 @@ class UsageStatsLoader extends FileLoader {
 	 */
 	function getName() {
 		return __('plugins.generic.usageStats.usageStatsLoaderName');
+	}
+
+	/**
+	 * @see FileLoader::executeActions()
+	 */
+	function executeActions() {
+		$plugin =& $this->_plugin;
+		if (!$plugin->getEnabled()) {
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.openFileFailed'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+			return true;
+		}
+
+		parent::executeActions();
 	}
 
 	/**
