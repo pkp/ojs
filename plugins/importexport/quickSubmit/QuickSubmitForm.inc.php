@@ -242,7 +242,7 @@ class QuickSubmitForm extends Form {
 
 		// Set some default values so the ArticleDAO doesn't complain when adding this article
 		$article->setDateSubmitted(Core::getCurrentDate());
-		$article->setStatus(STATUS_PUBLISHED);
+		$article->setStatus($this->getData('destination') == 'queue' ? STATUS_QUEUED : STATUS_PUBLISHED);
 		$article->setSubmissionProgress(0);
 		$article->stampStatusModified();
 		$article->setCurrentRound(1);
@@ -487,6 +487,11 @@ class QuickSubmitForm extends Form {
 		}
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);
+		// Call initialize permissions again to check if copyright year needs to be initialized.
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+		$article->initializePermissions();
+		$articleDao->updateLocaleFields($article);
 	}
 }
 

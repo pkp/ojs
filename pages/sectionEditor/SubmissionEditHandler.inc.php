@@ -2565,12 +2565,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 				$publishedArticleDao->insertPublishedArticle($publishedArticle);
 
-				// Call initialize permissions again to check if copyright year needs to be initialized.
-				$articleDao =& DAORegistry::getDAO('ArticleDAO');
-				$article = $articleDao->getArticle($articleId);
-				$article->initializePermissions();
-				$articleDao->updateLocaleFields($article);
-
 				// If we're using custom section ordering, and if this is the first
 				// article published in a section, make sure we enter a custom ordering
 				// for it. (Default at the end of the list.)
@@ -2613,6 +2607,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);
+
+		// Call initialize permissions again to check if copyright year needs to be initialized.
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+		$article->initializePermissions();
+		$articleDao->updateLocaleFields($article);
+
 		$articleSearchIndex->articleChangesFinished();
 
 		$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
