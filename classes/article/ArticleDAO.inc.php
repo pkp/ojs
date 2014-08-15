@@ -721,6 +721,7 @@ class ArticleDAO extends DAO {
 					(int) $article->getId()
 				)
 			);
+			$article = $this->getArticle($article->getId());
 			$article->initializePermissions();
 			$this->updateLocaleFields($article);
 			unset($article);

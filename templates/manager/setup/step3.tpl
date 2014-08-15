@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="manager.setup.guidingSubmissions"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form id="setupForm" method="post" action="{url op="saveSetup" path="3"}">
+<form name="setupForm" id="setupForm" method="post" action="{url op="saveSetup" path="3"}">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
@@ -151,7 +151,7 @@
 </table>
 
 <p>{translate key="manager.setup.resetPermissions.description"}</p>
-<p><input type="button" value="{translate key="manager.setup.resetPermissions"}" class="button" onclick="confirmAction('{url op="resetPermissions"}', '{translate|escape:"jsparam" key="manager.setup.confirmResetLicense"}')" /></p>
+<p><input id="resetPermissionsButton" type="button" value="{translate key="manager.setup.resetPermissions"}" class="button" /></p>
 </div>
 
 <div class="separator"></div>
@@ -423,6 +423,48 @@
 				if (checkboxState !== toggleState) {
 					$metaCitationsSetupBox.toggle(300);
 				}
+			});
+		});
+		
+		function permissionsValues() {
+			perm = ':';
+			licenseNames = ["copyrightYearBasis", "copyrightHolderType"];
+			for (l = 0; l < licenseNames.length; l++) {
+				ele = document.getElementsByName(licenseNames[l]);
+				for (i = 0; i < ele.length; i++) {
+					if (ele[i].type == 'radio') {
+						if (ele[i].checked) {
+							perm += ele[i].value + ':';
+							break;
+						}
+					} else {
+						perm += ele[i].value + ':';
+					}
+				}
+			};
+			licenseIds = ["copyrightHolderOther", "licenseURL"];
+			for (l = 0; l < licenseIds.length; l++) {
+				ele = document.getElementById(licenseIds[l]);
+				if (ele) {
+					perm += ele.value + ':';
+				}
+			}
+			return perm;
+		}
+		var resetValues;
+		$(document).ready( function () {
+			resetValues = permissionsValues();
+			$('#resetPermissionsButton').click( function ( event ) {
+				if (resetValues == permissionsValues()) {
+					{/literal}
+					confirmAction('{url op="resetPermissions"}', '{translate|escape:"jsparam" key="manager.setup.confirmResetLicense"}');
+					{literal}
+				} else {
+					{/literal}
+					window.alert('{translate|escape:"jsparam" key="manager.setup.confirmResetLicenseChanged"}')
+					{literal}
+				}
+				event.preventDefault();
 			});
 		});
 	</script>{/literal}

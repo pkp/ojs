@@ -181,7 +181,7 @@ class Article extends Submission {
 				$fieldValue = $this->getCopyrightHolder($locale);
 				break;
 			case PERMISSIONS_FIELD_COPYRIGHT_YEAR:
-				$fieldValue = $this->getCopyrightYear($locale);
+				$fieldValue = $this->getCopyrightYear();
 				break;
 			default: assert(false);
 		}
@@ -193,42 +193,51 @@ class Article extends Submission {
 		// Otherwise, get the permissions info from journal settings.
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal =& $journalDao->getById($this->getJournalId());
-		$licenseUrl = $journal->getSetting('licenseURL');
-		switch($journal->getSetting('copyrightHolderType')) {
-			case 'author':
-				$copyrightHolder = array($journal->getPrimaryLocale() => $this->getAuthorString());
+		switch ($field) {
+			case PERMISSIONS_FIELD_LICENSE_URL:
+				$licenseUrl = $journal->getSetting('licenseURL');
 				break;
-			case 'other':
-				$copyrightHolder = $journal->getSetting('copyrightHolderOther');
+			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
+				switch($journal->getSetting('copyrightHolderType')) {
+					case 'author':
+						$copyrightHolder = array($journal->getPrimaryLocale() => $this->getAuthorString());
+						break;
+					case 'other':
+						$copyrightHolder = $journal->getSetting('copyrightHolderOther');
+						break;
+					case 'journal':
+					default:
+						$copyrightHolder = $journal->getTitle(null);
+						break;
+				}
 				break;
-			case 'journal':
-			default:
-				$copyrightHolder = $journal->getTitle(null);
-				break;
-		}
-		// Default copyright year to current year
-		$copyrightYear = date('Y');
-		// Override based on journal settings
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($this->getId());
-		if ($publishedArticle) {
-			switch($journal->getSetting('copyrightYearBasis')) {
-				case 'article':
-					// override to the article's year if published as you go
-					$copyrightYear = date('Y', strtotime($publishedArticle->getDatePublished()));
-					break;
-				case 'issue':
-					if ($publishedArticle->getIssueId()) {
-						// override to the issue's year if published as issue-based
-						$issueDao =& DAORegistry::getDAO('IssueDAO');
-						$issue = $issueDao->getIssueByArticleId($this->getId());
-						if ($issue && $issue->getDatePublished()) {
-							$copyrightYear = date('Y', strtotime($issue->getDatePublished()));
-						}
+			case PERMISSIONS_FIELD_COPYRIGHT_YEAR:
+				// Default copyright year to current year
+				$copyrightYear = date('Y');
+				// Override based on journal settings
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($this->getId());
+				if ($publishedArticle) {
+					switch($journal->getSetting('copyrightYearBasis')) {
+						case 'article':
+							// override to the article's year if published as you go
+							$copyrightYear = date('Y', strtotime($publishedArticle->getDatePublished()));
+							break;
+						case 'issue':
+							if ($publishedArticle->getIssueId()) {
+								// override to the issue's year if published as issue-based
+								$issueDao =& DAORegistry::getDAO('IssueDAO');
+								$issue = $issueDao->getIssueByArticleId($this->getId());
+								if ($issue && $issue->getDatePublished()) {
+									$copyrightYear = date('Y', strtotime($issue->getDatePublished()));
+								}
+							}
+							break;
+						default: assert(false);
 					}
-					break;
-				default: assert(false);
-			}
+				}
+				break;
+			default: assert(false);
 		}
 
 		switch ($field) {
