@@ -39,6 +39,9 @@ class DataversePackager extends PackagerAtomTwoStep {
 	
 	/** @var string pubId plugin */
 	var $_pubIdPlugin;
+	
+	/** @var string plain-text citation */
+	var $_citation;
 
 	/**
 	 * Constructor.
@@ -119,7 +122,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 				}
 			}
 			// If no pubIdP plugin selected or enabled, provide OJS URL
-			if(!$pubIdAttributes['holdingsURI']) {
+			if(!array_key_exists('holdingsURI', $pubIdAttributes)) {
 				$pubIdAttributes['holdingsURI'] = Request::url($journal->getPath(), 'article', 'view', array($article->getId()));
 			}
 		}
@@ -127,7 +130,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 		// Journal metadata
 		$this->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
 		$this->addMetadata('rights', $journal->getLocalizedSetting('copyrightNotice'));
-//		$this->addMetadata('isReferencedBy', $this->getCitation($article), $pubIdAttributes);
+		$this->addMetadata('isReferencedBy', $this->_citation, $pubIdAttributes);
 		
 		// Suppfile metadata
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
@@ -198,7 +201,14 @@ class DataversePackager extends PackagerAtomTwoStep {
 	function setPubIdPlugin($pubIdPlugin) {
 		$this->_pubIdPlugin = $pubIdPlugin;
 	}
-		
+	
+	/**
+	 * Set citation to include in entry metadata.
+	 * @param $citation string Plain-text citation
+	 */
+	function setCitation($citation) {
+		$this->_citation = $citation;
+	}
 }
 
 ?>
