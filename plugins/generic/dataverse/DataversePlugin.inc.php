@@ -877,18 +877,17 @@ class DataversePlugin extends GenericPlugin {
 				$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());	 
 				if (!isset($study)) {
 					$study = $this->createStudy($article);
-					$notificationManager->createTrivialNotification($user->getId(), isset($study) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED : NOTIFICATION_TYPE_ERROR);					 
 				}
-				assert(isset($study));
-				
-				// File already in Dataverse?
-				$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($form->suppFile->getId(), $article->getId());			
-				if (!isset($dvFile)) {
-					$dvFile = $this->addFileToStudy($study, $form->suppFile);
+				if ($study) {
+					// File already in Dataverse?
+					$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($form->suppFile->getId(), $article->getId());			
+					if (!isset($dvFile)) {
+						$dvFile = $this->addFileToStudy($study, $form->suppFile);
+					}
+					// Update study with suppfile metadata 
+					$this->replaceStudyMetadata($article, $study);
+					$notificationManager->createTrivialNotification($user->getId(), isset($dvFile) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_ERROR);
 				}
-				// Update study with suppfile metadata 
-				$this->replaceStudyMetadata($article, $study);
-				$notificationManager->createTrivialNotification($user->getId(), isset($dvFile) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
 				break;
 		}
 		return false;
