@@ -36,6 +36,9 @@ class DataversePackager extends PackagerAtomTwoStep {
 	
 	/** @var string package content type */
 	var $_contentType = 'application/zip';
+	
+	/** @var string pubId plugin */
+	var $_pubIdPlugin;
 
 	/**
 	 * Constructor.
@@ -107,14 +110,16 @@ class DataversePackager extends PackagerAtomTwoStep {
 			$this->addMetadata('date', strftime('%Y-%m-%d', strtotime($datePublished)));
 			
 			// isReferencedBy: add persistent URL to citation using specified pubid plugin
-			$pubIdPlugin =& PluginRegistry::getPlugin('pubIds', $this->getSetting($article->getJournalId(), 'pubIdPlugin'));
-			if ($pubIdPlugin && $pubIdPlugin->getEnabled()) {
-				$pubIdAttributes['agency'] = $pubIdPlugin->getDisplayName();
-				$pubIdAttributes['IDNo'] = $article->getPubId($pubIdPlugin->getPubIdType());
-				$pubIdAttributes['holdingsURI'] = $pubIdPlugin->getResolvingUrl($article->getJournalId(), $pubIdAttributes['IDNo']);
+			if($this->_pubIdPlugin) {
+				$pubIdPlugin =& PluginRegistry::getPlugin('pubIds', $this->_pubIdPlugin);
+				if ($pubIdPlugin && $pubIdPlugin->getEnabled()) {
+					$pubIdAttributes['agency'] = $pubIdPlugin->getDisplayName();
+					$pubIdAttributes['IDNo'] = $article->getPubId($pubIdPlugin->getPubIdType());
+					$pubIdAttributes['holdingsURI'] = $pubIdPlugin->getResolvingUrl($article->getJournalId(), $pubIdAttributes['IDNo']);
+				}
 			}
-			else {
-				// If no pub id plugin selected, use OJS URL
+			// If no pubIdP plugin selected or enabled, provide OJS URL
+			if(!$pubIdAttributes['holdingsURI']) {
 				$pubIdAttributes['holdingsURI'] = Request::url($journal->getPath(), 'article', 'view', array($article->getId()));
 			}
 		}
@@ -122,7 +127,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 		// Journal metadata
 		$this->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
 		$this->addMetadata('rights', $journal->getLocalizedSetting('copyrightNotice'));
-		$this->addMetadata('isReferencedBy', $this->getCitation($article), $pubIdAttributes);
+//		$this->addMetadata('isReferencedBy', $this->getCitation($article), $pubIdAttributes);
 		
 		// Suppfile metadata
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
@@ -184,6 +189,14 @@ class DataversePackager extends PackagerAtomTwoStep {
 	 */
 	function getContentType() {
 		return $this->_contentType;
+	}
+	
+	/**
+	 * Set pubId plugin used to add persistent URI to entry metadata.
+	 * @param $pubIdPlugin string PubId plugin name
+	 */
+	function setPubIdPlugin($pubIdPlugin) {
+		$this->_pubIdPlugin = $pubIdPlugin;
 	}
 		
 }

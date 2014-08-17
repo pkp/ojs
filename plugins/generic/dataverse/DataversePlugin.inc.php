@@ -1117,6 +1117,7 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function createStudy($article) {
 		$packager = new DataversePackager();
+		$packager->setPubIdPlugin($this->getSetting($article->getJournalId(), 'pubIdPlugin'));
 		$packager->createAtomEntry($article);
 
 		// Create a new Dataverse study
@@ -1163,6 +1164,7 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function replaceStudyMetadata($article, $study) {
 		$packager = new DataversePackager();
+		$packager->setPubIdPlugin($this->getSetting($article->getJournalId(), 'pubIdPlugin'));
 		$packager->createAtomEntry($article);
 		
 		$client = $this->_initSwordClient();
