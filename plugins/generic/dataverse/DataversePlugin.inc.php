@@ -922,7 +922,6 @@ class DataversePlugin extends GenericPlugin {
 		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
 		$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($suppFileId, $submissionId ? $submissionId : '');
 		if (isset($dvFile)) {
-			/** @fixme return boolean? */
 			$this->deleteFile($dvFile);
 
 			// Replace cataloguing information: may have included metadata from deleted file
@@ -932,7 +931,6 @@ class DataversePlugin extends GenericPlugin {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$journal =& Request::getJournal();
 			$article =& $articleDao->getArticle($study->getSubmissionId(), $journal->getId());
-			/** @fixme notify? */
 			$metdataReplaced = $this->replaceStudyMetadata($article, $study);
 		}
 		return false;
