@@ -120,7 +120,17 @@ class WorkflowHandler extends PKPWorkflowHandler {
 					}
 				}
 
-				// no errors, close the modal.
+				// no errors, clear all notifications for this submission which may have been created during the submission process and close the modal.
+				$context = $request->getContext();
+				$notificationDao = DAORegistry::getDAO('NotificationDAO');
+				$notificationFactory = $notificationDao->deleteByAssoc(
+					ASSOC_TYPE_SUBMISSION,
+					$submission->getId(),
+					null,
+					null,
+					$context->getId()
+				);
+
 				$json = new JSONMessage(true);
 				return $json->getString();
 			} else {
