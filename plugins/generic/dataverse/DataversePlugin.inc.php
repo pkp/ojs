@@ -1027,17 +1027,27 @@ class DataversePlugin extends GenericPlugin {
 	 * @see DAO::update()
 	 */
 	function handleArticleUpdate($hookName, $args) {
-		$journal =& Request::getJournal();
 		$params =& $args[1];
 		$articleId = $params[count($params)-1];
 		$status = $params[6];
 		
-		if ($this->getSetting($journal->getId(), 'studyRelease') == DATAVERSE_PLUGIN_RELEASE_ARTICLE_PUBLISHED) {
-			// See if study exists for submission
+		// If plugin is configured to release studies when accepted for publication,
+		// editorial actions during review may have created draft versions of study.
+		// Release all studies on article publication since it's the last opportunity
+		// to do so.
+		if ($status == STATUS_PUBLISHED) {
 			$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
 			$study =& $dvStudyDao->getStudyBySubmissionId($articleId);
-			if (isset($study) && $status == STATUS_PUBLISHED) { 
-				$this->releaseStudy($study); 
+			if (isset($study)) {
+				// We may be updating a published article
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');			
+				$article =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+				if ($article && $article->getStatus() != STATUS_PUBLISHED) {
+					// Article is about to be published:  update citation in study metadata
+					$article->setStatus(STATUS_PUBLISHED);
+					$this->replaceStudyMetadata($article, $study);
+					$this->releaseStudy($study);
+				}
 			}
 		}
 		return false;
