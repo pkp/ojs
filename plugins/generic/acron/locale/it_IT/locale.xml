@@ -14,9 +14,10 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.acron.name">Plugin Acron</message>
-	<message key="plugins.generic.acron.description">Questo plugin cerca di ridurre la dipendenza di OCS dagli strumenti di schedulazione periodica come 'cron.'</message>
+	<message key="plugins.generic.acron.description">Questo plugin cerca di ridurre la dipendenza di OJS dagli strumenti di schedulazione periodica come 'crontab.'</message>
 
-	<message key="plugins.generic.acron.reload">Ricarica i compiti programmati</message>
+	<message key="plugins.generic.acron.reload">Ricarica le attività programmate</message>
 	<message key="plugins.generic.acron.enabled">Il plugin Acron è stato abilitato.</message>
 	<message key="plugins.generic.acron.disabled">Il plugin Acron è stato disabilitato.</message>
+	<message key="plugins.generic.acron.reloadedCronTab">Il crontab è stato ricaricato.</message>
 </locale>

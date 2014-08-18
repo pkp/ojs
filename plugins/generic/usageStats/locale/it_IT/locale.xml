@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="it_IT" full_name="Italian">
+	<message key="plugins.generic.usageStats.settings.logging">Opzioni log</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Crea file di log</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Attivando questa opzione, il plugin creerà dei log degli accessi nella cartella dei file. Questi file verranno utilizzati per estrarre i dati delle statistiche d'uso. Se non vuoi creare ulteriori file, lascia questa opzione disabilitata e usa i log di accesso del tuo server.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Usa espressioni regolari (ReGex) per esaminare i log</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Le regex utilizzate di default possono analizzare i log di accesso di apache in formato combninato e anche i file di log del plugin. Se i tuoi log d'accesso sono in formato diverso, devi utilizzare un'espressione regolare capace di analizzarli e di restituire i valori attesi. vedi UsageStatsLoader::_getDataFromLogEntry() per ulteriori informazioni.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Configurazioni del plugin salvate</message>
+	
+	<message key="plugins.generic.usageStats.openFileFailed">Il file {$file} non può essere aperto ed è stato rifiutato.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">La riga {$lineNumber} del file {$file} non è valida e il file è stato rifiutato.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">La riga {$lineNumber} del file {$file} contiene una URL da cui il sistema non riesce a rimuovere la baseurl. Ciò generalmente si verifica quando le configurazioni della baseurl nel file config.inc.php file contengono parametri che, sono uguali a uno di quegli altri. Vedi Core::_checkBaseUrl() per comprendere meglio il problema. Il file è stato rifiutato.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Impossibile caricare i dati estratti dal file {$file}. Si è verificato un errore: {$error}. Il file è stato riportato allo stato precedente.</message>
+	<message key="plugins.generic.usageStats.displayName">Statistiche d'uso</message>
+	<message key="plugins.generic.usageStats.description">Presenta statistiche d'uso dei dati. Può utilizzare i log di accesso al server per produrre le statistiche.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">Report delle statistiche d'uso</message>
+	<message key="plugins.reports.usageStats.report.description">Report delle statistiche OJS (compatibili COUNTER)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Statistiche OJS (compatibili COUNTER)</message>
+</locale>
