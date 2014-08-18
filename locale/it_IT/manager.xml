@@ -440,7 +440,17 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.useTextTitle">Testo del titolo</message>
 	<message key="manager.setup.volumePerYear">Volumi per anno</message>
 	<message key="manager.statistics.reports">Generatore di report</message>
+	<message key="manager.statistics.reports.aggregationColumns">Aggrega le statistiche per:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Modello di report di default</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Download degli articoli</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Viste delle pagine degli abstract</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Viste degli abstract e download degli articoli</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Download dei file dei fascicoli</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Viste della pagina del sommario dei fascicoli</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Viste dei sommari e download dei fascicoli</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Viste della home page della rivista</message>
 	<message key="manager.statistics.reports.description">OJS genera dei report che tracciano i dettagli associati alle submission in lavorazione nella rivista considerando le submission, gli editor, i revisori, le sezioni, in un periodo di tempo indicato. I report sono generati in formato CSV (richiede un'applicazione di foglio elettronico per una migliore visualizzazione).</message>
+	<message key="manager.statistics.reports.generateReport">Genera report personalizzato</message>
 	<message key="manager.statistics.statistics">Statistiche</message>
 	<message key="manager.statistics.statistics.articleViews">Conteggi delle visite dell'articolo (solo per gli autori)</message>
 	<message key="manager.statistics.statistics.count.accept">Proposte accettate (%):</message>
