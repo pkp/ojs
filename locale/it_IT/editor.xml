@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/editor.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
-  * Copyright (c) 2000-2013 John Willinsky
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -220,4 +220,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Esiste già un identificatore della gabbia del fascicolo</message>
 	<message key="editor.issues.backToIssueGalleys">Torna alle gabbie del fascicolo</message>
 	<message key="editor.issues.confirmDeleteGalley">Sei sicuro di cancellare questa gabbia del fascicolo?</message>
+	<message key="editor.notifyUsers.allMailingList">Includi tutti gli indirizzi della lista ({$count} email)</message>
 </locale>
