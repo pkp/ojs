@@ -1146,8 +1146,10 @@ class SectionEditorSubmissionDAO extends DAO {
 			FROM	signoffs sc,
 				articles a
 				LEFT JOIN published_articles pa ON (pa.article_id = a.article_id)
+				LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			WHERE	sc.assoc_id = a.article_id AND
 				NOT (pa.date_published IS NOT NULL AND a.status <> ' . STATUS_QUEUED . ') AND
+				i.date_published IS NULL AND a.status = ' . STATUS_QUEUED . ' AND
 				a.journal_id = ? AND
 				sc.symbolic = ? AND
 				sc.assoc_type = ?
