@@ -738,4 +738,5 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.statistics.defaultMetricDescription">La rivista è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti. 
 Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca. 
 Selezionare una delle metriche configurate come predefinita.</message>
+	<message key="manager.statistics.reports.objectNotFound">Oggetto non trovato nel database.</message>
 </locale>
