@@ -32,6 +32,9 @@
 	 * COMMON - This section contains the most frequently-used words
 	 *
 	-->
+	
+	<!-- common -->
+	<message key="common.journal">Rivista</message>
 
 	<!-- Common Messages -->
 	<message key="common.openJournalSystems">Open Journal Systems</message>
@@ -280,12 +283,9 @@ Da notare che l'interfaccia OAI può essere disabilitata per l'intero sito dal f
 	<!-- Plugin Management -->
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">I plugin generici sono usati per estendere Open Journal Systems con un'ampia serie di funzionalità aggiuntive.</message>
 	<message key="plugins.categories.auth.description">I plugin per le modalità di autenticazione consentono a Open Journal Systems di delegare ad altri sistemi (es. server LDAP) il compiti di gestire l'autenticazione degli utenti.</message>
-
-
-
-
+	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
+	<message key="plugins.categories.generic.description">I plugin generici sono usati per estendere Open Journal Systems con un'ampia serie di funzionalità aggiuntive.</message>
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
@@ -873,7 +873,6 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 		<li>OJS non &egrave; in grado di modificare il file di registro della lingua, solitamente "registry/locales.xml".</li>
 	</ul>
 <p>I pacchetti di localizzazione possono essere scaricati manualmente dal <a href="http://pkp.sfu.ca">sito web del PKP</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">I plugin dei formati di citazione forniscono agli utenti vari formati con cui visualizzare le citazioni degli articoli.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta di licenza Creative Commons</h3>
 <h4>1. Proposta per riviste Open Access</h4>
 Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
@@ -960,10 +959,8 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<message key="help.searchReturnResults">Torna ai risultati della ricerca</message>
 	<message key="payment.membership.ends">Finisce</message>
 	<message key="payment.subscription.expires">Scade</message>
-	<message key="plugins.categories.implicitAuth">Plugin per l'autenticazione implicita</message>
 	<message key="submission.reviewForm">Modulo di revisione</message>
 	<message key="submission.reviewFormResponse">Risposta del modulo di revisione</message>
-	<message key="plugins.categories.implicitAuth.description">I plugins di autenticazione implicita possono autenticare gli utenti basandosi sulle intestazioni http.</message>
 	<message key="submission.layout.publicGalleyId">Identificativo pubblico</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Identificativo pubblico già esistente</message>
 	<message key="about.memberships">Membri</message>
@@ -1114,9 +1111,7 @@ Titolo dello schema di classificazione]]></message>
 	<message key="gifts.manageMyGifts">Gestisci i regali</message>
 	<message key="gifts.status.notRedeemed">Disponibile</message>
 	<message key="payment.type.gift">Regalo</message>
-	<message key="plugins.categories.pubIds">Plugin degli identificatori pubblici</message>
 	<message key="gifts.purchaseGiftIndividualSubscription">Regala un abbonamento</message>
-	<message key="plugins.categories.pubIds.description">Questi plugin permettono la gestione di identificatori pubblici</message>
 	<message key="gifts.details">Dettagli del regalo</message>
 	<message key="gifts.note">Note sul regalo</message>
 	<message key="gifts.redeemGift">Riscatta il regalo</message>
@@ -1142,5 +1137,31 @@ Titolo dello schema di classificazione]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Il tuo server consente il caricamento di file: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[C'è una nuova versione di OJS! Stai utilizzando OJS {$currentVersion}. La versione più recente è OJS {$latestVersion}. Visita <a href="http://pkp.sfu.ca/ojs_download" target="_new">la pagina dei download</a> per scaricare la versione più recente e conoscere le modalità di aggiornamento.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[C'è una nuova versione di OJS! Stai utilizzando OJS {$currentVersion}. La versione più recente è OJS {$latestVersion}. Contatta l'amministratore del sito  ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) per informarlo. Maggiori informazioni sono disponibili <a href="http://pkp.sfu.ca/ojs_download" target="_new">qui</a>.]]></message>
+	<message key="submission.permissions">Permessi</message>
+	<message key="submission.license">Licenza</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Detentore dei diritti</message>
+	<message key="submission.copyrightYear">Anno del Copyright</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Inserisci una URL valida (compreso http://).</message>
+	<message key="submission.licenseURL">URL della licenza</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribuzione - Non commerciale - Non opere derivate 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Attribuzione - Non commerciale 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Attribuzione - Non commerciale - Condividi allo stesso modo 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Attribuzione - Non opere derivate 4.0</message>
+	<message key="submission.license.cc.by4">CC Attribuzione - Non opere derivate</message>
+	<message key="submission.license.cc.by-sa4">CC Attribuzione - Condividi allo stesso modo</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="article.abstract.views">Viste:</message>
+	<message key="article.nbn">NBN</message>
+	<message key="user.profile.profileImage">Immagine del profilo</message>
+	<message key="user.orcid">Id ORCID</message>
+	<message key="user.profile.form.orcidInvalid">L'identificativo ORCID inserito non è valido.</message>
+	<message key="user.orcid.description"><![CDATA[Gli ORCID iD possono essere assegnati solo dal<a href="http://orcid.org/" target="_blank">Registro ORCID</a>. Devi adeguarti a quello standard per esprimere gli  ORCID iD, e includerela URI completa (es. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 </locale>
 

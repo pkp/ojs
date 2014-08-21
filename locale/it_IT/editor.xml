@@ -220,4 +220,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Esiste già un identificatore della gabbia del fascicolo</message>
 	<message key="editor.issues.backToIssueGalleys">Torna alle gabbie del fascicolo</message>
 	<message key="editor.issues.confirmDeleteGalley">Sei sicuro di cancellare questa gabbia del fascicolo?</message>
+	<message key="editor.notifyUsers.allMailingList">Includi tutti gli indirizzi della lista ({$count} email)</message>
 </locale>
