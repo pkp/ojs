@@ -297,7 +297,6 @@
 	<message key="manager.setup.guidingSubmissions">Pas 3. Guia per a les trameses</message>
 	<message key="manager.setup.homepageImage">Imatge per a la pàgina inicial</message>
 	<message key="manager.setup.homepageImageDescription">Afegiu una imatge o un fitxer gràfic al mig de la pàgina.</message>
-	<message key="manager.setup.includeCreativeCommons">Per a les revistes que ofereixin accés lliure immediat o diferit, incloeu una llicència de Creative Commons per a totes les obres publicades quan escaigui.</message>
 	<message key="manager.setup.information">Informació</message>
 	<message key="manager.setup.information.description">La secció «Informació» de la barra lateral inclou descripcions breus de la revista per a bibliotecaris/àries i per a autors/ores i lectors/ores potencials.</message>
 	<message key="manager.setup.information.forAuthors">Per als autors/ores</message>
@@ -565,19 +564,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mes/os després de la publicació d’un número.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Seleccioneu una durada vàlida.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">La següent política per a l’accés obert diferit es publica a la secció «Polítiques» de la pàgina «Sobre la revista».</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Utilitzeu la casella de selecció.</message>
 	<message key="manager.subscriptionPolicies.expiry">Venciment de la subscripció</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Després que venci la subscripció, podeu denegar l’accés als lectors/ores a tot el contingut que requereix subscripció, o bé podeu triar que hi continuïn tenint accés si els continguts s'han publicat abans de la data de venciment.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Venciment total</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Després que venci la subscripció, els lectors/ores ja no tenen accés als continguts que requereixin subscripció.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Venciment parcial</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Els lectors/ores no tenen accés al contingut que requereixi subscripció i que s'hagi publicat recentment, però sí que poden accedir al contingut que s'hagi publicat abans de la data de venciment de la subscripció.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notifica els subscriptors/ores per correu electrònic</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mes/os després del venciment de la subscripció.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Notifica els subscriptors/ores per correu electrònic</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">setmana/es després del venciment de la subscripció.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notifica els subscriptors/ores per correu electrònic</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mes/os abans del venciment de la subscripció.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notifica els subscriptors/ores per correu electrònic</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">setmana/es abans del venciment de la subscripció.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Recordatoris del venciment de les subscripcions</message>
