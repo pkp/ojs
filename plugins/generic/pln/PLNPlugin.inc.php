@@ -71,18 +71,17 @@ class PLNPlugin extends GenericPlugin {
 	* @see LazyLoadPlugin::register()
 	*/
 	function register($category, $path) {
+	
+		// Delete all plug-in data for a journal when the journal is deleted
+		HookRegistry::register('JournalDAO::deleteJournalById', array(&$this, 'callbackDeleteJournalById'));
 		
-		if (parent::register($category, $path)) {
+		if (parent::register($category, $path) && $this->getEnabled()) {
 		
 			$this->registerDAOs();
 			
 			$export_plugin =& PluginRegistry::loadPlugin('importexport','native');
 			
-			// Handler for public (?) access to plugin-related information
 			HookRegistry::register('LoadHandler', array(&$this, 'setupPublicHandler'));
-			
-			// Delete all plug-in data for a journal when the journal is deleted
-			HookRegistry::register('JournalDAO::deleteJournalById', array(&$this, 'callbackDeleteJournalById'));
 
 			HookRegistry::register('AcronPlugin::parseCronTab', array(&$this, 'callbackParseCronTab'));
 			
@@ -211,6 +210,25 @@ class PLNPlugin extends GenericPlugin {
 		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'xml' . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
 
 		return false;
+	}
+
+	/**
+	 * Hook registry function to provide notification messages
+	 * @param $hookName string (NotificationManager::getNotificationContents)
+	 * @param $args array ($notification, $message)
+	 * @return boolean false to continue processing subsequent hooks
+	 */
+	function callbackNotificationContents($hookName, $args) {
+		$notification =& $args[0];
+		$message =& $args[1];
+
+		$type = $notification->getType();
+		assert(isset($type));
+		switch ($type) {
+			case PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED:
+				$message = __(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
+				break;
+		}
 	}
 
 	/**
@@ -392,25 +410,6 @@ class PLNPlugin extends GenericPlugin {
 		
 		return $result['status'];
 	} 
-	
-	/**
-	 * Hook registry function to provide notification messages
-	 * @param $hookName string (NotificationManager::getNotificationContents)
-	 * @param $args array ($notification, $message)
-	 * @return boolean false to continue processing subsequent hooks
-	 */
-	function callbackNotificationContents($hookName, $args) {
-		$notification =& $args[0];
-		$message =& $args[1];
-
-		$type = $notification->getType();
-		assert(isset($type));
-		switch ($type) {
-			case PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED:
-				$message = __(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
-				break;
-		}
-	}
 
 	/**
 	 * Create notification for all journal managers
