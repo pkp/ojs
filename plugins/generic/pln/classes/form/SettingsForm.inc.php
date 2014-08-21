@@ -59,9 +59,9 @@ class SettingsForm extends Form {
 			$this->_plugin->getServiceDocument($this->_journal_id);
 		}
 
-		$this->setData('pln_network', $this->_plugin->getSetting($this->_journal_id, 'pln_network'));
-		$this->setData('object_type', $this->_plugin->getSetting($this->_journal_id, 'object_type'));
-		$this->setData('object_threshold', $this->_plugin->getSetting($this->_journal_id, 'object_threshold'));
+		//$this->setData('pln_network', $this->_plugin->getSetting($this->_journal_id, 'pln_network'));
+		//$this->setData('object_type', $this->_plugin->getSetting($this->_journal_id, 'object_type'));
+		//$this->setData('object_threshold', $this->_plugin->getSetting($this->_journal_id, 'object_threshold'));
 		$this->setData('terms_of_use', unserialize($this->_plugin->getSetting($this->_journal_id, 'terms_of_use')));
 		$this->setData('terms_of_use_agreement', unserialize($this->_plugin->getSetting($this->_journal_id, 'terms_of_use_agreement')));
 	}
@@ -71,18 +71,21 @@ class SettingsForm extends Form {
 	*/
 	function readInputData() {
 	
+		/*
 		$this->readUserVars(array(
 			'pln_network',
 			'object_type',
 			'object_threshold',
 			
 		));
-		
+		*/
 		$terms_agreed = $this->getData('terms_of_use_agreement');
-		foreach(array_keys(Request::getUserVar('terms_agreed')) as $term_agreed) {
-			$terms_agreed[$term_agreed] = TRUE;
+		if (Request::getUserVar('terms_agreed')) {
+			foreach(array_keys(Request::getUserVar('terms_agreed')) as $term_agreed) {
+				$terms_agreed[$term_agreed] = TRUE;
+			}
+			$this->setData('terms_of_use_agreement', $terms_agreed);
 		}
-		$this->setData('terms_of_use_agreement', $terms_agreed);
 	}
 	
 	/**
@@ -92,20 +95,19 @@ class SettingsForm extends Form {
 		
 		$templateMgr =& TemplateManager::getManager();
 		
-		$templateMgr->assign('pln_networks', unserialize(PLN_PLUGIN_NETWORKS));
+		//$templateMgr->assign('pln_networks', unserialize(PLN_PLUGIN_NETWORKS));
 		$templateMgr->assign('terms_of_use', unserialize($this->_plugin->getSetting($this->_journal_id, 'terms_of_use')));
-		$templateMgr->assign('supported_objects', unserialize(PLN_PLUGIN_DEPOSIT_SUPPORTED_OBJECTS));
+		//$templateMgr->assign('supported_objects', unserialize(PLN_PLUGIN_DEPOSIT_SUPPORTED_OBJECTS));
 		
 		// form fields
-		$templateMgr->assign('pln_network', $this->getData('pln_network'));
-		$templateMgr->assign('object_type', $this->getData('object_type'));
-		$templateMgr->assign('object_threshold', $this->getData('object_threshold'));
+		//$templateMgr->assign('pln_network', $this->getData('pln_network'));
+		//$templateMgr->assign('object_type', $this->getData('object_type'));
+		//$templateMgr->assign('object_threshold', $this->getData('object_threshold'));
 		$templateMgr->assign('terms_of_use_agreement', $this->getData('terms_of_use_agreement'));
 		
 		// signals indicating plugin compatibility
 		$templateMgr->assign('curl_support', function_exists('curl_init') ? __('plugins.generic.pln.settings.installed') : __('plugins.generic.pln.settings.missing'));
 		$templateMgr->assign('zip_support', extension_loaded('zlib') ? __('plugins.generic.pln.settings.installed') : __('plugins.generic.pln.settings.missing'));
-		
 		
 		parent::display();
 	}  
@@ -115,9 +117,9 @@ class SettingsForm extends Form {
 	*/
 	function execute() { 
 	
-		$this->_plugin->updateSetting($this->_journal_id, 'pln_network', $this->getData('pln_network'), 'string');
-		$this->_plugin->updateSetting($this->_journal_id, 'object_type', $this->getData('object_type'), 'string');
-		$this->_plugin->updateSetting($this->_journal_id, 'object_threshold', $this->getData('object_threshold'), 'int');
+		//$this->_plugin->updateSetting($this->_journal_id, 'pln_network', $this->getData('pln_network'), 'string');
+		//$this->_plugin->updateSetting($this->_journal_id, 'object_type', $this->getData('object_type'), 'string');
+		//$this->_plugin->updateSetting($this->_journal_id, 'object_threshold', $this->getData('object_threshold'), 'int');
 		$this->_plugin->updateSetting($this->_journal_id, 'terms_of_use_agreement', serialize($this->getData('terms_of_use_agreement')), 'object');
 	}
 	
