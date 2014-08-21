@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+ * plugins/generic/pln/schema.xml
+ *
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * PLN plugin schema in XML.
+ *
+ -->
+
+<schema version="1.3">
+	<!--
+	 *
+	 * TABLE pln_deposit_objects
+	 *
+	 -->
+	<table name="pln_deposit_objects">
+		<field name="deposit_object_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="object_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="object_type" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="deposit_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_created" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T"/>
+		<descr>PLN Deposit Objects</descr>
+		<index name="pln_deposit_object_id">
+			<col>deposit_object_id</col>
+		</index>
+	</table>
+
+	<!--
+	 *
+	 * TABLE pln_deposits
+	 *
+	 -->
+	<table name="pln_deposits">
+		<field name="deposit_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="uuid" type="C2" size="255"/>
+		<field name="package_path" type="X"/>
+		<field name="status" type="I8">
+			<default value="0"/>
+		</field>
+		<field name="date_status" type="T"/>
+		<field name="date_created" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T"/>
+		<descr>PLN Deposits</descr>
+		<index name="pln_deposit_id">
+			<col>deposit_id</col>
+		</index>
+	</table>
+  
+</schema>
