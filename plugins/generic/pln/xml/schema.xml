@@ -61,7 +61,7 @@
 		<field name="uuid" type="C2" size="255"/>
 		<field name="package_path" type="X"/>
 		<field name="status" type="I8">
-			<default value="0"/>
+			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="date_status" type="T"/>
 		<field name="date_created" type="T">
