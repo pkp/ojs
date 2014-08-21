@@ -17,7 +17,7 @@
   * configured in cron, for example).
   -->
 
-<!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
+<!DOCTYPE scheduled_tasks SYSTEM "../../../../lib/pkp/dtd/scheduledTasks.dtd">
 
 <scheduled_tasks>
 	<task class="plugins.generic.pln.classes.tasks.Depositor">
