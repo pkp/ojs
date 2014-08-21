@@ -72,18 +72,21 @@ class PLNPlugin extends GenericPlugin {
 	*/
 	function register($category, $path) {
 	
+		$suceess = parent::register($category, $path);
+	
+		$this->registerDAOs();
+	
 		// Delete all plug-in data for a journal when the journal is deleted
 		HookRegistry::register('JournalDAO::deleteJournalById', array(&$this, 'callbackDeleteJournalById'));
 		
-		if (parent::register($category, $path) && $this->getEnabled()) {
+		// Have Acron add our task to its task
+		HookRegistry::register('AcronPlugin::parseCronTab', array(&$this, 'callbackParseCronTab'));
 		
-			$this->registerDAOs();
+		if ($success && $this->getEnabled()) {
 			
 			$export_plugin =& PluginRegistry::loadPlugin('importexport','native');
 			
 			HookRegistry::register('LoadHandler', array(&$this, 'setupPublicHandler'));
-
-			HookRegistry::register('AcronPlugin::parseCronTab', array(&$this, 'callbackParseCronTab'));
 			
 			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackTemplateDisplay'));
 			
