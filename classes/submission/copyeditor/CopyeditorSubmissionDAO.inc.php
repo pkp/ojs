@@ -7,6 +7,9 @@
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
+ * With contributions from:
+ *  - 2014 Instituto Nacional de Investigacion y Tecnologia Agraria y Alimentaria
+ *
  * @class CopyeditorSubmissionDAO
  * @ingroup submission
  * @see CopyeditorSubmission
@@ -161,8 +164,22 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_ID:
-				$params[] = (int) $search;
-				$searchSql = ' AND a.article_id = ?';
+				switch ($searchMatch) {
+					case 'is':
+						$params[] = (int) $search;
+						$searchSql = ' AND a.article_id = ?';
+						break;
+					case 'contains':
+						$search = '%' . $search . '%';
+						$params[] = $search;
+						$searchSql = ' AND CONCAT(a.article_id) LIKE ?';
+						break;
+					case 'startsWith':
+						$search = $search . '%';
+						$params[] = $search;
+						$searchSql = 'AND CONCAT(a.article_id) LIKE ?';
+						break;
+				}
 				break;
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
@@ -286,36 +303,12 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @param journalId int
 	 */
 	function getSubmissionsCount($copyeditorId, $journalId) {
-		$submissionsCount = array();
-		$submissionsCount[0] = 0;
-		$submissionsCount[1] = 0;
-
-		$sql = 'SELECT
-				i.date_published,
-				a.status
-			FROM	articles a
-				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
-				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN signoffs scf ON (a.article_id = scf.assoc_id AND scf.assoc_type = ? AND scf.symbolic = ?)
-				LEFT JOIN signoffs sci ON (a.article_id = sci.assoc_id AND sci.assoc_type = ? AND sci.symbolic = ?)
-			WHERE	a.journal_id = ? AND sci.user_id = ? AND sci.date_notified IS NOT NULL';
-
-		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_FINAL', ASSOC_TYPE_ARTICLE, 'SIGNOFF_COPYEDITING_INITIAL', $journalId, $copyeditorId));
-
-		while (!$result->EOF) {
-			if ($result->fields['date_published'] == null && $result->fields['status'] == STATUS_QUEUED) {
-				$submissionsCount[0] += 1;
-			} else {
-				$submissionsCount[1] += 1;
-			}
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $submissionsCount;
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$stats = $sectionEditorSubmissionDao->getCopyeditorStatistics($journalId, $copyeditorId);
+		return array(
+			0 => isset($stats[$copyeditorId]['incomplete'])?$stats[$copyeditorId]['incomplete']:0,
+			1 => isset($stats[$copyeditorId]['complete'])?$stats[$copyeditorId]['complete']:0
+		);
 	}
 
 	/**

@@ -90,9 +90,4 @@ fi
 
 cd ..
 
-echo -n "Building doxygen documentation... "
-doxygen docs/dev/ojs2.doxygen && cd docs/dev/doxygen && tar czf ../../../${BUILD}-doxygen.tar.gz html && cd ../../..
-
-echo "Done"
-
 rm -r $TMPDIR

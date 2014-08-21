@@ -340,7 +340,8 @@ class StatisticsHandler extends ManagerHandler {
 
 	/**
 	 * Get data object title based on passed
-	 * assoc type and id.
+	 * assoc type and id. If no object, return
+	 * a default title.
 	 * @param $assocId int
 	 * @param $assocType int
 	 * @return string
@@ -350,10 +351,12 @@ class StatisticsHandler extends ManagerHandler {
 			case ASSOC_TYPE_JOURNAL:
 				$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 				$journal =& $journalDao->getJournal($assocId);
+				if (!$journal) break;
 				return $journal->getLocalizedTitle();
 			case ASSOC_TYPE_ISSUE:
 				$issueDao =& DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 				$issue =& $issueDao->getIssueById($assocId, null, true);
+				if (!$issue) break;
 				$title = $issue->getLocalizedTitle();
 				if (!$title) {
 					$title = $issue->getIssueIdentification();
@@ -361,19 +364,24 @@ class StatisticsHandler extends ManagerHandler {
 				return $title;
 			case ASSOC_TYPE_ISSUE_GALLEY:
 				$issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-				$issue =& $issueGalleyDao->getGalley($assocId);
-				return $issue->getFileName();
+				$issueGalley =& $issueGalleyDao->getGalley($assocId);
+				if (!$issueGalley) break;
+				return $issueGalley->getFileName();
 			case ASSOC_TYPE_ARTICLE:
 				$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 				$article =& $articleDao->getArticle($assocId, null, true);
+				if (!$article) break;
 				return $article->getLocalizedTitle();
 			case ASSOC_TYPE_GALLEY:
 				$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 				$galley =& $articleGalleyDao->getGalley($assocId);
+				if (!$galley) break;
 				return $galley->getFileName();
 			default:
 				assert(false);
 		}
+
+		return __('manager.statistics.reports.objectNotFound');
 	}
 }
 

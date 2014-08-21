@@ -25,6 +25,7 @@
 	<message key="admin.languages.downloadFailed">Nedladdnigen av språket misslyckades. Se felmeddelanden nedan för information.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" Språket har installerats. </message>
 	<message key="admin.languages.download">Ladda ner språk</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Ladda standard e-mallar</message>
 	<message key="admin.languages.download.cannotOpen">Kan ej öppna språkbeskrivning från PKP:s hemsida.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Kan ej lägga till nya språk till språkregistreringsfilen, ex. "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS Användardatabas</message>

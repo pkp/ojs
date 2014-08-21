@@ -170,6 +170,8 @@ class CustomBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
+		$id = 'customblock-'.preg_replace('/\W+/', '-', $this->blockName);
+		$templateMgr->assign('customBlockId', $id);
 		$templateMgr->assign('customBlockContent', $this->getSetting($journal->getId(), 'blockContent'));
 		return parent::getContents($templateMgr);
 

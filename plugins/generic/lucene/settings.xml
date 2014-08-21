@@ -97,7 +97,7 @@
 	</setting>
 	<setting type="bool">
 		<name>customRanking</name>
-		<value>true</value>
+		<value>false</value>
 	</setting>
 </plugin_settings>
 

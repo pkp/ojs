@@ -14,6 +14,8 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="admin.hostedJournals">Hosted Journals</message>
 	<message key="admin.settings.journalRedirect">Journal redirect</message>
+	<message key="admin.settings.security">Security</message>
+	<message key="admin.settings.security.plugins">Prevent journal managers to install, update or delete plugins.</message>
 	<message key="admin.settings.options">Options</message>
 	<message key="admin.settings.useAlphalist">For sites with many journals, show an alphalist on the homepage allowing for quick alphabetical navigation between journals.</message>
 	<message key="admin.settings.usePaging">For sites with many journals, break the list of journals up into several pages.</message>
@@ -38,6 +40,7 @@
 	<message key="admin.languages.downloadFailed">The locale download failed. The error message(s) below describe the failure.</message>
 	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed.</message>
 	<message key="admin.languages.download">Download Locale</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Reload Default Email Templates</message>
 	<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS User Database</message>
@@ -92,8 +95,8 @@ to the current files directory, inside the UsageStatsPlugin stage directory. Mus
 This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
 
 Usage: {$scriptName} path/to/apache/log/file.log
-Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory
-Usage (processing all files inside a directory that starts with the passed string): {$scriptName} path/to/apache/directory starts_with_string  
+Usage (processing all files of a directory): {$scriptName} path/to/apache/directory
+Usage (processing all files of a directory whose names start with the passed string): {$scriptName} path/to/apache/directory starts_with_string  
 	</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: can't create temporary folder {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: File {$filePath} don't exist or can't be accessed.</message>

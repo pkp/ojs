@@ -519,6 +519,7 @@
 	<message key="manager.statistics.reports.columns">Spalten</message>
 	<message key="manager.statistics.reports.columns.description">Definieren Sie die Spalten, die zum Erzeugen des Berichts benutzt werden. Die Spalten, die Sie auswählen legen nicht nur fest, welche Daten im Bericht angzeigt werden, sondern definieren auch die Aggregationsstufe der Statistik. Wenn Sie zum Beispiel die Spalten ID, Typ und Monat auswählen, wird der Repurt alle Aufrufe eines Objekts in einem Monat summieren und diese Information in einer Zeile anzeigen. Wenn Sie stattdessen Tag statt Monat auswählen, wird jedes Objekt eine Zeile für jeden Tag erhalten.</message>
 	<message key="manager.statistics.reports.filters">Filter</message>
+	<message key="manager.statistics.reports.objectNotFound">Objekt nicht in Datenbank gefunden</message>
 	<message key="manager.statistics.reports.objectType">Objekttyp</message>
 	<message key="manager.statistics.reports.objectId">Objekt-ID</message>
 	<message key="manager.statistics.reports.objectId.label">Definieren Sie eine oder mehrere Objekt-ID, jeweils mit Komma getrennt (z.B. 1,2,3,4,5).</message>

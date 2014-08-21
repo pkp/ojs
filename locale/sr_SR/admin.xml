@@ -26,6 +26,7 @@
 	<message key="admin.languages.downloadFailed">Preuzimanje lokalizacije nije uspelo. Poruka o greškama niže objašnjava razloge.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" lokalizacija je instalirana.</message>
 	<message key="admin.languages.download">Preuzmi lokalizaciju</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Reload podrazumevane predloške e-pošte</message>
 	<message key="admin.languages.download.cannotOpen">Ne mogu da otvorim deskriptor jezika sa PKP web sajta.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Ne mogu da dodam novu lokalizaciju u lokalni registry fajl, obično "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS korisnička baza podataka</message>

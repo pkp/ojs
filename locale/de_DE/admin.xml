@@ -38,6 +38,7 @@
 	<message key="admin.languages.downloadFailed">Das Herunterladen der Regionaleinstellung ist fehlgeschlagen. Die Fehlernachricht(en) weiter unten beschreiben den Fehler.</message>
 	<message key="admin.languages.localeInstalled">Die Regionaleinstellung "{$locale}" wurde installiert.</message>
 	<message key="admin.languages.download">Regionaleinstellung herunterladen</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Standard-E-Mail-Vorlagen neu laden</message>
 	<message key="admin.languages.download.cannotOpen">Die Sprachbeschreibung von der PKP-Webseite kann nicht geöffnet werden.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Die neue Regionaleinstellung kann nicht zu der Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") hinzugefügt werden.</message>
 	<message key="admin.auth.ojs">OJS-Benutzer/innen-Datenbank</message>
@@ -92,7 +93,8 @@ in das aktuelle Dateiverzeichnis innerhalb des Vorbereitungs-Verzeichnisses des 
 Dieses Werkzeug wird nur Dateien kopieren, die nicht bereits in den usageStats-Verzeichnissen (Vorbereitung, Bearbeitung, Archiv, zurückgewiesen) sind.
 
 Benutzung: {$scriptName} path/to/apache/log/file.log
-Benutzung (verarbeite alle Dateien in einem Verzeichnis): {$scriptName} path/to/apache/directory 
+Benutzung (verarbeite alle Dateien eines Verzeichnisses): {$scriptName} path/to/apache/directory
+Benutzung (verarbeite alle Dateien eines Verzeichnisses, die mit der übergebenen Zeichenkette beginnen): {$scriptName} path/to/apache/directory starts_with_string  
 	</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fehler: kann temporären Ordner {$tmpDir} nicht anlegen</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fehler: Datei {$filePath} existiert nicht, oder es kann nicht auf sie zugegriffen werden.</message>

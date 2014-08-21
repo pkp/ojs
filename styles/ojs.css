@@ -15,7 +15,7 @@
 /* Includes CSS files necessary for OJS to use new interface components such as Grids */
 
 /* OOCSS - http://github.com/stubbornella/oocss */
-@import url("../lib/pkp/styles/oocss/grids.css");
+@import url("../lib/pkp/styles/lib/oocss/grids.css");
 
 /* Theme */
 @import url("../lib/pkp/styles/themes/default/theme.css");

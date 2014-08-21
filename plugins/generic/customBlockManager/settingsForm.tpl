@@ -39,7 +39,7 @@
 	
 {foreach name=blocks from=$blocks key=blockIndex item=block}
 <tr valign="top">
-	<td width="20%" class="value" align="left"><input type="text" class="textField" name="blocks[{$blockIndex|escape}]" id="blocks-{$blockIndex|escape}" value="{$block}" size="20" maxlength="40" /></td>
+	<td width="20%" class="value" align="left"><input type="text" class="textField" name="blocks[{$blockIndex|escape}]" id="blocks-{$blockIndex|escape}" value="{$block|escape}" size="20" maxlength="40" /></td>
 	<td  align="left"><input type="submit" name="delBlock[{$blockIndex|escape}]" value="{translate key="plugins.generic.customBlockManager.delete"}" class="button" /></td>
 </tr>
 <tr>

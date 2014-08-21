@@ -67,16 +67,12 @@ class TimedViewReportForm extends Form {
 
 	/**
 	 * Save subscription.
+	 * @param $request Request
 	 */
-	function execute() {
-		$journal =& Request::getJournal();
+	function execute(&$request) {
+		$router =& $request->getRouter();
+		$journal =& $router->getContext($request);
 		$journalId = $journal->getId();
-
-		$articleData = $galleyLabels = $galleyViews = array();
-
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 
 		$dateStart = $this->getData('dateStart');
 		$dateEnd = $this->getData('dateEnd');
@@ -86,82 +82,171 @@ class TimedViewReportForm extends Form {
 			$metricType = OJS_METRIC_TYPE_COUNTER;
 		}
 
+		import('lib.pkp.classes.db.DBResultRange');
+		$dbResultRange = new DBResultRange(STATISTICS_MAX_ROWS);
+
 		$metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
-		$columns = array(STATISTICS_DIMENSION_ASSOC_ID);
-		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_ARTICLE,
+		$columns = array(STATISTICS_DIMENSION_ASSOC_ID, STATISTICS_DIMENSION_ASSOC_TYPE, STATISTICS_DIMENSION_SUBMISSION_ID);
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_ARTICLE, ASSOC_TYPE_GALLEY),
 			STATISTICS_DIMENSION_CONTEXT_ID => $journalId);
 		if ($dateStart && $dateEnd) {
 			$filter[STATISTICS_DIMENSION_DAY] = array('from' => $dateStart, 'to' => $dateEnd);
 		}
-		$abstractViewCounts = $metricsDao->getMetrics($metricType, $columns, $filter);
 
-		foreach ($abstractViewCounts as $row) {
-			$galleyViewTotal = 0;
-			$articleId = $row['assoc_id'];
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-			if (!$publishedArticle) continue;
-			$issueId = $publishedArticle->getIssueId();
-			$issue =& $issueDao->getIssueById($issueId);
+		// Need to consider paging of stats records for databases with
+		// large amount of statistics data. We store all the records we
+		// need in those total variables. In a really really large metrics
+		// table, and for a considerable large period of time, this process
+		// might exceed the maximum amount of memory or take so long to
+		// finish that the browser will time out. Since users can generate
+		// the report by smaller periods of time, this is not a big issue.
+		$allReportStats = array();
 
-			$articleData[$articleId] = array(
-				'id' => $articleId,
-				'title' => $publishedArticle->getLocalizedTitle(),
-				'issue' => $issue->getIssueIdentification(),
-				'datePublished' => $publishedArticle->getDatePublished(),
-				'totalAbstractViews' => $row['metric']
-			);
+		// While we still have stats records about article abstract views,
+		// keep adding them to the total.
+		while (true) {
+			$reportStats = $metricsDao->getMetrics($metricType, $columns, $filter,
+					array(STATISTICS_DIMENSION_SUBMISSION_ID => STATISTICS_ORDER_ASC,
+							STATISTICS_DIMENSION_ASSOC_TYPE => STATISTICS_ORDER_ASC),
+					$dbResultRange);
 
-			// For each galley, store the label and the count
-			$columns = array(STATISTICS_DIMENSION_ASSOC_ID);
-			$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_GALLEY, STATISTICS_DIMENSION_SUBMISSION_ID => $articleId);
-			if ($dateStart && $dateEnd) {
-				$filter[STATISTICS_DIMENSION_DAY] = array('from' => $dateStart, 'to' => $dateEnd);
-			}
-			$galleyCounts = $metricsDao->getMetrics($metricType, $columns, $filter);
-			$galleyViews[$articleId] = array();
-			$galleyViewTotal = 0;
-			foreach ($galleyCounts as $record) {
-				$galleyId = $record['assoc_id'];
-				$galley =& $galleyDao->getGalley($galleyId);
-				$label = $galley->getLabel();
-				$i = array_search($label, $galleyLabels);
-				if ($i === false) {
-					$i = count($galleyLabels);
-					$galleyLabels[] = $label;
-				}
 
-				// Make sure the array is the same size as in previous iterations
-				//  so that we insert values into the right location
-				$galleyViews[$articleId] = array_pad($galleyViews[$articleId], count($galleyLabels), '');
+			$allReportStats = array_merge($allReportStats, $reportStats);
+			$dbResultRange->setPage($dbResultRange->getPage() + 1);
 
-				$views = $record['metric'];
-				$galleyViews[$articleId][$i] = $views;
-				$galleyViewTotal += $views;
-			}
-
-			$articleData[$articleId]['galleyViews'] = $galleyViewTotal;
-
-			// Clean up
-			unset($row, $galleys);
+			// It means we don't have more pages to fetch.
+			if (count($reportStats) < $dbResultRange->getCount()) break;
 		}
 
+		// Format stats and retrieve submission and galleys info.
+		list($articleData, $galleyLabels, $galleyViews) = $this->_formatStats($allReportStats);
+		$this->_buildReport($articleData, $galleyLabels, $galleyViews);
+	}
+
+	/**
+	 * Return report statistics already formatted in columns
+	 * to generate the report.
+	 * @param $reportStats array All metric records retrieved
+	 * with MetricsDAO::getMetrics()
+	 * @return array
+	 */
+	function _formatStats($reportStats) {
+		$articleData = $galleyLabels = $galleyViews = array();
+
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+
+		$workingArticleId = null;
+		$objects = array();
+
+		foreach ($reportStats as $record) {
+			$articleId = $record[STATISTICS_DIMENSION_SUBMISSION_ID];
+			if (is_null($workingArticleId)) {
+				// Just started, initiated this value.
+				$workingArticleId = $articleId;
+			}
+
+			if ($articleId != $workingArticleId) {
+				// Finished getting data for all objects related to the
+				// working article id.
+
+				// Add the galleys total downloads.
+				if (isset($articleData[$workingArticleId]) && isset($galleyViewTotal)) {
+					$articleData[$workingArticleId]['galleyViews'] = $galleyViewTotal;
+				}
+
+				// Clean up and move to the next article id.
+				unset($galleyViewTotal);
+
+				// Start to work on the current article id.
+				$workingArticleId = $articleId;
+			}
+
+			if ($articleId == $workingArticleId) {
+				// Retrieve article and galleys data related to the
+				// working article id.
+				$assocType = $record[STATISTICS_DIMENSION_ASSOC_TYPE];
+
+				// Retrieve article data, if it wasn't before.
+				if (!isset($articleData[$workingArticleId])) {
+					$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($workingArticleId, null, true);
+					if (!$publishedArticle) continue;
+					$issueId = $publishedArticle->getIssueId();
+					$issue =& $issueDao->getIssueById($issueId, null, true);
+
+					if ($assocType == ASSOC_TYPE_ARTICLE) {
+						$abstractViews = $record[STATISTICS_METRIC];
+					} else {
+						$abstractViews = '';
+					}
+
+					$articleData[$workingArticleId] = array(
+						'id' => $workingArticleId,
+						'title' => $publishedArticle->getLocalizedTitle(),
+						'issue' => $issue->getIssueIdentification(),
+						'datePublished' => $publishedArticle->getDatePublished(),
+						'totalAbstractViews' => $abstractViews
+					);
+				}
+
+				// Retrieve galley data.
+				if ($assocType == ASSOC_TYPE_GALLEY) {
+					if (!isset($galleyViews[$workingArticleId])) {
+						$galleyViews[$workingArticleId] = array();
+					}
+					$galleyId = $record[STATISTICS_DIMENSION_ASSOC_ID];
+					$galley =& $galleyDao->getGalley($galleyId, null, true);
+					$label = $galley->getLabel();
+					$i = array_search($label, $galleyLabels);
+					if ($i === false) {
+						$i = count($galleyLabels);
+						$galleyLabels[] = $label;
+					}
+
+					// Make sure the array is the same size as in previous iterations
+					// so that we insert values into the right location
+					$galleyViews[$workingArticleId] = array_pad($galleyViews[$workingArticleId], count($galleyLabels), '');
+
+					$views = $record[STATISTICS_METRIC];
+					$galleyViews[$workingArticleId][$i] = $views;
+					if (!isset($galleyViewTotal)) $galleyViewTotal = $views;
+					$galleyViewTotal += $views;
+				}
+			}
+		}
+
+		return array($articleData, $galleyLabels, $galleyViews);
+	}
+
+	/**
+	 * Build the report using the passed data.
+	 * @param $articleData array Title, journal, data, abstract views, etc.
+	 * @param $galleyLabels array All galley labels to be used as columns.
+	 * @param $galleyViews array All galley views per label.
+	 */
+	function _buildReport($articleData, $galleyLabels, $galleyViews) {
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=report.csv');
 		$fp = fopen('php://output', 'wt');
 		$reportColumns = array(
-			__('plugins.reports.timedView.report.articleId'),
-			__('plugins.reports.timedView.report.articleTitle'),
-			__('issue.issue'),
-			__('plugins.reports.timedView.report.datePublished'),
-			__('plugins.reports.timedView.report.abstractViews'),
-			__('plugins.reports.timedView.report.galleyViews'),
+				__('plugins.reports.timedView.report.articleId'),
+				__('plugins.reports.timedView.report.articleTitle'),
+				__('issue.issue'),
+				__('plugins.reports.timedView.report.datePublished'),
+				__('plugins.reports.timedView.report.abstractViews'),
+				__('plugins.reports.timedView.report.galleyViews'),
 		);
 
 		fputcsv($fp, array_merge($reportColumns, $galleyLabels));
 
 		$dateFormatShort = Config::getVar('general', 'date_format_short');
 		foreach ($articleData as $articleId => $article) {
-			fputcsv($fp, array_merge($articleData[$articleId], $galleyViews[$articleId]));
+			if (isset($galleyViews[$articleId])) {
+				fputcsv($fp, array_merge($articleData[$articleId], $galleyViews[$articleId]));
+			} else {
+				fputcsv($fp, $articleData[$articleId]);
+			}
 		}
 
 		fclose($fp);

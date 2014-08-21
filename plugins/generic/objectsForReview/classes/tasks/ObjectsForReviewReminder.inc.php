@@ -20,7 +20,14 @@ class ObjectsForReviewReminder extends ScheduledTask {
 	 * Constructor.
 	 */
 	function ObjectsForReviewReminder() {
-		$this->ScheduledTask();
+		parent::ScheduledTask();
+	}
+
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('plugins.generic.objectsForReview.reminderTask.name');
 	}
 
 	/**
@@ -59,9 +66,9 @@ class ObjectsForReviewReminder extends ScheduledTask {
 	}
 
 	/**
-	 * Run this scheduled task.
+	 * @see ScheduledTask::executeActions()
 	 */
-	function execute() {
+	function executeActions() {
 		$ofrPlugin =& PluginRegistry::getPlugin('generic', 'objectsforreviewplugin');
 		if ($ofrPlugin) {
 			$ofrPluginName = $ofrPlugin->getName();
@@ -112,6 +119,9 @@ class ObjectsForReviewReminder extends ScheduledTask {
 				}
 				unset($journal);
 			}
+			return true;
+		} else {
+			return false;
 		}
 	}
 

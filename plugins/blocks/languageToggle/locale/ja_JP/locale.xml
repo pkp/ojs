@@ -15,4 +15,5 @@
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.block.languageToggle.displayName">言語切り替えブロック</message>
 	<message key="plugins.block.languageToggle.description">サイドバーに言語切り替メニューを付けます。</message>
+	<message key="plugins.block.languageToggle.selectLabel">言語の選択</message>
 </locale>

@@ -15,4 +15,5 @@
 <locale name="pt_PT" full_name="Português">
 	<message key="plugins.block.languageToggle.displayName">Bloco Alterar Idioma</message>
 	<message key="plugins.block.languageToggle.description">Este plugin oferece a ferramenta de alteração de idiomas na barra lateral.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Selecione o idioma</message>
 </locale>

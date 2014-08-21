@@ -17,4 +17,5 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.block.languageToggle.displayName">Taalkeuze blok</message>
 	<message key="plugins.block.languageToggle.description">Deze plugin verzorgt de taalkiezer in de sidebar.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Selecteer taal</message>
 </locale>

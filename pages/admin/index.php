@@ -45,6 +45,7 @@ switch ($op) {
 	case 'installLocale':
 	case 'uninstallLocale':
 	case 'reloadLocale':
+	case 'reloadDefaultEmailTemplates':
 	case 'downloadLocale':
 		define('HANDLER_CLASS', 'AdminLanguagesHandler');
 		import('pages.admin.AdminLanguagesHandler');

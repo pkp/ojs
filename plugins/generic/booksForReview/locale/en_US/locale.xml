@@ -171,6 +171,7 @@
 	<message key="plugins.generic.booksForReview.public.bookDetails">Book Details</message>
 
 	<!-- Books For Review -->
+	<message key="plugins.generic.booksForReview.reminderTask.name">Books for review reminder</message>
 	<message key="plugins.generic.booksForReview.displayName">Books For Review</message>
 	<message key="plugins.generic.booksForReview.description">Solicit reviews for books of interest or received from publishers. Manage book reviewers and book review process.</message>
 	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Books&nbsp;For&nbsp;Review]]></message>

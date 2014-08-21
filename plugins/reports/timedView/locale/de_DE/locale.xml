@@ -24,6 +24,7 @@
 	<message key="plugins.reports.timedView.form.clearLogs.description">Wählen Sie ein Datum aus, um Logdateien zu löschen. Alle Logeinträge, die vor dem gewählten Datum angelegt worden sind, werden gelöscht. Beachten Sie, dass dies nur das Zeitbezogene Lese-Plug-In betrifft und nicht andernorts erzeugte Leseprotokolle (z.B. für das allgemeine Lese-Berichts-Plug-In).</message>
 	<message key="plugins.reports.timedView.form.clearLogs.confirm">Sind Sie sicher, dass Sie diese Berichte löschen möchten? Dieser Prozess kann nicht rückgängig gemacht werden.</message>
 	<message key="plugins.reports.timedView.form.useTimedViewRecords">Verwendung von Statistiken aus dem alten Plug-In für zeitbezogene Leseberichte aktivieren. Wenn Sie einen Bericht über zeitbezogene Zugriffe mit neuen statistischen Daten erzeugen wollen, lassen Sie dieses Feld deaktiviert.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">Wenn Sie einen großen Zeitraum mit einer großen Menge statistischer Daten auswählen, kann die Fertigstellung des  Berichts eine Weile dauern. Wenn es zu lange dauert, könnte die Verbindung wegen einer Zeitüberschreitung beendet werden und Sie würden die Datei mit dem Bericht nicht erhalten. Wenn dies passiert, probieren Sie es erneut mit einem kürzeren Zeitraum.</message>
 
 	<message key="plugins.reports.timedView.report.articleId">Artikel-ID</message>
 	<message key="plugins.reports.timedView.report.articleTitle">Artikeltitel</message>

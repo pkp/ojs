@@ -58,6 +58,7 @@
 	 * @param {Object} validator The validator plug-in.
 	 * @param {HTMLElement} formElement The wrapped HTML form.
 	 */
+	/*jslint unparam: true*/
 	$.pkp.pages.search.SearchFormHandler.prototype.submitForm =
 			function(validator, formElement) {
 		var $form, allBlank, formFields, i, max;
@@ -81,6 +82,7 @@
 
 		this.submitFormWithoutValidation(validator);
 	};
+	/*jslint unparam: false*/
 
 /** @param {jQuery} $ jQuery closure. */
 }(jQuery));

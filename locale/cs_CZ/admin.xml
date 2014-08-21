@@ -24,6 +24,7 @@
 	<message key="admin.languages.downloadFailed">Stahování lokalizace selhalo. Níže uvedené chybové hlášení popisuje selhání.</message>
 	<message key="admin.languages.localeInstalled">Tato "{$locale}" lokalizace byla nainstalována. </message>
 	<message key="admin.languages.download">Stáhnout lokalizaci</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Obnovit výchozí e-mailové šablony</message>
 	<message key="admin.languages.download.cannotOpen">Nelze otevřít popisovač jazyka z webové stránky PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Nelze přidat novou lokalizaci do registračního souboru lokalizací - typicky "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Databáze OJS uživatelů</message>

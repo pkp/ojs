@@ -95,7 +95,7 @@ class TimedViewReportPlugin extends ReportPlugin {
 		if ($request->getUserVar('generate')) {
 			$form->readInputData();
 			if ($form->validate()) {
-				$form->execute();
+				$form->execute($request);
 			} else {
 				$form->display();
 			}

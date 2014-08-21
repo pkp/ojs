@@ -193,8 +193,10 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 				$trackingCode = $this->getSetting($journalId, 'trackingCode');
 				if ($trackingCode == "ga") {
 					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagGa.tpl');
-				} else {
+				} elseif ($trackingCode == "urchin") {
 					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagUrchin.tpl');
+				} elseif ($trackingCode == "analytics") {
+					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagAnalytics.tpl');
 				}
 			}
 		}
@@ -227,11 +229,11 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 						Request::redirect(null, 'manager', 'plugin');
 						return false;
 					} else {
-						$this->setBreadCrumbs(true);
+						$this->setBreadcrumbs(true);
 						$form->display();
 					}
 				} else {
-					$this->setBreadCrumbs(true);
+					$this->setBreadcrumbs(true);
 					$form->initData();
 					$form->display();
 				}

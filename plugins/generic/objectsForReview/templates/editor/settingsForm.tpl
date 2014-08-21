@@ -54,20 +54,18 @@
 </table>
 </div>
 
-{*
 <div class="separator"></div>
-<div id="objectsForReviewSettingsCoverImages">
-<h4>{translate key="plugins.generic.objectsForReview.settings.coverImages"}</h4>
+<div id="displayObjectMetadata">
+<h4>{translate key="plugins.generic.objectsForReview.settings.displayMetadata"}</h4>
 <p>
-	<input type="checkbox" name="coverPageIssue" id="coverPageIssue" value="1" {if $coverPageIssue} checked="checked"{/if} />&nbsp;
-	{fieldLabel name="coverPageIssue" key="plugins.generic.objectsForReview.settings.coverPageIssue"}
+	<input type="checkbox" name="displayAbstract" id="displayAbstract" value="1" {if $displayAbstract} checked="checked"{/if} />&nbsp;
+	{fieldLabel name="displayAbstract" key="plugins.generic.objectsForReview.settings.displayAbstract"}
 </p>
 <p>
-	<input type="checkbox" name="coverPageAbstract" id="coverPageAbstract" value="1" {if $coverPageAbstract} checked="checked"{/if} />&nbsp;
-	{fieldLabel name="coverPageAbstract" key="plugins.generic.objectsForReview.settings.coverPageAbstract"}
+	<input type="checkbox" name="displayListing" id="displayListing" value="1" {if $displayListing} checked="checked"{/if} />&nbsp;
+	{fieldLabel name="displayAbstract" key="plugins.generic.objectsForReview.settings.displayListing"}
 </p>
 </div>
-*}
 
 <div class="separator"></div>
 <div id="objectsForReviewSettingsDue">

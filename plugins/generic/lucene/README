@@ -474,6 +474,11 @@ being correctly INDEXED:
 - Please make sure that the 'base_url' parameter in your OJS directory points
   to the correct URL (without trailing slash).
 
+If search is performing more slowly than anticipated check your custom ranking
+settings. If custom ranking is enabled, this will add an overhead to searches
+proportional to the size of your index.
+
+
 8 Push versus Pull Indexing
 ---------------------------
 

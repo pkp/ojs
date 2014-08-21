@@ -24,6 +24,7 @@
 	<message key="admin.languages.downloadFailed">Le téléchargement de la langue a échoué. Des explications sont contenues dans le message d'erreur ci-dessous.</message>
 	<message key="admin.languages.localeInstalled">La langue "{$locale}" a été installée.</message>
 	<message key="admin.languages.download">Télécharger la langue</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Recharger défaut des modèles de courriels</message>
 	<message key="admin.languages.download.cannotOpen">Impossible d'ouvrir le descripteur de langue du site Web de PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Impossible d'ajouter la nouvelle langue au fichier de registre de langue, généralement "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Base de données utilisateur d'OJS</message>

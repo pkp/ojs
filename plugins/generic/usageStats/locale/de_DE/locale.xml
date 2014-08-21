@@ -18,9 +18,12 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Regex zum Parsen der Logdateien</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Der standardmäßig benutzte reguläre Ausdruck kann Apache-Logdateien im Combined-Format und außerdem die Logdateien des Plug-Ins parsen. Wenn Ihre Zugriffsprotokolldateien in einem anderen Format sind, müssen Sie einen regulären Ausdruck einfügen, mit dem die Dateien geparst werden können und der die erwarteten Werte liefert. Vgl. UsageStatsLoader::_getDataFromLogEntry() für weitere Informationen.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Einstellungen des Zugriffsstatistik-Plug-Ins gespeichert</message>
-	
+
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Nutzungsstatistik-Fileloader</message>
 	<message key="plugins.generic.usageStats.openFileFailed">Die Datei {$file} konnte nicht geöffnet werden und wurde zurückgewiesen.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">Die Zeile {$lineNumber} aus der Datei {$file} stellt keinen gültigen Logeintrag dar, und die Datei wurde zurückgewiesen.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">Die Zeile {$lineNumber} aus der Datei {$file} enthält eine Adresse, aus der das System nicht den Basis-URL entfernen kann.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Konnte keine extrahierten Daten aus Datei {$file} laden. Der Fehler lautete: {$error}. Die Datei wurde entfernt, um sie erneut zu bearbeiten.</message>
 	<message key="plugins.generic.usageStats.displayName">Nutzungsstatistik</message>
 	<message key="plugins.generic.usageStats.description">Zeigt Nutzungsstatistik zu Objekten an. Kann Server-Logdateien benutzen, um Statistiken zu extrahieren.</message>
 	

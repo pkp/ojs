@@ -17,10 +17,7 @@
 			var e = document.getElementById('languageSelect');
 			var new_locale = e.options[e.selectedIndex].value;
 
-			var base_url = "{$currentUrl|escape}";
-			var current_url = document.URL;
-
-			var redirect_url = '{url|escape:"javascript" page="user" op="setLocale" path="NEW_LOCALE" source=$smarty.server.REQUEST_URI}';
+			var redirect_url = '{url|escape:"javascript" page="user" op="setLocale" path="NEW_LOCALE" source=$smarty.server.REQUEST_URI escape=false}';
 			redirect_url = redirect_url.replace("NEW_LOCALE", new_locale);
 
 			window.location.href = redirect_url;

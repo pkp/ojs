@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Modulo di navigazione</message>
 	<message key="plugins.block.navigation.description">Questo plugin inserisce link di navigazione al menu laterale.</message>
 	<message key="plugins.block.navigation.journalContent">Contenuti della rivista</message>
+	<message key="plugins.block.navigation.searchScope">Cerca in</message>
 </locale>

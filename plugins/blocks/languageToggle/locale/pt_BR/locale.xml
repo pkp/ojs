@@ -15,4 +15,5 @@
 <locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.block.languageToggle.displayName">Alteração de idioma</message>
 	<message key="plugins.block.languageToggle.description">Este plugin oferece a ferramenta de alteração de idiomas na barra lateral.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Selecione o idioma</message>
 </locale>

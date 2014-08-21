@@ -26,6 +26,7 @@
 	<message key="admin.languages.downloadFailed">Lo scaricamento della lingua è fallito. Il(I) messaggio(i) di errore qui sotto descrive il motivo dell'insuccesso.</message>
 	<message key="admin.languages.localeInstalled">La lingua "{$locale}" è stata installata.</message>
 	<message key="admin.languages.download">Scarica localizzazione</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Ricarica modelli di posta elettronica di default</message>
 	<message key="admin.languages.download.cannotOpen">Non è possibile aprire il descrittore della lingua dal sito web del PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Non è possibile aggiungere la nuova lingua al file di registro della lingua, solitamente "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Database degli utenti OJS</message>

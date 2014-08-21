@@ -33,6 +33,7 @@
 	<message key="admin.languages.downloadFailed">Преземањето на локацијата не е успешно.Пораката за грешка подолу го опишува неуспехот.</message>
 	<message key="admin.languages.localeInstalled"> "{$locale}" локацијата е инсталирана.</message>
 	<message key="admin.languages.download">Преземи ја локацијата</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Вчитај стандардно е-мејл шаблони</message>
 	<message key="admin.languages.download.cannotOpen">Не може да се отвори опишувачот за јазик од PKP веб страната.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Не можете да вметнете нова локација во локалниот регистар на датотеки, вообичаено "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS корисник на базата на податоци</message>

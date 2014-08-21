@@ -519,6 +519,7 @@
 	<message key="manager.statistics.reports.columns">Columns</message>
 	<message key="manager.statistics.reports.columns.description">Define the columns that will be used to build the report. The columns you select here not only define which data will be presented inside the reports, but also defines the aggregation level of the statistics. For example, if you choose ID, Type and Month columns, the report will sum all views from an object from one month and will present that data in one row. If you choose Day instead of Month, each object will have a row for each day.</message>
 	<message key="manager.statistics.reports.filters">Filters</message>
+	<message key="manager.statistics.reports.objectNotFound">Object not found in database</message>
 	<message key="manager.statistics.reports.objectType">Object Type</message>
 	<message key="manager.statistics.reports.objectId">Object id</message>
 	<message key="manager.statistics.reports.objectId.label">Define one or more object ids, comma separated (e.g. 1,2,3,4,5).</message>

@@ -68,54 +68,76 @@ class UsageStatsLoader extends FileLoader {
 
 		parent::FileLoader($args);
 
-		// Load the metric type constant.
-		PluginRegistry::loadCategory('reports');
+		if ($plugin->getEnabled()) {
+			// Load the metric type constant.
+			PluginRegistry::loadCategory('reports');
 
-		$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
-		$this->_geoLocationTool =& $geoLocationTool;
+			$geoLocationTool =& StatisticsHelper::getGeoLocationTool();
+			$this->_geoLocationTool =& $geoLocationTool;
 
-		$plugin->import('UsageStatsTemporaryRecordDAO');
-		$statsDao = new UsageStatsTemporaryRecordDAO();
-		DAORegistry::registerDAO('UsageStatsTemporaryRecordDAO', $statsDao);
+			$plugin->import('UsageStatsTemporaryRecordDAO');
+			$statsDao = new UsageStatsTemporaryRecordDAO();
+			DAORegistry::registerDAO('UsageStatsTemporaryRecordDAO', $statsDao);
 
-		$this->_counterRobotsListFile = $this->_getCounterRobotListFile();
+			$this->_counterRobotsListFile = $this->_getCounterRobotListFile();
 
-		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$journalFactory =& $journalDao->getJournals(); /* @var $journalFactory DAOResultFactory */
-		$journalsByPath = array();
-		while ($journal =& $journalFactory->next()) { /* @var $journal Journal */
-			$journalsByPath[$journal->getPath()] =& $journal;
-		}
-		$this->_journalsByPath = $journalsByPath;
+			$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$journalFactory =& $journalDao->getJournals(); /* @var $journalFactory DAOResultFactory */
+			$journalsByPath = array();
+			while ($journal =& $journalFactory->next()) { /* @var $journal Journal */
+				$journalsByPath[$journal->getPath()] =& $journal;
+			}
+			$this->_journalsByPath = $journalsByPath;
 
-		$this->checkFolderStructure(true);
+			$this->checkFolderStructure(true);
 
-		if ($this->_autoStage) {
-			// Copy all log files to stage directory, except the current day one.
-			$fileMgr = new FileManager();
-			$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
-			$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
+			if ($this->_autoStage) {
+				// Copy all log files to stage directory, except the current day one.
+				$fileMgr = new FileManager();
+				$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
+				$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
 
-			if (is_array($logsDirFiles) && is_array($processingDirFiles)) {
-				// It's possible that the processing directory have files that
-				// were being processed but the php process was stopped before
-				// finishing the processing. Just copy them to the stage directory too.
-				$dirFiles = array_merge($logsDirFiles, $processingDirFiles);
-				foreach ($dirFiles as $filePath) {
-					// Make sure it's a file.
-					if ($fileMgr->fileExists($filePath)) {
-						// Avoid current day file.
-						$filename = pathinfo($filePath, PATHINFO_BASENAME);
-						$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
-						if ($filename == $currentDayFilename) continue;
+				if (is_array($logsDirFiles) && is_array($processingDirFiles)) {
+					// It's possible that the processing directory have files that
+					// were being processed but the php process was stopped before
+					// finishing the processing. Just copy them to the stage directory too.
+					$dirFiles = array_merge($logsDirFiles, $processingDirFiles);
+					foreach ($dirFiles as $filePath) {
+						// Make sure it's a file.
+						if ($fileMgr->fileExists($filePath)) {
+							// Avoid current day file.
+							$filename = pathinfo($filePath, PATHINFO_BASENAME);
+							$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
+							if ($filename == $currentDayFilename) continue;
 
-						if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
-							$fileMgr->deleteFile($filePath);
+							if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
+								$fileMgr->deleteFile($filePath);
+							}
 						}
 					}
 				}
 			}
 		}
+	}
+
+	/**
+	 * @see FileLoader::getName()
+	 */
+	function getName() {
+		return __('plugins.generic.usageStats.usageStatsLoaderName');
+	}
+
+	/**
+	 * @see FileLoader::executeActions()
+	 */
+	function executeActions() {
+		$plugin =& $this->_plugin;
+		if (!$plugin->getEnabled()) {
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.openFileFailed'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+			return true;
+		}
+
+		parent::executeActions();
 	}
 
 	/**
@@ -165,8 +187,7 @@ class UsageStatsLoader extends FileLoader {
 			// Avoid bots.
 			if (Core::isUserAgentBot($entryData['userAgent'], $this->_counterRobotsListFile)) continue;
 
-			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $errorMsg, $filePath, $lineNumber);
-			if (!is_null($errorMsg)) return false;
+			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $filePath, $lineNumber);
 			if(!$assocId || !$assocType) continue;
 
 			list($countryCode, $cityName, $region) = $geoTool->getGeoLocation($entryData['ip']);
@@ -305,12 +326,11 @@ class UsageStatsLoader extends FileLoader {
 	 * Get the assoc type and id of the object that
 	 * is accessed through the passed url.
 	 * @param $url string
-	 * @param $errorMsg string
 	 * @param $filePath string
 	 * @param $lineNumber int
 	 * @return array
 	 */
-	function _getAssocFromUrl($url, &$errorMsg, $filePath, $lineNumber) {
+	function _getAssocFromUrl($url, $filePath, $lineNumber) {
 		// Check the passed url.
 		$assocId = $assocType = $journalId = false;
 		$expectedPageAndOp = $this->_getExpectedPageAndOp();
@@ -328,8 +348,8 @@ class UsageStatsLoader extends FileLoader {
 			$args = Core::getArgs($url, !$pathInfoDisabled);
 		} else {
 			// Could not remove the base url, can't go on.
-			$errorMsg = __('plugins.generic.usageStats.removeUrlError',
-				array('file' => $filePath, 'lineNumber' => $lineNumber));
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.removeUrlError',
+				array('file' => $filePath, 'lineNumber' => $lineNumber)), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			return array(false, false);
 		}
 

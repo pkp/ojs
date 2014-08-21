@@ -7,6 +7,9 @@
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
+ * With contributions from:
+ *  - 2014 Instituto Nacional de Investigacion y Tecnologia Agraria y Alimentaria
+ *
  * @class ProofreaderSubmissionDAO
  * @ingroup submission_proofreader
  * @see ProofreaderSubmission
@@ -156,8 +159,22 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_ID:
-				$params[] = (int) $search;
-				$searchSql = ' AND a.article_id = ?';
+				switch ($searchMatch) {
+					case 'is':
+						$params[] = (int) $search;
+						$searchSql = ' AND a.article_id = ?';
+						break;
+					case 'contains':
+						$search = '%' . $search . '%';
+						$params[] = $search;
+						$searchSql = ' AND CONCAT(a.article_id) LIKE ?';
+						break;
+					case 'startsWith':
+						$search = $search . '%';
+						$params[] = $search;
+						$searchSql = 'AND CONCAT(a.article_id) LIKE ?';
+						break;
+				}
 				break;
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
@@ -281,31 +298,12 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @param journalId int
 	 */
 	function getSubmissionsCount($proofreaderId, $journalId) {
-		$submissionsCount = array();
-		$submissionsCount[0] = 0;
-		$submissionsCount[1] = 0;
-
-		$sql = 'SELECT
-					a.status
-				FROM
-					articles a
-					LEFT JOIN signoffs spp ON (a.article_id = spp.assoc_id AND spp.assoc_type = ? AND spp.symbolic = ?)
-					LEFT JOIN sections s ON s.section_id = a.section_id
-				WHERE
-					spp.user_id = ? AND a.journal_id = ? AND spp.date_notified IS NOT NULL';
-
-		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_PROOFREADER', $proofreaderId, $journalId));
-
-		while (!$result->EOF) {
-			if ($result->fields['status'] == STATUS_QUEUED) {
-				$submissionsCount[0] += 1;
-			} else {
-				$submissionsCount[1] += 1;
-			}
-			$result->moveNext();
-		}
-
-		return $submissionsCount;
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$stats = $sectionEditorSubmissionDao->getProofreaderStatistics($journalId, $proofreaderId);
+		return array(
+			0 => isset($stats[$proofreaderId]['incomplete'])?$stats[$proofreaderId]['incomplete']:0,
+			1 => isset($stats[$proofreaderId]['complete'])?$stats[$proofreaderId]['complete']:0
+		);
 	}
 
 	/**

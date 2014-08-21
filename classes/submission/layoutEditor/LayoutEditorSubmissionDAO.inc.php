@@ -7,6 +7,9 @@
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
+ * With contributions from:
+ *  - 2014 Instituto Nacional de Investigacion y Tecnologia Agraria y Alimentaria
+ *
  * @class LayoutEditorSubmissionDAO
  * @ingroup submission_layoutEditor
  * @see LayoutEditorSubmission
@@ -154,8 +157,22 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_ID:
-				$params[] = (int) $search;
-				$searchSql = ' AND a.article_id = ?';
+				switch ($searchMatch) {
+					case 'is':
+						$params[] = (int) $search;
+						$searchSql = ' AND a.article_id = ?';
+						break;
+					case 'contains':
+						$search = '%' . $search . '%';
+						$params[] = $search;
+						$searchSql = ' AND CONCAT(a.article_id) LIKE ?';
+						break;
+					case 'startsWith':
+						$search = $search . '%';
+						$params[] = $search;
+						$searchSql = 'AND CONCAT(a.article_id) LIKE ?';
+						break;
+				}
 				break;
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
@@ -283,35 +300,13 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @param editorId int
 	 * @param journalId int
 	 */
-	function getSubmissionsCount($editorId, $journalId) {
-		$submissionsCount = array();
-		$submissionsCount[0] = 0;
-		$submissionsCount[1] = 0;
-
-		$sql = 'SELECT
-					a.status
-				FROM
-					articles a
-					LEFT JOIN signoffs sl ON (a.article_id = sl.assoc_id AND sl.assoc_type = ? AND sl.symbolic = ?)
-					LEFT JOIN signoffs spl ON (a.article_id = spl.assoc_id AND spl.assoc_type = ? AND spl.symbolic = ?)
-					LEFT JOIN sections s ON (s.section_id = a.section_id)
-				WHERE
-					sl.user_id = ? AND a.journal_id = ? AND sl.date_notified IS NOT NULL';
-
-		$result =& $this->retrieve($sql, array(ASSOC_TYPE_ARTICLE, 'SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, 'SIGNOFF_PROOFREADING_LAYOUT', $editorId, $journalId));
-		while (!$result->EOF) {
-			if ($result->fields['status'] == STATUS_QUEUED) {
-				$submissionsCount[0] += 1;
-			} else {
-				$submissionsCount[1] += 1;
-			}
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $submissionsCount;
+	function getSubmissionsCount($layoutEditorId, $journalId) {
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$stats = $sectionEditorSubmissionDao->getLayoutEditorStatistics($journalId, $layoutEditorId);
+		return array(
+			0 => isset($stats[$layoutEditorId]['incomplete'])?$stats[$layoutEditorId]['incomplete']:0,
+			1 => isset($stats[$layoutEditorId]['complete'])?$stats[$layoutEditorId]['complete']:0
+		);
 	}
 
 	function getProofedArticlesByIssueId($issueId) {

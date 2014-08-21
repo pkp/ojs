@@ -1,17 +1,26 @@
 language: php
 php:
   - 5.3
+git:
+  # We have to init submodules ourselves
+  submodules: false
+
 before_install:
+  # Start submodules
+  - ./tools/startSubmodulesTRAVIS.sh
+
   # Start apache and configure a virtual host.
   - sudo apt-get update > /dev/null
   - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl php5-mysql php5-intl
   - sudo sed -i -e "s,/var/www,$(pwd)/,g" /etc/apache2/sites-available/default 
   - sudo sed -i -e "s,\${APACHE_LOG_DIR},$(pwd),g" /etc/apache2/sites-available/default  
   - sudo /etc/init.d/apache2 restart
-  
-  # Install php unit selenium extension.
-  - pear channel-discover pear.phpunit.de
-  - pear install phpunit/PHPUnit_Selenium
+
+  # Install phpunit in a phar package with selenium extension already on it. 
+  - sudo rm -R /home/travis/.phpenv/versions/5.3/bin/phpunit
+  - wget --no-check-certificate https://phar.phpunit.de/phpunit.phar
+  - chmod +x phpunit.phar
+  - sudo mv phpunit.phar /home/travis/.phpenv/versions/5.3/bin/phpunit
  
   # Start Virtual Framebuffer to imitate a monitor.
   - sudo Xvfb :10 -ac > xvfb-output & 
@@ -32,6 +41,10 @@ before_install:
 
   # Make sure permissions are ok.
   - sudo chown -R travis:www-data .
+
+  # Sleep and output our logs, to avoid hanging 
+  # build with no access to logs.
+  - (sleep 590; cat access.log; cat error.log; cat xvfb-output; cat selenium-output cat ./lib/pkp/tests/results/error.log) &
 
 script:
   - ./lib/pkp/tools/runAllTests.sh -Ccf

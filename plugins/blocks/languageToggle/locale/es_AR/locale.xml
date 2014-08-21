@@ -15,4 +15,5 @@
 <locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.block.languageToggle.displayName">Bloque de cambios entre lenguajes</message>
 	<message key="plugins.block.languageToggle.description">Este plugin permite cambiar entre lenguajes en la barra lateral.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Seleccionar idioma</message>
 </locale>

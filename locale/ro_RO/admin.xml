@@ -27,6 +27,7 @@
 	<message key="admin.languages.downloadFailed">Descărcarea localizării a dat eroare. Mesajul(ele) de mai jos descriu ce s-a întâmplat.</message>
 	<message key="admin.languages.localeInstalled">Localizarea "{$locale}" a fost instalată. </message>
 	<message key="admin.languages.download">Descarcă localizări</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Reîncarcă template-uri prestabilite de e-mail</message>
 	<message key="admin.languages.download.cannotOpen">Nu pot deschide descriptorul de limbă de pe siteul PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Nu pot adăuga noul fişier registru al localizării, de regulă "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">Baza de de date cu utilizatori OJS</message>
