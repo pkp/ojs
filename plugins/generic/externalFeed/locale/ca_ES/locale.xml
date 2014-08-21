@@ -36,7 +36,7 @@
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Totes les pàgines</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Blocs en totes les pàgines</message>
 	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Cap bloc en cap pàgina</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Inici</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Només blocs a la pàgina d'inici</message>
 	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Cap bloc a la pàgina d'inici</message>
 	<message key="plugins.generic.externalFeed.manager.noneCreated">No hi ha canals de continguts externs</message>

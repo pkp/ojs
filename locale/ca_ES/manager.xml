@@ -308,7 +308,7 @@
 	<message key="manager.setup.institution">Institució</message>
 	<message key="manager.setup.issnDescription"><![CDATA[L’ISSN (número internacional normalitzat per a publicacions en sèrie) és un número de vuit dígits que identifica publicacions periòdiques, incloses les revistes electròniques. Aquests números són gestionats per una xarxa mundial de centres nacionals coordinats per un centre internacional amb seu a París que rep el suport de la UNESCO i del govern francès. Per obtenir un d’aquests números cal adreçar-se al <a href="http://www.issn.org" target="_new">lloc web de l’ISSN</a>. Podeu fer-ho durant qualsevol de les fases d’elaboració de la revista.]]></message>
 	<message key="manager.setup.issuePerVolume">Números per volum</message>
-	<message key="manager.setup.itemsDescription">A més dels elements ja existents («Inici», «Sobre la revista», «Àrea personal de l’usuari/ària», etc.), podeu afegir altres elements a la barra de navegació que hi ha a la part superior de la pàgina.</message>
+	<message key="manager.setup.itemsDescription">A més dels elements ja existents («Inici», «Sobre la revista», «Àrea personal», etc.), podeu afegir altres elements a la barra de navegació que hi ha a la part superior de la pàgina.</message>
 	<message key="manager.setup.itemsPerPage">Elements per pàgina</message>
 	<message key="manager.setup.journalAbbreviation">Abreviació de la revista</message>
 	<message key="manager.setup.journalArchiving">Arxivament de la revista</message>
