@@ -82,11 +82,13 @@ class PLNPlugin extends GenericPlugin {
 			HookRegistry::register('LoadHandler', array(&$this, 'setupPublicHandler'));
 			
 			// Delete all plug-in data for a journal when the journal is deleted
-			HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'callbackDeleteJournalById'));
+			HookRegistry::register('JournalDAO::deleteJournalById', array(&$this, 'callbackDeleteJournalById'));
 
-			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
+			HookRegistry::register('AcronPlugin::parseCronTab', array(&$this, 'callbackParseCronTab'));
 			
 			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackTemplateDisplay'));
+			
+			HookRegistry::register('NotificationManager::getNotificationContents', array(&$this, 'callbackNotificationContents'));
 			
 			return true;
 
@@ -150,7 +152,7 @@ class PLNPlugin extends GenericPlugin {
 		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'xml' . DIRECTORY_SEPARATOR . 'settings.xml';
 	}
 	
-	function getPluginStylesheet() {
+	function getStyleSheet() {
 		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'css' . DIRECTORY_SEPARATOR . 'pln.css';
 	}
 	
@@ -195,7 +197,7 @@ class PLNPlugin extends GenericPlugin {
 		
 		// Assign our private stylesheet.
 		$templateMgr =& $params[0];
-		$templateMgr->addStylesheet($request->getBaseUrl() . '/' . $this->getPluginStylesheet());
+		$templateMgr->addStylesheet($request->getBaseUrl() . '/' . $this->getStyleSheet());
 		
 		return false;
 	}
@@ -385,24 +387,44 @@ class PLNPlugin extends GenericPlugin {
 		
 			$this->updateSetting($journal_id, 'terms_of_use', $new_terms, 'object');
 			$this->updateSetting($journal_id, 'terms_of_use_agreement', serialize($term_agreements), 'object');
-			$this->addNotification($journal_id,PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);			
+			$this->createJournalManagerNotification($journal_id,PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);			
 		}
 		
 		return $result['status'];
 	} 
-
-	function addNotification($journal_id,$notification) {
-		
-		$notifications = unserialize($this->getSetting($journal_id,'notifications'));
-		if (!in_array($notification,$notifications)) $notifications[] = $notification;
-		$this->updateSetting($journal_id, 'notifications', serialize($notifications), 'object');
-	}
 	
-	function removeNotification($journal_id,$notification) {
-		
-		$notifications = unserialize($this->getSetting($journal_id,'notifications'));
-		if ($index = array_search($notification,$notifications)) unset($notifications[$index]);
-		$this->updateSetting($journal_id, 'notifications', serialize($notifications), 'object');
+	/**
+	 * Hook registry function to provide notification messages
+	 * @param $hookName string (NotificationManager::getNotificationContents)
+	 * @param $args array ($notification, $message)
+	 * @return boolean false to continue processing subsequent hooks
+	 */
+	function callbackNotificationContents($hookName, $args) {
+		$notification =& $args[0];
+		$message =& $args[1];
+
+		$type = $notification->getType();
+		assert(isset($type));
+		switch ($type) {
+			case PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED:
+				$message = __(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
+				break;
+		}
+	}
+
+	/**
+	 * Create notification for all journal managers
+	 * @param $journal_id int
+	 * @param $notificationType int
+	 */
+	function createJournalManagerNotification($journal_id, $notificationType) {
+		$role_dao =& DAORegistry::getDAO('RoleDAO');
+		$journal_managers = $role_dao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER,$journal_id);
+		import('classes.notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+		foreach ($journal_managers as $journal_manager) {
+			$notificationManager->createTrivialNotification($journal_manager->getId(), $notificationType);
+		}
 	}
 
 	/**
