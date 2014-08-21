@@ -96,7 +96,7 @@
 	<message key="manager.people.roleEnrollment">Donar-se d'alta com a {$role}</message>
 	<message key="manager.people.syncUserDescription">La sincronització d’altes dona d’alta tots els usuaris/àries que tinguin el rol indicat a la revista indicada amb el mateix rol en aquesta revista. Aquesta funció us permet sincronitzar un grup comú d’usuaris/àries entre diverses revistes (p. ex. els revisors/ores).</message>
 	<message key="manager.plugins.copyError">El mòdul no s’ha copiat correctament. És possible que es tracti d'un problema de permisos. Assegureu-vos que el servidor web pot escriure al directori de mòduls (inclosos els subdirectoris), però recordeu de tornar a protegir-lo més endavant.</message>
-	<message key="manager.plugins.delete">Elimina el mòdul</message>
+	<message key="manager.plugins.delete">Elimina</message>
 	<message key="manager.plugins.deleteConfirm">Esteu segur/a que voleu eliminar aquest mòdul del sistema?</message>
 	<message key="manager.plugins.deleteDescription">Fent clic a Elimina, elimineu el mòdul del sistema de fitxers del servidor.</message>
 	<message key="manager.plugins.deleteError">El mòdul no s’ha pogut eliminar del sistema de fitxers. És possible que es tracti d'un problema de permisos. Assegureu-vos que el servidor web pot escriure al directori de mòduls (inclosos els subdirectoris), però recordeu de tornar a protegir-lo més endavant.</message>
@@ -117,7 +117,7 @@
 	<message key="manager.plugins.pleaseUpgrade">El mòdul ja existeix, però aquesta versió és més nova que la que teniu instal·lada. Actualitzeu-lo</message>
 	<message key="manager.plugins.settings">Configuració</message>
 	<message key="manager.plugins.tarCommandNotFound">L’ordre tar no està disponible. Configureu-lo correctament al fitxer «config.inc.php».</message>
-	<message key="manager.plugins.upgrade">Actualitza el mòdul</message>
+	<message key="manager.plugins.upgrade">Actualitza</message>
 	<message key="manager.plugins.upgradeDescription">Aquest formulari us permet actualitzar un mòdul. Assegureu-vos que el mòdul estigui comprimit com a fitxer .tar.gz.</message>
 	<message key="manager.plugins.upgradeFailed">S’ha produït un error durant l’actualització</message>
 	<message key="manager.plugins.upgradeSuccessful">Actualització correcta a la versió</message>
