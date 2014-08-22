@@ -146,6 +146,7 @@ class Deposit extends DataObject {
 		$issue_dao =& DAORegistry::getDAO('IssueDAO');
 		$section_dao =& DAORegistry::getDAO('SectionDAO');
 		$published_article_dao =& DAORegistry::getDAO('PublishedArticleDAO');
+		PluginRegistry::loadCategory('importexport');
 		$export_plugin =& PluginRegistry::getPlugin('importexport','NativeImportExportPlugin');
 		$file_manager = new JournalFileManager($journal_dao->getById($this->getJournalId()));
 		$object_types = unserialize(PLN_PLUGIN_DEPOSIT_SUPPORTED_OBJECTS);

@@ -43,7 +43,11 @@
 	
 	<message key="plugins.generic.pln.objects.article">Article</message>
 	<message key="plugins.generic.pln.objects.issue">Issue</message>
+
+	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Depositor Task</message>
 	
 	<message key="plugins.generic.pln.notifications.check_status">Check the status of your deposits.</message>
+	<message key="plugins.generic.pln.notifications.issn_missing">Your journal must have an ISSN to deposit content to the PKP PLN.</message>
+	<message key="plugins.generic.pln.notifications.http_error">There was an error connecting to the PKP PLN - please contact your system administrator.</message>
 	<message key="plugins.generic.pln.notifications.terms_updated">Terms have been updated. Agreement with new terms is required to continue depositing.</message>
 </locale>

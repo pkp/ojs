@@ -57,6 +57,10 @@ define('PLN_PLUGIN_DEPOSIT_SUPPORTED_OBJECTS', serialize(array(
 )));
 
 define('PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED','plugins.generic.pln.notifications.terms_updated');
+define('PLN_PLUGIN_NOTIFICATION_ISSN_MISSING','plugins.generic.pln.notifications.issn_missing');
+define('PLN_PLUGIN_NOTIFICATION_HTTP_ERROR','plugins.generic.pln.notifications.http_error');
+
+
 
 class PLNPlugin extends GenericPlugin {
 
@@ -77,26 +81,22 @@ class PLNPlugin extends GenericPlugin {
 		$this->registerDAOs();
 	
 		// Delete all plug-in data for a journal when the journal is deleted
-		HookRegistry::register('JournalDAO::deleteJournalById', array(&$this, 'callbackDeleteJournalById'));
+		HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'callbackDeleteJournalById'));
 		
 		// Have Acron add our task to its task
-		HookRegistry::register('AcronPlugin::parseCronTab', array(&$this, 'callbackParseCronTab'));
+		HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 		
-		if ($success && $this->getEnabled()) {
+		if ($success) {
 			
-			$export_plugin =& PluginRegistry::loadPlugin('importexport','native');
+			HookRegistry::register('LoadHandler', array($this, 'setupPublicHandler'));
 			
-			HookRegistry::register('LoadHandler', array(&$this, 'setupPublicHandler'));
+			HookRegistry::register('TemplateManager::display',array($this, 'callbackTemplateDisplay'));
 			
-			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackTemplateDisplay'));
-			
-			HookRegistry::register('NotificationManager::getNotificationContents', array(&$this, 'callbackNotificationContents'));
-			
-			return true;
+			HookRegistry::register('NotificationManager::getNotificationContents', array($this, 'callbackNotificationContents'));
 
 		}
 		
-		return false;
+		return $success;
 	}
 
 	function registerDAOs() {
@@ -230,6 +230,12 @@ class PLNPlugin extends GenericPlugin {
 		switch ($type) {
 			case PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED:
 				$message = __(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
+				break;
+			case PLN_PLUGIN_NOTIFICATION_ISSN_MISSING:
+				$message = __(PLN_PLUGIN_NOTIFICATION_ISSN_MISSING);
+				break;
+			case PLN_PLUGIN_NOTIFICATION_HTTP_ERROR:
+				$message = __(PLN_PLUGIN_NOTIFICATION_HTTP_ERROR);
 				break;
 		}
 	}
