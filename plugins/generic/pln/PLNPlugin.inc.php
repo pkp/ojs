@@ -421,7 +421,7 @@ class PLNPlugin extends GenericPlugin {
 		$journal_managers = $role_dao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER,$journal_id);
 		import('classes.notification.NotificationManager');
 		$notificationManager = new NotificationManager();
-		foreach ($journal_managers as $journal_manager) {
+		foreach ($journal_managers->toArray() as $journal_manager) {
 			$notificationManager->createTrivialNotification($journal_manager->getId(), $notificationType);
 		}
 	}

@@ -32,9 +32,7 @@
 		<field name="object_type" type="C2" size="255">
 			<NOTNULL/>
 		</field>
-		<field name="deposit_id" type="I8">
-			<NOTNULL/>
-		</field>
+		<field name="deposit_id" type="I8"/>
 		<field name="date_created" type="T">
 			<NOTNULL/>
 		</field>
