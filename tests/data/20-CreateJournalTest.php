@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/data/20-CreateJournalTest.inc.php
+ * @file tests/data/20-CreateJournalTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky

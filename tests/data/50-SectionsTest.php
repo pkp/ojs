@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/data/50-SectionsTest.inc.php
+ * @file tests/data/50-SectionsTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
