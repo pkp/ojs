@@ -72,7 +72,7 @@ class PLNPlugin extends GenericPlugin {
 	*/
 	function register($category, $path) {
 	
-		$suceess = parent::register($category, $path);
+		$success = parent::register($category, $path);
 	
 		$this->registerDAOs();
 	
