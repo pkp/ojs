@@ -93,4 +93,7 @@
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no s'ha pogut esborrar l'arxiu {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Avís: el fitxer {$filePath} ja es troba dins del directori d'estadístiques d'utilització.</message>
 	<message key="admin.copyAccessLogFileTool.success">Èxit: {$filePath} a {$destinationPath}</message>
+	<message key="admin.settings.security">Seguretat</message>
+	<message key="admin.settings.security.plugins">Impedir que els/les gestors/es de la revista puguin instalar, actualitzar o suprimir mòduls.</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Recarregar les plantilles de correu per defecte</message>
 </locale> 

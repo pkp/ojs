@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Bloc de navegació</message>
 	<message key="plugins.block.navigation.description">Aquest mòdul proporciona enllaços de navegació a la barra lateral.</message>
 	<message key="plugins.block.navigation.journalContent">Contingut de la revista</message>
+	<message key="plugins.block.navigation.searchScope">Àmbit de la cerca</message>
 </locale> 

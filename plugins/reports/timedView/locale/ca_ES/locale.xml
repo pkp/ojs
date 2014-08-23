@@ -29,4 +29,6 @@
 	<message key="plugins.reports.timedView.report.datePublished">Data de publicació</message>
 	<message key="plugins.reports.timedView.report.abstractViews">Lectures d'abstract</message>
 	<message key="plugins.reports.timedView.report.galleyViews">Total de lectures de l'article</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">Marca per a utilitzar les estadístiques rebudes per l'antic mòdul d'informes de lectura en el temps. Si vols generar informes de lectura en el temps amb les noves dades estadístiques, deixa aquest camp sense marcar.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">Si selecciones un període de temps llarg en la configuració de les dades estadístiques, aquest informe pot trigar una estona a completar-se. Si pren massa temps, la connexió podria interrompre's i no rebries el fitxer amb l'informe. En aquest cas, torna a intentar-ho amb un període de temps més curt (o contacta amb l'administrador del servidor per a incrementar el temps d'execució).</message>
 </locale>

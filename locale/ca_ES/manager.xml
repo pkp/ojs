@@ -724,4 +724,15 @@
 	<!-- Categories -->
 	<message key="manager.setup.categories">Categories</message>
 	<message key="manager.setup.categories.description">Seleccioneu les categories que considereu més adequades de la llista anterior. Els lectors/ores poden fer cerques per categoria en el conjunt d'articles i números que componen la revista.</message>
+	<message key="manager.setup.permissions.priorAgreement">Acord previ</message>
+	<message key="manager.setup.permissions.display">Display</message>
+	<message key="manager.setup.licenseURLDescription">Proporciona la URL del web de la llicència, si existeix.</message>
+	<message key="manager.setup.includeLicense">Mosta la llicència del treball publicat.</message>
+	<message key="manager.setup.resetPermissions">Reinicia permisos d'article</message>
+	<message key="manager.statistics.reports.objectNotFound">Objecte no trobat a la base de dades</message>
+	<message key="manager.setup.includeCopyrightStatement">Mostra la declaració del copyright amb el contingut (aconsellable per a mostrar els drets d'autor)</message>
+	<message key="manager.setup.resetPermissions.description">La declaració del copyright i la informació de la llicència s'afegiran permanentment al contingut publicat, garantint que aquestes dades no canvien en cas de que ho facin les polítiques de la revista per a les noves trameses. Per reiniciar la informació emmagatzemada dels permisos que ja s'ha adjuntat al contingut publicat, utilitza els botons que es mostren a continuació.</message>
+	<message key="manager.setup.confirmResetLicense">Estàs segur de voler reiniciar la llicència i la informació del copyright adjunta al contingut publicat i substituir-la per la llicència actual de la revista?</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">S'ha enviat el recordatori pre-venciment</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">S'ha enviat el recordatori post-venciment</message>
 </locale> 

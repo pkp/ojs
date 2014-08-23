@@ -61,4 +61,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">supplementary file</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">What you see is a preview of the DOI that may be incomplete. A DOI has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique DOI for this {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTA:</strong> Quan utilitzis DOIs de <a href="http://www.crossref.org" target="_new">CrossRef</a>, si us plau selecciona articles. Els articles es comprenen com a un treball, dit d'un altre manera, una entitat intelecual i artística de contingut. Per tant, l'article es l'objecte en el que el DOI de CrossRef es basarà per a l'exportació i el registre.]]></message>
 </locale>

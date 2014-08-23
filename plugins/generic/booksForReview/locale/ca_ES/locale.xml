@@ -191,4 +191,5 @@
 	<message key="plugins.generic.booksForReview.field.title">Títol</message>
 	<message key="plugins.generic.booksForReview.field.description">Descripció</message>
 
+	<message key="plugins.generic.booksForReview.reminderTask.name">Recordatori de llibres per revisar</message>
 </locale>

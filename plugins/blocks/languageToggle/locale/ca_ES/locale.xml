@@ -15,4 +15,5 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.languageToggle.displayName">Bloc de commutació de llengües</message>
 	<message key="plugins.block.languageToggle.description">Aquest mòdul proporciona un commutador de llengües a la barra lateral.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Escull llengüa</message>
 </locale> 
