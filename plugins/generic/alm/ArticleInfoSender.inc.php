@@ -85,6 +85,10 @@ class ArticleInfoSender extends ScheduledTask {
 			}
 		}
 
+		if (empty($journals)) {
+			$this->addExecutionLogEntry(__('plugins.generics.alm.senderTask.warning.noJournal'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+		}
+
 		return true;
 	}
 
@@ -101,7 +105,7 @@ class ArticleInfoSender extends ScheduledTask {
 		$journals = array();
 		while($journal =& $journalFactory->next()) {
 			$journalId = $journal->getId();
-			if (!$plugin->getSetting($journalId, 'enabled')) {
+			if (!$plugin->getSetting($journalId, 'enabled') || !$plugin->getSetting($journalId, 'depositArticles')) {
 				unset($journal);
 				continue;
 			}

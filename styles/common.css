@@ -203,41 +203,43 @@ table.announcementsMore td {
  * Table of contents
  */
 
-h4.tocSectionTitle {
+.tocArticle {
+	width: 100%;
+	padding: 5px 0;
 }
 
-table.tocArticle {
+.tocArticleCoverImage {
+	display:none;
+}
+.tocArticleCoverImage.showCoverImage {
+	display: table-cell;
+	width: 15%;
+}
+.tocCoverImage {
+	width: 100%;
+}
+.tocCoverImage img {
+	border: 0;
 	width: 100%;
 }
 
-table.tocArticle td.tocTitle {
-	width: 70%;
-	height: 100%;
+.tocArticleTitleAuthors {
+	width: 80%;
+}
+.tocArticleTitleAuthors.showCoverImage {
+	width: 65%;
+	padding-left: 10px;
+}
+.tocAuthors {
+	padding-left: 10px;
 }
 
-table.tocArticle td.tocGalleys {
-	width: 30%;
+.tocArticleGalleysPages {
+	width: 20%;
+}
+.tocGalleys, .tocPages {
 	text-align: right;
 }
-
-table.tocArticle td.tocAuthors {
-	padding-left: 30px;
-	font-style: italic;
-	vertical-align: top;
-}
-
-table.tocArticle td.tocPages {
-	text-align: right;
-	vertical-align: top;
-}
-
-.tocArticleCoverImage img {
-	border: 0;
-	float: left;
-	width: 100px;
-	margin: 0 1em 1em 0;
-}
-
 
 /**
  * Homepage image

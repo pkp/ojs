@@ -26,6 +26,7 @@
 	<message key="plugins.generic.usageStats.loadDataError">Couldn't load data extracted from file {$file}. The error was: {$error}. The file was moved to stage again.</message>
 	<message key="plugins.generic.usageStats.displayName">Usage Statistics</message>
 	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Usage statistics plugin is disabled. No log files processed.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS usage statistics report</message>
 	<message key="plugins.reports.usageStats.report.description">OJS default usage statistics report (COUNTER ready)</message>

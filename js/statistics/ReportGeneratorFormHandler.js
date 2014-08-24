@@ -321,7 +321,8 @@
 			window.location = data.reportUrl;
 		}
 
-		return this.parent('handleResponse', formElement, jsonData);
+		return /** @type {boolean} */ this.parent(
+				'handleResponse', formElement, jsonData);
 	};
 
 
@@ -416,9 +417,8 @@
 	/*jslint unparam: true*/
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			updateArticleSelectCallback_ = function(ajaxContext, jsonData) {
-		var $articleSelectElement, limit, content, i;
-		/** @type {{content: string}|Object|boolean|null} handledJson */
-		var handledJson;
+		var $articleSelectElement, limit, content, i,
+				/** @type {{content: string}|Object|boolean|null} */ handledJson;
 		$articleSelectElement = this.$articleSelectElement_;
 
 		handledJson = this.handleJson(jsonData);
@@ -504,9 +504,8 @@
 	/*jslint unparam: true*/
 	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
 			updateRegionSelectCallback_ = function(ajaxContext, jsonData) {
-		var $regionSelectElement, limit, content, i;
-		/** @type {{content: string}|Object|boolean|null} handledJson */
-		var handledJson;
+		var $regionSelectElement, limit, content, i,
+				/** @type {{content: string}|Object|boolean|null} */ handledJson;
 		$regionSelectElement = this.$regionSelectElement_;
 
 		$regionSelectElement.empty();

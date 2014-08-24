@@ -75,7 +75,7 @@ class GiftsHandler extends Handler {
 		}
 
 		import('classes.subscription.form.GiftIndividualSubscriptionForm');
-		$giftSubscriptionForm = new GiftIndividualSubscriptionForm($buyerUserId);
+		$giftSubscriptionForm = new GiftIndividualSubscriptionForm($request, $buyerUserId);
 		$giftSubscriptionForm->readInputData();
 
 		if ($giftSubscriptionForm->validate()) {

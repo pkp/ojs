@@ -16,15 +16,20 @@ import('lib.pkp.classes.handler.validation.HandlerValidator');
 
 class HandlerValidatorSubmissionComment extends HandlerValidator {
 	var $commentId;
+	var $user;
+
 	/**
 	 * Constructor.
 	 * @param $handler Handler the associated form
-	 * @param $roles array of role id's 
-	 * @param $all bool flag for whether all roles must exist or just 1
+	 * @param $commentId int
+	 * @param $user object Optional user
 	 */	 
-	function HandlerValidatorSubmissionComment(&$handler, $commentId) {
+	function HandlerValidatorSubmissionComment(&$handler, $commentId, $user = null) {
 		parent::HandlerValidator($handler);
+
 		$this->commentId = $commentId;
+		if ($user) $this->user =& $user;
+		else $this->user =& Request::getUser();
 	}
 
 	/**
@@ -36,14 +41,12 @@ class HandlerValidatorSubmissionComment extends HandlerValidator {
 		$isValid = true;
 
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$user =& Request::getUser();
-
 		$comment =& $articleCommentDao->getArticleCommentById($this->commentId);
 
 		if ($comment == null) {
 			$isValid = false;
 
-		} else if ($comment->getAuthorId() != $user->getId()) {
+		} else if ($comment->getAuthorId() != $this->user->getId()) {
 			$isValid = false;
 		}
 
