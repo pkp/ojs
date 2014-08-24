@@ -57,6 +57,10 @@ define('PLN_PLUGIN_DEPOSIT_SUPPORTED_OBJECTS', serialize(array(
 )));
 
 define('PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED','plugins.generic.pln.notifications.terms_updated');
+define('PLN_PLUGIN_NOTIFICATION_ISSN_MISSING','plugins.generic.pln.notifications.issn_missing');
+define('PLN_PLUGIN_NOTIFICATION_HTTP_ERROR','plugins.generic.pln.notifications.http_error');
+
+
 
 class PLNPlugin extends GenericPlugin {
 
@@ -73,30 +77,28 @@ class PLNPlugin extends GenericPlugin {
 	function register($category, $path) {
 	
 		$success = parent::register($category, $path);
-	
+		
 		$this->registerDAOs();
-	
+		
 		// Delete all plug-in data for a journal when the journal is deleted
-		HookRegistry::register('JournalDAO::deleteJournalById', array(&$this, 'callbackDeleteJournalById'));
+		HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'callbackDeleteJournalById'));
 		
-		// Have Acron add our task to its task
-		HookRegistry::register('AcronPlugin::parseCronTab', array(&$this, 'callbackParseCronTab'));
+		HookRegistry::register('Templates::Manager::Setup::JournalArchiving', array($this, 'callbackJournalArchivingSetup'));
 		
-		if ($success && $this->getEnabled()) {
+		if ($success) {
+
+			// Have Acron add our task to its task
+			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 			
-			$export_plugin =& PluginRegistry::loadPlugin('importexport','native');
+			HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
 			
-			HookRegistry::register('LoadHandler', array(&$this, 'setupPublicHandler'));
+			HookRegistry::register('TemplateManager::display',array($this, 'callbackTemplateDisplay'));
 			
-			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackTemplateDisplay'));
-			
-			HookRegistry::register('NotificationManager::getNotificationContents', array(&$this, 'callbackNotificationContents'));
-			
-			return true;
+			HookRegistry::register('NotificationManager::getNotificationContents', array($this, 'callbackNotificationContents'));
 
 		}
-		
-		return false;
+
+		return $success;
 	}
 
 	function registerDAOs() {
@@ -208,10 +210,20 @@ class PLNPlugin extends GenericPlugin {
 	 * @see AcronPlugin::parseCronTab()
 	 */
 	function callbackParseCronTab($hookName, $args) {
-		
-		$taskFilesPath =& $args[0];
-		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'xml' . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
-
+		if ($this->getEnabled()) {
+			$taskFilesPath =& $args[0];
+			$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'xml' . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
+			return false;
+		}
+	}
+	
+	function callbackJournalArchivingSetup($hookName, $args) {
+		$smarty =& $args[1];
+		$output =& $args[2];
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$output .= $templateMgr->fetch($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'setup.tpl');
+			
 		return false;
 	}
 
@@ -222,15 +234,45 @@ class PLNPlugin extends GenericPlugin {
 	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function callbackNotificationContents($hookName, $args) {
-		$notification =& $args[0];
-		$message =& $args[1];
+		if ($this->getEnabled()) {
+			$notification =& $args[0];
+			$message =& $args[1];
+	
+			$type = $notification->getType();
+			assert(isset($type));
+			switch ($type) {
+				case PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED:
+					$message = __(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
+					break;
+				case PLN_PLUGIN_NOTIFICATION_ISSN_MISSING:
+					$message = __(PLN_PLUGIN_NOTIFICATION_ISSN_MISSING);
+					break;
+				case PLN_PLUGIN_NOTIFICATION_HTTP_ERROR:
+					$message = __(PLN_PLUGIN_NOTIFICATION_HTTP_ERROR);
+					break;
+			}
+		}
+	}
 
-		$type = $notification->getType();
-		assert(isset($type));
-		switch ($type) {
-			case PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED:
-				$message = __(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
-				break;
+	/**
+	 * @see PKPPageRouter::route()
+	 * @param $hookName string Hook name
+	 * @param $args array Array of hook parameters
+	 * @return boolean false to continue processing subsequent hooks
+	 */
+	function callbackLoadHandler($hookName, $args) {
+		$page =& $args[0];
+		if ($page == 'pln') {
+			$op =& $args[1];
+			if ($op) {
+				if (in_array($op, array('deposits'))) {
+					define('HANDLER_CLASS', 'PLNHandler');
+					define('PLN_PLUGIN_NAME', $this->getName());
+					AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+					$handlerFile =& $args[2];
+					$handlerFile = $this->getHandlerPath() . DIRECTORY_SEPARATOR . 'PLNHandler.inc.php';
+				}
+			}
 		}
 	}
 
@@ -239,46 +281,45 @@ class PLNPlugin extends GenericPlugin {
 	*/
 	function manage($verb, $args, &$message, &$messageParams) {
 		
-		$returner = parent::manage($verb, $args, $message, $messageParams);
-		if (!$returner) return false;
+		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
 		
 		$journal =& Request::getJournal();
-		
-		$this->import('classes.form.SettingsForm');
 
 		switch($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-				$settingsForm = new SettingsForm($this, $journal->getId());
+				$this->import('classes.form.PLNSettingsForm');
+				$form = new PLNSettingsForm($this, $journal->getId());
 				
 				if (Request::getUserVar('save')) {
-
-					$settingsForm->readInputData();
-					
-					if ($settingsForm->validate()) {
-						$settingsForm->execute();
+					$form->readInputData();
+					if ($form->validate()) {
+						$form->execute();
 						$message = NOTIFICATION_TYPE_SUCCESS;
 						$messageParams = array('contents' => __('plugins.generic.pln.settings.saved'));
 						return false;
 					} else {
-						$settingsForm->display();
-						return false;
+						$this->setBreadcrumbs(true);
+						$form->display();
 					}
 				} else {
 					if (Request::getUserVar('refresh')) {
-						$this->getServiceDocument($journal->getId());
-					}
-					$settingsForm->initData();
-					$settingsForm->validate();
+							$this->getServiceDocument($journal->getId());
+					} 
+					$this->setBreadcrumbs('settings');
+					$form->initData();
+					$form->display();
 				}
-				$this->setBreadCrumbs('settings');
-				$settingsForm->display();
-				break;
+				return true;
+			case 'status':
+				$templateMgr =& TemplateManager::getManager();
+				$this->setBreadCrumbs('status');
+				return true;
 			default:
 				return false;
 		}
-		return true;
+
 	}
 	
 	/**
@@ -289,8 +330,29 @@ class PLNPlugin extends GenericPlugin {
 		$verbs = parent::getManagementVerbs();
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', __('plugins.generic.pln.settings'));
+			$verbs[] = array('status', __('plugins.generic.pln.status'));
 		}
 		return $verbs;
+	}
+
+	/**
+	 * Extend the {url ...} smarty to support this plugin.
+	 */
+	function smartyPluginUrl($params, &$smarty) {
+		$path = array($this->getCategory(), $this->getName());
+		if (is_array($params['path'])) {
+			$params['path'] = array_merge($path, $params['path']);
+		} elseif (!empty($params['path'])) {
+			$params['path'] = array_merge($path, array($params['path']));
+		} else {
+			$params['path'] = $path;
+		}
+
+		if (!empty($params['id'])) {
+			$params['path'] = array_merge($params['path'], array($params['id']));
+			unset($params['id']);
+		}
+		return $smarty->smartyUrl($params, $smarty);
 	}
 
 	/**
@@ -321,31 +383,6 @@ class PLNPlugin extends GenericPlugin {
 		);
 
 		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}
-
-	/**
-	 * Hook callback: register pages to display terms of use & data policy
-	 * @see PKPPageRouter::route()
-	 */
-	function setupPublicHandler($hookName, $params) {
-		
-		$page =& $params[0];
-		if ($page == 'pln') {
-			$op =& $params[1];
-			if ($op) {
-				$publicPages = array(
-					'status',
-					'deposits'
-				);
-				if (in_array($op, $publicPages)) {
-					define('HANDLER_CLASS', 'PLNHandler');
-					define('PLN_PLUGIN_NAME', $this->getName());
-					AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
-					$handlerFile =& $params[2];
-					$handlerFile = $this->getHandlerPath() . DIRECTORY_SEPARATOR . 'PLNHandler.inc.php';
-				}
-			}
-		}
 	}
 
 	function termsAgreed($journal_id) {
@@ -427,23 +464,6 @@ class PLNPlugin extends GenericPlugin {
 		foreach ($journal_managers->toArray() as $journal_manager) {
 			$notificationManager->createTrivialNotification($journal_manager->getId(), $notificationType);
 		}
-	}
-
-	/**
-	 * Transfer a deposit document to the appropriate collection url
-	 * @param $deposit Deposit The deposit to transfer
-	 */
-	function postAtomDocument($deposit,$atom_file) {
-		
-		$pln_networks = unserialize(PLN_PLUGIN_NETWORKS);
-		$url = 'http://' . $pln_networks[$this->getSetting($deposit->getJournalID(), 'pln_network')] . PLN_PLUGIN_COL_IRI;
-		
-		$result = $this->_curlPostFile(
-			$url . '/' . $this->getSetting($deposit->getJournalID(), 'journal_uuid'),
-			$atom_file
-		);
-		
-		return $result['status'];
 	}
 
 	function _curlGet($url,$headers=array()) {

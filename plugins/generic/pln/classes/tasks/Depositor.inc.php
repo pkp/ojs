@@ -26,7 +26,6 @@ class Depositor extends ScheduledTask {
 	function Depositor($args) {
 		PluginRegistry::loadCategory('generic');
 		$this->_plugin =& PluginRegistry::getPlugin('generic', 'plnplugin');
-				
 		parent::ScheduledTask($args);
 	}
 
@@ -41,7 +40,7 @@ class Depositor extends ScheduledTask {
 	 * @see ScheduledTask::executeActions()
 	 */
 	function executeActions() {
-			
+
 		if (!$this->_plugin) return false;
 
 		$this->_plugin->import('classes.Deposit');
@@ -54,7 +53,7 @@ class Depositor extends ScheduledTask {
 		
 		// For all journals
 		while ($journal =& $journals->next()) {
-
+			
 			// if the plugin isn't enabled for this journal, skip it
 			if (!$this->_plugin->getSetting($journal->getId(), 'enabled')) continue;
 			
@@ -62,15 +61,27 @@ class Depositor extends ScheduledTask {
 			$sd_result = $this->_plugin->getServiceDocument($journal->getId());
 			
 			// if for some reason we didn't get a valid reponse, skip this journal
-			if ($sd_result != PLN_PLUGIN_HTTP_STATUS_OK) continue;
+			if ($sd_result != PLN_PLUGIN_HTTP_STATUS_OK) {
+				error_log($this->getName().": ".__(PLN_PLUGIN_NOTIFICATION_HTTP_ERROR));
+				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_HTTP_ERROR);
+				continue;
+			}
 			
 			// if the terms haven't been agreed to, skip transfer
-			if (!$this->_plugin->termsAgreed($journal->getId())) continue;
+			if (!$this->_plugin->termsAgreed($journal->getId())) {
+				error_log($this->getName().": ".__(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED));
+				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
+				continue;
+			}
 			
 			// it's necessary that the journal have an issn set
 			if (!$journal->getSetting('onlineIssn') &&
 				!$journal->getSetting('printIssn') &&
-				!$journal->getSetting('issn')) continue;
+				!$journal->getSetting('issn')) {
+				error_log($this->getName().": ".__(PLN_PLUGIN_NOTIFICATION_ISSN_MISSING));
+				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_ISSN_MISSING);	
+				continue;
+			}
 			
 			// update the statuses of existing deposits
 			$this->_processStatusUpdates($journal);
