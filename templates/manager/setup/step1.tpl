@@ -144,6 +144,13 @@
 <div id="setupEmails">
 <h3>1.4 {translate key="manager.setup.emails"}</h3>
 <table width="100%" class="data">
+	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailHeaderDescription"}<br />&nbsp;</td></tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="emailHeader" key="manager.setup.emailHeader"}</td>
+		<td class="value">
+			<textarea name="emailHeader" id="emailHeader" rows="3" cols="60" class="textArea">{$emailHeader|escape}</textarea>
+		</td>
+	</tr>
 	<tr valign="top"><td colspan="2">{translate key="manager.setup.emailSignatureDescription"}<br />&nbsp;</td></tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="emailSignature" key="manager.setup.emailSignature"}</td>

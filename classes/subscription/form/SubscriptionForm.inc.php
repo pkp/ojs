@@ -303,7 +303,7 @@ class SubscriptionForm extends Form {
 
 		import('classes.mail.MailTemplate');
 		$mail = new MailTemplate($mailTemplateKey);
-		$mail->setFrom($subscriptionEmail, $subscriptionName);
+		$mail->setReplyTo($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
 		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
