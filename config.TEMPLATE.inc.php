@@ -301,6 +301,11 @@ allowed_html = "<a href|target> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> 
 ; Default envelope sender to use if none is specified elsewhere
 ; default_envelope_sender = my_address@my_host.com
 
+; Force the default envelope sender (if present)
+; This is useful if setting up a site-wide noreply address
+; The reply-to field will be set with the reply-to or from address.
+; force_default_envelope_sender = Off
+
 ; Enable attachments in the various "Send Email" pages.
 ; (Disabling here will not disable attachments on features that
 ; require them, e.g. attachment-based reviews)

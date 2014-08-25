@@ -137,10 +137,6 @@ function deleteAttachment(fileId) {
 	<td colspan="2">&nbsp;</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="email.from"}</td>
-	<td class="value">{$from|escape}</td>
-</tr>
-<tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>
 	<td width="80%" class="value"><input type="text" id="subject" name="subject" value="{$subject|escape}" size="60" maxlength="120" class="textField" /></td>
 </tr>

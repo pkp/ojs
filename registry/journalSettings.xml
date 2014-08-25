@@ -52,6 +52,10 @@
 		<value>{translate key="default.journalSettings.copyeditInstructions"}</value>
 	</setting>
 	<setting type="string" locale="0">
+		<name>emailHeader</name>
+		<value>{translate key="default.journalSettings.emailHeader"}</value>
+	</setting>
+	<setting type="string" locale="0">
 		<name>emailSignature</name>
 		<value>{translate key="default.journalSettings.emailSignature"}</value>
 	</setting>
