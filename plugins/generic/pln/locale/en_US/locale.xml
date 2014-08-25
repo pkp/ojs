@@ -14,25 +14,13 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.pln">PKP PLN Plugin</message>
 	<message key="plugins.generic.pln.description">The PKP PLN plugin will deposit your published content into the PKP Public LOCKSS Network for preservation.</message>
+	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Private LOCKSS Network</strong><br /><br />Please read the <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">overview of the PKP PLN</a> and complete <a href="{$plnPluginURL}">this simple form</a>. This option will enable inclusion of your journal in the Public Knowledge Project Private LOCKSS Network (PKP PLN).]]></message>
 	
 	<message key="plugins.generic.pln.settings">Settings</message>
 	<message key="plugins.generic.pln.settings.saved">PLN settings saved.</message>
-	<message key="plugins.generic.pln.settings.pln_network">Network</message>
-	<message key="plugins.generic.pln.settings.pln_network_help">Choose a network to which you wish to deposit.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use">Terms of Use</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_help">Before depositing to a network it is necessary to agree to all of its terms of use.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_agree">I Agree</message>
-	<message key="plugins.generic.pln.settings.object_type">Deposit Object Type</message>
-	<message key="plugins.generic.pln.settings.object_type_help">Depending on your publication methods (continuous publication, for instance) you may wish to choose to deposit articles rather than complete issues.</message>
-	<message key="plugins.generic.pln.settings.object_threshold">Object Count</message>
-	<message key="plugins.generic.pln.settings.object_threshold_help">Depending on your rate of publication or the size of your content you may wish to deposit less or more content per deposit.</message>
-	<message key="plugins.generic.pln.settings.curl_support">Curl Support</message>
-	<message key="plugins.generic.pln.settings.curl_support_help">Curl is needed to communicate with the PLN.</message>
-	<message key="plugins.generic.pln.settings.zip_support">Zip Support</message>
-	<message key="plugins.generic.pln.settings.zip_support_help">Zip support is needed to compress your content for transmission.</message>
-	<message key="plugins.generic.pln.settings.installed">Installed</message>
-	<message key="plugins.generic.pln.settings.missing">Missing</message>
-	
 	<message key="plugins.generic.pln.settings.refresh">Refresh</message>
 	<message key="plugins.generic.pln.settings.refresh_help">If for some reason there are no terms listed above or you know these terms have been updated, click Refresh to update the terms listed above.</message>
 	
@@ -43,6 +31,8 @@
 	
 	<message key="plugins.generic.pln.objects.article">Article</message>
 	<message key="plugins.generic.pln.objects.issue">Issue</message>
+
+	<message key="plugins.generic.pln.status">Status</message>
 
 	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Depositor Task</message>
 	
