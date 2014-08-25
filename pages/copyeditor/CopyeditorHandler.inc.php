@@ -71,6 +71,12 @@ class CopyeditorHandler extends Handler {
 
 		$submissions = $copyeditorSubmissionDao->getCopyeditorSubmissionsByCopyeditorId($user->getId(), $journal->getId(), $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $active, $rangeInfo, $sort, $sortDirection);
 
+		// If only result is returned from a search, fast-forward to it
+		if ($search && $submissions && $submissions->getCount() == 1) {
+			$submission =& $submissions->next();
+			$request->redirect(null, null, 'submission', array($submission->getId()));
+		}
+
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign_by_ref('submissions', $submissions);

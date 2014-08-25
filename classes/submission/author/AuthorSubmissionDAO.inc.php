@@ -161,6 +161,8 @@ class AuthorSubmissionDAO extends DAO {
 
 	/**
 	 * Get all author submissions for an author.
+	 * FIXME: Beware of bug #8872 WRT this function. There is currently
+	 * no author search form so the search options here are dead code.
 	 * @param $authorId int
 	 * @return DAOResultFactory continaing AuthorSubmissions
 	 */
