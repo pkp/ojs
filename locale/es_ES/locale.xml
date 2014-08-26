@@ -1019,4 +1019,18 @@
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Lista de monedas “{$filename}” cargada de XML</message>
 	<message key="debug.notes.helpMappingLoad">El archivo de asignación de ayuda XML {$filename} se ha vuelto a cargar en busca de {$id}.</message>
+	<message key="submission.permissions">Permisos</message>
+	<message key="submission.license">Licencia</message>
+	<message key="submission.copyright">Copyright</message>
+	<message key="submission.copyrightHolder">Titular del copyright</message>
+	<message key="submission.copyrightYear">Año del copyright</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Por favor, proporciona una URL remota vàlida (inclou http://).</message>
+	<message key="submission.licenseURL">URL de la licencia</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Reconocimiento-NoComercial-SinObraDerivada 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Reconocimiento-NoComercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Reconocimiento-NoComercial-CompartirIgual 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Reconocimiento-SinObraDerivada 4.0</message>
+	<message key="submission.license.cc.by4">CC Reconocimiento 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Reconeixement-CompartirIgual 4.0</message>
 </locale> 
