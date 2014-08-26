@@ -20,6 +20,14 @@ class CreateJournalTest extends WebTestCase {
 	static $fullTitle = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
 
 	/**
+	 * Get a list of affected tables.
+	 * @return array A list of tables to backup and restore.
+	 */
+	protected function getAffectedTables() {
+		return array('articles', 'signoffs', 'email_log', 'event_log');
+	}
+
+	/**
 	 * Test editor submission search
 	 */
 	function testEditorSearch() {
