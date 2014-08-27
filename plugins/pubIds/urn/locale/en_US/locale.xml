@@ -24,14 +24,12 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN Prefix</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description"><![CDATA[The URN prefix is the fix, never changing part of the URN (e.g. "urn:nbn:de:0000-").]]></message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN Suffix</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">Use default patterns.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys <br />%j.v%vi%i.%a.s%s for supplementary files.]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Use the pattern entered below to generate URN suffixes. Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, %g for the OJS galley ID, %s for the OJS supplementary file ID, %p for the page number and %x for "Custom Identifier" (must be enabled in Setup 4.3).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default"><![CDATA[Use default patterns.<br />%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys <br />%j.v%vi%i.%a.s%s for supplementary files.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern"><![CDATA[Use the pattern entered below to generate URN suffixes. Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, %g for the OJS galley ID, %s for the OJS supplementary file ID, %p for the page number and %x for "Custom Identifier" (must be enabled in Setup 4.3).<br />For example, vol%viss%ipp%p could create the URN suffix "vol3iss2pp230".]]></message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">for issues</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">for articles</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">for galleys</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">for supplementary files.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">For example, vol%viss%ipp%p could create the URN suffix "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">A URN suffix can take any form, but must be unique for each published item.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Use the "Custom Identifier" for published items as the URN suffix (must be enabled in Setup 4.3). This is the same identifier that will be used for public URLs.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Enter an individual URN suffix for each published item independent and different from the "Custom Identifier" mentioned in the previous option. You'll find an additional URN input field on each item's metadata page.</message>
@@ -47,11 +45,11 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(e.g. http://nbn-resolving.de/)</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.journalContent">Journal Content</message>
-	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Choose the objects the URNs should be assigned to.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URNs will be assigned to issues.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">URNs will be assigned to articles.</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">URNs will be assigned to galleys (e.g. HTML or PDF files).</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">URNs will be assigned to supplementary files.</message>
+	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Please select the publishing objects that will have Uniform Resource Name (URN) assigned:</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Issues</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">Articles</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">Galleys</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">Supplementary Files</message>
 
 	<!-- custom URN suffix for an object -->
 	<message key="plugins.pubIds.urn.metadata">URN Metadata</message>

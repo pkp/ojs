@@ -28,25 +28,25 @@
 			{else}
 				{assign var="checked" value=false}
 			{/if}
-			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableIssueDoi" id="enableIssueDoi" checked=$checked maxlength="40" checked=$checked}
+			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableIssueDoi" id="enableIssueDoi" maxlength="40" checked=$checked}
 			{if $enableArticleDoi}
 				{assign var="checked" value=true}
 			{else}
 				{assign var="checked" value=false}
 			{/if}
-			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableArticleDoi" id="enableArticleDoi" checked=$checked maxlength="40" checked=$checked}
+			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableArticleDoi" id="enableArticleDoi" maxlength="40" checked=$checked}
 			{if $enableGalleyDoi}
 				{assign var="checked" value=true}
 			{else}
 				{assign var="checked" value=false}
 			{/if}
-			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableGalleyDoi" id="enableGalleyDoi" checked=$checked maxlength="40" checked=$checked}
+			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableGalleyDoi" id="enableGalleyDoi" maxlength="40" checked=$checked}
 			{if $enableSuppFileDoi}
 				{assign var="checked" value=true}
 			{else}
 				{assign var="checked" value=false}
 			{/if}
-			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableSuppFileDoi" id="enableSuppFileDoi" checked=$checked maxlength="40" checked=$checked}
+			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableSuppFileDoi" id="enableSuppFileDoi" maxlength="40" checked=$checked}
 		{/fbvFormSection}
 	{/fbvFormArea}
 		<table class="data">
