@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file tests/regression/8872Test.php
+ * @file tests/regression/Bug8872Test.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class 8872Test
+ * @class Bug8872Test
  * @ingroup tests_regression
  *
  * @brief Regression test for http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=8872
@@ -15,7 +15,7 @@
 
 import('lib.pkp.tests.WebTestCase');
 
-class CreateJournalTest extends WebTestCase {
+class Bug8872Test extends WebTestCase {
 	/** @var $fullTitle Full title of test submission */
 	static $fullTitle = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
 
