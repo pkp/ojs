@@ -16,4 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Ferramentas de navegação</message>
 	<message key="plugins.block.navigation.description">Este plugin oferece links de navegação na barra lateral.</message>
 	<message key="plugins.block.navigation.journalContent">Conteúdo da revista</message>
+	<message key="plugins.block.navigation.searchScope">Escopo da Busca</message>
 </locale>
