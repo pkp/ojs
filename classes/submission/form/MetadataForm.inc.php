@@ -448,9 +448,9 @@ class MetadataForm extends Form {
 		}
 
 		if ($this->isEditor) {
-			$article->setStoredCopyrightHolder($this->getData('copyrightHolder'), null);
-			$article->setStoredCopyrightYear($this->getData('copyrightYear'));
-			$article->setStoredLicenseURL($this->getData('licenseURL'));
+			$article->setCopyrightHolder($this->getData('copyrightHolder'), null);
+			$article->setCopyrightYear($this->getData('copyrightYear'));
+			$article->setLicenseURL($this->getData('licenseURL'));
 		}
 
 		parent::execute();

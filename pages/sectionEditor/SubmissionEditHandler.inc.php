@@ -2607,6 +2607,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);
+
+		// Call initialize permissions again to check if copyright year needs to be initialized.
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article = $articleDao->getArticle($articleId);
+		$article->initializePermissions();
+		$articleDao->updateLocaleFields($article);
+
 		$articleSearchIndex->articleChangesFinished();
 
 		$request->redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');

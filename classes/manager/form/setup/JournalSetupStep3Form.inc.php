@@ -34,6 +34,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 				'copyrightNoticeAgree' => 'bool',
 				'copyrightHolderType' => 'string',
 				'copyrightHolderOther' => 'string',
+				'copyrightYearBasis' => 'string',
 				'requireAuthorCompetingInterests' => 'bool',
 				'requireReviewerCompetingInterests' => 'bool',
 				'competingInterestGuidelines' => 'string',

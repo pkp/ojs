@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="manager.setup.guidingSubmissions"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form id="setupForm" method="post" action="{url op="saveSetup" path="3"}">
+<form name="setupForm" id="setupForm" method="post" action="{url op="saveSetup" path="3"}">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
@@ -99,6 +99,19 @@
 		</td>
 	</tr>
 	<tr valign="top">
+		<td width="20%" class="label" rowspan="2">
+			{translate key="manager.setup.copyrightYearBasis"}
+		</td>
+		<td width="80%" class="data">
+			<input type="radio" value="issue" name="copyrightYearBasis" {if $copyrightYearBasis=="issue"}checked="checked" {/if}id="copyrightYearBasis-issue" />&nbsp;<label for="copyrightYearBasis-issue">{translate key="issue.issue"}</label> ({translate key="manager.setup.copyrightYearBasis.Issue"})
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="data">
+			<input type="radio" value="article" name="copyrightYearBasis" {if $copyrightYearBasis=="article"}checked="checked" {/if}id="copyrightYearBasis-article" />&nbsp;<label for="copyrightYearBasis-article">{translate key="article.article"}</label> ({translate key="manager.setup.copyrightYearBasis.Article"})
+		</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="manager.setup.permissions.priorAgreement"}</td>
 		<td class="label">
 			<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />&nbsp;<label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label>
@@ -138,7 +151,7 @@
 </table>
 
 <p>{translate key="manager.setup.resetPermissions.description"}</p>
-<p><input type="button" value="{translate key="manager.setup.resetPermissions"}" class="button" onclick="confirmAction('{url op="resetPermissions"}', '{translate|escape:"jsparam" key="manager.setup.confirmResetLicense"}')" /></p>
+<p><input id="resetPermissionsButton" type="button" value="{translate key="manager.setup.resetPermissions"}" class="button" /></p>
 </div>
 
 <div class="separator"></div>
@@ -410,6 +423,48 @@
 				if (checkboxState !== toggleState) {
 					$metaCitationsSetupBox.toggle(300);
 				}
+			});
+		});
+		
+		function permissionsValues() {
+			perm = ':';
+			licenseNames = ["copyrightYearBasis", "copyrightHolderType"];
+			for (l = 0; l < licenseNames.length; l++) {
+				ele = document.getElementsByName(licenseNames[l]);
+				for (i = 0; i < ele.length; i++) {
+					if (ele[i].type == 'radio') {
+						if (ele[i].checked) {
+							perm += ele[i].value + ':';
+							break;
+						}
+					} else {
+						perm += ele[i].value + ':';
+					}
+				}
+			};
+			licenseIds = ["copyrightHolderOther", "licenseURL"];
+			for (l = 0; l < licenseIds.length; l++) {
+				ele = document.getElementById(licenseIds[l]);
+				if (ele) {
+					perm += ele.value + ':';
+				}
+			}
+			return perm;
+		}
+		var resetValues;
+		$(document).ready( function () {
+			resetValues = permissionsValues();
+			$('#resetPermissionsButton').click( function ( event ) {
+				if (resetValues == permissionsValues()) {
+					{/literal}
+					confirmAction('{url op="resetPermissions"}', '{translate|escape:"jsparam" key="manager.setup.confirmResetLicense"}');
+					{literal}
+				} else {
+					{/literal}
+					window.alert('{translate|escape:"jsparam" key="manager.setup.confirmResetLicenseChanged"}')
+					{literal}
+				}
+				event.preventDefault();
 			});
 		});
 	</script>{/literal}

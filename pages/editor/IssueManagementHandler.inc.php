@@ -911,6 +911,11 @@ class IssueManagementHandler extends EditorHandler {
 					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
 					$articleDao->updateArticle($article);
+					
+					// Call initialize permissions again to check if copyright year needs to be initialized.
+					$article->initializePermissions();
+					$articleDao->updateLocaleFields($article);
+				
 					if (!$articleSearchIndex) {
 						import('classes.search.ArticleSearchIndex');
 						$articleSearchIndex = new ArticleSearchIndex();

@@ -815,6 +815,12 @@ class NativeImportDom {
 			}
 		}
 		if ($hasErrors) return false;
+		
+		// Setup default copyright/license metadata after status is set and authors are attached.
+		// This handles the case where the XML is not providing it
+		$article->initializePermissions();
+		$articleDao->updateLocaleFields($article);
+		// TODO: provide for copyright/liceses metadata in XML and override the above defaults
 
 		// Create submission mangement records
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
