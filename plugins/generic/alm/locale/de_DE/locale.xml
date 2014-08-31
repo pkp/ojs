@@ -41,6 +41,7 @@
 
 	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">Das ALM-Plug-In ist aktiviert, aber ein gültiger DOI-Präfix muss im Setup zum Zeitschriftenpfad {$path} festgelegt werden, damit Artikelinformationen gesendet werden können.</message>
 	<message key="plugins.generic.alm.senderTask.warning.noApiKey">Das ALM-Plug-In ist aktiviert, aber es ist kein API-Key für den Zeitschriftenpfad {$path} definiert.</message>
+	<message key="plugins.generics.alm.senderTask.warning.noJournal">Das ALM-Plug-In ist in keiner Zeitschrift aktiviert. Es wurden keine Artikelinformationen gesendet.</message>
 	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Übermittlung von Artikelinformationen für Zeitschriftenpfad {$path} konnte nicht bestätigt werden. Der Server hat nicht geantwortet.</message>
 	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">Kein Ablieferungs-URL definiert.</message>
 	<message key="plugins.generic.alm.senderTask.error.returnError">Der Server hat ein Resultat geliefert: {$error}
