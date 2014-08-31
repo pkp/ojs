@@ -15,10 +15,12 @@
 	<message key="plugins.theme.custom.name">Plug-In für eine anpassbare Designvorlage</message>
 	<message key="plugins.theme.custom.description">Dieses Plug-In implementiert eine anpassbare Designvorlage.</message>
 	<message key="plugins.theme.custom.notWritable">HINWEIS: In die Stylesheet-Datei dieses Plug-Ins, "{$stylesheetFileLocation}", kann derzeit nicht geschrieben werden. Dies ist aber erforderlich, damit das Plug-In genutzt werden kann.</message>
+	<message key="plugins.theme.custom.notWritablePlugin">HINWEIS: Zeitschriftenbezogenes Stylesheet ist automatisch aktiviert worden, weil die Stylesheet-Datei dieses Plug-Ins,  "{$stylesheetFileLocation}" momentan nicht beschreibbar ist.</message>
 	<message key="plugins.theme.custom.settings">Einstellungen</message>
 	<message key="plugins.theme.custom.pickColour">Farbe auswählen</message>
 	<message key="plugins.theme.custom.header">Überschrift</message>
 	<message key="plugins.theme.custom.link">Link</message>
 	<message key="plugins.theme.custom.background">Hintergrund</message>
 	<message key="plugins.theme.custom.foreground">Vordergrund</message>
+	<message key="plugins.theme.custom.perJournal">Zeitschriftenbezogenes Stylesheet</message>
 </locale>
