@@ -26,6 +26,7 @@
 	<message key="plugins.generic.usageStats.loadDataError">Konnte keine extrahierten Daten aus Datei {$file} laden. Der Fehler lautete: {$error}. Die Datei wurde entfernt, um sie erneut zu bearbeiten.</message>
 	<message key="plugins.generic.usageStats.displayName">Nutzungsstatistik</message>
 	<message key="plugins.generic.usageStats.description">Zeigt Nutzungsstatistik zu Objekten an. Kann Server-Logdateien benutzen, um Statistiken zu extrahieren.</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Das Nutzungsstatistik-Plug-In ist deaktiviert. Es wurden keine Logdateien verarbeitet.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS-Nutzungsstatistik-Bericht</message>
 	<message key="plugins.reports.usageStats.report.description">OJS-Standardbericht zur Nutzungsstatistik (COUNTER-fähig)</message>
