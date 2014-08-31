@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/alm/locale/en_US/locale.xml
+  * @file plugins/generic/alm/locale/it_IT/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * ALM plugin localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 
 	<message key="plugins.generic.alm.displayName">ALM Plugin</message>
 	<message key="plugins.generic.alm.description">Plugin Article Level Metrics. Per utilizzare i servizi ALM, è necessario che gli articoli abbiano DOI registrati. questo requisito potrebbe mutare in futuro.</message>

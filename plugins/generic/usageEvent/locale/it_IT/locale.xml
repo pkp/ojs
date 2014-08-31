@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/usageEvent/locale/en_US/locale.xml
+  * plugins/generic/usageEvent/locale/it_IT/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.usageEvent.displayName">Usage event</message>
 	<message key="plugins.generic.usageEvent.description">Creates a hook that provides usage event in a defined format.</message>
 </locale>
