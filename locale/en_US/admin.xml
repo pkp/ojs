@@ -15,7 +15,7 @@
 	<message key="admin.hostedJournals">Hosted Journals</message>
 	<message key="admin.settings.journalRedirect">Journal redirect</message>
 	<message key="admin.settings.security">Security</message>
-	<message key="admin.settings.security.plugins">Prevent journal managers to install, update or delete plugins.</message>
+	<message key="admin.settings.security.plugins">Prevent journal managers from installing, updating or deleting plugins.</message>
 	<message key="admin.settings.options">Options</message>
 	<message key="admin.settings.useAlphalist">For sites with many journals, show an alphalist on the homepage allowing for quick alphabetical navigation between journals.</message>
 	<message key="admin.settings.usePaging">For sites with many journals, break the list of journals up into several pages.</message>
