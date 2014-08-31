@@ -14,6 +14,8 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="admin.hostedJournals">Zeitschriften auf dieser Website</message>
 	<message key="admin.settings.journalRedirect">Umleitung zu der Zeitschrift</message>
+	<message key="admin.settings.security">Sicherheit</message>
+	<message key="admin.settings.security.plugins">Unterbinde das Installieren, Aktualisieren oder Löschen von Plug-Ins durch Zeitschriftenverwalter/innen.</message>
 	<message key="admin.settings.options">Optionen</message>
 	<message key="admin.settings.useAlphalist">Zeige bei Installationen mit mehreren Zeitschriften eine alphabetische Liste auf der Startseite, um eine schnelle alphabetische Navigation zwischen den Zeitschriften zu ermöglichen.</message>
 	<message key="admin.settings.usePaging">Teile bei Installationen mit mehreren Zeitschriften die Liste der Zeitschriften auf mehrere Seiten auf.</message>
