@@ -17,7 +17,7 @@
 
 	<message key="plugins.importexport.duracloud.configuration">Configuración de DuraCloud</message>
 	<message key="plugins.importexport.duracloud.configuration.unconfigured.description">Actualmente no está registrado en una cuenta DuraCloud. Introduzca las credenciales a continuación. Ésto no se almacenará después de la sesión actual.</message>
-	<message key="plugins.importexport.duracloud.configuration.configured.description"><![CDATA[Está registrando DuraCloud en <a href="{$url}">{$escapedUrl}</a> con nombre de usuario "{$userName}". Estas credenciales no se almacenarán después de la sesión actual. Para eliminar las credenciales de inmediato, haga clic en <a href="{$logoutUrl}">cerrar sesión</a> de DuraCloud.]]></message>
+	<message key="plugins.importexport.duracloud.configuration.configured.description"><![CDATA[Está registrando DuraCloud en <a href="{$url}">{$escapedUrl}</a> con nombre de usuario "{$username}". Estas credenciales no se almacenarán después de la sesión actual. Para eliminar las credenciales de inmediato, haga clic en <a href="{$logoutUrl}">cerrar sesión</a> de DuraCloud.]]></message>
 	<message key="plugins.importexport.duracloud.configuration.urlRequired">Es necesaria una URL base válida de DuraCloud.</message>
 	<message key="plugins.importexport.duracloud.configuration.usernameRequired">Es necesario un nombre de usuario/a de DuraCloud.</message>
 	<message key="plugins.importexport.duracloud.configuration.passwordRequired">Es necesaria una contraseña de DuraCloud.</message>

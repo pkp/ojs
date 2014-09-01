@@ -735,7 +735,7 @@
 	<message key="about.sponsors">Patrocinadores</message>
 	<message key="about.contributors">Fuentes de ayuda</message>
 	<message key="about.onlineSubmissions">Envíos en línea</message>
-	<message key="about.onlineSubmissions.haveAccount">¿Ya tiene nombre de usuario/a y contraseña para {$journalTitle?}?</message>
+	<message key="about.onlineSubmissions.haveAccount">¿Ya tiene nombre de usuario/a y contraseña para {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Ir a Iniciar sesión</message>
 	<message key="about.onlineSubmissions.needAccount">Necesita un nombre de usuario/a y/o contraseña?</message>
 	<message key="about.onlineSubmissions.registration">Ir a Registro</message>
