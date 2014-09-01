@@ -365,8 +365,22 @@
 	</email_text>
 	<email_text key="GIFT_USER_REGISTER">
 		<subject>Reclame su regalo: Detalles de inicio de sesión</subject>
-		<body>Estimado/a {$recipientFirstName}, {$buyerFullName} quiere compartir un regalo con usted en {$giftJournalName}: {$giftDetails} Para reclamar su regalo, inicie sesión en el sitio web de la revista en {$giftUrl} Su nombre de usuario/a: {$username} Su contraseña: {$contraseña} Una vez se haya registrado, podrá cambiar su contraseña cuando lo desee. Esperamos que el regalo sea de su agrado. {$giftContactSignature}
-</body>
+		<body>Estimado/a {$recipientFirstName},
+
+{$buyerFullName} quiere compartir un regalo con usted en {$giftJournalName}:
+
+{$giftDetails}
+
+Para reclamar su regalo, inicie sesión en el sitio web de la revista en {$giftUrl} 
+
+Su nombre de usuario/a: {$username}
+Su contraseña: {$password}
+
+Una vez se haya registrado, podrá cambiar su contraseña cuando lo desee. 
+
+Esperamos que el regalo sea de su agrado.
+
+{$giftContactSignature}</body>
 		<description>Este correo electrónico notifica al destinatario/a de un regalo los detalles de inicio de sesión de su cuenta nueva.</description>
 	</email_text>
 	<email_text key="GIFT_USER_LOGIN">
