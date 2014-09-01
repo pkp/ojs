@@ -30,4 +30,7 @@
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Estadísticas de Open Journal Systems (COUNTER preparado)</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">La tarea no ha generado ningún registro.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">La linea {$lineNumber} del fichero {$file} contiene una url a la que no se le puede eliminar la url base de origen.</message>
+	<message key="plugins.generic.usageStats.loadDataError">No se pueden cargar los datos esperados del fichero {$file}. El error es: {$error}. El fichero se a movido de nuevo a su origen.</message>
 </locale> 

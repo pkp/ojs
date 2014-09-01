@@ -297,7 +297,6 @@
 	<message key="manager.setup.guidingSubmissions">Paso 3. Guiar envíos</message>
 	<message key="manager.setup.homepageImage">Imagen de la página inicial</message>
 	<message key="manager.setup.homepageImageDescription">Añada una imagen o un gráfico en el centro de la página.</message>
-	<message key="manager.setup.includeCreativeCommons">Para las revistas que ofrecen un acceso abierto inmediato o diferido, incluya una licencia de Creative Commons junto con todos los trabajos publicados en el momento apropiado.</message>
 	<message key="manager.setup.information">Información</message>
 	<message key="manager.setup.information.description">En la sección Información de la barra lateral, se facilita una breve descripción de la revista para los bibliotecarios/as, futuros autores/as y lectores/as.</message>
 	<message key="manager.setup.information.forAuthors">Para autores/as</message>
@@ -565,19 +564,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mes(es) después de la publicación de un número.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Especifique una duración válida.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">La siguiente Política de acceso abierto diferido se incluirá en el apartado Políticas de la sección Acerca de la revista.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Utilice las casillas de verificación proporcionadas.</message>
 	<message key="manager.subscriptionPolicies.expiry">Vencimiento de la suscripción</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">A partir del vencimiento de la suscripción, los lectores/as podrían no tener acceso al contenido total de la suscripción, aunque es posible que sí puedan tener acceso al contenido de dicha suscripción que se haya publicado antes de la fecha de vencimiento.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Vencimiento total</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Los lectores/as no podrán acceder a ningún contenido de la suscripción después del vencimiento de esta.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Vencimiento parcial</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Los lectores/as no podrán acceder al contenido reciente de la suscripción, pero tendrán acceso al contenido de dicha suscripción publicado antes de la fecha de vencimiento de esta.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notificar a los suscriptores/as por correo electrónico</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mes(es) después del vencimiento de la suscripción.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Notificar a los suscriptores/as por correo electrónico</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">semana/s después del vencimiento de la suscripción.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notificar a los suscriptores/as por correo electrónico</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mes(es) antes del vencimiento de la suscripción.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notificar a los suscriptores/as por correo electrónico</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">semana/s antes del vencimiento de la suscripción.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Recordatorios del vencimiento de la suscripción</message>
@@ -730,4 +724,15 @@
 	<!-- Categories -->
 	<message key="manager.setup.categories">Categorías</message>
 	<message key="manager.setup.categories.description">Escoja las categorías más adecuadas de la lista que aparece más arriba. Los lectores/as podrán examinar por categoría desde el conjunto completo de la revista.</message>
+	<message key="manager.setup.permissions.priorAgreement">Acuerdo previo</message>
+	<message key="manager.setup.permissions.display">Display</message>
+	<message key="manager.setup.licenseURLDescription">Si existe, proporciona la URL de la web de la del web de la licéncia.</message>
+	<message key="manager.setup.includeCopyrightStatement">Muestra la declaración del copyright con el contenido (recomendable para mostrar los derechos de autor).</message>
+	<message key="manager.setup.includeLicense">Mostar la licéncia con el trabajo publicado.</message>
+	<message key="manager.setup.resetPermissions">Reinicia permisos de artículo</message>
+	<message key="manager.setup.resetPermissions.description">La declaración del copyright y la información de la licencia se añadirán permanentemente al contenido publicado, garantizando que estos datos no cambian en caso de que lo hagan las políticas de la revista para los nuevos envíos. Para reiniciar la información almacenada de los permisos que ya se han adjuntado al contenido publicado, utiliza los botones que se muestran a continuación.</message>
+	<message key="manager.setup.confirmResetLicense">Seguro que quieres reiniciar la licencia y la información del copyright adjunta al contenido publicado y remplazarla por la licencia actual de la revista?</message>
+	<message key="manager.statistics.reports.objectNotFound">Objeto no encontrado en la base de datos</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Se ha enviado el recordatorio pre-vencimiento</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Se ha enviado el recordatorio post-vencimiento</message>
 </locale> 

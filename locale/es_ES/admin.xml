@@ -93,4 +93,7 @@
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no se puede eliminar el archivo {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Advertencia: el archivo {$filePath} ya existe en el directorio de estadísticas de uso.</message>
 	<message key="admin.copyAccessLogFileTool.success">Operación realizada correctamente: {$filePath} a {$destinationPath}</message>
+	<message key="admin.settings.security">Seguridad</message>
+	<message key="admin.settings.security.plugins">Impedir que losl gestores/as de la revista puedan instalar, actualitzar o suprimir módulos.</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Recargar las plantillas de correo por defecto</message>
 </locale> 
