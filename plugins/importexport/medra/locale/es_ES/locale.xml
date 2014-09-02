@@ -12,7 +12,8 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.medra.displayName">Módulo de exportación/registro de mEDRA</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.medra.displayName">Módulo de exportación/registro de mEDRA</message>
 	<message key="plugins.importexport.medra.description">Exportar metadatos de un número, un artículo y una galerada en formato Onix para DOI (O4DOI) y registrar los DOI en la agencia de registro mEDRA.</message>
 
 	<message key="plugins.importexport.medra.intro"><![CDATA[

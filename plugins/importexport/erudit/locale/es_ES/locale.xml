@@ -12,7 +12,8 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.erudit.displayName">Módulo de exportación de artículos Erudit</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.erudit.displayName">Módulo de exportación de artículos Erudit</message>
 	<message key="plugins.importexport.erudit.description">Exportar artículos mediante la versión inglesa de Erudit DTD</message>
 
 	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]

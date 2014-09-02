@@ -17,6 +17,7 @@
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Módulo phpMyVisites</message>
 	<message key="plugins.generic.phpmv.description"><![CDATA[Incorpore phpMyVisites a OJS, una aplicación gratuita de código abierto que analiza el tráfico de sitios web. Se requiere instalar phpMyVisites primero. Visite la página de <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> para más información.]]></message>
+    
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Configuración</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">Configuración de phpMyVisites</message>
@@ -27,5 +28,4 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Número de identificación de perfil del sitio</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">Dentro de phpMyVisites, haga clic en Administración-&gt;Modificar sitio. El número de identificación de perfil del sitio se muestra al lado del nombre de perfil.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Introduzca un número de identificación de perfil del sitio.</message>
-
 </locale> 

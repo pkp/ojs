@@ -12,8 +12,9 @@
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.reports.views.displayName">Ver el informe</message>
-	<message key="plugins.reports.views.description">Este módulo ofrece un informe CSV sobre los lectores/as de cada artículo.</message>
+<locale name="es_ES" full_name="Español (España)">
+  <message key="plugins.reports.views.displayName">Ver el informe</message>
+  <message key="plugins.reports.views.description">Este módulo ofrece un informe CSV sobre los lectores/as de cada artículo.</message>
 
   <message key="plugins.reports.views.articleId">Id. del artículo</message>
   <message key="plugins.reports.views.articleTitle">Título del artículo</message>

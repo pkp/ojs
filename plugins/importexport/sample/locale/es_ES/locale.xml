@@ -12,7 +12,8 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.sample.displayName">Muestra de módulos de importación/exportación</message>
+<locale name="es_ES" full_name="Español (España)">
+  <message key="plugins.importexport.sample.displayName">Muestra de módulos de importación/exportación</message>
 	<message key="plugins.importexport.sample.description">Este módulo proporciona un ejemplo de implementación que se utiliza para desarrollar módulos de importación/exportación. No resulta de gran utilidad en sí mismo.</message>
 
 	<message key="plugins.importexport.sample.selectIssue.short">Seleccionar un número</message>

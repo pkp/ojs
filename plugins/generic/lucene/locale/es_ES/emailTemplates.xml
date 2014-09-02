@@ -15,17 +15,31 @@
 <email_texts locale="es_ES">
 	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
 		<subject>Error de indexación de artículo</subject>
-		<body>Se produjo un error de indexación mientras se actualizaba el índice del artículo. El mensaje de error generado por el servicio web (de haberlo): "{$error}" El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
+		<body>Se produjo un error de indexación mientras se actualizaba el índice del artículo.
+
+El mensaje de error generado por el servicio web (de haberlo):
+
+"{$error}"
+
+El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
 		<description>Esta plantilla de correo electrónico se utiliza para notificar al contacto técnico de una revista que se produjo un error durante la indexación de un artículo.</description>
 	</email_text>
 	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
 		<subject>Error de indexación de revista</subject>
-		<body>Se produjo un error de indexación mientras se actualizaba el índice de la revista "{$journalName}". El mensaje de error generado por el servicio web (de haberlo): "{$error}" El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
+		<body>Se produjo un error de indexación mientras se actualizaba el índice de la revista "{$journalName}".
+
+El mensaje de error generado por el servicio web (de haberlo): "{$error}"
+
+El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
 		<description>Esta plantilla de correo electrónico se utiliza para notificar al contacto técnico de una revista que se produjo un error durante la indexación de la revista.</description>
 	</email_text>
 	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
 		<subject>Error de servicio de búsqueda de revista</subject>
-		<body>Se produjo un error cuando se intentó buscar la instalación "{$siteName}". El mensaje de error generado por el servicio web (de haberlo): "{$error}" El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
+		<body>Se produjo un error cuando se intentó buscar la instalación "{$siteName}".
+
+El mensaje de error generado por el servicio web (de haberlo): "{$error}"
+
+El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
 		<description>Esta plantilla de correo electrónico se utiliza para notificar al contacto técnico de una revista que se produjo un error mientras se intentaba acceder al servicio de búsquedas Solr.</description>
 	</email_text>
 </email_texts> 

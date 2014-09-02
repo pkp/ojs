@@ -15,7 +15,12 @@
 <email_texts locale="es_ES">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Manual de notificación de pago</subject>
-		<body>La revista {$journalName} y el/la usuario/a {$userFullName} (username "{$userName}") deben tramitar un pago manual.  Está realizando un pago por el elemento "{$itemName}". El precio es {$itemCost} ({$itemCurrencyCode}). Este correo electrónico ha sido generado por el módulo de pago manual de Open Journal Systems.</body>
+		<body>La revista {$journalName} y el/la usuario/a {$userFullName} (username "{$userName}") deben tramitar un pago manual.
+
+Está realizando un pago por "{$itemName}".
+El precio es {$itemCost} ({$itemCurrencyCode}).
+
+Este correo electrónico ha sido generado por el módulo de pago manual de Open Journal Systems.</body>
 		<description>La plantilla de correo electrónico se utiliza para notificar al gestor/a de contacto de la revista que se ha solicitado el pago manual.</description>
 	</email_text>
 </email_texts> 

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
-  * @file plugins/generic/alm/locale/en_US/locale.xml
+  * @file plugins/generic/alm/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * ALM plugin localization strings
   -->
-
-<locale name="en_US" full_name="U.S. English">
-
+ 
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.alm.displayName">Módulo ALM</message>
 	<message key="plugins.generic.alm.description">Módulo para mostrar la Métrica a Nivel de Artículo (ALM, Article Level Metrics). Para usar el servicio ALM, necesitas disponer de DOIs. Este requisito podría relajarse en un futuro.</message>
 	<message key="plugins.generic.alm.title">Métricas de artículo</message>

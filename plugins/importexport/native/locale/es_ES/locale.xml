@@ -12,7 +12,8 @@
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.native.displayName">Módulo de artículos y números en XML</message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.importexport.native.displayName">Módulo de artículos y números en XML</message>
 	<message key="plugins.importexport.native.description">Importar y exportar artículos y números</message>
 
 	<message key="plugins.importexport.native.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [command] ... Comandos: importar [xmlFileName] [journal_path] [user_name] ... exportar [xmlFileName] [journal_path] artículos [articleId1] [articleId2] ... exportar [xmlFileName] [journal_path] artículo [articleId] exportar [xmlFileName] [journal_path] números [issueId1] [issueId2] ... exportar [xmlFileName] [journal_path] número [issueId] Pueden requerirse parámetros adicionales para importar datos como se indica a continuación, dependiendo del nodo raíz del documento XML. Si el nodo raíz es <article> o <articles>, los parámetros adicionales son obligatorios. Se aceptan los siguientes formatos: {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] issue_id [issueId] section_id [sectionId] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] issue_id [issueId] section_name [name] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] issue_id [issueId] section_abbrev [abbrev]

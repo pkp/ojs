@@ -12,7 +12,8 @@
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.quickSubmit.addToExisting">Añadir a un número existente:</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.quickSubmit.addToExisting">Añadir a un número existente:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Destino del envío</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Seleccione si desea añadir nuevos envíos a un número existente o si prefiere colocarlos en la cola de edición.</message>
 	<message key="plugins.importexport.quickSubmit.displayName">Módulo QuickSubmit</message>

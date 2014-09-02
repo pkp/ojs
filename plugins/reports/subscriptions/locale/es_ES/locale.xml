@@ -12,7 +12,8 @@
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.reports.subscriptions.displayName">Informe de suscripciones</message>
+<locale name="es_ES" full_name="Español (España)">
+  <message key="plugins.reports.subscriptions.displayName">Informe de suscripciones</message>
 	<message key="plugins.reports.subscriptions.description">Este módulo ofrece un informe CSV con una lista de las suscripciones e información relativa a ellas.</message>
 	<message key="plugins.reports.subscriptions.institutionMailingAddress">Dirección de correo de la institución</message>
 	<message key="plugins.reports.subscriptions.ipRanges">Rangos de IP</message>

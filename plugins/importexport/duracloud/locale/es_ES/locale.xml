@@ -12,7 +12,8 @@
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.duracloud.displayName">Módulos de importación/exportación DuraCloud</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.duracloud.displayName">Módulos de importación/exportación DuraCloud</message>
 	<message key="plugins.importexport.duracloud.description">Archivar y restaurar los números utilizando un servicio externo de almacenamiento de DuraCloud</message>
 
 	<message key="plugins.importexport.duracloud.configuration">Configuración de DuraCloud</message>
@@ -49,5 +50,4 @@
 
 	<message key="plugins.importexport.duracloud.import.success">Importación realizada con éxito</message>
 	<message key="plugins.importexport.duracloud.import.success.description">La importación se realizó con éxito. A continuación se muestran los elementos importados con éxito.</message>
-
 </locale> 

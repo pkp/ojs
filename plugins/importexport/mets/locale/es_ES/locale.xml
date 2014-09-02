@@ -12,7 +12,8 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.METSExport.displayName">Módulo de exportación METS XML</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.METSExport.displayName">Módulo de exportación METS XML</message>
 	<message key="plugins.importexport.METSExport.description">Exportar revistas en METS XML</message>
 	<message key="plugins.importexport.METSExport.settings">Configuración</message>
 	<message key="plugins.importexport.METSExport.export">Exportar datos</message>

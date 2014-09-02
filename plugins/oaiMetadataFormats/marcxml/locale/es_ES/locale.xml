@@ -12,6 +12,7 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.OAIMetadata.marcxml.displayName">Formato de metadatos MARC21</message>
+<locale name="es_ES" full_name="Español (España)">
+  <message key="plugins.OAIMetadata.marcxml.displayName">Formato de metadatos MARC21</message>
 	<message key="plugins.OAIMetadata.marcxml.description">Estructura los metadatos según el formato MARC21.</message>
 </locale> 

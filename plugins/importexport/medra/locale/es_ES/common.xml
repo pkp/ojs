@@ -12,7 +12,8 @@
   * Shared localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para utilizar este módulo, vaya a la categoría de módulo "Identificador público", habilite y configure el módulo de Identificador digital de objeto (DOI) y especifique un prefijo DOI válido.</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.common.error.DOIsNotAvailable">Para utilizar este módulo, vaya a la categoría de módulo "Identificador público", habilite y configure el módulo de Identificador digital de objeto (DOI) y especifique un prefijo DOI válido.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">El módulo no está completamente configurado.</message>
 
 	<message key="plugins.importexport.common.settings">Configuración</message>

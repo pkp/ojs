@@ -12,7 +12,8 @@
   * Localization strings.
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.reports.counter.description"><![CDATA[El módulo COUNTER permite generar informes sobre la actividad del sitio web.]]></message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.reports.counter.description"><![CDATA[El módulo COUNTER permite generar informes sobre la actividad del sitio web.]]></message>
 	<message key="plugins.reports.counter">Informe COUNTER</message>
 	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R2): Solicitudes de artículos completos por mes y revista</message>
 	<message key="plugins.reports.counter.1a.title1">Informe de la revista 1 (R2)</message>

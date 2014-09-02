@@ -12,10 +12,10 @@
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.doaj.displayName">Módulo de exportación DOAJ</message>
+<locale name="es_ES" full_name="Español (España)">
+  <message key="plugins.importexport.doaj.displayName">Módulo de exportación DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Exportar la revista al DOAJ y añadir información sobre la revista para incluirla</message>
 
-	
 	<message key="plugins.importexport.doaj.export">Exportar datos de la revista al DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Exportar la revista</message>
 	<message key="plugins.importexport.doaj.export.contact">Contactar con el DOAJ para la inclusión</message>

@@ -12,7 +12,8 @@
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.paymethod.manual.displayName">Pago manual de las cuotas</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.paymethod.manual.displayName">Pago manual de las cuotas</message>
 	<message key="plugins.paymethod.manual.description">El gestor/a guardará de forma manual un comprobante del pago de un usuario/a (fuera de este software).</message>
 	<message key="plugins.paymethod.manual">Pago manual de las cuotas</message>
 	<message key="plugins.paymethod.manual.settings">Configuración de pagos manuales</message>

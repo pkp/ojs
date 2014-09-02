@@ -12,7 +12,8 @@
   * DOI plugin localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.pubIds.doi.displayName">Identificador de objeto digital (DOI)</message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.pubIds.doi.displayName">Identificador de objeto digital (DOI)</message>
 	<message key="plugins.pubIds.doi.description">Este módulo activa la asignación del Identificador de objetos digitales a números, artículos, galeradas y archivos complementarios en OJS.</message>
 
 	<!-- settings form -->

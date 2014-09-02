@@ -12,7 +12,8 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.users.displayName">Módulo para usuarios/as XML</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.users.displayName">Módulo para usuarios/as XML</message>
 	<message key="plugins.importexport.users.description">Importar y exportar usuarios/as</message>
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [command] ... Comandos: importar [xmlFileName] [journal_path] [optional flags] exportar [xmlFileName] [journal_path] exportar [xmlFileName] [journal_path] [role_path1] [role_path2] ... Indicadores opcionales: continue_on_error: Siga importando usuarios/as, si así se le indica, cuando se produce un error send_notify: Enviar notificaciones por correo electrónico, si así se le indica, con el nombre de usuario/a y la contraseña a los usuarios/as importados Ejemplos: Importar usuarios/as a myJournal desde myImportFile.xml cuando se produzca el error: {$scriptName} {$pluginName} importar myImportFile.xml myJournal continue_on_error Exportar todos los usuarios/as de myJournal: {$scriptName} {$pluginName} exportar myExportFile.xml myJournal Exportar todos los usuarios/as registrados/as como revisores/as sólo junto con su rol: {$scriptName} {$pluginName} exportar revisor/a de myExportFile.xml myJournal

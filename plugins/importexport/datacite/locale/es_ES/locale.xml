@@ -12,7 +12,8 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.datacite.displayName">Módulo de exportación/registro de DataCite</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.datacite.displayName">Módulo de exportación/registro de DataCite</message>
 	<message key="plugins.importexport.datacite.description">Exportar o registrar metadatos de número, de artículo, de galerada y de archivos complementarios en formato DataCite.</message>
 
 	<message key="plugins.importexport.datacite.intro"><![CDATA[

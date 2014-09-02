@@ -297,7 +297,6 @@
 	<message key="submission.event.editor.submissionArchived">Envío archivado</message>
 	<message key="submission.event.editor.submissionRestored">Envío recuperado del archivo</message>
 
-
 	<message key="submission.event.copyedit.copyeditorAssigned">Corrector/a de originales asignado al envío</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Corrector/a de originales no asignado al envío</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Asignación de corrección de originales iniciada</message>
@@ -338,8 +337,6 @@
 	<!-- Site Administration -->
 
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Para indexar el contenido de todas las revistas del sitio web en el sistema global de bases de datos para la investigación, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registre</a> la URL de su sitio web con <a href="http://pkp.sfu.ca/harvester/" target="_blank">la recopilación de los metadatos del Public Knowledge Project </a>. Esta herramienta recopila los metadatos de cada elemento indizado en la revista, permitiendo así una búsqueda precisa y conjunta en aquellos sitios de investigación que están adheridos al <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> Protocolo de Open Archives Initiative para la recopilación de metadatos</a>. <br /><br /> <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Haga clic aquí</a> e introduzca <span class="highlight">{$siteUrl}</span> en <strong>URL del sitio </strong>, y <span class="highlight">{$oaiUrl}</span> en <strong>URL base para el Archivo OAI</strong>. <br /><br /> Tenga en cuenta que la interfaz OAI se puede deshabilitar de este sitio modificando la configuración del sistema OJS. Versiones futuras de OJS permitirán activar o desactivar la interfaz OAI de forma individual para cada una de las revistas del sitio.]]></message>
-
-
 
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>No se pueden descargar paquetes de idiomas del servidor web de Public Knowledge Project porque:</p> <ul> <li>Su servidor no tiene o no permite la ejecución de la aplicación GNU "tar"</li> <li>OJS no puede modificar el archivo de registro local, normalmente "registry/locales.xml".</li> </ul> <p>Se pueden descargar manualmente los paquetes de idiomas desde <a href="http://pkp.sfu.ca">el sitio web de PKP</a>.</p>]]></message>
@@ -385,9 +382,7 @@
 
 	<!-- Setup Step 2 -->
 
-
 	<message key="manager.setup.reviewProcessEmailDescription">Los editores/as mandan a los revisores/as un correo electrónico con el envío adjunto para que lo revisen. Los editores/as mandan por correo electrónico su conformidad (o discrepancia) a los editores/as, junto con la revisión y las recomendaciones. Los editores/as introducen la aprobación (o discrepancia) de los revisores/as, así como su revisión y sus recomendaciones en la página de Revisión del envío para registrar el proceso de revisión.</message>
-
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems es compatible con el sistema <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) que garantiza a la revista un archivo permanente y seguro. LOCKSS es un programa de código abierto desarrollado por la Biblioteca de la Universidad de Stanford y que permite a las bibliotecas conservar revistas web seleccionadas buscando regularmente en revistas registradas para recopilar el nuevo contenido publicado y archivarlo. Cada archivo es validado continuamente con registros de otras bibliotecas, así que cualquier contenido dañado o perdido se puede restaurar utilizando esos registros o la misma revista. <br /><br /> No es necesario instalar LOCKSS para Open Journal Systems hasta que no se haya puesto en marcha la publicación; una vez llegados a ese punto, se deberán seguir dos pasos:]]></message>
 
@@ -412,12 +407,10 @@
 	<!-- Groups / Editorial Team -->
 
 
-
 	<!-- People Management -->
 	<message key="manager.people.confirmDisable">¿Deshabilitar esta cuenta de usuario/a? Esta acción no permitirá al usuario/a iniciar sesión en el sistema. De forma opcional, puede indicar el motivo por el cual se ha deshabilitado la cuenta de usuario/a.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[No tiene derechos administrativos sobre este usuario/a. Esto puede ser debido a que: <ul> <li>El usuario/a es un administrador/a del sitio</li> <li>El usuario/a está activo en revistas que usted no gestiona</li> </ul> Esta tarea debe gestionarla un administrador/a del sitio.
 	]]></message>
-
 
 
 	<!-- Email Management -->
@@ -450,10 +443,6 @@
 
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Nombre los enlaces para el perfil del revisor/a.<br /> El máximo de la Calificación es de 5 (excelente).<br /> Las Semanas indican el plazo medio de tiempo para terminar una revisión.<br /> Última, indica la fecha de la última revisión aceptada.<br /> Activa, indica cuántas revisiones se están llevando a cabo.]]></message>
-
-
-
-
 
 
 	<!-- Section Editor -->
@@ -509,31 +498,31 @@
 	<message key="reviewer.article.uploadedFile">Archivos subidos</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versión cargada por el revisor/a</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Si desea anotar el archivo para el editor/a, guárdelo en su disco duro y utilice Examinar/Cargar.)</message>
-		<message key="reviewer.article.schedule.request">Petición del editor/a</message>
-		<message key="reviewer.article.schedule.response">Su respuesta</message>
-		<message key="reviewer.article.schedule.submitted">Revisión enviada</message>
-		<message key="reviewer.article.schedule.due">Fecha de entrega de revisión</message>
+	<message key="reviewer.article.schedule.request">Petición del editor/a</message>
+	<message key="reviewer.article.schedule.response">Su respuesta</message>
+	<message key="reviewer.article.schedule.submitted">Revisión enviada</message>
+	<message key="reviewer.article.schedule.due">Fecha de entrega de revisión</message>
 	<message key="reviewer.article.decision.accept">Aceptar este envío</message>
 	<message key="reviewer.article.decision.pendingRevisions">Publicable con modificaciones</message>
 	<message key="reviewer.article.decision.resubmitHere">Reenviar para revisión</message>
-		<message key="reviewer.article.decision.resubmitElsewhere">Reenviar a otra publicación</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Reenviar a otra publicación</message>
 	<message key="reviewer.article.decision.decline">No publicable</message>
 	<message key="reviewer.article.decision.seeComments">Ver comentarios</message>
 	<message key="reviewer.article.schedule">Planificación</message>
-		<message key="reviewer.article.submissionToBeReviewed">Envío para revisar</message>
-		<message key="reviewer.article.reviewSchedule">Planificación de revisión</message>
-		<message key="reviewer.article.reviewSteps">Pasos de revisión</message>
-		<message key="reviewer.article.reviewerGuidelines">Directrices para el revisor/a</message>
+	<message key="reviewer.article.submissionToBeReviewed">Envío para revisar</message>
+	<message key="reviewer.article.reviewSchedule">Planificación de revisión</message>
+	<message key="reviewer.article.reviewSteps">Pasos de revisión</message>
+	<message key="reviewer.article.reviewerGuidelines">Directrices para el revisor/a</message>
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Las directrices para el revisor/a proporcionarán a los revisores/as el criterio necesario para juzgar si un envío es adecuado para ser publicado en la revista, y puede incluir cualquier tipo de instrucciones particulares para preparar una revisión efectiva y útil. Al realizar la revisión, los revisores/as disponen de dos cuadros de texto abiertos: el primero "para el autor/a y el editor/a" y el segundo "para el editor/a". El gestor/a de la revista también puede crear un formulario de revisión por pares en el apartado Formularios de revisión. En cualquier caso, los editores/as tendrán la opción de incluir las revisiones para el autor/a.]]></message>
-		<message key="reviewer.article.notifyEditorA">Notificar al editor/a del envío</message>
-		<message key="reviewer.article.notifyEditorB">de si aceptará o no la revisión.</message>
-		<message key="reviewer.article.consultGuidelines">Si va a revisar, consulte las directrices para el revisor que aparecen a continuación.</message>
-		<message key="reviewer.article.downloadSubmission">Haga clic en los nombres de los archivos relacionados con este envío que desee descargar y revisar (en pantalla o imprimiéndolos).</message>
-		<message key="reviewer.article.enterCompetingInterests"><![CDATA[Indique si tiene o no, algún conflicto de intereses en cuanto a esta investigación (consulte <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="reviewer.article.notifyEditorA">Notificar al editor/a del envío</message>
+	<message key="reviewer.article.notifyEditorB">de si aceptará o no la revisión.</message>
+	<message key="reviewer.article.consultGuidelines">Si va a revisar, consulte las directrices para el revisor que aparecen a continuación.</message>
+	<message key="reviewer.article.downloadSubmission">Haga clic en los nombres de los archivos relacionados con este envío que desee descargar y revisar (en pantalla o imprimiéndolos).</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Indique si tiene o no, algún conflicto de intereses en cuanto a esta investigación (consulte <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
 	<message key="reviewer.competingInterests">Conflicto de intereses</message>
-		<message key="reviewer.article.enterReviewA">Haga clic en el icono para escribir (o pegar) la revisión de este envío.</message>
-		<message key="reviewer.article.uploadFile">Además, puede cargar archivos para que los consulte el editor/a o el autor/a.</message>
-		<message key="reviewer.article.selectRecommendation">Seleccione una recomendación y envíe la revisión para completar el proceso. Debe introducir la revisión o subir un archivo antes de seleccionar una recomendación.</message>
+	<message key="reviewer.article.enterReviewA">Haga clic en el icono para escribir (o pegar) la revisión de este envío.</message>
+	<message key="reviewer.article.uploadFile">Además, puede cargar archivos para que los consulte el editor/a o el autor/a.</message>
+	<message key="reviewer.article.selectRecommendation">Seleccione una recomendación y envíe la revisión para completar el proceso. Debe introducir la revisión o subir un archivo antes de seleccionar una recomendación.</message>
 	<message key="reviewer.article.mustSelectDecision">No se ha seleccionado ninguna recomendación. Debe seleccionar una recomendación antes de enviar el formulario.</message>
 	<message key="reviewer.article.confirmDecision">Una vez haya registrado su decisión, no podrá hacer cambios en esta revisión. ¿Está seguro/a de que desea continuar?</message>
 	<message key="reviewer.article.ensuringBlindReview">Garantizar una revisión anónima</message>
@@ -727,7 +716,7 @@
 	<message key="about.aboutTheJournal">Acerca de la revista</message>
 	<message key="about.history">Historial de la revista</message>
 	<message key="about.editorialTeam">Equipo editorial</message>
-	<message key="about.editorialTeam.biography">Biografía</message>
+	<message key="about.editorialTeam.biography">Resumen biográfico</message>
 	<message key="about.editorialPolicies">Políticas de la editorial</message>
 	<message key="about.focusAndScope">Enfoque y alcance</message>
 	<message key="about.sectionPolicies">Políticas de sección</message>
@@ -928,8 +917,8 @@
 
 	<message key="log.imported">{$userName} importó el artículo {$articleId}.</message>
 
-	<!-- Reading Tools entries -->
 
+	<!-- Reading Tools entries -->
 
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">Opciones de las herramientas de lectura</message>
@@ -947,36 +936,24 @@
 	<message key="rt.admin.settings.addComment.anonymous">Los usuarios/as deben estar registrados/as y haber iniciado sesión para publicar un mensaje con posibilidad de hacerlo anónimamente.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Los usuarios/as no tienen que estar registrados/as para publicar ya que se permite hacerlo anónimamente.</message>
 
-
 	<!-- RT Versions -->
 
 	<!-- RT Contexts -->
 
 	<!-- RT Searches -->
-
 	<message key="rt.admin.validateUrls.description"><![CDATA[A continuación se muestran posibles URLs inválidas de sitios de búsqueda.<br /> Deberá verificar manualmente cualquier URL marcada como inválida, ya que esta prueba no es 100% precisa.<br /> Al buscar URLs que necesiten datos de formularios publicados, la validación podría fallar.]]></message>
 
 	<!-- RT Entities -->
-
-
-
-
 	<message key="rt.metadata.dublinCore.primaryAuthor">Creador/a</message>
 
 	<message key="rt.metadata.pkp.primaryAuthor">Nombre de autor/a, institución, país</message>
 	<message key="rt.metadata.pkp.peerReviewed">Artículo revisado por pares</message>
 
-
-
-
-
 	<message key="rt.beNotifiedWhen">Notificarme cuando...</message>
 
 	<message key="rt.thisJournal">Buscar revista</message>
 
-
 	<message key="rt.context.authorTermsDescription">Para artículos con mas de un autor/a, deje todos los nombres seleccionados para buscar por trabajos similares de co-autor/a o busque uno a la vez seleccionando un sólo nombre. Para obtener más información sobre el recurso que busca, haga clic en ACERCA DE. Estos recursos han sido seleccionados por su relevancia y por su acceso abierto (gratuito) a todo o parte de su contenido.</message>
-
 
 
 	<!-- Notification Types -->

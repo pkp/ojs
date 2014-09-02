@@ -12,7 +12,8 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.pubmed.displayName">Módulo de exportación PubMed XML</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.importexport.pubmed.displayName">Módulo de exportación PubMed XML</message>
 	<message key="plugins.importexport.pubmed.description">Exportar los metadatos de un artículo en formato PubMed XML para indexarlos en MEDLINE.</message>
 	
 	<message key="plugins.importexport.pubmed.export">Exportar datos</message>
@@ -27,6 +28,4 @@
 
 	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Ningún número se corresponde con la Id. indicada "{$issueId}".</message>
 	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Ningún artículo se corresponde con la Id. indicada "{$articleId}".</message>
-
-
 </locale> 

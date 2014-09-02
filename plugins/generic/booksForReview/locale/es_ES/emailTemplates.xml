@@ -12,40 +12,107 @@
   * Books for review email template localized default text.
   *
   -->
+
 <email_texts locale="es_ES">
 	<email_text key="BFR_REVIEW_REMINDER">
 		<subject>Libro para reseñar: Recordatorio de fecha de entrega</subject>
-		<body>Estimado/a {$authorName}: Este mensaje es para recordarle que la fecha de entrega de la reseña de libro de {$bookForReviewTitle} es el {$bookForReviewDueDate}. Para enviar la reseña de libro, inicie sesión en el sitio web de la revista y complete el proceso de envío de artículos en línea. Para su comodidad, puede ver la URL del envío a continuación. URL del envío: {$submissionUrl} Si tiene cualquier pregunta o comentario sobre la reseña de libro, no dude en ponerse en contacto conmigo. Gracias por su contribución a la revista. Quedo a la espera de recibir el envío. {$editorialContactSignature}</body>
+		<body>Estimado/a {$authorName}:
+
+Este mensaje es para recordarle que la fecha de entrega de la reseña de libro de {$bookForReviewTitle} es el {$bookForReviewDueDate}.
+
+Para enviar la reseña de libro, inicie sesión en el sitio web de la revista y complete el proceso de envío de artículos en línea. Para su comodidad, puede ver la URL del envío a continuación.
+
+URL del envío: {$submissionUrl}
+
+Si tiene cualquier pregunta o comentario sobre la reseña de libro, no dude en ponerse en contacto conmigo. 
+
+Gracias por su contribución a la revista. Quedo a la espera de recibir el envío.
+
+{$editorialContactSignature}</body>
 		<description>Esto es un mensaje de correo electrónico automático que se envía al autor/a del libro para reseñar para recordarle que la fecha de entrega de la revisión se acerca.</description>
 	</email_text>
 	<email_text key="BFR_REVIEW_REMINDER_LATE">
 		<subject>Libro para reseñar: Fecha de entrega de revisión</subject>
-		<body>Estimado/a {$authorName}: Este mensaje es para recordarle que la fecha de entrega de la reseña de libro de {$bookForReviewTitle} era el {$bookForReviewDueDate}, pero que aun no se recibió. Para enviar la reseña de libro, inicie sesión en el sitio web de la revista y complete el proceso de envío de artículos en línea. Para su comodidad, puede ver la URL del envío a continuación. URL del envío: {$submissionUrl} Si tiene cualquier pregunta o comentario sobre la reseña de libro, no dude en ponerse en contacto conmigo. Gracias por su contribución a la revista. Quedo a la espera de recibir el envío. {$editorialContactSignature}</body>
+		<body>Estimado/a {$authorName}:
+
+Este mensaje es para recordarle que la fecha de entrega de la reseña de libro de {$bookForReviewTitle} era el {$bookForReviewDueDate}, pero que aun no se recibió.
+
+Para enviar la reseña de libro, inicie sesión en el sitio web de la revista y complete el proceso de envío de artículos en línea. Para su comodidad, puede ver la URL del envío a continuación.
+
+URL del envío: {$submissionUrl}
+
+Si tiene cualquier pregunta o comentario sobre la reseña de libro, no dude en ponerse en contacto conmigo.
+
+Gracias por su contribución a la revista. Quedo a la espera de recibir el envío.
+
+{$editorialContactSignature}</body>
 		<description>Esto es un mensaje de correo electrónico automático que se envía al autor/a del libro para reseñar cuando venció la fecha de entrega de la revisión.</description>
 	</email_text>
 	<email_text key="BFR_BOOK_ASSIGNED">
 		<subject>Libro para reseñar: Libro asignado</subject>
-		<body>Estimado/a {$authorName}: Este correo electrónico confirma que se le asignó la reseña de libro de {$bookForReviewTitle}, que debe entregar antes del {$bookForReviewDueDate}. Asegúrese de que la dirección postal de su perfil de usuario/a en línea está actualizada. Esta dirección se usará para enviarle una copia del libro para su revisión. La dirección postal que consta actualmente en nuestro archivo es: {$authorMailingAddress} Si la dirección no está completa, o si ya no reside en esta dirección, use la siguiente URL de perfil de usuario/a para actualizarla: URL de perfil de usuario/a: {$userProfileUrl} Para enviar la reseña de libro, inicie sesión en el sitio web de la revista y complete el proceso de envío de artículos en línea. URL del envío: {$submissionUrl} Si tiene cualquier pregunta o comentario sobre la reseña de libro, no dude en ponerse en contacto conmigo. {$editorialContactSignature}</body>
+		<body>Estimado/a {$authorName}:
+
+Este correo electrónico confirma que se le asignó la reseña de libro de {$bookForReviewTitle}, que debe entregar antes del {$bookForReviewDueDate}.
+
+Asegúrese de que la dirección postal de su perfil de usuario/a en línea está actualizada. Esta dirección se usará para enviarle una copia del libro para su revisión.
+
+La dirección postal que consta actualmente en nuestro archivo es: {$authorMailingAddress}
+
+Si la dirección no está completa, o si ya no reside en esta dirección, use la siguiente URL de perfil de usuario/a para actualizarla:
+
+URL de perfil de usuario/a: {$userProfileUrl}
+
+Para enviar la reseña de libro, inicie sesión en el sitio web de la revista y complete el proceso de envío de artículos en línea.
+
+URL del envío: {$submissionUrl}
+
+Si tiene cualquier pregunta o comentario sobre la reseña de libro, no dude en ponerse en contacto conmigo.
+
+{$editorialContactSignature}</body>
 		<description>Este correo electrónico lo envía un editor/a al autor/a de una reseña de libro después de asignarle un libro para reseñar.</description>
 	</email_text>
 	<email_text key="BFR_BOOK_DENIED">
 		<subject>Libro para reseñar</subject>
-		<body>Estimado/a {$authorName}: Por desgracia, no fui capaz de asignarle {$bookForReviewTitle} para que escriba la reseña de libro. Espero que tome en consideración la posibilidad de revisar otro libro de nuestra lista, tanto ahora como en el futuro. {$editorialContactSignature}</body>
+		<body>Estimado/a {$authorName}:
+
+Por desgracia, no fui capaz de asignarle {$bookForReviewTitle} para que escriba la reseña de libro. Espero que tome en consideración la posibilidad de revisar otro libro de nuestra lista, tanto ahora como en el futuro. {$editorialContactSignature}</body>
 		<description>Este correo electrónico lo envía un editor/a a un autor/a interesado cuando un libro no está disponible para revisión.</description>
 	</email_text>
 	<email_text key="BFR_BOOK_REQUESTED">
 		<subject>Libro para reseñar: Libro solicitado</subject>
-		<body>Estimado/a {$editorName}: Me interesaría escribir la reseña de libro de {$bookForReviewTitle}. ¿Sería tan amable de confirmar si este libro está disponible para revisión? {$authorContactSignature}</body>
+		<body>Estimado/a {$editorName}:
+
+Me interesaría escribir la reseña de libro de {$bookForReviewTitle}.
+
+¿Sería tan amable de confirmar si este libro está disponible para revisión?
+
+{$authorContactSignature}</body>
 		<description>Este correo electrónico lo envía un autor/a interesado en escribir una reseña de libro de la lista a un editor/a.</description>
 	</email_text>
 	<email_text key="BFR_BOOK_MAILED">
 		<subject>Libro para reseñar: Libro enviado</subject>
-		<body>Estimado/a {$authorName}: Este correo electrónico confirma que envié una copia de {$bookForReviewTitle} a la siguiente dirección postal de su perfil de usuario/a: {$authorMailingAddress} Para enviar la reseña de libro, inicie sesión en el sitio web de la revista y complete el proceso de envío de artículos en línea. URL del envío: {$submissionUrl} Si tiene cualquier pregunta o comentario sobre la reseña de libro, no dude en ponerse en contacto conmigo. {$editorialContactSignature}</body>
+		<body>Estimado/a {$authorName}:
+
+Este correo electrónico confirma que envié una copia de {$bookForReviewTitle} a la siguiente dirección postal de su perfil de usuario/a: {$authorMailingAddress}
+
+Para enviar la reseña de libro, inicie sesión en el sitio web de la revista y complete el proceso de envío de artículos en línea.
+
+URL del envío: {$submissionUrl}
+
+Si tiene cualquier pregunta o comentario sobre la reseña de libro, no dude en ponerse en contacto conmigo.
+
+{$editorialContactSignature}</body>
 		<description>Este correo electrónico lo envía un editor/a al autor/a de una reseña de libro después de enviar una copia del libro por correo a este.</description>
 	</email_text>
 	<email_text key="BFR_REVIEWER_REMOVED">
 		<subject>Libro para reseñar</subject>
-		<body>Estimado/a {$authorName}: Este correo electrónico confirma se le eliminó como autor/a de la reseña de libro de {$bookForReviewTitle}, lo que implica que la reseña de libro estará disponible para otros autores/as que estén interesados. Espero que tome en consideración la posibilidad de revisar otro libro de nuestra lista, tanto ahora como en el futuro. {$editorialContactSignature}</body>
+		<body>Estimado/a {$authorName}:
+
+Este correo electrónico confirma se le eliminó como autor/a de la reseña de libro de {$bookForReviewTitle}, lo que implica que la reseña de libro estará disponible para otros autores/as que estén interesados.
+
+Espero que tome en consideración la posibilidad de revisar otro libro de nuestra lista, tanto ahora como en el futuro.
+
+{$editorialContactSignature}</body>
 		<description>Este correo electrónico lo envía un editor/a a un autor/a interesado cuando un libro no está disponible para revisión.</description>
 	</email_text>
 </email_texts> 

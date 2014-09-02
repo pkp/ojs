@@ -12,7 +12,8 @@
   * URN plugin localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.pubIds.urn.urns">URN</message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.pubIds.urn.urns">URN</message>
 
 	<!-- plugin -->
 	<message key="plugins.pubIds.urn.displayName">URN</message>
@@ -82,5 +83,4 @@
 
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">El sufijo URN indicado ya ha sido asignado a otro elemento publicado. Introduzca un único sufijo URN para cada elemento.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Falta el número de comprobación.</message>
-
 </locale> 

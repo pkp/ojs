@@ -15,7 +15,29 @@
 <email_texts locale="es_ES">
 	<email_text key="THESIS_ABSTRACT_CONFIRM">
 		<subject>Envío de resumen de tesis</subject>
-		<body>El {$journalName} formulario de envío de resumen de tesis generó de forma automática este correo electrónico. Confirme que la información enviada es correcta. Tras recibir la confirmación, el resumen se publicará en la edición en línea de la revista. Responda simplemente a {$thesisName} ({$thesisEmail}) con el contenido de este correo y la confirmación, así como cualquier clarificación o corrección que crea necesaria. Gracias. Título : {$title} Autor/a : {$studentName} Titulación : {$degree} Nombre de la titulación: {$degreeName} Departamento : {$department} Universidad : {$university} Fecha de aceptación: {$dateApproved} Supervisor/a : {$supervisorName} Resumen -------- {$abstract} {$thesisContactSignature}</body>
+		<body>El {$journalName} formulario de envío de resumen de tesis generó de forma automática este correo electrónico.
+
+Confirme que la información enviada es correcta. Tras recibir la confirmación, el resumen se publicará en la edición en línea de la revista.
+
+Responda simplemente a {$thesisName} ({$thesisEmail}) con el contenido de este correo y la confirmación, así como cualquier clarificación o corrección que crea necesaria.
+
+Gracias.
+
+
+Título : {$title}
+Autor/a : {$studentName}
+Titulación : {$degree}
+Nombre de la titulación: {$degreeName}
+Departamento : {$department}
+Universidad : {$university}
+Fecha de aceptación: {$dateApproved}
+Supervisor/a : {$supervisorName}
+
+Resumen
+-------
+{$abstract}
+
+{$thesisContactSignature}</body>
 		<description>El estudiante usó esta plantilla de correo electrónico para confirmar el envío de resumen de tesis. Se envía al director/a del estudiante, a quien se le pide que confirme los detalles del envío del resumen de tesis.</description>
 	</email_text>
 </email_texts> 

@@ -12,7 +12,8 @@
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.reports.reviews.displayName">Informe de revisión</message>
+<locale name="es_ES" full_name="Español (España)">
+  <message key="plugins.reports.reviews.displayName">Informe de revisión</message>
 	<message key="plugins.reports.reviews.description">Este módulo ofrece un informe CSV con una lista de las tareas de revisión para una revista.</message>
 	<message key="plugins.reports.reviews.round">Ronda</message>
 	<message key="plugins.reports.reviews.reviewerId">Id. del revisor/a</message>
