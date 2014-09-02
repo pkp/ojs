@@ -12,7 +12,8 @@
   * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español (España)">	<message key="plugins.theme.custom.name">Módulo de temas personalizados</message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.theme.custom.name">Módulo de temas personalizados</message>
 	<message key="plugins.theme.custom.description">Este módulo aplica temas personalizables.</message>
 	<message key="plugins.theme.custom.notWritable">NOTA: Actualmente no se puede escribir en el archivo de la hoja de estilo de este módulo, "{$stylesheetFileLocation}". Para usar el módulo este archivo ha de ser editable.</message>
 	<message key="plugins.theme.custom.settings">Configuración</message>
