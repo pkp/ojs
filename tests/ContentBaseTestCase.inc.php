@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file tests/data/ContentBaseTestCase.inc.php
+ * @file tests/ContentBaseTestCase.inc.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
@@ -13,7 +13,7 @@
  * @brief Data build suite: Base class for content creation tests
  */
 
-import('lib.pkp.tests.data.PKPContentBaseTestCase');
+import('lib.pkp.tests.PKPContentBaseTestCase');
 
 class ContentBaseTestCase extends PKPContentBaseTestCase {
 	/**

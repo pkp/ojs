@@ -13,7 +13,7 @@
  * @brief Data build suite: Create submission
  */
 
-import('tests.data.ContentBaseTestCase');
+import('tests.ContentBaseTestCase');
 
 class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 	/**
