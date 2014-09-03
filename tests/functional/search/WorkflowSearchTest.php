@@ -1,30 +1,29 @@
 <?php
 
 /**
- * @file tests/regression/Bug8872Test.php
+ * @file tests/functional/search/WorkflowSearchTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class Bug8872Test
- * @ingroup tests_regression
+ * @class WorkflowSearchTest
+ * @ingroup tests_functional_search
  *
- * @brief Regression test for http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=8872
+ * @brief Workflow search tests
  */
 
 import('lib.pkp.tests.WebTestCase');
 
-class Bug8872Test extends WebTestCase {
+class WorkflowSearchTest extends WebTestCase {
 	/** @var $fullTitle Full title of test submission */
 	static $fullTitle = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
 
 	/**
-	 * Get a list of affected tables.
-	 * @return array A list of tables to backup and restore.
+	 * @copydoc WebTestCase::getAffectedTables
 	 */
 	protected function getAffectedTables() {
-		return array('articles', 'signoffs', 'email_log', 'event_log');
+		return WEB_TEST_ENTIRE_DB;
 	}
 
 	/**
@@ -35,7 +34,7 @@ class Bug8872Test extends WebTestCase {
 		$this->logIn('dbarnes');
 
 		// Use the search to find a known submission with punctuation
-		// in the title
+		// in the title (bug #8872)
 		$this->_search(self::$fullTitle, 'is');
 		$this->assertText('css=h3', 'Submission');
 
@@ -60,6 +59,7 @@ class Bug8872Test extends WebTestCase {
 
 		// Use the search to find a known submission with punctuation
 		// in the title. Should find a submission with the exact name.
+		// (Bug #8872)
 		$this->clickAndWait('link=In Editing');
 		$this->_search(self::$fullTitle, 'is');
 		$this->assertText('css=h3', 'Submission');
@@ -97,6 +97,7 @@ class Bug8872Test extends WebTestCase {
 
 		// Use the search to find a known submission with punctuation
 		// in the title. Should find a submission with the exact name.
+		// (Bug #8872)
 		$this->_search(self::$fullTitle, 'is');
 		$this->assertText('css=h3', 'Submission');
 
@@ -122,10 +123,9 @@ class Bug8872Test extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		// Prep: Layout editor needs to be assigned and requested.
-		// WARNING: This is currently dependent on the CE test above,
-		// which sends the submission to the Archive. The search form
-		// only exists for archived submissions.
 		$this->findSubmissionAsEditor('dbarnes', null, self::$fullTitle);
+		$this->clickAndWait('link=Reject and Archive Submission');
+		$this->clickAndWait('css=input.button.defaultButton');
 		$this->clickAndWait('link=Editing');
 
 		// Assign Graham Cox
@@ -146,6 +146,7 @@ class Bug8872Test extends WebTestCase {
 
 		// Use the search to find a known submission with punctuation
 		// in the title. Should find a submission with the exact name.
+		// (Bug #8872)
 		$this->_search(self::$fullTitle, 'is');
 		$this->assertText('css=h3', 'Submission');
 

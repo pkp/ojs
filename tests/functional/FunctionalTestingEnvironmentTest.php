@@ -21,5 +21,6 @@ class FunctionalTestingEnvironmentTest extends WebTestCase {
 
 	function testTestingEnvironment() {
 		$this->logIn('admin', 'adminadmin');
+		$this->logOut();
 	}
 }
