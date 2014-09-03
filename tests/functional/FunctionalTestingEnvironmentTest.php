@@ -30,7 +30,7 @@ class FunctionalTestingEnvironmentTest extends WebTestCase {
 	 * Just login as admin user to test the testing environment.
 	 */
 	function testTestingEnvironment() {
-		$this->logIn('admin', 'ojsojs');
+		$this->logIn('admin', 'admin');
 		$this->logOut();
 	}
 }
