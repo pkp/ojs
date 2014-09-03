@@ -957,27 +957,16 @@
 	<message key="rt.admin.validateUrls.description"><![CDATA[A continuació es llisten els URL possiblement no vàlids per als llocs de cerca.<br /> Aquesta prova pot contenir errors, per la qual cosa haureu de comprovar els URL marcats com a no vàlids de manera manual.<br /> És possible que la validació falli per als URL de cerca que necessitin enviar dades de formulari.]]></message>
 
 	<!-- RT Entities -->
-
-
-
-
 	<message key="rt.metadata.dublinCore.primaryAuthor">Creador/a</message>
 
 	<message key="rt.metadata.pkp.primaryAuthor">Nom, afiliació i país de l’autor/a</message>
 	<message key="rt.metadata.pkp.peerReviewed">Article avaluat per experts/ertes</message>
 
-
-
-
-
 	<message key="rt.beNotifiedWhen">Vull rebre una notificació quan...</message>
 
 	<message key="rt.thisJournal">Cerca en la revista</message>
-
-
+	
 	<message key="rt.context.authorTermsDescription">Per a les obres amb més d’un autor/a, deixeu tots els noms activats si voleu cercar obres que tinguin la mateixa autoria de manera col·laborativa o bé activeu un sol nom si voleu cercar cada persona una per una. Feu clic a «Sobre la revista» per obtenir més informació sobre el recurs cercat. Aquests recursos han estat seleccionats per la rellevància que tenen i perquè ofereixen accés lliure (gratuït) a tots o part dels continguts.</message>
-
-
 
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Introduïu el vostre correu electrònic per rebre notificacions immediates del contingut important nou que s'afegeixi a la revista.</message>
@@ -1025,7 +1014,7 @@
 	<message key="submission.copyrightHolder">Titular del copyright</message>
 	<message key="submission.copyrightYear">Any del copyright</message>
 	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
-	<message key="submission.licenseURLValid">Si us plau, proporcina una URL remota vàlida (inclou http://).</message>
+	<message key="submission.licenseURLValid">Si us plau, proporciona una URL remota vàlida (inclou http://).</message>
 	<message key="submission.licenseURL">URL de la llicència</message>
 	<message key="submission.license.cc.by-nc-nd4">CC Reconeixement-NoComercial-SenseObraDerivada 4.0</message>
 	<message key="submission.license.cc.by-nc4">CC Reconeixement-NoComercial 4.0</message>

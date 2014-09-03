@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * @file plugins/generic/alm/locale/en_US/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
   * ALM plugin localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
-
+<locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.alm.displayName">Mòdul ALM</message>
-	<message key="plugins.generic.alm.description">Mòdul per a mostrar la Mètrica a Nivell d'Article (ALM, Article Level Metrics). Per a utilitzar el servei ALM, necessites despossar de DOIs. Aquest requeriment pot relaxar-se en un futur.</message>
+	<message key="plugins.generic.alm.description">Mòdul per a mostrar la Mètrica a Nivell d'Article (ALM, Article Level Metrics). Per a utilitzar el servei ALM, necessites disposar de DOIs. Aquest requeriment pot relaxar-se en un futur.</message>
 	<message key="plugins.generic.alm.title">Mètriques d'articles</message>
 	<message key="plugins.generic.alm.loading">Carregant mètriques ...</message>
 
@@ -31,9 +31,9 @@ a la <a href="http://pkp-alm.lib.sfu.ca/">pàgina ALM de PKP</a>.]]></message>
 
 	<message key="plugins.generic.alm.thisJournal">Aquesta revista</message>
 	<message key="plugins.generic.alm.categories.html">Vistes HTML.</message>
-	<message key="plugins.generic.alm.categories.html.description">Número total de visionats del HTML de la pàgina d'aquest article. Aquests visionats es computen pel propi sistema. El comput menusal de visionats tambè pot estar disponible.</message>
+	<message key="plugins.generic.alm.categories.html.description">Número total de visionats del HTML de la pàgina d'aquest article. Aquests visionats es computen pel propi sistema. El comput mensual de visionats tambè pot estar disponible.</message>
 	<message key="plugins.generic.alm.categories.pdf">Vistes PDF.</message>
-	<message key="plugins.generic.alm.categories.pdf.description">Número total de visionats i descàrregues del PDF d'aquest article. Aquests visionats es computen pel propi sistema. El comput menusal de visionats tambè pot estar disponible.</message>
+	<message key="plugins.generic.alm.categories.pdf.description">Número total de visionats i descàrregues del PDF d'aquest article. Aquests visionats es computen pel propi sistema. El comput mensual de visionats tambè pot estar disponible.</message>
 	<message key="plugins.generic.alm.categories.shares">Shares</message>
 	<message key="plugins.generic.alm.categories.shares.description">Shares or bookmarks a les xarxes socials com Facebook, CiteULike i Mendeley. A la majoria dels casos, clicar en el número de shares el portarà al llistat a la xarxa corresponent.</message>
 	<message key="plugins.generic.alm.categories.likes">Likes</message>
@@ -49,5 +49,4 @@ a la <a href="http://pkp-alm.lib.sfu.ca/">pàgina ALM de PKP</a>.]]></message>
 	S'han enviat {$articlesNumber} entrades d'articles.
 	{$payload}</message>
 	<message key="plugins.generic.alm.senderTask.name">Informació ALM del remitent de l'article</message>
-	
 </locale>

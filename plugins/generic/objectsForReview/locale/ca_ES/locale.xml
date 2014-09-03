@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
-  * @file plugins/generic/objectsForReview/locale/en_US/locale.xml
+  * @file plugins/generic/objectsForReview/locale/ca_ES/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Objects for review plugin localization strings for the en_US (U.S. English) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
+  * Objects for review plugin localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="en_US" full_name="U.S. English">
@@ -649,6 +650,4 @@
 	<message key="plugins.generic.objectsForReview.object.webPage.person.translator">Translator</message>
 	<message key="plugins.generic.objectsForReview.object.webPage.websiteTitle">Website Title</message>
 	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">Website Type</message>
-
-
 </locale>
