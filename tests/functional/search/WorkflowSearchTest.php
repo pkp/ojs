@@ -19,6 +19,7 @@ class WorkflowSearchTest extends WebTestCase {
 	/** @var $punctuationTitle Full title of test submission */
 	static $punctuationTitle = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
 	static $punctuationTitleSnippet = 'NineNation';
+	static $titleStartSnippet = 'the facets';
 
 	/**
 	 * @copydoc WebTestCase::getAffectedTables
@@ -37,16 +38,22 @@ class WorkflowSearchTest extends WebTestCase {
 		// Use the search to find a known submission with punctuation
 		// in the title (bug #8872)
 		$this->_search('Title', 'is', self::$punctuationTitle);
-		$this->assertText('css=h3', 'Submission');
+		$this->assertText('css=h3', 'Submission'); // Should match 1
 
 		// Try again, this time partial and without the colon
 		$this->clickAndWait('link=Editor');
 		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
-		$this->assertText('css=h3', 'Submissions');
+		$this->assertText('css=h3', 'Submissions'); // Should not match
+
+		// Test "starts with" searches.
+		$this->_search('Title', 'starts with', self::$titleStartSnippet);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
+		$this->clickAndWait('link=Editor');
 
 		// Ensure that the title sort heading doesn't error out.
+		$this->clickAndWait('link=In Review');
 		$this->clickAndWait('link=Title');
-		$this->assertText('css=h3', 'Submissions');
+		$this->assertText('css=h2', 'Submissions in Review');
 
 		$this->logOut();
 	}
@@ -63,7 +70,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// (Bug #8872)
 		$this->clickAndWait('link=In Editing');
 		$this->_search('Title', 'is', self::$punctuationTitle);
-		$this->assertText('css=h3', 'Submission');
+		$this->assertText('css=h3', 'Submission'); // Should match 1
 
 		// Try again, this time partial and without the colon. Before
 		// the fix, this would have matched a submission. After the fix,
@@ -71,7 +78,12 @@ class WorkflowSearchTest extends WebTestCase {
 		$this->clickAndWait('link=Section Editor');
 		$this->clickAndWait('link=In Editing');
 		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
-		$this->assertText('css=h2', 'Submissions in Editing');
+		$this->assertText('css=h2', 'Submissions in Editing'); // No match
+
+		// Test "starts with" searches.
+		$this->_search('Title', 'starts with', self::$titleStartSnippet);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
+		$this->clickAndWait('link=In Editing');
 
 		// Ensure that the title sort heading doesn't error out.
 		$this->clickAndWait('link=Title');
@@ -100,7 +112,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// in the title. Should find a submission with the exact name.
 		// (Bug #8872)
 		$this->_search('Title', 'is', self::$punctuationTitle);
-		$this->assertText('css=h3', 'Submission');
+		$this->assertText('css=h3', 'Submission'); // Should match 1
 
 		// Try again, this time partial and without the colon. Before
 		// the fix, this would have matched a submission. After the fix,
@@ -109,6 +121,11 @@ class WorkflowSearchTest extends WebTestCase {
 		$this->clickAndWait('link=Archive');
 		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
 		$this->assertElementPresent('css=td.nodata');
+
+		// Test "starts with" searches.
+		$this->_search('Title', 'starts with', self::$titleStartSnippet);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
+		$this->clickAndWait('link=Archive');
 
 		// Ensure that the title sort heading doesn't error out.
 		$this->clickAndWait('link=Title');
@@ -149,7 +166,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// in the title. Should find a submission with the exact name.
 		// (Bug #8872)
 		$this->_search('Title', 'is', self::$punctuationTitle);
-		$this->assertText('css=h3', 'Submission');
+		$this->assertText('css=h3', 'Submission'); // Should match 1
 
 		// Try again, this time partial and without the colon. Before
 		// the fix, this would have matched a submission. After the fix,
@@ -157,7 +174,12 @@ class WorkflowSearchTest extends WebTestCase {
 		$this->clickAndWait('link=Layout Editor');
 		$this->clickAndWait('link=Archive');
 		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
-		$this->assertElementPresent('css=td.nodata');
+		$this->assertElementPresent('css=td.nodata'); // No match
+
+		// Test "starts with" searches.
+		$this->_search('Title', 'starts with', self::$titleStartSnippet);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
+		$this->clickAndWait('link=Archive');
 
 		// Ensure that the title sort heading doesn't error out.
 		$this->clickAndWait('link=Title');
