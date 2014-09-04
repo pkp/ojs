@@ -16,8 +16,9 @@
 import('lib.pkp.tests.WebTestCase');
 
 class WorkflowSearchTest extends WebTestCase {
-	/** @var $fullTitle Full title of test submission */
-	static $fullTitle = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
+	/** @var $punctuationTitle Full title of test submission */
+	static $punctuationTitle = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
+	static $punctuationTitleSnippet = 'NineNation';
 
 	/**
 	 * @copydoc WebTestCase::getAffectedTables
@@ -35,12 +36,12 @@ class WorkflowSearchTest extends WebTestCase {
 
 		// Use the search to find a known submission with punctuation
 		// in the title (bug #8872)
-		$this->_search(self::$fullTitle, 'is');
+		$this->_search('Title', 'is', self::$punctuationTitle);
 		$this->assertText('css=h3', 'Submission');
 
 		// Try again, this time partial and without the colon
 		$this->clickAndWait('link=Editor');
-		$this->_search('NineNation', 'contains');
+		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
 		$this->assertText('css=h3', 'Submissions');
 
 		// Ensure that the title sort heading doesn't error out.
@@ -61,7 +62,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// in the title. Should find a submission with the exact name.
 		// (Bug #8872)
 		$this->clickAndWait('link=In Editing');
-		$this->_search(self::$fullTitle, 'is');
+		$this->_search('Title', 'is', self::$punctuationTitle);
 		$this->assertText('css=h3', 'Submission');
 
 		// Try again, this time partial and without the colon. Before
@@ -69,7 +70,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// it shouldn't.
 		$this->clickAndWait('link=Section Editor');
 		$this->clickAndWait('link=In Editing');
-		$this->_search('NineNation', 'contains');
+		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
 		$this->assertText('css=h2', 'Submissions in Editing');
 
 		// Ensure that the title sort heading doesn't error out.
@@ -87,7 +88,7 @@ class WorkflowSearchTest extends WebTestCase {
 
 		// Prep: Copyeditor search is only available in archive.
 		// Need to archive the submission first.
-		$this->findSubmissionAsEditor('dbarnes', null, self::$fullTitle);
+		$this->findSubmissionAsEditor('dbarnes', null, self::$punctuationTitle);
 		$this->clickAndWait('link=Reject and Archive Submission');
 		$this->clickAndWait('css=input.button.defaultButton');
 		$this->logOut();
@@ -98,7 +99,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// Use the search to find a known submission with punctuation
 		// in the title. Should find a submission with the exact name.
 		// (Bug #8872)
-		$this->_search(self::$fullTitle, 'is');
+		$this->_search('Title', 'is', self::$punctuationTitle);
 		$this->assertText('css=h3', 'Submission');
 
 		// Try again, this time partial and without the colon. Before
@@ -106,7 +107,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// it shouldn't.
 		$this->clickAndWait('link=Copyeditor');
 		$this->clickAndWait('link=Archive');
-		$this->_search('NineNation', 'contains');
+		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
 		$this->assertElementPresent('css=td.nodata');
 
 		// Ensure that the title sort heading doesn't error out.
@@ -123,7 +124,7 @@ class WorkflowSearchTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		// Prep: Layout editor needs to be assigned and requested.
-		$this->findSubmissionAsEditor('dbarnes', null, self::$fullTitle);
+		$this->findSubmissionAsEditor('dbarnes', null, self::$punctuationTitle);
 		$this->clickAndWait('link=Reject and Archive Submission');
 		$this->clickAndWait('css=input.button.defaultButton');
 		$this->clickAndWait('link=Editing');
@@ -147,7 +148,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// Use the search to find a known submission with punctuation
 		// in the title. Should find a submission with the exact name.
 		// (Bug #8872)
-		$this->_search(self::$fullTitle, 'is');
+		$this->_search('Title', 'is', self::$punctuationTitle);
 		$this->assertText('css=h3', 'Submission');
 
 		// Try again, this time partial and without the colon. Before
@@ -155,7 +156,7 @@ class WorkflowSearchTest extends WebTestCase {
 		// it shouldn't.
 		$this->clickAndWait('link=Layout Editor');
 		$this->clickAndWait('link=Archive');
-		$this->_search('NineNation', 'contains');
+		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
 		$this->assertElementPresent('css=td.nodata');
 
 		// Ensure that the title sort heading doesn't error out.
@@ -166,12 +167,14 @@ class WorkflowSearchTest extends WebTestCase {
 	}
 
 	/**
-	 * Search for a submission by title.
-	 * @param $title string Title search text
+	 * Search for a submission.
+	 * @param $field string Name of field (e.g. Title)
 	 * @param $match string string is|contains Type of match
+	 * @param $value string Title search text
 	 */
-	private function _search($title, $match) {
-		$this->type('//div[@id=\'main\']//input[@name=\'search\']', $title);
+	private function _search($field, $match, $value) {
+		$this->type('//div[@id=\'main\']//input[@name=\'search\']', $value);
+		$this->select('//div[@id=\'main\']//select[@name=\'searchField\']', 'label=' . $field);
 		$this->select('//div[@id=\'main\']//select[@name=\'searchMatch\']', 'label=' . $match);
 		$this->clickAndWait('//div[@id=\'main\']//input[@value=\'Search\']');
 	}
