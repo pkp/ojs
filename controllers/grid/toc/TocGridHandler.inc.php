@@ -117,9 +117,9 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @copydoc CategoryGridHandler::getCategoryData()
+	 * @copydoc CategoryGridHandler::loadCategoryData()
 	 */
-	function getCategoryData($section) {
+	function loadCategoryData($request, $section) {
 		return $this->publishedArticlesBySectionId[$section->getId()];
 	}
 

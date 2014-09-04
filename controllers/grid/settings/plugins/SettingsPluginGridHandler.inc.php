@@ -32,8 +32,8 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	/**
 	 * @copydoc PluginGridHandler::loadData()
 	 */
-	function getCategoryData($categoryDataElement, $filter) {
-		$plugins = parent::getCategoryData($categoryDataElement, $filter);
+	function loadCategoryData($request, $categoryDataElement, $filter) {
+		$plugins = parent::loadCategoryData($request, $categoryDataElement, $filter);
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 
 		$showSitePlugins = false;
