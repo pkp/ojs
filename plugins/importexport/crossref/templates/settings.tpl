@@ -13,13 +13,34 @@
 {/strip}
 <div id="crossrefSettings">
 	{include file="common/formErrors.tpl"}
-	<br />
-	<br />
-
-	<div id="description"><b>{translate key="plugins.importexport.crossref.settings.form.description"}</b></div>
-
+	<p>{translate key="plugins.importexport.crossref.registrationIntro"}</p>
+	<h3>{translate key="plugins.importexport.crossref.requirements"}</h3>
 	<br />
 
+	{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
+	{url|assign:"publisherUrl" page="manager" op="setup" path="1" anchor='setupPublisher'}
+	{url|assign:"doiUrl" page="manager" op="plugin" path="pubIds"}
+
+	{if !empty($configurationErrors) || !$currentJournal->getSetting('publisherInstitution')|escape}
+	<ul>
+		{foreach from=$configurationErrors item=configurationError}
+			{if $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_DOIPREFIX}
+				<li>{translate key="plugins.importexport.crossref.error.DOIsNotAvailable" doiUrl=$doiUrl}</li>
+			{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_SETTINGS}
+				<li>{translate key="plugins.importexport.crossref.error.pluginNotConfigured" settingsUrl=$settingsUrl}</li>
+			{/if}
+		{/foreach}
+		{if !$currentJournal->getSetting('publisherInstitution')|escape}
+			<li>{translate key="plugins.importexport.crossref.error.publisherNotConfigured" publisherUrl=$publisherUrl}</li>
+		{/if}
+
+	</ul>
+	{else}
+		{translate key="plugins.importexport.crossref.requirements.satisfied"}
+	{/if}
+
+	<h3>{translate key="plugins.importexport.common.settings"}</h3>
+	<br />
 	<form method="post" action="{plugin_url path="settings"}">
 		<table width="100%" class="data">
 			<tr valign="top">
@@ -59,13 +80,14 @@
 				<td width="20%" class="label">{fieldLabel name="password" key="plugins.importexport.common.settings.form.password"}</td>
 				<td width="80%" class="value">
 					<input type="password" name="password" value="{$password|escape}" size="20" maxlength="50" id="password" class="textField" />
+					<br />{translate key="plugins.importexport.common.settings.form.password.description"}
 				</td>
 			</tr>
 			<tr><td colspan="2">&nbsp;</td></tr>
 			<tr valign="top">
 				<td width="20%" class="label">{fieldLabel name="automaticRegistration" key="plugins.importexport.crossref.settings.form.automaticRegistration"}</td>
 				<td width="80%" class="value">
-					<input type="checkbox" name="automaticRegistration" id="automaticRegistration" value="1" {if $automaticRegistration} checked="checked"{/if} />&nbsp;
+					<input type="checkbox" name="automaticRegistration" id="automaticRegistration" value="1" {if $automaticRegistration} checked="checked"{/if} />&nbsp;{translate key="plugins.importexport.crossref.settings.form.automaticRegistration.description"}
 				</td>
 			</tr>
 			<tr><td colspan="2">&nbsp;</td></tr>

@@ -419,6 +419,37 @@ class DOIExportPlugin extends ImportExportPlugin {
 				$journal =& $router->getContext($request);
 
 				$form =& $this->_instantiateSettingsForm($journal);
+				
+				// FIXME: JM: duplicate code from _displayPluginHomePage()
+				// Check for configuration errors:
+				$configurationErrors = array();
+
+				// 1) missing DOI prefix
+				$doiPrefix = null;
+				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+				if (isset($pubIdPlugins['DOIPubIdPlugin'])) {
+					$doiPrefix = $pubIdPlugins['DOIPubIdPlugin']->getSetting($journal->getId(), 'doiPrefix');
+				}
+				if (empty($doiPrefix)) {
+					$configurationErrors[] = DOI_EXPORT_CONFIGERROR_DOIPREFIX;
+				}
+
+				// 2) missing plug-in setting.
+				$form =& $this->_instantiateSettingsForm($journal);
+				foreach($form->getFormFields() as $fieldName => $fieldType) {
+					if ($form->isOptional($fieldName)) continue;
+
+					$setting = $this->getSetting($journal->getId(), $fieldName);
+					if (empty($setting)) {
+						$configurationErrors[] = DOI_EXPORT_CONFIGERROR_SETTINGS;
+						break;
+					}
+				}
+
+				$templateMgr =& TemplateManager::getManager();
+				$templateMgr->assign_by_ref('configurationErrors', $configurationErrors);
+				// JM end duplicate code
+				
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {

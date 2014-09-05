@@ -21,16 +21,15 @@ if (!class_exists('DOIExportPlugin')) { // Bug #7848
 // DataCite API
 define('CROSSREF_API_DEPOSIT_OK', 303);
 define('CROSSREF_API_RESPONSE_OK', 200);
-//define('CROSSREF_API_URL', 'https://api.crossref.org/deposits');
+define('CROSSREF_API_URL', 'https://api.crossref.org/deposits');
+
 //TESTING
-define('CROSSREF_API_URL', 'http://test.crossref.org');
+//define('CROSSREF_API_URL', 'https://api.crossref.org/deposits?test=true');
+
 define('CROSSREF_SEARCH_API', 'http://search.crossref.org/dois');
 
 // The name of the settings used to save the registered DOI and the URL with the deposit status.
 define('CROSSREF_DEPOSIT_STATUS', 'depositStatus');
-
-// Test DOI prefix
-define('CROSSREF_API_TESTPREFIX', '10.1234');
 
 class CrossRefExportPlugin extends DOIExportPlugin {
 

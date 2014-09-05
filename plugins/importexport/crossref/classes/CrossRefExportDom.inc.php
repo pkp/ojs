@@ -21,6 +21,7 @@ if (!class_exists('DOIExportDom')) { // Bug #7848
 define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
 define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.3');
 define('CROSSREF_VERSION' , '4.3.3');
+define('CROSSREF_XSI_SCHEMAVERSION' , '4.3.3');
 define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.3 http://www.crossref.org/schema/deposit/crossref4.3.3.xsd');
 
 class CrossRefExportDom extends DOIExportDom {
@@ -475,6 +476,9 @@ class CrossRefExportDom extends DOIExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $authorNode, 'given_name', ucfirst($author->getFirstName()).(($author->getMiddleName())?' '.ucfirst($author->getMiddleName()):''));
 		XMLCustomWriter::createChildWithText($doc, $authorNode, 'surname', ucfirst($author->getLastName()));
+		if ($author->getData('orcid')) {
+			XMLCustomWriter::createChildWithText($doc, $authorNode, 'ORCID', $author->getData('orcid'));
+		}
 
 		return $authorNode;
 	}

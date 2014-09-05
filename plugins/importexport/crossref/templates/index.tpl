@@ -12,27 +12,15 @@
 {include file="common/header.tpl"}
 {/strip}
 
-<br/>
-
-<h3>{translate key="plugins.importexport.common.settings"}</h3>
-{if !empty($configurationErrors)}
-	{foreach from=$configurationErrors item=configurationError}
-		{if $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_DOIPREFIX}
-			{translate key="plugins.importexport.common.error.DOIsNotAvailable"}<br /><br />
-		{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_SETTINGS}
-			{translate key="plugins.importexport.common.error.pluginNotConfigured"}
-		{/if}
-	{/foreach}
-{/if}
-{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
-{translate key="plugins.importexport.crossref.settings.description" settingsUrl=$settingsUrl}
-<br />
-<br />
 {translate key="plugins.importexport.crossref.registrationIntro"}
+{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
 
-{if empty($configurationErrors)}
-	<h3>{translate key="plugins.importexport.common.export"}</h3>
+<br />
 
+<h3>{translate key="plugins.importexport.common.export"}</h3>
+{if !empty($configurationErrors) || !$currentJournal->getSetting('publisherInstitution')|escape}
+	<p>{translate key="plugins.importexport.common.export.unAvailable"}</p>
+{else}
 	<ul class="plain">
 		<li>&#187; <a href="{plugin_url path="all"}">{translate key="plugins.importexport.crossref.export.unregistered"}</a></li>
 		<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.common.export.issues"}</a></li>
@@ -40,5 +28,9 @@
 	</ul>
 {/if}
 
-<br /><br />
+<h3>{translate key="plugins.importexport.common.settings"}</h3>
+<br />
+{translate key="plugins.importexport.crossref.settings.description" settingsUrl=$settingsUrl}
+<br />
+
 {include file="common/footer.tpl"}
