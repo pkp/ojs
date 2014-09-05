@@ -52,6 +52,21 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		//
 		// Create test data.
 		//
+		$journalId = 1;
+
+		// Enable the DOI plugin.
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enabled', 1);
+		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableIssueDoi', 1);
+		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableArticleDoi', 1);
+		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableGalleyDoi', 1);
+		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableSuppFileDoi', 1);
+
+		AppLocale::setTranslations(
+			array(
+				'submission.copyrightStatement' => 'copyright-statement',
+			)
+		);
 
 		// Author
 		import('classes.article.Author');
@@ -75,7 +90,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		        ->method('getBestArticleId')
 		        ->will($this->returnValue(9));
 		$article->setId(9);
-		$article->setJournalId(1);
+		$article->setJournalId($journalId);
 		$author->setSubmissionId($article->getId());
 		$article->setSuppFiles(array($suppFile));
 		$article->setPages(15);
@@ -92,6 +107,9 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$article->setCoverageGeo('article-coverage-geo', 'en_US');
 		$article->setCoverageChron('article-coverage-chron', 'en_US');
 		$article->setCoverageSample('article-coverage-sample', 'en_US');
+		$article->setCopyrightYear('copyright-year');
+		$article->setCopyrightHolder('copyright-holder', 'en_US');
+		$article->setLicenseUrl('license-url');
 
 		// Galleys
 		import('classes.article.ArticleGalley');
@@ -125,7 +143,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$issue->setId(96);
 		$issue->setDatePublished('2010-11-05');
 		$issue->setStoredPubId('doi', 'issue-doi');
-		$issue->setJournalId(1);
+		$issue->setJournalId($journalId);
 
 
 		//
@@ -227,9 +245,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 			case 'title':
 				return array('en_US' => 'journal-title');
 
-			case 'copyrightNotice':
-				return array('en_US' => 'journal-copyright');
-
 			case 'publisherInstitution':
 				return array('journal-publisher');
 
@@ -239,8 +254,14 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 			case 'enablePublicSuppFileId':
 				return false;
 
+			case 'onlineIssn':
+				return 'online-issn';
+
+			case 'printIssn':
+				return 'print-issn';
+
 			default:
-				self::fail();
+				self::fail('Unknown setting ' . $settingName);
 		}
 	}
 

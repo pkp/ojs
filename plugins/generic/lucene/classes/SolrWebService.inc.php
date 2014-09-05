@@ -923,7 +923,7 @@ class SolrWebService extends XmlWebService {
 	 * @return DOMXPath An XPath object with the response loaded. Null if an error occurred.
 	 *  See _serviceMessage for more details about the error.
 	 */
-	function &_makeRequest($url, $params, $method = 'GET') {
+	function &_makeRequest($url, $params = array(), $method = 'GET') {
 		$webServiceRequest = new WebServiceRequest($url, $params, $method);
 		if ($method == 'POST') {
 			$webServiceRequest->setHeader('Content-Type', 'text/xml; charset=utf-8');
@@ -1201,6 +1201,8 @@ class SolrWebService extends XmlWebService {
 	 *  in the list.
 	 * @param $totalCount integer The overall number of changed articles
 	 *  (not only the current batch).
+	 * @param $numDeleted integer Variable to receive the number of deleted
+	 *  articles.
 	 *
 	 * @return string The XML ready to be consumed by the Solr data
 	 *  import service.
