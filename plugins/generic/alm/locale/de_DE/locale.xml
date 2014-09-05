@@ -20,10 +20,9 @@
 
 	<message key="plugins.generic.alm.settings">Einstellungen</message>
 	<message key="plugins.generic.alm.settings.saved">Einstellungen des ALM-Plug-Ins gespeichert.</message>
-	<message key="plugins.generic.alm.apiKeyRequired">Sie müssen Ihren API-Key für Article Level Metrics angeben.</message>
-	<message key="plugins.generic.alm.depositUrlRequired">Sie müssen einen URL für die Ablieferung von Artikelinformationen angeben.</message>
 	<message key="plugins.generic.alm.settings.apiKey">API-Key für Article Level Metrics</message>
 	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[Um auf die Article Level Metrics des ALM-Servers zugreifen zu können, benötigen Sie einen API-Key. Sie können einen erzeugen, indem Sie sich (mittels Mozilla Persona) auf der <a href="http://pkp-alm.lib.sfu.ca/">PKP-ALM-Seite</a> einloggen.]]></message>
+	<message key="plugins.generic.alm.settings.depositArticles">Sollen Informationen über Artikel automatisch abgeliefert werden? (Deaktivieren Sie diese Option, wenn Sie die Informationen mit dem DOI-Präfix direkt auf dem ALM-Server ablegen.)</message>
 	<message key="plugins.generic.alm.settings.depositUrl">URL zur Ablieferung von Artikelinformationen</message>
 	<message key="plugins.generic.alm.settings.depositUrl.description">Von PKP angegebener URL zur Ablieferung von Artikeln.</message>
 	<message key="plugins.generic.alm.settings.ipAddress">Wenn Sie PKP kontaktieren, um den ALM-Dienst einzurichten, geben Sie bitte diese IP-Adresse an: {$ip}</message>
@@ -42,6 +41,7 @@
 
 	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">Das ALM-Plug-In ist aktiviert, aber ein gültiger DOI-Präfix muss im Setup zum Zeitschriftenpfad {$path} festgelegt werden, damit Artikelinformationen gesendet werden können.</message>
 	<message key="plugins.generic.alm.senderTask.warning.noApiKey">Das ALM-Plug-In ist aktiviert, aber es ist kein API-Key für den Zeitschriftenpfad {$path} definiert.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noJournal">Das ALM-Plug-In ist in keiner Zeitschrift aktiviert. Es wurden keine Artikelinformationen gesendet.</message>
 	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Übermittlung von Artikelinformationen für Zeitschriftenpfad {$path} konnte nicht bestätigt werden. Der Server hat nicht geantwortet.</message>
 	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">Kein Ablieferungs-URL definiert.</message>
 	<message key="plugins.generic.alm.senderTask.error.returnError">Der Server hat ein Resultat geliefert: {$error}
