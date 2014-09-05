@@ -490,7 +490,7 @@
 	<message key="plugins.generic.objectsForReview.object.letter">Letter</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.author">Author</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Contributor</message>
-	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">Recepient</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Recipient</message>
 	<message key="plugins.generic.objectsForReview.object.letter.type">Letter Type</message>
 	<!-- Magazine Article -->
 	<message key="plugins.generic.objectsForReview.object.magazineArticle">Magazine Article</message>
