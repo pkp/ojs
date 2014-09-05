@@ -348,7 +348,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 				$message = __('plugins.generic.objectsForReview.notification.ofrRequested');
 				break;
 			case NOTIFICATION_TYPE_OFR_AUTHOR_ASSIGNED:
-				$message = __('plugins.generic.objectsForReview.notification.ofrAauthorAssigned');
+				$message = __('plugins.generic.objectsForReview.notification.ofrAuthorAssigned');
 				break;
 			case NOTIFICATION_TYPE_OFR_AUTHOR_DENIED:
 				$message = __('plugins.generic.objectsForReview.notification.ofrAuthorDenied');
