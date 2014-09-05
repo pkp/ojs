@@ -235,7 +235,11 @@
 	<message key="manager.setup.resetPermissions">Rechte zum Artikel zurücksetzen</message>
 	<message key="manager.setup.resetPermissions.description">Copyright-Vermerk und Lizenzinformation werden dauerhaft mit dem Inhalt verbunden, damit sie nicht geändert werden, wenn eine Zeitschrift die Regeln für neue Einreichungen ändert. Um bereits zusammen mit den veröffentlichten Inhalten gespeicherte Angaben zu den Rechten zurückzusetzen, benutzen Sie bitte den Knopf unten.</message>
 	<message key="manager.setup.confirmResetLicense">Sind Sie sicher, dass Sie die Informationen zu Lizenz und Copyright, die mit veröffentlichten Inhalten verknüpft sind, auf die in der Zeitschriftenverwaltung gespeicherte Lizenz zurücksetzen wollen?</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Sie haben Informationen zu Lizenz und Copyright in der Zeitschriftenverwaltung geändert. Bitte speichern Sie diese Änderungen, bevor Sie die Berechtigungen zurücksetzen.</message>
 	<message key="manager.setup.copyrightNotice">Copyright-Vermerk</message>
+	<message key="manager.setup.copyrightYearBasis">Bestimme das Copyright-Jahr neuer Artikel anhand von</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Das Standardjahr wird dem Veröffentlichungsdatum des Artikels entnommen, wie bei artikelweiser Veröffentlichung.</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Das Standardjahr wird dem Veröffentlichungsdatum der Ausgabe entnommen.</message>
 	<message key="manager.setup.coverage">Themenbereich</message>
 	<message key="manager.setup.coverageChronExamples">(z.B. Europäische Renaissance; Erdzeitalter Jura; Drittes Trimester usw.)</message>
 	<message key="manager.setup.coverageChronProvideExamples">Beispiele für den im Fachgebiet relevanten zeitlichen Bereich angeben.</message>
