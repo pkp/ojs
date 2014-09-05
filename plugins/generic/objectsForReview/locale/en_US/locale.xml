@@ -358,7 +358,7 @@
 	<message key="plugins.generic.objectsForReview.object.case.firstPage">First Page</message>
 	<message key="plugins.generic.objectsForReview.object.case.history">History</message>
 	<!-- Computer Program -->
-	<message key="plugins.generic.objectsForReview.object.computerProgram">Case</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram">Computer program</message>
 	<message key="plugins.generic.objectsForReview.object.computerProgram.person.programmer">Programmer</message>
 	<message key="plugins.generic.objectsForReview.object.computerProgram.person.contributor">Contributor</message>
 	<message key="plugins.generic.objectsForReview.object.computerProgram.seriesTitle">Series Title</message>
@@ -383,8 +383,8 @@
 	<message key="plugins.generic.objectsForReview.object.conferencePaper.pages">Pages</message>
 	<message key="plugins.generic.objectsForReview.object.conferencePaper.series">Series</message>
 	<message key="plugins.generic.objectsForReview.object.conferencePaper.isbn">ISBN</message>
-	<!-- Dictinary Entry -->
-	<message key="plugins.generic.objectsForReview.object.dictionaryEntry">Dictinary Entry</message>
+	<!-- Dictionary Entry -->
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry">Dictionary Entry</message>
 	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.author">Author</message>
 	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.contributor">Contributor</message>
 	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.editor">Editor</message>
@@ -457,7 +457,7 @@
 	<message key="plugins.generic.objectsForReview.object.hearing.pages">Pages</message>
 	<message key="plugins.generic.objectsForReview.object.hearing.legislativeBody">Legislative Body</message>
 	<message key="plugins.generic.objectsForReview.object.hearing.session">Session</message>
-	<message key="plugins.generic.objectsForReview.object.hearing.history">Hisotry</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.history">History</message>
 	<!-- Instant Message -->
 	<message key="plugins.generic.objectsForReview.object.instantMessage">Instant Message</message>
 	<message key="plugins.generic.objectsForReview.object.instantMessage.person.author">Author</message>
@@ -490,7 +490,7 @@
 	<message key="plugins.generic.objectsForReview.object.letter">Letter</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.author">Author</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Contributor</message>
-	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">Recepient</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Recipient</message>
 	<message key="plugins.generic.objectsForReview.object.letter.type">Letter Type</message>
 	<!-- Magazine Article -->
 	<message key="plugins.generic.objectsForReview.object.magazineArticle">Magazine Article</message>
@@ -615,7 +615,7 @@
 	<!-- TV Broadcast -->
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast">TV Broadcast</message>
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.director">Director</message>
-	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.castMember">Cast Memeber</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.castMember">Cast Member</message>
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.contributor">Contributor</message>
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.guest">Guest</message>
 	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.producer">Producer</message>
@@ -629,7 +629,7 @@
 	<!-- Video Recording -->
 	<message key="plugins.generic.objectsForReview.object.videoRecording">Video Recording</message>
 	<message key="plugins.generic.objectsForReview.object.videoRecording.person.director">Director</message>
-	<message key="plugins.generic.objectsForReview.object.videoRecording.person.castMember">Cast Memeber</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.castMember">Cast Member</message>
 	<message key="plugins.generic.objectsForReview.object.videoRecording.person.contributor">Contributor</message>
 	<message key="plugins.generic.objectsForReview.object.videoRecording.person.guest">Guest</message>
 	<message key="plugins.generic.objectsForReview.object.videoRecording.person.producer">Producer</message>
