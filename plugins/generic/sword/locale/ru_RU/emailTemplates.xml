@@ -11,7 +11,7 @@
   * Localization strings for the ru_RU (Russian) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
- 
+
 <email_texts locale="ru_RU">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Уведомление о передаче на хранение</subject>

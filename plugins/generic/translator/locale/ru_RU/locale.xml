@@ -17,9 +17,9 @@
 	<message key="plugins.generic.translator.description">Этот плагин позволяет выполнять работать с файлами перевода через веб-интерфейс.</message>
 	<message key="plugins.generic.translator.longdescription">Эта область позволяет администратору сайта создавать, изменять и проверять переводы системы OJS. Изменения в этой области затрагивают весь сайт, поэтому данная область не должна использоваться для изменения перевода для одного журнала OJS. Если вы корректируете или создаете перевод, пожалуйста подумайте над его отправкой в Public Knowledge Project для включения в будущие версии OJS.</message>
 	<message key="plugins.generic.translator.localeDescription">Эта страница содержит список всех компонентов перевода OJS  и дает возможность переводчику редактировать каждый из них. Полный перевод OJS должен содержать полный перевод всех компонентов.</message>
-	
+
 	<message key="plugins.generic.translator.tarMissing">Функция экспорта этого плагина была отключена, так как в этой системе не найдена настроенная утилита tar. Пожалуйста убедитесь, что утилита tar у вас установлена, а затем настройте путь к утилите tar в разделе [cli] файла config.inc.php!</message>
-	
+
 	<message key="plugins.generic.translator.localeName">Название языка</message>
 	<message key="plugins.generic.translator.localeKey">Ключ</message>
 	<message key="plugins.generic.translator.localeKey.description">Введите полный ключ сообщения, который нужно найти.</message>

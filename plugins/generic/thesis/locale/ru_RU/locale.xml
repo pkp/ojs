@@ -141,9 +141,9 @@
 	<message key="plugins.generic.thesis.university">Университет</message>
 	<message key="plugins.generic.thesis.abstract">Автореферат</message>
 	<message key="plugins.generic.thesis.fullText">Полный текст (внешний сайт)</message>
-	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName} {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.studentFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
-	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName} {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
 	<message key="plugins.generic.thesis.form.introduction">После отправки этой формы руководитель диссертации получит электронной почтой сообщение с просьбой подтвердить правильность отправленной информации. Как только такое подтверждение будет получено журналом, автореферат диссертации будет опубликован на сайте.</message>
 	<message key="plugins.generic.thesis.form.status">Статус</message>

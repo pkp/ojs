@@ -10,7 +10,6 @@
   *
   * ALM plugin localization strings for the ru_RU (Russian) locale.
   * With updates from Pavel Pisklakov (revising translation). 
-
   -->
 
 <locale name="ru_RU" full_name="Russian">
@@ -22,10 +21,9 @@
 
 	<message key="plugins.generic.alm.settings">Настройки</message>
 	<message key="plugins.generic.alm.settings.saved">Настройки плагина «ALM» сохранены.</message>
-	<message key="plugins.generic.alm.apiKeyRequired">Вам необходимо добавить ваш ключ API для метрик уровня статьи.</message>
-	<message key="plugins.generic.alm.depositUrlRequired">Вам необходимо добавить адрес (URL) депозитария информации о статьях.</message>
 	<message key="plugins.generic.alm.settings.apiKey">Ключ API для метрик уровня статьи</message>
 	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[Для получения метрик уровня статьи с сервера ALM, вам необходим ключ API. Вы можете создать его, войдя в систему (с помощью Mozilla Persona) на <a href="http://pkp-alm.lib.sfu.ca/">странице PKP ALM</a>.]]></message>
+	<message key="plugins.generic.alm.settings.depositArticles">Автоматически передавать информацию о статьях в депозитарий? (Отключите, если вы передаете информацию в депозитарий прямо на сервер ALM, используя префикс DOI.)</message>
 	<message key="plugins.generic.alm.settings.depositUrl">Адрес (URL) депозитария информации о статьях</message>
 	<message key="plugins.generic.alm.settings.depositUrl.description">URL, предоставленный PKP для депозитария статей.</message>
 	<message key="plugins.generic.alm.settings.ipAddress">Связываясь с PKP для настройки сервиса, пожалуйста сообщите этот IP-адрес: {$ip}</message>
@@ -44,6 +42,7 @@
 
 	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">Плагин «ALM» включен, но должен быть задан правильный префикс DOI для журнала с адресом {$path} Настройте, что бы можно было отправлять информацию о статьях.</message>
 	<message key="plugins.generic.alm.senderTask.warning.noApiKey">Плагин «ALM» включен, но не задан ключ API для журнала по адресу {$path}.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noJournal">Плагин ALM не включен ни в одном журнале. Информация о статьях не отправляется.</message>
 	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Не удается подтведить, что информация о статьях для журнала по адресу {$path} была отправлена. Сервер не отвечает.</message>
 	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">Не задан адрес (URL) депозитария.</message>
 	<message key="plugins.generic.alm.senderTask.error.returnError">Сервер вернул сообщение: {$error}

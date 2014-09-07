@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review plugin localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+
+	<!-- Плагин «Объекты на рецензию» -->
+	<message key="plugins.generic.objectsForReview.displayName">Плагин «Объекты на рецензию»</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">Напоминание об объектах на рецензию</message>
+	<message key="plugins.generic.objectsForReview.description">Этот плагин запрашивает рецензии на интересующие Вас объекты, а также позволяет управлять рецензируемыми объектами и процессом рецензирования.</message>
+
+	<!--  Редактор -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Объекты на рецензию</message>
+
+	<!-- Управление типами объектов -->
+	<message key="plugins.generic.objectsForReview.editor.objectTypes">Типы рецензируемых объектов</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">Здесь вы можете установить типы рецензируемых объектов по умолчанию (заранее заданные), обновить установленные типы при необходимости или создать свои собственные типы рецензируемых объектов.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">Название</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">Нет</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons">Пользователи</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">Пожалуйста, задайте все возможные роли пользователей, которые важны для этого рецензируемого объекта (например, Автор, Спонсор и т. д.). Вы не сможете добавить других или изменить этот список позже.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectType">Тип рецензируемого объекта</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">Это также удалит все существующие объекты данного типа на рецензию. Вы уверены, что хотите удалить данный тип рецензируемого объекта?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.create">Создать тип рецензируемого объекта</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Тип рецензируемого объекта</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Обновить</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">Обновить языковые пакеты для объектов, выбранных выше:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Установить</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.installObjects">Установка отсуствующих объектов на рецензию — выберите типы и языковые пакеты, нажмите на кнопку «Установить:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.name">Название</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.description">Описание и инструкции</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Метаданные</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Предварительный просмотр</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Метаданные реценизруемого объекта</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">Нет</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">Скопировать в :</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Создать метаданные рецензируемого объекта</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">Метаданные реценизруемого объекта</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">Это также удалит все метаданные аналогичных существующих объектов на рецензию. Вы уверены, что хотите удалить метаданные для этого рецензируемого объекта?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">Копировать</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">Название</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">Обязательно</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.display">Показать</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">Выбрать тип метаданных</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.smalltextfield">Текстовое поле на одно слово</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textfield">Текстовое поле на одну строку</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textarea">Расширенное текстовое поле</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.checkboxes">Флажки-галочки (вы можете выбрать один вариант или несколько)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.radiobuttons">Радиокнопки (вы можете выбрать только один вариант)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.dropdownbox">Раскрывающийся список</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.roledropdownbox">Раскрывающийся список ролей</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.langdropdownbox">Раскрывающийся список языков</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.changeType">Изменить тип</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">Тип метаданных</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions">Возможные варианты</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem">Добавить выделенное</message>
+
+	<!-- Настройки «Объектов на рецензию» -->
+	<message key="plugins.generic.objectsForReview.settings">Настройки</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">Управление</message>
+	<message key="plugins.generic.objectsForReview.settings.modeFull">Режим 1: Составлять список доступных объектов для рецензирования, управлять рецензентами объектов и публиковать метаданные объектов.</message>
+	<message key="plugins.generic.objectsForReview.settings.modeMetadata">Режим 2: Только публиковать метаданные объектов.</message>
+	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>Режим 1</h5><p>Реализует следующий рабочий процесс:</p><ul><li>Редактор добавляет объекты, доступные для рецензирования.</li><li>Авторы, заинтересованные в рецензировании объекта, могут запросить разрешение на рецензирование, уведомив редактора.</li><li>Редактор может принять или отклонить запрос на рецензию, уведомив автора.</li><li>Для принятых запросов на рецензию устанавливается срок выполнения рецензии.</li><li>Редактор может отправить копию объекта автору. Срок выполнения рецензии при этом может быть изменен.</li><li>Автор отправляет рецензию через стандартный процесс отправки материала.</li><li>Метаданные объекта публикуются как часть отправленной рецензии на объект.</li></ul><p>Этот плагин поддерживает журналы с множеством редакторов. Когда редактор добавляет новый объект для рецензирования, он становится основным редактором и контактным лицом по этому объекту.</p><h5>Режим 2</h5><p>Реализует следующий рабочий процесс:</p><ul><li>Редактор добавляет объекты для рецензирования.</li><li>Редактор сопоставляет отправленные авторами рецензии с каждым объектом.</li><li>Метаданные объекта публикуются как часть отправленной рецензии на объект.</li></ul>]]></message>
+	<message key="plugins.generic.objectsForReview.settings.displayMetadata">Показать метаданные объекта</message>
+	<message key="plugins.generic.objectsForReview.settings.displayAbstract">Показать метаданные объекта на страницах с аннотациями статей.</message>
+	<message key="plugins.generic.objectsForReview.settings.displayListing">Опубликовать список всех доступных для рецензирования объектов, используя элемент навигации «Объекты на рецензию».</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewDue">Сроки рецензирования объектов</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks1">Рецензии должны быть готовы через</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">недель после того, как объект будет назначен автору.</message>
+	<message key="plugins.generic.objectsForReview.settings.emailReminders">Отправить напоминания электронной почтой</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays1">Отправить авторам письмо-напоминание за</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">дней до срока сдачи рецензии.</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">Отправить авторам письмо-напоминание через</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">дней после окночания срока сдачи рецензии.</message>
+	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Обратите внимание:</strong> Для использования этих возможностей администратор сайта должен включить параметр <tt>scheduled_tasks</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера для поддержки этой возможности (выполнить такую настройку может быть невозможно на конкретном сервере), описание этой настройки приведено в документации OJS.]]></message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Дополнительная информация</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Дополнительная информация, публикуемая вместе с объектами на рецензию.</message>
+
+	<!-- Поиск, фильтрация, сортировка -->
+	<message key="plugins.generic.objectsForReview.search.field.title">Название</message>
+	<message key="plugins.generic.objectsForReview.search.field.abstract">Аннотация</message>
+	<message key="plugins.generic.objectsForReview.search.noResults">Нет результатов поиска</message>
+	<message key="plugins.generic.objectsForReview.filter.filterBy">Фильтровать по</message>
+	<message key="plugins.generic.objectsForReview.sort.sortBy">Сортировать по</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionAsc">По возрастанию</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionDesc">По убыванию</message>
+
+	<!-- Объекты на рецензию -->
+	<message key="plugins.generic.objectsForReview.objectsForReview.pageTitle">Объекты на рецензию</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.noneCreated">Нет объектов для рецензирования</message>	
+	<message key="plugins.generic.objectsForReview.objectsForReview.title">Название</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.dateCreated">Дата создания</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.status">Статус</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectReviewer">Рецензент объекта</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectType">Тип объекта</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.editor">Редактор</message>
+
+	<!-- Назначения объектов на рецензию -->
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAll">Назначения объектов на рецензию - Все</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.all">Все</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleRequested">Назначения объектов на рецензию - Запрошены</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.requested">Запрошены</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned">Назначения объектов на рецензию - Назначены</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned">Назначены</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleMailed">Назначения объектов на рецензию - Отправлены</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed">Отправлены</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleSubmitted">Назначения объектов на рецензию - Предоставлены</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submitted">Предоставлены</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.title">Название</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.status">Статус</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.objectReviewer">Рецензент объекта</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dateCreated">Дата создания</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dueDate">Срок</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submission">Отправка</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.noneCreated">Нет объектов для назначения на рецензию</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status">Статус</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">Доступно</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.requested">Запрошено</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">Назначено</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed">Отправлено</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted">Предоставлено</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.additionalNotes">Дополнительные примечания</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notes">Примечания</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">Только для редактора. Не будут публиковаться как часть объекта на рецензию.</message>
+
+	<!-- Управление назначениями объектов на рецензию со стороны редактора -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Объекты на рецензию</message>
+	<message key="plugins.generic.objectsForReview.editor.assignments">Назначения</message>
+	<!--  Действия -->
+	<message key="plugins.generic.objectsForReview.editor.select">Выбрать</message>
+	<message key="plugins.generic.objectsForReview.editor.assignObjectReviewer">Назначить</message>
+	<message key="plugins.generic.objectsForReview.editor.acceptObjectReviewer">Принять</message>
+	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">Отклонить</message>
+	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">Объект отправлен</message>
+	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">Удалить</message>
+	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">Вы уверены, что хотите удалить этого автора и очистить историю рецензирования этого объекта?</message>
+	<message key="plugins.generic.objectsForReview.editor.selectSubmission">Выбрать материал</message>
+	<!-- Assign Author -->
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor">Назначить автора</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.assign">Назначить</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.createNewUser">Создать нового пользователя</message>
+
+	<message key="plugins.generic.objectsForReview.editor.noMailingAddress">Нет почтового адреса в файле.</message>
+
+	<!-- Редактирование объекта на рецензию -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview">Объект на рецензию</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseLanguage">Выберите язык</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption">Выберите вариант</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole">Выберите роль</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer">Нет ответа</message>
+	<message key="plugins.generic.objectsForReview.editor.edit">Редактировать</message>
+	<message key="plugins.generic.objectsForReview.editor.create">Создать объект на рецензию</message>
+	<message key="plugins.generic.objectsForReview.editor.saveAndCreateAnother">Сохранить и создать другой</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.addPerson">Добавить человека</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.deletePerson">Удалить</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPage">Обложка</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageInstructions">(Разрешенные форматы: .gif, .jpg или .png)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageUploaded">Загружена</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.removeCoverPage">Удалить изображение обложки?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.remove">Удалить</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImage">Изображение обложки</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImageAltText">Альтернативный текст для изображения обложки</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.additionalNotes">Дополнительные примечания</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notes">Примечания</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notesInstructions">Только для редактора. Не будут публиковаться как часть объекта на рецензию.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditor">Назначить редактора</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditorInstructions">Выберите редактора, который будет ответственным за этот объект на рецензию.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.available">Доступен</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.availableInstructions">Задайте, если объект доступен для рецензирования.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.available">Доступен</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.notAvailable">Не доступен</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.delete">Удалить</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.confirmDelete">This will entirely remove the object and its assignments. Are you sure you want to delete this object?</message>
+
+	<!-- Общие -->
+	<message key="plugins.generic.objectsForReview.public.headerLink">Объекты на рецензию</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReview">Объекты на рецензию</message>
+	<message key="plugins.generic.objectsForReview.public.objectForReview">Объект на рецензию</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReviewInstructions"><![CDATA[<p>Чтобы запросить объект на рецензию:</p><ul><li><a href="{$registerUrl}" target="_parent">Зарегистрируйтесь</a> как автор в этом журнале.</li><li><a href="{$loginAuthorUrl}" target="_parent">Войдите в систему</a> как автор.</li><li>Щелкните на ссылке запроса, которая соответствует интересующему вас объекту.</li></ul>]]></message>
+	
+	<!-- Страница аннотации статьи -->
+	<message key="plugins.generic.objectsForReview.public.articleObjectsForReview">Объекты, рецензируемые в этой статье</message>
+
+
+	<!-- Автор -->
+	<message key="plugins.generic.objectsForReview.author.objectsForReview">Объекты на рецензию</message>
+	<message key="plugins.generic.objectsForReview.author.myObjectsForReview">Мои объекты</message>
+	<!--  Действия -->
+	<message key="plugins.generic.objectsForReview.author.requestObjectForReview">Запросить этот объект на рецензию</message>
+
+	<message key="plugins.generic.objectsForReview.author.submit">Отправить</message>
+	<message key="plugins.generic.objectsForReview.author.view">Просмотреть</message>
+	<!-- Submission -->
+	<message key="plugins.generic.objectsForReview.author.submitInstructions">Пожалуйста укажите, если этот материал — рецензия на один из следующих объектов, назначенных вам на рецензирование</message>
+
+
+	<!-- Уведомления -->
+	<message key="plugins.generic.objectsForReview.notification.objectTypeInstalled">Тип объекта для рецензирования установлен.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeCreated">Тип объекта для рецензирования создан.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeUpdated">Тип объекта для рецензирования обновлен.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeActivated">Тип объекта для рецензирования активирован.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeactivated">Тип объекта для рецензирования деактивирован.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeleted">Тип объекта для рецензирования удален, а также удалены связанные с ним объекты на рецензию и их назначения рецензентам.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrCreated">Новый объект для рецензирования создан.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrRequested">Отправлен запрос на объект для рецензирования. Дождитесь подтверждения от редактора.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Объект для рецензирования обновлен.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Объект для рецензирования и его назначения рецензентам удалены.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAauthorAssigned">Объекту для рецензирования назначен автор.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Запрос автора отклонен. Объект для рецензирования возвращен в начальное состояние.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">OОбънкт для рецензирования отмечен как отправленный автору.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Автр удален. Объект для рецензирования возвращен в начальное состояние.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSubmissionAssigned">Материал назначен объекту для рецензирования.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSettingsSaved">Настройки плагина «Объекты на рецензию» сохранены.</message>
+
+
+	<!-- ошибки -->
+	<!-- Управление типами объектов -->
+	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">Название обязательно для типа объекта на рецензию.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">Название обязательно для метаданных объекта на рецензию.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">Тип обязателен для метаданных объекта на рецензию.</message>
+	<!-- Редактирование объекта на рецензию -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">Пожалуйста, заполните все обязательные поля.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">Пожалуйста, выберите роль человека и ввелите его имя или фамилию.</message>
+	<!-- Настройки объектов на рецензию -->
+	<message key="plugins.generic.objectsForReview.settings.modeRequired">Режим обязателен.</message>
+	<message key="plugins.generic.objectsForReview.settings.modeValid">Пожалуйста, задайте правильный режим.</message>
+	<message key="plugins.generic.objectsForReview.settings.numDaysReminderValid">Пожалуйста, задайте правильное количество дней для письма-напоминания.</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksRequired">Пожалуйста, задайте число недель, в течение которых рецензии на объекты должны быть выполнены.</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksValid">Пожалуйста, задайте правильное число недель, в течение которых рецензии на объект должны быть выполнены.</message>
+
+
+
+
+
+	<!-- Объекты на рецензию и их метаданные -->
+	<!-- Общие метаданные -->
+	<message key="plugins.generic.objectsForReview.object.metadata.title">Название</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.person">Человек</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.date">Дата</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.language">Язык</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.shortTitle">Краткое название</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.url">URL</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.rights">Права</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.abstract">Аннотация</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable">Копия доступна</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.yes">Да</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.no">Нет</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.coverPage">Обложка</message>
+	<!-- Произведение искусства -->
+	<message key="plugins.generic.objectsForReview.object.artwork">Произведение искусства</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.artist">Художник</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.medium">Носитель</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.size">Размер</message>
+	<!-- Аудиозапись -->
+	<message key="plugins.generic.objectsForReview.object.audioRecording">Аудиозапись</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">Исполнитель</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">Композитор</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsByr">Автор текста</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.format">Формат</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">Название серии</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.numberOfVolumes">Количество томов</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.label">Студия записи</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.runningTime">Продолжительность</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.isbn">ISBN</message>
+	<!-- Законопроект -->
+	<message key="plugins.generic.objectsForReview.object.bill">Законопроект</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.sponsor">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.contributor">Участник</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.cosponsor">Соавтор</message>
+	<message key="plugins.generic.objectsForReview.object.bill.number">Номер законопроекта</message>
+	<message key="plugins.generic.objectsForReview.object.bill.code">Кодекс</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codeVolume">Том кодекса</message>
+	<message key="plugins.generic.objectsForReview.object.bill.section">Раздел</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codePages">Страницы кодекса</message>
+	<message key="plugins.generic.objectsForReview.object.bill.legislativeBody">Законодательный орган</message>
+	<message key="plugins.generic.objectsForReview.object.bill.session">Сессия</message>
+	<message key="plugins.generic.objectsForReview.object.bill.history">История</message>
+	<!-- Запись в блоге -->
+	<message key="plugins.generic.objectsForReview.object.blogPost">Запись в блоге</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.commenter">Комментатор</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.blogTitle">Название блога</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.websiteTitle">Название сайта</message>
+	<!-- Книга -->
+	<message key="plugins.generic.objectsForReview.object.book">Книга</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.contributor">Спосор</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.seriesEditor">Редактор серии</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.book.series">Серия</message>
+	<message key="plugins.generic.objectsForReview.object.book.seriesNumber">Номер серии</message>
+	<message key="plugins.generic.objectsForReview.object.book.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfVolumes">Количество томов</message>
+	<message key="plugins.generic.objectsForReview.object.book.edition">Издание</message>
+	<message key="plugins.generic.objectsForReview.object.book.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisher">Издатель</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisherURL">URL-адрес издателя</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfPages">Количество страниц</message>
+	<message key="plugins.generic.objectsForReview.object.book.isbn">ISBN</message>
+	<!-- Раздел книги -->
+	<message key="plugins.generic.objectsForReview.object.bookSection">Раздел книги</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.bookAuthor">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.seriesEditor">Редактор серии</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.bookTitle">Название книги</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.series">Серия</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.seriesNumber">Номер серии</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfVolumes">Количество томов</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.edition">Издание</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisher">Издатель</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisherURL">URL-адрес издателя</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfPages">Количество страниц</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.isbn">ISBN</message>
+	<!-- Дело -->
+	<message key="plugins.generic.objectsForReview.object.case">Дело</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.contributor">Участник</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.counsel">Адвокат</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporter">Секретарь</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporterVolume">Том дела</message>
+	<message key="plugins.generic.objectsForReview.object.case.court">Судья</message>
+	<message key="plugins.generic.objectsForReview.object.case.docketNo">Регистрационный номер</message>
+	<message key="plugins.generic.objectsForReview.object.case.firstPage">Первая страница</message>
+	<message key="plugins.generic.objectsForReview.object.case.history">История</message>
+	<!-- Компьютерная программа -->
+	<message key="plugins.generic.objectsForReview.object.computerProgram">Компьютерная программа</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.programmer">Программист</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.seriesTitle">Название серии</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.version">Версия</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.system">Система</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.programmingLanguage">Язык программирования</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.isbn">ISBN</message>
+	<!-- Материал конференции -->
+	<message key="plugins.generic.objectsForReview.object.conferencePaper">Материал конференции</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.seriesEditor">Редактор серии</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.proceedingsTitle">Название сборника</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.conferenceName">Название конференции</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisher">Издатель</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisherURL">URL-адрес издателя</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.pages">Страницы</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.series">Серия</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.isbn">ISBN</message>
+	<!-- Словарная статья -->
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry">Словарная статья</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.seriesEditor">Редактор серии</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.dictionaryTitle">Название словаря</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.series">Серия</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.seriesNumber">Номер серии</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.numberOfVolumes">Количество томов</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.edition">Издание</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.publisher">Издатель</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitlek.numberOfPages">Количество страниц</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.isbn">ISBN</message>
+	<!-- Документ -->
+	<message key="plugins.generic.objectsForReview.object.document">Документ</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.reviewedAuthor">Рецензируемый автор</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.document.publisher">Издатель</message>
+	<!-- E-mail -->
+	<message key="plugins.generic.objectsForReview.object.email">E-mail</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.recipient">Получатель</message>
+	<!-- Статья в энциклопедии -->
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle">Статья в энциклопедии</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.seriesEditor">Редактор серии</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.encyclopediaTitle">Название энциклопедии</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.series">Серия</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.seriesNo">Номер серии</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volumeNo">Количество томов</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.edition">Издание</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.publisher">Издатель</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.pages">Страницы</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.isbn">ISBN</message>
+	<!-- Фильм -->
+	<message key="plugins.generic.objectsForReview.object.film">Фильм</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.director">Режиссер</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.producer">Продюсер</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.scriptwriter">Автор сценария</message>
+	<message key="plugins.generic.objectsForReview.object.film.distributor">Дистрибьютор</message>
+	<message key="plugins.generic.objectsForReview.object.film.genre">Жанр</message>
+	<message key="plugins.generic.objectsForReview.object.film.format">Формат</message>
+	<message key="plugins.generic.objectsForReview.object.film.runningTime">Продолжительность</message>
+	<!-- Запись в форуме -->
+	<message key="plugins.generic.objectsForReview.object.forumPost">Запись в форуме</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.forumTitle">Название форума</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.postType">Тип записи</message>
+	<!-- Слушание -->
+	<message key="plugins.generic.objectsForReview.object.hearing">Слушание</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.person.contributor">Участник</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.committee">Комитет</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.publisher">Издатель</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.numberOfVolumes">Количество томов</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.documentNo">Номер документа</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.pages">Страницы</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.legislativeBody">Законодательный орган</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.session">Сессия</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.history">История</message>
+	<!-- Мгновенное сообщение -->
+	<message key="plugins.generic.objectsForReview.object.instantMessage">Мгновенное сообщение</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.recipient">Получатель</message>
+	<!-- Интервью -->
+	<message key="plugins.generic.objectsForReview.object.interview">Интервью</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewWith">С кем интервью</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewer">Интервьюер</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.interview.medium">Носитель</message>
+	<!-- Статья в научном журнале -->
+	<message key="plugins.generic.objectsForReview.object.journalArticle">Статья в научном журнале</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.editor">Редактор</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.reviewedAuthor">Рецензируемый автор</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.publication">Публикация</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issue">Выпуск</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.pages">Страницы</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.series">Серия</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesTitle">Название серии</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesText">Текст серии</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.journalAbbr">Аббревиатура журнала</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issn">ISSN</message>
+	<!-- Письмо -->
+	<message key="plugins.generic.objectsForReview.object.letter">Письмо</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">Получатель</message>
+	<message key="plugins.generic.objectsForReview.object.letter.type">Тип письма</message>
+	<!-- Статья в обычном журнале -->
+	<message key="plugins.generic.objectsForReview.object.magazineArticle">Статья в обычном журнале</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.reviewedAuthor">Рецензируемый автор</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.publication">Публикация</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issue">Выпуск</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.pages">Страницы</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issn">ISSN</message>
+	<!-- Рукопись -->
+	<message key="plugins.generic.objectsForReview.object.manuscript">Рукопись</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.type">Тип</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.numberOfPages">Количество страниц</message>
+	<!-- Карта -->
+	<message key="plugins.generic.objectsForReview.object.map">Карта</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.cartographer">Картограф</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.seriesEditor">Редактор серии</message>
+	<message key="plugins.generic.objectsForReview.object.map.type">Тип</message>
+	<message key="plugins.generic.objectsForReview.object.map.scale">Масштаб</message>
+	<message key="plugins.generic.objectsForReview.object.map.seriesTitle">Название серии</message>
+	<message key="plugins.generic.objectsForReview.object.map.edition">Издание</message>
+	<message key="plugins.generic.objectsForReview.object.map.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.map.publisher">Издатель</message>
+	<message key="plugins.generic.objectsForReview.object.map.isbn">ISBN</message>
+	<!-- Статья в газете -->
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle">Статья в газете</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.contributor">Издатель</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.reviewedAuthor">Рецензируемый автор</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.publication">Публикация</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.edition">Издание</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.section">Раздел</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.pages">Страницы</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.issn">ISSN</message>
+	<!-- Патент -->
+	<message key="plugins.generic.objectsForReview.object.patent">Патент</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.inventor">Изобретатель</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.attorney">Поверенный/Агент</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.patent.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.patent.country">Страна</message>
+	<message key="plugins.generic.objectsForReview.object.patent.assignee">Правообладатель</message>
+	<message key="plugins.generic.objectsForReview.object.patent.issuingAuthority">Выдавший орган</message>
+	<message key="plugins.generic.objectsForReview.object.patent.number">Номер</message>
+	<message key="plugins.generic.objectsForReview.object.patent.pages">Страницы</message>
+	<message key="plugins.generic.objectsForReview.object.patent.appNumber">Номер заявки</message>
+	<message key="plugins.generic.objectsForReview.object.patent.priorityNumbers">Номера приоритета</message>
+	<message key="plugins.generic.objectsForReview.object.patent.filingDate">Дата подачи заявки</message>
+	<message key="plugins.generic.objectsForReview.object.patent.references">Ссылки</message>
+	<message key="plugins.generic.objectsForReview.object.patent.legalStatus">Правовой статус</message>
+	<!-- Подкаст -->
+	<message key="plugins.generic.objectsForReview.object.podcast">Подкаст</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.podcaster">Ведущий</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.guest">Гость</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.seriesTitle">Название серии</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.episodeNo">Номер эпизода</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.fileType">Тип файла</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.runningTime">Продолжительность</message>
+	<!-- Презентация -->
+	<message key="plugins.generic.objectsForReview.object.presentation">Презентация</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.presenter">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.type">Тип</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.meetingName">Название мероприятия</message>
+	<!-- Радиотрансляция -->
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast">Радиотрансляция</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.director">Режиссер</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.castMember">Участник трансляции</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.guest">Гость</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.producer">Продюсер</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.scriptWriter">Автор сценария</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.programTitle">Название программы</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.episodeNo">Номер эпизода</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.format">Формат</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.network">Сеть</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.runningTime">Продолжительность</message>
+	<!-- Отчет -->
+	<message key="plugins.generic.objectsForReview.object.report">Отчет</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.seriesEditor">Редактор серии</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.report.no">Номер</message>
+	<message key="plugins.generic.objectsForReview.object.report.type">Тип</message>
+	<message key="plugins.generic.objectsForReview.object.report.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.report.seriesTitle">Название серии</message>
+	<message key="plugins.generic.objectsForReview.object.report.institution">Организация</message>
+	<message key="plugins.generic.objectsForReview.object.report.pages">Pages</message>
+	<!-- Закон -->
+	<message key="plugins.generic.objectsForReview.object.statute">Закон</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.contributor">Участник</message>
+	<message key="plugins.generic.objectsForReview.object.statute.code">Кодекс</message>
+	<message key="plugins.generic.objectsForReview.object.statute.codeNo">Номер кодекса</message>
+	<message key="plugins.generic.objectsForReview.object.statute.publicLawNo">Номер закона</message>
+	<message key="plugins.generic.objectsForReview.object.statute.pages">Страницы</message>
+	<message key="plugins.generic.objectsForReview.object.statute.section">Раздел</message>
+	<message key="plugins.generic.objectsForReview.object.statute.session">Сессия</message>
+	<message key="plugins.generic.objectsForReview.object.statute.history">История</message>
+	<!-- Диссертация -->
+	<message key="plugins.generic.objectsForReview.object.thesis">Диссертация</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.type">тип</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.university">Университет</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.numberOfPages">Количество страниц</message>
+	<!-- Телетрансляция -->
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast">Телетрансляция</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.director">Режиссер</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.castMember">Участник трансляции</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.guest">Гость</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.producer">Продюсер</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.scriptWriter">Автор сценария</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.programTitle">Название программы</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.episodeNo">Номер эпизода</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.format">Формат</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.network">Сеть</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.runningTime">Продолжительность</message>
+	<!-- Видеозапись -->
+	<message key="plugins.generic.objectsForReview.object.videoRecording">Видеозапись</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.director">Режиссер</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.castMember">Участник записи</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.guest">Гость</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.producer">Продюсер</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.scriptWriter">Автор сценария</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.format">Формат</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.seriesTitle">Название серии</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.volume">Том</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.numberOfVolumes">Количество томов</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.place">Место</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.studio">Студия</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.runningTime">Продолжительность</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.isbn">ISBN</message>
+	<!-- Веб-страница -->
+	<message key="plugins.generic.objectsForReview.object.webPage">Веб-страница</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.author">Автор</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.contributor">Спонсор</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.translator">Переводчик</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteTitle">Название веб-сайта</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">Тип веб-сайта</message>
+
+
+</locale>
