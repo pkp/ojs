@@ -14,23 +14,20 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.importexport.crossref.description">Artikel-Metadaten im CrossRef-Format exportieren oder registrieren.</message>
 	<message key="plugins.importexport.crossref.displayName">CrossRef-Export/Registrierungs-Plug-In</message>
-
-	<message key="plugins.importexport.crossref.settings.depositorIntro">Bitte geben Sie Namen und E-Mail-Adresse der Person ein, die für die Abgabe bei CrossRef zuständig ist.</message>
+	<message key="plugins.importexport.crossref.requirements">Anforderungen</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Alle Anforderungen des Plug-Ins sind erfüllt.</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Das Crossref-Plug-In ist nicht eingerichtet! Konfigurieren Sie dieses Plug-In auf seiner <a href="{$settingsUrl}">Einstellungsseite</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[Das DOI-Plug-In ist nicht eingerichtet! Aktivieren und konfigurieren Sie dieses Plug-In auf seiner <a href="{$doiUrl}" target="_blank">Einstellungsseite</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Kein Verlag eingerichtet! Sie müssen einen Verlag oder eine herausgebende Organisation im <a href="{$publisherUrl}" target="_blank">Schritt 1.5 unter Einrichten der Zeitschrift</a> festlegen.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Die folgenden Angaben werden für eine erfolgreiche Abgabe bei CrossRef nötig.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor-Name</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Depositor-E-Mail</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Bitte geben Sie den Depositor-Namen ein.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Bitte geben Sie die Depositor-E-Mail-Adresse ein.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Automatische Registrierung benutzen</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS wird Artikel bei ihrer Veröffentlichung automatisch bei CrossRef registrieren. Bitte beachten Sie, dass eine kurze Zeitspanne zur Verarbeitung nach der Veröffentlichung benötigt wird. Sie können alle unregistrierten DOI in der <a href="">Liste unregistrierter Artikel</a> überprüfen.]]></message>
 
-	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[
-		Wenn Sie DOI bei CrossRef registrieren möchten, folgen Sie bitte den Hinweisen auf
-		der <a href="http://www.crossref.org" target="_blank">CrossRef-Homepage</a>,
-		um Benutzer/innenname und Passwort zu erhalten. Wenn Sie über keinen eigenen Benutzer/innennamen und
-		Passwort verfügen, können Sie immerhin in das CrossRef-XML-Format exportieren,
-		aber Sie können Ihre DOI nicht aus OJS heraus bei CrossRef registrieren.
-		Bitte beachten Sie, dass das Passwort im Klartext, d.h. unverschlüsselt, gespeichert
-		werden wird, da der CrossRef-Registrierungsdienst dies erfordert.
-	]]></message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Wenn Sie DOI bei CrossRef registrieren möchten, folgen Sie bitte den Hinweisen auf <a href="http://www.crossref.org" target="_blank">CrossRef-Homepage</a>, um Benutzer/innenname und Passwort zu erhalten. Wenn Sie über keinen eigenen Benutzer/innennamen und Passwort verfügen, können Sie immerhin in das CrossRef-XML-Format exportieren, aber Sie können Ihre DOI nicht aus OJS heraus bei CrossRef registrieren. Bitte beachten Sie, dass das Passwort im Klartext, d.h. unverschlüsselt, gespeichert werden wird, da der CrossRef-Registrierungsdienst dies erfordert.]]></message>
 
 	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Bitte <a href="{$settingsUrl}">konfigurieren</a> Sie das CrossRef-Export/Registrierungs-Plug-In, bevor Sie es das erste Mal benutzen.]]></message>
 
