@@ -42,7 +42,7 @@
 	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Metadata</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Preview</message>
 
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Review Object metadata</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Review Object Metadata</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">None</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">Copy to:</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Create metadata field</message>
@@ -52,7 +52,7 @@
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">Name</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">Required</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.display">Display</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">Choose metadata field type</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">Choose metadata type</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.smalltextfield">Single word text box</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textfield">Single line text box</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textarea">Extended text box</message>
@@ -63,7 +63,7 @@
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.langdropdownbox">Language Drop-down box</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.changeType">Change type</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">Metadata field type</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">Metadata type</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions">Possible options</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem">Add selection</message>
@@ -87,7 +87,7 @@
 	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">day(s) after the review due date.</message>
 	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Additional Information</message>
-	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Additional information published along with the list of objects for review.</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Additional information published along with the objects for review.</message>
 
 	<!-- Search, filter, sort -->
 	<message key="plugins.generic.objectsForReview.search.field.title">Title</message>
@@ -215,7 +215,7 @@
 	<message key="plugins.generic.objectsForReview.author.submit">Submit</message>
 	<message key="plugins.generic.objectsForReview.author.view">View</message>
 	<!-- Submission -->
-	<message key="plugins.generic.objectsForReview.author.submitInstructions">Please indicate if this submission is a review for any of the following objects assigned to you.</message>
+	<message key="plugins.generic.objectsForReview.author.submitInstructions">Please indicate if this submission is a review for any of the following objects assigned to you</message>
 
 
 	<!-- Notifications -->
@@ -228,8 +228,8 @@
 	<message key="plugins.generic.objectsForReview.notification.ofrCreated">New object for review created.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrRequested">Object for review requested. Awaiting confirmation from the Editor.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Object for review updated.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Object for review and its assignments deleted.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Author assigned to object for review.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Object for review and their assignments deleted.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAauthorAssigned">Author assigned to object for review.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Author request denied. Object for review reset to initial state.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">Object for review recorded as mailed to author.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Author removed. Object for review reset to initial state.</message>
@@ -240,8 +240,8 @@
 	<!-- errors -->
 	<!-- Object Types Management -->
 	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">A name is required for the review object type.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">A name is required for the metadata field.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">A field type is required for the metadata field.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">A name is required for the review object metadata.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">A type is required for the review object metadata.</message>
 	<!-- Object For Review Edit -->
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">Please fill in the required fields.</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">Please choose the person role and fill either the first or the last name.</message>
@@ -281,7 +281,7 @@
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">Performer</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">Composer</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">Contributor</message>
-	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Words By</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsByr">Words By</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.format">Format</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">Series Title</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">Volume</message>
@@ -490,7 +490,7 @@
 	<message key="plugins.generic.objectsForReview.object.letter">Letter</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.author">Author</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Contributor</message>
-	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Recipient</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">Recepient</message>
 	<message key="plugins.generic.objectsForReview.object.letter.type">Letter Type</message>
 	<!-- Magazine Article -->
 	<message key="plugins.generic.objectsForReview.object.magazineArticle">Magazine Article</message>
@@ -570,7 +570,7 @@
 	<!-- Radio Broadcast -->
 	<message key="plugins.generic.objectsForReview.object.radioBroadcast">Radio Broadcast</message>
 	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.director">Director</message>
-	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.castMember">Cast Memeber</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.castMember">Cast Member</message>
 	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.contributor">Contributor</message>
 	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.guest">Guest</message>
 	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.producer">Producer</message>
