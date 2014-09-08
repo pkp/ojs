@@ -179,29 +179,6 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	 *    THEN I will immediately see the article disappear from the
 	 *         "pdftestarticle" full-text search result list.
 	 *
-	 * SCENARIO: Change document (push): add supplementary file
-	 *   GIVEN None of an article's supplementary files contains the
-	 *         word "pdftest" in its full text
-	 *     AND none of an article's supplementary files contains the
-	 *         word "spinach" in its title
-	 *     AND a supplementary file search for the phrase "doctest
-	 *         AND spinach" gives no result
-	 *    WHEN I add a supplementary file to the article that contains
-	 *         the word "pdftest" in its full text and "spinach" in
-	 *         its title
-	 *    THEN I will immediately see the article appear in the
-	 *         "pdftest AND spinach" supplementary file search
-	 *         result list.
-	 *
-	 * SCENARIO: Change document (push): delete supplementary file
-	 *   GIVEN An article's supplementary file contains a word not contained in
-	 *         any other supplementary file of the article, say "noodles".
-	 *     AND the article appears in the supplementary file search result
-	 *         list for "noodles"
-	 *    WHEN I delete this supplementary file from the article
-	 *    THEN I will immediately see the article disappear from the
-	 *         "noodles" supplementary file search result list.
-	 *
 	 * SCENARIO: Change document (push): unpublish article
 	 *   GIVEN An article contains the word "noodles" in its title
 	 *     AND is currently published
@@ -262,28 +239,6 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);
 		$this->assertTrue(is_array($indexedArticle), 'Article no longer indexed after deletion of galley.');
 		$this->assertArrayNotHasKey('galleyFullText_pdf_en_US', $indexedArticle, 'Galley not properly deleted from index.');
-
-		// Upload a supplementary file.
-		$this->uploadSuppFile($this->_articleId, $fileUri, 'spinach');
-
-		// Check whether the supplementary file
-		// has been indexed.
-		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);
-		$this->assertTrue(is_array($indexedArticle), 'Article no longer indexed after supp file upload.');
-		$this->assertArrayHasKey('suppFiles_en_US', $indexedArticle, 'Supp file not indexed after supp file upload.');
-		$this->assertContains('pdftest', $indexedArticle['suppFiles_en_US'], 'Supp file full text not indexed.');
-		$this->assertContains('spinach', $indexedArticle['suppFiles_en_US'], 'Supp file metadata not indexed.');
-
-		// Delete the supplementary file.
-		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $this->_articleId;
-		$this->verifyAndOpen($submissionEditingPage);
-		$this->clickAndWait('//a[contains(@href, "deleteSuppFile")]');
-		$this->waitForConfirmation('*Are you sure*');
-
-		// Check that the supp file is no longer indexed.
-		$indexedArticle = $this->_solr->getArticleFromIndex($this->_articleId);
-		$this->assertTrue(is_array($indexedArticle), 'Article no longer indexed after deletion of supp file.');
-		$this->assertArrayNotHasKey('suppFiles_en_US', $indexedArticle, 'Supp file not properly deleted from index.');
 
 		// Unpublish the article.
 		$this->unpublishArticle($this->_articleId);

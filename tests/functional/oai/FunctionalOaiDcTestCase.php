@@ -33,8 +33,6 @@ class FunctionalOaiDcTest extends FunctionalOaiBaseTestCase {
 	 *   article           | <dc:identifier>urn:nbn:de:0000-t.v1i1.18</dc:identifier>
 	 *   galley            | <dc:relation>10.4321/t.v1i1.g1</dc:relation>
 	 *   galley            | <dc:relation>urn:nbn:de:0000-t.v1i1.1.g17</dc:relation>
-	 *   supp-file         | <dc:relation>10.4321/t.v1i1.s1</dc:relation>
-	 *   supp-file         | <dc:relation>urn:nbn:de:0000-t.v1i1.1.s19</dc:relation>
 	 */
 	public function testDOIAndURN() {
 		// Configure the web service request

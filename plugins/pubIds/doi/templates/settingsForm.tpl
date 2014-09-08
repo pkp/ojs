@@ -41,12 +41,6 @@
 				{assign var="checked" value=false}
 			{/if}
 			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableGalleyDoi" id="enableGalleyDoi" checked=$checked maxlength="40" checked=$checked}
-			{if $enableSuppFileDoi}
-				{assign var="checked" value=true}
-			{else}
-				{assign var="checked" value=false}
-			{/if}
-			{fbvElement type="checkbox" label="plugins.pubIds.doi.manager.settings.enableSuppFileDoi" id="enableSuppFileDoi" checked=$checked maxlength="40" checked=$checked}
 		{/fbvFormSection}
 	{/fbvFormArea}
 		<table class="data">
@@ -70,7 +64,6 @@
 			{fbvElement type="text" label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues" id="doiIssueSuffixPattern" value=$doiIssueSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles" id="doiArticleSuffixPattern" value=$doiArticleSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys" id="doiGalleySuffixPattern" value=$doiGalleySuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles" id="doiSuppFileSuffixPattern" value=$doiSuppFileSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
 			{if !in_array($doiSuffix, array("pattern", "publisherId", "customId"))}

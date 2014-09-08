@@ -153,11 +153,6 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 				while ($galley = $galleys->next()) {
 					$this->generatePubId($doc, $pubIdsNode, $galley, $journal->getId());
 				}
-
-				$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
-				foreach ($suppFileDao->getSuppFilesByArticle($publishedArticle->getId()) as $suppFile) {
-					$this->generatePubId($doc, $pubIdsNode, $suppFile, $journal->getId());
-				}
 			}
 		}
 
@@ -205,9 +200,6 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
 						break;
 					case 'Galley':
 						$pubObject = $dao->getById($pubObjectId);
-						break;
-					case 'SuppFile':
-						$pubObject = $dao->getSuppFile($pubObjectId);
 						break;
 					default:
 						$errors[] = array('plugins.importexport.pubIds.import.error.unknownObjectType', array('pubObjectType' => $pubObjectType, 'pubId' => $pubIdValue));

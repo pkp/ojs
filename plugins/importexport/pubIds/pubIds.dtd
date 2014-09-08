@@ -14,5 +14,5 @@
 <!ELEMENT pubId (#PCDATA)>
 	<!ATTLIST pubId
 		pubIdType CDATA #REQUIRED
-		pubObjectType (Issue | Article | Galley | SuppFile) "Article"
+		pubObjectType (Issue | Article | Galley) "Article"
 		pubObjectId CDATA #REQUIRED>

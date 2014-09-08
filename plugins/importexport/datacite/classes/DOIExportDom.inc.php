@@ -481,7 +481,7 @@ class DOIExportDom {
 	 * @param $journal Journal
 	 * @param $issue Issue
 	 * @param $articleOrArticleFile PublishedArticle|ArticleFile An object representing an article.
-	 * @param $articleFile ArticleGalley|SuppFile
+	 * @param $articleFile ArticleGalley
 	 *
 	 * @return string The proprietary ID for the given objects.
 	 */
@@ -503,9 +503,6 @@ class DOIExportDom {
 			$proprietaryId .= '-';
 			if (is_a($articleFile, 'ArticleGalley')) {
 				$proprietaryId .= 'g';
-			} else {
-				assert(is_a($articleFile, 'SuppFile'));
-				$proprietaryId .= 's';
 			}
 			$proprietaryId .= $articleFile->getId();
 		}

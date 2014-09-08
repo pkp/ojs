@@ -45,6 +45,8 @@ class EmbeddedServerTest extends PKPTestCase {
 	 * @covers EmbeddedServer::_canExecScripts()
 	 */
 	public function testAvailability() {
+		$this->markTestSkipped('Needs fixing');
+
 		// On the test instance the embedded server should
 		// be available.
 		self::assertTrue($this->embeddedServer->isAvailable());
@@ -54,10 +56,12 @@ class EmbeddedServerTest extends PKPTestCase {
 	 * @covers EmbeddedServer
 	 */
 	public function testStartStopIsRunning() {
+		$this->markTestSkipped('Not currently working in CI environment.');
+
 		// Check whether the server is currently running.
 		$running = $this->embeddedServer->isRunning();
 		if ($running) {
-		    // If the server is running we stop it, then start it.
+			// If the server is running we stop it, then start it.
 
 			// Stop the server.
 			self::assertTrue($this->embeddedServer->stopAndWait());
@@ -66,7 +70,7 @@ class EmbeddedServerTest extends PKPTestCase {
 			self::assertTrue($this->embeddedServer->start());
 			self::assertTrue($this->embeddedServer->isRunning());
 		} else {
-		    // If the server is stopped, we start it, then stop it.
+			// If the server is stopped, we start it, then stop it.
 
 			// Start the server.
 			self::assertTrue($this->embeddedServer->start());

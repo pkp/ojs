@@ -36,7 +36,6 @@ class UsageEventPlugin extends GenericPlugin {
 			HookRegistry::register('TemplateManager::display', array($this, 'getUsageEvent'));
 			HookRegistry::register('ArticleHandler::viewFile', array($this, 'getUsageEvent'));
 			HookRegistry::register('ArticleHandler::downloadFile', array($this, 'getUsageEvent'));
-			HookRegistry::register('ArticleHandler::downloadSuppFile', array($this, 'getUsageEvent'));
 			HookRegistry::register('IssueHandler::viewFile', array($this, 'getUsageEvent'));
 			HookRegistry::register('FileManager::downloadFileFinished', array($this, 'getUsageEvent'));
 		}
@@ -186,16 +185,6 @@ class UsageEventPlugin extends GenericPlugin {
 				$article = $args[0];
 				$canonicalUrlParams = array($article->getBestArticleId(), $pubObject->getBestGalleyId($journal));
 				$idParams = array('a' . $article->getId(), 'g' . $pubObject->getId());
-				break;
-
-			// Supplementary file.
-			case 'ArticleHandler::downloadSuppFile':
-				$pubObject = $args[1];
-				$assocType = ASSOC_TYPE_SUPP_FILE;
-				$canonicalUrlOp = 'downloadSuppFile';
-				$article = $args[0];
-				$canonicalUrlParams = array($article->getBestArticleId(), $pubObject->getBestSuppFileId($journal));
-				$idParams = array('a' . $article->getId(), 's' . $pubObject->getId());
 				break;
 
 			// Issue galley.

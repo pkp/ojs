@@ -168,19 +168,6 @@
 	<td>{$article->getLanguage()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
-{if $journalRt->getSupplementaryFiles()}
-<tr>
-	<td>13.</td>
-	<td>{translate key="rt.metadata.dublinCore.relation"}</td>
-	<td>{translate key="rt.metadata.pkp.suppFiles"}</td>
-	<td>
-		{foreach from=$article->getSuppFiles() item=suppFile}
-			<a href="{url page="article" op="downloadSuppFile" path=$articleId|to_array:$suppFile->getBestSuppFileId($currentJournal)}">{$suppFile->getSuppFileTitle()|escape}</a> ({$suppFile->getNiceFileSize()})<br />
-		{/foreach}
-	</td>
-</tr>
-<tr><td colspan="4" class="separator">&nbsp;</td></tr>
-{/if}
 <tr>
 	<td>14.</td>
 	<td>{translate key="rt.metadata.dublinCore.coverage"}</td>

@@ -16,7 +16,7 @@
 	function toggleChecked() {
 		var elements = document.getElementById('exportAllForm').elements;
 		for (var i=0; i < elements.length; i++) {
-			if (elements[i].name == 'issueId[]' || elements[i].name == 'articleId[]' || elements[i].name == 'galleyId[]' || elements[i].name == 'suppFileId[]') {
+			if (elements[i].name == 'issueId[]' || elements[i].name == 'articleId[]' || elements[i].name == 'galleyId[]') {
 				elements[i].checked = !elements[i].checked;
 			}
 		}
@@ -97,24 +97,6 @@
 					</tr>
 					<tr>
 						<td colspan="5" class="separator">&nbsp;</td>
-					</tr>
-				{/if}
-			{/foreach}
-			{foreach from=$suppFiles item=suppFileData name=suppFiles}
-				{assign var=suppFile value=$suppFileData.suppFile}
-				{if $suppFile->getPubId('doi')}
-					{assign var=noObjects value=false}
-					{assign var=article value=$suppFileData.article}
-					{assign var=issue value=$suppFileData.issue}
-					<tr>
-						<td><input type="checkbox" name="suppFileId[]" value="{$suppFile->getId()}" checked="checked" /></td>
-						<td>{fieldLabel name="suppFileId[]" key="article.suppFile"}</td>
-						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
-						<td><a href="{url page="rt" op="suppFileMetadata" path=$article->getId()|to_array:0:$suppFile->getId()}" class="action">{$article->getLocalizedTitle()|cat:' ('|cat:$suppFile->getSuppFileTitle()|cat:')'|strip_unsafe_html}</a></td>
-						<td>{$suppFile->getSuppFileCreator()|default:$article->getAuthorString()|escape}</td>
-					</tr>
-					<tr>
-						<td colspan="5" class="{if $smarty.foreach.suppFiles.last}end{/if}separator">&nbsp;</td>
 					</tr>
 				{/if}
 			{/foreach}

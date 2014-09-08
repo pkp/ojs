@@ -186,7 +186,7 @@
 		// of them contains a keyword longer than "minLen".
 		formFields = [
 			'query', 'authors', 'title', 'abstract', 'discipline', 'subject',
-			'type', 'coverage', 'indexTerms', 'suppFiles', 'galleyFullText'
+			'type', 'coverage', 'indexTerms', 'galleyFullText'
 		];
 		for (i = 0, numFields = formFields.length; i < numFields; i++) {
 			fieldLength = $form.find('input[name="' + formFields[i] + '"]')

@@ -250,18 +250,6 @@ class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 					);
 				}
 				break;
-			case 'suppfile':
-				if (isset($urlParts[1]) && isset($urlParts[2])) {
-					$url = $request->url(
-							null,
-							'article',
-							'downloadSuppFile',
-							array($urlParts[1], $urlParts[2]),
-							null,
-							$anchor
-					);
-				}
-				break;
 			case 'sitepublic':
 				array_shift($urlParts);
 				import ('classes.file.PublicFileManager');

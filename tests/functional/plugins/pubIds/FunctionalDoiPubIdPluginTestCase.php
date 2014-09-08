@@ -14,9 +14,9 @@
  *
  * FEATURE: DOI generation settings and display
  *   AS A    journal manager
- *   I WANT  to be able to assign DOIs to issues, articles, galleys and
- *           supplementary files of my journal according to my institutional
- *           prefix and suffix generation strategy
+ *   I WANT  to be able to assign DOIs to issues, articles, and galleys
+ *           of my journal according to my institutional prefix and suffix
+ *           generation strategy
  *   SO THAT they can be uniquely identified for intellectual property
  *           transactions, in citations and look-up in meta-data databases
  *           and institutional repositories.
@@ -28,7 +28,7 @@ import('lib.pkp.tests.WebTestCase');
 class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	private
 		$pages,
-		$objectTypes = array('Article', 'Issue', 'Galley', 'SuppFile'); // order is significant!
+		$objectTypes = array('Article', 'Issue', 'Galley'); // order is significant!
 
 
 	/**
@@ -39,7 +39,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'journal_settings', 'plugin_settings', 'issues', 'issue_settings',
 			'published_submissions', 'submissions', 'submission_settings',
 			'submission_files', 'submission_galleys', 'submission_galley_settings',
-			'article_supplementary_files', 'article_supp_file_settings',
 			'event_log', 'event_log_settings', 'notifications', 'sessions'
 		);
 	}
@@ -93,10 +92,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 				'DC-meta' => '//meta[@name="DC.Identifier.DOI"]@content',
 				'Google-meta' => '//meta[@name="citation_doi"]@content'
 			),
-			'suppfile' => array(
-				'url' => $this->baseUrl.'/index.php/test/rt/suppFileMetadata/%id/0/1',
-				'visible' => '//tr/td[text()="Digital Object Identifier"]/../td[last()]'
-			),
 
 
 			// meta-data editing pages
@@ -113,10 +108,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 				'url' => $this->baseUrl.'/index.php/test/editor/editGalley/%id/1',
 				'urlSuffix' => 'id=publicGalleyId'
 			),
-			'metadata-suppfile' => array(
-				'url' => $this->baseUrl.'/index.php/test/editor/editSuppFile/%id/1',
-				'urlSuffix' => 'id=publicSuppFileId'
-			)
 		);
 
 		// The meta-data pages have uniform structure.
@@ -156,14 +147,13 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *   article     | .../rt/captureCite/1/0/ApaCitationPlugin | visible (APA citation)
 	 *   galley      | .../article/view/1/1                     | visible (10.xxxx/xxx)
 	 *               |                                          |   DC <meta>, Google <meta>
-	 *   supp file   | .../rt/suppFileMetadata/1/0/1            | visible (10.xxxx/xxx)
 	 *
 	 * SCENARIO OUTLINE: Standard pattern for suffix generation
 	 *    WHEN I select the "default pattern" suffix generation strategy
 	 *    THEN DOI suffixes for {object type} must follow a certain
 	 *         {default pattern} where %j stands for the initials of the journal,
 	 *         %v for the issue's volume, %i for the issue number, %a, %g, %s for
-	 *         the internal OJS article, galley and supp file IDs respectively,
+	 *         the internal OJS article and galley IDs respectively,
 	 *         and %p for the page number.
 	 *
 	 * EXAMPLES:
@@ -172,7 +162,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *   article     | %j.%v%i.%a
 	 *   issue       | %j.%v%i
 	 *   galley      | %j.%v%i.%a.g%g
-	 *   supp file   | %j.%v%i.%a.s%s
 	 */
 	public function testDoiDisplayWithDefaultPatternOnAllPages() {
 		// Enable DOIs with default settings for all objects.
@@ -187,7 +176,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'article-rt-indexing' => '10.1234/t.v1i1.1',
 			'article-rt-citations-apa' => 'doi:10.1234/t.v1i1.1',
 			'galley' => '10.1234/t.v1i1.1.g1',
-			'suppfile' => '10.1234/t.v1i1.1.s1'
 		);
 		foreach ($expectedDois as $objectType => $expectedDoi) {
 		    // There should be no DOI meta-data field for this suffix generation strategy.
@@ -214,7 +202,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *   article     | .../rt/metadata/1/0
 	 *   article     | .../rt/captureCite/1/0/ApaCitationPlugin
 	 *   galley      | .../article/view/1/1
-	 *   supp file   | .../rt/suppFileMetadata/1/0/1
 	 */
 	public function testDoiDisabled() {
 		// Disable DOIs for all objects.
@@ -224,7 +211,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'Article' => 'article-rt-indexing',
 			'Article' => 'article-rt-citations-apa',
 			'Galley' => 'galley',
-			'SuppFile' => 'suppfile'
 		);
 		foreach ($tests as $objectType => $page) {
 			$this->configureDoi($objectType);
@@ -236,7 +222,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	/**
 	 * SCENARIO OUTLINE: Individual journal prefix
 	 *    WHEN I set the {DOI prefix}
-	 *    THEN all DOIs for issues, articles, galleys and supp files
+	 *    THEN all DOIs for issues, articles, and galleys
 	 *         must start with that prefix (i.e. {DOI prefix}/xxx).
 	 *
 	 * EXAMPLES:
@@ -262,7 +248,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *    THEN DOI suffixes for {object type} must be generated according to
 	 *         the GIVEN {custom pattern} where %j stands for the initials of the
 	 *         journal, %v for the issue's volume, %i for the issue number, %a, %g,
-	 *         %s for the internal OJS article, galley and supp file IDs respectively,
+	 *         for the internal OJS article and galley IDs respectively,
 	 *         %p for the page number and %Y for the publication year.
 	 *
 	 * EXAMPLES:
@@ -271,7 +257,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *   issue       | jor%j.%Y.vol%v
 	 *   article     | jor%j.iss%i.art%a
 	 *   galley      | jor%j.art%a.gal%g
-	 *   supp file   | jor%j.art%a.suf%s
 	 */
 	public function testDoiCustomSuffixPattern() {
 		// Configure custom pattern.
@@ -283,7 +268,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'issue' => '10.1234/jort.2011.vol1',
 			'article' => '10.1234/jort.iss1.art1',
 			'galley' => '10.1234/jort.art1.gal1',
-			'suppfile' => '10.1234/jort.art1.suf1'
 		);
 		foreach ($expectedDois as $objectType => $expectedDoi) {
 			$this->checkDoiDisplay($objectType, $expectedDoi);
@@ -361,8 +345,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *   article     |                    |         1 | 10.1234/1
 	 *   galley      | article_galley_url |         1 | 10.1234/article_galley_url
 	 *   galley      |                    |         1 | 10.1234/g1
-	 *   supp file   | supp_file_url      |         1 | 10.1234/supp_file_url
-	 *   supp file   |                    |         1 | 10.1234/s1
 	 */
 	public function testDoiSuffixIsCustomUrlSuffix() {
 		// Configure the custom URL (a.k.a. publisher ID) suffix generation method.
@@ -375,7 +357,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'issue' => 'issue_url',
 			'article' => 'article_url',
 			'galley' => 'galley_url',
-			'suppfile' => 'supp_file_url',
 		);
 
 		// Check whether DOIs are generated based on these suffixes.
@@ -394,7 +375,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'issue' => '10.1234/i1',
 			'article' => '10.1234/1',
 			'galley' => '10.1234/g1',
-			'suppfile' => '10.1234/s1',
 		);
 		foreach ($expectedDoisWithoutUrlSuffix as $objectType => $expectedDoi) {
 			$this->setUrlSuffix($objectType, '');
@@ -420,10 +400,9 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 * EXAMPLES:
 	 *   publication object | meta-data page
 	 *   ===================|========================
-	 *   issue              | editor/editSuppFile/1/1
+	 *   issue              | editor/editSuppFile/1/1 (?)
 	 *   article            | editor/issueData/1
 	 *   galley             | editor/viewMetadata/1
-	 *   supp file          | editor/editGalley/1/1
 	 */
 	public function testCheckForDuplicateUrlSuffixesAcrossObjectTypes() {
 		// This test is not about testing the settings GUI so
@@ -442,15 +421,12 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'Issue' => array('IssueDAO', 'getById', 'updateObject'),
 			'Article' => array('PublishedArticleDAO', 'getPublishedArticleByArticleId', 'updateObject'),
 			'Galley' => array('ArticleGalleyDAO', 'getById', 'updateObject'),
-			'SuppFile' => array('SuppFileDAO', 'getSuppFile', 'updateSuppFile')
 		);
 
 		// Test examples.
 		$examples = array(
-			'Issue' => 'SuppFile',
 			'Article' => 'Issue',
 			'Galley' => 'Article',
-			'SuppFile' => 'Galley'
 		);
 
 		// Go through all object types.
@@ -529,8 +505,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *   issue       | ./.                   | ./.
 	 *   galley      | article_galley_suffix | 10.1234/article_galley_suffix
 	 *   galley      | ./.                   | ./.
-	 *   supp file   | supp_file_suffix      | 10.1234/supp_file_suffix
-	 *   supp file   | ./.                   | ./.
 	 *
 	 *
 	 * SCENARIO OUTLINE: Delete custom suffix.
@@ -550,7 +524,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *   issue              | editor/issueData/1
 	 *   article            | editor/viewMetadata/1
 	 *   galley             | editor/editGalley/1/1
-	 *   supp file          | editor/editSuppFile/1/1
 	 */
 	public function testDoiSuffixIsCustomId() {
 		// Change the suffix generation method.
@@ -775,7 +748,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 * @param $pattern string
 	 */
 	private function configureDoi($disabled = null, $prefix = '10.1234', $suffixGenerationMethod = 'doiSuffixDefault',
-			$pattern = array('Issue' => '', 'Article' => '', 'Galley' => '', 'SuppFile' => '')) {
+			$pattern = array('Issue' => '', 'Article' => '', 'Galley' => '')) {
 
 		// Make sure the settings page is open.
 		$this->openSettingsPage();
@@ -1000,7 +973,6 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'Issue' => 'jor%j.%Y.vol%v',
 			'Article' => 'jor%j.iss%i.art%a',
 			'Galley' => 'jor%j.art%a.gal%g',
-			'SuppFile' => 'jor%j.art%a.suf%s'
 		);
 	}
 }

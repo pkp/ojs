@@ -34,11 +34,6 @@
 			<img src="{$baseUrl}/plugins/blocks/readingTools/icons/citeArticle.png" class="articleToolIcon" /> <a href="javascript:openRTWindow('{url router=$smarty.const.ROUTE_PAGE page="rt" op="captureCite" path=$articleId|to_array:$galleyId}');">{translate key="rt.captureCite"}</a><br />
 		</div>
 	{/if}
-	{if $journalRt->getSupplementaryFiles() && is_a($article, 'PublishedArticle') && $article->getSuppFiles()}
-		<div class="articleToolItem">
-			<img src="{$baseUrl}/plugins/blocks/readingTools/icons/suppFiles.png" class="articleToolIcon" /> <a href="javascript:openRTWindow('{url router=$smarty.const.ROUTE_PAGE page="rt" op="suppFiles" path=$articleId|to_array:$galleyId}');">{translate key="rt.suppFiles"}</a><br />
-		</div>
-	{/if}
 	{if $journalRt->getFindingReferences()}
 		<div class="articleToolItem">
 			<img src="{$baseUrl}/plugins/blocks/readingTools/icons/findingReferences.png" class="articleToolIcon" /> <a href="javascript:openRTWindow('{url router=$smarty.const.ROUTE_PAGE page="rt" op="findingReferences" path=$article->getId()|to_array:$galleyId}');">{translate key="rt.findingReferences"}</a>

@@ -40,7 +40,7 @@ import('lib.pkp.tests.WebTestCase');
 class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	private
 		$pages,
-		$objectTypes = array('Article', 'Issue', 'Galley', 'SuppFile'); // order is significant!
+		$objectTypes = array('Article', 'Issue', 'Galley'); // order is significant!
 
 	/**
 	 * @see WebTestCase::getAffectedTables()
@@ -50,7 +50,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'journal_settings', 'issues', 'issue_settings',
 			'published_submissions', 'submissions', 'submission_settings',
 			'submission_galleys', 'submission_galley_settings',
-			'article_supplementary_files', 'article_supp_file_settings',
 			'plugin_settings'
 		);
 	}
@@ -106,12 +105,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 					'Google-meta' => '//meta[@name="citation_urn"]@content'
 				)
 			),
-			'suppfile' => array(
-				array(
-					'url' => $this->baseUrl.'/index.php/test/rt/suppFileMetadata/%id/0/1',
-					'visible' => '//tr/td[text()="Uniform Resource Name"]/../td[last()]'
-				)
-			),
 
 			// meta-data editing pages
 			'metadata-issue' => array(
@@ -127,10 +120,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 				'url' => $this->baseUrl.'/index.php/test/editor/editGalley/%id/1',
 				'urlSuffix' => 'id=publicGalleyId'
 			),
-			'metadata-suppfile' => array(
-				'url' => $this->baseUrl.'/index.php/test/editor/editSuppFile/%id/1',
-				'urlSuffix' => 'id=publicSuppFileId'
-			)
 		);
 
 		// The meta-data pages have uniform structure.
@@ -193,7 +182,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | issue     	|
 	 *        | article   	|
 	 *        | galley    	|
-	 *        | supp file 	|
 	 */
 	public function testRequiredFields() {
 		// Define no prefix
@@ -253,7 +241,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | issue     	|
 	 *        | article   	|
 	 *        | galley    	|
-	 *        | supp file 	|
 	 */
 	public function testRequiredCustomSuffixPatterns() {
 		// Select the custom suffix pattern option.
@@ -302,8 +289,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | article   	| %j.v%vi%i.%a  	| .../article/view/1 + DC <meta>, Google <meta>			| urn:nbn:de:0000-t.v1i1.18 	|
 	 *        | galley    	| %j.v%vi%i.%a.g%g	| .../editor/editGalley/1/1                         	| urn:nbn:de:0000-t.v1i1.1.g17	|
 	 *        | galley    	| %j.v%vi%i.%a.g%g	| .../article/view/1 + DC <meta>, Google <meta>			| urn:nbn:de:0000-t.v1i1.1.g17	|
-	 *        | supp file 	| %j.v%vi%i.%a.s%s	| .../editor/editSuppFile/1/1?from=submissionEditing	| urn:nbn:de:0000-t.v1i1.1.s19	|
-	 *        | supp file 	| %j.v%vi%i.%a.s%s	| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-t.v1i1.1.s19	|
 	 */
 	public function testDefaultSuffixPattern() {
 		// Enable URNs with default settings for all objects.
@@ -316,7 +301,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'issue' => 'urn:nbn:de:0000-t.v1i19',
 			'article' => 'urn:nbn:de:0000-t.v1i1.18',
 			'galley' => 'urn:nbn:de:0000-t.v1i1.1.g17',
-			'suppfile' => 'urn:nbn:de:0000-t.v1i1.1.s19'
 		);
 
 		$this->checkViewPages($expectedURNs);
@@ -337,8 +321,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | article   	| test.%j.v%vi%i.%a 	| .../article/view/1 + DC <meta>, Google <meta>			| urn:nbn:de:0000-test.t.v1i1.10	|
 	 *        | galley    	| test.%j.v%vi%i.%a.g%g	| .../editor/editGalley/1/1                         	| urn:nbn:de:0000-test.t.v1i1.1.g14	|
 	 *        | galley    	| test.%j.v%vi%i.%a.g%g	| .../article/view/1/1 + DC <meta>, Google <meta>		| urn:nbn:de:0000-test.t.v1i1.1.g14	|
-	 *        | supp file 	| test.%j.v%vi%i.%a.s%s	| .../editor/editSuppFile/1/1?from=submissionEditing	| urn:nbn:de:0000-test.t.v1i1.1.s11	|
-	 *        | supp file 	| test.%j.v%vi%i.%a.s%s	| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-test.t.v1i1.1.s11	|
 	 */
 	public function testCustomSuffixPattern() {
 		// Configure custom pattern.
@@ -346,7 +328,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'Issue' => 'test.%j.v%vi%i',
 			'Article' => 'test.%j.v%vi%i.%a',
 			'Galley' => 'test.%j.v%vi%i.%a.g%g',
-			'SuppFile' => 'test.%j.v%vi%i.%a.s%s'
 		);
 		$this->configureURN('urn:nbn:de:0000-', 'urnSuffixPattern', $customPattern);
 
@@ -355,7 +336,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'issue' => 'urn:nbn:de:0000-test.t.v1i16',
 			'article' => 'urn:nbn:de:0000-test.t.v1i1.10',
 			'galley' => 'urn:nbn:de:0000-test.t.v1i1.1.g14',
-			'suppfile' => 'urn:nbn:de:0000-test.t.v1i1.1.s11'
 		);
 		$this->checkViewPages($expectedURNs);
 	}
@@ -381,10 +361,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | galley    	| galleyurl1			| .../article/view/1/1 + DC <meta>, Google <meta>		| urn:nbn:de:0000-galleyurl14		|
 	 *        | galley    	| 						| .../editor/editGalley/1/1                         	| urn:nbn:de:0000-g16				|
 	 *        | galley    	| 						| .../article/view/1/1 + DC <meta>, Google <meta>		| urn:nbn:de:0000-g16				|
-	 *        | supp file 	| suppfileurl1			| .../editor/editSuppFile/1/1?from=submissionEditing	| urn:nbn:de:0000-suppfileurl16		|
-	 *        | supp file 	| suppfileurl1			| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-suppfileurl16		|
-	 *        | supp file 	| 						| .../editor/editSuppFile/1/1?from=submissionEditing	| urn:nbn:de:0000-s10				|
-	 *        | supp file 	| 						| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-s10				|
 	 */
 	public function testCustomPublicURL() {
 		// Enable custom URL suffixes.
@@ -397,7 +373,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'issue' => 'urn:nbn:de:0000-i16',
 			'article' => 'urn:nbn:de:0000-15',
 			'galley' => 'urn:nbn:de:0000-g16',
-			'suppfile' => 'urn:nbn:de:0000-s10'
 		);
 		$this->checkViewPages($expectedURNs);
 
@@ -411,7 +386,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'issue' => 'issueurl1',
 			'article' => 'articleurl1',
 			'galley' => 'galleyurl1',
-			'suppfile' => 'suppfileurl1',
 		);
 		$this->setUrlIds($urlIds);
 		// Expected URNs.
@@ -419,7 +393,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'issue' => 'urn:nbn:de:0000-issueurl17',
 			'article' => 'urn:nbn:de:0000-articleurl12',
 			'galley' => 'urn:nbn:de:0000-galleyurl14',
-			'suppfile' => 'urn:nbn:de:0000-suppfileurl16'
 		);
 		$this->checkViewPages($expectedURNs);
 	}
@@ -439,7 +412,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | issue     	| issue1    	| .../editor/issueData/1                            	|
 	 *        | article   	| article1  	| .../editor/viewMetadata/1                         	|
 	 *        | galley    	| galley1   	| .../editor/editGalley/1/1                         	|
-	 *        | supp file 	| suppfile1 	| .../editor/editSuppFile/1/1?from=submissionEditing	|
 	 *
 	 * SCENARIO OUTLINE: Define a custom suffix
 	 *    GIVEN	I have chosen custom suffix
@@ -455,7 +427,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | issue     	| issue1    	| .../editor/issueData/1                            	| issue14       	|
 	 *        | article   	| article1  	| .../editor/viewMetadata/1                         	| article13     	|
 	 *        | galley    	| galley1   	| .../editor/editGalley/1/1                         	| galley18      	|
-	 *        | supp file 	| suppfile1 	| .../editor/editSuppFile/1/1?from=submissionEditing	| suppfile14    	|
 	 *
 	 * SCENARIO OUTLINE: Custom suffix
 	 *    GIVEN	I specified {custom suffix}
@@ -472,8 +443,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 *        | article   	| article13 	| .../article/view/1 + DC <meta>, Google <meta>			| urn:nbn:de:0000-article13 	|
 	 *        | galley    	| galley18  	| .../editor/editGalley/1/1                         	| urn:nbn:de:0000-galley18  	|
 	 *        | galley    	| galley18  	| .../article/view/1 + DC <meta>, Google <meta>			| urn:nbn:de:0000-galley18  	|
-	 *        | supp file 	| suppfile14	| .../editor/editSuppFile/1/1?from=submissionEditing	| urn:nbn:de:0000-suppfile14	|
-	 *        | supp file 	| suppfile14	| .../rt/suppFileMetadata/1/0/1							| urn:nbn:de:0000-suppfile14	|
 	 *
 	 *
 	 * SCENARIO OUTLINE: Duplicated custom suffix
@@ -493,7 +462,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 		$this->configureURN('urn:nbn:de:0000-', 'urnSuffixCustomIdentifier');
 
 		// checkNo for the custom suffix
-		$objectCheckNo = array('issue'=>'4', 'article'=>'3', 'galley'=>'8', 'suppfile'=>'4');
+		$objectCheckNo = array('issue'=>'4', 'article'=>'3', 'galley'=>'8');
 
 		$existingSuffix = null;
 		foreach ($this->objectTypes as $objectType) {
@@ -622,7 +591,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 * @param $pattern string
 	 */
 	private function configureURN($prefix = 'urn:nbn:de:0000-', $suffixGenerationMethod = 'urnSuffixDefault',
-			$pattern = array('Issue' => '', 'Article' => '', 'Galley' => '', 'SuppFile' => ''), $resolver = 'http://nbn-resolving.de/') {
+			$pattern = array('Issue' => '', 'Article' => '', 'Galley' => ''), $resolver = 'http://nbn-resolving.de/') {
 
 		// Make sure the settings page is open.
 		$this->openSettingsPage();

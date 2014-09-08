@@ -14,8 +14,8 @@
  *
  * FEATURE: DataCite DOI registration and export
  *   AS A    journal manager
- *   I WANT  to be able to register DOIs for issues, articles and
- *           supplementary files with the DOI registration agency DataCite
+ *   I WANT  to be able to register DOIs for issues and articles
+ *           with the DOI registration agency DataCite
  *   SO THAT these objects can be uniquely identified and
  *           discovered through public meta-data searches.
  */
@@ -54,7 +54,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		$indexPage = $baseUrl . '/index.php/test/manager/importexport/plugin/DataciteExportPlugin';
 		$this->pages = array(
 			'index' => $indexPage,
-			'suppFiles' => $indexPage . '/suppFiles',
 			'settings' => $baseUrl . '/index.php/test/manager/plugin/importexport/DataciteExportPlugin/settings'
 		);
 
@@ -139,32 +138,18 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 
 	/**
-	 * SCENARIO OUTLINE: see FunctionalDoiExportTest::doExportObjectTest().
-	 *
-	 * EXAMPLES:
-	 *   export plug-in      |options|object type|object id(s)|export format    |sample file(s)
-	 *   ====================|=======|===========|============|=================|======================
-	 *   DataciteExportPlugin|./.    |supp file  |1           |DataCite resource|datacite-supp-file.xml
-	 */
-	public function testExportSuppFile() {
-		$this->doExportObjectTest('suppFile', 1, 'DataciteExportPlugin', 'datacite-supp-file.xml');
-	}
-
-
-	/**
 	 * SCENARIO OUTLINE: see FunctionalDoiExportTest::testExportUnregisteredDois().
 	 *
 	 * EXAMPLES:
 	 *   export plug-in      |objects                                            |XML files
 	 *   ====================|===================================================|==========================================================================================
-	 *   DataciteExportPlugin|issue 1; article 1; galleys 1, 2 and 3; supp-file 1|datacite-article.xml,datacite-galley-{1,2,3}.xml,datacite-issue.xml,datacite-supp-file.xml
+	 *   DataciteExportPlugin|issue 1; article 1; galleys 1, 2 and 3|datacite-article.xml,datacite-galley-{1,2,3}.xml,datacite-issue.xml
 	 */
 	public function testExportUnregisteredDois() {
 		$objects = array(
 			'issue' => 1,
 			'article' => 1,
 			'galley' => array(1,2,3),
-			'suppFile' => 1
 		);
 		$xmlFiles = array(
 			'datacite-article.xml',
@@ -172,7 +157,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 			'datacite-galley-2.xml',
 			'datacite-galley-3.xml',
 			'datacite-issue.xml',
-			'datacite-supp-file.xml'
 		);
 		parent::testExportUnregisteredDois('DataciteExportPlugin', $objects, $xmlFiles);
 	}
@@ -190,11 +174,9 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   Article |.../manager/importexport/plugin/DataciteExportPlugin/articles |Export
 	 *   Galley  |.../manager/importexport/plugin/DataciteExportPlugin/galleys  |Register
 	 *   Galley  |.../manager/importexport/plugin/DataciteExportPlugin/galleys  |Export
-	 *   SuppFile|.../manager/importexport/plugin/DataciteExportPlugin/suppFiles|Register
-	 *   SuppFile|.../manager/importexport/plugin/DataciteExportPlugin/suppFiles|Export
 	 */
 	public function testRegisterOrExportSpecificObjects() {
-		parent::testRegisterOrExportSpecificObjects('DataciteExportPlugin', array('issue', 'article', 'galley', 'suppFile'), self::TEST_ACCOUNT);
+		parent::testRegisterOrExportSpecificObjects('DataciteExportPlugin', array('issue', 'article', 'galley'), self::TEST_ACCOUNT);
 	}
 
 
@@ -202,7 +184,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 * SCENARIO: See FunctionalDoiExportTest::testRegisterUnregisteredDois().
 	 */
 	public function testRegisterUnregisteredDois() {
-		parent::testRegisterUnregisteredDois('DataciteExportPlugin', array('Issue', 'Article', 'Galley', 'Supplementary File'), self::TEST_ACCOUNT);
+		parent::testRegisterUnregisteredDois('DataciteExportPlugin', array('Issue', 'Article', 'Galley'), self::TEST_ACCOUNT);
 
 		// Check whether the DOIs and meta-data have actually been registered.
 		$registrationTests = array(
@@ -211,7 +193,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 			array('datacite-galley-1.xml', 'article/view/1/1', '10.5072/t.v1i1.1.g1'),
 			array('datacite-galley-2.xml', 'article/view/1/2', '10.5072/t.v1i1.1.g2'),
 			array('datacite-galley-3.xml', 'article/view/1/3', '10.5072/t.v1i1.1.g3'),
-			array('datacite-supp-file.xml', 'article/downloadSuppFile/1/1', '10.5072/t.v1i1.1.s1')
 		);
 		foreach($registrationTests as $registrationTest) {
 			list($sampleFile, $targetUrl, $doi) = $registrationTest;
@@ -230,11 +211,10 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   .../manager/importexport/plugin/DataciteExportPlugin/issues
 	 *   .../manager/importexport/plugin/DataciteExportPlugin/articles
 	 *   .../manager/importexport/plugin/DataciteExportPlugin/galleys
-	 *   .../manager/importexport/plugin/DataciteExportPlugin/suppFiles
 	 *   .../manager/importexport/plugin/DataciteExportPlugin/all
 	 */
 	public function testObjectsWithoutDOICannotBeSelectedForExport() {
-		parent::testObjectsWithoutDOICannotBeSelectedForExport(array('issues', 'articles', 'galleys', 'suppFiles', 'all'));
+		parent::testObjectsWithoutDOICannotBeSelectedForExport(array('issues', 'articles', 'galleys', 'all'));
 	}
 
 
@@ -269,7 +249,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   no DOI prefix configured
 	 */
 	public function testConfigurationError() {
-		parent::testConfigurationError(array('issues', 'articles', 'galleys', 'suppFiles', 'all'));
+		parent::testConfigurationError(array('issues', 'articles', 'galleys', 'all'));
 	}
 
 
@@ -284,7 +264,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|./.     |articles          |1         |datacite-article.xml
 	 *   DataciteExportPlugin|./.     |galleys           |1         |datacite-galley-1.xml
 	 *   DataciteExportPlugin|./.     |galleys           |1 2 3     |datacite-galley-{1,2,3}.xml
-	 *   DataciteExportPlugin|./.     |suppFiles         |1         |datacite-supp-file.xml
 	 *
 	 *
 	 * SCENARIO OUTLINE: CLI registration, see FunctionalDoiExportTest::testExportAndRegisterObjectsViaCli().
@@ -296,7 +275,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 *   DataciteExportPlugin|./.     |articles          |1
 	 *   DataciteExportPlugin|./.     |galleys           |1
 	 *   DataciteExportPlugin|./.     |galleys           |1 2 3
-	 *   DataciteExportPlugin|./.     |suppFiles         |1
 	 */
 	public function testExportAndRegisterObjectsViaCli() {
 		$examples = array(
@@ -304,7 +282,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 			array('articles', '1', 'datacite-article.xml'),
 			array('galleys', '1', 'datacite-galley-1.xml'),
 			array('galleys', '1 2 3', array('datacite-galley-1.xml', 'datacite-galley-2.xml', 'datacite-galley-3.xml')),
-			array('suppFiles', '1', 'datacite-supp-file.xml')
 		);
 
 		foreach($examples as $example) {

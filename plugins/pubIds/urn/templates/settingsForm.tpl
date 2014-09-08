@@ -37,8 +37,6 @@
 			{fieldLabel name="enableArticleURN" key="plugins.pubIds.urn.manager.settings.enableArticleURN"}<br />
 			<input type="checkbox" name="enableGalleyURN" id="enableGalleyURN" value="1"{if $enableGalleyURN} checked="checked"{/if} />
 			{fieldLabel name="enableGalleyURN" key="plugins.pubIds.urn.manager.settings.enableGalleyURN"}<br />
-			<input type="checkbox" name="enableSuppFileURN" id="enableSuppFileURN" value="1"{if $enableSuppFileURN} checked="checked"{/if} />
-			{fieldLabel name="enableSuppFileURN" key="plugins.pubIds.urn.manager.settings.enableSuppFileURN"}<br />
 		</td>
 	</tr>
 	<tr><td colspan="2">&nbsp;</td></tr>
@@ -81,13 +79,6 @@
 					<td>
 						<input type="text" name="urnGalleySuffixPattern" value="{$urnGalleySuffixPattern|escape}" size="15" maxlength="50" id="urnGalleySuffixPattern" class="textField" />
 						<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys"}</span>
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>
-						<input type="text" name="urnSuppFileSuffixPattern" value="{$urnSuppFileSuffixPattern|escape}" size="15" maxlength="50" id="urnSuppFileSuffixPattern" class="textField" />
-						<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles"}</span>
 					</td>
 				</tr>
 				<tr>

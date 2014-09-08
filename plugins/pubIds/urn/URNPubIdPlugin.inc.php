@@ -75,7 +75,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 			$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
 			$article = ($pubObjectType == 'Article' ? $pubObject : null);
 			$galley = ($pubObjectType == 'Galley' ? $pubObject : null);
-			$suppFile = ($pubObjectType == 'SuppFile' ? $pubObject : null);
 
 			// Get the journal id of the object
 			if (in_array($pubObjectType, array('Issue', 'Article'))) {
@@ -171,11 +170,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 						$urnSuffix = String::regexp_replace('/%g/', $galley->getId(), $urnSuffix);
 					}
 
-					if ($suppFile) {
-						// %s - supp file id
-						$urnSuffix = String::regexp_replace('/%s/', $suppFile->getId(), $urnSuffix);
-					}
-
 					if (!empty($urnSuffix)) {
 						$urn = $urnPrefix . $urnSuffix;
 						if ($this->getSetting($journal->getId(), 'checkNo')) {
@@ -199,10 +193,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 
 					if ($galley) {
 						$urnSuffix .= '.g' . $galley->getId();
-					}
-
-					if ($suppFile) {
-						$urnSuffix .= '.s' . $suppFile->getId();
 					}
 
 					$urn = $urnPrefix . $urnSuffix;

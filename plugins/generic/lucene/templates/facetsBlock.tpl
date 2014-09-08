@@ -28,7 +28,7 @@
 					{/if}
 					<li>
 						<a href="{url query=$query journalTitle=$journalTitle
-							authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText suppFiles=$suppFiles
+							authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText
 							discipline=$discipline subject=$subject type=$type coverage=$coverage
 							dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear
 							dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear escape=false}">

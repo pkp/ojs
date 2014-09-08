@@ -56,7 +56,6 @@
 					{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="title" filterValue=$title key="article.title"}
 					{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="abstract" filterValue=$abstract key="search.abstract"}
 					{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="galleyFullText" filterValue=$galleyFullText key="search.fullText"}
-					{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="suppFiles" filterValue=$suppFiles key="article.suppFiles"}
 					{include file="search/searchFilter.tpl" displayIf="activeFilter" filterType="date" filterName="dateFrom" filterValue=$dateFrom startYear=$startYear endYear=$endYear key="search.dateFrom"}
 					{include file="search/searchFilter.tpl" displayIf="activeFilter" filterType="date" filterName="dateTo" filterValue=$dateTo startYear=$startYear endYear=$endYear key="search.dateTo"}
 					{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="discipline" filterValue=$discipline key="search.discipline"}
@@ -70,7 +69,7 @@
 			{if $hasEmptyFilters}
 				{capture assign="emptyFilters"}
 					<table class="data">
-						{if empty($authors) || empty($title) || empty($abstract) || empty($galleyFullText) || empty($suppFiles)}
+						{if empty($authors) || empty($title) || empty($abstract) || empty($galleyFullText)}
 							<tr>
 								<td colspan="2" class="label"><h4>{translate key="search.searchCategories"}</h4></td>
 							</tr>
@@ -78,7 +77,6 @@
 							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="title" filterValue=$title key="article.title"}
 							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="abstract" filterValue=$abstract key="search.abstract"}
 							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="galleyFullText" filterValue=$galleyFullText key="search.fullText"}
-							{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="suppFiles" filterValue=$suppFiles key="article.suppFiles"}
 						{/if}
 						{if $dateFrom == '--' || $dateTo == '--'}
 							<tr>
@@ -128,7 +126,7 @@
 				function searchResultReorder(useDefaultOrderDir) {ldelim}
 					var reorderUrl = '{strip}
 							{url query=$query searchJournal=$searchJournal
-								authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText suppFiles=$suppFiles
+								authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText
 								discipline=$discipline subject=$subject type=$type coverage=$coverage
 								dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear
 								dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear escape=false}
@@ -238,7 +236,7 @@
 			{else}
 				<tr>
 					<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
-					<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText suppFiles=$suppFiles discipline=$discipline subject=$subject type=$type coverage=$coverage indexTerms=$indexTerms dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}</td>
+					<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText discipline=$discipline subject=$subject type=$type coverage=$coverage indexTerms=$indexTerms dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}</td>
 				</tr>
 			{/if}
 {if !$instantSearch} {* See "instant search" comment at the top of the file *}

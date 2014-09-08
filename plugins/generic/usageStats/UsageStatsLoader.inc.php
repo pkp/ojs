@@ -264,8 +264,6 @@ class UsageStatsLoader extends FileLoader {
 			ASSOC_TYPE_GALLEY => array(
 				'/article/viewFile/',
 				'/article/download/'),
-			ASSOC_TYPE_SUPP_FILE => array(
-				'/article/downloadSuppFile/'),
 			ASSOC_TYPE_ISSUE => array(
 				'issue/view/'),
 			ASSOC_TYPE_ISSUE_GALLEY => array(
@@ -342,30 +340,15 @@ class UsageStatsLoader extends FileLoader {
 						$assocId = false;
 						break;
 					}
-					if ($assocType == ASSOC_TYPE_SUPP_FILE) {
-						$suppFileDao = DAORegistry::getDAO('SuppFileDAO');
-						if ($journal->getSetting('enablePublicSuppFileId')) {
-							$suppFile = $suppFileDao->getSuppFileByBestSuppFileId($assocId, $articleId);
-						} else {
-							$suppFile = $suppFileDao->getSuppFile((int) $assocId, $articleId);
-						}
-						if (is_a($suppFile, 'SuppFile')) {
-							$assocId = $suppFile->getId();
-						} else {
-							$assocId = false;
-						}
-						break;
+					$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+					if ($journal->getSetting('enablePublicGalleyId')) {
+						$galley = $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
 					} else {
-						$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-						if ($journal->getSetting('enablePublicGalleyId')) {
-							$galley = $galleyDao->getGalleyByBestGalleyId($assocId, $articleId);
-						} else {
-							$galley = $galleyDao->getById($assocId, $articleId);
-						}
-						if (is_a($galley, 'ArticleGalley')) {
-							$assocId = $galley->getId();
-							break;
-						}
+						$galley = $galleyDao->getById($assocId, $articleId);
+					}
+					if (is_a($galley, 'ArticleGalley')) {
+						$assocId = $galley->getId();
+						break;
 					}
 
 					// Couldn't retrieve galley,

@@ -42,9 +42,6 @@
     <galley-xml>
       <![CDATA[<galleyList><galley locale="de_DE" fileName="%%test-url%%/index.php/lucene-test/article/download/3/4"/><galley locale="en_US" fileName="%%test-url%%/index.php/lucene-test/article/download/3/5"/></galleyList>]]>
     </galley-xml>
-    <suppFile-xml>
-      <![CDATA[<suppFileList><suppFile locale="de_DE" fileName="%%test-url%%/index.php/lucene-test/article/downloadSuppFile/3/2"/><suppFile locale="unknown" fileName="%%test-url%%/index.php/lucene-test/article/downloadSuppFile/3/3"><titleList><title locale="de_DE">Titel</title></titleList><creatorList><creator locale="de_DE">Autor</creator></creatorList><subjectList><subject locale="de_DE">Thema</subject></subjectList><typeOtherList><typeOther locale="de_DE">Sonstiger Typ</typeOther></typeOtherList><descriptionList><description locale="de_DE">Beschreibung</description></descriptionList><sourceList><source locale="de_DE">Quelle</source></sourceList></suppFile></suppFileList>]]>
-    </suppFile-xml>
   </article>
   <article id="99" sectionId="2" journalId="2" instId="test-inst" loadAction="delete"/>
 </articleList>

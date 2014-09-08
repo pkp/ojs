@@ -38,15 +38,15 @@ class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin {
 		return 'OAIMetadataFormat_MARC21';
 	}
 
-	function getMetadataPrefix() {
+	static function getMetadataPrefix() {
 		return 'marcxml';
 	}
 
-	function getSchema() {
+	static function getSchema() {
 		return 'http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd';
 	}
 
-	function getNamespace() {
+	static function getNamespace() {
 		return 'http://www.loc.gov/MARC21/slim';
 	}
 }

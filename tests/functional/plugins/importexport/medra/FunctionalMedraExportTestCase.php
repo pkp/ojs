@@ -14,8 +14,8 @@
  *
  * FEATURE: mEDRA DOI registration and export
  *   AS A    journal manager
- *   I WANT  to be able to register DOIs for issues, articles and
- *           supplementary files with the DOI registration agency mEDRA
+ *   I WANT  to be able to register DOIs for issues and articles
+ *           with the DOI registration agency mEDRA
  *   SO THAT these objects can be uniquely identified and
  *           discovered through public meta-data searches.
  */
