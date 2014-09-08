@@ -248,12 +248,13 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$this->_addLocalizedElements($dc11Description, 'dc:coverage', $coverage);
 
 		// Rights: Add both copyright statement and license
-		$this->_addLocalizedElements(
-			$dc11Description,
-			'dc:rights',
-			__('submission.copyrightStatement', array('copyrightHolder' => $article->getLocalizedCopyrightHolder(), 'copyrightYear' => $article->getCopyrightYear()))
-		);
-		$this->_addLocalizedElements($dc11Description, 'dc:rights', $article->getLicenseURL());
+		$copyrightHolder = $article->getLocalizedCopyrightHolder();
+		$copyrightYear = $article->getCopyrightYear();
+		if (!empty($copyrightHolder) && !empty($copyrightYear)) {
+			$dc11Description->addStatement('dc:rights', __('submission.copyrightStatement', array('copyrightHolder' => $copyrightHolder, 'copyrightYear' => $copyrightYear)));
+		}
+
+		if ($licenseUrl = $article->getLicenseURL()) $dc11Description->addStatement('dc:rights', $licenseUrl);
 
 		Hookregistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array(&$this, $article, $journal, $issue, &$dc11Description));
 

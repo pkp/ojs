@@ -1,23 +1,32 @@
 <?php
 
 /**
- * @file tests/regression/8872Test.php
+ * @file tests/functional/search/WorkflowSearchTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class 8872Test
- * @ingroup tests_regression
+ * @class WorkflowSearchTest
+ * @ingroup tests_functional_search
  *
- * @brief Regression test for http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=8872
+ * @brief Workflow search tests
  */
 
 import('lib.pkp.tests.WebTestCase');
 
-class CreateJournalTest extends WebTestCase {
-	/** @var $fullTitle Full title of test submission */
-	static $fullTitle = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
+class WorkflowSearchTest extends WebTestCase {
+	/** @var $punctuationTitle Full title of test submission */
+	static $punctuationTitle = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
+	static $punctuationTitleSnippet = 'NineNation';
+	static $titleStartSnippet = 'the facets';
+
+	/**
+	 * @copydoc WebTestCase::getAffectedTables
+	 */
+	protected function getAffectedTables() {
+		return WEB_TEST_ENTIRE_DB;
+	}
 
 	/**
 	 * Test editor submission search
@@ -27,18 +36,24 @@ class CreateJournalTest extends WebTestCase {
 		$this->logIn('dbarnes');
 
 		// Use the search to find a known submission with punctuation
-		// in the title
-		$this->_search(self::$fullTitle, 'is');
-		$this->assertText('css=h3', 'Submission');
+		// in the title (bug #8872)
+		$this->_search('Title', 'is', self::$punctuationTitle);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
 
 		// Try again, this time partial and without the colon
 		$this->clickAndWait('link=Editor');
-		$this->_search('NineNation', 'contains');
-		$this->assertText('css=h3', 'Submissions');
+		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
+		$this->assertText('css=h3', 'Submissions'); // Should not match
+
+		// Test "starts with" searches.
+		$this->_search('Title', 'starts with', self::$titleStartSnippet);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
+		$this->clickAndWait('link=Editor');
 
 		// Ensure that the title sort heading doesn't error out.
+		$this->clickAndWait('link=In Review');
 		$this->clickAndWait('link=Title');
-		$this->assertText('css=h3', 'Submissions');
+		$this->assertText('css=h2', 'Submissions in Review');
 
 		$this->logOut();
 	}
@@ -52,17 +67,23 @@ class CreateJournalTest extends WebTestCase {
 
 		// Use the search to find a known submission with punctuation
 		// in the title. Should find a submission with the exact name.
+		// (Bug #8872)
 		$this->clickAndWait('link=In Editing');
-		$this->_search(self::$fullTitle, 'is');
-		$this->assertText('css=h3', 'Submission');
+		$this->_search('Title', 'is', self::$punctuationTitle);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
 
 		// Try again, this time partial and without the colon. Before
 		// the fix, this would have matched a submission. After the fix,
 		// it shouldn't.
 		$this->clickAndWait('link=Section Editor');
 		$this->clickAndWait('link=In Editing');
-		$this->_search('NineNation', 'contains');
-		$this->assertText('css=h2', 'Submissions in Editing');
+		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
+		$this->assertText('css=h2', 'Submissions in Editing'); // No match
+
+		// Test "starts with" searches.
+		$this->_search('Title', 'starts with', self::$titleStartSnippet);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
+		$this->clickAndWait('link=In Editing');
 
 		// Ensure that the title sort heading doesn't error out.
 		$this->clickAndWait('link=Title');
@@ -79,7 +100,7 @@ class CreateJournalTest extends WebTestCase {
 
 		// Prep: Copyeditor search is only available in archive.
 		// Need to archive the submission first.
-		$this->findSubmissionAsEditor('dbarnes', null, self::$fullTitle);
+		$this->findSubmissionAsEditor('dbarnes', null, self::$punctuationTitle);
 		$this->clickAndWait('link=Reject and Archive Submission');
 		$this->clickAndWait('css=input.button.defaultButton');
 		$this->logOut();
@@ -89,16 +110,22 @@ class CreateJournalTest extends WebTestCase {
 
 		// Use the search to find a known submission with punctuation
 		// in the title. Should find a submission with the exact name.
-		$this->_search(self::$fullTitle, 'is');
-		$this->assertText('css=h3', 'Submission');
+		// (Bug #8872)
+		$this->_search('Title', 'is', self::$punctuationTitle);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
 
 		// Try again, this time partial and without the colon. Before
 		// the fix, this would have matched a submission. After the fix,
 		// it shouldn't.
 		$this->clickAndWait('link=Copyeditor');
 		$this->clickAndWait('link=Archive');
-		$this->_search('NineNation', 'contains');
+		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
 		$this->assertElementPresent('css=td.nodata');
+
+		// Test "starts with" searches.
+		$this->_search('Title', 'starts with', self::$titleStartSnippet);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
+		$this->clickAndWait('link=Archive');
 
 		// Ensure that the title sort heading doesn't error out.
 		$this->clickAndWait('link=Title');
@@ -114,10 +141,9 @@ class CreateJournalTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		// Prep: Layout editor needs to be assigned and requested.
-		// WARNING: This is currently dependent on the CE test above,
-		// which sends the submission to the Archive. The search form
-		// only exists for archived submissions.
-		$this->findSubmissionAsEditor('dbarnes', null, self::$fullTitle);
+		$this->findSubmissionAsEditor('dbarnes', null, self::$punctuationTitle);
+		$this->clickAndWait('link=Reject and Archive Submission');
+		$this->clickAndWait('css=input.button.defaultButton');
 		$this->clickAndWait('link=Editing');
 
 		// Assign Graham Cox
@@ -138,16 +164,22 @@ class CreateJournalTest extends WebTestCase {
 
 		// Use the search to find a known submission with punctuation
 		// in the title. Should find a submission with the exact name.
-		$this->_search(self::$fullTitle, 'is');
-		$this->assertText('css=h3', 'Submission');
+		// (Bug #8872)
+		$this->_search('Title', 'is', self::$punctuationTitle);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
 
 		// Try again, this time partial and without the colon. Before
 		// the fix, this would have matched a submission. After the fix,
 		// it shouldn't.
 		$this->clickAndWait('link=Layout Editor');
 		$this->clickAndWait('link=Archive');
-		$this->_search('NineNation', 'contains');
-		$this->assertElementPresent('css=td.nodata');
+		$this->_search('Title', 'contains', self::$punctuationTitleSnippet);
+		$this->assertElementPresent('css=td.nodata'); // No match
+
+		// Test "starts with" searches.
+		$this->_search('Title', 'starts with', self::$titleStartSnippet);
+		$this->assertText('css=h3', 'Submission'); // Should match 1
+		$this->clickAndWait('link=Archive');
 
 		// Ensure that the title sort heading doesn't error out.
 		$this->clickAndWait('link=Title');
@@ -157,12 +189,14 @@ class CreateJournalTest extends WebTestCase {
 	}
 
 	/**
-	 * Search for a submission by title.
-	 * @param $title string Title search text
+	 * Search for a submission.
+	 * @param $field string Name of field (e.g. Title)
 	 * @param $match string string is|contains Type of match
+	 * @param $value string Title search text
 	 */
-	private function _search($title, $match) {
-		$this->type('//div[@id=\'main\']//input[@name=\'search\']', $title);
+	private function _search($field, $match, $value) {
+		$this->type('//div[@id=\'main\']//input[@name=\'search\']', $value);
+		$this->select('//div[@id=\'main\']//select[@name=\'searchField\']', 'label=' . $field);
 		$this->select('//div[@id=\'main\']//select[@name=\'searchMatch\']', 'label=' . $match);
 		$this->clickAndWait('//div[@id=\'main\']//input[@value=\'Search\']');
 	}

@@ -55,7 +55,8 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$abbreviation = $journal->getLocalizedSetting('abbreviation');
 		$printIssn = $journal->getSetting('printIssn');
 		$onlineIssn = $journal->getSetting('onlineIssn');
-		$primaryLocale = $journal->getPrimaryLocale();
+		$primaryLocale = ($article->getLanguage() != '') ? $article->getLanguage() : $journal->getPrimaryLocale();
+
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
 		$datePublished = $article->getDatePublished();
 		if (!$datePublished) $datePublished = $issue->getDatePublished();
