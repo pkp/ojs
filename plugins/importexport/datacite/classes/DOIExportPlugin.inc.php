@@ -128,12 +128,12 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 	 *
 	 * This supports the following actions:
 	 * - index: the plug-ins home page
-	 * - all, issues, articles, galleys, suppFiles: lists with exportable objects
-	 * - exportIssue, exportArticle, exportGalley, exportSuppFile: export a single object
-	 * - exportIssues, exportArticles, exportGalleys, exportSuppFiles: export several objects at a time
-	 * - registerIssue, registerArticle, registerGalley, registerSuppFile: register a single object
-	 * - registerIssues, registerArticles, registerGalleys, registerSuppFiles: register several objects at a time
-	 * - resetIssue, resetArticle, resetGalley, resetSuppFile: reset an object to "unregistered" state.
+	 * - all, issues, articles, galleys: lists with exportable objects
+	 * - exportIssue, exportArticle, exportGalley: export a single object
+	 * - exportIssues, exportArticles, exportGalleys: export several objects at a time
+	 * - registerIssue, registerArticle, registerGalley: register a single object
+	 * - registerIssues, registerArticles, registerGalleys: register several objects at a time
+	 * - resetIssue, resetArticle, resetGalley: reset an object to "unregistered" state.
 	 */
 	function display(&$args, $request) {
 		parent::display($args, $request);
@@ -270,10 +270,6 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 						$this->_displayGalleyList($templateMgr, $journal);
 						break;
 
-					case 'suppFile':
-						$this->displaySuppFileList($templateMgr, $journal);
-						break;
-
 					case 'all':
 						$this->displayAllUnregisteredObjects($templateMgr, $journal);
 						break;
@@ -347,7 +343,6 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 
 			// Accept both singular and plural forms.
 			if (substr($objectType, -1) == 's') $objectType = substr($objectType, 0, -1);
-			if ($objectType == 'suppfile') $objectType = 'suppFile';
 
 			// Check whether the object type exists.
 			$objectTypes = $this->getAllObjectTypes();
@@ -458,15 +453,6 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 		$templateMgr->assign('articles', $this->_getUnregisteredArticles($journal));
 		$templateMgr->assign('galleys', $this->_getUnregisteredGalleys($journal));
 		$templateMgr->display($this->getTemplatePath() . 'all.tpl');
-	}
-
-	/**
-	 * Display a list of supplementary files for export.
-	 * @param $templateMgr TemplateManager
-	 * @param $journal Journal
-	 */
-	function displaySuppFileList(&$templateMgr, &$journal) {
-		fatalError('Not implemented for this plug-in');
 	}
 
 	/**
@@ -779,7 +765,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 	 * when several DOI registration plug-ins
 	 * are active at the same time.
 	 * @parem $request Request
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @parem $testPrefix string
 	 */
 	function markRegistered($request, $object, $testPrefix) {
@@ -817,7 +803,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * Set the object's "registeredDoi" setting.
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @parem $registeredDoi string
 	 */
 	function saveRegisteredDoi(&$object, $registeredDoi) {
@@ -826,7 +812,6 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 			'Issue' => array('IssueDAO', 'updateObject'),
 			'Article' => array('ArticleDAO', 'updateObject'),
 			'ArticleGalley' => array('ArticleGalleyDAO', 'updateObject'),
-			'SuppFile' => array('SuppFileDAO', 'updateSuppFile')
 		);
 		$foundConfig = false;
 		foreach($configurations as $objectType => $configuration) {

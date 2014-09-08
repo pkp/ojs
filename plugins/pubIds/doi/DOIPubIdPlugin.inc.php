@@ -81,7 +81,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$issue = ($pubObjectType == 'Issue' ? $pubObject : null);
 		$article = ($pubObjectType == 'Article' ? $pubObject : null);
 		$galley = ($pubObjectType == 'Galley' ? $pubObject : null);
-		$suppFile = ($pubObjectType == 'SuppFile' ? $pubObject : null);
 
 		// Get the journal id of the object.
 		if (in_array($pubObjectType, array('Issue', 'Article'))) {
@@ -135,9 +134,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 					case 'Galley':
 						$doiSuffix = (string) $pubObject->getBestGalleyId($journal);
 						break;
-					case 'SuppFile':
-						$doiSuffix = (string) $pubObject->getBestSuppFileId($journal);
-						break;
 					default:
 						assert(false);
 				}
@@ -188,10 +184,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 					$doiSuffix = String::regexp_replace('/%g/', $galley->getId(), $doiSuffix);
 				}
 
-				if ($suppFile) {
-					// %s - supp file id
-					$doiSuffix = String::regexp_replace('/%s/', $suppFile->getId(), $doiSuffix);
-				}
 				break;
 
 			default:
@@ -209,10 +201,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 
 				if ($galley) {
 					$doiSuffix .= '.g' . $galley->getId();
-				}
-
-				if ($suppFile) {
-					$doiSuffix .= '.s' . $suppFile->getId();
 				}
 		}
 		if (empty($doiSuffix)) return null;

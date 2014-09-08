@@ -37,12 +37,6 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		$pages = $article->getPages();
 		if (!empty($pages)) $source .= '; ' . $pages;
 
-		// Relation
-		$relation = array();
-		foreach ($article->getSuppFiles() as $suppFile) {
-			$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
-		}
-
 		// Format creators
 		$creators = array();
 		$authors = $article->getAuthors();

@@ -38,7 +38,6 @@
 		<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.common.export.issues"}</a></li>
 		<li>&#187; <a href="{plugin_url path="articles"}">{translate key="plugins.importexport.common.export.articles"}</a></li>
 		<li>&#187; <a href="{plugin_url path="galleys"}">{translate key="plugins.importexport.common.export.galleys"}</a></li>
-		<li>&#187; <a href="{plugin_url path="suppFiles"}">{translate key="plugins.importexport.datacite.export.suppFiles"}</a></li>
 	</ul>
 {/if}
 

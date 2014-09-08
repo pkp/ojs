@@ -59,12 +59,6 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		// Sources contains journal title, issue ID, and pages
 		$source = $journal->getLocalizedName() . '; ' . $issue->getIssueIdentification();
 
-		// Relation
-		$relation = array();
-		foreach ($article->getSuppFiles() as $suppFile) {
-			$relation[] = Request::url($journal->getPath(), 'article', 'download', array($article->getId(), $suppFile->getFileId()));
-		}
-
 		// Coverage
 		$coverage = array(
 			$article->getLocalizedCoverageGeo(),

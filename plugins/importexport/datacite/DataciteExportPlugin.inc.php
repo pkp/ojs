@@ -78,91 +78,6 @@ class DataciteExportPlugin extends DOIExportPlugin {
 	}
 
 	/**
-	 * @see DOIExportPlugin::getAllObjectTypes()
-	 */
-	function getAllObjectTypes() {
-		$objectTypes = parent::getAllObjectTypes();
-		$objectTypes['suppFile'] = DOI_EXPORT_SUPPFILES;
-		return $objectTypes;
-	}
-
-	/**
-	 * @see DOIExportPlugin::displayAllUnregisteredObjects()
-	 */
-	function displayAllUnregisteredObjects(&$templateMgr, &$journal) {
-		// Prepare information specific to this plug-in.
-		$templateMgr->assign('suppFiles', $this->_getUnregisteredSuppFiles($journal));
-		parent::displayAllUnregisteredObjects($templateMgr, $journal);
-	}
-
-	/**
-	 * @see DOIExportPlugin::getObjectName()
-	 */
-	function getObjectName($exportType) {
-		if ($exportType == DOI_EXPORT_SUPPFILES) {
-			return 'supp-file';
-		} else {
-			return parent::getObjectName($exportType);
-		}
-	}
-
-	/**
-	 * @see DOIExportPlugin::displaySuppFileList()
-	 */
-	function displaySuppFileList(&$templateMgr, &$journal) {
-		// Retrieve all published articles.
-		$allArticles = $this->getAllPublishedArticles($journal);
-
-		// Retrieve supp file data.
-		$this->registerDaoHook('SuppFileDAO');
-		$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
-		$suppFiles = array();
-		foreach($allArticles as $article) {
-			// Retrieve supp files for the article.
-			$articleSuppFiles =& $suppFileDao->getSuppFilesByArticle($article->getId());
-
-			// Filter only supp files that have a DOI assigned.
-			foreach ($articleSuppFiles as $suppFile) {
-				if ($suppFile->getPubId('doi')) {
-					$suppFiles[] =& $suppFile;
-				}
-				unset($suppFile);
-			}
-			unset($article, $articleSuppFiles);
-		}
-		unset($allArticles);
-
-		// Paginate supp files.
-		$totalSuppFiles = count($suppFiles);
-		$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'suppFiles');
-		if ($rangeInfo->isValid()) {
-			$suppFiles = array_slice($suppFiles, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-		}
-
-		// Retrieve supp file data.
-		$suppFileData = array();
-		foreach($suppFiles as $suppFile) {
-			$preparedSuppFile =& $this->_prepareSuppFileData($suppFile, $journal);
-			// As we select only published articles, we should always
-			// get data back here.
-			assert(is_array($preparedSuppFile));
-			if (is_array($preparedSuppFile)) {
-				$suppFileData[] =& $preparedSuppFile;
-			}
-			unset($suppFile, $preparedSuppFile);
-		}
-		unset($suppFiles);
-
-		// Instantiate supp file iterator.
-		import('lib.pkp.classes.core.VirtualArrayIterator');
-		$iterator = new VirtualArrayIterator($suppFileData, $totalSuppFiles, $rangeInfo->getPage(), $rangeInfo->getCount());
-
-		// Prepare and display the supp file template.
-		$templateMgr->assign('suppFiles', $iterator);
-		$templateMgr->display($this->getTemplatePath() . 'suppFiles.tpl');
-	}
-
-	/**
 	 * @see DOIExportPlugin::generateExportFiles()
 	 */
 	function generateExportFiles($request, $exportType, &$objects, $targetPath, $journal, &$errors) {
@@ -276,82 +191,15 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		return $result;
 	}
 
-	/**
-	 * @see DOIExportPlugin::getDaoName()
-	 */
-	function getDaoName($exportType) {
-		if ($exportType == DOI_EXPORT_SUPPFILES) {
-			return array('SuppFileDAO', 'getSuppFile');
-		} else {
-			return parent::getDaoName($exportType);
-		}
-	}
-
-	/**
-	 * @see DOIExportPlugin::getObjectNotFoundErrorKey()
-	 */
-	function getObjectNotFoundErrorKey($exportType) {
-		if ($exportType == DOI_EXPORT_SUPPFILES) {
-			return 'plugins.importexport.datacite.export.error.suppFileNotFound';
-		} else {
-			return parent::getObjectNotFoundErrorKey($exportType);
-		}
-	}
-
 
 	//
 	// Private helper methods
 	//
 	/**
-	 * Retrieve all unregistered supplementary files and their corresponding issues and articles.
-	 * @param $journal Journal
-	 * @return array
-	 */
-	function &_getUnregisteredSuppFiles(&$journal) {
-		// Retrieve all supp files that have not yet been registered.
-		$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
-		$suppFiles = $suppFileDao->getSuppFilesBySetting($this->getPluginId(). '::' . DOI_EXPORT_REGDOI, null, null, $journal->getId());
-
-		// Retrieve issues and articles for supp files.
-		$suppFileData = array();
-		foreach ($suppFiles as $suppFile) {
-			$preparedSuppFile =& $this->_prepareSuppFileData($suppFile, $journal);
-			if (is_array($preparedSuppFile)) {
-				$suppFileData[] =& $preparedSuppFile;
-			}
-			unset($suppFile, $preparedSuppFile);
-		}
-		return $suppFileData;
-	}
-
-	/**
-	 * Identify published article and issue of the given supp file.
-	 * @param $suppFile SuppFile
-	 * @param $journal Journal
-	 * @return array|null An array with article and issue of the given
-	 *  suppl file. Null will be returned if one of these objects
-	 *  cannot be identified (e.g. when the supp file belongs
-	 *  to an unpublished article).
-	 */
-	function &_prepareSuppFileData(&$suppFile, &$journal) {
-		// Retrieve article and issue for the supp file.
-		$suppFileData =& $this->prepareArticleFileData($suppFile, $journal);
-		if (!is_array($suppFileData)) {
-			$nullVar = null;
-			return $nullVar;
-		}
-
-		// Add the supp file itself.
-		$suppFileData['suppFile'] =& $suppFile;
-
-		return $suppFileData;
-	}
-
-	/**
 	 * Get the canonical URL of an object.
 	 * @param $request Request
 	 * @param $journal Journal
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 */
 	function _getObjectUrl($request, $journal, $object) {
 		$router = $request->getRouter();
@@ -381,10 +229,6 @@ class DataciteExportPlugin extends DOIExportPlugin {
 
 			case is_a($object, 'ArticleGalley'):
 				$url = $router->url($request, null, 'article', 'view', array($article->getBestArticleId($journal), $object->getBestGalleyId($journal)));
-				break;
-
-			case is_a($object, 'SuppFile'):
-				$url = $router->url($request, null, 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $object->getBestSuppFileId($journal)));
 				break;
 		}
 

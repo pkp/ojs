@@ -242,36 +242,5 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		// Save the galley.
 		$this->clickAndWait('css=input.defaultButton');
 	}
-
-	/**
-	 * Upload the given file as a supplementary file.
-	 * @param $articleId integer
-	 * @param $suppFileUri string
-	 * @param $title string
-	 */
-	protected function uploadSuppFile($articleId, $suppFileUri, $title) {
-		// Open the editing page.
-		$submissionEditingPage = $this->baseUrl . '/index.php/lucene-test/editor/submissionEditing/' . $articleId;
-		$this->verifyAndOpen($submissionEditingPage);
-
-		// Select supp file upload radio option.
-		$this->click('layoutFileTypeSupp1');
-
-		// Set the supp file.
-		$this->attachFile('name=layoutFile', $suppFileUri);
-
-		// Click the upload button.
-		$this->clickAndWait('css=#layout form input.button');
-		$this->waitForLocation('*index.php/lucene-test/editor/editSuppFile*');
-
-		// Type the file label.
-		$this->type('title', $title);
-
-		// Set a language.
-		$this->type('language', 'en');
-
-		// Save the file.
-		$this->clickAndWait('css=input.defaultButton');
-	}
 }
 ?>

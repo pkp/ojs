@@ -973,7 +973,7 @@ class SolrWebService extends XmlWebService {
 	 * @return DOMXPath An XPath object with the response loaded. Null if an error occurred.
 	 *  See _serviceMessage for more details about the error.
 	 */
-	function &_makeRequest($url, $params, $method = 'GET') {
+	function &_makeRequest($url, $params = array(), $method = 'GET') {
 		$webServiceRequest = new WebServiceRequest($url, $params, $method);
 		if ($method == 'POST') {
 			$webServiceRequest->setHeader('Content-Type', 'text/xml; charset=utf-8');
@@ -1019,7 +1019,7 @@ class SolrWebService extends XmlWebService {
 			'search' => array(
 				'localized' => array(
 					'title', 'abstract', 'discipline', 'subject',
-					'type', 'coverage', 'suppFiles'
+					'type', 'coverage',
 				),
 				'multiformat' => array(
 					'galleyFullText'
@@ -1553,77 +1553,6 @@ class SolrWebService extends XmlWebService {
 			}
 			XMLCustomWriter::appendChild($galleyOuterNode, $cdataNode);
 			XMLCustomWriter::appendChild($articleNode, $galleyOuterNode);
-		}
-
-		// Add supplementary files
-		$fileDao = DAORegistry::getDAO('SuppFileDAO');
-		$suppFiles =& $fileDao->getSuppFilesByArticle($article->getId());
-		$suppFileList = null;
-		foreach ($suppFiles as $suppFile) { /* @var $suppFile SuppFile */
-			// Try to map the supp-file language to a PKP locale.
-			$locale = null;
-			$language = $suppFile->getLanguage();
-			if (strlen($language) == 2) {
-				$language = AppLocale::get3LetterFrom2LetterIsoLanguage($language);
-			}
-			if (strlen($language) == 3) {
-				$locale = AppLocale::getLocaleFrom3LetterIso($language);
-			}
-			if (!AppLocale::isLocaleValid($locale)) {
-				$locale = 'unknown';
-			}
-
-			$suppFileUrl = $router->url($request, $journal->getPath(), 'article', 'downloadSuppFile', array(intval($article->getId()), intval($suppFile->getId())));
-
-			if (!empty($locale) && !empty($suppFileUrl)) {
-				if (is_null($suppFileList)) {
-					$suppFileList =& XMLCustomWriter::createElement($articleDoc, 'suppFileList');
-				}
-				$suppFileNode =& XMLCustomWriter::createElement($articleDoc, 'suppFile');
-				XMLCustomWriter::setAttribute($suppFileNode, 'locale', $locale);
-				XMLCustomWriter::setAttribute($suppFileNode, 'fileName', $suppFileUrl);
-				XMLCustomWriter::appendChild($suppFileList, $suppFileNode);
-
-				// Add supp file meta-data.
-				$suppFileMetadata = array(
-					'title' => $suppFile->getTitle(null),
-					'creator' => $suppFile->getCreator(null),
-					'subject' => $suppFile->getSubject(null),
-					'typeOther' => $suppFile->getTypeOther(null),
-					'description' => $suppFile->getDescription(null),
-					'source' => $suppFile->getSource(null)
-				);
-				foreach($suppFileMetadata as $field => $data) {
-					if (!empty($data)) {
-						$suppFileMDListNode =& XMLCustomWriter::createElement($articleDoc, $field . 'List');
-						foreach($data as $locale => $value) {
-							$suppFileMDNode =& XMLCustomWriter::createChildWithText($articleDoc, $suppFileMDListNode, $field, $value);
-							XMLCustomWriter::setAttribute($suppFileMDNode, 'locale', $locale);
-							unset($suppFileMDNode);
-						}
-						XMLCustomWriter::appendChild($suppFileNode, $suppFileMDListNode);
-						unset($suppFileMDListNode);
-					}
-				}
-			}
-		}
-
-		// Wrap the suppFile XML as CDATA.
-		if (!is_null($suppFileList)) {
-			if (is_callable(array($articleDoc, 'saveXml'))) {
-				$suppFileXml = $articleDoc->saveXml($suppFileList);
-			} else {
-				$suppFileXml = $suppFileList->toXml();
-			}
-			$suppFileOuterNode =& XMLCustomWriter::createElement($articleDoc, 'suppFile-xml');
-			if (is_callable(array($articleDoc, 'createCDATASection'))) {
-				$cdataNode = $articleDoc->createCDATASection($suppFileXml);
-			} else {
-				$cdataNode = new XMLNode();
-				$cdataNode->setValue('<![CDATA[' . $suppFileXml . ']]>');
-			}
-			XMLCustomWriter::appendChild($suppFileOuterNode, $cdataNode);
-			XMLCustomWriter::appendChild($articleNode, $suppFileOuterNode);
 		}
 	}
 

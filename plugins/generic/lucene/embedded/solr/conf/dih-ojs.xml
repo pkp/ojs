@@ -84,9 +84,6 @@
       var galleyXml = row.get('etl_galley_xml');
       if (galleyXml == null) galleyXml = '<?xml version="1.0" encoding="utf-8"?><galleyList />';
       row.put('etl_galley_xml', String(galleyXml));
-      var suppFileXml = row.get('etl_suppFile_xml');
-      if (suppFileXml == null) suppFileXml = '<?xml version="1.0" encoding="utf-8"?><suppFileList />';
-      row.put('etl_suppFile_xml', String(suppFileXml));
 
       // Check whether this article should actually be
       // deleted rather than updated (occurs in pull-indexing).
@@ -211,45 +208,6 @@
     }
 
     /**
-     * Custom transformer for the suppFile entitiy.
-     *
-     * @param Map row
-     * @param Context context
-     * @returns Map The transformed row.
-     */
-    function transformSuppFile(row, context) {
-      // List the supplementary file metadata fields.
-      var locFields = ['title', 'creator', 'subject', 'typeOther', 'description', 'source'];
-
-      // Run through all supp file fields and concatenate them.
-      for (var i=0, len=locFields.length; i<len; i++) {
-        var fieldName = locFields[i];
-        var valueList = 'etl_file_' + fieldName + 'List';
-        var localeList = 'etl_file_' + fieldName + 'List_locales';
-
-        var values = row.get(valueList);
-        if (values == null) continue;
-        var locales = row.get(localeList);
-        for(var j=0, numValues=values.size(); j<numValues; j++) {
-          var locale = String(locales.get(j));
-          var value = String(values.get(j));
-
-          // Concatenate all meta-data.
-          appendToDocField(context, 'suppFiles_' + locale, value);
-
-	      // Add full text to spellchecker and auto-suggest dictionaries.
-	      appendToDocField(context, 'default_spell', value);
-	      appendToDocField(context, 'suppFiles_spell', value);
-        }
-
-        row.remove(valueList);
-        row.remove(localeList);
-      }
-
-      return row;
-    }
-
-    /**
      * Custom transformer for full text.
      *
      * @param Map row
@@ -269,9 +227,6 @@
         var docType = resolveMimetype(String(row.get('Content-Type')));
         var fieldName = 'galleyFullText_' + docType + '_' + locale;
         var autoSuggestFieldName = 'galleyFullText_spell';
-      } else {
-        var fieldName = 'suppFiles_' + locale;
-        var autoSuggestFieldName = 'suppFiles_spell';
       }
 
       // Add full text.
@@ -452,57 +407,6 @@
                 format="text"
                 onError="continue" >
           <field column="Content-Type" meta="true" />
-          <field column="text" />
-        </entity>
-      </entity>
-
-      <!-- Supplementary Files -->
-      <field column="etl_suppFile_xml" xpath="/articleList/article/suppFile-xml" multiValued="false" default="" />
-      <entity name="suppFile"
-              dataSource="field"
-              dataField="article.etl_suppFile_xml"
-              processor="XPathEntityProcessor"
-              forEach="/suppFileList/suppFile"
-              transformer="script:transformSuppFile"
-              stream="false"
-              onError="continue" >
-
-        <!-- File Data -->
-        <field column="etl_file_name" xpath="/suppFileList/suppFile/@fileName" multiValued="false" />
-        <field column="etl_file_locale" xpath="/suppFileList/suppFile/@locale" multiValued="false" />
-
-        <!-- Titles -->
-        <field column="etl_file_titleList" xpath="/suppFileList/suppFile/titleList/title" multiValued="true" />
-        <field column="etl_file_titleList_locales" xpath="/suppFileList/suppFile/titleList/title/@locale" multiValued="true" />
-
-        <!-- Creators -->
-        <field column="etl_file_creatorList" xpath="/suppFileList/suppFile/creatorList/creator" multiValued="true" />
-        <field column="etl_file_creatorList_locales" xpath="/suppFileList/suppFile/creatorList/creator/@locale" multiValued="true" />
-
-        <!-- Subjects -->
-        <field column="etl_file_subjectList" xpath="/suppFileList/suppFile/subjectList/subject" multiValued="true" />
-        <field column="etl_file_subjectList_locales" xpath="/suppFileList/suppFile/subjectList/subject/@locale" multiValued="true" />
-
-        <!-- Other Types -->
-        <field column="etl_file_typeOtherList" xpath="/suppFileList/suppFile/typeOtherList/typeOther" multiValued="true" />
-        <field column="etl_file_typeOtherList_locales" xpath="/suppFileList/suppFile/typeOtherList/typeOther/@locale" multiValued="true" />
-
-        <!-- Descriptions -->
-        <field column="etl_file_descriptionList" xpath="/suppFileList/suppFile/descriptionList/description" multiValued="true" />
-        <field column="etl_file_descriptionList_locales" xpath="/suppFileList/suppFile/descriptionList/description/@locale" multiValued="true" />
-
-        <!-- Sources -->
-        <field column="etl_file_sourceList" xpath="/suppFileList/suppFile/sourceList/source" multiValued="true" />
-        <field column="etl_file_sourceList_locales" xpath="/suppFileList/suppFile/sourceList/source/@locale" multiValued="true" />
-
-        <!-- Full Text -->
-        <entity name="suppFile_file"
-                dataSource="file"
-                processor="TikaEntityProcessor"
-                url="${suppFile.etl_file_name}"
-                transformer="script:transformFullText"
-                format="text"
-                onError="continue" >
           <field column="text" />
         </entity>
       </entity>

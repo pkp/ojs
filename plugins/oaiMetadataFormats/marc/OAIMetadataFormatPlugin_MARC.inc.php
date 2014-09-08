@@ -39,15 +39,15 @@ class OAIMetadataFormatPlugin_MARC extends OAIMetadataFormatPlugin {
 		return 'OAIMetadataFormat_MARC';
 	}
 
-	function getMetadataPrefix() {
+	static function getMetadataPrefix() {
 		return 'oai_marc';
 	}
 
-	function getSchema() {
+	static function getSchema() {
 		return 'http://www.openarchives.org/OAI/1.1/oai_marc.xsd';
 	}
 
-	function getNamespace() {
+	static function getNamespace() {
 		return 'http://www.openarchives.org/OAI/1.1/oai_marc';
 	}
 }

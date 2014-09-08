@@ -23,13 +23,11 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 		'Issue' => '10.1234/t.v1i1-imp-test',
 		'PublishedArticle' => '10.1234/t.v1i1.1-imp-test',
 		'Galley' => '10.1234/t.v1i1.1.g1-imp-test',
-		'SuppFile' => '10.1234/t.v1i1.1.s1-imp-test'
 	);
 	private $expectedURNs = array(
 		'Issue' => 'urn:nbn:de:0000-t.v1i1-imp-test8',
 		'PublishedArticle' => 'urn:nbn:de:0000-t.v1i1.1-imp-test5',
 		'Galley' => 'urn:nbn:de:0000-t.v1i1.1.g1-imp-test5',
-		'SuppFile' => 'urn:nbn:de:0000-t.v1i1.1.s1-imp-test9'
 	);
 
 	/**
@@ -38,7 +36,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 	protected function getAffectedTables() {
 		return array(
 			'submissions', 'submission_files', 'submission_galleys', 'submission_galley_settings', 'submission_search_object_keywords',
-			'submission_search_objects', 'submission_settings', 'article_supp_file_settings', 'article_supplementary_files',
+			'submission_search_objects', 'submission_settings',
 			'authors', 'custom_issue_orders', 'custom_section_orders', 'event_log', 'event_log_settings',
 			'issue_settings', 'issues', 'published_submissions', 'sessions', 'signoffs', 'temporary_files', 'users'
 		);
@@ -67,7 +65,6 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 			'Issue' => 'IssueDAO',
 			'PublishedArticle' => 'PublishedArticleDAO',
 			'Galley' => 'ArticleGalleyDAO',
-			'SuppFile' => 'SuppFileDAO'
 		);
 		$articelId = null;
 		foreach ($daos as $objectType => $daoName) {

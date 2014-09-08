@@ -143,14 +143,6 @@
       <float name="threshold">0.005</float>
     </lst>
     <lst name="spellchecker">
-      <str name="name">suppFiles</str>
-      <str name="field">suppFiles_spell</str>
-      <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
-      <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.FSTLookup</str>
-      <int name="weightBuckets">100</int>
-      <float name="threshold">0.005</float>
-    </lst>
-    <lst name="spellchecker">
       <str name="name">discipline</str>
       <str name="field">discipline_spell</str>
       <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>

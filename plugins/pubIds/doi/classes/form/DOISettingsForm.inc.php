@@ -58,12 +58,11 @@ class DOISettingsForm extends Form {
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
-		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', create_function('$enableIssueDoi,$form', 'return $form->getData(\'enableIssueDoi\') || $form->getData(\'enableArticleDoi\') || $form->getData(\'enableGalleyDoi\') || $form->getData(\'enableSuppFileDoi\');'), array($this)));
+		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', create_function('$enableIssueDoi,$form', 'return $form->getData(\'enableIssueDoi\') || $form->getData(\'enableArticleDoi\') || $form->getData(\'enableGalleyDoi\');'), array($this)));
 		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'required', 'plugins.pubIds.doi.manager.settings.doiPrefixPattern', '/^10\.[0-9]{4,7}$/'));
 		$this->addCheck(new FormValidatorCustom($this, 'doiIssueSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired', create_function('$doiIssueSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableIssueDoi\')) return $doiIssueSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'doiArticleSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired', create_function('$doiArticleSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableArticleDoi\')) return $doiArticleSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'doiGalleySuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired', create_function('$doiGalleySuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableGalleyDoi\')) return $doiGalleySuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'doiSuppFileSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired', create_function('$doiSuppFileSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableSuppFileDoi\')) return $doiSuppFileSuffixPattern != \'\';return true;'), array($this)));
 		$this->addCheck(new FormValidatorPost($this));
 
 		// for DOI reset requests
@@ -129,13 +128,11 @@ class DOISettingsForm extends Form {
 			'enableIssueDoi' => 'bool',
 			'enableArticleDoi' => 'bool',
 			'enableGalleyDoi' => 'bool',
-			'enableSuppFileDoi' => 'bool',
 			'doiPrefix' => 'string',
 			'doiSuffix' => 'string',
 			'doiIssueSuffixPattern' => 'string',
 			'doiArticleSuffixPattern' => 'string',
 			'doiGalleySuffixPattern' => 'string',
-			'doiSuppFileSuffixPattern' => 'string'
 		);
 	}
 }

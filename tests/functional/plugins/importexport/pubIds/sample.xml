@@ -6,5 +6,4 @@
 <pubId pubIdType="other::urn" pubObjectType="Article" pubObjectId="1">urn:nbn:de:1234-article1URNSuffix</pubId>
 <pubId pubIdType="other::urn" pubObjectType="Galley" pubObjectId="1">urn:nbn:de:1234-galley1URNSuffix</pubId>
 <pubId pubIdType="other::urn" pubObjectType="Galley" pubObjectId="2">urn:nbn:de:1234-galley2URNSuffix</pubId>
-<pubId pubIdType="other::urn" pubObjectType="SuppFile" pubObjectId="1">urn:nbn:de:1234-suppFile1URNSuffix</pubId>
 </pubIds>

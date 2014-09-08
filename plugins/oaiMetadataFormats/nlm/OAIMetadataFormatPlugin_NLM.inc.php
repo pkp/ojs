@@ -38,15 +38,15 @@ class OAIMetadataFormatPlugin_NLM extends OAIMetadataFormatPlugin {
 		return 'OAIMetadataFormat_NLM';
 	}
 
-	function getMetadataPrefix() {
+	static function getMetadataPrefix() {
 		return 'nlm';
 	}
 
-	function getSchema() {
+	static function getSchema() {
 		return 'http://dtd.nlm.nih.gov/publishing/2.3/xsd/journalpublishing.xsd';
 	}
 
-	function getNamespace() {
+	static function getNamespace() {
 		return 'http://td.nlm.nih.gov/publishing/2.3';
 	}
 }

@@ -157,7 +157,6 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 			array('index', 'title', 'te', array('test', 'testartikel')),
 			array('lucene-test', 'title', 'te', array('test')),
 			array('lucene-test', 'galleyFullText', 'nu', array('nutella')),
-			array('lucene-test', 'suppFiles', 'ma', array('mango')),
 			array('lucene-test', 'discipline', 'die', array('dietary')),
 			array('index', 'subject', 'top', array('topological', 'topologische')),
 			array('lucene-test', 'subject', 'lun', array('lunch', 'lunchtime')),

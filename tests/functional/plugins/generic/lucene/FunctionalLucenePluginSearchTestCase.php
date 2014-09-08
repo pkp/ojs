@@ -123,7 +123,6 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 			array('authors', 'Another', 4),
 			array('title', 'Lucene Test', 4),
 			array('galleyFullText', 'chicken feet', 3),
-			array('suppFiles', 'Pizza', 3),
 			array('date', '--- see code below ---', 4),
 			array('discipline', 'dietary research', 4),
 			array('subject', 'lunchtime', 4),

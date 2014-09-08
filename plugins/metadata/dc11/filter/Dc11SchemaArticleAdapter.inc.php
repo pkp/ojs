@@ -176,11 +176,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Get galleys and supp files.
 		$galleys = array();
-		$suppFiles = array();
 		if (is_a($article, 'PublishedArticle')) {
 			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 			$galleys = $articleGalleyDao->getBySubmissionId($article->getId())->toArray();
-			$suppFiles = $article->getSuppFiles();
 		}
 
 		// Language
@@ -206,12 +204,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 			$dc11Description->addStatement('dc:relation', $relation);
 			unset($relation);
 		}
-		// supp file URLs
-		foreach ($suppFiles as $suppFile) {
-			$relation = Request::url($journal->getPath(), 'article', 'downloadSuppFile', array($article->getBestArticleId($journal), $suppFile->getBestSuppFileId($journal)));
-			$dc11Description->addStatement('dc:relation', $relation);
-			unset($relation);
-		}
 
 		// Public identifiers
 		$pubIdPlugins = (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId());
@@ -228,12 +220,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 				if ($pubGalleyId = $pubIdPlugin->getPubId($galley)) {
 					$dc11Description->addStatement('dc:relation', $pubGalleyId);
 					unset($pubGalleyId);
-				}
-			}
-			foreach ($suppFiles as $suppFile) {
-				if ($pubSuppFileId = $pubIdPlugin->getPubId($suppFile)) {
-					$dc11Description->addStatement('dc:relation', $pubSuppFileId);
-					unset($pubSuppFileId);
 				}
 			}
 		}

@@ -31,7 +31,6 @@ class FunctionalCrossrefExportTest extends FunctionalImportExportBaseTestCase {
 	 *   ==================|=====================================================
 	 *   issue             | body/journal/journal_issue/doi_data/{doi|resource}
 	 *   article           | body/journal/journal_article/doi_data/{doi|resource}
-	 *   supp-file         | body/journal/journal_article/component_list/
 	 *                     |   component/{titles|doi_data/{doi|resource}}
 	 */
 	public function testDoi() {
@@ -44,9 +43,7 @@ class FunctionalCrossrefExportTest extends FunctionalImportExportBaseTestCase {
 			'cr:journal_issue/cr:doi_data/cr:resource' => $this->baseUrl . '/index.php/test/issue/view/1',
 			'cr:journal_article/cr:doi_data/cr:doi' => '10.1234/t.v1i1.1',
 			'cr:journal_article/cr:doi_data/cr:resource' => $this->baseUrl . '/index.php/test/article/view/1',
-			'cr:journal_article/cr:component_list/cr:component/cr:titles/cr:title' => 'Test Supp File',
 			'cr:journal_article/cr:component_list/cr:component/cr:doi_data/cr:doi' => '10.1234/t.v1i1.1.s1',
-			'cr:journal_article/cr:component_list/cr:component/cr:doi_data/cr:resource' => $this->baseUrl . '/index.php/test/article/downloadSuppFile/1/1'
 		);
 		foreach($testCases as $xPath => $expectedDoi) {
 			self::assertEquals(

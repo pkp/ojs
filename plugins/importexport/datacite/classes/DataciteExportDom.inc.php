@@ -85,26 +85,21 @@ class DataciteExportDom extends DOIExportDom {
 		$issue = null; /* @var $issue Issue */
 		$article = null; /* @var $article PublishedArticle */
 		$galley = null; /* @var $galley ArticleGalley */
-		$suppFile = null; /* @var $suppFile SuppFile */
 		$articlesByIssue = null;
 		$galleysByArticle = null;
-		$suppFilesByArticle = null;
 
 		// Retrieve required publication objects (depends on the object to be exported).
 		$pubObjects =& $this->retrievePublicationObjects($object);
 		extract($pubObjects);
 
 		// Identify an object implementing an ArticleFile (if any).
-		$articleFile = (empty($suppFile) ? $galley : $suppFile);
+		$articleFile = $galley;
 
 		// Identify the object locale.
-		$objectLocalePrecedence = $this->getObjectLocalePrecedence($article, $galley, $suppFile);
+		$objectLocalePrecedence = $this->getObjectLocalePrecedence($article, $galley);
 
 		// The publisher is required.
-		$publisher = (is_a($object, 'SuppFile') ? $object->getSuppFilePublisher() : null);
-		if (empty($publisher)) {
 			$publisher = $this->getPublisher($objectLocalePrecedence);
-		}
 
 		// The publication date is required.
 		$publicationDate = (is_a($article, 'PublishedArticle') ? $article->getDatePublished() : null);
@@ -135,29 +130,25 @@ class DataciteExportDom extends DOIExportDom {
 		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'publicationYear', date('Y', strtotime($publicationDate)));
 
 		// Subjects
-		if (!empty($suppFile)) {
-			$this->_appendNonMandatoryChild($rootElement, $this->_subjectsElement($suppFile, $objectLocalePrecedence));
-		} elseif (!empty($article)) {
+		if (!empty($article)) {
 			$this->_appendNonMandatoryChild($rootElement, $this->_subjectsElement($article, $objectLocalePrecedence));
 		}
 
 		// Dates
-		XMLCustomWriter::appendChild($rootElement, $this->_datesElement($issue, $article, $articleFile, $suppFile, $publicationDate));
+		XMLCustomWriter::appendChild($rootElement, $this->_datesElement($issue, $article, $articleFile, $publicationDate));
 
 		// Language
 		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'language', AppLocale::get3LetterIsoFromLocale($objectLocalePrecedence[0]));
 
 		// Resource Type
-		if (!is_a($object, 'SuppFile')) {
-			$resourceTypeElement =& $this->_resourceTypeElement($object);
-			XMLCustomWriter::appendChild($rootElement, $resourceTypeElement);
-		}
+		$resourceTypeElement =& $this->_resourceTypeElement($object);
+		XMLCustomWriter::appendChild($rootElement, $resourceTypeElement);
 
 		// Alternate Identifiers
 		$this->_appendNonMandatoryChild($rootElement, $this->_alternateIdentifiersElement($object, $issue, $article, $articleFile));
 
 		// Related Identifiers
-		$this->_appendNonMandatoryChild($rootElement, $this->_relatedIdentifiersElement($object, $articlesByIssue, $galleysByArticle, $suppFilesByArticle, $issue, $article));
+		$this->_appendNonMandatoryChild($rootElement, $this->_relatedIdentifiersElement($object, $articlesByIssue, $galleysByArticle, $issue, $article));
 
 		// Sizes
 		$sizesElement =& $this->_sizesElement($object, $article);
@@ -171,7 +162,7 @@ class DataciteExportDom extends DOIExportDom {
 		if (!empty($rights)) XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'rights', String::html2text($rights));
 
 		// Descriptions
-		$descriptionsElement =& $this->_descriptionsElement($issue, $article, $suppFile, $objectLocalePrecedence, $articlesByIssue);
+		$descriptionsElement =& $this->_descriptionsElement($issue, $article, $objectLocalePrecedence, $articlesByIssue);
 		if ($descriptionsElement) XMLCustomWriter::appendChild($rootElement, $descriptionsElement);
 
 		return $doc;
@@ -213,18 +204,12 @@ class DataciteExportDom extends DOIExportDom {
 
 		// Retrieve basic OJS objects.
 		$publicationObjects = parent::retrievePublicationObjects($object);
-		if (is_a($object, 'SuppFile')) {
-			assert(isset($publicationObjects['article']));
-			$cache->add($object, $publicationObjects['article']);
-			$publicationObjects['suppFile'] =& $object;
-		}
 
 		// Retrieve additional related objects.
 		// For articles: Retrieve all galleys and supp files of the article:
 		if (is_a($object, 'PublishedArticle')) {
 			$article =& $publicationObjects['article'];
 			$publicationObjects['galleysByArticle'] =& $this->retrieveGalleysByArticle($article);
-			$publicationObjects['suppFilesByArticle'] =& $this->_retrieveSuppFilesByArticle($article);
 		}
 
 		// For issues: Retrieve all articles of the issue:
@@ -240,21 +225,12 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * @see DOIExportDom::getObjectLocalePrecedence()
-	 * @param $suppFile SuppFile
+	 * @param $article Article
+	 * @param $galley Galley
 	 */
-	function getObjectLocalePrecedence(&$article, &$galley, &$suppFile) {
-		$locales = array();
-		if (is_a($suppFile, 'SuppFile')) {
-			// Try to map the supp-file language to a PKP locale.
-			$suppFileLocale = $this->translateLanguageToLocale($suppFile->getLanguage());
-			if (!is_null($suppFileLocale)) {
-				$locales[] = $suppFileLocale;
-			}
-		}
-
+	function getObjectLocalePrecedence(&$article, &$galley) {
 		// Retrieve further locales from the other objects.
-		$locales = array_merge($locales, parent::getObjectLocalePrecedence($article, $galley));
-		return $locales;
+		return array_merge($locales, parent::getObjectLocalePrecedence($article, $galley));
 	}
 
 
@@ -262,29 +238,8 @@ class DataciteExportDom extends DOIExportDom {
 	// Private helper methods
 	//
 	/**
-	 * Retrieve all supp files for the given article
-	 * and commit them to the cache.
-	 * @param $article PublishedArticle
-	 * @return array
-	 */
-	function &_retrieveSuppFilesByArticle(&$article) {
-		$cache = $this->getCache();
-		$articleId = $article->getId();
-		if (!$cache->isCached('suppFilesByArticle', $articleId)) {
-			$suppFileDao = DAORegistry::getDAO('SuppFileDAO'); /* @var $suppFileDao SuppFileDAO */
-			$suppFiles =& $suppFileDao->getSuppFilesByArticle($articleId);
-			foreach($suppFiles as $suppFile) {
-				$cache->add($suppFile, $article);
-				unset($suppFile);
-			}
-			$cache->markComplete('suppFilesByArticle', $articleId);
-		}
-		return $cache->get('suppFilesByArticle', $articleId);
-	}
-
-	/**
 	 * Create an identifier element.
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_identifierElement(&$object) {
@@ -301,7 +256,7 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * Create the creators element list.
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @param $objectLocalePrecedence array
 	 * @param $publisher string
 	 * @return XMLNode|DOMImplementation
@@ -311,16 +266,6 @@ class DataciteExportDom extends DOIExportDom {
 
 		$creators = array();
 		switch (true) {
-			case is_a($object, 'SuppFile'):
-				// Check whether we have a supp file creator set...
-				$creator = $this->getPrimaryTranslation($object->getCreator(null), $objectLocalePrecedence);
-				if (!empty($creator)) {
-					$creators[] = $creator;
-					break;
-				}
-				// ...if not then go on by retrieving the article
-				// authors.
-
 			case is_a($object, 'ArticleGalley'):
 				// Retrieve the article of the supp file or galley...
 				$article =& $cache->get('articles', $object->getArticleId());
@@ -362,7 +307,7 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * Create the titles element list.
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @param $objectLocalePrecedence array
 	 * @return XMLNode|DOMImplementation
 	 */
@@ -372,10 +317,6 @@ class DataciteExportDom extends DOIExportDom {
 		// Get an array of localized titles.
 		$alternativeTitle = null;
 		switch (true) {
-			case is_a($object, 'SuppFile'):
-				$titles = $object->getTitle(null);
-				break;
-
 			case is_a($object, 'ArticleGalley'):
 				// Retrieve the article of the galley...
 				$article =& $cache->get('articles', $object->getArticleId());
@@ -433,28 +374,21 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * Create the subjects element list.
-	 * @param $object PublishedArticle|SuppFile
+	 * @param $object PublishedArticle
 	 * @param $objectLocalePrecedence array
 	 * @return XMLNode|DOMImplementation
 	 */
 	function &_subjectsElement(&$object, $objectLocalePrecedence) {
 		$subjectsElement =& XMLCustomWriter::createElement($this->getDoc(), 'subjects');
-		if (is_a($object, 'SuppFile')) {
-			$suppFileSubject = $this->getPrimaryTranslation($object->getSubject(null), $objectLocalePrecedence);
-			if (!empty($suppFileSubject)) {
-				XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($suppFileSubject));
-			}
-		} else {
-			assert(is_a($object, 'PublishedArticle'));
-			$keywords = $this->getPrimaryTranslation($object->getSubject(null), $objectLocalePrecedence);
-			if (!empty($keywords)) {
-				XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($keywords));
-			}
+		assert(is_a($object, 'PublishedArticle'));
+		$keywords = $this->getPrimaryTranslation($object->getSubject(null), $objectLocalePrecedence);
+		if (!empty($keywords)) {
+			XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($keywords));
+		}
 
-			list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($object, $objectLocalePrecedence);
-			if (!(empty($subjectSchemeName) || empty($subjectCode))) {
-				XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($subjectCode, $subjectSchemeName));
-			}
+		list($subjectSchemeName, $subjectCode) = $this->getSubjectClass($object, $objectLocalePrecedence);
+		if (!(empty($subjectSchemeName) || empty($subjectCode))) {
+			XMLCustomWriter::appendChild($subjectsElement, $this->_subjectElement($subjectCode, $subjectSchemeName));
 		}
 		return $subjectsElement;
 	}
@@ -478,21 +412,12 @@ class DataciteExportDom extends DOIExportDom {
 	 * @param $issue Issue
 	 * @param $article PublishedArticle
 	 * @param $articleFile ArticleFile
-	 * @param $suppFile SuppFile
 	 * @param $publicationDate string
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_datesElement(&$issue, &$article, &$articleFile, &$suppFile, $publicationDate) {
+	function &_datesElement(&$issue, &$article, &$articleFile, $publicationDate) {
 		$datesElement =& XMLCustomWriter::createElement($this->getDoc(), 'dates');
 		$dates = array();
-
-		// Created date (for supp files only): supp file date created.
-		if (!empty($suppFile)) {
-			$createdDate = $suppFile->getDateCreated();
-			if (!empty($createdDate)) {
-				$dates[DATACITE_DATE_CREATED] = $createdDate;
-			}
-		}
 
 		// Submitted date (for articles and galleys): article date submitted.
 		if (!empty($article)) {
@@ -502,14 +427,6 @@ class DataciteExportDom extends DOIExportDom {
 
 				// Default accepted date: submitted date.
 				$dates[DATACITE_DATE_ACCEPTED] = $submittedDate;
-			}
-		}
-
-		// Submitted date (for supp files): supp file date submitted.
-		if (!empty($suppFile)) {
-			$submittedDate = $suppFile->getDateSubmitted();
-			if (!empty($submittedDate)) {
-				$dates[DATACITE_DATE_SUBMITTED] = $submittedDate;
 			}
 		}
 
@@ -584,7 +501,7 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * Generate alternate identifiers element list.
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @param $issue Issue
 	 * @param $article PublishedArticle
 	 * @param $articleFile ArticleFile
@@ -635,15 +552,14 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * Generate related identifiers element list.
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @param $articlesByIssue array
 	 * @param $galleysByArticle array
-	 * @param $suppFilesByArticle array
 	 * @param $issue Issue
 	 * @param $article PublishedArticle
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_relatedIdentifiersElement(&$object, &$articlesByIssue, &$galleysByArticle, &$suppFilesByArticle, &$issue, &$article) {
+	function &_relatedIdentifiersElement(&$object, &$articlesByIssue, &$galleysByArticle, &$issue, &$article) {
 		$journal = $this->getJournal();
 		$relatedIdentifiersElement = XMLCustomWriter::createElement($this->getDoc(), 'relatedIdentifiers');
 
@@ -666,17 +582,12 @@ class DataciteExportDom extends DOIExportDom {
 				unset($doi);
 
 				// Parts: galleys and supp files.
-				assert(is_array($galleysByArticle) && is_array($suppFilesByArticle));
+				assert(is_array($galleysByArticle));
 				$relType = DATACITE_RELTYPE_HASPART;
 				foreach($galleysByArticle as $galleyInArticle) {
 					$doi =& $this->_relatedIdentifierElement($galleyInArticle, $relType);
 					if (!is_null($doi)) XMLCustomWriter::appendChild($relatedIdentifiersElement, $doi);
 					unset($galleyInArticle, $doi);
-				}
-				foreach($suppFilesByArticle as $suppFileInArticle) {
-					$doi =& $this->_relatedIdentifierElement($suppFileInArticle, $relType);
-					if (!is_null($doi)) XMLCustomWriter::appendChild($relatedIdentifiersElement, $doi);
-					unset($suppFileInArticle, $doi);
 				}
 				break;
 
@@ -693,7 +604,7 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * Create an identifier element with the object's DOI.
-	 * @param $object Issue|PublishedArticle|ArticleGalley|SuppFile
+	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @param $relationType string One of the DATACITE_RELTYPE_* constants.
 	 * @return XMLNode|DOMImplementation|null Can be null if the given ID Type
 	 *  has not been assigned to the given object.
@@ -796,25 +707,18 @@ class DataciteExportDom extends DOIExportDom {
 	 * Create a descriptions element list.
 	 * @param $issue Issue
 	 * @param $article PublishedArticle
-	 * @param $suppFile SuppFile
 	 * @param $objectLocalePrecedence array
 	 * @param $articlesByIssue array
 	 * @return XMLNode|DOMImplementation|null Can be null if no descriptions
 	 *  can be identified for the given object.
 	 */
-	function &_descriptionsElement(&$issue, &$article, &$suppFile, $objectLocalePrecedence, &$articlesByIssue) {
+	function &_descriptionsElement(&$issue, &$article, $objectLocalePrecedence, &$articlesByIssue) {
 		$descriptions = array();
 
-		if (isset($article) && !isset($suppFile)) {
+		if (isset($article)) {
 			// Articles and galleys.
 			$articleAbstract = $this->getPrimaryTranslation($article->getAbstract(null), $objectLocalePrecedence);
 			if (!empty($articleAbstract)) $descriptions[DATACITE_DESCTYPE_ABSTRACT] = $articleAbstract;
-		}
-
-		if (isset($suppFile)) {
-			// Supp files.
-			$suppFileDesc = $this->getPrimaryTranslation($suppFile->getDescription(null), $objectLocalePrecedence);
-			if (!empty($suppFileDesc)) $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;
 		}
 
 		if (isset($article)) {

@@ -149,7 +149,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 						if ($depFile->getFileId()) {
 							self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $depFile->getFileId());
 						}
-						self::suppFileMetadataChanged($depFile);
 					}
 				}
 			}

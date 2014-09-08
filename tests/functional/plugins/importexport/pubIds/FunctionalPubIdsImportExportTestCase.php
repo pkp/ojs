@@ -14,7 +14,7 @@
  *
  * FEATURE: Import and Export of the public identifiers
  *   AS A    journal manager
- *   I WANT  to be able to import and exoprt the public identifiers for issues, articles, galleys and supplementary files
+ *   I WANT  to be able to import and exoprt the public identifiers for issues, articles, and galleys
  *   SO THAT already used public identifiers can be integrated and managed in the system.
  */
 
@@ -32,7 +32,6 @@ class FunctionalPubIdsImportExportTest extends FunctionalImportExportBaseTestCas
 	protected function getAffectedTables() {
 		return array(
 			'submissions', 'submission_settings', 'submission_galleys', 'submission_galley_settings',
-			'article_supplementary_files', 'article_supp_file_settings',
 			'issues', 'issue_settings',
 			'plugin_settings'
 		);
@@ -69,7 +68,6 @@ class FunctionalPubIdsImportExportTest extends FunctionalImportExportBaseTestCas
 			'//pubId[@pubIdType="other::urn"][@pubObjectType="Article"]' => 'urn:nbn:de:1234-article1URNSuffix',
 			'//pubId[@pubIdType="other::urn"][@pubObjectType="Galley"][@pubObjectId="1"]' => 'urn:nbn:de:1234-galley1URNSuffix',
 			'//pubId[@pubIdType="other::urn"][@pubObjectType="Galley"][@pubObjectId="2"]' => 'urn:nbn:de:1234-galley2URNSuffix',
-			'//pubId[@pubIdType="other::urn"][@pubObjectType="SuppFile"]' => 'urn:nbn:de:1234-suppFile1URNSuffix'
 			);
 		foreach($testCases as $xPath => $expectedPubId) {
 			self::assertEquals(

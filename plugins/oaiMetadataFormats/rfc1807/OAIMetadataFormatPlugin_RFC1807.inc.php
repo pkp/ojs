@@ -39,15 +39,15 @@ class OAIMetadataFormatPlugin_RFC1807 extends OAIMetadataFormatPlugin {
 		return 'OAIMetadataFormat_RFC1807';
 	}
 
-	function getMetadataPrefix() {
+	static function getMetadataPrefix() {
 		return 'rfc1807';
 	}
 
-	function getSchema() {
+	static function getSchema() {
 		return 'http://www.openarchives.org/OAI/1.1/rfc1807.xsd';
 	}
 
-	function getNamespace() {
+	static function getNamespace() {
 		return 'http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt';
 	}
 }
