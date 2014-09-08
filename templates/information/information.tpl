@@ -12,7 +12,8 @@
 {include file="common/header.tpl"}
 {/strip}
 <div id="journalInfo">
-<p>{$content|nl2br}</p>
+<p>{$content|nl2br}</p> 
+<p>TEST</p>
 </div>
 {include file="common/footer.tpl"}
 
