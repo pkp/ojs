@@ -56,11 +56,15 @@ define('PLN_PLUGIN_DEPOSIT_SUPPORTED_OBJECTS', serialize(array(
 	PLN_PLUGIN_DEPOSIT_OBJECT_ISSUE => get_class(new Issue())
 )));
 
+define('PLN_PLUGIN_NOTIFICATION_TYPE_PLUGIN_BASE',		NOTIFICATION_TYPE_PLUGIN_BASE + 0x1000000);
+define('PLN_PLUGIN_NOTIFICATION_TYPE_TERMS_UPDATED',	PLN_PLUGIN_NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000001);
+define('PLN_PLUGIN_NOTIFICATION_TYPE_ISSN_MISSING',		PLN_PLUGIN_NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000002);
+define('PLN_PLUGIN_NOTIFICATION_TYPE_HTTP_ERROR',		PLN_PLUGIN_NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000003);
+
 define('PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED','plugins.generic.pln.notifications.terms_updated');
 define('PLN_PLUGIN_NOTIFICATION_ISSN_MISSING','plugins.generic.pln.notifications.issn_missing');
 define('PLN_PLUGIN_NOTIFICATION_HTTP_ERROR','plugins.generic.pln.notifications.http_error');
-
-
+define('PLN_PLUGIN_NOTIFICATION_PROCESSING_FOR','plugins.generic.pln.notifications.processing_for');
 
 class PLNPlugin extends GenericPlugin {
 
@@ -78,23 +82,23 @@ class PLNPlugin extends GenericPlugin {
 	
 		$success = parent::register($category, $path);
 		
-		$this->registerDAOs();
-		
-		// Delete all plug-in data for a journal when the journal is deleted
-		HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'callbackDeleteJournalById'));
-		
-		HookRegistry::register('Templates::Manager::Setup::JournalArchiving', array($this, 'callbackJournalArchivingSetup'));
-		
 		if ($success) {
-
+		
+			$this->registerDAOs();
+		
+			// Delete all plug-in data for a journal when the journal is deleted
+			HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'callbackDeleteJournalById'));
+		
+			HookRegistry::register('Templates::Manager::Setup::JournalArchiving', array($this, 'callbackJournalArchivingSetup'));
+		
 			// Have Acron add our task to its task
 			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
-			
-			HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
-			
-			HookRegistry::register('TemplateManager::display',array($this, 'callbackTemplateDisplay'));
-			
-			HookRegistry::register('NotificationManager::getNotificationContents', array($this, 'callbackNotificationContents'));
+		
+			if ($this->getEnabled()) {
+				HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
+				HookRegistry::register('TemplateManager::display',array($this, 'callbackTemplateDisplay'));
+				HookRegistry::register('NotificationManager::getNotificationContents', array($this, 'callbackNotificationContents'));
+			}
 
 		}
 
@@ -106,11 +110,11 @@ class PLNPlugin extends GenericPlugin {
 		$this->import('classes.DepositDAO');
 		$this->import('classes.DepositObjectDAO');
 		
-		$depositDao = new DepositDAO($this->getName());
-		DAORegistry::registerDAO('DepositDAO', $depositDao);
+		$deposit_dao = new DepositDAO($this->getName());
+		DAORegistry::registerDAO('DepositDAO', $deposit_dao);
 			
-		$depositObjectDao = new DepositObjectDAO($this->getName());
-		DAORegistry::registerDAO('DepositObjectDAO', $depositObjectDao);
+		$deposit_object_dao = new DepositObjectDAO($this->getName());
+		DAORegistry::registerDAO('DepositObjectDAO', $deposit_object_dao);
 		
 	}
 
@@ -182,12 +186,11 @@ class PLNPlugin extends GenericPlugin {
 	 * @return boolean false to continue processing subsequent hooks
 	 */
 	function callbackDeleteJournalById($hookName, $params) {
-		
-		$journalId = $params[1];
-		$depositDao =& DAORegistry::getDAO('DepositDAO');
-		$depositDao->deleteByJournalId($journalId);
-		$depositObjectDao =& DAORegistry::getDAO('DepositObjectDAO');
-		$depositObjectDao->deleteByJournalId($journalId);
+		$journal_id = $params[1];
+		$deposit_dao =& DAORegistry::getDAO('DepositDAO');
+		$deposit_dao->deleteByJournalId($journal_id);
+		$deposit_object_dao =& DAORegistry::getDAO('DepositObjectDAO');
+		$deposit_object_dao->deleteByJournalId($journal_id);
 		return false;
 	}
 	
@@ -241,13 +244,13 @@ class PLNPlugin extends GenericPlugin {
 			$type = $notification->getType();
 			assert(isset($type));
 			switch ($type) {
-				case PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED:
+				case PLN_PLUGIN_NOTIFICATION_TYPE_TERMS_UPDATED:
 					$message = __(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
 					break;
-				case PLN_PLUGIN_NOTIFICATION_ISSN_MISSING:
+				case PLN_PLUGIN_NOTIFICATION_TYPE_ISSN_MISSING:
 					$message = __(PLN_PLUGIN_NOTIFICATION_ISSN_MISSING);
 					break;
-				case PLN_PLUGIN_NOTIFICATION_HTTP_ERROR:
+				case PLN_PLUGIN_NOTIFICATION_TYPE_HTTP_ERROR:
 					$message = __(PLN_PLUGIN_NOTIFICATION_HTTP_ERROR);
 					break;
 			}
@@ -300,12 +303,12 @@ class PLNPlugin extends GenericPlugin {
 						$messageParams = array('contents' => __('plugins.generic.pln.settings.saved'));
 						return false;
 					} else {
-						$this->setBreadcrumbs(true);
+						$this->setBreadcrumbs('settings');
 						$form->display();
 					}
 				} else {
 					if (Request::getUserVar('refresh')) {
-							$this->getServiceDocument($journal->getId());
+						$this->getServiceDocument($journal->getId());
 					} 
 					$this->setBreadcrumbs('settings');
 					$form->initData();
@@ -314,7 +317,23 @@ class PLNPlugin extends GenericPlugin {
 				return true;
 			case 'status':
 				$templateMgr =& TemplateManager::getManager();
+				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+				$this->import('classes.form.PLNStatusForm');
+				$form = new PLNStatusForm($this, $journal->getId());
+				
+				if (Request::getUserVar('reset')) {
+					$journal =& Request::getJournal();
+					$deposit_ids = array_keys(Request::getUserVar('reset'));
+					$deposit_dao =& DAORegistry::getDAO('DepositDAO');
+					foreach ($deposit_ids as $deposit_id) {
+						$deposit =& $deposit_dao->getDepositById($journal->getId(),$deposit_id);
+						$deposit->setStatus(PLN_PLUGIN_DEPOSIT_STATUS_NEW);
+						$deposit_dao->updateDeposit($deposit);
+					}
+				}
+				
 				$this->setBreadCrumbs('status');
+				$form->display();
 				return true;
 			default:
 				return false;
@@ -326,7 +345,6 @@ class PLNPlugin extends GenericPlugin {
 	* @see GenericPlugin::getManagementVerbs()
 	*/
 	function getManagementVerbs() {
-		
 		$verbs = parent::getManagementVerbs();
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', __('plugins.generic.pln.settings'));
@@ -405,6 +423,9 @@ class PLNPlugin extends GenericPlugin {
 			
 		$pln_networks = unserialize(PLN_PLUGIN_NETWORKS);
 		
+		error_log('http://' . $pln_networks[$this->getSetting($journal_id, 'pln_network')] . PLN_PLUGIN_SD_IRI);
+		error_log('On-Behalf-Of: '.$this->getSetting($journal_id, 'journal_uuid'));
+		
 		// retrieve the service document
 		$result = $this->_curlGet(
 			'http://' . $pln_networks[$this->getSetting($journal_id, 'pln_network')] . PLN_PLUGIN_SD_IRI,
@@ -445,7 +466,7 @@ class PLNPlugin extends GenericPlugin {
 		
 			$this->updateSetting($journal_id, 'terms_of_use', $new_terms, 'object');
 			$this->updateSetting($journal_id, 'terms_of_use_agreement', serialize($term_agreements), 'object');
-			$this->createJournalManagerNotification($journal_id,PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);			
+			$this->createJournalManagerNotification($journal_id,PLN_PLUGIN_NOTIFICATION_TYPE_TERMS_UPDATED);			
 		}
 		
 		return $result['status'];
@@ -460,7 +481,7 @@ class PLNPlugin extends GenericPlugin {
 		$role_dao =& DAORegistry::getDAO('RoleDAO');
 		$journal_managers = $role_dao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER,$journal_id);
 		import('classes.notification.NotificationManager');
-		$notificationManager = new NotificationManager();
+		$notificationManager =& new NotificationManager();
 		foreach ($journal_managers->toArray() as $journal_manager) {
 			$notificationManager->createTrivialNotification($journal_manager->getId(), $notificationType);
 		}
@@ -480,7 +501,7 @@ class PLNPlugin extends GenericPlugin {
 		$http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 		$http_error = curl_error($curl);
 		curl_close ($curl);
-		
+				
 		return array(
 			'status' => $http_status,
 			'result' => $http_result,

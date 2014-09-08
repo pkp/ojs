@@ -9,3 +9,8 @@
 #plnSettingsForm table .value label.agree {clear: right; float: left; margin-left: 10px;}
 #plnSettingsForm table .value .separator { clear:both; margin-top: 1em; }
 
+#plnStatusForm table { width: 100%; }
+#plnStatusForm table td { border-top: 1px dotted black; }
+#plnStatusForm table input { margin: 2px; }
+#plnStatusForm table th { height: 20px; }
+

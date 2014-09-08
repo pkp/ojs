@@ -9,13 +9,11 @@
  *
  *}
 {strip}
-{assign var="pageTitle" value="plugins.generic.pln"}
+{assign var="pageTitle" value="plugins.generic.pln.settings_page"}
 {include file="common/header.tpl"}
 {/strip}
 
 <div id="plnSettings">
-	<h3>{translate key="plugins.generic.pln.settings"}</h3>
-
 	<form class="pkp_form" id="plnSettingsForm" method="post" action="{plugin_url path="settings"}">
 		{include file="common/formErrors.tpl"}
 		<table class="data">

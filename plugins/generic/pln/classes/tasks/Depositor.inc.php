@@ -43,8 +43,6 @@ class Depositor extends ScheduledTask {
 
 		if (!$this->_plugin) return false;
 
-		$this->_plugin->import('classes.Deposit');
-		$this->_plugin->import('classes.DepositObject');
 		import('classes.file.JournalFileManager');
 		$journal_dao =& DAORegistry::getDAO('JournalDAO');
 		
@@ -57,20 +55,22 @@ class Depositor extends ScheduledTask {
 			// if the plugin isn't enabled for this journal, skip it
 			if (!$this->_plugin->getSetting($journal->getId(), 'enabled')) continue;
 			
+			$this->addExecutionLogEntry(__(PLN_PLUGIN_NOTIFICATION_PROCESSING_FOR) . ' ' . $journal->getLocalizedTitle(), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
+			
 			// get the sword service document
 			$sd_result = $this->_plugin->getServiceDocument($journal->getId());
 			
 			// if for some reason we didn't get a valid reponse, skip this journal
 			if ($sd_result != PLN_PLUGIN_HTTP_STATUS_OK) {
-				error_log($this->getName().": ".__(PLN_PLUGIN_NOTIFICATION_HTTP_ERROR));
-				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_HTTP_ERROR);
+				$this->addExecutionLogEntry(__(PLN_PLUGIN_NOTIFICATION_HTTP_ERROR), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_TYPE_HTTP_ERROR);
 				continue;
 			}
 			
 			// if the terms haven't been agreed to, skip transfer
 			if (!$this->_plugin->termsAgreed($journal->getId())) {
-				error_log($this->getName().": ".__(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED));
-				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED);
+				$this->addExecutionLogEntry(__(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_TYPE_TERMS_UPDATED);
 				continue;
 			}
 			
@@ -78,8 +78,8 @@ class Depositor extends ScheduledTask {
 			if (!$journal->getSetting('onlineIssn') &&
 				!$journal->getSetting('printIssn') &&
 				!$journal->getSetting('issn')) {
-				error_log($this->getName().": ".__(PLN_PLUGIN_NOTIFICATION_ISSN_MISSING));
-				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_ISSN_MISSING);	
+				$this->addExecutionLogEntry(__(PLN_PLUGIN_NOTIFICATION_ISSN_MISSING), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_TYPE_ISSN_MISSING);	
 				continue;
 			}
 			
@@ -100,7 +100,7 @@ class Depositor extends ScheduledTask {
 
 			unset($journal);
 		}
-		return false;
+		return true;
 	}
 	
 	function _processStatusUpdates($journal) {

@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file plugins/generic/pln/SettingsForm.inc.php
+ * @file plugins/generic/pln/PLNSettingsForm.inc.php
  *
  * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class SettingsForm
+ * @class PLNSettingsForm
  * @ingroup plugins_generic_pln
  *
  * @brief Form for journal managers to modify PLN plugin settings
