@@ -166,7 +166,7 @@ $(document).ready(function() {
 	{/if}
 {else}
 	<!-- 'update published issue' button -->
-	<input type="button" value="{translate key="editor.issues.saveAndPublishIssue"}" onclick="return validateAnd_confirmAction('{url op="updateIssueToc" path=$issueId}', 'Are you sure you want to update this published issue?')" class="button defaultButton" />
+	<input type="submit" value="{translate key="editor.issues.saveAndPublishIssue"}" onclick="return validateAnd_confirmAction('{url op="updateIssueToc" path=$issueId}', 'Are you sure you want to update this published issue?')" class="button defaultButton" />
 	{if $isSiteAdmin}
 		<!-- unpublish button -->
 		<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />	
