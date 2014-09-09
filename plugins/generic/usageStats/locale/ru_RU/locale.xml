@@ -20,10 +20,14 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Регулярное выражение, используемое по умолчанию, может разибрать файлы журнала доступа apache в комбинированном формате, а также файлы журнала, создаваемые плагином. Если ваши файлы журнала доступа формируются в другом формате, то вам необходимо вставить регулярное выражение, которое может разобрать его и выдать ожидаемые значения. Для получения более подробной информации смотрите UsageStatsLoader::_getDataFromLogEntry().</message>
 	<message key="plugins.generic.usageStats.settings.saved">Настройки плагина «Статистика использования» сохранены</message>
 	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Задача загрузчика файлов статистики использования</message>
 	<message key="plugins.generic.usageStats.openFileFailed">Файл «{$file}» не может быть открыт и был отклонен.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">Строка с номером  {$lineNumber} из файла «{$file}» является некорректной записью журнала и файл был отклонен.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">Строка с номером {$lineNumber} из файла «{$file}» содержит URL-адрес, из которого система не может убрать свой базовый URL-адрес.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Невозможно загрузить данные, извлеченные из файла «{$file}». Ошибка: {$error}. Файл был перемещен обратно на свое место.</message>
 	<message key="plugins.generic.usageStats.displayName">Плагин «Статистика использования»</message>
 	<message key="plugins.generic.usageStats.description">Этот плагин представляет статистику использования объектов данных, может использовать файлы журнала доступа сервера для извлечения статистики.</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Плагин «Статистика использования» отключен. Файлы журнала не обрабатываются.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">Отчет о статистике использования OJS</message>
 	<message key="plugins.reports.usageStats.report.description">Отчет о статистике использования OJS, формируемый по умолчанию (готовый для COUNTER)</message>
