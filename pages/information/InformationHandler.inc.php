@@ -75,7 +75,8 @@ class InformationHandler extends Handler {
 		$templateMgr->assign('pageTitle', $pageTitle);
 		$templateMgr->assign('content', $content);
 		$templateMgr->display('information/information.tpl');
-	}
+	    $templateMgr->display('manager/setup/step3.tpl
+');	}//get rid of last template
 
 	function readers() {
 		$this->index(array('readers'));

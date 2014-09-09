@@ -75,11 +75,11 @@
 {url|assign:"sampleCopyrightWordingUrl" page="information" op="sampleCopyrightWording"}
 <p>{translate key="manager.setup.authorCopyrightNoticeDescription" sampleCopyrightWordingUrl=$sampleCopyrightWordingUrl}</p>
 
-/*This needs to appear only if there is nothing in the journal_setttings table */
+{*This needs to appear only if there is nothing in the journal_setttings table *}
 
+{if $copyrightNotice eq ''}
 <p><textarea name="copyrightNotice[{$formLocale|escape}]" id="copyrightNotice" rows="12" cols="60" class="textArea">
-/* see InformationHandler.inc.php*/
-{if $content eq ''}
+
      I, the author or co-author of this submission (the "Author") grant the journal to which I am submitting this work (the "Journal") on behalf of The Regents of the University of California ("The Regents") the non-exclusive right to make any material submitted by the Author to the Journal (the "Work") available in eScholarship  in any format in perpetuity. The Author grants the Journal and eScholarship the right to redistribute the Work to external non-commercial recipients.<br /><br />
 	
      The Author warrants as follows:<br /><br />
@@ -92,13 +92,12 @@
 	
 	<strong>For authors who are not employees of the University of California:</strong><br />
 	The Author agrees to hold The Regents of the University of California, the California Digital Library, the Journal, and its agents harmless for any losses, claims, damages, awards, penalties, or injuries incurred, including any reasonable attorney's fees that arise from any breach of warranty or for any claim by any third party of an alleged infringement of copyright or any other intellectual property rights arising from the Depositor’s submission of materials with the California Digital Library or of the use by the University of California or other users of such materials.
-{else}
-    <p>DRAWING CONTENT FROM THE DATABASE</p>
-     {$content|nl2br}
-{/if}
 	
-</textarea></p>
-
+</textarea>
+</p>
+{else}
+<p><textarea name="copyrightNotice[{$formLocale|escape}]" id="copyrightNotice" rows="12" cols="60" class="textArea">{$copyrightNotice[$formLocale]|escape}</textarea></p>
+{/if}
 
 <table width="100%" class="data">
 	<tr valign="top">

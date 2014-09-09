@@ -328,6 +328,7 @@ class SetupHandler extends ManagerHandler {
 						$copyrightNotice[$formLocale][] = array();
 						$setupForm->setData('copyrightNotice', $copyrightNotice);
 					}
+				break;
 			}
 
 			if (!isset($editData) && $setupForm->validate()) {
