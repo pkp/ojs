@@ -25,7 +25,7 @@ class WorkflowSearchTest extends WebTestCase {
 	 * @copydoc WebTestCase::getAffectedTables
 	 */
 	protected function getAffectedTables() {
-		return WEB_TEST_ENTIRE_DB;
+		return PKP_TEST_ENTIRE_DB;
 	}
 
 	/**
