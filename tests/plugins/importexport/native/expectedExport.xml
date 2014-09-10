@@ -9,11 +9,11 @@
     <country>NO</country>
     <email>bvemer@mailinator.com</email>
   </author>
-  <date_published>2014-09-09</date_published>
+  <date_published>{$currentDate}</date_published>
   <galley locale="en_US">
     <label>PDF</label>
     <file>
-      <embed filename="dummy.pdf" encoding="base64" mime_type="application/pdf">embed_contents</embed>
+      <embed filename="{$dummyFileName}" encoding="base64" mime_type="application/pdf">{$embedContents}</embed>
     </file>
   </galley>
 </article>
