@@ -98,16 +98,21 @@ class NativeImportExportPluginTest extends DatabaseTestCase {
 		$doc->load($filename);
 		$this->assertTrue(is_a($doc, 'DOMDocument'));
 
-		// Truncate embedded file contents
-		$embeds = $doc->getElementsByTagName('embed');
-		foreach ($embeds as $embed) {
-			$embed->nodeValue = 'embed_contents';
-		}
-
 		$doc->formatOutput = true;
 		$generatedXml = trim($doc->saveXML());
 
-		$this->assertEquals($generatedXml, trim(file_get_contents(dirname(__FILE__) . '/expectedExport.xml')));
+		$dummyFile = getenv('DUMMYFILE');
+		$params = array(
+			'{$embedContents}' => base64_encode(file_get_contents($dummyFile)),
+			'{$currentDate}' => date('Y-m-d'),
+			'{$dummyFileName}' => basename($dummyFile),
+		);
+
+		$this->assertEquals($generatedXml, str_replace(
+			array_keys($params),
+			array_values($params),
+			trim(file_get_contents(dirname(__FILE__) . '/expectedExport.xml'))
+		));
 		
 		unlink($filename); // Clean up temporary file
 	}
