@@ -236,7 +236,11 @@
 	<message key="manager.setup.resetPermissions">Сбросить разрешения для статей</message>
 	<message key="manager.setup.resetPermissions.description">Строка копирайта и информация о лицензии будет добавлена к опубликованному контенту, чтобы эти данные не могли измениться в случае смены политики журнала по отношению к новым статьям. Для сброса хранящейся информации о разрешениях, уже прикрепленной к опубликованному контенту, воспользуйтесь кнопкой ниже.</message>
 	<message key="manager.setup.confirmResetLicense">Вы уверены, что хотите заменить информацию о лицензии и авторских правах, уже прикрепленную к опубликованному контенту, на лицензию, указанную в разделе «Настройка журнала»?</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Вы изменили информацию о лицензии и авторских правах в настройке журнала. Пожалуйста, сохраните эти изменения перед сменой разрешений.</message>
 	<message key="manager.setup.copyrightNotice">Условия передачи авторских прав</message>
+	<message key="manager.setup.copyrightYearBasis">Способ определения года начала действия авторских прав для новой статьи</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Год по умолчанию будет браться из даты опубликования статьи, исходя из принципа «публикация по ходу работы».</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Год по умолчанию будет браться из даты опубликования выпуска.</message>
 	<message key="manager.setup.coverage">Охват</message>
 	<message key="manager.setup.coverageChronExamples">(Например, Эпоха Возрожения; Юрский период; Третий триместр; и т. д.)</message>
 	<message key="manager.setup.coverageChronProvideExamples">Приведите примеры соответствующих хронологических или исторических терминов для данной области</message>
@@ -520,6 +524,7 @@
 	<message key="manager.statistics.reports.columns">Столбцы</message>
 	<message key="manager.statistics.reports.columns.description">Укажите столбцы, которые будут испоьзоваться для построения отчета. Столбцы, которые вы выберете здесь, не только определяют то, какие данные будут в отчетах, но также определяют уровень агрегирования статистики. Например, если вы выберите столбцы «ID», «Тип» и «Месяц», отчет будет суммировать все просмотры объекта, которые были в один месяц, и представлять данные в одной строке. Если вы выберите «День» вместо «Месяц», каждый объект будет иметь отдельную строку для каждого дня.</message>
 	<message key="manager.statistics.reports.filters">Фильтры</message>
+	<message key="manager.statistics.reports.objectNotFound">Объект не найден в базе данных</message>
 	<message key="manager.statistics.reports.objectType">Тип объекта</message>
 	<message key="manager.statistics.reports.objectId">ID объекта</message>
 	<message key="manager.statistics.reports.objectId.label">Задайте один или несколько ID объектов, разделяя их запятыми (например, 1,2,3,4,5).</message>

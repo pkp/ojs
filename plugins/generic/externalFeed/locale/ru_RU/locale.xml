@@ -26,7 +26,7 @@
 	<!-- Управление внешней лентой -->
 	<message key="plugins.generic.externalFeed.manager.feeds">Внешние ленты</message>
 	<message key="plugins.generic.externalFeed.manager.settings">Настройки</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[To display feed content in sidebar blocks, go to <a href="{$setupStep56}" target="_blank">Setup Step 5.6</a>]]></message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[Чтобы отобразить содержимое ленты новостей в блоках на боковой панели, перейдите к <a href="{$setupStep56}" target="_blank">шагу 5.6 настройки</a>]]></message>
 	<message key="plugins.generic.externalFeed.manager.title">Заголовок</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage">Показывать на главной странице</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Показывать на главной странице</message>
