@@ -20,7 +20,7 @@ import('classes.issue.Issue');
 require_once('lib/bagit.php');
 
 define('PLN_PLUGIN_NETWORKS', serialize(array(
-	'PKP' => '192.241.216.9'
+	'PKP' => 'pkp-pln.lib.sfu.ca'
 )));
 
 define('PLN_PLUGIN_HTTP_STATUS_OK', 200);

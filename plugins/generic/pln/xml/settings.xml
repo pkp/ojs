@@ -16,7 +16,7 @@
 	<!-- if the plugin is enabled -->
 	<setting type="bool">
 		<name>enabled</name>
-		<value>true</value>
+		<value>false</value>
 	</setting>
 	<!-- if they've agreed to the terms of use -->
 	<setting type="string">
