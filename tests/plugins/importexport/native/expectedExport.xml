@@ -2,6 +2,9 @@
 <!DOCTYPE article PUBLIC "-//PKP//OJS Articles and Issues XML//EN" "http://pkp.sfu.ca/ojs/dtds/2.4.5/native.dtd">
 <article locale="en_US" language="en">
   <title locale="en_US">A Review of Information Systems and Corporate Memory: design for staff turn-over</title>
+  <indexing>
+    <subject locale="en_US">information technology; knowledge preservation</subject>
+  </indexing>
   <author primary_contact="true">
     <firstname>Brian</firstname>
     <lastname>Vemer</lastname>
