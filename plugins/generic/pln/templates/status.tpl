@@ -15,6 +15,7 @@
 
 <div id="plnStatus">
 	<h3>{translate key="plugins.generic.pln.status.deposits"}</h3>
+	<p>{fieldLabel name="network_status" key="plugins.generic.pln.status.network_status"}: {translate key=$network_status}</p>
 	<form class="pkp_form" id="plnStatusForm" method="post" action="{plugin_url path="status"}">
 		<table>
 			<tr>

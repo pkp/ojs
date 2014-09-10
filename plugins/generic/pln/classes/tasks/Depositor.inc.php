@@ -67,6 +67,12 @@ class Depositor extends ScheduledTask {
 				continue;
 			}
 			
+			// if the pln isn't accepting deposits, skip this journal
+			if (!$this->_plugin->getSetting($journal->getId(), 'pln_accepting')) {
+				$this->addExecutionLogEntry(__(PLN_PLUGIN_NOTIFICATION_PLN_NOT_ACCEPTING), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
+				continue;
+			}
+			
 			// if the terms haven't been agreed to, skip transfer
 			if (!$this->_plugin->termsAgreed($journal->getId())) {
 				$this->addExecutionLogEntry(__(PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);

@@ -53,4 +53,14 @@
 		<name>pln_network</name>
 		<value>PKP</value>
 	</setting>
+	<!-- is the PLN accepting deposits -->
+	<setting type="bool">
+		<name>pln_accepting</name>
+		<value>false</value>
+	</setting>
+	<!-- message about PLN stats -->
+	<setting type="string">
+		<name>pln_accepting_message</name>
+		<value></value>
+	</setting>
 </plugin_settings>

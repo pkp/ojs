@@ -31,7 +31,7 @@ class PLNStatusForm extends Form {
 	function PLNStatusForm(&$plugin, $journal_id) {
 		$this->_journal_id = $journal_id;
 		$this->_plugin =& $plugin;           
-		parent::Form($plugin->getTemplatePath() . DIRECTORY_SEPARATOR . 'status.tpl');
+		parent::Form($this->_plugin->getTemplatePath() . DIRECTORY_SEPARATOR . 'status.tpl');
 	}
 	
 	/**
@@ -40,8 +40,10 @@ class PLNStatusForm extends Form {
 	function display() {
 		$deposit_dao =& DAORegistry::getDAO('DepositDAO');
 		$journal =& Request::getJournal();
+		$network_status = $this->_plugin->getSetting($journal->getId(), 'pln_accepting');
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('deposits', $deposit_dao->getDepositsByJournalId($journal->getId()));
+		$templateMgr->assign('network_status', ($network_status?PLN_PLUGIN_NOTIFICATION_PLN_ACCEPTING:PLN_PLUGIN_NOTIFICATION_PLN_NOT_ACCEPTING));
 		parent::display();
 	}  
 	

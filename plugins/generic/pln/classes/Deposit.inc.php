@@ -60,6 +60,9 @@ class Deposit extends DataObject {
 		$title = $atom->createElement('title', $journal->getLocalizedTitle());
 		$entry->appendChild($title);
 		
+		$pkp_journal_url = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:url', $journal->getUrl());
+		$entry->appendChild($pkp_journal_url);
+		
 		$issn = '';
 
 		if ($journal->getSetting('onlineIssn')) {

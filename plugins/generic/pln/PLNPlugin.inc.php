@@ -65,6 +65,8 @@ define('PLN_PLUGIN_NOTIFICATION_TERMS_UPDATED','plugins.generic.pln.notification
 define('PLN_PLUGIN_NOTIFICATION_ISSN_MISSING','plugins.generic.pln.notifications.issn_missing');
 define('PLN_PLUGIN_NOTIFICATION_HTTP_ERROR','plugins.generic.pln.notifications.http_error');
 define('PLN_PLUGIN_NOTIFICATION_PROCESSING_FOR','plugins.generic.pln.notifications.processing_for');
+define('PLN_PLUGIN_NOTIFICATION_PLN_ACCEPTING','plugins.generic.pln.notifications.pln_accepting');
+define('PLN_PLUGIN_NOTIFICATION_PLN_NOT_ACCEPTING','plugins.generic.pln.notifications.pln_not_accepting');
 
 class PLNPlugin extends GenericPlugin {
 
@@ -422,14 +424,16 @@ class PLNPlugin extends GenericPlugin {
 	function getServiceDocument($journal_id) {
 			
 		$pln_networks = unserialize(PLN_PLUGIN_NETWORKS);
-		
-		error_log('http://' . $pln_networks[$this->getSetting($journal_id, 'pln_network')] . PLN_PLUGIN_SD_IRI);
-		error_log('On-Behalf-Of: '.$this->getSetting($journal_id, 'journal_uuid'));
+		$journal_dao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journal_dao->getById($journal_id);
 		
 		// retrieve the service document
 		$result = $this->_curlGet(
 			'http://' . $pln_networks[$this->getSetting($journal_id, 'pln_network')] . PLN_PLUGIN_SD_IRI,
-			array('On-Behalf-Of: '.$this->getSetting($journal_id, 'journal_uuid'))
+			array(
+				'On-Behalf-Of: '.$this->getSetting($journal_id, 'journal_uuid'),
+				'Journal-URL: '.$journal->getUrl()
+			)
 		);
 		
 		// stop here if we didn't get an OK
@@ -446,6 +450,11 @@ class PLNPlugin extends GenericPlugin {
 		// update the checksum type
 		$element = $service_document->getElementsByTagName('uploadChecksumType')->item(0);
 		$this->updateSetting($journal_id, 'checksum_type', $element->nodeValue);
+		
+		// update the network status
+		$element = $service_document->getElementsByTagName('pln_accepting')->item(0);
+		$this->updateSetting($journal_id, 'pln_accepting', (($element->getAttribute('is_acepting')=='yes')?TRUE:FALSE));
+		$this->updateSetting($journal_id, 'pln_accepting_message', $element->nodeValue);
 		
 		// update the terms of use
 		$term_elements = $service_document->getElementsByTagName('terms_of_use')->item(0)->childNodes;

@@ -22,7 +22,7 @@
 <scheduled_tasks>
 	<task class="plugins.generic.pln.classes.tasks.Depositor">
 		<descr>Deposit content with the PLN</descr>
-		<frequency hour="24"/>
+		<frequency hour="25"/>
 		<arg>autoStage</arg>
 	</task>
 </scheduled_tasks>

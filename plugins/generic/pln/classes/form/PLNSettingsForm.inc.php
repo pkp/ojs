@@ -51,6 +51,7 @@ class PLNSettingsForm extends Form {
 		if (!$this->_plugin->getSetting($this->_journal_id, 'terms_of_use')) {
 			$this->_plugin->getServiceDocument($this->_journal_id);
 		}
+		$this->setData('journal_uuid',$this->_plugin->getSetting($this->_journal_id, 'journal_uuid'));
 		$this->setData('terms_of_use', unserialize($this->_plugin->getSetting($this->_journal_id, 'terms_of_use')));
 		$this->setData('terms_of_use_agreement', unserialize($this->_plugin->getSetting($this->_journal_id, 'terms_of_use_agreement')));
 	}

@@ -31,6 +31,16 @@
 					{/foreach}
 				</td>
 			</tr>
+
+			<tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
+			
+			<tr>
+				<td class="label">{fieldLabel name="journal_uuid" key="plugins.generic.pln.settings.journal_uuid"}</td>
+				<td class="value">
+					<p>{translate key="plugins.generic.pln.settings.journal_uuid_help"}</p>
+					<input type="text" id="journal_uuid" name="journal_uuid"  size="36" maxlength="36" class="textField" value="{$journal_uuid|escape}" disabled="disabled"/>
+				</td>
+			</tr>
 			
 			<tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
 			
