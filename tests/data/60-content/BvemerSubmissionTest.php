@@ -33,6 +33,10 @@ class BvemerSubmissionTest extends ContentBaseTestCase {
 		$this->createSubmission(array(
 			'section' => 'Reviews',
 			'title' => $title,
+			'keywords' => array(
+				'information technology',
+				'knowledge preservation',
+			),
 		));
 		$this->logOut();
 
