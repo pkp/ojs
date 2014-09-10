@@ -258,7 +258,7 @@
 		<name>donationFeeDescription</name>
 		<value>{translate key="default.journalSettings.donationFeeDescription"}</value>
 	</setting>
-	<setting type="bool" locale="1">
+	<setting type="bool" locale="0">
 		<name>metaCitations</name>
 		<value>1</value>
 	</setting>
