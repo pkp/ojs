@@ -19,11 +19,12 @@ with the database (and files) from prod:
 
 3. Update dev from prod
    a. cd ~
-   b. rsync -av --delete submit.escholarship.org:ojs/ ojs/
+   b. rsync -av --delete --exclude '.hg' submit.escholarship.org:ojs/ ojs/
       (This will make the dev ~/ojs directory exactly equal to the prod directory,
-       including the .hg directory for Mercurial.
-       It will blow away any extraneous files and directories, so if you want any of 
-       these be sure to move them elsewhere.)
+       but not the .hg directory, since that contains backups of the local database.
+       The rsync will blow away any extraneous files and directories, so if you want 
+       any of these be sure to move them elsewhere. But backups are kept for 30 days
+       in /apps/subi/tmp/rolling/ojs_data/)
    d. gomysql < ojs/db_backup/ojs_db_dump.sql     # this recreates all tables
    e. monit start apache
    f. (now test)
