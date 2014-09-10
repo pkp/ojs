@@ -35,7 +35,14 @@ class IssuesTest extends WebTestCase {
 		$this->click('id=showYear');
 		$this->clickAndWait('css=input.button.defaultButton');
 
+		// Publish the (empty) issue
+		$this->clickAndWait('link=Vol 1, No 1 (2014)');
+		$this->chooseOkOnNextConfirmation();
+		$this->click('//input[@value=\'Publish Issue\']');
+		$this->getConfirmation(); // Flush the confirmation text
+
 		// Create issue
+		$this->waitForElementPresent('link=Create Issue');
 		$this->clickAndWait('link=Create Issue');
 		$this->type('id=volume', '1');
 		$this->type('id=number', '2');

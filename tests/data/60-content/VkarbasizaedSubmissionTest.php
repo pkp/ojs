@@ -56,6 +56,11 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->click('id=layoutFileTypeGalley');
 		$this->attachFile('name=layoutFile', "file://" . getenv('DUMMYFILE'));
 		$this->clickAndWait('//input[@name=\'layoutFile\']/..//input[@value=\'Upload\']');
+		$this->clickAndWait('//input[@value=\'Save\']');
+
+		// Schedule for an issue
+		$this->select('id=issueId', 'label=Vol 1, No 2 (2014)');
+		$this->clickAndWait('//div[@id=\'scheduling\']//input[@value=\'Record\']');
 
 		$this->logOut();
 	}
