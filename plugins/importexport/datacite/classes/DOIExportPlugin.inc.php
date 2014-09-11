@@ -154,17 +154,20 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$target = 'index';
 		// Check whether we serve an exportation request.
 		if (substr($op, 0, 6) == 'export') {
-			// Check whether the "register" button was clicked.
-			if ($request->isPost() && !is_null($request->getUserVar('register'))) {
-				// Fix the operation name so that we can check
-				// operations in a single switch statement.
-				$action = 'register';
-			} elseif ($request->isPost() && !is_null($request->getUserVar('export'))) {
-				$action = 'export';
-			} elseif ($request->isPost() && !is_null($request->getUserVar('markRegistered'))) {
-				$action = 'markRegistered';
-			}
+			$action = 'export';
 			$target = $multiSelect ? substr($op, 6, -1) : substr($op, 6);
+			if ($multiSelect) {
+				// Check whether the "register" button was clicked.
+				if ($request->isPost() && !is_null($request->getUserVar('register'))) {
+					// Fix the operation name so that we can check
+					// operations in a single switch statement.
+					$action = 'register';
+				} elseif ($request->isPost() && !is_null($request->getUserVar('export'))) {
+					$action = 'export';
+				} elseif ($request->isPost() && !is_null($request->getUserVar('markRegistered'))) {
+					$action = 'markRegistered';
+				}
+			}
 		// Check whether we serve a registration request.
 		} elseif (substr($op, 0, 8) == 'register') {
 			$action = 'register';
@@ -419,7 +422,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 				$journal =& $router->getContext($request);
 
 				$form =& $this->_instantiateSettingsForm($journal);
-				
+
 				// FIXME: JM: duplicate code from _displayPluginHomePage()
 				// Check for configuration errors:
 				$configurationErrors = array();
@@ -449,7 +452,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign_by_ref('configurationErrors', $configurationErrors);
 				// JM end duplicate code
-				
+
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
