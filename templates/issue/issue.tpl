@@ -65,7 +65,7 @@
 			{/if}
 		</div>
 	</td>
-	
+
 	<td class="tocArticleGalleysPages{if $showCoverPage} showCoverImage{/if}">
 		<div class="tocGalleys">
 			{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
