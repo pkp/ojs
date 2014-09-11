@@ -73,6 +73,7 @@ class Journal extends DataObject {
 			}
 
 			foreach ($locales as $localeKey) {
+				if (!isset($localeNames[$localeKey])) continue;
 				$supportedLocales[$localeKey] = $localeNames[$localeKey];
 			}
 		}
