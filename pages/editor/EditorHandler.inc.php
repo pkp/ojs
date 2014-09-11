@@ -75,7 +75,7 @@ class EditorHandler extends SectionEditorHandler {
 			$sort = $request->getUserVar('sort');
 			$sort = isset($sort) ? $sort : 'id';
 			$sortDirection = $request->getUserVar('sortDirection');
-			$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
+			$sortDirection = (isset($sortDirection) && ($sortDirection == SORT_DIRECTION_ASC || $sortDirection == SORT_DIRECTION_DESC)) ? $sortDirection : SORT_DIRECTION_ASC;
 
 			$fromDate = $request->getUserDateVar('dateFrom', 1, 1);
 			if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
@@ -104,7 +104,7 @@ class EditorHandler extends SectionEditorHandler {
 				$submissionsArray = $submissions->toArray();
 				$compare = create_function('$s1, $s2', 'return strcmp($s1->getSubmissionStatus(), $s2->getSubmissionStatus());');
 				usort ($submissionsArray, $compare);
-				if($sortDirection == 'DESC') {
+				if($sortDirection == SORT_DIRECTION_DESC) {
 					$submissionsArray = array_reverse($submissionsArray);
 				}
 				// Convert submission array back to an ItemIterator class
@@ -176,7 +176,7 @@ class EditorHandler extends SectionEditorHandler {
 		$sort = $request->getUserVar('sort');
 		$sort = isset($sort) ? $sort : 'id';
 		$sortDirection = $request->getUserVar('sortDirection');
-		$sortDirection = (isset($sortDirection) && ($sortDirection == 'ASC' || $sortDirection == 'DESC')) ? $sortDirection : 'ASC';
+		$sortDirection = (isset($sortDirection) && ($sortDirection == SORT_DIRECTION_ASC || $sortDirection == SORT_DIRECTION_DESC)) ? $sortDirection : SORT_DIRECTION_ASC;
 
 		$filterEditorOptions = array(
 			FILTER_EDITOR_ALL => AppLocale::Translate('editor.allEditors'),
