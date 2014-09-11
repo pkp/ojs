@@ -191,6 +191,8 @@ class ReviewerSubmissionDAO extends DAO {
 
 	/**
 	 * Get all submissions for a reviewer of a journal.
+	 * FIXME: Beware of bug #8872 WRT this function. There is currently
+	 * no reviewer search form so the search options here are dead code.
 	 * @param $reviewerId int
 	 * @param $journalId int
 	 * @param $rangeInfo object

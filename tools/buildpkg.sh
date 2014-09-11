@@ -38,7 +38,9 @@ tools/genTestLocale.php						\
 tools/test							\
 lib/pkp/tests							\
 .git								\
+.travis.yml							\
 lib/pkp/.git							\
+lib/pkp/tools/travis						\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
 

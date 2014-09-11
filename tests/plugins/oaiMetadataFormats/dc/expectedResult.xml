@@ -22,6 +22,8 @@
 	<dc:identifier>article-view-9</dc:identifier>
 	<dc:identifier>article-doi</dc:identifier>
 	<dc:source xml:lang="en-US">journal-title; issue-identification; 15</dc:source>
+	<dc:source>online-issn</dc:source>
+	<dc:source>print-issn</dc:source>
 	<dc:source>issue-doi</dc:source>
 	<dc:language>en_US</dc:language>
 	<dc:relation>article-view-9-98</dc:relation>
@@ -31,5 +33,6 @@
 	<dc:coverage xml:lang="en-US">article-coverage-geo</dc:coverage>
 	<dc:coverage xml:lang="en-US">article-coverage-chron</dc:coverage>
 	<dc:coverage xml:lang="en-US">article-coverage-sample</dc:coverage>
-	<dc:rights xml:lang="en-US">journal-copyright</dc:rights>
+	<dc:rights xml:lang="en-US">copyright-statement</dc:rights>
+	<dc:rights xml:lang="en-US">license-url</dc:rights>
 </oai_dc:dc>

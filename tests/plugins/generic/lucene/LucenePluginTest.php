@@ -71,6 +71,7 @@ class LucenePluginTest extends DatabaseTestCase {
 		}
 		PluginRegistry::loadCategory('generic', true, 0);
 		$this->lucenePlugin = PluginRegistry::getPlugin('generic', 'luceneplugin');
+		if (!$this->lucenePlugin) $this->markTestSkipped('Could not fetch Lucene plugin!');
 	}
 
 

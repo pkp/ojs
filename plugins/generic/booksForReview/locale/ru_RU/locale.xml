@@ -111,7 +111,7 @@
 	<!-- Управление настройками «Книги на рецензию» -->
 	<message key="plugins.generic.booksForReview.settings">Настройки</message>
 	<message key="plugins.generic.booksForReview.booksForReviewSettings">Настройки «Книги на рецензию»</message>
-	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Режим 1</h5><p>Реализует следующий рабочий процесс:</p><ul><li>Редактор добавляет книги, доступные для рецензирования.</li><li>Авторы, заинтересованные в рецензировании книги, могут запросить разрешение на рецензирование, уведомив редактроа.</li><li>Редактор может принять или отклонить запрос на рецензию, уведомив автора.</li><li>Если запрос на рецензирование принят<ul><li>Книга убирается из списка доступных для рецензирования.</li><li>Устанавливается срок выполнения рецензии.</li><li>Редактор может отправить копию книги автору.</li></ul></li><li>Автор отправляет рецензию на книгу через стандартный процесс отправки материала.</li><li>Метаданные книги публикуются как часть отправленной рецензии на книгу.</li></ul><p>Этот плагин поддерживает журналы с множеством редакторов. Когда редактор добавляет новую книгу для рецензирования, он становится основным редактором и контактным лицом по этой книге.</p><h5>Режим 2</h5><p>Реализует следующий рабочий процесс:</p><ul><li>Редактор добавляет книги.</li><li>Редактор сопоставляет отправленные авторами рецензии на книги с каждой книгой.</li><li>Метаданные книги публикуются как часть отправленной рецензии на книгу.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Режим 1</h5><p>Реализует следующий рабочий процесс:</p><ul><li>Редактор добавляет книги, доступные для рецензирования.</li><li>Авторы, заинтересованные в рецензировании книги, могут запросить разрешение на рецензирование, уведомив редактора.</li><li>Редактор может принять или отклонить запрос на рецензию, уведомив автора.</li><li>Если запрос на рецензирование принят<ul><li>Книга убирается из списка доступных для рецензирования.</li><li>Устанавливается срок выполнения рецензии.</li><li>Редактор может отправить копию книги автору.</li></ul></li><li>Автор отправляет рецензию на книгу через стандартный процесс отправки материала.</li><li>Метаданные книги публикуются как часть отправленной рецензии на книгу.</li></ul><p>Этот плагин поддерживает журналы с множеством редакторов. Когда редактор добавляет новую книгу для рецензирования, он становится основным редактором и контактным лицом по этой книге.</p><h5>Режим 2</h5><p>Реализует следующий рабочий процесс:</p><ul><li>Редактор добавляет книги.</li><li>Редактор сопоставляет отправленные авторами рецензии на книги с каждой книгой.</li><li>Метаданные книги публикуются как часть отправленной рецензии на книгу.</li></ul>]]></message>
 	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">Управление</message>
 	<message key="plugins.generic.booksForReview.settings.modeFull">Режим 1: Составлять список книг на рецензию, управлять рецензентами книг и публиковать метаданные книг.</message>
 	<message key="plugins.generic.booksForReview.settings.modeMetadata">Режим 2: Только публиковать метаданные книг.</message>
@@ -157,7 +157,7 @@
 
 	<!-- Общая информация «Книги на рецензию» -->
 	<message key="plugins.generic.booksForReview.public.booksForReview">Книги на рецензию</message>
-	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Чтобы запросить книгу на рецензию:</p><ul><li><a href="{$registerUrl}" target="_parent">Зарегистрируйтесь</a> как автор в этом журнале.</li><li><a href="{$loginAuthorUrl}" target="_parent">Войите в систему</a> как автор.</li><li>Щелкните на ссылке запроса, которая соответствует интересующей вас книге.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Чтобы запросить книгу на рецензию:</p><ul><li><a href="{$registerUrl}" target="_parent">Зарегистрируйтесь</a> как автор в этом журнале.</li><li><a href="{$loginAuthorUrl}" target="_parent">Войдите в систему</a> как автор.</li><li>Щелкните на ссылке запроса, которая соответствует интересующей вас книге.</li></ul>]]></message>
 	<message key="plugins.generic.booksForReview.public.copy">Доступна копия</message>
 	<message key="plugins.generic.booksForReview.public.copyYes">Да</message>
 	<message key="plugins.generic.booksForReview.public.copyNo">Нет</message>
@@ -172,6 +172,7 @@
 	<message key="plugins.generic.booksForReview.public.bookDetails">Информация о книге</message>
 
 	<!-- Книги на рецензию -->
+	<message key="plugins.generic.booksForReview.reminderTask.name">Напоминание о книгах на рецензию</message>
 	<message key="plugins.generic.booksForReview.displayName">Плагин «Книги на рецензию»</message>
 	<message key="plugins.generic.booksForReview.description">Этот плагин запрашивает рецензии на интересующие вас книги или книги, полученные от издателей, а также позволяет управлять рецензентами книг и процессом рецензирования книг.</message>
 	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Книги&nbsp;на&nbsp;рецензию]]></message>

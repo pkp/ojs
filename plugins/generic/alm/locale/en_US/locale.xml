@@ -20,10 +20,9 @@
 
 	<message key="plugins.generic.alm.settings">Settings</message>
 	<message key="plugins.generic.alm.settings.saved">ALM plugin settings saved.</message>
-	<message key="plugins.generic.alm.apiKeyRequired">You have to add your article level metrics API key.</message>
-	<message key="plugins.generic.alm.depositUrlRequired">You have to add an article information deposit url.</message>
 	<message key="plugins.generic.alm.settings.apiKey">Article level metrics API key</message>
 	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[To be able to access the article level metrics from ALM server, you need an API key. You can create one by login in (using Mozilla Persona) on the <a href="http://pkp-alm.lib.sfu.ca/">PKP ALM page</a>.]]></message>
+	<message key="plugins.generic.alm.settings.depositArticles">Automatically deposit articles information? (Uncheck if you deposit the information direclty on ALM server using the DOI prefix.)</message>
 	<message key="plugins.generic.alm.settings.depositUrl">Article information deposit url</message>
 	<message key="plugins.generic.alm.settings.depositUrl.description">URL provided by PKP for depositing articles.</message>
 	<message key="plugins.generic.alm.settings.ipAddress">When contacting PKP to set up the ALM service, please provide this IP address: {$ip}</message>
@@ -42,6 +41,7 @@
 
 	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">ALM plugin is enabled but a valid DOI prefix must be specified in the journal path {$path} Setup in order to send article information.</message>
 	<message key="plugins.generic.alm.senderTask.warning.noApiKey">ALM plugin is enabled but no API key defined for journal path {$path}.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noJournal">ALM plugin is not enabled in any journal. No article information sent.</message>
 	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Could not confirm that article information for journal path {$path} is sent. Server did not respond.</message>
 	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">No deposit url defined.</message>
 	<message key="plugins.generic.alm.senderTask.error.returnError">The server returned a message: {$error}

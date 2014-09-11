@@ -49,7 +49,7 @@ class ArticleDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array(
+		return parent::getLocaleFieldNames() + array(
 			'title', 'cleanTitle', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
 			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor',
 			'copyrightHolder'
@@ -273,13 +273,6 @@ class ArticleDAO extends DAO {
 
 		$article->setId($this->getInsertArticleId());
 		$this->updateLocaleFields($article);
-
-		// Insert authors for this article
-		$authors =& $article->getAuthors();
-		for ($i=0, $count=count($authors); $i < $count; $i++) {
-			$authors[$i]->setSubmissionId($article->getId());
-			$this->authorDao->insertAuthor($authors[$i]);
-		}
 
 		return $article->getId();
 	}
@@ -712,10 +705,10 @@ class ArticleDAO extends DAO {
 	}
 
 	/**
-	 * Delete the attached licenses of all articles in a journal.
+	 * Delete and re-initialize the attached licenses of all articles in a journal.
 	 * @param $journalId int
 	 */
-	function deletePermissions($journalId) {
+	function resetPermissions($journalId) {
 		$journalId = (int) $journalId;
 		$articles =& $this->getArticlesByJournalId($journalId);
 		while ($article =& $articles->next()) {
@@ -728,6 +721,9 @@ class ArticleDAO extends DAO {
 					(int) $article->getId()
 				)
 			);
+			$article = $this->getArticle($article->getId());
+			$article->initializePermissions();
+			$this->updateLocaleFields($article);
 			unset($article);
 		}
 		$this->flushCache();

@@ -805,6 +805,7 @@ class NativeImportDom {
 		if (!NativeImportDom::handlePubIds($articleNode, $article, $journal, $issue, $article, $errors)) $hasErrors = true;
 
 		$articleDao->insertArticle($article);
+
 		$dependentItems[] = array('article', $article);
 
 		/* --- Handle authors --- */
@@ -815,7 +816,7 @@ class NativeImportDom {
 			}
 		}
 		if ($hasErrors) return false;
-
+		
 		// Create submission mangement records
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 
@@ -877,6 +878,27 @@ class NativeImportDom {
 		$publishedArticle->setPublishedArticleId($publishedArticleDao->insertPublishedArticle($publishedArticle));
 
 		$publishedArticleDao->resequencePublishedArticles($section->getId(), $issue->getId());
+
+		// Setup default copyright/license metadata after status is set and authors are attached.
+		// This handles the case where the XML is not providing it
+		$article->initializePermissions();
+
+		// Get XML-specified overrides for permissions data
+		if ($permissionsNode = $articleNode->getChildByName('permissions')) {
+			if ($node = $permissionsNode->getChildByName('copyright_year')) {
+				$article->setCopyrightYear($node->getValue());
+			}
+			for ($index=0; ($node = $permissionsNode->getChildByName('copyright_holder', $index)); $index++) {
+				$locale = $node->getAttribute('locale');
+				$article->setCopyrightHolder($node->getValue(), $locale);
+			}
+			if ($node = $permissionsNode->getChildByName('license_url')) {
+				$article->setLicenseURL($node->getValue());
+			}
+		}
+
+		// Save permissions data
+		$articleDao->updateLocaleFields($article);
 
 		/* --- Galleys (html or otherwise handled simultaneously) --- */
 		import('classes.file.ArticleFileManager');

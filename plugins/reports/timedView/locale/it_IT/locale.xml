@@ -19,11 +19,12 @@
 	<message key="plugins.reports.timedView.form.dateStartValid">Inserire una data di inizio valida.</message>
 	<message key="plugins.reports.timedView.form.dateEndRequired">Inserire una data di fine.</message>
 	<message key="plugins.reports.timedView.form.dateEndValid">Inserire una data di fine valida.</message>
-	<message key="plugins.reports.timedView.form.generate">Genera  eport</message>
+	<message key="plugins.reports.timedView.form.generate">Genera report</message>
 	<message key="plugins.reports.timedView.form.clearLogs">Cancella il registro</message>
 	<message key="plugins.reports.timedView.form.clearLogs.description">Scegli una data per la rimozione dei record dal registro. Tutte le registrazioni precedenti a quella data verranno rimosse. Nota che verranno rimosse solo le visite registrate da questo plugin e non da altri contatori (es. dal plugin delle visite).</message>
 	<message key="plugins.reports.timedView.form.clearLogs.confirm">Sei sicuro di rimuovere queste registrazioni? Il processo non è reversibile.</message>
-
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">Controlla le statistiche d'uso registrate con il vecchio plugin. Se vuoi generare un report delle viste in un certo periodo con i nuovi dati, lascia questo campo non selezionato.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">Selezionando un intervallo temporale ampio con un gran numero di dati statistici, il report potrebbe impiegare molto tempo a completarsi. Se impiegasse troppo tempo, la connessione potrebbe andare in timeout e il file non verrebbe scaricato. Se ciò dovesse accadere, prova a generare il report su un intervallo temporale più breve.</message>
 	<message key="plugins.reports.timedView.report.articleId">ID dell'articolo</message>
 	<message key="plugins.reports.timedView.report.articleTitle">Titolo dell'articolo</message>
 	<message key="plugins.reports.timedView.report.datePublished">Data di pubblicazione</message>
