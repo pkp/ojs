@@ -13,6 +13,8 @@
 
 {foreach from=$section.articles item=article}
 	{assign var=articlePath value=$article->getBestArticleId($currentJournal)}
+	{assign var=articleId value=$article->getId()}
+
 	{if $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getHideCoverPageToc($locale)}
 		{assign var=showCoverPage value=true}
 	{else}
@@ -25,7 +27,6 @@
 		{assign var=hasAbstract value=1}
 	{/if}
 
-	{assign var=articleId value=$article->getId()}
 	{if (!$subscriptionRequired || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $articleExpiryPartial.$articleId))}
 		{assign var=hasAccess value=1}
 	{else}
@@ -36,21 +37,22 @@
 <tr valign="top">
 	<td class="tocArticleCoverImage{if $showCoverPage} showCoverImage{/if}">
 		{if $showCoverPage}
-		<div class="tocCoverImage">
-			{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$articlePath}" class="file">{/if}
+			<div class="tocCoverImage">
+				{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$articlePath}" class="file">{/if}
 				<img src="{$coverPagePath|escape}{$article->getFileName($locale)|escape}"{if $article->getCoverPageAltText($locale) != ''} alt="{$article->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}/>
-			{if !$hasAccess || $hasAbstract}</a>{/if}
-		</div>
+				{if !$hasAccess || $hasAbstract}</a>{/if}
+			</div>
 		{/if}
 	</td>
+
 	{call_hook name="Templates::Issue::Issue::ArticleCoverImage"}
 
 	<td class="tocArticleTitleAuthors{if $showCoverPage} showCoverImage{/if}">
 		<div class="tocTitle">
 			{if !$hasAccess || $hasAbstract}
-			<a href="{url page="article" op="view" path=$articlePath}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>
+				<a href="{url page="article" op="view" path=$articlePath}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>
 			{else}
-			{$article->getLocalizedTitle()|strip_unsafe_html}
+				{$article->getLocalizedTitle()|strip_unsafe_html}
 			{/if}
 		</div>
 		<div class="tocAuthors">
