@@ -599,9 +599,9 @@ class ObjectsForReviewEditorHandler extends Handler {
 			$dueWeeks = $ofrPlugin->getSetting($journalId, 'dueWeeks');
 			$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60);
 			$dueDate = date('Y-m-d H:i:s', $dueDateTimestamp);
-			$ofrAssignment->setDateMailed($dueDate);
+			$ofrAssignment->setDateDue($dueDate);
 			// Set date mailed and update the assignment
-			$ofrAssignment->setDateMailed(date('Y-m-d H:i:s', time()));
+			$ofrAssignment->setDateMailed(Core::getCurrentDate());
 			$ofrAssignmentDao->updateObject($ofrAssignment);
 			$email->send();
 			$this->_createTrivialNotification(NOTIFICATION_TYPE_OFR_AUTHOR_MAILED, $request);

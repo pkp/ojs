@@ -15,6 +15,8 @@
 <locale name="ru_RU" full_name = "Russian">
 	<message key="admin.hostedJournals">Журналы на сайте</message>
 	<message key="admin.settings.journalRedirect">Перенаправить</message>
+	<message key="admin.settings.security">Безопасность</message>
+	<message key="admin.settings.security.plugins">Запретить управляющим журналами устанавливать, обновлять или удалять плагины.</message>
 	<message key="admin.settings.options">Параметры</message>
 	<message key="admin.settings.useAlphalist">Для сайтов с большим количеством журналов показывать список букв на главной странице для быстрого перехода между журналами по первой букве названия.</message>
 	<message key="admin.settings.usePaging">Для сайтов с большим количеством журналов разбивать список журналов на несколько страниц.</message>
@@ -87,7 +89,7 @@
 	<message key="admin.categories.confirmDelete">Вы уверены, что хотите удалить эту категорию?</message>
 	<message key="admin.categories.name">Название</message>
 	<message key="admin.categories.nameRequired">Название категории обязательно.</message>
-
+	
 	<message key="admin.copyAccessLogFileTool.usage">Копирует прошедшие файлы журнала доступа apache, отфильтровывая записи, связанные с этой инсталляцией,
 в каталог текущих файлов, находящийся внутри каталога stage плагина «Статистика использования». Должен запускаться под пользователем с достаточными правами для чтения файлов журнала доступа apache.
 
@@ -95,6 +97,7 @@
 
 Вызов: {$scriptName} path/to/apache/log/file.log
 Вызов (обработка всех файлов в каталоге): {$scriptName} path/to/apache/directory 
+Вызов (обработка всех файлов в каталоге, которые начинаются с переданной строки): {$scriptName} path/to/apache/directory starts_with_string
 	</message>
 	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Ошибка: не могу создать временный каталог {$tmpDir}</message>
 	<message key="admin.copyAccessLogFileTool.error.acessingFile">Ошибка: Файл {$filePath} не существует или к нему нет доступа.</message>

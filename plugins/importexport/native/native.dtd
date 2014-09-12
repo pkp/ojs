@@ -67,6 +67,14 @@
 
 <!ELEMENT open_access EMPTY>
 
+<!ELEMENT license_url (#PCDATA)>
+
+<!ELEMENT copyright_holder (#PCDATA)>
+
+<!ELEMENT copyright_year (#PCDATA)>
+
+<!ELEMENT permissions (license_url?, copyright_holder?, copyright_year?)>
+
 <!ELEMENT sponsor (#PCDATA)>
 	<!ATTLIST sponsor
 		locale CDATA #IMPLIED>
@@ -122,7 +130,7 @@
   *  - Locale attribute value must correspond to the journal's
   *    additional locales, if enabled, otherwise an error will be displayed.
   -->
-<!ELEMENT article (id*, title+, abstract*, indexing?, sponsor*, author+, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
+<!ELEMENT article (id*, title+, abstract*, indexing?, sponsor*, author+, pages?, date_published, open_access?, permissions?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
 		public_id CDATA #IMPLIED
 		locale CDATA #IMPLIED

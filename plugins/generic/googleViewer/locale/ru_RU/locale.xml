@@ -11,7 +11,7 @@
   * Localization strings for the ru_RU (Russian) locale.
   * With updates from Pavel Pisklakov (revising translation). 
   -->
- 
+
 <locale name="ru_RU" full_name="Russian">
 	<message key="plugins.generic.googleViewer.name">Плагин «Встроенный просмотр Google»</message>
 	<message key="plugins.generic.googleViewer.description"><![CDATA[Этот плагин использует службу <a href="https://docs.google.com/viewer">«Средство просмотра Google Документы»</a> для встраивания PDF-файлов на страницу просмотра статьи.]]></message>

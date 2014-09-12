@@ -29,6 +29,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Пожалуйста, выберите код отслеживания, который вы хотите использовать.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Старый код отслеживания (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Новый код отслеживания (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Новый код отслеживания для универсальной аналитики (analytics.js)</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">Номер учетной записи Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Чтобы отслеживать читателй опубликованной статьи с помощью Google Analytics, введите здесь номер учетной записи (например, UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Один или несколько введенных номеров учетных записей Google Analytics, принадлежащих авторам материала, являются неправильными.</message>
