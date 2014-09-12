@@ -14,19 +14,18 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.importexport.crossref.description">Export or register article metadata in CrossRef format.</message>
 	<message key="plugins.importexport.crossref.displayName">CrossRef Export/Registration Plugin</message>
-	<message key="plugins.importexport.crossref.description">Export or register article metadata in CrossRef format.</message>
 	<message key="plugins.importexport.crossref.requirements">Requirements</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">All plugin requirements are satisfied.</message>
-	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Crossref plugin not configured! Configure this plugin in the plugin's <a href="{$settingsUrl}">settings page</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[CrossRef plugin not configured! Configure this plugin in the plugin's <a href="{$settingsUrl}">settings page</a>.]]></message>
 	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[DOI Public Identifier plugin not configured! Enable and configure this plugin from the <a href="{$doiUrl}" target="_blank">DOI Plugin</a> Settings page.]]></message>
 	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[A journal publisher has not been configured! You must add a publisher institution under <a href="{$publisherUrl}" target="_blank">Journal Setup Step 1.5</a>.]]></message>
-	<message key="plugins.importexport.crossref.settings.depositorIntro">The following items are required for a successful Crossref deposit.</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">The following items are required for a successful CrossRef deposit.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor name</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Depositor email</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Please enter the depositor name.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Please enter the depositor email.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Register DOIs automatically</message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS will deposit article DOIs automatically to Crossref as articles are published. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs in the <a href="">unregistered articles listing</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS will deposit article DOIs automatically to CrossRef as articles are published. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs in the <a href="">unregistered articles listing</a>.]]></message>
 
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[This plugin can be configured to automatically register Digital Object Identifiers (DOIs) with CrossRef. You will need a username and password (available from <a href="http://www.crossref.org" target="_blank">CrossRef</a>) in order to do so. If you do not have your own username and password you can still export into the CrossRef XML format, but you cannot register your DOIs with CrossRef from within OJS.]]></message>
 
