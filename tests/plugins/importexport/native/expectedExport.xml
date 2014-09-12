@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//PKP//OJS Articles and Issues XML//EN" "http://pkp.sfu.ca/ojs/dtds/2.4.5/native.dtd">
+<article locale="en_US" language="en">
+  <title locale="en_US">A Review of Information Systems and Corporate Memory: design for staff turn-over</title>
+  <indexing>
+    <subject locale="en_US">information technology;knowledge preservation</subject>
+  </indexing>
+  <author primary_contact="true">
+    <firstname>Brian</firstname>
+    <lastname>Vemer</lastname>
+    <affiliation locale="en_US">University of Oslo</affiliation>
+    <country>NO</country>
+    <email>bvemer@mailinator.com</email>
+  </author>
+  <date_published>{$currentDate}</date_published>
+  <permissions>
+    <license_url>http://creativecommons.org/licenses/by-nc-nd/4.0</license_url>
+    <copyright_holder locale="en_US">Brian Vemer</copyright_holder>
+    <copyright_year>2014</copyright_year>
+  </permissions>
+  <galley locale="en_US">
+    <label>PDF</label>
+    <file>
+      <embed filename="{$dummyFileName}" encoding="base64" mime_type="application/pdf">{$embedContents}</embed>
+    </file>
+  </galley>
+</article>

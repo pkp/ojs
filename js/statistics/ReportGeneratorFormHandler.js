@@ -58,7 +58,8 @@
 				$countrySelectElement, $metricTypeSelectElement,
 				$reportTemplateSelectElement, $currentTimeElements,
 				$rangeTimeElements, $aggregationOptions,
-				$currentDaySelectElement, $rangeByDaySelectElement;
+				$currentDaySelectElement, $rangeByDaySelectElement,
+				$fileTypeSelectElement;
 
 		// Configure the form handler.
 		options.trackFormChanges = false;
@@ -145,12 +146,13 @@
 
 		// Update the file type element when object type is changed.
 		this.fileAssocTypes_ = options.fileAssocTypes;
-		this.$fileTypeSelectElement_ = $(options.fileTypeSelectSelector,
+		this.fileTypeSelectSelector_ = options.fileTypeSelectSelector;
+		$fileTypeSelectElement = $(this.fileTypeSelectSelector_,
 				this.getHtmlElement());
 		$objectTypeSelectElement = $(options.objectTypeSelectSelector,
 				this.getHtmlElement());
-		if (this.$fileTypeSelectElement_.length == 1) {
-			this.$fileTypeSelectElement_.attr('disabled', 'true');
+		if ($fileTypeSelectElement.length == 1) {
+			$fileTypeSelectElement.attr('disabled', 'disabled');
 			$objectTypeSelectElement.change(this.callbackWrapper(
 					this.updateFileTypeSelectHandler_));
 		}
@@ -304,6 +306,15 @@
 			columnsSelector_ = null;
 
 
+	/**
+	 * File type select selector.
+	 * @private
+	 * @type {?string}
+	 */
+	$.pkp.statistics.ReportGeneratorFormHandler.prototype.
+			fileTypeSelectSelector_ = null;
+
+
 	//
 	// Protected extended methods.
 	//
@@ -453,13 +464,16 @@
 			assocType = $objectTypeSelectedOptions[0].value;
 			for (i in this.fileAssocTypes_) {
 				if (this.fileAssocTypes_[i] == assocType) {
-					this.$fileTypeSelectElement_.attr('disabled', 'false');
+					$(this.fileTypeSelectSelector_,
+							this.getHtmlElement()).removeAttr('disabled');
 					return false;
 				}
 			}
 		}
 
-		this.$fileTypeSelectElement_.attr('disabled', 'true');
+		$(this.fileTypeSelectSelector_,
+				this.getHtmlElement()).attr('disabled', 'disabled');
+
 		return false;
 	};
 
