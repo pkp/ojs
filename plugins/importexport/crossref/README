@@ -1,15 +1,17 @@
 ================================
 === OJS CrossRef Export Plugin
-=== Version: 1.1
-=== Release date: June 8, 2006
-=== Author: Juan Pablo Alperin <juan@geeky.net>
+=== Version: 2.0
+=== Author: Bozana Bokan <bozana.bokan@cedis.fu-berlin.de>
+=== Author: Juan Pablo Alperin <juan@alperin.ca>
+=== Author: James MacGregor <jmacgreg@gmail.com>
+=== Last update: July 2014
 ================================
 
 About
 -----
-This plugin for OJS 2 provides an import/export plugin to generate metadata information for articles 
-and issues for indexing in CrossRef.  Details on the XML format and data requirements is available at: 
-http://www.crossref.org/schema
+This plugin provides an import/export plugin to generate metadata information for articles 
+and issues for indexing in CrossRef as well as registration of the metadata with CrossRef from within OJS. Details on the XML format and data requirements is available at: 
+http://doi.crossref.org/schemas/common4.3.0.xsd
 
 License
 -------
@@ -18,22 +20,8 @@ complete terms of this license.
 
 System Requirements
 -------------------
-Same requirements as the OJS 2.x core.
-
-Installation
-------------
-To install the plugin:
- - copy the crossref folder into OJS/plugins/importexport
-
-The export functionality can then be accessed through: 
- - Home > User > Journal Management > Import/Export Data > CrossRef XML Export Plugin
-
-Known Issues/Limitations
----------
-The handling of a DOI suffix is currently hardcoded into the plugin and any changes have to be made 
-by editing the code.  Until such a time when DOI's are part of the OJS core this is seen as the 
-quick and dirty solution.  Once DOIs are handled by the core then this plugin should be updated to 
-reflect as much.
+Same requirements as the OJS 2.4.x core.
+Additionally CURL library.
 
 Localization
 ------------
@@ -41,12 +29,20 @@ Localized titles are determined from the per-article language setting, rather th
 As such, localized bibliographic data should be handled properly as per the CrossRef data format 
 guidelines, however, it has not been explicitly tested as of this release.
 
+Note
+---------
+In order to register DOIs with CrossRef from within OJS you will have to enter your username and password. 
+If you do not enter or have your own username and password you'll still be able to export into the 
+CrossRef XML format but you cannot register your DOIs from within OJS.
+Please note, that the password will be saved as plain text, i.e. not encrypted, due to CrossRef registration service requirements.
+
 Contact/Support
 ---------------
-Please email the author for support, bugfixes, or comments.
-Email: <juan@geeky.net>
+Please use the PKP support forum (http://pkp.sfu.ca/support/forum/), PKP Bugzilla (http://pkp.sfu.ca/bugzilla/) or email the authors for support, bugfixes, or comments.
 
 Version History
 ---------------
 1.0	- Initial Release
 1.1	- Updated to support CrossRef 4.3.0 schema (by Alec Smecher)
+1.2 - Register from within OJS
+2.0 - Update of plugin to include automatic registration
