@@ -1,1 +1,1 @@
-plugins/importexport/datacite/classes/DOIExportPlugin.inc.php
+../../datacite/classes/DOIExportPlugin.inc.php
