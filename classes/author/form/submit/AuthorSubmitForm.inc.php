@@ -109,11 +109,11 @@ class AuthorSubmitForm extends Form {
 		$journal =& $this->request->getJournal();
 
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO'); /* @var $editAssignmentDao EditAssignmentDAO */
 		$sectionEditors =& $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $sectionId);
 
 		foreach ($sectionEditors as $sectionEditorEntry) {
-			$editAssignment = new EditAssignment();
+			$editAssignment = $editAssignmentDao->newDataObject();
 			$editAssignment->setArticleId($article->getId());
 			$editAssignment->setEditorId($sectionEditorEntry['user']->getId());
 			$editAssignment->setCanReview($sectionEditorEntry['canReview']);
