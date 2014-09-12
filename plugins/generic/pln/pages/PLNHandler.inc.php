@@ -37,9 +37,10 @@ class PLNHandler extends Handler {
 		$deposit_dao =& DAORegistry::getDAO('DepositDAO');
 		$file_manager = new FileManager();
 		
-		$deposit_uuid = !isset($args) || empty($args) ? null : $args[0];
+		$deposit_uuid = (!isset($args) || empty($args)) ? null : $args[0];
 
-		if (!$deposit_uuid) return FALSE;
+		// sanitize the input
+		if (!preg_match('/^[[:xdigit:]]{8}-[[:xdigit:]]{4}-[[:xdigit:]]{4}-[[:xdigit:]]{4}-[[:xdigit:]]{12}$/',$deposit_uuid)) return FALSE;
 		
 		$deposit =& $deposit_dao->getDepositByUUID($journal->getId(),$deposit_uuid);
 		

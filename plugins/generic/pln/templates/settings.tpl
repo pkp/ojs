@@ -24,8 +24,8 @@
 				</td>
 				<td class="value">
 					<p>{translate key="plugins.generic.pln.settings.terms_of_use_help"}</p>
-					{foreach name=terms from=$terms_of_use key=term_name item=term_text}
-					<p>{$term_text|escape}</p>
+					{foreach name=terms from=$terms_of_use key=term_name item=term_data}
+					<p>{$term_data.term|escape}</p>
 					<input type="checkbox" name="terms_agreed[{$term_name|escape}]" value="1"{if $terms_of_use_agreement[$term_name] == 1} checked{/if}><label class="agree" for="terms_agreed[{$term_name|escape}]">{translate key="plugins.generic.pln.settings.terms_of_use_agree"}</label>
 					{if !$smarty.foreach.terms.last }<div class="separator">&nbsp;</div>{/if}
 					{/foreach}

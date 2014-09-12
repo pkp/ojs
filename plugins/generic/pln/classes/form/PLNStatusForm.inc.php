@@ -41,9 +41,20 @@ class PLNStatusForm extends Form {
 		$deposit_dao =& DAORegistry::getDAO('DepositDAO');
 		$journal =& Request::getJournal();
 		$network_status = $this->_plugin->getSetting($journal->getId(), 'pln_accepting');
+		$network_status_message = $this->_plugin->getSetting($journal->getId(), 'pln_accepting_message');
+		
+		if (!$network_status_message) {
+			if ($network_status === TRUE) {
+				$network_status_message = __(PLN_PLUGIN_NOTIFICATION_PLN_ACCEPTING);
+			} else {
+				$network_status_message = __(PLN_PLUGIN_NOTIFICATION_PLN_NOT_ACCEPTING);
+			}
+		}
+		 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('deposits', $deposit_dao->getDepositsByJournalId($journal->getId()));
-		$templateMgr->assign('network_status', ($network_status?PLN_PLUGIN_NOTIFICATION_PLN_ACCEPTING:PLN_PLUGIN_NOTIFICATION_PLN_NOT_ACCEPTING));
+		$templateMgr->assign('network_status', $network_status);
+		$templateMgr->assign('network_status_message', $network_status_message);
 		parent::display();
 	}  
 	

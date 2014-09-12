@@ -87,6 +87,8 @@ class PLNPlugin extends GenericPlugin {
 		if ($success) {
 		
 			$this->registerDAOs();
+			$this->import('classes.Deposit');
+			$this->import('classes.DepositObject');
 		
 			// Delete all plug-in data for a journal when the journal is deleted
 			HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'callbackDeleteJournalById'));
@@ -453,14 +455,14 @@ class PLNPlugin extends GenericPlugin {
 		
 		// update the network status
 		$element = $service_document->getElementsByTagName('pln_accepting')->item(0);
-		$this->updateSetting($journal_id, 'pln_accepting', (($element->getAttribute('is_acepting')=='yes')?TRUE:FALSE));
+		$this->updateSetting($journal_id, 'pln_accepting', (($element->getAttribute('is_accepting')=='Yes')?TRUE:FALSE));
 		$this->updateSetting($journal_id, 'pln_accepting_message', $element->nodeValue);
 		
 		// update the terms of use
 		$term_elements = $service_document->getElementsByTagName('terms_of_use')->item(0)->childNodes;
 		$terms = array();
 		foreach($term_elements as $term_element) {
-			$terms[$term_element->tagName] = $term_element->nodeValue;
+			$terms[$term_element->tagName] = array('updated' => $term_element->getAttribute('updated'), 'term' => $term_element->nodeValue);
 		}
 		
 		$new_terms = serialize($terms);

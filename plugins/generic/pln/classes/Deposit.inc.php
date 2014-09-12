@@ -12,6 +12,7 @@
  *
  * @brief Packages deposit objects for submission to a PLN
  */
+import('classes.file.JournalFileManager');
 
 class Deposit extends DataObject {
 
@@ -60,7 +61,7 @@ class Deposit extends DataObject {
 		$title = $atom->createElement('title', $journal->getLocalizedTitle());
 		$entry->appendChild($title);
 		
-		$pkp_journal_url = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:url', $journal->getUrl());
+		$pkp_journal_url = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:journal_url', $journal->getUrl());
 		$entry->appendChild($pkp_journal_url);
 		
 		$issn = '';
@@ -81,7 +82,6 @@ class Deposit extends DataObject {
 		
 		$updated = $atom->createElement('updated', strftime("%FT%TZ",strtotime($this->getDateModified())));
 		$entry->appendChild($updated);
-		
 		
 		$url = $journal->getUrl() . '/' . PLN_PLUGIN_ARCHIVE_FOLDER . '/deposits/' . $this->getUUID();
 		$pkp_details = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:content', $url);
@@ -151,6 +151,7 @@ class Deposit extends DataObject {
 		$published_article_dao =& DAORegistry::getDAO('PublishedArticleDAO');
 		PluginRegistry::loadCategory('importexport');
 		$export_plugin =& PluginRegistry::getPlugin('importexport','NativeImportExportPlugin');
+		$pln_plugin =& PluginRegistry::getPlugin('generic','plnplugin');
 		$file_manager = new JournalFileManager($journal_dao->getById($this->getJournalId()));
 		$object_types = unserialize(PLN_PLUGIN_DEPOSIT_SUPPORTED_OBJECTS);
 		
@@ -161,6 +162,7 @@ class Deposit extends DataObject {
 		$bag_dir = $this->getDepositDir() . DIRECTORY_SEPARATOR . 'bag';
 		$package_file = $this->getPackageFilePath();
 		$export_file =  $bag_dir . DIRECTORY_SEPARATOR . $this->getObjectType() . '.xml';
+		$terms_file =  $bag_dir . DIRECTORY_SEPARATOR . 'terms.xml';
 		
 		$bag = new BagIt($bag_dir);
 		
@@ -204,6 +206,32 @@ class Deposit extends DataObject {
 		
 		// delete the export file
 		unlink($export_file);
+		
+		// add the current terms to the bag
+		$atom  = new DOMDocument('1.0', 'utf-8');
+		$entry = $atom->createElementNS('http://www.w3.org/2005/Atom', 'entry');
+		$entry->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:dcterms', 'http://purl.org/dc/terms/');
+		$entry->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:pkp', 'http://pkp.sfu.ca/SWORD');
+
+		$terms = unserialize($pln_plugin->getSetting($this->getJournalId(), 'terms_of_use'));
+		
+		$pkp_terms_of_use = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:terms_of_use');
+		foreach ($terms as $term_name => $term_data) {
+			$element = $atom->createElementNS('http://pkp.sfu.ca/SWORD', $term_name, $term_data['term']);
+			$element->setAttribute('updated',$term_data['updated']);
+			$pkp_terms_of_use->appendChild($element);
+		}
+
+		$entry->appendChild($pkp_terms_of_use);
+		$atom->appendChild($entry);
+		$atom->save($terms_file);
+
+		// add the exported content to the bag
+		$bag->addFile($terms_file, 'terms' . $this->getUUID() . '.xml');
+		$bag->update();
+		
+		// delete the export file
+		unlink($terms_file);
 
 		// create the bag
 		$bag->package($package_file,'zip');
@@ -239,12 +267,19 @@ class Deposit extends DataObject {
 				$this->getAtomDocumentPath()
 			);
 		}
-				
+						
 		// if we get the OK, set the status as transferred
 		if (($result['status'] == PLN_PLUGIN_HTTP_STATUS_OK) || ($result['status'] == PLN_PLUGIN_HTTP_STATUS_CREATED)) {
 			$this->setTransferredStatus();
+			// unset a remote error if this worked
+			$this->setRemoteFailureStatus(FALSE);
 			// if this was an update, unset the update flag
 			$this->setUpdateStatus(FALSE);
+			$this->setLastStatusDate(time());
+			$deposit_dao->updateDeposit($this);
+		} else {
+			// we got an error back from the staging server
+			$this->setRemoteFailureStatus();
 			$this->setLastStatusDate(time());
 			$deposit_dao->updateDeposit($this);
 		}
