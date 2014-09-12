@@ -1,1 +1,1 @@
-/Applications/MAMP/htdocs/ojs/plugins/importexport/datacite/classes/DOIExportDom.inc.php
+plugins/importexport/datacite/classes/DOIExportDOM.inc.php
