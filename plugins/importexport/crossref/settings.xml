@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin_settings SYSTEM "../../../lib/pkp/dtd/pluginSettings.dtd">
+
+<!--
+  * plugins/importexport/crossref/settings.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default plugin settings.
+  -->
+
+<plugin_settings>
+	<setting type="string">
+		<name>username</name>
+		<value></value>
+	</setting>
+	<setting type="string">
+		<name>password</name>
+		<value></value>
+	</setting>
+</plugin_settings>

@@ -117,12 +117,20 @@ class EditAssignmentDAO extends DAO {
 	}
 
 	/**
+	 * Construct a new data object corresponding to this DAO.
+	 * @return EditAssignment
+	 */
+	function newDataObject() {
+		return new EditAssignment();
+	}
+
+	/**
 	 * Internal function to return an edit assignment object from a row.
 	 * @param $row array
 	 * @return EditAssignment
 	 */
 	function &_returnEditAssignmentFromRow(&$row) {
-		$editAssignment = new EditAssignment();
+		$editAssignment = $this->newDataObject();
 		$editAssignment->setEditId($row['edit_id']);
 		$editAssignment->setArticleId($row['article_id']);
 		$editAssignment->setEditorId($row['editor_id']);
@@ -145,7 +153,7 @@ class EditAssignmentDAO extends DAO {
 	/**
 	 * Insert a new EditAssignment.
 	 * @param $editAssignment EditAssignment
-	 */	
+	 */
 	function insertEditAssignment(&$editAssignment) {
 		$this->update(
 			sprintf('INSERT INTO edit_assignments

@@ -31,7 +31,7 @@ class EditorAction extends SectionEditorAction {
 	 */
 	function assignEditor($articleId, $sectionEditorId, $isEditor, $send, $request) {
 		$editorSubmissionDao =& DAORegistry::getDAO('EditorSubmissionDAO');
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO'); /* @var $editAssignmentDao EditAssignmentDAO */
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$user =& $request->getUser();
@@ -50,7 +50,7 @@ class EditorAction extends SectionEditorAction {
 				$email->send($request);
 			}
 
-			$editAssignment = new EditAssignment();
+			$editAssignment = $editAssignmentDao->newDataObject();
 			$editAssignment->setArticleId($articleId);
 			$editAssignment->setCanEdit(1);
 			$editAssignment->setCanReview(1);
