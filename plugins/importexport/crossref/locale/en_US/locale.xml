@@ -37,7 +37,7 @@
 
 	<message key="plugins.importexport.crossref.export.unregistered">Unregistered Articles</message>
 	<message key="plugins.importexport.crossref.export.selectUnregistered">Select unregistered Articles</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">All published articleshave already been registered (or none of them has a DOI assigned).</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">All published articles have already been registered (or none of them has a DOI assigned).</message>
 
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage:
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...

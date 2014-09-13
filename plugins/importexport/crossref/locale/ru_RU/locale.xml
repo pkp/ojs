@@ -13,23 +13,37 @@
   -->
  
 <locale name="ru_RU" full_name="Russian">
-	<message key="plugins.importexport.crossref.displayName">Плагин «Экспорт в формате CrossRef XML»</message>
-	<message key="plugins.importexport.crossref.description">Этот плагин экспортирует метаданные статей в формате CrossRef XML.</message>
-	
-	<message key="plugins.importexport.crossref.export">Экспортировать данные</message>
-	<message key="plugins.importexport.crossref.export.issues">Экспортировать выпуски</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Выберите выпуск для экспорта.</message>
-	<message key="plugins.importexport.crossref.export.articles">Экспортировать статьи</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Выберите статьи для экспорта.</message>
-	
+	<message key="plugins.importexport.crossref.description">Этот плагин экспортирует или регистрирует метаданные статьи в формате CrossRef.</message>
+	<message key="plugins.importexport.crossref.displayName">Плагин «Экспорт/Регистрация в CrossRef»</message>
+	<message key="plugins.importexport.crossref.requirements">Требования</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Все требования плагина выполнены.</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Плагин «CrossRef» не настроен! Настройте этот плагин на его <a href="{$settingsUrl}">странице настроек</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[Плагин открытого идентификатора «DOI» не настроен! Включите и настройте этот плагин на странице настроек <a href="{$doiUrl}" target="_blank">плагина «DOI»</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Издатель журнала не настроен! Вы должны добавить организацию-издателя на <a href="{$publisherUrl}" target="_blank">шаге 1.5 настройки журнала</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Следующая информация необходима для успешной передачи в депозитарий CrossRef.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Имя ответственного</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">E-mail ответственного</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Пожалуйста, введите имя ответственного.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">>Пожалуйста, введите адрес электронной почты ответственного.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Автоматически регистрировать DOI</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS будет автоматически передавать DOI статей в депозитарий CrossRef после их опубликования. Обратите внимание, что на эту обработку после опубликования может требоваться некоторое время. Вы можете проверить все незарегистрированные DOI в <a href="">списке незарегистрированных статей</a>.]]></message>
+
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Этот плагин может быть настроен на автоматическую регистрацию цифровых идентификаторов объектов (DOI) в CrossRef. Вам будут нужны имя пользователя и пароль (их можно получить у <a href="http://www.crossref.org" target="_blank">CrossRef</a>), чтобы делать это. Если у вас нет вашего собственного имени пользователя и пароля вы по-прежнему сможете экспортировать в формат CrossRef XML, но не сможете регистрировать ваши DOI в CrossRef напрямую из OJS.]]></message>
+
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Здесь вы можете <a href="{$settingsUrl}">настроить плагин «Экспорт/Регистрация в CrossRef»</a>.]]></message>
+
+	<message key="plugins.importexport.crossref.settings.form.description">Пожалуйста настройте плагин «Экспорт/Регистрация в CrossRef»:</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Имя пользователя</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Пожалуйста, введите имя пользователя, которое вы получили от CrossRef.</message>
+
+	<message key="plugins.importexport.crossref.export.unregistered">Незарегистрированные статьи</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Выбрать незарегистрированные статьи</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">Все опубликованные статьи уже были зарегистрированы (или ни одной из них не был присвоен DOI).</message>
+
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Вызов: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">ОШИБКА:</message>
 
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Нет выпуска с указанным ID выпуска «{$issueId}».</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Нет статьи с указанным ID статьи «{$articleId}».</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Для того чтобы использовать этот плагин, пожалуйста, перейдите в категорию плагинов «Плагины открытых идентификаторов», включите и настройте плагин DOI и укажите там верный префикс DOI.</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Дата опубликования отсутствует для статьи с ID {$param}.</message>
 </locale>

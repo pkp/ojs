@@ -19,6 +19,7 @@
 	<message key="plugins.importexport.common.settings">Настройки</message>
 
 	<message key="plugins.importexport.common.settings.form.password">Пароль</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Обратите внимание, что пароль будет сохранен в виде обычного текста, то есть не будет зашифрован.</message>
 	<message key="plugins.importexport.common.settings.form.passwordRequired">Пожалуйста, введите пароль.</message>
 	
 	<message key="plugins.importexport.common.register">Зарегистрировать</message>
@@ -29,17 +30,21 @@
 	<message key="plugins.importexport.common.register.warning">Регистрация большого количества объектов может занять длительное время, поэтому подождите после щелчка на кнопке «Зарегистрировать». Вы будете уведомлены, когда регистрация будет завершена.</message>
 	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[Прямая регистрация сейчас отключена. Пожалуйста, <a href="{$settingsUrl}">настройте</a> имя пользователя и пароль, чтобы регистрировать объекты напрямую в регистрационном агентстве.]]></message>
 
+	<message key="plugins.importexport.common.markRegistered">Пометить как зарегистрированное</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Щелкните на этой кнопке, чтобы пометить зарегистрированные объекты (например, если они были зарегистрированы раньше или вручную).</message>
+
 	<message key="plugins.importexport.common.update">Обновить</message>
 	<message key="plugins.importexport.common.updateDescription">Щелкните на этой кнопке, чтобы обновить метаданные этого объекта в регистрационном агентстве. Это работает только если вы ранее успешно зарегистрировали этот объект!</message>
 		
 	<message key="plugins.importexport.common.export">Экспортировать данные</message>
+	<message key="plugins.importexport.common.export.unAvailable">Экспорт данных сейчас не доступен. Пожалуйста, проверьте требования плагина.</message>
 	<message key="plugins.importexport.common.export.unregistered">Экспортировать все незарегистрированные выпуски, статьи и гранки</message>
 	<message key="plugins.importexport.common.export.selectUnregistered">Выбрать незарегистрированные выпуски, статьи и гранки</message>
-	<message key="plugins.importexport.common.export.noUnregistered">Все опубликованные выпуски, статьи и гранки уже были зарегистрированы (или ни одному из них не были присвоены DOI).</message>
-	<message key="plugins.importexport.common.export.issues">Экспортировать определенные выпуски</message>
+	<message key="plugins.importexport.common.export.noUnregistered">Все опубликованные выпуски, статьи и гранки уже были зарегистрированы (или ни одному из них не был присвоен DOI).</message>
+	<message key="plugins.importexport.common.export.issues">Все выпуски</message>
 	<message key="plugins.importexport.common.export.selectIssue">Выбрать выпуски</message>
 	<message key="plugins.importexport.common.export.noIssues">На текущий момент нет выпусков с назначенными DOI.</message>
-	<message key="plugins.importexport.common.export.articles">Экспортировать определенные статьи</message>
+	<message key="plugins.importexport.common.export.articles">Все статьи</message>
 	<message key="plugins.importexport.common.export.selectArticle">Выбрать статьи</message>
 	<message key="plugins.importexport.common.export.noArticles">На текущий момент нет статей с назначенными DOI.</message>
 	<message key="plugins.importexport.common.export.galleys">Экспортировать определенные гранки</message>
