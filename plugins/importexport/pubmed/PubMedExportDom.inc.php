@@ -117,6 +117,7 @@ class PubMedExportDom {
 
 		/* --- DOI --- */
         /* --- If no DOI, use the eScholarship ARK instead -- */
+		/* TODO NEED TO FIND OUT WHICH ID WE PUT IN THE ARKS.db*/
 		
 		 
 		if ($doi = $article->getDOI()) {
@@ -127,7 +128,7 @@ class PubMedExportDom {
 		   $articleID = $article->getID();           
 		   $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
 		   error_log('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where source = "ojs" AND external_id=' .$articleID. '"');
-		   error_log($qualifiedArk);
+		   error_log($qualifiedArk . "is the ARK for" . $articleID);
           
 		    if (!$qualifiedArk){
 		         error_log($articleID . " has no ARK in the database!");
