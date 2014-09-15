@@ -27,7 +27,7 @@ Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu 
 Herzlichen Dank für Ihren Beitrag zu der Zeitschrift. Ich freue mich darauf, Ihre Einreichung zu erhalten.
 
 {$editorialContactSignature}</body>
-		<description>Dies ist eine automatisch erzeugte E-Mail, die an eine/n Autor/in gesendet wird, die eine Buchrezension übernommen hat, als eine Erinnerung, dass die Rezension bald fällig ist.</description>
+		<description>Dies ist eine automatisch erzeugte E-Mail, die an eine/n Autor/in gesendet wird, der/die eine Buchrezension übernommen hat, als eine Erinnerung, dass die Rezension bald fällig ist.</description>
 	</email_text>
 	<email_text key="BFR_REVIEW_REMINDER_LATE">
 		<subject>Buch zur Rezension: Rezension fällig</subject>
@@ -44,45 +44,7 @@ Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu 
 Herzlichen Dank für Ihren Beitrag zu der Zeitschrift. Ich freue mich darauf, Ihre Einreichung zu erhalten.
 
 {$editorialContactSignature}</body>
-		<description>Dies ist eine automatisch erzeugte E-Mail, die an eine/n Autor/in gesendet wird, die eine Buchrezension übernommen hat, nachdem das Fälligkeitsdatum verstrichen ist.</description>
-	</email_text>
-	<email_text key="BFR_REVIEWER_REMOVED">
-		<subject>Buch zur Rezension</subject>
-		<body>Liebe/r {$authorName},
-
-diese E-Mail bestätigt, dass Sie als Rezensent/in für {$bookForReviewTitle} entfernt worden sind, das nun anderen Autor/innen, die eine Rezension dazu verfassen möchten, zur Verfügung steht.
-
-Ich hoffe, dass Sie in Erwägung ziehen, ein anderes Buch aus unserer Liste zu rezensieren - jetzt oder in der Zukunft.
-
-{$editorialContactSignature}</body>
-		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n interessierte/n Autor/in geschickt, wenn ein Buch nicht mehr zur Rezension zur Verfügung steht.</description>
-	</email_text>
-	<email_text key="BFR_BOOK_MAILED">
-		<subject>Buch zur Rezension: Buch verschickt</subject>
-		<body>Liebe/r {$authorName},
-
-diese E-Mail bestätigt, dass ich Ihnen ein Exemplar von {$bookForReviewTitle} an die folgende Anschrift aus Ihrem Benutzer/innenprofil geschickt habe:
-{$authorMailingAddress}
- 
-Um Ihre Buchrezension einzureichen, loggen Sie sich bitte auf der Website der Zeitschrift ein und schließen Sie den Einreichungsprozess ab.
-
-Einreichungs-URL: {$submissionUrl}
-
-Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu dieser Buchrezension haben.
-
-{$editorialContactSignature}</body>
-		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n Rezensent/in geschickt, wenn die/der Redakteur/in ein Exemplar des Buches an den/die Rezensent/in gesendet hat.</description>
-	</email_text>
-	<email_text key="BFR_BOOK_DENIED">
-		<subject>Buch zur Rezension</subject>
-		<body>Liebe/r {$authorName},
-
-leider kann ich Ihnen {$bookForReviewTitle} derzeit nicht zu einer Rezension zuteilen.
-
-Ich hoffe, dass Sie in Erwägung ziehen, ein anderes Buch aus unserer Liste zu besprechen - jetzt oder in Zukunft.
-
-{$editorialContactSignature}</body>
-		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n interesierte/n Rezensent/in geschickt, wenn das Buch nicht zur Rezension zugeteilt werden kann.</description>
+		<description>Dies ist eine automatisch erzeugte E-Mail, die an eine/n Autor/in gesendet wird, der/die eine Buchrezension übernommen hat, nachdem das Fälligkeitsdatum verstrichen ist.</description>
 	</email_text>
 	<email_text key="BFR_BOOK_ASSIGNED">
 		<subject>Buch zur Rezension: Buch zugeteilt</subject>
@@ -108,6 +70,17 @@ Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu 
 {$editorialContactSignature}</body>
 		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n Rezensent/in geschickt, wenn ein/e Redakteur/in das Buch dem/der Rezensent/in zugewiesen hat.</description>
 	</email_text>
+	<email_text key="BFR_BOOK_DENIED">
+		<subject>Buch zur Rezension</subject>
+		<body>Liebe/r {$authorName},
+
+leider kann ich Ihnen {$bookForReviewTitle} derzeit nicht zu einer Rezension zuteilen.
+
+Ich hoffe, dass Sie in Erwägung ziehen, ein anderes Buch aus unserer Liste zu besprechen - jetzt oder in Zukunft.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n interessierte/n Rezensent/in geschickt, wenn das Buch nicht zur Rezension zugeteilt werden kann.</description>
+	</email_text>
 	<email_text key="BFR_BOOK_REQUESTED">
 		<subject>Buch zur Rezension: Buchanfrage</subject>
 		<body>Liebe/r {$editorName},
@@ -118,5 +91,32 @@ Können Sie bitte bestätigen, dass das Buch noch zur Rezension zur Verfügung s
 
 {$authorContactSignature}</body>
 		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n Autor/in gesendet, der/die daran interessiert ist, eine Besprechung zu einem gelisteten Buch zu verfassen.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_MAILED">
+		<subject>Buch zur Rezension: Buch verschickt</subject>
+		<body>Liebe/r {$authorName},
+
+diese E-Mail bestätigt, dass ich Ihnen ein Exemplar von {$bookForReviewTitle} an die folgende Anschrift aus Ihrem Benutzer/innenprofil geschickt habe:
+{$authorMailingAddress}
+ 
+Um Ihre Buchrezension einzureichen, loggen Sie sich bitte auf der Website der Zeitschrift ein und schließen Sie den Einreichungsprozess ab.
+
+Einreichungs-URL: {$submissionUrl}
+
+Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu dieser Buchrezension haben.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n Rezensent/in geschickt, wenn die/der Redakteur/in ein Exemplar des Buches an den/die Rezensent/in gesendet hat.</description>
+	</email_text>
+	<email_text key="BFR_REVIEWER_REMOVED">
+		<subject>Buch zur Rezension</subject>
+		<body>Liebe/r {$authorName},
+
+diese E-Mail bestätigt, dass Sie als Rezensent/in für {$bookForReviewTitle} entfernt worden sind, das nun anderen Autor/innen, die eine Rezension dazu verfassen möchten, zur Verfügung steht.
+
+Ich hoffe, dass Sie in Erwägung ziehen, ein anderes Buch aus unserer Liste zu rezensieren - jetzt oder in der Zukunft.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n interessierte/n Autor/in geschickt, wenn ein Buch nicht mehr zur Rezension zur Verfügung steht.</description>
 	</email_text>
 </email_texts>

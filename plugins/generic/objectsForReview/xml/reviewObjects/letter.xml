@@ -5,7 +5,7 @@
 	<roleSelectionOptions>
 		<selectionOption>plugins.generic.objectsForReview.object.letter.person.author</selectionOption>
 		<selectionOption>plugins.generic.objectsForReview.object.letter.person.contributor</selectionOption>
-		<selectionOption>plugins.generic.objectsForReview.object.letter.person.recepient</selectionOption>
+		<selectionOption>plugins.generic.objectsForReview.object.letter.person.recipient</selectionOption>
 	</roleSelectionOptions>
 	<objectMetadata>
 	<metadata type="singleLineTextBox" required="false" display="false" key="letter_type">

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/de_DE/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review email template localized (de_DE) default text.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+<email_texts locale="de_DE">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Objekt zur Rezension: Erinnerung an Fälligkeitsdatum</subject>
+		<body>Liebe/r {$authorName},
+
+dies ist eine freundliche Erinnerung, dass Ihre Rezension von {$objectForReviewTitle} am {$objectForReviewDueDate} fällig ist.
+
+Um Ihre Rezension dieses Objekts einzureichen, loggen Sie sich bitte auf der Website der Zeitschrift ein und schließen Sie den Einreichungsprozess ab. Um es Ihnen zu erleichtern, ist ein URL zur Einreichung hier aufgeführt:
+
+Einreichungs-URL: {$submissionUrl}
+
+Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu dieser Rezension haben.
+
+Herzlichen Dank für Ihren Beitrag zu der Zeitschrift. Ich freue mich darauf, Ihre Einreichung zu erhalten.
+
+{$editorialContactSignature}</body>
+		<description>Dies ist eine automatisch erzeugte E-Mail, die an eine/n Autor/in gesendet wird, der/die eine Rezension übernommen hat, als eine Erinnerung, dass die Rezension bald fällig ist.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Objekt zur Rezension: Rezension fällig</subject>
+		<body>Liebe/r {$authorName},
+
+dies ist eine freundliche Erinnerung, dass Ihre Rezension von {$objectForReviewTitle} am {$objectForReviewDueDate} fällig gewesen ist, aber noch nicht hier eingegangen ist.
+
+Um Ihre Rezension des Objekts einzureichen, loggen Sie sich bitte auf der Website der Zeitschrift ein und schließen Sie den Einreichungsprozess ab. Um es Ihnen zu erleichtern, ist ein URL zur Einreichung hier aufgeführt:
+
+Einreichungs-URL: {$submissionUrl}
+
+Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu dieser Rezension haben.
+
+Herzlichen Dank für Ihren Beitrag zu der Zeitschrift. Ich freue mich darauf, Ihre Einreichung zu erhalten.
+
+{$editorialContactSignature}</body>
+		<description>Dies ist eine automatisch erzeugte E-Mail, die an eine/n Autor/in gesendet wird, die eine Rezension übernommen hat, nachdem das Fälligkeitsdatum verstrichen ist.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Objekt zur Rezension: Objekt zugeteilt</subject>
+		<body>Liebe/r {$authorName},
+
+diese E-Mail bestätigt, dass Ihnen {$objectForReviewTitle} zur Rezension zugeteilt worden ist, die bis {$objectForReviewDueDate} fällig ist.
+
+Bitte stellen Sie sicher, dass Ihre Anschrift in Ihrem Benutzer/innenprofil aktuell ist. Diese Adresse wird genutzt werden, um Ihnen ein Exemplar des Objekts für die Besprechung zukommen zu lassen.
+
+Die Anschrift, die wir momentan in unseren Unterlagen haben, ist:
+{$authorMailingAddress}
+
+Wenn diese Adresse unvollständig ist oder Sie nicht mehr unter dieser Anschrift erreichbar sind, benutzen Sie bitte den folgenden URL zum Benutzer/innenprofil, um Ihre Anschrift zu aktualisieren:
+
+Benutzer/innenprofil-URL: {$userProfileUrl}
+ 
+Um Ihre Rezension einzureichen, loggen Sie sich bitte auf der Website der Zeitschrift ein und schließen Sie den Einreichungsprozess ab.
+
+Einreichungs-URL: {$submissionUrl}
+
+Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu dieser Rezension haben.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n Rezensent/in geschickt, wenn ein/e Redakteur/in das Objekt dem/der Rezensent/in zugewiesen hat.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Objekt zur Rezension</subject>
+		<body>Liebe/r {$authorName},
+
+leider kann ich Ihnen {$objectForReviewTitle} derzeit nicht zu einer Rezension zuteilen.
+
+Ich hoffe, dass Sie in Erwägung ziehen, ein anderes Objekt aus unserer Liste zu besprechen - jetzt oder in Zukunft.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n interessierte/n Rezensent/in geschickt, wenn das Objekt nicht zur Rezension zugeteilt werden kann.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Objekt zur Rezension: Anfrage</subject>
+		<body>Liebe/r {$editorName},
+
+ich bin daran interessiert, eine Rezension von {$objectForReviewTitle} zu verfassen.
+
+Können Sie bitte bestätigen, dass das Objekt noch zur Rezension zur Verfügung steht?
+
+{$authorContactSignature}</body>
+		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n Autor/in gesendet, der/die daran interessiert ist, eine Besprechung zu einem gelisteten Objekt zu verfassen.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Objekt zur Rezension: Objekt verschickt</subject>
+		<body>Liebe/r {$authorName},
+
+diese E-Mail bestätigt, dass ich Ihnen ein Exemplar von {$objectForReviewTitle} an die folgende Anschrift aus Ihrem Benutzer/innenprofil geschickt habe:
+{$authorMailingAddress}
+ 
+Um Ihre Rezension einzureichen, loggen Sie sich bitte auf der Website der Zeitschrift ein und schließen Sie den Einreichungsprozess ab.
+
+Einreichungs-URL: {$submissionUrl}
+
+Bitte zögern Sie nicht, mich zu kontaktieren, wenn Sie Fragen oder Bedenken zu dieser Rezension haben.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n Rezensent/in geschickt, wenn die/der Redakteur/in ein Exemplar des Objekts an den/die Rezensent/in gesendet hat.</description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Objekt zur Rezension</subject>
+		<body>Liebe/r {$authorName},
+
+diese E-Mail bestätigt, dass Sie als Rezensent/in für {$objectForReviewTitle} entfernt worden sind, das nun anderen Autor/innen, die eine Rezension dazu verfassen möchten, zur Verfügung steht.
+
+Ich hoffe, dass Sie in Erwägung ziehen, ein anderes Objekt aus unserer Liste zu rezensieren - jetzt oder in der Zukunft.
+
+{$editorialContactSignature}</body>
+		<description>Diese E-Mail wird durch eine/n Redakteur/in an eine/n interessierte/n Autor/in geschickt, wenn ein Objekt nicht mehr zur Rezension zur Verfügung steht.</description>
+	</email_text>
+</email_texts>
