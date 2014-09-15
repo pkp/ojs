@@ -319,6 +319,16 @@ class SetupHandler extends ManagerHandler {
 						}
 					}
 					break;
+	            //lschiff 09082014 adding a case for saving a custom authorCopyrightNotice			
+				case 6:	
+					if ($request->getUserVar('copyrightNotice')) { 
+					 // Add a custom copyrightNotice
+						$editData = true;
+						$copyrightNotice = $setupForm->getData('copyrightNotice');
+						$copyrightNotice[$formLocale][] = array();
+						$setupForm->setData('copyrightNotice', $copyrightNotice);
+					}
+				break;
 			}
 
 			if (!isset($editData) && $setupForm->validate()) {
