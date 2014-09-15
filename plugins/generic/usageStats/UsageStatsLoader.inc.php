@@ -94,25 +94,31 @@ class UsageStatsLoader extends FileLoader {
 			if ($this->_autoStage) {
 				// Copy all log files to stage directory, except the current day one.
 				$fileMgr = new FileManager();
+				$logFiles = array();
 				$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
+
+				// It's possible that the processing directory have files that
+				// were being processed but the php process was stopped before
+				// finishing the processing. Just copy them to the stage directory too.
 				$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
 
-				if (is_array($logsDirFiles) && is_array($processingDirFiles)) {
-					// It's possible that the processing directory have files that
-					// were being processed but the php process was stopped before
-					// finishing the processing. Just copy them to the stage directory too.
-					$dirFiles = array_merge($logsDirFiles, $processingDirFiles);
-					foreach ($dirFiles as $filePath) {
-						// Make sure it's a file.
-						if ($fileMgr->fileExists($filePath)) {
-							// Avoid current day file.
-							$filename = pathinfo($filePath, PATHINFO_BASENAME);
-							$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
-							if ($filename == $currentDayFilename) continue;
+				if (is_array($logsDirFiles)) {
+					$logFiles = array_merge($logFiles, $logsDirFiles);
+				}
 
-							if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
-								$fileMgr->deleteFile($filePath);
-							}
+				if (is_array($processingDirFiles)) {
+					$logFiles = array_merge($logFiles, $processingDirFiles);
+				}
+
+				foreach ($logFiles as $filePath) {
+					// Make sure it's a file.
+					if ($fileMgr->fileExists($filePath)) {
+						// Avoid current day file.
+						$filename = pathinfo($filePath, PATHINFO_BASENAME);
+						$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
+						if ($filename == $currentDayFilename) continue;
+						if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
+							$fileMgr->deleteFile($filePath);
 						}
 					}
 				}
