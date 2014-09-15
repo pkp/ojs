@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/pubIds/doi/locale/fr_FR/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOI plugin localization strings
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Ce plugiciel permet l'assignation d'identifiants d'objets numériques aux numéros, articles, épreuves et fichiers supplémentaires dans OJS.</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Configuration du plugiciel DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Veuillez configurer le plugiciel DOI pour pouvoir gérer et utiliser les DOIs dans OJS:</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Contenu de la revue</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Veuillez choisir les objets auxquels des DOIs devraient être assignés.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">Veuillez sélectionner les objets publiés auxquels seront assignés des Identifiants d'Objets Numériques (DOI):</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Numéros</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Articles</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Épreuves</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Fichiers supplémentaires</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Préfixe DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[Le préfixe DOI est assigné par des agences d'enregistrement (p.ex. <a href="http://www.crossref.org" target="_new">CrossRef</a>) et est dans le format 10.xxxx (p.ex. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Le préfixe DOI est obligatoire et devrait avoir la forme de 10.xxxx.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Suffixe DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Un suffixe DOI peut prendre n'importe quelle forme, mais doit être unique parmi tout les objets publiés avec le même préfixe DOI:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Utilisez les modèle suivants pour générer des suffixes DOI. Utilisez %j pour des initiales de revues, %v pour le numéro du volume, %i pour le numéro du numéro, %Y pour l'année, %a pour l'ID de l'article OJS, %g Pour l'ID de l'épreuve OJS, %s pour l'ID du fichier OJS supplémentaire et %p pour le numéro de page.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">pour les numéros</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">pour les articles</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">pour les épreuves</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">pour les fichiers supplémentaires.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Par exemple, vol%viss%ipp%p peut former un DOI tel que 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Utiliser le modèle par défaut.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i pour les numéros<br />%j.v%vi%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves <br />%j.v%vi%i.%a.s%s pour les fichiers supplémentaires.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Utilisez les "identifiants personnalisés" pour les éléments publiés comme suffixe DOI (cela doit être activé à l'Étape 4). C'est le même identifiant qui sera utilisé pour les URLs publiques.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Entrez un suffixe DOI individuel pour chaque élément publié, indépendant et différent de "l'identifiant personnalisé" mentionné dans l'option précédente. Vous trouverez un champs de saisie DOI supplémentaire dans chaque page de métadonnées des éléments.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Veuillez entrer le modèle de suffixe DOI pour les numéros.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Veuillez entrer le modèle de suffixe DOI pour les articles.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Veuillez entrer le modèle de suffixe DOI pour les épreuves.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Veuillez entrer le modèle de suffixe DOI pour les fichiers supplémentaires.</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Réassigner les DOIs</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Si vous changez votre configuration DOI, les DOIs qui avaient déjà été assignés ne seront pas affectés. Une fois que la configuration des DOI est sauvegardée, utilisez ce bouton pour effacer tous les DOIs existants afin que la nouvelle configuration prennent effet avec les articles existants.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Êtes vous sûr de vouloir effacer tous les DOIs existants?</message>	
+
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">numéro</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">article</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">épreuve</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">fichier supplémentaire</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Ce que vous voyez est l'aperçu d'un DOI qui risque d'être incomplet. Un DOI n'a pas encore été généré. Publier ce numéro et regarder la page publique {$pubObjectType} générera automatiquement un DOI unique pour {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Ce DOI est déjà utilisé par un autre élément publié. Veuillez entrer un suffixe DOI unique pour chaque élément.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>Veuillez noter:</strong> sélectionnez les articles lorsque vous utilisez les identifiants d'objets numériques (DOI) <a href="http://www.crossref.org" target="_new">CrossRef</a>. Un article est considéré un ouvrage de contenu intellectuel ou artistique. Ainsi, l'exportation et l'inscription du DOI CrossRef se basent sur l'objet de publication qu'est l'article.]]></message>
+</locale>

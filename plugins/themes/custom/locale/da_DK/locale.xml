@@ -22,4 +22,6 @@
 	<message key="plugins.theme.custom.link">Link</message>
 	<message key="plugins.theme.custom.background">Baggrund</message>
 	<message key="plugins.theme.custom.foreground">Forgrund</message>
+	<message key="plugins.theme.custom.notWritablePlugin">NOTE: The journal-based stylesheet option is automatically enabled because this plugin's stylesheet file, "{$stylesheetFileLocation}", is not currently writable.</message>
+	<message key="plugins.theme.custom.perJournal">Journal-based Stylesheet</message>
 </locale>

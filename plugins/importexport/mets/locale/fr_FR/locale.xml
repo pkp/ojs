@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.importexport.METSExport.displayName">Plugiciel d'exportation METS XML</message>
+	<message key="plugins.importexport.METSExport.description">Exporte les revues en METS XML</message>
+	<message key="plugins.importexport.METSExport.settings">Paramètres</message>
+	<message key="plugins.importexport.METSExport.export">Exporter les données</message>
+	<message key="plugins.importexport.METSExport.export.issues">Exporter les numéros</message>
+	<message key="plugins.importexport.METSExport.export.selectIssue">Sélectionner les numéros à exporter.</message>
+	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Aucun numéro ne correspond à l'ID de numéro spécifié "{$issueId}".</message>
+	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Chemin de revue inconnu {$journalPath}</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">Utiliser l'encodage base64 comme enveloppeur de contenu</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Utiliser l'URL du flux de bits comme enveloppeur de contenu</message>
+	<message key="plugins.importexport.METSExport.settings.organization">élément METS:agent attribut organization</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">Niveau de conservation PREMIS</message>
+	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Exporter des fichiers supplémentaires</message>
+</locale>

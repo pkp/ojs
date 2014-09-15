@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR locale.
+  *
+  -->
+
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.reports.reviews.displayName">Rapport d'évaluation</message>
+	<message key="plugins.reports.reviews.description">Ce plugiciel met en place un rapport CSV contenant une liste d'assignations d'évaluation pour une revue.</message>
+	<message key="plugins.reports.reviews.round">Cycle</message>
+	<message key="plugins.reports.reviews.reviewerId">ID de l'évaluateur</message>
+	<message key="plugins.reports.reviews.reviewer">Évaluateur</message>
+	<message key="plugins.reports.reviews.dateAssigned">Date d'assignation</message>
+	<message key="plugins.reports.reviews.dateNotified">Date d'avis</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Date de confirmation</message>
+	<message key="plugins.reports.reviews.dateCompleted">Date de complétion</message>
+	<message key="plugins.reports.reviews.dateReminded">Date de rappel</message>
+</locale>
+

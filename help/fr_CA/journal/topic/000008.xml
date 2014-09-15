@@ -14,11 +14,11 @@
 
 <topic id="journal/topic/000008" locale="fr_CA" title="Statistiques et Rapports" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
 	<section>
-		<![CDATA[<p>Les statistiques et les rapports donnent la possibilité au directeur du journal d’extraire de l’information en regard de l’historique de l’usage du journal de deux manières. Premièrement, sous Statistiques, les statistiques annuelles son disponibles en un coup d’œil pour voir les données des présentations, des pratiques éditoriales et les usagers. Deuxièmement, le directeur du journal peut générer un des plusieurs types de rapports pour une période spécifique.</p><p>Il y a quatre types de rapports disponibles.:<ul>
-			<li><strong>Le rapport du journal</strong>: Rapport sur toutes les présentations au journal pour une période donnée.</li>
-			<li><strong>Le rapport de l’éditeur</strong>: Rapport sur les présentations, regroupées par éditeur.</li>
-			<li><strong>Rapport des révisions</strong>: Rapport sur les présentations, regroupées par réviseur.</li>
-			<li><strong>Rapport de rubrique</strong>: Rapport sur les présentations, regroupées par rubrique.</li>
+	  <![CDATA[<p>Les statistiques et les rapports donnent la possibilité au directeur de revue d&#x2019;extraire de l&#x2019;information en regard de l&#x2019;historique de l&#x2019;usage de la revue de deux manières. Premièrement, sous Statistiques, les statistiques annuelles sont disponibles en un coup d&#x2019;œil pour voir les données des soumissions, des pratiques éditoriales et les utilisateurs. Deuxièmement, le directeur de revue peut générer un des plusieurs types de rapports pour une période spécifique.</p><p>Il y a quatre types de rapports disponibles.&#x00A0;: <ul>
+			<li><strong>Le rapport de la revue</strong>&#x00A0;: Rapport sur toutes les soumissions à la revue pour une période donnée.</li>
+			<li><strong>Le rapport du rédacteur</strong>&#x00A0;: Rapport sur les soumissions, regroupées par éditeur.</li>
+			<li><strong>Rapport d&#x2019;évaluation</strong>&#x00A0;: Rapport sur les soumissions, regroupées par évaluateurs.</li>
+			<li><strong>Rapport de rubrique</strong>&#x00A0;: Rapport sur les soumissions, regroupées par rubrique.</li>
 		</ul>Ces rapports sont générés en format séparé par une virgule (CSV) et devraient être ouverts en utilisant un logiciel de tableur, comme Excel.]]>
 	</section>
 </topic>

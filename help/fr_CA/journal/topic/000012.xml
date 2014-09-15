@@ -12,16 +12,17 @@
   *
   -->
 
-<topic id="journal/topic/000012" locale="fr_CA" title="Création d’un nouvel usager" toc="journal/toc/000002" key="journal.users.createNewUser">
+<topic id="journal/topic/000012" locale="fr_CA" title="Créer un nouvel utilisateur" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>Le directeur du journal peut utiliser le lien «Création d’un nouvel usager» pour inscrire quelqu’un et lui assigner un rôle, à partir de directeur de journal à usager. L’usager peut, en ouvrant une séance dans le journal, compléter et modifier l’information de son profil entrée par le directeur du journal.</p><p><em>Changer un mot de passe</em>. Les usagers peuvent changer leur mot de passe une fois qu’ils sont connectés au journal. Le directeur du journal n’a pas accès  à un mot de passe une fois qu’il a été assigné. Cependant, le système va générer un nouveau mot de passe et l’envoyer par courriel aux usagers qui auront cliqué sur le lien «Mot de passe oublié» sous le cadre d’ouverture de session.</p>]]>	
+	  <![CDATA[<p>Le directeur de revue peut utiliser le lien  &#x00AB;&#x00A0;Création d&#x2019;un nouvel utilisateur&#x00A0;&#x00BB; pour inscrire quelqu&#x2019;un et lui assigner un rôle, allant de directeur de revue à lecteur. L&#x2019;utilisateur peut, en ouvrant une séance dans la revue, compléter et modifier l&#x2019;information de son profil entrée par le directeur de revue.</p>
+		<p><em>Changer un mot de passe. </em>Les utilisateurs peuvent changer leur mot de passe une fois qu&#x2019;ils sont connectés à la revue. Le directeur de revue n&#x2019;a pas accès  à un mot de passe une fois qu&#x2019;il a été assigné. Cependant, le système va générer un nouveau mot de passe et l&#x2019;envoyer par courriel aux utilisateurs qui auront cliqué sur le lien  &#x00AB;&#x00A0;Mot de passe oublié&#x00A0;&#x00BB; sous le cadre d&#x2019;ouverture de session.</p>]]>	
 	</section>
 
-	<section title="Inscrire un usager existant">
-		<![CDATA[<p>Le directeur du journal peut assigner à un usager existant à un ou plusieurs nouveaux rôles.</p>]]>
+	<section title="Inscrire un utilisateur existant">
+	  <![CDATA[<p>Le directeur de revue peut assigner à un utilisateur existant à un ou plusieurs nouveaux rôles.</p>]]>
 	</section>
 
-	<section title="Synchronisation des usagers">
-		<![CDATA[<p>La synchronisation de l’inscription  inscrira tous les usagers déjà inscrits dans un rôle spécifique dans un journal spécifique, dans le même rôle dans ce journal. Cette fonction permet d’avoir une série d’usagers (i.e. Réviseurs) d’être synchronisés entre divers journaux.</p>]]>
+	<section title="Synchronisation des utilisateurs">
+	  <![CDATA[<p>La synchronisation de l&#x2019;inscription  inscrira tous les utilisateurs déjà inscrits dans un rôle spécifique dans un journal spécifique, dans le même rôle dans cette revue. Cette fonction permet d&#x2019;avoir une série d&#x2019;utilisateurs (par ex. Évaluateurs) d&#x2019;être synchronisés entre divers revues.</p>]]>
 	</section>
 </topic>

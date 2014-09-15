@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Create New User 
+  *
+  -->
+
+<topic id="journal/topic/000012" locale="fr_FR" title="Création d’un nouvel usager" toc="journal/toc/000002" key="journal.users.createNewUser">
+	<section>
+		<![CDATA[<p>Le directeur du journal peut utiliser le lien «Création d’un nouvel usager» pour inscrire quelqu’un et lui assigner un rôle, à partir de directeur de journal à usager. L’usager peut, en ouvrant une séance dans le journal, compléter et modifier l’information de son profil entrée par le directeur du journal.</p><p><em>Changer un mot de passe</em>. Les usagers peuvent changer leur mot de passe une fois qu’ils sont connectés au journal. Le directeur du journal n’a pas accès  à un mot de passe une fois qu’il a été assigné. Cependant, le système va générer un nouveau mot de passe et l’envoyer par courriel aux usagers qui auront cliqué sur le lien «Mot de passe oublié» sous le cadre d’ouverture de session.</p>]]>	
+	</section>
+
+	<section title="Inscrire un usager existant">
+		<![CDATA[<p>Le directeur du journal peut assigner à un usager existant à un ou plusieurs nouveaux rôles.</p>]]>
+	</section>
+
+	<section title="Synchronisation des usagers">
+		<![CDATA[<p>La synchronisation de l’inscription  inscrira tous les usagers déjà inscrits dans un rôle spécifique dans un journal spécifique, dans le même rôle dans ce journal. Cette fonction permet d’avoir une série d’usagers (i.e. Réviseurs) d’être synchronisés entre divers journaux.</p>]]>
+	</section>
+</topic>

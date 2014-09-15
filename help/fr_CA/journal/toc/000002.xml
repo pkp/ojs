@@ -12,11 +12,11 @@
   *
   -->
 
-<toc id="journal/toc/000002" locale="fr_CA" title="Usagers" parent_topic="journal/topic/000002">
-	<topic id="journal/topic/000011" title="Tous les usagers" />
-	<topic id="journal/topic/000012" title="Création d’un nouvel usager" />
-	<topic id="journal/topic/000033" title="Amalgamation des usagers" />
+<toc id="journal/toc/000002" locale="fr_CA" title="Utilisateurs" parent_topic="journal/topic/000002">
+  <topic id="journal/topic/000011" title="Utilisateurs inscrits à cette revue" />
+  <topic id="journal/topic/000012" title="Créer un nouvel utilisateur" />
+  <topic id="journal/topic/000033" title="Fusionner les utilisateurs" />
 
-	<breadcrumb url="journal/topic/000000" title="Gestion du journal" />
-	<breadcrumb url="journal/topic/000002" title="Usagers" />
+	<breadcrumb url="journal/topic/000000" title="Gestion de la revue" />
+	<breadcrumb url="journal/topic/000002" title="Utilisateurs" />
 </toc>

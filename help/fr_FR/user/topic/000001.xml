@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Home
+  *
+  -->
+
+<topic id="user/topic/000001" locale="fr_FR" title="Page d’accueil" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>La page d’accueil du journal, ou «Home» dans la barre de navigation au haut de la page du journal peut être utilisée par le directeur du journal pour y présenter la table des matières pour l’édition courante du journal, ou de sa page couverture. Il peut aussi y mettre des annonces pour le journal, ou des nouvelles d’évènements à venir relatifs au journal, et peut-être même le nom de l’organisme qui le commandite. Les lecteurs n’ont qu’à cliquer sur <strong>Courant</strong> dans la barre de navigation au haut de la page d’accueil pour être dirigés à la page couverture ou la table des matières du numéro courant.</p>]]>	
+	</section>
+</topic>

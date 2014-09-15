@@ -22,4 +22,6 @@
 	<message key="plugins.theme.custom.link">Link</message>
 	<message key="plugins.theme.custom.background">Cor de segundo plano</message>
 	<message key="plugins.theme.custom.foreground">Cor de primeiro plano</message>
+	<message key="plugins.theme.custom.notWritablePlugin">NOTA: A opção da stylesheet base da revista é activada automaticamente porque o ficheiro de estilos deste plugin, "{$ stylesheetFileLocation}" não tem permissões de escrita.</message>
+	<message key="plugins.theme.custom.perJournal">Stylesheet base da Revista</message>
 </locale>

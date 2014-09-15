@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/backup/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2000-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.backup.name">备份插件</message>
+	<message key="plugins.generic.backup.description">该插件产生安装备份。</message>
+
+	<message key="plugins.generic.backup.link">下载备份</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>以下链接允许网站管理员下载设置的全部备份。一个完整的备份包含<strong>所有</strong>以下组件。请参考技术文献对这些组件如何相互关联的更多信息。</P >]]></message>
+	<message key="plugins.generic.backup.db">数据库</message>
+	<message key="plugins.generic.backup.files">文件</message>
+	<message key="plugins.generic.backup.code">代码</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{ $ footnotenum }。</STRONG>警告：</strong>数据库转储工具尚未配置在config.inc.php配置文件。配置将取决于您的服务器配置和数据库的使用类型。它应该在一段被称为[CLI]指定的，在一个配置选项称为“垃圾”。MySQL，使用mysqldump工具<br/>
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+The "%s" tokens will be replaced with, in order:<ol>
+	<li>数据库主机名</li>
+	<li>数据库用户名</li>
+	<li>数据库密码</li>
+	<li>数据库名称</li>
+</ol>请注意，这是在命令行中指定数据库的密码，这可能是一个安全的关注]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{ $ footnotenum }。</STRONG>警告：</strong>"tar" 工具在config.inc.php配置文件中尚未配置。配置将取决于您的服务器配置。它应该在一段被称为[CLI]指定的，在一个配置选项称为“tar”，指定“焦油”效用，即路径： i.e.:<br/>
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br/>]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>警告: </strong>备份进程中发生错误。最常见的原因就是文件权限。]]></message>
+</locale>

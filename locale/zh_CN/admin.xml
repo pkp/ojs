@@ -92,4 +92,6 @@
 这个工具复制的文件不能存在于usageStats文件（当前状态，进行中，存档，拒绝）中。
 Usage: {$scriptName} path/to/apache/log/file.log
 Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory</message>
+	<message key="admin.settings.security">安全性</message>
+	<message key="admin.settings.security.plugins">阻止期刊管理员设置，更新或者删除插件</message>
 </locale>

@@ -96,4 +96,6 @@ Usage (processing all files inside a directory): {$scriptName} path/to/apache/di
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fejl: Kan ikke slette  {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Advarsel: {$filePath} eksisterer allerede i brugerstatistikmappen.</message>
 	<message key="admin.copyAccessLogFileTool.success">Succes: {$filePath} to {$destinationPath}</message>
+	<message key="admin.settings.security">Security</message>
+	<message key="admin.settings.security.plugins">Prevent journal managers to install, update or delete plugins.</message>
 </locale>

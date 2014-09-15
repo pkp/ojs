@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface Index 
+  *
+  -->
+
+<topic id="user/topic/000000" locale="fr_FR" title="Site Web du journal" toc="index/toc/000000" subtoc="user/toc/000000" key="user.index">
+	<section>
+		<![CDATA[<p>Ce journal offre aux usagers de nombreuses fonctions destinées à agrémenter leur expérience de lecture de recherches et de connaissances. Ces fonctions sont couramment utilisées par des journaux en ligne, et la familiarité avec celles-ci, en ce qui regarde ce journal, vous aidera à tirer la pleine valeur d’autres journaux en ligne. Ces fonctions sont généralement disponibles à tous les lecteurs.</p>]]>	
+	</section>
+</topic>

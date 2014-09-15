@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.theme.custom.name">Plugiciel de thème personnalisé</message>
+	<message key="plugins.theme.custom.description">Ce plugiciel met en place un thème personnalisable.</message>
+	<message key="plugins.theme.custom.notWritable">NOTE : le fichier de feuille de style de ce plugiciel, "{$stylesheetFileLocation}", n'est pas disponible en écriture présentement. Ce fichier doit être disponible en écriture avant que le plugiciel puisse être utilisé.</message>
+	<message key="plugins.theme.custom.settings">Paramètres</message>
+	<message key="plugins.theme.custom.pickColour">Choisir une couleur</message>
+	<message key="plugins.theme.custom.header">En-tête</message>
+	<message key="plugins.theme.custom.link">Lien</message>
+	<message key="plugins.theme.custom.background">Arrière-plan</message>
+	<message key="plugins.theme.custom.foreground">Avant-plan</message>
+</locale>

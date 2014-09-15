@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/lucene/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS solr/lucene search plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.lucene.displayName">Lucene 搜索插件</message>
+	<message key="plugins.generic.lucene.description">Lucene支持多种语言，提高搜索结果的相关型，加快搜索，完善扩展性等。</message>
+
+	<message key="plugins.generic.lucene.faceting.displayName">Lucene 平面</message>
+	<message key="plugins.generic.lucene.faceting.description">Lucene平面版块插件</message>
+	<message key="plugins.generic.lucene.faceting.title">优化您的搜索</message>
+	<message key="plugins.generic.lucene.faceting.discipline">学科</message>
+	<message key="plugins.generic.lucene.faceting.subject">关键词</message>
+	<message key="plugins.generic.lucene.faceting.type">方法/途经</message>
+	<message key="plugins.generic.lucene.faceting.coverage">范围</message>
+	<message key="plugins.generic.lucene.faceting.journalTitle">期刊</message>
+	<message key="plugins.generic.lucene.faceting.authors">作者</message>
+	<message key="plugins.generic.lucene.faceting.publicationDate">发表日期</message>
+	
+	<message key="plugins.generic.lucene.message.coreNotFound">在Solr 服务器上没有发现要求核心'{$core}'。是否在线。</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">在搜索时出现错误： {$numProcessed}  不在{$batchCount}进程中。 (在{$numDeleted}批次中 删除文件).</message>
+	<message key="plugins.generic.lucene.message.indexOnline">在线搜索{$numDocs}文档。</message>
+	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Pull搜索无法启动。请在Lucene插件设置中启动该项。</message>
+	<message key="plugins.generic.lucene.message.searchServiceOffline">可惜OJS搜索服务当前不在线。</message>
+	<message key="plugins.generic.lucene.message.techAdminInformed">期刊的技术管理员已知晓这个问题。</message>
+	<message key="plugins.generic.lucene.message.webServiceError">Lucene 网站服务器返回一个错误。</message>
+
+	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} 文章标记为更新</message>
+	
+	<message key="plugins.generic.lucene.results.didYouMean">您是指。。。</message>
+	<message key="plugins.generic.lucene.results.orderBy">订单结果</message>
+	<message key="plugins.generic.lucene.results.orderBy.relevance">关联</message>
+	<message key="plugins.generic.lucene.results.orderBy.author">作者</message>
+	<message key="plugins.generic.lucene.results.orderBy.issue">期次</message>
+	<message key="plugins.generic.lucene.results.orderBy.date">出版日期</message>
+	<message key="plugins.generic.lucene.results.orderBy.journal">期刊名称</message>
+	<message key="plugins.generic.lucene.results.orderBy.article">文章标题</message>
+	<message key="plugins.generic.lucene.results.orderDir.asc">上升</message>
+	<message key="plugins.generic.lucene.results.orderDir.desc">下降</message>
+	<message key="plugins.generic.lucene.results.similarDocuments">相似文档</message>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[搜索提示： <ul>
+<li>搜索是不区分大小写的<li>
+<li>忽视一般用语<li>
+<li>返回包含<em>或</em> 条目的默认文章；如，(i.e., <em>OR</em>是暗含的。
+<li>确保每个字在文章中通过添加前缀的方式存在；如，<em>+期刊 +访问学者</em></li>
+<li>多个词和<em>AND</em>结合，寻找包含所有条目的文章<em>教育 和 研究</em></li>
+<li>通过前缀<strong>-</strong>或者<em>不是</em>排除一词；如， <em>在线-政治</em> 或者 <em>在线不是政治</em></li>
+<li>搜索括号的精确短语；如，<em>“开源出版”</em>。提示：引用汉语或者日本语帮助你在多国语言领域找到确切的匹配词；如，“中国”</li> 
+<li>使用括号来创建更复杂的查询；如，＜em >档案（（期刊和会议论文）不是这些）< / EM > < /li>
+</ul>]]></message>
+
+	<message key="plugins.generic.lucene.settings">设置</message>
+	<message key="plugins.generic.lucene.settings.autosuggest">自动显示（显示的搜索词建议动态下拉而进入一个搜索查询）</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[<strong>检查条件</strong>：只有建议的条目才会产生搜索结果。建议将针对目前期刊和条款已经进入其他领域交叉检查搜索。<br /><strong>使用全局目录</strong>：这是更快，消耗更少的资源搜索服务器。因为对于大型设备搜索更好。建议可能包含不相关的条款；如， 其他期刊或者条目。但是不会产生搜索结果。]]></message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">检查条目结果</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">使用全局目录</message>
+	<message key="plugins.generic.lucene.settings.customRanking">自定义排序（在每本期刊设置排名权重）</message>
+	<message key="plugins.generic.lucene.settings.description"><![CDATA[Luence插件通过Solr服务器访问Lucene搜索指引。这种配置页面允许你配置Solr服务器访问。<strong>请务必阅读插件自述文件（插件/一般/ Lucene /自述）在你试图改变默认配置之前</strong>。如果您使用的是嵌入式的场景在防火墙后面（在自述文件中解释过），那么您无须改变配置参数。]]></message>
+	<message key="plugins.generic.lucene.settings.faceting">刻画（显示带有额外服务器的导航框优化您的搜索）</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">你可以选择特定的刻画种类（响应的元数据一在期刊设置中选为索引，步骤3.4）</message>
+	<message key="plugins.generic.lucene.settings.featureDescription">Luence插件提供多项选择搜索功能。大多数功能都是默认启用但是也可以禁用或者调整。</message>
+	<message key="plugins.generic.lucene.settings.highlighting">突出（显示包含查询关键字的一小段节选）</message>
+	<message key="plugins.generic.lucene.settings.instId">独特设置的ID</message>
+	<message key="plugins.generic.lucene.settings.instIdRequired">请在Solr 搜索服务器上输入一个能够识别OJS设置的ID。</message>
+	<message key="plugins.generic.lucene.settings.instIdInstructions">如果你使用中央搜索服务器，那么您需要为OJS装置提供一个独特的装置ID，分享相同的搜索指引。这可以是任意的文本，但它必须与每一个参与OJS服务器是不同的（例如，服务器的静态IP地址，如果每个服务器都有OJS装置）。</message>
+	<message key="plugins.generic.lucene.settings.internalError">无效的选择。</message>
+	<message key="plugins.generic.lucene.settings.luceneSettings">Lucene 插件：设置</message>
+	<message key="plugins.generic.lucene.settings.password">密码</message>
+	<message key="plugins.generic.lucene.settings.passwordInstructions">请输入Solr服务器密码。</message>
+	<message key="plugins.generic.lucene.settings.passwordRequired">在Solr搜索服务器上，请输入一个有效的密码进行身份验证。</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">Pull 索引（这是一个高级功能，更多信息详见自述文件）</message>
+	<message key="plugins.generic.lucene.settings.searchEndpoint">搜索端点网址</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">Solr搜索端点包含服务器网址和一个搜索处理器。以默认设置为例。如果您使用中央搜索服务器，只能改变这个。</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointRequired">请输入一个有效的网址，显示搜索端点（您想链接到的Solr搜索服务器和搜索处理器）</message>
+	<message key="plugins.generic.lucene.settings.searchFeatures">搜索功能配置</message>
+	<message key="plugins.generic.lucene.settings.simdocs">有很多类似的例子（显示搜索结果类似文档的链接）</message>
+	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr服务器设置</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">替代拼写建议（显示可替代搜索条件）</message>
+	<message key="plugins.generic.lucene.settings.username">用户名</message>
+	<message key="plugins.generic.lucene.settings.usernameInstructions">Solr搜索服务器使用HTTP BASIC身份验证，请输入用户名。</message>
+	<message key="plugins.generic.lucene.settings.usernameRequired">在Solr搜索服务器上，请输入一个有效的用户名来验证身份（冒号不允许）</message>
+
+	<message key="plugins.generic.lucene.sectionForm.rankingBoost">自定义排序加权</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">The Lucene/Solr search plugin allows you to adjust the relative weight of articles in the result list
+		of a search query. Setting the ranking weight higher (or lower) does not place articles in this
+		section above (or below) all other articles. But they will rank better (or worse) than they would
+		without the adjustment made. Setting this option to "never show" will completely exclude articles
+		in this section from search results.</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">请选择一个有效的自定义排序加权。</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.never">从不显示</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.low">等级较低</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.normal">正常</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.high">等级较高</message>
+</locale>

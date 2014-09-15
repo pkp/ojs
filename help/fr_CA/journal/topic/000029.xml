@@ -12,14 +12,14 @@
   *
   -->
 
-<topic id="journal/topic/000029" locale="fr_CA" title="Générique" toc="journal/toc/000001" key="journal.managementPages.groups">
+<topic id="journal/topic/000029" locale="fr_CA" title="Bloc générique" toc="journal/toc/000001" key="journal.managementPages.groups">
 	<section>
-		<![CDATA[<p>Il y a deux méthodes que le directeur de journal peut utiliser pour définir le générique pour le journal, lequel apparaît dans la page «Équipe éditoriale» sous «Au sujet du journal» : en utilisant les rôles éditoriaux assignés, et en créant des titres personnalisés pour l’équipe éditoriale.</p>]]>
+		<![CDATA[<p>Il y a deux méthodes que le directeur de revue peut utiliser pour définir le bloc générique pour la revue, lequel apparaît dans la page «Équipe éditoriale» sous «À propos de cette revue» : en utilisant les rôles éditoriaux assignés, et en créant des titres personnalisés pour l’équipe éditoriale.</p>]]>
 	</section>
-	<section title="Générer un générique en utilisant les rôles éditoriaux assignés">
-		<![CDATA[<p>Quand cette option est sélectionnée, l’information au sujet de l’équipe éditoriale, dans «Au sujet du journal» sera générée automatiquement en utilisant les rôles éditoriaux définis dans les pages ‘’Rôles du directeur du journal’’. Les usagers inscrits en tant qu’éditeur, éditeur de rubrique, éditeur de la mise en page, reviseur de copie, correcteur d’épreuves seront affichés.</p>]]>
+	<section title="Générer un bloc générique en utilisant les rôles éditoriaux assignés">
+		<![CDATA[<p>Quand cette option est sélectionnée, l’information au sujet de l’équipe éditoriale, dans «À propos de la revue» sera générée automatiquement en utilisant les rôles éditoriaux définis dans les pages «Rôles du directeur de la revue». Les utilisateurs inscrits en tant que rédacteur, chef de rubrique, responsable de la mise en page, réviseur, correcteur d’épreuves seront affichés.</p>]]>
 	</section>
-	<section title="Générer un générique en utilisant les titres personnalisés de l’équipe éditoriale">
-		<![CDATA[<p>Si un directeur de journal désire avoir plus de contrôle sur l’information présentée sur la page de l’équipe éditoriale dans «Au sujet du journal», il peut activer cette option depuis la page ‘’Générique’’ (voir gestion du journal). Quand cette option est activée, les divers titres éditoriaux créés dans la page «Générique» seront utilisés pour générer l’information au sujet de l’équipe éditoriale visible par le public.</p>]]>
+	<section title="Générer un bloc générique en utilisant les titres personnalisés de l’équipe éditoriale">
+		<![CDATA[<p>Si un directeur de revue désire avoir plus de contrôle sur l’information présentée sur la page de l’équipe éditoriale dans «À propos de la revue», il peut activer cette option depuis la page «Bloc générique» (voir gestion de la revue). Quand cette option est activée, les divers titres éditoriaux créés dans la page «Bloc générique» seront utilisés pour générer l’information au sujet de l’équipe éditoriale visible par le public.</p>]]>
 	</section>
 </topic>

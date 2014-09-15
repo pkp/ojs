@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Plugiciel Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Intégrez OJS à Google Analytics, l’application d'analyse de trafic sur le site Web de Google. Vous devez avoir un compte Google Analytics pour utiliser cette application. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Paramètres</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Paramètres de Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p> Au moyen de ce plugiciel, vous pouvez utiliser Google Analytics pour collecter et analyser l'utilisation et le trafic sur ce site Web pour cette revue. Veuillez noter que pour utiliser ce plugiciel, vous devez déjà avoir un compte Google Analytics. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.</p><p>Veuillez noter que Google Analytics peut nécessiter jusqu'à 24 heures avant que les statistiques soient colligées et analysées. Durant cette période, la fonction 'Vérifier l'état' peut ne pas indiquer correctement s'il a détecté le code de repérage de la revue.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Numéro de compte</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">À partir de Google Analytics, cliquez sur Vérifier l'état pour voir le code de repérage de votre site. Le numéro de compte est affiché dans le code de repérage : _uacct = "###". Pour un nouveau code de repérage, le numéro de compte est affiché dans le code de repérage : var pageTracker = _gat._getTracker("###"). Entrez le texte correspondant à ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Veuillez entrer un numéro de compte.</message>
+
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Code de repérage</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Prière de sélectionner le code de repérage à utiliser.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Code de repérage patrimonial (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nouveau code de repérage (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Numéro de compte Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Pour retracer le lectorat des articles publiés à l'aide de Google Analytics, saisir un numéro de compte ici (par ex., UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Un ou plusieurs numéro de compte Google Analytics saisi(s) pour les auteurs des soumissions ne sont pas valides.</message>
+</locale>

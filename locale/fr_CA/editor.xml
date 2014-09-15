@@ -219,6 +219,5 @@
 	<message key="editor.issues.galleyLocaleRequired">Veuillez préciser la langue utilisée dans les épreuves du numéro.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà???</message>
 	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
-	<message key="editor.issues.confirmDeleteGalley">Êtes-vous certain de vouloir supprimer les épreuves de ce numéro?</message>
-	<message key="editor.notifyUsers.allMailingList">Inclure tous les courriel de la liste de diffusion ({$count} courriels)</message>
+	<message key="editor.issues.confirmDeleteGalley">Voulez-vous vraiment supprimer les épreuves de ce numéro?</message>
 </locale>

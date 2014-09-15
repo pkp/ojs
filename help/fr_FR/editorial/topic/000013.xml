@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role Index 
+  *
+  -->
+
+<topic id="editorial/topic/000013" locale="fr_FR" title="Rôle de l’éditeur à la mise en page" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+	<section>
+		<![CDATA[<p>L’éditeur de la mise en page reçoit un courriel du réviseur ou de l’éditeur de la rubrique lui demandant une mise en page d’une soumission qui a passé l’étape de révision. Un éditeur à la mise en page incapable de le faire répond par courriel à l’éditeur de la rubrique.</p>]]>	
+	</section>
+</topic>

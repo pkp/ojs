@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Proofreader's Role
+  *
+  -->
+
+<toc id="editorial/toc/000014" locale="fr_FR" title="Rôle du correcteur d’épreuves" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="Soumissions" />
+	<topic id="editorial/topic/000043" title="Correction d’épreuves" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processus éditorial" />
+	<breadcrumb url="editorial/topic/000014" title="Rôle du correcteur d’épreuves" />
+</toc>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.generic.announcementfeed.displayName">Plugiciel de flux d'annonces</message>
+	<message key="plugins.generic.announcementfeed.description">Ce plugiciel produit des flux de syndication Web RSS/Atom pour les annonces des revues.</message>
+
+	<message key="plugins.generic.announcementfeed.settings">Paramètres</message>
+	<message key="plugins.generic.announcementfeed.settings.all">Afficher les liens de flux dans toutes les pages des revues.</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Afficher les liens de flux dans la page d'accueil et dans la page d'annonces.</message>
+	<message key="plugins.generic.announcementfeed.settings.announcement">Afficher les liens de flux dans la page d'annonces uniquement.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Limiter le flux aux</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">plus récentes annonces.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Prière d'entrer un entier positif pour les annonces récentes.</message>
+	<message key="plugins.generic.announcementfeed.atom.altText">Logo Atom</message>
+	<message key="plugins.generic.announcementfeed.rss1.altText">Logo RSS1</message>
+	<message key="plugins.generic.announcementfeed.rss2.altText">Logo RSS2</message>
+</locale>

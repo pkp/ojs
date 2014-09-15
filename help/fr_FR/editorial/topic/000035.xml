@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000035.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Copyediting 
+  *
+  -->
+
+<topic id="editorial/topic/000035" locale="fr_FR" title="Révision de la copie" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>Initialement le réviseur de copie révise la soumission en travaillant directement dans le fichier électronique de la soumission, avec des suggestions pour améliorer la fluidité du langage et la clarté du texte et avec des changements pour s’assurer que la soumission est conforme au style et au format du journal (spécialement son format bibliographique). Le reviseur de copie télécharge vers le serveur la copie révisée de la soumission à l’étape 1, et envoie un courriel à l’auteur et à l’éditeur de rubrique, indiquant que la révision de copie initiale est complétée. L’auteur peut accéder à cette version à l’étape 1 de Révision de copie en cliquant sur le nom du fichier et en le sauvegardant sur son ordinateur pour l’ouvrir par la suite.</p><p><em>Revue par l’auteur des révisions faites par le reviseur de copie</em>.L’auteur révise tous les changements que le reviseur de copie lui propose et peut faire d’autres suggestions ou changements à la soumission en adhérant aux instructions du guide du reviseur de copie suivies par ce journal. (C’est la dernière chance de faire de tels changements, car à la correction des épreuves, seulement les erreurs typographiques et de formatage peuvent être corrigées). L’auteur devrait aussi répondre à toute demande reçue du reviseur de copie via «Questions à l’auteur» (i.e. numéros de page manquants, etc.) Lorsque terminé, l’auteur sauvegarde le fichier à l’ordinateur et le télécharge vers le serveur dans l’étape 2 de Révision de copie, ce qui la rend disponible au reviseur de copie.</p><p><em>Révision des métadonnées</em>.L’auteur devrait aussi réviser les métadonnées de la soumission pour des erreurs ou omissions. Les métadonnées sont utilisées pour indexer la soumission lors de la publication et aideront, selon comment elle est indexée, les lecteurs à localiser l’article. Finalement, l’auteur clique l’icône de courriel sous «Complet»  pour aviser l’éditeur de copie et l’éditeur de rubrique que l’étape est maintenant complétée.</p>]]>	
+	</section>
+</topic>

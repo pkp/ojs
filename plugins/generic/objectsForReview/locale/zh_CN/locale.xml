@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review plugin localization strings for the en_US (U.S. English) locale.
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Objects For Review Plug-In -->
+	<message key="plugins.generic.objectsForReview.displayName">审查对象</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">审查对象提醒</message>
+	<message key="plugins.generic.objectsForReview.description">征求评论感兴趣的对象。管理审查对象和审查过程。</message>
+
+	<!--  Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">审查对象</message>
+
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectTypes">审查对象类型</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">这里你可以安装默认/事先定义的审查对象类型，如果需要，请更新安装的对象类型或者创建您自己的审查对象类型。</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">名字</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">没有</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons">人员</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">请指定所有可能人员的只能，这对审查对象很重要（例如。作者，投稿人等）。这些信息以后都不能更改。</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectType">审查对象类型</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">删除所有这种类型的审查对象。您确定删除审查对象类型？</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.create">创建审查对象类型</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.edit">审查对象类型</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">更新</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">更新以上对象的局部数据。</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">安装</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.installObjects">安装丢失的审查对象-选择类型和区域并且按安装按钮：</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.name">名称</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.description">描述和说明</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">元数据</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.preview">预览</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata">预览对象元数据</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">没有</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">复制到：</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">创建审查对象元数据</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">审查对象元数据</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">此操作将删除所有相同和已经存在的审查对象元数据。您确定删除这些元数据吗？</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">复制</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">名称</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">请求</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.display">显示</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">选择元数据类型</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.smalltextfield">单字文本框</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textfield">单线文本框</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textarea">延伸文本框</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.checkboxes">复选框（可以选择一个或多个）</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.radiobuttons">单选框（可以选择一个或多个）</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.dropdownbox">下拉框</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.roledropdownbox">任务下拉框</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.langdropdownbox">语言下拉框</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.changeType">改变类型</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">元数据类型</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions">可能的选择</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem">增加选择</message>
+
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings">设置</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">管理</message>
+	<message key="plugins.generic.objectsForReview.settings.modeFull">模式1：列出可用的审查对象，管理对象评论者，并且发表对象元数据。</message>
+	<message key="plugins.generic.objectsForReview.settings.modeMetadata">模式2： 至发表对象元数据。</message>
+	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>模式1</h5><p>以下工作流程由</p><ul>支持。<li>期刊编辑添加可审查的对象</li><li>对评述感兴趣的作者可以申请写评论，通知期刊的编辑。</li><li>编辑通知作者接受或者拒绝他的请求。</li><li>如果编辑接受作者的审查需求，则设定审查的最后期限。</li><li>编辑把文章的副本发送给审查作者。设定评论期限。</li><li>作者通过在线提交系统提交评论结果。</li><li>对象元数据作为审查结果提交的一部分发表。</li></ul><p>该插件支持多重编辑的期刊。当编辑添加一个新的审查对象时，他或她成为对象的主要编辑和联系人。/p><h5>模式2</h5><p>以下工作流程获得</p><ul>支持。<li>编辑添加评论对象</li><li>为每个对象提交评论结果。</li><li>每个对象元数据作为评论提交的一部分发表。]]></message>
+	<message key="plugins.generic.objectsForReview.settings.displayMetadata">显示对象的元数据</message>
+	<message key="plugins.generic.objectsForReview.settings.displayAbstract">在文章摘要部分显示对象的元数据。</message>
+	<message key="plugins.generic.objectsForReview.settings.displayListing">发表所有可用的审查对象，使用导航条目“审查对象”。</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewDue">对象评审的最后期限</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks1">评论到期</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">对象被分配给作者几周后</message>
+	<message key="plugins.generic.objectsForReview.settings.emailReminders">邮件提醒</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays1">给作者发提醒邮件</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">评审期限几天前</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">给作者发提醒邮件</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">评审期限几天后</message>
+	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>注意：</strong>为激活这些选项，网站管理员必须在OJS配置文件中启用<tt>scheduled_tasks</tt>选项。并且其他服务器配置也得支持该功能（不是所有的服务器都能实现），在OJS文档中说明。]]></message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformation">附加信息</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">附加信息和随评审对象一起出版</message>
+
+	<!-- Search, filter, sort -->
+	<message key="plugins.generic.objectsForReview.search.field.title">标题</message>
+	<message key="plugins.generic.objectsForReview.search.field.abstract">摘要</message>
+	<message key="plugins.generic.objectsForReview.search.noResults">没有搜索结果</message>
+	<message key="plugins.generic.objectsForReview.filter.filterBy">按照过滤器</message>
+	<message key="plugins.generic.objectsForReview.sort.sortBy">按照种类</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionAsc">上升</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionDesc">下降</message>
+
+	<!-- Objects For Review -->
+	<message key="plugins.generic.objectsForReview.objectsForReview.pageTitle">评审对象</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.noneCreated">没有评审的对象</message>	
+	<message key="plugins.generic.objectsForReview.objectsForReview.title">标题</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.dateCreated">已创建</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.status">状态</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectReviewer">对象评论家</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectType">对象类型</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.editor">编辑</message>
+
+	<!-- Object For Review Assignments -->
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAll">对象评论分配-所有</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.all">所有</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleRequested">对象评论安排-请求</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.requested">请求</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned">对象评审分配-已分配</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned">已分配</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleMailed">对象评审分配-已邮寄</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed">已邮寄</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleSubmitted">对象评审分配-已提交</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submitted">已提交</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.title">标题</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.status">状态</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.objectReviewer">对象评论家</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dateCreated">已创建</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dueDate">最后期限</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submission">提交</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.noneCreated">对象审评未分配</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status">状态</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">可用</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.requested">请求</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">已分配</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed">已邮寄</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted">已提交</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.additionalNotes">附加注释</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notes">注释</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">仅限编辑。不会作为书评的一部分发表</message>
+
+	<!-- Objects For Review Assignments Management by Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
+	<message key="plugins.generic.objectsForReview.editor.assignments">分配</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.editor.select">选择</message>
+	<message key="plugins.generic.objectsForReview.editor.assignObjectReviewer">分配</message>
+	<message key="plugins.generic.objectsForReview.editor.acceptObjectReviewer">接受</message>
+	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">拒绝</message>
+	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">对象已邮寄</message>
+	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">删除</message>
+	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">您确定删除这个作者和他的评论记录吗？</message>
+	<message key="plugins.generic.objectsForReview.editor.selectSubmission">选择提交</message>
+	<!-- Assign Author -->
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor">分配作者</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.assign">分配</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.createNewUser">创建一个新用户</message>
+
+	<message key="plugins.generic.objectsForReview.editor.noMailingAddress">文件上没有邮寄地址</message>
+
+	<!-- Object For Review Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview">对象审评</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseLanguage">选择语言</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption">选择选项</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole">选择作用</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer">没有答案</message>
+	<message key="plugins.generic.objectsForReview.editor.edit">编辑</message>
+	<message key="plugins.generic.objectsForReview.editor.create">创建评审对象</message>
+	<message key="plugins.generic.objectsForReview.editor.saveAndCreateAnother">保存并且创建</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.addPerson">添加人员</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.deletePerson">删除</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPage">封面页</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageInstructions">(格式: .gif, .jpg, or .png )</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageUploaded">上传</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.removeCoverPage">删除封面图片</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.remove">删除</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImage">封面图片</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImageAltText">封面图片替代文本</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.additionalNotes">附加注释</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notes">注释</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notesInstructions">仅限编辑。不作为书评的一部分发表。</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditor">分配一个编辑</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditorInstructions">选择负责评审对象的编辑。</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.available">可用</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.availableInstructions">定义可用的评审对象</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.available">可用</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.notAvailable">不可用</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.delete">删除</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.confirmDelete">此举将完全删除对象和对应的分配。您确定删除？</message>
+
+	<!-- Public -->
+	<message key="plugins.generic.objectsForReview.public.headerLink">评审对象</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReview">评审对象</message>
+	<message key="plugins.generic.objectsForReview.public.objectForReview">评审对象</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReviewInstructions"><![CDATA[<p>要求评审对象:</p><ul><li><a href="{$registerUrl}" target="_parent">注册</a>期刊的作者</li><li><a href="{$loginAuthorUrl}" target="_parent">Log in</a> 作者.</li><li>选择感兴趣的对象，点击请求链接。</li></ul>]]></message>
+	
+	<!-- Article Abstract Page -->
+	<message key="plugins.generic.objectsForReview.public.articleObjectsForReview">这篇文章的评审对象</message>
+
+
+	<!-- Author -->
+	<message key="plugins.generic.objectsForReview.author.objectsForReview">评审对象</message>
+	<message key="plugins.generic.objectsForReview.author.myObjectsForReview">我的对象</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.author.requestObjectForReview">要求对象评审</message>
+
+	<message key="plugins.generic.objectsForReview.author.submit">提交</message>
+	<message key="plugins.generic.objectsForReview.author.view">浏览</message>
+	<!-- Submission -->
+	<message key="plugins.generic.objectsForReview.author.submitInstructions"></message>
+
+
+	<!-- Notifications -->
+	<message key="plugins.generic.objectsForReview.notification.objectTypeInstalled">已安装评审对象类型。</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeCreated">已创建评审对象类型。</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeUpdated">已更新评审对象类型。</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeActivated">已激活评审对象类型。</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeactivated">已停用评审对象类型。</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeleted">评审对象类型被删除。想噶un评审对象和分配也被删除。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrCreated">创建新的评审对象</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrRequested">请求评论的对象。等待编辑确认。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">已更新评审对象。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">评审对象和分配被删除。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAauthorAssigned">评审对象分配的作者。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">作者要求被拒。评审对象重置到初始状态。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">评审对象已邮寄给作者。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">删除作者。评审对象重置到初始状态。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSubmissionAssigned">提交分配给对象进行评审。</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSettingsSaved">评审对象插件设置已保存。</message>
+
+
+	<!-- errors -->
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">评审对象类型名称。</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">评审对象元数据名字。</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">评审对象元数据类型。</message>
+	<!-- Object For Review Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">请填写必填部分。</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">请选择人员任务并且填写他的姓或者名。</message>
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings.modeRequired">需要一个模式</message>
+	<message key="plugins.generic.objectsForReview.settings.modeValid">请指定一个有效的模式。</message>
+	<message key="plugins.generic.objectsForReview.settings.numDaysReminderValid">请指定一个有效的提醒邮件天数。</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksRequired">当评审对象到期时，请指定日期数。</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksValid">当评审对象到期时，请指定一个有效的时期。</message>
+
+
+
+
+
+	<!-- Objects for Review and their Metadata -->
+	<!-- Common Metadata -->
+	<message key="plugins.generic.objectsForReview.object.metadata.title">标题</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.person">人员</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.date">日期</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.language">语言</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.shortTitle">简称</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.url">URL</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.rights">权限</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.abstract">摘要</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable">副本可用</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.yes">可用</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.no">不可用</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.coverPage">封页</message>
+	<!-- Artwork -->
+	<message key="plugins.generic.objectsForReview.object.artwork">作品</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.artist">艺术家</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.medium">中等</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.size">尺寸</message>
+	<!-- Audio Recording -->
+	<message key="plugins.generic.objectsForReview.object.audioRecording">音频记录</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">演奏者</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">作曲家</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsByr">作词</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.format">格式</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">系列名称</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.numberOfVolumes">卷数</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.place">地址</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.label">标签</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.runningTime">运行时间</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.isbn">ISBN</message>
+	<!-- Bill -->
+	<message key="plugins.generic.objectsForReview.object.bill">法案</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.sponsor">赞助商</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.contributor">捐助者</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.cosponsor">共同赞助者</message>
+	<message key="plugins.generic.objectsForReview.object.bill.number">法案编号</message>
+	<message key="plugins.generic.objectsForReview.object.bill.code">代码</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codeVolume">代码量</message>
+	<message key="plugins.generic.objectsForReview.object.bill.section">部分</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codePages">代码页</message>
+	<message key="plugins.generic.objectsForReview.object.bill.legislativeBody">立法机关</message>
+	<message key="plugins.generic.objectsForReview.object.bill.session">会议</message>
+	<message key="plugins.generic.objectsForReview.object.bill.history">历史</message>
+	<!-- Blog Post -->
+	<message key="plugins.generic.objectsForReview.object.blogPost">博客条目</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.commenter">评论家</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.blogTitle">博客标题</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.websiteTitle">网站标题</message>
+	<!-- Book -->
+	<message key="plugins.generic.objectsForReview.object.book">书籍</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.seriesEditor">系列编辑</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.translator">翻译家</message>
+	<message key="plugins.generic.objectsForReview.object.book.series">系列</message>
+	<message key="plugins.generic.objectsForReview.object.book.seriesNumber">系列编号</message>
+	<message key="plugins.generic.objectsForReview.object.book.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfVolumes">卷号</message>
+	<message key="plugins.generic.objectsForReview.object.book.edition">版本</message>
+	<message key="plugins.generic.objectsForReview.object.book.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisher">出版社</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisherURL">出版社网址</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfPages">页数</message>
+	<message key="plugins.generic.objectsForReview.object.book.isbn">ISBN</message>
+	<!-- Book Section -->
+	<message key="plugins.generic.objectsForReview.object.bookSection">书籍部分</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.bookAuthor">作者</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.seriesEditor">系列编辑</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.translator">翻译家</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.bookTitle">书籍标题</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.series">系列</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.seriesNumber">系列编号</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfVolumes">卷数</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.edition">版本</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisher">出版社</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisherURL">出版社网址</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfPages">页数</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.isbn">ISBN</message>
+	<!-- Case -->
+	<message key="plugins.generic.objectsForReview.object.case">实例</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.contributor">投稿</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.counsel">顾问</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporter">记者</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporterVolume">汇编中的卷</message>
+	<message key="plugins.generic.objectsForReview.object.case.court">法院</message>
+	<message key="plugins.generic.objectsForReview.object.case.docketNo">案卷编号</message>
+	<message key="plugins.generic.objectsForReview.object.case.firstPage">第一页</message>
+	<message key="plugins.generic.objectsForReview.object.case.history">历史</message>
+	<!-- Computer Program -->
+	<message key="plugins.generic.objectsForReview.object.computerProgram">案例</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.programmer">程序员</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.seriesTitle">系列标题</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.version">版本</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.system">系统</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.place">地址</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.programmingLanguage">编程语言</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.isbn">ISBN</message>
+	<!-- Conference Paper -->
+	<message key="plugins.generic.objectsForReview.object.conferencePaper">回忆文献</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.seriesEditor">系列编辑</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.proceedingsTitle">程序标题</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.conferenceName">会议名称</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisher">出版社</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisherURL">出版社网址</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.pages">页</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.series">系列</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.isbn">ISBN</message>
+	<!-- Dictinary Entry -->
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry">字典条目</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.seriesEditor">系列编辑</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.dictionaryTitle">字典标题</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.series">系列</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.seriesNumber">系列编号</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.numberOfVolumes">卷号</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.edition">版本</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.publisher">出版社</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitlek.numberOfPages">页数</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.isbn">ISBN</message>
+	<!-- Document -->
+	<message key="plugins.generic.objectsForReview.object.document">文档</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.reviewedAuthor">评论的作者</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.document.publisher">出版社</message>
+	<!-- E-mail -->
+	<message key="plugins.generic.objectsForReview.object.email">E-mail</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.recipient">收件人</message>
+	<!-- Encyclopedia Article -->
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle">百科全书文章</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.seriesEditor">丛书编辑</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.encyclopediaTitle">百科全书的标题</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.series">系列</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.seriesNo">系列号</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volumeNo">卷数</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.edition">版本</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.publisher">出版社</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.pages">页数</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.isbn">ISBN</message>
+	<!-- Film -->
+	<message key="plugins.generic.objectsForReview.object.film">电影</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.director">主管</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.producer">制片人</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.scriptwriter">编剧</message>
+	<message key="plugins.generic.objectsForReview.object.film.distributor">经销商</message>
+	<message key="plugins.generic.objectsForReview.object.film.genre">流派</message>
+	<message key="plugins.generic.objectsForReview.object.film.format">格式</message>
+	<message key="plugins.generic.objectsForReview.object.film.runningTime">运行时间</message>
+	<!-- Forum Post -->
+	<message key="plugins.generic.objectsForReview.object.forumPost">论坛帖子</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.forumTitle">论坛标题</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.postType">帖子类型</message>
+	<!-- Hearing -->
+	<message key="plugins.generic.objectsForReview.object.hearing">听证会</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.committee">委员会</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.publisher">出版社</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.numberOfVolumes">卷数</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.documentNo">文件编号</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.pages">页</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.legislativeBody">立法机关</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.session">会议</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.history">历史</message>
+	<!-- Instant Message -->
+	<message key="plugins.generic.objectsForReview.object.instantMessage">即使传讯</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.recipient">收件人</message>
+	<!-- Interview -->
+	<message key="plugins.generic.objectsForReview.object.interview">采访</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewWith">采访</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.contributor">投稿</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewer">采访者</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.interview.medium">中等</message>
+	<!-- Journal Article -->
+	<message key="plugins.generic.objectsForReview.object.journalArticle">期刊文章</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.editor">编辑</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.reviewedAuthor">评论作者</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.publication">出版</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issue">期次</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.pages">页</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.series">系列</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesTitle">系列标题</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesText">系列文本</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.journalAbbr">期刊缩写</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issn">ISSN</message>
+	<!-- Letter -->
+	<message key="plugins.generic.objectsForReview.object.letter">信件</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">收件人</message>
+	<message key="plugins.generic.objectsForReview.object.letter.type">信件类型</message>
+	<!-- Magazine Article -->
+	<message key="plugins.generic.objectsForReview.object.magazineArticle">杂志文章</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.reviewedAuthor">评论作者</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.publication">出版</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issue">期</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.pages">页</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issn">ISSN</message>
+	<!-- Manuscript -->
+	<message key="plugins.generic.objectsForReview.object.manuscript">稿件</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.type">类型</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.numberOfPages">页数</message>
+	<!-- Map -->
+	<message key="plugins.generic.objectsForReview.object.map">地图</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.cartographer">制图员</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.seriesEditor">系列编辑</message>
+	<message key="plugins.generic.objectsForReview.object.map.type">种类</message>
+	<message key="plugins.generic.objectsForReview.object.map.scale">范围</message>
+	<message key="plugins.generic.objectsForReview.object.map.seriesTitle">系列标题</message>
+	<message key="plugins.generic.objectsForReview.object.map.edition">版本</message>
+	<message key="plugins.generic.objectsForReview.object.map.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.map.publisher">出版社</message>
+	<message key="plugins.generic.objectsForReview.object.map.isbn">ISBN</message>
+	<!-- Newspaper Article -->
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle">报纸文章</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.reviewedAuthor">评论作者</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.publication">出版</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.edition">编辑</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.section">部分</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.pages">页</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.issn">ISSN</message>
+	<!-- Patent -->
+	<message key="plugins.generic.objectsForReview.object.patent">专利</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.inventor">设计人</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.attorney">律师/代理人</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.patent.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.patent.country">国家</message>
+	<message key="plugins.generic.objectsForReview.object.patent.assignee">代理人</message>
+	<message key="plugins.generic.objectsForReview.object.patent.issuingAuthority">发行机关</message>
+	<message key="plugins.generic.objectsForReview.object.patent.number">号码</message>
+	<message key="plugins.generic.objectsForReview.object.patent.pages">页</message>
+	<message key="plugins.generic.objectsForReview.object.patent.appNumber">申请号</message>
+	<message key="plugins.generic.objectsForReview.object.patent.priorityNumbers">优先级编号</message>
+	<message key="plugins.generic.objectsForReview.object.patent.filingDate">提交日期</message>
+	<message key="plugins.generic.objectsForReview.object.patent.references">参考文件</message>
+	<message key="plugins.generic.objectsForReview.object.patent.legalStatus">法定地位</message>
+	<!-- Podcast -->
+	<message key="plugins.generic.objectsForReview.object.podcast">播客</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.podcaster">演奏者</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.guest">顾客</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.seriesTitle">系列标题</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.episodeNo">集编号</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.fileType">文件类型</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.runningTime">运行时间</message>
+	<!-- Presentation -->
+	<message key="plugins.generic.objectsForReview.object.presentation">陈述</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.presenter">陈述者</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.type">类型</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.place">地址</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.meetingName">会议名称</message>
+	<!-- Radio Broadcast -->
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast">无线电广播</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.director">主管</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.castMember">演员</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.guest">客人</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.producer">制片人</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.scriptWriter">编剧</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.programTitle">节目名称</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.episodeNo">集编号</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.format">格式</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.place">地点</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.network">网络</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.runningTime">运行时间</message>
+	<!-- Report -->
+	<message key="plugins.generic.objectsForReview.object.report">报告</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.seriesEditor">系列编辑</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.report.no">编号</message>
+	<message key="plugins.generic.objectsForReview.object.report.type">类型</message>
+	<message key="plugins.generic.objectsForReview.object.report.place">地址</message>
+	<message key="plugins.generic.objectsForReview.object.report.seriesTitle">系列标题</message>
+	<message key="plugins.generic.objectsForReview.object.report.institution">机构</message>
+	<message key="plugins.generic.objectsForReview.object.report.pages">页</message>
+	<!-- Statute -->
+	<message key="plugins.generic.objectsForReview.object.statute">法令</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.statute.code">代码</message>
+	<message key="plugins.generic.objectsForReview.object.statute.codeNo">代码编号</message>
+	<message key="plugins.generic.objectsForReview.object.statute.publicLawNo">公法编号</message>
+	<message key="plugins.generic.objectsForReview.object.statute.pages">页</message>
+	<message key="plugins.generic.objectsForReview.object.statute.section">部分</message>
+	<message key="plugins.generic.objectsForReview.object.statute.session">会议</message>
+	<message key="plugins.generic.objectsForReview.object.statute.history">历史</message>
+	<!-- Thesis -->
+	<message key="plugins.generic.objectsForReview.object.thesis">论文</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.type">类型</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.university">大学</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.place">地址</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.numberOfPages">页数</message>
+	<!-- TV Broadcast -->
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast">电视广播</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.director">主管</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.castMember">演员列表</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.guest">宾客</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.producer">制片人</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.scriptWriter">编剧</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.programTitle">节目名称</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.episodeNo">集数</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.format">格式</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.place">地址</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.network">网络</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.runningTime">运行时间</message>
+	<!-- Video Recording -->
+	<message key="plugins.generic.objectsForReview.object.videoRecording">视频记录</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.director">主管</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.castMember">演员表</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.guest">宾客</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.producer">制片人</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.scriptWriter">编剧</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.format">格式</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.seriesTitle">系列标题</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.volume">卷</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.numberOfVolumes">卷数</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.place">地址</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.studio">演播室</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.runningTime">运行时间</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.isbn">ISBN</message>
+	<!-- Web Page -->
+	<message key="plugins.generic.objectsForReview.object.webPage">网页</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.author">作者</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.contributor">投稿人</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.translator">翻译员</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteTitle">网站标题</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">网站类型</message>
+
+
+</locale>

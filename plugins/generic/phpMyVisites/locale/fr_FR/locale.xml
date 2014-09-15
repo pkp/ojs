@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">Plugiciel phpMyVisites</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Intégre OJS à phpMyVisites, une application gratuite et de libre-accès pour l’analyse du trafic sur un site Web. L’application phpMyVisites doit être préalablement installée. Consultez le<a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> pour de plus amples renseignements.]]></message>
+
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">Paramètres</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">Paramètres phpMyVisites</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Avec ce plugiciel, l’application phpMyVisites préalablement installée peut servir à la collecte et à l’analyse de l'utilisation et du trafic sur un site Web, aux fins de cette revue. Veuillez noter que ce plugiciel requiert l'installation préalable de l’application phpMyVisites. Consultez le <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> pour de plus amples renseignements. </p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">URL phpMyVisites</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">L'url complet pour l'installation de l'application phpMyVisites (par ex. : http://monserveur.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Veuillez inscrire un url valide, en ajoutant http:// au début.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Numéro du profil de site</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[Sous phpMyVisites, cliquez sur Administration->Modifier le site. Le numéro du profil de site apparaît à côté du nom de votre profil de site.]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Veuillez inscrire un numéro de profil de site.</message>
+
+</locale>

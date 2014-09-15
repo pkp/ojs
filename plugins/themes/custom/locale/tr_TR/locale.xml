@@ -22,4 +22,6 @@
 	<message key="plugins.theme.custom.link">Bağlantı</message>
 	<message key="plugins.theme.custom.background">Arka Plan</message>
 	<message key="plugins.theme.custom.foreground">Ön Plan</message>
+	<message key="plugins.theme.custom.notWritablePlugin">NOTE: The journal-based stylesheet option is automatically enabled because this plugin's stylesheet file, "{$stylesheetFileLocation}", is not currently writable.</message>
+	<message key="plugins.theme.custom.perJournal">Dergi-Tabanlı Biçim Sayfası</message>
 </locale>

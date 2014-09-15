@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Submissions
+  *
+  -->
+
+<topic id="editorial/topic/000037" locale="fr_FR" title="Soumissions" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Lorsqu’un réviseur de copie est connecté, cliquer sur le lien «Réviseur de copie» sur la page d’accueil  de l’usager l’amène à la file d’attente des soumissions. Cette file d’attente énumère ces ouvrages qu’ils ont été demandés de réviser. Un accès est aussi disponible pour aller aux soumissions qu’ils ont complétées dans le passé. Le réviseur de copie clique sur le titre de l’ouvrage ce qui l’amène à la page de révision de copie pour cette soumission.</p>]]>	
+	</section>
+</topic>

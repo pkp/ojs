@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Layout
+  *
+  -->
+
+<topic id="editorial/topic/000028" locale="fr_FR" title="Mise en page" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+	<section>
+		<![CDATA[<p>Lorsque le réviseur a compléter la copie épurée à la troisième étape, cette version de la soumission passe à l’étape de la mise en page. L’éditeur de rubrique, sur réception de la notification du parachèvement de la révision, doit alors choisir un éditeur de mise en page, si ce n’est déjà fait, et demander que ce dernier commence le travail. L’éditeur de la mise en page commence la travail en utilisant l’icône de courriel sous «Demande de mise en page». L’éditeur de la mise en page préparera les galées pour la soumission dans chacun des formats de publication du journal (i.e. HTML, PDF, PS, etc.). Les fichiers supplémentaires, lesquels restent dans le format dans lequel ils ont été soumis seront révisés par l’éditeur de la mise en page et le correcteur d’épreuves pour s’assurer que le formatage de base est en place, et que les fichiers sont conformes aux normes du journal, dans la mesure du possible. Quand l’éditeur de la mise en page a terminé la production initiale des galées, lesquelles sont les fichiers qui seront publiés en ligne, l’éditeur de la mise en page enverra un courriel à l’éditeur de la rubrique.</p>]]>	
+	</section>
+</topic>

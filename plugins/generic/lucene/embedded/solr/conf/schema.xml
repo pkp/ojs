@@ -425,6 +425,7 @@
     <dynamicField name="*_eu_ES" type="text_eu" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_fa_IR" type="text_fa" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_fr_CA" type="text_fr" indexed="true"  stored="true" multiValued="false" />
+	<dynamicField name="*_fr_FR" type="text_fr" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_gl_ES" type="text_gl" indexed="true"  stored="true" multiValued="false" />
     <dynamicField name="*_hr_HR" type="text" indexed="true"  stored="true" multiValued="false" /> <!-- not currently supported -->
     <dynamicField name="*_id_ID" type="text_ind" indexed="true"  stored="true" multiValued="false" />

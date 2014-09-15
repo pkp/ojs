@@ -731,4 +731,9 @@
 	<message key="manager.subscriptions.form.dateRemindedAfter">Enviado Lembrete de Pós-Expiração</message>
 	<message key="manager.setup.categories">Categorias</message>
 	<message key="manager.setup.categories.description">Seleccionar as categorias mais adequadas da lista exibida em cima. Os leitores poderão procurar por categoria a partir da configuração concluída da revista.</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Alterou as informações sobre licença e direitos de autor em Setup Journal. Por favor, guarde estas alterações antes de redefinir as permissões.</message>
+	<message key="manager.setup.copyrightYearBasis">Definir ano de copyright do artigo</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Ano padrão será definido a partir da data da publicação do artigo, tal como em "publicar-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Ano padrão será definido a partir da data de publicação do número.</message>
+	<message key="manager.statistics.reports.objectNotFound">Não foi encontrado o objecto na base de dados.</message>
 </locale>

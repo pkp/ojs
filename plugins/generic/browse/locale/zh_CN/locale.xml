@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/browse/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Browse plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">浏览</message>
+	<message key="plugins.generic.browse.description">该款插件可以浏览部分或识别类型</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">设置</message>
+	<message key="plugins.generic.browse.manager.settings.description">请设置以下附加浏览可能性</message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">浏览设置</message>
+	<message key="plugins.generic.browse.manager.settings.browse">浏览</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">选择可能浏览的对象</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">部分</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">分辨类型</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">排除部分</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">选择不应被考虑的部分</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">排除确定类型</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">选择不被识别的类型。</message>
+
+	<message key="plugins.generic.browse.search.sections">部分</message>
+	<message key="plugins.generic.browse.search.sectionIndex">浏览部分索引</message>
+	<message key="plugins.generic.browse.search.sectionDetails">部分细节</message>
+	<message key="plugins.generic.browse.search.identifyTypes">分辨类型</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">浏览识别类型索引</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">识别类型的细节</message>
+
+</locale>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role
+  *
+  -->
+
+<toc id="editorial/toc/000004" locale="fr_FR" title="Rôle de l’éditeur de rubrique" parent_topic="editorial/topic/000004">
+	<topic id="editorial/topic/000005" title="Soumissions" />
+	<topic id="editorial/topic/000006" title="En révision" />
+	<topic id="editorial/topic/000007" title="En édition" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processus éditorial" />
+	<breadcrumb url="editorial/topic/000004" title="Rôle de l’éditeur de rubrique" />
+</toc>

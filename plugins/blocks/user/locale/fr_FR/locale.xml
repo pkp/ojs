@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.block.user.displayName">Bloc de l'utilisateur</message>
+	<message key="plugins.block.user.description">Ce plugiciel offre des outils d'accès au compte de l'utilisateur dans l'encadré latéral (par ex. : ouverture de session, fermeture de session, lien au profil, etc.).</message>
+	<message key="plugins.block.user.loggedInAs">Vous êtes connecté en tant que...</message>
+	<message key="plugins.block.user.myJournals">Mes revues</message>
+	<message key="plugins.block.user.myProfile">Mon profil</message>
+	<message key="plugins.block.user.logout">Se déconnecter</message>
+	<message key="plugins.block.user.signOutAsUser">Se déconnecter en tant qu'utilisateur</message>
+	<message key="plugins.block.user.rememberMe">Mémoriser mon mot de passe</message>
+</locale>

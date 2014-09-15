@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Copyeditor 
+  *
+  -->
+
+<topic id="journal/topic/000019" locale="fr_FR" title="Reviseur de copie" toc="journal/toc/000003" key="journal.roles.copyeditor">
+	<section>
+		<![CDATA[<p>Le reviseur de copie édite les présentations pour en améliorer la grammaire et la clarté, travaille avec les auteurs pour s’assurer que tout est en place, s’assure de la stricte observance des styles bibliographiques et textuels du journal, et produit une copie éditée et épurée pour l’éditeur de la mise en page qui les convertira en galées en formats de publication du journal. Des journaux ont un éditeur ou un éditeur de rubrique qui occupe ce rôle.</p>]]>	
+	</section>
+</topic>

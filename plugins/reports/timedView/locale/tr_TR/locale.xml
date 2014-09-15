@@ -28,4 +28,5 @@
 	<message key="plugins.reports.timedView.report.galleyViews">Toplam Dizgi Görüntüleme</message>
 	<message key="plugins.reports.timedView.description">This plugin implements a CSV report describing readership for each article, filtered by a user-defined timespan.</message>
 	<message key="plugins.reports.timedView.form.useTimedViewRecords">Check to use statistics retrieved by the old Timed View plugin. If you want to generate a timed view report with new statistics data, leave this field unchecked.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">When selecting a long time period with a large set of statistics data, this report might take a while to be ready. If it takes too much time, the connection might time out and you will not receive the report file. If this happens, try again with a smaller time period.</message>
 </locale>
