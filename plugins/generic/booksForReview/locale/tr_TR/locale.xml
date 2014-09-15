@@ -191,5 +191,4 @@
 	<message key="plugins.generic.booksForReview.field.title">Başlık</message>
 	<message key="plugins.generic.booksForReview.field.description">Açıklama</message>
 
-	<message key="plugins.generic.booksForReview.reminderTask.name">Kitaplar için değerlendirme hatırlatması</message>
 </locale>

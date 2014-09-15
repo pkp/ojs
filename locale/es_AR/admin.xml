@@ -92,6 +92,4 @@ Uso (procesamiento de todos los archivos en un directorio): {$scriptName} ruta/a
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no se puede eliminar el archivo {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Alerta: el archivo {$filePath} ya existe dentro del directorio de estadísticas de uso.</message>
 	<message key="admin.copyAccessLogFileTool.success">Éxito: {$filePath} hacia {$destinationPath}</message>
-	<message key="admin.settings.security">Seguridad</message>
-	<message key="admin.settings.security.plugins">Prevee que el gestor de la revista pueda instalar, actualizar o borrar plugins</message>
 </locale>
