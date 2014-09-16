@@ -48,4 +48,3 @@
 		{/foreach}
 	</ul>
 </div>
-

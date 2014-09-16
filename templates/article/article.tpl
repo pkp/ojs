@@ -7,14 +7,14 @@
  *
  * Article View.
  *}
+{strip}
 {if $galley}
 	{assign var=pubObject value=$galley}
 {else}
 	{assign var=pubObject value=$article}
 {/if}
-
-
 {include file="article/header.tpl"}
+{/strip}
 
 {if $galley}
 	{if $galley->isHTMLGalley()}
@@ -127,4 +127,3 @@
 {include file="article/comments.tpl"}
 
 {include file="article/footer.tpl"}
-
