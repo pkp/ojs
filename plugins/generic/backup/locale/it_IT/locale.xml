@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.backup.name">Plugin per il backup</message>
 	<message key="plugins.generic.backup.description">Questo plugin esegue un backup dell'installazione.</message>
 

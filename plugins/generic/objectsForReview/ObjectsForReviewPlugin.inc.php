@@ -54,12 +54,12 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
 
-		// sitewide function:
-		$this->registerDAOs();
-		// Delete all plug-in data for a journal when the journal is deleted
-		HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'deleteJournalById'));
-
 		if ($success && $this->getEnabled()) {
+			// Register DAOs.
+			$this->registerDAOs();
+
+			// Delete all plug-in data for a journal when the journal is deleted
+			HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'deleteJournalById'));
 
 			// Editor links to reivew object types and objects for review pages
 			HookRegistry::register('Templates::Editor::Index::AdditionalItems', array($this, 'displayLink'));
@@ -348,7 +348,7 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 				$message = __('plugins.generic.objectsForReview.notification.ofrRequested');
 				break;
 			case NOTIFICATION_TYPE_OFR_AUTHOR_ASSIGNED:
-				$message = __('plugins.generic.objectsForReview.notification.ofrAauthorAssigned');
+				$message = __('plugins.generic.objectsForReview.notification.ofrAuthorAssigned');
 				break;
 			case NOTIFICATION_TYPE_OFR_AUTHOR_DENIED:
 				$message = __('plugins.generic.objectsForReview.notification.ofrAuthorDenied');
