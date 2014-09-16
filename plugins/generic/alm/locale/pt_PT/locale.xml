@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/alm/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * ALM plugin localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+
+	<message key="plugins.generic.alm.displayName">ALM Plugin</message>
+	<message key="plugins.generic.alm.description">Plugin to display in Article Level Metrics. To use the ALM service, you need to have use DOIs. This requirement may be relaxed in the future.</message>
+	<message key="plugins.generic.alm.title">Article Metrics</message>
+	<message key="plugins.generic.alm.loading">Metrics Loading ...</message>
+
+	<message key="plugins.generic.alm.settings">Settings</message>
+	<message key="plugins.generic.alm.settings.saved">ALM plugin settings saved.</message>
+	<message key="plugins.generic.alm.settings.apiKey">Article level metrics API key</message>
+	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[To be able to access the article level metrics from ALM server, you need an API key. You can create one by login in (using Mozilla Persona) on the <a href="http://pkp-alm.lib.sfu.ca/">PKP ALM page</a>.]]></message>
+	<message key="plugins.generic.alm.settings.depositArticles">Automatically deposit articles information? (Uncheck if you deposit the information direclty on ALM server using the DOI prefix.)</message>
+	<message key="plugins.generic.alm.settings.depositUrl">Article information deposit url</message>
+	<message key="plugins.generic.alm.settings.depositUrl.description">URL provided by PKP for depositing articles.</message>
+	<message key="plugins.generic.alm.settings.ipAddress">When contacting PKP to set up the ALM service, please provide this IP address: {$ip}</message>
+
+	<message key="plugins.generic.alm.thisJournal">This journal</message>
+	<message key="plugins.generic.alm.categories.html">HTML Views.</message>
+	<message key="plugins.generic.alm.categories.html.description">Total number of HTML page views for this article. These views are recorded directly within the system itself. Overall monthly view counts may also be available.</message>
+	<message key="plugins.generic.alm.categories.pdf">PDF Views.</message>
+	<message key="plugins.generic.alm.categories.pdf.description">Total number of PDF views and downloads for this article. These views are recorded directly within the system itself. Overall monthly view counts may also be available.</message>
+	<message key="plugins.generic.alm.categories.shares">Shares</message>
+	<message key="plugins.generic.alm.categories.shares.description">Shares or bookmarks in social networks such as Facebook, CiteULike and Mendeley. In most cases, clicking on the number of shares will take you to a listing in the network itself.</message>
+	<message key="plugins.generic.alm.categories.likes">Likes</message>
+	<message key="plugins.generic.alm.categories.likes.description">Likes found in social networks such as Facebook.</message>
+	<message key="plugins.generic.alm.categories.citations">Citations</message>
+	<message key="plugins.generic.alm.categories.citations.description">Citations of this article found in CrossRef, PubMed and Wikipedia. In most cases, clicking on the citation count will take you to a listing in the referencing service itself.</message>
+
+	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">ALM plugin is enabled but a valid DOI prefix must be specified in the journal path {$path} Setup in order to send article information.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">ALM plugin is enabled but no API key defined for journal path {$path}.</message>
+	<message key="plugins.generics.alm.senderTask.warning.noJournal">ALM plugin is not enabled in any journal. No article information sent.</message>
+	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Could not confirm that article information for journal path {$path} is sent. Server did not respond.</message>
+	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">No deposit url defined.</message>
+	<message key="plugins.generic.alm.senderTask.error.returnError">The server returned a message: {$error}
+	{$articlesNumber} entries from articles were sent.
+	{$payload}</message>
+	<message key="plugins.generic.alm.senderTask.name">ALM article information sender</message>
+	
+</locale>

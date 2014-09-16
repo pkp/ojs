@@ -12,10 +12,10 @@
   *
   -->
 
-<toc id="submission/toc/000000" locale="fr_CA" title="Processus des présentations" parent_topic="submission/topic/000000">
-	<topic id="submission/topic/000001" title="Guide pour les auteurs" />
-	<topic id="submission/topic/000002" title="Conditions requises pour les présentations" />
-	<topic id="submission/topic/000003" title="Création de l’index et des métadonnées" />
+<toc id="submission/toc/000000" locale="fr_CA" title="Processus de soumissions" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="Directives auteurs" />
+  <topic id="submission/topic/000002" title="Liste de vérification de la soumission" />
+	<topic id="submission/topic/000003" title="Aide aux auteurs pour l'indexation de leur travail" />
 	<topic id="submission/topic/000004" title="Fichiers supplémentaires" />
-	<breadcrumb url="submission/topic/000000" title="Processus des présentations" />
+	<breadcrumb url="submission/topic/000000" title="Processus des soumissions" />
 </toc>

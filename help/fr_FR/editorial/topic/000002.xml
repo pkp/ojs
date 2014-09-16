@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions Index 
+  *
+  -->
+
+<topic id="editorial/topic/000002" locale="fr_FR" title="Soumissions" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
+	<section>
+		<![CDATA[<p>Toutes les soumissions au journal peuvent être trouvées dans une des quatre lignes d’attente sur la page des soumissions, dépendamment à quelle étape elles en sont dans le processus éditorial. Les éditeurs ont accès à toutes les soumissions du journal par cette page, alors que les éditeurs de rubriques peuvent accéder seulement à celles qui leur ont été assignées.</p>]]>	
+	</section>
+</topic>

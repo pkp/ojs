@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (French) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.importexport.erudit.displayName">Plugiciel d'exportation d'articles pour Érudit</message>
+	<message key="plugins.importexport.erudit.description">Exporter des articles en utilisant la version anglaise de la DTD d'Érudit</message>
+
+	<message key="plugins.importexport.erudit.cliUsage">Utilisation : {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]</message>
+	<message key="plugins.importexport.erudit.export">Exporter des données</message>
+	<message key="plugins.importexport.erudit.export.issues">Exporter des numéros</message>
+	<message key="plugins.importexport.erudit.export.sections">Exporter des rubriques</message>
+	<message key="plugins.importexport.erudit.export.articles">Exporter des articles</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Sélectionner un numéro</message>
+	<message key="plugins.importexport.erudit.selectArticle">Sélectionner un article</message>
+
+	<message key="plugins.importexport.erudit.cliError">ERREUR :</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">Le chemin spécifié pour cette revue,"{$journalPath}", n'existe pas.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Impossible d'écrire au fichier "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">Aucun article ne correspond à l'identification d'article spécifiée "{$articleId}".</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Aucune épreuve ne correspond à l'étiquette d'épreuve spécifiée "{$galleyLabel}".</message>
+
+	<message key="plugins.importexport.erudit.unavailable">Non disponible</message>
+</locale>

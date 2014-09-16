@@ -14,10 +14,10 @@
 
 <topic id="site/topic/000001" locale="fr_CA" title="Installation" toc="site/toc/000000" key="site.installation">
 	<section>
-		<![CDATA[<p>L’Open Journal Systems est un système de gestion de base de données à code source libre qui peut être téléchargé gratuitement et installé sur la plupart des ordinateurs de bureau ou serveurs.</p>]]>	
+		<![CDATA[<p>L’Open Journal Systems est un système de gestion de base de données au code source ouvert et libre qui peut être téléchargé gratuitement et installé sur la plupart des ordinateurs de bureau ou serveurs.</p>]]>	
 	</section>
 	
-	<section title="License">
+	<section title="Licence">
 		<![CDATA[<p>Le système OJS est distribué sous les conditions du<a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU General Public License</a>. Une copie des conditions de la licence pour redistribuer le code original ou modifié d’OJS  est incluse avec le téléchargement d’OJS.</p>]]>
 	</section>
 	
@@ -25,16 +25,16 @@
 		<![CDATA[<p>Un environnement de serveur rencontrant les spécifications suivantes est recommandé :</p>
 		<ul>
 			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
-			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
 			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6+</li>
-			<li>Système d’exploitation: Tout système d’exploitation qui supporte les logiciels ci-haut, incluant<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, and <a href="http://www.microsoft.com/">Windows</a></li>
+			<li>Système d’exploitation: Tout système d’exploitation qui supporte les logiciels ci-haut, incluant<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, and <a href="http://www.microsoft.com/">Windows</a></li>
 		</ul>
 		<p>À ce jour, OJS a été testé seulement sur MySQL et PostgreSQL, bien que d’autres systèmes de gestion de banques de données supportés par<a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>puissent fonctionner (entièrement ou partiellement). Des rapports de compatibilité et/ou des rustines (code patches) pour d’autres systèmes de gestion de banques de données sont bienvenus.</p>
 		]]>
 	</section>
 	
 	<section title="Téléchargement">
-		<![CDATA[<p>OJS peut être téléchargé de  Public Knowledge Project <a href="http://pkp.sfu.ca/ojs/" target="_blank">web site</a>.</p>]]>
+	  <![CDATA[<p>OJS peut être téléchargé du<a href="http://pkp.sfu.ca/ojs/" target="_blank"> site internet </a>du Public Knowledge Project.</p>]]>
 	</section>
 	
 	<section title="Installation">
@@ -44,7 +44,7 @@
 				Télécharger les archives d’OJS.
 			</li>
 			<li>
-				Décompresser les archives d’OJS sur votre serveur Web et les mettre dans le dossier désiré dans l’arbre arborescent  de vos documents Web.<br />
+				Décompresser les archives d’OJS sur votre serveur Web et les mettre dans le dossier désiré dans l’arborescence de vos documents Web.<br />
 				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
 				$ mv ojs-* /var/www/myjournal</tt>
 			</li>

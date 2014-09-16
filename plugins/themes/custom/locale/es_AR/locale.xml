@@ -22,4 +22,6 @@
 	<message key="plugins.theme.custom.link">Enlace</message>
 	<message key="plugins.theme.custom.background">Fondo</message>
 	<message key="plugins.theme.custom.foreground">Primer plano</message>
+	<message key="plugins.theme.custom.notWritablePlugin">NOTA: La  opción de hojas de estilos propias para revista esta habilitada automáticamente debido a que el archivo de hoja de estilo de este plugin  "{$stylesheetFileLocation}", no se puede escribir.</message>
+	<message key="plugins.theme.custom.perJournal">Hoja de estilo propia para revista</message>
 </locale>

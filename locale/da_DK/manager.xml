@@ -733,4 +733,9 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.statistics.reports.filters.byLocation.description">Indsnævre resultatet ud fra land, region og/eller by.</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Påmindelse sendt om udløb (før)</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Påmindelse sendt om udløb (efter)</message>
+	<message key="manager.setup.confirmResetLicenseChanged">You have changed the license and copyright information in Journal Setup.  Please save these changes before resetting the permissions.</message>
+	<message key="manager.setup.copyrightYearBasis">Base new article's copyright year on</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Default year will be drawn from the article's publication date, as in "publish-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Default year will be drawn from the issue's publication date.</message>
+	<message key="manager.statistics.reports.objectNotFound">Object not found in database</message>
 </locale>

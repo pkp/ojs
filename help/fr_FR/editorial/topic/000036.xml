@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Proofreading
+  *
+  -->
+
+<topic id="editorial/topic/000036" locale="fr_FR" title="Correcteur d'épreuves" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>L'auteur revise les galées de ses soumissions, lesquelles sont écrites en HTML, PDF et/ou en PostScript, et qui apparaitront dans l'édition en ligne du journal. Pour visionner les dossiers, l'auteur clique sur chacun des formats d'épreuve (non pas sur le nom du dossier) pour voir la soumission dans chaque format dans lequel elle sera publiée. À l'étape de la révision, seulement les corrections typographiques et de mise en page sont faites par l'éditeur de la mise en page. Évidemment, si plus d'un format de dossier sont utilisés, l'auteur en vérifie seulement un pour trouver les fautes d'orthographe, mais chacun des formats pour de possibles problèmes de mise en forme. L'auteur devrait suivre les instructions de révision, quand il enregistre les corrections faites dans la zone de texte. L'auteur devrait aussi réviser tout dossier supplémentaire relié à la soumission publiée. Ces dossiers sont présentés dans leur format original et peuvent donc être modifiés et  téléchargés à nouveau, ainsi que de voir leurs titres modifiés en utilisant la fonction d'édition. Tout changement fait à ces dossiers doivent être notés dans la zone de correction.</p>]]>	
+	</section>
+</topic>

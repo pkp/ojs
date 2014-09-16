@@ -12,8 +12,8 @@
   *
   -->
 
-<topic id="journal/topic/000002" locale="fr_CA" title="Usagers" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+<topic id="journal/topic/000002" locale="fr_CA" title="Utilisateurs" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
 	<section>
-		<![CDATA[<p>Il est de la responsabilité du directeur du journal de gérer les usagers dans OJS. Ceci inclut la création d’usagers, l’inactivation des comptes, gérer les rôles, etc.. Le directeur du journal peut naviguer et ajouter aux inscriptions existantes, modifier des profils, fusionner des comptes, et communiquer avec des groupes d’usagers.</p>]]>	
+	  <![CDATA[<p>Il est de la responsabilité du directeur de la revuel de gérer les utilisateurs dans OJS. Ceci inclut la création d&#x2019;utilisateurs, l&#x2019;inactivation des comptes, gérer les rôles, etc.. Le directeur de revue peut naviguer et ajouter  des rôles aux utilisateurs déjà isncrits, modifier des profils, fusionner des comptes, et communiquer avec des groupes d&#x2019;utilisateurs.</p>]]>	
 	</section>
 </topic>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.generic.customBlockManager.displayName">Gestionnaire de bloc personnalisé</message>
+	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Vous pouvez utiliser ce plugiciel pour ajouter ou supprimer des plugiciels de blocs personnalisés. Vous pouvez alors modifier le contenu à l'aide de la page de <a href="{$systemPluginsUrl}">Plugiciels du système</a> (dans la section Plugiciel de blocs). Pour placer votre plugiciel à l'emplacement souhaité dans l'encadré latéral, aller à <a href="{$setupStep56}">Passer à l'étape 5.6</a>]]></message>
+	<message key="plugins.generic.customBlockManager.settings">Paramètres</message>
+	<message key="plugins.generic.customBlockManager.blockName">Nom du bloc</message>	
+	<message key="plugins.generic.customBlockManager.action">Action</message>	
+	<message key="plugins.generic.customBlockManager.delete">Supprimer</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Ajouter un bloc</message>	
+
+	<message key="plugins.generic.customBlock.content">Contenu</message>
+	<message key="plugins.generic.customBlock.saved">Le contenu du bloc a été enregistré.</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugiciel de bloc personnalisé)</message>
+	<message key="plugins.generic.customBlock.description">Il s'agit d'un bloc créé par l'utilisateur.</message>
+	<message key="plugins.generic.customBlock.editContent">Modifier le contenu de l'encadré latéral</message>
+	<message key="plugins.generic.customBlock.contentRequired">Un minimum de contenu est obligatoire. Si vous souhaitez supprimer ce bloc, vous pouvez le faire à l'aide du Plugiciel de gestion de bloc ou en désélectionnant ce bloc à l'Étape 5 de la configuration de la revue.</message>
+	<message key="plugins.generic.customBlock.edit">Modifier</message>
+	<message key="plugins.generic.customBlockManager.description">Ce plugiciel vous permet de personnaliser les encadrés latéraux. Vous pouvez modifier les encadrés par le biais des paramètres de chaque plugiciel que vous créez ici.</message>
+</locale>

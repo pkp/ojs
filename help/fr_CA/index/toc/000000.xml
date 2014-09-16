@@ -15,9 +15,9 @@
 <toc id="index/toc/000000" locale="fr_CA" title="Aide pour OJS" parent_topic="index/topic/000000">
 	<topic id="intro/topic/000000" title="Introduction à OJS" />
 	<topic id="site/topic/000000" title="Site de l’administration" />
-	<topic id="journal/topic/000000" title="Gestion du journal" />
+	<topic id="journal/topic/000000" title="Gestion de la revue" />
 	<topic id="submission/topic/000000" title="Processus des présentations" />
 	<topic id="editorial/topic/000000" title="Processus éditorial" />
 	<topic id="publishing/topic/000000" title="Processus de publication" />
-	<topic id="user/topic/000000" title="Site Web du journal" />
+	<topic id="user/topic/000000" title="Site Web de la revue" />
 </toc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000042.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role - Submissions
+  *
+  -->
+
+<topic id="editorial/topic/000042" locale="fr_FR" title="Soumissions" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+	<section>
+		<![CDATA[<p>Une fois que le correcteur d’épreuves est entré sur le site, cliquer sur le lien «Correcteur d’épreuves» dans la page d’accueil des usagers le mène à la file d’attente des soumissions. Cette file d’attente montre la liste des ouvrages pour lesquels on lui a demandé de faire la mise en page. Il est aussi possible d’accéder aux soumissions qu’il a déjà complétées dans le passé. Le correcteur d’épreuves clique sur le titre de l’ouvrage ce qui mène à la page à sa  page de correction d’épreuves.</p>]]>	
+	</section>
+</topic>

@@ -14,24 +14,24 @@
 
 <topic id="site/topic/000002" locale="fr_CA" title="Gestion du site" toc="site/toc/000000" key="site.siteManagement">
 	<section>
-		<![CDATA[<p>OJS est conçu pour être un système multi-journaux, et l’administrateur du site est responsable de la configuration des réglages au niveau du site et de la création de nouveaux journaux à être hébergés à l’intérieur d’un seul site Web. Les sites des journaux sont entièrement indépendants, à l’exception des comptes des usagers; alors qu’un usager peut participer dans une n’importe quelle combinaison de rôles et de journaux, la même adresse de courriel et nom d’usager fera référence au même usager, peu importe le journal.</p>]]>
+		<![CDATA[<p>OJS est conçu pour être un système multi-revues, et l’administrateur du site est responsable de la configuration des réglages au niveau du site et de la création de nouvelles revues à être hébergées à l’intérieur d’un seul site Web. Les sites des revues sont entièrement indépendants, à l’exception des comptes des utilisateurs; alors qu’un utilisateur peut avoir n’importe quelle combinaison de rôles et de revues, la même adresse de courriel et nom d’usager fera référence au même usager, peu importe la revue.</p>]]>
 	</section>
 	
 	<section title="Réglages du site">
-		<![CDATA[<p>Les informations de base sont entrées par l’administrateur du site et s’appliquent à tous les journaux hébergés par le site, incluant le nom du site, une description et les informations sur les contacts.</p>
-		<p><em>Réexpédition du journal</em> Ce réglage peut être utilisé pour assurer que toute requête est réexpédiée à un site Web particulier du journal. Habituellement ce réglage est utilisé quand un site n’héberge qu’un seul journal.</p>]]>
+		<![CDATA[<p>Les informations de base sont entrées par l’administrateur du site et s’appliquent à toutes les revues hébergées par le site, incluant le nom du site, une description et les informations sur les contacts.</p>
+		<p><em>Réexpédition de la revue</em> Ce réglage peut être utilisé pour assurer que toute requête est réexpédiée à un site Web particulier de la revue. Habituellement ce réglage est utilisé quand un site n’héberge qu’une seule revue.</p>]]>
 	</section>
 	
-	<section title="Journaux hébergés">
-		<![CDATA[<p>Comme OJS  permet de générer n’importe quel nombre de sites Web pour des journaux particuliers et distincts, de nouveaux journaux peuvent être créés et gérés en tout temps. Chaque journal qui est crée peut être accédé par une adresse URL unique basée sur un chemin d’accès entré par l’administrateur du site. Les journaux qui sont actuellement en processus d’être mis en place et configurés peuvent être invisibles du site principal jusqu’à ce qu’ils soient prêts d’aller en ligne.</p>]]>
+	<section title="Revues hébergés">
+		<![CDATA[<p>Comme OJS  permet de générer n’importe quel nombre de sites Web pour des revues particulières et distinctes, de nouvelles revues peuvent être créées et gérées en tout temps. Chaque revue qui est créée peut être accédée par une adresse URL unique basée sur un chemin d’accès entré par l’administrateur du site. Les revues qui sont actuellement en processus d’être créées et configurées peuvent être invisibles du site principal jusqu’à ce qu’ils soient prêts d’aller en ligne.</p>]]>
 	</section>
 	
 	<section title="Langues">
-		<![CDATA[<p>OJS est conçu pour être un système multilingue, permettant aux journaux supportant une multitude de langues d’être hébergées sur un site unique. L’administrateur du site peut spécifier la langue par défaut du site, et installer d’autres paramètres selon ce qu’ils deviennent disponibles, pour rendre possible l’utilisation de d’autres langues par le journal.</p>
-		<p>Des progiciels de langues additionnelles seront disponibles pour téléchargement de OJS<a href="http://pkp.sfu.ca/" target="_blank">web site</a>à mesure que des traductions seront reçues des usagers qui contribuent à la traduction. Ces progiciels peuvent être installés dans un système existant pour les rendre disponibles aux journaux.</p>]]>
+		<![CDATA[<p>OJS est conçu pour être un système multilingue, permettant aux revues supportant une multitude de langues d’être hébergées sur un site unique. L’administrateur du site peut spécifier la langue par défaut du site, et installer d’autres paramètres selon ce qu’ils deviennent disponibles, pour rendre possible l’utilisation de d’autres langues par la revue.</p>
+		<p>Des progiciels de langues additionnelles seront disponibles pour téléchargement du <a href="http://pkp.sfu.ca/" target="_blank">site web</a> d'OJS à mesure que des traductions seront reçues des utilisateurs qui contribuent à la traduction. Ces progiciels peuvent être installés dans un système existant pour les rendre disponibles aux revues.</p>]]>
 	</section>
 	
 	<section title="Authentification des sources">
-		<![CDATA[<p>Par défaut, OJS authentifie les usagers depuis sa base de données interne. Il est possible cependant d’utiliser d’autre méthodes d’authentification, tel LDAP. Des sources additionnelles d’authentification sont mises en place par OJS par des plugiciels. Référer à la documentation fournie avec chaque plugiciel pour les détails.</p>]]>
+		<![CDATA[<p>Par défaut, OJS authentifie les utilisateurs depuis sa base de données interne. Il est possible cependant d’utiliser d’autre méthodes d’authentification, tel LDAP. Des sources additionnelles d’authentification sont mises en place par OJS par des plugiciels. Référer à la documentation fournie avec chaque plugiciel pour les détails.</p>]]>
 	</section>
 </topic>

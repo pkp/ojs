@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process Index 
+  *
+  -->
+
+<topic id="submission/topic/000000" locale="fr_FR" title="Processus des présentations" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+	<section>
+		<![CDATA[<p>Le journal permet aux auteurs de télécharger leur présentations directement au serveur du site Web du journal. Dépendant des options choisies par le directeur du journal pour ce journal (Étape 2.7), les auteurs peuvent avoir l’option, en s’inscrivant comme auteur, d’aussi s’inscrire comme réviseur (d’être appelés à entreprendre une révision de pairs d’autres présentations) et/ou de lecteur (pour être notifié de la table des matières d’un nouveau numéro du journal). En complétant l’enregistrement, l’auteur est amené directement à la page d’accueil des usagers, laquelle énumère les divers rôles que l’usager a avec ce journal (i.e. auteur, reviseur, etc.). Cliquer sur le rôle d’auteur amène l’usager à sa page des présentations, sur laquelle y sont listées les présentations courantes et antérieures, et d’où une nouvelle présentation au journal peut être lancée. Le processus de présentation pour les auteurs est divisé en cinq étapes, avec un guide expliquant chaque étape. Les auteurs n’ont pas à compléter les cinq étapes en une seule session, mais peuvent retourner à ce qui sera alors listé dans le tableau des présentations comme ‘’incomplet’’</p>]]>	
+	présentations</section>
+</topic>

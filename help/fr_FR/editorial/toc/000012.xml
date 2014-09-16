@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Copyeditor's Role
+  *
+  -->
+
+<toc id="editorial/toc/000012" locale="fr_FR" title="Rôle du réviseur" parent_topic="editorial/topic/000012">
+	<topic id="editorial/topic/000037" title="Soumissions" />
+	<topic id="editorial/topic/000038" title="Révision de copie" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processus éditorial" />
+	<breadcrumb url="editorial/topic/000012" title="Rôle du réviseur" />
+</toc>

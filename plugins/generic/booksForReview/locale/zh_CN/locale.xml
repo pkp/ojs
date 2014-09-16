@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/booksForReview/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Books for review plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Books For Review Notifications -->
+	<message key="plugins.generic.booksForReview.notification.bookRequested">请求书评。等待编辑的确认。</message>
+	<message key="plugins.generic.booksForReview.notification.bookCreated">创建新的书评。</message>
+	<message key="plugins.generic.booksForReview.notification.bookUpdated">更新书评。</message>
+	<message key="plugins.generic.booksForReview.notification.bookMailed">书评记录已邮寄。</message>
+	<message key="plugins.generic.booksForReview.notification.bookDeleted">删除书评。</message>
+	<message key="plugins.generic.booksForReview.notification.submissionAssigned">提交的文章进行专家审评</message>
+	<message key="plugins.generic.booksForReview.notification.authorAssigned">作者指定的专家审评。</message>
+	<message key="plugins.generic.booksForReview.notification.authorDenied">作者的要求被拒绝。评论重置到初始状态。</message>
+	<message key="plugins.generic.booksForReview.notification.authorRemoved">作者被删除。评论重置到初始状态。</message>
+	<message key="plugins.generic.booksForReview.notification.settingsSaved">评论设置已保存。</message>
+
+	<!-- Books For Review Management -->
+	<message key="plugins.generic.booksForReview.editor.booksForReview"><![CDATA[Books&nbsp;For&nbsp;Review]]></message>
+	<message key="plugins.generic.booksForReview.editor.all">所有</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAll">评论-所有</message>
+	<message key="plugins.generic.booksForReview.editor.available">有效</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAvailable">评论-可用</message>
+	<message key="plugins.generic.booksForReview.editor.requested">请求</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewRequested">评论-请求</message>
+	<message key="plugins.generic.booksForReview.editor.assigned">已分配</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAssigned">评论-已分配</message>
+	<message key="plugins.generic.booksForReview.editor.mailed">已邮寄</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewMailed">评论-已邮寄</message>
+	<message key="plugins.generic.booksForReview.editor.submitted">提交</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">评论-提交</message>
+	<message key="plugins.generic.booksForReview.editor.create">创建评论。</message>
+	<message key="plugins.generic.booksForReview.editor.createNewUser">创建新用户</message>
+	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">编辑书评元数据</message>
+	<message key="plugins.generic.booksForReview.editor.delete">删除书评</message>
+	<message key="plugins.generic.booksForReview.editor.bookDetails">书评细节</message>
+	<message key="plugins.generic.booksForReview.editor.notes">补充注释。</message>
+	<message key="plugins.generic.booksForReview.editor.notesInstructions">只限编辑。不会作为评审结果发表。</message>
+	<message key="plugins.generic.booksForReview.editor.title">标题</message>
+	<message key="plugins.generic.booksForReview.editor.editor">编辑</message>
+	<message key="plugins.generic.booksForReview.editor.status">状态</message>
+	<message key="plugins.generic.booksForReview.editor.dueDate">到期</message>
+	<message key="plugins.generic.booksForReview.editor.noMailingAddress">在文件上没有邮寄地址。</message>
+	<message key="plugins.generic.booksForReview.editor.editSubmission"><![CDATA[Edit&nbsp;提交]]></message>
+	<message key="plugins.generic.booksForReview.editor.confirmDelete">您确定永久删除这个评论结果吗？</message>
+	<message key="plugins.generic.booksForReview.editor.confirmRemove">您确定删除这个作者和他的评审记录吗？</message>
+	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Select&nbsp;提交]]></message>
+	<message key="plugins.generic.booksForReview.editor.select">选择</message>
+	<message key="plugins.generic.booksForReview.editor.edit">编辑</message>
+	<message key="plugins.generic.booksForReview.editor.submission">提交</message>
+	<message key="plugins.generic.booksForReview.editor.bookReviewer">书评家</message>
+	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">分配</message>
+	<message key="plugins.generic.booksForReview.editor.removeBookReviewer">删除</message>
+	<message key="plugins.generic.booksForReview.editor.acceptBookReviewer">接受</message>
+	<message key="plugins.generic.booksForReview.editor.denyBookReviewer">拒绝</message>
+	<message key="plugins.generic.booksForReview.editor.notifyBookMailed"><![CDATA[Book&nbsp;已邮寄]]></message>
+	<message key="plugins.generic.booksForReview.editor.noneCreated">没有评论结果</message>
+	<message key="plugins.generic.booksForReview.editor.noResults">没有搜索结果</message>
+	<message key="plugins.generic.booksForReview.editor.assignAuthor">分配作者</message>
+	<message key="plugins.generic.booksForReview.editor.assign">分配</message>
+	<message key="plugins.generic.booksForReview.editor.form.status">状态</message>
+	<message key="plugins.generic.booksForReview.editor.form.title">标题</message>
+	<message key="plugins.generic.booksForReview.editor.form.addAuthor">添加作者</message>
+	<message key="plugins.generic.booksForReview.editor.form.deleteAuthor">删除</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorType"><![CDATA[Author&nbsp;类型]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.copy">副本可用</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisher">出版社</message>
+	<message key="plugins.generic.booksForReview.editor.form.year">年份</message>
+	<message key="plugins.generic.booksForReview.editor.form.language">语言</message>
+	<message key="plugins.generic.booksForReview.editor.form.edition">版本</message>
+	<message key="plugins.generic.booksForReview.editor.form.pages">页数</message>
+	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.editor.form.url"><![CDATA[Publisher's&nbsp;网址]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.description">描述</message>
+	<message key="plugins.generic.booksForReview.editor.form.notes">注释</message>
+	<message key="plugins.generic.booksForReview.editor.form.dateRequested"><![CDATA[Date&nbsp;请求]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateAssigned"><![CDATA[Date&nbsp;已分配]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateMailed"><![CDATA[Date&nbsp;已邮寄]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateDue"><![CDATA[Date&nbsp;到期]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateSubmitted"><![CDATA[Date&nbsp;已提交]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.user"><![CDATA[Book&nbsp;评审人]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.article">提交</message>
+	<message key="plugins.generic.booksForReview.editor.form.saveAndCreateAnother">保存并且创建另一个。</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorTypeValid">请选择一个有效的作者</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisherRequired">请输入这本书的出版社。</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearRequired">请输入这本书的出版年份。</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearValid">请输入一个有效的出版年份。</message>
+	<message key="plugins.generic.booksForReview.editor.form.pagesValid">请输入书的页数。</message>
+	<message key="plugins.generic.booksForReview.editor.form.urlPrefixIncluded">请输入一个完整的网址，须包含开头（例如http://）</message>
+	<message key="plugins.generic.booksForReview.editor.form.titleRequired">请输入书名。</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorRequiredFields">请确保每个作者都有指定的名和姓。</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPage">封面页</message>
+	<message key="plugins.generic.booksForReview.editor.form.image">图像</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageInstructions">(可用的格式: .gif, .jpg, or .png )</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageUploaded">上传</message>
+	<message key="plugins.generic.booksForReview.editor.form.removeCoverPage">删除封面页图片？</message>
+	<message key="plugins.generic.booksForReview.editor.form.remove">删除</message>
+
+
+	<!-- Books For Review Settings Management -->
+	<message key="plugins.generic.booksForReview.settings">设置</message>
+	<message key="plugins.generic.booksForReview.booksForReviewSettings">书籍评论设置</message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>模式1</h5><p>以下工作流程由</p><ul>支持。<li>编辑添加书籍供审查。</li><li>对书评感兴趣的作者可以写评论，然后通知编辑。</li></li>编辑可以接受或者拒绝他的请求，然后通知作者。</li><li>如果编辑接受他的请求，这本将不会列在供审查里列表中。</li><li>申请人会收到评审最后日期。</li><li>编辑会把书籍的副本寄给申请者。</li></ul></li><li>作者通过在线提交系统提交评论结果。</li><li>书籍元数据将作为书评的一部分出版。</li></ul><p>该款插件可以支持多重编辑的期刊。当编辑添加评论一本新书，他或她将成为这本书的初级编辑和主要联系人。</p><h5>模式2</h5><p>以下工作流程由</p><ul>支持。 <li>编辑器添加书籍</li><li>编辑为每一本书提交书评作者</li><li>书籍元数据作为书评提交的一部分出版。]]></message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">管理。</message>
+	<message key="plugins.generic.booksForReview.settings.modeFull">模式1：列出可用的图书进行审查，管理图书评论，出版图书元数据。</message>
+	<message key="plugins.generic.booksForReview.settings.modeMetadata">模式2：只出版书籍元数据。</message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewDue">书评到期</message>
+	<message key="plugins.generic.booksForReview.settings.coverImages">封面图片。</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageIssue">在每期目录中显示书籍封面图片。</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageAbstract">在文章摘要页显示书籍封面图片。</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks1">评论到期</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks2">书籍被分配给作者的几周后。</message>
+	<message key="plugins.generic.booksForReview.settings.emailReminders">电子邮件提醒</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays1">给作者发送提醒邮件</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">书评最后期限的前几天</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">给作者发送提醒邮件</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">书评最后期限后的几天</message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>提示:</strong>激活这些选项，网站管理员能够在OJS配置文件中启用<tt>scheduled_tasks</tt> 选项。需配置其它服务器支持该功能（在其他服务器无法启用该功能），如在OJS文档说明。]]></message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformation">附加信息</message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">书评的附加信息</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">请指定书评最后期限的时间。</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksValid">请指定书评的有效时间。</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysBeforeDueReminderValid">请指定邮件提醒的有效天数。</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysAfterDueReminderValid">请指定邮件提醒的有效天数</message>
+
+	<!-- Books For Review Author -->
+	<message key="plugins.generic.booksForReview.author.title">题目</message>
+	<message key="plugins.generic.booksForReview.author.editor">编辑</message>
+	<message key="plugins.generic.booksForReview.author.status">状态</message>
+	<message key="plugins.generic.booksForReview.author.submit">提交</message>
+	<message key="plugins.generic.booksForReview.author.dueDate">最后日期</message>
+	<message key="plugins.generic.booksForReview.author.noneCreated">没有书评</message>
+	<message key="plugins.generic.booksForReview.author.booksForReview">书评</message>
+	<message key="plugins.generic.booksForReview.author.myBooksForReview">我的书籍</message>
+	<message key="plugins.generic.booksForReview.author.availableBooksForReview">可用的书籍</message>
+	<message key="plugins.generic.booksForReview.author.requestBookForReview">请求书评</message>
+	<message key="plugins.generic.booksForReview.author.submitInstructions">请注明当前提交的文件是否是分配给您的评论的书籍。</message>
+	<message key="plugins.generic.booksForReview.author.requested">请求</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewRequested">书评-要求</message>
+	<message key="plugins.generic.booksForReview.author.assigned">已分配</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewAssigned">书评-已分配</message>
+	<message key="plugins.generic.booksForReview.author.mailed">已邮寄</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewMailed">书评-已邮寄</message>
+	<message key="plugins.generic.booksForReview.author.submitted">已提交</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewSubmitted">书评-已提交</message>
+
+	<!-- Books For Review Public -->
+	<message key="plugins.generic.booksForReview.public.booksForReview">书评</message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>请求书评：</p><ul><li><a href="{$registerUrl}" target="_parent">注册</a>该期刊的作者。</li><li><a href="{$loginAuthorUrl}" target="_parent">Log in</a> 作者.</li><li>点击感兴趣书籍的链接。]]></message>
+	<message key="plugins.generic.booksForReview.public.copy">副本可用</message>
+	<message key="plugins.generic.booksForReview.public.copyYes">允许</message>
+	<message key="plugins.generic.booksForReview.public.copyNo">不允许</message>
+	<message key="plugins.generic.booksForReview.public.language">语言</message>
+	<message key="plugins.generic.booksForReview.public.edition">版本</message>
+	<message key="plugins.generic.booksForReview.public.pages">页数</message>
+	<message key="plugins.generic.booksForReview.public.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.public.externalSite">外部网站</message>
+	<message key="plugins.generic.booksForReview.public.noneCreated">没有书评</message>
+	<message key="plugins.generic.booksForReview.public.noResults">没有搜索结果</message>
+	<message key="plugins.generic.booksForReview.public.coverPage.altText">封面图片</message>
+	<message key="plugins.generic.booksForReview.public.bookDetails">本书详细</message>
+
+	<!-- Books For Review -->
+	<message key="plugins.generic.booksForReview.reminderTask.name">书评提醒</message>
+	<message key="plugins.generic.booksForReview.displayName">书评</message>
+	<message key="plugins.generic.booksForReview.description">征求感兴趣的书籍评论。管理书籍评论和书籍评论进程。</message>
+	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Books&nbsp;For&nbsp;评论]]></message>
+	<message key="plugins.generic.booksForReview.status.available">可用</message>
+	<message key="plugins.generic.booksForReview.status.requested">已请求</message>
+	<message key="plugins.generic.booksForReview.status.assigned">已分配</message>
+	<message key="plugins.generic.booksForReview.status.mailed">已邮寄</message>
+	<message key="plugins.generic.booksForReview.status.submitted">已提交</message>
+	<message key="plugins.generic.booksForReview.authorType.by">通过</message>
+	<message key="plugins.generic.booksForReview.authorType.editedBy">编辑：</message>
+	<message key="plugins.generic.booksForReview.authorType.editedByShort">Ed.</message>
+	<message key="plugins.generic.booksForReview.editionShort">ed.</message>
+	<message key="plugins.generic.booksForReview.field.status">状态</message>
+	<message key="plugins.generic.booksForReview.field.publisher">出版社</message>
+	<message key="plugins.generic.booksForReview.field.year">年份</message>
+	<message key="plugins.generic.booksForReview.field.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.field.title">标题</message>
+	<message key="plugins.generic.booksForReview.field.description">描述</message>
+
+</locale>

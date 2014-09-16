@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/booksForReview/locale/fr_FR/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Books for review plugin localization strings for the en_US (U.S. English) locale.
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+
+	<!-- Books For Review Notifications -->
+	<message key="plugins.generic.booksForReview.notification.bookRequested">Livre demandé. En attente d'une confirmation du Rédacteur.</message>
+	<message key="plugins.generic.booksForReview.notification.bookCreated">Nouveau compte rendu de livre créé.</message>
+	<message key="plugins.generic.booksForReview.notification.bookUpdated">Compte rendu de livre mis à jour.</message>
+	<message key="plugins.generic.booksForReview.notification.bookMailed">Compte rendu de livre consigné comme posté.</message>
+	<message key="plugins.generic.booksForReview.notification.bookDeleted">Compte rendu de livre supprimé.</message>
+	<message key="plugins.generic.booksForReview.notification.submissionAssigned">Soumission assignée à un compte rendu de livre.</message>
+	<message key="plugins.generic.booksForReview.notification.authorAssigned">Auteur assigné à un compte rendu de livre.</message>
+	<message key="plugins.generic.booksForReview.notification.authorDenied">Demande de l'auteur refusée. Compte rendu de livre réinitialisé à son statut d'origine.</message>
+	<message key="plugins.generic.booksForReview.notification.authorRemoved">Auteur supprimé. Compte rendu de livre réinitialisé à son statut d'origine.</message>
+	<message key="plugins.generic.booksForReview.notification.settingsSaved">Paramètres du compte rendu de livre enregistrés.</message>
+
+	<!-- Books For Review Management -->
+	<message key="plugins.generic.booksForReview.editor.booksForReview"><![CDATA[Compte&nbsp;rendu&nbsp;de&nbsp;livre]]></message>
+	<message key="plugins.generic.booksForReview.editor.all">Tous</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAll">Comptes rendus de livre - Tous</message>
+	<message key="plugins.generic.booksForReview.editor.available">Disponible</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAvailable">Comptes rendus de livre - Disponible</message>
+	<message key="plugins.generic.booksForReview.editor.requested">Demandé</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewRequested">Comptes rendus de livre - Demandés</message>
+	<message key="plugins.generic.booksForReview.editor.assigned">Assigné</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAssigned">Comptes rendus de livre - Assignés</message>
+	<message key="plugins.generic.booksForReview.editor.mailed">Posté</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewMailed">Comptes rendus de livre - Postés</message>
+	<message key="plugins.generic.booksForReview.editor.submitted">Soumis</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">Comptes rendus de livre - Soumis</message>
+	<message key="plugins.generic.booksForReview.editor.create">Créer un compte rendu de livre</message>
+	<message key="plugins.generic.booksForReview.editor.createNewUser">Créer un nouvel utilisateur</message>
+	<message key="plugins.generic.booksForReview.editor.edit">Modifier</message>
+	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">Modifier les métadonnées du livre</message>
+	<message key="plugins.generic.booksForReview.editor.delete">Supprimer le compte rendu de livre</message>
+	<message key="plugins.generic.booksForReview.editor.bookDetails">Détails du livre</message>
+	<message key="plugins.generic.booksForReview.editor.notes">Notes supplémentaires</message>
+	<message key="plugins.generic.booksForReview.editor.notesInstructions">Pour le rédacteur uniquement. Ne pas publier comme partie intégrante du compte rendu de livre.</message>
+	<message key="plugins.generic.booksForReview.editor.title">Titre</message>
+	<message key="plugins.generic.booksForReview.editor.editor">Rédacteur</message>
+	<message key="plugins.generic.booksForReview.editor.status">Statut</message>
+	<message key="plugins.generic.booksForReview.editor.dueDate">Échéance</message>
+	<message key="plugins.generic.booksForReview.editor.noMailingAddress">Aucune adresse postale consignée.</message>
+	<message key="plugins.generic.booksForReview.editor.editSubmission"><![CDATA[Modifier&nbsp;une&nbsp;soumission]]></message>
+	<message key="plugins.generic.booksForReview.editor.confirmDelete">Êtes-vous certain de vouloir supprimer de façon permanente ce compte rendu de livre?</message>
+	<message key="plugins.generic.booksForReview.editor.confirmRemove">Êtes-vous certain de vouloir supprimer cet auteur et effacer l'historique de ce compte rendu de livre?</message>
+	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Sélectionner&nbsp;une&nbsp;soumission]]></message>
+	<message key="plugins.generic.booksForReview.editor.select">Sélectionner</message>
+	<message key="plugins.generic.booksForReview.editor.submission">Soumission</message>
+	<message key="plugins.generic.booksForReview.editor.bookReviewer">Critique de livre</message>
+	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Assigner</message>
+	<message key="plugins.generic.booksForReview.editor.removeBookReviewer">Supprimer</message>
+	<message key="plugins.generic.booksForReview.editor.acceptBookReviewer">Accepter</message>
+	<message key="plugins.generic.booksForReview.editor.denyBookReviewer">Rejeter</message>
+	<message key="plugins.generic.booksForReview.editor.notifyBookMailed"><![CDATA[Livre&nbsp;posté]]></message>
+	<message key="plugins.generic.booksForReview.editor.noneCreated">Aucun compte rendu de livre</message>
+	<message key="plugins.generic.booksForReview.editor.noResults">Aucun résultat de recherche</message>
+	<message key="plugins.generic.booksForReview.editor.assignAuthor">Assigner un auteur</message>
+	<message key="plugins.generic.booksForReview.editor.assign">Assigner</message>
+	<message key="plugins.generic.booksForReview.editor.form.status">Statut</message>
+	<message key="plugins.generic.booksForReview.editor.form.title">Titre</message>
+	<message key="plugins.generic.booksForReview.editor.form.addAuthor">Ajouter un auteur</message>
+	<message key="plugins.generic.booksForReview.editor.form.deleteAuthor">Supprimer</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorType"><![CDATA[Type&nbsp;d'auteur]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.copy">Copie disponible</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisher">Éditeur</message>
+	<message key="plugins.generic.booksForReview.editor.form.year">Année</message>
+	<message key="plugins.generic.booksForReview.editor.form.language">Langue</message>
+	<message key="plugins.generic.booksForReview.editor.form.edition">Édition</message>
+	<message key="plugins.generic.booksForReview.editor.form.pages">Pages</message>
+	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.editor.form.url"><![CDATA[URL&nbsp;de&nbsp;l'éditeur]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.description">Description</message>
+	<message key="plugins.generic.booksForReview.editor.form.notes">Notes</message>
+	<message key="plugins.generic.booksForReview.editor.form.dateRequested"><![CDATA[Date&nbsp;de&nbsp;la&nbsp;demande]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateAssigned"><![CDATA[Date&nbsp;de&nbsp;l'assignation]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateMailed"><![CDATA[Date&nbsp;de&nbsp;l'envoi&nbsp;postal]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateDue"><![CDATA[Date&nbsp;d'échéance]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateSubmitted"><![CDATA[Date&nbsp;de&nbsp;la&nbsp;soumission]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.user"><![CDATA[Critique&nbsp;de&nbsp;livre]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.article">Soumission</message>
+	<message key="plugins.generic.booksForReview.editor.form.saveAndCreateAnother">Enregistrer et en créer un autre</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorTypeValid">Veuillez sélectionner un type d'auteur valide.</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisherRequired">Veuillez saisir l'éditeur pour ce livre.</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearRequired">Veuillez saisir l'année de publication pour ce livre.</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearValid">Veuillez saisir une année de publication valide.</message>
+	<message key="plugins.generic.booksForReview.editor.form.pagesValid">Veuillez saisir un nombre de pages valide.</message>
+	<message key="plugins.generic.booksForReview.editor.form.urlPrefixIncluded">Veuillez saisir une URL complète incluant le préfixe (c.-à-d. http://).</message>
+	<message key="plugins.generic.booksForReview.editor.form.titleRequired">Veuillez saisir le titre du livre.</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorRequiredFields">Veuillez vous assurer que le prénom et le nom de famille est spécifié pour chaque auteur.</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPage">Page couverture</message>
+	<message key="plugins.generic.booksForReview.editor.form.image">Image</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageInstructions">(formats acceptés : .gif, .jpg, or .png )</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageUploaded">Téléchargée</message>
+	<message key="plugins.generic.booksForReview.editor.form.removeCoverPage">Supprimer l'image de la page couverture?</message>
+	<message key="plugins.generic.booksForReview.editor.form.remove">Supprimer</message>
+
+
+	<!-- Books For Review Settings Management -->
+	<message key="plugins.generic.booksForReview.settings">Paramètres</message>
+	<message key="plugins.generic.booksForReview.booksForReviewSettings">Paramètres du compte rendu de livre</message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Mode 1</h5><p>Le flux de travaux (workflow) suivant est supporté:</p><ul><li>Le Rédacteur ajoute les compted rendus de livre disponible.</li><li>Les Auteurs intéressés à faire un compte rendu de livre peuvent en faire la demande, en avisant le Rédacteur.</li><li>Le Rédacteur peut accepter ou refuser la demande de compte rendu, en avisant l'Auteur.</li><li>Si la demande de compte rendu est acceptée<ul><li>Le livre n'est plus listé comme disponible pour fins de compte rendu.</li><li>Une date d'échéance est établie pour le compte rendu.</li><li>Le Rédacteur peut poster une copie du livre à l'Auteur.</li></ul></li><li>L'Auteur soumet le compte rendu du livre via le processus régulier de soumission en ligne.</li><li>Les métadonnées du livre sont publiés comme partie intégrante de la soumission du compte rendu du livre.</li></ul><p>Ce plugiciel gère les revues comprenant plusieurs rédacteurs. Quand un Rédacteur ajoute un nouveau compte rendu de livre, il ou elle devient le rédacteur et le contact de correspondance pour le livre.</p><h5>Mode 2</h5><p>Le flux de travaux (workflow) suivant est supporté:</p><ul><li>Le Rédacteur ajoute des livres.</li><li>Le Rédacteur jumelle les soumissions de compte rendu de livre à chaque livre.</li><li>Les métadonnées du livre sont publiés comme partie intégrante de la soumission du compte rendu de livre.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">Gestion</message>
+	<message key="plugins.generic.booksForReview.settings.modeFull">Mode 1: liste les comptes rendus de livre disponibles, gère les critiques de livres, et publie les métadonnées de livres.</message>
+	<message key="plugins.generic.booksForReview.settings.modeMetadata">Mode 2: Ne publie que les métadonnes de livres seulement.</message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewDue">Échéance des comptes rendus de livre</message>
+	<message key="plugins.generic.booksForReview.settings.coverImages">Images couverture</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageIssue">Afficher les images couverture des livres pour les comptes rendus de livre dans le sommaire du numéro.</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageAbstract">Afficher les images couverture du livre pour les comptes rendus de livre dans les pages du résumé de l'article.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks1">Les comptes rendus sont échus</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks2">semaines(s) après que le livre ait été assigné à l'auteur.</message>
+	<message key="plugins.generic.booksForReview.settings.emailReminders">Courriels de rappel</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays1">Envoyer aux auteurs un courriel de rappel</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">jour(s) avant la date d'échéance du compte rendu.</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Send authors a reminder email</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">day(s) after the review due date.</message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Note :</strong> Pour activer ces options, l'administrateur du site doit activer l'option <tt>scheduled_tasks</tt>  dans le fichier de configuration d'OJS. Des configurations serveurs supplémentaires pourraient être nécessaires afin de prendre en charge cette fonctionnalité (laquelle peut ne pas être disponible sur tous les serveurs), tel qu'indiqué dans la documentation d'OJS.]]></message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformation">Informations supplémentaires</message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Informations supplémentaires publiées conjointement aux comptes rendus de livre.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Veuillez spécifier le nombre de semaines pour l'échéance des comptes rendus de livre.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksValid">Veuillez spécifier un nombre de semaines valide pour l'échéance des comptes rendus de livre.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysBeforeDueReminderValid">Veuillez spécifier un nombre de jours valide pour le courriel de rappel.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysAfterDueReminderValid">Veuillez spécifier un nombre de jours valide pour le courriel de rappel.</message>
+
+	<!-- Books For Review Author -->
+	<message key="plugins.generic.booksForReview.author.title">Titre</message>
+	<message key="plugins.generic.booksForReview.author.editor">Rédacteur</message>
+	<message key="plugins.generic.booksForReview.author.status">Statut</message>
+	<message key="plugins.generic.booksForReview.author.submit">Soumettre</message>
+	<message key="plugins.generic.booksForReview.author.dueDate">Échéance</message>
+	<message key="plugins.generic.booksForReview.author.noneCreated">Aucun compte rendu de livre</message>
+	<message key="plugins.generic.booksForReview.author.booksForReview">Compte rendu de livre</message>
+	<message key="plugins.generic.booksForReview.author.myBooksForReview">Mes livres</message>
+	<message key="plugins.generic.booksForReview.author.availableBooksForReview">Livres disponibles</message>
+	<message key="plugins.generic.booksForReview.author.requestBookForReview">Demander ce compte rendu de livre</message>
+	<message key="plugins.generic.booksForReview.author.submitInstructions">Veuillez indiquer si cette soumission est un compte rendu de livre pour n'importe lequel des livres suivants vous étant assignés.</message>
+	<message key="plugins.generic.booksForReview.author.requested">Demandé</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewRequested">Comptes rendus de livre - Demandés</message>
+	<message key="plugins.generic.booksForReview.author.assigned">Assigné</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewAssigned">Comptes rendus de livre - Assignés</message>
+	<message key="plugins.generic.booksForReview.author.mailed">Posté</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewMailed">Comptes rendus de livre - Postés</message>
+	<message key="plugins.generic.booksForReview.author.submitted">Soumis</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewSubmitted">Comptes rendus de livre - Soumis</message>
+
+	<!-- Books For Review Public -->
+	<message key="plugins.generic.booksForReview.public.booksForReview">Comptes rendus de livre</message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Pour demander un compte rendu de livre :</p><ul><li><a href="{$registerUrl}" target="_parent">S'inscrire</a> comme auteur avec cette revue.</li><li><a href="{$loginAuthorUrl}" target="_parent">Se connecter</a> comme auteur.</li><li>Cliquer sur le lien de demande qui correspond au livre qui suscite l'intérêt.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.public.copy">Copie disponible</message>
+	<message key="plugins.generic.booksForReview.public.copyYes">Oui</message>
+	<message key="plugins.generic.booksForReview.public.copyNo">Non</message>
+	<message key="plugins.generic.booksForReview.public.language">Langue</message>
+	<message key="plugins.generic.booksForReview.public.edition">Édition</message>
+	<message key="plugins.generic.booksForReview.public.pages">Pages</message>
+	<message key="plugins.generic.booksForReview.public.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.public.externalSite">site externe</message>
+	<message key="plugins.generic.booksForReview.public.noneCreated">Aucun compte rendu de livre</message>
+	<message key="plugins.generic.booksForReview.public.noResults">Aucun résultat de recherche</message>
+	<message key="plugins.generic.booksForReview.public.coverPage.altText">Image de la page couverture</message>
+	<message key="plugins.generic.booksForReview.public.bookDetails">Détails du livre</message>
+
+	<!-- Books For Review -->
+	<message key="plugins.generic.booksForReview.displayName">Comptes rendus de livre</message>
+	<message key="plugins.generic.booksForReview.description">Solliciter des comptes rendus pour les livres suscitant un intérêt ou reçus des éditeurs. Gérer les critiques de livre et le processus de compte rendu de livre.</message>
+	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Compte&nbsp;rendu&nbsp;de&nbsp;livre]]></message>
+	<message key="plugins.generic.booksForReview.status.available">Disponible</message>
+	<message key="plugins.generic.booksForReview.status.requested">Demandé</message>
+	<message key="plugins.generic.booksForReview.status.assigned">Assigné</message>
+	<message key="plugins.generic.booksForReview.status.mailed">Posté</message>
+	<message key="plugins.generic.booksForReview.status.submitted">Soumis</message>
+	<message key="plugins.generic.booksForReview.authorType.by">Par</message>
+	<message key="plugins.generic.booksForReview.authorType.editedBy">Modifié par</message>
+	<message key="plugins.generic.booksForReview.authorType.editedByShort">Éd.</message>
+	<message key="plugins.generic.booksForReview.editionShort">éd.</message>
+	<message key="plugins.generic.booksForReview.field.status">Statut</message>
+	<message key="plugins.generic.booksForReview.field.publisher">Éditeur</message>
+	<message key="plugins.generic.booksForReview.field.year">Année</message>
+	<message key="plugins.generic.booksForReview.field.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.field.title">Titre</message>
+	<message key="plugins.generic.booksForReview.field.description">Description</message>
+
+</locale>

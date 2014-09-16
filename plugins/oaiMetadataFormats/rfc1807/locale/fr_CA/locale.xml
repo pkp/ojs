@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
+  * Localization strings for the en_US (U.S. English) locale.
   *
   -->
  
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.OAIMetadata.rfc1807.displayName">Format de métadonnées RFC1807</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">Structure les métadonnées afin de les rendre conformes au format RFC1807.</message>
 </locale>

@@ -12,8 +12,8 @@
   *
   -->
 
-<topic id="journal/topic/000011" locale="fr_CA" title="Tous les usagers" toc="journal/toc/000002" key="journal.users.allUsers">
+<topic id="journal/topic/000011" locale="fr_CA" title="Utilisateurs inscrits à cette revue" toc="journal/toc/000002" key="journal.users.allUsers">
 	<section>
-		<![CDATA[<p>Cette liste inclut tous ceux qui sont inscrits au journal en une capacité quelconque. Le directeur du journal peut ouvrir une séance comme n’importe quel usager inscrit. Ceci peut s’avérer extrêmement utile pour aider un usager à distance, parce que çà permet au directeur du journal d’obtenir un meilleur sens de ce qui peut mal fonctionner.</p>]]>	
+		<![CDATA[<p>Cette liste inclut tous ceux qui sont inscrits à cette revue en une capacité quelconque. Le directeur de revue peut ouvrir une séance comme n’importe quel utilisateur inscrit. Ceci peut s’avérer extrêmement utile pour aider un utilisateur à distance, parce que ça permet au directeur de revue d’obtenir un meilleur sens de ce qui peut mal fonctionner.</p>]]>	
 	</section>
 </topic>

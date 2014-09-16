@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Reviewer's Role
+  *
+  -->
+
+<toc id="editorial/toc/000008" locale="fr_FR" title="Rôle du critique" parent_topic="editorial/topic/000008">
+	<topic id="editorial/topic/000030" title="Soumissions" />
+	<topic id="editorial/topic/000031" title="Révision" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processus éditorial" />
+	<breadcrumb url="editorial/topic/000008" title="Rôle du critique" />
+</toc>

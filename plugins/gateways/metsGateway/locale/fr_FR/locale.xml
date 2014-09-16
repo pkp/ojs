@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.gateways.metsGateway.displayName">Plugiciel de passerelle METS</message>
+	<message key="plugins.gateways.metsGateway.settings">Paramètres</message>
+	<message key="plugins.gateways.metsGateway.description"><![CDATA[Ce plugiciel fournit des données XML brutes dans un format METS pour une revue spécifique. <strong>NOTE : Il été conçu pour être utilisé par des services Web et activer ce plugiciel pose un problème de sécurité en cela qu'il fournit l'accès sans restriction à la revue sous une forme XML (le contenu est encodé en base64).</strong>]]></message>
+	<message key="plugins.gateways.metsGateway.errors.errorMessage">Incapacité à exporter les données de la revue. Le plugiciel de passerelle METS doit être activé et l'identifiant de la revue à exporter doit être fourni dans l'URL.</message>
+	<message key="plugins.gateways.metsGateway.settings.FContent">Utiliser l'encodage base64 comme enveloppeur de contenu</message>
+	<message key="plugins.gateways.metsGateway.settings.FLocat">Utiliser l'URL du train de bits comme enveloppeur de contenu</message>
+	<message key="plugins.gateways.metsGateway.settings.organization">élément METS:agent attribut organization</message>
+	<message key="plugins.gateways.metsGateway.settings.preservationLevel">Niveau de conversation PREMIS</message>
+	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Exporter des fichiers supplémentaires</message>
+</locale>

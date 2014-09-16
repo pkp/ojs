@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/reports/subscriptions/locale/fr_CA/locale.xml
+  * @file plugins/reports/subscriptions/locale/en_US/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.reports.subscriptions.displayName">Rapport sur les abonnements</message>
 	<message key="plugins.reports.subscriptions.description">Ce plugiciel crée un rapport au format CSV qui contient une liste des abonnements ainsi que leurs informations.</message>
 	<message key="plugins.reports.subscriptions.institutionMailingAddress">Adresse courriel de l'institution</message>

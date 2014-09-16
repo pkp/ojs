@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.block.languageToggle.displayName">Bloc de changement de langue</message>
+	<message key="plugins.block.languageToggle.description">Ce plugiciel fournit un mécanisme de changement de langue dans l’encadré latéral.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Choisir la langue</message>
+</locale>

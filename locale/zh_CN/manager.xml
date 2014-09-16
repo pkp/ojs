@@ -731,4 +731,9 @@
 	<message key="manager.statistics.reports.reportUrl.label">以下网址可以生成当前形式设置的报告。只须复制，在浏览器中粘贴然后点击进入。您可以把自定义报告的网址放在收藏夹里。</message>
 	<message key="manager.statistics.reports.columns.description">指定生成报告的项目。该项目不仅可以使报告显示数据也可以衡量统计的总体水平。例如：如果您选择ID，类型和月份作为指定的项目，报告将编辑每个目标和每个月，然后显示有一行相关的数据。如果你选择天而不是月份作为指定项目，那么每个目标将有相应的一行日期。</message>
 	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">或者通过以下选择范围：</message>
+	<message key="manager.setup.confirmResetLicenseChanged">您在期刊设置部分已变更许可证和版权信息。在重新设置权限前，请保存这些更改。</message>
+	<message key="manager.setup.copyrightYearBasis">根据新期刊的版权</message>
+	<message key="manager.setup.copyrightYearBasis.Article">年份的默认值根据文章的发表日期，如在“发表日期”</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">年份的默认值根据期次的发表日期。</message>
+	<message key="manager.statistics.reports.objectNotFound">在数据库里未发现目标</message>
 </locale>

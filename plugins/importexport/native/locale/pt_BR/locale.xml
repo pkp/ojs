@@ -121,7 +121,7 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.invalidPubId">O arquivo de importação contém um dataset com identificador {$pubIdType} inválido: '{$pubId}'.</message>
 	<message key="plugins.importexport.native.import.error.duplicatePubId">O arquivo de importação contém um dataset com identificador {$pubIdType} '{$pubId}' já existente para outro objeto na base de dados. Certifique-se de nunca importar objetos com IDs já existentes em sua base.</message>
 	<message key="plugins.importexport.native.import.error.unknownPubId">O arquivo de importação contém um dataset com tipo de ID '{$pubIdType}' que nenhum plugin de ID pode tratar. Instale e/ou ative o plugin de ID correspondente antes de tentar importar o dataset.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">O ID público "{ $publicId}", fornecido para a composição de importação, está pronto para uso por outra composição do mesmo artigo, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">O ID público "{$publicId}", fornecido para a composição de importação, está pronto para uso por outra composição do mesmo artigo, "{$articleTitle}".</message>
 	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">O ID público informado para o arquivo suplementar de importação "{$suppFileTitle}" já está sendo usado por outro arquivo suplementar no mesmo artigo, "{$otherSuppFileTitle}".</message>
 	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">O ID público informado para o artigo de importação "{$articleTitle}" já está em uso por outro artigo, "{$otherArticleTitle}".</message>
 </locale>
