@@ -1,0 +1,17 @@
+#plnSettingsForm table { width: 100%; }
+#plnSettingsForm table .label { width: 120px; }
+#plnSettingsForm table .value,
+#plnSettingsForm table .label { vertical-align: top; }
+#plnSettingsForm table .value p { clear: both; }
+#plnSettingsForm table .value input[type=checkbox] { clear:left; width: auto; float: left;}
+#plnSettingsForm table .value input.button { width: 100px; float: right; margin: 0 10px;}
+#plnSettingsForm table .value input#refresh { float: none; }
+#plnSettingsForm table .value input#journal_uuid { width: 300px; }
+#plnSettingsForm table .value label.agree {clear: right; float: left; margin-left: 10px;}
+#plnSettingsForm table .value .separator { clear:both; margin-top: 1em; }
+
+#plnStatusForm table { width: 100%; }
+#plnStatusForm table td { border-top: 1px dotted black; }
+#plnStatusForm table input { margin: 2px; }
+#plnStatusForm table th { height: 20px; }
+
