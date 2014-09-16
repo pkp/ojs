@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/reports/subscriptions/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
+  * Localization strings
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.reports.subscriptions.displayName">Conector de Informe de suscripciones</message>
-	<message key="plugins.reports.subscriptions.description">Este conector ofrece un informe CSV con una lista de las suscripciones e información sobre ellas.</message>
+  <message key="plugins.reports.subscriptions.displayName">Informe de suscripciones</message>
+	<message key="plugins.reports.subscriptions.description">Este módulo ofrece un informe CSV con una lista de las suscripciones e información relativa a ellas.</message>
 	<message key="plugins.reports.subscriptions.institutionMailingAddress">Dirección de correo de la institución</message>
 	<message key="plugins.reports.subscriptions.ipRanges">Rangos de IP</message>
 </locale> 

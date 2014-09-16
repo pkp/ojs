@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/metadata/mods34/locale/fr_CA/locale.xml
+  * @file plugins/metadata/mods34/locale/en_US/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 Article Adapter</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Extrait/Injecte des métadonnées dans les articles.</message>
 </locale>

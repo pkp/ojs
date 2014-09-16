@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2000-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.acron.name">Acron插件</message>
+	<message key="plugins.generic.acron.description">该款插件试图减轻周期性调度工具如cron对OCS的依赖。”</message>
+	<message key="plugins.generic.acron.enabled">Acron插件已启用</message>
+	<message key="plugins.generic.acron.disabled">Acron插件已被禁用</message>
+
+	<message key="plugins.generic.acron.reload">重新加载任务计划</message>
+</locale>

@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Author Submission Process - Author Guidelines 
   *
-  * $Id$
   -->
 
-<topic id="submission/topic/000001" locale="es_ES" title="Directrices para el autor/a" toc="submission/toc/000000" key="submission.authorGuidelines">
+<topic id="submission/topic/000001" locale="es_ES" title="Indicaciones para el autor/a" toc="submission/toc/000000" key="submission.authorGuidelines">
 	<section>
-		<![CDATA[<p>La revista proporciona un conjunto de directrices para el autor/a en "Acerca de la revista" que cubre la normativa bibliográfica y de los formatos empleados. Para aquellos aspectos que no se recogen en los ejemplos de las directrices, los autores/as pueden examinar los artículos ya publicados para comprobar cómo se tratan otros tipos de materiales en la revista.</p>]]>	
+		<![CDATA[<p>La revista proporciona un conjunto de indicaciones para el autor/a en Acerca de la revista que cubre los estándares bibliográficos y de formatos empleados en ella. Para aquellos aspectos que no se recogen en los ejemplos de las indicaciones, los autores/as pueden examinar también los artículos ya publicados para comprobar cómo la revista trata otros tipos de materiales.</p>]]>	
 	</section>
-</topic>
+</topic> 

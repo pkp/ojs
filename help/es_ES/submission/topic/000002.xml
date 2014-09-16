@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Author Submission Process - Submission Requirements 
   *
-  * $Id$
   -->
 
-<topic id="submission/topic/000002" locale="es_ES" title="Requisitos del envío" toc="submission/toc/000000" key="submission.submissionRequirements">
+<topic id="submission/topic/000002" locale="es_ES" title="Requisitos de envío" toc="submission/toc/000000" key="submission.submissionRequirements">
 	<section>
-		<![CDATA[<p>Para garantizar que los envíos a la revista se han preparado de forma correcta y están en un formato adecuado para ser procesados, el administrador/a de la revista y el editor/a han desarrollado una serie de requisitos para los envíos para los que el autor/a debe confirmar su cumplimiento antes de que se permita su paso a la fase 2 del proceso de envío del autor/a. Si el autor/a no consigue cumplir con alguno de los requisitos por algún motivo, puede confirmar el requisito y explicarlo en los comentarios al editor/a.</p>]]>	
+		<![CDATA[<p>Para asegurar que los envíos a la revista se han preparado de forma correcta y están en un formato adecuado para ser procesados, el gestor/a de la revista y el editor/a han desarrollado una serie de requisitos para los envíos. El autor/a debe confirmar su cumplimiento antes de que se le permita pasar a la fase dos del proceso de envío del autor/a. Si el autor/a no consigue cumplir con alguno de los requisitos por algún motivo, éste/a puede confirmar el requerimiento y explicarlo en los comentarios al editor/a.</p>]]>	
 	</section>
-</topic>
+</topic> 

@@ -44,7 +44,7 @@ class CreateJournalTest extends WebTestCase {
 		$this->type('id=journalPath', 'publicknowledge');
 
 		// Flip to French and enter data there
-		$this->select('id=formLocale', 'label=Français');
+		$this->select('id=formLocale', 'value=fr_CA');
 		$this->clickAndWait('css=#languageSelector > input.button');
 		$this->type('id=title', 'Journal de la connaissance du public');
 		$this->typeTinyMCE('description', 'Le Journal de Public Knowledge est une publication trimestrielle évaluée par les pairs sur le thème de l\'accès du public à la science.');

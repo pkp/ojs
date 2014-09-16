@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Publishing Process Index 
   *
-  * $Id$
   -->
 
 <topic id="publishing/topic/000000" locale="es_ES" title="Proceso de publicación" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
 	<section>
-		<![CDATA[<p>El editor/a lleva a término el proceso de publicación mediante la creación de números o volúmenes para la revista, la programación de envíos para esos números, la organización de la tabla de contenidos, hasta llegar a publicar finalmente el número. La revista puede ser publicada en una serie de formatos. El patrón típico es el de reunir envíos en un número que se publica trimestralmente, o mensualmente, o bien dos veces al año. Sin embargo, algunas revistas electrónicas prefieren publicar envíos tan pronto están preparados, como parte de un volumen anual, que empieza con el primer envío del año y concluye al final del año, cuando se inicia un nuevo volumen. Para este texto de ayuda, se emplea el número trimestral, aunque un número consiste en una tabla de contenidos que puede identificarse por (a) número, volumen, año; (b) volumen, año; (c) año; o (d) título. La forma de identificar los números forma parte de la configuración que el gestor/a de la revista habrá proporcionado a ésta.</p>]]>	
+		<![CDATA[<p>El editor/a se encarga del proceso de publicación mediante la creación de números o volúmenes para la revista, la programación de envíos a dichos números, la organización de la tabla de contenidos y, por último, la publicación del número. La revista puede publicarse en distintos formatos. El patrón típico consiste en recopilar los envíos en un número que se publica trimestralmente o mensualmente o dos veces al año. Sin embargo, algunas revistas electrónicas prefieren publicar envíos en cuanto están listos como parte de un volumen anual que comienza con el primer envío del año y termina a finales del mismo, momento en el que comienza otro volumen. A efectos de este texto de Ayuda, se utiliza el término número, aunque un número consiste en una tabla de contenidos que puede identificarse por (a) número, volumen, año; (b) volumen, año; (c) año o (d) título. Cómo se deben identificar los números es parte de la configuración de la revista que habrá establecido el gestor/a de la revista.</p>]]>	
 	</section>
-</topic>
+</topic> 

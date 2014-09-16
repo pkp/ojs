@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Layout Editor's Role - Proofreading
   *
   -->
 
-<topic id="editorial/topic/000041" locale="en_US" title="Proofreading" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+<topic id="editorial/topic/000041" locale="ca_ES" title="Proofreading" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
 	<section>
 		<![CDATA[<p>L'autor/a i el corrector/a de proves s'encarreguen de corregir els fitxers en els seus diversos formats per esmenar-hi errors tipogràfics i de formatació. Aquestes esmenes es registren al quadre de text de correccions, d'acord amb les instruccions per a la correcció de proves. Una vegada el corrector/a de proves ha enviat un correu electrònic al maquetista per notificar-li que s'ha enllestit el procés, aquest últim torna a accedir als diversos formats de la maqueta i hi aplica els canvis necessaris (suprimeix els fitxers que han estat corregits i en penja les versions corregides). Una vegada fet això, el maquetista pot afegir comentaris al quadre de text de correccions (p. ex., per explicar un canvi determinat), abans de fer clic a la icona de correu electrònic que hi ha sota «Complet» per notificar a l'editor/a de secció que ja pot planificar la publicació de la tramesa.</p>]]>	
 	</section>

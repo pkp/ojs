@@ -191,4 +191,5 @@
 	<message key="plugins.generic.booksForReview.field.title">Titel</message>
 	<message key="plugins.generic.booksForReview.field.description">Beskrivelse</message>
 
+	<message key="plugins.generic.booksForReview.reminderTask.name">Books for review reminder</message>
 </locale>

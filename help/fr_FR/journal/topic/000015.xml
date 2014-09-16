@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  -->
+
+<topic id="journal/topic/000015" locale="fr_FR" title="Directeur du journal" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>Le directeur du journal est responsable de la gestion du système de publication. Ceci ne requiert pas aucune habileté technique avancée, mais nécessite d’avoir à compléter des modèles et télécharger des fichiers vers le serveur. Le directeur du journal fait le {help_topic key="journal.managementPages.setup" text="Setup"} pour le journal, et inscrit les éditeurs, les éditeurs de rubriques, les réviseurs de copie, les éditeurs de la mise en page, les correcteurs d’épreuves, et les réviseurs. Alternativement, les noms et les courriels des réviseurs, s’ils existent déjà dans une autre banque de données, peuvent être importés dans le système  par  la fonction «Importer des gens» sous {help_topic key="journal.managementPages.importExport" text="Import/Export Data"}. Le directeur du journal a aussi accès aux autres systèmes de gestion du journal, et peut créer de nouvelles rubriques pour le journal, éditer les séries de courriels que le système utilise par défaut, gérer les {help_topic key="journal.managementPages.readingTools" text="Reading Tools"} qui sont disponible avec ce journal, et voir à ce que key="journal.managementPages.statsAndReports" text="Journal Statistics"} le système peut générer.</p>
+<p> Noter que bien que le rôle du directeur du journal est en apparence d’un rôle par journal, les directeurs de journaux devraient généralement être considérés des usagers en qui on a confiance à travers tout le système, car ils ont le pouvoir de prendre l’identité des autres usagers qui peuvent être inscrits dans d’autres journaux.</p>]]>
+	</section>
+</topic>

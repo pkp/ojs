@@ -1,37 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/staticPages/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.staticPages.displayName">Conector de páginas estáticas</message>
-	<message key="plugins.generic.staticPages.description">Este conector permite gestionar el contenido estático.</message>
+	<message key="plugins.generic.staticPages.displayName">Módulo de páginas estáticas</message>
+	<message key="plugins.generic.staticPages.description">Este módulo permite gestionar el contenido estático.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Título</message>
 	<message key="plugins.generic.staticPages.content">Contenido</message>
 
 	<message key="plugins.generic.staticPages.path">Ruta</message>
-	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Se debe instalar y activar el conector TinyMCE para poder añadir o editar contenido.</strong>]]></message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Se debe instalar y activar el módulo TinyMCE para poder añadir o editar contenido.</strong>]]></message>
 
-	<message key="plugins.generic.staticPages.editAddContent">Añadir o editar contenido</message>
+	<message key="plugins.generic.staticPages.editAddContent">Añadir/editar contenido</message>
 
 	<message key="plugins.generic.staticPages.addStaticPage">Añadir una página estática</message>
 	<message key="plugins.generic.staticPages.addNewPage">Añadir una nueva página</message>
 	<message key="plugins.generic.staticPages.editStaticPage">Editar una página estática</message>	
 
-	<message key="plugins.generic.staticPages.settingInstructions">El formulario que sigue a continuación le muestra todas las páginas estáticas que ha creado. Puede editar o eliminar las páginas mediante los enlaces situados en la parte derecha.</message>
-	<message key="plugins.generic.staticPages.editInstructions">Utilice el formulario que sigue a continuación para añadir o editar contenido de página.</message>
-  <message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Se puede acceder a las páginas en: {$pagesPath}, donde %PATH% es un valor para elegir. <br /> <strong>Nota:</strong> Dos páginas no pueden tener la misma ruta.]]></message>
+	<message key="plugins.generic.staticPages.settingInstructions">El siguiente formulario le muestra todas las páginas estáticas que creó. Puede editar o eliminar las páginas mediante los enlaces situados en la parte derecha.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Utilice el siguiente formulario para añadir o editar el contenido de la página.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Puede acceder a las páginas en: {$pagesPath}, donde %PATH% es el valor que elija.<strong>Atención:</strong> cada página debe tener una ruta diferente.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Esta ruta ya pertenece a otra página estática.</message>
 	
-	<message key="plugins.generic.staticPages.pageSaved">Se ha guardado la página con éxito.</message>
-	<message key="plugins.generic.staticPages.pageDeleted">Se ha eliminado la página con éxito.</message>
+	<message key="plugins.generic.staticPages.pageSaved">La página se guardó con éxito.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">La página se eliminó con éxito.</message>
 	
-	<message key="plugins.generic.staticPages.noneExist">No se ha creado ninguna página</message>
+	<message key="plugins.generic.staticPages.noneExist">No se creó ninguna página</message>
 </locale> 

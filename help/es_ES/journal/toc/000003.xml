@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000003.xml
   *
@@ -8,9 +7,10 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * table of contents for Journal Management - Roles. 
   *
-  * $Id$
   -->
 
 <toc id="journal/toc/000003" locale="es_ES" title="Roles" parent_topic="journal/topic/000003">
@@ -27,4 +27,4 @@
 
 	<breadcrumb url="journal/topic/000000" title="Gestión de la revista" />
 	<breadcrumb url="journal/topic/000003" title="Roles" />
-</toc>
+</toc> 

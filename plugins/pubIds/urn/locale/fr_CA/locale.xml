@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/pubIds/urn/locale/fr_CA/locale.xml
+  * @file plugins/pubIds/urn/locale/en_US/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * URN plugin localization strings
   -->
  
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
 	<!-- plugin -->
@@ -76,9 +76,4 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">Le suffixe d'URN spécifié est déjà utilisé pour un autre élément publié. Veuillez entrer un suffixe URN unique pour chaque élément.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Le numéro de contrôle est manquant.</message>
 
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">article</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">numéro</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">épreuve</message>
-	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">fichier supplémentaire</message>
-	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Cet aperçu du nom uniforme de ressource (URN) pourrait être incomplet. Aucun URN n'a été créé. Un URN unique pour {$pubObjectType} sera créé de façon automatique si vous publiez le numéro et visualisez la page publique {$pubObjectType}.</message>
 </locale>

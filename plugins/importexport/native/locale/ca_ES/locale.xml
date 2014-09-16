@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
 
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.importexport.native.displayName">Connector XML per a articles i números</message>
+	<message key="plugins.importexport.native.displayName">Mòdul XML per a articles i números</message>
 	<message key="plugins.importexport.native.description">Importa i exporta els articles i els números.</message>
 
 	<message key="plugins.importexport.native.cliUsage"><![CDATA[Ús: {$scriptName} {$pluginName} [command] ... Ordres: importar [xmlFileName] [journal_path] [user_name] ... exportar [xmlFileName] [journal_path] articles [articleId1] [articleId2] ... exportar [xmlFileName] [journal_path] article [articleId] exportar [xmlFileName] [journal_path] números [issueId1] [issueId2] ... exportar [xmlFileName] [journal_path] número [issueId] Caldran paràmetres addicionals per a la importació de dades, segons el node arrel del document XML. Si el node arrel és <article> o <articles>, caldran paràmetres addicionals. S'accepten els formats següents: {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] issue_id [issueId] section_id [sectionId] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] issue_id [issueId] section_name [name] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] issue_id [issueId] section_abbrev [abbrev]]]></message>
@@ -27,7 +29,7 @@
 	<message key="plugins.importexport.native.import.articles.description">El fitxer que esteu important conté un o més articles. Heu de triar el número i la secció als quals voleu importar aquests articles. Si no voleu importar tots els articles a la mateixa secció i número, heu de separar-los en fitxers XML diferents o moure'ls als números i les seccions adequats després d'importar-los.</message>
 
 	<message key="plugins.importexport.native.import">Importa les dades</message>
-	<message key="plugins.importexport.native.import.description"><![CDATA[Aquest connector admet la importació de dades basada en la definició de tipus de document native.dtd. Els nodes arrel compatibles són &lt;article&gt;, &lt;articles&gt;, &lt;issue&gt;, i &lt;issues&gt;.]]></message>
+	<message key="plugins.importexport.native.import.description"><![CDATA[Aquest mòdul admet la importació de dades basada en la definició de tipus de document native.dtd. Els nodes arrel compatibles són &lt;article&gt;, &lt;articles&gt;, &lt;issue&gt;, i &lt;issues&gt;.]]></message>
 
 	<message key="plugins.importexport.native.import.error">Error d'importació</message>
 	<message key="plugins.importexport.native.import.error.description">S'han produït un o més errors durant la importació. Comproveu que el format del fitxer d'importació coincideixi amb l'especificació. A continuació hi ha una llista dels detalls de l'error o dels errors d'importació.</message>
@@ -40,7 +42,7 @@
 	<message key="plugins.importexport.native.export.error.sectionNotFound">No hi ha cap secció que coincideixi amb l'especificador "{$sectionIdentifier}".</message>
 	<message key="plugins.importexport.native.export.error.issueNotFound">No hi ha cap número que coincideixi amb l'id. de número indicat "{$issueId}".</message>
 	<message key="plugins.importexport.native.export.error.articleNotFound">No hi ha cap article que coincideixi amb l'id. d'article indicat "{$articleId}".</message>
-	<message key="plugins.importexport.native.import.error.unsupportedRoot">Aquest connector no admet el node arrel indicat, "{$rootName}". Comproveu que el fitxer estigui ben format i torneu-ho a intentar.</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Aquest mòdul no admet el node arrel indicat, "{$rootName}". Comproveu que el fitxer estigui ben format i torneu-ho a intentar.</message>
 
 	<message key="plugins.importexport.native.import.error.titleMissing">Falta el títol d'un número.</message>
 	<message key="plugins.importexport.native.import.error.defaultTitle">FALTA EL TÍTOL</message>
@@ -108,5 +110,5 @@
 	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">L'ID públic del número importat "{$issueTitle}" l'utilitza actualment el número "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.invalidPubId">El teu fitxer d'importació conté un grup de dades invàlides a {$pubIdType}: '{$pubId}'.</message>
 	<message key="plugins.importexport.native.import.error.duplicatePubId">El fitxer d'importació conté un conjunt de dades a {$pubIdType} '{$pubId}' que ja existeixen en un altre objecte de la base de dades. Si us plau, confirma que anteriorment no has importat aquests ID a la base de dades.</message>
-	<message key="plugins.importexport.native.import.error.unknownPubId">El fitxer d'importació conté un conjunt de dades amb un tipus d'ID {$pubIdType} que cap connector ID pot processar. Si us plau, instal·la i/o activa el corresponent connector ID abans d'importar aquest grup de dades.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">El fitxer d'importació conté un conjunt de dades amb un tipus d'ID {$pubIdType} que cap mòdul ID pot processar. Si us plau, instal·la i/o activa el corresponent mòdul ID abans d'importar aquest grup de dades.</message>
 </locale> 

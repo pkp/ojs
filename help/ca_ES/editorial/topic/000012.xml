@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Copyeditor's Role Index 
   *
   -->
 
-<topic id="editorial/topic/000012" locale="en_US" title="Copyeditor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+<topic id="editorial/topic/000012" locale="ca_ES" title="Copyeditor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
 	<section>
 		<![CDATA[<p>L'editor/a de secció envia al corrector/a d'originals un missatge de correu electrònic per sol·licitar-li que corregeixi una tramesa, la qual passa a mostrar-se a la seva cua de trameses. En cas que el corrector/a d'originals no es pugui encarregar d'aquesta tasca, ho ha de notificar per correu electrònic a l'editor/a de secció.</p>]]>	
 	</section>

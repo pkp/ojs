@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000025.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Subscriptions 
   *
   -->
 
-<topic id="journal/topic/000025" locale="en_US" title="Subscriptions" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+<topic id="journal/topic/000025" locale="ca_ES" title="Subscriptions" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
 	<section>
 		<![CDATA[<p>OJS supports subscription journals by providing a subscription management component and a corresponding password protection for the journal's online content. The subscriptions can be managed for individual users, organizations or institutions. A subscription journal can also offer free access to its back issues through a form of delayed open access. In Issue Management, the Editor allows readers free access to the content of an issue or individual articles from zero to 24 months after their initial publication and availability to subscribers.</p><p>A journal's Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders are always free to access the journal as though they were subscribers.</p><p><em>Deploying the subscription module</em>. The Journal Manager must indicate in Setup, 4.1 Access and Security Settings, that the journal will be using this system to manage its subscriptions and that someone, enrolled as a Journal Manager or Subscription Manager, has been designated to manage this feature.</p>]]>	
 	</section>
@@ -34,5 +35,4 @@
 	<section title="Subscription Policies">
 		<![CDATA[<p>Under Subscription Policies, the Journal Manager can enter Subscription Manager contact information, which will appear in About the Journal; enter additional information about subscriptions to appear in About the Journal (subscription types and the fee structure will already appear there); set subscription expiry reminders; set open access options; and define an Author self-archiving policy, also to appear in About the Journal.</p>]]>
 	</section>
-
 </topic>

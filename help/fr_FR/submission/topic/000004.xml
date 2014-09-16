@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Supplementary Files 
+  *
+  -->
+
+<topic id="submission/topic/000004" locale="fr_FR" title="Fichiers supplémentaires" toc="submission/toc/000000" key="submission.supplementaryFiles">
+	<section>
+		<![CDATA[<p>L’auteur peut télécharger vers le serveur des fichiers supplémentaires à l’étape 4 du processus de présentation. Les fichiers supplémentaires sont destinés à inclure les fichiers de données de recherche, les instruments de recherche, le texte des sources, et autre matériel qui pourrait autrement constituer un appendice à la présentation, mais qui justifient d’être traités comme documents séparés car ils peuvent avoir une valeur à eux seuls. En plus, l’auteur indexera les fichiers supplémentaires indépendamment de la présentation, rendant donc possible que les fichiers fassent partie d’un index plus élaboré pouvant être trouvés par ceux cherchant ces types particuliers d’articles.</p><p><em>Formats des fichiers supplémentaires</em>. Les fichiers supplémentaires sont aussi téléchargés vers le serveur dans leur format original &mdash; et sur lesquels il n’y a aucune restriction &mdash; et demeurent dans ce format, contrairement au reste de la présentation qui doit être dans un format standard de manuscrit et qui sera  transformée en un format standard de publication. Ceci veut dire que les jeux de données qui sont disponibles dans des tableurs (spreadsheets) ou démonstrations flash, peuvent être téléchargés vers le serveur et conservés dans ce format; ceci peut poser des défis aux lecteurs. Les auteurs doivent tenir compte de ceci, peut-être en fournissant dans la description de leur fichier supplémentaire, où des logiciels gratuits sont disponibles pour ouvrir et voir le fichier supplémentaire peuvent être trouvés.</p>]]>	
+	</section>
+</topic>

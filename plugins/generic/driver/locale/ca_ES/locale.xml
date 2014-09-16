@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/driver/locale/ca_ES/locale.xml
   *
@@ -8,10 +7,12 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * DRIVER plugin localization strings
   -->
  
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">El connector DRIVER amplia la interfície OAI-PMH conforme a les directrius DRIVER 2.0, permetent que les revistes OJS siguin compatibles amb DRIVER.</message>
+	<message key="plugins.generic.driver.description">El mòdul DRIVER amplia la interfície OAI-PMH conforme a les directrius DRIVER 2.0, permetent que les revistes OJS siguin compatibles amb DRIVER.</message>
 </locale>

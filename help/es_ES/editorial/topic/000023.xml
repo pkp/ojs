@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Section Editor's Role Index - Archives
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000023" locale="es_ES" title="Archivos" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
 	<section>
-		<![CDATA[<p>Los envíos que están en esta lista ya han pasado el proceso editorial y han sido rechazados o publicados. Esta lista proporciona a los editores/as y al editor/a de sección asignado un acceso completo al historial editorial del envío (resumen, entrega, revisión, edición e historial).</p>]]>	
+		<![CDATA[<p>Los envíos que se encuentran en esta lista pasaron por el proceso editorial, independientemente de si se rechazaron o están ya publicados. La lista proporciona a los editores/as y a los editores/as de sección asignados total acceso al historial de edición del envío (resumen, envío, revisión, edición e historial).</p>]]>	
 	</section>
-</topic>
+</topic> 

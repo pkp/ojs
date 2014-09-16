@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/usageStats/locale/ca_ES/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
+  * Localization strings
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.generic.usageStats.settings.logging">Opcions del registre d'accès</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Crea fitxers de registre</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">A l'activar aquesta opció el plugin donarà accès als fitxers de registre dins del directori de fitxers. Aquests fitxers s'acostumen a utilitzar per a extreure'n les estadístiques d'ús. Si no vols crear més fitxer de registre, deixa aquesta opció desactivada i utilitza els fitxers de registre d'accès del teu servidor.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Expressions regulars d'anàlisi dels fitxers de registre</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Les expressions regulars per defecte poden analitzar els registes d'accés de l'apache en format combinat. Si els teus registres d'accés estàn en un altre format, hauràs d'introduïr una expressió regular capaç d'analitzar-lo i retornar els valors esperats. Per a més informació, mira UsageStatsLoader::_getDataFromLogEntry()</message>
+	<message key="plugins.generic.usageStats.settings.saved">S'ha guardat la configuració del mòdul d'estadístiques d'ús</message>
+	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Tasca de càrrega del fitxer d'estadístiques d'ús</message>
+	<message key="plugins.generic.usageStats.openFileFailed">No es pot obrir el fitxer {$file} i es rebutja.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">La línia {$lineNumber} del fitxer {$file} no és una entrada vàlida de registre i es rebutja el fitxer.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">La línia {$lineNumber} del fitxer {$file} contè una url a la que no se li pot el·liminar la url base d'origen.</message>
+	<message key="plugins.generic.usageStats.loadDataError">No es poden carregar les dades esperades del fitxer {$file}. L'error és: {$error}. El fitxer s'ha mogut a de nou a l'origen.</message>
+	<message key="plugins.generic.usageStats.displayName">Estadístiques d'ús</message>
+	<message key="plugins.generic.usageStats.description">Actuals objectes d'estadístiques d'ús. Pots utilitzar els fitxers de registre d'accés del servidor per a extreure'n les estadístiques.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">Informe OJS d'estadístiques d'ús</message>
+	<message key="plugins.reports.usageStats.report.description">Informe OJS per defecte d'estadístiques d'us (compatible amb COUNTER)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (compatible amb COUNTER)</message>
+</locale>

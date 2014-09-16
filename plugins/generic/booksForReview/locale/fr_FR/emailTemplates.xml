@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="fr_FR">
+	<email_text key="BFR_REVIEW_REMINDER">
+		<subject>Compte rendu de livre : Rappel de la date d'échéance</subject>
+		<body>Madame, Monsieur, {$authorName}:
+
+Ceci est un rappel amical de la date d'échéance de votre compte rendu de livre {$bookForReviewTitle} qui est le {$bookForReviewDueDate}.
+
+Afin de soumettre votre compte rendu de livre, veuillez vous connecter au site Web de la revue et compléter le processus de soumission d'article en ligne. Pour plus de commodités, l'URL de la soumission vous est fourni ci-dessous.
+
+URL de la soumission : {$submissionUrl}
+
+N'hésitez pas à communiquer avec moi si vous avez des questions ou préoccupations concernant ce compte rendu de livre.
+
+Merci pour votre contribution à la revue et nous avons hâte de recevoir votre soumission.
+
+{$editorialContactSignature}</body>
+		<description>Ceci est un courriel généré automatiquement et qui est envoyé à un auteur qui doit effectuer un compte rendu de livre lorsque la date d'échéance approche.</description>
+	</email_text>
+	<email_text key="BFR_REVIEW_REMINDER_LATE">
+		<subject>Compte rendu de livre : compte rendu non reçu</subject>
+		<body>Monsieur, Madame, {$authorName} :
+
+Ceci est un rappel amical pour vous informer que votre compte rendu du livre {$bookForReviewTitle} était attendu le {$bookForReviewDueDate} mais n'a pas encore été reçu.
+
+Pour soumettre votre compte rendu de livre, veuillez vous connecter au site Web de la revue et compléter le processus de soumission d'article en ligne. Pour plus de commodités, l'URL de la soumission vous a été fourni ci-dessous.
+
+L'URL de la soumission : {$submissionUrl}
+
+N'hésitez pas à communiquer avec moi si vous avez des questions ou des préoccupations concernant ce compte rendu de livre.
+
+Merci pour votre contribution à la revue et nous avons hâtes de recevoir votre soumission.
+
+{$editorialContactSignature}</body>
+		<description>Ceci est un courriel généré automatiquement lorsque la date d'échéance pour qu'un auteur soumette son compte rendu de livre est dépassée.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_ASSIGNED">
+		<subject>Compte rendu de livre : livre assigné</subject>
+		<body>Monsieur, Madame, {$authorName} :
+
+Ce courriel confirme que {$bookForReviewTitle} vous a été assigné pour un compte rendu qui devra être complété d'ici le {$bookForReviewDueDate}.
+
+Veuillez vous assurer que l'adresse postale dans votre profil utilisateur est à jour. Cette adresse sera utilisée pour vous envoyer une copie du livre dont vous devez faire le compte rendu.
+
+L'adresse postale présentement consignée est:
+{$authorMailingAddress}
+
+Si cette adresse est incomplète ou si vous n'habitez plus à cette adresse, veuillez utiliser l'URL du profil utilisateur suivant pour mettre à jour votre adresse :
+
+URL du profil utilisateur : {$userProfileUrl}
+ 
+Pour soumettre votre compte rendu de livre, veuillez vous connecter dans le site Web de la revue et compléter le processus de soumission d'article en ligne.
+
+URL de la soumission : {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou des préoccupations concernant ce compte rendu de livre.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé par un Rédacteur pour demander à un auteur d'effectuer un compte rendu de livre.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_DENIED">
+		<subject>Compte rendu de livre</subject>
+		<body>Madame, Monsieur, {$authorName} :
+
+Malheureusement, Je suis dans l'impossibilité de vous assigner {$bookForReviewTitle} à ce moment-ci pour fins de compte rendu.
+
+J'espère que vous considérez faire le compte rendu d'un autre livre de notre liste, soit dès maintenant ou à un autre moment.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé par un Rédacteur à un auteur intéressé lorsque un livre n'est plus disponible pour effectuer un compte rendu.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_REQUESTED">
+		<subject>Compte rendu de livre : demande de livre</subject>
+		<body>Madame, Monsieur, {$editorName} :
+
+Je suis intéressé à faire le compte rendu du livre {$bookForReviewTitle}.
+
+Pourriez-vous m'informer si ce livre est toujours disponible pour fins de compte rendu?
+
+{$authorContactSignature}</body>
+	</email_text>
+	<email_text key="BFR_BOOK_MAILED">
+		<subject>Compte rendu de livre : livre posté</subject>
+		<body>Madame, Monsieur, {$authorName} :
+
+Ce courriel vous confirme l'envoi postal d'une copie de {$bookForReviewTitle} à l'adresse postale suivante, provenant de votre profil utilisateur en ligne :
+{$authorMailingAddress}
+ 
+Pour soumettre votre compte rendu de livre, veuillez vous connecter dans le site Web de la revue et compléter le processus de soumission d'article en ligne.
+
+URL de la soumission : {$submissionUrl}
+
+N'hésitez pas à communiquer avec moi si vous avez des questions ou des préoccupations concernant ce compte rendu de livre.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé par un Rédacteur à un auteur qui doit effectuer un compte rendu de livre pour l'avertir que le livre vient de lui être posté.</description>
+	</email_text>
+	<email_text key="BFR_REVIEWER_REMOVED">
+		<subject>Compte rendu de livre</subject>
+		<body>Madame, Monsieur, {$authorName} :
+
+Ce courriel confirme que vous n'êtes plus responsable du compte rendu du livre {$bookForReviewTitle}, qui sera de nouveau disponible aux autres auteurs intéressés à en faire le compte rendu.
+
+J'espère que vous considérez faire le compte rendu d'un autre livre dans notre liste, soit dès maintenant ou à un autre moment.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé par un Rédacteur à un auteur intéressé lorsqu'un livre n'est plus disponible pour fins d'évaluation.</description>
+	</email_text>
+</email_texts>

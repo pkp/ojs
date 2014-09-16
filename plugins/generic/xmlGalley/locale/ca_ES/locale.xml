@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.xmlGalley.displayName">Connector de galerades XML</message>
-	<message key="plugins.generic.xmlGalley.description">Aquest connector genera galerades XHTML per a articles XML mitjançant XSLT.</message>
+	<message key="plugins.generic.xmlGalley.displayName">Mòdul de galerades XML</message>
+	<message key="plugins.generic.xmlGalley.description">Aquest mòdul genera galerades XHTML d'articles XML mitjançant XSLT.</message>
 
 	<message key="plugins.generic.xmlGalley.manager.settings">Configuració</message>
 
@@ -40,5 +42,4 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Full d'estil XSL personalitzat</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Heu d'indicar un full d'estil XSL personalitzat.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">El fitxer XSL que heu carregat no és vàlid. Comproveu el fitxer i torneu-ho a intentar.</message>
-
 </locale> 

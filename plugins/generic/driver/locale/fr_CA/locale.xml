@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/driver/locale/fr_CA/locale.xml
+  * @file plugins/generic/driver/locale/en_US/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * DRIVER plugin localization strings
   -->
  
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
 	<message key="plugins.generic.driver.description">Le plugiciel DRIVER prolonge l'interface OAI-PMH selon les directives 2.0 de DRIVER, aidant ainsi les revue OJS à devenir conformes aux normes Driver.</message>
 </locale>

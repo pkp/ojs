@@ -13,18 +13,18 @@
   -->
 
 <toc id="journal/toc/000001" locale="fr_CA" title="Pages de gestion" parent_topic="journal/topic/000001">
-	<topic id="journal/topic/000010" title="Navigateur de fichiers" />
-	<topic id="journal/topic/000005" title="Rubriques du journal" />
+	<topic id="journal/topic/000010" title="Explorateur de fichiers" />
+	<topic id="journal/topic/000005" title="Rubriques de la revue" />
 	<topic id="journal/topic/000007" title="Langues" />
-	<topic id="journal/topic/000029" title="Générique" />
-	<topic id="journal/topic/000006" title="Courriels pré-écrits" />
+	<topic id="journal/topic/000029" title="Bloc générique" />
+  <topic id="journal/topic/000006" title="Courriels préparés" />
 	<topic id="journal/topic/000009" title="Outils de lecture" />
-	<topic id="journal/topic/000004" title="Mise en place (Setup)" />
+	<topic id="journal/topic/000004" title="Configuration" />
 	<topic id="journal/topic/000008" title="Statistiques et Rapports" />
 	<topic id="journal/topic/000025" title="Abonnements" />
 	<topic id="journal/topic/000030" title="Plugiciels du système" />
-	<topic id="journal/topic/000031" title="Importation/Exportation des données" />
+  <topic id="journal/topic/000031" title="Importer/Exporter les données" />
 
-	<breadcrumb url="journal/topic/000000" title="Gestion du journal" />
+	<breadcrumb url="journal/topic/000000" title="Gestion de la revue" />
 	<breadcrumb url="journal/topic/000001" title="Pages de gestion" />
 </toc>

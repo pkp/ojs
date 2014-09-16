@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/reports/timedView/locale/es_ES/locale.xml
   *
@@ -8,26 +7,29 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Localization strings.
   -->
 
-<locale name="es_ES" full_name="Español">
-	<message key="plugins.reports.timedView.displayName">Informe de lectures en el tiempo</message>
-	<message key="plugins.reports.timedView.description">Este conector ofrece un informe en formato CSV detallando el número de lectores por artículo, filtrados por la ventana de tiempo que se indique.</message>
+<locale name="es_ES" full_name="Español (España)">
+    <message key="plugins.reports.timedView.displayName">Informe de tiempo de visualización</message>
+    <message key="plugins.reports.timedView.description">Este módulo ofrece un informe CSV sobre los lectores/as de cada artículo filtrados por tiempo de visualización.</message>
 
-	<message key="plugins.reports.timedView.form.dateStartRequired">Se requiere una fecha de inicio.</message>
-	<message key="plugins.reports.timedView.form.dateStartValid">Por favor, indique una fecha de inicio válida</message>
-	<message key="plugins.reports.timedView.form.dateEndRequired">Se requiere una fehca de finalización.</message>
-	<message key="plugins.reports.timedView.form.dateEndValid">Por favor, indique una fecha de finalización válida.</message>
-	<message key="plugins.reports.timedView.form.generate">Generar informe</message>
-	<message key="plugins.reports.timedView.form.clearLogs">Limpiar registro.</message>
-	<message key="plugins.reports.timedView.form.clearLogs.description">Indica una fecha para eliminar las entradas previas a la misma en el registro. Ten en cuenta que esto sólo afecta al conector de informes en el tiempo y no al cómputo realizado en otros lugares (p.e.: El complemento general de lecturas)</message>
-	<message key="plugins.reports.timedView.form.clearLogs.confirm">Estás seguro/a de querer eleminar estas entradas? Este proceso NO es reversible.</message>
+    <message key="plugins.reports.timedView.form.dateStartRequired">Debe indicar una fecha de inicio.</message>
+    <message key="plugins.reports.timedView.form.dateStartValid">Seleccione una fecha de inicio válida.</message>
+    <message key="plugins.reports.timedView.form.dateEndRequired">Debe indicar una fecha de finalización.</message>
+    <message key="plugins.reports.timedView.form.dateEndValid">Seleccione una fecha de finalización válida.</message>
+    <message key="plugins.reports.timedView.form.generate">Generador de informes</message>
+    <message key="plugins.reports.timedView.form.clearLogs">Eliminar registro</message>
+    <message key="plugins.reports.timedView.form.clearLogs.description">Seleccione una fecha para eliminar registros. Se eliminará cualquier entrada de registro efectuada antes de la fecha seleccionada. Tenga en cuenta que esto sólo afecta al módulo de tiempo de visualización y no a las visualizaciones realizadas en otro lugar (p. ej. para el módulo de Vista general).</message>
+    <message key="plugins.reports.timedView.form.clearLogs.confirm">¿Está seguro/a de que desea eliminar estos registros? El proceso no se puede deshacer.</message>
+    <message key="plugins.reports.timedView.form.useTimedViewRecords">Marque este campo para usar estadísticas recuperadas del viejo módulo de tiempo de visualización. No marque este campo si desea generar un informe de tiempo de visualización con los nuevos datos estadísticos.</message>
 
-	<message key="plugins.reports.timedView.report.articleId">ID de artículo</message>
-	<message key="plugins.reports.timedView.report.articleTitle">Título de artículo</message>
-	<message key="plugins.reports.timedView.report.datePublished">Fecha de publicación</message>
-	<message key="plugins.reports.timedView.report.abstractViews">Lecturas del resumen</message>
-	<message key="plugins.reports.timedView.report.galleyViews">Total de lecturas del artículo</message>
-	<message key="plugins.reports.timedView.form.useTimedViewRecords">Marque la casilla para utilizar las estadísticas generadas por el viejo módulo "Timed View". Si desea generar un informe con nuevos datos estadísticos, deje este campo sin seleccionar.</message>
-</locale>
+    <message key="plugins.reports.timedView.report.articleId">Id. del artículo</message>
+    <message key="plugins.reports.timedView.report.articleTitle">Título del artículo</message>
+    <message key="plugins.reports.timedView.report.datePublished">Fecha de publicación</message>
+    <message key="plugins.reports.timedView.report.abstractViews">Visualizaciones del resumen</message>
+    <message key="plugins.reports.timedView.report.galleyViews">Visualizaciones de todas las galeradas</message>
+    <message key="plugins.reports.timedView.form.largeSetOfDataIssue">Si indicas un periodo de tiempo amplio con un conjunto extenso de datos estadísticos, el informe tardará en elaborarse. Si toma mucho tiempo, la conexión podría caducar y no recibirías el fichero con el informe. Si eso sucede, intenta de nuevo con un período de tiempo menor.</message>
+</locale> 

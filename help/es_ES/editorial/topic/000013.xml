@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Layout Editor's Role Index 
   *
-  * $Id$
   -->
 
-<topic id="editorial/topic/000013" locale="es_ES" title="Rol del maquetista" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+<topic id="editorial/topic/000013" locale="es_ES" title="Rol de maquetista" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
 	<section>
-		<![CDATA[<p>El corrector/a de originales o el editor/a de sección envían al maquetista un correo electrónico solicitando la maquetación de un envío que ha superado la fase de corrección. El maquetista que no pueda hacerse cargo de la maquetación enviará un correo electrónico al editor/a de sección.</p>]]>	
+		<![CDATA[<p>El maquetista recibe una solicitud mediante correo electrónico del corrector/a de originales o del editor/a de sección en la que se solicita la maquetación de un envío que completó la fase de corrección. Si el maquetista no puede realizar la maquetación, sólo debe informar por correo electrónico al editor/a de sección.</p>]]>	
 	</section>
-</topic>
+</topic> 

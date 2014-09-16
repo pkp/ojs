@@ -12,9 +12,9 @@
   *
   -->
 
-<toc id="journal/toc/000000" locale="fr_CA" title="Gestion du journal" parent_topic="journal/topic/000000">
+<toc id="journal/toc/000000" locale="fr_CA" title="Gestion de la revue" parent_topic="journal/topic/000000">
 	<topic id="journal/topic/000001" title="Pages de gestion" />
 	<topic id="journal/topic/000002" title="Usagers" />
 	<topic id="journal/topic/000003" title="Rôles" />
-	<breadcrumb url="journal/topic/000000" title="Gestion du journal" />
+	<breadcrumb url="journal/topic/000000" title="Gestion de la revue" />
 </toc>

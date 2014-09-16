@@ -19,25 +19,13 @@
 	<message key="plugins.importexport.crossref.cliUsage">Brug: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] nummer [issueId]</message>
-	<message key="plugins.importexport.crossref.settings.depositorIntro">Indsæt navn og e-mail på den person, der er ansvarlig for CrossRef DOI-deponering.</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorName">Deponentens navn</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Deponentens e-mail</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Indsæt deponentens navn.</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Indsæt deponentens e-mail.</message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Anvend automatisk registrering</message>
-	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Hvis du ønsker at registrere DOI'er hos CrossRef, skal du følge anvisningerne på
-		<a href="http://www.crossref.org" target="_blank">CrossRef homepage</a>
-		for at modtage brugernavn og password. Selvom du ikke har eget brugernavn og
-		password kan du stadig eksportere i CrossRef XML format, men du kan 
-		ikke registrere DOIer med CrossRef inde fra OJS.
-		Bemærk, at password gemmes i tekstformat, altså ikke krypteret, 
-		grundet CrossRef serviceregistreringskrav.]]></message>
-	<message key="plugins.importexport.crossref.settings.description"><![CDATA[<a href="{$settingsUrl}">Konfigurér</a>CrossRef export/registration plug-in inden du bruger det første gang.]]></message>
-	<message key="plugins.importexport.crossref.settings.form.description">Konfigurér CrossRef export/registration plug-in:</message>
-	<message key="plugins.importexport.crossref.settings.form.username">Brugernavn</message>
-	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Indsæt dit brugernavn fra CrossRef.</message>
-	<message key="plugins.importexport.crossref.export.unregistered">Eksportér alle ikke-registrerede artikler</message>
-	<message key="plugins.importexport.crossref.export.selectUnregistered">Vælg ikke-registrerede artikler</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Alle publicerede artikler er allerede blevet registreret (eller ingen af dem har fået tildelt et DOI).</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Publiceringsdatoen mangler for artiklen med følgende ID {$param}.</message>
+	<message key="plugins.importexport.crossref.export">Export Data</message>
+	<message key="plugins.importexport.crossref.export.issues">Export Issue</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Select an Issue to export.</message>
+	<message key="plugins.importexport.crossref.export.articles">Export Articles</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Select Articles to export.</message>
+	<message key="plugins.importexport.crossref.cliError">ERROR:</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">No issue matched the specified issue ID "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">No article matched the specified article ID "{$articleId}".</message>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">In order to use this plug-in please go to the "Public Identifier" plug-in category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
 </locale>

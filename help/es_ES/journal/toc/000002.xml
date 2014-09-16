@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000002.xml
   *
@@ -8,16 +7,17 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * table of contents for Journal Management - Users. 
   *
-  * $Id$
   -->
 
 <toc id="journal/toc/000002" locale="es_ES" title="Usuarios/as" parent_topic="journal/topic/000002">
-	<topic id="journal/topic/000011" title="Usuarios/as registrados en esta revista" />
-	<topic id="journal/topic/000012" title="Crear un nuevo usuario/a" />
+	<topic id="journal/topic/000011" title="Usuarios/as con rol asignado en la revista" />
+	<topic id="journal/topic/000012" title="Crear un usuario/a nuevo" />
 	<topic id="journal/topic/000033" title="Fusionar usuarios/as" />
 
 	<breadcrumb url="journal/topic/000000" title="Gestión de la revista" />
 	<breadcrumb url="journal/topic/000002" title="Usuarios/as" />
-</toc>
+</toc> 

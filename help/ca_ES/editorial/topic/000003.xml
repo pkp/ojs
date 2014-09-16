@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editor's Role Submission Summary Index 
   *
   -->
 
-<topic id="editorial/topic/000003" locale="en_US" title="Submission Summary" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+<topic id="editorial/topic/000003" locale="ca_ES" title="Submission Summary" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
 	<section>
 		<![CDATA[<p>L'editor/a utilitza la pàgina de resum de cada tramesa per gestionar els fitxers que la componen i també les seves metadades associades i la seva informació d'indexació.</p>]]>	
 	</section>

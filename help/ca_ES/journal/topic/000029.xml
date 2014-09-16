@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000029.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Management Pages - Groups
   *
   -->
 
-<topic id="journal/topic/000029" locale="en_US" title="Masthead" toc="journal/toc/000001" key="journal.managementPages.groups">
+<topic id="journal/topic/000029" locale="ca_ES" title="Masthead" toc="journal/toc/000001" key="journal.managementPages.groups">
 	<section>
 		<![CDATA[<p>There are two methods the Journal Manager can use to define the Masthead for the journal, which appears in the Editorial Team page under About the Journal: using assigned editorial roles, and creating custom editorial team titles.</p>]]>
 	</section>

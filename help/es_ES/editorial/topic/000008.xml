@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Reviewer's Role Index 
   *
-  * $Id$
   -->
 
-<topic id="editorial/topic/000008" locale="es_ES" title="Rol del revisor/a" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+<topic id="editorial/topic/000008" locale="es_ES" title="Rol de revisor/a" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
 	<section>
-		<![CDATA[<p>Se propone al revisor/a que revise un envío mediante un correo electrónico que incluye el título y el resumen del artículo. Además también se le facilita la dirección URL de la revista y el nombre de usuario/a y la contraseña para que pueda acceder a ella. La revista tiene la opción de enviar un correo electrónico al revisor/a dónde se incluyen el archivo y la solicitud de revisión. En este caso, el revisor/a contesta por correo electrónico. Aquí se describe el método principal de revisión y de garantía de un registro completo del proceso, lo que conlleva que el revisor/a realice la revisión en el sitio web de la revista.</p>]]>	
+		<![CDATA[<p>El revisor/a recibirá un correo electrónico en el que se le asignará un envío donde se incluyen el título, el resumen, la URL de la revista y un usuario y contraseña que deberá utilizar para acceder a la revista. La revista puede utilizar la opción del revisor, remitiendo a éste último el envío como un archivo adjunto de correo electrónico junto con una invitación de revisión. En este caso, el revisor/a contestará por correo electrónico. Lo que aquí se describe es el principal método de revisión y verificación de que se lleva un registro completo del proceso. Esto implica que el revisor/a deba gestionar la revisión en el sitio web de la revista.</p>]]>	
 	</section>
-</topic>
+</topic> 

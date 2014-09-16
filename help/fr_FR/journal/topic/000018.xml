@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  -->
+
+<topic id="journal/topic/000018" locale="fr_FR" title="Editeur de la mise en page" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>L’éditeur de la mise en page transforme les versions révisées de la présentation en galées de format HTML, PDF, PS, etc., les fichiers que le journal a choisis d’utiliser pour la publication électronique. Ce système ne permet pas de convertir des documents crées par des traitements de texte aux formats pour les galées, donc l’éditeur de la mise en page devrait avoir accès à, et être capable d’utiliser un logiciel d’une tierce partie pour la création de galées. (avec Adobe Acrobat pour les PDF, par exemple, ou Dreamweaver pour les HTLM) lesquels présentent les articles sur le moniteur en un format bien disposé et facile à lire, à la manière des journaux académiques, et en gardant un œil sur ce nouveau medium de publication. (En allant voir la mise en page utilisée par d’autres éditeurs de journaux en ligne, tel Highwire Press, par exemple en sciences biologiques ou le projet Muse en humanités)</p>]]>	
+	</section>
+</topic>

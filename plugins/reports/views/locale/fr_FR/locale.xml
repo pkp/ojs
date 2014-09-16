@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.reports.views.displayName">Rapport de consultation</message>
+	<message key="plugins.reports.views.description">Ce plugiciel met en place un rapport CSV décrivant le lectorat pour chaque article.</message>
+	<message key="plugins.reports.views.articleId">Identification de l'article</message>
+	<message key="plugins.reports.views.articleTitle">Titre de l'article</message>
+	<message key="plugins.reports.views.datePublished">Date de publication</message>
+	<message key="plugins.reports.views.abstractViews">Vues des résumés</message>
+	<message key="plugins.reports.views.galleyViews">Vues des épreuves complètes</message>
+</locale>

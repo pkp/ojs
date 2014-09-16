@@ -7,13 +7,12 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Índice del proceso editorial
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000000" locale="es_ES" title="Proceso editorial" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
 	<section>
-		<![CDATA[<p>El proceso editorial para la publicación en la revista consiste en una revisión, normalmente una evaluación anónima por pares, seguida de la decisión del editor/a de sección, quien acepta o rechaza la publicación. Si se acepta el envío en la fase de revisión del proceso editorial, pasa a una fase de edición que consiste en su corrección, maquetación y corrección de pruebas. Posteriormente, se planifica la publicación del envío en un número de la revista. Dependiendo de cómo se haya organizado la revista, el proceso editorial puede llevarse a cabo por un sólo editor/a o por un equipo de editores/as, editores/as de sección, correctores/as de originales, maquetistas y correctores/as de pruebas.</p>]]>	
+		<![CDATA[<p>El proceso editorial por el que pasa un envío a la revista consiste en una revisión, normalmente una evaluación por pares, tras la cual un editor/a de sección decidirá si aceptar o rechazar el envío. Si se ha aceptado en la fase de revisión del proceso editorial, el envío pasa por la fase de edición, que consiste en corregir los originales, maquetarlos y realizar una corrección de pruebas. Posteriormente, el envío está listo para publicar en un número de la revista. Dependiendo de cómo se haya organizado la revista, el proceso editorial puede estar dirigido por un único editor/a, o bien por un equipo de editores/as, editores/as de sección, correctores/as de originales, maquetistas y correctores/as de pruebas.</p>]]>
 	</section>
 </topic>

@@ -32,4 +32,5 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analitik hesap numarası</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Google Analytics kullanarak yayımlanmış makale okuyucusunu izlemek için, buraya bir hesap numarası girin (Örneğin; UA-xxxxxx-x) .</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Gönderi yazarı için girilen bir veya birden çok Google Analitik hesap numarası geçerli değil.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Evrensel analtik için yeni izleme kodu (analytics.js)</message>
 </locale>

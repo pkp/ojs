@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/backup/locale.xml
   *
@@ -8,33 +7,22 @@
   * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Localization strings.
   *
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.backup.name">Conector de copias de seguridad</message>
-	<message key="plugins.generic.backup.description">Este conector genera una copia de de seguridad de la instalación.</message>
+	<message key="plugins.generic.backup.name">Módulo de copia de seguridad</message>
+	<message key="plugins.generic.backup.description">Este módulo crea una copia de seguridad de la instalación.</message>
 
 	<message key="plugins.generic.backup.link">Descargar copia de seguridad</message>
-	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Los siguientes enlaces permiten al administrador/a del sitio descargar una copia de seguridad de varios componentes de la instalación. Una copia de seguridad completa contiene <strong>todos</strong> los siguientes componentes. Por favor, consulte la documentación técnica para más información sobre como estos componentes se interrelacionan.</p>]]></message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Los siguientes enlaces permiten al administrador/a del sitio descargar una copia de seguridad completa de los diversos componentes de una instalación. Una copia de seguridad completa contiene <strong>todos</strong> los siguientes componentes. Consulte la documentación técnica si desea obtener más información sobre cómo se relacionan estos componentes entre sí.</p>]]></message>
 	<message key="plugins.generic.backup.db">Base de datos</message>
-	<message key="plugins.generic.backup.files">Ficheros</message>
+	<message key="plugins.generic.backup.files">Archivos</message>
 	<message key="plugins.generic.backup.code">Código</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> El volcado de la base de datos no se ha configurado en el fichero config.inc.php. La configuración dependerá del servidor y del tipo de base de datos que se use. Esto debe especificarse en la sección titulada [cli], en la opción de configuración etiquetada como "dump". Para MySQL, se puede utilizar la herramienta mysqldump, p.e.:<br/>
-<pre>[cli]
-dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
-</pre>
-Se remplazarán las etiquetas "%s" por orden, con:<ol>
-	<li>El nombre del servidor</li>
-	<li>El usuario de base de datos</li>
-	<li>La contraseña del usuario</li>
-	<li>El nombre de la base de datos</li>
-</ol>
-Tenga en cuenta que esto implica especificar la constraseña de la base de datos en la línea de comandos, lo que en rigor supone un riesgo para la seguridad de la misma.<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> La herramienta "tar" no se ha configurado en el fichero config.inc.php. La configuración dependerá del servidor. Esto debe especificarse en la sección titulada [cli], en la opción de configuración etiquetada como "tar", especificando el camino en el que encontrar la utilidad "tar", p.e.:<br/>
-<pre>[cli]
-tar = "/bin/tar"
-</pre><br/>]]></message>
-	<message key="plugins.generic.backup.failure"><![CDATA[<strong>AVISO: </strong>Ha ocurrido un error durante el proceso de copia de seguridad. Habitualmente esto es debio a problemas con los permisos sobre los ficheros.]]></message>
-</locale>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>Advertencia:</strong> la herramienta de volcado de la base de datos no se configuró en el archivo de configuración config.inc.php. La configuración depende de la configuración del servidor y del tipo de base de datos en uso. Debe especificarse en una sección llamada [cli], en una opción de configuración llamada "volcado". Si utiliza MySQL, utilice la herramienta mysqldump, p. ej.:<br/> <pre>[cli] dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s" </pre> El número de "%s" resultados se reemplazarán, en orden:<ol> <li>Nombre del host de la base de datos</li> <li>Nombre de usuario/a de la base de datos</li> <li>Contraseña de la base de datos</li> <li>Nombre de la base de datos</li> </ol>Tenga en cuenta que esto significa que se debe especificar la contraseña de la base de datos en la línea de comandos, lo que puede constituir un riesgo para la seguridad.<br/><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>Advertencia:</strong> la herramienta "tar" no se configuró en el archivo de configuración config.inc.php. La configuración depende de la configuración del servidor. Debe especificarse en una sección llamada [cli], en una opción de configuración llamada "tar", especificando la ruta de la aplicación "tar", esto es: <br/> <pre>[cli] tar = "/bin/tar" </pre><br/>]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>Advertencia:</strong> puede que se produjera un error durante el proceso de creación de la copia de seguridad. La razón más frecuente suelen ser los permisos de archivos.]]></message>
+</locale> 

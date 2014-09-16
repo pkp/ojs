@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/googleViewer/locale/fr_CA/locale.xml
+  * @file plugins/generic/googleViewer/locale/en_US/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.googleViewer.name">Plugiciel de visualisation Google incorporé</message>
 	<message key="plugins.generic.googleViewer.description"><![CDATA[Ce plugiciel utilise le  service<a href="https://docs.google.com/viewer">Google Docs Viewer</a> pour incorporer des PDFs dans la page de l'article.]]></message>
 </locale>

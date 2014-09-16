@@ -1,31 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/customLocale/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
  
-<locale name="es_ES" full_name="Español">
-	<message key="plugins.generic.customLocale.name">Conector de configuración local personalizada</message>
-	<message key="plugins.generic.customLocale.description">Este conector permite personalizar el texto de la interfaz de usuario/a que el OJS ofrece por defecto.</message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.customLocale.name">Módulo de configuración regional personalizada</message>
+	<message key="plugins.generic.customLocale.description">Este módulo permite personalizar el texto de la interfaz de usuario/a que OJS ofrece por defecto.</message>
 
-	<message key="plugins.generic.customLocale.longDescription">Esta página muestra una lista de las configuraciones locales actualmente instaladas para la revista.</message>
-	<message key="plugins.generic.customLocale.localeDescription">Esta página muestra una lista de todos los archivos disponibles para la configuración local seleccionada.</message>
+	<message key="plugins.generic.customLocale.longDescription">Esta página muestra una lista de las configuraciones regionales instaladas actualmente para la revista.</message>
+	<message key="plugins.generic.customLocale.localeDescription">Esta página muestra una lista de todos los archivos disponibles para la configuración regional seleccionada.</message>
 	<message key="plugins.generic.customLocale.fileDescription">Introduzca texto en el campo de texto personalizado correspondiente. Si desea usar el texto predeterminado del OJS, deje el campo de texto personalizado en blanco.</message>
-	<message key="plugins.generic.customLocale.localeName">Nombre de la configuración local</message>
+	<message key="plugins.generic.customLocale.localeName">Nombre de la configuración regional</message>
 	<message key="plugins.generic.customLocale.localeKey">Clave</message>
-	<message key="plugins.generic.customLocale.localeKey.description">Introduzca la clave de configuración local completa que desee buscar.</message>
+	<message key="plugins.generic.customLocale.localeKey.description">Introduzca la clave de configuración regional completa que desee buscar.</message>
 	<message key="plugins.generic.customLocale.localeKeyValue">Valor</message>
 	<message key="plugins.generic.customLocale.customize">Personalizar</message>
-	<message key="plugins.generic.customLocale.availableLocales">Configuraciones locales disponibles</message>
+	<message key="plugins.generic.customLocale.availableLocales">Configuraciones regionales disponibles</message>
 
-	<message key="plugins.generic.customLocale.locale">{$locale} Configuración local</message>
-	<message key="plugins.generic.customLocale.localeFiles">Archivos de configuración local</message>
+	<message key="plugins.generic.customLocale.locale">{$locale} Configuración regional</message>
+	<message key="plugins.generic.customLocale.localeFiles">Archivos de configuración regional</message>
 	<message key="plugins.generic.customLocale.file.filename">Nombre del archivo</message>
 	<message key="plugins.generic.customLocale.file.edit">Editar {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Texto predeterminado</message>

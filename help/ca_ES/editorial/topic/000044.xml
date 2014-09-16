@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Ensuring a blind peer review
   *
   -->
 
-<topic id="editorial/topic/000044" locale="en_US" title="Ensuring a Blind Peer Review" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+<topic id="editorial/topic/000044" locale="ca_ES" title="Ensuring a Blind Peer Review" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
 	<section>
 		<![CDATA[<p>Per tal d'assegurar la integritat de l'avaluació anònima d'experts per a les trameses d'aquesta revista, cal procurar que els autors/ores no coneguin en cap moment les identitats dels revisors/ores, i viceversa. Per aconseguir-ho, cal que els autors/ores, editors/ores i revisors/ores (els quals pengen documents durant el procés de revisió) comprovin si s'han aplicat els passos següents al text i a les propietats dels fitxers:</p> <ol><li>Els autors/ores del document han de suprimir els seus noms del text. Així, a les referències i a les notes al peu hi ha de constar la paraula «Autor/a» i l'any de publicació, en lloc del nom de l'autor/a, el títol de l'article, etc.</li> <li>En cas de treballar amb documents de Microsoft Office, també cal eliminar la identificació de l'autor/a de les propietats del fitxer. Per fer-ho, cal seguir el camí següent a partir del menú «Fitxer» de la interfície de l'aplicació de Microsoft utilitzada: «Fitxer» &gt; «Anomena i desa» &gt; «Eines» (o «Opcions» si treballeu amb Mac) &gt; «Opcions de seguretat» &gt; «Suprimeix la informació principal de les propietats del fitxer en desar-lo» &gt; «Desa».</li> <li>En cas de treballar amb el format PDF, també cal eliminar el nom de l'autor/a de les propietats del document, a les quals podeu accedir des del menú «Fitxer» de la interfície de l'Adobe Acrobat.</li> </ol>]]>
 	</section>

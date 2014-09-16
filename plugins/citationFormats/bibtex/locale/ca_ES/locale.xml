@@ -1,16 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/citationFormats/bibtex/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
+  * Localization strings.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.citationFormats.bibtex.displayName">Connector per al format de citació BibTeX</message>
+	<message key="plugins.citationFormats.bibtex.displayName">Mòdul per al format de citació BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
-	<message key="plugins.citationFormats.bibtex.description">Aquest connector implementa el format de citació BibTeX.</message>
+	<message key="plugins.citationFormats.bibtex.description">Aquest mòdul implementa el format de citació BibTeX.</message>
 </locale> 

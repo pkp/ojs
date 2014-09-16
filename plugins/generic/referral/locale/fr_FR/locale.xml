@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.generic.referral.name">Plugiciel de référence</message>
+	<message key="plugins.generic.referral.description">Le plugiciel de référence retrace les URL entrants de renvoi aux articles (c.-à-d. quand un lecteur suit un lien externe vers un article), permettant à des auteurs de maintenir et, potentiellement, de publier une liste mise à jour automatiquement de références à un article.</message>
+	
+	<message key="plugins.generic.referral.editReferral">Modifier un renvoi</message>
+	<message key="plugins.generic.referral.createReferral">Créer un renvoi</message>
+	<message key="plugins.generic.referral.referrals">Renvois</message>
+	<message key="plugins.generic.referral.count">Requêtes</message>
+	<message key="plugins.generic.referral.dateAdded">Date d'ajout</message>
+	<message key="plugins.generic.referral.all">Tous</message>
+	<message key="plugins.generic.referral.all.empty">Il n'y a présentement aucun renvoi.</message>
+	<message key="plugins.generic.referral.status.new">Nouveau</message>
+	<message key="plugins.generic.referral.status.new.empty">Il n'y a présentement aucun nouveau renvoi.</message>
+	<message key="plugins.generic.referral.status.accept">Publié</message>
+	<message key="plugins.generic.referral.status.accept.empty">Il n'y a présentement aucun renvoi publié.</message>
+	<message key="plugins.generic.referral.status.decline">Ignoré</message>
+	<message key="plugins.generic.referral.status.decline.empty">Il n'y a présentement aucun renvoi ignoré.</message>
+	<message key="plugins.generic.referral.confirmDelete">Êtes-vous certain de vouloir supprimer ce renvoi?</message>
+	<message key="plugins.generic.referral.nameRequired">Le nom de renvoi est obligatoire.</message>
+	<message key="plugins.generic.referral.urlRequired">L'URL du renvoi est obligatoire.</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Saisir une liste d'expressions régulières, une par ligne, qui seront traitées comme des exclusions pour la journalisation des renvois. Ça peut être utilisé pour empêcher les requêtes de moteurs de recherche de créer du bruit dans la liste des renvois. Pour plus d'information sur les expressions régulières, voir <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
+	<message key="plugins.generic.referral.settings">Paramètres du plugiciel de référence</message>
+	<message key="plugins.generic.referral.settings.description">Le plugiciel de référence enregistre les URLs qui sont liés aux articles publiés dans la revue afin qu'il puissent être organisés par l'auteur et optionnellement publiés. Ce formulaire permet au Directeur de revue de contrôler comment ces liens sont enregistrés.</message>
+	<message key="plugins.generic.referral.excusions">Exclusions</message>
+	<message key="plugins.generic.referral.status.accepted">Publié</message>
+	<message key="plugins.generic.referral.status.declined">IGNORED</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Publié</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Êtes-vous certain de ne pas vouloir tenir en compte le(s) refback(s) sélectionné(s)?</message>
+</locale>

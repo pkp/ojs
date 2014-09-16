@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  -->
+
+<topic id="editorial/topic/000021" locale="fr_FR" title="En révision" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Les soumissions qui apparaissent dans «En révision» sont sujettes au processus de révision qui mène à une décision de la part de l’éditeur de la rubrique, qui accepte ou refuse la soumission. L’étendue du processus de révision, incluant quelles rubriques du journal ont une revue faite menée par des pairs pour les soumissions et combien de réviseurs sont employés, est détaillée dans la politique de révision du journal préparée par les éditeurs et le directeur du journal. Quand un éditeur de rubrique ou un éditeur clique sur le titre d’une soumission dans la file d’attente de «En révision» ils sont dirigés à la page des soumissions en révision, où la revue par les pairs est menée, et la décision éditoriale obtenue pour l’article. Si l’éditeur de la rubrique accepte la soumission pour publication, elle passe alors à la file d’attente de En révision. Si la soumission est refusée, elle passe aux archives.</p>]]>	
+	</section>
+</topic>

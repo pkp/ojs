@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 
 	<!-- External Feed -->
 	<message key="plugins.generic.externalFeed.displayName">Flux externes</message>

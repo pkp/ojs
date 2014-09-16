@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Management Pages - Stats & Reports
   *
-  * $Id$
   -->
 
-<topic id="journal/topic/000008" locale="es_ES" title="Estadísticas &amp; Informes" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+<topic id="journal/topic/000008" locale="es_ES" title="Estadísticas e informes" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
 	<section>
-		<![CDATA[<p>El gestor de la revista dispone de estadísticas e informes para extraer datos sobre el historial de uso de la revista de dos modos distintos. El primero hace referencia a las estadísticas, pues se pueden consultar al instante datos anuales sobre envíos, prácticas editoriales y usuarios/as. Mediante el segundo, el gestor/a de la revista puede generar múltiples tipos de informes para un período de fechas determinadas.</p><p>Hay cuatro tipos de informes disponibles:</p> <ul> <li><strong>Informe de la revista</strong>: Informes que se generan a partir de envíos a la revista durante un periodo determinado.</li> <li><strong>Informe del editor</strong>: Informes sobre envíos, agrupados por editor/a.</li><li><strong>Informe de revisión</strong>: Informes sobre envíos, agrupados por revisor/a.</li><li><strong>Informe de sección</strong>: Informes sobre envíos, agrupados por sección.</li> </ul> <p>Los informes se generan en formato CSV (Comma-Separated Values) y deben ser de código abierto y creados en una hoja de cálculo.</p>]]>
+		<![CDATA[<p>Estadísticas e informes permite al gestor/a de la revista extraer información acerca de historial del uso de la revista en dos formularios. Primero, en Estadísticas, hay estadísticas anuales disponibles para ver, a groso modo, datos de envío, practicas editoriales y usuarios/as. Segundo, el gestor/a de la revista podrá crear uno de los distintos tipos de informes para un rango específico de fechas.</p><p>Hay 4 tipos de informes disponibles:</p> <ul> <li><strong>Informe de revista</strong>: Informes de todos los envíos a la revista en el periodo dado.</li> <li><strong>Informe del editor/a</strong>: Informes de envío, agrupados por editor/a.</li> <li><strong>Informe de revisión</strong>: Informes de envío, agrupados por revisor/a.</li> <li><strong>Informe de sección</strong>: Informes de envío, agrupados por sección.</li> </ul> <p>Estos informes están en formato de valores separados por comas (CSV) y deberían abrirse mediante una aplicación de hojas de cálculo.</p>]]>
 	</section>
-</topic>
+</topic> 

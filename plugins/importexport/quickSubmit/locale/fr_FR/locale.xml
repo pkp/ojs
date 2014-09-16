@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR locale.
+  *
+  -->
+
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.importexport.quickSubmit.addToExisting">Ajouter à un numéro existant :</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestination">Destination de la soumission</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Choisir soit d'ajouter les nouvelles soumissions à un numéro existant, soit de les laisser en révision.</message>
+	<message key="plugins.importexport.quickSubmit.displayName">Plugiciel QuickSubmit</message>
+	<message key="plugins.importexport.quickSubmit.description">Plugiciel de soumission en une étape</message>
+	<message key="plugins.importexport.quickSubmit.descriptionLong">Ce plugiciel permet d'ajouter rapidement des soumissions complètes en révision ou directement dans un numéro.</message>
+	<message key="plugins.importexport.quickSubmit.issueRequired">Vous devez sélectionner le numéro où l'article doit être ajouté.</message>
+	<message key="plugins.importexport.quickSubmit.leaveUnpublished">Laisser non publié</message>
+	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Enregistrer et en créer un autre</message>
+	<message key="plugins.importexport.quickSubmit.submissionData">Données de la soumission</message>
+	<message key="plugins.importexport.quickSubmit.submissionDescription">Choisir le fichier qui doit être utilisé comme épreuve finale pour cette soumission.</message>
+	<message key="plugins.importexport.quickSubmit.submissionRequired">Vous devez télécharger le fichier pour cette soumission.</message>
+	<message key="plugins.importexport.quickSubmit.success">Article ajouté</message>
+	<message key="plugins.importexport.quickSubmit.successDescription">Création de l'article avec succès.</message>
+	<message key="plugins.importexport.quickSubmit.successReturn">Retourner au plugiciel QuickSubmit.</message>
+</locale>

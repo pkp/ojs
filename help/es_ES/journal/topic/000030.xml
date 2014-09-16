@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Management Pages - System Plugins
   *
-  * $Id$
   -->
 
-<topic id="journal/topic/000030" locale="es_ES" title="Conectores del sistema" toc="journal/toc/000001" key="journal.managementPages.plugins">
+<topic id="journal/topic/000030" locale="es_ES" title="Módulos del sistema" toc="journal/toc/000001" key="journal.managementPages.plugins">
 	<section>
-		<![CDATA[<p>La página Conectores del sistema muestra al gestor/a de la revista una lista de los conectores instalados en OJS y le permite realizar cualquier tarea de gestión que disponga cada uno de los conectores. Para más información, consulte la documentación adjunta a cada conector ubicado en el directorio de conectores de OJS (/path/to/install/plugins).</p>]]>
+		<![CDATA[<p>La página Módulos del sistema permite al gestor/a de la revista ver la lista de los módulos instalados en OJS y llevar a cabo las tareas de gestión habilitadas por cada módulo. Para más información, consulte la documentación adjunta a cada módulo ubicado en el directorio de módulos de OJS (/path/to/install/plugins).</p>]]>
 	</section>
-</topic>
+</topic> 

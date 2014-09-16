@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * @file plugins/generic/booksForReview/locale/ca_ES/locale.xml
   *
@@ -8,7 +7,9 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Books for review plugin localization strings for the en_US (U.S. English) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
+  * Books for review plugin localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
@@ -111,7 +112,7 @@
 	<!-- Books For Review Settings Management -->
 	<message key="plugins.generic.booksForReview.settings">Configuració</message>
 	<message key="plugins.generic.booksForReview.booksForReviewSettings">Configuració de Llibres per revisar</message>
-	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Mode 1</h5><p>Permet el següent flux de treball: </p><ul><li>L'editor/a afegeix llibres disponibles per a revisar.</li><li>Els autors/ores interessats en revisar un llibre poden realitzar una sol·licitud mitjançant una notificació a l'editor/a.</li><li>L'editor/a pot acceptar o rebutjar la sol·licitud mitjançant una notificació a l'autor/a.</li><li>Si s'accepta la sol·licitud<ul><li>El llibre ja no està a disponible per a revisar.</li><li>Es fixa un termini per a la revisió.</li><li>L'editor/a pot enviar una còpia del llibre a l'autor/a.</li></ul></li><li>L'autor/a publica la revisió del llibre mitjançant el procés estàndard de publicació en línia.</li><li>Les metadades del llibre es publiquen com a part de la tramesa de la revisió.</li></ul><p>Aquest connector admet més d'un editor/a per revista. Quan un editor/a afegeix un nou llibre per revisar, es converteix en l'editor/a principal i en la figura de contacte en relació a aquest llibre.</p><h5>Mode 2</h5><p>Permet el següent flux de treball:</p><ul><li>L'editor/a afegeix llibres.</li><li>L'editor/a compara els llibres amb la tramesa de les revisions dels autors/ores.</li><li>Les metadades del llibre es publiquen com a part de la tramesa de la revisió.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Mode 1</h5><p>Permet el següent flux de treball: </p><ul><li>L'editor/a afegeix llibres disponibles per a revisar.</li><li>Els autors/ores interessats en revisar un llibre poden realitzar una sol·licitud mitjançant una notificació a l'editor/a.</li><li>L'editor/a pot acceptar o rebutjar la sol·licitud mitjançant una notificació a l'autor/a.</li><li>Si s'accepta la sol·licitud<ul><li>El llibre ja no està a disponible per a revisar.</li><li>Es fixa un termini per a la revisió.</li><li>L'editor/a pot enviar una còpia del llibre a l'autor/a.</li></ul></li><li>L'autor/a publica la revisió del llibre mitjançant el procés estàndard de publicació en línia.</li><li>Les metadades del llibre es publiquen com a part de la tramesa de la revisió.</li></ul><p>Aquest mòdul admet més d'un editor/a per revista. Quan un editor/a afegeix un nou llibre per revisar, es converteix en l'editor/a principal i en la figura de contacte en relació a aquest llibre.</p><h5>Mode 2</h5><p>Permet el següent flux de treball:</p><ul><li>L'editor/a afegeix llibres.</li><li>L'editor/a compara els llibres amb la tramesa de les revisions dels autors/ores.</li><li>Les metadades del llibre es publiquen com a part de la tramesa de la revisió.</li></ul>]]></message>
 	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">Administració</message>
 	<message key="plugins.generic.booksForReview.settings.modeFull">Mode 1: Mostra una llista dels llibres disponibles per a revisar, administrar els revisors/ores i publicar les metadades dels llibres.</message>
 	<message key="plugins.generic.booksForReview.settings.modeMetadata">Mode 2: Publica només les metadades del llibre.</message>
@@ -173,7 +174,7 @@
 
 	<!-- Books For Review -->
 	<message key="plugins.generic.booksForReview.displayName">Llibres per revisar</message>
-	<message key="plugins.generic.booksForReview.description">Aquest connector permet sol·licitar revisions de llibres d'interès o rebuts de les editorials i administrar els revisors/ores i el procés de revisió</message>
+	<message key="plugins.generic.booksForReview.description">Aquest mòdul permet sol·licitar revisions de llibres d'interès o rebuts de les editorials i administrar els revisors/ores i el procés de revisió</message>
 	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Llibres&nbsp;per&nbsp;revisar]]></message>
 	<message key="plugins.generic.booksForReview.status.available">Disponibles</message>
 	<message key="plugins.generic.booksForReview.status.requested">Sol·licitats</message>
@@ -191,4 +192,5 @@
 	<message key="plugins.generic.booksForReview.field.title">Títol</message>
 	<message key="plugins.generic.booksForReview.field.description">Descripció</message>
 
+	<message key="plugins.generic.booksForReview.reminderTask.name">Recordatori de llibres per revisar</message>
 </locale>

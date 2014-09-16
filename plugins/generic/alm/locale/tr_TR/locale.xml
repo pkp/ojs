@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/alm/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * ALM plugin localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+
+	<message key="plugins.generic.alm.displayName">ALM Eklentisi</message>
+	<message key="plugins.generic.alm.description">Plugin to display in Article Level Metrics. To use the ALM service, you need to have use DOIs. This requirement may be relaxed in the future.</message>
+	<message key="plugins.generic.alm.title">Madde Ölçümleri</message>
+	<message key="plugins.generic.alm.loading">Ölçüm Çağırılıyor ...</message>
+
+	<message key="plugins.generic.alm.settings">Ayarlar</message>
+	<message key="plugins.generic.alm.settings.saved">ALM eklentisi ayarları kaydedildi.</message>
+	<message key="plugins.generic.alm.settings.apiKey">Makale düzeyi ölçüm uygulama arayüzü API anahtarı</message>
+	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[To be able to access the article level metrics from ALM server, you need an API key. You can create one by login in (using Mozilla Persona) on the <a href="http://pkp-alm.lib.sfu.ca/">PKP ALM page</a>.]]></message>
+	<message key="plugins.generic.alm.settings.depositArticles">Automatically deposit articles information? (Uncheck if you deposit the information direclty on ALM server using the DOI prefix.)</message>
+	<message key="plugins.generic.alm.settings.depositUrl">Makale bilgisi arşiv URL'si</message>
+	<message key="plugins.generic.alm.settings.depositUrl.description">Arşivlenen makaleler için PKP tarafından sağlanan URL</message>
+	<message key="plugins.generic.alm.settings.ipAddress">When contacting PKP to set up the ALM service, please provide this IP address: {$ip}</message>
+
+	<message key="plugins.generic.alm.thisJournal">Bu Dergi</message>
+	<message key="plugins.generic.alm.categories.html">HTML Görüntüleme</message>
+	<message key="plugins.generic.alm.categories.html.description">Total number of HTML page views for this article. These views are recorded directly within the system itself. Overall monthly view counts may also be available.</message>
+	<message key="plugins.generic.alm.categories.pdf">PDF Görüntüleme.</message>
+	<message key="plugins.generic.alm.categories.pdf.description">Total number of PDF views and downloads for this article. These views are recorded directly within the system itself. Overall monthly view counts may also be available.</message>
+	<message key="plugins.generic.alm.categories.shares">Paylaşımlar</message>
+	<message key="plugins.generic.alm.categories.shares.description">Shares or bookmarks in social networks such as Facebook, CiteULike and Mendeley. In most cases, clicking on the number of shares will take you to a listing in the network itself.</message>
+	<message key="plugins.generic.alm.categories.likes">Beğeniler</message>
+	<message key="plugins.generic.alm.categories.likes.description">Facebook gibi sosyal ağlarda bulunan beğeniler.</message>
+	<message key="plugins.generic.alm.categories.citations">Atıflar</message>
+	<message key="plugins.generic.alm.categories.citations.description">Citations of this article found in CrossRef, PubMed and Wikipedia. In most cases, clicking on the citation count will take you to a listing in the referencing service itself.</message>
+
+	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">ALM plugin is enabled but a valid DOI prefix must be specified in the journal path {$path} Setup in order to send article information.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">ALM plugin is enabled but no API key defined for journal path {$path}.</message>
+	<message key="plugins.generics.alm.senderTask.warning.noJournal">ALM eklentisi herhangi bir dergide etkinleştirilmedi. Herhangi bir makale bilgisi gönderilmedi.</message>
+	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Could not confirm that article information for journal path {$path} is sent. Server did not respond.</message>
+	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">Herhangi bir arşiv URL'si belirlenmedi.</message>
+	<message key="plugins.generic.alm.senderTask.error.returnError">The server returned a message: {$error}
+	{$articlesNumber} entries from articles were sent.
+	{$payload}</message>
+	<message key="plugins.generic.alm.senderTask.name">ALM makale bilgi göndericisi</message>
+	
+</locale>

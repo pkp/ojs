@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000007.xml
   *
@@ -8,9 +7,10 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de contenido para el proceso editorial- Rol del editor/a de sección - Edición
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * table of contents for Editorial Process - Section Editor's Role - Editing
+  *
   -->
 
 <toc id="editorial/toc/000007" locale="es_ES" title="Edición" parent_topic="editorial/topic/000007">
@@ -19,6 +19,6 @@
 	<topic id="editorial/topic/000029" title="Corrección de pruebas" />
 
 	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
-	<breadcrumb url="editorial/topic/000004" title="Rol del editor/a sección" />
+	<breadcrumb url="editorial/topic/000004" title="Rol del editor/a de sección" />
 	<breadcrumb url="editorial/topic/000007" title="Edición" />
-</toc>
+</toc> 

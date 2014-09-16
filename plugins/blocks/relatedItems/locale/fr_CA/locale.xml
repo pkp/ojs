@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
+  * Localization strings for the en_US (U.S. English) locale.
   *
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.block.relatedItems.displayName">Bloc d'éléments connexes</message>
 	<message key="plugins.block.relatedItems.description">Ce plugiciel affiche un bloc contenant des éléments connexes dans le menu latéral des outils de lecture.</message>
 	<message key="plugins.block.relatedItems.title">Éléments connexes</message>

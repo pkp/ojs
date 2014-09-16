@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000005.xml
   *
@@ -8,17 +7,18 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * table of contents for Journal Management - Management Pages - Reading Tools.
   *
-  * $Id$
   -->
 
 <toc id="journal/toc/000005" locale="es_ES" title="Herramientas de lectura" parent_topic="journal/topic/000009">
 	<topic id="journal/topic/000026" title="Opciones de las herramientas de lectura" />
-	<topic id="journal/topic/000027" title="Sets de elementos relacionados" />
+	<topic id="journal/topic/000027" title="Conjuntos de elementos relacionados" />
 	<topic id="journal/topic/000028" title="Contextos" />
 
 	<breadcrumb url="journal/topic/000000" title="Gestión de la revista" />
 	<breadcrumb url="journal/topic/000001" title="Páginas de gestión" />
 	<breadcrumb url="journal/topic/000009" title="Herramientas de lectura" />
-</toc>
+</toc> 

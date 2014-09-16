@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/pubIds/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<!-- plugin -->
+	<message key="plugins.importexport.pubIds.displayName">Public Identifiers XML Plugin</message>
+	<message key="plugins.importexport.pubIds.description">Import and export public identifiers</message>
+
+	<message key="plugins.importexport.pubIds.cliUsage">Usage: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [user_name]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]</message>
+
+	<message key="plugins.importexport.pubIds.export">Export public identifiers</message>
+	<message key="plugins.importexport.pubIds.export.forIssues">Export public identifiers</message>
+	<message key="plugins.importexport.pubIds.export.selectIssue">Select Issue</message>
+	<message key="plugins.importexport.pubIds.export.selectIssue.description">Please select issues, for whose objects you wish to export the public identifiers.</message>
+
+	<message key="plugins.importexport.pubIds.import">Import public identifiers</message>
+	<message key="plugins.importexport.pubIds.import.description">This plugin supports the import of the public identifiers based on the pubIds.dtd Document Type Definition.</message>
+	<message key="plugins.importexport.pubIds.import.results">Import Results</message>
+	<message key="plugins.importexport.pubIds.import.errors">Import Errors</message>
+	<message key="plugins.importexport.pubIds.import.errors.description">One or more errors occurred during import. Please check to ensure that the format of the import file correctly matches the specification. Specific details of the import errors are listed below.</message>
+	<message key="plugins.importexport.pubIds.import.success">Import Success</message>
+	<message key="plugins.importexport.pubIds.import.success.description">Successfully-imported public identifiers are listed below.</message>
+
+	<!-- errors -->
+	<message key="plugins.importexport.pubIds.cliError">ERROR:</message>
+	<message key="plugins.importexport.pubIds.cliError.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
+	<message key="plugins.importexport.pubIds.cliError.unknownUser">The specified user, "{$userName}", does not exist.</message>
+	<message key="plugins.importexport.pubIds.cliError.issueNotFound">No issue matched the specified issue ID "{$issueId}".</message>
+	<message key="plugins.importexport.pubIds.cliError.couldNotWrite">Could not write to the file "{$fileName}".</message>
+
+	<message key="plugins.importexport.pubIds.import.error.uploadFailed">The upload failed; please ensure that uploads are allowed on your server and that the file is not too big for your PHP and web server configuration.</message>
+	<message key="plugins.importexport.pubIds.import.error.unsupportedRoot">This plugin does not support the supplied root node "{$rootName}". Please ensure that the file is correctly formed and try again.</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownObjectType">An unknown object type "{$pubObjectType}" was specified in the "pubObjectType" attribute of the element with the value "{$pubId}".</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownObject">The object "{$pubObjectType}" with ID = {$pubObjectId} specified in the element with the value "{$pubId}" does not exist for this journal.</message>
+	<message key="plugins.importexport.pubIds.import.error.pubIdExists">Public identifier of the type "{$pubIdType}" for the object {$pubObjectType} with ID = {$pubObjectId} already exists.</message>
+	<message key="plugins.importexport.pubIds.import.error.duplicatePubId">The public identifier "{$pubId}" is already in use by another object.</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownPubId">Your import file contains a public identifier type "{$pubIdType}" that no pubId plugin can handle. Please install and/or activate the corresponding pubId plugin before trying to import this dataset.</message>
+
+
+</locale>

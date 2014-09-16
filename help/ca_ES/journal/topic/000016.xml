@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000016.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Roles - Editor 
   *
   -->
 
-<topic id="journal/topic/000016" locale="en_US" title="Editor" toc="journal/toc/000003" key="journal.roles.editor">
+<topic id="journal/topic/000016" locale="ca_ES" title="Editor" toc="journal/toc/000003" key="journal.roles.editor">
 	<section>
 		<![CDATA[<p>The Editor oversees the entire editorial and publishing process. The Editor, working with the Journal Manager, typically establishes the policies and procedures for the journal, which are entered in {help_topic key="journal.managementPages.setup" text="Setup"}. In the Editorial Process, the Editor assigns submissions to the Section Editors to see through Submission Review and Submission Editing. The Editor keeps an eye on the submission's progress and assists with any difficulties. Once review is completed, the Editor typically sees the submission through the {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} process (including copyediting, layout, and proofreading) although in some journals this remains the responsibility of the Section Editor in charge of the submission's {help_topic key="editorial.sectionEditorsRole.review" text="Review"} process. The Editor also schedules submissions for publication, arranges the Table of Contents and publishes the issue as part of the {help_topic key="publishing.index" text="Publishing Process"}. The Editor can restore archived submissions to the active In Review or In Editing lists as outlined in {help_topic key="editorial.editorsRole.submissions.archives" text="Archives"}.</p>]]>	
 	</section>

@@ -1,20 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.importexport.users.displayName">Connector XML d'usuaris/àries</message>
+	<message key="plugins.importexport.users.displayName">Mòdul XML d'usuaris/àries</message>
 	<message key="plugins.importexport.users.description">Importa i exporta usuaris/àries.</message>
 
-	<message key="plugins.importexport.users.cliUsage">Ús: {$scriptName} {$pluginName} [command] ... Ordres: importeu [xmlFileName] [journal_path] [optional flags] exporteu [xmlFileName] [journal_path] exporteu [xmlFileName] [journal_path] [role_path1] [role_path2] ... Marques opcionals: continue_on_error: Si es produeix un error, no atureu la importació d'usuaris/àries send_notify: Envieu un correu electrònic de notificació amb els noms d'usuari/ària i les contrasenyes dels usuaris/àries importats Exemples: Importeu els usuaris/àries a myJournal des de myImportFile.xml, continua amb l'error: {$scriptName} {$pluginName} importeu myImportFile.xml myJournal continue_on_error Exporteu tots els usuaris/àries des de myJournal: {$scriptName} {$pluginName} exporteu myExportFile.xml myJournal Exporteu tots els usuaris/àries registrats com a revisors/ores, només amb els seus rols de revisor/a: {$scriptName} {$pluginName} exporteu myExportFile.xml myJournal revisor/a</message>
+    <message key="plugins.importexport.users.cliUsage"><![CDATA[Ús: {$scriptName} {$pluginName} [command] ...
+Ordres:
+    import [xmlFileName] [ruta_revista] [paràmetres opcionals]
+    export [xmlFileName] [ruta_revista]
+    export [xmlFileName] [ruta_revista] [rol_ruta1] [rol_ruta2] ...
+
+Paràmetres opcionals:
+    continue_on_error: Si es produeix un error, no atureu la importació d'usuaris/àries 
+
+    send_notify: Envieu un correu electrònic de notificació amb els noms d'usuari/ària i les contrasenyes dels usuaris/àries importats
+
+Exemples: 
+    Importeu els usuaris/àries a myJournal des de myImportFile.xml, continua amb l'error:
+    {$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+    Exporteu tots els usuaris/àries des de myJournal:
+    {$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+    Exporteu tots els usuaris/àries registrats com a revisors/ores, només amb els seus rols de revisor/a:
+    {$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Importa els usuaris/àries</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleccioneu un fitxer de dades XML que contingui la informació dels usuaris/àries que vulgueu importar a aquesta revista. Si necessiteu informació detallada sobre el format d'aquest fitxer, vegeu l'Ajuda de la revista.<br /><br />Tingueu en compte que si el fitxer importat conté noms d'usuari/ària o adreces electròniques que ja existeixen al sistema, no s'importaran les dades d'aquests usuaris/àries i els rols nous que s'hagin de crear s'assignaran als usuaris/àries existents.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">No s'ha pogut importar l'usuari/ària.</message>

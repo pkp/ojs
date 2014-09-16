@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.gateways.resolver.displayName">Plugiciel Resolver</message>
+	<message key="plugins.gateways.resolver.description">Ce plugiciel résout les numéros et les articles basés sur l'information de référence bibliographique.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Impossible de résoudre une seule entité en utilisant l'information de référence bibliographique spécifiée. Veuillez vous assurer que l'information de référence bibliographique est complète et qu'elle se rapporte à une entité dans cette installation de OJS.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Exporter le contenu</message>
+</locale>

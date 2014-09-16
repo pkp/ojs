@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.customLocale.name">Connector de la configuració regional personalitzat</message>
-	<message key="plugins.generic.customLocale.description">Aquest connector permet personalitzar el text de la interfície d'usuari que l'OJS utilitza per defecte.</message>
+	<message key="plugins.generic.customLocale.name">Mòdul de la configuració regional personalitzada</message>
+	<message key="plugins.generic.customLocale.description">Aquest mòdul permet personalitzar el text de la interfície d'usuari que l'OJS utilitza per defecte.</message>
 
 	<message key="plugins.generic.customLocale.longDescription">Aquesta pàgina enumera totes les configuracions regionals que hi ha instal·lades per a la revista.</message>
 	<message key="plugins.generic.customLocale.localeDescription">Aquesta pàgina enumera tots els fitxers que hi ha disponibles per a la configuració regional seleccionada.</message>

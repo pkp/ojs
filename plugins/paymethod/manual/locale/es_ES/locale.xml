@@ -1,24 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/paymethod/manual/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
- -->
+  * Localization strings
+  -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.paymethod.manual.displayName">Pago manual de las cuotas</message>
-	<message key="plugins.paymethod.manual.description">El gestor/a emitirá manualmente un recibo del pago de un usuario/a (fuera de este programa).</message>
+    <message key="plugins.paymethod.manual.displayName">Pago manual de las cuotas</message>
+	<message key="plugins.paymethod.manual.description">El gestor/a guardará de forma manual un comprobante del pago de un usuario/a (fuera de este software).</message>
 	<message key="plugins.paymethod.manual">Pago manual de las cuotas</message>
 	<message key="plugins.paymethod.manual.settings">Configuración de pagos manuales</message>
 	<message key="plugins.paymethod.manual.settings.instructions">Instrucciones</message>
 	<message key="plugins.paymethod.manual.settings.manualInstructions">Instrucciones sobre el pago de las cuotas para usuarios/as que elijan el pago manual.</message>
 
-	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Envíe una notificación de pago</message>
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Enviar una notificación de pago</message>
 	<message key="plugins.paymethod.manual.paymentNotification">Notificación de pago</message>
 	<message key="plugins.paymethod.manual.notificationSent">Se ha enviado una notificación de pago</message>
 

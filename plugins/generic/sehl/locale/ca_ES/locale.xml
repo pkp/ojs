@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.sehl.name">Connector SEHL</message>
-	<message key="plugins.generic.sehl.description">Aquest connector implementa la cerca que destaca (Search Engine Highlighting o SEHL), de manera que quan el cercador troba un article en HTML, les paraules per les quals s'ha buscat aquest article apareixen destacades.</message>
-</locale> 
+	<message key="plugins.generic.sehl.name">Mòdul SEHL</message>
+	<message key="plugins.generic.sehl.description">Aquest mòdul implementa la cerca que destaca (Search Engine Highlighting o SEHL), de manera que quan el cercador troba un article en HTML, les paraules per les quals s'ha buscat aquest article apareixen destacades.</message>
+</locale>

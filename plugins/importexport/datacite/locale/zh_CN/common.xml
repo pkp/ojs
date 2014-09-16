@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/importexport/medra/locale/en_US/common.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Shared localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">为使用该款插件，请在"公共标识符"插件种类中，开启和配置DOI插件并且指定一个有效的DOI字首。</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">插件尚未完全建立。</message>
+
+	<message key="plugins.importexport.common.settings">设置</message>
+
+	<message key="plugins.importexport.common.settings.form.password">密码</message>
+	<message key="plugins.importexport.common.settings.form.password.description">请注意密码已纯文本的形式保存，如：不加密。</message>
+	<message key="plugins.importexport.common.settings.form.passwordRequired">请输入密码。</message>
+	
+	<message key="plugins.importexport.common.register">注册</message>
+	<message key="plugins.importexport.common.registerDescription">点击此按钮实现对象在注册机构的第一次注册。前提是对象之前没有注册过才有效。</message>
+	<message key="plugins.importexport.common.registerDescription.multi">点击此按钮实现选定对象的元数据在注册机构的注册和更新。</message>
+	<message key="plugins.importexport.common.register.error.mdsError">注册失败！DOI注册服务器返回一个错误：'{$param}'。</message>
+	<message key="plugins.importexport.common.register.success">注册成功！</message>
+	<message key="plugins.importexport.common.register.warning">同时注册很多对象会需要很长时间。所i一点击注册按钮后请耐心等待。注册完成会通知您。</message>
+	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[直接注册当前禁用。<a href="{$settingsUrl}">配置</a>一个用户名和密码在注册机构直接注册。]]></message>
+
+	<message key="plugins.importexport.common.markRegistered">标记已注册</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">点击此按钮标记注册的对象（例如，之前注册或者手动注册）</message>
+
+	<message key="plugins.importexport.common.update">更新</message>
+	<message key="plugins.importexport.common.updateDescription">点击此按钮实现对象元数据在注册机构的更新。前提是，对象之前已成功注册才能有效。</message>
+		
+	<message key="plugins.importexport.common.export">导出数据</message>
+	<message key="plugins.importexport.common.export.unAvailable">当前数据无法导出。请核实插件要求。</message>
+	<message key="plugins.importexport.common.export.unregistered">导出所有未注册的期次，文章和样稿</message>
+	<message key="plugins.importexport.common.export.selectUnregistered">选择未注册的期次，文章和样稿</message>
+	<message key="plugins.importexport.common.export.noUnregistered">所有发表的期次，文章和样稿已被注册（或者它们没有指定的DOI）。</message>
+	<message key="plugins.importexport.common.export.issues">所有期次</message>
+	<message key="plugins.importexport.common.export.selectIssue">选定期次</message>
+	<message key="plugins.importexport.common.export.noIssues">当前期次没有指定的DOI。</message>
+	<message key="plugins.importexport.common.export.articles">所有文章</message>
+	<message key="plugins.importexport.common.export.selectArticle">选择文章</message>
+	<message key="plugins.importexport.common.export.noArticles">当前文章没有指定的DOI。</message>
+	<message key="plugins.importexport.common.export.galleys">导出指定样稿</message>
+	<message key="plugins.importexport.common.export.selectGalley">选择样稿</message>
+	<message key="plugins.importexport.common.export.noGalleys">当前样稿没有指定的DOI。</message>
+	<message key="plugins.importexport.common.exportDescription">Click this button to export XML data for the selected object(s) into a local file without registering it with the registration agency. This can be useful if you want a third party to register DOIs for you or if you want to inspect the XML format before registering it.</message>
+ 
+	<message key="plugins.importexport.common.export.error.issueNotFound">没有找到 ID： {$param}的期次。</message>
+	<message key="plugins.importexport.common.export.error.articleNotFound">没有找到ID： {$param}的文章。</message>
+	<message key="plugins.importexport.common.export.error.galleyNotFound">没有找到ID：{$param}的样稿。</message>
+	<message key="plugins.importexport.common.export.error.noDoiAssigned">ID{$param}的对象没有指定的DOI。</message>
+	<message key="plugins.importexport.common.export.error.unknownJournal">没找到期刊路径：{$param}的期刊。</message>
+	<message key="plugins.importexport.common.export.error.unknownObjectType">对象类型{$param} 无法导出。</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">输出文件{$param}不可写。</message>
+ 
+	<message key="plugins.importexport.common.notification.exportSuccessful">成功导出所选对象到 '{$param}'</message>
+ 
+	<message key="plugins.importexport.common.cliError">错误：</message>
+</locale>
+

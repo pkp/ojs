@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin_settings SYSTEM "../../../../lib/pkp/dtd/pluginSettings.dtd">
+
+<!--
+  * plugins/generic/pln/xml/settings.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * Default plugin settings.
+  *
+  -->
+
+<plugin_settings>
+	<!-- if the plugin is enabled -->
+	<setting type="bool">
+		<name>enabled</name>
+		<value>false</value>
+	</setting>
+	<!-- unique journal uuid -->
+	<setting type="string">
+		<name>journal_uuid</name>
+		<value></value>
+	</setting>
+	<!-- checksum type (see constants in Deposit) -->
+	<setting type="string">
+		<name>checksum_type</name>
+		<value>SHA-1</value>
+	</setting>
+	<!-- article or issue-based depositing (see constants in DepositObject) -->
+	<setting type="string">
+		<name>object_type</name>
+		<value>Issue</value>
+	</setting>
+	<!-- in the case of articles, the article threshold per deposit -->
+	<setting type="int">
+		<name>object_threshold</name>
+		<value>20</value>
+	</setting>
+	<!-- chosen staging server -->
+	<setting type="string">
+		<name>pln_network</name>
+		<value>PKP</value>
+	</setting>
+	<!-- is the PLN accepting deposits -->
+	<setting type="bool">
+		<name>pln_accepting</name>
+		<value>false</value>
+	</setting>
+</plugin_settings>

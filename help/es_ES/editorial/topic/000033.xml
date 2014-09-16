@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Author's Role Review Index - Peer Review
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000033" locale="es_ES" title="Evaluación por pares" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
 	<section>
-		<![CDATA[<p>En esta página permanecen registradas varias fechas, incluidas la fecha en la que el editor/a solicita la revisión, las fechas en las que las revisiones están en proceso y las fechas en las que los revisores/as han completado sus revisiones. El autor/a puede consultar la política de revisión en {help_topic key="user.about" text=»Sobre la revista"} para obtener más información acerca de cómo se revisan los envíos en la revista. Los revisores/as pueden cargar archivos para que los consulte el autor/a, así como versiones del envío con notas. (Para consultar los archivos cargados, el autor/a debe hacer clic en el nombre del archivo enlazado que aparece junto a dicho archivo y abrirlo directamente o guardarlo en el equipo para abrirlo posteriormente.)</p>]]>	
+		<![CDATA[<p>Se registran varias fechas en esta página, incluyendo la fecha de la solicitud del editor/a a los revisores/as, las fechas en las cuales las revisiones están en proceso y las fechas en las que los diferentes revisores/as completan las revisiones. El autor/a puede consultar la política de revisión en {help_topic key="user.about" text="Sobre la revista"} para obtener más información acerca de cómo la revista revisa los envíos. Los revisores/as pueden subir archivos para que los consulte el autor/a, incluyendo versiones comentadas del envío. (Para consultar los archivos subidos, el autor/a debe hacer clic en el enlace del nombre del archivo al lado de Archivo subido y abrir el archivo, o guardar el archivo en el ordenador y después abrirlo.)</p>]]>	
 	</section>
-</topic>
+</topic> 

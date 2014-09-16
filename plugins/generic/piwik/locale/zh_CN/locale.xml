@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/piwik/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Piwik plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Piwik -->
+	<message key="plugins.generic.piwik.displayName">Piwik 插件</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[OJS和Piwik兼容，一个免费和开源网站流量分析应用。条件是已安装Piwik插件。更多信息详见<a href="http://piwik.org/" title="piwik site">Piwik 网站</a>。]]></message>
+
+	<!-- Piwik Settings Management -->
+	<message key="plugins.generic.piwik.manager.settings">设置</message>
+	<message key="plugins.generic.piwik.manager.piwikSettings">Piwik 设置</message>
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>该款插件启用Piwik收集和分析期刊试用情况的功能。但请注意，前提是已安装Piwik插件。更多信息详见<a href="http://piwik.org/" title="Piwik site">Piwik site</a></p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Piwik 网址</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">Piwik安装的完整网址 (如. http://myserver.net/piwik).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">请输入一个有效的网址。包括 http://开头。</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">网站配置ID</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"><![CDATA[在Piwik，点击设置->网站。在网站配置名称旁就是配置的ID。]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">请输入一个网站配置ID</message>
+
+</locale>

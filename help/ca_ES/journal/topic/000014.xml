@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000014.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Users - Email Users
   *
   -->
 
-<topic id="journal/topic/000014" locale="en_US" title="Email Users" toc="journal/toc/000002" key="journal.users.emailUsers">
+<topic id="journal/topic/000014" locale="ca_ES" title="Email Users" toc="journal/toc/000002" key="journal.users.emailUsers">
 	<section>
 		<![CDATA[<p>The Journal Manager is able to email all users or a sub-set of them. Note that all Readers are sent an email notification upon the publication of each issue with a copy of the Table of Contents for that issue or, in the case of continuous {help_topic key="publishing.index" text="publishing"}, with the title and author of the submission. The journal also should have a Privacy Policy, entered in the Setup and available in About the Journal, which describes how privacy of registered users of this journal will be respected.</p>]]>	
 	</section>

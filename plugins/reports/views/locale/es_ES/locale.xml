@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 <!--
-  * locale.xml
+  * plugins/reports/views/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
+  * Localization strings
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.reports.views.displayName">Conector de Visualización de informes</message>
-	<message key="plugins.reports.views.description">Este conector ofrece un informe CSV sobre los lectores/as de cada artículo.</message>
-	<message key="plugins.reports.views.articleId">ID de artículo</message>
-	<message key="plugins.reports.views.articleTitle">Título del artículo</message>
-	<message key="plugins.reports.views.datePublished">Fecha de publicación</message>
-	<message key="plugins.reports.views.abstractViews">Ver resúmenes</message>
-	<message key="plugins.reports.views.galleyViews">Total de accesos a galeradas</message>
+  <message key="plugins.reports.views.displayName">Ver el informe</message>
+  <message key="plugins.reports.views.description">Este módulo ofrece un informe CSV sobre los lectores/as de cada artículo.</message>
+
+  <message key="plugins.reports.views.articleId">Id. del artículo</message>
+  <message key="plugins.reports.views.articleTitle">Título del artículo</message>
+  <message key="plugins.reports.views.datePublished">Fecha de publicación</message>
+  <message key="plugins.reports.views.abstractViews">Visualizaciones del resumen</message>
+  <message key="plugins.reports.views.galleyViews">Visualizaciones de todas las galeradas</message>
 </locale> 

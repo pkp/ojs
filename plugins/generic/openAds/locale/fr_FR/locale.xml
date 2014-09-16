@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.generic.openads.description">Le plugiciel OpenAds permet d'insérer dans OJS des annonces publicitaires dynamiques tirés du serveur publicitaire OpenAds.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Le plugiciel OpenAds permet d'insérer dans OJS des annonces publicitaires dynamiques tirés du serveur publicitaire OpenAds.  <strong>Veuillez lire le fichier LISEZMOI dans plugiciel/générique/openAds pour de plus amples renseignements concernant l’activation de ce plugiciel.</strong>]]></message>
+	<message key="plugins.generic.openads">Plugiciel OpenAds</message>
+	<message key="plugins.generic.openads.settings.description">Utilisez ce formulaire pour sélectionner les zones de publicité OpenAds qui seront affichées dans OJS pour chaque emplacement potentiel.</message>
+	<message key="plugins.generic.openads.manager.settings">Paramètres</message>
+
+	<message key="plugins.generic.openads.error.configFileNotFound">Le fichier de configuration, {$filename}, n'est pas accessible.</message>
+	<message key="plugins.generic.openads.error.missingParameter">Au moins un des paramètres de configuration OpenAds requis n'a pu être lu à partir du fichier de configuration. Les paramètres requis sont dbhost, dbuser, dbpassword, dbname, url_prefix, et table_prefix.</message>
+	<message key="plugins.generic.openads.error.dbConnectionError">Impossible de se brancher à la base de données OpenAds.</message>
+
+	<message key="plugins.generic.openads.headerAd">En-tête publicitaire</message>
+	<message key="plugins.generic.openads.contentAd">Contenu publicitaire</message>
+	<message key="plugins.generic.openads.sidebarAd">Encadré latéral publicitaire</message>
+
+	<message key="plugins.generic.openads.orientation.left">Gauche</message>
+	<message key="plugins.generic.openads.orientation.centre">Centre</message>
+	<message key="plugins.generic.openads.orientation.right">Droit</message>
+</locale>

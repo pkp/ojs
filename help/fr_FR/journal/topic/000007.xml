@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Languages 
+  *
+  -->
+
+<topic id="journal/topic/000007" locale="fr_FR" title="Langues" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<section>
+		<![CDATA[<p>Ce système peut supporter des journaux multilingues, ainsi que des journaux en langues autres que l’anglais. Les langues qui ont été rendues disponibles pour le système par l’administrateur du site sont listées sous «Langues» dans «Gestion du journal» et peuvent donc être choisies pour usage sur le site du journal.</p>]]>	
+	</section>
+</topic>

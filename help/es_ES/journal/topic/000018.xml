@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles - Layout Editor 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000018" locale="es_ES" title="Maquetista" toc="journal/toc/000003" key="journal.roles.layoutEditor">
 	<section>
-		<![CDATA[<p>El maquetista convierte las versiones corregidas de los envíos a galeradas en HTML, PDF, PS, etc., archivos que la revista ha elegido para que se publiquen de forma electrónica. Este sistema no dispone del software necesario para convertir documentos procesados por palabras a formatos de galeradas, así pues, el maquetista deberá tener acceso y podrá utilizar paquetes de software de terceros para crear galeradas (por ejemplo, con Adobe Acrobat para PDFs o Dreamweaver para HTML), los cuales muestran los artículos en pantalla con una maquetación inteligible y con un buen formato, manteniendo el formato de una revista académica, y teniendo en cuenta el medio de publicación (se puede consultar la maquetación de otras revistas publicadas en línea, como puede ser Highwire Press, por ejemplo, en el ámbito de ciencias de la vida o Project Muse, para humanidades).</p><p>Haga clic {help_topic key="editorial.layoutEditorsRole" text="aquí"} para saber más.</p>]]>	
+		<![CDATA[<p>El maquetista transforma la versión corregida del envío en galeradas en HTML, PDF, PS, etc.; los archivos seleccionados por la revista para su publicación electrónica. Este sistema no dispone del software necesario para convertir documentos de un procesador de textos a formato de galerada, por lo que el maquetista debería tener acceso y poder usar paquetes de software de terceros para crearlas (Adobe Acrobat para PDF, por ejemplo; o Dreamweaver para HTML), que muestren los artículos en la pantalla con un diseño legible y de buen formato, similar al de las revistas académicas; prestando atención a este nuevo medio de publicación (basándose en el diseño de otros editores de revistas en línea, como Highwire Press, por ejemplo, para las ciencias de la vida o Project Muse para las humanidades).</p><p>Se puede encontrar más información {help_topic key="editorial.layoutEditorsRole" text="aquí"}</p>]]>	
 	</section>
-</topic>
+</topic> 

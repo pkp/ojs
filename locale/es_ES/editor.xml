@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd"> 
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 <!--
   * locale/es_ES/editor.xml
   *
@@ -7,15 +7,18 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Localization strings.
   -->
 
-<locale name="es_ES" full_name = "Español">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="editor.article.reviewForms">Formularios de revisión</message>
 	<message key="editor.article.selectReviewForm">Seleccionar formulario de revisión</message>
-	<message key="editor.article.clearReviewForm">Borrar formulario de revisión</message>
-	<message key="editor.home">Página de inicio del editor/a</message>
-	 <message key="editor.article.confirmChangeReviewForm">Advertencia: modificar el formulario de revisión afectará a las respuestas que los revisores/as hayan hecho utilizando este formulario. ¿Desea continuar?</message>
+	<message key="editor.article.clearReviewForm">Eliminar formulario de revisión</message>
+	<message key="editor.home">Página principal del editor/a</message>
+	<message key="editor.article.confirmChangeReviewForm">Advertencia: Modificar el formulario de revisión afectará a las respuestas que los revisores/as hayan hecho utilizando este formulario. ¿Desea continuar?</message>
+	<message key="editor.reassign">Volver a asignar</message>
 	<message key="editor.submissionsAndPublishing">Envíos y publicaciones</message>
 	<message key="editor.submissionQueue">Cola de envío</message>
 	<message key="editor.submissionArchive">Archivo de envíos</message>
@@ -24,23 +27,25 @@
 	<message key="editor.allSections">Todas las secciones</message>
 	<message key="editor.allEditors">Todos los editores/as</message>
 	<message key="editor.me">Yo</message>
-	<message key="editor.submissionArchive.noSubmissions">No hay envíos en el archivo</message>
-	<message key="editor.submissionArchive.saveChanges">¿Desea guardar los cambios en envíos archivados? Los envíos que se seleccionen para ser eliminados serán borrados permanentemente del sistema.</message>
+	<message key="editor.publicIdentificationExists">La identificación pública '{$publicIdentifier}' ya existe para otro objeto (número, artículo, galerada o archivo complementario). Elija identificadores exclusivos en la revista.</message>
+	<message key="editor.submissionArchive.noSubmissions">Ningún envío en el archivo.</message>
+	<message key="editor.submissionArchive.saveChanges">¿Desea guardar los cambios en envíos archivados? Los envíos que se seleccionen para ser eliminados se eliminarán permanentemente del sistema.</message>
 	<message key="editor.submissionArchive.confirmDelete">¿Está seguro/a de que desea eliminar este envío de forma permanente?</message>
 	<message key="editor.submissionReview.confirmDecision">¿Está seguro/a de que desea registrar esta decisión?</message>
-	<message key="editor.submissionReview.emailWillArchive">Este envío se archivará después de que se envíe el correo electrónico de notificación al autor/a o después de pulsar el botón No enviar correo electrónico.</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de mandar un envío a corrección, utilice el enlace Informar al autor/a para comunicarle la decisión y seleccionar la versión que se enviará.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Enviar a Corrección</message>
+	<message key="editor.submissionReview.emailWillArchive">Este envío se archivará después de que se envíe el correo electrónico de notificación al autor/a, o después de pulsar el botón No enviar correo electrónico.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de mandar un envío a corrección de originales, utilice el enlace Notificar al autor/a para comunicarle la decisión y seleccionar la versión que se enviará.</message>
+	<message key="editor.submissionReview.sendToCopyediting">Enviar a Corrección de originales</message>
 	<message key="editor.notifyUsers">Informar a los usuarios/as</message>
-	<message key="editor.notifyUsers.allUsers">Enviar este mensaje a todos los usuarios/as asociados con esta revista ({$count} usuarios/as)</message>
+	<message key="editor.notifyUsers.allUsers">Todos los usuarios/as asociados con esta revista ({$count} usuarios/as)</message>
 	<message key="editor.notifyUsers.allReaders">Todos los lectores/as ({$count} usuarios/as)</message>
 	<message key="editor.notifyUsers.allAuthors">Todos los autores/as publicados ({$count} usuarios/as)</message>
-	<message key="editor.notifyUsers.allIndividualSubscribers">Todos los suscriptores individuales ({$count} usuarios/as)</message>
-	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos los suscriptores institucionales ({$count} usuarios/as)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Todos los suscriptores/as individuales ({$count} usuarios/as)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos los suscriptores/as institucionales ({$count} usuarios/as)</message>
+	<message key="editor.notifyUsers.allMailingList">Incluir todos los correos electrónicos en la lista de distribución de correo ({$count} correos electrónicos)</message>
 	<message key="editor.notifyUsers.inProgress">Se está informando a los usuarios/as...</message>
 	<message key="editor.usersNotified">Usuarios/as informados</message>
 	<message key="editor.notifyUsers.allUsers">Enviar este mensaje a todos los usuarios/as asociados con esta revista ({$count} usuarios/as)</message>
-	<message key="editor.notifyUsers.interestedUsers">Enviar este mensaje a los usuarios/as asociados a esta revista que hayan indicado que desean recibir actualizaciones ({$count} usuarios/as)</message>
+	<message key="editor.notifyUsers.interestedUsers">Enviar este mensaje a los usuarios/as asociados con esta revista que hayan indicado que desean recibir actualizaciones ({$count} usuarios/as)</message>
 	<message key="editor.notifyUsers.includeToc">Incluir la tabla de contenidos de este número:</message>
 	<message key="editor.editorAdministration">Administración del editor/a</message>
 	<message key="editor.issues.createIssue">Crear número</message>
@@ -48,7 +53,7 @@
 	<message key="editor.issues.futureIssues">Próximos números</message>
 	<message key="editor.issues.currentIssue">Número actual</message>
 	<message key="editor.issues.numArticles">Elementos</message>
-	<message key="editor.issues.noArticles">No hay elementos asignados para este número.</message>
+	<message key="editor.issues.noArticles">No hay elementos planificados para este número.</message>
 	<message key="editor.issues.confirmDelete">¿Está seguro/a de que desea eliminar este número de forma permanente?</message>
 	<message key="editor.issues.published">Publicado</message>
 	<message key="editor.issues.unpublished">No publicado</message>
@@ -56,7 +61,7 @@
 	<message key="editor.issues.numberRequired">Introduzca el número, que debe ser un valor numérico positivo.</message>
 	<message key="editor.issues.yearRequired">Introduzca el año, que debe ser un valor numérico positivo.</message>
 	<message key="editor.issues.titleRequired">Introduzca un título para el número.</message>
-	<message key="editor.issues.issueIdentificationRequired">Introduzca una identificación para el número. Seleccione al menos una de las opciones de identificación del número.</message>
+	<message key="editor.issues.issueIdentificationRequired">Introduzca una identificación del número. Seleccione al menos una de las opciones de identificación del número.</message>
 	<message key="editor.issues.issueIdentification">Identificación del número</message>
 	<message key="editor.issues.publicIssueIdentifier">Identificación pública del número</message>
 	<message key="editor.issues.description">Descripción</message>
@@ -69,26 +74,26 @@
 	<message key="editor.issues.remove">Eliminar</message>
 	<message key="editor.issues.proofed">Revisado</message>
 	<message key="editor.issues.removeCoverPage">¿Eliminar la imagen de portada?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Formato de portada inválido. Formatos permitidos: .gif, .jpg, o .png.</message>
+	<message key="editor.issues.invalidCoverPageFormat">Formato de portada no válido. Formatos aceptados: .gif, .jpg, o .png.</message>
 	<message key="editor.issues.styleFile">Hoja de estilo</message>
-	<message key="editor.issues.invalidStyleFormat">Formato de hoja de estilo inválido. Asegúrese de que el archivo enviado es un CSS válido. (Tenga en cuenta que las hojas de estilo que contengan comentarios al principio pueden ser rechazadas).</message>
+	<message key="editor.issues.invalidStyleFormat">Formato de hoja de estilo no válido. Asegúrese de que el archivo enviado es un CSS válido. (Tenga en cuenta que las hojas de estilo que contengan comentarios al principio pueden ser rechazadas).</message>
 	<message key="editor.issues.removeStyleFile">¿Eliminar hoja de estilo?</message>
-	<message key="editor.issues.coverPageCaption">Título de la portada</message>
+	<message key="editor.issues.coverPageCaption">Captura de portada</message>
 	<message key="editor.issues.showCoverPage">Crear una portada para este número con los siguientes elementos.</message>
 	<message key="editor.issues.coverPageDisplay">Mostrar</message>
 	<message key="editor.issues.hideCoverPageArchives">No mostrar la miniatura de la imagen de portada en la lista de números.</message>
-	<message key="editor.issues.hideCoverPageCover">No mostrar la imagen de portada antes de la tabla de contenidos.</message>
+	<message key="editor.issues.hideCoverPageCover">No mostrar la imagen de portada antes que la tabla de contenidos.</message>
 	<message key="editor.issues.openAccess">Acceso abierto</message>
 	<message key="editor.issues.subscription">Suscripción</message>
 	<message key="editor.issues.identification">Identificación</message>
 	<message key="editor.issues.access">Acceso</message>
 	<message key="editor.issues.cover">Portada</message>
-	<message key="editor.issues.confirmIssueDelete">Todos los artículos se devolverán a la cola de edición y todos los archivos asociados se eliminarán de forma permanente. ¿Está seguro/a de que desea eliminar este número de forma permanente?</message>
-	<message key="editor.issues.resetIssueOrder"><![CDATA[Esta revista usa un orden de números personalizado. <a href="{$url}" class="action">Restablecer valores predeterminados</a>.]]></message>
-	<message key="editor.issues.resetSectionOrder"><![CDATA[Este número usa un orden de sección personalizado. <a href="{$url}" class="action">Restablecer valores predeterminados</a>.]]></message>
+	<message key="editor.issues.confirmIssueDelete">Todos los artículos se devolverán a la lista de edición y todos los archivos asociados se eliminarán de forma permanente. ¿Está seguro/a de que desea eliminar este número?</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Esta revista usa un sistema de orden de números personalizado. <a href="{$url}" class="action">Reestablecer valores por defecto</a>]]></message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Este número usa un sistema de orden de secciones personalizado. <a href="{$url}" class="action">Reestablecer valores por defecto</a>]]></message>
 	<message key="editor.issues.issueData">Datos del número</message>
-	<message key="editor.issues.saveChanges">¿Desea guardar los cambios efectuados en las tablas de contenido?</message>
-	<message key="editor.issues.default">Predeterminado</message>
+	<message key="editor.issues.saveChanges">¿Desea guardar los cambios efectuados en las tabla de contenidos?</message>
+	<message key="editor.issues.default">Valor por defecto</message>
 	<message key="editor.issues.order">Orden</message>
 	<message key="editor.issues.publicId">Id. pública</message>
 	<message key="editor.issues.publishIssue">Publicar número</message>
@@ -97,22 +102,33 @@
 	<message key="editor.issues.preview">(Vista previa)</message>
 	<message key="editor.issues.confirmPublish">¿Está seguro/a de que desea publicar el nuevo número?</message>
 	<message key="editor.issues.confirmUnpublish">¿Está seguro/a de que desea eliminar el número publicado?</message>
-	<message key="editor.issues.publicArticleIdExists">No se pudo guardar el Id. público para el artículo:</message>
-	<message key="editor.issues.noLiveIssues">Ningún número en directo</message>
+	<message key="editor.issues.publicArticleIdExists">No se pudo guardar la Id. pública para el artículo:</message>
+	<message key="editor.issues.noLiveIssues">Ningún número activo</message>
 	<message key="editor.issues.open">Abrir</message>
 	<message key="editor.issues.pages">Páginas</message>
+	<message key="editor.issues.galleys">Galeradas del número</message>
+	<message key="editor.issues.galley">Galerada del número</message>
+	<message key="editor.issues.viewingGalley">Visualizar galerada del número</message>
+	<message key="editor.issues.issueGalleysDescription">Publicar galeradas con todos los contenidos del número.</message>
+	<message key="editor.issues.noneIssueGalleys">No se publicaron galeradas del número.</message>
+	<message key="editor.issues.galleyLabelRequired">Se requiere la etiqueta de galerada del número.</message>
+	<message key="editor.issues.galleyLocaleRequired">Se requiere la configuración regional de galerada del número.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">La identificación pública de galerada del número ya existe.</message>
+	<message key="editor.issues.backToIssueGalleys">Volver a galeradas del número</message>
+	<message key="editor.issues.viewingGalley">Visualizar galerada del número</message>
+	<message key="editor.issues.confirmDeleteGalley">¿Está seguro/a de que desea eliminar la galerada del número?</message>
 	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.navigation.futureIssues">Próximos números</message>
 	<message key="editor.navigation.createIssue">Crear número</message>
 	<message key="editor.navigation.issueArchive">Números anteriores</message>
-	<message key="editor.article.designateReviewVersion">Designar el archivo original como la versión de revisión</message>
-	<message key="editor.article.uploadReviewVersion">Cargar una versión de revisión corregida</message>
+	<message key="editor.article.designateReviewVersion">Designar el archivo original como la versión para revisar</message>
+	<message key="editor.article.uploadReviewVersion">Cargar una versión para revisar corregida</message>
 	<message key="editor.article.showSuppFile">Presentar el archivo a los revisores/as</message>
-	<message key="editor.article.layoutAndProof">Maquetado y pruebas</message>
+	<message key="editor.article.layoutAndProof">Maquetación y prueba</message>
 	<message key="editor.article.clear">Eliminar</message>
 	<message key="editor.article.clearReviewer">Eliminar revisor/a</message>
 	<message key="editor.article.changeSection">Cambiar sección</message>
-	<message key="editor.article.setDueDate">Establecer plazo de entrega</message>
+	<message key="editor.article.setDueDate">Establecer fecha de entrega</message>
 	<message key="editor.article.addReviewer">Añadir revisor/a</message>
 	<message key="editor.article.toReviewer">Para el revisor/a</message>
 	<message key="editor.article.notifyReviewer">Avisar al revisor/a</message>
@@ -126,20 +142,20 @@
 	<message key="editor.article.replaceReviewer">Reemplazar revisor/a</message>
 	<message key="editor.article.editorToEnter">Recomendaciones/comentarios del editor/a para el revisor/a</message>
 	<message key="editor.article.uploadReviewForReviewer">Cargar revisión</message>
-	<message key="editor.article.peerReviewOptions">Opciones de revisión por pares</message>
+	<message key="editor.article.peerReviewOptions">Opciones de evaluación por pares</message>
 	<message key="editor.article.decision">Decisión</message>
 	<message key="editor.article.noEditorSelected">Ningún editor/a seleccionado</message>
 	<message key="editor.article.recordDecision">Registrar decisión</message>
-	<message key="editor.article.cannotRecord">Ningún editor/a de sección registrado todavía.</message>
+	<message key="editor.article.cannotRecord">No se registró aún el editor/a de sección o no hay archivo de revisión presente.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Revisores/as que verán la versión del autor/a</message>
-	<message key="editor.article.designateDueDate">Establecer plazo de entrega</message>
-	<message key="editor.article.designateDueDateDescription">Introduzca la fecha o el numero de semanas para el nuevo plazo.</message>
+	<message key="editor.article.designateDueDate">Establecer fecha de entrega</message>
+	<message key="editor.article.designateDueDateDescription">Introduzca la fecha o el número de semanas para la nueva fecha de entrega.</message>
 	<message key="editor.article.todaysDate">Fecha de hoy</message>
 	<message key="editor.article.requestedByDate">Solicitado para la fecha</message>
 	<message key="editor.article.dueDateFormat">Formato: AAAA-MM-DD</message>
 	<message key="editor.article.numberOfWeeks">Número de semanas</message>
-	<message key="editor.article.selectCopyeditor">Asignar corrector/a</message>
-	<message key="editor.article.replaceCopyeditor">Reemplazar corrector/a</message>
+	<message key="editor.article.selectCopyeditor">Asignar corrector/a de originales</message>
+	<message key="editor.article.replaceCopyeditor">Reemplazar corrector/a de originales</message>
 	<message key="editor.article.editorsCopyedit">Corrección del editor/a</message>
 	<message key="editor.article.showAuthor">Permitir al autor/a ver el archivo</message>
 	<message key="editor.article.showCopyeditor">Mostrar la versión al corrector/a</message>
@@ -153,23 +169,23 @@
 	<message key="editor.article.commentsRequired">El campo de comentarios es obligatorio.</message>
 	<message key="editor.article.saveRating">Guardar puntuación</message>
 	<message key="editor.article.noneSelected">Ninguna seleccionada</message>
-	<message key="editor.article.authorProofing">Corrección del autor/a</message>
+	<message key="editor.article.authorProofing">Corrección de pruebas del autor/a</message>
 	<message key="editor.article.archiveSubmission">Rechazar y archivar envío</message>
-	<message key="editor.article.restoreToQueue">Restaurar a la lista de activos</message>
+	<message key="editor.article.restoreToQueue">Restaurar a la lista activa</message>
 	<message key="editor.article.assignSectionEditor">Añadir editor/a de sección</message>
 	<message key="editor.article.assignEditor">Añadir editor/a</message>
 	<message key="editor.article.selectEditor">Seleccionar {$roleName}</message>
 	<message key="editor.article.selectDecision">Seleccionar decisión</message>
-	<message key="editor.article.decision.accept">Publicable</message>
-	<message key="editor.article.decision.pendingRevisions">Requiere revisión</message>
+	<message key="editor.article.decision.accept">Aceptar envío</message>
+	<message key="editor.article.decision.pendingRevisions">Publicable con modificaciones</message>
 	<message key="editor.article.decision.resubmit">Reevaluable</message>
 	<message key="editor.article.decision.decline">No publicable</message>
 	<message key="editor.article.selectLayoutEditor">Seleccionar maquetista</message>
 	<message key="editor.article.replaceLayoutEditor">Reemplazar maquetista</message>
 	<message key="editor.article.reviewSubmission">Revisar envío</message>
-	<message key="editor.article.resubmitForReview">Archivo reevaluable</message>
-	<message key="editor.article.resubmitFileForPeerReview">El archivo seleccionado necesita una revisión por pares</message>
-	<message key="editor.article.sendToCopyedit">Enviar el archivo a corrección</message>
+	<message key="editor.article.resubmitForReview">Reenviar archivo para su revisión</message>
+	<message key="editor.article.resubmitFileForPeerReview">Reenviar el archivo seleccionado para una evaluación por pares</message>
+	<message key="editor.article.sendToCopyedit">Enviar el archivo a corrección de originales</message>
 	<message key="editor.article.selectProofreader">Asignar corrector/a de pruebas</message>
 	<message key="editor.article.replaceProofreader">Reemplazar corrector/a de pruebas</message>
 	<message key="editor.article.authorComments">Comentarios del autor/a</message>
@@ -178,21 +194,21 @@
 	<message key="editor.article.noDate">(fecha)</message>
 	<message key="editor.submissions.showBy">Mostrado por</message>
 	<message key="editor.submissions.submitMMDD">Enviar MM-DD</message>
-	<message key="editor.submissions.activeAssignments">Asignaciones activas</message>
+	<message key="editor.submissions.activeAssignments">Tareas activas</message>
 	<message key="editor.submissions.invite">Invitar</message>
 	<message key="editor.submissions.accept">Aceptar</message>
-	<message key="editor.submissions.noSubmissions">No hay envíos</message>
-	<message key="editor.submissions.lastAssigned">Últimos</message>
+	<message key="editor.submissions.noSubmissions">Sin envíos</message>
+	<message key="editor.submissions.lastAssigned">Última(s)</message>
 	<message key="editor.submissions.averageTime">Semanas</message>
 	<message key="editor.submissions.lastCompleted">Último completado</message>
 	<message key="editor.submissions.assignedTo">Asignado a</message>
 	<message key="editor.submissions.inSection">En sección</message>
 	<message key="editor.article.scheduleForPublication">Programado para publicar en</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Aún sin asignar</message>
-	<message key="editor.article.payment.publicationFeeNotPaid">Cuota de publicación sin pagar. Para programar el elemento para su publicación, informe al autor/a sobre el pago de la cuota o de su exención.</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Cuota de publicación sin pagar. Para programar el elemento para su publicación, notifique al autor/a sobre el pago de la cuota o de su exención.</message>
 	<message key="editor.article.display">Mostrar</message>
-	<message key="editor.article.hideTocAuthorDescription">No mostrar los nombres de los autores/as en las tablas de contenidos del número.</message>
-	<message key="editor.article.hideTocAuthorDefault">Predeterminado</message>
+	<message key="editor.article.hideTocAuthorDescription">No mostrar los nombres de los autores/as en las tabla de contenidos del número.</message>
+	<message key="editor.article.hideTocAuthorDefault">Valor por defecto</message>
 	<message key="editor.article.hideTocAuthorHide">Omitir</message>
 	<message key="editor.article.hideTocAuthorShow">Mostrar</message>
 	<message key="editor.article.cover">Portada</message>
@@ -206,17 +222,4 @@
 	<message key="editor.article.removeCoverPage">¿Eliminar la imagen de portada?</message>
 	<message key="editor.article.remove">Eliminar</message>
 	<message key="editor.issues.invalidAccessDate">Fecha de acceso no válida.</message>
-	<message key="editor.reassign">Reasignar</message>
-	<message key="editor.publicIdentificationExists">El identificador público '{$publicIdentifier}' ya existe para otro objeto (número, artículo, galerada o fichero suplementario). Por favor, escoge identificadores únicos en el contexto de la revista.</message>
-	<message key="editor.issues.galleys">Galeradas del número</message>
-	<message key="editor.issues.galley">Galerada del número</message>
-	<message key="editor.issues.viewingGalley">Visualizando la galerada del número</message>
-	<message key="editor.issues.issueGalleysDescription">Publicar las galeradas con el contenido completo del número.</message>
-	<message key="editor.issues.noneIssueGalleys">No se han publicado galeradas para este número.</message>
-	<message key="editor.issues.galleyLabelRequired">Es necesaria una etiqueta de galerada.</message>
-	<message key="editor.issues.galleyLocaleRequired">Es necesaria una traducción de galerada.</message>
-	<message key="editor.issues.galleyPublicIdentificationExists">El identificador público de esta galerada ya existe.</message>
-	<message key="editor.issues.backToIssueGalleys">Volver a las galeradas</message>
-	<message key="editor.issues.confirmDeleteGalley">¿Estás seguro/a de querer eliminar esta galerada?</message>
-	<message key="editor.notifyUsers.allMailingList">Incluir todos los correos en la lista de correo ({$count} correos)</message>
 </locale> 

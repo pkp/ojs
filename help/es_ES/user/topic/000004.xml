@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * User Interface - Current and Archives
   *
-  * $Id$
   -->
 
-<topic id="user/topic/000004" locale="es_ES" title="Actuales y Archivos" toc="user/toc/000000" key="user.currentAndArchives">
+<topic id="user/topic/000004" locale="es_ES" title="Actuales y archivos" toc="user/toc/000000" key="user.currentAndArchives">
 	<section>
-		<![CDATA[<p>Los números de la revista están disponibles como número o edición actual, y como un conjunto de archivos de números anteriores. El gestor/a de la revista puede traer a esta página web números anteriores de la revista que fueron publicados antes del uso de este sistema, para que así formen parte de los archivos que estarán disponibles para los lectores/as.</p>]]>	
+		<![CDATA[<p>Los números de la revista están disponibles como número o edición actual y como un conjunto de archivos de números anteriores. El gestor/a de la revista puede incorporar en este sitio web de la revista números anteriores que fueron publicados antes del uso de este sistema, para que, de ese modo, formen parte de los archivos que estarán disponibles para los lectores/as en el sitio web de la revista.</p>]]>	
 	</section>
-</topic>
+</topic> 

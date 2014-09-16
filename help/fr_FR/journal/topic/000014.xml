@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  -->
+
+<topic id="journal/topic/000014" locale="fr_FR" title="Email Users" toc="journal/toc/000002" key="Courriels aux usagers du journal">
+	<section>
+		<![CDATA[<p>Le directeur du journal peut envoyer des courriels à tous les usagers ou à un sous-groupe d’entre eux. Noter que tous les lecteurs reçoivent une notification par courriel à la publication de chaque numéro, avec une copie de la table des matières pour ce numéro, ou dans le cas de continuel {help_topic key="publishing.index" text="publishing"}, avec le titre et l’auteur de la présentation. Le journal devrait aussi avoir une politique  au sujet de la vie privée, entrée dans «Mise en marche» (Setup) et disponible dans «Au sujet du journal», laquelle expliquerait comment l’intimité des usagers inscrits sera respectée.</p>]]>	
+	</section>
+</topic>

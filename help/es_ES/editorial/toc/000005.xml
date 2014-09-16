@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000005.xml
   *
@@ -8,17 +7,18 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de contenido para el proceso editorial - Rol del editor/a de sección - Envíos
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * table of contents for Editorial Process - Section Editor's Role - Submissions
+  *
   -->
 
 <toc id="editorial/toc/000005" locale="es_ES" title="Envíos" parent_topic="editorial/topic/000005">
-	<topic id="editorial/topic/000021" title="En Revisión" />
-	<topic id="editorial/topic/000022" title="En Edición" />
+	<topic id="editorial/topic/000021" title="En revisión" />
+	<topic id="editorial/topic/000022" title="En edición" />
 	<topic id="editorial/topic/000023" title="Archivos" />
 
 	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
 	<breadcrumb url="editorial/topic/000004" title="Rol del editor/a de sección" />
 	<breadcrumb url="editorial/topic/000005" title="Envíos" />
-</toc>
+</toc> 

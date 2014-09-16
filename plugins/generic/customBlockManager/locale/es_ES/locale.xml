@@ -1,30 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/customBlockManager/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
-<locale name="es_ES" full_name="Español">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.customBlockManager.displayName">Gestor de bloques personalizados</message>
-	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Con este conector puede añadir o eliminar conectores de bloques personalizados. También puede editar el contenido a través de la página <a href="{$systemPluginsUrl}">Conectores del sistema</a> (en la sección Conector de bloques). Para colocar el conector en el lugar que desee de la barra lateral, vaya a <a href="{$setupStep56}">Paso de instalación 5.6</a>]]></message>
+	<message key="plugin.generic.customBlockManager.introduction"><![CDATA[Con este módulo puede añadir o eliminar módulos de bloques personalizados. También puede editar el contenido a través de la página <a href="{$systemPluginsUrl}">Módulos del sistema</a> (en la sección Módulo de bloques). Para colocar el módulo en el lugar que desee de la barra lateral, vaya a <a href="{$setupStep56}">Paso de instalación 5.6</a>]]></message>
 	<message key="plugins.generic.customBlockManager.settings">Configuración</message>
-	<message key="plugins.generic.customBlockManager.description">Este conector le permite gestionar los bloques personalizados de la barra lateral. Puede editar los bloques en la configuración de cada conector que cree aquí.</message>
+	<message key="plugins.generic.customBlockManager.description">Este módulo le permite gestionar los bloques personalizados de la barra lateral. Puede editar los bloques en la configuración de cada módulo que cree aquí.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Nombre del bloque</message>	
-	<message key="plugins.generic.customBlockManager.action">Operación</message>	
+	<message key="plugins.generic.customBlockManager.action">Acción</message>	
 	<message key="plugins.generic.customBlockManager.delete">Eliminar</message>	
 	<message key="plugins.generic.customBlockManager.addBlock">Añadir un bloque</message>	
 
 	<message key="plugins.generic.customBlock.content">Contenido</message>
-	<message key="plugins.generic.customBlock.saved">Se ha guardado el contenido del bloque.</message>
-	<message key="plugins.generic.customBlock.nameSuffix">(Conector de bloques personalizados)</message>
+	<message key="plugins.generic.customBlock.saved">Se guardó el contenido del bloque.</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Módulo de bloques personalizados)</message>
 	<message key="plugins.generic.customBlock.description">Este es un bloque generado por el usuario/a.</message>
 	<message key="plugins.generic.customBlock.editContent">Edite el contenido de la barra lateral</message>
-	<message key="plugins.generic.customBlock.contentRequired">Se requiere algún contenido. Si desea eliminar este bloque, puede hacerlo con el conector de gestión de bloques o bien deseleccionarlo en el paso 5 de la instalación de la revista.</message>
+	<message key="plugins.generic.customBlock.contentRequired">Debe incluir algún contenido. Si desea eliminar este bloque, puede hacerlo con el módulo Block Manager o bien deseleccionarlo en el paso 5 de la instalación de la revista.</message>
 	<message key="plugins.generic.customBlock.edit">Editar</message>
 </locale> 

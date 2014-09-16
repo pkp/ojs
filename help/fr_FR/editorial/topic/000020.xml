@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Metadata
+  *
+  -->
+
+<topic id="editorial/topic/000020" locale="fr_FR" title="Soumission des métadonnées" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>Les métadonnées qui seront utilisées pour indexer la soumission à publier auront été entrées par l’auteur, et elles peuvent être éditées par l’éditeur de la rubrique, ainsi que par l’auteur et le correcteur d’épreuves pendant le processus éditorial.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.generic.sword.displayName">Plugiciel SWORD</message>
+	<message key="plugins.generic.sword.description">Permet aux directeurs et (optionnellement) aux auteurs de la revue de déposer des articles par l'intermédiaire du protocole SWORD</message>
+	<message key="plugins.generic.sword.enabled">Le plugiciel SWORD a été activé.</message>
+	<message key="plugins.generic.sword.disable">Le plugiciel SWORD a été désactivé.</message>
+	<message key="plugins.generic.sword.settings">Paramètres</message>
+	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permet à l'auteur de spécifier un point de dépôt</message>
+	<message key="plugins.generic.sword.settings.depositPoints">Points de dépôt</message>
+	<message key="plugins.generic.sword.depositPoints.create">Créer un point de dépôt</message>
+	<message key="plugins.generic.sword.depositPoints.edit">Modifier un point de dépôt</message>
+	<message key="plugins.generic.sword.depositPoints.type.automatic">Automatique</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalSelection">Optionnel; flexible</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Optionnel; fixé</message>
+	<message key="plugins.generic.sword.depositPoints.type.manager">Directeur uniquement</message>
+	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Types de point de dépôt :</h4>
+<p><strong>Automatique</strong> : le dépôt survient automatiquement. Le point de dépôt SWORD est spécifié intégralement. Un non d'utilisateur et mot de passe doit être spécifié. Le dépôt survient après avoir aviser l'auteur de son acceptation.<br/>
+<strong>Optionnel; flexible</strong> : l'auteur peut choisir ou non d'effectuer un dépôt. L'URL spécifiée indique un document de service, et l'auteur peut choisir que point de dépôt spécifique utiliser à partir de ce document. Le dépôt survient après avoir avisé l'auteur de son acceptation.<br/>
+<strong>Optionnel; fixé</strong> : l'auteur peut choisir ou non d'effecteur un dépôt. L'URL spécifie le point de dépôt SWORD spécifique. Le dépôt survient après avoir avisé l'auteur de son acceptation.<br/>
+<strong>Directeur uniquement</strong> : seulement le directeur de la revue peut utiliser ce point de dépôt. L'URL indique un document de service. Le dépôt est effectué manuellement par le directeur de la revue en utilisant l'interface "Importer/Exporter" dans "Gestion de la revue".]]></message>
+	<message key="plugins.generic.sword.depositPoints.password.description">Si vous ne spécifiez pas un mot de passe ici, vous et/ou l'auteur sera(ez) invité(s) à en spécifiez un quand le dépôt surviendra. À noter que ce mot de passe sera visible à tous les Directeurs de revue et sera stocké non chiffré dans la base de données.</message>
+	<message key="plugins.generic.sword.depositPoints.name">Nom</message>
+	<message key="plugins.generic.sword.automaticDepositComplete">Cet élément "{$itemTitle}" a été automatiquement déposé dans le service d'archives "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.depositComplete">Cet élément "{$itemTitle}" a été déposé dans le service d'archives "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.authorDepositDescription"><![CDATA[<p>Vous pouvez optionnellement utiliser le formulaire suivant pour déposer votre soumission, "{$submissionTitle}", dans l'un des services d'archives listés. Utiliser les boîtes à cocher en bas de la colomne de gauche pour sélectionner dans quels services d'archives vous souhaitez déposer votre soumission; chaque service d'archives peut également vous permettre de spécifier un point de dépôt à partir d'une liste déroulante.</p>]]></message>
+	<message key="plugins.generic.sword.authorCustomDepositDescription"><![CDATA[<p>Vous pouvez optionnellement spécifier un point de dépôt SWORD-compatible dans le formulaire suivant. Si désiré, veuillez spécifier un URL, nom d'utilisateur et mot de passe SWORD vers votre service d'archives et votre soumission sera déposée.<p/>]]></message>
+
+	<message key="plugins.importexport.sword.displayName">Plugiciel de dépôt Importer/Exporter SWORD</message>
+	<message key="plugins.importexport.sword.description">Déposer des articles dans des services d'archives à distance en utilisant le protocole de dépôt SWORD</message>
+	<message key="plugins.importexport.sword.deposit">Dépôt</message>
+	<message key="plugins.importexport.sword.serviceDocUrl">URL du document de service</message>
+	<message key="plugins.importexport.sword.depositUrl">URL de point de dépôt</message>
+	<message key="plugins.importexport.sword.depositPoint">Point de dépôt</message>
+	<message key="plugins.importexport.sword.depositPoint.addRemove">Ajouter/Supprimer</message>
+	<message key="plugins.importexport.sword.depositGalleys">Entreposer les épreuves</message>
+	<message key="plugins.importexport.sword.depositEditorial">Entreposer le plus récent fichier éditorial</message>
+	<message key="plugins.importexport.sword.depositSuccessful">Dépôt réussi</message>
+	<message key="plugins.importexport.sword.depositSuccessfulDescription">Le(s) élément(s) sélectionné(s) a(ont) été déposé(s).</message>
+	<message key="plugins.importexport.sword.depositFailed">Le dépôt a échoué</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Autoriser les directeurs de revue et (facultativement) les auteurs à déposer des articles par le protocole SWORD. Veuillez noter que ce plugin exige le module Zip, qui n'est PAS installée.</message>
+</locale>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/dataverse/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Dataverse plugin localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Dataverse Plugin -->
+	<message key="plugins.generic.dataverse.displayName">Dataverse 插件</message>
+	<message key="plugins.generic.dataverse.description">存储数据集和其他附加文件到Dataverse</message>
+
+	<!-- Set up Dataverse: DVN URL and authentication details -->
+	<message key="plugins.generic.dataverse.settings.connect">链接</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">Dataverse 网址</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">Dataverse在所属期刊的网址。</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">在Dataverse使用用户名存储文件。</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">网站分配的用户名。</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">需要Dataverse网址。</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Dataverse 网址无效</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">请输入Dataverse有效用户名。</message>
+	<message key="plugins.generic.dataverse.settings.passwordRequired">请输入Dataverse有效密码。</message>
+
+	<!-- Set up Dataverse: select Dataverse -->
+	<message key="plugins.generic.dataverse.settings.selectDataverse">选择Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverseDescription">选择Dataverse存储文章数据文件</message>
+	<message key="plugins.generic.dataverse.settings.dataverseRequired">请选择一个 Dataverse.</message>
+
+	<!-- Plugin configuration: Settings -->
+	<message key="plugins.generic.dataverse.settings">设置</message>
+	<message key="plugins.generic.dataverse.settings.dataPolicies">数据政策</message>
+	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">配置数据政策。</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">数据可用性政策</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">期刊总体数据可用性政策。这一部分将在期刊简介上出现。</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">请提供一个数据可用政策</message>
+	<message key="plugins.generic.dataverse.settings.sectionPoliciesDescription">为期刊部分添加数据政策</message>
+	<message key="plugins.generic.dataverse.settings.authorGuidelinesDescription"><![CDATA[编辑<a href="{$authorGuidelinesUrl}" target="_blank">作者须知</a>包含数据提交和引用指南。]]></message>
+	<message key="plugins.generic.dataverse.settings.checklistDescription"><![CDATA[编辑<a href="{$checklistUrl}" target="_blank">提交准备清单</a>使作者满足数据提交和引用指南的要求。]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewPolicyDescription"><![CDATA[编辑 <a href="{$reviewPolicyUrl}" target="_blank">审评政策</a>在地址数据。]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewGuidelinesUrl"><![CDATA[编辑<a href="{$reviewGuidelinesUrl}" target="_blank">评审指南</a>包含评审数据集说明。]]></message>
+	<message key="plugins.generic.dataverse.settings.copyeditInstructionsUrl"><![CDATA[编辑 <a href="{$copyeditInstructionsUrl}" target="_blank">排版说明</a> 包含数据集说明。]]></message>
+	<message key="plugins.generic.dataverse.settings.termsOfUse">使用条款</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseRequired">提供使用条款或者从Dataverse选择使用条款</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseDescription">使用条款前，用户必须同意存储数据文件。</message>
+	<message key="plugins.generic.dataverse.settings.fetchTermsOfUse">从Dataverse获取该期刊的使用条款设置。</message>
+	<message key="plugins.generic.dataverse.settings.defineTermsOfUse">在以下字段输入自定义条款。</message>
+	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">无法检索Dataverse配置使用条款。请检查链接设置。</message>
+	<message key="plugins.generic.dataverse.settings.metadata">元数据设置</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat">引用格式</message>
+	<message key="plugins.generic.dataverse.settings.citationFormatDescription">选择在研究编目信息中出版引用的格式。</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat.apa">APA 引用格式</message>
+	<message key="plugins.generic.dataverse.settings.pubIdType">公共使用类型</message>
+	<message key="plugins.generic.dataverse.settings.pubIdTypeDescription"><![CDATA[选择公共标识类型链接到出版引用的文章。如果<a href="{$pubIdsUrl}">公共标识插件</a>没有启用，使用OJS网址引用发表的文章。]]></message>
+	<message key="plugins.generic.dataverse.settings.workflow">工作流程设置</message>
+	<message key="plugins.generic.dataverse.settings.requireData">需要数据文件</message>
+	<message key="plugins.generic.dataverse.settings.requireDataDescription">提交的文件须包含在Dataverse存储的数据文件。</message>
+	<message key="plugins.generic.dataverse.settings.requireDataError">作者需要在Dataverse存储提交数据。上传一个附件文件。</message>
+	<message key="plugins.generic.dataverse.settings.studyRelease">公布草案研究</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseSubmissionAccepted">编辑接受提交</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">文章已发表</message>
+
+	<!-- Settings: default values -->
+	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[{ $期刊}要求，作为出版条件，这些数据支持的结果应该存档在一个适当的公共档案。 {$journal} 推荐 the <a href="http://thedata.harvard.edu/">哈佛Dataverse</a>，这是对世界所有研究者免费开放，分享，引用和研究的数据。数据是科学事业的重要产品，在未来几十年，一直保存和使用中。作者可以选择公开出版这些数据。编辑自由裁量，特别是敏感信息，例如：人类主体数据和濒危物种位置。任何异常须在文章中声明。（摘自<a href="http://datadryad.org/pages/jdap">联合数据存档政策</a> (JDAP)）]]></message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras">作者指南举例</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras.label">显示数据提交和引用指南举例</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines"><![CDATA[<ol>
+     <li>
+<p>共享数据定义。<p>
+<p>“最小数据集”既包括与相关数据和数据集达到结论的数据集，也包括他们的全部复制报告的附加信息。包含研究人员理解数据所需的足够信息。和任何引用数据的复制集的导出。核心的描述性数据，方法，和研究的结果应包括在主页，无论他们是否数据沉积。作者共享的数据集太大或者上传文件应征询 {$journal} 建议。摘自<a href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">PLOS' 数据政策</a>)</p>
+     </li>
+     <li>
+       <p>分享涉及人类参与者数据集指南。</p>
+<p>隐私，国家安全和商业机密性完整的数据不能公开的，在这种情况下，研究者应至少符合法律规定的限制性条款，在分享他们的数据分析，和遵守道德和社会准则的研究。这应包括开放非敏感数据，汇总数据，元数据和代码；促进原始数据的所有者授予其他研究人员使用的数据的权限。摘自 OKF's <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf">开放经济学原理</a>)</p>
+     </li>
+     <li>
+<p>数据引用指南</p>
+<p>您的稿件使用OJS文件提交表格时，您的研究数据同时也存储起来，接着，Harvard Dataverse将自动生成数据引用。如果你的研究数据已经在数据库里，数据引用格式则包含您提交稿件的时间。</p>
+<p>作者, 年份, 数据集标题, 全球唯一标识符，数据存储库或档案，版本和子集。</P >
+<p>更多数据引用信息，请查看<a href="http://www.force11.org/datacitation">Force11's 数据引用原则</a>.</p>
+     </li>
+   </ol>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras">提交准备清单举例</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras.label">提交准备清单和数据集举例。</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[<ol>
+   <li><p>如果共享涉及人类受试者的数据集，请参照上面的指南。</p></li>
+<li><p>准备存储数据参照审查复制指南<a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a></p></li>
+ <li><p>如果沉积在哈佛dataverse，在OJS提交你的数据集的同时，作为 {$journal}的稿件。这将自动保存在哈佛dataverse，并产生数据引用和永久的链接性服务（DOI），当您的文章发表时，可以允许别人引用你的数据。</p></li>
+<li><p>如果您的数据集已经存储在推荐的文档中，请提供数据引用的永久网址。数据引用指南请参考作者指南。</p></li>
+   </ol>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras">评审政策举例</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras.label">数据集审查政策举例。</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy"><![CDATA[<ul>
+   <li><p>为达到同行评议的目的，存储的数据应视为文章的一部分。OR</p></li>
+ <li><p>一旦接受，在稿件的最终版本前，须提交基础数据和创建数据集的描述（包括从以前的版本，任何的差异，所使用的任何软件包的名字）</p></li>
+ </ul>审查政策应包括涉及人类受试者工作数据集声明</p>
+   <ul>
+   <li><p>涉及人类受试者工作的数据集应保护受试者的隐私，数据可用性政策已提到，应该满足最小数据集可用性政策的要求。</p></li>
+   </ul>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras">审查政策举例</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras.label">数据集审查政策举例。</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[<p>文章的伴随数据，评审人应验证文章和数据集是否符合期刊提交政策，数据和文章是否一致，附加文件能否解析数据，它的起源和使用方法。]]></message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras">排版说明举例。</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras.label">数据集排版说明举例。</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions"><![CDATA[<ul>
+			<li><p>排版人验证引用的数据符合引用政策。OR</p></li>
+<li><p>排版人验证引用数据有经验要求。</p></li>
+		</ul>]]></message>
+
+	<!-- Notifications -->
+	<message key="plugins.generic.dataverse.notification.studyCreated">提交的数据已存储在Dataverse。</message>
+	<message key="plugins.generic.dataverse.notification.studyUpdated">在Dataverse提交的数据已更新。</message>
+	<message key="plugins.generic.dataverse.notification.fileAdded">附加文件已存储在Dataverse。</message>
+	<message key="plugins.generic.dataverse.notification.fileDeleted">附加文件从Dataverse删除。</message>
+	<message key="plugins.generic.dataverse.notification.studyDeleted">提交数据已从Dataverse删除。</message>
+	<message key="plugins.generic.dataverse.notification.releaseDataverse">Dataverse发布后，才可以进入发表的数据。请登入期刊的Dataverse并且发布。</message>
+	<message key="plugins.generic.dataverse.notification.studyReleased"><![CDATA[<p>提交的数据在Dataverse已发表</p><p>{$dataCitation}</p>]]></message>
+	<message key="plugins.generic.dataverse.notification.error">在Dataverse更新提交数据时发生错误。</message>
+
+	<!-- Article metadata for completed submissions: form errors -->
+	<message key="plugins.generic.dataverse.metadataForm.studyLocked">提交的Dataverse研究在处理中。经处理后，提交的元数据可以更新。</message>
+
+	<!-- Additional metadata: suppfile form -->
+	<message key="plugins.generic.dataverse.suppFile.title">Dataverse插件：出版数据</message>
+	<message key="plugins.generic.dataverse.suppFile.description">您可以通过在期刊Dataverse存储附加文件出版提交的研究数据或者提供数据库中数据的引用。</message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataNone"><![CDATA[上传文件作为补充文件。文件<strong>不能</strong>在Dataverse存储。]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataDataverse"><![CDATA[在Dataverse存储文件。作者同意并且接受Dataverse<a href="javascript:openWindow('{$dataverseTermsOfUseUrl}');">使用条款</a>。]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishData.error">请上传文件在Dataverse存储。</message>
+	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">文件将添加到Dataverse。</message>
+	<message key="plugins.generic.dataverse.suppFile.studyLocked">该项研究仍在处理中。处理结束后，提交数据将进行更改。</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">外部数据引用</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">如果即将发表的数据在不同的数据库，请提供一个数据引用。</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">请上传在Dataverse存储的数据或者提供外部数据引用。</message>
+
+	<!-- Terms of use -->
+	<message key="plugins.generic.dataverse.termsOfUse.title">使用条款</message>
+	<message key="plugins.generic.dataverse.termsOfUse.dataverse">Dataverse</message>
+
+	<!-- Data availality policy -->
+	<message key="plugins.generic.dataverse.dataAvailabilityPolicy.title">数据可用性政策</message>
+
+	<!-- Block plugin -->
+	<message key="plugins.generic.dataverse.block.displayName">Dataverse 版块插件</message>
+	<message key="plugins.generic.dataverse.block.title">数据引用</message>
+
+	<!-- Reading tools: suppfiles -->
+	<message key="plugins.generic.dataverse.suppFiles.view">Dataverse视图</message>
+
+	<!-- Field labels -->
+	<message key="plugins.generic.dataverse.dataCitation">数据引用</message>
+
+	<!-- Citation "in press" info -->
+	<message key="plugins.generic.dataverse.citationAPA.inPress">(出版中).</message>
+</locale>

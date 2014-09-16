@@ -29,4 +29,7 @@
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Estatísticas Open Journal Systems (pronto para COUNTER)</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Estatísticas de uso do carregador de arquivos</message>
+	<message key="plugins.generic.usageStats.removeUrlError">A linha {$lineNumber} do arquivo {$file} contém uma URL que o sistema não pode consegue remover a URL base.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Não foi possível carregar os dados extraídos do arquivo {$file}. O erro foi: {$error}. O arquivo foi movido para o estágio novamente.</message>
 </locale>

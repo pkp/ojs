@@ -14,39 +14,39 @@
 
 <email_texts locale="ml_IN">
 	<email_text key="NOTIFICATION">
-		<subject>{$siteTitle}ഇല്‍ നിന്ന് പുതിയ അറിയിപ്പ്</subject>
-		<body>{$siteTitle}ഇല്‍ നിന്ന് താങ്കള്‍ക്ക് ഒരു പുതിയ അറിയിപ്പുണ്ട്:
+		<subject>{$siteTitle}ല്‍ നിന്ന് പുതിയ അറിയിപ്പ്</subject>
+		<body>{$siteTitle} ല്‍ നിന്ന് താങ്കള്‍ക്ക് ഒരു പുതിയ അറിയിപ്പുണ്ട്:
 
 {$notificationContents}
 
-കണ്ണി: {$url}
+ലിങ്ക്: {$url}
 
 {$principalContactSignature}</body>
-		<description>ഇത്തരം അറിയിപ്പ് ഇമെയലുകള്‍ സ്വീകരിക്കാന്‍ റജിസ്റ്റര്‍ ചെയ്തവര്‍ക്ക് ഈ ഇമെയ്ല്‍ അയക്കുന്നതാണ്.</description>
+		<description>ഇത്തരം അറിയിപ്പ് ഇമെയലുകള്‍ സ്വീകരിക്കാന്‍ റജിസ്റ്റര്‍ ചെയ്തവര്‍ക്ക് ഈ ഇമെയില്‍ അയക്കുന്നതാണ്.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>{$siteTitle}ഇല്‍ നിന്ന് പുതിയ അറിയിപ്പ്</subject>
-		<body>{$siteTitle}ഇല്‍ നിന്ന് താങ്കള്‍ക്ക് ഒരു പുതിയ അറിയിപ്പുണ്ട്:
+		<subject>{$siteTitle}ല്‍ നിന്ന് പുതിയ അറിയിപ്പ്</subject>
+		<body>{$siteTitle}ല്‍ നിന്ന് താങ്കള്‍ക്ക് ഒരു പുതിയ അറിയിപ്പുണ്ട്:
 --
 {$notificationContents}
 
-കണ്ണി: {$url}
+ലിങ്ക്: {$url}
 --
 
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
+നോട്ടിഫിക്കേഷന്‍ ഇ-മെയിലുകള്‍ ലഭിക്കുന്നത് തടയുന്നതിനായി ദയവായി {$unsubscribeLink} ലേക്ക് പോയി താങ്കളുടെ ഇ-മെയില്‍ അഡ്രസ്സും പാസ് വേഡും നല്‍കുക.
 
 {$principalContactSignature}</body>
-		<description>This email is sent to unregistered users on the notification mailing list.</description>
+		<description>നോട്ടിഫിക്കേഷന്‍ മെയിലിങ്ങ് പട്ടികയിലുള്ള രജിസ്റ്റര്‍ ചെയ്യാത്ത യൂസറുകള്‍ക്കാണ് ഈ മെയില്‍ അയച്ചത്.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>മെയിലിങ് പട്ടിക  {$siteTitle}ഇലേക്ക് സ്വാഗതം!</subject>
+		<subject>{$siteTitle} മെയിലിങ്ങ് പട്ടികയിലേക്ക് സ്വാഗതം!</subject>
 		<body>{$siteTitle}ഇല്‍ നിന്ന് വിജ്ഞാപനങ്ങള്‍ സ്വീകരിക്കാന്‍ താങ്കള്‍ അംഗത്വമെടുത്തിരിക്കുന്നു.
 			
-താങ്കളുടെ അപേക്ഷ സ്ഥിരീകരിക്കാനും താങ്കളുടെ ഇമെയില്‍ വിലാസം മെയിലിങ് പട്ടികയിലേക്ക് ചേര്‍ക്കാനും വേണ്ടി ഈ കണ്ണിയില്‍ ക്ലക്ക് ചെയ്യുക:
+താങ്കളുടെ അപേക്ഷ സ്ഥിരീകരിക്കാനും താങ്കളുടെ ഇമെയില്‍ വിലാസം മെയിലിങ് പട്ടികയിലേക്ക് ചേര്‍ക്കാനും വേണ്ടി ഈ കണ്ണിയില്‍ ക്ലിക്ക് ചെയ്യുക:
 
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink} and enter your email address and password.
+നോട്ടിഫിക്കേഷന്‍ ഇ-മെയിലുകള്‍ ലഭിക്കുന്നത് തടയുന്നതിനായി ദയവായി {$unsubscribeLink} ലേക്ക് പോയി താങ്കളുടെ ഇ-മെയില്‍ അഡ്രസ്സും പാസ് വേഡും നല്‍കുക.
 
-Your password for disabling notification emails is: {$password}
+നോട്ടിഫിക്കേഷന്‍ ഇ-മെയിലുകള്‍ Your password for disabling notification emails is: {$password}
 
 {$principalContactSignature}</body>
 		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>

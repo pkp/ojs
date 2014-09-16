@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/importexport/medra/locale/fr_FR/common.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Shared localization strings
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Afin d'utiliser ce plugiciel, veuillez aller à la catégorie "identifiants publics", activez et configurez le plugiciel DOI et spécifiez un préfixe DOI valide.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Ce plugiciel n'est pas entièrement configuré.</message>
+
+	<message key="plugins.importexport.common.settings">Paramètres</message>
+
+	<message key="plugins.importexport.common.settings.form.password">Mot de passe</message>
+	<message key="plugins.importexport.common.settings.form.passwordRequired">Veuillez entrer un mot de passe.</message>
+	
+	<message key="plugins.importexport.common.register">Enregistrer</message>
+	<message key="plugins.importexport.common.registerDescription">Veuillez cliquer ce bouton pour enregistrer cet objet à l'agence d'enregistrement pour la première fois. Cela fonctionne à la condition de n'avoir jamais enregistré cet objet auparavant.</message>
+	<message key="plugins.importexport.common.registerDescription.multi">Veuillez cliquer ce bouton pour enregistrer ou mettre à jour les métadonnées d'un objet sélectionné avec l'agence d'enregistrement.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">L'enregistrement a échoué! Le serveur d'enregistrement DOI a retourné une erreur: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Enregistrement réussi!</message>
+	<message key="plugins.importexport.common.register.warning">Enregistrer plusieurs objets peut prendre un moment. Veuillez être patient après avoir cliqué le bouton "Enregistrer". Vous serez averti lorsqu'il sera complété.</message>
+	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[L'enregistrement est actuellement hors-service. S'il vous plaît <a href="{$settingsUrl}">configurez</a> un nom d'utilisateur et un mot de passe afin de pouvoir enregistrer les objets directement  auprès de l'agence.]]></message>
+
+	<message key="plugins.importexport.common.update">Mise à jour</message>
+	<message key="plugins.importexport.common.updateDescription">Cliquez ce bouton afin de mettre à jour les métadonnées de l'objet avec l'agence d'enregistrement. Cela ne fonctionne que si vous avez réussi à enregistrer l'objet auparavant.</message>
+		
+	<message key="plugins.importexport.common.export">Exporter les données</message>
+	<message key="plugins.importexport.common.export.unregistered">Exporter tous les numéros, articles et épreuves qui ne sont pas enregistrés</message>
+	<message key="plugins.importexport.common.export.selectUnregistered">Sélectionner tous les numéros, articles et épreuves qui ne sont pas enregistrés</message>
+	<message key="plugins.importexport.common.export.noUnregistered">Tous les numéros, articles et épreuves ont déjà été enregistrés (ou aucun d'eux n'a de DOI assigné).</message>
+	<message key="plugins.importexport.common.export.issues">Exporter un/des numéro(s)</message>
+	<message key="plugins.importexport.common.export.selectIssue">Sélectionner des numéros</message>
+	<message key="plugins.importexport.common.export.noIssues">Aucun numéro n'a actuellement de DOI assigné.</message>
+	<message key="plugins.importexport.common.export.articles">Exporter un/des article(s)</message>
+	<message key="plugins.importexport.common.export.selectArticle">Sélectionner des articles</message>
+	<message key="plugins.importexport.common.export.noArticles">Aucun article n'a actuellement de DOI assigné.</message>
+	<message key="plugins.importexport.common.export.galleys">Exporter une/des épreuve(s)</message>
+	<message key="plugins.importexport.common.export.selectGalley">Sélectionner des épreuves</message>
+	<message key="plugins.importexport.common.export.noGalleys">Aucune épreuve n'a actuellement de DOI assigné.</message>
+	<message key="plugins.importexport.common.exportDescription">Cliquez ce bouton pour exporter les données XML pour le(s) objet(s) sélectionné(s) dans un fichier local sans les enregistrer avec l'agence d'enregistrement. Cela peut être utile si vous désirez qu'un tiers enregistre des DOIs pour vous ou si vous voulez inspecter le format XML avant de l'enregistrer.</message>
+ 
+	<message key="plugins.importexport.common.export.error.issueNotFound">Aucun numéro ne correspond à celui indiqué: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.articleNotFound">Aucun article ne correspond à l'ID de l'article spécifié: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.galleyNotFound">Aucune épreuve ne correspond à l'ID de l'épreuve spécifiée: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.noDoiAssigned">L'objet dont l'ID est {$param} n'a pas de DOI assigné.</message>
+	<message key="plugins.importexport.common.export.error.unknownJournal">Aucune revue ne correspond au chemin spécifié: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.unknownObjectType">L'objet de type {$param} ne peut être exporté.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Le fichier de sortie {$param} n'est pas accessible en écriture.</message>
+ 
+	<message key="plugins.importexport.common.notification.exportSuccessful">L'objet a été exporté avec succès vers '{$param}'</message>
+ 
+	<message key="plugins.importexport.common.cliError">ERREUR:</message>
+	<message key="plugins.importexport.common.markRegistered">Marquer les objets déjà enregistrés</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Cliquez sur ce bouton afin de marquer les objets enregistrés (par exemple, s'ils ont été enregistrés antérieurement ou manuellement).</message>
+</locale>

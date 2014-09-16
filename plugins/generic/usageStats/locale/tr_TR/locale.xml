@@ -29,4 +29,7 @@
 	
 	<message key="plugins.reports.usageStats.metricType">ADS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Açık Dergi Sistemleri istatistikleri (COUNTER uyumlu)</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Kullanım istatistikleri dosyası yükleyicisi</message>
+	<message key="plugins.generic.usageStats.removeUrlError">The line number {$lineNumber} from the file {$file} contains an url that the system can't remove the base url from.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Couldn't load data extracted from file {$file}. The error was: {$error}. The file was moved to stage again.</message>
 </locale>

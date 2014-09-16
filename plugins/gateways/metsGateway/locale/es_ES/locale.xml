@@ -1,23 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/gateways/metsGateway/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.gateways.metsGateway.displayName">Conector de puerta de enlace METS</message>
+	<message key="plugins.gateways.metsGateway.displayName">Módulo de puerta de enlace METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Configuración</message>
-	<message key="plugins.gateways.metsGateway.description"><![CDATA[Este conector proporciona datos XML en bruto en formato METS para una revista especificada. <strong> NOTA: Está pensado para usarse mediante Servicios web. Habilitar este conector implica un problema de seguridad, ya que permite un acceso no restringido a la revista en forma XML (el contenido está codificado en base64).</strong>]]></message>
-	<message key="plugins.gateways.metsGateway.errors.errorMessage">No se pueden exportar los datos de la revista. Es necesario habilitar el conector de puerta de enlace METS y escribir la Id. de la revista que se desee exportar en la URL.</message>
-	<message key="plugins.gateways.metsGateway.settings.FContent">Usar una codificación base64 para el contenedor de contenido (content wrapper)</message>
-	<message key="plugins.gateways.metsGateway.settings.FLocat">Usar una URL de flujo de bits (bitstream) para el contenedor de contenido (content wrapper)</message>
+	<message key="plugins.gateways.metsGateway.description"><![CDATA[Este módulo proporciona datos XML en bruto en formato METS para una revista especificada. <strong>ADVERTENCIA: Este módulo está pensado para que lo utilice un servicio web y habilitarlo implica un problema de seguridad, ya que permite un acceso no restringido a la revista en forma XML (el contenido está codificado en base64).</strong>]]></message>
+	<message key="plugins.gateways.metsGateway.errors.errorMessage">No se pueden exportar los datos de la revista. Es necesario habilitar el módulo de puerta de enlace METS y escribir la Id. de la revista que se desee exportar en la URL.</message>
+	<message key="plugins.gateways.metsGateway.settings.FContent">Utilice una codificación base64 para contenedores de contenido (content wrapper)</message>
+	<message key="plugins.gateways.metsGateway.settings.FLocat">Utilice una URL de flujo de bits (bitstream) para el contenedor de contenido (content wrapper)</message>
 	<message key="plugins.gateways.metsGateway.settings.organization">METS: atributo para la organización de elementos agentes</message>
-	<message key="plugins.gateways.metsGateway.settings.preservationLevel">Nivel de preservación PREMIS</message>
+	<message key="plugins.gateways.metsGateway.settings.preservationLevel">Nivel de conservación PREMIS</message>
 	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Exportar archivos complementarios</message>
 </locale> 

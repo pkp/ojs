@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/usageEvent/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.generic.usageEvent.displayName">Event d'ús</message>
+	<message key="plugins.generic.usageEvent.description">Crea un hook que ofereix l'esdeveniment d'ús en un format definit.</message>
+</locale>

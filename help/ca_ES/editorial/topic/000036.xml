@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Author's Role Editing - Proofreading
   *
   -->
 
-<topic id="editorial/topic/000036" locale="en_US" title="Proofreading" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+<topic id="editorial/topic/000036" locale="ca_ES" title="Proofreading" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
 	<section>
 		<![CDATA[<p>L'autor/a corregeix les galerades de la tramesa, que són les versions en format HTML, PDF i Postscript que s'utilitzen per a l'edició en línia de la revista. L'autor/a fa clic a cadascun dels formats de correcció de proves (i no als noms dels fitxers) per visualitzar la tramesa en el format en què es publicarà. Durant l'etapa de correcció de proves només es permet corregir errors tipogràfics i de format, i només el maquetista pot aplicar aquestes correccions.</p> <p>Si s'utilitza més d'un format de fitxer, l'autor/a ha de cercar els errors ortogràfics només en un d'aquests formats, però ha de cercar els errors de format a tots els fitxers. L'autor/a ha de seguir les instruccions per a la correcció de proves a l'hora d'introduir les correccions al quadre de text corresponent. A més, ha de revisar tots els fitxers addicionals que acompanyin la tramesa publicada. Aquests fitxers es presenten en el seu format original, per la qual cosa és possible modificar-los i tornar-los a penjar. També se'n pot canviar el títol mitjançant la funció d'edició. Cal introduir tots els canvis aplicats en aquests fitxers al quadre de text de correccions.</p>]]>	
 	</section>

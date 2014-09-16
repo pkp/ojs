@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000012.xml
   *
@@ -8,16 +7,16 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de contenido para el proceso editorial  - Rol del corrector/a de originales
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
+  * table of contents for Editorial Process - Copyeditor's Role
   *
-  * $Id$
   -->
 
-<toc id="editorial/toc/000012" locale="es_ES" title="Rol del corrector/a de originales" parent_topic="editorial/topic/000012">
+<toc id="editorial/toc/000012" locale="es_ES" title="Rol de corrector/a de originales" parent_topic="editorial/topic/000012">
 	<topic id="editorial/topic/000037" title="Envíos" />
 	<topic id="editorial/topic/000038" title="Corrección de originales" />
 
 	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
-	<breadcrumb url="editorial/topic/000012" title="Rol del corrector/a de pruebas" />
-</toc>
+	<breadcrumb url="editorial/topic/000012" title="Rol de corrector/a de originales" />
+</toc> 

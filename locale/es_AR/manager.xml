@@ -731,4 +731,9 @@ Hay casos en los que una sola estadística de uso debe ser usada, por ej. mostra
 	<message key="manager.statistics.reports.filters.byLocation.description">Limitar resultados por país, región y/o ciudad.</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Pre-expirar Recordatorio de Envío</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Post-expirar Recordatorio de Envío</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Ha cambiado la licencia y la información de derechos en la configuración de la Revista. Por favor guarde estos cambios antes de resetear los permisos.</message>
+	<message key="manager.setup.copyrightYearBasis">Bases de los  nuevos derechos de artículo en el año actual</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Se tomará el  año por defecto desde la fecha de publicación del artículo, así como en  "publish-as-you-go"</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Se tomará el año por defecto desde la fecha de publicación del número</message>
+	<message key="manager.statistics.reports.objectNotFound">El objeto no se encontró en la base de datos</message>
 </locale>

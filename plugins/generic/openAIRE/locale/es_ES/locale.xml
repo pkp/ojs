@@ -1,18 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * @file plugins/generic/openAIRE/locale/es_ES/locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/openAIRE/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * OpenAIRE plugin localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * OpenAIRE plugin localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.openAIRE.displayName">Conector OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.description">Este conector añade el elemento projectID a los metadatos del artículo y extiende la interfaz del protocolo OAI-PMH según las Directrices OpenAIRE 1.1, y así facilita que las revistas del OJS sean compatibles con OpenAIRE.</message>
-	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
+	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.description">El módulo OpenAIRE añade el elemento projectID (identificación del proyecto) a los metadatos del artículo y extiende la interfaz del protocolo OAI-PMH según las Directrices OpenAIRE 1.1, y así facilita que las revistas del OJS sean compatibles con OpenAIRE.</message>
+	<message key="plugins.generic.openAIRE.projectID">Identificación del proyecto</message>
 	<message key="plugins.generic.openAIRE.metadata">Metadatos específicos de OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.projectID.description">(El projectID equivale al número del acuerdo de subvención)</message>
-	<message key="plugins.generic.openAIRE.projectIDValid">Introduzca un projectID válido (6 números)</message>
-</locale>
+	<message key="plugins.generic.openAIRE.projectID.description">(La identificación del proyecto equivale al número del acuerdo de acceso)</message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Introduzca una identificación de proyecto válida (6 números)</message>
+</locale> 

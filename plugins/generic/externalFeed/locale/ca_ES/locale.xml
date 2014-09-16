@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * locale.xml
   *
@@ -8,10 +7,10 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * External feed plugin localization strings for the en_US (U.S. English) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
-  -->
+  * External feed plugin localization strings for the ca_ES (Català) locale.
+ -->
  
 <locale name="ca_ES" full_name="Català">
 
@@ -36,7 +35,7 @@
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Totes les pàgines</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Blocs en totes les pàgines</message>
 	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Cap bloc en cap pàgina</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Pàgina d'inici</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Inici</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Només blocs a la pàgina d'inici</message>
 	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Cap bloc a la pàgina d'inici</message>
 	<message key="plugins.generic.externalFeed.manager.noneCreated">No hi ha canals de continguts externs</message>
@@ -49,7 +48,7 @@
 	<message key="plugins.generic.externalFeed.settings.description">Personalitza la visualització dels ítems de canals de continguts externs.</message>
 	<message key="plugins.generic.externalFeed.settings.styleSheet">Visualització</message>
 	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Full d'estil de canals de continguts externs</message>
-	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Es pot substituir el full d'estil per defecte per un de personalitzat per a aquest connector. Aquí es pot veure el full d'estil per defecte</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Es pot substituir el full d'estil per defecte per un de personalitzat per a aquest mòdul. Aquí es pot veure el full d'estil per defecte</message>
 	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Full d'estil personalitzat</message>
 
 

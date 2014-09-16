@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Author's Role Index 
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000009" locale="es_ES" title="Rol del autor/a" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
 	<section>
-		<![CDATA[<p>El autor/a del envío puede iniciar sesión en el sitio web de la revista para realizar un seguimiento del envío y participar en el proceso editorial. Si hay más de un autor/a, el que presente el artículo debe especificar quién será la persona de contacto con la que se llevará a cabo todo el intercambio editorial y que tendrá acceso al sitio web de la revista.</p>]]>	
+		<![CDATA[<p>El autor/a de un envío puede acceder al sitio web de la revista para comprobar el progreso del envío y participar en el proceso editorial. Si hay más de un autor/a, se pedirá a aquel que realice el envío del artículo que identifique quién será el contacto principal. Éste se convertirá en la persona con la que se intercambiará toda la correspondencia editorial y que accederá al sitio web de la revista.</p>]]>	
 	</section>
-</topic>
+</topic> 

@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Author's Role Review Index 
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000010" locale="es_ES" title="Revisión" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
 	<section>
-		<![CDATA[<p>El autor/a puede seguir el progreso del envío a través del proceso de revisión, además de cargar versiones revisadas, según lo solicite el editor/a de sección que esté supervisando el proceso de revisión.</p>]]>	
+		<![CDATA[<p>El autor/a puede observar el progreso del envío mediante el proceso de revisión, además de subir las versiones revisadas que requiera el editor/a de sección que supervise el proceso de revisión.</p>]]>	
 	</section>
-</topic>
+</topic> 

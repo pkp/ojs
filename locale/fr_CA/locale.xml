@@ -55,6 +55,13 @@
 	<message key="navigation.infoForLibrarians">Pour les bibliothécaires</message>
 	<message key="navigation.infoForAuthors.long">Information pour les auteurs</message>
 	<message key="navigation.infoForLibrarians.long">Information pour les bibliothécaires</message>
+
+	<message key="navigation.journalHelpCenr">Aide offerte par le CEN-R </message>
+	<message key="navigation.journalHelpCenr.foire">Foire aux questions </message>
+	<message key="navigation.journalHelpCenr.aidememoire">Aide-mémoire </message>
+	<message key="navigation.journalHelpCenr.questions">Soumettre vos questions </message>
+	<message key="navigation.journalHelpCenr.feedback">Nous donner un feedback </message>
+	<message key="navigation.journalHelpCenrContact">Pour nous joindre </message>
 	
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Non assignées</message>
@@ -307,13 +314,13 @@
 
 
 	
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems prend en charge le système <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) afin d'assurer l'archivage sécuritaire et permanent pour la revue. LOCKSS est un logiciel libre développé à la bibliothèque de l'Université Stanford qui permet aux bibliothécaires de préserver des revues numériques sélectionnées en interrogant régulièrement les sites Web des revues inscrites pour du contenu récemment publié et en l'archivant. Chaque archive est continuellement validée  par rapport aux caches des autres bibliothèques, et si son contenu est corrompu ou perdu, les autres caches de la revue sont utilisés pour le restaurer.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems prend en charge le système <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) afin d'assurer l'archivage sécuritaire et permanent pour la revue. LOCKSS est un logiciel libre développé à la bibliothèque de l'Université Stanford qui permet aux bibliothécaires de préserver des revues numériques sélectionnées en interrogant régulièrement les sites Web des revues inscrites pour du contenu récemment publié et en l'archivant. Chaque archive est continuellement validée  par rapport aux caches des autres bibliothèques, et si son contenu est corrompu ou perdu, les autres caches de la revue sont utilisés pour le restaurer.
 	<br /><br />
 	La configuration de la prise en charge de LOCKSS pour Open Journal Systems n'a pas à être effectuée avant que le processus de publication soit bien enclenché, en quel cas, suivre ces deux étapes :]]></message>
 	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pour que le contenu de cette revue soit indexé dans un système distribué de bases de données de recherche, veuillez lire <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">les étapes pour devenir un fournisseur de données</a> et inscrire votre revue avec le <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">registre Open Archives</a> officiel. Pour vous inscrire, vous aurez besoin de l'URL de base de votre dépôt : <span class="highlight">{$oaiUrl}</span>.
-Par la suite, vous pouvez inscrire votre revue au <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registre UIUC OAI</a> et <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pour que le contenu de cette revue soit indexé dans un système distribué de bases de données de recherche, veuillez lire <a href="http://www.oaister.org/dataproviders.html" target="_blank">les étapes pour devenir un fournisseur de données</a> et inscrire votre revue avec le <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">registre Open Archives</a> officiel. Pour vous inscrire, vous aurez besoin de l'URL de base de votre dépôt : <span class="highlight">{$oaiUrl}</span>.
+Par la suite, vous pouvez inscrire votre revue au <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registre UIUC OAI</a> et <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
 <br /><br />
 Prendre note que si votre administrateur de site a déjà inscrit ce site auprès de ces services, votre revue sera indexée automatiquement et vous n'avez pas besoin d'inscrire votre revue.]]></message>
 
@@ -657,7 +664,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 
 <h4>Mise à jour</h4>
 
-<p>Si vous faites la mise à jour d'une installation existante d'OJS 2.x, <a href="{$upgradeUrl}">cliquer ici</a> pour procéder.</p>
+<p>Si vous faites la mise à jour d'une installation existante d'OJS 2.x, <a href="{$pageUrl}/install/upgrade">cliquer ici</a> pour procéder.</p>
 
 <h4>Configuration du système recommandée</h4>
 
@@ -665,7 +672,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion} (incluant PHP 5.x); vous utilisez présentement PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (incluant MySQL 4.x) ou <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluant PostgreSQL 8.x)</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x ou Microsoft IIS 6</li>
-	<li>Système d'exploitation : Tout système d'exploitation qui supporte le logiciel ci-dessus, y compris <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Système d'exploitation : Tout système d'exploitation qui supporte le logiciel ci-dessus, y compris <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
 <p>Comme PKP n'a pas les ressources nécessaires lui permettant de tester toutes les combinaisons possibles de versions et de plateformes des logiciels, aucune garantie de fonctionnement ou de soutien adéquat n'est implicite.</p>
@@ -703,7 +710,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">La langue principale à utiliser pour ce système. Veuillez consulter la documentation d'OJS si vous êtes intéressé à prendre en charge des langues qui ne sont pas listées ici.</message>
 	<message key="installer.additionalLocalesInstructions">Sélectionner une ou plusieurs langues supplémentaires à prendre en charge dans ce système. Ces langues seront disponibles pour fins d'utilisation par les revues hébergées sur le site. Des langues supplémentaires peuvent également être installées en tout temps à partir de l'interface d'administration du site.</message>
-	<message key="installer.filesDirInstructions">Saisir le nom du chemin d'accès complet à un répertoire existant où les fichiers téléchargés doivent être conservés. Ce répertoire ne doit pas être accessible directement à partir du Web. Veuillez vous assurer que ce répertoire existe et qu'il est accessible en écriture avant de procéder à l'installation. Les noms de chemin d'accès de Windows doivent utiliser des barres obliques, par ex., "C:/myJournal/files".</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Saisir le nom du chemin d'accès complet à un répertoire existant où les fichiers téléchargés doivent être conservés. Ce répertoire ne doit pas être accessible directement à partir du Web. Veuillez vous assurer que ce répertoire existe et qu'il est accessible en écriture avant de procéder à l'installation. Les noms de chemin d'accès de Windows doivent utiliser des barres obliques, par ex., "C:/myJournal/files".]]></message>
 	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Avertissement :</strong> Si l'installation de la base de données échoue, vous devrez peut-être supprimer votre base de données OJS ou les tables de votre base de données avant de tenter de réinstaller la base de données.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>L'installateur n'a pas pu écraser automatiquement le fichier de configuration. Avant de tenter d'utiliser le système, veuillez ouvrir <tt>config.inc.php</tt> dans un éditeur de texte approprié et remplacer son contenu par le contenu de la zone de texte ci-dessous.</p>]]></message>
@@ -1028,26 +1035,26 @@ Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, 
 La validation peut échouer sur les URL de recherche qui nécessitent des formulaires de données enregistrés.]]></message>
 	<message key="notification.mailListDescription">Saisir votre adresse de courriel pour être avisé immédiatement de tout nouveau contenu important ajouté à la revue.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Cette page montre les mises à jour importantes associées avec cette revue tel que les nouvelles parutions et les annonces. Vous pouvez vous abonner à ces avis par l'intermédiaire des flux RSS (en cliquant sur les images à droite), ou <a href="{$emailUrl}">par courriel.</a>]]></message>
-	<message key="notification.type.articleSubmitted">Un nouvel article, "{$title}", a été soumis.</message>
-	<message key="notification.type.copyeditComment">Un réviseur a laissé un commentaire sur "{$title}".</message>
+	<message key="notification.type.articleSubmitted">Un nouvel article, "{$param}", a été soumis.</message>
+	<message key="notification.type.copyeditComment">Un réviseur a laissé un commentaire sur "{$param}".</message>
 	<message key="notification.type.editing">Événements de révision</message>
-	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$title}".</message>
-	<message key="notification.type.galleyModified">Une épreuve a été modifiée pour "{$title}".</message>
+	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$param}".</message>
+	<message key="notification.type.galleyModified">Une épreuve a été modifiée pour "{$param}".</message>
 	<message key="notification.type.issuePublished">Un numéro a été publié.</message>
-	<message key="notification.type.layoutComment">Un commentaire a été laissé à propos de la mise en page de "{$title}".</message>
-	<message key="notification.type.metadataModified">Les métadonnées de "{$title}" ont été modifiées.</message>
+	<message key="notification.type.layoutComment">Un commentaire a été laissé à propos de la mise en page de "{$param}".</message>
+	<message key="notification.type.metadataModified">Les métadonnées de "{$param}" ont été modifiées.</message>
 	<message key="notification.type.newAnnouncement">Une nouvelle annonce a été créée</message>
-	<message key="notification.type.proofreadComment">Un commentaire a été laissé par un correcteur d'épreuves sur "{$title}".</message>
-	<message key="notification.type.reviewerComment">Un évaluateur a écrit un commentaire sur "{$title}".</message>
-	<message key="notification.type.reviewerFormComment">Une évaluation de formulaire d'évaluation a été soumise pour "{$title}".</message>
+	<message key="notification.type.proofreadComment">Un commentaire a été laissé par un correcteur d'épreuves sur "{$param}".</message>
+	<message key="notification.type.reviewerComment">Un évaluateur a écrit un commentaire sur "{$param}".</message>
+	<message key="notification.type.reviewerFormComment">Une évaluation de formulaire d'évaluation a été soumise pour "{$param}".</message>
 	<message key="notification.type.reviewing">Événements d'évaluation</message>
 	<message key="notification.type.site">Événements du site</message>
-	<message key="notification.type.submissionComment">Un rédacteur a fait un commentaire sur "{$title}".</message>
+	<message key="notification.type.submissionComment">Un rédacteur a fait un commentaire sur "{$param}".</message>
 	<message key="notification.type.submissions">Événements de soumission</message>
-	<message key="notification.type.suppFileModified">Le (ou les) fichier(s) supplémentaire(s) de "{$title}" a (ont) été modifié(s).</message>
-	<message key="notification.type.userComment">Un lecteur a fait un commentaire sur "{$title}"</message>
+	<message key="notification.type.suppFileModified">Le (ou les) fichier(s) supplémentaire(s) de "{$param}" a (ont) été modifié(s).</message>
+	<message key="notification.type.userComment">Un lecteur a fait un commentaire sur "{$param}"</message>
 	<message key="debug.notes.helpMappingLoad">Fichier de mappage d'aide XML {$filename} rechargé à la recherche de {$id}.</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Le fichier PDF que vous avez sélectionné devrait s'afficher ici si votre navigateur Web a un plugiciel de lecture PDF d'installé (par exemple, une version récente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Sinon, vous pouvez également télécharger directement le fichier PDF sur votre poste de travail, où il peut être ouvert à l'aide d'un outil de lecture PDF. Pour télécharger le PDF, cliquer sur le lien Télécharger ci-dessous.</p> <p>Si vous désirez avoir plus d'information concernant l'impression, l'enregistrement et l'édition des fichiers PDF, Highwire Press fournit un <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">FAQ (Frequently Asked Questions) à propos des PDF)</a> très utile.</p>]]></message>
+	<message key="article.pdf.pluginMissing"><![CDATA[<p>Le fichier PDF que vous avez sélectionné devrait s'afficher ici si votre navigateur Web a un plugiciel de lecture PDF d'installé (par exemple, une version récente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>).</p> <p>Sinon, vous pouvez également télécharger directement le fichier PDF sur votre poste de travail, où il peut être ouvert à l'aide d'un outil de lecture PDF. Pour télécharger le PDF, cliquer sur le lien Télécharger ci-dessous.</p> <p>Si vous désirez avoir plus d'information concernant l'impression, l'enregistrement et l'édition des fichiers PDF, Highwire Press fournit un <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">FAQ (Frequently Asked Questions) à propos des PDF)</a> très utile.</p>]]></message>
 	<message key="user.register.reviewerInterests">Identifier les intérêts d'évaluation (questions de fond et méthodes de recherche) :</message>
 	<message key="user.subscriptions.subscriptionStatus">Statut de l'abonnement</message>
 	<message key="user.subscriptions.statusInformation">Les abonnements actifs et échus sont affichés ci-dessous avec leur date d'expiration. De plus, les informations suivantes sur le statut peuvent être incluses avec chaque abonnement.</message>
@@ -1106,38 +1113,13 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="payment.type.purchaseIssue">Tarif au numéro</message>
 	<message key="payment.type.gift">Cadeau</message>
 	<message key="payment.type.gift.subscription">Abonnement</message>
-	<message key="installer.maxFileUploadSize"><![CDATA[Votre serveur permet actuellement le téléchargement de fichiers : <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Votre serveur permet actuellement le téléchargement de fichiers : <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Une nouvelle version d'OJS est maintenant disponible! Vous utilisez actuellement OJS {$currentVersion}. La dernière version est OJS {$latestVersion}. Allez à <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> pour télécharger la dernière version d'OJS et voir les instructions concernant la mise à jour.]]></message>
-	<message key="site.upgradeAvailable.manager"><![CDATA[Une nouvelle version d'OJS est maintenant disponible! Vous utilisez actuellement OJS {$currentVersion}. La dernière version est OJS {$latestVersion}. Contactez votre administrateur de site ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) afin de les aviser de cette nouvelle version. Pour plus d'information, cliquez <a href="http://pkp.sfu.ca/ojs_download" target="_new">ici</a>.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Une nouvelle version d'OJS est maintenant disponible! Vous utilisez actuellement OJS {$currentVersion}. La dernière version est OJS {$latestVersion}. Contactez votre administrateur de site ({$siteAdminName}, </a]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Votre serveur permet actuellement le téléchargement de fichiers : <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Accès refusé! Vous n'avez pas été nommé rédacteur/éditeur de cet article.</message>
 	<message key="user.authorization.noJournal">Pas de revue en contexte!</message>
 	<message key="user.authorization.sectionAssignment">Vous tentez d'accéder à un article qui ne fait pas partie de votre section.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Dépôt du rédacteur non valide ou non requis!</message>
 	<message key="user.authorization.invalidSectionEditorSubmission">Dépôt du chef de rubrique non valide ou non requis!</message>
-	<message key="common.journal">Revue</message>
-	<message key="user.profile.profileImage">Image du profil</message>
-	<message key="submission.permissions">Droits d'accès</message>
-	<message key="submission.license">Licence</message>
-	<message key="submission.copyright">Droit d'auteur</message>
-	<message key="submission.copyrightHolder">Détenteur des droits d'auteur</message>
-	<message key="submission.copyrightYear">Année du droit d'auteur</message>
-	<message key="submission.copyrightStatement">Droit d'auteur (c) {$copyrightYear}, {$copyrightHolder}</message>
-	<message key="submission.licenseURLValid">Veuillez fournir une adresse URL distante valide (inclure http://).</message>
-	<message key="submission.licenseURL">Adresse URL de la licence</message>
-	<message key="submission.license.cc.by-nc-nd4">Creative Commons Attribution - Pas d'Utilisation Commerciale - Pas de Modification 4.0</message>
-	<message key="submission.license.cc.by-nc4">Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0</message>
-	<message key="submission.license.cc.by-nc-sa4">Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0</message>
-	<message key="submission.license.cc.by-nd4">Creative Commons Attribution - Pas de Modification 4.0</message>
-	<message key="submission.license.cc.by4">Creative Commons Attribution 4.0</message>
-	<message key="submission.license.cc.by-sa4">Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0</message>
-	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licence Creative Commons Attribution - Pas d&#39;Utilisation Commerciale - Pas de Modification 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Licence Creative Commons Attribution - Pas de Modification 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence Creative Commons Attribution 4.0 International</a>.]]></message>
-	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.]]></message>
-	<message key="user.orcid">Identifiant ORCID</message>
-	<message key="user.profile.form.orcidInvalid">L'identifiant ORCID que vous avez fourni n'est pas valide.</message>
-	<message key="user.orcid.description"><![CDATA[Les identifiants ORCID doivent être assignés par le <a href="http://orcid.org/" target="_blank">registre d'ORCID</a>. Vous devez vous conformer à leur normes pour le format des indentifiants ORCID; vous devez également inclure l'identifiant uniforme de ressource (URI) au complet (par exemple, <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 </locale>

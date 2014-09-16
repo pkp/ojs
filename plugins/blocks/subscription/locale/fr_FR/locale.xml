@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.block.subscription.displayName">Bloc d'abonnement</message>
+	<message key="plugins.block.subscription.description">Ce plugiciel fournit un encadré contenant l'information d'abonnement.</message>
+	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
+	<message key="plugins.block.subscription.expires">Échéance</message>
+	<message key="plugins.block.subscription.providedBy">Accès fournit par :</message>
+	<message key="plugins.block.subscription.comingFromIP">Adresse IP de provenance :</message>
+	<message key="plugins.block.subscription.about">Abonnements</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Ouvrir une session pour vérifier l'abonnement</message>
+</locale>

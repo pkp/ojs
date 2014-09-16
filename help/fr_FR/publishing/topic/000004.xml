@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  -->
+
+<topic id="publishing/topic/000004" locale="fr_FR" title="Publication" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>Quand il est temps de publier un numéro, l’éditeur clique sur «Publier le numéro» sur la page ‘’Numéro en cours’’ pour que le numéro soit publié , c'est-à-dire la page avec la table des matières du numéro. La publication d’un numéro a pour effet de faire apparaître sa table des matières quand ‘’Courant’’ est cliqué par les lecteurs, et sa page couverture, s’il y en a une, apparaitra sur la page d’accueil du journal. Le numéro qui était précédemment courant passe aux archives. S’il n’y a pas de page couverture, la table des matières apparaitra sur la page d’accueil, à moins que la page d’accueil ne contienne déjà une image ou du texte qui a été téléchargé  par la mise en place (Setup) par le directeur du journal, pour y apparaître. La publication d’un numéro envoie une notification par courriel à tous les lecteurs inscrits, laquelle inclut la table des matières du numéro ainsi qu’un hyperlien au site Web du journal.</p>]]>	
+	</section>
+</topic>

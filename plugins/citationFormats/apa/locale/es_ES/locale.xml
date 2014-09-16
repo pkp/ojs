@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/citationFormats/apa/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in es_ES.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.citationFormats.apa.displayName">Conector de formato de citas APA</message>
+	<message key="plugins.citationFormats.apa.displayName">Módulo de formato de citas APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">Este conector ofrece el formato de citas APA.</message>
+	<message key="plugins.citationFormats.apa.description">Este módulo ofrece el formato de citas APA.</message>
 	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Recuperado de <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale> 

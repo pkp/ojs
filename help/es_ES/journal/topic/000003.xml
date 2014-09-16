@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles Index 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000003" locale="es_ES" title="Roles" toc="journal/toc/000000" subtoc="journal/toc/000003" key="journal.roles.index">
 	<section>
-		<![CDATA[Este sistema de revista emplea un número de roles tradicionales de publicación para llevar a cabo el todo el proceso. Una misma persona puede asumir más de un rol, así pues la revista podría funcionar, por ejemplo, con una única persona llevando a cabo todos los roles excepto el de revisor/a y el de autor/a. Lo más habitual es que el gestor/a de la revista sea además editor/a y editor/a de sección. Los revisores/as a menudo se registran también como autores/as.</p><p><em>El acceso se limita según el rol</em>. Cada uno de los roles tiene su propio dominio de acceso al proceso de edición y publicación. Por ejemplo, los autores/as y revisores/as acceden a su propio espacio personal dentro del sitio web de la revista; los editores/as de sección solo pueden ver los envíos que se les han asignado. Esto significa que en principio no debería suponer ningún conflicto el hecho de que un editor/a de sección enviase un artículo a la revista para su revisión y posible publicación.</p>]]>	
+		<![CDATA[<p>El sistema de la revista utiliza un número de roles tradicionales de publicación de revistas para llevar a cabo el proceso de publicación. Una misma persona puede asumir más de un rol, de forma que la revista podría funcionar, por ejemplo, con una única persona llevando a cabo todos los roles excepto el de revisor/a y el de autor/a. Lo más habitual es que el gestor/a de la revista sea además editor/a y editor/a de sección. Los revisores/as están registrados a menudo como autores/as.</p><p><em>Acceso limitado por el rol</em>. Cada uno de los roles tiene su propio dominio de acceso al proceso de edición y publicación. Por ejemplo, los autores/as y revisores/as acceden a su propio espacio personal dentro del sitio web de la revista y los editores/as de sección solo pueden ver los envíos que se les asignaron. Esto quiere decir que, al menos en principio, no hay posibilidad de conflicto si un editor de sección envía un artículo a la revista para su revisión y posible publicación.</p>]]>	
 	</section>
-</topic>
+</topic> 

@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Author's Role Index 
   *
   -->
 
-<topic id="editorial/topic/000009" locale="en_US" title="Author's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+<topic id="editorial/topic/000009" locale="ca_ES" title="Author's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
 	<section>
 		<![CDATA[<p>L'autor/a pot iniciar la sessió al lloc web de la revista per controlar el progrés de la seva tramesa i participar en el procés editorial. En cas que hi hagi més d'un autor/a, se sol·licita a l'autor/a que ha tramès l'element que identifiqui el contacte principal. Aquesta persona és qui rep tota la correspondència editorial i qui obté accés al lloc web de la revista.</p>]]>	
 	</section>

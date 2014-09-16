@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/blocks/navigation/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.navigation.displayName">Bloc de navegació</message>
-	<message key="plugins.block.navigation.description">Aquest connector proporciona enllaços de navegació a la barra lateral.</message>
+	<message key="plugins.block.navigation.description">Aquest mòdul proporciona enllaços de navegació a la barra lateral.</message>
 	<message key="plugins.block.navigation.journalContent">Contingut de la revista</message>
+	<message key="plugins.block.navigation.searchScope">Àmbit de la cerca</message>
 </locale> 

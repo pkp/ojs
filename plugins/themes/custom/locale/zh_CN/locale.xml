@@ -22,4 +22,6 @@
 	<message key="plugins.theme.custom.link">链接</message>
 	<message key="plugins.theme.custom.background">背景色</message>
 	<message key="plugins.theme.custom.foreground">前景色</message>
+	<message key="plugins.theme.custom.notWritablePlugin">注意：以期刊为主的样式表的选择项是自动启用。因为该款插件的样式文件{$stylesheetFileLocation}当前不可写。</message>
+	<message key="plugins.theme.custom.perJournal">以期刊为主的样式表</message>
 </locale>

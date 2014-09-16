@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Editor's Role Submission Summary Index 
   *
-  * $Id$
   -->
 
-<topic id="editorial/topic/000003" locale="es_ES" title="Resumen de envío" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+<topic id="editorial/topic/000003" locale="es_ES" title="Resumen del envío" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
 	<section>
-		<![CDATA[<p>El editor/a utiliza la página Resumen de cada envío para gestionar los archivos, así como los metadatos y la información de indexación.</p>]]>	
+		<![CDATA[<p>El editor/a se encarga de la página Resumen de cada envío. En ella gestiona los envíos de archivos y sus metadatos asociados o información de indexación.</p>]]>	
 	</section>
-</topic>
+</topic> 

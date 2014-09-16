@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles - Copyeditor 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000019" locale="es_ES" title="Corrector/a de originales" toc="journal/toc/000003" key="journal.roles.copyeditor">
 	<section>
-		<![CDATA[<p>El corrector/a de originales edita los envíos para mejorar la claridad y la gramática, trabaja junto con los autores/as para garantizar que todo está en su sitio, se asegura de ceñirse al estilo textual y a la bibliografía de la revista y produce una copia limpia y editada para que el maquetista la convierta en galeradas y así pueda publicarse en el formato establecido por la revista. Algunas revistas tienen a un editor/a o editor/a de sección desempeñando este rol.</p><p>Haga clic {help_topic key="editorial.copyeditorsRole" text="aquí"} para saber más.</p>]]>	
+		<![CDATA[<p>El corrector/a de originales se encarga de editar los envíos para mejorar la gramática y la claridad, trabaja con los autores/as para garantizar que todo está correcto, garantiza la estricta adherencia al estilo bibliográfico y textual de la revista, y produce una copia editada en limpio para que el maquetista la convierta en las galeradas que se incluirán en el formato publicado de la revista. En algunas revistas, es el editor/a o editor/a de sección quien tiene este rol.</p><p>Se puede encontrar más información {help_topic key="editorial.copyeditorsRole" text="aquí"}.</p>]]>	
 	</section>
-</topic>
+</topic> 

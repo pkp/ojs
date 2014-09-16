@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Section Editor's Role Index - In Editing
   *
   -->
 
-<topic id="editorial/topic/000022" locale="en_US" title="In Editing" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+<topic id="editorial/topic/000022" locale="ca_ES" title="In Editing" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
 	<section>
 		<![CDATA[<p>Les trameses incloses a la cua d'edició han de passar pels processos de correcció d'originals, maquetació i correcció de proves. Per accedir a la pàgina d'edició d'una tramesa, només cal que un editor/a de secció o un editor/a facin clic al títol de la tramesa des de la cua d'edició. Quan la tramesa ja ha passat per l'etapa d'edició i se n'ha planificat la publicació en un número, s'elimina d'aquesta llista i es trasllada a l'arxiu.</p><p>Si necessiteu més informació sobre el procés d'edició, vegeu {help_topic key="editorial.sectionEditorsRole.editing" text="En edició"}.</p>]]>	
 	</section>

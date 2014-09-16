@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.roundedcorners.displayName">Cantonades arrodonides</message>
-	<message key="plugins.generic.roundedcorners.description">Aquest connector crea un fons darrere de cada bloc de barra lateral i n'arrodoneix les cantonades. Podeu canviar els colors d'aquest connector editant-ne el full d'estil CSS que trobareu al connector.</message>
+	<message key="plugins.generic.roundedcorners.description">Aquest mòdul crea un fons darrere de cada bloc de barra lateral i n'arrodoneix les cantonades. Podeu canviar els colors editant-ne el full d'estil CSS que trobareu al mòdul.</message>
 </locale> 

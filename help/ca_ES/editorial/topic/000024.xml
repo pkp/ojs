@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Section Editor's Role Index - Review - Review Version 
   *
   -->
 
-<topic id="editorial/topic/000024" locale="en_US" title="Review Version" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.reviewVersion">
+<topic id="editorial/topic/000024" locale="ca_ES" title="Review Version" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.reviewVersion">
 	<section>
 		<![CDATA[<p>La primera tasca que l'editor/a de secció ha de dur a terme per a cada tramesa és comprovar si la seva versió original es pot convertir directament en versió de revisió, o bé si cal penjar-ne una versió revisada. Per visualitzar el fitxer original, l'editor/a de secció ha de fer clic al nom de fitxer que es mostra al costat de la versió de revisió.</p><p><em>Com assegurar una avaluació anònima d'experts</em>. Vegeu les instruccions per {help_topic key="editorial.sectionEditorsRole.review.blindPeerReview" text="Com assegurar una avaluació anònima d'experts"}. L'editor/a de secció també pot consultar la pàgina de la tramesa per comprovar si és possible compartir els fitxers addicionals amb els revisors/ores. Si l'autor/a vol compartir els fitxers amb els revisors/ores aquests fitxers estaran activats, però l'editor/a de secció els pot desactivar si considera que no són adequats per compartir-los.</p><p><em>Com determinar quina és la versió de revisió d'una tramesa</em>. L'editor/a de secció pot assignar la versió de revisió de la tramesa que visualitzaran els revisors/ores (a) seleccionant-ne la versió original en cas que ja sigui adequada, o (b) penjant-ne una versió més adequada. L'editor/a de secció pot triar de corregir els errors de poca importància del fitxer original utilitzant un processador de textos per fer els canvis, per a la qual cosa ha de desar el fitxer a l'escriptori i posteriorment l'ha de tornar a penjar mitjançant els botons «Navega/Penja» de la pàgina de la versió de revisió.</p><p><em>Trameses preparades inadequadament</em>. Si és clar que l'autor/a no ha adequat la tramesa a les indicacions per als autors/ores, entre les quals s'inclouen la necessitat d'assegurar que la tramesa admeti una avaluació anònima d'experts, l'editor/a de secció pot indicar a l'autor/a que cal que revisi i torni a trametre l'article. En aquest cas, l'autor/a pot trametre la versió revisada per correu electrònic directament a l'editor/a, el qual l'ha de penjar com a versió de revisió. D'altra banda, l'editor/a de secció també pot decidir que la tramesa no s'adequa a la revista i notificar aquest fet a l'autor/a. Per enviar la tramesa als arxius cal accedir a la pàgina de la tramesa i fer clic a «Arxiva la tramesa».</p>]]>	
 	</section>

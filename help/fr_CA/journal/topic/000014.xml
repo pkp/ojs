@@ -12,8 +12,8 @@
   *
   -->
 
-<topic id="journal/topic/000014" locale="fr_CA" title="Email Users" toc="journal/toc/000002" key="Courriels aux usagers du journal">
+<topic id="journal/topic/000014" locale="fr_CA" title="Envoyer des courriels aux utilisateurs" toc="journal/toc/000002" key="Courriels aux utilisateurs du journal">
 	<section>
-		<![CDATA[<p>Le directeur du journal peut envoyer des courriels à tous les usagers ou à un sous-groupe d’entre eux. Noter que tous les lecteurs reçoivent une notification par courriel à la publication de chaque numéro, avec une copie de la table des matières pour ce numéro, ou dans le cas de continuel {help_topic key="publishing.index" text="publishing"}, avec le titre et l’auteur de la présentation. Le journal devrait aussi avoir une politique  au sujet de la vie privée, entrée dans «Mise en marche» (Setup) et disponible dans «Au sujet du journal», laquelle expliquerait comment l’intimité des usagers inscrits sera respectée.</p>]]>	
+	  <![CDATA[<p>Le directeur de revue peut envoyer des courriels à tous les utilisateurs ou à un sous-groupe d&#x2019;entre eux. Noter que tous les lecteurs reçoivent une notification par courriel à la publication de chaque numéro, avec une copie de la table des matières pour ce numéro, ou dans le cas de continuel {help_topic key="publishing.index" text="publishing"}, avec le titre et l&#x2019;auteur de la soumission. La revue devrait aussi avoir une politique  au sujet de la vie privée, entrée dans Configuration et disponible dans  &#x00AB;&#x00A0;À propos de la revue&#x00A0;&#x00BB;, laquelle expliquerait comment l&#x2019;intimité des utilisateurs inscrits sera respectée.</p>]]>	
 	</section>
 </topic>

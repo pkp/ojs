@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000007.xml
   *
@@ -14,25 +13,21 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * User Interface - User Home
   *
   -->
 
 <topic id="user/topic/000007" locale="ca_ES" title="Àrea personal" toc="user/toc/000000" key="user.userHome">
-	<section>
-		<![CDATA[<p>Una vegada iniciada la sessió, es mostra l'enllaç «Àrea personal» de l'usuari/ària a la barra de navegació superior. La informació que es mostra en fer clic en aquest enllaç varia segons si l'usuari/usuària està navegant per una revista determinada o si ho fa per tot el lloc web en conjunt.</p>]]>	
-	</section>
-
-<section title="Informació de la pàgina inicial de l'usuari/usuària per al lloc principal">
-		<![CDATA[<p>Si l'usuari/usuària ha iniciat la sessió i està navegant pel lloc principal, es mostra la informació següent:</p>
-<p><em>Les meves revistes</em>. L'usuari/usuària trobarà una llista de totes les revistes per a les quals s'hagi registrat, juntament amb una sèrie d'enllaços per a tots els rols disponibles (autor/a, editor/a, etc.) per a cada revista. Si l'usuari/usuària és també l'administrador/a del lloc web, també es mostren una sèrie d'enllaços que permeten accedir a les pàgines d'administració.</p><p><em>El meu compte</em>. Aquesta pàgina inclou enllaços que permeten modificar els paràmetres del compte, com ara el registre a altres revistes, i també editar el perfil d'usuari/usuària, canviar la contrasenya i finalitzar la sessió.</p>]]>
-
-</section>
-
-<section title="Informació de l'àrea personal de l'usuari/ària per a una revista">
-		<![CDATA[<p>Si l'usuari/usuària ha iniciat la sessió i està navegant per una revista determinada, només es mostra informació sobre aquesta revista. A més, a la secció <em>El meu compte</em> l'enllaç per a registrar-se en altres revistes es reemplaça per un enllaç anomenat «Mostra les meves revistes», que porta l'usuari/usuària a la pàgina inicial de l'usuari/usuària del lloc principal .</p>]]>
-
-</section>
-
+  <section>
+  <![CDATA[<p>Una vegada iniciada la sessió, es mostra l'enllaç «Àrea personal» de l'usuari/ària a la barra de navegació superior. La informació que es mostra en fer clic en aquest enllaç varia segons si l'usuari/usuària està navegant per una revista determinada o si ho fa per tot el lloc web en conjunt.</p>]]>	
+  </section>
+  <section title="Informació de la pàgina inicial de l'usuari/usuària per al lloc principal">
+  <![CDATA[<p>Si l'usuari/usuària ha iniciat la sessió i està navegant pel lloc principal, es mostra la informació següent:</p>
+  <p><em>Les meves revistes</em>. L'usuari/usuària trobarà una llista de totes les revistes per a les quals s'hagi registrat, juntament amb una sèrie d'enllaços per a tots els rols disponibles (autor/a, editor/a, etc.) per a cada revista. Si l'usuari/usuària és també l'administrador/a del lloc web, també es mostren una sèrie d'enllaços que permeten accedir a les pàgines d'administració.</p><p><em>El meu compte</em>. Aquesta pàgina inclou enllaços que permeten modificar els paràmetres del compte, com ara el registre a altres revistes, i també editar el perfil d'usuari/usuària, canviar la contrasenya i finalitzar la sessió.</p>]]>
+  </section>
+  <section title="Informació de l'àrea personal de l'usuari/ària per a una revista">
+  <![CDATA[<p>Si l'usuari/usuària ha iniciat la sessió i està navegant per una revista determinada, només es mostra informació sobre aquesta revista. A més, a la secció <em>El meu compte</em> l'enllaç per a registrar-se en altres revistes es reemplaça per un enllaç anomenat «Mostra les meves revistes», que porta l'usuari/usuària a la pàgina inicial de l'usuari/usuària del lloc principal .</p>]]>
+  </section>
 </topic>
-

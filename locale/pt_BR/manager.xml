@@ -726,4 +726,19 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Ou escolha ordenar por:</message>
 	<message key="manager.statistics.reports.filters.byLocation">Localização geográfica</message>
 	<message key="manager.statistics.reports.filters.byLocation.description">Restringir resultados por país, região e/ou cidade.</message>
+	<message key="manager.setup.permissions.priorAgreement">Acordo prévio</message>
+	<message key="manager.setup.permissions.display">Mostrar</message>
+	<message key="manager.setup.licenseURLDescription">Forneça a URL da página de licença, se disponível.</message>
+	<message key="manager.setup.includeCopyrightStatement">Mostrar a declaração de direitos autorais com o conteúdo (aconselhável para assegurar direitos autorais do autor).</message>
+	<message key="manager.setup.includeLicense">Mostrar a licensa com o trabalho publicado.</message>
+	<message key="manager.setup.resetPermissions">Redefinir Permissões do Artigo</message>
+	<message key="manager.setup.resetPermissions.description">Declarações de direitos autorais e informações sobre licença são permanentemente associados ao conteúdo publicado, garantindo que esses dados não mudem no caso de uma revista mudar as políticas relativas aos novos pedidos. Para redefinir informação sobre permissões já associadas aos conteúdos publicados, use o botão abaixo.</message>
+	<message key="manager.setup.confirmResetLicense">Tem certeza de que deseja redefinir informações sobre direitos autorais e licensas associadas aos conteúdos publicados com a licença configurado na Configuração da Revista?</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Você alterou as informações de licença e direitos autorais na Configuração da Revista. Por favor, salve essas alterações antes de redefinir as permissões.</message>
+	<message key="manager.setup.copyrightYearBasis">Basear direitos autorais de novos artigos no ano</message>
+	<message key="manager.statistics.reports.objectNotFound">Objeto não encontrado na base de dados</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Lembrete de pré-vencimento enviado</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Lembrete de pós-vencimento enviado</message>
+	<message key="manager.setup.copyrightYearBasis.Article">O ano padrão será deduzido da data de publicação do artigo, como em "publish-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">O ano padrão será deduzido da data de publicação da edição.</message>
 </locale>

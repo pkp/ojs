@@ -13,17 +13,17 @@
   -->
 
 <toc id="journal/toc/000003" locale="fr_CA" title="Rôles" parent_topic="journal/topic/000003">
-	<topic id="journal/topic/000015" title="Directeur du journal" />
-	<topic id="journal/topic/000016" title="Éditeur" />
-	<topic id="journal/topic/000017" title="Éditeur de rubrique" />
-	<topic id="journal/topic/000019" title="Reviseur de copie" />
-	<topic id="journal/topic/000018" title="Editeur de la mise en page" />
+	<topic id="journal/topic/000015" title="Directeur de revue" />
+	<topic id="journal/topic/000016" title="Rédacteur" />
+	<topic id="journal/topic/000017" title="Chef de rubrique" />
+	<topic id="journal/topic/000019" title="Reviseur" />
+  <topic id="journal/topic/000018" title="Responsables de la mise en page" />
 	<topic id="journal/topic/000020" title="Correcteur d’épreuves" />
-	<topic id="journal/topic/000021" title="Reviseur" />
+	<topic id="journal/topic/000021" title="Évaluateur" />
 	<topic id="journal/topic/000022" title="Auteurs" />
 	<topic id="journal/topic/000023" title="Lecteur" />
-	<topic id="journal/topic/000032" title="Gestion des abonnements" />
+  <topic id="journal/topic/000032" title="Responsables des abonnements" />
 
-	<breadcrumb url="journal/topic/000000" title="Gestion du journal" />
+	<breadcrumb url="journal/topic/000000" title="Gestion de la revue" />
 	<breadcrumb url="journal/topic/000003" title="Rôles" />
 </toc>

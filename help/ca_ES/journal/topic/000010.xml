@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000010.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Management Pages - Files Browser
   *
   -->
 
-<topic id="journal/topic/000010" locale="en_US" title="Files Browser" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+<topic id="journal/topic/000010" locale="ca_ES" title="Files Browser" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
 	<section>
 		<![CDATA[<p>The Files Browser allows Journal Managers to peruse and manage the hierarchy of files uploaded for the journal (including all files uploaded through submission management). Files can be viewed, deleted, and moved as if interacting with a local file system.</p><p>Note that this is intended as an administrative facility only and will generally not be needed in the day-to-day management of the journal. Submission information is maintained as a combination of files and database records; deleting submission files with the Files Browser will not delete the associated database records.</p>]]>
 	</section>

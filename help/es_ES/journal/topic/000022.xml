@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Roles - Autor/a 
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Roles - Author 
+  *
   -->
 
 <topic id="journal/topic/000022" locale="es_ES" title="Autor/a" toc="journal/toc/000003" key="journal.roles.author">
 	<section>
-		<![CDATA[<p>Los autores/as pueden inscribirse y enviar artículos a la revista directamente a través de la página web de la revista. Se requerirá al autor/a que cargue el artículo y proporcione metadatos (mejoran la capacidad de búsqueda para la investigación en línea y para esta revista) o información de indexación sobre éste. El autor/a puede cargar archivos adicionales, en forma de conjunto de datos, instrumentos de investigación o textos de origen, que enriquezcan el artículo y contribuyan a formas más abiertas y sólidas de investigación y erudición. Al iniciar sesión en la página web de la revista, el autor/a puede realizar un seguimiento del envío a través del proceso editorial &mdash; así como participar en la corrección de originales y la corrección de envíos aceptados para su publicación &mdash;.</p><p>Más información {help_topic key="editorial.authorsRole" text="aquí"}.</p>]]>	
+		<![CDATA[<p>Los autores/as pueden registrarse y enviar artículos a la revista directamente a través del sitio web de la revista. Se requerirá al autor/a que cargue el artículo y proporcione metadatos o información de indexación sobre éste. (Los metadatos mejoran la capacidad de búsqueda para la investigación en línea y en esta revista.) El autor/a puede cargar archivos complementarios, en forma de conjunto de datos, herramientas de investigación o textos de origen, que enriquezcan el artículo y contribuyan a formas más abiertas y sólidas de investigación y erudición. El autor/a puede seguir el envío mediante el proceso editorial (así como participar en la corrección de originales y la corrección de pruebas de los envíos aceptados para su publicación) al iniciar sesión al sitio web de la revista.</p><p>Se puede encontrar más información {help_topic key="editorial.authorsRole" text="aquí"}.</p>]]>	
 	</section>
-</topic>
+</topic> 

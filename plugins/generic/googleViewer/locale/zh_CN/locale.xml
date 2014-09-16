@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleViewer/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.googleViewer.name">Google嵌入式浏览器插件</message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[该款插件使用<a href="https://docs.google.com/viewer">Google Docs 浏览器</a>服务在文章浏览页面潜入PDF格式。]]></message>
+</locale>

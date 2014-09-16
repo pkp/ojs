@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Author's Role Editing - Proofreading
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000036" locale="es_ES" title="Corrección de pruebas" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
 	<section>
-		<![CDATA[<p>El autor/a corrige las galeradas, es decir, la versión en formato HTML, PDF o Postscript de los documentos que aparecerán en la edición en línea de la revista. Para ver estos archivos en cada uno de los formatos en los que se publicarán, el autor/a debe hacer clic en los formatos de prueba (no en el nombre del archivo). Durante la fase de corrección de pruebas, sólo se realizan cambios tipográficos y de formato. Además, únicamente el maquetista puede llevar a cabo estas modificaciones.</p> <p>Evidentemente, cuando se usa más de un formato de archivo, el autor/a sólo corrige los errores ortográficos de uno de los archivos, aunque corrige los problemas de formato de todos. El autor/a debe seguir las directrices establecidas para la corrección de pruebas cuando registra sus anotaciones en el cuadro de texto Correcciones. Asimismo, el autor/a debe revisar los archivos adicionales que acompañan al envío publicado. Estos archivos se presentan en su formato original y, por esta razón, se pueden modificar y cargar de nuevo; también se puede cambiar su título por medio de la función Editar. Se debe notificar cualquier cambio realizado en estos archivos en el cuadro de texto Correcciones.</p>]]>	
+		<![CDATA[<p>El autor/a corrige las galeradas para el envío, es decir, las versiones en HTML, PDF o Postscript que aparecerán en la edición en línea de la revista. Para ver estos archivos en cada uno de los formatos en los que se publicarán, el autor/a debe hacer clic en los formatos de prueba (no en el nombre de archivo). En la fase de corrección de pruebas, sólo se hacen correcciones tipográficas y de formato, y únicamente puede hacerlas el maquetista.</p> <p>Evidentemente, si se utiliza más de un formato de archivo, el autor/a no sólo comprueba uno en busca de errores de ortografía sino todos, por si se cometieron errores de formato. El autor/a debe seguir las instrucciones de corrección de pruebas cuando registre sus anotaciones en el cuadro de texto Correcciones. Asimismo, el autor/a debe revisar los archivos complementarios que acompañan al envío publicado. Estos archivos se presentan en su formato original y, por esta razón, se pueden modificar y subir de nuevo, así como cambiar su título por medio de la función Editar. Cualquier cambio que se haga en estos archivos ha de ser apuntado en el cuadro de texto Correcciones.</p>]]>	
 	</section>
-</topic>
+</topic> 

@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Copyeditor's Role - Submissions
   *
   -->
 
-<topic id="editorial/topic/000037" locale="en_US" title="Submissions" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+<topic id="editorial/topic/000037" locale="ca_ES" title="Submissions" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
 	<section>
 		<![CDATA[<p>En iniciar la sessió a la revista i fer clic a l'enllaç «Corrector/a d'originals» de la pàgina inicial d'usuari/ària, el corrector/a d'originals accedeix a la cua de trameses, on s'enumeren tots els encàrrecs de correcció que té assignats. A més, fent clic a l'enllaç «Arxiu» pot accedir a encàrrecs ja completats.</p><p>Per accedir a la pàgina de correcció d'originals d'una tramesa determinada, el corrector/a d'originals ha de fer clic al títol que es mostra a la llista de trameses actives.</p>]]>	
 	</section>

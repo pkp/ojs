@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Section Editor's Role Index 
   *
   -->
 
-<topic id="editorial/topic/000004" locale="en_US" title="Section Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+<topic id="editorial/topic/000004" locale="ca_ES" title="Section Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
 	<section>
 		<![CDATA[<p>Els editors/ores de secció s'acostumen a encarregar de gestionar l'etapa de revisió de totes les trameses i també l'etapa d'edició de les trameses acceptades. No obstant això, segons les polítiques establertes per la revista, l'editor/a pot demanar a l'editor/a de secció inicialment assignat a una tramesa que només s'encarregui de supervisar l'etapa de revisió. Això vol dir que si s'accepta la tramesa l'editor/a és l'encarregat de supervisar la resta del procés (és a dir, que adopta el rol d'editor/a de secció). Els editors/ores envien sol·licituds als editors/ores de secció perquè supervisin el procés editorial d'una tramesa.</p>]]>	
 	</section>

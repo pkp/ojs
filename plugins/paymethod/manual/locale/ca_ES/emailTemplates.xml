@@ -7,10 +7,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localized email templates XML file.
   -->
+
 <email_texts locale="ca_ES">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Notificació de Pagament Manual</subject>
@@ -19,7 +20,7 @@
 L'ítem pagat és "{$itemName}".
 El preu és {$itemCost} ({$itemCurrencyCode}).
 
-Aquest correu l'ha generat el connector de pagament manual de l'Open Journal Systems.</body>
+Aquest correu l'ha generat el mòdul de pagament manual de l'Open Journal Systems.</body>
 		<description>Aquest correu s'utilitza per a notificar a l'administrador/ora de la revista que s'ha realitzat un pagament manual.</description>
 	</email_text>
 </email_texts>

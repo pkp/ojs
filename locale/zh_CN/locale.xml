@@ -1259,4 +1259,5 @@ Note that if your site administrator has already registered this site with these
 	<message key="user.profile.profileImage">个人照片</message>
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[ORCID iDs只能通过<a href="http://orcid.org/" target="_blank"> ORCID注册</a>的指定。您必须符合ORCID iDs的标准，并且包括URI9（例如：<em>http://orcid.org/0000-0002-1825-0097</em>）]]></message>
+	<message key="manager.setup.preservationDescription"><![CDATA[开源期刊系统支持<a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (很多副本确保材料安全)确保您的期刊的安全和永久保存。下列多个选项供您选择使您的期刊包含在LOCKSS网络系统中。]]></message>
 </locale>

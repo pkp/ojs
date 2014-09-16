@@ -12,8 +12,8 @@
   *
   -->
 
-<topic id="journal/topic/000017" locale="fr_CA" title="Éditeur de rubrique" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+<topic id="journal/topic/000017" locale="fr_CA" title="Chef de rubrique" toc="journal/toc/000003" key="journal.roles.sectionEditor">
 	<section>
-		<![CDATA[<p>L’éditeur de rubrique gère la révision et l’édition des présentations auxquelles il a été assigné. Dans certains cas, un éditeur de rubrique qui est assigné de voir les présentations par le processus de {help_topic key="editorial.sectionEditorsRole.review" text="Review"} sera aussi responsable de voir les présentations qui sont acceptées par le processus de {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} (c’est à dire par la révision de copie, la mise en page et la correction d’épreuves) Souvent, toutefois, les éditeurs de rubriques travaillent seulement sur le processus de la révision, et un éditeur, agissant dans le rôle d’un éditeur de rubrique, voit les présentations par le processus d’édition. Le journal aura une politique sur comment les tâches sont divisées.</p>]]>	
+		<![CDATA[<p>Le chef de rubrique gère l'évaluation et l’édition des soumissions auxquelles il a été assigné. Dans certains cas, un chef de rubrique qui est assigné à superviser les soumissions par le processus de {help_topic key="editorial.sectionEditorsRole.review" text="Review"} sera aussi responsable de voir les soumissions qui sont acceptées par le processus de {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} (c’est à dire par la révision, la mise en page et la correction d’épreuves) Souvent, toutefois, les chefs de rubriques travaillent seulement sur le processus de l'évaluation, et un rédacteur, agissant dans le rôle d’un chef de rubrique, voit les soumissions par le processus de révision. La revue aura une politique concernant la répartition des tâches.</p>]]>	
 	</section>
 </topic>

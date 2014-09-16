@@ -31,4 +31,5 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics账户编号</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">为投稿作者输入一个或者多个Google Analytics账户编号是无效的</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">使用Google分析来追踪发布文章的读者群情况，在此处输入账号（如UA-xxxxxx-x）。</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">通用分析新的跟踪代码（analytics.js）</message>
 </locale>

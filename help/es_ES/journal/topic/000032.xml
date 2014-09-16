@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles - Subscription Manager 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000032" locale="es_ES" title="Gestor/a de suscripciones" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
 	<section>
-		<![CDATA[<p>El gestor/a de suscripciones gestiona las suscripciones de la revista y sus diferentes tipos.</p><p>Puede encontrar más información sobre cómo gestionar suscripciones {help_topic key="journal.managementPages.subscriptions" text="aquí"}.</p>]]>
+		<![CDATA[<p>El gestor/a de suscripciones gestiona los diferentes tipos de suscripción de la revista.</p><p>Se puede encontrar más información sobre la gestión de suscripciones en {help_topic key="journal.managementPages.subscriptions" text="aquí"}.</p>]]>
 	</section>
-</topic>
+</topic> 

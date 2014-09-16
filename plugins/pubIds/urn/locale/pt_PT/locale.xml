@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/urn/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * URN plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.pubIds.urn.urns">URNs</message>
+
+	<!-- plugin -->
+	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.description">This plugin enables the assignment of the Uniform Resource Names to the objects (issues, articles, galley and supplementary files) in OJS.</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.pubIds.urn.manager.settings.description">Please do the following setup steps to be able to manage and use URNs in OJS:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSettings">URN Settings</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN Prefix</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">The URN prefix is the fix, never changing part of the URN (e.g. "urn:nbn:de:0000-").</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN Suffix</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">Use default patterns.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys <br />%j.v%vi%i.%a.s%s for supplementary files.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">Use the pattern entered below to generate URN suffixes. Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, %g for the OJS galley ID, %s for the OJS supplementary file ID, %p for the page number and %x for "Custom Identifier" (must be enabled in Setup 4.3).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">for issues</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">for articles</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">for galleys</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">for supplementary files.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">For example, vol%viss%ipp%p could create the URN suffix "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">A URN suffix can take any form, but must be unique for each published item.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Use the "Custom Identifier" for published items as the URN suffix (must be enabled in Setup 4.3). This is the same identifier that will be used for public URLs.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Enter an individual URN suffix for each published item independent and different from the "Custom Identifier" mentioned in the previous option. You'll find an additional URN input field on each item's metadata page.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Clear URNs</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">If you change your URN configuration, URNs that have already been assigned will not be affected. Once the changed URN configuration is saved, use this button to clear all existing URNs so that the new settings will take effect with existing objects.</message>
+	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Are you sure you wish to delete all existing URNs?</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Check Number</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">The check number will be automatically calculated and added at the end, as the last digit of a URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Namespace</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Choose</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">The persistent identifier namespace usually needed for the registration (e.g. at the Deutsche Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(e.g. http://nbn-resolving.de/)</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.journalContent">Journal Content</message>
+	<message key="plugins.pubIds.urn.manager.settings.URNsForJournalContent">Choose the objects the URNs should be assigned to.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URNs will be assigned to issues.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableArticleURN">URNs will be assigned to articles.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableGalleyURN">URNs will be assigned to galleys (e.g. HTML or PDF files).</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSuppFileURN">URNs will be assigned to supplementary files.</message>
+
+	<!-- custom URN suffix for an object -->
+	<message key="plugins.pubIds.urn.metadata">URN Metadata</message>
+	<message key="plugins.pubIds.urn.urnSuffix">URN Suffix</message>
+	<message key="plugins.pubIds.urn.urnSuffix.description">Custom URN Suffix for this article.</message>
+	<message key="plugins.pubIds.urn.calculateCheckNo">Calculate Check Number</message>
+	
+	<!--  metadata form -->
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">issue</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">article</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">galley</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">supplementary file</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">What you see is a preview of the URN that may be incomplete. A URN has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique URN for this {$pubObjectType}.</message>
+
+	<!-- consider URNs at other places in the system -->
+	<message key="plugins.pubIds.urn.rt.metadata.urn">Uniform Resource Name</message>
+
+	<!-- errors -->
+	<message key="plugins.pubIds.urn.manager.settings.form.journalContentRequired">Please choose the objects URNs should be assigned to.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixRequired">Please enter the URN prefix.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[The URN prefix pattern must be in the form "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired">Please enter the URN suffix pattern for issues.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnArticleSuffixPatternRequired">Please enter the URN suffix pattern for articles.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnGalleySuffixPatternRequired">Please enter the URN suffix pattern for galleys.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnSuppFileSuffixPatternRequired">Please enter the URN suffix pattern for supplementary files.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.namespaceRequired">Please choose a namespace.</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Please enter the resolver URL.</message>
+
+	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
+	<message key="plugins.pubIds.urn.form.checkNoRequired">The check number is missing.</message>
+
+</locale>

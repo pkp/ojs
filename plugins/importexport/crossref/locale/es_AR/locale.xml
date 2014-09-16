@@ -22,20 +22,13 @@
 	{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 	{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
 	]]></message>
-	<message key="plugins.importexport.crossref.settings.depositorIntro">Por favor ingrese el nombre y el email de la persona responsable del depósito del DOI CrossRef.</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorName">Nombre del depositante</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email del depositante</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Por favor ingrese el nombre del depositante.</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Por favor ingrese el email del depositante.</message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Usar el registro automático</message>
-	<message key="plugins.importexport.crossref.settings.form.description">Por favor configure el conector de exportación/registro de CrossRef:</message>
-	<message key="plugins.importexport.crossref.settings.form.username">Usuario</message>
-	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Por favor ingrese su nombre de usuario de CrossRef</message>
-	<message key="plugins.importexport.crossref.export.unregistered">Exportar todos los artículos sin registrar</message>
-	<message key="plugins.importexport.crossref.export.selectUnregistered">Seleccionar artículos sin registrar</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Todos los artículos publicados ya han sido registrados (o ninguno de ellos posee un DOI asignado)</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">La fecha de publicado falta para el artículo con ID {$param}.</message>
-	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Si usted quiere registrar DOIs con CrossRef, por favor siga las instrucciones de la <a href="http://www.crossref.org" target="_blank">página de CrossRef</a> para recibir un usuario y una clave. Si usted no posee su propio usuario yc lave igualmente podrá exportar hacia el formato de XML de CrossRef, pero po nodrá registrar sus DOIs con CrossRef desde OJS. 
-Por favor notese que la clave será almacenada en texto plano, o sea que no será encriptada, dados los requerimientos de registración del servicio de CrossRef,]]></message>
-	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Por favor <a href="{$settingsUrl}">configure</a> el conetor de exportación/registro de CrossRef antes de usarlo por primera vez.]]></message>
+	<message key="plugins.importexport.crossref.export">Datos de exportación</message>
+	<message key="plugins.importexport.crossref.export.issues">Exportar números</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Seleccione un número para exportar</message>
+	<message key="plugins.importexport.crossref.export.articles">Exportar Artículos</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Seleccione Artículos para exportar</message>
+	<message key="plugins.importexport.crossref.cliError">ERROR:</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Ningún número se relaciona con el ID especificado: "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ningún artículo se asocia con el ID especificado: "{$articleId}"</message>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Para utilizar este plugin por favor acceda a la categoría de plugin para "Identificador Público", habilite y configure el plugin DOI y especifique un DOI válido.</message>
 </locale>

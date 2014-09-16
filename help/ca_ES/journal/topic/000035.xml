@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000035.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Payments 
   *
   -->
 
-<topic id="journal/topic/000035" locale="en_US" title="Payments" toc="journal/toc/000001" key="journal.managementPages.payments">
+<topic id="journal/topic/000035" locale="ca_ES" title="Payments" toc="journal/toc/000001" key="journal.managementPages.payments">
 	<section>
 		<![CDATA[<p>From the Journal Management page, the Journal Manager can enable the Fee Payment Module to accept payments, either via PayPal or through a manual process, for author fees and article access. The Fee Payment Module keeps track of paid users, and also displays fee information in the journal's About page. Additionally, with the Fee Payment Module enabled it is possible for users to renew subscriptions and memberships from their User Home page.</p><p>The Fee Payment module is split into three different subsections: Fee Payment Options, Fee Payment Methods, and Records.</p>]]>
 </section>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/doi/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOI plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">该插件能够为期次，文章，样稿和附加文件分配DOI。</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">DOI 插件设置</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">请配置DOI插件开启管理和使用DOI。</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">期刊目录</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">请选择DOI指定的对象。</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">请选择DOI指定的出版对象。</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>注意：</strong> 使用<a href="http://www.crossref.org" target="_new">CrossRef</a> DOIs时, 请选择文章。文章被视作作品, 例如， 知识和艺术的实体。 因此，发表的文章已DOI导出和注册为基础。]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">期次</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">文章</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">样稿</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">附加文件</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI 字首</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[DOI字首由注册机构指定（例如，a href="http://www.crossref.org" target="_new">CrossRef</a>）格式为10.xxxx （例如， 10.1234）：]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">DOI字首是强制性的，并且格式为10.xxxx。</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI 字尾</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">DOI字尾可以是任何格式，但是在相同DOI字首的情况下，字尾是不同的。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">使用以下模式生成DOI字尾。%j 为期刊首字母, %v 为卷号, %i 为期数, %Y 为年份, %a 为OJS文章ID, %g 为OJS样稿 ID, %s 为OJS附加文件 ID, %p 为页数 %x 为"自定义标识符"（在设置4.3启用）。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">期次</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">文章</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">样稿</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">附加文件。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">例如, vol%viss%ipp%p 生成的DOI为10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">使用默认模式。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i 期次<br />%j.v%vi%i.%a 文章<br />%j.v%vi%i.%a.g%g 样稿 <br />%j.v%vi%i.%a.s%s 附加文件。]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">使用“自定义标识符”作为DOI字尾（启动设置4.3）。相同的标识符被用作公共网址。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">请输入每个出版项目的DOI字尾，并且区别于以上“自定义标识符”。您将在每个项目元数据页发现一个额外的DOI输入段。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">请输入期次DOI字尾模式。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">请输入文章DOI字尾模式。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">请输入样稿的DOI字尾模式。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">请输入附加文件的DOI字尾模式。</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">重新分配DOI。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">如果你改变DOI配置，已指定的DOI不会受到影像。一旦DOI配置已保存，使用此按钮清楚所有现有的DOI，这样新的设置就会在现有文章上生效。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">您确定删除所有现有的DOI？</message>	
+
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">期次</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">文章</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">样稿</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">附加文件</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">您看见的只是DOI预览，可能不会完整。DOI尚未生成。串班期次并且浏览公共{$pubObjectType}页将使{$pubObjectType}自动生成一个独特的DOI。</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">指定的DOI字尾已被其它出版项目使用。请输入一个独特的DOI字尾。</message>
+</locale>

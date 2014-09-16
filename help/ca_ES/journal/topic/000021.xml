@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000021.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Roles - Reviewer 
   *
   -->
 
-<topic id="journal/topic/000021" locale="en_US" title="Reviewer" toc="journal/toc/000003" key="journal.roles.reviewer">
+<topic id="journal/topic/000021" locale="ca_ES" title="Reviewer" toc="journal/toc/000003" key="journal.roles.reviewer">
 	<section>
 		<![CDATA[<p>The Reviewer is selected by the Section Editor to review a submission. Reviewers are asked to submit reviews to the journal's web site (although some journals opt for an email review policy) and are able to upload attachments for the use of the Editor and Author. Reviewers may be rated by Section Editors, again depending on the policies for this journal.</p><p>More information can be found {help_topic key="editorial.reviewersRole" text="here"}.</p>]]>	
 	</section>

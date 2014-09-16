@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/timedView/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * Localization strings
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.timedView.displayName">Reporte de Cantidad de Veces Visto</message>
+	<message key="plugins.generic.timedView.description">Este plugin implementa un reporte  CSV que describe la cantidad de lecturas que cada artículo ha tenido, filtradas por algún intervalo de tiempo definido por el usuario.</message>
+
+	<message key="plugins.generic.timedView.form.dateStartRequired">Una fecha de inicio es requerida.</message>
+	<message key="plugins.generic.timedView.form.dateStartValid">Por favor seleccione una fecha de inicio válida</message>
+	<message key="plugins.generic.timedView.form.dateEndRequired">Una fecha de fin es requerida.</message>
+	<message key="plugins.generic.timedView.form.dateEndValid">Por favor seleccione una fecha de fin válida.</message>
+	<message key="plugins.generic.timedView.form.generate">Generar Reporte.</message>
+	<message key="plugins.generic.timedView.form.clearLogs">Vaciar los Logs</message>
+	<message key="plugins.generic.timedView.form.clearLogs.description">Seleccionar una fecha para eliminar los reportes de los logs. Cualquier entrada de log anterior a la fecha seleccionada será borrada. Note que esto solo afecta al log del plugin de cantidad de veces visto y no a otros logs o cotes realizados de otra forma. (EJ: por el plugin de vistas general).</message>
+	<message key="plugins.generic.timedView.form.clearLogs.confirm">¿Esta seguro que quiere elimar este registro? Este proceso no puede ser deshecho una vez realiizado.</message>
+
+	<message key="plugins.generic.timedView.report.articleId">ID de Artículo</message>
+	<message key="plugins.generic.timedView.report.articleTitle">Título de Artículo</message>
+	<message key="plugins.generic.timedView.report.datePublished">Fecha de publicación</message>
+	<message key="plugins.generic.timedView.report.abstractViews">Vistas del Resumen</message>
+	<message key="plugins.generic.timedView.report.galleyViews">Total de Vistas Galeradas</message>
+</locale>

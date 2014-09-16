@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.importexport.doaj.displayName">Plugiciel d'exportation DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Exporte la revue vers DOAJ et envoie par courriel l'information de la revue pour l'intégration</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Exporter les données de la revue vers DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Exporter la revue</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Exporter l'information de l'article en XML pour archivage dans DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contact">Communiquer avec DOAJ pour intégration</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">Pour que votre revue soit considérée pour une intégration dans le DOAJ, veuillez soumettre ce formulaire partiellement complété automatiquement au DOAJ, et remplir les informations incomplètes du mieux que vous pouvez.</message>
+</locale>

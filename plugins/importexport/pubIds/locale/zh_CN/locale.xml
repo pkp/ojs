@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/pubIds/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<!-- plugin -->
+	<message key="plugins.importexport.pubIds.displayName">公共标识符XML插件</message>
+	<message key="plugins.importexport.pubIds.description">导入和导出公共标识符。</message>
+
+	<message key="plugins.importexport.pubIds.cliUsage">使用方法: {$scriptName} {$pluginName} [command] ...
+命令:
+	导入 [xmlFileName] [journal_path] [user_name]
+	导出[xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	导出 [xmlFileName] [journal_path] issue [issueId]</message>
+
+	<message key="plugins.importexport.pubIds.export">导出公共标识符</message>
+	<message key="plugins.importexport.pubIds.export.forIssues">导出公共标识符。</message>
+	<message key="plugins.importexport.pubIds.export.selectIssue">选择期次</message>
+	<message key="plugins.importexport.pubIds.export.selectIssue.description">请选择您希望导出公共标识符的期次。</message>
+
+	<message key="plugins.importexport.pubIds.import">导入公共标识符</message>
+	<message key="plugins.importexport.pubIds.import.description">插件支持pubIds.dtd 文件类型定义的导入。</message>
+	<message key="plugins.importexport.pubIds.import.results">导入结果</message>
+	<message key="plugins.importexport.pubIds.import.errors">导出错误</message>
+	<message key="plugins.importexport.pubIds.import.errors.description">导入过程中出现一个或者多个错误。请检查导入文件的格式是否正确。导入错误的具体细节已列出。</message>
+	<message key="plugins.importexport.pubIds.import.success">导入成功</message>
+	<message key="plugins.importexport.pubIds.import.success.description">成功导入公共标识符已列出。</message>
+
+	<!-- errors -->
+	<message key="plugins.importexport.pubIds.cliError">错误:</message>
+	<message key="plugins.importexport.pubIds.cliError.unknownJournal">期刊路径 "{$journalPath}"不存在。</message>
+	<message key="plugins.importexport.pubIds.cliError.unknownUser">用户"{$userName}"不存在。</message>
+	<message key="plugins.importexport.pubIds.cliError.issueNotFound">找不到指定期次ID "{$issueId}"的文件。</message>
+	<message key="plugins.importexport.pubIds.cliError.couldNotWrite">无法写入文件"{$fileName}".</message>
+
+	<message key="plugins.importexport.pubIds.import.error.uploadFailed">上传失败；请检查您的服务器是否允许上传文件，并且确保对您的网页和网站服务器配置来说，文件</message>
+	<message key="plugins.importexport.pubIds.import.error.unsupportedRoot">插件不支持根节点 "{$rootName}"。请检查文件的格式是否正确然后重新尝试。</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownObjectType">未知对象类型“{$pubObjectType}”指定的“pubobjecttype”属性的元素的值“{ $ pubid }”。</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownObject">对象"{$pubObjectType}"  ID = {$pubObjectId} 元素中指定的值 "{$pubId}" 不存在这个期刊中。</message>
+	<message key="plugins.importexport.pubIds.import.error.pubIdExists">公共标识符类型 "{$pubIdType}"对象{$pubObjectType}  ID = {$pubObjectId} 已经存在。</message>
+	<message key="plugins.importexport.pubIds.import.error.duplicatePubId">公共标识符"{$pubId}"已被其他用户使用。</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownPubId">您导入文件包含的公共标识符类型"{$pubIdType}" ，pubId 插件无法处理。请安装并且/或者激活对应的 pubId 插件在导入数据集之前。</message>
+
+
+</locale>
