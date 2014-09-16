@@ -12,7 +12,7 @@
  *
  -->
 
-<schema version="1.0">
+<schema version="0.2">
 	<!--
 	 *
 	 * TABLE pln_deposit_objects
