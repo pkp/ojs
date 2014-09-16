@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * @file plugins/generic/alm/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
+  * ALM plugin localization strings
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.generic.alm.displayName">Mòdul ALM</message>
+	<message key="plugins.generic.alm.description">Mòdul per a mostrar la Mètrica a Nivell d'Article (ALM, Article Level Metrics). Per a utilitzar el servei ALM, necessites disposar de DOIs. Aquest requeriment pot relaxar-se en un futur.</message>
+	<message key="plugins.generic.alm.title">Mètriques d'articles</message>
+	<message key="plugins.generic.alm.loading">Carregant mètriques ...</message>
+
+	<message key="plugins.generic.alm.settings">Configuració</message>
+	<message key="plugins.generic.alm.settings.saved">S'ha guardat la configuració del mòdul ALM.</message>
+	<message key="plugins.generic.alm.apiKeyRequired">Heu d'afegir la vostre clau de l'API de ALM (Article Level Metrics)</message>
+	<message key="plugins.generic.alm.depositUrlRequired">Heu d'afegir la url del dipòsit d'informació d'article.</message>
+	<message key="plugins.generic.alm.settings.apiKey">Clau API de l'ALM (Article Level Metrics)</message>
+	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[Per a que el servidor ALM pugui accedir a les mètriques a nivell d'article, cal la clau API. Pots crear-ne una entrant (utilitzant Mozilla Persona)
+a la <a href="http://pkp-alm.lib.sfu.ca/">pàgina ALM de PKP</a>.]]></message>
+	<message key="plugins.generic.alm.settings.depositUrl">URL del dipòsit d'informació d'article</message>
+	<message key="plugins.generic.alm.settings.depositUrl.description">URL proporcionada per PKP per a dipositar articles.</message>
+	<message key="plugins.generic.alm.settings.ipAddress">Quan contacti amb PKP per a configurar el servei ALM, proporcioni aquesta adreça IP: {$ip}</message>
+
+	<message key="plugins.generic.alm.thisJournal">Aquesta revista</message>
+	<message key="plugins.generic.alm.categories.html">Vistes HTML.</message>
+	<message key="plugins.generic.alm.categories.html.description">Número total de visionats del HTML de la pàgina d'aquest article. Aquests visionats es computen pel propi sistema. El comput mensual de visionats tambè pot estar disponible.</message>
+	<message key="plugins.generic.alm.categories.pdf">Vistes PDF.</message>
+	<message key="plugins.generic.alm.categories.pdf.description">Número total de visionats i descàrregues del PDF d'aquest article. Aquests visionats es computen pel propi sistema. El comput mensual de visionats tambè pot estar disponible.</message>
+	<message key="plugins.generic.alm.categories.shares">Shares</message>
+	<message key="plugins.generic.alm.categories.shares.description">Shares or bookmarks a les xarxes socials com Facebook, CiteULike i Mendeley. A la majoria dels casos, clicar en el número de shares el portarà al llistat a la xarxa corresponent.</message>
+	<message key="plugins.generic.alm.categories.likes">Likes</message>
+	<message key="plugins.generic.alm.categories.likes.description">Likes trobats a xarxes socials com Facebook.</message>
+	<message key="plugins.generic.alm.categories.citations">Citacions</message>
+	<message key="plugins.generic.alm.categories.citations.description">Citations de l'article trobades a CrossRef, PubMed i Wikipedia. En la majoria dels casos, clicant al comptador de cites el portarà al llistat corresponent del servei de referencies.</message>
+
+	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">El mòdul ALM està actiu però cal especificar un prefix DOI vàlid al camí de la {$path}. Configura'l per a enviar informació de l'article.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">El mòdul ALM està actiu però no hi ha una clau de l'API definida per a la revista amb el camí {$path}.</message>
+	<message key="plugins.generic.alm.senderTask.error.noServerResponse">No es pot confirmar que s'hagi enviat la informació de l'article per a la revista amb camí {$path}. El servidor no respòn.</message>
+	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">No s'ha definit la URL del dipòsit.</message>
+	<message key="plugins.generic.alm.senderTask.error.returnError">El servidor ha retornat el missatge: {$error}
+	S'han enviat {$articlesNumber} entrades d'articles.
+	{$payload}</message>
+	<message key="plugins.generic.alm.senderTask.name">Informació ALM del remitent de l'article</message>
+</locale>

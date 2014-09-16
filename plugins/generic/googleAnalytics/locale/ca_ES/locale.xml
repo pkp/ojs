@@ -1,25 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Google Analytics plugin localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
 
 	<!-- Google Analytics -->
-	<message key="plugins.generic.googleAnalytics.displayName">Connector Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integreu l'OJS amb Google Analytics, l'aplicació de Google per a l'anàlisi del trànsit de llocs web. Per utilitzar aquest connector, cal que disposeu d'un compte de Google Analytics. Si necessiteu més informació, vegeu la <a href="http://www.google.com/analytics/" title="Google Analytics site">pàgina de Google Analytics</a>.]]></message>
+	<message key="plugins.generic.googleAnalytics.displayName">Mòdul Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integreu l'OJS amb Google Analytics, l'aplicació de Google per a l'anàlisi del trànsit de llocs web. Per utilitzar aquest mòdul, cal que disposeu d'un compte de Google Analytics. Si necessiteu més informació, vegeu la <a href="http://www.google.com/analytics/" title="Google Analytics site">pàgina de Google Analytics</a>.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Configuració</message>
 	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Configuració de Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Si activeu aquest connector podreu utilitzar Google Analytics per recollir i analitzar dades relatives a l'ús web i al trànsit d'aquesta revista. Tingueu en compte que per poder utilitzar aquest connector heu de disposar d'un compte de Google Analytics. Si necessiteu més informació, vegeu la <a href="http://www.google.com/analytics/" title="Google Analytics site">pàgina de Google Analytics</a>.</p><p>Tingueu en compte que Google Analytics pot necessitar fins a 24 hores per recollir i llistar les estadístiques. Durant aquest període és possible que la funció «Check Status» no informi de forma precisa sobre si ha detectat el codi de seguiment necessari per a la revista.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Si activeu aquest mòdul podreu utilitzar Google Analytics per recollir i analitzar dades relatives a l'ús web i al trànsit d'aquesta revista. Tingueu en compte que per poder utilitzar aquest mòdul heu de disposar d'un compte de Google Analytics. Si necessiteu més informació, vegeu la <a href="http://www.google.com/analytics/" title="Google Analytics site">pàgina de Google Analytics</a>.</p><p>Tingueu en compte que Google Analytics pot necessitar fins a 24 hores per recollir i llistar les estadístiques. Durant aquest període és possible que la funció «Check Status» no informi de forma precisa sobre si ha detectat el codi de seguiment necessari per a la revista.</p>]]></message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Número de compte</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Dins el Google Analytics, feu clic a 'Check Status' per visualitzar el codi de seguiment del lloc web. Amb codis de seguiment antics, el número de compte es mostra al codi de seguiment com a: _uacct = "###". Amb codis de seguiment nous, el número de compte es mostra al codi de seguiment com a: var pageTracker = _gat._getTracker("###"). Introduïu el text que correspon a ###.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Introduïu un número de compte.</message>
@@ -30,4 +32,5 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount">Número de compte de Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Per fer un seguiment amb el Google Analytics del nombre total de lectors/ores d'un article publicat, introduïu un número de compte aquí (p. ex. UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Un o més números de compte de Google Analytics enviats per als autors/ores de les trameses no són vàlids.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nou codi de seguiment per Universal Analytics (analytics.js)</message>
 </locale> 

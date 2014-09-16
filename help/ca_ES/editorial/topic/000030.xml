@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Reviewer's Role Index - Submissions 
   *
   -->
 
-<topic id="editorial/topic/000030" locale="en_US" title="Submissions" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+<topic id="editorial/topic/000030" locale="ca_ES" title="Submissions" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
 	<section>
 		<![CDATA[<p>En iniciar la sessió a la revista, el revisor/a accedeix a la pàgina inicial d'usuari/ària. En fer clic al rol de revisor/a (tingueu en compte que el revisor/a també pot haver estat donat d'alta en altres rols, com ara el d'autor/a), el revisor/a accedeix a la pàgina d'informes, on s'enumeren les trameses que està revisant o per a les quals ha rebut una sol·licitud de revisió. La cua d'informes també indica la ronda en què es troba la revisió ja que en algunes ocasions pot ser necessària una segona ronda, concretament si l'editor/a de secció ha decidit que la tramesa s'ha de reavaluar. A través d'aquesta pàgina el revisor/a també pot accedir a altres revisions que hagi fet a la revista.</p>]]>	
 	</section>

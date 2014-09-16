@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.tinymce.name">Connector TinyMCE</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Aquest connector habilita l'edició WYSIWYG de les àrees de text de l'OJS mitjançant l'editor de continguts <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Aquest connector habilita l'edició WYSIWYG de les àrees de text de l'OJS mitjançant l'editor de continguts <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE no està instal·lat. Instaleu-lo a {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.name">Mòdul TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Aquest mòdul habilita l'edició WYSIWYG de les àrees de text de l'OJS mitjançant l'editor de continguts <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Aquest mòdul habilita l'edició WYSIWYG de les àrees de text de l'OJS mitjançant l'editor de continguts <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE no està instal·lat. Instaleu-lo a {$tinyMcePath}.</strong>]]></message>
 	<message key="plugins.generic.tinymce.settings">Configuració</message>
-</locale> 
+</locale>

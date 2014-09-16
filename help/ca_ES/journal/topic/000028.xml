@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000028.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Management Pages - Reading Tools - Contexts
   *
   -->
 
-<topic id="journal/topic/000028" locale="en_US" title="Contexts" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
+<topic id="journal/topic/000028" locale="ca_ES" title="Contexts" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
 	<section>
 		<![CDATA[<p>Each set of Reading Items is made up of individual tools (e.g., Related Studies, Online Forums, etc.) with each tool consisting of a number of relevant databases grouped into a context. These databases, and the contexts they are organized into, can be created, edited or deleted.</p><p><em>Metadata for items in a context</em>. The Journal Manager can alter the title of the tool. It also provides an option to determine whether the author's keywords (the default), the author's name (e.g., for use with Author's Other Works), or geographical indexing terms will be used for the searching of the database. Another option, used with Define Terms, allows the reader to select the search term by double clicking on any word in the text of the item being read in the journal. Journal Managers can use these options in building their own reading tools.</p><p><em>Edit searches for each tool</em>. Using Searches, the Journal Manager can edit or delete the search URL for each database in a tool, as well as reorder the databases that appear in the tool. For each database, a URL is provided that will enable the reader to learn more about the database, and a URL for that enables the search to be conducted. There are two types of searches that can be set up, a GET search, and if that will not work with the database, a POST search is also supported.</p>]]>
 	</section>

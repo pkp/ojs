@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
-
 <!--
   * locale/ca_ES/emailTemplateData.xml
   *
@@ -8,13 +7,15 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Localized email templates XML file.
   -->
 
 <email_texts locale="ca_ES">
 	<email_text key="NOTIFICATION">
 		<subject>Notificació nova de {$siteTitle}</subject>
-		<body>Teniu una notificació nova de {$siteTitle}:
+		<body>Teniu una notificació nova de {$siteTitle}: 
 
 {$notificationContents}
 
@@ -32,7 +33,7 @@ Enllaç: {$url}
 Enllaç: {$url}
 --
 
-Si no voleu rebre més notificacions per correu electrònic, dirigiu-vos a {$unsubscribeLink} i introduïu la vostra adreça electrònica i la vostra contrasenya.
+Si no voleu rebre més notificacions per correu electrònic, dirigiu-vos a {$unsubscribeLink}. 
 
 {$principalContactSignature}</body>
 		<description>Aquest missatge de correu electrònic s'envia als usuaris/àries no registrats de la llista de notificacions.</description>
@@ -41,14 +42,15 @@ Si no voleu rebre més notificacions per correu electrònic, dirigiu-vos a {$uns
 		<subject>Benvingut/uda a la llista de correu de {$siteTitle}.</subject>
 		<body>Us heu registrat per rebre notificacions de {$siteTitle}.
 
-Feu clic a aquest enllaç per confirmar la sol·licitud i afegir la vostra adreça electrònica a la llista de correu: {$confirmLink}
+Feu clic en aquest enllaç per confirmar la sol·licitud i afegir la vostra adreça electrònica a la llista de correu:
+{$confirmLink}
 
 Si no voleu rebre més notificacions per correu electrònic, dirigiu-vos a {$unsubscribeLink}.
 
 {$principalContactSignature}</body>
 		<description>Aquest missatge de correu electrònic s'envia a un usuari/ària no registrat que s'acaba de registrar a la llista de notificacions.</description>
 	</email_text>
-		<email_text key="PASSWORD_RESET_CONFIRM">
+	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Confirmació per reinicialitzar la contrasenya</subject>
 		<body>Hem rebut una sol·licitud per reinicialitzar la vostra contrasenya per al lloc web {$siteTitle}.
 
@@ -61,7 +63,9 @@ Reinicialitza la meva contrasenya: {$url}
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Reinicialitza la contrasenya</subject>
-		<body>La vostra contrasenya per al lloc web {$siteTitle} s'ha reinicialitzat correctament. Recordeu aquest nom d'usuari/ària i aquesta contrasenya, ja que els necessitareu per accedir a la revista i treballar-hi.
+		<body>La vostra contrasenya per al lloc web {$siteTitle} s'ha reinicialitzat correctament.
+
+Recordeu aquest nom d'usuari/ària i aquesta contrasenya, ja que els necessitareu per accedir a la revista i treballar-hi.
 
 Nom d'usuari/ària: {$username}
 Contrasenya nova: {$password}
@@ -73,50 +77,53 @@ Contrasenya nova: {$password}
 		<subject>Registre a la revista</subject>
 		<body>Benvolgut/uda {$userFullName},
 
-Us acabeu de registrar com a usuari/ària de {$journalName}. Aquest missatge de correu electrònic conté el vostre nom d'usuari/ària i la vostra contrasenya. Necessitareu aquestes dades per accedir al lloc web de la revista i treballar-hi. Recordeu que en qualsevol moment em podeu sol·licitar que us suprimeixi de la llista d'usuaris/àries de la revista.
+us acabeu de registrar com a usuari/ària de {$journalName}. Aquest missatge de correu electrònic conté el vostre nom d'usuari/ària i la vostra contrasenya. Necessitareu aquestes dades per accedir al lloc web de la revista i treballar-hi. Recordeu que en qualsevol moment em podeu sol·licitar que us elimini de la llista d'usuaris/àries de la revista.
 
 Nom d'usuari/ària: {$username}
 Contrasenya: {$password}
 
-Moltes gràcies, {$principalContactSignature}</body>
+Moltes gràcies,
+{$principalContactSignature}</body>
 		<description>Aquest missatge de correu electrònic s'envia a un usuari/ària que s'acaba de registrar per donar-li la benvinguda al sistema i fer-li arribar el seu nom d'usuari/ària i la seva contrasenya.</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>Valideu el vostre compte</subject>
 		<body>Benvolgut/uda {$userFullName},
 
-Heu creat un compte d'usuari/ària per a {$journalName}, però abans de poder-lo començar a utilitzar heu de validar el vostre compte de correu electrònic. Per fer-ho, seguiu l'enllaç següent:
+heu creat un compte d'usuari/ària per a {$journalName}, però abans de poder-lo començar a utilitzar heu de validar el vostre compte de correu electrònic. Per fer-ho, seguiu l'enllaç següent:
 
 {$activateUrl}
 
-Moltes gràcies, {$principalContactSignature}</body>
-		<description>Aquest missatge de correu electrònic s'envia a un usuari/ària que s'acaba de registrar per donar-li la benvinguda al sistema i fer-li arribar el seu nom d'usuari/ària i la seva contrasenya.</description>
+Moltes gràcies,
+{$principalContactSignature}</body>
+		<description>Aquest missatge de correu electrònic s'envia a un usuari/ària que s'acaba de registrar per validar el seu compte de correu electrònic.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
 		<subject>Registre com a revisor/a a {$journalName}</subject>
-		<body>Després d'avaluar el vostre perfil, ens hem pres la llibertat de registrar el vostre nom a la base de dades de revisors/ores per a {$journalName}. El fet de pertànyer a aquesta base de dades no suposa cap compromís per part vostra i, d'altra banda, ens permet fer-vos arribar propostes de revisions. Quan rebeu una proposta de revisió d'un document tindreu l'oportunitat de consultar-ne el títol i el resum, i tant podreu acceptar com rebutjar la invitació. En qualsevol moment podeu sol·licitar que se suprimeixi el vostre nom d'aquesta llista de revisors/ores.
+		<body>Després d'avaluar el vostre perfil, ens hem pres la llibertat de registrar el vostre nom a la base de dades de revisors/ores per a {$journalName}. El fet de pertànyer a aquesta base de dades no suposa cap compromís per part vostra i, d'altra banda, ens permet fer-vos arribar propostes de revisions. Quan rebeu una proposta de revisió d'un document tindreu l'oportunitat de consultar-ne el títol i el resum, i tant podreu acceptar com rebutjar la invitació. En qualsevol moment podeu sol·licitar que s'elimini el vostre nom d'aquesta llista de revisors/ores.
 
 A continuació trobareu el vostre nom d'usuari/ària i la vostra contrasenya. Necessitareu aquestes dades per entrar al lloc web de la revista i treballar-hi. És possible que, per exemple, vulgueu actualitzar el vostre perfil i incloure-hi els vostres interessos de revisió.
 
 Nom d'usuari/ària: {$username}
 Contrasenya: {$password}
 
-Moltes gràcies, {$principalContactSignature}</body>
+Moltes gràcies,
+{$principalContactSignature}</body>
 		<description>Aquest missatge de correu electrònic s'envia a un revisor/a que s'acaba de registrar per donar-li la benvinguda al sistema i fer-li arribar el seu nom d'usuari/ària i la seva contrasenya.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
 		<subject>Número nou publicat</subject>
 		<body>Benvolguts/udes lectors/ores,
 
-{$journalName} acaba de publicar el seu darrer número a {$journalUrl}. Us convidem a consultar-ne el sumari i a visitar el nostre lloc web per accedir als articles i documents que us puguin interessar.
+{$journalName} acaba de publicar el seu darrer número a {$journalUrl}. Us convidem a consultar-ne el sumari i a visitar el nostre lloc web per accedir als articles i documents que us puguin interessar. 
 
-Us agraïm el vostre interès per la nostra revista.
+s agraïm el vostre interès per la nostra revista.
 {$editorialContactSignature}</body>
 		<description>Aquest missatge de correu electrònic s'envia als lectors/ores registrats mitjançant l'enllaç «Notifica als usuaris/àries» que hi ha a l'àrea personal de l'editor/a. Notifica als lectors/ores la publicació d'un número nou i els convida a entrar a la revista mitjançant l'enllaç proporcionat.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
 		<subject>Sol·licitud d'arxivament per a {$journalName}</subject>
-		<body><![CDATA[Benvolgut/uda [bibliotecari universitari],
+		<body>Benvolgut/uda [bibliotecari universitari],
 
 {$journalName} &lt;{$journalUrl}&gt; és una revista en què un membre de la vostra facultat o universitat, [nom del membre], participa en qualitat de [nom del rol]. Des d'aquesta revista volem crear un arxiu amb la vostra biblioteca universitària i altres biblioteques, d'acord amb la iniciativa LOCKSS (Lots of Copies Keep Stuff Safe).
 
@@ -126,33 +133,33 @@ L'URL del LOCKSS Publisher Manifest per a la nostra revista és: {$journalUrl}/g
 
 Entenem que ja esteu col·laborant amb LOCKSS. Per tant, no dubteu a sol·licitar-nos totes les metadades addicionals que necessiteu per registrar aquesta revista a la vostra versió de LOCKSS.
 
-Moltes gràcies,
-{$principalContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic sol·licita al conservador/a de l'arxiu LOCKSS incloure aquesta revista al seu arxiu. Inclou l'URL del LOCKSS Publisher Manifest per a la revista.</description>
+Moltes gràcies, 
+{$principalContactSignature}</body>
+		<description>Aquest missatge de correu electrònic sol·licita al conservador/a de l'arxiu LOCKSS que inclogui aquesta revista al seu arxiu. Inclou l'URL del LOCKSS Publisher Manifest per a la revista.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
 		<subject>Sol·licitud d'arxivament per a {$journalName}</subject>
-		<body><![CDATA[Benvolgut/uda [bibliotecari universitari],
+		<body>Benvolgut/uda [bibliotecari universitari],
 
 {$journalName} &lt;{$journalUrl}&gt; és una revista en què un membre de la vostra facultat o universitat, [nom del membre], participa en qualitat de [nom del rol]. Des d'aquesta revista volem crear un arxiu amb la vostra biblioteca universitària i altres biblioteques, d'acord amb la iniciativa LOCKSS (lots of copies keep stuff safe).
 
 [Descripció breu de la revista]
 
-El programa LOCKSS &lt;http://lockss.org/&gt;, una iniciativa internacional d'enllaç entre biblioteques i entitats publicadores, representa un exemple viu de conservació distribuïda i repositori d'arxivament. Es tracta d'una aplicació gratuïta executable en qualsevol ordinador personal que podeu gestionar fàcilment i per a la qual es requereix un manteniment mínim.
+El programa LOCKSS &lt;http://lockss.org/&gt;, una iniciativa internacional d'enllaç entre biblioteques i entitats publicadores, representa un exemple viu de conservació distribuïda i repositori d'arxivament. Es tracta d'una aplicació gratuïta executable en qualsevol ordinador personal que podeu gestionar fàcilment i per a la qual es requereix un manteniment mínim. 
 
 Per contribuir a l'arxivament d'aquesta revista, us convidem a ser membre de la comunitat LOCKSS i a col·laborar en la recopilació i conservació de títols elaborats a la vostra facultat o universitat i en altres entitats acadèmiques de l'àmbit internacional. Per fer-ho, us recomanem que algun membre del vostre personal visiti el lloc web de LOCKSS per obtenir informació sobre el funcionament d'aquest sistema. Confio rebre ben aviat la vostra acceptació per col·laborar en l'arxivament d’aquesta revista.
 
 Moltes gràcies,
-{$principalContactSignature}]]></body>
+{$principalContactSignature}</body>
 		<description>Aquest missatge de correu electrònic convida el destinatari/ària a participar a la iniciativa LOCKSS i a incloure aquesta revista al seu arxiu. Proporciona informació sobre la iniciativa LOCKSS i com s'hi ha de participar.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>Justificant de recepció de la tramesa</subject>
-		<body>{$authorName}:
+		<body>{$authorName}: 
 
-Gràcies per haver tramès el manuscrit «{$articleTitle}» a {$journalName}. Gràcies al sistema de gestió de revistes en línia que utilitzem, en podreu seguir el progrés durant el procés editorial en iniciar la sessió al lloc web de la revista:
+Gràcies per haver tramès el manuscrit «{$articleTitle}» a {$journalName}. Gràcies al nostre sistema de gestió de revistes en línia, en podreu seguir el progrés durant el procés editorial en iniciar la sessió al lloc web de la revista: 
 
-URL del manuscrit: {$submissionUrl}
+Enllaç del manuscrit: {$submissionUrl} 
 Nom d'usuari/ària: {$authorUsername}
 
 Si teniu qualsevol dubte o consulta, no dubteu a fer-me-la arribar. Us agraeixo que hàgiu tingut en compte aquesta revista com a mitjà per difondre la vostra obra.
@@ -164,10 +171,9 @@ Si teniu qualsevol dubte o consulta, no dubteu a fer-me-la arribar. Us agraeixo 
 		<subject>Tramesa rebutjada</subject>
 		<body>{$authorName}:
 
-Després d'una primera revisió de «{$articleTitle}», hem decidit que aquesta tramesa no s'adequa a la temàtica i l'àmbit de {$journalName}. Per conèixer millor el tipus d'obres que publiquem us recomano que consulteu la descripció d'aquesta revista a la secció «Sobre la revista» i també els articles publicats fins ara. També podeu intentar trametre aquest manuscrit a una altra revista més adequada.
+Després d'una primera revisió de «{$articleTitle}», hem decidit que aquesta tramesa no s'adequa a la temàtica i l'àmbit de {$journalName}. Per conèixer millor el tipus d'obres que publiquem us recomano que consulteu la descripció d'aquesta revista a la secció «Quant a» i també els articles publicats fins ara. També podeu intentar trametre aquest manuscrit a una altra revista més adequada.
 
 {$editorialContactSignature}</body>
-		<description></description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Comentari de la tramesa</subject>
@@ -180,7 +186,7 @@ Després d'una primera revisió de «{$articleTitle}», hem decidit que aquesta 
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Decisió sobre «{$articleTitle}»</subject>
-		<body>Com a membre del grup de revisors de la tramesa «{$articleTitle}» per a la revista {$journalName}, us faig arribar les revisions i la decisió de l'editor/a enviats a l'autor/a d'aquesta obra. Gràcies una vegada més per la vostra important contribució a aquest procés.
+		<body>Com a membre del grup de revisors/ores de la tramesa «{$articleTitle}» per a la revista {$journalName}, us faig arribar les revisions i la decisió de l'editor/a enviats a l'autor/a d'aquesta obra. Gràcies una vegada més per la vostra important contribució a aquest procés.
 
 {$editorialContactSignature}
 
@@ -191,51 +197,52 @@ Després d'una primera revisió de «{$articleTitle}», hem decidit que aquesta 
 		<subject>Assignació editorial</subject>
 		<body>{$editorialContactName}:
 
-Us ha estat assignada la tramesa «{articleTitle}» per a la revista {$journalName} perquè en superviseu el procés editorial en qualitat d'editor/a de secció.
+Se us ha assignat la tramesa «{articleTitle}» per a la revista {$journalName} perquè en superviseu el procés editorial en qualitat d'editor/a de secció.
 
-URL de la tramesa: {$submissionUrl}
+Enllaç de la tramesa: {$submissionUrl}
 Nom d'usuari/ària: {$editorUsername}
 
 Moltes gràcies,
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic notifica a un editor/a de secció que l'editor/a li ha assignat la tasca de supervisar el procés editorial d'una tramesa. Proporciona informació sobre la tramesa i indica com s'ha d'accedir al lloc web de la revista.</description>
+		<description>Aquest missatge de correu electrònic notifica a un editor/a de secció que l'editor/a li ha assignat la tasca de supervisar el procés editorial d'una tramesa. Proporciona informació sobre la tramesa, i indica com s'ha d'accedir al lloc web de la revista.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Sol·licitud de revisió d'un article</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
-Considero que el vostre perfil és adequat per revisar el manuscrit «{$articleTitle}» tramès a la revista {$journalName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta tasca important.
+Considero que el vostre perfil és adequat per revisar el manuscrit «{$articleTitle}» tramès a la revista {$journalName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta tasca important. 
 
-Us demano que inicieu la sessió a la revista abans del {$weekLaterDate} per indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per accedir-hi i enregistrar-ne la revisió i recomanació. El lloc web és {$journalUrl}
+Us demano que inicieu la sessió a la revista abans del {$weekLaterDate} per indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per accedir-hi i enregistrar-ne la revisió i recomanació. El lloc web és {$journalUrl} 
 
 La data límit per a la revisió és el {$reviewDueDate}.
 
-Si heu perdut el vostre nom d'usuari/ària o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari/ària). {$passwordResetUrl}
+Si heu oblidat el vostre nom d'usuari/ària o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari/ària). {$passwordResetUrl} 
 
-URL de la tramesa: {$submissionReviewUrl}
+Enllaç de la tramesa: {$submissionReviewUrl} 
 
-Gràcies per tenir en compte aquesta sol·licitud.
+Gràcies per tenir en compte aquesta sol·licitud. 
 
 {$editorialContactSignature}
 
 
 
 «{$articleTitle}»
+
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció i s'envia a un possible revisor/a perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard al pas 2 de la configuració de la revista (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST_ATTACHED).</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a un possible revisor/a perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard al pas 2 de la configuració de la revista  (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST_ATTACHED).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Sol·licitud de revisió d'un article</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
-Considero que el vostre perfil és adequat per revisar el manuscrit «{$articleTitle}» tramès a la revista {$journalName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta tasca important.
+Considero que el vostre perfil és adequat per revisar el manuscrit «{$articleTitle}» tramès a la revista {$journalName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta important tasca.
 
 Us demano que inicieu la sessió a la revista abans del {$weekLaterDate} per indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per accedir-hi i enregistrar-ne la revisió i recomanació.
 
-La data límit per a la revisió és el {$reviewDueDate}. U
+La data límit per a la revisió és el {$reviewDueDate}.
 
-RL de la tramesa: {$submissionReviewUrl}
+Enllaç de la tramesa: {$submissionReviewUrl}
 
 Gràcies per tenir en compte aquesta sol·licitud.
 
@@ -247,35 +254,112 @@ Gràcies per tenir en compte aquesta sol·licitud.
 
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció i s'envia a un possible revisor/a perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard al pas 2 de la configuració de la revista i s'ha habilitat l'accés a la revisió en un clic.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a un possible revisor/a perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard al pas 2 de la configuració de la revista i s'ha habilitat l'accés a la revisió en un clic.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Sol·licitud de revisió d'un article</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
-Considero que el vostre perfil és adequat per revisar el manuscrit «{$articleTitle}», per la qual cosa us demano que valoreu la possibilitat d'encarregar-vos d'aquesta tasca important. A continuació trobareu les directrius de revisió d'aquesta revista, així com també la tramesa com a fitxer adjunt. M'hauríeu de fer arribar per correu electrònic la revisió de la tramesa i la recomanació corresponent abans del {$reviewDueDate}.
+Considero que el vostre perfil és adequat per revisar el manuscrit «{$articleTitle}», per la qual cosa us demano que valoreu la possibilitat d'encarregar-vos d'aquesta tasca important. A continuació trobareu les directrius de revisió d'aquesta revista, juntament amb un fitxer adjunt amb la tramesa. És necessari que em feu arribar per correu electrònic la revisió de la tramesa i la recomanació corresponent abans del {$reviewDueDate}.
 
 Us demano que respongueu a aquest missatge abans del {$weekLaterDate} per indicar-nos si accepteu encarregar-vos de la revisió.
 
 Gràcies per tenir en compte aquesta sol·licitud.
+
+{$editorialContactSignature}
+
+
+Directrius de revisió
+
+{$reviewGuidelines}</body>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a un possible revisor/a perquè accepti o rebutgi la revisió d'una tramesa. Inclou un fitxer adjunt amb la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió amb fitxer adjunt al pas 2 de la configuració de la revista. (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Sol·licitud de revisió d'un article</subject>
+		<body>{$reviewerName}:
+
+Us escrivim en referència al manuscrit «{$articleTitle}», del qual {$journalName} n'està considerant la seva publicació. 
+
+Seguint les observacions fetes en la revisió de la versió anterior, els autors/ores han tramès una versió revisada de l'article. Us agrairíem que ens ajudéssiu a avaluar-la.
+
+Us demano que inicieu la sessió a la revista abans del {$weekLaterDate} per indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per accedir-hi i enregistrar-ne la revisió i recomanació. El lloc web és {$journalUrl}.
+
+La data límit per a la revisió és el {$reviewDueDate}. 
+
+Si heu oblidat el vostre nom d'usuari/ària o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari/ària). {$passwordResetUrl}
+
+Enllaç de la tramesa: {$submissionReviewUrl}
+
+Gràcies per tenir en compte aquesta sol·licitud.
+
 {$editorialContactSignature}
 
 
 
+«{$articleTitle}»
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a un possible revisor/a perquè accepti o rebutgi una segona o posterior ronda de revisió de la tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard al pas 2 de la configuració de la revista (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Sol·licitud de revisió d'un article</subject>
+		<body>{$reviewerName}:
+
+Us escrivim en referència al manuscrit «{$articleTitle}», del qual {$journalName} n'està considerant la seva publicació.
+
+Seguint les observacions fetes en la revisió de la versió anterior, els autors/ores han tramès una versió revisada de l'article. Us agrairíem que ens ajudéssiu a avaluar-la.
+
+Us demano que inicieu la sessió a la revista abans del {$weekLaterDate} per indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per accedir-hi i enregistrar-ne la revisió i recomanació.
+
+La data límit per a la revisió és el {$reviewDueDate}.
+
+Enllaç de la tramesa: {$submissionReviewUrl}
+
+Gràcies per tenir en compte aquesta sol·licitud.
+
+{$editorialContactSignature}
+
+
+
+«{$articleTitle}»
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a un possible revisor/a perquè accepti o rebutgi una segona o posterior ronda de revisió de la tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard al pas 2 de la configuració de la revista i s'ha habilitat l'accés a la revisió en un clic.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Sol·licitud de revisió d'un article</subject>
+		<body>{$reviewerName}:
+
+Us escrivim en referència al manuscrit «{$articleTitle}», del qual {$journalName} n'està considerant la seva publicació.
+
+Seguint les observacions fetes en la revisió de la versió anterior, els autors/ores han tramès una versió revisada de l'article. Us agrairíem que ens ajudéssiu a avaluar-la.
+
+A continuació trobareu les directrius de revisió d'aquesta revista, juntament amb un fitxer adjunt amb la tramesa. És necessari que em feu arribar per correu electrònic la revisió de la tramesa i la recomanació corresponent abans del {$reviewDueDate}.
+
+Us demano que respongueu a aquest missatge abans del {$weekLaterDate} per indicar-nos si accepteu encarregar-vos de la revisió.
+
+Gràcies per tenir en compte aquesta sol·licitud.
+
+{$editorialContactSignature}
+
+
 Directrius de revisió
+
 {$reviewGuidelines}</body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció i s'envia a un possible revisor/a perquè accepti o rebutgi la revisió d'una tramesa. Inclou la tramesa com a fitxer adjunt. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió amb fitxer adjunt al pas 2 de la configuració de la revista (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST).</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a un possible revisor/a perquè accepti o rebutgi una segona o posterior ronda de revisió de la tramesa. Inclou un fitxer adjunt amb la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió amb fitxer adjunt al pas 2 de la configuració de la revista. (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>Sol·licitud de revisió cancel·lada</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
 Hem decidit cancel·lar la nostra sol·licitud perquè reviseu la tramesa «{$articleTitle}» per a {$journalName}. Lamentem les molèsties que us pugui causar aquesta decisió i confiem tornar a sol·licitar els vostres serveis de revisió per a aquesta revista en el futur.
 
 Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció i s'envia a un revisor/a que estigui revisant una tramesa per notificar-li que aquesta tasca ha estat cancel·lada.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a un revisor/a que estigui revisant una tramesa per notificar-li que aquesta tasca ha estat cancel·lada.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Accepto la revisió</subject>
@@ -284,7 +368,7 @@ Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 Accepto revisar la tramesa «{$articleTitle}» per a {$journalName}. Us agraeixo que m'hàgiu tingut en compte. La meva intenció és tenir-la acabada per a la data de venciment prevista ({$reviewDueDate}), o abans si és possible.
 
 {$reviewerName}</body>
-		<description>Aquest missatge de correu electrònic té un revisor/a com a remitent i s'envia a l'editor/a de secció en resposta a una sol·licitud de revisió per notificar-li que ha acceptat encarregar-se d'aquesta tasca i que la trametrà abans de la data indicada.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent un revisor/a, i s'envia a l'editor/a de secció en resposta a una sol·licitud de revisió per notificar-li que ha acceptat encarregar-se d'aquesta tasca i que la trametrà abans de la data indicada.</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Rebutjo la revisió</subject>
@@ -293,7 +377,7 @@ Accepto revisar la tramesa «{$articleTitle}» per a {$journalName}. Us agraeixo
 Lamento comunicar-vos que en aquesta ocasió no em podré encarregar de la revisió de la tramesa «{$articleTitle}» per a {$journalName}. Us agraeixo que m'hàgiu tingut en compte i confio que ens tornem a posar en contacte en una altra ocasió.
 
 {$reviewerName}</body>
-		<description>Aquest missatge de correu electrònic té un revisor/a com a remitent i s'envia a l'editor/a de secció en resposta a una sol·licitud de revisió per notificar-li que rebutja encarregar-se d'aquesta tasca.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent un revisor/a, i s'envia a l'editor/a de secció en resposta a una sol·licitud de revisió per notificar-li que rebutja encarregar-se d'aquesta tasca.</description>
 	</email_text>
 	<email_text key="REVIEW_COMPLETE">
 		<subject>Revisió de l'article completada</subject>
@@ -302,182 +386,170 @@ Lamento comunicar-vos que en aquesta ocasió no em podré encarregar de la revis
 Us comunico que he acabat la revisió de «{$articleTitle}» per a {$journalName} i que també n'he tramès la recomanació corresponent, «{$recommendation}».
 
 {$reviewerName}</body>
-		<description>Aquest missatge de correu electrònic té un revisor/a com a remitent i s'envia a l'editor/a de secció per notificar-li que ha completat la revisió i que ha enregistrat els comentaris i les recomanacions corresponents al lloc web de la revista.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent un revisor/a, i s'envia a l'editor/a de secció per notificar-li que ha completat la revisió i que ha enregistrat els comentaris i les recomanacions corresponents al lloc web de la revista.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Justificant de recepció de la revisió de l'article</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
 Us agraïm que hàgiu revisat la tramesa «{$articleTitle}» per a {$journalName}. Valorem la vostra contribució a la qualitat de les obres que publiquem.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té un editor/a de secció com a remitent i s'envia al revisor/a per confirmar-li la recepció d'una revisió completada i agrair-li la seva contribució.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent un editor/a de secció, i s'envia al revisor/a per confirmar-li la recepció d'una revisió completada i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
 		<subject>Recordatori de revisió de la tramesa</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
 Us recordem la nostra petició per revisar la tramesa «{$articleTitle}» per a {$journalName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i confiem rebre-la tan aviat com la tingueu enllestida.
 
-Si heu perdut el vostre nom d'usuari/ària o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari/ària). {$passwordResetUrl}
+Si heu oblidat el vostre nom d'usuari/ària o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari/ària). {$passwordResetUrl}
 
-URL de la tramesa: {$submissionReviewUrl}
+Enllaç de la tramesa: {$submissionReviewUrl}
 
 Us agrairem que ens confirmeu la vostra disponibilitat per completar aquesta contribució vital per al funcionament de la revista. Confiem rebre notícies vostres ben aviat.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té un editor/a de secció com a remitent i s'envia a un revisor/a per recordar-li que ha superat la data de venciment per lliurar la revisió.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent un editor/a de secció, i s'envia a un revisor/a per recordar-li que ha superat la data de venciment per lliurar la revisió.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
 		<subject>Recordatori de revisió de la tramesa</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
 Us recordem la nostra petició per revisar la tramesa «{$articleTitle}» per a {$journalName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i confiem rebre-la tan aviat com la tingueu enllestida.
 
-URL de la tramesa: {$submissionReviewUrl}
+Enllaç de la tramesa: {$submissionReviewUrl}
 
 Us agrairem que ens confirmeu la vostra disponibilitat per completar aquesta contribució vital per al funcionament de la revista. Confiem rebre notícies vostres ben aviat.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té un editor/a de secció com a remitent i s'envia a un revisor/a per recordar-li que ha superat la data de venciment per lliurar la revisió.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent un editor/a de secció, i s'envia a un revisor/a per recordar-li que ha superat la data de venciment per lliurar la revisió.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
 		<subject>Recordatori automàtic de revisió de la tramesa</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
-Us recordem la nostra petició per revisar la tramesa «{$articleTitle}» per a {$journalName}. Esperàvem aquesta revisió abans del {$reviewDueDate}. Aquest missatge de correu electrònic s'ha generat i enviat automàticament en haver-se superat aquesta data. Malgrat això, encara confiem rebre la vostra revisió tan aviat com la tingueu enllestida.
+Us recordem la nostra petició per revisar la tramesa «{$articleTitle}» per a {$journalName}. Esperàvem aquesta revisió abans del {$reviewDueDate}. Aquest missatge de correu electrònic s'ha generat i enviat automàticament en haver-se superat aquesta data. Tot i així, encara confiem rebre la vostra revisió tan aviat com la tingueu enllestida.
 
-Si heu perdut el vostre nom d'usuari/ària o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari/ària). {$passwordResetUrl}
+Si heu oblidat el vostre nom d'usuari/ària o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari/ària). {$passwordResetUrl}
 
-URL de la tramesa: {$submissionReviewUrl}
+Enllaç de la tramesa: {$submissionReviewUrl}
 
 Us agrairem que ens confirmeu la vostra disponibilitat per completar aquesta contribució vital per al funcionament de la revista. Confiem rebre notícies vostres ben aviat.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic s’envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha inhabilitat l'accés per a revisors en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc).</description>
+		<description>Aquest missatge de correu electrònic s’envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha inhabilitat l'accés per a revisors/ores en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc).</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
 		<subject>Recordatori automàtic de revisió de la tramesa</subject>
-		<body>Benvolgut/uda {$reviewerName},
+		<body>{$reviewerName}:
 
-Us recordem la nostra petició per revisar la tramesa «{$articleTitle}» per a {$journalName}. Esperàvem aquesta revisió abans del {$reviewDueDate}. Aquest missatge de correu electrònic s'ha generat i enviat automàticament en haver-se superat aquesta data. Malgrat això, encara confiem rebre la vostra revisió tan aviat com la tingueu enllestida.
+Us recordem la nostra petició per revisar la tramesa «{$articleTitle}» per a {$journalName}. Esperàvem aquesta revisió abans del {$reviewDueDate}. Aquest missatge de correu electrònic s'ha generat i enviat automàticament en haver-se superat aquesta data. Tot i així, encara confiem rebre la vostra revisió tan aviat com la tingueu enllestida.
 
-URL de la tramesa: {$submissionReviewUrl}
+Enllaç de la tramesa: {$submissionReviewUrl}
 
 Us agrairem que ens confirmeu la vostra disponibilitat per completar aquesta contribució vital per al funcionament de la revista. Confiem rebre notícies vostres ben aviat.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic s'envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha habilitat l'accés per a revisors en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc).</description>
+		<description>Aquest missatge de correu electrònic s'envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha habilitat l'accés per a revisors/ores en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc).</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Decisió de l’editor/a</subject>
-		<body>Benvolgut/uda {$authorName}:
+		<body>{$authorName}:
 
 Hem pres una decisió respecte a la vostra tramesa a {$journalTitle}, «{$articleTitle}».
 
 La nostra decisió és:
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té com a remitent l’editor/a o editor/a de secció i s'envia a un autor/a per notificar-li una decisió final respecte a la tramesa.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l’editor/a o editor/a de secció, i s'envia a un autor/a per notificar-li la decisió final respecte a la tramesa.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Decisió de l’editor/a</subject>
-		<body>Benvolgut/uda {$authorName}:
+		<body>{$authorName}:
 
 Hem pres una decisió respecte a la vostra tramesa a {$journalTitle}, «{$articleTitle}».
 
-La nostra decisió és:
-
-
-
-
-
-{$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té com a remitent l’editor/a o editor/a de secció i s'envia a un autor/a per notificar-li una decisió final respecte a la tramesa.</description>
+La nostra decisió és: {$editorialContactSignature}</body>
+		<description>Aquest missatge de correu electrònic té com a remitent l’editor/a o editor/a de secció, i s'envia a un autor/a per notificar-li la decisió final respecte a la tramesa.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Decisió de l’editor/a</subject>
-		<body>Benvolgut/uda {$authorName}:
+		<body>{$authorName}:
 
 Hem pres una decisió respecte a la vostra tramesa a {$journalTitle}, «{$articleTitle}».
 
 La nostra decisió és:
 
-
-
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té com a remitent l’editor/a o editor/a de secció i s'envia a un autor/a per notificar-li una decisió final respecte a la tramesa.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l’editor/a o editor/a de secció, i s'envia a un autor/a per notificar-li la decisió final respecte a la tramesa.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Decisió de l’editor/a</subject>
-		<body>Benvolgut/uda {$authorName}:
+		<body>{$authorName}:
 
 Hem pres una decisió respecte a la vostra tramesa a {$journalTitle}, «{$articleTitle}».
 
 La nostra decisió és:
 
-
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té com a remitent l’editor/a o editor/a de secció i s'envia a un autor/a per notificar-li una decisió final respecte a la tramesa.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l’editor/a o editor/a de secció, i s'envia a un autor/a per notificar-li la decisió final respecte a la tramesa.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Sol·licitud de correcció</subject>
 		<body>Benvolgut/uda {$copyeditorName}:
 
 M'agradaria demanar-vos que us encarreguéssiu de la revisió de «{$articleTitle}» per a {$journalName}. Els passos que hauríeu de seguir són els següents:
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
+1. Feu clic a l'enllaç de la tramesa que trobareu posteriorment en aquest missatge.
 2. Inicieu la sessió a la revista i feu clic al fitxer que trobareu al pas 1.
-3. Consulteu les instruccions per a la correcció que hi ha publicades a la pàgina web.
+3. Consulteu les instruccions per a la correcció publicades a la pàgina web.
 4. Obriu el fitxer que heu baixat i corregiu-lo. Hi podeu incloure totes les consultes a l'autor/a que considereu necessàries.
 5. Deseu el fitxer corregit i pengeu-lo al pas 1 de la correcció.
 6. Envieu el missatge de correu electrònic COMPLET a l'editor/a.
 
-URL de {$journalName}: {$journalUrl}
-URL de la tramesa: {$submissionCopyeditingUrl}
-Nom d'usuari: {$copyeditorUsername}
-
+Enllaç {$journalName}: {$journalUrl}
+Enllaç de la tramesa: {$submissionCopyeditingUrl}
+Nom d'usuari/ària: {$copyeditorUsername}
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té un editor/a de secció com a remitent i s'envia a un possible corrector/a d'originals d'una tramesa per sol·licitar-li que comenci el procés de correcció. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent un editor/a de secció, i s'envia a un possible corrector/a d'originals d'una tramesa per sol·licitar-li que comenci el procés de correcció. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
 		<subject>Correcció completada</subject>
 		<body>{$editorialContactName}:
 
-Ja hem corregit la vostra tramesa «{$articleTitle}» per a {$journalName}. Seguiu els passos següents per revisar els canvis proposats i respondre a les consultes a l'autor/a:
-
-1. Inicieu la sessió a la revista fent clic a l'URL que trobareu més avall en aquest missatge i introduint-hi el vostre nom d'usuari/ària i la vostra contrasenya (utilitzeu l'enllaç «Oblida», si escau).
+Ja hem corregit la vostra tramesa «{$articleTitle}» per a {$journalName}. Seguiu els passos següents per revisar els canvis proposats i respondre a les consultes de l'autor/a:
+1. Inicieu la sessió a la revista fent clic a l'enllaç que trobareu posteriorment en aquest missatge i introduïu-hi el vostre nom d'usuari/ària i la vostra contrasenya (utilitzeu l'enllaç «Oblida», si escau).
 2. Feu clic al fitxer que hi ha a 1. Fitxer de la correcció inicial per baixar i obrir la versió corregida.
-3. Reviseu la correcció, feu-hi els canvis necessaris mitjançant l'eina de seguiment de canvis del Word i responeu les consultes.
+3. Reviseu la correcció, feu-hi els canvis necessaris utilitzant l'eina de seguiment de canvis del Word i responeu a les consultes.
 4. Deseu el fitxer a l'escriptori i pengeu-lo a 2. Correcció de l’autor/a.
-5. Feu clic a la icona de correu electrònic que hi ha a sota de COMPLET i envieu el missatge de correu electrònic a l'editor/a.
+5. Feu clic damunt la icona de correu electrònic que hi ha a sota de COMPLET i envieu el missatge de correu electrònic a l'editor/a. Aquesta serà la vostra darrera oportunitat per fer canvis substancials a la tramesa. Més endavant se us demanarà que corregiu les galerades, però durant aquest procés només podreu esmenar errors tipogràfics i de format.
 
-Aquesta serà la darrera oportunitat que tindreu per fer canvis substancials a la tramesa. Més endavant se us demanarà que corregiu les galerades, però durant aquest procés només podreu esmenar errors tipogràfics i de format.
-
-URL del manuscrit: {$submissionEditingUrl}
+Enllaç del manuscrit: {$submissionEditingUrl}
 Nom d'usuari/ària: {$authorUsername}
 
-Si no esteu disponible per encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. Gràcies per la vostra contribució a aquesta revista.
+Si no esteu disponible per encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.
+
+Gràcies per la vostra contribució a aquesta revista.
 
 {$copyeditorName}</body>
-		<description></description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>Justificant de recepció de la correcció</subject>
 		<body>Benvolgut/uda {$copyeditorName}:
 
-Gràcies per haver corregit el manuscrit «{$articleTitle}» per a {$journalName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.
+Gràcies per la correcció del manuscrit «{$articleTitle}» per a {$journalName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al corrector/a d'originals d'una tramesa per notificar-li que ha completat el procés de correcció i agrair-li la seva contribució.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al corrector/a d'originals d'una tramesa per notificar-li que ha completat el procés de correcció i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Sol·licitud de revisió de la correcció</subject>
-		<body>Benvolgut/uda {$authorName}:
+		<body>{$authorName}:
 
 S'ha completat la primera etapa de correcció de la vostra tramesa «{$articleTitle}» per a {$journalName}. Seguiu els passos següents per revisar-la:
 
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
+1. Feu clic a l'enllaç de la tramesa que trobareu posteriorment en aquest missatge.
 2. Inicieu la sessió a la revista i feu clic al fitxer que trobareu al pas 1.
 3. Obriu la tramesa baixada.
 4. Reviseu el text tenint en compte les propostes de correcció i les consultes a l'autor/a.
@@ -486,34 +558,34 @@ S'ha completat la primera etapa de correcció de la vostra tramesa «{$articleTi
 7. Feu clic a METADADES per comprovar que la informació d'indexació sigui completa i correcta.
 8. Envieu el missatge de correu electrònic COMPLET a l'editor/a i al corrector/a d'originals.
 
-URL de la tramesa: {$submissionCopyeditingUrl}
+Enllaç de la tramesa: {$submissionCopyeditingUrl}
 Nom d'usuari/ària: {$authorUsername}
 
-Aquesta serà la darrera oportunitat que tindreu per fer correccions substancials a la tramesa. A l'etapa de correcció de proves, que segueix la preparació de les galerades, només es podran esmenar errors tipogràfics i de format.
+Aquesta serà la vostra darrera oportunitat per fer correccions substancials a la tramesa. A l'etapa de correcció de proves, que segueix la preparació de les galerades, només es podran esmenar errors tipogràfics i de format. 
 
 Si no esteu disponible per encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. Gràcies per la vostra contribució a aquesta revista.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia a l'autor/a d'una tramesa per sol·licitar-li que revisi la feina feta pel corrector/a d'originals. Proporciona informació per accedir al manuscrit i alerta a l'autor/a que aquesta és la darrera oportunitat que té per fer-hi canvis substancials.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a l'autor/a d'una tramesa per sol·licitar-li que revisi la feina feta pel corrector/a d'originals. Proporciona informació per accedir al manuscrit i alerta l'autor/a que aquesta és la seva darrera oportunitat per fer-hi canvis substancials.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
 		<subject>Revisió de la correcció completada</subject>
-		<body>Benvolgut/uda {$editorialContactName}:
+		<body>{$editorialContactName}:
 
 Ja he revisat la correcció del manuscrit «{$articleTitle}» per a {$journalName}. Per tant, la tramesa ja és a punt per fer-hi la darrera ronda de revisió i preparar-la per a la maquetació.
 
-Gràcies per aquesta contribució a la meva obra,
+Gràcies per la vostra contribució a la meva obra.
 {$authorName}</body>
-		<description>Aquest missatge de correu electrònic té l'autor/a com a remitent i s'envia a l'editor/a de secció per notificar-li que s'ha completat el procés de correcció de l'autor/a.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'autor/a, i s'envia a l'editor/a de secció per notificar-li que s'ha completat el procés de correcció de l'autor/a.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_ACK">
 		<subject>Justificant de recepció de la revisió de la correcció</subject>
-		<body>Benvolgut/uda {$authorName}:
+		<body>{$authorName}:
 
-Gràcies per haver revisat la correcció del vostre manuscrit «{$articleTitle}» per a {$journalName}. Esperem publicar la vostra obra ben aviat.
+Gràcies per la revisió de la correcció del vostre manuscrit «{$articleTitle}» per a {$journalName}. Esperem publicar la vostra obra ben aviat.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia a l'autor/a d'una tramesa per notificar-li que ha completat correctament el procés de correcció i agrair-li la seva contribució.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a l'autor/a d'una tramesa per notificar-li que ha completat correctament el procés de correcció i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>Revisió final de la correcció</subject>
@@ -521,28 +593,28 @@ Gràcies per haver revisat la correcció del vostre manuscrit «{$articleTitle}�
 
 L'autor/a i l'editor/a ja han acabat de revisar la correcció de «{$articleTitle}» per a {$journalName}. Ara, doncs, ja es pot preparar una «còpia neta» de la tramesa per a la maquetació. Per fer-ho, seguiu els passos següents:
 
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
+1. Feu clic a l'enllaç de la tramesa que trobareu posteriorment en aquest missatge.
 2. Inicieu la sessió a la revista i feu clic al fitxer que trobareu al pas 2.
 3. Obriu el fitxer baixat i incorporeu-hi totes les correccions i les respostes a les consultes.
 4. Deseu el fitxer net i pengeu-lo al pas 3 de la correcció.
-5. Feu clic a METADADES per comprovar que la informació d'indexació sigui correcta (recordeu de desar totes les correccions que hi feu).
-6. Envieu el missatge de correu electrònic COMPLET a l'editor/a.
+5. Feu clic a METADADES per comprovar que la informació d'indexació sigui correcta (recordeu-vos de desar totes les correccions que hi feu).
+6. Envieu el missatge de correu electrònic COMPLET a l'editor/a. 
 
-URL de {$journalName}: {$journalUrl}
-URL de la tramesa: {$submissionCopyeditingUrl}
-Nom d'usuari: {$copyeditorUsername}
+Enllaç {$journalName}: {$journalUrl}
+Enllaç de la tramesa: {$submissionCopyeditingUrl}
+Nom d'usuari/ària: {$copyeditorUsername}
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al corrector/a d'originals per sol·licitar-li que s'encarregui de la ronda final de correcció d'una tramesa abans que entri al procés de maquetació.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al corrector/a d'originals per sol·licitar-li que s'encarregui de la ronda final de correcció d'una tramesa abans que entri al procés de maquetació.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_COMPLETE">
 		<subject>Revisió final de la correcció completada</subject>
-		<body>Benvolgut/uda {$editorialContactName}:
+		<body>{$editorialContactName}:
 
 He preparat una versió neta i corregida del manuscrit «{$articleTitle}» per a {$journalName}. Aquesta versió ja és a punt per entrar al procés de maquetació i de preparació de les galerades.
 
 {$copyeditorName}</body>
-		<description>Aquest missatge de correu electrònic té el corrector/a d'originals com a remitent i s'envia a l'editor/a de secció per notificar-li que ha completat la ronda final de correcció i que el procés de maquetació ja pot començar.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent el corrector/a d'originals, i s'envia a l'editor/a de secció per notificar-li que ha completat la ronda final de correcció i que el procés de maquetació ja pot començar.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>Justificant de recepció de la revisió final de la correcció</subject>
@@ -551,163 +623,160 @@ He preparat una versió neta i corregida del manuscrit «{$articleTitle}» per a
 Gràcies per haver completat la correcció del manuscrit «{$articleTitle}» per a {$journalName}. La preparació d’una «còpia neta» per a la maquetació és un pas molt important del procés editorial.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al corrector/a d'originals per notificar-li que ha completat la ronda final de correcció i agrair-li la seva contribució.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al corrector/a d'originals per notificar-li que ha completat la ronda final de correcció i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Sol·licitud de galerades</subject>
-		<body>Benvolgut/uda {$layoutEditorName},
+		<body>Benvolgut/uda {$layoutEditorName}:
 
-Us demanem que us encarregueu de preparar les galerades de la tramesa «{$articleTitle}» per a {$journalName}. Seguiu els passos següents:
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
-2. Inicieu la sessió a la revista i utilitzeu el fitxer de la versió maquetada per crear les galerades d'acord amb els estàndards de la revista.
-3. Envieu el missatge de correu electrònic COMPLET a l'editor/a.
+Us demanem que us encarregueu de preparar les galerades de la tramesa «{$articleTitle}» per a {$journalName}. Per fer-ho, seguiu els passos següents:
+1. Feu clic a l'enllaç de la tramesa que trobareu posteriorment en aquest missatge.
+2. Inicieu la sessió a la revista i utilitzeu el fitxer de la versió maquetada per crear les galerades d'acord amb els estàndards de la revista. 3. Envieu el missatge de correu electrònic COMPLET a l'editor/a.
 
-URL de {$journalName}: {$journalUrl}
-URL de la tramesa: {$submissionLayoutUrl}
+Enllaç {$journalName}: {$journalUrl}
+Enllaç de la tramesa: {$submissionLayoutUrl}
 Nom d'usuari/ària: {$layoutEditorUsername}
 
 Si no esteu disponible per encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. Gràcies per la vostra contribució a aquesta revista.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al maquetador/a per notificar-li que ha estat assignat per encarregar-se de la maquetació d'una tramesa. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al maquetista per notificar-li que li han assignat encarregar-se de la maquetació d'una tramesa. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
 		<subject>Galerades completades</subject>
-		<body>Benvolgut/uda {$editorialContactName}:
+		<body>{$editorialContactName}:
 
-Ja he preparat les galerades del manuscrit «{$articleTitle}» per a {$journalName}. Així, doncs, ja estan a punt per entrar al procés de correcció de proves.
-
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
+Ja he preparat les galerades del manuscrit «{$articleTitle}» per a {$journalName}. Així, doncs, ja estan a punt per entrar al procés de correcció de proves. Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 
 {$layoutEditorName}</body>
-		<description>Aquest missatge té el maquetista com a remitent i s'envia a l'editor/a de secció per notificar-li que s'ha completat el procés de maquetació.</description>
+		<description>Aquest missatge té com a remitent el maquetista, i s'envia a l'editor/a de secció per notificar-li que s'ha completat el procés de maquetació.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
-		<subject>Justificant de recepció de les galerades</subject>
-		<body>Benvolgut/uda {$layoutEditorName},
+		<subject>Justificant de recepció de la maquetació</subject>
+		<body>Benvolgut/uda {$layoutEditorName}:
 
-Gràcies per haver preparat les galerades del manuscrit «{$articleTitle}» per a {$journalName}. Aquesta tasca és una contribució molt important al procés de publicació.
+Gràcies per la preparació de les galerades del manuscrit «{$articleTitle}» per a {$journalName}. Aquesta tasca és una contribució molt important al procés de publicació.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al maquetista per notificar-li que ha completat el procés de maquetació i agrair-li la seva contribució.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al maquetista per notificar-li que ha completat el procés de maquetació i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
 		<subject>Sol·licitud de correcció de proves (autor/a)</subject>
-		<body>Benvolgut/uda {$authorName}:
+		<body>{$authorName}:
 
-Us volem demanar que us encarregueu de la correcció de proves de la vostra tramesa «{$articleTitle}» per a {$journalName}. Seguiu els passos següents:
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
+Us volem demanar que us encarregueu de la correcció de proves de la vostra tramesa «{$articleTitle}» per a {$journalName}. Per fer-ho, seguiu els passos següents:
+1. Feu clic a l'enllaç de la tramesa que trobareu posteriorment en aquest missatge.
 2. Inicieu la sessió a la revista i consulteu les INSTRUCCIONS PER A LA CORRECCIÓ DE PROVES
 3. Feu clic a VISUALITZA LA PROVA a la secció de maquetació i corregiu les galerades en un dels formats utilitzats o en més d'un.
 4. Introduïu les correccions (tipogràfiques i de format) a «Correccions de proves».
 5. Deseu les correccions i envieu-les per correu electrònic al maquetista i al corrector/a de proves.
 6. Envieu el missatge de correu electrònic COMPLET a l'editor/a.
 
-URL de la tramesa: {$submissionUrl}
+Enllaç de la tramesa: {$submissionUrl}
 Nom d'usuari/ària: {$authorUsername}
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia a l'autor/a per notificar-li que les galerades d'un article ja són a punt per fer-hi la correcció de proves. Proporciona informació sobre l'article i com s'hi ha d'accedir.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a l'autor/a per notificar-li que les galerades d'un article ja són a punt per fer-hi la correcció de proves. Proporciona informació sobre l'article i com s'hi ha d'accedir.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
 		<subject>Correcció de proves completada (autor/a)</subject>
-		<body>Benvolgut/uda {$editorialContactName},
+		<body>{$editorialContactName}:
 
-He acabat la correcció de proves de les galerades per al meu manuscrit "{$articleTitle}" per a {$journalName}. Així, doncs, les galerades ja són a punt perquè el corrector/a de proves i el maquetista hi facin les correccions finals.
+He acabat la correcció de proves de les galerades per al meu manuscrit «{$articleTitle}» per a {$journalName}. Així, doncs, les galerades ja són a punt perquè el corrector/a de proves i el maquetista hi facin les correccions finals.
 
 {$authorName}</body>
-		<description>Aquest missatge de correu electrònic té l'autor/a com a remitent i s'envia al corrector/a de proves i a l'editor/a per notificar-los que s'ha completat la ronda de correcció de proves i que en trobaran més detalls als comentaris de l'article.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'autor/a, i s'envia al corrector/a de proves i a l'editor/a per notificar-los que s'ha completat la ronda de correcció de proves i que en trobaran més detalls als comentaris de l'article.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
 		<subject>Justificant de recepció de la correcció de proves (autor/a)</subject>
-		<body>Benvolgut/uda {$authorName}:
+		<body>{$authorName}:
 
-Gràcies per haver fet la correcció de proves per a les galerades del vostre manuscrit «{$articleTitle}» per a {$journalName}. Confiem publicar el vostre article ben aviat.
+Gràcies per la correcció de proves de les galerades del vostre manuscrit «{$articleTitle}» per a {$journalName}. Esperem publicar el vostre article ben aviat.
 
-Si us subscriviu al nostre sistema de notificacions rebreu un missatge de correu electrònic amb el sumari de la revista tan aviat com aquesta es publiqui. Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
+Si us subscriviu al nostre sistema de notificacions rebreu un missatge de correu electrònic amb el sumari de la revista tan aviat com es publiqui. Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia a l'autor/a per notificar-li que ha completat la ronda inicial de correcció de proves i agrair-li la seva contribució.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia a l'autor/a per notificar-li que ha completat la ronda inicial de correcció de proves i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
 		<subject>Sol·licitud de correcció de proves</subject>
-		<body>Benvolgut/uda {$proofreaderName},
+		<body>Benvolgut/uda {$proofreaderName}:
 
-Us volem demanar que us encarregueu de la correcció de proves de la tramesa «{$articleTitle}» per a {$journalName}. Seguiu els passos següents:
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
+Us volem demanar que us encarregueu de la correcció de proves de la tramesa «{$articleTitle}» per a {$journalName}. Per a fer-ho, seguiu els passos següents:
+1. Feu clic a l'enllaç de la tramesa que trobareu posteriorment en aquest missatge.
 2. Inicieu la sessió a la revista i consulteu les INSTRUCCIONS PER A LA CORRECCIÓ DE PROVES.
 3. Feu clic a VISUALITZA LA PROVA a la secció de maquetació i corregiu les galerades en un dels formats utilitzats o en més d'un.
 4. Introduïu les correccions (tipogràfiques i de format) a «Correccions de proves».
 5. Deseu les correccions i envieu-les per correu electrònic al maquetista.
 6. Envieu el missatge de correu electrònic COMPLET a l'editor/a.
 
-URL del manuscrit: {$submissionUrl}
+Enllaç del manuscrit: {$submissionUrl}
 Nom d'usuari/ària: {$proofreaderUsername}
 
 Si no esteu disponible per encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. Gràcies per la vostra contribució a aquesta revista.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al corrector/a de proves per sol·licitar-li que s'encarregui de la correcció de proves de les galerades per a un article. Proporciona informació sobre l'article i com s'hi ha d'accedir.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al corrector/a de proves per sol·licitar-li que s'encarregui de la correcció de proves de les galerades per a un article. Proporciona informació sobre l'article i com s'hi ha d'accedir.</description>
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
 		<subject>Correcció de proves completada</subject>
-		<body>Benvolgut/uda {$editorialContactName}:
+		<body>{$editorialContactName}:
 
 He acabat la correcció de proves de les galerades per al manuscrit «{$articleTitle}» per a {$journalName}. Així, doncs, les galerades ja són a punt perquè el maquetista hi faci les correccions finals.
 
 {$proofreaderName}</body>
-		<description>Aquest missatge de correu electrònic té el corrector/a de proves com a remitent i s'envia a l'editor/a de secció per notificar-li que s'ha completat el procés de correcció de proves.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent el corrector/a de proves, i s'envia a l'editor/a de secció per notificar-li que s'ha completat el procés de correcció de proves.</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
 		<subject>Justificant de recepció de la correcció de proves</subject>
-		<body>Benvolgut/uda {$proofreaderName},
+		<body>Benvolgut/uda {$proofreaderName}:
 
-Gràcies per haver fet la correcció de proves de les galerades per al manuscrit «{$articleTitle}» per a {$journalName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.
+Gràcies per la correcció de proves de les galerades per al manuscrit «{$articleTitle}» per a {$journalName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al corrector/a de proves per notificar-li que ha completat el procés de correcció de proves i agrair-li la seva contribució.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al corrector/a de proves per notificar-li que ha completat el procés de correcció de proves i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Sol·licitud de correcció de proves (maquetista)</subject>
-		<body>Benvolgut/uda {$layoutEditorName},
+		<body>Benvolgut/uda {$layoutEditorName}:
 
-L'autor/a i el corrector/a de proves ja han fet la correcció de proves de la tramesa «{$articleTitle}» per a {$journalName} i, per tant, ara us hauríeu d'encarregar de corregir-la. Seguiu els passos següents:
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.
+L'autor/a i el corrector/a de proves ja han fet la correcció de proves de la tramesa «{$articleTitle}» per a {$journalName} i, per tant, ara us hauríeu d'encarregar de corregir-la. Per fer-ho, seguiu els passos següents:
+1. Feu clic a l'enllaç de la tramesa que trobareu posteriorment en aquest missatge.
 2. Inicieu la sessió a la revista i consulteu «Correccions de proves» per crear unes galerades corregides.
 3. Pengeu les galerades revisades.
 4. Envieu el missatge de correu electrònic COMPLET del pas 3 de la correcció de proves a l'editor/a.
 
-URL de {$journalName}: {$journalUrl}
-URL de la tramesa: {$submissionUrl}
+Enllaç {$journalName}: {$journalUrl}
+Enllaç de la tramesa: {$submissionUrl}
 Nom d'usuari/ària: {$layoutEditorUsername}
 
 Si no esteu disponible per encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber. Gràcies per la vostra contribució a aquesta revista.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al maquetista per notificar-li que les galerades d'un article ja són a punt per fer-hi la correcció de proves final. Proporciona informació sobre l'article i com accedir-hi.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al maquetista per notificar-li que les galerades d'un article ja són a punt per fer-hi la correcció de proves final. Proporciona informació sobre l'article i com accedir-hi.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Correcció de proves completada (maquetista)</subject>
-		<body>Benvolgut/uda {$editorialContactName}:
+		<body>{$editorialContactName}:
 
 He acabat la correcció posterior a la correcció de proves de les galerades per al manuscrit «{$articleTitle}» per a {$journalName}. Així, doncs, aquest article ja es pot publicar.
 
 {$layoutEditorName}</body>
-		<description>Aquest missatge de correu electrònic té el maquetista com a remitent i s'envia a l'editor/a de secció per notificar-li que s'ha completat l'etapa final del procés de correcció de proves i que l'article ja es pot publicar.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent el maquetista, i s'envia a l'editor/a de secció per notificar-li que s'ha completat l'etapa final del procés de correcció de proves i que l'article ja es pot publicar.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Justificant de recepció de la correcció de proves (maquetista)</subject>
-		<body>Benvolgut/uda {$layoutEditorName},
+		<body>Benvolgut/uda {$layoutEditorName}:
 
-Gràcies per haver completat el procés de correcció de proves per a les galerades associades amb el manuscrit «{$articleTitle}» per a {$journalName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.
+Gràcies per haver completat el procés de correcció de proves de les galerades associades al manuscrit «{$articleTitle}» per a {$journalName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.
 
 {$editorialContactSignature}</body>
-		<description>Aquest missatge de correu electrònic té l'editor/a de secció com a remitent i s'envia al maquetista per notificar-li que ha completat l'etapa final de la correcció de proves i agrair-li la seva contribució.</description>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor/a de secció, i s'envia al maquetista per notificar-li que ha completat l'etapa final de la correcció de proves i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Article que us pot interessar</subject>
 		<body>Considero que us pot interessar llegir l'article «{$articleTitle}» de {$authorName} publicat al volum {$volume}, número {$number} ({$year}) de {$journalName}. El podeu consultar a «{$articleUrl}».</body>
-		<description>Aquesta plantilla de missatge de correu electrònic ofereix als lectors registrats l'oportunitat d'enviar informació sobre un article a algú que hi pugui estar interessat. Aquesta plantilla està disponible a les eines de lectura si l'administrador/a de la revista l'ha habilitada a la pàgina d'administració d'aquestes eines.</description>
+		<description>Aquesta plantilla de missatge de correu electrònic ofereix als lectors/ores registrats l'oportunitat d'enviar informació sobre un article a algú que hi pugui estar interessat. Aquesta plantilla està disponible a les eines de lectura si l'administrador/a de la revista l'ha habilitat a la pàgina d'administració d'aquestes eines.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Notificació de subscripció</subject>
@@ -717,9 +786,11 @@ Us acabeu de registrar com a subscriptor/a del nostre sistema de gestió de revi
 
 {$subscriptionType}
 
-Per accedir als continguts que només estan disponibles per als subscriptors/ores, inicieu la sessió al sistema amb el vostre nom d'usuari/ària, «{$username}».
+Per accedir als continguts només disponibles per als subscriptors/ores, inicieu la sessió al sistema amb el vostre nom d'usuari/ària, «{$username}».
 
-Una vegada dins el sistema podreu canviar la contrasenya i els detalls del vostre perfil en qualsevol moment. Si disposeu d'una subscripció institucional, els usuaris/àries membres de la institució no hauran d'iniciar la sessió, ja que el sistema autenticarà automàticament les sol·licituds d'accés al contingut per a subscriptors/ores.
+Una vegada dins el sistema podreu canviar la contrasenya i els detalls del vostre perfil en qualsevol moment.
+
+Si disposeu d'una subscripció institucional, els usuaris/àries membres de la institució no hauran d'iniciar la sessió, ja que el sistema autenticarà automàticament les sol·licituds d'accés al contingut per a subscriptors/ores.
 
 Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 
@@ -728,12 +799,12 @@ Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
 		<subject>Ara el número és d'accés obert</subject>
-		<body>Benvolguts/udes lectors/ores,
+		<body>Benvolguts/udes lectors/ores:
 
 {$journalName} acaba de publicar en format d'accés obert el número següent. Us convidem a consultar-ne el sumari adjunt i a visitar el nostre lloc web ({$journalUrl}) per accedir als articles que us interessin.
 
 Us agraïm el vostre interès per la nostra revista.
-$editorialContactSignature}</body>
+{$editorialContactSignature}</body>
 		<description>Aquest missatge de correu electrònic s'envia als lectors/ores que han sol·licitat rebre una notificació per correu electrònic quan es publiqui un número en format d'accés obert.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
@@ -745,7 +816,7 @@ La vostra subscripció per a {$journalName} és a punt de vèncer.
 {$subscriptionType}
 Data de venciment: {$expiryDate}
 
-Per assegurar-vos que seguireu tenint accés a aquesta revista, entreu al lloc web i renoveu la vostra subscripció. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari, "{$username}".
+Per assegurar-vos que seguireu tenint accés a aquesta revista, entreu al lloc web i renoveu la vostra subscripció. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari/ària, "{$username}".
 
 Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 
@@ -761,7 +832,7 @@ La vostra subscripció per a {$journalName} ha vençut.
 {$subscriptionType}
 Data de venciment: {$expiryDate}
 
-Per renovar la subscripció, aneu al lloc web de la revista. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari, "{$username}".
+Per renovar la subscripció, aneu al lloc web de la revista. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari/ària, "{$username}".
 
 Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 
@@ -772,12 +843,13 @@ Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 		<subject>La subscripció ha vençut (últim recordatori)</subject>
 		<body>Benvolgut/uda {$subscriberName}:
 
-La vostra subscripció per a {$journalName} ha vençut. Tingueu en compte que aquest missatge és el darrer recordatori que rebreu.
+La vostra subscripció per a {$journalName} ha vençut.
+Tingueu en compte que aquest missatge és el darrer recordatori que rebreu.
 
 {$subscriptionType}
 Data de venciment: {$expiryDate}
 
-Per renovar la subscripció, aneu al lloc web de la revista. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari, "{$username}".
+Per renovar la subscripció, aneu al lloc web de la revista. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari/ària, "{$username}".
 
 Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 
@@ -785,29 +857,28 @@ Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.
 		<description>Aquest missatge de correu electrònic notifica a un subscriptor/a que la seva subscripció ha vençut. Proporciona l'URL de la revista i també instruccions per accedir-hi.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Comprar una subscripció: Individuals</subject>
+		<subject>Compra una subscripció: Individuals</subject>
 		<body>S'ha comprat una subscripció individual en línia per a {$journalName} amb els detalls següents.
 
 Tipus de subscripció: {$subscriptionType}
-
 Usuari/ària: {$userDetails}
 
 Informació d'afiliació (si s'ha proporcionat):
 {$membership}
 
-Per veure o editar aquesta subscripció, utilitzeu l'URL següent.
+Per veure o editar aquesta subscripció, utilitzeu l'enllaç següent.
 
-URL de la subscripció: {$subscriptionUrl}</body>
+Enllaç de la subscripció: {$subscriptionUrl}</body>
 		<description>Aquest missatge de correu electrònic notifica a un administrador/a de la subscripció que s'ha comprat una subscripció individual en línia. Proporciona informació resumida sobre la subscripció i un enllaç ràpid a la subscripció comprada.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Comprar una subscripció: Institucionals</subject>
-		<body>S'ha comprat una subscripció institucional en línia per a {$journalName} amb els detalls següents. Per activar aquesta subscripció, utilitzeu l'URL de la subscripció proporcionat i establiu l'estat de la subscripció com a «Actiu».
+		<subject>Compra una subscripció: Institucionals</subject>
+		<body>S'ha comprat una subscripció institucional en línia per a {$journalName} amb els detalls següents. Per activar aquesta subscripció, utilitzeu l'enllaç de la subscripció proporcionat i establiu l'estat de la subscripció com a «Actiu».
 
-Tipus de subscripció:
-{$subscriptionType}
+Tipus de subscripció: {$subscriptionType}
 
-Institució: {$institutionName}
+Institució:
+{$institutionName}
 {$institutionMailingAddress}
 
 Domini (si s'ha proporcionat):
@@ -822,14 +893,15 @@ Persona de contacte:
 Informació d'afiliació (si s'ha proporcionat):
 {$membership}
 
-Per veure o editar aquesta subscripció, utilitzeu l'URL següent.
+Per veure o editar aquesta subscripció, utilitzeu l'enllaç següent.
 
-URL de la subscripció: {$subscriptionUrl}</body>
+Enllaç de la subscripció: {$subscriptionUrl}
+		</body>
 		<description>Aquest missatge de correu electrònic notifica a l'administrador/a de la subscripció que s'ha comprat una subscripció institucional en línia. Proporciona informació resumida sobre la subscripció i un enllaç ràpid a la subscripció comprada.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Renovació de la subscripció: Individuals</subject>
-		<body>S'ha renovat una subscripció individual en línia per a {$journalName} amb els detalls següents.
+		<body>S'ha renovat una subscripció individual en línia per a {$journalName} amb els detalls següents:
 
 Tipus de subscripció:
 {$subscriptionType}
@@ -840,9 +912,9 @@ Usuari/ària:
 Informació d'afiliació (si s'ha proporcionat):
 {$membership}
 
-Per veure o editar aquesta subscripció, utilitzeu l'URL següent.
+Per veure o editar aquesta subscripció, utilitzeu l'enllaç següent.
 
-URL de la subscripció: {$subscriptionUrl}</body>
+Enllaç de la subscripció: {$subscriptionUrl}</body>
 		<description>Aquest missatge de correu electrònic notifica a un administrador/a de la subscripció que s'ha renovat una subscripció individual en línia. Proporciona informació resumida sobre la subscripció i un enllaç ràpid a la subscripció renovada.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
@@ -868,168 +940,90 @@ Persona de contacte:
 Informació d'afiliació (si s'ha proporcionat):
 {$membership}
 
-Per veure o editar aquesta subscripció, utilitzeu l'URL següent.
+Per veure o editar aquesta subscripció, utilitzeu l'enllaç següent.
 
-URL de la subscripció: {$subscriptionUrl}</body>
+Enllaç de la subscripció: {$subscriptionUrl}</body>
 		<description>Aquest missatge de correu electrònic notifica a un administrador/a de la subscripció que s'ha renovat una subscripció institucional en línia. Proporciona informació resumida sobre la subscripció i un enllaç ràpid a la subscripció renovada.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
 		<subject>Edició de citació</subject>
-		<body>Benvolgut/uda {$authorFirstName},
+		<body>Benvolgut/uda {$authorFirstName}:
 
-Verifiqueu o proporcioneu-nos la citació apropiada per a la referència següent del vostre article, {$articleTitle}:
+Verifiqueu o proporcioneu-nos la citació apropiada per a la referència següent del vostre article, «{$articleTitle}»:
 
 {$rawCitation}
 
-Moltes gràcies!
+Moltes gràcies.
 
 {$userFirstName}
 Corrector/a d'originals, {$journalName}</body>
 		<description>Aquest missatge de correu electrònic permet als correctors/ores d'originals sol·licitar informació addicional sobre referències d'autors/ores.</description>
 	</email_text>
-	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Sol·licitud de revisió d'article</subject>
-		<body>{$reviewerName}:
-
-Aquest correu fa referència a l'article "{$articleTitle}," que està en procés d'avaluació a la revista {$journalName}.
-
-Seguint el procés de revisió de l'article, els autors han enviat una nova versió del document. Ens seria de gran ajut si poguéssiu avaluar aquesta nova revisió.
-
-Inicieu la sessió al lloc web de la revista abans de {$weekLaterDate} per a indicar si portareu a terme la revisió o no, o per a obtenir accés a la tramesa i per a registrar la revisió i la recomanació.El lloc web és {$journalUrl}
-
-La revisió ha d'entregar-se el {$reviewDueDate}.
-
-Si no recordeu el vostre usuari/ària i contrasenya per al lloc web de la revista, podeu fer clic al següent enllaç: {$passwordResetUrl}
-
-URL de l'article: {$submissionReviewUrl}
-
-Gràcies per tenir en compte aquesta petició.
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Amb aquest correu electrònic l'editor/a de secció sol·licita a un revisor/a que accepti o declini la tasca de revisar una tramesa en segones rondes o posteriors. A més a mes, proporciona informació sobre l'article com el títol, el resum, la data de enviament i sobre com obtenir accés a la tramesa. Aquest missatge s'utilitza quan es selecciona el procés de revisió estàndard al pas 2 de la configuració de la revista (Consulteu també REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Sol·licitud de revisió d'article</subject>
-		<body>{$reviewerName}:
-
-Aquest correu fa referència a l'article "{$articleTitle}," que està en procés d'avaluació a la revista {$journalName}.
-
-Seguint el procés de revisió de l'article, els autors han enviat una nova versió del document. Ens seria de gran ajut si poguéssiu avaluar aquesta nova revisió.
-
-Inicieu la sessió al lloc web de la revista abans de {$weekLaterDate} per a indicar si portareu a terme la revisió o no, o per a obtenir accés a la tramesa i per a registrar la revisió i la recomanació.
-
-La revisió ha d'entregar-se el {$reviewDueDate}.
-
-URL de l'article: {$submissionReviewUrl}
-
-Gràcies per tenir en compte aquesta petició.
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Amb aquest correu electrònic l'editor/a de secció sol·licita a un revisor/a que accepti o declini la tasca de revisar una tramesa en segones rondes o posteriors. A més a mes, proporciona informació sobre l'article com el títol, el resum, la data de enviament i sobre com obtenir accés a la tramesa. Aquest missatge s'utilitza quan es selecciona el procés de revisió estàndard al pas 2 de la configuració de la revista, i s'activa l'accés al revisor/a amb un sol clic.</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Sol·licitud de revisió d'article</subject>
-		<body>{$reviewerName}:
-
-Aquest correu fa referència a l'article "{$articleTitle}," que està en procés d'avaluació a la revista {$journalName}.
-
-Seguint el procés de revisió de l'article, els autors han enviat una nova versió del document. Ens seria de gran ajut si poguéssiu avaluar aquesta nova revisió.
-
-Les directrius de revisió de la revista s'afegixen a continuació i l'article s'adjunta a aquest correu. La revisió ha d'entregar-se abans del {$reviewDueDate}.
-
-Gràcies per tenir en compte aquesta petició.
-
-{$editorialContactSignature}
-
-
-Directrius de revisió
-
-{$reviewGuidelines}</body>
-		<description>Amb aquest correu electrònic l'editor/a de secció sol·licita a un revisor/a que accepti o declini la tasca de revisar una tramesa en segones rondes o posteriors. Aquest missatge s'utilitza quan es selecciona el procés de revisió estàndard al pas 2 de la configuració de la revista (Consulteu també REVIEW_REQUEST_SUBSEQUENT.)</description>
-	</email_text>
 	<email_text key="GIFT_AVAILABLE">
 		<subject>{$giftNoteTitle}</subject>
-		<body>Benvolgut {$recipientFirstName},
+		<body>Benvolgut/uda {$recipientFirstName},
 
-{$buyerFullName} vol fer-te un regal a {$giftJournalName}:
+{$buyerFullName} us vol fer arribar un obsequi de {$giftJournalName}:
 
 {$giftDetails}
-
 
 {$giftNote}
 
+Ben aviat rebreu un missatge de correu electrònic amb el detalls per iniciar la sessió i les instruccions per bescanviar l'obsequi.
 
-Rebràs un correu de seguiment que inclou detalls i instruccions per a bescanviar el teu regal.
+Esperem que l'obsequi sigui del vostre grat.
 
-Esperem que gaudeixis del regal!
-
-{$giftContactSignature}</body>
-		<description>Aquest correu notifica al destinatari del regal de que ja ha sigut pagat i està disponible per a ser bescanviat.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Bescanviar el teu regal: Detalls d'accés</subject>
-		<body>Benvolgut {$recipientFirstName},
-
-{$buyerFullName} vol fer-te un regal a {$giftJournalName}:
-
-{$giftDetails}
-
-
-Per a bescanviar el teu regal, si us plau accediu al lloc web de la revista {$giftUrl} amb:
-
-Usuari/ària: {$username}
-
-Quan accediu a la revista podràs canviar aquesta contrasenya.
-
-Esperem que gaudeixis del regal!
-
-{$giftContactSignature}</body>
-		<description>Aquest correu notifica al destinatari d'un regal dels detalls d'accés.</description>
+{$giftContactSignature}
+</body>
+		<description>Aquest missatge de correu electrònic notifica al destinatari/ària d'un obsequi que s'ha comprat un obsequi i que ja el pot bescanviar.</description>
 	</email_text>
 	<email_text key="GIFT_USER_REGISTER">
-		<subject>Bescanviar el teu regal: Detalls d'accés</subject>
-		<body>Benvolgut {$recipientFirstName},
+		<subject>Bescanvieu l'obsequi: Dades per iniciar la sessió</subject>
+		<body>Benvolgut/uda {$recipientFirstName},
 
-{$buyerFullName} vol fer-te un regal a {$giftJournalName}:
+{$buyerFullName} us vol fer arribar un obsequi de {$giftJournalName}:
+
+{$giftDetails}
+
+Per bescanviar l'obsequi heu d'iniciar la sessió al lloc web de la revista a {$giftUrl}
+
+Nom d’usuari/ària: {$username}
+Contrasenya: {$password}
+
+Una vegada dins el sistema podreu canviar la contrasenya en qualsevol moment.
+
+Esperem que l'obsequi sigui del vostre grat.
+
+{$giftContactSignature}
+</body>
+		<description>Aquest missatge de correu electrònic notifica al destinatari/ària d'un obsequi les dades per iniciar la sessió amb un nou compte.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Bescanvieu l'obsequi: Dades per iniciar la sessió</subject>
+		<body>Benvolgut/uda {$recipientFirstName},
+
+{$buyerFullName} us vol fer arribar un obsequi de {$giftJournalName}:
 
 {$giftDetails}
 
 
-Per a bescanviar el teu regal, si us plau accediu al lloc web de la revista {$giftUrl} amb:
+Per bescanviar l'obsequi heu d'iniciar la sessió al lloc web de la revista a {$giftUrl}
 
-Usuari/ària: {$username}
-Contrasenya: {$password}
+Nom d’usuari/ària: {$username}
 
-Quan accediu a la revista podràs canviar aquesta contrasenya.
+Esperem que l'obsequi sigui del vostre grat.
 
-Esperem que gaudeixis del regal!
-
-{$giftContactSignature}</body>
-		<description>Aquest correu notifica al destinatari d'un regal dels detalls d'accés per al seu nou compte.</description>
+{$giftContactSignature}
+</body>
+		<description>Aquest missatge de correu electrònic notifica al destinatari/ària d'un obsequi les dades per iniciar la sessió.</description>
 	</email_text>
-	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>S'ha entregat una versió revisada</subject>
+<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>Versió revisada carregada</subject>
 		<body>{$editorialContactName}:
 
-L'autor/a {$authorName} ha entregat una nova versió revisada de l'article "{$articleTitle}".
-
-URL de la tramesa: {$submissionUrl}
+L'autor/a ha carregat una versió revisada de «{$articleTitle}». Enllaç de la tramesa: {$submissionUrl}
 
 {$editorialContactSignature}</body>
-		<description>Aquest correu envia a l'editor/a assignat un missatge automàtic quan l'autor/a envia una versió revisada del seu article.</description>
+		<description>Aquest missatge de correu electrònic s'envia automàticament a l'editor/a assignat quan l'autor/a carrega una versió revisada d'un article.</description>
 	</email_text>
 </email_texts>

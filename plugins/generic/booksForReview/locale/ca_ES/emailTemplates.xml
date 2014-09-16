@@ -7,10 +7,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localized email templates XML file.
   -->
+
 <email_texts locale="ca_ES">
 	<email_text key="BFR_REVIEW_REMINDER">
 		<subject>Sol·licitud de Ressenya: Recordatori de la data de venciment</subject>
@@ -27,7 +28,7 @@ Si us plau, no dubtis a posar-te en contacte amb nosaltres si tens algun alguna 
 Gràcies per la teva contribució a la revista
 
 {$editorialContactSignature}</body>
-    <description>Aquesta plantilla de correu s'envia autoàmticament a l'autor/a de la ressenya d'un llibre com a recordatori quan la data de venciment s'apropa.</description>
+    <description>Aquesta plantilla de correu s'envia automàticament a l'autor/a de la ressenya d'un llibre com a recordatori quan la data de venciment s'apropa.</description>
 	</email_text>
 	<email_text key="BFR_REVIEW_REMINDER_LATE">
 		<subject>Ressenya de llibre: Data de venciment</subject>

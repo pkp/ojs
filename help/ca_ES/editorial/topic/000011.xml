@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Author's Role Editing Index 
   *
   -->
 
-<topic id="editorial/topic/000011" locale="en_US" title="Editing" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
+<topic id="editorial/topic/000011" locale="ca_ES" title="Editing" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
 	<section>
 		<![CDATA[<p>L'autor/a participa en els processos de correcció d'originals i de correcció de proves durant l'etapa d'edició, que consisteix a preparar la tramesa per a la publicació electrònica i/o en paper.</p>]]>	
 	</section>

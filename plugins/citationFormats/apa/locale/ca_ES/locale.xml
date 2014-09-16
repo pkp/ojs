@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/citationFormats/apa/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
+  * Localization strings.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.citationFormats.apa.displayName">Connector per al format de citació APA</message>
+	<message key="plugins.citationFormats.apa.displayName">Mòdul per al format de citació APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">Aquest connector implementa el format de citació APA.</message>
+	<message key="plugins.citationFormats.apa.description">Aquest mòdul implementa el format de citació APA.</message>
 	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Recuperat des de <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale> 

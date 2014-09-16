@@ -7,16 +7,17 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localized email templates XML file.
   -->
+
 <email_texts locale="ca_ES">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Activitat inusual a PayPal</subject>
 		<body>Open Journal Systems ha detectat una activitat inusual relacionada amb el suport de pagament de PayPal a la revista. Aquesta activitat pot requerir de més investigació o d'intervenció manual.
 
-Aquest correu l'ha generat el connector PayPal de l'Open Journal Systems.
+Aquest correu l'ha generat el mòdul PayPal de l'Open Journal Systems.
 
 Informació completa de la tramesa:
 {$postInfo}
@@ -26,6 +27,6 @@ Información addicional (si fou proporcionada):
 
 Variables del servidor:
 {$serverVars}</body>
-		<description>Aquesta plantilla de correu s'utilitza per a notificar al contacte principal de la revista de que el connector PayPal ha detectat activitat sospitosa o activitat que requereix d'una intervenció manual.</description>
+		<description>Aquesta plantilla de correu s'utilitza per a notificar al contacte principal de la revista de que el mòdul PayPal ha detectat activitat sospitosa o activitat que requereix d'una intervenció manual.</description>
 	</email_text>
 </email_texts>

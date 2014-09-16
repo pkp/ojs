@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editor's Role Submission Summary - Submission Metadata
   *
   -->
 
-<topic id="editorial/topic/000020" locale="en_US" title="Submission Metadata" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+<topic id="editorial/topic/000020" locale="ca_ES" title="Submission Metadata" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
 	<section>
 		<![CDATA[<p>Les metadades que s'utilitzen per indexar la tramesa en publicació han estat introduïdes per l'autor/a i poden ser modificades per l'editor/a de secció i també per l'autor/a i el corrector/a d'originals durant el procés editorial.</p>]]>	
 	</section>

@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Author's Role Editing - Copyediting 
   *
   -->
 
-<topic id="editorial/topic/000035" locale="en_US" title="Copyediting" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
+<topic id="editorial/topic/000035" locale="ca_ES" title="Copyediting" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
 	<section>
 		<![CDATA[<p>Inicialment, el corrector/a d'originals corregeix la tramesa treballant directament en el fitxer electrònic i incloent-hi suggeriments per millorar-ne la coherència i la cohesió semàntiques i també els canvis necessaris perquè la tramesa s'ajusti a l'estil i al format de la revista (sobretot pel que fa a les convencions bibliogràfiques). El corrector/a d'originals penja la tramesa corregida al 1er pas i envia un correu electrònic a l'autor/a i a l'editor/a de secció per notificar-los que la correcció d'originals inicial ja és a punt. L'autor/a pot accedir a aquesta versió al 1er pas del procés de correcció d'originals fent clic al nom del fitxer, desant-lo al seu ordinador i obrint-lo des d'allà.</p><p><em>Revisió de l'autor/a de correccions d'originals</em>. L'autor/a revisa tots els canvis proposats pel corrector/a d'originals i pot fer més suggeriments o canvis a la tramesa seguint les instruccions per a la correcció d'originals que hagin definit la revista. (És l'última oportunitat per fer aquest tipus de canvis a la tramesa, ja que durant l'etapa de correcció de proves només s'admeten modificacions relatives a errors tipogràfics i de format). A més, l'autor/a ha de respondre les consultes del corrector/a d'originals (com ara números de pàgina que faltin, etc.). Per accedir a aquestes consultes, l'autor/a ha de fer clic a la icona que hi ha al costat dels comentaris del corrector/a d'originals. Una vegada ha acabat, l'autor/a desa el fitxer al seu ordinador i a continuació el penja al 2n pas de la correcció perquè el corrector/a d'originals hi pugui accedir.</p><p><em>Revisió de les metadades</em>. L'autor/a també ha de revisar les metadades de la tramesa per detectar-hi possibles errors o omissions. Les metadades s'utilitzen per indexar la tramesa en el procés de publicació i poden ajudar els usuaris/àries a trobar l'article.</p> <p>Per acabar, l'autor/a fa clic a la icona de correu electrònic que hi ha sota de «Complet» per notificar al corrector/a d'originals i a l'editor/a de secció que ja s'ha enllestit aquest pas.</p>]]>	
 	</section>

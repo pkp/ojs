@@ -1,18 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.openads.description">El connector OpenAds permet inserir anuncis dinàmics del servidor d'anuncis OpenAds a l'OJS.</message>
-	<message key="plugins.generic.openads.descriptionUnconfigured">El connector OpenAds permet inserir anuncis dinàmics del servidor d'anuncis OpenAds a l'OJS. Llegiu el fitxer README de plugins/generic/openAds per obtenir informació sobre l'activació d'aquest connector.</message>
-	<message key="plugins.generic.openads">Connector OpenAds</message>
+	<message key="plugins.generic.openads.description">El mòdul OpenAds permet inserir anuncis dinàmics del servidor d'anuncis OpenAds a l'OJS.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured">El mòdul OpenAds permet inserir anuncis dinàmics del servidor d'anuncis OpenAds a l'OJS. Llegiu el fitxer README de plugins/generic/openAds per obtenir informació sobre l'activació d'aquest mòdul.</message>
+	<message key="plugins.generic.openads">Mòdul OpenAds</message>
 	<message key="plugins.generic.openads.settings.description">Utilitzeu aquest formulari per seleccionar les zones de publicitat d'OpenAds que es mostraran a l'OJS per a cada lloc potencial.</message>
 	<message key="plugins.generic.openads.manager.settings">Configuració</message>
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000031.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Management Pages - Import/Export
   *
   -->
 
-<topic id="journal/topic/000031" locale="en_US" title="Import/Export Data" toc="journal/toc/000001" key="journal.managementPages.importExport">
+<topic id="journal/topic/000031" locale="ca_ES" title="Import/Export Data" toc="journal/toc/000001" key="journal.managementPages.importExport">
 	<section>
 		<![CDATA[<p>The Import/Export Data feature, available from Journal Management, allows the Journal Manager to inject data into and extract data from OJS.</p><p>Data import/export is implemented using plugins, with each format or type of data being provided by a different plugin. For more information, refer to each plugin's documentation, found within OJS' plugin directory.</p><p>Five Import/Export plugins ship with OJS, and are documented below.</p><p>Import/export functionality is also available as a command-line tool; see tools/importExport.php for more information.</p>]]>
 	</section>

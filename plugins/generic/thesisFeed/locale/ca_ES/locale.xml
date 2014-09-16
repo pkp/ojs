@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.thesisfeed.displayName">Connector de canals d'informació per als resums de tesis</message>
-	<message key="plugins.generic.thesisfeed.description">Aquest connector genera canals d'informació RSS/Atom per als resums de tesis.</message>
+	<message key="plugins.generic.thesisfeed.displayName">Mòdul de canals d'informació per als resums de tesis</message>
+	<message key="plugins.generic.thesisfeed.description">Aquest mòdul genera canals d'informació RSS/Atom per als resums de tesis.</message>
 
 	<message key="plugins.generic.thesisfeed.settings">Configuració</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Mostra enllaços als canals d'informació a totes les pàgines de la revista.</message>

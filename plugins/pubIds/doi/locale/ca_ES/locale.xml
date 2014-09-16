@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/pubIds/doi/locale/ca_ES/locale.xml
   *
@@ -8,18 +7,20 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * DOI plugin localization strings
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.displayName">Mòdul DOI</message>
 	<message key="plugins.pubIds.doi.description">This plugin enables the assignment of the Digital Object Identifiers to issues, articles, galleys and supplementary files in OJS.</message>
 
 	<!-- settings form -->
-	<message key="plugins.pubIds.doi.manager.settings.doiSettings">DOI Plugin Settings</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Configuració del mòdul DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Please configure the DOI plug-in to be able to manage and use DOIs in OJS:</message>
 	
-	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Journal Content</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Contingut de la revista</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Please choose the objects DOIs should be assigned to.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Please select the publishing objects that will have Digital Object Identifiers (DOI) assigned:</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Issues</message>
@@ -27,7 +28,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Galleys</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Supplementary Files</message>
 	
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Prefix</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Prefix DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[The DOI Prefix is assigned by registration agencies (e.g. <a href="http://www.crossref.org" target="_new">CrossRef</a>) and is in the format 10.xxxx (e.g. 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">The DOI prefix is mandatory and must be in the form 10.xxxx.</message>
 
@@ -48,7 +49,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Please enter the DOI suffix pattern for galleys.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Please enter the DOI suffix pattern for supplementary files.</message>
 	
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Reassign DOIs</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Reassignar DOIs</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">If you change your DOI configuration, DOIs that have already been assigned will not be affected. Once the DOI configuration is saved, use this button to clear all existing DOIs so that the new settings will take effect with existing articles.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Are you sure you wish to delete all existing DOIs?</message>	
 
@@ -61,4 +62,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">supplementary file</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">What you see is a preview of the DOI that may be incomplete. A DOI has not yet been generated. Publishing the issue and viewing the public {$pubObjectType} page will automatically generate a unique DOI for this {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NOTA:</strong> Quan utilitzeu DOIs de <a href="http://www.crossref.org" target="_new">CrossRef</a>, si us plau seleccioneu articles. Els articles es comprenen com a un treball, dit d'un altre manera, una entitat intel·lectual i artística de contingut. Per tant, l'article es l'objecte en el que el DOI de CrossRef es basarà per a l'exportació i el registre.]]></message>
 </locale>

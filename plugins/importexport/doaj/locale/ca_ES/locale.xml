@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
@@ -11,14 +13,11 @@
   -->
 
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.importexport.doaj.displayName">Connector d'exportació DOAJ</message>
+	<message key="plugins.importexport.doaj.displayName">Mòdul d'exportació DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Exporta la revista al DOAJ i envia informació sobre la revista al representant del DOAJ.</message>
-
-	
 	<message key="plugins.importexport.doaj.export">Exporta les dades de la revista al DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Exporta la revista</message>
 	<message key="plugins.importexport.doaj.export.contact">Contacta amb el DOAJ per a l'inclusió</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Exporta la informació de l'article en format XML per arxivar-la al DOAJ.</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Perquè la vostra revista consti al DOAJ, envieu-hi aquest formulari parcialment emplenat de manera automàtica i completeu-lo amb la resta d'informació que pugueu aportar.</message>
-
 </locale> 

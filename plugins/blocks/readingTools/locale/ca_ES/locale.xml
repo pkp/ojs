@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
-  * locale.xml
+  * plugins/blocks/readingTools/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
 
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.block.readingTools.displayName">Bloc d'eines de lectura</message>
-	<message key="plugins.block.readingTools.description">Aquest connector mostra un bloc que conté eines de lectura a la barra lateral d'eines de lectura.</message>
+	<message key="plugins.block.readingTools.displayName">Secció Eines de lectura</message>
+	<message key="plugins.block.readingTools.description">Aquest mòdul mostra un bloc que conté eines de lectura a la barra lateral de les eines de lectura.</message>
 	<message key="plugins.block.readingTools.title">Eines de lectura</message>
 	<message key="plugins.block.readingTools.aboutTheAuthor">Sobre l'autor/a</message>
 	<message key="plugins.block.readingTools.aboutTheAuthors">Sobre els autors/ores</message>
 	<message key="plugins.block.readingTools.articleTools">Eines de l'article</message>
-	<message key="plugins.block.readingTools.emailThisArticle">Envia aquest article per correu electrònic</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Envieu aquest article per correu electrònic</message>
 	<message key="plugins.block.readingTools.loginRequired">Heu d'iniciar sessió</message>
 	<message key="plugins.block.readingTools.printThisArticle">Imprimeix aquest article</message>
 	<message key="plugins.block.readingTools.postComment">Publica un comentari</message>
-</locale>
+</locale> 

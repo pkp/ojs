@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Author's Role Review Index - Peer Review
   *
   -->
 
-<topic id="editorial/topic/000034" locale="en_US" title="Editor Decision" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
+<topic id="editorial/topic/000034" locale="ca_ES" title="Editor Decision" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
 	<section>
 		<![CDATA[<p>Una vegada ha acabat el procés de revisió, l'editor/a de secció pren una decisió i la notifica per correu electrònic a l'autor/a. Aquesta decisió també queda registrada a la secció de correspondència editor/a-autor/a de la pàgina de revisió de l'autor/a. Si l'editor/a de secció sol·licita revisions abans de prendre una decisió final, l'autor/a pot penjar en aquesta pàgina un versió revisada de la tramesa i també fitxers addicionals revisats o addicionals (p. ex., conjunts de dades, instruments de recerca, documents originals, etc.). L'editor/a de secció també pot penjar versions de la tramesa o altres documents perquè els consulti l'autor/a. (Per consultar els fitxers penjats, l'autor/a ha de fer clic al nom del fitxer per obrir-lo o bé per desar-lo al seu ordinador i obrir-lo des d'allà.)</p><p> Si la tramesa és acceptada, passa a l'etapa d'{help_topic key="editorial.editorsRole.submissions.inEditing" text="edició"} del procés editorial.</p><p><em>Reavaluable</em>. En cas que l'editor/a de secció decideixi que cal revisar la tramesa i després tornar-la a enviar perquè la revisin persones expertes, l'autor/a ha d'indicar que accepta fer aquesta revisió mitjançant la correspondència editor/a-autor/a. Una vegada s'hagi enllestit la revisió, l'autor/a ha de penjar la nova versió perquè passi per una segona ronda de revisió. A continuació, l'editor/a de secció envia la tramesa als mateixos revisors/ores de la primera ronda o bé a un o més revisors/ores nous i, finalment, notifica a l'autor/a la decisió presa, de la mateixa manera que s'ha fet a la revisió inicial.</p>]]>	
 	</section>

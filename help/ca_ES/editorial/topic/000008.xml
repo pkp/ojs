@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Reviewer's Role Index 
   *
   -->
 
-<topic id="editorial/topic/000008" locale="en_US" title="Reviewer's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+<topic id="editorial/topic/000008" locale="ca_ES" title="Reviewer's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
 	<section>
 		<![CDATA[<p>El revisor/a rep per correu electrònic una sol·licitud per revisar una tramesa. Aquesta sol·licitud inclou el títol i el resum de la tramesa, l'URL de la revista, un nom d'usuari/ària i una contrasenya que li permeten accedir a la revista. A més, la revista també disposa d'una opció que permet enviar la tramesa com a fitxer adjunt en un missatge de correu electrònic al revisor/a, juntament amb la sol·licitud perquè dugui a terme aquesta tasca. En aquest cas, el revisor/a ha de respondre per correu electrònic. No obstant això, en aquest apartat de l'ajuda es descriu el mètode de revisió principal (que assegura l'obtenció d'un registre complet del procés), en el qual el revisor/a revisa la tramesa des del lloc web de la revista.</p>]]>	
 	</section>

@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.reports.counter.description"><![CDATA[El connector COUNTER (comptador) permet enregistrar i crear informes de l'activitat del lloc web, d'acord amb la iniciativa <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>.]]></message>
-	<message key="plugins.reports.counter">Estadístiques del COUNTER</message>
-	<message key="plugins.reports.counter.migrate">Migra el fitxer de registre</message>
+	<message key="plugins.reports.counter.description"><![CDATA[El mòdul COUNTER (comptador) permet enregistrar i crear informes de l'activitat del lloc web, d'acord amb la iniciativa <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>.]]></message>
+	<message key="plugins.reports.counter">Estadístiques de COUNTER</message>
 	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R2): Sol·licituds d'articles de text complet per mes i revista</message>
 	<message key="plugins.reports.counter.1a.title1">Informe de la revista 1 (R2):</message>
 	<message key="plugins.reports.counter.1a.title2">Nombre de sol·licituds amb èxit d'articles de text complet per mes i revista (any {$year})</message>
@@ -26,4 +27,5 @@
 	<message key="plugins.reports.counter.1a.ytdHtml">HTML de l'any en curs</message>
 	<message key="plugins.reports.counter.1a.ytdPdf">PDF de l'any en curs</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total per a totes les revistes</message>
+	<message key="plugins.reports.counter.legacyStats">Els enllaços següents generen informes utilitzant dades de l'antic mòdul COUNTER. Si voleu generar informes COUNTER utilitzant la nova mètrica OJS COUNTER, utilitzeu els enllaços superiors.</message>
 </locale> 

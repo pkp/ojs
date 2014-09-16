@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editor's Role Submissions Index 
   *
   -->
 
-<topic id="editorial/topic/000002" locale="en_US" title="Submissions" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
+<topic id="editorial/topic/000002" locale="ca_ES" title="Submissions" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
 	<section>
 		<![CDATA[<p>Totes les trameses a la revista es poden trobar en una de les quatre cues de la pàgina de trameses, segons l'etapa del procés editorial en què es trobin. Els editors/ores poden accedir a totes les trameses a través d'aquesta pàgina, mentre que els editors/ores de secció només tenen accés a les trameses que els hagin estat assignades.</p>]]>	
 	</section>

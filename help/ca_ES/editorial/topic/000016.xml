@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editor's Role Submissions - In Review 
   *
   -->
 
-<topic id="editorial/topic/000016" locale="en_US" title="In Review" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
+<topic id="editorial/topic/000016" locale="ca_ES" title="In Review" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
 	<section>
 		<![CDATA[<p>Les trameses d'aquesta cua han de passar per un procés de revisió i l'editor/a de secció ha de decidir si les accepta o les rebutja. La política de revisió de la revista defineix tots els aspectes del procés de revisió (p. ex., s'hi descriuen qüestions com ara «Totes les seccions de la revista estan subjectes a l'avaluació d'experts?» o bé «Quantes persones expertes han de revisar una tramesa?»). Per accedir a la pàgina de revisió d'una tramesa, només cal que un editor/a de secció o un editor/a facin clic al títol de la tramesa des de la cua de revisió. Si l'editor/a de secció accepta una tramesa, l'ha de traslladar a la cua d'edició. En cas de rebutjar-la, l'ha de traslladar als arxius.</p>]]>	
 	</section>

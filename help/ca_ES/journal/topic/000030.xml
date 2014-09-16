@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000030.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Management Pages - System Plugins
   *
   -->
 
-<topic id="journal/topic/000030" locale="en_US" title="System Plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
+<topic id="journal/topic/000030" locale="ca_ES" title="System Plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
 	<section>
 		<![CDATA[<p>The System Plugins page allows the Journal Manager to view a list of plugins installed in OJS and perform any management tasks made available by each plugin. For more information, refer to the documentation included with each plugin, found within OJS' plugin directory (/path/to/install/plugins).</p>]]>
 	</section>

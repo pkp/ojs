@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Layout Editor's Role - Submissions
   *
   -->
 
-<topic id="editorial/topic/000039" locale="en_US" title="Submissions" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+<topic id="editorial/topic/000039" locale="ca_ES" title="Submissions" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
 	<section>
 		<![CDATA[<p>En iniciar la sessió, el maquetista accedeix a la seva pàgina inicial d'usuari/ària. Aquesta pàgina inclou un enllaç que permet accedir a la cua de trameses actives del maquetista, un enllaç anomenat «Arxiu» que permet accedir a trameses enllestides anteriorment i un darrer enllaç que permet visualitzar sumaris per a números futurs, en cas que estiguin disponibles.</p><p><em>Trameses actives</em><br />En fer clic a l'enllaç «Actiu» de la pàgina inicial de l'usuari/ària, el maquetista accedeix a la seva pàgina de trameses actives, on s'enumeren tots els encàrrecs de maquetació que té assignats. El procés de maquetació s'inicia en fer clic a un dels títols.</p><p><em>Arxiu</em><br />En fer clic a l'enllaç «Arxiu» de la pàgina inicial de l'usuari/ària, el maquetista accedeix a la pàgina d'arxiu. En aquesta pàgina s'enumeren els encàrrecs de maquetació enllestits i ja publicats.</p><p><em>Números</em><br />En fer clic a l'enllaç «Propers números» de la pàgina inicial de l'usuari/ària, el maquetista accedeix a una llista on s'enumeren propers números que encara no han estat publicats. Mitjançant aquesta opció el maquetista pot corregir un número de manera global.</p>]]>	
 	</section>

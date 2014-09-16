@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/importexport/duracloud/locale/ca_ES/locale.xml
   *
@@ -8,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Localization strings
   -->
 
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.importexport.duracloud.displayName">Connector d'importació/exportació DuraCloud</message>
+	<message key="plugins.importexport.duracloud.displayName">Mòdul d'importació/exportació DuraCloud</message>
 	<message key="plugins.importexport.duracloud.description">Archive and restore issues using an external DuraCloud service for storage</message>
 
 	<message key="plugins.importexport.duracloud.configuration">DuraCloud Configuration</message>
@@ -58,5 +59,4 @@ Example:
 
 	<message key="plugins.importexport.duracloud.import.success">Import Successful</message>
 	<message key="plugins.importexport.duracloud.import.success.description">The import was successful. Successfully-imported items are listed below.</message>
-
 </locale>

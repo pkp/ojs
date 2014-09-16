@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Proofreader's Role - Submissions
   *
   -->
 
-<topic id="editorial/topic/000042" locale="en_US" title="Submissions" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+<topic id="editorial/topic/000042" locale="ca_ES" title="Submissions" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
 	<section>
 		<![CDATA[<p>En iniciar la sessió a la revista i fer clic a l'enllaç «Corrector/a de proves» de la seva pàgina inicial d'usuari/ària, el corrector/a de proves accedeix a la cua de trameses, on s'enumeren tots els encàrrecs de correcció que té assignats. A més, també pot accedir a encàrrecs que hagi enllestit anteriorment fent clic a l'enllaç «Arxiu». En fer clic al títol d'un article, el corrector/a de proves accedeix a la pàgina de correcció corresponent.</p>]]>	
 	</section>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * locale.xml
   *
@@ -8,14 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
 
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.reports.reviews.displayName">Informe de revisions</message>
-	<message key="plugins.reports.reviews.description">Aquest connector implementa un informe CSV amb la llista d'assignacions de revisions d'una revista.</message>
+	<message key="plugins.reports.reviews.description">Aquest mòdul implementa un informe CSV amb la llista d'assignacions de revisions d'una revista.</message>
 	<message key="plugins.reports.reviews.round">Ronda</message>
 	<message key="plugins.reports.reviews.reviewerId">Id. del revisor/a</message>
 	<message key="plugins.reports.reviews.reviewer">Revisor/a</message>
@@ -25,4 +24,3 @@
 	<message key="plugins.reports.reviews.dateCompleted">Data de la compleció</message>
 	<message key="plugins.reports.reviews.dateReminded">Data del recordatori</message>
 </locale>
-

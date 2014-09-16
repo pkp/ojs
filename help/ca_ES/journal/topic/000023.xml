@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000023.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Roles - Reader 
   *
   -->
 
-<topic id="journal/topic/000023" locale="en_US" title="Reader" toc="journal/toc/000003" key="journal.roles.reader">
+<topic id="journal/topic/000023" locale="ca_ES" title="Reader" toc="journal/toc/000003" key="journal.roles.reader">
 	<section>
 		<![CDATA[<p>Readers include both subscribers for journals for which access is subscription-based, and readers who choose to register for open access journals (whether immediately open access or open after a period of time after initial publication of journal content). Registered Readers receive a notification email with the publication of each issue, which includes the Table of Contents for that particular issue. On registering themselves with the journal, Authors are given the option of enrolling as Readers as well.</p><p>More information on Registering for a journal can be found {help_topic key="user.registerAndProfile" text="here"}.</p> ]]>	
 	</section>

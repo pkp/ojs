@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Layout Editor's Role - Layout
   *
   -->
 
-<topic id="editorial/topic/000040" locale="en_US" title="Layout" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.layout">
+<topic id="editorial/topic/000040" locale="ca_ES" title="Layout" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.layout">
 	<section>
 		<![CDATA[<p>El corrector/a d'originals s'encarrega de preparar la versió de maquetació de la tramesa segons les convencions establertes per a la revista. La tasca del maquetista consisteix a convertir la tramesa als formats de fitxer adequats i a aplicar-hi l'estil de maquetació establert per a la revista. Per preparar els fitxers en format HTML, PDF, Postscript, etc., el maquetista ha d'utilitzar altres programes com ara Dreamweaver, Front Page o Acrobat. L'administrador/a de la revista pot preparar un conjunt d'instruccions de maquetació per ajudar els maquetistes a formatar els fitxers de manera adequada.</p><p><em>Com penjar galerades</em>. Quan el maquetista penja un fitxer de galerades, el sistema en sol identificar el tipus segons la seva extensió (p. ex., PDF, HTML) i també ofereix informació sobre el nom original i la mida. Aquesta etiqueta, que es mostra al sumari de la revista en associació amb l'element publicat, informa els lectors/ores sobre els tipus de format de fitxer en què està disponible l'element publicat. El maquetista pot etiquetar manualment el fitxer i, a més, també pot penjar més d'un format de fitxer de galerades, suprimir fitxers penjats i editar dades com ara els noms de fitxer. A l'hora de penjar galerades en format HTML, cal tenir en compte que juntament amb el fitxer .htm o .html també cal penjar les imatges i el full d'estil corresponents.</p><p><em>Fitxers addicionals</em>. Si l'autor/a ha penjat fitxers addicionals, són a la ubicació que els pertoca. Cal publicar-los en el seu format de fitxer original, tret que la revista hagi establert una política especial en relació amb la seva preparació (per exemple, amb figures o il·lustracions). Encara que la política de la revista indiqui que aquests fitxers s'han de publicar en el seu format original, és possible que el maquetista els vulgui revisar per comprovar-ne la llegibilitat i fer-hi modificacions per adequar-los a l'estil i les convencions de la revista. El maquetista és qui pot crear, modificar, sobreescriure i suprimir fitxers addicionals (en alguns casos també ho pot fer l'autor/a, si determinats aspectes del format de fitxer ho requereixen).</p>]]>	
 	</section>

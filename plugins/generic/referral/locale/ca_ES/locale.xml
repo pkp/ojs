@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * locale.xml
   *
@@ -8,14 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.referral.name">Connector Referral</message>
-	<message key="plugins.generic.referral.description">El connector Referral rastreja en els articles l'URL d'enllaços refback entrants (p. ex. quan un lector segueix un enllaç extern a un article) i permet als autors/ores mantenir i publicar una llista actualitzada automàticament dels enllaços refback d'un article.</message>
+	<message key="plugins.generic.referral.name">Mòdul Referral</message>
+	<message key="plugins.generic.referral.description">El mòdul Referral rastreja en els articles l'URL d'enllaços refback entrants (p. ex. quan un lector segueix un enllaç extern a un article) i permet als autors/ores mantenir i publicar una llista actualitzada automàticament dels enllaços refback d'un article.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Edita enllaços refback</message>
 	<message key="plugins.generic.referral.createReferral">Crea enllaços refback</message>
@@ -33,8 +32,8 @@
 	<message key="plugins.generic.referral.confirmDelete">Esteu segur/a que voleu suprimir aquest enllaç refback?</message>
 	<message key="plugins.generic.referral.nameRequired">Es requereix un títol per a l'enllaç refback.</message>
 	<message key="plugins.generic.referral.urlRequired">Es requereix un URL per a l'enllaç refback.</message>
-	<message key="plugins.generic.referral.settings">Configuració del connector Referral</message>
-	<message key="plugins.generic.referral.settings.description">El connector Referral captura els URL que enllacen amb els articles publicats en aquesta revista perquè l'autor/a els pugui organitzar i decidir si s'han de publicar o no. Aquest formulari permet que el gestor/a de la revista controli com es capturen aquests enllaços.</message>
+	<message key="plugins.generic.referral.settings">Configuració del mòdul Referral</message>
+	<message key="plugins.generic.referral.settings.description">El mòdul Referral captura els URL que enllacen amb els articles publicats en aquesta revista perquè l'autor/a els pugui organitzar i decidir si s'han de publicar o no. Aquest formulari permet que el gestor/a de la revista controli com es capturen aquests enllaços.</message>
 	<message key="plugins.generic.referral.excusions">Exclusions</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Introduïu una llista de patrons d'expressions regulars, un per línia, a tractar com exclusions per a un registre de referències. Això serveix per evitar que les sol·licituds dels motors de cerca saturin la llista de referències. Per a més informació sobre expressions regulars, vegeu <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new"> http://ca.php.net/manual/és/ref.pcre.php. </ a>/en/ref.pcre.php</a>.]]></message>
 	<message key="plugins.generic.referral.status.accepted">Publicat</message>

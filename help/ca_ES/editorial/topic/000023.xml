@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Section Editor's Role Index - Archives
   *
   -->
 
-<topic id="editorial/topic/000023" locale="en_US" title="Archives" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
+<topic id="editorial/topic/000023" locale="ca_ES" title="Archives" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
 	<section>
 		<![CDATA[<p>Les trameses d'aquesta cua han passat pel procés editorial i pot ser que hagin estat rebutjades o publicades. A través d'aquesta cua els editors/ores i l'editor/a de secció assignats poden accedir a l'historial editorial complet de la tramesa (resum, tramesa, revisió, edició i historial).</p>]]>	
 	</section>

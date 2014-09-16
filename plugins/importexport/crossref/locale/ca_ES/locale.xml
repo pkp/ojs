@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.importexport.crossref.displayName">Connector d'exportació a XML de CrossRef</message>
+	<message key="plugins.importexport.crossref.displayName">Mòdul d'exportació a XML de CrossRef</message>
 	<message key="plugins.importexport.crossref.description">Exporta les metadades de l'article en format XML de CrossRef.</message>
 	
 	<message key="plugins.importexport.crossref.export">Exporta les dades</message>
@@ -26,5 +28,5 @@
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">No hi ha cap número que coincideixi amb l'id. de número indicat "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">No hi ha cap article que coincideixi amb l'id. d'article indicat "{$articleId}".</message>
 
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Per poder utilitzar aquest connector heu d'indicar un prefix DOI vàlid a la configuració de la revista.</message>
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Per poder utilitzar aquest mòdul heu d'indicar un prefix DOI vàlid a la configuració de la revista.</message>
 </locale> 

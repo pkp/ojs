@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/announcementFeed/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.announcementfeed.displayName">Connector de canals d'avisos</message>
-	<message key="plugins.generic.announcementfeed.description">Aquest connector genera canals d'informació RSS/Atom per als avisos de la revista.</message>
+	<message key="plugins.generic.announcementfeed.displayName">Mòdul de canals d'avisos</message>
+	<message key="plugins.generic.announcementfeed.description">Aquest mòdul genera canals d'informació RSS/Atom per als avisos de la revista.</message>
 	
 	<message key="plugins.generic.announcementfeed.settings">Configuració</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Mostra enllaços als canals d'informació a totes les pàgines de la revista.</message>

@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editor's Role Index 
   *
   -->
 
-<topic id="editorial/topic/000001" locale="en_US" title="Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
+<topic id="editorial/topic/000001" locale="ca_ES" title="Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
 	<section>
 		<![CDATA[<p>L'editor/a s'encarrega de supervisar el procés editorial, començant amb l'assignació d'un editor/a de secció per a una tramesa. Segons les polítiques establertes per la revista, l'editor/a sovint també adopta el rol d'editor/a de secció a l'hora de supervisar el pas de les trameses acceptades per l'etapa d'edició del procés editorial.</p><p>L'editor/a també pot crear i gestionar números de revista, i notificar als usuaris/àries de nous números i/o esdeveniments.</p>]]>	
 	</section>
