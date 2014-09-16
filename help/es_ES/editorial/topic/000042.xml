@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Proofreader's Role - Submissions
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000042" locale="es_ES" title="Envíos" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
 	<section>
-		<![CDATA[<p>Una vez el corrector/a de pruebas inicia sesión, si hace clic en el enlace Corrector/a de pruebas del Área personal, llega a la lista Envíos. Esta lista muestra los trabajos que se le han asignado. Además, los correctores/as de pruebas pueden acceder a todos aquellos envíos que ya han finalizado por medio del enlace Archivos. Para acceder a la página de corrección de pruebas del artículo, los correctores/as de pruebas deben hacer clic en el título del artículo.</p>]]>	
+		<![CDATA[<p>Una vez que se registre el corrector/a de pruebas, si hace clic en el enlace de corrector/a de pruebas en la página del área personal se dirigirá a la cola de envíos. Esta lista es útil para aquellos que deben realizar correcciones.   Además, los correctores/as de pruebas pueden acceder a todos los envíos que completaron por medio del enlace Archivos. Para acceder a la página de corrección de pruebas del artículo, el corrector/a de pruebas debe hacer clic en el título del artículo.</p>]]>	
 	</section>
-</topic>
+</topic> 

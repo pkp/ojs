@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * @file plugins/generic/alm/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * ALM plugin localization strings
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.alm.displayName">Módulo ALM</message>
+	<message key="plugins.generic.alm.description">Módulo para mostrar la Métrica a Nivel de Artículo (ALM, Article Level Metrics). Para usar el servicio ALM, necesitas disponer de DOIs. Este requisito podría relajarse en un futuro.</message>
+	<message key="plugins.generic.alm.title">Métricas de artículo</message>
+	<message key="plugins.generic.alm.loading">Cargando métricas ...</message>
+
+	<message key="plugins.generic.alm.settings">Configuración</message>
+	<message key="plugins.generic.alm.settings.saved">Se ha guadado la configuración del módulo ALM.</message>
+	<message key="plugins.generic.alm.apiKeyRequired">Debe añadir la clave de la API de ALM (Article Level Metrics)</message>
+	<message key="plugins.generic.alm.depositUrlRequired">Debe añadir la url del dipósito de información del artículo.</message>
+	<message key="plugins.generic.alm.settings.apiKey">Clave API de ALM (Article Level Metrics)</message>
+	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[Para que el servidor ALM pueda acceder a las métricas a nivel de artículo, es necesaria la clave de la API. Puedes crear una (utilizando Mozilla Persona) entrando en la <a href="http://pkp-alm.lib.sfu.ca/">página ALM de PKP</a>.]]></message>
+	<message key="plugins.generic.alm.settings.depositUrl">Article information deposit url</message>
+	<message key="plugins.generic.alm.settings.depositUrl.description">URL proporcionada por PKP para dipositar artículos.</message>
+	<message key="plugins.generic.alm.settings.ipAddress">Cuando contacte con PKP para configurar el servicio ALM, proporcione esta dirección IP: {$ip}</message>
+
+	<message key="plugins.generic.alm.thisJournal">Esta revista</message>
+	<message key="plugins.generic.alm.categories.html">Vistas HTML.</message>
+	<message key="plugins.generic.alm.categories.html.description">Número total de visionados del HTML de la página de este artículo. Estos visionados los computa el propio sistema. El cómputo mensual de visionados también podría estar disponible.</message>
+	<message key="plugins.generic.alm.categories.pdf">Vistas PDF.</message>
+	<message key="plugins.generic.alm.categories.pdf.description">Número total de visionados del PDF de este artículo. Estos visionados los computa el propio sistema. El cómputo mensual de visionados también podría estar disponible.</message>
+	<message key="plugins.generic.alm.categories.shares">Shares</message>
+	<message key="plugins.generic.alm.categories.shares.description">Shares or bookmarks a las redes sociales como Facebook, CiteULike y Mendeley. En la mayoría de los casos, clicar en el número de compartidos (shares) lleva al listado en la red correspondiente.</message>
+	<message key="plugins.generic.alm.categories.likes">Likes</message>
+	<message key="plugins.generic.alm.categories.likes.description">Likes encontrados en redes sociales como Facebook.</message>
+	<message key="plugins.generic.alm.categories.citations">Citas</message>
+	<message key="plugins.generic.alm.categories.citations.description">Citas del artículo encontrados en CrossRef, PubMed y Wikipedia. En la mayoría de los casos, clicar en el contador de citas llebaEn la majoria dels casos, clicant al comptador de cites lleva al listado en el servicio de referencias correspondiente.</message>
+
+	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">El módulo ALM está activo pero es necesario especificar un prefijo DOI válido en  {$path}. Configúralo para enviar información del artículo.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">El módulo ALM está activo pero no hay una clave de la API definida para la revista con la ruta {$path}.</message>
+	<message key="plugins.generic.alm.senderTask.error.noServerResponse">No se puede confirmar que se haya enviado la información para la revista con ruta {$path}. El servidor no responde.</message>
+	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">No se ha definido la URL del dipósito</message>
+	<message key="plugins.generic.alm.senderTask.error.returnError">El servidor ha retornado el mensaje: {$error}
+	Se han enviado {$articlesNumber} entradqas de artículos.
+	{$payload}</message>
+	<message key="plugins.generic.alm.senderTask.name">Información ALM del remitente del artículo</message>
+	
+</locale>

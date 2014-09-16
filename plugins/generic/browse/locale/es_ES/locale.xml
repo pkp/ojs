@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/browse/locale/es_ES/locale.xml
   *
@@ -8,33 +7,35 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Browse plugin localization strings
   -->
  
-<locale name="es_ES" full_name="Español">
+<locale name="es_ES" full_name="Español (España)">
 	<!-- plugin -->
-	<message key="plugins.generic.browse.displayName">Navegar</message>
-	<message key="plugins.generic.browse.description">Este conector activa la navegación por secciones y/o tipos de identificación.</message>
+	<message key="plugins.generic.browse.displayName">Examinar</message>
+	<message key="plugins.generic.browse.description">Este módulo permite examinar secciones o tipos de identificación.</message>
 
 	<!-- URN manager options, setting -->
 	<message key="plugins.generic.browse.manager.settings">Configuración</message>
-	<message key="plugins.generic.browse.manager.settings.description">Por favor, configure las siguientes posibilidades de navegación:</message>
+	<message key="plugins.generic.browse.manager.settings.description"><![CDATA[Instale las siguientes posibilidades adicionales para la función examinar:]]></message>
 
-	<message key="plugins.generic.browse.manager.settings.browseSettings">Configuración de navegación</message>
-	<message key="plugins.generic.browse.manager.settings.browse">Navegar</message>
-	<message key="plugins.generic.browse.manager.settings.browseByObjects">Escoge los objetos por los que será posible navegar.</message>
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Configuración de la función examinar</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Examinar</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Elija aquellos objetos por los que se podría examinar.</message>
 	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Por sección</message>
 	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Por tipo de identificación</message>
 	<message key="plugins.generic.browse.manager.settings.excludedSections">Secciones excluidas</message>
-	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Escoge las secciones que no deben ser consideradas.</message>
-	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Excluir tipos de identificación</message>
-	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">EScoge los tipos de identificación que no deben ser considerados.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Elija las secciones que no se deberían tener en cuenta.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Tipos de identificación excluídos</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Elija los tipos de identificación que no se deberían tener en cuenta.</message>
 
-	<message key="plugins.generic.browse.search.sections">Por sección</message>
-	<message key="plugins.generic.browse.search.sectionIndex">Navegar por índice de sección</message>
+	<message key="plugins.generic.browse.search.sections">Por secciones</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Examinar índice de secciones</message>
 	<message key="plugins.generic.browse.search.sectionDetails">Detalles de sección</message>
-	<message key="plugins.generic.browse.search.identifyTypes">Por tipo de identificación</message>
-	<message key="plugins.generic.browse.search.identifyTypeIndex">Índice del navegador por tipo de identificación</message>
-	<message key="plugins.generic.browse.search.identifyTypeDetails">Detalles del tipo de identificación</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Por tipos de identificación</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Examinar índice de tipos de identificación</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Detalles de tipos de identificación</message>
 
-</locale>
+</locale> 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000013.xml
   *
@@ -8,17 +7,17 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de contenido para el proceso editorial - Rol del maquetista
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
+  * table of contents for Editorial Process - Layout Editor's Role
   *
-  * $Id$
   -->
 
-<toc id="editorial/toc/000013" locale="es_ES" title="Rol del maquetista" parent_topic="editorial/topic/000013">
+<toc id="editorial/toc/000013" locale="es_ES" title="Rol de maquetista" parent_topic="editorial/topic/000013">
 	<topic id="editorial/topic/000039" title="Envíos" />
 	<topic id="editorial/topic/000040" title="Maquetación" />
 	<topic id="editorial/topic/000041" title="Corrección de pruebas" />
 
 	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
-	<breadcrumb url="editorial/topic/000013" title="Rol del maquetista" />
-</toc>
+	<breadcrumb url="editorial/topic/000013" title="Rol de maquetista" />
+</toc> 

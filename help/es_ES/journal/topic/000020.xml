@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles - Proofreader 
   *
-  * $Id$
   -->
 
-<topic id="journal/topic/000020" locale="es_ES" title="Corrector/a de originales" toc="journal/toc/000003" key="journal.roles.proofreader">
+<topic id="journal/topic/000020" locale="es_ES" title="Corrector/a de pruebas" toc="journal/toc/000003" key="journal.roles.proofreader">
 	<section>
-		<![CDATA[<p>El revisor/a se lee con detenimiento las galeradas en los distintos formatos en los que la revista publica (al igual que el autor/a). El revisor/a (y el autor/a) toman nota de cualquier tipo de error tipográfico o de formato para que el maquetista lo corrija. En algunas revistas, el editor/a o el editor/a de sección trabajan también como revisores/as.</p><p>Haga clic {help_topic key="editorial.proofreadersRole" text="aquí"} para saber más.</p>]]>	
+		<![CDATA[<p>El corrector/a de pruebas revisa cuidadosamente las galeradas en los distintos formatos en los que está publicada la revista (al igual que lo hace el autor/a). El corrector/a de pruebas (y el autor/a) registran cualquier error tipográfico o de formato para que el maquetista lo corrija. En el caso de algunas revistas, el editor/a o el editor/a de sección también pueden ejercer la función de corrector/a de pruebas.</p><p>Se puede encontrar más información {help_topic key="editorial.proofreadersRole" text="aquí"}.</p>]]>	
 	</section>
-</topic>
+</topic> 

@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/citationFormats/proCite/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in es_ES.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.citationFormats.proCite.displayName">Conector de formato de citas ProCite</message>
-	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite - Formato RIS (Macintosh y Windows)</message>
-	<message key="plugins.citationFormats.proCite.description">Este conector ofrece el formato de citas ProCite.</message>
+	<message key="plugins.citationFormats.proCite.displayName">Módulo de formato de citas ProCite</message>
+	<message key="plugins.citationFormats.proCite.citationFormatName">ProCite: formato RIS (Macintosh y Windows)</message>
+	<message key="plugins.citationFormats.proCite.description">Este módulo ofrece el formato de citas ProCite.</message>
 </locale> 

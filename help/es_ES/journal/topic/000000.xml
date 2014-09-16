@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Journal Management Main 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000000" locale="es_ES" title="Gestión de la revista" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
 	<section>
-		<![CDATA[<p>El gestor/a de la revista, de forma conjunta con los editores/as, se encarga de todos los asuntos relacionados con la gestión de la revista, además de instalar y configurar el sistema de la revista, registrar usuarios/as para desempeñar los distintos roles que se necesitan para el funcionamiento de la revista, organizar las diferentes secciones, entre muchas otras tareas de gestión.</p>]]>	
+		<![CDATA[<p>El gestor/a de la revista trata todos los aspectos relacionados con su gestión en consulta con los editores. Esto incluye la instalación y configuración del sistema de la revista, el registro de usuarios en los distintos roles necesarios y la configuración de las distintas secciones, así como otras tareas de gestión.</p>]]>	
 	</section>
-</topic>
+</topic> 

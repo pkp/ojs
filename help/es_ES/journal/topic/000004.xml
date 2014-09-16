@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Management Pages - Setup 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000004" locale="es_ES" title="Configuración" toc="journal/toc/000001" key="journal.managementPages.setup">
 	<section>
-		<![CDATA[<p>Tras la instalación del sistema en un servidor web, el gestor/a establece la configuración de la revista mediante cinco pasos, rellena las plantillas necesarias y administra la gestión de la revista. La configuración del sistema se puede realizar progresivamente: las plantillas se pueden rellenar y guardar y el/la gestor/a de la revista puede retomar la configuración y finalizar la tarea o realizar modificaciones en cualquier momento.</p><p>El gestor/a dispone de la Configuración en la página de Gestión de la revista donde podrá encontrar además documentos de ayuda para cada una de las plantillas. Para la configuración de la página web de la revista será necesario tomar decisiones y aportar textos para los siguientes puntos, entre otros, que pueden ir preparándose de manera anticipada con el asesoramiento de los editores/as o añadirse más tarde.</p><ul><li>Contacto principal de la revista</li><li>Contacto técnico</li><li>Declaración de alcance y enfoque de la revista</li><li>Secciones de la revista y políticas</li><li>Directrices para autores</li><li>Requisitos de entrega para autores</li><li>Indexación de elementos y ejemplos adecuados</li><li>Política de evaluación por pares</li><li>Indicaciones para el revisor</li><li>Política de derechos de autor</li><li>Política de acceso abierto</li><li>Consejo editorial/Consejo de revisión</li><li>Política de suscripción</li><li>Uso de maquestistas, correctores/as de originales o correctores/as de pruebas</li></ul>]]>
+		<![CDATA[<p>Después de que el sistema se instale en un servidor web, el gestor/a de la revista la configurará por medio de cinco pasos, completando plantillas y configurando la gestión de la revista. La configuración no tiene que hacerse toda a la vez: las plantillas pueden completarse y guardarse. El gestor/a de la revista podrá volver a Configuración para terminar la tarea o hacer cambios en cualquier momento.</p><p>La configuración está a disposición del gestor/a de la revista en la página Gestión de la revista y contiene su propio conjunto de textos de ayuda incorporados en cada una de las plantillas. La configuración del sitio web de la revista requerirá decisiones y textos para los siguientes elementos, entre otros, los cuales pueden prepararse por adelantado con la ayuda de los editores/as o añadirse posteriormente.</p><ul><li>Contacto principal de la revista</li><li>Contacto técnico</li><li>Objetivos y alcance de la revista</li><li>Políticas y secciones de la revista</li><li>Directrices del autor/a</li><li>Requisitos de envío para autores/as</li><li>Elementos de indexación y ejemplos adecuados</li><li>Política de revisión por pares</li><li>Directrices del revisor/a</li><li>Política de derechos de autor</li><li>Política de acceso abierto</li><li>Consejo editorial/Consejo de revisión</li><li>Políticas de suscripción</li><li>Uso de maquetistas, correctores/as de originales o revisores/as.</li></ul>]]>
 	</section>
-</topic>
+</topic> 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000004.xml
   *
@@ -8,16 +7,17 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de contenido para el proceso editorial - Rol del editor/a de sección
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * table of contents for Editorial Process - Section Editor's Role
+  *
   -->
 
-<toc id="editor/aial/toc/000004" locale="es_ES" title="Rol del editor/a de sección" parent_topic="editor/aial/topic/000004">
-	<topic id="editor/aial/topic/000005" title="Envíos" />
-	<topic id="editor/aial/topic/000006" title="Revisión" />
-	<topic id="editor/aial/topic/000007" title="Edición" />
+<toc id="editorial/toc/000004" locale="es_ES" title="Rol del editor/a de sección" parent_topic="editorial/topic/000004">
+	<topic id="editorial/topic/000005" title="Envíos" />
+	<topic id="editorial/topic/000006" title="Revisión" />
+	<topic id="editorial/topic/000007" title="Edición" />
 
-	<breadcrumb url="editor/aial/topic/000000" title="Proceso editorial" />
-	<breadcrumb url="editor/aial/topic/000004" title="Rol del editor/a de sección" />
-</toc>
+	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
+	<breadcrumb url="editorial/topic/000004" title="Rol del editor/a de sección" />
+</toc> 

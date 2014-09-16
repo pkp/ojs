@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/stopForumSpam/locale/es_ES/locale.xml
   *
@@ -8,20 +7,22 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Stop Forum Spam plugin localization strings
   -->
  
-<locale name="es_ES" full_name="Español">
+<locale name="es_ES" full_name="Español (España)">
 
-	<message key="plugins.generic.stopForumSpam.displayName">Stop Forum Spam Plugin</message>
-	<message key="plugins.generic.stopForumSpam.description"><![CDATA[Integrate OJS with the Stop Forum Spam prevention system, which aims to reduce the amount of spam registrations.]]></message>
+	<message key="plugins.generic.stopForumSpam.displayName">Módulo Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.description"><![CDATA[Incorpore el sistema de prevención Stop Forum Spam a OJS, que sirve para reducir la cantidad de registros de correo no deseado.]]></message>
 
-	<message key="plugins.generic.stopForumSpam.manager.settings">Settings</message>
-	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Stop Forum Spam Settings</message>
-	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>With this plugin enabled, OJS will check to see if a submitted user registration contains elements that are on the Stop Forum Spam list.  Registrations will be denied if this is the case.</p>]]></message>
-	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">Check registration IP</message>
-	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Check registration email address</message>
-	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Check registration username (enable with caution!)</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings">Configuración</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Configuración de Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>Si activa este módulo, OJS comprobará si el registro de usuario/a enviado contiene elementos incluidos dentro de la lista de Stop Forum Spam. Si este es el caso, se denegarán los registros.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">Comprobar IP de registro</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Comprobar dirección de correo electrónico de registro</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Comprobar nombre de usuario/a de registro (se debe habilitar con precaución)</message>
 	<message key="plugins.generic.stopForumSpam.checkName">stopForumSpamPlugin</message>
-	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[The <a href="http://www.stopforumspam.com" target="_blank">Stop Forum Spam</a> plugin has blocked this registration.]]></message>
-</locale>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[El módulo <a href="http://www.stopforumspam.com" target="_blank">Stop Forum Spam</a> bloqueó este registro.]]></message>
+</locale> 

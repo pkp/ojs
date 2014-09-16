@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Editor's Role Submissions - Unassigned 
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000015" locale="es_ES" title="Sin asignar" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
 	<section>
-		<![CDATA[<p>Cada envío a la revista se introduce en el proceso en la cola Sin asignar a editor/a. El editor/a hace clic en el título del envío para asignarlo a un editor/a de sección. Este proceso conduce al editor/a a la página de envío apropiada dónde se asigna un editor/a de sección. Cuando se asigna un envío a un editor/a de sección, pasa de la cola Sin asignar a la cola En revisión.</p>]]>	
+		<![CDATA[<p>Cada envío a la revista comienza el proceso en la Lista de envíos sin asignar de los editores/as. El editor/a hace clic en el título del envío para asignarlo a un editor/a de sección. De esta manera, llegará a la página de envíos pertinente donde se asigna un editor/a de sección. Cuando se asigna un envío a un editor/a de sección, se mueve de la Lista de envíos sin asignar a la Lista de envíos en revisión.</p>]]>	
 	</section>
-</topic>
+</topic> 

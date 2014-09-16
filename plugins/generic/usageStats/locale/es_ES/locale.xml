@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/usageStats/locale/es_ES/locale.xml
   *
@@ -8,25 +7,30 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Localization strings
   -->
 
-<locale name="es_ES" full_name="Español">
-	<message key="plugins.generic.usageStats.settings.logging">Opciones de acceso al registro</message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.usageStats.settings.logging">Opciones de registro de acceso</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">Crear archivos de registro</message>
-	<message key="plugins.generic.usageStats.settings.createLogFiles.description">La activación de esta opción hará que el plugin crear archivos de registro de acceso dentro del directorio de archivos. Estos archivos deben ser utilizados para extraer los datos de las estadísticas de uso. Si no desea crear más archivos de registro de acceso se puede dejar esta opción desactivada y utilizar sus propios archivos de registro del servidor de acceso.</message>
-	<message key="plugins.generic.usageStats.settings.logParseRegex">Analizar los archivos de registro mediante expresiones regulares</message>
-	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Las expresiones regulares utilizadas por defecto puede analizar archivos de registro de acceso de Apache en formato combinado, así como archivos de registro del plugin. Si los archivos de registro de acceso están en un formato diferente, tendrá que insertar una expresión regular capaz de analizar ellos y dando a los valores esperados. Ver UsageStatsLoader ::_getDataFromLogEntry() para más información.</message>
-	<message key="plugins.generic.usageStats.settings.saved">Configuración del módulo de estadísticas de uso guardada</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Si se activa esta opción, el módulo creará archivos de acceso de registro dentro del directorio de archivos. Dichos archivos se emplearán para extraer los datos de estadísticas de uso. Si no desea crear más archivos de acceso de registro, puede dejar esta opción deshabilitada y utilizar sus propios archivos de acceso de registro del servidor.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Analizar archivos de registro mediante expresiones regulares</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">La expresión regular predeterminada puede analizar archivos de acceso de registro apache en formato combinado, así como archivos de registro del módulo. Si los archivos de acceso de registro que tiene están en un formato diferente, deberá introducir una expresión regular que sea capaz de analizarlos y de mostrar los valores esperados. Si desea obtener más información, consulte UsageStatsLoader::_getDataFromLogEntry().</message>
+	<message key="plugins.generic.usageStats.settings.saved">Se guardó la configuración del módulo de estadísticas de uso</message>
 	
-	<message key="plugins.generic.usageStats.openFileFailed">El archivo {$file} no pudo ser abierto y fue rechazada.</message>
-	<message key="plugins.generic.usageStats.invalidLogEntry">El número de línea {$lineNumber} del archivo {$file} no es una entrada de registro válido y el archivo fue rechazado.</message>
+	<message key="plugins.generic.usageStats.openFileFailed">No se pudo abrir el archivo {$file}, por lo que se rechazó.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">El número de línea {$lineNumber} del archivo {$file} no es una entrada de registro válida por lo que se rechazó el archivo.</message>
 	<message key="plugins.generic.usageStats.displayName">Estadísticas de uso</message>
-	<message key="plugins.generic.usageStats.description">Los datos actuales objetos de estadísticas de uso. Puede utilizar los archivos de registro de acceso de servidor para extraer estadísticas.</message>
+	<message key="plugins.generic.usageStats.description">Presentar objetos de datos de estadísticas de uso. Se pueden usar los archivos de acceso de registro del servidor para extraer las estadísticas.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">Informe de estadísticas de uso de OJS</message>
-	<message key="plugins.reports.usageStats.report.description">Informe de estadísticas de uso por defecto de OJS (compatibles con COUNTER)</message>
+	<message key="plugins.reports.usageStats.report.description">Informe de estadísticas de uso de OJS predeterminado (COUNTER preparado)</message>
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
-	<message key="plugins.reports.usageStats.metricType.full">Estadísticas de Open Journal Systems (compatibles con COUNTER)</message>
-</locale>
+	<message key="plugins.reports.usageStats.metricType.full">Estadísticas de Open Journal Systems (COUNTER preparado)</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">La tarea no ha generado ningún registro.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">La linea {$lineNumber} del fichero {$file} contiene una url a la que no se le puede eliminar la url base de origen.</message>
+	<message key="plugins.generic.usageStats.loadDataError">No se pueden cargar los datos esperados del fichero {$file}. El error es: {$error}. El fichero se a movido de nuevo a su origen.</message>
+</locale> 

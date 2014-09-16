@@ -7,19 +7,20 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * table of contents for User Interface. 
   *
-  * $Id$
   -->
 
 <toc id="user/toc/000000" locale="es_ES" title="Sitio web de la revista" parent_topic="user/topic/000000">
 	<topic id="user/topic/000001" title="Página de inicio" />
 	<topic id="user/topic/000002" title="Acerca de" />
-	<topic id="user/topic/000007" title="Área personal" />
-	<topic id="user/topic/000003" title="Registro &amp; Perfil" />
-	<topic id="user/topic/000004" title="Actuales &amp; Archivos" />
-	<topic id="user/topic/000005" title="Buscar" />
+	<topic id="user/topic/000007" title="Área personal del usuario/a" />
+	<topic id="user/topic/000003" title="Registro y perfil" />
+	<topic id="user/topic/000004" title="Actuales y archivos" />
+	<topic id="user/topic/000005" title="Buscar y examinar" />
 	<topic id="user/topic/000006" title="Herramientas de lectura" />
 
 	<breadcrumb url="user/topic/000000" title="Sitio web de la revista" />
-</toc>
+</toc> 

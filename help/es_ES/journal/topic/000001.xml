@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Management Pages Index 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000001" locale="es_ES" title="Páginas de gestión" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
 	<section>
-		<![CDATA[<p>El gestor/a de la revista se encarga de configurar y de personalizar el sistema para adecuarlo a la revista mediante distintas páginas de gestión. El proceso, que comienza con los cinco pasos de la configuración, incluye además las secciones que se publicarán, el tono y estilo de los correos electrónicos estándares de la revista, las estadísticas que se publicarán, los idiomas y las herramientas que estarán disponibles para los lectores.</p>]]>	
+		<![CDATA[<p>El gestor/a de la revista configura y personaliza el sistema para que se adapte a la revista mediante una serie de páginas de gestión. El proceso comienza con los 5 pasos de la configuración, pero también incluye las secciones que se van a publicar, el tono y estilo de los correos electrónicos estándar de la revista, los idiomas disponibles en la revista, las estadísticas que publica y las herramientas que ponen a disposición de los lectores/as.</p>]]>	
 	</section>
-</topic>
+</topic> 

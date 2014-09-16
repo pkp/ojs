@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * emailTemplateData.xml
+  * @file plugins/paymethod/paypal/locale/es_ES/emailTemplates.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localized email templates XML file.
   -->
+
 <email_texts locale="es_ES">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Actividad inusual de PayPal</subject>
-		<body>Open Journal Systems ha notado una actividad inusual relacionada con el soporte de pago de PayPal para la revista {$journalName}.  Esta actividad puede necesitar de mayor investigación o intervención manual.
-
-Este email ha sido generado por el plugin de PayPal de Open Journal Systems.
-
-Información completa de envío para la solicitud:
-{$postInfo}
-
-Información adicional (si proporcionada):
-{$additionalInfo}
-
-Variables de servidor:
-{$serverVars}</body>
-		<description>Esta plantilla de correo es usada para notificar al contacto principal de la revista de que el plugin de PayPal ha detectado actividad sospechosa o actividad que requiere de intervención manual.</description>
+		<body>Open Journal Systems encontró una actividad inusual relacionada con el servicio de pago PayPal para la revista {$journalName}. Esta actividad puede requerir una mayor investigación o una intervención manual. Este correo electrónico ha sido generado por el módulo PayPal del Open Journal Systems. Información completa sobre la solicitud: {$postInfo} Información adicional (si se suministró): {$additionalInfo} Variables del servidor: {$serverVars}
+</body>
+		<description>La plantilla de correo electrónico se emplea para notificar al contacto principal de la revista que el módulo de PayPal ha hallado una actividad sospechosa o una actividad que requiere una intervención manual.</description>
 	</email_text>
-</email_texts>
+</email_texts> 

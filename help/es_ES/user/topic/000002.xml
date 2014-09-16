@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * User Interface - About
   *
-  * $Id$
   -->
 
 <topic id="user/topic/000002" locale="es_ES" title="Acerca de" toc="user/toc/000000" key="user.about">
 	<section>
-		<![CDATA[<p>En Acerca de, la revista presenta sus políticas, procedimientos y otro material relevante, con la intención de hacer lo más transparente posible su funcionamiento. Este es el tipo de material al que normalmente se hace referencia como páginas preliminares en las revistas. Aquí es donde los posibles autores/as de la revista pueden aprender sobre el ámbito y el enfoque de la revista, su política de evaluación, cómo dar formato y preparar una publicación, así como la forma de enviar un artículo a la revista.</p>]]>	
+		<![CDATA[<p>En la sección Acerca de la revista, se presentan las políticas, los procedimientos y otro material relevante, con la intención de hacer lo más transparente posible su funcionamiento. Este es el material al que normalmente se hace referencia como páginas preliminares en las revistas. Aquí es donde los posibles autores/as de la revista pueden conocer el ámbito y el enfoque de la revista, su política de evaluación por pares y cómo dar formato y preparar un envío, así como la forma de enviar un artículo a la revista.</p>]]>	
 	</section>
-</topic>
+</topic> 

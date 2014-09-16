@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Section Editor's Role Index - Submissions 
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000005" locale="es_ES" title="Envíos" toc="editorial/toc/000004" subtoc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions">
 	<section>
-		<![CDATA[<p>Los envíos que el editor/a ha asignado al editor/a de sección se muestran en la cola de Envíos por revisar del editor/a de sección. Los editores/as de sección sólo pueden acceder a aquellos envíos que se les han asignado. En función de la política de la revista, los editores/as de sección pueden tener la responsabilidad de únicamente revisar el envío o bien de revisarlo y editarlo.</p>]]>	
+		<![CDATA[<p>Los envíos a la revista que el editor/a asigna al editor/a de sección, aparecen en Envíos del editor/a de sección pendientes de revisión. Los editores/as de sección sólo pueden acceder a aquellos envíos que se les asignaron. Dependiendo de las políticas de la revista, los editores/as de sección no sólo podrán encargarse de la revisión del envío, sino también de la edición del mismo.</p>]]>	
 	</section>
-</topic>
+</topic> 

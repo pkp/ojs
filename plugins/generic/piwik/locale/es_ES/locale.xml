@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/piwik/locale/es_ES/locale.xml
   *
@@ -8,26 +7,26 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Piwik plugin localization strings
   -->
  
-<locale name="es_ES" full_name="Español">
+<locale name="es_ES" full_name="Español (España)">
 
 	<!-- Piwik -->
-	<message key="plugins.generic.piwik.displayName">Conector Piwik</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Integra OJS con Piwik, una aplicación web desarrollada como software libre, para el análisis del tráfico de un sitio web. Se requiere que Piwik esté instalado en su servidor.
-Por favor, visite el sitio de <a href="http://piwik.org/" title="piwik site">Piwik</a> para más información.]]></message>
+	<message key="plugins.generic.piwik.displayName">Módulo Piwik</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Incorpore Piwik a OJS, una aplicación gratuita de código abierto que analiza el tráfico de sitios web. Es necesario instalar Piwik primero. Visite la página de <a href="http://piwik.org/" title="piwik site">Piwik</a> para más información.]]></message>
 
 	<!-- Piwik Settings Management -->
 	<message key="plugins.generic.piwik.manager.settings">Configuración</message>
 	<message key="plugins.generic.piwik.manager.piwikSettings">Configuración de Piwik</message>
-	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>Al activar este conector, Piwiki podrá recolectar y analizar datos del uso y el tráfico de la web de la revista. Se requiere que Piwik esté instalado en su servidor.
-Por favor, visite el sitio de <a href="http://piwik.org/" title="piwik site">Piwik</a> para más información.]]></message>
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>Con este módulo activado, Piwik puede recoger y analizar el uso y el tráfico del sitio web de esta revista. Este módulo requiere instalar Piwik primero. Visite la página de <a href="http://piwik.org/" title="piwik site">Piwik</a> para más información.]]></message>
 	<message key="plugins.generic.piwik.manager.settings.piwikUrl">URL de Piwik</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">La dirección URL completa de la instalación Piwik (p.e.: http://myserver.net/piwik).</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Por favor, escriba una url válida. Debe incluir http:// al inicio.</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">ID del perfil del sitio</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"><![CDATA[En Piwik, clique en Settings -> Websites. El ID del perfil del sitio se muestra al lado del nombre del perfil del sitio.]]></message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Por favor, escriba un ID del perfil del sitio</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">URL completa de la instalación de Piwik (es decir, http://myserver.net/piwik).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Introduzca una URL válida. Incluya http:// al principio.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">Número de identificación de perfil del sitio</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Dentro de Piwik, haga clic en Configuración -&gt; Páginas web. El número de identificación de perfil del sitio se muestra al lado del nombre de perfil.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Introduzca un número de identificación de perfil del sitio.</message>
 
-</locale>
+</locale> 

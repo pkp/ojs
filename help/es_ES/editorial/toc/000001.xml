@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000001.xml
   *
@@ -8,18 +7,17 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de contenido para el proceso editorial - Rol del editor/a 
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * Translated by Juan Arias, Corporación Parque Tecnológico de Mérida: juanarias@ula.ve.
+  * table of contents for Editorial Process - Editor's Role 
   *
-  * $Id$
   -->
 
 <toc id="editorial/toc/000001" locale="es_ES" title="Rol del editor/a" parent_topic="editorial/topic/000001">
 	<topic id="editorial/topic/000002" title="Envíos" />
-	<topic id="editorial/topic/000003" title="Resumen de envíos" />
-	<topic id="editorial/topic/000044" title="Garantizar una evaluación anónima por pares" />
+	<topic id="editorial/topic/000003" title="Resumen del envío" />
+	<topic id="editorial/topic/000044" title="Garantizar una evaluación por pares anónima" />
 
 	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
 	<breadcrumb url="editorial/topic/000001" title="Rol del editor/a" />
-</toc>
+</toc> 

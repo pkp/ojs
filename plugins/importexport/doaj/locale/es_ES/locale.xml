@@ -1,24 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/importexport/doaj/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.doaj.displayName">Conector de exportación DOAJ</message>
-	<message key="plugins.importexport.doaj.description">Exportar la revista al DOAJ y añadir información sobre ella para incluirla.</message>
+  <message key="plugins.importexport.doaj.displayName">Módulo de exportación DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Exportar la revista al DOAJ y añadir información sobre la revista para incluirla</message>
 
-	
 	<message key="plugins.importexport.doaj.export">Exportar datos de la revista al DOAJ</message>
 	<message key="plugins.importexport.doaj.export.journal">Exportar la revista</message>
-	<message key="plugins.importexport.doaj.export.contact">Contactar con el DOAJ para inclusiones</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">exportar la información de un artículo en XML para archivarla en el DOAJ.</message>
-	<message key="plugins.importexport.doaj.export.contactInfo">para que su revista sea considerada en el DOAJ, envíe este formulario parcialmente rellenado al DOAJ completando toda la información posible.</message>
+	<message key="plugins.importexport.doaj.export.contact">Contactar con el DOAJ para la inclusión</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Exportar la información de un artículo en XML para archivarla en el DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">Para que su revista sea considerada en el DOAJ, envíe este formulario parcialmente autocompletado al DOAJ e incluya toda la información posible.</message>
 
 </locale> 

@@ -1,29 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/counter/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.reports.counter.description"><![CDATA[El conector COUNTER permite grabar la actividad del sitio web y crear informes de actividad <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>.]]></message>
-	<message key="plugins.reports.counter">Conector de estadísticas de COUNTER</message>
-	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R2): solicitudes de artículos completos por mes y revista</message>
+    <message key="plugins.reports.counter.description"><![CDATA[El módulo COUNTER permite generar informes sobre la actividad del sitio web.]]></message>
+	<message key="plugins.reports.counter">Informe COUNTER</message>
+	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R2): Solicitudes de artículos completos por mes y revista</message>
 	<message key="plugins.reports.counter.1a.title1">Informe de la revista 1 (R2)</message>
 	<message key="plugins.reports.counter.1a.title2">Número de solicitudes aceptadas de artículos completos por mes y revista (Año {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Fecha de inicio:</message>
 	<message key="plugins.reports.counter.1a.publisher">Editorial</message>
 	<message key="plugins.reports.counter.1a.platform">Plataforma</message>
-	<message key="plugins.reports.counter.1a.printIssn">Imprimir ISSN</message>
+	<message key="plugins.reports.counter.1a.printIssn">ISSN impreso</message>
 	<message key="plugins.reports.counter.1a.onlineIssn">ISSN en línea</message>
-	<message key="plugins.reports.counter.1a.ytdTotal">Totales en el último año</message>
-	<message key="plugins.reports.counter.1a.ytdHtml">HTML en el último año</message>
-	<message key="plugins.reports.counter.1a.ytdPdf">PDF en el último año</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">Totales del último año</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">HTML del último año</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">PDF del último año</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total para todas las revistas</message>
-	<message key="plugins.reports.counter.legacyStats">Los siguientes enlaces generan informes utilizando los datos antiguos del módulo COUNTER. Si desea generar informes de contador con el nuevo contador y su métrica tipo OJS, utilice los enlaces de arriba.</message>
+	<message key="plugins.reports.counter.legacyStats">Los siguientes enlaces generan informes mediante datos antiguos del módulo COUNTER. Si desea generar informes COUNTER mediante el nuevo tipo de métrica COUNTER de OJS, utilice los siguientes enlaces.</message>
 </locale> 

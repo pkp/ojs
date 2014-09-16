@@ -7,14 +7,15 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Section Editor's Role Index - Review 
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000006" locale="es_ES" title="Revisión" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
 	<section>
-		<![CDATA[<p>La página de revisión de artículos contiene todos los elementos necesarios para que el editor/a de sección pueda organizar y completar el proceso de revisión. Además, el editor/a de sección determina la versión para revisar del artículo, asigna uno o más revisores/as y participa en la decisión editorial. En función de cuál sea esta decisión, el artículo pasará de la cola de revisión a la de edición o a la de archivos, o bien puede volver a enviarse para revisar.</p><p>Para más información sobre la versión para revisar, véase {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="Versión para revisar"}.</p><p>Para más información sobre el procreso de evaluación por pares, véase {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="Evaluación por pares”}.</p><p>Para más información sobre la decisión del editor/a, véase {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="Decisión del editor/a"}.</p>]]>
+		<![CDATA[<p>La página de revisión del artículo enumera todos los elementos necesarios para que el editor/a de sección organice y complete el proceso de revisión. Además, el editor/a de sección determina la versión para revisar del artículo, asigna uno o más revisores/as y participa en la decisión editorial. Dependiendo de la decisión editorial, el artículo se moverá de la cola de Revisión a la de Edición o a los Archivos, o bien se volverá a subir para su revisión.</p><p>Si desea obtener información más detallada sobre cómo seleccionar una versión para revisar, consulte {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="Review Version"}.</p><p>Si desea información más detallada sobre el proceso de evaluación por pares, consulte {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="Peer Review"}.</p><p>Si desea información más detallada sobre cómo aplicar una decisión del editor/a, consulte {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="Editor Decision"}.</p>]]>
 </section>
 
-</topic>
+</topic> 

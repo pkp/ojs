@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Publishing Process - Schedule Submissions
   *
-  * $Id$
   -->
 
-<topic id="publishing/topic/000002" locale="es_ES" title="Programar un envío" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+<topic id="publishing/topic/000002" locale="es_ES" title="Programación de envíos" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
 	<section>
-		<![CDATA[<p>El editor/a de sección puede programar un envío para su publicación en un número concreto en cualquier momento del proceso de edición. Por lo general, el editor/a coloca el envío en el primer número disponible, pero puede suceder que el número esté lleno antes de su publicación, o que un editor/a desee colocar un envío en un número posterior para asegurar la variedad en cada número, o que, por el contrario, el editor/a desee aglutinar una serie de envíos sobre un único tema.</p><p><em>Publicación continua de envíos</em>. Al ser publicados de forma continuada, en cuanto los envíos están preparados, el editor/a los programa en el número actual y son publicados de inmediato. Al final de un año de volúmenes, se programa el siguiente envío de forma que aparezca en un nuevo volumen, para el que se publica o actualiza la tabla de contenidos con este envío inicial.</p><p>Una vez programado el envío en un número concreto, se facilita el nombre del número y el enlace a la tabla de contenidos a los maquetistas y los correctores/as.</p>]]>
+		<![CDATA[<p>El editor/a de sección puede programar la publicación de un envío en un número concreto en cualquier momento del proceso de edición. Normalmente, el editor/a incluye el envío en el primer número disponible, aunque puede que esté «completo» antes de su publicación, o que el editor/a desee incluirlo en un número posterior para garantizar variedad temática en cada número o que agrupe una serie de envíos en un único tema.</p><p><em>Publicación continua de envíos</em>. Si los envíos se publican de forma continuada, el editor/a los programa en cuanto están preparados en lo que es, de hecho, el número actual y se publican de inmediato. Al final de un año de publicaciones, el siguiente envío se programa para que aparezca en el próximo volumen, para el que se publica o se hace actual la tabla de contenidos con dicho envío inicial.</p><p>Al programar un envío para un número concreto, se presenta el nombre de dicho número y un enlace a su tabla de contenidos a los maquetistas y correctores/as de pruebas.</p>]]>
 	</section>
-</topic>
+</topic> 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000000.xml
   *
@@ -8,15 +7,16 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * table of contents for Author Submission Process. 
   *
-  * $Id$
   -->
 
-<toc id="submission/toc/000000" locale="es_ES" title="Proceso de publicación" parent_topic="submission/topic/000000">
-	<topic id="submission/topic/000001" title="Directrices para el autor/a" />
-	<topic id="submission/topic/000002" title="Requisitos del envío" />
+<toc id="submission/toc/000000" locale="es_ES" title="Proceso de envío" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="Directrices para autores/as" />
+	<topic id="submission/topic/000002" title="Requisitos de envío" />
 	<topic id="submission/topic/000003" title="Indexación y metadatos" />
-	<topic id="submission/topic/000004" title="Archivos adicionales" />
+	<topic id="submission/topic/000004" title="Archivos complementarios" />
 	<breadcrumb url="submission/topic/000000" title="Proceso de envío" />
-</toc>
+</toc> 

@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Management Pages - Files Browser
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000010" locale="es_ES" title="Explorador de archivos" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
 	<section>
-		<![CDATA[<p>El Explorador de archivos permite a los gestores/as de la revista examinar y administrar la estructura jerárquica de los archivos cargados (incluyendo todos aquellos procesados desde la gestión de envíos). Los archivos pueden visualizarse, eliminarse y moverse como si se tratara de un sistema de fichero local.</p><p>Tenga en cuenta que esto sólo pretende ser un servicio administrativo y que, en general, no será necesario en el día a día de la gestión de la revista. La información del envío se mantiene como una combinación de archivos y de un registro de base de datos. De hecho, al eliminar un fichero enviado utilizando el Explorador de archivos no borrará el registro de la base de datos asociado al documento.</p>]]>
+		<![CDATA[<p>El explorador de archivos permite a los gestores/as de la revista examinar y gestionar la jerarquía de archivos cargados para la revista (incluyendo todos los archivos cargados mediante la gestión de envío). Los archivos se pueden ver, eliminar y mover como si se estuviera interactuando con un sistema local de archivos.</p><p>Nótese que esto está previsto sólo como un servicio administrativo y no será necesario para la gestión diaria de la revista. El envío de información se mantiene como una combinación de archivos y registro de base de datos. La eliminación de archivos de envío con el explorador de archivos no eliminará los registros de base de datos asociados.</p>]]>
 	</section>
-</topic>
+</topic> 

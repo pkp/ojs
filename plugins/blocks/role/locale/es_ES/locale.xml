@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/blocks/role/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.role.displayName">Bloque específico de roles</message>
-	<message key="plugins.block.role.description">Este conector proporciona un bloque en la barra lateral con información específica para cada rol como, por ejemplo, el número de envíos realizados, enlaces rápidos para editores/as, autores/as, etc.</message>
+	<message key="plugins.block.role.description">Este módulo proporciona un bloque en la barra lateral con información específica para cada rol como, por ejemplo, el número de envíos realizados, enlaces rápidos para editores/as, autores/as, etc.</message>
 </locale> 

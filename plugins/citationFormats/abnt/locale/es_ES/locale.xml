@@ -1,22 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/citationFormats/abnt/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in es_ES.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.citationFormats.abnt.displayName">Conector de formato de citas ABNT</message>
+	<message key="plugins.citationFormats.abnt.displayName">Módulo de formato de citas ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
-	<message key="plugins.citationFormats.abnt.description">Este conector ofrece el formato de citas ABNT.</message>
-	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponible en: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Fecha de acceso: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.description">Este módulo ofrece el formato de citas ABNT.</message>
+	
 	<message key="plugins.citationFormats.abnt.manager.settings">Configuración</message>
-	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Configuraciones del conector de formato de cita ABNT</message>
-	<message key="plugins.citationFormats.abnt.manager.settings.description">Configuraciones usadas para crear citas en formato ABNT.</message>
-	<message key="plugins.citationFormats.abnt.manager.settings.location">Local</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Configuración del módulo de formato de citas ABNT</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Configuración usada para crear citas según ABNT.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Ubicación</message>
+	
+	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponible en: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Fecha de acceso: {$retrievedDate}]]></message>
 </locale> 

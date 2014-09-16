@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Users Index 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000002" locale="es_ES" title="Usuarios/as" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
 	<section>
-		<![CDATA[<p>El gestor/a de la revista es el responsable de la administración de usuarios/as en OJS. Esto incluye crear y desactivar cuentas de usuario/a, gestionar roles, buscar y agregar nuevos registros a los ya existentes, modificar perfiles, unir cuentas y contactar a grupos de usuarios/as, entre otros.</p>]]>	
+		<![CDATA[<p>Administrar los usuarios/as en OJS es responsabilidad del gestor/a de la revista. Esto incluye la creación de usuarios/as, la desactivación de cuentas, la administración de roles, etc. El gestor/a de la revista podrá buscar y añadir registros existentes, modificar perfiles, fusionar cuentas y ponerse en contacto con grupos de usuarios/as.</p>]]>	
 	</section>
-</topic>
+</topic> 

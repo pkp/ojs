@@ -1,29 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/importexport/quickSubmit/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.quickSubmit.addToExisting">Agregar a un número existente:</message>
+    <message key="plugins.importexport.quickSubmit.addToExisting">Añadir a un número existente:</message>
 	<message key="plugins.importexport.quickSubmit.chooseDestination">Destino del envío</message>
-	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Elija si desea añadir nuevos envíos a un número existente o si prefiere colocarlos en la cola de edición.</message>
-	<message key="plugins.importexport.quickSubmit.displayName">Conector QuickSubmit</message>
-	<message key="plugins.importexport.quickSubmit.description">Conector para el envío en un sólo paso.</message>
-	<message key="plugins.importexport.quickSubmit.descriptionLong">Este conector permite añadir rápidamente envíos completos a la cola de edición o directamente a un número.</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Seleccione si desea añadir nuevos envíos a un número existente o si prefiere colocarlos en la cola de edición.</message>
+	<message key="plugins.importexport.quickSubmit.displayName">Módulo QuickSubmit</message>
+	<message key="plugins.importexport.quickSubmit.description">Módulo para el envío en un solo paso</message>
+	<message key="plugins.importexport.quickSubmit.descriptionLong">Este módulo permite añadir rápidamente envíos completos a la cola de edición o directamente a un número.</message>
 	<message key="plugins.importexport.quickSubmit.issueRequired">Seleccione un número en el que añadir el artículo.</message>
 	<message key="plugins.importexport.quickSubmit.leaveUnpublished">No publicar de momento</message>
-	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Guardar y crear nuevo</message>
+	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Guardar y crear uno nuevo</message>
 	<message key="plugins.importexport.quickSubmit.submissionData">Datos del envío</message>	
 	<message key="plugins.importexport.quickSubmit.submissionDescription">Elija el archivo que se usará como galerada final para este envío.</message>	
 	<message key="plugins.importexport.quickSubmit.submissionRequired">Debe cargar un archivo para este envío.</message>	
-	<message key="plugins.importexport.quickSubmit.success">Se ha añadido el artículo</message>
-	<message key="plugins.importexport.quickSubmit.successDescription">Se ha creado el artículo con éxito.</message>
-	<message key="plugins.importexport.quickSubmit.successReturn">Volver al conector QuickSubmit.</message>
+	<message key="plugins.importexport.quickSubmit.success">Se añadió el artículo</message>
+	<message key="plugins.importexport.quickSubmit.successDescription">Se creó el artículo con éxito.</message>
+	<message key="plugins.importexport.quickSubmit.successReturn">Volver al módulo QuickSubmit.</message>
 </locale> 

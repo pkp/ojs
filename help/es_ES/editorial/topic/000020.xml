@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Editor's Role Submission Summary - Submission Metadata
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000020" locale="es_ES" title="Metadatos del envío" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
 	<section>
-		<![CDATA[<p>El autor/a introduce los metadatos que se usarán para indexar el envío en la publicación. Tanto el editor/a de sección, como el autor/a y el corrector/a de originales pueden editar dichos metadatos durante el proceso editorial.</p>]]>	
+		<![CDATA[<p>Los metadatos que se utilizarán para indexar el envío en la publicación los introduce el autor/a, pero tanto el editor/a de sección como el autor/a y el corrector/a de originales pueden editarlos durante el proceso editorial.</p>]]>	
 	</section>
-</topic>
+</topic> 

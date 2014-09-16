@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) Agustin Terruzzi - Gonzalo Villarreal
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * Localization strings for the es_ES locale.
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+
+<!-- Plugin Settings -->
+<message key="plugin.generic.category.displayName"> Plugin de Categorias</message>
+<message key="plugin.generic.category.plugDescription">Este módulopermite  mostrar de forma rápida e intuitiva 
+las revistas del sitio agrupadas por categorias personalizables</message>
+<message key="plugins.generic.category.noCat">Sin Categorizar</message>
+<message key="plugins.generic.category.description"> Menu de gestión de categorias</message>
+<message key="plugins.generic.category.menu"> Editar Categorias </message>
+<message key="plugin.generic.category.disable">Deshabilitar Plugin de Categorias</message>
+<message key="plugin.generic.category.enable"> Habilitar Plugin de Categorias</message>
+<message key="plugins.generic.category">Plugin de Categorias</message>
+<message key="plugin.generic.category.options"> Opciones del Plugin de Categorias</message>
+<message key="plugins.generic.category.changeCss">Perzonalizar estilos del Plugin</message>
+
+<!-- Notifications -->
+<message key="plugins.generic.category.view.notif">Vista modificada con éxito</message>
+<message key="plugins.generic.category.view.notifDisable"> Plugin de categorias desHabilitado </message>
+<message key="plugins.generic.category.view.notifEnable">Plugin de categorias Habilitado</message>
+<message key="plugins.generic.category.changeCss.notif">Hoja de estilos cambiada con éxito</message>
+
+<!-- View Changer -->
+<message key="plugins.generic.categoriy.setView">Escoger la vista de categorias para el inicio </message>
+<message key="plugins.generic.category.view.title">Vistas</message>
+<message key="plugins.generic.category.view.description">Menu de selección de vistas</message>
+<message key="plugins.generic.category.view.instruct1">Elija un tipo de vista para mostrar las revistas ordenadas en categorias en la página de inicio</message>
+
+<!--viewXml-->
+<message key="plugin.generic.category.tags.tagsName"> Pestañas </message>
+<message key="plugin.generic.category.tags.tagsDescription"> Permite visualizar las categorias y sus revistas en un sistema categorizado por pestañas intuitivo y vacil de usar</message>
+<message key="plugin.generic.category.select.selectName"> Selector </message>
+<message key="plugin.generic.category.select.selectDescription"> Clasificación muy sencilla que permite seleccionar la categoria mediante un select</message>
+<message key="plugin.generic.category.groups.groupsName"> Grupos </message>
+<message key="plugin.generic.category.groups.groupsDescription"> Clasificación de categorias en grupos con imagenes</message>
+
+<!-- ChangeCss -->
+<message key="plugins.generic.category.changeCssTitle">Personalizar los estilos</message>
+<message key="plugins.generic.category.changeCssDescription">Aquí puede editar la hoja de estilos por defecto que contiene todos 
+los estilos utilizados en la pagina inicial del sitio que se muestra al usta el módulode categorias</message>
+
+<!-- Category Settings -->
+<message key="plugins.generic.category.settings"> Opciones del módulode categorias</message>
+<message key="plugins.generic.category.view"> Escoger vista para el inicio</message>
+<message key="admin.plugin.category.categorySettings"> Configuración de categorias</message>
+<message key="plugins.generic.category.categoryTitle">Nombre</message>
+<message key="plugin.generic.category.categoryDescription">Descripcion</message>
+<message key="plugins.generic.category.confirmDelete">¿Está seguro? Se borrará la categoria</message>
+<message key="plugin.generic.category.noneCreated"> No hay categorias creadas</message>
+<message key="plugin.generic.category.addCategory"> Nueva Categoria</message>
+<message key="plugins.generic.category.assocJournal"> Editar asociación de revistas</message>
+<message key="plugin.generic.category.journalAssociation"> Asociar revistas a las categorias</message>
+<message key="plugin.generic.category.createInstructions"> Complete los datos para crear la categoria</message>
+<message key="plugin.generic.category.categoryImg"> Imagen de Categoria</message>
+<message key="plugin.generic.category.categoryImg.altText"> Texto Alternativo imagen</message>
+<message key="plugin.generic.category.categoryLogo">Logo de Categoria</message>
+<message key="plugin.generic.category.availability">Disponible</message>
+<message key="plugins.generic.category.saveButton">Guardar</message>
+<message key="plugins.generic.category.assocDescription">Utilize los checkboxes para asociar cada revista con la categoria correspondiente, cuando haya terminado, pulse en "Regresar". Todos los cambios realizados se guardaran automaticamente.
+</message>
+<message key="plugins.generic.category.buttonReturn"> Regresar</message>
+<message key="plugins.generic.category.buttonDefaul"> Por defecto</message>
+<message key="plugins.generic.category.confirmDefault">¿Esta seguro? se restauraran los valores por defecto</message>
+<message key="plugins.generic.category.jssuccess"> Estilos modificados con éxito</message>
+</locale>

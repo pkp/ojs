@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * emailTemplateData.xml
+  * @file plugins/generic/sword/locale/es_ES/emailTemplates.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localized email templates XML file.
   -->
+
 <email_texts locale="es_ES">
-	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
-		<subject>Notificación de depósito</subject>
-		<body>Enhorabuena por la aceptación de su presentación, "($ articleTitle)", para su publicación en {$journalName}. Si lo desea, puede depositar de forma automática su presentación en uno o varios repositorios.
+  <email_text key="SWORD_DEPOSIT_NOTIFICATION">
+    <subject>Notificación de depósito</subject>
+    <body>Enhorabuena por la aceptación del envío, "{$articleTitle}", para que se publique en {$journalName}. Si así lo desea, puede depositar automáticamente el envío en uno o más repositorios. 
 
-Vaya a {$swordDepositUrl} para proceder.
+Para proceder, vaya a {$swordDepositUrl}.
 
-Este correo electrónico fue generado por Open Journal Systems' SWORD deposit plugin.</body>
-		<description>Esta plantilla de correo electrónico se utiliza para notificar a un autor de puntos opcionales de depósito para los depósitos SWORD.</description>
-	</email_text>
-</email_texts>
+El módulo de depósito SWORD del Open Journal Systems generó este correo electrónico.</body>
+    <description>Se utiliza esta plantilla de correo electrónico para notificar a un autor/a de los puntos de depósito opcionales para depósitos SWORD.</description>
+  </email_text>
+</email_texts> 

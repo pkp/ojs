@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../../../../lib/pkp/dtd/helpTopic.dtd">
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * Index Help Page 
+  *
+  -->
+
+<topic id="TranslatorPlugin/topic/000000" locale="es_ES" title="Translator Plugin" toc="index/toc/000000" key="TranslatorPlugin.index">
+	<section>
+		<![CDATA[<p>OJS 2.2 y versiones siguientes incorporan un módulo de traducción que hace mucho más fácil la tarea de actualizar las traducciones incompletas. También puede empezar una traducción nueva desde cero, pero esto acarreará un poco más de trabajo al principio (lea más abajo).</p><p>Para ver las traducciones que están disponibles en este momento para OJS y comprobar cuáles están ya en progreso, visite la página <a href="http://pkp.sfu.ca/ojs-languages">OJS languages</a> donde obtendrá más información. En el caso de traducciones que ya están en progreso, considere contactar con los traductores de la lista para comprobar el estado de la traducción o trabajar conjuntamente y ayudar con la traducción.</p><p>Para habilitar el módulo, conéctese como administrador/a de la revista, vaya a Inicio y después a Módulos del sistema. Ahí encontrará una lista con el módulo de traducción y los módulos genéricos. Haga clic en el enlace 'Habilitar' del módulo. Para acceder al módulo, vuelva a la página Módulos del sistema, desplácese hasta el módulo y haga clic en el enlace "Traducir" recientemente disponible.</p><p>A continuación, podrá ver una lista de configuraciones locales disponibles (ya instaladas) y tres acciones disponibles: "Comprobar", "Editar" y "Exportar".</p>]]>
+	</section>
+
+	<section title="Checking a Translation">
+		<![CDATA[<p>Puede comprobar si una traducción está completa mediante un clic en el enlace "Comprobar". Esto le mostrará una lista de los archivos de configuración local que faltan, las claves que faltan de los archivos de configuración local existentes, las claves adicionales (no necesarias), las longitudes de clave sospechosas (es decir,valores si el valor de clave que tradujo es sustancialmente más largo que el predeterminado en inglés), y de los correos electrónicos del sistema adicionales o que faltan.</p><p>Si le falta un archivo de configuración local, el módulo le permitirá crear uno y traducir los valores clave desde el inglés predeterminado mediante la introducción de nuevos valores sobre los antiguos en los campos pertinentes. Cualquier otro error se mostrará en el mensaje de error junto al valor clave erróneo en un campo editable</p><p><strong>Atención:</strong> puede que al principio se sorprenda por el número de archivos de configuración local que faltan. Cada módulo del sistema requiere un archivo de configuración local individual para su interfaz, por lo que si no los va a usar, puede omitir su traducción.</p>]]>
+	</section>
+
+	<section title="Editing a Translation">
+		<![CDATA[<p>Si ya identificó dónde hay un error, puede hacer clic en el enlace 'Editar' situado al lado del nombre del idioma que necesita arreglar y, luego, hacer clic en el enlace "Editar" que está junto al archivo de configuración local específico (atención: si sólo hace clic en el nombre de archivo de configuración local, irá directamente al archivo de configuración local descargable).</p><p>Tendrá a su disposición una lista de todas las claves de los archivos de configuración local con los valores en inglés junto con los de la traducción. Puede editar sus valores de traducción directamente aquí y guardar sus resultados haciendo clic en el campo de valor de traducción y realizando los cambios pertinentes</p><p>Si sabe la clave específica que quiere cambiar (p. ej. "navigation.journalHelp") introduzca la clave en el campo de búsqueda situado encima de la tabla y pulse en "Buscar". Esto le llevará a la página apropiada con la clave o el valor resaltado en amarillo.</p><p>Puede eliminar cualquier clave del archivo de configuración regional haciendo clic en el enlace "Eliminar". Sin embargo, tenga en cuenta que no se puede agregar una nueva clave con el módulo de traducción: si elimina una clave que va a necesitar más tarde, tendrá que agregarla manualmente (es decir, mediante la edición del archivo en el servidor).</p>]]>
+	</section>
+
+	<section title="Exporing a Translation">
+		<![CDATA[<p>Puede exportar una traducción mediante el enlace "Exportar" en frente al nombre del idioma en la página del módulo de traducción: el sistema comprimirá todos los archivos de configuración local para esa traducción en un paquete tar.gz descargable. Esto resulta muy útil si necesita llevar un idioma recientemente traducido a otro OJS o a un entorno OCS, o incluso si quisiera aportar sus cambios al PKP.</p>]]>
+	</section>
+
+	<section title="Starting a Translation from Scratch">
+		<![CDATA[<p>Si se emplea el módulo de traducción para empezar una traducción desde cero, la tarea resultará un poco más complicada que editar una traducción incompleta e instalada. Tendrá que crear y subir manulamente los principales archivos de configuración local (locales/[your_LANG]/locale.xml) junto con los archivos de plantillas de correo electrónico (dbscripts/xml/data/locale/[your_LANG]/email_templates_data.xml). Después deberá introducir el idioma nuevo en registry/locales.xml, después de eso, su idioma aparecerá en la lista de traducciones editables cuando visite el módulo de traducción. Tras esto, el idioma aparacerá en la lista de traducciones editables del módulo de traducción Una vez hecho todo esto, podrá agregar nuevos archivos de configuración regional según las instrucciones anteriores y podrá editar los dos archivos mencionados anteriormente.</p>]]>
+	</section>
+</topic> 

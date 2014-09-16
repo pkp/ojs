@@ -1,31 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/openAds/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.openads.description">El conector OpenAds permite insertar en el OJS anuncios dinámicos del servidor de OpenAds.</message>
-	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[El conector OpenAds permite insertar en el OJS anuncios dinámicos del servidor de OpenAds. <strong>Lea la información sobre cómo habilitarlo en el archivo LÉEME ubicado en plugins/generic/openAds.</strong>]]></message>
-	<message key="plugins.generic.openads">Conector OpenAds</message>
-	<message key="plugins.generic.openads.settings.description">Use este formulario para seleccionar las zonas del OJS en las que se visualizarán los anuncios de OpenAds.</message>
+	<message key="plugins.generic.openads.description">El módulo OpenAds permite insertar en el OJS anuncios dinámicos del servidor de OpenAds.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[El módulo OpenAds permite insertar en el OJS anuncios dinámicos del servidor de OpenAds. <strong>Lea la información sobre cómo habilitarlo en el archivo LÉAME ubicado en plugins/generic/openAds.</strong>]]></message>
+	<message key="plugins.generic.openads">Módulo OpenAds</message>
+	<message key="plugins.generic.openads.settings.description">Use este formulario para seleccionar las zonas del OJS en las que se mostrarán los anuncios de OpenAds.</message>
 	<message key="plugins.generic.openads.manager.settings">Configuración</message>
 
 	<message key="plugins.generic.openads.error.configFileNotFound">No se pudo acceder al archivo de configuración {$filename}.</message>
-	<message key="plugins.generic.openads.error.missingParameter">Al menos uno de los parámetros de configuración que requiere OpenAds no pudo ser leído en el archivo de configuración. Los parámetros necesarios son dbhost, dbuser, dbpassword, dbname, url_prefix y table_prefix.</message>
-	<message key="plugins.generic.openads.error.dbConnectionError">No se puede conectar con la base de datos de OpenAds.</message>
+	<message key="plugins.generic.openads.error.missingParameter">Al menos uno de los parámetros de configuración que requiere OpenAds no se pudo leer en el archivo de configuración. Los parámetros necesarios son dbhost, dbuser, dbpassword, dbname, url_prefix y table_prefix.</message>
+	<message key="plugins.generic.openads.error.dbConnectionError">No se pudo conectar con la base de datos de OpenAds.</message>
 
-	<message key="plugins.generic.openads.headerAd">Anuncio en la cabecera</message>
+	<message key="plugins.generic.openads.headerAd">Anuncio en el encabezado</message>
 	<message key="plugins.generic.openads.contentAd">Anuncio en el contenido</message>
 	<message key="plugins.generic.openads.sidebarAd">Anuncio en la barra lateral</message>
 
 	<message key="plugins.generic.openads.orientation.left">Izquierda</message>
 	<message key="plugins.generic.openads.orientation.centre">Centro</message>
 	<message key="plugins.generic.openads.orientation.right">Derecha</message>
-</locale>
+</locale> 

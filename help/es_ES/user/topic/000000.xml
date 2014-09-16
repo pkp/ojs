@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * User Interface Index 
   *
-  * $Id$
   -->
 
 <topic id="user/topic/000000" locale="es_ES" title="Sitio web de la revista" toc="index/toc/000000" subtoc="user/toc/000000" key="user.index">
 	<section>
-		<![CDATA[<p>Esta revista ofrece a los usuarios/as varias funciones diseñadas para mejorar la lectura mediante la investigación y la formación académica. Estas funciones las usan normalmente las revistas en línea y, en el caso de esta revista, familiarizarse con ellas facilitará la obtención de mayores beneficios de otras revistas en línea. Estas funciones están disponibles generalmente para todos los lectores/as.</p>]]>	
+		<![CDATA[<p>Esta revista ofrece a los usuarios/as varias funciones diseñadas para mejorar su experiencia con la investigación y la erudición. Las revistas en línea usan normalmente estas funciones y familiarizarse con ellas, en el caso de esta revista, facilitará sacar el máximo rendimiento de otras revistas en línea. Estas funciones están disponibles generalmente para todos los lectores/as.</p>]]>	
 	</section>
-</topic>
+</topic> 

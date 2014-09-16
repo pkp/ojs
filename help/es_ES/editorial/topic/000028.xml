@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Section Editor's Role Index - Editing - Layout
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000028" locale="es_ES" title="Maquetación" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
 	<section>
-		<![CDATA[<p>Una vez que el corrector/a de originales haya generado la versión limpia del documento del envío (paso 3 del proceso de corrección de originales), dicha versión sigue a la fase de maquetación. Después de recibir la notificación de que el proceso de corrección de originales ha finalizado, el editor/a de sección elige un maquetista, si esta decisión no se ha tomado previamente, y solicita que comience su trabajo por medio de un correo electrónico (icono bajo Solicitar maquetación). El maquetista prepara las galeradas en cada uno de los formatos de publicación de la revista (p. ej., HTML, PDF, PS, etc.). Además, el maquetista y el corrector/a de pruebas revisan los archivos adicionales, que tienen el formato original en el que se enviaron, con el fin de asegurar que el formato básico es correcto y que los archivos se ajustan al máximo a los estándares de la revista. Cuando el maquetista ha finalizado las galeradas iniciales, es decir, los archivos que se publicarán en línea, envía un correo electrónico al editor/a de sección.</p><p>Tenga en cuenta que el editor/a puede planificar la publicación del documento en cualquier fase del proceso de edición. Esta información se pondrá a disposición de los maquetistas y de los correctores/as de pruebas para que puedan tener una vista previa del número antes de su publicación.</p>]]>	
+		<![CDATA[<p>Una vez que el corrector/a de originales finalice la copia "limpia" del paso 3 de la corrección de originales, esa versión del envío pasa a la fase de maquetación. Después de recibir la notificación de que el proceso de corrección de originales finalizó, el editor/a de sección elige un maquetista y, si no lo hizo antes, le solicita que comience a trabajar por medio de un correo electrónico (icono de correo electrónico de Solicitar maquetación). El maquetista prepara las galeradas en cada uno de los formatos de publicación de la revista (p. ej.:, HTML, PDF, PS, etc.). Además, el maquetista y el corrector/a de pruebas revisan los archivos complementarios, que tienen el formato original en el que se enviaron, con el fin de asegurar que el formato básico es correcto y que los archivos se ajustan al máximo a los estándares de la revista. Cuando el maquetista completa la producción inicial de galeradas, que son los archivos que se publicarán en línea, envía un correo electrónico al editor/a de sección.</p><p>Tenga en cuenta que el editor/a puede planificar un envío para publicación en cualquier momento del proceso de edición. Esta información estará disponible para los maquetistas y para los correctores/as de pruebas para que puedan tener una vista previa del número antes de su publicación.</p>]]>	
 	</section>
-</topic>
+</topic> 

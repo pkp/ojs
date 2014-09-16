@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Site Administration Main 
   *
-  * $Id$
   -->
 
 <topic id="site/topic/000000" locale="es_ES" title="Administración del sitio" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
 	<section>
-		<![CDATA[<p>Este sistema de gestión y publicación de revistas está diseñado para instalarse y administrarse desde un servidor web local. Una vez instalado, el administrador/a puede usarlo para crear tantas revistas como sean necesarias, y supervisar la administración del sitio web de cada una.</p>]]>	
+		<![CDATA[<p>Este sistema de gestión y edición de revistas está diseñado para que se instale y administre en un servidor web local. Una vez instalado, el administrador/a del sitio puede usarlo para crear tantas revistas individuales como desee y supervisar la administración de cada sitio de la revista creado.</p>]]>	
 	</section>
-</topic>
+</topic> 

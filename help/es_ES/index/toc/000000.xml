@@ -9,7 +9,8 @@
   *
   * Main table of contents for help. 
   *
-  * $Id$
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   -->
 
 	<toc id="index/toc/000000" locale="es_ES" title="Ayuda de OJS" parent_topic="index/topic/000000">
@@ -19,5 +20,4 @@
 	<topic id="submission/topic/000000" title="Proceso de envío" />
 	<topic id="editorial/topic/000000" title="Proceso editorial" />
 	<topic id="publishing/topic/000000" title="Proceso de publicación" />
-	<topic id="user/topic/000000" title="Sitio web de la revista" />
 </toc>

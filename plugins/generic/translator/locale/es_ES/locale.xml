@@ -1,51 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/translator/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.translator.name">Conector de traducción</message>
-	<message key="plugins.generic.translator.description">Este conector permite el mantenimiento basado en web de archivos de traducción.</message>
-	<message key="plugins.generic.translator.longdescription">Esta área permite que el administrador/a del sitio web pueda crear, modificar y comprobar las traducciones del OJS. Está disponible en todo el sitio web y no debe utilizarse para personalizar una única revista del OJS. Si corrige o crea una traducción, considere entregarla al Public Knowledge Project para su distribución en próximas publicaciones.</message>
-	<message key="plugins.generic.translator.localeDescription">Esta página enumera todos los componentes de una traducción OJS y ofrece al traductor/a la posibilidad de editar cada uno de ellos. La traducción íntegra de una traducción debería contener traducciones completas de todos sus componentes.</message>
+	<message key="plugins.generic.translator.name">Módulo de traducción</message>
+	<message key="plugins.generic.translator.description">Este módulo permite el mantenimiento basado en web de archivos de traducción.</message>
+	<message key="plugins.generic.translator.longdescription">Este área permite que el administrador/a del sitio web pueda crear, modificar y comprobar las traducciones del OJS. Está disponible en todo el sitio web y no debe utilizarse para personalizar una única revista del OJS. Si corrige o crea una traducción, considere entregarla al Public Knowledge Project para su distribución en próximas publicaciones.</message>
+	<message key="plugins.generic.translator.localeDescription">Esta página enumera todos los componentes de una traducción OJS y ofrece al traductor/a la posibilidad de editar cada uno de ellos. Se considera que una traducción es íntegra cuando contiene traducciones completas de todos sus componentes.</message>
 	
-	<message key="plugins.generic.translator.tarMissing">La función de exportación de este conector ha sido desactivada porque no se pudo encontrar el archivo binario tar configurado en el sistema. Asegúrese de que tiene el programa tar instalado y configure la ruta hacia el archivo binario tar en la sección config.inc.php [cli].</message>
+	<message key="plugins.generic.translator.tarMissing">La función de exportación de este módulo se desactivó porque no se pudo encontrar el archivo binario tar configurado en el sistema. Asegúrese de que tiene el programa tar instalado y configure la ruta hacia el archivo binario tar en la sección config.inc.php [cli] section!</message>
 	
-	<message key="plugins.generic.translator.localeName">Nombre de la configuración local</message>
+	<message key="plugins.generic.translator.localeName">Nombre de la configuración regional</message>
 	<message key="plugins.generic.translator.localeKey">Clave</message>
-	<message key="plugins.generic.translator.localeKey.description">Introduzca la clave de configuración local completa que desee buscar.</message>
+	<message key="plugins.generic.translator.localeKey.description">Introduzca la clave de configuración regional completa que desee buscar.</message>
 	<message key="plugins.generic.translator.localeKeyValue">Valor</message>
 	<message key="plugins.generic.translator.translate">Traducir</message>
-	<message key="plugins.generic.translator.availableLocales">Configuraciones locales disponibles</message>
+	<message key="plugins.generic.translator.availableLocales">Configuraciones regionales disponibles</message>
 	<message key="plugins.generic.translator.check">Comprobar</message>
 
-	<message key="plugins.generic.translator.errors">Errores de configuración local</message>
+	<message key="plugins.generic.translator.errors">Errores de configuración regional</message>
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Faltan claves</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Claves adicionales</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Listas de parámetros diferentes</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Faltan archivos de configuración local</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Faltan archivos de configuración regional</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Faltan correos electrónicos</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Correos electrónicos adicionales</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Listas de parámetros de correo electrónico diferentes</message>
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Falta la clave "{$key}" en "{$filename}". Se ofrece la versión en inglés como predeterminada.</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">La clave "{$key}" está obsoleta y se puede eliminar desde "{$filename}".</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">La clave de configuración local "{$key}" de "{$filename}" difiere en el uso de parámetros de la configuración local de referencia. Compruebe de nuevo que contiene todos los parámetros pertinentes. Los parámetros desajustados son:</message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">El archivo de configuración local "{$filename}" no se encuentra o no se puede leer.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">La clave de configuración local "{$key}" de "{$filename}" difiere en el uso de parámetros de la configuración regional de referencia. Compruebe de nuevo que contiene todos los parámetros pertinentes. Los parámetros que no coinciden son:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">El archivo de configuración regional "{$filename}" no se encuentra o no se puede leer.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">No se encuentra el mensaje de correo electrónico "{$key}" en la traducción.</message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">El mensaje de correo electrónico "{$key}" es obsoleto y se puede eliminar.</message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">El mensaje de correo electrónico "{$key}" difiere en el uso de parámetros de la configuración local de referencia. Compruebe de nuevo que contiene todos los parámetros pertinentes. Los parámetros desajustados son:</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">El mensaje de correo electrónico "{$key}" está obsoleto y se puede eliminar.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">El mensaje de correo electrónico "{$key}" difiere en el uso de parámetros de la configuración regional de referencia. Compruebe de nuevo que contiene todos los parámetros pertinentes. Los parámetros que no coinciden son:</message>
 
-	<message key="plugins.generic.translator.locale">{$locale} Configuración local</message>
-	<message key="plugins.generic.translator.localeFiles">Archivos de configuración local</message>
+	<message key="plugins.generic.translator.locale">{$locale} Configuración regional</message>
+	<message key="plugins.generic.translator.localeFiles">Archivos de configuración regional</message>
 	<message key="plugins.generic.translator.miscFiles">Archivos varios</message>
 	<message key="plugins.generic.translator.emails">Plantillas de correo electrónico</message>
 	<message key="plugins.generic.translator.file.filename">Nombre del archivo</message>
@@ -61,13 +63,13 @@
 	<message key="plugins.generic.translator.email.resetToReference">Restablecer a la referencia</message>
 	<message key="plugins.generic.translator.file.resetConfirm">¿Está seguro de que desea restablecer los contenidos del archivo?</message>
 	<message key="plugins.generic.translator.email.resetConfirm">¿Está seguro de que desea restablecer los contenidos del correo electrónico?</message>
-	<message key="plugins.generic.translator.file.doesNotExistNote">*Este archivo aún no ha sido traducido.</message>
-	<message key="plugins.generic.translator.file.confirmCreate">El archivo "{$filename}" se creará con la versión en inglés; deberá traducir todas las cadenas del archivo. ¿Desea continuar?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Este archivo aún no está traducido.</message>
+	<message key="plugins.generic.translator.file.confirmCreate">El archivo "{$filename}" se creará con la versión en inglés, por lo que deberá traducir todas las cadenas del archivo. ¿Desea continuar?</message>
 	<message key="plugins.generic.translator.email.description">Traduzca el título, el cuerpo y la descripción de la plantilla del correo electrónico en los siguientes campos. La descripción es sólo para referencia del gestor/a de la revista.</message>
-	<message key="plugins.generic.translator.confirmDelete">¿Está seguro/a de que desea eliminar este elemento? No se puede deshacer esta operación.</message>
-	<message key="plugins.generic.translator.deleteKey">Eliminar esta clave</message>
-	<message key="plugins.generic.translator.deleteEmail">Eliminar este correo electrónico</message>
-	<message key="plugins.generic.translator.saveBeforeContinuing">Asegúrese de guardar todos los cambios realizados en esta página antes de continuar o los perderá. ¿Desea continuar? Todos los cambios que no se hayan guardado se perderán.</message>
-	<message key="plugins.generic.translator.fileNotWriteable">Este archivo de configuración local no se puede editar en el servidor. No se guardará ningún cambio que realice.</message>
+	<message key="plugins.generic.translator.confirmDelete">¿Está seguro de que desea eliminar este elemento? Esta acción es irreversible.</message>
+	<message key="plugins.generic.translator.deleteKey">Eliminar la clave</message>
+	<message key="plugins.generic.translator.deleteEmail">Eliminar el correo electrónico</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Asegúrese de guardar todos los cambios realizados en esta página antes de continuar o los perderá. ¿Desea continuar? Todos los cambios sin guardar se perderán.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Este archivo de configuración regional no se puede editar en el servidor. No se guardará ningún cambio que realice.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Estos archivos de configuración local no se pueden editar en el servidor. No se guardará ningún cambio que realice en ellos.</message>
 </locale> 

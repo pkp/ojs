@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/referral/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.referral.name">Conector Referral</message>
-	<message key="plugins.generic.referral.description">El conector Referral rastrea en los artículos la URL de enlaces refback entrantes (p.ej.: cuando un lector sigue un enlace externo a un artículo) y permite a los autores/as mantener y publicar una lista actualizada automáticamente de los enlaces refback de un artículo.</message>
+	<message key="plugins.generic.referral.name">Módulo de referencias</message>
+	<message key="plugins.generic.referral.description">El módulo de referencias rastrea las URL de enlaces refback entrantes a artículos (p. ej., cuando un lector sigue un enlace externo a un artículo) y permite a los autores/as mantener y publicar una lista actualizada automáticamente de los enlaces refback a un artículo.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Editar enlaces refback</message>
 	<message key="plugins.generic.referral.createReferral">Crear enlaces refback</message>
@@ -21,21 +23,21 @@
 	<message key="plugins.generic.referral.dateAdded">Fecha de creación</message>
 	<message key="plugins.generic.referral.all">Todos</message>
 	<message key="plugins.generic.referral.all.empty">No hay ningún enlace refback.</message>
-	<message key="plugins.generic.referral.status.new">Nuevos</message>
+	<message key="plugins.generic.referral.status.new">Nuevo</message>
 	<message key="plugins.generic.referral.status.new.empty">No hay ningún enlace refback nuevo.</message>
-	<message key="plugins.generic.referral.status.accept">Publicados</message>
+	<message key="plugins.generic.referral.status.accepted">Publicado</message>
+	<message key="plugins.generic.referral.status.accept">Publicar</message>
+	<message key="plugins.generic.referral.status.accept.confirm">¿Está seguro de que desea publicar los enlaces refback seleccionados?</message>
 	<message key="plugins.generic.referral.status.accept.empty">No hay ningún enlace refback publicado.</message>
-	<message key="plugins.generic.referral.status.decline">Omitidos</message>
+	<message key="plugins.generic.referral.status.decline">Omitir</message>
+	<message key="plugins.generic.referral.status.declined">Omitidos</message>
+	<message key="plugins.generic.referral.status.decline.confirm">¿Está seguro de que desea ignorar los enlaces refback seleccionados?</message>
 	<message key="plugins.generic.referral.status.decline.empty">No hay ningún enlace refback omitido.</message>
-	<message key="plugins.generic.referral.confirmDelete">¿Está seguro/a de que desea eliminar este enlace refback?</message>
+	<message key="plugins.generic.referral.confirmDelete">¿Está seguro de que desea eliminar los enlaces refback seleccionados?</message>
 	<message key="plugins.generic.referral.nameRequired">Se requiere el título del enlace refback.</message>
 	<message key="plugins.generic.referral.urlRequired">Se requiere la URL del enlace refback.</message>
-	<message key="plugins.generic.referral.settings">Configuración del conector Referral</message>
-	<message key="plugins.generic.referral.settings.description">El conector Referral captura las URL que enlazan con los artículos publicados en esta revista para que el autor/a los pueda organizar y decidir si deben publicarse o no. Este formulario permite que el gestor/a de la revista controle como se capturan estos enlaces.</message>
+	<message key="plugins.generic.referral.settings">Configuración del módulo de referencias</message>
+	<message key="plugins.generic.referral.settings.description">El módulo de referencias captura las URL que enlazan con los artículos publicados en esta revista para que el autor/a pueda organizarlos y decidir si deben publicarse o no. Este formulario permite que el gestor/a de la revista controle como se capturan los enlaces.</message>
 	<message key="plugins.generic.referral.excusions">Exclusiones</message>
-	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Introduzca una lista de patrones de expresiones regulares, uno por línea, que deban tratarse como exclusiones para un registro de referencias. Esto sirve para evitar que las solicitudes de los motores de búsqueda saturen la lista de referencias. Para más información sobre expresiones regulares, vea <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/es/ref.pcre.php.</a>]]></message>
-	<message key="plugins.generic.referral.status.accepted">Publicado</message>
-	<message key="plugins.generic.referral.status.accept.confirm">¿Estás seguro/a de querer publicar los refbacks seleccionados?</message>
-	<message key="plugins.generic.referral.status.declined">Ignorar</message>
-	<message key="plugins.generic.referral.status.decline.confirm">¿Estás seguro/a de querer ignorar los refbacks seleccionados?</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Introduzca una lista de patrones de expresiones regulares, una por línea, que deban tratarse como exclusiones para un registro de referencias. Esto sirve para evitar que las solicitudes de los motores de búsqueda saturen la lista de referencias. Si desea obtener más información acerca de las expresiones regulares, visite la página  <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
 </locale> 

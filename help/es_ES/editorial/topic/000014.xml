@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Proofreader's Role Index 
   *
-  * $Id$
   -->
 
-<topic id="editorial/topic/000014" locale="es_ES" title="Rol del corrector/a de pruebas" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+<topic id="editorial/topic/000014" locale="es_ES" title="Rol de corrector/a de pruebas" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
 	<section>
-		<![CDATA[<p>El corrector/a recibirá un correo electrónico del editor/a de sección pidiéndole que lleve a cabo una, o varias, correcciones. A partir de entonces le corresponde al corrector/a aceptar o rechazar la responsabilidad. En caso de aceptar, el corrector/a podrá iniciar sesión y comenzar el proceso de corrección desde su página de usuario/a.</p>]]>	
+		<![CDATA[<p>El corrector/a de pruebas recibirá un correo electrónico del editor/a de sección en el que se solicitará que realice una o varias rondas de corrección de pruebas. Entonces, el corrector/a de pruebas aceptará o rechazará dicha responsabilidad; si acepta, podrá acceder y comenzar el proceso de corrección de pruebas desde su área personal.</p>]]>	
 	</section>
-</topic>
+</topic> 

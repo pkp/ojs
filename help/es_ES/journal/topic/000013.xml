@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Users - Import Users
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000013" locale="es_ES" title="Importar usuarios/as" toc="journal/toc/000002" key="journal.users.importUsers">
 	<section>
-		<![CDATA[<p>OJS proporciona una forma sencilla para la importación de datos de usuario/a desde un formato basado en XML, datos que pueden ser fácilmente generados desde otras bases de datos de información del usuario/a. Consulte la documentación incluida en OJS para obtener más información sobre el formato XML y XML DTD para datos de usuario/a.</p>]]>	
+		<![CDATA[<p>OJS ofrece un servicio sencillo para importar datos de usuario/a en formato XML, el cual se puede crear fácilmente desde otras bases de datos de información de usuario. Se puede consultar la documentación incluida en OJS para más información acerca del formato XML y XML DTD para datos de usuario/a.</p>]]>	
 	</section>
-</topic>
+</topic> 

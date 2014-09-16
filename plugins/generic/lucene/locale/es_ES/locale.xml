@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/lucene/locale/es_ES/locale.xml
   *
@@ -8,112 +7,95 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * OJS solr/lucene search plugin localization strings
   -->
  
-<locale name="es_ES" full_name="Español">
-	<message key="plugins.generic.lucene.displayName">Lucene Search Plugin</message>
-	<message key="plugins.generic.lucene.description">The Lucene plugin provides multi-language support, improved search result relevance, faster indexing, better scalability and more.</message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.lucene.displayName">Módulo de búsqueda Lucene</message>
+	<message key="plugins.generic.lucene.description">El módulo Lucene proporciona asistencia multilingüe, relevancia de resultados de búsqueda mejorada, indexación más rápida, mejor escalabilidad y mucho más.</message>
 
-	<message key="plugins.generic.lucene.faceting.title">refine your search</message>
-	<message key="plugins.generic.lucene.faceting.discipline">Discipline</message>
-	<message key="plugins.generic.lucene.faceting.subject">Keyword</message>
-	<message key="plugins.generic.lucene.faceting.type">Method/Approach</message>
-	<message key="plugins.generic.lucene.faceting.coverage">Coverage</message>
-	<message key="plugins.generic.lucene.faceting.journalTitle">Journal</message>
-	<message key="plugins.generic.lucene.faceting.authors">Author</message>
-	<message key="plugins.generic.lucene.faceting.publicationDate">Publication Date</message>
+	<message key="plugins.generic.lucene.faceting.displayName">Facetado de Lucene</message>
+	<message key="plugins.generic.lucene.faceting.description">Módulo de bloques facetados para Lucene</message>
+	<message key="plugins.generic.lucene.faceting.title">ajustar la búsqueda</message>
+	<message key="plugins.generic.lucene.faceting.discipline">Disciplina</message>
+	<message key="plugins.generic.lucene.faceting.subject">Palabra clave</message>
+	<message key="plugins.generic.lucene.faceting.type">Método/enfoque</message>
+	<message key="plugins.generic.lucene.faceting.coverage">Cobertura</message>
+	<message key="plugins.generic.lucene.faceting.journalTitle">Revista</message>
+	<message key="plugins.generic.lucene.faceting.authors">Autor/a</message>
+	<message key="plugins.generic.lucene.faceting.publicationDate">Fecha de publicación</message>
 	
-	<message key="plugins.generic.lucene.message.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
-	<message key="plugins.generic.lucene.message.indexingIncomplete">An error occurred while indexing: Indexed {$numIndexed} out of a batch of {$batchCount}.</message>
-	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
-	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Pull indexing is not enabled. Please enable it in the Lucene plug-in settings.</message>
-	<message key="plugins.generic.lucene.message.searchServiceOffline">Unfortunately the OJS search service is currently offline.</message>
-	<message key="plugins.generic.lucene.message.techAdminInformed">The technical administrator of this journal has been informed about the problem.</message>
-	<message key="plugins.generic.lucene.message.webServiceError">The Lucene web service returned an error.</message>
+	<message key="plugins.generic.lucene.message.coreNotFound">No se pudo encontrar el núcleo requerido '{$core}' en el servidor Solr. ¿Está conectado?</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">Se produjo un error durante la indexación: {$numProcessed} procesados de un lote de {$batchCount} ({$numDeleted} documentos eliminados en este lote).</message>
+	<message key="plugins.generic.lucene.message.indexOnline">Indexar con {$numDocs} documentos en línea.</message>
+	<message key="plugins.generic.lucene.message.pullIndexingDisabled">La indexación mediante servidor no está habilitada. Habilítela en la configuración del módulo Lucene.</message>
+	<message key="plugins.generic.lucene.message.searchServiceOffline">Desafortunadamente el servicio de búsquedas de OJS está desconectado en estos momentos.</message>
+	<message key="plugins.generic.lucene.message.techAdminInformed">Se informó al administrador/a de la revista del problema.</message>
+	<message key="plugins.generic.lucene.message.webServiceError">El servicio web Lucene devolvió un error.</message>
 
-	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} articles marked for update</message>
+	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} artículos marcados para actualización</message>
 	
-	<message key="plugins.generic.lucene.results.didYouMean">Did you mean</message>
-	<message key="plugins.generic.lucene.results.orderBy">Order results by</message>
-	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevance</message>
-	<message key="plugins.generic.lucene.results.orderBy.author">Author</message>
-	<message key="plugins.generic.lucene.results.orderBy.issue">Issue</message>
-	<message key="plugins.generic.lucene.results.orderBy.date">Publication Date</message>
-	<message key="plugins.generic.lucene.results.orderBy.journal">Journal Title</message>
-	<message key="plugins.generic.lucene.results.orderBy.article">Article Title</message>
-	<message key="plugins.generic.lucene.results.orderDir.asc">Ascending</message>
-	<message key="plugins.generic.lucene.results.orderDir.desc">Descending</message>
-	<message key="plugins.generic.lucene.results.similarDocuments">similar documents</message>
+	<message key="plugins.generic.lucene.results.didYouMean">Quiso decir</message>
+	<message key="plugins.generic.lucene.results.orderBy">Ordenar resultados por</message>
+	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevancia</message>
+	<message key="plugins.generic.lucene.results.orderBy.author">Autor/a</message>
+	<message key="plugins.generic.lucene.results.orderBy.issue">Número</message>
+	<message key="plugins.generic.lucene.results.orderBy.date">Fecha de publicación</message>
+	<message key="plugins.generic.lucene.results.orderBy.journal">Título de la revista</message>
+	<message key="plugins.generic.lucene.results.orderBy.article">Título del artículo</message>
+	<message key="plugins.generic.lucene.results.orderDir.asc">Ascendente</message>
+	<message key="plugins.generic.lucene.results.orderDir.desc">Descendente</message>
+	<message key="plugins.generic.lucene.results.similarDocuments">documentos similares</message>
 	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
-		Search tips: <ul>
-			<li>Search terms are case-insensitive</li>
-			<li>Common words are ignored</li>
-			<li>By default articles containing <em>any</em> term in the query are returned (i.e., <em>OR</em> is implied)</li>
-			<li>Make sure that a word exists in an article by prefixing it with <strong>+</strong>; e.g., <em>+journal +access scholarly academic</em></li>
-			<li>Combine multiple words with <em>AND</em> to find articles containing all terms; e.g., <em>education AND research</em></li>
-			<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g., <em>online -politics</em> or <em>online NOT politics</em></li>
-			<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em>. Hint: Quoting Chinese or Japanese words will help you to find exact word matches in mixed-language fields, e.g. "中国".</li> 
-			<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal AND conference) NOT theses)</em></li>
-		 </ul>
+		Consejos de búsqueda: <ul> <li>Los términos de búsqueda son capaces de distinguir mayúsculas de minúsculas</li> <li>Se ignoran las palabras más comunes</li> <li>Por defecto, los artículos que contienen<em>cualquier</em> término en la consulta aparecen (p. ej., cuando<em>OR</em> está implícito)</li> <li>Asegúrese de que una palabra está en el artículo añadiendo el prefijo con <strong>+</strong>; p. ej., <em>+revista +acceso académico escolar</em></li> <li>Combine varias palabras con<em>AND</em> para encontrar artículos que contengan todos los términos; p. ej., <em>educación AND investigación</em></li> <li>Excluya una palabra añadiendo el prefijo <strong>-</strong> o <em>NOT</em>; p. ej., <em>en líena -políticas</em> o <em>en línea NOT políticas</em></li> <li>Busque una frase exacta poniéndola entre comillas; p. ej., <em>"publicaciones de acceso abierto"</em>. Sugerencia: Si entrecomilla palabras chinas o japonesas, podrá encontrar correspondencias de palabras exactas en campos multilingües, p. ej., "中国"..</li> <li>Utilice los paréntesis para crear consutas más complejas; p. ej., <em>archivo ((revista AND conferencia) NOT tesis)</em></li> </ul>
 	]]></message>
 
-	<message key="plugins.generic.lucene.settings">Settings</message>
-	<message key="plugins.generic.lucene.settings.autosuggest">Auto-Suggest (show a dynamic drop-down with search term suggestions while entering a search query)</message>
+	<message key="plugins.generic.lucene.settings">Configuración</message>
+	<message key="plugins.generic.lucene.settings.autosuggest">Autosugerencia (muestra un menú desplegable dinámico con las sugerencias de términos de búsqueda mientras se introduce la consulta de búsqueda)</message>
 	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[
-		<strong>Check terms for results</strong>: Only suggest terms that will actually produce search results. Suggestions will be
-		cross-checked against the current journal and terms already entered into other search fields.<br />
-		<strong>Use global dictionary</strong>: This is faster, consumes less resources on the search server and therefore scales better
-		for large installations. Suggestions may contain irrelevant terms, though, e.g. from other journals or terms that produce no
-		search results.
+		<strong>Compuebe los términos para obtener resultados</strong>: Sugerir únicamente términos que realmente vayan a tener resultados de búsqueda. Las sugerencias se verificarán a partir de la revista actual y de los términos ya introducidos en otros campos de búsqueda.<br /> <strong>Utilizar el diccionario global</strong>: Esto resulta más rápido, consume menos recursos del servidor de búsquedas y, por lo tanto, funciona mejor en el caso de grandes instalaciones. Sin embargo, las sugerencias pueden contener términos irrelevantes, p. ej. de otras revistas o términos que no obtienen ningún resultado de búsqueda.
 	]]></message>
-	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">Check terms for results</message>
-	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">Use global dictionary</message>
-	<message key="plugins.generic.lucene.settings.customRanking">Custom Ranking (set individual ranking weights per journal section)</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">Comprobar términos para obtener resultados</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">Utilizar el diccionario global</message>
+	<message key="plugins.generic.lucene.settings.customRanking">Personalización de clasificación (establezca la importancia individual en la clasificación por cada sección de la revista)</message>
 	<message key="plugins.generic.lucene.settings.description"><![CDATA[
-		The Lucene plugin acesses the Lucene search index through a Solr server. This configuration page allows you to configure access to the Solr server.
-		<strong>Please make sure you read the plugin's README file (plugins/generic/lucene/README) before you try to change the default configuration.</strong>
-		If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.
+		El módulo Lucene accede al índice de búsqueda Lucene a través de un servidor Solr. Esta página de configuración le permite configurar el acceso al servidor Solr. <strong>Asegúrese de leer el archivo LÉAME de los módulos (plugins/generic/lucene/README) antes de intentar cambiar la configuración por defecto.</strong> Si utiliza un escenario incrustrado protegido por un firewall como se explica en el archivo LÉAME, probablemente no debería cambiar ningún parámetro de configuración.
 	]]></message>
-	<message key="plugins.generic.lucene.settings.faceting">Faceting (display a navigation box with additional filters to refine your search)</message>
-	<message key="plugins.generic.lucene.settings.facetingSelectCategory">You may select specific facet categories (the corresponding metadata must have beeen selected for indexing in journal setup, step 3.4)</message>
+	<message key="plugins.generic.lucene.settings.faceting">Facetado (muestra un cuadro de navegación con filtros adicionales para ajustar la búsqueda)</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">Puede seleccionar categorías de faceta específicas (se deben haber seleccionado los metadatos correspondientes para la indexación en la configuración de la revista, paso 3.4)</message>
 	<message key="plugins.generic.lucene.settings.featureDescription"><![CDATA[
-		The Lucene plugin provides several optional search features. Most of these features are enabled by default but can be disabled or fine-tuned.
+		El módulo Lucene proporciona varias funciones opcionales de búsqueda. La mayoría de estas funciones se encuentran disponibles de forma predeterminada, pero se pueden deshabilitar o ajustar.
 	]]></message>
-	<message key="plugins.generic.lucene.settings.highlighting">Highlighting (display a short excerpt of each article's full text containing queried keywords)</message>
-	<message key="plugins.generic.lucene.settings.instId">Unique Installation ID</message>
-	<message key="plugins.generic.lucene.settings.instIdRequired">Please enter an ID that uniquely identifies this OJS installation to the Solr search server.</message>
-	<message key="plugins.generic.lucene.settings.instIdInstructions">If you use a central search server then you'll have to provide a unique installation ID for every OJS installation sharing the same search index.  This can be any arbitrary text but it must be different for every participating OJS server (e.g. the server's static IP address if you have one OJS installation per server).</message>
-	<message key="plugins.generic.lucene.settings.internalError">Invalid selection.</message>
-	<message key="plugins.generic.lucene.settings.luceneSettings">Lucene Plugin: Settings</message>
-	<message key="plugins.generic.lucene.settings.password">Password</message>
-	<message key="plugins.generic.lucene.settings.passwordInstructions">Please enter the Solr server password.</message>
-	<message key="plugins.generic.lucene.settings.passwordRequired">Please enter a valid password to authenticate to the Solr search server.</message>
-	<message key="plugins.generic.lucene.settings.pullIndexing">Pull indexing (this is an advanced feature, see README file for more information)</message>
-	<message key="plugins.generic.lucene.settings.searchEndpoint">Search Endpoint URL</message>
-	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
-	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
-	<message key="plugins.generic.lucene.settings.searchFeatures">Search Feature Configuration</message>
-	<message key="plugins.generic.lucene.settings.simdocs">More-Like-This (display a link "similar documents" for every search result)</message>
-	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr server settings</message>
-	<message key="plugins.generic.lucene.settings.spellcheck">Alternative Spelling Suggestions (display alternative search terms)</message>
-	<message key="plugins.generic.lucene.settings.username">Username</message>
-	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
-	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>
+	<message key="plugins.generic.lucene.settings.highlighting">Destacado (muestra un breve extracto del texto completo de cada artículo que contiene palabras clave consultadas)</message>
+	<message key="plugins.generic.lucene.settings.instId">Número de identificación único de instalación</message>
+	<message key="plugins.generic.lucene.settings.instIdRequired">Introduzca un número de identificación específico para esta instalación de OJS en el servidor de búsqueda Solr.</message>
+	<message key="plugins.generic.lucene.settings.instIdInstructions">Si emplea un servidor de búsqueda central, tendrá que proporcionar este número único para cada instalación de OJS que comparta el mísmo índice de búsqueda. Puede utilizar cualquier texto que elija pero debe ser diferente para cada servidor OJS involucrado (p. ej. la dirección estática IP del servidor si tiene una instalación OJS por servidor).</message>
+	<message key="plugins.generic.lucene.settings.internalError">Selección no válida.</message>
+	<message key="plugins.generic.lucene.settings.luceneSettings">Módulo Lucene: Configuración</message>
+	<message key="plugins.generic.lucene.settings.password">Contraseña</message>
+	<message key="plugins.generic.lucene.settings.passwordInstructions">Introduzca la contraseña del servidor Solr.</message>
+	<message key="plugins.generic.lucene.settings.passwordRequired">Introduzca una contraseña válida para identificarse en el servidor de búsqueda Solr.</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">Indexación mediante servidor (esta es una función avanzada, para obtener más información consulte el archivo LÉAME)</message>
+	<message key="plugins.generic.lucene.settings.searchEndpoint">Dirección URL de extremo de búsqueda</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">La búsqueda de extremo Solr consiste en la URL del servidor y un gestor de búsquedas. Consulte la configuración predeterminada como ejemplo. Sólo cambie esto si utiliza un servidor de búsquedas central.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Introduzca una URL válida que represente la búsqueda de extremo (el servidor de búsquedas Solr y el gestor de búsquedas) con la que desea conectar.</message>
+	<message key="plugins.generic.lucene.settings.searchFeatures">Configuración de funciones de búsqueda</message>
+	<message key="plugins.generic.lucene.settings.simdocs">Más-como-esto (muestra un enlace de "documentos similares" para cada resutado de búsqueda)</message>
+	<message key="plugins.generic.lucene.settings.solrServerSettings">Configuración del servidor Solr</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">Sugerencias alternativas de ortografía (proporciona términos de búsqueda alternativos)</message>
+	<message key="plugins.generic.lucene.settings.username">Nombre de usuario/a</message>
+	<message key="plugins.generic.lucene.settings.usernameInstructions">El servidor de búsqueda Solr emplea autenticación HTTP BASIC. Introduzca el nombre de usuario/a.</message>
+	<message key="plugins.generic.lucene.settings.usernameRequired">Introduzca una contraseña válida para autenticarse ante el servidor de búsqueda Solr (no se permiten los dos puntos).</message>
 
-	<message key="plugins.generic.lucene.sectionForm.rankingBoost">Custom Ranking Weight</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoost">Personalización de importancia de clasificación</message>
 	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">
-		The Lucene/Solr search plugin allows you to adjust the relative weight of articles in the result list
-		of a search query. Setting the ranking weight higher (or lower) does not place articles in this
-		section above (or below) all other articles. But they will rank better (or worse) than they would
-		without the adjustment made. Setting this option to "never show" will completely exclude articles
-		in this section from search results.
+		El módulo de búsqueda Lucene/Solr permite ajustar la importacia relativa de los artículos en las listas de resultados de una consulta de búsqueda. Dar una mayor (o menor) importancia dentro de la clasificación no coloca artículos de una sección por encima (o por debajo) del resto de artículos. Lo que hace es posicionarlos mejor (o peor) de lo que estarían sin realizar este ajuste. Si se escoge la opción de "no mostrar nunca", los artículos de esta sección se excluirán de los resultados de búsqueda.
 	</message>
-	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Please select a valid custom ranking weight.</message>
-	<message key="plugins.generic.lucene.sectionForm.ranking.never">Never Show</message>
-	<message key="plugins.generic.lucene.sectionForm.ranking.low">Rank Lower</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Seleccione una personalización de importancia de clasificación válida.</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.never">No mostrar nunca</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.low">Posicionar más abajo</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normal</message>
-	<message key="plugins.generic.lucene.sectionForm.ranking.high">Rank Higher</message>
-	<message key="plugins.generic.lucene.faceting.displayName">Lucene Faceting</message>
-	<message key="plugins.generic.lucene.faceting.description">Bloque del plugin de Lucene Faceting</message>
-</locale>
+	<message key="plugins.generic.lucene.sectionForm.ranking.high">Posicionar más arriba</message>
+</locale> 

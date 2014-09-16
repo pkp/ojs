@@ -7,29 +7,30 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Site Administration - Site Management 
   *
-  * $Id$
   -->
 
-<topic id="site/topic/000002" locale="es_ES" title="Administración del sitio" toc="site/toc/000000" key="site.siteManagement">
+<topic id="site/topic/000002" locale="es_ES" title="Gestión del sitio" toc="site/toc/000000" key="site.siteManagement">
 	<section>
-		<![CDATA[<p>OJS está diseñado para ser un sistema multirevista, y el administrador/a del sito web es responsable de configurar las características de sus distintos niveles y de crear nuevas revistas que se almacenarán dentro de un mismo sito web. Los sitos web de revistas son totalmente independientes, a excepción de las cuentas de los usuarios/as. Aunque un usuario/a puede participar en diferentes combinaciones de roles y revistas, mantendrá el mismo nombre y la misma dirección de correo electrónico en todas las revistas.</p>]]>
+		<![CDATA[<p>OJS está diseñado para ser un sistema multirevista. El administrador/a del sitio web es responsable de configurar las características de sus distintos niveles y de crear nuevas revistas que se almacenen dentro de un mismo sitio web. Los sitios web de las revistas son totalmente independientes, a excepción de las cuentas de los usuarios/as. Aunque un usuario/a puede participar en diferentes combinaciones de roles y revistas, mantendrá el mismo nombre y la misma dirección de correo electrónico en todas las revistas.</p>]]>
 	</section>
 	
-	<section title="Opciones del sitio">
-		<![CDATA[<p>El administrador/a del sitio web introduce información básica que se ofrece a todas la revistas almacenadas en el sitio web, incluidos el título del sitio, la descripción y la información de contacto.</p> <p><em>Redireccionar a la revista.</em> Esta opción puede usarse para asegurarse de que todos los visitantes sean redireccionados a un sitio web de revistas concreto. Normalmente esta función se usa cuando un sitio web alberga una sola revista.</p>]]>
+	<section title="Configuración del sitio">
+		<![CDATA[<p>El administrador/a del sitio web introduce información básica común a todas la revistas alojadas en el sitio web, incluidos el título, la descripción del sitio y la información de contacto.</p> <p><em>Redireccionar a la revista.</em> Esta opción puede usarse para asegurarse de que todos los visitantes sean redireccionados al sitio web de una revista en concreto. Normalmente esta función se usa cuando un sitio web almacena una sola revista.</p>]]>
 	</section>
 	
 	<section title="Revistas alojadas">
-		<![CDATA[<p>Al igual que OJS permite generar cualquier número de sitios web de revistas individuales y concretas, también se pueden crear y gestionar nuevas revistas en cualquier momento. Se puede acceder a cada revista creada a través de un URL único basado en un nombre de ruta introducido por el administrador/a del sitio web. Las revistas que están en proceso de creación y configuración, se pueden ocultar del sitio web principal hasta el momento en que deban entrar en funcionamiento.</p>]]>
+		<![CDATA[<p>OJS permite generar cualquier cantidad de sitios web de revistas diferentes, por lo que permite crear y gestionar nuevas revistas en cualquier momento. Se puede acceder a cada revista a través de una URL única basada en un nombre de ruta introducido por el administrador/a del sitio web. Las revistas que están en proceso de creación y configuración se pueden ocultar de la página principal hasta el momento de su publicación.</p>]]>
 	</section>
 	
 	<section title="Idiomas">
-		<![CDATA[<p>OJS está diseñado para ser un sistema multilingüe, lo que permite que las revistas admitan albergar una amplia variedad de idiomas en un solo sitio web. El administrador/a del sitio web puede especificar el idioma por defecto e instalar configuraciones locales que estarán disponibles para permitir el uso de otros idiomas en las revistas.</p> <p>Se podrán descargar paquetes de idiomas adicionales desde la <a href="http://pkp.sfu.ca/ojs-languages" target="_blank">página de OJS</a> gracias a traducciones aportadas por los usuarios/as. Estos paquetes se pueden instalar en un sistema OJS existente para que estén disponibles en las diferentes revistas.</p>]]>
+		<![CDATA[<p>OJS está diseñado para ser un sistema multilingüe, lo que permite publicar revistas en una gran variedad de idiomas en un solo sitio web. El administrador/a del sitio web puede especificar el idioma predeterminado e instalar configuraciones regionales según su disponibilidad para permitir el uso de otros idiomas en las revistas.</p> <p>Se podrán descargar paquetes de idiomas adicionales desde el <a href="http://pkp.sfu.ca/" target="_blank">sitio web</a> del Open Journal System gracias a las traducciones aportadas por los usuarios/as. Estos paquetes se pueden instalar en un sistema OJS existente para que estén disponibles en las diferentes revistas.</p>]]>
 	</section>
 	
 	<section title="Fuentes de autenticación">
-		<![CDATA[<p>OJS autentica por defecto a los usuarios/as de acuerdo con su base de datos interna. Sin embargo, es posible usar otros métodos de autenticación, como el LDAP. Existen conectores de OJS de recursos de autenticación adicionales. Para más información, consulte la documentación adjunta a cada conector.</p>]]>
+		<![CDATA[<p>OJS autentica por defecto a los usuarios/as de acuerdo con su base de datos interna. Sin embargo, es posible usar otros métodos de autenticación como el LDAP. Existen fuentes de autenticación adicionales implementadas como módulos de OJS; consulte la documentación que acompaña a cada módulo para más información.</p>]]>
 	</section>
-</topic>
+</topic> 

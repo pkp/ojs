@@ -1,20 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/blocks/fontSize/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.fontSize.displayName">Bloque de tamaño de fuente</message>
-	<message key="plugins.block.fontSize.description">Este conector proporciona la opción de cambiar el tamaño de fuente en la barra lateral.</message>
+	<message key="plugins.block.fontSize.description">Este módulo proporciona la opción de cambiar el tamaño de fuente en la barra lateral.</message>
 	<message key="plugins.block.fontSize.title">Tamaño de fuente</message>
 	<message key="plugins.block.fontSize.small">Pequeño</message>
-	<message key="plugins.block.fontSize.medium">Normal</message>
+	<message key="plugins.block.fontSize.medium">Mediano</message>
 	<message key="plugins.block.fontSize.large">Grande</message>
 </locale> 
