@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Journal Management Main 
+  *
+  -->
+
+<topic id="journal/topic/000000" locale="fr_FR" title="Gestion du journal" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+	<section>
+		<![CDATA[<p>Le directeur du journal voit à tous les aspects de la gestion du journal, en consultation avec les éditeurs, incluant la mise en marche et la configuration du système du journal, au recrutement des usagers pour les divers rôles requis pour opérer le journal, la mise en place des diverses rubriques du journal, ainsi que bien d’autres tâches de gestion.</p>]]>	
+	</section>
+</topic>

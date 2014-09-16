@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.block.fontSize.displayName">Bloc de taille de police</message>
+	<message key="plugins.block.fontSize.description">Ce plugiciel fournit un outil de modification de taille de police dans l'encadré latéral.</message>
+	<message key="plugins.block.fontSize.title">Taille de police</message>
+	<message key="plugins.block.fontSize.small">Petit</message>
+	<message key="plugins.block.fontSize.medium">Moyen</message>
+	<message key="plugins.block.fontSize.large">Grand</message>
+</locale>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.block.readingTools.displayName">Bloc des outils de lecture</message>
+	<message key="plugins.block.readingTools.description">Ce plugiciel affiche un bloc contenant les outils de lecture dans le menu latéral des outils de lecture.</message>
+	<message key="plugins.block.readingTools.title">Outils de lecture</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">À propos de l'auteur</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">À propos des auteurs</message>
+	<message key="plugins.block.readingTools.articleTools">Outils de l'article</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Envoyer cet article par courriel</message>
+	<message key="plugins.block.readingTools.loginRequired">Connexion nécessaire</message>
+	<message key="plugins.block.readingTools.printThisArticle">Imprimer cet article</message>
+	<message key="plugins.block.readingTools.postComment">Ajouter un commentaire</message>
+</locale>

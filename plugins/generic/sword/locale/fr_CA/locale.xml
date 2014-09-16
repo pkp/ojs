@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
+  * Localization strings for the en_US (U.S. English) locale.
   *
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.sword.displayName">Plugiciel SWORD</message>
 	<message key="plugins.generic.sword.description">Permet aux directeurs et (optionnellement) aux auteurs de la revue de déposer des articles par l'intermédiaire du protocole SWORD</message>
 	<message key="plugins.generic.sword.enabled">Le plugiciel SWORD a été activé.</message>
@@ -50,5 +50,4 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Dépôt réussi</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">Le(s) élément(s) sélectionné(s) a(ont) été déposé(s).</message>
 	<message key="plugins.importexport.sword.depositFailed">Le dépôt a échoué</message>
-	<message key="plugins.generic.sword.descriptionUnsupported">Autoriser les directeurs de revue et (facultativement) les auteurs à déposer des articles par le protocole SWORD. Veuillez noter que ce plugin exige le module Zip, qui n'est PAS installée.</message>
 </locale>

@@ -735,4 +735,9 @@
 	<message key="manager.setup.confirmResetLicense">Dergi ayarında belirlenmiş ve yayımlanmış içeriğe eklenmiş lisans telif hakkını  sıfırlamak istediğinizden emin misiniz?</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Ön-Süre Bitimi Hatırlatması Gönderildi</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Geçmiş-Süre Bitimi Hatırlatması Gönderildi</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Dergi ayarında telif hakkı bilgisini ve lisansını değiştirsiniz. İzinleri sıfırlamadan önce lütfen bu değişiklikleri kaydedin.</message>
+	<message key="manager.setup.copyrightYearBasis">Yeni makalenin temel telif hakkı yılı</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Varsayılan yıl makalenin yayın tarihinden itibaren çekilecektir.</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Varsayılan yıl sayının yayımı tarihinden itibaren çekilecek.</message>
+	<message key="manager.statistics.reports.objectNotFound">Obje veri tabanında bulunamadı</message>
 </locale>

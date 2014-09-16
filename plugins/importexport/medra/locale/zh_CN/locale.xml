@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/medra/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.medra.displayName">mEDRA 导出/注册插件</message>
+	<message key="plugins.importexport.medra.description">导出期次，文章和样稿元数据在Onix DOI (O4DOI)格式，并且在mEDRA 注册机构注册DOI。</message>
+
+	<message key="plugins.importexport.medra.intro"><![CDATA[如果您想在mEDRA注册DOI，请遵照指示<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA 首页</a>得到一个用户名和密码。如果您没有用户名和密码，仍可以导出 mEDRA XML格式，但是不能在OJS mEDRA注册DOI。请注意，密码将被保存为纯文本，即不加密的，按照
+medra注册服务要求。]]></message>
+
+	<message key="plugins.importexport.medra.settings.description"><![CDATA[<a href="{$settingsUrl}">配置</a> mEDRA 导出插件在首次使用前。]]></message>
+	
+	<message key="plugins.importexport.medra.settings.form.description">请配置 mEDRA 导出插件：</message>
+	<message key="plugins.importexport.medra.settings.form.username">用户名</message>
+	<message key="plugins.importexport.medra.settings.form.usernameRequired">请输入mEDRA用户名，不能包含冒号。</message>
+	<message key="plugins.importexport.medra.settings.form.registrantName">在mEDRA注册的机构名称。</message>	
+	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">请输入已在mEDRA注册的机构。</message>
+	<message key="plugins.importexport.medra.settings.form.fromFields">技术咨询联系人：</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompany">机构：</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">请输入负责DOI导出的机构（例如，负责托管您的服务器的机构）</message>
+	<message key="plugins.importexport.medra.settings.form.fromName">联系人：</message>
+	<message key="plugins.importexport.medra.settings.form.fromNameRequired">请输入一个技术联系人。</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmail">Email：</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">请输入一个有效的技术员联系邮箱。</message>
+	<message key="plugins.importexport.medra.settings.form.publicationCountry">请选择一个国家作为 “出版国家”。</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[你希望导出的文件为<a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'作品' 或者 '证明'</a>。]]></message>
+	<message key="plugins.importexport.medra.settings.form.work">运作</message>	
+	<message key="plugins.importexport.medra.settings.form.manifestation">显示</message>
+
+	<message key="plugins.importexport.medra.reset">重置</message>
+	<message key="plugins.importexport.medra.resetDescription">如果对象从未注册过，点击此按钮。（如medra首次登记的电邮发送错误消息）不要点击此按钮当你收到错误信息，更新失败后。</message>
+	
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB：指定DOI的文章导到 mEDRA为 <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>。指定DOI的样稿导出为 <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'证明'</a>。]]></message>
+		
+	<message key="plugins.importexport.medra.cliUsage">使用方法：
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+</locale>

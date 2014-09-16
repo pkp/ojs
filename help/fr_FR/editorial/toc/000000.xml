@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process. 
+  *
+  -->
+
+<toc id="editorial/toc/000000" locale="fr_FR" title="Processus éditorial" parent_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000001" title="Rôle de l’éditeur" />
+	<topic id="editorial/topic/000004" title="Rôle de l’éditeur de rubrique" />
+	<topic id="editorial/topic/000008" title="Rôle du critique" />
+	<topic id="editorial/topic/000009" title="Rôle de l’auteur" />
+	<topic id="editorial/topic/000012" title="Rôle du réviseur" />
+	<topic id="editorial/topic/000013" title="Rôle de l’éditeur à la mise en page" />
+	<topic id="editorial/topic/000014" title="Rôle du correcteur d’épreuves" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processus éditorial" />
+</toc>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/alm/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * ALM plugin localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+
+	<message key="plugins.generic.alm.displayName">ALM 插件</message>
+	<message key="plugins.generic.alm.description">在文章说平密钥中显示插件。为使用ALM服务，您需要DOIs。这项要求在未来有可能会放松。</message>
+	<message key="plugins.generic.alm.title">文章指标</message>
+	<message key="plugins.generic.alm.loading">指标登陆中 ...</message>
+
+	<message key="plugins.generic.alm.settings">设置</message>
+	<message key="plugins.generic.alm.settings.saved">ALM 插件设置保存</message>
+	<message key="plugins.generic.alm.settings.apiKey">文章水平指标API密钥</message>
+	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[为能够在ALM服务器访问文章水平指标，您需要一个API密钥。您可以登入（使用Mozilla Persona）<a href="http://pkp-alm.lib.sfu.ca/">PKP ALM 页面</a>.获取。]]></message>
+	<message key="plugins.generic.alm.settings.depositArticles">自动存储文章信息？（如果你已经使用DOI前缀在ALM服务器上存储信息则取消）</message>
+	<message key="plugins.generic.alm.settings.depositUrl">文章信息存储网址</message>
+	<message key="plugins.generic.alm.settings.depositUrl.description">PKP提供存储文章的网址</message>
+	<message key="plugins.generic.alm.settings.ipAddress">联系PKP设置ALM服务，请提供IP地址 {$ip}。</message>
+
+	<message key="plugins.generic.alm.thisJournal">该期刊</message>
+	<message key="plugins.generic.alm.categories.html">HTML 浏览量.</message>
+	<message key="plugins.generic.alm.categories.html.description">文章HTML页面访问量总数。这些访问量直接记录在系统中。每月整体访问量也是可用的。</message>
+	<message key="plugins.generic.alm.categories.pdf">PDF 浏览量.</message>
+	<message key="plugins.generic.alm.categories.pdf.description">文章的PDF访问量和下载总量。这些访问量直接诶记录在系统中。每月整体访问量也是可用的。</message>
+	<message key="plugins.generic.alm.categories.shares">分享</message>
+	<message key="plugins.generic.alm.categories.shares.description">在社交网站，如Facebook，CiteULike 和 Mendeley分享或者标记。大多数情况下，点击分享将带你到网站的列表。</message>
+	<message key="plugins.generic.alm.categories.likes">爱好</message>
+	<message key="plugins.generic.alm.categories.likes.description">在社交网站，如Facebook发现爱好。</message>
+	<message key="plugins.generic.alm.categories.citations">引用</message>
+	<message key="plugins.generic.alm.categories.citations.description">在CrossRef, PubMed 和Wikipedia发现文章的引用情况。大多数情况下，点击引用计数器将指引你到引用服务列表。</message>
+
+	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">ALM插件启用，但是须在期刊路径 {$path}设置中指定DOI前缀已保证发送文章信息。</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">ALM插件已启动，但是期刊路径{$path}没有指定的API密钥。</message>
+	<message key="plugins.generics.alm.senderTask.warning.noJournal">ALM插件在任何期刊都无法启动。文章信息尚未发送。</message>
+	<message key="plugins.generic.alm.senderTask.error.noServerResponse">无法确认期刊路径{$path} 文章信息已发送。服务器没有响应。</message>
+	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">没有存储指定的网址</message>
+	<message key="plugins.generic.alm.senderTask.error.returnError">服务器返回信息：{$error}。
+{$articlesNumber}文章词条已发送。
+{$payload}</message>
+	<message key="plugins.generic.alm.senderTask.name">ALM文章信息发件人</message>
+	
+</locale>

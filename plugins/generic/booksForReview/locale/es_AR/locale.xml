@@ -190,4 +190,5 @@
 	<message key="plugins.generic.booksForReview.field.title">Título</message>
 	<message key="plugins.generic.booksForReview.field.description">Descripción</message>
 
+	<message key="plugins.generic.booksForReview.reminderTask.name">Libros para recordatorio de revisión</message>
 </locale>

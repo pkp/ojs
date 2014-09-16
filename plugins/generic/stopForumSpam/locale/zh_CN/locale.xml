@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/stopForumSpam/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Stop Forum Spam plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<message key="plugins.generic.stopForumSpam.displayName">阻止垃圾讯息入侵插件</message>
+	<message key="plugins.generic.stopForumSpam.description">OJS和阻挡垃圾讯息系统融为一体，这样来减少垃圾讯息的注册数量。</message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">设置</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">阻止垃圾讯息设置</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>插件启用的情况下，OJS将核实提交的用户信息是否包含在阻挡垃圾讯息的名单中。如果在名单中，那么插件将阻止其注册。]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">检查注册IP</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">检查注册电子邮箱地址</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">检查注册用户名（谨慎使用）</message>
+	<message key="plugins.generic.stopForumSpam.checkName">停止垃圾讯息插件</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[<a href="http://www.stopforumspam.com" target="_blank">阻挡垃圾讯息</a> 插件已阻止其注册.]]></message>
+</locale>

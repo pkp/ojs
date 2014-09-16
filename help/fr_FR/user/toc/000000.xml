@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for User Interface. 
+  *
+  -->
+
+<toc id="user/toc/000000" locale="fr_FR" title="Site Web du journal" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="Page d’accueil" />
+	<topic id="user/topic/000002" title="Au sujet du journal" />
+	<topic id="user/topic/000007" title="Page d’accueil de l’usager" />
+	<topic id="user/topic/000003" title="Inscription et profil" />
+	<topic id="user/topic/000004" title="Courant et Archives" />
+	<topic id="user/topic/000005" title="Recherche et Navigation" />
+	<topic id="user/topic/000006" title="Outils de lecture" />
+
+	<breadcrumb url="user/topic/000000" title="Site Web du journal" />
+</toc>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.usageStats.settings.logging">访问日志选项</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">创建日志文件</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">激活该选项可能使插件在文件目录中生成访问日志。这些文件呗用来提取使用统计数据。如果您不希望生成更多的访问日志文件，您可以禁用该选项，或者使用自己的服务器日志访问文件。</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">正则表达式解析日志文件</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">默认的正则表达式可以解析合并格式的Apache的访问日志文件和插件的日志文件。如果您的访问日志文件是不同的格式，那么请插入一个可以解析它们的正则表达式。关于更多信息详见：UsageStatsLoader::_getDataFromLogEntry()</message>
+	<message key="plugins.generic.usageStats.settings.saved">使用统计插件设置保存</message>
+	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">使用统计文件加载任务</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Usage statistics plugin is disabled. No log files processed.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">在文件{$file} 中文件号为{$lineNumber} 不是一个有效的日至条目，文件被拒绝。</message>
+	<message key="plugins.generic.usageStats.removeUrlError">文件{$file} 中{$lineNumber}包含一个系统无法删除的网址。</message>
+	<message key="plugins.generic.usageStats.loadDataError">无法加载从文件{$file}提取的数据。出现错误：{$error}。文件再次被移动到之前阶段。</message>
+	<message key="plugins.generic.usageStats.displayName">使用统计</message>
+	<message key="plugins.generic.usageStats.description">呈现数据对象的使用统计。可以使用服务器访问日志文件提取数据。</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Usage statistics plugin is disabled. No log files processed.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">OJS使用统计报告</message>
+	<message key="plugins.reports.usageStats.report.description">OJS默认使用统计报告（计数器准备）</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OJS/计数器</message>
+	<message key="plugins.reports.usageStats.metricType.full">OJS系统数据（计数器准备）</message>
+</locale>

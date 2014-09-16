@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/browse/locale/fr_FR/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Browse plugin localization strings
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">Naviguer</message>
+	<message key="plugins.generic.browse.description">Ce plugiciel permet la navigation par section et/ou des type d'identifiants.</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">Configurations</message>
+	<message key="plugins.generic.browse.manager.settings.description">Veuillez paramétrer les possibilités de navigation additionnelles suivantes:</message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Paramètres de navigation</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Naviguer</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Choisissez les objets par lesquels il devrait être possible de naviguer.</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Par section</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Par type d'identifiant</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Section exclue</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Choisissez les sections qui ne devraient pas être considérées.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Types d'identifiants exclus</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Choisissez les types d'identifiants qui ne devraient pas être considérés.</message>
+
+	<message key="plugins.generic.browse.search.sections">Par section</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Naviguer dans l'index de section</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Détails de section</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Par type d'identifiant</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Naviguer dans l'index des types d'identifiants</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Détails des types d'identifiants</message>
+
+</locale>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/subscriptions/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.subscriptions.displayName">Subscriptions Report</message>
+	<message key="plugins.reports.subscriptions.description">This plugin implements a CSV report containing a list of subscriptions and their info.</message>
+	<message key="plugins.reports.subscriptions.institutionMailingAddress">Institution Mailing Address</message>
+	<message key="plugins.reports.subscriptions.ipRanges">IP Ranges</message>
+</locale>

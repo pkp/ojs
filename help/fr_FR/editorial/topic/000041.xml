@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000041.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Proofreading
+  *
+  -->
+
+<topic id="editorial/topic/000041" locale="fr_FR" title="Correction des épreuves" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section>
+		<![CDATA[<p>L’auteur et le correcteur d’épreuves vont tirer une épreuve des fichiers dans leurs divers formats pour les erreurs de typographie et de formatage. Ils enregistreront les corrections requises dans la zone de texte Corrections, en suivant les instructions pour la correction d’épreuves. Une fois que le correcteur d’épreuves envoie un courriel à l’éditeur de la mise en page que la correction d’épreuves est terminée, l’éditeur de la mise en page retourne à «Format des épreuves»  dans «Mise en page» et fait les changements nécessaires, effaçant les fichiers à corriger et en téléchargeant leurs versions corrigées. Tout en accomplissant cette tâche l’éditeur de mise en page peut souhaiter ajouter des commentaires dans la zone de texte de Corrections. (I.e. expliquer un changement fait), avant de cliquer sur l’icône de courriel sous Complet, ce qui mènera à un courriel pour aviser l’éditeur de la rubrique que la soumission est prête pour être mise au calendrier pour publication.</p>]]>	
+	</section>
+</topic>

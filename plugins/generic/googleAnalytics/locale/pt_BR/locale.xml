@@ -33,4 +33,5 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount">Número de conta Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Para acompanhar a leitura de artigos publicados usando o Google Analytics, informe um número de conta a seguir (ex.: UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Um ou mais números de contas do Google Analytics informados para autores da submissão são inválidos.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Novo código de rastreamento para o Analytics (analytics.js)</message>
 </locale>

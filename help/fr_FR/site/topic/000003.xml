@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Administration Functions 
+  *
+  -->
+
+<topic id="site/topic/000003" locale="fr_FR" title="Fonctions administratives" toc="site/toc/000000" key="site.administrativeFunctions">
+	<section>
+		<![CDATA[<p>Plusieurs fonctions administratives sont disponibles dans la section administration du site. Ces fonctions devraient généralement être utilisées avec précaution, car un usage inapproprié pourrait mener à des résultats non-désirés.</p>
+		<p><em>Informations du système</em> Information générale au sujet de l’environnement du serveur et historique de la version d’OJS (incluant les mises à jour antérieures)  Un interface disponible sur le Web pour modifier la configuration d’OJS est aussi fourni.</p>
+		<p><em>Expiration d’une session d’usager</em> Annule toute session d’usager dans le système et requiert de l’usager qui était connecté d’ouvrir une nouvelle session.</p>
+		<p><em>Nettoyer la mémoire cache des données</em> Nettoie toutes les données de la mémoire cache, incluant les informations locales, la cache d’aide, et la cache des recherches faites.</p>
+		<p><em>Nettoyer la mémoire cache des modèles</em> Nettoie les versions des modèles HTML de la mémoire cache. Cette fonction peut être utile pour forcer les modèles à être rechargés après une personnalisation.</p>]]>
+	</section>
+</topic>

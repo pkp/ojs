@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Layout Editor's Role
+  *
+  -->
+
+<toc id="editorial/toc/000013" locale="fr_FR" title="Rôle de l’éditeur à la mise en page" parent_topic="editorial/topic/000013">
+	<topic id="editorial/topic/000039" title="Soumissions" />
+	<topic id="editorial/topic/000040" title="Mise en page" />
+	<topic id="editorial/topic/000041" title="Correction des épreuves" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processus éditorial" />
+	<breadcrumb url="editorial/topic/000013" title="Rôle de l’éditeur à la mise en page" />
+</toc>

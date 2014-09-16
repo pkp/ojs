@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_FR (Français) locale.
+  *
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.generic.thesisfeed.displayName">Plugiciel de flux de résumés de thèses</message>
+	<message key="plugins.generic.thesisfeed.description">Ce plugiciel produit des flux de syndication Web RSS/Atom pour les résumés de thèses.</message>
+
+	<message key="plugins.generic.thesisfeed.settings">Paramètres</message>
+	<message key="plugins.generic.thesisfeed.settings.all">Afficher les liens de flux dans toutes les pages des revues.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">Afficher les liens de flux dans la page d'accueil et dans la page des résumés de thèses.</message>
+	<message key="plugins.generic.thesisfeed.settings.thesis">Afficher les liens de flux dans la page des résumés de thèses uniquement.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Limiter le flux aux</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis2">plus récents résumés de thèses soumis.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Prière d'entrer un entier positif comme nombre de résumés de thèses.</message>
+	<message key="plugins.generic.thesisfeed.atom.altText">Logo Atom</message>
+	<message key="plugins.generic.thesisfeed.rss1.altText">Logo RSS1</message>
+	<message key="plugins.generic.thesisfeed.rss2.altText">Logo RSS2</message>
+</locale>

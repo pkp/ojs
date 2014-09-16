@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Ensuring a blind peer review
+  *
+  -->
+
+<topic id="editorial/topic/000044" locale="fr_FR" title="Ensuring a Blind Peer Review" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+<![CDATA[<p>Pour assurer un processus d’évaluation par les pairs qui soit le plus juste possible, tout effort doit être fourni pour protéger l’anonymat des auteurs vis-à-vis des évaluateurs et vice versa. À ce titre, les auteurs, rédacteurs et évaluateurs (qui téléchargent les documents dans le contexte de leur évaluation) doivent vérifier que les étapes suivantes ont été observées par rapport aux propriétés du texte et du fichier : 
+<ol><li>Les auteurs des documents ont éliminé leurs noms du texte, en utilisant « Auteur » et l’année à la place de données complètes (noms des auteurs, titres des articles, etc.) dans les notes en bas de page et dans la bibliographie.</li> 
+<li>Pour les documents MS Office, l’auteur doit éliminer son identité des Propriétés du fichier (voir sous Fichier dans Word), en cliquant sur les commandes suivantes : Fichier &gt; Enregistrer sous... &gt; Outils (ou, sur le Mac, Options...) &gt; Sécurité &gt; Supprimer les informations personnelles du fichier lors de l’enregistrement &gt; Enregistrer (ou OK).</li>
+<li>Avec des documents .pdf, les noms des auteurs doivent aussi être éliminés de Propriétés, qu’on peut trouver dans Fichier au menu principal d’Adobe Acrobat.</li>
+</ol></p>]]>
+	</section>
+</topic>

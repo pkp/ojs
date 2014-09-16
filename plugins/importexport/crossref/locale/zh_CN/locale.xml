@@ -34,4 +34,10 @@
 	<message key="plugins.importexport.crossref.export.noUnregistered">所有发表的文章已经注册（或者这些文章没有指定的DOI）。</message>
 	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">ID号为{$param}的文章缺少出版日期。</message>
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[如果您希望在CrossRef注册DOIs，请按照以下<a href="http://www.crossref.org" target="_blank">CrossRef 首页</a>的要求，您将收到一个用户名和密码。如果您不希望拥有自己的用户名和密码，您也可以导入CrossRef XML格式。但是您不能在OJS中CrossRef注册DOIs.请注意，由于CrossRef注册服务的要求，该密码将被保存为纯文本，即不加密的。]]></message>
+	<message key="plugins.importexport.crossref.requirements">要求</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">已满足所有插件的要求</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Crossref 插件没有配置。在<a href="{$settingsUrl}">设置页</a>配置该款插件。]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[DOI Public Identifier插件没有配置。在<a href="{$doiUrl}target="_" blank">DOI插件</a> 设置页配置该款插件。]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[期刊出版商尚未设置。在 <a href="{$publisherUrl}" target="_blank">期刊设置Step 1.5</a>添加期刊出版商。]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS将在文章发表后自动存储文章的DOI到Crossref 。注意，该进程会花费一些时间。你可以检查所有尚未注册的DOI在<a href="">未注册文章列表</a>.]]></message>
 </locale>

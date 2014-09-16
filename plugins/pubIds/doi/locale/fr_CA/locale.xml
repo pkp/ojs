@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/pubIds/doi/locale/fr_CA/locale.xml
+  * @file plugins/pubIds/doi/locale/en_US/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * DOI plugin localization strings
   -->
  
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Ce plugiciel permet l'assignation d'identifiants d'objets numériques aux numéros, articles, épreuves et fichiers supplémentaires dans OJS.</message>
 
@@ -61,5 +61,4 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">fichier supplémentaire</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Ce que vous voyez est l'aperçu d'un DOI qui risque d'être incomplet. Un DOI n'a pas encore été généré. Publier ce numéro et regarder la page publique {$pubObjectType} générera automatiquement un DOI unique pour {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Ce DOI est déjà utilisé par un autre élément publié. Veuillez entrer un suffixe DOI unique pour chaque élément.</message>
-	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>Veuillez noter:</strong> sélectionnez les articles lorsque vous utilisez les identifiants d'objets numériques (DOI) <a href="http://www.crossref.org" target="_new">CrossRef</a>. Un article est considéré un ouvrage de contenu intellectuel ou artistique. Ainsi, l'exportation et l'inscription du DOI CrossRef se basent sur l'objet de publication qu'est l'article.]]></message>
 </locale>

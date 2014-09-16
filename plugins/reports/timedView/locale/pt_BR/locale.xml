@@ -30,4 +30,5 @@
 	<message key="plugins.reports.timedView.report.abstractViews">Acessos ao resumo</message>
 	<message key="plugins.reports.timedView.report.galleyViews">Acessos às composições finais</message>
 	<message key="plugins.reports.timedView.form.useTimedViewRecords">Marque para usar estatísticas retiradas pelo antigo plugin Visão Temporal. Caso deseje gerar um relatório de visão temporal com novos dados estatísticos, deixe esta opção desmarcada.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">Ao selecionar um longo período de tempo com um grande conjunto de dados estatísticos, o relatório pode demorar um pouco para ficar pronto. Se demorar muito tempo, a conexão pode expirar e você não receberá o arquivo de relatório. Se isso acontecer, tente novamente com um período de tempo menor.</message>
 </locale>

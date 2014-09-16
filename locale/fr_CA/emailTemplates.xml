@@ -145,7 +145,7 @@ Merci,
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Demande d'évaluation d'un article</subject>
-		<body>{$reviewerName}:
+		<body><![CDATA[{$reviewerName}:
 
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} » qui a été soumis à la revue {$journalName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.
 
@@ -153,7 +153,7 @@ Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous la
 
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.
 
-Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (que vous sera envoyé par courriel avec votre nom d'utilisateur). {$passwordResetUrl}
+Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (que vous sera envoyé par courriel avec votre nom d'utilisateur). {$psasswordResetUrl}
 
 URL de la soumission : {$submissionReviewUrl}
 
@@ -166,16 +166,16 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 « {$articleTitle} »
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir « Demande d'évaluation », en pièce jointe).</description>
+{$articleAbstract}]]></body>
+		<description><![CDATA[Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir « Demande d'évaluation », en pièce jointe).]]></description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Demande d'évaluation d'un article</subject>
-		<body>{$reviewerName}:
+		<body><![CDATA[{$reviewerName}:
 
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} » qui a été soumis à la revue {$journalName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.
 
-Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. 
+Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$journalUrl}
 
 Date limite pour l'évaluation {$reviewDueDate}.
 
@@ -190,8 +190,8 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 « {$articleTitle} »
 
 {$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou décline la tâche d'évaluation d'une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » a été sélectionné à l'Étape 2  de la Configuration de la revue, et que l'accès en « un clic » de l'évaluateur a été activé.</description>
+{$articleAbstract}]]></body>
+		<description><![CDATA[Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou décline la tâche d'évaluation d'une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » a été sélectionné à l'Étape 2  de la Configuration de la revue, et que l'accès en « un clic » de l'évaluateur a été activé.]]></description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Demande d'évaluation d'un article</subject>
@@ -523,7 +523,7 @@ Si vous êtes inscrit à notre service d'avis, vous recevrez par courriel la tab
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
 		<subject>Demande de correction d'épreuves</subject>
-		<body>{$proofreaderName}:
+		<body>{$authorName}:
 
 Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit intitulé « {$articleTitle} » dans {$journalName}.
 1. Cliquez sur l'URL de la soumission ci-dessous.
@@ -534,7 +534,7 @@ Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit int
 6. Envoyez le courriel TERMINÉ au rédacteur.
 
 URL du manuscrit : {$submissionUrl}
-Nom d'utilisateur : {$proofreaderUsername}
+Nom d'utilisateur : {$authorUsername}
 
 {$editorialContactSignature}</body>
 		<description>Ce courriel du Rédacteur de rubrique au Correcteur d'épreuves demande que ce dernier fasse la correction des épreuves de l'article. Il fournit de l'information sur l'article, et comment y accéder.</description>
@@ -734,6 +734,8 @@ Veuillez cliquer sur ce lien pour confirmer votre demande et ajouter votre adres
 
 Si vous souhaitez arrêter l'envoi d'avis par courriels, veuillez aller à {$unsubscribeLink} et saisir votre adresse de courriel et votre mot de passe.
 
+Votre mot de passe pour désactiver les courriels d'avis est : {$password}
+
 {$principalContactSignature}</body>
 		<description></description>
 	</email_text>
@@ -882,148 +884,5 @@ Merci !
 {$userFirstName}
 Réviseur, {$journalName}</body>
 		<description></description>
-	</email_text>
-	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>Mise en ligne d'une version révisée d'un article</subject>
-		<body>{$editorialContactName}:
-
-Une version révisée de l'article « {$articleTitle} » a été mise en ligne par {$authorName}.
-
-Adresse URL de la soumission: {$submissionUrl}
-
-{$editorialContactSignature}</body>
-		<description>Ce gabarit permettra d'informer le rédacteur d'une revue lorsqu'un auteur met en ligne une version révisée d'un article.</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Demande d'évaluation d'un article</subject>
-		<body>{$reviewerName}:
-
-Ce message concerne le manuscrit « {$articleTitle} », qui est actuellement en évaluation par la revue {$journalName}.
-
-Suite à l'évaluation de la version précédente du manuscrit, les auteurs ont soumis une version révisée de leur article. Nous vous serions très reconnaissants de bien vouloir nous aider à l'évaluer de nouveau. 
-
-Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse URL suivante : {$journalUrl}
-
-La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.
-
-Si vous avez oublié votre nom d'utilisateur ou votre mot de passe pour le site Web de la revue, cliquez sur le lien suivant afin de réinitialiser votre mot de passe : {$passwordResetUrl} Il vous sera envoyé par courriel, avec votre nom d'utilisateur.
-
-Adresse URL de la soumission : {$submissionReviewUrl}
-
-Nous vous remercions de l'attention que vous porterez à cette demande. 
-
-{$editorialContactSignature}
-
-
-
-« {$articleTitle} »
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluation d'une soumission pour la deuxième fois (ou plus). Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir « REVIEW_REQUEST_ATTACHED_SUBSEQUENT », en pièce jointe).</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Demande d'évaluation d'un article</subject>
-		<body>{$reviewerName}:
-
-Ceci concerne le manuscrit intitulé « {$articleTitle} », qui est actuellement en évaluation par la revue {$journalName}.
-
-Suite à l'évaluation de la version précédente du manuscrit, les auteurs ont soumis une version révisée de leur article. Nous vous serions très reconnaissants de bien vouloir nous aider à l'évaluer de nouveau. 
-
-Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. 
-
-La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.
-
-Adresse URL de la soumission : {$submissionReviewUrl}
-
-Nous vous remercions de l'attention que vous porterez à cette demande. 
-
-{$editorialContactSignature}
-
-« {$articleTitle} »
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluation d'une soumission pour une deuxième évaluation (ou plus). Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » a été sélectionné à l'Étape 2  de la Configuration de la revue, et que l'accès en « un clic » de l'évaluateur a été activé.</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Demande d'évaluation d'un article</subject>
-		<body>{$reviewerName}:
-
-Ceci concerne le manuscrit intitulé « {$articleTitle} », qui est actuellement en évaluation par la revue {$journalName}.
-
-Suite à l'évaluation de la version précédente du manuscrit, les auteurs ont soumis une version révisée de leur article. Nous vous serions très reconnaissants de bien vouloir nous aider à l'évaluer de nouveau. 
-
-Les directives d'évaluation pour cette revue ont été inclues ci-dessous, et la soumission se trouve en pièce jointe. Veuillez me faire parvenir par courriel votre évaluation de la soumission, ainsi que votre recommandation avant le {$reviewDueDate}.
-
-Veuillez nous faire savoir par courriel si vous acceptez de faire l'évaluation ou non avant le {$weekLaterDate}.
-
-Nous vous remercions de l'attention que vous porterez à cette demande. 
-
-{$editorialContactSignature}
-
-
-Directives d'évaluation
-
-{$reviewGuidelines}</body>
-		<description>Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluation d'une soumission pour une deuxième évaluation (ou plus). Il inclut la soumission en pièce jointe. Ce message est utilisé lorsque le processus d'évaluation par courriel et pièce jointe est sélectionné à l'Étape 2 lors de la configuration de la revue. (Autrement, voir REVIEW_REQUEST_SUBSEQUENT.)</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Récupérez votre cadeau : données de connexion</subject>
-		<body>Cher {$recipientFirstName},
-
-Vous avez reçu un cadeau de la part de {$buyerFullName}, sur la revue {$giftJournalName}:
-
-{$giftDetails}
-
-
-Vous pouvez récupérer votre cadeau en vous connectant sur le site Web de la revue à l'adresse suivante : {$giftUrl}
-
-Nom d'utilisateur : {$username}
-
-Nous espérons que vous allez apprécier ce cadeau !
-
-{$giftContactSignature}</body>
-		<description>Ce courriel informe le destinataire d'un cadeau de leur données de connexion.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Récupérez votre cadeau : données de connexion</subject>
-		<body>Cher {$recipientFirstName},
-
-Vous avez reçu un cadeau de la part de {$buyerFullName}, sur la revue {$giftJournalName}:
-
-{$giftDetails}
-
-
-Vous pouvez récupérer votre cadeau en vous connectant sur le site Web de la revue à l'adresse suivante : {$giftUrl}
-
-Nom d'utilisateur : {$username}
-Mot de passe : {$password}
-
-Une fois connecté, vous pouvez modifier votre mot de passe à tout moment.
-
-Nous espérons que vous allez apprécier ce cadeau !
-
-{$giftContactSignature}</body>
-		<description>Ce courriel informe le destinataire d'un cadeau de leur données de connexion pour un nouveau compte.</description>
-	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body>Cher {$recipientFirstName},
-
-Vous avez reçu un cadeau de la part de {$buyerFullName}, sur la revue {$giftJournalName}:
-
-{$giftDetails}
-
-
-{$giftNote}
-
-
-Vous recevrez un courriel de suivi précisant vos données de connexion, ainsi que les directives pour récupérer votre cadeau. 
-
-Nous espérons que vous allez apprécier ce cadeau !
-
-{$giftContactSignature}</body>
-		<description>Ce courriel informe un destinataire de la réception d'un cadeau.</description>
 	</email_text>
 </email_texts>

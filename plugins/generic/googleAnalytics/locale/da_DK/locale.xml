@@ -32,4 +32,5 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics-kontonummer</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Hvis du vil spore antallet af læsere for en udgiven artikel ved hjælp af Google Analytics, skal du indtaste et kontonummer her (fx UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Et eller flere af de Google Analytics-kontonumre, der er indtastet for indleveringsforfattere, er ikke gyldige.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">New tracking code for Universal Analytics (analytics.js)</message>
 </locale>

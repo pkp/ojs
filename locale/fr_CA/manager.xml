@@ -169,7 +169,7 @@
 	<message key="manager.setup.authorGuidelines">Directives aux auteurs</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Identifier pour les auteurs les normes bibliographiques et de formatage utilisées pour les articles soumis à la revue (par ex., <em>Publication Manual of the American Psychological Association</em>, 5e édition, 2001). Il est souvent utile de donner des exemples des formats de références bibliographiques les plus communs pour les revues et les livres qui seront utilisés dans les soumissions. Identifier également les types de fichiers supplémentaires appropriés (par ex., données, instruments de recherche, etc.) que les auteurs devraient être incités à télécharger, en plus de leur soumission, afin d'accroître l'engagement des lecteurs envers leur travail.]]></message>
 	<message key="manager.setup.competingInterests">Conflits d'intérêts</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[Les revues biomédicales exigent habituellement que les auteurs et les évaluateurs déclarent s'ils ont des conflits d'intérêts concernant leur recherche (voir <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Les revues biomédicales exigent habituellement que les auteurs et les évaluateurs déclarent s'ils ont des conflits d'intérêts concernant leur recherche (voir <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines">Directives pour déposer une déclaration de conflits d'intérêts</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Les auteurs soumissionnaires doivent déposer une déclaration de conflits d'intérêts (CI) avec leur soumission.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Les évaluateurs doivent déposer une déclaration de CI avec chaque évaluation par les pairs qu'ils soumettent.</message>
@@ -250,6 +250,7 @@
 	<message key="manager.setup.guidingSubmissions">Étape 3. Orienter les soumissions</message>
 	<message key="manager.setup.homepageImage">Image de la page d'accueil</message>
 	<message key="manager.setup.homepageImageDescription">Ajouter un fichier image ou graphique dans le milieu de la page.</message>
+	<message key="manager.setup.includeCreativeCommons">Pour les revues offrant l'accès libre immédiat ou différé, inclure la licence Creative Commons dans tous les ouvrages publiés, au moment opportun.</message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">De brèves descriptions de la revue pour les bibliothécaires, les auteurs et lecteurs potentiels sont disponibles dans la rubrique " Renseignements " du menu latéral.</message>
 	<message key="manager.setup.information.forAuthors">Pour les auteurs</message>
@@ -297,7 +298,7 @@
 	<message key="manager.setup.lists">Listes</message>
 	<message key="manager.setup.listsDescription">Saisir le nombre maximum d'éléments (par exemple, soumissions, utilisateurs, ou assignations) qui figurent dans chaque page d'une liste, et le nombre de liens à afficher sur chaque page.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Activer LOCKSS pour stocker et distribuer le contenu de la revue aux bibliothèques participantes via une page <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> LOCKSS. Une licence LOCKSS apparaîtra dans « À propos de la revue » sous Archivage :]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[Voir <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">les autres versions d'une licence LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[Voir <a href="http://lockss.org/lockss/Publishers_and_Titles" target="_blank">les autres versions d'une licence LOCKSS</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifier 6 à 10 bibliothèques qui enregistreront et mettreront en cache la revue. Par exemple, ayez recours à des institutions dont les Rédacteurs ou les Membres de la direction participent déjà à LOCKSS. Voir <a href="http://lockss.org/lockss/Libraries" target="_blank">les bibliothèques participantes</a>. Utiliser les invitations préparées pour les (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliothèques participantes dans LOCKSS</a> ou (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliothèques non participantes dans LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">L'apparence</message>
 	<message key="manager.setup.look.description">En-tête de la page d'accueil, contenu, en-tête de la revue, pied de page, barre de navigation, et feuille de style.</message>
@@ -468,14 +469,19 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mois après la publication du numéro.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Veuillez sélectionner une durée valide.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">La politique d'Accès libre différé suivante sera affichée dans À propos de la revue sous Politiques.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Veuillez utiliser les cases à cocher fournies.</message>
 	<message key="manager.subscriptionPolicies.expiry">Échéance de l'abonnement</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">À l'échéance de l'abonnement, les lecteurs peuvent se voir refuser l'accès à tout contenu restreint ou peuvent conserver l'accès au contenu publié avant la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Échéance complète</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Les lecteurs se voient refuser l'accès à tout contenu restreint, à l'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Échéance partielle</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Les lecteurs se voient refuser l'accès au contenu restreint publié récemment, mais conservent l'accès au contenu publié avant la date d'échéance de l'abonnement.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Aviser les abonnés par courriel</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mois après la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Aviser les abonnés par courriel</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">semaine(s) après la date d'échéance de l'abonnement.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Aviser les abonnés par courriel</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mois avant la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Aviser les abonnés par courriel</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">semaine(s) avant la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Rappels de l'échéance de l'abonnement</message>
@@ -695,53 +701,4 @@
 	<message key="manager.setup.useThumbnail">Vignette</message>
 	<message key="manager.setup.categories">Catégories</message>
 	<message key="manager.setup.categories.description">Choisir les catégories les plus appropriées dans la liste ci-dessus. Les lecteurs pourront naviguer par catégorie parmi l'ensemble des revues disponibles.</message>
-	<message key="manager.statistics.reports.aggregationColumns">Statistiques agrégées par :</message>
-	<message key="manager.statistics.reports.defaultReportTemplates">Modèle de rapport par défaut</message>
-	<message key="manager.statistics.reports.defaultReport.articleDownloads">Téléchargement d'article</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstract">Nombre de vues de résumé d'article</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Résumé d'article et téléchargements</message>
-	<message key="manager.statistics.reports.defaultReport.issueDownloads">Problème de téléchargement de fichier</message>
-	<message key="manager.statistics.reports.form.columnsRequired">Vous devez choisir au moins une colonne pour produire le rapport.</message>
-	<message key="manager.statistics.reports.reportUrl">URL du rapport</message>
-	<message key="manager.statistics.reports.reportUrl.label">L'adresse URL suivante peut être utilisée pour produire le rapport avec les configurations de formulaire actuelles. Il suffit de la copier, de la coller dans votre navigateur Web et d'entrer. Vous pouvez utiliser vos favoris pour conserver votre générateur d'URL pour les rapports personnalisés.</message>
-	<message key="manager.statistics.reports.filters.byContext">Par contexte</message>
-	<message key="manager.statistics.reports.filters.byTime">Choisir la portée du rapport</message>
-	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Ou choisir la portée par:</message>
-	<message key="manager.statistics.reports.filters.byLocation.description">Affiner les résultats selon le pays, la région ou la ville.</message>
-	<message key="manager.setup.permissions.priorAgreement">Accord préalable</message>
-	<message key="manager.setup.permissions.display">Afficher</message>
-	<message key="manager.setup.licenseURLDescription">Fournissez l'adresse URL du site Web des licences, le cas échéant.</message>
-	<message key="manager.setup.includeLicense">Afficher la licence avec la publication.</message>
-	<message key="manager.statistics.reports.generateReport">Générer un rapport personnalisé</message>
-	<message key="manager.statistics.reports.advancedOptions">Options avancées</message>
-	<message key="manager.statistics.reports.advancedOptions.label">Personnaliser les colonnes, le filtre et les options de classement. Les changements apportés à ces options pourraient modifier le résultat du modèle de rapport attendu.</message>
-	<message key="manager.statistics.reports.columns">Colonnes</message>
-	<message key="manager.statistics.reports.columns.description">Définir les colonnes qui seront utilisées pour construire le rapport. Les colonnes que vous sélectionnez ici précisent non seulement les données qui apparaîtront dans les rapports, mais également le niveau d'agrégation des statistiques. Par exemple, si vous choisissez les colonnes ID, Type et Mois, le rapport effectuera la somme de tous les visionnements d'un objet pour un mois particulier et affichera les données sur une ligne. Si vous choisissez Jour au lieu de Mois, chaque objet affichera une ligne pour chaque jour.</message>
-	<message key="manager.statistics.reports.filters">Filtres</message>
-	<message key="manager.statistics.reports.objectType">Type d'objet</message>
-	<message key="manager.statistics.reports.objectId">ID de l'objet</message>
-	<message key="manager.statistics.reports.objectId.label">Définir un ou plusieurs identifiant(s) d'objet, séparés par une virgule (ex.: 1,2,3,4,5).</message>
-	<message key="manager.statistics.reports.today">Aujourd'hui</message>
-	<message key="manager.statistics.reports.currentMonth">Mois actuel</message>
-	<message key="manager.statistics.reports.orderBy">Mettre en ordre</message>
-	<message key="manager.statistics.reports.orderDir.asc">Ascendant</message>
-	<message key="manager.statistics.reports.orderDir.desc">Descendant</message>
-	<message key="manager.statistics.reports.month.label">Veuillez employer le format AAAAMM.</message>
-	<message key="manager.statistics.reports.day.label">Veuillez employer le format AAAAMMJJ.</message>
-	<message key="manager.statistics.reports.cities.label">Un ou plusieurs nom(s) de villes, séparés par une virgule (ex.: Ville 1, Ville 2)</message>
-	<message key="manager.statistics.reports.filters.byContext.description">Affiner les résultats par contexte</message>
-	<message key="manager.statistics.reports.filters.byObject">Par type d'objet ou identifiant d'objet</message>
-	<message key="manager.setup.includeCopyrightStatement">Afficher la déclaration de droit d'auteur avec le contenu (recommandé lorsque l'auteur détient le droit d'auteur).</message>
-	<message key="manager.setup.resetPermissions">Réinitialiser les autorisations pour les articles</message>
-	<message key="manager.setup.resetPermissions.description">La déclaration de droit d'auteur et l'information concernant la licence seront liés de façon définitive au contenu publié afin de prévenir toute modification à ces données en cas de changement des politiques d'un journal pour les nouvelles soumissions. Afin de réinitialiser les autorisations enregistrées, utilisez le bouton ci-dessous.</message>
-	<message key="manager.setup.confirmResetLicense">Êtes-vous certain de vouloir réinitialiser les informations concernant la licence et le droit d'auteur liées au contenu publié à la licence pré-configurée dans la configuration de revue?</message>
-	<message key="manager.statistics.defaultMetricDescription">Votre revue a été configurée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées pour plusieurs contextes. Il arrive parfois qu'une seule statistique d'utilisation doit être utilisée, par exemple pour afficher une liste ordonnée des soumissions les plus utilisées ou pour ordonner les résultats de la recherche. Veuillez choisir l'une des mesures configurées à titre de mesure par défaut.</message>
-	<message key="manager.statistics.reports.filters.byObject.description">Affiner les résultat par type d'objet (revue, numéro, article, épreuve PDF, autres épreuves) et/ou par un ou plusieurs identifiant(s) d'objet.</message>
-	<message key="manager.statistics.reports.filters.byLocation">Par emplacement géographique</message>
-	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Nombre de consultations du sommaire du numéro</message>
-	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Sommaire et téléchargements du numéro</message>
-	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Nombre de consultations de la page d'accueil de la revue</message>
-	<message key="manager.statistics.reports.orderDir">Ordre</message>
-	<message key="manager.subscriptions.form.dateRemindedBefore">Rappel de pré-expiration envoyé</message>
-	<message key="manager.subscriptions.form.dateRemindedAfter">Rappel de post-expiration envoyé</message>
 </locale>

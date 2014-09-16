@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Import Users
+  *
+  -->
+
+<topic id="journal/topic/000013" locale="fr_FR" title="Importation d’usagers" toc="journal/toc/000002" key="journal.users.importUsers">
+	<section>
+		<![CDATA[<p>OJS fournit une façon simple d’importer des données des usagers à partir d’un format basé sur XML, lequel peut facilement être généré à partir d’autres banques de données contenant de l’information des usagers. Consulter la documentation incluse avec OJS pour de plus amples informations au sujet du format XML et XML DTD pour données des usagers.</p>]]>	
+	</section>
+</topic>

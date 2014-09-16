@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/paymethod/manual/locale/fr_FR/emailTemplateData.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  -->
+<email_texts locale="fr_FR">
+	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
+		<subject>Avis de paiement manuel</subject>
+		<body>Un paiement manuel doit être traité pour la revue {$journalName} et l'utilisateur {$userFullName} (nom d'utilisateur "{$userName}").
+
+L'élément facturé est "{$itemName}".
+Le coût est de {$itemCost} ({$itemCurrencyCode}).
+
+Ce courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.</body>
+		<description>Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.</description>
+	</email_text>
+</email_texts>

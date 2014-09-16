@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/timedView/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.timedView.displayName">定时的浏览量报告</message>
+	<message key="plugins.reports.timedView.description">该款插件使用CSV报告描述每篇文章的读者量，过滤用户定义的时间段。</message>
+
+	<message key="plugins.reports.timedView.form.dateStartRequired">需要一个起始日期。</message>
+	<message key="plugins.reports.timedView.form.dateStartValid">请选择一个有效的起始日期。</message>
+	<message key="plugins.reports.timedView.form.dateEndRequired">需要一个结束日期。</message>
+	<message key="plugins.reports.timedView.form.dateEndValid">请选择一个有效的结束日期。</message>
+	<message key="plugins.reports.timedView.form.generate">生成报告</message>
+	<message key="plugins.reports.timedView.form.clearLogs">清楚日志</message>
+	<message key="plugins.reports.timedView.form.clearLogs.description">选择从日志中删除记录的时间。选定日期前的任何日志条目将被删除。注意：该操作只影响定时浏览插件而不是别处的浏览计数器（例如，总体浏览插件）。</message>
+	<message key="plugins.reports.timedView.form.clearLogs.confirm">您确定删除这些记录？这个过程不能撤销。</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">检查旧的定时浏览插件恢复的统计数据。如果您想用新的统计数据生成一个定时浏览报告，则无须检查该段。</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">当您选择的是很长时间段的统计数据时，该报告可能需要很长的准备时间。如果花费太长时间，连接器肯能暂停，您也不会收到报告文件。如果这种情况发生的话，请选择短时间段的统计数据。</message>
+
+	<message key="plugins.reports.timedView.report.articleId">文章ID</message>
+	<message key="plugins.reports.timedView.report.articleTitle">文章标题</message>
+	<message key="plugins.reports.timedView.report.datePublished">出版日期</message>
+	<message key="plugins.reports.timedView.report.abstractViews">摘要的浏览量</message>
+	<message key="plugins.reports.timedView.report.galleyViews">样稿的浏览总量</message>
+</locale>

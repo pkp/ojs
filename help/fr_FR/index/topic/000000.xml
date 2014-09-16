@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index Help Page 
+  *
+  -->
+
+<topic id="index/topic/000000" locale="fr_FR" title="Aide pour OJS" toc="index/toc/000000" key="index.index">
+	<section>
+		<![CDATA[<p> Le document d’aide pour le Système Open Journal (OJS) est destiné à aider les usagers dans le processus de lecture, de présentation, d’édition et la publication d’articles dans les journaux académiques et d’intérêt général. Il est aussi destiné à servir de manuel pour OJS, en décrivant l’étendue et les fonctions de ce logiciel de gestion pour un journal académique. Le document d’aide fournit aussi des conseils d’édition sur les pratiques courantes dans la publication de journaux académiques. En plus de ce document, les usagers ont accès à la personne chargée du support technique dont le nom apparaitra sous l’onglet «Au sujet du journal» dans la listes des ”contacts”</p><p> Parce que OJS a des rôles et des titres bien définis pour chaque fonction et procédure de la publication.&mdash; depuis le directeur du journal qui voit à la mise en place de celui-ci, à l’auteur qui révise les galées.&mdash; chaque sujet couvert dans «aide» réfère à qui devrait s’occuper de chaque tâche. Basé sur le même principe, l’accès au document est déterminé par qui fait quoi, et où dans le système. La page d’aide est spécifique au contexte. Ce que quelqu’un peut visioner dépend de son rôle. Les usagers peuvent avoir plus d’un rôle dans OJS. Un réviseur de texte peut aussi être un auteur, et un gestionnaire peut aussi être un éditeur. Ce que quelqu’un voit dépend aussi de l’endroit où il travaille à l’intérieur d’OJS. Le rôle et l’endroit déterminent quelles rubriques d’aide apparaissent à l’écran, bien que l’usager puisse naviguer vers des sujets reliés pour explorer toutes les facettes du système.</p>]]>
+	</section>
+</topic>
+

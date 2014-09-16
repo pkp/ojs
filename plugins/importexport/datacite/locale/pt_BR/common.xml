@@ -57,4 +57,8 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Objetos selecionados exportados com sucesso para '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">ERRO:</message>
+	<message key="plugins.importexport.common.settings.form.password.description">As senhas serão salvas em texto não cifrado.</message>
+	<message key="plugins.importexport.common.markRegistered">Marco registrado</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Clique neste botão para marcar os objetos registrados (se registrados previamente ou manualmente).</message>
+	<message key="plugins.importexport.common.export.unAvailable">Exportação de dados está atualmente desabilitada. Verifique os requisitos do plugin.</message>
 </locale>

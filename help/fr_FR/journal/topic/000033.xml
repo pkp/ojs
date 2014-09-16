@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Merge Users
+  *
+  -->
+
+<topic id="journal/topic/000033" locale="fr_FR" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+<![CDATA[<p>La fonction Merge Users (Fusionner usagers), disponible dans Journal Management (Gestion de la revue) sous l’entête Users (Usagers), permet au rédacteur de la revue de fusionner deux comptes d’usagers en un seul, en transférant les tâches de révision, les soumissions et plusieurs autres données d’un compte à un autre tout en éliminant le premier compte.</p>
+	<p>Les items suivants sont transférés :
+		<ul>
+			<li>Identité de l’auteur d’un article</li>
+			<li>Commentaires publics sur l’article</li>
+			<li>Notes sur l’article</li>
+			<li>Tâches et décisions du rédacteur</li>
+			<li>Tâches des évaluateurs</li>
+			<li>Tâches des rédacteurs metteur en page</li>
+			<li>Entrées pour les courriels et le journal des événements d’un article</li>
+			<li>Clés d’accès des évaluateurs</li>
+		</ul>
+	Les items suivants ne sont <strong>pas</strong> transférés :
+		<ul>
+			<li>Sessions</li>
+			<li>Abonnements</li>
+			<li>Statut de notification (c’est-à-dire si l’usager s’est inscrit pour recevoir des nouvelles de la part de la revue)</li>
+			<li>Adhésions à l’équipe de rédaction</li>
+			<li>Rapports sur les rubriques de la part des chefs de rubrique</li>
+			<li>Rôles</li>
+			<li>Données sur les profils des usagers (c’est-à-dire prénom, nom de famille, etc.) </li>
+		</ul>
+	</p>
+<p>Il faut utiliser cette fonction précautionneusement, car elle n’est pas renversable et elle implique le transfert de données d’un utilisateur à un autre.</p>]]>
+	</section>
+</topic>

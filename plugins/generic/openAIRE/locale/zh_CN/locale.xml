@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/openAIRE/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OpenAIRE plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.description">OpenAIRE插件添加项目ID元素到文章元数据，并且依据OpenAIRE指南1.1kuozhan OAI-PMH界面，帮助OJS期刊实现 OpenAIRE兼容。</message>
+	<message key="plugins.generic.openAIRE.projectID">项目ID</message>
+	<message key="plugins.generic.openAIRE.metadata">OpenAIRE 特定元数据</message>
+	<message key="plugins.generic.openAIRE.projectID.description">（项目ID与授予协议号码相同）</message>
+	<message key="plugins.generic.openAIRE.projectIDValid">请输入一个有效的项目ID（6位数）</message>
+</locale>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/piwik/locale/fr_FR/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Piwik plugin localization strings
+  -->
+ 
+<locale name="fr_FR" full_name="Français">
+
+	<!-- Piwik -->
+	<message key="plugins.generic.piwik.displayName">Plugiciel Piwik</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Intégrez OJS avec Piwik, une application gratuite et en accès libre qui analyse le trafic d'un site web. Cela requiert que Piwik soit déjà installé. Veuillez regarder le <a href="http://piwik.org/" title="piwik site">site Piwik</a> pour de plus amples informations.]]></message>
+
+	<!-- Piwik Settings Management -->
+	<message key="plugins.generic.piwik.manager.settings">Paramètres</message>
+	<message key="plugins.generic.piwik.manager.piwikSettings">Paramètres de Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>Avec ce plugiciel activé, Piwik peut être utilisé pour recueillir et analyser des données d'utilisation et de fréquentation pour cette revue. Veuillez noter que cela requiert que Piwik soit déjà installé. Veuillez regarder le <a href="http://piwik.org/" title="piwik site">site Piwik</a> pour de plus amples informations.</p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Url Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">L'URL complète à votre installation Piwik (i.e. http://myserver.net/piwik).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Veuillez entrer une URL valide. Inclure http:// au début.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">ID du profil du site</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"><![CDATA[Dans Piwik, cliquez sur Paramètres -> Sites internet. L'ID du profil du site est affiché à côté de votre nom de profil sur le site.]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Veuillez entrer un ID de profil de site.</message>
+
+</locale>

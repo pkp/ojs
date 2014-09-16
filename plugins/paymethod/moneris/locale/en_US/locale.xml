@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+ * Copyright (c) 2000-2009 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+ -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.paymethod.moneris.displayName">Moneris</message>
+
+	<!-- Moneris Settings Form -->
+	<message key="plugins.paymethod.moneris.settings.monerisenable">Enable Moneris</message>
+	<message key="plugins.paymethod.moneris.settings.monerisHost">Moneris Host</message>
+	<message key="plugins.paymethod.moneris.settings.monerisHost.description"><![CDATA[This is the hostame to Moneris' payment gateway. For testing, use <u>esqa.moneris.com</u>; for production systems, use <u>www3.moneris.com</u>.]]></message>
+	<message key="plugins.paymethod.moneris.settings.storeId">Store ID</message>
+	<message key="plugins.paymethod.moneris.settings.storeId.description">This is the Store Identification assigned by Moneris to your organization/journal.</message>
+	<message key="plugins.paymethod.moneris.settings.apiToken">API Token</message>
+	<message key="plugins.paymethod.moneris.settings.apiToken.description">This is the API Token assigned by Moneris to your organization/journal.</message>
+	<message key="plugins.paymethod.moneris.settings.CVD">CVD</message>
+	<message key="plugins.paymethod.moneris.settings.CVD.description">Select this if you would have the Card Verification Digits enabled on your Moneris account.</message>
+	<message key="plugins.paymethod.moneris.settings.additionalInfo">Additional information for users</message>
+	<message key="plugins.paymethod.moneris.settings.additionalInfo.description">You may enter any additional information that you would like displayed on the payment page, such as privacy information or refund policies.</message>	
+	
+
+	<message key="plugins.paymethod.moneris.settings.curlNotInstalled">Warning: CURL support for PHP is not installed. Moneris payment support requires the CURL library and will not function until it is installed.</message>
+	<message key="plugins.paymethod.moneris.settings">Moneris Settings</message>
+
+	<!-- Moneris -->
+	<message key="plugins.paymethod.moneris">Moneris Payment Gateway</message>
+	<message key="plugins.paymethod.moneris.description"><![CDATA[The Moneris Plugin enables users to use all major credit cards when paying through the system. The Journal Manager will need to set up a <a href="https://www3.moneris.com/connect/en/index.php" target="_new">Moneris eSelect Plus</a> account to use this payment option.]]></message>
+	<message key="plugins.paymethod.moneris.warning"><![CDATA[Clicking Pay will process your credit card.  This may take a few seconds.  Do <strong>not refresh</strong> your browser, as this will cause your card to be processed a second time.]]></message>	
+	<message key="plugins.paymethod.moneris.purchase.amount">Amount</message>
+	<message key="plugins.paymethod.moneris.purchase.description">Description</message>
+	<message key="plugins.paymethod.moneris.purchase.cancelled">Your purchase has been cancelled.</message>
+	<message key="plugins.paymethod.moneris.purchase.cancelled.title">Purchase Cancelled</message>
+
+	<message key="plugins.paymethod.moneris.purchase.creditCardNumber">Credit Card Number</message>
+	<message key="plugins.paymethod.moneris.purchase.expiryDate">Expiry Date</message>
+	<message key="plugins.paymethod.moneris.purchase.CVD">Security Number (CVV)</message>
+	
+	<message key="plugins.paymethod.moneris.purchase.retry">Retry</message>
+	<message key="plugins.paymethod.moneris.purchase.retry.error">Please fill in all the fields below</message>
+		
+	<message key="plugins.paymethod.moneris.purchase.paymentReceived">Payment Received</message>
+	<message key="plugins.paymethod.moneris.purchase.paymentReceived.message">Your payment has been processed and a receipt has been sent to your email for your records.  Your registration status has been updated.</message>
+		
+	<message key="plugins.paymethod.moneris.purchase.paymentUnsuccessful">Payment Unsuccessful</message>
+	<message key="plugins.paymethod.moneris.purchase.paymentUnsuccessful.explanation">We were unable to process your card.  If you believe this was an error, please try again.</message>
+	<message key="plugins.paymethod.moneris.purchase.payNow">Pay Now</message>
+		
+	<message key="plugins.paymethod.moneris.purchase.queuedPaymentUnfulfilled.title">Payment Received</message>
+	<message key="plugins.paymethod.moneris.purchase.queuedPaymentUnfulfilled"><![CDATA[Your payment has been received, but there was a problem updating your registration status.  Our staff has been notified of the error and will be correcting it shortly.  Do <strong>NOT</strong> resubmit your payment.]]></message>
+</locale>

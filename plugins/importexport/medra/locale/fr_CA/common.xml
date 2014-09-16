@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/importexport/medra/locale/fr_CA/common.xml
+  * @file plugins/importexport/medra/locale/en_US/common.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Shared localization strings
   -->
  
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name="en_US" full_name="U.S. English">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Afin d'utiliser ce plugiciel, veuillez aller dans la catégorie des "identifiants publics", activez et configurez le plugiciel DOI et spécifiez un préfixe DOI valide.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Ce plugiciel n'est pas entièrement configuré.</message>
 
@@ -57,6 +57,4 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">L'objet a été exporté avec succès vers '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">ERREUR:</message>
-	<message key="plugins.importexport.common.markRegistered">Marquer les objets déjà enregistrés</message>
-	<message key="plugins.importexport.common.markRegisteredDescription">Cliquez sur ce bouton afin de marquer les objets enregistrés (par exemple, s'ils ont été enregistrés antérieurement ou manuellement).</message>
 </locale>

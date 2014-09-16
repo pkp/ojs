@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="da_DK">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Bedømmelse: Husk forfaldsdato</subject>
+		<body>Kære {$authorName}:
+
+Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af  {$objectForReviewTitle} er forfalden {$objectForReviewDueDate}.
+
+For at indsende din bedømmelse bedes du logge dig ind på tidsskriftets hjemmeside og færdiggøre online indsendelsen. For nemheds skyld finder du URL-adressen her: {$submissionUrl}
+
+Du er velkommen til at kontakte mig, hvis du spørgsmål eller betænkeligheder omkring denne bedømmelse.
+
+Tak for dit bidrag. Jeg ser frem til at høre fra dig.
+
+{$editorialContactSignature}</body>
+		<description>This is an automatically generated email that is sent to an object for review author as a reminder that the due date for the review is approaching.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject></subject>
+		<body>Kære {$authorName}:
+
+Dette blot for at minde dig om, at din bedømmelse af {$objectForReviewTitle} skulle have være afsendt {$objectForReviewDueDate}. Imidlertid har vi intet modtaget.
+
+For at færdiggøre din bedømmelse, bedes du logge ind på tidsskriftets hjemmeside og udfylde indsendelsen. For nemheds skyld finder du URL-adressen nedenfor.
+
+Indsendelses-URL: {$submissionUrl}
+
+Du er velkommen til at kontakte mig, hvis du har spørgsmål eller betænkeligheder omkring denne bedømmelse.
+
+Tak for dit bidrag. Jeg ser frem til at modtage din indsendelse.
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Object for Review: Object Assigned</subject>
+		<body>Kære {$authorName}:
+
+Denne e-mail bekræfter, at {$objectForReviewTitle} er blevet tildelt dig til bedømmelse med forfaldsdato {$objectForReviewDueDate}.
+
+Vær venlig at sikre, at din mailadresse i din brugerprofil er opdateret. Denne adresse vil blive benyttet når objektet skal vidersendes til bedømmelse.
+
+I din brugerprofil står følgende mailadresse:
+{$authorMailingAddress}
+
+Hvis denne adresse er ufuldstændig eller ugyldig bedes du opdatere den via følgende URL:
+
+Brugerprofil-URL: {$userProfileUrl}
+ 
+For at færdiggøre din bedømmelse, bedes du logge ind på tidsskriftets hjemmeside og udfylde indsendelsen vis følgende URL-adresse:
+
+Indsendelses-URL: {$submissionUrl}
+
+Du er velkommen til at kontakte mig, hvis du har spørgsmål eller betænkeligheder omkring denne bedømmelse.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an object review author when an editor assigns the object for review to the author.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Object for Review</subject>
+		<body>Kære {$authorName}:
+
+Desværre kan jeg ikke denne gang tildele dig {$objectForReviewTitle} til viderebedømmelse.
+
+Jeg håber, du vil overveje at bedømme et andet objekt fra vores liste enten nu eller senere.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an interested author when an object is no longer available for review.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Object for Review: Object Requested</subject>
+		<body>Kære {$editorName}:
+
+Jeg vil gerne foretage en bedømmelse af {$objectForReviewTitle}.
+
+Kan du bekræfte om der stadig er mulighed for dette?
+
+{$authorContactSignature}</body>
+		<description>This email is sent to an editor by an author interested in writing an object review for a listed object.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Object for Review: Object Mailed</subject>
+		<body>Kære {$authorName}:
+
+Denne e-mail bekræfter, at jeg har sendt en kopi af {$objectForReviewTitle} til følgende mailadresse fra din online brugerprofil:
+{$authorMailingAddress}
+ 
+For at indsende din bedømmelse bedes du logge ind på tidsskriftets hjemmeside og færdiggøre online-bedømmelsen via følgende URL: {$submissionUrl}
+
+Du er velkommen til at kontakte mig, hvis du har spørgsmål eller betænkeligheder omkring denne bedømmelse.
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Object for Review</subject>
+		<body>Kære {$authorName}:
+
+Denne e-mail bekræfter, at du er blevet slettet som bedømmer af {$objectForReviewTitle}.
+
+Jeg håber, du vil overveje at bedømme et andet objekt fra vores liste enten nu eller senere.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an interested author when an object is no longer available for review.</description>
+	</email_text>
+</email_texts>

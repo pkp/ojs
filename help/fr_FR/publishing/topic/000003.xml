@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  -->
+
+<topic id="publishing/topic/000003" locale="fr_FR" title="Table des matières" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Un fois qu’une présentation est mise au calendrier, elle apparaitra dans la table des matières de ce numéro sous l’entête de sa rubrique. S’il n’y a pas de présentation dans une rubrique, cette rubrique n’apparaitra pas dans la table des matières. L’éditeur peut réarranger les rubriques, et les présentations peuvent être réarrangées à l’intérieur d’une rubrique.</p>]]>	
+	</section>
+</topic>

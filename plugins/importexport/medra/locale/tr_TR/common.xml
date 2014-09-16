@@ -57,6 +57,4 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Successfully exported selected objects to '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">HATA</message>
-	<message key="plugins.importexport.common.markRegisteredDescription">Kayıtlı öğelerin mark kaydı için için bu butona tıklayınız (Ör. eğer daha önce veya manuel olarak kaydedildi ise)</message>
-	<message key="plugins.importexport.common.markRegistered">Kayıtlı Mark</message>
 </locale>

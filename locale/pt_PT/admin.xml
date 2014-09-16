@@ -96,4 +96,6 @@ Usage (processing all files inside a directory): {$scriptName} path/to/apache/di
 	<message key="admin.copyAccessLogFileTool.error.deletingFile">ERRO: não é possível eliminar o ficheiro {$tmpFilePath}</message>
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">ADVERTÊNCIA: ficheiro {$filePath} já existente na pasta de estatísticas de utilização.</message>
 	<message key="admin.copyAccessLogFileTool.success">SUCESSO: {$filePath} para {$destinationPath}</message>
+	<message key="admin.settings.security">Segurança</message>
+	<message key="admin.settings.security.plugins">Impedir que os directores de revistas instalem, atualizem ou eliminem plugins.</message>
 </locale>
