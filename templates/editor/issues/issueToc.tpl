@@ -87,11 +87,12 @@ $(document).ready(function() {
 
 <form method="post" action="{url op="updateIssueToc" path=$issueId}">
 
-{assign var=numCols value=5}
+{assign var=numCols value=6}
 {if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}{assign var=numCols value=$numCols+1}{/if}
 {if $enablePublicArticleId}{assign var=numCols value=$numCols+1}{/if}
 {if $enablePageNumber}{assign var=numCols value=$numCols+1}{/if}
 
+{assign var="missingGalleys" value=false}
 {foreach from=$sections key=sectionKey item=section}
 <h4>{$section[1]}{if $section[4]}<a href="{url op="moveSectionToc" path=$issueId d=u newPos=$section[4] sectionId=$section[0]}" class="plain">&uarr;</a>{else}&uarr;{/if} {if $section[5]}<a href="{url op="moveSectionToc" path=$issueId d=d newPos=$section[5] sectionId=$section[0]}" class="plain">&darr;</a>{else}&darr;{/if}</h4>
 
@@ -108,6 +109,7 @@ $(document).ready(function() {
 		{if $enablePageNumber}<td width="7%">{translate key="editor.issues.pages"}</td>{/if}
 		{if $unpublished || $isSiteAdmin}<td width="5%">{translate key="common.remove"}</td>{/if} {* BLH 20111021 For unpublished issues, hide for all but site admin *}
 		<td width="10%">{translate key="editor.issues.proofed"}</td>
+                <td width="7%">HAS GALLEY</td>
 	</tr>
 	<tr>
 		<td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td>
@@ -141,6 +143,18 @@ $(document).ready(function() {
 			{else}
 				{icon name="unchecked"}
 			{/if}
+                </td>
+                <td>
+                        {assign var="galleyExists" value=false}
+                        {foreach name=galleys from=$article->getGalleys() item=galley}
+                            {assign var="galleyExists" value=true}
+                        {/foreach}
+                        {if $galleyExists}
+                            {icon name="checked"} 
+                        {else}
+                            {icon name="unchecked"}
+                            {assign var="missingGalleys" value=true}
+                        {/if}
 		</td>
 	</tr>
 	{/foreach}
@@ -162,20 +176,25 @@ $(document).ready(function() {
 	<input type="submit" value="{translate key="common.save"}" class="button defaultButton" />
 	{if $isSiteAdmin || (!$isLayoutEditor && !$escholInStage && $journalPath != 'ethnomusic_pre' && $issueTitle != 'Unpublished')}
 		<!-- publish -->
-		<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="return validateAnd_confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />
+		<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="return validateAnd_confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" {if $missingGalleys==true}disabled="disabled"{/if} />
 	{/if}
 {else}
 	<!-- 'update published issue' button -->
-	<input type="submit" value="{translate key="editor.issues.saveAndPublishIssue"}" onclick="return validateAnd_confirmAction('{url op="updateIssueToc" path=$issueId}', 'Are you sure you want to update this published issue?')" class="button defaultButton" />
+	<input type="submit" value="{translate key="editor.issues.saveAndPublishIssue"}" onclick="return validateAnd_confirmAction('{url op="updateIssueToc" path=$issueId}', 'Are you sure you want to update this published issue?')" {if $missingGalleys==true}class="button" disabled="disabled"{else}class="button defaultButton"{/if} />
 	{if $isSiteAdmin}
 		<!-- unpublish button -->
 		<input type="button" value="{translate key="editor.issues.unpublishIssue"}" onclick="confirmAction('{url op="unpublishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmUnpublish"}')" class="button" />	
 	{/if}
 {/if}
-	
-<br /><br />
 
-<strong>Having trouble publishing this issue? <a href="https://getsatisfaction.com/cdl/topics/i_just_tried_to_publish_a_journal_issue_but_it_isnt_showing_up_on_escholarship_org_or_only_some_of" target="_blank">Click here for help</a>.</strong> 
+{if $unpublished}
+    {assign var="publishedOrUpdated" value="published"}
+{else}
+    {assign var="publishedOrUpdated" value="updated"}
+{/if}	
+<p>Issue cannot be {$publishedOrUpdated} because one or more articles do not have galleys. To add a galley, click on the article title above and upload a file in the "3. EDITING --&gt; Layout" section.</p>
+
+<p><strong>Having trouble publishing this issue? <a href="https://getsatisfaction.com/cdl/topics/i_just_tried_to_publish_a_journal_issue_but_it_isnt_showing_up_on_escholarship_org_or_only_some_of" target="_blank">Click here for help</a>.</strong> </p>
 </form>
 
 {/if}
