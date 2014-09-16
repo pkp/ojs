@@ -1,0 +1,42 @@
+================================================================
+=== OJS Private LOCKSS Network Plugin
+=== Version: 1.0
+=== Author: Chris MacDonald <chris@fcts.ca>
+=== Last update: September 2014
+================================================================
+
+About
+-----
+This plugin provides a means for OJS to preserve content on a private LOCKSS
+network. The plugin checks for new and modified content and provided the PLN's
+terms of use are met, will communicate with the PLN's staging server to preserve
+your published content automatically.
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the
+accompanying OJS file docs/COPYING for the complete terms of this license.
+
+System Requirements
+-------------------
+OJS 2.4.5 or greater.
+PHP 5.2 or greater.
+CURL support for PHP.
+ZipArchive support for PHP.
+
+Note
+----
+The primary difference between this plugin and the existing LOCKSS preservation
+mechanism present in OJS is the PLN requires no registration or involvement with
+the network - as long as you agree with the network's terms of use, you can
+preserve your journal's content.
+
+Contact/Support
+---------------
+Please use the PKP support forum (http://pkp.sfu.ca/support/forum/), PKP
+Bugzilla (http://pkp.sfu.ca/bugzilla/) or email the authors for support,
+bugfixes, or comments.
+
+Version History
+---------------
+1.0	- Initial Release
