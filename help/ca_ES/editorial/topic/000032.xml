@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Author's Role Index - Submissions
   *
   -->
 
-<topic id="editorial/topic/000032" locale="en_US" title="Submissions" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+<topic id="editorial/topic/000032" locale="ca_ES" title="Submissions" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
 	<section>
 		<![CDATA[<p>En iniciar la sessió a la revista i seleccionar el rol d'autor/a a la pàgina inicial d'usuari/ària, l'autor/a accedeix a la cua de trameses actives, on s'enumeren les trameses en procés editorial. A més, també pot accedir a les trameses rebudes anteriorment a la revista mitjançant l'enllaç «Arxiu», o bé trametre un nou article fent clic a l'enllaç «Inicia una tramesa nova».</p><p>Si la revista accepta pagaments en línia, l'autor/a també pot utilitzar aquesta pàgina per pagar trameses concretes. En cas que la revista ho requereixi, la pàgina també pot incloure enllaços a cada article sota Estat per pagar les tarifes per a trameses, les revisions ràpides de trameses i les tarifes per a publicacions. Aquests enllaços es mostren a la secció «Estat» i en fer-hi clic l'autor/a accedeix a la pàgina de pagament manual de tarifes o a la pàgina de pagament mitjançant PayPal, des d'on és possible dur a terme la transacció. Feu clic a {help_topic key="journal.managementPages.payments" text="aquí"} si necessiteu més informació sobre el procés de pagament.</p><p>Feu clic a {help_topic key="submission.index" text="aquí"} si necessiteu més informació sobre el procés de tramesa.</p>]]>	
 	</section>

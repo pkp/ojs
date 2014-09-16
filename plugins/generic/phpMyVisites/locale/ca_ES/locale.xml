@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * phpMyVisites plugin localization strings for the en_US (U.S. English) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * phpMyVisites plugin localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-
 	<!-- phpMyVisites -->
-	<message key="plugins.generic.phpmv.displayName">Connector phpMyVisites</message>
+	<message key="plugins.generic.phpmv.displayName">Mòdul phpMyVisites</message>
 	<message key="plugins.generic.phpmv.description"><![CDATA[Integreu l'OJS amb phpMyVisites, una aplicació lliure i de codi obert per a l'anàlisi del trànsit de pàgines web. Per fer-ho, heu de tenir instal·lada l'aplicació phpMyVisites. Si necessiteu més informació, vegeu la <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">pàgina de phpMyVisites</a>.]]></message>
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Configuració</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">Configuració de l'aplicació phpMyVisites</message>
-	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Si activeu aquest connector, podreu utilitzar l'aplicació phpMyVisites per a recopilar i analitzar dades sobre l'ús i el trànsit del lloc web d’aquesta revista. Aquest connector requereix la instal·lació prèvia de l'aplicació phpMyVisites. Si necessiteu més informació, vegeu la <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">pàgina de phpMyVisites</a>.</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Si activeu aquest mòdul, podreu utilitzar l'aplicació phpMyVisites per a recopilar i analitzar dades sobre l'ús i el trànsit del lloc web d’aquesta revista. Aquest mòdul requereix la instal·lació prèvia de l'aplicació phpMyVisites. Si necessiteu més informació, vegeu la <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">pàgina de phpMyVisites</a>.</p>]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">URL de l'aplicació phpMyVisites</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">URL complet per a la instal·lació de l'aplicació phpMyVisites (p. ex. http://myserver.net/phpmv).</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Introduïu un URL vàlid. Incloeu http:// al principi de l'adreça.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Número de perfil del lloc</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">A phpMyVisites, feu clic a Administració &amp;gt; Modifica el lloc. El número del perfil del lloc es mostra al costat del nom del perfil del lloc.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Introduïu un número de perfil del lloc.</message>
-
 </locale> 

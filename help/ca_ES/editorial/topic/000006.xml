@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Section Editor's Role Index - Review 
   *
   -->
 
-<topic id="editorial/topic/000006" locale="en_US" title="Review" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
+<topic id="editorial/topic/000006" locale="ca_ES" title="Review" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
 	<section>
 		<![CDATA[<p>La pàgina de revisió de l'article enumera tots els elements que l'editor/a de secció necessita per organitzar i dur a terme el procés de revisió. L'editor/a de secció assigna una versió de revisió de l'article, assigna un o més revisors/ores per a l'article i introdueix una decisió de l'editor/a. Segons aquesta decisió, l'article passa de la cua de revisió a la cua d'edició o als arxius, o bé torna a ser tramès per a una nova revisió.</p><p>Si necessiteu més informació sobre com seleccionar una versió de revisió, vegeu {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="Versió de revisió"}.</p><p>Si necessiteu més informació sobre el procés d'avaluació d'experts, vegeu {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="Avaluació d'experts"}.</p><p>Si necessiteu més informació sobre la presa de decisions de l'editor/a, vegeu {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="Decisió de l'editor/a"}.</p>]]>
 </section>
-
 </topic>

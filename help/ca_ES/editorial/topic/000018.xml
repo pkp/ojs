@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editor's Role Submissions - Archives 
   *
   -->
 
-<topic id="editorial/topic/000018" locale="en_US" title="Archives" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+<topic id="editorial/topic/000018" locale="ca_ES" title="Archives" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
 	<section>
 		<![CDATA[<p>Les trameses d'aquesta cua han passat pel procés editorial i pot ser que hagin estat rebutjades, que se n'hagi planificat la publicació o bé que ja hagin estat publicades. A través d'aquesta cua els editors/ores i l'editor/a de secció assignat poden accedir a l'historial editorial complet de la tramesa (resum, tramesa, revisió, edició i historial).</p><p><em>Com restaurar un element arxivat a la llista activa</em>. Per fer-ho, l'editor/a ha d'accedir a la secció «Arxius» de la seva pàgina inicial i cercar-hi la tramesa. En fer clic al títol de la tramesa s'accedeix a les pàgines de resum, revisió, edició i historial corresponents. La pàgina de resum inclou un enllaç anomenat «Restaura a la llista activa» mitjançant el qual és possible traslladar una tramesa a la llista de revisió o d'edició, segons l'etapa en què es trobés en el moment d'arxivar-la.</p>]]>	
 	</section>

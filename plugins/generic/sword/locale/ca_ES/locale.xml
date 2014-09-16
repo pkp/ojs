@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * locale.xml
   *
@@ -8,14 +7,15 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
+  * Localization strings for the ca_ES (Català) locale.
   -->
 
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.sword.displayName">Connector SWORD</message>
-	<message key="plugins.generic.sword.description">Aquest connector permet als administradors/ores de la revista i als autors/ores (opcional) dipositar articles mitjançant el protocol SWORD.</message>
-	<message key="plugins.generic.sword.enabled">S'ha activat el connector SWORD.</message>
+	<message key="plugins.generic.sword.displayName">Mòdul SWORD</message>
+	<message key="plugins.generic.sword.description">Aquest mòdul permet als administradors/ores de la revista i als autors/ores (opcional) dipositar articles mitjançant el protocol SWORD.</message>
+	<message key="plugins.generic.sword.enabled">S'ha activat el mòdulor SWORD.</message>
 	<message key="plugins.generic.sword.settings">Configuració</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permet a l'autor/a indicar un punt de dipòsit.</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Punts de dipòsit.</message>
@@ -33,7 +33,7 @@
 	<message key="plugins.generic.sword.authorDepositDescription"><![CDATA[<p> Si ho desitja, pot utilitzar el següent formulari per dipositarla seva tramesa "{$submissionTitle}" en un dels dipòsits de la llista. Per a seleccionar en quin repositori desitja dipositar la tramesa, utilitzeu les caselles de verificació situades a la part inferior de la columna esquerra. Cada dipòsit permet triar un punt de dipòsit d'una llista desplegable.</p>]]></message>
 	<message key="plugins.generic.sword.authorCustomDepositDescription"><![CDATA[<p> Si ho desitja, pot indicar un punt de dipòsit compatible amb SWORD en el següent formulari. Per a això, indiqueu un URL, nom d'usuari/ària i contrasenya de SWORD al dipòsit i es dipositarà la tramesa.</p>]]></message>
 
-	<message key="plugins.importexport.sword.displayName">Connector de dipòsit d'importació/exportació SWORD</message>
+	<message key="plugins.importexport.sword.displayName">Mòdul de dipòsit d'importació/exportació SWORD</message>
 	<message key="plugins.importexport.sword.description">Diposita articles en dipòsits remots mitjançant el protocol de dipòsit SWORD.</message>
 	<message key="plugins.importexport.sword.deposit">Dipòsit</message>
 	<message key="plugins.importexport.sword.serviceDocUrl">URL del document de servei</message>
@@ -45,5 +45,5 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Dipòsit correcte</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">Els elements seleccionats s'han dipositat.</message>
 	<message key="plugins.importexport.sword.depositFailed">Dipòsit erroni</message>
-	<message key="plugins.generic.sword.descriptionUnsupported">Permetre als gestors de la revista i (opcionalment) als autors dipositar articles mitjançant el protocol SWORD. Tingues en compte que aquest connector requereix l'extensió Zip, la qual NO es troba actualment instal·lada al servidor.</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Permetre als gestors de la revista i (opcionalment) als autors dipositar articles mitjançant el protocol SWORD. Tingues en compte que aquest mòdul requereix l'extensió Zip, la qual NO es troba actualment instal·lada al servidor.</message>
 </locale>

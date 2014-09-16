@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000003.xml
   *
@@ -14,28 +13,26 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * User Interface - Register and Profile
   *
   -->
 
 <topic id="user/topic/000003" locale="ca_ES" title="Registre i perfil" toc="user/toc/000000" key="user.registerAndProfile">
-	<section>
-		<![CDATA[<p>La revista utilitza un sistema de registre per a tots els usuaris/usuàries implicats en el procés editorial i de publicació. La política de privadesa de la revista s'aplica a tots els usuaris/usuàries registrats. Cada usuari/usuària registrat disposa d'un perfil que és possible modificar una vegada s'ha iniciat la sessió a la revista. L'enllaç que permet accedir al perfil es troba ubicat al marge dret de la pàgina inicial de l'usuari/usuària, sota el títol «USUARI/USUÀRIA».</p><p>Tots els usuaris/usuàries disposen de l'opció de rebre actualitzacions per correu electrònic, mitjançant la qual és possible rebre el sumari de cada nou número publicat. En el cas de les revistes que treballen amb més d'una llengua, els revisors/es poden indicar al seu perfil la llengua o les llengües per a les quals volen revisar trameses.</p>]]>	
-	</section>
-
-	<section title="Per què m'he de registrar?">
-
-<![CDATA[<p>Quan us registreu, el sistema crea una «Àrea personal» de l'usuari/usuària que us permet accedir més fàcilment a les vostres revistes. Cal que us registreu si voleu trametre un article o esdevenir membre de l'equip editorial (p. ex., com a revisor/a o com a corrector/a de proves) per a qualsevol revista.</p><p>Algunes revistes restringeixen l'accés a part dels seus continguts, que passen a estar disponibles només per als usuaris/usuàries registrats.</p>]]>
-</section>
-
-<section title="Política de privadesa">
-<![CDATA[<p>La política de privadesa de la revista s'aplica a tots els usuaris/usuàries registrats. Podeu trobar més informació sobre la política de privadesa a la pàgina «Sobre la revista».</p>]]>
-</section>
-<section title="Què he de fer per a registrar-me?">
-<![CDATA[<p>Us podeu registrar fent clic als enllaços «Inici de la sessió» o «Registre» que es mostren tant a la pàgina inicial del lloc web com a les pàgines inicials de totes les revistes. Si ho preferiu, també podeu sol·licitar a un administrador/a de la revista que us registri. En trobareu la informació de contacte a la pàgina «Sobre la revista».</p>]]>
-</section>
-<section title="Perfil">
-<![CDATA[<p>En registrar-vos es crea el vostre perfil (inclòs el nom d'usuari/usuària i la contrasenya). Podeu editar el vostre perfil en qualsevol moment una vegada heu iniciat la sessió. Per a accedir-hi només cal que feu clic a l'enllaç «El meu perfil» que es mostra sota el títol «USUARI/USUÀRIA», a la barra de navegació dreta. En aquesta pàgina podeu modificar la vostra informació de contacte, els interessos de revisió i els rols, i també gestionar la recepció de notificacions per correu electrònic sobre les revistes per a les quals estigueu registrats.</p>]]>
-</section>
-
+  <section>
+  <![CDATA[<p>La revista utilitza un sistema de registre per a tots els usuaris/usuàries implicats en el procés editorial i de publicació. La política de privadesa de la revista s'aplica a tots els usuaris/usuàries registrats. Cada usuari/usuària registrat disposa d'un perfil que és possible modificar una vegada s'ha iniciat la sessió a la revista. L'enllaç que permet accedir al perfil es troba ubicat al marge dret de la pàgina inicial de l'usuari/usuària, sota el títol «USUARI/USUÀRIA».</p><p>Tots els usuaris/usuàries disposen de l'opció de rebre actualitzacions per correu electrònic, mitjançant la qual és possible rebre el sumari de cada nou número publicat. En el cas de les revistes que treballen amb més d'una llengua, els revisors/es poden indicar al seu perfil la llengua o les llengües per a les quals volen revisar trameses.</p>]]>	
+  </section>
+  <section title="Per què m'he de registrar?">
+  <![CDATA[<p>Quan us registreu, el sistema crea una «Àrea personal» de l'usuari/usuària que us permet accedir més fàcilment a les vostres revistes. Cal que us registreu si voleu trametre un article o esdevenir membre de l'equip editorial (p. ex., com a revisor/a o com a corrector/a de proves) per a qualsevol revista.</p><p>Algunes revistes restringeixen l'accés a part dels seus continguts, que passen a estar disponibles només per als usuaris/usuàries registrats.</p>]]>
+  </section>
+  <section title="Política de privadesa">
+  <![CDATA[<p>La política de privadesa de la revista s'aplica a tots els usuaris/usuàries registrats. Podeu trobar més informació sobre la política de privadesa a la pàgina «Sobre la revista».</p>]]>
+  </section>
+  <section title="Què he de fer per a registrar-me?">
+  <![CDATA[<p>Us podeu registrar fent clic als enllaços «Inici de la sessió» o «Registre» que es mostren tant a la pàgina inicial del lloc web com a les pàgines inicials de totes les revistes. Si ho preferiu, també podeu sol·licitar a un administrador/a de la revista que us registri. En trobareu la informació de contacte a la pàgina «Sobre la revista».</p>]]>
+  </section>
+  <section title="Perfil">
+  <![CDATA[<p>En registrar-vos es crea el vostre perfil (inclòs el nom d'usuari/usuària i la contrasenya). Podeu editar el vostre perfil en qualsevol moment una vegada heu iniciat la sessió. Per a accedir-hi només cal que feu clic a l'enllaç «El meu perfil» que es mostra sota el títol «USUARI/USUÀRIA», a la barra de navegació dreta. En aquesta pàgina podeu modificar la vostra informació de contacte, els interessos de revisió i els rols, i també gestionar la recepció de notificacions per correu electrònic sobre les revistes per a les quals estigueu registrats.</p>]]>
+  </section>
 </topic>

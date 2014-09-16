@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editor's Role Submissions - Unassigned 
   *
   -->
 
-<topic id="editorial/topic/000015" locale="en_US" title="Unassigned" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+<topic id="editorial/topic/000015" locale="ca_ES" title="Unassigned" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
 	<section>
 		<![CDATA[<p>Les trameses per a la revista comencen el procés d'edició a la cua de trameses no assignades de l'editor/a. Per assignar una tramesa d'aquesta llista a un editor/a de secció, l'editor/a ha de fer clic al títol de la tramesa. Això porta a l'editor/a a la pàgina de tramesa apropiada on està assignat l'editor/a de secció. Quan una tramesa és assignada a un editor/a de secció, desapareix de la cua de trameses no assignades i passa a mostrar-se a la cua de revisió.</p>]]>	
 	</section>

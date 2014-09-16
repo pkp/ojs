@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/gateways/metsGateway/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
+  * Localization strings.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.gateways.metsGateway.displayName">Connector de passarel·la METS</message>
+	<message key="plugins.gateways.metsGateway.displayName">Mòdul de passarel·la METS</message>
 	<message key="plugins.gateways.metsGateway.settings">Configuració</message>
-	<message key="plugins.gateways.metsGateway.description"><![CDATA[Aquest connector proporciona dades XML sense processar en format METS per a una revista determinada. <strong>NOTA: Aquest connector ha estat dissenyat per utilitzar-se amb serveis web i la seva activació causa un problema de seguretat, ja que permet accedir a la revista en format XML sense restriccions (el contingut està codificat en base64).</strong>]]></message>
-	<message key="plugins.gateways.metsGateway.errors.errorMessage">No s'han pogut exportar les dades de la revista. El connector de passarel·la METS ha d'estar activat i l'id. de la revista que voleu exportar s'ha d'indicar a l'URL.</message>
+	<message key="plugins.gateways.metsGateway.description"><![CDATA[Aquest mòdul proporciona dades XML sense processar en format METS per a una revista determinada. <strong>NOTA: Aquest mòdul ha estat dissenyat per utilitzar-se amb serveis web i la seva activació causa un problema de seguretat, ja que permet accedir a la revista en format XML sense restriccions (el contingut està codificat en base64).</strong>]]></message>
+	<message key="plugins.gateways.metsGateway.errors.errorMessage">No s'han pogut exportar les dades de la revista. El mòdul de passarel·la METS ha d'estar activat i l'id. de la revista que voleu exportar s'ha d'indicar a l'URL.</message>
 	<message key="plugins.gateways.metsGateway.settings.FContent">Utilitza la codificació base64 per a l'embolcall de continguts</message>
 	<message key="plugins.gateways.metsGateway.settings.FLocat">Utilitza l'URL del flux de bits per a l'embolcall de continguts</message>
-	<message key="plugins.gateways.metsGateway.settings.organization">METS:atribut d'organització de l'element agent</message>
+	<message key="plugins.gateways.metsGateway.settings.organization">METS: atribut organitzador d'elements agents</message>
 	<message key="plugins.gateways.metsGateway.settings.preservationLevel">Nivell de conservació PREMIS</message>
 	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Exporta els fitxers addicionals</message>
 </locale> 

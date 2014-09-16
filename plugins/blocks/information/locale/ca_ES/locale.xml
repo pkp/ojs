@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/blocks/information/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.information.displayName">Bloc d'informació</message>
-	<message key="plugins.block.information.description">Aquest connector proporciona un enllaç d'informació a la barra lateral.</message>
+	<message key="plugins.block.information.description">Aquest mòdul proporciona un enllaç d'informació a la barra lateral.</message>
 	<message key="plugins.block.information.link">Informació</message>
 </locale> 

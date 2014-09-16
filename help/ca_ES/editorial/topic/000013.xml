@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Layout Editor's Role Index 
   *
   -->
 
-<topic id="editorial/topic/000013" locale="en_US" title="Layout Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+<topic id="editorial/topic/000013" locale="ca_ES" title="Layout Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
 	<section>
 		<![CDATA[<p>El corrector/a d'originals o l'editor/a de secció envien un missatge de correu electrònic al maquetista per sol·licitar-li la maquetació d'una tramesa que ja hagi passat per l'etapa de correcció d'originals. En cas que el maquetista no es pugui encarregar d'aquesta tasca, ho ha de notificar per correu electrònic a l'editor/a de secció.</p>]]>	
 	</section>

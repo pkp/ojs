@@ -7,9 +7,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
+  * Localized email templates XML file.
   -->
+
 <email_texts locale="ca_ES">
 	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
 		<subject>Error a l'indexar un article</subject>

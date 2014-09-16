@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editor's Role Submissions - In Editing 
   *
   -->
 
-<topic id="editorial/topic/000017" locale="en_US" title="In Editing" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
+<topic id="editorial/topic/000017" locale="ca_ES" title="In Editing" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
 	<section>
 		<![CDATA[<p>Les trameses incloses en aquesta cua han de passar pels processos de correcció d'originals, maquetació i correcció de proves. Per accedir a la pàgina d'edició d'una tramesa, només cal que un editor/a de secció o un editor/a facin clic al títol de la tramesa des de la cua d'edició.</p>]]>	
 	</section>

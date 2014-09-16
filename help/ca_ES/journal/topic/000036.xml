@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000036.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Review Forms
   *
   -->
 
-<topic id="journal/topic/000036" locale="en_US" title="Review Forms" toc="journal/toc/000001" key="journal.managementPages.reviewForms">
+<topic id="journal/topic/000036" locale="ca_ES" title="Review Forms" toc="journal/toc/000001" key="journal.managementPages.reviewForms">
 	<section>
 		<![CDATA[<p>By default, OJS allows Reviewers to enter their review findings via a simple two-field review form: one field for Editor-only text, and one for both Authors and Editors. The Journal Manager can extend this functionality by making custom review forms.</p>
 		<p>The Journal Manager can associate a custom review form with a Journal Section so that it will be the default form for that section; if more than one form is active, the Editor will also be able to override the default form when a reviewer is assigned to a submission.</p>
@@ -32,11 +33,11 @@
 		<![CDATA[<p>The Journal Manager will now have a number of options available from the Review Forms page for each review:</p>
 		
 		<p><strong>Edit:</strong> Clicking the Edit link will allow the Journal Manager to change the form title and description. The Journal Manager will also be able to extend the form by clicking the Add Form Items subheading: the resulting page will list any form items (text fields; radio buttons, drop-down boxes and checkboxes; etc.) that have been added to the form, and allows for new items to be added by clicking Create New Item. When a new item is created, the Journal Manager can provide descriptive text, and can make the item mandatory for the Reviewer to complete. Once an item is created, it can be edited or deleted until the review form is locked due to use. Finally, the Journal Manager can click the Preview Form subheading to see what the form will look like to a Reviewer. The Edit option is only permitted until the review form has been used once, at which point the form is locked.</p>
-			<p><strong>Activate/Deactivate:</strong> Clicking the Activate link will allow the form to be chosen as a default form for a journal section (this can be applied in Journal Sections from the Journal Management page), and to be selected by the Editor as an optional form at the time of review assignment. Deactivating the form removes it as an option from these locations, but does not delete the form.</p>
-			<p><strong>Copy:</strong> The Copy action allows the Journal Manager to copy a review form that has already been used in its entirety. Clicking the Copy link will duplicate the form in the Review Forms list, and will populate the duplicated form with the original form's items. The Journal Manager can then change the form name, and edit the form items if need be.</p>
-			<p>The Journal Manager can also copy any form items from one editable form to another, pre-existing form. To do this, the Journal Manager must click the form name that includes the item to be duplicated; click the Form Items subheading; select the items to be duplicated by checking the box to the left of their name (or alternatively, by clicking the Select All button to choose all of them); choose the form that the items will be copied to from the drop-down menu; and then click Copy to commit the change. Please note that copied items can still be deleted while the form hasn't yet been locked; and that individual items cannot be copied from forms that have already been locked. 
-			<p><strong>Preview:</strong> The Preview link allows the Journal Manager to see what the review form will look like to a Reviewer.</p>
-			<p><strong>Delete:</strong> The Delete link only shows up if the form has not yet been locked. If clicked, the Journal Manager will be prompted on whether or not the delete action should indeed be carried through.</p>
-			<p>The Review Forms page also lists the number of reviews currently being processed against the listed review forms, and the number of reviews that have been completed using each form. </p>]]>
+		<p><strong>Activate/Deactivate:</strong> Clicking the Activate link will allow the form to be chosen as a default form for a journal section (this can be applied in Journal Sections from the Journal Management page), and to be selected by the Editor as an optional form at the time of review assignment. Deactivating the form removes it as an option from these locations, but does not delete the form.</p>
+		<p><strong>Copy:</strong> The Copy action allows the Journal Manager to copy a review form that has already been used in its entirety. Clicking the Copy link will duplicate the form in the Review Forms list, and will populate the duplicated form with the original form's items. The Journal Manager can then change the form name, and edit the form items if need be.</p>
+		<p>The Journal Manager can also copy any form items from one editable form to another, pre-existing form. To do this, the Journal Manager must click the form name that includes the item to be duplicated; click the Form Items subheading; select the items to be duplicated by checking the box to the left of their name (or alternatively, by clicking the Select All button to choose all of them); choose the form that the items will be copied to from the drop-down menu; and then click Copy to commit the change. Please note that copied items can still be deleted while the form hasn't yet been locked; and that individual items cannot be copied from forms that have already been locked. 
+		<p><strong>Preview:</strong> The Preview link allows the Journal Manager to see what the review form will look like to a Reviewer.</p>
+		<p><strong>Delete:</strong> The Delete link only shows up if the form has not yet been locked. If clicked, the Journal Manager will be prompted on whether or not the delete action should indeed be carried through.</p>
+		<p>The Review Forms page also lists the number of reviews currently being processed against the listed review forms, and the number of reviews that have been completed using each form. </p>]]>
 	</section>
 </topic>

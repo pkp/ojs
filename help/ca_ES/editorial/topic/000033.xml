@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Author's Role Review Index - Peer Review
   *
   -->
 
-<topic id="editorial/topic/000033" locale="en_US" title="Peer Review" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+<topic id="editorial/topic/000033" locale="ca_ES" title="Peer Review" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
 	<section>
 		<![CDATA[<p>En aquesta pàgina es recullen diverses dates, incloses la data en què l'editor/a envia la sol·licitud als revisors/ores, la data en què els revisors/ores comencen a treballar i la data en què cada revisor/a acaba el seu encàrrec. L'autor/a pot consultar la política de revisió a {help_topic key="user.about" text="Sobre la revista"} per conèixer amb més detall el procés de revisió de trameses de la revista. Els revisors/ores poden penjar fitxers per als autors/ores, com ara versions de la tramesa amb anotacions. (Per consultar aquests fitxers, l'autor/a ha de fer clic al nom de fitxer que es mostra sota l'enllaç «Fitxer penjat» per obrir directament el fitxer o bé per desar-lo al seu ordinador i obrir-lo des d'allà.)</p>]]>	
 	</section>

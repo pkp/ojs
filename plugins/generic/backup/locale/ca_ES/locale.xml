@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/backup/locale.xml
   *
@@ -8,34 +7,21 @@
   * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
+  * Localization strings.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.backup.name">Connector de còpies de seguretat</message>
-	<message key="plugins.generic.backup.description">Aquest connector genera una còpia de seguretat de la instal·lació.</message>
+	<message key="plugins.generic.backup.name">Mòdul de còpia de seguretat</message>
+	<message key="plugins.generic.backup.description">Aquest mòdul crea una còpia de seguretat de la instal·lació.</message>
 
-	<message key="plugins.generic.backup.link">Descarregeu còpia de seguretat</message>
-	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Els següent enllaços permeten a l'administrador/ora del lloc descarregar una còpia de seguretat de varis components de la instal·lació. Una còpia de seguretat completa conté <strong>tots</strong> els següents components. 
-Si us plau, consulteu la documentació tècnica per a més informació sobre com s'interaccionen aquests components.</p>]]></message>
+	<message key="plugins.generic.backup.link">Descarrega una còpia de seguretat</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Els  enllaços següents permeten a l'administrador/a del lloc web descarregar una còpia de seguretat completa dels diferents components de la instal·lació. Una còpia de seguretat completa conté <strong>tots</strong>els components següents. Consulteu la documentació tècnica per a més informació sobre la interrelació d'aquests components.</p>]]></message>
 	<message key="plugins.generic.backup.db">Base de dades</message>
 	<message key="plugins.generic.backup.files">Fitxers</message>
 	<message key="plugins.generic.backup.code">Codi</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>AVÍS:</strong> El bolcat de la base de dades no s'ha configurat al fitxer config.inc.php. La configuració dependrà del servidor i del tipus de base de dades que s'utilitzi. Això s'ha d'especificar a la secció titulada [cli], a l'opció etiquetada com "dump". Per a bases de dades MySQL, es pot utilitzar l'eina mysqldump, p.e.:<br/>
-<pre>[cli]
-dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
-</pre>
-Per ordre, les etiquetes "%s" s'han de reemplaçar per:<ol>
-  <li>El nom del servidor</li>
-  <li>El nom d'usuari de base de dades</li>
-  <li>La contrasenya de l'usuari</li>
-  <li>El nom de la base de dades</li>
-</ol>
-Tingues en compte que això implica especificar la contrasenya de la base de dades a una línia de comandes, el que en rigor suposa un risc per a la seguretat del sistema.<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVÍS:</strong> L'eina "tar" no s'ha configurat al fitxer config.inc.php. La configuració dependrà del servidor. Això s'ha d'especificar a la secció titulada [cli], a l'opció etiquetada com "tar", especificant el camí on trobar la utilitat "tar", p.e.:<br/>
-<pre>[cli]
-tar = "/bin/tar"
-</pre><br/>]]></message>
-	<message key="plugins.generic.backup.failure"><![CDATA[<strong>AVÍS: </strong>Ha sorgit un error durant el procés de còpia de seguretat. Habitualment això es degut a problemes amb els permisos sobre els fitxers.]]></message>
-</locale>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>ADVERTIMENT:</strong> No s'ha configurat l'eina de buidatge de la base de dades  al fitxer de configuració config.inc.php. La configuració depèn de la configuració del vostre servidor i del tipus de base de dades que utilitzeu. És recomanable que ho especifiqueu en la secció anomenada [cli] en l'opció de configuració anomenada «buidatge». Per a MySQL, feu servir l'eina mysqldump, p. ex.:<br /> <pre>[cli] dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s" </pre> Es reemplaçaran els "%s" autenticadors, amb aquest ordre, per:<ol> <li>Nom d'amfitrió/ona de la base de dades</li> <li>Nom d'usuari/ària de la base de dades</li> <li>Contrasenya de la base de dades</li> <li>Nom de la base de dades</li> </ol> Tingueu en compte que això comporta indicar la contrasenya de la base de dades a la línia de comandaments, fet que pot afectar la seguretat.<br /><br />]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>ADVERTIMENT:</strong> L'eina «tar» no ha estat configurada en el fitxer de configuració config.inc.php. La configuració depèn de la configuració del vostre servidor. És recomanable que ho especifiqueu en la secció anomenada [cli], en l'opció de configuració anomenada «tar», especificant la ruta que duu fins a la utilitat «tar», p. ex.:<br /> <pre>[cli] tar = "/bin/tar" </pre><br />]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>ADVERTIMENT: </strong>Pot haver-se produït un error durant el procés d'elaboració de la còpia de seguretat. La causa més comuna és els permisos dels fitxers.]]></message>
+</locale> 

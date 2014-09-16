@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/pubIds/urn/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
   * URN plugin localization strings
   -->
@@ -15,7 +16,7 @@
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
 	<!-- plugin -->
-	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.displayName">Mòdul URN</message>
 	<message key="plugins.pubIds.urn.description">This plugin enables the assignment of the Uniform Resource Names to the objects (issues, articles, galley and supplementary files) in OJS.</message>
 
 	<!-- URN manager options, setting -->
@@ -76,4 +77,9 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">The check number is missing.</message>
 
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">article</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">galerada</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">arxiu complementari</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">edició</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">El que veieu és una previsualització de la URN que podria ser incomplerta. La URN no s'ha generat encara. Publicar la edició i visualitzant la pàgina pública {$pubObjectType} generarà una URN única per a aquest {$pubObjectType}.</message>
 </locale>

@@ -1,22 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/blocks/user/locale/ca_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.block.user.displayName">Bloc d'usuari</message>
-	<message key="plugins.block.user.description">Aquest connector proporciona eines per als comptes d'usuari a la barra lateral (p. ex., inici de la sessió, finalització de la sessió, enllaç al perfil, etc.).</message>
+	<message key="plugins.block.user.displayName">Secció Usuari/ària</message>
+	<message key="plugins.block.user.description">Aquest mòdul proporciona eines per als comptes d'usuari/ària a la barra lateral (p. ex., inici de la sessió, finalització de la sessió, enllaç al perfil, etc).</message>
 	<message key="plugins.block.user.loggedInAs">Heu iniciat la sessió com a...</message>
 	<message key="plugins.block.user.myJournals">Les meves revistes</message>
 	<message key="plugins.block.user.myProfile">El meu perfil</message>
 	<message key="plugins.block.user.logout">Finalitza la sessió</message>
-	<message key="plugins.block.user.signOutAsUser">Finalitza la sessió com a usuari</message>
+	<message key="plugins.block.user.signOutAsUser">Finalitza la sessió com a usuari/ària</message>
 	<message key="plugins.block.user.rememberMe">Recorda'm</message>
 </locale> 

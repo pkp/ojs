@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/stopForumSpam/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Stop Forum Spam plugin localization strings
+  -->
+ 
+<locale name="ca_ES" full_name="Català">
+
+	<message key="plugins.generic.stopForumSpam.displayName">Mòdul Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.description">Integra OJS amb el sistema de prevenció Stop Forum Spam que pretèn reduïr la quantitat de registres d'usuari brossa.</message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">Configuració</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Configuració de Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>Amb aquest mòdul actiu, OJS no permetrà el registre dels nous usuaris si contenen elements que apareixen a la llista de Stop Forum Spam.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">Comprova la IP de registre</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Comprova l'adreça de correu de registre</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Comprova el nom d'usuari de registre (activeu-lo amb compte!)</message>
+	<message key="plugins.generic.stopForumSpam.checkName">stopForumSpamPlugin</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[El mòdul <a href="http://www.stopforumspam.com" target="_blank">Stop Forum Spam</a> ha bloquejat aquest registre.]]></message>
+</locale>

@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Proofreader's Role Index 
   *
   -->
 
-<topic id="editorial/topic/000014" locale="en_US" title="Proofreader's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+<topic id="editorial/topic/000014" locale="ca_ES" title="Proofreader's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
 	<section>
 		<![CDATA[<p>L'editor/a de secció envia un missatge de correu electrònic al corrector/a de proves per sol·licitar-li que s'encarregui d'una o més rondes de correcció. En aquest punt el corrector/a de proves ha de notificar si accepta o rebutja l'encàrrec. En cas d'acceptar-lo, ha d'iniciar la sessió i començar el procés de correcció des de la seva pàgina inicial d'usuari/ària.</p>]]>	
 	</section>

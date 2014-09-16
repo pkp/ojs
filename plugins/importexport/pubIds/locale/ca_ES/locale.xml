@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/importexport/pubIds/locale/ca_ES/locale.xml
   *
@@ -8,12 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Localization strings
   -->
  
 <locale name="ca_ES" full_name="Català">
 	<!-- plugin -->
-	<message key="plugins.importexport.pubIds.displayName">Connector d'identificadors públics XML</message>
+	<message key="plugins.importexport.pubIds.displayName">Mòdul d'identificadors públics XML</message>
 	<message key="plugins.importexport.pubIds.description">Import and export public identifiers</message>
 
 	<message key="plugins.importexport.pubIds.cliUsage">Usage: {$scriptName} {$pluginName} [command] ...
@@ -49,6 +50,4 @@ Commands:
 	<message key="plugins.importexport.pubIds.import.error.pubIdExists">Public identifier of the type "{$pubIdType}" for the object {$pubObjectType} with ID = {$pubObjectId} already exists.</message>
 	<message key="plugins.importexport.pubIds.import.error.duplicatePubId">The public identifier "{$pubId}" is already in use by another object.</message>
 	<message key="plugins.importexport.pubIds.import.error.unknownPubId">Your import file contains a public identifier type "{$pubIdType}" that no pubId plugin can handle. Please install and/or activate the corresponding pubId plugin before trying to import this dataset.</message>
-
-
 </locale>

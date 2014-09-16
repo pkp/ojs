@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Section Editor's Role Index - Editing - Layout
   *
   -->
 
-<topic id="editorial/topic/000028" locale="en_US" title="Layout" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+<topic id="editorial/topic/000028" locale="ca_ES" title="Layout" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
 	<section>
 		<![CDATA[<p>Una vegada el corrector/a d'originals ha creat la còpia «neta» al pas 3 de la correcció d'originals, aquesta versió de la tramesa passa a l'etapa de maquetació. Una vegada ha rebut la notificació de finalització del procés de correcció d'originals, l'editor/a de secció ha de seleccionar un maquetista, si encara no ho ha fet, i li ha de sol·licitar que comenci el procés de maquetació mitjançant la icona de correu electrònic que es mostra sota la sol·licitud de maquetació. A continuació, el maquetista s'encarrega de preparar les galerades per a la tramesa en cadascun dels formats de publicació de la revista (p. ex. HTML, PDF, PS, etc.). El maquetista i el corrector/a de proves revisen els fitxers addicionals, que es mantenen en el format de fitxer original en què es van enviar, per comprovar si s'adeqüen a les normes de formatació bàsica i als estàndards de la revista tant com sigui possible. Quan el maquetista hagi finalitzat l'elaboració inicial de les galerades, fitxers que es publicaran en línia, ha d'enviar un correu electrònic a l'editor/a de secció.</p><p>Tingueu en compte que l'editor/a pot planificar la publicació d'un informe en qualsevol punt del procés revisió. Els maquetistes i els correctors/ores de proves han de conèixer aquesta informació i també han de poder previsualitzar el número de la revista abans que es publiqui.</p>]]>	
 	</section>

@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Editorial Process Index 
   *
   -->
 
-<topic id="editorial/topic/000000" locale="en_US" title="Editorial Process" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+<topic id="editorial/topic/000000" locale="ca_ES" title="Editorial Process" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
 	<section>
 		<![CDATA[<p>El procés editorial per a una tramesa a la revista consisteix en una etapa de revisió (habitualment, una avaluació anònima d'experts), seguida de la decisió de l'editor/a de secció per acceptar o rebutjar la tramesa. Si s'accepta durant l'etapa de revisió del procés editorial, la tramesa passa a l'etapa d'edició, que consisteix en els processos de correcció d'originals, maquetació i correcció de proves. A continuació es decideix la data de publicació de la tramesa en un número de la revista. Segons l'organització de la revista, el procés editorial pot ser dirigit per un únic editor/a o bé per un equip d'editors/ores, editors/ores de secció, correctors/ores d'originals, maquetistes i correctors/ores de proves.</p>]]>	
 	</section>

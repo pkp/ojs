@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.webfeed.displayName">Connector de canals d'informació</message>
-	<message key="plugins.generic.webfeed.description">Aquest connector crea canals d'informació RSS/Atom per al número actual.</message>
+	<message key="plugins.generic.webfeed.displayName">Mòdul de canals d'informació</message>
+	<message key="plugins.generic.webfeed.description">Aquest mòdul crea canals d'informació RSS/Atom per al número actual.</message>
 
 	<message key="plugins.generic.webfeed.settings">Configuració</message>
 	<message key="plugins.generic.webfeed.settings.issue">Mostra enllaços als canals d'informació només a les pàgines del número.</message>
@@ -24,4 +27,4 @@
 	<message key="plugins.generic.webfeed.atom.altText">Logotip Atom</message>
 	<message key="plugins.generic.webfeed.rss1.altText">Logotip RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logotip RSS2</message>
-</locale> 
+</locale>

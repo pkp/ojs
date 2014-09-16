@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
@@ -6,12 +8,10 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ca_ES (Català) locale.
-  *
-  * $Id$
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.importexport.METSExport.displayName">Connector d'exportació METS XML</message>
+	<message key="plugins.importexport.METSExport.displayName">Mòdul d'exportació METS XML</message>
 	<message key="plugins.importexport.METSExport.description">Exporta les revistes en METS XML.</message>
 	<message key="plugins.importexport.METSExport.settings">Configuració</message>
 	<message key="plugins.importexport.METSExport.export">Exporta les dades</message>

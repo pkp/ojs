@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
+  * Localized email templates XML file.
+  -->
+
+<email_texts locale="ca_ES">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Objecte per revisar: Recordatori de data de venciment</subject>
+		<body>Benvolgut/da {$authorName}:
+
+Aquest és un recordatori per l'objecte de revisió {$objectForReviewTitle} previst per la data {$objectForReviewDueDate}.
+
+Per a enviar el teu objecte de revisió, cal que entreu al lloc web de la revista i completeu el procés de tramesa de l'article. Per a la vostre comoditat, et fem arribar la URL de la tramesa.
+
+URL: {$submissionUrl}
+
+Si us plau, contacteu amb nosaltres si teniu alguna pregunta o dubte sobre aquest objecte de revisió.
+
+Quedem a l'espera de la tramesa, molt agraïts per la vostre contribució a la revista.
+
+{$editorialContactSignature}</body>
+		<description>Aquest és un correu electrònic generat automàticament i enviat a l'autor de l'objecte de revisió com a recordatori quan la data de venciment de la revisió s'apropa.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Objecte per revisar: Venciment de la data de revisió</subject>
+		<body>Benvolgut/da {$authorName}:
+
+Aquest és un recordatori per l'objecte de revisió {$objectForReviewTitle} previst per la data {$objectForReviewDueDate} però que encara no s'ha rebut.
+
+Per a enviar el vostre objecte de revisió, cal que entreu al lloc web de la revista i completeu el procés de tramesa de l'article. Per a la vostre comoditat, us fem arribar la URL de la tramesa.
+
+URL: {$submissionUrl}
+
+Si us plau, contacteu amb nosaltres si teniu alguna pregunta o dubte sobre aquest objecte de revisió.
+
+Quedem a l'espera de la tramesa, molt agraïts per la vostre contribució a la revista.
+
+{$editorialContactSignature}</body>
+		<description>Aquest és un correu electrònic generat automàticament i enviat a l'autor de l'objecte de revisió com a recordatori quan la data de venciment s'ha superat.</description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Objecte per revisar</subject>
+		<body>Benvolgut/da {$authorName}:
+
+Aquest correu electrònic confirma que ja no sou revisor de {$objectForReviewTitle}.
+
+Esperem que considereu revisar altres objectes de la nostre llista, ja sigui ara o en un futur.
+
+{$editorialContactSignature}</body>
+		<description>Aquest correu l'envia l'editor als autors interessats quan l'objecte ja no està disponible per ser revisat.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Objecte per revisar: Objecte assignat</subject>
+		<body>Benvolgut/da {$authorName}:
+
+Aquest correu confirma que se us ha assignat {$objectForReviewTitle} i que la revisió s'ha de completar abans de {$objectForReviewDueDate}.
+
+Us demanem que confirmeu que la vostre adreça de correu postal del vostre perfil està actualitzada.
+
+L'adreça actual és:
+{$authorMailingAddress}
+
+Si aquesta adreça fos incomplerta o ja no és correcte, visiteu el vostre perfil d'usuari per actualitzar-la:
+
+Enllaç al perfil d'usuari: {$userProfileUrl}
+
+Per a enviar el vostre objecte de revisió, cal que entreu al lloc web de la revista i completeu el procés de tramesa de l'article. Per a la vostre comoditat, us fem arribar l'enllaç de la tramesa.
+
+Enllaç: {$submissionUrl}
+
+Si us plau, contacteu amb nosaltres si teniu alguna pregunta o dubte sobre aquest objecte de revisió.
+
+Quedem a l'espera de la tramesa, molt agraïts per la vostre contribució a la revista.
+
+{$editorialContactSignature}</body>
+		<description>Aquest correu l'envia l'editor a l'autor de l'objecte de revisió quan l'editor assigna l'objecte a l'autor.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Objecte per revisar</subject>
+		<body>Benvolgut/da {$authorName}:
+
+Desgraciadament, en aquests moments no us podem assignar {$objectForReviewTitle} com a objecte de revisió.
+
+Esperem que considereu revisar altres objectes de la nostre llista, ja sigui ara o en un futur.
+
+{$editorialContactSignature}</body>
+		<description>Aquest correu l'envia l'editor als autors interessats quan l'objecte ja no està disponible per a ser revisat.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Objecte per revisar: Objecte sol·licitat</subject>
+		<body>Benvolgut/da {$editorName}:
+
+Estic interessat a escriure una revisió de l'objecte {$objectForReviewTitle}.
+
+Podríeu confirmar que l'objecte encara està disponible per a ser revisat?
+
+{$authorContactSignature}</body>
+		<description>Aquest correu s'envia a l'editor per l'autor interessat en escriure una revisió d'un objecte del llistat.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Objecte per revisar: Objecte enviat</subject>
+		<body>Benvolgut/da {$authorName}:
+
+Aquest correu confirma que us hem enviat una copia de {$objectForReviewTitle} a la següent adreça de correu del teu perfil d'usuari:
+{$authorMailingAddress}
+
+Per a enviar la vostre revisió d'objecte, si us plau, entreu al lloc web de la revista i completeu el procés en línia de tramesa d'articles.
+
+Enllaç de tramesa: {$submissionUrl}
+
+Si us plau, contacteu amb nosatres si teniu alguna pregunta o dubte sobre aquest objecte de revisió.
+
+{$editorialContactSignature}</body>
+		<description>Aquest correu l'envia l'editor als autors interessats quan l'editor ha enviat per correu a l'autor una copia de l'objecte.</description>
+	</email_text>
+</email_texts>

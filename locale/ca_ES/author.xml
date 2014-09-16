@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * locale/ca_ES/author.xml
   *
@@ -8,91 +7,94 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
+  * Localization strings.
   -->
 
-<locale name="ca_ES" full_name = "Català">
+<locale name="ca_ES" full_name="Català">
 	<message key="author.submit">Tramesa nova</message>
 	<message key="author.track">Trameses actives</message>
 	<message key="author.competingInterests"><![CDATA[Conflicte&nbsp;d’interessos <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política&nbsp;de CI</a>]]></message>
-	<message key="author.submit.submitArticle">Envia un article</message>
-	<message key="author.submit.stepsToSubmit">Cinc passos per enviar una tramesa</message>
-	<message key="author.submit.startHereTitle">Inicia una tramesa nova</message>
+	<message key="author.submit.submitArticle">Tramet un article</message>
+	<message key="author.submit.stepsToSubmit">Cinc passos per realitzar la tramesa</message>
+	<message key="author.submit.startHereTitle">Comença una tramesa nova</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Feu clic aquí</a> si voleu anar al primer dels cinc passos de què consta el procés de tramesa.]]></message>
 	<message key="author.submit.step1">Pas 1. Inici de la tramesa</message>
 	<message key="author.submit.step2">Pas 2. Càrrega de la tramesa</message>
 	<message key="author.submit.step3">Pas 3. Introducció de les metadades de la tramesa</message>
-	<message key="author.submit.step4">Pas 4. Càrrega de fitxers addicionals</message>
-	<message key="author.submit.step4a">Pas 4a. Afegeix un fitxer addicional</message>
+	<message key="author.submit.step4">Pas 4. Càrrega dels fitxers addicionals</message>
+	<message key="author.submit.step4a">Pas 4a. Addició d'un fitxer addicional</message>
 	<message key="author.submit.step5">Pas 5. Confirmació de la tramesa</message>
 	<message key="author.submit.start">1. Inici</message>
 	<message key="author.submit.upload">2. Càrrega de la tramesa</message>
-	<message key="author.submit.metadata">3. Introducció de metadades</message>
+	<message key="author.submit.metadata">3. Introducció de les metadades</message>
 	<message key="author.submit.supplementaryFiles">4. Càrrega de fitxers addicionals</message>
 	<message key="author.submit.confirmation">5. Confirmació</message>
-	<message key="author.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant si seleccioneu "Trameses actives" a la pàgina inicial de l’autor/a.</message>
+	<message key="author.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant si seleccioneu «Trameses actives» a la pàgina d'inici de l’autor/a.</message>
 	<message key="author.submit.notAccepting">Actualment aquesta revista no accepta trameses.</message>
 	<message key="author.submit.requestWaiver">Sol·licita una exempció</message>
-	<message key="author.submit.addReasonsForWaiver">Utilitzeu el quadre de comentaris següent per indicar per què sol·liciteu l’exempció de la tarifa.</message>
-	<message key="author.submit.mustEnterWaiverReason">Si esteu sol·licitant l’exempció de la tarifa heu d’introduir-ne el motiu a l’espai proporcionat.</message>
+	<message key="author.submit.qualifyForWaiver">Tingueu en compte que podeu sol·licitar l’exempció de la quota per a la tramesa d’aquest article.</message>
+	<message key="author.submit.addReasonsForWaiver">Utilitzeu el quadre de comentaris següent per indicar per què sol·liciteu l’exempció de la quota.</message>
+	<message key="author.submit.mustEnterWaiverReason">Si sol·liciteu l’exempció de la quota, heu d’introduir-ne el motiu a l’espai proporcionat.</message>
 	<message key="author.submissions.queuedReviewSubsequent">En ronda de revisió {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">En revisió: Publicable amb modificacions</message>
-	<message key="author.submissions.queuedEditingCopyedit">En edició: Correcció d’originals requerida</message>
-	<message key="author.submissions.queuedEditingProofread">En edició: Correcció de proves requerida</message>
+	<message key="author.submissions.queuedReviewRevisions">En revisió: Calen revisions</message>
+	<message key="author.submissions.queuedEditingCopyedit">En edició: S'ha sol·licitat la correcció d'originals</message>
+	<message key="author.submissions.queuedEditingProofread">En edició: S'ha sol·licitat la correcció de proves</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Carrega la versió corregida</message>
 	<message key="author.submissions.proofreadingCorrections">Correccions de proves</message>
-	<message key="author.submissions.confirmDelete">Esteu segur/a que voleu suprimir aquesta tramesa incompleta?</message>
+	<message key="author.submissions.confirmDelete">Esteu segur/a que voleu eliminar aquesta tramesa incompleta?</message>
 	<message key="author.submissions.viewStatus">Visualitza l’estat</message>
 	<message key="author.submissions.noSubmissions">No hi ha cap tramesa.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[En cas que necessiteu assistència, poseu-vos en contacte amb <a href="mailto:{$supportEmail}">{$supportName}</a> ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[En cas que necessiteu assistència, poseu-vos en contacte amb <a href="mailto:{$supportEmail}">{$supportName}</a>.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[ En cas que necessiteu assistència, poseu-vos en contacte amb <a href="mailto:{$supportEmail}">{$supportName}</a> ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[ En cas que necessiteu assistència, poseu-vos en contacte amb <a href="mailto:{$supportEmail}">{$supportName}</a>.]]></message>
 	<message key="author.submit.journalSection">Secció de la revista</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccioneu la secció adequada per a aquesta tramesa (vegeu «Seccions i Polítiques» a <a href="{$aboutUrl}" target="_new">Sobre la revista</a>).]]></message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccioneu la secció adequada per a aquesta tramesa (vegeu «Seccions i Polítiques» a «<a href="{$aboutUrl}" target="_new">Sobre</a> la revista»).]]></message>
 	<message key="author.submit.selectSection">Seleccioneu una secció...</message>
 	<message key="author.submit.submissionLocale">Llengua de la tramesa</message>
-	<message key="author.submit.submissionLocaleDescription">Aquesta revista admet trameses en diverses llengües. Escolliu la llengua principal de la tramesa al menú desplegable que hi ha a continuació.</message>
-	<message key="author.submit.submissionChecklist">Llista de verificació de la tramesa</message>
-	<message key="author.submit.submissionChecklistDescription">Per indicar que aquesta tramesa ja està llesta perquè la consideri la revista, marqueu els punts següents (podeu incloure comentaris per a l’editor/a a continuació).</message>
+	<message key="author.submit.submissionLocaleDescription">Aquesta revista accepta trameses en diverses llengües. Trieu la llengua principal de la tramesa al menú desplegable que hi ha a continuació.</message>
+	<message key="author.submit.submissionChecklist">Llista de verificació de tramesa</message>
+	<message key="author.submit.submissionChecklistDescription">Per indicar que aquesta tramesa ja està llesta perquè la consideri la revista, comproveu els punts següents (podeu incloure comentaris per a l’editor/a a continuació).</message>
 	<message key="author.submit.verifyChecklist">Abans de continuar, comproveu que es compleixen tots els punts de la llista de verificació de la tramesa.</message>
-	<message key="author.submit.copyrightNoticeAgree">Els autors/ores accepten els termes d’aquest avís de copyright, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació).</message>
-	<message key="author.submit.copyrightNoticeAgreeRequired">Abans de continuar, accepteu els termes de l’avís de copyright.</message>
-	<message key="author.submit.commentsForEditor">Comentaris per a l’editor/a</message>
-	<message key="author.submit.comments">Introdueix text (opcional)</message>
+	<message key="author.submit.copyrightNoticeAgree">Els autors/ores accepten les condicions d’aquest avís de drets d'autor/a, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Abans de continuar, accepteu les condicions de l’avís de drets d'autor/a.</message>
+	<message key="author.submit.commentsForEditor">Comentaris per a l'editor/a</message>
+	<message key="author.submit.comments">Introduïu el text (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Seleccioneu una secció adequada de la revista per a aquesta tramesa.</message>
-	<message key="author.submit.form.localeRequired">Seleccioneu una llengua per a la tramesa.</message>
+	<message key="author.submit.form.localeRequired">Seleccioneu la llengua per a la tramesa.</message>
 	<message key="author.submit.privacyStatement">Declaració de privacitat de la revista</message>
-	<message key="author.submit.reorderInstructions">Reordeneu els autors/ores perquè apareguin en l’ordre en què es llistaran a la publicació.</message>
+	<message key="author.submit.reorderInstructions">Reordena els autors/ores perquè apareguin en l'ordre que sortiran a la publicació.</message>
 	<message key="author.submit.reorder">Reordena el nom de l’autor/a</message>
 	<message key="author.submit.selectPrincipalContact">Contacte principal per a la correspondència editorial.</message>
 	<message key="author.submit.addAuthor">Afegeix un autor/a</message>
 	<message key="author.submit.deleteAuthor">Suprimeix l’autor/a</message>
-	<message key="author.submit.submissionIndexingDescription">Indiqueu els termes per a la indexació de la tramesa i separeu-los amb punt i coma (terme1; terme2; terme3).</message>
-	<message key="author.submit.submissionSupportingAgencies">Agències de suport</message>
-	<message key="author.submit.submissionSupportingAgenciesDescription">Identifiqueu les agències que han aportat finançament o suport per a l’obra presentada en aquesta tramesa.</message>
+	<message key="author.submit.submissionIndexingDescription">Proporcioneu els termes per a la indexació de la tramesa i separeu-los amb punt i coma (terme1; terme2; terme3).</message>
+	<message key="author.submit.submissionSupportingAgencies">Patrocinadors i organismes col·laboradors</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identifiqueu els organismes (una persona, una organització o un servei) que han contribuït al contingut o que han aportat finançament o suport per a l’obra presentada en aquesta tramesa. Separeu-los amb un punt i coma (p. ex. John Doe, Metro University; Master University, Departament de Ciència Computacional).</message>
 	<message key="author.submit.coverageInstructions">Fa referència a la ubicació geospacial, a la cobertura cronològica o històrica o a les característiques de la mostra de recerca.</message>
-	<message key="author.submit.subjectClassInstructions">Utilitzeu el sistema de classificació enllaçada per seleccionar els termes de classificació i, si escau, els números.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codis addicionals</a>.]]></message>
+	<message key="author.submit.subjectClassInstructions">Utilitzeu el sistema de classificació enllaçat per seleccionar els termes de classificació i, si escau, els números.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[Anglès=en; francès=fr; castellà=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codis addicionals</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Heu d’introduir un autor/a com a mínim.</message>
-	<message key="author.submit.form.authorRequiredFields">Heu d’introduir el nom, els cognoms i el correu electrònic de cada autor/a.</message>
+	<message key="author.submit.form.authorRequiredFields">Heu d’introduir el nom, els cognoms i l'adreça de correu electrònic de cada autor/a.</message>
 	<message key="author.submit.form.titleRequired">Introduïu el títol del vostre article.</message>
 	<message key="author.submit.form.abstractRequired">Introduïu el resum del vostre article.</message>
 	<message key="author.submit.form.wordCountAlert">Heu superat el límit de paraules permeses per a resums en aquesta part de la secció.</message>
 	<message key="author.submit.submissionFile">Fitxer de la tramesa</message>
-	<message key="author.submit.uploadSubmissionFile">Penja el fitxer de la tramesa</message>
+	<message key="author.submit.uploadSubmissionFile">Carrega el fitxer de la tramesa</message>
 	<message key="author.submit.replaceSubmissionFile">Reemplaça el fitxer de la tramesa</message>
 	<message key="author.submit.noSubmissionFile">No s’ha carregat cap fitxer de tramesa.</message>
 	<message key="author.submit.noSubmissionConfirm">Esteu segur/a que voleu continuar sense carregar cap fitxer de tramesa?</message>
-	<message key="author.submit.supplementaryFilesInstructions">Aquest pas opcional us permet afegir fitxers addicionals a una tramesa. Aquests fitxers poden tenir qualsevol format i incloure (i) instruments per a la recerca, (ii) conjunts de dades que compleixin els termes de la revisió ètica de recerca per a l’estudi, (iii) fonts que altrament no estarien disponibles per als lectors, (iv) figures i taules que no es puguin integrar en el text, o qualsevol altre tipus de material que contribueixi a l’obra.</message>
-	<message key="author.submit.supplementaryFiles.saveToUpload">Feu clic a "Desa" per carregar el fitxer (a continuació podreu carregar fitxers addicionals).</message>
+	<message key="author.submit.supplementaryFilesInstructions">Aquest pas opcional us permet afegir fitxers addicionals a una tramesa. Aquests fitxers poden tenir qualsevol format i incloure (i) instruments per a la recerca, (ii) conjunts de dades que compleixin els termes de la revisió ètica de recerca per a l’estudi, (iii) fonts que altrament no estarien disponibles per als lectors/ores, (iv) figures i taules que no es puguin integrar en el text, o qualsevol altre tipus de material que contribueixi a l’obra.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Feu clic a «Desa» per carregar el fitxer (a continuació podreu carregar fitxers addicionals).</message>
 	<message key="author.submit.forgottenSubmitSuppFile">Esteu segur/a que voleu continuar sense carregar el fitxer addicional que heu triat?</message>
 	<message key="author.submit.noSupplementaryFiles">No s’ha afegit cap fitxer addicional a aquesta tramesa.</message>
 	<message key="author.submit.backToSupplementaryFiles">Torna a «Fitxers addicionals»</message>
-	<message key="author.submit.confirmDeleteSuppFile">Esteu segur/a que voleu suprimir aquest fitxer addicional?</message>
+	<message key="author.submit.confirmDeleteSuppFile">Esteu segur/a que voleu eliminar aquest fitxer addicional?</message>
 	<message key="author.submit.uploadSuppFile">Carrega un fitxer addicional</message>
 	<message key="author.submit.addSupplementaryFile">Afegeix un fitxer addicional</message>
 	<message key="author.submit.editSupplementaryFile">Edita un fitxer addicional</message>
 	<message key="author.submit.supplementaryFileData">Metadades del fitxer addicional</message>
-	<message key="author.submit.supplementaryFileDataDescription">Per indexar aquest material addicional, indiqueu les metadades següents per al fitxer addicional que heu carregat.</message>
+	<message key="author.submit.supplementaryFileDataDescription">Per indexar aquest material addicional, proporcioneu les metadades següents per al fitxer addicional que heu carregat.</message>
 	<message key="author.submit.supplementaryFileUpload">Fitxer addicional</message>
 	<message key="author.submit.suppFile.createrOrOwner">Creador/a (o propietari/ària) del fitxer</message>
 	<message key="author.submit.suppFile.researchInstrument">Instrument de recerca</message>
@@ -101,7 +103,7 @@
 	<message key="author.submit.suppFile.transcripts">Transcripcions</message>
 	<message key="author.submit.suppFile.dataAnalysis">Anàlisi de les dades</message>
 	<message key="author.submit.suppFile.dataSet">Conjunt de dades</message>
-	<message key="author.submit.suppFile.sourceText">Text font</message>
+	<message key="author.submit.suppFile.sourceText">Text original</message>
 	<message key="author.submit.suppFile.briefDescription">Descripció breu</message>
 	<message key="author.submit.suppFile.contributorOrSponsor">Agència col·laboradora o patrocinadora</message>
 	<message key="author.submit.suppFile.availableToPeers">Presenteu el fitxer als revisors/ores (sense metadades), ja que això no comprometrà l'avaluació anònima.</message>
@@ -109,21 +111,20 @@
 	<message key="author.submit.suppFile.dateDescription">Data de la recopilació de les dades o de la creació de l’instrument.</message>
 	<message key="author.submit.suppFile.sourceDescription">Nom de l’estudi o punt d’origen.</message>
 	<message key="author.submit.suppFile.specifyOtherType">Especifica’n un altre</message>
-	<message key="author.submit.suppFile.noFile">No s’ha carregat cap fitxer.</message>
-	<message key="author.submit.suppFile.form.titleRequired">Introduïu el títol d’aquest fitxer addicional.</message>
+	<message key="author.submit.suppFile.noFile">No s'ha carregat cap fitxer.</message>
+	<message key="author.submit.suppFile.form.titleRequired">Introduïu el títol d'aquest fitxer addicional.</message>
 	<message key="author.submit.suppFile.form.subjectRequired">Introduïu un tema.</message>
 	<message key="author.submit.suppFile.form.descriptionRequired">Introduïu una descripció.</message>
 	<message key="author.suppFile.suppFilePublicIdentificationExists">La identificació pública del fitxer addicional ja existeix.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Identificador públic del fitxer addicional</message>
-	<message key="author.submit.confirmationDescription">Per enviar el vostre manuscrit a {$journalTitle} feu clic a «Finalitza la tramesa». El contacte principal de la tramesa rebrà un justificant de recepció per correu electrònic i podrà visualitzar el progrés de la tramesa a través del procés editorial en iniciar la sessió al lloc web de la revista. Us agraïm el vostre interès per publicar a {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">Per trametre el vostre manuscrit a {$journalTitle} feu clic a «Finalitza la tramesa». El contacte principal de la tramesa rebrà un justificant de recepció per correu electrònic i podrà visualitzar el progrés de la tramesa a través del procés editorial quan iniciï la sessió al lloc web de la revista. Us agraïm el vostre interès per publicar a {$journalTitle}.</message>
 	<message key="author.submit.noFiles">No s’ha adjuntat cap fitxer a aquesta tramesa.</message>
 	<message key="author.submit.filesSummary">Resum dels fitxers</message>
 	<message key="author.submit.finishSubmission">Finalitza la tramesa</message>
 	<message key="author.submit.submissionComplete">S’ha completat la tramesa. Us agraïm el vostre interès per publicar a {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Si aquesta tramesa té un format que es pugui publicar sense fer-hi cap revisió, edició o maquetació, la podeu assignar directament a la darrera etapa de la cua d’edició<a href="{$expediteUrl}" class="action"> si feu clic aquí</a>. (Important: només els editors/ores de la revista poden utilitzar aquesta opció per a les trameses.)]]></message>
+	<message key="author.submit.expedite"><![CDATA[Si aquesta tramesa té un format que es pugui publicar sense fer-hi cap revisió, edició o maquetació, la podeu assignar directament a la darrera etapa de la cua d’edició si <a href="{$expediteUrl}" class="action">feu clic aquí</a>. (Nota: Només els editors/ores de la revista poden utilitzar aquesta opció per a les trameses.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Carrega la versió de l’autor/a</message>
 	<message key="author.article.copyeditedFile">Fitxer corregit</message>
-	<message key="author.article.authorRevisedFile">Fitxer de l’autor/a</message>
-	<message key="author.submit.authorSubmitLoginMessage">Per enviar una tramesa a aquesta revista cal tenir un compte d’usuari. Això permet als editors/ores fer un seguiment de les vostres trameses, enviar-vos avisos quan canviï l’estat de les trameses i sol·licitar-vos informació addicional, si escau.</message>
-	<message key="author.submit.qualifyForWaiver">Si us plau, valora no cobrar la tarifa d'aquest article</message>
-</locale>
+	<message key="author.article.authorRevisedFile">Fitxer de l'autor/a</message>
+	<message key="author.submit.authorSubmitLoginMessage">Per enviar una tramesa a aquesta revista cal tenir un compte d’usuari/ària. Això permet als editors/ores fer un seguiment de les vostres trameses, enviar-vos avisos quan canviï l’estat de les trameses i sol·licitar-vos informació addicional, si escau.</message>
+</locale> 

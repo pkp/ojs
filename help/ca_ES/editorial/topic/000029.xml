@@ -7,11 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Section Editor's Role Index - Editing - Proofreading
   *
   -->
 
-<topic id="editorial/topic/000029" locale="en_US" title="Proofreading" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+<topic id="editorial/topic/000029" locale="ca_ES" title="Proofreading" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
 	<section>
 		<![CDATA[<p>Una vegada el maquetista ha notificat a l'editor/a de secció que ha enllestit les galerades, l'editor/a de secció ha de seleccionar un corrector/a de proves, si encara no ho ha fet. A continuació, l'editor/a de secció ha d'enviar un correu electrònic de sol·licitud a l'autor/a per començar el procés de revisió. Quan hagi acabat de revisar les galerades i els fitxers addicionals, en cas que n'hi hagi, l'autor/a ha d'enviar un correu electrònic de finalització al corrector/a de proves i amb còpia a l'editor/a de secció. En cas que l'autor/a o el corrector/a de proves trobin errors tipogràfics o de format a les galerades, els han d'introduir al quadre de text «Correccions» de la pàgina de correcció de proves perquè no tenen permís d'escriptura per a les galerades. Una vegada ha acabat la revisió de les galerades i dels fitxers addicionals, en cas que n'hi hagi, el corrector/a de proves ha d'enviar un correu electrònic de notificació al maquetista amb còpia a l'editor/a de secció i aquest ha de començar a aplicar les correccions a les galerades i als fitxers addicionals, en cas que n'hi hagi. Finalment, el maquetista ha de notificar a l'editor/a de secció que ja es pot planificar la publicació de la tramesa. En aquest punt, és possible que l'editor/a de secció vulgui tornar a revisar els fitxers. En cas que estigui satisfet amb el resultat, l'editor/a de secció ha de planificar la publicació de la tramesa i ha de triar un número de la revista a «Planificació» i fer clic a «Enregistra». A continuació, la tramesa entra al {help_topic key="publishing.index" text="procés de publicació"}.</p><p>Tingueu en compte que l'editor/a pot planificar la publicació d'una tramesa en qualsevol punt del procés d'edició. Els maquetistes i els correctors/ores de proves han de conèixer aquesta informació i també han de poder previsualitzar el número de la revista abans que es publiqui.</p>]]>
 	</section>

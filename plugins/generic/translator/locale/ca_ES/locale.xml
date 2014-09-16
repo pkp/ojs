@@ -1,22 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
   * locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the ca_ES (Català) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
   *
-  * $Id$
+  * Localization strings for the ca_ES (Català) locale.
   -->
  
 <locale name="ca_ES" full_name="Català">
-	<message key="plugins.generic.translator.name">Connector de traducció</message>
-	<message key="plugins.generic.translator.description">Aquest connector permet el manteniment web dels fitxers de traducció.</message>
+	<message key="plugins.generic.translator.name">Mòdul de traducció</message>
+	<message key="plugins.generic.translator.description">Aquest mòdul permet el manteniment web dels fitxers de traducció.</message>
 	<message key="plugins.generic.translator.longdescription">Aquesta àrea permet a l”administrador/a del lloc web crear, modificar i revisar les traduccions de l'OJS. Afecta tot el lloc web, per la qual cosa no s'ha d'utilitzar per personalitzar una única revista de l'OJS. Si corregiu o creeu una traducció, us recomanem que l'envieu al Public Knowledge Project perquè es pugui distribuir amb versions futures.</message>
 	<message key="plugins.generic.translator.localeDescription">Aquesta pàgina conté una llista de tots els components d'una traducció de l'OJS i permet que el traductor els pugui editar. Perquè la traducció a una llengua sigui completa s'han d'haver traduït tots els components.</message>
 	
-	<message key="plugins.generic.translator.tarMissing">La funció d'exportació d'aquest connector s'ha desactivat perquè no s'ha pogut trobar el binari tar configurat al sistema. Assegureu-vos de tenir instal·lat el programa tar i a continuació configureu la ruta del binari tar a la secció config.inc.php's [cli]. </message>
+	<message key="plugins.generic.translator.tarMissing">La funció d'exportació d'aquest mòdul s'ha desactivat perquè no s'ha pogut trobar el binari tar configurat al sistema. Assegureu-vos de tenir instal·lat el programa tar i a continuació configureu la ruta del binari tar a la secció config.inc.php's [cli]. </message>
 	
 	<message key="plugins.generic.translator.localeName">Nom de la configuració regional</message>
 	<message key="plugins.generic.translator.localeKey">Clau</message>

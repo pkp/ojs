@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/reports/timedView/locale/ca_ES/locale.xml
   *
@@ -8,25 +7,29 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Localization strings.
   -->
 
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.reports.timedView.displayName">Informes de lectura en el temps</message>
-	<message key="plugins.reports.timedView.description">Aquest connector ofereix un informe en format CSV detallant el número de lectors per article, filtrats per la finestra de temps que s'indiqui.</message>
+	<message key="plugins.reports.timedView.description">Aquest mòdul ofereix un informe en format CSV detallant el número de lectors per article, filtrats per la finestra de temps que s'indiqui.</message>
 
-	<message key="plugins.reports.timedView.form.dateStartRequired">Es necessaria una data d'inici.</message>
+	<message key="plugins.reports.timedView.form.dateStartRequired">Es necessària una data d'inici.</message>
 	<message key="plugins.reports.timedView.form.dateStartValid">Si us plau, escull una data d'inici vàlida.</message>
-	<message key="plugins.reports.timedView.form.dateEndRequired">Es necessaria una data de finalització.</message>
+	<message key="plugins.reports.timedView.form.dateEndRequired">Es necessària una data de finalització.</message>
 	<message key="plugins.reports.timedView.form.dateEndValid">Si us plau, escull una data de finalització vàlida.</message>
 	<message key="plugins.reports.timedView.form.generate">Genereu informe</message>
 	<message key="plugins.reports.timedView.form.clearLogs">Neteja el registre</message>
-	<message key="plugins.reports.timedView.form.clearLogs.description">Escolliu una data per a eliminar les entrades prèvies al registre. Qualsevol entrada al registre feta abans de la data escollida serà eliminada. Tingueu en compte que això només afecta al connector d'informes de lectura en el temps i no al cómput de lectures fets per altres complements (p.e.: El complement general de lectures).</message>
+	<message key="plugins.reports.timedView.form.clearLogs.description">Escolliu una data per a eliminar les entrades prèvies al registre. Qualsevol entrada al registre feta abans de la data escollida serà eliminada. Tingueu en compte que això només afecta al mòdul d'informes de lectura en el temps i no al còmput de lectures fets per altres complements (p.e.: El complement general de lectures).</message>
 	<message key="plugins.reports.timedView.form.clearLogs.confirm">Esteu segurs de voler eliminar aquestes entrades? Aquest procés NO és reversible.</message>
 
 	<message key="plugins.reports.timedView.report.articleId">ID d'article</message>
 	<message key="plugins.reports.timedView.report.articleTitle">Títol d'article</message>
 	<message key="plugins.reports.timedView.report.datePublished">Data de publicació</message>
-	<message key="plugins.reports.timedView.report.abstractViews">Lectures d'abstract</message>
+	<message key="plugins.reports.timedView.report.abstractViews">Lectures de resums</message>
 	<message key="plugins.reports.timedView.report.galleyViews">Total de lectures de l'article</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">Marca per a utilitzar les estadístiques rebudes per l'antic mòdul d'informes de lectura en el temps. Si vols generar informes de lectura en el temps amb les noves dades estadístiques, deixa aquest camp sense marcar.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">Si selecciones un període de temps llarg en la configuració de les dades estadístiques, aquest informe pot trigar una estona a completar-se. Si pren massa temps, la connexió podria interrompre's i no rebries el fitxer amb l'informe. En aquest cas, torna a intentar-ho amb un període de temps més curt (o contacta amb l'administrador del servidor per a incrementar el temps d'execució).</message>
 </locale>

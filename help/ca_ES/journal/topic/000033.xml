@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000033.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Management Pages - Merge Users
   *
   -->
 
-<topic id="journal/topic/000033" locale="en_US" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+<topic id="journal/topic/000033" locale="ca_ES" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
 	<section>
 		<![CDATA[<p>The Merge Users feature, available from Journal Management under the Users heading, allows the Journal Manager to merge two user accounts into a single account, transferring edit assignments, submissions, and numerous other records from one account to the other and effectively deleting the first.</p>
 		<p>The following items are transferred:</p>

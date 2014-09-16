@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * plugins/generic/browse/locale/ca_ES/locale.xml
   *
@@ -8,13 +7,15 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Browse plugin localization strings
   -->
  
 <locale name="ca_ES" full_name="Català">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">Navega</message>
-	<message key="plugins.generic.browse.description">Aquest connector activa la navegació per seccions i/o tipus d'identificació.</message>
+	<message key="plugins.generic.browse.description">Aquest mòdul activa la navegació per seccions i/o tipus d'identificació.</message>
 
 	<!-- URN manager options, setting -->
 	<message key="plugins.generic.browse.manager.settings">Configuració</message>
@@ -36,5 +37,4 @@
 	<message key="plugins.generic.browse.search.identifyTypes">Per tipus d'identificació</message>
 	<message key="plugins.generic.browse.search.identifyTypeIndex">Navega per índex de tipus d'identificació</message>
 	<message key="plugins.generic.browse.search.identifyTypeDetails">Detalls de tipus d'identificació</message>
-
 </locale>

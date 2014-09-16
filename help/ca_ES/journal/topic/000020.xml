@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000020.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Roles - Proofreader 
   *
   -->
 
-<topic id="journal/topic/000020" locale="en_US" title="Proofreader" toc="journal/toc/000003" key="journal.roles.proofreader">
+<topic id="journal/topic/000020" locale="ca_ES" title="Proofreader" toc="journal/toc/000003" key="journal.roles.proofreader">
 	<section>
 		<![CDATA[<p>The Proofreader carefully reads over the galleys in the various formats in which the journal publishes (as does the author). The Proofreader (and the Author) record any typographic and formatting errors for the Layout Editor to fix. In the case of some journals, the Editor or Section Editor will also serve as Proofreader.</p><p>More information can be found {help_topic key="editorial.proofreadersRole" text="here"}.</p>]]>	
 	</section>

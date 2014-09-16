@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "../../../../lib/pkp/dtd/helpTopic.dtd">
-
 <!--
   * 000015.xml
   *
@@ -14,11 +13,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
+  *
   * Roles - Subscription Manager 
   *
   -->
 
-<topic id="journal/topic/000032" locale="en_US" title="Subscription Manager" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+<topic id="journal/topic/000032" locale="ca_ES" title="Subscription Manager" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
 	<section>
 		<![CDATA[<p>The Subscription Manager manages the journal's Subscriptions and Subscription Types.</p><p>More information on managing subscriptions can be found {help_topic key="journal.managementPages.subscriptions" text="here"}.</p>]]>
 	</section>
