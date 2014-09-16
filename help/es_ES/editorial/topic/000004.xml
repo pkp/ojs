@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Section Editor's Role Index 
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000004" locale="es_ES" title="Rol del editor/a de sección" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
 	<section>
-		<![CDATA[<p>Normalmente, los editores/as de sección gestionan la revisión de los envíos y la edición de aquellos que se aceptan. Sin embargo, dependiendo de la política de la revista, el editor/a de sección que el editor/a asignó para el envío puede pedir verlo sólo en la fase de revisión, después de la cual, si se acepta el envío, el editor/a se hace cargo del resto (bajo el rol de editor/a de sección). Los editores/as pueden enviar una solicitud a los editores/as de sección para ver un envío durante el proceso editorial.</p>]]>	
+		<![CDATA[<p>Los editores/as de sección normalmente gestionan la revisión de los envíos, así como la edición de aquellos que se aprueban. Sin embargo, y dependiendo de las políticas de la revista, se puede pedir al editor/a de sección (al cual el editor/a asignó un envío) que lo revise únicamente durante la fase de revisión. Después de esta fase, y si se acepta el envío, el editor/a se hará cargo del resto (asumiendo el rol de editor/a de sección). Los editores/as piden a los editores/as de sección que revisen un envío durante el proceso editorial.</p>]]>	
 	</section>
-</topic>
+</topic> 

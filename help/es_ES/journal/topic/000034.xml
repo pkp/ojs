@@ -7,14 +7,15 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Announcements 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000034" locale="es_ES" title="Avisos" toc="journal/toc/000001" key="journal.managementPages.announcements">
 	<section>
-		<![CDATA[<p>OJS permite al gestor/a de la revista colgar avisos disponibles para los lectores/as que visitan el sitio. Los avisos colgados aparecen en la página Avisos y, de manera opcional, en la página de inicio de la revista.</p><p><em>Instalar el módulo de avisos</em>. El gestor/a de la revista debe indicar en el paso 4.4 de la configuración de la revista que se publicarán avisos. Además, debe establecer si se mostrarán en la página inicial o no. También se puede ofrecer un texto introductorio que aparecerá en la parte superior de la página Avisos.</p><p><em>Crear avisos</em>. Para crear un aviso el gestor/a de la revista selecciona el tipo de aviso, indica un título y facilita una descripción corta y una completa del aviso. La versión corta se muestra a los lectores/as como resumen y la versión completa cuando los lectores/as deciden leer todos los detalles del aviso. También se puede indicar una fecha de vencimiento. Los avisos que la incluyan no podrán visualizarse pasado el plazo.</p>]]>
+		<![CDATA[<p>OJS permite publicar avisos a los gestores/as de la revista para los lectores/as que visitan el sitio web. Los avisos publicados aparecen en la página Avisos y, de manera opcional, en la página de inicio de la revista.</p><p><em>Implementación del módulo de avisos</em>. El gestor/a de la revista debe indicar en el paso 4.4 de la configuración de la revista que se publicarán avisos. Además, debe establecer si se mostrarán o no en la página inicial de la revista. También se puede proporcionar un texto introductorio que aparecerá en la parte superior de la página Avisos.</p><p><em>Creación avisos</em>. Para crear un aviso el gestor/a de la revista debe seleccionar el tipo de aviso (si lo hubiera), indicar un título y facilitar una breve descripción y otra completa del mismo. La versión corta se muestra a los lectores/as como resumen mientras que la versión completa se muestra cuando los lectores deciden leer todos los detalles del aviso. También se puede indicar una fecha de vencimiento. Los avisos que incluyen una fecha de vencimiento no se muestran a los lectores/as pasado el plazo.</p>]]>
 	</section>
 
-</topic>
+</topic> 

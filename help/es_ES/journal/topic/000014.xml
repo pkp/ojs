@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Users - Email Users
   *
-  * $Id$
   -->
 
-<topic id="journal/topic/000014" locale="es_ES" title="Contactar por correo a los usuarios/as" toc="journal/toc/000002" key="journal.users.emailUsers">
+<topic id="journal/topic/000014" locale="es_ES" title="Enviar un correo electrónico a los usuarios/as" toc="journal/toc/000002" key="journal.users.emailUsers">
 	<section>
-		<![CDATA[<p>El gestor/a de la revista puede contactar a todos los usuarios/as por correo electrónico o a un subgrupo. Cada vez que se realice una publicación todos los lectores/as recibirán una notificación a través del correo electrónico con una copia de la Tabla de contenidos para ese número o, en el caso de {help_topic key="publishing.index" text="publicaciones"} continuas, con copia del título y del autor/a del envío. La revista también debe disponer de una Política de privacidad, que se incluye en la Configuración del sistema y se puede consultar en el apartado "Acerca de la revista". En ella se describe la privacidad de los usuarios/as registrados/as.</p>]]>	
+		<![CDATA[<p>El gestor/a de la revista puede enviar correos electrónicos a todos los usuarios/as o a un subconjunto de ellos. Tenga en cuenta que, cada vez que se lleve a cabo una publicación, todos los lectores/as recibirán una notificación a través del correo electrónico con una copia de la Tabla de contenidos para ese número o, en el caso de {help_topic key="publishing.index" text="publicaciones"} continuas, con copia del título y del autor/a del envío. La revista también debería tener una política de privacidad disponible, introducida durante la Configuración y disponible en Acerca de la revista, en la que se describe cómo respetar la privacidad de los usuarios/as registrados de esta revista.</p>]]>	
 	</section>
-</topic>
+</topic> 

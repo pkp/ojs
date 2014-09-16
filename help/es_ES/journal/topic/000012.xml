@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Users - Create New User 
   *
-  * $Id$
   -->
 
-<topic id="journal/topic/000012" locale="es_ES" title="Crear un nuevo usuario/a" toc="journal/toc/000002" key="journal.users.createNewUser">
+<topic id="journal/topic/000012" locale="es_ES" title="Crear un usuario/a nuevo" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>El gestor/a de la revista puede utilizar el enlace Crear un nuevo usuario/a para registrar a alguien y asignarle un rol, que puede ser desde un gestor/a de revista hasta un lector. Al iniciar sesión en la revista, el usuario/a puede completar y modificar la información del perfil que ingresó el gestor/a de la revista.</p><p><em>Cambiar contraseña</em>. Los usuarios/as pueden cambiar su contraseña una vez que hayan iniciado sesión en la revista. Cuando la contraseña haya sido asignada al usuario/a, el gestor/a de la revista ya no podrá acceder. No obstante, el sistema puede generar una nueva contraseña y enviarla por correo electrónico a los usuarios/as que hagan clic en el enlace "{translate key="¿Ha olvidado su contraseña?"}" que aparece debajo de la caja de texto de inicio de sesión.</p><p><em>Registrar a un usuario/a existente</em><br /> El gestor/a de la revista puede asignar uno o más roles nuevos a un usuario existente.</p><p><em>Sincronizar usuarios/as</em><br /> La sincronización del registro sincronizará a todos los usuarios/as previamente registrados que realicen un rol específico en una revista específica para desempeñar el mismo rol en esta revista. Esta función permite a un conjunto de usuarios/as (ej. revisores/as) estar sincronizados entre distintas revistas.</p>]]>
+		<![CDATA[<p>El gestor/a de la revista puede usar el vínculo Crear nuevo usuario/a para registrar a alguien y asignarle un rol, desde gestor/a de la revista a lector/a. Una vez conectado a la revista, el usuario/a puede completar y cambiar la información del perfil introducida por el gestor/a de la revista.</p><p><em>Cambiar contraseña</em>. Los usuarios/as pueden cambiar su contraseña cuando inicien sesión en la revista. Cuando la contraseña se asigne al usuario/a, el gestor/a de la revista ya no podrá acceder a ella. No obstante, el sistema creará una nueva contraseña y la enviará por correo electrónico a los usuarios/as que hagan clic en el enlace "{translate key="user.login.forgotPassword"}" de la casilla de inicio de sesión.</p><p><em>Registrar usuario/a existente</em><br /> El gestor/a de la revista puede asignar uno o más roles a un usuario/a existente.</p><p><em>Sincronizar usuarios/as</em><br /> La sincronización de registros hará posible el registro de todos los usuarios/as registrados en el rol especificado en la revista especificada con el mismo rol en esta revista. Esta función permite que un grupo común de usuarios/as (p. ej. los revisores/as) esté sincronizado entre revistas.</p>]]>
 	</section>
-</topic>
+</topic> 

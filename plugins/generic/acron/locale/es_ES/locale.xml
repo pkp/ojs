@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
-
 <!--
   * locale.xml
   *
@@ -8,15 +7,17 @@
   * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (Español) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * Localization strings for the es_ES (Español (España)) locale.
   *
   -->
  
-<locale name="es_ES" full_name="España Castellano">
-	<message key="plugins.generic.acron.name">Acron Plugin</message>
-	<message key="plugins.generic.acron.description"><![CDATA[Este plugin pretende reducir la dependencia de OCS de las tareas periódicas de programación tales como 'cron.']]></message>
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.acron.name">Módulo Acron</message>
+	<message key="plugins.generic.acron.description"><![CDATA[Este módulo intenta reducir la dependencia de OCS en herramientas de programación periódica, como "cron".]]></message>
+	<message key="plugins.generic.acron.enabled">Se habilitó el módulo Acron.</message>
+	<message key="plugins.generic.acron.disabled">Se deshabilitó el módulo Acron.</message>
 
-	<message key="plugins.generic.acron.reload">Recargar las tareas programadas</message>
-	<message key="plugins.generic.acron.enabled">El plugin Acron ha sido habilitado.</message>
-	<message key="plugins.generic.acron.disabled">El plugin Acron ha sido deshabilitado.</message>
-</locale>
+	<message key="plugins.generic.acron.reload">Volver a cargar tareas planificadas</message>
+</locale> 

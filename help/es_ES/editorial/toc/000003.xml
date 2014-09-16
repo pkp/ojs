@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000003.xml
   *
@@ -8,16 +7,17 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Tabla de contenido para el proceso editorial - Rol del editor/a - Resumen de envíos
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * table of contents for Editorial Process - Editor's Role - Submission Summary
+  *
   -->
 
-<toc id="editorial/toc/000003" locale="es_ES" title="Resumen de envíos" parent_topic="editorial/topic/000003">
-	<topic id="editorial/topic/000019" title="Gestión de envíos" />
-	<topic id="editorial/topic/000020" title="Metadatos de envíos" />
+<toc id="editorial/toc/000003" locale="es_ES" title="Resumen del envío" parent_topic="editorial/topic/000003">
+	<topic id="editorial/topic/000019" title="Gestión del envío" />
+	<topic id="editorial/topic/000020" title="Metadatos del envío" />
 
 	<breadcrumb url="editorial/topic/000000" title="Proceso editorial" />
 	<breadcrumb url="editorial/topic/000001" title="Rol del editor/a" />
-	<breadcrumb url="editorial/topic/000003" title="Resumen de envíos" />
-</toc>
+	<breadcrumb url="editorial/topic/000003" title="Resumen del envío" />
+</toc> 

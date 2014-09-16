@@ -7,9 +7,10 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * table of contents for Site Administration. 
   *
-  * $Id$
   -->
 
 <toc id="site/toc/000000" locale="es_ES" title="Administración del sitio" parent_topic="site/topic/000000">
@@ -17,4 +18,4 @@
 	<topic id="site/topic/000002" title="Gestión del sitio" />
 	<topic id="site/topic/000003" title="Funciones administrativas" />
 	<breadcrumb url="site/topic/000000" title="Administración del sitio" />
-</toc>
+</toc> 

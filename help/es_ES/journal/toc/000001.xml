@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000001.xml
   *
@@ -8,9 +7,10 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * table of contents for Journal Management - Management Pages. 
   *
-  * $Id$
   -->
 
 <toc id="journal/toc/000001" locale="es_ES" title="Páginas de gestión" parent_topic="journal/topic/000001">
@@ -21,14 +21,14 @@
 	<topic id="journal/topic/000007" title="Idiomas" />
 	<topic id="journal/topic/000029" title="Cabecera" />
 	<topic id="journal/topic/000035" title="Pagos" />
-	<topic id="journal/topic/000006" title="Plantillas de correo electrónicos" />
+	<topic id="journal/topic/000006" title="Plantillas de correo electrónico" />
 	<topic id="journal/topic/000009" title="Herramientas de lectura" />
 	<topic id="journal/topic/000004" title="Configuración" />
-	<topic id="journal/topic/000008" title="Estadísticas &amp; Informes" />
+	<topic id="journal/topic/000008" title="Estadísticas e informes" />
 	<topic id="journal/topic/000025" title="Suscripciones" />
-	<topic id="journal/topic/000030" title="Conectores del sistema" />
+	<topic id="journal/topic/000030" title="Módulos del sistema" />
 	<topic id="journal/topic/000031" title="Importar/Exportar datos" />
 
 	<breadcrumb url="journal/topic/000000" title="Gestión de la revista" />
 	<breadcrumb url="journal/topic/000001" title="Páginas de gestión" />
-</toc>
+</toc> 

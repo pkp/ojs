@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * Localized email templates XML file.
+  *
+  -->
+
+<email_texts locale="es_ES">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Objeto a revisar: Recordatorio de fecha de vencimiento</subject>
+		<body>Apreciado/da {$authorName}:
+
+Este es un recordatorio del objeto de revisión {$objectForReviewTitle} previsto para la fecha {$objectForReviewDueDate}.
+
+Para enviar tu objeto de revisión, es necesario que entres en el sitio web de la revista y completes el proceso de envío del artículo. Para tu comodidad, te mandamos la URL del envío.
+
+URL: {$submissionUrl}
+
+Por favor, contacta con nosotros si tienes algún problema o duda sobre este objeto de revisión.
+
+Quedamos a la espera de tu envío, muy agradecidos por tu contribución a la revista.
+
+{$editorialContactSignature}</body>
+		<description>Este es un correo electrónico generado automáticamente y enviado al autor del objeto de revisión como recordatorio cuando la fecha de vencimiento se acerca.</description>
+	</email_text>
+  <email_text key="OFR_REVIEW_REMINDER_LATE">
+    <subject>Objeto a revisar: Vencimiento de la fecha de revisión</subject>
+    <body>Apreciado/da {$authorName}:
+
+Este es un recordatorio del objeto de revisión {$objectForReviewTitle} previsto para la fecha {$objectForReviewDueDate} pero que todavía no hemos recibido.
+
+Para enviar tu objeto de revisión, es necesario que entres en el sitio web de la revista y completes el proceso de envío del artículo. Para tu comodidad, te mandamos la URL del envío.
+
+URL: {$submissionUrl}
+
+Por favor, contacta con nosotros si tienes algún problema o duda sobre este objeto de revisión.
+
+Quedamos a la espera de tu envío, muy agradecidos por tu contribución a la revista.
+
+{$editorialContactSignature}</body>
+    <description>Este es un correo electrónico generado automáticamente y enviado al autor del objeto de revisión como recordatorio cuando la fecha de vencimiento se ha superado.</description>
+  </email_text>
+  <email_text key="OFR_REVIEWER_REMOVED">
+    <subject>Objeto a revisar</subject>
+    <body>Apreciado/da {$authorName}:
+
+Este correo electrónico confirma que ya no eres revisor de {$objectForReviewTitle}.
+
+Esperamos que consideres revisar otros objetos de nuestra lista, ja sea ahora o en un futuro.
+
+{$editorialContactSignature}</body>
+    <description>Este correo lo envía el editor a los autores interesados cuando el objeto de revisión ya no está disponible.</description>
+  </email_text>
+  <email_text key="OFR_OBJECT_ASSIGNED">
+    <subject>Objeto a revisar: Objeto asignado</subject>
+    <body>Apreciado/da {$authorName}:
+
+Este correo confirma que se te ha asignado {$objectForReviewTitle} y que la revisión se ha de completar antes de  {$objectForReviewDueDate}.
+
+Te pedimos que confirmes que la dirección de correo de tu perfil está actualizada.
+
+Tu dirección actual es:
+{$authorMailingAddress}
+
+Si esta dirección fuese incompleta o ya no es correcta, vista tu perfil de usuario para actualizarla:
+
+URL del perfil de usuario: {$userProfileUrl}
+
+Para enviar tu objeto de revisión, es necesario que entres en el sitio web de la revista y completes el proceso de envío del artículo. Para tu comodidad, te añadimos la URL del envío.
+
+URL: {$submissionUrl}
+
+Por favor, contacta con nosotros si tienes alguna pregunta o duda sobre este objeto de revisión.
+
+Quedamos a la espera de tu envío, muy agradecidos por tu contribución a la revista.
+
+{$editorialContactSignature}</body>
+    <description>Este correo lo envía el editor al autor del objeto de revisión cuando el editor asigna el objeto al autor.</description>
+  </email_text>
+  <email_text key="OFR_OBJECT_DENIED">
+    <subject>Objeto a revisar</subject>
+    <body>Apreciado/da {$authorName}:
+
+Desgraciadamente, en estos momentos no te podemos asignar {$objectForReviewTitle} como objeto de revisión.
+
+Esperamos que consideres revisar otros objetos de nuestra lista, ja sea ahora o en un futuro.
+
+{$editorialContactSignature}</body>
+    <description>Este correo lo envía el editor a los autores interesados cuando el objeto ya no está disponible para ser revisado.</description>
+  </email_text>
+  <email_text key="OFR_OBJECT_REQUESTED">
+    <subject>Objeto a revisar: Objeto solicitado</subject>
+    <body>Apreciado/da {$editorName}:
+
+Estoy interesado en escribir una revisión del objeto {$objectForReviewTitle}.
+
+¿Podría confirmar que el objeto todavía está disponible para ser revisado?
+
+{$authorContactSignature}</body>
+    <description>Este correo lo envía al editor el autor interesado en escribir una revisión de un objeto de la lista.</description>
+  </email_text>
+  <email_text key="OFR_OBJECT_MAILED">
+    <subject>Objeto a revisar: Objeto enviado</subject>
+    <body>Apreciado/da {$authorName}:
+
+Este correo confirma que os hemos enviado una copia de {$objectForReviewTitle} a la siguiente dirección de correo de tu perfil de usuario: 
+{$authorMailingAddress}
+
+Para enviar tu objeto de revisión, es necesario que entres en el sitio web de la revista y completes el proceso de envío del artículo.
+
+URL del envío: {$submissionUrl}
+
+Por favor, contacta con nosotros si tienes algún problema o duda sobre este objeto de revisión.
+
+{$editorialContactSignature}</body>
+    <description>Este correo lo envía el editor a los autores interesados cuando el editor ha enviado por correo al autor una copia del objeto.</description>
+  </email_text>
+</email_texts>

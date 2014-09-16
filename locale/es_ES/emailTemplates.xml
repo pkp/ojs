@@ -1,1027 +1,1014 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd"> 
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * emailTemplateData.xml
+  * locale/es_ES/emailTemplateData.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
+  * Localized email templates XML file.
   -->
+
 <email_texts locale="es_ES">
 	<email_text key="NOTIFICATION">
 		<subject>Nueva notificación de {$siteTitle}</subject>
-		<body>Ha recibido una nueva notificación de {$siteTitle}: 
+		<body>Recibió una nueva notificación de {$siteTitle}: 
 
-{$notificationContents} 
+{$notificationContents}
 
-Enlace: {$url} 
+Enlace: {$url}
 
 {$principalContactSignature}</body>
-		<description>Este correo electrónico se envía a usuarios/as registrados que han seleccionado recibir este tipo de notificaciones por correo.</description>
+		<description>Este correo electrónico se envía a usuarios/as registrados que seleccionaron recibir este tipo de notificaciones por correo.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
 		<subject>Nueva notificación de {$siteTitle}</subject>
-		<body>Ha recibido una nueva notificación de {$siteTitle}: 
--- 
-{$notificationContents} 
+		<body>Recibió una nueva notificación de {$siteTitle}:
+--
+{$notificationContents}
 
-Enlace: {$url} 
--- 
+Enlace: {$url}
+--
 
-Si desea dejar de recibir notificaciones por correo, vaya a {$unsubscribeLink} y escriba su dirección de correo electrónico y contraseña. 
+Si desea dejar de recibir notificaciones por correo, vaya a {$unsubscribeLink}.
 
 {$principalContactSignature}</body>
 		<description>Este correo electrónico se envía a los usuarios/as no registrados que aparecen en la lista de distribución de notificaciones por correo.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bienvenido/a a la lista de distribución de correo de {$siteTitle}.</subject>
-		<body>Se ha inscrito para recibir notificaciones de {$siteTitle}. 
+		<subject>Bienvenido/a a la lista de distribución de correo {$siteTitle}.</subject>
+		<body>Se inscribió para recibir notificaciones de {$siteTitle}. 
 
-Haga clic en el enlace para confirmar su petición y añadir su dirección a la lista de distribución de correo electrónico: 
-{$confirmLink} 
+Haga clic en el enlace para confirmar su solicitud y añadir su dirección de correo electrónico a la lista de distribución de correo: {$confirmLink}
 
-Si desea dejar de recibir notificaciones por correo, vaya a {$unsubscribeLink}
+Si desea dejar de recibir notificaciones por correo, vaya a {$unsubscribeLink}.
 
 {$principalContactSignature}</body>
 		<description>Este correo electrónico se envía a los usuarios/as no registrados que acaban de inscribirse en la lista de distribución de notificaciones por correo.</description>
 	</email_text>
-		<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Confirmación de restablecimiento de la contraseña</subject>
-		<body>Hemos recibido una petición para restablecer su contraseña para el sitio web de {$siteTitle}. 
+	<email_text key="PASSWORD_RESET_CONFIRM">
+		<subject>Confirmación del restablecimiento de la contraseña</subject>
+		<body>Recibimos una solicitud para restablecer su contraseña para el sitio web {$siteTitle}.
 
-Si no hizo esta petición, ignore este correo y su contraseña no cambiará. Si desea restablecer su contraseña, haga clic en la URL que aparece a continuación. 
+Si no realizó esta solicitud, ignore este correo electrónico y su contraseña no cambiará. Si desea restablecer su contraseña, haga clic en la URL que aparece a continuación. 
 
-Restablecer mi contraseña: {$url} 
+Restablecer mi contraseña: {$url}
 
 {$principalContactSignature}</body>
-		<description>Este correo electrónico se envía a los usuarios/as registrados cuando indican que han olvidado su contraseña o no pueden iniciar sesión. Este correo propociona una URL en la que pueden hacer clic para restablecer su contraseña.</description>
+		<description>Este correo electrónico se envía a los usuarios/as registrados cuando indican que olvidaron su contraseña o no pueden iniciar sesión. Se proporciona una URL en la que los usuarios/as pueden hacer clic para restablecer su contraseña.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Contraseña restablecida</subject>
-		<body>Su contraseña para el sitio web de {$siteTitle} se ha restablecido con éxito. Conserve este nombre de usuario/a y contraseña ya que es necesario para realizar cualquier acción en la revista. 
+		<subject>Restablecer contraseña</subject>
+		<body>Su contraseña para el sitio web {$siteTitle} se restableció con éxito.
 
-Su nombre de usuario/a: {$username} 
-Su nueva contraseña: {$password} 
+Conserve este nombre de usuario/a y contraseña, ya que se requieren para realizar cualquier acción con la revista.
+
+Su nombre de usuario/a: {$username}
+Su nueva contraseña: {$password}
 
 {$principalContactSignature}</body>
-		<description>Este correo electrónico se envía a los usuarios/as registrados cuando han restablecido su contraseña con éxito siguiendo el proceso descrito en el correo electrónico PASSWORD_RESET_CONFIRM.</description>
+		<description>Este correo electrónico se envía a los usuarios/as registrados cuando restablecen su contraseña con éxito siguiendo el proceso descrito en el correo electrónico CONFIRMACIÓN_DEL_RESTABLECIMIEMTO_DE_LA_CONTRASEÑA.</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Inscripción en la revista</subject>
-		<body>{$userFullName}: 
+		<subject>Registro en la revista</subject>
+		<body>{$userFullName} Se registró como usuario/a de {$journalName}. 
 
-Se ha registrado como usuario/a de {$journalName}. En este correo electrónico le indicamos su nombre de usuario/a y contraseña. Ambos serán necesarios para realizar cualquier tipo de acción en esta revista a través del sitio web. Puede solicitar su eliminación de la lista de usuarios/as de la revista en cualquier momento poniéndose en contacto conmigo. 
+Incluimos su nombre de usuario/a y contraseña en este correo electrónico. Ambos serán necesarios para realizar cualquier tipo de acción en esta revista a través de su sitio web. Puede solicitar su exclusión de la lista de usuarios/as de la revista en cualquier momento poniéndose en contacto conmigo. 
 
 Nombre de usuario/a: {$username} 
 Contraseña: {$password} 
 
-Gracias. 
+Gracias,
 {$principalContactSignature}</body>
 		<description>Este correo electrónico se envía a los usuarios/as que se acaban de inscribir para darles la bienvenida al sistema y proporcionarles un registro de su nombre de usuario/a y contraseña.</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>Validación de la cuenta</subject>
-		<body>{$userFullName}:
+		<body>Apreciado/da {$userFullName}
 
-Ha creado una cuenta en {$journalName}, pero antes de empezar a usarla es necesario validar su cuenta de correo electrónico. Para ello haga clic en el enlace que aparece a continuación: 
+Has creado una cuenta en {$journalName}, pero antes de empezar a usarla, es necesario validar su cuenta de correo electrónico. Para validar, haga clic en el enlace que aparece a continuación:
 
-{$activateUrl} 
+{$activateUrl}
 
-Gracias. 
+Gracias,
 {$principalContactSignature}</body>
-		<description>Este correo electrónico se envía a los usuarios/as que se acaban de inscribir para darles la bienvenida al sistema y proporcionarles un registro de su nombre de usuario/a y contraseña.</description>
+		<description>Este correo electrónico se envía a los usuarios/as que se acaban de inscribir para validar sus cuentas de correo electrónico.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Inscripción como revisor/a en {$journalName}</subject>
-		<body>Teniendo en cuenta su experiencia, nos hemos tomado la libertad de inscribir su nombre en la base de datos de revisores/as de {$journalName}. Esto no conlleva ningún tipo de obligación por su parte, simplemente nos permite comunicarnos con usted en relación a una posible revisión de un envío. Al ser invitado a revisar, tendrá la oportunidad de ver el título y el resumen del artículo en cuestión y siempre será libre de aceptar o declinar la invitación. También podrá solicitar que su nombre se elimine en cualquier momento de la lista de revisores/as. 
+		<subject>Registro como revisor/a en {$journalName}</subject>
+		<body>Teniendo en cuenta su experiencia, nos tomamos la libertad de registrar su nombre en la base de datos de revisores/as de {$journalName}. Esto no conlleva ningún tipo de obligación por su parte, simplemente nos permite comunicarnos con usted en referencia a la posibilidad de revisión de un envío. Al ser invitado a revisar, tendrá la oportunidad de ver el título y el resumen del artículo en cuestión y siempre será libre de aceptar o rechazar la invitación. También podrá solicitar que su nombre se elimine en cualquier momento de la lista de revisores/as. 
 
-Le proporcionamos un nombre de usuario/a y contraseña que se usarán en todas las interacciones con la revista a través del sitio web. Quizás desee actualizar su perfil incluyendo sus intereses de revisión. 
+Le proporcionamos un nombre de usuario/a y contraseña, que se usarán en todas las interacciones con la revista a través de su sitio web. Es posible que, por ejemplo, desee actualizar su perfil incluyendo sus intereses de revisión.
 
-Nombre de usuario/a: {$username} 
-Contraseña: {$password} 
+Nombre de usuario/a: {$username}
+Contraseña: {$password}
 
-Gracias. 
+Gracias, 
 {$principalContactSignature}</body>
-		<description>Este correo electrónico se envía a los revisores/as que se acaban de inscribir para darles la bienvenida al sistema y proporcionarles un registro de su nombre de usuario/a y contraseña.</description>
+		<description>Este correo electrónico se envía a los revisores/as que se acaban de registrar para darles la bienvenida al sistema y proporcionarles un registro de su nombre de usuario/a y contraseña.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
 		<subject>Publicación de un número nuevo</subject>
-		<body>Estimados lectores/as: 
+		<body>Apreciados lectores/as:
 
-{$journalName} acaba de publicar su último número en {$journalUrl}. Les invitamos a revisar su Tabla de contenidos desde aquí y después visitar nuestro sitio web para revisar artículos y otros elementos de interés. 
+{$journalName} acaba de publicar su último número en {$journalUrl}. Le invitamos a revisar su Tabla de contenidos desde aquí y después visitar nuestro sitio web para revisar artículos y otros elementos de interés.
 
-Gracias por su continuo interés en nuestro trabajo. 
+Gracias por su continuo interés en nuestro trabajo,
 {$editorialContactSignature}</body>
-		<description>Este correo electrónico se envía a los lectores/as registrados a través del enlace "Notificar usuarios/as" que se encuentra en la página de inicio del editor/a. Notifica la existencia de un nuevo número a los lectores/as y los invita a visitar la revista a través de la URL que se les proporciona.</description>
+		<description>Este correo electrónico se envía a los lectores/as registrados a través del enlace "Notificar usuarios/as" que se encuentra en el área personal del editor/a. Notifica la existencia de un nuevo número a los lectores/as y los invita a visitar la revista a través de la URL que se les proporciona.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Petición de archivo de {$journalName}</subject>
-		<body><![CDATA[Estimado/a [bibliotecario/a de la universidad] 
+		<subject>Archivar solicitud para {$journalName}</subject>
+		<body>Estimado/a [bibliotecario/a de la universidad]
 
-{$journalName} &lt;{$journalUrl}&gt; es una revista para la cual [nombre del miembro], un miembro de su facultad, ejerce de [nombre de la posición]. Esta revista pretende establecer un archivo del sistema de preservación digital LOCKSS («Lots of Copies Keep Stuff Safe») compatible con esta biblioteca y con bibliotecas de otras universidades. 
+[nombre del miembro], miembro de su facultad, fue nombrado como [título del cargo] de la revista {$journalName} &lt;{$journalUrl}&gt;. Esta revista, en conjunto con esta biblioteca y las de otras universidades, pretende establecer un archivo compatible con el sistema de preservación digital LOCKSS ("Lots of Copies Keep Stuff Safe»). 
 
-[Breve descripción de la revista] 
+[Breve descripción de la revista]
 
-La URL al manifiesto editorial sobre LOCKSS para nuestra revista es: {$journalUrl}/gateway/lockss 
+La URL al manifiesto editorial sobre LOCKSS para nuestra revista es: {$journalUrl}/gateway/lockss
 
-Tenemos entendido que ya es partícipe de LOCKSS. Sería un placer proporcionar metadatos adicionales para registrar nuestra revista con su versión de LOCKSS. 
+Entendemos que ya participa en LOCKSS. Será un placer proporcionar metadatos adicionales para registrar nuestra revista con su versión de LOCKSS.
 
-Gracias. 
-{$principalContactSignature}]]></body>
-		<description>Este correo electrónico solicita al encargado/a de un archivo LOCKSS que considere la posibilidad de incluir esta revista en su archivo. Además, proporciona la URL hacia el manifiesto editorial sobre LOCKSS en la revista.</description>
+Gracias,
+{$principalContactSignature}</body>
+		<description>Este correo electrónico solicita al encargado/a de un archivo LOCKSS que considere la posibilidad de incluir esta revista en su archivo. Además, proporciona la URL del manifiesto editorial sobre LOCKSS en la revista.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Petición de archivo de {$journalName}</subject>
-		<body><![CDATA[Estimado/a [bibliotecario/a de la universidad]: 
+		<subject>Solicitud de archivo para {$journalName}</subject>
+		<body>Estimado/a [bibliotecario/a de la universidad]
 
-{$journalName} &lt;{$journalUrl}&gt; es una revista para la cual [nombre del miembro], un miembro de su facultad, ejerce de [nombre de la posición]. Esta revista pretende establecer un archivo del sistema de preservación digital LOCKSS («Lots of Copies Keep Stuff Safe») compatible con esta biblioteca y con bibliotecas de otras universidades. 
+[nombre del miembro], miembro de su facultad, se nombró como [título del cargo] de la revista {$journalName} &lt;{$journalUrl}&gt;. Esta revista, en conjunto con esta biblioteca y las de otras universidades, pretende establecer un archivo compatible con el sistema de   preservación digital LOCKSS ("Lots of Copies Keep Stuff Safe»). 
 
-[Breve descripción de la revista] 
+[Breve descripción de la revista]
 
-El programa LOCKSS &lt;http://lockss.org/&amp;gt&gt;, una iniciativa internacional de editores/bibliotecas, es un ejemplo en uso de una conservación y almacenamiento de archivos repartidos. A continuación hay una explicación más detallada. El programa, que funciona en equipos personales convencionales, es gratuito; el sistema se puede conectar a internet fácilmente y es sencillo de mantener. 
+El programa LOCKSS &lt;http://lockss.org/&gt;, una iniciativa internacional de bibliotecas y editoriales, es un ejemplo funcional de repositorio de conservación y archivo. A continuación, podrá encontrar información detallada sobre LOCKSS. El software, que se ejecuta en un ordenador personal, es gratuito; el sistema se puede conectar a la red fácilmente y apenas necesita mantenimiento continuado.
 
-Para ayudar en el archivo de nuestra revista, le invitamos a convertirse en miembro de la comunidad LOCKSS y así ayudar a recopilar y conservar los títulos presentados por su facultad y otros estudiosos de todo el mundo. Para hacerlo, puede pedir a alguno de sus empleados que visite el sitio web de LOCKSS para obtener información acerca del funcionamiento del sistema. Me mantengo a la espera de su respuesta acerca de la posibilidad de ofrecer este sistema de preservación digital para esta revista. 
+Para ser de utilidad en el archivo de nuestra revista, le invitamos a convertirse en miembro de la comunidad LOCKSS y así ayudarnos a recopilar y conservar los títulos presentados por su facultad y otros estudiosos de todo el mundo. Para hacerlo, puede pedir a alguno de sus empleados/as que visite el sitio web de LOCKSS para obtener información acerca del funcionamiento del sistema. Me mantengo a la espera de su respuesta acerca de la posibilidad de ofrecer este sistema de preservación digital para esta revista.
 
-Gracias. 
-{$principalContactSignature}]]></body>
-		<description>Este correo electrónico anima al destinatario/a a participar en la iniciativa LOCKSS e incluir esta revista en el archivo; proporciona información acerca de la iniciativa LOCKSS y las diferentes maneras que existen de involucrarse.</description>
+Gracias,
+{$principalContactSignature}</body>
+		<description>Este correo electrónico anima al destinatario/a a participar en la iniciativa LOCKSS e incluir esta revista en el archivo. Contiene información acerca de la iniciativa LOCKSS y las diferentes maneras que existen de involucrarse.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>Acuse de recibo de envío</subject>
-		<body>{$authorName}: 
+		<body>{$authorName}:
 
-Gracias por enviar el manuscrito "{$articleTitle}" a {$journalName}. Con nuestro sistema de gestión de revistas en línea, podrá iniciar sesión en el sitio web de la revista y hacer un seguimiento de su progreso a través del proceso editorial. 
+Gracias por enviar el manuscrito, "{$articleTitle}" a {$journalName}. Con nuestro sistema de gestión de revistas en línea, podrá iniciar sesión en el sitio web de la revista y hacer un seguimiento de su progreso a través del proceso editorial:
 
-URL del manuscrito: {$submissionUrl} 
-Nombre de usuario/a: {$authorUsername} 
+URL del manuscrito: {$submissionUrl}
+Nombre de usuario/a: {$authorUsername}
 
 En caso de dudas, contacte conmigo. Gracias por elegir esta revista para publicar su trabajo.
 
 {$editorialContactSignature}</body>
-		<description>Una vez ha sido habilitado, este correo electrónico se envía automáticamente a un autor/a cuando ha completado el proceso de envío de un manuscrito a una revista. Además, proporciona información acerca del proceso de seguimiento del envío y agradece al autor/a el envío.</description>
+		<description>Una vez habilitado, el correo electrónico se envía automáticamente a un autor/a cuando éste complete el proceso de envío de un manuscrito a una revista. Además, proporciona información acerca del proceso de seguimiento del envío y agradece al autor/a el envío.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Envío no apto</subject>
-		<body>{$authorName}: 
+		<subject>Envío inadecuado</subject>
+		<body>{$authorName}:
 
-La revisión inicial de "{$articleTitle}" muestra que el envío no coincide con el objetivo y el enfoque de {$journalName}. Le recomendamos que consulte la descripción de la revista que figura en "Acerca de", así como sus contenidos actuales, para saber más acerca de las obras que publicamos. Asimismo, puede considerar la presentación de este manuscrito a otra revista más adecuada a su contenido.
+La revisión inicial de "{$articleTitle}" muestra que el envío no coincide con el objetivo y el enfoque de {$journalName}. Le recomendamos que consulte la descripción de la revista que figura en "Acerca de", así como sus contenidos actuales, para saber más acerca de los trabajos que publicamos. Asimismo, puede considerar la presentación de este manuscrito a otra revista más adecuada a su contenido.
 
 {$editorialContactSignature}</body>
-		<description></description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Comentarios acerca del envío</subject>
-		<body>{$name}: 
+		<body>{$name}:
 
-{$commentName} ha añadido un comentario acerca del envío "{$articleTitle}" en {$journalName}: 
+{$commentName} añadió un comentario acerca del envío "{$articleTitle}" en {$journalName}:
 
 {$comments}</body>
-		<description>Este correo electrónico notifica a las personas involucradas en el proceso editorial del envío que se ha publicado un comentario.</description>
+		<description>Este correo electrónico notifica a las personas involucradas en el proceso de edición del envío que se publicó un comentario.</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Decisión sobre "{$articleTitle}"</subject>
-		<body>Como revisor/a del envío "{$articleTitle}" para {$journalName}, le remito las revisiones y la decisión editorial enviadas al autor/a de este texto. De nuevo, le agradecemos su inestimable contribución en este proceso. 
+		<body>Como uno de los revisores/as del envío "{$articleTitle}" para {$journalName}, le remito las revisiones y la decisión editorial enviadas al autor/a de este texto. De nuevo, le agradecemos su inestimable contribución en este proceso.
 
-{$editorialContactSignature} 
+{$editorialContactSignature}
 
 {$comments}</body>
-		<description>Este correo electrónico notifica a los revisores/as de un envío que se ha completado el proceso de revisión. Incluye información sobre el artículo y la decisión tomada, así como agradece a los revisores/as su colaboración.</description>
+		<description>Este correo electrónico notifica a los revisores/as de un envío que se completó el proceso de revisión. Incluye información sobre el artículo y la decisión tomada, así como, agradece a los revisores/as su colaboración.</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
-		<subject>Encargo editorial</subject>
+		<subject>Asignación editorial</subject>
 		<body>{$editorialContactName}: 
 
-El envío "{$articleTitle}" para {$journalName} le ha sido asignado para que, en su papel de editor/a de sección, lleve a cabo el proceso editorial. 
+Se le asignó el envío "{$articleTitle}" para {$journalName} para que, en su rol de editor/a de sección, lleve a cabo el proceso editorial.
 
-URL del envío: {$submissionUrl} 
-Nombre de usuario/a: {$editorUsername} 
+URL del envío: {$submissionUrl}
+Nombre de usuario/a: {$editorUsername}
 
-Gracias. 
+Gracias, 
 {$editorialContactSignature}</body>
-		<description>Este correo electrónico notifica al editor/a de sección que el editor/a le ha asignado la tarea de supervisar un envío a través del proceso editorial. Además, proporciona información acerca del envío y de cómo obtener acceso al sitio de la revista.</description>
+		<description>Este correo electrónico notifica al editor/a de sección que el editor/a le asignó la tarea de supervisar un envío durante del proceso de edición. Además, proporciona información acerca del envío y de cómo obtener acceso al sitio de la revista.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Solicitud de revisión de un artículo</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Considero que sería un excelente revisor/a del manuscrito "{$articleTitle}," el cual ha sido enviado a {$journalName}. El resumen del envío aparece abajo y espero que contemple la posibilidad de llevar a cabo esta importante tarea para nosotros. 
+Creo que sería un excelente revisor/a del manuscrito "{$articleTitle}," el cual se envió a {$journalName}. El resumen del envío aparece abajo, espero que considere la posibilidad de llevar a cabo esta importante tarea para nosotros.
 
-Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. El sitio web es {$journalUrl} 
+Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. El sitio web es {$journalUrl}
 
-La revisión deberá entregarse el {$reviewDueDate}. 
+La revisión deberá entregarse el {$reviewDueDate}.
 
-Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para conseguir su nombre de usuario/a y su contraseña: {$passwordResetUrl} 
+Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a). {$passwordResetUrl} 
 
-URL del envío: {$submissionReviewUrl} 
+URL del envío: {$submissionReviewUrl}
 
-Gracias por contemplar esta petición. 
-
-{$editorialContactSignature} 
-
+Gracias por considerar esta solicitud. 
+{$editorialContactSignature}
 
 
-"{$articleTitle}" 
 
-{$abstractTermIfEnabled} 
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>Con este correo electrónico, el editor/a de sección solicita a un revisor/a que acepte o decline la tarea de revisar un envío. Además, proporciona información sobre el envío como el título, el resumen, la fecha de envío de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista. (Consulte también REVIEW_REQUEST_ATTACHED).</description>
+		<description>Este correo electrónico del editor/a de sección a un revisor/a solicita que el revisor/a acepte o rechace la tarea de revisar un envío. Además, proporciona información sobre el envío como el título, el resumen, la fecha de entrega de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista. (Por lo demás, vea SOLICITUD_DE_REVISIÓN_ADJUNTA).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Solicitud de revisión de un artículo</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Considero que sería un excelente revisor/a del manuscrito "{$articleTitle}," el cual ha sido enviado a {$journalName}. El resumen del envío aparece abajo, espero que contemple la posibilidad de llevar a cabo esta importante tarea para nosotros. 
+Creo que sería un excelente revisor/a del manuscrito "{$articleTitle}," el cual se envió a {$journalName}. El resumen del envío aparece abajo, espero que considere la posibilidad de llevar a cabo esta importante tarea para nosotros.
 
-Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. 
+Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación.
 
-La revisión deberá entregarse el {$reviewDueDate}. 
+La revisión deberá ser entregada el {$reviewDueDate}.
 
-URL del envío: {$submissionReviewUrl} 
+URL del envío: {$submissionReviewUrl}
 
-Gracias por contemplar esta petición. 
+Gracias por considerar esta solicitud.
 
-{$editorialContactSignature} 
+{$editorialContactSignature}
 
 
 
-"{$articleTitle}" 
+"{$articleTitle}"
 
-{$abstractTermIfEnabled} 
+{$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>Con este correo electrónico el editor/a de sección solicita a un revisor/a que acepte o decline la tarea de revisar un envío. Además, proporciona información sobre el envío como el título, el resumen, la fecha de envío de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista y cuando se habilita el acceso al revisor/a con un solo clic.</description>
+		<description>Este correo electrónico del editor/a de sección a un revisor/a solicita que el revisor/a acepte o rechace la tarea de revisar un envío. Además, proporciona información sobre el envío como el título, el resumen, la fecha de entrega de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista y cuando se habilita el acceso al revisor/a con un solo clic.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Solicitud de revisión de un artículo</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Considero que sería un excelente revisor/a del manuscrito "{$articleTitle}" y le pido que contemple la posibilidad de llevar a cabo esta importante tarea para nosotros. Se ha adjuntado el envío a este correo electrónico y a continuación se añaden las pautas de revisión de esta revista. Deberá enviarme su revisión del envío, junto con su recomendación, antes del {$reviewDueDate}. 
+Creo que sería un excelente revisor/a del manuscrito, "{$articleTitle}," y le pido que considere la posibilidad de llevar a cabo esta importante tarea para nosotros. Se adjuntó el envío a este correo electrónico y a continuación se añaden las indicaciones para la revisión para esta revista. Deberá enviarme su revisión del envío, junto con su recomendación, antes del {$reviewDueDate}.
 
-Le rogamos que responda a este correo electrónico antes de {$weekLaterDate} e indique si puede y desea realizar esta revisión. 
+Rogamos responda a este correo electrónico antes del {$weekLaterDate} e indique si puede y desea realizar esta revisión.
 
-Gracias por contemplar esta petición. 
+Gracias por considerar esta solicitud.
 
-{$editorialContactSignature} 
+{$editorialContactSignature}
 
-
-Directrices de revisión 
+Indicaciones para la revisión
 
 {$reviewGuidelines}</body>
-		<description>Con este correo electrónico el editor/a de sección solicita a un revisor/a que acepte o decline la tarea de revisar un envío. Se adjunta el envío al correo. Este mensaje se usa cuando se selecciona el proceso de revisión de datos adjuntos por correo electrónico en el paso 2 de la configuración de la revista. (Consulte también REVIEW_REQUEST).</description>
+		<description>El editor/a de sección envía este correo electrónico a un revisor/a para pedirle que acepte o rechace la tarea de revisar un envío. Se adjunta el envío al correo. Este mensaje se usa cuando se selecciona el proceso de revisión de archivos adjuntos por correo electrónico en el paso 2 de la configuración de la revista. (Por lo demás, vea SOLICITUD_DE_REVISIÓN).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Solicitud de revisión de un artículo</subject>
+		<body>{$reviewerName}:
+
+Se refiere al manuscrito "{$articleTitle}", que {$journalName} está tomando en consideración.
+
+Después de la revisión de la versión previa del manuscrito, los autores/as enviaron una versión revisada de su artículo. Agradeceríamos mucho que pudiera ayudarnos a evaluarlo.
+
+Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. El sitio web es {$journalUrl}
+
+La revisión deberá entregarse el {$reviewDueDate}.
+
+Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a).{$passwordResetUrl} 
+
+URL del envío: {$submissionReviewUrl}
+
+Gracias por considerar esta solicitud.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Este correo electrónico del editor/a de sección a un revisor/a solicita que el revisor/a acepte o rechace la tarea de revisar un envío para una ronda de revisión adicional. Además, proporciona información sobre el envío como el título, el resumen, la fecha de entrega de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista. (Por lo demás, vea SOLICITUD_DE_REVISIÓN_POSTERIOR _ADJUNTA).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Solicitud de revisión de un artículo</subject>
+		<body>{$reviewerName}:
+
+Se refiere al manuscrito "{$articleTitle}", que {$journalName} está tomando en consideración.
+
+Después de la revisión de la versión previa del manuscrito, los autores/as enviaron una versión revisada de su artículo. Agradeceríamos mucho que pudiera ayudarnos a evaluarlo.
+
+Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación.
+
+La revisión deberá ser entregada el {$reviewDueDate}.
+
+URL del envío: {$submissionReviewUrl}
+
+Gracias por considerar esta solicitud.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</body>
+		<description>Este correo electrónico del editor/a de sección a un revisor/a solicita que el revisor/a acepte o rechace la tarea de revisar un envío para una ronda de revisión adicional. Además, proporciona información sobre el envío como el título, el resumen, la fecha de entrega de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista y cuando se habilita el acceso al revisor/a con un solo clic.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Solicitud de revisión de un artículo</subject>
+		<body>{$reviewerName}:
+
+Se refiere al manuscrito "{$articleTitle}", que {$journalName} está tomando en consideración.
+
+Después de la revisión de la versión previa del manuscrito, los autores/as enviaron una versión revisada de su artículo. Agradeceríamos mucho que pudiera ayudarnos a evaluarlo. 
+
+Se adjuntó el envío a este correo electrónico y a continuación se añaden las indicaciones para la revisión para esta revista. Deberá enviarme su revisión del envío, junto con su recomendación, antes del {$reviewDueDate}.
+
+Rogamos responda a este correo electrónico antes del {$weekLaterDate} e indique si puede y desea realizar esta revisión.
+
+Gracias por considerar esta solicitud.
+
+{$editorialContactSignature}
+
+Indicaciones para la revisión
+
+{$reviewGuidelines}</body>
+		<description>El editor/a de sección envía este correo electrónico a un revisor/a para pedirle que acepte o rechace la tarea de revisar un envío para una ronda de revisión adicional. Se adjunta el envío al correo. Este mensaje se usa cuando se selecciona el proceso de revisión de archivos adjuntos por correo electrónico en el paso 2 de la configuración de la revista. (Por lo demás, vea SOLICITUD_DE_REVISIÓN_POSTERIOR).</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>Solicitud de revisión cancelada</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Hemos decidido cancelar nuestra petición para que revise el envío "{$articleTitle}" para {$journalName}. Le pedimos disculpas por los inconvenientes que pueda causar esta situación y esperamos poder pedirle que vuelva a colaborar con el proceso de revisión de esta revista en un futuro. 
+Decidimos cancelar nuestra solicitud para que revise el envío "{$articleTitle}" para {$journalName}. Le pedimos disculpas por los inconvenientes que puedan surgir y esperamos que vuelva a colaborar con nosotros en el proceso de revisión de esta revista en el futuro.
 
-Si tiene cualquier pregunta, póngase en contacto conmigo. 
+Si tiene cualquier pregunta, póngase en contacto conmigo.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico a un revisor/a que está revisando un envío para notificarle que la revisión se ha cancelado.</description>
+		<description>El editor/a de sección envía este correo electrónico a un revisor/a que está revisando un envío para notificarle que la revisión se canceló.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
-		<subject>Disponible para la revisión</subject>
-		<body>{$editorialContactName}: 
+		<subject>Disponible para revisión</subject>
+		<body>{$editorialContactName}:
 
-Estoy disponible y dispuesto/a a revisar el envío "{$articleTitle}" para {$journalName}. Gracias por haber pensado en mí, espero haber completado la revisión para la fecha de entrega, {$reviewDueDate}, si no antes. 
+Estoy disponible y dispuesto a revisar el envío "{$articleTitle}" para {$journalName}. Gracias por haber pensado en mí, espero haber completado la revisión para la fecha de entrega, {$reviewDueDate}, si no antes. 
 
 {$reviewerName}</body>
-		<description>Un revisor/a envía este correo electrónico a un editor/a de sección en respuesta a una petición de revisión para notificarle que ha aceptado la petición y que la terminará para la fecha acordada.</description>
+		<description>Un revisor/a envía este correo electrónico a un editor/a de sección en respuesta a una solicitud de revisión para notificarle que aceptó la petición y que la terminará para la fecha acordada.</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>No disponible para la revisión</subject>
-		<body>{$editorialContactName}: 
+		<subject>No disponible para revisión</subject>
+		<body>{$editorialContactName}:
 
-Siento comunicarle que en estos momentos no estoy disponible para revisar el envío "{$articleTitle}" para {$journalName}. Gracias por haber pensado en mí, en una próxima ocasión no dude en recurrir a mis servicios. 
+Siento comunicarle que en estos momentos no estoy disponible para revisar el envío "{$articleTitle}" para {$journalName}. Gracias por haber pensado en mí, en la próxima ocasión no dude en recurrir a mis servicios.
 
 {$reviewerName}</body>
-		<description>Un revisor/a envía este correo electrónico a un editor/a de sección en respuesta a una petición de revisión para notificarle que ha declinado dicha petición.</description>
+		<description>Un revisor/a envía este correo electrónico a un editor/a de sección en respuesta a una solicitud de revisión para notificarle que declinó dicha solicitud.</description>
 	</email_text>
 	<email_text key="REVIEW_COMPLETE">
 		<subject>Revisión del artículo completada</subject>
-		<body>{$editorialContactName}: 
+		<body>{$editorialContactName}:
 
-He completado mi revisión de "{$articleTitle}" para {$journalName} y he enviado mi recomendación, "{$recommendation}". 
+Completé mi revisión de "{$articleTitle}" para {$journalName} y envié mi recomendación, "{$recommendation}".
 
 {$reviewerName}</body>
-		<description>Un revisor/a envía este correo electrónico a un editor/a de sección para notificarle que ha completado la revisión y que los comentarios y las recomendaciones se han registrado en el sitio web de la revista.</description>
+		<description>Un revisor/a envía este correo electrónico a un editor/a de sección para notificarle que completó la revisión y que los comentarios y las recomendaciones se registraron en el sitio web de la revista.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Acuse de recibo de revisión del artículo</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Gracias por haber completado la revisión del envío "{$articleTitle}" para {$journalName}. Apreciamos su contribución a la mejora de la calidad de las obras que publicamos. 
+Gracias por haber completado la revisión del envío "{$articleTitle}" para {$journalName}. Apreciamos su contribución a la mejora de la calidad de los trabajos que publicamos.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico a un revisor/a para confirmarle que ha recibido una revisión completa y agradecerle su contribución.</description>
+		<description>El editor/a de sección envía este correo electrónico a un revisor/a para confirmarle que recibió una revisión completa y agradecerle su contribución.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
 		<subject>Recordatorio de envío de la revisión</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Le enviamos este correo electrónico a modo de recordatorio acerca de nuestra petición para que revise el envío "{$articleTitle}" para {$journalName}. Esperábamos contar con esta revisión para el día {$reviewDueDate} y le agradeceríamos que nos la enviara tan pronto como la tenga lista. 
+Le enviamos este correo electrónico a modo de recordatorio acerca de nuestra solicitud para que revise el envío "{$articleTitle}," para {$journalName}. Esperábamos contar con esta revisión para el día {$reviewDueDate} y le agradeceríamos que nos la enviara tan pronto como la haya preparado.
 
-Si no dispone de su nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a).{$passwordResetUrl} 
+Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a). {$passwordResetUrl}
 
-URL del envío: {$submissionReviewUrl} 
+URL del envío: {$submissionReviewUrl}
 
-Confirme su disponibilidad para completar esta vital contribución al contenido de esta revista. Me mantengo a la espera de su respuesta. 
+Confirme su disponibilidad para completar esta importante contribución al contenido de esta revista. Me mantengo a la espera de su respuesta.
 
 {$editorialContactSignature}</body>
 		<description>Un editor/a de sección envía este correo electrónico a un revisor/a para recordarle que debe entregar su revisión.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
 		<subject>Recordatorio de envío de la revisión</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Le enviamos este correo electrónico a modo de recordatorio acerca de nuestra petición para que revise el envío "{$articleTitle}" para {$journalName}. Esperábamos contar con esta revisión para el día {$reviewDueDate} y le agradeceríamos que nos la enviara tan pronto como la tenga lista. 
+Le enviamos este correo electrónico a modo de recordatorio acerca de nuestra solicitud para que revise el envío "{$articleTitle}," para {$journalName}. Esperábamos contar con esta revisión para el día {$reviewDueDate} y le agradeceríamos que nos la enviara tan pronto como la haya preparado.
 
-URL del envío: {$submissionReviewUrl} 
+URL del envío: {$submissionReviewUrl}
 
-Confirme su disponibilidad para completar esta vital contribución al contenido de esta revista. Me mantengo a la espera de su respuesta. 
+Confirme su disponibilidad para completar esta importante contribución al contenido de esta revista. Me mantengo a la espera de su respuesta.
 
 {$editorialContactSignature}</body>
 		<description>Un editor/a de sección envía este correo electrónico a un revisor/a para recordarle que debe entregar su revisión.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
 		<subject>Recordatorio automático de la revisión del envío</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Le enviamos este correo electrónico a modo de recordatorio acerca de nuestra petición para que revise el envío, "{$articleTitle}," para {$journalName}. Esperábamos contar con esta revisión para el {$reviewDueDate}; este correo electrónico se ha enviado automáticamente una vez vencida la fecha de envío. Le agradeceríamos que nos la enviara tan pronto como la tenga lista. 
+Le enviamos este correo electrónico a modo de recordatorio acerca de nuestra solicitud para que revise el envío "{$articleTitle}," para {$journalName}. Esperábamos contar con esta revisión para el {$reviewDueDate}; este correo electrónico se envió automáticamente una vez vencida la fecha de entrega. Le agradeceríamos que nos la enviara tan pronto como la haya preparado.
 
-Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a):{$passwordResetUrl} 
+Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a). {$passwordResetUrl}
 
-URL del envío: {$submissionReviewUrl} 
+URL del envío: {$submissionReviewUrl}
 
-Confirme su disponibilidad para completar esta vital contribución al contenido de esta revista. Me mantengo a la espera de su respuesta. 
+Confirme su disponibilidad para completar esta importante contribución al contenido de esta revista. Me mantengo a la espera de su respuesta.
 
 {$editorialContactSignature}</body>
-		<description>Este correo electrónico se envía automáticamente cuando transcurre la fecha de envío del revisor/a (vea las opciones de revisión en el paso 2 de la configuración de la revista) y se deshabilita el acceso con un solo clic al revisor/a. Las tareas programadas deben ser habilitadas y configuradas (vea el archivo de configuración del sitio).</description>
+		<description>Este correo electrónico se envía automáticamente cuando transcurre la fecha de entrega del revisor/a (vea las opciones de revisión en el paso 2 de la configuración de la revista) y se deshabilita el acceso al revisor/a con un solo clic. Las tareas planificadas se deben habilitar y configurar (vea el archivo de configuración del sitio).</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
 		<subject>Recordatorio automático de la revisión del envío</subject>
-		<body>{$reviewerName}: 
+		<body>{$reviewerName}:
 
-Le enviamos este correo electrónico a modo de recordatorio acerca de nuestra petición para que revise el envío, "{$articleTitle}," para {$journalName}. Esperábamos contar con esta revisión para el {$reviewDueDate}; este correo electrónico se ha enviado automáticamente una vez vencida la fecha de envío. Le agradeceríamos que nos la enviara tan pronto como la tenga lista.
-URL del envío: {$submissionReviewUrl} 
+Le enviamos este correo electrónico a modo de recordatorio acerca de nuestra solicitud para que revise el envío "{$articleTitle}," para {$journalName}. Esperábamos contar con esta revisión para el {$reviewDueDate}; este correo electrónico se envió automáticamente una vez vencida la fecha de entrega. Le agradeceríamos que nos la enviara tan pronto como la haya preparado.
 
-Confirme su disponibilidad para completar esta vital contribución al contenido de esta revista. Me mantengo a la espera de su respuesta. 
+URL del envío: {$submissionReviewUrl}
+
+Confirme su disponibilidad para completar esta importante contribución al contenido de esta revista. Me mantengo a la espera de su respuesta.
 
 {$editorialContactSignature}</body>
-		<description>Este correo electrónico se envía automáticamente cuando transcurre la fecha de envío del revisor/a (vea las opciones de revisión en el paso 2 de la configuración de la revista) y se habilita el acceso con un solo clic al revisor/a. Las tareas programadas deben ser habilitadas y configuradas (vea el archivo de configuración del sitio).</description>
+		<description>Este correo electrónico se envía automáticamente cuando transcurre la fecha de entrega del revisor/a (vea las opciones de revisión en el paso 2 de la configuración de la revista) y se habilita el acceso al revisor/a con un solo clic. Las tareas planificadas se deben habilitar y configurar (vea el archivo de configuración del sitio).</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Decisión del editor/a</subject>
-		<body>{$authorName}: 
+		<body>{$authorName}:
 
-Hemos tomado una decisión sobre su envío a {$journalTitle}, "{$articleTitle}". 
+Tomamos una decisión sobre su envío a {$journalTitle}, "{$articleTitle}".
 
-Nuestra decisión es: 
+Nuestra decisión es:
 
 {$editorialContactSignature}</body>
-		<description>El editor/a o el editor/a de sección envía este correo electrónico a un autor/a para notificarle la decisión final acerca de su envío.</description>
+		<description>El editor/a o editor/a de sección envía este correo electrónico a un autor/a para notificarle la decisión final acerca de su envío.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Decisión del editor/a</subject>
-		<body>{$authorName}: 
+		<body>{$authorName}:
 
-Hemos tomado una decisión sobre su envío a {$journalTitle}, "{$articleTitle}". 
+Tomamos una decisión sobre su envío a {$journalTitle}, "{$articleTitle}".
 
-Nuestra decisión es: 
+Nuestra decisión es:
 
 {$editorialContactSignature}</body>
-		<description>El editor/a o el editor/a de sección envía este correo electrónico a un autor/a para notificarle la decisión final acerca de su envío.</description>
+		<description>El editor/a o editor/a de sección envía este correo electrónico a un autor/a para notificarle la decisión final acerca de su envío.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Decisión del editor/a</subject>
-		<body>{$authorName}: 
+		<body>{$authorName}:
 
-Hemos tomado una decisión sobre su envío a {$journalTitle}, "{$articleTitle}". 
+Tomamos una decisión sobre su envío a {$journalTitle}, "{$articleTitle}".
 
-Nuestra decisión es: 
+Nuestra decisión es:
 
 {$editorialContactSignature}</body>
-		<description>El editor/a o el editor/a de sección envía este correo electrónico a un autor/a para notificarle la decisión final acerca de su envío.</description>
+		<description>El editor/a o editor/a de sección envía este correo electrónico a un autor/a para notificarle la decisión final acerca de su envío.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Decisión del editor/a</subject>
-		<body>{$authorName}: 
-
-Hemos tomado una decisión sobre su envío a {$journalTitle}, "{$articleTitle}". 
-
-Nuestra decisión es: 
-
-{$editorialContactSignature}</body>
-		<description>El editor/a o el editor/a de sección envía este correo electrónico a un autor/a para notificarle la decisión final acerca de su envío.</description>
+		<body>{$authorName}: Tomamos una decisión sobre su envío a {$journalTitle}, "{$articleTitle}". Nuestra decisión es: {$editorialContactSignature}</body>
+		<description>El editor/a o editor/a de sección envía este correo electrónico a un autor/a para notificarle la decisión final acerca de su envío.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
-		<subject>Solicitud de corrección</subject>
-		<body>{$copyeditorName}: 
+		<subject>Solicitud de corrección de originales</subject>
+		<body>{$copyeditorName}:
 
 Nos gustaría que corrigiera "{$articleTitle}" para {$journalName} siguiendo estos pasos: 
+
 1. Haga clic en la URL del envío que aparece abajo. 
-2. Inicie sesión en la revista y haga clic en el archivo que aparece en el paso 1. 
-3. Consulte las instrucciones sobre corrección que aparecen en la página web. 
-4. Abra el archivo que ha descargado y vaya añadiendo las preguntas al autor/a a medida que corrija. 
-5. Guarde el archivo corregido y súbalo al paso 1 de la corrección. 
+2. Inicie sesión en la revista y haga clic en el archivo que aparece en el paso 1.
+3. Consulte las instrucciones de corrección de originales que aparecen en la página web.
+4. Abra el archivo que descargó y vaya añadiendo las consultas al autor/a a medida que vaya realizando la corrección de originales.
+5. Guarde el archivo corregido y súbalo en el paso 1 de la corrección de originales.
 6. Envíe el correo electrónico COMPLETO al editor/a.
 
-URL de {$journalName}: {$journalUrl} 
+{$journalName} URL: {$journalUrl}
 URL del envío: {$submissionCopyeditingUrl} 
-Nombre de usuario/a: {$copyeditorUsername} 
+Nombre de usuario/a: {$copyeditorUsername}
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al corrector/a de un envío para pedirle que empiece el proceso de corrección. Además, proporciona información acerca del envío y de cómo obtener acceso a él.</description>
+		<description>El editor/a de sección envía este correo electrónico al corrector/a de originales de un envío para pedirle que empiece el proceso de corrección de originales. Además, proporciona información acerca del envío y de cómo obtener acceso al mismo.</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Corrección completada</subject>
-		<body>{$editorialContactName}: 
+		<subject>Corrección de originales completada</subject>
+		<body>{$editorialContactName}:
 
-Hemos corregido su envío "{$articleTitle}" para {$journalName}. Para revisar los cambios propuestos y responder a las preguntas del autor/a, siga estos pasos: 
-1. Inicie sesión en la revista mediante la URL que aparece abajo con su nombre de usuario/a y contraseña (use el enlace He olvidado si es necesario). 
-2. Haga clic en el archivo del paso 1. Archivo de corrección inicial para descargar y abrir la versión corregida. 
-3. Revise la corrección, realice cambios mediante el control de cambios de Word y responda a las preguntas. 
-4. Guarde el archivo en el escritorio y súbalo al paso 2. Corrección del autor/a. 
-5. Haga clic en el icono del correo electrónico que se encuentra debajo de COMPLETO y envíe el correo al editor/a. Esta es su última oportunidad para hacer cambios importantes. Más adelante le pediremos que realice la corrección de pruebas de las galeradas, pero en ese paso solo se podrán corregir errores tipográficos menores y de maquetación. 
+Corregimos su envío "{$articleTitle}" para {$journalName}. Para revisar los cambios propuestos y responder a las consultas al autor/a, siga estos pasos:
 
-URL del manuscrito: {$submissionEditingUrl} 
-Nombre de usuario/a: {$authorUsername} 
+1. Inicie sesión en la revista mediante la URL que aparece abajo con su nombre de usuario/a y contraseña (use el enlace Olvidé mi contraseña si es necesario).
+2. Haga clic en el archivo del paso 1. Descargue el archivo de corrección de originales inicial y abra la versión corregida.
+3. Revise la corrección de originales, realice cambios mediante el control de cambios de Word y responda a las consultas.
+4. Guarde el archivo en el escritorio y súbalo en el paso 2. Corrección de originales del autor/a.
+5. Haga clic en el icono del correo electrónico que se encuentra debajo de COMPLETO y envíe el correo al editor/a. Esta es su última oportunidad para hacer cambios importantes. Más adelante le pediremos que realice la corrección de pruebas de las galeradas, pero en ese paso solo se podrán corregir errores menores de tipografía y maquetación.
 
-Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, póngase en contacto conmigo. 
+URL del manuscrito: {$submissionEditingUrl}
+Nombre de usuario/a: {$authorUsername}
 
-Gracias por su contribución a esta revista. 
+Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, póngase en contacto conmigo.
+
+Gracias por su contribución a esta revista.
 
 {$copyeditorName}</body>
-		<description></description>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
-		<subject>Acuse de recibo de corrección</subject>
-		<body>{$copyeditorName}: 
-
-Gracias por corregir el manuscrito "{$articleTitle}" para {$journalName}. Supondrá una gran contribución para mejorar la calidad de la revista. 
+		<subject>Acuse de recibo de corrección de originales</subject>
+		<body>{$copyeditorName}: Gracias por corregir el manuscrito "{$articleTitle}" para {$journalName}. Supondrá una contribución importante para mejorar la calidad de la revista.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al corrector/a de un envío para confirmarle que ha terminado el proceso de corrección con éxito y agradecerle su contribución.</description>
+		<description>El editor/a de sección envía este correo electrónico al corrector/a de originales de un envío para confirmarle que terminó el proceso de corrección de originales con éxito y agradecerle su contribución.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Petición de revisión de una corrección</subject>
-		<body>{$authorName}: 
+		<subject>Solicitud de revisión de corrección de originales</subject>
+		<body>{$authorName}:
 
-Su envío "{$articleTitle}" para {$journalName} ha superado la primera fase de la corrección y está disponible para su revisión siguiendo estos pasos: 
+Su envío "{$articleTitle}" para {$journalName} superó el primer paso de la corrección de originales y está disponible para su revisión siguiendo estos pasos:
 
-1. Haga clic en la URL del envío que aparece abajo. 
-2. Inicie sesión en la revista y haga clic en el archivo que aparece en el paso 1. 
-3. Abra el envío que ha descargado. 
-4. Revise el texto incluyendo las propuestas de corrección y las preguntas al autor/a. 
-5. Haga las correcciones necesarias para mejorar el texto. 
-6. Cuando haya completado la corrección, suba el archivo al paso 2. 
-7. Haga clic en METADATOS para comprobar que la información sobre la indexación es precisa y completa. 
-8. Envíe el correo electrónico COMPLETO al editor/a y al corrector/a. 
+1. Haga clic en la URL del envío que aparece abajo.
+2. Inicie sesión en la revista y haga clic en el archivo que aparece en el paso 1.
+3. Abra el envío que descargó.
+4. Revise el texto e incluya las propuestas de corrección de originales y las consultas al autor/a.
+5. Haga las correcciones necesarias para mejorar todavía más el texto.
+6. Cuando haya completado la corrección, suba el archivo en el paso 2.
+7. Haga clic en METADATOS para comprobar que la información de indexación es precisa y completa.
+8. Envíe el correo electrónico COMPLETO al editor/a y al corrector/a de originales.
 
-URL del envío: {$submissionCopyeditingUrl} 
-Nombre de usuario/a: {$authorUsername} 
+URL del envío: {$submissionCopyeditingUrl}
+Nombre de usuario/a: {$authorUsername}
 
-Esta es su última oportunidad para hacer cambios importantes en la corrección del envío. La fase de corrección de pruebas que sigue a la preparación de las galeradas, se limita a la corrección de errores tipográficos y de maquetación. 
+Esta es su última oportunidad para hacer cambios importantes en la corrección de originales del envío. La fase de corrección de pruebas, que sigue a la preparación de las galeradas, se limita a la corrección de errores tipográficos y de maquetación.
 
-Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, póngase en contacto conmigo. Gracias por su contribución a esta revista. 
+Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, póngase en contacto conmigo. Gracias por su contribución a esta revista.
 
 {$editorialContactSignature}</body>
 		<description>El editor/a de sección envía este correo electrónico al autor/a del envío para pedirle que haga una corrección de pruebas del trabajo del corrector/a. Además, proporciona información de acceso al manuscrito y advierte al autor/a de que esta es su última oportunidad para realizar cambios importantes.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Revisión de la corrección completada.</subject>
-		<body>{$editorialContactName}: 
+		<subject>Revisión de corrección de originales completada</subject>
+		<body>{$editorialContactName}:
 
-He revisado la corrección del manuscrito "{$articleTitle}" para {$journalName} y está listo para su corrección final y su preparación para maquetación. 
+Revisé la corrección de originales del manuscrito "{$articleTitle}" para {$journalName} y está listo para la ronda final de corrección de originales y su preparación para maquetación.
 
-Gracias por su contribución a mi trabajo. 
+Gracias por su contribución a mi trabajo,
 {$authorName}</body>
-		<description>El autor/a envía este correo electrónico al editor/a de sección para notificarle que se ha completado el proceso de corrección del autor/a.</description>
+		<description>El autor/a envía este correo electrónico al editor/a de sección para notificarle que se completó el proceso de corrección de originales del autor/a.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Acuse de recibo de revisión de la corrección</subject>
-		<body>{$authorName}: 
+		<subject>Acuse de recibo de revisión de corrección de originales</subject>
+		<body>{$authorName}:
 
-Gracias por revisar la corrección de su manuscrito "{$articleTitle}" para {$journalName}. Esperamos poder publicar esta obra. 
+Gracias por revisar la corrección de originales de su manuscrito "{$articleTitle}" para {$journalName}. Esperamos poder publicar este trabajo.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al autor/a de un envío para confirmarle que ha terminado el proceso de corrección y agradecerle su contribución.</description>
+		<description>El editor/a de sección envía este correo electrónico al autor/a de un envío para confirmarle que terminó el proceso de corrección de originales y agradecerle su contribución.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Revisión final de la corrección</subject>
-		<body>{$copyeditorName}: 
+		<subject>Revisión final de la corrección de originales</subject>
+		<body>{$copyeditorName}:
 
-El autor/a y el editor/a han completado su revisión de la corrección de "{$articleTitle}" para {$journalName}. Ahora es necesario preparar una copia limpia para la maquetación siguiendo estos pasos: 
+El autor/a y el editor/a completaron su revisión de la corrección de originales de "{$articleTitle}" para {$journalName}. Ahora, es necesario preparar una copia limpia para la maquetación siguiendo estos pasos:
 
-1. Haga clic en la URL del envío que aparece abajo. 
-2. Inicie sesión en la revista y haga clic en el archivo que aparece en el paso 2. 
-3. Abra el archivo que ha descargado y añada todas las correcciones y las respuestas a las preguntas. 
-4. Guarde el archivo limpio y súbalo al paso 3 de la corrección. 
-5. Haga clic en METADATOS para comprobar la información sobre la indexación (guarde todas las correcciones). 
-6. Envíe el correo electrónico COMPLETO al editor/a. 
+1. Haga clic en la URL del envío que aparece abajo.
+2. Inicie sesión en la revista y haga clic en el archivo que aparece en el paso 2.
+3. Abra el archivo que descargó y añada todas las correcciones y las respuestas a las consultas.
+4. Guarde el archivo limpio y súbalo en el paso 3 de la corrección de originales.
+5. Haga clic en METADATOS para comprobar la información de indexación (guarde todas las correcciones).
+6. Envíe el correo electrónico COMPLETO al editor/a.
 
-URL de {$journalName}: {$journalUrl} 
-URL del envío: {$submissionCopyeditingUrl} 
-Nombre de usuario/a: {$copyeditorUsername} 
+{$journalName} URL: {$journalUrl}
+URL del envío: {$submissionCopyeditingUrl}
+Nombre de usuario/a: {$copyeditorUsername}
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo al corrector/a para pedirle que realice una última corrección en un envío antes de entrar en el proceso de maquetación.</description>
+		<description>El editor/a de sección envía este correo electrónico al corrector/a de originales para pedirle que realice una última ronda de corrección de originales en un envío antes de entrar en el proceso de maquetación.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Revisión final de la corrección completada</subject>
-		<body>{$editorialContactName}: 
+		<subject>Revisión final de la corrección de originales completada</subject>
+		<body>{$editorialContactName}:
 
-He preparado una versión limpia de la corrección del manuscrito "{$articleTitle}" para {$journalName}. Esta versión está a punto para su maquetación y preparación de las galeradas. 
+Preparé una versión limpia de la corrección de originales del manuscrito "{$articleTitle}" para {$journalName}. Esta versión está lista para su maquetación y preparación de las galeradas.
 
 {$copyeditorName}</body>
-		<description>El corrector/a de originales envía este correo electrónico al editor/a de sección para notificarle que el proceso final de la corrección ha finalizado y que ya se puede iniciar el proceso de maquetación.</description>
+		<description>El corrector/a de originales envía este correo electrónico al editor/a de sección para notificarle que la ronda final de la corrección de originales finalizó y que ya se puede iniciar el proceso de maquetación.</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Acuse de recibo de revisión final de la corrección</subject>
-		<body>{$copyeditorName}: 
+		<subject>Acuse de recibo de revisión final de la corrección de originales</subject>
+		<body>{$copyeditorName}:
 
-Gracias por haber completado la corrección del manuscrito "{$articleTitle}" para {$journalName}. La preparación de esta copia limpia para la maquetación es un paso importante en el proceso editorial. 
+Gracias por haber completado la corrección de originales del manuscrito "{$articleTitle}" para {$journalName}. La preparación de esta copia limpia para la maquetación es un paso importante en el proceso editorial.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al corrector/a de originales para confirmarle que ha terminado el proceso de corrección final y agradecele su contribución.</description>
+		<description>El editor/a de sección envía este correo electrónico al corrector/a de originales para confirmarle que terminó la ronda final de corrección de originales y agradecerle su contribución.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>Solicitud de galerada</subject>
-		<body>{$layoutEditorName}: 
+		<subject>Solicitud de galeradas</subject>
+		<body>{$layoutEditorName}:
 
-Es necesario disponer las galeradas del envío de "{$articleTitle}" para {$journalName} siguiendo estos pasos: 
-1. Haga clic en la URL del envío que aparece abajo. 
-2. Inicie sesión en la revista y use la última versión de la maquetación para generar las galeradas siguiendo los estándares de la revista. 
-3. Envíe el correo electrónico COMPLETO al editor/a. 
+Es necesario disponer las galeradas del envío de "{$articleTitle}" para {$journalName} siguiendo estos pasos:
 
-URL de {$journalName}: {$journalUrl} 
-URL del envío: {$submissionLayoutUrl} 
-Nombre de usuario/a: {$layoutEditorUsername} 
+1. Haga clic en la URL del envío que aparece abajo.
+2. Inicie sesión en la revista y use el último archivo de la versión para maquetar para generar las galeradas siguiendo los estándares de la revista.
+3. Envíe el correo electrónico COMPLETO al editor/a.
 
-Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, póngase en contacto conmigo. Gracias por su contribución a esta revista. 
+{$journalName} URL: {$journalUrl}
+URL del envío: {$submissionLayoutUrl}
+Nombre de usuario/a: {$layoutEditorUsername}
+
+Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, póngase en contacto conmigo. Gracias por su contribución a esta revista.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al maquetista para encargarle la labor de maquetación de un envío. Además, proporciona información acerca del envío y de cómo obtener acceso a él.</description>
+		<description>El editor/a de sección envía este correo electrónico al maquetista para asignarle la labor de maquetación de un envío. Además, proporciona información acerca del envío y de cómo obtener acceso al mismo.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
-		<subject>Galerada completada</subject>
-		<body>{$editorialContactName}: 
+		<subject>Galeradas completadas</subject>
+		<body>{$editorialContactName}:
 
-Las galeradas del manuscrito "{$articleTitle}" para {$journalName} están preparadas y a punto para su corrección de pruebas. Si tiene cualquier pregunta, póngase en contacto conmigo. 
+Las galeradas del manuscrito "{$articleTitle}" para {$journalName} están preparadas y listas para su corrección de pruebas. Si tiene cualquier pregunta, póngase en contacto conmigo.
 
 {$layoutEditorName}</body>
-		<description>El maquetista envía este correo electrónico al editor/a de sección para notificarle que el proceso de maquetación ha sido completado.</description>
+		<description>El maquetista envía este correo electrónico al editor/a de sección para notificarle que el proceso de maquetación fue completado.</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>Acuse de recibo de maquetación</subject>
-		<body>{$layoutEditorName}: 
+		<body>{$layoutEditorName}:
 
-Gracias por preparar la galerada del manuscrito "{$articleTitle}" para {$journalName}. Esto supone una gran contribución al proceso de publicación. 
+Gracias por preparar las galeradas del manuscrito "{$articleTitle}" para {$journalName}. Esto supone una importante contribución al proceso de publicación.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al maquetista para confirmarle que ha terminado el proceso de maquetación final y agraderle su contribución.</description>
+		<description>El editor/a de sección envía este correo electrónico al maquetista para confirmarle que terminó el proceso de maquetación y agradecerle su contribución.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
 		<subject>Solicitud de corrección de pruebas (Autor/a)</subject>
-		<body>{$authorName}: 
+		<body>{$authorName}:
 
-Es necesario corregir el envío de "{$articleTitle}" para {$journalName} siguiendo estos pasos: 
-1. Haga clic en la URL del envío que aparece abajo. 
-2. Inicie sesión en la revista y visualice las INSTRUCCIONES DE COMPROBACIÓN 
-3. Haga clic en VISUALIZAR PRUEBA en maquetación y verifique la galerada en uno o varios de los formatos utilizados. 
-4. Escriba las correcciones (tipográficas y de formato) en el apartado de correcciones de pruebas. 
-5. Guarde los cambios en las correcciones y envíelas por correo electrónico al maquetista y al corrector/a de pruebas. 
-6. Envíe el correo electrónico COMPLETO al editor/a. 
+Ahora, es necesario corregir el envío "{$articleTitle}" para {$journalName} siguiendo estos pasos:
+1. Haga clic en la URL del envío que aparece abajo.
+2. Inicie sesión en la revista y vea las INSTRUCCIONES DE CORRECCIÓN DE PRUEBAS
+3. Haga clic en VER PRUEBA en maquetación y verifique la galerada en uno o varios de los formatos utilizados.
+4. Escriba las correcciones (tipográficas y de formato) en Modificaciones de la corrección de pruebas.
+5. Guarde los cambios en las correcciones y envíelas por correo electrónico al maquetista y al corrector/a de pruebas.
+6. Envíe el correo electrónico COMPLETO al editor/a.
 
-URL del envío: {$submissionUrl} 
-Nombre de usuario/a: {$authorUsername} 
+URL del envío: {$submissionUrl}
+Nombre de usuario/a: {$authorUsername}
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al autor/a para notificarle que las galeradas de un artículo están preparadas para una corrección de pruebas. Además, proporciona información acerca del artículo y de cómo obtener acceso a él.</description>
+		<description>El editor/a de sección envía este correo electrónico al autor/a para notificarle que las galeradas de un artículo están preparadas para una corrección de pruebas. Además, proporciona información acerca del artículo y de cómo obtener acceso al mismo.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
 		<subject>Corrección de pruebas completada (Autor/a)</subject>
-		<body>{$editorialContactName}: 
+		<body>{$editorialContactName}:
 
-He completado la corrección de pruebas de las galeradas de mi manuscrito "{$articleTitle}" para {$journalName}. El corrector de pruebas y el maquetista pueden empezar la corrección de las galeradas.
+Completé la corrección de pruebas de las galeradas de mi manuscrito "{$articleTitle}" para {$journalName}. Las galeradas están listas para su corrección final por el corrector/a de pruebas y el maquetista.
 
 {$authorName}</body>
-		<description>El autor/a envía este correo electrónico al corrector/a de pruebas y al editor/a para notificarles que ha finalizado su recorrido por la corrección de pruebas y que los detalles pueden visualizarse en los comentarios sobre el artículo.</description>
+		<description>El autor/a envía este correo electrónico al corrector/a de pruebas y al editor/a para notificarles que finalizó su ronda de corrección de pruebas y que los detalles pueden verse en los comentarios sobre el artículo.</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
 		<subject>Acuse de recibo de corrección de pruebas (Autor/a)</subject>
-		<body>{$authorName}: 
+		<body>{$authorName}:
 
-Gracias por realizar la corrección de pruebas de galeradas de su manuscrito "{$articleTitle}" en {$journalName}. Esperamos poder publicar su obra en breve. 
+Gracias por realizar la corrección de pruebas de galeradas de su manuscrito "{$articleTitle}" en {$journalName}. Esperamos poder publicar su trabajo en breve.
 
-Si se inscribe a nuestro servicio de notificaciones, recibirá un correo electrónico con la tabla de contenidos tan pronto como se publique. Si tiene cualquier pregunta, póngase en contacto conmigo. 
+Si se inscribe a nuestro servicio de notificaciones, recibirá un correo electrónico con la tabla de contenidos tan pronto como esté publicada. Si tiene cualquier pregunta, póngase en contacto conmigo.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al autor/a para confirmarle que ha terminado el proceso de corrección de pruebas inicial y agradecerle su contribución.</description>
+		<description>El editor/a de sección envía este correo electrónico al autor/a para confirmarle que terminó el proceso de corrección de pruebas inicial y agradecerle su contribución.</description>
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
 		<subject>Solicitud de corrección de pruebas</subject>
-		<body>{$proofreaderName}: 
+		<body>{$proofreaderName}:
 
-Es necesario corregir el envío "{$articleTitle}" para {$journalName} siguiendo estos pasos: 
-1. Haga clic en la URL del envío que aparece abajo. 
-2. Inicie sesión en la revista y visualice las INSTRUCCIONES DE CORRECCIÓN DE PRUEBAS. 
-3. Haga clic en VISUALIZAR PRUEBA en maquetación y verifique la galerada en uno o varios de los formatos utilizados. 
-4. Escriba las correcciones (tipográficas y de formato) en el apartado de correcciones de pruebas. 
-5. Guarde los cambios en las correcciones y envíelas por correo electrónico al maquetista. 
-6. Envíe el correo electrónico COMPLETO al editor/a. 
+Ahora, es necesario corregir el envío "{$articleTitle}" para {$journalName} siguiendo estos pasos: 
+1. Haga clic en la URL del envío que aparece abajo.
+2. Inicie sesión en la revista y vea las INSTRUCCIONES DE CORRECCIÓN DE PRUEBAS.
+3. Haga clic en VER PRUEBA en maquetación y verifique la galerada en uno o varios de los formatos utilizados.
+4. Escriba las correcciones (tipográficas y de formato) en Modificaciones de la corrección de pruebas.
+5. Guarde los cambios en las correcciones y envíelas por correo electrónico al maquetista.
+6. Envíe el correo electrónico COMPLETO al editor/a.
 
-URL del manuscrito: {$submissionUrl} 
-Nombre de usuario/a: {$proofreaderUsername} 
+URL del manuscrito: {$submissionUrl}
+Nombre de usuario/a: {$proofreaderUsername}
 
-Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, contacte conmigo. Gracias por su contribución a esta revista. 
+Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, contacte conmigo. Gracias por su contribución a esta revista.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al corrector/a de pruebas para pedirle que realice la corrección de pruebas de las galeradas de un artículo. Además, proporciona información acerca del artículo y de cómo obtener acceso a él.</description>
+		<description>El editor/a de sección envía este correo electrónico al corrector/a de pruebas para pedirle que realice la corrección de pruebas de las galeradas de un artículo. Además, proporciona información acerca del artículo y de cómo obtener acceso al mismo.</description>
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
 		<subject>Corrección de pruebas completada</subject>
-		<body>{$editorialContactName}: 
-
-He completado la corrección de pruebas de las galeradas del manuscrito "{$articleTitle}" para {$journalName}. Las galeradas están a punto para su corrección final por el maquetista. 
-
-{$proofreaderName}</body>
-		<description>El corrector/a de pruebas envía este correo electrónico al editor/a de sección para notificarle que el proceso de corrección de pruebas ha sido completado.</description>
+		<body>{$editorialContactName}: Completé la corrección de pruebas de las galeradas del manuscrito "{$articleTitle}" para {$journalName}. Las galeradas están listas para su corrección final por el maquetista. {$proofreaderName}</body>
+		<description>El corrector/a de pruebas envía este correo electrónico al editor/a de sección para notificarle que el proceso de corrección de pruebas fue completado.</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
 		<subject>Acuse de recibo de corrección de pruebas</subject>
-		<body>{$proofreaderName}: 
-
-Gracias por realizar la corrección de pruebas de galeradas del manuscrito "{$articleTitle}" para {$journalName}. Esta obra supone una contribución importante para mejorar la calidad de la revista. 
+		<body>{$proofreaderName}: Gracias por realizar la corrección de pruebas de galeradas del manuscrito "{$articleTitle}" para {$journalName}. Este trabajo supone una contribución importante para mejorar la calidad de la revista.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al corrector/a de pruebas para confirmarle que ha terminado el proceso de corrección de pruebas y agradecerle su contribución.</description>
+		<description>El editor/a de sección envía este correo electrónico al corrector/a de pruebas para confirmarle que terminó el proceso de corrección de pruebas y agradecerle su contribución.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>Solicitud de corrección de pruebas (Maquetista)</subject>
-		<body>{$layoutEditorName}: 
+		<body>{$layoutEditorName}:
 
-El envío de "{$articleTitle}" a {$journalName} ha sido revisado por el autor/a y el corrector/a de pruebas, y cualquier otra corrección deberá realizarse siguiendo estos pasos: 
-1. Haga clic en la URL del envío que aparece abajo. 
-2. Inicie sesión en la revista y consulte el apartado de correcciones de pruebas para generar las galeradas corregidas. 
-3. Cargue las galeradas revisadas. 
-4. Envíe el correo electrónico COMPLETO del paso 3 de Corrección de pruebas al editor/a. 
+El envío de "{$articleTitle}" a {$journalName} fue revisado por el autor/a y el corrector/a de pruebas, y cualquier otra corrección deberá realizarse siguiendo estos pasos:
 
-URL de {$journalName}: {$journalUrl} 
-URL del envío: {$submissionUrl} 
-Nombre de usuario/a: {$layoutEditorUsername} 
+1. Haga clic en la URL del envío que aparece abajo.
+2. Inicie sesión en la revista y consulte las Modificaciones de la corrección de pruebas para generar las galeradas corregidas.
+3. Cargue las galeradas revisadas.
+4. Envíe el correo electrónico COMPLETO del paso 3 de Corrección de pruebas al editor/a.
 
-Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, póngase en contacto conmigo. Gracias por su contribución a esta revista. 
+{$journalName} URL: {$journalUrl}
+URL del envío: {$submissionUrl}
+Nombre de usuario/a: {$layoutEditorUsername}
+
+Si en estos momentos no puede llevar a cabo esta tarea o tiene cualquier pregunta, póngase en contacto conmigo. Gracias por su contribución a esta revista.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al maquetista para notificarle que las galeradas de un artículo están preparadas para su corrección de pruebas final. Además, proporciona información del artículo y de cómo obtener acceso a él.</description>
+		<description>El editor/a de sección envía este correo electrónico al maquetista para notificarle que las galeradas de un artículo están preparadas para su corrección de pruebas final. Además, proporciona información del artículo y de cómo obtener acceso al mismo.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Corrección de pruebas completada (Maquetista)</subject>
-		<body>{$editorialContactName}: 
+		<body>{$editorialContactName}:
 
-Las galeradas han sido corregidas, tras su corrección de pruebas, para el manuscrito "{$articleTitle}" para {$journalName}. El artículo ya está listo para su publicación. 
+Las galeradas se corrigieron, tras su corrección de pruebas, para el manuscrito "{$articleTitle}" para {$journalName}. El artículo ya está listo para su publicación.
 
 {$layoutEditorName}</body>
-		<description>El maquetista envía este correo electrónico al editor/a de sección para notificarle que el proceso final de la corrección de pruebas ha sido finalizado y que el artículo ya está listo para su publicación.</description>
+		<description>El maquetista envía este correo electrónico al editor/a de sección para notificarle que la fase final de la corrección de pruebas finalizó y que el artículo ya está listo para su publicación.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>Acuse de recibo de corrección de pruebas (Maquetista)</subject>
 		<body>{$layoutEditorName}:
 
-Gracias por finalizar la corrección de pruebas de las galeradas relacionadas con el manuscrito "{$articleTitle}" para {$journalName}. Supone una importante contribución al funcionamiento de esta revista. 
+Gracias por finalizar las modificaciones de la corrección de pruebas de las galeradas relacionadas con el manuscrito "{$articleTitle}" para {$journalName}. Supone una importante contribución al funcionamiento de esta revista.
 
 {$editorialContactSignature}</body>
-		<description>El editor/a de sección envía este correo electrónico al maquetista para confirmarle que ha terminado el proceso final de corrección de pruebas y agradecerle su contribución.</description>
+		<description>El editor/a de sección envía este correo electrónico al maquetista para confirmarle que terminó la fase final de corrección de pruebas y agradecerle su contribución.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Artículo de posible interés</subject>
-		<body>Podría estar interesado en ver el artículo "{$articleTitle}" de {$authorName} publicado en Vol. {$volume}, núm. {$number} ({$year}) de {$journalName} en "{$articleUrl}".</body>
-		<description>La plantilla de este correo electrónico permite a un lector/a registrado enviar información sobre el artículo a alguien que pueda interesarle. Está disponible a través de las Herramientas de lectura y debe ser habilitada por el gestor/a de la revista en la página de gestión de Herramientas de lectura.</description>
+		<body>Podría estar interesado en ver el artículo "{$articleTitle}" de {$authorName} publicado en vol. {$volume}, núm. {$number} ({$year}) de {$journalName} en "{$articleUrl}".</body>
+		<description>La plantilla de este correo electrónico permite a un lector/a registrado enviar información sobre el artículo a alguien que pueda estar interesado en él. Está disponible a través de las Herramientas de lectura y es el gestor/a de la revista quien la habilita en la página de administración de Herramientas de lectura.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Notificación de suscripción</subject>
-		<body>{$subscriberName}: 
+		<body>{$subscriberName}:
 
-Acaba de registrarse como suscriptor/a en nuestro sistema de gestión de revista en línea para {$journalName} con la siguiente suscripción: 
+Acaba de registrarse como suscriptor/a en nuestro sistema de gestión de revista en línea para {$journalName} con la siguiente suscripción:
 
-{$subscriptionType} 
+{$subscriptionType}
 
-Para obtener acceso al contenido disponible sólo para suscriptores/as, entre en el sistema con su nombre de usuario/a: "{$username}". 
+Para obtener acceso al contenido disponible sólo para suscriptores/as, entre en el sistema con su nombre de usuario/a, "{$username}".
 
-Una vez iniciada la sesión, puede cambiar los detalles de su perfil y la contraseña en cualquier momento. 
+Una vez iniciada la sesión, puede cambiar los detalles de su perfil y la contraseña en cualquier momento.
 
-Tenga en cuenta que si posee una suscripción institucional, los usuarios/as de su institución no necesitan iniciar sesión, ya que las peticiones de suscripción al contenido son automáticamente autenticadas por el sistema. 
+Tenga en cuenta que si posee una suscripción institucional, los usuarios/as de su institución no necesitan iniciar sesión, ya que las peticiones de suscripción al contenido son automáticamente autenticadas por el sistema.
 
-Si tiene cualquier pregunta, no dude en ponerse en contacto conmigo. 
+Si tiene cualquier pregunta, no dude en ponerse en contacto conmigo.
 
 {$subscriptionContactSignature}</body>
-		<description>Este correo electrónico notifica a un lector/a registrado que el gestor/a le ha proporcionado una suscripción. Además, proporciona la URL de la revista junto con las instrucciones de acceso.</description>
+		<description>Este correo electrónico notifica a un lector/a registrado que el gestor/a le proporcionó una suscripción. Además, proporciona la URL de la revista junto con las instrucciones de acceso.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
 		<subject>Acceso libre a un número de la revista</subject>
-		<body>Estimados lectores/as: 
+		<body>Lectores/as:
 
-{$journalName} acaba de proporcionar acceso libre al siguiente artículo. Le invitamos a revisar su Tabla de contenidos desde aquí y después visitar nuestro sitio web ({$journalUrl}) para revisar artículos y otros elementos de interés. 
+{$journalName} acaba de proporcionar formato de acceso abierto al siguiente número. Le invitamos a revisar su Tabla de contenidos desde aquí y después visitar nuestro sitio web ({$journalUrl}) para revisar artículos y otros elementos de interés.
 
-Gracias por su continuo interés en nuestro trabajo, {$editorialContactSignature}</body>
-		<description>Este correo electrónico se envía a los lectores/as registrados que han solicitado recibir notificación por correo electrónico cada vez que un número pasa a ser de libre acceso.</description>
+Gracias por su continuo interés en nuestro trabajo,
+{$editorialContactSignature}</body>
+		<description>Este correo electrónico se envía a los lectores/as registrados que solicitaron recibir notificación por correo electrónico cada vez que un número pasa a ser de libre acceso.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Aviso sobre la caducidad de la suscripción</subject>
-		<body>{$subscriberName}: 
+		<subject>Aviso sobre la vencimiento de la suscripción</subject>
+		<body>{$subscriberName}:
 
-Su suscripción a {$journalName} caduca en breve. 
+Su suscripción a {$journalName} caduca en breve.
 
-{$subscriptionType} 
-Fecha de caducidad: {$expiryDate} 
+{$subscriptionType}
+Fecha de vencimiento: {$expiryDate}
 
-Para asegurar su futuro acceso a esta revista, diríjase al sitio web de la revista y renueve su suscripción. Puede iniciar sesión en el sistema con su nombre de usuario/a "{$username}". 
+Para asegurar su futuro acceso a esta revista, vaya al sitio web de la revista y renueve su suscripción. Puede iniciar sesión en el sistema con su nombre de usuario/a "{$username}".
 
-Si tiene cualquier pregunta, no dude en ponerse en contacto conmigo. 
+Si tiene cualquier pregunta, no dude en ponerse en contacto conmigo.
 
 {$subscriptionContactSignature}</body>
 		<description>Este correo electrónico notifica al suscriptor/a que su suscripción está a punto de caducar. Además, proporciona la URL de la revista junto con las instrucciones de acceso.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
 		<subject>Suscripción caducada</subject>
-		<body>{$subscriberName}: 
+		<body>{$subscriberName}:
 
-Su suscripción a {$journalName} ha caducado. 
+Su suscripción {$journalName} caducó.
 
-{$subscriptionType} 
-Fecha de caducidad: {$expiryDate} 
+{$subscriptionType}
+Fecha de vencimiento: {$expiryDate}
 
-Para renovar la suscripción, vaya al sitio web de la revista. Puede iniciar sesión en el sistema con su nombre de usuario/a "{$username}". 
+Para renovar la suscripción, vaya al sitio web de la revista. Puede iniciar sesión en el sistema con su nombre de usuario/a "{$username}".
 
-Si tiene cualquier pregunta, no dude en ponerse en contacto conmigo. 
+Si tiene cualquier pregunta, no dude en ponerse en contacto conmigo.
 
 {$subscriptionContactSignature}</body>
-		<description>Este correo electrónico notifica al suscriptor/a que su suscripción ha caducado. Además, proporciona la URL de la revista junto con las instrucciones de acceso.</description>
+		<description>Este correo electrónico notifica al suscriptor/a que su suscripción caducó. Además, proporciona la URL de la revista junto con las instrucciones de acceso.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
 		<subject>Suscripción caducada - Último recordatorio</subject>
-		<body>{$subscriberName}: 
+		<body>{$subscriberName}:
 
-Su suscripción a {$journalName} ha caducado. 
-Tenga en cuenta que este es el último recordatorio que le será enviado por correo electrónico. 
+Su suscripción a {$journalName} caducó. Tenga en cuenta que este es el último recordatorio que le será enviado por correo electrónico.
 
-{$subscriptionType} 
-Fecha de caducidad: {$expiryDate} 
+{$subscriptionType}
+Fecha de vencimiento: {$expiryDate}
 
-Para renovar su suscripción, vaya al sitio web de la revista. Puede iniciar sesión en el sistema con su nombre de usuario/a "{$username}". 
-
-Si tiene cualquier pregunta, no dude en ponerse en contacto conmigo. 
+Para renovar su suscripción, vaya al sitio web de la revista. Puede iniciar sesión en el sistema con su nombre de usuario/a "{$username}".
+ºnSi tiene cualquier pregunta, no dude en ponerse en contacto conmigo.
 
 {$subscriptionContactSignature}</body>
-		<description>Este correo electrónico notifica al suscriptor/a que su suscripción ha caducado. Además, proporciona la URL de la revista junto con las instrucciones de acceso.</description>
+		<description>Este correo electrónico notifica al suscriptor/a que su suscripción caducó. Además, proporciona la URL de la revista junto con las instrucciones de acceso.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Adquirir una suscripción: Individual</subject>
-		<body>Se ha adquirido en línea una suscripción individual para {$journalName} con los siguientes detalles. 
+		<subject>Comprar una suscripción: Individual</subject>
+		<body>Se adquirió en línea una suscripción individual para {$journalName} con los siguientes detalles.
 
-Tipo de suscripción: {$subscriptionType} 
-Usuario/a: {$userDetails} 
+Tipo de suscripción: {$subscriptionType}
 
-Información de pertenencia (si se proporciona): 
-{$membership} 
+Usuario/a:
+{$userDetails}
 
-Para visualizar o modificar esta suscripción, haga clic en la siguiente dirección URL. 
+Información de afiliación (si se proporciona):
+{$membership}
+
+Para ver o modificar esta suscripción, haga clic en la siguiente dirección URL.
 
 URL de la suscripción: {$subscriptionUrl}</body>
-		<description>Este correo electrónico notifica al gestor/a de suscripciones que se ha adquirido en línea una suscripción individual. Además, proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción adquirida.</description>
+		<description>Este correo electrónico notifica al gestor/a de suscripciones que se adquirió en línea una suscripción individual. Además, proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción adquirida.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Adquirir una suscripción: Institucional</subject>
-		<body>Se ha adquirido en línea una suscripción institucional para {$journalName} con los siguientes detalles. Para activar esta suscripción, use la dirección URL para suscripciones proporcionada y cambie el estado de la suscripción a "Activa". 
+		<subject>Comprar una suscripción: Institucional</subject>
+		<body>Se adquirió en línea una suscripción institucional para {$journalName} con los siguientes detalles.
 
-Tipo de suscripción: {$subscriptionType} 
+Para activar esta suscripción, use la dirección URL para suscripciones proporcionada y cambie el estado de la suscripción a "Activa".
 
-Institución: 
-{$institutionName} 
-{$institutionMailingAddress} 
+Tipo de suscripción: {$subscriptionType}
 
-Dominio (si se proporciona): 
-{$domain} 
+Institución:
+{$institutionName}
+{$institutionMailingAddress}
 
-Intervalo de IP (si se proporciona): 
-{$ipRanges} 
+Dominio (si se proporciona):
+{$domain}
 
-Persona de contacto: 
-{$userDetails} 
+Rangos de IP (si se proporciona):
+{$ipRanges}
 
-Información de pertenencia (si se proporciona): 
-{$membership} 
+Persona de contacto:
+{$userDetails}
 
-Para visualizar o modificar esta suscripción, haga clic en la siguiente dirección URL. 
+Información de afiliación (si se proporciona):
+{$membership}
+
+Para ver o modificar esta suscripción, haga clic en la siguiente dirección URL.
 
 URL de la suscripción: {$subscriptionUrl}</body>
-		<description>Este correo electrónico notifica al gestor/a de suscripciones que se ha adquirido en línea una suscripción institucional. Además, proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción adquirida.</description>
+		<description>Este correo electrónico notifica al gestor/a de suscripciones que se adquirió en línea una suscripción institucional. Además, proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción adquirida.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Renovación de suscripción: Individual</subject>
-		<body>Se ha renovado en línea una suscripción individual para {$journalName} con los siguientes detalles: 
+		<body>Se renovó en línea una suscripción individual para {$journalName} con los siguientes detalles.
 
-Tipo de suscripción: 
-{$subscriptionType} 
+Tipo de suscripción: {$subscriptionType}
 
-Usuario/a: 
-{$userDetails} 
+Usuario/a:
+{$userDetails}
 
-Información de pertenencia (si se proporciona): 
-{$membership} 
+Información de afiliación (si se proporciona):
+{$membership}
 
-Para visualizar o modificar esta suscripción, haga clic en la siguiente dirección URL. 
+Para ver o modificar esta suscripción, haga clic en la siguiente dirección URL.
 
 URL de la suscripción: {$subscriptionUrl}</body>
-		<description>Este correo electrónico notifica al gestor/a de suscripciones que se ha renovado en línea una suscripción individual. Además, proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción renovada.</description>
+		<description>Este correo electrónico notifica al gestor/a de suscripciones que se renovó en línea una suscripción individual. Además, proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción renovada.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Renovación de suscripción: Institucional</subject>
-		<body>Se ha renovado en línea una suscripción institucional para {$journalName} con los siguientes detalles:
+		<body>Se renovó en línea una suscripción institucional para {$journalName} con los siguientes detalles.
 
-Tipo de suscripción: 
-{$subscriptionType} 
+Tipo de suscripción: {$subscriptionType}
 
-Institución: 
-{$institutionName} 
-{$institutionMailingAddress} 
+Institución:
+{$institutionName}
+{$institutionMailingAddress}
 
-Dominio (si se proporciona): 
-{$domain} 
+Dominio (si se proporciona):
+{$domain}
 
-Intervalo de IP (si se proporciona): 
-{$ipRanges} 
+Rangos de IP (si se proporciona):
+{$ipRanges}
 
-Persona de contacto: 
-{$userDetails} 
+Persona de contacto:
+{$userDetails}
 
-Información de pertenencia (si se proporciona): 
-{$membership} 
+Información de afiliación (si se proporciona):
+{$membership}
 
-Para visualizar o modificar esta suscripción, haga clic en la siguiente dirección URL. 
+Para ver o modificar esta suscripción, haga clic en la siguiente dirección URL.
 
 URL de la suscripción: {$subscriptionUrl}</body>
-		<description>Este correo electrónico notifica al gestor/a de suscripciones que se ha renovado en línea una suscripción institucional. Además, proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción renovada.</description>
+		<description>Este correo electrónico notifica al gestor/a de suscripciones que se renovó en línea una suscripción institucional. Además, proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción renovada.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Edición de cita</subject>
-		<body>{$authorFirstName}: 
+		<subject>Edición de citas</subject>
+		<body>{$authorFirstName},
 
-Compruebe o proporcione la cita correcta para la siguiente referencia de su artículo {$articleTitle}:
+compruebe o proporcione la cita correcta para la siguiente referencia de su artículo, {$articleTitle}: 
 
-{$rawCitation} 
+{$rawCitation}
 
-Gracias. 
-
+Gracias.
 {$userFirstName}
 Corrector/a de originales, {$journalName}</body>
-		<description>Este correo electrónico permite a los correctores/as solicitar información adicional sobre las referencias de los autores/as.</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Solicitud de revisión de un artículo</subject>
-		<body>{$reviewerName}: 
-
-Este correo hace referéncia al artículo "{$articleTitle}," que está en proceso de evaluación por la revista {$journalName}.
-
-Siguiendo el proceso de revisión del artículo, los autores han enviado una nueva versión del documento. Nos sería de gran valor si pudieses ayudar evaluando esta nueva versión.
-
-Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. El sitio web es {$journalUrl}
-
-La revisión deberá entregarse el {$reviewDueDate}.
-
-Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para conseguir su nombre de usuario/a y su contraseña: {$passwordResetUrl}
-
-URL del envío: {$submissionReviewUrl}
-
-Gracias por contemplar esta petición.
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Con este correo electrónico el editor/a de sección solicita a un revisor/a que acepte o decline la tarea de revisar un envío en segundas rondas o posteriores. Además, proporciona información sobre el envío como el título, el resumen, la fecha de envío de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista. (Consulte también REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Solicitud de revisión de un artículo</subject>
-		<body>{$reviewerName}: 
-
-Este correo hace referencia al artículo "{$articleTitle}," que está en proceso de evaluación por la revista {$journalName}.
-
-Siguiendo el proceso de revisión del artículo, los autores han enviado una nueva versión del documento. Nos sería de gran valor si pudieses ayudar evaluando esta nueva versión.
-
-Inicie sesión en el sitio web de la revista antes de {$weekLaterDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. 
-
-La revisión deberá entregarse el {$reviewDueDate}.
-
-El artículo está disponible en: {$submissionReviewUrl}
-
-Gracias por contemplar esta petición.
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-{$abstractTermIfEnabled}
-{$articleAbstract}</body>
-		<description>Con este correo electrónico el editor/a de sección solicita a un revisor/a que acepte o decline la tarea de revisar un envío en segundas rondas o posteriores. Además, proporciona información sobre el envío como el título, el resumen, la fecha de envío de la revisión y cómo obtener acceso al propio envío. Este mensaje se usa cuando se selecciona el proceso de revisión estándar en el paso 2 de la configuración de la revista y cuando se habilita el acceso al revisor/a en un solo clic.</description>
+		<description>Este correo electrónico permite a los correctores/as de originales solicitar información adicional sobre las referencias de los autores/as.</description>
 	</email_text>
 	<email_text key="GIFT_AVAILABLE">
 		<subject>{$giftNoteTitle}</subject>
-		<body>Apreciado {$recipientFirstName},
+		<body>Estimado/a {$recipientFirstName},
 
-{$buyerFullName} quiere hacerte un regalo en {$giftJournalName}:
+{$buyerFullName} quiere compartir un regalo con usted en {$giftJournalName}:
 
 {$giftDetails}
-
 
 {$giftNote}
 
+Recibirá un mensaje de correo electrónico de seguimiento que incluye los detalles para iniciar sesión e instrucciones para reclamar su regalo.
 
-Vas a recibir un correo de seguimiento que incluye detalles e instrucciones para canjear tu regalo.
-
-Esperamos lo disfrutes!
+Esperamos que el regalo sea de su agrado.
 
 {$giftContactSignature}</body>
-		<description>Este correo notifica al destinatario del regalo que ya ha sido pagado y está disponible para ser canjeado.</description>
-	</email_text>
-	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Solicitud de revisión de un artículo</subject>
-		<body>{$reviewerName}: 
-
-Este correo hace referéncia al artículo "{$articleTitle}," que está en proceso de evaluación por la revista {$journalName}.
-
-Siguiendo el proceso de revisión del artículo, los autores han enviado una nueva versión del documento. Nos sería de gran valor si pudieses ayudar evaluando esta nueva versión.
-
-Las directrices de revisión de la revista se añaden a continuación y el artículo se adjunta a este correo. La revisión del artículo, junto con tu recomendación deberán entregarse antes del  {$reviewDueDate}.
-
-Gracias por contemplar esta petición.
-
-{$editorialContactSignature}
-
-
-Directrices de revisión
-
-{$reviewGuidelines}</body>
-		<description>Con este correo electrónico el editor/a de sección solicita a un revisor/a que acepte o decline la tarea de revisar un envío en segundas rondas o posteriores. Además, el correo incluye el artículo como adjunto. Este mensaje se usa cuando se selecciona el proceso de revisión con correos adjuntos en el paso 2 de la configuración de la revista. (Consulte también REVIEW_REQUEST_SUBSEQUENT.)</description>
+		<description>Este correo electrónico notifica al destinatario/a de un regalo que este fue adquirido y puede ser reclamado.</description>
 	</email_text>
 	<email_text key="GIFT_USER_REGISTER">
-		<subject>Canjear un regalo: Detalles de acceso</subject>
-		<body>Apreciado {$recipientFirstName},
+		<subject>Reclame su regalo: Detalles de inicio de sesión</subject>
+		<body>Estimado/a {$recipientFirstName},
 
-{$buyerFullName} quiere hacerte un regalo en {$giftJournalName}:
+{$buyerFullName} quiere compartir un regalo con usted en {$giftJournalName}:
 
 {$giftDetails}
 
+Para reclamar su regalo, inicie sesión en el sitio web de la revista en {$giftUrl} 
 
-Para canjear tu regalo, por favor accede al sitio web de la revista en {$giftUrl}
+Su nombre de usuario/a: {$username}
+Su contraseña: {$password}
 
-Usuario/a: {$username}
-Contraseña: {$password}
+Una vez se haya registrado, podrá cambiar su contraseña cuando lo desee. 
 
-Cuando accedas a la revista, podrás cambiar esta contraseña.
-
-Esperamos disfrutes de tu regalo!
+Esperamos que el regalo sea de su agrado.
 
 {$giftContactSignature}</body>
-		<description>Este correo notifica al destinatario de un regalo de sus credenciales para su nueva cuenta.</description>
+		<description>Este correo electrónico notifica al destinatario/a de un regalo los detalles de inicio de sesión de su cuenta nueva.</description>
 	</email_text>
 	<email_text key="GIFT_USER_LOGIN">
-		<subject>Canjear un regalo: Detalles de acceso</subject>
-		<body>Apreciado {$recipientFirstName},
+		<subject>Reclame su regalo: Detalles de inicio de sesión</subject>
+		<body>Estimado/a {$recipientFirstName},
 
-{$buyerFullName} quiere hacerte un regalo en {$giftJournalName}:
+{$buyerFullName} quiere compartir un regalo con usted en {$giftJournalName}:
 
 {$giftDetails}
 
+Para reclamar su regalo, inicie sesión en el sitio web de la revista en {$giftUrl}
 
-Para canjear tu regalo, por favor accede al sitio web de la revista en {$giftUrl}
+Su nombre de usuario/a: {$username}
 
-Usuario/a: {$username}
-
-Esperamos disfrutes de tu regalo!
+Esperamos que el regalo sea de su agrado.
 
 {$giftContactSignature}</body>
-		<description>Este correo notifica al destinatario de un regalo de sus detalles de acceso.</description>
+		<description>Este correo electrónico notifica al destinatario/a de un regalo sus detalles de inicio de sesión.</description>
 	</email_text>
-	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>Se ha entregado una versión revisada</subject>
+<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>Versión de revisión cargada</subject>
 		<body>{$editorialContactName}:
 
-El autor/a {$authorName} ha entregado una nueva versión revisada del artículo "{$articleTitle}".
+Se cargó una versión revisada de "{$articleTitle}" por el autor/a {$authorName}.
 
 URL del envío: {$submissionUrl}
 
 {$editorialContactSignature}</body>
-    <description>Este correo se envía al editor/a asignado un mensaje automático cuando el autor/a carga una versión revisada de su artículo.</description>
+		<description>Este correo electrónico se envía de forma automática al editor/a asignado, cuando el autor/a carga una versión revisada de un artículo.</description>
 	</email_text>
 </email_texts> 

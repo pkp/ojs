@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/blocks/relatedItems/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
 
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.relatedItems.displayName">Bloque de elementos relacionados</message>
-	<message key="plugins.block.relatedItems.description">Este conector muestra un bloque con elementos relacionados en la barra lateral de Herramientas de lectura.</message>
+	<message key="plugins.block.relatedItems.description">Este módulo muestra un bloque con elementos relacionados en la barra lateral de herramientas de lectura.</message>
 	<message key="plugins.block.relatedItems.title">Elementos relacionados</message>
 	<message key="plugins.block.relatedItems.hide">Ocultar</message>
 	<message key="plugins.block.relatedItems.show">Mostrar todos</message>

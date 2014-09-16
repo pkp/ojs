@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles - Section Editor 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000017" locale="es_ES" title="Editor/a de sección" toc="journal/toc/000003" key="journal.roles.sectionEditor">
 	<section>
-		<![CDATA[<p>El editor/a de sección gestiona la revisión y la edición de los envíos que le han sido asignados. En algunos casos, un editor/a de sección al cual se le ha asignado la visualización de los envíos desde {help_topic key="editorial.sectionEditorsRole.review" text="En revisión"} puede ser también el responsable de visualizar los envíos que se han aceptado a través de {help_topic key="editorial.sectionEditorsRole.editing" text="En edición"} (corrección de originales, maquetación y revisiones). A menudo, sin embargo, los editores/as de sección trabajan únicamente en el proceso de revisión y un editor/a, que desempeña el papel de editor/a de sección, visualiza los envíos desde el proceso "En edición". Cada revista tiene una política sobre la división de las tareas.</p>]]>	
+		<![CDATA[<p>El editor/a de la sección gestiona la revisión y edición de los envíos que se le asignen. En algunos casos, un editor/a de sección asignado para asegurar que los envíos pasen el proceso de {help_topic key="editorial.sectionEditorsRole.review" text="Revisión"}, puede ser responsable de que los envíos que se acepten a través del proceso de {help_topic key="editorial.sectionEditorsRole.editing" text="Edición"} (corrección de originales, maquetación y corrección de pruebas). A menudo, sin embargo, los editores/as de sección trabajan únicamente en el proceso de revisión; mientras que un editor/a que desempeña el rol de editor/a de sección, también se asegura de que pasen el proceso de edición. La revista tendrá una política sobre la división de tareas.</p>]]>	
 	</section>
-</topic>
+</topic> 

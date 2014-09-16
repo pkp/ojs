@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../../../../lib/pkp/dtd/helpToc.dtd">
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * Main table of contents for translator plugin help. 
+  *
+  -->
+
+<toc id="TranslatorPlugin/toc/000000" locale="es_ES" title="Translator Plugin" parent_topic="index/topic/000000">
+	<topic id="TranslatorPlugin/topic/000000" title="Translator Plugin" />
+</toc> 

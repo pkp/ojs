@@ -7,28 +7,29 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Management Pages - Import/Export
   *
-  * $Id$
   -->
 
-<topic id="journal/topic/000031" locale="es_ES" title="Importar/Exportar Datos" toc="journal/toc/000001" key="journal.managementPages.importExport">
+<topic id="journal/topic/000031" locale="es_ES" title="Importar/Exportar datos" toc="journal/toc/000001" key="journal.managementPages.importExport">
 	<section>
-		<![CDATA[<p>La función de Importar/Exportar datos, disponible en Gestión de la revista, permite al gestor/a de la revista introducir y extraer datos de OJS.</p><p>La importación/exportación de datos se implementa mediante conectores, uno diferente por cada tipo y formato de datos. Para más información, consulte la documentación de cada conector, ubicada en el directorio de conectores de OJS.</p><p>OJS incluye cinco conectores para importar y exportar que se explican más abajo.</p><p>La función de importar y exportar también está disponible como herramienta de línea de órdenes. Para más información, véase tools/importExport.php.</p>]]>
+		<![CDATA[<p>La función Importar/Exportar datos, disponible en Gestión de la revista, permite al gestor/a de la revista introducir y extraer datos de OJS.</p><p>La importación/exportación de datos se implementa mediante módulos, uno diferente por cada tipo y formato de datos. Para más información, consulte la documentación de cada módulo, ubicada en el directorio de módulos de OJS.</p><p>OJS incluye cinco módulos para importar/exportar que se explican más abajo.</p><p>La función de importar y exportar también está disponible como herramienta de línea de comandos. Para más información, ver tools/importExport.php.</p>]]>
 	</section>
-	<section title="Conector Users XML">
-			<![CDATA[<p>El conector XML Usuarios/as sirve para importar y exportar usuarios/as y sus roles. Para más información, véase el DTD en XML en "plugins/importexport/users/users.dtd".</p>]]>
+	<section title="Módulo XML usuarios/as">
+			<![CDATA[<p>El módulo XML usuarios/as sirve para importar y exportar usuarios/as y sus roles. Vea XML DTD en "plugins/importexport/users/users.dtd" para más información.</p>]]>
 	</section>
-	<section title="Conector Erudit Article Export">
-			<![CDATA[<p>El conector para exportar artículos de Erudit implementa una exportación individual de artículos para una indización del texto completo usando el DTD en XML de Erudit. Para más información, véase <a href="http://www.erudit.org/?lang=es">http://www.erudit.org</a>.</p>]]>
+	<section title="Módulo de exportación de artículos de Erudit">
+			<![CDATA[<p>El módulo de exportación de artículos de Erudit implementa una exportación individual de artículos para una indexación del texto completo mediante XML DTD de Erudit. Vea <a href="http://www.erudit.org">http://www.erudit.org</a> para más información.</p>]]>
 	</section>
-	<section title="Conector Articles &amp; Issues XML">
-			<![CDATA[<p>El conector XML Artículos &amp; Números es el principal método para importaciones y exportaciones por lotes. Pueden tratarse los archivos y números de manera individual o colectiva, incluidos los metadatos de forma íntegra. Para más información, véase el DTD en XML en "plugins/importexport/native/native.dtd".</p>]]>
+	<section title="Módulo XML artículos y números">
+			<![CDATA[<p>El módulo XML artículos y números es el método principal para importar y exportar por lotes. Puede usarse para importar y exportar artículos y números de manera individual o colectiva, incluidos los metadatos de forma íntegra. Para más información, vea XML DTD en "plugins/importexport/native/native.dtd".</p>]]>
 	</section>
-	<section title="Conector PubMed XML Export">
-			<![CDATA[<p>El conector de exportación XML PubMed permite crear información bibliográfica para los artículos del número actual según el estándar de PubMed de datos en formato en XML para indexarlos en NLM PubMed/MEDLINE. Dispone de detalles sobre el formato XML y de requisitos de datos en: <a href="http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html">http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html</a>. Para más información sobre este conector, véase "plugins/importexport/pubmed".</p>]]>
+	<section title="Módulo de exportación XML PubMed">
+			<![CDATA[<p>El módulo de exportación XML PubMed proporciona un módulo de importación/exportación para crear información bibliográfica para los artículos del número actual según el estándar de PubMed de publicación de datos en formato XML para indexarlos en NLM PubMed/MEDLINE. Los detalles sobre el formato XML y los requisitos de datos se encuentran disponibles en: <a href="http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html">http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html</a>. Se puede encontrar más información sobre este módulo en "plugins/importexport/pubmed".</p>]]>
 	</section>
-	<section title="Conector Crossref XML Export">
-			<![CDATA[<p>El conector de exportación XML Crossref permite crear información de metadatos para artículos y números para indexarlos en CrossRef. Dispone de detalles sobre el formato XML y de requisitos de datos en: <a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>. Para más información sobre este conector, véase "plugins/importexport/crossref".</p>]]>
+	<section title="Módulo de exportación XML Crossref">
+			<![CDATA[<p>El módulo de exportación XML Crossref proporciona un módulo de importación/exportación para crear información de metadatos para artículos y números para indexarlos en CrossRef. Los detalles sobre el formato XML y los requisitos de datos se encuentran disponibles en: <a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>. Se puede encontrar más información sobre este módulo en "plugins/importexport/crossref".</p>]]>
 	</section>
-</topic>
+</topic> 

@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles - Editor 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000016" locale="es_ES" title="Editor/a" toc="journal/toc/000003" key="journal.roles.editor">
 	<section>
-		<![CDATA[<p>El editor/a supervisa la totalidad del proceso editorial y de publicación. Normalmente, el editor/a establece, junto con el gestor/a de la revista, las políticas y los procedimientos que debe seguir la revista, incluidos en el apartado {help_topic key="journal.managementPages.setup" text="Configuración"}. En el apartado Proceso editorial, el editor/a asigna envíos a los editores/as de sección que se pueden ver en "Envío en revisión" y "Envío en edición". El editor/a realiza un seguimiento del progreso del envío y presta asistencia con cualquier dificultad que pueda surgir. Una vez la revisión ha finalizado, el editor/a debería ver el envío con el proceso {help_topic key="editorial.sectionEditorsRole.editing" text="En edición"} (incluyendo la corrección, la maquetación y la revisión) a pesar de que en otras revistas esta responsabilidad recae sobre el editor/a de sección encargardo/a del proceso de {help_topic key="editorial.sectionEditorsRole.review" text="En revisión"} de la entrega. El editor/a también planifica la publicación de envíos, reorganiza la Tabla de contenidos y publica el número de la revista como parte del {help_topic key="publishing.index" text="Proceso editorial"}. El editor/a puede volver a colocar los envíos archivados en las listas activas de "En revisión" o "En edición" como se explica en {help_topic key="editorial.editorsRole.submissions.archives" text="Archivos"}.</p>]]>	
+		<![CDATA[<p>El editor/a supervisa todo el proceso de edición y publicación. Normalmente, el editor/a establece, junto con el gestor/a de la revista, las políticas y los procedimientos que debe seguir la revista, incluidos en el apartado {help_topic key="journal.managementPages.setup" text="Configuración"}. En Proceso editorial, el editor/a asigna envíos a los editores/as de sección que se pueden ver en la Revisión de envíos y Edición de envíos. El editor/a realiza un seguimiento del progreso del envío y ayuda en cualquier dificultad que pueda surgir. Una vez finalizada la revisión, el editor/a usualmente se asegura de que el envío pase por el proceso de {help_topic key="editorial.sectionEditorsRole.editing" text="Edición"} (incluyendo la corrección de originales, la maquetación y la corrección de pruebas) a pesar de que en otras revistas esta responsabilidad recae sobre el editor/a de sección encargado del proceso de {help_topic key="editorial.sectionEditorsRole.review" text="Revisión"} del envío. El editor/a también planifica la publicación de envíos, reorganiza la Tabla de contenidos y publica el número de la revista como parte del {help_topic key="publishing.index" text="Proceso de publicación"}. El editor/a puede recuperar envíos archivados en las listas activas En revisión o En edición tal y como se describe en {help_topic key="editorial.editorsRole.submissions.archives" text="Archivos"}.</p>]]>	
 	</section>
-</topic>
+</topic> 

@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Editor's Role Submissions - In Review 
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000016" locale="es_ES" title="En revisión" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
 	<section>
-		<![CDATA[<p>Los envíos de esta lista están sujetos a revisión y a la decisión del editor/a de sección de aceptar o rechazar el envío. El alcance del proceso de revisión se explica en detalle en la política de revisión de la revista (p. ej. ¿Están todas las secciones de la revista sujetas a una evaluación por pares? ¿Cuántos revisores/as por pares hay por envío?). Cuando un editor/a de sección o un editor/a hacen clic en el título de un envío de la lista En proceso de revisión, acceden a la página Revisión de envíos. Si el editor/a de sección acepta un envío, se añade automáticamente a la lista En edición; si la rechaza, se envía a Archivos.</p>]]>	
+		<![CDATA[<p>Los envíos en esta lista se someten a revisión y a la decisión del editor/a de sección de aceptar o rechazar el envío. El alcance del proceso de revisión se explica en detalle en la política de revisión de la revista (p. ej.: ¿están todas las secciones de la revista sujetas a una evaluación por pares? O ¿cuántos revisores/as por pares hay por envío?). Cuando un editor/a de sección o un editor/a hacen clic en el título de un envío de la lista En revisión, acceden a la página de Revisión de envíos. Si el editor/a de sección acepta la publicación de un envío, éste pasa a la cola de edición; si la rechaza, pasa a Archivos.</p>]]>	
 	</section>
-</topic>
+</topic> 

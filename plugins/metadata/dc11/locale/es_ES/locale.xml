@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.metadata.dc11.articleAdapter.displayName">Adaptador de artículo DC 1.1</message>
+	<message key="plugins.metadata.dc11.articleAdapter.description">Extrae/inyecta meta-data desde/hacia articles.</message>
+</locale>

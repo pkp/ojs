@@ -1,20 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/importexport/native/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.native.displayName">Conector de artículos y números en XML</message>
-	<message key="plugins.importexport.native.description">Importar y exportar artículos y números.</message>
+	<message key="plugins.importexport.native.displayName">Módulo de artículos y números en XML</message>
+	<message key="plugins.importexport.native.description">Importar y exportar artículos y números</message>
 
-	<message key="plugins.importexport.native.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [command] ... Comandos: importar [xmlFileName] [journal_path] [user_name] ... exportar [xmlFileName] [journal_path] artículos [articleId1] [articleId2] ... exportar [xmlFileName] [journal_path] artículo [articleId] exportar [xmlFileName] [journal_path] números [issueId1] [issueId2] ... exportar [xmlFileName] [journal_path] número [issueId] Dependiendo del nodo raíz del documento XML, pueden requerirse parámetros adicionales para importar datos si: El nodo raíz es <article> o <articles>, se requieren parámetros adicionales. Se admiten los siguientes formatos: {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] id_número [issueId] id_sección [sectionId] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] id_número [issueId] nombre_sección [name] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] id_número [issueId] abrev_sección [abbrev]]]></message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [command] ... Comandos: importar [xmlFileName] [journal_path] [user_name] ... exportar [xmlFileName] [journal_path] artículos [articleId1] [articleId2] ... exportar [xmlFileName] [journal_path] artículo [articleId] exportar [xmlFileName] [journal_path] números [issueId1] [issueId2] ... exportar [xmlFileName] [journal_path] número [issueId] Pueden requerirse parámetros adicionales para importar datos como se indica a continuación, dependiendo del nodo raíz del documento XML. Si el nodo raíz es <article> o <articles>, los parámetros adicionales son obligatorios. Se aceptan los siguientes formatos: {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] issue_id [issueId] section_id [sectionId] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] [user_name] issue_id [issueId] section_name [name] {$scriptName} {$pluginName} importar [xmlFileName] [journal_path] issue_id [issueId] section_abbrev [abbrev]
+]]></message>
 	<message key="plugins.importexport.native.export">Exportar datos</message>
 	<message key="plugins.importexport.native.export.issues">Exportar números</message>
 	<message key="plugins.importexport.native.export.sections">Exportar secciones</message>
@@ -24,89 +27,90 @@
 	<message key="plugins.importexport.native.selectArticle">Seleccionar un artículo</message>
 
 	<message key="plugins.importexport.native.import.articles">Importar artículos</message>
-	<message key="plugins.importexport.native.import.articles.description">El archivo que está importando contiene uno o más artículos. Debe elegir un número y una sección a los que importar estos artículos. Si no desea importarlos todos en el mismo número o la misma sección, sepárelos en diferentes archivos XML o muévalos a los números y secciones adecuados después de importarlos.</message>
+	<message key="plugins.importexport.native.import.articles.description">Está importando un archivo que contiene uno o más artículos. Debe elegir un número y una sección a los que importar estos artículos. Si no desea importarlos todos en el mismo número o la misma sección, sepárelos en diferentes archivos XML o muévalos a los números y secciones adecuados después de importarlos.</message>
 
 	<message key="plugins.importexport.native.import">Importar datos</message>
-	<message key="plugins.importexport.native.import.description"><![CDATA[Este conector admite la importación de datos basada en la definición del tipo de documento nativo.dtd. Los nodos raíz admitidos son &lt;artículo&gt;, &lt;artículos&gt;, &lt;número&gt; y &lt;números&gt;.]]></message>
+	<message key="plugins.importexport.native.import.description">Este módulo admite la importación de datos basada en la definición del tipo de documento nativo.dtd. Los nodos de raíz son compatibles con &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, y &amp;lt;issues&amp;gt;.</message>
 
 	<message key="plugins.importexport.native.import.error">Error de importación</message>
-	<message key="plugins.importexport.native.import.error.description">Se ha producido uno o más errores durante la importación. Compruebe que el formato del archivo de importación se corresponda con el indicado. A continuación se listan los detalles de los errores de importación.</message>
+	<message key="plugins.importexport.native.import.error.description">Se produjeron uno o más errores durante la importación. Compruebe que el formato del archivo de importación corresponde con la especificación. A continuación se muestran los detalles de los errores de importación.</message>
 
 	<message key="plugins.importexport.native.cliError">ERROR:</message>
-	<message key="plugins.importexport.native.error.uploadFailed">Se ha producido un fallo en la subida. Asegúrese de que se pueden subir archivos en su servidor y de que el archivo no es demasiado grande para la configuración del PHP y del servidor web.</message>
+	<message key="plugins.importexport.native.error.uploadFailed">No se pudo subir el archivo; asegúrese de que se pueden subir archivos en su servidor y de que el archivo no es demasiado grande para la configuración del PHP y del servidor web.</message>
 	<message key="plugins.importexport.native.error.unknownUser">No existe el usuario/a indicado "{$userName}".</message>
 	<message key="plugins.importexport.native.error.unknownJournal">No existe la ruta a la revista indicada "{$journalPath}".</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">No se pudo editar el archivo "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">No se puede editar el archivo "{$fileName}".</message>
 	<message key="plugins.importexport.native.export.error.sectionNotFound">Ninguna sección se corresponde con el especificador "{$sectionIdentifier}".</message>
 	<message key="plugins.importexport.native.export.error.issueNotFound">Ningún número se corresponde con la Id. indicada "{$issueId}".</message>
 	<message key="plugins.importexport.native.export.error.articleNotFound">Ningún artículo se corresponde con la Id. indicada "{$articleId}".</message>
-	<message key="plugins.importexport.native.import.error.unsupportedRoot">Este conector no admite el nodo raíz proporcionado "{$rootName}". Asegúrese de que el archivo está correctamente constituido e inténtelo de nuevo.</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Este módulo no admite el nodo raíz proporcionado "{$rootName}". Asegúrese de que el archivo se creó correctamente e inténtelo de nuevo.</message>
 
-	<message key="plugins.importexport.native.import.error.titleMissing">Falta el título de un número.</message>
+	<message key="plugins.importexport.native.import.error.titleMissing">Número sin título</message>
 	<message key="plugins.importexport.native.import.error.defaultTitle">FALTA TÍTULO</message>
-	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Se indicó un tipo de identificación desconocida "{$identificationType}" en el atributo «identificación» para el elemento «número» del número "{$issueTitle}".</message>
-	<message key="plugins.importexport.native.import.error.invalidBooleanValue">Se indicó un valor booleano no válido "{$value}". Indique «verdadero» o «falso».</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Se indicó un tipo de identificación desconocida "{$identificationType}" en el atributo "identificación" para el elemento "número" del número "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">Se indicó un valor booleano no válido "{$value}". Indique "verdadero" o "falso" .</message>
 	<message key="plugins.importexport.native.import.error.invalidDate">Se indicó una fecha no válida "{$value}".</message>
 	<message key="plugins.importexport.native.import.error.unknownEncoding">Se introdujeron datos mediante un tipo de codificación desconocida "{$type}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotWriteFile">No se pudo guardar una copia local de "{$originalName}".</message>
 	<message key="plugins.importexport.native.import.error.illegalUrl">La URL indicada "{$url}" para el número "{$issueTitle}" no es válida. Las importaciones enviadas a través de la web sólo admiten métodos http, https, ftp o ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Se ha indicado un tipo de archivo complementario desconocido "{$suppFileType}".</message>
-	<message key="plugins.importexport.native.import.error.couldNotCopy">No se pudo copiar la URL indicada "{$url}" a un archivo local.</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">No se puede copiar la URL indicada "{$url}" a un archivo local.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">La Id. pública indicada para la galerada importada "{$publicId}" ya está asignada a otra galerada del mismo artículo, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">La Id. pública indicada para el archivo suplementario indicado"{$suppFileTitle}" ya está asignada a otro archivo suplementario del mismo artículo, "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">La Id. pública indicada para el archivo importado "{$articleTitle}" ya está asignada a otro artículo, "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">La Id. pública indicada para el número importado "{$issueTitle}" ya está asignada a otro número, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Falta un título de sección para el número "{$issueTitle}". Asegúrese de que el documento XML se ajusta a la DTD apropiada.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">La sección "{$sectionTitle}" del número "{$issueTitle}" coincide con una sección de la revista, pero la abreviatura indicada ("{$sectionAbbrev}") se corresponde con una sección diferente.</message>
-	<message key="plugins.importexport.native.import.error.articleTitleMissing">Falta un título de artículo para el número "{$issueTitle}" en la sección "{$sectionTitle}". Asegúrese de que el documento XML se ajusta a la DTD apropiada y de que se ha proporcionado un título para la configuración local de la revista.</message>
-	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">Se ha proporcionado un título de artículo ("{$articleTitle}") para el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">Se ha proporcionado un resumen de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">Falta un título de artículo para el número "{$issueTitle}" en la sección "{$sectionTitle}". Asegúrese de que el documento XML se ajusta a la DTD apropiada y que se proporcionó un título para la configuración regional de la revista.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">Se ha proporcionado un título de artículo ("{$articleTitle}") para el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">Se ha proporcionado un resumen de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
 	<message key="plugins.importexport.native.import.error.galleyLabelMissing">Falta una etiqueta de galerada en el artículo "{$articleTitle}" de la sección "{$sectionTitle}" del número "{$issueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.suppFileMissing">Falta un archivo complementario en el artículo "{$articleTitle}" de la sección "{$sectionTitle}" del número "{$issueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.galleyFileMissing">Falta un archivo de galerada en el artículo "{$articleTitle}" de la sección "{$sectionTitle}" del número "{$issueTitle}".</message>
 
-	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">Se ha proporcionado un título de número ("{$issueTitle}") en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">Se ha proporcionado una descripción del número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">Se ha proporcionado una portada del número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">Se ha proporcionado un título de número ("{$issueTitle}") en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">Se ha proporcionado una descripción del número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">Se ha proporcionado una portada del número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
 
-	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">Se ha proporcionado un título de sección ("{$sectionTitle}") en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">Se ha proporcionado una abreviatura de sección ("{$sectionAbbrev}") en el número ("{$issueTitle}") en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">Se ha proporcionado un tipo de identificación de sección ("{$sectionIdentifyType}") en el número ("{$issueTitle}") en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">Se ha proporcionado una política de sección ("{$sectionPolicy}") en el número ("{$issueTitle}") en una configuración local ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">Se ha proporcionado un título de sección ("{$sectionTitle}") en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">Se ha proporcionado una abreviatura de sección ("{$sectionAbbrev}") en el número ("{$issueTitle}") en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">Se ha proporcionado un tipo de identificación de sección ("{$sectionIdentifyType}") en el número ("{$issueTitle}") en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">Se ha proporcionado una política de sección ("{$sectionPolicy}") en el número ("{$issueTitle}") en una configuración regional ("{$locale}") no admitida por esta revista.</message>
 
 	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">El título de sección "{$section1Title}" y el título de sección "{$section2Title}" del número "{$issueTitle}" se corresponden con otras secciones de la revista.</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMatch">El título de sección "{$sectionTitle}" del número "{$issueTitle}" se corresponde con una sección existente de la revista, pero otro título de esta sección no se corresponde con un título en la sección existente de la revista.</message>
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">La abreviatura de sección "{$section1Abbrev}" y la abreviatura de sección "{$section2Abbrev}" del número "{$issueTitle}" se corresponden con otras secciones de la revista.</message>
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">La abreviatura de sección "{$sectionAbbrev}" del número "{$issueTitle}" se corresponde con una sección existente de la revista, pero otra abreviatura de esta sección no se corresponde con una abreviatura en la sección existente de la revista.</message>
 
-	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">Se ha proporcionado una disciplina de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">Se ha proporcionado un tipo de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">Se ha proporcionado una materia de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">Se ha proporcionado una clasificación de materia de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">Se ha proporcionado una cobertura geográfica para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">Se ha proporcionado una cobertura cronológica para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">Se ha proporcionado una cobertura de muestra de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">Se ha proporcionado un patrocinador de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">Se ha proporcionado una disciplina de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">Se ha proporcionado un tipo de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">Se ha proporcionado una materia de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">Se ha proporcionado una clasificación de materia de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">Se ha proporcionado una cobertura geográfica para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">Se ha proporcionado una cobertura cronológica para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">Se ha proporcionado una cobertura de muestra de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">Se ha proporcionado un patrocinador de artículo para el artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
 
-	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Se ha proporcionado un interés de autor/a concurrente para el autor /a "{$authorFullName}" del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">Se ha proporcionado una biografía de autor/a para el autor/a "{$authorFullName}" del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Se ha proporcionado una afiliación de autor/a para el autor/a "{$authorFullName}" del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Se ha proporcionado un interés de autor/a concurrente para el autor/a "{$authorFullName}" del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">Se ha proporcionado una biografía de autor/a para el autor/a "{$authorFullName}" del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Se ha proporcionado una afiliación de autor/a para el autor/a "{$authorFullName}" del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
 
-	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">Se ha proporcionado una galerada del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">Se ha proporcionado una galerada del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
 
-	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">Se ha proporcionado un título de archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">Se ha proporcionado un creador/a del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">Se ha proporcionado una materia del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">Se ha proporcionado un tipo personalizado del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">Se ha proporcionado una descripción del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">Se ha proporcionado una editorial del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">Se ha proporcionado un patrocinador del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}") no admitida por esta revista.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">Se ha proporcionado una fuente del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración local ("{$locale}») no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">Se ha proporcionado un título de archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">Se ha proporcionado un creador/a del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">Se ha proporcionado una materia del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">Se ha proporcionado un archivo complementario de tipo personalizado ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">Se ha proporcionado una descripción del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">Se ha proporcionado una editorial del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">Se ha proporcionado un patrocinador del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">Se ha proporcionado una fuente del archivo complementario ("{$suppFileTitle}") del artículo "{$articleTitle}" en el número "{$issueTitle}" en una configuración regional ("{$locale}") no admitida por esta revista.</message>
 
-	<message key="plugins.importexport.native.import.success">Importación con éxito</message>
-	<message key="plugins.importexport.native.import.success.description">La importación se ha efectuado con éxito. A continuación se muestran los elementos importados con éxito.</message>
+	<message key="plugins.importexport.native.import.error.invalidPubId">El archivo importado contiene un conjunto de datos con un {$pubIdType}: '{$pubId}' no válido.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">El archivo importado contiene un conjunto de datos con un {$pubIdType}: '{$pubId}' ya asignado a otro elemento de la base de datos. Asegúrese de no importar elementos con Id. ya existentes en la base de datos.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">El archivo importado contiene un conjunto de datos con un tipo de Id. '{$pubIdType}' que no puede ser procesado por ningún módulo de Id. Instale o active el módulo Id. correspondiente antes de intentar importar el conjunto de datos.</message>
+	
+	<message key="plugins.importexport.native.import.success">Importación realizada con éxito</message>
+	<message key="plugins.importexport.native.import.success.description">La importación se realizó con éxito. A continuación se muestran los elementos importados con éxito.</message>
 
-	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">El ID público "{$publicId}" indicado para la galerada importada ya lo utiliza otra galerada del mismo artículo ("{$articleTitle}").</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">El ID público indicado para el fichero suplementario importado "{$suppFileTitle}" ya lo utiliza otro fichero suplementario del mismo artículo ("{$otherSuppFileTitle}").</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">El ID público para el artículo importado "{$articleTitle}" ya lo utiliza otro artículo ("{$otherArticleTitle}").</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">El ID público para el número importado "{$issueTitle}" ya lo utiliza otro número "{$otherIssueTitle}".</message>
-	<message key="plugins.importexport.native.import.error.invalidPubId">Tu fichero de importación contiene un grupo de datos inválidos en {$pubIdType}: '{$pubId}'.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePubId">El fichero de importación contiene un conjunto de datos con {$pubIdType} '{$pubId}' que ya existen en otro objeto de la base de datos. Por favor, confirma que no habías importado ya en la base de datos objetos con estos ID.</message>
-	<message key="plugins.importexport.native.import.error.unknownPubId">El fichero de importación contiene un conjunto de datos con un tipo de ID {$pubIdType} que ningún conector ID puede manejar. Por favor, instala y/o activa el correspondiente conector ID antes de importar este grupo de datos.</message>
 </locale> 

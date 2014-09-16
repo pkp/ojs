@@ -7,29 +7,30 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Site Administration - Installation 
   *
-  * $Id$
   -->
 
 <topic id="site/topic/000001" locale="es_ES" title="Instalación" toc="site/toc/000000" key="site.installation">
 	<section>
-		<![CDATA[<p>OJS es una aplicación de código abierto que se puede descargar de forma gratuita e instalar en casi cualquier escritorio o servidor.</p>]]>	
+		<![CDATA[<p>Open Journal Systems es una aplicación de código abierto que puede descargarse e instalarse de forma gratuita en casi cualquier equipo de escritorio o servidor.</p>]]>	
 	</section>
 	
 	<section title="Licencia">
-		<![CDATA[<p>OJS se distribuye bajo las condiciones de la <a href="http://www.gnu.org/licenses/licenses.es.htmll" target="_blank">Licencia Pública General de GNU</a>. La descarga de OJS incluye una copia de las condiciones de la licencia para redistribuir su código tanto en formato original como modificado.</p>]]>
+		<![CDATA[<p>OJS se distribuye según las condiciones de la <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">Licencia Pública General de GNU</a>. Al descargar OJS, se incluye una copia de las condiciones de la licencia para la redistribución del código OJS, original o modificado.</p>]]>
 	</section>
 	
 	<section title="Requisitos del sistema">
-		<![CDATA[<p>Se recomienda un entorno de servidor que cumpla con los siguientes requisitos: </p> <ul> <li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li> <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (incluido PostgreSQL 8.x)</li> <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x o >= 2.0.4x o el sistema operativo </li> <li>Microsoft IIS 6+: Cualquier sistema operativo que soporte un software mencionado en la lista anteriormente, incluidos <a href="http://www.linux-es.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/es/index.html/" target="_blank">Solaris</a>, <a href="http://www.apple.com/es/" target="_blank">Mac OS X</a> y <a href="http://www.microsoft.com/es-es/default.aspx">Windows</a></li> </ul> <p>Hasta ahora OJS se ha probado únicamente en MySQL y PostgreSQL, aunque pueden funcionar total o parcialmente en otros sistemas de gestión de bases de datos que <a href="http://www.lacorona.com.mx/fortiz/adodb/" target="_blank">ADOdb</a> admita. Todo informe de compatibilidad o parche de código para SGBD alternativos será bienvenido.</p> ]]>
+		<![CDATA[<p>Se recomienda un entorno de servidor que cumpla los siguientes requisitos:</p> <ul> <li><a href="http://www.php.net/" target="_blank">PHP</a> &gt;= 4.2.x</li> <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> &gt;= 4.1 o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> &gt;= 7.1 (PostgreSQL 8.x incluido)</li> <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> &gt;= 1.3.2x o &gt;= 2.0.4x o Microsoft IIS 6+</li> <li>Sistema operativo: Cualquier SO compatible con el software anterior, incluidos <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a> y <a href="http://www.microsoft.com/">Windows</a></li> </ul> <p>Actualmente, OJS sólo se probó en MySQL y PostgreSQL, aunque otros sistemas de gestión de bases de datos compatibles con <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> pueden funcionar, en su totalidad o parcialmente. Se aceptan los informes de compatibilidad o los parches de código para las DBMS alternativas.</p> ]]>
 	</section>
 	
-	<section title="Descarga">
-		<![CDATA[<p>OJS puede descargarse del sitio web de <a href="http://pkp.sfu.ca/ojs/" target="_blank">Public Knowledge Project</a>.</p>]]>
+	<section title="Descargar">
+		<![CDATA[<p>Se puede descargar OJS en el <a href="http://pkp.sfu.ca/ojs/" target="_blank">sitio web</a> de Public Knowledge Project.</p>]]>
 	</section>
 	
 	<section title="Instalación">
-		<![CDATA[<p>OJS viene con un script de instalación basado en web que guía al administrador del sistema durante del proceso de instalación. Como alternativa, hay disponible una herramienta de instalación de línea de comandos.</p> <ol> <li> Descargue el archivo de OJS.</li> <li> Debe descomprimirlo en el servidor web y colocarlo en el lugar deseado dentro de la estructura de directorios web:<br /> <tt>$ tar -zxf ojs-2.*.tar.gz<br /> $ mv ojs-* /var/www/myjournal</tt> </li> <li> Permita que los siguientes archivos y directorios sean escribibles (usando comandos chown o chmod):<br /> - config.inc.php (opcional)<br /> - public<br /> - cache<br /> - cache/t_cache<br /> - cache/t_config<br /> - cache/t_compile<br /> - cache/_db </li> <li> Abra un buscador web para la ubicación de la instalación de OJS (p.ej., http://www.midominio.com/mirevista/) y siga las instrucciones que aparecen en pantalla para completar la instalación. Para más información sobre el proceso de instalación, vea docs/LEEME.</li> </ol> ]]>
+		<![CDATA[<p>OJS presenta un script de instalación basado en web que guía al administrador/a del sistema a través del proceso de instalación. Por otro lado, hay disponible una herramienta de instalación de línea de comandos.</p> <ol> <li> Descargue el archivo OJS. </li> <li> Descomprima el archivo OJS en su servidor web y seleccione la ubicación que desee en el árbol de documentos web:<br /> <tt>$ tar -zxf ojs-2.*.tar.gz<br /> $ mv ojs-* /var/www/myjournal</tt> </li> <li> Permita la escritura de los siguientes archivos y directorios (es decir, use chown o chmod):<br /> - config.inc.php (opcional)<br /> - public<br /> - cache<br /> - cache/t_cache<br /> - cache/t_config<br /> - cache/t_compile<br /> - cache/_db </li> <li> Abra un navegador web para la ubicación de la instalación de OJS (por ejemplo, http://www.mydomain.com/myjournal/) y siga las instrucciones en pantalla para completar la instalación. Vea docs/LÉAME para más información sobre el proceso de instalación. </li> </ol> ]]>
 	</section>
-</topic>
+</topic> 

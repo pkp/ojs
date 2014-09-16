@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles - Reviewer 
   *
-  * $Id$
   -->
 
-<topic id="journal/topic/000021" locale="en_US" title="Reviewer" toc="journal/toc/000003" key="journal.roles.reviewer">
+<topic id="journal/topic/000021" locale="es_ES" title="Revisor/a" toc="journal/toc/000003" key="journal.roles.reviewer">
 	<section>
-		<![CDATA[<p>El editor/a de sección es el encargado de seleccionar al revisor/a para revisar el envío. A los revisores se les solicita que envíen sus revisiones al sitio web de la revista (a pesar de que algunas revistas optan por una política de revisión de correo electrónico) y pueden cargar archivos adjuntos para que los utilicen el editor/a y el autor/a. Los editores/as de sección serán los que evaluarán el trabajo de los revisores/as, dependiendo una vez más de las políticas de la revista.</p><p>Haga clic {help_topic key="editorial.reviewersRole" text="aquí"} para saber más.</p>]]>	
+		<![CDATA[<p>El revisor/a es seleccionado por el editor/a de sección para que revise un envío. Los revisores/as deben enviar sus revisiones al sitio web de la revista (a pesar de que algunas revistas optan por una política de revisión de correo electrónico) y pueden cargar archivos adjuntos para que los utilicen el editor/a y el autor/a. Los editores/as de sección pueden calificar a los revisores/as, una vez más teniendo en cuenta las políticas de esta revista.</p><p>Se puede encontrar más información {help_topic key="editorial.reviewersRole" text="aquí"}.</p>]]>	
 	</section>
-</topic>
+</topic> 

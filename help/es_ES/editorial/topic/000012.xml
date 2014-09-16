@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Copyeditor's Role Index 
   *
-  * $Id$
   -->
 
-<topic id="editorial/topic/000012" locale="es_ES" title="Rol del corrector/a de originales" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+<topic id="editorial/topic/000012" locale="es_ES" title="Rol de corrector/a de originales" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
 	<section>
-		<![CDATA[<p>El corrector/a de originales recibe un correo electrónico de solicitud por parte del editor/a de sección para corregir un envío, el cual aparecerá en la cola de envíos del corrector/a de originales. Un corrector/a de originales que no pueda hacerse cargo del encargo enviará un correo electrónico al editor/a de sección.</p>]]>	
+		<![CDATA[<p>El corrector/a de originales recibe una solicitud mediante correo electrónico del editor/a de sección para corregir un envío que posteriormente aparecerá en la cola de envíos del corrector/a. Si el corrector/a de originales no puede realizar la corrección, sólo debe informar por correo electrónico al editor/a de sección.</p>]]>	
 	</section>
-</topic>
+</topic> 

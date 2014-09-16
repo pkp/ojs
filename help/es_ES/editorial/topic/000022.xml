@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Section Editor's Role Index - In Editing
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000022" locale="es_ES" title="En edición" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
 	<section>
-		<![CDATA[<p>Los envíos en la cola En edición pasan por el proceso de corrección de originales, maquetación y corrección de pruebas. Cuando un editor/a de sección o un editor/a hacen clic en el título de un envío en la cola En edición, acceden a la página de edición de envíos. Cuando un envío ha pasado la etapa de edición y está prevista su publicación en un número, se elimina de esta lista y pasa a la lista Archivos.</p><p>Para más información sobre el proceso de edición, véase {help_topic key="editorial.sectionEditorsRole.editing" text="En edición"}.</p>]]>	
+		<![CDATA[<p>Los envíos de la cola de edición pasan por los procesos de corrección de originales, maquetación y corrección de pruebas. Cuando un editor/a de sección o un editor/a hacen clic en el título de un envío de la cola de edición, acceden a la página de edición de envíos. Cuando un envío pasa por la fase de edición y está previsto que aparezca en un número, se elimina de la lista y se cambia a Archivo.</p><p>Si desea más información sobre el proceso de edición, consulte {help_topic key="editorial.sectionEditorsRole.editing" text="Proceso de edición"}.</p>]]>	
 	</section>
-</topic>
+</topic> 

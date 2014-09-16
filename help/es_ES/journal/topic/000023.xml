@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Roles - Reader 
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000023" locale="es_ES" title="Lector/a" toc="journal/toc/000003" key="journal.roles.reader">
 	<section>
-		<![CDATA[<p>Los lectores/as pueden ser de dos tipos: miembros de revistas que requiren suscripción y miembros que deciden registrarse en una revista de acceso abierto (bien sea de acceso abierto inmediato o libres pasado un tiempo tras la publicación del contenido en la revista). Los lectores/as registrados reciben un aviso por correo electrónico con la publicación de cada número, el cual incluye la Tabla de contenidos para ese número en particular. Al registrarse en la revista, los autores/as tienen la posibilidad de registrarse también como lectores/as.</p><p>Haga clic {help_topic key="user.registerAndProfile" text="aquí"} para saber más.</p> ]]>	
+		<![CDATA[<p>Los lectores/as incluyen tanto a los suscriptores/as de las revistas que tienen acceso según la suscripción, como a los lectores/as que eligen registrarse en revistas de acceso abierto (sea acceso abierto inmediato o después de un tiempo tras la publicación inicial del contenido de la revista). Los lectores/as registrados reciben un aviso por correo electrónico con la publicación de cada número, el cual incluye la Tabla de contenidos para ese número en particular. Al registrarse en la revista, a los autores/as se les da la opción de registrarse también como lectores/as.</p><p>Se puede encontrar más información sobre el registro en una revista {help_topic key="user.registerAndProfile" text=”aquí"}.</p> ]]>	
 	</section>
-</topic>
+</topic> 

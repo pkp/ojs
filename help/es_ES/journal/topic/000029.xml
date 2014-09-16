@@ -7,19 +7,20 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Management Pages - Groups
   *
-  * $Id$
   -->
 
 <topic id="journal/topic/000029" locale="es_ES" title="Cabecera" toc="journal/toc/000001" key="journal.managementPages.groups">
 	<section>
-		<![CDATA[<p>El gestor/a de la revista dispone de dos métodos para definir el consejo editorial de la revista, que aparece en la página Equipo editorial, bajo Acerca de la revista: usar roles editoriales asignados y crear títulos de del equipo editorial personalizados.</p>]]>
+		<![CDATA[<p>El gestor/a de la revista dispone de dos métodos para definir la cabecera de la revista, que se encuentra en la página Equipo editorial después de Acerca de la revista: usar roles editoriales asignados y crear títulos de equipo editorial personalizados.</p>]]>
 	</section>
-	<section title="Generar el equipo editorial usando roles editoriales asignados">
-		<![CDATA[<p>Al seleccionar esta opción, la información sobre el equipo editorial en Acerca de la revista se generará automáticamente usando los roles editoriales definidos en las páginas de rol del gestor/a de la revista. Se creará una lista de los usuarios/as registrados como editores/as, editores/as de sección, maquetistas, correctores/as de originales y correctores/as de pruebas.</p>]]>
+	<section title="Generar el equipo editorial mediante roles editoriales asignados">
+		<![CDATA[<p>Al seleccionar dicha opción, la información sobre el equipo editorial en Acerca de la revista se genera automáticamente mediante los roles editoriales definidos en las páginas de los roles del gestor/a de la revista. Los usuarios/as registrados como editores/as, editores/as de sección, maquetistas, correctores/as de originales y correctores/as de pruebas aparecen en una lista.</p>]]>
 	</section>
-	<section title="Generar el equipo editorial usando títulos personalizados">
-		<![CDATA[<p>Si el gestor/a de la revista desea tener mayor control sobre la información que aparece en la página Equipo editorial, bajo Acerca de la revista, pueden activar tal opción desde la página consejo editorial (véase Gestión de la revista). Al activar esta opción, los diversos títulos creados en la página consejo editorial se usarán para crear información pública sobre el equipo editorial y sobre otras personas relacionadas a la revista si se desea.</p><p>Para crear un título personalizado, el gestor/a de la revista hace clic en Crear un título de posición, introduce el Nombre del título (redactor/a jefe, editor/a de sección, consejo editorial, etc.) y decide si el título aparecerá bajo Equipo editorial en Acerca de la revista o bajo Gente, en la misma sección. El gestor/a de la revista puede ordenar cómo se verán los títulos editoriales en la página principal de consejo editorial, mediante las flechas arriba y abajo, y podrá editar y eliminar aquellos que crea convenientes.</p><p>Para ver, añadir y quitar un título determinado de un usuario/a, debe hacer clic en el enlace Afiliación al lado del nombre del título. De este modo se mostrará una lista de los usuarios/as actuales de ese título en concreto. El gestor/a de la revista puede ordenar la lista de miembros y eliminar aquellos que considere necesario. Para añadir un miembro, el gestor/a de la revista hace clic en Añadir miembro e inscribir un usuario/a de la lista de miembros de la revista.</p>]]>
+	<section title="Generar el equipo editorial mediante títulos de equipo editorial personalizados">
+		<![CDATA[<p>Si el gestor/a de la revista desea tener un mayor control sobre la información que aparece en la página Equipo editorial debajo de Acerca de la revista, se puede habilitar la opción en la portada (vea Gestión de la revista). Al habilitar dicha opción, los distintos títulos creados en la portada se usan para generar información pública del equipo editorial, así como información sobre otras personas relacionadas con la revista, si así se desea.</p><p>Para crear un título personalizado, el gestor/a de la revista hace clic en Crear un título para el cargo, introduce el nombre del título (es decir, editor/a jefe, editor/a de sección, consejo editorial, etc.) y decide si el título aparecerá debajo de Equipo editorial o de Contactos en Acerca de la revista. El gestor/a de la revista puede ordenar la visualización de los títulos editoriales en la portada principal mediante las flechas arriba y abajo, y puede editarlos y eliminarlos si fuese necesario.</p><p>Para ver, añadir o eliminar usuarios/as con un título concreto, el gestor/a de la revista hace clic en el enlace Afiliación junto al nombre del título. De este modo se mostrará una lista de los usuarios/as actuales con ese título en concreto. El gestor/a de la revista puede ordenar la visualización de la lista de miembros y eliminarlos si fuese necesario. Para añadir un nuevo miembro, el gestor/a de la revista hace clic en Añadir miembro e inscribir a un usuario/a de la lista de miembros de la revista.</p>]]>
 	</section>
-</topic>
+</topic> 

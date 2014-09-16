@@ -1,75 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * @file plugins/generic/booksForReview/locale/es_ES/locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/booksForReview/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Books for review plugin localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
+  * Books for review plugin localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
 
 	<!-- Books For Review Notifications -->
 	<message key="plugins.generic.booksForReview.notification.bookRequested">Libro solicitado. Esperando la confirmación del editor/a.</message>
-	<message key="plugins.generic.booksForReview.notification.bookCreated">Se ha creado un nuevo libro para revisar.</message>
-	<message key="plugins.generic.booksForReview.notification.bookUpdated">Se ha actualizado el libro para revisar.</message>
-	<message key="plugins.generic.booksForReview.notification.bookMailed">Se ha registrado el libro para revisar como enviado.</message>
-	<message key="plugins.generic.booksForReview.notification.bookDeleted">Se ha eliminado el libro para revisar.</message>
-	<message key="plugins.generic.booksForReview.notification.submissionAssigned">Se ha asignado un envío al libro para revisar.</message>
-	<message key="plugins.generic.booksForReview.notification.authorAssigned">Se ha asignado un autor/a para el libro para revisar.</message>
-	<message key="plugins.generic.booksForReview.notification.authorDenied">Se ha denegado la solicitud del autor/a. Se ha restablecido el estado del libro para revisar.</message>
-	<message key="plugins.generic.booksForReview.notification.authorRemoved">Se ha eliminado el autor/a. Se ha restablecido el estado del libro para revisar.</message>
-	<message key="plugins.generic.booksForReview.notification.settingsSaved">Se ha guardado la configuración del libro para revisar.</message>
+	<message key="plugins.generic.booksForReview.notification.bookCreated">Se creó un nuevo libro para reseñar.</message>
+	<message key="plugins.generic.booksForReview.notification.bookUpdated">Se actualizó el libro para reseñar.</message>
+	<message key="plugins.generic.booksForReview.notification.bookMailed">Se registró el libro para reseñar como enviado.</message>
+	<message key="plugins.generic.booksForReview.notification.bookDeleted">Se eliminó el libro para reseñar.</message>
+	<message key="plugins.generic.booksForReview.notification.submissionAssigned">Se asignó un envío al libro para reseñar.</message>
+	<message key="plugins.generic.booksForReview.notification.authorAssigned">Se asignó un autor/a al libro para reseñar.</message>
+	<message key="plugins.generic.booksForReview.notification.authorDenied">Se denegó la solicitud del autor/a. Se restableció el estado del libro para reseñar.</message>
+	<message key="plugins.generic.booksForReview.notification.authorRemoved">Se eliminó el autor/a. Se restableció el estado del libro para reseñar.</message>
+	<message key="plugins.generic.booksForReview.notification.settingsSaved">Se guardó la configuración del libro para reseñar.</message>
 
 	<!-- Books For Review Management -->
-	<message key="plugins.generic.booksForReview.editor.booksForReview"><![CDATA[Libros&nbsp;para&nbsp;revisar]]></message>
+	<message key="plugins.generic.booksForReview.editor.booksForReview"><![CDATA[Libros&nbsp;para&nbsp;reseñar]]></message>
 	<message key="plugins.generic.booksForReview.editor.all">Todos</message>
-	<message key="plugins.generic.booksForReview.editor.booksForReviewAll">Libros para revisar - Todos</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAll">Libros para reseñar - Todos</message>
 	<message key="plugins.generic.booksForReview.editor.available">Disponibles</message>
-	<message key="plugins.generic.booksForReview.editor.booksForReviewAvailable">Libros para revisar - Disponibles</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAvailable">Libros para reseñar - Disponibles</message>
 	<message key="plugins.generic.booksForReview.editor.requested">Solicitados</message>
-	<message key="plugins.generic.booksForReview.editor.booksForReviewRequested">Libros para revisar - Solicitados</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewRequested">Libros para reseñar - Solicitados</message>
 	<message key="plugins.generic.booksForReview.editor.assigned">Asignados</message>
-	<message key="plugins.generic.booksForReview.editor.booksForReviewAssigned">Libros para revisar - Asignados</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAssigned">Libros para reseñar - Asignados</message>
 	<message key="plugins.generic.booksForReview.editor.mailed">Enviados</message>
-	<message key="plugins.generic.booksForReview.editor.booksForReviewMailed">Libros para revisar - Enviados</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewMailed">Libros para reseñar - Enviados</message>
 	<message key="plugins.generic.booksForReview.editor.submitted">Enviado(s)</message>
-	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">Libros para revisar - Enviados</message>
-	<message key="plugins.generic.booksForReview.editor.create">Crear un libro para revisar</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">Libros para reseñar - Enviados</message>
+	<message key="plugins.generic.booksForReview.editor.create">Crear un libro para reseñar</message>
 	<message key="plugins.generic.booksForReview.editor.createNewUser">Crear un usuario/a nuevo</message>
 	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">Editar los metadatos del libro</message>
-	<message key="plugins.generic.booksForReview.editor.delete">Eliminar el libro para revisar</message>
+	<message key="plugins.generic.booksForReview.editor.delete">Eliminar el libro para reseñar</message>
 	<message key="plugins.generic.booksForReview.editor.bookDetails">Detalles del libro</message>
 	<message key="plugins.generic.booksForReview.editor.notes">Notas adicionales</message>
-	<message key="plugins.generic.booksForReview.editor.notesInstructions">Solo para el editor/a. No se ha publicado como parte del libro para revisar.</message>
+	<message key="plugins.generic.booksForReview.editor.notesInstructions">Sólo para el editor/a. No se publicó como parte del libro para reseñar.</message>
 	<message key="plugins.generic.booksForReview.editor.title">Título</message>
 	<message key="plugins.generic.booksForReview.editor.editor">Editor/a</message>
 	<message key="plugins.generic.booksForReview.editor.status">Estado</message>
 	<message key="plugins.generic.booksForReview.editor.dueDate">Plazo</message>
-	<message key="plugins.generic.booksForReview.editor.noMailingAddress">No se ha indicado ninguna dirección de correo en el archivo.</message>
-	<message key="plugins.generic.booksForReview.editor.editSubmission"><![CDATA[Editar el&nbsp;envío]]></message>
-	<message key="plugins.generic.booksForReview.editor.confirmDelete">¿Está seguro/a de que desea eliminar este libro para revisar de forma permanente?</message>
-	<message key="plugins.generic.booksForReview.editor.confirmRemove">¿Está seguro/a de que desea eliminar este autor/a y limpiar el historial de revisión(es) de este libro?</message>
+	<message key="plugins.generic.booksForReview.editor.noMailingAddress">No se indicó ninguna dirección postal en el archivo.</message>
+	<message key="plugins.generic.booksForReview.editor.editSubmission"><![CDATA[Editar&nbsp;envío]]></message>
+	<message key="plugins.generic.booksForReview.editor.confirmDelete">¿Está seguro de que desea eliminar este libro para reseñar de forma permanente?</message>
+	<message key="plugins.generic.booksForReview.editor.confirmRemove">¿Está seguro de que desea eliminar este autor/a y limpiar el historial de revisión(es) de este libro?</message>
 	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Seleccionar&nbsp;envío]]></message>
 	<message key="plugins.generic.booksForReview.editor.select">Seleccionar</message>
 	<message key="plugins.generic.booksForReview.editor.edit">Editar</message>
 	<message key="plugins.generic.booksForReview.editor.submission">Envío</message>
-	<message key="plugins.generic.booksForReview.editor.bookReviewer">Revisor/a de libros</message>
+	<message key="plugins.generic.booksForReview.editor.bookReviewer">Autor/a de reseña de libros</message>
 	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Asignar</message>
 	<message key="plugins.generic.booksForReview.editor.removeBookReviewer">Eliminar</message>
 	<message key="plugins.generic.booksForReview.editor.acceptBookReviewer">Aceptar</message>
 	<message key="plugins.generic.booksForReview.editor.denyBookReviewer">Denegar</message>
 	<message key="plugins.generic.booksForReview.editor.notifyBookMailed"><![CDATA[Libro&nbsp;enviado]]></message>
-	<message key="plugins.generic.booksForReview.editor.noneCreated">No hay libros para revisar</message>
+	<message key="plugins.generic.booksForReview.editor.noneCreated">No hay libros para reseñar</message>
 	<message key="plugins.generic.booksForReview.editor.noResults">No hay resultados de búsqueda</message>
 	<message key="plugins.generic.booksForReview.editor.assignAuthor">Asignar un autor/a</message>
 	<message key="plugins.generic.booksForReview.editor.assign">Asignar</message>
 	<message key="plugins.generic.booksForReview.editor.form.status">Estado</message>
 	<message key="plugins.generic.booksForReview.editor.form.title">Título</message>
-	<message key="plugins.generic.booksForReview.editor.form.addAuthor">Añadir un autor/a</message>
+	<message key="plugins.generic.booksForReview.editor.form.addAuthor">Añadir autor/a</message>
 	<message key="plugins.generic.booksForReview.editor.form.deleteAuthor">Eliminar</message>
-	<message key="plugins.generic.booksForReview.editor.form.authorType"><![CDATA[Tipo de&nbsp;autor/a]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.authorType"><![CDATA[Tipo&nbsp;de&nbsp;autor/a]]></message>
 	<message key="plugins.generic.booksForReview.editor.form.copy">Copia disponible</message>
 	<message key="plugins.generic.booksForReview.editor.form.publisher">Editorial</message>
 	<message key="plugins.generic.booksForReview.editor.form.year">Año</message>
@@ -77,15 +81,15 @@
 	<message key="plugins.generic.booksForReview.editor.form.edition">Edición</message>
 	<message key="plugins.generic.booksForReview.editor.form.pages">Páginas</message>
 	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>
-	<message key="plugins.generic.booksForReview.editor.form.url"><![CDATA[URL de la&nbsp;editorial]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.url"><![CDATA[URL&nbsp;de&nbsp;la&nbsp;editorial]]></message>
 	<message key="plugins.generic.booksForReview.editor.form.description">Descripción</message>
 	<message key="plugins.generic.booksForReview.editor.form.notes">Notas</message>
-	<message key="plugins.generic.booksForReview.editor.form.dateRequested"><![CDATA[Fecha de&nbsp;solicitud]]></message>
-	<message key="plugins.generic.booksForReview.editor.form.dateAssigned"><![CDATA[Fecha&nbsp;de asignación]]></message>
-	<message key="plugins.generic.booksForReview.editor.form.dateMailed"><![CDATA[Fecha de&nbsp;envío]]></message>
-	<message key="plugins.generic.booksForReview.editor.form.dateDue"><![CDATA[Fecha&nbsp;de plazo]]></message>
-	<message key="plugins.generic.booksForReview.editor.form.dateSubmitted"><![CDATA[Fecha de&nbsp;envío]]></message>
-	<message key="plugins.generic.booksForReview.editor.form.user"><![CDATA[Revisor/a de&nbsp;libros]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateRequested"><![CDATA[Fecha&nbsp;solicitud]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateAssigned"><![CDATA[Fecha&nbsp;asignación]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateMailed"><![CDATA[Fecha&nbsp;envío]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateDue"><![CDATA[Fecha&nbsp;vencimiento]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateSubmitted"><![CDATA[Fecha&nbsp;envío]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.user"><![CDATA[Libro&nbsp;Revisor]]></message>
 	<message key="plugins.generic.booksForReview.editor.form.article">Envío</message>
 	<message key="plugins.generic.booksForReview.editor.form.saveAndCreateAnother">Guardar y crear nuevo</message>
 	<message key="plugins.generic.booksForReview.editor.form.authorTypeValid">Seleccione un tipo de autor/a válido.</message>
@@ -93,40 +97,40 @@
 	<message key="plugins.generic.booksForReview.editor.form.yearRequired">Introduzca el año de publicación de este libro.</message>
 	<message key="plugins.generic.booksForReview.editor.form.yearValid">Introduzca un año de publicación válido.</message>
 	<message key="plugins.generic.booksForReview.editor.form.pagesValid">Introduzca un número de páginas válido.</message>
-	<message key="plugins.generic.booksForReview.editor.form.urlPrefixIncluded">Introduzca una URL completa, incluido el prefijo (p. ej. http://).</message>
+	<message key="plugins.generic.booksForReview.editor.form.urlPrefixIncluded">Introduzca una URL completa, incluido el prefijo (esto es: http://).</message>
 	<message key="plugins.generic.booksForReview.editor.form.titleRequired">Introduzca el título del libro.</message>
-	<message key="plugins.generic.booksForReview.editor.form.authorRequiredFields">Asegúrese de indicar el nombre y los apellidos de cada autor/a.</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorRequiredFields">Asegúrese de indicar el nombre y el apellido de cada autor/a.</message>
 	<message key="plugins.generic.booksForReview.editor.form.coverPage">Portada</message>
 	<message key="plugins.generic.booksForReview.editor.form.image">Imagen</message>
-	<message key="plugins.generic.booksForReview.editor.form.coverPageInstructions">(Formatos permitidos: .gif, .jpg y .png )</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageInstructions">(Formatos permitidos: .gif, .jpg, o .png )</message>
 	<message key="plugins.generic.booksForReview.editor.form.coverPageUploaded">Cargado</message>
-	<message key="plugins.generic.booksForReview.editor.form.removeCoverPage">¿Desea eliminar la imagen de la portada?</message>
+	<message key="plugins.generic.booksForReview.editor.form.removeCoverPage">¿Eliminar la imagen de portada?</message>
 	<message key="plugins.generic.booksForReview.editor.form.remove">Eliminar</message>
 
 
 	<!-- Books For Review Settings Management -->
 	<message key="plugins.generic.booksForReview.settings">Configuración</message>
-	<message key="plugins.generic.booksForReview.booksForReviewSettings">Configuración de libros para revisar</message>
-	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Modo 1</h5><p>Se permite el siguiente flujo de trabajo:</p><ul><li>El editor/a añade libros disponibles para revisar.</li><li>Los autores/as interesados en revisar un libro pueden realizar una solicitud mediante una notificación al editor/a.</li><li>El editor/a puede aceptar o denegar la solicitud mediante una notificación al autor/a.</li><li>Si se acepta la solicitud<ul><li>El libro ya no aparece como disponible para revisar.</li><li>Se fija un plazo para la revisión.</li><li>El editor/a puede enviar una copia del libro al autor/a.</li></ul></li><li>El autor/a publica la revisión del libro mediante el proceso estándar de publicación en línea.</li><li>Los metadatos del libro se publican como parte del envío de la revisión.</li></ul><p>Este conector admite más de un editor/a por revista. Cuando un editor/a añade un nuevo libro para revisar, se convierte en el editor/a principal y en la figura de contacto en relación a dicho libro.</p><h5>Modo 2</h5><p>Se permite el siguiente flujo de trabajo:</p><ul><li>El editor/a añade libros.</li><li>El editor/a coteja los libros con el envío de las revisiones de los autores/as.</li><li>Los metadatos del libro se publican como parte del envío de la revisión.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.booksForReviewSettings">Configuración de libros para reseñar</message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Modo 1</h5><p>El siguiente flujo de trabajo es compatible:</p><ul><li>El editor/a añade libros disponibles para su revisión.</li><li>Los autores/as interesados en revisar un libro pueden solicitar escribir una nueva reseña, notificando al editor/a.</li><li>El editor/a puede aceptar o rechazar la solicitud de revisión, notificando al autor/a.</li><li>Si se acepta la solicitud de revisión<ul><li>El libro ya no aparecerá en la lista como disponible para revisión.</li><li>Se establecerá un plazo para la revisión.</li><li>El editor puede enviar una copia del libro al autor/a.</li></ul></li><li>El autor/a envía una reseña de libro a través del proceso de envío estándar en línea.</li><li>Los metadatos del libro se publican como parte del envío de reseña de libro.</li></ul><p>Este módulo es compatible con revistas de varios editores. Cuando un editor/a añade un nuevo libro para reseñar, se convierte en el editor/a y contacto principal del libro.</p><h5>Modo 2</h5><p>El siguiente flujo de trabajo es compatible:</p><ul><li>El editor/a añade libros.</li><li>El editor/a casa la reseña de libro del autor/a con cada libro.</li><li>Los metadatos del libro se publican como parte del envío de la reseña de libro.</li></ul>]]></message>
 	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">Gestión</message>
-	<message key="plugins.generic.booksForReview.settings.modeFull">Modo 1: Mostrar una lista de los libros disponibles para revisar, administrar los revisores/as y publicar los metadatos de los libros.</message>
+	<message key="plugins.generic.booksForReview.settings.modeFull">Modo 1: Mostrar una lista de los libros disponibles para revisar, gestionar los revisores/as y publicar los metadatos de cada libro.</message>
 	<message key="plugins.generic.booksForReview.settings.modeMetadata">Modo 2: Publicar sólo los metadatos del libro.</message>
-	<message key="plugins.generic.booksForReview.settings.booksForReviewDue">Plazo de las revisiones de libros</message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewDue">Plazo de las reseñas de libros</message>
 	<message key="plugins.generic.booksForReview.settings.coverImages">Imágenes de portada</message>
-	<message key="plugins.generic.booksForReview.settings.coverPageIssue">Mostrar imágenes de portada para la revisión de libros en la tabla de contenidos del número.</message>
-	<message key="plugins.generic.booksForReview.settings.coverPageAbstract">Mostrar imágenes de portada para la revisión de libros en las páginas de resumen de los artículos.</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageIssue">Mostrar imágenes de portada para la reseña de libros en la tabla de contenidos del número.</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageAbstract">Mostrar imágenes de portada para la reseña de libros en las páginas de resumen de los artículos.</message>
 	<message key="plugins.generic.booksForReview.settings.dueWeeks1">Las revisiones se deben entregar</message>
 	<message key="plugins.generic.booksForReview.settings.dueWeeks2">semana(s) después de que el libro haya sido asignado al autor/a.</message>
 	<message key="plugins.generic.booksForReview.settings.emailReminders">Recordatorios por correo electrónico</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays1">Enviar a los autores/as un recordatorio por correo electrónico</message>
-	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">día(s) antes de la fecha de plazo de la revisión.</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">día(s) antes de la fecha de entrega de la revisión.</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Enviar a los autores/as un recordatorio por correo electrónico</message>
-	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">día(s) después de la fecha de plazo de la revisión.</message>
-	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Nota:</strong> Para activar estas opciones, el administrador/a del sitio debe habilitar la opción <tt>tareas_planificadas</tt> en el archivo de configuración de OJS. Es posible que se requiera una configuración adicional del servidor para admitir esta función (puede que no todos los servidores la permitan) siguiendo las indicaciones en la documentación del OJS.]]></message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">día(s) después de la fecha de entrega de la revisión.</message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Atención:</strong> Para activar estas opciones, el administrador/a del sitio debe habilitar la opción <tt>scheduled_tasks</tt> en el archivo de configuración de OJS. Es posible que se requiera una configuración adicional del servidor para admitir esta función (puede que no todos los servidores la permitan) siguiendo las indicaciones en la documentación del OJS.]]></message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformation">Información adicional</message>
-	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Información adicional publicada junto con los libros para revisar.</message>
-	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Indique el número de semanas de plazo para las revisiones de libro.</message>
-	<message key="plugins.generic.booksForReview.settings.dueWeeksValid">Indique un número válido de semanas de plazo para las revisiones de libro.</message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Información adicional publicada junto con los libros para reseñar.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Indique el número de semanas de plazo para las reseñas de libro.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksValid">Indique un número válido de semanas de plazo para las reseñas de libro.</message>
 	<message key="plugins.generic.booksForReview.settings.numDaysBeforeDueReminderValid">Indique un número de días válido para el recordatorio por correo electrónico.</message>
 	<message key="plugins.generic.booksForReview.settings.numDaysAfterDueReminderValid">Indique un número de días válido para el recordatorio por correo electrónico.</message>
 
@@ -136,24 +140,24 @@
 	<message key="plugins.generic.booksForReview.author.status">Estado</message>
 	<message key="plugins.generic.booksForReview.author.submit">Enviar</message>
 	<message key="plugins.generic.booksForReview.author.dueDate">Plazo</message>
-	<message key="plugins.generic.booksForReview.author.noneCreated">No hay libros para revisar</message>
-	<message key="plugins.generic.booksForReview.author.booksForReview">Libros para revisar</message>
+	<message key="plugins.generic.booksForReview.author.noneCreated">No hay libros para reseñar</message>
+	<message key="plugins.generic.booksForReview.author.booksForReview">Libros para reseñar</message>
 	<message key="plugins.generic.booksForReview.author.myBooksForReview">Mis libros</message>
 	<message key="plugins.generic.booksForReview.author.availableBooksForReview">Libros disponibles</message>
-	<message key="plugins.generic.booksForReview.author.requestBookForReview">Solicitar este libro para revisar</message>
-	<message key="plugins.generic.booksForReview.author.submitInstructions">Indique si este envío es una revisión de alguno de los siguientes libros que se le han asignado.</message>
+	<message key="plugins.generic.booksForReview.author.requestBookForReview">Solicitar este libro para reseñar</message>
+	<message key="plugins.generic.booksForReview.author.submitInstructions">Indique si este envío es una reseña de alguno de los siguientes libros que se le asignaron.</message>
 	<message key="plugins.generic.booksForReview.author.requested">Solicitados</message>
-	<message key="plugins.generic.booksForReview.author.booksForReviewRequested">Libros para revisar - Solicitados</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewRequested">Libros para reseñar - Solicitados</message>
 	<message key="plugins.generic.booksForReview.author.assigned">Asignados</message>
-	<message key="plugins.generic.booksForReview.author.booksForReviewAssigned">Libros para revisar - Asignados</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewAssigned">Libros para reseñar - Asignados</message>
 	<message key="plugins.generic.booksForReview.author.mailed">Enviados</message>
-	<message key="plugins.generic.booksForReview.author.booksForReviewMailed">Libros para revisar - Enviados</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewMailed">Libros para reseñar - Enviados</message>
 	<message key="plugins.generic.booksForReview.author.submitted">Enviado(s)</message>
-	<message key="plugins.generic.booksForReview.author.booksForReviewSubmitted">Libros para revisar - Enviados</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewSubmitted">Libros para reseñar - Enviados</message>
 
 	<!-- Books For Review Public -->
-	<message key="plugins.generic.booksForReview.public.booksForReview">Libros para revisar</message>
-	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Para solicitar un libro para revisar:</p><ul><li><a href="{$registerUrl}" target="_parent">Regístrese</a> como autor/a en esta revista.</li><li><a href="{$loginAuthorUrl}" target="_parent">Inicie sesión</a> como autor/a.</li><li>Haga clic en el enlace de solicitud que corresponda al libro en cuestión.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.public.booksForReview">Libros para reseñar</message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Para soliciar un libro para reseñar:</p><ul><li><a href="{$registerUrl}" target=»_parent»>Regístrese</a> en la revista como autor/a.</li><li><a href="{$loginAuthorUrl}" target=»_parent»>Inicie sesión</a> como autor/a.</li><li>Haga clic en el enlace de solicitud que corresponde al libro que le interese.</li></ul>]]></message>
 	<message key="plugins.generic.booksForReview.public.copy">Copia disponible</message>
 	<message key="plugins.generic.booksForReview.public.copyYes">Sí</message>
 	<message key="plugins.generic.booksForReview.public.copyNo">No</message>
@@ -162,15 +166,15 @@
 	<message key="plugins.generic.booksForReview.public.pages">Páginas</message>
 	<message key="plugins.generic.booksForReview.public.isbn">ISBN</message>
 	<message key="plugins.generic.booksForReview.public.externalSite">sitio externo</message>
-	<message key="plugins.generic.booksForReview.public.noneCreated">No hay libros para revisar</message>
+	<message key="plugins.generic.booksForReview.public.noneCreated">No hay libros para reseñar</message>
 	<message key="plugins.generic.booksForReview.public.noResults">No hay resultados de búsqueda</message>
 	<message key="plugins.generic.booksForReview.public.coverPage.altText">Imagen de portada</message>
 	<message key="plugins.generic.booksForReview.public.bookDetails">Detalles del libro</message>
 
 	<!-- Books For Review -->
-	<message key="plugins.generic.booksForReview.displayName">Conector de libros para revisar</message>
-	<message key="plugins.generic.booksForReview.description">Este conector permite solicitar revisiones para libros de interés o recibidos de las editoriales y administrar los revisores/as y el proceso de revisión.</message>
-	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Libros&nbsp;para&nbsp;revisar]]></message>
+	<message key="plugins.generic.booksForReview.displayName">Libros para reseñar</message>
+	<message key="plugins.generic.booksForReview.description">Solicitar revisiones para libros de interés o recibidos de las editoriales. Gestionar los revisores/as de libros y el proceso de reseñas de libros.</message>
+	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Libros&nbsp;para&nbsp;reseñar]]></message>
 	<message key="plugins.generic.booksForReview.status.available">Disponibles</message>
 	<message key="plugins.generic.booksForReview.status.requested">Solicitados</message>
 	<message key="plugins.generic.booksForReview.status.assigned">Asignados</message>
@@ -187,4 +191,5 @@
 	<message key="plugins.generic.booksForReview.field.title">Título</message>
 	<message key="plugins.generic.booksForReview.field.description">Descripción</message>
 
+	<message key="plugins.generic.booksForReview.reminderTask.name">Recordatorio de libros para revisar</message>
 </locale> 

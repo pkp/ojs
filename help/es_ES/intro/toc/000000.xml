@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toc SYSTEM "../../../../lib/pkp/dtd/helpToc.dtd">
-
 <!--
   * 000000.xml
   *
@@ -8,12 +7,13 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Table of contents for Introduction to OJS. 
   *
-  * $Id$
   -->
 
 <toc id="intro/toc/000000" locale="es_ES" title="Introducción a OJS" parent_topic="intro/topic/000000">
-	<topic id="intro/topic/000001" title="PMF" />
+	<topic id="intro/topic/000001" title="Preguntas frecuentes" />
 	<breadcrumb url="intro/topic/000000" title="Introducción a OJS" />
-</toc>
+</toc> 

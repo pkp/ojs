@@ -1,27 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/importexport/mets/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.METSExport.displayName">Conector de exportación METS XML</message>
-	<message key="plugins.importexport.METSExport.description">Exportar revistas en METS XML.</message>
+    <message key="plugins.importexport.METSExport.displayName">Módulo de exportación METS XML</message>
+	<message key="plugins.importexport.METSExport.description">Exportar revistas en METS XML</message>
 	<message key="plugins.importexport.METSExport.settings">Configuración</message>
 	<message key="plugins.importexport.METSExport.export">Exportar datos</message>
 	<message key="plugins.importexport.METSExport.export.issues">Exportar números</message>
-	<message key="plugins.importexport.METSExport.export.selectIssue">Seleccione los números que desee exportar</message>
+	<message key="plugins.importexport.METSExport.export.selectIssue">Seleccione los números que desee exportar.</message>
 	<message key="plugins.importexport.METSExport.export.error.IssuesNotFound">Ningún número se corresponde con la Id. indicada "{$issueId}".</message>
 	<message key="plugins.importexport.METSExport.export.error.unknownIssue">Ruta de revista desconocida {$journalPath}</message>
-	<message key="plugins.importexport.METSExport.settings.FContent">Utilice una codificación base64 para contenedores de contenido (content wrapper)</message>
-	<message key="plugins.importexport.METSExport.settings.FLocat">Utilice una URL del flujo de bits (bitstream) para contenedores de contenido (content wrapper)</message>
+	<message key="plugins.importexport.METSExport.settings.FContent">Utilice una codificación base64 para el contenedor de contenido (content wrapper)</message>
+	<message key="plugins.importexport.METSExport.settings.FLocat">Utilice una URL del flujo de bits (bitstream) para el contenedor de contenido (content wrapper)</message>
 	<message key="plugins.importexport.METSExport.settings.organization">METS: atributo para la organización de elementos agentes</message>
-	<message key="plugins.importexport.METSExport.settings.preservationLevel">Nivel de preservación PREMIS</message>
+	<message key="plugins.importexport.METSExport.settings.preservationLevel">Nivel de conservación PREMIS</message>
 	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Exportar archivos complementarios</message>
 </locale> 

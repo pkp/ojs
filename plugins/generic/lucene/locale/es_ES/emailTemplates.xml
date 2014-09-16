@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
-  * emailTemplateData.xml
+  * @file plugins/generic/lucene/locale/es_ES/emailTemplates.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localized email templates XML file.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
+  * Localized email templates XML file.
   -->
+
 <email_texts locale="es_ES">
 	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
-		<subject>Error al indexar un artículo</subject>
-		<body>Ha ocurrido un error de indexación al actualizar el índice del articulo.
+		<subject>Error de indexación de artículo</subject>
+		<body>Se produjo un error de indexación mientras se actualizaba el índice del artículo.
 
-El mensaje de error generado por el servicio web (si lo hubiese) es: "{$error}"
+El mensaje de error generado por el servicio web (de haberlo):
 
-Este correo lo ha generado el conector de búsqueda Lucene de Open Journal Systems.</body>
-		<description>Esta plantilla de correo se usa para notificar al contacto técnico de la revista si ocurre algún error indexando un artículo.</description>
+"{$error}"
+
+El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
+		<description>Esta plantilla de correo electrónico se utiliza para notificar al contacto técnico de una revista que se produjo un error durante la indexación de un artículo.</description>
 	</email_text>
 	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
-		<subject>Error al indexar una revista</subject>
-		<body>Ha ocurrido un error de indexación indexando la revista "{$journalName}".
+		<subject>Error de indexación de revista</subject>
+		<body>Se produjo un error de indexación mientras se actualizaba el índice de la revista "{$journalName}".
 
-El mensaje de error generado por el servicio web (si lo hubiese) es: "{$error}"
+El mensaje de error generado por el servicio web (de haberlo): "{$error}"
 
-Este correo lo ha generado el conector de búsqueda Lucene de Open Journal Systems.</body>
-		<description>Esta plantilla de correo se usa para notificar al contacto técnico de la revista si ocurre algún error indexando una revista.</description>
+El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
+		<description>Esta plantilla de correo electrónico se utiliza para notificar al contacto técnico de una revista que se produjo un error durante la indexación de la revista.</description>
 	</email_text>
 	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
-		<subject>Error del servicio de búsqueda de la revista</subject>
-		<body>Ha ocurrido un error mientras un usuario/a realizaba una búsqueda en la instalación "{$siteName}".
+		<subject>Error de servicio de búsqueda de revista</subject>
+		<body>Se produjo un error cuando se intentó buscar la instalación "{$siteName}".
 
-El mensaje de error generado por el servicio web (si lo hubiese) es: "{$error}"
+El mensaje de error generado por el servicio web (de haberlo): "{$error}"
 
-Este correo lo ha generado el conector de búsqueda Lucene de Open Journal Systems.</body>
-		<description>Esta plantilla de correo se usa para notificar al contacto técnico de la revista si ocurre algún error al intentar acceder al servicio de búsqueda Solr.</description>
+El módulo de búsqueda Lucene de Open Journal Systems generó este correo electrónico.</body>
+		<description>Esta plantilla de correo electrónico se utiliza para notificar al contacto técnico de una revista que se produjo un error mientras se intentaba acceder al servicio de búsquedas Solr.</description>
 	</email_text>
-</email_texts>
+</email_texts> 

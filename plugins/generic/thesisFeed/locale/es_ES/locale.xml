@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/thesisFeed/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.thesisfeed.displayName">Conector de canal de resúmenes de tesis</message>
-	<message key="plugins.generic.thesisfeed.description">Este conector crea canales de sindicación web RSS/Atom para resúmenes de tesis.</message>
+	<message key="plugins.generic.thesisfeed.displayName">Módulo de canal de resúmenes de tesis</message>
+	<message key="plugins.generic.thesisfeed.description">Este módulo crea canales de sindicación web RSS/Atom para resúmenes de tesis.</message>
 
 	<message key="plugins.generic.thesisfeed.settings">Configuración</message>
 	<message key="plugins.generic.thesisfeed.settings.all">Mostrar enlaces de canales en todas las páginas de la revista.</message>

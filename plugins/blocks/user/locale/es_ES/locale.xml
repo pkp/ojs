@@ -1,19 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/blocks/user/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.user.displayName">Bloque del usuario/a</message>
-	<message key="plugins.block.user.description">Este conector proporciona herramientas de la cuenta del usuario/a en la barra lateral (p. ej.: iniciar y cerrar sesión, enlace al perfil, etc.).</message>
-	<message key="plugins.block.user.loggedInAs">Ha iniciado sesión como</message>
+	<message key="plugins.block.user.description">Este módulo proporciona herramientas de la cuenta del usuario/a en la barra lateral (p. ej.: iniciar y cerrar sesión, enlace al perfil, etc.).</message>
+	<message key="plugins.block.user.loggedInAs">Ha iniciado sesión como...</message>
 	<message key="plugins.block.user.myJournals">Mis revistas</message>
 	<message key="plugins.block.user.myProfile">Mi perfil</message>
 	<message key="plugins.block.user.logout">Cerrar sesión</message>

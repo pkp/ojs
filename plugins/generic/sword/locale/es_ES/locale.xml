@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 <!--
-  * locale.xml
+  * plugins/generic/sword/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
+  * Localization strings
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.sword.displayName">Conector SWORD</message>
-  <message key="plugins.generic.sword.description">Este conector permite a los gestores/as de la revista y a los autores/as (opcional) depositar artículos mediante el protocolo SWORD.</message>
-  <message key="plugins.generic.sword.descriptionUnsupported">Permitir a los gestores de revista y (opcionalmente) a los autores, depositar artículos mediante el protocolo SWORD. Tenga en cuenta que este conector requiere la extensión Zip, la cual NO se encuentra instalada en el servidor.</message>
-	<message key="plugins.generic.sword.enabled">Se ha activado el conector SWORD.</message>
+	<message key="plugins.generic.sword.displayName">Módulo SWORD</message>
+	<message key="plugins.generic.sword.description">Permitir a los gestores/as de la revista y a los autores/as (opcional) depositar artículos mediante el protocolo SWORD</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Permitir a los gestores/as de la revista y a los autores/as (opcional) depositar artículos mediante el protocolo SWORD. Este módulo requiere una extensión Zip que NO está instalada actualmente.</message>
+	<message key="plugins.generic.sword.enabled">Se habilitó el módulo SWORD.</message>
 	<message key="plugins.generic.sword.settings">Configuración</message>
-	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permitir al autor/a indicar un punto de depósito.</message>
+	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permitir al autor/a que indique un punto de depósito.</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Puntos de depósito</message>
 	<message key="plugins.generic.sword.depositPoints.create">Crear un punto de depósito</message>
 	<message key="plugins.generic.sword.depositPoints.edit">Editar un punto de depósito</message>
@@ -25,16 +26,16 @@
 	<message key="plugins.generic.sword.depositPoints.type.optionalSelection">Opcional; Flexible</message>
 	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Opcional; Fijo</message>
 	<message key="plugins.generic.sword.depositPoints.type.manager">Sólo para el gestor/a</message>
-	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipos de punto de depósito:</h4> <p><strong>Automático</strong>: El depósito se produce de forma automática. Se indica el punto de depósito SWORD completo. Debe indicar un nombre de usuario/a y una contraseña. El depósito se produce tras notificar la confirmación al autor/a.<br/> <strong>Opcional; Flexible</strong>: El autor/a puede decidir si desea depositar o no. La URL facilitada ofrece un documento de servicio y el autor/a puede decidir qué punto de depósito concreto usar de dicho documento. El depósito se produce tras notificar la confirmación al autor/a.<br/> <strong>Opcional; Fijo</strong>: El autor/a puede decidir si desea depositar o no. La URL indica el punto de depósito SWORD concreto. El depósito se produce tras notificar la confirmación al autor/a.<br/> <strong>Sólo para el gestor/a</strong>: Sólo el gestor/a de la revista puede usar este punto de depósito. La URL indica un documento de servicio. El gestor/a de la revista realiza el depósito manualmente usando la interfaz de Importación/Exportación de la gestión de la revista. </p>]]></message>
-	<message key="plugins.generic.sword.depositPoints.password.description">Si no indica aquí una contraseña, se le solicitará cuando usted o el autor/a realicen el depósito. Esta contraseña será visible para todos los gestores/as de la revista y se guardará sin encriptar en la base de datos.</message>
+	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Tipos de puntos de depósito:</h4> <p><strong>Automático</strong>: El depósito se produce de forma automática. Se indica el punto de depósito SWORD completo. Debe indicar un nombre de usuario/a y una contraseña. El depósito se produce después de notificar al autor/a la aceptación.<br/> <strong>Opcional; Flexible</strong>: El autor/a puede decidir si desea depositar o no. La URL facilitada ofrece un documento de servicio y el autor/a puede decidir qué punto de depósito concreto usar de dicho documento. El depósito se produce después de notificar al autor/a la aceptación.<br/> <strong>Opcional; Flexible</strong>: El autor/a puede decidir si desea depositar o no. La URL indica el punto de depósito SWORD concreto. El depósito se produce después de notificar al autor/a la aceptación.<br/> <strong>Sólo el gestor/a</strong>: Sólo el gestor/a de la revista puede usar este punto de depósito. La URL indica un documento de servicio. El gestor/a de la revista realiza manualmente el depóstio mediante la interfaz Importar/Exportar de la Gestión de la revista.</p>]]></message>
+	<message key="plugins.generic.sword.depositPoints.password.description">Si no indica ahora una contraseña, se le solicitará cuando usted o el autor/a realicen el depósito. Esta contraseña será visible para todos los gestores/as de la revista y se guardará sin encriptar en la base de datos.</message>
 	<message key="plugins.generic.sword.depositPoints.name">Nombre</message>
-	<message key="plugins.generic.sword.automaticDepositComplete">El elemento "{$itemTitle}" se ha depositado automáticamente en el repositorio "{$repositoryName}".</message>
-	<message key="plugins.generic.sword.depositComplete">El elemento "{$itemTitle}" se ha depositado en el repositorio "{$repositoryName}".</message>
-	<message key="plugins.generic.sword.authorDepositDescription"><![CDATA[<p>Si lo desea, puede usar el siguiente formulario para depositar su envío "{$submissionTitle}" en uno de los repositorios de la lista. Para seleccionar en qué repositorio desea depositar su envío, use las casillas de verificación situadas en la parte inferior de la columna izquierda. Cada repositorio permite elegir un punto de depósito de una lista desplegable.</p>]]></message>
-	<message key="plugins.generic.sword.authorCustomDepositDescription"><![CDATA[<p>Si lo desea, puede indicar un punto de depósito compatible con SWORD en el siguiente formulario. Para ello, indique una URL, nombre de usuario/a y contraseña de SWORD en el repositorio y se depositará el envío.</p>]]></message>
+	<message key="plugins.generic.sword.automaticDepositComplete">El elemento "{$itemTitle}" se depositó automáticamente en el repositorio "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.depositComplete">El elemento "{$itemTitle}" se depositó en el repositorio "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.authorDepositDescription"><![CDATA[<p>También puede usar el siguiente formulario para depositar el envío, "{$submissionTitle}" en alguno de los repositorios de la lista. Utilice las casillas de comprobación situadas más abajo en la columna de la izquierda para seleccionar el repositorio en el que desea depositar el envío. Cada uno de los repositorios le permitirá también especificar el punto de depósito a partir de una lista despleglable.</p>]]></message>
+	<message key="plugins.generic.sword.authorCustomDepositDescription"><![CDATA[<p>Tiene la opción de indicar el punto de acceso compatible con SWORD en el siguiente formulario. Si así lo desea, indique una URL de SWORD, el nombre de usuario/a, la contraseña del repositorio y el envío que va a depositar.]]></message>
 
-	<message key="plugins.importexport.sword.displayName">Conector de depósito de importación/exportación SWORD</message>
-	<message key="plugins.importexport.sword.description">Depositar artículos en repositorios remotos mediante el protocolo de depósito SWORD.</message>
+	<message key="plugins.importexport.sword.displayName">Módulo de depósito de importación/exportación SWORD</message>
+	<message key="plugins.importexport.sword.description">Depositar artículos en repositorios remotos mediante el protocolo de depósito SWORD</message>
 	<message key="plugins.importexport.sword.deposit">Depósito</message>
 	<message key="plugins.importexport.sword.serviceDocUrl">URL del documento de servicio</message>
 	<message key="plugins.importexport.sword.depositUrl">URL del punto de depósito</message>

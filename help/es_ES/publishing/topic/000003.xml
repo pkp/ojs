@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Publishing Process - Table of Contents
   *
-  * $Id$
   -->
 
 <topic id="publishing/topic/000003" locale="es_ES" title="Tabla de contenidos" toc="publishing/toc/000000" key="publishing.tableOfContents">
 	<section>
-		<![CDATA[<p>En cuanto se programa un envío, aparece en la tabla de contenidos de ese número bajo el título de la sección. Si no hay envíos para una sección, esa sección no aparece en la tabla de contenidos. El editor/a puede volver a ordenar las secciones, del mismo modo que se pueden reorganizar los envíos dentro de una sección.</p><p>Además, si el gestor/a de la revista ha permitido el control de suscripción, el editor/a puede cambiar las reglas de acceso (ya sea de suscripción o de libre acceso) a nivel de artículo.</p>]]>	
+		<![CDATA[<p>Al programar un envío, éste aparece en la tabla de contenidos del número debajo del título de la sección. Si no hay envíos para una sección, esa sección no aparece en la tabla de contenidos. El editor/a puede reordenar las secciones así como los envíos dentro de una sección.</p><p>Además, si el gestor/a de la revista habilita el control de suscripción, el editor/a puede modificar las reglas de acceso (de suscripción o abierto) según el nivel del artículo.</p>]]>	
 	</section>
-</topic>
+</topic> 

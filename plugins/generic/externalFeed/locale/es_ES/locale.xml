@@ -1,52 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
-  * locale.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/externalFeed/locale/es_ES/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * External feed plugin localization strings for the es_ES (España) locale.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
-  * $Id$
+  * External feed plugin localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
 
 	<!-- External Feed -->
-	<message key="plugins.generic.externalFeed.displayName">Conector de canales externos</message>
+	<message key="plugins.generic.externalFeed.displayName">Canales externos</message>
 	<message key="plugins.generic.externalFeed.block.displayName">Bloque de canales externos</message>
-	<message key="plugins.generic.externalFeed.description">Este conector publica contenido de canales de sindicación web RSS/Atom externos. Ejemplos: instalaciones externas de WordPress, Drupal o OCS.</message>
+	<message key="plugins.generic.externalFeed.description">Publicar contenido de canales de sindicación web RSS/Atom externos. Por ejemplo, de la instalación externa de WordPress, Drupal o OCS.</message>
 	<message key="plugins.generic.externalFeed.noneExist">No hay canales externos</message>
 	<message key="plugins.generic.externalFeed.title">Título</message>
 	<message key="plugins.generic.externalFeed.posted">Publicado</message>
-	<message key="plugins.generic.externalFeed.more">Más</message>
+	<message key="plugins.generic.externalFeed.more">Más...</message>
 
 	<!-- External Feed Management -->
 	<message key="plugins.generic.externalFeed.manager.feeds">Canales externos</message>
 	<message key="plugins.generic.externalFeed.manager.settings">Configuración</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[Para mostrar el contenido de los canales en el bloque de la barra lateral, vaya al <a href="{$setupStep56}" target="_blank">paso de instalación 5.6</a>]]></message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[Para mostrar el contenido del canal en los bloques de la barra lateral, vaya a <a href="{$setupStep56}" target="_blank">Paso de intalación 5.6</a>]]></message>
 	<message key="plugins.generic.externalFeed.manager.title">Título</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage">Mostrar la página de inicio</message>
 	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Mostrar la página de inicio</message>
-	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">No hay ninguna visualización de la página de inicio</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">No se muestra la página de inicio</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlock">Mostrar el bloque</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Todas las páginas</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Mostrar el bloque en todas las páginas</message>
-	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">No mostrar el bloque en todas las páginas</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">No mostrar el bloque en ninguna página</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Página de inicio</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Mostrar el bloque sólo en la página de inicio</message>
-	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">No mostrar el bloque en la página de inicio</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Mostrar el bloque sólo en la página de incio</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">No mostrar el bloque en la página de incio</message>
 	<message key="plugins.generic.externalFeed.manager.noneCreated">No hay canales externos</message>
 	<message key="plugins.generic.externalFeed.manager.create">Crear un nuevo canal externo</message>
 	<message key="plugins.generic.externalFeed.manager.edit">Editar el canal externo</message>
-	<message key="plugins.generic.externalFeed.manager.confirmDelete">¿Está seguro/a de que desea eliminar este canal de forma permanente?</message>
+	<message key="plugins.generic.externalFeed.manager.confirmDelete">¿Está seguro de que desea eliminar este canal de forma permanente?</message>
 
 	<!-- External Feed Settings -->
 	<message key="plugins.generic.externalFeed.settings">Configuración</message>
 	<message key="plugins.generic.externalFeed.settings.description">Personalizar la visualización de elementos de canales externos.</message>
 	<message key="plugins.generic.externalFeed.settings.styleSheet">Mostrar</message>
 	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Hoja de estilo de canales externos</message>
-	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Se puede usar una hoja de estilo personalizada para reemplazar la predeterminada de este conector. Aquí se puede ver la hoja de estilo predeterminada.</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Se puede usar una hoja de estilo personalizada para reemplazar la hoja de estilo predeterminada de este módulo. Aquí se puede ver la hoja de estilo predeterminada</message>
 	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Hoja de estilo personalizada</message>
 
 
@@ -55,15 +57,15 @@
 	<message key="plugins.generic.externalFeed.form.titleDescription">Título de la página de inicio o de la visualización de bloque</message>
 	<message key="plugins.generic.externalFeed.form.titleRequired">Indique un título para este canal</message>
 	<message key="plugins.generic.externalFeed.form.feedUrl">URL</message>
-	<message key="plugins.generic.externalFeed.form.feedUrlValid">Indique una URL de canal válida (incluyendo http://)</message>
-	<message key="plugins.generic.externalFeed.form.feedUrlDescription">URL del canal de sindicación RSS/Atom externo (p. ej.: http://pkp.sfu.ca/blog/feed)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlValid">Indique una URL de canal válida (http:// incluido)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlDescription">La URL del canal de sindicación RSS/Atom externo (p. ej. http://pkp.sfu.ca/blog/feed)</message>
 	<message key="plugins.generic.externalFeed.form.display">Mostrar</message>
 	<message key="plugins.generic.externalFeed.form.displayHomepage">Mostrar en la página de inicio</message>
 	<message key="plugins.generic.externalFeed.form.displayBlockNone">No mostrar en el bloque</message>
-	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Mostrar sólo en el bloque de la página de inicio</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Mostrar sólo en el bloque de la página inicial</message>
 	<message key="plugins.generic.externalFeed.form.displayBlockAll">Mostrar en el bloque en todas las páginas</message>
-	<message key="plugins.generic.externalFeed.form.recentItems1">Limitar a</message>
-	<message key="plugins.generic.externalFeed.form.recentItems2">fuentes web</message>
-	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Guardar y crear nuevo</message>
+	<message key="plugins.generic.externalFeed.form.recentItems1">Limitar los</message>
+	<message key="plugins.generic.externalFeed.form.recentItems2">elementos de canal</message>
+	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Guardar y crear otro</message>
 
 </locale> 

@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Publishing Process - Publish
   *
-  * $Id$
   -->
 
 <topic id="publishing/topic/000004" locale="es_ES" title="Publicar" toc="publishing/toc/000000" key="publishing.publish">
 	<section>
-		<![CDATA[<p>A la hora de publicar un número, el editor/a hace clic en "{translate key="editor.issues.publishIssue"}" en la página del número actual para que se publique el número, es decir, la página con la tabla de contenidos del número. La publicación de un número hace que su tabla de contenidos aparezca cuando los lectores/as hacen clic en {translate key="navigation.current"}, y que su portada, si la hay, aparezca en la página de inicio de la revista. El número que previamente fue {translate key="navigation.current"} pasa a {translate key="navigation.archives"}. La tabla de contenidos aparecerá en la página de inicio en caso de que no haya portada, a menos que la página de inicio esté ocupada por una imagen o texto que el gestor/a de la revista haya cargado expresamente en la configuración. Con la publicación de un número, todos los lectores/as inscritos reciben una notificación por correo electrónico que incluye la tabla de contenidos del número y un enlace a la página web de la revista.</p>]]>	
+		<![CDATA[<p>Cuando hay que publicar un número, el editor/a hace clic en "{translate key="editor.issues.publishIssue"}" en la página Número activo para publicarlo, es decir, en la página con la tabla de contenidos del número. La publicación de un número hace que su tabla de contenidos aparezca cuando los lectores/as hacen clic en {translate key="navigation.current"}, y que su portada, en caso de haberla, se muestre en la página inicial de la revista. El número que era anteriormente {translate key="navigation.current"} pasa a {translate key="navigation.archives"}. La tabla de contenidos aparece en la página inicial en el caso de no existir portada, a menos que la página inicial esté ocupada por una imagen o texto que el gestor/a de la revista cargara expresamente en la configuración. La publicación de un número también envía una notificación por correo electrónico a todos los lectores/as registrados que incluye la tabla de contenidos del número y un enlace que lleva de vuelta al sitio web de la revista.</p>]]>	
 	</section>
-</topic>
+</topic> 

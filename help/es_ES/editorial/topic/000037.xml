@@ -7,13 +7,14 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
+  *
   * Copyeditor's Role - Submissions
   *
-  * $Id$
   -->
 
 <topic id="editorial/topic/000037" locale="es_ES" title="Envíos" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
 	<section>
-		<![CDATA[<p>Cuando el corrector/a de originales inicie sesión, puede dirigirse a la cola de envíos haciendo clic en el enlace de corrector/a de originales que se encuentra en la página Área personal. En esta cola aparecen los trabajos para los que se ha solicitado corrección. A través del enlace de archivo, también se proporciona acceso a aquellos envíos que se han completado anteriormente.</p><p>Para obtener acceso a la página de corrección de un envío en particular, el corrector/a de originales hace clic en el título de una obra que aparezca en la lista de envío activa.</p>]]>	
+		<![CDATA[<p>Una vez que se registre el corrector/a de originales, si hace clic en el enlace de corrector/a de originales en la página del área personal se dirigirá a la cola de envíos. En esta lista aparecen los trabajos para los que se solicitó una corrección de originales. También se proporciona acceso a los envíos que se realizaron en el pasado a través del enlace Archivo.</p><p>Para acceder a la página de corrección de originales para un envío específico, el corrector/a de originales debe hacer clic en el título del trabajo que aparece en la lista activa de envíos.</p>]]>	
 	</section>
-</topic>
+</topic> 
