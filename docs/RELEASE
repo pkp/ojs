@@ -67,3 +67,4 @@ Bug Fixes
 	#8899# Citation assistant default setting is localized
 	#8902# Usage Stats auto staging fails where glob function returns false for empty folders
 	#8903# Blank page on installer form load with MySQL module not installed
+	#8905# Report generator page error when all metric type providing plugins disabled
