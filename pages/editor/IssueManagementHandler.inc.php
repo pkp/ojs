@@ -746,6 +746,11 @@ class IssueManagementHandler extends EditorHandler {
 		//
 		// run script. if it ran OK (return 0) then proceed happily. if it errored (return not 0), then cause an error!
 		passthru("/apps/subi/subi/ojsConvert/convert.py $outputFile >> /apps/subi/ojs/logs/issue_export.log 2>&1 &");
+
+		//send a notification of publication to help@escholarship.org
+		$message = $journal . ' has just published issue ' . $issue;
+		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message,"From: help@escholarship.org\n");		
+		
 		return true;
 		//exec("/apps/subi/subi/ojsConvert/convert.py $outputFile",$conversionOutput,$returnValue); //returns 0 on success
 		//if(!$returnValue) {
