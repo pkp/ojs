@@ -749,7 +749,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		//send a notification of publication to help@escholarship.org
 		$message = $journal . ' has just published issue ' . $issue;
-		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message,"From: help@escholarship.org\n");		
+		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);		
 		
 		return true;
 		//exec("/apps/subi/subi/ojsConvert/convert.py $outputFile",$conversionOutput,$returnValue); //returns 0 on success
