@@ -205,7 +205,7 @@ function setRegAllowOpts(form) {
 	</tr>
 	<tr valign="top">
 		<td width="5%" class="label"><input checked type="checkbox" name="publicationFormatNumber" id="publicationFormatNumber" value="1"{if ($publicationFormatNumber)} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="publicationFormatNumber">{translate key="manager.setup.publicationFormatIssue"}</label></td>
+		<td width="95%" class="value"><label for="publicationFormatNumber">{translate key="manager.setup.publicationFormatNumber"}</label></td>
 	</tr>
 	<tr valign="top">
 		<td width="5%" class="label"><input checked type="checkbox" name="publicationFormatYear" id="publicationFormatYear" value="1"{if ($publicationFormatYear)} checked="checked"{/if} /></td>
