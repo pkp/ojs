@@ -166,6 +166,16 @@
 		<td colspan="7" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
+        {if $galleyCount > 1}
+        <tr>
+                <td colspan="3" style="padding: 5px; background: #F0B1A8;">Multiple galley files detected: Please delete extra galley files.</td>
+        </tr>
+        {/if}
+        {if $galleyCount > 0}
+        <tr>
+                <td colspan="100%"><em>Note: eScholarship supports one galley only. If you would like to replace the existing galley, please click 'EDIT' to replace the file.</em></td>
+        </tr>
+        {/if}
 	<tr>
 		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
@@ -198,7 +208,14 @@
 <form method="post" action="{url op="uploadLayoutFile"}"  enctype="multipart/form-data">
 	<input type="hidden" name="from" value="submissionEditing" />
 	<input type="hidden" name="articleId" value="{$submission->getId()}" />
-	{translate key="submission.uploadFileTo"} <input type="radio" name="layoutFileType" id="layoutFileTypeSubmission" value="submission" checked="checked" /><label for="layoutFileTypeSubmission">{translate key="submission.layout.layoutVersion"}</label>, <input type="radio" name="layoutFileType" id="layoutFileTypeGalley" value="galley" /><label for="layoutFileTypeGalley">{translate key="submission.galley"}</label>, <input type="radio" name="layoutFileType" id="layoutFileTypeSupp" value="supp" /><label for="layoutFileTypeSupp">{translate key="article.suppFilesAbbrev"}</label>
+	{translate key="submission.uploadFileTo"} 
+        <input type="radio" name="layoutFileType" id="layoutFileTypeSubmission" value="submission" checked="checked" /><label for="layoutFileTypeSubmission">{translate key="submission.layout.layoutVersion"}</label>, 
+        {if $galleyCount > 0}
+            <input type="radio" name="layoutFileType" id="layoutFileTypeGalley" value="galley" disabled="disabled" /><label for="layoutFileTypeGalley" class="disabled">{translate key="submission.galley"}</label>, 
+        {else}
+            <input type="radio" name="layoutFileType" id="layoutFileTypeGalley" value="galley" /><label for="layoutFileTypeGalley">{translate key="submission.galley"}</label>,
+        {/if}
+        <input type="radio" name="layoutFileType" id="layoutFileTypeSupp" value="supp" /><label for="layoutFileTypeSupp">{translate key="article.suppFilesAbbrev"}</label>
 	<input type="file" name="layoutFile" size="10" class="uploadField" />
 	<input type="submit" value="{translate key="common.upload"}" class="button" />
 </form>
