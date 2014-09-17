@@ -379,6 +379,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('copyeditor', $submission->getUserBySignoffType('SIGNOFF_COPYEDITING_INITIAL'));
 
+                // determine number of galleys. eSchol only supports one.
+                $galleyCount = count($submission->getGalleys());
+                $templateMgr->assign_by_ref('galleyCount', $galleyCount);
+                
 		// layout file extension is needed to determine whether or not to display
 		// the PDF conversion button
 		$layoutFile = $submission->getFileBySignoffType('SIGNOFF_LAYOUT');
