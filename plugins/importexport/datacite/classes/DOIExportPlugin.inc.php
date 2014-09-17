@@ -1113,6 +1113,8 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Prepare and display the article template.
 		$templateMgr->assign_by_ref('articles', $iterator);
+		$templateMgr->assign('depositStatusSettingName', $this->getDepositStatusSettingName());
+		$templateMgr->assign('depositStatusUrlSettingName', $this->getDepositStatusUrlSettingName());
 		$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 	}
 

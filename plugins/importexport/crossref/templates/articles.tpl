@@ -30,17 +30,18 @@
 	<form action="{plugin_url path="exportArticles"}" method="post" id="articlesForm">
 		<table width="100%" class="listing">
 			<tr>
-				<td colspan="5" class="headseparator">&nbsp;</td>
+				<td colspan="6" class="headseparator">&nbsp;</td>
 			</tr>
 			<tr class="heading" valign="bottom">
 				<td width="5%">&nbsp;</td>
 				<td width="25%">{translate key="issue.issue"}</td>
 				<td width="40%">{translate key="article.title"}</td>
 				<td width="25%">{translate key="article.authors"}</td>
-				<td width="5%" align="right">{translate key="common.action"}</td>
+				<td width="5%">{translate key="common.action"}</td>
+				<td width="5%" align="right">{translate key="common.status"}</td>
 			</tr>
 			<tr>
-				<td colspan="5" class="headseparator">&nbsp;</td>
+				<td colspan="6" class="headseparator">&nbsp;</td>
 			</tr>
 
 			{iterate from=articles item=articleData}
@@ -58,23 +59,30 @@
 					<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
 					<td><a href="{url page="article" op="view" path=$article->getId()}" class="action">{$article->getLocalizedTitle()|strip_unsafe_html}</a></td>
 					<td>{$article->getAuthorString()|escape}</td>
-					<td align="right"><nobr>
+					<td><nobr>
 						{if $hasCredentials}
 							<a href="{plugin_url path="registerArticle"|to_array:$article->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
 						{/if}
 						<a href="{plugin_url path="exportArticle"|to_array:$article->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 					</nobr></td>
+					<td align="right">
+						{if $article->getData($depositStatusUrlSettingName)|escape}
+							<a href="https://api.crossref.org{$article->getData($depositStatusUrlSettingName)|escape}" target="_blank">{$article->getData($depositStatusSettingName)|escape}</a>
+						{else}
+							-
+						{/if}
+					</td>
 				</tr>
 				<tr>
-					<td colspan="5" class="{if $articles->eof()}end{/if}separator">&nbsp;</td>
+					<td colspan="6" class="{if $articles->eof()}end{/if}separator">&nbsp;</td>
 				</tr>
 			{/iterate}
 			{if $articles->wasEmpty()}
 				<tr>
-					<td colspan="5" class="nodata">{translate key="plugins.importexport.common.export.noArticles"}</td>
+					<td colspan="6" class="nodata">{translate key="plugins.importexport.common.export.noArticles"}</td>
 				</tr>
 				<tr>
-					<td colspan="5" class="endseparator">&nbsp;</td>
+					<td colspan="6" class="endseparator">&nbsp;</td>
 				</tr>
 			{else}
 				<tr>

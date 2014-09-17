@@ -253,6 +253,9 @@ class CrossRefExportDom extends DOIExportDom {
 		if ($journal->getLocalizedSetting('abbreviation') != '' ) {
 			XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'abbrev_title', $journal->getLocalizedSetting('abbreviation'));
 		}
+		else {
+			XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'abbrev_title', $journal->getLocalizedSetting('initials'));
+		}
 
 		/* Both ISSNs are permitted for CrossRef, so sending whichever one (or both) */
 		if ( $ISSN = $journal->getSetting('onlineIssn') ) {
@@ -316,6 +319,7 @@ class CrossRefExportDom extends DOIExportDom {
 		// Create the base node
 		$journalArticleNode =& XMLCustomWriter::createElement($doc, 'journal_article');
 		XMLCustomWriter::setAttribute($journalArticleNode, 'publication_type', 'full_text');
+		XMLCustomWriter::setAttribute($journalArticleNode, 'metadata_distribution_opts', 'any');
 
 		/* Titles */
 		$titlesNode =& XMLCustomWriter::createElement($doc, 'titles');

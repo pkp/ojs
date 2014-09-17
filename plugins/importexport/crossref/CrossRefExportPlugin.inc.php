@@ -290,6 +290,9 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 				if (is_a($article, 'Article')) {
 					// we only save the URL of the last deposit so it can be checked later on
 					$articleDao->updateSetting($article->getId(), $this->getDepositStatusUrlSettingName(), $depositLocation, 'string');
+
+					// update the status of the DOIs
+					$this->updateDepositStatus($request, $journal, $article);
 				}
 			}
 		}
@@ -306,6 +309,7 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 	 */
 	function updateDepositStatus(&$request, &$journal, $article) {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
+		import('lib.pkp.classes.core.JSONManager');
 		$jsonManager = new JSONManager();
 
 		// Prepare HTTP session.
@@ -333,6 +337,12 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 					$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), 'completed', 'string');
 					$this->markRegistered($request, $article);
 					return true;
+				}
+				if ( $item->status == 'failed' ) {
+					$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), 'failed', 'string');
+				}
+				elseif ( $item->status == 'submitted' ) {
+					$articleDao->updateSetting($article->getId(), $this->getDepositStatusSettingName(), 'submitted', 'string');
 				}
 			}
 
@@ -367,7 +377,6 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 	function callbackParseCronTab($hookName, $args) {
 		$taskFilesPath =& $args[0];
 		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
-		error_log($this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml');
 
 		return false;
 	}
