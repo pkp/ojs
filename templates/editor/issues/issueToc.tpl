@@ -193,7 +193,7 @@ $(document).ready(function() {
     {else}
         {assign var="publishedOrUpdated" value="updated"}
     {/if}	
-    <p>Issue cannot be {$publishedOrUpdated} because one or more articles do not have galleys. To add a galley, click on the article title above and upload a file in the "3. EDITING --&gt; Layout" section.</p>
+    <p style="padding: 5px; background: #F0B1A8;">Issue cannot be {$publishedOrUpdated} because one or more articles do not have galleys. To add a galley, click on the article title above and upload a file in the "3. EDITING --&gt; Layout" section.</p>
 {/if}
 
 <p><strong>Having trouble publishing this issue? <a href="https://getsatisfaction.com/cdl/topics/i_just_tried_to_publish_a_journal_issue_but_it_isnt_showing_up_on_escholarship_org_or_only_some_of" target="_blank">Click here for help</a>.</strong> </p>
