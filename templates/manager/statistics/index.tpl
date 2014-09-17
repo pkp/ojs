@@ -30,8 +30,9 @@
 		<li>&#187; <a href="{url op="report" path=$plugin->getName()|escape}">{$plugin->getDisplayName()|escape}</a></li>
 	{/foreach}
 	</ul>
-	
-	<p><a href="{url op="reportGenerator"}">{translate key="manager.statistics.reports.generateReport"}</a></p>	
+	{if !empty($availableMetricTypes)}	
+		<p><a href="{url op="reportGenerator"}">{translate key="manager.statistics.reports.generateReport"}</a></p>
+	{/if}
 </div>
 {include file="common/footer.tpl"}
 
