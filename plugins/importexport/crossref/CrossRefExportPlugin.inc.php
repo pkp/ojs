@@ -331,7 +331,11 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 
 		$doi = urlencode($article->getPubId('doi'));
 		$params = 'filter=doi:' . $doi ;
-		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_API_URL . '?' . $params);
+		curl_setopt(
+			$curlCh,
+			CURLOPT_URL,
+			CROSSREF_API_URL . (strpos(CROSSREF_API_URL,'?')===false?'?':'&') . $params
+		);
 
 		// try to fetch from the new API
 		$response = curl_exec($curlCh);
@@ -363,7 +367,11 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 		}
 
 		// now try the old crossref API and just search for the DOI
-		curl_setopt($curlCh, CURLOPT_URL, CROSSREF_SEARCH_API . '?q=' . $doi);
+		curl_setopt(
+			$curlCh,
+			CURLOPT_URL,
+			CROSSREF_SEARCH_API . (strpos(CROSSREF_SEARCH_API,'?')===false?'?':'&') . 'q=' . $doi
+		);
 		$response = curl_exec($curlCh);
 		if ( $response && curl_getinfo($curlCh, CURLINFO_HTTP_CODE) == CROSSREF_API_RESPONSE_OK ) {
 			$response = $jsonManager->decode($response);
