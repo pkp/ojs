@@ -749,7 +749,7 @@ class IssueManagementHandler extends EditorHandler {
 
 		//send a notification of publication to help@escholarship.org
 		$journalTitle = $journal->getFullName();
-		$issueNumber = $issue-<getIssueId();
+		$issueNumber = $issue->getIssueId();
 		$message = $journalTitle . ' has just published issue ' . $issueNumber;
 		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);		
 		
