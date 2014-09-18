@@ -27,7 +27,8 @@
 <br/>
 
 <div id="allUnregistered">
-	<form action="{plugin_url path="exportAll"}" method="post" id="exportAllForm">
+	<form action="{plugin_url path="process"}" method="post" id="exportAllForm">
+		<input type="hidden" name="target" value="all" />
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>

@@ -27,7 +27,8 @@
 <br/>
 
 <div id="issues">
-	<form action="{plugin_url path="exportIssues"}" method="post" id="issuesForm">
+	<form action="{plugin_url path="process"}" method="post" id="issuesForm">
+		<input type="hidden" name="target" value="issue" />
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
@@ -58,9 +59,9 @@
 					<td>{$issue->getNumArticles()|escape}</td>
 					<td align="right"><nobr>
 						{if $hasCredentials}
-							<a href="{plugin_url path="registerIssue"|to_array:$issue->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+							<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
 						{/if}
-						<a href="{plugin_url path="exportIssue"|to_array:$issue->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+						<a href="{plugin_url path="process" issueId=$issue->getId() params=$testMode target="issue" register=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 					</nobr></td>
 				</tr>
 				<tr>

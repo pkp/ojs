@@ -27,7 +27,8 @@
 <br/>
 
 <div id="galleys">
-	<form action="{plugin_url path="exportGalleys"}" method="post" id="galleysForm">
+	<form action="{plugin_url path="process"}" method="post" id="galleysForm">
+		<input type="hidden" name="target" value="galley" />
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
@@ -62,9 +63,9 @@
 					<td>{$article->getAuthorString()|escape}</td>
 					<td align="right"><nobr>
 						{if $hasCredentials}
-							<a href="{plugin_url path="registerGalley"|to_array:$galley->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+							<a href="{plugin_url path="process" galleyId=$galley->getId() params=$testMode target="galley" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
 						{/if}
-						<a href="{plugin_url path="exportGalley"|to_array:$galley->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+						<a href="{plugin_url path="process" galleyId=$galley->getId() params=$testMode target="galley" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 					</nobr></td>
 				</tr>
 				<tr>

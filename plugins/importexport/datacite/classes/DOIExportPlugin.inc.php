@@ -140,91 +140,88 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function display(&$args, &$request) {
 		parent::display($args, $request);
+		$templateMgr =& TemplateManager::getManager();
 
 		// Retrieve journal from the request context.
-		$router =& $request->getRouter();
-		$journal =& $router->getContext($request);
+		$journal =& $request->getJournal();
 
 		$op = strtolower_codesafe(array_shift($args));
 
-		// Check whether we deal with a single object or
-		// multiple objects.
-		$multiSelect = (substr($op, -1) == 's');
+		switch($op) {
+			// Show the plugin homepage
+			case '':
+			case 'index':
+				return $this->_displayPluginHomePage($templateMgr, $journal);
 
-		$target = 'index';
-		// Check whether we serve an exportation request.
-		if (substr($op, 0, 6) == 'export') {
-			$action = 'export';
-			$target = $multiSelect ? substr($op, 6, -1) : substr($op, 6);
-			if ($multiSelect) {
-				// Check whether the "register" button was clicked.
-				if ($request->isPost() && !is_null($request->getUserVar('register'))) {
-					// Fix the operation name so that we can check
-					// operations in a single switch statement.
-					$action = 'register';
-				} elseif ($request->isPost() && !is_null($request->getUserVar('export'))) {
-					$action = 'export';
-				} elseif ($request->isPost() && !is_null($request->getUserVar('markRegistered'))) {
-					$action = 'markRegistered';
+			// Display cases: show a list of the specified objects
+			case 'all':
+			case 'issues':
+			case 'articles':
+			case 'galleys':
+			case 'suppFiles':
+				// Test mode.
+				$templateMgr->assign('testMode', $this->isTestMode($request)?array('testMode' => 1):array());
+
+				// Export without account.
+				$username = $this->getSetting($journal->getId(), 'username');
+				$templateMgr->assign('hasCredentials', !empty($username));
+
+				switch ($op) {
+					case 'issues':
+						return $this->displayIssueList($templateMgr, $journal);
+					case 'articles':
+						return $this->_displayArticleList($templateMgr, $journal);
+					case 'galleys':
+						return $this->_displayGalleyList($templateMgr, $journal);
+					case 'suppFiles':
+						return $this->displaySuppFileList($templateMgr, $journal);
+					case 'all':
+						return $this->displayAllUnregisteredObjects($templateMgr, $journal);
 				}
-			}
-		// Check whether we serve a registration request.
-		} elseif (substr($op, 0, 8) == 'register') {
-			$action = 'register';
-			$target = $multiSelect ? substr($op, 8, -1) : substr($op, 8);
-		// Check whether we serve a reset request (which is allowed for single targets only).
-		} elseif (!$multiSelect && substr($op, 0, 5) == 'reset') {
-			$action = 'reset';
-			$target = substr($op, 5);
-		// By default we assume a display request.
-		} else {
-			$action = 'display';
-			$target = $multiSelect ? substr($op, 0, -1) : $op;
-		}
 
+			// Process register/reset/export/mark actions.
+			case 'process':
+				$this->_process($request, $journal);
+				break;
+
+			default:
+				fatalError('Invalid command.');
+		}
+	}
+
+	/**
+	 * Process a DOI activity request.
+	 * @param $request PKPRequest
+	 * @param $journal Journal
+	 */
+	function _process(&$request, &$journal) {
 		$objectTypes = $this->getAllObjectTypes();
-		if ($target != 'all') {
-			$targetAllowed = false;
-			foreach(array_keys($objectTypes) as $objectType) {
-				if (strtolower_codesafe($objectType) == $target) {
-					$target = $objectType;
-					$targetAllowed = true;
-					break;
-				}
-			}
-			if (!$targetAllowed) {
-				$target = 'index';
-				$action = 'dispay';
-			}
-		}
+		$target = $request->getUserVar('target');
+		$result = false;
 
 		// Dispatch the action.
-		switch($action) {
-			case 'export':
-			case 'register':
-			case 'markRegistered':
+		switch(true) {
+			case $request->getUserVar('export'):
+			case $request->getUserVar('register'):
+			case $request->getUserVar('markRegistered'):
 				// Find the objects to be exported (registered).
 				if ($target == 'all') {
 					$exportSpec = array();
 					foreach ($objectTypes as $objectName => $exportType) {
-						$objectIds = $request->getUserVar($objectName . 'Id');
+						$objectIds = (array) $request->getUserVar($objectName . 'Id');
 						if (!empty($objectIds)) {
 							$exportSpec[$exportType] = $objectIds;
 						}
 					}
 				} else {
 					assert(isset($objectTypes[$target]));
-					if ($multiSelect) {
-						$exportSpec = array($objectTypes[$target] => $request->getUserVar($target . 'Id'));
-					} else {
-						$exportSpec = array($objectTypes[$target] => array_shift($args));
-					}
+					$exportSpec = array($objectTypes[$target] => (array) $request->getUserVar($target . 'Id'));
 				}
 
-				if ($action == 'export') {
+				if ($request->getUserVar('export')) {
 					// Export selected objects.
 					$result = $this->exportObjects($request, $exportSpec, $journal);
-				} elseif ($action == 'markRegistered') {
+				} elseif ($request->getUserVar('markRegistered')) {
 					foreach($exportSpec as $exportType => $objectIds) {
 						// Normalize the object id(s) into an array.
 						if (is_scalar($objectIds)) $objectIds = array($objectIds);
@@ -240,8 +237,8 @@ class DOIExportPlugin extends ImportExportPlugin {
 						($this->isTestMode($request) ? array('testMode' => 1) : null)
 					);
 					break;
-				} else {
-					// Register selected objects.
+				} else { // Register selected objects.
+					assert($request->getUserVar('register'));
 					$result = $this->registerObjects($request, $exportSpec, $journal);
 
 					// Provide the user with some visual feedback that
@@ -254,21 +251,19 @@ class DOIExportPlugin extends ImportExportPlugin {
 						);
 
 						// Redisplay the changed object list.
-						if ($result === true) {
-							$listAction = $target . ($target == 'all' ? '' : 's');
-							$request->redirect(
-								null, null, null,
-								array('plugin', $this->getName(), $listAction),
-								($this->isTestMode($request) ? array('testMode' => 1) : null)
-							);
-						}
+						$listAction = $target . ($target == 'all' ? '' : 's');
+						$request->redirect(
+							null, null, null,
+							array('plugin', $this->getName(), $listAction),
+							($this->isTestMode($request) ? array('testMode' => 1) : null)
+						);
 					}
 				}
 				break;
-
-			case 'reset':
+			case $request->getUserVar('reset'):
 				// Reset the selected target object to "unregistered" state.
-				$result = $this->resetRegistration($objectTypes[$target], array_shift($args), $journal);
+				$ids = (array) $request->getUserVar($target . 'Id');
+				$result = $this->resetRegistration($objectTypes[$target], array_shift($ids), $journal);
 
 				// Redisplay the changed object list.
 				if ($result === true) {
@@ -279,47 +274,11 @@ class DOIExportPlugin extends ImportExportPlugin {
 					);
 				}
 				break;
-
-			default: // Display.
-				$templateMgr =& TemplateManager::getManager();
-
-				// Test mode.
-				$templateMgr->assign('testMode', $this->isTestMode($request)?array('testMode' => 1):array());
-
-				// Export without account.
-				$username = $this->getSetting($journal->getId(), 'username');
-				$templateMgr->assign('hasCredentials', !empty($username));
-
-				switch ($target) {
-					case 'issue':
-						$this->displayIssueList($templateMgr, $journal);
-						break;
-
-					case 'article':
-						$this->_displayArticleList($templateMgr, $journal);
-						break;
-
-					case 'galley':
-						$this->_displayGalleyList($templateMgr, $journal);
-						break;
-
-					case 'suppFile':
-						$this->displaySuppFileList($templateMgr, $journal);
-						break;
-
-					case 'all':
-						$this->displayAllUnregisteredObjects($templateMgr, $journal);
-						break;
-
-					default:
-						$this->_displayPluginHomePage($templateMgr, $journal);
-				}
-				$result = true;
 		}
 
 		// Redirect to the index page.
 		if ($result !== true) {
-			if (is_array($result) && !empty($result)) {
+			if (is_array($result)) {
 				foreach($result as $error) {
 					assert(is_array($error) && count($error) >= 1);
 					$this->_sendNotification(
@@ -418,9 +377,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		switch ($verb) {
 			case 'settings':
-				$router =& $request->getRouter();
-				$journal =& $router->getContext($request);
-
+				$journal =& $request->getJournal();
 				$form =& $this->_instantiateSettingsForm($journal);
 
 				// FIXME: JM: duplicate code from _displayPluginHomePage()

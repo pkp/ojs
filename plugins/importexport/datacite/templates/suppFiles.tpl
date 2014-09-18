@@ -27,7 +27,8 @@
 <br/>
 
 <div id="suppFiles">
-	<form action="{plugin_url path="exportSuppFiles"}" method="post" id="suppFilesForm">
+	<form action="{plugin_url path="process"}" method="post" id="suppFilesForm">
+		<input type="hidden" name="target" value="suppFile" />
 		<table width="100%" class="listing">
 			<tr>
 				<td colspan="5" class="headseparator">&nbsp;</td>
@@ -62,9 +63,9 @@
 					<td>{$suppFile->getSuppFileCreator()|default:$article->getAuthorString()|escape}</td>
 					<td align="right"><nobr>
 						{if $hasCredentials}
-							<a href="{plugin_url path="registerSuppFile"|to_array:$suppFile->getId() params=$testMode}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
+							<a href="{plugin_url path="process" suppFileId=$suppFile->getId() params=$testMode target="suppFile" register=true}" title="{$updateOrRegisterDescription}" class="action">{$updateOrRegister}</a>
 						{/if}
-						<a href="{plugin_url path="exportSuppFile"|to_array:$suppFile->getId() params=$testMode}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
+						<a href="{plugin_url path="process" suppFileId=$suppFile->getId() params=$testMode target="suppFile" export=true}" title="{translate key="plugins.importexport.common.exportDescription"}" class="action">{translate key="common.export"}</a>
 					</nobr></td>
 				</tr>
 				<tr>
