@@ -710,7 +710,7 @@ class IssueManagementHandler extends EditorHandler {
 				null, $url, 1, NOTIFICATION_TYPE_PUBLISHED_ISSUE
 			)
 		);
-		
+
 		//export issue to eScholarship front-end
 		$this->publishIssueToEschol($journal,$issue);
 		
@@ -748,7 +748,10 @@ class IssueManagementHandler extends EditorHandler {
 		passthru("/apps/subi/subi/ojsConvert/convert.py $outputFile >> /apps/subi/ojs/logs/issue_export.log 2>&1 &");
 
 		//send a notification of publication to help@escholarship.org
-		$journalTitle = $journal->getFullName();
+	    error_log("Testing Logging");
+		error_log("JOURNAL CLASS", get_class($journal));
+		error_log("JOURNAL CLASS METHODS" , get_class_methods(get_class($journal)));
+		$journalTitle = $journal->getId();
 		$issueNumber = $issue->getIssueId();
 		$message = $journalTitle . ' has just published issue ' . $issueNumber;
 		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);		
