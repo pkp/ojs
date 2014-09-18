@@ -748,7 +748,9 @@ class IssueManagementHandler extends EditorHandler {
 		passthru("/apps/subi/subi/ojsConvert/convert.py $outputFile >> /apps/subi/ojs/logs/issue_export.log 2>&1 &");
 
 		//send a notification of publication to help@escholarship.org
-		$message = $journal . ' has just published issue ' . $issue;
+		$journalTitle = $journal->getFullName();
+		$issueNumber = $issue-<getIssueId();
+		$message = $journalTitle . ' has just published issue ' . $issueNumber;
 		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);		
 		
 		return true;
