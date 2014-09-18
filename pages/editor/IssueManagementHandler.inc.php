@@ -751,9 +751,9 @@ class IssueManagementHandler extends EditorHandler {
 	    error_log("Testing Logging");
 		error_log("JOURNAL CLASS", get_class($journal));
 		error_log("JOURNAL CLASS METHODS" , get_class_methods(get_class($journal)));
-		$journalTitle = $journal->getId();
-		$issueNumber = $issue->getIssueId();
-		$message = $journalTitle . ' has just published issue ' . $issueNumber;
+		$journalTitle = $journal->getLocalizedTitle();
+		//$issueNumber = $issue->get;
+		$message = $journalTitle . ' has just published an issue.';
 		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);		
 		
 		return true;
