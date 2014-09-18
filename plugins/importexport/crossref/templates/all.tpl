@@ -56,7 +56,12 @@
 						<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_tags}</a></td>
 						<td><a href="{url page="article" op="view" path=$article->getId()}" class="action">{$article->getLocalizedTitle()|strip_unsafe_html}</a></td>
 						<td>{$article->getAuthorString()|escape}</td>
-						<td><a href="https://api.crossref.org{$article->getData($depositStatusUrlSettingName)|escape}">{$article->getData($depositStatusSettingName)|escape}</a></td>
+						<td>{if $article->getData($depositStatusUrlSettingName)|escape}
+							<a href="https://api.crossref.org{$article->getData($depositStatusUrlSettingName)|escape}" target="_blank">{$article->getData($depositStatusSettingName)|escape}</a>
+						{else}
+							-
+						{/if}
+						</td>
 					</tr>
 					<tr>
 						<td colspan="6" class="separator">&nbsp;</td>
