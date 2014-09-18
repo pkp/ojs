@@ -16,5 +16,5 @@
 	<message key="plugins.block.navigation.displayName">Bloco Navegação</message>
 	<message key="plugins.block.navigation.description">Este plugin oferece links de navegação na barra lateral.</message>
 	<message key="plugins.block.navigation.journalContent">Conteúdo da Revista</message>
-	<message key="plugins.block.navigation.searchScope">Pesquisa SCOPE</message>
+	<message key="plugins.block.navigation.searchScope">Âmbito da pesquisa</message>
 </locale>
