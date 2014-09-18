@@ -33,7 +33,7 @@
 	<message key="plugins.generic.objectsForReview.editor.objectType">Тип рецензируемого объекта</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">Это также удалит все существующие объекты данного типа на рецензию. Вы уверены, что хотите удалить данный тип рецензируемого объекта?</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.create">Создать тип рецензируемого объекта</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Тип рецензируемого объекта</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Редактировать тип рецензируемого объекта</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Обновить</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">Обновить языковые пакеты для объектов, выбранных выше:</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Установить</message>
@@ -46,14 +46,14 @@
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Метаданные реценизруемого объекта</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">Нет</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">Скопировать в :</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Создать метаданные рецензируемого объекта</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">Метаданные реценизруемого объекта</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">Это также удалит все метаданные аналогичных существующих объектов на рецензию. Вы уверены, что хотите удалить метаданные для этого рецензируемого объекта?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Создать поле метаданных</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">Редактировать поле метаданных</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">Это также удалит все метаданные, введенные в это поле. Вы уверены, что хотите удалить поле метаданных для этого типа рецензируемого объекта?</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">Копировать</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">Название</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">Обязательно</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.display">Показать</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">Выбрать тип метаданных</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">Выбрать тип поля метаданных</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.smalltextfield">Текстовое поле на одно слово</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textfield">Текстовое поле на одну строку</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textarea">Расширенное текстовое поле</message>
@@ -64,7 +64,7 @@
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.langdropdownbox">Раскрывающийся список языков</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.changeType">Изменить тип</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">Тип метаданных</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">Тип поля метаданных</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions">Возможные варианты</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem">Добавить выделенное</message>
@@ -88,7 +88,7 @@
 	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">дней после окночания срока сдачи рецензии.</message>
 	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Обратите внимание:</strong> Для использования этих возможностей администратор сайта должен включить параметр <tt>scheduled_tasks</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера для поддержки этой возможности (выполнить такую настройку может быть невозможно на конкретном сервере), описание этой настройки приведено в документации OJS.]]></message>
 	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Дополнительная информация</message>
-	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Дополнительная информация, публикуемая вместе с объектами на рецензию.</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Дополнительная информация, публикуемая вместе со списком объектов на рецензию.</message>
 
 	<!-- Поиск, фильтрация, сортировка -->
 	<message key="plugins.generic.objectsForReview.search.field.title">Название</message>
@@ -128,7 +128,7 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dueDate">Срок</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submission">Отправка</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.editor">Редактор</message>
-	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.noneCreated">Нет объектов для назначения на рецензию</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.noneCreated">Нет доступных объектов на рецензию</message>
 
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status">Статус</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">Доступно</message>
@@ -216,7 +216,7 @@
 	<message key="plugins.generic.objectsForReview.author.submit">Отправить</message>
 	<message key="plugins.generic.objectsForReview.author.view">Просмотреть</message>
 	<!-- Submission -->
-	<message key="plugins.generic.objectsForReview.author.submitInstructions">Пожалуйста укажите, если этот материал — рецензия на один из следующих объектов, назначенных вам на рецензирование</message>
+	<message key="plugins.generic.objectsForReview.author.submitInstructions">Пожалуйста укажите, если этот материал — рецензия на один из следующих объектов, назначенных вам на рецензирование.</message>
 
 
 	<!-- Уведомления -->
@@ -241,8 +241,8 @@
 	<!-- ошибки -->
 	<!-- Управление типами объектов -->
 	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">Название обязательно для типа объекта на рецензию.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">Название обязательно для метаданных объекта на рецензию.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">Тип обязателен для метаданных объекта на рецензию.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">Название обязательно для поля метаданных.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">Тип обязателен для поля метаданных.</message>
 	<!-- Редактирование объекта на рецензию -->
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">Пожалуйста, заполните все обязательные поля.</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">Пожалуйста, выберите роль человека и ввелите его имя или фамилию.</message>
@@ -282,7 +282,7 @@
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">Исполнитель</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">Композитор</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">Спонсор</message>
-	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsByr">Автор текста</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Автор текста</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.format">Формат</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">Название серии</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">Том</message>
@@ -491,7 +491,7 @@
 	<message key="plugins.generic.objectsForReview.object.letter">Письмо</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.author">Автор</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Спонсор</message>
-	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">Получатель</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Получатель</message>
 	<message key="plugins.generic.objectsForReview.object.letter.type">Тип письма</message>
 	<!-- Статья в обычном журнале -->
 	<message key="plugins.generic.objectsForReview.object.magazineArticle">Статья в обычном журнале</message>
