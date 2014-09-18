@@ -226,7 +226,7 @@ function setRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="initialNumber" key="issue.number"}</td>
+		<td width="20%" class="label">{fieldLabel name="initialNumber" key="issue.issue"}</td>
 		<td width="80%" class="data"><input type="text" name="initialNumber" id="initialNumber" value="{$initialNumber|escape}" size="5" maxlength="8" class="textField" /></td>
 	</tr>
 	<tr valign="top">

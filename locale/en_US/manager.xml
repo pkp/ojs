@@ -409,7 +409,8 @@
 	<message key="manager.setup.provideRefLinkInstructions">Provide Layout Editors with instructions.</message>
 	<message key="manager.setup.publicationFormat">Format</message>
 	<message key="manager.setup.publicationFormatDescription">The journal will use the following elements to identify issues (which can be overridden for individual issues).</message>
-	<message key="manager.setup.publicationFormatNumber">Number</message>
+	<!-- LS 09172014 The Number concept is used all over the code, so I'm just going to repurpose this key. -->
+	<message key="manager.setup.publicationFormatNumber">Issue</message>
 	<message key="manager.setup.publicationFormatTitle">Title</message>
 	<message key="manager.setup.publicationFormatVolume">Volume</message>
 	<message key="manager.setup.publicationFormatYear">Year</message>

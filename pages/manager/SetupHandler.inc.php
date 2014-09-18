@@ -191,8 +191,8 @@ class SetupHandler extends ManagerHandler {
 				case 4:
 					$router =& $request->getRouter();
 					// CDL MH: Applied https://github.com/pkp/ojs/commit/804308bb1d4bfa50808504de94b0da91b4f88f0a.diff
-					//$journal =& $router->getContext(&$request);
-					$journal =& $router->getContext($request);
+					//$journal =& $router->getContext(&$request); original code
+					$journal =& $router->getContext($request); //Change suggested by http://stackoverflow.com/questions/8971261/php-5-4-call-time-pass-by-reference-easy-fix-available
 					$templates = $journal->getSetting('templates');
 					import('classes.file.JournalFileManager');
 					$journalFileManager = new JournalFileManager($journal);
