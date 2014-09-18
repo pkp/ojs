@@ -169,6 +169,15 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 	}
 
 	/**
+	 * @copydoc DOIExportPlugin::displayArticleList
+	 */
+	function displayArticleList(&$templateMgr, &$journal) {
+		$templateMgr->assign('depositStatusSettingName', $this->getDepositStatusSettingName());
+		$templateMgr->assign('depositStatusUrlSettingName', $this->getDepositStatusUrlSettingName());
+		return parent::displayArticleList($templateMgr, $journal);
+	}
+
+	/**
 	 * The selected issue can be exported if it contains an article that has a DOI,
 	 * and the articles containing a DOI also have a date published.
 	 * The selected article can be exported if it has a DOI and a date published.

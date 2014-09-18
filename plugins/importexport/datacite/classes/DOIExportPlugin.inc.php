@@ -145,7 +145,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		// Retrieve journal from the request context.
 		$journal =& $request->getJournal();
 
-		$op = strtolower_codesafe(array_shift($args));
+		$op = array_shift($args);
 
 		switch($op) {
 			// Show the plugin homepage
@@ -170,7 +170,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 					case 'issues':
 						return $this->displayIssueList($templateMgr, $journal);
 					case 'articles':
-						return $this->_displayArticleList($templateMgr, $journal);
+						return $this->displayArticleList($templateMgr, $journal);
 					case 'galleys':
 						return $this->_displayGalleyList($templateMgr, $journal);
 					case 'suppFiles':
@@ -1028,7 +1028,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @param $templateMgr TemplateManager
 	 * @param $journal Journal
 	 */
-	function _displayArticleList(&$templateMgr, &$journal) {
+	function displayArticleList(&$templateMgr, &$journal) {
 		$this->setBreadcrumbs(array(), true);
 
 		// Retrieve all published articles.
@@ -1070,8 +1070,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		// Prepare and display the article template.
 		$templateMgr->assign_by_ref('articles', $iterator);
-		$templateMgr->assign('depositStatusSettingName', $this->getDepositStatusSettingName());
-		$templateMgr->assign('depositStatusUrlSettingName', $this->getDepositStatusUrlSettingName());
 		$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
 	}
 
