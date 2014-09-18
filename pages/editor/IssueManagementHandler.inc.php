@@ -755,7 +755,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueVolume = $issue->getVolume();
 		$issueNumber = $issue->getNumber();
 		//$issueNumber = $issue->get;
-		$message = $journalTitle . ' has just published an issue, Volume ' . $issueVolume . 'Issue ' . $issueNumber;
+		$message = $journalTitle . ' has just published an issue, Volume ' . $issueVolume . ' Issue ' . $issueNumber;
 		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);		
 		
 		return true;
