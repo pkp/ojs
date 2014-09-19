@@ -4,3 +4,6 @@
 [submodule "plugins/importexport/duracloud/lib/DuraCloud-PHP"]
 	path = plugins/importexport/duracloud/lib/DuraCloud-PHP
 	url = git://github.com/asmecher/DuraCloud-PHP
+[submodule "plugins/generic/customBlockManager"]
+	path = plugins/generic/customBlockManager
+	url = git://github.com/pkp/customBlockManager
