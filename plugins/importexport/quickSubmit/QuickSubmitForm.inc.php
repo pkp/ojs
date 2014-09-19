@@ -103,6 +103,7 @@ class QuickSubmitForm extends Form {
 		$templateMgr->assign('enablePageNumber', $journal->getSetting('enablePageNumber'));
 
 		parent::display();
+		$templateMgr->display('submitSuccess.tpl');
 	}
 
 
@@ -364,6 +365,12 @@ class QuickSubmitForm extends Form {
 		$rawCitationList = $article->getCitations();
 		$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
 
+		//LS 09192014 Assign variables to template
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('journalPath',$journal->getPath()); 
+		$templateMgr->assign('articleID',$article->getID());
+		$templateMgr->display('submitSuccess.tpl');
+		
 		return $galley;
 	}
 
