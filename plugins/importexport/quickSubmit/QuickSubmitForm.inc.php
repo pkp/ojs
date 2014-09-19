@@ -23,7 +23,6 @@ class QuickSubmitForm extends Form {
 	 */
 	function QuickSubmitForm(&$plugin) {
 		parent::Form($plugin->getTemplatePath() . 'index.tpl');
-
 		$journal =& Request::getJournal();
 
 		$this->addCheck(new FormValidatorPost($this));
@@ -103,7 +102,6 @@ class QuickSubmitForm extends Form {
 		$templateMgr->assign('enablePageNumber', $journal->getSetting('enablePageNumber'));
 
 		parent::display();
-		$templateMgr->display('submitSuccess.tpl');
 	}
 
 
@@ -170,6 +168,8 @@ class QuickSubmitForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
+	
+		$templateMgr =& TemplateManager::getManager(); //LS 09192014
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
