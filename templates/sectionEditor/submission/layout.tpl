@@ -39,11 +39,11 @@
 		{if $layoutSignoff->getUserId()}
                     {if $layoutEditor}
                         <td width="20%" class="value">{$layoutEditor->getFullName()|escape}</td>
-                        <td class="value"><a href="{url op="assignLayoutEditor" path=$submission->getId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></td>
                     {else}
-                        <td style="padding: 5px; background: #F0B1A8;"><strong>Error</strong>: Layout Editor with User ID {$layoutSignoff->getUserId()} is missing from the database. Please <a href="{url op="assignLayoutEditor" path=$submission->getId()}" class="action">assign a new layout editor</a> or contact {mailto address='help@escholarship.org'} to resolve this issue.</td>
+                        <td style="padding: 5px; background: #F0B1A8;"><strong>Error</strong>: Layout Editor with User ID {$layoutSignoff->getUserId()} is missing from the database. Please contact {mailto address='help@escholarship.org'} to resolve this issue.</td>
                     {/if}
                 {/if}
+                <td class="value"><a href="{url op="assignLayoutEditor" path=$submission->getId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></td>
 	</tr>
 </table>
 </div>
