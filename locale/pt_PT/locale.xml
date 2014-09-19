@@ -1063,7 +1063,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
 	<message key="user.profile.profileImage">Imagem Perfil</message>
 	<message key="user.orcid">ID ORCID</message>
-	<message key="user.orcid.description"><![CDATA[ORCID iDs can only be assigned by <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. You must conform to their standards for expressing ORCID iDs, and include the full URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="user.orcid.description"><![CDATA[Os identificadores ORCID só podem ser atribuídos no serviço <a href="http://orcid.org/" target="_blank">ORCID</a>. Deve colocar corretamente o seu ORCID ID indicando o endereço completo (exemplo: <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">O ID ORCID indicado é inválido.</message>
 	<message key="issue.fullIssue">Número Completo</message>
 	<message key="issue.nonpdf.title">Download Número</message>
