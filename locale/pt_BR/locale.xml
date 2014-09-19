@@ -963,8 +963,16 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 
 Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadastro.</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
-	<li>Itens marcados indicam que uma ação é exigida por parte do editor.</li>
-	<li>"Prazo" é preenchido quando o avaliador indica disponibilidade para realizar a avaliação; exibe o tempo em semanas até a data de entrega da avaliação ou (-) semanas quando está atrasado.</li>
+        <li>Itens marcados indicam que uma ação é exigida por parte do editor, classificados assim:</li>
+                <ul>
+                        <li class="highlightREviewerNotNotified">Um revisor foi designado mas não foi notificado por email</li>
+                        <li class="highlightNoDecision">Todos os revisores enviaram uma resposta, mas nenhuma decisão foi gravada</li>
+                        <li class="highlightRevisedCopyUploaded">Autor subiu uma revisão de manuscrito</li>
+                        <li class="highlightReviewerConfirmationOverdue">Revisor está atrasado para confirmar um convite para revisão</li>
+                        <li class="highlightReviewerCompletionOverdue">Revisor está atrasado para completar revisão</li>
+                </ul>
+        </li> 
+        <li>"Prazo" é preenchido quando o avaliador indica disponibilidade para realizar a avaliação; exibe o tempo em semanas até a data de entrega da avaliação ou (-) semanas quando está atrasado.</li>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">As Diretrizes para Avaliação fornecerão aos avaliadores critérios necessários para julgar se uma submissão é adequada para publicação no periódico, e podem incluir quaisquer instruções especiais para preparar uma avaliação efetiva e construtiva. Ao entrar na avaliação, os avaliadores terão acesso a dois campos de texto aberto, sendo o primeiro "para autor e editor" e o segundo para "editor apenas". Como opção alternativa, o Editor Gerente pode criar formulários específicos acessando "Formulários de Avaliação", na Administração da revista. Em todos os casos, os editores terão a opção de incluir as avaliações nas mensagens, ao se comunicarem com o autor.</message>
 	<message key="user.subscriptions.mySubscriptions">Minhas Assinaturas</message>
