@@ -55,7 +55,7 @@ input.button {
 }
 
 input.defaultButton {
-	background-color: #667c4d;
+	background: #667c4d;
 	color: #eee;
 }
 
