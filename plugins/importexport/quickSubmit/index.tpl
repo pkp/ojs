@@ -40,6 +40,10 @@ function updateAbstractRequired() {
 
 <p>{translate key="plugins.importexport.quickSubmit.descriptionLong"}</p>
 
+<div style="height: 30px;background-color:#FFFF99;">
+  <p style="margin:0;line-height:30px;">Note: The <a href="/help/journals/video_tutorials.html" target="_blank">Special Topic section of the Help Center</a> contains a <strong>brief video overview</strong> of this tool.</p>
+</div>
+
 <form enctype="multipart/form-data" name="submit" method="post" action="{plugin_url path="saveSubmit"}">
 
 {include file="common/formErrors.tpl"}
@@ -77,10 +81,14 @@ function updateAbstractRequired() {
 			</td>
 			<td width="20%" class="value">
 				{fieldLabel name="destinationIssue" key="plugins.importexport.quickSubmit.addToExisting"}
+
 			</td>
 			<td class="value">
 				<select name="issueId" id="issueId" size="1" class="selectMenu">{html_options options=$issueOptions selected=$issueNumber}</select>
 			</td>
+		</tr>
+		<tr valign="top">
+			<td colspan="2">(You can manage issues under the Issues heading on the <a href="/ojs/index.php/{$journal->getPath()}/editor">Editor Home</a> page.)</td>
 		</tr>
 		<tr valign="top">
 			<td class="label">
@@ -140,6 +148,10 @@ function updateAbstractRequired() {
 				<td width="30%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
 				<td width="70%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu" onchange="updateAbstractRequired()">{html_options options=$sectionOptions selected=$sectionId}</select></td>
 			</tr>
+			<tr valign="top">
+			    <td colspan="2">(You can manage sections on the <a href="/ojs/index.php/{$journal->getPath()}/manager/sections">Journal Sections</a> configuration page.)</td>
+			</tr>
+			
 		</table>
 		
 		{/if}{* if count($sectionOptions) == 2 *}
