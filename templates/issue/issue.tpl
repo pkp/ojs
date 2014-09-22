@@ -84,3 +84,4 @@
 {/if}
 {/foreach}
 
+{debug}
