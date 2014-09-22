@@ -23,3 +23,4 @@
 {include file="core:common/footer.tpl"}
 {/strip}
 
+{debug}
