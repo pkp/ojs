@@ -23,7 +23,6 @@ class QuickSubmitForm extends Form {
 	 */
 	function QuickSubmitForm(&$plugin) {
 		parent::Form($plugin->getTemplatePath() . 'index.tpl');
-
 		$journal =& Request::getJournal();
 
 		$this->addCheck(new FormValidatorPost($this));
@@ -169,6 +168,8 @@ class QuickSubmitForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
+	
+		$templateMgr =& TemplateManager::getManager(); //LS 09192014
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -364,6 +365,12 @@ class QuickSubmitForm extends Form {
 		$rawCitationList = $article->getCitations();
 		$citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
 
+		//LS 09192014 Assign variables to template
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('journalPath',$journal->getPath()); 
+		$templateMgr->assign('articleID',$article->getID());
+		$templateMgr->display('submitSuccess.tpl');
+		
 		return $galley;
 	}
 
