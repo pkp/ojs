@@ -18,7 +18,7 @@
    <li><a href="{plugin_url}" class="action">Return to the QuickSubmit Plugin</a> to submit another item</li>
    <li><a href="/ojs/index.php/{$journalPath}/editor">Go to the table of contents</a> to arrange and publish this issue</li>
    <li><a href="/ojs/index.php/{$journalPath}/editor/submission/{$articleID}">Make a correction</a> to the item you just submitted (<a href="https://vimeo.com/32994126" target="_blank">Watch the training video to learn how to make corrections</a>)</li>
-   <li><a href="/ojs/index.php/{$journalPath}/manager/>Return to the Configure Journals page</a></li>
+   <li><a href="/ojs/index.php/{$journalPath}/manager/">Return to the Configure Journals page</a></li>
 </ul>
 
 <p>
