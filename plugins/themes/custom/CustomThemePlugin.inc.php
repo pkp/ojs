@@ -69,7 +69,7 @@ class CustomThemePlugin extends ThemePlugin {
 	 */
 	function getStylesheetPath() {
 		$journal =& Request::getJournal();
-		if ($this->getSetting($journal->getId(), 'customThemePerJournal')) {
+		if ($journal && $this->getSetting($journal->getId(), 'customThemePerJournal')) {
 			import('classes.file.PublicFileManager');
 			$fileManager = new PublicFileManager();
 			return $fileManager->getJournalFilesPath($journal->getId());
@@ -146,13 +146,14 @@ class CustomThemePlugin extends ThemePlugin {
 		if ($verb != 'settings') return false;
 
 		$journal =& Request::getJournal();
+		$journalId = ($journal ? $journal->getId() : CONTEXT_ID_NONE);
 		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
 
 		$this->import('CustomThemeSettingsForm');
-		$form = new CustomThemeSettingsForm($this, $journal->getId());
+		$form = new CustomThemeSettingsForm($this, $journalId);
 		if (Request::getUserVar('save')) {
 			$form->readInputData();
 			if ($form->validate()) {
