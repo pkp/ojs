@@ -7,3 +7,6 @@
 [submodule "plugins/generic/customBlockManager"]
 	path = plugins/generic/customBlockManager
 	url = git://github.com/pkp/customBlockManager
+[submodule "plugins/generic/staticPages"]
+	path = plugins/generic/staticPages
+	url = git://github.com/pkp/staticPages
