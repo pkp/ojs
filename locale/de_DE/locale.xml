@@ -426,10 +426,11 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Sys
 	Gutachter/innen die Bitte um Begutachtung, indem sie den eingereichten Beitrag an die E-Mail anhängen. Gutachter/innen mailen den Redakteur/innen ihr Einverständnis (oder einen abschlägigen Bescheid), außerdem das Gutachten und ihre Empfehlung. Redakteur/innen können das Einverständnis der Gutachter/innen (oder deren abschlägigen Bescheid) sowie das Gutachten und die Empfehlung auf der "In Begutachtung"-Seite des Beitrags einsehen, um den Begutachtungsprozess zu verfolgen.</message>
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[OJS unterstützt <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe &ndash; viele Kopien sichern das Material) und gewährleistet so eine sichere und dauerhafte Archivierung der Zeitschrift. LOCKSS ist ein von der Stanforder Universitätsbibliothek entwickeltes offenes Programm, das Bibliotheken ermöglicht, ausgewählte Online-Zeitschriften dadurch zu sichern, dass sie registrierte Zeitschriften-Webseiten regelmäßig auf neue Inhalte prüfen und diese archivieren. Jedes Archiv wird fortlaufend mit anderen Bibliotheksarchiven verglichen, und falls Inhalte verloren gegangen oder beschädigt sind, werden diese anderen Archive oder die Zeitschriften genutzt, um sie wiederherzustellen.
-<br /><br />
-LOCKSS muss erst dann eingerichtet werden, wenn die Zeitschrift vollständig in Betrieb genommen wurde. Dann führen Sie bitte die folgenden beiden Schritte aus:]]></message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems unterstützt das System <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) um sichere und dauerhafte Archivierung Ihrer Zeitschrift zu gewährleisten. Ihnen stehen mehrere Möglichkeiten zur Verfügung, Ihre Zeitschrift in ein LOCKSS-Netzwerk aufzunehmen:]]></message>
 
+	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>
+<br /><br />
+Wenn Sie denken, dass Sie Zugriff auf eines oder mehrere der <a href="http://www.lockss.org/community/networks/" target="_blank">hier gelisteten</a> LOCKSS-Netzwerke haben, kontaktieren Sie bitte die/den entsprechende/n LOCKSS-Netzwerk-Administrator/in, um sich um Aufnahme zu bewerben. Dazu können Sie das Formular unten ausfüllen, um in diese Netzwerke aufgenommen zu werden. <em>Es werden keine Inhalte archiviert werden, bevor Sie das entsprechende Netzwerk benachrichtigt haben.</em>]]></message>
 	<!-- 3. Einrichtungsschritt -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Beispiele für die Anzeige von Creative-Commons-Lizenzen in den Copyright-Vermerken</h3>
 <h4>1. Empfohlene Copyright-Regelungen für Zeitschriften mit Open Access</h4>
