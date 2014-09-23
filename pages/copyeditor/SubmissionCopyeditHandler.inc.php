@@ -54,7 +54,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 	}
 
 	function submissionEditing($args, &$request) {
-		$this->submission($args, &$request);
+		$this->submission($args, $request);
 	}
 
 	function completeCopyedit($args) {
