@@ -143,7 +143,7 @@ class UsageStatsLoader extends FileLoader {
 			return true;
 		}
 
-		parent::executeActions();
+		return parent::executeActions();
 	}
 
 	/**
