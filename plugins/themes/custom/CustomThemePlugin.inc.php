@@ -146,7 +146,7 @@ class CustomThemePlugin extends ThemePlugin {
 		if ($verb != 'settings') return false;
 
 		$journal =& Request::getJournal();
-		$journalId = ($journal ? $journal->getId() : NULL);
+		$journalId = ($journal ? $journal->getId() : CONTEXT_ID_NONE);
 		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
