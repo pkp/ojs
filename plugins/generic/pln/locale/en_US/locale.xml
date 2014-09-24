@@ -13,7 +13,7 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.pln">PKP PLN Plugin</message>
-	<message key="plugins.generic.pln.description">The PKP PLN plugin will deposit your published content into the PKP Public LOCKSS Network for preservation.</message>
+	<message key="plugins.generic.pln.description">The PKP PLN plugin will deposit your published content into the PKP Private LOCKSS Network for preservation.</message>
 	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Private LOCKSS Network</strong><br /><br />Please read the <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">overview of the PKP PLN</a> and complete <a href="{$plnPluginURL}">this simple form</a>. This option will enable inclusion of your journal in the Public Knowledge Project Private LOCKSS Network (PKP PLN).]]></message>
 	
 	<message key="plugins.generic.pln.settings_page">PKP PLN Plugin - Settings</message>
