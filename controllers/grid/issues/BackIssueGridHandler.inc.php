@@ -48,7 +48,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 				'published',
 				'editor.issues.published',
 				null,
-				'controllers/grid/gridCell.tpl',
+				null,
 				$issueGridCellProvider
 			)
 		);

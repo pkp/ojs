@@ -103,9 +103,7 @@ class SectionGridHandler extends SetupGridHandler {
 		$this->addColumn(
 			new GridColumn(
 				'title',
-				'common.title',
-				null,
-				'controllers/grid/gridCell.tpl'
+				'common.title'
 			)
 		);
 		$this->addColumn(new GridColumn('editors', 'user.role.editors'));
