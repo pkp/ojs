@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/relatedVideos/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<message key="plugins.generic.relatedVideos.displayName">Плагие «Связанные видео»</message>
+	<message key="plugins.generic.relatedVideos.description">Этот плагин добавляет дополнительное поле для авторов и редакторов, в котором можно ввести HTML для связанных видео.</message>
+	<message key="plugins.generic.relatedVideos">Связанные видео</message>
+	<message key="plugins.generic.relatedVideos.description">Вставьте видеоконтент (из Youtube, Vimeo, и т. д.) в это поле. Вы можете вставлять готовые фрагменты кода HTML (например, «код встраивания» Youtube), щелкнув на кнопке «HTML».</message>
+</locale>
