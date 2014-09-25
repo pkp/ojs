@@ -79,7 +79,7 @@ class IssueGridHandler extends GridHandler {
 				'identification',
 				'issue.issue',
 				null,
-				'controllers/grid/gridCell.tpl',
+				null,
 				$issueGridCellProvider
 			)
 		);
@@ -92,7 +92,7 @@ class IssueGridHandler extends GridHandler {
 				'numArticles',
 				'editor.issues.numArticles',
 				null,
-				'controllers/grid/gridCell.tpl',
+				null,
 				$issueGridCellProvider
 			)
 		);

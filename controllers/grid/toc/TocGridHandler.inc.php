@@ -69,7 +69,7 @@ class TocGridHandler extends CategoryGridHandler {
 				'title',
 				'article.title',
 				null,
-				'controllers/grid/gridCell.tpl',
+				null,
 				$tocGridCellProvider
 			)
 		);

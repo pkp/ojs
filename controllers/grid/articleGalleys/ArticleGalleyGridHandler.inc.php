@@ -127,7 +127,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 				'label',
 				'submission.layout.galleyLabel',
 				null,
-				'controllers/grid/gridCell.tpl',
+				null,
 				$articleGalleyGridCellProvider
 			)
 		);
@@ -140,7 +140,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 					'locale',
 					'common.language',
 					null,
-					'controllers/grid/gridCell.tpl',
+					null,
 					$articleGalleyGridCellProvider
 				)
 			);
@@ -153,7 +153,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 					'publicGalleyId',
 					'submission.layout.publicGalleyId',
 					null,
-					'controllers/grid/gridCell.tpl',
+					null,
 					$articleGalleyGridCellProvider
 				)
 			);
