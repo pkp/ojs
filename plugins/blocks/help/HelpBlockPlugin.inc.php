@@ -76,6 +76,17 @@ class HelpBlockPlugin extends BlockPlugin {
 	function getDescription() {
 		return Locale::translate('plugins.block.help.description');
 	}
+
+
+       function getContents(&$templateMgr) {
+		$journal =& Request::getJournal();
+                $abbreviation = $journal->getLocalizedSetting('abbreviation');
+                $contactEmail = $journal->getSetting('contactEmail');
+		$templateMgr->assign('abbreviation', $abbreviation);
+                $templateMgr->assign('contactEmail', $contactEmail);
+                return parent::getContents($templateMgr);
+        }
+
 }
 
 ?>

@@ -26,9 +26,8 @@
 #sidebar div.block span.blockTitle {
 	display: block;
 	padding: 0.5em 0 0.5em 0;
-	font-size: 1em;
+	font-size: 1.25em;
 	letter-spacing: 0.1em;
-	text-transform: uppercase;
 }
 
 #sidebar div.block span.blockSubtitle {

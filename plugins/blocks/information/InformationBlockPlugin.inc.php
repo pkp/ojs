@@ -53,6 +53,9 @@ class InformationBlockPlugin extends BlockPlugin {
 		$templateMgr->assign('forReaders', $journal->getLocalizedSetting('readerInformation'));
 		$templateMgr->assign('forAuthors', $journal->getLocalizedSetting('authorInformation'));
 		$templateMgr->assign('forLibrarians', $journal->getLocalizedSetting('librarianInformation'));
+                $templateMgr->assign('contactEmail', $journal->getSetting('contactEmail'));
+                $templateMgr->assign('abbreviation', $journal->getLocalizedSetting('abbreviation'));
+
 		return parent::getContents($templateMgr);
 	}
 }

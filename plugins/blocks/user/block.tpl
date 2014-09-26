@@ -10,7 +10,7 @@
  *}
 <div class="block" id="sidebarUser">
 	{if !$implicitAuth}
-		<span class="blockTitle">{translate key="navigation.user"}</span>
+		<span class="blockTitle">eScholarship</span>
 	{/if}
 	
 	{if $isUserLoggedIn}
