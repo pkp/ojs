@@ -747,16 +747,21 @@ class IssueManagementHandler extends EditorHandler {
 		// run script. if it ran OK (return 0) then proceed happily. if it errored (return not 0), then cause an error!
 		passthru("/apps/subi/subi/ojsConvert/convert.py $outputFile >> /apps/subi/ojs/logs/issue_export.log 2>&1 &");
 
-		//send a notification of publication to help@escholarship.org
-	    error_log("Testing Logging");
-		error_log("JOURNAL CLASS", get_class($journal));
-		error_log("JOURNAL CLASS METHODS" , get_class_methods(get_class($journal)));
+		//send a notification of publication to help@escholarship.org, unless it's an Articles in Press (Vol=0 and Iss=0).
+		//error_log("JOURNAL CLASS", get_class($journal));
+		//error_log("JOURNAL CLASS METHODS" , get_class_methods(get_class($journal)));
 		$journalTitle = $journal->getLocalizedTitle();
 		$issueVolume = $issue->getVolume();
 		$issueNumber = $issue->getNumber();
 		//$issueNumber = $issue->get;
-		$message = $journalTitle . ' has just published an issue, Volume ' . $issueVolume . ' Issue ' . $issueNumber;
-		mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);		
+		
+		if (($issueVolume != 0) && ($issueNumber != 0)){
+		    $message = $journalTitle . ' has just published an issue, Volume ' . $issueVolume . ' Issue ' . $issueNumber;
+		    mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);
+        }
+		else {
+		  error_log("AIP publication only");
+		}
 		
 		return true;
 		//exec("/apps/subi/subi/ojsConvert/convert.py $outputFile",$conversionOutput,$returnValue); //returns 0 on success
