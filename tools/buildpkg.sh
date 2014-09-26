@@ -31,6 +31,7 @@ EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml		\
 dbscripts/xml/data/sample.xml					\
 docs/dev							\
 locale/te_ST							\
+plugins/importexport/duracloud/lib/DuraCloud-PHP/.git		\
 tests								\
 tools/buildpkg.sh						\
 tools/genLocaleReport.sh					\
