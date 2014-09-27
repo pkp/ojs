@@ -1,0 +1,171 @@
+OJS Javascript use
+==================
+
+Code to detect jQuery version: jQuery.fn.jquery
+Code to detect jQuery UI version: jQuery.ui.version
+
+js/articleView.js
+        #sidebarToggle and #fullscreenShow
+        Only used on 'article' page, which in turn appears to be part of OJS front-end
+
+js/pdfobject.js
+        Only used on 'article' page
+
+"throbber"
+        #citationEditorExportPane
+        used in templates/copyeditor/submissionCitations.tpl, templates/sectionEditor/submissionCitations.tpl, templates/citation/citationEditor.tpl
+        The citation editor is enabled by a journal-wide setting, 'metaCitations'
+        but all our journals have "metaCitations" turned off.
+
+lib/pkp/js/ajax_upload.js
+        It appears to be referenced in lib/pkp/classes/template/PKPTemplateManager.inc.php but nowhere else. I think we're not using this.
+
+lib/pkp/js/fontController.js
+        Seems to be working properly.
+
+lib/pkp/js/general.js
+        Seems to be working. Makes very light use of JQuery
+
+lib/pkp/js/grid-clickhandler.js 
+        a little click handler. Refers to css ".row_controls"
+        That's used in PKPCitationGridRow and PKPFilterGridRow
+        We know citation grid isn't used in our OJS (see above).
+        What is PKPFilterGridRow? Used from PKPFilterGridHandler. What's that? Called from FilterGridHandler.
+        What's that? Subclassed as grid.filter.ParserFilterGridHandler and grid.filter.LookupFilterGridHandler among others.
+        Where are those used? classes/manager/form/setup/JournalSetupStep3Form.inc.php
+        Ah. Instances are placed in variables parserFilterGridUrl and lookupFilterGridUrl.
+        Used in templates/manager/setup/step3.tpl.
+        They're only used if citations are enabled. Whew.
+
+lib/pkp/js/jquery.cookie.js
+        Used by fontController.js.
+        And fontController's cookies appear to be working fine.
+        So good.
+
+lib/pkp/js/jquery.pnotify.js
+        Used in lib/pkp/templates/common/footer.tpl
+        Displays "systemNotifications" in a loop using pnotify
+        What are system notifications? Assigned in lib/pkp/classes/template/PKPTemplateManager.inc.php
+        $notifications =& $notificationDao->getNotificationsByUserId($user->getId(), NOTIFICATION_LEVEL_TRIVIAL);
+        To get this to trigger, I didn't figure out how to make a notification happen in the UI. Instead I inserted it
+        into the database:  insert into notifications values(null, 1, 1, '2014-09-17 15:19:46', null, null, 'notification.type.galleyModified', 'LEED-ND and Livability Revisited', 'https://submit-dev.escholarship.org/ojs/index.php/ucb_crp_bpj/layoutEditor/submissionEditing/20808#layout', 1, 'ojs2', 49, 16777222);
+        Then I got a notification box in the upper-right corner when I was logged in as the right user and on the right journal's page.
+        It had an "X" close box, and faded out in a javascript-y way, so I think it works.
+
+lib/pkp/js/jquery.tablednd_0_5.js
+        Called by lib/pkp/js/tablednd.js, which is included in lots of pages.
+        Wow, who knew you could rearrange tables (e.g. the back issues) using drag-n-drop.
+        Works with the new jQuery, so yay.
+
+lib/pkp/js/jqueryValidatorI18n.js
+        Seems to localize "jquery validation plugin" (below perhaps), but I think we don't care.
+
+lib/pkp/js/lib/jquery/jquery.min.js
+        I think this does not get used at all. Removed to be totally sure, since we need the upgraded version.
+
+lib/pkp/js/lib/jquery/plugins/jquery.form.js
+        Only used by ajax_upload, which I verified above we don't use.
+
+lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js
+        I think this also does not get used. Removed to be totally sure, since we need the upgraded version.
+
+lib/pkp/js/lib/jquery/plugins/validate/additional-methods.js
+        Adds a bunch of functions to jquery.validator (below)
+
+lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.js
+        not used (but min is below)
+lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.min.js
+        included by classes/manager/form/setup/JournalSetupStep3Form.inc.php and lib/pkp/classes/submission/common/PKPAction.inc.php
+        As for the former (J Setup Step 3) that's suspicious. I suspect validation is only used on the citation widget, which we don't use.
+        And as for the latter (PKPAction): it's the same! Only the citation widget.
+        Result ==> Ignore
+
+lib/pkp/js/lib/superfish/hoverIntent.js
+lib/pkp/js/lib/superfish/jquery.bgiframe.min.js
+lib/pkp/js/lib/superfish/superfish.js
+lib/pkp/js/lib/superfish/supersubs.js
+lib/pkp/js/superfish/hoverIntent.js
+lib/pkp/js/superfish/jquery.bgiframe.min.js
+lib/pkp/js/superfish/superfish.js
+lib/pkp/js/superfish/supersubs.js
+        superfish css seems to be referenced, but I can't find any reference to superfish outside the plugin itself.
+        same with bgiframe, hoverIntent, and supersubs.
+        So: ignoring.
+
+lib/pkp/js/lib/wufoo/wufoo.js
+        I see wufoo.css referenced, but nobody seems to refer to wufoo.js.
+        Ignoring.
+
+lib/pkp/js/listbuilder.js
+        lib/pkp/classes/controllers/listbuilder/ListbuilderGridRow.inc.php
+        lib/pkp/classes/controllers/listbuilder/ListbuilderHandler.inc.php
+        lib/pkp/templates/controllers/listbuilder/listbuilder.tpl
+        lib/pkp/templates/controllers/listbuilder/listbuilderGrid.tpl
+        lib/pkp/templates/controllers/listbuilder/listbuilderItem.tpl
+
+        ListBuilderHandler seems to lead to all the other things, but nothing leads to ListBuilderHandler.
+        Strange.
+        So, uneasily, deciding to ignore.
+
+lib/pkp/js/modal.js
+        This one is a real mixed bag. It appears to be a concatenation of several plugins. Considering each one:
+
+        modal() and modalConfirm()
+                registered as smartyModal and smartyModalConfirm. Apparently these can be called from templates like this:
+                {modal url=$dialogUrl actOnId="#gridName" button="#dialogButton"}
+                so, where does it do that?
+                only in lib/pkp/templates/linkAction/linkAction.tpl
+                and only if if $action->getMode() eq $smarty.const.LINK_ACTION_MODE_MODAL or MODAL_CONFIRM
+                Those constants in turn are used only in PKPFilterGridHandler.inc.php and PKPFilterGridRow.inc.php,
+                which above we determined are only used by citation editor, which we don't use.
+                So, not used.
+        submitJsonForm
+                only used in citationForm.tpl
+                skip
+        modalAlert
+                only used in listbuilder.js
+                we're ignoring that, => ignoring this too
+        changeModalFormLocale
+        clearFormFields
+        saveAndUpdate
+                not used anywhere
+        ajaxAction
+                used on linkaction, and also filterForm.tpl, and a bunch of citation forms.
+                the only one we haven't eliminated is filterForm, so:
+                That's used in FilterGridHandler, which is again citation-specific.
+                ==> ignore
+        actionThrobber
+        extrasOnDemand
+        scrollToMakeVisible
+        selectRange
+                only used in citation stuff
+                ==> ignore
+        updateItem
+        deleteElementById
+                only used within modal.js itself
+                ==> ignore
+        $.browser
+                used by jquery.validate, superfish, article.tpl, and citationEditor.tpl
+                all are not used in our OJS
+                ==> ignore
+        $.hotkeys
+                Not sure but it seems likely to be citation related.
+                ==> ignore
+
+lib/pkp/js/tablednd.js
+        see lib/pkp/js/jquery.tablednd_0_5.js
+        It's working so far.
+
+lib/pkp/js/tag-it.js
+        Used in lib/pkp/templates/common/header.tpl which means it's everywhere.
+        The function appears to be used lots of places:
+                lib/pkp/templates/form/keywordInput.tpl
+                templates/manager/people/userProfileForm.tpl
+                templates/sectionEditor/createReviewerForm.tpl
+                etc.
+        Let's look at userProfileForm. ... $("#interests").tagit({ ...
+        Okay, it does javascripty auto-completion stuff. Seems to work, including save.
+        ==> Works.
+
+lib/pkp/js/wufoo/wufoo.js
+        ==> same as wufoo above, ignore.
