@@ -1,8 +1,18 @@
 OJS Javascript use
 ==================
 
-Code to detect jQuery version: jQuery.fn.jquery
-Code to detect jQuery UI version: jQuery.ui.version
+Here's some code to detect jQuery version: 
+        jQuery.fn.jquery
+
+Here's some code to detect jQuery UI version: 
+        jQuery.ui.version
+
+Our custom role add check:
+        On ojs/index.php/journalName/manager/createUser at least, probably some other pages too.
+        When you type the email of an existing user, it offers to add role instead of creating a new user.
+        Very, very minimal use of jQuery.
+        Still works.
+        ==> Done.
 
 js/articleView.js
         #sidebarToggle and #fullscreenShow
