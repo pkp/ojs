@@ -31,12 +31,17 @@ class MetricsDAO extends DAO {
 	 * @param $filters array report-level filter selection
 	 * @param $orderBy array order criteria
 	 * @param $range null|DBResultRange paging specification
+	 * @param $nonAdditive boolean False will mix two different metric types,
+	 *  results, which is conceptually wrong because different metric types
+	 *  counts events differently. Only use this in cases that you know the
+	 *  metric types counts events similary, and where the metric numbers 
+	 *  accuracy is not that crucial. 
 	 *
 	 * @return null|array The selected data as a simple tabular result set or
 	 *  null if metrics are not supported by this plug-in, the specified report
 	 *  is invalid or cannot be produced or another error occurred.
 	 */
-	function &getMetrics($metricType, $columns = array(), $filters = array(), $orderBy = array(), $range = null) {
+	function &getMetrics($metricType, $columns = array(), $filters = array(), $orderBy = array(), $range = null, $nonAdditive = true) {
 		// Return by reference.
 		$nullVar = null;
 
@@ -73,7 +78,8 @@ class MetricsDAO extends DAO {
 		// either require a filter on a single metric type or the metric type
 		// must be present as a column.
 		if (empty($metricType)) return $nullVar;
-		if (count($metricType) !== 1) {
+		// Let addition happen if parameter is false. 
+		if ($nonAdditive && count($metricType) !== 1) {
 			if (!in_array(STATISTICS_DIMENSION_METRIC_TYPE, $columns)) {
 				array_push($columns, STATISTICS_DIMENSION_METRIC_TYPE);
 			}
