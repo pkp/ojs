@@ -159,14 +159,14 @@
 		<tr valign="top">
 			<td class="label">{fieldLabel name="password" required=$passwordRequired key="user.password"}</td>
 			<td class="value">
-				<input type="password" name="password" id="password" value="{$password|escape}" size="20" maxlength="32" class="textField" />
+				<input type="password" name="password" id="password" value="{$password|escape}" size="20" class="textField" />
 				<br />
 				<span class="instruct">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</span>
 			</td>
 		</tr>
 		<tr valign="top">
 			<td class="label">{fieldLabel name="password2" required=$passwordRequired key="user.repeatPassword"}</td>
-			<td class="value"><input type="password" name="password2"  id="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
+			<td class="value"><input type="password" name="password2"  id="password2" value="{$password2|escape}" size="20" class="textField" /></td>
 		</tr>
 		{if $userId}
 		<tr valign="top">
