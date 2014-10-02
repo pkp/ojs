@@ -15,7 +15,7 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.block.fontSize.displayName">Font Size Block</message>
 	<message key="plugins.block.fontSize.description">This plugin provides sidebar font sizer.</message>
-	<message key="plugins.block.fontSize.title">Font Size</message>
+	<message key="plugins.block.fontSize.title">Interface Font Size</message>
 	<message key="plugins.block.fontSize.small">Small</message>
 	<message key="plugins.block.fontSize.medium">Medium</message>
 	<message key="plugins.block.fontSize.large">Large</message>

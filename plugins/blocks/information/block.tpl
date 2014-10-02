@@ -10,11 +10,12 @@
  *}
 {if !empty($forReaders) || !empty($forAuthors) || !empty($forLibrarians)}
 <div class="block" id="sidebarInformation">
-	<span class="blockTitle">{translate key="plugins.block.information.link"}</span>
+	<span class="blockTitle">{$abbreviation}</span>
 	<ul>
-		{if !empty($forReaders)}<li><a href="{url page="information" op="readers"}">{translate key="navigation.infoForReaders"}</a></li>{/if}
-		{if !empty($forAuthors)}<li><a href="{url page="information" op="authors"}">{translate key="navigation.infoForAuthors"}</a></li>{/if}
-		{if !empty($forLibrarians)}<li><a href="{url page="information" op="librarians"}">{translate key="navigation.infoForLibrarians"}</a></li>{/if}
+		<li><a href="{url page="about"}">About Us</a></li>
+                <li><a href="{url page="about" op="submissions"}">Submission Guidelines</a></li>
+                <li><a href="{url page="about" op="editorialPolicies" anchor="peerReviewProcess"}">Review Guidelines</a></li>
+                <li>{mailto text="Contact Us" address="$contactEmail"}</li>
 	</ul>
 </div>
 {/if}

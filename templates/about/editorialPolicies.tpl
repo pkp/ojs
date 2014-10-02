@@ -15,7 +15,6 @@
 
 <ul class="plain">
 	{if $currentJournal->getLocalizedSetting('focusScopeDesc') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="focusAndScope"}">{translate key="about.focusAndScope"}</a></li>{/if}
-	<li>&#187; <a href="{url op="editorialPolicies" anchor="sectionPolicies"}">{translate key="about.sectionPolicies"}</a></li>
 	{if $currentJournal->getLocalizedSetting('reviewPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="peerReviewProcess"}">{translate key="about.peerReviewProcess"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('pubFreqPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="publicationFrequency"}">{translate key="about.publicationFrequency"}</a></li>{/if}
 	{if !$currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
@@ -36,40 +35,6 @@
 <div class="separator">&nbsp;</div>
 </div>
 {/if}
-
-<div id="sectionPolicies"><h3>{translate key="about.sectionPolicies"}</h3>
-{foreach from=$sections item=section}{if !$section->getHideAbout()}
-	<h4>{$section->getLocalizedTitle()}</h4>
-	{if strlen($section->getLocalizedPolicy()) > 0}
-		<p>{$section->getLocalizedPolicy()|nl2br}</p>
-	{/if}
-
-	{assign var="hasEditors" value=0}
-	{foreach from=$sectionEditorEntriesBySection item=sectionEditorEntries key=key}
-		{if $key == $section->getId()}
-			{foreach from=$sectionEditorEntries item=sectionEditorEntry}
-				{assign var=sectionEditor value=$sectionEditorEntry.user}
-				{if 0 == $hasEditors++}
-				{translate key="user.role.editors"}
-				<ul class="plain">
-				{/if}
-				<li>{$sectionEditor->getFirstName()|escape} {$sectionEditor->getLastName()|escape}{if $sectionEditor->getLocalizedAffiliation()}, {$sectionEditor->getLocalizedAffiliation()|escape}{/if}</li>
-			{/foreach}
-		{/if}
-	{/foreach}
-	{if $hasEditors}</ul>{/if}
-
-	<table class="plain" width="60%">
-		<tr>
-			<td width="33%">{if !$section->getEditorRestricted()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.open"}</td>
-			<td width="33%">{if $section->getMetaIndexed()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.indexed"}</td>
-			<td width="34%">{if $section->getMetaReviewed()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.reviewed"}</td>
-		</tr>
-	</table>
-{/if}{/foreach}
-</div>
-
-<div class="separator">&nbsp;</div>
 
 {if $currentJournal->getLocalizedSetting('reviewPolicy') != ''}<div id="peerReviewProcess"><h3>{translate key="about.peerReviewProcess"}</h3>
 <p>{$currentJournal->getLocalizedSetting('reviewPolicy')|nl2br}</p>
