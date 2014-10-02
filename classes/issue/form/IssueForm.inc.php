@@ -276,7 +276,8 @@ class IssueForm extends Form {
 			'hideCoverPageCover',
 			'articles',
 			'styleFileName',
-			'originalStyleFileName'
+			'originalStyleFileName',
+			'resetArticlePublicationDates'
 		));
 		// consider the additional field names from the public identifer plugins
 		import('classes.plugins.PubIdPluginHelper');
@@ -319,6 +320,16 @@ class IssueForm extends Form {
 		$issue->setYear(empty($year) ? 0 : $year);
 		if (!$isNewIssue) {
 			$issue->setDatePublished($this->getData('datePublished'));
+			// If the Editor has asked to reset article publication dates for content
+			// in this issue, set them all to the specified issue publication date.
+			if ($this->getData('resetArticlePublicationDates')) {
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticles =& $publishedArticleDao->getPublishedArticles($issue->getId());
+				foreach ($publishedArticles as $publishedArticle) {
+					$publishedArticle->setDatePublished($this->getData('datePublished'));
+					$publishedArticleDao->updatePublishedArticle($publishedArticle);
+				}
+			}
 		}
 		$issue->setDescription($this->getData('description'), null); // Localized
 		$issue->setStoredPubId('publisher-id', $this->getData('publicIssueId'));
