@@ -21,9 +21,6 @@ before_install:
   # Configure the webserver
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/prepare-webserver.sh; fi
 
-  # Install phpunit
-  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/install-phpunit.sh; fi
-
   # Start xvfb
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/start-xvfb.sh; fi
 
