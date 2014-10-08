@@ -65,6 +65,7 @@
 	<message key="editor.issues.publicIssueIdentifier">Public issue identifier</message>
 	<message key="editor.issues.description">Description</message>
 	<message key="editor.issues.accessStatus">Access status</message>
+	<message key="editor.issues.resetArticlePublicationDates">Reset article publication dates</message>
 	<message key="editor.issues.accessDate">Open access date</message>
 	<message key="editor.issues.enableOpenAccessDate">Enable delayed open access</message>
 	<message key="editor.issues.coverPage">Cover image</message>
