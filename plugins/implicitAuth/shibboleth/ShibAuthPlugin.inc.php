@@ -191,10 +191,11 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 		$user->setMailingAddress($_SERVER[$mailing_address]);
 		$user->setDateRegistered(Core::getCurrentDate());
 
-		// Set the user's  password to their email address. This may or may not be necessary
+		// Randomly genearate the user's password, using a randomly generated salt
+		// Salting with a value other than the authStr/UIN prevents password-based login
+		// (eg in the case that implicit auth is disabled later)
 
-		$email = Config::getVar('security', 'implicit_auth_header_email');
-		$user->setPassword(Validation::encryptCredentials($email, $email . 'pass'));
+		$user->setPassword(Validation::encryptCredentials(Validation::generatePassword(40), Validation::generatePassword(40)));
 
 		// Now go insert the user in the db
 
