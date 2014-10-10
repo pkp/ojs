@@ -229,6 +229,14 @@ function moveAuthor(dir, authorIndex) {
 		<td class="label">{if $section->getAbstractsNotRequired()==0}{fieldLabel name="abstract" required="true" key="article.abstract"}{else}{fieldLabel name="abstract" key="article.abstract"}{/if}</td>
 		<td class="value"><textarea name="abstract[{$formLocale|escape}]" id="abstract" rows="15" cols="60" class="textArea">{$abstract[$formLocale]|escape}</textarea></td>
 	</tr>
+  <tr>
+    <td width="20%" class="label">{fieldLabel name="submissionLocale" required="true" key="author.submit.submissionLocale"}</td>
+    <td width="80%" class="value">
+    <select name="submissionLocale" id="submissionLocale" size="1" class="selectMenu">
+        {html_options options=$formLocales selected=$submissionLocale}
+    </select>
+    </td>
+  </tr>
 </table>
 </div>
 
@@ -488,4 +496,3 @@ function moveAuthor(dir, authorIndex) {
 </form>
 
 {include file="common/footer.tpl"}
-

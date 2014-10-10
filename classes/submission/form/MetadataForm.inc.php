@@ -124,6 +124,7 @@ class MetadataForm extends Form {
 				'authors' => array(),
 				'title' => $article->getTitle(null), // Localized
 				'abstract' => $article->getAbstract(null), // Localized
+				'submissionLocale' => $article->getLocale(null),
 				'coverPageAltText' => $article->getCoverPageAltText(null), // Localized
 				'showCoverPage' => $article->getShowCoverPage(null), // Localized
 				'hideCoverPageToc' => $article->getHideCoverPageToc(null), // Localized
@@ -249,6 +250,7 @@ class MetadataForm extends Form {
 				'primaryContact',
 				'title',
 				'abstract',
+				'submissionLocale',
 				'coverPageAltText',
 				'showCoverPage',
 				'hideCoverPageToc',
@@ -334,6 +336,8 @@ class MetadataForm extends Form {
 
 		$section =& $sectionDao->getSection($article->getSectionId());
 		$article->setAbstract($this->getData('abstract'), null); // Localized
+
+    $article->setLocale($this->getData('submissionLocale'), null);
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
