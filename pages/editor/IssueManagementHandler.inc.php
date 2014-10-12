@@ -906,6 +906,11 @@ class IssueManagementHandler extends EditorHandler {
 			$articleDao =& DAORegistry::getDAO('ArticleDAO');
 			$publishedArticles =& $publishedArticleDao->getPublishedArticles($issueId);
 			foreach ($publishedArticles as $publishedArticle) {
+				// Set the publication date to the current date
+				$publishedArticle->setDatePublished(Core::getCurrentDate());
+				$publishedArticleDao->updatePublishedArticle($publishedArticle);
+
+				// Set the article status and affected metadata
 				$article =& $articleDao->getArticle($publishedArticle->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
 					$article->setStatus(STATUS_PUBLISHED);
@@ -922,9 +927,11 @@ class IssueManagementHandler extends EditorHandler {
 					}
 					$articleSearchIndex->articleMetadataChanged($publishedArticle);
 				}
-				// delete article tombstone
+
+				// Delete article tombstone if necessary
 				$tombstoneDao =& DAORegistry::getDAO('DataObjectTombstoneDAO');
 				$tombstoneDao->deleteByDataObjectId($article->getId());
+
 				unset($article);
 			}
 		}

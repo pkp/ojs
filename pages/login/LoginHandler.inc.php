@@ -39,7 +39,7 @@ class LoginHandler extends PKPLoginHandler {
 				$templateMgr =& TemplateManager::getManager();
 				$templateMgr->assign('pageTitle', 'manager.people');
 				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
-				$templateMgr->assign('backLink', $request->url(null, null, 'people', 'all'));
+				$templateMgr->assign('backLink', $request->url(null, 'manager', 'people', 'all'));
 				$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 				return $templateMgr->display('common/error.tpl');
 			}

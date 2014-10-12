@@ -103,6 +103,8 @@
 					{math|assign:"maxYear" equation="x+2" x=$currentYear}
 				{/if}
 				{html_select_date prefix="datePublished" time=$datePublished|default:"---" all_extra="class=\"selectMenu\"" start_year=$minYear end_year=$maxYear year_empty="-" month_empty="-" day_empty="-"}
+				<br/>
+				<input type="checkbox" id="resetArticlePublicationDates" name="resetArticlePublicationDates" />&nbsp;{fieldLabel name="resetArticlePublicationDates" key="editor.issues.resetArticlePublicationDates"}<br/>
 			{else}
 				{translate key="editor.issues.unpublished"}
 			{/if}
