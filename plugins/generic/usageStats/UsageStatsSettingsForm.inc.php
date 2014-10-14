@@ -39,21 +39,20 @@ class UsageStatsSettingsForm extends Form {
 
 		$this->setData('createLogFiles', $plugin->getSetting(CONTEXT_SITE, 'createLogFiles'));
 		$this->setData('accessLogFileParseRegex', $plugin->getSetting(0, 'accessLogFileParseRegex'));
-		$this->setData('minTimeBetweenRequests', $plugin->getSetting(0, 'minTimeBetweenRequests'));
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('createLogFiles','accessLogFileParseRegex', 'minTimeBetweenRequests'));
+		$this->readUserVars(array('createLogFiles','accessLogFileParseRegex'));
 	}
 
 	/**
 	 * @see Form::fetch()
 	 */
 	function display() {
-		$templateMgr =& TemplateManager::getManager($request);
+		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pluginName', $this->plugin->getName());
 		parent::display();
 	}
@@ -66,7 +65,6 @@ class UsageStatsSettingsForm extends Form {
 
 		$plugin->updateSetting(0, 'createLogFiles', $this->getData('createLogFiles'));
 		$plugin->updateSetting(0, 'accessLogFileParseRegex', $this->getData('accessLogFileParseRegex'));
-		$plugin->updateSetting(0, 'minTimeBetweenRequests', (int)$this->getData('minTimeBetweenRequests'));
 	}
 
 }
