@@ -94,7 +94,7 @@
 	<message key="editor.issues.order">Sıra</message>
 	<message key="editor.issues.publicId">Genel Sıra</message>
 	<message key="editor.issues.publishIssue">Sayıyı Yayınla</message>
-	<message key="editor.issues.unpublishIssue">Yayından Yaldır</message>
+	<message key="editor.issues.unpublishIssue">Yayından Kaldır</message>
 	<message key="editor.issues.previewIssue">Sayı Önizleme</message>
 	<message key="editor.issues.preview">(Önizleme)</message>
 	<message key="editor.issues.confirmPublish">Yeni sayıyı yayınlamak istediğinizden emin misiniz?</message>
