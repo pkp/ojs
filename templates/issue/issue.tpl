@@ -38,7 +38,7 @@
 		{assign var=hasAccess value=0}
 	{/if}
 
-	<td class="tocTitle">{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$articlePath}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>{else}{$article->getLocalizedTitle()|strip_unsafe_html}{/if}</td>
+	<td class="tocTitle">{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$articlePath}">{$article->getLocalizedTitle($currentLocale)|strip_unsafe_html}</a>{else}{$article->getLocalizedTitle($currentLocale)|strip_unsafe_html}{/if}</td>
 	<td class="tocGalleys">
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 			{foreach from=$article->getGalleys() item=galley name=galleyList}
