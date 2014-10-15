@@ -93,7 +93,7 @@
 	<message key="author.submit.addSupplementaryFile">Ek Dosya Ekle</message>
 	<message key="author.submit.editSupplementaryFile">Ek Dosya Düzenle</message>
 	<message key="author.submit.supplementaryFileData">Ek Dosya Üst Verisi</message>
-	<message key="author.submit.supplementaryFileDataDescription">Yüklediğiniz bu ek belge için lütfen aşağıdaki formu doldurunuz. (Eğer belgeniz yayın hakkı devir formu ise (a) "Başlık" alanına makalenizin başlığını yazınız, (b) "Tür" alanında "diğer" seçeneğini seçiniz, (c) "Kısa Açıklama" alanına "Yayın Kakkı Devir Formu" ifadesini yazınız, (d) "Yayıncı" kısmına "Deri yayıncısını" yazınız ve (e) makalenizin dil kodunu "dil" alanında belirtiniz.)</message>
+	<message key="author.submit.supplementaryFileDataDescription">Yüklediğiniz bu ek belge için lütfen aşağıdaki formu doldurunuz. (Eğer belgeniz yayın hakkı devir formu ise (a) "Başlık" alanına makalenizin başlığını yazınız, (b) "Tür" alanında "diğer" seçeneğini seçiniz, (c) "Kısa Açıklama" alanına "Yayın Hakkı Devir Formu" ifadesini yazınız, (d) "Yayıncı" kısmına "Deri yayıncısını" yazınız ve (e) makalenizin dil kodunu "dil" alanında belirtiniz.)</message>
 	<message key="author.submit.supplementaryFileUpload">Ek Dosya</message>
 	<message key="author.submit.suppFile.createrOrOwner">Dosya sahibi</message>
 	<message key="author.submit.suppFile.researchInstrument">Araştırma Enstürmanları</message>

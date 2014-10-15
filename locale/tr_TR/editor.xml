@@ -94,7 +94,7 @@
 	<message key="editor.issues.order">Sıra</message>
 	<message key="editor.issues.publicId">Genel Sıra</message>
 	<message key="editor.issues.publishIssue">Sayıyı Yayınla</message>
-	<message key="editor.issues.unpublishIssue">Yayından Yaldır</message>
+	<message key="editor.issues.unpublishIssue">Yayından Kaldır</message>
 	<message key="editor.issues.previewIssue">Sayı Önizleme</message>
 	<message key="editor.issues.preview">(Önizleme)</message>
 	<message key="editor.issues.confirmPublish">Yeni sayıyı yayınlamak istediğinizden emin misiniz?</message>
@@ -137,7 +137,7 @@
 	<message key="editor.article.designateDueDateDescription">Son değerlendirme tarihi olarak yeni bir tarih ya da eklenecek hafta sayısını giriniz.</message>
 	<message key="editor.article.todaysDate">Günün Tarihi</message>
 	<message key="editor.article.requestedByDate">Tarihle İstenildi</message>
-	<message key="editor.article.dueDateFormat">Biçim: YYYY-MM-DD</message>
+	<message key="editor.article.dueDateFormat">Biçim: YYYY-AA-GG</message>
 	<message key="editor.article.numberOfWeeks">Hafta Sayısı</message>
 	<message key="editor.article.selectCopyeditor">Sayfa Düzenleyici Ata</message>
 	<message key="editor.article.replaceCopyeditor">Sayfa Düzenleyiciyi Değiştir</message>
