@@ -249,7 +249,7 @@ encryption = md5
 ; Use e.g. "img[src,alt],p" to allow "src" and "alt" attributes to the "img"
 ; tag, and also to permit the "p" paragraph tag. Unspecified attributes will be
 ; stripped.
-allowed_html = "a[href|target],em,strong,cite,code,ul,ol,li,dl,dt,dd,b,i,u,img[src|alt],sup,sub,br,p"
+allowed_html = "a[href|target],em,strong,cite,code,ul,ol,li[class],dl,dt,dd,b,i,u,img[src|alt],sup,sub,br,p"
 
 ;Is implicit authentication enabled or not
 
