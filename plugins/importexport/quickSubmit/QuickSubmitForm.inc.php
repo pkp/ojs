@@ -482,8 +482,8 @@ class QuickSubmitForm extends Form {
 
 		if ($issue && $issue->getPublished()) {
 			$submission->setStatus(STATUS_PUBLISHED);
-			if ($submission && !$submission->getDatePublished()) {
-				$submission->setDatePublished($issue->getDatePublished());
+			if ($publishedArticle && !$publishedArticle->getDatePublished()) {
+				$publishedArticle->setDatePublished($issue->getDatePublished());
 			}
 		} else {
 			$submission->setStatus(STATUS_QUEUED);
