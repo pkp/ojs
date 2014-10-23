@@ -363,7 +363,7 @@ class CounterReportPlugin extends ReportPlugin {
 	* Internal function to collect structures for output
 	*/
 	function _arrangeEntries($entries, $begin, $end) {
-		$ret=null;
+		$ret = array();
 
 		$i = 0;
 
