@@ -2,7 +2,7 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-* plugins/generic/counter/counter_monthly_log_1_1.xml
+* plugins/reports/counter/counter_monthly_log_1_1.xml
 *
 * Copyright (c) 2013-2014 Simon Fraser University Library
 * Copyright (c) 2003-2014 John Willinsky

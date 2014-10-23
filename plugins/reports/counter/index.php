@@ -11,7 +11,7 @@
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup plugins_generic_counter
+ * @ingroup plugins_reports_counter
  * @brief Wrapper for counter report plugin.
  *
  */
