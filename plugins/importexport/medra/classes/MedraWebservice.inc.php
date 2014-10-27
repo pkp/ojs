@@ -114,7 +114,6 @@ class MedraWebservice {
 		curl_setopt($curlCh, CURLOPT_USERPWD, $this->_auth);
 
 		// Set up SSL.
-		curl_setopt($curlCh, CURLOPT_SSLVERSION, 3);
 		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
 
 		// Make SOAP request.
