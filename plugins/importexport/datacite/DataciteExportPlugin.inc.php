@@ -140,7 +140,6 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
 
 		// Set up SSL.
-		curl_setopt($curlCh, CURLOPT_SSLVERSION, 3);
 		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
 
 		// Transmit meta-data.
