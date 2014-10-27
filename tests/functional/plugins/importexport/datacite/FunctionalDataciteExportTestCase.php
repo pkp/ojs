@@ -341,7 +341,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 		// Request the DOI's URL over SSL.
 		$apiUrl = "https://mds.datacite.org/%action/$doi?testMode=true";
-		curl_setopt($curlCh, CURLOPT_SSLVERSION, 3);
 		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
 
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
