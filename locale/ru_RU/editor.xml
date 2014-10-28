@@ -66,6 +66,7 @@
 	<message key="editor.issues.publicIssueIdentifier">Открытый идентификатор выпуска</message>
 	<message key="editor.issues.description">Описание</message>
 	<message key="editor.issues.accessStatus">Статус доступа</message>
+	<message key="editor.issues.resetArticlePublicationDates">Сбросить даты публикации статей</message>
 	<message key="editor.issues.accessDate">Дата открытого доступе</message>
 	<message key="editor.issues.enableOpenAccessDate">Включить отложенный открытый доступ</message>
 	<message key="editor.issues.coverPage">Изображение обложки</message>
