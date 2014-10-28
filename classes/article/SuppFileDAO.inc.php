@@ -82,7 +82,7 @@ class SuppFileDAO extends DAO {
 				LEFT JOIN published_articles pa ON s.article_id = pa.article_id ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id AND sfs.setting_name = ?
-				WHERE	(sfs.setting_value IS NULL OR sfs.setting_value = "")';
+				WHERE	(sfs.setting_value IS NULL OR sfs.setting_value = \'\')';
 		} else {
 			$params[] = $settingValue;
 			$sql .= 'INNER JOIN article_supp_file_settings sfs ON s.supp_id = sfs.supp_id
