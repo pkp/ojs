@@ -109,6 +109,7 @@
 <script src="{$baseUrl}/lib/pkp/js/pages/header/ContextSwitcherFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/header/HeaderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/admin/ContextsHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/pages/user/form/UserFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/submission/SubmissionTabHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/submission/SubmissionStep2FormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/submission/SubmissionStep3FormHandler.js"></script>
