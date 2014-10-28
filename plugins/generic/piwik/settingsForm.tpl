@@ -8,7 +8,6 @@
  * Piwik plugin settings
  *
  *}
-
 {assign var="pageTitle" value="plugins.generic.piwik.manager.piwikSettings"}
 {include file="common/header.tpl"}
 
