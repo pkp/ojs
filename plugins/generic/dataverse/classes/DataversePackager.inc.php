@@ -22,7 +22,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 	/** @var string file directory for packager files */
 	var $_fileDir = 'files';
 	
-	/** @var array of SuppFile objects to be deposited */
+	/** @var array of files to be deposited: file paths indexed by filename */
 	var $_files	 = array();
 	
 	/** @var string Atom entry filename */
@@ -50,11 +50,12 @@ class DataversePackager extends PackagerAtomTwoStep {
 	}
 
 	/**
-	 * Add file to deposit package.
-	 * @param $suppFile 
+	 * Add file to deposit package. 
+	 * @param $filePath String file path
+	 * @param $fileName String file name
 	 */
-	function addFile($suppFile) {
-		$this->_files[] = $suppFile;
+	function addFile($filePath, $fileName) {
+		$this->_files[$fileName] = $filePath;
 	}
 	
 	/**
@@ -71,9 +72,8 @@ class DataversePackager extends PackagerAtomTwoStep {
 	function createPackage() {
 		$package = new ZipArchive();
 		$package->open($this->getPackageFilePath(), ZIPARCHIVE::CREATE | ZIPARCHIVE::OVERWRITE);
-		foreach ($this->_files as $suppFile) {
-			$suppFile->setFileStage(ARTICLE_FILE_SUPP); // workaround for #8444
-			$package->addFile($suppFile->getFilePath(), $suppFile->getOriginalFileName());
+		foreach ($this->_files as $fileName => $filePath) {
+			$package->addFile($filePath, $fileName);
 		}
 		$package->close();
 	}
