@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                xmlns="http://www.crossref.org/doi_resources_schema/4.3.0"
+      targetNamespace="http://www.crossref.org/doi_resources_schema/4.3.0">
+
+<!-- =============================================================
+     doi_resources4.3.0.xsd (previously called doi_citations.xsd)
+
+     The purpose of this XSD is to bind existing DOIs to resources attached to a DOI such as:
+     - Bind existing DOIs to their citations.
+     - Bind existing DOIs to URL collections
+
+     This XSD was created to allow publishers to submit resources attached to a DOI without the need to submit
+     the full metadata of the DOI. In some cases, the submitter may not even be the owner of the DOI (e.g. URL
+     collections for multiple resolution)
+
+                          Change History
+
+	Changes record version, author initials, date, and comments
+
+	    4.3.0 (PDF) added crossmark_data to allow CrossMark-only deposits
+	    4.3.0 (HS) March 4, 2008
+
+	    Created 4.3.0 version to synch version up with crossref4.3.0.xsd/common4.3.0.xsd
+
+        1.0.3 (CSK) October 24, 2005.
+
+        Added doi_resources to allow this schema to be used to deposit addition URL information
+        for a DOI. This may include as-crawled URLs (used during search engine indexing) or it
+        may include multiple resolution data.
+
+
+        1.0.1 (CSK) April 12, 2004
+
+        Increase revision to reflect changes made to the underlying common
+        XSD file. This change modified "year" model in citation_t to be cYear
+        to support non numeric years in references (e.g. 1998a , 1999-2000)
+
+	1.0 (CSK) 12/12/03 (verions 1.0 still under development)
+
+	Removed  'citation_query_return.atts' and 'citation_query_type' attribute
+        groups from the element 'citation'
+
+     ============================================================= -->
+	<xsd:include schemaLocation="common4.3.0.xsd"/>
+	<xsd:element name="doi_batch">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="head"/>
+				<xsd:element ref="body"/>
+			</xsd:sequence>
+			<xsd:attribute name="version" type="xsd:string" fixed="4.3.0"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="head">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="doi_batch_id"/>
+				<xsd:element ref="depositor"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="body">
+		<xsd:complexType>
+			<xsd:sequence>
+                <xsd:element ref="doi_citations" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="doi_resources" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="crossmark_data" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+    <xsd:element name="doi_citations">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref = "doi" />
+                <xsd:element ref = "citation_list" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="doi_resources">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="doi"/>
+				<xsd:element ref="collection"/>
+			</xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+	
+	<xsd:element name="crossmark_data">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="doi"/>
+				<xsd:element ref="crossmark"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

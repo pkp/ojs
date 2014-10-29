@@ -1,0 +1,1767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp1 U (http://www.altova.com) by Chuck Koscher (CrossRef) -->
+<xsd:schema xmlns="http://www.crossref.org/schema/4.3.0"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.crossref.org/schema/4.3.0">
+
+	<!--Conforms to w3c http://www.w3.org/2001/XMLSchema-->
+	<!-- =============================================================
+
+                          Introduction
+
+     CrossRef W3C Deposit Schema Version 4..0
+     for Journal, book and conferernce submissions
+
+     Developed for CrossRef (www.crossref.org) by
+
+     Inera Incorporated
+     Newton, MA 02460
+     http://www.inera.com
+     email: info@inera.com
+
+     Last Updated April 13, 2006
+     (c) 2001-2006 PILA, Inc. All Rights Reserved.
+
+    For more information on the use of this DTD, see
+    "CrossRef Schema Documentation 4.2.0.pdf". Also available are sample
+    files journal410.xml, book410.xml, book410-2.xml, conf410.xml,
+    stand_alone410.xml, dissertation410.xml, standard410.xml, report410.xml,
+    paper410.xml, database410.xml, and database410-2.xml
+
+    Document analysis and publisher surveys used to build this schema
+    are available on request from CrossRef.
+
+     ============================================================= -->
+	<!-- =============================================================
+
+                          File Organization
+
+     This schema is organized into the following sections:
+     0. Include module common to multiple CrossRef schemas
+     1. Shared attributes
+     2. Schema-specific data types
+     3. Header Elements
+     4. Journal elements
+     5. Conference elements
+     6. Book elements
+     7. Elements common to books and conferences
+     8. Elements common to journals, books and conferences
+     9. Expanded Content Types (reports, dissertations and standards)
+    10. Elements common to reports, dissertations and standards
+     ============================================================= -->
+	<!-- =============================================================
+
+                          Change History
+
+    Changes record version, author initials, date, and comments
+   
+   4.3.0 (PDF) 10/17/2012 updated stale comments and moved documentation into <documentation>
+   4.3.0 (PDF)  12/9/11 Added CrossMark element to content_item (for book chapters), dissertations, report-paper, and standards, moved CrossMark elements to common4.3.0.xsd to accommodate CrossMark-only deposits	
+   4.3.0 (PDF)  12/2/11 changed allowed value of crossmark_policy to doi_t
+   4.3.0 (PDF)	10/28/11 Added href attribute to <assertions>
+   4.3.0 (PDF) 	9/20/11 Added <noisbn> to book_series_metadata, book_set_metadata, and proceedings_series_metadata
+   4.3.0 (PDF) 	6/29/11	CrossMark	
+   4.3.0 (CSK) 6/2/09   Made conference paper contributer min=zero
+
+   4.3.0 (CSK) 8/12/08  Modified book series to allow unassigned content
+
+   4.3.0 (CSK) 6/23/2008 Added std-designation to identifier type attribute
+                       7/30.2008 Added publication_status attribute to <standard_metadata>
+
+    4.3.0 (CSK)  2/20/08  Changed to use common 1.0.6 which includes production
+                          multiple resolution changes
+    4.2.0 (BDR) 10/25/07
+    Changed structure of book metadata deposits so that
+     a) book series are handled seperately from books that are not series
+     b) book sets are properly supported
+    This is accomplished by changing the top book structure to be a choice
+     of book_metadata, book_series_metadata, or book_set_metadata
+    book_metadata is backwards compatible provided you are depositing books
+     that are not part of a series or a set
+    A minimum of 1 ISBN is required for each book volume. Previously ISBN was
+     optional
+
+    In conjunction with the book changes above, volume and issn were removed
+     from proceedings_metadata, report-paper_metadata, and standards_metatdata
+     because they are now in series_metadata.
+
+    4.1.0 (CSK/BDR) 4/13/06  Added elements for database deposits;
+
+    4.0.1 (CSK/BDR) 2/6/06,  3/23/06
+    Added citation_list to all deposit types, expanded from journal
+        articles only
+    Changed abbrev_title so that it is optional. full_title is still required
+    Changed full_title to allow up to 10 names for a journal
+    Added citation_list to conference_paper, book_metadata, content_item,
+        dissertation, report-paper_metadata, standard_metadata
+          (BDR) 4/6/06
+    Added approval_date to report-paper_metadata as optional element
+    Added report-number has an attribute to identifier to indicate report
+        numbers that use non-standard identification schemes
+
+    4.0.0 (BDR) 6/7/05
+
+    Extended schema to support expanded content types for dissertations,
+    reports, working papers, and standards
+
+    3.0.3 (CSK) 7/20/04
+
+    Added the <component> element to the common include file and to the <journal_article>,
+    <conference_paper> and <content_item> elements to allow the deposit of component
+    DOIs on their own or as parts of the three higher level entities. Also added
+    <sa_component> which identifies a parent DOI that may already exist (e.g. created
+    in an earlier deposit or via some other registration process).
+
+    3.0.2 (CSK) 7/16/04
+
+    Extensively modified collection element to fit multiple resolution pilot/demo. Added <doi> to the
+    possible elements in <item>
+
+    Moved elments resource,item,collection,property_t and property from the
+    main schema file to include file (common1.0.2.xsd) to faciliate creating a schema
+    for the deposit of only multiple resolution data.
+
+    3.0.1 (CSK)  4/12/04
+
+    Increased version number to reflect changes made in the common file.
+
+    3.0.0 (BDR) 11/05/03 (CSK) 12/19/03
+
+    Added citation_list element to support deposits of reference lists in journal
+    articles for forward linking
+
+    Separated common elements for reuse in other CrossRef schemas into common.xsd
+
+    2.0.7 (HS) Made DOI and contributors elements under book_metadata optional (to accommodate Elsevier)
+
+    2.0.6.1 (CSK) set min values to zero for <conference_date> and <conference_location> under
+                  the <event_metadata> record
+
+    2.0.5.2 (CSK) 9/02/03 changed the datatype for DOI and RESOURCE back to String from anyURI
+
+    2.0.5.1 (CSK) 3/19/03 increased number of allowed contributors to "unbounded"
+
+    2.0.5 (CSK) 10/04/02 minor change, fully backward compatible
+
+    Modifed xrefMonth maxInclusive value to "34" to allow extended definitions
+
+    2.0.5 (BDR) 05/02/02
+
+    Brought into full conformance with Xerces 2.0
+
+    2.0.4 (BDR) 02/25/02
+
+    Changed default name space declaration and brought into full
+    conformance with XML Spy 4.3
+
+    2.0.3 (BDR) 01/18/02
+
+    Changed item_data to resource and property where resource is the
+    container for a URI related to a DOI and property elements
+    qualify the resource or collection to which    they're applied.
+
+    Changed data type of DOI from string to xsd:anyURI
+
+    Changed the relationship of item and collection.
+
+    2.0.2 (BDR) 01/15/02
+
+    Tightened validation of ISBN and ISSN instances
+
+    Changed item_number maxLength from 15 to 32, added an
+    attribute for item_number_type, and changed publisher_item
+    to allow up to three item_number elements.
+
+    Added face markup to title, original_language_title, and subtitle
+    elements. This addition allows basic face markup in titles for
+    those disciplines (e.g. in genetics, mathematics) where lack of
+    face markup can result in ambiguous interpretation.
+
+    Increased DOI maxLength from 255 to 2048 characters
+
+    Changed the doi_data model from url to collection, item and item_data
+    to allow future expansion for multiple resolution. WARNING: the
+    collection model is infinitely recursive and may only be used in
+    accordance with the documentation provide by CrossRef!
+
+    2.0.1 (BDR) 10/25/01
+
+    Added contributors as an optional element to journal_issue to allow
+    for cases when a special issue of a journal has editors who may be
+    listed when the entire issue is cited
+
+    2.0.0 (BDR) 10/09/01
+
+    First major release of version 2.0.0, based loosely on
+    version 0.3 by Howard Ratner.
+
+     ============================================================= -->
+	<!-- =============================================================
+
+          0. Include module common to multiple CrossRef schemas
+
+     ============================================================= -->
+	<xsd:include schemaLocation="common4.3.0.xsd"/>
+	<!-- =============================================================
+
+                          1. Shared attributes
+
+     ============================================================= -->
+	<!--               Moved to common.xsd for version 3.0.0           -->
+	<!-- =============================================================
+
+                     2. Schema-specific data types
+
+     ================================================================= -->
+	<!--               Moved to common.xsd for version 3.0.0           -->
+	<!-- =============================================================
+
+                          3. Header elements
+
+     ================================================================= -->
+	<!--      Most elements moved to common.xsd for version 3.0.0      -->
+	<xsd:element name="doi_batch">
+		<xsd:annotation>
+			<xsd:documentation>Top level element for a metadata submission to CrossRef.
+
+This element indicates the start and end of the XML file. The version number is fixed to the version of the schema.
+
+Be sure to set the name space attributes as shown above in order for the Xerces parser to process the instance correctly.
+
+For the purposes of parsing, you may also set xsi:schemaLocation to http://www.crossref.org/schema/4.3.0 http://www.crossref.org /schema/4.3.0/crossref.xsd. A copy of the schema is located on the CrossRef server at this URL and will remain constant for a given version of the schema. This location permits you to have a constant location for the schema for parsing without relying on a hardwired local directory on your development platform. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="head"/>
+				<xsd:element ref="body"/>
+			</xsd:sequence>
+			<xsd:attribute name="version" type="xsd:string" fixed="4.3.0"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="head">
+		<xsd:annotation>
+			<xsd:documentation>The container for information related to the DOI batch submission.
+
+This element uniquely identifies the batch deposit to CrossRef and contains information that will be used as a reference in error messages sent by the MDDB.
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="doi_batch_id"/>
+				<xsd:element ref="timestamp"/>
+				<xsd:element ref="depositor"/>
+				<xsd:element ref="registrant"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="body">
+		<xsd:annotation>
+			<xsd:documentation>The container for the main body of a DOI record submission.
+
+The body contains a set of journal, book, conference proceedings or stand alone component records. It is not possible to mix genres within a single DOI submission. It is possible to include records for multiple journals, books, conferences, or stand alone components in a single submission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="journal" maxOccurs="unbounded"/>
+				<xsd:element ref="book" maxOccurs="unbounded"/>
+				<xsd:element ref="conference" maxOccurs="unbounded"/>
+				<xsd:element ref="sa_component" maxOccurs="unbounded"/>
+				<xsd:element ref="dissertation" maxOccurs="unbounded"/>
+				<xsd:element ref="report-paper" maxOccurs="unbounded"/>
+				<xsd:element ref="standard" maxOccurs="unbounded"/>
+				<xsd:element ref="database" maxOccurs="unbounded"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- =============================================================
+
+                          4. Journal elements
+
+     ============================================================= -->
+	<xsd:element name="journal">
+		<xsd:annotation>
+			<xsd:documentation>The container for all information about a single journal and the articles being registered within the journal.
+
+journal is the core container for information about a single journal and articles submitted for registration from that journal.
+Within a journal instance, you may register articles from a single issue, detailed in journal_issue. If you want to register items from more than one issue, you must use multiple journal instances, which can be done within a single batch submission.
+If you have articles that have not been assigned to an issue, you may register them within a single journal instance. In this case, do not include a journal_issue.
+You may chose to submit only top level journal_metadata and journal_issue metadata for any journal or issue, allowing you to register DOIs for an entire journal, or any issue or volume within a journal.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="journal_metadata"/>
+				<xsd:element ref="journal_issue" minOccurs="0"/>
+				<xsd:element ref="journal_article" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="journal_metadata">
+		<xsd:annotation>
+			<xsd:documentation>The container for metadata that defines a journal.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="full_title" maxOccurs="10"/>
+				<xsd:element ref="abbrev_title" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="issn" maxOccurs="6"/>
+				<xsd:element ref="coden" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="full_title">
+		<xsd:annotation>
+			<xsd:documentation>The full title by which a journal is commonly known or cited.
+
+full_title and abbrev_title must both be submitted even if they are identical.
+Note: In version 4.1.0 and later, this element is allowed up to 10 times to allow for a) journal name changes over time, b) translated journal names (e.g. the Japanese name and the English equivalent), and c) common author mis-spellings of a given journal name.
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+	<xsd:element name="abbrev_title">
+		<xsd:annotation>
+			<xsd:documentation>
+				This element contains the common abbreviation or abbreviations used when citing this journal. It is preferred, but not required, that periods be included after abbreviated words within the title.
+
+full_title and abbrev_title must both be submitted, and they can be identical. If you do not know the abbreviated title for a specific journal, please supply the full title in the abbrev_title element.
+
+Note: In version 4.1.0 and later, this element is no longer required in journal_metadata because some journals do not have abbreviated journal names.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="150"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="journal_issue">
+		<xsd:annotation>
+			<xsd:documentation>The container for metadata that defines a single issue of a journal.
+
+Special issue numbering information for a journal should be placed in special_numbering.
+You may register a DOI for an entire issue by including doi_data in journal_issue. The URI should resolve to the table of contents for the issue.
+contributors is included in journal_issue to allow inclusion of editors of special issues. This element allows linking from a reference such as:
+R.Glaser, L.Bond (Eds.), Testing: concepts and research, American Psychologist 36 (10-12) (1981) (special issue).
+You should not include contributors for the regular editors of regular issues.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:element ref="journal_volume" minOccurs="0"/>
+				<xsd:element ref="issue" minOccurs="0"/>
+				<xsd:element ref="special_numbering" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Issue level numbering for supplements or special issues.
+
+Text defining the type of special issue (e.g. "suppl") should be included in this element along with the number.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="journal_volume">
+		<xsd:annotation>
+			<xsd:documentation>The container for the journal volume and DOI assigned to an entire journal volume.
+
+You may register a DOI for an entire volume by including doi_data in journal_volume.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="volume"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="special_numbering">
+		<xsd:annotation>
+			<xsd:documentation>Issue level numbering for supplements or special issues.
+
+Text defining the type of special issue (e.g. "suppl") should be included in this element along with the number.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="15"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="journal_article">
+		<xsd:annotation>
+			<xsd:documentation>The container for all information about a single journal article.
+
+A journal article is required to have title and doi_data. All other information is optional. When registering items that do not have titles, use the appropriate heading from the journal section or table of contents (e.g. "Errata") in title.
+
+journal_article allows for multiple titles per entity. In some cases it may be helpful to submit multiple titles. For example, if an erratum carries title of the original article and the heading "Errata", both should be submitted by using two titles elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="titles" maxOccurs="20"/>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:element ref="pages" minOccurs="0"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="crossmark" minOccurs="0"/>
+				<xsd:element ref="doi_data"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+				<xsd:element ref="component_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="publication_type.atts"/>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- =============================================================
+
+                          5. Conference elements
+
+     ============================================================= -->
+	<xsd:element name="conference">
+		<xsd:annotation>
+			<xsd:documentation>The container for all information about a single conference and its proceedings.
+
+conference is the core container for information about a single conference and its proceedings.
+If a conference proceedings spans multiple volumes, each volume must be contained in a unique conference element.
+
+You may choose to submit only top level contributors, event_metadata and proceedings_metadata for any conference, or you may choose to submit these elements along with metadata for each conference_paper. It is not necessary to submit metadata for all items listed on the proceedings table of contents. You may chose to drop items of lesser significance such as front and back matter.
+
+NOTE: The CrossRef system currently uses the proceedings_title and conference_acronym in the query matching process. This system can cause problems when the proceedings have a simple non-changing title (e.g PRoceedings of SPIE) and the conference event name, conference_name, is used to differentiate conference topics (e.g. Optoelectronic Integrated Circuits II). To avoid this problem, CrossRef recommends that you make sure the conference_acronym accurately reflects the event name (e.g OpIC II in this example).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="event_metadata"/>
+				<xsd:choice>
+					<xsd:element ref="proceedings_series_metadata"/>
+					<xsd:element ref="proceedings_metadata"/>
+				</xsd:choice>
+				<xsd:element ref="conference_paper" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="event_metadata">
+		<xsd:annotation>
+			<xsd:documentation>A container for all information that applies to a conference event.
+
+event_metadata captures information about a conference event. Data about conference proceedings is captured in proceedings_metadata.
+
+NOTE: The CrossRef system currently uses the proceedings_title and conference_acronym in the query matching process. This system can cause problems when the proceedings have a simple non-changing title (e.g PRoceedings of SPIE) and the conference event name, conference_name, is used to differentiate conference topics (e.g. Optoelectronic Integrated Circuits II). To avoid this problem, CrossRef recommends that you make sure the conference_acronym accurately reflects the event name (e.g OpIC II in this example).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="conference_name"/>
+				<xsd:element ref="conference_theme" minOccurs="0"/>
+				<xsd:element ref="conference_acronym" minOccurs="0"/>
+				<xsd:element ref="conference_sponsor" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="conference_number" minOccurs="0"/>
+				<xsd:element ref="conference_location" minOccurs="0"/>
+				<xsd:element ref="conference_date" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="conference_name">
+		<xsd:annotation>
+			<xsd:documentation>The official name of the conference.
+
+conference_name does not include "Proceedings of". For example, "The 23rd Annual Meeting of the American Society for Information Science" is a correct conference name.
+
+It is quite common for a conference name to include the conference number or subject. When any of these metadata items appear in the conference name, they should be included in this element, and also in the respective sub-element, conference_number or proceedings_subject. The following example shows incorrect tagging of a conference name and then the corrected version:
+
+INCORRECT:
+
+<event_metadata>
+   <conference_name>the second international conference</conference_name>
+   <conference_acronym>IEA/AIE '89</conference_acronym>
+   <conference_number>1989</conference_number>
+   <conference_location>Tullahoma, TN</conference_location>
+   <conference_date start_year="1989"/>
+</event_metadata>
+<proceedings_metadata language="en">
+   <proceedings_title>Proceedings of the second international conference on Industrial and engineering applications of artificial intelligence and expert systems - IEA/AIE'89</proceedings_title>
+   <proceedings_subject>Industrial and engineering applications of artificial intelligence and expert systems</proceedings_subject>
+</proceedings_metadata>
+
+CORRECT:
+
+<event_metadata>
+    <conference_name>The second international conference on Industrial and engineering applications of artificial intelligence and expert systems</conference_name>
+	<conference_acronym>IEA/AIE '89</conference_acronym>
+	<conference_number>2</conference_number>
+	<conference_location>Tullahoma, TN</conference_location>
+	<conference_date start_year="1989"/>
+</event_metadata>
+<proceedings_metadata language="en">
+	<proceedings_title>Proceedings of the second international conference on Industrial and engineering applications of artificial intelligence and expert systems - IEA/AIE '89</proceedings_title>
+	<proceedings_subject>Industrial and engineering applications of artificial intelligence and expert systems</proceedings_subject>
+</proceedings_metadata>
+
+Authors commonly cite a conference by the official name, so it is important to provide this information as accurately as possible.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="512"/>
+				<xsd:minLength value="3"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="conference_theme">
+		<xsd:annotation>
+			<xsd:documentation>
+
+The theme is the slogan or special emphasis of a conference in a particular year.
+
+The theme is the slogan of the conference. It differs from the subject of a conference in that the subject is stable over the years while the theme may vary from year to year.
+
+For example, the American Society for Information Science and Technology conference theme was "Knowledge: Creation, Organization and Use" in 1999 and "Defining Information Architecture" in 2000.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="conference_acronym">
+		<xsd:annotation>
+			<xsd:documentation>The popularly known as or jargon name (e.g. SIGGRAPH for "Special Interest Group on Computer Graphics").
+
+Authors commonly cite the conference acronym rather than the full conference or proceedings name, so it is best to include this element when it is available.
+
+The conference acronym often includes the year of the conference (e.g. SGML '97) or, less often, the conference number. It is preferred, but not required, that submission of metadata exclude number or year information from the conference acronym. It is better to include such information in conference_number, or conference_date, respectively.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="127"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="conference_sponsor">
+		<xsd:annotation>
+			<xsd:documentation>The sponsoring organization(s) of a conference.
+
+Multiple sponsors may be given if a conference is hosted by more than one organization.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="conference_number">
+		<xsd:annotation>
+			<xsd:documentation>The number of a conference.
+
+conference_number should include only the number of the conference without any extra text. For example, "The 24th Annual Conference on..." should be tagged as shown in the example above, and "th" should not be included. Roman numerals are acceptable.
+
+When a conference is named such that the year of the conference indicates the number (e.g. "SGML 1994"), the year appears in conference_name, conference_date, and conference_number, as in:
+
+   	<conference_name>SGML 1994</conference_name>
+	<conference_acronym>SGML</conference_acronym>
+	<conference_number>1994</conference_number>
+	<conference_date start_day="07" start_month="11" start_year="1994" end_day="10" end_month="11" end_year="1994">November 7-10, 1994</conference_date>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="15"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="conference_location">
+		<xsd:annotation>
+			<xsd:documentation>The location of the conference.
+
+The city and country of the conference. If the conference is in the United States, the appropriate state should also be provided, and the country may be omitted. If the conference is in Canada, the province should be provided, and the country may be omitted. The specific venue or address within a city (e.g. conference center, hotel, etc.) should not be provided.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:simpleType name="conference_date_t">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="100"/>
+			<xsd:minLength value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="conference_date">
+		<xsd:annotation>
+			<xsd:documentation>The start and end dates of a conference event.
+
+conference_date may be used in three ways: 
+
+1. If publishers that do not have parsed date values, provide just text with the conference dates. The date text should be taken from the proceedings title page.
+
+2. If publishers have parsed date values, provide them in the attributes.
+
+3. If both parsed date values and the date text are available, both should be provided. This is the preferred tagging for conference_date.  For example:
+
+	<conference_date start_month="01" start_year="1997" start_day="15" end_year="1997" end_month="01" end_day="17">Jan. 15-17, 1997</conference_date> </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="conference_date_t">
+					<xsd:attribute name="start_day" type="xrefDay" use="optional"/>
+					<xsd:attribute name="start_month" type="xrefMonth" use="optional"/>
+					<xsd:attribute name="start_year" type="xrefYear" use="optional"/>
+					<xsd:attribute name="end_day" type="xrefDay" use="optional"/>
+					<xsd:attribute name="end_month" type="xrefMonth" use="optional"/>
+					<xsd:attribute name="end_year" type="xrefYear" use="optional"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="proceedings_metadata">
+		<xsd:annotation>
+			<xsd:documentation>A container for all information that applies to a non-series conference proceeding.
+
+proceedings_metadata captures information about conference proceedings. Data about conference events is captured in event_metadata</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="proceedings_title"/>
+				<xsd:element ref="proceedings_subject" minOccurs="0"/>
+				<xsd:element ref="publisher" maxOccurs="5"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:choice>
+					<xsd:element ref="isbn" maxOccurs="6"/>
+					<xsd:element ref="noisbn"/>
+				</xsd:choice>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="proceedings_series_metadata">
+		<xsd:annotation>
+			<xsd:documentation>A container for all information that applies to a specific conference proceeding that is part of a series.
+
+A conference proceedings published as a series can sometimes look just like a journnal in that
+there is no volume information (no volume title, no ISBN). In these cases the conference proceeding
+may be deposited as a journal (which more accurately should have been called a 'series_publication').
+To allow for the use of a consistent XML heirarchy we will allow a proceedings_series_metadata root 
+element to also describe such a publication.
+
+Note: this structure is organized to allow backward compatibility with previous schema versions by 
+maintaining the prior sequence of elements.
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="series_metadata"/>
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:choice>
+							<xsd:sequence>
+								<xsd:element ref="proceedings_title"/>
+								<xsd:element ref="volume" minOccurs="0"/>
+							</xsd:sequence>
+							<xsd:element ref="volume"/>
+						</xsd:choice>
+						<xsd:element ref="proceedings_subject" minOccurs="0"/>
+						<xsd:element ref="publisher" maxOccurs="5"/>
+						<xsd:element ref="publication_date" maxOccurs="10"/>
+						<xsd:choice>
+							<xsd:element ref="isbn" maxOccurs="6"/>
+							<xsd:element ref="noisbn"/>
+						</xsd:choice>
+					</xsd:sequence>
+					<xsd:sequence>
+						<xsd:element ref="proceedings_subject" minOccurs="0"/>
+						<xsd:element ref="publisher" maxOccurs="5"/>
+						<xsd:element ref="publication_date" maxOccurs="10"/>
+					</xsd:sequence>
+				</xsd:choice>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="proceedings_title">
+		<xsd:annotation>
+			<xsd:documentation>The title of the conference proceedings as printed on title page of the published conference proceedings.
+
+proceedings_title is the undifferentiated title of a conference proceedings. It should generally be the title as it appears on the cover of the printed proceedings.
+
+In some cases, proceedings_title may differ from conference_name only in that the text "Proceedings of" often appears at the start of the proceedings_title, and it this text should never be included in conference_name. In other cases, the proceedings_title and conference_name may be quite different.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="511"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="proceedings_subject">
+		<xsd:annotation>
+			<xsd:documentation>The subject of the printed conference proceedings, e.g. "Computer Graphics" is the subject matter of SIGGRAPH.
+
+This element is useful because an author may cite a conference paper by the conference subject. For example, "Proceedings of the 1999 ACM Conference on Computer Graphics"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="conference_paper">
+		<xsd:annotation>
+			<xsd:documentation>The container for all information about a single conference paper.
+
+A conference paper is required to have contributors, title and doi_data. All other information is optional.
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="titles"/>
+				<xsd:element ref="publication_date" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="pages" minOccurs="0"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="crossmark" minOccurs="0"/>
+				<xsd:element ref="doi_data"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+				<xsd:element ref="component_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="publication_type.atts"/>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- =============================================================
+
+                          6. Book elements
+
+     ============================================================= -->
+	<xsd:element name="book">
+		<xsd:annotation>
+			<xsd:documentation>The container for all information about a single book.
+
+book is the core container for information about a specific book. Books may be in the form of edited books (i.e. a contributed volume with one or more editors), monographs (single-authored works), or reference works (e.g. encyclopedias).
+
+If a book contains multiple volumes, each volume must be contained in a unique book element.
+
+You may chose to submit only top level contributors and book_metadata for any book, or you may chose to submit these elements along with metadata for each content_item. A content item is typically any entity that is listed on the table of contents such as a chapter, section, etc. It is not necessary to submit metadata for all items listed on the table of contents. You may chose to drop items of lesser significance such as front and back matter.
+
+Book-level metadata is captured within book_metadata, book_series_metadata, or book_set_metadata. If a books is a single-volume work, use book_metadata. If the book is a volume from a multi-volume work that is also a serial publication (and therefore has an ISSN), use book_series_metadata. If the book is a volume of non-serial publication, then it is considered a set and you should use book_set_metadata
+
+book_type should be set to "monograph" when the same author or authors wrote the majority of the content. It should be set to "edited_book" when a book primarily consists of contributed chapters, each chapter written by different authors. It should be set to "reference" for major reference works such as encyclopedias. Use "other" when the author of the content does not fit any of the other categories.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:choice>
+					<xsd:element ref="book_metadata"/>
+					<xsd:element ref="book_series_metadata"/>
+					<xsd:element ref="book_set_metadata"/>
+				</xsd:choice>
+				<xsd:element ref="content_item" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="book_type" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:NMTOKEN">
+						<xsd:enumeration value="edited_book"/>
+						<xsd:enumeration value="monograph"/>
+						<xsd:enumeration value="reference"/>
+						<xsd:enumeration value="other"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="book_metadata">
+		<xsd:annotation>
+			<xsd:documentation>A container for all information that applies to a monograph. It does not include metadata about individual chapters.
+
+The language of the book should be specified in the book_metadata language attribute. If a book contains items in multiple languages this attribute should be set for the predominant language of the book. Individual items may have their language specified in content_item. If all content items are the same language, it is only necessary to specify the language of the book in this element.
+
+The contributors are the author(s) or editor(s) of the entire work. 
+
+When using book_metadata, specify the title of the book within book_metadata.
+
+edition_number, when given, should include only a number and not additional text such as "edition" or "ed".
+
+publisher_item, when given, specifies this information for the entire book or volume. This element also appears in content_item.
+
+doi_data is required for each book or volume that you submit. It is not possible to submit DOI information for individual chapters without assigning a DOI to the entire work.
+
+Note: citation_list should only be used in book_metadata instead of content_item when the reference list is a separate section of the book, and content_items are not included in the deposit (e.g. you are depositing a book with a bibliography, but not the chapters of the book)
+			
+In very limited circumstances a book may be deposited without an ISBN, in which case the noisbn element must be supplied to explicitly declare that an ISBN is not accidentily omitted. Great care should be taken when choossing to use noisbn since it may adversely effect matching. This provision is primarily being made to allow for the deposit of DOIs for historical volumes that are difficult to obtain ISBNs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="titles"/>
+				<xsd:element ref="edition_number" minOccurs="0"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:choice>
+					<xsd:element ref="isbn" maxOccurs="6"/>
+					<xsd:element ref="noisbn"/>
+				</xsd:choice>
+				<xsd:element ref="publisher"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="book_series_metadata">
+		<xsd:annotation>
+			<xsd:documentation>A container for all information that applies to an individual volume of a book series. It does not include metadata about individual chapters.
+
+The language of the book should be specified in the book_series_metadata language attribute. If a book contains items in multiple languages this attribute should be set for the predominant language of the book. Individual items may have their language specified in content_item. If all content items are the same language, it is only necessary to specify the language of the book in this element.
+
+The contributors are the author(s) or editor(s) of the entire work. If a multi- volume work has separate editors for each volume, those editors should be specified in this element, and the series editors are listed in the series_metadata contributors.
+
+Series titles should be specified within series_metadata. Volume titles (when present) are captured in book_series_metadata. If the volumes of a series only have volume numbers and not individual titles, you may specify the volume number within volume_metadata, and no title is required.
+
+volume and edition_number, when given, should include only a number and not additional text such as "volume" or "edition". For example, you should submit "3", not "third edition".
+
+If a work spans multiple volumes with a unique ISBN for each volume and the whole series, you should specify the series ISBN in isbn in series_metadata and the volume ISBN in isbn in book_series_metadata.
+
+WARNING: Care must be taken when submitting books with series. If a series title is submitted and no book title is supplied but an ISBN is supplied at the book_series_metadata level and not with the series title, the CrossRef system will index a series title with no ISBN and an ISBN with no title. Please take care to associate the ISBN at the correct level of the XML hierarchy.
+
+publisher_item, when given, specifies this information for the entire book or volume. This element also appears in content_item.
+
+doi_data is required for each book or volume that you submit. It is not possible to submit DOI information for individual chapters without assigning a DOI to the entire work.
+
+Note: citation_list should only be used in book_series_metadata instead of content_item when the reference list is a separate section of the book, and content_items are not included in the deposit (e.g. you are depositing a book with a bibliography, but not the chapters of the book)
+			
+Normally book content that is published as a series is required to have a series title with an ISSN and a book title and/or a book volume number along with a book ISBN.  An exception is when book chapters are published on line first prior to being assigned to a specific book in which case only the series title (and ISSN) is known at time of DOI registration.  Element unassigned_content is used as a placeholder to force recognition of this condition and thus prevent accidental omission of book level title information.
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="series_metadata"/>
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element ref="contributors" minOccurs="0"/>
+						<xsd:choice>
+							<xsd:sequence>
+								<xsd:element ref="titles"/>
+								<xsd:element ref="volume" minOccurs="0"/>
+							</xsd:sequence>
+							<xsd:element ref="volume"/>
+						</xsd:choice>
+						<xsd:element ref="edition_number" minOccurs="0"/>
+						<xsd:element ref="publication_date" maxOccurs="10"/>
+						<xsd:choice>
+							<xsd:element ref="isbn" maxOccurs="6"/>
+							<xsd:element ref="noisbn"/>
+						</xsd:choice>
+					</xsd:sequence>
+					<xsd:element ref="publication_date" maxOccurs="10"/>
+				</xsd:choice>
+				<xsd:element ref="publisher"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="book_set_metadata">
+		<xsd:annotation>
+			<xsd:documentation>A container for all information that applies to an individual volume of a book set. It does not include metadata about individual chapters. A set is a finite series, and does not have an ISSN
+
+The language of the book should be specified in the book_set_metadata language attribute. If a book contains items in multiple languages this attribute should be set for the predominant language of the book. Individual items may have their language specified in content_item. If all content items are the same language, it is only necessary to specify the language of the book in this element.
+
+The contributors are the author(s) or editor(s) of the entire work. If a multi- volume work has separate editors for each volume, those editors should be specified in this element, and the series editors are listed in the series_metadata contributors.
+
+When using book_set_metadata, specify the title of the entire set and the isbn of the set. Specify the title of the volume in volume_metadata. If the volumes of a set only have volume numbers and not individual titles, you may specify the volume number within volume_metadata, and no title is required.
+
+volume and edition_number, when given, should include only a number and not additional text such as "volume" or "edition". For example, you should submit "3", not "third edition".
+
+If a work spans multiple volumes with a unique ISBN for each volume and the whole series, you should specify the series ISBN in isbn in series_metadata and the volume ISBN in isbn in book_series_metadata.
+
+publisher_item, when given, specifies this information for the entire book or volume. This element also appears in content_item.
+
+doi_data is required for each book or volume that you submit. It is not possible to submit DOI information for individual chapters without assigning a DOI to the entire work.
+
+Note: citation_list should only be used in book_series_metadata instead of content_item when the reference list is a separate section of the book, and content_items are not included in the deposit (e.g. you are depositing a book with a bibliography, but not the chapters of the book)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="set_metadata"/>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element ref="titles"/>
+						<xsd:element ref="volume" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:element ref="volume"/>
+				</xsd:choice>
+				<xsd:element ref="edition_number" minOccurs="0"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:choice>
+					<xsd:element ref="isbn" maxOccurs="6"/>
+					<xsd:element ref="noisbn"/>
+				</xsd:choice>
+				<xsd:element ref="publisher"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="content_item">
+		<xsd:annotation>
+			<xsd:documentation>An entity in a book, such as a chapter, for which a DOI is being registered.
+
+A content item is typically an entity listed on the table of contents. There need not be a one-to-one correlation between content listings and content items (e.g. you may choose not to register front and back matter items listed in the table of contents).
+
+The language of a content_item only need be set if it differs from the language of book_metadata.
+
+The component_type indicates the type of content item you are registering. Please see the example of a book submission in this documentation for a better understanding of how this attribute may be used in nested tables of contents.
+
+level_sequence_number indicates the level of nesting for content items. For example, you may use it to indicate when one content item, such as a chapter, is actually inside another content item, such as a section. Please see the example of a book submission in this documentation for a better understanding of how this attribute may be used in nested tables of contents.
+
+Note: Because the CrossRef schema uses a flat model to indicate hierarchically nested content items, there is an implicit assumption that content items will be listed in the CrossRef submission in the same order in which they appear in the table of contents. Please follow this protocol when submitting DOI data for books. This order is not required for journal and conference data.
+			
+contributors for a content_item need not be listed if all items in a book have the same contributors listed in book_metadata. In other words, contributors must be listed for edited books, but they should not be listed for each content_item in a monograph. The exception case is when a content item such as a Preface or Forward for a monograph has a different author from that of the monograph. In this case, the contributors should be given.
+			
+The title of each content item must be submitted. If, however, you are submitted data for a monograph that simply has "Chapter 1", "Chapter 2", etc., you should put this information in component_number, not titles.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="titles" minOccurs="0"/>
+				<xsd:element ref="component_number" minOccurs="0"/>
+				<xsd:element ref="publication_date" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="pages" minOccurs="0"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="crossmark" minOccurs="0"/>
+				<xsd:element ref="doi_data"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+				<xsd:element ref="component_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="component_type" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:NMTOKEN">
+						<xsd:enumeration value="chapter"/>
+						<xsd:enumeration value="section"/>
+						<xsd:enumeration value="part"/>
+						<xsd:enumeration value="track"/>
+						<xsd:enumeration value="reference_entry"/>
+						<xsd:enumeration value="other"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="level_sequence_number" default="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:positiveInteger">
+						<xsd:maxInclusive value="9"/>
+						<xsd:minInclusive value="1"/>
+						<xsd:totalDigits value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attributeGroup ref="publication_type.atts"/>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- =============================================================
+
+              7. Elements common to books and conferences
+
+     ============================================================= -->
+	<xsd:element name="series_metadata">
+		<xsd:annotation>
+			<xsd:documentation>The container for metadata about a series publication.
+
+When a book, conference proceeding, or report consists of multiple volumes, series_metadata is used to describe information about the entire series.
+
+If a work spans multiple volumes, you should use titles in series_metadata. If a work spans multiple volumes with a unique title for each volume and the whole series, you should specify the series title in titles in series_metadata and the volume title in titles in book_series_metadata.
+
+If a unique ISBN has been assigned to the entire series (as opposed to the individual volumes), it should given in series_metadata.
+
+You may assign and register a DOI that encompasses an entire series by adding doi_data in series_metadata. This element is optional for a series.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="titles"/>
+				<xsd:element ref="issn" maxOccurs="6"/>
+				<xsd:element ref="coden" minOccurs="0"/>
+				<xsd:element ref="series_number" minOccurs="0"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="set_metadata">
+		<xsd:annotation>
+			<xsd:documentation> When a book consists of multiple volumes that are not part of a serial publication (series), set_metadata is used to describe information about the entire set.
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="titles"/>
+				<xsd:choice>
+					<xsd:element ref="isbn" maxOccurs="6"/>
+					<xsd:element ref="noisbn"/>
+				</xsd:choice>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="part_number" minOccurs="0"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="series_number">
+		<xsd:annotation>
+			<xsd:documentation>The series number within a specific published conference discipline.
+
+The series number is different from the volume number. A volume number is the number of a book in a physically printed set and typically appears in sequence. The series number is not tied to the physical manifestation of the printed volume and need not be strictly in sequence. It is most commonly used in "Lectures" published by Springer-Verlag.
+
+This element is available in series_metadata, however it should only be used for conference proceedings, not for books.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="15"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="part_number">
+		<xsd:annotation>
+			<xsd:documentation>The part number of a given volume. Deposited within book_set_metadata.
+
+In some cases, a book set will have multiple parts, and then one or more volumes within each part. The part number of a given volume should be deposited in this element.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="15"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="publisher">
+		<xsd:annotation>
+			<xsd:documentation>A container for information about the publisher of a book or conference proceedings.
+
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="publisher_name"/>
+				<xsd:element ref="publisher_place" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="publisher_place">
+		<xsd:annotation>
+			<xsd:documentation>The city where the publisher of this work is located.
+
+publisher_place gives the primary city location of the publisher. When the location is a major city (e.g. New York, Amsterdam), no qualifying country, U.S. state, or Canadian province need be given. If the city is not a major city, the appropriate country, U.S. state, or Canadian province should be added.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="publisher_name">
+		<xsd:annotation>
+			<xsd:documentation>The name of the publisher of a book or conference proceedings.
+
+publisher_name is the imprint of the publication (what the author will likely cite), not the organization registering the DOI, if for any reason they are different.
+When registering a translation, the translation publisher, not the original publisher, should be given.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- =============================================================
+
+       8. Elements common to journals, books and conferences
+
+     ============================================================= -->
+	<xsd:element name="publisher_item">
+		<xsd:annotation>
+			<xsd:documentation>A container for item identification numbers set by a publisher.
+
+item_number within publisher_item may also be used to provide an article number when a first_page is not available or applicable. In certain cases it may be deemed in-appropriate to 'misuse' the first_page element to provide a value that has meaning in an on-line only publication and does not convey an form of page number. In these circumstances the attribute &lt;item_number item_number_type="article-number"&gt; will instruct the CrossRef system to treat the value of item_number in the same manner as first_page. This value then becomes a critical part of the query process. If both &lt;item_number item_number_type="article-number"&gt; and first_page are present, first_page will take precedence.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="item_number" minOccurs="0" maxOccurs="3"/>
+				<xsd:element ref="identifier" minOccurs="0" maxOccurs="10"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="item_number_t">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="item_number">
+		<xsd:annotation>
+			<xsd:documentation>A publisher identifier that can be used to uniquely identify the entity being registered.
+
+This identifier is a publisher-assigned number that uniquely identifies the entity being registered.
+
+This element should be used for identifiers based on publisher internal standards. Use identifier for a publisher identifier that is based on a public standard such as PII or SICI.
+
+If the item_number and identifier are identical, there is no need to submit both. In this case, the preferred element to use is identifier.
+
+Data may be alpha, numeric or a combination.
+
+item_number has an optional attribute, item_number_type. It is assigned by the publisher to provide context for the data in item_number. If item_number contains only a publisher's tracking number, this attribute need not be supplied. If the item_number contains other data, this attribute can be used to define the content. 
+
+For example, if a journal is published online (i.e. it has no page numbers), and each article on the table of contents is assigned a sequential number, this article number can be placed in item_number, and the item_number_type attribute can be set to "article_number". Although CrossRef has not provided a set of enumerated types for this attribute, please check with CrossRef before using this attribute to determine if a standard attribute has already been defined for your specific needs.
+
+If a dissertation DAI has been assigned, it should be deposited in the identifier element with the id_type attribute set to "dai". If an institution has its own numbering system, it should be deposited in item_number, and the item_number_type should be set to "institution"
+
+If the report number of an item follows Z39.23, the number should be deposited in the identifier element with the id_type attribute set to "Z39.23". If a report number uses its own numbering system, it should be deposited in the identifier element, and the id_type should be set to "report-number"
+
+The designation for a standard should be placed inside the identifier element with the id_type attribute set to "ISO-std-ref" or "std-designation" (more generic label)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="item_number_t">
+					<xsd:attribute name="item_number_type" type="xsd:string" use="optional"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="identifier_t">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="255"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="identifier">
+		<xsd:annotation>
+			<xsd:documentation>A public standard identifier that can be used to uniquely identify the entity being registered.
+
+This identifier is a publisher-assigned number that uniquely identifies the entity being registered.
+This element should be used for identifiers based on public standards. Use item_number for a publisher identifier that is based on a publisher's internal systems rather than on a public standard. The supported standards are:
+PII - Publisher Item Identifier
+SICI - Serial Item and Contribution Identifier DOI - Digital Object Identifier</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="identifier_t">
+					<xsd:attribute name="id_type" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:NMTOKEN">
+								<xsd:enumeration value="pii"/>
+								<xsd:enumeration value="sici"/>
+								<xsd:enumeration value="doi"/>
+								<xsd:enumeration value="dai"/>
+								<xsd:enumeration value="Z39.23"/>
+								<xsd:enumeration value="ISO-std-ref"/>
+								<xsd:enumeration value="std-designation"/>
+								<xsd:enumeration value="report-number"/>
+								<xsd:enumeration value="other"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- =============================================================
+
+      9. Expanded Content Types (reports, dissertations, standards, and datasets)
+
+     ============================================================= -->
+	<xsd:element name="dissertation">
+		<xsd:annotation>
+			<xsd:documentation>dissertation is the top level element for deposit of metadata about one or more dissertations.
+
+The dissertation element does not have publisher, or issn elements. It is expected that the dissertation element will be used for deposit of items that have not been published in books or journals. If a dissertation is published as a book or within a serial, it should be deposited using the top-level element for the appropriate publication type.
+
+If a DAI has been assigned, it should be deposited in the identifier element with the id_type attribute set to "dai". If an institution has its own numbering system, it should be deposited in item_number, and the item_number_type should be set to "institution"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="person_name"/>
+				<xsd:element ref="titles"/>
+				<xsd:element ref="approval_date" maxOccurs="10"/>
+				<xsd:element ref="institution" maxOccurs="6"/>
+				<xsd:element ref="degree" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="isbn" minOccurs="0" maxOccurs="6"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="crossmark" minOccurs="0"/>
+				<xsd:element ref="doi_data"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+				<xsd:element ref="component_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="publication_type.atts"/>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!--
+    report-paper is the top level element for deposit of metadata about
+    one or more reports or working papers.
+
+    component_list is included in report-paper to handle items that have
+    components but do not have content_item elements (i.e. a report that is not
+    divided into multiple chapters). If an item has content_item elements, then
+    component_list inside of content_item must be used rather than the element
+    available in report-paper
+-->
+	<xsd:element name="report-paper">
+		<xsd:annotation>
+			<xsd:documentation>report-paper is the top level element for deposit of metadata about one or more reports or working papers.
+
+component_list is included in report-paper to handle items that have components but do not have content_item elements (i.e. a report that is not divided into multiple chapters). If an item has content_item elements, then component_list inside of content_item must be used rather than the element available in report-paper
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:choice>
+					<xsd:element ref="report-paper_metadata"/>
+					<xsd:element ref="report-paper_series_metadata"/>
+				</xsd:choice>
+				<xsd:element ref="content_item" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="component_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="publication_type.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="report-paper_metadata">
+		<xsd:annotation>
+			<xsd:documentation>report-paper_metadata is used as a wrapper for the metadata related to a Technical Report or Working Paper.
+
+report-paper_metadata is almost identical to book_metadata. It differs only in that report-paper_metadata removes the volume number and adds the elements institution and contract_number. Please see the comments for book_metadata about the usage of most elements in report- paper_metadata.
+
+Reports and Working Papers are often sponsored by either universities or by a non-academic organization (corporate or government). Such institutions are not typically considered "publishers" and so the item may be deposited using the institution element. Multiple element instances are permitted so the sponsoring institution and publishing institution can both be deposited as authors may cite either.
+
+If the report number of an item follows Z39.23, the number should be deposited in the identifier element with the id_type attribute set to "Z39.23". If a report number uses its own numbering system, it should be deposited in item_number.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="titles"/>
+				<xsd:element ref="edition_number" minOccurs="0"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:element ref="approval_date" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="isbn" minOccurs="0" maxOccurs="6"/>
+				<xsd:element ref="publisher" minOccurs="0"/>
+				<xsd:element ref="institution" minOccurs="0" maxOccurs="5"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="contract_number" minOccurs="0"/>
+				<xsd:element ref="crossmark" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="report-paper_series_metadata">
+		<xsd:annotation>
+			<xsd:documentation>report-paper_series_metadata is used as a wrapper for the metadata related to a Technical Report or Working Paper that is part of a series.
+
+report-paper_series_metadata is almost identical to book_series_metadata. It differs only in that report-paper_metadata removes the volume number and adds the elements institution and contract_number. Please see the comments for book_series_metadata about the usage of most elements in report- paper_series_metadata.
+
+Reports and Working Papers are often sponsored by either universities or by a non-academic organization (corporate or government). Such institutions are not typically considered "publishers" and so the item may be deposited using the institution element. Multiple element instances are permitted so the sponsoring institution and publishing institution can both be deposited as authors may cite either.
+
+If the report number of an item follows Z39.23, the number should be deposited in the identifier element with the id_type attribute set to "Z39.23". If a report number uses its own numbering system, it should be deposited in item_number.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="series_metadata"/>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element ref="titles"/>
+						<xsd:element ref="volume" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:element ref="volume"/>
+				</xsd:choice>
+				<xsd:element ref="edition_number" minOccurs="0"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:element ref="approval_date" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="isbn" minOccurs="0" maxOccurs="6"/>
+				<xsd:element ref="publisher" minOccurs="0"/>
+				<xsd:element ref="institution" minOccurs="0" maxOccurs="5"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="contract_number" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="standard">
+		<xsd:annotation>
+			<xsd:documentation>standard is the top level element for deposit of metadata about standards developed by Standards Development Organizations (SDOs) or Consortia.
+
+CrossRef does not determine if a new DOI should be created for each revision or reaffirmation of a standard. The decision will be left to the individual standards organizations.
+
+CrossRef recommends that the full standard designation be placed in the identifier element with the id_type attribute set to "ISO-std-ref". For example, ISO/IEC 7498-4:1989 would appear as:
+
+<identifier> id_type="ISO-std-ref"&gt;ISO/IEC 7498-
+   4:1989</identifier>
+
+In addition, CrossRef recommends that the item_number element exclude the year from the designation when depositing the DOI. For example, ISO/IEC 7498- 4:1989 should be broken down into the following elements when deposited:
+
+   <institution_acronym>ISO</institution_acronym>
+   <institution_acronym>IEC</institution_acronym>
+   <item_number item_number_type="designation">
+            7498-4</item_number>
+   <approval_date><year>1989</year></approval_date>
+
+By identifying standards using both the identifier and item_number elements as described above, CrossRef will have a better chance of matching a lookup that is ill-formed.
+
+component_list is included in standard to handle items that have components but do not have content_item elements (i.e. a standard that is not divided into multiple chapters). If an item has content_item elements, then component_list inside of content_item must be used rather than the element available in standard.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:choice>
+					<xsd:element ref="standard_metadata"/>
+					<xsd:element ref="standard_series_metadata"/>
+				</xsd:choice>
+				<xsd:element ref="content_item" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="component_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="publication_type.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!--
+    standard_metadata is similar to book_metadata. It differs
+    in that standard_metadata adds the elements institution and
+    approval_date.
+
+    contributors contains the author(s) of the standard. In most cases,
+    it is expected that the organization element will be used rather than
+    person_name element for standards. However in some cases, standards are
+    cited by their individual authors. In such cases, individual authors
+    should be deposited with person_name, and the SDO or consortia name should
+    be deposited with the organization element in contributors and also
+    the institution_name element in institution
+
+    Note that when the organization element is used in contributors, it should
+    have the name of the committee (when appropriate) that developed the standard,
+    not the name of the Standards Development Organization (SDO) or consortia.
+    The SDO or consortia name should be placed in the publisher or institution
+    element (as appropriate)
+
+    standards more often have version numbers than edition numbers. However
+    the edition_number element can be used for deposit of the version number of
+    a standard
+
+    approval_date should be used for the date that a standard has been accepted or
+    re-affirmed if different from the date of publication. Both may be provided
+    even if identical
+
+    Within publisher_item, the designation should be placed inside the item_number
+    element, and the id_type should be set to "designation" to indicate a standard
+    designation
+
+    Standards are typically sponsored or hosted by SDOs or Consortia. In some
+    cases standards are published by a traditional publisher rather than by
+    the owning organization. Such cases may be deposited with one or more
+    publishers as well as a hosting organization as in the following example:
+
+    <institution>
+         <institution_name>American National Standards Institute</institution_name>
+         <institution_acronym>ANSI</institution_acronym>
+        <institution_location>Washington, DC</institution_location>
+    </institution>
+    <institution>
+         <institution_name>National Information Standards Organization</institution_name>
+         <institution_acronym>NISO</institution_acronym>
+        <institution_location>Bethesda, MD</institution_location>
+    </institution>
+    <publisher>
+        <publisher_name>NISO Press</publisher_name>
+        <publisher_place>Bethesda, MD</publisher_place>
+    </publisher>
+-->
+	<xsd:element name="standard_metadata">
+		<xsd:annotation>
+			<xsd:documentation>Standard_metadata is used as a wrapper for the metadata related to a Standard that is not part of a series.
+
+standard_metadata is similar to book_metadata. It differs in that standard_metadata adds the elements institution and approval_date.
+
+contributors contains the author(s) of the standard. In most cases, it is expected that the organization element will be used rather than person_name element for standards. However in some cases, standards are cited by their individual authors. In such cases, individual authors should be deposited with person_name, and the SDO or consortia name should be deposited with the organization element in contributors and also the institution_name element in institution
+
+Note that when the organization element is used in contributors, it should have the name of the committee (when appropriate) that developed the standard, not the name of the Standards Development Organization (SDO) or consortia. The SDO or consortia name should be placed in the publisher or institution element (as appropriate)
+
+Standards more often have version numbers than edition numbers. However the edition_number element can be used for deposit of the version number of a standard
+
+approval_date should be used for the date that a standard has been accepted or re-affirmed if different from the date of publication. Both may be provided even if identical
+
+Within publisher_item, the designation should be placed inside the item_number element, and the id_type should be set to "designation" to indicate a standard designation.
+			
+Standards are typically sponsored or hosted by SDOs or Consortia. In some cases standards are published by a traditional publisher rather than by the owning organization. Such cases may be deposited with one or more publishers as well as a hosting organization as in the following example:
+			
+	<institution>
+		<institution_name>American National Standards Institute</institution_name>
+		<institution_acronym>ANSI</institution_acronym>
+		<institution_location>Washington, DC</institution_location>
+	</institution>
+	<institution>
+		<institution_name>National Information Standards Organization</institution_name>
+		<institution_acronym>NISO</institution_acronym>
+		<institution_location>Bethesda, MD</institution_location>
+	</institution>
+	<publisher>
+		<publisher_name>NISO Press</publisher_name>
+		<publisher_place>Bethesda, MD</publisher_place>
+	</publisher>			
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="titles"/>
+				<xsd:element ref="edition_number" minOccurs="0"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:element ref="approval_date" maxOccurs="10"/>
+				<xsd:element ref="isbn" minOccurs="0" maxOccurs="6"/>
+				<xsd:element ref="publisher" minOccurs="0"/>
+				<xsd:element ref="institution" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="crossmark" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="publication_status" use="optional">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:NMTOKEN">
+						<xsd:enumeration value="released"/>
+						<xsd:enumeration value="withdrawn"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="standard_series_metadata">
+		<xsd:annotation>
+			<xsd:documentation>standard_metadata is used as a wrapper for the metadata related to a Standard that is part of a series.
+
+standard_series_metadata is similar to book_series_metadata. It differs in that standard_series_metadata adds the elements institution and approval_date.
+
+contributors contains the author(s) of the standard. In most cases, it is expected that the organization element will be used rather than person_name element for standards. However in some cases, standards are cited by their individual authors. In such cases, individual authors should be deposited with person_name, and the SDO or consortia name should be deposited with the organization element in contributors and also the institution_name element in institution.
+
+Note that when the organization element is used in contributors, it should have the name of the committee (when appropriate) that developed the standard, not the name of the Standards Development Organization (SDO) or consortia. The SDO or consortia name should be placed in the publisher or institution element (as appropriate).
+
+Standards more often have version numbers than edition numbers. However the edition_number element can be used for deposit of the version number of a standard.
+
+approval_date should be used for the date that a standard has been accepted or re-affirmed if different from the date of publication. Both may be provided even if identical.
+
+Within publisher_item, the designation should be placed inside the item_number element, and the id_type should be set to "designation" to indicate a standard designation.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="series_metadata"/>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element ref="titles"/>
+						<xsd:element ref="volume" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:element ref="volume"/>
+				</xsd:choice>
+				<xsd:element ref="edition_number" minOccurs="0"/>
+				<xsd:element ref="publication_date" maxOccurs="10"/>
+				<xsd:element ref="approval_date" maxOccurs="10"/>
+				<xsd:element ref="isbn" minOccurs="0" maxOccurs="6"/>
+				<xsd:element ref="publisher" minOccurs="0"/>
+				<xsd:element ref="institution" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="publication_status" use="optional">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:NMTOKEN">
+						<xsd:enumeration value="released"/>
+						<xsd:enumeration value="withdrawn"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="database">
+		<xsd:annotation>
+			<xsd:documentation>database is the top level element for deposit of metadata about one or more datasets or records in a database.
+
+Database structures allow for the assignment of DOIs to entire databases at the aggregate level and at two lower levels.
+
+The top level may be a physical/functional database or a logical abstration acting as a collection much the same as a journal is a collection of articles. The need to assign specific fields of metadata at each level depends on the nature of the top most level (e.g. publication date may be appropriate at the top level for a physical object but only at lower levels for an abstract top level object)
+
+The first sub-level is the dataset which may be a basic record of the top level object or a collection in its own right. In either case dataset must represent a physical construct. A third level is provided in the component_list.
+
+NOTE: component_list in &lt;database&gt; (rather than in dataset may be used as a second level when no third level is required and the second level objects derive most of their qualities from the parent.
+
+NOTE: This model is not intended to show relationships between different dataset entries in the form of a relational database. However in the future it is possible that multiple resolution may be used to express such relationships</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="database_metadata"/>
+				<xsd:choice>
+					<xsd:element ref="dataset" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="component_list" minOccurs="0"/>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="database_metadata">
+		<xsd:annotation>
+			<xsd:documentation>database_metadata contains metadata about the database.
+
+contributors contains the author(s) of the database. In most cases, it is expected that the organization element will be used rather than person_name element for the primary database authoring information.
+
+contributors should not be confused with publisher and institution. In many cases, databases are more likely to have one or both of the latter elements rather than contributors at the top level (dataset elements are more likely to have contributors). In most cases, the institution element may be the best choice to deposit the database host organization because it includes the institution_acronym element along with the name.
+
+The titles element is used to capture the name of the database. The description element can be used to capture a fuller description of the nature of the database than might be inferred from the title.
+
+database_date should be used to capture the date that a database was first created. Whenever updated records are deposited with CrossRef, the update_date should be set to the date of the most recent CrossRef deposit.
+
+publisher_item may be used to record an identifying number for the database other than the DOI.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="titles"/>
+				<xsd:element ref="description" minOccurs="0"/>
+				<xsd:element ref="database_date" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="publisher" minOccurs="0"/>
+				<xsd:element ref="institution" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="doi_data" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="language.atts"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="dataset">
+		<xsd:annotation>
+			<xsd:documentation>dataset is used to capture information about one or more database records or collections.
+
+The dataset_type attribute should be set to either "record" or "collection" to indicate the type of deposit. The default value of this attribute is "record".
+
+dataset entries are not intended to contain the entire database record or collection. They are only intended to contain the metadata for each database record or collection. The metadata can include:
+
+contributors: the author(s) of a database record or collection titles: the title of a database record or collection
+
+database_date: the creation date, publication date (if different from the creation date) and the date of last update of the record
+
+publisher_item: the record number of the dataset item. In this context, publisher_item can be used for the record number of each item in the database.
+
+description: a brief summary description of the contents of the database
+
+format: the format type of the dataset item if it includes files rather than just text. Note the format element here should not be used to describe the format of items deposited as part of the component_list
+
+doi_data: the doi of the item.
+
+citation_list: a list of items (e.g. journal articles) cited by the dataset item. For example, dataset entry from a taxonomy might cite the article in which a species was first identified.
+
+component_list: a list of components included in the dataset item such as supporting figures
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="contributors" minOccurs="0"/>
+				<xsd:element ref="titles" minOccurs="0"/>
+				<xsd:element ref="database_date" minOccurs="0" maxOccurs="10"/>
+				<xsd:element ref="publisher_item" minOccurs="0"/>
+				<xsd:element ref="description" minOccurs="0"/>
+				<xsd:element ref="format" minOccurs="0"/>
+				<xsd:element ref="crossmark" minOccurs="0"/>
+				<xsd:element ref="doi_data"/>
+				<xsd:element ref="citation_list" minOccurs="0"/>
+				<xsd:element ref="component_list" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="dataset_type" default="record">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:NMTOKEN">
+						<xsd:enumeration value="record"/>
+						<xsd:enumeration value="collection"/>
+						<xsd:enumeration value="crossmark_policy"/>
+						<xsd:enumeration value="other"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="database_date">
+		<xsd:annotation>
+			<xsd:documentation>database_date records key dates in the life of a database or dataset item.
+
+Within database_date, creation_date is the date the item was first created, publication_date is the date the item was first published, and update_date is the date the item was last updated.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="creation_date" minOccurs="0"/>
+				<xsd:element ref="publication_date" minOccurs="0"/>
+				<xsd:element ref="update_date" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="creation_date">
+		<xsd:annotation>
+			<xsd:documentation>The date a database or dataset item was created.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="date_t"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="update_date">
+		<xsd:annotation>
+			<xsd:documentation>The date a database or dataset item was updated.
+
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="date_t"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- =============================================================
+
+        10. Elements common to reports, dissertations and standards
+
+     ============================================================= -->
+	<xsd:element name="institution">
+		<xsd:annotation>
+			<xsd:documentation>Wrapper element for information about an organization that sponsored or hosted an item but is not the publisher of the item.
+
+The institution element should be used to deposit metadata about an organization that sponsored or hosted the research or development of the published material but was not actually the publisher of the information.
+
+The institution is distinctly different from the publisher because it may not be a publishing organization. It is typically an organization such as a university, corporation, government agency, NGO or consortia.
+
+If the content was published by an organization other than the sponsor, the use of both the publisher and institution elements is encouraged because authors may cite either one in a reference, and the availability of both may allow for more precise matching in queries.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="institution_name"/>
+				<xsd:element ref="institution_acronym" minOccurs="0" maxOccurs="6"/>
+				<xsd:element ref="institution_place" minOccurs="0" maxOccurs="6"/>
+				<xsd:element ref="institution_department" minOccurs="0" maxOccurs="6"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="institution_name">
+		<xsd:annotation>
+			<xsd:documentation>The full name of an institution.
+
+Examples are: World Health Organization; University of California, Davis. Corresponding institution_acronym content for these organizations would be WHO and UCD, respectively.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="1024"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="institution_acronym">
+		<xsd:annotation>
+			<xsd:documentation>The acronym of the institution.
+
+Note that authors often cite with acronyms and this information can be important in matching a query
+
+Examples: WHO, UCDavis, UCD
+
+Note: as shown above, an institution may be know by multiple acronyms, in which case all common acronyms should be deposited.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="institution_place">
+		<xsd:annotation>
+			<xsd:documentation>The primary city location of the institution.
+
+institution_place gives the primary city location of the institution. When the location is a major city (e.g. New York, Amsterdam), no qualifying country or U.S. state need be given. If the city is not a major city, the appropriate country and/or state or province should be added.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="institution_department">
+		<xsd:annotation>
+			<xsd:documentation>The department within an institution.
+
+institution_department gives the department within an institution. A common use is the department under which a dissertation was completed. Note that the institution_department is repeatable. If multiple departments are to be deposited, each one should be given in a unique institution_department element.
+			
+Example: Department of Psychology
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+	<xsd:element name="approval_date">
+		<xsd:annotation>
+			<xsd:documentation>
+The date on which a dissertation was accepted by the institution awarding the degree, a report was approved, or a standard was accepted.
+
+approval_date includes the same elements as publication_date, but it has no attributes. It is a distinct element from publication_date to reflect that an important but different semantic meeting from publication_date
+				
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="date_t"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="degree">
+		<xsd:annotation>
+			<xsd:documentation>The degree(s) awarded for a dissertation.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="contract_number">
+		<xsd:annotation>
+			<xsd:documentation>The contract number under which a report or paper was written.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="255"/>
+				<xsd:minLength value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+</xsd:schema>

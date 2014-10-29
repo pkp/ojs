@@ -18,9 +18,9 @@
 import('lib.pkp.classes.xml.XMLCustomWriter');
 
 define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
-define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.0');
-define('CROSSREF_VERSION' , '4.3.0');
-define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.0 http://www.crossref.org/schema/4.3.0/crossref4.3.0.xsd');
+define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.4');
+define('CROSSREF_VERSION' , '4.3.4');
+define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.4 http://www.crossref.org/schemas/crossref4.3.4.xsd');
 
 class CrossRefExportDom {
 
@@ -92,7 +92,7 @@ class CrossRefExportDom {
 	 */
 	function &generateDepositorDom(&$doc, $name, $email) {
 		$depositor =& XMLCustomWriter::createElement($doc, 'depositor');
-		XMLCustomWriter::createChildWithText($doc, $depositor, 'name', $name);
+		XMLCustomWriter::createChildWithText($doc, $depositor, 'depositor_name', $name);
 		XMLCustomWriter::createChildWithText($doc, $depositor, 'email_address', $email);
 
 		return $depositor;
