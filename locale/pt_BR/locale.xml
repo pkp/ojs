@@ -562,7 +562,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="search.allJournals">Todas as Revistas</message>
 	<message key="search.authorIndex">Índice de autores</message>
 	<message key="search.authorDetails">Perfil do autor</message>
-	<message key="search.syntaxInstructions"><![CDATA[Dicas para pesquisa: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Dicas para pesquisa: </h4><ul>
 <li>O sistema de busca não diferencia maiúsculas ou minúsculas</li>
 <li>Termos irrelevantes são ignorados pelo sistema de busca</li>
 <li>São recuperados por padrão apenas artigos contendo <em>todos</em> os termos de busca (ex.: <strong>AND</strong> é implícito)</li>

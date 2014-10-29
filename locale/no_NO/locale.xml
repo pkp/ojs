@@ -566,7 +566,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="search.allJournals">Alle tidsskrift</message>
 	<message key="search.authorIndex">Finn fram i forfatterregister</message>
 	<message key="search.authorDetails">Forfatterdetaljer</message>
-	<message key="search.syntaxInstructions"><![CDATA[Søketips: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Søketips: </h4><ul>
 <li>Søkeord skiller ikke mellom små og store bokstaver</li>
 <li>Vanlige ord blir ignorert</li>
 <li>Ved standard søk blir bare artikler som inneholder <i>alle</i> søkeordene truffet (m.a.o. at søkebegrepet <i>AND</i> er implisitt)</li>
