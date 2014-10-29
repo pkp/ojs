@@ -163,7 +163,7 @@ class ArticleGalleyDAO extends DAO {
 				LEFT JOIN published_articles pa ON g.article_id = pa.article_id ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN article_galley_settings gs ON g.galley_id = gs.galley_id AND gs.setting_name = ?
-				WHERE	(gs.setting_value IS NULL OR gs.setting_value = "")';
+				WHERE	(gs.setting_value IS NULL OR gs.setting_value = \'\')';
 		} else {
 			$params[] = $settingValue;
 			$sql .= 'INNER JOIN article_galley_settings gs ON g.galley_id = gs.galley_id
