@@ -814,42 +814,68 @@ class DataversePlugin extends GenericPlugin {
 		
 		// Form executed for completed submissions. Draft studies are created on 
 		// submission completion. A study may or may not exist for this submission.
-		$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
-		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');		
-		
 		switch ($form->getData('publishData')) {
 			case 'none':
 				// Supplementary file: do not deposit. 
-				if (!$form->suppFile->getId()) return false; // New suppfile: not in Dataverse
-
-				$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($form->suppFile->getId(), $article->getId());
-				if (!isset($dvFile)) return false; // Edited suppfile, but not in Dataverse
-					
-				// Remove the file from Dataverse
-				$this->deleteFile($dvFile);
-
-				// Deleting a file may affect study cataloguing information
-				$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());
-				$this->replaceStudyMetadata($article, $study);
+				if ($form->suppFile->getId()) { 
+					// Suppfile exists & may previously have been flagged for deposit / 
+					// deposited in Dataverse
+					$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');		
+					$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($form->suppFile->getId(), $article->getId());
+					if (isset($dvFile)) {
+						// Remove file from pending deposit (if submission is incomplete) or 
+						// dataset previously deposited 
+						$fileDeleted = $this->deleteFile($dvFile);
+						if ($fileDeleted) {
+							$dvFileDao->deleteDataverseFile($dvFile);
+						}
+						// Deleting a file may affect study cataloguing information
+						$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');				
+						$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());
+						if (isset($study)) {
+							$this->replaceStudyMetadata($article, $study);
+						}
+						// Notify
+						$user =& Request::getUser();
+						import('classes.notification.NotificationManager');
+						$notificationManager = new NotificationManager();
+						$notificationManager->createTrivialNotification($user->getId(), $fileDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
+					}
+				}
 				break;
 
 			case 'dataverse':
-				// Deposit file. If needed, insert/update suppfile on behalf of form
-				$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+				// Deposit file. Create a study, if submission doesn't have one already.
+				$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
+				$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());	 
+				if (!isset($study)) {
+					$study = $this->createStudy($article);
+				}
 				if (!$form->suppFile->getId()) {
 					// Suppfile is new, but inserted in db after hook is called. Handle
 					// insertion here & prevent duplicates in handleSuppFileInsertion() callback
+					$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 					$form->setSuppFileData($form->suppFile);
 					$suppFileDao->insertSuppFile($form->suppFile);
 					$form->suppFileId = $form->suppFile->getId();
 					$form->suppFile =& $suppFileDao->getSuppFile($form->suppFileId, $article->getId());
+					// Add suppfile to study. 
+					$deposited = $this->depositFiles($study, array($form->suppFile));
+					// File-level metadata may need to be added to study.
+					$this->replaceStudyMetadata($article, $study);
+					// & notify:
+					$user =& Request::getUser();
+					import('classes.notification.NotificationManager');
+					$notificationManager = new NotificationManager();
+					$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_ERROR);
 				}
 				else {
-					// Suppfile exists, but uploaded file may be new, replaced, or non-existent. 
-					// Hook called before suppfile object updated with details of uploaded file,
-					// so refresh suppfile object here. 
+					// Suppfile exists, and uploaded file may be new or a replacement
+					// (form validator requires file upload if Dataverse option selected).
+					// Hook is called before suppfile object is updated with details of 
+					// uploaded file, so refresh suppfile object here. 
 					import('classes.file.ArticleFileManager');
-					$fileName = 'uploadSuppFile';										 
+					$fileName = 'uploadSuppFile';
 					$articleFileManager = new ArticleFileManager($article->getId());
 					if ($articleFileManager->uploadedFileExists($fileName)) {
 						$fileId = $form->suppFile->getFileId();
@@ -862,36 +888,36 @@ class DataversePlugin extends GenericPlugin {
 						}
 					}
 					// Store form metadata. It may be used to update study cataloguing information.
+					$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
 					$form->suppFile =& $suppFileDao->getSuppFile($form->suppFileId, $article->getId());
 					$form->setSuppFileData($form->suppFile);
 					$suppFileDao->updateSuppFile($form->suppFile);
-				}
-				// If, at this point, there is no file id, there is nothing to deposit
-				if (!$form->suppFile->getFileId()) return false;
-				
-				$user =& Request::getUser();
-				import('classes.notification.NotificationManager');
-				$notificationManager = new NotificationManager();
-				
-				$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());	 
-				if ($study) {
-					$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($form->suppFile->getId(), $article->getId());			
-					if (!$dvFile) {
-						$deposited = $this->depositFiles($study, array($form->suppFile));						
-						// Update study with suppfile metadata 
-						$this->replaceStudyMetadata($article, $study);
-						$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_ERROR);
-					}
-				}
-				else {
-					// First file to be deposited. Create study & add file. 
-					$study = $this->createStudy($article);
-					if ($study) {
-						$deposited = $this->depositFiles($study, array($form->suppFile));
-						$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED: NOTIFICATION_TYPE_ERROR);
-					}
-				}
+					
+					// The uploaded file may be new, or it may replace a previously-deposited
+					// file. If it's a replacement, delete the existing file from Dataverse:
+					// this prevents orphaned files on the Dataverse side, and filename collisions
+					// described in https://redmine.hmdc.harvard.edu/issues/3301
+					$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');							
+					$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($form->suppFileId, $article->getId());
+					if (isset($dvFile)) {
+						$this->deleteFile($dvFile);
+						$dvFileDao->deleteDataverseFile($dvFile);
+ 					}
+					// Add uploaded suppfile to study.
+					$deposited = $this->depositFiles($study, array($form->suppFile));
+					// File-level metadata may need to be added to study.
+ 					$this->replaceStudyMetadata($article, $study);
+					// & notify:
+					$user =& Request::getUser();
+					import('classes.notification.NotificationManager');
+					$notificationManager = new NotificationManager();
+ 					$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_ERROR);
+ 				}
 				break;
+				
+			default:
+				// Unknown option
+				assert(false);
 		}
 		return false;
 	}
@@ -1338,12 +1364,12 @@ class DataversePlugin extends GenericPlugin {
 							$dvFile->setSubmissionId($study->getSubmissionId());						
 							$dvFile->setStudyId($study->getId());
 							$dvFile->setContentSourceUri($dvFileIndex[$suppFileKey]);
-							$dvFileDao->updateDataverseFile($dvFile);												
+							$dvFileDao->insertDataverseFile($dvFile);												
 						}
 						else {
 							$dvFile->setStudyId($study->getId());
 							$dvFile->setContentSourceUri($dvFileIndex[$suppFileKey]);						
-							$dvFileDao->insertDataverseFile($dvFile);
+							$dvFileDao->updateDataverseFile($dvFile);
 						}
 					}
 				}
@@ -1466,8 +1492,6 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function deleteFile(&$dvFile) {
 		$journal =& Request::getJournal();
-		$user =& Request::getUser();
-		
 		if (!$dvFile->getContentSourceUri()) {
 			// File hasn't been deposited in Dataverse yet
 			$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');			
@@ -1482,19 +1506,8 @@ class DataversePlugin extends GenericPlugin {
 						$this->getSetting($journal->getId(), 'password'),
 						'' // on behalf of
 						);
-		$fileDeleted = ($response->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_NO_CONTENT);
-
-		import('classes.notification.NotificationManager');
-		$notificationManager = new NotificationManager();
 		
-		if ($fileDeleted) {
-			$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');			
-			$dvFileDao->deleteDataverseFile($dvFile);
-			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_FILE_DELETED);			
-		}
-		else {
-			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);						 
-		}
+		$fileDeleted = ($response->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_NO_CONTENT);
 		return $fileDeleted;
 	}
 	
