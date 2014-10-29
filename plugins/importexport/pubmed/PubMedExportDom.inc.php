@@ -136,7 +136,7 @@ class PubMedExportDom {
 		    else {
 			   $ark = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk); 				
 			   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
-               XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'piiLINE138');
+               XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
 			   error_log($articleID . " has this ARK" . $ark);
 			  }
         }
@@ -161,9 +161,8 @@ class PubMedExportDom {
 		if ($article->getPublicArticleId()) {
 			$articleIdListNode =& XMLCustomWriter::createElement($doc, 'ArticleIdList');
 			XMLCustomWriter::appendChild($root, $articleIdListNode);
-
 			$articleIdNode =& XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPublicArticleId());
-			XMLCustomWriter::setAttribute($articleIdNode, 'IdType', 'piiLINE165');
+			XMLCustomWriter::setAttribute($articleIdNode, 'IdType', 'pii');
 		}
 
 		/* --- History --- */
