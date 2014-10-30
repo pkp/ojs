@@ -40,6 +40,7 @@
 <script src="{$baseUrl}/lib/pkp/js/classes/linkAction/OpenWindowRequest.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/linkAction/PostAndRedirectRequest.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/linkAction/NullAction.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/classes/linkAction/EventAction.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/linkAction/AjaxRequest.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/linkAction/ModalRequest.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/notification/NotificationHelper.js"></script>
