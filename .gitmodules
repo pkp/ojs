@@ -10,3 +10,6 @@
 [submodule "plugins/generic/staticPages"]
 	path = plugins/generic/staticPages
 	url = git://github.com/pkp/staticPages
+[submodule "plugins/generic/translator"]
+	path = plugins/generic/translator
+	url = git://github.com/pkp/translator
