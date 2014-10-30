@@ -293,7 +293,7 @@ class EditCommentForm extends Form {
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
 		$journal =& $request->getJournal();
-		if ($journal) $email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+		$email->setReplyTo(null);
 
 		foreach ($recipients as $emailAddress => $name) {
 			$email->addRecipient($emailAddress, $name);
