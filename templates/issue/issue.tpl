@@ -50,9 +50,9 @@
 	<td class="tocArticleTitleAuthors{if $showCoverPage} showCoverImage{/if}">
 		<div class="tocTitle">
 			{if !$hasAccess || $hasAbstract}
-				<a href="{url page="article" op="view" path=$articlePath}">{$article->getLocalizedTitle()|strip_unsafe_html}</a>
+				<a href="{url page="article" op="view" path=$articlePath}">{$article->getLocalizedTitle($currentLocale)|strip_unsafe_html}</a>
 			{else}
-				{$article->getLocalizedTitle()|strip_unsafe_html}
+				{$article->getLocalizedTitle($currentLocale)|strip_unsafe_html}
 			{/if}
 		</div>
 		<div class="tocAuthors">

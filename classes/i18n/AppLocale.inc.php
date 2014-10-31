@@ -24,6 +24,8 @@ define('LOCALE_COMPONENT_OJS_MANAGER',		0x00000104);
 define('LOCALE_COMPONENT_OJS_ADMIN',		0x00000105);
 define('LOCALE_COMPONENT_OJS_DEFAULT',		0x00000106);
 
+define('DEFAULT_LOCALE_DISPLAY', 'legacy');
+
 class AppLocale extends PKPLocale {
 	/**
 	 * Get all supported UI locales for the current context.
@@ -172,6 +174,40 @@ class AppLocale extends PKPLocale {
 
 		return $locale;
 	}
+
+  /**
+   * Retrieve the localization display mode of the titles.
+   * @return string
+   */
+  function getLocaleDisplayTitle() {
+    $journal =& Request::getJournal();
+
+    if (isset($journal)) {
+      $locale = $journal->getLocaleDisplayTitle();
+    }
+    else {
+      $locale = DEFAULT_LOCALE_DISPLAY;
+    }
+
+    return $locale;
+  }
+
+  /**
+   * Retrieve the localization display mode of the titles.
+   * @return string
+   */
+  function getLocaleDisplayFile() {
+    $journal =& Request::getJournal();
+
+    if (isset($journal)) {
+      $locale = $journal->getLocaleDisplayFile();
+    }
+    else {
+      $locale = DEFAULT_LOCALE_DISPLAY;                                                                                                                      
+    }
+
+    return $locale;
+  }
 
 	/**
 	 * Make a map of components to their respective files.

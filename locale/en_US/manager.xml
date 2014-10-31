@@ -33,6 +33,15 @@
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</message>
 	<message key="manager.languages.primaryLocaleInstructions">This will be the default language for the journal site.</message>
+  <message key="manager.languages.locale.display.intro">In this section you can modify how OJS will display the titles and galleys in TOC when they are availiable in multiple languages. If you have doubts or your journal is publishing in a single language, probably "legacy" option is the good one for you.</message>
+  <message key="manager.languages.locale.display.title">Display of titles:</message>
+  <message key="manager.languages.locale.display.title.original">Original: Show the title in the original language.</message>
+  <message key="manager.languages.locale.display.title.both">Both: Show the title in the user's current language (if availiable) AND also in the original language.</message>
+  <message key="manager.languages.locale.display.title.legacy">Legacy: Show the title in the user's current language (if avaliable) OR the original language. This option is enabled by default.</message>
+  <message key="manager.languages.locale.display.file">Display of galleys:</message>
+  <message key="manager.languages.locale.display.file.show">Show language: Links to files will include the language's tag (e.g. "PDF (English), HTML (Klingon)").</message>
+  <message key="manager.languages.locale.display.file.hide">Hide language: Links to files won't include the language's tag (e.g. "PDF, HTML").</message>
+  <message key="manager.languages.locale.display.file.legacy">Legacy: Links to files will include the language's tag except if it's the current user's language. (e.j: "PDF, HTML (Klingon)"). This option is enabled by default.</message>
 	<message key="manager.managementPages">Management Pages</message>
 	<message key="manager.payment.action">Action</message>
 	<message key="manager.payment.addPayment">Add Payment</message>

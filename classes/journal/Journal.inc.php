@@ -55,6 +55,48 @@ class Journal extends DataObject {
 		return $this->setData('primaryLocale', $primaryLocale);
 	}
 
+  /**
+   * Return the locale display of the titles of this journal.
+   * @return string
+   */
+  function getLocaleDisplayTitle() {
+    $localeDisplayTitle = $this->getSetting('localeDisplayTitle');
+
+    if (!isset($localeDisplayTitle)) {
+      $localeDisplayTitle = DEFAULT_LOCALE_DISPLAY;
+    }
+    return $localeDisplayTitle;
+  }
+
+  /**
+   * Set the locale display of the titles of this journal.
+   * @param $localeDisplayTitle string
+   */
+  function setLocaleDisplayTitle($localeDisplayTitle) {
+    return $this->setData('localeDisplayTitle', $localeDisplayTitle);
+  }
+
+  /**
+   * Return the locale display of the galleys of this journal.
+   * @return string
+   */
+  function getLocaleDisplayFile() {
+    $localeDisplayFile = $this->getSetting('localeDisplayFile');
+
+    if (!isset($localeDisplayFile)) {
+      $localeDisplayFile = DEFAULT_LOCALE_DISPLAY;
+    }
+    return $localeDisplayFile;
+  }
+
+  /**
+   * Set the locale display of the galleys of this journal.
+   * @param $localeDisplayFile string
+   */
+  function setLocaleDisplayFile($localeDisplayFile) {
+    return $this->setData('localeDisplayFile', $localeDisplayFile);
+  }
+
 	/**
 	 * Return associative array of all locales supported by the journal.
 	 * These locales are used to provide a language toggle on the journal-specific pages.
