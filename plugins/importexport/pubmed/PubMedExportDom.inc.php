@@ -134,10 +134,10 @@ class PubMedExportDom {
 		         error_log($articleID . " has no ARK in the database!");
 		      }
 		    else {
-			   $ark = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk); 				
-			   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $ark, false);
+			   /*$ark = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);*/ 				
+			   $arkNode =&  XMLCustomWriter::createChildWithText($doc, $root, 'ELocationID', $qualifiedArk, false);
                XMLCustomWriter::setAttribute($arkNode, 'EIdType', 'pii');
-			   error_log($articleID . " has this ARK" . $ark);
+			   error_log($articleID . " has this ARK" . $qualifiedArk);
 			  }
         }
 		
