@@ -42,6 +42,6 @@
 {/if}
 
 <div id="journalListPageInfo">{page_info iterator=$journals}</div>
-<div id="journalListPageLinks">{page_links anchor="journals" name="journals" iterator=$journals}
+<div id="journalListPageLinks">{page_links anchor="journals" name="journals" iterator=$journals}</div>
 
 {include file="common/footer.tpl"}
