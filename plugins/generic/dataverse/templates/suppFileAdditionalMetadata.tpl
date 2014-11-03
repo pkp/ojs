@@ -28,6 +28,9 @@
 			<p style="margin-left: 25px;" class="error">{translate key="plugins.generic.dataverse.suppFile.studyLocked"}</p>
 		{/if}
 	{/if}
+	<h4>{translate key="plugins.generic.dataverse.suppFile.studyDescription"}</h4>
+	<p>{translate key="plugins.generic.dataverse.suppFile.studyDescription.description"}</p>
+	<textarea cols="60" rows="5" class="textArea" id="studyDescription" name="studyDescription">{$studyDescription|escape}</textarea>
 	<h4>{translate key="plugins.generic.dataverse.suppFile.externalDataCitation"}</h4>
 	<p>{translate key="plugins.generic.dataverse.suppFile.externalDataCitation.description"}</p>	
 	<textarea cols="60" rows="5" class="textArea" id="externalDataCitation" name="externalDataCitation">{$externalDataCitation|escape}</textarea>		 

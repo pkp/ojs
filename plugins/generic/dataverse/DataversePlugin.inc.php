@@ -83,7 +83,7 @@ class DataversePlugin extends GenericPlugin {
 			HookRegistry::register('suppfileform::readuservars', array(&$this, 'suppFileFormReadUserVars'));
 			HookRegistry::register('suppfileform::execute', array(&$this, 'suppFileFormExecute'));
 			
-			// Notify ArticleDAO of article metadata field (external data citation) in suppfile form
+			// Notify ArticleDAO of additional metadata fields in suppfile form
 			HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'articleMetadataFormFieldNames'));
 			
 			// Validate suppfile forms: warn if Dataverse deposit selected but no file uploaded
@@ -626,12 +626,12 @@ class DataversePlugin extends GenericPlugin {
 	}
 	
 	/**
-	 * Hook callback: notify ArticleDAO of external data citation field added to
-	 * suppfile forms.
+	 * Hook callback: notify ArticleDAO of fields added to suppfile forms.
 	 * @see ArticleDAO::getAdditionalFieldNames()
 	 */
 	function articleMetadataFormFieldNames($hookName, $args) {
 		$fields =& $args[1];
+		$fields[] = 'studyDescription';
 		$fields[] = 'externalDataCitation';
 		return false;		 
 	}
@@ -720,7 +720,8 @@ class DataversePlugin extends GenericPlugin {
 		if (!isset($article)) {
 			$article = $articleDao->getArticle($form->articleId, $journal->getId());
 		}
-		// Add or edit external data citation field, if missed in previous step
+		// Dataset metadata
+		$form->setData('studyDescription', $article->getLocalizedData('studyDescription'));
 		$form->setData('externalDataCitation', $article->getLocalizedData('externalDataCitation'));
 		
 		// Set data publishing option for this suppfile:
@@ -745,6 +746,7 @@ class DataversePlugin extends GenericPlugin {
 	function suppFileFormReadUserVars($hookName, $args) {
 		$form =& $args[0];
 		$vars =& $args[1];
+		$vars[] = 'studyDescription';
 		$vars[] = 'externalDataCitation';
 		$vars[] = 'publishData';
 		return false;
@@ -763,6 +765,7 @@ class DataversePlugin extends GenericPlugin {
 		$journal =& Request::getJournal();		
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($form->articleId, $journal->getId());
+		$article->setData('studyDescription', $form->getData('studyDescription'), $form->getFormLocale());
 		$article->setData('externalDataCitation', $form->getData('externalDataCitation'), $form->getFormLocale());
 		$articleDao->updateArticle($article);
 		
@@ -806,9 +809,9 @@ class DataversePlugin extends GenericPlugin {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $form->article;
 		
-		// External data citation: field is article metadata, but provided in 
-		// suppfile form as well, at point of data file deposit, to help support
-		// data publishing decisions
+		// Dataset metadata: fields stored with article metadata, but provided in suppfile
+		// form, at point of data deposit, to support data publishing
+		$article->setData('studyDescription', $form->getData('studyDescription'), $form->getFormLocale());
 		$article->setData('externalDataCitation', $form->getData('externalDataCitation'), $form->getFormLocale());
 		$articleDao->updateArticle($article);
 		
@@ -1162,7 +1165,11 @@ class DataversePlugin extends GenericPlugin {
 		$package = new DataversePackager();
 		// Article metadata
 		$package->addMetadata('title', $article->getLocalizedTitle());
-		$package->addMetadata('description', $article->getLocalizedAbstract());
+		$package->addMetadata('description', 
+						$article->getLocalizedData('studyDescription') ? 
+						$article->getLocalizedData('studyDescription') :
+						$article->getLocalizedAbstract()
+		);
 		foreach ($article->getAuthors() as $author) {
 			$package->addMetadata('creator', $author->getFullName(true));
 		}

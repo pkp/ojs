@@ -149,6 +149,8 @@
 	<message key="plugins.generic.dataverse.suppFile.publishData.error">Please upload a file to deposit in Dataverse.</message>
 	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">The file will be added to the Dataverse study created for this submission:</message>
 	<message key="plugins.generic.dataverse.suppFile.studyLocked">This study is locked for processing. No changes can be made to submission data until processing has completed.</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription">Study Description</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">Provide a summary of the purpose, nature, and scope of study data.</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">External Data Citation</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">If the data to be published with this submission is already in a different repository, please provide a data citation.</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Please upload files to deposit in Dataverse OR provide an external data citation.</message>
