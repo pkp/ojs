@@ -75,6 +75,9 @@ class UserHandler extends Handler {
 			$templateMgr->assign_by_ref('userJournals', $userJournals);
 			$templateMgr->assign('showAllJournals', 1);
 
+			$allJournals =& $journalDao->getJournals();
+			$templateMgr->assign_by_ref('allJournals', $allJournals->toArray());
+
 		} else { // Currently within a journal's context.
 			$journalId = $journal->getId();
 
