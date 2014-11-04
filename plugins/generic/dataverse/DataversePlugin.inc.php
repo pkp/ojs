@@ -1162,7 +1162,10 @@ class DataversePlugin extends GenericPlugin {
 	 * @return DataversePackager
 	 */
 	function createMetadataPackage($article) {
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getById($article->getJournalId());
 		$package = new DataversePackager();
+		
 		// Article metadata
 		$package->addMetadata('title', $article->getLocalizedTitle());
 		$package->addMetadata('description', 
@@ -1173,27 +1176,30 @@ class DataversePlugin extends GenericPlugin {
 		foreach ($article->getAuthors() as $author) {
 			$package->addMetadata('creator', $author->getFullName(true));
 		}
-		// subject: academic disciplines
-		$split = '/\s*'. DATAVERSE_PLUGIN_SUBJECT_SEPARATOR .'\s*/';
-		foreach(preg_split($split, $article->getLocalizedDiscipline(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$package->addMetadata('subject', $subject);
+		
+		// Article metadata: fields with multiple values
+		$pattern = '/\s*'. DATAVERSE_PLUGIN_SUBJECT_SEPARATOR .'\s*/';
+		foreach(String::regexp_split($pattern, $article->getLocalizedCoverageGeo()) as $coverage) {
+			if ($coverage) $package->addMetadata('coverage', $coverage);
 		}
-		// subject: subject classifications
-		foreach(preg_split($split, $article->getLocalizedSubjectClass(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$package->addMetadata('subject', $subject);
+		// Article metadata: filter subject(s) to prevent repeated values in dataset subject field
+		$subjects = array();
+		foreach(String::regexp_split($pattern, $article->getLocalizedDiscipline()) as $subject) {
+			if ($subject) $subjects[String::strtolower($subject)] = $subject;
 		}
-		// subject:	 keywords		 
-		foreach(preg_split($split, $article->getLocalizedSubject(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$package->addMetadata('subject', $subject);
+		foreach(String::regexp_split($pattern, $article->getLocalizedSubjectClass()) as $subject) {
+			if ($subject) $subjects[String::strtolower($subject)] = $subject;
 		}
-		// geographic coverage
-		foreach(preg_split($split, $article->getLocalizedCoverageGeo(), NULL, PREG_SPLIT_NO_EMPTY) as $coverage) {
-			$package->addMetadata('coverage', $coverage);
+		foreach(String::regexp_split($pattern, $article->getLocalizedSubject()) as $subject) {
+			if ($subject) $subjects[String::strtolower($subject)] = $subject;
 		}
-		// Fetch journal for published article and journal metadata
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journal =& $journalDao->getById($article->getJournalId());
-		// Published articles
+
+		// Article metadata: filter contributors(s) to prevent repeated values in dataset contributor field		
+		$contributors = array();
+		foreach(String::regexp_split($pattern, $article->getLocalizedSponsor()) as $contributor) {		
+			if ($contributor) $contributors[String::strtolower($contributor)] = $contributor;
+		}
+		// Published article metadata
 		$pubIdAttributes = array();
 		if ($article->getStatus() == STATUS_PUBLISHED) {
 			// publication date
@@ -1219,6 +1225,7 @@ class DataversePlugin extends GenericPlugin {
 				$pubIdAttributes['holdingsURI'] = Request::url($journal->getPath(), 'article', 'view', array($article->getId()));
 			}
 		}
+
 		// Journal metadata
 		$package->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
 		$package->addMetadata('rights', $journal->getLocalizedSetting('copyrightNotice'));
@@ -1228,16 +1235,29 @@ class DataversePlugin extends GenericPlugin {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
 		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
 		$dvFiles =& $dvFileDao->getDataverseFilesBySubmissionId($article->getId());
+		// Filter type field to prevent repeated values in dataset 'Kind of data' field
+		$suppFileTypes = array();
 		foreach ($dvFiles as $dvFile) {
 			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $article->getId());
 			if ($suppFile) {
-				foreach(preg_split($split, $suppFile->getSuppFileSubject(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-					$package->addMetadata('subject', $subject);
+				// Split & filter subjects and/or contributors that may be repeated in article metadata
+				foreach (String::regexp_split($pattern, $suppFile->getSuppFileSubject()) as $subject) {
+					$subjects[String::strtolower($subject)] = $subject;
 				}
-				if ($suppFile->getType()) $package->addMetadata('type', $suppFile->getType());
-				if ($suppFile->getSuppFileTypeOther()) $package->addMetadata('type', $suppFile->getSuppFileTypeOther());
+				foreach (String::regexp_split($pattern, $suppFile->getSuppFileSponsor()) as $contributor) {
+					if ($contributor) $contributors[String::strtolower($contributor)] = $contributor;
+				}
+				// File type has single value but possibly repeated across suppfiles
+				if ($suppFile->getType()) $suppFileTypes[String::strtolower($suppFile->getType())] = $suppFile->getType();
+				if ($suppFile->getSuppFileTypeOther()) $suppFileTypes[String::strtolower($suppFile->getSuppFileTypeOther())] = $suppFile->getSuppFileTypeOther();
 			}
 		}
+		
+		// Add subjects, contributors & types to entry
+		foreach (array_values($subjects) as $subject) { $package->addMetadata('subject', $subject); }
+		foreach (array_values($contributors) as $contributor) { $package->addMetadata('contributor', $contributor, array('type' => 'funder')); }
+		foreach (array_values($suppFileTypes) as $type) { $package->addMetadata('type', $type); }
+		
 		// Write metadata as Atom entry
 		$package->createAtomEntry();
 		
