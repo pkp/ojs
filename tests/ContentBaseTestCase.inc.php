@@ -20,7 +20,7 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 	 * Handle any section information on submission step 1
 	 * @return string
 	 */
-	protected function _handleSection($data) {
+	protected function _handleStep1($data) {
 		$section = 'Articles'; // Default
 		if (isset($data['section'])) $section = $data['section'];
 
