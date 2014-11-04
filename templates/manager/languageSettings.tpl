@@ -60,6 +60,30 @@
 </tr>
 </table>
 
+<br />
+<br />
+<table id="languageDisplay" class="data" width="100%">
+<tr valign="top">
+  <td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.locale.display.intro"}</span></td>
+</tr>
+<tr valign="top">
+  <td width="20%" class="label">{fieldLabel name="localeDisplayTitle" required="true" key="manager.languages.locale.display.title"}</td>
+  <td width="80%" class="value">
+      <input type="radio" name="localeDisplayTitle" value="original"{if ($localeDisplayTitle == 'original')} checked="checked"{/if}/>{translate key="manager.languages.locale.display.title.original"}<br />
+      <input type="radio" name="localeDisplayTitle" value="both"{if ($localeDisplayTitle == 'both')} checked="checked"{/if}/>{translate key="manager.languages.locale.display.title.both"}<br />
+      <input type="radio" name="localeDisplayTitle" value="legacy"{if ($localeDisplayTitle == 'legacy')} checked="checked"{/if}/>{translate key="manager.languages.locale.display.title.legacy"}<br />
+  </td>
+</tr>
+<tr valign="top">
+  <td width="20%" class="label">{fieldLabel name="localeDisplayFile" required="true" key="manager.languages.locale.display.file"}</td>
+  <td width="80%" class="value">
+      <input type="radio" name="localeDisplayFile" value="show"{if ($localeDisplayFile == 'show')} checked="checked"{/if}/>{translate key="manager.languages.locale.display.file.show"}<br />
+      <input type="radio" name="localeDisplayFile" value="hide"{if ($localeDisplayFile == 'hide')} checked="checked"{/if}/>{translate key="manager.languages.locale.display.file.hide"}<br />
+      <input type="radio" name="localeDisplayFile" value="legacy"{if ($localeDisplayFile == 'legacy')} checked="checked"{/if}/>{translate key="manager.languages.locale.display.file.legacy"}<br />
+  </td>
+</tr>
+</table>
+
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
