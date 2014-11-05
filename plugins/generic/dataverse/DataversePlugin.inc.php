@@ -1174,7 +1174,7 @@ class DataversePlugin extends GenericPlugin {
 						$article->getLocalizedAbstract()
 		);
 		foreach ($article->getAuthors() as $author) {
-			$package->addMetadata('creator', $author->getFullName(true));
+			$package->addMetadata('creator', $author->getFullName(true), array('affiliation' => $this->_formatAffiliation($author)));
 		}
 		
 		// Article metadata: fields with multiple values
@@ -1661,6 +1661,25 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function _formatDataCitation($dataCitation, $persistentUri) {
 	 return str_replace($persistentUri, '<a href="'. $persistentUri .'">'. $persistentUri .'</a>', strip_tags($dataCitation));
+	}
+	
+	/**
+	 * Format author bio statement, affiliation, and/or country as affiliation statement
+	 * @param $author Author 
+	 * @return string Author affiliation
+	 */
+	function _formatAffiliation($author) {
+		$affiliation = '';
+		if ($author) {
+			if ($author->getLocalizedAffiliation()) {			
+				// Affiliation is a block of plain text. Split into lines & trim punctuation
+				$lines = array_map("String::trimPunctuation", String::regexp_split('/\s*[\r\n]+/s', $author->getLocalizedAffiliation()));
+				$affiliation .= implode(', ', $lines);
+				// Append country, if affiliation present
+				if ($author->getCountryLocalized())	$affiliation .= ', '. $author->getCountryLocalized();
+			}
+		}
+		return $affiliation;
 	}
 }
 
