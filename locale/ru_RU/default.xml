@@ -128,7 +128,9 @@
 	<br />
 	<pre>4. ОТФОРМАТИРОВАТЬ
 	Абзац, начинающийся фразой «Эта последняя тема...», не имеет красной строки.</pre>]]></message>
-	
+
+	<message key="default.journalSettings.emailHeader">Следующее сообщение отправлено Вам по поручению журнала «{$journalName}».
+________________________________________________________________________</message>
 	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}</message>
