@@ -55,13 +55,6 @@ class JournalSetupStep6Form extends JournalSetupForm {
 			 ($_SERVER["HTTPS"] ? 'https://' : 'http://') . $_SERVER["SERVER_NAME"] . 
 			'/subi/configure?configView=compact&entity=' . $journal->getPath());
 
- 		$sessionManager = SessionManager::getManager();
-		$session = $sessionManager->getUserSession();
-		$user = $session->getUser();
-		$templateMgr->assign('user', $user->getUserName());
-
-		$templateMgr->assign('journalPath',$journal->getPath());
-
 		// Make lists of the sidebar blocks available.
 		$leftBlockPlugins = $disabledBlockPlugins = $rightBlockPlugins = array();
 		$plugins =& PluginRegistry::loadCategory('blocks');
