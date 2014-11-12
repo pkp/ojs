@@ -41,6 +41,11 @@
 		{translate key="manager.setup.look.description"}<br/>
 		&nbsp;
 	</li>
+	<li>
+		<h4><a href="{url op="setup" path="6"}">Step 6</a></h4>
+		Step 6 description<br/>
+		&nbsp;
+	</li>
 </ol>
 
 {include file="common/footer.tpl"}

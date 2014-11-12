@@ -185,7 +185,7 @@
 	<message key="manager.sections.unassigned">Available Section Editors</message>
 	<message key="manager.sections.wordCount">Word Count</message>
 	<message key="manager.sections.wordCountInstructions">Limit abstract word counts for this section (0 for no limit): </message>
-	<message key="manager.setup">5-Step Journal Setup</message>
+	<message key="manager.setup">6-Step Journal Setup</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add About Item</message>
 	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>
@@ -238,6 +238,7 @@
 	<message key="manager.setup.coverageResearchSampleProvideExamples">Provide examples of research sample characteristics for this field</message>
 	<message key="manager.setup.currentIssue">Current issue</message>
 	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>
+	<message key="manager.setup.customizingEScholarshipBrand">Step 6. Customizing the eScholarship Brand</message>
 	<message key="manager.setup.customTags">Custom tags</message>
 	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
 	<message key="manager.setup.details">Details</message>
@@ -469,7 +470,7 @@
 	<message key="manager.setup.sponsors">Sponsoring Organizations</message>
 	<message key="manager.setup.sponsorNoteDescription">This text will appear below the "Sponsors" heading and above the list of sponsor names and urls under "Journal Sponsorship" on the "About" page.</message>
 	<message key="manager.setup.sponsorsDescription">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
-	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Web Site</message>
+	<message key="manager.setup.stepsToJournalSite">Six Steps to a Journal Web Site</message>
 	<message key="manager.setup.subjectClassification">Subject Classification</message>
 	<message key="manager.setup.subjectClassificationExamples">(E.g., Mathematics Subject Classification; Library of Congress Classification)</message>
 	<message key="manager.setup.subjectExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
