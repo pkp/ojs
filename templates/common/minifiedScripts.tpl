@@ -15,7 +15,6 @@
 {* External jQuery plug-ins to be minified *}
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.form.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js"></script>
-<script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.pnotify.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.roundabout.min.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.sortElements.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.imgpreview.js"></script>

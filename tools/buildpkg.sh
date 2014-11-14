@@ -41,6 +41,8 @@ lib/pkp/tests							\
 .git								\
 .openshift							\
 lib/pkp/.git							\
+lib/pkp/js/lib/pnotify/build-tools				\
+lib/pkp/js/lib/pnotify/includes
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
 
