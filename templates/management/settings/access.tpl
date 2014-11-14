@@ -19,7 +19,6 @@
 		$('#accessTabs').pkpHandler(
 			'$.pkp.controllers.tab.settings.managementSettings.UsersAndRolesTabHandler',
 			{ldelim}
-				notScrollable: true,
 				userGridContentUrl:'{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.AccessSettingsTabHandler" tab="users" op="showTab"}',
 			{rdelim}
 

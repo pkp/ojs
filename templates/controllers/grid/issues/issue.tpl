@@ -10,8 +10,7 @@
 <script type="text/javascript">
 	// Attach the JS file tab handler.
 	$(function() {ldelim}
-		$('#editIssueTabs').pkpHandler('$.pkp.controllers.TabHandler', {ldelim}
-				notScrollable: true
+		$('#editIssueTabs').pkpHandler('$.pkp.controllers.TabHandler');
 		{rdelim});
 	{rdelim});
 </script>

@@ -23,7 +23,6 @@
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.equalizer.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.jlabel-1.3.min.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js"></script>
-<script src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jquery.scrollabletab.js"></script>
 
 {* JSON library *}
 <script src="{$baseUrl}/lib/pkp/js/lib/json/json2.js"></script>
