@@ -18,6 +18,24 @@
 {include file="common/header.tpl"}
 {/strip}
 
+<script type="text/javascript">
+{literal}
+<!--
+
+function checkForFileToUpload() {
+        var fieldValue = document.suppFile.uploadSuppFile.value;
+        if (!fieldValue) {
+                alert("Please select a file by clicking 'Browse...' first.");
+                return false;
+        }
+        return true;
+}
+
+// -->
+{/literal}
+</script>
+
+
 <form name="suppFile" method="post" action="{url page=$rolePath op="saveSuppFile" path=$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 <input type="hidden" name="from" value="{$from|escape}" />
@@ -173,7 +191,7 @@
 <div class="separator"></div>
 
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
+<p><input type="submit" onclick="return checkForFileToUpload()" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

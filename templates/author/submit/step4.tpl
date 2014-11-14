@@ -25,7 +25,7 @@ function confirmForgottenUpload() {
 function checkForFileToUpload() {
         var fieldValue = document.submitForm.uploadSuppFile.value;
         if (!fieldValue) {
-                alert("Please select a file by clicking 'browse' first.");
+                alert("Please select a file by clicking 'Browse...' first.");
                 return false;
         }
         return true;

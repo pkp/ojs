@@ -21,6 +21,16 @@
 		$("#generatePdf").hide();
 		alert("{/literal}{translate key="submission.layout.generatePdfPleaseWait"}{literal}");
 	}
+
+	function checkForFileToUpload() {
+        	var fieldValue = document.uploadFile.layoutFile.value;
+        	if (!fieldValue) {
+                	alert("Please select a file by clicking 'Browse...' first.");
+                	return false;
+       		}
+        	return true;
+	}
+
 </script>
 {/literal}
 
@@ -205,7 +215,7 @@
 	</tr>
 </table>
 
-<form method="post" action="{url op="uploadLayoutFile"}"  enctype="multipart/form-data">
+<form name="uploadFile" method="post" action="{url op="uploadLayoutFile"}" enctype="multipart/form-data">
 	<input type="hidden" name="from" value="submissionEditing" />
 	<input type="hidden" name="articleId" value="{$submission->getId()}" />
 	{translate key="submission.uploadFileTo"} 
@@ -217,7 +227,7 @@
         {/if}
         <input type="radio" name="layoutFileType" id="layoutFileTypeSupp" value="supp" /><label for="layoutFileTypeSupp">{translate key="article.suppFilesAbbrev"}</label>
 	<input type="file" name="layoutFile" size="10" class="uploadField" />
-	<input type="submit" value="{translate key="common.upload"}" class="button" />
+	<input type="submit" onclick="return checkForFileToUpload()" value="{translate key="common.upload"}" class="button" />
 </form>
 <div id="layoutComments">
 {translate key="submission.layout.layoutComments"}
