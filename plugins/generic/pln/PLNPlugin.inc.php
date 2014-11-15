@@ -176,7 +176,7 @@ class PLNPlugin extends GenericPlugin {
 	function getSetting($journalId,$settingName) {
 
 		$settingValue = parent::getSetting($journalId, $settingName);
-		if ($settingValue) return $settingValue;
+		if ($settingValue != null) return $settingValue;
 
 		// if a setting returns null, populate it with a default
 		switch ($settingName) {
