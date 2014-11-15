@@ -175,11 +175,29 @@ class PLNPlugin extends GenericPlugin {
 	 */
 	function getSetting($journalId,$settingName) {
 
-		// if there isn't a journal_uuid, make one
-		if ($settingName == 'journal_uuid') {
-			$uuid = parent::getSetting($journalId, $settingName);
-			if ($uuid) return $uuid;
-			$this->updateSetting($journalId, $settingName, $this->newUUID());
+		$settingValue = parent::getSetting($journalId, $settingName);
+		if ($settingValue) return $settingValue;
+
+		// if a setting returns null, populate it with a default
+		switch ($settingName) {
+			case 'journal_uuid':
+				$this->updateSetting($journalId, $settingName, $this->newUUID(), 'string');
+				break;
+			case 'checksum_type':
+				$this->updateSetting($journalId, $settingName, 'SHA-1', 'string');
+				break;
+			case 'object_type':
+				$this->updateSetting($journalId, $settingName, 'Issue', 'string');
+				break;
+			case 'object_threshold':
+				$this->updateSetting($journalId, $settingName, 20, 'int');
+				break;
+			case 'pln_network':
+				$this->updateSetting($journalId, $settingName, 'PKP', 'string');
+				break;
+			case 'pln_accepting':
+				$this->updateSetting($journalId, $settingName, false, 'bool');
+				break;
 		}
 		
 		return parent::getSetting($journalId,$settingName);
