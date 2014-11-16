@@ -15,7 +15,7 @@
 
 import('classes.file.JournalFileManager');
 
-require_once(dirname(__FILE__).'/../lib/bagit.php');
+require_once(dirname(__FILE__).'/bagit/bagit.php');
 
 class DepositPackage {
 
