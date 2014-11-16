@@ -35,6 +35,27 @@
 			<tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
 			
 			<tr>
+				<td class="label">{fieldLabel name="object_type" key="plugins.generic.pln.settings.object_type"}</td>
+				<td class="value">
+					<p>{translate key="plugins.generic.pln.settings.object_type_help"}</p>
+					<select id="object_type" name="object_type">
+						{foreach name=object_type_options from=$object_type_options key=object_type_key item=object_type_name}
+							<option value="{$object_type_key|escape}"{if $object_type_key == $object_type} selected{/if}>{$object_type_name|escape}</option>
+						{/foreach}
+				</td>
+			</tr>
+			
+			<tr style="display:none;">
+				<td class="label">{fieldLabel name="object_threshold" key="plugins.generic.pln.settings.object_threshold"}</td>
+				<td class="value">
+					<p>{translate key="plugins.generic.pln.settings.object_threshold_help"}</p>
+					<input type="text" id="object_threshold" name="object_threshold"  size="3" maxlength="3" class="textField" value="{$object_threshold|escape}"/>
+				</td>
+			</tr>
+
+			<tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
+
+			<tr>
 				<td class="label">{fieldLabel name="journal_uuid" key="plugins.generic.pln.settings.journal_uuid"}</td>
 				<td class="value">
 					<p>{translate key="plugins.generic.pln.settings.journal_uuid_help"}</p>
