@@ -18,14 +18,4 @@
 		<name>enabled</name>
 		<value>false</value>
 	</setting>
-	<!-- article or issue-based depositing (see constants in DepositObject) -->
-	<setting type="string">
-		<name>object_type</name>
-		<value>Issue</value>
-	</setting>
-	<!-- in the case of articles, the article threshold per deposit -->
-	<setting type="int">
-		<name>object_threshold</name>
-		<value>20</value>
-	</setting>
 </plugin_settings>
