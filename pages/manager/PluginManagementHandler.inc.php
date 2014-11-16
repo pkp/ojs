@@ -237,24 +237,11 @@ class PluginManagementHandler extends ManagerHandler {
 		$installedPlugin = $versionDao->getCurrentVersion($pluginVersion->getProductType(), $pluginVersion->getProduct(), true);
 
 		if(!$installedPlugin) {
-			$pluginLibDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . strtr($pluginVersion->getProductType(), '.', DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $pluginVersion->getProduct();
 			$pluginDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . strtr($pluginVersion->getProductType(), '.', DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $pluginVersion->getProduct();
 
 			// Copy the plug-in from the temporary folder to the
 			// target folder.
-			// Start with the library part (if any).
-			$libPath = $path . DIRECTORY_SEPARATOR . 'lib';
 			$fileManager = new FileManager();
-			if (is_dir($libPath)) {
-				if(!$fileManager->copyDir($libPath, $pluginLibDest)) {
-					$templateMgr->assign('message', 'manager.plugins.copyError');
-					return false;
-				}
-				// Remove the library part of the temporary folder.
-				$fileManager->rmtree($libPath);
-			}
-
-			// Continue with the application-specific part (mandatory).
 			if(!$fileManager->copyDir($path, $pluginDest)) {
 				$templateMgr->assign('message', 'manager.plugins.copyError');
 				return false;
@@ -272,7 +259,6 @@ class PluginManagementHandler extends ManagerHandler {
 			$installer->setCurrentVersion($pluginVersion);
 			if (!$installer->execute()) {
 				// Roll back the copy
-				if (is_dir($pluginLibDest)) $fileManager->rmtree($pluginLibDest);
 				if (is_dir($pluginDest)) $fileManager->rmtree($pluginDest);
 				$templateMgr->assign('message', array('manager.plugins.installFailed', $installer->getErrorString()));
 				return false;
@@ -338,33 +324,19 @@ class PluginManagementHandler extends ManagerHandler {
 			return false;
 		} else {
 			$pluginDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . $category . DIRECTORY_SEPARATOR . $plugin;
-			$pluginLibDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . $category . DIRECTORY_SEPARATOR . $plugin;
 
 			// Delete existing files.
 			$fileManager = new FileManager();
 			if (is_dir($pluginDest)) $fileManager->rmtree($pluginDest);
-			if (is_dir($pluginLibDest)) $fileManager->rmtree($pluginLibDest);
 
 			// Check whether deleting has worked.
-			if(is_dir($pluginDest) || is_dir($pluginLibDest)) {
+			if(is_dir($pluginDest)) {
 				$templateMgr->assign('message', 'manager.plugins.deleteError');
 				return false;
 			}
 
 			// Copy the plug-in from the temporary folder to the
 			// target folder.
-			// Start with the library part (if any).
-			$libPath = $path . DIRECTORY_SEPARATOR . 'lib';
-			if (is_dir($libPath)) {
-				if(!$fileManager->copyDir($libPath, $pluginLibDest)) {
-					$templateMgr->assign('message', 'manager.plugins.copyError');
-					return false;
-				}
-				// Remove the library part of the temporary folder.
-				$fileManager->rmtree($libPath);
-			}
-
-			// Continue with the application-specific part (mandatory).
 			if(!$fileManager->copyDir($path, $pluginDest)) {
 				$templateMgr->assign('message', 'manager.plugins.copyError');
 				return false;
@@ -418,17 +390,15 @@ class PluginManagementHandler extends ManagerHandler {
 
 		if ($installedPlugin) {
 			$pluginDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . $category . DIRECTORY_SEPARATOR . $plugin;
-			$pluginLibDest = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'pkp' . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . $category . DIRECTORY_SEPARATOR . $plugin;
 
 			//make sure plugin type is valid and then delete the files
 			if (in_array($category, PluginRegistry::getCategories())) {
 				// Delete the plugin from the file system.
 				$fileManager = new FileManager();
 				$fileManager->rmtree($pluginDest);
-				$fileManager->rmtree($pluginLibDest);
 			}
 
-			if(is_dir($pluginDest) || is_dir($pluginLibDest)) {
+			if(is_dir($pluginDest)) {
 				$templateMgr->assign('error', true);
 				$templateMgr->assign('message', 'manager.plugins.deleteError');
 			} else {
