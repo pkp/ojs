@@ -44,16 +44,6 @@
 						{/foreach}
 				</td>
 			</tr>
-			
-			<tr style="display:none;">
-				<td class="label">{fieldLabel name="object_threshold" key="plugins.generic.pln.settings.object_threshold"}</td>
-				<td class="value">
-					<p>{translate key="plugins.generic.pln.settings.object_threshold_help"}</p>
-					<input type="text" id="object_threshold" name="object_threshold"  size="3" maxlength="3" class="textField" value="{$object_threshold|escape}"/>
-				</td>
-			</tr>
-
-			<tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
 
 			<tr>
 				<td class="label">{fieldLabel name="journal_uuid" key="plugins.generic.pln.settings.journal_uuid"}</td>

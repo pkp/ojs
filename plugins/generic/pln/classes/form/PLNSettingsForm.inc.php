@@ -50,8 +50,8 @@ class PLNSettingsForm extends Form {
 		$this->setData('journal_uuid',$this->_plugin->getSetting($this->_journalId, 'journal_uuid'));
 		$this->setData('object_type',$this->_plugin->getSetting($this->_journalId, 'object_type'));
 		
-		$object_threshold = $this->_plugin->getSetting($this->_journalId, 'object_threshold');
-		$this->setData('object_threshold',($object_threshold==null?20:$object_threshold));
+		$objectThreshold = $this->_plugin->getSetting($this->_journalId, 'object_threshold');
+		$this->setData('object_threshold',($objectThreshold==null?PLN_PLUGIN_OBJECT_THRESHOLD_DEFAULT:$objectThreshold));
 		$this->setData('terms_of_use', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use')));
 		$this->setData('terms_of_use_agreement', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use_agreement')));
 	}
@@ -60,15 +60,18 @@ class PLNSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$terms_agreed = $this->getData('terms_of_use_agreement');
-		if (Request::getUserVar('terms_agreed')) {
-			foreach(array_keys(Request::getUserVar('terms_agreed')) as $term_agreed) {
-				$terms_agreed[$term_agreed] = TRUE;
+		$storedTermsAgreed = $this->getData('terms_of_use_agreement');
+		$formTermsAgreed = Request::getUserVar('terms_agreed');
+		if (is_array($formTermsAgreed)) {
+			foreach(array_keys($formTermsAgreed) as $termAgreed) {
+				$storedTermsAgreed[$termAgreed] = TRUE;
 			}
-			$this->setData('terms_of_use_agreement', $terms_agreed);
+			$this->setData('terms_of_use_agreement', $storedTermsAgreed);
 		}
-		if (Request::getUserVar('object_type')) {
-			switch (Request::getUserVar('object_type')) {
+		
+		$objectType = Request::getUserVar('object_type');
+		if ($objectType) {
+			switch ($objectType) {
 				case PLN_PLUGIN_DEPOSIT_OBJECT_ARTICLE:
 				case PLN_PLUGIN_DEPOSIT_OBJECT_ISSUE:
 					$this->setData('object_type', Request::getUserVar('object_type'));
@@ -76,8 +79,10 @@ class PLNSettingsForm extends Form {
 				default:
 			}
 		}
-		if (Request::getUserVar('object_threshold') && (is_numeric(Request::getUserVar('object_threshold')))) {
-			$this->setData('object_threshold', Request::getUserVar('object_threshold'));
+		
+		$objectThreshold = Request::getUserVar('object_threshold');
+		if ($objectThreshold && (is_numeric($objectThreshold))) {
+			$this->setData('object_threshold', $objectThreshold);
 		}	
 	}
 
@@ -115,7 +120,6 @@ class PLNSettingsForm extends Form {
 			case PLN_PLUGIN_DEPOSIT_OBJECT_ARTICLE:
 			case PLN_PLUGIN_DEPOSIT_OBJECT_ISSUE:
 				return true;
-				break;
 		}
 		return false;
 	}

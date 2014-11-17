@@ -33,6 +33,7 @@ define('PLN_PLUGIN_COL_IRI','/api/sword/2.0/col-iri');
 define('PLN_PLUGIN_CONT_IRI','/api/sword/2.0/cont-iri');
 
 define('PLN_PLUGIN_ARCHIVE_FOLDER','pln');
+define('PLN_PLUGIN_OBJECT_THRESHOLD_DEFAULT',20);
 
 define('PLN_PLUGIN_DEPOSIT_STATUS_NEW',				0x00);
 define('PLN_PLUGIN_DEPOSIT_STATUS_PACKAGED',		0x01);
