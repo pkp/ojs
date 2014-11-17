@@ -45,6 +45,8 @@
 				</td>
 			</tr>
 
+			<tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
+
 			<tr>
 				<td class="label">{fieldLabel name="journal_uuid" key="plugins.generic.pln.settings.journal_uuid"}</td>
 				<td class="value">
