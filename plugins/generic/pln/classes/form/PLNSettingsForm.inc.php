@@ -74,7 +74,7 @@ class PLNSettingsForm extends Form {
 			switch ($objectType) {
 				case PLN_PLUGIN_DEPOSIT_OBJECT_ARTICLE:
 				case PLN_PLUGIN_DEPOSIT_OBJECT_ISSUE:
-					$this->setData('object_type', Request::getUserVar('object_type'));
+					$this->setData('object_type', $objectType);
 					break;
 				default:
 			}
