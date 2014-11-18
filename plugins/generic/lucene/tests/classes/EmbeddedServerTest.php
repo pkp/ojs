@@ -1,19 +1,18 @@
 <?php
 
 /**
- * @file tests/plugins/generic/lucene/classes/EmbeddedServerTest.php
+ * @file plugins/generic/lucene/tests/classes/EmbeddedServerTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EmbeddedServerTest
- * @ingroup tests_plugins_generic_lucene_classes
+ * @ingroup plugins_generic_lucene_classes_tests
  * @see EmbeddedServer
  *
  * @brief Test class for the EmbeddedServer class
  */
-
 
 import('lib.pkp.tests.PKPTestCase');
 import('plugins.generic.lucene.classes.EmbeddedServer');

@@ -1,19 +1,18 @@
 <?php
 
 /**
- * @file tests/plugins/generic/lucene/LucenePluginTest.php
+ * @file plugins/generic/lucene/tests/LucenePluginTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LucenePluginTest
- * @ingroup tests_plugins_generic_lucene
+ * @ingroup plugins_generic_lucene_tests
  * @see LucenePlugin
  *
  * @brief Test class for the LucenePlugin class
  */
-
 
 require_mock_env('env2'); // Required for mock app locale.
 

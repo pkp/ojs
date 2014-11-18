@@ -1,23 +1,22 @@
 <?php
 
 /**
- * @defgroup tests_plugins_oaiMetadataFormats_dc Dublin Core OAI Plugin
+ * @defgroup plugins_oaiMetadataFormats_dc_tests Dublin Core OAI Plugin
  */
 
 /**
- * @file tests/plugins/oaiMetadataFormats/dc/OAIMetadataFormat_DCTest.php
+ * @file plugins/oaiMetadataFormats/dc/tests/OAIMetadataFormat_DCTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_DCTest
- * @ingroup tests_plugins_oaiMetadataFormats_dc
+ * @ingroup plugins_oaiMetadataFormats_dc_tests
  * @see OAIMetadataFormat_DC
  *
  * @brief Test class for OAIMetadataFormat_DC.
  */
-
 
 require_mock_env('env2');
 

@@ -1,21 +1,20 @@
 <?php
 
 /**
- * @file tests/plugins/metadata/dc11/Dc11MetadataPluginTest.php
+ * @file plugins/metadata/dc11/tests/Dc11MetadataPluginTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Dc11MetadataPluginTest
- * @ingroup tests_plugins_metadata_dc11
+ * @ingroup plugins_metadata_dc11_tests
  * @see Dc11MetadataPlugin
  *
  * @brief Test class for Dc11MetadataPlugin.
  */
 
-
-import('lib.pkp.tests.plugins.metadata.dc11.PKPDc11MetadataPluginTest');
+import('lib.pkp.plugins.metadata.dc11.tests.PKPDc11MetadataPluginTest');
 
 class Dc11MetadataPluginTest extends PKPDc11MetadataPluginTest {
 	/**

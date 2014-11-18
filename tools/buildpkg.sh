@@ -37,12 +37,15 @@ tools/genLocaleReport.sh					\
 tools/genTestLocale.php						\
 tools/test							\
 lib/pkp/tools/travis						\
+lib/pkp/plugins/*/*/tests					\
+plugins/*/*/tests						\
+tests								\
 lib/pkp/tests							\
 .git								\
 .openshift							\
 lib/pkp/.git							\
 lib/pkp/js/lib/pnotify/build-tools				\
-lib/pkp/js/lib/pnotify/includes
+lib/pkp/js/lib/pnotify/includes					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
 

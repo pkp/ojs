@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file tests/plugins/importexport/medra/classes/MedraWebserviceTest.php
+ * @file plugins/importexport/medra/tests/classes/MedraWebserviceTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MedraWebserviceTest
- * @ingroup tests_plugins_importexport_medra_classes
+ * @ingroup plugins_importexport_medra_tests_classes
  * @see MedraWebserviceTest
  *
  * @brief Test class for MedraWebservice.
