@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file tests/functional/plugins/generic/lucene/FunctionalLucenePluginConfigAndAdminTest.php
+ * @file plugins/generic/lucene/tests/functional/FunctionalLucenePluginConfigAndAdminTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalLucenePluginConfigAndAdminTest
- * @ingroup tests_functional_plugins_generic_lucene
+ * @ingroup plugins_generic_lucene_tests_functional
  * @see LucenePlugin
  *
  * @brief Integration/Functional test for the lucene plug-in
@@ -17,10 +17,9 @@
  * FEATURE: search configuration and index administration
  */
 
-
 require_mock_env('env1');
 
-import('tests.functional.plugins.generic.lucene.FunctionalLucenePluginBaseTestCase');
+import('plugins.generic.lucene.tests.functional.FunctionalLucenePluginBaseTestCase');
 import('plugins.generic.lucene.classes.EmbeddedServer');
 
 class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBaseTestCase {

@@ -1,18 +1,17 @@
 <?php
 
 /**
- * @file tests/functional/plugins/importexport/native/FunctionalNativeExportTest.php
+ * @file plugins/importexport/native/tests/functional/FunctionalNativeExportTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalNativeExportTest
- * @ingroup tests_functional_plugins_importexport_native
+ * @ingroup plugins_importexport_native_tests_functional
  *
  * @brief Test native OJS export.
  */
-
 
 import('lib.pkp.tests.functional.plugins.importexport.FunctionalImportExportBaseTestCase');
 

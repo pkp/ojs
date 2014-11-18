@@ -1,20 +1,19 @@
 <?php
 
 /**
- * @file tests/functional/plugins/generic/lucene/FunctionalLucenePluginBaseTestCase.inc.php
+ * @file plugins/generic/lucene/tests/functional/FunctionalLucenePluginBaseTestCase.inc.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalLucenePluginBaseTestCase
- * @ingroup tests_functional_plugins_generic_lucene
+ * @ingroup plugins_generic_lucene_tests_functional
  * @see LucenePlugin
  *
  * @brief Integration/Functional test for the lucene plug-in
  * and its dependencies (base class with common functionality).
  */
-
 
 import('lib.pkp.tests.WebTestCase');
 

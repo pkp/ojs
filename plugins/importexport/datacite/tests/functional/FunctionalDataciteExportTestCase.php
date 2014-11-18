@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file tests/functional/plugins/importexport/datacite/FunctionalDataciteExportTest.php
+ * @file plugins/importexport/datacite/tests/functional/FunctionalDataciteExportTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalDataciteExportTest
- * @ingroup tests_functional_plugins_importexport_datacite
+ * @ingroup plugins_importexport_datacite_tests_functional
  *
  * @brief Test the DataCite plug-in.
  *
@@ -19,7 +19,6 @@
  *   SO THAT these objects can be uniquely identified and
  *           discovered through public meta-data searches.
  */
-
 
 import('tests.functional.plugins.importexport.FunctionalDoiExportTest');
 import('plugins.importexport.datacite.DataciteExportPlugin');

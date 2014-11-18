@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file tests/functional/plugins/generic/lucene/FunctionalLucenePluginCustomRankingTest.php
+ * @file plugins/generic/lucene/tests/functional/FunctionalLucenePluginCustomRankingTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalLucenePluginCustomRankingTest
- * @ingroup tests_functional_plugins_generic_lucene
+ * @ingroup plugins_generic_lucene_tests_functional
  * @see LucenePlugin
  *
  * @brief Integration/Functional test for the custom ranking feature of
@@ -17,8 +17,7 @@
  * FEATURE: custom ranking
  */
 
-
-import('tests.functional.plugins.generic.lucene.FunctionalLucenePluginBaseTestCase');
+import('plugins.generic.lucene.tests.functional.FunctionalLucenePluginBaseTestCase');
 import('plugins.generic.lucene.classes.SolrWebService');
 
 class FunctionalLucenePluginCustomRankingTest extends FunctionalLucenePluginBaseTestCase {

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file tests/functional/plugins/importexport/pubIds/FunctionalPubIdsImportExportTest.php
+ * @file plugins/importexport/pubIds/tests/functional/FunctionalPubIdsImportExportTest.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalPubIdsImportExportTest
- * @ingroup tests_functional_plugins_importexport_pubIds
+ * @ingroup plugins_importexport_pubIds_tests_functional
  *
  * @brief Test the pubIds import/exoprt plugin.
  *
@@ -17,7 +17,6 @@
  *   I WANT  to be able to import and exoprt the public identifiers for issues, articles, and galleys
  *   SO THAT already used public identifiers can be integrated and managed in the system.
  */
-
 
 require_mock_env('env1');
 
