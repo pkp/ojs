@@ -42,8 +42,8 @@
 		&nbsp;
 	</li>
 	<li>
-		<h4><a href="{url op="setup" path="6"}">Step 6</a></h4>
-		Step 6 description<br/>
+		<h4><a href="{url op="setup" path="6"}">eScholarship Brand</a></h4>
+		Public site branding: logo, blurb, contact info, policies page, etc.<br/>
 		&nbsp;
 	</li>
 </ol>
