@@ -5,9 +5,15 @@
 ./lib/pkp/tests/phpunit-env1.xml
 ./lib/pkp/tests/phpunit-env2.xml
 ./lib/pkp/tests/classes/xslt
+./lib/pkp/js/lib
 ./plugins/generic/lucene/embedded
 ./plugins/generic/lucene/tests/classes/test-article.xml
+./plugins/oaiMetadataFormats/dc/tests/expectedResult.xml
+./plugins/importexport/medra/tests/functional
+./plugins/importexport/datacite/tests/functional
 ./plugins/importexport/native/sample.xml
+./plugins/importexport/native/tests/functional
 ./plugins/importexport/users/sample.xml
+./plugins/importexport/pubIds/tests/functional
 ./lib/pkp/tests/
 ./lib/pkp/js/lib/plupload
