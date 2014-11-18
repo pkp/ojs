@@ -6,6 +6,7 @@
 ./lib/pkp/tests/phpunit-env2.xml
 ./lib/pkp/tests/classes/xslt
 ./plugins/generic/lucene/embedded
+./plugins/generic/lucene/tests/classes/test-article.xml
 ./plugins/importexport/native/sample.xml
 ./plugins/importexport/users/sample.xml
 ./lib/pkp/tests/
