@@ -245,7 +245,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 	     if (!empty($article)) {		    
 			$articleID = $article->getID();
 			
-            if (!empty{$articleID)){
+            if (!empty($articleID)){
                 //check first to see if an ARK has already been assigned			
 		        $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');		       
 		        error_log($qualifiedArk . "is the ARK for" . $articleID);
