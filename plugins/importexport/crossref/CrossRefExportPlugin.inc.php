@@ -258,20 +258,23 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 					     error_log("Failed to generate an ARK for $articleID");
 					 }
 					 else{
-					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);                         						 
+					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
+						 error_log("For ARTICLE ID $articleID generated this eSchol URL: $escholURL");
+                         return $escholURL;						 
 					 }
 		        }
 				//If an ARK already exists, use that
 				else {				
 				   error_log($qualifiedArk . "is the ARK for" . $articleID);
-				   $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk); 	
+				   $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);				   
+                   return $escholURL;				   
 				}
 				
 				if (empty($escholURL)){
 				    error_log("Failed to preassign an eScholarship ARK to $articleID!");
 					return;
 				}
-   		        return $escholURL;
+   		        
 				
 			} else {
 			    error_log("CrossRefPlugin--no $articleID from which to preassign an eScholarship ARK!");
