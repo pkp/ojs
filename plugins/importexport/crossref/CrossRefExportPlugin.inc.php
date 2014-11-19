@@ -248,8 +248,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
             if (!empty($articleID)){
                 //check first to see if an ARK has already been assigned			
 		        $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');		       
-		        error_log($qualifiedArk . "is the ARK for" . $articleID);
-				$escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk); 	
+		        
 
                 //No ARK exists, so assign one now                 
 		        if (!$qualifiedArk){
@@ -262,6 +261,11 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);                         						 
 					 }
 		        }
+				//If an ARK already exists, use that
+				else {				
+				   error_log($qualifiedArk . "is the ARK for" . $articleID);
+				   $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk); 	
+				}
 				
 				if (empty($escholURL)){
 				    error_log("Failed to preassign an eScholarship ARK to $articleID!");
