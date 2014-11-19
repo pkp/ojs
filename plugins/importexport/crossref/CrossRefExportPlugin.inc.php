@@ -153,8 +153,9 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			$journalArticleNode =& CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
 			XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 
-			// Create the DOI data
-			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId()));
+			// Create the DOI data--need to get the eScholarship ARK here
+			//$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId()));
+			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), assignARK($article));
 			XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 			XMLCustomWriter::appendChild($bodyNode, $journalNode);
 		}
@@ -212,7 +213,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 					XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 
 					// DOI data node
-					$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId()));
+					//$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId
+					$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), assignARK($article));
 					XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 					XMLCustomWriter::appendChild($bodyNode, $journalNode);
 
@@ -234,7 +236,51 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 		return true;
 	}
+	/**
+	 * PreAssign and ARK to an article
+	 * @param $article OJS article for which to generate the ARK
+	 * @return $qualifiedArk, $escholURL preassigned eScholarship ARK; this will be the published ark
+	 */
+	function assignARK ($article){
+	     if (!empty($article)) {		    
+			$articleID = $article->getID();
+			
+            if (!empty{$articleID)){
+                //check first to see if an ARK has already been assigned			
+		        $qualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');		       
+		        error_log($qualifiedArk . "is the ARK for" . $articleID);
+				$escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk); 	
 
+                //No ARK exists, so assign one now                 
+		        if (!$qualifiedArk){
+		             error_log($articleID . " has no ARK in the database; will generate now!");					 
+					 $qualifiedArk = shell_exec('/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs' . $articleID);
+					 if (empty($qualifiedArk)){
+					     error_log("Failed to generate an ARK for $articleID");
+					 }
+					 else{
+					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);                         						 
+					 }
+		        }
+				
+				if (empty($escholURL)){
+				    error_log("Failed to preassign an eScholarship ARK to $articleID!");
+					return;
+				}
+   		        return $escholURL;
+				
+			} else {
+			    error_log("CrossRefPlugin--no $articleID from which to preassign an eScholarship ARK!");
+                return;				
+			}		 
+		 
+		 } else {
+		       error_log("CrossRefPlugin--no article from which to assign eScholarship ARK!");
+			   return;		  
+		   }	
+	}
+	
+	
 	/**
 	 * Execute import/export tasks using the command-line interface.
 	 * @param $args Parameters to the plugin
