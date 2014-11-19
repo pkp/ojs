@@ -155,7 +155,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 			// Create the DOI data--need to get the eScholarship ARK here
 			//$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId()));
-			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), assignARK($article));
+			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), $this->assignARK($article));
 			XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 			XMLCustomWriter::appendChild($bodyNode, $journalNode);
 		}
@@ -214,7 +214,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 					// DOI data node
 					//$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId
-					$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), assignARK($article));
+					$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), $this->assignARK($article));
 					XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 					XMLCustomWriter::appendChild($bodyNode, $journalNode);
 
