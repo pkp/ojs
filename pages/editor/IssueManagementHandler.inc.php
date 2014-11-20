@@ -719,6 +719,7 @@ class IssueManagementHandler extends EditorHandler {
 	
 	/**
 	 * Export issue to eScholarship front-end
+	 * If Journal has a DOI, then generate CrossRef metadata and send to EZID
 	 */
 	function publishIssueToEschol($journal, $issue) {
 		//
@@ -762,6 +763,22 @@ class IssueManagementHandler extends EditorHandler {
 		else {
 		  error_log("AIP publication only");
 		}
+		
+		//
+		//FOR JOURNALS WITH A DOI, GENERATE CROSSREF FILES AND SEND TO EZID
+		//
+
+		if ($journal->getSetting('doiPrefix') != ""){
+		    error_log("$journalTitle DOI Prefix is $journal->getSetting('doiPrefix') so generating CrossRef files.");
+			import('plugins.importexport.native.CrossRefExportPlugin');
+			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
+			$crossRefIssueNode =& CrossRefExportPlugin::exportIssues($journal, $issue, $outputFile = null));
+			
+		}
+		else {
+		   error_log("$journalTitle does not have a DOI, so no CrossRef/EZID export.");
+		}
+		
 		
 		return true;
 		//exec("/apps/subi/subi/ojsConvert/convert.py $outputFile",$conversionOutput,$returnValue); //returns 0 on success
