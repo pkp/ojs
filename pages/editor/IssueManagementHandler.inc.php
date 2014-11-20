@@ -772,7 +772,7 @@ class IssueManagementHandler extends EditorHandler {
 		    error_log("$journalTitle DOI Prefix is $journal->getSetting('doiPrefix') so generating CrossRef files.");
 			import('plugins.importexport.native.CrossRefExportPlugin');
 			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
-			$crossRefIssueNode =& CrossRefExportPlugin::exportIssues($journal, $issue, $outputFile = null));
+			$crossRefIssueNode =& CrossRefExportPlugin::exportIssues($journal, $issue, $outputFile = null);
 			
 		}
 		else {
