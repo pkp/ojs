@@ -2736,6 +2736,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$issueId = (int) $request->getUserVar('issueId');
 		$this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
+		$this->setupTemplate(true, $articleId); // we have to do this in order for Locale to be set up properly for translation.
+
 		$journal =& $request->getJournal();
 		$submission =& $this->submission;
 
@@ -2776,13 +2778,29 @@ class SubmissionEditHandler extends SectionEditorHandler {
 					}
 				}
 			}
+
+			// Add log entry
+                        $user =& $request->getUser();
+                        import('classes.article.log.ArticleLog');
+                        import('classes.article.log.ArticleEventLogEntry');
+                        $issueName = $issue->getIssueIdentification(); 
+                        ArticleLog::logEvent($articleId, ARTICLE_LOG_ISSUE_ASSIGN, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.schedule.assign', Array('issueName' => $issueName, 'assignerName' => $user->getFullName())); 
+
 		} else {
 			if ($publishedArticle) {
+                	        // Add log entry indicating that article was "unscheduled"
+                        	$user =& $request->getUser();
+                        	import('classes.article.log.ArticleLog');
+                        	import('classes.article.log.ArticleEventLogEntry');
+                        	ArticleLog::logEvent($articleId, ARTICLE_LOG_ISSUE_UNASSIGN, ARTICLE_LOG_TYPE_DEFAULT, 0, 'log.schedule.unassign', Array('assignerName' => $user->getFullName()));
+
 				// This was published elsewhere; make sure we don't
 				// mess up sequencing information.
 				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $publishedArticle->getIssueId());
 				$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
+                                
 			}
+                        
 		}
 		$submission->stampStatusModified();
 
