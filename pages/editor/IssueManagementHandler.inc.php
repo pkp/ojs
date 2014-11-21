@@ -765,15 +765,28 @@ class IssueManagementHandler extends EditorHandler {
 		}
 		
 		//
-		//FOR JOURNALS WITH A DOI, GENERATE CROSSREF FILES AND SEND TO EZID
+		//FOR JOURNALS WITH A DOI, GENERATE CROSSREF FILES by submitting each article to the plugin AND SEND TO EZID
 		//
 
 		if ($journal->getSetting('doiPrefix') != ""){
 		    error_log("$journalTitle DOI Prefix is $journal->getSetting('doiPrefix') so generating CrossRef files.");
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
 			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
-			$issues = $issue; //plugin expected $issues variable
-			$crossRefIssueNode =& CrossRefExportPlugin::exportIssues($journal, $issues, $outputFile = null);
+			//$result = ArticleSearch::formatResults($articleIds);
+			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
+		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId);
+		    foreach($articles as $article) {
+			    $result = $article->getId();
+				if (empty($result)){
+				   error_log("No articles in TOC!");
+				}
+				else {$crossRefIssueNode =& CrossRefExportPlugin::exportArticles ($journal, $result, $outputFile="$result_crossref.xml");
+				}
+			} 	
+			
+			
+			
+
 			
 		}
 		else {
