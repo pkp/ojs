@@ -777,10 +777,11 @@ class IssueManagementHandler extends EditorHandler {
 		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		    foreach($articles as $article) {
 			    $result = $article->getId();
+				$output = $result . "_crossref.xml";
 				if (empty($result)){
 				   error_log("No articles in TOC!");
 				}
-				else {$crossRefIssueNode =& CrossRefExportPlugin::exportArticles ($journal, $result, $outputFile="$result_crossref.xml");
+				else {$crossRefIssueNode =& CrossRefExportPlugin::exportArticles ($journal, $result, $output);
 				}
 			} 				
 		}
