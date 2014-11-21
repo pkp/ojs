@@ -769,7 +769,7 @@ class IssueManagementHandler extends EditorHandler {
 		//
 
 		if ($journal->getSetting('doiPrefix') != ""){
-		    error_log("$journalTitle DOI Prefix is $journal->getSetting('doiPrefix') so generating CrossRef files.");
+		    error_log("$journalTitle DOI Prefix is" . $journal->getSetting('doiPrefix') ." so generating CrossRef files.");
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
 			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
 			//$result = ArticleSearch::formatResults($articleIds);
@@ -782,12 +782,7 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				else {$crossRefIssueNode =& CrossRefExportPlugin::exportArticles ($journal, $result, $outputFile="$result_crossref.xml");
 				}
-			} 	
-			
-			
-			
-
-			
+			} 				
 		}
 		else {
 		   error_log("$journalTitle does not have a DOI, so no CrossRef/EZID export.");
