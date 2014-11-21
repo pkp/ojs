@@ -767,9 +767,9 @@ class IssueManagementHandler extends EditorHandler {
 		//
 		//FOR JOURNALS WITH A DOI, GENERATE CROSSREF FILES by submitting each article to the plugin AND SEND TO EZID
 		//
-
-		if ($journal->getSetting('doiPrefix') != ""){
-		    error_log("$journalTitle DOI Prefix is" . $journal->getSetting('doiPrefix') ." so generating CrossRef files.");
+        $doiPrefix = $journal->getSetting('doiPrefix');
+		if ($doiPrefix != ""){
+		    error_log("$journalTitle DOI Prefix is $doiPrefix so generating CrossRef files.");
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
 			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
 			//$result = ArticleSearch::formatResults($articleIds);
