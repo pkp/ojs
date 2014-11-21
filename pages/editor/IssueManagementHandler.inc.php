@@ -774,7 +774,7 @@ class IssueManagementHandler extends EditorHandler {
 			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
 			//$result = ArticleSearch::formatResults($articleIds);
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
-		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId);
+		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		    foreach($articles as $article) {
 			    $result = $article->getId();
 				if (empty($result)){
