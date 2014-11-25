@@ -780,7 +780,7 @@ class IssueManagementHandler extends EditorHandler {
 			    $results = $article->getId();
 				$output = $results . "_crossref.xml";
 				error_log("CrossRef file should be called $output");
-				if (empty($result)){
+				if (empty($results)){
 				   error_log("No articles in TOC!");
 				}
 				else {$crossRefObject->exportArticles($journal, $results, $output);
