@@ -777,8 +777,9 @@ class IssueManagementHandler extends EditorHandler {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
 		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		    foreach($articles as $article) {
+			    $articleID = $article->getId();
 			    $results = ArticleSearch::formatResults($article->getId());			    
-				$output = $results . "_crossref.xml";
+				$output = $articleID . "_crossref.xml";
 				error_log("CrossRef file should be called $output");
 				if (empty($results)){
 				   error_log("No articles in TOC!");
