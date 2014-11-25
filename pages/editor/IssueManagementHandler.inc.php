@@ -771,8 +771,7 @@ class IssueManagementHandler extends EditorHandler {
 		if ($doiPrefix != ""){
 		    error_log("$journalTitle DOI Prefix is $doiPrefix so generating CrossRef files.");
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
-			$crossRefObject = new CrossRefExportPlugin;
-			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
+			$crossRefObject = new CrossRefExportPlugin();			
 			//$result = ArticleSearch::formatResults($articleIds);
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
 		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
@@ -783,7 +782,8 @@ class IssueManagementHandler extends EditorHandler {
 				if (empty($result)){
 				   error_log("No articles in TOC!");
 				}
-				else {$crossRefObject->exportArticles($journal, $results, "mytest.xml");				
+				else {$crossRefObject->exportArticles($journal, $results, "mytest.xml");
+				
 				}
 			} 				
 		}
