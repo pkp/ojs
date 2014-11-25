@@ -777,7 +777,7 @@ class IssueManagementHandler extends EditorHandler {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
 		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		    foreach($articles as $article) {
-			    $results = array($article->getId());//need to pop this one item into an array, not a string
+			    $results = ArticleSearch::formatResults($article->getId());			    
 				$output = $results . "_crossref.xml";
 				error_log("CrossRef file should be called $output");
 				if (empty($results)){
