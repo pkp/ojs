@@ -778,7 +778,7 @@ class IssueManagementHandler extends EditorHandler {
 		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		    foreach($articles as $article) {
 			    $articleID = $article->getId();
-			    $results = ArticleSearch::formatResults($article->getId());			    
+			    $results = ArticleSearch::formatResults($articleID);//not populating $results properly			    
 				$output = $articleID . "_crossref.xml";
 				error_log("CrossRef file should be called $output");
 				if (empty($results)){
