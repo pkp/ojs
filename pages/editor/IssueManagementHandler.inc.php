@@ -772,14 +772,13 @@ class IssueManagementHandler extends EditorHandler {
 		    error_log("$journalTitle DOI Prefix is $doiPrefix so generating CrossRef files.");
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
 			$crossRefObject = new CrossRefExportPlugin();
-			error_log(getcwd());
-            $crossRefObject->pluginPath="/apps/subi/apache/htdocs/ojs-lschiff/plugins/importexport/crossref/";
+            $crossRefObject->pluginPath="./plugins/importexport/crossref/";
 			//$result = ArticleSearch::formatResults($articleIds);
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
 		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		    foreach($articles as $article) {
-			    $result = $article->getId();
-				$output = $result . "_crossref.xml";
+			    $results = $article->getId();
+				$output = $results . "_crossref.xml";
 				error_log("CrossRef file should be called $output");
 				if (empty($result)){
 				   error_log("No articles in TOC!");
