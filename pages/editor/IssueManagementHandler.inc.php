@@ -782,7 +782,7 @@ class IssueManagementHandler extends EditorHandler {
 				if (empty($result)){
 				   error_log("No articles in TOC!");
 				}
-				else {$crossRefIssueNode =& CrossRefExportPlugin::exportArticles ($journal, $result, $output);//not working
+				else {$crossRefIssueNode =& CrossRefExportPlugin::exportArticles ($journal, $result, "mytest.xml");//not working
 				}
 			} 				
 		}
