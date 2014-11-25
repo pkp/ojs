@@ -771,8 +771,8 @@ class IssueManagementHandler extends EditorHandler {
 		if ($doiPrefix != ""){
 		    error_log("$journalTitle DOI Prefix is $doiPrefix so generating CrossRef files.");
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
+			//import('plugins.importexport.crossref.CrossRefExportDom');
 			$crossRefObject = new CrossRefExportPlugin;
-			import('plugins.importexport.crossref.CrossRefExportDom');
 			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
 			//$result = ArticleSearch::formatResults($articleIds);
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
