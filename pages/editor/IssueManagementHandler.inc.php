@@ -778,8 +778,8 @@ class IssueManagementHandler extends EditorHandler {
 		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		    foreach($articles as $article) {
 			    $articleID = array($article->getId());
-			    $result = ArticleSearch::formatResults($articleID);//not populating $results properly			    
-				$output = $articleID . "_crossref.xml";
+			    $result = ArticleSearch::formatResults($articleID);
+				$output = array_shift($articleID) . "_crossref.xml";
 				error_log("CrossRef file should be called $output");
 				if (empty($result)){
 				   error_log("No articles in TOC!");
