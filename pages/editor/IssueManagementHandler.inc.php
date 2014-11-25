@@ -772,6 +772,7 @@ class IssueManagementHandler extends EditorHandler {
 		    error_log("$journalTitle DOI Prefix is $doiPrefix so generating CrossRef files.");
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
 			$crossRefObject = new CrossRefExportPlugin();
+			error_log(getcwd());
             $crossRefObject->pluginPath="/apps/subi/apache/htdocs/ojs-lschiff/plugins/importexport/crossref/";
 			//$result = ArticleSearch::formatResults($articleIds);
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
