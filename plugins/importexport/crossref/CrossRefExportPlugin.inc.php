@@ -116,8 +116,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportArticles(&$journal, &$results, $outputFile = null) {
-		$this->import('CrossRefExportDom');
-
+        $this->import('CrossRefExportDom');
 		$doc =& CrossRefExportDom::generateCrossRefDom();
 		$doiBatchNode =& CrossRefExportDom::generateDoiBatchDom($doc);
 

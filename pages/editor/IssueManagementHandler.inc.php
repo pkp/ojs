@@ -771,6 +771,7 @@ class IssueManagementHandler extends EditorHandler {
 		if ($doiPrefix != ""){
 		    error_log("$journalTitle DOI Prefix is $doiPrefix so generating CrossRef files.");
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
+			$crossRefObject = new CrossRefExportPlugin;
 			import('plugins.importexport.crossref.CrossRefExportDom');
 			$crossRefDoc =& XMLCustomWriter::createDocument();//not sure if I need to do this;
 			//$result = ArticleSearch::formatResults($articleIds);
@@ -783,7 +784,7 @@ class IssueManagementHandler extends EditorHandler {
 				if (empty($result)){
 				   error_log("No articles in TOC!");
 				}
-				else {$crossRefIssueNode =& CrossRefExportPlugin::exportArticles($journal, $results, "mytest.xml");				
+				else {$crossRefObject->exportArticles($journal, $results, "mytest.xml");				
 				}
 			} 				
 		}
