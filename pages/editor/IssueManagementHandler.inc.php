@@ -773,7 +773,6 @@ class IssueManagementHandler extends EditorHandler {
 			import('plugins.importexport.crossref.CrossRefExportPlugin');
 			$crossRefObject = new CrossRefExportPlugin();
             $crossRefObject->pluginPath="./plugins/importexport/crossref/";
-			//$result = ArticleSearch::formatResults($articleIds);
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
 		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		    foreach($articles as $article) {
@@ -785,12 +784,13 @@ class IssueManagementHandler extends EditorHandler {
 				   error_log("No articles in TOC!");
 				}
 				else {
-				    $crossRefObject->exportArticles($journal, $result, $output);				
+				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
+                    //I need to get the object returned to me.					
 				}
 			} 				
 		}
 		else {
-		   error_log("$journalTitle does not have a DOI, so no CrossRef/EZID export.");
+		   error_log("$journalTitle does not have a DOI, so no CrossRef/EZID export.");		   
 		}
 		
 		

@@ -171,6 +171,16 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			header("Cache-Control: private");
 			header("Content-Disposition: attachment; filename=\"crossref.xml\"");
 			XMLCustomWriter::printXML($doc);
+			
+			//if the journal has a doi prefix, then dump the file to XML and pass it back as a return object.
+			$doiPrefix = $journal->getSetting('doiPrefix');
+		    if ($doiPrefix != ""){
+			    $crossRefDoc = XMLCustomWriter::getXML($doc);//$xml = $doc->toXml();
+				return $crossRefDoc;
+			}
+			else {
+			    error_log("$journalTitle does not have a DOI, so no CrossRef/EZID export.");	
+			}
 		}
 		return true;
 	}
