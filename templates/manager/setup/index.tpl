@@ -42,8 +42,8 @@
 		&nbsp;
 	</li>
 	<li>
-		<h4><a href="{url op="setup" path="6"}">eScholarship Brand</a></h4>
-		Public site branding: logo, blurb, contact info, policies page, etc.<br/>
+		<h4><a href="{url op="setup" path="6"}">Public-facing Site Setup</a></h4>
+		Logo, blurb, contact info, policies page, additional informational pages.<br/>
 		&nbsp;
 	</li>
 </ol>

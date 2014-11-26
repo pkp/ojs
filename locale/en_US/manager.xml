@@ -238,7 +238,7 @@
 	<message key="manager.setup.coverageResearchSampleProvideExamples">Provide examples of research sample characteristics for this field</message>
 	<message key="manager.setup.currentIssue">Current issue</message>
 	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>
-	<message key="manager.setup.customizingEScholarshipBrand">Step 6. Customizing the eScholarship Brand</message>
+	<message key="manager.setup.customizingEScholarshipBrand">Step 6. Public-facing Site Setup</message>
 	<message key="manager.setup.customTags">Custom tags</message>
 	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
 	<message key="manager.setup.details">Details</message>

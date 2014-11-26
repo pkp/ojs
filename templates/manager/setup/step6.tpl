@@ -9,7 +9,7 @@
 {include file="manager/setup/setupHeader.tpl"}
 
 <div id="escholBrand">
-<h3>6.1 eScholarship Brand</h3>
+<h3>6.1 Public-facing Site Setup</h3>
 
 <iframe src="{$subiURL}" width="1000" height="800" frameBorder="0" seamless='seamless'></iframe>
 
