@@ -48,9 +48,9 @@ class LucenePluginTest extends DatabaseTestCase {
 	 * @see PKPTestCase::setUp()
 	 */
 	protected function setUp() {
-		$this->markTestSkipped('Needs fixing.');
-
 		parent::setUp();
+
+		$this->markTestSkipped('Needs fixing.');
 
 		// Instantiate the plug-in for testing.
 		$this->mockRequest();
