@@ -11,7 +11,6 @@
 	// Attach the JS file tab handler.
 	$(function() {ldelim}
 		$('#editIssueTabs').pkpHandler('$.pkp.controllers.TabHandler');
-		{rdelim});
 	{rdelim});
 </script>
 <div id="editIssueTabs">
