@@ -128,7 +128,7 @@ class CustomThemeSettingsForm extends Form {
 		if (!$customThemePerJournal && !$this->_canUsePluginPath()) {
 			$customThemePerJournal = true;
 		}
-		$plugin->updateSetting($journalId, 'customThemePerJournal', $customThemePerJournal, 'boolean');
+		$plugin->updateSetting($journalId, 'customThemePerJournal', $customThemePerJournal, 'bool');
 		if ($customThemePerJournal) {
 			$fileManager->writeJournalFile($journalId, $this->plugin->getStylesheetFilename(), $css);
 		} else {
