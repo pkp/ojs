@@ -169,7 +169,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			fwrite($h, XMLCustomWriter::getXML($doc));
 			//$outputStream = file_get_contents($h);
 			fclose($h);
-			return $doc;
+			return $h;
 		} else {
 			header("Content-Type: application/xml");
 			header("Cache-Control: private");
