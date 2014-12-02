@@ -778,14 +778,39 @@ class IssueManagementHandler extends EditorHandler {
 		    foreach($articles as $article) {
 			    $articleID = array($article->getId());
 			    $result = ArticleSearch::formatResults($articleID);
-				$output = array_shift($articleID) . "_crossref.xml";
+				$singleArticleID = array_shift($articleID);
+				$output = $singleArticleID . "_crossref.xml";
 				error_log("CrossRef file should be called $output");
 				if (empty($result)){
 				   error_log("No articles in TOC!");
 				}
 				else {
 				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
-                    //I need to get the object returned to me.					
+                     error_log($crossRefXML);
+					 $qualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $articleID");
+					 if (empty($qualifiedArk)){
+					     error_log("No ARK for $articleID");
+					 }
+					 else{
+					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
+						 error_log("For ARTICLE ID $articleID eSchol URL is $escholURL");				 
+					 }
+					 
+                     //now pass this to EZID:
+					 //--using the "create" operation; 
+					 //--Set the "_crossref" reserved metadata element to "yes".
+					 //--Set the "_profile" reserved metadata element to "crossref"
+					 //e.g. _crossref: yes
+                     //_profile: crossref
+                     //_target: http://... (Do I need to pull the eScholarship URL out?)
+                     //crossref: CrossRef XMl file
+                    if ($crossRefXML !=""){
+                      //$input = '_target: url';I'm not sure what this is
+                      $ch = curl_init();
+                    }					
+					else {
+					   error_log("$journalTitle | $output didn't get created");
+					}
 				}
 			} 				
 		}

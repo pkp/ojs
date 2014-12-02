@@ -155,9 +155,11 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 			// Create the DOI data--need to get the eScholarship ARK here
 			//$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId()));
-			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), $this->assignARK($article));
+			$ark = $this->assignARK($article);
+			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), $ark);
 			XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 			XMLCustomWriter::appendChild($bodyNode, $journalNode);
+			
 		}
 
 
@@ -172,7 +174,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			header("Content-Disposition: attachment; filename=\"crossref.xml\"");
 			XMLCustomWriter::printXML($doc);
 			
-			//if the journal has a doi prefix, then dump the file to XML and pass it back as a return object.
+			//if the journal has a DOI prefix, then dump the file to XML and pass it back as a return object.
 			$doiPrefix = $journal->getSetting('doiPrefix');
 		    if ($doiPrefix != ""){
 			    $crossRefDoc = XMLCustomWriter::getXML($doc);//$xml = $doc->toXml();
