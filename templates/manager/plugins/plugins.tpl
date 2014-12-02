@@ -18,7 +18,7 @@
 		{foreach from=$plugins item=plugin}
 			{if $plugin->getCategory() != $category}
 				{assign var=category value=$plugin->getCategory()}
-				<li>&#187; <a href="{url path=$category|escape}">{translate key="plugins.categories.$category"}</a></li>
+				<li><a href="{url path=$category|escape}">{translate key="plugins.categories.$category"}</a></li>
 			{/if}
 		{/foreach}
 		{if !$preventManagerPluginManagement}
