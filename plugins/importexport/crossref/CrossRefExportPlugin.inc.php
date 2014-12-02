@@ -177,6 +177,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			//if the journal has a DOI prefix, then dump the file to XML and pass it back as a return object.
 			$doiPrefix = $journal->getSetting('doiPrefix');
 		    if ($doiPrefix != ""){
+			    error_log("Journal has a DOI prefix so creating CrossRef XML");
 			    $crossRefDoc = XMLCustomWriter::getXML($doc);//$xml = $doc->toXml();
 				return $crossRefDoc;
 			}

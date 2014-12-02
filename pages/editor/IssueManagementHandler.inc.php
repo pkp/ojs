@@ -805,8 +805,23 @@ class IssueManagementHandler extends EditorHandler {
                      //_target: http://... (Do I need to pull the eScholarship URL out?)
                      //crossref: CrossRef XMl file
                     if ($crossRefXML !=""){
-                      //$input = '_target: url';I'm not sure what this is
+					   error_log("crossRefXML is not empty so sending to EZID");
+					  /*$input = "_crossref: yes _profile: crossref _target: $eschol_url crossref: $crossRefXML";
                       $ch = curl_init();
+                      curl_setopt($ch, CURLOPT_URL, 'https://ezid.cdlib.org/id/identifier');
+                      curl_setopt($ch, CURLOPT_USERPWD, 'apitest:apitest');
+                      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+                      curl_setopt($ch, CURLOPT_HTTPHEADER,
+                      array('Content-Type: text/plain; charset=UTF-8',
+                             'Content-Length: ' . strlen($input)));
+                      curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
+                      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                      $output = curl_exec($ch);
+                      error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
+                      error_log($output);
+                      curl_close($ch)*/
+					  
+					  
                     }					
 					else {
 					   error_log("$journalTitle | $output didn't get created");
