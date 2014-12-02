@@ -786,14 +786,14 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				else {
 				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
-                     error_log($crossRefXML);
-					 $qualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $articleID");
+                     error_log("XML" . $crossRefXML);
+					 $qualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID");
 					 if (empty($qualifiedArk)){
 					     error_log("No ARK for $articleID");
 					 }
 					 else{
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
-						 error_log("For ARTICLE ID $articleID eSchol URL is $escholURL");				 
+						 error_log("For ARTICLE ID $singleArticleID eSchol URL is $escholURL");				 
 					 }
 					 
                      //now pass this to EZID:
