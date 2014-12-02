@@ -17,7 +17,7 @@
 
 <h3>{translate key="plugins.importexport.METSExport.export"}</h3>
 <ul class="plain">
-	<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.METSExport.export.issues"}</a></li>
+	<li><a href="{plugin_url path="issues"}">{translate key="plugins.importexport.METSExport.export.issues"}</a></li>
 </ul>
 
 {include file="common/footer.tpl"}

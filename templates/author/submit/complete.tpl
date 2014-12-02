@@ -24,7 +24,7 @@
 	{include file=$paymentButtonsTemplate orientation="vertical"}
 {/if}
 
-<p>&#187; <a href="{url op="index"}">{translate key="author.track"}</a></p>
+<p><a href="{url op="index"}">{translate key="author.track"}</a></p>
 </div>
 
 {include file="common/footer.tpl"}

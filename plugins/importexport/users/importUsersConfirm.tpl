@@ -121,6 +121,6 @@
 </p>
 {/if}
 
-<p>&#187; <a href="{url page="manager"}">{translate key="manager.journalManagement"}</a></p>
+<p><a href="{url page="manager"}">{translate key="manager.journalManagement"}</a></p>
 </div>
 {include file="common/footer.tpl"}

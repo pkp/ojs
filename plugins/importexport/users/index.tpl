@@ -20,7 +20,7 @@
 <ul class="plain">
 	<li>
 		<form action="{plugin_url path="exportByRole"}" method="post">
-			&#187; {translate key="plugins.importexport.users.export.exportByRole"}<br/>
+			{translate key="plugins.importexport.users.export.exportByRole"}<br/>
 			&nbsp;&nbsp;&nbsp;&nbsp;<select name="roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
 					{if $roleKey != ''}<option value="{$roleKey|escape}">{translate key=$roleOption}</option>{/if}
@@ -31,7 +31,7 @@
 		</form>
 		&nbsp;
 	</li>
-	<li>&#187; <a href="{plugin_url path="exportAll"}">{translate key="plugins.importexport.users.export.exportAllUsers"}</a></li>
+	<li><a href="{plugin_url path="exportAll"}">{translate key="plugins.importexport.users.export.exportAllUsers"}</a></li>
 </ul>
 </div>
 <div id="importUsers">
