@@ -20,7 +20,7 @@
 </div>
 
 {if $backLink}
-<p>&#187; <a href="{$backLink}">{translate key="$backLinkLabel"}</a></p>
+<p><a href="{$backLink}">{translate key="$backLinkLabel"}</a></p>
 {/if}
 
 {include file="common/footer.tpl"}

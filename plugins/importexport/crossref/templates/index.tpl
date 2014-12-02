@@ -22,9 +22,9 @@
 	<p>{translate key="plugins.importexport.common.export.unAvailable"}</p>
 {else}
 	<ul class="plain">
-		<li>&#187; <a href="{plugin_url path="all"}">{translate key="plugins.importexport.crossref.export.unregistered"}</a></li>
-		<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.common.export.issues"}</a></li>
-		<li>&#187; <a href="{plugin_url path="articles"}">{translate key="plugins.importexport.common.export.articles"}</a></li>
+		<li><a href="{plugin_url path="all"}">{translate key="plugins.importexport.crossref.export.unregistered"}</a></li>
+		<li><a href="{plugin_url path="issues"}">{translate key="plugins.importexport.common.export.issues"}</a></li>
+		<li><a href="{plugin_url path="articles"}">{translate key="plugins.importexport.common.export.articles"}</a></li>
 	</ul>
 {/if}
 

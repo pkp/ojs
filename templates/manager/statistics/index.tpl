@@ -27,7 +27,7 @@
 	
 	<ul class="plain">
 	{foreach from=$reportPlugins key=key item=plugin}
-		<li>&#187; <a href="{url op="report" path=$plugin->getName()|escape}">{$plugin->getDisplayName()|escape}</a></li>
+		<li><a href="{url op="report" path=$plugin->getName()|escape}">{$plugin->getDisplayName()|escape}</a></li>
 	{/foreach}
 	</ul>
 	{if !empty($availableMetricTypes)}	
