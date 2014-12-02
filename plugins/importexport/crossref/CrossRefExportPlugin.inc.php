@@ -165,11 +165,13 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 		// dump out the results
 		if (!empty($outputFile)) {
+		error_log("In first XML output block");
 			if (($h = fopen($outputFile, 'w'))===false) return false;
 			fwrite($h, XMLCustomWriter::getXML($doc));
 			return $h;
 			fclose($h);
 		} else {
+				error_log("In second XML output block");
 			header("Content-Type: application/xml");
 			header("Cache-Control: private");
 			header("Content-Disposition: attachment; filename=\"crossref.xml\"");
