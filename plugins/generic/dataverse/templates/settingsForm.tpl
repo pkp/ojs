@@ -35,7 +35,7 @@
 		<p>{translate key="plugins.generic.dataverse.settings.sectionPoliciesDescription"}</p>
 		<ul class="plain">
 			{foreach from=$sections item=section}
-				<li>&#187; <a href="{url op='editSection' path=$section->getId()}" target="_blank">{$section->getLocalizedTitle()}</a></li>
+				<li><a href="{url op='editSection' path=$section->getId()}" target="_blank">{$section->getLocalizedTitle()}</a></li>
 			{/foreach}
 		</ul>
 		
