@@ -83,7 +83,7 @@ class DataversePlugin extends GenericPlugin {
 			HookRegistry::register('suppfileform::readuservars', array(&$this, 'suppFileFormReadUserVars'));
 			HookRegistry::register('suppfileform::execute', array(&$this, 'suppFileFormExecute'));
 			
-			// Notify ArticleDAO of article metadata field (external data citation) in suppfile form
+			// Notify ArticleDAO of additional metadata fields in suppfile form
 			HookRegistry::register('articledao::getAdditionalFieldNames', array(&$this, 'articleMetadataFormFieldNames'));
 			
 			// Validate suppfile forms: warn if Dataverse deposit selected but no file uploaded
@@ -626,12 +626,12 @@ class DataversePlugin extends GenericPlugin {
 	}
 	
 	/**
-	 * Hook callback: notify ArticleDAO of external data citation field added to
-	 * suppfile forms.
+	 * Hook callback: notify ArticleDAO of fields added to suppfile forms.
 	 * @see ArticleDAO::getAdditionalFieldNames()
 	 */
 	function articleMetadataFormFieldNames($hookName, $args) {
 		$fields =& $args[1];
+		$fields[] = 'studyDescription';
 		$fields[] = 'externalDataCitation';
 		return false;		 
 	}
@@ -720,7 +720,8 @@ class DataversePlugin extends GenericPlugin {
 		if (!isset($article)) {
 			$article = $articleDao->getArticle($form->articleId, $journal->getId());
 		}
-		// Add or edit external data citation field, if missed in previous step
+		// Dataset metadata
+		$form->setData('studyDescription', $article->getLocalizedData('studyDescription'));
 		$form->setData('externalDataCitation', $article->getLocalizedData('externalDataCitation'));
 		
 		// Set data publishing option for this suppfile:
@@ -745,6 +746,7 @@ class DataversePlugin extends GenericPlugin {
 	function suppFileFormReadUserVars($hookName, $args) {
 		$form =& $args[0];
 		$vars =& $args[1];
+		$vars[] = 'studyDescription';
 		$vars[] = 'externalDataCitation';
 		$vars[] = 'publishData';
 		return false;
@@ -763,6 +765,7 @@ class DataversePlugin extends GenericPlugin {
 		$journal =& Request::getJournal();		
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($form->articleId, $journal->getId());
+		$article->setData('studyDescription', $form->getData('studyDescription'), $form->getFormLocale());
 		$article->setData('externalDataCitation', $form->getData('externalDataCitation'), $form->getFormLocale());
 		$articleDao->updateArticle($article);
 		
@@ -806,9 +809,9 @@ class DataversePlugin extends GenericPlugin {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $form->article;
 		
-		// External data citation: field is article metadata, but provided in 
-		// suppfile form as well, at point of data file deposit, to help support
-		// data publishing decisions
+		// Dataset metadata: fields stored with article metadata, but provided in suppfile
+		// form, at point of data deposit, to support data publishing
+		$article->setData('studyDescription', $form->getData('studyDescription'), $form->getFormLocale());
 		$article->setData('externalDataCitation', $form->getData('externalDataCitation'), $form->getFormLocale());
 		$articleDao->updateArticle($article);
 		
@@ -1159,34 +1162,44 @@ class DataversePlugin extends GenericPlugin {
 	 * @return DataversePackager
 	 */
 	function createMetadataPackage($article) {
-		$package = new DataversePackager();
-		// Article metadata
-		$package->addMetadata('title', $article->getLocalizedTitle());
-		$package->addMetadata('description', $article->getLocalizedAbstract());
-		foreach ($article->getAuthors() as $author) {
-			$package->addMetadata('creator', $author->getFullName(true));
-		}
-		// subject: academic disciplines
-		$split = '/\s*'. DATAVERSE_PLUGIN_SUBJECT_SEPARATOR .'\s*/';
-		foreach(preg_split($split, $article->getLocalizedDiscipline(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$package->addMetadata('subject', $subject);
-		}
-		// subject: subject classifications
-		foreach(preg_split($split, $article->getLocalizedSubjectClass(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$package->addMetadata('subject', $subject);
-		}
-		// subject:	 keywords		 
-		foreach(preg_split($split, $article->getLocalizedSubject(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-			$package->addMetadata('subject', $subject);
-		}
-		// geographic coverage
-		foreach(preg_split($split, $article->getLocalizedCoverageGeo(), NULL, PREG_SPLIT_NO_EMPTY) as $coverage) {
-			$package->addMetadata('coverage', $coverage);
-		}
-		// Fetch journal for published article and journal metadata
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal =& $journalDao->getById($article->getJournalId());
-		// Published articles
+		$package = new DataversePackager();
+		
+		// Article metadata
+		$package->addMetadata('title', $article->getLocalizedTitle());
+		$package->addMetadata('description', 
+						$article->getLocalizedData('studyDescription') ? 
+						$article->getLocalizedData('studyDescription') :
+						$article->getLocalizedAbstract()
+		);
+		foreach ($article->getAuthors() as $author) {
+			$package->addMetadata('creator', $author->getFullName(true), array('affiliation' => $this->_formatAffiliation($author)));
+		}
+		
+		// Article metadata: fields with multiple values
+		$pattern = '/\s*'. DATAVERSE_PLUGIN_SUBJECT_SEPARATOR .'\s*/';
+		foreach(String::regexp_split($pattern, $article->getLocalizedCoverageGeo()) as $coverage) {
+			if ($coverage) $package->addMetadata('coverage', $coverage);
+		}
+		// Article metadata: filter subject(s) to prevent repeated values in dataset subject field
+		$subjects = array();
+		foreach(String::regexp_split($pattern, $article->getLocalizedDiscipline()) as $subject) {
+			if ($subject) $subjects[String::strtolower($subject)] = $subject;
+		}
+		foreach(String::regexp_split($pattern, $article->getLocalizedSubjectClass()) as $subject) {
+			if ($subject) $subjects[String::strtolower($subject)] = $subject;
+		}
+		foreach(String::regexp_split($pattern, $article->getLocalizedSubject()) as $subject) {
+			if ($subject) $subjects[String::strtolower($subject)] = $subject;
+		}
+
+		// Article metadata: filter contributors(s) to prevent repeated values in dataset contributor field		
+		$contributors = array();
+		foreach(String::regexp_split($pattern, $article->getLocalizedSponsor()) as $contributor) {		
+			if ($contributor) $contributors[String::strtolower($contributor)] = $contributor;
+		}
+		// Published article metadata
 		$pubIdAttributes = array();
 		if ($article->getStatus() == STATUS_PUBLISHED) {
 			// publication date
@@ -1212,6 +1225,7 @@ class DataversePlugin extends GenericPlugin {
 				$pubIdAttributes['holdingsURI'] = Request::url($journal->getPath(), 'article', 'view', array($article->getId()));
 			}
 		}
+
 		// Journal metadata
 		$package->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
 		$package->addMetadata('rights', $journal->getLocalizedSetting('copyrightNotice'));
@@ -1221,16 +1235,29 @@ class DataversePlugin extends GenericPlugin {
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
 		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
 		$dvFiles =& $dvFileDao->getDataverseFilesBySubmissionId($article->getId());
+		// Filter type field to prevent repeated values in dataset 'Kind of data' field
+		$suppFileTypes = array();
 		foreach ($dvFiles as $dvFile) {
 			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $article->getId());
 			if ($suppFile) {
-				foreach(preg_split($split, $suppFile->getSuppFileSubject(), NULL, PREG_SPLIT_NO_EMPTY) as $subject) {
-					$package->addMetadata('subject', $subject);
+				// Split & filter subjects and/or contributors that may be repeated in article metadata
+				foreach (String::regexp_split($pattern, $suppFile->getSuppFileSubject()) as $subject) {
+					$subjects[String::strtolower($subject)] = $subject;
 				}
-				if ($suppFile->getType()) $package->addMetadata('type', $suppFile->getType());
-				if ($suppFile->getSuppFileTypeOther()) $package->addMetadata('type', $suppFile->getSuppFileTypeOther());
+				foreach (String::regexp_split($pattern, $suppFile->getSuppFileSponsor()) as $contributor) {
+					if ($contributor) $contributors[String::strtolower($contributor)] = $contributor;
+				}
+				// File type has single value but possibly repeated across suppfiles
+				if ($suppFile->getType()) $suppFileTypes[String::strtolower($suppFile->getType())] = $suppFile->getType();
+				if ($suppFile->getSuppFileTypeOther()) $suppFileTypes[String::strtolower($suppFile->getSuppFileTypeOther())] = $suppFile->getSuppFileTypeOther();
 			}
 		}
+		
+		// Add subjects, contributors & types to entry
+		foreach (array_values($subjects) as $subject) { $package->addMetadata('subject', $subject); }
+		foreach (array_values($contributors) as $contributor) { $package->addMetadata('contributor', $contributor, array('type' => 'funder')); }
+		foreach (array_values($suppFileTypes) as $type) { $package->addMetadata('type', $type); }
+		
 		// Write metadata as Atom entry
 		$package->createAtomEntry();
 		
@@ -1634,6 +1661,25 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function _formatDataCitation($dataCitation, $persistentUri) {
 	 return str_replace($persistentUri, '<a href="'. $persistentUri .'">'. $persistentUri .'</a>', strip_tags($dataCitation));
+	}
+	
+	/**
+	 * Format author bio statement, affiliation, and/or country as affiliation statement
+	 * @param $author Author 
+	 * @return string Author affiliation
+	 */
+	function _formatAffiliation($author) {
+		$affiliation = '';
+		if ($author) {
+			if ($author->getLocalizedAffiliation()) {			
+				// Affiliation is a block of plain text. Split into lines & trim punctuation
+				$lines = array_map("String::trimPunctuation", String::regexp_split('/\s*[\r\n]+/s', $author->getLocalizedAffiliation()));
+				$affiliation .= implode(', ', $lines);
+				// Append country, if affiliation present
+				if ($author->getCountryLocalized())	$affiliation .= ', '. $author->getCountryLocalized();
+			}
+		}
+		return $affiliation;
 	}
 }
 
