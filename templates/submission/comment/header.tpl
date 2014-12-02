@@ -54,7 +54,7 @@
 
 	{$additionalHeadData}
 </head>
-<body>
+<body id="pkp-{$pageTitle|replace:'.':'-'}">
 {literal}
 <script type="text/javascript">
 <!--
