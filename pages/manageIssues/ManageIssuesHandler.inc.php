@@ -50,7 +50,7 @@ class ManageIssuesHandler extends Handler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->display('manageIssues/issues.tpl');
+		return $templateMgr->fetchJson('manageIssues/issues.tpl');
 	}
 }
 
