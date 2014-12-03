@@ -142,6 +142,14 @@ class UsageStatsLoader extends FileLoader {
 			$this->addExecutionLogEntry(__('plugins.generic.usageStats.pluginDisabled'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			return true;
 		}
+		// It's possible that the processing directory has files that
+		// were being processed but the php process was stopped before
+		// finishing the processing, or there may be a concurrent process running.
+		// Warn the user if this is the case.
+		$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
+		if (is_array($processingDirFiles) && count($processingDirFiles)) {
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.processingPathNotEmpty', array('directory' => $this->getProcessingPath())), SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
+		}
 
 		return parent::executeActions();
 	}
