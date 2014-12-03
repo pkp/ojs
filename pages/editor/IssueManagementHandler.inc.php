@@ -798,12 +798,12 @@ class IssueManagementHandler extends EditorHandler {
 					 $ezidIdentifier = 'https://ezid.cdlib.org/id/' . $articleDOI;
 					 error_log("EZID IDENTIFIER $ezidIdentifier");
                      //now pass this to EZID:
-					error_log("crossrefxml $crossRefXML");
+					
                     if ($crossRefXML !=""){
 					   //First escape % and newlines
 					   $crossRefXML = str_replace("%", "%25", $crossRefXML);
 					   $crossRefXML = str_replace(array("\n", "\r"),'', $crossRefXML);
-					   //error_log("Cleaned CrossRefFile: $crossRefXML");
+					   error_log("Cleaned CrossRefFile $crossRefXML");
 					   error_log("crossRefXML is not empty so sending to EZID using create operation");
 					   /* $input = "_crossref: yes
 						_profile: crossref
