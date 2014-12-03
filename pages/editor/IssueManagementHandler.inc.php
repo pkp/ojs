@@ -811,7 +811,7 @@ class IssueManagementHandler extends EditorHandler {
 						crossref: $crossRefXML";
                         $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, $ezidIdentifier);
-                        curl_setopt($ch, CURLOPT_USERPWD, '~/.passwords/ezid-credentials');
+                        curl_setopt($ch, CURLOPT_USERPWD, '/apps/subi/.passwords/ezid-credentials');
                         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
                         curl_setopt($ch, CURLOPT_HTTPHEADER,
                         array('Content-Type: text/plain; charset=UTF-8',
