@@ -786,7 +786,6 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				else {
 				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
-                     error_log("XML" . $crossRefXML);
 					 $qualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID");
 					 if (empty($qualifiedArk)){
 					     error_log("No ARK for $articleID");
@@ -795,33 +794,33 @@ class IssueManagementHandler extends EditorHandler {
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
 						 error_log("For ARTICLE ID $singleArticleID eSchol URL is $escholURL");				 
 					 }
-					 
+					 $articleDOI = $article->getDOI();
+					 $ezidIdentifier = 'https://ezid.cdlib.org/id/' . $articleDOI;
+					 error_log("EZID IDENTIFIER $ezidIdentifier");
                      //now pass this to EZID:
-					 //--using the "create" operation; 
-					 //--Set the "_crossref" reserved metadata element to "yes".
-					 //--Set the "_profile" reserved metadata element to "crossref"
-					 //e.g. _crossref: yes
-                     //_profile: crossref
-                     //_target: http://... (Do I need to pull the eScholarship URL out?)
-                     //crossref: CrossRef XMl file
                     if ($crossRefXML !=""){
-					   error_log("crossRefXML is not empty so sending to EZID");
-					  /*$input = "_crossref: yes _profile: crossref _target: $eschol_url crossref: $crossRefXML";
-                      $ch = curl_init();
-                      curl_setopt($ch, CURLOPT_URL, 'https://ezid.cdlib.org/id/identifier');
-                      curl_setopt($ch, CURLOPT_USERPWD, 'apitest:apitest');
-                      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
-                      curl_setopt($ch, CURLOPT_HTTPHEADER,
-                      array('Content-Type: text/plain; charset=UTF-8',
+					   //First escape % and newlines
+					   $crossRefXML = str_replace("%", "%25", $crossRefXML);
+					   $crossRefXML = str_replace(array("\n", "\r"),'', $crossRefXML)
+					   error_log("Cleaned CrossRefFile: $crossRefXML");
+					    error_log("crossRefXML is not empty so sending to EZID using create operation");
+					   /* $input = "_crossref: yes
+						_profile: crossref
+						_target: $eschol_url
+						crossref: $crossRefXML";
+                        $ch = curl_init();
+                        curl_setopt($ch, CURLOPT_URL, $ezidIdentifier);
+                        curl_setopt($ch, CURLOPT_USERPWD, '~/.passwords/ezid-credentials');
+                        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+                        curl_setopt($ch, CURLOPT_HTTPHEADER,
+                        array('Content-Type: text/plain; charset=UTF-8',
                              'Content-Length: ' . strlen($input)));
-                      curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
-                      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                      $output = curl_exec($ch);
-                      error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
-                      error_log($output);
-                      curl_close($ch)*/
-					  
-					  
+                        curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        $output = curl_exec($ch);
+                        error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
+                        error_log($output);
+                        curl_close($ch)*/					  					  
                     }					
 					else {
 					   error_log("$journalTitle | $output didn't get created");

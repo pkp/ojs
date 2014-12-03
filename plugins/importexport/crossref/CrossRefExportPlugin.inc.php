@@ -167,7 +167,6 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
 			fwrite($h, XMLCustomWriter::getXML($doc));
-			//$outputStream = file_get_contents($h);
 			fclose($h);
 			$outputStream = XMLCustomWriter::getXML($doc);
 			return $outputStream;
@@ -175,18 +174,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			header("Content-Type: application/xml");
 			header("Cache-Control: private");
 			header("Content-Disposition: attachment; filename=\"crossref.xml\"");
-			XMLCustomWriter::printXML($doc);
-			
-			//Unnecessary? if the journal has a DOI prefix, then dump the file to XML and pass it back as a return object.
-			/*$doiPrefix = $journal->getSetting('doiPrefix');
-		    if ($doiPrefix != ""){
-			    error_log("Journal has a DOI prefix so creating CrossRef XML");
-			    $crossRefDoc = XMLCustomWriter::getXML($doc);//$xml = $doc->toXml();
-				return $crossRefDoc;
-			}
-			else {
-			    error_log("$journalTitle does not have a DOI, so no CrossRef/EZID export.");	
-			}*/
+			XMLCustomWriter::printXML($doc);			
 		}
 		return true;
 	}
