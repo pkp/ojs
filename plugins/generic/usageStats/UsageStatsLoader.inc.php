@@ -139,7 +139,7 @@ class UsageStatsLoader extends FileLoader {
 	function executeActions() {
 		$plugin =& $this->_plugin;
 		if (!$plugin->getEnabled()) {
-			$this->addExecutionLogEntry(__('plugins.generic.usageStats.openFileFailed'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.pluginDisabled'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			return true;
 		}
 

@@ -27,7 +27,7 @@
 	<message key="plugins.generic.usageStats.loadDataError">Невозможно загрузить данные, извлеченные из файла «{$file}». Ошибка: {$error}. Файл был перемещен обратно на свое место.</message>
 	<message key="plugins.generic.usageStats.displayName">Плагин «Статистика использования»</message>
 	<message key="plugins.generic.usageStats.description">Этот плагин представляет статистику использования объектов данных, может использовать файлы журнала доступа сервера для извлечения статистики.</message>
-	<message key="plugins.generic.usageStats.openFileFailed">Плагин «Статистика использования» отключен. Файлы журнала не обрабатываются.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Плагин «Статистика использования» отключен. Файлы журнала не обрабатываются.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">Отчет о статистике использования OJS</message>
 	<message key="plugins.reports.usageStats.report.description">Отчет о статистике использования OJS, формируемый по умолчанию (готовый для COUNTER)</message>
