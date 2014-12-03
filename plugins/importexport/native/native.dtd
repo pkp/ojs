@@ -70,6 +70,8 @@
 <!ELEMENT license_url (#PCDATA)>
 
 <!ELEMENT copyright_holder (#PCDATA)>
+	<!ATTLIST copyright_holder
+		locale CDATA #IMPLIED>
 
 <!ELEMENT copyright_year (#PCDATA)>
 
@@ -157,6 +159,8 @@
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT competing_interests (#PCDATA)>
+	<!ATTLIST competing_interests
+		locale CDATA #IMPLIED>
 
 <!ELEMENT biography (#PCDATA)>
 	<!ATTLIST biography
