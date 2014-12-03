@@ -97,7 +97,7 @@ class UsageStatsLoader extends FileLoader {
 				$logFiles = array();
 				$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
 
-				// It's possible that the processing directory have files that
+				// It's possible that the processing directory has files that
 				// were being processed but the php process was stopped before
 				// finishing the processing. Just copy them to the stage directory too.
 				$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
@@ -162,6 +162,13 @@ class UsageStatsLoader extends FileLoader {
 		$geoTool = $this->_geoLocationTool;
 		if (!$fhandle) {
 			$errorMsg = __('plugins.generic.usageStats.openFileFailed', array('file' => $filePath));
+			return false;
+		}
+		if (!$this->_counterRobotsListFile) {
+			$errorMsg = __('plugins.generic.usageStats.noCounterBotList', array('botlist' => $this->_counterRobotsListFile, 'file' => $filePath));
+			return false;
+		} elseif (!file_exists($this->_counterRobotsListFile)) {
+			$errorMsg = __('plugins.generic.usageStats.failedCounterBotList', array('botlist' => $this->_counterRobotsListFile, 'file' => $filePath));
 			return false;
 		}
 
