@@ -134,6 +134,13 @@ class UsageStatsLoader extends FileLoader {
 			$errorMsg = __('plugins.generic.usageStats.openFileFailed', array('file' => $filePath));
 			return false;
 		}
+		if (!$this->_counterRobotsListFile) {
+			$errorMsg = __('plugins.generic.usageStats.noCounterBotList', array('botlist' => $this->_counterRobotsListFile, 'file' => $filePath));
+			return false;
+		} elseif (!file_exists($this->_counterRobotsListFile)) {
+			$errorMsg = __('plugins.generic.usageStats.failedCounterBotList', array('botlist' => $this->_counterRobotsListFile, 'file' => $filePath));
+			return false;
+		}
 
 		$loadId = basename($filePath);
 		$statsDao =& DAORegistry::getDAO('UsageStatsTemporaryRecordDAO'); /* @var $statsDao UsageStatsTemporaryRecordDAO */
