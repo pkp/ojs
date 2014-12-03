@@ -756,6 +756,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueNumber = $issue->getNumber();
 		//$issueNumber = $issue->get;
 		
+		/*  Commenting out notification of new journal issue publishing
 		if (($issueVolume != 0) && ($issueNumber != 0)){
 		    $message = $journalTitle . ' has just published an issue, Volume ' . $issueVolume . ' Issue ' . $issueNumber;
 		    mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);
@@ -763,6 +764,7 @@ class IssueManagementHandler extends EditorHandler {
 		else {
 		  error_log("AIP publication only");
 		}
+		*/
 		
 		//
 		//FOR JOURNALS WITH A DOI, GENERATE CROSSREF FILES by submitting each article to the plugin AND SEND TO EZID
