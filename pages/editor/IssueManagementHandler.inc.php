@@ -756,15 +756,15 @@ class IssueManagementHandler extends EditorHandler {
 		$issueNumber = $issue->getNumber();
 		//$issueNumber = $issue->get;
 		
-		/*  Commenting out notification of new journal issue publishing
-		if (($issueVolume != 0) && ($issueNumber != 0)){
+		
+		if (($issueVolume != 0) && ($issueNumber != 0) && (gethostname == 'cdl-submit-p01' )){
 		    $message = $journalTitle . ' has just published an issue, Volume ' . $issueVolume . ' Issue ' . $issueNumber;
 		    mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);
         }
 		else {
 		  error_log("AIP publication only");
 		}
-		*/
+		
 		
 		//
 		//FOR JOURNALS WITH A DOI, GENERATE CROSSREF FILES by submitting each article to the plugin AND SEND TO EZID
@@ -804,9 +804,9 @@ class IssueManagementHandler extends EditorHandler {
                     if ($crossRefXML !=""){
 					   //First escape % and newlines
 					   $crossRefXML = str_replace("\n", "%0A", str_replace("%", "%25", $crossRefXML));
-					   error_log("Cleaned CrossRefFile $crossRefXML");
+					   //error_log("Cleaned CrossRefFile $crossRefXML");
 					   error_log("crossRefXML is not empty so sending to EZID using create operation");
-					   $input = "_crossref: yes
+					  /* $input = "_crossref: yes
 						_profile: crossref
 						_target: $eschol_url
 						crossref: $crossRefXML";
@@ -822,7 +822,8 @@ class IssueManagementHandler extends EditorHandler {
                         $output = curl_exec($ch);
                         error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
                         error_log($output);
-                        curl_close($ch);					  					  
+                        curl_close($ch);
+                       */						
                     }					
 					else {
 					   error_log("$journalTitle | $output didn't get created");
