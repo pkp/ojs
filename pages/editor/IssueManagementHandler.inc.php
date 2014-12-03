@@ -805,7 +805,7 @@ class IssueManagementHandler extends EditorHandler {
 					   $crossRefXML = str_replace(array("\n", "\r"),'', $crossRefXML);
 					   error_log("Cleaned CrossRefFile $crossRefXML");
 					   error_log("crossRefXML is not empty so sending to EZID using create operation");
-					   /* $input = "_crossref: yes
+					   $input = "_crossref: yes
 						_profile: crossref
 						_target: $eschol_url
 						crossref: $crossRefXML";
@@ -821,7 +821,7 @@ class IssueManagementHandler extends EditorHandler {
                         $output = curl_exec($ch);
                         error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
                         error_log($output);
-                        curl_close($ch)*/					  					  
+                        curl_close($ch);					  					  
                     }					
 					else {
 					   error_log("$journalTitle | $output didn't get created");
