@@ -808,12 +808,12 @@ class IssueManagementHandler extends EditorHandler {
 					   error_log("crossRefXML is not empty so sending to EZID using create operation");
 					  $input = "_crossref: yes
 						_profile: crossref
-						_target: $eschol_url
+						_target: $escholURL
 						crossref: $crossRefXML";
                         $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, $ezidIdentifier);
                         //curl_setopt($ch, CURLOPT_USERPWD, '/apps/subi/.passwords/ezid-credentials');
-                        curl_setopt($ch, CURLOPT_NETRC, '/apps/subi/.netrc');
+                        curl_setopt($ch, CURLOPT_NETRC, true);
 						curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
                         curl_setopt($ch, CURLOPT_HTTPHEADER,
                         array('Content-Type: text/plain; charset=UTF-8',
