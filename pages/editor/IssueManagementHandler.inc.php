@@ -801,9 +801,9 @@ class IssueManagementHandler extends EditorHandler {
                     if ($crossRefXML !=""){
 					   //First escape % and newlines
 					   $crossRefXML = str_replace("%", "%25", $crossRefXML);
-					   $crossRefXML = str_replace(array("\n", "\r"),'', $crossRefXML)
+					   $crossRefXML = str_replace(array("\n", "\r"),'', $crossRefXML);
 					   error_log("Cleaned CrossRefFile: $crossRefXML");
-					    error_log("crossRefXML is not empty so sending to EZID using create operation");
+					   error_log("crossRefXML is not empty so sending to EZID using create operation");
 					   /* $input = "_crossref: yes
 						_profile: crossref
 						_target: $eschol_url
