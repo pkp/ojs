@@ -147,11 +147,12 @@ class UsageStatsLoader extends FileLoader {
 		// finishing the processing, or there may be a concurrent process running.
 		// Warn the user if this is the case.
 		$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
-		if (is_array($processingDirFiles) && count($processingDirFiles)) {
+		$processingDirError = is_array($processingDirFiles) && count($processingDirFiles);
+		if ($processingDirError) {
 			$this->addExecutionLogEntry(__('plugins.generic.usageStats.processingPathNotEmpty', array('directory' => $this->getProcessingPath())), SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
 		}
 
-		return parent::executeActions();
+		return (parent::executeActions() && !$processingDirError);
 	}
 
 	/**
