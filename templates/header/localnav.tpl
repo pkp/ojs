@@ -37,14 +37,10 @@
 			{if $currentJournal}
 				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">{translate key="navigation.current"}</a></li>
 				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">{translate key="navigation.archives"}</a>
-				{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR), $userRoles)}
+				{if array_intersect(array(ROLE_ID_MANAGER), $userRoles)}
 					<li>
 						<a href="#">{translate key="navigation.management"}</a>
 						<ul>
-							<li>
-								<a href="{url router=$smarty.const.ROUTE_PAGE page="manageIssues"}">{translate key="editor.navigation.issues"}</a>
-							</li>
-							{if array_intersect(array(ROLE_ID_MANAGER), $userRoles)}
 							<li>
 								<a href="{url router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="index"}">{translate key="navigation.settings"}</a>
 								<ul>
@@ -62,10 +58,9 @@
 									<li><a href="{url router=$smarty.const.ROUTE_PAGE page="manager" op="statistics"}">{translate key="navigation.tools.statistics"}</a></li>
 								</ul>
 							</li>
-							{/if}
 						</ul>
 					</li>
-				{/if}{* ROLE_ID_MANAGER || ROLE_ID_SERIES_EDITOR *}
+				{/if}{* ROLE_ID_MANAGER *}
 				{$publicMenu}
 			{/if}
 		</ul>

@@ -23,8 +23,10 @@ class IssuesTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		// Management > Issues
-		$this->waitForElementPresent('link=Issues');
-		$this->click('link=Issues');
+		$this->waitForElementPresent($selector='link=Dashboard');
+		$this->clickAndWait($selector);
+		$this->waitForElementPresent($selector='link=Issues');
+		$this->click($selector);
 
 		// Create issue
 		$this->waitForElementPresent('css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
