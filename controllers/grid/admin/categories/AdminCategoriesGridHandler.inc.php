@@ -121,7 +121,7 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 	 * An action to edit a category
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function editItem($args, $request) {
 		import('controllers.grid.admin.categories.form.AdminCategoryForm');
@@ -130,15 +130,14 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 
 		$categoryForm->initData($args, $request);
 
-		$json = new JSONMessage(true, $categoryForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $categoryForm->fetch($request));
 	}
 
 	/**
 	 * Update a category
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function updateItem($args, $request) {
 		// -> categoryId must be present and valid
@@ -152,10 +151,8 @@ class AdminCategoriesGridHandler extends SetupGridHandler {
 		if ($categoryForm->validate()) {
 			$categoryForm->execute($args, $request);
 			return DAO::getDataChangedEvent($categoryForm->categoryId);
-		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
 		}
+		return new JSONMessage(false);
 	}
 
 	/**

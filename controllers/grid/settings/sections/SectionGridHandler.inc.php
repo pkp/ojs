@@ -165,6 +165,7 @@ class SectionGridHandler extends SetupGridHandler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function editSection($args, $request) {
 		$sectionId = isset($args['sectionId']) ? $args['sectionId'] : null;
@@ -173,15 +174,14 @@ class SectionGridHandler extends SetupGridHandler {
 		import('controllers.grid.settings.sections.form.SectionForm');
 		$sectionForm = new SectionForm($request, $sectionId);
 		$sectionForm->initData($args, $request);
-		$json = new JSONMessage(true, $sectionForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $sectionForm->fetch($request));
 	}
 
 	/**
 	 * Update a section
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function updateSection($args, $request) {
 		$sectionId = $request->getUserVar('sectionId');
@@ -193,17 +193,15 @@ class SectionGridHandler extends SetupGridHandler {
 		if ($sectionForm->validate()) {
 			$sectionForm->execute($args, $request);
 			return DAO::getDataChangedEvent($sectionForm->getSectionId());
-		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
 		}
+		return new JSONMessage(false);
 	}
 
 	/**
 	 * Delete a section
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function deleteSection($args, $request) {
 		$journal = $request->getJournal();
@@ -217,11 +215,9 @@ class SectionGridHandler extends SetupGridHandler {
 		if (isset($section)) {
 			$sectionDao->deleteObject($section);
 			return DAO::getDataChangedEvent($section->getId());
-		} else {
-			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.setup.errorDeletingItem
-			$json = new JSONMessage(false, __('manager.setup.errorDeletingItem'));
 		}
-		return $json->getString();
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.setup.errorDeletingItem
+		return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
 	}
 }
 

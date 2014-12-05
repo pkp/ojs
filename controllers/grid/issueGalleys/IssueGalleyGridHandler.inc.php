@@ -184,7 +184,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * An action to edit a issue galley
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function edit($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -193,15 +193,14 @@ class IssueGalleyGridHandler extends GridHandler {
 		import('controllers.grid.issues.form.IssueGalleyForm');
 		$issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
 		$issueGalleyForm->initData();
-		$json = new JSONMessage(true, $issueGalleyForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $issueGalleyForm->fetch($request));
 	}
 
 	/**
 	 * An action to upload an issue galley file.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function upload($args, $request) {
 		$user = $request->getUser();
@@ -214,11 +213,10 @@ class IssueGalleyGridHandler extends GridHandler {
 			$json->setAdditionalAttributes(array(
 				'temporaryFileId' => $temporaryFile->getId()
 			));
+			return $json;
 		} else {
-			$json = new JSONMessage(false, __('common.uploadFailed'));
+			return new JSONMessage(false, __('common.uploadFailed'));
 		}
-
-		return $json->getString();
 	}
 
 	/**
@@ -239,7 +237,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * Update a issue
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function update($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -253,8 +251,7 @@ class IssueGalleyGridHandler extends GridHandler {
 			$issueId = $issueGalleyForm->execute($request);
 			return DAO::getDataChangedEvent($issueId);
 		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
+			return new JSONMessage(false);
 		}
 	}
 

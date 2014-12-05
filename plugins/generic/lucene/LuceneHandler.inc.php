@@ -49,7 +49,7 @@ class LuceneHandler extends Handler {
 	 * AJAX request for search query auto-completion.
 	 * @param $args array
 	 * @param $request Request
-	 * @return JSON string
+	 * @return JSONMessage JSON object
 	 */
 	function queryAutocomplete($args, $request) {
 		$this->validate(null, $request);
@@ -94,8 +94,7 @@ class LuceneHandler extends Handler {
 		}
 
 		// Return the suggestions as JSON message.
-		$json = new JSONMessage(true, $suggestionList);
-		return $json->getString();
+		return new JSONMessage(true, $suggestionList);
 	}
 
 	/**

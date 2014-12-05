@@ -32,7 +32,7 @@ class JournalGridHandler extends ContextGridHandler {
 	 * Edit an existing journal.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function editContext($args, $request) {
 		// Get the journal ID. (Not the same as the context!)
@@ -41,16 +41,14 @@ class JournalGridHandler extends ContextGridHandler {
 		// Form handling.
 		$settingsForm = new JournalSiteSettingsForm(!isset($journalId) || empty($journalId) ? null : $journalId);
 		$settingsForm->initData();
-		$json = new JSONMessage(true, $settingsForm->fetch($args, $request));
-
-		return $json->getString();
+		return new JSONMessage(true, $settingsForm->fetch($args, $request));
 	}
 
 	/**
 	 * Update an existing journal.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function updateContext($args, $request) {
 		// Identify the context Id.
@@ -61,8 +59,7 @@ class JournalGridHandler extends ContextGridHandler {
 		$settingsForm->readInputData();
 
 		if (!$settingsForm->validate()) {
-			$json = new JSONMessage(false);
-			return $json->getString();
+			return new JSONMessage(false);
 		}
 
 		PluginRegistry::loadCategory('blocks');
@@ -107,7 +104,7 @@ class JournalGridHandler extends ContextGridHandler {
 	 * Delete a journal.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function deleteContext($args, $request) {
 		// Identify the journal Id.
@@ -132,8 +129,7 @@ class JournalGridHandler extends ContextGridHandler {
 			return DAO::getDataChangedEvent($journalId);
 		}
 
-		$json = new JSONMessage(false);
-		return $json->getString();
+		return new JSONMessage(false);
 	}
 }
 

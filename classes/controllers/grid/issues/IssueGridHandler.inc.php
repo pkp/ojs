@@ -133,21 +133,20 @@ class IssueGridHandler extends GridHandler {
 	 * An action to edit a issue
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function editIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$templateMgr = TemplateManager::getManager($request);
 		if ($issue) $templateMgr->assign('issueId', $issue->getId());
-		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issue.tpl'));
-		return $json->getString();
+		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issue.tpl'));
 	}
 
 	/**
 	 * An action to edit a issue's identifying data
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function editIssueData($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -155,15 +154,14 @@ class IssueGridHandler extends GridHandler {
 		import('controllers.grid.issues.form.IssueForm');
 		$issueForm = new IssueForm($issue);
 		$issueForm->initData($request);
-		$json = new JSONMessage(true, $issueForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $issueForm->fetch($request));
 	}
 
 	/**
 	 * An action to upload an issue file. Used for both covers and stylesheets.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function uploadFile($args, $request) {
 		$user = $request->getUser();
@@ -176,18 +174,17 @@ class IssueGridHandler extends GridHandler {
 			$json->setAdditionalAttributes(array(
 				'temporaryFileId' => $temporaryFile->getId()
 			));
+			return $json;
 		} else {
-			$json = new JSONMessage(false, __('common.uploadFailed'));
+			return new JSONMessage(false, __('common.uploadFailed'));
 		}
-
-		return $json->getString();
 	}
 
 	/**
 	 * Update a issue
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function updateIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -200,8 +197,7 @@ class IssueGridHandler extends GridHandler {
 			$issueId = $issueForm->execute($request);
 			return DAO::getDataChangedEvent($issueId);
 		} else {
-			$json = new JSONMessage(true, $issueForm->fetch($request));
-			return $json->getString();
+			return new JSONMessage(true, $issueForm->fetch($request));
 		}
 	}
 
@@ -209,7 +205,7 @@ class IssueGridHandler extends GridHandler {
 	 * An action to edit a issue's cover
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function editCover($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -217,15 +213,14 @@ class IssueGridHandler extends GridHandler {
 		import('controllers.grid.issues.form.CoverForm');
 		$coverForm = new CoverForm($issue);
 		$coverForm->initData($request);
-		$json = new JSONMessage(true, $coverForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $coverForm->fetch($request));
 	}
 
 	/**
 	 * Update an issue cover
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function updateCover($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -238,8 +233,7 @@ class IssueGridHandler extends GridHandler {
 			$coverForm->execute($request);
 			return DAO::getDataChangedEvent($issue->getId());
 		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
+			return new JSONMessage(false);
 		}
 	}
 
@@ -287,20 +281,22 @@ class IssueGridHandler extends GridHandler {
 
 	/**
 	 * Display the table of contents
+	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
 	function issueToc($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$templateMgr->assign('issue', $issue);
-		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
-		return $json->getString();
+		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
 	}
 
 	/**
 	 * Displays the issue galleys page.
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
 	function issueGalleys($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
@@ -315,8 +311,7 @@ class IssueGridHandler extends GridHandler {
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		$templateMgr->assign('issueGalleys', $issueGalleyDao->getByIssueId($issue->getId()));
 
-		$json = new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueGalleys.tpl'));
-		return $json->getString();
+		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueGalleys.tpl'));
 	}
 
 	/**

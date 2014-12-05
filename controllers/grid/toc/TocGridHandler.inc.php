@@ -196,6 +196,7 @@ class TocGridHandler extends CategoryGridHandler {
 	 * Remove an article from the issue.
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
 	function removeArticle($args, $request) {
 		$journal = $request->getJournal();
@@ -225,8 +226,7 @@ class TocGridHandler extends CategoryGridHandler {
 		}
 
 		// If we've fallen through, it must be a badly-specified article
-		$json = new JSONMessage(false);
-		return $json->getString();
+		return new JSONMessage(false);
 	}
 }
 

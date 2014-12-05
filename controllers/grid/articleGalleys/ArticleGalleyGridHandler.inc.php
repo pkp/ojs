@@ -198,7 +198,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * An action to edit a submission galley
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function edit($args, $request) {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
@@ -207,15 +207,14 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
 		$articleGalleyForm = new ArticleGalleyForm($request, $submission, $articleGalley);
 		$articleGalleyForm->initData();
-		$json = new JSONMessage(true, $articleGalleyForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $articleGalleyForm->fetch($request));
 	}
 
 	/**
 	 * Update a issue
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function update($args, $request) {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
@@ -229,8 +228,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$galleyId = $articleGalleyForm->execute($request);
 			return DAO::getDataChangedEvent($galleyId);
 		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
+			return new JSONMessage(false);
 		}
 	}
 
@@ -250,7 +248,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * Set a galley's "available" state
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function setAvailable($args, $request) {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
@@ -277,8 +275,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 
 			return DAO::getDataChangedEvent($articleGalley->getId());
 		} else {
-			$json = new JSONMessage(false, __('manager.setup.errorDeletingItem'));
-			return $json->getString();
+			return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
 		}
 
 	}
