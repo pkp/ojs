@@ -41,11 +41,13 @@
 		{translate key="manager.setup.look.description"}<br/>
 		&nbsp;
 	</li>
+	<!-- MH-6-STEP add this in when ready to reveal Step 6
 	<li>
 		<h4><a href="{url op="setup" path="6"}">Public-facing Site Setup</a></h4>
 		Logo, blurb, contact info, policies page, additional informational pages.<br/>
 		&nbsp;
 	</li>
+	-->
 </ol>
 
 {include file="common/footer.tpl"}

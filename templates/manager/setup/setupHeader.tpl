@@ -20,6 +20,8 @@
 	<li id="step3" {if $setupStep == 3} class="current"{/if}><a href="{url op="setup" path="3"}">3. {translate key="manager.setup.submissions"}</a></li>
 	<li id="step4" {if $setupStep == 4} class="current"{/if}><a href="{url op="setup" path="4"}">4. {translate key="manager.setup.management"}</a></li>
 	<li id="step5" {if $setupStep == 5} class="current"{/if}><a href="{url op="setup" path="5"}">5. {translate key="manager.setup.look"}</a></li>
+        <!-- MH-6-STEP: Add this back in when ready to reveal Step 6
         <li id="step6" {if $setupStep == 6} class="current"{/if}><a href="{url op="setup" path="6"}">6. Public Site</a></li>
+        -->
 </ul>
 
