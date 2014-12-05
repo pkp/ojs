@@ -150,8 +150,6 @@
 	<message key="plugins.generic.dataverse.suppFile.publishData.error">Пожалуйста, загрузите файл для размещения в Dataverse.</message>
 	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">Файл будет добавлен в исследование Dataverse, созданное для этой статьи:</message> 
 	<message key="plugins.generic.dataverse.suppFile.studyLocked">Это исследование заблокировано для обработки. Никакие изменения в отправляемые данные не могут быть внесены, пока обработка не будет завершена.</message> 
-	<message key="plugins.generic.dataverse.suppFile.studyDescription">Описание исследования</message>
-	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">Введите краткое описание цели, характера и охвата исследования данных.</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">Внешняя ссылка на данные</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Если данные, которые должны быть опубликованы вместе с этой статьей, уже размещены в другом репозитории, пожалуйста укажите ссылку на данные.</message>   
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Пожалуйста, загрузите файлы для размещения в Dataverse ИЛИ укажите внешнюю ссылку на данные.</message>    
