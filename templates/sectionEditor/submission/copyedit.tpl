@@ -63,10 +63,8 @@
 		<td>
 			{if $initialCopyeditSignoff->getDateCompleted()}
 				{$initialCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort}
-			{elseif !$useCopyeditors}
-				<a href="{url op="completeCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
 			{else}
-				&mdash;
+				<a href="{url op="completeCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
 			{/if}
 		</td>
 		<td>
@@ -121,10 +119,8 @@
 		<td>
 				{if $authorCopyeditSignoff->getDateCompleted()}
 					{$authorCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
-				{elseif !$useCopyeditors}
-					<a href="{url op="completeAuthorCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
 				{else}
-					&mdash;
+					<a href="{url op="completeAuthorCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
 				{/if}
 		</td>
 		<td>
@@ -179,10 +175,8 @@
 		<td>
 			{if $finalCopyeditSignoff->getDateCompleted()}
 				{$finalCopyeditSignoff->getDateCompleted()|date_format:$dateFormatShort}
-			{elseif !$useCopyeditors}
-				<a href="{url op="completeFinalCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
 			{else}
-				&mdash;
+				<a href="{url op="completeFinalCopyedit" articleId=$submission->getId()}" class="action">{translate key="common.complete"}</a>
 			{/if}
 		</td>
 		<td>
