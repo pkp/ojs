@@ -39,7 +39,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	 * Show the publication metadata form.
 	 * @param $request Request
 	 * @param $args array
-	 * @return string JSON message
+	 * @return JSONMessage JSON object
 	 */
 	function publicationMetadata($args, $request) {
 		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
@@ -51,8 +51,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId, array('displayedInContainer' => true));
 
 		$issueEntryPublicationMetadataForm->initData();
-		$json = new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
 	}
 
 	/**

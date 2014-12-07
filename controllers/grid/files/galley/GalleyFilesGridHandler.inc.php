@@ -126,7 +126,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	 * display the template containing the dependent files grid.
 	 * @param array $args
 	 * @param PKPRequest $request
-	 * @return string
+	 * @return JSONMessage JSON object
 	 */
 	function dependentFiles($args, $request) {
 

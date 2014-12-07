@@ -35,6 +35,7 @@ class IssueEntryHandler extends PublicationEntryHandler {
 	 * Display the tabs index page.
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
 	function fetch($args, $request) {
 		parent::fetch($args, $request);
@@ -68,21 +69,19 @@ class IssueEntryHandler extends PublicationEntryHandler {
 	 * for this submission.
 	 * @param $args array
 	 * @param $request Request
+	 * @return JSONMessage JSON object
 	 */
 	function fetchFormatInfo($args, $request) {
 		$submission = $this->getSubmission();
-		$json = new JSONMessage();
-
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galleys = $galleyDao->getBySubmissionId($submission->getId());
 		$formats = array();
 		while ($galley = $galleys->next()) {
 			$formats[$galley->getId()] = $galley->getLocalizedName();
 		}
-		$json->setStatus(true);
-		$json->setContent(true);
+		$json = new JSONMessage(true, true);
 		$json->setAdditionalAttributes(array('formats' => $formats));
-		return $json->getString();
+		return $json;
 	}
 }
 

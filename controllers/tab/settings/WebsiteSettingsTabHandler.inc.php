@@ -63,45 +63,42 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	 * Show the upload image form.
 	 * @param $request Request
 	 * @param $args array
-	 * @return string JSON message
+	 * @return JSONMessage JSON object
 	 */
 	function showFileUploadForm($args, $request) {
 		$fileUploadForm = $this->_getFileUploadForm($request);
 		$fileUploadForm->initData($request);
 
-		$json = new JSONMessage(true, $fileUploadForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $fileUploadForm->fetch($request));
 	}
 
 	/**
 	 * Upload a new file.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string
+	 * @return JSONMessage JSON object
 	 */
 	function uploadFile($args, $request) {
 		$fileUploadForm = $this->_getFileUploadForm($request);
-		$json = new JSONMessage();
 
 		$temporaryFileId = $fileUploadForm->uploadFile($request);
 
 		if ($temporaryFileId !== false) {
+			$json = new JSONMessage();
 			$json->setAdditionalAttributes(array(
 				'temporaryFileId' => $temporaryFileId
 			));
+			return $json;
 		} else {
-			$json->setStatus(false);
-			$json->setContent(__('common.uploadFailed'));
+			return new JSONMessage(false, __('common.uploadFailed'));
 		}
-
-		return $json->getString();
 	}
 
 	/**
 	 * Save an uploaded file.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string
+	 * @return JSONMessage JSON object
 	 */
 	function saveFile($args, $request) {
 		$fileUploadForm = $this->_getFileUploadForm($request);
@@ -114,8 +111,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 				return DAO::getDataChangedEvent($settingName);
 			}
 		}
-		$json = new JSONMessage(false, __('common.invalidFileType'));
-		return $json->getString();
+		return new JSONMessage(false, __('common.invalidFileType'));
 	}
 
 	/**
@@ -142,7 +138,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	 *
 	 * @param $args array
 	 * @param $request Request
-	 * @return string
+	 * @return JSONMessage JSON object
 	 */
 	function fetchFile($args, $request) {
 		// Get the setting name.
@@ -161,20 +157,20 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 			$json->setElementId($settingName);
 			$json->setContent($renderedElement);
 		}
-		return $json->getString();
+		return $json;
 	}
 
 	/**
 	 * Reload the default localized settings for the journal
 	 * @param $args array
 	 * @param $request object
+	 * @return JSONMessage JSON object
 	 */
 	function reloadLocalizedDefaultSettings($args, $request) {
 		// make sure the locale is valid
 		$locale = $request->getUserVar('localeToLoad');
 		if ( !AppLocale::isLocaleValid($locale) ) {
-			$json = new JSONMessage(false);
-			return $json->getString();
+			return new JSONMessage(false);
 		}
 
 		$journal = $request->getJournal();

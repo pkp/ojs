@@ -49,6 +49,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	 * Show the production stage accordion contents
 	 * @param $request PKPRequest
 	 * @param $args array
+	 * @return JSONMessage JSON object
 	 */
 	function galleysTab($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
@@ -131,16 +132,12 @@ class WorkflowHandler extends PKPWorkflowHandler {
 					$context->getId()
 				);
 
-				$json = new JSONMessage(true);
-				return $json->getString();
+				return new JSONMessage(true);
 			} else {
-			$json = new JSONMessage(true, $form->fetch($request));
-			return $json->getString();
+				return new JSONMessage(true, $form->fetch($request));
+			}
 		}
-		} else {
-			$json = new JSONMessage(true, $form->fetch($request));
-			return $json->getString();
-		}
+		return new JSONMessage(true, $form->fetch($request));
 	}
 
 	//

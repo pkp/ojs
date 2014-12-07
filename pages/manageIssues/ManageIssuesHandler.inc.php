@@ -44,6 +44,7 @@ class ManageIssuesHandler extends Handler {
 	 * Displays the issue listings in a tabbed interface.
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
 	function index($args, $request) {
 		$this->setupTemplate($request);

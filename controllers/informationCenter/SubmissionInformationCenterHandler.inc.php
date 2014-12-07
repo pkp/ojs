@@ -27,6 +27,7 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 	 * Display the metadata tab.
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
 	function metadata($args, $request) {
 		$this->setupTemplate($request);
@@ -42,22 +43,20 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 		$submissionMetadataViewForm = new SubmissionMetadataViewForm($this->_submission->getId(), null, $params);
 		$submissionMetadataViewForm->initData($args, $request);
 
-		$json = new JSONMessage(true, $submissionMetadataViewForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $submissionMetadataViewForm->fetch($request));
 	}
 
 	/**
 	 * Save the metadata tab.
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
 	function saveForm($args, $request) {
 		$this->setupTemplate($request);
 
 		import('controllers.modals.submissionMetadata.form.SubmissionMetadataViewForm');
 		$submissionMetadataViewForm = new SubmissionMetadataViewForm($this->_submission->getId());
-
-		$json = new JSONMessage();
 
 		// Try to save the form data.
 		$submissionMetadataViewForm->readInputData();
@@ -67,11 +66,9 @@ class SubmissionInformationCenterHandler extends PKPSubmissionInformationCenterH
 			$notificationManager = new NotificationManager();
 			$user = $request->getUser();
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __('notification.savedSubmissionMetadata')));
-		} else {
-			$json->setStatus(false);
+			return new JSONMessage();
 		}
-
-		return $json->getString();
+		$json->setStatus(false);
 	}
 
 	/**

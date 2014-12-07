@@ -41,7 +41,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * Will create a new prepared email if their is no emailKey in the request
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function editPreparedEmail($args, $request) {
 		$journal = $request->getJournal();
@@ -51,15 +51,14 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 		$preparedEmailForm = new PreparedEmailForm($emailKey, $journal);
 		$preparedEmailForm->initData($request);
 
-		$json = new JSONMessage(true, $preparedEmailForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $preparedEmailForm->fetch($request));
 	}
 
 	/**
 	 * Save the email editing form
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return string Serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function updatePreparedEmail($args, $request) {
 		$journal = $request->getJournal();
@@ -80,8 +79,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 			// Let the calling grid reload itself
 			return DAO::getDataChangedEvent($emailKey);
 		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
+			return new JSONMessage(false);
 		}
 	}
 
@@ -89,7 +87,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * Reset a single email
 	 * @param $args array
 	 * @param $request Request
-	 * @return string a serialized JSON object
+	 * @return JSONMessage JSON object
 	 */
 	function resetEmail($args, $request) {
 		$emailKey = $request->getUserVar('emailKey');
@@ -101,10 +99,8 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 		if ($emailTemplateDao->templateExistsByKey($emailKey, $journal->getId())) {
 			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getId());
 			return DAO::getDataChangedEvent($emailKey);
-		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
 		}
+		return new JSONMessage(false);
 	}
 
 	/**
@@ -123,6 +119,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * Disables an email template.
 	 * @param $args array
 	 * @param $request Request
+	 * @return JSONMessage JSON object
 	 */
 	function disableEmail($args, $request) {
 		$emailKey = $request->getUserVar('emailKey');
@@ -150,10 +147,8 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 
 				return DAO::getDataChangedEvent($emailKey);
 			}
-		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
 		}
+		return new JSONMessage(false);
 	}
 
 
@@ -161,6 +156,7 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 	 * Enables an email template.
 	 * @param $args array
 	 * @param $request Request
+	 * @return JSONMessage JSON object
 	 */
 	function enableEmail($args, $request) {
 		$emailKey = $request->getUserVar('emailKey');
@@ -183,16 +179,15 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 
 				return DAO::getDataChangedEvent($emailKey);
 			}
-		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
 		}
+		return new JSONMessage(false);
 	}
 
 	/**
 	 * Delete a custom email.
 	 * @param $args array
 	 * @param $request Request
+	 * @return JSONMessage JSON object
 	 */
 	function deleteCustomEmail($args, $request) {
 		$emailKey = $request->getUserVar('emailKey');
@@ -202,10 +197,8 @@ class PreparedEmailsGridHandler extends PKPPreparedEmailsGridHandler {
 		if ($emailTemplateDao->customTemplateExistsByKey($emailKey, $journal->getId())) {
 			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getId());
 			return DAO::getDataChangedEvent($emailKey);
-		} else {
-			$json = new JSONMessage(false);
-			return $json->getString();
 		}
+		return new JSONMessage(false);
 	}
 
 }

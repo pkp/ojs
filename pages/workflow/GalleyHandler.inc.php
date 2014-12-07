@@ -91,6 +91,7 @@ class GalleyHandler extends Handler {
 	 * Display the galley template (grid + actions).
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
 	 */
 	function fetchGalley($args, $request) {
 		// Fetch the template
