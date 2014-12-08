@@ -806,13 +806,9 @@ class IssueManagementHandler extends EditorHandler {
 					   $crossRefXML = str_replace("\n", "%0A", str_replace("%", "%25", $crossRefXML));
 					   //error_log("Cleaned CrossRefFile $crossRefXML");
 					   error_log("crossRefXML is not empty so sending to EZID using create operation");
-					  $input = "_crossref: yes
-						_profile: crossref
-						_target: $escholURL
-						crossref: $crossRefXML";
+					  $input = "_crossref: yes\n" . "_profile: crossref\n" . "_target: $escholURL\n" . "crossref: $crossRefXML";
                         $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, $ezidIdentifier);
-                        //curl_setopt($ch, CURLOPT_USERPWD, '/apps/subi/.passwords/ezid-credentials');
                         curl_setopt($ch, CURLOPT_NETRC, true);
 						curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
                         curl_setopt($ch, CURLOPT_HTTPHEADER,
@@ -823,8 +819,7 @@ class IssueManagementHandler extends EditorHandler {
                         $output = curl_exec($ch);
                         error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
                         error_log($output);
-                        curl_close($ch);
-                       						
+                        curl_close($ch);                       						
                     }					
 					else {
 					   error_log("$journalTitle | $output didn't get created");
