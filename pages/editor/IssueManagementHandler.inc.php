@@ -798,6 +798,8 @@ class IssueManagementHandler extends EditorHandler {
 					 }
 					 $articleDOI = $article->getDOI();
 					 $articleDOI = str_replace("/","%2F", $articleDOI);
+					 $journalPath = $journal->getPath();
+					 $campusOwner = array("uciem_westjem"=>'cdlib');//change this when we're live!
 					 $ezidIdentifier = 'https://ezid.cdlib.org/id/doi%3A' . $articleDOI;
 					 error_log("EZID IDENTIFIER $ezidIdentifier");
                      //now pass this to EZID:
@@ -807,7 +809,7 @@ class IssueManagementHandler extends EditorHandler {
 					   $crossRefXML = str_replace("\n", "%0A", str_replace("%", "%25", $crossRefXML));
 					   //error_log("Cleaned CrossRefFile $crossRefXML");
 					   error_log("crossRefXML is not empty so sending to EZID using create operation");
-					  $input = "_crossref: yes\n" . "_profile: crossref\n" . "_target: $escholURL\n" . "crossref: $crossRefXML";
+					  $input = "_crossref: yes\n" . "_profile: crossref\n" . "_target: $escholURL\n" ."_coowners: $campusOwner[$journalPath]" . "crossref: $crossRefXML";
                         $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, $ezidIdentifier);
                         curl_setopt($ch, CURLOPT_NETRC, true);
