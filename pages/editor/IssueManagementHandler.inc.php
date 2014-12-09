@@ -814,10 +814,11 @@ class IssueManagementHandler extends EditorHandler {
                         curl_setopt($ch, CURLOPT_HTTPHEADER,
                         array('Content-Type: text/plain; charset=UTF-8',
                              'Content-Length: ' . strlen($input)));
-                        curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
+                        curl_setopt($ch, CURLINFO_HEADER_OUT,true);
+						curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         $output = curl_exec($ch);
-						error_log(curl_getinfo($ch, CURLINFO_EFFECTIVE_URL));
+						error_log(curl_getinfo($ch, CURLINFO_HEADER_OUT));
                         error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
                         error_log($output);
                         curl_close($ch);                       						
