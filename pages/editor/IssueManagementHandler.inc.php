@@ -798,7 +798,7 @@ class IssueManagementHandler extends EditorHandler {
 					 }
 					 $articleDOI = $article->getDOI();
 					 $articleDOI = str_replace("/","%2F", $articleDOI);
-					 $ezidIdentifier = 'https://ezid.cdlib.org/id/' . $articleDOI;
+					 $ezidIdentifier = 'https://ezid.cdlib.org/id/doi%3A' . $articleDOI;
 					 error_log("EZID IDENTIFIER $ezidIdentifier");
                      //now pass this to EZID:
 					
