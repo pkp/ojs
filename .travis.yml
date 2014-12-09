@@ -18,6 +18,9 @@ before_install:
   # Start submodules
   - ./tools/startSubmodulesTRAVIS.sh
 
+  # Install composer dependencies
+  - cd lib/pkp && composer install && cd ../..
+
   # Configure the webserver
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/prepare-webserver.sh; fi
 
@@ -41,7 +44,7 @@ script:
 after_script:
   # Print logs and outputs for debugging.
   # - cat access.log
-  # - cat error.log
+  - cat error.log
   # - cat xvfb-output
   # - cat selenium-output
   - cat ./lib/pkp/tests/results/error.log

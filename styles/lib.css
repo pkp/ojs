@@ -33,8 +33,8 @@
 
 /* Plupload - http://www.plupload.com/ */
 
-@import url("../lib/pkp/js/lib/plupload/js/jquery.ui.plupload/css/jquery.ui.plupload.css");
+@import url("../lib/pkp/lib/vendor/moxiecode/plupload/js/jquery.ui.plupload/css/jquery.ui.plupload.css");
 
 /* JqueryUI - http://jqueryui.com */
 
-@import url("../lib/pkp/styles/lib/jqueryUi/jqueryUi.css");
+@import url("../lib/pkp/lib/components/jquery-ui/themes/ui-lightness/jquery-ui.min.css");

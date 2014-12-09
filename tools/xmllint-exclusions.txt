@@ -4,6 +4,7 @@
 ./lib/pkp/plugins/metadata/mods34/tests/filter/test.xml
 ./lib/pkp/tests/phpunit-env1.xml
 ./lib/pkp/tests/phpunit-env2.xml
+./lib/pkp/lib/vendor
 ./lib/pkp/tests/classes/xslt
 ./lib/pkp/js/lib
 ./plugins/generic/lucene/embedded
@@ -16,4 +17,3 @@
 ./plugins/importexport/users/sample.xml
 ./plugins/importexport/pubIds/tests/functional
 ./lib/pkp/tests/
-./lib/pkp/js/lib/plupload

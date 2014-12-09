@@ -44,8 +44,29 @@ lib/pkp/tests							\
 .git								\
 .openshift							\
 lib/pkp/.git							\
-lib/pkp/js/lib/pnotify/build-tools				\
-lib/pkp/js/lib/pnotify/includes					\
+lib/pkp/lib/components/*.js					\
+lib/pkp/lib/components/*.css					\
+lib/pkp/lib/vendor/components					\
+lib/pkp/lib/vendor/composer					\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/art			\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/benchmarks		\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/configdog		\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/docs			\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/extras			\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/maintenance		\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/smoketests		\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/tests			\
+lib/pkp/lib/vendor/kriswallsmith				\
+lib/pkp/lb/vendor/leafo/lessphp/tests				\
+lib/pkp/lb/vendor/leafo/lessphp/docs				\
+lib/pkp/lb/vendor/moxiecode/plupload/examples			\
+lib/pkp/lb/vendor/phpmailer/phpmailer/docs			\
+lib/pkp/lb/vendor/phpmailer/phpmailer/examples			\
+lib/pkp/lb/vendor/phpmailer/phpmailer/test			\
+lib/pkp/lb/vendor/robloach					\
+lib/pkp/lb/vendor/smarty/smarty/demo				\
+lib/pkp/lb/vendor/symfony					\
+lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
 
@@ -65,8 +86,11 @@ echo "Done"
 echo -n "Checking out submodule submodules ... "
 cd lib/pkp
 git submodule -q update --init >/dev/null || exit 1
-cd ../..
 echo "Done"
+
+echo -n "Installing composer dependencies ... "
+composer.phar update
+cd ../..
 
 echo -n "Preparing package ... "
 cp config.TEMPLATE.inc.php config.inc.php
