@@ -92,37 +92,37 @@ class ArticleGalley extends ArticleFile {
 	 * Get the localized value of the galley label.
 	 * @return $string
 	 */
-  function getGalleyLabel() {
-    $label = $this->getLabel();
-    $localeDisplayFile = AppLocale::getLocaleDisplayFile();
+	function getGalleyLabel() {
+		$label = $this->getLabel();
+		$localeDisplayFile = AppLocale::getLocaleDisplayFile();
 
-    switch ($localeDisplayFile) {
-      case "show":
-          // Show lang label appened to the galley tag.
-          if ($this->getLocale() != AppLocale::getLocale()) {
-            $locales = AppLocale::getAllLocales();
-            $label .= ' (' . $locales[$this->getLocale()] . ')';
-          }
-          else {
-            $locales = AppLocale::getAllLocales();
-            $label .= ' (' . $locales[$this->getLocale()] . ')'; 
-          }
-        break;
+		switch ($localeDisplayFile) {
+			case "show":
+				// Show lang label appened to the galley tag.
+				if ($this->getLocale() != AppLocale::getLocale()) {
+					$locales = AppLocale::getAllLocales();
+					$label .= ' (' . $locales[$this->getLocale()] . ')';
+				}
+				else {
+					$locales = AppLocale::getAllLocales();
+					$label .= ' (' . $locales[$this->getLocale()] . ')'; 
+				}
+			break;
 
-      case "hide":
-          // Do nothing.
-        break;
+			case "hide":
+				// Do nothing.
+			break;
 
-      case "legacy":
-      default:
-          // Show lang label, except for user's current language.
-          if ($this->getLocale() != AppLocale::getLocale()) {
-            $locales = AppLocale::getAllLocales();
-            $label .= ' (' . $locales[$this->getLocale()] . ')';
-          }
-        break;
-    }
-		return $label;
+			case "legacy":
+			default:
+				// Show lang label, except for user's current language.
+				if ($this->getLocale() != AppLocale::getLocale()) {
+					$locales = AppLocale::getAllLocales();
+					$label .= ' (' . $locales[$this->getLocale()] . ')';
+				}
+			break;
+		}
+	return $label;
 	}
 
 	/**

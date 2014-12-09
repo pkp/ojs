@@ -175,39 +175,39 @@ class AppLocale extends PKPLocale {
 		return $locale;
 	}
 
-  /**
-   * Retrieve the localization display mode of the titles.
-   * @return string
-   */
-  function getLocaleDisplayTitle() {
-    $journal =& Request::getJournal();
+	/**
+	 * Retrieve the localization display mode of the titles.
+	 * @return string
+	 */
+	function getLocaleDisplayTitle() {
+		$journal =& Request::getJournal();
 
-    if (isset($journal)) {
-      $locale = $journal->getLocaleDisplayTitle();
-    }
-    else {
-      $locale = DEFAULT_LOCALE_DISPLAY;
-    }
+		if (isset($journal)) {
+			$locale = $journal->getLocaleDisplayTitle();
+		}
+		else {
+			$locale = DEFAULT_LOCALE_DISPLAY;
+		}
 
-    return $locale;
-  }
+		return $locale;
+	}
 
-  /**
-   * Retrieve the localization display mode of the titles.
-   * @return string
-   */
-  function getLocaleDisplayFile() {
-    $journal =& Request::getJournal();
+	/**
+	 * Retrieve the localization display mode of the titles.
+	 * @return string
+	 */
+	function getLocaleDisplayFile() {
+		$journal =& Request::getJournal();
 
-    if (isset($journal)) {
-      $locale = $journal->getLocaleDisplayFile();
-    }
-    else {
-      $locale = DEFAULT_LOCALE_DISPLAY;                                                                                                                      
-    }
+		if (isset($journal)) {
+			$locale = $journal->getLocaleDisplayFile();
+		}
+		else {
+			$locale = DEFAULT_LOCALE_DISPLAY;
+		}
 
-    return $locale;
-  }
+		return $locale;
+	}
 
 	/**
 	 * Make a map of components to their respective files.

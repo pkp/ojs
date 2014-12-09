@@ -32,9 +32,9 @@ class LanguageSettingsForm extends Form {
 		$this->settings = array(
 			'supportedLocales' => 'object',
 			'supportedSubmissionLocales' => 'object',
-      'supportedFormLocales' => 'object',
-      'localeDisplayTitle' => 'object',
-      'localeDisplayFile' => 'object'
+			'supportedFormLocales' => 'object',
+			'localeDisplayTitle' => 'object',
+			'localeDisplayFile' => 'object'
 		);
 
 		$site =& Request::getSite();
@@ -74,16 +74,16 @@ class LanguageSettingsForm extends Form {
 			if ($this->getData($name) == null || !is_array($this->getData($name))) {
 				$this->setData($name, array());
 			}
-    }
+		}
 
-    // Assign DEFAULT lang display modes:
-    if ($this->getData('localeDisplayTitle') == null) {
-      $this->setData('localeDisplayTitle', 'legacy');
-    }
+		// Assign DEFAULT lang display modes:
+		if ($this->getData('localeDisplayTitle') == null) {
+			$this->setData('localeDisplayTitle', 'legacy');
+		}
 
-    if ($this->getData('localeDisplayFile') == null) {
-      $this->setData('localeDisplayFile', 'legacy');
-    }
+		if ($this->getData('localeDisplayFile') == null) {
+			$this->setData('localeDisplayFile', 'legacy');
+		}
 
 	}
 
@@ -92,24 +92,24 @@ class LanguageSettingsForm extends Form {
 	 */
 	function readInputData() {
 		$vars = array_keys($this->settings);
-    $vars[] = 'primaryLocale';
-    $vars[] = 'localeDisplayTitle';
-    $vars[] = 'localeDisplayFile';
+		$vars[] = 'primaryLocale';
+		$vars[] = 'localeDisplayTitle';
+		$vars[] = 'localeDisplayFile';
 		$this->readUserVars($vars);
 
 		foreach (array('supportedFormLocales', 'supportedSubmissionLocales', 'supportedLocales') as $name) {
 			if ($this->getData($name) == null || !is_array($this->getData($name))) {
 				$this->setData($name, array());
 			}
-    }
+		}
 
-    // Assign DEFAULT lang display mode: (Why are we doing this twice? just in case initData fails?)
-    if ($this->getData('localeDisplayTitle') == null) {
-       $this->setData('localeDisplayTitle', 'legacy');
-    }
-    if ($this->getData('localeDisplayFile') == null) {
-       $this->setData('localeDisplayFile', 'legacy');
-    }
+		// Assign DEFAULT lang display mode: (Why are we doing this twice? just in case initData fails?)
+		if ($this->getData('localeDisplayTitle') == null) {
+			$this->setData('localeDisplayTitle', 'legacy');
+		}
+		if ($this->getData('localeDisplayFile') == null) {
+			$this->setData('localeDisplayFile', 'legacy');
+		}
 
 	}
 
@@ -144,10 +144,10 @@ class LanguageSettingsForm extends Form {
 		$this->setData('supportedSubmissionLocales', $supportedSubmissionLocales);
 		$this->setData('supportedFormLocales', $supportedFormLocales);
 
-    $localeDisplayTitle = $this->getData('localeDisplayTitle');
+		$localeDisplayTitle = $this->getData('localeDisplayTitle');
 		$this->setData('localeDisplayTitle', $localeDisplayTitle);
 
-    $localeDisplayFile = $this->getData('localeDisplayFile');
+		$localeDisplayFile = $this->getData('localeDisplayFile');
 		$this->setData('localeDisplayFile', $localeDisplayFile);
 
 		foreach ($this->_data as $name => $value) {

@@ -337,7 +337,7 @@ class MetadataForm extends Form {
 		$section =& $sectionDao->getSection($article->getSectionId());
 		$article->setAbstract($this->getData('abstract'), null); // Localized
 
-    $article->setLocale($this->getData('submissionLocale'), null);
+		$article->setLocale($this->getData('submissionLocale'), null);
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
