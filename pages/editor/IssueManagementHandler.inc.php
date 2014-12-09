@@ -799,8 +799,8 @@ class IssueManagementHandler extends EditorHandler {
 					 $articleDOI = $article->getDOI();
 					 $articleDOI = str_replace("/","%2F", $articleDOI);
 					 $journalPath = $journal->getPath();
-					 error_log("JOURNALPATH:$journalPath");
 					 $campusOwner = array("uciem_westjem"=>'cdlib');//change this when we're live!
+					 error_log("Campus OWNER: $campusOwner[$journalPath]");
 					 $ezidIdentifier = 'https://ezid.cdlib.org/id/doi%3A' . $articleDOI;
 					 error_log("EZID IDENTIFIER $ezidIdentifier");
                      //now pass this to EZID:
