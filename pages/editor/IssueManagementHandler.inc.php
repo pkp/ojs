@@ -719,6 +719,7 @@ class IssueManagementHandler extends EditorHandler {
 	
 	/**
 	 * Export issue to eScholarship front-end
+	 * If Journal has a DOI, then generate CrossRef metadata and send to EZID
 	 */
 	function publishIssueToEschol($journal, $issue) {
 		//
@@ -755,13 +756,88 @@ class IssueManagementHandler extends EditorHandler {
 		$issueNumber = $issue->getNumber();
 		//$issueNumber = $issue->get;
 		
-		if (($issueVolume != 0) && ($issueNumber != 0)){
+		
+		if (($issueVolume != 0) && ($issueNumber != 0) && (gethostname == 'cdl-submit-p01' )){
 		    $message = $journalTitle . ' has just published an issue, Volume ' . $issueVolume . ' Issue ' . $issueNumber;
 		    mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);
         }
 		else {
 		  error_log("AIP publication only");
 		}
+		
+		
+		//
+		//FOR JOURNALS WITH A DOI, GENERATE CROSSREF FILES by submitting each article to the plugin AND SEND TO EZID
+		//
+        $doiPrefix = $journal->getSetting('doiPrefix');
+		if ($doiPrefix != ""){
+		    error_log("$journalTitle DOI Prefix is $doiPrefix so generating CrossRef files.");
+			import('plugins.importexport.crossref.CrossRefExportPlugin');
+			$crossRefObject = new CrossRefExportPlugin();
+            $crossRefObject->pluginPath="./plugins/importexport/crossref/";
+			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');		    
+		    $articles = $publishedArticleDao->getPublishedArticles($issue->getId());
+		    foreach($articles as $article) {
+			    $articleID = array($article->getId());
+			    $result = ArticleSearch::formatResults($articleID);
+				$singleArticleID = array_shift($articleID);
+				$output = $singleArticleID . "_crossref.xml";
+				error_log("CrossRef file should be called $output");
+				if (empty($result)){
+				   error_log("No articles in TOC!");
+				}
+				else {
+				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
+					 $qualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID");
+					 if (empty($qualifiedArk)){
+					     error_log("No ARK for $articleID");
+					 }
+					 else{
+					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
+						 error_log("For ARTICLE ID $singleArticleID eSchol URL is $escholURL");				 
+					 }
+					 $articleDOI = $article->getDOI();
+					 $articleDOI = str_replace("/","%2F", $articleDOI);
+					 $journalPath = $journal->getPath();
+					 $campusOwner = array("uciem_westjem"=>'cdllib');//change this when we're live!
+					 error_log("Campus OWNER: $campusOwner[$journalPath]");
+					 $ezidIdentifier = 'https://ezid.cdlib.org/id/doi%3A' . $articleDOI;
+					 error_log("EZID IDENTIFIER $ezidIdentifier");
+                     //now pass this to EZID:
+					
+                    if ($crossRefXML !=""){
+					   //First escape % and newlines
+					   $crossRefXML = str_replace("\n", "%0A", str_replace("%", "%25", $crossRefXML));
+					   //error_log("Cleaned CrossRefFile $crossRefXML");
+					   error_log("crossRefXML is not empty so sending to EZID using create operation");
+					  $input = "_crossref: yes\n" . "_profile: crossref\n" . "_target: $escholURL\n" ."_coowners: $campusOwner[$journalPath]\n" . "crossref: $crossRefXML";
+                        $ch = curl_init();
+                        curl_setopt($ch, CURLOPT_URL, $ezidIdentifier);
+                        curl_setopt($ch, CURLOPT_NETRC, true);
+						curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+                        curl_setopt($ch, CURLOPT_HTTPHEADER,
+                        array('Content-Type: text/plain; charset=UTF-8',
+                             'Content-Length: ' . strlen($input)));
+                        curl_setopt($ch, CURLINFO_HEADER_OUT,true);
+						curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        $output = curl_exec($ch);
+						error_log(curl_getinfo($ch, CURLINFO_HEADER_OUT));
+						error_log(curl_error($ch));
+                        error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
+                        error_log($output);
+                        curl_close($ch);                       						
+                    }					
+					else {
+					   error_log("$journalTitle | $output didn't get created");
+					}
+				}
+			} 				
+		}
+		else {
+		   error_log("$journalTitle does not have a DOI, so no CrossRef/EZID export.");		   
+		}
+		
 		
 		return true;
 		//exec("/apps/subi/subi/ojsConvert/convert.py $outputFile",$conversionOutput,$returnValue); //returns 0 on success
