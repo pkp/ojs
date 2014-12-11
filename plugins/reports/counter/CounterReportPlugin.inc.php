@@ -86,7 +86,7 @@ class CounterReportPlugin extends ReportPlugin {
 	 * @see ReportPlugin::display()
 	 */
 	function display(&$args, &$request) {
-		parent::display($args);
+		parent::display($args, $request);
 
 		$journal =& $request->getJournal();
 		if (!Validation::isSiteAdmin()) {
