@@ -193,10 +193,11 @@ class ReportPlugin extends Plugin {
 	}
 
 	/**
-	 * Display the import/export plugin UI.
+	 * Base method to display the report plugin UI.  This should be implemented in the subclass.
 	 * @param $args Array The array of arguments the user supplied.
+	 * @param $request Object The PKP Request object initiating the call.
 	 */
-	function display(&$args) {
+	function display($args, $request) {
 		$templateManager =& TemplateManager::getManager();
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 	}

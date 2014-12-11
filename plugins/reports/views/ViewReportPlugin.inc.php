@@ -48,7 +48,7 @@ class ViewReportPlugin extends ReportPlugin {
 		return __('plugins.reports.views.description');
 	}
 
-	function display(&$args) {
+	function display($args, $request) {
 		$journal =& Request::getJournal();
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -79,7 +79,6 @@ class ViewReportPlugin extends ReportPlugin {
 		$dbResultRange = new DBResultRange(STATISTICS_MAX_ROWS);
 		$page = 3;
 
-		$request =& Application::getRequest();
 		if ($request->getUserVar('metricType') === OJS_METRIC_TYPE_COUNTER) {
 			$metricType = OJS_METRIC_TYPE_COUNTER;
 		} else {

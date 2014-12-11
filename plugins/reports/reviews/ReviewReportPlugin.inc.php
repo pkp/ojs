@@ -51,7 +51,7 @@ class ReviewReportPlugin extends ReportPlugin {
 		return __('plugins.reports.reviews.description');
 	}
 
-	function display(&$args) {
+	function display($args, $request) {
 		$journal =& Request::getJournal();
 
 		header('content-type: text/comma-separated-values');

@@ -86,8 +86,8 @@ class TimedViewReportPlugin extends ReportPlugin {
 		$templateMgr->assign('pageHierarchy', $pageCrumbs);
 	}
 
-	function display(&$args, $request) {
-		parent::display($args);
+	function display($args, $request) {
+		parent::display($args, $request);
 		$this->setBreadcrumbs();
 
 		$form = new TimedViewReportForm($this);
