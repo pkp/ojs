@@ -42,35 +42,35 @@ class NotificationManager extends PKPNotificationManager {
 
 		switch ($type) {
 			case NOTIFICATION_TYPE_ARTICLE_SUBMITTED:
-				$role = $this->_getCachedRole($request, $notification);
+				$role = $this->_getCachedRole($notification);
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submission', $notification->getAssocId());
 			case NOTIFICATION_TYPE_SUPP_FILE_MODIFIED:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
+				$role = $this->_getCachedRole($notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId());
 			case NOTIFICATION_TYPE_METADATA_MODIFIED:
-				$role = $this->_getCachedRole($request, $notification);
+				$role = $this->_getCachedRole($notification);
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submission', $notification->getAssocId(), null, 'metadata');
 			case NOTIFICATION_TYPE_GALLEY_MODIFIED:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
+				$role = $this->_getCachedRole($notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'layout');
 			case NOTIFICATION_TYPE_SUBMISSION_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
+				$role = $this->_getCachedRole($notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'editorDecision');
 			case NOTIFICATION_TYPE_LAYOUT_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
+				$role = $this->_getCachedRole($notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'layout');
 			case NOTIFICATION_TYPE_COPYEDIT_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
+				$role = $this->_getCachedRole($notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'coypedit');
 			case NOTIFICATION_TYPE_PROOFREAD_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
+				$role = $this->_getCachedRole($notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionEditing', $notification->getAssocId(), null, 'proofread');
 			case NOTIFICATION_TYPE_REVIEWER_COMMENT:
 			case NOTIFICATION_TYPE_REVIEWER_FORM_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
+				$role = $this->_getCachedRole($notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'peerReview');
 			case NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT:
-				$role = $this->_getCachedRole($request, $notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
+				$role = $this->_getCachedRole($notification, array(ROLE_ID_EDITOR, ROLE_ID_SECTION_EDITOR, ROLE_ID_AUTHOR));
 				return $dispatcher->url($request, ROUTE_PAGE, null, $role, 'submissionReview', $notification->getAssocId(), null, 'editorDecision');
 			case NOTIFICATION_TYPE_USER_COMMENT:
 				return $dispatcher->url($request, ROUTE_PAGE, null, 'comment', 'view', $notification->getAssocId());
@@ -84,13 +84,13 @@ class NotificationManager extends PKPNotificationManager {
 		}
 	}
 
-	function _getCachedRole(&$request, &$notification, $validRoles = null) {
+	function _getCachedRole(&$notification, $validRoles = null) {
 		assert($notification->getAssocType() == ASSOC_TYPE_ARTICLE);
 		$articleId = (int) $notification->getAssocId();
 		$userId = $notification->getUserId();
 
 		// Check if we've already set the roles for this user and article, otherwise fetch them
-		if(!isset($this->privilegedRoles[$userId][$articleId])) $this->privilegedRoles[$userId][$articleId] = $this->_getHighestPrivilegedRolesForArticle($request, $articleId);
+		if(!isset($this->privilegedRoles[$userId][$articleId])) $this->privilegedRoles[$userId][$articleId] = $this->_getHighestPrivilegedRolesForArticle($userId, $articleId);
 
 		$roleDao =& DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
 
@@ -113,12 +113,11 @@ class NotificationManager extends PKPNotificationManager {
 	 * Get a list of the most 'privileged' roles a user has associated with an article.  This will
 	 *  determine the URL to point them to for notifications about articles.  Returns roles in
 	 *  order of 'importance'
-	 * @param $articleId
+	 * @param $userId int User ID
+	 * @param $articleId int Article ID
 	 * @return array
 	 */
-	function _getHighestPrivilegedRolesForArticle(&$request, $articleId) {
-		$user =& $request->getUser();
-		$userId = $user->getId();
+	function _getHighestPrivilegedRolesForArticle($userId, $articleId) {
 		$roleDao =& DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
 		$articleDao =& DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 
