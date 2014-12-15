@@ -32,11 +32,14 @@ class JournalStatisticsDAO extends DAO {
 			FROM	articles a
 				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
-				LEFT JOIN articles a2 ON (a2.article_id < a.article_id AND a2.date_submitted IS NOT NULL)
+				LEFT JOIN articles a2 ON (a2.article_id < a.article_id AND a2.date_submitted IS NOT NULL AND a2.journal_id = ?)
 			WHERE	a2.article_id IS NULL AND
 				a.date_submitted IS NOT NULL AND
 				a.journal_id = ?',
-			(int) $journalId
+			array(
+				(int) $journalId,
+				(int) $journalId
+			)
 		);
 
 		$row = $result->GetRowAssoc(false);
