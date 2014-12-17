@@ -133,7 +133,10 @@ class UserXMLParser {
 								$newUser->setSignature($attrib->getValue(), $locale);
 								break;
 							case 'interests':
-								$newUser->setTemporaryInterests($attrib->getValue());
+								$interests = $attrib->getValue(); // Bug #9054
+								$oldInterests = $newUser->getTemporaryInterests();
+								if ($oldInterests) $interests = $oldInterests . ',' . $interests;
+								$newUser->setTemporaryInterests($interests);
 								break;
 							case 'gossip':
 								$locale = $attrib->getAttribute('locale');
