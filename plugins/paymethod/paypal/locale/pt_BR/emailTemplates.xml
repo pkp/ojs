@@ -12,19 +12,19 @@
 <email_texts locale="pt_BR">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Atividade incomum na conta PayPal</subject>
-		<body>O sistema encontrou atividade incomum relacionada ao suporte a pagamentos via PayPal da revista {$contextName}. 
-Esta atividade pode exigir investigação mais profunda ou intervenção manual.
-                       
-Esta é uma mensagem automática da ferramenta de Pagamento via PayPal do Open Journal Systems.
-
-Informações detalhadas da notificação:
-{$postInfo}
-
-Informações adicionais (caso informado):
-{$additionalInfo}
-
-Variáveis do servidor:
-{$serverVars}</body>
+		<body><![CDATA[O sistema encontrou atividade incomum relacionada ao suporte a pagamentos via PayPal da revista {$contextName}. <br />
+Esta atividade pode exigir investigação mais profunda ou intervenção manual.<br />
+                       <br />
+Esta é uma mensagem automática da ferramenta de Pagamento via PayPal do Open Journal Systems.<br />
+<br />
+Informações detalhadas da notificação:<br />
+{$postInfo}<br />
+<br />
+Informações adicionais (caso informado):<br />
+{$additionalInfo}<br />
+<br />
+Variáveis do servidor:<br />
+{$serverVars}]]></body>
 		<description>Esta mensagem notifica o contato principal da revista sobre atividades suspeitas, ou atividades que exijam intervenção manual, detectadas pelo Plugin de Pagamento via PayPal.</description>
 	</email_text>
 </email_texts>

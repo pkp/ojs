@@ -51,7 +51,7 @@
 
 		<!-- Message to user -->
 		{fbvFormSection}
-			{fbvElement type="textarea" name="personalMessage" id="personalMessage" label="editor.submission.copyediting.personalMessageToUser" value=$personalMessage height=$fbvStyles.height.TALL}
+			{fbvElement type="textarea" name="personalMessage" id="personalMessage" label="editor.submission.copyediting.personalMessageToUser" value=$personalMessage height=$fbvStyles.height.TALL rich=true}
 		{/fbvFormSection}
 
 		<!-- skip email checkbox -->

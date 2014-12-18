@@ -12,17 +12,17 @@
 <email_texts locale="ja_JP">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>異常なPayPal</subject>
-		<body>Open Journal Systems は {$contextName} がサポートしている PayPal 支払いに関して異常な処理が発生しました。この処理についてさらなる調査と手作業による介入が必要かもしれません。
-
-このメールは Open Journal Systems の PayPal プラグインから自動生成されました。
-
-要求のあった全ポスト情報:
-{$postInfo}
-
-追加情報 (ある場合):
-{$additionalInfo}
-
-Server vars:
-{$serverVars}</body>
+		<body><![CDATA[Open Journal Systems は {$contextName} がサポートしている PayPal 支払いに関して異常な処理が発生しました。この処理についてさらなる調査と手作業による介入が必要かもしれません。<br />
+<br />
+このメールは Open Journal Systems の PayPal プラグインから自動生成されました。<br />
+<br />
+要求のあった全ポスト情報:<br />
+{$postInfo}<br />
+<br />
+追加情報 (ある場合):<br />
+{$additionalInfo}<br />
+<br />
+Server vars:<br />
+{$serverVars}]]></body>
 	</email_text>
 </email_texts>

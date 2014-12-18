@@ -1147,6 +1147,73 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * Convert email templates to HTML.
+	 * @return boolean True indicates success.
+	 */
+	function htmlifyEmailTemplates() {
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
+
+		// Convert the email templates in email_templates_data to localized
+		$result = $emailTemplateDao->retrieve('SELECT * FROM email_templates_data');
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$emailTemplateDao->update(
+				'UPDATE	email_templates_data
+				SET	body = ?
+				WHERE	email_key = ? AND
+					locale = ? AND
+					assoc_type = ? AND
+					assoc_id = ?',
+				array(
+					preg_replace('/{\$[a-zA-Z]+Url}/', '<a href="\0">\0</a>', nl2br($row['body'])),
+					$row['email_key'],
+					$row['locale'],
+					$row['assoc_type'],
+					$row['assoc_id']
+				)
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// Convert the email templates in email_templates_default_data to localized
+		$result = $emailTemplateDao->retrieve('SELECT * FROM email_templates_default_data');
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$emailTemplateDao->update(
+				'UPDATE	email_templates_default_data
+				SET	body = ?
+				WHERE	email_key = ? AND
+					locale = ?',
+				array(
+					preg_replace('/{\$[a-zA-Z]+Url}/', '<a href="\0">\0</a>', nl2br($row['body'])),
+					$row['email_key'],
+					$row['locale'],
+				)
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// Localize the email header and footer fields.
+		$contextDao = DAORegistry::getDAO('PressDAO');
+		$settingsDao = DAORegistry::getDAO('PressSettingsDAO');
+		$contexts = $contextDao->getAll();
+		while ($context = $contexts->next()) {
+			foreach (array('emailHeader', 'emailFooter', 'emailSignature') as $settingName) {
+				$settingsDao->updateSetting(
+					$context->getId(),
+					$settingName,
+					$context->getSetting('emailHeader'),
+					'string'
+				);
+			}
+		}
+
+		return true;
+	}
 }
 
 ?>

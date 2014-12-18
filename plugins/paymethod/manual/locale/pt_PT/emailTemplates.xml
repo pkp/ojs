@@ -12,12 +12,12 @@
 <email_texts locale="pt_PT">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Notificação de pagamento manual</subject>
-		<body>É necessário realizar o processamento de um pagamento manual de assinatura da revista {$contextName} do utilizador {$userFullName} (username "{$userName}").
-
-O item adquirido é "{$itemName}".
-O custo é {$itemCost} ({$itemCurrencyCode}).
-
-Esta mensagem foi gerada pelo Plugin de Pagamento Manual do OJS.</body>
+		<body><![CDATA[É necessário realizar o processamento de um pagamento manual de assinatura da revista {$contextName} do utilizador {$userFullName} (username &quot;{$userName}&quot;).<br />
+<br />
+O item adquirido é &quot;{$itemName}&quot;.<br />
+O custo é {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+Esta mensagem foi gerada pelo Plugin de Pagamento Manual do OJS.]]></body>
 		<description>Esta mensagem notifica o editor-gestor que um pagamento manual foi realizado e exige processamento.</description>
 	</email_text>
 </email_texts>

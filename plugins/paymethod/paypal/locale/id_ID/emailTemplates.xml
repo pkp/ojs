@@ -4,14 +4,14 @@
 <email_texts locale="id_ID"> 
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">		
 	<subject> Kegiatan pembayaran paypal yang tidak biasa </subject> 
-		<body> IOJS telah menemukan kegiatan yang tidak biasa yang berhubungan dengan bantuan pembayaran paypal untuk jurnal {$contextName}. Kegiatan ini mungkin dibutuhkan investigasi yang lebih lanjut atau intervensi manual. Emai ini diciptakan oleh OJS PayPal plugin.
-Informasi posting penuh untuk permohonan:
-{$postInfo}
-Informasi tambahan (jika tersedia):
-{$additionalInfo}
-Variasi Server :
-{$serverVars}
-</body>
+		<body><![CDATA[ IOJS telah menemukan kegiatan yang tidak biasa yang berhubungan dengan bantuan pembayaran paypal untuk jurnal {$contextName}. Kegiatan ini mungkin dibutuhkan investigasi yang lebih lanjut atau intervensi manual. Emai ini diciptakan oleh OJS PayPal plugin.<br />
+Informasi posting penuh untuk permohonan:<br />
+{$postInfo}<br />
+Informasi tambahan (jika tersedia):<br />
+{$additionalInfo}<br />
+Variasi Server :<br />
+{$serverVars}<br />
+]]></body>
 		<description> Email ini digunakan untuk memberitahukan jurnal kontak utama yang mempunyai kegiatan yang mencurigakan atau kegiatan yang membutuhkan intervensi manual yang ditemukan oleh plugin paypal.</description>
 	</email_text>
 </email_texts>

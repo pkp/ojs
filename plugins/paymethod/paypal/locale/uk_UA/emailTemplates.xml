@@ -12,19 +12,19 @@
 <email_texts locale="en_US">
        <email_text key="PAYPAL_INVESTIGATE_PAYMENT">
                <subject>Незвичайна активність PayPal</subject>
-               <body>Система Open Journal Systems помітила незвичайну активність у функціонуванні модуля платежів PayPal журналу {$contextName}. Може знадобитись подальше вивчення цього питання або ручне втручання.
-                       
-Цей лист створений модулем PayPal системи Open Journal Systems.
-
-Повна інформація про запит:
-{$postInfo}
-
-Додаткова інформація (якщо наявна):
-{$additionalInfo}
-
-Дані сервера:
-{$serverVars}
-</body>
+               <body><![CDATA[Система Open Journal Systems помітила незвичайну активність у функціонуванні модуля платежів PayPal журналу {$contextName}. Може знадобитись подальше вивчення цього питання або ручне втручання.<br />
+                       <br />
+Цей лист створений модулем PayPal системи Open Journal Systems.<br />
+<br />
+Повна інформація про запит:<br />
+{$postInfo}<br />
+<br />
+Додаткова інформація (якщо наявна):<br />
+{$additionalInfo}<br />
+<br />
+Дані сервера:<br />
+{$serverVars}<br />
+]]></body>
                <description>Цей шаблон листа використовується для інформування основної контактної особи журналу про виявлення модулем PayPal підозрілої активності або активності, що потребує ручного втручання.</description>
        </email_text>
 </email_texts>

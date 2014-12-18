@@ -12,18 +12,18 @@
 <email_texts locale="eu_ES">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Ezohiko PayPal jarduera</subject>
-		<body>Open Journal Systems-ek ezohiko jarduera sumatu du {$contextName} aldizkariaren PayPal ordainketa-zerbitzuan. Jarduera hori gehiago ikertu beharko da edo eskuz parte hartu beharko da.
-                       
-Mezu hau Open Journal Systems-en PayPal pluginak sortu du.
-
-Eskaeraren informazio osoa:
-{$postInfo}
-
-Informazio osagarria (eman badute):
-{$additionalInfo}
-
-Zerbitzari-aldagaiak:
-{$serverVars}</body>
+		<body><![CDATA[Open Journal Systems-ek ezohiko jarduera sumatu du {$contextName} aldizkariaren PayPal ordainketa-zerbitzuan. Jarduera hori gehiago ikertu beharko da edo eskuz parte hartu beharko da.<br />
+                       <br />
+Mezu hau Open Journal Systems-en PayPal pluginak sortu du.<br />
+<br />
+Eskaeraren informazio osoa:<br />
+{$postInfo}<br />
+<br />
+Informazio osagarria (eman badute):<br />
+{$additionalInfo}<br />
+<br />
+Zerbitzari-aldagaiak:<br />
+{$serverVars}]]></body>
 		<description>Mezu-txantiloi hau erabiltzen da aldizkariko kontaktu nagusiari jakinarazteko PayPal pluginak jarduera susmagarria edo eskuz parte hartzea eskatzen duena topatu duela.</description>
 	</email_text>
 </email_texts>

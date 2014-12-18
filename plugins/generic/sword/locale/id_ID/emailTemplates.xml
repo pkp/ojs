@@ -14,11 +14,11 @@
 <email_texts locale="id_ID">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Notifikasi Deposit</subject>
-		<body>Selamat atas diterimanya naskah Anda, "{$submissionTitle}", untuk penerbitan di  {$contextName}. Jika Anda memilih, Anda boleh secara otomatis menyimpan naskah Anda di satu repositori atau lebih.  
-
-Pergi ke {$swordDepositUrl} untuk melanjutkan.
-
-Email ini dihasilkan oleh Plugin deposit SWORD Open Journal System.</body>
+		<body><![CDATA[Selamat atas diterimanya naskah Anda, &quot;{$submissionTitle}&quot;, untuk penerbitan di  {$contextName}. Jika Anda memilih, Anda boleh secara otomatis menyimpan naskah Anda di satu repositori atau lebih.  <br />
+<br />
+Pergi ke <a href="{$swordDepositUrl}">{$swordDepositUrl}</a> untuk melanjutkan.<br />
+<br />
+Email ini dihasilkan oleh Plugin deposit SWORD Open Journal System.]]></body>
 		<description>Template email ini digunakan untuk memberitahu penulis poin deposit opsional untuk SWORD deposits.</description>
 	</email_text>
 </email_texts>

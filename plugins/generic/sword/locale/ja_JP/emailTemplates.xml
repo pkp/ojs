@@ -13,13 +13,13 @@
 <email_texts locale="ja_JP">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>デポジット通知</subject>
-		<body>この度は， {$contextName} に  "{$submissionTitle}" を投稿いただきまして誠に有難うございます。
-
-ご希望の場合は，下記のURLから他のリポジトリにも自動的にデポジットすることができます。
-
-{$swordDepositUrl}
-
-このメールは，Open Journal Systems' SWORD デポジットプラグインで生成されました。</body>
+		<body><![CDATA[この度は， {$contextName} に  &quot;{$submissionTitle}&quot; を投稿いただきまして誠に有難うございます。<br />
+<br />
+ご希望の場合は，下記のURLから他のリポジトリにも自動的にデポジットすることができます。<br />
+<br />
+<a href="{$swordDepositUrl}">{$swordDepositUrl}</a><br />
+<br />
+このメールは，Open Journal Systems' SWORD デポジットプラグインで生成されました。]]></body>
 		<description>SWORD デポジットでデポジットポイントの選択を著者に通知するために使われるテンプレートです。</description>
 	</email_text>
 </email_texts>

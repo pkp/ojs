@@ -12,12 +12,12 @@
 <email_texts locale="ro_RO">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Înștiințare la plata în sistem tradițional</subject>
-		<body>Trebuie procesată o plată făcută în sistem tradițional (nu electronică) pentru această revistă {$contextName} a utilizatorului {$userFullName} (username "{$userName}").
-
-Se face plata pentru "{$itemName}".
-Costă {$itemCost} ({$itemCurrencyCode}).
-
-Acest email a fost generat de modulul pentru plăți în sistem tradițional al Open Journal Systems.</body>
+		<body><![CDATA[Trebuie procesată o plată făcută în sistem tradițional (nu electronică) pentru această revistă {$contextName} a utilizatorului {$userFullName} (username &quot;{$userName}&quot;).<br />
+<br />
+Se face plata pentru &quot;{$itemName}&quot;.<br />
+Costă {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+Acest email a fost generat de modulul pentru plăți în sistem tradițional al Open Journal Systems.]]></body>
 		<description>Acest șablon de email este utilizat pentru a înștiința managerul unei reviste asupra faptului că a fost solicitată o plată în sistem tradițional.</description>
 	</email_text>
 </email_texts>

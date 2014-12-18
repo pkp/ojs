@@ -12,17 +12,17 @@
 <email_texts locale="cs_CZ">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Neobvyklá PayPal aktivita</subject>
-		<body>OJS zaznamenal neobvyklou aktivitu v souvislosti s podporou plateb přes PayPal pro časopis {$contextName}. Tato aktivita může vyžadovat další kontrolu nebo ruční zásah.
-                       
-Tento email byl vygenerován OJS pluginem pro PayPal.
-
-Kompletní informace k požadavku:
-{$postInfo}
-
-Doplňkové informace (pokud byly uvedeny):
-{$additionalInfo}
-
-Proměnné serveru:
-{$serverVars}</body>
+		<body><![CDATA[OJS zaznamenal neobvyklou aktivitu v souvislosti s podporou plateb přes PayPal pro časopis {$contextName}. Tato aktivita může vyžadovat další kontrolu nebo ruční zásah.<br />
+                       <br />
+Tento email byl vygenerován OJS pluginem pro PayPal.<br />
+<br />
+Kompletní informace k požadavku:<br />
+{$postInfo}<br />
+<br />
+Doplňkové informace (pokud byly uvedeny):<br />
+{$additionalInfo}<br />
+<br />
+Proměnné serveru:<br />
+{$serverVars}]]></body>
 	</email_text>
 </email_texts>

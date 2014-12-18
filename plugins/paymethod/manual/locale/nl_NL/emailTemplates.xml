@@ -12,11 +12,11 @@
 <email_texts locale="nl_NL">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Bericht van handmatige betaling</subject>
-		<body>Er moet een handmatige betaling verwerkt worden voor tijdschrift {$contextName} en gebruiker {$userFullName} (gebruikersnaam "{$userName}").
-
-Er wordt betaald voor "{$itemName}".
-De prijs is {$itemCost} ({$itemCurrencyCode}).
-
-Deze e-mail is gegenereerd door de Handmatige betalingen plugin van Open Journal Systems.</body>
+		<body><![CDATA[Er moet een handmatige betaling verwerkt worden voor tijdschrift {$contextName} en gebruiker {$userFullName} (gebruikersnaam &quot;{$userName}&quot;).<br />
+<br />
+Er wordt betaald voor &quot;{$itemName}&quot;.<br />
+De prijs is {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+Deze e-mail is gegenereerd door de Handmatige betalingen plugin van Open Journal Systems.]]></body>
 	</email_text>
 </email_texts>

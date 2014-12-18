@@ -13,70 +13,70 @@
 <email_texts locale="ro_RO">
 	<email_text key="DOAJ_EMAIL_REP">
 		<subject>Contribuirea la DOAJ cu informații privind revista</subject>
-		<body>Dragă Sonja, 
-			
-Acest mesaj a fost trimis pentru a te înștiința că dorim să includem {$contextName} în DOAJ. Pentru a crește viteza procesului de evaluare, am dori să-ți oferim câteva informații despre revista noastră.
-
-Acces deschis (nu taxează cititorii sau instituțiile din care fac parte pentru acces) (da/nu): {$isOpenAccess}
-
-Titlul revistei: {$contextName}
-
-Titlul alternativ al revistei (folosește-l dacă revista are un al doilea nume care este foarte cunoscut): {$altTitle}
-
-URL: {$journalURL}
-
-Autorii sunt taxați pentru publicare? (da/nu): {$hasAuthorFee}
-
-Ai un URL (link) către o pagină cu informații care se adresează autorilor? (URL): {$infoURL}
- 
-Control prin evaluare peer-review sau control editorial (da/nu): {$isPeerReviewed}
-
-Revistă de cercetare care conține în principal rezultate originale de cercetare sau evaluări ale cercetărilor (da/nu): {$isOriginalResearch}
-
-Comunitatea științifică/de cercetare ca și grup țintă principal (da/nu): {$isAcademic}
-
-Activă (da/nu): {$isActive}
-
-Este și în formă tipărită (da/nu): {$hasPrintedForm}
-
-Embargo (dacă versiunea tipărită este publicată înaintea versiunii online) (da/nu): {$hasEmbargo}
-
-Access deschis pe deplin începând cu anul: {$accessFrom}
-
-Volumul (first full text accessible volume): {$firstVolume}
-
-Număr (primul număr cu acces la textul integral): {$firstIssue}
-
-ISSN (Completează DOAR dacă revista are un ISSN): {$issn}
-
-EISSN (Completează DOAR dacă revista are un EISSN): {$eissn}
-
-Editor: {$publisherName}
-
-Țara: {$country}
-
-Limbi: {$languages}
-
-Cuvinte cheie (trei - cinci cuvinte care descriu conținutul revistei): {$keywords}
-
-Persoană de contact (numele persoanei de contact, poate fi editorul/redactoru șef): {$contactName}
-
-Email de contact (adresa de email pentru persoana de contact): {$contactEmail}
-
-Periodicitatea revistei / an: {$frequency}
-
-Numărul de articole / număr: {$articlesPerIssue}
-
-Reține că DOAJ include doar titlurile care se ridică la nivelul și criteriile de selecție cerute (http://www.doaj.org/articles/about#definitions).
-
-Ce nu incorporează DOAJ: 
-	- Buletine de informare care doar aduc informații despre o instituție. 
-	- Reviste care taxează accesul sau care au taxe pentru abonamente. 
-	- Reviste care impun o perioadă de embargo. 
-
-Mulțumesc! 
-Cu stimă,
-{$editorialContactSignature}</body>
+		<body><![CDATA[Dragă Sonja, <br />
+			<br />
+Acest mesaj a fost trimis pentru a te înștiința că dorim să includem {$contextName} în DOAJ. Pentru a crește viteza procesului de evaluare, am dori să-ți oferim câteva informații despre revista noastră.<br />
+<br />
+Acces deschis (nu taxează cititorii sau instituțiile din care fac parte pentru acces) (da/nu): {$isOpenAccess}<br />
+<br />
+Titlul revistei: {$contextName}<br />
+<br />
+Titlul alternativ al revistei (folosește-l dacă revista are un al doilea nume care este foarte cunoscut): {$altTitle}<br />
+<br />
+URL: {$journalURL}<br />
+<br />
+Autorii sunt taxați pentru publicare? (da/nu): {$hasAuthorFee}<br />
+<br />
+Ai un URL (link) către o pagină cu informații care se adresează autorilor? (URL): {$infoURL}<br />
+ <br />
+Control prin evaluare peer-review sau control editorial (da/nu): {$isPeerReviewed}<br />
+<br />
+Revistă de cercetare care conține în principal rezultate originale de cercetare sau evaluări ale cercetărilor (da/nu): {$isOriginalResearch}<br />
+<br />
+Comunitatea științifică/de cercetare ca și grup țintă principal (da/nu): {$isAcademic}<br />
+<br />
+Activă (da/nu): {$isActive}<br />
+<br />
+Este și în formă tipărită (da/nu): {$hasPrintedForm}<br />
+<br />
+Embargo (dacă versiunea tipărită este publicată înaintea versiunii online) (da/nu): {$hasEmbargo}<br />
+<br />
+Access deschis pe deplin începând cu anul: {$accessFrom}<br />
+<br />
+Volumul (first full text accessible volume): {$firstVolume}<br />
+<br />
+Număr (primul număr cu acces la textul integral): {$firstIssue}<br />
+<br />
+ISSN (Completează DOAR dacă revista are un ISSN): {$issn}<br />
+<br />
+EISSN (Completează DOAR dacă revista are un EISSN): {$eissn}<br />
+<br />
+Editor: {$publisherName}<br />
+<br />
+Țara: {$country}<br />
+<br />
+Limbi: {$languages}<br />
+<br />
+Cuvinte cheie (trei - cinci cuvinte care descriu conținutul revistei): {$keywords}<br />
+<br />
+Persoană de contact (numele persoanei de contact, poate fi editorul/redactoru șef): {$contactName}<br />
+<br />
+Email de contact (adresa de email pentru persoana de contact): {$contactEmail}<br />
+<br />
+Periodicitatea revistei / an: {$frequency}<br />
+<br />
+Numărul de articole / număr: {$articlesPerIssue}<br />
+<br />
+Reține că DOAJ include doar titlurile care se ridică la nivelul și criteriile de selecție cerute (http://www.doaj.org/articles/about#definitions).<br />
+<br />
+Ce nu incorporează DOAJ: <br />
+	- Buletine de informare care doar aduc informații despre o instituție. <br />
+	- Reviste care taxează accesul sau care au taxe pentru abonamente. <br />
+	- Reviste care impun o perioadă de embargo. <br />
+<br />
+Mulțumesc! <br />
+Cu stimă,<br />
+{$editorialContactSignature}]]></body>
 		<description>Acest șablon de email este utilizat pentru a trimite un email contactului de la DOAJ cu scopul de a include revista în propriile lor arhive.</description>
 	</email_text>
 </email_texts>

@@ -12,12 +12,12 @@
 <email_texts locale="de_DE">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Benachrichtigung über manuelle Zahlung</subject>
-		<body>Eine manuelle Zahlung ist für die Zeitschrift {$contextName} und den/die Benutzer/in {$userFullName} (Benutzer/innen-Name "{$userName}") angekündigt worden.
-
-Gezahlt werden soll für "{$itemName}".
-Die Kosten betragen {$itemCost} ({$itemCurrencyCode}).
-
-Diese E-Mail wurde vom OJS-Plug-In Manuelle Gebührenzahlung erzeugt.</body>
+		<body><![CDATA[Eine manuelle Zahlung ist für die Zeitschrift {$contextName} und den/die Benutzer/in {$userFullName} (Benutzer/innen-Name &quot;{$userName}&quot;) angekündigt worden.<br />
+<br />
+Gezahlt werden soll für &quot;{$itemName}&quot;.<br />
+Die Kosten betragen {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+Diese E-Mail wurde vom OJS-Plug-In Manuelle Gebührenzahlung erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird genutzt, um eine/n Zeitschriftenverwalter/in darüber zu benachrichtigen, dass eine manuelle Zahlung beantragt worden ist.</description>
 	</email_text>
 </email_texts>

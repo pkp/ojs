@@ -13,11 +13,11 @@
 <email_texts locale="de_DE">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Archivierungsbenachrichtigung</subject>
-		<body>Herzlichen Glückwunsch zur Annahme Ihres Beitrags "{$submissionTitle}" zur Veröffentlichung in {$contextName}. Wenn Sie möchten, können Sie Ihren Beitrag automatisch in einem oder mehreren Repositorien archivieren.
-
-Fahren Sie unter {$swordDepositUrl} fort.
-
-Diese E-Mail wurde durch das SWORD-Archivierungs-Plug-In für Open Journal Systems erzeugt.</body>
+		<body><![CDATA[Herzlichen Glückwunsch zur Annahme Ihres Beitrags &quot;{$submissionTitle}&quot; zur Veröffentlichung in {$contextName}. Wenn Sie möchten, können Sie Ihren Beitrag automatisch in einem oder mehreren Repositorien archivieren.<br />
+<br />
+Fahren Sie unter <a href="{$swordDepositUrl}">{$swordDepositUrl}</a> fort.<br />
+<br />
+Diese E-Mail wurde durch das SWORD-Archivierungs-Plug-In für Open Journal Systems erzeugt.]]></body>
 		<description>Diese E-Mail-Vorlage wird benutzt, um eine/n Autor/in über optionale Archivierungsorte für SWORD-Archivierungen zu informieren.</description>
 	</email_text>
 </email_texts>

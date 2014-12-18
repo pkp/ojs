@@ -13,13 +13,13 @@
 <email_texts locale="it_IT">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Notifica di deposito</subject>
-		<body>Congratulazioni per l'accettazione della tua proposta "{$submissionTitle}" per la pubblicazione in {$contextName}. 
-
-Se vuoi, puoi depositare automaticamente la tua submission in uno o più archivi.
-
-Vai all'indirizzo {$swordDepositUrl} per proseguire.
-
-Questa email è generara atumaticamentee da Open Journal Systems' SWORD deposit plugin.</body>
+		<body><![CDATA[Congratulazioni per l'accettazione della tua proposta &quot;{$submissionTitle}&quot; per la pubblicazione in {$contextName}. <br />
+<br />
+Se vuoi, puoi depositare automaticamente la tua submission in uno o più archivi.<br />
+<br />
+Vai all'indirizzo <a href="{$swordDepositUrl}">{$swordDepositUrl}</a> per proseguire.<br />
+<br />
+Questa email è generara atumaticamentee da Open Journal Systems' SWORD deposit plugin.]]></body>
 		<description></description>
 	</email_text>
 </email_texts>

@@ -13,11 +13,11 @@
 <email_texts locale="el_GR">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Ενημερώση για αρχειοθέτηση άρθρου</subject>
-		<body>Συγχαρητήρια για την αποδοχή του άρθρου σας, "{$submissionTitle}", για δημοσίευση στο περιοδικό {$contextName}. Αν επιθυμείτε, μπορείτε αυτόματα να αρχειοθετήσετε το έρθρο σας σε ένα ή περισσότερα καταθετήρια.
-
-Πηγαίνεται στη διεύθυνση {$swordDepositUrl} για τα περαιτέρω.
-
-Αυτό το μήνυμα δημιουργήθηκε από το SWORD deposit plugin του Open Journal Systems.</body>
+		<body><![CDATA[Συγχαρητήρια για την αποδοχή του άρθρου σας, &quot;{$submissionTitle}&quot;, για δημοσίευση στο περιοδικό {$contextName}. Αν επιθυμείτε, μπορείτε αυτόματα να αρχειοθετήσετε το έρθρο σας σε ένα ή περισσότερα καταθετήρια.<br />
+<br />
+Πηγαίνεται στη διεύθυνση <a href="{$swordDepositUrl}">{$swordDepositUrl}</a> για τα περαιτέρω.<br />
+<br />
+Αυτό το μήνυμα δημιουργήθηκε από το SWORD deposit plugin του Open Journal Systems.]]></body>
 		<description>Αυτό το πρότυπο μηνύματος χρησιμοποιείται για την ενημέρωση του συγγραφέα σχετικά με την δυνατότητα αρχειοθέτησης του άρθρου του.</description>
 	</email_text>
 </email_texts>

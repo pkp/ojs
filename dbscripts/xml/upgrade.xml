@@ -207,6 +207,7 @@
 
 	<upgrade minversion="2.3.0.0" maxversion="2.9.9.9"><!-- 2.9.9.0 is OJS 3.0b -->
 		<code function="fixReviewForms" />
+		<code function="htmlifyEmailTemplates" /><!-- Bug #8929 -->
 		<note file="docs/release-notes/README-3.0b" />
 	</upgrade>
 
