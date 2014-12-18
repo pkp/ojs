@@ -33,15 +33,25 @@
 		<password encrypted="sha1">efe7d096996561e621764052b451ff752b03652f</password>
 		<salutation>Dr.</salutation>
 		<first_name>TestUser2FirstName</first_name>
+		<midle_name>TestUser2MidletName</midle_name>
 		<last_name>TestUser2LastName</last_name>
-		<gender>F</gender>
+		<gender>M</gender>
+		<initials>TES</initials>
+        	<url>http://www.testuser2.com</url>
 		<affiliation>TestUser2Affiliation</affiliation>
+		<phone>4242424242</phone>
+        	<mailing_address>42 St.</mailing_address>
 		<email>testuser2@ojsdev.bb</email>
 		<country>DE</country>
+		<interests>TestUser2Interest1</interests>
+        	<interests>TestUser2Interest2</interests>
+        	<interests>TestUser2Interest3, TestUser2Interest4</interests>
 		<biography locale="de_DE">My biograhy (German) - TestUser2.</biography>
 		<biography locale="en_US">My biograhy (English) - TestUser2.</biography>
 		<biography locale="es_ES">My biograhy (Spanish) - TestUser2.</biography>
+		<signature>TestUser2Signature</signature>
 		<locales>de_DE:en_US</locales>
 		<role type="author"/>
+		<role type="editor"/>
         </user>
 </users>
