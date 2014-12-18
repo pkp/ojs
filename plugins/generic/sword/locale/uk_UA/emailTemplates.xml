@@ -15,11 +15,11 @@
 <email_texts locale="uk_UA">
        <email_text key="SWORD_DEPOSIT_NOTIFICATION">
                <subject>Повідомлення про депонування</subject>
-               <body>Поздоровляємо з прийняттям Вашого подання "{$submissionTitle}" до публікації у журналі {$contextName}. За бажанням, Ви можете автоматично депонувати Ваше подання у одне або кілька сховищ відкритого доступу.
-
-Щоб зробити це, натисніть {$swordDepositUrl}.
-
-Цей лист був генерований модулем депонування SWORD системи Open Journal Systems.</body>
+               <body><![CDATA[Поздоровляємо з прийняттям Вашого подання &quot;{$submissionTitle}&quot; до публікації у журналі {$contextName}. За бажанням, Ви можете автоматично депонувати Ваше подання у одне або кілька сховищ відкритого доступу.<br />
+<br />
+Щоб зробити це, натисніть <a href="{$swordDepositUrl}">{$swordDepositUrl}</a>.<br />
+<br />
+Цей лист був генерований модулем депонування SWORD системи Open Journal Systems.]]></body>
                <description>Цей шаблон листа використовується для повідомлення автору про можливість депонування роботи у SWORD-сумісні сховища.</description>
        </email_text>
 </email_texts>

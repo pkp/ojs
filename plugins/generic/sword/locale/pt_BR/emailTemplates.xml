@@ -13,12 +13,12 @@
 <email_texts locale="pt_BR">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Notificação de depósito em repositório SWORD</subject>
-		<body>Parabéns pela aceitação de publicação de sua submissão "{$submissionTitle}", na revista {$contextName}. 
-Caso deseje, pode depositar automaticamente esta submissão em um ou mais repositórios.
-
-Acesse {$swordDepositUrl} para proceder.
-
-Esta é uma mensagem automática da ferramenta de Depósito SWORD do Open Journal Systems.</body>
+		<body><![CDATA[Parabéns pela aceitação de publicação de sua submissão &quot;{$submissionTitle}&quot;, na revista {$contextName}. <br />
+Caso deseje, pode depositar automaticamente esta submissão em um ou mais repositórios.<br />
+<br />
+Acesse <a href="{$swordDepositUrl}">{$swordDepositUrl}</a> para proceder.<br />
+<br />
+Esta é uma mensagem automática da ferramenta de Depósito SWORD do Open Journal Systems.]]></body>
 		<description>Mensagem de notificação ao autor, de pontos de depósito opcional para repositórios SWORD.</description>
 	</email_text>
 </email_texts>

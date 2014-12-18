@@ -12,11 +12,11 @@
 <email_texts locale="fa_IR">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>اطلاع رسانی پرداخت دستی</subject>
-		<body>یک پرداخت دستی قرار است برای مجله {$contextName} از طرف کاربر {$userFullName} (username "{$userName}") صورت گیرد.
-
-مورد خرید "{$itemName}".
-قیمت {$itemCost} ({$itemCurrencyCode}).
-
-این ایمیل توسط پلاگین پرداخت دستی سیستم های مجله آزاد ایجاد شده است.</body>
+		<body><![CDATA[یک پرداخت دستی قرار است برای مجله {$contextName} از طرف کاربر {$userFullName} (username &quot;{$userName}&quot;) صورت گیرد.<br />
+<br />
+مورد خرید &quot;{$itemName}&quot;.<br />
+قیمت {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+این ایمیل توسط پلاگین پرداخت دستی سیستم های مجله آزاد ایجاد شده است.]]></body>
 	</email_text>
 </email_texts>

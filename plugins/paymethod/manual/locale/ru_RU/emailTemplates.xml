@@ -12,11 +12,11 @@
 <email_texts locale="ru_RU">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Уведомление о платеже</subject>
-		<body>Необходимо обработать платеж на имя журнала  {$contextName} от {$userFullName} (пользователь "{$userName}").
-
-Оплачивается "{$itemName}".
-Цена {$itemCost} ({$itemCurrencyCode}).
-
-Это письмо отправлено модулем платежей OJS.</body>
+		<body><![CDATA[Необходимо обработать платеж на имя журнала  {$contextName} от {$userFullName} (пользователь &quot;{$userName}&quot;).<br />
+<br />
+Оплачивается &quot;{$itemName}&quot;.<br />
+Цена {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+Это письмо отправлено модулем платежей OJS.]]></body>
 	</email_text>
 </email_texts>

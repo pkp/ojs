@@ -15,928 +15,928 @@
 <email_texts locale="ja_JP">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>パスワードリセットの確認</subject>
-		<body>「{$siteTitle}」のWebサイトにログインするパスワードのリセット依頼を受け取りました。
-
-リセット依頼をした覚えがない場合は、申し訳ありませんが、このメールを無理し、パスワードは変更しないでください。パスワードのリセットを希望される場合は、下のURLをクリックしてください。
-
-パスワードのリセット: {$url}
-
-よろしくお願いいたします。
-
-{$principalContactSignature}</body>
+		<body><![CDATA[「{$siteTitle}」のWebサイトにログインするパスワードのリセット依頼を受け取りました。<br />
+<br />
+リセット依頼をした覚えがない場合は、申し訳ありませんが、このメールを無理し、パスワードは変更しないでください。パスワードのリセットを希望される場合は、下のURLをクリックしてください。<br />
+<br />
+パスワードのリセット: {$url}<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>このメールは、登録ユーザからパスワードを忘れた、または、ログインできない旨の連絡を受けた場合に、登録ユーザに送信されるものです。このメールではパスワードをリセットするためのURLを提供します。</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>パスワードのリセット</subject>
-		<body>ご利用の「{$siteTitle}」のWebサイトのパスワードのリセットが終了しました。このユーザ名とパスワードは、雑誌のすべての処理で必要となりますので、大切に保管してください。
-
-あなたのユーザ名:   {$username}
-あなたのパスワード: {$password}
-
-よろしくお願いいたします。
-
-{$principalContactSignature}</body>
+		<body><![CDATA[ご利用の「{$siteTitle}」のWebサイトのパスワードのリセットが終了しました。このユーザ名とパスワードは、雑誌のすべての処理で必要となりますので、大切に保管してください。<br />
+<br />
+あなたのユーザ名:   {$username}<br />
+あなたのパスワード: {$password}<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>このメールは、PASSWORD_RESET_CONFIRMメールで説明されている処理を受けてパスワードのリセットが成功した場合に、登録ユーザに送信されるものです。</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
 		<subject>新規ユーザの登録</subject>
-		<body>雑誌『{$contextName}』への登録ありがとうございました。
-
-ユーザ名とパスワードは、この雑誌のすべての処理で必要となりますので、大切に保管してください。
-
-ユーザ名:   {$username}
-パスワード: {$password}
-
-よろしくお願いいたします。
-
-{$principalContactSignature}</body>
+		<body><![CDATA[雑誌『{$contextName}』への登録ありがとうございました。<br />
+<br />
+ユーザ名とパスワードは、この雑誌のすべての処理で必要となりますので、大切に保管してください。<br />
+<br />
+ユーザ名:   {$username}<br />
+パスワード: {$password}<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>このメールは、新規に登録したユーザに送信されるもので、システムへの登録を歓迎し、ユーザ名とパスワードの記録を提供します。</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
 		<subject>最新号の発行案内</subject>
-		<body>読者各位:
-
-いつもご利用ありがとうございます。
-
-雑誌『{$contextName}』は、今日、最新号を発行しました。目次を送付いたしますので、興味のある論文や記事について、実際に雑誌のWebサイトにアクセスしてチェックしていただくようご案内いたします。
-
-雑誌WebサイトのURLは、{$journalUrl} です。
-
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[読者各位:<br />
+<br />
+いつもご利用ありがとうございます。<br />
+<br />
+雑誌『{$contextName}』は、今日、最新号を発行しました。目次を送付いたしますので、興味のある論文や記事について、実際に雑誌のWebサイトにアクセスしてチェックしていただくようご案内いたします。<br />
+<br />
+雑誌WebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、編集者のユーザページにある「利用者への通知」リンクにより、登録ユーザに送信されるものです。このメールは、最新号の発行を読者に通知し、URLを示して雑誌にアクセスするよう案内します。</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
 		<subject>『{$contextName}』保存のお願い</subject>
-		<body>[大学図書館長] 御中
-
-本誌『{$contextName}』&lt;{$journalUrl}&gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。
-
-[雑誌の簡単な説明]
-
-本誌のLOCKSS出版者宣言書のURLは、以下の通りです。
-
-    {$journalUrl}/gateway/lockss
-
-貴館は既にLOCKSSに参加していると伺っております。私たちの雑誌を貴館のLOCKSSに登録するためにメタデータを提供できるなら、喜んで提供したいと考えております。
-
-よろしくご検討くださるよう、お願いいたします。
-
-{$principalContactSignature}</body>
+		<body><![CDATA[[大学図書館長] 御中<br />
+<br />
+本誌『{$contextName}』&amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
+<br />
+[雑誌の簡単な説明]<br />
+<br />
+本誌のLOCKSS出版者宣言書のURLは、以下の通りです。<br />
+<br />
+    <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+<br />
+貴館は既にLOCKSSに参加していると伺っております。私たちの雑誌を貴館のLOCKSSに登録するためにメタデータを提供できるなら、喜んで提供したいと考えております。<br />
+<br />
+よろしくご検討くださるよう、お願いいたします。<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>このメールは、LOCKSSアーカイブの管理者にこの雑誌をアーカイブに追加することを検討してもらうことを依頼するものです。メールでは、雑誌のLOCKSS出版者宣言書のURLを提供します。</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
 		<subject>『{$contextName}』保存のお願い</subject>
-		<body>[大学図書館長] 御中
-
-本誌『{$contextName}』&lt;{$journalUrl}&gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。
-
-[雑誌の簡単な説明]
-
-図書館と出版者による国際的なイニシアティブであるLOCKSS Program &lt;http://lockss.org/&gt;は、分散型保存の運用例としてリポジトリのアーカイブを行うものです。詳細について、以下でご説明します。普通のパソコンで利用できる無料のソフトウェアが存在します。このシステムは容易にオンライン化することができ、保守作業もほとんど必要としません。
-
-私たちの雑誌のアーカイブを支援するために、貴館がLOCKSSコミュニティの一員となり、貴学の教官や世界中の研究者が作成する論文の収集･保存にご協力いただけるようお願いする次第です。そのために、貴館の職員にLOCKSSのサイトにアクセスして、このシステムの運用方法に関する情報を調査するようお願いいたします。貴学が、本誌のためにこのアーカイブサポートを提供していただけるという良い知らせを期待しております。
-
-よろしくご検討くださるよう、お願いいたします。
-
-{$principalContactSignature}</body>
+		<body><![CDATA[[大学図書館長] 御中<br />
+<br />
+本誌『{$contextName}』&amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;は、貴学の教官 [教官名]殿に[役職名]をお願いしているものです。本誌は、貴館およびその他の大学図書館との間でLOCKSS（Lots of Copies Keep Stuff Safe）準拠のアーカイブを構築したいと考えております。<br />
+<br />
+[雑誌の簡単な説明]<br />
+<br />
+図書館と出版者による国際的なイニシアティブであるLOCKSS Program &amp;lt;http://lockss.org/&amp;gt;は、分散型保存の運用例としてリポジトリのアーカイブを行うものです。詳細について、以下でご説明します。普通のパソコンで利用できる無料のソフトウェアが存在します。このシステムは容易にオンライン化することができ、保守作業もほとんど必要としません。<br />
+<br />
+私たちの雑誌のアーカイブを支援するために、貴館がLOCKSSコミュニティの一員となり、貴学の教官や世界中の研究者が作成する論文の収集･保存にご協力いただけるようお願いする次第です。そのために、貴館の職員にLOCKSSのサイトにアクセスして、このシステムの運用方法に関する情報を調査するようお願いいたします。貴学が、本誌のためにこのアーカイブサポートを提供していただけるという良い知らせを期待しております。<br />
+<br />
+よろしくご検討くださるよう、お願いいたします。<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>このメールは、受信者がLOCKSSイニシアティブに参加し、この雑誌をアーカイブに追加することを薦めるものです。メールでは、LOCKSSイニシアティブに関する情報と参加方法を提供します。</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>投稿のお礼</subject>
-		<body>{$authorName} 殿:
-
-雑誌『{$contextName}』に原稿「{$submissionTitle}」をご投稿いただき、ありがとうございました。本誌が使用しているオンライン雑誌管理システムでは、雑誌のWebサイトにログインすることにより、編集過程の進捗状況を確認することができます。
-
-原稿のURL: {$submissionUrl}
-ユーザ名: {$authorUsername}
-
-何かご不明な点がございましたら、ご連絡ください。
-
-研究成果の発表の場として、本雑誌をご検討いただき、誠にありがとうございました。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName} 殿:<br />
+<br />
+雑誌『{$contextName}』に原稿「{$submissionTitle}」をご投稿いただき、ありがとうございました。本誌が使用しているオンライン雑誌管理システムでは、雑誌のWebサイトにログインすることにより、編集過程の進捗状況を確認することができます。<br />
+<br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+ユーザ名: {$authorUsername}<br />
+<br />
+何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+研究成果の発表の場として、本雑誌をご検討いただき、誠にありがとうございました。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは（設定で有効になっていれば）著者がこの雑誌への投稿プロセスを終了した時に、自動的に送信されるものです。メールでは、投稿物の処理状況を追跡できることを伝える同時に、著者に投稿に対するお礼をしています。</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>謝絶のご案内（雑誌に不適な投稿）</subject>
-		<body>{$authorName} 殿:
-
-ご投稿いただいた「{$submissionTitle}」について審査しましたが、雑誌『{$contextName}』の範囲と対象からみて、貴殿の論文は明らかに雑誌にとって不適当なものであると判断いたしました。Webサイトに掲載している本雑誌の説明や既刊のコンテンツをあたって、本雑誌が出版の対象とする研究成果をご理解いただくようお願いいたします。また、本原稿を他のよりふさわしい雑誌に投稿することもご検討ください。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName} 殿:<br />
+<br />
+ご投稿いただいた「{$submissionTitle}」について審査しましたが、雑誌『{$contextName}』の範囲と対象からみて、貴殿の論文は明らかに雑誌にとって不適当なものであると判断いたしました。Webサイトに掲載している本雑誌の説明や既刊のコンテンツをあたって、本雑誌が出版の対象とする研究成果をご理解いただくようお願いいたします。また、本原稿を他のよりふさわしい雑誌に投稿することもご検討ください。<br />
+<br />
+{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>投稿物へのコメント</subject>
-		<body>{$name} 殿:
-
-雑誌『{$contextName}』への投稿物「$submissionTitle}」へのコメントに{$commentName} を追加しました。
-
-{$comments}</body>
+		<body><![CDATA[{$name} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿物「$submissionTitle}」へのコメントに{$commentName} を追加しました。<br />
+<br />
+{$comments}]]></body>
 		<description>このメールは、投稿物の編集プロセスに関わる様々な人々にコメントが投稿されたことを通知するものです。</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>「{$submissionTitle}」に対する判断</subject>
-		<body>雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読者の1人として、この投稿物の著者に送る査読結果と編集上の判断を送付します。本プロセスの遂行に当たって、貴殿の多大なるご協力に感謝いたします。
-
-{$editorialContactSignature}
-
-{$comments}</body>
+		<body><![CDATA[雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読者の1人として、この投稿物の著者に送る査読結果と編集上の判断を送付します。本プロセスの遂行に当たって、貴殿の多大なるご協力に感謝いたします。<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+{$comments}]]></body>
 		<description>このメールは、投稿物の査読者に査読プロセスが終了したことを通知するものです。メールでは、論文に関する情報と最終判断を示し、査読者に作業に対するお礼をしています。</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>セクションエディタ任命のお知らせ</subject>
-		<body>{$editorialContactName} 殿:
-
-この度、雑誌『{$contextName}』への投稿論文「{$submissionTitle}」のセクションエディタとして、編集プロセス全般の管理をお願いすることになりました。
-
-投稿物のURL: {$submissionUrl}
-投稿者:      {$editorUsername}
-
-よろしくお願いいたします。
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+この度、雑誌『{$contextName}』への投稿論文「{$submissionTitle}」のセクションエディタとして、編集プロセス全般の管理をお願いすることになりました。<br />
+<br />
+投稿物のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+投稿者:      {$editorUsername}<br />
+<br />
+よろしくお願いいたします。<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、編集者からセクションエディタに投稿物の編集プロセスを監督する作業を任命したことを通知するものです。メールには投稿物に関する情報と雑誌サイトへのアクセス法を示しています。</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>論文査読のお願い</subject>
-		<body>{$reviewerName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。
-
-{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、{$journalUrl} です。
-
-査読作業自体の期限日は、{$reviewDueDate}です。
-
-雑誌のWebサイトにアクセスするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）: {$passwordResetUrl}
-
-
-投稿物のURL: {$submissionReviewUrl}
-
-よろしくご検討くださるよう、お願いいたします。
-
-{$editorialContactSignature}
-
-
-
-「{$submissionTitle}」
-
-
-{$submissionAbstract}</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。<br />
+<br />
+{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+<br />
+査読作業自体の期限日は、{$reviewDueDate}です。<br />
+<br />
+雑誌のWebサイトにアクセスするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）: <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+<br />
+投稿物のURL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+よろしくご検討くださるよう、お願いいたします。<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+「{$submissionTitle}」<br />
+<br />
+<br />
+{$submissionAbstract}]]></body>
 		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQUEST_ATTACHEDを参照してください）。</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>論文査読のお願い</subject>
-		<body>{$reviewerName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。
-
-{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、{$journalUrl} です。
-
-査読作業自体の期限日は、{$reviewDueDate}です。
-
-投稿物のURL: {$submissionReviewUrl}
-
-よろしくご検討くださるよう、お願いいたします。
-
-{$editorialContactSignature}
-
-
-
-「{$submissionTitle}」
-
-
-{$submissionAbstract}</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。投稿物の要旨を以下に添付しました。貴殿がこの重要な仕事を引き受けてくださることを希望いたしております。<br />
+<br />
+{$weekLaterDate}までに、雑誌のWebサイトにログインして、査読を引き受けていただけるかどうかを示していただけるようお願いいたします。引き受けていただける場合は、このサイトで投稿物にアクセスし、査読結果と答申を記録することができます。雑誌のWebサイトのURLは、<a href="{$journalUrl}">{$journalUrl}</a> です。<br />
+<br />
+査読作業自体の期限日は、{$reviewDueDate}です。<br />
+<br />
+投稿物のURL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+よろしくご検討くださるよう、お願いいたします。<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+「{$submissionTitle}」<br />
+<br />
+<br />
+{$submissionAbstract}]]></body>
 		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択され、ワンクリック査読者アクセスが有効な場合に使用されます。</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>論文査読のお願い</subject>
-		<body>{$reviewerName} 殿:
-
-原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。貴殿がこの重要な仕事を引き受けてくださることをお願いいたしております。この雑誌の査読の手引きを以下に添付しました。また、投稿物はメールの添付ファイルとして添付いたしました。投稿物の査読結果と答申は、{$reviewDueDate}までに私宛にメールでいただきたいと考えております。
-
-査読をしていただけるか否かを、{$weekLaterDate}までにメールでご返事いただけるようお願いいたします。
-
-よろしくご検討くださるよう、お願いいたします。
-
-{$editorialContactSignature}
-
-
-査読の手引き
-
-{$reviewGuidelines}
-</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+原稿「{$submissionTitle}」の査読をお願いいたしたくメールを差し上げました。貴殿がこの重要な仕事を引き受けてくださることをお願いいたしております。この雑誌の査読の手引きを以下に添付しました。また、投稿物はメールの添付ファイルとして添付いたしました。投稿物の査読結果と答申は、{$reviewDueDate}までに私宛にメールでいただきたいと考えております。<br />
+<br />
+査読をしていただけるか否かを、{$weekLaterDate}までにメールでご返事いただけるようお願いいたします。<br />
+<br />
+よろしくご検討くださるよう、お願いいたします。<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+査読の手引き<br />
+<br />
+{$reviewGuidelines}<br />
+]]></body>
 		<description>このメールは、セクションエディタから査読者に投稿物の査読を依頼するものです。メールには、査読物をファイルで添付します。このメールは、雑誌設定のステップ2でメール添付による査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQUESTを参照してください）。</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>査読依頼取消のお願い</subject>
-		<body>{$reviewerName} 殿:
-
-以前お願いしておりました、雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読の件ですが、誠に勝手ながら事情により取り消させていただくことになりました。ご迷惑をおかけして、誠に申し訳ありませんでした。今後また査読をお願いすることがあろうかと思いますが、その節はよろしくお願いいたします。
-
-何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+以前お願いしておりました、雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読の件ですが、誠に勝手ながら事情により取り消させていただくことになりました。ご迷惑をおかけして、誠に申し訳ありませんでした。今後また査読をお願いすることがあろうかと思いますが、その節はよろしくお願いいたします。<br />
+<br />
+何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから査読者に既に開始している査読が取りやめになったことを通知するものです。</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>査読依頼の受諾</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読の件ですが、喜んでやらせていただきます。査読者に選んでいただき、ありがとうございました。ご指定の査読期限、{$reviewDueDate}までには査読を終わらせるつもりです。
-
-よろしくお願いします。
-
-{$reviewerName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読の件ですが、喜んでやらせていただきます。査読者に選んでいただき、ありがとうございました。ご指定の査読期限、{$reviewDueDate}までには査読を終わらせるつもりです。<br />
+<br />
+よろしくお願いします。<br />
+<br />
+{$reviewerName}]]></body>
 		<description>このメールは、査読者からセクションエディタに査読依頼を受諾し、指定された期日までに査読を終了させる意思を伝えるものです。</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>査読依頼の謝絶</subject>
-		<body>{$editorialContactName} 殿:
-
-申し訳ありませんが、今回は、雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお受けすることはできません。査読者に選んでいただきありがとうございました。また、機会がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$reviewerName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+申し訳ありませんが、今回は、雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をお受けすることはできません。査読者に選んでいただきありがとうございました。また、機会がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$reviewerName}]]></body>
 		<description>このメールは、査読者からセクションエディタに査読依頼を受けることができない旨を通知するものです。</description>
 	</email_text>
 	<email_text key="REVIEW_COMPLETE">
 		<subject>論文査読の完了</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読を終え、答申「{$recommendation}」を提出したことをお伝えします。
-
-よろしくお願いいたします。
-
-{$reviewerName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読を終え、答申「{$recommendation}」を提出したことをお伝えします。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$reviewerName}]]></body>
 		<description>このメールは、査読者からセクションエディタに査読が終わり、コメントと答申を雑誌のWebサイトで記録したことを通知するものです。</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>論文査読のお礼</subject>
-		<body>{$reviewerName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をしていただき、ありがとうございました。本誌が発行する論文の品質向上に対する貴殿の貢献に対し感謝いたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をしていただき、ありがとうございました。本誌が発行する論文の品質向上に対する貴殿の貢献に対し感謝いたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから査読者に査読が完了したことを確認し、その貢献に感謝するものです。</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
 		<subject>論文査読の督促</subject>
-		<body>{$reviewerName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
-
-雑誌のWebサイトにログインするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）： {$passwordResetUrl}
-
-投稿物のURL: {$submissionReviewUrl}
-
-本誌の投稿物にとって極めて重要なこの貢献を貴殿が遂行できることを確認してください。お返事をお待ちしております。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。<br />
+<br />
+雑誌のWebサイトにログインするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）： <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+投稿物のURL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+本誌の投稿物にとって極めて重要なこの貢献を貴殿が遂行できることを確認してください。お返事をお待ちしております。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから査読者に査読期限日が過ぎたことを督促するものです。</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
 		<subject>論文査読の督促</subject>
-		<body>{$reviewerName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
-
-投稿物のURL: {$submissionReviewUrl}
-
-本誌の投稿物にとって極めて重要なこの貢献を貴殿が遂行できることを確認してください。お返事をお待ちしております。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。<br />
+<br />
+投稿物のURL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+本誌の投稿物にとって極めて重要なこの貢献を貴殿が遂行できることを確認してください。お返事をお待ちしております。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから査読者に査読期限日が過ぎたことを督促するものです。</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
 		<subject>論文査読の督促（自動送信）</subject>
-		<body>{$reviewerName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。このメールは、期限日が過ぎた査読者に対し、システムにより自動的に作成され送信されるものです。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
-
-雑誌のWebサイトにログインするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）： {$passwordResetUrl}
-
-投稿物のURL: {$submissionReviewUrl}
-
-本誌の投稿物にとって極めて重要なこの貢献を貴殿が遂行できることを確認してください。お返事をお待ちしております。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。このメールは、期限日が過ぎた査読者に対し、システムにより自動的に作成され送信されるものです。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。<br />
+<br />
+雑誌のWebサイトにログインするユーザ名とパスワードをお持ちでない場合は、次のリンクを使ってパスワードをリセットしてください（パスワードはユーザ名と共にメールで送信されます）： <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+投稿物のURL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+本誌の投稿物にとって極めて重要なこの貢献を貴殿が遂行できることを確認してください。お返事をお待ちしております。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、査読者の査読期限日が過ぎ（雑誌設定ステップ2の査読オプションを参照）、ワンクリック査読者アクセスが無効な場合に、自動的に送信されるものです。定期タスク機能が有効かつ設定されている必要があります（サイト設定ファイルを参照）。</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
 		<subject>論文査読の督促（自動送信）</subject>
-		<body>{$reviewerName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。このメールは、期限日が過ぎた査読者に対し、システムにより自動的に作成され送信されるものです。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。
-
-投稿物のURL: {$submissionReviewUrl}
-
-本誌の投稿物にとって極めて重要なこの貢献を貴殿が遂行できることを確認してください。お返事をお待ちしております。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読は進んでいるでしょうか。査読期限日は、{$reviewDueDate}となっております。このメールは、期限日が過ぎた査読者に対し、システムにより自動的に作成され送信されるものです。準備ができ次第できるだけ早く査読結果をいただきたいと考えております。<br />
+<br />
+投稿物のURL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+本誌の投稿物にとって極めて重要なこの貢献を貴殿が遂行できることを確認してください。お返事をお待ちしております。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、査読者の査読期限日が過ぎ（雑誌設定ステップ2の査読オプションを参照）、ワンクリック査読者アクセスが有効な場合に、自動的に送信されるものです。定期タスク機能が有効かつ設定されている必要があります（サイト設定ファイルを参照）。</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>原稿整理のお願い</subject>
-		<body>{$copyeditorName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業をお願いいたしたくメールを差し上げました。投稿物は雑誌のWebサイトで見ることができます。原稿整理の手引きも用意しております。
-
-原稿のURL: {$submissionCopyeditingUrl}
-ユーザ名: {$copyeditorUsername}
-
-今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。
-
-本誌にとって重要なこの作業を引き受けていただくよう、よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$copyeditorName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業をお願いいたしたくメールを差し上げました。投稿物は雑誌のWebサイトで見ることができます。原稿整理の手引きも用意しております。<br />
+<br />
+原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+ユーザ名: {$copyeditorUsername}<br />
+<br />
+今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+本誌にとって重要なこの作業を引き受けていただくよう、よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタからコピーエディタに原稿整理作業を開始するよう依頼するものです。メールでは、投稿物に関する情報とアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
 		<subject>原稿整理の完了</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の第1回目の原稿整理作業を終了しました。これで、著者と編集者が整理作業に伴う変更点と私からの質問をチェックする用意ができたことをご報告いたします。
-
-よろしくお願いいたします。
-
-{$copyeditorName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の第1回目の原稿整理作業を終了しました。これで、著者と編集者が整理作業に伴う変更点と私からの質問をチェックする用意ができたことをご報告いたします。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$copyeditorName}]]></body>
 	</email_text>
 	<email_text key="COPYEDIT_ACK">
 		<subject>原稿整理のお礼</subject>
-		<body>{$copyeditorName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理を行っていただき、ありがとうございました。
-
-今後とも、よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$copyeditorName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理を行っていただき、ありがとうございました。<br />
+<br />
+今後とも、よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタからコピーエディタに投稿物の原稿整理の終了を確認し、その貢献に感謝するものです。</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>原稿整理版のチェックのお願い</subject>
-		<body>{$authorName} 殿:
-
-雑誌『{$contextName}』へ投稿いただいた原稿「{$submissionTitle}」の原稿整理作業が終了しました。下に示すリンクを使って雑誌のWebサイトにログインし、指摘された変更点の確認と質問への回答をお願いいたします。最初の原稿整理版ファイルをダウンロードして開いてください。原稿整理版のチェックが終了したら、ステップ2でファイルをアップロードしていただき、さらに編集者に「完了」メールを送信してください。
-
-これは、大規模な変更を行うことができる最後のチャンスです。今後、ゲラの校正をお願いすることになりますが、その際は、ちょっとした文字やレイアウトの間違いしか修正することはできませんのでご注意ください。
-
-原稿のURL: {$submissionCopyeditingUrl}
-ユーザ名: {$authorUsername}
-
-今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName} 殿:<br />
+<br />
+雑誌『{$contextName}』へ投稿いただいた原稿「{$submissionTitle}」の原稿整理作業が終了しました。下に示すリンクを使って雑誌のWebサイトにログインし、指摘された変更点の確認と質問への回答をお願いいたします。最初の原稿整理版ファイルをダウンロードして開いてください。原稿整理版のチェックが終了したら、ステップ2でファイルをアップロードしていただき、さらに編集者に「完了」メールを送信してください。<br />
+<br />
+これは、大規模な変更を行うことができる最後のチャンスです。今後、ゲラの校正をお願いすることになりますが、その際は、ちょっとした文字やレイアウトの間違いしか修正することはできませんのでご注意ください。<br />
+<br />
+原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+ユーザ名: {$authorUsername}<br />
+<br />
+今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから投稿物の著者に、コピーエディタ版の校正を依頼するものです。メールでは、原稿に対するアクセス情報を提供し、これが著者が大規模な変更を行う最後のチャンスであることを警告しています。</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
 		<subject>原稿整理版のチェックの完了</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』へ投稿させていただいた「{$submissionTitle}」の原稿整理版のチェックを終了しました。これで、原稿整理の最終ラウンドでレイアウト版を用意する準備ができたことをご報告いたします。
-
-よろしくお願いいたします。
-
-{$authorName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』へ投稿させていただいた「{$submissionTitle}」の原稿整理版のチェックを終了しました。これで、原稿整理の最終ラウンドでレイアウト版を用意する準備ができたことをご報告いたします。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$authorName}]]></body>
 		<description>このメールは、著者からセクションエディタに著者による原稿整理作業が終了したことを通知するものです。</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_ACK">
 		<subject>原稿整理版のチェックのお礼</subject>
-		<body>{$authorName} 殿:
-
-雑誌『{$contextName}』へ投稿いただいた原稿「{$submissionTitle}」の原稿整理版のチェックを行っていただき、ありがとうございました。この原稿が出版されることを私も楽しみにしております。
-
-今後とも、よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName} 殿:<br />
+<br />
+雑誌『{$contextName}』へ投稿いただいた原稿「{$submissionTitle}」の原稿整理版のチェックを行っていただき、ありがとうございました。この原稿が出版されることを私も楽しみにしております。<br />
+<br />
+今後とも、よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから投稿物の著者に著者による原稿整理の終了を確認し、その貢献に感謝するものです。</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
 		<subject>最終の原稿整理のお願い</subject>
-		<body>{$copyeditorName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理版の著者と編集者によるチェックが終わりました。レイアウト作業のための最終の「クリーン版」を作成していただくようお願いいたします。
-
-原稿のURL: {$submissionCopyeditingUrl}
-ユーザ名: {$copyeditorUsername}
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$copyeditorName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理版の著者と編集者によるチェックが終わりました。レイアウト作業のための最終の「クリーン版」を作成していただくようお願いいたします。<br />
+<br />
+原稿のURL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+ユーザ名: {$copyeditorUsername}<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタからコピーエディタにレイアウト処理を行うための最終の原稿整理作業を行うよう依頼するものです。</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_COMPLETE">
 		<subject>最終の原稿整理の完了</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のクリーンな原稿整理版の準備を終了しました。これで、レイアウト作業を行いゲラを用意する準備ができたことをご報告いたします。
-
-よろしくお願いいたします。
-
-{$copyeditorName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のクリーンな原稿整理版の準備を終了しました。これで、レイアウト作業を行いゲラを用意する準備ができたことをご報告いたします。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$copyeditorName}]]></body>
 		<description>このメールは、コピーエディタからセクションエディタに最終の原稿製作業が終了し、レイアウト作業を開始できることを通知するものです。</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
 		<subject>最終の原稿整理のお礼</subject>
-		<body>{$copyeditorName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業を行っていただき、ありがとうございました。レイアウト作業用の「クリーン版」の作成は、編集プロセスにとって重要なものです。
-
-今後とも、よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$copyeditorName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業を行っていただき、ありがとうございました。レイアウト作業用の「クリーン版」の作成は、編集プロセスにとって重要なものです。<br />
+<br />
+今後とも、よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタからコピーエディタに最終原稿整理作業の終了を確認し、その貢献に感謝するものです。</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>ゲラ作成のお願い</subject>
-		<body>{$layoutEditorName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの作成をお願いいたしたくメールを差し上げました。
-
-原稿のURL: {$submissionLayoutUrl}
-ユーザ名: {$layoutEditorUsername}
-
-今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。
-
-この作業を引き受けていただくよう、よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$layoutEditorName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの作成をお願いいたしたくメールを差し上げました。<br />
+<br />
+原稿のURL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+ユーザ名: {$layoutEditorUsername}<br />
+<br />
+今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+この作業を引き受けていただくよう、よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタからレイアウトエディタに投稿物に対するレイアウト作業を任命したことを通知するものです。メールでは、投稿物に関する情報とアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
 		<subject>ゲラ作成の完了</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラを作成し、校正作業の準備ができたことをご報告いたします。。
-
-何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$layoutEditorName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラを作成し、校正作業の準備ができたことをご報告いたします。。<br />
+<br />
+何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$layoutEditorName}]]></body>
 		<description>このメールは、レイアウトエディタからセクションエディタにレイアウト処理が終了したことを通知するものです。</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
 		<subject>レイアウト作業のお礼</subject>
-		<body>{$layoutEditorName}:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラを作成していただき、ありがとうございました。これは出版プロセスに対する大きな貢献です。
-
-今後とも、よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$layoutEditorName}:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラを作成していただき、ありがとうございました。これは出版プロセスに対する大きな貢献です。<br />
+<br />
+今後とも、よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタからレイアウトエディタにレイアウト処理の完了を確認し、その貢献に感謝するものです。</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
 		<subject>著者校正のお願い</subject>
-		<body>{$authorName} 殿:
-
-雑誌『{$contextName}』に投稿いただいた原稿「{$submissionTitle}」のゲラができましたので、校正をお願いいたします。ゲラを見るには、下に示すリンクを使って雑誌のWebサイトにログインしてください。閲覧リンクをクリックして、原稿の出版版を読み、校正の手引きに従って文字やレイアウトの誤りのみをチェックしてください。修正点は、校正による修正入力ボックスに記入してください。
-
-原稿のURL: {$submissionUrl}
-ユーザ名: {$authorUsername}
-
-今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName} 殿:<br />
+<br />
+雑誌『{$contextName}』に投稿いただいた原稿「{$submissionTitle}」のゲラができましたので、校正をお願いいたします。ゲラを見るには、下に示すリンクを使って雑誌のWebサイトにログインしてください。閲覧リンクをクリックして、原稿の出版版を読み、校正の手引きに従って文字やレイアウトの誤りのみをチェックしてください。修正点は、校正による修正入力ボックスに記入してください。<br />
+<br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+ユーザ名: {$authorUsername}<br />
+<br />
+今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから著者に論文のゲラの校正作業を行う準備ができたことを通知するものです。メールでは、論文に関する情報とアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
 		<subject>著者校正の完了</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』に投稿させていただいた原稿「{$submissionTitle}」のゲラの校正が終了しました。これにより、校正者とレイアウトエディタによる最終修正ができるようになったことをご報告いたします。
-
-よろしくお願いいたします。
-
-{$authorName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』に投稿させていただいた原稿「{$submissionTitle}」のゲラの校正が終了しました。これにより、校正者とレイアウトエディタによる最終修正ができるようになったことをご報告いたします。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$authorName}]]></body>
 		<description>このメールは、著者から校正者およびエディタに著者による校正作業が終了し、その内容をコメント欄に記入したことを通知するものです。</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
 		<subject>著者校正のお礼</subject>
-		<body>{$authorName} 殿:
-
-雑誌『{$contextName}』に投稿いただいた原稿「{$submissionTitle}」のゲラの校正作業をしていただき、ありがとうございました。近々出版できるものと期待しております。
-
-雑誌の通知サービスに登録されている場合は、雑誌が出版され次第、その目次をメールで受け取ることができます。何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName} 殿:<br />
+<br />
+雑誌『{$contextName}』に投稿いただいた原稿「{$submissionTitle}」のゲラの校正作業をしていただき、ありがとうございました。近々出版できるものと期待しております。<br />
+<br />
+雑誌の通知サービスに登録されている場合は、雑誌が出版され次第、その目次をメールで受け取ることができます。何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから著者に校正作業が終了したことを確認し、その貢献に感謝するものです。</description>
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
 		<subject>校正のお願い</subject>
-		<body>{$proofreaderName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正をお願いいたしたくメールを差し上げました。
-
-原稿URL: {$submissionUrl}
-ユーザ名: {$proofreaderUsername}
-
-今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。
-
-この作業を引き受けていただくよう、よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$proofreaderName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正をお願いいたしたくメールを差し上げました。<br />
+<br />
+原稿URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+ユーザ名: {$proofreaderUsername}<br />
+<br />
+今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+この作業を引き受けていただくよう、よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから校正者に論文のゲラの校正を依頼するものです。メールでは、論文に関する情報とアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
 		<subject>校正の完了</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正が終了しました。これにより、レイアウトエディタによる最終修正ができるようになったことをご報告いたします。
-
-よろしくお願いいたします。
-
-{$proofreaderName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正が終了しました。これにより、レイアウトエディタによる最終修正ができるようになったことをご報告いたします。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$proofreaderName}]]></body>
 		<description>このメールは、校正者からセクションエディタに校正作業が終了したことを通知するものです。</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
 		<subject>校正のお礼</subject>
-		<body>{$proofreaderName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正作業をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。
-
-今後ともよろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$proofreaderName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正作業をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。<br />
+<br />
+今後ともよろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタから校正者に校正作業の終了を確認し、その貢献に感謝するものです。</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_REQUEST">
 		<subject>（レイアウトエディタ）校正のお願い</subject>
-		<body>{$layoutEditorName}:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の校正作業の結果、ゲラの修正をお願いすることになりました。
-
-原稿のURL: {$submissionUrl}
-ユーザ名: {$layoutEditorUsername}
-
-今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。
-
-この作業を引き受けていただくよう、よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$layoutEditorName}:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の校正作業の結果、ゲラの修正をお願いすることになりました。<br />
+<br />
+原稿のURL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+ユーザ名: {$layoutEditorUsername}<br />
+<br />
+今回この作業を行うことができない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+この作業を引き受けていただくよう、よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタからレイアウトエディタに論文のゲラの最終校正の準備ができたことを通知するものです。メールでは、論文に関する情報とアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>（レイアウトエディタ）校正の完了</subject>
-		<body>{$editorialContactName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」に対する校正作業の結果を修正しました。これで、出版の準備ができたことをご報告いたします。
-
-よろしくお願いいたします。
-
-{$layoutEditorName}</body>
+		<body><![CDATA[{$editorialContactName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」に対する校正作業の結果を修正しました。これで、出版の準備ができたことをご報告いたします。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$layoutEditorName}]]></body>
 		<description>このメールは、レイアウトエディタからセクションエディタに最終の校正作業が終了し、論文を出版する用意ができたことを通知するものです。</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
 		<subject>（レイアウトエディタ）校正のお礼</subject>
-		<body>{$layoutEditorName} 殿:
-
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正結果に対する修正をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。
-
-今後ともよろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$layoutEditorName} 殿:<br />
+<br />
+雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」のゲラの校正結果に対する修正をしていただき、ありがとうございました。これは、本誌の品質の向上に重要な貢献をしていただいたことになります。<br />
+<br />
+今後ともよろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、セクションエディタからレイアウトエディタに校正作業の終了を確認し、その貢献に感謝するものです。</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>論文の紹介</subject>
-		<body>以下の論文を紹介します。
-
-{$submissionTitle} / {$authorName}. {$contextName}』, 第{$volume}巻{$number}号（{$year}）
-
-この論文のURL: {$articleUrl}
-</body>
+		<body><![CDATA[以下の論文を紹介します。<br />
+<br />
+{$submissionTitle} / {$authorName}. {$contextName}』, 第{$volume}巻{$number}号（{$year}）<br />
+<br />
+この論文のURL: <a href="{$articleUrl}">{$articleUrl}</a><br />
+]]></body>
 		<description>このメールテンプレートは、登録ユーザに、興味を持ちそうな研究者に論文を紹介する機会を提供するものです。このメールは、読書ツールから利用することができますが、あらかじめ雑誌管理者が読書ツール管理ページで有効にしておく必要があります。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>購読に関する通知</subject>
-		<body>{$subscriberName} 殿:
-
-貴殿は雑誌『{$contextName}』のオンラインジャーナル管理システムに、以下の条件の購読者として登録されました。
-
-{$subscriptionType}
-
-購読者のみが利用できるコンテンツにアクセスするには、ユーザ名「{$username}」でシステムにログインしていただくだけです。
-
-システムにログイン後は、ユーザ情報とパスワードをいつでも変更することができます。
-機関購読者の場合は、機関構成員の方はログインする必要はありませんので、ご注意ください。購読コンテンツへのアクセスの際に、システムにより自動的に認証が行われます。
-何かご不明な点がございましたら、ご連絡ください。
-
-ありがとうございました。
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName} 殿:<br />
+<br />
+貴殿は雑誌『{$contextName}』のオンラインジャーナル管理システムに、以下の条件の購読者として登録されました。<br />
+<br />
+{$subscriptionType}<br />
+<br />
+購読者のみが利用できるコンテンツにアクセスするには、ユーザ名「{$username}」でシステムにログインしていただくだけです。<br />
+<br />
+システムにログイン後は、ユーザ情報とパスワードをいつでも変更することができます。<br />
+機関購読者の場合は、機関構成員の方はログインする必要はありませんので、ご注意ください。購読コンテンツへのアクセスの際に、システムにより自動的に認証が行われます。<br />
+何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+ありがとうございました。<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>このメールは、管理者から登録読者に購読者として登録したことを通知するものです。メールでは、雑誌のURLとアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
 		<subject>オープンアクセスのお知らせ</subject>
-		<body>読者各位:
-
-いつもご利用ありがとうございます。
-
-雑誌『{$contextName}』の以下の号がオープンアクセスにより利用できるようになりましたのでご案内いたします。
-
- 雑誌のWebサイト（{$journalUrl}）にアクセスし、目次をチェックし興味のある論文や記事をご利用ください。
-
-よろしくお願いいたします。
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[読者各位:<br />
+<br />
+いつもご利用ありがとうございます。<br />
+<br />
+雑誌『{$contextName}』の以下の号がオープンアクセスにより利用できるようになりましたのでご案内いたします。<br />
+<br />
+ 雑誌のWebサイト（<a href="{$journalUrl}">{$journalUrl}</a>）にアクセスし、目次をチェックし興味のある論文や記事をご利用ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>このメールは、巻号がオープンアクセスになった時に通知を受け取るよう登録している読者に送信されるものです。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
 		<subject>購読期間終了のお知らせ</subject>
-		<body>{$subscriberName} 殿:
-
-いつもご利用ありがとうございます。
-
-まもなく、雑誌『{$contextName}』の購読期間が終了します。
-
-{$subscriptionType}
-購読期限日: {$expiryDate}
-
-本誌へのアクセスを継続するために、雑誌のWebサイトで再購読の手続きをするようお願いいたします。システムにはユーザ名「{$username}」でログインすることができます。
-
-何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName} 殿:<br />
+<br />
+いつもご利用ありがとうございます。<br />
+<br />
+まもなく、雑誌『{$contextName}』の購読期間が終了します。<br />
+<br />
+{$subscriptionType}<br />
+購読期限日: {$expiryDate}<br />
+<br />
+本誌へのアクセスを継続するために、雑誌のWebサイトで再購読の手続きをするようお願いいたします。システムにはユーザ名「{$username}」でログインすることができます。<br />
+<br />
+何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>このメールは、購読者に購読期間がまもなく終了することを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
 		<subject>購読期間終了</subject>
-		<body>{$subscriberName} 殿:
-
-いつもご利用ありがとうございます。
-
-雑誌『{$contextName}』の購読期間が終了しました。
-
-{$subscriptionType}
-購読期限日: {$expiryDate}
-
-雑誌のWebサイトで更新の手続きをするようお願いいたします。システムにはユーザ名「{$username}」でログインすることができます。
-
-何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName} 殿:<br />
+<br />
+いつもご利用ありがとうございます。<br />
+<br />
+雑誌『{$contextName}』の購読期間が終了しました。<br />
+<br />
+{$subscriptionType}<br />
+購読期限日: {$expiryDate}<br />
+<br />
+雑誌のWebサイトで更新の手続きをするようお願いいたします。システムにはユーザ名「{$username}」でログインすることができます。<br />
+<br />
+何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>このメールは、購読者に購読期間が終了したことを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
 		<subject>購読期間終了（最終案内）</subject>
-		<body>{$subscriberName} 殿:
-
-いつもご利用ありがとうございます。
-
-雑誌『{$contextName}』の購読期間が終了しました。
-
-{$subscriptionType}
-購読期限日: {$expiryDate}
-
-雑誌のWebサイトで更新の手続きをするようお願いいたします。システムにはユーザ名「{$username}」でログインすることができます。
-
-本メールは、最終のご案内であることにご注意ください。
-
-何かご不明な点がございましたら、ご連絡ください。
-
-よろしくお願いいたします。
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName} 殿:<br />
+<br />
+いつもご利用ありがとうございます。<br />
+<br />
+雑誌『{$contextName}』の購読期間が終了しました。<br />
+<br />
+{$subscriptionType}<br />
+購読期限日: {$expiryDate}<br />
+<br />
+雑誌のWebサイトで更新の手続きをするようお願いいたします。システムにはユーザ名「{$username}」でログインすることができます。<br />
+<br />
+本メールは、最終のご案内であることにご注意ください。<br />
+<br />
+何かご不明な点がございましたら、ご連絡ください。<br />
+<br />
+よろしくお願いいたします。<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>このメールは、購読者に購読期間が終了したことを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>アカウントの確認</subject>
-		<body>{$userFullName} 様
-
-雑誌「{$contextName}」用のアカウントを作成しました。このアカウントを有効にするには、メールアドレスの確認が必要です。以下のリンクをクリックして確認してください。
-Y
-{$activateUrl}
-
-ありがとうございました。
-
-{$principalContactSignature}</body>
+		<body><![CDATA[{$userFullName} 様<br />
+<br />
+雑誌「{$contextName}」用のアカウントを作成しました。このアカウントを有効にするには、メールアドレスの確認が必要です。以下のリンクをクリックして確認してください。<br />
+Y<br />
+<a href="{$activateUrl}">{$activateUrl}</a><br />
+<br />
+ありがとうございました。<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>このメールは、新規登録したユーザに送付され、ユーザ名とパスワードを通知します。</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
 		<subject>ユーザ名 "{$contextName}" で査読者として登録されました</subject>
-		<body>突然のメールをお許しください。
-
-貴殿の専門性に鑑み、失礼ですが私どもの雑誌「{$contextName}」の査読者データベースにあなたの名前を登録させていただきました。これによりあなたに何らかの義務が発生することはありません。ただ、できたら査読をお願いできるようにしておきたかっただけです。査読をお願いする場合は、対象となる論文のタイトルと要旨を見る機会を持っていただきます。もちろん、査読の依頼に応じるか否かの判断は常に貴殿に委ねられます。また、任意の時点で、この査読者リストから貴殿の名前を削除することもできます。
-
-以下に、貴殿のユーザ名とパスワードをご報告いたします。これを使用することにより、雑誌のWebサイトであらゆる処理（例えば、査読対象分野の変更など、貴殿のプロフィールの更新）を行うことができます。
-
-ユーザ名: {$username}
-パスワード: {$password}
-
-ご協力よろしくお願いいたします。
-
-{$principalContactSignature}</body>
+		<body><![CDATA[突然のメールをお許しください。<br />
+<br />
+貴殿の専門性に鑑み、失礼ですが私どもの雑誌「{$contextName}」の査読者データベースにあなたの名前を登録させていただきました。これによりあなたに何らかの義務が発生することはありません。ただ、できたら査読をお願いできるようにしておきたかっただけです。査読をお願いする場合は、対象となる論文のタイトルと要旨を見る機会を持っていただきます。もちろん、査読の依頼に応じるか否かの判断は常に貴殿に委ねられます。また、任意の時点で、この査読者リストから貴殿の名前を削除することもできます。<br />
+<br />
+以下に、貴殿のユーザ名とパスワードをご報告いたします。これを使用することにより、雑誌のWebサイトであらゆる処理（例えば、査読対象分野の変更など、貴殿のプロフィールの更新）を行うことができます。<br />
+<br />
+ユーザ名: {$username}<br />
+パスワード: {$password}<br />
+<br />
+ご協力よろしくお願いいたします。<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>このメールは新規に登録された査読者に送付され、ユーザ名とパスワードが通知されます。</description>
 	</email_text>
 	<email_text key="NOTIFICATION">
 		<subject>{$siteTitle} からの新しいお知らせ</subject>
-		<body>{$siteTitle} からの新しいお知らせです。
-
-{$notificationContents}
-
-Link: {$url}
-
-{$principalContactSignature}</body>
+		<body><![CDATA[{$siteTitle} からの新しいお知らせです。<br />
+<br />
+{$notificationContents}<br />
+<br />
+Link: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
 		<subject>{$siteTitle} からの新しいお知らせ</subject>
-		<body>{$siteTitle} からの新しいお知らせです。
---
-{$notificationContents}
-
-Link: {$url}
---
-
-通知メールの配信を停止したい場合は， {$unsubscribeLink} でメールアドレスとパスワードを入力してください。
-
-{$principalContactSignature}</body>
+		<body><![CDATA[{$siteTitle} からの新しいお知らせです。<br />
+--<br />
+{$notificationContents}<br />
+<br />
+Link: {$url}<br />
+--<br />
+<br />
+通知メールの配信を停止したい場合は， {$unsubscribeLink} でメールアドレスとパスワードを入力してください。<br />
+<br />
+{$principalContactSignature}]]></body>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>{$siteTitle} メーリングリストへようこそ！</subject>
-		<body>あなたは {$siteTitle} からのお知らせを受け取ることに同意しました。
-
-メーリングリストにあなたのメールアドレスを追加するために下記の確認リンクをクリックしてください。
-{$confirmLink}
-
-もし通知メールの受信を停止したい場合は，下記のページでメールドレスとパスワードを入力してください。
-{$unsubscribeLink}
-
-あなたの通知メールを無効にするためのパスワードは下記のとおりです。
-{$password}
-
-
-{$principalContactSignature}</body>
+		<body><![CDATA[あなたは {$siteTitle} からのお知らせを受け取ることに同意しました。<br />
+<br />
+メーリングリストにあなたのメールアドレスを追加するために下記の確認リンクをクリックしてください。<br />
+{$confirmLink}<br />
+<br />
+もし通知メールの受信を停止したい場合は，下記のページでメールドレスとパスワードを入力してください。<br />
+{$unsubscribeLink}<br />
+<br />
+あなたの通知メールを無効にするためのパスワードは下記のとおりです。<br />
+{$password}<br />
+<br />
+<br />
+{$principalContactSignature}]]></body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>編集者の判断</subject>
-		<body>{$authorName}:
-
-私たちはあなたが {$journalTitle}, に投稿された "{$submissionTitle}"
-について結論に達しました。
-
-結果:
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+私たちはあなたが {$journalTitle}, に投稿された &quot;{$submissionTitle}&quot;<br />
+について結論に達しました。<br />
+<br />
+結果:<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>編集者の判断</subject>
-		<body>{$authorName}:
-
-私たちは下記のあなたの投稿について結論に達しました。 {$journalTitle}, "{$submissionTitle}".
-
-結果は:
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+私たちは下記のあなたの投稿について結論に達しました。 {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+結果は:<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>編集者の判断</subject>
-		<body>{$authorName}:
-
-私たちはあなたの下記の投稿について結論に達しました。
-{$journalTitle}, "{$submissionTitle}".
-
-結果は:
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+私たちはあなたの下記の投稿について結論に達しました。<br />
+{$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+結果は:<br />
+<br />
+{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>編集者の判断</subject>
-		<body>{$authorName}:
-
-私たちはあなたの下記の投稿について結論に達しました。{$journalTitle}, "{$submissionTitle}".
-
-結果は:
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+私たちはあなたの下記の投稿について結論に達しました。{$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+結果は:<br />
+<br />
+{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>購読申込: 個人</subject>
-		<body>オンラインで {$contextName}  に対する個人購読が申し込まれました。詳細は下記の通りです。
-
-購読種別:
-{$subscriptionType}
-
-ユーザ:
-{$userDetails}
-
-会員情報 (ある場合):
-{$membership}
-
-この購読を閲覧あるいは編集するには，下記のURLにアクセスしてください。
-
-購読URL: {$subscriptionUrl}</body>
+		<body><![CDATA[オンラインで {$contextName}  に対する個人購読が申し込まれました。詳細は下記の通りです。<br />
+<br />
+購読種別:<br />
+{$subscriptionType}<br />
+<br />
+ユーザ:<br />
+{$userDetails}<br />
+<br />
+会員情報 (ある場合):<br />
+{$membership}<br />
+<br />
+この購読を閲覧あるいは編集するには，下記のURLにアクセスしてください。<br />
+<br />
+購読URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
 		<description>このメールは個人購読がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>購読申込: 機関</subject>
-		<body>オンラインで {$contextName} に対する機関購読申し込みがされました。詳細は下記の通りです。この購読を有効にするためには，下記の購読リンクから購読状態を「有効」に設定してください。
-
-購読種別:
-{$subscriptionType}
-
-機関名:
-{$institutionName}
-{$institutionMailingAddress}
-
-ドメイン名 (ある場合):
-{$domain}
-
-IPアドレス範囲 (ある場合):
-{$ipRanges}
-
-連絡担当者:
-{$userDetails}
-
-会員情報 (ある場合):
-{$membership}
-
-この購読を閲覧および編集するためには，下記のURLにアクセスしてください。
-
-購読URL: {$subscriptionUrl}</body>
+		<body><![CDATA[オンラインで {$contextName} に対する機関購読申し込みがされました。詳細は下記の通りです。この購読を有効にするためには，下記の購読リンクから購読状態を「有効」に設定してください。<br />
+<br />
+購読種別:<br />
+{$subscriptionType}<br />
+<br />
+機関名:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+ドメイン名 (ある場合):<br />
+{$domain}<br />
+<br />
+IPアドレス範囲 (ある場合):<br />
+{$ipRanges}<br />
+<br />
+連絡担当者:<br />
+{$userDetails}<br />
+<br />
+会員情報 (ある場合):<br />
+{$membership}<br />
+<br />
+この購読を閲覧および編集するためには，下記のURLにアクセスしてください。<br />
+<br />
+購読URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
 		<description>このメールは機関購読がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>購読更新: 個人</subject>
-		<body>オンラインで {$contextName} に対する個人購読の更新申込がされました。詳細は下記の通りです。
-
-購読種別:
-{$subscriptionType}
-
-ユーザ:
-{$userDetails}
-
-会員情報 (ある場合):
-{$membership}
-
-この購読を閲覧および編集するためには，下記のURLにアクセスしてください。
-
-購読URL: {$subscriptionUrl}</body>
+		<body><![CDATA[オンラインで {$contextName} に対する個人購読の更新申込がされました。詳細は下記の通りです。<br />
+<br />
+購読種別:<br />
+{$subscriptionType}<br />
+<br />
+ユーザ:<br />
+{$userDetails}<br />
+<br />
+会員情報 (ある場合):<br />
+{$membership}<br />
+<br />
+この購読を閲覧および編集するためには，下記のURLにアクセスしてください。<br />
+<br />
+購読URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
 		<description>このメールは個人購読の更新がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>購読更新: 機関</subject>
-		<body>オンラインで {$contextName} に対する機関購読の更新申込がおこなわれました。詳細は下記の通りです。
-
-購読種別:
-{$subscriptionType}
-
-機関名:
-{$institutionName}
-{$institutionMailingAddress}
-
-ドメイン名 (ある場合):
-{$domain}
-
-IPアドレス範囲 (ある場合):
-{$ipRanges}
-
-連絡担当者:
-{$userDetails}
-
-会員情報 (ある場合):
-{$membership}
-
-この購読を閲覧および編集するためには，下記のURLにアクセスしてください。
-
-購読URL: {$subscriptionUrl}</body>
+		<body><![CDATA[オンラインで {$contextName} に対する機関購読の更新申込がおこなわれました。詳細は下記の通りです。<br />
+<br />
+購読種別:<br />
+{$subscriptionType}<br />
+<br />
+機関名:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+ドメイン名 (ある場合):<br />
+{$domain}<br />
+<br />
+IPアドレス範囲 (ある場合):<br />
+{$ipRanges}<br />
+<br />
+連絡担当者:<br />
+{$userDetails}<br />
+<br />
+会員情報 (ある場合):<br />
+{$membership}<br />
+<br />
+この購読を閲覧および編集するためには，下記のURLにアクセスしてください。<br />
+<br />
+購読URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
 		<subject>引用の編集</subject>
-		<body>{$authorFirstName} 様,
-
-あなたの下記の論文に含まれる参考文献についてご確認いただき，正確な引用情報をご提供ください。
-
-{$submissionTitle}:
-
-{$rawCitation}
-
-どうぞよろしくお願い致します。
-
-{$userFirstName}
-{$contextName} コピーエディタ</body>
+		<body><![CDATA[{$authorFirstName} 様,<br />
+<br />
+あなたの下記の論文に含まれる参考文献についてご確認いただき，正確な引用情報をご提供ください。<br />
+<br />
+{$submissionTitle}:<br />
+<br />
+{$rawCitation}<br />
+<br />
+どうぞよろしくお願い致します。<br />
+<br />
+{$userFirstName}<br />
+{$contextName} コピーエディタ]]></body>
 	</email_text>
 </email_texts>

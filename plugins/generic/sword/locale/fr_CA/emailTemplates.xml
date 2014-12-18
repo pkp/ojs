@@ -13,10 +13,10 @@
 <email_texts locale="fr_CA">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Avis de dépôt</subject>
-		<body>Félicitations pour l'acceptation de votre soumission, "{$submissionTitle}", pour publication dans la revue {$contextName}. Si vous le souhaitez, vous pouvez déposer automatiquement votre soumission dans un ou plusieurs de nos services d'archivage.
-
-Aller à {$swordDepositUrl} afin de procéder.
-
-Ce courriel a été généré par le plugiciel de dépôt SWORD du Open Journal Systems.</body>
+		<body><![CDATA[Félicitations pour l'acceptation de votre soumission, &quot;{$submissionTitle}&quot;, pour publication dans la revue {$contextName}. Si vous le souhaitez, vous pouvez déposer automatiquement votre soumission dans un ou plusieurs de nos services d'archivage.<br />
+<br />
+Aller à <a href="{$swordDepositUrl}">{$swordDepositUrl}</a> afin de procéder.<br />
+<br />
+Ce courriel a été généré par le plugiciel de dépôt SWORD du Open Journal Systems.]]></body>
 	</email_text>
 </email_texts>

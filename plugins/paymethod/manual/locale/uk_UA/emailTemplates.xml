@@ -15,12 +15,12 @@
 <email_texts locale="uk_UA">
        <email_text key="MANUAL_PAYMENT_NOTIFICATION">
                <subject>Інформування про платіж</subject>
-               <body>На рахунок журналу {$contextName} користувачем {$userFullName} (username "{$userName}") повинен бути перерахований платіж.
-
-Це плата за "{$itemName}".
-Сума платежу {$itemCost} ({$itemCurrencyCode}).
-
-Цей лист був створений модулем ручних платежів системи Open Journal Systems.</body>
+               <body><![CDATA[На рахунок журналу {$contextName} користувачем {$userFullName} (username &quot;{$userName}&quot;) повинен бути перерахований платіж.<br />
+<br />
+Це плата за &quot;{$itemName}&quot;.<br />
+Сума платежу {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+Цей лист був створений модулем ручних платежів системи Open Journal Systems.]]></body>
                <description>Цей шаблон листа використовується для інформування менеджера журнала про запит на здійснення ручного платежу.</description>
        </email_text>
 </email_texts>

@@ -73,7 +73,7 @@ class EmailTemplateDAO extends PKPEmailTemplateDAO {
 	 * Delete all email templates for a specific journal.
 	 * @param $journalId int
 	 */
-	function deleteEmailTemplatesByJournal($journalId) {
+	function deleteEmailTemplatesByContext($journalId) {
 		return parent::deleteEmailTemplatesByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
 	}
 

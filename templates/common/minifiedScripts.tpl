@@ -33,6 +33,7 @@
 <script src="{$baseUrl}/lib/pkp/js/classes/Helper.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/ObjectProxy.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/Handler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/classes/TinyMCEHelper.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/linkAction/LinkActionRequest.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/linkAction/RedirectRequest.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/classes/linkAction/OpenWindowRequest.js"></script>

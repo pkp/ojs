@@ -30,7 +30,7 @@
 		{/fbvFormSection}
 
 		{fbvFormSection title="editor.submission.personalMessageToUser" for="message"}
-			{fbvElement type="textarea" id="message" value=$message}
+			{fbvElement type="textarea" id="message" value=$message rich=true}
 		{/fbvFormSection}
 		{fbvFormSection title="editor.submission.taskSchedule"}
 			{fbvElement type="text" id="dateNotified" label="reviewer.submission.reviewRequestDate" value=$signoff->getDateNotified()|date_format:$dateFormatShort disabled=true inline=true size=$fbvStyles.size.SMALL}

@@ -12,17 +12,17 @@
 <email_texts locale="el_GR">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Ασυνήθιστη δραστηριότητα PayPal</subject>
-		<body>To Open Journal Systems διαπίστωσε μια ασυνήθιστη δραστηριότητα σχετικά με διαδικασίες πληρωμής με τη μέθοδο PayPal για το περιοδικό {$contextName}. Αυτή η δραστηριότητα ίσως χρειάζεται να διερευνηθεί περαιτέρω.
-                       
-Το μήνυμα αυτό δημιουργήθκε αυτόματα από το PayPal plugin του  Open Journal Systems.
-
-Πλήρη ταχυδρομικά στοιχεία :
-{$postInfo}
-
-Πρόσθετε πληροφορίες (αν παρέχονται):
-{$additionalInfo}
-
-Server vars:
-{$serverVars}</body>
+		<body><![CDATA[To Open Journal Systems διαπίστωσε μια ασυνήθιστη δραστηριότητα σχετικά με διαδικασίες πληρωμής με τη μέθοδο PayPal για το περιοδικό {$contextName}. Αυτή η δραστηριότητα ίσως χρειάζεται να διερευνηθεί περαιτέρω.<br />
+                       <br />
+Το μήνυμα αυτό δημιουργήθκε αυτόματα από το PayPal plugin του  Open Journal Systems.<br />
+<br />
+Πλήρη ταχυδρομικά στοιχεία :<br />
+{$postInfo}<br />
+<br />
+Πρόσθετε πληροφορίες (αν παρέχονται):<br />
+{$additionalInfo}<br />
+<br />
+Server vars:<br />
+{$serverVars}]]></body>
 	</email_text>
 </email_texts>

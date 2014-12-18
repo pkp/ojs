@@ -12,12 +12,12 @@
 <email_texts locale="eu_ES">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Eskuzko ordainketaren jakinarazpena</subject>
-		<body>{$userFullName} erabiltzaileak ("{$userName}" erab.-iz.) {$contextName} aldizkarirako egindako eskuzko ordainketa bat prozesatu beharrean dago.
-
-Ordaindu beharreko lana "{$itemName}" da.
-Kostua : {$itemCost} ({$itemCurrencyCode}).
-
-Mezu hau Open Journal Systems-en Eskuzko ordainketen pluginak sortu du.</body>
+		<body><![CDATA[{$userFullName} erabiltzaileak (&quot;{$userName}&quot; erab.-iz.) {$contextName} aldizkarirako egindako eskuzko ordainketa bat prozesatu beharrean dago.<br />
+<br />
+Ordaindu beharreko lana &quot;{$itemName}&quot; da.<br />
+Kostua : {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+Mezu hau Open Journal Systems-en Eskuzko ordainketen pluginak sortu du.]]></body>
 		<description>Mezu-txantiloi hau aldizkariaren kudeatzaileari eskuzko ordainketa bat eskatu dela jakinarazteko erabiltzen da.</description>
 	</email_text>
 </email_texts>

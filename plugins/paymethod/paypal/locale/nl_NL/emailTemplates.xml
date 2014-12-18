@@ -12,17 +12,17 @@
 <email_texts locale="nl_NL">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Ongebruikelijke PayPal activiteit</subject>
-		<body>Open Journal Systems heeft ongebruikelijke activiteit geconstateerd met betrekking tot de PayPal betalingsondersteuning van het tijdschrift {$contextName}. Deze activiteit vraagt om verder onderzoek of handmatige interventie.
-                       
-Deze e-mail is gegenereerd door de PayPal plugin van Open Journal Systems.
-
-Volledige berichtinformatie voor het verzoek:
-{$postInfo}
-
-Additionele informatie (indien opgegeven):
-{$additionalInfo}
-
-Server variabelen:
-{$serverVars}</body>
+		<body><![CDATA[Open Journal Systems heeft ongebruikelijke activiteit geconstateerd met betrekking tot de PayPal betalingsondersteuning van het tijdschrift {$contextName}. Deze activiteit vraagt om verder onderzoek of handmatige interventie.<br />
+                       <br />
+Deze e-mail is gegenereerd door de PayPal plugin van Open Journal Systems.<br />
+<br />
+Volledige berichtinformatie voor het verzoek:<br />
+{$postInfo}<br />
+<br />
+Additionele informatie (indien opgegeven):<br />
+{$additionalInfo}<br />
+<br />
+Server variabelen:<br />
+{$serverVars}]]></body>
 	</email_text>
 </email_texts>

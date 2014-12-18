@@ -14,826 +14,826 @@
 <email_texts locale="en_US">
 	<email_text key="AUDITOR_REQUEST">
 		<subject>Manuscript Audit Request</subject>
-		<body>{$auditorName}:
-
-New files have been uploaded for the manuscript "{$submissionTitle}," and I am asking that you audit them. It is important to the journal that participants review the manuscript at each stage.
-
-You can find the files to review at: 
-
-{$auditUrl}
-
-Username: {$auditorUserName}
-
-Please indicate in a return email if you are not able to complete the audit by {$weekLaterDate}.
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-</body>
+		<body><![CDATA[{$auditorName}:<br />
+<br />
+New files have been uploaded for the manuscript &quot;{$submissionTitle},&quot; and I am asking that you audit them. It is important to the journal that participants review the manuscript at each stage.<br />
+<br />
+You can find the files to review at: <br />
+<br />
+<a href="{$auditUrl}">{$auditUrl}</a><br />
+<br />
+Username: {$auditorUserName}<br />
+<br />
+Please indicate in a return email if you are not able to complete the audit by {$weekLaterDate}.<br />
+<br />
+Thank you for considering this request.<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
 		<description>This email is sent by the Section Editor to an Auditor to request that they accept or decline the task of auditing a submission.</description>
 	</email_text>
 	<email_text key="NOTIFICATION">
 		<subject>New notification from {$siteTitle}</subject>
-		<body>You have a new notification from {$siteTitle}:
-
-{$notificationContents}
-
-Link: {$url}
-
-{$principalContactSignature}</body>
+		<body><![CDATA[You have a new notification from {$siteTitle}:<br />
+<br />
+{$notificationContents}<br />
+<br />
+Link: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
 		<subject>New notification from {$siteTitle}</subject>
-		<body>You have a new notification from {$siteTitle}:
---
-{$notificationContents}
-
-Link: {$url}
---
-
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.
-
-{$principalContactSignature}</body>
+		<body><![CDATA[You have a new notification from {$siteTitle}:<br />
+--<br />
+{$notificationContents}<br />
+<br />
+Link: {$url}<br />
+--<br />
+<br />
+If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>This email is sent to unregistered users on the notification mailing list.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Welcome to the the {$siteTitle} mailing list!</subject>
-		<body>You have signed up to receive notifications from {$siteTitle}.
-
-Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}
-
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.
-
-{$principalContactSignature}</body>
+		<body><![CDATA[You have signed up to receive notifications from {$siteTitle}.<br />
+<br />
+Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}<br />
+<br />
+If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Password Reset Confirmation</subject>
-		<body>We have received a request to reset your password for the {$siteTitle} web site.
-
-If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.
-
-Reset my password: {$url}
-
-{$principalContactSignature}</body>
+		<body><![CDATA[We have received a request to reset your password for the {$siteTitle} web site.<br />
+<br />
+If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />
+<br />
+Reset my password: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Password Reset</subject>
-		<body>Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.
-
-Your username: {$username}
-Your new password: {$password}
-
-{$principalContactSignature}</body>
+		<body><![CDATA[Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />
+<br />
+Your username: {$username}<br />
+Your new password: {$password}<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
 		<subject>Journal Registration</subject>
-		<body>{$userFullName}
-
-You have now been registered as a user with {$contextName}. We have included your username and password in this email, which are needed for all work with this journal through its website. At any point, you can ask to be removed from the journal's list of users by contacting me.
-
-Username: {$username}
-Password: {$password}
-
-Thank you,
-{$principalContactSignature}</body>
+		<body><![CDATA[{$userFullName}<br />
+<br />
+You have now been registered as a user with {$contextName}. We have included your username and password in this email, which are needed for all work with this journal through its website. At any point, you can ask to be removed from the journal's list of users by contacting me.<br />
+<br />
+Username: {$username}<br />
+Password: {$password}<br />
+<br />
+Thank you,<br />
+{$principalContactSignature}]]></body>
 		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>Validate Your Account</subject>
-		<body>{$userFullName}
-
-You have created an account with {$contextName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:
-
-{$activateUrl}
-
-Thank you,
-{$principalContactSignature}</body>
+		<body><![CDATA[{$userFullName}<br />
+<br />
+You have created an account with {$contextName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />
+<br />
+<a href="{$activateUrl}">{$activateUrl}</a><br />
+<br />
+Thank you,<br />
+{$principalContactSignature}]]></body>
 		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
 		<subject>Registration as Reviewer with {$contextName}</subject>
-		<body>In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$contextName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.
-
-We are providing you with a username and password, which is used in all interactions with the journal through its website. You may wish, for example, to update your profile, including your reviewing interests.
-
-Username: {$username}
-Password: {$password}
-
-Thank you,
-{$principalContactSignature}</body>
+		<body><![CDATA[In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$contextName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.<br />
+<br />
+We are providing you with a username and password, which is used in all interactions with the journal through its website. You may wish, for example, to update your profile, including your reviewing interests.<br />
+<br />
+Username: {$username}<br />
+Password: {$password}<br />
+<br />
+Thank you,<br />
+{$principalContactSignature}]]></body>
 		<description>This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
 		<subject>New Issue Published</subject>
-		<body>Readers:
-
-{$contextName} has just published its latest issue at {$journalUrl}. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.
-
-Thanks for the continuing interest in our work,
-{$editorialContactSignature}</body>
+		<body><![CDATA[Readers:<br />
+<br />
+{$contextName} has just published its latest issue at <a href="{$journalUrl}">{$journalUrl}</a>. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
+<br />
+Thanks for the continuing interest in our work,<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
 		<subject>Archiving Request for {$contextName}</subject>
-		<body>Dear [University Librarian]
-
-{$contextName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
-
-[Brief description of journal]
-
-The URL to the LOCKSS Publisher Manifest for our journal is: {$journalUrl}/gateway/lockss
-
-We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.
-
-Thank you,
-{$principalContactSignature}</body>
+		<body><![CDATA[Dear [University Librarian]<br />
+<br />
+{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+<br />
+[Brief description of journal]<br />
+<br />
+The URL to the LOCKSS Publisher Manifest for our journal is: <a href="{$journalUrl}">{$journalUrl}</a>/gateway/lockss<br />
+<br />
+We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.<br />
+<br />
+Thank you,<br />
+{$principalContactSignature}]]></body>
 		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
 		<subject>Archiving Request for {$contextName}</subject>
-		<body>Dear [University Librarian]
-
-{$contextName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
-
-[Brief description of journal]
-
-The LOCKSS Program &lt;http://lockss.org/&gt;, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.
-
-To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.
-
-Thank you,
-{$principalContactSignature}</body>
+		<body><![CDATA[Dear [University Librarian]<br />
+<br />
+{$contextName} &amp;lt;<a href="{$journalUrl}">{$journalUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+<br />
+[Brief description of journal]<br />
+<br />
+The LOCKSS Program &amp;lt;http://lockss.org/&amp;gt;, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.<br />
+<br />
+To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.<br />
+<br />
+Thank you,<br />
+{$principalContactSignature}]]></body>
 		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>Submission Acknowledgement</subject>
-		<body>{$authorName}:
-
-Thank you for submitting the manuscript, "{$submissionTitle}" to {$contextName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:
-
-Submission URL: {$submissionUrl}
-Username: {$authorUsername}
-
-If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Thank you for submitting the manuscript, &quot;{$submissionTitle}&quot; to {$contextName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />
+<br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$authorUsername}<br />
+<br />
+If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Unsuitable Submission</subject>
-		<body>{$authorName}:
-
-An initial review of "{$submissionTitle}" has made it clear that this submission does not fit within the scope and focus of {$contextName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+An initial review of &quot;{$submissionTitle}&quot; has made it clear that this submission does not fit within the scope and focus of {$contextName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.<br />
+<br />
+{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Editorial Assignment</subject>
-		<body>{$editorialContactName}:
-
-The submission, "{$submissionTitle}," to {$contextName} has been assigned to you to see through the editorial process in your role as Section Editor.
-
-Submission URL: {$submissionUrl}
-Username: {$editorUsername}
-
-Thank you,
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+The submission, &quot;{$submissionTitle},&quot; to {$contextName} has been assigned to you to see through the editorial process in your role as Section Editor.<br />
+<br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$editorUsername}<br />
+<br />
+Thank you,<br />
+{$editorialContactSignature}]]></body>
 		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
-
-I believe that you would serve as an excellent reviewer of the manuscript, "{$submissionTitle}," which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
-
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
-
-The review itself is due {$reviewDueDate}.
-
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
-
-Submission URL: {$submissionReviewUrl}
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-"{$submissionTitle}"
-
-{$submissionAbstract}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
+<br />
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$journalUrl}">{$journalUrl}</a><br />
+<br />
+The review itself is due {$reviewDueDate}.<br />
+<br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Thank you for considering this request.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review. (Otherwise see REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
-
-I believe that you would serve as an excellent reviewer of the manuscript, "{$submissionTitle}," which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
-
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
-
-The review itself is due {$reviewDueDate}.
-
-Submission URL: {$submissionReviewUrl}
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-"{$submissionTitle}"
-
-{$submissionAbstract}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
+<br />
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
+<br />
+The review itself is due {$reviewDueDate}.<br />
+<br />
+Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Thank you for considering this request.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review, and one-click reviewer access is enabled.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
-
-I believe that you would serve as an excellent reviewer of the manuscript, "{$submissionTitle}," and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
-
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-
-Review Guidelines
-
-{$reviewGuidelines}
-</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; and I am asking that you consider undertaking this important task for us. The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.<br />
+<br />
+Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.<br />
+<br />
+Thank you for considering this request.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+Review Guidelines<br />
+<br />
+{$reviewGuidelines}<br />
+]]></body>
 		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review. (Otherwise see REVIEW_REQUEST.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
-
-This regards the manuscript "{$submissionTitle}," which is under consideration by {$contextName}.
-
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
-
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
-
-The review itself is due {$reviewDueDate}.
-
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
-
-Submission URL: {$submissionReviewUrl}
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-"{$submissionTitle}"
-
-{$submissionAbstract}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+This regards the manuscript &quot;{$submissionTitle},&quot; which is under consideration by {$contextName}.<br />
+<br />
+Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
+<br />
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$journalUrl}">{$journalUrl}</a><br />
+<br />
+The review itself is due {$reviewDueDate}.<br />
+<br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Thank you for considering this request.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
 		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
-
-This regards the manuscript "{$submissionTitle}," which is under consideration by {$contextName}.
-
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
-
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
-
-The review itself is due {$reviewDueDate}.
-
-Submission URL: {$submissionReviewUrl}
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-"{$submissionTitle}"
-
-{$submissionAbstract}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+This regards the manuscript &quot;{$submissionTitle},&quot; which is under consideration by {$contextName}.<br />
+<br />
+Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
+<br />
+Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />
+<br />
+The review itself is due {$reviewDueDate}.<br />
+<br />
+Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Thank you for considering this request.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review, and one-click reviewer access is enabled.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
 		<subject>Article Review Request</subject>
-		<body>{$reviewerName}:
-
-This regards the manuscript "{$submissionTitle}," which is under consideration by {$contextName}.
-
-Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.
-
-The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.
-
-Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.
-
-Thank you for considering this request.
-
-{$editorialContactSignature}
-
-
-Review Guidelines
-
-{$reviewGuidelines}
-</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+This regards the manuscript &quot;{$submissionTitle},&quot; which is under consideration by {$contextName}.<br />
+<br />
+Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
+<br />
+The Review Guidelines for this journal are appended below, and the submission is attached to this email. Your review of the submission, along with your recommendation, should be emailed to me by {$reviewDueDate}.<br />
+<br />
+Please indicate in a return email by {$weekLaterDate} whether you are able and willing to do the review.<br />
+<br />
+Thank you for considering this request.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+Review Guidelines<br />
+<br />
+{$reviewGuidelines}<br />
+]]></body>
 		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission for a second or greater round of review. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review. (Otherwise see REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>Request for Review Cancelled</subject>
-		<body>{$reviewerName}:
-
-We have decided at this point to cancel our request for you to review the submission, "{$submissionTitle}," for {$contextName}. We apologize for any inconvenience this may cause you and hope that we will be able to call on you to assist with this journal's review process in the future.
-
-If you have any questions, please contact me.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+We have decided at this point to cancel our request for you to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We apologize for any inconvenience this may cause you and hope that we will be able to call on you to assist with this journal's review process in the future.<br />
+<br />
+If you have any questions, please contact me.<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Able to Review</subject>
-		<body>{$editorialContactName}:
-
-I am able and willing to review the submission, "{$submissionTitle}," for {$contextName}. Thank you for thinking of me, and I plan to have the review completed by its due date, {$reviewDueDate}, if not before.
-
-{$reviewerName}</body>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+I am able and willing to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. Thank you for thinking of me, and I plan to have the review completed by its due date, {$reviewDueDate}, if not before.<br />
+<br />
+{$reviewerName}]]></body>
 		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Unable to Review</subject>
-		<body>{$editorialContactName}:
-
-I am afraid that at this time I am unable to review the submission, "{$submissionTitle}," for {$contextName}. Thank you for thinking of me, and another time feel free to call on me.
-
-{$reviewerName}</body>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+I am afraid that at this time I am unable to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. Thank you for thinking of me, and another time feel free to call on me.<br />
+<br />
+{$reviewerName}]]></body>
 		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.</description>
 	</email_text>
 	<email_text key="REVIEW_COMPLETE">
 		<subject>Article Review Completed</subject>
-		<body>{$editorialContactName}:
-
-I have now completed my review of "{$submissionTitle}" for {$contextName}, and submitted my recommendation, "{$recommendation}."
-
-{$reviewerName}</body>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+I have now completed my review of &quot;{$submissionTitle}&quot; for {$contextName}, and submitted my recommendation, &quot;{$recommendation}.&quot;<br />
+<br />
+{$reviewerName}]]></body>
 		<description>This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Article Review Acknowledgement</subject>
-		<body>{$reviewerName}:
-
-Thank you for completing the review of the submission, "{$submissionTitle}," for {$contextName}. We appreciate your contribution to the quality of the work that we publish.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Thank you for completing the review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We appreciate your contribution to the quality of the work that we publish.<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
 		<subject>Submission Review Reminder</subject>
-		<body>{$reviewerName}:
-
-Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
-
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
-
-Submission URL: {$submissionReviewUrl}
-
-Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.<br />
+<br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is sent by a Section Editor to remind a reviewer that their review is due.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
 		<subject>Submission Review Reminder</subject>
-		<body>{$reviewerName}:
-
-Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.
-
-Submission URL: {$submissionReviewUrl}
-
-Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.<br />
+<br />
+Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is sent by a Section Editor to remind a reviewer that their review is due.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
 		<subject>Automated Submission Review Reminder</subject>
-		<body>{$reviewerName}:
-
-Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
-
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
-
-Submission URL: {$submissionReviewUrl}
-
-Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.<br />
+<br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Management &gt; Settings &gt; Workflow &gt; Review) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
 		<subject>Automated Submission Review Reminder</subject>
-		<body>{$reviewerName}:
-
-Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.
-
-Submission URL: {$submissionReviewUrl}
-
-Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.<br />
+<br />
+Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Management &gt; Settings &gt; Workflow &gt; Review) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Editor Decision</subject>
-		<body>{$authorName}:
-
-We have reached a decision regarding your submission to {$journalTitle}, "{$submissionTitle}".
-
-Our decision is to:
-
-{$editorialContactSignature}
-</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Our decision is to:<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
 		<subject>Editor Decision</subject>
-		<body>{$authorName}:
-
-We have reached a decision regarding your submission to {$contextName}, "{$submissionTitle}".
-
-Our decision is to:
-
-Submission URL: {$submissionUrl}
-Username: {$authorUsername}
-
-{$editorialContactSignature}
-</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Our decision is to:<br />
+<br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$authorUsername}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them that their submission is being sent to an external review.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
 		<subject>Editor Decision</subject>
-		<body>{$authorName}:
-
-The editing of your submission, "{$submissionTitle}," is complete.  We are now sending it to production.
-
-Submission URL: {$submissionUrl}
-Username: {$authorUsername}
-
-{$editorialContactSignature}
-</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+The editing of your submission, &quot;{$submissionTitle},&quot; is complete.  We are now sending it to production.<br />
+<br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Username: {$authorUsername}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them that their submission is being sent to production.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Editor Decision</subject>
-		<body>{$authorName}:
-
-We have reached a decision regarding your submission to {$journalTitle}, "{$submissionTitle}".
-
-Our decision is to:
-
-{$editorialContactSignature}
-</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Our decision is to:<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Editor Decision</subject>
-		<body>{$authorName}:
-
-We have reached a decision regarding your submission to {$journalTitle}, "{$submissionTitle}".
-
-Our decision is to:
-
-{$editorialContactSignature}
-</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Our decision is to:<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Editor Decision</subject>
-		<body>{$authorName}:
-
-We have reached a decision regarding your submission to {$journalTitle}, "{$submissionTitle}".
-
-Our decision is to:
-
-{$editorialContactSignature}
-</body>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Our decision is to:<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
-		<body>{$copyeditorName}:
-
-I would ask that you undertake the copyediting of "{$submissionTitle}" for {$contextName} by following these steps.
-1. Click on the Submission URL below.
-2. Consult Copyediting Instructions posted on webpage.
-3. Open any files available under Final Draft Files and copyedit, while adding Author Queries as needed.
-4. Save copyedited file(s), and upload to Copyediting.
-5. Notify the Editor that all files have been prepared, and that the auditing process may begin.
-
-{$contextName} URL: {$journalUrl}
-Submission URL: {$submissionCopyeditingUrl}
-Username: {$copyeditorUsername}
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$copyeditorName}:<br />
+<br />
+I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot; for {$contextName} by following these steps.<br />
+1. Click on the Submission URL below.<br />
+2. Consult Copyediting Instructions posted on webpage.<br />
+3. Open any files available under Final Draft Files and copyedit, while adding Author Queries as needed.<br />
+4. Save copyedited file(s), and upload to Copyediting.<br />
+5. Notify the Editor that all files have been prepared, and that the auditing process may begin.<br />
+<br />
+{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
+Username: {$copyeditorUsername}<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Request Galleys</subject>
-		<body>{$layoutEditorName}:
-
-The submission "{$submissionTitle}" to {$contextName} now needs galleys laid out by following these steps.
-1. Click on the Submission URL below.
-2. Log into the journal and use the Production Ready files to create the galleys according to the journal's standards.
-3. Upload the galleys to the Galley Files section.
-4. Notify the Editor that the galleys are uploaded and ready to be audited.
-
-{$contextName} URL: {$journalUrl}
-Submission URL: {$submissionLayoutUrl}
-Username: {$layoutEditorUsername}
-
-If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$layoutEditorName}:<br />
+<br />
+The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galleys laid out by following these steps.<br />
+1. Click on the Submission URL below.<br />
+2. Log into the journal and use the Production Ready files to create the galleys according to the journal's standards.<br />
+3. Upload the galleys to the Galley Files section.<br />
+4. Notify the Editor that the galleys are uploaded and ready to be audited.<br />
+<br />
+{$contextName} URL: <a href="{$journalUrl}">{$journalUrl}</a><br />
+Submission URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+Username: {$layoutEditorUsername}<br />
+<br />
+If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.<br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
 		<subject>Galleys Complete</subject>
-		<body>{$editorialContactName}:
-
-Galleys have now been prepared for the manuscript, "{$submissionTitle}," for {$contextName} and are ready for proofreading.
-
-If you have any questions, please contact me.
-
-{$layoutEditorName}</body>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+Galleys have now been prepared for the manuscript, &quot;{$submissionTitle},&quot; for {$contextName} and are ready for proofreading.<br />
+<br />
+If you have any questions, please contact me.<br />
+<br />
+{$layoutEditorName}]]></body>
 		<description>This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Article of Possible Interest</subject>
-		<body>Thought you might be interested in seeing "{$submissionTitle}" by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at "{$articleUrl}".</body>
+		<body><![CDATA[Thought you might be interested in seeing &quot;{$submissionTitle}&quot; by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
 		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Subscription Notification</subject>
-		<body>{$subscriberName}:
-
-You have now been registered as a subscriber in our online journal management system for {$contextName}, with the following subscription:
-
-{$subscriptionType}
-
-To access content that is available only to subscribers, simply log in to the system with your username, "{$username}".
-
-Once you have logged in to the system you can change your profile details and password at any point.
-
-Please note that if you have an institutional subscription, there is no need for users at your institution to log in, since requests for subscription content will be automatically authenticated by the system.
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+You have now been registered as a subscriber in our online journal management system for {$contextName}, with the following subscription:<br />
+<br />
+{$subscriptionType}<br />
+<br />
+To access content that is available only to subscribers, simply log in to the system with your username, &quot;{$username}&quot;.<br />
+<br />
+Once you have logged in to the system you can change your profile details and password at any point.<br />
+<br />
+Please note that if you have an institutional subscription, there is no need for users at your institution to log in, since requests for subscription content will be automatically authenticated by the system.<br />
+<br />
+If you have any questions, please feel free to contact me.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
 		<subject>Issue Now Open Access</subject>
-		<body>Readers:
-
-{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site ({$journalUrl}) to review articles and items of interest.
-
-Thanks for the continuing interest in our work,
-{$editorialContactSignature}</body>
+		<body><![CDATA[Readers:<br />
+<br />
+{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site (<a href="{$journalUrl}">{$journalUrl}</a>) to review articles and items of interest.<br />
+<br />
+Thanks for the continuing interest in our work,<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
 		<subject>Notice of Subscription Expiry</subject>
-		<body>{$subscriberName}:
-
-Your {$contextName} subscription is about to expire.
-
-{$subscriptionType}
-Expiry date: {$expiryDate}
-
-To ensure the continuity of your access to this journal, please go to the journal website and renew your subscription. You are able to log in to the system with your username, "{$username}".
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+Your {$contextName} subscription is about to expire.<br />
+<br />
+{$subscriptionType}<br />
+Expiry date: {$expiryDate}<br />
+<br />
+To ensure the continuity of your access to this journal, please go to the journal website and renew your subscription. You are able to log in to the system with your username, &quot;{$username}&quot;.<br />
+<br />
+If you have any questions, please feel free to contact me.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
 		<subject>Subscription Expired</subject>
-		<body>{$subscriberName}:
-
-Your {$contextName} subscription has expired.
-
-{$subscriptionType}
-Expiry date: {$expiryDate}
-
-To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+Your {$contextName} subscription has expired.<br />
+<br />
+{$subscriptionType}<br />
+Expiry date: {$expiryDate}<br />
+<br />
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, &quot;{$username}&quot;.<br />
+<br />
+If you have any questions, please feel free to contact me.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
 		<subject>Subscription Expired - Final Reminder</subject>
-		<body>{$subscriberName}:
-
-Your {$contextName} subscription has expired.
-Please note that this is the final reminder that will be emailed to you.
-
-{$subscriptionType}
-Expiry date: {$expiryDate}
-
-To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+Your {$contextName} subscription has expired.<br />
+Please note that this is the final reminder that will be emailed to you.<br />
+<br />
+{$subscriptionType}<br />
+Expiry date: {$expiryDate}<br />
+<br />
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, &quot;{$username}&quot;.<br />
+<br />
+If you have any questions, please feel free to contact me.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Subscription Purchase: Individual</subject>
-		<body>An individual subscription has been purchased online for {$contextName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-User:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}
-</body>
+		<body><![CDATA[An individual subscription has been purchased online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+User:<br />
+{$userDetails}<br />
+<br />
+Membership Information (if provided):<br />
+{$membership}<br />
+<br />
+To view or edit this subscription, please use the following URL.<br />
+<br />
+Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+]]></body>
 		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Subscription Purchase: Institutional</subject>
-		<body>An institutional subscription has been purchased online for {$contextName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
-
-Subscription Type:
-{$subscriptionType}
-
-Institution:
-{$institutionName}
-{$institutionMailingAddress}
-
-Domain (if provided):
-{$domain}
-
-IP Ranges (if provided):
-{$ipRanges}
-
-Contact Person:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}
-</body>
+		<body><![CDATA[An institutional subscription has been purchased online for {$contextName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+Institution:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domain (if provided):<br />
+{$domain}<br />
+<br />
+IP Ranges (if provided):<br />
+{$ipRanges}<br />
+<br />
+Contact Person:<br />
+{$userDetails}<br />
+<br />
+Membership Information (if provided):<br />
+{$membership}<br />
+<br />
+To view or edit this subscription, please use the following URL.<br />
+<br />
+Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+]]></body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Subscription Renewal: Individual</subject>
-		<body>An individual subscription has been renewed online for {$contextName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-User:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}
-</body>
+		<body><![CDATA[An individual subscription has been renewed online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+User:<br />
+{$userDetails}<br />
+<br />
+Membership Information (if provided):<br />
+{$membership}<br />
+<br />
+To view or edit this subscription, please use the following URL.<br />
+<br />
+Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+]]></body>
 		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Subscription Renewal: Institutional</subject>
-		<body>An institutional subscription has been renewed online for {$contextName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-Institution:
-{$institutionName}
-{$institutionMailingAddress}
-
-Domain (if provided):
-{$domain}
-
-IP Ranges (if provided):
-{$ipRanges}
-
-Contact Person:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}
-</body>
+		<body><![CDATA[An institutional subscription has been renewed online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+Institution:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domain (if provided):<br />
+{$domain}<br />
+<br />
+IP Ranges (if provided):<br />
+{$ipRanges}<br />
+<br />
+Contact Person:<br />
+{$userDetails}<br />
+<br />
+Membership Information (if provided):<br />
+{$membership}<br />
+<br />
+To view or edit this subscription, please use the following URL.<br />
+<br />
+Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+]]></body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
 		<subject>Citation Editing</subject>
-		<body>{$authorFirstName},
-
-Could you please verify or provide us with the proper citation for the following reference from your article, {$submissionTitle}:
-
-{$rawCitation}
-
-Thanks!
-
-{$userFirstName}
-Copy-Editor, {$contextName}
-</body>
+		<body><![CDATA[{$authorFirstName},<br />
+<br />
+Could you please verify or provide us with the proper citation for the following reference from your article, {$submissionTitle}:<br />
+<br />
+{$rawCitation}<br />
+<br />
+Thanks!<br />
+<br />
+{$userFirstName}<br />
+Copy-Editor, {$contextName}<br />
+]]></body>
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
 	</email_text>
 	<email_text key="GIFT_AVAILABLE">
 		<subject>{$giftNoteTitle}</subject>
-		<body>Dear {$recipientFirstName},
-
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-{$giftNote}
-
-
-You will receive a follow-up email that includes login details and instructions for redeeming your gift.
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}
-</body>
+		<body><![CDATA[Dear {$recipientFirstName},<br />
+<br />
+{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+{$giftNote}<br />
+<br />
+<br />
+You will receive a follow-up email that includes login details and instructions for redeeming your gift.<br />
+<br />
+We hope that you enjoy your gift!<br />
+<br />
+{$giftContactSignature}<br />
+]]></body>
 		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
 	</email_text>
 	<email_text key="GIFT_USER_REGISTER">
 		<subject>Redeem Your Gift: Login Details</subject>
-		<body>Dear {$recipientFirstName},
-
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-To redeem your gift, please login to the journal website at {$giftUrl}
-
-Your username: {$username}
-Your password: {$password}
-
-Once logged in, you can change your password at any time.
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}
-</body>
+		<body><![CDATA[Dear {$recipientFirstName},<br />
+<br />
+{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
+<br />
+Your username: {$username}<br />
+Your password: {$password}<br />
+<br />
+Once logged in, you can change your password at any time.<br />
+<br />
+We hope that you enjoy your gift!<br />
+<br />
+{$giftContactSignature}<br />
+]]></body>
 		<description>This email notifies a gift recipient of their login details for a new account.</description>
 	</email_text>
 	<email_text key="GIFT_USER_LOGIN">
 		<subject>Redeem Your Gift: Login Details</subject>
-		<body>Dear {$recipientFirstName},
-
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-To redeem your gift, please login to the journal website at {$giftUrl}
-
-Your username: {$username}
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}
-</body>
+		<body><![CDATA[Dear {$recipientFirstName},<br />
+<br />
+{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
+<br />
+Your username: {$username}<br />
+<br />
+We hope that you enjoy your gift!<br />
+<br />
+{$giftContactSignature}<br />
+]]></body>
 		<description>This email notifies a gift recipient of their login details.</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revised Version Uploaded</subject>
-		<body>{$editorialContactName}:
-
-A revised version of "{$submissionTitle}" has been uploaded by the author {$authorName}.
-
-Submission URL: {$submissionUrl}
-
-{$editorialContactSignature}</body>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$authorName}.<br />
+<br />
+Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+<br />
+{$editorialContactSignature}]]></body>
 		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>A message regarding {$contextName}</subject>
-		<body>Please enter your message.</body>
+		<body><![CDATA[Please enter your message.]]></body>
 		<description>The default (blank) message used in the Notification Center Message Listbuilder.</description>
 	</email_text>
 </email_texts>

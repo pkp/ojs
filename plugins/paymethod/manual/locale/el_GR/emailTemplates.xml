@@ -12,11 +12,11 @@
 <email_texts locale="el_GR">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
 		<subject>Ειδοποίηση μη αυτόματης πληρωμής</subject>
-		<body>Μια μη αυτόματη διαδικασία πληρωμής για το περιοδικό {$contextName} από τον χρήση {$userFullName} (username "{$userName}") πρέπει να προωθηθεί.
-
-Η πληρωμή γίνεται για  "{$itemName}".
-Το κόστος είναι {$itemCost} ({$itemCurrencyCode}).
-
-Το μήνυμα αυτό δημιουργείται αυτόματα από το Plugin Μη αυτόματης πληρωμής του Open Journal Systems.</body>
+		<body><![CDATA[Μια μη αυτόματη διαδικασία πληρωμής για το περιοδικό {$contextName} από τον χρήση {$userFullName} (username &quot;{$userName}&quot;) πρέπει να προωθηθεί.<br />
+<br />
+Η πληρωμή γίνεται για  &quot;{$itemName}&quot;.<br />
+Το κόστος είναι {$itemCost} ({$itemCurrencyCode}).<br />
+<br />
+Το μήνυμα αυτό δημιουργείται αυτόματα από το Plugin Μη αυτόματης πληρωμής του Open Journal Systems.]]></body>
 	</email_text>
 </email_texts>

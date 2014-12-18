@@ -13,11 +13,11 @@
 <email_texts locale="nl_NL">
 	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
 		<subject>Bericht van opname</subject>
-		<body>Gefeliciteerd met de acceptatie van uw inzending, "{$submissionTitle}", voor publicatie in {$contextName}. Als u wilt, kunt u uw inzending automatisch opnemen in één of meer repositories.
-
-Ga daarvoor naar {$swordDepositUrl}.
-
-Deze e-mail is gegenereerd door de SWORD deposit plugin van Open Journal Systems.</body>
+		<body><![CDATA[Gefeliciteerd met de acceptatie van uw inzending, &quot;{$submissionTitle}&quot;, voor publicatie in {$contextName}. Als u wilt, kunt u uw inzending automatisch opnemen in één of meer repositories.<br />
+<br />
+Ga daarvoor naar <a href="{$swordDepositUrl}">{$swordDepositUrl}</a>.<br />
+<br />
+Deze e-mail is gegenereerd door de SWORD deposit plugin van Open Journal Systems.]]></body>
 		<description>Dit e-mail sjabloon wordt gebruikt om een auteur te in te lichten over de mogelijkheid om met SWORD in te zenden naar repositories</description>
 	</email_text>
 </email_texts>

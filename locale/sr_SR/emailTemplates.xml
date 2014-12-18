@@ -15,59 +15,59 @@
 <email_texts locale="sr_SR">
 	<email_text key="NOTIFICATION">
 		<subject>Imate poruku od {$siteTitle}</subject>
-		<body>Imate poruku od {$siteTitle}:
-
-{$notificationContents}
-
-Link: {$url}
-
-{$principalContactSignature}</body>
+		<body><![CDATA[Imate poruku od {$siteTitle}:<br />
+<br />
+{$notificationContents}<br />
+<br />
+Link: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>Ova poruka je poslata registrovanim korisnicima koji su obeležili da žele da primaju poruke putem imejla.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST">
 		<subject>Nova poruka od {$siteTitle}</subject>
-		<body>Imate novu poruku od {$siteTitle}:
---
-{$notificationContents}
-
-Link: {$url}
---
-
-Ukoliko želite da više ne primate obaveštenja o novim porukama idite na link  {$unsubscribeLink} i unesite imejl adresu i lozinku.
-
-{$principalContactSignature}</body>
+		<body><![CDATA[Imate novu poruku od {$siteTitle}:<br />
+--<br />
+{$notificationContents}<br />
+<br />
+Link: {$url}<br />
+--<br />
+<br />
+Ukoliko želite da više ne primate obaveštenja o novim porukama idite na link  {$unsubscribeLink} i unesite imejl adresu i lozinku.<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>Ova poruka je poslata neregistrovanim korisnicima na mejling listi</description>
 	</email_text>
 	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
 		<subject>Dobrodošli na {$siteTitle} mejling listu!</subject>
-		<body>Prijavili ste se da primate obaveštenja od {$siteTitle}.
-
-Molimo Vas da kliknete na link kako biste potvrdili svoj zahtev i dodali Vašu imejl adresu na mejling listu: {$confirmLink}
-
-Ukoliko ne želite više da primate imejlove o obaveštenjima, idite na {$unsubscribeLink} i unesite imejl adresu i lozinku.
-
-Vaša lozinka za onemogućavanje imejl obaveštenja je: {$password}
-
-{$principalContactSignature}</body>
+		<body><![CDATA[Prijavili ste se da primate obaveštenja od {$siteTitle}.<br />
+<br />
+Molimo Vas da kliknete na link kako biste potvrdili svoj zahtev i dodali Vašu imejl adresu na mejling listu: {$confirmLink}<br />
+<br />
+Ukoliko ne želite više da primate imejlove o obaveštenjima, idite na {$unsubscribeLink} i unesite imejl adresu i lozinku.<br />
+<br />
+Vaša lozinka za onemogućavanje imejl obaveštenja je: {$password}<br />
+<br />
+{$principalContactSignature}]]></body>
 		<description>Ova poruka se šalje neregistrovanim korisnicima koji su se tek registrovali na mejling listu obaveštenja</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Obaveštenje o pretplati</subject>
-		<body>{$subscriberName}:
-
-Registrovani ste kao pretplatnik u sistemu {$contextName}, sa sledećim pretplatama:
-
-{$subscriptionType}
-
-Da biste pristupili sadržaju koji je dostupan samo pretplatnicima jednostavno se prijavite u sistem sa Vašim korisničkim imenom "{$username}".
-
-Kada se prijavite, možete menjati podatke na vašem profilu i lozinku.
-
-Imajte na umu da ukoliko imate institucionalnu pretplatu nema potrebe da se korisnici sa vaše institucije prijavljuju korisničkim imenom i lozinkom pošto će pretplata biti automatski prepoznata od strane sistema.
-
-Ukoliko imate bilo kakvih pitanja slobodno nas kontaktirajte.
-
-{$subscriptionContactSignature}</body>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+Registrovani ste kao pretplatnik u sistemu {$contextName}, sa sledećim pretplatama:<br />
+<br />
+{$subscriptionType}<br />
+<br />
+Da biste pristupili sadržaju koji je dostupan samo pretplatnicima jednostavno se prijavite u sistem sa Vašim korisničkim imenom &quot;{$username}&quot;.<br />
+<br />
+Kada se prijavite, možete menjati podatke na vašem profilu i lozinku.<br />
+<br />
+Imajte na umu da ukoliko imate institucionalnu pretplatu nema potrebe da se korisnici sa vaše institucije prijavljuju korisničkim imenom i lozinkom pošto će pretplata biti automatski prepoznata od strane sistema.<br />
+<br />
+Ukoliko imate bilo kakvih pitanja slobodno nas kontaktirajte.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
 		<description>Ovaj imejl obaveštava registrovane čitaoce da je urednik napravio nalog za njihovu pretplatu. Imejl poruka sadrži URL časopisa kao i instrukcije za pristup.</description>
 	</email_text>
 </email_texts>
