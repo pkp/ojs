@@ -178,7 +178,7 @@
 			isTemplate="0" />
 		<!-- Native XML article galley input -->
 		<filter
-			inGroup="native-xml=>article-galley"
+			inGroup="native-xml=>ArticleGalley"
 			class="plugins.importexport.native.filter.NativeXmlArticleGalleyFilter"
 			isTemplate="0" />
 	</filters>
