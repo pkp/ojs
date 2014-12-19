@@ -105,7 +105,7 @@
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Article Galley native XML input -->
 		<filterGroup
-			symbolic="native-xml=>article-galley"
+			symbolic="native-xml=>ArticleGalley"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
