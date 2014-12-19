@@ -23,7 +23,7 @@
 	</setting>
 	<setting type="string">
 		<name>accessLogFileParseRegex</name>
-		<value>/^(\S+) \S+ \S+ \[(.*?)\] "(\S+).*?" \d+ \d+ "(.*?)" "(.*?)"/</value>
+		<value>/^(\S+) \S+ \S+ \[(.*?)\] "\S+ (\S+).*?" (\S+) \S+ ".*?" "(.*?)"/</value>
 	</setting>
 </plugin_settings>
 
