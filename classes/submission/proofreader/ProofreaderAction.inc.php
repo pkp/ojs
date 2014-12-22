@@ -246,7 +246,7 @@ class ProofreaderAction extends Action {
 					'layoutEditorUsername' => $receiver->getUsername(),
 					'layoutEditorPassword' => $receiver->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::url(null, 'proofreader', 'submission', $articleId)
+					'submissionUrl' => Request::url(null, 'layoutEditor', 'submission', $articleId)
 				);
 
 				if (!$actionPath) {
