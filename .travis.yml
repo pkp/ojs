@@ -5,7 +5,7 @@ env:
   - TEST=pgsql
   - TEST=mysql
   global:
-  - secure: czmjTpubG9BN+5+1pOurxzvveR93f3ndjNjGlRNZGVS4/IzU+ntKjP4EE26/CpHA9pk83W9c/geQ37sczFPyWFHQc8mfi8BQJQfzxAEj4YRur2qJsYeXx77JZ++a1/Bfaqoa5cUv/rSX0A0kkVfnSRLkqzer4jDaeVejvdBUoOA=
+  - secure: mkMonMVhqW6QqTyGG+dWORrWOS+Vf6er/XTDSj6CI+OGwU6dUbxXuqDOy3SLcwqBg3qrES2BLXFQ5oYyWMVOTKECvuwCI7fYD7AolkEK90PeEHv0CPQd0JWBKEuTNmpOrj78lrmgPSXtLmw6qogKo2VfAr6J0RKy300SukvsAuo=
 language: php
 php:
   - 5.3
