@@ -1,8 +1,11 @@
 # Configure the build matrix
 env:
+  matrix:
   - TEST=validation
   - TEST=pgsql
   - TEST=mysql
+  global:
+  - secure: mkMonMVhqW6QqTyGG+dWORrWOS+Vf6er/XTDSj6CI+OGwU6dUbxXuqDOy3SLcwqBg3qrES2BLXFQ5oYyWMVOTKECvuwCI7fYD7AolkEK90PeEHv0CPQd0JWBKEuTNmpOrj78lrmgPSXtLmw6qogKo2VfAr6J0RKy300SukvsAuo=
 language: php
 php:
   - 5.3
@@ -30,6 +33,9 @@ before_install:
   # Start Selenium
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/start-selenium.sh; fi
 
+  # Prepare code coverage
+  - if [[ "$TEST" == "mysql" ]]; then ./lib/pkp/tools/travis/prepare-code-coverage.sh; fi
+
   # Install the JS linter
   - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/install-linter.sh; fi
 
@@ -42,6 +48,8 @@ script:
   - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/validate-xml.sh && ./lib/pkp/tools/buildjs.sh; fi
 
 after_script:
+  # Merge the coverage reports into one HTML report and upload to http://pkp.sfu.ca/test-coverage 
+  - if [[ "$TEST" == "mysql" ]]; then ./lib/pkp/tools/travis/post-code-coverage.sh; fi
   # Print logs and outputs for debugging.
   # - cat access.log
   - cat error.log
