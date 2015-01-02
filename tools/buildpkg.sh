@@ -66,6 +66,7 @@ lib/pkp/lb/vendor/phpmailer/phpmailer/test			\
 lib/pkp/lb/vendor/robloach					\
 lib/pkp/lb/vendor/smarty/smarty/demo				\
 lib/pkp/lb/vendor/symfony					\
+lib/pkp/lib/phpunit-selenium					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
