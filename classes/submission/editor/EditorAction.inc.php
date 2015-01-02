@@ -41,6 +41,12 @@ class EditorAction extends SectionEditorAction {
 		$sectionEditor =& $userDao->getById($sectionEditorId);
 		if (!isset($sectionEditor)) return true;
 
+		foreach ($editorSubmission->getEditAssignments() as $assignment) {
+			if ($assignment->getEditorId() == $sectionEditorId) {
+				return true;
+			}
+		}
+
 		import('classes.mail.ArticleMailTemplate');
 		$email = new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 
