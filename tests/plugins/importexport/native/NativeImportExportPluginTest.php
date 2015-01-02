@@ -102,6 +102,7 @@ class NativeImportExportPluginTest extends DatabaseTestCase {
 		$params = array(
 			'{$embedContents}' => base64_encode(file_get_contents($dummyFile)),
 			'{$currentDate}' => date('Y-m-d'),
+			'{$currentYear}' => date('Y'),
 			'{$dummyFileName}' => basename($dummyFile),
 		);
 
