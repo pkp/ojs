@@ -243,7 +243,6 @@ class TimedViewReportForm extends Form {
 		$dateFormatShort = Config::getVar('general', 'date_format_short');
 		foreach ($articleData as $articleId => $article) {
 			if (isset($galleyViews[$articleId])) {
-				$mergedColumns = array_merge($articleData[$articleId], $galleyViews[$articleId]);
 				fputcsv($fp, array_merge($articleData[$articleId], $galleyViews[$articleId]));
 			} else {
 				fputcsv($fp, $articleData[$articleId]);
