@@ -16,7 +16,7 @@
   <permissions>
     <license_url>http://creativecommons.org/licenses/by-nc-nd/4.0</license_url>
     <copyright_holder locale="en_US">Brian Vemer</copyright_holder>
-    <copyright_year>2014</copyright_year>
+    <copyright_year>{$currentYear}</copyright_year>
   </permissions>
   <galley locale="en_US">
     <label>PDF</label>
