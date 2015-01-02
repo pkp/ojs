@@ -137,82 +137,82 @@ class TimedViewReportForm extends Form {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 
-		$workingArticleId = null;
+		$articleId = null;
 		$objects = array();
 
 		foreach ($reportStats as $record) {
 			$articleId = $record[STATISTICS_DIMENSION_SUBMISSION_ID];
-			if (is_null($workingArticleId)) {
-				// Just started, initiated this value.
-				$workingArticleId = $articleId;
+		
+			// Retrieve article and galleys data related to the
+			// working article id.
+			$assocType = $record[STATISTICS_DIMENSION_ASSOC_TYPE];
+
+			// Retrieve article data, if it wasn't before.
+			if (!isset($articleData[$articleId])) {
+				$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
+				if (!$publishedArticle) continue;
+				$issueId = $publishedArticle->getIssueId();
+				$issue =& $issueDao->getIssueById($issueId, null, true);
+
+				if ($assocType == ASSOC_TYPE_ARTICLE) {
+					$abstractViews = $record[STATISTICS_METRIC];
+				} else {
+					$abstractViews = '';
+				}
+
+				$articleData[$articleId] = array(
+					'id' => $articleId,
+					'title' => $publishedArticle->getLocalizedTitle(),
+					'issue' => $issue->getIssueIdentification(),
+					'datePublished' => $publishedArticle->getDatePublished(),
+					'totalAbstractViews' => $abstractViews
+				);
 			}
 
-			if ($articleId != $workingArticleId) {
+			// Retrieve galley data.
+			if ($assocType == ASSOC_TYPE_GALLEY) {
+				if (!isset($galleyViews[$articleId])) {
+					$galleyViews[$articleId] = array();
+				}
+				$galleyId = $record[STATISTICS_DIMENSION_ASSOC_ID];
+				$galley =& $galleyDao->getGalley($galleyId, null, true);
+				$label = $galley->getLabel();
+				$i = array_search($label, $galleyLabels);
+				if ($i === false) {
+					$i = count($galleyLabels);
+					$galleyLabels[] = $label;
+				}
+
+				// Make sure the array is the same size as in previous iterations
+				// so that we insert values into the right location
+				$galleyViews[$articleId] = array_pad($galleyViews[$articleId], count($galleyLabels), '');
+
+				$views = $record[STATISTICS_METRIC];
+				$galleyViews[$articleId][$i] = $views;
+				if (!isset($galleyViewTotal)) $galleyViewTotal = 0;
+				$galleyViewTotal += $views;
+			}
+					
+			// Check if we got all article galley stats, if yes, add
+			// the total galley views info.
+			$nextRecord = next($reportStats);
+			if ($nextRecord) {
+				$nextArticleId = $nextRecord[STATISTICS_DIMENSION_SUBMISSION_ID];
+			} else {
+				$nextArticleId = null;
+			}
+
+			if ($nextArticleId != $articleId) {
 				// Finished getting data for all objects related to the
 				// working article id.
-
 				// Add the galleys total downloads.
-				if (isset($articleData[$workingArticleId]) && isset($galleyViewTotal)) {
-					$articleData[$workingArticleId]['galleyViews'] = $galleyViewTotal;
+				if (isset($articleData[$articleId]) && isset($galleyViewTotal)) {
+					$articleData[$articleId]['galleyViews'] = $galleyViewTotal;
 				}
 
-				// Clean up and move to the next article id.
+				// Clean up.
 				unset($galleyViewTotal);
 
-				// Start to work on the current article id.
-				$workingArticleId = $articleId;
-			}
-
-			if ($articleId == $workingArticleId) {
-				// Retrieve article and galleys data related to the
-				// working article id.
-				$assocType = $record[STATISTICS_DIMENSION_ASSOC_TYPE];
-
-				// Retrieve article data, if it wasn't before.
-				if (!isset($articleData[$workingArticleId])) {
-					$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($workingArticleId, null, true);
-					if (!$publishedArticle) continue;
-					$issueId = $publishedArticle->getIssueId();
-					$issue =& $issueDao->getIssueById($issueId, null, true);
-
-					if ($assocType == ASSOC_TYPE_ARTICLE) {
-						$abstractViews = $record[STATISTICS_METRIC];
-					} else {
-						$abstractViews = '';
-					}
-
-					$articleData[$workingArticleId] = array(
-						'id' => $workingArticleId,
-						'title' => $publishedArticle->getLocalizedTitle(),
-						'issue' => $issue->getIssueIdentification(),
-						'datePublished' => $publishedArticle->getDatePublished(),
-						'totalAbstractViews' => $abstractViews
-					);
-				}
-
-				// Retrieve galley data.
-				if ($assocType == ASSOC_TYPE_GALLEY) {
-					if (!isset($galleyViews[$workingArticleId])) {
-						$galleyViews[$workingArticleId] = array();
-					}
-					$galleyId = $record[STATISTICS_DIMENSION_ASSOC_ID];
-					$galley =& $galleyDao->getGalley($galleyId, null, true);
-					$label = $galley->getLabel();
-					$i = array_search($label, $galleyLabels);
-					if ($i === false) {
-						$i = count($galleyLabels);
-						$galleyLabels[] = $label;
-					}
-
-					// Make sure the array is the same size as in previous iterations
-					// so that we insert values into the right location
-					$galleyViews[$workingArticleId] = array_pad($galleyViews[$workingArticleId], count($galleyLabels), '');
-
-					$views = $record[STATISTICS_METRIC];
-					$galleyViews[$workingArticleId][$i] = $views;
-					if (!isset($galleyViewTotal)) $galleyViewTotal = $views;
-					$galleyViewTotal += $views;
-				}
 			}
 		}
 
