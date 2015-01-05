@@ -15,8 +15,8 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.reports.counter.description"><![CDATA[El mòdul COUNTER (comptador) permet enregistrar i crear informes de l'activitat del lloc web, d'acord amb la iniciativa <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>.]]></message>
 	<message key="plugins.reports.counter">Estadístiques de COUNTER</message>
-	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R2): Sol·licituds d'articles de text complet per mes i revista</message>
-	<message key="plugins.reports.counter.1a.title1">Informe de la revista 1 (R2):</message>
+	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R3): Sol·licituds d'articles de text complet per mes i revista</message>
+	<message key="plugins.reports.counter.1a.title1">Informe de la revista 1 (R3):</message>
 	<message key="plugins.reports.counter.1a.title2">Nombre de sol·licituds amb èxit d'articles de text complet per mes i revista (any {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Data d'execució:</message>
 	<message key="plugins.reports.counter.1a.publisher">Institució publicadora</message>

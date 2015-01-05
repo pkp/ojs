@@ -15,8 +15,8 @@
 <locale name="es_ES" full_name="Español (España)">
     <message key="plugins.reports.counter.description"><![CDATA[El módulo COUNTER permite generar informes sobre la actividad del sitio web.]]></message>
 	<message key="plugins.reports.counter">Informe COUNTER</message>
-	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R2): Solicitudes de artículos completos por mes y revista</message>
-	<message key="plugins.reports.counter.1a.title1">Informe de la revista 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R3): Solicitudes de artículos completos por mes y revista</message>
+	<message key="plugins.reports.counter.1a.title1">Informe de la revista 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">Número de solicitudes aceptadas de artículos completos por mes y revista (Año {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Fecha de inicio:</message>
 	<message key="plugins.reports.counter.1a.publisher">Editorial</message>

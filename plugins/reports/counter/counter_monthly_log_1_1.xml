@@ -9,6 +9,7 @@
 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 *
 * second version of the counter_monthly_log with one row per month per journal
+* DEPRECATED upgrade function for 2.3.x
 -->
 
 <data>

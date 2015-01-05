@@ -23,8 +23,8 @@
 	<message key="plugins.reports.counter.description"><![CDATA[Το COUNTER plugin επιτρέπει την καταγραφή και την σύνταξη αναφορών συμβατών με το <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> για τα στατιστικά του ιστοτόπου.]]></message>
 	<message key="plugins.reports.counter">Στατιστικά COUNTER</message>
 
-	<message key="plugins.reports.counter.1a.title">Αναφορά Περιοδικού 1 (R2): Αιτήματα για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό</message>
-	<message key="plugins.reports.counter.1a.title1">Αναφορά Περιοδικού 1 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">Αναφορά Περιοδικού 1 (R3): Αιτήματα για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό</message>
+	<message key="plugins.reports.counter.1a.title1">Αναφορά Περιοδικού 1 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">Αριθμός Επιτυχημένων Αιτημάτων για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό (Έτος {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Ημερομηνία:</message>
 	<message key="plugins.reports.counter.1a.publisher">Εκδότης</message>

@@ -31,8 +31,8 @@
 	<message key="plugins.reports.counter.entry.type.search">Search</message>
 	<message key="plugins.reports.counter.entry.value">Value</message>
 
-	<message key="plugins.reports.counter.1a.title">Journal Report 1 (R2): Full-Text Article Requests by Month and Journal</message>
-	<message key="plugins.reports.counter.1a.title1">Journal Report 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">Journal Report 1 (R3): Full-Text Article Requests by Month and Journal</message>
+	<message key="plugins.reports.counter.1a.title1">Journal Report 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">Number of Successful Full-Text Article Requests by Month and Journal (Year {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Date run:</message>
 	<message key="plugins.reports.counter.1a.publisher">Publisher</message>
