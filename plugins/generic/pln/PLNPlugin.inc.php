@@ -55,6 +55,7 @@ define('PLN_PLUGIN_NOTIFICATION_TYPE_ISSN_MISSING',		PLN_PLUGIN_NOTIFICATION_TYP
 define('PLN_PLUGIN_NOTIFICATION_TYPE_HTTP_ERROR',		PLN_PLUGIN_NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000003);
 define('PLN_PLUGIN_NOTIFICATION_TYPE_CURL_MISSING',		PLN_PLUGIN_NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000004);
 define('PLN_PLUGIN_NOTIFICATION_TYPE_ZIP_MISSING',		PLN_PLUGIN_NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000005);
+define('PLN_PLUGIN_NOTIFICATION_TYPE_TAR_MISSING',		PLN_PLUGIN_NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000006);
 
 class PLNPlugin extends GenericPlugin {
 
@@ -528,6 +529,14 @@ class PLNPlugin extends GenericPlugin {
 	function zipInstalled() {
 		return class_exists('ZipArchive');
 	}
+        
+        /**
+         * Check if the Archive_Tar extension is installed and available. BagIt
+         * requires it, and will not function without it.
+         */
+        function tarInstalled() {
+                return class_exists('Archive_Tar');
+        }
 	
 	/**
 	 * Get resource using CURL
