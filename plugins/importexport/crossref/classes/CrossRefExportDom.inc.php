@@ -299,7 +299,7 @@ class CrossRefExportDom extends DOIExportDom {
 		}
 
 		if ($issue->getDatePublished() && $issue->getPubId('doi')) {
-			$issueDoiNode =& $this->_generateDOIdataDom($doc, $issue->getPubId('doi'), Request::url(null, 'issue', 'view', $issue->getBestIssueId($journal)));
+			$issueDoiNode =& $this->_generateDOIdataDom($doc, $issue->getPubId('doi'), Request::url($journal->getPath(), 'issue', 'view', $issue->getBestIssueId($journal)));
 			XMLCustomWriter::appendChild($journalIssueNode, $issueDoiNode);
 		}
 
@@ -360,7 +360,7 @@ class CrossRefExportDom extends DOIExportDom {
 
 		// DOI data node
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$DOIdataNode =& $this->_generateDOIdataDom($doc, $article->getPubId('doi'), Request::url(null, 'article', 'view', $article->getBestArticleId()), $articleGalleyDao->getGalleysByArticle($article->getId()));
+		$DOIdataNode =& $this->_generateDOIdataDom($doc, $article->getPubId('doi'), Request::url($journal->getPath(), 'article', 'view', $article->getBestArticleId()), $articleGalleyDao->getGalleysByArticle($article->getId()));
 
 		XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);
 
@@ -412,7 +412,7 @@ class CrossRefExportDom extends DOIExportDom {
 
 					// DOI data node
 					$suppFileUrl = Request::url(
-						null, 'article', 'downloadSuppFile',
+						$journal->getPath(), 'article', 'downloadSuppFile',
 						array($article->getId(), $suppFile->getBestSuppFileId($journal))
 					);
 					$suppFileDoiNode =& $this->_generateDOIdataDom($doc, $suppFile->getPubId('doi'), $suppFileUrl);
