@@ -192,7 +192,7 @@ class NativeImportExportPluginTest extends DatabaseTestCase {
 		$this->assertFalse($article->getId() == $newArticle->getId());
 
 		// Check permissions
-		$this->assertEquals('2014', $newArticle->getCopyrightYear());
+		$this->assertEquals(date('Y'), $newArticle->getCopyrightYear());
 		$this->assertEquals(array('en_US' => 'Brian Vemer'), $newArticle->getCopyrightHolder(null));
 		$this->assertEquals('http://creativecommons.org/licenses/by-nc-nd/4.0', $newArticle->getLicenseURL());
 	}
