@@ -8,12 +8,14 @@
  * Form for editing a Static Page
  *
  *}
+{strip}
 {if $staticPageId}
 	{assign var="pageTitle" value="plugins.generic.staticPages.editStaticPage"}
 {else}
 	{assign var="pageTitle" value="plugins.generic.staticPages.addStaticPage"}
 {/if}
 {include file="common/header.tpl"}
+{/strip}
 
 {translate key="plugins.generic.staticPages.editInstructions"}
 <br />

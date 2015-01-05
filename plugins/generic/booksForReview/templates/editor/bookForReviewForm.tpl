@@ -8,6 +8,7 @@
  * Book for review form under plugin management.
  *
  *}
+{strip}
 {assign var="pageCrumbTitle" value="$booksForReviewTitle"}
 {if $bookForReview}
 	{assign var="pageTitle" value="plugins.generic.booksForReview.editor.edit"}
@@ -16,6 +17,7 @@
 	{assign var="pageTitle" value="plugins.generic.booksForReview.editor.create"}
 {/if}
 {include file="common/header.tpl"}
+{/strip}
 
 <br/>
 

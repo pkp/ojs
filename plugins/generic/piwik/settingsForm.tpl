@@ -8,9 +8,10 @@
  * Piwik plugin settings
  *
  *}
-
+{strip}
 {assign var="pageTitle" value="plugins.generic.piwik.manager.piwikSettings"}
 {include file="common/header.tpl"}
+{/strip}
 
 {translate key="plugins.generic.piwik.manager.settings.description"}
 
