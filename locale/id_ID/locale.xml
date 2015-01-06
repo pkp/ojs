@@ -731,7 +731,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="search.allJournals">Semua Jurnal</message>
 	<message key="search.authorIndex">Menelusuri Indeks Penulis</message>
 	<message key="search.authorDetails">Rincian Penulis</message>
-	<message key="search.syntaxInstructions"><![CDATA[Tip Pencarian: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Tip Pencarian: </h4><ul>
 <li>Istilah pencarian tidak mempedulikan besar-kecilnya huruf</li>
 <li>Kata-kata umum diabaikan</li>
 <li>Secara default hanya artikel yang berisi semua istilah query akan muncul (contoh: <em>dan</em>)</li>
