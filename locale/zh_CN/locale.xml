@@ -840,7 +840,7 @@ Note that if your site administrator has already registered this site with these
 	<message key="search.allJournals">所有期刊</message>
 	<message key="search.authorIndex">浏览作者索引</message>
 	<message key="search.authorDetails">作者的详细信息</message>
-	<message key="search.syntaxInstructions"><![CDATA[检索提示: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>检索提示: </h4><ul>
 <li>检索的名词区分大小写</li>
 <li>常用字词将被忽略</li>
 <li>默认情况下只有在查询结果满足所有检索词才返回（例如，隐含AND）</li>
