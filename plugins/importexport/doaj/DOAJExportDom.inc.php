@@ -63,7 +63,7 @@ class DOAJExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'publisher', $journal->getSetting('publisherInstitution'), false);
 
 		/* --- Journal's title --- */
-		XMLCustomWriter::createChildWithText($doc, $root, 'journalTitle', $journal->getLocalizedTitle(), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'journalTitle', $journal->getTitle($journal->getPrimaryLocale()), false);
 
 		/* --- Identification Numbers --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'issn', $journal->getSetting('printIssn'), false);
@@ -102,7 +102,7 @@ class DOAJExportDom {
 		/* --- Article's publication date, volume, issue, DOI --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'publisherRecordId',  $article->getPublishedArticleId(), false);
 
-		XMLCustomWriter::createChildWithText($doc, $root, 'documentType',  $article->getLocalizedType(), false);
+		XMLCustomWriter::createChildWithText($doc, $root, 'documentType',  $article->getType($article->getLocale()), false);
 
 		/* --- Article title --- */
 		foreach ((array) $article->getTitle(null) as $locale => $title) {
@@ -116,7 +116,7 @@ class DOAJExportDom {
 		$authors =& XMLCustomWriter::createElement($doc, 'authors');
 		XMLCustomWriter::appendChild($root, $authors);
 
-		$affilList = DOAJExportDom::generateAffiliationsList($article->getAuthors());
+		$affilList = DOAJExportDom::generateAffiliationsList($article->getAuthors(), $article);
 
 		foreach ($article->getAuthors() as $author) {
 			$authorNode =& DOAJExportDom::generateAuthorDom($doc, $root, $issue, $article, $author, $affilList);
@@ -151,7 +151,7 @@ class DOAJExportDom {
 		$keywords =& XMLCustomWriter::createElement($doc, 'keywords');
 		XMLCustomWriter::appendChild($root, $keywords);
 
-		$subjects = array_map('trim', explode(';', $article->getLocalizedSubject()));
+		$subjects = array_map('trim', explode(';', $article->getSubject($article->getLocale())));
 
 		foreach ($subjects as $keyword) {
 			XMLCustomWriter::createChildWithText($doc, $keywords, 'keyword', $keyword, false);
@@ -175,8 +175,8 @@ class DOAJExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'name', $author->getFullName());
 		XMLCustomWriter::createChildWithText($doc, $root, 'email', $author->getEmail(), false);
 
-		if(in_array($author->getLocalizedAffiliation(), $affilList)  && !empty($affilList[0])) {
-			XMLCustomWriter::createChildWithText($doc, $root, 'affiliationId', current(array_keys($affilList, $author->getLocalizedAffiliation())));
+		if(in_array($author->getAffiliation($article->getLocale()), $affilList)  && !empty($affilList[0])) {
+			XMLCustomWriter::createChildWithText($doc, $root, 'affiliationId', current(array_keys($affilList, $author->getAffiliation($article->getLocale()))));
 		}
 		
 		return $root;
@@ -185,13 +185,15 @@ class DOAJExportDom {
 	/**
 	 * Generate a list of affiliations among all authors of an article.
 	 * @param $authors object Array of article authors
+	 * @param $article Article
+	 * @return array
 	 */
-	function &generateAffiliationsList($authors) {
+	function &generateAffiliationsList($authors, $article) {
 		$affilList = array();
 	
 		foreach ($authors as $author) {
-			if(!in_array($author->getLocalizedAffiliation(), $affilList)) {
-				$affilList[] = $author->getLocalizedAffiliation() ;
+			if(!in_array($author->getAffiliation($article->getLocale()), $affilList)) {
+				$affilList[] = $author->getAffiliation($article->getLocale()) ;
 			}
 		}
 

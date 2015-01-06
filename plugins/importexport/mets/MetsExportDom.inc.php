@@ -132,7 +132,7 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mods, 'xmlns:mods', 'http://www.loc.gov/mods/v3');
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', str_replace(' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd', '', $root->getAttribute('xsi:schemaLocation')) . ' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd');
 		$titleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $journal->getLocalizedTitle());
+		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $journal->getTitle($journal->getPrimaryLocale()));
 		XMLCustomWriter::appendChild($mods, $titleInfo);
 		XMLCustomWriter::createChildWithText($doc, $mods, 'mods:genre', 'journal');
 		XMLCustomWriter::appendChild($xmlData, $mods);
@@ -154,11 +154,11 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mods, 'xmlns:mods', 'http://www.loc.gov/mods/v3');
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', str_replace(' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd', '', $root->getAttribute('xsi:schemaLocation')) . ' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd');
 		$titleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $issue->getLocalizedTitle());
+		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $issue->getTitle($journal->getPrimaryLocale()));
 		XMLCustomWriter::appendChild($mods, $titleInfo);
 
-		if($issue->getLocalizedDescription() != ''){
-			$modsAbstract = XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:abstract', $issue->getLocalizedDescription());
+		if($issue->getDescription($journal->getPrimaryLocale()) != ''){
+			$modsAbstract = XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:abstract', $issue->getDescription($journal->getPrimaryLocale()));
 			XMLCustomWriter::appendChild($mods, $modsAbstract);
 		}
 
@@ -177,7 +177,7 @@ class MetsExportDom {
 		$modsRelatedItem =& XMLCustomWriter::createElement($doc, 'mods:relatedItem');
 		XMLCustomWriter::setAttribute($modsRelatedItem, 'type', 'host');
 		$modsTitleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsTitleInfo, 'mods:title', $journal->getLocalizedTitle());
+		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsTitleInfo, 'mods:title', $journal->getTitle($journal->getPrimaryLocale()));
 		XMLCustomWriter::appendChild($modsRelatedItem, $modsTitleInfo);
 		$url = $base_url.'/index.php/'.$journal->getPath();
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $modsRelatedItem, 'mods:identifier', $url);
@@ -220,11 +220,11 @@ class MetsExportDom {
 		XMLCustomWriter::setAttribute($mods, 'xmlns:mods', 'http://www.loc.gov/mods/v3');
 		XMLCustomWriter::setAttribute($root, 'xsi:schemaLocation', str_replace(' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd', '', $root->getAttribute('xsi:schemaLocation')) . ' http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd');
 		$titleInfo =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $section->getLocalizedTitle());
+		XMLCustomWriter::createChildWithText($doc, $titleInfo, 'mods:title', $section->getTitle($journal->getPrimaryLocale()));
 		XMLCustomWriter::appendChild($mods, $titleInfo);
-		if($section->getLocalizedAbbrev() != ''){
+		if($section->getAbbrev($journal->getPrimaryLocale()) != ''){
 			$titleInfoAlt =& XMLCustomWriter::createElement($doc, 'mods:titleInfo');
-			XMLCustomWriter::createChildWithText($doc, $titleInfoAlt, 'mods:title', $section->getLocalizedAbbrev());
+			XMLCustomWriter::createChildWithText($doc, $titleInfoAlt, 'mods:title', $section->getAbbrev($journal->getPrimaryLocale()));
 			XMLCustomWriter::setAttribute($titleInfoAlt, 'type', 'abbreviated');
 			XMLCustomWriter::appendChild($mods, $titleInfoAlt);
 		}
@@ -284,9 +284,9 @@ class MetsExportDom {
 			$sDate = XMLCustomWriter::createChildWithText($doc, $originInfo, 'mods:dateIssued', $timeIssued);
 			XMLCustomWriter::appendChild($mods, $originInfo);
 		}
-		if($article->getLocalizedDiscipline() != ''){
+		if ($article->getDiscipline($article->getLocale()) != ''){
 			$modsSubject =& XMLCustomWriter::createElement($doc, 'mods:subject');
-			$disciplineArray = explode(";", $article->getLocalizedDiscipline());
+			$disciplineArray = explode(';', $article->getDiscipline($article->getLocale()));
 			$i = 0;
 			while ($i < sizeof($disciplineArray)) {
 				XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:topic', $disciplineArray[$i] );
@@ -294,16 +294,16 @@ class MetsExportDom {
 			}
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getLocalizedSubject() != ''){
+		if ($article->getSubject($article->getLocale()) != ''){
 			$modsSubject =& XMLCustomWriter::createElement($doc, 'mods:subject');
-			$modsTopic = XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:topic', $article->getLocalizedSubject());
-			if($article->getLocalizedSubjectClass() != '')
-				XMLCustomWriter::setAttribute($modsSubject, 'authority', $article->getLocalizedSubjectClass());
+			$modsTopic = XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:topic', $article->getSubject($article->getLocale()));
+			if($article->getSubjectClass($article->getLocale()) != '')
+				XMLCustomWriter::setAttribute($modsSubject, 'authority', $article->getSubjectClass($article->getLocale()));
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getLocalizedCoverageGeo() != ''){
+		if ($article->getCoverageGeo($article->getLocale()) != ''){
 			$modsSubject =& XMLCustomWriter::createElement($doc, 'mods:subject');
-			$coverageArray = explode(";", $article->getLocalizedCoverageGeo());
+			$coverageArray = explode(";", $article->getCoverageGeo($article->getLocale()));
 			$i = 0;
 			while ($i < sizeof($coverageArray)) {
 				XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:geographic', $coverageArray[$i] );
@@ -311,9 +311,9 @@ class MetsExportDom {
 			}
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getLocalizedCoverageChron() != ''){
+		if ($article->getCoverageChron($article->getLocale()) != ''){
 			$modsSubject =& XMLCustomWriter::createElement($doc, 'mods:subject');
-			$coverageArray = explode(";", $article->getLocalizedCoverageChron());
+			$coverageArray = explode(";", $article->getCoverageChron($article->getLocale()));
 			$i = 0;
 			while ($i < sizeof($coverageArray)) {
 				XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:temporal', $coverageArray[$i] );
@@ -321,15 +321,15 @@ class MetsExportDom {
 			}
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getLocalizedType() != ''){
+		if ($article->getType($article->getLocale()) != ''){
 			$modsSubject =& XMLCustomWriter::createElement($doc, 'mods:subject');
-			XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:genre', $article->getLocalizedType());
+			XMLCustomWriter::createChildWithText($doc, $modsSubject, 'mods:genre', $article->getType($article->getLocale()));
 			XMLCustomWriter::appendChild($mods, $modsSubject);
 		}
-		if($article->getLocalizedSponsor() != ''){
+		if ($article->getSponsor($article->getLocale()) != ''){
 			$presenterNode =& XMLCustomWriter::createElement($doc, 'mods:name');
 			XMLCustomWriter::setAttribute($presenterNode, 'type', 'corporate');
-			$fNameNode =& XMLCustomWriter::createChildWithText($doc, $presenterNode, 'mods:namePart', $article->getLocalizedSponsor());
+			$fNameNode =& XMLCustomWriter::createChildWithText($doc, $presenterNode, 'mods:namePart', $article->getSponsor($article->getLocale()));
 			$role =& XMLCustomWriter::createElement($doc, 'mods:role');
 			$roleTerm =& XMLCustomWriter::createChildWithText($doc, $role, 'mods:roleTerm', 'sponsor');
 			XMLCustomWriter::setAttribute($roleTerm, 'type', 'text');
@@ -660,7 +660,7 @@ class MetsExportDom {
 		if($organization == ''){
 			$siteDao =& DAORegistry::getDAO('SiteDAO');
 			$site = $siteDao->getSite();
-			$organization = $site->getLocalizedTitle();
+			$organization = $site->getTitle($site->getPrimaryLocale());
 		}
 		XMLCustomWriter::createChildWithText($doc, $agentNode, 'METS:name', $organization, false);
 		XMLCustomWriter::appendChild($root, $agentNode);

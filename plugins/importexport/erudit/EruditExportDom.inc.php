@@ -46,8 +46,8 @@ class EruditExportDom {
 		$journalNode =& XMLCustomWriter::createElement($doc, 'journal');
 		XMLCustomWriter::appendChild($adminNode, $journalNode);
 		XMLCustomWriter::setAttribute($journalNode, 'id', 'ojs-' . $journal->getPath());
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getLocalizedTitle());
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getLocalizedSetting('initials'), false);
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getTitle($journal->getPrimaryLocale()));
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getSetting('initials', $journal->getPrimaryLocale()), false);
 
 		if (!($printIssn = $journal->getSetting('printIssn'))) {
 			$printIssn = $unavailableString;
@@ -101,7 +101,7 @@ class EruditExportDom {
 		XMLCustomWriter::setAttribute($dtdNode, 'version', '3.0.0');
 
 		/* --- copyright --- */
-		$copyright = $journal->getLocalizedSetting('copyrightNotice');
+		$copyright = $journal->getSetting('copyrightNotice', $journal->getPrimaryLocale());
 		XMLCustomWriter::createChildWithText($doc, $adminNode, 'copyright', empty($copyright)?$unavailableString:$copyright);
 
 		/* --- frontmatter --- */
@@ -112,7 +112,7 @@ class EruditExportDom {
 		$titleGroupNode =& XMLCustomWriter::createElement($doc, 'titlegr');
 		XMLCustomWriter::appendChild($frontMatterNode, $titleGroupNode);
 
-		XMLCustomWriter::createChildWithText($doc, $titleGroupNode, 'title', strip_tags($article->getLocalizedTitle()));
+		XMLCustomWriter::createChildWithText($doc, $titleGroupNode, 'title', strip_tags($article->getTitle($article->getLocale())));
 
 
 		/* --- authorgr --- */
@@ -132,10 +132,10 @@ class EruditExportDom {
 			XMLCustomWriter::createChildWithText($doc, $persNameNode, 'middlename', $author->getMiddleName(), false);
 			XMLCustomWriter::createChildWithText($doc, $persNameNode, 'familyname', $author->getLastName());
 
-			if ($author->getLocalizedAffiliation() != '') {
+			if ($author->getAffiliation($article->getLocale()) != '') {
 				$affiliationNode =& XMLCustomWriter::createElement($doc, 'affiliation');
 				XMLCustomWriter::appendChild($authorNode, $affiliationNode);
-				XMLCustomWriter::createChildWithText($doc, $affiliationNode, 'blocktext', $author->getLocalizedAffiliation(), false);
+				XMLCustomWriter::createChildWithText($doc, $affiliationNode, 'blocktext', $author->getAffiliation($article->getLocale()), false);
 			}
 
 			$authorNum++;
@@ -152,7 +152,7 @@ class EruditExportDom {
 			unset($abstractNode);
 		}
 
-		if ($keywords = $article->getLocalizedSubject()) {
+		if ($keywords = $article->getSubject($article->getLocale())) {
 			$keywordGroupNode =& XMLCustomWriter::createElement($doc, 'keywordgr');
 			XMLCustomWriter::setAttribute ($keywordGroupNode, 'lang', ($language = $article->getLanguage())?$language:'en');
 			foreach (explode(';', $keywords) as $keyword) {
