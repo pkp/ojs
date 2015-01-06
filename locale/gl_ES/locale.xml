@@ -602,7 +602,7 @@ o contrasinal actual.<br /><br />Insire o teu enderezo de correo elecrónico par
 	<message key="search.allJournals">Todas as revistas</message>
 	<message key="search.authorIndex">Consultar índice de autoras/es</message>
 	<message key="search.authorDetails">Detalles de autor/a</message>
-	<message key="search.syntaxInstructions"><![CDATA[Consellos de pescuda: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Consellos de pescuda: </h4><ul>
 <li>Os termos de busca non distinguen minúsculas/MAYÚSCULAS</li>
 <li>Ignóranse as palabras comúns</li>
 <li>Por defecto só se recuperan os artigos  que conteñen <em>todos</em> os termos de busca (úsase por defecto o operador <strong>AND</strong>)</li>

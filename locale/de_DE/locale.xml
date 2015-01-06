@@ -795,7 +795,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="search.allJournals">allen Zeitschriften</message>
 	<message key="search.authorIndex">Autor/innenverzeichnis durchblättern</message>
 	<message key="search.authorDetails">Nähere Angaben zu den Autor/innen</message>
-	<message key="search.syntaxInstructions"><![CDATA[Suchhinweise: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Suchhinweise: </h4><ul>
 <li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
 <li>Häufig vorkommende Worte werden ignoriert</li>
 <li>Standardmäßig werden nur die Artikel aufgelistet, die <em>alle</em> Suchbegriffe enthalten (implizites <em>UND</em>).</li>

@@ -745,7 +745,7 @@
        <message key="search.allJournals">Всі журнали</message>
        <message key="search.authorIndex">Перегляд списку авторів</message>
        <message key="search.authorDetails">Інформація про автора</message>
-       <message key="search.syntaxInstructions"><![CDATA[Пошукові нотатки: <ul>
+       <message key="search.syntaxInstructions"><![CDATA[<h4>Пошукові нотатки: </h4><ul>
 <li>Пошукові терміни незалежні від регістру</li>
 <li>Слова загального вжитку ігноруються</li>
 <li>За замовчуванням повертаються лише ті статті, які містять <em>всі</em> терміни запиту (тобто застосовується оператор <em>AND</em>)</li>

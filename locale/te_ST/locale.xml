@@ -1758,7 +1758,7 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="search.reviseSearch">Rèvîþè ßèårçh</message>
 	<message key="search.noResults">Ñó Rèþültþ</message>
 	<message key="search.noKeywordError">Ýóü müþt èñtèr åt lèåþt óñè þèårçh kèýwórð.</message>
-	<message key="search.syntaxInstructions"><![CDATA[ßèårçh tîpþ: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>ßèårçh tîpþ: </h4><ul>
 <li>ßèårçh tèrmþ årè çåþè-îñþèñþîtîvè</li>
 <li>Çómmóñ wórðþ årè îgñórèð</li>
 <li>Bý ðèfåült óñlý årtîçlèþ çóñtåîñîñg <em>åll</em> tèrmþ îñ thè qüèrý årè rètürñèð (î.è., <em>ÆÑÐ</em> îþ împlîèð)</li>
