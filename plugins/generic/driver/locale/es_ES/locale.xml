@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
 	<message key="plugins.generic.driver.description">El módulo DRIVER amplia la interfaz OAI-PMH según las directrices DRIVER 2.0, lo que permite que las revistas de OJS sean compatibles con DRIVER.</message>
-</locale> 
+</locale>

@@ -33,4 +33,4 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Per fer un seguiment amb el Google Analytics del nombre total de lectors/ores d'un article publicat, introduïu un número de compte aquí (p. ex. UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Un o més números de compte de Google Analytics enviats per als autors/ores de les trameses no són vàlids.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nou codi de seguiment per Universal Analytics (analytics.js)</message>
-</locale> 
+</locale>

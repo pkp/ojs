@@ -18,4 +18,4 @@
 
 	<message key="plugins.importexport.sample.selectIssue.short">Seleccionar un número</message>
 	<message key="plugins.importexport.sample.selectIssue.long">Seleccione el número que desea exportar.</message>
-</locale> 
+</locale>

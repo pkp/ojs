@@ -23,4 +23,4 @@
 	<message key="plugins.citationFormats.abnt.manager.settings.location">Ubicación</message>
 	
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Disponible en: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Fecha de acceso: {$retrievedDate}]]></message>
-</locale> 
+</locale>

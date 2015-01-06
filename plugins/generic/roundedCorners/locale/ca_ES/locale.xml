@@ -15,4 +15,4 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.generic.roundedcorners.displayName">Cantonades arrodonides</message>
 	<message key="plugins.generic.roundedcorners.description">Aquest mòdul crea un fons darrere de cada bloc de barra lateral i n'arrodoneix les cantonades. Podeu canviar els colors editant-ne el full d'estil CSS que trobareu al mòdul.</message>
-</locale> 
+</locale>

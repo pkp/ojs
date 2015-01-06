@@ -30,4 +30,4 @@
     <message key="plugins.importexport.crossref.export.error.articleNotFound">Ningún artículo se corresponde con la Id. indicada "{$articleId}".</message>
 
     <message key="plugins.importexport.crossref.errors.noDOIprefix">Para utilizar este módulo vaya a la categoría del módulo del "Identificador público", active y configure el módulo DOI e indique un prefijo del DOI válido.</message>
-</locale> 
+</locale>

@@ -16,4 +16,4 @@
 	<message key="plugins.citationFormats.cbe.displayName">Mòdul per al format de citació CBE</message>
 	<message key="plugins.citationFormats.cbe.citationFormatName">CBE</message>
 	<message key="plugins.citationFormats.cbe.description">Aquest mòdul implementa el format de citació CBE.</message>
-</locale> 
+</locale>

@@ -16,4 +16,4 @@
 	<message key="plugins.citationFormats.turabian.displayName">Mòdul per al format de citació Turabian</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">Aquest mòdul implementa el format de citació Turabian.</message>
-</locale> 
+</locale>

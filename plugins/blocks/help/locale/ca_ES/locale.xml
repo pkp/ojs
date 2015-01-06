@@ -15,4 +15,4 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.help.displayName">Bloc d'ajuda</message>
 	<message key="plugins.block.help.description">Aquest mòdul proporciona un enllaç a l'ajuda de la barra de lateral.</message>
-</locale> 
+</locale>

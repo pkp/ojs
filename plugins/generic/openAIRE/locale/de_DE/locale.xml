@@ -18,4 +18,4 @@
 	<message key="plugins.generic.openAIRE.metadata">OpenAIRE-spezifische Metadaten</message>
 	<message key="plugins.generic.openAIRE.projectID.description">(Die projectID entspricht der Grant Agreement number.)</message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Bitte geben Sie eine gültige projectID ein (6 Ziffern)</message>
-</locale> 
+</locale>

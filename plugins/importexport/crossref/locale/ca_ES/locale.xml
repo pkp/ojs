@@ -29,4 +29,4 @@
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">No hi ha cap article que coincideixi amb l'id. d'article indicat "{$articleId}".</message>
 
 	<message key="plugins.importexport.crossref.errors.noDOIprefix">Per poder utilitzar aquest mòdul heu d'indicar un prefix DOI vàlid a la configuració de la revista.</message>
-</locale> 
+</locale>

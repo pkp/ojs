@@ -32,4 +32,4 @@
 	<message key="plugins.generic.customLocale.file.edit">Edició de {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Text per defecte</message>
 	<message key="plugins.generic.customLocale.file.custom">Text personalitzat</message>
-</locale> 
+</locale>

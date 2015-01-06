@@ -34,4 +34,4 @@
  
 	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} exportar xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ... {$scriptName} {$pluginName} registrar journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
 ]]></message>
-</locale> 
+</locale>

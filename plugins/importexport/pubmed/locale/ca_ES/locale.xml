@@ -28,4 +28,4 @@
 
 	<message key="plugins.importexport.pubmed.export.error.issueNotFound">No hi ha cap número que coincideixi amb l'id. de número indicat "{$issueId}".</message>
 	<message key="plugins.importexport.pubmed.export.error.articleNotFound">No hi ha cap article que coincideixi amb l'id. d'article indicat «{$articleId}».</message>
-</locale> 
+</locale>

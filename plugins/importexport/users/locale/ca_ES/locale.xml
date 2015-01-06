@@ -57,4 +57,4 @@ Exemples:
 	<message key="plugins.importexport.users.export.exportAllUsers">Exporta'ls tots</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">S'han produït errors durant l'exportació.</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">No s'ha pogut escriure al fitxer "{$fileName}".</message>
-</locale> 
+</locale>

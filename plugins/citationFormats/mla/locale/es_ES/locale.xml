@@ -17,4 +17,4 @@
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Este módulo ofrece el formato de citas MLA.</message>
 	<message key="plugins.citationFormats.mla.noPages">s. p.</message>	
-</locale> 
+</locale>

@@ -455,8 +455,9 @@ the following:
   server. Sometimes a solution to your problem may be obvious from the error
   messages, e.g. in the case of permission problems or erroneous symlinks. If
   you have difficulties in interpreting error messages in the log then please
-  register a bug report at 'http://pkp.sfu.ca/bugzilla/' and post the most
-  recent error message. This will help OJS developers to resolve your problem.
+  register a bug report at 'https://github.com/pkp/pkp-lib#issues' and post the
+  most recent error message. This will help OJS developers to resolve your
+  problem.
 
 If you get errors when STARTING or STOPPING the solr server:
 

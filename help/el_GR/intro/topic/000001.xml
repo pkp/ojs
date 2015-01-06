@@ -50,7 +50,7 @@
 	</section>
 	<section title="2. Που μπορώ να βρω τεχνική υποστήριξη, να υποβάλλω προβλήματα και να προτείνω βελτιώσεις για το OJS;">
 		<![CDATA[
-<p>Το Public Knowledge Project λειτουργεί ένα <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum Υποστήριξης</a> όπου οι χρήστες μπορούν να ανζητήσουν απαντήσεις και να αποστείλουν ερωτήσεις. Σε περίπτωση που δεν μπορέσατε να βρείτε κάτι χρήσιμο στο forum, μπορείτε να επικοινωνήσετε στο <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Προβλήματα λειτουργίας θα πρέπει να υποβάλλονται μέσω του <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">PKP's Bugzilla</a>.</p>
+<p>Το Public Knowledge Project λειτουργεί ένα <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum Υποστήριξης</a> όπου οι χρήστες μπορούν να ανζητήσουν απαντήσεις και να αποστείλουν ερωτήσεις. Σε περίπτωση που δεν μπορέσατε να βρείτε κάτι χρήσιμο στο forum, μπορείτε να επικοινωνήσετε στο <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Προβλήματα λειτουργίας θα πρέπει να υποβάλλονται μέσω του <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. Πως μπορώ να μεταφράσω το OJS σε άλλες γλώσσες;">

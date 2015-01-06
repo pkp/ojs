@@ -17,4 +17,4 @@
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description">Aquest mòdul implementa el format de citació RefWorks.</message>
 	<message key="plugins.citationFormats.refWorks.export">Exporta a RefWorks</message>
-</locale> 
+</locale>

@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.help.displayName">Bloque de ayuda</message>
 	<message key="plugins.block.help.description">Este módulo proporciona un enlace de ayuda en la barra lateral.</message>
-</locale> 
+</locale>

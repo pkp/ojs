@@ -43,7 +43,7 @@
 	</section>
 	<section title="2. Var finner jag teknisk support, skickar in buggar och föreslår förbättringar?">
 		<![CDATA[
-<p>The Public Knowledge Project tillhandahåller ett <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Support-forum</a> med över tusen frågor och svar, där man kan söka och lägga in frågor. T ex kan man söka efter felmeddelanden och få förslag på lösningar. Om man inte finner lösningen där kan man skicka frågor till <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Rapporter om buggar ska gå via PKP's <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>.</p>
+<p>The Public Knowledge Project tillhandahåller ett <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Support-forum</a> med över tusen frågor och svar, där man kan söka och lägga in frågor. T ex kan man söka efter felmeddelanden och få förslag på lösningar. Om man inte finner lösningen där kan man skicka frågor till <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Rapporter om buggar ska gå via PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. Hur gör jag för att översätta OJS till något annat språk?">

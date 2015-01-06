@@ -22,4 +22,4 @@
 	<message key="plugins.gateways.metsGateway.settings.organization">METS: atribut organitzador d'elements agents</message>
 	<message key="plugins.gateways.metsGateway.settings.preservationLevel">Nivell de conservació PREMIS</message>
 	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Exporta els fitxers addicionals</message>
-</locale> 
+</locale>

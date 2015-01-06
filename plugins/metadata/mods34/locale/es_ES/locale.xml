@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
   <message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 Adaptador de artículos</message>
 	<message key="plugins.metadata.mods34.articleAdapter.description">Extrae/inserta metadatos de/en los artículos.</message>
-</locale> 
+</locale>

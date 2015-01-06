@@ -20,4 +20,4 @@
 	<message key="plugins.importexport.doaj.export.contact">Contacta amb el DOAJ per a l'inclusió</message>
 	<message key="plugins.importexport.doaj.export.journalInfo">Exporta la informació de l'article en format XML per arxivar-la al DOAJ.</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Perquè la vostra revista consti al DOAJ, envieu-hi aquest formulari parcialment emplenat de manera automàtica i completeu-lo amb la resta d'informació que pugueu aportar.</message>
-</locale> 
+</locale>

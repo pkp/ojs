@@ -50,4 +50,4 @@
 
 	<message key="plugins.importexport.duracloud.import.success">Importación realizada con éxito</message>
 	<message key="plugins.importexport.duracloud.import.success.description">La importación se realizó con éxito. A continuación se muestran los elementos importados con éxito.</message>
-</locale> 
+</locale>

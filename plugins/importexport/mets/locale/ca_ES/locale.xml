@@ -24,4 +24,4 @@
 	<message key="plugins.importexport.METSExport.settings.organization">METS: atribut d'organització de l'element agent</message>
 	<message key="plugins.importexport.METSExport.settings.preservationLevel">Nivell de conservació PREMIS</message>
 	<message key="plugins.importexport.METSExport.settings.exportSuppFiles">Exporta els fitxers addicionals</message>
-</locale> 
+</locale>

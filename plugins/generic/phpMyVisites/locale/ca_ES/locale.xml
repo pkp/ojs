@@ -26,4 +26,4 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Número de perfil del lloc</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">A phpMyVisites, feu clic a Administració &amp;gt; Modifica el lloc. El número del perfil del lloc es mostra al costat del nom del perfil del lloc.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Introduïu un número de perfil del lloc.</message>
-</locale> 
+</locale>

@@ -28,4 +28,4 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">PDF de l'any en curs</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total per a totes les revistes</message>
 	<message key="plugins.reports.counter.legacyStats">Els enllaços següents generen informes utilitzant dades de l'antic mòdul COUNTER. Si voleu generar informes COUNTER utilitzant la nova mètrica OJS COUNTER, utilitzeu els enllaços superiors.</message>
-</locale> 
+</locale>

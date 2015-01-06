@@ -46,4 +46,4 @@
 		
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} exportar xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ... {$scriptName} {$pluginName} registrar journal_path {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
-</locale> 
+</locale>

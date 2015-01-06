@@ -16,4 +16,4 @@
 	<message key="plugins.block.keywordCloud.displayName">Bloc de núvol de paraules clau</message>
 	<message key="plugins.block.keywordCloud.description">Aquest mòdul proporciona un núvol d'etiquetes amb les paraules clau de l'article.</message>
 	<message key="plugins.block.keywordCloud.title">Paraules clau</message>
-</locale> 
+</locale>

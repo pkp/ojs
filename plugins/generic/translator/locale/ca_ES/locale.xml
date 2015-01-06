@@ -72,4 +72,4 @@
 	<message key="plugins.generic.translator.saveBeforeContinuing">Abans de continuar, assegureu-vos de desar els canvis que heu fet en aquesta pàgina. Voleu continuar? Si ho feu, es perdran els canvis que no hàgiu desat.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">El servidor no pot escriure sobre aquest fitxer local. No es guardaran els canvis que hàgiu fet.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">El servidor no pot escriure sobre aquests fitxers locals. No es guardaran els canvis que hàgiu fet.</message>
-</locale> 
+</locale>

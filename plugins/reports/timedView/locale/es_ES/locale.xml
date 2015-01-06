@@ -32,4 +32,4 @@
     <message key="plugins.reports.timedView.report.abstractViews">Visualizaciones del resumen</message>
     <message key="plugins.reports.timedView.report.galleyViews">Visualizaciones de todas las galeradas</message>
     <message key="plugins.reports.timedView.form.largeSetOfDataIssue">Si indicas un periodo de tiempo amplio con un conjunto extenso de datos estadísticos, el informe tardará en elaborarse. Si toma mucho tiempo, la conexión podría caducar y no recibirías el fichero con el informe. Si eso sucede, intenta de nuevo con un período de tiempo menor.</message>
-</locale> 
+</locale>

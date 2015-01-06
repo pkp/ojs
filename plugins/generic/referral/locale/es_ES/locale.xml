@@ -40,4 +40,4 @@
 	<message key="plugins.generic.referral.settings.description">El módulo de referencias captura las URL que enlazan con los artículos publicados en esta revista para que el autor/a pueda organizarlos y decidir si deben publicarse o no. Este formulario permite que el gestor/a de la revista controle como se capturan los enlaces.</message>
 	<message key="plugins.generic.referral.excusions">Exclusiones</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Introduzca una lista de patrones de expresiones regulares, una por línea, que deban tratarse como exclusiones para un registro de referencias. Esto sirve para evitar que las solicitudes de los motores de búsqueda saturen la lista de referencias. Si desea obtener más información acerca de las expresiones regulares, visite la página  <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
-</locale> 
+</locale>

@@ -42,4 +42,4 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Hoja de estilos XSL personalizada</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Debe indicar el archivo de hoja de estilos XSL personalizada.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">El archivo XSL cargado no es válido. Compruebe el archivo e inténtelo de nuevo.</message>
-</locale> 
+</locale>

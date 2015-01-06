@@ -5,29 +5,29 @@
 	=== Release date: May 15, 2005
 	================================
 	================================================
-	=== Sistema Eletrônico de Editoração de Revistas
-	=== Tradução do Sistema para português
-	=== Versão: 2.0
-	=== Data de lançamento: 2005
+	=== Sistema EletrÃ´nico de EditoraÃ§Ã£o de Revistas
+	=== TraduÃ§Ã£o do Sistema para portuguÃªs
+	=== VersÃ£o: 2.0
+	=== Data de lanÃ§amento: 2005
 	===============================================
 
 
 Sobre
 -----
-Sistema Eletrônico de Editoração de Revistas(SEER)/Open Journal Systems(OJS) 
+Sistema EletrÃ´nico de EditoraÃ§Ã£o de Revistas(SEER)/Open Journal Systems(OJS) 
 foi desenvolvido pelo Public Knowledge Project.
-Para informações gerais sobre o OJS e outros sistemas abertos de pesquisa,
+Para informaÃ§Ãµes gerais sobre o OJS e outros sistemas abertos de pesquisa,
 acesse o portal do PKP em <http://pkp.sfu.ca/>.
 
 
-Licença
+LicenÃ§a
 -------
-O OJS é licenciado sob o GNU General Public License v2. Veja no arquivo
-docs/COPYING_pt os termos completos desta licença. 
+O OJS Ã© licenciado sob o GNU General Public License v2. Veja no arquivo
+docs/COPYING_pt os termos completos desta licenÃ§a. 
 
-Participação de terceiros são bem-vindas para modificar e redistribuir o SEER/OJS
-por inteiro ou em partes de acôrdo com os termos desta licença. O PKP também aceita
-códigos com melhorias ou correção de erros para o software.
+ParticipaÃ§Ã£o de terceiros sÃ£o bem-vindas para modificar e redistribuir o SEER/OJS
+por inteiro ou em partes de acÃ´rdo com os termos desta licenÃ§a. O PKP tambÃ©m aceita
+cÃ³digos com melhorias ou correÃ§Ã£o de erros para o software.
 
 
 Requisitos de Sistema
@@ -40,62 +40,62 @@ Requisitos de servidor recomendados:
 	* Sistema Operacional: Um SO que suporte os software acima, incluindo
 	  Linux, BSD, Solaris, Mac OS X, Windows
 
-Como o PKP não possui recursos para testar todas as possíveis combinações de
-vesões do software e plataformas, nenhuma garantia do correto funcionamento ou
-suporte está implícita.
+Como o PKP nÃ£o possui recursos para testar todas as possÃ­veis combinaÃ§Ãµes de
+vesÃµes do software e plataformas, nenhuma garantia do correto funcionamento ou
+suporte estÃ¡ implÃ­cita.
 
 
-Instalação
+InstalaÃ§Ã£o
 -----------
 Leia este documento antes de instalar o sistema. Em caso de problemas, leia o
-arquivo FAQ_pt localizado neste diretório.
+arquivo FAQ_pt localizado neste diretÃ³rio.
 
 Para instalar o sistema:
 
-	1. Extraia o arquivo compactado do sistema no local desejado do diretório 
+	1. Extraia o arquivo compactado do sistema no local desejado do diretÃ³rio 
          web do servidor
 	
-	2. Modifique as permissões para escrita dos seguintes diretórios (e seus 
-         conteúdos), modificando o dono da pasta e permissões através dos 
+	2. Modifique as permissÃµes para escrita dos seguintes diretÃ³rios (e seus 
+         conteÃºdos), modificando o dono da pasta e permissÃµes atravÃ©s dos 
          comandos "chown" e "chmod", por exemplo:
 	   
-	     * config.inc.php (opcional -- caso não tenha permissão, o sistema 
-             solicitará a substituição do conteúdo durante a instalação)
+	     * config.inc.php (opcional -- caso nÃ£o tenha permissÃ£o, o sistema 
+             solicitarÃ¡ a substituiÃ§Ã£o do conteÃºdo durante a instalaÃ§Ã£o)
 	     * help/cache
 	     * locale/cache
 	     * public
 	     * templates/t_cache
 	     * templates/t_compile
 	
-	3. Crie um diretório para armazenar arquivos submetidos ao servidor 
-         (arquivos de submissão, arquivos suplementares, etc.) e mude as 
-         permissões deste diretório para escrita. É recomendado que este 
-         diretório esteja fora de acesso via web (ou com proteção para acesso
+	3. Crie um diretÃ³rio para armazenar arquivos submetidos ao servidor 
+         (arquivos de submissÃ£o, arquivos suplementares, etc.) e mude as 
+         permissÃµes deste diretÃ³rio para escrita. Ã‰ recomendado que este 
+         diretÃ³rio esteja fora de acesso via web (ou com proteÃ§Ã£o para acesso
          direto, utilizando regras no .htaccess).
 	   
 	4. Digite no navegador a "url" do site 
-         (ex.: http://seudomínio.com/caminho/do/ojs/> e siga as instruções na 
+         (ex.: http://seudomÃ­nio.com/caminho/do/ojs/> e siga as instruÃ§Ãµes na 
          tela.
 	 
-	5. Passos adicionais recomendados pós-instalação:
+	5. Passos adicionais recomendados pÃ³s-instalaÃ§Ã£o:
 	
-	     * Verificar config.inc.php para configurações adicionais
-	     * Verificar o FAQ_pt para perguntas técnicas frequentes sobre 
-             configurações de servidor, entre outras.
+	     * Verificar config.inc.php para configuraÃ§Ãµes adicionais
+	     * Verificar o FAQ_pt para perguntas tÃ©cnicas frequentes sobre 
+             configuraÃ§Ãµes de servidor, entre outras.
 
 
-Atualização
+AtualizaÃ§Ã£o
 -----------
-Atualmente SEER/OJS 2.0 não possui um processo de atualização de versões do 
-SEER/OJS 1.x. Uma ferramente de migração está em desenvolvimento e será lançada 
-nas próximas versões do SEER/OJS 2.x.
+Atualmente SEER/OJS 2.0 nÃ£o possui um processo de atualizaÃ§Ã£o de versÃµes do 
+SEER/OJS 1.x. Uma ferramente de migraÃ§Ã£o estÃ¡ em desenvolvimento e serÃ¡ lanÃ§ada 
+nas prÃ³ximas versÃµes do SEER/OJS 2.x.
 	   
 
-Localização (Tradução)
+LocalizaÃ§Ã£o (TraduÃ§Ã£o)
 ----------------------
-Para adicionar suporte a outros idiomas, é necessário traduzir o seguinte 
-conjunto arquivos, que devem ser inseridos em diretórios com nomenclatura apropriada
-(utilizar códigos ISO de idiomas, como "pt_BR", é o recomendado):
+Para adicionar suporte a outros idiomas, Ã© necessÃ¡rio traduzir o seguinte 
+conjunto arquivos, que devem ser inseridos em diretÃ³rios com nomenclatura apropriada
+(utilizar cÃ³digos ISO de idiomas, como "pt_BR", Ã© o recomendado):
 
 	* locale/en_US -> locale/pt_BR
 	* dbscripts/xml/data/locale/en_US -> dbscripts/xml/data/locale/pt_BR
@@ -103,11 +103,11 @@ conjunto arquivos, que devem ser inseridos em diretórios com nomenclatura apropr
 	* help/en_US/topic -> help/pt_BR/topic
 	* rt/en_US -> rt/pt_BR
 
-Novos idiomas devem ser adicionados ao arquivo registry/locales.xml, após o que 
-podem ser instalados no sistema através da interface de administração web.
+Novos idiomas devem ser adicionados ao arquivo registry/locales.xml, apÃ³s o que 
+podem ser instalados no sistema atravÃ©s da interface de administraÃ§Ã£o web.
 	
-Traduções podem ser enviadas para a equipe do PKP para distribuição em futuros 
-lançamentos do sistema.
+TraduÃ§Ãµes podem ser enviadas para a equipe do PKP para distribuiÃ§Ã£o em futuros 
+lanÃ§amentos do sistema.
 
 Requisitos de servidor para suporte total a Unicode (UTF-8):
 
@@ -118,37 +118,37 @@ Requisitos de servidor para suporte total a Unicode (UTF-8):
 Tarefas Agendadas
 -----------------
 O SEER/OJS possui mecanismo para executar uma variedade de tarefas agendadas em 
-períodos determinados (como disparo automático de lembretes ou notificação via 
+perÃ­odos determinados (como disparo automÃ¡tico de lembretes ou notificaÃ§Ã£o via 
 email).
 
 Para permitir suporte a Tarefas Agendadas, edite o arquivo config.inc.php e 
-defina a variável scheduled_tasks para "On", e defina também seu sistema 
-operacional (o servidor onde está rodando o sistema) para executar periodicamente 
-o código PHP em tools/runScheduledTasks.php no diretório do sistema:
+defina a variÃ¡vel scheduled_tasks para "On", e defina tambÃ©m seu sistema 
+operacional (o servidor onde estÃ¡ rodando o sistema) para executar periodicamente 
+o cÃ³digo PHP em tools/runScheduledTasks.php no diretÃ³rio do sistema:
 
 Em sistemas operacionais de base unix, isto pode ser adicionado a tarefas da 
 cron:
 	# crontab -e www
 	0 * * * *	php /path/to/ojs2/tools/runScheduledTasks.php
-Neste exemplo o código seria executado a cada hora.
+Neste exemplo o cÃ³digo seria executado a cada hora.
 
 Em sistemas Windows XP, isto pode ser adicionado no Tarefas Agendadas do Windows 
 (Windows Task Scheduler):
 	1) No Painel de Controle, escolha explorar Tarefas Agendadas.
 	2) Na janela do Windows Explorer escolha no menu Arquivo, ou clique com o
-         botão direito do mouse na janela e escolha:
+         botÃ£o direito do mouse na janela e escolha:
 		Novo > Tarefa Agendada
 	3) Edite a nova tarefa, na aba de Tarefa, no campo Executar, digitando:
 		php c:\path\to\ojs2\tools\runScheduledTasks.php
-	4) Deverá ser especificado também a pasta de execução da tarefa (a pasta
-         onde foi instalado o PHP) e o usuário que executará a tarefa.
-	5) Nas abas Agendar e Configurções, pode-se configurar com mais detalhes 
-         a tarefa, como escolher datas para execução e repetições da mesma.
+	4) DeverÃ¡ ser especificado tambÃ©m a pasta de execuÃ§Ã£o da tarefa (a pasta
+         onde foi instalado o PHP) e o usuÃ¡rio que executarÃ¡ a tarefa.
+	5) Nas abas Agendar e ConfigurÃ§Ãµes, pode-se configurar com mais detalhes 
+         a tarefa, como escolher datas para execuÃ§Ã£o e repetiÃ§Ãµes da mesma.
 	   
-Caso o código de tarefa agendada seja utilizado, recomenda-se que seja executado 
+Caso o cÃ³digo de tarefa agendada seja utilizado, recomenda-se que seja executado 
 pelo menos uma vez ao dia.
 
-Note que utilizar o código também exige que o interpretador de linha de comando 
+Note que utilizar o cÃ³digo tambÃ©m exige que o interpretador de linha de comando 
 do PHP esteja instalado no servidor.
 
 
@@ -160,5 +160,5 @@ Bibliotecas de terceiros
 Contato/Suporte
 ---------------
 Forum: <http://pkp.sfu.ca/support/forum>,<http://forum.ibict.br>
-Problemas: <http://pkp.sfu.ca/bugzilla/>
+Problemas: <https://github.com/pkp/pkp-lib#issues>
 Email: <pkp-support@sfu.ca>

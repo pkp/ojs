@@ -17,4 +17,4 @@
 	<message key="plugins.gateways.resolver.description">Aquest mòdul determina números i articles a partir de la informació de citació.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">No s'ha pogut determinar una entitat simple mitjançant la informació de citació indicada. Comproveu que la informació de citació sigui completa i que faci referència a una entitat d'aquesta versió de l'OJS.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Exporta el contingut</message>
-</locale> 
+</locale>

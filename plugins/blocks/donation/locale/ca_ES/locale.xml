@@ -15,4 +15,4 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.donation.displayName">Bloc de donacions</message>
 	<message key="plugins.block.donation.description">Aquest mòdul proporciona un enllaç a la barra lateral per acceptar donacions.</message>
-</locale> 
+</locale>

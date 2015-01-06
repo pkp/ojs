@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.developedBy.displayName">Bloque de "Desarrollado por"</message>
 	<message key="plugins.block.developedBy.description">Este módulo proporciona un enlace a "Desarrollado por" en la barra lateral.</message>
-</locale> 
+</locale>

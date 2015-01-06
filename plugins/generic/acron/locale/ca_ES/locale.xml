@@ -19,4 +19,4 @@
 	<message key="plugins.generic.acron.disabled">S'ha deshabilitat el mòdul Acron.</message>
 
 	<message key="plugins.generic.acron.reload">Torna a carregar les tasques planificades</message>
-</locale> 
+</locale>

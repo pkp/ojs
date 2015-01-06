@@ -203,4 +203,4 @@
 	<message key="plugins.generic.thesis.form.supervisorMiddleName">Segon nom del supervisor</message>
 	<message key="plugins.generic.thesis.form.supervisorEmail">Adreça electrònica del supervisor</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Heu d'introduir una adreça electrònica vàlida del supervisor/a.</message>
-</locale> 
+</locale>

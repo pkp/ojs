@@ -16,4 +16,4 @@
 	<message key="plugins.citationFormats.refMan.displayName">Módulo de formato de citas del gestor de referencias</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Gestor de referencias: formato RIS (solo para Windows)</message>
 	<message key="plugins.citationFormats.refMan.description">Este módulo ofrece el formato de citas del gestor de referencias.</message>
-</locale> 
+</locale>

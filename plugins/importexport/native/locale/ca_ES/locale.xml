@@ -111,4 +111,4 @@
 	<message key="plugins.importexport.native.import.error.invalidPubId">El teu fitxer d'importació conté un grup de dades invàlides a {$pubIdType}: '{$pubId}'.</message>
 	<message key="plugins.importexport.native.import.error.duplicatePubId">El fitxer d'importació conté un conjunt de dades a {$pubIdType} '{$pubId}' que ja existeixen en un altre objecte de la base de dades. Si us plau, confirma que anteriorment no has importat aquests ID a la base de dades.</message>
 	<message key="plugins.importexport.native.import.error.unknownPubId">El fitxer d'importació conté un conjunt de dades amb un tipus d'ID {$pubIdType} que cap mòdul ID pot processar. Si us plau, instal·la i/o activa el corresponent mòdul ID abans d'importar aquest grup de dades.</message>
-</locale> 
+</locale>

@@ -17,4 +17,4 @@
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Este módulo ofrece el formato de citas APA.</message>
 	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Recuperado de <a href="{$url}" target="_new">{$url}</a>]]></message>
-</locale> 
+</locale>

@@ -22,4 +22,4 @@
 	<message key="plugins.gateways.metsGateway.settings.organization">METS: atributo para la organización de elementos agentes</message>
 	<message key="plugins.gateways.metsGateway.settings.preservationLevel">Nivel de conservación PREMIS</message>
 	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Exportar archivos complementarios</message>
-</locale> 
+</locale>

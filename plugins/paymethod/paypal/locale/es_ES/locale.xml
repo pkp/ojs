@@ -32,4 +32,4 @@
 	<message key="plugins.paymethod.paypal.purchase.description">Descripción</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled">Se canceló su compra.</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Compra cancelada</message>
-</locale> 
+</locale>

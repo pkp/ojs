@@ -15,4 +15,4 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.notification.displayName">Bloc de notificacions</message>
 	<message key="plugins.block.notification.description">Aquest mòdul mostra informació sobre les notificacions del sistema.</message>
-</locale> 
+</locale>

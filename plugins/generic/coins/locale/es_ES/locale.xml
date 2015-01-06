@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.coins.displayName">Módulo COinS</message>
 	<message key="plugins.generic.coins.description">El módulo COinS añade un descriptor OpenURL a las páginas de los artículos (resumen y HTML) que puede servir para la extracción de herramientas de citas, entre otros.</message>
-</locale> 
+</locale>

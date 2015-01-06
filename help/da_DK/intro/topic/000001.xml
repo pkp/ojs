@@ -43,7 +43,7 @@
 	</section>
 	<section title="2. Hvor kan jeg finde teknisk support, fremsende fejl og foreslå forbedringer til anvendelsen af OJS?">
 		<![CDATA[
-<p>Public Knowledge Project driver et <a href="http://pkp.sfu.ca/support/forum/" target="_blank">supportforum</a> med langt over tusinde udvekslinger, hvor det er muligt at søge efter svar og stille spørgsmål. Det er f.eks. muligt at søge efter fejlmeddelelser, der leder dig videre til foreslåede løsninger på kendte problemer. Hvis der ikke gøres brug af dette, kan brugere sende forespørgsler til <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Fremsendelse af fejlrapporter skal ske via PKP's <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>.</p>
+<p>Public Knowledge Project driver et <a href="http://pkp.sfu.ca/support/forum/" target="_blank">supportforum</a> med langt over tusinde udvekslinger, hvor det er muligt at søge efter svar og stille spørgsmål. Det er f.eks. muligt at søge efter fejlmeddelelser, der leder dig videre til foreslåede løsninger på kendte problemer. Hvis der ikke gøres brug af dette, kan brugere sende forespørgsler til <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Fremsendelse af fejlrapporter skal ske via PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. Hvordan skal jeg gribe det an, hvis jeg vil oversætte OJS til et andet sprog?">

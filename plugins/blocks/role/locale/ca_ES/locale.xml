@@ -15,4 +15,4 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.role.displayName">Bloc per a rols</message>
 	<message key="plugins.block.role.description">Aquest mòdul proporciona un bloc a la barra lateral que conté informació específica per als rols, com ara el nombre de trameses o enllaços ràpids per a editors/ores, autors/ores, etc.</message>
-</locale> 
+</locale>

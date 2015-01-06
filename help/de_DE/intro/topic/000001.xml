@@ -44,7 +44,7 @@
 	</section>
 	<section title="2. Wo finde ich technische Unterstützung, und wo kann ich Fehler melden und Verbesserungen für die Nutzung von OJS vorschlagen?">
 		<![CDATA[
-<p>Das Public Knowledge Project (PKP) betreibt ein <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Support Forum</a> mit weit über 1.000 Einträgen, die recherchiert werden können, und Fragen können im Forum gestellt werden. So können Sie beispielsweise nach Fehlermeldungen suchen, um für bereits bekannte Probleme Lösungsvorschläge zu finden.  Ist dies nicht erfolgreich, können Sie eine E-Mail an <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> schicken. Programmfehler bitte über PKPs <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a> melden.</p>
+<p>Das Public Knowledge Project (PKP) betreibt ein <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Support Forum</a> mit weit über 1.000 Einträgen, die recherchiert werden können, und Fragen können im Forum gestellt werden. So können Sie beispielsweise nach Fehlermeldungen suchen, um für bereits bekannte Probleme Lösungsvorschläge zu finden.  Ist dies nicht erfolgreich, können Sie eine E-Mail an <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> schicken. Programmfehler bitte über PKPs <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a> melden.</p>
 		]]>
 	</section>
 	<section title="3. Wie ist im Falle der Übersetzung von OJS in eine weitere Sprache vorzugehen?">

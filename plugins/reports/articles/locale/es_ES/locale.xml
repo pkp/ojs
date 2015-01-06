@@ -16,4 +16,4 @@
   <message key="plugins.reports.articles.displayName">Informe de artículos</message>
 	<message key="plugins.reports.articles.description">Este módulo ofrece un informe CSV con una lista de los artículos e información sobre ellos.</message>
 	<message key="plugins.reports.articles.nodecision">Sin decidir</message>
-</locale> 
+</locale>

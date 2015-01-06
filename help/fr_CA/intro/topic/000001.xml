@@ -43,7 +43,7 @@
 	</section>
 	<section title="2. Où puis-je trouver du support technique, poser des questions sur les bogues, et suggérer des améliorations en utilisant OJS?">
 		<![CDATA[
-<p> Le projet Public Knowledge  entretient un<a href="http://pkp.sfu.ca/support/forum/" target="_blank">forum de support </a> avec plus d’un millier d’échanges où les réponses peuvent être recherchées, ou une question posée. Par exemple, les messages d’erreur peuvent être recherchés, ce qui vous amène  à des solutions pour des problèmes connus. Si insuffisant, les usagers peuvent envoyer des questions à <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Les rapports de bogues devraient être soumis via  PKP <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>.</p>
+<p> Le projet Public Knowledge  entretient un<a href="http://pkp.sfu.ca/support/forum/" target="_blank">forum de support </a> avec plus d’un millier d’échanges où les réponses peuvent être recherchées, ou une question posée. Par exemple, les messages d’erreur peuvent être recherchés, ce qui vous amène  à des solutions pour des problèmes connus. Si insuffisant, les usagers peuvent envoyer des questions à <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Les rapports de bogues devraient être soumis via  PKP <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. Comment faire pour traduire OJS dans une autre langue?">

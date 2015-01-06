@@ -42,4 +42,4 @@
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Full d'estil XSL personalitzat</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Heu d'indicar un full d'estil XSL personalitzat.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">El fitxer XSL que heu carregat no és vàlid. Comproveu el fitxer i torneu-ho a intentar.</message>
-</locale> 
+</locale>

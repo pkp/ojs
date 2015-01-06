@@ -50,7 +50,7 @@
 	</section>
 	<section title="2. On puc trobar assistència tècnica, trametre errors i suggerir millores per a l'OJS?">
 		<![CDATA[
-<p>El Public Knowledge Project posa a la vostra disposició un <a href="http://pkp.sfu.ca/support/forum/" target="_blank">fòrum de suport</a> on podeu cercar respostes als vostres dubtes als fils de discussió existents (actualment ja n'hi ha més d'un miler), o bé crear un fil nou. Així, per exemple hi podeu cercar missatges d'error per a veure les solucions proposades per a problemes coneguts. En cas que el fòrum no solucioni el vostre problema, podeu enviar les vostres consultes a <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. A més, podeu trametre informes d'errors a través de la plataforma <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a> del PKP.
+<p>El Public Knowledge Project posa a la vostra disposició un <a href="http://pkp.sfu.ca/support/forum/" target="_blank">fòrum de suport</a> on podeu cercar respostes als vostres dubtes als fils de discussió existents (actualment ja n'hi ha més d'un miler), o bé crear un fil nou. Així, per exemple hi podeu cercar missatges d'error per a veure les solucions proposades per a problemes coneguts. En cas que el fòrum no solucioni el vostre problema, podeu enviar les vostres consultes a <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. A més, podeu trametre informes d'errors a través de la plataforma <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a> del PKP.
 		]]>
 	</section>
 	<section title="3. Què puc fer per a traduir l'OJS a una altra llengua?">

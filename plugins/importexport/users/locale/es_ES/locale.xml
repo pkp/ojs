@@ -38,4 +38,4 @@
 	<message key="plugins.importexport.users.export.exportAllUsers">Exportar todos/as</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">Se produjeron errores durante la exportación</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">No se pudo editar el archivo "{$fileName}".</message>
-</locale> 
+</locale>

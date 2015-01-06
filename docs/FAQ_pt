@@ -1,96 +1,96 @@
 Perguntas e Respostas Frequentes
 --------------------------------
 
-Este documento contÈm perguntas frequentes sobre o SEER/OJS, que lidam 
-incialmente com questıes tÈcnicas e de suporte mais comuns. Para informaÁıes 
-sobre uso ou interaÁ„o com o SEER/OJS - Sistema de EditoraÁ„o de Revistas -, 
+Este documento cont√©m perguntas frequentes sobre o SEER/OJS, que lidam 
+incialmente com quest√µes t√©cnicas e de suporte mais comuns. Para informa√ß√µes 
+sobre uso ou intera√ß√£o com o SEER/OJS - Sistema de Editora√ß√£o de Revistas -, 
 consulte a ajuda do sistema.
 
 =================
-Questıes Gerais
+Quest√µes Gerais
 =================
 
 1) Quem eu posso contactar para suporte?
 
-A: Um forum de apoio do SEER/OJS em inglÍs est· disponÌvel em 
+A: Um forum de apoio do SEER/OJS em ingl√™s est√° dispon√≠vel em 
    <http://pkp.sfu.ca/support/forum/>.
-   Erros de sistema (bugs) ou solicitaÁ„o de melhorias ou funcionalidades podem 
-   ser postadas em <http://pkp.sfu.ca/bugzilla/>.
+   Erros de sistema (bugs) ou solicita√ß√£o de melhorias ou funcionalidades podem 
+   ser postadas em <https://github.com/pkp/pkp-lib#issues>.
    Perguntas sobre o SEER/OJS podem ser enviadas para:
    equipe PKP: <pkp-support@sfu.ca>.
    equipe Ibict: <ramon@ibict.br;meinert@ibict.br;miguel@ibict.br>
    
-   Embora o esforÁo seja o m·ximo para assistir e resolver erros encontrados no 
-   sistema, note que o SEER/OJS n„o possui garantia de suporte.
+   Embora o esfor√ßo seja o m√°ximo para assistir e resolver erros encontrados no 
+   sistema, note que o SEER/OJS n√£o possui garantia de suporte.
 
    -----------------------------------------------------------------------------
    
-2) Posso modificar o cÛdigo fonte do SEER/OJS?
+2) Posso modificar o c√≥digo fonte do SEER/OJS?
    
-A: Sendo o SEER/OJS um sistema de cÛdigo aberto, os usu·rios tÍm liberdade para 
-   modificar o sistema que forem consideradas pertinentes. CÛdigos com novas 
-   funcionalidades ou correÁıes s„o bem-vindos, e sugere-se envi·-las a 
-   <pkp-support@sfu.ca>, caso considere as modificaÁıes benÈficas a outros usu·rios 
+A: Sendo o SEER/OJS um sistema de c√≥digo aberto, os usu√°rios t√™m liberdade para 
+   modificar o sistema que forem consideradas pertinentes. C√≥digos com novas 
+   funcionalidades ou corre√ß√µes s√£o bem-vindos, e sugere-se envi√°-las a 
+   <pkp-support@sfu.ca>, caso considere as modifica√ß√µes ben√©ficas a outros usu√°rios 
    do sistema.
 
-   Note que em caso de redistribuiÁ„o do sistema (seja o original ou versıes 
-   hÌbridas), os termos da GNU General Public License v2 devem ser seguidas. Veja 
-   docs/COPYING_pt ou docs/Copying para os termos completos da licenÁa.
+   Note que em caso de redistribui√ß√£o do sistema (seja o original ou vers√µes 
+   h√≠bridas), os termos da GNU General Public License v2 devem ser seguidas. Veja 
+   docs/COPYING_pt ou docs/Copying para os termos completos da licen√ßa.
 
 
 ============================
-Perguntas/Problemas TÈcnicos
+Perguntas/Problemas T√©cnicos
 ============================
 
    1) Quando tento acessar o site SEER/OJS o sistema exibe uma mensagem de erro:
       "Warning: Smarty error: problem creating directory '/./templates' in
       ./lib/smarty/Smarty.class.php"
 
-A: Isto pode ocorrer caso um nÌvel de diretÛrio hierarquicamente superior tenha 
-   permissıes de execuÁ„o, mas n„o de leitura ou gravaÁ„o. Nestes casos, o valor 
-   de _FILE_ aparenta ser relativo ao local de onde se est· incluindo o arquivo. 
-   A soluÁ„o para o problema È assegurar que todos os diretÛrios de maior nÌvel 
-   (pais) tenham permiss„o de leitura, escrita e execuÁ„o.
+A: Isto pode ocorrer caso um n√≠vel de diret√≥rio hierarquicamente superior tenha 
+   permiss√µes de execu√ß√£o, mas n√£o de leitura ou grava√ß√£o. Nestes casos, o valor 
+   de _FILE_ aparenta ser relativo ao local de onde se est√° incluindo o arquivo. 
+   A solu√ß√£o para o problema √© assegurar que todos os diret√≥rios de maior n√≠vel 
+   (pais) tenham permiss√£o de leitura, escrita e execu√ß√£o.
 
-   Veja tambÈm este aviso de erro do PHP: 
+   Veja tamb√©m este aviso de erro do PHP: 
    <http://bugs.php.net/bug.php?id=16231>.
 
    -----------------------------------------------------------------------------
 
-   2) Envio de arquivos (upload) grandes falha sem explicaÁ„o.
+   2) Envio de arquivos (upload) grandes falha sem explica√ß√£o.
  
-A: A causa pode estar em algumas configuraÁıes do Apache ou do PHP.
+A: A causa pode estar em algumas configura√ß√µes do Apache ou do PHP.
 
    Apache 2.x possui a diretiva LimitRequestBody directive que, se definida com 
-   um valor baixo, pode levar a esse comportamento. Em particular, as instalÁıes 
-   padr„o do PHP para versıes recentes do Red Hat Linux setam o LimitRequestBody 
+   um valor baixo, pode levar a esse comportamento. Em particular, as instal√ß√µes 
+   padr√£o do PHP para vers√µes recentes do Red Hat Linux setam o LimitRequestBody 
    para 524288 bytes no arquivo /etc/httpd/conf.d/php.conf.
 
-   Valores baixos para as configuraÁıes do php.ini como post_max_size (padr„o È 
-   "8M"), upload_max_filesize (padr„o È "8M"), e memory_limit (padr„o "8M") 
-   tambÈm podem causar o comportamento descrito.
+   Valores baixos para as configura√ß√µes do php.ini como post_max_size (padr√£o √© 
+   "8M"), upload_max_filesize (padr√£o √© "8M"), e memory_limit (padr√£o "8M") 
+   tamb√©m podem causar o comportamento descrito.
 
    -----------------------------------------------------------------------------
 
-   3) Estou usando um servidor Windows, e os emails disparados n„o s„o recebidos 
+   3) Estou usando um servidor Windows, e os emails disparados n√£o s√£o recebidos 
       nunca.
 
-A: No Windows vocÍ deve configurar o PHP para enviar mensagens atravÈs de um 
-   servidor SMTP (rodando na m·quina ou outro servidor).
+A: No Windows voc√™ deve configurar o PHP para enviar mensagens atrav√©s de um 
+   servidor SMTP (rodando na m√°quina ou outro servidor).
    
-   Veja <http://www.php.net/mail> para maiores detalhes sobre configuraÁıes das 
+   Veja <http://www.php.net/mail> para maiores detalhes sobre configura√ß√µes das 
    funcionalidades do PHP mail no Windows.
 
    -----------------------------------------------------------------------------
 
-   4) Estou usando Apache 2.0.x, e as p·ginas do SEER/OJS n„o s„o carregadas, 
+   4) Estou usando Apache 2.0.x, e as p√°ginas do SEER/OJS n√£o s√£o carregadas, 
       gerando um erro do tipo "File does not exist: .../index.php/index/...".
 
-A: Em algumas versıes ou configuraÁıes do Apache 2.0.x, pode ser necess·rio 
-   explicitamente habilitar a diretiva AcceptPathInfo no arquivo de configuraÁ„o 
+A: Em algumas vers√µes ou configura√ß√µes do Apache 2.0.x, pode ser necess√°rio 
+   explicitamente habilitar a diretiva AcceptPathInfo no arquivo de configura√ß√£o 
    do Apache.
    
-   Veja http://httpd.apache.org/docs-2.0/mod/core.html para maiores informaÁıes
+   Veja http://httpd.apache.org/docs-2.0/mod/core.html para maiores informa√ß√µes
    sobre esta diretiva.
 
    -----------------------------------------------------------------------------
@@ -98,100 +98,100 @@ A: Em algumas versıes ou configuraÁıes do Apache 2.0.x, pode ser necess·rio
    5) Grande quantidade de avisos "Warning: Call-time pass-by-reference has been 
       deprecated" aparecem quando executo o instalador do SEER/OJS.
 
-A: Estes avisos podem ser removidos setando a vari·vel 
-   allow_call_time_pass_reference para "On" no arquivo php.ini; este È o valor 
-   padr„o em versıes atuais do PHP, porÈm algumas distribuiÁıes podem setar a 
-   vari·vel para "Off" inicialmente.   
-   Est· prevista a remoÁ„o do requisito que obriga ter 
-   allow_call_time_pass_reference em "On" em futuras versıes do SEER/OJS.
+A: Estes avisos podem ser removidos setando a vari√°vel 
+   allow_call_time_pass_reference para "On" no arquivo php.ini; este √© o valor 
+   padr√£o em vers√µes atuais do PHP, por√©m algumas distribui√ß√µes podem setar a 
+   vari√°vel para "Off" inicialmente.   
+   Est√° prevista a remo√ß√£o do requisito que obriga ter 
+   allow_call_time_pass_reference em "On" em futuras vers√µes do SEER/OJS.
 
    -----------------------------------------------------------------------------
 
    6) O SEER/OJS funciona em ambiente PHP-CGI?
       O SEER/OJS funciona em ambiente Microsoft IIS?
 
-A: Testes limitados do PKP indicam que o SEER/OJS n„o funcionar· corretamente 
-   nesses ambientes. N„o se sabe qual o impacto de modificaÁıes necess·rias para 
-   que o SEER/OJS funcione nessse ambientes, porÈm solicitamos a desenvolvedores 
-   experientes nos ambientes em quest„o que contribuam com soluÁıes para este 
+A: Testes limitados do PKP indicam que o SEER/OJS n√£o funcionar√° corretamente 
+   nesses ambientes. N√£o se sabe qual o impacto de modifica√ß√µes necess√°rias para 
+   que o SEER/OJS funcione nessse ambientes, por√©m solicitamos a desenvolvedores 
+   experientes nos ambientes em quest√£o que contribuam com solu√ß√µes para este 
    problema.
    
-   Atualmente, a configuraÁ„o recomendada È do Apache com o PHP como mÛdulo 
-   distribuÌdo. Outras configuraÁıes podem ou n„o ser melhor suportads em futuras 
-   versıes.
+   Atualmente, a configura√ß√£o recomendada √© do Apache com o PHP como m√≥dulo 
+   distribu√≠do. Outras configura√ß√µes podem ou n√£o ser melhor suportads em futuras 
+   vers√µes.
 
    -----------------------------------------------------------------------------
 
-   7) A instalaÁ„o do SEER/OJS falha, exibindo a mensagem de erro do MySQL "Client does not 
+   7) A instala√ß√£o do SEER/OJS falha, exibindo a mensagem de erro do MySQL "Client does not 
       support authentication protocol requested by server; consider upgrading MySQL client".
 
-A: Este problema È causado por uma mudanÁa no protocolo de autenticaÁ„o do MySQL 4.1, e pode 
-   ocorrer se o ambiente est· usando um ves„o antiga da biblioteca do cliente MySQL com uma 
-   vers„o mais nova do servidor MySQL.
+A: Este problema √© causado por uma mudan√ßa no protocolo de autentica√ß√£o do MySQL 4.1, e pode 
+   ocorrer se o ambiente est√° usando um ves√£o antiga da biblioteca do cliente MySQL com uma 
+   vers√£o mais nova do servidor MySQL.
 
-   Veja http://dev.mysql.com/doc/mysql/en/Old_client.html para sugestıes de soluÁ„o do problema.
+   Veja http://dev.mysql.com/doc/mysql/en/Old_client.html para sugest√µes de solu√ß√£o do problema.
 
    -----------------------------------------------------------------------------
 
-   8) Como faÁo para criar uma cÛpia de seguranÁa (backup) do site SEER/OJS?
+   8) Como fa√ßo para criar uma c√≥pia de seguran√ßa (backup) do site SEER/OJS?
 
-A: … altamente recomendado que o sistema seja feita uma cÛpia de seguranÁa regularmente para
+A: √â altamente recomendado que o sistema seja feita uma c√≥pia de seguran√ßa regularmente para
    prevenir contra falhas no sisetma, no servidor ou no hardware que possam causar perda de dados.
   
-   Para executar uma cÛpia de seguranÁa corretamente, execute os seguintes passos:
+   Para executar uma c√≥pia de seguran√ßa corretamente, execute os seguintes passos:
      - A base de dados, utilizando as ferramentas do DBMS (ex.: mysqldump for MySQL, 
        pg_dump for PostgreSQL)
-     - O diretÛrio base do SEER/OJS
-     - Os diretÛrios de arquivos n„o-p˙blicos (o diretÛrio especificado na opÁ„o de configuraÁ„o "files_dir")
+     - O diret√≥rio base do SEER/OJS
+     - Os diret√≥rios de arquivos n√£o-p√∫blicos (o diret√≥rio especificado na op√ß√£o de configura√ß√£o "files_dir")
        
-   Este procedimento pode ser facilmente integrado com qualquer mecanismo autom·tico de backup.
+   Este procedimento pode ser facilmente integrado com qualquer mecanismo autom√°tico de backup.
 
    -----------------------------------------------------------------------------
 
-   9) Como faÁo para migrar uma instalaÁ„o existente do SEER/OJS para um servidor diferente?
+   9) Como fa√ßo para migrar uma instala√ß√£o existente do SEER/OJS para um servidor diferente?
 
-A: Para migrar o sistema para outro servidor, È necess·rio:
+A: Para migrar o sistema para outro servidor, √© necess√°rio:
 
    - Copiar a base de dados com os dados e importar o arquivo para o novo servidor(ex.: usando as ferramentas
      de linha de comando do DBMS)
-   - Copiar o diretÛrio base do sistema e os diretÛrios de arquivos n„o-p˙blicos
-   - Atualizar o arquivo config.inc.php com as configuraÁıes do novo servidor (normalmente, as configuraÁıes 
-     de autenticaÁ„o/acesso da base de dados e o caminho para a pasta de arquivos n„o-p˙blicos)
+   - Copiar o diret√≥rio base do sistema e os diret√≥rios de arquivos n√£o-p√∫blicos
+   - Atualizar o arquivo config.inc.php com as configura√ß√µes do novo servidor (normalmente, as configura√ß√µes 
+     de autentica√ß√£o/acesso da base de dados e o caminho para a pasta de arquivos n√£o-p√∫blicos)
 
 
 
 ================================
-OpÁıes de ConfiguraÁ„o AvanÁadas
+Op√ß√µes de Configura√ß√£o Avan√ßadas
 ================================
 
-   1) Como posso controlar o endereÁo para onde ser„o enviadas as mensagens devolvidas?
-      Porque as mensagens s„o enviadas com um cabeÁalho de envelope de envio 'X-Warning'?
+   1) Como posso controlar o endere√ßo para onde ser√£o enviadas as mensagens devolvidas?
+      Porque as mensagens s√£o enviadas com um cabe√ßalho de envelope de envio 'X-Warning'?
 
-A: Para controlar o endereÁo para o envio de emails retornados, È necess·rio setar o 
-   endereÁo do envelope de destino. Habilite a opÁ„o "allow_envelope_sender" na seÁ„o
-   [email] do arquivo de configuraÁ„o do SEER/OJS 2.x; quando habilitada, um campo para
-   "EndereÁo de Emails Retornados" aparece na P·gina 2 das ConfiguraÁıes da Revista.
+A: Para controlar o endere√ßo para o envio de emails retornados, √© necess√°rio setar o 
+   endere√ßo do envelope de destino. Habilite a op√ß√£o "allow_envelope_sender" na se√ß√£o
+   [email] do arquivo de configura√ß√£o do SEER/OJS 2.x; quando habilitada, um campo para
+   "Endere√ßo de Emails Retornados" aparece na P√°gina 2 das Configura√ß√µes da Revista.
 
-   Note que esta opÁ„o pode requerer modificaÁıes nas configuraÁıes do servidor de email
-   para que o usu·rio do servidor web (ex.:www-data) seja de confianÁa do servidor de email,
-   ou um cabeÁalho de aviso "X-Warning" ser· adicionado ‡s mensagens enviadas pelo sistema.
-   Consulte a documentaÁ„o do servidor de email caso esse cabeÁalho esteja sendo incluÌdo.
+   Note que esta op√ß√£o pode requerer modifica√ß√µes nas configura√ß√µes do servidor de email
+   para que o usu√°rio do servidor web (ex.:www-data) seja de confian√ßa do servidor de email,
+   ou um cabe√ßalho de aviso "X-Warning" ser√° adicionado √†s mensagens enviadas pelo sistema.
+   Consulte a documenta√ß√£o do servidor de email caso esse cabe√ßalho esteja sendo inclu√≠do.
    
-   Por exemplo, o Sendmail mantÈm uma lista de usu·rios confi·veis no arquivo 
+   Por exemplo, o Sendmail mant√©m uma lista de usu√°rios confi√°veis no arquivo 
    "/etc/mail/trusted-users";  outros sistemas possuem arquivos similares.
-   A opÁ„o de linha de comando utilizada pelo SEER/OJS 2.x que seta o envelope 
-   de envio È "-f".
+   A op√ß√£o de linha de comando utilizada pelo SEER/OJS 2.x que seta o envelope 
+   de envio √© "-f".
 
    -----------------------------------------------------------------------------
 
-   2) Como posso permitir busca em arquivos fechados que n„o s„o de texto, como o 
+   2) Como posso permitir busca em arquivos fechados que n√£o s√£o de texto, como o 
       PDF ou MS Word?
 
-A: O SEER/OJS suporta a indexaÁ„o de arquivos fechados atravÈs de aplicaÁıes de 
-   convers„o externa. Na seÁ„o "OpÁıes de Busca" do arquivo de configuraÁ„o 
-   config.inc.php pode ser modificado para permitir a indexaÁ„o de alguns formatos
-   bin·rios de arquivo, setando o Ìndice "index_XXX" para o conversor externo especÌfico
+A: O SEER/OJS suporta a indexa√ß√£o de arquivos fechados atrav√©s de aplica√ß√µes de 
+   convers√£o externa. Na se√ß√£o "Op√ß√µes de Busca" do arquivo de configura√ß√£o 
+   config.inc.php pode ser modificado para permitir a indexa√ß√£o de alguns formatos
+   bin√°rios de arquivo, setando o √≠ndice "index_XXX" para o conversor externo espec√≠fico
    do formato apropriado.
 
-   Note que software de terceiros deve ser instalado para permitir o uso desta opÁ„o, 
+   Note que software de terceiros deve ser instalado para permitir o uso desta op√ß√£o, 
   (ex.: "pdftotext" para arquivos PDF).

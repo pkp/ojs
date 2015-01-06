@@ -47,4 +47,4 @@
 	<message key="plugins.importexport.pubIds.import.error.pubIdExists">El identificador público de tipo "{$pubIdType}" para el objeto {$pubObjectType} con Id. = {$pubObjectId} ya existe.</message>
 	<message key="plugins.importexport.pubIds.import.error.duplicatePubId">El identificador público "{$pubId}" ya se utiliza para otro objeto.</message>
 	<message key="plugins.importexport.pubIds.import.error.unknownPubId">El archivo importado contiene un tipo de identificador público "{$pubIdType}" que no puede ser procesado por ningún módulo pubId. Instale o active el módulo pubId correspondiente antes de intentar importar el conjunto de datos.</message>
-</locale> 
+</locale>

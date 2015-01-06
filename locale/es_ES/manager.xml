@@ -735,4 +735,4 @@
 	<message key="manager.statistics.reports.objectNotFound">Objeto no encontrado en la base de datos</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Se ha enviado el recordatorio pre-vencimiento</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Se ha enviado el recordatorio post-vencimiento</message>
-</locale> 
+</locale>

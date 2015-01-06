@@ -57,4 +57,4 @@
 	<message key="plugins.importexport.common.notification.exportSuccessful">Los objetos seleccionados se exportaron con éxito a '{$param}'</message>
  
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
-</locale> 
+</locale>

@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.googleViewer.name">Módulo de visualización incrustrada de Google</message>
 	<message key="plugins.generic.googleViewer.description"><![CDATA[Este módulo utiliza el servicio de <a href="https://docs.google.com/viewer">visualización de Google Docs </a> para incrustar PDFs en la página de visualización del artículo.]]></message>
-</locale> 
+</locale>

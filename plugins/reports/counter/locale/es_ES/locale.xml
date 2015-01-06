@@ -28,4 +28,4 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">PDF del último año</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total para todas las revistas</message>
 	<message key="plugins.reports.counter.legacyStats">Los siguientes enlaces generan informes mediante datos antiguos del módulo COUNTER. Si desea generar informes COUNTER mediante el nuevo tipo de métrica COUNTER de OJS, utilice los siguientes enlaces.</message>
-</locale> 
+</locale>

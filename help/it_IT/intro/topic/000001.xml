@@ -45,7 +45,7 @@
 	</section>
 	<section title="2. Where can I find technical support, pose bugs, and suggest improvements in using OJS?">
 		<![CDATA[
-<p>Il Public Knowledge Project gestisce un <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum di supporto</a>. Se ciò non dovesse bastare, è possibile inviare richieste a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Segnalazioni di bug dovrebbero essere inviate tramite il<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a> di PKP.</p>
+<p>Il Public Knowledge Project gestisce un <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum di supporto</a>. Se ciò non dovesse bastare, è possibile inviare richieste a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Segnalazioni di bug dovrebbero essere inviate tramite il <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a> di PKP.</p>
 <p>Parte della documentazione è disponibile anche in lingua italiana, sul sito del <a href="http://www.aepic.it/ojs.php" target="_blank">Team Aepic-CILEA</a>; a loro puoi rivolgerti anche per consulenza e supporto nella gestione di OJS.</p>
 		]]>
 	</section>

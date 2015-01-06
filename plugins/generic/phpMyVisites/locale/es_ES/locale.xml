@@ -28,4 +28,4 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Número de identificación de perfil del sitio</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">Dentro de phpMyVisites, haga clic en Administración-&gt;Modificar sitio. El número de identificación de perfil del sitio se muestra al lado del nombre de perfil.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Introduzca un número de identificación de perfil del sitio.</message>
-</locale> 
+</locale>

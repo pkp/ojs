@@ -21,4 +21,4 @@
 	<message key="plugins.block.user.logout">Cerrar sesión</message>
 	<message key="plugins.block.user.signOutAsUser">Cerrar sesión de usuario/a</message>
 	<message key="plugins.block.user.rememberMe">No cerrar sesión</message>
-</locale> 
+</locale>

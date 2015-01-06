@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.usageEvent.displayName">Evento de uso</message>
 	<message key="plugins.generic.usageEvent.description">Crea una enlace que proporciona un evento de uso en un formato definido.</message>
-</locale> 
+</locale>

@@ -29,4 +29,4 @@
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Dentro de Piwik, haga clic en Configuración -&gt; Páginas web. El número de identificación de perfil del sitio se muestra al lado del nombre de perfil.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Introduzca un número de identificación de perfil del sitio.</message>
 
-</locale> 
+</locale>

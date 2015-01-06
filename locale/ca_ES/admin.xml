@@ -100,4 +100,4 @@ Utilització (processament dels fitxers dins d'un directori amb cadena d'inici):
 	<message key="admin.settings.security">Seguretat</message>
 	<message key="admin.settings.security.plugins">Impedir que els/les gestors/es de la revista puguin instalar, actualitzar o suprimir mòduls.</message>
 	<message key="admin.languages.reloadDefaultEmailTemplates">Recarregar les plantilles de correu per defecte</message>
-</locale> 
+</locale>

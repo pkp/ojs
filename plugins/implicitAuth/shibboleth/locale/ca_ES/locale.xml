@@ -16,4 +16,4 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
 	<message key="plugins.implicitAuth.shibboleth.description">Aquest mòdul s'utilitza a tot el lloc web i s'habilita al fitxer de configuració de l'OJS.</message>
-</locale> 
+</locale>

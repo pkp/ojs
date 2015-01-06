@@ -21,4 +21,4 @@
 	<message key="plugins.block.user.logout">Finalitza la sessió</message>
 	<message key="plugins.block.user.signOutAsUser">Finalitza la sessió com a usuari/ària</message>
 	<message key="plugins.block.user.rememberMe">Recorda'm</message>
-</locale> 
+</locale>

@@ -98,4 +98,4 @@
 	<message key="plugins.generic.lucene.sectionForm.ranking.low">Posicionar más abajo</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normal</message>
 	<message key="plugins.generic.lucene.sectionForm.ranking.high">Posicionar más arriba</message>
-</locale> 
+</locale>

@@ -20,4 +20,4 @@
 	<message key="plugins.generic.acron.disabled">Se deshabilitó el módulo Acron.</message>
 
 	<message key="plugins.generic.acron.reload">Volver a cargar tareas planificadas</message>
-</locale> 
+</locale>

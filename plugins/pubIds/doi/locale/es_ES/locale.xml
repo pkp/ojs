@@ -63,4 +63,4 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">archivo complementario</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Podría estar visualizando una vista previa incompleta de los DOI. No se generó un DOI. Se generará automaticamente un único DOI para {$pubObjectType} publicando el número y viendo la página pública {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">El sufijo del DOI indicado ya ha sido asignado a otro elemento publicado. Introduzca un único sufijo del DOI para cada elemento.</message>
-</locale> 
+</locale>

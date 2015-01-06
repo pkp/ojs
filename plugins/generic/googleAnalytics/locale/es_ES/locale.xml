@@ -33,4 +33,4 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Para seguir el número de lectores de un artículo publicado mediante Google Analytics, introduzca un número de cuenta a continuación (p. ej.  UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">No es válido el uso de uno o más números de cuenta de Google Analytics para los autores/as del envío.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nuevo código de seguimiento para Universal Analytics (analytics.js)</message>
-</locale> 
+</locale>

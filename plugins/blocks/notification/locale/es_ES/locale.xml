@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.notification.displayName">Bloque de "Notificaciones" </message>
 	<message key="plugins.block.notification.description">Este módulo muestra información acerca de notificaciones del sistema.</message>
-</locale> 
+</locale>

@@ -43,7 +43,7 @@
 	</section>
 	<section title="2. ADS ile ilgili teknik konular, geliştirme önerilerim ve hata bildirimlerim için nerede destek bulabilirim?">
 		<![CDATA[
-<p>The Public Knowledge Project bir <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Destek Forumu</a> yürütmektedir. Bu formda binin üzerinde bilgi alışverişine ulaşabilir, arama olanağı ile aradığınızı kolayca bulabilirsiniz. Örneğin hata raporlarını arama alanına girerek, o konuda daha önceki bilgi alışverişlerine ulaşabilirsiniz. Eğer bu yöntem sonuç vermez ise, sorunuzu <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> adresine gönderebilirsiniz. Hata bildirimleri PKP tarafından yürütülen <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a> aracılığı ile yapılmalıdır.</p>
+<p>The Public Knowledge Project bir <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Destek Forumu</a> yürütmektedir. Bu formda binin üzerinde bilgi alışverişine ulaşabilir, arama olanağı ile aradığınızı kolayca bulabilirsiniz. Örneğin hata raporlarını arama alanına girerek, o konuda daha önceki bilgi alışverişlerine ulaşabilirsiniz. Eğer bu yöntem sonuç vermez ise, sorunuzu <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> adresine gönderebilirsiniz. Hata bildirimleri PKP tarafından yürütülen <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a> aracılığı ile yapılmalıdır.</p>
 		]]>
 	</section>
 	<section title="3. ADS yazılımını başka bir dile nasıl çeviririm?">

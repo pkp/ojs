@@ -16,4 +16,4 @@
 	<message key="plugins.block.languageToggle.displayName">Bloque de cambio de idioma</message>
 	<message key="plugins.block.languageToggle.description">Este módulo permite cambiar el idioma desde la barra lateral.</message>
 	<message key="plugins.block.languageToggle.selectLabel">Escoge idioma</message>
-</locale> 
+</locale>

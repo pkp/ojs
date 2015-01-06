@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.roundedcorners.displayName">Esquinas redondeadas</message>
 	<message key="plugins.generic.roundedcorners.description">Este módulo coloca un fondo en cada bloque de barras laterales y redondea sus esquinas. Se pueden cambiar los colores mediante la edición de la hoja de estilo CSS del módulo.</message>
-</locale> 
+</locale>

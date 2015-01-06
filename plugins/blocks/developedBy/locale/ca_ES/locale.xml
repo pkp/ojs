@@ -15,4 +15,4 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.block.developedBy.displayName">Bloc «Desenvolupat per»</message>
 	<message key="plugins.block.developedBy.description">Aquest mòdul proporciona l'enllaç «Desenvolupat per» a la barra lateral.</message>
-</locale> 
+</locale>

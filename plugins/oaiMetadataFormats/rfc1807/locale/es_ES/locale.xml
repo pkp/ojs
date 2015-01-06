@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
   <message key="plugins.OAIMetadata.rfc1807.displayName">Formato de metadatos RFC1807</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">Estructura los metadatos según el formato RFC1807.</message>
-</locale> 
+</locale>

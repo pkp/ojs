@@ -46,4 +46,4 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Depósito correcto</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">Los elementos seleccionados se han depositado.</message>
 	<message key="plugins.importexport.sword.depositFailed">Depósito erróneo</message>
-</locale> 
+</locale>

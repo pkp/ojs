@@ -38,4 +38,4 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Territorio</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Id. de autorización solicitada</message>
 	<message key="plugins.auth.ldap.settings.saslprop">Propiedades de seguridad de SASL</message>
-</locale> 
+</locale>

@@ -38,7 +38,7 @@ Please note, that the password will be saved as plain text, i.e. not encrypted, 
 
 Contact/Support
 ---------------
-Please use the PKP support forum (http://pkp.sfu.ca/support/forum/), PKP Bugzilla (http://pkp.sfu.ca/bugzilla/) or email the authors for support, bugfixes, or comments.
+Please use the PKP support forum (http://pkp.sfu.ca/support/forum/), issue tracker (https://github.com/pkp/pkp-lib#issues) or email the authors for support, bugfixes, or comments.
 
 Version History
 ---------------

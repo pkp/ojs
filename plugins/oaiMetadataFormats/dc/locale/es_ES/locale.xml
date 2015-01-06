@@ -13,4 +13,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.oaiMetadata.dc.displayName">Formato de metadatos DC</message>
 	<message key="plugins.oaiMetadata.dc.description">Estructura los metadatos según el formato DC.</message>
-</locale> 
+</locale>

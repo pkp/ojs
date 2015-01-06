@@ -96,4 +96,4 @@
 	<message key="admin.settings.security">Seguridad</message>
 	<message key="admin.settings.security.plugins">Impedir que losl gestores/as de la revista puedan instalar, actualitzar o suprimir módulos.</message>
 	<message key="admin.languages.reloadDefaultEmailTemplates">Recargar las plantillas de correo por defecto</message>
-</locale> 
+</locale>

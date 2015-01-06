@@ -33,4 +33,4 @@
 	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Ninguna galerada se corresponde con la etiqueta indicada "{$galleyLabel}".</message>
 
 	<message key="plugins.importexport.erudit.unavailable">No disponible</message>
-</locale> 
+</locale>

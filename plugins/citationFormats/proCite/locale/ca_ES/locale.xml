@@ -16,4 +16,4 @@
 	<message key="plugins.citationFormats.proCite.displayName">Mòdul per al format de citació ProCite</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName">Format ProCite - RIS (Macintosh i Windows)</message>
 	<message key="plugins.citationFormats.proCite.description">Aquest mòdul implementa el format de citació ProCite.</message>
-</locale> 
+</locale>

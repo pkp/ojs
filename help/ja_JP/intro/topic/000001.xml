@@ -43,7 +43,7 @@
 	</section>
 	<section title="2. OJSの使用において、技術サポートはどこで得られますか、また、バグ報告およびシステム改良提案はどこで行うことができますか。">
 		<![CDATA[
-<p>Public Knowledgeプロジェクトが<a href="http://pkp.sfu.ca/support/forum/" target="_blank">サポートフォーラム</a>を運営しています。ここでは、1000件をはるかに超える意見が交換されており、回答を検索したり、質問をしたりすることができます。例えば、エラーメッセージを検索して、既知の問題に対する解決法を見つけることができます。解決法が見つからなかった場合は、<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>に質問を送ることができます。バグ報告はPKPの<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>に投稿してください。</p>
+<p>Public Knowledgeプロジェクトが<a href="http://pkp.sfu.ca/support/forum/" target="_blank">サポートフォーラム</a>を運営しています。ここでは、1000件をはるかに超える意見が交換されており、回答を検索したり、質問をしたりすることができます。例えば、エラーメッセージを検索して、既知の問題に対する解決法を見つけることができます。解決法が見つからなかった場合は、<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>に質問を送ることができます。バグ報告はPKPの<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>に投稿してください。</p>
 		]]>
 	</section>
 	<section title="3. OJSを別の言語に翻訳するにはどうしたらいいですか。">

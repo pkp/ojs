@@ -735,4 +735,4 @@
 	<message key="manager.setup.confirmResetLicense">Estàs segur de voler reiniciar la llicència i la informació del copyright adjunta al contingut publicat i substituir-la per la llicència actual de la revista?</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">S'ha enviat el recordatori pre-venciment</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">S'ha enviat el recordatori post-venciment</message>
-</locale> 
+</locale>

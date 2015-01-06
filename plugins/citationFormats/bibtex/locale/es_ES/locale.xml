@@ -16,4 +16,4 @@
 	<message key="plugins.citationFormats.bibtex.displayName">Módulo de formato de citas BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.description">Este módulo ofrece el formato de citas BibTeX.</message>
-</locale> 
+</locale>

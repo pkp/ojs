@@ -43,7 +43,7 @@
 	</section>
 	<section title="2. Onde eu posso encontrar suporte técnico, informar bugs, e sugerir melhorias no sistema?">
 		<![CDATA[
-<p>O Public Knowledge Project opera um <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum de Suporte</a> onde pode-se pesquisar por muitas respostas e colocar novas perguntas. Por exemplo, mensagens de erro podem ser pesquisadas, levando a soluções propostas para os assuntos mais comuns. Caso não encontre o que precisa, o usuário pode perguntar para <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Informes sobre Bugs devem ser submetidos para o <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a> do PKP.</p>
+<p>O Public Knowledge Project opera um <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum de Suporte</a> onde pode-se pesquisar por muitas respostas e colocar novas perguntas. Por exemplo, mensagens de erro podem ser pesquisadas, levando a soluções propostas para os assuntos mais comuns. Caso não encontre o que precisa, o usuário pode perguntar para <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Informes sobre Bugs devem ser submetidos para o <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a> do PKP.</p>
 		]]>
 	</section>
 	<section title="3. Como traduzir o sistema para outros idiomas?">

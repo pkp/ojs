@@ -17,4 +17,4 @@
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Aquest mòdul implementa el format de citació MLA.</message>
 	<message key="plugins.citationFormats.mla.noPages">núm. de pàg.</message>	
-</locale> 
+</locale>

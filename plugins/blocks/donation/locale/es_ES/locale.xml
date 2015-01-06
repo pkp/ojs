@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.donation.displayName">Bloque de donaciones</message>
 	<message key="plugins.block.donation.description">Este módulo proporciona un enlace en la barra lateral para aceptar donaciones.</message>
-</locale> 
+</locale>

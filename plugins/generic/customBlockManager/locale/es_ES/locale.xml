@@ -29,4 +29,4 @@
 	<message key="plugins.generic.customBlock.editContent">Edite el contenido de la barra lateral</message>
 	<message key="plugins.generic.customBlock.contentRequired">Debe incluir algún contenido. Si desea eliminar este bloque, puede hacerlo con el módulo Block Manager o bien deseleccionarlo en el paso 5 de la instalación de la revista.</message>
 	<message key="plugins.generic.customBlock.edit">Editar</message>
-</locale> 
+</locale>

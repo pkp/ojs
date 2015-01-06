@@ -15,4 +15,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.sehl.name">Módulo SEHL</message>
 	<message key="plugins.generic.sehl.description">Este módulo implementa el Search Engine HighLighting (SEHL), que permite que un buscador localice un artículo en HTML y resalte las palabras clave buscadas.</message>
-</locale> 
+</locale>

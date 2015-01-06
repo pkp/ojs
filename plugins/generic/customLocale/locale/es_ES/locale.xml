@@ -32,4 +32,4 @@
 	<message key="plugins.generic.customLocale.file.edit">Editar {$filename}</message>
 	<message key="plugins.generic.customLocale.file.reference">Texto predeterminado</message>
 	<message key="plugins.generic.customLocale.file.custom">Texto personalizado</message>
-</locale> 
+</locale>

@@ -170,5 +170,5 @@ Windows XPシステムでは、Windows Task Schedulerを使ってこれを行う
 技術的問題でOJSの開発チームに連絡を取りたい場合はフォーラムでお願いします。
 
 フォーラム: <http://pkp.sfu.ca/support/forum/>
-バグ報告: <http://pkp.sfu.ca/bugzilla/>
+バグ報告: <https://github.com/pkp/pkp-lib#issues>
 メール: <pkp.contact@gmail.com>

@@ -72,4 +72,4 @@
 	<message key="plugins.generic.translator.saveBeforeContinuing">Asegúrese de guardar todos los cambios realizados en esta página antes de continuar o los perderá. ¿Desea continuar? Todos los cambios sin guardar se perderán.</message>
 	<message key="plugins.generic.translator.fileNotWriteable">Este archivo de configuración regional no se puede editar en el servidor. No se guardará ningún cambio que realice.</message>
 	<message key="plugins.generic.translator.filesNotWriteable">Estos archivos de configuración local no se pueden editar en el servidor. No se guardará ningún cambio que realice en ellos.</message>
-</locale> 
+</locale>

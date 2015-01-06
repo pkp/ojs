@@ -16,4 +16,4 @@
 	<message key="plugins.citationFormats.endNote.displayName">Mòdul per al format de citació EndNote</message>
 	<message key="plugins.citationFormats.endNote.citationFormatName">Format EndNote - EndNote (Macintosh i Windows)</message>
 	<message key="plugins.citationFormats.endNote.description">Aquest mòdul implementa el format de citació EndNote.</message>
-</locale> 
+</locale>

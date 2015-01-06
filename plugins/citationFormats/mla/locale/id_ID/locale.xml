@@ -15,4 +15,4 @@
 	<message key="plugins.citationFormats.mla.displayName"> Plugin format kutipan MLA </message> 
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message> 
 	<message key="plugins.citationFormats.mla.description"> Plugin ini menerapkan format kutipan MLA.</message>	<message key="plugins.citationFormats.mla.noPages">n. pag.</message>	
-</locale> 
+</locale>

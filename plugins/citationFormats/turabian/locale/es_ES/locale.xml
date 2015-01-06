@@ -16,4 +16,4 @@
 	<message key="plugins.citationFormats.turabian.displayName">Módulo de formato de citas Turabian</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">Este módulo ofrece el formato de citas Turabian.</message>
-</locale> 
+</locale>

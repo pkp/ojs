@@ -22,4 +22,4 @@
 	<message key="plugins.importexport.doaj.export.journalInfo">Exportar la información de un artículo en XML para archivarla en el DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Para que su revista sea considerada en el DOAJ, envíe este formulario parcialmente autocompletado al DOAJ e incluya toda la información posible.</message>
 
-</locale> 
+</locale>

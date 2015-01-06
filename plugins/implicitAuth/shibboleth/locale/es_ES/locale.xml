@@ -17,4 +17,4 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
 	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Este módulo está presente en todo el sitio web y está habilitado en el archivo de configuración de OJS.</message>
-</locale> 
+</locale>
