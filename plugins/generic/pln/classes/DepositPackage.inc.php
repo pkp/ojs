@@ -186,8 +186,8 @@ class DepositPackage {
 		// set up folder and file locations
 		$bagDir = $this->getDepositDir() . DIRECTORY_SEPARATOR . 'bag';
 		$packageFile = $this->getPackageFilePath();
-		$exportFile =  $bagDir . DIRECTORY_SEPARATOR . $this->_deposit->getObjectType() . '.xml';
-		$termsFile =  $bagDir . DIRECTORY_SEPARATOR . 'terms.xml';
+		$exportFile =  tempnam(sys_get_temp_dir(), 'ojs-pln-export-');
+		$termsFile =  tempnam(sys_get_temp_dir(), 'ojs-pln-terms-');
 		
 		$bag = new BagIt($bagDir);
 		
@@ -251,10 +251,6 @@ class DepositPackage {
 		$bag->addFile($termsFile, 'terms' . $this->_deposit->getUUID() . '.xml');
 		$bag->update();
 		
-		// delete files
-		$fileManager->deleteFile($exportFile);
-		$fileManager->deleteFile($termsFile);
-
 		// create the bag
 		$bag->package($packageFile,'zip');
 		
