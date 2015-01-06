@@ -180,8 +180,9 @@ git
 * A web interface to the git repository is located at <http://github.com/pkp>.
 * A brief log message describing the changes made must be included with all git
   commits.
-* Whenever possible, git commit log messages should include "*BUG_ID_NUMBER*" to
-  reference a Bugzilla report at <http://pkp.sfu.ca/bugzilla/>.
+* Whenever possible, git commit log messages should be prefixed with
+  "pkp/pkp-lib#ISSUENUM" to reference a git issue; see
+  <https://github.com/pkp/pkp-lib#issues>.
 * Please consult http://pkp.sfu.ca/wiki/index.php/HOW-TO_check_out_PKP_applications_from_git
   for instructions on setting up a development environment.
 

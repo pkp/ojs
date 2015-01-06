@@ -15,7 +15,8 @@ General Questions
    1) Who can I contact for support?
 
 A: A support forum for OJS is available at <http://pkp.sfu.ca/support/forum/>.
-   Bugs or feature requests can be reported at <http://pkp.sfu.ca/bugzilla/>.
+   Bugs or feature requests can be reported at:
+   <https://github.com/pkp/pkp-lib#issues>
    Although the forum is the preferred method of contact, email inquiries
    regarding OJS can be sent to <pkp.contact@gmail.com>.
    
