@@ -19,14 +19,13 @@
 
 	<!-- Set up Dataverse: DVN URL and authentication details -->
 	<message key="plugins.generic.dataverse.settings.connect">Connect</message>
-	<message key="plugins.generic.dataverse.settings.dvnUri">Dataverse Network URL</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL of Dataverse Network to which the journal's Dataverse belongs</message>
-	<message key="plugins.generic.dataverse.settings.usernameDescription">Username of account to be used to deposit files in Dataverse</message>
-	<message key="plugins.generic.dataverse.settings.passwordDescription">Password for username given above</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Dataverse Network URL is required.</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Dataverse Network URL is not valid.</message>
-	<message key="plugins.generic.dataverse.settings.usernameRequired">Please enter a valid username for the specified Dataverse Network.</message>
-	<message key="plugins.generic.dataverse.settings.passwordRequired">Please enter a valid password for the specified Dataverse Network.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">Dataverse URL</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">Root Dataverse URL</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Username or API token</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Password. Not required for API token.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Dataverse URL is required.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Can't connect to Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Please enter a Dataverse username.</message>
 
 	<!-- Set up Dataverse: select Dataverse -->
 	<message key="plugins.generic.dataverse.settings.selectDataverse">Select Dataverse</message>
