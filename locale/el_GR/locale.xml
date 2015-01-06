@@ -644,7 +644,7 @@
         <message key="search.allJournals">Όλα τα περιοδικά</message>
         <message key="search.authorIndex">Ευρετήριο Συγγραφέων</message>
         <message key="search.authorDetails">Λεπτομέρειες Συγγραφέα</message>
-        <message key="search.syntaxInstructions"><![CDATA[Συμβουλές αναζήτησης:  <ul> 
+        <message key="search.syntaxInstructions"><![CDATA[<h4>Συμβουλές αναζήτησης:  </h4><ul> 
         <li>Δεν γίνεται διάκριση πεζών-κεφαλαίων στους όρους αναζήτησης</li> 
         <li>Συνήθεις λέξεις δεν λαμβάνονται υπόψη κατά την αναζήτηση</li> 
         <li>Εξ ορισμού τα αποτελέσματα της αναζήτησης περιλαμβάνουν μόνο άρθρα που περιέχουν <em>όλους</em> τους όρους αναζήτησης (ο τελεστής <em>AND</em> υπονοείται)</li> 

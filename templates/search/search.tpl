@@ -187,14 +187,12 @@
 	</table>
 
 	{capture assign="syntaxInstructions"}{call_hook name="Templates::Search::SearchResults::SyntaxInstructions"}{/capture}
-	<p>
 		{if empty($syntaxInstructions)}
 			{translate key="search.syntaxInstructions"}
 		{else}
 			{* Must be properly escaped in the controller as we potentially get HTML here! *}
 			{$syntaxInstructions}
 		{/if}
-	</p>
 </div>
 
 {include file="common/footer.tpl"}
