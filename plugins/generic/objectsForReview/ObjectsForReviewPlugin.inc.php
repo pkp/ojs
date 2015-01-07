@@ -419,12 +419,12 @@ class ObjectsForReviewPlugin extends GenericPlugin {
 			$templateMgr = TemplateManager::getManager();
 			if ($hookName == 'Templates::Editor::Index::AdditionalItems') { // On editor's home page
 				$output .= '<h3>' . __('plugins.generic.objectsForReview.editor.objectsForReview') . '</h3>
-							<ul class="plain">
-							<li>&#187; <a href="' . Request::url(null, 'editor', 'reviewObjectTypes') . '">' . __('plugins.generic.objectsForReview.editor.objectTypes') . '</a></li>
-							<li>&#187; <a href="' . Request::url(null, 'editor', 'objectsForReview', 'all') . '">' . __('plugins.generic.objectsForReview.editor.objectsForReview') . '</a></li>
+							<ul>
+							<li><a href="' . Request::url(null, 'editor', 'reviewObjectTypes') . '">' . __('plugins.generic.objectsForReview.editor.objectTypes') . '</a></li>
+							<li><a href="' . Request::url(null, 'editor', 'objectsForReview', 'all') . '">' . __('plugins.generic.objectsForReview.editor.objectsForReview') . '</a></li>
 							</ul>';
 			} elseif ($hookName == 'Templates::Author::Index::AdditionalItems') { // On author's home page
-				$output .= '<br /><div class="separator"></div><h3>' . __('plugins.generic.objectsForReview.author.objectsForReview') . '</h3><ul class="plain"><li>&#187; <a href="' . Request::url(null, 'author', 'objectsForReview', 'all') . '">' . __('plugins.generic.objectsForReview.author.myObjectsForReview') . '</a></li></ul><br />';
+				$output .= '<br /><div class="separator"></div><h3>' . __('plugins.generic.objectsForReview.author.objectsForReview') . '</h3><ul><li><a href="' . Request::url(null, 'author', 'objectsForReview', 'all') . '">' . __('plugins.generic.objectsForReview.author.myObjectsForReview') . '</a></li></ul><br />';
 			} elseif ($hookName == 'Templates::Common::Header::Navbar::CurrentJournal' && $this->getSetting($journal->getId(), 'displayListing')) { // In the main nav bar
 				$output .= '<li><a href="' . Request::url(null, 'objectsForReview') . '" target="_parent">' . __('plugins.generic.objectsForReview.public.headerLink') . '</a></li>';
 			}

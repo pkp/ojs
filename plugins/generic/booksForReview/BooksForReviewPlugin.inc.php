@@ -510,7 +510,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$smarty =& $params[1];
 			$output =& $params[2];
 			$templateMgr = TemplateManager::getManager();
-			$output .= '<h3>' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</h3><ul class="plain"><li>&#187; <a href="' . $templateMgr->smartyUrl(array('op'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</a></li></ul>';
+			$output .= '<h3>' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</h3><ul><li><a href="' . $templateMgr->smartyUrl(array('op'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.editor.booksForReview'), $smarty) . '</a></li></ul>';
 		}
 		return false;
 	}
@@ -547,7 +547,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 			$smarty =& $params[1];
 			$output =& $params[2];
 			$templateMgr = TemplateManager::getManager();
-			$output .= '<br /><div class="separator"></div><h3>' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.booksForReview'), $smarty) . '</h3><ul class="plain"><li>&#187; <a href="' . $templateMgr->smartyUrl(array('page'=>'author', 'op'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.myBooksForReview'), $smarty) . '</a></li><li>&#187; <a href="' . $templateMgr->smartyUrl(array('page'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.availableBooksForReview'), $smarty) . '</a></li></ul><br />';
+			$output .= '<br /><div class="separator"></div><h3>' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.booksForReview'), $smarty) . '</h3><ul><li><a href="' . $templateMgr->smartyUrl(array('page'=>'author', 'op'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.myBooksForReview'), $smarty) . '</a></li><li><a href="' . $templateMgr->smartyUrl(array('page'=>'booksForReview'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.booksForReview.author.availableBooksForReview'), $smarty) . '</a></li></ul><br />';
 		}
 		return false;
 	}

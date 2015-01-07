@@ -569,7 +569,7 @@ class DataversePlugin extends GenericPlugin {
 		if (!empty($dataPAvailability)) {
 			$templateMgr =& $args[1];
 			$output =& $args[2];
-			$output .= '<li>&#187; <a href="'. $templateMgr->smartyUrl(array('page' => 'dataverse', 'op'=>'dataAvailabilityPolicy'), $templateMgr) .'">';
+			$output .= '<li><a href="'. $templateMgr->smartyUrl(array('page' => 'dataverse', 'op'=>'dataAvailabilityPolicy'), $templateMgr) .'">';
 			$output .= __('plugins.generic.dataverse.settings.dataAvailabilityPolicy');
 			$output .= '</a></li>';
 		}

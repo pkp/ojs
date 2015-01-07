@@ -150,7 +150,7 @@ class ThesisPlugin extends GenericPlugin {
 			$smarty =& $params[1];
 			$output =& $params[2];
 			$templateMgr = TemplateManager::getManager();
-			$output .= '<li>&#187; <a href="' . $this->smartyPluginUrl(array('op'=>'plugin', 'path'=>'theses'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.thesis.manager.theses'), $smarty) . '</a></li>';
+			$output .= '<li><a href="' . $this->smartyPluginUrl(array('op'=>'plugin', 'path'=>'theses'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.thesis.manager.theses'), $smarty) . '</a></li>';
 		}
 		return false;
 	}

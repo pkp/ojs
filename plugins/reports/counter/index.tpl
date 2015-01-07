@@ -14,16 +14,16 @@
 
 <p>{translate key="plugins.reports.counter.description"}</p>
 
-<ul class="plain">
-	<li>&#187; {translate key="plugins.reports.counter.1a.title"}{foreach from=$years item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="report" year=$year}">{$year|escape}</a>{/foreach}</li>
-	<li>&#187; XML version {foreach from=$years item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="reportxml" year=$year}">{$year|escape}</a>{/foreach}</li>
+<ul>
+	<li>{translate key="plugins.reports.counter.1a.title"}{foreach from=$years item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="report" year=$year}">{$year|escape}</a>{/foreach}</li>
+	<li>XML version {foreach from=$years item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="reportxml" year=$year}">{$year|escape}</a>{/foreach}</li>
 </ul>
 
 {if $legacyYears}
 	<p>{translate key="plugins.reports.counter.legacyStats"}</p>
-	<ul class="plain">
-		<li>&#187; {translate key="plugins.reports.counter.1a.title"}{foreach from=$legacyYears item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="report" year=$year useOldCounterStats=true}">{$year|escape}</a>{/foreach}</li>
-		<li>&#187; XML version {foreach from=$legacyYears item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="reportxml" year=$year useOldCounterStats=true}">{$year|escape}</a>{/foreach}</li>
+	<ul>
+		<li>{translate key="plugins.reports.counter.1a.title"}{foreach from=$legacyYears item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="report" year=$year useOldCounterStats=true}">{$year|escape}</a>{/foreach}</li>
+		<li>XML version {foreach from=$legacyYears item=year}&nbsp;&nbsp;<a href="{url path="CounterReportPlugin" type="reportxml" year=$year useOldCounterStats=true}">{$year|escape}</a>{/foreach}</li>
 	</ul>
 {/if}
 

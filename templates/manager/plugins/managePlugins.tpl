@@ -33,8 +33,8 @@
 				</ul>
 			{/if}
 			{if $uploaded}
-				<ul class="plain">
-					<li>&#187;&nbsp;
+				<ul>
+					<li>
 					{if is_array($message)}
 						{translate key=$message[0]} {$message[1]}
 					{else}
@@ -77,8 +77,8 @@
 				</ul>
 			{/if}
 			{if $uploaded}
-				<ul class="plain">
-					<li>&#187;&nbsp;
+				<ul>
+					<li>
 					{if is_array($message)}
 						{translate key=$message[0]} {$message[1]}
 					{else}

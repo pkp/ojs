@@ -16,9 +16,9 @@
 <br/>
 
 <h3>{translate key="plugins.importexport.native.export"}</h3>
-<ul class="plain">
-	<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.native.export.issues"}</a></li>
-	<li>&#187; <a href="{plugin_url path="articles"}">{translate key="plugins.importexport.native.export.articles"}</a></li>
+<ul>
+	<li><a href="{plugin_url path="issues"}">{translate key="plugins.importexport.native.export.issues"}</a></li>
+	<li><a href="{plugin_url path="articles"}">{translate key="plugins.importexport.native.export.articles"}</a></li>
 </ul>
 
 <h3>{translate key="plugins.importexport.native.import"}</h3>

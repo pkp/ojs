@@ -14,11 +14,11 @@
 {if $mainPage}
 	<p>{translate key="manager.plugins.description"}</p>
 
-	<ul id="plugins" class="plain">
+	<ul id="plugins">
 		{foreach from=$plugins item=plugin}
 			{if $plugin->getCategory() != $category}
 				{assign var=category value=$plugin->getCategory()}
-				<li>&#187; <a href="{url path=$category|escape}">{translate key="plugins.categories.$category"}</a></li>
+				<li><a href="{url path=$category|escape}">{translate key="plugins.categories.$category"}</a></li>
 			{/if}
 		{/foreach}
 		{if !$preventManagerPluginManagement}
@@ -36,7 +36,7 @@
 		{/if}
 	{/foreach}
 
-	<ul id="plugins" class="plain">
+	<ul id="plugins">
 		{foreach from=$plugins item=plugin}
 			{if !$plugin->getHideManagement()}
 			{if $plugin->getCategory() != $category}

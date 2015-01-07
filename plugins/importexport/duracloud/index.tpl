@@ -33,9 +33,9 @@
 
 	{if in_array($duracloudSpace, $spaces)}{* if $duracloudSpace valid *}
 		<h3>{translate key="manager.importExport"}</h3>
-		<ul class="plain">
-			<li>&#187; <a href="{plugin_url path="exportableIssues"}">{translate key="plugins.importexport.duracloud.export.issues"}</a></li>
-			<li>&#187; <a href="{plugin_url path="importableIssues"}">{translate key="plugins.importexport.duracloud.import.issues"}</a></li>
+		<ul>
+			<li><a href="{plugin_url path="exportableIssues"}">{translate key="plugins.importexport.duracloud.export.issues"}</a></li>
+			<li><a href="{plugin_url path="importableIssues"}">{translate key="plugins.importexport.duracloud.import.issues"}</a></li>
 		</ul>
 	{/if}{* $duracloudSpace is valid *}
 
