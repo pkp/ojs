@@ -54,7 +54,7 @@
 		<rights>{$journal->getLocalizedSetting('copyrightNotice')|strip|escape:"html"}</rights>
 	{/if}
 
-	<subtitle>{$description|strip|escape:"html"}</subtitle>
+	<subtitle type="html">{$description|strip|escape:"html"}</subtitle>
 
 	{foreach name=sections from=$publishedArticles item=section key=sectionId}
 		{foreach from=$section.articles item=article}
