@@ -29,12 +29,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 		$creators = array();
 		$authors = $article->getAuthors();
 		for ($i = 0, $num = count($authors); $i < $num; $i++) {
-			$authorName = $authors[$i]->getFullName(true);
-			$affiliation = $authors[$i]->getLocalizedAffiliation();
-			if (!empty($affiliation)) {
-				$authorName .= '; ' . $affiliation;
-			}
-			$creators[] = $authorName;
+			$creators[] = $authors[$i]->getFullName(true);
 		}
 
 		$subjects = array_merge_recursive(
@@ -80,11 +75,13 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			"\thttp://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd\">\n" .
 			"\t<leader>     cam         3u     </leader>\n" .
 			($article->getDatePublished()?"\t<controlfield tag=\"008\">\"" . date('ymd Y', strtotime($article->getDatePublished())) . "                        eng  \"</controlfield>\n":'') .
+			$this->formatElement('022', '#', '#', '$a', $journal->getSetting('onlineIssn')) .
+			$this->formatElement('022', '#', '#', '$a', $journal->getSetting('printIssn')) .
 			$this->formatElement('042', ' ', ' ', 'a', 'dc') .
 			$this->formatElement('245', '0', '0', 'a', $article->getTitle($journal->getPrimaryLocale())) .
 			$this->formatElement('720', ' ', ' ', 'a', $creators) .
 			$this->formatElement('653', ' ', ' ', 'a', $subject) .
-			$this->formatElement('520', ' ', ' ', 'a', $article->getLocalizedAbstract()) .
+			$this->formatElement('520', ' ', ' ', 'a', String::html2text($article->getLocalizedAbstract())) .
 			$this->formatElement('260', ' ', ' ', 'b', $publisher) .
 			$this->formatElement('720', ' ', ' ', 'a', strip_tags($article->getLocalizedSponsor())) .
 			($issue->getDatePublished()?$this->formatElement('260', ' ', ' ', 'c', $issue->getDatePublished()):'') .
@@ -93,7 +90,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			$this->formatElement('856', '4', '0', 'u', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))) .
 			$this->formatElement('786', '0', ' ', 'n', $source) .
 
-			$this->formatElement('546', ' ', ' ', 'a', $article->getLanguage()) .
+			$this->formatElement('546', ' ', ' ', 'a', AppLocale::get3LetterIsoFromLocale($article->getLocale())) .
 			$this->formatElement('787', '0', ' ', 'n', $record->relation) .
 			$this->formatElement('500', ' ', ' ', 'a', $coverage) .
 			$this->formatElement('540', ' ', ' ', 'a', __('submission.copyrightStatement', array('copyrightYear' => $article->getCopyrightYear(), 'copyrightHolder' => $article->getLocalizedCopyrightHolder()))) .
@@ -109,8 +106,10 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 	 * @param $ind2 string
 	 * @param $code string
 	 * @param $value mixed
+	 * @param $includeEmpty boolean Whether to include the field if value empty
 	 */
-	function formatElement($tag, $ind1, $ind2, $code, $value) {
+	function formatElement($tag, $ind1, $ind2, $code, $value, $includeEmpty = false) {
+		if (empty($value) && !$includeEmpty) return '';
 		if (!is_array($value)) {
 			$value = array($value);
 		}
