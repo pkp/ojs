@@ -30,7 +30,7 @@
 		{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 	{/if}
 	{if $description}
-	<subtitle>{$description|strip|escape:"html"}</subtitle>
+		<subtitle type="html">{$description|strip|escape:"html"}</subtitle>
 	{/if}
 
 {foreach from=$announcements item=announcement}
