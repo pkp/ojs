@@ -5,7 +5,6 @@
  *
  * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
- * Copyright (c) 2014 Eirik Hanssen
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleHTMLGalley
@@ -34,7 +33,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	}
 
 	/**
-	* Eirik Hanssen, Oslo and Akershus University College of Applied Sciences
+	* Eirik Hanssen, Oslo and Akershus University College of Applied Sciences 2015
 	* Return string contains the <body> element of the HTML Galley file renamed to a <div> element.
 	* The returned string is a html fragment where empty tags will be self closed, as required by xhtml rulesybe.
 	* The purpose is to allow to allow OJS pages displaying the HTML Galley of an article to validate. Without filtering the HTML file string
@@ -47,8 +46,8 @@ class ArticleHTMLGalley extends ArticleGalley {
 	function getHTMLBodyContents($htmldoc){
 		// first check if DOMDocument class is available
 		if (class_exists('DOMDocument')) {
-			$originalHtmlDocument = new DOMDocument;
-			$htmlBodyContents = new DOMDocument;
+			$originalHtmlDocument = new DOMDocument();
+			$htmlBodyContents = new DOMDocument();
 			$originalHtmlDocument->loadHTML($htmldoc);
 
 			// Get the body element node from the full html document.
@@ -146,7 +145,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 
 		// Eirik Hanssen 2014-05-15:
 		// to make HTML Galley webpages in OJS validate, $contents will be filtered through the new getHTMLBodyContents() function
-		// This wil grab the <body> element of the article (with all it's contents), rename it to a <div> tag  and return that instead as the HTML Galley html-string.
+		// This will grab the <body> element of the article (with all it's contents), rename it to a <div> tag  and return that instead as the HTML Galley html-string.
 		return $this->getHTMLBodyContents($contents);
 	}
 
