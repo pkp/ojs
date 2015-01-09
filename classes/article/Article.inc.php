@@ -139,7 +139,7 @@ class Article extends Submission {
 			if (isset($copyrightHolders[$locale])) return $copyrightHolders[$locale];
 		}
 		// Fallback: return anything available
-		return array_shift($copyrightHolders);
+		return array_shift((array) $copyrightHolders);
 	}
 
 	/**
