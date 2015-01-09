@@ -96,6 +96,14 @@ class CustomBlockEditForm extends Form {
 	function readInputData() {
 		$this->readUserVars(array('blockContent'));
 	}
+	
+	/**
+	 * Get the names of localized fields
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('blockContent');
+	}
 
 	/**
 	 * Save page into DB
