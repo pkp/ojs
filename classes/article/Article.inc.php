@@ -134,12 +134,12 @@ class Article extends Submission {
 	 * Get the localized copyright holder for this article.
 	 */
 	function getLocalizedCopyrightHolder() {
-		$copyrightHolders = $this->getCopyrightHolder(null);
+		$copyrightHolders = (array) $this->getCopyrightHolder(null);
 		foreach (AppLocale::getLocalePrecedence() as $locale) {
 			if (isset($copyrightHolders[$locale])) return $copyrightHolders[$locale];
 		}
 		// Fallback: return anything available
-		return array_shift((array) $copyrightHolders);
+		return array_shift($copyrightHolders);
 	}
 
 	/**
