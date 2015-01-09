@@ -9,7 +9,7 @@
  *
  *}
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
-<rss version="2.0" xmlns:cc="http://web.resource.org/cc/">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/">
 	<channel>
 		{* required elements *}
 		<title>{$journal->getLocalizedTitle()|strip|escape:"html"}</title>
