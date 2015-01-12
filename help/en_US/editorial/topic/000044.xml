@@ -51,14 +51,13 @@
 				<li>Run the document inspector, which will then do a search of the document properties and indicated if any document property fields contain any information.</li>
 				<li>If the document inspector finds that some of the document properties contain information it will notify you and give you the option to "Remove all," which you will click to remove the document properties and personal information from the document.</li>
 			</ol>
-		</li>
-		<li><p>For <strong>PDF files</strong>:</p>
-		<ul>
-			<li>With PDFs, the authors' names should also be removed from Document Properties found under File on Adobe Acrobat's main menu.</li>
-		</ul>
-	</li>
-</ul>
-
+			</li>
+			<li><p>For <strong>PDF files</strong>:</p>
+			<ul>
+				<li>With PDFs, the authors' names should also be removed from Document Properties found under File on Adobe Acrobat's main menu.</li>
+			</ul>
+			</li>
+		</ol>
 		]]>
 	</section>
 </topic>
