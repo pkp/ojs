@@ -9,7 +9,7 @@
  *
  *}
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/">
 	<channel>
 		{* required elements *}
 		<title>{$journal->getLocalizedTitle()|strip|escape:"html"}</title>
@@ -66,6 +66,15 @@
 					{* <comments/> *}
 					{* <source/> *}
 
+					<dc:rights>
+						{translate|escape key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear() copyrightHolder=$article->getLocalizedCopyrightHolder()}
+						{$article->getLicenseURL()|escape}
+					</dc:rights>
+					{if ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_ISSUE_DEFAULT && $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN)) && $article->isCCLicense()}
+						<cc:license rdf:resource="{$article->getLicenseURL()|escape}" />
+					{else}
+						<cc:license></cc:license>
+					{/if}
 					<guid isPermaLink="true">{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</guid>
 					{if $article->getDatePublished()}
 						<pubDate>{$article->getDatePublished()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
