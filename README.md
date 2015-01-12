@@ -38,6 +38,10 @@ Running the tests :
 
     ./lib/pkp/tools/runAllTests.sh -Cc
 
+## Bugs / Issues
+
+See https://github.com/pkp/pkp-lib/#issues for information on reporting issues.
+
 ## License
 
 This software is released under the the [GNU General Public License][gpl-licence].
