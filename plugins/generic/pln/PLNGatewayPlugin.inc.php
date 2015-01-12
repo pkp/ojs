@@ -16,6 +16,7 @@
 
 import('classes.plugins.GatewayPlugin');
 import('lib.pkp.classes.site.VersionCheck');
+import('lib.pkp.classes.db.DBResultRange');
 
 class PLNGatewayPlugin extends GatewayPlugin {
 	/** @var $parentPluginName string Name of parent plugin */
@@ -111,6 +112,11 @@ class PLNGatewayPlugin extends GatewayPlugin {
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$ojsVersion =& $versionDao->getCurrentVersion();
 		$templateMgr->assign('ojsVersion', $ojsVersion->getVersionString());
+                
+                $publishedArticlesDAO =& DAORegistry::getDAO('PublishedArticleDAO');
+                $range = new DBResultRange(12, 1);
+                $publishedArticles =& $publishedArticlesDAO->getPublishedArticlesByJournalId($journal->getId(), $range,  true);
+                $templateMgr->assign_by_ref('articles', $publishedArticles);
 
 		$templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl');
 
