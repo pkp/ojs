@@ -118,7 +118,7 @@ class PLNGatewayPlugin extends GatewayPlugin {
                 $publishedArticles =& $publishedArticlesDAO->getPublishedArticlesByJournalId($journal->getId(), $range,  true);
                 $templateMgr->assign_by_ref('articles', $publishedArticles);
 
-		$templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl');
+		$templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl', 'text/xml');
 
 		return true;
 	}

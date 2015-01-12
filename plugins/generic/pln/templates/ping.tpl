@@ -13,7 +13,7 @@
         <title>{$journal->getLocalizedTitle()}</title>
         <articles count='{$articles->getCount()}'>
             {foreach from=$articles->toArray() item=article}
-            <article pubDate='{$article->getDatePublished()}'>{$article->getLocalizedTitle()}</article>
+            <article pubDate='{$article->getDatePublished()}'>{$article->getLocalizedTitle()|escape}</article>
             {/foreach}
         </articles>
     </journalInfo>
