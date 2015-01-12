@@ -18,6 +18,8 @@ import('classes.plugins.GatewayPlugin');
 import('lib.pkp.classes.site.VersionCheck');
 import('lib.pkp.classes.db.DBResultRange');
 
+define('PLN_PLUGIN_PING_ARTICLE_COUNT', 12);
+
 class PLNGatewayPlugin extends GatewayPlugin {
 	/** @var $parentPluginName string Name of parent plugin */
 	var $parentPluginName;
@@ -35,18 +37,22 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
+         * @copydoc Plugin::getName
+         */
 	function getName() {
 		return 'PLNGatewayPlugin';
 	}
 
+        /**
+         * @copydoc Plugin::getDisplayName
+         */
 	function getDisplayName() {
 		return __('plugins.generic.plngateway.displayName');
 	}
 
+        /**
+         * @copydoc Plugin::getDescription
+         */
 	function getDescription() {
 		return __('plugins.generic.plngateway.description');
 	}
@@ -93,34 +99,34 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	 * @return array
 	 */
 	function getManagementVerbs() {
-		return array();
+                return array();
 	}
         
 	/**
 	 * Handle fetch requests for this plugin.
 	 */
 	function fetch() {
-		$templateMgr =& TemplateManager::getManager();
-                
-		$journal =& Request::getJournal();
+                $templateMgr =& TemplateManager::getManager();
+
+                $journal =& Request::getJournal();
                 $templateMgr->assign_by_ref('journal', $journal);
 
                 $pluginVersionFile = $this->getPluginPath() . DIRECTORY_SEPARATOR . '/version.xml';
                 $pluginVersion =& VersionCheck::parseVersionXml($pluginVersionFile);
                 $templateMgr->assign_by_ref('pluginVersion', $pluginVersion);
-                
-		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$ojsVersion =& $versionDao->getCurrentVersion();
-		$templateMgr->assign('ojsVersion', $ojsVersion->getVersionString());
-                
+
+                $versionDao =& DAORegistry::getDAO('VersionDAO');
+                $ojsVersion =& $versionDao->getCurrentVersion();
+                $templateMgr->assign('ojsVersion', $ojsVersion->getVersionString());
+
                 $publishedArticlesDAO =& DAORegistry::getDAO('PublishedArticleDAO');
-                $range = new DBResultRange(12, 1);
+                $range = new DBResultRange(PLN_PLUGIN_PING_ARTICLE_COUNT);
                 $publishedArticles =& $publishedArticlesDAO->getPublishedArticlesByJournalId($journal->getId(), $range,  true);
                 $templateMgr->assign_by_ref('articles', $publishedArticles);
 
-		$templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl', 'text/xml');
+                $templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl', 'text/xml');
 
-		return true;
+                return true;
 	}
 }
 
