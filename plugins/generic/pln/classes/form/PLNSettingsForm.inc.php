@@ -84,6 +84,9 @@ class PLNSettingsForm extends Form {
 	 */
 	function execute() { 
 		$this->_plugin->updateSetting($this->_journalId, 'terms_of_use_agreement', serialize($this->getData('terms_of_use_agreement')), 'object');
+                $journalDao =& DAORegistry::getDAO('JournalDAO');
+                $journal = $journalDao->getById($this->_journalId);
+                $this->_plugin->installContextSpecificSettings(null, array(null, $journal));
 	}
 	
 }
