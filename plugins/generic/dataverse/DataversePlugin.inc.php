@@ -954,7 +954,10 @@ class DataversePlugin extends GenericPlugin {
 		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
 		$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($suppFileId, $submissionId ? $submissionId : '');
 		if (isset($dvFile)) {
-			$this->deleteFile($dvFile);
+			$fileDeleted = $this->deleteFile($dvFile);
+			if ($fileDeleted) {
+				$dvFileDao->deleteDataverseFile($dvFile);
+			}
 
 			// If file belongs to a completed submission & study present in Dataverse,
 			// replace cataloguing information to remove metadata assoc. w/ deleted file
@@ -966,6 +969,11 @@ class DataversePlugin extends GenericPlugin {
 				$article =& $articleDao->getArticle($study->getSubmissionId(), $journal->getId());
 				$this->replaceStudyMetadata($article, $study);
 			}
+			// Notify
+			$user =& Request::getUser();
+			import('classes.notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification($user->getId(), $fileDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
 		}
 		return false;
 	}
