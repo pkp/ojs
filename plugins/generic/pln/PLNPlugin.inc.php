@@ -177,7 +177,7 @@ class PLNPlugin extends GenericPlugin {
 		// if there isn't a journal_uuid, make one
 		if ($settingName == 'journal_uuid') {
 			$uuid = parent::getSetting($journalId, $settingName);
-			if ($uuid) return $uuid;
+			if (!is_null($uuid) && $uuid != '') return $uuid;
 			$this->updateSetting($journalId, $settingName, $this->newUUID());
 		}
 		
