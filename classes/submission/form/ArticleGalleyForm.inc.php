@@ -81,13 +81,13 @@ class ArticleGalleyForm extends Form {
 	 * Validate the form
 	 */
 	function validate() {
-		// check if public galley ID has already been used
+		// check if public galley ID has already been used for another galley of this article
 		$journal =& Request::getJournal();
-		$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleylDao ArticleGalleyDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId && $journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_GALLEY, $this->galleyId)) {
-			$this->addError('publicGalleyId', __('editor.publicIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
+		if ($publicGalleyId && $galleyDao->getGalleyByPubId('publisher-id', $publicGalleyId, $this->articleId)) {
+			$this->addError('publicGalleyId', __('editor.publicGalleyIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
 			$this->addErrorField('publicGalleyId');
 		}
 
@@ -259,12 +259,13 @@ class ArticleGalleyForm extends Form {
 			$galley->setLocale($article->getLocale());
 
 			if ($enablePublicGalleyId) {
-				// check to make sure the assigned public id doesn't already exist
-				$journalDao =& DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+				// check to make sure the assigned public id doesn't already exist for another galley of this article
+				$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleylDao ArticleGalleyDAO */
+
 				$publicGalleyId = $galley->getPubId('publisher-id');
 				$suffix = '';
 				$i = 1;
-				while ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId . $suffix)) {
+				while ($galleyDao->getGalleyByPubId('publisher-id', $publicGalleyId . $suffix, $this->articleId)) {
 					$suffix = '_'.$i++;
 				}
 
