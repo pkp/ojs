@@ -1171,7 +1171,7 @@ class DataversePlugin extends GenericPlugin {
 		$package->addMetadata('description', 
 						$article->getLocalizedData('studyDescription') ? 
 						$article->getLocalizedData('studyDescription') :
-						$article->getLocalizedAbstract()
+						String::html2text($article->getLocalizedAbstract())
 		);
 		foreach ($article->getAuthors() as $author) {
 			$package->addMetadata('creator', $author->getFullName(true), array('affiliation' => $this->_formatAffiliation($author)));
@@ -1228,8 +1228,8 @@ class DataversePlugin extends GenericPlugin {
 
 		// Journal metadata
 		$package->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
-		$package->addMetadata('rights', $journal->getLocalizedSetting('copyrightNotice'));
-		$package->addMetadata('isReferencedBy', $this->getCitation($article), $pubIdAttributes);
+		$package->addMetadata('rights', String::html2text($journal->getLocalizedSetting('copyrightNotice')));
+		$package->addMetadata('isReferencedBy', String::html2text($this->getCitation($article)), $pubIdAttributes);
 		
 		// Suppfile metadata
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
