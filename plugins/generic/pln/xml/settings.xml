@@ -38,11 +38,6 @@
 		<name>object_threshold</name>
 		<value>20</value>
 	</setting>
-	<!-- chosen staging server -->
-	<setting type="string">
-		<name>pln_network</name>
-		<value>PKP</value>
-	</setting>
 	<!-- is the PLN accepting deposits -->
 	<setting type="bool">
 		<name>pln_accepting</name>

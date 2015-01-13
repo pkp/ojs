@@ -27,7 +27,6 @@
 	<message key="plugins.generic.pln.settings.refresh">Refresh</message>
 	<message key="plugins.generic.pln.settings.refresh_help">If for some reason there are no terms listed above or you know these terms have been updated, click Refresh to update the terms listed above.</message>
 	
-	<message key="plugins.generic.pln.required.pln_network">Please choose a PLN network.</message>
 	<message key="plugins.generic.pln.required.object_type">Please choose an deposit object type.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Please choose a deposit object threshold.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">Agreement to the network's terms of use is required in order to deposit to the PLN.</message>
