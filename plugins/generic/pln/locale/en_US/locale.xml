@@ -23,17 +23,22 @@
 	<message key="plugins.generic.pln.settings.terms_of_use_help">Before depositing to a network it is necessary to agree to all of its terms of use.</message>
 	<message key="plugins.generic.pln.settings.terms_of_use_agree">I Agree</message>
 	<message key="plugins.generic.pln.settings.journal_uuid">Journal Identifier</message>
+	<message key="plugins.generic.pln.settings.object_type">Deposit Object Type</message>
+	<message key="plugins.generic.pln.settings.object_type_help">Chose the type of content you wish to deposit.</message>
+	<message key="plugins.generic.pln.settings.object_threshold">Deposit Object Threshold</message>
+	<message key="plugins.generic.pln.settings.object_threshold_help">Chose the amount of content to send per deposit.</message>
 	<message key="plugins.generic.pln.settings.journal_uuid_help">This is your journal's unique identifier for the PKP PLN. You may need to share this with PKP PLN administrators for support purposes.</message>
 	<message key="plugins.generic.pln.settings.refresh">Refresh</message>
 	<message key="plugins.generic.pln.settings.refresh_help">If for some reason there are no terms listed above or you know these terms have been updated, click Refresh to update the terms listed above.</message>
 	
 	<message key="plugins.generic.pln.required.pln_network">Please choose a PLN network.</message>
-	<message key="plugins.generic.pln.required.object_type">Please choose an deposit object type.</message>
+	<message key="plugins.generic.pln.required.object_type">Please choose a deposit object type.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Please choose a deposit object threshold.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">Agreement to the network's terms of use is required in order to deposit to the PLN.</message>
 	
 	<message key="plugins.generic.pln.objects.article">Article</message>
 	<message key="plugins.generic.pln.objects.issue">Issue</message>
+	<message key="plugins.generic.pln.objects.default">Please choose a type</message>
 
 	<message key="plugins.generic.pln.status_page">PKP PLN Plugin - Status</message>
 	<message key="plugins.generic.pln.status.network_status">Network Status: {$networkStatusMessage}</message>

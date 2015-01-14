@@ -19,9 +19,7 @@ import('classes.issue.Issue');
 
 define('PLN_PLUGIN_NAME','plnplugin');
 
-define('PLN_PLUGIN_NETWORKS', serialize(array(
-	'PKP' => 'pkp-pln.lib.sfu.ca'
-)));
+define('PLN_PLUGIN_STAGING_SERVER', 'pkp-pln.lib.sfu.ca');
 
 define('PLN_PLUGIN_HTTP_STATUS_OK', 200);
 define('PLN_PLUGIN_HTTP_STATUS_CREATED', 201);
@@ -35,6 +33,7 @@ define('PLN_PLUGIN_COL_IRI','/api/sword/2.0/col-iri');
 define('PLN_PLUGIN_CONT_IRI','/api/sword/2.0/cont-iri');
 
 define('PLN_PLUGIN_ARCHIVE_FOLDER','pln');
+define('PLN_PLUGIN_OBJECT_THRESHOLD_DEFAULT',20);
 
 define('PLN_PLUGIN_DEPOSIT_STATUS_NEW',				0x00);
 define('PLN_PLUGIN_DEPOSIT_STATUS_PACKAGED',		0x01);
@@ -175,7 +174,7 @@ class PLNPlugin extends GenericPlugin {
 	 * @param $settingName string
 	 */
 	function getSetting($journalId,$settingName) {
-
+	
 		// if there isn't a journal_uuid, make one
 		if ($settingName == 'journal_uuid') {
 			$uuid = parent::getSetting($journalId, $settingName);
@@ -431,13 +430,12 @@ class PLNPlugin extends GenericPlugin {
 	 */
 	function getServiceDocument($journalId) {
 			
-		$plnNetworks = unserialize(PLN_PLUGIN_NETWORKS);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal =& $journalDao->getById($journalId);
 		
 		// retrieve the service document
 		$result = $this->_curlGet(
-			'http://' . $plnNetworks[$this->getSetting($journalId, 'pln_network')] . PLN_PLUGIN_SD_IRI,
+			'http://' . PLN_PLUGIN_STAGING_SERVER . PLN_PLUGIN_SD_IRI,
 			array(
 				'On-Behalf-Of: '.$this->getSetting($journalId, 'journal_uuid'),
 				'Journal-URL: '.$journal->getUrl()

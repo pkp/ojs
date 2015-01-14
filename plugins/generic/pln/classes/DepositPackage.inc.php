@@ -15,7 +15,7 @@
 
 import('classes.file.JournalFileManager');
 
-require_once(dirname(__FILE__).'/../lib/bagit.php');
+require_once(dirname(__FILE__).'/bagit/bagit.php');
 
 class DepositPackage {
 
@@ -268,12 +268,11 @@ class DepositPackage {
 		$depositDao =& DAORegistry::getDAO('DepositDAO');
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$plnPlugin =& PluginRegistry::getPlugin('generic',PLN_PLUGIN_NAME);
-		$plnNetworks = unserialize(PLN_PLUGIN_NETWORKS);
 		$fileManager = new JournalFileManager($journalDao->getById($this->_deposit->getJournalId()));
 		$plnDir = $fileManager->filesDir . PLN_PLUGIN_ARCHIVE_FOLDER;
 		
 		// post the atom document
-		$url = 'http://' . $plnNetworks[$plnPlugin->getSetting($this->_deposit->getJournalID(), 'pln_network')];
+		$url = 'http://' . PLN_PLUGIN_STAGING_SERVER;
 		if ($this->_deposit->getUpdateStatus()) {
 			$url .= PLN_PLUGIN_CONT_IRI . '/' . $plnPlugin->getSetting($this->_deposit->getJournalID(), 'journal_uuid');
 			$url .= '/' . $this->_deposit->getUUID() . '/edit';
@@ -350,9 +349,8 @@ class DepositPackage {
 			
 		$depositDao =& DAORegistry::getDAO('DepositDAO');
 		$plnPlugin =& PluginRegistry::getPlugin('generic','plnplugin');
-		$plnNetworks = unserialize(PLN_PLUGIN_NETWORKS);
 		
-		$url = 'http://' . $plnNetworks[$plnPlugin->getSetting($this->_deposit->getJournalID(), 'pln_network')] . PLN_PLUGIN_CONT_IRI;
+		$url = 'http://' . PLN_PLUGIN_STAGING_SERVER . PLN_PLUGIN_CONT_IRI;
 		$url .= '/' . $plnPlugin->getSetting($this->_deposit->getJournalID(), 'journal_uuid');
 		$url .= '/' . $this->_deposit->getUUID() . '/state';
 		
