@@ -1106,17 +1106,35 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Request Dataverse Network service document
-	 * 
-	 * @param $sdUrl string service document URL
-	 * @param $user string username 
-	 * @param $password string password
-	 * @param $onBehalfOf string send request on behalf of user
+	 * @param $journalId Current journal
 	 * @return SWORDAPPServiceDocument
 	 */
-	function getServiceDocument($sdUrl, $user, $password, $onBehalfOf = NULL) {
+	function getServiceDocument($journalId) {
 		// allow insecure SSL connections
 		$client = $this->_initSwordClient();
-		return $client->servicedocument($sdUrl, $user, $password, $onBehalfOf);
+		
+		// Build service doc request. If version not set, assume v1.
+		$apiVersion = $this->getSetting($journalId, 'apiVersion') ? 
+						$this->getSetting($journalId, 'apiVersion') : '1';
+		
+		$sdRequest = $this->getSetting($journalId, 'dvnUri');
+		$sdRequest .= preg_match('/\/dvn$/', $sdRequest) ? '' : '/dvn';
+		$sdRequest .= '/api/data-deposit/v'. $apiVersion . '/swordv2/service-document';
+		
+		$sd = $client->servicedocument(
+						$sdRequest, 
+						$this->getSetting($journalId, 'username'), 
+						$this->getSetting($journalId, 'password'),
+						'');
+		
+		if ($sd && $sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK && !$this->getSetting($journalId, 'apiVersion')) {
+			// Check service doc for deprecation warnings & update API.
+			$newVersion = $this->checkAPIVersion($sd);
+			if ($newVersion) $apiVersion = $newVersion;
+			$this->updateSetting($journalId, 'apiVersion', $apiVersion);			
+		}
+		
+		return $sd;
 	} 
 	
 	/**
@@ -1125,12 +1143,7 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function getTermsOfUse() {
 		$journal =& Request::getJournal();
-		$sd = $this->getServiceDocument(
-						$this->getSetting($journal->getId(), 'sdUri'), 
-						$this->getSetting($journal->getId(), 'username'), 
-						$this->getSetting($journal->getId(), 'password')
-					);
-		
+		$sd = $this->getServiceDocument($journal->getId());
 		$dvTermsOfUse = '';
 		if ($sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK) {
 			$dvUri = $this->getSetting($journal->getId(), 'dvUri');
@@ -1649,6 +1662,33 @@ class DataversePlugin extends GenericPlugin {
 		$templateMgr->assign_by_ref('journal', $journal); 
 		
 		return $templateMgr->fetch($this->getTemplatePath() .'citation'. $citationFormat .'.tpl');
+	}
+
+	/**
+	 * Check service document for deprecation warnings returned in requests made
+	 * against outdated versions of Dataverse SWORD API.
+	 * @param SWORDAPPServiceDocument $serviceDocument
+	 * @return string Current API version parsed from deprecation warning
+	 */
+	function checkAPIVersion($serviceDocument) {
+		// Look for current version in deprecation message in warning attribute on workspace		
+		$newAPIVersion = '';		
+		$pattern = 'current\s+version.+?'. preg_quote('/dvn/api/data-deposit/', '/') .'v(\d+(\.\d+)?)';
+
+		$sd_xml = new SimpleXMLElement($serviceDocument->sac_xml);
+		$workspaces = $sd_xml->children('http://www.w3.org/2007/app')->workspace;
+		if ($workspaces) {
+			foreach ($workspaces[0]->attributes() as $attr => $value) {
+				if ($attr == 'warning' && preg_match("/deprecated/i", $value)) {
+					if (preg_match("/$pattern/i", $value, $matches)) {
+						// New version available
+						$newAPIVersion = $matches[1];
+						break;
+					}
+				}
+			}
+		}		
+		return $newAPIVersion;
 	}
   
 	/**
