@@ -98,6 +98,8 @@ class AuthorDAO extends PKPAuthorDAO {
 		);
 
 		if (isset($journalId)) $params[] = $journalId;
+		$params[] = AUTHOR_TOC_DEFAULT;
+		$params[] = AUTHOR_TOC_SHOW;
 		if (isset($initial)) {
 			$params[] = String::strtolower($initial) . '%';
 			$initialSql = ' AND LOWER(aa.last_name) LIKE LOWER(?)';
@@ -127,9 +129,11 @@ class AuthorDAO extends PKPAuthorDAO {
 				JOIN articles a ON (a.article_id = aa.submission_id AND a.status = ' . STATUS_PUBLISHED . ')
 				JOIN published_articles pa ON (pa.article_id = a.article_id)
 				JOIN issues i ON (pa.issue_id = i.issue_id AND i.published = 1)
+				JOIN sections s ON (a.section_id = s.section_id)
 			WHERE ' . (isset($journalId)?'a.journal_id = ? AND ':'') . '
-				(aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
-				$initialSql . '
+				(aa.last_name IS NOT NULL AND aa.last_name <> \'\') AND
+				((s.hide_author = 0 AND a.hide_author = ?) OR a.hide_author = ?)
+				' . $initialSql . '
 			ORDER BY aa.last_name, aa.first_name',
 			$params,
 			$rangeInfo
