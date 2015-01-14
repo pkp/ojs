@@ -1106,7 +1106,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Request Dataverse Network service document
-	 * @param $journalId Current journal
+	 * @param $journalId int Journal ID
 	 * @return SWORDAPPServiceDocument
 	 */
 	function getServiceDocument($journalId) {
@@ -1281,7 +1281,7 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Create a Dataverse study: create deposit package with journal-, article-, 
 	 * and suppfile-level metadata, then deposit in Dataverse to create study.
-	 * @param $article
+	 * @param $article Article
 	 * @return DataverseStudy
 	 */
 	function createStudy($article) {
@@ -1322,8 +1322,8 @@ class DataversePlugin extends GenericPlugin {
 	 * Update cataloguing information for an existing study. Metadata in the Atom
 	 * entry replaces all cataloguing information currently defined for the
 	 * study.
-	 * @param Article $article
-	 * @param DataverseStudy $study
+	 * @param $article Article
+	 * @param $study DataverseStudy
 	 * @return boolean Cataloguing information updated
 	 */
 	function replaceStudyMetadata($article, $study) {
@@ -1348,8 +1348,8 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Deposit suppfiles in Dataverse study.
-	 * @param DataverseStudy $study Study associated with author submission
-	 * @param Array $suppFiles Array of suppfiles
+	 * @param $study DataverseStudy Study associated with author submission
+	 * @param $suppFiles array Array of suppfiles
 	 * @return boolean Files deposited
 	 */
 	function depositFiles($study, $suppFiles) {
@@ -1445,7 +1445,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Release draft study.
-	 * @param DataverseStudy $study
+	 * @param $study DataverseStudy
 	 * @return boolean Study released
 	 */
 	function releaseStudy(&$study) {
@@ -1493,7 +1493,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Delete draft study or deaccession released study.
-	 * @param DataverseStudy $study
+	 * @param $study DataverseStudy
 	 * @return boolean Study deleted
 	 */
 	function deleteStudy(&$study) {
@@ -1642,7 +1642,7 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Returns article citation to include in study cataloguing metadata.
-	 * @param type $article
+	 * @param $article Article to be cited
 	 * @return string
 	 */
 	function getCitation($article) {
@@ -1667,7 +1667,7 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Check service document for deprecation warnings returned in requests made
 	 * against outdated versions of Dataverse SWORD API.
-	 * @param SWORDAPPServiceDocument $serviceDocument
+	 * @param $serviceDocument SWORDAPPServiceDocument Service document
 	 * @return string Current API version parsed from deprecation warning
 	 */
 	function checkAPIVersion($serviceDocument) {
