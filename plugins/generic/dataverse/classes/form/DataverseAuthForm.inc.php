@@ -77,6 +77,7 @@ class DataverseAuthForm extends Form {
 			$password = DATAVERSE_PLUGIN_PASSWORD_SLUG;
 		}
 		$this->setData('password', $password);
+		$this->setData('dvnUri', preg_replace("/\/+$/", '', $this->getData('dvnUri')));
 	}
 
 	/**
@@ -87,7 +88,7 @@ class DataverseAuthForm extends Form {
 		$plugin->updateSetting($this->_journalId, 'dvnUri', $this->getData('dvnUri'), 'string');
 		$plugin->updateSetting($this->_journalId, 'username', $this->getData('username'), 'string');
 		$plugin->updateSetting($this->_journalId, 'password', $this->getData('password'), 'string'); 
-		$plugin->updateSetting($this->_journalId, 'sdUri', $this->_getServiceDocumentUri($this->getData('dvnUri')));
+		$plugin->updateSetting($this->_journalId, 'apiVersion', $this->getData('apiVersion'), 'string');
 	}
 	
 	/**
@@ -96,8 +97,18 @@ class DataverseAuthForm extends Form {
 	 * @return boolean 
 	 */
 	function _getServiceDocument() {
-		$sd = $this->_plugin->getServiceDocument(
-						$this->_getServiceDocumentUri($this->getData('dvnUri')),
+		// Dataverse SWORD API version. Assume v1 if not set.
+		$this->setData('apiVersion', 
+						$apiVersion = $this->_plugin->getSetting($this->_journalId, 'apiVersion') ?
+						$this->_plugin->getSetting($this->_journalId, 'apiVersion') : '1');
+		
+		// Fetch service document
+		$sdRequest = preg_match('/\/dvn$/', $this->getData('dvnUri')) ? '' : '/dvn';
+		$sdRequest .= '/api/data-deposit/v'. $this->getData('apiVersion') . '/swordv2/service-document';
+
+		$client = $this->_plugin->_initSwordClient();
+		$sd = $client->servicedocument(
+						$this->getData('dvnUri') . $sdRequest,
 						$this->getData('username'),
 						$this->getData('password'),
 						''); // on behalf of
@@ -105,26 +116,20 @@ class DataverseAuthForm extends Form {
 		// Recover from errors where user has entered 'http' instead of 'https'
 		if (isset($sd) && $sd->sac_status != DATAVERSE_PLUGIN_HTTP_STATUS_OK && preg_match('/^http\:/', $this->getData('dvnUri'))) {
 			$this->setData('dvnUri', preg_replace('/^http\:/', 'https:', $this->getData('dvnUri')));
-			$sd = $this->_plugin->getServiceDocument(
-							$this->_getServiceDocumentUri($this->getData('dvnUri')),
+			$sd = $client->servicedocument(
+							$this->getData('dvnUri') . $sdRequest,
 							$this->getData('username'), 
 							$this->getData('password'), 
 							''); // on behalf of
 		}
+		
+		// Check service doc for deprecation warnings & update API.
+		if (isset($sd) && $sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK) {
+			$newVersion = $this->_plugin->checkAPIVersion($sd);
+			if ($newVersion) $this->setData('apiVersion', $newVersion);
+		}
+		
 		return (isset($sd) && $sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK);
-	}
-
-	/**
-	 * Build service document URL for specified Dataverse
-	 * @param $dvnUri string Dataverse Network URI
-	 * @return string Service document URI
-	 */
-	function _getServiceDocumentUri($dvnUri) {
-		// Build service doc URI. For simplicity, users are asked to enter the base
-		// Dataverse URL. Dataverse v.3 URLs end with '/dvn' but v.4 URLs do not.  
-		$sdUri = preg_replace('/\/$/', '', $dvnUri);
-		if (!preg_match('/\/dvn$/', $sdUri)) $sdUri .= '/dvn';
-		$sdUri .= '/api/data-deposit/v1/swordv2/service-document';	
-		return $sdUri;
+		
 	}
 }

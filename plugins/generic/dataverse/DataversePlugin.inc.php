@@ -1114,17 +1114,35 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Request Dataverse Network service document
-	 * 
-	 * @param $sdUrl string service document URL
-	 * @param $user string username 
-	 * @param $password string password
-	 * @param $onBehalfOf string send request on behalf of user
+	 * @param $journalId int Journal ID
 	 * @return SWORDAPPServiceDocument
 	 */
-	function getServiceDocument($sdUrl, $user, $password, $onBehalfOf = NULL) {
+	function getServiceDocument($journalId) {
 		// allow insecure SSL connections
 		$client = $this->_initSwordClient();
-		return $client->servicedocument($sdUrl, $user, $password, $onBehalfOf);
+		
+		// Build service doc request. If version not set, assume v1.
+		$apiVersion = $this->getSetting($journalId, 'apiVersion') ? 
+						$this->getSetting($journalId, 'apiVersion') : '1';
+		
+		$sdRequest = $this->getSetting($journalId, 'dvnUri');
+		$sdRequest .= preg_match('/\/dvn$/', $sdRequest) ? '' : '/dvn';
+		$sdRequest .= '/api/data-deposit/v'. $apiVersion . '/swordv2/service-document';
+		
+		$sd = $client->servicedocument(
+						$sdRequest, 
+						$this->getSetting($journalId, 'username'), 
+						$this->getSetting($journalId, 'password'),
+						'');
+		
+		if ($sd && $sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK && !$this->getSetting($journalId, 'apiVersion')) {
+			// Check service doc for deprecation warnings & update API.
+			$newVersion = $this->checkAPIVersion($sd);
+			if ($newVersion) $apiVersion = $newVersion;
+			$this->updateSetting($journalId, 'apiVersion', $apiVersion);			
+		}
+		
+		return $sd;
 	} 
 	
 	/**
@@ -1133,12 +1151,7 @@ class DataversePlugin extends GenericPlugin {
 	 */
 	function getTermsOfUse() {
 		$journal =& Request::getJournal();
-		$sd = $this->getServiceDocument(
-						$this->getSetting($journal->getId(), 'sdUri'), 
-						$this->getSetting($journal->getId(), 'username'), 
-						$this->getSetting($journal->getId(), 'password')
-					);
-		
+		$sd = $this->getServiceDocument($journal->getId());
 		$dvTermsOfUse = '';
 		if ($sd->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK) {
 			$dvUri = $this->getSetting($journal->getId(), 'dvUri');
@@ -1276,7 +1289,7 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Create a Dataverse study: create deposit package with journal-, article-, 
 	 * and suppfile-level metadata, then deposit in Dataverse to create study.
-	 * @param $article
+	 * @param $article Article
 	 * @return DataverseStudy
 	 */
 	function createStudy($article) {
@@ -1317,8 +1330,8 @@ class DataversePlugin extends GenericPlugin {
 	 * Update cataloguing information for an existing study. Metadata in the Atom
 	 * entry replaces all cataloguing information currently defined for the
 	 * study.
-	 * @param Article $article
-	 * @param DataverseStudy $study
+	 * @param $article Article
+	 * @param $study DataverseStudy
 	 * @return boolean Cataloguing information updated
 	 */
 	function replaceStudyMetadata($article, $study) {
@@ -1343,8 +1356,8 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Deposit suppfiles in Dataverse study.
-	 * @param DataverseStudy $study Study associated with author submission
-	 * @param Array $suppFiles Array of suppfiles
+	 * @param $study DataverseStudy Study associated with author submission
+	 * @param $suppFiles array Array of suppfiles
 	 * @return boolean Files deposited
 	 */
 	function depositFiles($study, $suppFiles) {
@@ -1440,7 +1453,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Release draft study.
-	 * @param DataverseStudy $study
+	 * @param $study DataverseStudy
 	 * @return boolean Study released
 	 */
 	function releaseStudy(&$study) {
@@ -1488,7 +1501,7 @@ class DataversePlugin extends GenericPlugin {
 	
 	/**
 	 * Delete draft study or deaccession released study.
-	 * @param DataverseStudy $study
+	 * @param $study DataverseStudy
 	 * @return boolean Study deleted
 	 */
 	function deleteStudy(&$study) {
@@ -1637,7 +1650,7 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Returns article citation to include in study cataloguing metadata.
-	 * @param type $article
+	 * @param $article Article to be cited
 	 * @return string
 	 */
 	function getCitation($article) {
@@ -1657,6 +1670,33 @@ class DataversePlugin extends GenericPlugin {
 		$templateMgr->assign_by_ref('journal', $journal); 
 		
 		return $templateMgr->fetch($this->getTemplatePath() .'citation'. $citationFormat .'.tpl');
+	}
+
+	/**
+	 * Check service document for deprecation warnings returned in requests made
+	 * against outdated versions of Dataverse SWORD API.
+	 * @param $serviceDocument SWORDAPPServiceDocument Service document
+	 * @return string Current API version parsed from deprecation warning
+	 */
+	function checkAPIVersion($serviceDocument) {
+		// Look for current version in deprecation message in warning attribute on workspace		
+		$newAPIVersion = '';		
+		$pattern = 'current\s+version.+?'. preg_quote('/dvn/api/data-deposit/', '/') .'v(\d+(\.\d+)?)';
+
+		$sd_xml = new SimpleXMLElement($serviceDocument->sac_xml);
+		$workspaces = $sd_xml->children('http://www.w3.org/2007/app')->workspace;
+		if ($workspaces) {
+			foreach ($workspaces[0]->attributes() as $attr => $value) {
+				if ($attr == 'warning' && preg_match("/deprecated/i", $value)) {
+					if (preg_match("/$pattern/i", $value, $matches)) {
+						// New version available
+						$newAPIVersion = $matches[1];
+						break;
+					}
+				}
+			}
+		}		
+		return $newAPIVersion;
 	}
   
 	/**
