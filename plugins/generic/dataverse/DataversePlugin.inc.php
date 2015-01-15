@@ -1225,13 +1225,17 @@ class DataversePlugin extends GenericPlugin {
 			if(!array_key_exists('holdingsURI', $pubIdAttributes)) {
 				$pubIdAttributes['holdingsURI'] = Request::url($journal->getPath(), 'article', 'view', array($article->getId()));
 			}
+			// Add copyright notice. 
+			if ($article->getCopyrightYear() && $article->getCopyrightHolder($article->getLocale())) {
+				AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
+				$package->addMetadata('rights',	__('submission.copyrightStatement', array('copyrightYear' => $article->getCopyrightYear(), 'copyrightHolder' => $article->getCopyrightHolder($article->getLocale()))));
+			}
 		}
 
 		// Journal metadata
 		$package->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
-		$package->addMetadata('rights', String::html2text($journal->getLocalizedSetting('copyrightNotice', $journal->getPrimaryLocale())));
 		$package->addMetadata('isReferencedBy', String::html2text($this->getCitation($article)), $pubIdAttributes);
-		
+
 		// Suppfile metadata
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
 		$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
