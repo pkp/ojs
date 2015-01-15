@@ -19,9 +19,7 @@ import('classes.issue.Issue');
 
 define('PLN_PLUGIN_NAME','plnplugin');
 
-define('PLN_PLUGIN_NETWORKS', serialize(array(
-	'PKP' => 'pkp-pln.lib.sfu.ca'
-)));
+define('PLN_PLUGIN_NETWORK', 'http://pkp-pln.lib.sfu.ca');
 
 define('PLN_PLUGIN_HTTP_STATUS_OK', 200);
 define('PLN_PLUGIN_HTTP_STATUS_CREATED', 201);
@@ -172,15 +170,14 @@ class PLNPlugin extends GenericPlugin {
 	
 	/**
 	 * @see PKPPlugin::getSetting()
-	 * @param $journalId string
+	 * @param $journalId int
 	 * @param $settingName string
 	 */
 	function getSetting($journalId,$settingName) {
-
 		// if there isn't a journal_uuid, make one
 		if ($settingName == 'journal_uuid') {
 			$uuid = parent::getSetting($journalId, $settingName);
-			if ($uuid) return $uuid;
+			if (!is_null($uuid) && $uuid != '') return $uuid;
 			$this->updateSetting($journalId, $settingName, $this->newUUID());
 		}
 		
@@ -450,13 +447,12 @@ class PLNPlugin extends GenericPlugin {
 	 */
 	function getServiceDocument($journalId) {
 			
-		$plnNetworks = unserialize(PLN_PLUGIN_NETWORKS);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal =& $journalDao->getById($journalId);
 		
 		// retrieve the service document
 		$result = $this->_curlGet(
-			'http://' . $plnNetworks[$this->getSetting($journalId, 'pln_network')] . PLN_PLUGIN_SD_IRI,
+			PLN_PLUGIN_NETWORK . PLN_PLUGIN_SD_IRI,
 			array(
 				'On-Behalf-Of: '.$this->getSetting($journalId, 'journal_uuid'),
 				'Journal-URL: '.$journal->getUrl()

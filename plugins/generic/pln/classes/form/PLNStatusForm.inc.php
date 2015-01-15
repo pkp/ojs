@@ -50,9 +50,9 @@ class PLNStatusForm extends Form {
 		
 		if (!$networkStatusMessage) {
 			if ($networkStatus === true) {
-				$networkStatusMessage = __(PLN_PLUGIN_NOTIFICATION_PLN_ACCEPTING);
+				$networkStatusMessage = __('plugins.generic.pln.notifications.pln_accepting');
 			} else {
-				$networkStatusMessage = __(PLN_PLUGIN_NOTIFICATION_PLN_NOT_ACCEPTING);
+				$networkStatusMessage = __('plugins.generic.pln.notifications.pln_not_accepting');
 			}
 		}
 		$templateMgr =& TemplateManager::getManager();

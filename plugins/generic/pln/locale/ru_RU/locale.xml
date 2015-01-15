@@ -28,7 +28,6 @@
 	<message key="plugins.generic.pln.settings.refresh">Обновить</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Если по какой-либо причине выше не показаны условия использования или вы знаете, что эти условия были изменены, щелкните на кнопке «Обновить» для обновления списка условий выше.</message>
 	
-	<message key="plugins.generic.pln.required.pln_network">Пожалуйста, выберите сеть PLN.</message>
 	<message key="plugins.generic.pln.required.object_type">Пожалуйста, выберите тип депонируемого объекта.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Пожалуйста, выберите порог депонируемых объектов.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">Принятие условий использования сети является обязательным для депонирования в PLN.</message>
