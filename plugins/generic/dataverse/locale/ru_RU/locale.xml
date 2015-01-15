@@ -20,14 +20,13 @@
 
 	<!-- Настройка Dataverse: DVN URL и детали аутентификации -->
 	<message key="plugins.generic.dataverse.settings.connect">Подключение</message>
-	<message key="plugins.generic.dataverse.settings.dvnUri">Адрес (URL) сети Dataverse</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL сети Dataverse, которой принадлежит Dataverse вашего журнала</message>
-	<message key="plugins.generic.dataverse.settings.usernameDescription">Имя пользователя, которое будет использоваться для депонирования файлов в Dataverse</message>
-	<message key="plugins.generic.dataverse.settings.passwordDescription">Пароль для имени пользователя, указанного выше</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriRequired">URL сети Dataverse обязателен.</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">URL сети Dataverse является неправильным.</message>
-	<message key="plugins.generic.dataverse.settings.usernameRequired">Пожалуйста, введите правильное имя пользователя для указанной сети Dataverse.</message>
-	<message key="plugins.generic.dataverse.settings.passwordRequired">Пожалуйста, введите правильный пароль для указанной сети Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">Адрес (URL) Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">Корневой URL Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Имя пользователя или токен API</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Пароль. Не обязателен для токена API</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">URL Dataverse обязателен.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Не удается подключиться к Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Пожалуйста, введите имя пользователя Dataverse.</message>
 
 	<!-- Настройка Dataverse: выбор Dataverse --> 
 	<message key="plugins.generic.dataverse.settings.selectDataverse">Выбор Dataverse</message> 
