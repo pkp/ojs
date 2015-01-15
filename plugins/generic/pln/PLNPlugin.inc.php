@@ -88,6 +88,7 @@ class PLNPlugin extends GenericPlugin {
 				$this->import('classes.DepositObject');
 				$this->import('classes.DepositPackage');
 			
+				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));			
 				HookRegistry::register('JournalDAO::deleteJournalById', array($this, 'callbackDeleteJournalById'));
 				HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
 				HookRegistry::register('NotificationManager::getNotificationContents', array($this, 'callbackNotificationContents'));
@@ -186,6 +187,24 @@ class PLNPlugin extends GenericPlugin {
 		return parent::getSetting($journalId,$settingName);
 	}
 	
+	/**
+	 * Register as a gateway plugin.
+	 * @param $hookName string
+	 * @param $args array
+	 */
+	function callbackLoadCategory($hookName, $args) {
+		$category =& $args[0];
+		$plugins =& $args[1];
+		switch ($category) {
+			case 'gateways':
+				$this->import('PLNGatewayPlugin');
+				$gatewayPlugin = new PLNGatewayPlugin($this->getName());
+				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
+				break;
+		}
+		return false;
+	}
+
 	/**
 	 * Delete all plug-in data for a journal when the journal is deleted
 	 * @param $hookName string (JournalDAO::deleteJournalById)
