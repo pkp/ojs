@@ -1165,38 +1165,39 @@ class DataversePlugin extends GenericPlugin {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal =& $journalDao->getById($article->getJournalId());
 		$package = new DataversePackager();
-		
-		// Article metadata
-		$package->addMetadata('title', $article->getLocalizedTitle());
+					
+		// Add article metadata, in language of article locale
+		$package->addMetadata('title', $article->getTitle($article->getLocale()));
+		// If study description not provided, use article abstract
 		$package->addMetadata('description', 
-						$article->getLocalizedData('studyDescription') ? 
-						$article->getLocalizedData('studyDescription') :
-						String::html2text($article->getLocalizedAbstract())
+						$article->getData('studyDescription', $article->getLocale()) ? 
+						$article->getData('studyDescription', $article->getLocale()) :						
+						String::html2text($article->getAbstract($article->getLocale()))
 		);
 		foreach ($article->getAuthors() as $author) {
-			$package->addMetadata('creator', $author->getFullName(true), array('affiliation' => $this->_formatAffiliation($author)));
+			$package->addMetadata('creator', $author->getFullName(true), array('affiliation' => $this->_formatAffiliation($author, $article->getLocale())));
 		}
 		
 		// Article metadata: fields with multiple values
 		$pattern = '/\s*'. DATAVERSE_PLUGIN_SUBJECT_SEPARATOR .'\s*/';
-		foreach(String::regexp_split($pattern, $article->getLocalizedCoverageGeo()) as $coverage) {
+		foreach(String::regexp_split($pattern, $article->getCoverageGeo($article->getLocale())) as $coverage) {
 			if ($coverage) $package->addMetadata('coverage', $coverage);
 		}
 		// Article metadata: filter subject(s) to prevent repeated values in dataset subject field
 		$subjects = array();
-		foreach(String::regexp_split($pattern, $article->getLocalizedDiscipline()) as $subject) {
+		foreach(String::regexp_split($pattern, $article->getDiscipline($article->getLocale())) as $subject) {
 			if ($subject) $subjects[String::strtolower($subject)] = $subject;
 		}
-		foreach(String::regexp_split($pattern, $article->getLocalizedSubjectClass()) as $subject) {
+		foreach(String::regexp_split($pattern, $article->getSubjectClass($article->getLocale())) as $subject) {
 			if ($subject) $subjects[String::strtolower($subject)] = $subject;
 		}
-		foreach(String::regexp_split($pattern, $article->getLocalizedSubject()) as $subject) {
+		foreach(String::regexp_split($pattern, $article->getSubject($article->getLocale())) as $subject) {
 			if ($subject) $subjects[String::strtolower($subject)] = $subject;
 		}
 
 		// Article metadata: filter contributors(s) to prevent repeated values in dataset contributor field		
 		$contributors = array();
-		foreach(String::regexp_split($pattern, $article->getLocalizedSponsor()) as $contributor) {		
+		foreach(String::regexp_split($pattern, $article->getSponsor($article->getLocale())) as $contributor) {
 			if ($contributor) $contributors[String::strtolower($contributor)] = $contributor;
 		}
 		// Published article metadata
@@ -1228,7 +1229,7 @@ class DataversePlugin extends GenericPlugin {
 
 		// Journal metadata
 		$package->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
-		$package->addMetadata('rights', String::html2text($journal->getLocalizedSetting('copyrightNotice')));
+		$package->addMetadata('rights', String::html2text($journal->getLocalizedSetting('copyrightNotice', $journal->getPrimaryLocale())));
 		$package->addMetadata('isReferencedBy', String::html2text($this->getCitation($article)), $pubIdAttributes);
 		
 		// Suppfile metadata
@@ -1241,15 +1242,15 @@ class DataversePlugin extends GenericPlugin {
 			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $article->getId());
 			if ($suppFile) {
 				// Split & filter subjects and/or contributors that may be repeated in article metadata
-				foreach (String::regexp_split($pattern, $suppFile->getSuppFileSubject()) as $subject) {
+				foreach (String::regexp_split($pattern, $suppFile->getSubject($article->getLocale())) as $subject) {
 					$subjects[String::strtolower($subject)] = $subject;
 				}
-				foreach (String::regexp_split($pattern, $suppFile->getSuppFileSponsor()) as $contributor) {
+				foreach (String::regexp_split($pattern, $suppFile->getSponsor($article->getLocale())) as $contributor) {
 					if ($contributor) $contributors[String::strtolower($contributor)] = $contributor;
 				}
 				// File type has single value but possibly repeated across suppfiles
 				if ($suppFile->getType()) $suppFileTypes[String::strtolower($suppFile->getType())] = $suppFile->getType();
-				if ($suppFile->getSuppFileTypeOther()) $suppFileTypes[String::strtolower($suppFile->getSuppFileTypeOther())] = $suppFile->getSuppFileTypeOther();
+				if ($suppFile->getTypeOther($article->getLocale())) $suppFileTypes[String::strtolower($suppFile->getTypeOther($article->getLocale()))] = $suppFile->getTypeOther($article->getLocale());
 			}
 		}
 		
@@ -1260,7 +1261,7 @@ class DataversePlugin extends GenericPlugin {
 		
 		// Write metadata as Atom entry
 		$package->createAtomEntry();
-		
+
 		// Return package for deposit
 		return $package;
 	}
@@ -1666,17 +1667,18 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * Format author bio statement, affiliation, and/or country as affiliation statement
 	 * @param $author Author 
+	 * @param $locale string Get affiliation for locale
 	 * @return string Author affiliation
 	 */
-	function _formatAffiliation($author) {
+	function _formatAffiliation($author, $locale) {
 		$affiliation = '';
 		if ($author) {
-			if ($author->getLocalizedAffiliation()) {			
+			if ($author->getAffiliation($locale)) {
 				// Affiliation is a block of plain text. Split into lines & trim punctuation
-				$lines = array_map("String::trimPunctuation", String::regexp_split('/\s*[\r\n]+/s', $author->getLocalizedAffiliation()));
+				$lines = array_map("String::trimPunctuation", String::regexp_split('/\s*[\r\n]+/s', $author->getAffiliation($locale)));
 				$affiliation .= implode(', ', $lines);
 				// Append country, if affiliation present
-				if ($author->getCountryLocalized())	$affiliation .= ', '. $author->getCountryLocalized();
+				if ($author->getCountry())	$affiliation .= ', '. $author->getCountry();
 			}
 		}
 		return $affiliation;
