@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/pln/PLNGatewayPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2013-2015 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -24,6 +24,11 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	/** @var $parentPluginName string Name of parent plugin */
 	var $parentPluginName;
 
+	/**
+	 * Constructor.
+	 *
+	 * @param $parentPluginName string
+	 */
 	function PLNGatewayPlugin($parentPluginName) {
 		parent::GatewayPlugin();
 		$this->parentPluginName = $parentPluginName;
@@ -58,7 +63,7 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Get the web feed plugin
+	 * Get the PLN plugin
 	 * @return object
 	 */
 	function &getPLNPlugin() {
