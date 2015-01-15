@@ -47,7 +47,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.asc">上升</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">下降</message>
 	<message key="plugins.generic.lucene.results.similarDocuments">相似文档</message>
-	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[搜索提示： <ul>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[<h4>搜索提示：</h4><ul>
 <li>搜索是不区分大小写的<li>
 <li>忽视一般用语<li>
 <li>返回包含<em>或</em> 条目的默认文章；如，(i.e., <em>OR</em>是暗含的。

@@ -47,7 +47,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.asc">Crescente</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Decrescente</message>
 	<message key="plugins.generic.lucene.results.similarDocuments">documentos similares</message>
-	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Dicas: <ul>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[<h4>Dicas:</h4><ul>
 			<li>Termos de pesquisa não diferenciam maiúsculas de minúsculas</li>
 			<li>Palavras comuns são ignoradas</li>
 			<li>Por padrão, artigos contendo <em>qualquer</em> termo são recuperados (isto é, <em>OU</em> é implícito)</li>

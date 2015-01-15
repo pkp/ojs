@@ -42,7 +42,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.asc">Прямий порядок</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Зворотній порядок</message>
 
-	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Пошукові нотатки: <ul>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[<h4>Пошукові нотатки:</h4><ul>
 <li>Пошукові терміни незалежні від регістру</li>
 <li>Слова загального вжитку ігноруються</li>
 <li>За замовчуванням повертаються ті статті, які містять <em>будь-який</em> з пошукових термінів (тобто застосовується оператор <em>OR</em>)</li>

@@ -49,7 +49,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.desc">По убыванию</message>
 	<message key="plugins.generic.lucene.results.similarDocuments">похожие документы</message>
 	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
-		Советы по поиску: <ul>
+		<h4>Советы по поиску:</h4><ul>
 			<li>Поиск производится независимо от регистра (заглавные и строчные буквы не различаются)</li>
 			<li>Общие слова игнорируются</li>
 			<li>По умолчанию, в результатах поиска возвращаются статьи, содержащие <em>любое</em> слово из запроса (то есть, предполагается условие <em>OR</em>)</li>

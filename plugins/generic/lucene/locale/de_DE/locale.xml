@@ -48,7 +48,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.desc">Absteigend</message>
 	<message key="plugins.generic.lucene.results.similarDocuments">Ähnliche Dokumente</message>
 	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
-		Suchhinweise: <ul>
+		<h4>Suchhinweise:</h4><ul>
 			<li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
 			<li>Häufig auftretende Wörter werden ignoriert.</li>
 			<li>Standardmäßig werden alle Artikel aufgelistet, die mindestens <em>einen</em> Suchbegriff der Anfrage enthalten (d.h. <em>ODER</em> ist impliziert).</li>

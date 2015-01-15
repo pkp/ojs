@@ -689,7 +689,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="search.allJournals">Tüm Dergiler</message>
 	<message key="search.authorIndex">Yazar Dizini</message>
 	<message key="search.authorDetails">Yazar Detayları</message>
-	<message key="search.syntaxInstructions"><![CDATA[Arama İpuçları: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Arama İpuçları: </h4><ul>
 <li>Arama terimlerinde küçük ve büyük harf farkı yoktur.</li>
 <li>Sık kullanılan kelimeler göz ardı edilmiştir.</li>
 <li>Arama sonucunda sadece sorgudaki tüm terimleri içeren makaleler listelenir.</li>

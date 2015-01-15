@@ -636,7 +636,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="search.allJournals">Alle Tijdschriften</message>
 	<message key="search.authorIndex">Blader door de auteursindex</message>
 	<message key="search.authorDetails">Auteursdetails</message>
-	<message key="search.syntaxInstructions"><![CDATA[Zoektips: <ul> 
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Zoektips: </h4><ul>
 <li>Zoektermen zijn niet hoofdlettergevoelig</li>
 <li>Veelvoorkomende woorden worden genegeerd</li>
 <li>Standaard worden alleen artikelen getoond waarin <em>alle</em> zoektermen voorkomen (<i>EN</i> is impliciet)</li>

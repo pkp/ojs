@@ -42,7 +42,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.asc">Rastuće</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Opadajuće</message>
 
-	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Saveti za pretragu: <ul>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[<h4>Saveti za pretragu:</h4><ul>
 <li> Termini ne zavise od veličine slova (veliko/malo) </p>
 <li> Uobičajene reči su ignorisane </li>
 <li> Podrazumevano, članci koji sadrže <em> bilo koji </em> izraz u upitu su prikazani kao rezultat pretrage ( tj. <em> ILI </em> se podrazumeva) </p>

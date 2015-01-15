@@ -670,7 +670,7 @@
 	<message key="search.allJournals">所有期刊</message>
 	<message key="search.authorIndex">瀏覽作者索引</message>
 	<message key="search.authorDetails">作者履歷</message>
-	<message key="search.syntaxInstructions"><![CDATA[搜尋技巧： <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>搜尋技巧： </h4><ul>
 <li>搜尋的語詞不要有大小寫之別</li>
 <li>常用的語詞會被略過</li>
 <li>預設只會傳回包含有<em>全部</em>搜尋詞彙的文章 (也就是說，預設以<em>AND</em>連接各項目)。</li>

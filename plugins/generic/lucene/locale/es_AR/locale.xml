@@ -42,7 +42,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.asc">Ascendiente</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Descendiente</message>
 
-	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Tips de búsqueda: <ul>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[<h4>Tips de búsqueda:</h4><ul>
 <li>Los términos de búsqueda no son sensibles a mayúsculas</li>
 <li>Las palabras comunes son ignoradas</li>
 <li>Por defecto, son retornados artículos que contengan <em>ALGÚN</em> término en la búsqueda (EJ:, <em>OR</em> es implicado)</li>

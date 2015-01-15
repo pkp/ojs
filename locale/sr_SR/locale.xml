@@ -462,7 +462,7 @@ Sadržaj priloženog fajla možete proveriti ukoliko kliknete na njegovo ime. Um
 	<message key="search.allJournals">Svi časopisi</message>
 	<message key="search.authorIndex">Indeks autora</message>
 	<message key="search.authorDetails">Detalji o autoru</message>
-	<message key="search.syntaxInstructions"><![CDATA[Saveti za pretraživanje: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Saveti za pretraživanje: </h4><ul>
 <li>Pojmovi koji se pretražuju su neosjetljivi na veličinu slova</li>
 <li>Kao rezultat se vraćaju samo članci koji sadrže sve izraze u upitu</li>
 <li>Višestruke reči kombinujte sa <i>ILI</i> da biste pronašli članke koji sadrže jedan od pojmova; npr. <i>edukacija ILI istraživanje</i></li>

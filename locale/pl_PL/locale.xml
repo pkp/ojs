@@ -754,7 +754,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="search.allJournals">Wszystkie czasopisma</message>
 	<message key="search.authorIndex">Indeks autorów</message>
 	<message key="search.authorDetails">Autor - szczegóły</message>
-	<message key="search.syntaxInstructions"><![CDATA[Wskazówki: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Wskazówki: </h4><ul>
 <li>Wielkość znaków nie ma znaczenia</li>
 <li>Spójniki są ignorowane</li>
 <li>Wyszukaj dokładnego wyrażenia przez umieszczenie go w cudzyszłowie, np. <em>"Dolnośląska Szkoła Wyższa"</em></li>

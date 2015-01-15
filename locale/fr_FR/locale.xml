@@ -568,7 +568,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="search.allJournals">Toutes les revues</message>
 	<message key="search.authorIndex">Explorer l'Index des auteurs</message>
 	<message key="search.authorDetails">Détails de l'auteur</message>
-	<message key="search.syntaxInstructions"><![CDATA[Pistes de recherche : <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Pistes de recherche : </h4><ul>
 <li>Les termes de recherche sont insensibles à la casse</li>
 <li>Les noms communs sont ignorés</li>
 <li>Par défaut, seulement les articles contenant <em>tous</em> les termes de recherche sont retournés (c.-à-d. <em>ET</em> est implicite)</li>

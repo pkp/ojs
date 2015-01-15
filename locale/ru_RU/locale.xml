@@ -796,7 +796,7 @@
 	<message key="search.allJournals">Все журналы</message>
 	<message key="search.authorIndex">Просмотреть список авторов</message>
 	<message key="search.authorDetails">Информация об авторе</message>
-	<message key="search.syntaxInstructions"><![CDATA[Советы по поиску: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Советы по поиску: </h4><ul>
 <li>Поиск ведется без учета регистра (строчные и прописные буквы не различаются)</li>
 <li>Общие слова игнорируются</li>
 <li>По умолчанию отображаются только статьи, содержащие <em>все</em> слова из запроса (то есть предполагается условие <strong>AND</strong>)</li>

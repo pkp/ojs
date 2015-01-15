@@ -47,7 +47,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.asc">Ascending</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Descending</message>
 	<message key="plugins.generic.lucene.results.similarDocuments">similar documents</message>
-	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Search tips: <ul>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[<h4>Search tips:</h4><ul>
 			<li>Search terms are case-insensitive</li>
 			<li>Common words are ignored</li>
 			<li>By default articles containing <em>any</em> term in the query are returned (i.e., <em>OR</em> is implied)</li>

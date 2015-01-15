@@ -130,7 +130,32 @@
 	<message key="submission.scheduling">Planlegging</message>
 	<message key="submission.scheduledIn">Planlagt publisert i {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(kommer)</message>
+
 	
+
+	<!-- Permissions -->
+
+	<message key="submission.permissions">Opphavsrett</message>
+	<message key="submission.copyrightHolder">Rettighetshaver</message>
+	<message key="submission.license">Lisens</message>
+	<message key="submission.copyright">Opphavsrett</message>
+	<message key="submission.copyrightYear">Opphavsrettsår</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Angi en gyldig URL (include http://).</message>
+	<message key="submission.licenseURL">Lisens URL</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
+
 	<message key="submissions.sec">Seksj.</message>
 	<message key="submissions.step1">Trinn 1</message>
 	<message key="submissions.step3">Trinn 3</message>
@@ -161,10 +186,21 @@
 	<message key="journal.journal">Tidsskrift</message>
 
 	<!-- User -->
+	<message key="user.profile.profileImage">Profilbilde</message>
 	<message key="user.showAllJournals">Vis mine tidsskrift</message>
 	<message key="user.registerForOtherJournals">Registrer for andre tidsskrift</message>
 	<message key="user.myJournals">Mine tidsskrift</message>
-	
+        <message key="user.manageMySubscriptions">Administrer mine abbonementer</message>
+        <message key="user.noRoles.chooseJournal">Kontoen din er ikke knyttet opp mot noen tidsskrift. Velg et tidsskrift:</message>
+        <message key="user.noRoles.noRolesForJournal">Kontoen din har ikke registrert noen roller for dette tidsskriftet. Vennligst velg blant handlingene nedenfor:</message>
+        <message key="user.noRoles.submitArticle">Send inn et manuskriptforslag</message>
+        <message key="user.noRoles.submitArticleRegClosed">Send inn en artikkel: Forfatterregistrering er for øyeblikket deaktivert</message>
+        <message key="user.noRoles.regReviewer">Registrer deg for å fagvellevurdere artikler</message>
+        <message key="user.noRoles.regReviewerClosed">Registrer deg for å fagfellevurdere: Fagfellevurderingsregistrering er for øyeblikket deaktivert.</message>
+        <message key="user.orcid">ORCID iD</message>
+        <message key="user.orcid.description"><![CDATA[ORCID ID kan bare tildeles av <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. Du må følge deres standard for å uttrykke ORCHID ID, inkludert hele lenken (f.eks <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+        <message key="user.profile.form.orcidInvalid">ORCID ID-en som du har angitt er ugyldig.</message>
+
 	<!-- Roles -->
 	<message key="user.role.manager">Redaksjonsleder</message>
 	<message key="user.role.editor">Ansvarlig redaktør</message>
@@ -566,7 +602,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="search.allJournals">Alle tidsskrift</message>
 	<message key="search.authorIndex">Finn fram i forfatterregister</message>
 	<message key="search.authorDetails">Forfatterdetaljer</message>
-	<message key="search.syntaxInstructions"><![CDATA[Søketips: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Søketips: </h4><ul>
 <li>Søkeord skiller ikke mellom små og store bokstaver</li>
 <li>Vanlige ord blir ignorert</li>
 <li>Ved standard søk blir bare artikler som inneholder <i>alle</i> søkeordene truffet (m.a.o. at søkebegrepet <i>AND</i> er implisitt)</li>
@@ -968,7 +1004,10 @@ Authors who publish with this journal agree to the following terms:
 	<message key="subscriptionManager.subscriptionTypes">Abonnementstyper</message>
 	<message key="plugins.categories.oaiMetadataFormats">Programtillegg for OAI metadata-format</message>
 	<message key="plugins.categories.oaiMetadataFormats.description">Disse format-programtilleggene tilgjengeliggjør metadata i OAI-kommunikasjon.</message>
+	<message key="plugins.categories.pubIds">Public Identifier programtillegg</message>
+	<message key="plugins.categories.pubIds.description">Disse programtilleggene aktiverer støtte for en 'public identifier'.</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Redaktørene sender fagfellevurderere forespørsel om å være fagfellevurderer med det innsendte manuskriptet vedlagt e-posten. Fagfellevurdererne sender sin aksept eller avslag til redaktørene på e-post, og sine kommentarer og anbefalinger. Redaktørene legger inn fagfellevurderernes aksept eller avslag på forespørselen, og deres vurderinger og anbefalinger på innleveringens vurderingsside for å dokumentere fagfellevurderingsprosessen.</message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems støtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) løsningen for å sikre permanent bevaring av tidsskriftet. Du har flere valgmuligheter for å inkludere tidsskriftet ditt i et LOCKSS nettverk:]]></message>
 	<message key="manager.setup.citations">Gjør det mulig for forfattere å legge inn en separat formattert liste med referanser som en del av innleveringen.</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Merkede elementer indikerer at noe avventer handling fra redaktøren.</li>

@@ -42,7 +42,7 @@
 	<message key="plugins.generic.lucene.results.orderDir.asc">Croissant</message>
 	<message key="plugins.generic.lucene.results.orderDir.desc">Décroissant</message>
 
-	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Conseils de recherche: <ul>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[<h4>Conseils de recherche:</h4><ul>
 <li>Les termes de recherche sont sensibles à la casse</li>
 <li>Les mots communs sont ignorés</li>
 <li>Par défaut, les articles qui contiennent <em>n'importe quel</em> terme dans la requête sont retournés (i.e., <em>OU</em> est impliqué)</li>
