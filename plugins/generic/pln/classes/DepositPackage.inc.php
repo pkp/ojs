@@ -90,7 +90,13 @@ class DepositPackage {
 		
 		$pkpJournalUrl = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:journal_url', $journal->getUrl());
 		$entry->appendChild($pkpJournalUrl);
-		
+
+		$pkpPublisher = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:publisherName', $journal->getSetting('publisherInstitution'));
+		$entry->appendChild($pkpPublisher);
+
+		$pkpPublisherUrl = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:publisherUrl', $journal->getSetting('publisherUrl'));
+		$entry->appendChild($pkpPublisherUrl);
+
 		$issn = '';
 		
 		if ($journal->getSetting('onlineIssn')) {
