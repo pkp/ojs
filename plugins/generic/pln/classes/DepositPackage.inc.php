@@ -114,7 +114,7 @@ class DepositPackage {
 		
 		$objectVolume = "";
 		$objectIssue = "";
-		$objectOublicationDate = 0;
+		$objectPublicationDate = 0;
 		
 		switch ($this->_deposit->getObjectType()) {
 			case PLN_PLUGIN_DEPOSIT_OBJECT_ARTICLE:
@@ -122,8 +122,8 @@ class DepositPackage {
 				while ($depositObject =& $depositObjects->next()) {
 					$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 					$article = $publishedArticleDao->getPublishedArticleByArticleId($depositObject->getObjectId());
-					if ($article->getDatePublished() > $objectOublicationDate)
-						$objectOublicationDate = $article->getDatePublished();
+					if ($article->getDatePublished() > $objectPublicationDate)
+						$objectPublicationDate = $article->getDatePublished();
 					unset($depositObject);
 				}
 				break;
@@ -134,8 +134,8 @@ class DepositPackage {
 					$issue = $issueDao->getIssueById($depositObject->getObjectId());
 					$objectVolume = $issue->getVolume();
 					$objectIssue = $issue->getNumber();
-					if ($issue->getDatePublished() > $objectOublicationDate)
-						$objectOublicationDate = $issue->getDatePublished();
+					if ($issue->getDatePublished() > $objectPublicationDate)
+						$objectPublicationDate = $issue->getDatePublished();
 					unset($depositObject);
 				}
 				break;
@@ -143,7 +143,7 @@ class DepositPackage {
 		
 		$pkpDetails->setAttribute('volume', $objectVolume);
 		$pkpDetails->setAttribute('issue', $objectIssue);
-		$pkpDetails->setAttribute('pubdate', strftime("%F",strtotime($objectOublicationDate)));
+		$pkpDetails->setAttribute('pubdate', strftime("%F",strtotime($objectPublicationDate)));
 		
 		switch ($plnPlugin->getSetting($journal->getId(), 'checksum_type')) {
 			case 'SHA-1':
