@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plnplugin SYSTEM "plugin.dtd"> 
+<!DOCTYPE plnplugin SYSTEM "ping.dtd"> 
 <plnplugin>
     <ojsInfo>
         <release>{$ojsVersion|escape}</release>
@@ -11,7 +11,7 @@
         <current>{$pluginVersion.version->getCurrent()}</current>
     </pluginInfo>
     <journalInfo>
-        <title>{$journal->getLocalizedTitle()}</title>
+        <title>{$journal->getLocalizedTitle()|escape}</title>
         <articles count='{$articles->getCount()}'>
             {foreach from=$articles->toArray() item=article}
             <article pubDate='{$article->getDatePublished()}'>{$article->getLocalizedTitle()|escape}</article>
