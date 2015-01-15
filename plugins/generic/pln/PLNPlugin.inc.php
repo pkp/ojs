@@ -19,7 +19,7 @@ import('classes.issue.Issue');
 
 define('PLN_PLUGIN_NAME','plnplugin');
 
-define('PLN_PLUGIN_NETWORK', 'pkp-pln.lib.sfu.ca');
+define('PLN_PLUGIN_NETWORK', 'http://pkp-pln.lib.sfu.ca');
 
 define('PLN_PLUGIN_HTTP_STATUS_OK', 200);
 define('PLN_PLUGIN_HTTP_STATUS_CREATED', 201);
@@ -169,11 +169,10 @@ class PLNPlugin extends GenericPlugin {
 	
 	/**
 	 * @see PKPPlugin::getSetting()
-	 * @param $journalId string
+	 * @param $journalId int
 	 * @param $settingName string
 	 */
 	function getSetting($journalId,$settingName) {
-                        
 		// if there isn't a journal_uuid, make one
 		if ($settingName == 'journal_uuid') {
 			$uuid = parent::getSetting($journalId, $settingName);

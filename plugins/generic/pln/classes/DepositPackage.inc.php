@@ -272,7 +272,7 @@ class DepositPackage {
 		$plnDir = $fileManager->filesDir . PLN_PLUGIN_ARCHIVE_FOLDER;
 		
 		// post the atom document
-		$url = 'http://' . PLN_PLUGIN_NETWORK;
+		$url = PLN_PLUGIN_NETWORK;
 		if ($this->_deposit->getUpdateStatus()) {
 			$url .= PLN_PLUGIN_CONT_IRI . '/' . $plnPlugin->getSetting($this->_deposit->getJournalID(), 'journal_uuid');
 			$url .= '/' . $this->_deposit->getUUID() . '/edit';
@@ -350,7 +350,7 @@ class DepositPackage {
 		$depositDao =& DAORegistry::getDAO('DepositDAO');
 		$plnPlugin =& PluginRegistry::getPlugin('generic','plnplugin');
 		
-		$url = 'http://' . PLN_PLUGIN_NETWORK . PLN_PLUGIN_CONT_IRI;
+		$url = PLN_PLUGIN_NETWORK . PLN_PLUGIN_CONT_IRI;
 		$url .= '/' . $plnPlugin->getSetting($this->_deposit->getJournalID(), 'journal_uuid');
 		$url .= '/' . $this->_deposit->getUUID() . '/state';
 		
