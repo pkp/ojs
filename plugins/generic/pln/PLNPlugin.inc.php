@@ -433,7 +433,7 @@ class PLNPlugin extends GenericPlugin {
 		
 		// retrieve the service document
 		$result = $this->_curlGet(
-			'http://' . PLN_PLUGIN_NETWORK . PLN_PLUGIN_SD_IRI,
+			PLN_PLUGIN_NETWORK . PLN_PLUGIN_SD_IRI,
 			array(
 				'On-Behalf-Of: '.$this->getSetting($journalId, 'journal_uuid'),
 				'Journal-URL: '.$journal->getUrl()
