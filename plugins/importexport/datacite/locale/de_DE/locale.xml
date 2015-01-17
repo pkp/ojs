@@ -22,7 +22,7 @@
 		Nachdem Sie Kontakt zu der Mitgliedsorganisation hergestellt haben, wird Ihnen ein
 		Zugang zum DataCite-Dienst zum Ausstellen persistenter Kennungen (DOI) und zur
 		Registrierung zugehöriger Metadaten ermöglicht. Wenn Sie über keinen eigenen Benutzer/innennamen und
-		Passwort verfügen, können Sie immerhin in das DataCite-XML-Format exportieren, aber Sie
+		kein eigenes Passwort verfügen, können Sie immerhin in das DataCite-XML-Format exportieren, aber Sie
 		können Ihre DOI nicht aus OJS heraus bei DataCite registrieren.
 		Bitte beachten Sie, dass das Passwort im Klartext, d.h. unverschlüsselt, gespeichert werden
 		wird, da der DataCite-Registrierungsdienst dies erfordert.
