@@ -1235,6 +1235,33 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+	
+	/**
+	 * For 2.4.6 upgrade: to enable localization of a CustomBlock, 
+	 * the blockContent values are converted from string to array (key: primary_language)
+	 */
+	function localizeCustomBlockSettings() {
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getJournals();
+		
+		while ($journal = $journals->next()) {
+			$journalId = $journal->getId();
+			$primaryLocale = $journal->getPrimaryLocale();
+			
+			$blocks = $pluginSettingsDao->getSetting($journalId, 'customblockmanagerplugin', 'blocks');
+			foreach($blocks as $block) {
+				$blockContent = $pluginSettingsDao->getSetting($journalId, $block, 'blockContent');
+				
+				if (!is_array($blockContent)) {
+					$pluginSettingsDao->updateSetting($journalId, $block, 'blockContent', array($primaryLocale => $blockContent));
+				}
+			}
+			unset($journal);
+		}
+		
+		return true;
+	}
 }
 
 ?>

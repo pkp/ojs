@@ -141,7 +141,14 @@ class CustomBlockPlugin extends BlockPlugin {
 				);
 
 				$templateMgr->assign('pageHierarchy', $pageCrumbs);
-				$form->initData();
+				
+				if ($form->isLocaleResubmit()) {
+					$form->readInputData();
+					$form->addTinyMCE();
+				} else {
+					$form->initData();
+				}
+				
 				$form->display();
 				exit;
 
@@ -176,13 +183,23 @@ class CustomBlockPlugin extends BlockPlugin {
 	 */
 	function getContents(&$templateMgr) {
 		$journal =& Request::getJournal();
+		$journalId = $journal->getId();
+		
 		if (!$journal) return '';
+		
+		$locale = AppLocale::getLocale();
+		$primaryLocale = AppLocale::getPrimaryLocale();
+		$blockContent = $this->getSetting($journalId, 'blockContent');
+		$blockContentLocale = '';
+	
+		if (array_key_exists($locale, $blockContent)) {
+			$blockContentLocale = $blockContent[$locale];
+		}
 
 		$id = 'customblock-'.preg_replace('/\W+/', '-', $this->blockName);
 		$templateMgr->assign('customBlockId', $id);
-		$templateMgr->assign('customBlockContent', $this->getSetting($journal->getId(), 'blockContent'));
+		$templateMgr->assign('customBlockContent', $blockContentLocale);
 		return parent::getContents($templateMgr);
-
 	}
 
 	/**

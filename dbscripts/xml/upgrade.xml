@@ -364,6 +364,10 @@
 	<upgrade minversion="2.4.0.0" maxversion="2.4.4.9">
 		<note file="docs/release-notes/README-2.4.5" />
 	</upgrade>
+	
+	<upgrade minversion="2.3.0.0" maxversion="2.4.5.9">
+		<code function="localizeCustomBlockSettings" />
+	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
