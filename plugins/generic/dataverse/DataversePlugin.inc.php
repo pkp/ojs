@@ -809,6 +809,11 @@ class DataversePlugin extends GenericPlugin {
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$article =& $form->article;
 		
+		// Notify on successful study updates or errors
+		import('classes.notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+		$user =& Request::getUser();
+
 		// Dataset metadata: fields stored with article metadata, but provided in suppfile
 		// form, at point of data deposit, to support data publishing
 		$article->setData('studyDescription', $form->getData('studyDescription'), $form->getFormLocale());
@@ -839,9 +844,6 @@ class DataversePlugin extends GenericPlugin {
 							$this->replaceStudyMetadata($article, $study);
 						}
 						// Notify
-						$user =& Request::getUser();
-						import('classes.notification.NotificationManager');
-						$notificationManager = new NotificationManager();
 						$notificationManager->createTrivialNotification($user->getId(), $fileDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_ERROR);
 					}
 				}
@@ -851,8 +853,11 @@ class DataversePlugin extends GenericPlugin {
 				// Deposit file. Create a study, if submission doesn't have one already.
 				$dvStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
 				$study =& $dvStudyDao->getStudyBySubmissionId($article->getId());	 
-				if (!isset($study)) {
-					$study = $this->createStudy($article);
+				if (!$study) $study = $this->createStudy($article);
+				if (!$study) {
+					// If study is not created, warn & exit	
+					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);
+					return false;
 				}
 				if (!$form->suppFile->getId()) {
 					// Suppfile is new, but inserted in db after hook is called. Handle
@@ -867,9 +872,6 @@ class DataversePlugin extends GenericPlugin {
 					// File-level metadata may need to be added to study.
 					$this->replaceStudyMetadata($article, $study);
 					// & notify:
-					$user =& Request::getUser();
-					import('classes.notification.NotificationManager');
-					$notificationManager = new NotificationManager();
 					$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_ERROR);
 				}
 				else {
@@ -911,9 +913,6 @@ class DataversePlugin extends GenericPlugin {
 					// File-level metadata may need to be added to study.
  					$this->replaceStudyMetadata($article, $study);
 					// & notify:
-					$user =& Request::getUser();
-					import('classes.notification.NotificationManager');
-					$notificationManager = new NotificationManager();
  					$notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_ERROR);
  				}
 				break;
@@ -1301,7 +1300,7 @@ class DataversePlugin extends GenericPlugin {
 						$this->getSetting($article->getJournalId(), 'password'),
 						'',	 // on behalf of: no one
 						$package->getAtomEntryFilePath());
-		
+
 		$study = null;
 		if ($depositReceipt->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_CREATED) {
 			$this->import('classes.DataverseStudy');
@@ -1428,27 +1427,59 @@ class DataversePlugin extends GenericPlugin {
 
 	/**
 	 * Indicate whether Dataverse has been released. 
-	 * @return boolean 
+	 * @param $journalId int Journal id
+	 * @return boolean True if journal's Dataverse has been released
 	 */
-	function dataverseIsReleased() {
-		$journal =& Request::getJournal();
+	function dataverseIsReleased($journalId) {
 		$client = $this->_initSwordClient();		
-
 		$depositReciept = $client->retrieveDepositReceipt(
-				$this->getSetting($journal->getId(), 'dvUri'), 
-				$this->getSetting($journal->getId(), 'username'),
-				$this->getSetting($journal->getId(), 'password'), 
+				$this->getSetting($journalId, 'dvUri'),
+				$this->getSetting($journalId, 'username'),
+				$this->getSetting($journalId, 'password'),
 				''); // on behalf of
 
-		if ($depositReciept->sac_status != DATAVERSE_PLUGIN_HTTP_STATUS_OK) return false;
-					
-		$depositReceiptXml = @new SimpleXMLElement($depositReciept->sac_xml);
-		$releasedNodes = $depositReceiptXml->children('http://purl.org/net/sword/terms/state')->dataverseHasBeenReleased;
-
-		if (!empty($releasedNodes)) {
-			$released = $releasedNodes[0];
+		$released = false;
+		if ($depositReciept->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK) {
+			$depositReceiptXml = @new SimpleXMLElement($depositReciept->sac_xml);
+			$releasedNodes = $depositReceiptXml->children('http://purl.org/net/sword/terms/state')->dataverseHasBeenReleased;
+			if (!empty($releasedNodes) && $releasedNodes[0] == 'true') {
+				$released = true;
+			}
 		}
-		return ($released == 'true');
+		return $released;
+	}
+	
+	/**
+	 * Release draft Dataverse associated with this journal. Supported in SWORD
+	 * API v1.1 / Dataverse 4.0.
+	 * @param $journalId int Journal id
+	 * @return boolean Dataverse released
+	 */
+	function releaseDataverse($journalId) {
+		$released = false;
+		if (version_compare($this->getSetting($journalId, 'apiVersion'), '1.1', '>=')) {
+			// To release a Dataverse, a complete-incomplete-deposit request is issued
+			// on a collection-level edit IRI. Identify Dataverse by alias.
+			if(preg_match("/.+\/(\w+)$/", $this->getSetting($journalId, 'dvUri'), $matches)) {
+				$request = $this->getSetting($journalId, 'dvnUri');
+				$request .= preg_match('/\/dvn$/', $request) ? '' : '/dvn';
+				$request .= '/api/data-deposit';
+				$request .= '/v'. ($this->getSetting($journalId, 'apiVersion') ? $this->getSetting($journalId, 'apiVersion') : '1');
+				$request .= '/swordv2/edit/dataverse/'. $matches[1];
+
+				$client = $this->_initSwordClient();
+				$response = $client->completeIncompleteDeposit(
+								$request,
+								$this->getSetting($journalId, 'username'),
+								$this->getSetting($journalId, 'password'),
+								''); // on behalf of
+
+				if ($response->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK) {
+					$released = true;
+				}
+			}
+		}
+		return $released;
 	}
 	
 	/**
@@ -1456,35 +1487,20 @@ class DataversePlugin extends GenericPlugin {
 	 * @param $study DataverseStudy
 	 * @return boolean Study released
 	 */
-	function releaseStudy(&$study) {
+	function releaseStudy($study) {
+		import('classes.notification.NotificationManager');
+		$notificationManager = new NotificationManager();		
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
-		
-		$client = $this->_initSwordClient();		
-		$response = $client->completeIncompleteDeposit(
-						$study->getEditUri(),
-						$this->getSetting($journal->getId(), 'username'),
-						$this->getSetting($journal->getId(), 'password'),		
-						''); // on behalf of
-		
-		$studyReleased = ($response->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK); 
 
-		// Notify on success or failure. Provide citation & link to study.
-		import('classes.notification.NotificationManager');
-		$notificationManager = new NotificationManager();
-
-		if ($studyReleased) {
-			$params = array('dataCitation' => $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
-			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED, $params);
+		// Dataverse released? 
+		$dvReleased = $this->dataverseIsReleased($journal->getId());
+		if (!$dvReleased) {
+			// Try to release Dataverse via API
+			$dvReleased = $this->releaseDataverse($journal->getId());
 		}
-		else {
-			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);
-		}
-		
-		// Whether the study was released or not, notify JMs by email if Dataverse
-		// has not yet been released. Released studies are not accessible until
-		// the Dataverse has been released.
-		if (!$this->dataverseIsReleased()) {
+		// If release via API has failed or is not supported, notify JMs
+		if (!$dvReleased) {
 			$request =& Application::getRequest();										
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$journalManagers =& $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER, $journal->getId());
@@ -1493,9 +1509,44 @@ class DataversePlugin extends GenericPlugin {
 				$notification = $notificationManager->createNotification($request, $journalManager->getId(), NOTIFICATION_TYPE_DATAVERSE_UNRELEASED, $journal->getId(), ASSOC_TYPE_JOURNAL, $journal->getId(), NOTIFICATION_LEVEL_NORMAL);
 				$notificationManager->sendNotificationEmail($request, $notification);
 				unset($journalManager);
-			} // end notifying JMs			
-		} // end if (study not released)
+			} // end notifying JMs
+
+			// In API v1.1, publishing datasets in unpublished datverses is not supported.
+			if (version_compare($this->getSetting($journal->getId(), 'apiVersion'), '1.1', '>=')) {
+				$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);
+				return $dvReleased;
+			}
+		}
+
+		// Attempt to release/publish the study/dataset.
+		$client = $this->_initSwordClient();		
+		$response = $client->completeIncompleteDeposit(
+						$study->getEditUri(),
+						$this->getSetting($journal->getId(), 'username'),
+						$this->getSetting($journal->getId(), 'password'),		
+						''); // on behalf of
 		
+		$studyReleased = ($response->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK); 
+		if ($studyReleased) {
+			// Retrieve deposit receipt & store updated data citation
+			$depositReceipt = $client->retrieveDepositReceipt(
+							$study->getEditUri(), 
+							$this->getSetting($journal->getId(), 'username'), 
+							$this->getSetting($journal->getId(), 'password'),
+							'');
+
+			if ($depositReceipt->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_OK) {
+				$study->setDataCitation($depositReceipt->sac_dcterms['bibliographicCitation'][0]);
+				$dataverseStudyDao =& DAORegistry::getDAO('DataverseStudyDAO');
+				$dataverseStudyDao->updateStudy($study);
+			}
+			// Include citation & link to study in notification
+			$params = array('dataCitation' => $this->_formatDataCitation($study->getDataCitation(), $study->getPersistentUri()));
+			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_STUDY_RELEASED, $params);			
+		}
+		else {
+			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);
+		}
 		return $studyReleased;
 	}
 	
