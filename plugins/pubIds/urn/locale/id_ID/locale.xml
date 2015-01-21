@@ -33,8 +33,6 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">untuk file tambahan.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">Sebagai contoh, vol%viss%ipp%p dapat menciptakan akhiran URN "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Akhiran URN dapat dengan format apapun, tetapi harus unik di antara semua objek penerbitan.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Gunakan "Custom Identifier" untuk item penerbitan sebagai akhiran URN (harus diaktifkan di langkah 4.3). Identifier ini juga akan digunakan untuk URL publik.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Masukkan akhiran URN individual untuk masing-masing akhiran independen URN dan berbeda dari "Custom Identifier" yang disebutkan dalam pilihan sebelumnya. Anda akan menemukan field masukkan URN tambahan di setiap halaman metadata item.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Hapus URN</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Jika anda mengganti konfigurasi URN, tidak akan berpengaruh terhadap URN yang telah ditetapkan sebelumnya. Sekali konfigurasi URN telah disimpan, gunakan tombol ini untuk membersihkan semua URN yang ada sehingga pengaturan baru akan berlaku pada artikel yang ada.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Anda yakin untuk menghapus semua URN yang ada?</message>

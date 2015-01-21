@@ -27,6 +27,7 @@
 	<message key="editor.allEditors">All Editors</message>
 	<message key="editor.me">Me</message>
 	<message key="editor.publicIdentificationExists">The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or supplementary file). Please choose unique identifiers within your journal.</message>
+	<message key="editor.publicGalleyIdentificationExists">The public identifier '{$publicIdentifier}' already exists for another galley of this article. Please choose unique galley identifier within this article.</message>
 	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>

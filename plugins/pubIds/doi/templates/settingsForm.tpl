@@ -97,20 +97,12 @@
 						</tr>
 						<tr>
 							<td width="5%" class="label" align="right" valign="top">
-								<input type="radio" name="doiSuffix" id="doiSuffixDefault" value="default" {if !in_array($doiSuffix, array("pattern", "publisherId", "customId"))}checked{/if} />
+								<input type="radio" name="doiSuffix" id="doiSuffixDefault" value="default" {if !in_array($doiSuffix, array("pattern", "customId"))}checked{/if} />
 							</td>
 							<td width="95%" class="value">
 								{fieldLabel name="doiSuffixDefault" key="plugins.pubIds.doi.manager.settings.doiSuffixDefault"}
 								<br />
 								<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"}</span>
-							</td>
-						</tr>
-						<tr>
-							<td width="5%" class="label" align="right" valign="top">
-								<input type="radio" name="doiSuffix" id="doiSuffixPublisherId" value="publisherId" {if $doiSuffix eq "publisherId"}checked{/if} />
-							</td>
-							<td width="95%" class="value">
-								{fieldLabel name="doiSuffixPublisherId" key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId"}
 							</td>
 						</tr>
 						<tr>

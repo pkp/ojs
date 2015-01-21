@@ -41,8 +41,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Npr. vol%viss%ipp%p može dati DOI kao što je 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Koristite predviđene obrasce.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i za jedinicu (broj)<br />%j.v%vi%i.%a za članak<br />%j.v%vi%i.%a.g%g za prikaz <br />%j.v%vi%i.%a.s%s za dodatni fajl.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Koristite "Custom Identifier" za objavljene stavke kao DOI sufiks (mora biti uključeno u koraku 4). Ovo je isti identifikator koji će se koristiti i za javni URL.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Unesite individualni DOI sufiks za svaku objavljenu stavku, nezavisan i drugačiji od "Custom Identifier" iz prethodnog opcije. Naći ćete dodatno polje za DOI unos na stranici svake stavlke među metapodacima.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Unesite individualni DOI sufiks za svaku objavljenu stavku. Naći ćete dodatno polje za DOI unos na stranici svake stavlke među metapodacima.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Unesite DOI sufiks obrazac za ovu jedinicu (broj).</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Unesite DOI sufiks obrazac za članak.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Unesite DOI sufiks obrazac za prikaz.</message>

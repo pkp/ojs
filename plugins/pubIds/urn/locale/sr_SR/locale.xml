@@ -33,8 +33,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">za dodatni fajl</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">Npr, vol%viss%ipp%p može generisati URN sufiks "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">URN sufiks može uzeti bilo koju formu ali mora biti jedinstven za svaku objavljenu stavku.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Koristi "Custom Identifier" za objavljene stavke kao URN sufiks (mora biti uključen u koraku 4.3). Ovo je isti identifikator koji će se koristiti za javne URL-ove.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Unesite individualni URN sufiks za svaku objavljenu stavku nezavisno i drugačije od "Custom Identifier" iz prethodne opcije. Naći ćete dodatno URN polje za unos na svakoj stranici metapodataka.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Unesite individualni URN sufiks za svaku objavljenu stavku. Naći ćete dodatno URN polje za unos na svakoj stranici metapodataka.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Obriši URN-ove</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Ako promenite URN konfiguraciju, URN-ovi koje ste već dodelili neće biti pogođeni promenom. Kada je promenjena URN konfiguracija sačuvana, koristite ovo dugme za brisanje svih postojećih URN-ova, tako da nova podešavanja stupe na snagu sa postojećim objektima.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Da li ste sigurni da želite da obrišete postojeće URN-ove?</message>

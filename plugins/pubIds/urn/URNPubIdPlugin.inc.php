@@ -113,22 +113,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 			// Generate the URN suffix
 			$urnSuffixSetting = $this->getSetting($journal->getId(), 'urnSuffix');
 			switch ($urnSuffixSetting) {
-				case 'publisherId':
-					$urnSuffix = (string) call_user_func_array(array($pubObject, "getBest${pubObjectType}Id"), array(&$journal));
-					// When the suffix equals the object's ID then
-					// require an object-specific prefix to be sure that the suffix is unique
-					if ($pubObjectType != 'Article' && $urnSuffix === (string) $pubObject->getId()) {
-						$urnSuffix = strtolower_codesafe($pubObjectType{0}) . $urnSuffix;
-					}
-
-					if (!empty($urnSuffix)) {
-						$urn = $urnPrefix . $urnSuffix;
-						if ($this->getSetting($journal->getId(), 'checkNo')) {
-							$urn .= $this->_calculateCheckNo($urn);
-						}
-					}
-					break;
-
 				case 'customIdentifier':
 					$urnSuffix = $pubObject->getData('urnSuffix');
 

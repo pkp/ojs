@@ -369,6 +369,10 @@
 		<code function="localizeCustomBlockSettings" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="2.4.5.9">
+		<code function="removeCustomIdentifierSuffixOption" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>

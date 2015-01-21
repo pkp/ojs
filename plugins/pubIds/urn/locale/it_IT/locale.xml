@@ -33,8 +33,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">per i file supplementari.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">Per esempio, vol%vfasc%ipp%p creerebbe un suffisso "vol3fasc2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Il suffisso URN può essere composto a piacere, ma deve essere univoco.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Usa gli "Identificatori personalizzati" per gli oggetti pubblicati come suffisso URN (devi abilitarli al passo 4.3 del setup). Questo sarà il medesimo identificatore utilizzato per costruire le URL.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Inserisci un suffisso URN individuale per ciascun oggetto pubblicato differente e indipendente dagli "Identificatori personalizzati" citati nell'opzione precedente. Troverai un ulteriore campo per inserire l'URN tra i metadati di ciascun oggetto.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Inserisci un suffisso URN individuale per ciascun oggetto pubblicato. Troverai un ulteriore campo per inserire l'URN tra i metadati di ciascun oggetto.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Cancella URN</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Se cambi la configurazione degli URN, gli identificatori già assegnati non verranno modificati. Per forzarne la modifica, usa questo tasto per fare in modo che le nuove impostazioni abbiano effetto sugli oggetti già esistenti.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Sei sicuro di cancellare tutte gli URN esistenti?</message>

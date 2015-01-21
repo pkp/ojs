@@ -41,8 +41,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Sebagai contoh, vol%viss%ipp%p dapat menciptakan DOI seperti 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Gunakan pola default.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i untuk terbitan<br />%j.v%vi%i.%a untuk artikel<br />%j.v%vi%i.%a.g%g untuk galley <br />%j.v%vi%i.%a.s%s untuk file tambahan.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Gunakan "Custom Identifier" untuk item penerbitan sebagai akhiran DOI (harus diaktifkan di langkah 4). Identifier ini juga akan digunakan untuk URL publik.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Masukkan akhiran DOI individual untuk masing-masing akhiran independen DOI dan berbeda dari "Custom Identifier" yang disebutkan dalam pilihan sebelumnya. Anda akan menemukan field masukkan DOI tambahan di setiap halaman metadata item.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk terbitan.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk artikel.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Silahkan masukkan pola akhiran DOI untuk galley.</message>
