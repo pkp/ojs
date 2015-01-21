@@ -41,8 +41,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Bijvoorbeeld vol%viss%ipp%p kan resulteren in een DOI als 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Gebruik standaard patronen.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i voor nummerss<br />%j.v%vi%i.%a voor artikelen<br />%j.v%vi%i.%a.g%g voor proeven<br />%j.v%vi%i.%a.s%s voor aanvullende bestanden.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Gebruik de aangepaste identificatie bij gepubliceerde items als DOI voorvoegsel (moet geactiveerd worden in stap 4). Dit is dezelfde identificatie die gebruikt zal worden voor publieke URL's.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Gebruik een apart DOI voorvoegsel voor ieder gepubliceerd item, onafhankelijk en afwijkend van de aangepaste identificatie zoals genoemd in de vorige optie. Er wordt een extra DOI invoerveld getoond op de metadata-pagina van ieder item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Gebruik een apart DOI voorvoegsel voor ieder gepubliceerd item. Er wordt een extra DOI invoerveld getoond op de metadata-pagina van ieder item.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Kies het DOI voorvoegsel voor nummers.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Kies het DOI voorvoegsel voor artikelen.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Kies het DOI voorvoegsel voor proeven.</message>

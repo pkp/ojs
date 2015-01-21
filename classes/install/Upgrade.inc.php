@@ -1235,33 +1235,83 @@ class Upgrade extends Installer {
 
 		return true;
 	}
-	
+
 	/**
-	 * For 2.4.6 upgrade: to enable localization of a CustomBlock, 
+	 * For 2.4.6 upgrade: to enable localization of a CustomBlock,
 	 * the blockContent values are converted from string to array (key: primary_language)
 	 */
 	function localizeCustomBlockSettings() {
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journals = $journalDao->getJournals();
-		
+
 		while ($journal = $journals->next()) {
 			$journalId = $journal->getId();
 			$primaryLocale = $journal->getPrimaryLocale();
-			
+
 			$blocks = $pluginSettingsDao->getSetting($journalId, 'customblockmanagerplugin', 'blocks');
-			foreach($blocks as $block) {
+			if ($blocks) foreach ($blocks as $block) {
 				$blockContent = $pluginSettingsDao->getSetting($journalId, $block, 'blockContent');
-				
+
 				if (!is_array($blockContent)) {
 					$pluginSettingsDao->updateSetting($journalId, $block, 'blockContent', array($primaryLocale => $blockContent));
 				}
 			}
 			unset($journal);
 		}
-		
+
 		return true;
 	}
+
+	/**
+	 * For 2.4.6 upgrade: Remove the "Custom Identifier" suffix option in the DOI and URN plugin and
+	 * use the ctustom suffix pattern %x instead.
+	 * @return boolean
+	 */
+	function removeCustomIdentifierSuffixOption() {
+		$pluginSettingsDAO =& DAORegistry::getDAO('PluginSettingsDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getJournals();
+		while ($journal =& $journals->next()) {
+			$journalId = $journal->getId();
+			// DOI plugin
+			$doiSuffixSetting = $pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'doiSuffix');
+			if ($doiSuffixSetting == 'publisherId') {
+				if ($pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'enableArticleDoi')) {
+					$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiArticleSuffixPattern', '%x', 'string');
+				}
+				if ($pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'enableGalleyDoi')) {
+					$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiGalleySuffixPattern', '%x', 'string');
+				}
+				if ($pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'enableIssueDoi')) {
+					$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiIssueSuffixPattern', '%x', 'string');
+				}
+				if ($pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'enableSuppFileDoi')) {
+					$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiSuppFileSuffixPattern', '%x', 'string');
+				}
+				$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiSuffix', 'pattern', 'string');
+			}
+			// URN plugin
+			$urnSuffixSetting = $pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'urnSuffix');
+			if ($doiSuffixSetting == 'publisherId') {
+				if ($pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'enableArticleURN')) {
+					$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnArticleSuffixPattern', '%x', 'string');
+				}
+				if ($pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'enableGalleyURN')) {
+					$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnGalleySuffixPattern', '%x', 'string');
+				}
+				if ($pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'enableIssueURN')) {
+					$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnIssueSuffixPattern', '%x', 'string');
+				}
+				if ($pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'enableSuppFileURN')) {
+					$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnSuppFileSuffixPattern', '%x', 'string');
+				}
+				$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnSuffix', 'pattern', 'string');
+			}
+		}
+		return true;
+	}
+
 }
 
 ?>

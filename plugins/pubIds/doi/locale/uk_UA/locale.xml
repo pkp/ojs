@@ -41,8 +41,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Наприклад, за шаблоном vol%viss%ipp%p будуть створюватись такі DOI, як 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Використовувати шаблон за замовчуванням.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i - для випусків<br />%j.v%vi%i.%a - для статей<br />%j.v%vi%i.%a.g%g - для гранок <br />%j.v%vi%i.%a.s%s - для супровідних файлів.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Використовувати "Власний ідентифікатор" як суфікс DOI для опублікованих об'єктів (необхідно дозволити на Кроці 4). Це той саме ідентифікатор, який використовується для генерації адрес URL.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Самостійно вводити індивідуальний суфікс DOI для кожного опублікованого об'єкту, відмінний і незалежний від "Власного ідентифікатора", запропонованого у попередній опції. У цьому випадку на сторінках метаданих кожного об'єкту буде наявне додаткове поле для введення DOI.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Самостійно вводити індивідуальний суфікс DOI для кожного опублікованого об'єкту. У цьому випадку на сторінках метаданих кожного об'єкту буде наявне додаткове поле для введення DOI.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для випусків.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для статей.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для гранок.</message>

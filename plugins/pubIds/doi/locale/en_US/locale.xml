@@ -42,8 +42,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">For example, vol%viss%ipp%p could create a DOI such as 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Use default patterns.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys <br />%j.v%vi%i.%a.s%s for supplementary files.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Use the "Custom Identifier" for published items as the DOI suffix (must be enabled in Setup 4.3). This is the same identifier that will be used for public URLs.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Enter an individual DOI suffix for each published item independent and different from the "Custom Identifier" mentioned in the previous option. You'll find an additional DOI input field on each item's meta-data page.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Enter an individual DOI suffix for each published item. You'll find an additional DOI input field on each item's meta-data page.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Please enter the DOI suffix pattern for issues.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Please enter the DOI suffix pattern for articles.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Please enter the DOI suffix pattern for galleys.</message>

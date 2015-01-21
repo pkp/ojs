@@ -41,8 +41,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Par exemple, vol%viss%ipp%p peut former un DOI tel que 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Utiliser le modèle par défaut.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i pour les numéros<br />%j.v%vi%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves <br />%j.v%vi%i.%a.s%s pour les fichiers supplémentaires.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Utilisez les "identifiants personnalisés" pour les éléments publiés comme suffixe DOI (cela doit être activé à l'Étape 4). C'est le même identifiant qui sera utilisé pour les URLs publiques.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Entrez un suffixe DOI individuel pour chaque élément publié, indépendant et différent de "l'identifiant personnalisé" mentionné dans l'option précédente. Vous trouverez un champs de saisie DOI supplémentaire dans chaque page de métadonnées des éléments.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Entrez un suffixe DOI individuel pour chaque élément publié. Vous trouverez un champs de saisie DOI supplémentaire dans chaque page de métadonnées des éléments.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Veuillez entrer le modèle de suffixe DOI pour les numéros.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Veuillez entrer le modèle de suffixe DOI pour les articles.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Veuillez entrer le modèle de suffixe DOI pour les épreuves.</message>

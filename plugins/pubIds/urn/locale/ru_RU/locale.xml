@@ -34,8 +34,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">для длполнительных файлов.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">Например, vol%viss%ipp%p cможет создать суффикс URN «vol3iss2pp230».</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Суффикс URN может принимать любую форму, но должен быть уникальным для каждого публикуемого объекта.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Использовать «Пользовательский идентификатор» для опубликованных элементов как суффикс URN (должно быть включено на шаге 4.3 установки журнала). Это тот же самый идентификатор, который будет использоваться для публичных адресов (URL).</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Ввести индивидуальный суффикс URN для каждого опубликованного элемента, независимый и отличающийся от «Пользовательского идентификатора», который упоминается в предыдущей настройке. Вы увидите дополнительное поле ввода URN на странице метаданных для каждого элемента.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Ввести индивидуальный суффикс URN для каждого опубликованного элемента. Вы увидите дополнительное поле ввода URN на странице метаданных для каждого элемента.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Очистить URN</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Если вы измените вашу конфигурацию URN, то она не затронет URN, которые уже были назначены. После сохранения конфигурации URN используйте эту кнопку, чтобы удалить все существующие URN для того, чтобы новые настройки повлияли на существующие объекты.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Вы уверены, что хотите удалить все существующие URN?</message>

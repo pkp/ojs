@@ -103,14 +103,6 @@
 				</tr>
 				<tr>
 					<td width="5%" class="label" align="right" valign="top">
-						<input type="radio" name="urnSuffix" id="urnSuffixPublisherId" value="publisherId" {if $urnSuffix eq "publisherId"}checked{/if} />
-					</td>
-					<td width="95%" class="value">
-						{fieldLabel name="urnSuffixpublisherId" key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId"}
-					</td>
-				</tr>
-				<tr>
-					<td width="5%" class="label" align="right" valign="top">
 						<input type="radio" name="urnSuffix" id="urnSuffixCustomIdentifier" value="customIdentifier" {if $urnSuffix eq "customIdentifier"}checked{/if} />
 					</td>
 					<td width="95%" class="value">

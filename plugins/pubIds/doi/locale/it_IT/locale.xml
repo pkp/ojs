@@ -41,8 +41,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Per esempio, vol%viss%ipp%p creerà il suffisso "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Usa i pattern di default.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for i fascicoli<br />%j.v%vi%i.%a per gli articoli<br />%j.v%vi%i.%a.g%g per l'impaginato <br />%j.v%vi%i.%a.s%s per i file supplementari.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Usa gli "Identificatori personalizzati" degli oggetti pubblicati come suffissi DOI (devono essere abilitati nel Setup, 4.3). Lo stesso identificatore verrà usato nelle URL.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Inserisci un suffisso DOI indipendente per ogni oggetto pubblicato e differente dagli "Identificatori personalizzati" menzionati nell'opzione precedente. Troverai un ulteriore campo per inserire l'URN nella pagina dei metadati di ogni oggetto.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Inserisci il pattern del suffisso DOI per i fascicoli.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Inserisci il pattern del suffisso DOI per gli articoli.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Inserisci il pattern del suffisso DOI per i file principali degli articoli.</message>

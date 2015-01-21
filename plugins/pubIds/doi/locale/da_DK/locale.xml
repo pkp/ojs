@@ -41,8 +41,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">For eksempel ville vol%viss%ipp%p kunne generere en DOI som 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Anvend standardformaterne.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g til satsskibe <br />%j.v%vi%i.%a.s%s til supplerende filer.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Brug “Brugerdefinerede id'er” for udgivne elementer som DOI-suffiks (skal være aktiveret under Trin 4). Dette er det samme id, som vil blive anvendt i de offentligt tilgængelige URL’er.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Indskriv et særskilt DOI-suffiks for hvert publiceret element, forskelligt fra det brugerdefinerede id nævnt ovenfor. Der findes et ekstra DOI-felt på hvert elements metadataside.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Indskriv et særskilt DOI-suffiks for hvert publiceret element. Der findes et ekstra DOI-felt på hvert elements metadataside.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Indskriv DOI-suffiksformatet til numrene.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Indskriv DOI-suffiksformatet til artiklerne.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Indskriv DOI-suffiksformatet til satsskibene.</message>

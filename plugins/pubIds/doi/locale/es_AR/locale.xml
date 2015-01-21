@@ -41,8 +41,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Por ejemplo, vol%viss%ipp%p puede crear un DOI tal como 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Usar los patrones por defecto.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i para números<br />%j.v%vi%i.%a para artículos<br />%j.v%vi%i.%a.g%g para versiones galeradas <br />%j.v%vi%i.%a.s%s para artículos complementarios.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Use el "Identificador Personalizado" para items publicados como el sufijo DOI ( debe ser habilitado en el paso 4). Este es el mismo identificador que será usado para las URLs públicas.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Introduzca un sufijo DOI individual para cada item publicado, independiente  y diferente del "Identificador personalizado" mencionado en la opción previa. Encontrará un campo adicional para el DOI en cada página de metadatos de item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Introduzca un sufijo DOI individual para cada item publicado. Encontrará un campo adicional para el DOI en cada página de metadatos de item.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Por favor introduzca el patrón de sufijos DOI para los números.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Por favor introduzca el patrón de sufijos DOI para los artículos.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Por favor introduzca el patrón de sufijos DOI para las versiones galeradas.</message>

@@ -41,8 +41,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Por examplo, vol%viss%ipp%p poderiam criar um DOI com estrutura 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Use os padrões predefinidos.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i para edições<br />%j.v%vi%i.%a para artigos<br />%j.v%vi%i.%a.g%g para composições<br />%j.v%vi%i.%a.s%s para arquivos suplementares.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Use o "Identificador personalizado" de itens publicados como sufixo DOI (deve estar habilitado no Passo 4 da configuração). Este mesmo identificador será usado para URLs públicos.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Informe um sufixo DOI individual para cada item publicado, independente e distinto do "Identificador personalizado" mencionado na opção anterior. Ficará disponível um campo DOI adicional na página de metadados de cada item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Informe um sufixo DOI individual para cada item publicado. Ficará disponível um campo DOI adicional na página de metadados de cada item.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Informe o padrão do sufixo DOI para edições.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Informe o padrão do sufixo DOI para artigos.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Informe o padrão do sufixo DOI para composições.</message>

@@ -116,32 +116,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		// Generate the DOI suffix.
 		$doiSuffixGenerationStrategy = $this->getSetting($journalId, 'doiSuffix');
 		switch ($doiSuffixGenerationStrategy) {
-			case 'publisherId':
-				switch($pubObjectType) {
-					case 'Issue':
-						$doiSuffix = (string) $pubObject->getBestIssueId($journal);
-						break;
-					case 'Article':
-						$doiSuffix = (string) $pubObject->getBestArticleId($journal);
-						break;
-					case 'Galley':
-						$doiSuffix = (string) $pubObject->getBestGalleyId($journal);
-						break;
-					case 'SuppFile':
-						$doiSuffix = (string) $pubObject->getBestSuppFileId($journal);
-						break;
-					default:
-						assert(false);
-				}
-
-				// When the suffix equals the object's ID then
-				// require an object-specific prefix to be sure that
-				// the suffix is unique.
-				if ($pubObjectType != 'Article' && $doiSuffix === (string) $pubObject->getId()) {
-					$doiSuffix = strtolower_codesafe($pubObjectType{0}) . $doiSuffix;
-				}
-				break;
-
 			case 'customId':
 				$doiSuffix = $pubObject->getData('doiSuffix');
 				break;

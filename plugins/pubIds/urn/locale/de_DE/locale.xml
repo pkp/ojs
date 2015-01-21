@@ -33,8 +33,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">für Zusatzdateien</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">vol%viss%ipp%p würde z.B. einen URN-Suffix "vol3iss2pp230" erzeugen.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Ein URN-Suffix kann in beliebiger Form sein, muss aber eindeutig für jedes veröffentlichte Element sein.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Die eindeutige Kennung für veröffentlichte Elemente als URN-Suffix verwenden (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden). Dies ist dieselbe Kennung, die für öffentliche URL verwendet werden wird.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Für jedes veröffentlichte Element einen individuellen URN-Suffix unabhängig und verschieden von der "benutzerdefinierten Kennung" aus der vorherigen Option vergeben. Sie werden ein zusätzliches URN-Eingabefeld auf der Metadatenseite jedes Elements finden.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Für jedes veröffentlichte Element einen individuellen URN-Suffix vergeben. Sie werden ein zusätzliches URN-Eingabefeld auf der Metadatenseite jedes Elements finden.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">URN löschen</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Wenn Sie Ihre URN-Konfiguration ändern, werden bereits zugewiesene URN nicht betroffen sein. Sobald die geänderte URN-Konfiguration gespeichert worden ist, nutzen Sie bitte diesen Knopf, um alle bestehenden URN zu löschen, so dass die neuen Einstellungen für bestehende Artikel gelten.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Sind Sie sicher, dass Sie alle existierenden URN löschen möchten?</message>

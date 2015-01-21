@@ -33,8 +33,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">para archivos complementarios.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">Por ejemplo, vol%viss%ipp%p puede crear el sufijo URN "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Un sufijo URN puede tomar cualquier formato, pero debe ser único para cada item publicado</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Use este "identificador personalizado" para sufijos URN para los items publicados (debe ser habilitado en paso 4.3). Este es el mismo identificador que será usado para las URLs públicas.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Introduzca un sufijo URN individual para cada item publicado, independiente y diferente al "identificador personalizado" mencionado en la opción previa. Encontrará un campo adicional para la URN en cada página de metadatos de cada item.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Introduzca un sufijo URN individual para cada item publicado. Encontrará un campo adicional para la URN en cada página de metadatos de cada item.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Borrar todos los URN.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Si cambia su configuración de URN , aquellos URN que ya fueron asignados no se verán afectados. Una vez que cambie su configuración de URN, use este botón para borrar todos los URN ya existentes para que las nuevas configuraciones tengan efecto en los objetos existentes.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">¿Está seguro de  eliminar todos los URN existente?</message>

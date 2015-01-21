@@ -42,8 +42,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">例如, vol%viss%ipp%p 生成的DOI为10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">使用默认模式。</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i 期次<br />%j.v%vi%i.%a 文章<br />%j.v%vi%i.%a.g%g 样稿 <br />%j.v%vi%i.%a.s%s 附加文件。]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">使用“自定义标识符”作为DOI字尾（启动设置4.3）。相同的标识符被用作公共网址。</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">请输入每个出版项目的DOI字尾，并且区别于以上“自定义标识符”。您将在每个项目元数据页发现一个额外的DOI输入段。</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">请输入期次DOI字尾模式。</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">请输入文章DOI字尾模式。</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">请输入样稿的DOI字尾模式。</message>

@@ -33,8 +33,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">voor aanvullende bestanden.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">bijvoorbeeld, vol%viss%ipp%p  kan het URN achtervoegsel "vol3iss2pp230" opleveren.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Een URN achtervoegsel kan iedere vorm aannemen zolang het uniek is voor ieder gepubliceerd item.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Gebruik de aangepaste identificatie voor gepubliceerde items als URN achtervoegsel (moet ingeschakeld worden in stap 4.3). Dit is dezelfde identificatie die gebruik zal worden voor publieke URL's.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Voer een individueel URN achtervoegsel in voor ieder gepubliceerd item onafhankelijk en afwijkend van de aangepaste identificatie uit de vorige optie. U zult een extra URN invoerveld tegenkomen op de metadata pagina van ieder item.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Voer een individueel URN achtervoegsel in voor ieder gepubliceerd item. U zult een extra URN invoerveld tegenkomen op de metadata pagina van ieder item.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Wis URN's</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Als u de URN configuratie verandert heeft dat geen gevolgen voor reeds toegekende URN's. Nadat de gewijzigde URN configuratie is opgeslagen kunt u deze knop gebruiken om alle bestaande URN's te wissen om de nieuwe instellingen ook toe te passen op bestaande objecten.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Weet u zeker dat u allle bestaande URN's wilt verwijderen?</message>

@@ -43,8 +43,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Например, vol%viss%ipp%p может создать DOI вида 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Использовать шаблоны по умолчанию.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i для выпусков<br />%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок <br />%j.v%vi%i.%a.s%s для дополнительных файлов.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Использовать «Пользовательский идентификатор» для опубликованных элементов как суффикс DOI (должно быть включено на шаге 4.3 установки журнала). Это тот же самый идентификатор, который будет использоваться для публичных адресов (URL).</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Ввести индивидуальный суффикс DOI для каждого опубликованного элемента, независимый и отличающийся от «Пользовательского идентификатора», который упоминается в предыдущей настройке. Вы увидите дополнительное поле ввода DOI на странице метаданных для каждого элемента.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Ввести индивидуальный суффикс DOI для каждого опубликованного элемента. Вы увидите дополнительное поле ввода DOI на странице метаданных для каждого элемента.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Пожалуйста, введите шаблон суффикса DOI для выпусков.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Пожалуйста, введите шаблон суффикса DOI для статей.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Пожалуйста, введите шаблон суффикса DOI для гранок.</message>

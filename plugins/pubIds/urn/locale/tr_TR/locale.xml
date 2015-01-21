@@ -50,8 +50,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">ek dosyalar için</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">For example, vol%viss%ipp%p could create the URN suffix "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">A URN suffix can take any form, but must be unique for each published item.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Use the "Custom Identifier" for published items as the URN suffix (must be enabled in Step 4.3). This is the same identifier that will be used for public URLs.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Enter an individual URN suffix for each published item independent and different from the "Custom Identifier" mentioned in the previous option. You'll find an additional URN input field on each item's metadata page.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Enter an individual URN suffix for each published item. You'll find an additional URN input field on each item's metadata page.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">URN'leri temizle</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">If you change your URN configuration, URNs that have already been assigned will not be affected. Once the changed URN configuration is saved, use this button to clear all existing URNs so that the new settings will take effect with existing objects.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.confirm">Açık URN'leri silemek istediğinizden emin misiniz?</message>

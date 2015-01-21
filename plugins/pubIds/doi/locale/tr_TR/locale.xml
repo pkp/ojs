@@ -41,8 +41,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Örneğin; vol%viss%ipp%p kodlaması, 10.1234/vol3iss2pp230 gibi bir DOI yaratabilir.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">varsayılan örneği/şablonu kullan.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[Sayılar için %j.v%vi%i<br />makaleler için %j.v%vi%i.%a<br />dizgiler için %j.v%vi%i.%a.g%g<br />ek dosyalar için %j.v%vi%i.%a.s%s.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Yayınlanmış öğeler için DOI son eki gibi (adım 4'te etkinleştirilmelidir) "Özelleştirilmiş Belirleyici" kullanın. Bu genel URL'ler için kullanılacak aynı belirleyicidir.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Önceki seçenekte belirtilen "Özel Belirleyici"den farklı ve bağımsız yayımlanan her öğe için tekil bir DOI son ek girin. Her öğenin üst veri sayfasında ek DOI giriş alanı bulacaksınız.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Lütfen sayılar için örnek/şablon DOI son ekini giriniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Lütfen makaleler için örnek/şablon DOI son ekini giriniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Lütfen dizgiler için örnek/şablon DOI son ekini gibiniz.</message>
