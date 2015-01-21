@@ -19,14 +19,13 @@
 
 	<!-- Set up Dataverse: DVN URL and authentication details -->
 	<message key="plugins.generic.dataverse.settings.connect">Verbinden</message>
-	<message key="plugins.generic.dataverse.settings.dvnUri">Dataverse Network URL</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL des Dataverse Network, zu dem das Dataverse der Zeitschrift gehört</message>
-	<message key="plugins.generic.dataverse.settings.usernameDescription">Benutzer/innenname des Accounts, der für die Archivierung von Dateien in Dataverse benutzt werden soll</message>
-	<message key="plugins.generic.dataverse.settings.passwordDescription">Passwort zum angegebenen Benutzer/innennamen</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriRequired">URL des Dataverse Networks wird benötigt.</message>
-	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">URL des Dataverse Networks ist ungültig.</message>
-	<message key="plugins.generic.dataverse.settings.usernameRequired">Bitte geben Sie einen gültigen Benutzer/innennamen für das angegebene Dataverse Network an.</message>
-	<message key="plugins.generic.dataverse.settings.passwordRequired">Bitte geben Sie ein gültiges Passwort für das angegebene Dataverse Network an.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">Dataverse URL</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL des Stamm-Dataverse, zu dem das Dataverse der Zeitschrift gehört</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Benutzer/innenname oder API token</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Passwort. Für API token nicht benötigt</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">URL des Dataverse wird benötigt.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Kann nicht mit Dataverse verbinden.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Bitte geben Sie einen Benutzer/innennamen für Dataverse an.</message>
 
 	<!-- Set up Dataverse: select Dataverse --> 
 	<message key="plugins.generic.dataverse.settings.selectDataverse">Dataverse auswählen</message>
@@ -149,6 +148,8 @@
 	<message key="plugins.generic.dataverse.suppFile.publishData.error">Bitte laden Sie eine Datei zur Archivierung in Dataverse hoch.</message>
 	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">Die Datei wird zur Dataverse-Studie, die für diese Einreichung angelegt worden ist, hinzugefügt:</message>
 	<message key="plugins.generic.dataverse.suppFile.studyLocked">Diese Studie ist für die Bearbeitung gesperrt. Bis die Bearbeitung abgeschlossen ist, können keine Änderungen der Einreichungsdaten vorgenommen werden.</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription">Beschreibung der Studie</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">Lifert eine Zusammenfassung des Zweckes, der Art und des Fokus der Studie.</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">Externe Datenzitierung</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Wenn die Daten dieser Einreichung bereits in einem anderen Repository veröffentlicht worden sind, geben Sie bitte eine Datenzitierung an.</message>
 	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Bitte laden Sie Dateien zur Archivierung in Dataverse hoch ODER geben Sie eine externe Datenzitierung an.</message>

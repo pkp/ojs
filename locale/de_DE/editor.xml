@@ -65,6 +65,7 @@
 	<message key="editor.issues.publicIssueIdentifier">Öffentliche Ausgabenkennzeichnung </message>
 	<message key="editor.issues.description">Beschreibung</message>
 	<message key="editor.issues.accessStatus">Zugangsstatus</message>
+	<message key="editor.issues.resetArticlePublicationDates">Publikationsdatum zurücksetzen</message>
 	<message key="editor.issues.accessDate">Datum für freien Zugang</message>
 	<message key="editor.issues.enableOpenAccessDate">Verzögerten freien Zugang aktivieren</message>
 	<message key="editor.issues.coverPage">Titelbild</message>
