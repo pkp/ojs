@@ -1269,45 +1269,46 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function removeCustomIdentifierSuffixOption() {
-		$pluginSettingsDAO =& DAORegistry::getDAO('PluginSettingsDAO');
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journals =& $journalDao->getJournals();
-		while ($journal =& $journals->next()) {
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getJournals();
+		while ($journal = $journals->next()) {
 			$journalId = $journal->getId();
 			// DOI plugin
-			$doiSuffixSetting = $pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'doiSuffix');
+			$doiSuffixSetting = $pluginSettingsDao->getSetting($journalId, 'doipubidplugin', 'doiSuffix');
 			if ($doiSuffixSetting == 'publisherId') {
-				if ($pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'enableArticleDoi')) {
-					$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiArticleSuffixPattern', '%x', 'string');
+				if ($pluginSettingsDao->getSetting($journalId, 'doipubidplugin', 'enableArticleDoi')) {
+					$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'doiArticleSuffixPattern', '%x', 'string');
 				}
-				if ($pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'enableGalleyDoi')) {
-					$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiGalleySuffixPattern', '%x', 'string');
+				if ($pluginSettingsDao->getSetting($journalId, 'doipubidplugin', 'enableGalleyDoi')) {
+					$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'doiGalleySuffixPattern', '%x', 'string');
 				}
-				if ($pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'enableIssueDoi')) {
-					$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiIssueSuffixPattern', '%x', 'string');
+				if ($pluginSettingsDao->getSetting($journalId, 'doipubidplugin', 'enableIssueDoi')) {
+					$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'doiIssueSuffixPattern', '%x', 'string');
 				}
-				if ($pluginSettingsDAO->getSetting($journalId, 'doipubidplugin', 'enableSuppFileDoi')) {
-					$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiSuppFileSuffixPattern', '%x', 'string');
+				if ($pluginSettingsDao->getSetting($journalId, 'doipubidplugin', 'enableSuppFileDoi')) {
+					$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'doiSuppFileSuffixPattern', '%x', 'string');
 				}
-				$pluginSettingsDAO->updateSetting($journalId, 'doipubidplugin', 'doiSuffix', 'pattern', 'string');
+				$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'doiSuffix', 'pattern', 'string');
 			}
 			// URN plugin
-			$urnSuffixSetting = $pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'urnSuffix');
+			$urnSuffixSetting = $pluginSettingsDao->getSetting($journalId, 'urnpubidplugin', 'urnSuffix');
 			if ($doiSuffixSetting == 'publisherId') {
-				if ($pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'enableArticleURN')) {
-					$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnArticleSuffixPattern', '%x', 'string');
+				if ($pluginSettingsDao->getSetting($journalId, 'urnpubidplugin', 'enableArticleURN')) {
+					$pluginSettingsDao->updateSetting($journalId, 'urnpubidplugin', 'urnArticleSuffixPattern', '%x', 'string');
 				}
-				if ($pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'enableGalleyURN')) {
-					$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnGalleySuffixPattern', '%x', 'string');
+				if ($pluginSettingsDao->getSetting($journalId, 'urnpubidplugin', 'enableGalleyURN')) {
+					$pluginSettingsDao->updateSetting($journalId, 'urnpubidplugin', 'urnGalleySuffixPattern', '%x', 'string');
 				}
-				if ($pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'enableIssueURN')) {
-					$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnIssueSuffixPattern', '%x', 'string');
+				if ($pluginSettingsDao->getSetting($journalId, 'urnpubidplugin', 'enableIssueURN')) {
+					$pluginSettingsDao->updateSetting($journalId, 'urnpubidplugin', 'urnIssueSuffixPattern', '%x', 'string');
 				}
-				if ($pluginSettingsDAO->getSetting($journalId, 'urnpubidplugin', 'enableSuppFileURN')) {
-					$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnSuppFileSuffixPattern', '%x', 'string');
+				if ($pluginSettingsDao->getSetting($journalId, 'urnpubidplugin', 'enableSuppFileURN')) {
+					$pluginSettingsDao->updateSetting($journalId, 'urnpubidplugin', 'urnSuppFileSuffixPattern', '%x', 'string');
 				}
-				$pluginSettingsDAO->updateSetting($journalId, 'urnpubidplugin', 'urnSuffix', 'pattern', 'string');
+				$pluginSettingsDao->updateSetting($journalId, 'urnpubidplugin', 'urnSuffix', 'pattern', 'string');
 			}
+			unset($journal);
 		}
 		return true;
 	}
