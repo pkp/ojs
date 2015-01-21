@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/pln/version.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Plugin version information.
@@ -13,8 +13,8 @@
 <version>
 	<application>pln</application>
 	<type>plugins.generic</type>
-	<release>1.0.0.0</release>
-	<date>2014-06-01</date>
+	<release>1.0.1.0</release>
+	<date>2015-01-20</date>
 	<lazy-load>1</lazy-load>
 	<sitewide>0</sitewide>
 	<class>PLNPlugin</class>
