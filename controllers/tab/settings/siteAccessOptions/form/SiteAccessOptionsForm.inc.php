@@ -23,8 +23,6 @@ class SiteAccessOptionsForm extends ContextSettingsForm {
 	function SiteAccessOptionsForm($wizardMode = false) {
 		$settings = array(
 			'disableUserReg' => 'bool',
-			'allowRegAuthor' => 'bool',
-			'allowRegReviewer' => 'bool',
 			'restrictSiteAccess' => 'bool',
 			'restrictArticleAccess' => 'bool',
 			'showGalleyLinks' => 'bool'

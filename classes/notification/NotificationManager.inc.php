@@ -175,24 +175,6 @@ class NotificationManager extends PKPNotificationManager {
 			default: return parent::getIconClass($notification);
 		}
 	}
-
-	/**
-	 * Returns an array of information on the journal's subscription settings
-	 * @return array
-	 */
-	function getSubscriptionSettings($request) {
-		$journal = $request->getJournal();
-		if (!$journal) return array();
-
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
-
-		$settings = array('subscriptionsEnabled' => $paymentManager->acceptSubscriptionPayments(),
-				'allowRegReviewer' => $journal->getSetting('allowRegReviewer'),
-				'allowRegAuthor' => $journal->getSetting('allowRegAuthor'));
-
-		return $settings;
-	}
 }
 
 ?>

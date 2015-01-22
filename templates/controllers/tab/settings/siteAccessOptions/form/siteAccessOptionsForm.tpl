@@ -30,11 +30,6 @@
 	{fbvFormArea id="userRegistration" class="border" title="manager.setup.userRegistration"}
 		{fbvFormSection list=true}
 			{fbvElement type="radio" id="disableUserReg-0" name="disableUserReg" value="0" checked=!$disableUserReg label="manager.setup.enableUserRegistration"}
-			<div style="padding-left: 20px;">
-				{fbvElement type="checkbox" id="allowRegReader" value="1" checked=$allowRegReader disabled=$disableUserReg label="manager.setup.enableUserRegistration.reader"}
-				{fbvElement type="checkbox" id="allowRegAuthor" value="1" checked=$allowRegAuthor disabled=$disableUserReg label="manager.setup.enableUserRegistration.author"}
-				{fbvElement type="checkbox" id="allowRegReviewer" value="1" checked=$allowRegReviewer disabled=$disableUserReg label="manager.setup.enableUserRegistration.reviewer"}
-			</div>
 			{fbvElement type="radio" id="disableUserReg-1" name="disableUserReg" value="1" checked=$disableUserReg label="manager.setup.disableUserRegistration"}
 		{/fbvFormSection}
 	{/fbvFormArea}

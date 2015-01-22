@@ -220,26 +220,20 @@ class UserHandler extends PKPUserHandler {
 		switch (array_shift($args)) {
 			case 'author':
 				$roleId = ROLE_ID_AUTHOR;
-				$setting = 'allowRegAuthor';
 				$deniedKey = 'user.noRoles.submitArticleRegClosed';
 				break;
 			case 'reviewer':
 				$roleId = ROLE_ID_REVIEWER;
-				$setting = 'allowRegReviewer';
 				$deniedKey = 'user.noRoles.regReviewerClosed';
 				break;
 			default:
 				return $request->redirect(null, null, 'index');
 		}
 
-		if ($journal->getSetting($setting)) {
-			$role = new Role();
-			$role->setJournalId($journal->getId());
-			$role->setRoleId($roleId);
-			$role->setUserId($user->getId());
-
-			$roleDao = DAORegistry::getDAO('RoleDAO');
-			$roleDao->insertRole($role);
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$userGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), $roleId);
+		if ($userGroup->getPermitSelfRegistration()) {
+			$userGroupDao->assignUserToGroup($user->getId(), $userGroup->getId());
 			$request->redirectUrl($request->getUserVar('source'));
 		} else {
 			$templateMgr = TemplateManager::getManager($request);

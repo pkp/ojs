@@ -62,14 +62,6 @@
 </form>
 <h5 style="margin-left:10%">{translate key="notification.mailList.register"}</h5>
 <ul class="plain" style="margin-left:10%">
-	{if $settings.allowRegReviewer}
-		{url|assign:"url" page="user" op="register"}
-		<li>&#187; {translate key="notification.mailList.review" reviewUrl=$url} </li>
-	{/if}
-	{if $settings.allowRegAuthor}
-		{url|assign:"url" page="information" op="authors"}
-		<li>&#187; {translate key="notification.mailList.submit" submitUrl=$url} </li>
-	{/if}
 	{if $settings.subscriptionsEnabled}
 		{url|assign:"url" page="user" op="register"}
 		<li>&#187; {translate key="notification.mailList.protectedContent" subscribeUrl=$url}
@@ -80,4 +72,3 @@
 </form>
 
 {include file="common/footer.tpl"}
-
