@@ -1198,8 +1198,8 @@ class Upgrade extends Installer {
 		$result->Close();
 
 		// Localize the email header and footer fields.
-		$contextDao = DAORegistry::getDAO('PressDAO');
-		$settingsDao = DAORegistry::getDAO('PressSettingsDAO');
+		$contextDao = DAORegistry::getDAO('JournalDAO');
+		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$contexts = $contextDao->getAll();
 		while ($context = $contexts->next()) {
 			foreach (array('emailHeader', 'emailFooter', 'emailSignature') as $settingName) {
