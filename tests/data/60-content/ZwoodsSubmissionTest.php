@@ -39,10 +39,11 @@ class ZwoodsSubmissionTest extends ContentBaseTestCase {
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
+		$this->waitForElementPresent('//a[contains(text(), \'External Review\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
 		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
+		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
 		$this->logOut();
 	}

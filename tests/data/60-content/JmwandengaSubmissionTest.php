@@ -39,14 +39,15 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
+		$this->waitForElementPresent('//a[contains(text(), \'External Review\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('jjanssen', 'Julie Janssen');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
 		$this->assignReviewer('agallego', 'Adela Gallego');
 		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
+		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
 		$this->recordEditorialDecision('Send To Production');
-		$this->waitForText('css=a.production.stageId5 > div.stageState', 'Initiated');
+		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Layout Editor', 'Stephen Hellier');
 		$this->assignParticipant('Proofreader', 'Sabine Kumar');
 

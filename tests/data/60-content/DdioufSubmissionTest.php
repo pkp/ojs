@@ -39,12 +39,15 @@ class DdioufSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
+		$this->waitForElementPresent('//a[contains(text(), \'External Review\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->assignReviewer('agallego', 'Adela Gallego');
 		$this->recordEditorialDecision('Accept Submission');
+		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
 		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');
 		$this->recordEditorialDecision('Send To Production');
+		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/div[contains(text(), \'Initiated\')]');
 		$this->waitForText('css=a.production.stageId5 > div.stageState', 'Initiated');
 		$this->assignParticipant('Layout Editor', 'Graham Cox');
 		$this->assignParticipant('Proofreader', 'Catherine Turner');

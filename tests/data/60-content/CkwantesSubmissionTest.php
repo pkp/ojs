@@ -43,9 +43,11 @@ class CkwantesSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'Stephanie Berardo');
 		$this->sendToReview();
+		$this->waitForElementPresent('//a[contains(text(), \'External Review\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
 		$this->assignReviewer('agallego', 'Adela Gallego');
 		$this->recordEditorialDecision('Accept Submission');
+		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
 		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');
 		$this->logOut();

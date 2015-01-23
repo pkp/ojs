@@ -43,6 +43,7 @@ class LchristopherSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
+		$this->waitForElementPresent('//a[contains(text(), \'External Review\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('jjanssen', 'Julie Janssen');
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->logOut();

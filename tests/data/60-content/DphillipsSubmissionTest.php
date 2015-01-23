@@ -39,13 +39,14 @@ class DphillipsSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'Stephanie Berardo');
 		$this->sendToReview();
+		$this->waitForElementPresent('//a[contains(text(), \'External Review\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('jjanssen', 'Julie Janssen');
 		$this->assignReviewer('agallego', 'Adela Gallego');
 		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForText('css=a.editorial.stageId4 > div.stageState', 'Initiated');
+		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');
 		$this->recordEditorialDecision('Send To Production');
-		$this->waitForText('css=a.production.stageId5 > div.stageState', 'Initiated');
+		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Layout Editor', 'Graham Cox');
 		$this->logOut();
 	}
