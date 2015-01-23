@@ -157,6 +157,13 @@ class RegistrationForm extends Form {
 	 */
 	function initData() {
 		$this->setData('registerAsReader', 1);
+		
+		$referrer = (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null);
+		$authorPattern = '/information\/authors|about\/submissions/';
+		if (preg_match($authorPattern, $referrer)) {
+			$this->setData('registerAsAuthor', 1);
+		}
+		
 		$this->setData('existingUser', $this->existingUser);
 		$this->setData('userLocales', array());
 		$this->setData('sendPassword', 1);
