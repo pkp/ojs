@@ -16,7 +16,7 @@
 	{rdelim});
 </script>
 
-<form class="pkp_form" id="accessForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.OJSDistributionSettingsTabHandler" op="saveFormData" tab="access"}">
+<form class="pkp_form" id="accessForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.DistributionSettingsTabHandler" op="saveFormData" tab="access"}">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="accessFormNotification"}
 
 	{fbvFormArea id="userRegistration" class="border" title="manager.setup.onlineAccessManagement"}

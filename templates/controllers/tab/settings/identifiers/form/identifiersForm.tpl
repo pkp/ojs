@@ -16,7 +16,7 @@
 	{rdelim});
 </script>
 
-<form class="pkp_form" id="identifiersForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.OJSDistributionSettingsTabHandler" op="saveFormData" tab="identifiers"}">
+<form class="pkp_form" id="identifiersForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.DistributionSettingsTabHandler" op="saveFormData" tab="identifiers"}">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="identifiersFormNotification"}
 
 	{fbvFormArea id="identifiers"}
