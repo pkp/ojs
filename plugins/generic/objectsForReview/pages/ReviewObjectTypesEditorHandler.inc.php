@@ -52,7 +52,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function createReviewObjectType($args, &$request) {
-		$this->editReviewObjectType($args, &$request);
+		$this->editReviewObjectType($args, $request);
 	}
 
 	/**

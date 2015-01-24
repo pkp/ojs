@@ -206,7 +206,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function createObjectForReview($args, &$request) {
-		$this->editObjectForReview($args, &$request);
+		$this->editObjectForReview($args, $request);
 	}
 
 	/**
