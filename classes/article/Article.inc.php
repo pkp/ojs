@@ -46,6 +46,70 @@ class Article extends Submission {
 	//
 
 	/**
+	 * Get the value of a license field from the containing context.
+	 * @param $locale string Locale code
+	 * @param $field PERMISSIONS_FIELD_...
+	 * @return string|null
+	 */
+	function _getContextLicenseFieldValue($locale, $field) {
+		$contextDao = Application::getContextDAO();
+		$context = $contextDao->getById($this->getContextId());
+		$fieldValue = null; // Scrutinizer
+		switch ($field) {
+			case PERMISSIONS_FIELD_LICENSE_URL:
+				$fieldValue = $context->getSetting('licenseURL');
+				break;
+			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
+				switch($context->getSetting('copyrightHolderType')) {
+					case 'author':
+						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString());
+						break;
+					case 'other':
+						$fieldValue = $context->getSetting('copyrightHolderOther');
+						break;
+					case 'context':
+					default:
+						$fieldValue = $context->getName(null);
+						break;
+				}
+				break;
+			case PERMISSIONS_FIELD_COPYRIGHT_YEAR:
+				// Default copyright year to current year
+				$fieldValue = date('Y');
+
+				// Override based on context settings
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($this->getId());
+				if ($publishedArticle) {
+					switch($context->getSetting('copyrightYearBasis')) {
+						case 'submission':
+							// override to the submission's year if published as you go
+							$fieldValue = date('Y', strtotime($publishedArticle->getDatePublished()));
+							break;
+						case 'issue':
+							if ($publishedArticle->getIssueId()) {
+								// override to the issue's year if published as issue-based
+								$issueDao =& DAORegistry::getDAO('IssueDAO');
+								$issue = $issueDao->getIssueByArticleId($this->getId());
+								if ($issue && $issue->getDatePublished()) {
+									$fieldValue = date('Y', strtotime($issue->getDatePublished()));
+								}
+							}
+							break;
+						default: assert(false);
+					}
+				}
+				break;
+			default: assert(false);
+		}
+
+		// Return the fetched license field
+		if ($locale === null || !is_array($fieldValue)) return $fieldValue;
+		if (isset($fieldValue[$locale])) return $fieldValue[$locale];
+		return null;
+	}
+
+	/**
 	 * Return the "best" article ID -- If a public article ID is set,
 	 * use it; otherwise use the internal article Id. (Checks the journal
 	 * settings to ensure that the public ID feature is enabled.)

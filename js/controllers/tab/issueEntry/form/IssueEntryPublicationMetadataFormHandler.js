@@ -41,6 +41,20 @@
 
 		$('#waivePaymentButton', $form).click(
 				this.callbackWrapper(this.waivePaymentHandler));
+
+		// Permissions: If any of the permissions fields are filled, check the box
+		if (options.arePermissionsAttached) {
+			$form.find('#attachPermissions').prop('checked', true);
+		}
+
+		// Automatically check the "attach permissions" box on various conditions
+		$('#issueId', $form).change(this.callbackWrapper(this.checkAttachMetadata));
+		$('input[id^="copyrightHolder-"]', $form)
+				.keyup(this.callbackWrapper(this.checkAttachMetadata));
+		$('input[id^="copyrightYear-"]', $form)
+				.keyup(this.callbackWrapper(this.checkAttachMetadata));
+		$('input[id^="licenseURL-"]', $form)
+				.keyup(this.callbackWrapper(this.checkAttachMetadata));
 	};
 
 	$.pkp.classes.Helper.inherits(
@@ -59,8 +73,7 @@
 	$.pkp.controllers.tab.issueEntry.form.IssueEntryPublicationMetadataFormHandler.
 			prototype.paymentReceivedHandler = function(submitButton, event) {
 
-		var $element;
-		$element = this.getHtmlElement();
+		var $element = this.getHtmlElement();
 		$element.find('input[name="waivePublicationFee"]').val('1');
 		$element.find('input[name="markAsPaid"]').val('1');
 
@@ -78,11 +91,25 @@
 	$.pkp.controllers.tab.issueEntry.form.IssueEntryPublicationMetadataFormHandler.
 			prototype.waivePaymentHandler = function(submitButton, event) {
 
-		var $element;
-		$element = this.getHtmlElement();
+		var $element = this.getHtmlElement();
 		$element.find('input[name="waivePublicationFee"]').val('1');
 
 		$element.submit();
+	};
+
+
+	/**
+	 * Callback for when the selected issue changes.
+	 *
+	 * @param {HTMLElement} submitButton The submit button.
+	 * @param {Event} event The event that triggered the
+	 *  submit button.
+	 */
+	$.pkp.controllers.tab.issueEntry.form.IssueEntryPublicationMetadataFormHandler.
+			prototype.checkAttachMetadata = function() {
+
+		var $element = this.getHtmlElement();
+		$element.find('#attachPermissions').prop('checked', true);
 	};
 /** @param {jQuery} $ jQuery closure. */
 }(jQuery));
