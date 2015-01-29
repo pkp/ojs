@@ -29,14 +29,26 @@
 	{else}
 		<a href="http://www.addthis.com/bookmark.php"
 			onclick="window.open('http://www.addthis.com/bookmark.php?pub={$sharingUserName|escape:"url"}&amp;url={$sharingRequestURL|escape:"url"}&amp;title={$sharingArticleTitle|escape:"url"}', 'addthis',
-			                     'scrollbars=yes,menubar=no,width=620,height=520,resizable=yes,toolbar=no,location=no,status=no');
-			         return false;"
+					     'scrollbars=yes,menubar=no,width=620,height=520,resizable=yes,toolbar=no,location=no,status=no');
+				 return false;"
 			title="Bookmark using any bookmark manager!" target="_blank">
 				<img src="{$sharingButtonUrl}" width="{$sharingButtonWidth}" height="{$sharingButtonHeight}" border="0" alt="Bookmark and Share" style="border:0;padding:0" />
 		</a>
 	{/if}
 <!-- end AddThis -->
 {/if}
+
+{if $currentJournal}
+	{if $currentJournal->getSetting('includeCopyrightStatement')}
+		<br/><br/>
+		{translate key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear()|escape copyrightHolder=$article->getLocalizedCopyrightHolder()|escape}
+	{/if}
+	{if $currentJournal->getSetting('includeLicense') && $ccLicenseBadge}
+		<br /><br />
+		{$ccLicenseBadge}
+	{/if}
+{/if}
+
 
 {call_hook name="Templates::Article::Footer::PageFooter"}
 {if $pageFooter}
