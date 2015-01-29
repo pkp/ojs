@@ -28,6 +28,7 @@
 	<message key="editor.allEditors">Все редакторы</message>
 	<message key="editor.me">Я</message>
 	<message key="editor.publicIdentificationExists">Открытый идентификатор «{$publicIdentifier}» уже используется для другого объекта (выпуска, статьи, гранки или дополнительного файла). Пожалуйста, выбирайте уникальные идентификаторы в рамках своего журнала.</message>
+	<message key="editor.publicGalleyIdentificationExists">Открытый идентификатор «{$publicIdentifier}» уже используется для другой гранки этой статьи. Пожалуйста, выберите уникальный идентификатор гранки в рамках этой статьи.</message>
 	<message key="editor.submissionArchive.noSubmissions">Нет рукописей в архиве.</message>
 	<message key="editor.submissionArchive.saveChanges">Сохранить изменения в архиве рукописей? Отмеченные для удаления рукописи будут навсегда удалены из системы.</message>
 	<message key="editor.submissionArchive.confirmDelete">Вы уверены, что хотите навсегда удалить эту рукопись?</message>
