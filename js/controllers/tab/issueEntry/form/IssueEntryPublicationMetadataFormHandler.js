@@ -100,10 +100,6 @@
 
 	/**
 	 * Callback for when the selected issue changes.
-	 *
-	 * @param {HTMLElement} submitButton The submit button.
-	 * @param {Event} event The event that triggered the
-	 *  submit button.
 	 */
 	$.pkp.controllers.tab.issueEntry.form.IssueEntryPublicationMetadataFormHandler.
 			prototype.checkAttachMetadata = function() {
