@@ -80,10 +80,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
 		$enablePageNumber = $journalSettingsDao->getSetting($context->getId(), 'enablePageNumber');
 		$templateMgr->assign('enablePageNumber', $enablePageNumber);
-
-		// include issue possibilities
-		import('classes.issue.IssueAction');
-		$issueAction = new IssueAction();
 		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
 
 		$publishedArticle = $this->getPublishedArticle();
