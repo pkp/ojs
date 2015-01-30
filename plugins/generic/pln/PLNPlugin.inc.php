@@ -449,13 +449,18 @@ class PLNPlugin extends GenericPlugin {
 			
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journal =& $journalDao->getById($journalId);
-		
+
+		// get the journal and determine the language.
+		$locale = $journal->getPrimaryLocale();
+		$language = strtolower(str_replace('_', '-', $locale));
+
 		// retrieve the service document
 		$result = $this->_curlGet(
 			PLN_PLUGIN_NETWORK . PLN_PLUGIN_SD_IRI,
 			array(
 				'On-Behalf-Of: '.$this->getSetting($journalId, 'journal_uuid'),
-				'Journal-URL: '.$journal->getUrl()
+				'Journal-URL: '.$journal->getUrl(),
+				'Accept-language:' . $language,
 			)
 		);
 		
