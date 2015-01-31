@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+* plugins/generic/googleViewer/locale/pt_PT/locale.xml
+*
+* Copyright (c) 2014 Simon Fraser University Library
+* Copyright (c) 2003-2014 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* Localization strings
+-->
+<locale name="pt_PT" full_name="Português">
+<message key="plugins.generic.googleViewer.name">Plugin do Visualizador integrado da Google</message>
+<message key="plugins.generic.googleViewer.description"><![CDATA[Este plugin usa o <a href="https://docs.google.com/viewer">Visualizador Google Docs</a>, um serviço para integrar os ficheiros PDF na página do artigo.]]></message>
+</locale>
