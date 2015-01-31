@@ -15,8 +15,7 @@
 <email_texts locale="pt_PT">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Confirmar actualização de senha</subject>
-		<body>{$userFullName},
-
+		<body>
 Recebemos um pedido para recuperar a sua senha de acesso à revista {$siteTitle}.
 
 Caso não tenha apresentado este pedido, ignore este email e a sua senha não será alterada.
@@ -30,8 +29,7 @@ Recuperar senha: {$url}
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Senha actualizada</subject>
-		<body>{$userFullName},
-
+		<body>
 A sua senha de acesso ao site {$siteTitle} foi actualizada com sucesso. Guarde o login (nome de utilizador) e a senha, uma vez que serão necessários para todas as actividades relacionadas com este portal.
 
 O seu nome de utilizador: {$username}
@@ -236,7 +234,7 @@ Agradecemos a sua contribuição, a qual é fundamental para garantir a qualidad
 
 A submissão "{$articleTitle}" a {$journalName} foi-lhe designada para acompanhamento durante o processo editorial, como parte das suas funções como Editor de Secção.
 
-URL da Submissão: {$submissionEditingUrl}
+URL da Submissão: {$submissionUrl}
 Nome de utilizador: {$editorUsername}
 
 Agradecendo desde já a sua atenção,
@@ -298,6 +296,7 @@ Dados da submissão
 
 Título
 "{$articleTitle}"
+{$abstractTermIfEnabled}
 
 Resumo
 {$articleAbstract}</body>
@@ -445,8 +444,7 @@ Aguardando o seu contacto,
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
 		<subject>Lembrete automático de pedido de revisão</subject>
-		<body>{$reviewerName},
-
+		<body>
 Este é apenas um lembrete automático, referente ao pedido de revisão da submissão "{$articleTitle}" a {$journalName}.
 
 O prazo para entrega da revisão era {$reviewDueDate} e este email foi enviado automaticamente pois o prazo expirou.
@@ -865,8 +863,6 @@ Caso não deseje receber mais notificações via e-mail, aceda a {$unsubscribeLi
 Clique no link a seguir para confirmar o seu pedido e incluir o seu e-mail na lista de correio: {$confirmLink}
 
 Caso não deseje mais receber as notificações, aceda a {$unsubscribeLink} e forneça o seu e-mail e senha.
-
-A senha para desactivar os e-mails é: {$password}
 
 {$principalContactSignature}</body>
 		<description>Esta mensagem é enviada a utilizadores não registados que acabaram de se registar no serviço de notificações via lista de correio.</description>
