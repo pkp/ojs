@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+* plugins/generic/pln/locale/pt_PT/locale.xml
+*
+* Copyright (c) 2013-2014 Simon Fraser University Library
+* Copyright (c) 2003-2014 John Willinsky
+* Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+*
+* PLN plugin localization strings
+-->
+<locale name="pt_PT" full_name="Português">
+<message key="plugins.generic.pln">Plugin PKP PLN</message>
+<message key="plugins.generic.pln.description">O plugin PKP PLN deposita o conteúdo publicado na rede privada PKP LOCKSS para preservação.</message>
+<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>Rede Privada PKP LOCKSS</strong><br /><br />Por favor, leia a <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">descrição do serviço PKP PLN</a> e preencha <a href="{$plnPluginURL}">este formulário</a>. Esta opção permite-lhe incluir a sua revista na rede privada Public Knowledge Project Private LOCKSS (PKP PLN).]]></message>
+<message key="plugins.generic.pln.settings_page">Plugin PKP PLN - Configurações</message>
+<message key="plugins.generic.pln.settings">Configurações</message>
+<message key="plugins.generic.pln.settings.saved">PKP PLN configurações guardadas.</message>
+<message key="plugins.generic.pln.settings.terms_of_use">Termos de Uso</message>
+<message key="plugins.generic.pln.settings.terms_of_use_help">Antes de enviar para um rede, é necessário aceitar todos os termos de uso do serviço.</message>
+<message key="plugins.generic.pln.settings.terms_of_use_agree">Concordo</message>
+<message key="plugins.generic.pln.settings.journal_uuid">Identificador de Revista</message>
+<message key="plugins.generic.pln.settings.journal_uuid_help">Este é o identificador único da revista no serviço PKP PLN. Poderá ter de partilhar esta informação com os administradores do PKP PLN para efeitos de suporte.</message>
+<message key="plugins.generic.pln.settings.refresh">Atualizar</message>
+<message key="plugins.generic.pln.settings.refresh_help">Se por alguma razão não existirem termos listados abaixo ou se tiverem sido atualizados, clique "Atualizar" para atualizar os termos de uso.</message>
+<message key="plugins.generic.pln.required.pln_network">Escolha uma rede PLN.</message>
+<message key="plugins.generic.pln.required.object_type">Escolha o tipo de objecto a depositar.</message>
+<message key="plugins.generic.pln.required.object_threshold">Escolha o limite do objecto a depositar.</message>
+<message key="plugins.generic.pln.required.terms_of_use_agreement">É necessário aceitar os termos de uso da rede para submeter os objectos à rede PLN.</message>
+<message key="plugins.generic.pln.objects.article">Artigo</message>
+<message key="plugins.generic.pln.objects.issue">Número</message>
+<message key="plugins.generic.pln.status_page">Plugin PKP PLN - Estado</message>
+<message key="plugins.generic.pln.status.network_status">Estado da Rede: {$networkStatusMessage}</message>
+<message key="plugins.generic.pln.status.deposits">Depósitos</message>
+<message key="plugins.generic.pln.status">Estado</message>
+<message key="plugins.generic.pln.status.id">ID</message>
+<message key="plugins.generic.pln.status.type">Tipo</message>
+<message key="plugins.generic.pln.status.items">Itens</message>
+<message key="plugins.generic.pln.status.packaged">Empacotados</message>
+<message key="plugins.generic.pln.status.transferred">Transferidos</message>
+<message key="plugins.generic.pln.status.received">Recebidos</message>
+<message key="plugins.generic.pln.status.syncing">A Sincronizar</message>
+<message key="plugins.generic.pln.status.synced">Sincronizado</message>
+<message key="plugins.generic.pln.status.updated">Atualizado</message>
+<message key="plugins.generic.pln.status.local_failure">Falha Local</message>
+<message key="plugins.generic.pln.status.remote_failure">Falha Remota</message>
+<message key="plugins.generic.pln.status.reset">Repor</message>
+<message key="plugins.generic.pln.status.yes">Sim</message>
+<message key="plugins.generic.pln.status.no">Não</message>
+<message key="plugins.generic.pln.depositorTask.name">PKP PLN Tarefa de Depositante</message>
+<message key="plugins.generic.pln.notifications.processing_for">Depositante a processar para </message>
+<message key="plugins.generic.pln.notifications.pln_not_accepting">A rede PKP PLN não está a aceitar neste momento depósitos.</message>
+<message key="plugins.generic.pln.notifications.pln_accepting">A rede PKP PLN está a aceitar depósitos.</message>
+<message key="plugins.generic.pln.notifications.check_status">Verifique o estado dos seus depósitos.</message>
+<message key="plugins.generic.pln.notifications.issn_missing">A sua revista necessita de um ISSN para depositar objectos na rede PKP PLN.</message>
+<message key="plugins.generic.pln.notifications.http_error">Ocorreu um erro ao ligar à rede PKP PLN - contacte o administrador da plataforma.</message>
+<message key="plugins.generic.pln.notifications.terms_updated">Os termos de uso do PKP PLN foram alterados. É necessário aceitar os termos para continuar a depositar objectos.</message>
+<message key="plugins.generic.pln.notifications.curl_missing">O servidor deve suportar e ter CURL ativo para continuar.</message>
+<message key="plugins.generic.pln.notifications.zip_missing">O servidor deve suportar e ter ZipArchive ativo para continuar.</message>
+</locale>
