@@ -1388,43 +1388,49 @@ class DataversePlugin extends GenericPlugin {
 		$deposited = ($depositReceipt->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_CREATED);
 		if ($deposited) {
 			// Get the study statement & update the local file list
-			$studyStatement = $client->retrieveAtomStatement(
-						$study->getStatementUri(),
-						$this->getSetting($journal->getId(), 'username'),
-						$this->getSetting($journal->getId(), 'password'),
-						'' // on behalf of
-			);
-			if ($studyStatement) {
-				// Associate Dataverse-side file with OJS-side file
-				$dvFileIndex = array();
-				foreach ($studyStatement->sac_entries as $entry) {
-					if (strrpos($entry->sac_content_source, '/')) {
-						$dvUriFileName = substr($entry->sac_content_source, strrpos($entry->sac_content_source, '/')+1);
-						$dvFileIndex[$dvUriFileName] = $entry->sac_content_source;
-					}
-				}
-				// Create or update DataverseFile linking suppfile with deposited file
-				$this->import('classes.DataverseFile');			
-				$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
-				foreach ($suppFiles as $suppFile) {
-					$suppFileKey = str_replace(' ', '_', $suppFile->getOriginalFileName());
-					if (array_key_exists($suppFileKey, $dvFileIndex)) {
-						$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($suppFile->getId());
-						if (!$dvFile) {
-							$dvFile = new DataverseFile();
-							$dvFile->setSuppFileId($suppFile->getId());
-							$dvFile->setSubmissionId($study->getSubmissionId());						
-							$dvFile->setStudyId($study->getId());
-							$dvFile->setContentSourceUri($dvFileIndex[$suppFileKey]);
-							$dvFileDao->insertDataverseFile($dvFile);												
-						}
-						else {
-							$dvFile->setStudyId($study->getId());
-							$dvFile->setContentSourceUri($dvFileIndex[$suppFileKey]);						
-							$dvFileDao->updateDataverseFile($dvFile);
+			try {
+				$studyStatement = $client->retrieveAtomStatement(
+							$study->getStatementUri(),
+							$this->getSetting($journal->getId(), 'username'),
+							$this->getSetting($journal->getId(), 'password'),
+							'' // on behalf of
+				);
+				if ($studyStatement) {
+					// Associate Dataverse-side file with OJS-side file
+					$dvFileIndex = array();
+					foreach ($studyStatement->sac_entries as $entry) {
+						if (strrpos($entry->sac_content_source, '/')) {
+							$dvUriFileName = substr($entry->sac_content_source, strrpos($entry->sac_content_source, '/')+1);
+							$dvFileIndex[$dvUriFileName] = $entry->sac_content_source;
 						}
 					}
+					// Create or update DataverseFile linking suppfile with deposited file
+					$this->import('classes.DataverseFile');			
+					$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
+					foreach ($suppFiles as $suppFile) {
+						$suppFileKey = str_replace(' ', '_', $suppFile->getOriginalFileName());
+						if (array_key_exists($suppFileKey, $dvFileIndex)) {
+							$dvFile =& $dvFileDao->getDataverseFileBySuppFileId($suppFile->getId());
+							if (!$dvFile) {
+								$dvFile = new DataverseFile();
+								$dvFile->setSuppFileId($suppFile->getId());
+								$dvFile->setSubmissionId($study->getSubmissionId());						
+								$dvFile->setStudyId($study->getId());
+								$dvFile->setContentSourceUri($dvFileIndex[$suppFileKey]);
+								$dvFileDao->insertDataverseFile($dvFile);												
+							}
+							else {
+								$dvFile->setStudyId($study->getId());
+								$dvFile->setContentSourceUri($dvFileIndex[$suppFileKey]);						
+								$dvFileDao->updateDataverseFile($dvFile);
+							}
+						}
+					}
 				}
+			}
+			catch (Exception $e) {
+				$application =& PKPApplication::getApplication();
+				error_log($application->getName() .': '. $e->getMessage() .': '. $e->getFile() . ': '. $e->getLine());
 			}
 		}
 		return $deposited;
@@ -1485,6 +1491,39 @@ class DataversePlugin extends GenericPlugin {
 			}
 		}
 		return $released;
+	}
+	
+	/**
+	 * Report whether study has been released
+	 * @param $study DataverseStudy 
+	 * @return boolean Study released
+	 */
+	function studyIsReleased($study) {
+		$journal =& Request::getJournal();
+		$client = $this->_initSwordClient();
+		$studyReleased = false;
+		try {
+			$statement = $client->retrieveAtomStatement(
+						$study->getStatementUri(), 
+						$this->getSetting($journal->getId(), 'username'), 
+						$this->getSetting($journal->getId(), 'password'), 
+						'');
+
+			if ($statement && $statement->sac_xml) {
+				$sac_xml = @new SimpleXMLElement($statement->sac_xml);
+				foreach ($sac_xml->children()->category as $category) {
+					if ($category->attributes()->term == 'latestVersionState') {
+						if ($category == 'RELEASED') $studyReleased = true;
+						break;
+					}
+				}
+			}
+		}
+		catch (Exception $e) {
+			$application =& PKPApplication::getApplication();
+			error_log($application->getName() .': '. $e->getMessage() .': '. $e->getFile() . ': '. $e->getLine());
+		}
+		return $studyReleased;
 	}
 	
 	/**
@@ -1560,31 +1599,33 @@ class DataversePlugin extends GenericPlugin {
 	 * @param $study DataverseStudy
 	 * @return boolean Study deleted
 	 */
-	function deleteStudy(&$study) {
+	function deleteStudy($study) {
 		$journal =& Request::getJournal();
-		$client = $this->_initSwordClient();
-		$response = $client->deleteContainer(
-								$study->getEditUri(), 
-								$this->getSetting($journal->getId(), 'username'),
-								$this->getSetting($journal->getId(), 'password'),
-								''); // on behalf of 
-		
-		$studyDeleted = ($response->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_NO_CONTENT);
-		
-		// Notify on success or failure
-		import('classes.notification.NotificationManager');
-		$notificationManager = new NotificationManager();
-		$user =& Request::getUser();
-		
-		if ($studyDeleted) {
-			$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
-			$dvFileDao->deleteDataverseFilesByStudyId($study->getId());
-			$dataverseStudyDao = DAORegistry::getDAO('DataverseStudyDAO');
-			$dataverseStudyDao->deleteStudy($study);
-			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED);
-		}
-		else {
-			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR);			 
+		$apiVersion = $this->getSetting($journal->getId(), 'apiVersion');
+
+		// Deaccessioning is not supported in Dataverse 4 / SWORD API v1.1. Only 
+		// draft datasets can be deleted.
+		$studyDeleted = false;		
+		if (version_compare($apiVersion, '1.1', '<') || !$this->studyIsReleased($study)) {
+			$client = $this->_initSwordClient();
+			$response = $client->deleteContainer(
+									$study->getEditUri(), 
+									$this->getSetting($journal->getId(), 'username'),
+									$this->getSetting($journal->getId(), 'password'),
+									''); // on behalf of 
+
+			if ($response->sac_status == DATAVERSE_PLUGIN_HTTP_STATUS_NO_CONTENT) {
+				$studyDeleted = true;
+				$dvFileDao =& DAORegistry::getDAO('DataverseFileDAO');
+				$dvFileDao->deleteDataverseFilesByStudyId($study->getId());
+				$dataverseStudyDao = DAORegistry::getDAO('DataverseStudyDAO');
+				$dataverseStudyDao->deleteStudy($study);
+			}
+
+			import('classes.notification.NotificationManager');
+			$notificationManager = new NotificationManager();
+			$user =& Request::getUser();
+			$notificationManager->createTrivialNotification($user->getId(), $studyDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED : NOTIFICATION_TYPE_ERROR);
 		}
 		return $studyDeleted;
 	}
@@ -1687,19 +1728,25 @@ class DataversePlugin extends GenericPlugin {
 		$journal =& Request::getJournal();
 		$client = $this->_initSwordClient();		
 		$locked = false;		
-		$statement = $client->retrieveAtomStatement($study->getStatementUri(), $this->getSetting($journal->getId(), 'username'), $this->getSetting($journal->getId(), 'password'), '');
 		try {
-			$statementXml = new SimpleXMLElement($statement->sac_xml); 
-			foreach ($statementXml->category as $category) {
-				if ($category->attributes()->{'term'} == 'locked') {
-					$locked = $category->attributes()->{'term'} == 'true' ? true : false;
-					break;
-				}
-			}				 
+			$statement = $client->retrieveAtomStatement(
+							$study->getStatementUri(), 
+							$this->getSetting($journal->getId(), 'username'), 
+							$this->getSetting($journal->getId(), 'password'),
+							'');
+			if ($statement && $statement->sac_xml) {
+				$statementXml = new SimpleXMLElement($statement->sac_xml); 
+				foreach ($statementXml->category as $category) {
+					if ($category->attributes()->term == 'locked') {
+						if ($category == 'true') $locked = true;
+						break;
+					}
+				}				 
+			}
 		}
 		catch (Exception $e) {
 			$application =& PKPApplication::getApplication();
-			error_log($application->getName() .'\n '. $e->getMessage() .'\n In file: '. $e->getFile() . '\n At line: '. $e->getLine());
+			error_log($application->getName() .': '. $e->getMessage() .': '. $e->getFile() . ': '. $e->getLine());
 		}			 
 		return $locked;
 	}
