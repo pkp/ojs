@@ -356,20 +356,17 @@
 		<note file="docs/release-notes/README-2.4.3" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="2.4.3.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.4.3.0">
 		<data file="dbscripts/xml/upgrade/2.4.4_update.xml" />
 		<note file="docs/release-notes/README-2.4.4" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="2.4.4.9">
+	<upgrade minversion="2.0.0.0" maxversion="2.4.4.9">
 		<note file="docs/release-notes/README-2.4.5" />
 	</upgrade>
 	
-	<upgrade minversion="2.3.0.0" maxversion="2.4.5.9">
+	<upgrade minversion="2.0.0.0" maxversion="2.4.5.9">
 		<code function="localizeCustomBlockSettings" />
-	</upgrade>
-
-	<upgrade minversion="2.4.0.0" maxversion="2.4.5.9">
 		<code function="removeCustomIdentifierSuffixOption" />
 	</upgrade>
 
