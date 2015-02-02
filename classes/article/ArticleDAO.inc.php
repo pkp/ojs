@@ -410,8 +410,9 @@ class ArticleDAO extends SubmissionDAO {
 	 */
 	function getBySubEditorId($journalId = null, $subEditorId = null, $includeDeclined = true, $includePublished = true, $rangeInfo = null) {
 		$params = $this->_getFetchParameters();
-		$params[] = ROLE_ID_MANAGER;
 		if ($subEditorId) $params[] = (int) $subEditorId;
+		$params[] = ROLE_ID_MANAGER;
+		$params[] = ROLE_ID_SUB_EDITOR;
 		if ($journalId && is_int($journalId))
 			$params[] = (int) $journalId;
 
@@ -421,10 +422,10 @@ class ArticleDAO extends SubmissionDAO {
 			FROM	submissions s
 				LEFT JOIN published_submissions ps ON s.submission_id = ps.submission_id
 				' . $this->_getFetchJoins() . '
-				LEFT JOIN stage_assignments sa ON (s.submission_id = sa.submission_id)
-				LEFT JOIN user_groups g ON (sa.user_group_id = g.user_group_id AND g.role_id = ?)
 				' . ($subEditorId?' JOIN section_editors see ON (see.journal_id = s.context_id AND see.user_id = ? AND see.section_id = s.section_id)':'') . '
-			WHERE	s.date_submitted IS NOT NULL'
+			WHERE	s.date_submitted IS NOT NULL AND 
+				(SELECT COUNT(sa.stage_assignment_id) FROM stage_assignments sa LEFT JOIN user_groups g ON sa.user_group_id = g.user_group_id WHERE 
+					sa.submission_id = s.submission_id AND (g.role_id = ? OR g.role_id = ?)) = 0' 
 			. (!$includeDeclined?' AND s.status <> ' . STATUS_DECLINED : '' )
 			. (!$includePublished?' AND ps.date_published IS NULL' : '' )
 			. ($journalId && !is_array($journalId)?' AND s.context_id = ?':'')
