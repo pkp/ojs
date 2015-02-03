@@ -20,13 +20,11 @@
 	<message key="plugins.generic.usageStats.settings.saved">使用统计插件设置保存</message>
 	
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">使用统计文件加载任务</message>
-	<message key="plugins.generic.usageStats.openFileFailed">Usage statistics plugin is disabled. No log files processed.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">在文件{$file} 中文件号为{$lineNumber} 不是一个有效的日至条目，文件被拒绝。</message>
 	<message key="plugins.generic.usageStats.removeUrlError">文件{$file} 中{$lineNumber}包含一个系统无法删除的网址。</message>
 	<message key="plugins.generic.usageStats.loadDataError">无法加载从文件{$file}提取的数据。出现错误：{$error}。文件再次被移动到之前阶段。</message>
 	<message key="plugins.generic.usageStats.displayName">使用统计</message>
 	<message key="plugins.generic.usageStats.description">呈现数据对象的使用统计。可以使用服务器访问日志文件提取数据。</message>
-	<message key="plugins.generic.usageStats.openFileFailed">Usage statistics plugin is disabled. No log files processed.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS使用统计报告</message>
 	<message key="plugins.reports.usageStats.report.description">OJS默认使用统计报告（计数器准备）</message>

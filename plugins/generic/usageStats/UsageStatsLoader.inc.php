@@ -97,7 +97,7 @@ class UsageStatsLoader extends FileLoader {
 				$logFiles = array();
 				$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
 
-				// It's possible that the processing directory have files that
+				// It's possible that the processing directory has files that
 				// were being processed but the php process was stopped before
 				// finishing the processing. Just copy them to the stage directory too.
 				$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
@@ -139,11 +139,20 @@ class UsageStatsLoader extends FileLoader {
 	function executeActions() {
 		$plugin =& $this->_plugin;
 		if (!$plugin->getEnabled()) {
-			$this->addExecutionLogEntry(__('plugins.generic.usageStats.openFileFailed'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.pluginDisabled'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			return true;
 		}
+		// It's possible that the processing directory has files that
+		// were being processed but the php process was stopped before
+		// finishing the processing, or there may be a concurrent process running.
+		// Warn the user if this is the case.
+		$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
+		$processingDirError = is_array($processingDirFiles) && count($processingDirFiles);
+		if ($processingDirError) {
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.processingPathNotEmpty', array('directory' => $this->getProcessingPath())), SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
+		}
 
-		return parent::executeActions();
+		return (parent::executeActions() && !$processingDirError);
 	}
 
 	/**
@@ -154,6 +163,13 @@ class UsageStatsLoader extends FileLoader {
 		$geoTool = $this->_geoLocationTool;
 		if (!$fhandle) {
 			$errorMsg = __('plugins.generic.usageStats.openFileFailed', array('file' => $filePath));
+			return false;
+		}
+		if (!$this->_counterRobotsListFile) {
+			$errorMsg = __('plugins.generic.usageStats.noCounterBotList', array('botlist' => $this->_counterRobotsListFile, 'file' => $filePath));
+			return false;
+		} elseif (!file_exists($this->_counterRobotsListFile)) {
+			$errorMsg = __('plugins.generic.usageStats.failedCounterBotList', array('botlist' => $this->_counterRobotsListFile, 'file' => $filePath));
 			return false;
 		}
 
