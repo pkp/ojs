@@ -1058,7 +1058,7 @@ class IssueManagementHandler extends EditorHandler {
 					$recipients =& $institutionalSubscriptionDao->getSubscribedUsers($journal->getId());
 					break;
 				case 'allAuthors':
-					$recipients =& $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true);
+					$recipients =& $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true, true);
 					break;
 				case 'allUsers':
 					$recipients =& $roleDao->getUsersByJournalId($journal->getId());
@@ -1134,7 +1134,7 @@ class IssueManagementHandler extends EditorHandler {
 			$allUsersCount = $roleDao->getJournalUsersCount($journal->getId());
 
 			// FIXME: There should be a better way of doing this.
-			$authors =& $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true);
+			$authors =& $authorDao->getAuthorsAlphabetizedByJournal($journal->getId(), null, null, true, true);
 			$authorCount = $authors->getCount();
 
 
