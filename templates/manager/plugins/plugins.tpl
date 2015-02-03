@@ -21,11 +21,13 @@
 				<li><a href="{url path=$category|escape}">{translate key="plugins.categories.$category"}</a></li>
 			{/if}
 		{/foreach}
-		{if !$preventManagerPluginManagement}
-			<li>&nbsp;</li>
-			<li><b><a href="{url op="managePlugins" path=install}">{translate key="manager.plugins.install"}</a></b></li>
-		{/if}
 	</ul>
+
+	{if !$preventManagerPluginManagement}
+		<ul id="pluginManagement">
+			<li><b><a href="{url op="managePlugins" path=install}">{translate key="manager.plugins.install"}</a></b></li>
+		</ul>
+	{/if}
 {else}
 	{foreach from=$plugins item=plugin}
 		{if $plugin->getCategory() != $category}
