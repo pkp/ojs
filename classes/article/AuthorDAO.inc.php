@@ -88,9 +88,10 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * @param $initial An initial the last names must begin with
 	 * @param $rangeInfo Range information
 	 * @param $includeEmail Whether or not to include the email in the select distinct
+	 * @param $disallowRepeatedEmail Whether or not to include duplicated emails in the array
 	 * @return array Authors ordered by sequence
 	 */
-	function &getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
+	function &getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false, $disallowRepeatedEmail = false) {
 		$authors = array();
 		$params = array(
 			'affiliation', AppLocale::getPrimaryLocale(),
@@ -126,6 +127,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			FROM	authors aa
 				LEFT JOIN author_settings aspl ON (aa.author_id = aspl.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
 				LEFT JOIN author_settings asl ON (aa.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
+				'.($disallowRepeatedEmail?" LEFT JOIN authors aa2 ON (aa.email=aa2.email AND aa.author_id < aa2.author_id) ":"").'
 				JOIN articles a ON (a.article_id = aa.submission_id AND a.status = ' . STATUS_PUBLISHED . ')
 				JOIN published_articles pa ON (pa.article_id = a.article_id)
 				JOIN issues i ON (pa.issue_id = i.issue_id AND i.published = 1)
@@ -133,7 +135,8 @@ class AuthorDAO extends PKPAuthorDAO {
 			WHERE ' . (isset($journalId)?'a.journal_id = ? AND ':'') . '
 				(aa.last_name IS NOT NULL AND aa.last_name <> \'\') AND
 				((s.hide_author = 0 AND a.hide_author = ?) OR a.hide_author = ?)
-				' . $initialSql . '
+				' .	($disallowRepeatedEmail?' AND aa2.email IS NULL ':'')
+				. $initialSql . '
 			ORDER BY aa.last_name, aa.first_name',
 			$params,
 			$rangeInfo
