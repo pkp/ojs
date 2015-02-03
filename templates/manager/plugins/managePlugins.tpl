@@ -19,7 +19,7 @@
 			<p>{translate key="manager.plugins.installDescription"}</p>
 		{/if}
 
-		<form method="post" action="{url path="installPlugin"}" enctype="multipart/form-data">
+		<form method="post" action="{url op="managePlugins" path="installPlugin"}" enctype="multipart/form-data">
 			{if $error}
 				<span class="formError">{translate key="form.errorsOccurred"}:</span>
 				<ul class="formErrorList">
