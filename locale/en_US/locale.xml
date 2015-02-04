@@ -83,7 +83,7 @@
 	<message key="common.queue.short.submissionsInReview">In Review</message>
 	<message key="common.queue.long.submissionsArchives">Archives</message>
 	<message key="common.queue.short.submissionsArchives">Archives</message>
-	<message key="common.queue.long.active">Active Submissions</message>
+	<message key="common.queue.long.active">Active</message>
 	<message key="common.queue.short.active">Active</message>
 	<message key="common.queue.long.completed">Archive</message>
 	<message key="common.queue.short.completed">Archive</message>

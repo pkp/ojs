@@ -405,22 +405,35 @@ class ArticleDAO extends SubmissionDAO {
 	 * 	whose section will be included in the results (excluding others).
 	 * @param $includeDeclined boolean optional include submissions which have STATUS_DECLINED
 	 * @param $includePublished boolean optional include submissions which are published
+	 * @param $title string|null optional Filter by title.
+	 * @param $author string|null optional Filter by author.
+	 * @param $stageId int|null optional Filter by stage id.
 	 * @param $rangeInfo DBRangeInfo
 	 * @return DAOResultFactory containing matching Submissions
 	 */
-	function getBySubEditorId($journalId = null, $subEditorId = null, $includeDeclined = true, $includePublished = true, $rangeInfo = null) {
+	function getBySubEditorId($journalId = null, $subEditorId = null, $includeDeclined = true, $includePublished = true, $title = null, $author = null, $stageId = null, $rangeInfo = null) {
 		$params = $this->_getFetchParameters();
 		if ($subEditorId) $params[] = (int) $subEditorId;
 		$params[] = ROLE_ID_MANAGER;
 		$params[] = ROLE_ID_SUB_EDITOR;
 		if ($journalId && is_int($journalId))
 			$params[] = (int) $journalId;
+		
+		if ($title) {
+			$params[] = AppLocale::getLocale();
+			$params[] = 'title';
+			$params[] = '%' . $title . '%';
+		}
+		if ($author) array_push($params, $authorQuery = '%' . $author . '%', $authorQuery, $authorQuery);
+		if ($stageId) $params[] = $stageId;
 
 		$result = $this->retrieveRange(
 			'SELECT	s.*, ps.date_published,
 				' . $this->_getFetchColumns() . '
 			FROM	submissions s
 				LEFT JOIN published_submissions ps ON s.submission_id = ps.submission_id
+				' . ($title?' LEFT JOIN submission_settings ss ON (s.submission_id = ss.submission_id)':'') . '
+				' . ($author?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'') . '
 				' . $this->_getFetchJoins() . '
 				' . ($subEditorId?' JOIN section_editors see ON (see.journal_id = s.context_id AND see.user_id = ? AND see.section_id = s.section_id)':'') . '
 			WHERE	s.date_submitted IS NOT NULL AND 
@@ -429,7 +442,10 @@ class ArticleDAO extends SubmissionDAO {
 			. (!$includeDeclined?' AND s.status <> ' . STATUS_DECLINED : '' )
 			. (!$includePublished?' AND ps.date_published IS NULL' : '' )
 			. ($journalId && !is_array($journalId)?' AND s.context_id = ?':'')
-			. ($journalId && is_array($journalId)?' AND s.context_id IN  (' . join(',', array_map(array($this,'_arrayWalkIntCast'), $journalId)) . ')':'') . '
+			. ($journalId && is_array($journalId)?' AND s.context_id IN  (' . join(',', array_map(array($this,'_arrayWalkIntCast'), $journalId)) . ')':'')
+			. ($title?' AND (ss.locale = ? AND ss.setting_name = ? AND ss.setting_value LIKE ?)':'') 
+			. ($author?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
+			. ($stageId?' AND s.stage_id = ?':'') . '
 
 			GROUP BY s.submission_id, ps.date_published, stl.setting_value, stpl.setting_value, sal.setting_value, sapl.setting_value',
 			// See bug #8557; the above are required to keep PostgreSQL happy (and s.submission_id is required logically).
