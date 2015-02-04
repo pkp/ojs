@@ -47,11 +47,11 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="name" required="true" key="common.title"}</td>
-	<td class="value"><input type="text" name="name[{$formLocale|escape}]" value="{$name[$formLocale]|escape}" size="40" id="name" maxlength="80" class="textField" /></td>
+	<td class="value"><input type="text" name="name[{$formLocale|escape}]" value="{$name[$formLocale]|escape}" size="40" id="name" maxlength="255" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="url" required="true" key="common.url"}</td>
-	<td class="value"><input type="text" name="url" id="url" value="{$url|escape}" size="40" maxlength="80" class="textField" /></td>
+	<td class="value"><input type="text" name="url" id="url" value="{$url|escape}" size="40" maxlength="255" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="status" key="common.status"}</td>
