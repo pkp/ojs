@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/externalFeed/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * External feed plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- External Feed -->
+	<message key="plugins.generic.externalFeed.displayName">Externí kanál</message>
+	<message key="plugins.generic.externalFeed.block.displayName">Blok externího kanálu</message>
+	<message key="plugins.generic.externalFeed.description">Publikuje obsah z externích webů pomocí Atom/RSS kanálů. Například z externích instalací WordPress, Drupal či OCS.</message>
+	<message key="plugins.generic.externalFeed.noneExist">Nejsou žádné externí zprávy</message>
+	<message key="plugins.generic.externalFeed.title">Název</message>
+	<message key="plugins.generic.externalFeed.posted">Zásláno</message>
+	<message key="plugins.generic.externalFeed.more">Více...</message>
+
+	<!-- External Feed Management -->
+	<message key="plugins.generic.externalFeed.manager.feeds">Externí zprávy</message>
+	<message key="plugins.generic.externalFeed.manager.settings">Nastavení</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[K zobrazení externích zpráv v postranních blocích, jděte na <a href="{$setupStep56}" target="_blank">Nastavení, krok 5.6</a>]]></message>
+	<message key="plugins.generic.externalFeed.manager.title">Název</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage">Zobrazení domácí stránky</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Zobrazení domácí stránky</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Zobrazení domácí stránky neexistuje</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlock">Zobrazení bloku</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Všechny stránky</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Blok pro všechny stránky</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Blok pro všechny stránky není</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Domácí stránky</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Blok pouze pro domácí stránku</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Není blok pouze pro domácí stránku</message>
+	<message key="plugins.generic.externalFeed.manager.noneCreated">Nejsou žádné kanály externích zpráv</message>
+	<message key="plugins.generic.externalFeed.manager.create">Vytvořit nový kanál externích zpráv</message>
+	<message key="plugins.generic.externalFeed.manager.edit">Editovat kanály externích zpráv</message>
+	<message key="plugins.generic.externalFeed.manager.confirmDelete">Jste si jisti, že chcete trvale smazat tento kanál?</message>
+
+	<!-- External Feed Settings -->
+	<message key="plugins.generic.externalFeed.settings">Nastavení</message>
+	<message key="plugins.generic.externalFeed.settings.description">Nastevení položek externích kanálů zpráv.</message>
+	<message key="plugins.generic.externalFeed.settings.styleSheet">Zobrazit</message>
+	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Soubor stylu pro kanály externích zpráv</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">Přizpůsobený soubor stylu může nahradit standardní soubor stylu tohoto pluginu. Standardní soubor stylu lze prohlédnout zde</message>
+	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Přizpůsobený soubor stylu</message>
+
+
+	<!-- External Feed Form-->
+	<message key="plugins.generic.externalFeed.form.title">Název</message>
+	<message key="plugins.generic.externalFeed.form.titleDescription">Název domovské stránky a/nebo bloku zpráv</message>
+	<message key="plugins.generic.externalFeed.form.titleRequired">Vložte, prosím, název tohoto kanálu</message>
+	<message key="plugins.generic.externalFeed.form.feedUrl">URL</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlValid">Vložte, prosím, platné URL  kanálu zpráv (včetně http://)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlDescription">URL externího kanálu Atom/RSS (např. http://pkp.sfu.ca/blog/feed)</message>
+	<message key="plugins.generic.externalFeed.form.display">Zobrazit</message>
+	<message key="plugins.generic.externalFeed.form.displayHomepage">Zobrazit na domovské stránce</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockNone">Nezobrazovat v bloku</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Zobrazovat v bloku pouze na domovské stránce</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockAll">Zobrazit v bloku na všech stránkách</message>
+	<message key="plugins.generic.externalFeed.form.recentItems1">Omezit na</message>
+	<message key="plugins.generic.externalFeed.form.recentItems2">položek kanálu</message>
+	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Uložit a vytvořit další</message>
+
+</locale>

@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/sehl/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the cs_CZ (Czech) locale.
@@ -14,5 +14,5 @@
  
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.generic.sehl.name">Plugin SEHL</message>
-	<message key="plugins.generic.sehl.description">Tento plugin zavádí zvýrazňovač pro vyhledávací nástroj. Pokud vyhledávací nástroj nalezne HTML článek, jsou v něm zvýrazněny hledaná výrazy.</message>
+	<message key="plugins.generic.sehl.description">Tento plugin zavádí zvýrazňovač pro vyhledávací nástroj. Pokud vyhledávací nástroj nalezne HTML článek, jsou v něm zvýrazněny hledané výrazy.</message>
 </locale>

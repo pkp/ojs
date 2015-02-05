@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/timedView/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.timedView.displayName">Časové zprávy o počtu přečtení</message>
+	<message key="plugins.reports.timedView.description">Tento plugin implementuje CSV zprávu popisující čtenost jednotlivých článků, filtrovaný podle časového úseku, nastaveného uživatelem.</message>
+
+	<message key="plugins.reports.timedView.form.dateStartRequired">Je požadováno počáteční datum.</message>
+	<message key="plugins.reports.timedView.form.dateStartValid">Zvolte, prosím, platné datum počátku.</message>
+	<message key="plugins.reports.timedView.form.dateEndRequired">Je požadováno koncové datum.</message>
+	<message key="plugins.reports.timedView.form.dateEndValid">Zvolte, prosím, platné datum konce.</message>
+	<message key="plugins.reports.timedView.form.generate">Vytvořit zprávu</message>
+	<message key="plugins.reports.timedView.form.clearLogs">Vymazat logy</message>
+	<message key="plugins.reports.timedView.form.clearLogs.description">Zvolte, prosím, datum pro vymazání záznamů v logu. Jakýkoliv záznam učiněný před tímto datem bude vymazán. Tento výmaz ovlivní pouze tento plugin pro zprávy za časový úsek a ne počty přečtení hlášené jinými pluginy, (např. normální plugin pro tvorbu zpráv o čtenosti)</message>
+	<message key="plugins.reports.timedView.form.clearLogs.confirm">Jste si jisti, že chcete smazat tyto záznamy?  Tento výmaz je nevratný..</message>
+	<message key="plugins.reports.timedView.form.useTimedViewRecords">Zatrhněte, aby byly používány statistiky ze starého pluginu pro časové zprávy o čtenosti. Pokud chcete vytvořit zprávu s daty, získanými tímto novým pluginem, nechte políčko nezatržené.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">Pokud si zvolíte dlouhý časový úsek s velkým množstvím statistických dat, může zabrat tvoření zprávy delší čas. Pokud to bude trvat moc dlouho, je možné, že bude překročen časový limit pro spojení a zpráva nebude vytvořena. V tom případě zkuste vytvořit zprávu znovu za kratší časový úsek.</message>
+
+	<message key="plugins.reports.timedView.report.articleId">ID článku</message>
+	<message key="plugins.reports.timedView.report.articleTitle">Název článku</message>
+	<message key="plugins.reports.timedView.report.datePublished">Datum zveřejnění</message>
+	<message key="plugins.reports.timedView.report.abstractViews">Počet zobrazení abstraktu</message>
+	<message key="plugins.reports.timedView.report.galleyViews">Celkový počet zobrazení sazebnice</message>
+</locale>

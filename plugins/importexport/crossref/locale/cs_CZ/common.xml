@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/importexport/medra/locale/en_US/common.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Shared localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Pro používání tohoto pluginu jděte do kategorie pluginů "Veřejný identifikátor", umožněte a nastavte DOI plugin a specifikujte platný DOI prefix.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Plugin není plně nastavený.</message>
+
+	<message key="plugins.importexport.common.settings">Nastavení</message>
+
+	<message key="plugins.importexport.common.settings.form.password">Heslo</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Uvědomte si, prosím,že heslo je uloženo jako prostý text, není tedy kódováno.</message>
+	<message key="plugins.importexport.common.settings.form.passwordRequired">Vložte, prosím, heslo.</message>
+	
+	<message key="plugins.importexport.common.register">Registrace</message>
+	<message key="plugins.importexport.common.registerDescription">Klikněte na toto tlačítko pro registraci tohoto objektu u registrační agentury, pokud tam ještě nikdy nebyl registrován.</message>
+	<message key="plugins.importexport.common.registerDescription.multi">Klikněte na toto tlačítko, pro registraci, nebo pro aktualizaci metadat vybraného objektu/vybraných objektů u registrační agentury.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registrace nebyla úspěšnál! DOI registrční server vrátil chybu: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registrace úspěšná!</message>
+	<message key="plugins.importexport.common.register.warning">Registrace mnoha objektů může trvat dlouhou dobu. Buďte, prosím, trpěliví po kliknutí na tlačítko "Registrovat". Až bude registrace hotová, budete upozorněni.</message>
+	<message key="plugins.importexport.common.register.noCredentials"><![CDATA[Přímá registrace je v současnosti zakázána. <a href="{$settingsUrl}">Nakonfigurujte</a>, prosím, uživatelské jméno a heslo aby bylo možné registrovat objekty přímo u registrační agentury.]]></message>
+
+	<message key="plugins.importexport.common.markRegistered">Označit registrované</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Klikněte na tlačítko k označení objektů, které byly již dříve registrované (např. dříve, nebo manuálně).</message>
+
+	<message key="plugins.importexport.common.update">Aktualizace</message>
+	<message key="plugins.importexport.common.updateDescription">Klikněte na toto tlačítko pro aktualizace metadat tohoto objektu u registrační agentury. Bude to fungovat pouze v případě, že objekt byl u agentury zaregistrován již dříve.</message>
+		
+	<message key="plugins.importexport.common.export">Exportovat data</message>
+	<message key="plugins.importexport.common.export.unAvailable">Export dat není v současnosti přístupný. Zkontrolujte, prosím, požadavky pluginu.</message>
+	<message key="plugins.importexport.common.export.unregistered">Exportujte všechny neregistrované čísla, články a sazebnice</message>
+	<message key="plugins.importexport.common.export.selectUnregistered">Vyberte neregistrovaná čísla, články a sazebnice</message>
+	<message key="plugins.importexport.common.export.noUnregistered">Všechny publikovaná čísla, články a sazebnice byly již registrovány (nebo žádný z nich nemá přiřazeno DOI).</message>
+	<message key="plugins.importexport.common.export.issues">Všechna čísla</message>
+	<message key="plugins.importexport.common.export.selectIssue">Vyberte čísla</message>
+	<message key="plugins.importexport.common.export.noIssues">Žádné číslo nemá momentálně přiřazeno DOI.</message>
+	<message key="plugins.importexport.common.export.articles">Všechny články</message>
+	<message key="plugins.importexport.common.export.selectArticle">Vyberte články</message>
+	<message key="plugins.importexport.common.export.noArticles">Žádné články nemají momentálně přiřazeno DOI.</message>
+	<message key="plugins.importexport.common.export.galleys">Export specifických sazebnic</message>
+	<message key="plugins.importexport.common.export.selectGalley">Vyberte sazebnice</message>
+	<message key="plugins.importexport.common.export.noGalleys">Žádné sazebnice nemají momentálně přiřazeno DOI.</message>
+	<message key="plugins.importexport.common.exportDescription">Klikněte na toto tlačítko pro export dat ve formátu XML  do lokálního souboru pro vybrané objekty, aniž by byly registrovány u registrační agentury. To může být užitečné, pokud chcete, aby registraci DOI za vás udělala třetí strana, nebo pokud chcete zkontrolovat XML formát před vlastní registrací.</message>
+ 
+	<message key="plugins.importexport.common.export.error.issueNotFound">Žádné číslo neodpovídá zadanému ID: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.articleNotFound">Žádný článek neodpovídá zadanému ID: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.galleyNotFound">Žádná sazebnice neodpovídá zadanému ID: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.noDoiAssigned">Objekt s ID {$param} nemá přiřazené DOI.</message>
+	<message key="plugins.importexport.common.export.error.unknownJournal">Žádný časopis neodpovídá zadané cestě: {$param}.</message>
+	<message key="plugins.importexport.common.export.error.unknownObjectType">Objekt typu {$param} nelze exportovat.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Výstupní soubor {$param} není zapisovatelný.</message>
+ 
+	<message key="plugins.importexport.common.notification.exportSuccessful">Úspěšně byly exportovány vybrané objekty do '{$param}'</message>
+ 
+	<message key="plugins.importexport.common.cliError">CHYBA:</message>
+</locale>

@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/webFeed/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the cs_CZ (Czech) locale.
@@ -14,12 +14,12 @@
  
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.generic.webfeed.displayName">Plugin Web Feed</message>
-	<message key="plugins.generic.webfeed.description">Tento plugin vytváří RSS/Atom web syndication feedy pro aktuální číslo.</message>
+	<message key="plugins.generic.webfeed.description">Tento plugin vytváří RSS/Atom kanál pro aktuální číslo.</message>
 
 	<message key="plugins.generic.webfeed.settings">Nastavení</message>
-	<message key="plugins.generic.webfeed.settings.issue">Zobrazit odkazy na feed pouze na stránkách čísla.</message>
-	<message key="plugins.generic.webfeed.settings.homepage">Zobrazit odkazy na feed pouze na domácí stránce a na stránkách čísla.</message>
-	<message key="plugins.generic.webfeed.settings.all">Zobrazit odkazy na feed na všech stránkách časopisu.</message>
+	<message key="plugins.generic.webfeed.settings.issue">Zobrazit odkazy na kanál pouze na stránkách čísla.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Zobrazit odkazy na kanál pouze na domácí stránce a na stránkách čísla.</message>
+	<message key="plugins.generic.webfeed.settings.all">Zobrazit odkazy na kanál na všech stránkách časopisu.</message>
 
 	<message key="plugins.generic.webfeed.settings.currentIssue">Zobrazit položky v aktuálně publikovaném čísle.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">posledních publikovaných položek.</message>

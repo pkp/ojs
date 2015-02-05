@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/views/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.views.displayName">Zpráva o počtu zobrazení</message>
+	<message key="plugins.reports.views.description">Tento plugin implementuje zprávu ve formátu CSV, která ukazuje počet přečtení každého článku.</message>
+
+  <message key="plugins.reports.views.articleId">ID článku</message>
+  <message key="plugins.reports.views.articleTitle">Název článku</message>
+  <message key="plugins.reports.views.datePublished">Publikován dne</message>
+  <message key="plugins.reports.views.abstractViews">Počet náhledů abstraktu</message>
+  <message key="plugins.reports.views.galleyViews">Počet náhledů sazebnice</message>
+</locale>

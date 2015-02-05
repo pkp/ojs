@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/googleAnalytics/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Google Analytics plugin localization strings for the cs_CZ (Czech) locale.
@@ -30,4 +30,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Starší sledovací kód (urchin.js)</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nový sledovací kód (ga.js)</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount">číslo účtu Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nový sledovací kód pro Univerzální analýzu (analytics.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Pokud chcete sledova čtenost článku pomocí Google Analytics, je nutné zde vložit platné číslo účtu (např. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Jeden či více účtů Google Analytics pro autory článků nejsou platné.</message>
 </locale>

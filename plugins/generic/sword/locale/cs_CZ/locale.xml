@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/sword/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.sword.displayName">Plugin SWORD</message>
+	<message key="plugins.generic.sword.description">Umožňuje manažerům časopisu a (volitelně) autorům ukládat články pomocí protokolu SWORD.</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Umožňuje manažerům časopisu a (volitelně) autorům ukládat články pomocí protokolu SWORD. Tento plugin vyžaduje rozšíření Zip, které není na vašem serveru v tomto momentě nainstalováno.</message>
+	<message key="plugins.generic.sword.enabled">Plugin SWORD byl povolen.</message>
+	<message key="plugins.generic.sword.settings">Nastavení</message>
+	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Umožňuje autorům specifikovat bod ukládání</message>
+	<message key="plugins.generic.sword.settings.depositPoints">Bod ukládání</message>
+	<message key="plugins.generic.sword.depositPoints.create">Vytvořit bod ukládání</message>
+	<message key="plugins.generic.sword.depositPoints.edit">Upravit bod ukládání</message>
+	<message key="plugins.generic.sword.depositPoints.type.automatic">Automaticky</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalSelection">Volitelný; Flexibilní</message>
+	<message key="plugins.generic.sword.depositPoints.type.optionalFixed">Volitelný; Pevný</message>
+	<message key="plugins.generic.sword.depositPoints.type.manager">Pouze manažer</message>
+	<message key="plugins.generic.sword.depositPoints.type.description"><![CDATA[<h4>Typy bodu ukládání:</h4>
+<p><strong>Automatický</strong>: Úložiště se objevuje automaticky. Je plně definováno místo SWORD úložiště. Musí být zadány login a heslo. Místo uložení se objeví po upozornění autora o přijetí.<br/>
+<strong>Volitelné; Flexibilní</strong>: Autor se může rozhodnout, zda uložit, či ne. URL ukazuje servisní dokument a autor se může rozhodnout, které specifické místo uložení použije. Místo uložení se objeví po upozornění autora o přijetí.<br/>
+<strong>Volitelný; Pevný</strong>: Autor se může rozhodnou, zda uložit, či ne. URL určuje specifické místo SWORD úložiště. Místo uložení se objeví po upozornění autora o přijetí.<br/>
+<strong>Pouze manažer</strong>: Pouze manažer časopisu může používat toto ukládací místo. URL indikuje servisní dokument. Uložení je prováděno manuálně manažerem časopisu pomocí rozhraní Import/Export interface ve Správě časopisu.
+</p>]]></message>
+	<message key="plugins.generic.sword.depositPoints.password.description">Pokud zde nevložíte heslo, vy a/nebo autor bude tázán na heslo vždy když se objeví místo pro ukládání. Vemte na vědomí, že heslo bude viditelné všem manažerům časopisu a bude uloženo v databázi nezašifrované.</message>
+	<message key="plugins.generic.sword.depositPoints.name">Jméno</message>
+	<message key="plugins.generic.sword.automaticDepositComplete">Položka "{$itemTitle}" byla automaticky uložena do repozitáře "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.depositComplete">Položka "{$itemTitle}" byla uložena do repozitáře "{$repositoryName}".</message>
+	<message key="plugins.generic.sword.authorDepositDescription"><![CDATA[<p>Máte možnost použít následující formulář k uložené vašeho příspěvku, "{$submissionTitle}", v jednom z repozitářů z následujícího seznamu. Použijte zatrhávací políčka níže v levém sloupci, abyste si vybrali ve kterém z repozitářů chcete článek uložit; každý z repozitářů vám může také umožnit specifikovat vstupní bod z rozbalovacího seznamu.</p>]]></message>
+	<message key="plugins.generic.sword.authorCustomDepositDescription"><![CDATA[<p>Volitelně můžete specifikovat vstupní bod úložiště, který je v souladu s SWORD formátem. Pokud je to žádoucí, specifikujte URL SWORDU, uživatelské jméno a heslo k vašemu repozitáři - váš příspěvek bude uložen.</p>]]></message>
+
+	<message key="plugins.importexport.sword.displayName">Plugin pro Import/Export do SWORD repozitářů</message>
+	<message key="plugins.importexport.sword.description">Uložte články do vzdálených repoziřářů s použitím protokolu SWORD</message>
+	<message key="plugins.importexport.sword.deposit">Úložiště</message>
+	<message key="plugins.importexport.sword.serviceDocUrl">URL servisního dokumentu</message>
+	<message key="plugins.importexport.sword.depositUrl">URL místa uložení</message>
+	<message key="plugins.importexport.sword.depositPoint">Místo ukládání</message>
+	<message key="plugins.importexport.sword.depositPoint.addRemove">Přidat/odebrat</message>
+	<message key="plugins.importexport.sword.depositGalleys">Uložit sazebnice</message>
+	<message key="plugins.importexport.sword.depositEditorial">Uložit nejnovější redakční soubor</message>
+	<message key="plugins.importexport.sword.depositSuccessful">Úspěšné uložení</message>
+	<message key="plugins.importexport.sword.depositSuccessfulDescription">Vybrané položky byly uloženy.</message>
+	<message key="plugins.importexport.sword.depositFailed">Uložení selhalo</message>
+</locale>

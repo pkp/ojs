@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/dataverse/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Dataverse plugin localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Dataverse Plugin -->
+	<message key="plugins.generic.dataverse.displayName">Plugin Dataverse</message>
+	<message key="plugins.generic.dataverse.description">Ukládá sady dat a/nebo ostatní doplňkové soubory do Dataverse.</message>
+
+	<!-- Set up Dataverse: DVN URL and authentication details -->
+	<message key="plugins.generic.dataverse.settings.connect">Připojit</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">URL sítě Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL sítě Dataverse do které patří Dataverse časopisu</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Uživatelské jméno účtu, používaného k ukládání souborů v Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Heslo pro uživatelské jméno zadané výše</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Je vyžadováno URL pro síť Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">URL pro síť Dataverse není platné.</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Vložte, prosím, platné uživatelské jméno pro specifikovanou síť Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.passwordRequired">Please enter aVložte, prosím, platné heslo pro specifikovanou síť Dataverse valid password for the specified Dataverse Network.</message>
+
+	<!-- Set up Dataverse: select Dataverse -->
+	<message key="plugins.generic.dataverse.settings.selectDataverse">Zvolte Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverseDescription">Zvolte Dataverse pro uložení souborů vašeho časopisu.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseRequired">Zvolte, prosím, Dataverse.</message>
+
+	<!-- Plugin configuration: Settings -->
+	<message key="plugins.generic.dataverse.settings">Nastavení</message>
+	<message key="plugins.generic.dataverse.settings.dataPolicies">Zacházení s daty</message>
+	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">Nastavte způsob zacházení s daty</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">Zásady dostupnosti dat</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">Všeobecné zásady dostupnosti dat tohoto časopisu. Objeví se v sekci "O časopise".</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">Uveďte, prosím, zásady dostupnosti dat.</message>
+	<message key="plugins.generic.dataverse.settings.sectionPoliciesDescription">Přidejte zásady specifické pro jednotlivé sekce časopisu.</message>
+	<message key="plugins.generic.dataverse.settings.authorGuidelinesDescription"><![CDATA[Upravte <a href="{$authorGuidelinesUrl}" target="_blank">Pokyny pro autory</a>, aby byly zahrnuty také pokyny pro vkládání dat a citací.]]></message>
+	<message key="plugins.generic.dataverse.settings.checklistDescription"><![CDATA[Upravte <a href="{$checklistUrl}" target="_blank">Zaškrtávací seznam  příspěvku</a> tak, aby mohli autoři vyhovět zásadám zacházení s daty a citacemi.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewPolicyDescription"><![CDATA[Upravte <a href="{$reviewPolicyUrl}" target="_blank">Zásady recenzního procesu</a> pro zacházení se soubory dat.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewGuidelinesUrl"><![CDATA[Upravte <a href="{$reviewGuidelinesUrl}" target="_blank">Pokyny pro recenzenty</a> aby zahrnovaly zásady recenzí datových souborů.]]></message>
+	<message key="plugins.generic.dataverse.settings.copyeditInstructionsUrl"><![CDATA[Upravte <a href="{$copyeditInstructionsUrl}" target="_blank">Pokyny pro lektorování</a> aby zahrnovaly zásady zacházení s datovými soubory.]]></message>
+	<message key="plugins.generic.dataverse.settings.termsOfUse">Podmínky užití</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseRequired">Vytvořte buď své vlastní podmínky užití, nebo použijte podmínky užití z Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseDescription">Vytvořte podmínky užití, které musí uživatelé odsouhlasit před ukládáním datových souborů.</message>
+	<message key="plugins.generic.dataverse.settings.fetchTermsOfUse">Přeneste podmínky užití z Dataverse nastavení pro tento časopis.</message>
+	<message key="plugins.generic.dataverse.settings.defineTermsOfUse">Vložte upravené podmínky užití do pole níže.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">Nelze nahrát podmínky užití z nastavení Dataverse. Zkontrolujte, prosím, nastavení připojení.</message>
+	<message key="plugins.generic.dataverse.settings.metadata">Nastavení metadat</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat">Citační formát</message>
+	<message key="plugins.generic.dataverse.settings.citationFormatDescription">Zvolte citační formát, který bude zobrazen v katalogu.</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat.apa">Citační styl APA</message>
+	<message key="plugins.generic.dataverse.settings.pubIdType">Typ veřejného identifikátoru</message>
+	<message key="plugins.generic.dataverse.settings.pubIdTypeDescription"><![CDATA[Zvolte, jaký veřejný identifikátor bude odkazovat na článek z citace publikace. Pokud není povolen <a href="{$pubIdsUrl}">plugin veřejného identifikátoru,</a> citace publikovaných článků budou používat přímo URL v systému OJS.]]></message>
+	<message key="plugins.generic.dataverse.settings.workflow">Nastavení procesu zpracování</message>
+	<message key="plugins.generic.dataverse.settings.requireData">Požadovat datový soubor</message>
+	<message key="plugins.generic.dataverse.settings.requireDataDescription">Požadavek na to, aby příspěvek zahrnoval data uložená v Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.requireDataError">Je požadováno, aby autoři uložili data příspěvku v Dataverse. Před pokračováním nahrajte doplňkový soubor.</message>
+	<message key="plugins.generic.dataverse.settings.studyRelease">Uvolnění návrhu studie</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseSubmissionAccepted">Editor přijímá příspěvek</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">Článek je publikován</message>
+
+	<!-- Settings: default values -->
+	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[{$journal} požaduje, jako podmínku publikování, aby data k výsledkům článku byla archivována v příslušném veřejném archivu. {$journal} doporučuje <a href="http://thedata.harvard.edu/">Harvard Dataverse</a>, který je zdarma a přístupný všem vědcům na světě ke sdílení, citování a archivování výzkumných dat. Data jsou důležitou součástí vědeckého výzkumu a mají být chráněna a využitelná po desetiletí v budoucnosti. Autoři si mohou zvolit, aby jejich data byla veřejně přístupná v okamžiku publikace článku. Výjimky mohou být v případě citlivých informací, jako jsou informace o osobách, či o poloze ohrožených druhů. Veškeré výjimky je třeba dokumentovat v prohlášení v rámci veřejně přístupného článku. (Přizpůsobeno z <a href="http://datadryad.org/pages/jdap">Joint Data Archiving Policy</a> (JDAP)).]]></message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras">Příklad pokynů pro autory</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras.label">Ukázat vzorové zásady pro uložení dat a jejich citaci.</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines"><![CDATA[<ol>
+     <li>
+       <p>Definition of data that must be shared</p>
+       <p>A "minimal dataset" can be defined to consist of the dataset used to reach the conclusions drawn in the manuscript with related metadata and methods, and any additional data required to replicate the reported study findings in their entirety. Include sufficient information for a researcher to understand data, and any citations to data from which the replication set is derived. Core descriptive data, methods, and study results should be included within the main paper, regardless of data deposition. Authors who have datasets too large for sharing via repositories or uploaded files should contact {$journal} for advice. (Adapted from <a href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">PLOS' Data Policy</a>)</p>
+     </li>
+     <li>
+       <p>Guidance on sharing datasets that derive from work involving human participants</p>
+       <p>{$journal} recognizes that there are cases where for reasons of privacy, national security and commercial confidentiality the full data cannot be made openly available. In such cases researchers should share their data analysis under the least restrictive terms consistent with legal requirements, and abiding by the research ethics and guidelines of their community. This should include opening up non-sensitive data, summary data, metadata and code; and facilitating access if the owner of the original data grants other researchers permission to use the data. (Adapted from OKF's <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf">Open Economics Priciples</a>)</p>
+     </li>
+     <li>
+       <p>Guidance on Data Citation</p>
+       <p>If your research data is deposited at the same time as your manuscript using OJS' article submission form then a Data Citation will automatically be generated by the Harvard Dataverse. However, if your research data is already in a repository then here is the suggested Data Citation format to include when you submit your manuscript:</p>
+       <p>Author(s), Year, Dataset Title, Global Persistent Identifier, Data Repository or Archive, version and subset.</p>
+       <p>For more information on Data Citation best practices please review <a href="http://www.force11.org/datacitation">Force11's Data Citation Priciples</a>.</p>
+     </li>
+   </ol>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras">Příklady Kontrolního seznamu příspěvku</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras.label">Ukázat body kontrolního seznamu příspěvku s datovými soubory</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[<ol>
+   <li><p>If intending to share datasets that derive from work involving human participants please review "Guidance on sharing datasets that derive from work involving human participants" above.</p></li>
+   <li><p>Prepare dataset for deposit by reviewing replication guidelines: <a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a></p></li>
+   <li><p>If depositing into the Harvard Dataverse, you may submit your dataset in OJS at the same time as your manuscript in {$journal}. This will be automatically deposited in the Harvard Dataverse and will generate a Data Citation with a persistent URL (DOI) which you can then refer others to cite your data when your article is published.</p></li>
+   <li><p>If your dataset is already in a recommended public archive please include a Data Citation with a persistent URL. For guidelines on Data Citation please review the author guidelines.</p></li>
+   </ol>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras">Příklady zásad recenzí</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras.label">Ukázat zásady recenzí pro příspěvky s datovými soubory</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy"><![CDATA[<ul>
+   <li><p>Deposited datasets should be treated as part of the article for the purpose of peer review; OR</p></li>
+   <li><p>At acceptance, and prior to the final version of the manuscript, underlying data must be submitted along with a description of how the dataset was created (including any differences from prior versions, and the name of any software packages that were used).</p></li>
+   </ul>
+   <p>A review policy should include a statement on datasets derived from work involving human participants:</p>
+   <ul>
+   <li><p>Datasets that derive from work involving human participants should demonstrate that the study participants' privacy was preserved as indicated in the Data Availability Policy. They should also preferably meet the "minimal dataset" requirement described in the Data Availability Policy.</p></li>
+   </ul>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras">Příklady pokynů pro recenze</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras.label">Ukázat příklady pokynů pro recenze příspěvků s datovými soubory</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[<p>As regards an article's accompanying data, reviewers should verify that the article and dataset comply with the journal's data submission policy, that the data appear consistent with the article, and the article and supplementary documentation are sufficient to understand the data provided, as well as its origins and the way in which it was used.</p>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras">Příklady pokynů pro lektory</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras.label">Ukázat příklady pokynů pro lektory příspěvků s datovými soubory</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions"><![CDATA[<ul>
+			<li><p>Copyeditors have verified that data citation policy is followed; OR</p></li>
+			<li><p>Copyeditors have verified that empirical claims are accompanied by appropriate citations to data.</p></li>
+		</ul>]]></message>
+
+	<!-- Notifications -->
+	<message key="plugins.generic.dataverse.notification.studyCreated">Data příspěvku byla uložena v Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.studyUpdated">Data příspěvku byla aktualizována v Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileAdded">Doplňkový soubor byl uložen do Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileDeleted">Doplňkový soubor byl vyňat z Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.studyDeleted">Data příspěvku byla vyňata z Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.releaseDataverse">Data publikovaná v Dataverse časopisu nebudou přístupna, dokud je neuvolníte. Přihlaste se, prosím, do Dataverse časopisu a uvolněte je.</message>
+	<message key="plugins.generic.dataverse.notification.studyReleased"><![CDATA[<p>Data příspěvky byla publikována v Dataverse:</p><p>{$dataCitation}</p>]]></message>
+	<message key="plugins.generic.dataverse.notification.error">Při aktualizaci dat příspěvku v Dataverse se vyskytla chyba.</message>
+
+	<!-- Article metadata for completed submissions: form errors -->
+	<message key="plugins.generic.dataverse.metadataForm.studyLocked">Tato studie v Dataverse je uzamčena z důvodů zpracování. Metadata příspěvku nemohou být aktualizovány dokud nebude ukončeno zpracování.</message>
+
+	<!-- Additional metadata: suppfile form -->
+	<message key="plugins.generic.dataverse.suppFile.title">Plugin Dataverse: Publikování dat</message>
+	<message key="plugins.generic.dataverse.suppFile.description">Výzkumná data mohou být odeslána k publikaci uložením doplňkových souborů do Dataverse časopisu, nebo citací dat, již uložených v repozitáři.</message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataNone"><![CDATA[Zacházet se souborem jako s doplňkovým souborem. Soubor <strong>nebude</strong> uložen v Dataverse.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataDataverse"><![CDATA[Uložení souboru do Dataverse. Autor přijímá a souhlasí s <a href="javascript:openWindow('{$dataverseTermsOfUseUrl}');">podmínkami užití</a> Dataverse.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishData.error">Nahrajte, prosím, soubor k uložení do Dataverse.</message>
+	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">Soubor bude přidán k studii Dataverse, vytvořené pro tento příspěvek:</message>
+	<message key="plugins.generic.dataverse.suppFile.studyLocked">Tato studie je momentálně uzamčena, protože se zpracovává. Nelze měnit data příspěvku dokud nebude zpracování ukončeno.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">Externí citace dat</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Pokud jsou již data příspěvku uložená v jiném repozitáři, poskytněte, prosím, citaci těchto dat.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Nahrajte, prosím, soubory k uložení v Dataverse NEBO poskytněte externí citaci dat.</message>
+
+	<!-- Terms of use -->
+	<message key="plugins.generic.dataverse.termsOfUse.title">Podmínky užití</message>
+	<message key="plugins.generic.dataverse.termsOfUse.dataverse">Dataverse</message>
+
+	<!-- Data availality policy -->
+	<message key="plugins.generic.dataverse.dataAvailabilityPolicy.title">Zásady dostupnosti dat</message>
+
+	<!-- Block plugin -->
+	<message key="plugins.generic.dataverse.block.displayName">Plugin pro blok Dataverse</message>
+	<message key="plugins.generic.dataverse.block.title">Citace dat</message>
+
+	<!-- Reading tools: suppfiles -->
+	<message key="plugins.generic.dataverse.suppFiles.view">Zobrazení v Dataverse</message>
+
+	<!-- Field labels -->
+	<message key="plugins.generic.dataverse.dataCitation">Citace dat</message>
+
+	<!-- Citation "in press" info -->
+	<message key="plugins.generic.dataverse.citationAPA.inPress">(v tisku).</message>
+</locale>
