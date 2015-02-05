@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/subscriptions/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.reports.subscriptions.displayName">Zpráva o předplatných</message>
+	<message key="plugins.reports.subscriptions.description">Tento plugin vytvoří zprávu ve formátu CSV, která obsahuje seznam předplatných a informace o nich.</message>
+	<message key="plugins.reports.subscriptions.institutionMailingAddress">E-mailová adresa organizace</message>
+	<message key="plugins.reports.subscriptions.ipRanges">Rozsah IP</message>
+</locale>

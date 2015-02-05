@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/booksForReview/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Books for review plugin localization strings
+  * Translation Jiří Dlouhý  
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+
+	<!-- Books For Review Notifications -->
+	<message key="plugins.generic.booksForReview.notification.bookRequested">Žádos o knihu. Čeká se na potvrzení editora.</message>
+	<message key="plugins.generic.booksForReview.notification.bookCreated">Nová kniha pro recenzi byla vytvořena.</message>
+	<message key="plugins.generic.booksForReview.notification.bookUpdated">Byly aktualizovány informace o knize k recenzi.</message>
+	<message key="plugins.generic.booksForReview.notification.bookMailed">Kniha k recenzi - zaznamenáno odeslání e-mailem.</message>
+	<message key="plugins.generic.booksForReview.notification.bookDeleted">Kniha k recenzi smazána.</message>
+	<message key="plugins.generic.booksForReview.notification.submissionAssigned">Ke knize k recenzi byl přiřazen příspěvek.</message>
+	<message key="plugins.generic.booksForReview.notification.authorAssigned">Ke knize k recenzi byl přiřazen autor.</message>
+	<message key="plugins.generic.booksForReview.notification.authorDenied">Autorům požadavek zakázan. Kniha k recenzi vrácen do původního stavu.</message>
+	<message key="plugins.generic.booksForReview.notification.authorRemoved">Autor odebrán. Kniha k recenzi vrácen do původního stavu.</message>
+	<message key="plugins.generic.booksForReview.notification.settingsSaved">Nastavení knihy k recenzi uložena.</message>
+
+	<!-- Books For Review Management -->
+	<message key="plugins.generic.booksForReview.editor.booksForReview"><![CDATA[Knihy&nbsp;k&nbsp;recenzi]]></message>
+	<message key="plugins.generic.booksForReview.editor.all">Vše</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAll">Knihy k recenzi - vše</message>
+	<message key="plugins.generic.booksForReview.editor.available">Dostupné</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAvailable">Knihy k recenzi - Dostupné</message>
+	<message key="plugins.generic.booksForReview.editor.requested">Požadované</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewRequested">Knihy k recenzi - Požadované</message>
+	<message key="plugins.generic.booksForReview.editor.assigned">Přidělené</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAssigned">Knihy k recenzi - Přidělené</message>
+	<message key="plugins.generic.booksForReview.editor.mailed">Odeslané e-mailem</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewMailed">Knihy k recenzi - Odeslané e-mailem</message>
+	<message key="plugins.generic.booksForReview.editor.submitted">Podané</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">Knihy k recenzi - Podané</message>
+	<message key="plugins.generic.booksForReview.editor.create">Vytvořit knihu k recenzi</message>
+	<message key="plugins.generic.booksForReview.editor.createNewUser">Vytvořit nového uživatele</message>
+	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">Upravit metadata knihy</message>
+	<message key="plugins.generic.booksForReview.editor.delete">Smazat knihu k recenzi</message>
+	<message key="plugins.generic.booksForReview.editor.bookDetails">Detaily o knize</message>
+	<message key="plugins.generic.booksForReview.editor.notes">Další poznámky</message>
+	<message key="plugins.generic.booksForReview.editor.notesInstructions">Jen pro editora. Nebude publikováno jako součást knihy k recenzi.</message>
+	<message key="plugins.generic.booksForReview.editor.title">Název</message>
+	<message key="plugins.generic.booksForReview.editor.editor">Editor</message>
+	<message key="plugins.generic.booksForReview.editor.status">Stav</message>
+	<message key="plugins.generic.booksForReview.editor.dueDate">Ukončit do</message>
+	<message key="plugins.generic.booksForReview.editor.noMailingAddress">K souboru není e-mailová adresa.</message>
+	<message key="plugins.generic.booksForReview.editor.editSubmission"><![CDATA[Editovat&nbsp;příspěvek]]></message>
+	<message key="plugins.generic.booksForReview.editor.confirmDelete">Jste si jisti, že chcete trvale smazat tuto knihu k recenzi?</message>
+	<message key="plugins.generic.booksForReview.editor.confirmRemove">Jste si jisti, že chcete odebrat tohoto autora a vyčistit historii této knihy k recenzi?</message>
+	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Vybrat&nbsp;příspěvek]]></message>
+	<message key="plugins.generic.booksForReview.editor.select">Vybrat</message>
+	<message key="plugins.generic.booksForReview.editor.edit">Editovat</message>
+	<message key="plugins.generic.booksForReview.editor.submission">Příspěvek</message>
+	<message key="plugins.generic.booksForReview.editor.bookReviewer">Book Reviewer</message>
+	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Přiřadit</message>
+	<message key="plugins.generic.booksForReview.editor.removeBookReviewer">Odebrat</message>
+	<message key="plugins.generic.booksForReview.editor.acceptBookReviewer">Přijmout</message>
+	<message key="plugins.generic.booksForReview.editor.denyBookReviewer">Zakázat</message>
+	<message key="plugins.generic.booksForReview.editor.notifyBookMailed"><![CDATA[Kniha&nbsp;odeslána&nbsp;e-mailem]]></message>
+	<message key="plugins.generic.booksForReview.editor.noneCreated">Nejsou žádné knihy k recenzi</message>
+	<message key="plugins.generic.booksForReview.editor.noResults">Nebylo nic nalezeno</message>
+	<message key="plugins.generic.booksForReview.editor.assignAuthor">Přiřadit autora</message>
+	<message key="plugins.generic.booksForReview.editor.assign">Přiřadit</message>
+	<message key="plugins.generic.booksForReview.editor.form.status">Stav</message>
+	<message key="plugins.generic.booksForReview.editor.form.title">Název</message>
+	<message key="plugins.generic.booksForReview.editor.form.addAuthor">Přidat autora</message>
+	<message key="plugins.generic.booksForReview.editor.form.deleteAuthor">Smazat</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorType"><![CDATA[Typ&nbsp;autora]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.copy">Kopie je dostupná</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisher">Vydavatel</message>
+	<message key="plugins.generic.booksForReview.editor.form.year">Rok</message>
+	<message key="plugins.generic.booksForReview.editor.form.language">Jazyk</message>
+	<message key="plugins.generic.booksForReview.editor.form.edition">Vydání</message>
+	<message key="plugins.generic.booksForReview.editor.form.pages">Stran</message>
+	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.editor.form.url"><![CDATA[URL&nbsp;vydavatele]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.description">Popis</message>
+	<message key="plugins.generic.booksForReview.editor.form.notes">Poznámky</message>
+	<message key="plugins.generic.booksForReview.editor.form.dateRequested"><![CDATA[Datum&nbsp;požadavku]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateAssigned"><![CDATA[Datum&nbsp;přiřazení]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateMailed"><![CDATA[Datum&nbsp;odeslání&nbsp;e-mailem]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateDue"><![CDATA[Datum&nbsp;ukončení]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateSubmitted"><![CDATA[Datum&nbsp;podání]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.user"><![CDATA[Recenzent&nbsp;knihy]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.article">Příspěvek</message>
+	<message key="plugins.generic.booksForReview.editor.form.saveAndCreateAnother">Uložit a vytvořit další</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorTypeValid">Zvolte, prosím, platný typ autora.</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisherRequired">Zadejte, prosím, vydavatele této knihy.</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearRequired">Zadejte, prosím, rok vydání této knihy.</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearValid">Zadejte, prosím, platný rok vydání.</message>
+	<message key="plugins.generic.booksForReview.editor.form.pagesValid">Zadejte, prosím, platný počet stránek.</message>
+	<message key="plugins.generic.booksForReview.editor.form.urlPrefixIncluded">Zadejte, prosím celé URL včetně předpony (např. http://).</message>
+	<message key="plugins.generic.booksForReview.editor.form.titleRequired">Vložte, prosím, název knihy.</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorRequiredFields">Ujistěte se, prosím, že pro každého autora je zadáno jméno i příjmení..</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPage">Obal</message>
+	<message key="plugins.generic.booksForReview.editor.form.image">Obrázek</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageInstructions">(Povolené formáty: .gif, .jpg, or .png )</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageUploaded">Nahráno</message>
+	<message key="plugins.generic.booksForReview.editor.form.removeCoverPage">Odebrat obrázek obálky?</message>
+	<message key="plugins.generic.booksForReview.editor.form.remove">Odebrat</message>
+
+
+	<!-- Books For Review Settings Management -->
+	<message key="plugins.generic.booksForReview.settings">Nastavení</message>
+	<message key="plugins.generic.booksForReview.booksForReviewSettings">Nastavení Knih k recenzi</message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Mód 1</h5><p>Je podporován následující pracovní postup:</p><ul><li>Editor přidá knihu k recenzi.</li><li>Autoři si mohou zvolit knihu, kterou by chtěli recenzovat - upozorní přitom editora.</li><li>Editor může přijmout nebo odmítnout autorům návrh na recenzi - upozorní přitom autora.</li><li>Pokud je autorův návrh recenze přijat<ul><li>Kniha je odebrána ze seznamu knih k recenzi</li><li>Je stanoveno datum, do kterého má být recenze hotova.</li><li>Editor může poslat autorovi kopii knihy e-mailem.</li></ul></li><li>Autor odevzdá recenzi standardním procesem podání recenze.</li><li>Metadata knihy jsou publikována jako součást zaslané recenze.</li></ul><p>Tento plugin podporuje časopisy s více editory. Pokud editor přidá knihu k recenzi, stává se primárním editorem a korespondenčním kontaktem pro tuto knihu.</p><h5>Mód 2</h5><p>Je podporován následující postup práce:</p><ul><li>Editor přidává knihy.</li><li>Editor přiřazuje každé knize přímo recenzenta.</li><li>Metadata knihy jsou publikována jakou součást podané recenze.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">Správa</message>
+	<message key="plugins.generic.booksForReview.settings.modeFull">Mód 1: Seznam dostupných knih k recenzi, správa recenzentů knih, metadata knih.</message>
+	<message key="plugins.generic.booksForReview.settings.modeMetadata">Mód 2: Publikkovat pouze metadata knih.</message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewDue">Recenze má být hotova do</message>
+	<message key="plugins.generic.booksForReview.settings.coverImages">Obrázek obalu</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageIssue">Zobrazit obrázek obálky recenzované knihy v obsahu čísla.</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageAbstract">Zobrazit obrázek obálky recenzovaných knih na stránkách s abstrakty článků.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks1">Recenzent má termín</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks2">týdnů poté, co byla kniha pro recenzi přiřazena autorovi.</message>
+	<message key="plugins.generic.booksForReview.settings.emailReminders">E-mailová připomínka</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays1">Poslat autorům e-mail s připomínkou</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">dnů před termínem pro odevzdání.</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Poslat autorům e-mail s připomínkou.</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">dnů po termínu pro odevzdání.</message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Pozor:</strong> Pro aktivaci této možnosti musí administrátor stránek zapnout možnost <tt>scheduled_tasks</tt> v konfiguračním souboru  OJS. Je možné, že bude třeba další nastavení serveru pro podporu této funkce (která nemusí být dostupná na všech serverech), tak, jak je popsánou v OJS dokumentaci.]]></message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformation">Další informace</message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Další informace publikované s knihou k recenzi</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Určete, prosím, za kolik týdnů má být hotova recenze knihy.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksValid">Zadejte, prosím, platný počet týdnů má být hotova recenze knihy.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysBeforeDueReminderValid">Zadejte, prosím, platný počet dnů před termínem pro e-mailovou připomínku.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysAfterDueReminderValid">Zadejte, prosím, platný počet dnů po termínu pro e-mailovou připomínku.</message>
+
+	<!-- Books For Review Author -->
+	<message key="plugins.generic.booksForReview.author.title">Název</message>
+	<message key="plugins.generic.booksForReview.author.editor">Editor</message>
+	<message key="plugins.generic.booksForReview.author.status">Stav</message>
+	<message key="plugins.generic.booksForReview.author.submit">Odeslat</message>
+	<message key="plugins.generic.booksForReview.author.dueDate">Termín</message>
+	<message key="plugins.generic.booksForReview.author.noneCreated">Nejsou žádné knihy k recenzi</message>
+	<message key="plugins.generic.booksForReview.author.booksForReview">Knihy k recenzi</message>
+	<message key="plugins.generic.booksForReview.author.myBooksForReview">Mé knihy</message>
+	<message key="plugins.generic.booksForReview.author.availableBooksForReview">Dostupné knihy</message>
+	<message key="plugins.generic.booksForReview.author.requestBookForReview">Zamluvit si tuto knihu k recenzi.</message>
+	<message key="plugins.generic.booksForReview.author.submitInstructions">Označte, prosím, zda tento příspěvek je recenze knihy k některé z následujících knih, které máte přidělené</message>
+	<message key="plugins.generic.booksForReview.author.requested">Požadované</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewRequested">Knihy k recenzi - Požadované</message>
+	<message key="plugins.generic.booksForReview.author.assigned">Přidělené</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewAssigned">Knihy k recenzi - Přiřazené</message>
+	<message key="plugins.generic.booksForReview.author.mailed">Odeslané e-mailem</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewMailed">Knihy k recenzi - Odeslané e-mailem</message>
+	<message key="plugins.generic.booksForReview.author.submitted">Podané</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewSubmitted">Knihy k recenzi - Podané</message>
+
+	<!-- Books For Review Public -->
+	<message key="plugins.generic.booksForReview.public.booksForReview">Knihy k recenzi</message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Pokud máte zájem napsat recenzi knihy:</p><ul><li><a href="{$registerUrl}" target="_parent">Zaregistrujte se</a> jako autor do tohoto časopisu.</li><li><a href="{$loginAuthorUrl}" target="_parent">Přihlaste se</a> Jako autor.</li><li>Klikněte na odkaz knihy, kterou máte zájem recenzovat.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.public.copy">Kopie je k dispozici</message>
+	<message key="plugins.generic.booksForReview.public.copyYes">Ano</message>
+	<message key="plugins.generic.booksForReview.public.copyNo">Ne</message>
+	<message key="plugins.generic.booksForReview.public.language">Jazyk</message>
+	<message key="plugins.generic.booksForReview.public.edition">Vydání</message>
+	<message key="plugins.generic.booksForReview.public.pages">Stran</message>
+	<message key="plugins.generic.booksForReview.public.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.public.externalSite">externí stránky</message>
+	<message key="plugins.generic.booksForReview.public.noneCreated">Nejsou žádné knihy k recenzi</message>
+	<message key="plugins.generic.booksForReview.public.noResults">Nebylo nic nalezeno</message>
+	<message key="plugins.generic.booksForReview.public.coverPage.altText">Obrázek obálky</message>
+	<message key="plugins.generic.booksForReview.public.bookDetails">Podrobnosti o knize</message>
+
+	<!-- Books For Review -->
+	<message key="plugins.generic.booksForReview.reminderTask.name">Připomínka recenze knihy</message>
+	<message key="plugins.generic.booksForReview.displayName">Knihy k recenzi</message>
+	<message key="plugins.generic.booksForReview.description">Získávejte recenzenty knih, které odpovídají zaměření časopisu, nebo které vám zašlou nakladatelé. Spravujte recenzenty knih a recenzní proces knih.
+process.</message>
+	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Knihys&nbsp;k&nbsp;recenzi]]></message>
+	<message key="plugins.generic.booksForReview.status.available">Dostupné</message>
+	<message key="plugins.generic.booksForReview.status.requested">Požadované</message>
+	<message key="plugins.generic.booksForReview.status.assigned">Přiřazené</message>
+	<message key="plugins.generic.booksForReview.status.mailed">Odeslané e-mailem</message>
+	<message key="plugins.generic.booksForReview.status.submitted">Podané</message>
+	<message key="plugins.generic.booksForReview.authorType.by">kým</message>
+	<message key="plugins.generic.booksForReview.authorType.editedBy">Edigované kým</message>
+	<message key="plugins.generic.booksForReview.authorType.editedByShort">Ed.</message>
+	<message key="plugins.generic.booksForReview.editionShort">ed.</message>
+	<message key="plugins.generic.booksForReview.field.status">Stav</message>
+	<message key="plugins.generic.booksForReview.field.publisher">Vydavatel</message>
+	<message key="plugins.generic.booksForReview.field.year">Rok</message>
+	<message key="plugins.generic.booksForReview.field.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.field.title">Název</message>
+	<message key="plugins.generic.booksForReview.field.description">Popis</message>
+
+</locale>

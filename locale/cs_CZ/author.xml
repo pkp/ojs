@@ -4,14 +4,15 @@
 <!--
   * locale/cs_CZ/author.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings.
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translation Jiří Dlouhý  
   -->
 
-<locale name="cs_CZ" full_name = "Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="author.submit">Nový příspěvek</message>
 	<message key="author.track">Aktivní příspěvky</message>
 	<message key="author.competingInterests"><![CDATA[Střet&nbsp;zájmů <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Pravidla upravující střet zájmů</a>]]></message>
@@ -29,8 +30,8 @@
 	<message key="author.submit.cancelSubmission">Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky.</message>
 	<message key="author.submit.notAccepting">Tento časopis aktuálně nepřijímá příspěvky.</message>
 	<message key="author.submit.requestWaiver">Požádat o prominutí</message>
-	<message key="author.submit.qualifyForWaiver">Prosím, zvažte prominutí platby Poplatku za zaslání příspěvku pro tento článek</message>
-	<message key="author.submit.addReasonsForWaiver">Použijte prosím níže umístěné pole pro komentář a uveďte, proč by Vám měl být poplatek prominut.</message>
+	<message key="author.submit.qualifyForWaiver">Zvažte, prosím, prominutí platby poplatku za zaslání příspěvku pro tento článek</message>
+	<message key="author.submit.addReasonsForWaiver">Použijte, prosím, níže umístěné pole pro komentář a uveďte, proč by Vám měl být poplatek prominut.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Nahrát redigovanou verzi</message>
 	<message key="author.submissions.proofreadingCorrections">Korekturní opravy</message>
 	<message key="author.submissions.confirmDelete">Jste si jistý, že chcete smazat tento nedokončený příspěvek?</message>

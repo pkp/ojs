@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/pubIds/locale/cs_CU/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<!-- plugin -->
+	<message key="plugins.importexport.pubIds.displayName">Plugin pro veřejné identifikátory XML</message>
+	<message key="plugins.importexport.pubIds.description">Import a export veřejných identifikátorů</message>
+
+	<message key="plugins.importexport.pubIds.cliUsage">Použití: {$scriptName} {$pluginName} [command] ...
+Příkazy:
+	import [xmlFileName] [journal_path] [user_name]
+	export [xmlFileName] [journal_path] číslo [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] číslo [issueId]</message>
+
+	<message key="plugins.importexport.pubIds.export">Export veřejných identifikátorů</message>
+	<message key="plugins.importexport.pubIds.export.forIssues">Export veřejných identifikátorů</message>
+	<message key="plugins.importexport.pubIds.export.selectIssue">Vyberte číslo</message>
+	<message key="plugins.importexport.pubIds.export.selectIssue.description">Vyberte, prosím čísla, pro jejichž prvky chcete exportovat veřejné identifikátory.</message>
+
+	<message key="plugins.importexport.pubIds.import">Importovat veřejné identifikátory</message>
+	<message key="plugins.importexport.pubIds.import.description">Tento plugin podporuje import veřejných identifikátorů založených na pubIds.dtd Document Type Definition.</message>
+	<message key="plugins.importexport.pubIds.import.results">Importovat výsledky</message>
+	<message key="plugins.importexport.pubIds.import.errors">Importovat chyby</message>
+	<message key="plugins.importexport.pubIds.import.errors.description">Během importu se vyskytla jedna, či více chyb. Zkontrolujte, prosím, že formát importovaného souboru odpovídá specifikaci. Specifické detaily chyb importu naleznete níže.</message>
+	<message key="plugins.importexport.pubIds.import.success">Import byl úspěšný</message>
+	<message key="plugins.importexport.pubIds.import.success.description">Úspěšně importované veřejné identifikátory jsou v seznamu níže.</message>
+
+	<!-- errors -->
+	<message key="plugins.importexport.pubIds.cliError">CHYBA:</message>
+	<message key="plugins.importexport.pubIds.cliError.unknownJournal">Zadaná cesta k časopisu, "{$journalPath}", neexistuje.</message>
+	<message key="plugins.importexport.pubIds.cliError.unknownUser">Zadaný uživatel "{$userName}" neexistuje.</message>
+	<message key="plugins.importexport.pubIds.cliError.issueNotFound">Žádné číslo neodpovídá zadanému ID "{$issueId}".</message>
+	<message key="plugins.importexport.pubIds.cliError.couldNotWrite">Nelze zapisovat do souboru "{$fileName}".</message>
+
+	<message key="plugins.importexport.pubIds.import.error.uploadFailed">Nahrávání selhalo; ujistěte se, prosím, že je povoleno nahrávání na vašem serveru a že soubor není moc velký s ohledem na konfiguraci PHP a webového serveru.</message>
+	<message key="plugins.importexport.pubIds.import.error.unsupportedRoot">Tento plugin nepodporuje zadaný kořenový uzel "{$rootName}". Ujistěte se, prosím, zda je soubor správně uspořádán a zkuste to znovu.</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownObjectType">Byl zadán neznámý typo objektu "{$pubObjectType}" v atributu "pubObjectType" prvku s hodnotou "{$pubId}".</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownObject">Objekt "{$pubObjectType}" s ID = {$pubObjectId} zadaný v prvku s hodnotou "{$pubId}" neexistuje v tomto časopisu.</message>
+	<message key="plugins.importexport.pubIds.import.error.pubIdExists">Veřejný identifikátor typu "{$pubIdType}" pro objekt {$pubObjectType} s ID = {$pubObjectId} již existuje.</message>
+	<message key="plugins.importexport.pubIds.import.error.duplicatePubId">Veřejný identifikátor "{$pubId}" se již používá jiným objektem.</message>
+	<message key="plugins.importexport.pubIds.import.error.unknownPubId">Váš soubor importu obsahuje veřejný identifikátor typu "{$pubIdType}" který plugin pubId plugin neumí obsloužit. Instalujte, prosím a/nebo aktivujte odpovídající pubId plugin před pokusem o import dat.</message>
+
+
+</locale>

@@ -12,12 +12,12 @@
   -->
  
 <locale name="cs_CZ" full_name="Czech">
-	<message key="plugins.paymethod.manual.displayName">Ruční platba polatku</message>
+	<message key="plugins.paymethod.manual.displayName">Ruční platba poplatku</message>
 	<message key="plugins.paymethod.manual.description">Manažer ručně zaznamená přijetí platby uživatele (mimo tento software).</message>
-	<message key="plugins.paymethod.manual">Ruční platba polatku</message>
+	<message key="plugins.paymethod.manual">Ruční platba poplatku</message>
 	<message key="plugins.paymethod.manual.settings">Nastavení ruční platby</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Instrukce</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Instrukce pro platbu poplatku pro uživatele, kteří zvolili ruční platbu poplatku</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Pokyny</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Pokyny pro platbu poplatku pro uživatele, kteří zvolili ruční platbu poplatku</message>
 	
 	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Poslat oznámení o platbě</message>
 	<message key="plugins.paymethod.manual.paymentNotification">Oznámení o platbě</message>

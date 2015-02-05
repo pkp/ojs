@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review plugin localization strings
+  * Translation Jiří Dlouhý  
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+
+	<!-- Objects For Review Plug-In -->
+	<message key="plugins.generic.objectsForReview.displayName">Objekty k recenzi</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">Připomínka recenze objektů</message>
+	<message key="plugins.generic.objectsForReview.description">Získávání recenzentů podle zájmů. Správa objektů k recenzi a správa recenzního procesu.</message>
+
+	<!--  Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
+
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectTypes">Typy objektů k recenzi</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">Zde můžete určit standardní/předdefinované objekty k recenzi, pokud je to nezbytné, tak aktualizovat nainstalované nebo vytvořit nové typy.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">Jméno</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">Žádné</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons">Osoby</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">Definujte, prosím, možné role pro osoby, které budou působit při recenzi objektů (např. autor, přispěvatel atd.). V budoucnu nebude možné je měnit, nebo přidávat další.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectType">Náhled typů objektů</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">Toto smaže všechny existující objekty k recenzi tohoto typu. Jste si jisti, že chcete smazat tento typ objektů k recenzi?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.create">Vytvořit typo objektu k recenzi</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Upravit typo objektu k recenzi</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Aktualizovat</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">Aktualizovat data jazykové lokalizace pro výše vybrané objekty:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Instalovat</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.installObjects">Instalovat chybějící objekty k recenzi - vyberte typy a jazykové lokalizace a poté klikněte na tlačítko instalovat:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.name">Jméno</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.description">Popis a pokyny</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Metadata</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Náhled</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Metadata objektu k recenzi</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">Žádný</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">Kopírovat do:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Vytvořit pole metadat</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">Upravit pole metadat</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">Toto také smaže všechna metadata vložená do tohoto pole. Jste si jisti, že chcete smazat toto pole metadat pro tento typ objektu k recenzi?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">Kopírovat</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">Jméno</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">Požadováno</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.display">Zobrazit</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">Zvolte typ pole metadat</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.smalltextfield">Jednoslovný textový box</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textfield">Jednořádkový textový box</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textarea">Rozšířený textový box</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.checkboxes">Zatrhávací položky (můžete zvolit jednu, nebo více položek)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.radiobuttons">Radiové tlačítko (můžete zvolit právě jednu možnost)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.dropdownbox">Rozbalovací box</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.roledropdownbox">Rolovací rozbalovací box</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.langdropdownbox">Rozbalovací box s jazyky</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.changeType">Změnit typ</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">Typ pole metadat</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions">Možné volby</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem">Přidat výber</message>
+
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings">Nastavení</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">Správa</message>
+	<message key="plugins.generic.objectsForReview.settings.modeFull">Mód 1: Seznam dostupných objektů pro recenzi, správa recenzentů objektů a publikace metadat objektů.</message>
+	<message key="plugins.generic.objectsForReview.settings.modeMetadata">Mód 2: Pouze publikace metadat objektů.</message>
+	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>Mód 1</h5><p>Je podporován následující pracovní postup:</p><ul><li>Editor přidává objekty pro recenzi.</li><li>Autoři, kteří mají zájem recenzovat objekty si je mohou rezervovat, editor je o tom uvědoměn.</li><li>Editor může přijmou, nebo odmítnout požadavek na provedení recenze, autor je uvědoměn o vyřízení žádosti.</li><li>Pokud je požadavek na recenzi schválen, je stanoven termín pro dokončení recenze.</li><li>Editor může poslat objekt k recenzi e-mailem autorovi. V tom případě je aktualizován termín dokončení recenze.</li><li>Autor odevzdá výsledek recenze objektu standardním on-line procesem odevzdání.</li><li>Metadata objektu jsou publikována jakou součást recenze.</li></ul><p>Tento plugin podporuje časopisy s více editory. Pokud přidá editor nový objekt k recenzi, stává se primárním editorem a korespondenčním kontaktem pro tento objekt.</p><h5>Mód 2</h5><p>Je podporován následující pracovní postup:</p><ul><li><h5>Mód 1</h5><p>Je podporován následující pracovní postup:</p><ul><li>Editor přidává objekty pro recenzi.</li><li>Editor určuje recenzenty pro každý z objektů.</li><li>Metadata objektu jsou publikována jakou součást recenze.</li></ul>]]></message>
+	<message key="plugins.generic.objectsForReview.settings.displayMetadata">Zobrazit metadata objektu</message>
+	<message key="plugins.generic.objectsForReview.settings.displayAbstract">Zobrazovat metadata objektu na stránkách abstraktu článku.</message>
+	<message key="plugins.generic.objectsForReview.settings.displayListing">Publikovat seznam všech objektů k recenzi  s použitím navigační položky "Objekty k recenzi"</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewDue">Termíny na provedení recenzí objektů</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks1">Termíny pro recenzenty</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">týdnů poté, co bylo stanoveno datum dokončení recenze objektu.</message>
+	<message key="plugins.generic.objectsForReview.settings.emailReminders">E-mailová připomínka</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays1">Poslat autorům připomínkový e-mail</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">dnů po stanoveném datu k ukončení recenze.</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">Poslat autorům e-mail s připomínkou</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">dnů po datu stanoveném k ukončení recenze.</message>
+	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Poznámka:</strong> K aktivaci této možnosti musí administrátor stránek povolit možnost <tt>scheduled_tasks</tt> v rámci konfiguračním souboru systému OJS. Další nastavení serveru může být požadován aby tato funkce fungovala (což nemusí fungovat na všech serverech), další informaci najdete v dokumentaci OJS.]]></message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Dodatečné informace</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Dodatečné informace publikované spolu se seznamem objektů k recenzi.</message>
+
+	<!-- Search, filter, sort -->
+	<message key="plugins.generic.objectsForReview.search.field.title">Název</message>
+	<message key="plugins.generic.objectsForReview.search.field.abstract">Abstrakt</message>
+	<message key="plugins.generic.objectsForReview.search.noResults">Nejsou žádné výsledky hledání</message>
+	<message key="plugins.generic.objectsForReview.filter.filterBy">Filtrováno podle</message>
+	<message key="plugins.generic.objectsForReview.sort.sortBy">Řazeno podle</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionAsc">Vzestupně</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionDesc">Sestupně</message>
+
+	<!-- Objects For Review -->
+	<message key="plugins.generic.objectsForReview.objectsForReview.pageTitle">Objekty k recenzi</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.noneCreated">Nejsou žádné objekty k recenzi</message>	
+	<message key="plugins.generic.objectsForReview.objectsForReview.title">Název</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.dateCreated">Vytvořen</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.status">Stav</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectReviewer">Object Reviewer</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectType">Recenzent objektu</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.editor">Editor</message>
+
+	<!-- Object For Review Assignments -->
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAll">Přiřazení objektů k recenzi - všechny</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.all">Všechny</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleRequested">Přiřazení objektů k recenzi - rezervované</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.requested">Rezervované</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned">Přiřazení objektů k recenzi - přiřazené</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned">Přiřazené</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleMailed">Přiřazení objektů k recenzi - odeslané e-mailem</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed">Odeslané e-mailem</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleSubmitted">Přiřazení objektů k recenzi - odevzdané</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submitted">Odevzdané</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.title">Název</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.status">Stav</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.objectReviewer">Recenzent objektu</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dateCreated">Vytvořený</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dueDate">Termín ukončení</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submission">Odevzdání</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.noneCreated">Nejsou dostupné žádné objekty k recenzi</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status">Stav</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">Dostupné</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.requested">Požadované</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">Přiděleno</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed">Odesláno e-mailem</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted">Odesláno</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.additionalNotes">Dodatečné poznámky</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notes">Poznámky</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">Pouze pro editora. Nebude publikováno jako součást objektu pro recenzi.</message>
+
+	<!-- Objects For Review Assignments Management by Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
+	<message key="plugins.generic.objectsForReview.editor.assignments">Úkoly</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.editor.select">Vybrat</message>
+	<message key="plugins.generic.objectsForReview.editor.assignObjectReviewer">Přidělit</message>
+	<message key="plugins.generic.objectsForReview.editor.acceptObjectReviewer">Přijmout</message>
+	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">Odmítnout</message>
+	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">Objekt zaslán e-mailem</message>
+	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">Odebrat</message>
+	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">Jste si jisti, že chcete odebrat tohoto autora a vymazat historii revizí tohoto objektu?</message>
+	<message key="plugins.generic.objectsForReview.editor.selectSubmission">Vybrat příspěvek</message>
+	<!-- Assign Author -->
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor">Přiřadit autora</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.assign">Přiřadit</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.createNewUser">Vytvořit nového uživatele</message>
+
+	<message key="plugins.generic.objectsForReview.editor.noMailingAddress">Není e-mailová adresa pro soubor.</message>
+
+	<!-- Object For Review Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview">Objekt k recenzi</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseLanguage">Vyberte jazyk</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption">Vyberte možnost</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole">Vyberte roli</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer">Bez odpovědi</message>
+	<message key="plugins.generic.objectsForReview.editor.edit">Editovat</message>
+	<message key="plugins.generic.objectsForReview.editor.create">Vytvořit objekt pro recenzi</message>
+	<message key="plugins.generic.objectsForReview.editor.saveAndCreateAnother">Uložit a vytvořit další</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.addPerson">Přidat osobu</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.deletePerson">Smazat</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPage">Obálka</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageInstructions">(Povolené formáty: .gif, .jpg, or .png )</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageUploaded">Nahráno</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.removeCoverPage">Odebrat obrázek obálky?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.remove">Odebrat</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImage">Obrázek obálky</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImageAltText">Alternativní text pro obrázek obálky</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.additionalNotes">Další poznámky</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notes">Poznámky</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notesInstructions">Pouze pro editora. Nebude publikováno jako součást objektu pro recenzi.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditor">Přiřadit editora</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditorInstructions">Vyberte editora, který je odpovědný za tento objekt k recenzi.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.available">Dostupný</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.availableInstructions">Definujte, pokud je objekt dotupný k recenzi.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.available">Dostupný</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.notAvailable">Není dostupný</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.delete">Smazat</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.confirmDelete">Toto definitivně smaže objekt a všechny úlohy k němu přířazené. Jste si jisti, že chcete smazat tento objekt?</message>
+
+	<!-- Public -->
+	<message key="plugins.generic.objectsForReview.public.headerLink">Objekty k recenzi</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReview">Objekty k recenzi</message>
+	<message key="plugins.generic.objectsForReview.public.objectForReview">Objekt k recenzi</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReviewInstructions"><![CDATA[<p>Pokud máte zájem napsat recenzi k objektu:</p><ul><li><a href="{$registerUrl}" target="_parent">Zaregistrujte se</a> jako autor tohoto časopisu.</li><li><a href="{$loginAuthorUrl}" target="_parent">Přihlaste se</a> jako autor.</li><li>Klikněte na odpovídajicí objekt, který odpovídá vašemu zájmu (vaší odbornosti).</li></ul>]]></message>
+	
+	<!-- Article Abstract Page -->
+	<message key="plugins.generic.objectsForReview.public.articleObjectsForReview">Objekty recenzované v tomto článku</message>
+
+
+	<!-- Author -->
+	<message key="plugins.generic.objectsForReview.author.objectsForReview">Objekty k recenzi</message>
+	<message key="plugins.generic.objectsForReview.author.myObjectsForReview">Mé objekty</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.author.requestObjectForReview">Požadovat (rezervovat) tento objekt k recenzi</message>
+
+	<message key="plugins.generic.objectsForReview.author.submit">Odeslat</message>
+	<message key="plugins.generic.objectsForReview.author.view">Náhled</message>
+	<!-- Submission -->
+	<message key="plugins.generic.objectsForReview.author.submitInstructions">Zaznamenejte, zda tento příspěvek je recenze některého z následujících objektů, které vám byly přiděleny.</message>
+
+
+	<!-- Notifications -->
+	<message key="plugins.generic.objectsForReview.notification.objectTypeInstalled">Typ objektu k recenzi byl instalován.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeCreated">Typ objektu k recenzi byl vytvořen.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeUpdated">Typ objektu k recenzi byl aktualizován.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeActivated">Typ objektu k recenzi byl aktivován.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeactivated">Typ objektu k recenzi byl deaktivován.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeleted">Typ objektu k recenzi byl smazán. Tím byly smazány také vlastní objekty k recenzi a jejich přiřazení.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrCreated">Byly vytvořeny nové objekty k recenzi.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrRequested">Byly rezervovány objekty k recenzi. Čeká se na souhlas editora.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Objekty k recenzi byly aktualizovány.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Objekty k recenzi a jejich přiřazení byly smazány.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Autorovi byl přiřazen objekt k recenzi.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Autorům požadavek byl zamítnut. Objekt k recenzi byl vrácen do původního stavu.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">Bylo zaznamenáno odeslání objektu k recenzi e-mailem autorovi.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Autor odebrán. Objekt k recenzi byl vrácen do původního stavu.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSubmissionAssigned">Odevzdání bylo přiřazeno k objektu k recenzi.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSettingsSaved">Bylo uloženo nastavení pluginu Objekty k recenzi.</message>
+
+
+	<!-- errors -->
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">Je vyžadováno název pro typ objektu k recenzi.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">Je vyžadován název pole metadat.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">Je vyžadován typo pole pro pole metadat.</message>
+	<!-- Object For Review Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">Vyplňte, prosím, požadovaná pole.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">Zvolte, prosím, roli pro osobu a vyplňte buď křestní jméno, nebo příjmení.</message>
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings.modeRequired">Je požadováno zadání módu.</message>
+	<message key="plugins.generic.objectsForReview.settings.modeValid">Specifikujte, prosím, platný mód.</message>
+	<message key="plugins.generic.objectsForReview.settings.numDaysReminderValid">Zadejte, prosím, platný počet dnů pro odeslání e-mailového upozornění.</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksRequired">Zadejte, prosím, počet týdnů, za které má být hotova recenze objektu.</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksValid">Zadejte, prosím, počet týdnů, za které má být hotovy recenze objektů.</message>
+
+
+
+
+
+	<!-- Objects for Review and their Metadata -->
+	<!-- Common Metadata -->
+	<message key="plugins.generic.objectsForReview.object.metadata.title">Název</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.person">Osoba</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.date">Datum</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.language">Jazyk</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.shortTitle">Krátký název</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.url">URL</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.rights">Práva</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.abstract">Abstrakt</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable">Kopie je dostupná</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.yes">Ano</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.no">Ne</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.coverPage">Obálka</message>
+	<!-- Artwork -->
+	<message key="plugins.generic.objectsForReview.object.artwork">Umělecké dílo</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.artist">Umělec</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.medium">Médium</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.size">Velikost</message>
+	<!-- Audio Recording -->
+	<message key="plugins.generic.objectsForReview.object.audioRecording">Zvuková nahrávka</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">Umělec</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">Skladatel</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Autor textu</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.format">Formát</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">Název série</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.numberOfVolumes">Počet svazků</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.label">Označení</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.runningTime">Délka nahrávky (čas)</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.isbn">ISBN</message>
+	<!-- Bill -->
+	<message key="plugins.generic.objectsForReview.object.bill">Účet</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.sponsor">Sponzor</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.cosponsor">Spolusponzor</message>
+	<message key="plugins.generic.objectsForReview.object.bill.number">Číslo účtu</message>
+	<message key="plugins.generic.objectsForReview.object.bill.code">Kód</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codeVolume">Objem kódu</message>
+	<message key="plugins.generic.objectsForReview.object.bill.section">Sekce</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codePages">Kódové stránky</message>
+	<message key="plugins.generic.objectsForReview.object.bill.legislativeBody">Legislativní osoba</message>
+	<message key="plugins.generic.objectsForReview.object.bill.session">Zasedání (session)</message>
+	<message key="plugins.generic.objectsForReview.object.bill.history">Historie</message>
+	<!-- Blog Post -->
+	<message key="plugins.generic.objectsForReview.object.blogPost">Příspěvek do blogu</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.commenter">Komentátor</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.blogTitle">Název blogu</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.websiteTitle">Název webové stránky</message>
+	<!-- Book -->
+	<message key="plugins.generic.objectsForReview.object.book">Kniha</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.seriesEditor">Editor řady</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.book.series">Řada</message>
+	<message key="plugins.generic.objectsForReview.object.book.seriesNumber">Číslo řady</message>
+	<message key="plugins.generic.objectsForReview.object.book.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfVolumes">Počet svazků</message>
+	<message key="plugins.generic.objectsForReview.object.book.edition">Edice</message>
+	<message key="plugins.generic.objectsForReview.object.book.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisher">Vydavatel</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisherURL">URL vydavatele</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfPages">Počet stran</message>
+	<message key="plugins.generic.objectsForReview.object.book.isbn">ISBN</message>
+	<!-- Book Section -->
+	<message key="plugins.generic.objectsForReview.object.bookSection">Sekce knihy</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.bookAuthor">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.seriesEditor">Editor řady</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.bookTitle">Název knihy</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.series">Řada</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.seriesNumber">Číslo řady</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfVolumes">Počet svazků</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.edition">Edice</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisher">Vydavatel</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisherURL">URL vydavatele</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfPages">Počet stran</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.isbn">ISBN</message>
+	<!-- Case -->
+	<message key="plugins.generic.objectsForReview.object.case">Případ</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.counsel">Právní zástupce</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporter">Zpravodaj</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporterVolume">Reporter Volume</message>
+	<message key="plugins.generic.objectsForReview.object.case.court">Soud</message>
+	<message key="plugins.generic.objectsForReview.object.case.docketNo">Číslo celního potvrzení (Docket Number)</message>
+	<message key="plugins.generic.objectsForReview.object.case.firstPage">První strana</message>
+	<message key="plugins.generic.objectsForReview.object.case.history">Historie</message>
+	<!-- Computer Program -->
+	<message key="plugins.generic.objectsForReview.object.computerProgram">Počítačový program</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.programmer">Programátor</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.seriesTitle">Název řady</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.version">Verze</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.system">Systém</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.programmingLanguage">Programovací jazyk</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.isbn">ISBN</message>
+	<!-- Conference Paper -->
+	<message key="plugins.generic.objectsForReview.object.conferencePaper">Příspěvek na konferenci</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.seriesEditor">Editor řady</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.translator">Překladatel řady</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.proceedingsTitle">Název konferenčního sborníku</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.conferenceName">Jméno konference</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisher">Vydavatel</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisherURL">URL vydavatele</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.pages">Strany</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.series">Řada</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.isbn">ISBN</message>
+	<!-- Dictionary Entry -->
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry">Příspěvek do slovníku</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.seriesEditor">Editor řady</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.dictionaryTitle">Název slovníku</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.series">Řada</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.seriesNumber">Číslo řady</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.numberOfVolumes">Počet svazků</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.edition">Edice</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.publisher">Vydavatel</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitlek.numberOfPages">Počet stran</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.isbn">ISBN</message>
+	<!-- Document -->
+	<message key="plugins.generic.objectsForReview.object.document">Dokument</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.reviewedAuthor">Recenzovaný autor</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.document.publisher">Vydavatel</message>
+	<!-- E-mail -->
+	<message key="plugins.generic.objectsForReview.object.email">E-mail</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.recipient">Příjemce</message>
+	<!-- Encyclopedia Article -->
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle">Článek v encyklopedii</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.seriesEditor">Editor řady</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.encyclopediaTitle">Název encyklopedie</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.series">Řada</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.seriesNo">Číslo řady</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volumeNo">Počet svazků</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.edition">Edice</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.publisher">Vydavatel</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.pages">Počet stran</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.isbn">ISBN</message>
+	<!-- Film -->
+	<message key="plugins.generic.objectsForReview.object.film">Film</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.director">Režisér</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.producer">Producent</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.scriptwriter">Autor námětu</message>
+	<message key="plugins.generic.objectsForReview.object.film.distributor">Distributor</message>
+	<message key="plugins.generic.objectsForReview.object.film.genre">Žánr</message>
+	<message key="plugins.generic.objectsForReview.object.film.format">Formát</message>
+	<message key="plugins.generic.objectsForReview.object.film.runningTime">Dělka</message>
+	<!-- Forum Post -->
+	<message key="plugins.generic.objectsForReview.object.forumPost">Příspěvek do fóra</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.forumTitle">Název fóra</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.postType">Typ příspěvku</message>
+	<!-- Hearing -->
+	<message key="plugins.generic.objectsForReview.object.hearing">Slyšení</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.committee">Výbor</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.publisher">Vydavatel</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.numberOfVolumes">Počet svazků</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.documentNo">Číslo dokumentu</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.pages">Stran</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.legislativeBody">Legislativní orgán</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.session">Sezení</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.history">Historie</message>
+	<!-- Instant Message -->
+	<message key="plugins.generic.objectsForReview.object.instantMessage">Rychlá zpráva</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.recipient">Příjemce</message>
+	<!-- Interview -->
+	<message key="plugins.generic.objectsForReview.object.interview">Rozhovor</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewWith">Rozhovor s</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewer">Osoba vedoucí rozhovor</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.interview.medium">Médium</message>
+	<!-- Journal Article -->
+	<message key="plugins.generic.objectsForReview.object.journalArticle">Článek v časopise</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.reviewedAuthor">Recenzovaný autor</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.publication">Publikace</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issue">Číslo</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.pages">Pages</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.series">Řada</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesTitle">Název řady</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesText">Text řady</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.journalAbbr">Zkratka časopisu</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issn">ISSN</message>
+	<!-- Letter -->
+	<message key="plugins.generic.objectsForReview.object.letter">Dopis</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Příjemce</message>
+	<message key="plugins.generic.objectsForReview.object.letter.type">Typ dopisu</message>
+	<!-- Magazine Article -->
+	<message key="plugins.generic.objectsForReview.object.magazineArticle">Článek v magazínu</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.reviewedAuthor">Recenzovaný autor</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.publication">Publikace</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issue">Číslo</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.pages">Stran</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issn">ISSN</message>
+	<!-- Manuscript -->
+	<message key="plugins.generic.objectsForReview.object.manuscript">Rukopis</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.type">Typ</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.numberOfPages">Počet stran</message>
+	<!-- Map -->
+	<message key="plugins.generic.objectsForReview.object.map">Mapa</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.cartographer">Kartograf</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.seriesEditor">Editor řady</message>
+	<message key="plugins.generic.objectsForReview.object.map.type">Typ</message>
+	<message key="plugins.generic.objectsForReview.object.map.scale">Měřítko</message>
+	<message key="plugins.generic.objectsForReview.object.map.seriesTitle">Název řady</message>
+	<message key="plugins.generic.objectsForReview.object.map.edition">Edice</message>
+	<message key="plugins.generic.objectsForReview.object.map.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.map.publisher">Vydavatel</message>
+	<message key="plugins.generic.objectsForReview.object.map.isbn">ISBN</message>
+	<!-- Newspaper Article -->
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle">Novinový článek</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.reviewedAuthor">Recenzovaný autor</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.publication">Publikace</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.edition">Edice</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.section">Sekce</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.pages">Strany</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.issn">ISSN</message>
+	<!-- Patent -->
+	<message key="plugins.generic.objectsForReview.object.patent">Patent</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.inventor">Vynálezce</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.attorney">Advokát/Agent</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.patent.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.patent.country">Stát</message>
+	<message key="plugins.generic.objectsForReview.object.patent.assignee">Postupník</message>
+	<message key="plugins.generic.objectsForReview.object.patent.issuingAuthority">Vydávající agentura</message>
+	<message key="plugins.generic.objectsForReview.object.patent.number">Číslo</message>
+	<message key="plugins.generic.objectsForReview.object.patent.pages">Strany</message>
+	<message key="plugins.generic.objectsForReview.object.patent.appNumber">Číslo přihlášky</message>
+	<message key="plugins.generic.objectsForReview.object.patent.priorityNumbers">Prioritní čísla</message>
+	<message key="plugins.generic.objectsForReview.object.patent.filingDate">Datum podání</message>
+	<message key="plugins.generic.objectsForReview.object.patent.references">Reference</message>
+	<message key="plugins.generic.objectsForReview.object.patent.legalStatus">Právní stav</message>
+	<!-- Podcast -->
+	<message key="plugins.generic.objectsForReview.object.podcast">Podcast</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.podcaster">Umělec</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.guest">Host</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.seriesTitle">Název řady</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.episodeNo">Číslo epizody</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.fileType">Typ souboru</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.runningTime">Doba trvání</message>
+	<!-- Presentation -->
+	<message key="plugins.generic.objectsForReview.object.presentation">Prezentace</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.presenter">Prezentující</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.type">Typ</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.meetingName">Název setkání</message>
+	<!-- Radio Broadcast -->
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast">Rozhlasové vysílání</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.director">Režisér</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.castMember">Člen obsazení</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.guest">Host</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.producer">Producent</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.scriptWriter">Autor scénáře</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.programTitle">Název programu</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.episodeNo">Číslo epizody</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.format">Formát</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.network">Síť</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.runningTime">Délka vysílání (čas)</message>
+	<!-- Report -->
+	<message key="plugins.generic.objectsForReview.object.report">Zpráva</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.seriesEditor">Editor řady</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.report.no">Číslo</message>
+	<message key="plugins.generic.objectsForReview.object.report.type">Typ</message>
+	<message key="plugins.generic.objectsForReview.object.report.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.report.seriesTitle">Název řady</message>
+	<message key="plugins.generic.objectsForReview.object.report.institution">Organizace/instituce</message>
+	<message key="plugins.generic.objectsForReview.object.report.pages">Místo</message>
+	<!-- Statute -->
+	<message key="plugins.generic.objectsForReview.object.statute">Statut</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.statute.code">Kód</message>
+	<message key="plugins.generic.objectsForReview.object.statute.codeNo">Číslo kódu</message>
+	<message key="plugins.generic.objectsForReview.object.statute.publicLawNo">Veřejné právní číslo</message>
+	<message key="plugins.generic.objectsForReview.object.statute.pages">Stran</message>
+	<message key="plugins.generic.objectsForReview.object.statute.section">Sekce</message>
+	<message key="plugins.generic.objectsForReview.object.statute.session">Zasedání (session)</message>
+	<message key="plugins.generic.objectsForReview.object.statute.history">Historie</message>
+	<!-- Thesis -->
+	<message key="plugins.generic.objectsForReview.object.thesis">Diplomová práce</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.type">Typ</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.university">Univerzita</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.numberOfPages">Počet stran</message>
+	<!-- TV Broadcast -->
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast">Televizní vysílání</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.director">Režisér</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.castMember">Člen obsazení</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.guest">Host</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.producer">Producent</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.scriptWriter">Autor scénáře</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.programTitle">Název programu</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.episodeNo">Číslo epizody</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.format">Formát</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.network">Síť</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.runningTime">Délka nahrávky (čas)</message>
+	<!-- Video Recording -->
+	<message key="plugins.generic.objectsForReview.object.videoRecording">Nahrávání videa</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.director">Režisér</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.castMember">Člen obsazení</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.guest">Host</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.producer">Producent</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.scriptWriter">Autor scénáře</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.format">Formát</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.seriesTitle">Název řady</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.volume">Svazek</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.numberOfVolumes">Počet svazků</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.place">Místo</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.studio">Studio</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.runningTime">Délka nahrávky (čas)</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.isbn">ISBN</message>
+	<!-- Web Page -->
+	<message key="plugins.generic.objectsForReview.object.webPage">Webová stránka</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.author">Autor</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.contributor">Přispěvatel</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.translator">Překladatel</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteTitle">Název webové stránky</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">Typ webové stránky</message>
+
+
+</locale>

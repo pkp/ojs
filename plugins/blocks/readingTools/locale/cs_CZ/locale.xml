@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/readingTools/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.block.readingTools.displayName">Panel čtenářských nástrojů</message>
+	<message key="plugins.block.readingTools.description">Tento plugin zobrazuje panel, který obsahuje čtenářské nástroje</message>
+	<message key="plugins.block.readingTools.title">Čtenářské nástroje</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">O autorovi</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">O autorech</message>
+	<message key="plugins.block.readingTools.articleTools">Nástroje k článku</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Poslat tento článek e-mailem</message>
+	<message key="plugins.block.readingTools.loginRequired">Je třeba se přihlásit</message>
+	<message key="plugins.block.readingTools.printThisArticle">Tisknout tento článek</message>
+	<message key="plugins.block.readingTools.postComment">Odeslat komentář</message>
+</locale>

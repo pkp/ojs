@@ -13,14 +13,13 @@
   -->
  
 <locale name="cs_CZ" full_name="Czech">
-	<message key="plugins.generic.announcementfeed.displayName">Plugin pro dodávání oznámení</message>
-	<message key="plugins.generic.announcementfeed.description">Tento plugin vytváří RSS/Atom web syndication feeds pro oznámení časopisu.</message>
-
+	<message key="plugins.generic.announcementfeed.displayName">Plugin pro kanál oznámení</message>
+	<message key="plugins.generic.announcementfeed.description">Tento plugin vytváří kanál RSS/Atom pro oznámení časopisu.</message>
 	<message key="plugins.generic.announcementfeed.settings">Nastavení</message>
-	<message key="plugins.generic.announcementfeed.settings.all">Zobrazit odkazy na feed na všech stránkách časopisu.</message>
-	<message key="plugins.generic.announcementfeed.settings.homepage">Zobrazit odkazy na feed pouze na domácí stránce a stránce oznámení.</message>
-	<message key="plugins.generic.announcementfeed.settings.announcement">Zobrazit odkazy na feed pouze na stránce oznámení.</message>
-	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Omezit feed na</message>
+	<message key="plugins.generic.announcementfeed.settings.all">Zobrazit odkazy na kanál na všech stránkách časopisu.</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Zobrazit odkazy na kanál pouze na domácí stránce a stránce oznámení.</message>
+	<message key="plugins.generic.announcementfeed.settings.announcement">Zobrazit odkazy na kanál pouze na stránce oznámení.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Omezit kanál na</message>
 	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">poslední oznámení.</message>
 	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Vložte prosím celé kladné číslo pro počet posledních oznámení.</message>
 	<message key="plugins.generic.announcementfeed.atom.altText">Atom logo</message>
