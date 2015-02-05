@@ -18,7 +18,7 @@
 
 	<message key="plugins.importexport.erudit.cliUsage">Použití: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]</message>
 	<message key="plugins.importexport.erudit.export">Export dat</message>
-	<message key="plugins.importexport.erudit.export.issues">Export čísla</message>
+	<message key="plugins.importexport.erudit.export.issues">Export čísel</message>
 	<message key="plugins.importexport.erudit.export.sections">Export sekcí</message>
 	<message key="plugins.importexport.erudit.export.articles">Export článků</message>
 

@@ -4,14 +4,15 @@
 <!--
   * locale/cs_CZ/default.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings.
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translation Jiří Dlouhý  
   -->
- 
-<locale name="cs_CZ" full_name="Czech">
+
+<locale name="cs_CZ" full_name="Čeština">
 	<!-- Section default -->
 	<message key="section.default.title">Články</message>
 	<message key="section.default.abbrev">ČL</message>
@@ -25,12 +26,12 @@
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Příspěvek nebyl dosud publikován ani není v současnosti zaslán do jiného časopisu pro posouzení (nebo bylo podáno vysvětlení v Komentářích pro editora).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Soubor příspěvku je ve formátu OpenOffice, Microsoft Word, RTF nebo WordPerfect.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">URL odkazy na reference jsou uvedeny všude, kde to bylo možné.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Text má řádkování 1; písmo má velikost 12; je použita spíše kurzíva než podtržení (kromě url adres);všechny ilustrace tabulky a obrázky jsou umístěny spíše v textu, než na konci.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Text má jednoduché řádkování; písmo má velikost 12; je použita spíše kurzíva a ne podtržení (kromě url adres); všechny ilustrace tabulky a obrázky jsou umístěny spíše v textu, než na konci.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Text odpovídá stylistickým a bibliografickým požadavkům uvedeným v <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Pokynech pro autory</a>, které se nachází na stránce O časopisu.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Pokud je příspěvek zasílán do recenzované sekce časopisu, byly dodrženy instrukce pro <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Zajištění anonymního recenzního řízení</a>.]]></message>
 	<message key="default.journalSettings.privacyStatement">Jména a emailové adresy vložené na této stránce budou použity výhradně pro uvedené účely tohoto časopisu a nebudou zpřístupněny pro jiné účely ani třetí straně.</message>
 	<message key="default.journalSettings.openAccessPolicy">Tento časopis poskytuje okamžitý otevřený přístup ke svému obsahu na principu, podle kterého volné zpřístupnění výsledků výzkumu podporuje větší celosvětovou výměnu poznatků.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Tento časopis dovoluje a doporučuje autorům zavěsit příspěvky do časopisu na osobních webových stránkách nebo v instituciálních archivech, a to jak před jejich publikováním, tak po něm. Přitom je potřeba uvést bibliografické údaje, které, pokud je to možné, dokládají publikování příspěvku v tomto časopisu.</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Tento časopis dovoluje a doporučuje autorům zavěsit příspěvky do časopisu na osobních webových stránkách nebo v instituciálních archivech, a to jak před jejich publikováním, tak po něm. Přitom je potřeba uvést bibliografické údaje, které, pokud je to možné, dokládají publikování příspěvku v našem časopisu.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Etapa redigování příspěvku je zaměřena na zkvalitnění toku textu, jeho srozumitelnosti, gramatiky, stylizace a formátování. Představuje pro autora poslední šanci, kdy může udělat v textu nějakou podstatnou změnu, protože další etapa je již omezena pouze na opravy překlepů a formátování.
 
 Soubor pro redigování je ve formátu Word nebo .rtf, a proto může být snadno upravován jako textový dokument. Uvedený soubor instrukcí nabízí dva přístupy k redigování. Jeden je založen na nástroji Revize v programu Microsoft Word a vyžaduje, aby redaktor, editor i autor měli k dispozici tento program. Druhý systém, který nezávisí na softwaru, byl s dovolením vypůjčen od Harvard Educational Review. Editor může pozměnit tyto instrukce, aby lépe vyhovovaly požadavkům tohoto časopisu.
@@ -145,14 +146,14 @@ Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]
 	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Pobízíme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href="{$indexUrl}/{$journalPath}/user/register">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Pokyny autorům</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href="{$indexUrl}/{$journalPath}/user/register">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href="{$indexUrl}/{$journalPath}/login">přihlásit</a> a zahájit pětistupňový proces.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Pobízíme knihovníky, aby uváděli tento časopis ve svém seznamu volně dostupných elektronických publikací. Také může být vhodné poznamenat, že open source redakční software, který tento časopis využívá, je vhodný pro použití s časopisy, v jejichž redakcích mohou členové fakult dané univerzity pracovat (viz <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Tento časopis využívá systém LOCKSS pro vytvoření distribuovaného archivačního systému mezi zúčastněnými knihovnami a dovoluje těmto knihovnám vytvářet trvalé archivy časopisu pro účely jeho uchování a obnovení. <a href="http://www.lockss.org/">Více...</a>]]></message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Vyzýváme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href="{$indexUrl}/{$journalPath}/user/register">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Pokyny pro autory</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href="{$indexUrl}/{$journalPath}/user/register">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href="{$indexUrl}/{$journalPath}/login">přihlásit</a> a zahájit pětistupňový proces.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[Vyzýváme knihovníky, aby uváděli tento časopis ve svém seznamu volně dostupných elektronických publikací. Také může být vhodné poznamenat, že open source redakční software, který tento časopis využívá, je vhodný pro použití s časopisy, v jejichž redakcích mohou členové fakult dané univerzity pracovat (viz <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Tento časopis využívá systém LOCKSS pro vytvoření distribuovaného archivačního systému mezi zúčastněnými knihovnami a dovoluje těmto knihovnám vytvářet trvalé archivy časopisu pro účely jeho uchování a obnovení. <a href="http://lockss.org/">Více...</a>]]></message>
 	
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.submissionFee">Odeslání příspěvku</message>
-	<message key="default.journalSettings.submissionFeeDescription">Je požadováno, aby autoři zaplatili Poplatek za odeslání příspěvku jako součást procesu odesílání článku. Tento poplatek přispěje k uhrazení nákladů na recenzní řízení.</message>
+	<message key="default.journalSettings.submissionFeeDescription">Je požadováno, aby autoři zaplatili poplatek za odeslání příspěvku jako součást procesu odesílání článku. Tento poplatek přispěje k uhrazení nákladů na recenzní řízení.</message>
 	<message key="default.journalSettings.fastTrackFee">Zrychlené recenzní řízení</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Po zaplacení tohoto poplatku je garantováno zpracování recenze, rozhodnutí editora a informování autora o tomto článku během 4 týdnů.</message>
 	<message key="default.journalSettings.publicationFee">Publikování článku</message>
@@ -164,4 +165,6 @@ Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]
 	<message key="default.journalSettings.membershipFeeDescription">Zaplacení tohoto poplatku Vás přihlásí jako člena této asociace na jeden rok a poskytne Vám volný přístup k tomuto časopisu.</message>
 	<message key="default.journalSettings.donationFee">Dary časopisu</message>
 	<message key="default.journalSettings.donationFeeDescription">Dary tomuto časopisu v jakékoliv výši jsou s vděčností přijímány a poskytují editorům prostředky, které jim umožní pokračovat v poskytování časopisu nejvyšší kvality svým čtenářům.</message>
+	<message key="default.journalSettings.purchaseIssueFee">Zakoupit číslo</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Zaplacení tohoto poplatku vám umožní vidět, stáhnout a tisknout toto číslo.</message>
 </locale>
