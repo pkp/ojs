@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/lucene/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OJS solr/lucene search plugin localization strings
+  * Translation Jiří Dlouhý  
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.lucene.displayName">Vyhledávací plugin Lucene</message>
+	<message key="plugins.generic.lucene.description">Plugin Lucene poskytuje multijazykovou podporu, vylepšené hledání, rychlejší indexování, lepší škálování a další funkce.</message>
+
+	<message key="plugins.generic.lucene.faceting.displayName">Lucene Faceting</message>
+	<message key="plugins.generic.lucene.faceting.description">Faceting Blok Plugin pro Lucene</message>
+	<message key="plugins.generic.lucene.faceting.title">upřesněte vaše hledání</message>
+	<message key="plugins.generic.lucene.faceting.discipline">Disciplína</message>
+	<message key="plugins.generic.lucene.faceting.subject">Klíčové slovo</message>
+	<message key="plugins.generic.lucene.faceting.type">Metoda/přístup</message>
+	<message key="plugins.generic.lucene.faceting.coverage">Pokrytí</message>
+	<message key="plugins.generic.lucene.faceting.journalTitle">Časopis</message>
+	<message key="plugins.generic.lucene.faceting.authors">Autor</message>
+	<message key="plugins.generic.lucene.faceting.publicationDate">Datum vydání</message>
+	
+	<message key="plugins.generic.lucene.message.coreNotFound">Požadované jádro '{$core}' nebylo nalezeno na Solr serveru. Je online?</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">Během indexace došlo k chybě: Bylo zpracováno {$numProcessed} z celkového počtu úloh ke zpracování {$batchCount} ({$numDeleted} počet smazaných úloh).</message>
+	<message key="plugins.generic.lucene.message.indexOnline">Index s {$numDocs} dokumentů online.</message>
+	<message key="plugins.generic.lucene.message.pullIndexingDisabled">"Pull indexování" není povoleno. Povolte ho, prosím, v nastavení pluginu Lucene.</message>
+	<message key="plugins.generic.lucene.message.searchServiceOffline">OJS vyhledávací služba je, bohužel, momentálně offline.</message>
+	<message key="plugins.generic.lucene.message.techAdminInformed">Technický správce tohoto časopisu byl informován.</message>
+	<message key="plugins.generic.lucene.message.webServiceError">Webová služba Lucene vrátila chybu.</message>
+
+	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} článku bylo označeno pro aktualizaci</message>
+	
+	<message key="plugins.generic.lucene.results.didYouMean">Mysleli jste</message>
+	<message key="plugins.generic.lucene.results.orderBy">Řadit výsledky podle</message>
+	<message key="plugins.generic.lucene.results.orderBy.relevance">Relevance</message>
+	<message key="plugins.generic.lucene.results.orderBy.author">Autor</message>
+	<message key="plugins.generic.lucene.results.orderBy.issue">Číslo</message>
+	<message key="plugins.generic.lucene.results.orderBy.date">Datum vydání</message>
+	<message key="plugins.generic.lucene.results.orderBy.journal">Název časopisu</message>
+	<message key="plugins.generic.lucene.results.orderBy.article">Název článku</message>
+	<message key="plugins.generic.lucene.results.orderDir.asc">Vzestupně</message>
+	<message key="plugins.generic.lucene.results.orderDir.desc">Sestupně</message>
+	<message key="plugins.generic.lucene.results.similarDocuments">podobné dokumenty</message>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[Tipy pro hledání: <ul>
+			<li>Hledané termíny nejsou citlivé na velká a malá písmena</li>
+			<li>Všeobecná slova jsou ignorována</li>
+			<li>Standardně články obsahující <em>kterýkoliv</em> výraz v dotazu (tedy je používán výraz <em>OR</em>)</li>
+			<li>Ujistěte se, že slovo v článku existuje tím, že před něj napíšete znak <strong>+</strong>; např., <em>+journal +access scholarly academic</em></li>
+			<li>Zkombinujte více slov pomocí spojky <em>AND</em> pokud hledáte článek, který obsahuje všechna slova; e.g., <em>education AND research</em></li>
+			<li>Pokud nesmí článek obsahovat některé slovo, napište před toto slovo <strong>-</strong> nebo <em>NOT</em>; např., <em>online -politics</em> nebo <em>online NOT politics</em></li>
+			<li>Hledejte přesnou frázi tím, že ji dáte do uvozovek; např., <em>"open access publishing"</em>. Hint: Quoting Chinese or Japanese words will help you to find exact word matches in mixed-language fields, e.g. "中国".</li> 
+			<li>Pomocí závorek jde tvořit i složitější vyhledávací výrazy; např., <em>archive ((journal AND conference) NOT theses)</em></li>
+		 </ul>]]></message>
+
+	<message key="plugins.generic.lucene.settings">Nastavení</message>
+	<message key="plugins.generic.lucene.settings.autosuggest">Automatické návrhy (ukazuje dynamické rozbalovací menu s návrhy hledaných výrazů během psaní dotazu)</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[<strong>Zkontrolujte výrazy pro dosažení dobrých výsledků</strong>: Pište jen výrazy, které povedou k výsledkům hledání. Návrhy budou srovnávány s obsahem časopisu a s termíny, které již hledány byly.<br />
+		<strong>Používejte globální slovník</strong>: Je to rychlejší, spotřebuje to méně zdrojů serveru a povede to k lepším výsledkům zvláště u rozsáhlých instalací.]]></message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">Zkontrolujte výrazy pro výsledky</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">Použít globální slovník</message>
+	<message key="plugins.generic.lucene.settings.customRanking">Uživatelské hodnocení (nastavte individuální váhy hodnocení pro jednotlivé sekce časopisu)</message>
+	<message key="plugins.generic.lucene.settings.description"><![CDATA[Plugin Lucene používá vyhledávací index pomocí Solr serveru. Tato konfigurační stránka vám dovoluje nakonfigurovat přístup k Solr serveru.
+		<strong>Ujistěte se, že jste si přečetli soubor README tohoto pluginu (plugins/generic/lucene/README), než se budete pokoušet změnit standardní nastavení.</strong>
+		Pokud používáte vložený scénář za firewallem,  jak je vysvětleno v souboru README, postačí, pravděpodobně ponechat všechny parametry nezměněné.]]></message>
+	<message key="plugins.generic.lucene.settings.faceting">Upřesnění (Zobrazení navigačního boxu s dodatečnými filtry k upřesnění vyhledávání)</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">Můžete si zvolit specifické kategorie upřesnění vyhledávání (odpovídající metadata musí být vybrána pro indexování v nastavení časopisu v kroku 3.4)</message>
+	<message key="plugins.generic.lucene.settings.featureDescription">Lucene plugin poskytuje několik možností hledání. Většina těchto možnosti je standardně zapnuta, ale je možno je zakázat při jemném ladění hledání.</message>
+	<message key="plugins.generic.lucene.settings.highlighting">Zvýraznění (zobrazit stručný výtažek z plného textu každého článku, obsahující hledaná klíčová slova)</message>
+	<message key="plugins.generic.lucene.settings.instId">Unikátní ID instalace</message>
+	<message key="plugins.generic.lucene.settings.instIdRequired">Vložte, prosím, ID, která jedinečně identifikuje tuto instalaci OJS vzhledem k Solr vyhledávacímu serveru.</message>
+	<message key="plugins.generic.lucene.settings.instIdInstructions">Pokud používáte centrální vyhledávací server, budete muset poskytnout unikátní ID pro každou instalaci OJS, která sdílí tento vyhledávací server. Může to být libovolný text, ale musí být odlišný pro každý ze zúčastněných serverů (např. statická IP adresa serveru, pokud máte na každém serveru jednu instalaci OJS).</message>
+	<message key="plugins.generic.lucene.settings.internalError">Chybná volba.</message>
+	<message key="plugins.generic.lucene.settings.luceneSettings">Plugin Lucene: Nastavení</message>
+	<message key="plugins.generic.lucene.settings.password">Heslo</message>
+	<message key="plugins.generic.lucene.settings.passwordInstructions">Vložte, prosím, heslo pro Solr server.</message>
+	<message key="plugins.generic.lucene.settings.passwordRequired">Vložte, prosím, platné heslo pro identifikaci na Solr serveru.</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">"Pull indexace" (toto je pokročilá možnost, přečtěte si soubor README pro další informace)</message>
+	<message key="plugins.generic.lucene.settings.searchEndpoint">URL koncového bodu vyhledávání</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">Koncový bod Solr vyhledávače se skládá z URL serveru a vyhledávacího handleru. Prohládněte si jako příklad standardní nastavení. Nastavení změňte jen pokud používáte centrální vyhledávací server.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Vložte, prosím, platné URL představující koncový vyhledávací bod (Solr vyhledávací sever a vyhledávací handler), ke kterému se chcete připojit.</message>
+	<message key="plugins.generic.lucene.settings.searchFeatures">Nastavení vyhledávacích možností</message>
+	<message key="plugins.generic.lucene.settings.simdocs">Více podobných (zobrazit odkaz "podobné dokumenty" u každého výsledku hledání)</message>
+	<message key="plugins.generic.lucene.settings.solrServerSettings">Nastavení Solr serveru</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">Alternativní návrhy hláskování (zobrazit alternativní návrhy hledání)</message>
+	<message key="plugins.generic.lucene.settings.username">Uživatelské jméno</message>
+	<message key="plugins.generic.lucene.settings.usernameInstructions">Solr server používá základní HTTP BASIC ověření. Vložte, prosím, uživatelské jméno.</message>
+	<message key="plugins.generic.lucene.settings.usernameRequired">Vložte, prosím, platné uživatelské jméno pro Solr vyhledávací server (dvojtečka není povolena).</message>
+
+	<message key="plugins.generic.lucene.sectionForm.rankingBoost">Uživatelské váhy hodnocení</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">Lucene/Solr vyhledávací plugin vám umožňuje nastavit relativní váhu článků ve výsledcích hledání. Nastavení váhy hodnocení výše (či níže) neumístí články v sekci výše. Budou ale hodnoceny lépe (nebo hůře), než bez tohoto nastavení. Nastavení "nikdy neukazovat" vyřadí takový článek kompletně z vyhledávacích výsledků. </message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Vložte, prosím, platnou váhu uživatelského hodnocení.</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.never">Nikdy neukazovat</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.low">Hodnotit hůře</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normálně</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.high">Hodnotit lépe</message>
+</locale>

@@ -4,7 +4,7 @@
 <!--
   * plugins/paymethod/manual/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -12,12 +12,12 @@
   -->
  
 <locale name="cs_CZ" full_name="Czech">
-	<message key="plugins.paymethod.manual.displayName">Ruční platba polatku</message>
+	<message key="plugins.paymethod.manual.displayName">Ruční platba poplatku</message>
 	<message key="plugins.paymethod.manual.description">Manažer ručně zaznamená přijetí platby uživatele (mimo tento software).</message>
-	<message key="plugins.paymethod.manual">Ruční platba polatku</message>
+	<message key="plugins.paymethod.manual">Ruční platba poplatku</message>
 	<message key="plugins.paymethod.manual.settings">Nastavení ruční platby</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Instrukce</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Instrukce pro platbu poplatku pro uživatele, kteří zvolili ruční platbu poplatku</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Pokyny</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Pokyny pro platbu poplatku pro uživatele, kteří zvolili ruční platbu poplatku</message>
 	
 	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Poslat oznámení o platbě</message>
 	<message key="plugins.paymethod.manual.paymentNotification">Oznámení o platbě</message>

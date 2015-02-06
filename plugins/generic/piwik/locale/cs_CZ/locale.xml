@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/piwik/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Piwik plugin localization strings
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+
+	<!-- Piwik -->
+	<message key="plugins.generic.piwik.displayName">Plugin Piwik</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Propojte OJS s Piwik, volně dostupnou a otevřenou aplikací pro analýzu provozu webu. Požaduje, aby byl Piwik nainstalován. Na <a href="http://piwik.org/" title="piwik site">stránce Piwik</a> najdete více informací.]]></message>
+
+	<!-- Piwik Settings Management -->
+	<message key="plugins.generic.piwik.manager.settings">Nastavení</message>
+	<message key="plugins.generic.piwik.manager.piwikSettings">Nastavení Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>Pokud máte povolený plugin Piwik, můžete shromažďovat a analyzovat data o používání a provozu tohoto časopisu. Aby tento plugin fungoval, je třeba, aby byl Piwik nainstaován. Na <a href="http://piwik.org/" title="Piwik site">stránce Piwik</a> najdete více informací.</p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">URL pro Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">Vložte plné URL k vaší instalaci Piwik (např. http://myserver.net/piwik).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Vložte, prosím, platné URL. Na počátku musí být "http://".</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">ID profilu stránek</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"><![CDATA[V rámci Piwik, klikněte na Settings -> Websites.  ID profilu stránek je zobrazeno vedle jména profilu vašich stránek.]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Vložte, prosím, ID profilu vašich stránek.</message>
+
+</locale>

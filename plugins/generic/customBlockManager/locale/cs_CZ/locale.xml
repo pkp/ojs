@@ -4,7 +4,7 @@
 <!--
   * plugins/generic/customBlockManager/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -28,4 +28,5 @@
 	<message key="plugins.generic.customBlock.editContent">Editovat obsah postranního panelu</message>
 	<message key="plugins.generic.customBlock.contentRequired">Je vyžadován nějaký obsah. Pokud si přejete smazat tento panel, můžete tak udělat pomocí pluginu Manažer panelů nebo srušením výběru tohoto panelu v Kroku 5 v nastavení časopisu.</message>
 	<message key="plugins.generic.customBlock.edit">Editovat</message>
+	<message key="plugins.generic.customBlockManager.description">Tento plugin vám umožní nastavení postranních panelů. Můžete editovat jednotlivé panely v nastavení jednotlivých pluginů.</message>
 </locale>

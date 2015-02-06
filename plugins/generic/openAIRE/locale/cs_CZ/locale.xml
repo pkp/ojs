@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/openAIRE/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * OpenAIRE plugin localization strings
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.description">OpenAIRE plugin přidává prvek projectID element k metadatům článku a rozšiřuje OAI-PMH interface podle směrnic OpenAIRE Guidelines 1.1 a napomáhá časopisu vyhovět podmínkám OpenAIRE.</message>
+	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
+	<message key="plugins.generic.openAIRE.metadata">Specifická metadata OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.projectID.description">(ProjectID je shodné s číslem projektové smlouvy)</message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Vložte, prosím, platné projectID (6 číslic)</message>
+</locale>

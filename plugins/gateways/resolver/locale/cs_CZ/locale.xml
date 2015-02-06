@@ -4,7 +4,7 @@
 <!--
   * plugins/gateways/resolver/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,6 +15,6 @@
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.gateways.resolver.displayName">Rozlišovací plugin</message>
 	<message key="plugins.gateways.resolver.description">Tento plugin rozlišuje čísla a články na základě informací pro citování.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Není možné rozlišit jedinou entitu s použitím uvedené informace pro citování. Ujistěte se prosím, že informace pro citování je úplná a odkazuje na entitu v tomto rozmístění OJS.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Není možné rozlišit jedinou entitu s použitím uvedené informace pro citování. Ujistěte se, prosím, že informace pro citování je úplná a odkazuje na entitu v tomto rozmístění OJS.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Exportovat fond</message>
 </locale>

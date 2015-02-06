@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleViewer/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.googleViewer.name">Plugin pro Google vložený prohlížeč dokumentů</message>
+	<message key="plugins.generic.googleViewer.description"><![CDATA[Tento plugin používá <a href="https://docs.google.com/viewer">Prohlížeč dokumentů Google</a> - službu na prohlížení PDFs v rámci stránky článku.]]></message>
+</locale>

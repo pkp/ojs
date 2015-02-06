@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/native/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -71,9 +71,9 @@ Jsou akceptovány následující formáty:
 	<message key="plugins.importexport.native.import.error.invalidDate">Bylo uvedeno neplatné datum "{$value}".</message>
 	<message key="plugins.importexport.native.import.error.unknownEncoding">Data byla zakódována s použitím neznámého typu kódování "{$type}".</message>
 	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Nebylo možné uložit místní kopii souboru "{$originalName}".</message>
-	<message key="plugins.importexport.native.import.error.illegalUrl">Uvedená adresa URL "{$url}" pro číslo "{$issueTitle}" nebyla povolená. Imprt pře web podporuje pouze metody http, https, ftp nebo ftps.</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">Uvedená adresa URL "{$url}" pro číslo "{$issueTitle}" nebyla povolená. Import přes web podporuje pouze metody http, https, ftp nebo ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Byl uveden neznámý typ doplňkového souboru "{$suppFileType}".</message>
-	<message key="plugins.importexport.native.import.error.couldNotCopy">Uvedená adresa URL "{$url}" nemohla být skopírována do místního souboru.</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">Uvedená adresa URL "{$url}" nemohla být zkopírována do místního souboru.</message>
 	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Veřejné ID přidělené importovanému číslu "{$issueTitle}" je již používáno jiným číslem "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Název sekce chyběl u čísla "{$issueTitle}". Prosím ujistěte se, že XML dokument je v souladu s odpovídajícím DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Sekce "{$sectionTitle}" čísla "{$issueTitle}" odpovídá existující sekci časopisu, ale uvedená zkratka ("{$sectionAbbrev}") odpovídá jiné sekci.</message>
@@ -124,4 +124,11 @@ Jsou akceptovány následující formáty:
 	<message key="plugins.importexport.native.import.success">Úspěšný import</message>
 	<message key="plugins.importexport.native.import.success.description">Import proběhl úspěšně. Úspěšně naimportované položky jsou uvedeny níže.</message>
 
+	<message key="plugins.importexport.native.import.error.invalidPubId">Váš importovaný soubor obsahuje data s neplatným {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Vámi importovaný soubor obsahuje datový soubor s{$pubIdType} '{$pubId}', který již existuje pro jiný objekt v databázi. Ujistěte se, že nikdy nenahráváte objekty s ID, které již existují v databázi.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Váš nahrávaný soubor obsahuje data is ID typu '{$pubIdType}', které ID plugin není schopný rozeznat. Instalujte a/nebo aktivujte příslušný ID plugin před nahráváním vašich dat.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">Veřejné ID dané importované sazebnici "{$publicId}" je již používáno jinou sazebnicí stejného článku, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">Veřejné ID přidělené doplňkovému souboru "{$suppFileTitle}" je již používáno jiným doplňkový souborem stejného článku, "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">Veřejné ID přidělené nahrávanému článku "{$articleTitle}" je již používáno pro jiný článek "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Afiliace autora, kterou zvolil autor "{$authorFullName}" článku "{$articleTitle}" v čísle "{$issueTitle}" je v lokalizaci ("{$locale}") kterou tento časopis nepodporuje.</message>
 </locale>

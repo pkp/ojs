@@ -4,7 +4,7 @@
 <!--
   * plugins/auth/ldap/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,13 +14,13 @@
  
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">Tento plugin umožňuje ověření a synchronizování uživatelských účtů vzhledem k externímu LDAP zdroji dat.</message>
+	<message key="plugins.auth.ldap.description">Tento plugin umožňuje ověření a synchronizování uživatelských účtů vzhledem k externímu LDAP serveru.</message>
 	
 	<message key="plugins.auth.ldap.settings">LDAP nastavení</message>
 	<message key="plugins.auth.ldap.settings.hostname">Server hostname</message>
 	<message key="plugins.auth.ldap.settings.hostname.description">Např.: "ldap.example.com" nebo "ldaps://ldap.example.com" (pro použití SSL)</message>
 	<message key="plugins.auth.ldap.settings.port">Port serveru</message>
-	<message key="plugins.auth.ldap.settings.port.description">Volitelné. Výchozí na to 389 (LDAP) nebo 636 (LDAP přes SSL)</message>
+	<message key="plugins.auth.ldap.settings.port.description">Volitelné. Výchozí hodnota je 389 (LDAP) nebo 636 (LDAP přes SSL)</message>
 	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
 	<message key="plugins.auth.ldap.settings.basedn.description">Např.: "ou=people,dc=example,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerdn">Manažer DN</message>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/doi/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOI plugin localization strings
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Tento plugin umožňuje přiřazení čísla DOI (Digital Object Identifier) číslům, článkům a sazebnicím a doplňkovým souborům v OJS</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Nastavení pluginu DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Nastavte, prosím, plugin DOI, abyste mohli používat a DOI v rámci OJS.</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Obsah časopisu</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Vyberte, prosím, objekty, kterým má být přiřazeno DOI.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">Vyberte, prosím, objekty k publikaci, které budou mít přiřazeno DOI:</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>POZNÁMKA:</strong> Při užívání <a href="http://www.crossref.org" target="_new">CrossRef</a> DOI, zvolte, prosím, články. Článek je považován za dílo, např. subjekt s intelektuálním, nebo uměleckým obsahem. Takže článek je objekt, na kterém je založen export pro CrossRef DOI.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Čísla</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Články</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Sazebnice</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Doplňkové soubory</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Prefix</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[DOI Prefix je určen registrační agenturou (např. <a href="http://www.crossref.org" target="_new">CrossRef</a>) a má formát 10.xxxx (např. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">DOI prefix je povinný a musí mít formát 10.xxxx.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI Suffix</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">DOI suffix může mít libovolnou podobu, ale v rámci všech publikovaných objektů se stejným DOI prefixem musí mít unikátní podobu:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Použijte vzor zadaný níže ke generaci DOI suffixů. Použijte %j pro iniciály časopisu, %v pro svazek, %i pro číslo, %Y pro rok, %a pro ID článku v rámci OJS, %g pro ID sazebnice v rámci OJS, %s pro ID doplňkového souboru v rámci OJS, %p pro číslo stránky a %x pro "Uživatelský identifikátor" (Musí být nastaven v Kroku 4.3 nastavení).</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">pro čísla</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">pro články</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">pro sazebnice</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">pro doplňkové soubory.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Například, vol%viss%ipp%p může vytvořit DOI ve tvaru 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Použít standardní parametry.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i pro čísla<br />%j.v%vi%i.%a pro články<br />%j.v%vi%i.%a.g%g pro sazebnice <br />%j.v%vi%i.%a.s%s pro doplňkové soubory.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Použijte "Uživatelský identifikátor" pro publikovaná čísla jako DOI suffix (musí být nastaveno v Kroku 4.3 Nastavení). To je stejný identifikátor, který bude použit pro veřejné URL.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Vložte individuální DOI suffix pro každou publikovanou položku nezávisle a odlišně od "Uživatelského identifikátoru" zmíněného v předešlé možnosti. Najdete dodatečné pole pro zapsání DOI u každé položky na stránce metadat.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Vložte, prosím vzor pro DOI suffix pro čísla.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Vložte, prosím vzor pro DOI suffix pro články.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Vložte, prosím vzor pro DOI suffix pro sazebnice</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Vložte, prosím vzor pro DOI suffix pro doplňkové soubory.</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Znovu přiřadí DOI.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Když změníte nastavení DOI, tak na hodnoty DOI, které byly již přiřazeny to nebude mít vliv. Jakmile bude nastavení DOI uloženo, použijte toto tlačítko ke smazání všech již existujících DOI, tak, aby nové nastavení bylo uplatněno u existujících článků.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Jste si jisti, že chcete smazat všechna existující DOI?</message>	
+
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">číslo</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">článek</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">sazebnice</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">doplňkový soubor</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">To co vidíte je náhled DOI, který nemusí být úplný. DOI nebylo zatím vytvořeno. Publikováním čísla a zobrazením veřejné {$pubObjectType} stránky automaticky vytvoří unikátní DOI pro tento {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Daný DOI suffix je již používán jiným vydaným objektem. Vložte, prosím, unikátní DOI suffix pro každou položku.</message>
+</locale>

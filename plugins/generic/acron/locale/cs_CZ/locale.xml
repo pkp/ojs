@@ -4,7 +4,7 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,9 +15,8 @@
  
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.acron.name">Doplněk Acron</message>
-	<message key="plugins.generic.acron.description"><![CDATA[Doplněk omezuje závislost OCS na pravidelném spouštění naplánovaných úloh pomocí služby 'cron.']]></message>
+	<message key="plugins.generic.acron.description">Doplněk omezuje závislost OCS na pravidelném spouštění naplánovaných úloh pomocí služby 'cron.'</message>
 	<message key="plugins.generic.acron.enabled">Doplněk Acron byl povolen.</message>
 	<message key="plugins.generic.acron.disabled">Doplněk Acron byl zakázán.</message>
-
-	<message key="plugins.generic.acron.reload">Spustit naplánované úlohy</message>
+ 	<message key="plugins.generic.acron.reload">Znovu nahrát naplánované úlohy</message>
 </locale>

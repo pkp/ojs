@@ -4,11 +4,12 @@
 <!--
   * plugins/generic/thesis/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Thesis abstracts plugin localization strings for the cs_CZ (Czech) locale.
+  * Translation Jiří Dlouhý  
   *
   -->
  
@@ -27,9 +28,9 @@
 	<message key="plugins.generic.thesis.manager.studentName">Jméno studenta</message>
 	<message key="plugins.generic.thesis.manager.title">Název</message>
 	<message key="plugins.generic.thesis.manager.keyword">Klíčové slovo</message>
-	<message key="plugins.generic.thesis.manager.studentFirstName">Jméno</message>
+	<message key="plugins.generic.thesis.manager.studentFirstName">Křestní jméno</message>
 	<message key="plugins.generic.thesis.manager.studentLastName">Příjmení</message>
-	<message key="plugins.generic.thesis.manager.studentEmail">Email</message>
+	<message key="plugins.generic.thesis.manager.studentEmail">E-mail</message>
 	<message key="plugins.generic.thesis.manager.department">Katedra</message>
 	<message key="plugins.generic.thesis.manager.university">Univerzita</message>
 	<message key="plugins.generic.thesis.manager.abstract">Abstrakt</message>
@@ -60,12 +61,12 @@
 	<message key="plugins.generic.thesis.manager.form.titleRequired">Je vyžadován název práce.</message>
 	<message key="plugins.generic.thesis.manager.form.comment">Komentáře</message>
 	<message key="plugins.generic.thesis.manager.form.author">Autor a vedoucí práce</message>
-	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Publikovat email studenta</message>
-	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">Pokud je zaškrtnuto, bude email studenta publikován spolu s abstraktem práce.</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Publikovat e-mail studenta</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">Pokud je zaškrtnuto, bude e-mail studenta publikován spolu s abstraktem práce.</message>
 	<message key="plugins.generic.thesis.manager.form.studentBio">Biografické údaje studenta</message>
 	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Vložte prosím řádky pro oddělení odstavců. Umístěte text mezi &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, a &lt;u&gt;&lt;/u&gt; tagy pro tučné písmo, kurzivu a podtržení (v uvedeném pořadí) (např.: toto &lt;i&gt;slovo&lt;/i&gt; bude zobrazeno kurzívou.)]]></message>
 	<message key="plugins.generic.thesis.manager.form.indexing">Indexace</message>
-	<message key="plugins.generic.thesis.manager.form.indexingDescription">Použijte termíny, které nejlépe popisují obsah práce s ohledem na kategorie používané tímto časopisem. Oddělte termíny středníkem (termín1; termín2; termín3).</message>
+	<message key="plugins.generic.thesis.manager.form.indexingDescription">Použijte výrazy, které nejlépe popisují obsah práce s ohledem na kategorie používané tímto časopisem. Oddělte výrazy středníkem (výraz1; výraz2; výraz3).</message>
 	<message key="plugins.generic.thesis.manager.form.discipline">Akademická disciplína a subdisciplíny</message>
 	<message key="plugins.generic.thesis.manager.form.subjectClass">Klasifikace předmětu</message>
 	<message key="plugins.generic.thesis.manager.form.keyword">Klíčová slova</message>
@@ -74,7 +75,7 @@
 	<message key="plugins.generic.thesis.manager.form.coverageSample">Charakteristika výzkumného souboru</message>
 	<message key="plugins.generic.thesis.manager.form.method">Typ, metodika nebo přístup</message>
 	<message key="plugins.generic.thesis.manager.form.language">Jazyk</message>
-	<message key="plugins.generic.thesis.manager.form.languageInstructions"><![CDATA[čeština=cs; angličtina=en; francouzština=fr; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Další kódy</a>.]]></message>
+	<message key="plugins.generic.thesis.manager.form.languageInstructions"><![CDATA[čeština=cs; angličtina=en; francouzština=fr; slovenština=sk; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Další kódy</a>.]]></message>
 	<message key="plugins.generic.thesis.manager.form.urlPrefixIncluded">Uveďte prosím plnou URL adresu včetně http:// nebo ftp:// na začátku.</message>
 	<message key="plugins.generic.thesis.manager.form.abstract">Abstrakt</message>
 	<message key="plugins.generic.thesis.manager.form.abstractRequired">Je vyžadován abstrakt práce.</message>
@@ -87,13 +88,13 @@
 	<message key="plugins.generic.thesis.manager.form.studentLastNameRequired">Je vyžadováno příjmení studenta.</message>
 	<message key="plugins.generic.thesis.manager.form.studentMiddleName">Prostřední jméno studenta</message>
 	<message key="plugins.generic.thesis.manager.form.studentEmail">Email studenta</message>
-	<message key="plugins.generic.thesis.manager.form.studentEmailValid">Je vyžadován platný email studenta.</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailValid">Je vyžadován platný e-mail studenta.</message>
 	<message key="plugins.generic.thesis.manager.form.supervisorFirstName">Jméno vedoucího práce</message>
 	<message key="plugins.generic.thesis.manager.form.supervisorFirstNameRequired">Je vyžadováno jméno vedoucího práce.</message>
 	<message key="plugins.generic.thesis.manager.form.supervisorLastName">Příjmení vedoucího práce</message>
 	<message key="plugins.generic.thesis.manager.form.supervisorLastNameRequired">Je vyžadováno příjmení vedoucího práce.</message>
 	<message key="plugins.generic.thesis.manager.form.supervisorMiddleName">Prostřední jméno vedoucího práce</message>
-	<message key="plugins.generic.thesis.manager.form.supervisorEmail">Email vedoucího práce</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmail">E-mail vedoucího práce</message>
 	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">Je vyžadován platný email vedoucího práce.</message>
 	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">Uložit a vytvořit další</message>
 
@@ -117,7 +118,7 @@
 	<message key="plugins.generic.thesis.settings.thesisIntroduction">Úvodní prohlášení</message>
 	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">Úvodní prohlášení, které se zobrazí nahoře na stránce s abstraktem práce.</message>
 	<message key="plugins.generic.thesis.settings.thesisNameRequired">Musí být uvedeno jméno kontaktu.</message>
-	<message key="plugins.generic.thesis.settings.thesisEmailRequired">Musí být uveden email kontaktu.</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">Musí být uveden e-mail kontaktu.</message>
 	<message key="plugins.generic.thesis.settings.thesisOrderValid">Zvolte prosím platné pořadí publikování.</message>
 
 	<!-- Thesis Abstracts -->
@@ -169,7 +170,7 @@
 	<message key="plugins.generic.thesis.form.studentBio">Biografické údaje studenta</message>
 	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Vložte prázdné řádky pro oddělení odstavců. Umístěte text mezi &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, a &lt;u&gt;&lt;/u&gt; tags pro tučné písmo, kurzívu a podtržení (v uvedeném pořadí) (např.: toto &lt;i&gt;slovo&lt;/i&gt; bude napsáno kurzívou).]]></message>
 	<message key="plugins.generic.thesis.form.indexing">Indexace</message>
-	<message key="plugins.generic.thesis.form.indexingDescription">Zvolte termíny, které nejlépe popisují obsah závěrečné práce s ohledem na následující kategorie používané časopisem. Oddělte termíny středníkem (termín1; termín2; termín3).</message>
+	<message key="plugins.generic.thesis.form.indexingDescription">Zvolte výrazy, které nejlépe popisují obsah závěrečné práce s ohledem na následující kategorie používané časopisem. Oddělte výrazy středníkem (výraz1; výraz2; výraz3).</message>
 	<message key="plugins.generic.thesis.form.discipline">Akademická disciplína a subdisciplíny</message>
 	<message key="plugins.generic.thesis.form.subjectClass">Klasifikace předmětu</message>
 	<message key="plugins.generic.thesis.form.keyword">Klíčová slova</message>
@@ -178,7 +179,7 @@
 	<message key="plugins.generic.thesis.form.coverageSample">Charakteristika výzkumného souboru</message>
 	<message key="plugins.generic.thesis.form.method">Typ, metodika nebo přístup</message>
 	<message key="plugins.generic.thesis.form.language">Jazyk</message>
-	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[čeština=cs; angličtina=en; francouzština=fr; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Další kódy</a>.]]></message>
+	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[čeština=cs; angličtina=en; slovenština=sk; francouzština=fr; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Další kódy</a>.]]></message>
 	<message key="plugins.generic.thesis.form.urlPrefixIncluded">Uveďte prosím plnou URL adresu včetně http:// nebo ftp:// na začátku.</message>
 	<message key="plugins.generic.thesis.form.abstract">Abstrakt</message>
 	<message key="plugins.generic.thesis.form.abstractRequired">Je vyžadován abstrakt závěrečné práce.</message>
@@ -194,14 +195,14 @@
 	<message key="plugins.generic.thesis.form.studentMiddleName">Prostřední jméno studenta</message>
 	<message key="plugins.generic.thesis.form.studentEmail">Email studenta</message>
 	<message key="plugins.generic.thesis.form.studentEmailValid">Je vyžadován platný email studenta.</message>
-	<message key="plugins.generic.thesis.form.studentEmailPublish">Publikovat email studenta</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublish">Publikovat e-mail studenta</message>
 	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Pokud je zaškrtnuto, bude email studenta publikován spolu s abstraktem práce.</message>
 	<message key="plugins.generic.thesis.form.supervisorFirstName">Jméno vedoucího práce</message>
 	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">Je vyžadováno jméno vedoucího práce.</message>
 	<message key="plugins.generic.thesis.form.supervisorLastName">Příjmení vedoucího práce</message>
 	<message key="plugins.generic.thesis.form.supervisorLastNameRequired">Je vyžadováno příjmení vedoucího práce.</message>
 	<message key="plugins.generic.thesis.form.supervisorMiddleName">Prostřední jméno vedoucího práce</message>
-	<message key="plugins.generic.thesis.form.supervisorEmail">Email vedoucího práce</message>
+	<message key="plugins.generic.thesis.form.supervisorEmail">E-mail vedoucího práce</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Je vyžadován platný email vedoucího práce.</message>
 
 </locale>

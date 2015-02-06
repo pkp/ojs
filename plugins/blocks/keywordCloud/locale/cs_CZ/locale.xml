@@ -4,7 +4,7 @@
 <!--
   * plugins/blocks/keywordCloud/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -14,6 +14,6 @@
  
 <locale name="cs_CZ" full_name="Czech">
 	<message key="plugins.block.keywordCloud.displayName">Panel Oblak z klíčových slov</message>
-	<message key="plugins.block.keywordCloud.description">Tento plugin poskytuje oblak štítků z klíčových slov článků.</message>
+	<message key="plugins.block.keywordCloud.description">Tento plugin poskytuje oblak z klíčových slov článků.</message>
 	<message key="plugins.block.keywordCloud.title">Klíčová slova</message>
 </locale>

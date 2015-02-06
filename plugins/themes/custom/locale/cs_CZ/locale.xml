@@ -4,7 +4,7 @@
 <!--
   * plugins/themes/custom/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,13 +13,15 @@
   -->
  
 <locale name="cs_CZ" full_name="Czech">
-	<message key="plugins.theme.custom.name">Plugin pro přizpůsobení tématu</message>
+	<message key="plugins.theme.custom.name">Plugin pro přizpůsobení tématu vzhledu</message>
 	<message key="plugins.theme.custom.description">Tento plugin zavádí přizpůsobitelné téma vzhledu.</message>
-	<message key="plugins.theme.custom.notWritable">UPOZORNĚNÍ: Soubor stylesheetu tohoto pluginu, "{$stylesheetFileLocation}", není momentálně zapisovatelný. Než budete moci tento plugin použít, musíte tento soubor nastavit jako zapisovatelný.</message>
+	<message key="plugins.theme.custom.notWritable">UPOZORNĚNÍ: Soubor stylu tohoto pluginu, "{$stylesheetFileLocation}", není momentálně zapisovatelný. Než budete moci tento plugin použít, musíte tento soubor nastavit jako zapisovatelný.</message>
 	<message key="plugins.theme.custom.settings">Nastavení</message>
 	<message key="plugins.theme.custom.pickColour">Zvolte barvu</message>
 	<message key="plugins.theme.custom.header">Záhlaví</message>
 	<message key="plugins.theme.custom.link">Odkaz</message>
 	<message key="plugins.theme.custom.background">Pozadí</message>
 	<message key="plugins.theme.custom.foreground">Popředí</message>
+	<message key="plugins.theme.custom.perJournal">Šablona stylu vybraného časopisu</message>
+	<message key="plugins.theme.custom.notWritablePlugin">POZNÁMKA: Je automaticky použita šablona vzhledu pro celý časopisu protože do souboru "{$stylesheetFileLocation}"  pluginu pro vzhled časopisu nelze zapisovat.</message>
 </locale>

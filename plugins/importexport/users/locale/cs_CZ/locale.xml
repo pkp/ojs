@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/users/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,22 +13,20 @@
   -->
  
 <locale name="cs_CZ" full_name="Czech">
-	<message key="plugins.importexport.users.displayName">Plugin uživatelů XML</message>
+	<message key="plugins.importexport.users.displayName">Plugin XML uživatelů</message>
 	<message key="plugins.importexport.users.description">Import a export uživatelů</message>
 
-	<message key="plugins.importexport.users.cliUsage">Usage: {$scriptName} {$pluginName} [command] ...
-Commands:
+	<message key="plugins.importexport.users.cliUsage">Použití: {$scriptName} {$pluginName} [command] ... Příkazy:
 	import [xmlFileName] [journal_path] [optional flags]
 	export [xmlFileName] [journal_path]
 	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
 
-Optional flags:
-	continue_on_error: If specified, do not stop importing users if an error occurs
+Volitelné parametry:
+	continue_on_error: Pokud je specifikováno, import uživatelů není při chybě ukončen
 
-	send_notify: If specified, send notification emails containing usernames
-		and passwords to imported users
+	send_notify: Pokud je specifikováno, je importovaným uživatelům zaslán informační e-mail s loginem a heslem
 
-Examples:
+Příklady:
 	Import users into myJournal from myImportFile.xml, continuing on error:
 	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
 
