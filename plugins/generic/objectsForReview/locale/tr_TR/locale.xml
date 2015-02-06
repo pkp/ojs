@@ -11,7 +11,7 @@
   * Objects for review plugin localization strings for the en_US (U.S. English) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="tr_TR" full_name="U.S. English">
 
 	<!-- Objects For Review Plug-In -->
 	<message key="plugins.generic.objectsForReview.displayName">Nesneler için değerlendirme</message>
