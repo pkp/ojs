@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/usageStats/locale/en_US/locale.xml
+  * plugins/generic/usageStats/locale/zh_CN/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="zh_CN" full_name="China">
 	<message key="plugins.generic.usageStats.settings.logging">访问日志选项</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles">创建日志文件</message>
 	<message key="plugins.generic.usageStats.settings.createLogFiles.description">激活该选项可能使插件在文件目录中生成访问日志。这些文件呗用来提取使用统计数据。如果您不希望生成更多的访问日志文件，您可以禁用该选项，或者使用自己的服务器日志访问文件。</message>

@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/alm/locale/en_US/locale.xml
+  * @file plugins/generic/alm/locale/zh_CN/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * ALM plugin localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="zh_CN" full_name="China">
 
 	<message key="plugins.generic.alm.displayName">ALM 插件</message>
 	<message key="plugins.generic.alm.description">在文章说平密钥中显示插件。为使用ALM服务，您需要DOIs。这项要求在未来有可能会放松。</message>
