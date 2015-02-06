@@ -12,7 +12,7 @@
   * Objects for review plugin localization strings for the ca_ES (Català) locale.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="ca_ES" full_name="U.S. English">
 
 	<!-- Objects For Review Plug-In -->
 	<message key="plugins.generic.objectsForReview.displayName">Objects For Review</message>

@@ -11,7 +11,7 @@
   * Objects for review email template localized default text for the ru_RU (Russian) locale.
   * With updates from Pavel Pisklakov (revising translation).
   -->
-<email_texts locale="en_US">
+<email_texts locale="ru_RU">
 	<email_text key="OFR_REVIEW_REMINDER">
 		<subject>Объект на рецензию: напоминание о сроке</subject>
 		<body>{$authorName}!
