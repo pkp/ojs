@@ -4,7 +4,7 @@
 <!--
   * plugins/blocks/fontSize/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,7 +15,7 @@
   -->
  
 <locale name="cs_CZ" full_name="Czech">
-	<message key="plugins.block.fontSize.displayName">Blok velikosti fontu</message>
+	<message key="plugins.block.fontSize.displayName">Panel velikosti fontu</message>
 	<message key="plugins.block.fontSize.description">Tento plugin poskytne v postranním panelu možnost měnit velikost fontu.</message>
 	<message key="plugins.block.fontSize.title">Velikost fontu</message>
 	<message key="plugins.block.fontSize.small">Malý</message>

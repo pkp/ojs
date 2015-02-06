@@ -4,7 +4,7 @@
 <!--
   * plugins/generic/referral/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -13,23 +13,31 @@
   -->
  
 <locale name="cs_CZ" full_name="Czech">
-	<message key="plugins.generic.referral.name">Odkazovací plugin</message>
+	<message key="plugins.generic.referral.name">Plugin pro zpětné odkazy</message>
 	<message key="plugins.generic.referral.description">Odkazovací plugin sleduje příchozí URL citací článků (např.: když čtenář následuje externí odkaz na článek) a umožňuje autorům spravovat a případně vydávat automaticky aktualizovaný seznam citací článku.</message>
 	
 	<message key="plugins.generic.referral.editReferral">Editovat zpětnou citaci</message>
 	<message key="plugins.generic.referral.createReferral">Vytvořit zpětnou citaci</message>
-	<message key="plugins.generic.referral.referrals">Citace</message>
+	<message key="plugins.generic.referral.referrals">Na tento článek odkazuje</message>
 	<message key="plugins.generic.referral.count">Zásahy</message>
 	<message key="plugins.generic.referral.dateAdded">Datum přidání</message>
 	<message key="plugins.generic.referral.all">Vše</message>
 	<message key="plugins.generic.referral.all.empty">Aktuálně neexistují žádné citace.</message>
 	<message key="plugins.generic.referral.status.new">Nové</message>
-	<message key="plugins.generic.referral.status.new.empty">Aktuálně neexsitují žádné nové citace.</message>
+	<message key="plugins.generic.referral.status.new.empty">Aktuálně neexistují žádné nové citace.</message>
 	<message key="plugins.generic.referral.status.accept">Publikované</message>
 	<message key="plugins.generic.referral.status.accept.empty">Aktuálně neexistují žádné publikované citace.</message>
-	<message key="plugins.generic.referral.status.decline">Ignorované</message>
+	<message key="plugins.generic.referral.status.decline">Ignorovat</message>
 	<message key="plugins.generic.referral.status.decline.empty">Aktuálně neexistují žádné ignorované citace.</message>
 	<message key="plugins.generic.referral.confirmDelete">Jste si jistý, že chcete smazat tuto citaci?</message>
 	<message key="plugins.generic.referral.nameRequired">Je vyžadován název citace.</message>
 	<message key="plugins.generic.referral.urlRequired">Je vyžadována URL adresa citace.</message>
+	<message key="plugins.generic.referral.status.accepted">Publikováno</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Jste si jisti, že chcete publikovat vybranou citaci (vybrané citace)?</message>
+	<message key="plugins.generic.referral.status.declined">Ignorované</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Jste si jisti, že chcete ignorovat vybranou citaci (vybrané citace)?</message>
+	<message key="plugins.generic.referral.settings">Nastavení pluginu pro sledování citování</message>
+	<message key="plugins.generic.referral.settings.description">Plugin pro sledování citování sbírá URL, které odkazuji na články publikované v tomto časopise, tak, že mohou být posouzeny autorem a případně publikovány. Tento formulář umožňuje Správci časopisu kontrolovat, jakým způsobem budou tyto odkazy získávány.</message>
+	<message key="plugins.generic.referral.excusions">Výjimky</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Zadejte seznam vzorců regulárních výrazů, jeden na řádku, které budou použity jako výjimky pro sběr odkazů. Tyto výjimky se používají např. pro vyhledávače, jejichž odkazy jsou nepoužitelné. Další informace o regulárních výrazech naleznete v <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new"> http://ca.php.net/manual / en / ref.pcre.php </ a>.]]></message>
 </locale>

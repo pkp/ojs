@@ -8,10 +8,11 @@
   * Copyright (c) 2003-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings.
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translation Jiří Dlouhý  
   -->
 
-<locale name="cs_CZ" full_name = "Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="admin.hostedJournals">Hostované časopisy</message>
 	<message key="admin.settings.journalRedirect">Přesměrování časopisu</message>
 	<message key="admin.settings.journalRedirectInstructions">Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis.</message>
