@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * @file plugins/generic/alm/locale/en_US/locale.xml
+  * @file plugins/generic/alm/locale/da_DK/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * ALM plugin localization strings
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Danish">
 
 	<message key="plugins.generic.alm.displayName">ALM Plugin</message>
 	<message key="plugins.generic.alm.description">Plugin to display in Article Level Metrics. To use the ALM service, you need to have use DOIs. This requirement may be relaxed in the future.</message>

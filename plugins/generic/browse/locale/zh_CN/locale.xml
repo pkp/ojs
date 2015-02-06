@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/browse/locale/en_US/locale.xml
+  * plugins/generic/browse/locale/zh_CN/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Browse plugin localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="zh_CN" full_name="China">
 	<!-- plugin -->
 	<message key="plugins.generic.browse.displayName">浏览</message>
 	<message key="plugins.generic.browse.description">该款插件可以浏览部分或识别类型</message>

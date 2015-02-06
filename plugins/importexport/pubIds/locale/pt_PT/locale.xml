@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/pubIds/locale/en_US/locale.xml
+  * plugins/importexport/pubIds/locale/pt_PT/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_PT" full_name="Português">
 	<!-- plugin -->
 	<message key="plugins.importexport.pubIds.displayName">Public Identifiers XML Plugin</message>
 	<message key="plugins.importexport.pubIds.description">Import and export public identifiers</message>

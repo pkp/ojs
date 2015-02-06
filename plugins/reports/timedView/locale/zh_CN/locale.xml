@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/reports/timedView/locale/en_US/locale.xml
+  * plugins/reports/timedView/locale/zh_CN/locale.xml
   *
   * Copyright (c) 2013-2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="en_US" full_name="U.S. English">
+<locale name="zh_CN" full_name="China">
 	<message key="plugins.reports.timedView.displayName">定时的浏览量报告</message>
 	<message key="plugins.reports.timedView.description">该款插件使用CSV报告描述每篇文章的读者量，过滤用户定义的时间段。</message>
 

@@ -8,11 +8,11 @@
   * Copyright (c) 2000-2014 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the da_DK (Danish) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="da_DK" full_name="Danish">
 	<message key="plugins.generic.acron.name">Acron Plugin</message>
 	<message key="plugins.generic.acron.description">This plugin attempts to reduce the dependance of OCS on periodic scheduling tools such as 'cron.'</message>
 	<message key="plugins.generic.acron.enabled">The Acron Plugin has been enabled.</message>
