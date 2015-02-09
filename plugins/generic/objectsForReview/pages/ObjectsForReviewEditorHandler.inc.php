@@ -1099,7 +1099,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 			$editorEmail = $editor->getEmail();
 			$editorContactSignature = $editor->getContactSignature();
 
-			if ($action = 'OFR_OBJECT_ASSIGNED') {
+			if ($action == 'OFR_OBJECT_ASSIGNED') {
 				$ofrPlugin =& $this->_getObjectsForReviewPlugin();
 				$journal =& $request->getJournal();
 				$dueWeeks = $ofrPlugin->getSetting($journal->getId(), 'dueWeeks');
@@ -1113,14 +1113,14 @@ class ObjectsForReviewEditorHandler extends Handler {
 					'submissionUrl' => $request->url(null, 'author', 'submit'),
 					'editorialContactSignature' => String::html2text($editorContactSignature)
 				);
-			} elseif ($action = 'OFR_OBJECT_DENIED') {
+			} elseif ($action == 'OFR_OBJECT_DENIED') {
 				$paramArray = array(
 					'authorName' => strip_tags($userFullName),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
 					'submissionUrl' => $request->url(null, 'author', 'submit'),
 					'editorialContactSignature' => String::html2text($editorContactSignature)
 				);
-			} elseif ($action = 'OFR_OBJECT_MAILED') {
+			} elseif ($action == 'OFR_OBJECT_MAILED') {
 				$paramArray = array(
 					'authorName' => strip_tags($userFullName),
 					'authorMailingAddress' => String::html2text($userMailingAddress),
