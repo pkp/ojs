@@ -6,4 +6,4 @@
 	url = git://github.com/asmecher/DuraCloud-PHP
 [submodule "plugins/generic/pdfJsViewer"]
 	path = plugins/generic/pdfJsViewer
-	url = git@github.com:pkp/pdfJsViewer.git
+	url = git://github.com/pkp/pdfJsViewer
