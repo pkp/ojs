@@ -632,6 +632,25 @@ class ArticleGalleyDAO extends DAO {
 		}
 		$this->flushCache();
 	}
+
+	/**
+	 * Delete the public ID of a galley.
+	 * @param $galleyId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deletePubId($galleyId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM article_galley_settings WHERE setting_name = ? AND galley_id = ?',
+			array(
+				$settingName,
+				(int)$galleyId
+			)
+		);
+		$this->flushCache();
+	}
 }
 
 ?>
