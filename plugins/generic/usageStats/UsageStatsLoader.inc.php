@@ -675,7 +675,7 @@ class UsageStatsLoader extends FileLoader {
 
 		// We only expect one file inside the directory.
 		$fileCount = 0;
-		foreach (glob($dir . DIRECTORY_SEPARATOR . "*.*") as $file) {
+		foreach (glob($dir . DIRECTORY_SEPARATOR . '*') as $file) {
 			$fileCount++;
 		}
 		if (!$file || $fileCount !== 1) {
