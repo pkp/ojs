@@ -168,6 +168,10 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" /></td>
 </tr>
 <tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-0-orcid" key="user.orcid"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][orcid]" id="authors-0-orcid" size="30" maxlength="90" /><br />{translate key="user.orcid.description"}</td>
+</tr>
+<tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-url" key="user.url"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][url]" id="authors-0-url" size="30" maxlength="255" /></td>
 </tr>
