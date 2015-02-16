@@ -1,9 +1,13 @@
 <?php
 
 /**
+ * @defgroup oai_format_nlm
+ */
+
+/**
  * @file plugins/oaiMetadataFormats/nlm/OAIMetadataFormat_NLM.inc.php
  *
- * Copyright (c) 2014 Simon Fraser University Library
+ * Copyright (c) 2013-2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -30,6 +34,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$section =& $record->getData('section');
 		$issue =& $record->getData('issue');
 		$galleys =& $record->getData('galleys');
+		$articleId = $article->getId();
 
 		// Cache issue ordering information.
 		static $issueId;
@@ -46,9 +51,11 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			unset($sections);
 		}
 
+		$abbreviation = $journal->getLocalizedSetting('abbreviation');
 		$printIssn = $journal->getSetting('printIssn');
 		$onlineIssn = $journal->getSetting('onlineIssn');
-		$primaryLocale = $journal->getPrimaryLocale();
+		$primaryLocale = ($article->getLanguage() != '') ? $article->getLanguage() : $journal->getPrimaryLocale();
+
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
 		$datePublished = $article->getDatePublished();
 		if (!$datePublished) $datePublished = $issue->getDatePublished();
@@ -145,8 +152,11 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 
 		$response .=
 			"\t\t\t<permissions>\n" .
-			((($s = $journal->getLocalizedSetting('copyrightNotice')) != '')?"\t\t\t\t<copyright-statement>" . htmlspecialchars(Core::cleanVar($s)) . "</copyright-statement>\n":'') .
-			($datePublished?"\t\t\t\t<copyright-year>" . strftime('%Y', $datePublished) . "</copyright-year>\n":'') .
+			"\t\t\t\t<copyright-statement>" . htmlspecialchars(__('submission.copyrightStatement', array('copyrightYear' => $article->getCopyrightYear(), 'copyrightHolder' => $article->getLocalizedCopyrightHolder()))) . "</copyright-statement>\n" .
+			($datePublished?"\t\t\t\t<copyright-year>" . $article->getCopyrightYear() . "</copyright-year>\n":'') .
+			"\t\t\t\t<license xlink:href=\"" . $article->getLicenseURL() . "\">\n" .
+			(($s = Application::getCCLicenseBadge($article->getLicenseURL()))?"\t\t\t\t\t<license-p>" . strip_tags($s) . "</license-p>\n":'') .
+			"\t\t\t\t</license>\n" .
 			"\t\t\t</permissions>\n" .
 			"\t\t\t<self-uri xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', $article->getBestArticleId()))) . "\" />\n";
 

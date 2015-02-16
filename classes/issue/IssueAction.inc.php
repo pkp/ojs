@@ -183,39 +183,6 @@ class IssueAction {
 	}
 
 	/**
-	 * builds the issue options pulldown for published and unpublished issues
-	 * @param $current bool retrieve current or not
-	 * @param $published bool retrieve published or non-published issues
-	 */
-	function getIssueOptions() {
-		$issueOptions = array();
-
-		$journal = Request::getJournal();
-		$journalId = $journal->getId();
-
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-
-		$issueOptions['-100'] =  '------    ' . __('editor.issues.futureIssues') . '    ------';
-		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
-		while ($issue = $issueIterator->next()) {
-			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
-		}
-		$issueOptions['-101'] = '------    ' . __('editor.issues.currentIssue') . '    ------';
-		$issuesIterator = $issueDao->getPublishedIssues($journalId);
-		$issues = $issuesIterator->toArray();
-		if (isset($issues[0]) && $issues[0]->getCurrent()) {
-			$issueOptions[$issues[0]->getId()] = $issues[0]->getIssueIdentification();
-			array_shift($issues);
-		}
-		$issueOptions['-102'] = '------    ' . __('editor.issues.backIssues') . '    ------';
-		foreach ($issues as $issue) {
-			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
-		}
-
-		return $issueOptions;
-	}
-
-	/**
 	 * Checks if this user is granted access to pre-publication galleys based on role
 	 * based on their roles in the journal (i.e. Manager, Editor, etc).
 	 * @param $journal object

@@ -50,10 +50,6 @@
 		{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 	{/if}
 
-	{if $journal->getLocalizedSetting('copyrightNotice')}
-		<rights>{$journal->getLocalizedSetting('copyrightNotice')|strip|escape:"html"}</rights>
-	{/if}
-
 	<subtitle type="html">{$description|strip|escape:"html"}</subtitle>
 
 	{foreach name=sections from=$publishedArticles item=section key=sectionId}
@@ -90,7 +86,7 @@
 				{/if}
 
 				{* <source/> *}
-				{* <rights/> *}
+				<rights>{translate|escape key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear() copyrightHolder=$article->getLocalizedCopyrightHolder()}</rights>
 			</entry>
 		{/foreach}{* articles *}
 	{/foreach}{* sections *}

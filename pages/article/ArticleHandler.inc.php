@@ -220,6 +220,7 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('comments', isset($comments)?$comments:null);
 
 			$templateMgr->assign('sharingEnabled', $journalRt->getSharingEnabled());
+			$templateMgr->assign('ccLicenseBadge', Application::getCCLicenseBadge($article->getLicenseURL()));
 
 			if($journalRt->getSharingEnabled()) {
 				$templateMgr->assign('sharingRequestURL', $request->getRequestURL());

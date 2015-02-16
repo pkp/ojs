@@ -56,6 +56,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$context = $request->getContext();
 			$this->addCheck(new FormValidatorCustom($this, 'issueId', 'required', 'author.submit.form.issueRequired', array(DAORegistry::getDAO('IssueDAO'), 'issueIdExists'), array($context->getId())));
 		}
+
+		$this->addCheck(new FormValidatorURL($this, 'licenseURL', 'optional', 'form.url.invalid'));
 	}
 
 	/**
@@ -78,11 +80,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('enablePublicArticleId', $enablePublicArticleId);
 		$enablePageNumber = $journalSettingsDao->getSetting($context->getId(), 'enablePageNumber');
 		$templateMgr->assign('enablePageNumber', $enablePageNumber);
-
-		// include issue possibilities
-		import('classes.issue.IssueAction');
-		$issueAction = new IssueAction();
-		$templateMgr->assign('issueOptions', $issueAction->getIssueOptions());
+		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
 
 		$publishedArticle = $this->getPublishedArticle();
 		if ($publishedArticle) {
@@ -112,6 +110,40 @@ class IssueEntryPublicationMetadataForm extends Form {
 		return parent::fetch($request);
 	}
 
+	/**
+	 * builds the issue options pulldown for published and unpublished issues
+	 * @param $journal Journal
+	 * @return array Associative list of options for pulldown
+	 */
+	function getIssueOptions($journal) {
+		$issueOptions = array();
+		$journalId = $journal->getId();
+
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+
+		$issueOptions['future'] =  '------    ' . __('editor.issues.futureIssues') . '    ------';
+		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
+		while ($issue = $issueIterator->next()) {
+			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
+		}
+		$issueOptions['current'] = '------    ' . __('editor.issues.currentIssue') . '    ------';
+		$issuesIterator = $issueDao->getPublishedIssues($journalId);
+		$issues = $issuesIterator->toArray();
+		if (isset($issues[0]) && $issues[0]->getCurrent()) {
+			$issueOptions[$issues[0]->getId()] = $issues[0]->getIssueIdentification();
+			array_shift($issues);
+		}
+		$issueOptions['back'] = '------    ' . __('editor.issues.backIssues') . '    ------';
+		foreach ($issues as $issue) {
+			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
+		}
+
+		return $issueOptions;
+	}
+
+	/**
+	 * Initialize form data.
+	 */
 	function initData() {
 		AppLocale::requireComponents(
 			LOCALE_COMPONENT_APP_COMMON,
@@ -122,7 +154,18 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 		$submission = $this->getSubmission();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$this->_publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false);
+		$this->_publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false);
+
+		$copyrightHolder = $submission->getCopyrightHolder(null);
+		$copyrightYear = $submission->getCopyrightYear();
+		$licenseURL = $submission->getLicenseURL();
+
+		$this->_data = array(
+			'copyrightHolder' => $submission->getDefaultCopyrightHolder(null), // Localized
+			'copyrightYear' => $submission->getDefaultCopyrightYear(),
+			'licenseURL' => $submission->getDefaultLicenseURL(),
+			'arePermissionsAttached' => !empty($copyrightHolder) || !empty($copyrightYear) || !empty($licenseURL),
+		);
 	}
 
 
@@ -164,7 +207,12 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * @copydoc Form::readInputData()
 	 */
 	function readInputData() {
-		$this->readUserVars(array('waivePublicationFee', 'markAsPaid', 'issueId', 'datePublished', 'accessStatus', 'pages', 'publicArticleId'));
+		$this->readUserVars(array(
+			'waivePublicationFee', 'markAsPaid', 'issueId',
+			'datePublished', 'accessStatus', 'pages',
+			'publicArticleId', 'copyrightYear', 'copyrightHolder',
+			'licenseURL', 'attachPermissions',
+		));
 	}
 
 	/**
@@ -282,6 +330,16 @@ class IssueEntryPublicationMetadataForm extends Form {
 					// Delete the article from the search index.
 					$articleSearchIndex->articleFileDeleted($submission->getId());
 				}
+			}
+
+			if ($this->getData('attachPermissions')) {
+				$submission->setCopyrightYear($this->getData('copyrightYear'));
+				$submission->setCopyrightHolder($this->getData('copyrightHolder'), null); // Localized
+				$submission->setLicenseURL($this->getData('licenseURL'));
+			} else {
+				$submission->setCopyrightYear(null);
+				$submission->setCopyrightHolder(null, null);
+				$submission->setLicenseURL(null);
 			}
 
 			// Resequence the articles.

@@ -1,8 +1,8 @@
 {**
- * catalog/form/catalogMetadataFormFields.tpl
+ * templates/controllers/tab/issueEntry/form/publicationMetadataFormFields.tpl
  *
- * Copyright (c) 2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  *}
@@ -13,6 +13,7 @@
 			'$.pkp.controllers.tab.issueEntry.form.IssueEntryPublicationMetadataFormHandler',
 			{ldelim}
 				trackFormChanges: true,
+				arePermissionsAttached: {if $arePermissionsAttached}true{else}false{/if}
 			{rdelim}
 		);
 	{rdelim});
@@ -88,6 +89,17 @@
 			{/fbvFormSection}
 		{/fbvFormArea}
 	{/if}
+
+	{fbvFormArea id="permissions" title="submission.permissions" class="border"}
+		{fbvFormSection list=true}
+			{fbvElement type="checkbox" id="attachPermissions" label="submission.attachPermissions"}
+		{/fbvFormSection}
+		{fbvFormSection}
+			{fbvElement type="text" id="licenseURL" label="submission.licenseURL" value=$licenseURL}
+			{fbvElement type="text" id="copyrightHolder" label="submission.copyrightHolder" value=$copyrightHolder multilingual=true size=$fbvStyles.size.MEDIUM inline=true}
+			{fbvElement type="text" id="copyrightYear" label="submission.copyrightYear" value=$copyrightYear size=$fbvStyles.size.SMALL inline=true}
+		{/fbvFormSection}
+	{/fbvFormArea}
 
 	{fbvFormButtons id="publicationMetadataFormSubmit" submitText="common.save"}
 </form>
