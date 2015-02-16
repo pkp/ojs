@@ -92,7 +92,9 @@ class ArticleHandler extends Handler {
 
 		if ($galley && !$galley->isHtmlGalley() && !$galley->isPdfGalley()) {
 			if ($galley->getRemoteURL()) {
-				$request->redirectUrl($galley->getRemoteURL());
+				if (!HookRegistry::call('ArticleHandler::viewRemoteGalley', array(&$article, &$galley))) {
+					$request->redirectUrl($galley->getRemoteURL());
+				}
 			}
 			if ($galley->isInlineable()) {
 				return $this->viewFile(
