@@ -297,7 +297,7 @@ class StatisticsHelper {
 
 	/**
 	* Get the geo location tool.
-	* @return GeoLocationTool
+	* @return mixed GeoLocationTool object or null
 	*/
 	function &getGeoLocationTool() {
 		$geoLocationTool = null;
