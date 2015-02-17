@@ -421,8 +421,8 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * Retrieve "submission_id"s for published articles for a journal, sorted
 	 * alphabetically.
 	 * Note that if journalId is null, alphabetized article IDs for all
-	 * journals are returned.
-	 * @param $journalId int optional
+	 * enabled journals are returned.
+	 * @param $journalId int Optional journal ID to restrict results to
 	 * @param $useCache boolean optional
 	 * @return Array
 	 */
@@ -438,13 +438,14 @@ class PublishedArticleDAO extends ArticleDAO {
 			'SELECT	s.submission_id AS pub_id,
 				COALESCE(stl.setting_value, stpl.setting_value) AS submission_title
 			FROM	submissions s
+				JOIN journals j ON (s.context_id = j.journal_id)
 				JOIN published_submissions ps ON (s.submission_id = ps.submission_id)
 				JOIN issues i ON (i.issue_id = ps.issue_id)
 				JOIN sections se ON se.section_id = s.section_id
 				LEFT JOIN submission_settings stl ON (s.submission_id = stl.submission_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN submission_settings stpl ON (s.submission_id = stpl.submission_id AND stpl.setting_name = ? AND stpl.locale = s.locale)
 			WHERE	i.published = 1' .
-				($journalId?' AND s.context_id = ?':'') . '
+				($journalId?' AND j.journal_id = ?':' AND j.enabled = 1') . '
 			ORDER BY submission_title',
 			$params
 		);
