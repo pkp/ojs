@@ -181,7 +181,7 @@ class UsageStatsLoader extends FileLoader {
 			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $filePath, $lineNumber);
 			if(!$assocId || !$assocType) continue;
 
-			list($countryCode, $cityName, $region) = $geoTool->getGeoLocation($entryData['ip']);
+			list($countryCode, $cityName, $region) = $geoTool ? $geoTool->getGeoLocation($entryData['ip']) : array();
 			$day = date('Ymd', $entryData['date']);
 
 			$type = $this->_getFileType($assocType, $assocId);

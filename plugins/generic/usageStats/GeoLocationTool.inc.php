@@ -26,7 +26,8 @@ class GeoLocationTool {
 
 	/**
 	 * Constructor.
-	 * @param $argv array command-line arguments
+	 * If we cannot find the database file, an empty object will be constructed.
+	 * Use the method isPresent() to check if the database file is present before use.
 	 */
 	function GeoLocationTool() {
 		$geoLocationDbFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . "GeoLiteCity.dat";
@@ -69,6 +70,14 @@ class GeoLocationTool {
 			utf8_encode($record->city),
 			$record->region
 		);
+	}
+
+	/**
+	 * Identify if the geolocation database tool is available for use.
+	 * @return boolean
+	 */
+	function isPresent() {
+		return $this->_isDbFilePresent;
 	}
 
 	/**
