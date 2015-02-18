@@ -19,11 +19,11 @@
 {/if}
 
 <ul>
-	{if !$currentJournal->getSetting('disableUserReg')}<li><a href="{url page="about" op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>{/if}
-	{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li><a href="{url page="about" op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
-	{if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}<li><a href="{url page="about" op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
-	{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<li><a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
-	{if $authorFees}<li><a href="{url page="about" op="submissions" anchor="authorFees"}">{translate key="about.authorFees"}</a></li>{/if}
+	{if !$currentJournal->getSetting('disableUserReg')}<li id="disableUserReg"><a href="{url page="about" op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>{/if}
+	{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li id="authorGuidelines"><a href="{url page="about" op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
+	{if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}<li id="copyrightNotice"><a href="{url page="about" op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
+	{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<li id="privacyStatement"><a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
+	{if $authorFees}<li id="authorFees"><a href="{url page="about" op="submissions" anchor="authorFees"}">{translate key="about.authorFees"}</a></li>{/if}
 </ul>
 
 {if !$currentJournal->getSetting('disableUserReg')}
