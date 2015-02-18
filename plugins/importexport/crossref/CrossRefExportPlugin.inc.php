@@ -260,8 +260,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
                      $qualifiedArk = trim($rawQualifiedArk);  
 					 if (empty($qualifiedArk)){
 					     error_log("Failed to generate an ARK for " . $articleID);
-                         break;
-                         //need to exit out;
+                         //need to do something like throw an exception
 					 }
 					 else{
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
