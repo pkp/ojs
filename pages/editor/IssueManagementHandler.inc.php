@@ -790,8 +790,10 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				else {
 				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
+                    error_log("SINGLEARTICLEID:" . $singleArticleID);
 					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID");
-                     $qualifiedArk = trim($rawQualifiedArk);
+                     error_log("RAWQUALIFIED ARK:" . $rawQualifiedArk );
+                     $qualifiedArk = trim($rawQualifiedArk);                     
                      error_log("Trimmed ARK from IssueMgngHndler:" . $qualifiedArk . ":END");
 					 if (empty($qualifiedArk)){
 					     error_log("No ARK for $singleArticleID");
