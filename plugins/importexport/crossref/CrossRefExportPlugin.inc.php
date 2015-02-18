@@ -252,16 +252,17 @@ class CrossRefExportPlugin extends ImportExportPlugin {
             if (!empty($articleID)){
                 //check first to see if an ARK has already been assigned			
 		        $rawQualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
-                $qualifiedArk = trim($rawQualifiedArk);             
-		        
-
+                $qualifiedArk = trim($rawQualifiedArk);
                 //No ARK exists, so assign one now                 
-		        if (!$qualifiedArk){
+		        //if (!$qualifiedArk){
+                if ($qualifiedArk)
 		             error_log($articleID . " has no ARK in the database; will generate now!");					 
 					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $articleID");
                      $qualifiedArk = trim($rawQualifiedArk);  
 					 if (empty($qualifiedArk)){
 					     error_log("Failed to generate an ARK for $articleID");
+                         break;
+                         //need to exit out;
 					 }
 					 else{
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
@@ -271,9 +272,9 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		        }
 				//If an ARK already exists, use that
 				else {				
-				   error_log($qualifiedArk . "is the ARK for " . $articleID);
+				   error_log($qualifiedArk . " is the ARK for " . $articleID);
 				   $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
-                   error_log("CrossRef Plugin passing back this eSchol URL:" . 	$escholURL);			   
+                   error_log("CrossRef Plugin using this eSchol URL:" . 	$escholURL);			   
                    return $escholURL;				   
 				}
 				

@@ -790,6 +790,7 @@ class IssueManagementHandler extends EditorHandler {
 				}
 				else {
 				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
+                    //Need to get the ARK here
                     error_log("SINGLEARTICLEID:" . $singleArticleID);
 					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID");
                      error_log("RAWQUALIFIED ARK:" . $rawQualifiedArk );
@@ -797,6 +798,8 @@ class IssueManagementHandler extends EditorHandler {
                      error_log("Trimmed ARK from IssueMgngHndler:" . $qualifiedArk . ":END");
 					 if (empty($qualifiedArk)){
 					     error_log("No ARK for $singleArticleID");
+                         //Need to exit out from here;
+                         //break;uncomment once I've figured out why I'm not getting the ARK
 					 }
 					 else{
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
