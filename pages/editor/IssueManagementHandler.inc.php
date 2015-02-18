@@ -793,8 +793,8 @@ class IssueManagementHandler extends EditorHandler {
                     //Need to get the ARK here
                      error_log("SINGLEARTICLEID:" . $singleArticleID);
 					 $rawQualifiedArk = exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $singleArticleID, $execOutput, $execError );
-                     error_log ("ExecOutput:". $execOutput);
-                     error_log("ExecError:" . $execError);
+                     error_log ("ExecOutput:". print_r($execOutput, 1));
+                     error_log("ExecError:" . print_r($execError, 1));
                      error_log("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $singleArticleID);
                      error_log("RAWQUALIFIED ARK:" . $rawQualifiedArk );
                      $qualifiedArk = trim($rawQualifiedArk);                     
