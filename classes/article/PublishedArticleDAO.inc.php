@@ -511,8 +511,8 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve "article_id"s for published articles for a journal, sorted
 	 * alphabetically.
 	 * Note that if journalId is null, alphabetized article IDs for all
-	 * journals are returned.
-	 * @param $journalId int optional
+	 * enabled journals are returned.
+	 * @param $journalId int Optional journal ID to use in restricting results
 	 * @param $useCache boolean optional
 	 * @return Array
 	 */
@@ -531,6 +531,7 @@ class PublishedArticleDAO extends DAO {
 			FROM	published_articles pa,
 				issues i,
 				articles a
+				JOIN journals j ON (a.journal_id = j.journal_id)
 				LEFT JOIN sections s ON s.section_id = a.section_id
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
@@ -538,7 +539,7 @@ class PublishedArticleDAO extends DAO {
 				AND i.issue_id = pa.issue_id
 				AND i.published = 1
 				AND s.section_id IS NOT NULL' .
-				(isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY article_title',
+				(isset($journalId)?' AND a.journal_id = ?':' AND j.enabled = 1') . ' ORDER BY article_title',
 			$params
 		);
 

@@ -83,8 +83,8 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * the first letter of the last name, for example:
 	 * $returnedArray['S'] gives array($misterSmithObject, $misterSmytheObject, ...)
 	 * Keys will appear in sorted order. Note that if journalId is null,
-	 * alphabetized authors for all journals are returned.
-	 * @param $journalId int
+	 * alphabetized authors for all enabled journals are returned.
+	 * @param $journalId int Optional journal ID to restrict results to
 	 * @param $initial An initial the last names must begin with
 	 * @param $rangeInfo Range information
 	 * @param $includeEmail Whether or not to include the email in the select distinct
@@ -132,9 +132,10 @@ class AuthorDAO extends PKPAuthorDAO {
 				JOIN published_articles pa ON (pa.article_id = a.article_id)
 				JOIN issues i ON (pa.issue_id = i.issue_id AND i.published = 1)
 				JOIN sections s ON (a.section_id = s.section_id)
-			WHERE ' . (isset($journalId)?'a.journal_id = ? AND ':'') . '
-				(aa.last_name IS NOT NULL AND aa.last_name <> \'\') AND
-				((s.hide_author = 0 AND a.hide_author = ?) OR a.hide_author = ?)
+				JOIN journals j ON (a.journal_id = j.journal_id)
+			WHERE ' . (isset($journalId)?'a.journal_id = ?':'j.enabled = 1') . '
+				AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\')
+				AND ((s.hide_author = 0 AND a.hide_author = ?) OR a.hide_author = ?)
 				' .	($disallowRepeatedEmail?' AND aa2.email IS NULL ':'')
 				. $initialSql . '
 			ORDER BY aa.last_name, aa.first_name',
