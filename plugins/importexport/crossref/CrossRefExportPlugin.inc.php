@@ -255,7 +255,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
                 $qualifiedArk = trim($rawQualifiedArk);
                 //No ARK exists, so assign one now                 
 		        //if (!$qualifiedArk){
-                if ($qualifiedArk)
+                if ($qualifiedArk){
 		             error_log($articleID . " has no ARK in the database; will generate now!");					 
 					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $articleID");
                      $qualifiedArk = trim($rawQualifiedArk);  
