@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# buildpkg.sh
+# tools/buildpkg.sh
 #
 # Copyright (c) 2013-2015 Simon Fraser University Library
 # Copyright (c) 2003-2015 John Willinsky
@@ -10,7 +10,6 @@
 # Script to create an OJS package for distribution.
 #
 # Usage: buildpkg.sh <version> [<tag>] [<patch_dir>]
-#
 #
 
 GITREP=git://github.com/pkp/ojs.git
