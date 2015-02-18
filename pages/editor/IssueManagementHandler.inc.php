@@ -834,7 +834,7 @@ class IssueManagementHandler extends EditorHandler {
                         curl_setopt($ch, CURLINFO_HEADER_OUT,true);
 						curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                        $output = curl_exec($ch);
+                        //$output = curl_exec($ch); comment out for testing
 						error_log(curl_getinfo($ch, CURLINFO_HEADER_OUT));
 						error_log(curl_error($ch));
                         error_log(curl_getinfo($ch, CURLINFO_HTTP_CODE));
