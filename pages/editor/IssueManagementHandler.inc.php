@@ -792,8 +792,9 @@ class IssueManagementHandler extends EditorHandler {
 				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
                     //Need to get the ARK here
                      error_log("SINGLEARTICLEID:" . $singleArticleID);
-					 $rawQualifiedArk = exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $singleArticleID, $execOutput, $execError );
-                     error_log ("ExecOutput:". print_r($execOutput, 1));
+					 //$rawQualifiedArk = exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . //$singleArticleID, $execOutput, $execError );
+                     //error_log ("ExecOutput:". print_r($execOutput, 1));
+                    $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID 2>&1"); 
                      error_log("ExecError:" . print_r($execError, 1));
                      error_log("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $singleArticleID);
                      error_log("RAWQUALIFIED ARK:" . $rawQualifiedArk );
