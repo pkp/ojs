@@ -254,19 +254,18 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		        $rawQualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
                 $qualifiedArk = trim($rawQualifiedArk);
                 //No ARK exists, so assign one now                 
-		        //if (!$qualifiedArk){
-                if ($qualifiedArk){
+		        if (!$qualifiedArk){                
 		             error_log($articleID . " has no ARK in the database; will generate now!");					 
-					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $articleID");
+					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $articleID);
                      $qualifiedArk = trim($rawQualifiedArk);  
 					 if (empty($qualifiedArk)){
-					     error_log("Failed to generate an ARK for $articleID");
+					     error_log("Failed to generate an ARK for " . $articleID);
                          break;
                          //need to exit out;
 					 }
 					 else{
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
-						 error_log("For ARTICLE ID $articleID generated this eSchol URL: $escholURL");
+						 error_log("For ARTICLE ID $articleID generated this eSchol URL:" . $escholURL);
                          return $escholURL;						 
 					 }
 		        }

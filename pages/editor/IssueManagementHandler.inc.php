@@ -791,8 +791,8 @@ class IssueManagementHandler extends EditorHandler {
 				else {
 				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
                     //Need to get the ARK here
-                    error_log("SINGLEARTICLEID:" . $singleArticleID);
-					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID");
+                     error_log("SINGLEARTICLEID:" . $singleArticleID);
+					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $singleArticleID);
                      error_log("RAWQUALIFIED ARK:" . $rawQualifiedArk );
                      $qualifiedArk = trim($rawQualifiedArk);                     
                      error_log("Trimmed ARK from IssueMgngHndler:" . $qualifiedArk . ":END");
@@ -803,7 +803,7 @@ class IssueManagementHandler extends EditorHandler {
 					 }
 					 else{
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
-						 error_log("For ARTICLE ID $singleArticleID eSchol URL is $escholURL");				 
+						 error_log("For ARTICLE ID $singleArticleID eSchol URL is:" . $escholURL);				 
 					 }
 					 $articleDOI = $article->getDOI();
 					 $articleDOI = str_replace("/","%2F", $articleDOI);
