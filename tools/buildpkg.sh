@@ -9,13 +9,16 @@
 #
 # Script to create an OJS package for distribution.
 #
-# Usage: buildpkg.sh <version> [<tag>] [<patch_dir>]
+# Usage: buildpkg.sh <version> <tag-branch> <patch_dir>
+#  <version>: The version of OJS to release (e.g. 2.4.5 or 2.4.5-1)
+#  <tag-branch>: The tag or branch to use to build the package
+#  <patch-dir>: A directory containg .tar.gz files of previous releases to create patches from
 #
 
 GITREP=git://github.com/pkp/ojs.git
 
-if [ -z "$1" ]; then
-	echo "Usage: $0 <version> [<tag>-<branch>] [<patch_dir>]";
+if [ -z "$3" ]; then
+	echo "Usage: $0 <version> <tag>-<branch> <patch_dir>";
 	exit 1;
 fi
 
@@ -51,19 +54,13 @@ plugins/generic/pdfJsViewer/.git"
 cd $TMPDIR
 
 echo -n "Cloning $GITREP and checking out tag $TAG ... "
-git clone -q -n $GITREP $BUILD || exit 1
+git clone -b $TAG --depth 1 -q -n $GITREP $BUILD || exit 1
 cd $BUILD
 git checkout -q $TAG || exit 1
 echo "Done"
 
-echo -n "Checking out corresponding submodule ... "
-git submodule -q update --init >/dev/null || exit 1
-echo "Done"
-
-echo -n "Checking out submodule submodules ... "
-cd lib/pkp
-git submodule -q update --init >/dev/null || exit 1
-cd ../..
+echo -n "Checking out submodules ... "
+git submodule -q update --init --recursive >/dev/null || exit 1
 echo "Done"
 
 echo -n "Preparing package ... "
@@ -81,7 +78,7 @@ echo "Done"
 if [ ! -z "$PATCHDIR" ]; then
 	echo "Creating patches in $BUILD.patch ..."
 	[ -e "../${BUILD}.patch" ] || mkdir "../$BUILD.patch"
-	for FILE in $PATCHDIR/*; do
+	for FILE in $PATCHDIR/*.tar.gz; do
 		OLDBUILD=$(basename $FILE)
 		OLDVERSION=${OLDBUILD/$PREFIX-/}
 		OLDVERSION=${OLDVERSION/.tar.gz/}
