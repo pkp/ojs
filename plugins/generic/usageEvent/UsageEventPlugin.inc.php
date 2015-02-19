@@ -35,6 +35,7 @@ class UsageEventPlugin extends GenericPlugin {
 			// Register callbacks.
 			HookRegistry::register('TemplateManager::display', array($this, 'getUsageEvent'));
 			HookRegistry::register('ArticleHandler::viewFile', array($this, 'getUsageEvent'));
+			HookRegistry::register('ArticleHandler::viewRemoteGalley', array($this, 'getUsageEvent'));
 			HookRegistry::register('ArticleHandler::downloadFile', array($this, 'getUsageEvent'));
 			HookRegistry::register('ArticleHandler::downloadSuppFile', array($this, 'getUsageEvent'));
 			HookRegistry::register('IssueHandler::viewFile', array($this, 'getUsageEvent'));
@@ -145,7 +146,7 @@ class UsageEventPlugin extends GenericPlugin {
 		$canonicalUrlParams = array();
 		switch ($hookName) {
 
-			// Article abstract, HTML galley and remote galley.
+			// Article abstract and HTML galley.
 			case 'TemplateManager::display':
 				$page = $router->getRequestedPage($request);
 				$op = $router->getRequestedOp($request);
@@ -177,7 +178,7 @@ class UsageEventPlugin extends GenericPlugin {
 				if (!$issue && !$galley && !$article) return false;
 
 				if ($galley) {
-					if ($galley->isHTMLGalley() || $galley->getRemoteURL()) {
+					if ($galley->isHTMLGalley()) {
 						$pubObject =& $galley;
 						$assocType = ASSOC_TYPE_GALLEY;
 						$canonicalUrlParams = array($article->getBestArticleId(), $pubObject->getBestGalleyId($journal));
@@ -205,6 +206,15 @@ class UsageEventPlugin extends GenericPlugin {
 				$canonicalUrlOp = 'view';
 				break;
 
+			case 'ArticleHandler::viewRemoteGalley':
+				$article =& $args[0];
+				$pubObject =& $args[1];
+				$assocType = ASSOC_TYPE_GALLEY;
+				$canonicalUrlParams = array($article->getBestArticleId(), $pubObject->getBestGalleyId($journal));
+				$idParams = array('a' . $article->getId(), 'g' . $pubObject->getId());
+				$downloadSuccess = true;
+				$canonicalUrlOp = 'view';
+				break;
 			// Article galley (except for HTML and remote galley).
 			case 'ArticleHandler::viewFile':
 			case 'ArticleHandler::downloadFile':
