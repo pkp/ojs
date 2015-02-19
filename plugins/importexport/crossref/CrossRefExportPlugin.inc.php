@@ -155,7 +155,12 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 			// Create the DOI data--need to get the eScholarship ARK here
 			//$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getId()));
-			$ark = $this->assignARK($article);
+			try { 
+                $ark = $this->assignARK($article);
+            }
+            catch(Exception $e){
+              error_log($e->getMessage());
+            }
 			$DOIdataNode =& CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), $ark);
 			XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 			XMLCustomWriter::appendChild($bodyNode, $journalNode);
@@ -256,12 +261,12 @@ class CrossRefExportPlugin extends ImportExportPlugin {
                 //No ARK exists, so assign one now                 
 		        if (!$qualifiedArk){                
 		             error_log($articleID . " has no ARK in the database; will generate now!");					 
-					 $rawQualifiedArk = shell_exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $articleID);
+					 $rawQualifiedArk = shell_exec("source /apps/subi/.bashrc &&  /apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $articleID);
                      error_log("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $articleID);
                      $qualifiedArk = trim($rawQualifiedArk);  
 					 if (empty($qualifiedArk)){
 					     error_log("Failed to generate an ARK for " . $articleID);
-                         //need to do something like throw an exception
+                         throw new Exception('Failed to generate an ARK for " . $articleID');
 					 }
 					 else{
 					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
