@@ -286,6 +286,21 @@ class UsageEventPlugin extends GenericPlugin {
 			$request, null, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams
 		);
 
+		// Make sure we log the server name and not aliases.
+		$configBaseUrl = Config::getVar('general', 'base_url');
+		$requestBaseUrl = $request->getBaseUrl();
+		if ($requestBaseUrl !== $configBaseUrl) {
+			// Make sure it's not an url override (no alias on that case).
+			if (!in_array($requestBaseUrl, Config::getContextBaseUrls()) && 
+					$requestBaseUrl !== Config::getVar('general', 'base_url[index]')) {
+				// Alias found, replace it by base_url from config file.
+				// Make sure we use the correct base url override value for the context, if any.
+				$baseUrlReplacement = Config::getVar('general', 'base_url['.$journal->getPath().']');
+				if (!$baseUrlReplacement) $baseUrlReplacement = $configBaseUrl;
+				$canonicalUrl = str_replace($requestBaseUrl, $baseUrlReplacement, $canonicalUrl);
+			}
+		}
+
 		// Public identifiers.
 		// 1) A unique OJS-internal ID that will help us to easily attribute
 		//    statistics to a specific publication object.
