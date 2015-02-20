@@ -166,6 +166,7 @@ class SubscriptionForm extends Form {
 				'notes' => $subscription->getNotes()
 			);
 		}
+		return parent::initData();
 	}
 
 	/**
@@ -257,6 +258,7 @@ class SubscriptionForm extends Form {
 		$user->setMailingAddress($this->getData('userMailingAddress'));
 		$user->setCountry($this->getData('userCountry'));
 
+		parent::execute($user);
 		$userDao->updateObject($user);
 	}
 

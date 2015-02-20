@@ -189,6 +189,8 @@ class ProfileForm extends Form {
 			'interestsKeywords' => $interestManager->getInterestsForUser($user),
 			'interestsTextOnly' => $interestManager->getInterestsString($user),
 		);
+
+		return parent::initData();
 	}
 
 	/**
@@ -270,6 +272,8 @@ class ProfileForm extends Form {
 			}
 		}
 		$user->setLocales($locales);
+
+		parent::execute($user);
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$userDao->updateObject($user);

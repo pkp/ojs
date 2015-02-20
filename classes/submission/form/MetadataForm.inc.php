@@ -186,11 +186,11 @@ class MetadataForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array(
+		return array_merge(parent::getLocaleFieldNames(), array(
 			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
 			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor', 'citations',
 			'copyrightHolder'
-		);
+		));
 	}
 
 	/**
