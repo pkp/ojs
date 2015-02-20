@@ -54,11 +54,9 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	}
 
 	/**
-	 * Generate the subscription report and write CSV contents to file
-	 * @param $args array Request arguments
+	 * @copydoc ReportPlugin::display() 
 	 */
-	function display(&$args) {
-		$request = $this->getRequest();
+	function display($args, $request) {
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$userDao = DAORegistry::getDAO('UserDAO');

@@ -46,8 +46,10 @@ class ViewReportPlugin extends ReportPlugin {
 		return __('plugins.reports.views.description');
 	}
 
-	function display(&$args) {
-		$request = $this->getRequest();
+	/**
+	 * @copydoc ReportPlugin::display()
+	 */
+	function display($args, $request) {
 		$journal = $request->getJournal();
 
 		$columns = array(

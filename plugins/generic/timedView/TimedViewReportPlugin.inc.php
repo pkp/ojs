@@ -51,8 +51,11 @@ class TimedViewReportPlugin extends ReportPlugin {
 		return __('plugins.generic.timedView.description');
 	}
 
-	function display(&$args, $request) {
-		parent::display($args);
+	/**
+	 * @copydoc ReportPlugin::display()
+	 */
+	function display($args, $request) {
+		parent::display($args, $request);
 
 		$form = new TimedViewReportForm($this);
 

@@ -50,8 +50,10 @@ class ArticleReportPlugin extends ReportPlugin {
 		return __('plugins.reports.articles.description');
 	}
 
-	function display(&$args) {
-		$request = $this->getRequest();
+	/**
+	 * @copydoc ReportPlugin::display() 
+	 */
+	function display($args, $request) {
 		$journal = $request->getJournal();
 
 		header('content-type: text/comma-separated-values');

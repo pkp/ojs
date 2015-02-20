@@ -56,10 +56,10 @@ class UsageStatsReportPlugin extends ReportPlugin {
 	}
 
 	/**
-	 * @see ReportPlugin::display()
+	 * @copydoc ReportPlugin::display()
 	 */
-	function display(&$args) {
-		return parent::display($args);
+	function display($args, $request) {
+		return parent::display($args, $request);
 	}
 
 	/**
