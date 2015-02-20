@@ -14,7 +14,7 @@
  *
  */
 
-import('classes.plugins.GatewayPlugin');
+import('lib.pkp.classes.plugins.GatewayPlugin');
 
 class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	var $parentPluginName;

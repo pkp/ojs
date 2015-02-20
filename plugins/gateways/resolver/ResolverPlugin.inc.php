@@ -13,7 +13,7 @@
  * @brief Simple resolver gateway plugin
  */
 
-import('classes.plugins.GatewayPlugin');
+import('lib.pkp.classes.plugins.GatewayPlugin');
 
 class ResolverPlugin extends GatewayPlugin {
 	/**

@@ -14,7 +14,7 @@
  *
  */
 
-import('classes.plugins.GatewayPlugin');
+import('lib.pkp.classes.plugins.GatewayPlugin');
 
 class WebFeedGatewayPlugin extends GatewayPlugin {
 	/** @var string Name of parent plugin */
@@ -96,8 +96,10 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 
 	/**
 	 * Handle fetch requests for this plugin.
+	 * @param $args array Arguments.
+	 * @param $request PKPRequest Request object.
 	 */
-	function fetch($args) {
+	function fetch($args, $request) {
 		// Make sure we're within a Journal context
 		$request = $this->getRequest();
 		$journal = $request->getJournal();
