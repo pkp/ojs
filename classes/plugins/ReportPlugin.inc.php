@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/ReportPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReportPlugin
@@ -193,10 +193,11 @@ class ReportPlugin extends Plugin {
 	}
 
 	/**
-	 * Display the import/export plugin UI.
+	 * Base method to display the report plugin UI.  This should be implemented in the subclass.
 	 * @param $args Array The array of arguments the user supplied.
+	 * @param $request Object The PKP Request object initiating the call.
 	 */
-	function display(&$args) {
+	function display($args, $request) {
 		$templateManager =& TemplateManager::getManager();
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 	}

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/acron/AcronPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2000-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2000-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AcronPlugin
@@ -213,13 +213,14 @@ class AcronPlugin extends GenericPlugin {
 
 		ob_end_flush();
 		flush();
+		
+		set_time_limit(0);
 
 		// Fix the current working directory. See
 		// http://www.php.net/manual/en/function.register-shutdown-function.php#92657
 		chdir($this->_workingDir);
 
 		$taskDao =& DAORegistry::getDao('ScheduledTaskDAO');
-
 		foreach($this->_tasksToRun as $task) {
 			// Strip off the package name(s) to get the base class name
 			$className = $task['className'];

@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/reviews/ReviewReportPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  * 
  * @class ReviewReportPlugin
@@ -51,7 +51,7 @@ class ReviewReportPlugin extends ReportPlugin {
 		return __('plugins.reports.reviews.description');
 	}
 
-	function display(&$args) {
+	function display($args, $request) {
 		$journal =& Request::getJournal();
 
 		header('content-type: text/comma-separated-values');

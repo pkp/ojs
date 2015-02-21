@@ -3,8 +3,8 @@
 /**
  * @file pages/article/ArticleHandler.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleHandler
@@ -92,7 +92,9 @@ class ArticleHandler extends Handler {
 
 		if ($galley && !$galley->isHtmlGalley() && !$galley->isPdfGalley()) {
 			if ($galley->getRemoteURL()) {
-				$request->redirectUrl($galley->getRemoteURL());
+				if (!HookRegistry::call('ArticleHandler::viewRemoteGalley', array(&$article, &$galley))) {
+					$request->redirectUrl($galley->getRemoteURL());
+				}
 			}
 			if ($galley->isInlineable()) {
 				return $this->viewFile(

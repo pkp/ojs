@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/subscriptions/SubscriptionReportPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionReportPlugin
@@ -56,8 +56,9 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	/**
 	 * Generate the subscription report and write CSV contents to file
 	 * @param $args array Request arguments 
+	 * @param $request object Request object
 	 */
-	function display(&$args) {
+	function display($args, $request) {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 		$userDao =& DAORegistry::getDAO('UserDAO');

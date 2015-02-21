@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/counter/CounterReportPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CounterReportPlugin
@@ -86,7 +86,7 @@ class CounterReportPlugin extends ReportPlugin {
 	 * @see ReportPlugin::display()
 	 */
 	function display(&$args, &$request) {
-		parent::display($args);
+		parent::display($args, $request);
 
 		$journal =& $request->getJournal();
 		if (!Validation::isSiteAdmin()) {

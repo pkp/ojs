@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/views/ViewReportPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ViewReportPlugin
@@ -48,7 +48,7 @@ class ViewReportPlugin extends ReportPlugin {
 		return __('plugins.reports.views.description');
 	}
 
-	function display(&$args) {
+	function display($args, $request) {
 		$journal =& Request::getJournal();
 
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
@@ -79,7 +79,6 @@ class ViewReportPlugin extends ReportPlugin {
 		$dbResultRange = new DBResultRange(STATISTICS_MAX_ROWS);
 		$page = 3;
 
-		$request =& Application::getRequest();
 		if ($request->getUserVar('metricType') === OJS_METRIC_TYPE_COUNTER) {
 			$metricType = OJS_METRIC_TYPE_COUNTER;
 		} else {
