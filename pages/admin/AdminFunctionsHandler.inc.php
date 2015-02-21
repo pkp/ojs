@@ -109,6 +109,31 @@ class AdminFunctionsHandler extends AdminHandler {
 
 		Request::redirect(null, 'admin');
 	}
+
+	/**
+	 * Download scheduled task execution log file.
+	 * @param $args array
+	 */
+	function downloadScheduledTaskLogFile() {
+		$this->validate();
+		$application =& Application::getApplication();
+		$request =& $application->getRequest();
+
+		$file = $request->getUserVar('file');
+		import('lib.pkp.classes.scheduledTask.ScheduledTaskHelper');
+		ScheduledTaskHelper::downloadExecutionLog($file);
+	}
+	
+	/**
+	 * Clear scheduled tasks execution logs.
+	 */
+	function clearScheduledTaskLogFiles() {
+		$this->validate();
+		import('lib.pkp.classes.scheduledTask.ScheduledTaskHelper');
+		ScheduledTaskHelper::clearExecutionLogs();	
+
+		Request::redirect(null, 'admin');
+	}
 }
 
 ?>
