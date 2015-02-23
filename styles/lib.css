@@ -25,7 +25,7 @@
 @import url("../lib/pkp/js/lib/pnotify/buildcustom.php?mode=css&modules=");
 
 /* Tag it! - http://plugins.jquery.com/project/tag-it/ */
-@import url("lib/pkp/styles/lib/tagit.css");
+@import url("../lib/pkp/styles/lib/tagit.css");
 
 /**
  * The following libraries are compilable but compiling throws image paths off.
