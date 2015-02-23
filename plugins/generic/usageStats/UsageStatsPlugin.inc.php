@@ -228,8 +228,13 @@ class UsageStatsPlugin extends GenericPlugin {
 		* interface. */
 		$this->import('GeoLocationTool');
 
-		$tool = new GeoLocationTool();
-		return $tool->isPresent() ? $tool : null;
+		$null = null;
+		$tool =& new GeoLocationTool();
+		if ($tool->isPresent()) {
+			return $tool;
+		} else {
+			return $null;
+		}
 	}
 
 	/**
