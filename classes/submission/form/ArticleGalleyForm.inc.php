@@ -246,6 +246,9 @@ class ArticleGalleyForm extends Form {
 					} else if (strstr($fileType, 'xml')) {
 						$galley->setLabel('XML');
 						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'xml');
+					} else if (strstr($fileType, 'epub')) {
+						$galley->setLabel('EPUB');
+						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'epub');
 					}
 				}
 
