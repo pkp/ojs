@@ -20,8 +20,6 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Exporteer tijdschriftgegevens naar DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exporteer tijdschrift</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Exporteer artikelinformatie in XML voor archivering in de DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Vraag opnamen in de DOAJ aan</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Stuur dit formulier naar de DOAJ om opname van uw tijdschrift in de DOAJ te vragen. Het formulier is al gedeeltelijk ingevuld. Vul het zoveel mogelijk aan.</message>
 </locale>

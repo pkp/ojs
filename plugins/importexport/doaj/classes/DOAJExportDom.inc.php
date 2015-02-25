@@ -20,22 +20,59 @@ class DOAJExportDom {
 	 * Generate the export DOM tree for a given journal.
 	 * @param $doc object DOM object
 	 * @param $journal object Journal to export
+	 * @param $selectedObjects array
 	 */
-	function &generateJournalDom(&$doc, &$journal) {
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$sectionDao =& DAORegistry::getDAO('SectionDAO');
-		$pubArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+	function generateJournalDom($doc, $journal, $selectedObjects) {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$pubArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$journalId = $journal->getId();
 
 		// Records node contains all articles, each called a record
-		$records =& XMLCustomWriter::createElement($doc, 'records');
+		$records = XMLCustomWriter::createElement($doc, 'records');
+		
+		// retrieve selected issues
+		$selectedIssues = array();
+		if (isset($selectedObjects[DOAJ_EXPORT_ISSUES])) {
+			$selectedIssues = $selectedObjects[DOAJ_EXPORT_ISSUES];
+			
+			// make sure the selected issues belong to the current journal
+			foreach($selectedIssues as $key => $selectedIssueId) {
+				$selectedIssue = $issueDao->getIssueById($selectedIssueId, $journalId);
+				if (!$selectedIssue) unset($selectedIssues[$key]);
+			}
+		}
 
-		$pubArticles =& $pubArticleDao->getPublishedArticlesByJournalId($journal->getId());
-		while ($pubArticle =& $pubArticles->next()) {
-			$issue =& $issueDao->getIssueById($pubArticle->getIssueId());
+		// retrieve selected articles
+		$selectedArticles = array();
+		if (isset($selectedObjects[DOAJ_EXPORT_ARTICLES])) {
+			$selectedArticles = $selectedObjects[DOAJ_EXPORT_ARTICLES];
+		
+			// make sure the selected articles belong to the current journal
+			foreach($selectedArticles as $key => $selectedArticleId) {
+				$selectedArticle = $articleDao->getArticle($selectedArticleId, $journalId);
+				if (!$selectedArticle) unset($selectedArticles[$key]);
+			}
+		}
+
+		$pubArticles = $pubArticleDao->getPublishedArticlesByJournalId($journalId);
+		while ($pubArticle = $pubArticles->next()) {
+			
+			// check for selected issues:
+			$issueId = $pubArticle->getIssueId();
+			if (!empty($selectedIssues) && !in_array($issueId, $selectedIssues)) continue;
+
+			$issue = $issueDao->getIssueById($issueId);
 			if(!$issue) continue;
-			$section =& $sectionDao->getSection($pubArticle->getSectionId());
+			
+			// check for selected articles:
+			$articleId = $pubArticle->getArticleId();
+			if (!empty($selectedArticles) && !in_array($articleId, $selectedArticles)) continue;
 
-			$articleNode =& DOAJExportDom::generateArticleDom($doc, $journal, $issue, $section, $pubArticle);
+
+			$section = $sectionDao->getSection($pubArticle->getSectionId());
+			$articleNode = DOAJExportDom::generateArticleDom($doc, $journal, $issue, $section, $pubArticle);
 
 			XMLCustomWriter::appendChild($records, $articleNode);
 
@@ -53,8 +90,8 @@ class DOAJExportDom {
 	 * @param $section object Section
 	 * @param $article object Article
 	 */
-	function &generateArticleDom(&$doc, &$journal, &$issue, &$section, &$article) {
-		$root =& XMLCustomWriter::createElement($doc, 'record');
+	function generateArticleDom($doc, $journal, $issue, $section, $article) {
+		$root = XMLCustomWriter::createElement($doc, 'record');
 
 		/* --- Article Language --- */
 		XMLCustomWriter::createChildWithText($doc, $root, 'language', DOAJExportDom::mapLang($article->getLanguage()), false);
@@ -108,47 +145,47 @@ class DOAJExportDom {
 		foreach ((array) $article->getTitle(null) as $locale => $title) {
 			if (empty($title)) continue;
 
-			$titleNode =& XMLCustomWriter::createChildWithText($doc, $root, 'title', $title);
+			$titleNode = XMLCustomWriter::createChildWithText($doc, $root, 'title', $title);
 			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($titleNode, 'language', DOAJExportDom::mapLang(String::substr($locale, 0, 2)));
 		}
 
 		/* --- Authors and affiliations --- */
-		$authors =& XMLCustomWriter::createElement($doc, 'authors');
+		$authors = XMLCustomWriter::createElement($doc, 'authors');
 		XMLCustomWriter::appendChild($root, $authors);
 
 		$affilList = DOAJExportDom::generateAffiliationsList($article->getAuthors(), $article);
 
 		foreach ($article->getAuthors() as $author) {
-			$authorNode =& DOAJExportDom::generateAuthorDom($doc, $root, $issue, $article, $author, $affilList);
+			$authorNode = DOAJExportDom::generateAuthorDom($doc, $root, $issue, $article, $author, $affilList);
 			XMLCustomWriter::appendChild($authors, $authorNode);
 			unset($authorNode);
 		}
-		
+
 		if (!empty($affilList[0])) {
-			$affils =& XMLCustomWriter::createElement($doc, 'affiliationsList');
+			$affils = XMLCustomWriter::createElement($doc, 'affiliationsList');
 			XMLCustomWriter::appendChild($root, $affils);
-				
+
 			for ($i = 0; $i < count($affilList); $i++) {
-				$affilNode =& XMLCustomWriter::createChildWithText($doc, $affils, 'affiliationName', $affilList[$i]);
+				$affilNode = XMLCustomWriter::createChildWithText($doc, $affils, 'affiliationName', $affilList[$i]);
 				XMLCustomWriter::setAttribute($affilNode, 'affiliationId', $i);
 				unset($affilNode);
 			}
 		}
-		
+
 		/* --- Abstract --- */
 		foreach ((array) $article->getAbstract(null) as $locale => $abstract) {
 			if (empty($abstract)) continue;
 
-			$abstractNode =& XMLCustomWriter::createChildWithText($doc, $root, 'abstract', $abstract);
+			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', $abstract);
 			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($abstractNode, 'language', DOAJExportDom::mapLang(String::substr($locale, 0, 2)));
 		}
 
 		/* --- FullText URL --- */
-		$fullTextUrl =& XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', Request::url(null, 'article', 'view', $article->getId()));
+		$fullTextUrl = XMLCustomWriter::createChildWithText($doc, $root, 'fullTextUrl', Request::url(null, 'article', 'view', $article->getId()));
 		XMLCustomWriter::setAttribute($fullTextUrl, 'format', 'html');
 
 		/* --- Keywords --- */
-		$keywords =& XMLCustomWriter::createElement($doc, 'keywords');
+		$keywords = XMLCustomWriter::createElement($doc, 'keywords');
 		XMLCustomWriter::appendChild($root, $keywords);
 
 		$subjects = array_map('trim', explode(';', $article->getSubject($article->getLocale())));
@@ -169,8 +206,8 @@ class DOAJExportDom {
 	 * @param $author object Author
 	 * @param $affilList array List of author affiliations
 	 */
-	function &generateAuthorDom(&$doc, &$journal, &$issue, &$article, &$author, &$affilList) {
-		$root =& XMLCustomWriter::createElement($doc, 'author');
+	function generateAuthorDom($doc, $journal, $issue, $article, $author, $affilList) {
+		$root = XMLCustomWriter::createElement($doc, 'author');
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'name', $author->getFullName());
 		XMLCustomWriter::createChildWithText($doc, $root, 'email', $author->getEmail(), false);
@@ -178,19 +215,19 @@ class DOAJExportDom {
 		if(in_array($author->getAffiliation($article->getLocale()), $affilList)  && !empty($affilList[0])) {
 			XMLCustomWriter::createChildWithText($doc, $root, 'affiliationId', current(array_keys($affilList, $author->getAffiliation($article->getLocale()))));
 		}
-		
+
 		return $root;
 	}
-	
+
 	/**
 	 * Generate a list of affiliations among all authors of an article.
 	 * @param $authors object Array of article authors
 	 * @param $article Article
 	 * @return array
 	 */
-	function &generateAffiliationsList($authors, $article) {
+	function generateAffiliationsList($authors, $article) {
 		$affilList = array();
-	
+
 		foreach ($authors as $author) {
 			if(!in_array($author->getAffiliation($article->getLocale()), $affilList)) {
 				$affilList[] = $author->getAffiliation($article->getLocale()) ;

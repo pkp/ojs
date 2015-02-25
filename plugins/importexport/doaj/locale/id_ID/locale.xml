@@ -18,9 +18,7 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Ekspor Data Jurnal ke DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Ekspor Jurnal</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontak DOAJ untuk pencantuman</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Ekspor informasi artikel dalam XML untuk pengarsipan dalam DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">sebagai bahan pertimbangan, silahkan menyerahkan sebagian formulir yang telah diisi ke DOAJ, dan isi informasi yang belum lengkap sebaik yang kamu bisa.</message>
 
 </locale>
