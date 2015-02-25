@@ -39,7 +39,7 @@ class FpaglieriSubmissionTest extends ContentBaseTestCase {
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'External Review\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/div[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('jjanssen', 'Julie Janssen');
 		$this->assignReviewer('agallego', 'Adela Gallego');
 		$this->recordEditorialDecision('Accept Submission');
