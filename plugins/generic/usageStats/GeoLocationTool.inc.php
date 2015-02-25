@@ -32,13 +32,15 @@ class GeoLocationTool {
 	function GeoLocationTool() {
 		$geoLocationDbFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . "GeoLiteCity.dat";
 		if (file_exists($geoLocationDbFile)) {
-			$_isDbFilePresent = true;
+			$isDbFilePresent = true;
 			$this->_geoLocationTool = geoip_open($geoLocationDbFile, GEOIP_STANDARD);
 			include('lib' . DIRECTORY_SEPARATOR . 'geoIp' . DIRECTORY_SEPARATOR . 'geoipregionvars.php');
 			$this->_regionName = $GEOIP_REGION_NAME;
 		} else {
-			$_isDbFilePresent = false;
+			$isDbFilePresent = false;
 		}
+		
+		$this->_isDbFilePresent = $isDbFilePresent;
 	}
 
 	//
