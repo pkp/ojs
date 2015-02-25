@@ -39,7 +39,7 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 	 * @param $day string
 	 * @param $time int
 	 * @param $countryCode string
-	 * @param $region int
+	 * @param $region string
 	 * @param $cityName string
 	 * @param $fileType int
 	 * @param $loadId string
@@ -57,7 +57,7 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 				$day,
 				(int) $time,
 				$countryCode,
-				(int) $region,
+				$region,
 				$cityName,
 				(int) $fileType,
 				$loadId // Not number.
