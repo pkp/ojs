@@ -651,6 +651,15 @@ class ArticleGalleyDAO extends DAO {
 		);
 		$this->flushCache();
 	}
+
+	/**
+	 * Flush the article galley cache.
+	 */
+	function flushCache() {
+		$cache =& $this->_getGalleyCache();
+		$cache->flush();
+		unset($cache);
+	}
 }
 
 ?>

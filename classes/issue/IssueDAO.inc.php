@@ -818,7 +818,7 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Delete the public ID of an issues.
+	 * Delete the public ID of an issue.
 	 * @param $issueId int
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list
