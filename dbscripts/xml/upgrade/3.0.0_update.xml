@@ -110,4 +110,7 @@
 		<query>UPDATE rt_versions SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE subscription_type_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 	</sql>
+	<sql><!-- Bug #8397 -->
+		<query>UPDATE submissions SET status=4 WHERE status=0</sql><!-- STATUS_ARCHIVED to STATUS_DECLINED -->
+	</sql>
 </data>
