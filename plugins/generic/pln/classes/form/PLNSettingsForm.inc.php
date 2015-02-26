@@ -81,12 +81,12 @@ class PLNSettingsForm extends Form {
 		} else if ($journal->getSetting('printIssn')) {
 			$issn = $journal->getSetting('printIssn');
 		}
-		$has_issn = false;
+		$hasIssn = false;
 		if($issn != '') {
-			$has_issn = true;
+			$hasIssn = true;
 		}
 		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('has_issn', $has_issn);
+		$templateMgr->assign('hasIssn', $hasIssn);
 		$templateMgr->assign('terms_of_use', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use')));
 		$templateMgr->assign('terms_of_use_agreement', $this->getData('terms_of_use_agreement'));
 		parent::display();
