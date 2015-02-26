@@ -22,7 +22,7 @@
 				<td class="label">
 					{fieldLabel name="terms_of_use" key="plugins.generic.pln.settings.terms_of_use"}
 				</td>
- 				<td class="value">
+                                <td class="value">
 					<p>{translate key="plugins.generic.pln.settings.terms_of_use_help"}</p>
                                         {if $has_issn}
                                             {foreach name=terms from=$terms_of_use key=term_name item=term_data}
@@ -34,7 +34,7 @@
                                             <p>{translate key="plugins.generic.pln.notifications.issn_setting"}</p>
                                         {/if}
 				</td>
- 			</tr>
+                        </tr>
 
 			<tr><td colspan="2"><div class="separator">&nbsp;</div></td></tr>
 			
