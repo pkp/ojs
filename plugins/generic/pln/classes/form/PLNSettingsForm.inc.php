@@ -74,7 +74,19 @@ class PLNSettingsForm extends Form {
 	 * @see Form::display()
 	 */
 	function display() {
+		$journal =& Request::getJournal();
+		$issn = '';
+		if ($journal->getSetting('onlineIssn')) {
+			$issn = $journal->getSetting('onlineIssn');
+		} else if ($journal->getSetting('printIssn')) {
+			$issn = $journal->getSetting('printIssn');
+		}
+		$hasIssn = false;
+		if($issn != '') {
+			$hasIssn = true;
+		}
 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('hasIssn', $hasIssn);
 		$templateMgr->assign('terms_of_use', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use')));
 		$templateMgr->assign('terms_of_use_agreement', $this->getData('terms_of_use_agreement'));
 		parent::display();
