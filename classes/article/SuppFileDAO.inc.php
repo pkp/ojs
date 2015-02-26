@@ -17,13 +17,55 @@
 import('classes.article.SuppFile');
 
 class SuppFileDAO extends DAO {
+
+	/**
+	 * Get supp file objects cache.
+	 * @return GenericCache
+	 */
+	function &_getSuppFileCache() {
+		if (!isset($this->suppFileCache)) {
+			$cacheManager =& CacheManager::getManager();
+			$this->suppFileCache =& $cacheManager->getObjectCache('suppfile', 0, array(&$this, '_suppFileCacheMiss'));
+		}
+		return $this->suppFileCache;
+	}
+
+	/**
+	 * Callback when there is no object in cache.
+	 * @param $cache GenericCache
+	 * @param $id int The wanted object id.
+	 * @return SuppFile
+	 */
+	function &_suppFileCacheMiss(&$cache, $id) {
+		$suppFile =& $this->getSuppFile($id, null, false);
+		$cache->setCache($id, $suppFile);
+		return $suppFile;
+	}
+
+	/**
+	 * Flush the supp file galley cache.
+	 */
+	function flushCache() {
+		$cache =& $this->_getSuppFileCache();
+		$cache->flush();
+		unset($cache);
+	}
+
 	/**
 	 * Retrieve a supplementary file by ID.
 	 * @param $suppFileId int
 	 * @param $articleId int optional
+	 * @param $useCache boolean optional
 	 * @return SuppFile
 	 */
-	function &getSuppFile($suppFileId, $articleId = null) {
+	function &getSuppFile($suppFileId, $articleId = null, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getSuppFileCache();
+			$returner = $cache->get($suppFileId);
+			if ($returner && $articleId != null && $articleId != $returner->getArticleId()) $returner = null;
+			return $returner;
+		}
+
 		$params = array($suppFileId);
 		if ($articleId) $params[] = $articleId;
 
