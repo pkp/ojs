@@ -386,7 +386,7 @@ class PubIdPlugin extends Plugin {
 			foreach ($pubIdPlugins as $pubIdPlugin) {
 				$excludeSubmittName = 'excludeIssueObjects_' . $pubIdPlugin->getPubIdType();
 				$clearSubmittName = 'clearIssueObjects_' . $pubIdPlugin->getPubIdType();
-				$exlude = $clear = false;
+				$exclude = $clear = false;
 				if (Request::getUserVar($excludeSubmittName)) $exclude = true;
 				if (Request::getUserVar($clearSubmittName)) $clear = true;
 				if ($exclude || $clear) {
