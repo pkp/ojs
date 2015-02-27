@@ -65,6 +65,13 @@
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">гранка</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">дополнительный файл</message>
 	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Вы видите, как будет выглядеть URN (этот вид может быть неполным). URN еще не был сгенерирован. Опубликование выпуска и просмотр страницы объекта типа «{$pubObjectType}» приведет к автоматической генерации уникального URN для этого объекта типа «{$pubObjectType}».</message>
+	<message key="plugins.pubIds.urn.editor.excludePubObject">Исключить объект типа «{$pubObjectType}» из объектов, которым назначается URN.</message>
+	<message key="plugins.pubIds.urn.editor.urnClear">Удалить URN</message>
+	<message key="plugins.pubIds.urn.editor.urnClear.description">Поставьте галочку, чтобы удалить существующие URN для объектов типа «{$pubObjectType}».</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN">Исключить объекты выпуска</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description">Используйте эту кнопку, чтобы исключить объекты (статьи, гранки и дополнительные файлы), запланированные на текущий момент к публикации в этом выпуске, из списка объектов, которым назначается URN. Обратите внимание, что это не повлияет на объекты, которые будут добавлены/запланированы позже. Вы по-прежнему сможете воспользоваться настройками исключения отдельных объектов.</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Удалить URN у объектов выпуска</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Используйте эту кнопку, чтобы удалить URN всех объектов (статей, гранок и дополнительных файлов), запланированных на текущий момент к публикации в этом номере.</message>
 
 	<!-- consider URNs at other places in the system -->
 	<message key="plugins.pubIds.urn.rt.metadata.urn">Единообразное имя ресурса (Uniform Resource Name)</message>
