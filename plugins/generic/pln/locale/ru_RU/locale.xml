@@ -63,6 +63,6 @@
 	<message key="plugins.generic.pln.notifications.http_error">Произошла ошибка при подключении к PKP PLN — пожалуйста, свяжитесь с системным администратором.</message>
 	<message key="plugins.generic.pln.notifications.terms_updated">Условия использования PKP PLN были обновлены. Принятие новых условий является обязательным для продолжения депонирования.</message>
 	<message key="plugins.generic.pln.notifications.curl_missing">Для работы необходимо включить поддержку CURL.</message>
-	<message key="plugins.generic.pln.notifications.zip_missing">Для работы необходимо вклчють поддержку ZipArchive.</message>
+	<message key="plugins.generic.pln.notifications.zip_missing">Для работы необходимо включить поддержку ZipArchive.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">У вашего журнала должен быть ISSN до того, как вы примение условия использования. Вы можете ввести ISSN на странице «Настройка журнала». После того как будет введен ISSN журнал, условия использования будут показаны ниже.</message>
 </locale>
