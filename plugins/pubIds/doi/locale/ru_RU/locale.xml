@@ -62,4 +62,11 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">дополнительный файл</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Вы видите, как будет выглядеть DOI (этот вид может быть неполным). DOI еще не был сгенерирован. Опубликование выпуска и просмотр страницы объекта типа «{$pubObjectType}» приведет к автоматической генерации уникального DOI для этого объекта типа «{$pubObjectType}».</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Заданный суффикс DOI уже используется для другого опубликованного элемента. Пожалуйста, введите уникальный суффикс DOI для каждого элемента.</message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">Исключить объект типа «{$pubObjectType}» из объектов, которым назначается DOI.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Переназначить DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Поставьте галочку, чтобы удалить существующие DOI для объектов типа «{$pubObjectType}».</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Исключить объекты выпуска</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Используйте эту кнопку, чтобы исключить объекты (статьи, гранки и дополнительные файлы), запланированные на текущий момент к публикации в этом выпуске, из списка объектов, которым назначается DOI. Обратите внимание, что это не повлияет на объекты, которые будут добавлены/запланированы позже. Вы по-прежнему сможете воспользоваться настройками исключения отдельных объектов.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Удалить DOI у объектов выпуска</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Используйте эту кнопку, чтобы удалить DOI всех объектов (статей, гранок и дополнительных файлов), запланированных на текущий момент к публикации в этом номере.</message>
 </locale>
