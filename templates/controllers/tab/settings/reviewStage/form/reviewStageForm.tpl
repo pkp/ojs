@@ -1,5 +1,5 @@
 {**
- * controllers/tab/settings/reviewStage/form/ojsReviewStageForm.tpl
+ * controllers/tab/settings/reviewStage/form/reviewStageForm.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -19,4 +19,4 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 {/capture}
-{include file="controllers/tab/settings/reviewStage/form/reviewStageForm.tpl"}
+{include file="core:controllers/tab/settings/reviewStage/form/reviewStageForm.tpl"}
