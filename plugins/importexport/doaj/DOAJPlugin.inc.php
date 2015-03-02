@@ -146,6 +146,7 @@ class DOAJPlugin extends ImportExportPlugin {
 	}
 
 	/**
+	 * Label articles (on article or issue level) with a 'doaj::registered' flag
 	 * @param $request PKPRequest
 	 * @param $selectedObjects array
 	 */
@@ -250,12 +251,12 @@ class DOAJPlugin extends ImportExportPlugin {
 	function _displayArticleList($templateMgr, $journal, $unregistered = false) {
 		$this->setBreadcrumbs(array(), true);
 
-		// Retrieve all published articles.
-		$articles = $this->_getAllPublishedArticles($journal);
-
-		// Retrieve array elements without index "doaj::registered"
-		if ($unregistered == true) {
-			$articles = array_filter($articles, create_function('$article', 'return !$article["article"]->getData("doaj::registered");'));
+		if ($unregistered == false) {
+			// Retrieve all published articles.
+			$articles = $this->_getAllPublishedArticles($journal);
+		} else {
+			// Retrieve array elements without index "doaj::registered"
+			$articles = array_filter($this->_getAllPublishedArticles($journal), create_function('$article', 'return !$article["article"]->getData("doaj::registered");'));
 		}
 		
 		// Paginate articles.
