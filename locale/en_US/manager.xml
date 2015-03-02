@@ -365,11 +365,6 @@
 	<message key="manager.setup.reviewOptions.reviewTime">Review Time</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Provide links to <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ensuring a Blind Review</a> on pages where authors and reviewers upload files.]]></message>
 	<message key="manager.setup.reviewPolicy">Review Policy</message>
-	<message key="manager.setup.reviewProcess">Review Process</message>
-	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS supports two models for managing the review process. The Standard Review Process is recommended because it steps reviewers through the process, ensures a complete review history for each submission, and takes advantage of automatic reminder notification, and standard recommendations for submissions (Accept; Accept with revisions; Submit for review; Submit elsewhere; Decline; See comments).<br /><br />Select one of the following:]]></message>
-	<message key="manager.setup.reviewProcessEmail">Email-Attachment Review Process</message>
-	<message key="manager.setup.reviewProcessStandard">Standard Review Process</message>
-	<message key="manager.setup.reviewProcessStandardDescription">Editors will email selected Reviewers the title and abstract of the submission, as well as an invitation to log into the journal web site to complete the review. Reviewers enter the journal web site to agree to do the review, to download submissions, submit their comments, and select a recommendation.</message>
 	<message key="manager.setup.searchEngineIndexing">Search Engine Indexing</message>
 	<message key="manager.setup.searchEngineIndexingDescription">To assist the users of search engines in discovering this journal, provide a brief description of the journal and relevant keywords (separated by semicolons).</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>

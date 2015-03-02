@@ -26,7 +26,6 @@ class ReviewStageForm extends PKPReviewStageForm {
 			array(
 				'restrictReviewerFileAccess' => 'bool',
 				'reviewerAccessKeysEnabled' => 'bool',
-				'mailSubmissionsToReviewers' => 'bool',
 			),
 			'controllers/tab/settings/reviewStage/form/ojsReviewStageForm.tpl'
 		);
