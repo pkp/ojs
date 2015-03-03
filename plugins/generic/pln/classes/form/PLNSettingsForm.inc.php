@@ -64,7 +64,7 @@ class PLNSettingsForm extends Form {
 		$terms_agreed = $this->getData('terms_of_use_agreement');
 		if (Request::getUserVar('terms_agreed')) {
 			foreach(array_keys(Request::getUserVar('terms_agreed')) as $term_agreed) {
-				$terms_agreed[$term_agreed] = TRUE;
+				$terms_agreed[$term_agreed] = date('c');
 			}
 			$this->setData('terms_of_use_agreement', $terms_agreed);
 		}

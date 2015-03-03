@@ -434,7 +434,7 @@ class PLNPlugin extends GenericPlugin {
 		$termsAgreed = unserialize($this->getSetting($journalId, 'terms_of_use_agreement'));
 		
 		foreach (array_keys($terms) as $term) {
-			if (!isset($termsAgreed[$term]) || ($termsAgreed[$term] == false)) return false;
+			if (!isset($termsAgreed[$term]) || ($termsAgreed[$term] == null)) return false;
 		}
 		
 		return true;
@@ -498,7 +498,7 @@ class PLNPlugin extends GenericPlugin {
 		if ($newTerms != $oldTerms) {
 			$termAgreements = array();
 			foreach($terms as $termName => $termText) {
-				$termAgreements[$termName] = false;
+				$termAgreements[$termName] = null;
 			}
 		
 			$this->updateSetting($journalId, 'terms_of_use', $newTerms, 'object');

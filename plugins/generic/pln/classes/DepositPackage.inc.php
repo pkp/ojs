@@ -239,11 +239,13 @@ class DepositPackage {
 		$entry->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:pkp', PLN_PLUGIN_NAME);
 
 		$terms = unserialize($plnPlugin->getSetting($this->_deposit->getJournalId(), 'terms_of_use'));
+		$agreement = unserialize($plnPlugin->getSetting($this->_deposit->getJournalId(), 'terms_of_use_agreement'));
 		
 		$pkpTermsOfUse = $termsXml->createElementNS(PLN_PLUGIN_NAME, 'pkp:terms_of_use');
 		foreach ($terms as $termName => $termData) {
 			$element = $termsXml->createElementNS(PLN_PLUGIN_NAME, $termName, $termData['term']);
 			$element->setAttribute('updated',$termData['updated']);
+			$element->setAttribute('agreed', $agreement[$termName]);
 			$pkpTermsOfUse->appendChild($element);
 		}
 
