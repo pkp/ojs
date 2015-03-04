@@ -434,7 +434,7 @@ class PLNPlugin extends GenericPlugin {
 		$termsAgreed = unserialize($this->getSetting($journalId, 'terms_of_use_agreement'));
 		
 		foreach (array_keys($terms) as $term) {
-			if (!isset($termsAgreed[$term]) || ($termsAgreed[$term])) return false;
+			if (!isset($termsAgreed[$term]) || (!$termsAgreed[$term])) return false;
 		}
 		
 		return true;
