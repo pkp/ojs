@@ -18,9 +18,7 @@
 
 	
 	<message key="plugins.importexport.doaj.export">DOAJ İçin Dergi Verisi İhracı</message>
-	<message key="plugins.importexport.doaj.export.journal">Dergi İhracı</message>
 	<message key="plugins.importexport.doaj.export.contact">Katılım için DOAJ İletişimi</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">XML olarak DOAJ arşivlemesi için makale ihraç bilgisi</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">DOAJ içinde derginizin dikkate alınması için lütfen kısmen doldurulan bu form tamamlayınız.</message>
 
 </locale>

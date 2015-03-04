@@ -18,9 +18,7 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Izvezi podatke časopisa u DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Izvezi časopis</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontaktiraj DOAJ za uključivanje</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Izvezi podatke o članku u XML za arhiviranje u DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Da bi vaš časopis ušao u razmatranje u DOAJ popunite ovaj poluautomatski popunjen formular najbolje što možete.</message>
 
 </locale>

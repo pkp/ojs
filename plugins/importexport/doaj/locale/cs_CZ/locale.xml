@@ -18,8 +18,6 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Export dat časopisu do DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exportovat časopis</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Exportovat informace článku v XML pro archivaci v DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontaktujte DOAJ pro vložení</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Pro zapsání vašeho časopisu do DOAJ odešlete částečně předvyplněný dotazník pro DOAJ a doplňte chybějící informace jak nejlépe umíte.</message>
 </locale>
