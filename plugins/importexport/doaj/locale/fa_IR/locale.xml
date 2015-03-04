@@ -16,9 +16,7 @@
 
 	
 	<message key="plugins.importexport.doaj.export">صدور داده های مجله به دواج</message>
-	<message key="plugins.importexport.doaj.export.journal">صدور مجله</message>
 	<message key="plugins.importexport.doaj.export.email">ایمیل به نماینده دواج</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">صدور اطلاعات مقاله بصورت ایکس ام ال برای ذخیره در دواج</message>
 	<message key="plugins.importexport.doaj.export.emailInfo">این ایمیل برای ارسال درخواست به دواج است. لطفا قسمتهای مورد لزوم را بر حسب سلیقه خود کامل کنید.</message>
 
 	<message key="plugins.importexport.doaj.export.contact">برای محسوب شدن با DOAJ تماس بگیرید</message>
