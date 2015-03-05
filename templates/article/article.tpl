@@ -6,15 +6,25 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article View.
+ *
+ * Available data:
+ *  $article Article The article object for the current article view
+ *  $galley ArticleGalley The (optional!) galley object for the current view
+ *  $galleys array The list of galleys available for this article
+ *  $citationsFactory ItemIterator List of citations from this article.
+ *  $subscriptionRequired boolean Whether or not a subscription is required
+ *  $subscribedUser boolean Whether or not the current user is subscribed
+ *  $subscribedDomain boolean Whether or not the user has subscription access by domain
+ *  $showGalleyLinks boolean True iff OJS should display galley links regardless of subscription status
  *}
-{if $galley}
-	{assign var=pubObject value=$galley}
-{else}
-	{assign var=pubObject value=$article}
-{/if}
-
-
-{include file="article/header.tpl"}
+{strip}
+	{if $galley}
+		{assign var=pubObject value=$galley}
+	{else}
+		{assign var=pubObject value=$article}
+	{/if}
+	{include file="article/header.tpl"}
+{/strip}
 
 {if $galley}
 	{call_hook name="Templates::Galley::displayGalley" fileId=$fileId}
@@ -60,65 +70,12 @@
 		</div>
 	{/if}
 
-	{if (!$subscriptionRequired || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || $subscribedUser || $subscribedDomain)}
-		{assign var=hasAccess value=1}
-	{else}
-		{assign var=hasAccess value=0}
-	{/if}
+	{include file="article/galleys.tpl"}
 
-	{if $galleys}
-		<div id="articleFullText">
-		<h4>{translate key="reader.fullText"}</h4>
-		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
-			{foreach from=$article->getGalleys() item=galley name=galleyList}{if $galley->getIsAvailable()}
-				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
-				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
-					{if $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || !$galley->isPdfGalley()}
-						<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
-					{else}
-						<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
-					{/if}
-				{/if}
-			{/if}{/foreach}
-			{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
-				{if $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN}
-					<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
-				{else}
-					<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
-				{/if}
-			{/if}
-		{else}
-			&nbsp;<a href="{url page="about" op="subscriptions"}" target="_parent">{translate key="reader.subscribersOnly"}</a>
-		{/if}
-		</div>
-	{/if}
-
-	{if $citationFactory->getCount()}
-		<div id="articleCitations">
-		<h4>{translate key="submission.citations"}</h4>
-		<br />
-		<div>
-			{iterate from=citationFactory item=citation}
-				<p>{$citation->getRawCitation()|strip_unsafe_html}</p>
-			{/iterate}
-		</div>
-		<br />
-		</div>
-	{/if}
+	{include file="article/citations.tpl"}
 {/if}
 
-{foreach from=$pubIdPlugins item=pubIdPlugin}
-	{if $issue->getPublished()}
-		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject)}
-	{else}
-		{assign var=pubId value=$pubIdPlugin->getPubId($pubObject, true)}{* Preview rather than assign a pubId *}
-	{/if}
-	{if $pubId}
-		<br />
-		<br />
-		{$pubIdPlugin->getPubIdDisplayType()|escape}: {if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}</a>{else}{$pubId|escape}{/if}
-	{/if}
-{/foreach}
+{include file="article/pubIds.tpl"}
 
 {include file="article/comments.tpl"}
 

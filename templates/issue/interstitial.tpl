@@ -5,8 +5,7 @@
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Interstitial page used to display a note
- * before downloading an issue galley file
+ * Interstitial page used to display a note before downloading an issue galley
  *}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -36,21 +35,22 @@
 <body>
 
 <div id="container">
-<div id="body">
-<div id="main">
-<div id="content">
-<h3>{translate key="issue.nonpdf.title"}</h3>
-{url|assign:"url" op="download" path=$issueId|to_array:$galley->getBestGalleyId($currentJournal)}
-<p>{translate key="article.nonpdf.note" url=$url}</p>
+	<div id="body">
+		<div id="main">
+			<div id="content">
+				<h3>{translate key="issue.nonpdf.title"}</h3>
+				{url|assign:"url" op="download" path=$issueId|to_array:$galley->getBestGalleyId($currentJournal)}
+				<p>{translate key="article.nonpdf.note" url=$url}</p>
 
-{if $pageFooter}
-<br /><br />
-{$pageFooter}
-{/if}
-{call_hook name="Templates::Issue::Interstitial::PageFooter"}
+				{if $pageFooter}
+					<br /><br />
+					{$pageFooter}
+				{/if}
+				{call_hook name="Templates::Issue::Interstitial::PageFooter"}
+			</div>
+		</div>
+	</div>
 </div>
-</div>
-</div>
-</div>
+
 </body>
 </html>
