@@ -112,13 +112,12 @@ class ArticleDAO extends SubmissionDAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO submissions
-				(locale, user_id, context_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author, comments_status)
+				(locale, context_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author, comments_status)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
-				(int) $article->getUserId(),
 				(int) $article->getContextId(),
 				(int) $article->getSectionId(),
 				(int) $article->getStageId(),
@@ -157,7 +156,6 @@ class ArticleDAO extends SubmissionDAO {
 		$this->update(
 			sprintf('UPDATE submissions
 				SET	locale = ?,
-					user_id = ?,
 					section_id = ?,
 					stage_id = ?,
 					language = ?,
@@ -177,7 +175,6 @@ class ArticleDAO extends SubmissionDAO {
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
-				(int) $article->getUserId(),
 				(int) $article->getSectionId(),
 				(int) $article->getStageId(),
 				$article->getLanguage(),
@@ -263,24 +260,6 @@ class ArticleDAO extends SubmissionDAO {
 	function getJournalId($articleId) {
 		$result = $this->retrieve(
 			'SELECT context_id FROM submissions WHERE submission_id = ?', (int) $articleId
-		);
-		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
-
-		$result->Close();
-		return $returner;
-	}
-
-	/**
-	 * Check if the specified incomplete submission exists.
-	 * @param $articleId int
-	 * @param $userId int
-	 * @param $journalId int
-	 * @return int the submission progress
-	 */
-	function incompleteSubmissionExists($articleId, $userId, $journalId) {
-		$result = $this->retrieve(
-			'SELECT submission_progress FROM submissions WHERE submission_id = ? AND user_id = ? AND context_id = ? AND date_submitted IS NULL',
-			array((int) $articleId, (int) $userId, (int) $journalId)
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 

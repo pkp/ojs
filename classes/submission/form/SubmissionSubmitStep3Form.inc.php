@@ -50,7 +50,7 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 			$mail->setFrom($this->context->getSetting('contactEmail'), $this->context->getSetting('contactName'));
 			$authorMail->setFrom($this->context->getSetting('contactEmail'), $this->context->getSetting('contactName'));
 
-			$user = $submission->getUser();
+			$user = $request->getUser();
 			$primaryAuthor = $submission->getPrimaryAuthor();
 			if (!isset($primaryAuthor)) {
 				$authors = $submission->getAuthors();

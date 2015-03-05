@@ -37,13 +37,6 @@ class UserAction {
 
 		HookRegistry::call('UserAction::mergeUsers', array(&$oldUserId, &$newUserId));
 
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$articles = $articleDao->getByUserId($oldUserId);
-		while ($article = $articles->next()) {
-			$article->setUserId($newUserId);
-			$articleDao->updateObject($article);
-		}
-
 		$commentDao = DAORegistry::getDAO('CommentDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$newUser = $userDao->getById($newUserId);
@@ -154,6 +147,13 @@ class UserAction {
 			}
 		}
 		$userGroupDao->deleteAssignmentsByUserId($oldUserId);
+
+		// Delete stage assignments outright.
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+		$stageAssignments = $stageAssignmentDao->getByUserId($oldUserId);
+		while ($stageAssignment = $stageAssignments->next()) {
+			$stageAssignmentDao->deleteObject($stageAssignment);
+		}
 
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$userDao->deleteUserById($oldUserId);
