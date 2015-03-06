@@ -607,7 +607,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="about.focusAndScope">Foco e Escopo</message>
 	<message key="about.sectionPolicies">Políticas de Seção</message>
 	<message key="about.submissions">Submissões</message>
-	<message key="about.sponsors">Editora</message>
+	<message key="about.sponsors">Agências de Fomento</message>
 	<message key="about.contributors">Patrocínio</message>
 	<message key="about.onlineSubmissions">Submissões Online</message>
 	<message key="about.onlineSubmissions.haveAccount">Já possui um login/senha de acesso à revista {$journalTitle}?</message>
