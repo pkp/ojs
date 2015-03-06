@@ -7,6 +7,10 @@
  *
  * Article View -- Comments component.
  *
+ * Available data:
+ *  $article Article The article object for the current article view
+ *  $galley ArticleGalley The (optional!) galley object for the current view
+ *  $galleys array The list of galleys available for this article
  *}
 {if $comments}
 <div class="separator"></div>

@@ -72,4 +72,3 @@
 	{call_hook name="Templates::Issue::Issue::Article"}
 	{/foreach}
 {/foreach}
-

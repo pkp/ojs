@@ -7,6 +7,10 @@
  *
  * Dublin Core metadata elements for articles.
  *
+ * Available data:
+ *  $article Article The article object for the current article view
+ *  $galley ArticleGalley The (optional!) galley object for the current view
+ *  $galleys array The list of galleys available for this article
  *}
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
 
