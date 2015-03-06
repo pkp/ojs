@@ -57,4 +57,5 @@
 	<message key="submission.confirmSubmit">Are you sure you wish to submit this article to the journal?</message>
 	<message key="workflow.review.externalReview">Review</message>
 	<message key="editor.submission.decision.sendExternalReview">Send to Review</message>
+	<message key="submission.event.issueMetadataUpdated">The submission's issue metadata was updated.</message>
 </locale>
