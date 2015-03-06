@@ -29,11 +29,27 @@ class RcerpaSubmissionTest extends ContentBaseTestCase {
 			'roles' => array('Author'),
 		));
 
+		$title = 'A Review of Object Oriented Database Concepts and their Implementation';
 		$this->createSubmission(array(
 			'section' => 'Reviews',
-			'title' => 'A Review of Object Oriented Database Concepts and their Implementation',
+			'title' => $title,
+			'abstract' => 'Object Oriented design and databases has attracted a great deal of attention in recent years. This article outlines and discusses the semantic data principles used inter alia in understanding Object Oriented concepts. To illustrate and lend substance to this discussion a list is presented of OODBMS implementations. Their weaknesses and strengths are analysed. And their suitability for specific applications is assessed. Finally we offer some conclusions about research in this area and the directions in which further development should proceed.',
 		));
+		$this->logOut();
 
+		$this->findSubmissionAsEditor('dbarnes', null, $title);
+		$this->waitForElementPresent($selector = '//span[text()=\'Expedite submission\']/..');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = '//span[text()=\'OK\']/..');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = 'css=[id^=issueEntry-button-]');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = '//a[@name=\'catalog\']');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = 'id=issueId');
+		$this->select($selector, 'Vol 1, No 1 (2014)');
+		$this->waitForElementPresent($selector = '//span[text()=\'Save\']/..');
+		$this->click($selector);
 		$this->logOut();
 	}
 }

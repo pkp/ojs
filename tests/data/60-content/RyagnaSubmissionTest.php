@@ -29,11 +29,26 @@ class RyagnaSubmissionTest extends ContentBaseTestCase {
 			'roles' => array('Author'),
 		));
 
+		$title = 'Whistleblowing: an ethical dilemma';
 		$this->createSubmission(array(
-			'title' => 'Whistleblowing: an ethical dilemma',
-			'abstract' => 'ABSTRACT GOES HERE',
+			'title' => $title,
+			'abstract' => 'Because most organizations depend on computer systems that electronically store important data to perform crucial business functions, the integrity of these information systems is paramount. Securing company systems, however, is not always an easy task. More sophisticated systems often provide widespread access to computer resources and increased user knowledge, which may lead to added difficulties in maintaining security. This paper explores whistleblowing employees\' exposing illegal or unethical computer practices taking place in the organization as a method of computer security and the support for whistleblowing found in codes of ethical conduct formulated by professional societies.',
 		));
+		$this->logOut();
 
+		$this->findSubmissionAsEditor('dbarnes', null, $title);
+		$this->waitForElementPresent($selector = '//span[text()=\'Expedite submission\']/..');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = '//span[text()=\'OK\']/..');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = 'css=[id^=issueEntry-button-]');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = '//a[@name=\'catalog\']');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = 'id=issueId');
+		$this->select($selector, 'Vol 1, No 1 (2014)');
+		$this->waitForElementPresent($selector = '//span[text()=\'Save\']/..');
+		$this->click($selector);
 		$this->logOut();
 	}
 }

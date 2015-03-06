@@ -29,10 +29,10 @@ class IssuesTest extends WebTestCase {
 		$this->click($selector);
 
 		// Create issue
-		$this->waitForElementPresent('css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
-		$this->click('css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
-		$this->waitForElementPresent('css=[id^=volume-]');
-		$this->type('css=[id^=volume-]', '1');
+		$this->waitForElementPresent($selector='css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
+		$this->click($selector);
+		$this->waitForElementPresent($selector='css=[id^=volume-]');
+		$this->type($selector, '1');
 		$this->type('css=[id^=number-]', '1');
 		$this->type('css=[id^=year-]', '2014');
 		$this->click('id=showTitle');
@@ -41,12 +41,18 @@ class IssuesTest extends WebTestCase {
 
 		// Create issue
 		$this->click('css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
-		$this->waitForElementPresent('css=[id^=volume-]');
-		$this->type('css=[id^=volume-]', '1');
+		$this->waitForElementPresent($selector='css=[id^=volume-]');
+		$this->type($selector, '1');
 		$this->type('css=[id^=number-]', '2');
 		$this->type('css=[id^=year-]', '2014');
 		$this->click('id=showTitle');
 		$this->click('//span[text()=\'Save\']/..');
+		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+
+		// Publish first issue
+		$this->click('//*[text()=\'Vol 1, No 1 (2014)\']/../../../../../following-sibling::*//a[text()=\'Publish Issue\']');
+		$this->waitForElementPresent($selector='//span[text()=\'OK\']/..');
+		$this->click($selector);
 		$this->waitForElementNotPresent('css=.ui-widget-overlay');
 	}
 }

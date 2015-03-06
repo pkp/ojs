@@ -29,11 +29,26 @@ class JforchtSubmissionTest extends ContentBaseTestCase {
 			'roles' => array('Author'),
 		));
 
+		$title = 'Cyclomatic Complexity: theme and variations';
 		$this->createSubmission(array(
-			'title' => 'Cyclomatic Complexity: theme and variations',
-			'abstract' => 'ABSTRACT GOES HERE',
+			'title' => $title,
+			'abstract' => 'Focussing on the "McCabe family" of measures for the decision/logic structure of a program, leads to an evaluation of extensions to modularization, nesting and, potentially, to object-oriented program structures. A comparison of rated, operating and essential complexities of programs suggests two new metrics: "inessential complexity" as a measure of unstructuredness and "product complexity" as a potential objective measure of structural complexity. Finally, nesting and abstraction levels are considered, especially as to how metrics from the "McCabe family" might be applied in an object-oriented systems development environment.',
 		));
+		$this->logOut();
 
+		$this->findSubmissionAsEditor('dbarnes', null, $title);
+		$this->waitForElementPresent($selector = '//span[text()=\'Expedite submission\']/..');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = '//span[text()=\'OK\']/..');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = 'css=[id^=issueEntry-button-]');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = '//a[@name=\'catalog\']');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = 'id=issueId');
+		$this->select($selector, 'Vol 1, No 1 (2014)');
+		$this->waitForElementPresent($selector = '//span[text()=\'Save\']/..');
+		$this->click($selector);
 		$this->logOut();
 	}
 }
