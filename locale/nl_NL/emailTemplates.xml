@@ -371,7 +371,6 @@ We hebben de tekstredactie van uw inzending &quot;{$submissionTitle}&quot; voor 
 Dit is de laatste gelegenheid om substantiële veranderingen te aan te brengen. In een later stadium zal u gevraagd worden om de proeven te beoordelen, maar op dat moment kunnen alleen kleine typografische en opmaakfouten hersteld worden.<br />
 <br />
 Manuscript URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Gebruikersnaam: {$authorUsername}<br />
 <br />
 Als u niet in staat bent op dit werk op dit moment te verrichten, of als u vragen heeft, neemt u dan alstublieft contact met me op. Dank u voor uw bijdrage aan dit tijdschrift.<br />
 <br />
@@ -403,7 +402,6 @@ Uw inzending &quot;{$submissionTitle}&quot; voor {$contextName} is door de eerst
 8. Stuur de COMPLEET e-mail naar de redacteur en tekstredacteur.<br />
 <br />
 URL inzending: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Gebruikersnaam: {$authorUsername}<br />
 <br />
 Dit is de laatste gelegenheid voor het doen van substantiële veranderingen aan de inzending De proefleesfase, die volgt op het maken van de proeven is beperkt tot het corrigeren van typografische en en opmaakfouten.<br />
 <br />
@@ -519,7 +517,6 @@ Uw inzending &quot;{$submissionTitle}&quot; voor {$contextName} kan proefgelezen
 6. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
 URL inzending: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Gebruikersnaam: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail van de sectieredacteur aan de auteur vraagt om het proeflezen van de proeven van een artikel. Het levert informatie over het artikel en hoe het te benaderen.</description>

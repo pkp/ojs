@@ -369,7 +369,6 @@ Právě jsme provedli redigování Vašeho příspěvku &quot;{$submissionTitle}
 Toto je poslední příležitost, kterou máte, abyste provedl výraznější změny. Později budete požádán, abyste provedl korekturu sazebnic, ale v tom okamžiku již budete moci opravit pouze drobné typografické a grafické chyby.<br />
 <br />
 URL příspěvku: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Uživatelské jméno: {$authorUsername}<br />
 <br />
 Pokud nyní nemůžete tuto práci provést nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaše přispění do tohoto časopisu.<br />
 <br />
@@ -401,7 +400,6 @@ Váš příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} prošel prv
 8. Pošlete email DOKONČENO editorovi a redaktorovi.<br />
 <br />
 URL příspěvku: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Uživatelské jméno: {$authorUsername}<br />
 <br />
 Toto je poslední možnost udělat v příspěvku podstatnější redakční zásahy. Fáze korektur, která následuje po přípravě sazebnic, je omezena na opravy typografických a grafických chyb.<br />
 <br />
@@ -517,7 +515,6 @@ Váš příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} nyní vyža
 6. Pošlete email DOKONČENO editorovi.<br />
 <br />
 URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Uživatelské jméno: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Tento email posílá editor sekce autorovi, aby mu oznámil, že sazebnice příspěvku jsou připraveny pro korektury. Obsahuje informace o článku a přístupu k němu.</description>

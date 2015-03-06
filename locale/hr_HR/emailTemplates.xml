@@ -360,7 +360,6 @@ upravo smo napravili lekturu vašeg priloga &quot;{$submissionTitle}&quot; za č
 Ovo je posljednja prilika da izvršite neke promjene u vašem prilogu. Tekst ćete moći još jednom pregledati u fazi korekture, međutim u toj fazi mogu se ispravljati samo manje tiskarske pogreške i pogreške u prijelomu.<br />
 <br />
 URL rukopisa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Korisničko ime: {$authorUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti pregledati svoj prilog ili ako imate bilo kakvih dodatnih upita, molimo vas da nam se obratite.<br />
 <br />
@@ -468,7 +467,6 @@ Srdačno,<br />
 molimo vas da izvršite korekturu prijeloma vašeg priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}. Kako biste pristupili radnom primjerku prijeloma, molimo vas da otiđete na mrežnu stranicu časopisa koristeći se poveznicom koja se nalazi u nastavku teksta. Koristite poveznicu VIEW PROOF kako biste pregledali postoje li tiskarske pogreške i greške u prijelomu u tekstu oblikovanom za objavljivanje. Ispravke zabilježite unutar okvira Korektorski ispravci, koristeći se priloženim uputama za ispravke.<br />
 <br />
 URL Rukopisa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Korisničko ime: {$authorUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti izraditi korekturu svog priloga ili ako imate bilo kakvih dodatnih pitanja, molim vas da nam se obratite.<br />
 <br />

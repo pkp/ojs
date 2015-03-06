@@ -347,7 +347,7 @@ Vi har nu redigeret dit manuskript &quot;{$submissionTitle}&quot; til {$contextN
 <br />
 Dette er den sidste mulighed, du har for at foretage omfattende ændringer. På et senere tidspunkt vil du blive bedt om at læse korrektur på satsskibene, men på det tidspunkt kan du kun rette mindre typografiske fejl og layoutfejl.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a> Brugernavn: {$authorUsername}<br />
+Manuskriptets URL-adresse: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a>
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
  Tak for dit bidrag til dette tidsskrift.<br />
@@ -370,7 +370,7 @@ Dit manuskript &quot;{$submissionTitle}&quot; til {$contextName} har gennemgået
 <br />
 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 1. 3. Åbn det hentede manuskript. 4. Gennemgå teksten, herunder manuskriptredigeringsforslag og forfatterforespørgsler. 5. Foretag eventuelle ændringer, der vil forbedre teksten yderligere. 6. Overfør filen i trin 2, når du er færdig med at foretage ændringer. 7. Klik på METADATA for at kontrollere, at indekseringsoplysningerne er fuldstændige og præcise. 8. Send e-mailen under UDFØR til redaktøren og manuskriptredaktøren.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a> Brugernavn: {$authorUsername}<br />
+Manuskriptets URL-adresse: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a>
 <br />
 Dette er din sidste mulighed for at foretage omfattende ændringer af manuskriptet. Korrekturlæsningsfasen, der følger efter forberedelsen af satsskibene, begrænser sig til rettelse af typografiske fejl og layoutfejl.<br />
 <br />
@@ -465,7 +465,7 @@ Tak, fordi du har oprettet satsskibene for manuskriptet &quot;{$submissionTitle}
 <br />
 Dit manuskript &quot;{$submissionTitle}&quot; til {$contextName} skal nu korrekturlæses ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist INSTRUKTIONER TIL KORREKTURLÆSNING 3. Klik på VIS KORREKTUR under Layout, og læs korrektur på satsskibet i det eller de anvendte formater. 4. Angiv rettelser (typografiske og formateringsmæssige) under Korrekturrettelser. 5. Gem og send rettelserne via e-mail til layoutredaktøren og korrekturlæseren. 6. Send e-mailen under UDFØR til redaktøren.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a> Brugernavn: {$authorUsername}<br />
+Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a>
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail fra sektionsredaktøren til forfatteren underretter forfatteren om, at en artikels satsskibe er klar til korrekturlæsning. Den indeholder oplysninger om artiklen og om, hvordan der oprettes adgang til den.</description>

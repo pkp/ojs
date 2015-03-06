@@ -529,7 +529,6 @@ wir haben den ersten Lektoratsdurchgang für das Manuskript &quot;{$submissionTi
 Dies ist die letzte Gelegenheit für Sie, noch größere Änderungen vorzunehmen. Sie werden später noch gebeten, die Fahnen zu korrigieren, dann können jedoch nur noch kleinere Typographie- und Layoutfehler korrigiert werden.<br />
 <br />
 URL des Beitrags: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Benutzer/innenname: {$authorUsername}<br />
 <br />
 Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben,<br />
 geben Sie mir bitte Bescheid. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.<br />
@@ -561,7 +560,6 @@ Ihre Einreichung &quot;{$submissionTitle}&quot; für {$contextName} hat den erst
 8. Benachrichtigen Sie die Redaktion mit der ABGESCHLOSSEN-E-Mail.<br />
 <br />
 URL des Beitrags: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Benutzer/innename: {$authorUsername}<br />
 <br />
 Dies ist die letzte Gelegenheit für Sie, noch größere Änderungen vorzunehmen. Sie werden danach noch gebeten, die Fahnen zu korrigieren. Dann können Sie jedoch nur noch kleinere Typographie- und Layoutfehler korrigieren.<br />
 <br />
@@ -678,7 +676,6 @@ wir bitten Sie, die Fahnenkorrektur von &quot;{$submissionTitle}&quot; für {$co
 6. Senden Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
 <br />
 URL des Beitrags: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Benutzer/innenname: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Autor/in benachrichtigt diese/n, dass die Fahnen eines Artikels zum Korrekturlektorat bereit stehen. Sie liefert Informationen über den Beitrag und darüber, wie auf ihn zugegriffen werden kann.</description>

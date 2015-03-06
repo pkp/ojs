@@ -351,7 +351,6 @@ Vi har nå redigert ditt manuskript &quot;{$submissionTitle}&quot; for {$context
 Vennligst merk deg at dette er din aller siste mulighet til å gjøre vesentlige endringer i manuskriptet. Riktignok vil du senere også bli bedt om å korrekturlese de ferdig oppsatte sidene, men i den produksjonsfasen er det bare formatfeil og typografiske feil som kan korrigeres.<br />
 <br />
 Manuskript URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Brukernavn: {$authorUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />
@@ -450,7 +449,6 @@ Takk for at du har satt opp sidene til manuskriptet &quot;{$submissionTitle}&quo
 Vi ber med dette om at du leser sluttkorrektur på de oppsatte sidene for ditt manuskript  &quot;{$submissionTitle}&quot; for {$contextName}. For å få tilgang til den aktuelle manuskriptfilen ber vi deg om å logge inn på tidsskriftets nettsted med lenken nedenfor. Bruk deretter VIS KORREKTUR-lenken for å få se manuskriptsidene slik de vil bli publisert. Vi minner om at det bare er formatfeil og typografiske feil som kan korrigeres i denne produksjonsfasen. Vi ber deg om å følge vår Instruks for korrekturlesing. Oppgi slike feil i boksen som blir hentet fram av lenken Korrekturlesing: rettelser.<br />
 <br />
 Manuskript URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Brukernavn: {$authorUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
 <br />

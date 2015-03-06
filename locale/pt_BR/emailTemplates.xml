@@ -491,7 +491,6 @@ Para verificar as sugestões e responder às perguntas ao autor, siga os passos 
 Esta é a última oportunidade para realizar alterações substanciais no documento. Em etapa posterior, lhe será solicitada a leitura de prova das composições finais, onde será possível solicitar apenas pequenas correções de digitação e de visual.<br />
 <br />
 URL da submissão: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Login: {$authorUsername}<br />
 <br />
 Caso não esteja disponível para realizar esta tarefa ou em caso de dúvidas, entre em contato via e-mail.<br />
 <br />
@@ -529,7 +528,6 @@ Avalie a edição realizada conforme os passos a seguir:<br />
 8. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor de texto.<br />
 <br />
 URL da submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Login: {$authorUsername}<br />
 <br />
 Esta é a última oportunidade para realizar alterações substanciais no documento. Em etapa posterior, lhe será solicitada a leitura de prova das composições finais, onde será possível solicitar apenas pequenas correções de digitação e de visual.<br />
 <br />
@@ -663,7 +661,6 @@ Solicitamos a leitura de provas do trabalho&quot;{$submissionTitle}&quot;, subme
 6. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
 URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Login: {$authorUsername}<br />
 <br />
 Em caso de dúvidas, entre em contato via e-mail.<br />
 <br />

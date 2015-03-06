@@ -371,7 +371,6 @@ Erabiltzaile-izena: {$copyeditorUsername}<br />
 Hau da aldaketak eta zuzenketak egiteko izango duzun azkeneko aukera. Aurrerago, galeraden proba-zuzenketa egitea eskatuko dizugu, baina orduan tipografiako eta konposizioko akats txikiak bakarrik zuzendu ahal izango dira.<br />
 <br />
 Eskuizkribuaren URLa: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Erabiltzaile-izena: {$authorUsername}<br />
 <br />
 Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu,<br />
 jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
@@ -403,7 +402,6 @@ Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuiz
 8. Bidali BUKATU duzula adierazteko mezua editoreari eta zuzentzaileari.<br />
 <br />
 Artikuluaren URLa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Erabiltzaile-izena: {$authorUsername}<br />
 <br />
 Hau da artikuluan aldaketak eta zuzenketak egiteko azkeneko aukera. Gero, proba-zuzenketan, galeradetan azaltzen diren tipografia eta konposizioko akatsak bakarrik zuzendu ahal izango dira.<br />
 <br />
@@ -519,7 +517,6 @@ Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkr
 6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
 Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Erabiltzaile-izena: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mezu hau Ataleko editoreak Egileari bidaltzen dio galeradak zuzentzen hasteko prest daudela jakinarazteko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>

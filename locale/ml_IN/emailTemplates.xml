@@ -466,7 +466,6 @@ We have now copyedited your submission &quot;{$submissionTitle}&quot; for {$cont
 This is the last opportunity that you have to make substantial changes. You will be asked at a later stage to proofread the galleys, but at that point only minor typographical and layout errors can be corrected.<br />
 <br />
 Manuscript URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Username: {$authorUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions,<br />
 please contact me. Thank you for your contribution to this journal.<br />
@@ -498,7 +497,6 @@ Your submission &quot;{$submissionTitle}&quot; for {$contextName} has been throu
 8. Send the COMPLETE email to the editor and copyeditor.<br />
 <br />
 Submission URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$authorUsername}<br />
 <br />
 This is the last opportunity to make substantial copyediting changes to the submission. The proofreading stage, that follows the preparation of the galleys, is restricted to correcting typographical and layout errors.<br />
 <br />
@@ -614,7 +612,6 @@ Your submission &quot;{$submissionTitle}&quot; to {$contextName} now needs to be
 6. Send the COMPLETE email to the editor.<br />
 <br />
 Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Username: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it.</description>

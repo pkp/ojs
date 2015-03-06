@@ -457,7 +457,6 @@ Am făcut (tehno)redactarea propunerii intitulată &quot;{$submissionTitle}&quot
 Aceasta este ultima șansă pentru a face modificări de substanță. Veți fi întrebat la un moment ulterior să faceți corecturi asupra asamblării, dar la acel moment doar cele minore privind erorile de natură tipografică și de asamblare.<br />
 <br />
 URL-ul manuscrisului: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Nume utilizator: {$authorUsername}<br />
 <br />
 Dacă nu puteți da un răspuns pozitiv pentru această sarcină sau aveți întrebări,<br />
 contactați-mă. Mulțumim pentru contribuția la revistă.<br />
@@ -489,7 +488,6 @@ Propunerea dumneavoastră intitulată &quot;{$submissionTitle}&quot; pentru {$co
 8. Trimite emailul de ÎNCHEIERE către redactor și (tehno)redactor.<br />
 <br />
 URL-ul propunerii: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nume utilizator: {$authorUsername}<br />
 <br />
 Aceasta este ultima șansă de a face modificări substanțiale de (tehno)redactare asupra propunerii. Etapa de corectură care este premergătoare pregătirii asamblării este limitată la corectarea erorilor tipografice și a celor de machetare.<br />
 <br />
@@ -605,7 +603,6 @@ Propunerea intitulată &quot;{$submissionTitle}&quot; înaintată revistei {$con
 6. Trimite emailul de ÎNCHEIERE redactorului.<br />
 <br />
 URL-ul propunerii: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nume utilizator: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Acet email este trimis de redactorul de secțiune autorului înștiințându-l pe acesta asupra faptului că asamblările articolului sunt pregătite pentru corectură. Sunt oferite informații privind articolul și cum poate fi acesta accesat.</description>

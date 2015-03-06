@@ -350,7 +350,6 @@ Nous avons terminé la révision de la soumission intitulé « {$submissionTitle
 Il s'agit de votre dernière chance d'apporter des modifications importantes à votre soumission. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.<br />
 <br />
 URL de la soumission : <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Nom d'utilisateur : {$authorUsername}<br />
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.<br />
 <br />
@@ -382,7 +381,6 @@ Nous avons maintenant terminé la révision initiale de votre manuscrit intitul�
 8. Envoyer le courriel TERMINÉ au rédacteur et au réviseur.<br />
 <br />
 URL de la soumission : <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nom d'utilisateur : {$authorUsername}<br />
 <br />
 Il s'agit de votre dernière chance d'apporter des modifications importantes à votre soumission. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.<br />
 <br />
@@ -498,7 +496,6 @@ Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit int
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
 URL du manuscrit : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nom d'utilisateur : {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel du Rédacteur de rubrique à l'Auteur avise ce dernier que les épreuves de la soumission sont prêtes pour la correction d'épreuves. Il fournit de l'information sur la soumission et comment y accéder.</description>
@@ -536,7 +533,6 @@ Nous aimerions que vous procédiez à la correction d'épreuves du manuscrit int
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
 URL du manuscrit : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nom d'utilisateur : {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]&gt;]]></body>
 		<description>Ce courriel du Rédacteur de rubrique au Correcteur d'épreuves demande que ce dernier fasse la correction des épreuves de l'article. Il fournit de l'information sur l'article, et comment y accéder.</description>

@@ -356,7 +356,6 @@ Vi har nu avslutat sakkunnigbedömning av ditt manuskript &quot;{$submissionTitl
 Ytterligare kommentarer av Redaktion och Sakkunnigbedömare hitatr du om du loggar in på tidskriftens hemsida:<br />
 <br />
 Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Användarnamn: {$authorUsername}<br />
 <br />
 Vänligen kontakta mig om du har några frågor.<br />
 <br />
@@ -397,7 +396,6 @@ Vi har nu avslutat manusredigering av manuskriptet &quot;{$submissionTitle}&quot
 Det här är sista chansen för att göra ändringar i manuskriptet. Du kommer att i ett senare skede ha möjlighet att korrekturläsa en senare version, men du kommer då bara ha möjlighet att göra mindre typografiska och layoutmässiga ändringar.<br />
 <br />
 Manuskriptets URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Användarnamn: {$authorUsername}<br />
 <br />
 Om du inte har möjlighet att göra manusredigeringen nu, eller om du har frågor,<br />
 vänligen kontakta mig.<br />
@@ -429,7 +427,6 @@ Ditt Manuskript &quot;{$submissionTitle}&quot; för {$contextName} har passerat 
 8. Skicka COMPLETE mailet till Redaktör och Manusredaktör.<br />
 <br />
 Manuskriptets URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Användarnamn: {$authorUsername}<br />
 <br />
 Det här är sista möjligheten att göra mer omfattande ändringar av manuskriptet. I korrekturskedet, som följer i redigeringsprocessen, finns endast möjlighet att gäöra typografiska ändringar av layouten.<br />
 <br />
@@ -545,7 +542,6 @@ Ditt manuskript &quot;{$submissionTitle}&quot; till {$contextName} ska korrektur
 6. Skicka COMPLETE mailet till Redaktören.<br />
 <br />
 Manuskriptets URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Användarnamn: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här meddelandet från Sektionsredaktören till Författaren innehåller information om att Korrekturversionen är iordningställd för Korrekturläsning.</description>

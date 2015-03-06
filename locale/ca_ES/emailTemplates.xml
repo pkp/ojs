@@ -379,7 +379,6 @@ Ja hem corregit la vostra tramesa &quot;{$submissionTitle}&quot; per a {$context
 Noteu que aquesta serà la darrera oportunitat que tindreu per a fer canvis substancials a la tramesa, atès que més endavant se us demanarà que corregiu les galerades, però durant aquest procés només podreu esmenar errors tipogràfics i de format.<br />
 <br />
 URL del manuscrit: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Nom d'usuari: {$authorUsername}<br />
 <br />
 Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
 <br />
@@ -413,7 +412,6 @@ S'ha completat la primera etapa de correcció de la vostra tramesa &quot;{$submi
 8. Envieu el missatge de correu electrònic COMPLET a l'editor i al corrector.<br />
 <br />
 URL de la tramesa: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nom d'usuari: {$authorUsername}<br />
 <br />
 Noteu que aquesta serà la darrera oportunitat que tindreu per a fer correccions substancials a la tramesa, atès que a l'etapa de correcció de proves, que segueix la preparació de les galerades, només es podran esmenar errors tipogràfics i de format.<br />
 <br />
@@ -536,7 +534,6 @@ Us volem demanar que us encarregueu de la correcció de proves de la vostra tram
 6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
 <br />
 URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nom d'usuari: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia a l'autor per a notificar-li que les galerades d'un article ja són a punt per a fer-hi la correcció de proves. Proporciona informació sobre l'article i com s'hi ha d'accedir.</description>

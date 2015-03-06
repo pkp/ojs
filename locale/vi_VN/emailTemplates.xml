@@ -344,7 +344,6 @@ Chúng tôi đã biên tập bài nộp của quý vị, &quot;{$submissionTitle
 Đây là cơ hội cuối cùng để quý vị có thể sửa đổi lớn với bài viết. Quý vị sẽ được đề nghị đọc soát lỗi các bản bông, nhưng ở bước đó chúng tôi chỉ có thể sửa những lỗi đánh máy và lỗi trình bày nhỏ mà thôi.<br />
 <br />
 Đường dẫn tới bản thảo: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Bí danh: {$authorUsername}<br />
  <br />
 Nếu quý vị không thể thực hiện được công việc vào thời điểm này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi.  Trân trọng cảm ơn sự đóng góp của của quý vị cho tạp chí.<br />
 <br />
@@ -443,7 +442,6 @@ Cảm ơn quý vị đã chuẩn bị các bản bông cho bài viết, &quot;{$
 Chúng tôi xin đề nghị quý vị đọc soát lỗi các bản bông cho bài nộp của quý vị, &quot;{$submissionTitle},&quot; cho tạp chí {$contextName}. Để xem các bản bông, vui lòng đăng nhập vào website của tạp chí bằng đường dẫn dưới đây. Sử dụng liên kết Xem bản soát lỗi để đọc bản sẽ được xuất bản để tìm các lỗi đánh máy và trình bày. Ghi lại những lỗi này trong ô Sửa soát lỗi theo các hướng dẫn soát lỗi được cung cấp.<br />
 <br />
 Đường dẫn tới bản thảo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Bí danh: {$authorUsername}<br />
 <br />
 Nếu quý vị không thể thực hiện được công việc vào thời điểm này hoặc có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Trân trọng cảm ơn sự đóng góp của của quý vị cho tạp chí.<br />
 <br />
