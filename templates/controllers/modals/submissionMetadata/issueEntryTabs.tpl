@@ -26,9 +26,9 @@
 <div id="newIssueEntryTabs">
 	<ul>
 		<li>
-			<a title="submission" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="submission" op="submissionMetadata" submissionId=$submissionId stageId=$stageId tabPos="0"}">{translate key="submission.issueEntry.submissionMetadata"}</a>
+			<a name="submission" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="submission" op="submissionMetadata" submissionId=$submissionId stageId=$stageId tabPos="0"}">{translate key="submission.issueEntry.submissionMetadata"}</a>
 		</li>
 		<li>
-			<a title="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="publication" op="publicationMetadata" submissionId=$submissionId stageId=$stageId tabPos="1"}">{translate key="submission.issueEntry.publicationMetadata"}</a>
+			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="publication" op="publicationMetadata" submissionId=$submissionId stageId=$stageId tabPos="1"}">{translate key="submission.issueEntry.publicationMetadata"}</a>
 		</li>
 </ul>
