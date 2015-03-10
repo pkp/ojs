@@ -137,12 +137,6 @@
 						<element key="order">5</element>
 					</array>
 				</element>
-				<element>
-					<array>
-						<element key="content">{translate key="default.journalSettings.checklist.anonymous"}</element>
-						<element key="order">6</element>
-					</array>
-				</element>
 			</array>
 		</value>
 	</setting>

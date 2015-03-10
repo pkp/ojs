@@ -20,9 +20,6 @@
   <message key="default.journalSettings.checklist.bibliographicRequirements">
     <![CDATA[テキストは、「この雑誌について」ページにある<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>で示された書式要件および書誌記述要件を順守している。]]>
   </message>
-  <message key="default.journalSettings.checklist.anonymous">
-    <![CDATA[査読を行う雑誌セクションに投稿する場合、<a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">ブラインド審査を保証する</a>ための指示に従っている。]]>
-  </message>
   <message key="default.journalSettings.privacyStatement">本雑誌サイトに入力された名前およびメールアドレスは、本雑誌で述べた目的にのみ使用し、他の目的で使用したり、他のいかなる団体にも公開することはありません。</message>
   <message key="default.journalSettings.openAccessPolicy">本雑誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにするという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。</message>
   <message key="default.journalSettings.authorSelfArchivePolicy">著者には、（出版に関する書誌的情報を提供する限り）本雑誌に投稿したアイテムを個人または機関のWebサイトに出版に先立って、あるいは出版後に掲載することを許可し、奨励します。</message>

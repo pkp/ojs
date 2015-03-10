@@ -155,7 +155,6 @@ http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI
 	<message key="default.journalSettings.checklist.addressesLinked" >ختی المقدور لینک مراجع در متن ارائه شده است. و URLs آماده کلیک کردن است</message>
 	<message key="default.journalSettings.checklist.submissionAppearance" >فاصله سطور در متن مقاله تک فاصله ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب نه در انتها میباشد.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements" ><![CDATA[متن مقاله بر طبق اصول مقاله نویسی و مرجع نگاری  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> راهنمای نویسندگان </a> میباشد که در قسمت در باره مجله یافت میشود.]]></message>
-	<message key="default.journalSettings.checklist.anonymous" ><![CDATA[در صورتی که مقاله قرار باشد کارشناسی شود ، ساب میشن از نظر  <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">رعایت کارشناسی محرمانه </a>) دستورالعمل های لازم رعایت شده است.]]></message>
 	<message key="default.journalSettings.privacyStatement" >نام ها و ایمیل های وارد شده در این سایت مجله فقط به منظور بیان شده بکار میرود و در دسترس هیچ شخص یا سازمان دیگری قرار نخواهد گرفت.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription" >با پرداخت این وجه میتوانیذ ببینید و دانلود یا چاپ کنید</message>
 	<message key="section.default.title">مقالات</message>
