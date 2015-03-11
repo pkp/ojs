@@ -34,7 +34,7 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 	 * @return int
 	 */
 	protected function _getChecklistLength() {
-		return 6;
+		return 5;
 	}
 
 	/**
