@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/tab/settings/appearance/form/OJSAppearanceForm.inc.php
+ * @file controllers/tab/settings/appearance/form/AppearanceForm.inc.php
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -13,14 +13,14 @@
  * @brief Form to edit appearance settings.
  */
 
-import('lib.pkp.controllers.tab.settings.appearance.form.AppearanceForm');
+import('lib.pkp.controllers.tab.settings.appearance.form.PKPAppearanceForm');
 
-class OJSAppearanceForm extends AppearanceForm {
+class AppearanceForm extends PKPAppearanceForm {
 	/**
 	 * Constructor.
 	 */
-	function OJSAppearanceForm($wizardMode = false) {
-		parent::AppearanceForm($wizardMode);
+	function AppearanceForm($wizardMode = false) {
+		parent::PKPAppearanceForm($wizardMode);
 	}
 
 	/**
