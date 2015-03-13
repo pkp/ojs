@@ -12,6 +12,20 @@
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
 {assign var=enableObjectDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enable`$pubObjectType`Doi")}
 {if $enableObjectDoi}
+	<script type="text/javascript">
+		{literal}
+		<!--
+			function toggleDOIClear() {
+				if ($('#excludeDoi').is(':checked')) {
+					$('#clear_doi').attr('checked', true);
+					$('#clear_doi').attr('disabled', true);
+				} else {
+					$('#clear_doi').attr('disabled', false);
+				}
+			}
+		// -->
+		{/literal}
+	</script>
 	<div id="pub-id::doi">
 		<h3>{translate key="plugins.pubIds.doi.editor.doi"}</h3>
 		{assign var=storedPubId value=$pubObject->getStoredPubId($pubIdPlugin->getPubIdType())}
@@ -42,11 +56,9 @@
 			<br />
 		{/if}
 
-		{if empty($storedPubId)}
-			<input type="checkbox" name="excludeDoi" id="excludeDoi" value="1"{if $excludeDoi} checked="checked"{/if} />
-			{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
-			{translate key="plugins.pubIds.doi.editor.excludePubObject" pubObjectType=$translatedObjectType}<br />
-		{/if}
+		<input type="checkbox" name="excludeDoi" id="excludeDoi" value="1"{if $excludeDoi} checked="checked"{/if} onClick="toggleDOIClear()" />
+		{capture assign=translatedObjectType}{translate key="plugins.pubIds.doi.editor.doiObjectType"|cat:$pubObjectType}{/capture}
+		{translate key="plugins.pubIds.doi.editor.excludePubObject" pubObjectType=$translatedObjectType}<br />
 
 		{if $pubObjectType == 'Issue'}
 			{assign var=enableArticleDoi value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableArticleDoi")}

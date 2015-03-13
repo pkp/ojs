@@ -12,6 +12,22 @@
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
 {assign var=enableObjectURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enable`$pubObjectType`URN")}
 {if $enableObjectURN}
+	<script type="text/javascript">
+		{literal}
+		<!--
+			function toggleURNClear() {
+				if ($('#excludeURN').is(':checked')) {
+					var $element = document.getElementById('other::urn');
+					$element.setAttribute('checked', 'checked');
+					$element.setAttribute('disabled', 'disabled');
+				} else {
+					var $element = document.getElementById('other::urn');
+					$element.removeAttribute('disabled');
+				}
+			}
+		// -->
+		{/literal}
+	</script>
 	<!-- URN -->
 	<div id="pub-id::other::urn">
 		<h3>{translate key="plugins.pubIds.urn.metadata"}</h3>
@@ -45,11 +61,9 @@
 			<br />
 		{/if}
 
-		{if empty($storedPubId)}
-			<input type="checkbox" name="excludeURN" id="excludeURN" value="1"{if $excludeURN} checked="checked"{/if} />
-			{capture assign=translatedObjectType}{translate key="plugins.pubIds.urn.editor.urnObjectType"|cat:$pubObjectType}{/capture}
-			{translate key="plugins.pubIds.urn.editor.excludePubObject" pubObjectType=$translatedObjectType}<br />
-		{/if}
+		<input type="checkbox" name="excludeURN" id="excludeURN" value="1"{if $excludeURN} checked="checked"{/if} onClick="toggleURNClear()"  />
+		{capture assign=translatedObjectType}{translate key="plugins.pubIds.urn.editor.urnObjectType"|cat:$pubObjectType}{/capture}
+		{translate key="plugins.pubIds.urn.editor.excludePubObject" pubObjectType=$translatedObjectType}<br />
 
 		{if $pubObjectType == 'Issue'}
 			{assign var=enableArticleURN value=$pubIdPlugin->getSetting($currentJournal->getId(), "enableArticleURN")}

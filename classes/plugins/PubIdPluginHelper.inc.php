@@ -84,33 +84,42 @@ class PubIdPluginHelper {
 				// Public ID data can only be changed as long
 				// as no ID has been generated.
 				$storedId = $pubObject->getStoredPubId($pubIdPlugin->getPubIdType());
-				if (empty($storedId)) {
-					$fieldNames = $pubIdPlugin->getFormFieldNames();
-					foreach ($fieldNames as $fieldName) {
-						$data = $form->getData($fieldName);
-						$excludeFormFieldName = $pubIdPlugin->getExcludeFormFieldName();
-						// if the exclude checkbox is unselected
-						if ($fieldName == $excludeFormFieldName && !isset($data))  {
-							$data = 0;
-						}
-						$pubObject->setData($fieldName, $data);
+				$fieldNames = $pubIdPlugin->getFormFieldNames();
+				$excludeFormFieldName = $pubIdPlugin->getExcludeFormFieldName();
+				$clearFormFieldName = 'clear_' . $pubIdPlugin->getPubIdType();
+				foreach ($fieldNames as $fieldName) {
+					$data = $form->getData($fieldName);
+					// if the exclude checkbox is unselected
+					if ($fieldName == $excludeFormFieldName && !isset($data))  {
+						$data = 0;
 					}
-				} else {
-					$clearFormFieldName = 'clear_' . $pubIdPlugin->getPubIdType();
-					if ($form->getData($clearFormFieldName)) {
-						// clear the pubId:
-						// delte the pubId from the DB
-						$pubObjectType = $pubIdPlugin->getPubObjectType($pubObject);
-						$dao = $pubIdPlugin->getDAO($pubObjectType);
-						$dao->deletePubId($pubObject->getId(), $pubIdPlugin->getPubIdType());
-						// set the object setting/data 'pub-id::...' to null, in order
-						// not to be consideren in the DB object update later in the form
-						$settingName = 'pub-id::'.$pubIdPlugin->getPubIdType();
-						$pubObject->setData($settingName, null);
+					$pubObject->setData($fieldName, $data);
+					if ($data) {
+						$this->_clearPubId($pubIdPlugin, $pubObject);
+					} else if ($form->getData($clearFormFieldName)) {
+						$this->_clearPubId($pubIdPlugin, $pubObject);
+
 					}
 				}
 			}
 		}
+	}
+
+	/**
+	 * Clear a pubId from a pubObject.
+	 * @param PubIdPlugin $pubIdPlugin
+	 * @param Object $pubObject
+	 */
+	function _clearPubId($pubIdPlugin, $pubObject) {
+		// clear the pubId:
+		// delte the pubId from the DB
+		$pubObjectType = $pubIdPlugin->getPubObjectType($pubObject);
+		$dao = $pubIdPlugin->getDAO($pubObjectType);
+		$dao->deletePubId($pubObject->getId(), $pubIdPlugin->getPubIdType());
+		// set the object setting/data 'pub-id::...' to null, in order
+		// not to be consideren in the DB object update later in the form
+		$settingName = 'pub-id::'.$pubIdPlugin->getPubIdType();
+		$pubObject->setData($settingName, null);
 	}
 
 }
