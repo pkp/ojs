@@ -2,17 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * /locale/cs_CZ/manager.xml
+  * locale/cs_CZ/manager.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2013-2015 Simon Fraser University Library
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the cs_CZ (Czech) locale.
-  *
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
   -->
 
-<locale name="cs_CZ" full_name = "Czech">
+<locale name="cs_CZ" full_name = "Čeština">
 	<message key="manager.emails.confirmResetAll">Jste si jisti, že chcete resetovat všechny šablony e-mailů v tomto časopisu? Ztratíte tak veškerá přizpůsobení, která jste dopsud udělali.</message>
 	<message key="manager.files.note">Poznámka: Prohlížeč souborů je pokročilý nástroj, který umožňuje zobrazení a přímou manipulaci se soubory a adresáři souvisejícími s časopisem.</message>
 	<message key="manager.groups">Tiráž</message>
@@ -667,7 +666,6 @@
 	<message key="manager.sections.confirmDelete">Jste si jisti, že chcete natrvalo vymazat tuto sekci?</message>
 	<message key="manager.sections.alertDelete">Než budete moci smazat tuto sekci, musíte přesunout všechny články z této sekce do jiných sekcí.</message>
 	<message key="manager.setup.subjectClassificationURLValid">Vložte, prosím, platné vzdálené URL (včetně http://).</message>
-	<message key="manager.setup.categories">Kategorie</message>
 	<message key="manager.statistics.reports.today">Dnes</message>
 	<message key="manager.statistics.reports.currentMonth">V tomto měsíci</message>
 	<message key="manager.statistics.reports.orderBy">Seřadit podle</message>
@@ -712,7 +710,6 @@
 	<message key="manager.statistics.reports.filters.byLocation.description">Zúžení výsledků hledání podle země, oblasti a/nebo města.</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Připomínka před vypršením odeslána</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Připomínka po vypršení odeslána</message>
-	<message key="manager.setup.categories.description">Zvolte nejvíce vhodné kategorie z nabídky výše. Čtenáři boudou moci procházet podle těchto kategorií z kompletní sady časopisů.</message>
 	<message key="manager.groups.publishEmails">Publikovat e-mailové adresy členů</message>
 	<message key="manager.language.submissions">Příspěvky</message>
 	<message key="manager.payment.giftFees">Darovací poplatek</message>
@@ -737,4 +734,8 @@
 	<message key="manager.statistics.reports.filters.byObject.description">Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf sazebnice, ostatní sazebnice) a/nebo podle jednoho, nebo více id.</message>
 	<message key="manager.payment.giftFeesDescription">Odkaz na dárkové předplatné se objeví v sekci Předplatné na stránce O časopise a také jako součást postranního bloku Předplatné.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Toto aktivuje platby pro dárkové předplatné a umožní čtenářům časopisu zakoupit dárkové předplatné pro jiné čtenáře.</message>
+
+	<!-- Categories -->
+	<message key="manager.setup.categories">Kategorie</message>
+	<message key="manager.setup.categories.description">Zvolte nejvíce vhodné kategorie z nabídky výše. Čtenáři boudou moci procházet podle těchto kategorií z kompletní sady časopisů.</message>
 </locale>
