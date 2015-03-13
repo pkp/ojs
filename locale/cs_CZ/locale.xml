@@ -362,7 +362,7 @@
 
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Aby byl obsah všech časopisů hostovaných na této stránce indexován v celosvětově distribuovaném systému výzkumných databází, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">zaregistrujte</a> URL Vaší stránky do <a href="http://pkp.sfu.ca/harvester/" target="_blank">shromažďovače</a> metadat Public Knowledge Projektu. Tento nástroj sbírá metadata z každé indexované položky tohoto časopisu a umožňuje přesné a hromadné vyhledávání v rámci výzkumných stránek, které dodržují <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">protokol Iniciativy otevřených archivů pro shromažďování metadat </a> (Open Archives Initiative (OAI) Protocol for Metadata Harvesting).
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikněte zde</a> a vložte <span class="highlight">{$siteUrl}</span> pod <b> URL stránky</b> a <span class="highlight">{$oaiUrl}</span> pod <b> Základní URL pro OAI Archív</b>.
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikněte zde</a> a vložte <span class="highlight">{$siteUrl}</span> pod <strong> URL stránky</strong> a <span class="highlight">{$oaiUrl}</span> pod <strong> Základní URL pro OAI Archív</strong>.
 <br /><br />
 Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigurace OJS systému. Příští verze OJS umožní, aby rozhraní OAI bylo povoleno nebo zakázáno pro jednotlivé časopisy na této stránce.]]></message>
 
@@ -452,7 +452,7 @@ Autoři, kteří publikují v tomto časopise, souhlasí s následujícími body
 Název systému klasifikace]]></message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Aby byl obsah tohoto časopisu indexován v celosvětově distribuovaném systému výzkumných databází, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">zaregistrujte</a> URL Vašeho časopisu do <a href="http://pkp.sfu.ca/harvester/" target="_blank">shromažďovače</a> metadat Public Knowledge Projektu. Tento nástroj sbírá metadata z každé indexované položky tohoto časopisu a umožňuje přesné a hromadné vyhledávání v rámci výzkumných stránek, které dodržují <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> protokol Iniciativy otevřených archivů pro shromažďování metadat </a> (Open Archives Initiative (OAI) Protocol for Metadata Harvesting).
 <br /><br />
-Vězte, že pokud již Váš administrátor stránek zaregistroval tyto stránky do PKP shromažďovače, Váš časopis bude indexován automaticky a Vy nemusíte časopis registrovat.<br /><br /><a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikněte zde</a> a vložte <span class="highlight">{$siteUrl}</span> pod <b>URL stránky</b> a <span class="highlight">{$oaiUrl}</span> pod <b>Základní URL pro OAI Archív</b>.]]></message>
+Vězte, že pokud již Váš administrátor stránek zaregistroval tyto stránky do PKP shromažďovače, Váš časopis bude indexován automaticky a Vy nemusíte časopis registrovat.<br /><br /><a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikněte zde</a> a vložte <span class="highlight">{$siteUrl}</span> pod <strong>URL stránky</strong> a <span class="highlight">{$oaiUrl}</span> pod <strong>Základní URL pro OAI Archív</strong>.]]></message>
 	<message key="manager.setup.citations">Povolit pomocníka pro zpracování citací</message>
 
 	<!-- Setup Step 4 -->
@@ -735,7 +735,7 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="user.register.noJournals">Na této stránce nejsou žádné časopisy, do kterých byste se mohl zaregistrovat.</message>
 	<message key="user.register.privacyStatement">Prohlášení o soukromí</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud jste již registrovaný do tohoto nebo jiného časopisu na této stránce.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud ještě <b>nejste</b> registrovaný do tohoto nebo jiného časopisu na těchto stránkách.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Klikněte zde</a>, pokud ještě <strong>nejste</strong> registrovaný do tohoto nebo jiného časopisu na těchto stránkách.]]></message>
 	<message key="user.register.loginToRegister">Pro zaregistrování do tohoto časopisu vložte Vaše existující uživatelské jméno a heslo.</message>
 	<message key="user.register.registrationDisabled">Tento časopis v současnosti nepřijímá žádné registrace uživatelů.</message>
 	<message key="user.register.form.passwordLengthTooShort">Heslo, které jste vložil není dostatečně dlouhé.</message>
@@ -798,12 +798,12 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="search.syntaxInstructions"><![CDATA[Tipy pro vyhledávání: <ul>
 <li>Nezáleží na velikosti písmen vyhledávaného výrazu</li>
 <li>Běžná slova jsou ignorována</li>
-<li>Ve výchozím nastavení jsou vraceny pouze články obsahující <i>všechny</i> termíny dotazu (tzn. <i>AND</i> je aplikováno)</li>
-<li>Kombinujte více slov pomocí <i>OR</i> pro nalezení článků obsahujících některý z termínů; např. <i>vzdělávání OR výzkum</i></li>
-<li>Pro vytvoření komplexnějších dotazů použijte závorky; např. <i>archiv ((časopis OR konference) NOT disertace)</i></li>
-<li>Vyhledejte přesnou frázi vložením hledaného výrazu do uvozovek; např. <i>"open access publikování"</i></li>
-<li>Vylučte slovo tím, že před něj vložíte <b>-</b> nebo <i>NOT</i>; např. <i>online -politika</i> nebo <i>online NOT politika</i></li>
-<li>Použijte <b>*</b> v termínu jako divokou kartu pro nalezení jakékoliv sekvence znaků; např. <i>soci* etika</i> by vrátilo dokumenty obsahující "sociologický" nebo "sociální"</li>
+<li>Ve výchozím nastavení jsou vraceny pouze články obsahující <em>všechny</em> termíny dotazu (tzn. <em>AND</em> je aplikováno)</li>
+<li>Kombinujte více slov pomocí <em>OR</em> pro nalezení článků obsahujících některý z termínů; např. <em>vzdělávání OR výzkum</em></li>
+<li>Pro vytvoření komplexnějších dotazů použijte závorky; např. <em>archiv ((časopis OR konference) NOT disertace)</em></li>
+<li>Vyhledejte přesnou frázi vložením hledaného výrazu do uvozovek; např. <em>"open access publikování"</em></li>
+<li>Vylučte slovo tím, že před něj vložíte <strong>-</strong> nebo <em>NOT</em>; např. <em>online -politika</em> nebo <em>online NOT politika</em></li>
+<li>Použijte <strong>*</strong> v termínu jako divokou kartu pro nalezení jakékoliv sekvence znaků; např. <em>soci* etika</em> by vrátilo dokumenty obsahující "sociologický" nebo "sociální"</li>
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
@@ -1027,7 +1027,7 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="installer.databaseSettingsInstructions">OJS vyžaduje přístup k SQL databázi, aby mohl uchovávat svoje data. Viz systémové požadavky výše pro seznam podporovaných databází. Do políček níže uveďte nastavení, které má být použito pro připojení do databáze.</message>
 	<message key="installer.installApplication">Instalace Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Upgrade Open Journal Systems</message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Varování:</b> Pokud instalace selhala v průběhu instalace databáze, budete možná muset odstranit Vaši OJS databázy nebo databázové tabulky před tím, než se pokusíte databázy přeinstalovat.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Varování:</strong> Pokud instalace selhala v průběhu instalace databáze, budete možná muset odstranit Vaši OJS databázy nebo databázové tabulky před tím, než se pokusíte databázy přeinstalovat.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>DŮLEŽITÉ!</h4>
 <p>Instalace nemohla automaticky přepsat konfigurační soubor. Než se pokusíte používat systém, otevřete prosím <tt>config.inc.php</tt> ve vhodném textovém editoru a nahraďte jeho obsah obsahem níže uvedeného textového pole.</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>Instalace OJS byla úspěšně dokončena.</p>
@@ -1041,7 +1041,7 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 
 
 	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade OJS na verzi {$version} byl úspěšně dokončen.</p>
-<p>Nezapomeňte upravit "installed" nastavení ve Vašem config.inc.php konfiguračním souboru zpět na <i>On</i>.</p>
+<p>Nezapomeňte upravit "installed" nastavení ve Vašem config.inc.php konfiguračním souboru zpět na <em>On</em>.</p>
 <p>Pokud jste se ještě nezaregistroval a přejete si dostávat informace o novinkách a aktualizacích, <strong>zaregistrujte se prosím na <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Pokud máte otázky nebo komentáře, navštivte prosím <a href="http://pkp.sfu.ca/support/forum" target="_new">support forum</a>.</p>]]></message>
 
 	<!-- Installation upgrade warnings -->
