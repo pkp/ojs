@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../locale.dtd">
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2013-2015 Simon Fraser University Library
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -25,7 +25,7 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
-	<!-- review forms end -->
+	<!-- review froms start -->
 
 	<!-- common -->
 	<message key="common.journal">Časopis</message>
@@ -64,7 +64,7 @@
 
 	<message key="reviewer.article.enterReviewForm">Pro vyplnění formuláře recenze klikněte na ikonu.</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vyplňte prosím požadované položky.</message>
-	
+
 	<!-- review forms end -->
 
 	<!--
