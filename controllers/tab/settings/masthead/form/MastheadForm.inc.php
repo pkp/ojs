@@ -102,7 +102,7 @@ class MastheadForm extends ContextSettingsForm {
 
 		// Save block plugins context positions.
 		import('lib.pkp.classes.controllers.listbuilder.ListbuilderHandler');
-		$this->categories = null;
+		$this->categories = $journal->getSetting('categories');
 		ListbuilderHandler::unpack($request, $request->getUserVar('categories'));
 		$this->setData('categories', $this->categories);
 
@@ -122,7 +122,7 @@ class MastheadForm extends ContextSettingsForm {
 	 * @copydoc ListbuilderHandler::deleteEntry()
 	 */
 	function deleteEntry($request, $rowId) {
-		if (isset($this->categories[$rowId['name']])) unset($this->categories[$rowId['name']]);
+		if (isset($this->categories[$rowId])) unset($this->categories[$rowId]);
 		return true;
 	}
 
