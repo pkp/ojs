@@ -33,7 +33,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 		);
 		parent::ManagerSettingsTabHandler();
 		$this->setPageTabs(array(
-			'appearance' => 'controllers.tab.settings.appearance.form.OJSAppearanceForm',
+			'appearance' => 'controllers.tab.settings.appearance.form.AppearanceForm',
 			'information' => 'lib.pkp.controllers.tab.settings.information.form.InformationForm',
 			'archiving' => 'lib.pkp.controllers.tab.settings.archiving.form.ArchivingForm',
 			'languages' => 'controllers/tab/settings/languages/languages.tpl',
