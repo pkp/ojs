@@ -59,6 +59,13 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">Artikel</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">Fahne</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">Zusatzdatei</message>
-	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Es wurde noch kein DOI erzeugt. Die Veröffentlichung der Ausgabe und die Ansicht der öffentlichen {$pubObjectType}-Seite wird automatisch eindeutige DOI für diese/n {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Es wurde noch kein DOI erzeugt. Die Veröffentlichung der Ausgabe und die Ansicht der öffentlichen {$pubObjectType}-Seite wird automatisch eindeutige DOI für den/die/das {$pubObjectType} erzeugen.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Der angegebene DOI-Suffix wird bereits für ein anderes veröffentlichtes Element benutzt. Bitte vergeben Sie einen eindeutigen DOI-Suffix für jedes Element.</message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">Diese/diesen/dieses {$pubObjectType} von der Zuweisung eines DOI ausnehmen.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Neuen DOI vergeben</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Wählen Sie diese Box, um den existierenden DOI für diese/diesen/dieses {$pubObjectType} zu löschen.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Objekte einer Ausgabe ausnehmen</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Nutzen Sie diesen Knopf, um Objekte (Artikel, Fahnen, Zusatzdateien), die momentan für diese Ausgabe vorgesehen sind, von der DOI-Zuweisung auszunehmen. Beachten Sie bitte, dass dies nicht für Objekte gilt, die Sie später hinzufügen/für die Ausgabe einplanen. Sie können immer noch Ausnahmen für einzelne Objekte vornehmen.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">DOI der Ausgabenobjekte löschen</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Nutzen Sie diesen Knopf, um die DOI aller Objekte (Artikel, Fahne, Zusatzdateien), die momentan für diese Ausgabe vorgesehen sind, zu löschen.</message>
 </locale>
