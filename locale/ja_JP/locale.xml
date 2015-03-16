@@ -554,7 +554,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="installer.ojsUpgrade">OJSのバージョンアップ</message>
   <message key="installer.upgradeInstructions"><![CDATA[<h4>OJS バージョン {$version}</h4>
 	
-<p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうございました。処理を進める前に、このソフトウェアに添付されている<a href="{$baseUrl}/docs/README">README</a>ファイルと<a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href="http://pkp.sfu.ca/" target="_blank">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a href="http://pkp.sfu.ca/support/forum">サポートフォーラム</a>、または、PKPのオンライン<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>にメールしてくださっても構いません。</p>
+<p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうございました。処理を進める前に、このソフトウェアに添付されている<a href="{$baseUrl}/docs/README">README</a>ファイルと<a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href="http://pkp.sfu.ca/" target="_blank">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a href="http://forum.pkp.sfu.ca">サポートフォーラム</a>、または、PKPのオンライン<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>にメールしてくださっても構いません。</p>
 <p>処理を行う前に、データベース、ファイルディレクトリ、OJSインストールディレクトリのバックアップを行うことを<strong>強く推奨します</strong>。</p>
 <p>システムを<a href="http://www.php.net/features.safe-mode" target="_blank">PHPセーフモード</a>で運用している場合は、"php.ini"設定ファイルの"max_execution_time"ディレクティブに最大値が設定されていることを確認してください。この制限値、またはその他の時間制限（例えば、Apacheの"Timeout"ディレクティブ）に達すると、バージョンアップ処理は中断され、手作業による処理が必要になります。</p>]]></message>
   <message key="installer.localeInstructions">このシステムで使用する第一言語。ここに表示されていない言語のサポートに興味がある場合は、OJS文書をご覧ください。</message>
@@ -565,10 +565,10 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 <p>設定ファイルを上書きする保存することができませんでした。システムを使用する前に、適当なエディターで <tt>config.inc.php</tt> ファイルを開いて、その内容を以下のテキストフィールドの内容に置き換えてください。</p>]]></message>
   <message key="installer.installationComplete"><![CDATA[<p>OJSのインストールが終了しました。</p>
 <p>このシステムの利用を開始するには、前画面でユーザ名とパスワードを入力して<a href="{$loginUrl}">ログイン</a>してください。</p>
-<p>お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]></message>
+<p>お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://forum.pkp.sfu.ca" target="_new">サポートフォーラム</a>にご参加ください。</p>]]></message>
   <message key="installer.upgradeComplete"><![CDATA[<p>OJS バージョン {$version} へのバージョンアップが終了しました。</p>
 <p> config.inc.php 設定ファイルの"installed"項目を<em>On</em>に戻すことを忘れないでください。</p>
-<p>もしまだ登録されていなくて、お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]></message>
+<p>もしまだ登録されていなくて、お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://forum.pkp.sfu.ca" target="_new">サポートフォーラム</a>にご参加ください。</p>]]></message>
   <!-- Article Logs -->
   <message key="log.author.submitted">{$authorName}が新規投稿ID {$submissionId} を行った。</message>
   <message key="log.author.documentRevised">{$authorName}が論文 {$articleId} を改訂した。新しいファイルIDは {$fileId} である。</message>

@@ -755,7 +755,7 @@
 	<message key="installer.ojsUpgrade">OJS升級程式</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS版本{$version}</h4>
 
-<p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://pkp.sfu.ca/support/forum">支援討論區</a>，或者請見PKP的線上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>。</p>
+<p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://forum.pkp.sfu.ca">支援討論區</a>，或者請見PKP的線上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>。</p>
 
 <h4>升級</h4>
 
@@ -797,7 +797,7 @@
 <p>選擇<strong>手動安裝</strong> 以顯示建立OJS資料庫結構和初始資料所必須的SQL指令，以手動執行安裝資料庫。在為安裝問題除錯時，可以選擇這個選項，特別是在沒有受到支援的平台上。注意，這個安裝方式並不嘗試去建立資料庫或任何資料表，雖然仍會將支持資料庫設定的內容寫入設定檔案中。</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS版本{$version}</h4>
 	
-<p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://pkp.sfu.ca/support/forum">支援討論區</a>，或者請見PKP的線上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>。</p>
+<p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://forum.pkp.sfu.ca">支援討論區</a>，或者請見PKP的線上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>。</p>
 <p>我們<strong>強烈地建議您</strong>在繼續下一步之前，請備份您的資料庫、檔案目錄以及OJS的安裝目錄</p>
 <p>如果您正在執行<a href="http://www.php.net/features.safe-mode" target="_blank">PHP安全模式</a>， 請確保在您的 php.ini 設定檔中設定max_execution_time指令一個高額的上限。如果這個或者其他的時間上限（例如Apache的 "Timeout"指令）已到，而升級程序遭到中斷，您必須以手動的方式介入。</p>]]></message>
 	<message key="installer.localeInstructions">使用本系統的主要語言。如果您有意支援不列在這裡的語系，請參見OJS的說明文件。</message>
@@ -810,10 +810,10 @@
 <p>安裝檔無法自動覆寫設定檔。在嘗試使用本系統之前，請以合適的編輯器開啟<tt>config.inc.php</tt>並且變更其內容為下列文字欄位中的內容。</p>]]></message>
 	<message key="installer.installationComplete"><![CDATA[<p>OJS已經成功安裝！</p>
 <p>要開始使用本系統，請以您在上一個網頁中輸入的使用者名稱和密碼進行<a href="{$loginUrl}">登入</a></p>
-<p>如果您希望收到新聞和更新訊息，請<strong>在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://pkp.sfu.ca/support/forum" target="_new">支援討論區</a>.</p>]]></message>
+<p>如果您希望收到新聞和更新訊息，請<strong>在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://forum.pkp.sfu.ca" target="_new">支援討論區</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>以成功升級OJS到 {$version}版本。</p>
 <p>別忘了在您的config.inc.php設定檔中將"installed"設定改成<em>On</em>。</p>
-<p>If you haven't already registered and wish to receive news and updates, 如果您尚未註冊但希望收到新聞和更新訊息，<strong>請在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://pkp.sfu.ca/support/forum" target="_new">支援討論區</a>.</p>]]></message>
+<p>If you haven't already registered and wish to receive news and updates, 如果您尚未註冊但希望收到新聞和更新訊息，<strong>請在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://forum.pkp.sfu.ca" target="_new">支援討論區</a>.</p>]]></message>
 
 
 	<!-- Article Logs 文章記錄 -->
