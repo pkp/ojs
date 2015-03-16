@@ -11,7 +11,7 @@
   *
   * Localization strings
   -->
- 
+
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.theme.custom.name">Módulo de temas personalizados</message>
 	<message key="plugins.theme.custom.description">Este módulo aplica temas personalizables.</message>
@@ -22,4 +22,6 @@
 	<message key="plugins.theme.custom.link">Enlace</message>
 	<message key="plugins.theme.custom.background">Fondo</message>
 	<message key="plugins.theme.custom.foreground">Primer plano</message>
+	<message key="plugins.theme.custom.notWritablePlugin">NOTA: La opción de hoja de estilo está activada de forma automática ya que el fichero, "{$stylesheetFileLocation}", no es accesible en modo escritura actualmente.</message>
+	<message key="plugins.theme.custom.perJournal">Hoja de estilo</message>
 </locale>

@@ -10,7 +10,7 @@
   *
   * URN plugin localization strings
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
@@ -80,4 +80,11 @@
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">épreuve</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">fichier supplémentaire</message>
 	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Cet aperçu du nom uniforme de ressource (URN) pourrait être incomplet. Aucun URN n'a été créé. Un URN unique pour {$pubObjectType} sera créé de façon automatique si vous publiez le numéro et visualisez la page publique {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.excludePubObject">Exclure ce {$pubObjectType} en lui assignant un URN.</message>
+	<message key="plugins.pubIds.urn.editor.urnClear">Effacer l'URN</message>
+	<message key="plugins.pubIds.urn.editor.urnClear.description">Sélectionner la case pour effacer l'URN existant de ce {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN">Exclure l'URN de cet objet</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Effacer les URNs des objets du numéro</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Utiliser ce bouton pour effacer les URNs des objets (articles, épreuves et fichiers supplémentaires) actuellement programmé dans ce numéro.</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description">Utiliser ce bouton pour exclure les objets (articles, épreuves et fichiers supplémentaires) actuellement programmés dans ce numéro en leur attribuant un URN. Noter que les objets ajoutés/programmés plus tard ne seront pas affectés. Vous aurez toujours la possibilité d'utiliser plus tard l'option d'exclusion d'un objet unique.</message>
 </locale>

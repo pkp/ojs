@@ -11,7 +11,7 @@
   * Localization strings for the el_GR (Greek) locale.
   *
   -->
- 
+
 <locale name="el_GR" full_name="Greek">
 	<message key="plugins.theme.custom.name">Custom Theme Plugin</message>
 	<message key="plugins.theme.custom.description">Το plugin αυτό δημιουργεί ένα προσαρμοσμένο θέμα.</message>
@@ -22,4 +22,6 @@
 	<message key="plugins.theme.custom.link">Σύνδεσμος</message>
 	<message key="plugins.theme.custom.background">Φόντο</message>
 	<message key="plugins.theme.custom.foreground">Πρώτο πλάνο</message>
+	<message key="plugins.theme.custom.notWritablePlugin">ΣΗΜΕΙΩΣΗ: Η επιλογή του stylesheet που είναι βασισμένο στο περιοδικό α=ενεργοπιείται αυτόματα γιατί  το stylesheet αρχείο αυτού του plugin, "{$stylesheetFileLocation}",  δεν είναι ακόμα εγγράψιμο.</message>
+	<message key="plugins.theme.custom.perJournal">Stylesheet βασισμένο στο περιοδικό</message>
 </locale>

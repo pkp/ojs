@@ -18,11 +18,14 @@
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
   *
   -->
- 
+
 <locale name="el_GR" full_name="Greek">	
 	<message key="plugins.citationFormats.abnt.displayName">Πρόσθετο σχήματος παραπομπής ABNT</message>
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Το πρόσθετο αυτό υλοποιεί το σχήμα παραπομπής ABNT.</message>
-	<message key="plugins.citationFormat.abnt.location">Βόρεια Αμερική</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Διαθέσιμο από: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Ημερομηνία πρόσβασης: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Ρυθμίσεις</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Ρυθμίσεις plugin αναφορών ABNT</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Ρυθμίσεις για τη δημιουργία αναφορών σύμφωνα με το ABNT</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Τοποθεσία</message>
 </locale>

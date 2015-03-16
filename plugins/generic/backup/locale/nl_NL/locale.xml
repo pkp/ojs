@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/backup/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2000-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  *
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.backup.name">Backup Plugin</message>
+	<message key="plugins.generic.backup.description">Deze plugin genereert een back-up van de installatie.</message>
+
+	<message key="plugins.generic.backup.link">Download Backup</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[p>Met de nu volgende links kan de beheerder een volledige backup van de de componenten van de installatie downloaden.Een volledige backup bevat <strong>alle</strong> nu volgende componenten. Zie de technische documentatie voor meer informatie over de samenhang van deze componenten.</p>]]></message>
+	<message key="plugins.generic.backup.db">Database</message>
+	<message key="plugins.generic.backup.files">Bestanden</message>
+	<message key="plugins.generic.backup.code">Code</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>Waarschuwing:</strong> Het database dump tool is niet geconfigureerd in config.inc.php. Deze configuratie is afhankelijk van uw server configuratie en de database die u gebruikt. Dat moet geconfigureerd worden in de sectie [cli], in de optie "dump". Gebruik voor MySQL, het mysqldump tool, bv.:<br/>
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+The "%s" tokens worden vervangen door respectievelijk:<ol>
+	<li>Database hostname</li>
+	<li>Database username</li>
+	<li>Database password</li>
+	<li>Database name</li>
+</ol>
+Merk op dat het wachtwoord van de database op de commandoregel opgegeven moet worden, wat een veiligheidsrisico kan zijn.<br/><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>Waarschuwing:</strong> Het "tar" tool is niet geconfigureerd in config.inc.php. Deze configuratie hangt af van uw serverconfiguratie. Het moet gespecificeerd worden in de sectie [cli], in de optie "tar",en bevat het pad naar het "tar" utility, bv.:<br/>
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br/>]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>Waarschuwing: </strong>Er kan een fout opgetreden zijn tijdens het back-up proces. De meest voorkomende oorzaak is bestandspermissies.]]></message>
+</locale>

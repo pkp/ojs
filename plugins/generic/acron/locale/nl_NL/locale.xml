@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/acron/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2000-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  *
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.acron.name">Acron Plugin</message>
+	<message key="plugins.generic.acron.description">Deze plugin probeert de afhankelijkheid van OJS van periodieke taken tools als 'cron' te verminderen.</message>
+	<message key="plugins.generic.acron.enabled">The Acron Plugin is ingeschakeld.</message>
+	<message key="plugins.generic.acron.disabled">The Acron Pluginis uitgeschakeld.</message>
+
+	<message key="plugins.generic.acron.reload">Scheduled Tasks opnieuw laden</message>
+</locale>

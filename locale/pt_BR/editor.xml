@@ -220,4 +220,6 @@
 	<message key="editor.issues.backToIssueGalleys">Voltar para composições de edição</message>
 	<message key="editor.issues.confirmDeleteGalley">Deseja realmente excluir esta composição?</message>
 	<message key="editor.notifyUsers.allMailingList">Incluir todas as mensagens na lista de correio ({$count} mensagens)</message>
+	<message key="editor.publicGalleyIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outra composição deste artigo. Por favor, escolha um identificador único no âmbito deste artigo.</message>
+	<message key="editor.issues.resetArticlePublicationDates">Redefinir as datas de publicação de artigo</message>
 </locale>

@@ -1019,4 +1019,5 @@
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[Solo el <a href="http://orcid.org/" target="_blank">Registro ORCID</a> puede asignar ORCID iDs. Debes aceptar sus estándares para disponer de ORCID iDs e incluri la URL completa (pe. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">El ORCID iD que has especificado no es vàlido.</message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems soporta el sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) para asegurar seguridad y preservación permanente de su revista. Tiene múltiples opciones para incluir su revista en una red LOCKSS:]]></message>
 </locale>

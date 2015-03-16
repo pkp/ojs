@@ -94,4 +94,6 @@ Usage (traitement de tous les fichiers dans le répertoire): {$scriptName} path/
 
 Vous devez parfois utiliser une seule statistique d'utilisation pour, par exemple, afficher une liste ordonnée des soumissions les plus utilisées ou classer les résultats des recherches. Veuillez choisir l'une des mesures configurées à titre de mesure par défaut.</message>
 	<message key="admin.copyAccessLogFileTool.success">Succès: {$filePath} dans {$destinationPath}</message>
+	<message key="admin.settings.security">Sécurité</message>
+	<message key="admin.settings.security.plugins">Empêcher les responsables de la revue d’installer, mettre à jour ou supprimer des plugiciels.</message>
 </locale>

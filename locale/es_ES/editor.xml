@@ -222,4 +222,6 @@
 	<message key="editor.article.removeCoverPage">¿Eliminar la imagen de portada?</message>
 	<message key="editor.article.remove">Eliminar</message>
 	<message key="editor.issues.invalidAccessDate">Fecha de acceso no válida.</message>
+	<message key="editor.issues.resetArticlePublicationDates">Resetear las fechas de publicación del artículo.</message>
+	<message key="editor.publicGalleyIdentificationExists">El identificador público '{$publicIdentifier}' ya existe para otra galerada de este artículo. Escoja un identificador único de galerada dentro de este artículo.</message>
 </locale>

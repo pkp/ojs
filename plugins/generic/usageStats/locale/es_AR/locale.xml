@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/es_AR/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="es_AR" full_name="Español">
+	<message key="plugins.generic.usageStats.settings.logging">Opciones del log de Accesos</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Crear archivos log</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activando esta opción permite al plugin crear logs de accesos dentro de la carpeta de files. Estos archivos deben serán utilizados para extraer datos para las estadísticas de uso. Si no desea crear más logs de acceso, puede dejar esta opción deshabilitada y utilizar los logs de su servidor.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Regex para parsear los logs</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">La regex por defecto puede parsear los logs de apache en formato combinado y también los logs del plugin. Si sus logs de acceso están en un formato deferente, debe insertar un regex que sea capaz de parsearlos y devolver los valores esperados. Vea
+UsageStatsLoader::_getDataFromLogEntry() para más información.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Configuración del plugin de estadísticas de uso guardadas.</message>
+	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Tarea de carga de archivos de estadísticas de uso</message>
+	<message key="plugins.generic.usageStats.openFileFailed">El archivo {$file} no se pudo abrir y fue rechazado.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">La línea número {$lineNumber} del archivo {$file}  nos es una entrada de log válida y el archivo ha sido rechazado.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">El número de línea {$lineNumber} del archivo {$file}  contiene una url de la cual el sistema no pudo remover la url base.</message>
+	<message key="plugins.generic.usageStats.loadDataError">No se pueden cargar los datos extraídos del archivo {$file}.  El error fue: {$error}.  El archivo fue movido de nuevo a la otra etapa.</message>
+	<message key="plugins.generic.usageStats.displayName">Estadísticas de Uso</message>
+	<message key="plugins.generic.usageStats.description">Estadísticas de uso de objetos de datos presentes. Puede utilizar los logs de acceso de los servidores para extraer las estadísticas.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">El plugin de estadísticas fue deshabilitado. No hay logs procesados.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">La carpeta {$directory} no esta vacía. Esto podría indicar un proceso previo fallido. Este archivo será reprocesado automáticamente si también esta utilizando scheduledTasksAutoStage.xml,  de otra forma deberá mover manualmente cada archivo huérfano en la carpeta procesada de nuevo a la carpeta de etapa.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">La lista de CONTADOR de bots no puede ser encontrada, o más de una lista esta presente. El archivo {$file} no puede ser procesado.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">La lista CONTADORA de bots {$botlist} no se puede abrir. El archivo {$file} no se puede procesar.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">Reporte de estadísticas de uso de OJS</message>
+	<message key="plugins.reports.usageStats.report.description">Reporte de estadísticas de uso de OJS por defecto (CONTADOR listo)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OJS/CONTADOR</message>
+	<message key="plugins.reports.usageStats.metricType.full">Estadísticas de OJS (CONTADOR listo)</message>
+</locale>

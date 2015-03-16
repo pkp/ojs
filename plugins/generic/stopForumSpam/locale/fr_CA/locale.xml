@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/stopForumSpam/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Stop Forum Spam plugin localization strings
+  -->
+
+<locale name="fr_CA" full_name="Français">
+
+	<message key="plugins.generic.stopForumSpam.displayName">Plugiciel Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.description">Intégrer OJS avec le système de prévention Stop Forum Spam, qui vise à réduire le montant des spams.</message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">Paramètres</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Paramètres de Stop Forum Spam</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>Avec ce plugiciel activé, OJS vérifiera si l'inscription d'un utilisateur contient des éléments qui se trouvent sur la liste du Stop Forum Spam.  Les inscriptions seront refusées si c'est le cas.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">Vérifier l'inscription IP</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Vérifier l'inscription de l'adresse courriel</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Vérifier l'inscription du nom d'utilisateur (activez avec prudence!)</message>
+	<message key="plugins.generic.stopForumSpam.checkName">stopForumSpamPlugin</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[Le plugiciel <a href="http://www.stopforumspam.com" target="_blank">Stop Forum Spam</a> a bloqué cette inscription.]]></message>
+</locale>

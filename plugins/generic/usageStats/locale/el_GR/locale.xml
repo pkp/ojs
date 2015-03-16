@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/el_GR/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="el_GR" full_name="Greek">
+	<message key="plugins.generic.usageStats.settings.logging">Επιλογές αρχείου καταγραφής πρόσβασης</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Δημιουργία αρχείου καταγραφής</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Η ενεργοποίηση αυτής της επιλογής θα κάνει το plugin δημιουργήσεις  αρχεία καταγραφής πρόσβασης μέσα στον κατάλογο αρχείων. Αυτά τα αρχεία θα πρέπει να χρησιμοποιηθούν για την εξαγωγή των δεδομένων στατιστικών στοιχείων χρήσης. Εάν δεν θέλετε να δημιουργήσετε περισσότερα αρχεία καταγραφής πρόσβασης μπορείτε να αφήσετε αυτή την επιλογή με ειδικές ανάγκες και να χρησιμοποιούν τη δική σας πρόσβαση σε αρχεία καταγραφής του διακομιστή.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Ανάλυση regex αρχείου καταγραφής;</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Το προκαθορισμένο regex μπορεί να αναλύσει τα αρχεία καταγραφής πρόασβης του  apache σε συνδιασμένη μορφή καθώς επίσης και τα αρχεία καταγραφής του plugin. Αν τα αρχεία καταγραφής πρόσβασης είναι σε διαφορετική μορφήθα πρέπει να εισάγετε ένα κατάλληλο regex για να τα αναλύσει  και να δώσει τις κατάλληλες τιμές. Δείτε UsageStatsLoader::_getDataFromLogEntry() για περισσότερες πληροφορίες.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Οι ρυθμίσεις του plugin στατιστικών χρήσης αποθηκεύτηκαν</message>
+	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Ενέργεια φόρτωσης αρχείου στατιστικών χρήσης</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Το αρχείο {$file} δεν μπόρεσε να αμοιχτεί και απορρίθηκε.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">Ο αριθμός γραμμής  {$lineNumber} του αρχείου {$file} δεν είναι μια έγκυρη εγγραφή καταγραφής και το αρχείο απορρίφθηκε.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">Ο αριθμός γραμμής  {$lineNumber} του αρχείο {$file} περιέχει ένα url για το οποίο το σύστημα δεν μπορεί να μετακινήσει το base url.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Δεν ήταν δυνατό να εξαχθούν τα δεδομένα από το αρχείο {$file}. Το σφάλμα ήταν: {$error}. Το αρχείο μετακινήθηκε στο αρχικό στάδιο ξανά.</message>
+	<message key="plugins.generic.usageStats.displayName">Στατιστικά Χρήσης</message>
+	<message key="plugins.generic.usageStats.description">Παρουσιάζει δεδομένα στατιστικών χρήσης. Μπορεί να χρησιμοποιήσεθς τα αρχεία καταγραφής του server για να εξάγει στατιστικά.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Το plugin στατιστικών χρήσης είναι απενεργοποιημένο. Κανένα αρχείο καταγραφής δεν επεξεργάστηκε.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">Ο φάκελλος {$directory} δεν είναι αδειανός. Αυτό μπορεί να υποδεικνύσει μια προηγούμενη αποτυχημένη διαδικασία ή μια διαδικασία που εκτελείται ταυτόχρονα. Το αρχείο θα επανεπεξεργαστεί αυτόματα αν χρησιμοποιείται επίσης το scheduledTasksAutoStage.xml,  αλλιώς θα πρέπει να μετακινήσετε χειρωνακτικά όλα τα ορφανά αρχεία του φακέλλου επεξεργασίας πίσω στο αρχικό φάκελλο</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">Η λίστα COUNTER bot δεν ήταν δυνατόν να βρεθεί ή περισσότερες από μια λίστες είναι παρούσες. Tο αρχείο  {$file} δεν ήταν δυνατόν να επεξεργαστεί.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">Η λίστα COUNTER bot {$botlist} δεν ήταν δυνατόν να ανοιχτεί. Το αρχείο  {$file} δεν ήταν δυνατόν να επεξεργαστεί.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">OJS αναφορά στατιστικών χρήσης</message>
+	<message key="plugins.reports.usageStats.report.description">OJS προκαθορισμένη αναφορά στατιστικών χρήσης (COUNTER ready)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (COUNTER ready)</message>
+</locale>

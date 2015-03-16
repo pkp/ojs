@@ -16,7 +16,6 @@
 	<message key="plugins.generic.sword.displayName">Plugiciel SWORD</message>
 	<message key="plugins.generic.sword.description">Permet aux directeurs et (optionnellement) aux auteurs de la revue de déposer des articles par l'intermédiaire du protocole SWORD</message>
 	<message key="plugins.generic.sword.enabled">Le plugiciel SWORD a été activé.</message>
-	<message key="plugins.generic.sword.disable">Le plugiciel SWORD a été désactivé.</message>
 	<message key="plugins.generic.sword.settings">Paramètres</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permet à l'auteur de spécifier un point de dépôt</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Points de dépôt</message>
@@ -50,4 +49,5 @@
 	<message key="plugins.importexport.sword.depositSuccessful">Dépôt réussi</message>
 	<message key="plugins.importexport.sword.depositSuccessfulDescription">Le(s) élément(s) sélectionné(s) a(ont) été déposé(s).</message>
 	<message key="plugins.importexport.sword.depositFailed">Le dépôt a échoué</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Permettre aux directeurs de revue et (optionnellement) aux auteurs de déposer leurs articles via le SWORD protocole. Notez que ce plugiciel requiert l'extension ZIP qui n'est PAS installée actuellement.</message>
 </locale>

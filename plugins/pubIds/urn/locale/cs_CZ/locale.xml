@@ -10,7 +10,7 @@
   *
   * URN plugin localization strings
   -->
- 
+
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.pubIds.urn.urns">URN jména</message>
 
@@ -33,7 +33,6 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.suppFiles">pro doplňkové soubory.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.patternExample">Například, vol%viss%ipp%p může vytvořit URN suffix "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">URN suffix může mít libovolnou podobu, ale musí být jedinečné pro každou publikovanou položku.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.publisherId">Použijte "Custom Identifier" for published items as the URN suffix (must be enabled in Setup 4.3). This is the same identifier that will be used for public URLs.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">Vložte individuální URN suffix pro každou publikovanou položkou a rozdílnou od "Uživatelského identifikátoru" zmíněného v předešlé možnosti. Dodatečné pole pro zapsání URN najdete u každé položky na stránce metadat.</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs">Vymazat URN</message>
 	<message key="plugins.pubIds.urn.manager.settings.clearURNs.description">Pokud změníte nastavení URN, ta URN, která byla doposud přiřazena to neovlivní. Jakmile je uloženo nové nastavení URN , použijte tlačítko na vymazání všech existujících URN pokud chcete, aby nové nastavení platilo i pro objekty, které už URN měly přiřazené.</message>
@@ -83,4 +82,11 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">Zadaný URL suffix je již používán jinou publikovanou položkou. Vložte, prosím, unikátní URL suffix pro každou položku.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Kontrolní číslo chybí.</message>
 
+	<message key="plugins.pubIds.urn.editor.urnClear">Smazat URN</message>
+	<message key="plugins.pubIds.urn.editor.excludePubObject">Vyloučit, aby tomuto {$pubObjectType} byla přiřazována data.</message>
+	<message key="plugins.pubIds.urn.editor.urnClear.description">Zatrhněte toto políčko, pro smazání existujících URN pro tento {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN">Vyloučit objeky vydání</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description">Použijte toto tlačítko pro vyloučení objektů (článků, sazebnic a doplňkových souborů), které jsou připraveny k vydání v tomto čísle, aby nedostaly URN. Vemte na vědomí, že objekty, které jsou přidány/plánovány později tím nebudou ovlivněny. Stále budete mít možnost změny u jednotlivých objektů.</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Vymazat URN u objeků čísla</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Použijte toto tlačítko k vymazání URN u všech objektů (článků, sazebnic a doplňkových souborů), připravených pro toto číslo.</message>
 </locale>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/ro_RO/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ro_RO" full_name="Romanian">
+	<message key="plugins.generic.usageStats.settings.logging">Opțiunile jurnalierului de acces</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Creează fișiere de jurnalizare</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activarea acestei opțiuni va conduce la crearea de către plugin a unor fișiere de acces în structura de directoare. Aceste fișiere ar trebui utilizate pentru extragerea de date privind utilizarea. Dacă nu dorești să creezi mai multe fișiere de jurnalizare, poți lăsa această opțiune dezactivată și să continui folosirea fișierelor jurnal ale serverului.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Regex de parsare a fișierelor jurnal</message>
+</locale>

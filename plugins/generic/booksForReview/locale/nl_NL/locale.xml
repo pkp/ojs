@@ -10,7 +10,7 @@
   *
   * Books for review plugin localization strings for the en_US (U.S. English) locale.
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 
 	<!-- Books For Review Notifications -->
@@ -190,4 +190,5 @@
 	<message key="plugins.generic.booksForReview.field.title">Titel</message>
 	<message key="plugins.generic.booksForReview.field.description">Beschrijving</message>
 
+	<message key="plugins.generic.booksForReview.reminderTask.name">Boeken ter review herinnering</message>
 </locale>

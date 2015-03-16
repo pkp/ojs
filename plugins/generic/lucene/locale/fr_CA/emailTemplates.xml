@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="fr_CA">
+	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
+		<subject>Erreur d'indexation d'un article</subject>
+		<body>Une erreur d'indexation est survenue lors de la mise à jour de l'indexation de l'article.
+
+Le message d'erreur généré par le service web (s'il y en a) : "{$error}"
+
+Ce courriel est généré par le plugiciel de recherche Lucene d'OJS.</body>
+		<description></description>
+	</email_text>
+	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
+		<subject>Erreur d'indexation d'une revue</subject>
+		<body>Une erreur d'indexation est survenue lors de l'indexation de la revue "{$journalName}".
+
+Le message d'erreur généré par le service web (s'il y en a) : "{$error}"
+
+Ce courriel est généré par le plugiciel de recherche Lucene d'OJS.</body>
+		<description></description>
+	</email_text>
+	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
+		<subject>Erreur du service de recherche de la revue</subject>
+		<body>Une erreur d'indexation est survenue lorsque quelqu'un a tenté de chercher l'installation "{$siteName}".
+
+Le message d'erreur généré par le service web (s'il y en a) : "{$error}"
+
+Ce courriel est généré par le plugiciel de recherche Lucene d'OJS.</body>
+		<description></description>
+	</email_text>
+</email_texts>

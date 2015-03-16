@@ -738,4 +738,6 @@
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorie</message>
 	<message key="manager.setup.categories.description">Zvolte nejvíce vhodné kategorie z nabídky výše. Čtenáři boudou moci procházet podle těchto kategorií z kompletní sady časopisů.</message>
+	<message key="manager.setup.emailHeader">Hlavička e-mailu</message>
+	<message key="manager.setup.emailHeaderDescription">Připravené e-maily, které jsou zasílány systémem jménem časopisu budou mít následující záhlaví. Tyto e-maily budou zasílány jménem Hlavního kontaktu, je proto důležité vyjasnit, že Hlavní kontakt není nutně zodpovědný za obsah zprávy, která jeho jménem může být poslána různým uživatelům.</message>
 </locale>

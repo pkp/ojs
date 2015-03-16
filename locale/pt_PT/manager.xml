@@ -736,4 +736,6 @@
 	<message key="manager.setup.copyrightYearBasis.Article">Ano padrão será definido a partir da data da publicação do artigo, tal como em "publicar-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Ano padrão será definido a partir da data de publicação do número.</message>
 	<message key="manager.statistics.reports.objectNotFound">Não foi encontrado o objecto na base de dados.</message>
+	<message key="manager.setup.emailHeader">Cabeçalho do e-mail</message>
+	<message key="manager.setup.emailHeaderDescription">Os emails automáticos enviados pelo sistema em nome da revista começa com o seguinte cabeçalho. Estes emails serão dirigidos ao Contacto Principal, assim é importante clarificar que o Contacto Principal não é necessariamente o responsável pelo conteúdo da mensagem, a qual poderá ser enviada em nome de outra pessoa.</message>
 </locale>

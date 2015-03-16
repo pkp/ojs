@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="fr_CA">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Objet à évaluer: rappel de la date d'échéance</subject>
+		<body>Chèr(e) {$authorName}:
+
+Ceci est un petit rappel que l'objet pour évaluation de {$objectForReviewTitle} est du pour le {$objectForReviewDueDate}.
+
+Pour soumettre votre évaluation de l'objet, veuillez vous connecter au site web de la revue et compléter le processus de soumission d'article en ligne. Afin de vous aider, un lien pour soumettre votre article est fourni ci-dessous :
+
+URL de la soumission: {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou des inquiétudes à propos de cette évaluation.
+
+Merci pour votre contribution,
+J'attends avec impatience votre soumission
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Objet à évaluer: Évaluation arrivée à échéance</subject>
+		<body>Chèr(e) {$authorName}:
+
+Ceci est un petit rappel que l'objet pour évaluation de {$objectForReviewTitle} était du pour le {$objectForReviewDueDate}, mais nous ne l'avons pas encore reçu.
+
+Pour soumettre votre évaluation de l'objet, veuillez vous connecter au site web de la revue et compléter le processus de soumission d'article en ligne. Afin de vous aider, un lien pour soumettre votre article est fourni ci-dessous :
+
+URL de la soumission: {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou des inquiétudes à propos de cette évaluation.
+
+Merci pour votre contribution,
+J'attends avec impatience votre soumission
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Objet à évaluer: objet assigné</subject>
+		<body>Chèr(e) {$authorName}:
+
+Ce courriel confirme que {$objectForReviewTitle} vous a été assigné pour l'objet d'une évaluation à compléter avant le {$objectForReviewDueDate}.
+
+Veuillez vous assurer que votre adresse courriel dans votre compte est à jour. Cette dernière sera utilisée afin de vous faire parvenir une copie de l'objet à évaluer.
+
+L'adresse courriel que vous avons actuellement dans nos fichiers est celle-ci:
+{$authorMailingAddress}
+
+Si cette adresse est incomplète ou si vous ne l'utilisez plus, veuillez utiliser le lien de profil suivant pour la mettre à jour.
+
+Lien de profil : {$userProfileUrl}
+
+Pour soumettre votre évaluation de l'objet, veuillez vous connecter au site web de la revue et compléter le processus de soumission d'article en ligne. Afin de vous aider, un lien pour soumettre votre article est fourni ci-dessous :
+
+URL de la soumission: {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou des inquiétudes à propos de cette évaluation.
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Objet à évaluer</subject>
+		<body>Chèr(e) {$authorName}:
+
+Malheureusement je ne suis pas en mesure de vous assigner {$objectForReviewTitle} actuellement pour une évaluation de l'objet.
+
+J'espère que vous considérerez d'évaluer un autre objet de notre liste, soit maintenant ou dans le futur.
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Objet à évaluer : objet requis</subject>
+		<body>Chèr(e) {$editorName}:
+
+Je suis intéressé à écrire une évaluation de {$objectForReviewTitle}.
+
+Pouvez-vous confirmer que cet objet soit toujours disponible pour évaluation ?
+
+{$authorContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Objet à évaluer : objet envoyé</subject>
+		<body>Chèr(e) {$authorName}:
+
+Ce courriel confirme que je vous ai envoyé par la poste une copie de {$objectForReviewTitle} à l'adresse suivante de votre profil :
+{$authorMailingAddress}
+
+Pour soumettre votre évaluation, veuillez vous connecter au site web de la revue et compléter le processus de soumission en ligne.
+
+URL de soumission : {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou des préoccupations à propos de cette évaluation.
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Objet à évaluer</subject>
+		<body>Chèr(e) {$authorName}:
+
+Ce courriel confirme que l'on vous a retiré la responsabilité de l'évaluation de {$objectForReviewTitle}.
+
+J'espère que vous considérerez d'évaluer un autre objet présent dans la liste actuellement ou plus tard.
+
+{$editorialContactSignature}</body>
+		<description></description>
+	</email_text>
+</email_texts>

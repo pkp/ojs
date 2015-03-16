@@ -10,7 +10,7 @@
   *
   * DOI plugin localization strings
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Ce plugiciel permet l'assignation d'identifiants d'objets numériques aux numéros, articles, épreuves et fichiers supplémentaires dans OJS.</message>
@@ -61,4 +61,11 @@
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Ce que vous voyez est l'aperçu d'un DOI qui risque d'être incomplet. Un DOI n'a pas encore été généré. Publier ce numéro et regarder la page publique {$pubObjectType} générera automatiquement un DOI unique pour {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Ce DOI est déjà utilisé par un autre élément publié. Veuillez entrer un suffixe DOI unique pour chaque élément.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>Veuillez noter:</strong> sélectionnez les articles lorsque vous utilisez les identifiants d'objets numériques (DOI) <a href="http://www.crossref.org" target="_new">CrossRef</a>. Un article est considéré un ouvrage de contenu intellectuel ou artistique. Ainsi, l'exportation et l'inscription du DOI CrossRef se basent sur l'objet de publication qu'est l'article.]]></message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">Supprimer ce {$pubObjectType} en lui assignant un DOI.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Réaffecter un DOI</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Exclure les objets du numéro</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Effacer les DOIs des objets du numéro</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Utiliser ce bouton pour effacer les DOIs de tous les objets (articles, épreuves et fichiers supplémentaires) actuellement programmé dans ce numéro.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Sélectionner cette case pour effacer le DOI de ce {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Utiliser ce bouton pour exclure les objets (articles, épreuves et fichiers supplémentaires) actuellement programmés dans ce numéro en leur attribuant un DOI. Noter que les objets ajoutés/programmés plus tard ne seront pas affectés. Vous aurez toujours la possibilité d'utiliser plus tard l'option d'exclusion d'un objet unique.</message>
 </locale>

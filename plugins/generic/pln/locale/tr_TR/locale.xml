@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pln/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * PLN plugin localization strings
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="plugins.generic.pln">PKP PLN Eklentisi</message>
+	<message key="plugins.generic.pln.description">PKP PLN eklentisi koruma amaçlı olarak yayımlanmış içeriklerinizi PKP Özel LOCKSS ağında arşivleyecktir.</message>
+	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Özel LOCKSS ağı</strong><br /><br />Lütfen <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">PKP PLN'ye genel bakışı</a> okuyuunuz ve <a href="{$plnPluginURL}">bu basit formu</a> doldurunuz. Bu seçenek Kamu bilgi Projesi Özel LOCKSS Ağına (PKP PLN) derginizin dahil edilmesini sağlayacaktır.]]></message>
+	
+	<message key="plugins.generic.pln.settings_page">PKP PLN Eklentisi - Ayarlar</message>
+	<message key="plugins.generic.pln.settings">Ayarlar</message>
+	<message key="plugins.generic.pln.settings.saved">PKP PLN ayarları kaydedildi.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use">Kullanım Koşulları</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">Bir ağda arşivlemeden önce o ağın tüm kullanım koşullarını kabul etmelisiniz.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_agree">Kabul Ediyorum</message>
+	<message key="plugins.generic.pln.settings.journal_uuid">Deri Tanımlayıcısı</message>
+	<message key="plugins.generic.pln.settings.journal_uuid_help">PKP PLN için bu derginizin tekil belirleyicisidir. Bu belirleyiciyi destek amacıyla PKP PLN yöneticileriyle paylaşmalısınız.</message>
+	<message key="plugins.generic.pln.settings.refresh">Yenile</message>
+	<message key="plugins.generic.pln.settings.refresh_help">Eğer herhangi bir nedenden dolayı koşullar yukarıda listelenmediyse veya koşulların güncellenmiş olduğunu  biliyorsanız, koşulları güncellemek için Yenile seçeneğine tıklayınız.</message>
+	
+	<message key="plugins.generic.pln.required.object_type">Lütfen bir arşiv öğesi türü seçiniz.</message>
+	<message key="plugins.generic.pln.required.object_threshold">Lütfen bir arşiv öğesi eşiği seçiniz.</message>
+	<message key="plugins.generic.pln.required.terms_of_use_agreement">PLN'de arşivleme için ağ kullanım koşulları anlaşması gereklidir.</message>
+	
+	<message key="plugins.generic.pln.objects.article">Makale</message>
+	<message key="plugins.generic.pln.objects.issue">Sayı</message>
+
+	<message key="plugins.generic.pln.status_page">PKP PLN Eklentisi - Durum</message>
+	<message key="plugins.generic.pln.status.network_status">Ağ Durumu: {$networkStatusMessage}</message>
+	<message key="plugins.generic.pln.status.deposits">Arşivler</message>
+	<message key="plugins.generic.pln.status">Durum</message>
+	<message key="plugins.generic.pln.status.id">ID</message>
+	<message key="plugins.generic.pln.status.type">Tür</message>
+	<message key="plugins.generic.pln.status.items">Öğeler</message>
+	<message key="plugins.generic.pln.status.packaged">Paketlenenler</message>
+	<message key="plugins.generic.pln.status.transferred">Aktarılanlar</message>
+	<message key="plugins.generic.pln.status.received">Alınanlar</message>
+	<message key="plugins.generic.pln.status.syncing">Eşitleniyor</message>
+	<message key="plugins.generic.pln.status.synced">Eşitlendi</message>
+	<message key="plugins.generic.pln.status.updated">Güncellendi</message>
+	<message key="plugins.generic.pln.status.local_failure">Yerel Hata</message>
+	<message key="plugins.generic.pln.status.remote_failure">Uzak Bağlantı Hatası</message>
+	<message key="plugins.generic.pln.status.reset">Yenile</message>
+	<message key="plugins.generic.pln.status.yes">Evet</message>
+	<message key="plugins.generic.pln.status.no">Hayır</message>
+
+	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Arşivleme Görevi</message>
+	<message key="plugins.generic.pln.notifications.processing_for">Arşivleme işlemi için</message>
+	<message key="plugins.generic.pln.notifications.pln_not_accepting">PKP PLN şu halde arşivleme kabul etmiyor.</message>
+	<message key="plugins.generic.pln.notifications.pln_accepting">PKP PLN arşivleme kabul ediyor.</message>
+	<message key="plugins.generic.pln.notifications.check_status">Arşivlerinizin durumunu kontrol ediniz.</message>
+	<message key="plugins.generic.pln.notifications.issn_missing">PKP PLN'de içerik arşivleme için derginiz bir ISSN'ye sahip olmalıdır.</message>
+	<message key="plugins.generic.pln.notifications.http_error">PKP PLN'ye bağlanırken bir hata oluştu. Lütfen sistem yöneticinizle bağlatıya geçiniz.</message>
+	<message key="plugins.generic.pln.notifications.terms_updated">PKP PLN kullanım koşulları güncellendi. Arşivlemeye devam edebilmek için yeni koşulları kabul etmelisiniz.</message>
+	<message key="plugins.generic.pln.notifications.curl_missing">Devam edebilmek için CURL desteği etkinleştirilemlidir.</message>
+	<message key="plugins.generic.pln.notifications.zip_missing">Devam edebilmek için ZipArchive desteği etkinleştirilmelidir.</message>
+</locale>

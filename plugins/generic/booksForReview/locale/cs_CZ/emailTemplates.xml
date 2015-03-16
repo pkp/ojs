@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/generic/booksForReview/locale/cs_CZ/emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="cs_CZ">
+	<email_text key="BFR_REVIEWER_REMOVED">
+		<subject>Kniha k recenzi</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+Tento email potvrzuje, že vám byla odebrána role recenzenta knihy {$bookForReviewTitle}, která tímto byla uvolněna pro další zájemce o recenze knih.
+
+Doufáme, že si vyberete k recenzi jinou knihu z naší nabídky ať již hned, nebo v budoucnosti.
+
+{$editorialContactSignature}</body>
+		<description>Tento email je zasílán editorem recenzentovi knihy, který ztratil zájem o její recenzi.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_MAILED">
+		<subject>Kniha k recenzi: Kniha zaslána</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+Tento mail potvrzuje, že vám byla zaslána kopie knihy {$bookForReviewTitle} na následující e-mailovou adresu z vašeho profilu:
+{$authorMailingAddress}
+
+K odevzdání recenze knihy se, prosím, přihlaste na stránkách časopisu a dokončete proces odevzdání článku.
+
+URL pro váš příspěvek: {$submissionUrl}
+
+Neváhejte mne kontaktovat, pokud máte jakékoliv dotazy k recenzi knihy.
+
+{$editorialContactSignature}</body>
+		<description>Tento e-mail zasílá editor recenzentovi knihy po zaslání kopie knihy k recenzi</description>
+	</email_text>
+	<email_text key="BFR_BOOK_REQUESTED">
+		<subject>Kniha k recenzi: Kniha je požadováno</subject>
+		<body>Vážená paní/vážený pane {$editorName}:
+
+Mám zájem napsat recenzi knihy {$bookForReviewTitle}.
+
+Můžete mi, prosím, potvrdit, že je kniha nadále dostupná k recenzi?
+
+{$authorContactSignature}</body>
+		<description>Tento e-mail posílá autor potenciální recenze knihy editorovi.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_DENIED">
+		<subject>Kniha k recenzi</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+Bohužel, knihu {$bookForReviewTitle} vám nemohu v tomto okamžiku přidělit k recenzi.
+
+Byli bychom rádi, kdybyste si vybral/a jinou knihu z našeho seznamu k recenzi, buď nyní, či kdykoliv v budoucnosti.
+
+
+{$editorialContactSignature}</body>
+		<description>Tento e-mail posílá editor potenciálnímu recenzentovi knihy v případě, že kniha už není dostupná k recenzi.</description>
+	</email_text>
+	<email_text key="BFR_BOOK_ASSIGNED">
+		<subject>Kniha k recenzi: přidělení</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+Tento e-mail potvrzuje, že kniha {$bookForReviewTitle} vám byla přidělena k recenzi. Tato recenze by měla být dokončena do  {$bookForReviewDueDate}.
+
+Ujistěte se, prosím, že vaše emailová adresa v zobrazeném profilu je správná. Na tuto adresu vám zašleme kopii knihy k recenzi.
+
+E-mailová adresa, kterou máme v současnosti uloženou u vašeho jména je:
+{$authorMailingAddress}
+
+Pokud je tato adresa neúplná, nebo je neplatná, upravte ji, prosím, ve vašem profilu.
+
+Odkaz na váš profil: {$userProfileUrl}
+
+Pro odevzdání recenze knihy se, prosím, přihlaste na stránkách časopisu a dokončete proces odevzdání článku.
+
+URL pro odevzdání recenze: {$submissionUrl}
+
+Neváhejte mne kontaktovat, pokud máte jakékoliv dotazy k recenzi knihy.
+
+{$editorialContactSignature}</body>
+		<description>Tento email posílá editor recenzentovi knihy v momentě, kdy mu recenzi knihy přidělí.</description>
+	</email_text>
+	<email_text key="BFR_REVIEW_REMINDER_LATE">
+		<subject>Kniha k recenzi: uplynula lhůta pro odevzdání recenze</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+rádi bychom vás upozornili na skutečnost, že termín pro odevdání recenze knihy {$bookForReviewTitle} byl {$bookForReviewDueDate}, ale my jsme doposud nedostali tuto recenzi.
+
+Pro odevzdání recenze knihy s prosím přihlaste na webových stránkách časopisu a ukončete proces odevzdání příspěvku. Pro usnadnění přihlášení použijte následující odkaz.
+
+URL pro odevzdání příspěvku: {$submissionUrl}
+
+Pokud máte jakékoliv dotazy k recenzi knihy, neváhejte mne kontaktovat.
+
+Děkujeme vám mnohokrát za spolupráci s naším časopisem a těšíme se na vaši recenzi.
+
+{$editorialContactSignature}</body>
+		<description>Tento email automaticky odesílá systém po uplynutí termínu na odevzdání recenze knihy.</description>
+	</email_text>
+	<email_text key="BFR_REVIEW_REMINDER">
+		<subject>Kniha k recenzi: připomenutí lhůty odevzdání recenze</subject>
+		<body>Vážený pane/vážená paní {$authorName}:
+
+rádi bychom vám připomenuli, že termín pro vaši recenzi knihy {$bookForReviewTitle} byl stanoven na {$bookForReviewDueDate}.
+
+Pro odevzdání recenze knihy se, prosím přihlaste na stránkách časopisu a použijte proceduru na odevzdání příspěvku.
+
+URL pro odevzdání recenze: {$submissionUrl}
+
+Pokud máte jakékoliv dotazy k recenzi knihy, neváhejte mne kontaktovat.
+
+Děkujeme vám za spolupráci s naším časopisem a těšíme se na vaši recenzi.
+
+{$editorialContactSignature}</body>
+		<description>Tento e-mail je automaticky zasílán autorovi recenze knihy před uplynutím termínu na recenzi knihy.</description>
+	</email_text>
+</email_texts>

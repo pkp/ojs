@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norwegian) locale.
+  *
+  -->
+
+<locale name="nb_NO" full_name="Norwegian">
+	<message key="plugins.generic.staticPages.displayName">Programutvidelse for statiske sider</message>
+	<message key="plugins.generic.staticPages.description">Denne programutvidselsen lar deg administrere statiske sider.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Tittel</message>
+	<message key="plugins.generic.staticPages.content">Innhold</message>
+
+	<message key="plugins.generic.staticPages.path">Sti</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>TinyMCE-programutvidelsen må være installert og slått på for at du skal kunne legge til eller redigere innhold.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Rediger/legg til innhold</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Legg til statisk side</message>
+	<message key="plugins.generic.staticPages.addNewPage">Legg til ny side</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Rediger statisk side</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Oversikten nedenfor viser alle statiske sider du har laget. Du kan redigere eller slette sidene ved å bruke lenkene på høyre side.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Bruk skjemaet nedenfor for å legge til eller endre innhold.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Denne stien finnes allerede for en annen statisk side.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Lagring av siden var vellykket.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Sletting av siden var vellykket.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Ingen sider har blitt opprettet</message>
+</locale>

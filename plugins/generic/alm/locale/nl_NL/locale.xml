@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/alm/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * ALM plugin localization strings
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+
+	<message key="plugins.generic.alm.displayName">ALM Plugin</message>
+	<message key="plugins.generic.alm.description">Plugin om te tonen in Article Level Metrics. Om de ALM service te gebruiken, moet u DOIs gebruiken. Wellicht dat dit in de toekomst niet meer hoeft.</message>
+	<message key="plugins.generic.alm.title">Article Metrics</message>
+	<message key="plugins.generic.alm.loading">Metrics worden geladen ...</message>
+
+	<message key="plugins.generic.alm.settings">Instellingen</message>
+	<message key="plugins.generic.alm.settings.saved">ALM plugin instellingen opgeslagen.</message>
+	<message key="plugins.generic.alm.settings.apiKey">Article level metrics API key</message>
+	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[Om de article level metrics van de ALM server te benaderen heeft u een API key nodig. U kunt er een aanmaken door in te loggen (met Mozilla Persona) op de <a href="http://pkp-alm.lib.sfu.ca/">PKP ALM pagina</a>.]]></message>
+	<message key="plugins.generic.alm.settings.depositArticles">Artikelinformatie automatisch deponeren? (uitvinken als u de informatie direct deponeert bij de  ALM server met behulp van de  DOI prefix.)</message>
+	<message key="plugins.generic.alm.settings.depositUrl">Url om artikelinformatie te deponeren</message>
+	<message key="plugins.generic.alm.settings.depositUrl.description">URL van PKP om artikelen te deponeren.</message>
+	<message key="plugins.generic.alm.settings.ipAddress">Als u contact opneemt met PKP om de ALM service in te richten, gelieve dit IP adres te vermelden: {$ip}</message>
+
+	<message key="plugins.generic.alm.thisJournal">Dit tijdschrift</message>
+	<message key="plugins.generic.alm.categories.html">HTML Views.</message>
+	<message key="plugins.generic.alm.categories.html.description">Het totaal aantal HTML page views voor dit artikel. Deze telling wordt direct door het systeem vastgelegd. Er kunnen ook maandtotalen beschikbaar zijn.</message>
+	<message key="plugins.generic.alm.categories.pdf">PDF Views.</message>
+	<message key="plugins.generic.alm.categories.pdf.description">Het totaal aantal views en download van PDF-bestanden voor dit artikel. Deze telling wordt direct door het systeem vastgelegd. Er kunnen ook maandtotalen beschikbaar zijn.</message>
+	<message key="plugins.generic.alm.categories.shares">Shares</message>
+	<message key="plugins.generic.alm.categories.shares.description">Shares of bookmarks in sociale netwerken als Facebook, CiteULike en Mendeley. In de meeste gevallen kunt u op de getallen klikken om door te springen naar de gegevens in het betreffende netwerk.</message>
+	<message key="plugins.generic.alm.categories.likes">Likes</message>
+	<message key="plugins.generic.alm.categories.likes.description">Likes in sociale netwerken als Facebook.</message>
+	<message key="plugins.generic.alm.categories.citations">Citaties</message>
+	<message key="plugins.generic.alm.categories.citations.description">Citaties van dit artikel in CrossRef, PubMed en Wikipedia. In de meeste gevallen kunt u op de getallen klikken om door te springen naar de gegevens in het betreffende systeem.</message>
+
+	<message key="plugins.generic.alm.senderTask.warning.noDOIprefix">ALM plugin is ingeschakeld maar een geldige DOI prefix moet opgegeven worden in de tijdschrift pad {$path} instelling om artikelinformatie te verzenden.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noApiKey">ALM plugin is ingeschakeld maar er is geen API key gedefinieerd voor tijdschriftpad {$path}.</message>
+	<message key="plugins.generic.alm.senderTask.warning.noJournal">ALM plugin is niet ingeschakeld. Geen artikelinformatie verzonden.</message>
+	<message key="plugins.generic.alm.senderTask.error.noServerResponse">Kon niet bevestigen dat artikelinformatie is verzonden voor tijdschriftpad {$path}. Geen reactie van de server.</message>
+	<message key="plugins.generic.alm.senderTask.error.noDepositUrl">Geen inzend-url gedefinieerd.</message>
+	<message key="plugins.generic.alm.senderTask.error.returnError">De server stuurde een bericht: {$error}
+	{$articlesNumber} inzendingen van artikelen verzonden.
+	{$payload}</message>
+	<message key="plugins.generic.alm.senderTask.name">ALM artikelinformatie zender</message>
+	
+</locale>

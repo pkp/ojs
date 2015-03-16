@@ -10,7 +10,7 @@
   *
   * URN plugin localization strings
   -->
- 
+
 <locale name="zh_CN" full_name="China">
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
@@ -81,4 +81,5 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">给定的URN字尾已被请用。请输入一个独特的URN字尾。</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">核对数目丢失。</message>
 
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">为每一个出版的项目输入一个单独的URN后缀。你会在每个项目的元数据页面上发现附加的URN输入字段。</message>
 </locale>

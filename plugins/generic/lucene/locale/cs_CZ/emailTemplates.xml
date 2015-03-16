@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/generic/lucene/locale/cs_CZ/emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="cs_CZ">
+	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
+		<subject>Chyba služby vyhledávání časopisů</subject>
+		<body>Vznikla chyba, když se někdo pokoušel vyhledávat v instalaci "{$siteName}".
+
+Webová služba vygenerovala zprávu (pokud ji vygenerovala): "{$error}"
+
+Tento email vygeneroval plugin Open Journal Systems' Lucene</body>
+		<description>Tento e-mail upozorňuje technický kontakt na chybu během používání Solr vyhledávací služby</description>
+	</email_text>
+	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
+		<subject>Chyba indexování časopisu</subject>
+		<body>Vznikla chyba při indexování časopisu "{$journalName}".
+
+Pokud vygeneroval systém nějakou chybovou hlášku, je její obsah: "{$error}"
+
+Tuto zprávu vygeneroval automaticky plugin Open Journal Systems' Lucene</body>
+		<description>Tato šablona emailu je používána pro upozornění technického kontaktu časopisu na chybu, která vznikla během indexace časopisu.</description>
+	</email_text>
+	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
+		<subject>Chyba indexování článků</subject>
+		<body>Vznikla chyba při aktualizaci indexování článků.
+
+Pokud vygeneroval systém nějakou chybovou hlášku, je její obsah: "{$error}"
+
+Tuto zprávu vygeneroval automaticky plugin Open Journal Systems' Lucene</body>
+		<description>Tato šablona e-mailu je používána na upozornění technického kontaktu časopisu na chybu, která vznikla během indexování článků.</description>
+	</email_text>
+</email_texts>

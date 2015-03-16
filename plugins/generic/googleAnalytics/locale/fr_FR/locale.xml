@@ -11,7 +11,7 @@
   * Google Analytics plugin localization strings for the fr_FR (Français) locale.
   *
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 
 	<!-- Google Analytics -->
@@ -33,4 +33,5 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount">Numéro de compte Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Pour retracer le lectorat des articles publiés à l'aide de Google Analytics, saisir un numéro de compte ici (par ex., UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Un ou plusieurs numéro de compte Google Analytics saisi(s) pour les auteurs des soumissions ne sont pas valides.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nouveau code de suivi Google Analytics (Universal analytics.js)</message>
 </locale>

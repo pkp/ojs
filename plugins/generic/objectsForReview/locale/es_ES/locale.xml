@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review plugin localization strings for the en_US (U.S. English) locale.
+  -->
+
+<locale name="es_ES" full_name="U.S. English">
+
+	<!-- Objects For Review Plug-In -->
+	<message key="plugins.generic.objectsForReview.displayName">Objectos para revisión</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">Recordatorio de objectos a revisar</message>
+	<message key="plugins.generic.objectsForReview.description">Solicitar revisiones para objetos de interés. Gestionar los objetos y el proceso de la revisión.</message>
+
+	<!--  Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
+
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectTypes">Revisar tipos de objeto</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">Aquí puede instalar los tipos de objeto para revisión predefinidos, cree sus propios tipo de objeto para revisión o actualice los instalados si es necesario.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">Nombre</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">Ninguno</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons">Personas</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">Defina todos los posibles roles de persona que sean importantes para este objeto de revisión (ej. Autor, Contribuidor, etc). No podrá añadirlos ni cambiarlos después.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectType">Tipo de objeto de revisión</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">Esto borrará además todos los objetos para revisar existentes de este tipo. ¿Está seguro de que quiere borrar el tipo de objeto de revisión?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.create">Crear tipo de objeto de revisión</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Editar tipo de objeto de revisión</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Actualizar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">Actualizar información de localización para los objetos seleccionados arriba:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Instalar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.installObjects">Instalar los objetos de revisión perdidos - escoja los tipos y las localizaciones y presione el botón de instalar:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.name">Nombre</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.description">Descripción e instrucciones</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Metadatos</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Previsualizar</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Revisar los meta-datos del objeto</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">Ninguno</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">Copiar a:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Crear campo de meta-dato</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">Editar campo de meta-dato</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">Esto borrará también todos los metadatos introducidos en este campo. ¿Está seguro de que desea eliminar el campo de meta-dato de este tipo de objeto de revisión?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">Copiar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">Nombre</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">Requerido</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.display">Mostrar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">Escoger tipo de campo de metadato</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.smalltextfield">Caja de texto de una palabra</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textfield">Caja de texto de una línea</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textarea">Caja de texto extendida</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.checkboxes">Checkboxes (puede escoger uno o más)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.radiobuttons">Radio buttons (solamnet puede escoger uno)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.dropdownbox">Caja desplegable</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.roledropdownbox">Caja desplegable de roles</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.langdropdownbox">Caja desplegable de idiomas</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.changeType">Cambiar tipo</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">Tipo de metadato</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions">Opciones posibles</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem">Añadir selección</message>
+
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings">Configuración</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">Gestión</message>
+	<message key="plugins.generic.objectsForReview.settings.modeFull">Modo 1: Listar los objetos disponibles para revisar, gestionar revisores de los objetos y publicar los metadatos del objeto.</message>
+	<message key="plugins.generic.objectsForReview.settings.modeMetadata">Modo 2: Publicar solamente los metadatos del objeto</message>
+	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>Modo 1</h5><p>El siguiente flujo de trabajo está soportado:</p><ul><li>El editor añade objetos disponibles para revisión.</li><li>Los autores interesados en revisar un objeto pueden solicitar  escribir una revisión, notificando el Editor.</li><li>El Editor puede aceptar o denegar la solicitud de revisión, notificandolo al Autor.</li><li>Se supone una fecha límite para las solicitudes de revisión aceptadas.</li><li>El Editor puede mandar por email una copia del objeto al Autor. Se vuelve a introducir una fecha límite para la revisión.</li><li>El Autor envía la revisión por el proceso de envío online estándar.</li><li>El metadato del Objecto se publica como parte del envío de la revisión del objeto.</li></ul><p>Este plugin soporta revistas con múltiples editores. Cuando un editor añade un nuevo objeto para revisar, se convierte en el editor primario y contacto de correspondencia para el objeto.</p><h5>Modo 2</h5><p>El siguiente workflow está soportado:</p><ul><li>El editor añade los objetos a revisar.</li><li>El editor asigna los envíos (revisiones) a cada objeto.</li><li>El meta-dato del objeto es publicado como parte del envío de la revisión del objeto.</li></ul>]]></message>
+	<message key="plugins.generic.objectsForReview.settings.displayMetadata">Mostrar metadatos del objeto</message>
+	<message key="plugins.generic.objectsForReview.settings.displayAbstract">Mostrar metadatos del objeto en la página de resumen del artículo.</message>
+	<message key="plugins.generic.objectsForReview.settings.displayListing">Publicar la lista de todos los objetos disponibles para revisar usando el ítem de navegación "Objetos a revisar".</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewDue">Fecha límite de revisiones de objetos</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks1">Las revisiones son hasta</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">semanas tras asignación del objeto al autor.</message>
+	<message key="plugins.generic.objectsForReview.settings.emailReminders">Mandar por email recordatorios</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays1">Mandar un email de recordatorio a los autores</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">días antes de la fecha límite de revisión.</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">Mandar un email de recordatorio a los autores</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">días tras la fecha límite para la revisión.</message>
+	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Información adicional</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Información adicional publicada a través de la lista de objetos a revisar.</message>
+
+	<!-- Search, filter, sort -->
+	<message key="plugins.generic.objectsForReview.search.field.title">Título</message>
+	<message key="plugins.generic.objectsForReview.search.field.abstract">Resúmen</message>
+	<message key="plugins.generic.objectsForReview.search.noResults">No hay resultados de la búsqueda</message>
+	<message key="plugins.generic.objectsForReview.filter.filterBy">Filtrados por</message>
+	<message key="plugins.generic.objectsForReview.sort.sortBy">Ordenados por</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionAsc">Ascendiendo</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionDesc">Descendiendo</message>
+
+	<!-- Objects For Review -->
+	<message key="plugins.generic.objectsForReview.objectsForReview.pageTitle">Objectos a revisar</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.noneCreated">No hay objectos a revisar</message>	
+	<message key="plugins.generic.objectsForReview.objectsForReview.title">Título</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.dateCreated">Creado</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.status">Estatus</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectReviewer">Revisor de Objeto</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectType">Tipo de Objeto</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.editor">Editor</message>
+
+	<!-- Object For Review Assignments -->
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAll">Asignaciones de objetos para revisar - Todos</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.all">Todos</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleRequested">Asignaciones de objetos a revisar - Solicitado</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.requested">Solicitado</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned">Asignaciones de objetos a revisar - Asignado</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned">Asignado</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleMailed">Asignaciones de objetos a revisar - Enviadas por email</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed">Enviado por email</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleSubmitted">Asignaciones de objetos a revisar - Enviadas</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submitted">Enviado</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.title">Título</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.status">Estatus</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.objectReviewer">Revisor del objeto</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dateCreated">Creado</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dueDate">Fecha límite</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submission">Envío</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.noneCreated">No hay asignaciones de objetos a revisar</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status">Estatus</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">Disponible</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.requested">Solicitado</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">Asignado</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed">Enviado por email</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted">Enviado</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.additionalNotes">Notas adicionales</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notes">Notas</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">Sólo para el editor. No publicado como parte del objeto a revisar.</message>
+
+	<!-- Objects For Review Assignments Management by Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
+	<message key="plugins.generic.objectsForReview.editor.assignments">Asignaciones</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.editor.select">Seleccionar</message>
+	<message key="plugins.generic.objectsForReview.editor.assignObjectReviewer">Asignar</message>
+	<message key="plugins.generic.objectsForReview.editor.acceptObjectReviewer">Aceptar</message>
+	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">Denegar</message>
+	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">Objecto enviado por email</message>
+	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">Eliminar</message>
+	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">¿Está seguro de querer eliminar este autor y de borrar su historial de revisión de objetos?</message>
+	<message key="plugins.generic.objectsForReview.editor.selectSubmission">Seleccionar envío</message>
+	<!-- Assign Author -->
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor">Asignar autor</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.assign">Asignar</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.createNewUser">Crear nuevo usuario</message>
+
+	<message key="plugins.generic.objectsForReview.editor.noMailingAddress">No hay dirección de mailing en el fichero</message>
+
+	<!-- Object For Review Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview">Objeto a revisar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseLanguage">Escoger idioma</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption">Escoger opción</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole">Escoger rol</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer">Sin respuesta</message>
+	<message key="plugins.generic.objectsForReview.editor.edit">Editar</message>
+	<message key="plugins.generic.objectsForReview.editor.create">Crear objeto a revisar</message>
+	<message key="plugins.generic.objectsForReview.editor.saveAndCreateAnother">Guardar y crear otro</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.addPerson">Añadir persona</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.deletePerson">Eliminar</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPage">Cubierta</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageInstructions">(Formatos permitidos: .gif, .jpg, or .png )</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageUploaded">Subido</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.removeCoverPage">¿Eliminar imagen de portada?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.remove">Eliminar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImage">Imagen de portada</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImageAltText">Texto alternativo de imagen de portada</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.additionalNotes">Notas adicionales</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notes">Notas</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notesInstructions">Sólo para el editor. No publicado como parte del objeto a revisar.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditor">Asignar Editor</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.editor">Editor</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditorInstructions">Escoger un editor responsable de este objeto a revisar.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.available">Disponible</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.available">Disponible</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.notAvailable">No disponible</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.delete">Delete</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.confirmDelete">Esto borrará completamente el objeto y sus asignaciones. ¿Está seguro de eliminar este objeto?</message>
+
+	<!-- Public -->
+	<message key="plugins.generic.objectsForReview.public.headerLink">Objetos a revisar</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReview">Objetos a revisar</message>
+	<message key="plugins.generic.objectsForReview.public.objectForReview">Objetos a revisar</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReviewInstructions"><![CDATA[<p>To request an object for review:</p><ul><li><a href="{$registerUrl}" target="_parent">Register</a> as an author with this journal.</li><li><a href="{$loginAuthorUrl}" target="_parent">Log in</a> as an author.</li><li>Click on the request link that corresponds to the object of interest.</li></ul>]]></message>
+	
+	<!-- Author -->
+	<message key="plugins.generic.objectsForReview.author.objectsForReview">Objetos a revisar</message>
+	<message key="plugins.generic.objectsForReview.author.myObjectsForReview">Mis objetos</message>
+
+	<message key="plugins.generic.objectsForReview.author.submit">Enviar</message>
+	<message key="plugins.generic.objectsForReview.author.view">Ver</message>
+	<!-- Submission -->
+	<message key="plugins.generic.objectsForReview.author.submitInstructions">Indique si este envío es una revisión de uno de los siguientes objetos asignados a usted.</message>
+
+
+	<!-- Notifications -->
+	<message key="plugins.generic.objectsForReview.notification.objectTypeInstalled">Revisar tipo de objeto instalado.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeCreated">Revisar tipo de objeto creado.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeUpdated">Revisar tipo de objeto actualizado.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeActivated">Revisar tipo de objeto activado.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeactivated">Revisar tipo de objeto desactivado.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeleted">Revisar el tipo de objeto eliminado. También los objetos relacionados para revisar y sus asignaciones.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrCreated">Nuevo objeto a revisar creado.</message>
+
+	<message key="plugins.generic.objectsForReview.object.artwork.size">Tamaño</message>
+	<!-- Audio Recording -->
+	<message key="plugins.generic.objectsForReview.object.audioRecording">Grabación de audio</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">Intérprete</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">Compositor</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">Contribuidor</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.format">Formato</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">Título de la Serie</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">Volúmen</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.numberOfVolumes">Número de Volúmenes</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.place">Lugar</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.label">Etiqueta</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.runningTime">Tiempo de ejecución</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.isbn">ISBN</message>
+	<!-- Bill -->
+	<message key="plugins.generic.objectsForReview.object.bill">Factura</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.sponsor">Patrocinador</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.contributor">Contribuidor</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.cosponsor">Copatrocinador</message>
+	<message key="plugins.generic.objectsForReview.object.bill.number">Número de factura</message>
+	<message key="plugins.generic.objectsForReview.object.bill.code">Código</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codeVolume">Code Volume</message>
+	<message key="plugins.generic.objectsForReview.object.bill.section">Sección</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codePages">Code Pages</message>
+	<message key="plugins.generic.objectsForReview.object.bill.legislativeBody">Legislative Body</message>
+	<message key="plugins.generic.objectsForReview.object.bill.session">Sessión</message>
+	<message key="plugins.generic.objectsForReview.object.bill.history">Historial</message>
+	<!-- Blog Post -->
+	<message key="plugins.generic.objectsForReview.object.blogPost">Envío al Blog</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.author">Autor</message>
+
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Autor asignado para el objeto a revisar.</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Receptor</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Palabras por</message>
+</locale>

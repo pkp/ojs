@@ -18,7 +18,7 @@
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
   *
   -->
- 
+
 <locale name="el_GR" full_name="Greek">	
 
 	<!-- Google Analytics -->
@@ -41,4 +41,5 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount">Αριθμός λογαριασμού στο Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Για την ανίχνευση της αναγνωσιμότητας ενός δημοσιευμένου άρθρου με την χρήση του Google Analytics, εισάγετε έναν αριθμό λογαριασμού (π.χ. UA-xxxxxx-x).</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Ένας ή περισσότεροι αριθμοί λογαριασμού στην Google Analytics που χρησιμοποιήθηκαν για συγγραφείς υποβολών δεν είναι έγκυροι.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Νέος κώδικα; παρακολούθησης για την Universal Analytics (analytics.js)</message>
 </locale>

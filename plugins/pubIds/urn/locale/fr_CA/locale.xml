@@ -10,7 +10,7 @@
   *
   * URN plugin localization strings
   -->
- 
+
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
@@ -75,4 +75,9 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">Le suffixe d'URN spécifié est déjà utilisé pour un autre élément publié. Veuillez entrer un suffixe URN unique pour chaque élément.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Le numéro de contrôle est manquant.</message>
 
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">numéro</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeArticle">article</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">épreuve</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">fichier supplémentaire</message>
+	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Ce que vous voyez est l'aperçu de l'URN qui peut être incomplète. Une URN n'a pas encore été générée. Publier le numéro et aller voir la page {$pubObjectType} publique générera automatiquement un URN unique pour ce {$pubObjectType}.</message>
 </locale>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.usageStats.settings.logging">Access log opties</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Logbestanden maken</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Als u deze optie inschakelt, maakt de plugin logbestanden in de files-map. Deze bestanden zijn  nodig voor het extraheren van gebruiksstatistieken. Als u deze bestanden niet meer wilt maken, kunt u de optie uitgeschakeld houden en uw webserver logbestanden gebruiken</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">regex om logbestanden te parsen</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">De standaard regex kan apache acces log-bestanden in combined format analyseren, evenals de logbestanden van de plugin. Als uw logbestanden anders zijn, kun u een regex opgeven die uw bestanden kent en de gevraagde waarden op levert. Zie UsageStatsLoader::_getDataFromLogEntry() voor meer informatie.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Usage statistics plugin instellingen opgeslagen</message>
+	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Usage statistics bestandslader taak</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Het bestand {$file} kon niet geopend worden en is genegeerd.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">Regel  nummer {$lineNumber} in bestand {$file} is geen geldige logregel en is genegeerd.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">Regel nummer {$lineNumber} in bestand {$file} bevat een url waaruit het systeem de base url niet af kan leiden.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Kon de data geëxtraheerd uit {$file} niet laden. De melding was: {$error}. Het bestand is weer te verwerking klaargezet.</message>
+	<message key="plugins.generic.usageStats.displayName">Gebruiksstatistieken</message>
+	<message key="plugins.generic.usageStats.description">Toon gebruiksstatistieken van de databestand. Kan de statistieken extraheren uit de server logbestanden.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Usage statistics plugin is uitgeschakeld. Geen logbestanden verwerkt.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">De map {$directory} is niet leeg. Dit kan duiden op een eerder mislukt proces of een proces dat tegelijkertijd loopt.  Dit bestand wordt automatisch opniew verwerkt als u scheduledTasksAutoStage.xml gebruikt, anders moet u de verweesde bestanden met de hand naar de map met de niet-verwerkte bestanden verplaatsen.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">De COUNTER bot list could kon niet gevonden worden, of er zijn er meerdere. Het bestand {$file} kon niet verwerkt worden</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">De COUNTER bot list {$botlist} kon niet geopend worden. Het bestand {$file} kon niet verwerkt worden.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">OJS gebruiksstatistieken rapport</message>
+	<message key="plugins.reports.usageStats.report.description">OJS standaard gebruiksstatistieken rapport (geschikt voor COUNTER)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (COUNTER ready)</message>
+</locale>

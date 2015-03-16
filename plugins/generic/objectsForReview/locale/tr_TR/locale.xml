@@ -10,44 +10,20 @@
   *
   * Objects for review plugin localization strings for the en_US (U.S. English) locale.
   -->
- 
+
 <locale name="tr_TR" full_name="U.S. English">
 
 	<!-- Objects For Review Plug-In -->
 	<message key="plugins.generic.objectsForReview.displayName">Nesneler için değerlendirme</message>
-	<message key="plugins.generic.objectsForReview.reminderTask.name">Objects for review reminder</message>
-	<message key="plugins.generic.objectsForReview.description">Solicit reviews for objects of interest. Manage review objects and the review process.</message>
-
-	<!--  Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
-
-	<!-- Object Types Management -->
-	<message key="plugins.generic.objectsForReview.editor.objectTypes">Review Object Types</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">Here you can install the default/predefined review objects types, if necessary update the installed ones or create your own review object types.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">İsim</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">Hiçbiri</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.persons">Kişiler</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">Please define all possible persons roles, that are important for this review object (e.g. Author, Contributor, etc). You won't be able to add and change them later.</message>
-
-	<message key="plugins.generic.objectsForReview.editor.objectType">Review Object Type</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">This will also delete all existing objects for review of this type. Are you sure you wish to delete the review object type?</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.create">Create Review Object Type</message>
-	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Review Object Type</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Güncelleme</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">Update locale data for the above selected objects:</message>
 	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Yükle</message>
-	<message key="plugins.generic.objectsForReview.editor.objectTypes.installObjects">Install the missing review objects - choose the types and the locales and press the install button:</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.name">İsim</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.description">Açıklama ve Talimatlar</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Üst Veri</message>
 	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Ön İzleme</message>
 
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Review Object Metadata</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">Hiçbiri</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">Şuraya Kopyala:</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Create Review Object Metadata</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">Review Object Metadata</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">This will also delete all the same and existing objects for review metadata. Are you sure you wish to delete the metadata of the review object?</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">Kopyala</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">İsim</message>
 	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">Gerekli</message>
@@ -71,36 +47,17 @@
 	<!-- Objects For Review Settings -->
 	<message key="plugins.generic.objectsForReview.settings">Ayarlar</message>
 	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">Yönetim</message>
-	<message key="plugins.generic.objectsForReview.settings.modeFull">Mode 1: List available objects for review, manage object reviewers, and publish object metadata.</message>
-	<message key="plugins.generic.objectsForReview.settings.modeMetadata">Mode 2: Only publish object metadata.</message>
-	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>Mode 1</h5><p>The following workflow is supported:</p><ul><li>Editor adds objects available for review.</li><li>Authors interested in reviewing an object can request to write a review, notifying the Editor.</li><li>Editor can accept or deny the review request, notifying the Author.</li><li>For the accepted review request a due date is set for the review.</li><li>The Editor can mail a copy of the object to the Author. The due date for the review is set anew.</li><li>Author submits review via the standard online submission process.</li><li>Object metadata is published as part of the object review submission.</li></ul><p>This plugin supports journals with multiple editors. When an Editor adds a new object for review, he or she becomes the primary editor and correspondence contact for the object.</p><h5>Mode 2</h5><p>The following workflow is supported:</p><ul><li>Editor adds objects for review.</li><li>Editor matches submissions (reviews) to each object.</li><li>Object metadata is published as part of the object review submission.</li></ul>]]></message>
 	<message key="plugins.generic.objectsForReview.settings.displayMetadata">Üst veri nesnesi görüntüle</message>
 	<message key="plugins.generic.objectsForReview.settings.displayAbstract">Makale özet sayfasında üst veri nesnesi görüntüle</message>
-	<message key="plugins.generic.objectsForReview.settings.displayListing">Publish the list of all available objects for review using the navigation item "Objects For Review".</message>
-	<message key="plugins.generic.objectsForReview.settings.objectsForReviewDue">Object Reviews Due</message>
-	<message key="plugins.generic.objectsForReview.settings.dueWeeks1">Reviews are due</message>
-	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">week(s) after the object has been assigned to the author.</message>
-	<message key="plugins.generic.objectsForReview.settings.emailReminders">Email Reminders</message>
-	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays1">Send authors a reminder email</message>
-	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">day(s) before the review due date.</message>
-	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">Send authors a reminder email</message>
-	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">day(s) after the review due date.</message>
-	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
-	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Additional Information</message>
-	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Additional information published along with the objects for review.</message>
 
 	<!-- Search, filter, sort -->
 	<message key="plugins.generic.objectsForReview.search.field.title">Başlık</message>
 	<message key="plugins.generic.objectsForReview.search.field.abstract">Özet</message>
 	<message key="plugins.generic.objectsForReview.search.noResults">Hiç bir sonuç bulunamadı</message>
-	<message key="plugins.generic.objectsForReview.filter.filterBy">Filter by</message>
-	<message key="plugins.generic.objectsForReview.sort.sortBy">Sort by</message>
 	<message key="plugins.generic.objectsForReview.sort.sortDirectionAsc">Artan sıralama</message>
 	<message key="plugins.generic.objectsForReview.sort.sortDirectionDesc">Azalan sıralama</message>
 
 	<!-- Objects For Review -->
-	<message key="plugins.generic.objectsForReview.objectsForReview.pageTitle">Objects For Review</message>
-	<message key="plugins.generic.objectsForReview.objectsForReview.noneCreated">No objects for review</message>	
 	<message key="plugins.generic.objectsForReview.objectsForReview.title">Başlık</message>
 	<message key="plugins.generic.objectsForReview.objectsForReview.dateCreated">Oluşturuldu</message>
 	<message key="plugins.generic.objectsForReview.objectsForReview.status">Durum</message>
@@ -138,10 +95,8 @@
 
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.additionalNotes">Ek notlar</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notes">Notlar</message>
-	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">For the editor only. Not published as part of the book for review.</message>
 
 	<!-- Objects For Review Assignments Management by Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
 	<message key="plugins.generic.objectsForReview.editor.assignments">Atamalar</message>
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">Seçim</message>
@@ -150,7 +105,6 @@
 	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">Reddet</message>
 	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">Postalanan Nesne</message>
 	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">Sil</message>
-	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">Are you sure you want to remove this author and clear this object's review history?</message>
 	<message key="plugins.generic.objectsForReview.editor.selectSubmission">Gönderi seç</message>
 	<!-- Assign Author -->
 	<message key="plugins.generic.objectsForReview.editor.assignAuthor">Yazar Ata</message>
@@ -181,26 +135,20 @@
 
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.additionalNotes">Ek notlar</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.notes">Notlar</message>
-	<message key="plugins.generic.objectsForReview.editor.objectForReview.notesInstructions">For the editor only. Not published as part of the book for review.</message>
-
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditor">Bir editör ata</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.editor">Editör</message>
-	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditorInstructions">Choose an editor that is resopnsible for this object for review.</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.available">Kullanılabilir</message>
-	<message key="plugins.generic.objectsForReview.editor.objectForReview.availableInstructions">Define if the object is available for review.</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.available">Kullanılabilir</message>
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.notAvailable">Kullanılamaz</message>
 
 	<message key="plugins.generic.objectsForReview.editor.objectForReview.delete">Sil</message>
-	<message key="plugins.generic.objectsForReview.editor.objectForReview.confirmDelete">This will entirely remove the object and its assignments. Are you sure you want to delete this object?</message>
 
 	<!-- Public -->
 	<message key="plugins.generic.objectsForReview.public.headerLink">Değerlendirme için nesne</message>
 	<message key="plugins.generic.objectsForReview.public.objectsForReview">Değerlendirme için nesne</message>
 	<message key="plugins.generic.objectsForReview.public.objectForReview">Değerlendirme için nesne</message>
-	<message key="plugins.generic.objectsForReview.public.objectsForReviewInstructions"><![CDATA[<p>To request an object for review:</p><ul><li><a href="{$registerUrl}" target="_parent">Register</a> as an author with this journal.</li><li><a href="{$loginAuthorUrl}" target="_parent">Log in</a> as an author.</li><li>Click on the request link that corresponds to the object of interest.</li></ul>]]></message>
 	
 	<!-- Article Abstract Page -->
 	<message key="plugins.generic.objectsForReview.public.articleObjectsForReview">Bu makalede nesneler değerlendirildi</message>
@@ -210,12 +158,10 @@
 	<message key="plugins.generic.objectsForReview.author.objectsForReview">Değerlendirme için nesne</message>
 	<message key="plugins.generic.objectsForReview.author.myObjectsForReview">Nesnelerim</message>
 	<!--  Actions -->
-	<message key="plugins.generic.objectsForReview.author.requestObjectForReview">Request this Object For Review</message>
 
 	<message key="plugins.generic.objectsForReview.author.submit">Gönder</message>
 	<message key="plugins.generic.objectsForReview.author.view">Göster</message>
 	<!-- Submission -->
-	<message key="plugins.generic.objectsForReview.author.submitInstructions">Please indicate if this submission is a review for any of the following objects assigned to you</message>
 
 
 	<!-- Notifications -->
@@ -224,37 +170,10 @@
 	<message key="plugins.generic.objectsForReview.notification.objectTypeUpdated">Değerlendirme nesne türü güncellendi.</message>
 	<message key="plugins.generic.objectsForReview.notification.objectTypeActivated">Değerlendirme nesne türü etkinleştirildi.</message>
 	<message key="plugins.generic.objectsForReview.notification.objectTypeDeactivated">Değerlendirme nesne türü pasifleştirildi.</message>
-	<message key="plugins.generic.objectsForReview.notification.objectTypeDeleted">Review object type deleted. Also the related objects for review and their assignments.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrCreated">Değerlendirmee oluşturulması için yeni nesne.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrRequested">Object for review requested. Awaiting confirmation from the Editor.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Değerlendirme güncellemesi için nesne.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Object for review and their assignments deleted.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAauthorAssigned">Author assigned to object for review.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Author request denied. Object for review reset to initial state.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">Object for review recorded as mailed to author.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Author removed. Object for review reset to initial state.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrSubmissionAssigned">Submission assigned to object for review.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrSettingsSaved">Object for review plugin settings saved.</message>
 
-
-	<!-- errors -->
-	<!-- Object Types Management -->
-	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">A name is required for the review object type.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">A name is required for the review object metadata.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">A type is required for the review object metadata.</message>
-	<!-- Object For Review Edit -->
-	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">Please fill in the required fields.</message>
-	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">Please choose the person role and fill either the first or the last name.</message>
-	<!-- Objects For Review Settings -->
 	<message key="plugins.generic.objectsForReview.settings.modeRequired">Bir mod gerekli.</message>
-	<message key="plugins.generic.objectsForReview.settings.modeValid">Please specify a valid mode.</message>
-	<message key="plugins.generic.objectsForReview.settings.numDaysReminderValid">Please specify a valid number of days for the reminder email.</message>
-	<message key="plugins.generic.objectsForReview.settings.dueWeeksRequired">Please specify the number of weeks for when object reviews are due.</message>
-	<message key="plugins.generic.objectsForReview.settings.dueWeeksValid">Please specify a valid number of weeks for when object reviews are due.</message>
-
-
-
-
 
 	<!-- Objects for Review and their Metadata -->
 	<!-- Common Metadata -->
@@ -281,7 +200,6 @@
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">Oyuncu</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">Besteci</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">Katkı Sağlayan</message>
-	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsByr">Words By</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.format">Biçim</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">Seri Başlıkları</message>
 	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">Cilt</message>
@@ -292,7 +210,6 @@
 	<message key="plugins.generic.objectsForReview.object.audioRecording.isbn">ISBN</message>
 	<!-- Bill -->
 	<message key="plugins.generic.objectsForReview.object.bill">Fatura</message>
-	<message key="plugins.generic.objectsForReview.object.bill.person.sponsor">Sponsor</message>
 	<message key="plugins.generic.objectsForReview.object.bill.person.contributor">Katkı Sağlayan</message>
 	<message key="plugins.generic.objectsForReview.object.bill.person.cosponsor">Sponsorla Desteklemek</message>
 	<message key="plugins.generic.objectsForReview.object.bill.number">Fatura Numamarsı</message>
@@ -300,7 +217,6 @@
 	<message key="plugins.generic.objectsForReview.object.bill.codeVolume">Kod Cildi</message>
 	<message key="plugins.generic.objectsForReview.object.bill.section">Bölüm</message>
 	<message key="plugins.generic.objectsForReview.object.bill.codePages">Kod Sayfası</message>
-	<message key="plugins.generic.objectsForReview.object.bill.legislativeBody">Legislative Body</message>
 	<message key="plugins.generic.objectsForReview.object.bill.session">Oturum</message>
 	<message key="plugins.generic.objectsForReview.object.bill.history">Geçmiş</message>
 	<!-- Blog Post -->
@@ -490,7 +406,6 @@
 	<message key="plugins.generic.objectsForReview.object.letter">Mektup</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.author">Yazar</message>
 	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Katkı Sağlayan</message>
-	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">Alıcı</message>
 	<message key="plugins.generic.objectsForReview.object.letter.type">Mektup Türü</message>
 	<!-- Magazine Article -->
 	<message key="plugins.generic.objectsForReview.object.magazineArticle">Magazin Makalesi</message>
@@ -651,4 +566,7 @@
 	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">Web Sitesi Türü</message>
 
 
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">Kelimeye Göre</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">Alıcı</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Yazar inceleme için öğeye atandı.</message>
 </locale>

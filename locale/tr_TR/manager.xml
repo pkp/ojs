@@ -740,4 +740,5 @@
 	<message key="manager.setup.copyrightYearBasis.Article">Varsayılan yıl makalenin yayın tarihinden itibaren çekilecektir.</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Varsayılan yıl sayının yayımı tarihinden itibaren çekilecek.</message>
 	<message key="manager.statistics.reports.objectNotFound">Obje veri tabanında bulunamadı</message>
+	<message key="manager.setup.emailHeader">e-Posta Başlığı</message>
 </locale>

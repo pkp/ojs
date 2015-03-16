@@ -49,4 +49,5 @@
 {$payload}</message>
 	<message key="plugins.generic.alm.senderTask.name">ALM文章信息发件人</message>
 	
+	<message key="plugins.generic.alm.senderTask.warning.noJournal">任何杂志未启用ALM插件。文章信息未发送。</message>
 </locale>

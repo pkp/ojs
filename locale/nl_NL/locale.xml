@@ -13,7 +13,7 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -40,14 +40,6 @@
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalingen</message>
 
-	<!-- Common Form Messages -->
-	
-	<!-- Common Email Messages -->
-
-	<!-- Common Localization Terms -->
-
-	<!-- Common Error Messages -->
-		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Tijdschrift help</message>
 	<message key="navigation.archives">Archief</message>
@@ -60,7 +52,7 @@
 	<message key="navigation.competingInterestGuidelines">Richtlijnen voor belangenconflicten</message>
 	<message key="navigation.infoForAuthors.long">Informatie voor auteurs</message>
 	<message key="navigation.infoForLibrarians.long">Informatie voor bibliothecarissen</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Niet toegekend</message>
 	<message key="common.queue.short.submissionsUnassigned">Niet toegekend</message>
@@ -74,7 +66,7 @@
 	<message key="common.queue.short.active">Actief</message>
 	<message key="common.queue.long.completed">Archief</message>
 	<message key="common.queue.short.completed">Archief</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -137,7 +129,7 @@
 	<message key="submission.scheduling">Inplannen</message>
 	<message key="submission.scheduledIn">Ingepland voor publicatie in  {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Step 1</message>
 	<message key="submissions.step3">Stap 3</message>
@@ -160,7 +152,7 @@
 	<message key="submissions.proofreadingComplete">Proefgelezen</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Huidig nummer</message>
 	<message key="journal.journals">Tijdschriften</message>
@@ -171,7 +163,7 @@
 	<message key="user.showAllJournals">Toon mijn tijdschriften</message>
 	<message key="user.registerForOtherJournals">Registreren voor andere tijdschriften</message>
 	<message key="user.myJournals">Mijn tijdschriften</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Tijdschriftbeheerder</message>
 	<message key="user.role.editor">Redacteur</message>
@@ -189,7 +181,7 @@
 	<message key="user.role.proofreaders">Proeflezers</message>
 	<message key="user.role.authors">Auteurs</message>
 	<message key="user.role.subscriptionManagers">Abonnementenbeheerders</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Nummer</message>
 	<message key="issue.issues">Nummers</message>
@@ -217,15 +209,15 @@
 	<message key="submission.event.author.authorRevision">Revisie door auteur ingezonden</message>
 
 	<message key="submission.event.general.authorRevision">Bestand door de auteur gereviseerd</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">Redacteur toegekend aan de inzending</message>
 	<message key="submission.event.editor.editorUnassigned">Toekenning redacteur ingetrokken</message>
 	<message key="submission.event.editor.editorDecision">Beslissing van de redacteur ingezonden</message>
 	<message key="submission.event.editor.editorFile">Bestand van de redacteur bijgewerkt</message>
 	<message key="submission.event.editor.submissionArchived">Inzending naar archief verstuurd</message>
 	<message key="submission.event.editor.submissionRestored">Inzending teruggehaald uit archief</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">Tekstredacteur toegekend aan inzending</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Toewijzing tekstredacteur ingetrokken</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Tekstredactie gestart</message>
@@ -233,13 +225,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Eerste tekstredactie gereed</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Laatste tekstredactier gereed</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Bestand tekstredactie bijgewerkt</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Proeflezer toegekend aan de inzending</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Toekenning proeflezer ingetrokken</message>
 	<message key="submission.event.proofread.proofreadInitiated">Proeflezen gestart</message>
 	<message key="submission.event.proofread.proofreadRevision">Bestand met revisies proeflezer bijgewerkt</message>
 	<message key="submission.event.proofread.proofreadCompleted">Proeflezen gereed</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">Eindredacteur toegekend aan de inzending</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Toekenning eindredacteur ingetrokken</message>
 	<message key="submission.event.layout.layoutInitiated">Eindredactie gestart</message>
@@ -254,7 +246,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Alleen voor abonnees</message>
-	<message key="reader.subscriptionRequiredLoginText">Abonnement vereist om toegang te krijgen. Log in om uw abonnement te verifiëren.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Abonnement vereist om toegang te krijgen. Log in om uw abonnement te verifiëren.</message>
 	<message key="reader.openAccess">Vrij toegankelijk</message>
 	<message key="reader.subscriptionAccess">Toegankelijk voor abonnees</message>
 	<message key="reader.subscriptionOrFeeAccess">Toegankelijk voor abonnees of na betaling</message>
@@ -271,8 +263,7 @@
 <br /><br />
 Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de configuratie van het OJS systeem te wijzigen. In toekomstige versies van het OJS systeem zal het mogelijk zijn de OAI interface voor afzonderlijke tijdschriften binnen de site aan of uit te zetten.]]></message>
 
-	
-	
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Het binnenhalen van taalbestanden van de Public Knowledge Project website is momenteel niet mogelijk omdat:</p>
 	<ul>
@@ -285,28 +276,16 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 <ul>
 	<li>Wanneer een gebruiker een nieuw account probeert te registreren  met een gebruikersnaam die al bestaat in het externe systeem (maar niet in OJS), zal de registratie alleen lukken als het wachtwoord geldig is voor dat account.</li>
 </ul>]]></message>
-	
+
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Attentie!</div>
 <p>Het systeem kon het instellingenbestand niet overschrijven. Om uw wijzigingen te effectueren moet u <tt>config.inc.php</tt> openen in een geschikte teksteditor en de inhoud van het bestand vervangen door de inhoud van het tekstveld hieronder.</p>]]></message>
 
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Abonneebeheer</message>
-	
-	<!-- Journal Management -->
-
-	<!-- Statistics & Reports -->
-
-	<!-- Plugin Management -->
-	
-	<!-- Payment Management -->
-
-
-		
-
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.generic.description">Generieke plugins worden gebruikt om Open Journal Systems uit te breiden op manieren die niet ondersteund worden in de andere plugin-categorieën.</message>
@@ -316,24 +295,10 @@ Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de con
 
 	<message key="plugins.categories.citationFormats.description">Citatieformaat plugins leveren de gebruikers verschillende formaten voor arikelcitaties.</message>
 
-
-
-
-	<!-- Files Browser -->
-
-	<!-- Journal Setup -->
-	
-	<!-- Setup Step 1 -->
-
-	<!-- Setup Step 2 -->
-
-
-
-
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems ondersteunt het <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systeem om een permanent archief van het tijdschrift te verzekeren. LOCKSS is open source software, ontwikkeld door Stanford University Library, die bibliotheken in staat stelt om geselecteerde internet-tijdschriften te archiveren door die tijdschriften regelmatig  te onderzoeken op nieuwe inhoud en die dan te archiveren. Ieder archief wordt continue gevalideerd tegen archieven in andere bibliotheken. Verloren of beschadigd materiaal wordt uit de andere archieven hersteld.
 <br /><br />
 Het inrichten van LOCKSS ondersteuning voor Open Journal Systems hoeft pas te gebeuren als publicatie plaatsvindt. Volg dan deze twee stappen:]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Voorgestelde Creative Commons auteursrecht verklaringen</h3>
 <h4>1. Concept beleid voor Open Access tijdschriften</h4>
@@ -369,18 +334,6 @@ Kies een model voor deze aspecten van het redactieproces. (Voor het aanwijzen va
 	<li><strong>Links opnemen in referenties</strong><p>De opmaakredacteur kan een link toevoegen naar referenties die online gevonden kunnen worden door de volgende instructies te volgen (die aangepast kunnen worden).</p></li>
 </ol>]]></message>
 
-	<!-- Setup Step 5 -->
-
-	<!-- Languages -->
-	
-	
-	<!-- Section Management -->
-	<!-- Import/Export -->
-
-	<!-- Groups / Editorial Team -->
-
-
-
 	<!-- People Management -->
 	<message key="manager.people.confirmDisable">Deze gebruiker blokkeren?. De gebruiker kan dan niet meer inloggen op het systeem
 
@@ -392,36 +345,11 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 		</ul>
 	Deze taak moet uitgevoerd worden door een sitebeheerder.]]></message>
 
-
-	
-	<!-- Email Management -->
-
-	<!-- Subscription Policy Management -->
-
-	<!-- Subscription Type Management -->
-
-	<!-- Subscription Management -->
-
-	<!-- Announcement Type Management -->
-
-	<!-- Announcements Management -->
-
-	<!-- Editor -->
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Onderdelen worden geaccentueerd als de redacteur actie moet ondernemen.</li>
 	<li>"Verloopt"  is ingevuld als de reviewer het verzoek tot beoordelen accepteert, het geeft het aantal weken aan voordat de review binnen moet zijn of  (-) het aantal weken dat die overtijd is.</li>
 </ol>]]></message>
 
-	<!-- Editor Index Page -->
-
-	<!-- Back Issues -->
-
-	<!-- Create Issue / Issue Data -->
-
-	<!-- Live Issues -->
-
-	<!-- Navigation sidebar menu -->
-	
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[De naam is een link naar het profiel van de reviewer.<br/>
 Oordeel is van 1 tot  5 (Uitstekend).<br/>
@@ -429,10 +357,6 @@ Weken refereert aan de gemiddelde tijdsduur voor een complete review.<br/>
 Laatste is de datum van de laatst geaccepteerde review.<br/>
 Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]></message>
 
-
-
-
-	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Actieve redactietaken</message>
 	<message key="sectionEditor.completedEditorialAssignments">Voltooide redactietaken</message>
@@ -463,12 +387,12 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="layoutEditor.galley.replaceGalley">Vervang bestand</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Aanvullend bestand laden</message>
 	<message key="submission.layout.imageInvalid">Ongeldig afbeeldingsformaat. Toegestaan zijn .gif, .jpg, en .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artikelen in afwachting van review</message>
 	<message key="reviewer.completedReviews">Gereed</message>
 	<message key="reviewer.averageQuality">Beoordeling</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Bestand moet beoordeeld worden</message>
 	<message key="reviewer.article.notifyTheEditor">Bericht de redacteur</message>
@@ -484,7 +408,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="reviewer.article.recommendation">Aanbeveling</message>
 	<message key="reviewer.article.submitReview">Stuur review naar redacteur</message>
 	<message key="reviewer.article.reviewerComments">Comentaar</message>
-	<message key="reviewer.article.uploadedFile">Geladen bestanden</message>	
+	<message key="reviewer.article.uploadedFile">Geladen bestanden</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Door de reviewer geladen versie</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Als u het bestand wilt annoteren voor de redacteur, bewaar het op uw harde schijf en gebruik bladeren/laden.)</message>
         <message key="reviewer.article.schedule.request">Verzoek van de redacteur</message>
@@ -520,7 +444,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="copyeditor.article.copyeditorFile">Bestand voor tekstredacteur</message>
 	<message key="copyeditor.article.uploadedFile">Geladen bestand</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Bestand voor tekstredacteur</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Geen proefleestaken</message>
 
@@ -529,9 +453,9 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 
 	<!-- Article Submission Step 1 -->
 
-	
+
 	<!-- Article Submission Step 2 -->
-	
+
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[<p>Doorloop de volgende stappen om een manuscript in het tijdschrift te laden.</p>
 <ol>
@@ -541,11 +465,11 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 <li>Klik Laden op deze pagina, waarna het bestand van uw computer in de website van het tijdschrift wordt geladen. Het bestand krijgt een naam volgens de conventies van het tijdschrift</li>
 <li>Als de inzending geladen is, klik dan op Bewaren en Doorgaan onderaan de pagina.</li>
 </ol>]]></message>
-	
+
 	<!-- Article Submission Step 4 -->
-	
+
 	<!-- Article Submission Step 4a: Supplementary Files -->
-	
+
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
@@ -563,7 +487,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.copyedit.useFile">Gebruik bestand</message>
 	<message key="submission.copyedit.copyeditComments">Opmerkingen tekstredactie</message>
 	<message key="submission.copyedit.instructions">Instructies voor tekstredactie</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Geen (laad de laatste tekstredactieversie als opmaakversie voorafgaand aan het versturen van het verzoek)</message>
 	<message key="submission.layout.assignLayoutEditor">Opmaakredacteur toekennen</message>
@@ -571,15 +495,15 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.layout.layoutComments">Commentaren opmaak</message>
 	<message key="submission.layout.instructions">Opmaakinstructies</message>
 	<message key="submission.layout.referenceLinking">Linken naar referenties</message>
-	
-	
+
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proeflees-commentaren</message>
 	<message key="submission.proofread.corrections">Proeflezen correcties</message>
 	<message key="submission.proofread.instructions">Proeflees-instructies</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Artikel</message>
 	<message key="submission.logType.author">Auteur</message>
 	<message key="submission.logType.editor">Redacteur</message>
@@ -587,11 +511,11 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.logType.copyedit">Tekstredactie</message>
 	<message key="submission.logType.layout">Opmaak</message>
 	<message key="submission.logType.proofread">Proeflezen</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Redacteur/auteur correspondentie</message>
 	<message key="submission.comments.copyeditComments">Tekstredactie commentaren</message>
@@ -604,13 +528,13 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="submission.comments.forEditor">Voor redacteur</message>
 	<message key="submission.comments.saveAndEmailAuthor">Bewaar en e-mail auteur</message>
 	<message key="submission.comments.saveAndEmailEditor">Bewaar en e-mail redacteur</message>
-	
+
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">Geen gebruiker? Registreer u bij deze site</message>
 	<message key="user.login.resetPasswordInstructions"><![CDATA[Om redenen van veiligheid e-mailt het systeem een nieuw wachtwoord naar geregistreerde gebruikers in plaats van het bestaande wachtwoord.<br /><br />Geef uw e-mail adres om uw wachtwoord terug te zetten. Er wordt een bevestiging naar dit e-mail adres gestuurd.]]></message>
-	
+
 	<!-- Profile -->
-	
+
 	<!-- Registration -->
 	<message key="user.register.selectJournal">Kies een tijdschrift om u bij te registreren</message>
 	<message key="user.register.noJournals">Deze site heeft geen tijdschriften waarbij u zich kunt registreren.</message>
@@ -649,17 +573,17 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikel download</message>
 	<message key="article.nonpdf.note"><![CDATA[Het bestand dat u gekozen hebt, zou automatisch op uw computer geladen moeten worden. Als dat niet gebeurt, klik op de link hieronder. Het bestand vereist mogelijk een programma of plugin om te bekijken<br /><br />Als de download niet vanzelf start, <a href="{$url}">klik hier</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tijdschriften op deze site</message>
 	<message key="site.journalView">Bekijk tijdschrift</message>
 	<message key="site.journalRegister">Registreren</message>
 	<message key="site.journalCurrent">Huidig nummer</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Huidig</message>
@@ -670,7 +594,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="archive.archives">Archieven</message>
 	<message key="archive.browse">Blader door oudere nummers</message>
 	<message key="archive.issueUnavailable">Nummer niet beschikbaar</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistieken</message>
 	<message key="about.journalContact">Contactpersoon tijdschrift</message>
@@ -712,22 +636,22 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="about.aboutThisPublishingSystem">Over dit publicatiesysteem</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Dit tijdschrift gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> onder de GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Deze site gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> onder de GNU General Public License.]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Open Journal Systems Help</message>
-	<message key="help.ojsHelpAbbrev">OJS Help</message>	
+	<message key="help.ojsHelpAbbrev">OJS Help</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Dank u</message>
 	<message key="donations.thankYouMessage">Dank u voor uw bijdrage. Uw bijdage wordt zeer gewaardeerd.</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">U moet ingelogd zijn om een betaling te kunnen doen.</message>
 	<message key="payment.loginRequired.forArticle">Abonnement of aankoop van het artikel benodigd voor toegang tot het item. Log in om uw abonnement te controleren, toegang te krijgen tot aankopen of nieuwe aankopen te doen</message>
 	<message key="payment.loginRequired.forDonation">U moet ingelogd zijn om een donatie te doen.</message>
-	
+
 	<message key="payment.paid">Betaald</message>
 	<message key="payment.payNow">Betaal nu</message>
 	<message key="payment.waive">Kwijtschelden</message>
@@ -741,21 +665,21 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="payment.type.membership">Kosten voor individueel lidmaatschap</message>
 	<message key="payment.type.subscription">Abonnementskosten</message>
 	<message key="payment.type.donation">Donaties</message>
-	
+
 	<message key="payment.donation.makeDonation">Doe een donatie</message>
-	
+
 	<message key="payment.submission.paySubmission">Betaal inzendingskosten</message>
 	<message key="payment.fastTrack.payFastTrack">Betaal voor snelle beoordeling</message>
 	<message key="payment.fastTrack.inFastTrack">In snelle beoordeling</message>
 	<message key="payment.publication.payPublication">Betaal om te publiceren</message>
 	<message key="payment.publication.publicationPaid">Publicatiekosten betaald</message>
-	
+
 	<message key="payment.membership.buyMembership">Koop individueel lidmaatschap</message>
-	<message key="payment.membership.renewMembership">Vernieuw individueel lidmaatschap</message>	
+	<message key="payment.membership.renewMembership">Vernieuw individueel lidmaatschap</message>
 	<message key="payment.membership.ends">Loopt af op</message>
 
 	<message key="payment.subscription.renew">Vernieuw abonnement</message>
-	<message key="payment.subscription.expires">Verloopt</message>	
+	<message key="payment.subscription.expires">Verloopt</message>
 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installatie</message>
@@ -803,7 +727,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 
 <p>Kies <strong>Handmatige installatie</strong> om de  SQL commando's te tonen voor het aanmaken van het OJS database schema en de initiële gegevens zodat de database installatie met de hand uitgevoerd kan worden. Deze optie is handig voor het localiseren van installatieproblemen, in het bijzonder op niet-ondersteunde platforms. Merk op dat deze installatie niet probeert om de database of tabellen aan te maken, hoewel het configuratiebestand met de opgegeven database instellingen wel wordt weggeschreven.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
-	
+
 <p>Dank u voor het downloaden van  Public Knowledge Project's <strong>Open Journal Systems</strong>. Lees voor u verdergaat de <a href="{$baseUrl}/docs/README">README</a> en <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> bestanden bij deze software. Bezoek voor meer informatie over het Public Knowledge Project en zijn software projecten de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Voor het melden van fouten  en het verkrijgen van technische ondersteuning voor Open Journal Systems kunt u terecht op het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">fout rapportage systeem</a>. Hoewel het forum de voorkeur heeft kunt u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Het is <strong>sterk aanbevolen</strong> dat u een backup maakt van uw databank, bestanden-map en OJS installatiemap voor u verder gaat.</p>
 <p>Als u draait in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, verzeker u er dan van dat de max_execution_timeout in uw php.ini op een hoge waarde staat. Als deze of een andere tijdslimiet (bv. Apache's "Timeout" waarde) bereikt wordt en het upgrade proces onderbroken wordt, is handmatige interventie noodzakelijk.</p>]]></message>
@@ -901,7 +825,7 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="rt.admin.validateUrls.description"><![CDATA[Mogelijk ongeldige URL's van zoeksites worden hieronder getoond.<br/>
 Verifieer de als ongeldig gemerkte URL's met de hand, aangezien deze test niet 100% accuraat is.<br/>
 Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -914,7 +838,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="rt.beNotifiedWhen">Bericht als...</message>
 
 	<message key="rt.thisJournal">Doorzoek tijdschrift</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">Laat bij items met meer dan één auteur alle namen aangevinkt voor het zoeken naar werk met soortgelijke co-auteurs, of zoek naar één tegelijk door slechts één naam aan te vinken. Klik op OVER voor meer informatie over de doorzochte bronnen. Deze bronnen zijn uitgekozen vanwege hun relevantie en open (gratis) toegang tot alle of een gedeelte van hun inhoud.</message>
 
@@ -1160,4 +1084,5 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.]]></message>
 	<message key="user.profile.form.orcidInvalid">Het opgegeven ORCID ID is niet geldig</message>
 	<message key="user.orcid.description"><![CDATA[ORCID iDs kunnen alleen toegekend worden door <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. U moet hun standaarden voor het uitdrukken van ORCID iDs volgen, en de volledige URI opnemen (bv. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems ondersteunt het <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systeem voor veilige en permanente beschikbaarheid van uw tijdschrift. Er zijn verschillende opties om uw tijdschrift op te nemen in een LOCKSS netwerk:]]></message>
 </locale>

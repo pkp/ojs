@@ -220,4 +220,6 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública do galley já existe.</message>
 	<message key="editor.issues.backToIssueGalleys">Voltar ao galley dos números</message>
 	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar este galley do número?</message>
+	<message key="editor.publicGalleyIdentificationExists">O identificador público '{$publicIdentifier}' já existe para ouyra instância deste artigo. Por favor, escolha um identificador único dentro deste artigo.</message>
+	<message key="editor.issues.resetArticlePublicationDates">Restaurar as datas de publicação dos artigos</message>
 </locale>

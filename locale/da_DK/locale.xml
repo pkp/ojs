@@ -13,7 +13,7 @@
   * Translated by Niels Erik Frederiksen, nef@statsbiblioteket.dk
   *
   -->
- 
+
 <locale name="da_DK" full_name="Danish">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -41,13 +41,13 @@
 	<message key="common.payments">Betalinger</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Hjælp til tidsskrift</message>
 	<message key="navigation.archives">Arkiver</message>
@@ -60,7 +60,7 @@
 	<message key="navigation.competingInterestGuidelines">Retningslinjer for konkurrerende interesser</message>
 	<message key="navigation.infoForAuthors.long">Oplysninger til forfattere</message>
 	<message key="navigation.infoForLibrarians.long">Oplysninger til bibliotekarer</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Ikke-tildelt</message>
 	<message key="common.queue.short.submissionsUnassigned">Ikke-tildelt</message>
@@ -74,7 +74,7 @@
 	<message key="common.queue.short.active">Aktiv</message>
 	<message key="common.queue.long.completed">Arkiv</message>
 	<message key="common.queue.short.completed">Arkiv</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -137,7 +137,7 @@
 	<message key="submission.scheduling">Planlægning</message>
 	<message key="submission.scheduledIn">Planlagt til publicering i {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-	
+
 	<message key="submissions.sec">Sek</message>
 	<message key="submissions.step1">Trin 1</message>
 	<message key="submissions.step3">Trin 3</message>
@@ -160,7 +160,7 @@
 	<message key="submissions.proofreadingComplete">Korrekturlæst</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Nyeste udgave</message>
 	<message key="journal.journals">Tidsskrifter</message>
@@ -171,7 +171,7 @@
 	<message key="user.showAllJournals">Vis mine tidsskrifter</message>
 	<message key="user.registerForOtherJournals">Tilmeld dig andre tidsskrifter</message>
 	<message key="user.myJournals">Mine tidsskrifter</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Tidsskriftschef</message>
 	<message key="user.role.editor">Redaktør</message>
@@ -189,7 +189,7 @@
 	<message key="user.role.proofreaders">Korrekturlæsere</message>
 	<message key="user.role.authors">Forfattere</message>
 	<message key="user.role.subscriptionManagers">Abonnementschefer</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Udgave</message>
 	<message key="issue.issues">Udgaver</message>
@@ -217,15 +217,15 @@
 	<message key="submission.event.author.authorRevision">Forfatterrevideringen er fremsendt</message>
 
 	<message key="submission.event.general.authorRevision">Forfatters revideringsfil er opdateret</message>
-	
+
 	<message key="submission.event.editor.editorAssigned">Redaktøren er tildelt manuskriptet</message>
 	<message key="submission.event.editor.editorUnassigned">Tildelingen af redaktør til manuskriptet er fjernet</message>
 	<message key="submission.event.editor.editorDecision">Redaktørbeslutningen er fremsendt</message>
 	<message key="submission.event.editor.editorFile">Redaktørfilen er opdateret</message>
 	<message key="submission.event.editor.submissionArchived">Manuskriptet er sendt til arkivet</message>
 	<message key="submission.event.editor.submissionRestored">Manuskriptet er gendannet fra arkivet</message>
-	
-	
+
+
 	<message key="submission.event.copyedit.copyeditorAssigned">Manuskriptredaktøren er tildelt manuskriptet</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Tildelingen af manuskriptredaktør til manuskriptet er fjernet</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Manuskriptredigeringsopgaven er startet</message>
@@ -233,13 +233,13 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Første manuskriptredigering er fuldført</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Sidste manuskriptredigering er fuldført</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Manuskriptredigeringsfilen er opdateret</message>
-	
+
 	<message key="submission.event.proofread.proofreaderAssigned">Korrekturlæseren er tildelt manuskriptet</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Tildelingen af korrekturlæser til manuskriptet er fjernet</message>
 	<message key="submission.event.proofread.proofreadInitiated">Korrekturlæsningsopgaven er startet</message>
 	<message key="submission.event.proofread.proofreadRevision">Korrekturlæserens revideringsfil er opdateret</message>
 	<message key="submission.event.proofread.proofreadCompleted">Korrekturlæsningsopgaven er fuldført</message>
-	
+
 	<message key="submission.event.layout.layoutEditorAssigned">Layoutredaktøren er tildelt manuskriptet</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Tildelingen af layoutredaktør til manuskriptet er fjernet</message>
 	<message key="submission.event.layout.layoutInitiated">Layoutopgaven er startet</message>
@@ -254,7 +254,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Kun abonnenter</message>
-	<message key="reader.subscriptionRequiredLoginText">Der kræves et abonnement for at få adgang til elementet. Log på tidsskriftet for at bekræfte abonnementet.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Der kræves et abonnement for at få adgang til elementet. Log på tidsskriftet for at bekræfte abonnementet.</message>
 	<message key="reader.openAccess">Open Access</message>
 	<message key="reader.subscriptionAccess">Abonnementsadgang</message>
 	<message key="reader.subscriptionOrFeeAccess">Abonnements- eller betalingsadgang</message>
@@ -271,8 +271,8 @@
 <br /><br />
 Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved at redigere OJS-systemkonfigurationen. I fremtidige versioner af OJS vil OAI-grænsefladen kunne aktiveres eller deaktiveres for individuelle tidsskrifter på webstedet.]]></message>
 
-	
-	
+
+
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Det er i øjeblikket ikke muligt at hente sprogpakker fra webserveren Public Knowledge Project, fordi:</p>
 	<ul>
@@ -285,28 +285,16 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 <ul>
 	<li>Hvis en bruger forsøger at registrere en ny konto på dette websted med et brugernavn, der findes i godkendelseskilden (men ikke i OJS-databasen), vil registreringen kun lykkes, hvis den angivne adgangskode er gyldig for den pågældende brugerkonto.</li>
 </ul>]]></message>
-	
+
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>BEMÆRK!</div>
 <p>Systemet kunne ikke automatisk overskrive konfigurationsfilen. Hvis du vil aktivere konfigurationsændringerne, skal du åbne filen <tt>config.inc.php</tt> i en passende teksteditor og erstatte dens indhold med indholdet i tekstfeltet nedenfor.</p>]]></message>
 
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Administration af abonnementer</message>
-	
-	<!-- Journal Management -->
-
-	<!-- Statistics & Reports -->
-
-	<!-- Plugin Management -->
-	
-	<!-- Payment Management -->
-
-
-		
-
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.generic.description">Generiske plug-ins bruges til at udvide Open Journal Systems på en række forskellige måder, der ikke understøttes af de andre plug-in-kategorier.</message>
@@ -316,24 +304,10 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 
 	<message key="plugins.categories.citationFormats.description">Plug-ins til citatformater gør det muligt for brugere at få adgang til artikelcitater i forskellige formater.</message>
 
-
-
-
-	<!-- Files Browser -->
-
-	<!-- Journal Setup -->
-	
-	<!-- Setup Step 1 -->
-
-	<!-- Setup Step 2 -->
-
-
-
-
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford Universitetets bibliotek, og der gør bibliotekarer til stand til at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
 <br /><br />
 Konfigurationen af LOCKSS-understøttelse for Open Journal Systems behøver ikke finde sted, før publiceringen er i fuld gang. På dette tidspunkt skal du følge disse to trin:]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til oplysninger om ophavsret på baggrund af Creative Commons</h3>
 <h4>1. Forslag til politik for tidsskrifter, der tilbyder Open Access</h4>
@@ -369,18 +343,6 @@ Vælg en model til håndtering af disse aspekter af den redaktionelle proces. (G
 	<li><strong>Integrer links i referencerne</strong><p>Layoutredaktøren kan føje et link til referencer, der kan findes online, ved hjælp af følgende instruktioner (som kan redigeres).</p></li>
 </ol>]]></message>
 
-	<!-- Setup Step 5 -->
-
-	<!-- Languages -->
-	
-	
-	<!-- Section Management -->
-	<!-- Import/Export -->
-
-	<!-- Groups / Editorial Team -->
-
-
-
 	<!-- People Management -->
 	<message key="manager.people.confirmDisable">Vil du annullere denne bruger? Dette forhindrer brugeren i at logge på systemet.
 
@@ -392,36 +354,12 @@ Du kan vælge at give brugeren en begrundelse for deaktiveringen af kontoen.</me
 		</ul>
 	Denne opgave skal udføres af en webstedsadministrator.]]></message>
 
-
-	
-	<!-- Email Management -->
-
-	<!-- Subscription Policy Management -->
-
-	<!-- Subscription Type Management -->
-
-	<!-- Subscription Management -->
-
-	<!-- Announcement Type Management -->
-
-	<!-- Announcements Management -->
-
 	<!-- Editor -->
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Fremhævede elementer indikerer, at redaktøren skal foretage en handling.</li>
 	<li>"Forfalden" udfyldes automatisk, når bedømmeren accepterer bedømmelsesforespørgslen. I feltet vises antallet af uger til bedømmerens forfaldsdato eller (-) det antal uger, tidsfristen er blevet overskredet med.</li>
 </ol>]]></message>
 
-	<!-- Editor Index Page -->
-
-	<!-- Back Issues -->
-
-	<!-- Create Issue / Issue Data -->
-
-	<!-- Live Issues -->
-
-	<!-- Navigation sidebar menu -->
-	
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Navngiv links til bedømmers profil.<br/>
 Klassificeringerne går fra 5 (Fremragende) og nedefter.<br/>
@@ -429,10 +367,6 @@ Uger refererer til den gennemsnitlige tid, det tager at foretage en bedømmelse.
 Senest er datoen for den seneste accepterede bedømmelse.<br/>
 Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestående.]]></message>
 
-
-
-
-	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktive redaktionelle tildelinger</message>
 	<message key="sectionEditor.completedEditorialAssignments">Fuldførte redaktionelle tildelinger</message>
@@ -463,12 +397,12 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="layoutEditor.galley.replaceGalley">Erstat fil</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Overfør supplerende fil</message>
 	<message key="submission.layout.imageInvalid">Ugyldigt billedformat. De accepterede formater er .gif, .jpg og .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artikler, der afventer bedømmelse</message>
 	<message key="reviewer.completedReviews">Udført</message>
 	<message key="reviewer.averageQuality">Klassificering</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Fil, der skal bedømmes</message>
 	<message key="reviewer.article.notifyTheEditor">Underret redaktøren</message>
@@ -483,7 +417,7 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="reviewer.article.recommendation">Anbefaling</message>
 	<message key="reviewer.article.submitReview">Fremsend bedømmelse til redaktør</message>
 	<message key="reviewer.article.reviewerComments">Kommentarer</message>
-	<message key="reviewer.article.uploadedFile">Overførte filer</message>	
+	<message key="reviewer.article.uploadedFile">Overførte filer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Version overført af bedømmer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Hvis du vil anmærke filen til redaktøren, skal du gemme den på harddisken og bruge Gennemse/Overfør).</message>
         <message key="reviewer.article.schedule.request">Redaktørs forespørgsel</message>
@@ -519,18 +453,12 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="copyeditor.article.copyeditorFile">Manuskriptredaktørfil</message>
 	<message key="copyeditor.article.uploadedFile">Overført fil</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Manuskriptredaktørfil</message>
-	
+
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">Ingen korrekturlæsningsopgaver</message>
 
 	<!-- Author -->
 
-
-	<!-- Article Submission Step 1 -->
-
-	
-	<!-- Article Submission Step 2 -->
-	
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[<p>Fuldfør følgende trin for at overføre et manuskript til dette tidsskrift.</p>
 <ol>
@@ -540,12 +468,6 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 <li>Klik på Overfør på denne side, hvilket overfører filen fra computeren til tidsskriftets websted og omdøber den i henhold til tidsskriftets principper.</li>
 <li>Klik på Gem og fortsæt nederst på denne side, når manuskriptet er overført.</li>
 </ol>]]></message>
-	
-	<!-- Article Submission Step 4 -->
-	
-	<!-- Article Submission Step 4a: Supplementary Files -->
-	
-	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Det er ikke muligt at sende en forespørgsels-e-mail, før der findes en bedømmelsesversion.</message>
@@ -562,7 +484,7 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="submission.copyedit.useFile">Brug fil</message>
 	<message key="submission.copyedit.copyeditComments">Kommentarer til manuskriptredigering</message>
 	<message key="submission.copyedit.instructions">Instruktioner til manuskriptredigering</message>
-	
+
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.noLayoutFile">Ingen (Overfør den sidste manuskriptredigeringsversion som layoutversion inden afsendelse af forespørgsel)</message>
 	<message key="submission.layout.assignLayoutEditor">Tildel layoutredaktør</message>
@@ -570,15 +492,14 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="submission.layout.layoutComments">Kommentarer til layout</message>
 	<message key="submission.layout.instructions">Layoutinstruktioner</message>
 	<message key="submission.layout.referenceLinking">Angivelse af links til referencer</message>
-	
-	
+
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Kommentarer til korrekturlæsning</message>
 	<message key="submission.proofread.corrections">Korrekturrettelser</message>
 	<message key="submission.proofread.instructions">Instruktioner til korrekturlæsning</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Artikel</message>
 	<message key="submission.logType.author">Forfatter</message>
 	<message key="submission.logType.editor">Redaktør</message>
@@ -586,11 +507,11 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="submission.logType.copyedit">Manuskriptredigering</message>
 	<message key="submission.logType.layout">Layout</message>
 	<message key="submission.logType.proofread">Korrekturlæst</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Korrespondance mellem redaktør/forfatter</message>
 	<message key="submission.comments.copyeditComments">Kommentarer til manuskriptredigering</message>
@@ -603,14 +524,14 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="submission.comments.forEditor">Til redaktør</message>
 	<message key="submission.comments.saveAndEmailAuthor">Gem og send e-mail til forfatter</message>
 	<message key="submission.comments.saveAndEmailEditor">Gem og send e-mail til redaktør</message>
-	
+
 	<!-- Login -->
 	<message key="user.login.registerNewAccount">Er du ikke bruger? Registrer dig på dette websted</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Af sikkerhedshensyn sender dette system registrerede brugere en e-mail med en nulstillet adgangskode i stedet for at tilbagekalde den 
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Af sikkerhedshensyn sender dette system registrerede brugere en e-mail med en nulstillet adgangskode i stedet for at tilbagekalde den
 aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulstille din adgangskode. Der sendes en bekræftelse til denne e-mail-adresse.]]></message>
-	
+
 	<!-- Profile -->
-	
+
 	<!-- Registration -->
 	<message key="user.register.selectJournal">Vælg et tidsskrift, du vil registreres hos</message>
 	<message key="user.register.noJournals">Der findes ingen tidsskrifter, du kan blive registreret hos, på dette websted.</message>
@@ -649,17 +570,17 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">PDF (Portable Document Format)</message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Hent artikel</message>
 	<message key="article.nonpdf.note"><![CDATA[Den valgte fil hentes automatisk. Hvis det ikke er tilfældet, skal du klikke på linket nedenfor. Vær opmærksom på, at der til visning af filen muligvis kræves en speciel fremviser eller plug-in.<br /><br />Hvis filen ikke hentes automatisk, skal du <a href="{$url}">klikke her</a>.]]></message>
-	
+
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tidsskrifter tilknyttet dette websted</message>
 	<message key="site.journalView">Vis tidsskrift</message>
 	<message key="site.journalRegister">Registrer</message>
 	<message key="site.journalCurrent">Nyeste udgave</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Nyeste</message>
@@ -670,7 +591,7 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="archive.archives">Arkiver</message>
 	<message key="archive.browse">Gennemse tidligere udgaver</message>
 	<message key="archive.issueUnavailable">Udgaven er utilgængelig</message>
-	
+
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistikker</message>
 	<message key="about.journalContact">Kontaktperson for tidsskrift</message>
@@ -712,22 +633,22 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="about.aboutThisPublishingSystem">Om dette publiceringssystem</message>
 	<message key="about.aboutOJSJournal"><![CDATA[Dette tidsskrift anvender Open Journal Systems {$ojsVersion}, som er open source-software til administration og publicering af tidsskrifter, der er udviklet , understøttet og gratis distribueret af <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> i henhold til GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[Dette websted anvender Open Journal Systems {$ojsVersion}, som er open source-software til administration og publicering af tidsskrifter, der er udviklet , understøttet og gratis distribueret af <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> i henhold til GNU General Public License.]]></message>
-	
+
 	<!-- Announcement -->
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Open Journal Systems Hjælp</message>
-	<message key="help.ojsHelpAbbrev">OJS Hjælp</message>	
+	<message key="help.ojsHelpAbbrev">OJS Hjælp</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Tak</message>
 	<message key="donations.thankYouMessage">Tak for dit bidrag. Vi værdsætter dit bidrag.</message>
-	
+
 	<!-- Payments -->
 	<message key="payment.loginRequired">Du skal være logget på for at kunne foretage en betaling.</message>
 	<message key="payment.loginRequired.forArticle">Abonnement eller betal-pr-visning er påkrævet for adgang til elementet. Log på tidsskriftet for at bekræfte abonnementet eller foretage betaling.</message>
 	<message key="payment.loginRequired.forDonation">Du skal være logget på for at foretage en donation.</message>
-	
+
 	<message key="payment.paid">Betalt</message>
 	<message key="payment.payNow">Betal nu</message>
 	<message key="payment.waive">Afkald</message>
@@ -741,21 +662,21 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="payment.type.membership">Gebyr for individuelt medlemskab</message>
 	<message key="payment.type.subscription">Abonnementsgebyr</message>
 	<message key="payment.type.donation">Donationer</message>
-	
+
 	<message key="payment.donation.makeDonation">Foretag en donation</message>
-	
+
 	<message key="payment.submission.paySubmission">Betal manuskriptgebyr</message>
 	<message key="payment.fastTrack.payFastTrack">Betal for FastTrack</message>
 	<message key="payment.fastTrack.inFastTrack">i FastTrack</message>
 	<message key="payment.publication.payPublication">Betal for publicering</message>
 	<message key="payment.publication.publicationPaid">Publiceringsgebyret er betalt</message>
-	
+
 	<message key="payment.membership.buyMembership">Tegn individuelt medlemskab</message>
-	<message key="payment.membership.renewMembership">Forny individuelt medlemskab</message>	
+	<message key="payment.membership.renewMembership">Forny individuelt medlemskab</message>
 	<message key="payment.membership.ends">Slutter</message>
 
 	<message key="payment.subscription.renew">Forny abonnement</message>
-	<message key="payment.subscription.expires">Udløber</message>	
+	<message key="payment.subscription.expires">Udløber</message>
 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS-installation</message>
@@ -803,7 +724,7 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 
 <p>Vælg <strong>Manuel installation</strong> for at få vist de SQL-sætninger, der er nødvendige for at oprette OJS-databaseskemaet og de første data, så databaseinstallationen kan foretages manuelt. Denne indstilling er nyttig i forbindelse med fejlfinding af installationsproblemer, især på ikke-understøttede platforme. Vær opmærksom på, at denne installationsmetode ikke forsøger at oprette databasen eller nogen tabeller, selvom konfigurationsfilen stadig skrives med de angivne databaseindstillinger.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS-version {$version}</h4>
-	
+
 <p>Tak, fordi du har hentet Public Knowledge Projects <strong>Open Journal Systems</strong>. Læs filen <a href="{$baseUrl}/docs/README">VIGTIGT</a> og filen <a href="{$baseUrl}/docs/UPGRADE">OPGRADER</a>, der følger med denne software, inden du fortsætter. Du kan finde flere oplysninger om Public Knowledge Project og dets softwareprojekter på <a href="http://pkp.sfu.ca/" target="_blank">PKP-webstedet</a>. Hvis du har fejlrapporter eller tekniske supportforespørgsler om Open Journal Systems, skal du se <a href="http://forum.pkp.sfu.ca">supportforummet</a> eller besøge PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">onlinefejlrapporteringssystem</a>. Selvom supportforummet er den foretrukne kontaktmåde, kan du også sende teamet en e-mail på <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Det <strong>anbefales på det kraftigste</strong>, at du foretager sikkerhedskopiering af databasen, filmappen og OJS-installationsmappen, inden du fortsætter.</p>
 <p>Hvis du kører i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP-fejlsikret tilstand</a>, skal du sørge for, at der er angivet en høj grænse for direktivet max_execution_time i konfigurationsfilen php.ini. Hvis denne eller en anden tidsgrænse (f.eks. Apaches "Timeout"-direktiv) nås, og opgraderingsprocessen afbrydes, er manuel indgriben nødvendig.</p>]]></message>
@@ -890,23 +811,13 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="rt.admin.settings.addComment.authenticated">Brugere skal være registreret og logget på for at kunne sende, og anonymitet er ikke tilladt.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Brugere skal være registreret og logget på for at kunne sende, og anonymitet er tilladt.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Brugere skal ikke være registreret for at sende, og anonymitet er tilladt.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
 	<!-- RT Searches -->
 
 	<message key="rt.admin.validateUrls.description"><![CDATA[Eventuelt ugyldige URL-adresser på opslagswebsteder er vist nedenfor.<br/>
 Du bør manuelt kontrollere alle de URL-adresser, der er markeret som ugyldige, da denne test ikke er 100% nøjagtig.<br/>
 Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver sendte formulardata.]]></message>
-	
+
 	<!-- RT Entities -->
-
-
-
-
 	<message key="rt.metadata.dublinCore.primaryAuthor">Opretter</message>
 
 	<message key="rt.metadata.pkp.primaryAuthor">Forfatters navn, tilhørsforhold, land</message>
@@ -914,7 +825,7 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="rt.beNotifiedWhen">Skal underrettes, når...</message>
 
 	<message key="rt.thisJournal">Søg i tidsskrift</message>
-	
+
 
 	<message key="rt.context.authorTermsDescription">I forbindelse med elementer med mere end én forfatter skal du markere alle navnene for at søge efter værker af de samme forfattere. Du kan også søge efter en ad gangen ved kun at markere et enkelt navn. Klik på OM for at få mere at vide om de ressourcer, der blev søgt i. Disse ressourcer er valgt på baggrund af deres relevans og deres (gratis) Open Access til hele eller dele af deres indhold.</message>
 
@@ -1159,4 +1070,5 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[ORCID iDs can only be assigned by <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. You must conform to their standards for expressing ORCID iDs, and include the full URI (eg. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">The ORCID iD you specified is invalid.</message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems understøtter LOCKSS-systemet <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) for at sikre en pålidelig og permanent arkivering af tidsskriftet. Du har flere muligheder for at lade jeres tidsskrift indgå i LOCKSS-netværket:]]></message>
 </locale>

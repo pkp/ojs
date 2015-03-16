@@ -10,7 +10,7 @@
   *
   * Objects for review plugin localization strings for the en_US (U.S. English) locale.
   -->
- 
+
 <locale name="zh_CN" full_name="U.S. English">
 
 	<!-- Objects For Review Plug-In -->
@@ -19,7 +19,7 @@
 	<message key="plugins.generic.objectsForReview.description">征求评论感兴趣的对象。管理审查对象和审查过程。</message>
 
 	<!--  Editor -->
-	<message key="plugins.generic.objectsForReview.editor.objectsForReview">审查对象</message>
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
 
 	<!-- Object Types Management -->
 	<message key="plugins.generic.objectsForReview.editor.objectTypes">审查对象类型</message>
@@ -651,4 +651,7 @@
 	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">网站类型</message>
 
 
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">作者已分配审查。</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsBy">通过一句话</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recipient">收件人</message>
 </locale>

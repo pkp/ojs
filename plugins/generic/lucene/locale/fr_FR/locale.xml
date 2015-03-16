@@ -10,7 +10,7 @@
   *
   * OJS solr/lucene search plugin localization strings
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 	<message key="plugins.generic.lucene.displayName">Plugiciel de recherche Lucene</message>
 	<message key="plugins.generic.lucene.description">Le plugiciel Lucene offre un support multilingue, une pertinenc des résultats de recherche améliorée, une indexation plus rapide, une meilleure évolutivité et plus encore.</message>
@@ -53,8 +53,6 @@
 <li>Use parentheses to create more complex queries; e.g., <em>archive ((journal AND conference) NOT theses)</em></li>
 </ul>]]></message>
 	
-	<message key="plugins.generic.lucene.error.searchServiceOffline">Malheureusement le service de recherche d'OJS est actuellement hors connexion. L'administrateur technique de ce journal a été informé de ce problème.</message>
-	<message key="plugins.generic.lucene.error.coreNotFound">Le coeur requis '{$core}' n'a pas été trouvé sur le serveur Solr. Est-il en ligne?</message>
 	<message key="plugins.generic.lucene.message.indexOnline">Indexez avec {$numDocs} documents en ligne.</message>
 	<message key="plugins.generic.lucene.faceting.title">affiner votre recherche</message>
 	<message key="plugins.generic.lucene.faceting.subject">Mot-clé</message>

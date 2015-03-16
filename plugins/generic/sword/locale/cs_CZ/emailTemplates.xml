@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/generic/sword/locale/cs_CZ/emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="cs_CZ">
+	<email_text key="SWORD_DEPOSIT_NOTIFICATION">
+		<subject>Upozornění o uložení</subject>
+		<body>Gratulujeme k přijetí vašeho příspěvku "{$articleTitle}" k publikaci v časopisu {$journalName}. Pokud se rozhodnete, můžete článek automaticky uložit do jednoho či více repozitářů.
+
+Jděte na {$swordDepositUrl} pro toto uložení.
+
+Tento e-mail byl automaticky vygenerovaný pomocí pluginu Open Journal Systems' SWORD.</body>
+		<description>Tato šablona emailu je používána na upozornění autora na možnost uložení článku v jednotlivých repozitářích SWORD.</description>
+	</email_text>
+</email_texts>

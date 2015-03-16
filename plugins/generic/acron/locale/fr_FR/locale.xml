@@ -11,10 +11,12 @@
   * Localization strings for the fr_FR locale.
   *
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 	<message key="plugins.generic.acron.name">Plugin Acron</message>
 	<message key="plugins.generic.acron.description"><![CDATA[This plugin attempts to reduce the dependance of OCS on periodic scheduling tools such as 'cron.']]></message>
 
 	<message key="plugins.generic.acron.reload">Recharger des tâches programmées</message>
+	<message key="plugins.generic.acron.disabled">Le plugiciel Acron a été activé.</message>
+	<message key="plugins.generic.acron.enabled">Le plugiciel Acron a été activé.</message>
 </locale>

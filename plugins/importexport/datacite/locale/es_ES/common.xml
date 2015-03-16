@@ -11,7 +11,7 @@
   *
   * Shared localization strings
   -->
- 
+
 <locale name="es_ES" full_name="Español (España)">	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para utilizar este módulo, vaya a la categoría de módulo "Identificador público", habilite y configure el módulo de Identificador digital de objeto (DOI) y especifique un prefijo DOI válido.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">El módulo no está completamente configurado.</message>
 
@@ -45,7 +45,7 @@
 	<message key="plugins.importexport.common.export.selectGalley">Seleccionar Galeradas</message>
 	<message key="plugins.importexport.common.export.noGalleys">Actualmente ninguna galerada tiene asignado un DOI.</message>
 	<message key="plugins.importexport.common.exportDescription">Haga clic en el botón para exportar datos XML para el/los objeto/s seleccionado/s en el archivo local sin registrarlo en la agencia de registro. Puede resultar de utilidad en caso de que desee que una tercera parte registre en su nombre el DOI o si quiere inspeccionar el formato XML antes de registrarlo.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Ningún número se corresponde con la Id. indicada: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Ningún artículo se corresponde con la Id. indicada: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Ninguna galerada se corresponde con la Id. indicada: {$param}.</message>
@@ -53,8 +53,12 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">Ninguna revista se corresponde con la ruta indicada: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">El tipo de objeto {$param} no puede exportarse.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">El archivo de salida {$param} no es editable.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">Los objetos seleccionados se exportaron con éxito a '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Note que la contraseña será guardada en texto plano no cifrado.</message>
+	<message key="plugins.importexport.common.markRegistered">Marca registrada</message>
+	<message key="plugins.importexport.common.export.unAvailable">La exportación de datos está actualmente deshabilitada. Compruebe los requerimientos del plugin.</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Haga clic en el botón para registrar los objetos (ej, si han sido tempranamente o manualmente registrados).</message>
 </locale>

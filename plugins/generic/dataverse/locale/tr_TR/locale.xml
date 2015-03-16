@@ -26,8 +26,6 @@
 	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Veri Dizisi ağı URL'si gerekli.</message>
 	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Veri Dizisi ağı URL'si geçerli değil.</message>
 	<message key="plugins.generic.dataverse.settings.usernameRequired">Belirli Veri Dizisi ağı için lütfen geçerli bir kullanıcı adı giriniz.</message>
-	<message key="plugins.generic.dataverse.settings.passwordRequired">Belirli Veri Dizisi ağı için lütfen geçerli bir şifre giriniz.</message>
-
 	<!-- Set up Dataverse: select Dataverse -->
 	<message key="plugins.generic.dataverse.settings.selectDataverse">Veri Dizisi Seç</message>
 	<message key="plugins.generic.dataverse.settings.dataverse">Veri Dizisi</message>
@@ -159,4 +157,6 @@
 
 	<!-- Citation "in press" info -->
 	<message key="plugins.generic.dataverse.citationAPA.inPress">(baskıda).</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription">Çalışma Açıklaması</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">Çalışma verilerin kapsamı, amacı ve özgünlüğü konusunda özet girin.</message>
 </locale>

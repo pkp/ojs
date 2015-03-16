@@ -31,4 +31,9 @@
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/计数器</message>
 	<message key="plugins.reports.usageStats.metricType.full">OJS系统数据（计数器准备）</message>
+	<message key="plugins.generic.usageStats.openFileFailed">{$file}文件无法打开，被拒绝了。</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">使用统计插件被禁用。没有日志文件进行处理。</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">目录{$directory}不是空的。这就意味着之前的进程失败，或者同时运行进程。如果您正在使用scheduledTasksAutoStage.xml，文件将被自动重新处理，否则您需要手动将处理目录中的孤立文件直接移动到阶段目录中去。</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">COUNTER bot{$botlist} 列表没有找到，或多个列表存在。文件{$}无法处理。</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">COUNTER bot{$botlist} 列表无法打开。文件{$}无法处理。</message>
 </locale>

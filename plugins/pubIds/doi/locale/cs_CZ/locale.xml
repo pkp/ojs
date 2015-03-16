@@ -10,7 +10,7 @@
   *
   * DOI plugin localization strings
   -->
- 
+
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Tento plugin umožňuje přiřazení čísla DOI (Digital Object Identifier) číslům, článkům a sazebnicím a doplňkovým souborům v OJS</message>
@@ -42,7 +42,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Například, vol%viss%ipp%p může vytvořit DOI ve tvaru 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Použít standardní parametry.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i pro čísla<br />%j.v%vi%i.%a pro články<br />%j.v%vi%i.%a.g%g pro sazebnice <br />%j.v%vi%i.%a.s%s pro doplňkové soubory.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Použijte "Uživatelský identifikátor" pro publikovaná čísla jako DOI suffix (musí být nastaveno v Kroku 4.3 Nastavení). To je stejný identifikátor, který bude použit pro veřejné URL.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Vložte individuální DOI suffix pro každou publikovanou položku nezávisle a odlišně od "Uživatelského identifikátoru" zmíněného v předešlé možnosti. Najdete dodatečné pole pro zapsání DOI u každé položky na stránce metadat.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Vložte, prosím vzor pro DOI suffix pro čísla.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Vložte, prosím vzor pro DOI suffix pro články.</message>
@@ -62,4 +61,11 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">doplňkový soubor</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">To co vidíte je náhled DOI, který nemusí být úplný. DOI nebylo zatím vytvořeno. Publikováním čísla a zobrazením veřejné {$pubObjectType} stránky automaticky vytvoří unikátní DOI pro tento {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Daný DOI suffix je již používán jiným vydaným objektem. Vložte, prosím, unikátní DOI suffix pro každou položku.</message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">Vylučte tento {$pubObjectType} z procesu přidělování DOI.</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Přiřaďte znovu DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Zatrhněte políčko k vymazání existujících DOI pro tento {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Vyloučit objekty čísla</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Použijte toto tlačítko k vyloučení objektů (článků, sazebnic a doplňkových souborů), plánovaných k vydání v tomto čísle z přiřazování DOI. Vemte na vědomí, že objekty přidané/vydané později tím nebudou ovlivněny. Máte stále možnost měnit vlastnosti pro jednotlivé objekty.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Vymazat DOI objektů čísla</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Toto tlačítko odebere DOI všem objektům (článkům, sazebnicím a doplňkovým souborům) v tomto čísle.</message>
 </locale>
