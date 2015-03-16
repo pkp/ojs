@@ -43,12 +43,12 @@
 	</section>
 	<section title="2. Where can I find technical support, post bugs, and suggest improvements in using OJS?">
 		<![CDATA[
-<p>The Public Knowledge Project operates a <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Support Forum</a> with well over a thousand exchanges where answers can be searched for and questions can be posed. For example, error messages can be searched, leading to proposed solutions for known issues. Bug reports should be submitted through PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a>.</p>
+<p>The Public Knowledge Project operates a <a href="http://forum.pkp.sfu.ca/" target="_blank">Support Forum</a> with well over a thousand exchanges where answers can be searched for and questions can be posed. For example, error messages can be searched, leading to proposed solutions for known issues. Bug reports should be submitted through PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. How would I go about translating OJS in another language?">
 		<![CDATA[
-<p>Instructions are provided in the docs/README file which is included in the OJS download. Additional information on common translation issues can also be found in the <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP Support Forum</a>.</p>
+<p>Instructions are provided in the docs/README file which is included in the OJS download. Additional information on common translation issues can also be found in the <a href="http://forum.pkp.sfu.ca/" target="_blank">PKP Support Forum</a>.</p>
 		]]>
 	</section>
 	<section title='4. Why are authors getting the message that the journal is "not accepting submissions at this time"?'>

@@ -43,12 +43,12 @@
 	</section>
 	<section title="2. Tôi có thể tìm kiếm hỗ trợ kỹ thuật, báo lỗi và đề xuất cải tiến ở đâu khi sử dụng OJS?">
 		<![CDATA[
-<p>Dự án Tri thức Công cộng (PKP) vận hành một <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Diễn đàn hỗ trợ</a> với hơn một ngàn câu trao đổi, nơi mà người dùng có thể tìm kiếm câu trả lời và có thể đặt câu hỏi với chuyên gia và cộng đồng người dùng. Chẳng hạn, người dùng có thể tìm kiếm dựa trên các thông báo lỗi để được dẫn đến các giải pháp đề xuất cho những vấn đề đã được xác định. Nếu không được, người dùng có thể gửi câu hỏi tới địa chỉ email <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Các báo lỗi cần được gửi cho hệ thống ghi báo lỗi của PKP <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a>.</p>
+<p>Dự án Tri thức Công cộng (PKP) vận hành một <a href="http://forum.pkp.sfu.ca/" target="_blank">Diễn đàn hỗ trợ</a> với hơn một ngàn câu trao đổi, nơi mà người dùng có thể tìm kiếm câu trả lời và có thể đặt câu hỏi với chuyên gia và cộng đồng người dùng. Chẳng hạn, người dùng có thể tìm kiếm dựa trên các thông báo lỗi để được dẫn đến các giải pháp đề xuất cho những vấn đề đã được xác định. Nếu không được, người dùng có thể gửi câu hỏi tới địa chỉ email <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Các báo lỗi cần được gửi cho hệ thống ghi báo lỗi của PKP <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. Làm thế nào tôi có thể dịch OJS sang một ngôn ngữ khác?">
 		<![CDATA[
-<p>Hướng dẫn được cung cấp trong file docs/README kèm theo trong gói OJS được tải xuống. Thông tin thêm về những vấn đề thường gặp khi dịch cũng có thể tìm thấy trên <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Diễn đàn hỗ trợ của PKP</a>.</p>
+<p>Hướng dẫn được cung cấp trong file docs/README kèm theo trong gói OJS được tải xuống. Thông tin thêm về những vấn đề thường gặp khi dịch cũng có thể tìm thấy trên <a href="http://forum.pkp.sfu.ca/" target="_blank">Diễn đàn hỗ trợ của PKP</a>.</p>
 		]]>
 	</section>
 	<section title='4. Tại sao các tác giả nhận được thông báo rằng tạp chí "hiện không nhận bài nộp"?'>

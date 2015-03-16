@@ -26,6 +26,6 @@
 <p align="center"><a href="{$baseUrl}/locale/{$locale}/edprocesslarge.png"><img src="{$baseUrl}/locale/{$locale}/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>]]>
 	</section>
 	<section title="Unterstützung">
-		<![CDATA[<p>Technischer Support bzw. ein Fehlermelde- und Dokumentationssystem für technische Probleme finden Sie auf der PKP-<a href="http://pkp.sfu.ca/support/forum/" target="_blank">Webseite</a>.</p><p>Im Falle von Fragen zu spezifischen Zeitschriften, die OJS verwenden, können Sie sich an den Hauptkontakt oder an Supportkontakte wenden, die Sie auf den Zeitschriftenwebseiten unter "Über uns" finden.</p>]]>
+		<![CDATA[<p>Technischer Support bzw. ein Fehlermelde- und Dokumentationssystem für technische Probleme finden Sie auf der PKP-<a href="http://forum.pkp.sfu.ca/" target="_blank">Webseite</a>.</p><p>Im Falle von Fragen zu spezifischen Zeitschriften, die OJS verwenden, können Sie sich an den Hauptkontakt oder an Supportkontakte wenden, die Sie auf den Zeitschriftenwebseiten unter "Über uns" finden.</p>]]>
 	</section>
 </topic>
