@@ -124,6 +124,7 @@ class IssueHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('coverPagePath', $coverPagePath);
 		$templateMgr->assign('locale', AppLocale::getLocale());
+		$templateMgr->assign('primaryLocale', $journal->getPrimaryLocale());
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
@@ -438,13 +439,13 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('coverPagePath', $coverPagePath);
 			$templateMgr->assign('locale', $locale);
 
-
-			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageCover($locale)) {
-				$templateMgr->assign('fileName', $issue->getFileName($locale));
-				$templateMgr->assign('width', $issue->getWidth($locale));
-				$templateMgr->assign('height', $issue->getHeight($locale));
-				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
-				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
+			$coverLocale = $issue->getFileName($locale) ? $locale : $journal->getPrimaryLocale();
+			if (!$showToc && $issue->getFileName($coverLocale) && $issue->getShowCoverPage($coverLocale) && !$issue->getHideCoverPageCover($coverLocale)) {
+				$templateMgr->assign('fileName', $issue->getFileName($coverLocale));
+				$templateMgr->assign('width', $issue->getWidth($coverLocale));
+				$templateMgr->assign('height', $issue->getHeight($coverLocale));
+				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($coverLocale));
+				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($coverLocale));
 
 				$showToc = false;
 			} else {
