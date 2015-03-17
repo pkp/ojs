@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.user.displayName">Panel uživatele</message>
 	<message key="plugins.block.user.description">Tento plugin zobrazí v postraním panelu nástroje pro práci s účtem uživatele (např.: přihlášení, odhlášení, odkaz na profil atd.).</message>
 	<message key="plugins.block.user.loggedInAs">Jste přihlášen jako...</message>

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.referral.name">Plugin pro zpětné odkazy</message>
 	<message key="plugins.generic.referral.description">Odkazovací plugin sleduje příchozí URL citací článků (např.: když čtenář následuje externí odkaz na článek) a umožňuje autorům spravovat a případně vydávat automaticky aktualizovaný seznam citací článku.</message>
 	

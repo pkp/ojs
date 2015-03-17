@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.role.displayName">Panel specifický podle role</message>
 	<message key="plugins.block.role.description">Tento plugin přidá do postranního panelu blok obsahující informace specifické pro roli uživatele, jako například počet příspěvků a rychlé odkazy pro editory, autory atd.</message>
 </locale>

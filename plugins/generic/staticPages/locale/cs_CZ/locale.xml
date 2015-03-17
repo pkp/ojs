@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.staticPages.displayName">Plugin statických stránek</message>
 	<message key="plugins.generic.staticPages.description">Tento plugin umožňuje správu statického obsahu.</message>
 	<message key="plugins.generic.staticPages.pageTitle">Název</message>

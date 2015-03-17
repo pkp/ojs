@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.fontSize.displayName">Panel velikosti fontu</message>
 	<message key="plugins.block.fontSize.description">Tento plugin poskytne v postranním panelu možnost měnit velikost fontu.</message>
 	<message key="plugins.block.fontSize.title">Velikost fontu</message>
