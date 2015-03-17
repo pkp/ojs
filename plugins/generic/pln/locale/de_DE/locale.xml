@@ -63,4 +63,5 @@
 	<message key="plugins.generic.pln.notifications.terms_updated">Die Nutzungsbedingungen des PKP PLN sind aktualisiert worden. Die Zustimmung zu den neuen Bedingungen ist notwendig, um weiter abliefern zu können.</message>
 	<message key="plugins.generic.pln.notifications.curl_missing">Die Unterstützung von CURL muss aktiviert werden, um fortfahren zu können.</message>
 	<message key="plugins.generic.pln.notifications.zip_missing">Die Unterstützung von ZipArchive muss aktiviert werden, um fortfahren zu können.</message>
+	<message key="plugins.generic.pln.notifications.issn_setting">Ihre Zeitschrift muss über eine ISSN verfügen, bevor Sie den Nutzungsbedingungen zustimmen können. Sie können die ISSN im Setup der Zeitschrift eingeben. Sobald die ISSN der Zeitschrift eingegeben ist, werden die Nutzungsbedingungen unten angezeigt.</message>
 </locale>
