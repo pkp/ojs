@@ -99,6 +99,7 @@ class NativeImportExportPluginTest extends DatabaseTestCase {
 		$generatedXml = trim($doc->saveXML());
 
 		$dummyFile = getenv('DUMMYFILE');
+		import('lib.pkp.classes.site.VersionCheck');
 		$currentVersion =& VersionCheck::getCurrentDBVersion();
 		$params = array(
 			'{$embedContents}' => base64_encode(file_get_contents($dummyFile)),
