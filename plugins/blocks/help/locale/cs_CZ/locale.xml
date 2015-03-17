@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.help.displayName">Panel Pomoc</message>
 	<message key="plugins.block.help.description">Tento plugin přidá do postranního panelu odkaz na Pomoc.</message>
 </locale>

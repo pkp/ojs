@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.citationFormats.apa.displayName">Plugin pro citační formát APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
 	<message key="plugins.citationFormats.apa.description">Tento plugin zavádí citační formát APA.</message>

@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.notification.displayName">Panel Oznámení</message>
 	<message key="plugins.block.notification.description">Tento plugin zobrazuje informace o systémových oznámeních.</message>
 </locale>

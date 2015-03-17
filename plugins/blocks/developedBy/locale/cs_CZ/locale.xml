@@ -15,7 +15,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.developedBy.displayName">Blok "Tvůrce"</message>
 	<message key="plugins.block.developedBy.description">Tento plugin přidá odkaz "Tvůrce" do postranního panelu.</message>
 </locale>

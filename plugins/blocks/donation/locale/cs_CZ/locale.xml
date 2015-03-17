@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.donation.displayName">Blok "Dary"</message>
 	<message key="plugins.block.donation.description">Tento plugin přidá do postranního panelu odkaz pro přijímání darů.</message>
 </locale>

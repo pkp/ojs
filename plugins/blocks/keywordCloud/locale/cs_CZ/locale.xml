@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.block.keywordCloud.displayName">Panel Oblak z klíčových slov</message>
 	<message key="plugins.block.keywordCloud.description">Tento plugin poskytuje oblak z klíčových slov článků.</message>
 	<message key="plugins.block.keywordCloud.title">Klíčová slova</message>

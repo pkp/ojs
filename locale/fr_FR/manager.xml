@@ -9,7 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français) locale.
-  *
   -->
 
 <locale name="fr_FR" full_name = "Français">
@@ -153,7 +152,6 @@
 	<message key="manager.setup.addItemtoAboutJournal">Ajouter un élément à afficher dans  « À propos de la revue »</message>
 	<message key="manager.setup.additionalContent">Contenu additionnel</message>
 	<message key="manager.setup.additionalContentDescription">Ajouter le contenu suivant, en utilisant du texte/HTML, qui apparaîtra sous l'image de la page d'accueil, le cas échéant.</message>
-	<message key="bon ">Ajouter un élément</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Ajouter un nouveau lien de base de données</message>
 	<message key="manager.setup.addSponsor">Ajouter un commanditaire</message>
 	<message key="manager.setup.alternateHeader">En-tête secondaire</message>

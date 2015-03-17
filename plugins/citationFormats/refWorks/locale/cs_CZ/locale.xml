@@ -14,7 +14,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.citationFormats.refWorks.displayName">Plugin pro citační formát RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
 	<message key="plugins.citationFormats.refWorks.description">Tento plugin zavádí citační formát RefWorks.</message>

@@ -12,7 +12,7 @@
   *
   -->
 
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.reports.reviews.displayName">Report recenzí</message>
 	<message key="plugins.reports.reviews.description">Tento plugin zavádí CSV report obsahující seznam recenzních úkolů zpracovaných pro časopis.</message>
 	<message key="plugins.reports.reviews.round">Kolo</message>
