@@ -45,7 +45,8 @@ lib/pkp/.git							\
 lib/pkp/tools/travis						\
 lib/pkp/tools/mergePullRequest.sh				\
 lib/pkp/lib/swordappv2/.git					\
-lib/pkp/lib/swordappv2/test"
+lib/pkp/lib/swordappv2/test					\
+plugins/generic/pdfJsViewer/.git"
 
 
 cd $TMPDIR

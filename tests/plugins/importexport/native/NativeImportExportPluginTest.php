@@ -99,11 +99,13 @@ class NativeImportExportPluginTest extends DatabaseTestCase {
 		$generatedXml = trim($doc->saveXML());
 
 		$dummyFile = getenv('DUMMYFILE');
+		$currentVersion =& VersionCheck::getCurrentDBVersion();
 		$params = array(
 			'{$embedContents}' => base64_encode(file_get_contents($dummyFile)),
 			'{$currentDate}' => date('Y-m-d'),
 			'{$currentYear}' => date('Y'),
 			'{$dummyFileName}' => basename($dummyFile),
+			'{$version}' => urlencode($currentVersion->getMajor() . '.' . $currentVersion->getMinor() . '.' . $currentVersion->getRevision()),
 		);
 
 		$this->assertEquals(
