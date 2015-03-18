@@ -46,15 +46,6 @@ class ArticleFile extends SubmissionFile {
 	}
 
 	/**
-	 * Check if the file may be displayed inline.
-	 * @return boolean
-	 */
-	function isInlineable() {
-		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		return $articleFileDao->isInlineable($this);
-	}
-
-	/**
 	 * Get a public ID for this galley.
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list

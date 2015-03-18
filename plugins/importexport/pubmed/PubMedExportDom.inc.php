@@ -169,10 +169,10 @@ class PubMedExportDom {
 
 		// article revised by publisher or author
 		// check if there is a revised version; if so, generate a revised tag
-		$revisedFileID = $article->getRevisedFileId();
-		if (!empty($revisedFileID)) {
-			$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-			$articleFile =& $articleFileDao->getArticleFile($revisedFileID);
+		$revisedFileId = $article->getRevisedFileId();
+		if (!empty($revisedFileId)) {
+			$articleFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$articleFile = $submissionFileDao->getLatestRevision($revisedFileId);
 
 			if ($articleFile) {
 				$revisedNode =& PubMedExportDom::generatePubDateDom($doc, $articleFile->getDateModified(), 'revised');
