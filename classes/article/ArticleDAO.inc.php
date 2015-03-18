@@ -214,6 +214,9 @@ class ArticleDAO extends SubmissionDAO {
 	 * @param $articleId int
 	 */
 	function deleteById($articleId) {
+		$article = $this->getById($articleId);
+		assert(is_a($article, 'Submission'));
+
 		parent::deleteById($articleId);
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
@@ -228,15 +231,9 @@ class ArticleDAO extends SubmissionDAO {
 		$commentDao = DAORegistry::getDAO('CommentDAO');
 		$commentDao->deleteBySubmissionId($articleId);
 
-		// Delete article files -- first from the filesystem, then from the database
-		import('classes.file.ArticleFileManager');
-		$articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
-		$articleFiles = $articleFileDao->getArticleFilesByArticle($articleId);
-
-		$articleFileManager = new ArticleFileManager($articleId);
-		foreach ($articleFiles as $articleFile) {
-			$articleFileManager->deleteFile($articleFile->getFileId());
-		}
+		import('lib.pkp.classes.file.SubmissionFileManager');
+		$articleFileManager = new SubmissionFileManager($article->getPressId(), $article->getId());
+		$articleFileManager->rmtree($articleFileManager->getBasePath());
 
 		$articleFileDao->deleteArticleFiles($articleId);
 

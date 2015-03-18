@@ -15,8 +15,6 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('classes.file.ArticleFileManager');
-
 class SubmissionDeletionTool extends CommandLineTool {
 
 	var $articleIds;
@@ -49,29 +47,13 @@ class SubmissionDeletionTool extends CommandLineTool {
 	 */
 	function execute() {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
-
 		foreach($this->parameters as $articleId) {
 			$article = $articleDao->getById($articleId);
-
-			if(isset($article)) {
-				// remove files first, to prevent orphans
-				$articleFileManager = new ArticleFileManager($articleId);
-
-				if (! file_exists($articleFileManager->filesDir)) {
-					printf("Warning: no files found for submission $articleId.\n");
-				} else {
-					if (! is_writable($articleFileManager->filesDir)) {
-						printf("Error: Skipping submission $articleId. Can't delete files in " . $articleFileManager->filesDir . "\n");
-						continue;
-					} else {
-						$articleFileManager->deleteArticleTree();
-					}
-				}
-
-				$articleDao->deleteById($articleId);
+			if(!isset($article)) {
+				printf("Error: Skipping $articleId. Unknown submission.\n");
 				continue;
 			}
-			printf("Error: Skipping $articleId. Unknown submission.\n");
+			$articleDao->deleteById($articleId);
 		}
 	}
 }

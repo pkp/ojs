@@ -93,25 +93,21 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
-			import('classes.file.ArticleFileManager');
-			$fileManager = new ArticleFileManager($articleId);
-			$file = $fileManager->getFile($fileId);
-
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
+			$file = $submissionFileDao->getLatestRevision($fileId);
 			if (isset($file)) {
 				$parser = SearchFileParser::fromFile($file);
 			}
 
-			if (isset($parser)) {
-				if ($parser->open()) {
-					$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
-					$objectId = $searchDao->insertObject($articleId, $type, $fileId);
+			if (isset($parser) && $parser->open()) {
+				$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+				$objectId = $searchDao->insertObject($articleId, $type, $fileId);
 
-					$position = 0;
-					while(($text = $parser->read()) !== false) {
-						self::_indexObjectKeywords($objectId, $text, $position);
-					}
-					$parser->close();
+				$position = 0;
+				while(($text = $parser->read()) !== false) {
+					self::_indexObjectKeywords($objectId, $text, $position);
 				}
+				$parser->close();
 			}
 		}
 	}

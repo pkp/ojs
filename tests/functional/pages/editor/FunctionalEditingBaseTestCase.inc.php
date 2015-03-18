@@ -15,9 +15,7 @@
  * process (base class with common functionality).
  */
 
-
 import('lib.pkp.tests.WebTestCase');
-import('classes.file.ArticleFileManager');
 
 class FunctionalEditingBaseTestCase extends WebTestCase {
 

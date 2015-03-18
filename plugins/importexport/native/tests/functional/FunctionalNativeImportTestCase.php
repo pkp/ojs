@@ -66,7 +66,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 			'PublishedArticle' => 'PublishedArticleDAO',
 			'Galley' => 'ArticleGalleyDAO',
 		);
-		$articelId = null;
+		$articleId = null;
 		foreach ($daos as $objectType => $daoName) {
 			$dao = DAORegistry::getDAO($daoName);
 			$pubObject = call_user_func(array($dao, "get${objectType}ByPubId"), 'doi', $this->expectedDois[$objectType]);
@@ -74,7 +74,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 			$pubObjectByURN = call_user_func(array($dao, "get${objectType}ByPubId"), 'other::urn', $this->expectedURNs[$objectType]);
 			self::assertNotNull($pubObjectByURN, "Error while testing $objectType: object or URN has not been imported.");
 			if ($objectType == 'PublishedArticle') {
-				$articelId = $pubObject->getId();
+				$articleId = $pubObject->getId();
 			}
 		}
 
@@ -84,9 +84,11 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 		self::assertRegExp('/##plugins.importexport.native.import.error.duplicatePubId##/', $result);
 
 		// Delete inserted article files from the filesystem.
-		import('classes.file.ArticleFileManager');
-		$articleFileManager = new ArticleFileManager($articelId);
-		$articleFileManager->deleteArticleTree();
+		$request = $application->getRequest();
+		$context = $request->getContext();
+		import('lib.pkp.classes.file.SubmissionFileManager');
+		$articleFileManager = new SubmissionFileManager($context->getId(), $articleId);
+		$articleFileManager->rmtree($articleFileManager->getBasePath());
 	}
 
 	public function testNativeDoiImportWithErrors() {

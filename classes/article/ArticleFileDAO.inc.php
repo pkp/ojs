@@ -186,30 +186,6 @@ class ArticleFileDAO extends PKPFileDAO {
 	}
 
 	/**
-	 * Retrieve all article files for a file stage and assoc ID.
-	 * @param $assocId int
-	 * @param $fileStage int
-	 * @return array ArticleFiles
-	 */
-	function &getArticleFilesByAssocId($assocId, $fileStage) {
-		import('classes.file.ArticleFileManager');
-		$articleFiles = array();
-
-		$result = $this->retrieve(
-			'SELECT * FROM submission_files WHERE assoc_id = ? AND file_stage = ?',
-			array($assocId, $fileStage)
-		);
-
-		while (!$result->EOF) {
-			$articleFiles[] = $this->_returnArticleFileFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-
-		$result->Close();
-		return $articleFiles;
-	}
-
-	/**
 	 * Internal function to return an ArticleFile object from a row.
 	 * @param $row array
 	 * @return ArticleFile
