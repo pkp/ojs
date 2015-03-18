@@ -148,11 +148,19 @@ class UserAction {
 		}
 		$userGroupDao->deleteAssignmentsByUserId($oldUserId);
 
-		// Delete stage assignments outright.
+		// Transfer stage assignments.
 		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
 		$stageAssignments = $stageAssignmentDao->getByUserId($oldUserId);
 		while ($stageAssignment = $stageAssignments->next()) {
-			$stageAssignmentDao->deleteObject($stageAssignment);
+			$duplicateAssignments = $stageAssignmentDao->getBySubmissionAndStageId($stageAssignment->getSubmissionId(), null, $stageAssignment->getUserGroupId(), $newUserId);
+			if (!$duplicateAssignments->next()) {
+				// If no similar assignments already exist, transfer this one.
+				$stageAssignment->setUserId($newUserId);
+				$stageAssignmentDao->updateObject($stageAssignment);
+			} else {
+				// There's already a stage assignment for the new user; delete.
+				$stageAssignmentDao->deleteObject($stageAssignment);
+			}
 		}
 
 		$userDao = DAORegistry::getDAO('UserDAO');
