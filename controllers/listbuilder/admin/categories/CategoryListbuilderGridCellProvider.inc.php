@@ -30,7 +30,7 @@ class CategoryListbuilderGridCellProvider extends GridCellProvider {
 	 * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
-		$category =& $row->getData(); /* @var $category Category */
+		$category = $row->getData(); /* @var $category Category */
 		$columnId = $column->getId();
 		assert(is_a($category, 'ControlledVocabEntry'));
 		switch ($columnId) {

@@ -37,6 +37,7 @@ class CategoryDAO extends ControlledVocabDAO {
 
 	/**
 	 * Get an iterator of category objects.
+	 * @return DAOResultFactory
 	 */
 	function getIterator() {
 		$categoryEntryDao = $this->getEntryDAO();

@@ -33,7 +33,7 @@ class CategoryListbuilderHandler extends ListbuilderHandler {
 	// Overridden template methods
 	//
 	/**
-	 * @copydoc SetupListbuilderHandler::initialize()
+	 * @copydoc ListbuilderHandler::initialize()
 	 */
 	function initialize($request) {
 		parent::initialize($request);
