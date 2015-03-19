@@ -62,19 +62,19 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testUpdateFileIndexViaPluginHook() {
 		// Diverting to the search plugin hook.
-		HookRegistry::register('ArticleSearchIndex::articleFileChanged', array($this, 'callbackUpdateFileIndex'));
+		HookRegistry::register('ArticleSearchIndex::submissionFileChanged', array($this, 'callbackUpdateFileIndex'));
 
 		// Simulate updating an article file via hook.
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->articleFileChanged(0, 1, 2);
+		$articleSearchIndex->submissionFileChanged(0, 1, 2);
 
 		// Test whether the hook was called.
 		$calledHooks = HookRegistry::getCalledHooks();
 		$lastHook = array_pop($calledHooks);
-		self::assertEquals('ArticleSearchIndex::articleFileChanged', $lastHook[0]);
+		self::assertEquals('ArticleSearchIndex::submissionFileChanged', $lastHook[0]);
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearchIndex::articleFileChanged');
+		HookRegistry::clear('ArticleSearchIndex::submissionFileChanged');
 	}
 
 	/**
@@ -85,11 +85,11 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		$this->registerMockArticleSearchDAO($this->never(), $this->atLeastOnce());
 
 		// Make sure that no hook is being called.
-		HookRegistry::clear('ArticleSearchIndex::articleFileDeleted');
+		HookRegistry::clear('ArticleSearchIndex::submissionFileDeleted');
 
 		// Test deleting an article from the index with a mock database back-end.#
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->articleFileDeleted(0);
+		$articleSearchIndex->submissionFileDeleted(0);
 	}
 
 	/**
@@ -97,22 +97,22 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	public function testDeleteTextIndexViaPluginHook() {
 		// Diverting to the search plugin hook.
-		HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array($this, 'callbackDeleteTextIndex'));
+		HookRegistry::register('ArticleSearchIndex::submissionFileDeleted', array($this, 'callbackDeleteTextIndex'));
 
 		// The search DAO should not be called.
 		$this->registerMockArticleSearchDAO($this->never(), $this->never());
 
 		// Simulate deleting article index via hook.
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->articleFileDeleted(0, 1, 2);
+		$articleSearchIndex->submissionFileDeleted(0, 1, 2);
 
 		// Test whether the hook was called.
 		$calledHooks = HookRegistry::getCalledHooks();
 		$lastHook = array_pop($calledHooks);
-		self::assertEquals('ArticleSearchIndex::articleFileDeleted', $lastHook[0]);
+		self::assertEquals('ArticleSearchIndex::submissionFileDeleted', $lastHook[0]);
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearchIndex::articleFileDeleted');
+		HookRegistry::clear('ArticleSearchIndex::submissionFileDeleted');
 	}
 
 	/**
@@ -197,25 +197,25 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * @covers ArticleSearchIndex
 	 */
-	public function testIndexArticleFiles() {
+	public function testIndexSubmissionFiles() {
 		$this->markTestSkipped(); // Temporarily disabled!
 
 		// Make sure that no hook is being called.
-		HookRegistry::clear('ArticleSearchIndex::articleFilesChanged');
+		HookRegistry::clear('ArticleSearchIndex::submissionFilesChanged');
 		$this->registerFileDAOs(true);
 
 		// Test indexing an article with a mock environment.
 		$article = new Article();
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->articleFilesChanged($article);
+		$articleSearchIndex->submissionFilesChanged($article);
 	}
 
 	/**
 	 * @covers ArticleSearchIndex
 	 */
-	public function testIndexArticleFilesViaPluginHook() {
+	public function testIndexSubmissionFilesViaPluginHook() {
 		// Diverting to the search plugin hook.
-		HookRegistry::register('ArticleSearchIndex::articleFilesChanged', array($this, 'callbackIndexArticleFiles'));
+		HookRegistry::register('ArticleSearchIndex::submissionFilesChanged', array($this, 'callbackIndexSubmissionFiles'));
 
 		// The file DAOs should not be called.
 		$this->registerFileDAOs(false);
@@ -223,15 +223,15 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		// Simulate indexing via hook.
 		$article = new Article();
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->articleFilesChanged($article);
+		$articleSearchIndex->submissionFilesChanged($article);
 
 		// Test whether the hook was called.
 		$calledHooks = HookRegistry::getCalledHooks();
 		$lastHook = array_pop($calledHooks);
-		self::assertEquals('ArticleSearchIndex::articleFilesChanged', $lastHook[0]);
+		self::assertEquals('ArticleSearchIndex::submissionFilesChanged', $lastHook[0]);
 
 		// Remove the test hook.
-		HookRegistry::clear('ArticleSearchIndex::articleFilesChanged');
+		HookRegistry::clear('ArticleSearchIndex::submissionFilesChanged');
 	}
 
 
@@ -241,10 +241,10 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * Simulate a search plug-ins "update file index"
 	 * hook.
-	 * @see ArticleSearchIndex::articleFileChanged()
+	 * @see ArticleSearchIndex::submissionFileChanged()
 	 */
 	public function callbackUpdateFileIndex($hook, $params) {
-		self::assertEquals('ArticleSearchIndex::articleFileChanged', $hook);
+		self::assertEquals('ArticleSearchIndex::submissionFileChanged', $hook);
 
 		list($articleId, $type, $fileId) = $params;
 		self::assertEquals(0, $articleId);
@@ -259,10 +259,10 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * Simulate a search plug-ins "delete text index"
 	 * hook.
-	 * @see ArticleSearchIndex::articleFileDeleted()
+	 * @see ArticleSearchIndex::submissionFileDeleted()
 	 */
 	public function callbackDeleteTextIndex($hook, $params) {
-		self::assertEquals('ArticleSearchIndex::articleFileDeleted', $hook);
+		self::assertEquals('ArticleSearchIndex::submissionFileDeleted', $hook);
 
 		list($articleId, $type, $assocId) = $params;
 		self::assertEquals(0, $articleId);
@@ -308,10 +308,10 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * Simulate a search plug-ins "index article files"
 	 * hook.
-	 * @see ArticleSearchIndex::articleFilesChanged()
+	 * @see ArticleSearchIndex::submissionFilesChanged()
 	 */
-	public function callbackIndexArticleFiles($hook, $params) {
-		self::assertEquals('ArticleSearchIndex::articleFilesChanged', $hook);
+	public function callbackIndexSubmissionFiles($hook, $params) {
+		self::assertEquals('ArticleSearchIndex::submissionFilesChanged', $hook);
 
 		list($article) = $params;
 		self::assertInstanceOf('Article', $article);

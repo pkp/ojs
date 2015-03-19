@@ -31,7 +31,7 @@ class ArtworkFileDAODelegate extends SubmissionArtworkFileDAODelegate {
 
 	/**
 	 * @see SubmissionFileDAODelegate::newDataObject()
-	 * @return ArticleFile
+	 * @return ArtworkFile
 	 */
 	function newDataObject() {
 		return new ArtworkFile();

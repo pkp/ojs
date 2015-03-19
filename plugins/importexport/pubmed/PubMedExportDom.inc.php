@@ -171,11 +171,11 @@ class PubMedExportDom {
 		// check if there is a revised version; if so, generate a revised tag
 		$revisedFileId = $article->getRevisedFileId();
 		if (!empty($revisedFileId)) {
-			$articleFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-			$articleFile = $submissionFileDao->getLatestRevision($revisedFileId);
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$submissionFile = $submissionFileDao->getLatestRevision($revisedFileId);
 
-			if ($articleFile) {
-				$revisedNode =& PubMedExportDom::generatePubDateDom($doc, $articleFile->getDateModified(), 'revised');
+			if ($submissionFile) {
+				$revisedNode =& PubMedExportDom::generatePubDateDom($doc, $submissionFile->getDateModified(), 'revised');
 				XMLCustomWriter::appendChild($historyNode, $revisedNode);
 			}
 		}

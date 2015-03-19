@@ -111,7 +111,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 
 		// update the submission's file index
 		import('classes.search.ArticleSearchIndex');
-		ArticleSearchIndex::articleFilesChanged($submission);
+		ArticleSearchIndex::submissionFilesChanged($submission);
 
 		return DAO::getDataChangedEvent($submissionFile->getId());
 	}

@@ -248,15 +248,15 @@ class MetricsDAO extends DAO {
 			case ASSOC_TYPE_SUPP_FILE:
 				if ($recordToStore['assoc_type'] == ASSOC_TYPE_GALLEY) {
 					$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-					$articleFile = $galleyDao->getById($recordToStore['assoc_id']);
-					if (!is_a($articleFile, 'ArticleGalley')) {
+					$submissionFile = $galleyDao->getById($recordToStore['assoc_id']);
+					if (!is_a($submissionFile, 'ArticleGalley')) {
 						throw new Exception('Cannot load record: invalid galley id.');
 					}
 				} else {
 					assert(false); // Unknown assoc type
 					// FIXME: Previously supplementary files were supported here.
 				}
-				$articleId = $articleFile->getSubmissionId();
+				$articleId = $submissionFile->getSubmissionId();
 				$isArticleFile = true;
 				// Don't break but go on to retrieve the article.
 

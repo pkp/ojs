@@ -14,9 +14,9 @@
  * @brief Artwork file class.
  */
 
-import('classes.article.ArticleFile');
+import('lib.pkp.classes.submission.SubmissionFile');
 
-class ArtworkFile extends ArticleFile {
+class ArtworkFile extends SubmissionFile {
 	/** @var array image file information */
 	var $_imageInfo;
 
@@ -24,7 +24,7 @@ class ArtworkFile extends ArticleFile {
 	 * Constructor
 	 */
 	function ArtworkFile() {
-		parent::ArticleFile();
+		parent::SubmissionFile();
 	}
 
 
@@ -176,7 +176,6 @@ class ArtworkFile extends ArticleFile {
 	 */
 	function getHeight() {
 		if (!$this->_imageInfo) {
-			$articleFile =& $this->getFile();
 			$this->_imageInfo = getimagesize($this->getFilePath());
 		}
 		return $this->_imageInfo[1];
@@ -185,18 +184,18 @@ class ArtworkFile extends ArticleFile {
 	/**
 	 * Copy the user-facing (editable) metadata from another article
 	 * file.
-	 * @param $articleFile ArticleFile
+	 * @param $submissionFile SubmissionFile
 	 */
-	function copyEditableMetadataFrom($articleFile) {
-		if (is_a($articleFile, 'ArtworkFile')) {
-			$this->setCaption($articleFile->getCaption());
-			$this->setCredit($articleFile->getCredit());
-			$this->setCopyrightOwner($articleFile->getCopyrightOwner());
-			$this->setCopyrightOwnerContactDetails($articleFile->getCopyrightOwnerContactDetails());
-			$this->setPermissionTerms($articleFile->getPermissionTerms());
+	function copyEditableMetadataFrom($submissionFile) {
+		if (is_a($submissionFile, 'ArtworkFile')) {
+			$this->setCaption($submissionFile->getCaption());
+			$this->setCredit($submissionFile->getCredit());
+			$this->setCopyrightOwner($submissionFile->getCopyrightOwner());
+			$this->setCopyrightOwnerContactDetails($submissionFile->getCopyrightOwnerContactDetails());
+			$this->setPermissionTerms($submissionFile->getPermissionTerms());
 		}
 
-		parent::copyEditableMetadataFrom($articleFile);
+		parent::copyEditableMetadataFrom($submissionFile);
 	}
 }
 

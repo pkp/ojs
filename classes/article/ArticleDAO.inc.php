@@ -232,10 +232,11 @@ class ArticleDAO extends SubmissionDAO {
 		$commentDao->deleteBySubmissionId($articleId);
 
 		import('lib.pkp.classes.file.SubmissionFileManager');
-		$articleFileManager = new SubmissionFileManager($article->getPressId(), $article->getId());
-		$articleFileManager->rmtree($articleFileManager->getBasePath());
+		$submissionFileManager = new SubmissionFileManager($article->getPressId(), $article->getId());
+		$submissionFileManager->rmtree($submissionFileManager->getBasePath());
 
-		$articleFileDao->deleteArticleFiles($articleId);
+		$submissionFileDao = DAORegistry::get('SubmissionFileDAO');
+		$submissionFileDao->deleteAllRevisionsBySubmissionId($articleId);
 
 		// Delete article citations.
 		$citationDao = DAORegistry::getDAO('CitationDAO');

@@ -92,8 +92,8 @@ class DataciteExportDom extends DOIExportDom {
 		$pubObjects =& $this->retrievePublicationObjects($object);
 		extract($pubObjects);
 
-		// Identify an object implementing an ArticleFile (if any).
-		$articleFile = $galley;
+		// Identify an object implementing a SubmissionFile (if any).
+		$submissionFile = $galley;
 
 		// Identify the object locale.
 		$objectLocalePrecedence = $this->getObjectLocalePrecedence($article, $galley);
@@ -135,7 +135,7 @@ class DataciteExportDom extends DOIExportDom {
 		}
 
 		// Dates
-		XMLCustomWriter::appendChild($rootElement, $this->_datesElement($issue, $article, $articleFile, $publicationDate));
+		XMLCustomWriter::appendChild($rootElement, $this->_datesElement($issue, $article, $submissionFile, $publicationDate));
 
 		// Language
 		XMLCustomWriter::createChildWithText($this->getDoc(), $rootElement, 'language', AppLocale::get3LetterIsoFromLocale($objectLocalePrecedence[0]));
@@ -145,7 +145,7 @@ class DataciteExportDom extends DOIExportDom {
 		XMLCustomWriter::appendChild($rootElement, $resourceTypeElement);
 
 		// Alternate Identifiers
-		$this->_appendNonMandatoryChild($rootElement, $this->_alternateIdentifiersElement($object, $issue, $article, $articleFile));
+		$this->_appendNonMandatoryChild($rootElement, $this->_alternateIdentifiersElement($object, $issue, $article, $submissionFile));
 
 		// Related Identifiers
 		$this->_appendNonMandatoryChild($rootElement, $this->_relatedIdentifiersElement($object, $articlesByIssue, $galleysByArticle, $issue, $article));
@@ -155,7 +155,7 @@ class DataciteExportDom extends DOIExportDom {
 		if ($sizesElement) XMLCustomWriter::appendChild($rootElement, $sizesElement);
 
 		// Formats
-		if (!empty($articleFile)) XMLCustomWriter::appendChild($rootElement, $this->_formatsElement($articleFile));
+		if (!empty($submissionFile)) XMLCustomWriter::appendChild($rootElement, $this->_formatsElement($submissionFile));
 
 		// Rights
 		$rights = $this->getPrimaryTranslation($journal->getSetting('copyrightNotice', null), $objectLocalePrecedence);
@@ -411,11 +411,11 @@ class DataciteExportDom extends DOIExportDom {
 	 * Create a date element list.
 	 * @param $issue Issue
 	 * @param $article PublishedArticle
-	 * @param $articleFile ArticleFile
+	 * @param $submissionFile SubmissionFile
 	 * @param $publicationDate string
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_datesElement(&$issue, &$article, &$articleFile, $publicationDate) {
+	function &_datesElement(&$issue, &$article, &$submissionFile, $publicationDate) {
 		$datesElement =& XMLCustomWriter::createElement($this->getDoc(), 'dates');
 		$dates = array();
 
@@ -431,8 +431,8 @@ class DataciteExportDom extends DOIExportDom {
 		}
 
 		// Accepted date (for galleys and supp files): article file uploaded.
-		if (!empty($articleFile)) {
-			$acceptedDate = $articleFile->getDateUploaded();
+		if (!empty($submissionFile)) {
+			$acceptedDate = $submissionFile->getDateUploaded();
 			if (!empty($acceptedDate)) {
 				$dates[DATACITE_DATE_ACCEPTED] = $acceptedDate;
 			}
@@ -448,7 +448,7 @@ class DataciteExportDom extends DOIExportDom {
 		}
 
 		// Last modified date (for articles): last modified date.
-		if (!empty($article) && empty($articleFile)) {
+		if (!empty($article) && empty($submissionFile)) {
 			$dates[DATACITE_DATE_UPDATED] = $article->getLastModified();
 		}
 
@@ -504,15 +504,15 @@ class DataciteExportDom extends DOIExportDom {
 	 * @param $object Issue|PublishedArticle|ArticleGalley
 	 * @param $issue Issue
 	 * @param $article PublishedArticle
-	 * @param $articleFile ArticleFile
+	 * @param $submissionFile SubmissionFile
 	 * @return XMLNode|DOMImplementation
 	 */
-	function &_alternateIdentifiersElement(&$object, &$issue, &$article, &$articleFile) {
+	function &_alternateIdentifiersElement(&$object, &$issue, &$article, &$submissionFile) {
 		$journal = $this->getJournal();
 		$alternateIdentifiersElement =& XMLCustomWriter::createElement($this->getDoc(), 'alternateIdentifiers');
 
 		// Proprietary ID
-		$proprietaryId = $this->getProprietaryId($journal, $issue, $article, $articleFile);
+		$proprietaryId = $this->getProprietaryId($journal, $issue, $article, $submissionFile);
 		XMLCustomWriter::appendChild(
 			$alternateIdentifiersElement,
 			$this->createElementWithText(
@@ -591,7 +591,7 @@ class DataciteExportDom extends DOIExportDom {
 				}
 				break;
 
-			case is_a($object, 'ArticleFile'):
+			case is_a($object, 'SubmissionFile'):
 				// Part of: article.
 				assert(is_a($article, 'Article'));
 				$doi =& $this->_relatedIdentifierElement($article, DATACITE_RELTYPE_ISPARTOF);
@@ -631,7 +631,7 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * Create a sizes element list.
-	 * @param $object Issue|PublishedArticle|ArticleFile
+	 * @param $object Issue|PublishedArticle|SubmissionFile
 	 * @param $article PublishedArticle|null
 	 * @return XMLNode|DOMImplementation|null Can be null if a size
 	 *  cannot be identified for the given object.
@@ -648,7 +648,7 @@ class DataciteExportDom extends DOIExportDom {
 				$files = array();
 				break;
 
-			case is_a($object, 'ArticleFile'):
+			case is_a($object, 'SubmissionFile'):
 				if (is_a($object, 'ArticleGalley')) {
 					// The galley represents the article.
 					$pages = $article->getPages();
@@ -687,12 +687,12 @@ class DataciteExportDom extends DOIExportDom {
 
 	/**
 	 * Create a formats element list.
-	 * @param $articleFile ArticleFile
+	 * @param $submissionFile SubmissionFile
 	 * @return XMLNode|DOMImplementation|null Can be null if a format
 	 *  cannot be identified for the given object.
 	 */
-	function &_formatsElement(&$articleFile) {
-		$format = $articleFile->getFileType();
+	function &_formatsElement(&$submissionFile) {
+		$format = $submissionFile->getFileType();
 		if (empty($format)) {
 			$nullVar = null;
 			return $nullVar;

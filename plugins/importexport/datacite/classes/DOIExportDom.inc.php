@@ -267,7 +267,7 @@ class DOIExportDom {
 		}
 
 		// Retrieve the article related to article files.
-		if (is_a($object, 'ArticleFile')) {
+		if (is_a($object, 'SubmissionFile')) {
 			$articleId = $object->getArticleId();
 			if ($cache->isCached('articles', $articleId)) {
 				$article =& $cache->get('articles', $articleId);
@@ -480,31 +480,31 @@ class DOIExportDom {
 	 *
 	 * @param $journal Journal
 	 * @param $issue Issue
-	 * @param $articleOrArticleFile PublishedArticle|ArticleFile An object representing an article.
-	 * @param $articleFile ArticleGalley
+	 * @param $articleOrSubmissionFile PublishedArticle|SubmissionFile An object representing an article.
+	 * @param $submissionFile ArticleGalley
 	 *
 	 * @return string The proprietary ID for the given objects.
 	 */
-	function getProprietaryId(&$journal, $issue = null, $articleOrArticleFile = null, $articleFile = null) {
+	function getProprietaryId(&$journal, $issue = null, $articleOrSubmissionFile = null, $submissionFile = null) {
 		$proprietaryId = $journal->getId();
 		if ($issue) $proprietaryId .= '-' . $issue->getId();
-		if ($articleOrArticleFile) {
+		if ($articleOrSubmissionFile) {
 			assert($issue);
 			$proprietaryId .= '-';
-			if (is_a($articleOrArticleFile, 'PublishedArticle')) {
-				$proprietaryId .= $articleOrArticleFile->getId();
+			if (is_a($articleOrSubmissionFile, 'PublishedArticle')) {
+				$proprietaryId .= $articleOrSubmissionFile->getId();
 			} else {
-				assert(is_a($articleOrArticleFile, 'ArticleFile'));
-				$proprietaryId .= $articleOrArticleFile->getArticleId();
+				assert(is_a($articleOrSubmissionFile, 'SubmissionFile'));
+				$proprietaryId .= $articleOrSubmissionFile->getSubmissionId();
 			}
 		}
-		if ($articleFile) {
-			assert($articleOrArticleFile);
+		if ($submissionFile) {
+			assert($articleOrSubmissionFile);
 			$proprietaryId .= '-';
-			if (is_a($articleFile, 'ArticleGalley')) {
+			if (is_a($submissionFile, 'ArticleGalley')) {
 				$proprietaryId .= 'g';
 			}
-			$proprietaryId .= $articleFile->getId();
+			$proprietaryId .= $submissionFile->getId();
 		}
 		return $proprietaryId;
 	}
@@ -552,21 +552,21 @@ class DOIExportDom {
 	/**
 	 * Try to identify the resource type of the
 	 * given article file.
-	 * @param $articleFile ArticleFile
+	 * @param $submissionFile SubmissionFile
 	 * @return string|null One of the DOI_EXPORT_FILTYPE_* constants or null.
 	 */
-	function getFileType($articleFile) {
+	function getFileType($submissionFile) {
 		// Identify the galley type.
 		$resourceType = null;
-		if (is_a($articleFile, 'ArticleXMLGalley')) {
+		if (is_a($submissionFile, 'ArticleXMLGalley')) {
 			return DOI_EXPORT_FILETYPE_XML;
 		}
-		if (is_a($articleFile, 'ArticleHTMLGalley')) {
+		if (is_a($submissionFile, 'ArticleHTMLGalley')) {
 			return DOI_EXPORT_FILETYPE_HTML;
 		}
 		if (is_null($resourceType)) {
 			// Try to guess the resource type from the MIME type.
-			$fileType = $articleFile->getFileType();
+			$fileType = $submissionFile->getFileType();
 			if (!empty($fileType)) {
 				switch (true) {
 					case strstr($fileType, 'html'):

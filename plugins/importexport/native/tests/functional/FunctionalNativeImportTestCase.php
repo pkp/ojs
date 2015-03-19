@@ -87,8 +87,8 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 		$request = $application->getRequest();
 		$context = $request->getContext();
 		import('lib.pkp.classes.file.SubmissionFileManager');
-		$articleFileManager = new SubmissionFileManager($context->getId(), $articleId);
-		$articleFileManager->rmtree($articleFileManager->getBasePath());
+		$submissionFileManager = new SubmissionFileManager($context->getId(), $articleId);
+		$submissionFileManager->rmtree($submissionFileManager->getBasePath());
 	}
 
 	public function testNativeDoiImportWithErrors() {

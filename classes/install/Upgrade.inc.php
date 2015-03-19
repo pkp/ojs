@@ -780,10 +780,10 @@ class Upgrade extends Installer {
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 
-		$articleFilesResult = $submissionFileDao->retrieve('SELECT af.*, s.submission_id, s.context_id FROM article_files_migration af, submissions s WHERE af.article_id = s.submission_id');
+		$submissionFilesResult = $submissionFileDao->retrieve('SELECT af.*, s.submission_id, s.context_id FROM article_files_migration af, submissions s WHERE af.article_id = s.submission_id');
 		$filesDir = Config::getVar('files', 'files_dir') . '/journals/';
-		while (!$articleFilesResult->EOF){
-			$row = $articleFilesResult->GetRowAssoc(false);
+		while (!$submissionFilesResult->EOF){
+			$row = $submissionFilesResult->GetRowAssoc(false);
 			// Assemble the old file path.
 			$oldFilePath = $filesDir . $row['context_id'] . '/articles/' . $row['submission_id'] . '/';
 			if (isset($row['type'])) { // pre 2.4 upgrade.
@@ -847,7 +847,7 @@ class Upgrade extends Installer {
 				}
 			}
 
-			$articleFilesResult->MoveNext();
+			$submissionFilesResult->MoveNext();
 			unset($localeResult);
 			unset($submissionFileResult);
 			unset($localeRow);

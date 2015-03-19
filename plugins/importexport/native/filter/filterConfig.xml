@@ -81,7 +81,7 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.article.ArticleFile" />
+			outputType="class::lib.pkp.classes.article.SubmissionFile" />
 		<!-- Artwork file native XML input -->
 		<filterGroup
 			symbolic="native-xml=>ArtworkFile"
@@ -91,10 +91,10 @@
 			outputType="class::classes.article.ArtworkFile" />
 		<!-- Article file native XML output -->
 		<filterGroup
-			symbolic="ArticleFile=>native-xml"
+			symbolic="SubmissionFile=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.article.ArticleFile"
+			inputType="class::lib.pkp.classes.article.SubmissionFile"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Article Galley native XML output -->
 		<filterGroup
@@ -168,7 +168,7 @@
 			class="plugins.importexport.native.filter.ArtworkFileNativeXmlFilter"
 			isTemplate="0" />
 		<filter
-			inGroup="ArticleFile=>native-xml"
+			inGroup="SubmissionFile=>native-xml"
 			class="lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter"
 			isTemplate="0" />
 		<!-- Native XML article galley output -->

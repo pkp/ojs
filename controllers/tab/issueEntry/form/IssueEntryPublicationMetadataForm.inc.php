@@ -324,7 +324,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 					// Index the published article metadata and files for the first time.
 					$articleSearchIndex->articleMetadataChanged($publishedArticle);
-					$articleSearchIndex->articleFilesChanged($publishedArticle);
+					$articleSearchIndex->submissionFilesChanged($publishedArticle);
 				}
 
 			} else {
@@ -335,7 +335,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticleDao->deletePublishedArticleByArticleId($submission->getId());
 
 					// Delete the article from the search index.
-					$articleSearchIndex->articleFileDeleted($submission->getId());
+					$articleSearchIndex->submissionFileDeleted($submission->getId());
 				}
 			}
 
