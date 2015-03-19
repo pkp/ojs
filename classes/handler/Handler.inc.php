@@ -13,34 +13,14 @@
  * @brief Base request handler application class
  */
 
-
 import('lib.pkp.classes.handler.PKPHandler');
 
 class Handler extends PKPHandler {
+	/**
+	 * Constructor
+	 */
 	function Handler() {
 		parent::PKPHandler();
-	}
-
-	/**
-	 * Get the iterator of working contexts.
-	 * @param $request PKPRequest
-	 * @return ItemIterator
-	 */
-	function getWorkingContexts($request) {
-		// For installation process
-		if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
-			return null;
-		}
-
-		// Check for multiple journals.
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-
-		$user = $request->getUser();
-		if (is_a($user, 'User')) {
-			return $journalDao->getAll();
-		} else {
-			return $journalDao->getAll(true); // Enabled only
-		}
 	}
 
 	/**
@@ -78,23 +58,6 @@ class Handler extends PKPHandler {
 			return $journal;
 		}
 		return null;
-	}
-
-	/**
-	 * Return the journal that is configured in site redirect setting.
-	 * @param $request Request
-	 * @return mixed Either Journal or null
-	 */
-	function getSiteRedirectContext($request) {
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$site = $request->getSite();
-		$journal = null;
-		if ($site) {
-			if($site->getRedirect()) {
-				$journal = $journalDao->getById($site->getRedirect());
-			}
-		}
-		return $journal;
 	}
 }
 

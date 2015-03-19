@@ -51,46 +51,23 @@ class JournalDAO extends ContextDAO {
 	}
 
 	/**
-	 * Insert a new journal.
-	 * @param $journal Journal
-	 */
-	function insertObject(&$journal) {
-		$this->update(
-			'INSERT INTO journals
-				(path, seq, enabled, primary_locale)
-				VALUES
-				(?, ?, ?, ?)',
-			array(
-				$journal->getPath(),
-				$journal->getSequence() == null ? 0 : $journal->getSequence(),
-				$journal->getEnabled() ? 1 : 0,
-				$journal->getPrimaryLocale()
-			)
-		);
-
-		$journal->setId($this->getInsertId());
-		return $journal->getId();
-	}
-
-	/**
 	 * Update an existing journal.
 	 * @param $journal Journal
 	 */
-	function updateObject(&$journal) {
+	function updateObject($journal) {
 		return $this->update(
 			'UPDATE journals
-				SET
-					path = ?,
-					seq = ?,
-					enabled = ?,
-					primary_locale = ?
-				WHERE journal_id = ?',
+			SET	path = ?,
+				seq = ?,
+				enabled = ?,
+				primary_locale = ?
+			WHERE journal_id = ?',
 			array(
 				$journal->getPath(),
-				$journal->getSequence(),
+				(float) $journal->getSequence(),
 				$journal->getEnabled() ? 1 : 0,
 				$journal->getPrimaryLocale(),
-				$journal->getId()
+				(int) $journal->getId()
 			)
 		);
 	}
