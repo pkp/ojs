@@ -433,7 +433,6 @@ Acabamos de finalizar una corrección inicial de su manuscrito &quot;{$submissio
 Esta es la última oportunidad que tendrá para hacer cambios sustanciales. Se le pedirá que revise las galeradas, pero en esa fase tan solo podrá corregir pequeños errores tipográficos y de maquetación.<br />
 <br />
 URL del manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nombre de usuaria/o: {$authorUsername}<br />
 <br />
 Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a la revista.<br />
 <br />
@@ -532,7 +531,6 @@ Gracias por prepara las galeradas para el manuscrito &quot;{$submissionTitle},&q
 Le rogamos que se encargue de la corrección de las galeradas de su manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Para ver las galeradas, identifíquese en la revista a través del enlace que le mostramos a continuación. Pinche en la opción VER PRUEBA para leer lo que será la versión publicada y buscar sólo errores tipográficos y de maquetación sólo. Registre estos errores en la caja de Correcciones de Pruebas, siguiendo las instrucciones proporcionadas.<br />
 <br />
 URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nombre de usuaria/o: {$authorUsername}<br />
 <br />
 Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a esta revista.<br />
 <br />

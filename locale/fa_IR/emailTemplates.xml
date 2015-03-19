@@ -345,7 +345,6 @@ Thank you,<br />
 This is the last opportunity that you have to make substantial changes. You will be asked at a later stage to proofread the galleys, but at that point only minor typographical and layout errors can be corrected.<br />
 <br />
 Manuscript URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Username: {$authorUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions,<br />
 please contact me. Thank you for your contribution to this journal.<br />
@@ -416,7 +415,6 @@ please contact me. Thank you for your contribution to this journal.<br />
 از شما درخواست می شود که نمونه پیش از چاپ مقاله ارسالی خود را تحت عنوان ضضض مربوط به {$contextName}، مورد بررسی نهایی قراردهید. لطفا برای دیدن نمونه های پیش از چاپ، بوسیله پیوند زیر وارد وب سایت مجله شوید. جهت فقط خواندن موارد غلط های املایی و صفحه آرایی در نسخه ای که چاپ خواهد شد، از پیوند VIEW PROOF استفاده کنید. این غلط ها را در کادر اطلاعات نمونه خوانی ذخیره کرده و طبق دستورالعمل های مربوط به بررسی نهایی (نمونه خوانی) که در وب سایت گنجانده شده است، عمل نمایید.<br />
 <br />
 آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-نام کاربری: {$authorUsername}<br />
 <br />
 چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.<br />
 <br />
@@ -621,7 +619,6 @@ jhvdo hkrqh: {$expiryDate}<br />
 <br />
 آدزس مقاله:<br />
 <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-نام کاربری: {$authorUsername}<br />
 <br />
 لطفا توجه فرمائید که این آخرین فرصت برای شما جهت اعمال تغییرات قابل توجه در مقاله میباشد. در مرحله بازبینی که متعاقب صفحه آرائی خواهد آمد فقط امکان تغییرات جزئی وجود دارد.<br />
 <br />

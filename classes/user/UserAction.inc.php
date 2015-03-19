@@ -37,13 +37,6 @@ class UserAction {
 
 		HookRegistry::call('UserAction::mergeUsers', array(&$oldUserId, &$newUserId));
 
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$articles = $articleDao->getByUserId($oldUserId);
-		while ($article = $articles->next()) {
-			$article->setUserId($newUserId);
-			$articleDao->updateObject($article);
-		}
-
 		$commentDao = DAORegistry::getDAO('CommentDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$newUser = $userDao->getById($newUserId);
@@ -154,6 +147,21 @@ class UserAction {
 			}
 		}
 		$userGroupDao->deleteAssignmentsByUserId($oldUserId);
+
+		// Transfer stage assignments.
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+		$stageAssignments = $stageAssignmentDao->getByUserId($oldUserId);
+		while ($stageAssignment = $stageAssignments->next()) {
+			$duplicateAssignments = $stageAssignmentDao->getBySubmissionAndStageId($stageAssignment->getSubmissionId(), null, $stageAssignment->getUserGroupId(), $newUserId);
+			if (!$duplicateAssignments->next()) {
+				// If no similar assignments already exist, transfer this one.
+				$stageAssignment->setUserId($newUserId);
+				$stageAssignmentDao->updateObject($stageAssignment);
+			} else {
+				// There's already a stage assignment for the new user; delete.
+				$stageAssignmentDao->deleteObject($stageAssignment);
+			}
+		}
 
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$userDao->deleteUserById($oldUserId);

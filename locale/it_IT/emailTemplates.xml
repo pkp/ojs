@@ -404,7 +404,6 @@ Dopo aver revisionato il file, lo ricarichi nella fase 2 e comunichi all'Editor 
 Questa è l'ultima occasione che ha per fare cambiamenti sostanziali. Le sarà richiesto di correggere le bozze, ma in quella fase potremo correggere solo refusi e poco altro.<br />
 <br />
 URL manoscritto: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Username: {$authorUsername}<br />
 <br />
 Se non può prendere in carico il lavoro in questo periodo o ha qualche domanda, mi contatti.<br />
 <br />
@@ -520,7 +519,6 @@ E' necessario correggere le bozze del tuo contributo &quot;{$submissionTitle}&qu
 6. Invia all'editor il messaggio COMPLETATO.<br />
 <br />
 URL del contributo: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Username: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Questa mail viene inviata dall'editor all'autore per informarlo che è necessario correggere le bozze del suo contributo. Fornisce informazioni sulla procedura.</description>

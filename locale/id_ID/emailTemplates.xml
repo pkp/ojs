@@ -470,7 +470,6 @@ Kami sekarang telah meng-copyedit naskah Anda &quot;{$submissionTitle}&quot; for
 Ini adalah kesempatan terakhir Anda harus membuat perubahan besar. Anda akan diminta di tahap selanjutnya untuk proofread galley, tapi saat itu kesalahan layout dan tipografi minor dapat dikoreksi. <br />
 <br />
 URL Manuskrip: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Nama pengguna Penulis: {$authorUsername}<br />
 <br />
 Jika Anda tidak dapat bertanggungjawab atas pekerjaan ini sekarang atau mempunyai pertanyaan apapun, silakan hubungi saya. Terima kasih untuk kontribusi Anda untuk jurnal ini. <br />
 <br />
@@ -500,7 +499,6 @@ Naskah Anda &quot;{$submissionTitle}&quot; untuk {$contextName} telah melewati l
 8. Kirim email LENGKAP kepada editor dan copyeditor.<br />
 <br />
 URL Penyerahan: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nama pengguna Penulis: {$authorUsername}<br />
 <br />
 Ini adalah kesempatan terbaik untuk membuat perubahan copyediting besar ke naskah. Tahap proofreading, yang mengikuti persiapa galley, terlarang untuk mengoreksi kesalahan layout dan tipografi. <br />
 <br />
@@ -617,7 +615,6 @@ Naskah Anda &quot;{$submissionTitle}&quot; untuk {$contextName} sekarang perlu d
 6. Kirim email LENGKAP kepada editor.<br />
 <br />
 URL Penyerahan: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nama pengguna Penulis: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Email ini dari Editor Bagian untuk Penulis yang memberitahu mereka bahwa galley artikel siap untuk di-proofreading. Email ini memberikan informasi tentang artikel dan bagaimana mengaksesnya.</description>

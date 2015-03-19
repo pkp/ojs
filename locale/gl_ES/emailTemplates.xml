@@ -433,7 +433,6 @@ Vimos de rematar unha corrección inicial do teu manuscrito &quot;{$submissionTi
 Esta é a derradeira oportunidade que terás de facer cambios substanciais. Pediráseche que revises as probas, alén diso nesta fase só poderás corrixir pequenos erros tipográficos e de composición.<br />
 <br />
 URL do manuscrito: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nome de usuaria/o: {$authorUsername}<br />
  <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco.Benzóns pola tú achega á revista.<br />
 <br />
@@ -532,7 +531,6 @@ Benzóns por preparar as probas do manuscrito con correccións (galeradas) &quot
 Pregámosche que te encargues da corrección das probas do teu manuscrito con correccións (galeradas) &quot;{$submissionTitle},&quot; para {$contextName}. Para ver as probas de correción (galeradas), identifícate na revista através da ligazón que amosamos a seguir. Clica na opción VER PRoBA para ler a que será a versión publicada e busca somente os erros tipográficos e de maquetaxe. Registra este erros na caixa  Correcciçóns de Probas seguindo as instruccións.<br />
 <br />
 URL do manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nome de usuaria/o: {$authorUsername}<br />
 <br />
 Se non podes realizar este traballo neste intre ou tes algunha dúbida, contacta connosco. Benzóns pola túa achega á revista.<br />
 <br />

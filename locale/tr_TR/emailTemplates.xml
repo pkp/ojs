@@ -399,7 +399,6 @@ Teşekkürler,<br />
 Bu yazıda ciddi değişiklikler için son şansınızdır. Sonraki basamakta prova dizgi üzerinde küçük yazım hatası benzeri düzeltmeler dışında değiştirme yapma olasılığı yoktur.<br />
 <br />
 Sayfa düzeni kopyası için bağlantı: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Kullanıcı adınız: {$authorUsername}<br />
  <br />
 Eğer değerlendirmeyi yapamayacaksanız veya sorunuz olur ise bana yazmaya çekinmeyiniz. Dergimize katkılarınız için teşekkür ederiz.<br />
 <br />
@@ -498,7 +497,6 @@ Sorunuz olur ise bana yazabilirsiniz.<br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanızın mizanpajı tamamlanarak, prova dizgisi değerlendirmenize hazır hale gelmiştir. Lütfen dergi sitemize aşağıdaki bağlantıdan girip, &quot;PROVA DİZGİYİ GÖR&quot; bağlantısını izleyerek yazınızın yayınlanacak biçimini gözden geçiriniz. Lütfen saptadığınız hatalar veya dilediğiniz geliştirmeleri prova dizgi düzeltme yönergesini izleyerek, sayfadaki Prova Dizgi Düzeltme kutusuna yazarak, form aracılığı ile bize iletiniz.<br />
 <br />
 Makalenize ulaşım bağlantısı: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Kullanıcı adınız: {$authorUsername}<br />
 <br />
 Eğer bu işlem ile ilgili soru veya sorunlarınız olur ise bana iletiniz.<br />
 Dergimize değerli katkılarınız için teşekkür ederiz.<br />

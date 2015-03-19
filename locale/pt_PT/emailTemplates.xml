@@ -505,7 +505,6 @@ A edição do texto do artigo &quot;{$submissionTitle}&quot;, submetido à revis
 Esta é a última oportunidade para realizar alterações substanciais no documento. Em etapa posterior, lhe será solicitada a leitura de prova das composições finais, onde será possível solicitar apenas pequenas correcções de redacção e visual.<br />
 <br />
 URL da submissão: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-Nome de utilizador: {$authorUsername}<br />
 <br />
 Caso não esteja disponível para realizar esta tarefa ou em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
@@ -542,7 +541,6 @@ Concluímos a Edição de Texto inicial do seu manuscrito &quot;{$submissionTitl
 8. Envie o e-mail de CONCLUÍDO ao editor e ao editor de texto.<br />
 <br />
 URL da submissão: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-Nome de utilizador: {$authorUsername}<br />
 <br />
 Esta é a última oportunidade para realizar alterações substanciais no documento. Em etapa posterior, lhe será solicitada a leitura de prova das composições finais, onde será possível solicitar apenas pequenas correcções de redacção e visual.<br />
 <br />
@@ -676,7 +674,6 @@ Solicitamos a leitura de provas do manuscrito &quot;{$submissionTitle}&quot;, su
 6. Envie o email CONCLUÍDO ao editor.<br />
 <br />
 URL da Submissão: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nome de utilizador: {$authorUsername}<br />
 <br />
 Em caso de dúvidas, entre em contacto através deste email.<br />
 <br />

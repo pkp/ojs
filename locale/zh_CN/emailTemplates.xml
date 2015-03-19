@@ -453,7 +453,6 @@
 这是最后的机会您可以做出修改。您将在最后的阶段被请求校对草稿，但是只有少数的文字问题或者排版问题才能修改。.<br />
 <br />
 稿件 URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-用户名: {$authorUsername}<br />
 <br />
 如果您不能完成这项工作或者有任何的疑问需要质询，请联系我们，感谢您对本刊的贡献.<br />
 <br />
@@ -486,7 +485,6 @@
 8. 发送完成邮件给编辑和文字编辑.<br />
 <br />
 稿件URL: <a href="{$submissionCopyeditingUrl}">{$submissionCopyeditingUrl}</a><br />
-用户名: {$authorUsername}<br />
 <br />
 这是最后的机会您可以对稿件做出文字编辑修改.在校对阶段， 校样只允许修改少量的文字问题于布局错误.<br />
 <br />
@@ -607,7 +605,6 @@
 6. 发送完成电邮给编辑.<br />
 <br />
 稿件URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-用户名: {$authorUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>这封电子邮件是由区段编辑寄发给作者，通知他们一篇文章的排版稿已经可以进行校对了。邮件中含有稿件的信息以及如何取得稿件的指引。</description>

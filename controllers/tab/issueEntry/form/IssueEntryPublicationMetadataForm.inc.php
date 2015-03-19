@@ -234,10 +234,17 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			$user = $request->getUser();
 
+			// Get a list of author user IDs
+			$authorUserIds = array();
+			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+			$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
+			$submitterAssignment = $submitterAssignments->next();
+			assert($submitterAssignment); // At least one author should be assigned
+
 			$queuedPayment =& $paymentManager->createQueuedPayment(
 				$context->getId(),
 				PAYMENT_TYPE_PUBLICATION,
-				$markAsPaid ? $submission->getUserId() : $user->getId(),
+				$markAsPaid ? $submitterAssignment->getUserId() : $user->getId(),
 				$submission->getId(),
 				$markAsPaid ? $context->getSetting('publicationFee') : 0,
 				$markAsPaid ? $context->getSetting('currency') : ''
