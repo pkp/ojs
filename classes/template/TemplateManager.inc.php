@@ -97,6 +97,7 @@ class TemplateManager extends PKPTemplateManager {
 				if (isset($displayPageHeaderTitle['altText'])) $this->assign('displayPageHeaderTitleAltText', $displayPageHeaderTitle['altText']);
 
 				$this->assign('siteTitle', $site->getLocalizedTitle());
+				$this->assign('primaryLocale', $site->getPrimaryLocale());
 			}
 		}
 	}

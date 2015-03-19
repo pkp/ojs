@@ -36,13 +36,20 @@ class CategoryDAO extends ControlledVocabDAO {
 	}
 
 	/**
+	 * Get an iterator of category objects.
+	 * @return DAOResultFactory
+	 */
+	function getIterator() {
+		$categoryEntryDao = $this->getEntryDAO();
+		$categoryControlledVocab = $this->build();
+		return $categoryEntryDao->getByControlledVocabId($categoryControlledVocab->getId());
+	}
+
+	/**
 	 * Rebuild the cache.
 	 */
 	function rebuildCache() {
-		// Read the full set of categories into an associative array
-		$categoryEntryDao = $this->getEntryDAO();
-		$categoryControlledVocab = $this->build();
-		$categoriesIterator = $categoryEntryDao->getByControlledVocabId($categoryControlledVocab->getId());
+		$categoriesIterator = $this->getIterator();
 		$allCategories = array();
 		while ($category = $categoriesIterator->next()) {
 			$allCategories[$category->getId()] = $category;

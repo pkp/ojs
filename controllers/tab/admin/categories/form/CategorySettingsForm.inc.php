@@ -44,7 +44,7 @@ class CategorySettingsForm extends Form {
 	 * @copydoc Form::readUserVars()
 	 */
 	function readInputData() {
-		$this->readUserVars(array('categoriesEnabled'));
+		$this->readUserVars(array('categoriesEnabled', 'categories'));
 	}
 
 	/**
@@ -53,6 +53,55 @@ class CategorySettingsForm extends Form {
 	function execute($request) {
 		$site = $request->getSite();
 		$site->updateSetting('categoriesEnabled', (int) $this->getData('categoriesEnabled'));
+		ListbuilderHandler::unpack($request, $this->getData('categories'));
+
+	}
+
+	/**
+	 * @copydoc ListbuilderHandler::insertEntry()
+	 */
+	function insertEntry($request, $newRowId) {
+		$categoryDao = DAORegistry::getDAO('CategoryDAO');
+		$categoryEntryDao = $categoryDao->getEntryDao();
+		$category = $categoryEntryDao->newDataObject();
+		$category->setName($newRowId['name'], null);
+		$category->setControlledVocabId($categoryDao->build()->getId());
+		$categoryEntryDao->insertObject($category);
+		return true;
+	}
+
+	/**
+	 * @copydoc ListbuilderHandler::updateEntry()
+	 */
+	function updateEntry($request, $rowId, $newRowId) {
+		$categoryDao = DAORegistry::getDAO('CategoryDAO');
+		$categoryEntryDao = $categoryDao->getEntryDao();
+		$category = $categoryEntryDao->getById($rowId, $categoryDao->build()->getId());
+		$category->setName($newRowId['name'], null); // Localized
+		$categoryEntryDao->updateObject($category);
+		return true;
+	}
+
+	/**
+	 * @copydoc ListbuilderHandler::deleteEntry()
+	 */
+	function deleteEntry($request, $rowId) {
+		if ($rowId) {
+			$categoryDao = DAORegistry::getDAO('CategoryDAO');
+			$categoryEntryDao = $categoryDao->getEntryDao();
+			$category = $categoryEntryDao->getById($rowId, $categoryDao->build()->getId());
+			$categoryEntryDao->deleteObject($category);
+		}
+		return true;
+	}
+
+	/**
+	 * Handle any additional form validation checks.
+	 * (See SettingsTabHandler)
+	 * @return boolean
+	 */
+	function addValidationChecks() {
+		return true;
 	}
 }
 
