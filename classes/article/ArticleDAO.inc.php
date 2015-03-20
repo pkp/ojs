@@ -210,41 +210,30 @@ class ArticleDAO extends SubmissionDAO {
 	}
 
 	/**
-	 * Delete an article by ID.
-	 * @param $articleId int
+	 * @copydoc Submission::deleteById
 	 */
-	function deleteById($articleId) {
-		$article = $this->getById($articleId);
-		assert(is_a($article, 'Submission'));
-
-		parent::deleteById($articleId);
+	function deleteById($submissionId) {
+		parent::deleteById($submissionId);
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
+		$publishedArticleDao->deletePublishedArticleByArticleId($submissionId);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalleyDao->deleteGalleysByArticle($articleId);
+		$articleGalleyDao->deleteGalleysByArticle($submissionId);
 
 		$articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO');
-		$articleSearchDao->deleteSubmissionKeywords($articleId);
+		$articleSearchDao->deleteSubmissionKeywords($submissionId);
 
 		$commentDao = DAORegistry::getDAO('CommentDAO');
-		$commentDao->deleteBySubmissionId($articleId);
-
-		import('lib.pkp.classes.file.SubmissionFileManager');
-		$submissionFileManager = new SubmissionFileManager($article->getPressId(), $article->getId());
-		$submissionFileManager->rmtree($submissionFileManager->getBasePath());
-
-		$submissionFileDao = DAORegistry::get('SubmissionFileDAO');
-		$submissionFileDao->deleteAllRevisionsBySubmissionId($articleId);
+		$commentDao->deleteBySubmissionId($submissionId);
 
 		// Delete article citations.
 		$citationDao = DAORegistry::getDAO('CitationDAO');
-		$citationDao->deleteObjectsByAssocId(ASSOC_TYPE_ARTICLE, $articleId);
+		$citationDao->deleteObjectsByAssocId(ASSOC_TYPE_ARTICLE, $submissionId);
 
 		import('classes.search.ArticleSearchIndex');
 		$articleSearchIndex = new ArticleSearchIndex();
-		$articleSearchIndex->articleDeleted($articleId);
+		$articleSearchIndex->articleDeleted($submissionId);
 		$articleSearchIndex->articleChangesFinished();
 
 		$this->flushCache();
