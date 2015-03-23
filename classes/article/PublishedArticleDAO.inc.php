@@ -477,7 +477,8 @@ class PublishedArticleDAO extends ArticleDAO {
 			FROM	published_submissions ps
 				JOIN submissions s ON ps.submission_id = s.submission_id
 				JOIN sections se ON s.section_id = se.section_id
-			WHERE	ps.submission_id = s.submission_id
+				JOIN issues i ON ps.issue_id = i.issue_id
+			WHERE	i.published = 1
 				' . (isset($journalId)?' AND s.context_id = ?':'') . '
 			ORDER BY ps.date_published DESC',
 			isset($journalId)?(int) $journalId:false
