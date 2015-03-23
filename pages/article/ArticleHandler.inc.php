@@ -283,9 +283,9 @@ class ArticleHandler extends Handler {
 			}
 
 			if (!HookRegistry::call($hookName, array($this->article, &$this->galley, &$fileId))) {
-				import('classes.file.ArticleFileManager');
-				$articleFileManager = new ArticleFileManager($articleId);
-				$articleFileManager->downloadFile($fileId, null, $inline);
+				import('lib.pkp.classes.file.SubmissionFileManager');
+				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $articleId);
+				$submissionFileManager->downloadFile($fileId, null, $inline);
 			}
 		}
 	}

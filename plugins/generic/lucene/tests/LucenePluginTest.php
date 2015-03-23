@@ -194,7 +194,7 @@ class LucenePluginTest extends DatabaseTestCase {
 		// Trying to delete a document without the server running
 		// should trigger an email to the tech contact.
 		$params = array($articleId = 3, $type = null, $assocId = null);
-		$this->lucenePlugin->callbackArticleFileDeleted('ArticleSearchIndex::articleFileDeleted', $params);
+		$this->lucenePlugin->callbackSubmissionFileDeleted('ArticleSearchIndex::submissionFileDeleted', $params);
 		$this->lucenePlugin->callbackArticleChangesFinished('ArticleSearchIndex::articleChangesFinished', array());
 
 		// Check the mail.

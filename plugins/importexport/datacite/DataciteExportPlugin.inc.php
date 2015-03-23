@@ -204,7 +204,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$router = $request->getRouter();
 
 		// Retrieve the article of article files.
-		if (is_a($object, 'ArticleFile')) {
+		if (is_a($object, 'SubmissionFile')) {
 			$articleId = $object->getArticleId();
 			$cache = $this->getCache();
 			if ($cache->isCached('articles', $articleId)) {

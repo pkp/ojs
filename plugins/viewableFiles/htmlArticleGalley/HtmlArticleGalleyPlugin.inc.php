@@ -117,8 +117,8 @@ class HtmlArticleGalleyPlugin extends ViewableFilePlugin {
 	 * @return string
 	 */
 	function _getHTMLContents($request, $galley, $fileId = null) {
-		import('classes.file.ArticleFileManager');
-		$fileManager = new ArticleFileManager($galley->getSubmissionId());
+		import('lib.pkp.classes.file.SubmissionFileManager');
+		$fileManager = new SubmissionFileManager($request->getContext()->getId(), $galley->getSubmissionId());
 		if (!$fileId) {
 
 			// Note: Some HTML file uploads may be stored with incorrect file_type settings

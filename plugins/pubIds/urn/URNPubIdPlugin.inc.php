@@ -81,7 +81,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 				$journalId = $pubObject->getJournalId();
 			} else {
 				// Retrieve the published article
-				assert(is_a($pubObject, 'ArticleFile'));
+				assert(is_a($pubObject, 'SubmissionFile'));
 				$articleDao = DAORegistry::getDAO('ArticleDAO');
 				$article = $articleDao->getById($pubObject->getArticleId(), null, true);
 				if (!$article) return null;

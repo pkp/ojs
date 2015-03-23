@@ -39,7 +39,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 		// update the submission's search index if this submission is published.
 		if ($submission->getDatePublished()) {
 			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::articleFilesChanged($submission);
+			ArticleSearchIndex::submissionFilesChanged($submission);
 		}
 	}
 

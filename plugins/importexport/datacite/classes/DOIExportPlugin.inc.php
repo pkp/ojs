@@ -483,16 +483,16 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * Identify published article and issue of the given article file.
-	 * @param $articleFile ArticleFile
+	 * @param $submissionFile SubmissionFile
 	 * @param $journal Journal
 	 * @return array|null An array with the article and issue of the given
 	 *  article file. Null will be returned if one of these objects cannot
 	 *  be identified (e.g. when the article file belongs to an unpublished
 	 *  article).
 	 */
-	function &prepareArticleFileData(&$articleFile, &$journal) {
+	function &prepareSubmissionFileData(&$submissionFile, &$journal) {
 		// Prepare and return article data for the article file.
-		$articleData =& $this->_prepareArticleDataByArticleId($articleFile->getArticleId(), $journal);
+		$articleData =& $this->_prepareArticleDataByArticleId($submissionFile->getSubmissionId(), $journal);
 		if (!is_array($articleData)) {
 			$nullVar = null;
 			return $nullVar;
@@ -500,7 +500,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 
 		// Add the article file to the cache.
 		$cache = $this->getCache();
-		$cache->add($articleFile, $articleData['article']);
+		$cache->add($submissionFile, $articleData['article']);
 
 		return $articleData;
 	}
@@ -1162,7 +1162,7 @@ abstract class DOIExportPlugin extends ImportExportPlugin {
 	 */
 	function &_prepareGalleyData(&$galley, &$journal) {
 		// Retrieve article and issue for the galley.
-		$galleyData =& $this->prepareArticleFileData($galley, $journal);
+		$galleyData =& $this->prepareSubmissionFileData($galley, $journal);
 		if (!is_array($galleyData)) {
 			$nullVar = null;
 			return $nullVar;

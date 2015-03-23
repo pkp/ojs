@@ -54,9 +54,9 @@ class SubmissionFilesUploadForm extends PKPSubmissionFilesUploadForm {
 	function _uploadFile($request, $user, $uploaderUserGroupId, $revisedFileId, $fileGenre, $assocType, $assocId) {
 		$context = $request->getContext();
 		import('lib.pkp.classes.file.SubmissionFileManager');
-		$articleFileManager = new SubmissionFileManager($context->getId(), $this->getData('submissionId'));
+		$submissionFileManager = new SubmissionFileManager($context->getId(), $this->getData('submissionId'));
 		$fileStage = $this->getData('fileStage');
-		$submissionFile = $articleFileManager->uploadSubmissionFile(
+		$submissionFile = $submissionFileManager->uploadSubmissionFile(
 			'uploadedFile', $fileStage,
 			$user->getId(), $uploaderUserGroupId, $revisedFileId, $fileGenre, $assocType, $assocId
 		);

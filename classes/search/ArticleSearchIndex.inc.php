@@ -83,35 +83,31 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $type int
 	 * @param $fileId int
 	 */
-	function articleFileChanged($articleId, $type, $fileId) {
+	function submissionFileChanged($articleId, $type, $fileId) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
-			'ArticleSearchIndex::articleFileChanged',
+			'ArticleSearchIndex::submissionFileChanged',
 			array($articleId, $type, $fileId)
 		);
 
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
-			import('classes.file.ArticleFileManager');
-			$fileManager = new ArticleFileManager($articleId);
-			$file = $fileManager->getFile($fileId);
-
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
+			$file = $submissionFileDao->getLatestRevision($fileId);
 			if (isset($file)) {
 				$parser = SearchFileParser::fromFile($file);
 			}
 
-			if (isset($parser)) {
-				if ($parser->open()) {
-					$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
-					$objectId = $searchDao->insertObject($articleId, $type, $fileId);
+			if (isset($parser) && $parser->open()) {
+				$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+				$objectId = $searchDao->insertObject($articleId, $type, $fileId);
 
-					$position = 0;
-					while(($text = $parser->read()) !== false) {
-						self::_indexObjectKeywords($objectId, $text, $position);
-					}
-					$parser->close();
+				$position = 0;
+				while(($text = $parser->read()) !== false) {
+					self::_indexObjectKeywords($objectId, $text, $position);
 				}
+				$parser->close();
 			}
 		}
 	}
@@ -125,10 +121,10 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $article Article
 	 */
-	function articleFilesChanged(&$article) {
+	function submissionFilesChanged(&$article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
-			'ArticleSearchIndex::articleFilesChanged',
+			'ArticleSearchIndex::submissionFilesChanged',
 			array($article)
 		);
 
@@ -142,12 +138,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			);
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
-					self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $file->getFileId());
+					self::submissionFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $file->getFileId());
 					// Index dependent files associated with any galley files.
 					$dependentFiles = $fileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $article->getId(), SUBMISSION_FILE_DEPENDENT);
 					foreach ($dependentFiles as $depFile) {
 						if ($depFile->getFileId()) {
-							self::articleFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $depFile->getFileId());
+							self::submissionFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $depFile->getFileId());
 						}
 					}
 				}
@@ -165,10 +161,10 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $type int optional
 	 * @param $assocId int optional
 	 */
-	function articleFileDeleted($articleId, $type = null, $assocId = null) {
+	function submissionFileDeleted($articleId, $type = null, $assocId = null) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
-			'ArticleSearchIndex::articleFileDeleted',
+			'ArticleSearchIndex::submissionFileDeleted',
 			array($articleId, $type, $assocId)
 		);
 
@@ -261,7 +257,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 				while ($article = $articles->next()) {
 					if ($article->getDateSubmitted()) {
 						self::articleMetadataChanged($article);
-						self::articleFilesChanged($article);
+						self::submissionFilesChanged($article);
 						$numIndexed++;
 					}
 				}

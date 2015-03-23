@@ -129,9 +129,9 @@ class LucenePlugin extends GenericPlugin {
 			HookRegistry::register('ArticleSearch::getResultSetOrderingOptions', array($this, 'callbackGetResultSetOrderingOptions'));
 			HookRegistry::register('SubmissionSearch::retrieveResults', array($this, 'callbackRetrieveResults'));
 			HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array($this, 'callbackArticleMetadataChanged'));
-			HookRegistry::register('ArticleSearchIndex::articleFileChanged', array($this, 'callbackArticleFileChanged'));
-			HookRegistry::register('ArticleSearchIndex::articleFileDeleted', array($this, 'callbackArticleFileDeleted'));
-			HookRegistry::register('ArticleSearchIndex::articleFilesChanged', array($this, 'callbackArticleFilesChanged'));
+			HookRegistry::register('ArticleSearchIndex::submissionFileChanged', array($this, 'callbackSubmissionFileChanged'));
+			HookRegistry::register('ArticleSearchIndex::submissionFileDeleted', array($this, 'callbackSubmissionFileDeleted'));
+			HookRegistry::register('ArticleSearchIndex::submissionFilesChanged', array($this, 'callbackSubmissionFilesChanged'));
 			HookRegistry::register('ArticleSearchIndex::articleDeleted', array($this, 'callbackArticleDeleted'));
 			HookRegistry::register('ArticleSearchIndex::articleChangesFinished', array($this, 'callbackArticleChangesFinished'));
 			HookRegistry::register('ArticleSearchIndex::rebuildIndex', array($this, 'callbackRebuildIndex'));
@@ -566,30 +566,30 @@ class LucenePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see ArticleSearchIndex::articleFilesChanged()
+	 * @see ArticleSearchIndex::submissionFilesChanged()
 	 */
-	function callbackArticleFilesChanged($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::articleFilesChanged');
+	function callbackSubmissionFilesChanged($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::submissionFilesChanged');
 		list($article) = $params; /* @var $article Article */
 		$this->_solrWebService->markArticleChanged($article->getId());
 		return true;
 	}
 
 	/**
-	 * @see ArticleSearchIndex::articleFileChanged()
+	 * @see ArticleSearchIndex::submissionFileChanged()
 	 */
-	function callbackArticleFileChanged($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::articleFileChanged');
+	function callbackSubmissionFileChanged($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::submissionFileChanged');
 		list($articleId, $type, $fileId) = $params;
 		$this->_solrWebService->markArticleChanged($articleId);
 		return true;
 	}
 
 	/**
-	 * @see ArticleSearchIndex::articleFileDeleted()
+	 * @see ArticleSearchIndex::submissionFileDeleted()
 	 */
-	function callbackArticleFileDeleted($hookName, $params) {
-		assert($hookName == 'ArticleSearchIndex::articleFileDeleted');
+	function callbackSubmissionFileDeleted($hookName, $params) {
+		assert($hookName == 'ArticleSearchIndex::submissionFileDeleted');
 		list($articleId, $type, $assocId) = $params;
 		$this->_solrWebService->markArticleChanged($articleId);
 		return true;
