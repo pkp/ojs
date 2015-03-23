@@ -8,13 +8,13 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionFileDAO
- * @ingroup monograph
- * @see MonographFile
+ * @ingroup article
+ * @see SubmissionFile
  * @see SubmissionArtworkFile
- * @see MonographFileDAODelegate
- * @see ArtworkFileDAODelegate
+ * @see SubmissionFileDAODelegate
+ * @see SubmissionArtworkFileDAODelegate
  *
- * @brief Operations for retrieving and modifying OMP-specific submission
+ * @brief Operations for retrieving and modifying OJS-specific submission
  *  file implementations.
  */
 
