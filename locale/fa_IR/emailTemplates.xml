@@ -253,17 +253,6 @@ Thank you,<br />
 {$reviewerName}]]></body>
 		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>اتمام بررسی مقاله</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-بررسی مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} را تمام و نظر کارشناسی خود را نیز ارسال کرده ام.<br />
-<br />
-&quot;{$recommendation}&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description>This email is sent by a Reviewer to the Section Editor to notify them that a review has been completed and the comments and recommendations have been recorded on the journal web site.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>قدردانی بخاطر بررسی مقاله</subject>
 		<body><![CDATA[{$reviewerName}:<br />

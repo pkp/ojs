@@ -358,19 +358,6 @@ Lamento informar que não estou disponível no momento para realizar a revisão 
 {$reviewerName}]]></body>
 		<description>Mensagem enviada pelo Revisor ao Editor de Secção, em resposta ao pedido de revisão, para notificar a sua inisponibilidade para realizar a tarefa, rejeitando a revisão.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Conclusão de revisão</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-Concluí a revisão da submissão &quot;{$submissionTitle}&quot; à revista {$contextName}.<br />
-<br />
-Os comentários e recomendações estão registados no sistema.<br />
-<br />
-Agradeço a oportunidade de prestar serviços à revista e estou à disposição para esclarecer quaisquer dúvidas.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Mensagem enviada pelo Revisor ao Editor de Secção para notificar da conclusão de revisão.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Agradecimento pela revisão</subject>
 		<body><![CDATA[{$reviewerName},<br />

@@ -373,15 +373,6 @@ leider kann ich gegenwärtig die Begutachtung des Beitrags &quot;{$submissionTit
 {$reviewerName}]]></body>
 		<description>Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in als Antwort auf eine Begutachtungsanfrage gesendet, um darüber zu informieren, dass die Anfrage abgelehnt wird.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Gutachten für einen Beitrag fertiggestellt</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-ich habe mein Gutachten zu dem Beitrag &quot;{$submissionTitle}&quot; für {$contextName} fertiggestellt und meine Empfehlung &quot;{$recommendation}&quot; abgegeben.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in gesendet, um darüber zu informieren, dass ein Gutachten fertiggestellt worden ist un dass die Kommentare und Korrekturen auf der Website der Zeitschrift notiert worden sind.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Eingangsbestätigung für ein Gutachten</subject>
 		<body><![CDATA[{$reviewerName},<br />

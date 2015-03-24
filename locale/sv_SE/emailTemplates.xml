@@ -271,15 +271,6 @@ Jag beklagar att jag inte har möjlighet att sakkunnigbedöma manuskriptet, &quo
 {$reviewerName}]]></body>
 		<description>Det här meddelandet skickas från Sakkunighetsbedömare till Sektionsredaktör som svar på förfrågan om sakkunnigbedömning av manuskript. Meddelandet innehåller information om att sakkunnigbedömaren inte har möjlighet att bedöma manuskriptet.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Sakkunnigbedömning avslutad</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Jag har nu avslutat sakkunnigbedömning av &quot;{$submissionTitle}&quot; för {$contextName}, och skickat in rekommendation, &quot;{$recommendation}.&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Der här meddelandet skickas fråm Sakkunnigbedömare till Sektionsredaktör och innehåller information om att manuskriptbedömning är avslutad och att omdöme och rekommendationer har skickats till tidskriftens hemsida.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Bekräftelse på sakkunnigbedömning</subject>
 		<body><![CDATA[{$reviewerName}:<br />

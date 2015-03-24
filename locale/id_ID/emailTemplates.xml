@@ -311,15 +311,6 @@ Saya khawatir saat ini saya tidak bisa mereview naskah, &quot;{$submissionTitle}
 {$reviewerName}]]></body>
 		<description>Email ini dikriim oleh Reviewer untuk Editor Bagian sebagai respon pada permintaan review untuk memberitahu Editor Bagian yang permintaan reviewnya telah ditolak. .</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Review Artikel Selesai</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Saya telah menyelesaikan review saya tentang &quot;{$submissionTitle}&quot; untuk {$contextName}, dan menyerahkan rekomendasi saya, &quot;{$recommendation}.&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Email ini dikirim oleh Reviewer untuk Editor Bagian untuk memberitahu mereka bahwa review telah selesai dan komentar serta rekomendasi telah dicatat di web site jurnal. </description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Pernyataan Review Artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />

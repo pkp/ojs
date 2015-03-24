@@ -275,15 +275,6 @@ Değerlendirme Rehberi:<br />
 {$reviewerName}]]></body>
 		<description>Bu elektronik posta gözden geçirme talebine cevap olarak, gözden geçirmenin red edildiğini bildirmek amacıyla Bölüm Editörüne gözden geçirmeyi yapan kişi tarafından gönderilir.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Değerlendirme İşlemi Tamamlandı</subject>
-		<body><![CDATA[Sayın {$editorialContactName},<br />
-<br />
-{$contextName} adlı dergide yayınlanmak üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın değerlendirme işlemini tamamladım. Önerim; &quot;{$recommendation}&quot; biçimindedir.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Bu elektronik posta gözden geçirme işleminin tamamlanarak öneri ve yorumların derginin web sitesine kayıt edildiğini bildirmek için gözden geçirmeyi yapan kişi tarafından Bölüm Editörüne gönderilmiştir.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Değerlendirme İçin Teşekkür</subject>
 		<body><![CDATA[Sayın {$reviewerName},<br />

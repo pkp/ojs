@@ -302,15 +302,6 @@ Mă tem că în acest moment nu pot să dau curs solicitării de a evalua propun
 {$reviewerName}]]></body>
 		<description>Acest email este trimis de un evaluator către redactorul secțiunii ca răspuns la o solicitare privind o evaluare și pentru a-l înștiința pe acesta asupra faptului că solicitarea a fost declinată.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Evaluarea articolului s-a încheiat</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Am încheiat evaluarea articolului intitulat &quot;{$submissionTitle}&quot; pentru {$contextName} și v-am trimis recomandarea &quot;{$recommendation}.&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Acest email este trimis de către evaluator redactorului de secțiune pentru a-l înștiința asupra faptului că evaluarea s-a încheiat iar comentariile și recomandările au fost înregistrate pe siteul revistei.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Confirmarea primirii evaluării articolului</subject>
 		<body><![CDATA[{$reviewerName}:<br />

@@ -242,15 +242,6 @@ Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$sub
 {$reviewerName}]]&gt;]]></body>
 		<description>Ce courriel est envoyé par l'Évaluateur au Rédacteur de rubrique en réponse à la demande d'évaluation, pour aviser ce dernier qu'il ne peut effectuer l'évaluation.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Évaluation de la soumission terminée</subject>
-		<body><![CDATA[&lt;![CDATA[{$editorialContactName}:<br />
-<br />
-J'ai effectué l'évaluation de la soumission intitulée « {$submissionTitle} » pour {$contextName}. Mes commentaires et ma recommandation sont sur le site Web de la revue.<br />
-<br />
-{$reviewerName}]]&gt;]]></body>
-		<description>Ce courriel est envoyé par l'Évaluateur au Rédacteur de rubrique pour l'aviser que l'évaluation est terminée, et que les commentaires et recommandations ont été enregistrés sur le site Web de la revue.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Accusé de réception de l'évaluation d'une soumission</subject>
 		<body><![CDATA[&lt;![CDATA[{$reviewerName}:<br />

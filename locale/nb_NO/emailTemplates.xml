@@ -236,15 +236,6 @@ Dessverre kan jeg ikke påta meg oppdraget med å vurdere manuskriptet &quot;{$s
 {$reviewerName}]]></body>
 		<description>Denne e-posten sendes av en Fagkonsulent til Seksjonsredaktøren som svar på en forespørsel om fagfellevurdering, for å varsle redaktøren om at oppdraget er avslått.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Vurderingsoppdraget er fullført</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Jeg har nå fullført fagfelelevurderingen av &quot;{$submissionTitle}&quot; for {$contextName}, og jeg har anbefalt at manuskriptet &quot;{$recommendation}.&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Denne e-posten sendes av en Fagkonsulent til Seksjonsredaktøren for å varsle om at oppdraget er fullført, og at kommentarer og anbefaling er registrert på tidsskriftets nettsted.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Bekrefter at du har fullført vurderingsoppdrag</subject>
 		<body><![CDATA[{$reviewerName}:<br />

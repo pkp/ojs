@@ -351,19 +351,6 @@ Sinto informar que estou indisponível no momento para realizar a avaliação da
 {$reviewerName}]]></body>
 		<description>Mensagem enviada pelo Avaliador ao Editor de Seção, em resposta à solicitação de avaliação, para notificar sua NÃO disponibilidade para realizar a tarefa, rejeitando a solicitação.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Conclusão de avaliação</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-Concluí a avaliação da submissão &quot;{$submissionTitle}&quot; à revista {$contextName}.<br />
-<br />
-Os comentários e recomendações estão registrados no sistema.<br />
-<br />
-Agradeço a oportunidade de prestar serviços a esta publicação e estou à disposição para esclarecer quaisquer dúvidas.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Mensagem enviada pelo Avaliador ao Editor de Seção para notificar da conclusão de avaliação.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Agradecimento pela avaliação</subject>
 		<body><![CDATA[{$reviewerName},<br />

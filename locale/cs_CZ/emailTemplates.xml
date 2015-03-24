@@ -261,15 +261,6 @@ Obávám se, že tentokrát nejsem schopen zpracovat recenzi příspěvku &quot;
 {$reviewerName}]]></body>
 		<description> Tento email posílá recenzent editorovi sekce v odpovědi na žádost o zpracování recenze, aby mu oznámil, že recenzi nemůže zpracovat.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Recenze článku dokončena</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Dokončil jsem recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName} a zasílám Vám své doporučení: &quot;{$recommendation}.&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Tento email posílá recenzent editorovi sekce, aby mu oznámil, že dokončil recenzi příspěvku a na stránkách časopisu uložil svůj komentář a doporučení.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Poděkování za zpracování recenze článku</subject>
 		<body><![CDATA[{$reviewerName}:<br />

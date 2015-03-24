@@ -270,15 +270,6 @@ Lamento comunicar-vos que en aquesta ocasió no em podré encarregar de la revis
 {$reviewerName}]]></body>
 		<description>Aquest missatge de correu electrònic té un revisor com a remitent i s'envia a l'editor de secció en resposta a una sol·licitud de revisió per a notificar-li que rebutja encarregar-se d'aquesta tasca.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Revisió de l'article completada</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-Us comunico que he acabat la revisió de &quot;{$submissionTitle}&quot; per a {$contextName} i que també n'he tramès la recomanació corresponent, &quot;{$recommendation}&quot;.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Aquest missatge de correu electrònic té un revisor com a remitent i s'envia a l'editor de secció per a notificar-li que ha completat la revisió i que ha enregistrat els comentaris i les recomanacions corresponents al lloc web de la revista.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Justificant de recepció de la revisió de l'article</subject>
 		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />

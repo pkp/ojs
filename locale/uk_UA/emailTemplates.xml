@@ -299,15 +299,6 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 {$reviewerName}]]></body>
                <description>Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що відмовляється працювати над рецензією.</description>
        </email_text>
-       <email_text key="REVIEW_COMPLETE">
-               <subject>Рецензування статті завершено</subject>
-               <body><![CDATA[{$editorialContactName}:<br />
-<br />
-Я завершив рецензування статті &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot; та надсилаю Вам свою рекомендацію - &quot;{$recommendation}&quot;.<br />
-<br />
-{$reviewerName}]]></body>
-               <description>Цим листом рецензент повідомляє редактора розділу про те, що він завершив роботу над рецензією та записав на веб-сайті журналу свої коментарі та рекомендацію.</description>
-       </email_text>
        <email_text key="REVIEW_ACK">
                <subject>Подяка за рецензування статті</subject>
                <body><![CDATA[{$reviewerName}:<br />

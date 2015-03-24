@@ -235,15 +235,6 @@ Tôi sợ rằng vào thời điểm này tôi không thể phản biện bài n
 {$reviewerName}]]></body>
 		<description>Email này được Người phản biện gửi cho BTV chuyên mục để hồi âm đề nghị phản biện và báo cho BTV chuyên mục biết Người phản biện từ chối phản biện bài nộp.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Hoàn thành phản biện bài nộp</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Tôi đã hoàn thành phản biện bài viết &quot;{$submissionTitle}&quot; cho tạp chí {$contextName}, và đã gửi khuyến nghị, &quot;{$recommendation}.&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Email này được Người phản biện gửi cho BTV chuyên mục thông báo rằng bài phản biện đã hoàn thành và lời bình cũng như khuyến nghị đã được ghi lại trên website của tạp chí.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Khẳng định đã nhận được phản biện</subject>
 		<body><![CDATA[{$reviewerName}:<br />

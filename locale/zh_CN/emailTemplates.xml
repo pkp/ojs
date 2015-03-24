@@ -299,15 +299,6 @@
 {$reviewerName}]]></body>
 		<description>这封电子邮件是由一位审查人寄给区段编辑以回复一份审查邀请，并通知区段编辑要婉谢审查邀请。</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>已完成文章审查工作</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-我目前已经为 《{$contextName}》完成稿件〈{$submissionTitle}〉的审查工作，并提出了我的建议：「{$recommendation}」<br />
-<br />
-{$reviewerName}]]></body>
-		<description>这封电子邮件是由一位审查人寄给区段编辑以通知他们说已经完成一份审查工作，而审查意见舒和编辑建议已经记录在网站上了。</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>文章审查感谢函</subject>
 		<body><![CDATA[{$reviewerName}:<br />

@@ -262,17 +262,6 @@
 {$reviewerName}]]></body>
 		<description>このメールは、査読者からセクションエディタに査読依頼を受けることができない旨を通知するものです。</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>論文査読の完了</subject>
-		<body><![CDATA[{$editorialContactName} 殿:<br />
-<br />
-雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読を終え、答申「{$recommendation}」を提出したことをお伝えします。<br />
-<br />
-よろしくお願いいたします。<br />
-<br />
-{$reviewerName}]]></body>
-		<description>このメールは、査読者からセクションエディタに査読が終わり、コメントと答申を雑誌のWebサイトで記録したことを通知するものです。</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>論文査読のお礼</subject>
 		<body><![CDATA[{$reviewerName} 殿:<br />

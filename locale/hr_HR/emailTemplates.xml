@@ -234,16 +234,6 @@ Srdačno,<br />
 {$reviewerName}]]></body>
 		<description>Ovim obrascem e-pošte recenzent odgovara uredniku rubrike da ne prihvaća zahtjev za recenzijom.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Izrađena recenzija članka</subject>
-		<body><![CDATA[Poštovana/i {$editorialContactName},<br />
-<br />
-upravo sam završio/la recenziju članka&quot;{$submissionTitle}&quot; za časopis {$contextName} i predao/la svoju preporuku: {$recommendation}.<br />
-<br />
-Srdačno,<br />
-{$reviewerName}]]></body>
-		<description>Ovim obrascem e-pošte recenzent obavještava urednika rubrike da je recenzija izrađena i da su komentari i preporuke evidentirani na mrežnoj stranici časopisa.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Zaprimljena recenzija članka</subject>
 		<body><![CDATA[Poštovana/i {$reviewerName},<br />

@@ -263,15 +263,6 @@ Sentitzen dut, baina oraingoan ezingo dut egin {$contextName} aldizkarirako &quo
 {$reviewerName}]]></body>
 		<description>Mezu hau Ebaluatzaileak Ataleko editoreari bidaltzen dio, ebaluazioa egiteko eskaerari erantzunez, ezin duela egin esateko.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Artikuluaren ebaluazioa eginda</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa bukatu dut, eta &quot;{$recommendation}&quot; gomendioa bidali dut.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Mezu hau Ebaluatzaileak Ataleko editoreari bidaltzen dio, ebaluazioa egin duela eta oharrak eta gomendioa aldizkariaren webgunean sartu dituela esateko.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Artikuluaren ebaluazioaren hartu-agiria</subject>
 		<body><![CDATA[{$reviewerName}:<br />

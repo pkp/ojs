@@ -318,15 +318,6 @@ Me temo que en este momento no voy a poder revisar el envío &quot;{$submissionT
 {$reviewerName}]]></body>
 		<description>Este correo es enviado por un/a revisor/a al / a la Editor/a de Sección en respuesta a una petición de revisión para notificarle que rechaza la petición de revisión.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Revisión de artículo completada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Ya he finalizado la revisión del envío &quot;{$submissionTitle},&quot; para {$contextName}. En el sitio web he registrado mis comentarios y recomendación. Me alegro de poder colaborar con la revista, si tienen cualquier pregunta no duden en ponerse en contacto conmigo.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Este correo enviado por un/a revisor/a al / al a Editor/a de Sección para notificarle que a ha finalizado una revisión y se han registrado los comentarios y recomendaciones en el sitio de la revista.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Acuse de recibo de revisión de artículo</subject>
 		<body><![CDATA[{$reviewerName}:<br />

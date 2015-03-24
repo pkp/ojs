@@ -245,15 +245,6 @@
 {$reviewerName}]]></body>
 		<description>這封電子郵件是由一位審查人寄給區段編輯以回覆一份審查邀請，並通知區段編輯要婉謝審查邀請。</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>已完成文章審查工作</subject>
-		<body><![CDATA[{$editorialContactName}您好：<br />
-<br />
-我目前已經為 《{$contextName}》完成稿件〈{$submissionTitle}〉的審查工作，並提出了我的建議：「{$recommendation}」<br />
-<br />
-{$reviewerName}]]></body>
-		<description>這封電子郵件是由一位審查人寄給區段編輯以通知他們說已經完成一份審查工作，而審查意見舒和編輯建議已經記錄在網站上了。</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>文章審查感謝函</subject>
 		<body><![CDATA[{$reviewerName}您好：<br />

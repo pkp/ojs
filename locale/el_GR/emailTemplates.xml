@@ -263,15 +263,6 @@ URL υποβολής: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a
 {$reviewerName}]]></body>
 		<description>Το συγκεκριμένο μήνυμα αποστέλλεται από τον Αξιολογητή στον Επιμελητή ενότητας ως απάντηση στο αίτημα αξιολόγησης για να τον ενημερώσει ότι δεν μπορεί να αναλάβει την συγκεκριμένη αξιολόγηση.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Ολοκλήρωση αξιολόγησης άρθρου</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Θα ήθελα να σας ενημέρωση ότι ολοκλήρωσα την αξιολόγηση της εργασίας &quot;{$submissionTitle}&quot; για το περιοδικό {$contextName}, και έχω ήδη υποβάλλει την σχετική εισήγησή μου, &quot;{$recommendation}.&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description> Το συγκεκριμένο μήνυμα αποστέλλεται απο τον Αξιολογητή στον Επιμελητή ενότητας για να τον ενημερώσει για την ολοκλήρωση της αξιολόγησης και για την καταχώριση των σχολίων και της σχετικής εισήγησής του στον ιστότοπο του περιοδικού.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Επιβεβαίωση λήψης αξιολόγησης άρθρου</subject>
 		<body><![CDATA[{$reviewerName}:<br />

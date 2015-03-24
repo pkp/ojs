@@ -277,15 +277,6 @@ Sono spiacente di non poter revisionare la submission, &quot;{$submissionTitle},
 {$reviewerName}]]></body>
 		<description>Questa email viene mandata dal revisore al section editor in risposta a una richiesta di revisione per far sapere a quest'ultimo che la richiesta è stata declinata.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Revisione completata</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Ho completato la revisione di &quot;{$submissionTitle}&quot; per {$contextName}, e indicato il mio parere, &quot;{$recommendation}.&quot;<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Questa email viene mandata dal revisore al section editor per fargli sapere che la revisione è stata completata e i commenti e le raccomandazioni sono state registrate nel sito web della rivista.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Ringraziamenti per la revisione</subject>
 		<body><![CDATA[Gentile {$reviewerName}:<br />
