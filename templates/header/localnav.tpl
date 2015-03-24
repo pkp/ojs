@@ -35,8 +35,10 @@
 				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="dashboard"}">{translate key="navigation.dashboard"}</a></li>
 			{/if}
 			{if $currentJournal}
-				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">{translate key="navigation.current"}</a></li>
-				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">{translate key="navigation.archives"}</a>
+				{if $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+					<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">{translate key="navigation.current"}</a></li>
+					<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">{translate key="navigation.archives"}</a>
+				{/if}
 				{if array_intersect(array(ROLE_ID_MANAGER), $userRoles)}
 					<li>
 						<a href="#">{translate key="navigation.management"}</a>
@@ -67,8 +69,10 @@
 	{elseif !$notInstalled}{* !$isUserLoggedIn *}
 		<ul class="sf-menu">
 			{if $currentJournal}
-				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">{translate key="navigation.current"}</a></li>
-				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
+				{if $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+					<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">{translate key="navigation.current"}</a></li>
+					<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
+				{/if}
 			{/if}
 			{$publicMenu}
 		</ul>
