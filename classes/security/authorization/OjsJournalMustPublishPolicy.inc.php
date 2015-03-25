@@ -42,7 +42,6 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 			$userRoles,
 			array(
 				ROLE_ID_MANAGER,
-				ROLE_ID_EDITOR,
 				ROLE_ID_SITE_ADMIN,
 				ROLE_ID_ASSISTANT,
 				ROLE_ID_SECTION_EDITOR

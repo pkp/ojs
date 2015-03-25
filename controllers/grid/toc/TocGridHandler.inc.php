@@ -26,7 +26,7 @@ class TocGridHandler extends CategoryGridHandler {
 	function TocGridHandler() {
 		parent::CategoryGridHandler();
 		$this->addRoleAssignment(
-			array(ROLE_ID_EDITOR, ROLE_ID_MANAGER),
+			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence', 'removeArticle')
 		);
 		$this->publishedArticlesBySectionId = array();

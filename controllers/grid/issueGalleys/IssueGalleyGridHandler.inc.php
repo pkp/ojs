@@ -23,7 +23,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	function IssueGalleyGridHandler() {
 		parent::GridHandler();
 		$this->addRoleAssignment(
-			array(ROLE_ID_EDITOR, ROLE_ID_MANAGER),
+			array(ROLE_ID_MANAGER),
 			array(
 				'fetchGrid', 'fetchRow', 'saveSequence',
 				'add', 'edit', 'upload', 'download', 'update', 'delete'

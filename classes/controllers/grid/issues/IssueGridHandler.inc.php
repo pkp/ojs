@@ -28,7 +28,7 @@ class IssueGridHandler extends GridHandler {
 	function IssueGridHandler() {
 		parent::GridHandler();
 		$this->addRoleAssignment(
-			array(ROLE_ID_EDITOR, ROLE_ID_MANAGER),
+			array(ROLE_ID_MANAGER),
 			array(
 				'fetchGrid', 'fetchRow',
 				'addIssue', 'editIssue', 'editIssueData', 'updateIssue',

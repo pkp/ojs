@@ -32,11 +32,11 @@ class AuthorGridHandler extends PKPAuthorGridHandler {
 	function AuthorGridHandler() {
 		parent::PKPAuthorGridHandler();
 		$this->addRoleAssignment(
-				array(ROLE_ID_MANAGER, ROLE_ID_EDITOR, ROLE_ID_AUTHOR, ROLE_ID_SECTION_EDITOR),
+				array(ROLE_ID_MANAGER, ROLE_ID_AUTHOR, ROLE_ID_SECTION_EDITOR),
 				array('fetchGrid', 'fetchRow', 'addAuthor', 'editAuthor',
 				'updateAuthor', 'deleteAuthor'));
 		$this->addRoleAssignment(ROLE_ID_REVIEWER, array('fetchGrid', 'fetchRow'));
-		$this->addRoleAssignment(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR), array('addUser'));
+		$this->addRoleAssignment(array(ROLE_ID_MANAGER), array('addUser'));
 	}
 
 
@@ -80,7 +80,7 @@ class AuthorGridHandler extends PKPAuthorGridHandler {
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 		// N.B.: $article will not be defined yet for feature
 		// initialization, which happens prior to fetching.
-		if (!$article || $article->getDateSubmitted() == null || array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_EDITOR), $userRoles))
+		if (!$article || $article->getDateSubmitted() == null || array_intersect(array(ROLE_ID_MANAGER), $userRoles))
 			return true;
 		else
 			return false;
