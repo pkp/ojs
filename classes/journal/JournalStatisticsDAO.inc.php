@@ -29,7 +29,8 @@ class JournalStatisticsDAO extends DAO {
 	function getFirstActivityDate($journalId) {
 		$result =& $this->retrieve(
 			'SELECT	LEAST(a.date_submitted, COALESCE(pa.date_published, NOW()), COALESCE(i.date_published, NOW()), u.date_registered) AS first_date
-			FROM	articles a INNER JOIN users u
+			FROM	articles a 
+				INNER JOIN users u ON (a.user_id = u.user_id)
 				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
 				LEFT JOIN articles a2 ON (a2.article_id < a.article_id AND a2.date_submitted IS NOT NULL AND a2.journal_id = ?)
