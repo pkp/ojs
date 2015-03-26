@@ -146,7 +146,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 				$dateUpdated = $lastDateUpdated;
 			}
 		} else {
-			$mostRecentAnnouncement =& $announcementDao->getMostRecentAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
+			$mostRecentAnnouncement =& $announcementDao->getMostRecentPublishedAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 			$dateUpdated = $mostRecentAnnouncement->getDatetimePosted();
 			if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) { 
 				$announcementFeedPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');			
