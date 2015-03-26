@@ -41,7 +41,7 @@
 	<group roleId="0x00001000" stages="3" name="default.groups.name.externalReviewer" plural="default.groups.plural.externalReviewer" abbrev="default.groups.abbrev.externalReviewer" permitSelfRegistration="true" />
 
 	<!-- Reader Role -->
-	<group roleId="0x00100000" stages="" name="default.groups.name.reader" plural="default.groups.plural.reader" abbrev="default.groups.abbrev.reader" />
+	<group roleId="0x00100000" stages="" name="default.groups.name.reader" plural="default.groups.plural.reader" abbrev="default.groups.abbrev.reader" permitSelfRegistration="true" />
 
 	<!-- Subscription Manager Role -->
 	<group roleId="0x00200000" stages="" name="default.groups.name.subscriptionManager" plural="default.groups.plural.subscriptionManager" abbrev="default.groups.abbrev.subscriptionManager" />
