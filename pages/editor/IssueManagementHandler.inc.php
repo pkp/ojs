@@ -1081,6 +1081,7 @@ class IssueManagementHandler extends EditorHandler {
 			import('lib.pkp.classes.validation.ValidatorEmail');
 			while ($recipients && !$recipients->eof()) {
 				$recipient =& $recipients->next();
+				if ($recipient->getDisabled()) continue;
 				if (preg_match(ValidatorEmail::getRegexp(), $recipient->getEmail())) {
 					$email->addRecipient($recipient->getEmail(), $recipient->getFullName());
 				} else {
