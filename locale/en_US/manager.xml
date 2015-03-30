@@ -632,5 +632,5 @@
 	<!-- Genres Grid -->
 	<message key="grid.genres.title.short">Components</message>
 	<message key="grid.genres.title">Article Components</message>
-	<message key="grid.genres.description">These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole book 99Z or a particular chapter by number (e.g., 02).</message>
+	<message key="grid.genres.description">These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02).</message>
 </locale>
