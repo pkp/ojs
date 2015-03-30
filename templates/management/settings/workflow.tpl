@@ -22,7 +22,7 @@
 </script>
 <div id="publicationTabs">
 	<ul>
-		<li><a name="genres" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.PublicationSettingsTabHandler" op="showTab" tab="genres"}">{translate key="grid.genres.title"}</a></li>
+		<li><a name="genres" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.PublicationSettingsTabHandler" op="showTab" tab="genres"}">{translate key="grid.genres.title.short"}</a></li>
 		<li><a name="submissionStage" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.PublicationSettingsTabHandler" op="showTab" tab="submissionStage"}">{translate key="manager.publication.submissionStage"}</a></li>
 		<li><a name="contentIndexing" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.PublicationSettingsTabHandler" op="showTab" tab="contentIndexing"}">{translate key="manager.workflow.contentIndexing"}</a></li>
 		<li><a name="reviewStage" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.PublicationSettingsTabHandler" op="showTab" tab="reviewStage"}">{translate key="manager.publication.reviewStage"}</a></li>

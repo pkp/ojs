@@ -628,4 +628,9 @@
 	<message key="manager.setup.resetPermissions">Reset Article Permissions</message>
 	<message key="manager.setup.resetPermissions.confirm">Are you sure you wish to reset permissions data already attached to articles?</message>
 	<message key="manager.setup.resetPermissions.description">Copyright statement and license information will be permanently attached to published content, ensuring that this data will not change in the case of a journal changing policies for new submissions. To reset stored permissions information already attached to published content, use the button below.</message>
+
+	<!-- Genres Grid -->
+	<message key="grid.genres.title.short">Components</message>
+	<message key="grid.genres.title">Article Components</message>
+	<message key="grid.genres.description">These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole book 99Z or a particular chapter by number (e.g., 02).</message>
 </locale>
