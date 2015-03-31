@@ -15,9 +15,6 @@
 
 import('lib.pkp.classes.controllers.grid.filter.PKPFilterGridHandler');
 
-// import validation classes
-import('lib.pkp.classes.handler.validation.HandlerValidatorRoles');
-
 class FilterGridHandler extends PKPFilterGridHandler {
 	/**
 	 * Constructor
