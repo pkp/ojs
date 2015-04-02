@@ -38,7 +38,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%"><input type="radio" name="pageHeaderTitleType[{$formLocale|escape}]" id="pageHeaderTitleType-1" value="1"{if $pageHeaderTitleType[$formLocale]} checked="checked"{/if} /> {fieldLabel name="pageHeaderTitleType-1" key="manager.setup.useImageTitle"}</td>
-		<td colspan="2" width="80%" class="value"><input type="file" name="pageHeaderTitleImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderTitleImage" value="{translate key="common.upload"}" class="button" /></td>
+		<td colspan="2" width="80%" class="value"><input type="file" name="pageHeaderTitleImage" id="pageHeaderTitleImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderTitleImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 	<tr valign="top">
 		<td colspan="2">
@@ -99,9 +99,9 @@
 		<td class="value" colspan="2"><input type="checkbox" id="oneStepReset" name="oneStepReset" {if $oneStepReset}checked="checked" {/if}/></td>
 	</tr>
 	<tr>
-		<td class="label"><label for="journalTheme">{translate key="admin.settings.siteTheme"}</label></td>
+		<td class="label"><label for="siteTheme">{translate key="admin.settings.siteTheme"}</label></td>
 		<td colspan="2" class="value">
-			<select name="siteTheme" class="selectMenu" id="theme"{if empty($themes)} disabled="disabled"{/if}>
+			<select name="siteTheme" class="selectMenu" id="siteTheme"{if empty($themes)} disabled="disabled"{/if}>
 				<option value="">{translate key="common.none"}</option>
 				{foreach from=$themes key=path item=themePlugin}
 					<option value="{$path|escape}"{if $path == $siteTheme} selected="selected"{/if}>{$themePlugin->getDisplayName()|escape}</option>
@@ -110,9 +110,9 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{translate key="admin.settings.siteStyleSheet"}</td>
+		<td class="label"><label for="siteStyleSheet">{translate key="admin.settings.siteStyleSheet"}</label></td>
 		<td colspan="2" width="80%" class="value">
-			<input type="file" name="siteStyleSheet" class="uploadField" /> <input type="submit" name="uploadSiteStyleSheet" value="{translate key="common.upload"}" class="button" />
+			<input type="file" name="siteStyleSheet" class="uploadField" id="siteStyleSheet" /> <input type="submit" name="uploadSiteStyleSheet" value="{translate key="common.upload"}" class="button" />
 			{if $siteStyleFileExists}
 				<br />
 				{translate key="common.fileName"}: <a href="{$publicFilesDir}/{$styleFilename}" class="file">{$originalStyleFilename|escape}</a> {$dateStyleFileUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteSiteStyleSheet" value="{translate key="common.delete"}" class="button" />

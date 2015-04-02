@@ -146,8 +146,8 @@ function prepBlockFields() {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.useImageLogo"}</td>
-		<td width="80%" class="value"><input type="file" name="homeHeaderLogoImage" class="uploadField" /> <input type="submit" name="uploadHomeHeaderLogoImage" value="{translate key="common.upload"}" class="button" /></td>
+		<td width="20%" class="label">{fieldLabel name="homeHeaderLogoImage" key="manager.setup.useImageLogo"}</td>
+		<td width="80%" class="value"><input type="file" name="homeHeaderLogoImage" id="homeHeaderLogoImage" class="uploadField" /> <input type="submit" name="uploadHomeHeaderLogoImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -174,8 +174,8 @@ function prepBlockFields() {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.useThumbnail"}</td>
-		<td width="80%" class="value"><input type="file" name="journalThumbnail" class="uploadField" /> <input type="submit" name="uploadJournalThumbnail" value="{translate key="common.upload"}" class="button" /></td>
+		<td width="20%" class="label">{fieldLabel name="journalThumbnail" key="manager.setup.useThumbnail"}</td>
+		<td width="80%" class="value"><input type="file" name="journalThumbnail" id="journalThumbnail" class="uploadField" /> <input type="submit" name="uploadJournalThumbnail" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -206,7 +206,7 @@ function prepBlockFields() {
 </div>
 
 <div id="journalDescription">
-<h4>{translate key="manager.setup.journalDescription"}</h4>
+<h4>{fieldLabel name="description" key="manager.setup.journalDescription"}</h4>
 
 <p>{translate key="manager.setup.journalDescriptionDescription"}</p>
 
@@ -219,8 +219,8 @@ function prepBlockFields() {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.homepageImage"}</td>
-		<td width="80%" class="value"><input type="file" name="homepageImage" class="uploadField" /> <input type="submit" name="uploadHomepageImage" value="{translate key="common.upload"}" class="button" /></td>
+		<td width="20%" class="label">{fieldLabel name="homepageImage" key="manager.setup.homepageImage"}</td>
+		<td width="80%" class="value"><input type="file" name="homepageImage" id="homepageImage" class="uploadField" /> <input type="submit" name="uploadHomepageImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -253,7 +253,7 @@ function prepBlockFields() {
 </div>
 <div id="additionalContent">
 
-<h4>{translate key="manager.setup.additionalContent"}</h4>
+<h4>{fieldLabel name="additionalHomeContent" key="manager.setup.additionalContent"}</h4>
 
 <p>{translate key="manager.setup.additionalContentDescription"}</p>
 
@@ -302,8 +302,8 @@ function prepBlockFields() {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.useImageLogo"}</td>
-		<td width="80%" class="value"><input type="file" name="pageHeaderLogoImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderLogoImage" value="{translate key="common.upload"}" class="button" /></td>
+		<td width="20%" class="label">{fieldLabel name="pageHeaderLogoImage" key="manager.setup.useImageLogo"}</td>
+		<td width="80%" class="value"><input type="file" name="pageHeaderLogoImage" id="pageHeaderLogoImage" class="uploadField" /> <input type="submit" name="uploadPageHeaderLogoImage" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -332,8 +332,8 @@ function prepBlockFields() {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.useImageLogo"}</td>
-		<td width="80%" class="value"><input type="file" name="journalFavicon" class="uploadField" /> <input type="submit" name="uploadJournalFavicon" value="{translate key="common.upload"}" class="button" /></td>
+		<td width="20%" class="label">{fieldLabel name="journalFavicon" key="manager.setup.useImageLogo"}</td>
+		<td width="80%" class="value"><input type="file" name="journalFavicon" id="journalFavicon" class="uploadField" /> <input type="submit" name="uploadJournalFavicon" value="{translate key="common.upload"}" class="button" /></td>
 	</tr>
 </table>
 
@@ -345,7 +345,7 @@ function prepBlockFields() {
 </div>
 
 <div id="alternateHeader">
-<h4>{translate key="manager.setup.alternateHeader"}</h4>
+<h4>{fieldLabel name="journalPageHeader" key="manager.setup.alternateHeader"}</h4>
 
 <p>{translate key="manager.setup.alternateHeaderDescription"}</p>
 
@@ -355,7 +355,7 @@ function prepBlockFields() {
 <div class="separator"></div>
 
 <div id="journalPageFooterInfo">
-<h3>5.4 {translate key="manager.setup.journalPageFooter"}</h3>
+<h3>5.4 {fieldLabel name="journalPageFooter" key="manager.setup.journalPageFooter"}</h3>
 
 <p>{translate key="manager.setup.journalPageFooterDescription"}</p>
 
@@ -463,9 +463,9 @@ function prepBlockFields() {
 <table id="assignBlocksToSidebars" border="0" align="center" style="width: 100%;">
 	<tr align="center">
 		<td rowspan="2" id="assignBlocksToSidebarLeft" style="with: 30%;" >
-			{translate key="manager.setup.layout.leftSidebar"}<br/>
+			{fieldLabel name="blockSelectLeftWidget" key="manager.setup.layout.leftSidebar"}<br/>
 			<input class="button defaultButton" style="width: 100%;" type="button" value="&uarr;" onclick="moveUp(this.form.elements['blockSelectLeftWidget']);" /><br/>
-			<select name="blockSelectLeftWidget" multiple="multiple" size="10" class="selectMenu" style="width: 100%; height:200px">
+			<select name="blockSelectLeftWidget" id="blockSelectLeftWidget" multiple="multiple" size="10" class="selectMenu" style="width: 100%; height:200px">
 				{foreach from=$leftBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
 				{foreachelse}
@@ -479,8 +479,8 @@ function prepBlockFields() {
 			<input class="button defaultButton" style="width: 100%;" type="button" value="&rarr;" onclick="jumpList(this.form.elements['blockSelectLeftWidget'],this.form.elements['blockUnselectedWidget']);" />
 		</td>
 		<td valign="top" id="assignBlocksToSidebarUnselected" style="width: 30%;" >
-			{translate key="manager.setup.layout.unselected"}<br/>
-			<select name="blockUnselectedWidget" multiple="multiple" size="10" class="selectMenu" style="width: 100%; height:180px;" >
+			{fieldLabel name="blockUnselectedWidget" key="manager.setup.layout.unselected"}<br/>
+			<select name="blockUnselectedWidget" id="blockUnselectedWidget" multiple="multiple" size="10" class="selectMenu" style="width: 100%; height:180px;" >
 				{foreach from=$disabledBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
 				{foreachelse}
@@ -493,9 +493,9 @@ function prepBlockFields() {
 			<input class="button defaultButton" style="width: 100%;" type="button" value="&rarr;" onclick="jumpList(this.form.elements['blockUnselectedWidget'],this.form.elements['blockSelectRightWidget']);" />
 		</td>
 		<td rowspan="2" id="assignBlocksToSidebarRight" style="width: 30%;">
-			{translate key="manager.setup.layout.rightSidebar"}<br/>
+			{fieldLabel name="blockSelectRightWidget" key="manager.setup.layout.rightSidebar"}<br/>
 			<input class="button defaultButton" style="width: 100%;" type="button" value="&uarr;" onclick="moveUp(this.form.elements['blockSelectRightWidget']);" /><br/>
-			<select name="blockSelectRightWidget" multiple="multiple" size="10" class="selectMenu" style="width: 100%; height:200px" >
+			<select name="blockSelectRightWidget" id="blockSelectRightWidget" multiple="multiple" size="10" class="selectMenu" style="width: 100%; height:200px" >
 				{foreach from=$rightBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
 				{foreachelse}
@@ -522,15 +522,15 @@ function prepBlockFields() {
 
 <p>{translate key="manager.setup.information.description"}</p>
 
-<div id="infoForReaders"><h4>{translate key="manager.setup.information.forReaders"}</h4>
+<div id="infoForReaders"><h4>{fieldLabel name="readerInformation" key="manager.setup.information.forReaders"}</h4>
 
 <p><textarea name="readerInformation[{$formLocale|escape}]" id="readerInformation" rows="12" cols="60" class="textArea">{$readerInformation[$formLocale]|escape}</textarea></p></div>
 
-<div id="infoForAuth"><h4>{translate key="manager.setup.information.forAuthors"}</h4>
+<div id="infoForAuth"><h4>{fieldLabel name="authorInformation" key="manager.setup.information.forAuthors"}</h4>
 
 <p><textarea name="authorInformation[{$formLocale|escape}]" id="authorInformation" rows="12" cols="60" class="textArea">{$authorInformation[$formLocale]|escape}</textarea></p></div>
 
-<div id="infoForLibs"><h4>{translate key="manager.setup.information.forLibrarians"}</h4>
+<div id="infoForLibs"><h4>{fieldLabel name="librarianInformation" key="manager.setup.information.forLibrarians"}</h4>
 
 <p><textarea name="librarianInformation[{$formLocale|escape}]" id="librarianInformation" rows="12" cols="60" class="textArea">{$librarianInformation[$formLocale]|escape}</textarea></p></div>
 </div>
@@ -542,12 +542,12 @@ function prepBlockFields() {
 <p>{translate key="manager.setup.listsDescription"}</p>
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.itemsPerPage"}</td>
-		<td width="80%" class="value"><input type="text" size="3" name="itemsPerPage" class="textField" value="{$itemsPerPage|escape}" /></td>
+		<td width="20%" class="label">{fieldLabel name="itemsPerPage" key="manager.setup.itemsPerPage"}</td>
+		<td width="80%" class="value"><input type="text" size="3" name="itemsPerPage" id="itemsPerPage" class="textField" value="{$itemsPerPage|escape}" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.setup.numPageLinks"}</td>
-		<td width="80%" class="value"><input type="text" size="3" name="numPageLinks" class="textField" value="{$numPageLinks|escape}" /></td>
+		<td width="20%" class="label">{fieldLabel name="numPageLinks" key="manager.setup.numPageLinks"}</td>
+		<td width="80%" class="value"><input type="text" size="3" name="numPageLinks" id="numPageLinks" class="textField" value="{$numPageLinks|escape}" /></td>
 	</tr>
 </table>
 </div>

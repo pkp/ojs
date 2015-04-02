@@ -30,7 +30,7 @@
 {/if}
 <div id="focusAndScopeDescription">
 <h3>2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</h3>
-<p>{translate key="manager.setup.focusAndScopeDescription"}</p>
+<p>{fieldLabel name="focusScopeDesc" key="manager.setup.focusAndScopeDescription"}</p>
 <p>
 	<textarea name="focusScopeDesc[{$formLocale|escape}]" id="focusScopeDesc" rows="12" cols="60" class="textArea">{$focusScopeDesc[$formLocale]|escape}</textarea>
 </p>
@@ -43,13 +43,13 @@
 <div id="peerReviewDescription">
 <p>{translate key="manager.setup.peerReviewDescription"}</p>
 
-<h4>{translate key="manager.setup.reviewPolicy"}</h4>
+<h4>{fieldLabel name="reviewPolicy" key="manager.setup.reviewPolicy"}</h4>
 
 <p><textarea name="reviewPolicy[{$formLocale|escape}]" id="reviewPolicy" rows="12" cols="60" class="textArea">{$reviewPolicy[$formLocale]|escape}</textarea></p>
 </div>
 <div id="reviewGuidelinesInfo">
 
-<h4>{translate key="manager.setup.reviewGuidelines"}</h4>
+<h4>{fieldLabel name="reviewGuidelines" key="manager.setup.reviewGuidelines"}</h4>
 
 {url|assign:"reviewFormsUrl" op="reviewForms"}
 <p>{translate key="manager.setup.reviewGuidelinesDescription" reviewFormsUrl=$reviewFormsUrl}</p>
@@ -105,7 +105,7 @@
 
 <p>
 	<strong>{translate key="manager.setup.reviewOptions.reviewTime"}</strong><br/>
-	{translate key="manager.setup.reviewOptions.numWeeksPerReview"}: <input type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" /> {translate key="common.weeks"}<br/>
+	{fieldLabel name="numWeeksPerReview" key="manager.setup.reviewOptions.numWeeksPerReview"}: <input type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" /> {translate key="common.weeks"}<br/>
 	{translate key="common.note"}: {translate key="manager.setup.reviewOptions.noteOnModification"}
 </p>
 
@@ -113,23 +113,23 @@
 		<strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong><br/>
 		{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
 		<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $remindForInvite} checked="checked"{/if} />&nbsp;
-		<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
-		<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite || !$scheduledTasksEnabled} disabled="disabled"{/if}>
+		{fieldLabel name="remindForInvite" key="manager.setup.reviewOptions.remindForInvite1"}
+		<select name="numDaysBeforeInviteReminder" id="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite || !$scheduledTasksEnabled} disabled="disabled"{/if}>
 			{section name="inviteDayOptions" start=3 loop=11}
 			<option value="{$smarty.section.inviteDayOptions.index}"{if $numDaysBeforeInviteReminder eq $smarty.section.inviteDayOptions.index or ($smarty.section.inviteDayOptions.index eq 5 and not $remindForInvite)} selected="selected"{/if}>{$smarty.section.inviteDayOptions.index}</option>
 			{/section}
 		</select>
-		{translate key="manager.setup.reviewOptions.remindForInvite2"}
+		{fieldLabel name="numDaysBeforeInviteReminder" key="manager.setup.reviewOptions.remindForInvite2"}
 		<br/>
 
 		<input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled"{elseif $remindForSubmit} checked="checked"{/if} />&nbsp;
-		<label for="remindForSubmit">{translate key="manager.setup.reviewOptions.remindForSubmit1"}</label>
-		<select name="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit || !$scheduledTasksEnabled} disabled="disabled"{/if}>
+		{fieldLabel name="remindForSubmit" key="manager.setup.reviewOptions.remindForSubmit1"}
+		<select name="numDaysBeforeSubmitReminder" id="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit || !$scheduledTasksEnabled} disabled="disabled"{/if}>
 			{section name="submitDayOptions" start=0 loop=11}
 				<option value="{$smarty.section.submitDayOptions.index}"{if $numDaysBeforeSubmitReminder eq $smarty.section.submitDayOptions.index} selected="selected"{/if}>{$smarty.section.submitDayOptions.index}</option>
 		{/section}
 		</select>
-		{translate key="manager.setup.reviewOptions.remindForSubmit2"}
+		{fieldLabel name="numDaysBeforeSubmitReminder" key="manager.setup.reviewOptions.remindForSubmit2"}
 		{if !$scheduledTasksEnabled}
 		<br/>
 		{translate key="manager.setup.reviewOptions.automatedRemindersDisabled"}
@@ -161,7 +161,7 @@
 </div>
 <div class="separator"></div>
 <div id="privacyStatementInfo">
-<h3>2.3 {translate key="manager.setup.privacyStatement"}</h3>
+<h3>2.3 {fieldLabel name="privacyStatement" key="manager.setup.privacyStatement"}</h3>
 
 <p><textarea name="privacyStatement[{$formLocale|escape}]" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatement[$formLocale]|escape}</textarea></p>
 </div>
@@ -224,7 +224,7 @@
 <p>
 	<textarea name="lockssLicense[{$formLocale|escape}]" id="lockssLicense" rows="6" cols="60" class="textArea">{$lockssLicense[$formLocale]|escape}</textarea>
 	<br />
-	<span class="instruct">{translate key="manager.setup.lockssLicenses"}</span>
+	<span class="instruct">{fieldLabel name="lockssLicense" key="manager.setup.lockssLicenses"}</span>
 </p>
 </div>
 

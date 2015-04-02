@@ -30,7 +30,7 @@
 	</tr>
 {/if}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel suppressId="true" name="username" key="user.username"}</td>
+	<td width="20%" class="label">{translate key="user.username"}</td>
 	<td width="80%" class="value">{$username|escape}</td>
 </tr>
 <tr valign="top">

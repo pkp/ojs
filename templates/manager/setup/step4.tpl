@@ -62,7 +62,7 @@
 		</td>
 		<td width="95%" class="value">
 			<label for="publishingMode-0">{translate key="manager.setup.openAccess"}</label>
-			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
+			<h4>{fieldLabel name="openAccessPolicy" key="manager.setup.openAccessPolicy"}</h4>
 			<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
 			<p><textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $publishingMode != $smarty.const.PUBLISHING_MODE_OPEN} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea></p>
 		</td>
@@ -172,7 +172,7 @@ function setRegAllowOpts(form) {
 <div id="publicationScheduling">
 <h3>4.2 {translate key="manager.setup.publicationScheduling"}</h3>
 <div id="publicationSchedule">
-<h4>{translate key="manager.setup.publicationSchedule"}</h4>
+<h4>{fieldLabel name="pubFreqPolicy" key="manager.setup.publicationSchedule"}</h4>
 
 <p>{translate key="manager.setup.publicationScheduleDescription"}</p>
 
@@ -301,15 +301,15 @@ function setRegAllowOpts(form) {
 <p>
 	<input type="checkbox" name="enableAnnouncementsHomepage" id="enableAnnouncementsHomepage" value="1" onclick="toggleEnableAnnouncementsHomepage(this.form)"{if $enableAnnouncementsHomepage} checked="checked"{/if} />&nbsp;
 	<label for="enableAnnouncementsHomepage">{translate key="manager.setup.enableAnnouncementsHomepage1"}</label>
-	<select name="numAnnouncementsHomepage" size="1" class="selectMenu" {if not $enableAnnouncementsHomepage}disabled="disabled"{/if}>
+	<select name="numAnnouncementsHomepage" id="numAnnouncementsHomepage" size="1" class="selectMenu" {if not $enableAnnouncementsHomepage}disabled="disabled"{/if}>
 		{section name="numAnnouncementsHomepageOptions" start=1 loop=11}
 		<option value="{$smarty.section.numAnnouncementsHomepageOptions.index}"{if $numAnnouncementsHomepage eq $smarty.section.numAnnouncementsHomepageOptions.index or ($smarty.section.numAnnouncementsHomepageOptions.index eq 1 and not $numAnnouncementsHomepage)} selected="selected"{/if}>{$smarty.section.numAnnouncementsHomepageOptions.index}</option>
 		{/section}
 	</select>
-	{translate key="manager.setup.enableAnnouncementsHomepage2"}
+	{fieldLabel name="numAnnouncementsHomepage" key="manager.setup.enableAnnouncementsHomepage2"}
 </p>
 <div id="announcementsIntroductionSection">
-<h4>{translate key="manager.setup.announcementsIntroduction"}</h4>
+<h4>{fieldLabel name="announcementsIntroduction" key="manager.setup.announcementsIntroduction"}</h4>
 
 <p>{translate key="manager.setup.announcementsIntroductionDescription"}</p>
 
@@ -337,7 +337,7 @@ function setRegAllowOpts(form) {
 </div><!-- copyediting -->
 
 <div id="copyeditInstructionsSection">
-<h4>{translate key="manager.setup.copyeditInstructions"}</h4>
+<h4>{fieldLabel name="copyeditInstructions" key="manager.setup.copyeditInstructions"}</h4>
 
 <p>{translate key="manager.setup.copyeditInstructionsDescription"}</p>
 
@@ -365,7 +365,7 @@ function setRegAllowOpts(form) {
 </table>
 
 <div id="layoutInstructionsSection">
-<h4>{translate key="manager.setup.layoutInstructions"}</h4>
+<h4>{fieldLabel name="layoutInstructions" key="manager.setup.layoutInstructions"}</h4>
 
 <p>{translate key="manager.setup.layoutInstructionsDescription"}</p>
 
@@ -411,7 +411,7 @@ function setRegAllowOpts(form) {
 </div><!-- referenceLinking -->
 
 <div id="refLinkInstructionsSection">
-<h4>{translate key="manager.setup.refLinkInstructions.description"}</h4>
+<h4>{fieldLabel name="refLinkInstructions" key="manager.setup.refLinkInstructions.description"}</h4>
 <textarea name="refLinkInstructions[{$formLocale|escape}]" id="refLinkInstructions" rows="12" cols="60" class="textArea">{$refLinkInstructions[$formLocale]|escape}</textarea>
 </div><!-- refLinkInstructionsSection -->
 </div>
@@ -433,7 +433,7 @@ function setRegAllowOpts(form) {
 	</tr>
 </table>
 <div id="proofingInstructions">
-<h4>{translate key="manager.setup.proofingInstructions"}</h4>
+<h4>{fieldLabel name="proofInstructions" key="manager.setup.proofingInstructions"}</h4>
 
 <p>{translate key="manager.setup.proofingInstructionsDescription"}</p>
 

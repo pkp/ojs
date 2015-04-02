@@ -29,7 +29,7 @@
 {/if}
 
 <div id="authorGuidelinesInfo">
-<h3>3.1 {translate key="manager.setup.authorGuidelines"}</h3>
+<h3>3.1 {fieldLabel name="authorGuidelines" key="manager.setup.authorGuidelines"}</h3>
 
 <p>{translate key="manager.setup.authorGuidelinesDescription"}</p>
 
@@ -73,7 +73,7 @@
 <div id="permissions">
 <h3>3.2 {translate key="submission.permissions"}</h3>
 
-<h4>{translate key="manager.setup.authorCopyrightNotice"}</h4>
+<h4>{fieldLabel name="copyrightNotice" key="manager.setup.authorCopyrightNotice"}</h4>
 {url|assign:"sampleCopyrightWordingUrl" page="information" op="sampleCopyrightWording"}
 <p>{translate key="manager.setup.authorCopyrightNoticeDescription" sampleCopyrightWordingUrl=$sampleCopyrightWordingUrl}</p>
 
@@ -124,7 +124,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name=licenseURL key="submission.licenseURL"}</td>
+		<td class="label">{fieldLabel name="licenseURLSelect" key="submission.licenseURL"}</td>
 		<td class="value">
 			<select name="licenseURLSelect" id="licenseURLSelect" onchange="document.getElementById('licenseURL').value=document.getElementById('licenseURLSelect').options[document.getElementById('licenseURLSelect').selectedIndex].value; document.getElementById('licenseURL').readOnly=(document.getElementById('licenseURL').value==''?false:true);">
 				{assign var=foundCc value=0}
@@ -139,7 +139,7 @@
 			<br/>
 			<input type="text" name="licenseURL" id="licenseURL" value="{$licenseURL|escape}" {if $foundCc}readonly="readonly" {/if}size="40" maxlength="255" class="textField" />
 			<br/>
-			{translate key="manager.setup.licenseURLDescription"}
+			{fieldLabel name="licenseURL" key="manager.setup.licenseURLDescription"}
 		</td>
 	</tr>
 	<tr valign="top">
@@ -180,7 +180,7 @@
 	</tr>
 </table>
 
-<h4>{translate key="manager.setup.competingInterests.guidelines"}</h4>
+<h4>{fieldLabel name="competingInterestGuidelines" key="manager.setup.competingInterests.guidelines"}</h4>
 <p><textarea name="competingInterestGuidelines[{$formLocale|escape}]" id="competingInterestGuidelines" rows="12" cols="60" class="textArea">{$competingInterestGuidelines[$formLocale]|escape}</textarea></p>
 </div>
 
@@ -206,7 +206,7 @@
 			<br />
 			<input type="text" name="metaDisciplineExamples[{$formLocale|escape}]" id="metaDisciplineExamples" value="{$metaDisciplineExamples[$formLocale]|escape}" size="60" class="textField" />
 			<br />
-			<span class="instruct">{translate key="manager.setup.disciplineExamples"}</span>
+			<span class="instruct">{fieldLabel name="metaDisciplineExamples" key="manager.setup.disciplineExamples"}</span>
 		</td>
 	</tr>
 
@@ -254,7 +254,7 @@
 			<br />
 			<input type="text" name="metaSubjectExamples[{$formLocale|escape}]" id="metaSubjectExamples" value="{$metaSubjectExamples[$formLocale]|escape}" size="60" class="textField" />
 			<br />
-			<span class="instruct">{translate key="manager.setup.subjectExamples"}</span>
+			<span class="instruct">{fieldLabel name="metaSubjectExamples" key="manager.setup.subjectExamples"}</span>
 		</td>
 	</tr>
 
@@ -279,7 +279,7 @@
 			<br />
 			<input type="text" name="metaCoverageGeoExamples[{$formLocale|escape}]" id="metaCoverageGeoExamples" value="{$metaCoverageGeoExamples[$formLocale]|escape}" size="60" class="textField" />
 			<br />
-			<span class="instruct">{translate key="manager.setup.coverageGeoExamples"}</span>
+			<span class="instruct">{fieldLabel name="metaCoverageGeoExamples" key="manager.setup.coverageGeoExamples"}</span>
 		</td>
 	</tr>
 	<tr>
@@ -292,7 +292,7 @@
 			<br />
 			<input type="text" name="metaCoverageChronExamples[{$formLocale|escape}]" id="metaCoverageChronExamples" value="{$metaCoverageChronExamples[$formLocale]|escape}" size="60" class="textField" />
 			<br />
-			<span class="instruct">{translate key="manager.setup.coverageChronExamples"}</span>
+			<span class="instruct">{fieldLabel name="metaCoverageChronExamples" key="manager.setup.coverageChronExamples"}</span>
 		</td>
 	</tr>
 	<tr>
@@ -305,7 +305,7 @@
 			<br />
 			<input type="text" name="metaCoverageResearchSampleExamples[{$formLocale|escape}]" id="metaCoverageResearchSampleExamples" value="{$metaCoverageResearchSampleExamples[$formLocale]|escape}" size="60" class="textField" />
 			<br />
-			<span class="instruct">{translate key="manager.setup.coverageResearchSampleExamples"}</span>
+			<span class="instruct">{fieldLabel name="metaCoverageResearchSampleExamples" key="manager.setup.coverageResearchSampleExamples"}</span>
 		</td>
 	</tr>
 
@@ -326,7 +326,7 @@
 			<br />
 			<input type="text" name="metaTypeExamples[{$formLocale|escape}]" id="metaTypeExamples" value="{$metaTypeExamples[$formLocale]|escape}" size="60" class="textField" />
 			<br />
-			<span class="instruct">{translate key="manager.setup.typeExamples"}</span>
+			<span class="instruct">{fieldLabel name="metaTypeExamples" key="manager.setup.typeExamples"}</span>
 		</td>
 	</tr>
 </table>
@@ -355,7 +355,9 @@
 	</tr>
 	<tr valign="top">
 		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckSpecified" id="copySubmissionAckSpecified" value="true" {if $copySubmissionAckSpecified}checked="checked"{/if}/></td>
-		<td class="value">{fieldLabel name="copySubmissionAckAddress" key="manager.setup.notifications.copySpecifiedAddress"}&nbsp;&nbsp;<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="textField" id="copySubmissionAckAddress" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/></td>
+		<td class="value">
+			{fieldLabel name="copySubmissionAckSpecified" key="manager.setup.notifications.copySpecifiedAddress"}<br/>
+			{fieldLabel name="copySubmissionAckAddress" key="user.email"}&nbsp;&nbsp;<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="textField" id="copySubmissionAckAddress" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/></td>
 	</tr>
 	{if !$submissionAckEnabled}
 	<tr valign="top">
