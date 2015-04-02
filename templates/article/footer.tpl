@@ -24,7 +24,7 @@
 				onmouseout="addthis_close()" onclick="return addthis_sendto()">
 					<img src="{$sharingButtonUrl}" width="{$sharingButtonWidth}" height="{$sharingButtonHeight}" border="0" alt="Bookmark and Share" style="border:0;padding:0" />
 			</a>
-			<script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+			<script type="text/javascript" src="//s7.addthis.com/js/200/addthis_widget.js"></script>
 		</div>
 	{else}
 		<a href="http://www.addthis.com/bookmark.php"
