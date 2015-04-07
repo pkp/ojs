@@ -20,8 +20,6 @@
 				{rdelim}
 			{rdelim}
 		);
-		$('input[id^="datePublished"]').datepicker({ldelim} dateFormat: 'yy-mm-dd' {rdelim});
-		$('input[id^="openAccessDate"]').datepicker({ldelim} dateFormat: 'yy-mm-dd' {rdelim});
 	{rdelim});
 </script>
 
@@ -38,10 +36,10 @@
 		{fbvFormArea id="issueAccessArea" title="editor.issues.access" class="border"}
 			{fbvFormSection}
 				{if $issuePublished}
-					{fbvElement type="text" label="editor.issues.datePublished" id="datePublished" value=$datePublished|date_format:"%y-%m-%d" size=$fbvStyles.size.SMALL inline=true}
+					{fbvElement type="text" label="editor.issues.datePublished" id="datePublished" value=$datePublished|date_format:"%y-%m-%d" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
 				{/if}
 				{fbvElement type="select" id="accessStatus" label="editor.issues.accessStatus" from=$accessOptions selected=$accessStatus translate=false size=$fbvStyles.size.SMALL inline=true}
-				{fbvElement type="text" label="editor.issues.accessDate" id="openAccessDate" value=$openAccessDate|date_format:"%y-%m-%d" size=$fbvStyles.size.SMALL inline=true}
+				{fbvElement type="text" label="editor.issues.accessDate" id="openAccessDate" value=$openAccessDate|date_format:"%y-%m-%d" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
 			{/fbvFormSection}
 		{/fbvFormArea}
 	{/if}
