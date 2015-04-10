@@ -30,32 +30,6 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 
 
 	//
-	// Implement protected template methods from PKPSubmissionFileDAO
-	//
-	/**
-	 * @copydoc PKPSubmissionFileDAO::getDelegateClassNames()
-	 */
-	function getDelegateClassNames() {
-		return array_replace(
-			parent::getDelegateClassNames(),
-			array(
-			)
-		);
-	}
-
-	/**
-	 * @copydoc PKPSubmissionFileDAO::getGenreCategoryMapping()
-	 */
-	function getGenreCategoryMapping() {
-		return array_replace(
-			parent::getGenreCategoryMapping(),
-			array(
-			)
-		);
-	}
-
-
-	//
 	// Protected helper methods
 	//
 	/**
