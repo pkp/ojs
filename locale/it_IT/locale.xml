@@ -566,8 +566,8 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<message key="user.register.selectJournal">Seleziona una rivista a cui registrarsi</message>
 	<message key="user.register.noJournals">Non ci sono riviste a cui ti puoi registrare in questo sito.</message>
 	<message key="user.register.privacyStatement">Tutela della privacy</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> se sei gi&#x00E0; a questo o a un'altra rivista su questo sito.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> Se <strong>non</strong> sei gi&#x00E0; registrato a questo o un'altra rivista su questo sito.]]></message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">IMPORTANTE: clicca qui</a> se sei gi&#x00E0; registrat* a questo o a un'altra rivista su questo sito.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">IMPORTANTE: clicca qui</a> Se <strong>non</strong> sei gi&#x00E0; registrato a questo o un'altra rivista su questo sito.]]></message>
 	<message key="user.register.loginToRegister">Inserisci la tua username e la password per registrarti a questa rivista.</message>
 	<message key="user.register.registrationDisabled">Questa rivista attualmente non sta accettando registrazioni di utenti.</message>
 	<message key="user.register.form.passwordLengthTooShort">La password Che hai inserito non è abbastanza lunga.</message>
