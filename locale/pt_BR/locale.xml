@@ -44,7 +44,11 @@
 	<message key="navigation.infoForLibrarians">Para Bibliotecários</message>
 	<message key="navigation.infoForAuthors.long">Informação para Autores</message>
 	<message key="navigation.infoForLibrarians.long">Informação para Bibliotecários</message>
-	
+    <message key="navigation.management">Gestão</message>
+    <message key="navigation.tools">Ferramentas</message>
+    <message key="navigation.tools.importExport">Importar / Exportar</message>
+    <message key="navigation.tools.statistics">Estatísticas</message>
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Não designado</message>
 	<message key="common.queue.short.submissionsUnassigned">Não designado</message>
