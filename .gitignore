@@ -1,4 +1,5 @@
 config.inc.php
+cache
 build
 temp
 files
@@ -6,3 +7,4 @@ files
 .project
 .buildpath
 .settings
+.idea

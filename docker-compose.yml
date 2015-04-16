@@ -1,0 +1,23 @@
+web:
+    image: arturluizbr/apache-php:php5.6-development
+    ports:
+        - "80:80"
+        - "443:443"
+    links:
+        - mysql:db
+    volumes:
+        - ./:/var/www/html
+        - ./php.ini:/usr/local/etc/php/conf.d/php.ini:ro
+        - ./logs:/var/log/
+
+# MySQL Server Container
+mysql:
+    image: mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: periodicos
+        MYSQL_PASSWORD: periodicos
+        MYSQL_DATABASE: periodicos
+    volumes:
+        - ./mysql-data:/var/lib/mysql
+        - ./mysql.conf:/etc/mysql/conf.d/mysql.conf:ro
