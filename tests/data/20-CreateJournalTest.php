@@ -42,7 +42,7 @@ class CreateJournalTest extends WebTestCase {
 		$this->typeTinyMCE('description-en_US', 'The Journal of Public Knowledge is a peer-reviewed quarterly publication on the subject of public access to science.');
 		$this->typeTinyMCE('description-fr_CA', 'Le Journal de Public Knowledge est une publication trimestrielle évaluée par les pairs sur le thème de l\'accès du public à la science.');
 		$this->type('css=[id^=path-]', 'publicknowledge');
-		$this->click('css=[id^=submitFormButton-]');
+		$this->clickAndWait('css=[id^=submitFormButton-]');
 		$this->waitForElementPresent('css=h2:contains(\'Settings Wizard\')');
 		$this->waitJQuery();
 	}

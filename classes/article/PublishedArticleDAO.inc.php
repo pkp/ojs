@@ -90,7 +90,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function getPublishedArticles($issueId) {
 		$params = array_merge(
-			$this->_getFetchParameters(),
+			$this->getFetchParameters(),
 			array(
 				(int) $issueId,
 				(int) $issueId
@@ -102,10 +102,10 @@ class PublishedArticleDAO extends ArticleDAO {
 				s.*,
 				COALESCE(o.seq, ps.seq) AS section_seq,
 				ps.seq,
-				' . $this->_getFetchColumns() . '
+				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				LEFT JOIN submissions s ON ps.submission_id = s.submission_id
-				' . $this->_getFetchJoins() . '
+				' . $this->getFetchJoins() . '
 				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND o.issue_id = ?)
 			WHERE	ps.submission_id = s.submission_id
 				AND ps.issue_id = ?
@@ -146,16 +146,16 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return DAOResultFactory
 	 */
 	function getPublishedArticlesByJournalId($journalId = null, $rangeInfo = null, $reverse = false) {
-		$params = $this->_getFetchParameters();
+		$params = $this->getFetchParameters();
 		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieveRange(
 			'SELECT	ps.*,
 				s.*,
-				' . $this->_getFetchColumns() . '
+				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				LEFT JOIN submissions s ON ps.submission_id = s.submission_id
 				LEFT JOIN issues i ON ps.issue_id = i.issue_id
-				' . $this->_getFetchJoins() . '
+				' . $this->getFetchJoins() . '
 			WHERE 	i.published = 1
 				' . ($journalId?'AND s.context_id = ?':'') . '
 				AND s.status <> ' . STATUS_DECLINED . '
@@ -189,16 +189,16 @@ class PublishedArticleDAO extends ArticleDAO {
 				se.hide_author AS section_hide_author,
 				COALESCE(o.seq, ps.seq) AS section_seq,
 				ps.seq,
-				' . $this->_getFetchColumns() . '
+				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN submissions s ON (ps.submission_id = s.submission_id)
-				' . $this->_getFetchJoins() . '
+				' . $this->getFetchJoins() . '
 				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND ps.issue_id = o.issue_id)
 			WHERE	ps.issue_id = ?
 				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY section_seq ASC, ps.seq ASC',
 			array_merge(
-				$this->_getFetchParameters(),
+				$this->getFetchParameters(),
 				array((int) $issueId)
 			)
 		);
@@ -239,16 +239,16 @@ class PublishedArticleDAO extends ArticleDAO {
 		$result = $this->retrieve(
 			'SELECT	ps.*,
 				s.*,
-				' . $this->_getFetchColumns() . '
+				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN submissions s ON (ps.submission_id = s.submission_id)
-				' . $this->_getFetchJoins() . '
+				' . $this->getFetchJoins() . '
 			WHERE	se.section_id = ?
 				AND ps.issue_id = ?
 				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY ps.seq ASC',
 			array_merge(
-				$this->_getFetchParameters(),
+				$this->getFetchParameters(),
 				array(
 					(int) $sectionId,
 					(int) $issueId
@@ -304,17 +304,17 @@ class PublishedArticleDAO extends ArticleDAO {
 			return $returner;
 		}
 
-		$params = $this->_getFetchParameters();
+		$params = $this->getFetchParameters();
 		$params[] = (int) $articleId;
 		if ($journalId) $params[] = (int) $journalId;
 
 		$result = $this->retrieve(
 			'SELECT	ps.*,
 				s.*,
-				' . $this->_getFetchColumns() . '
+				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN submissions s ON (ps.submission_id = s.submission_id)
-				' . $this->_getFetchJoins() . '
+				' . $this->getFetchJoins() . '
 			WHERE	s.submission_id = ?' .
 				($journalId?' AND s.context_id = ?':''),
 			$params
@@ -366,15 +366,15 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return array The articles identified by setting.
 	 */
 	function getBySetting($settingName, $settingValue, $journalId = null) {
-		$params = $this->_getFetchParameters();
+		$params = $this->getFetchParameters();
 		$params[] = $settingName;
 
 		$sql = 'SELECT	ps.*,
 				s.*,
-				' . $this->_getFetchColumns() . '
+				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN submissions s ON ps.submission_id = s.submission_id
-				' . $this->_getFetchJoins();
+				' . $this->getFetchJoins();
 
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN submission_settings sst ON s.submission_id = sst.submission_id AND sst.setting_name = ?

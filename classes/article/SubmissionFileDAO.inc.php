@@ -30,32 +30,6 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 
 
 	//
-	// Implement protected template methods from PKPSubmissionFileDAO
-	//
-	/**
-	 * @copydoc PKPSubmissionFileDAO::getDelegateClassNames()
-	 */
-	function getDelegateClassNames() {
-		return array_replace(
-			parent::getDelegateClassNames(),
-			array(
-			)
-		);
-	}
-
-	/**
-	 * @copydoc PKPSubmissionFileDAO::getGenreCategoryMapping()
-	 */
-	function getGenreCategoryMapping() {
-		return array_replace(
-			parent::getGenreCategoryMapping(),
-			array(
-			)
-		);
-	}
-
-
-	//
 	// Protected helper methods
 	//
 	/**
@@ -64,6 +38,8 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 	function fromRow($row) {
 		if (isset($row['artwork_file_id']) && is_numeric($row['artwork_file_id'])) {
 			return parent::fromRow($row, 'SubmissionArtworkFile');
+		} elseif (isset($row['supplementary_file_id']) && is_numeric($row['supplementary_file_id'])) {
+			return parent::fromRow($row, 'SupplementaryFile');
 		} else {
 			return parent::fromRow($row, 'SubmissionFile');
 		}

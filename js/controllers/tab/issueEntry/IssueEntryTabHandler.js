@@ -200,9 +200,9 @@
 				$gridRow = gridHandler.getParentRow($(sourceElement)),
 				galleyId = gridHandler.getRowDataId($gridRow);
 
-		this.getHtmlElement().tabs('select',
-				/** @type {string} */ (this.getTabPositionByGalleyId_(galleyId,
-						this.getHtmlElement())));
+		this.getHtmlElement().tabs({
+				active: /** @type {string} */ (this.getTabPositionByGalleyId_(
+						galleyId, this.getHtmlElement()))});
 	};
 
 

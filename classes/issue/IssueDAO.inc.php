@@ -29,7 +29,7 @@ class IssueDAO extends DAO {
 		if ($cache->getCacheId() === 'current') {
 			$issue = $this->getCurrent($id, false);
 		} else {
-			$issue = $this->getById($id, null, false);
+			$issue = $this->getByBestId($id, null, false);
 		}
 		$cache->setCache($id, $issue);
 		return $issue;
