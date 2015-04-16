@@ -220,7 +220,7 @@ umask = 0022
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [finfo]
-mime_database_path = /etc/magic.mime
+; mime_database_path = /etc/magic.mime
 
 
 ;;;;;;;;;;;;;;;;;;;;;
