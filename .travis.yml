@@ -22,7 +22,7 @@ before_install:
   - ./tools/startSubmodulesTRAVIS.sh
 
   # Install composer dependencies
-  - cd lib/pkp && composer install && cd ../..
+  - cd lib/pkp && composer update && cd ../..
 
   # Configure the webserver
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/prepare-webserver.sh; fi

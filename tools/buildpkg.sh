@@ -57,16 +57,16 @@ lib/pkp/lib/vendor/ezyang/htmlpurifier/maintenance		\
 lib/pkp/lib/vendor/ezyang/htmlpurifier/smoketests		\
 lib/pkp/lib/vendor/ezyang/htmlpurifier/tests			\
 lib/pkp/lib/vendor/kriswallsmith				\
-lib/pkp/lb/vendor/leafo/lessphp/tests				\
-lib/pkp/lb/vendor/leafo/lessphp/docs				\
-lib/pkp/lb/vendor/moxiecode/plupload/examples			\
-lib/pkp/lb/vendor/phpmailer/phpmailer/docs			\
-lib/pkp/lb/vendor/phpmailer/phpmailer/examples			\
-lib/pkp/lb/vendor/phpmailer/phpmailer/test			\
-lib/pkp/lb/vendor/robloach					\
-lib/pkp/lb/vendor/smarty/smarty/demo				\
-lib/pkp/lb/vendor/symfony					\
-lib/pkp/lib/phpunit-selenium					\
+lib/pkp/lib/vendor/leafo/lessphp/tests				\
+lib/pkp/lib/vendor/leafo/lessphp/docs				\
+lib/pkp/lib/vendor/moxiecode/plupload/examples			\
+lib/pkp/lib/vendor/phpmailer/phpmailer/docs			\
+lib/pkp/lib/vendor/phpmailer/phpmailer/examples			\
+lib/pkp/lib/vendor/phpmailer/phpmailer/test			\
+lib/pkp/lib/vendor/robloach					\
+lib/pkp/lib/vendor/smarty/smarty/demo				\
+lib/pkp/lib/vendor/symfony					\
+lib/pkp/lib/vendor/phpunit					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test"
