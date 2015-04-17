@@ -43,9 +43,13 @@
 		<br/><br/>
 		{translate key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear()|escape copyrightHolder=$article->getLocalizedCopyrightHolder()|escape}
 	{/if}
-	{if $currentJournal->getSetting('includeLicense') && $ccLicenseBadge}
+	{if $currentJournal->getSetting('includeLicense')}
 		<br /><br />
-		{$ccLicenseBadge}
+		{if $ccLicenseBadge}
+			{$ccLicenseBadge}
+		{elseif $article->getLicenseURL()}
+			{translate key="submission.licenseURL"}: <a href="{$article->getLicenseURL()|escape}" rel="license">{$article->getLicenseURL()|escape}</a>
+		{/if}
 	{/if}
 {/if}
 
@@ -83,12 +87,12 @@
 		document.captureEvents(Event.DBLCLICK);
 	}
 
-	// Make sure to only open the reading tools when double clicking within the galley	
+	// Make sure to only open the reading tools when double clicking within the galley
 	if (document.getElementById('inlinePdfResizer')) {
-		context = document.getElementById('inlinePdfResizer');	
+		context = document.getElementById('inlinePdfResizer');
 	}
 	else if (document.getElementById('content')) {
-		context = document.getElementById('content');	
+		context = document.getElementById('content');
 	}
 	else {
 		context = document;
