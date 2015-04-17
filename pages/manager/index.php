@@ -94,6 +94,8 @@ switch ($op) {
 	case 'updateEmail':
 	case 'deleteCustomEmail':
 	case 'resetEmail':
+	case 'exportEmails':
+	case 'uploadEmails':
 	case 'disableEmail':
 	case 'enableEmail':
 	case 'resetAllEmails':

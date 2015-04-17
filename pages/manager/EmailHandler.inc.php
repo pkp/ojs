@@ -210,7 +210,189 @@ class EmailHandler extends ManagerHandler {
 
 		Request::redirect(null, null, 'emails');
 	}
+	
+	/**
+	 * Export the selected email templates as XML
+	 * @param $args array
+	 * @@param $request PKPRequest
+	 */
+	function exportEmails($args, $request) {
+		$this->validate();
+		import('lib.pkp.classes.xml.XMLCustomWriter');
+		
+		$selectedEmailKeys = (array) $request->getUserVar('tplId');
+		if (empty($selectedEmailKeys)) {
+			$request->redirect(null, null, 'emails');
+		}
+		
+		$journal = Request::getJournal();
+		$doc = XMLCustomWriter::createDocument();
+		$emailTexts = XMLCustomWriter::createElement($doc, 'email_texts');
+		$emailTexts->setAttribute('locale', AppLocale::getLocale());
+		$emailTexts->setAttribute('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
+		
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
+		$emailTemplates = $emailTemplateDao->getEmailTemplates(AppLocale::getLocale(), $journal->getId());
+		
+		foreach($emailTemplates as $emailTemplate) {
+			$emailKey = $emailTemplate->getData('emailKey');
+			if (!in_array($emailKey, $selectedEmailKeys)) continue;
+			
+			$subject = $emailTemplate->getData('subject');
+			$body = $emailTemplate->getData('body');
+			
+			$emailTextNode = XMLCustomWriter::createElement($doc, 'email_text');
+			XMLCustomWriter::setAttribute($emailTextNode, 'key', $emailKey);
+			
+			//append subject node
+			$subjectNode = XMLCustomWriter::createChildWithText($doc, $emailTextNode, 'subject', $subject, false);
+			XMLCustomWriter::appendChild($emailTextNode, $subjectNode);
+			
+			//append body node
+			$bodyNode = XMLCustomWriter::createChildWithText($doc, $emailTextNode, 'body', $body, false);
+			XMLCustomWriter::appendChild($emailTextNode, $bodyNode);
+			
+			//append email_text node
+			XMLCustomWriter::appendChild($emailTexts, $emailTextNode);
+		}
+		
+		XMLCustomWriter::appendChild($doc, $emailTexts);
+		
+		header("Content-Type: application/xml");
+		header("Cache-Control: private");
+		header("Content-Disposition: attachment; filename=\"email-templates-" . date('Y-m-d-H-i-s') . ".xml\"");
+		
+		XMLCustomWriter::printXML($doc);
+	}
+	
+	/**
+	 * Upload a custom email template file
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function uploadEmails($args, $request) {
+		$this->validate();
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
 
+		$journal = $request->getJournal();
+		$journalId = $journal->getId();
+		
+		$uploadName = 'email_file';
+		$fileName = $fileManager->getUploadedFileName($uploadName);
+		if (!$fileName) {
+			$request->redirect(null, null, 'emails');
+		}
+		
+		$filesDir = Config::getVar('files', 'files_dir');
+		$filePath = $filesDir . '/journals/' . $journalId . '/' . $fileName;
+		
+		if (!$fileManager->uploadError($uploadName)) {
+			if ($fileManager->uploadedFileExists($uploadName)) {
+				$uploadedFilePath = $fileManager->getUploadedFilePath($uploadName);
+				if ($this->_saveEmailTemplates($uploadedFilePath, $journal)) {
+					if ($fileManager->deleteFile($uploadedFilePath)) {
+						$this->_showMessage($request);
+						$request->redirect(null, null, 'emails');
+					}
+				}
+			}
+		}
+		
+		$this->_showMessage($request, false);
+		$request->redirect(null, null, 'emails');
+	}
+	
+	/**
+	 * Save a custom email template file
+	 * @param $filePath string
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function _saveEmailTemplates($filePath, $journal) {
+		$this->validate();
+		import('lib.pkp.classes.xml.XMLParser');
+		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
+		
+		$xmlParser = new XMLParser();
+		
+		$struct = $xmlParser->parseStruct($filePath);
+		$locale = $struct['email_texts'][0]['attributes']['locale'];
+
+		$emailTexts = $struct['email_text'];
+		$subjects = $struct['subject'];
+		$bodies = $struct['body'];
+		
+		// check if the parsed xml has the correct structure
+		if (!$emailTexts || !$subjects || !$bodies) return false;
+
+		$nodeSizes = array(count($emailTexts), count($subjects), count($bodies));
+		if (count(array_unique($nodeSizes)) > 1) return false;
+
+		$journalId = $journal->getId();
+		$supportedLocales = $journal->getSupportedLocaleNames();
+
+		foreach($emailTexts as $index => $emailText) {
+			$emailKey = $emailText['attributes']['key'];
+			$subject = $subjects[$index]['value'];
+			$body = $bodies[$index]['value'];
+
+			$emailTemplate = $emailTemplateDao->getLocaleEmailTemplate($emailKey, $journalId);
+			$emailTemplateLocaleData = $emailTemplate->localeData;
+			
+			// just update supported locales
+			foreach($emailTemplateLocaleData as $emailTemplateLocale => $data) {
+				if (!isset($supportedLocales[$emailTemplateLocale])) {
+					unset($emailTemplateLocaleData[$emailTemplateLocale]);
+				}
+			}
+			$emailTemplate->localeData = $emailTemplateLocaleData; 
+			
+			$emailTemplate->setAssocType(ASSOC_TYPE_JOURNAL);
+			$emailTemplate->setAssocId($journalId);
+			
+			if ($emailTemplate->getCanDisable()) {
+				$emailTemplate->setEnabled($emailTemplate->getData('enabled'));
+			}
+			
+			$emailTemplate->setSubject($locale, $subject);
+			$emailTemplate->setBody($locale, $body);
+
+			if ($emailTemplate->getEmailId() != null) {
+				$emailTemplateDao->updateLocaleEmailTemplate($emailTemplate);
+			} else {
+				$emailTemplateDao->insertLocaleEmailTemplate($emailTemplate);
+			}
+		}
+		return true;
+	}
+	
+	/**
+	 * Show success or error message
+	 * @param $request PKPRequest
+	 * @param $success boolean
+	 */
+	function _showMessage($request, $success = true) {
+		$this->validate();
+		import('classes.notification.NotificationManager');
+		$notificationManager = new NotificationManager();
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
+		
+		if ($success == true) {
+			$notificationType = NOTIFICATION_TYPE_SUCCESS;
+			$message = 'manager.emails.uploadSuccess';
+		} else {
+			$notificationType = NOTIFICATION_TYPE_ERROR;
+			$message = 'manager.emails.uploadError';
+		}
+		
+		$user = $request->getUser();
+		$notificationManager->createTrivialNotification(
+			$user->getId(),
+			$notificationType,
+			array('contents' => __($message))
+		);
+	}
 }
-
 ?>
