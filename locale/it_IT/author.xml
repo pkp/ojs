@@ -27,11 +27,11 @@
 	<message key="author.submit.step4">Fase 4. Caricamento di file supplementari</message>
 	<message key="author.submit.step4a">Fase 4a. Aggiungi un file supplementare</message>
 	<message key="author.submit.step5">Fase 5. Conferma la proposta</message>
-	<message key="author.submit.start">Inizio</message>
-	<message key="author.submit.metadata">Inserisci i metadati</message>
-	<message key="author.submit.upload">Carica il file della proposta</message>
-	<message key="author.submit.supplementaryFiles">Carica i file supplementari</message>
-	<message key="author.submit.confirmation">Conferma</message>
+	<message key="author.submit.start">1. Inizio</message>
+	<message key="author.submit.metadata">3. Inserisci i metadati</message>
+	<message key="author.submit.upload">2. Carica il file della proposta</message>
+	<message key="author.submit.supplementaryFiles">4. Carica i file supplementari</message>
+	<message key="author.submit.confirmation">5. Conferma</message>
 	<message key="author.submit.cancelSubmission">Puoi completare questa proposta in un momento successivo, selezionando la voce "Proposteattive" nell'home page della sezione Autore.</message>
 	<message key="author.submit.notAccepting">In questo momento la rivista non accetta nessuna proposta.</message>
 	<message key="author.submit.requestWaiver">Richiedi un'esenzione</message>

@@ -34,7 +34,7 @@
 	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Non mostrare in homepage</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlock">Mostra il blocco</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Tutte le pagine</message>
-	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Mostra in tutte le pagine</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Mostra il blocco su tutte le pagine</message>
 	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Non mostrare il blocco su tutte le pagine</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Homepage</message>
 	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Mostra il blocco solo in homepage</message>
@@ -46,7 +46,7 @@
 
 	<!-- External Feed Settings -->
 	<message key="plugins.generic.externalFeed.settings">Impostazioni</message>
-	<message key="plugins.generic.externalFeed.settings.description">Personalizza l'aspetto degli elementi del feed esterno</message>
+	<message key="plugins.generic.externalFeed.settings.description">Personalizza l'aspetto degli item del feed esterno</message>
 	<message key="plugins.generic.externalFeed.settings.styleSheet">Mostra</message>
 	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Foglio di stile CSS del feed</message>
 	<message key="plugins.generic.externalFeed.settings.stylesheetDescription"><![CDATA[Puoi caricare un foglio di stile personalizzato al posto di quello standard di questo plugin. Il CSS standard pu&#242; essere visualizzato qui]]></message>
@@ -66,7 +66,7 @@
 	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Mostra il blocco in homepage</message>
 	<message key="plugins.generic.externalFeed.form.displayBlockAll">Mostra il blocco su tutte le pagine</message>
 	<message key="plugins.generic.externalFeed.form.recentItems1">Limita a</message>
-	<message key="plugins.generic.externalFeed.form.recentItems2">elementi del feed</message>
+	<message key="plugins.generic.externalFeed.form.recentItems2">item del feed</message>
 	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Salva e creane un altro</message>
 
 </locale>
