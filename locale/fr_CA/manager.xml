@@ -90,7 +90,6 @@
 	<message key="manager.sections.abstractsNotRequired">Résumé non obligatoire</message>
 	<message key="manager.sections.assigned">Rédacteurs de cette rubrique</message>
 	<message key="manager.sections.create">Créer une rubrique</message>
-	<message key="manager.sections.disableComments">Désactiver les commentaires des lecteurs pour cette rubrique.</message>
 	<message key="manager.section.sectionEditorInstructions">Ajouter un Rédacteur de rubrique à cette rubrique afin que les soumissions soient automatiquement assignées à ce Rédacteur de rubrique. (Sinon, les Rédacteurs de rubriques peuvent être assignés manuellement, suite à la réception d'une soumission.) S'il a été ajouté, un Rédacteur de rubrique peut automatiquement être assigné pour superviser l'ÉVALUATION (évaluation par les pairs) et/ou la RÉVISION (révision, mise ne page et correction d'épreuves) des soumissions de cette rubrique. Des Rédacteurs de rubrique peuvent être créés en cliquant sur Rédacteur de rubrique sous Rôles dans Gestion de la revue.</message>
 	<message key="manager.sections.editorRestriction">Les articles ne peuvent être soumis que par les Rédacteurs et les Rédacteurs de rubrique.</message>
 	<message key="manager.sections.editors">Rédacteurs de rubrique</message>

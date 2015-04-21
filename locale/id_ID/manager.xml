@@ -121,7 +121,6 @@
 	<message key="manager.sections.assigned"> Editor Bagian ini </message> 
 	<message key="manager.sections.confirmDelete"> Apakah Anda yakin ingin menghapus bagian ini secara permanen? Anda akan harus menerbitkan ulang artikel apapun di bagian ini.</message> 
 	<message key="manager.sections.create"> Buat Bagian</message>	
-	<message key="manager.sections.disableComments"> Komentar pembaca di bagian ini tidak aktif.</message> 
 	<message key="manager.section.sectionEditorInstructions"> Tambahkan Editor Bagian ke bagian ini agar naskah secara otomastis ditugaskan kepada Editor Bagian. (jika tidak, Editor Bagian akan ditugaskan secara manual, setelah naskah masuk). Jika ditambahkan, Editor Bagian secara otomatis dapat ditugaskan untuk mengawasi REVIEW (peer review) dan/ atau PENGEDITAN (copyediting, layout, dan proofreading) naskah ke bagian ini. Editor Bagian dibuat dengan mengklik Editor Bagian di bawah Peran di Manajemen Jurnal. </message> 
 	<message key="manager.sections.editorRestriction"> Item hanya bisa diserahkan oleh editor dan editor bagian.</message>
 	<message key="manager.sections.editors"> Editor Bagian </message> 

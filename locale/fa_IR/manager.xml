@@ -93,7 +93,6 @@
 	<message key="manager.sections.abstractsNotRequired">نیاز به چکیده ندارد</message>
 	<message key="manager.sections.assigned">دبیر این نوع مقاله</message>
 	<message key="manager.sections.create">ایجاد نوع مقاله</message>
-	<message key="manager.sections.disableComments">غیر فعال کردن ارائه نظر توسط خوانندگان برای این نوع مقاله</message>
 	<message key="manager.section.sectionEditorInstructions">از بین دبیران یک نفر را انتخاب و به عنوان دبیر این نوع مقاله انتخاب کنید.</message>
 	<message key="manager.sections.editorRestriction">این نوع مقاله فقط توسط دبیران قابل ارسال است.</message>
 	<message key="manager.sections.editors">دبیران نوع مقاله</message>

@@ -114,7 +114,6 @@
 	<message key="manager.sections.abstractsNotRequired">不要求文章摘要</message>
 	<message key="manager.sections.assigned">此栏目的编辑</message>
 	<message key="manager.sections.create">新增栏目</message>
-	<message key="manager.sections.disableComments">这个栏目禁止读者评论</message>
 	<message key="manager.section.sectionEditorInstructions">添加一个栏目编辑到这个栏目用于投稿自动指派. (另外，栏目编辑也可以在投稿到来后被手动指派.)当添加后，栏目编辑可以自动指派有监督审稿和（或）编辑该栏目内的投稿，栏目编辑可以通过点击期刊管理的角色来创建.</message>
 	<message key="manager.sections.editorRestriction">只有编辑和栏目编辑可以发送项目。</message>
 	<message key="manager.sections.editors">栏目编辑</message>

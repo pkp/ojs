@@ -516,7 +516,6 @@
 	<message key="manager.language.reloadLocalizedDefaultSettings">この言語のデフォルト設定をリロードする</message>
 	<message key="manager.payment.options.purchaseArticleFee">論文購入料</message>
 	<message key="manager.sections.abstractsNotRequired">抄録を必要としない</message>
-	<message key="manager.sections.disableComments">このセクションは読者コメント機能を無効にする</message>
 	<message key="manager.sections.form.mustAllowPermission">各セクション編集者を割り当てるために少なくとも1つはチェックボックスをチェックしてください。</message>
 	<message key="manager.sections.form.reviewFormId">正しい査読フォームを選択したことを確認してください。</message>
 	<message key="manager.sections.hideTocAuthor">このセクションのアイテムは目次に著者名を表示しない</message>

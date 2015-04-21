@@ -90,7 +90,6 @@
 	<message key="manager.sections.abstractsNotRequired">Không yêu cầu tóm tắt</message>
 	<message key="manager.sections.assigned">Các BTV của Chuyên mục này</message>
 	<message key="manager.sections.create">Tạo chuyên mục mới</message>
-	<message key="manager.sections.disableComments">Không có bạn đọc bình luận chuyên mục này.</message>
 	<message key="manager.section.sectionEditorInstructions">Lựa chọn trong số BTV hiện có và "Bổ nhiệm BTV" cho chuyên mục này.</message>
 	<message key="manager.sections.editorRestriction">Chỉ BTV chính và BTV chuyên mục mới có thể nộp bài.</message>
 	<message key="manager.sections.editors">BTV chuyên mục</message>

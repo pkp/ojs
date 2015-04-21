@@ -37,13 +37,8 @@ class UserAction {
 
 		HookRegistry::call('UserAction::mergeUsers', array(&$oldUserId, &$newUserId));
 
-		$commentDao = DAORegistry::getDAO('CommentDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$newUser = $userDao->getById($newUserId);
-		foreach ($commentDao->getByUserId($oldUserId) as $comment) {
-			$comment->setUser($newUser);
-			$commentDao->updateObject($comment);
-		}
 
 		$noteDao = DAORegistry::getDAO('NoteDAO');
 		$notes = $noteDao->getByUserId($oldUserId);

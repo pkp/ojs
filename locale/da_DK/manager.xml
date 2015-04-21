@@ -111,7 +111,6 @@
 	<message key="manager.sections.abstractsNotRequired">Kræv ikke abstracts</message>
 	<message key="manager.sections.assigned">Redaktører for denne sektion</message>
 	<message key="manager.sections.create">Opret sektion</message>
-	<message key="manager.sections.disableComments">Deaktiver mulighed for læserkommentarer i denne sektion</message>
 	<message key="manager.section.sectionEditorInstructions">Vælg blandt de tilgængelige sektionsredaktører, og "Tildel redaktør" til denne sektion.</message>
 	<message key="manager.sections.editorRestriction">Elementer kan kun fremsendes af redaktører og sektionsredaktører.</message>
 	<message key="manager.sections.editors">Sektionsredaktører</message>

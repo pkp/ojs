@@ -77,6 +77,4 @@
 
 {include file="article/pubIds.tpl"}
 
-{include file="article/comments.tpl"}
-
 {include file="article/footer.tpl"}

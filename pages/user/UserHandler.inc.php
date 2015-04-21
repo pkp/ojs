@@ -263,36 +263,6 @@ class UserHandler extends PKPUserHandler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_GRID);
 	}
 
-	/**
-	 * View the public user profile for a user, specified by user ID,
-	 * if that user should be exposed for public view.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function viewPublicProfile($args, $request) {
-		$this->validate(false);
-		$templateMgr = TemplateManager::getManager($request);
-		$userId = (int) array_shift($args);
-
-		$accountIsVisible = false;
-
-		// Ensure that the user's profile info should be exposed:
-
-		$commentDao = DAORegistry::getDAO('CommentDAO');
-		if ($commentDao->attributedCommentsExistForUser($userId)) {
-			// At least one comment is attributed to the user
-			$accountIsVisible = true;
-		}
-
-		if(!$accountIsVisible) $request->redirect(null, 'index');
-
-		$userDao = DAORegistry::getDAO('UserDAO');
-		$user = $userDao->getById($userId);
-
-		$templateMgr->assign('user', $user);
-		$templateMgr->display('user/publicProfile.tpl');
-	}
-
 
 	//
 	// Payments

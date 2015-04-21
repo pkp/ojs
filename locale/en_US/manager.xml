@@ -91,7 +91,6 @@
 	<message key="manager.sections.confirmDelete">Are you sure you want to permanently delete this section?</message>
 	<message key="manager.sections.alertDelete">Before this section can be deleted, you must move articles published within it into other sections.</message>
 	<message key="manager.sections.create">Create Section</message>
-	<message key="manager.sections.disableComments">Disable reader comments for this section.</message>
 	<message key="manager.section.sectionEditorInstructions">Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management.</message>
 	<message key="manager.sections.editorRestriction">Items can only be submitted by Editors and Section Editors.</message>
 	<message key="manager.sections.editors">Section editors</message>

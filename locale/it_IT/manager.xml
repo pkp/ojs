@@ -126,7 +126,6 @@
 	<message key="manager.sections.assigned">Editor di questa sezione</message>
 	<message key="manager.sections.confirmDelete">Sei sicuro di voler cancellare definitivamente questa sezione? Se sì dovrete ripubblicare tutti gli articoli attualmente presenti.</message>
 	<message key="manager.sections.create">Crea una sezione</message>
-	<message key="manager.sections.disableComments">Disabilita i commenti dei lettori per questa sezione</message>
 	<message key="manager.section.sectionEditorInstructions">Aggiungi un Section Editor a questa sezione per assegnargli automaticamente le proposte inviate a questa sezione (comunque potrai sempre assegnare manualmente un SE, quando arriva ciascuna proposta).
 Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della REVISIONE (peer review) e/o dell'EDITING (copyediting, layout e correzione delle bozze) delle submission di questa sezione. I SE vengono creati cliccando 'Section editor' nel menù dei ruoli nella pagina di gestione della rivista.</message>
 	<message key="manager.sections.editorRestriction">Solo editor e section editor possono proporre contributi da pubblicare in questa sezione</message>

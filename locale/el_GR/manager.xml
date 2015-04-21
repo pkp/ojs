@@ -535,7 +535,6 @@
 	<message key="manager.language.reloadLocalizedDefaultSettings">Επαναφόρτωση τις εξ'ορισμού παραμέτρους συγκεκριμένης τοπικής ρύθμισης</message>
 	<message key="manager.payment.options.purchaseArticleFee">Αγορά Άρθρου</message>
 	<message key="manager.sections.abstractsNotRequired">Μην απαιτείτε περιλήψεις</message>
-	<message key="manager.sections.disableComments">Απενεργοποιήστε τα σχόλια αναγνωστών για αυτή την ενότητα.</message>
 	<message key="manager.sections.form.mustAllowPermission">Σιγουρευτείτε ότι τουλάχιστον ένα checkbox έχει τσεκαριστεί για κάθε ανάθεση Επιμελητή Ενότητας.</message>
 	<message key="manager.sections.form.reviewFormId">Σιγουρευτείτε ότι έχετε επιλέξει μια έγκυρη φόρμα αξιολόγησης.</message>
 	<message key="manager.sections.hideTocAuthor">Παραλείψτε τα ονόματα των συγγραφέων για τεκμήρια ενοτήτων από τον πίνακα περιεχομένων του τεύχους</message>

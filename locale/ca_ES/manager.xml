@@ -90,7 +90,6 @@
 	<message key="manager.sections.abstractsNotRequired">No necessiten resums</message>
 	<message key="manager.sections.assigned">Editors/es per a aquesta secció</message>
 	<message key="manager.sections.create">Crea una secció</message>
-	<message key="manager.sections.disableComments">Desactiva els comentaris dels lectors/es per a aquesta secció.</message>
 	<message key="manager.section.sectionEditorInstructions">Seleccioneu un dels editors/es de secció disponibles i assigneu-lo a aquesta secció.</message>
 	<message key="manager.sections.editorRestriction">Només els editors/es i els editors/es de secció poden fer trameses.</message>
 	<message key="manager.sections.editors">Editors/es de secció</message>

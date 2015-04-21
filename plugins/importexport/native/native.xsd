@@ -180,7 +180,6 @@
 		<attribute name="hide_title" type="int" />
 		<attribute name="hide_author" type="int" />
 		<attribute name="hide_about" type="int" />
-		<attribute name="disable_comments" type="int" />
 		<attribute name="abstract_word_count" type="int" />
 	</complexType>
 

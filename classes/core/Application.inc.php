@@ -95,7 +95,6 @@ class Application extends PKPApplication {
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
 			'CategoryDAO' => 'classes.journal.categories.CategoryDAO',
-			'CommentDAO' => 'lib.pkp.classes.comment.CommentDAO',
 			'EditorSubmissionDAO' => 'classes.submission.editor.EditorSubmissionDAO',
 			'EmailTemplateDAO' => 'classes.mail.EmailTemplateDAO',
 			'FooterCategoryDAO' => 'lib.pkp.classes.context.FooterCategoryDAO',

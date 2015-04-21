@@ -211,22 +211,6 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Return boolean indicating if RT comments should be disabled.
-	 * @return boolean
-	 */
-	function getDisableComments() {
-		return $this->getData('disableComments');
-	}
-
-	/**
-	 * Set if RT comments should be disabled.
-	 * @param $disableComments boolean
-	 */
-	function setDisableComments($disableComments) {
-		return $this->setData('disableComments', $disableComments);
-	}
-
-	/**
 	 * Get localized section policy.
 	 * @return string
 	 */
