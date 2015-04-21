@@ -6,3 +6,4 @@ files
 .project
 .buildpath
 .settings
+*.bak

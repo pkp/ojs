@@ -15,6 +15,8 @@
 
 <locale name="it_IT" full_name = "Italiano">
 	<message key="admin.hostedJournals">Riviste</message>
+	<message key="admin.settings.security">Sicurezza</message>
+	<message key="admin.settings.security.plugins">Impedisci agli amministratori delle riviste di installare, aggiornare e cancellare i plugin.</message>
 	<message key="admin.settings.journalRedirect">Redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista.</message>
 	<message key="admin.settings.noJournalRedirect">Nessun redirect</message>
