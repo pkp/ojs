@@ -75,7 +75,7 @@
 
 <!ELEMENT copyright_year (#PCDATA)>
 
-<!ELEMENT permissions (license_url?, copyright_holder?, copyright_year?)>
+<!ELEMENT permissions (license_url?, copyright_holder*, copyright_year?)>
 
 <!ELEMENT sponsor (#PCDATA)>
 	<!ATTLIST sponsor
