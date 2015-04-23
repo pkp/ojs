@@ -44,7 +44,7 @@ class ReferralPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.googleAnalytics.manager.settings'));
+			$verbs[] = array('settings', __('plugins.generic.referral.settings'));
 		}
 		return parent::getManagementVerbs($verbs);
 	}
