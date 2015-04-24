@@ -112,7 +112,7 @@ class AuthorAction extends Action {
 			$user =& $request->getUser();
 			$journal =& $request->getJournal();
 			import('classes.mail.ArticleMailTemplate');
-			$email = new ArticleMailTemplate($authorSubmission, 'REVISED_VERSION_NOTIFY');			
+			$email = new ArticleMailTemplate($authorSubmission, 'REVISED_VERSION_NOTIFY', null, null, null, false);
 			if ($email->isEnabled()) {
 				$isEditor = false;
 				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($authorSubmission->getId());
