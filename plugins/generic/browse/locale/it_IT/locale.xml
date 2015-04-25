@@ -32,7 +32,7 @@
 	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Tipologie escluse</message>
 	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Scegli le tipologie da escludere</message>
 
-	<message key="plugins.generic.browse.search.sections">per sezioni</message>
+	<message key="plugins.generic.browse.search.sections">per sezione</message>
 	<message key="plugins.generic.browse.search.sectionIndex">Naviga l'indice della sezione</message>
 	<message key="plugins.generic.browse.search.sectionDetails">Dettagli della sezione</message>
 	<message key="plugins.generic.browse.search.identifyTypes">per tipologia</message>
