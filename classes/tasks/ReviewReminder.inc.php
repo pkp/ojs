@@ -24,6 +24,13 @@ class ReviewReminder extends ScheduledTask {
 		$this->ScheduledTask();
 	}
 
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('admin.scheduledTask.reviewReminder');
+	}
+
 	function sendReminder ($reviewAssignment, $submission, $context) {
 		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
@@ -85,7 +92,10 @@ class ReviewReminder extends ScheduledTask {
 
 	}
 
-	function execute() {
+	/**
+	 * @see ScheduledTask::executeActions()
+	 */
+	protected function executeActions() {
 		$submission = null;
 		$context = null;
 

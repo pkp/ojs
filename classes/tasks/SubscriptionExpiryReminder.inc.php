@@ -24,6 +24,13 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$this->ScheduledTask();
 	}
 
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('admin.scheduledTask.subscriptionExpiryReminder');
+	}
+
 	function sendReminder ($subscription, $journal, $emailKey) {
 
 		$userDao = DAORegistry::getDAO('UserDAO');
@@ -214,7 +221,10 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		}
 	}
 
-	function execute() {
+	/**
+	 * @see ScheduledTask::executeActions()
+	 */
+	protected function executeActions() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journals = $journalDao->getAll(true);
 

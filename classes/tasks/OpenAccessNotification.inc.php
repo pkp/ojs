@@ -24,6 +24,13 @@ class OpenAccessNotification extends ScheduledTask {
 		$this->ScheduledTask();
 	}
 
+	/**
+	 * @see ScheduledTask::getName()
+	 */
+	function getName() {
+		return __('admin.scheduledTask.openAccessNotification');
+	}
+
 	function sendNotification ($users, $journal, $issue) {
 		if ($users->getCount() != 0) {
 
@@ -91,7 +98,10 @@ class OpenAccessNotification extends ScheduledTask {
 		}
 	}
 
-	function execute() {
+	/**
+	 * @see ScheduledTaks::executeActions()
+	 */
+	protected function executeActions() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journals = $journalDao->getAll(true);
 
