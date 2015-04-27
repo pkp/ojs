@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/usageStats/UsageStatsReportPlugin.inc.php
  *
- * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2013-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -14,56 +14,14 @@
  */
 
 
-import('classes.plugins.ReportPlugin');
+import('lib.pkp.plugins.generic.usageStats.PKPUsageStatsReportPlugin');
 
 define('OJS_METRIC_TYPE_COUNTER', 'ojs::counter');
 
-// TODO: #8015 Move to their own report plugins when created.
-define('OJS_METRIC_TYPE_LEGACY_COUNTER', 'ojs::legacyCounterPlugin');
-define('OJS_METRIC_TYPE_TIMED_VIEWS', 'ojs::timedViews');
-define('OJS_METRIC_TYPE_LEGACY_DEFAULT', 'ojs::legacyDefault');
-
-class UsageStatsReportPlugin extends ReportPlugin {
+class UsageStatsReportPlugin extends PKPUsageStatsReportPlugin {
 
 	/**
-	 * @see Plugin::register()
-	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		$this->addLocaleData();
-		return $success;
-	}
-
-	/**
-	 * @see Plugin::getName()
-	 */
-	function getName() {
-		return 'UsageStatsReportPlugin';
-	}
-
-	/**
-	 * @see Plugin::getDisplayName()
-	 */
-	function getDisplayName() {
-		return __('plugins.reports.usageStats.report.displayName');
-	}
-
-	/**
-	 * @see Plugin::getDescription()
-	 */
-	function getDescription() {
-		return __('plugins.reports.usageStats.report.description');
-	}
-
-	/**
-	 * @copydoc ReportPlugin::display()
-	 */
-	function display($args, $request) {
-		return parent::display($args, $request);
-	}
-
-	/**
-	 * @see ReportPlugin::getMetrics()
+	 * @see PKPUsageStatsReportPlugin::getMetrics()
 	 */
 	function getMetrics($metricType = null, $columns = null, $filters = null, $orderBy = null, $range = null) {
 		// Validate the metric type.
@@ -71,10 +29,7 @@ class UsageStatsReportPlugin extends ReportPlugin {
 		if (is_array($metricType)) $metricType = array_pop($metricType);
 		if ($metricType !== OJS_METRIC_TYPE_COUNTER) return null;
 
-		// This plug-in uses the MetricsDAO to store metrics. So we simply
-		// delegate there.
-		$metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
-		return $metricsDao->getMetrics($metricType, $columns, $filters, $orderBy, $range);
+		return parent::getMetrics($metricType, $columns, $filters, $orderBy, $range);
 	}
 
 	/**
@@ -85,19 +40,95 @@ class UsageStatsReportPlugin extends ReportPlugin {
 	}
 
 	/**
-	 * @see ReportPlugin::getMetricDisplayType()
+	 * @see PKPUsageStatsReportPlugin::getMetricDisplayType()
 	 */
 	function getMetricDisplayType($metricType) {
 		if ($metricType !== OJS_METRIC_TYPE_COUNTER) return null;
-		return __('plugins.reports.usageStats.metricType');
+		return parent::getMetricDisplayType($metricType);
 	}
 
 	/**
-	 * @see ReportPlugin::getMetricFullName()
+	 * @see PKPUsageStatsReportPlugin::getMetricFullName()
 	 */
 	function getMetricFullName($metricType) {
-		if ($metricType !== OAS_METRIC_TYPE_COUNTER) return null;
-		return __('plugins.reports.usageStats.metricType.full');
+		if ($metricType !== OJS_METRIC_TYPE_COUNTER) return null;
+		return parent::getMetricDisplayType($metricType);
+	}
+
+	/**
+	 * @see ReportPlugin::getColumns()
+	 */
+	function getColumns($metricType) {
+		if ($metricType !== OJS_METRIC_TYPE_COUNTER) return array();
+		return array(
+			STATISTICS_DIMENSION_ASSOC_ID,
+			STATISTICS_DIMENSION_ASSOC_TYPE,
+			STATISTICS_DIMENSION_FILE_TYPE,
+			STATISTICS_DIMENSION_REPRESENTATION_ID,
+			STATISTICS_DIMENSION_SUBMISSION_ID,
+			STATISTICS_DIMENSION_CONTEXT_ID,
+			STATISTICS_DIMENSION_CITY,
+			STATISTICS_DIMENSION_REGION,
+			STATISTICS_DIMENSION_COUNTRY,
+			STATISTICS_DIMENSION_DAY,
+			STATISTICS_DIMENSION_MONTH,
+			STATISTICS_METRIC
+		);
+	}
+
+	/**
+	 * @see ReportPlugin::getObjectTypes()
+	 */
+	function getObjectTypes($metricType) {
+		if ($metricType !== OJS_METRIC_TYPE_COUNTER) return array();
+		return array(
+			ASSOC_TYPE_JOURNAL,
+			ASSOC_TYPE_ISSUE,
+			ASSOC_TYPE_ISSUE_GALLEY,
+			ASSOC_TYPE_ARTICLE,
+			ASSOC_TYPE_SUBMISSION_FILE
+		);
+	}
+
+	/**
+	 * @see PKPUsageStatsReportPlugin::getDefaultReportTemplates()
+	 */
+	function getDefaultReportTemplates($metricTypes = null) {
+		$reports = parent::getDefaultReportTemplates($metricTypes);
+		// Define the press report template.
+		$reports[0]['nameLocaleKey'] = 'manager.statistics.reports.defaultReport.journalIndexPageViews';
+
+		$contextReportTemplate = current($reports);
+		$metricType = $contextReportTemplate['metricType'];
+		$aggregationColumns = $this->getAggregationColumns();
+
+		// Article file downloads.
+		$columns = array(STATISTICS_DIMENSION_ASSOC_TYPE,
+			STATISTICS_DIMENSION__ID,
+			STATISTICS_DIMENSION_SUBMISSION_ID,
+			STATISTICS_DIMENSION_MONTH,
+			STATISTICS_DIMENSION_COUNTRY);
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION_FILE);
+		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.articleDownloads',
+			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
+			'aggregationColumns' => $aggregationColumns));
+
+		// Monograph abstract views.
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION);
+		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.monographAbstract',
+			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
+			'aggregationColumns' => $aggregationColumns));
+
+		// Series main page views.
+		$columns = array(STATISTICS_DIMENSION_ASSOC_TYPE,
+			STATISTICS_DIMENSION_MONTH,
+			STATISTICS_DIMENSION_COUNTRY);
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SERIES);
+		array_unshift($reports, array('nameLocaleKey' => 'manager.statistics.reports.defaultReport.seriesIndexPageViews',
+			'metricType' => $metricType, 'columns' => $columns, 'filter' => $filter,
+			'aggregationColumns' => $aggregationColumns));
+
+		return $reports;
 	}
 }
 

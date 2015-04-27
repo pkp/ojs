@@ -92,4 +92,7 @@
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">A category name is required.</message>
 	<message key="admin.presses.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Subscription Expiry Reminder</message>
+	<message key="admin.scheduledTask.openAccessNotification">Open Access Notification</message>
+	<message key="admin.scheduledTask.reviewReminder">Review Reminder</message>
 </locale>

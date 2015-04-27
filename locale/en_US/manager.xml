@@ -434,6 +434,13 @@
 	<message key="manager.statistics.statistics.reviewsPerReviewer">No. of reviews</message>
 	<message key="manager.statistics.statistics.selectSections">Select the sections for calculating this journal's peer-reviewed statistics.</message>
 	<message key="manager.statistics.statistics.subscriptions">Subscriptions</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Article file downloads</message>
+        <message key="manager.statistics.reports.defaultReport.articleAbstract">Article abstract page views</message>
+        <message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Article abstract and downloads</message>
+        <message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Journal main page views</message>
+        <message key="manager.statistics.reports.filters.byContext.description">Narrow results by context (issues and/or article).</message>
+        <message key="manager.statistics.reports.filters.byObject.description">Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s).</message>
+
 	<message key="manager.subscriptionPolicies">Subscription Policies</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Author Self-Archiving Policy</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">The following Author Self-Archiving Policy will be included in About the Journal under Policies.</message>
