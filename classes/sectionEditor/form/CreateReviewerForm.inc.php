@@ -176,6 +176,7 @@ class CreateReviewerForm extends Form {
 		}
 
 		$user->setDateRegistered(Core::getCurrentDate());
+		parent::execute($user);
 		$userId = $userDao->insertUser($user);
 
 		// Insert the user interests

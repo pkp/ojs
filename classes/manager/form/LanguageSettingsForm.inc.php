@@ -73,6 +73,7 @@ class LanguageSettingsForm extends Form {
 				$this->setData($name, array());
 			}
 		}
+		return parent::initData();
 	}
 
 	/**
@@ -120,6 +121,7 @@ class LanguageSettingsForm extends Form {
 		$this->setData('supportedLocales', $supportedLocales);
 		$this->setData('supportedSubmissionLocales', $supportedSubmissionLocales);
 		$this->setData('supportedFormLocales', $supportedFormLocales);
+		parent::execute();
 
 		foreach ($this->_data as $name => $value) {
 			if (!in_array($name, array_keys($this->settings))) continue;

@@ -184,6 +184,7 @@ class UserManagementForm extends Form {
 				'enrollAs' => array($roleSymbolic)
 			);
 		}
+		return parent::initData();
 	}
 
 	/**
@@ -315,9 +316,8 @@ class UserManagementForm extends Form {
 				// FIXME Should try to create user here too?
 				$auth->doSetUserInfo($user);
 			}
-
+			parent::execute($user);
 			$userDao->updateObject($user);
-
 		} else {
 			$user->setUsername($this->getData('username'));
 			if ($this->getData('generatePassword')) {
@@ -338,6 +338,7 @@ class UserManagementForm extends Form {
 			}
 
 			$user->setDateRegistered(Core::getCurrentDate());
+			parent::execute($user);
 			$userId = $userDao->insertUser($user);
 
 			$isManager = Validation::isJournalManager();

@@ -94,7 +94,7 @@ class UserDAO extends PKPUserDAO {
 	}
 	
 	function getAdditionalFieldNames() {
-		return array('orcid');
+		return array_merge(parent::getAdditionalFieldNames(), array('orcid'));
 	}
 }
 

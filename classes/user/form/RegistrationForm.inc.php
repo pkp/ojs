@@ -226,8 +226,8 @@ class RegistrationForm extends Form {
 				return false;
 			}
 
+			parent::execute($user);
 			$userId = $user->getId();
-
 		} else {
 			// New user
 			$user = new User();
@@ -277,6 +277,7 @@ class RegistrationForm extends Form {
 				$user->setDisabledReason(__('user.login.accountNotValidated'));
 			}
 
+			parent::execute($user);
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			$userDao->insertUser($user);
 			$userId = $user->getId();
