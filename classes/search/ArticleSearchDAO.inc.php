@@ -101,15 +101,16 @@ class ArticleSearchDAO extends DAO {
 			$params[] = $journal->getId();
 		}
 
+		import('classes.article.Article'); // STATUS_PUBLISHED
 		$result =& $this->retrieveCached(
-			'SELECT
-				o.article_id,
+			'SELECT	o.article_id,
 				COUNT(*) AS count
-			FROM
+			FROM	articles a,
 				published_articles pa,
 				issues i,
 				article_search_objects o NATURAL JOIN ' . $sqlFrom . '
-			WHERE
+			WHERE	pa.article_id = a.article_id AND
+				a.status = ' . STATUS_PUBLISHED . ' AND
 				pa.article_id = o.article_id AND
 				i.issue_id = pa.issue_id AND
 				i.published = 1 AND ' . $sqlWhere . '
