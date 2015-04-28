@@ -73,6 +73,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			$params[] = $journal->getId();
 		}
 
+		import('lib.pkp.classes.submission.Submission'); // STATUS_PUBLISHED
 		$result = $this->retrieveCached(
 			'SELECT
 				o.submission_id,
@@ -87,6 +88,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE
 				s.submission_id = o.submission_id AND
+				s.status = ' . STATUS_PUBLISHED . ' AND
 				ps.submission_id = s.submission_id AND
 				i.issue_id = ps.issue_id AND
 				i.published = 1 AND ' . $sqlWhere . '
