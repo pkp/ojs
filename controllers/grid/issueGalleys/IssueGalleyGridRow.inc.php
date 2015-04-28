@@ -22,8 +22,9 @@ class IssueGalleyGridRow extends GridRow {
 	function IssueGalleyGridRow($issueId) {
 		parent::GridRow();
 		$this->setRequestArgs(
-			((array) $this->getRequestArgs()) + array(
-				'issueId' => $issueId
+			array_merge(
+				((array) $this->getRequestArgs()),
+				array('issueId' => $issueId)
 			)
 		);
 	}
@@ -50,7 +51,10 @@ class IssueGalleyGridRow extends GridRow {
 				new LinkAction(
 					'edit',
 					new AjaxModal(
-						$router->url($request, null, null, 'edit', null, $this->getRequestArgs() + array('issueGalleyId' => $issueGalleyId)),
+						$router->url(
+							$request, null, null, 'edit', null,
+							array_merge($this->getRequestArgs(), array('issueGalleyId' => $issueGalleyId))
+						),
 						__('editor.issues.editIssueGalley'),
 						'modal_edit',
 						true),
@@ -66,7 +70,10 @@ class IssueGalleyGridRow extends GridRow {
 					new RemoteActionConfirmationModal(
 						__('common.confirmDelete'),
 						__('grid.action.delete'),
-						$router->url($request, null, null, 'delete', null, $this->getRequestArgs() + array('issueGalleyId' => $issueGalleyId)),
+						$router->url(
+							$request, null, null, 'delete', null,
+							array($this->getRequestArgs(), array('issueGalleyId' => $issueGalleyId))
+						),
 						'modal_delete'
 					),
 					__('grid.action.delete'),

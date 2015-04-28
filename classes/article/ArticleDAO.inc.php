@@ -30,8 +30,12 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return parent::getLocaleFieldNames() + array(
-			'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
+		return array_merge(
+			parent::getLocaleFieldNames(),
+			array(
+				'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract',
+				'originalFileName', 'fileName', 'width', 'height',
+			)
 		);
 	}
 

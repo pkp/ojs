@@ -105,7 +105,10 @@ class IssueGalleyGridHandler extends GridHandler {
 			new LinkAction(
 				'add',
 				new AjaxModal(
-					$router->url($request, null, null, 'add', null, $this->getRequestArgs() + array('gridId' => $this->getId())),
+					$router->url(
+						$request, null, null, 'add', null,
+						array_merge($this->getRequestArgs(), array('gridId' => $this->getId()))
+					),
 					__('grid.action.addIssueGalley'),
 					'modal_add'
 				),
