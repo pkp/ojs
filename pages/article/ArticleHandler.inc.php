@@ -124,8 +124,6 @@ class ArticleHandler extends Handler {
 				}
 			}
 
-			$enableComments = $journal->getSetting('enableComments');
-
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
 				$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());

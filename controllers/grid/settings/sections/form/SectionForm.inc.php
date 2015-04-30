@@ -82,7 +82,6 @@ class SectionForm extends PKPSectionForm {
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 		$sectionEditorCount = $userGroupDao->getContextUsersCount($journal->getId(), null, ROLE_ID_SUB_EDITOR);
 		$templateMgr->assign('sectionEditorCount', $sectionEditorCount);
-		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
 
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForms = $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
