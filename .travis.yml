@@ -1,8 +1,11 @@
 # Configure the build matrix
 env:
+  matrix:
   - TEST=validation
   - TEST=pgsql
   - TEST=mysql
+  global:
+  - secure: "gU845ecyxcMLcOCiFsfXeVNaPPSR7qb4/9GzZM6DPOxfwO2acMzmcXhN/sIS3CBURV2qWaAZ4xmR5dvU3aWRHCok4JUKLVNxPL0yYVQteXpL7FSKP4JK5DNOj1R5TddCY6pvQGeFmucZ7X0LYJjohmpIlRlwQyfwcD4ZYwTpz3M="
 language: php
 php:
   - 5.3
