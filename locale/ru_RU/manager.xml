@@ -420,7 +420,6 @@
 	<message key="manager.plugins.installFailed">Установка не удалась</message>
 	<message key="manager.plugins.upgradeFailed">Обновление не удалось</message>
 	<message key="manager.sections.abstractsNotRequired">Не требовать резюме</message>
-	<message key="manager.sections.disableComments">Выключить комментарии читателей в этой секции.</message>
 	<message key="manager.sections.form.mustAllowPermission">Пожалуйста убедитесь, что поставлена хотя-бы одна галочка для каждого звпроса Редактора Секции</message>
 	<message key="manager.sections.form.reviewFormId">Пожалуйста убедитесь, что Вы выбрали правильную форму рецензента.</message>
 	<message key="manager.sections.hideAbout">Опустить эту секцию из раздела "О журнале".</message>

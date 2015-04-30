@@ -121,7 +121,6 @@
 	<message key="manager.sections.confirmDelete">Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen?</message>
 	<message key="manager.sections.alertDelete">Bevor diese Rubrik entfernt werden kann, müssen Sie Artikel aus dieser Rubrik in andere Rubriken verschieben.</message>
 	<message key="manager.sections.create">Eine Rubrik erstellen</message>
-	<message key="manager.sections.disableComments">Leser/innenkommentare für diese Rubrik ausschalten.</message>
 	<message key="manager.section.sectionEditorInstructions"><![CDATA[Fügen Sie dieser Rubrik eine/n Rubrikredakteur/in aus den zur Verfügung stehenden Rubrikredakteur/innen hinzu. Sobald er/sie hinzugefügt worden ist, geben Sie an, ob die/der Rubrikredakteur/in den BEGUTACHTUNGS- (Peer Review) oder den REDAKTIONSPROZESS (Lektorat, Layout und Korrekturlektorat) von Beiträgen zu dieser Rubrik durchführen soll. Rubrikredakteur/innen können Sie anlegen, in dem Sie auf <a href="{$sectionEditorsUrl}">Rubrikredakteur/innen</a> unter Funktionen in der Zeitschriftenverwaltung klicken.]]></message>
 	<message key="manager.sections.editorRestriction">Beiträge können nur von Redakteur/innen und Rubrikredakteur/innen eingereicht werden.</message>
 	<message key="manager.sections.editors">Rubrikredakteur/innen</message>

@@ -91,7 +91,6 @@
 	<message key="manager.sections.assigned">Editor/a desta sección</message>
 	<message key="manager.sections.confirmDelete">Tes a certeza de que queres eliminar esta sección de xeito permanente? Será necesario voltar a publicar calquera artigo desta sección.</message>
 	<message key="manager.sections.create">Crear sección</message>
-	<message key="manager.sections.disableComments">Deshabilitar comentarios do lector para esta sección</message>
 	<message key="manager.section.sectionEditorInstructions">Seleccione un/ha entre os/as Editores/as de Sección dispoñíbeis e "Asigne editor/a" a esta sección.</message>
 	<message key="manager.sections.editorRestriction">Só os/as editores/as e editores/as de sección poden enviar elementos.</message>
 	<message key="manager.sections.editors">Editores/as de sección</message>

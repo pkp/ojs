@@ -90,7 +90,6 @@
 	<message key="manager.sections.abstractsNotRequired">Não exigir resumos</message>
 	<message key="manager.sections.assigned">Editores desta seção</message>
 	<message key="manager.sections.create">Incluir seção</message>
-	<message key="manager.sections.disableComments">Desabilitar comentários dos leitores para esta seção.</message>
 	<message key="manager.section.sectionEditorInstructions">Escolha dentre os editores de seção disponíveis e clique em "Designar editor" a esta seção.</message>
 	<message key="manager.sections.editorRestriction">Restrita a editores e editores de seção.</message>
 	<message key="manager.sections.editors">Editores de seção</message>

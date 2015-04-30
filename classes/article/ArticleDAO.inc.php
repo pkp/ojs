@@ -94,7 +94,6 @@ class ArticleDAO extends SubmissionDAO {
 		$article->setPages($row['pages']);
 		$article->setFastTracked($row['fast_tracked']);
 		$article->setHideAuthor($row['hide_author']);
-		$article->setCommentsStatus($row['comments_status']);
 
 		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
 		return $article;
@@ -116,9 +115,9 @@ class ArticleDAO extends SubmissionDAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO submissions
-				(locale, context_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author, comments_status)
+				(locale, context_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
@@ -134,7 +133,6 @@ class ArticleDAO extends SubmissionDAO {
 				$article->getPages(),
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
-				(int) $article->getCommentsStatus()
 			)
 		);
 
@@ -173,8 +171,7 @@ class ArticleDAO extends SubmissionDAO {
 					current_round = ?,
 					pages = ?,
 					fast_tracked = ?,
-					hide_author = ?,
-					comments_status = ?
+					hide_author = ?
 				WHERE submission_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
@@ -190,7 +187,6 @@ class ArticleDAO extends SubmissionDAO {
 				$article->getPages(),
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
-				(int) $article->getCommentsStatus(),
 				(int) $article->getId()
 			)
 		);
@@ -227,9 +223,6 @@ class ArticleDAO extends SubmissionDAO {
 
 		$articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$articleSearchDao->deleteSubmissionKeywords($submissionId);
-
-		$commentDao = DAORegistry::getDAO('CommentDAO');
-		$commentDao->deleteBySubmissionId($submissionId);
 
 		// Delete article citations.
 		$citationDao = DAORegistry::getDAO('CitationDAO');

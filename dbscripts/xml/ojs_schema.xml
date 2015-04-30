@@ -126,10 +126,6 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="disable_comments" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<field name="abstract_word_count" type="I8" />
 		<descr>Journal sections.</descr>
 		<index name="sections_journal_id">
@@ -492,10 +488,6 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="hide_author" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="comments_status" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>

@@ -120,7 +120,6 @@
 	<message key="manager.sections.assigned">Bu Bölümün Editörleri</message>
 	<message key="manager.sections.confirmDelete">Bu bölümü kalıcı olarak silmek istediğinizden emin misiniz?</message>
 	<message key="manager.sections.create">Bölüm Oluştur</message>
-	<message key="manager.sections.disableComments">Bu bölüm için okuyucu yorumlarını kapat.</message>
 	<message key="manager.section.sectionEditorInstructions">Bölüm editörlerinin gönderilere otomatik olarak atanması için bu bölüme bir bölüm editörü ekleyiniz. (Öte yandan, bir gönderi geldikten sonra bölüm editörleri manuel olarak da atanabilir.) Eğer eklendiyse bir bölüm editörü bu bölümün gönderilerini gözden geçirmeye (hakemlik) ve düzenlemeye (sayfa düzeni, mizanpaj ve tashih) otomatik olarak atanır. Bölüm editörleri Dergi Yönetimi kısmındaki Roller altında Bölüm Editörleri tıklanarak oluşturulur.</message>
 	<message key="manager.sections.editorRestriction">Öğeler sadece editörler ve bölüm editörleri tarafından gönderilerbilir.</message>
 	<message key="manager.sections.editors">Bölüm Editörleri</message>

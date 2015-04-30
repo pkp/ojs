@@ -90,7 +90,6 @@
 	<message key="manager.sections.abstractsNotRequired">No requiere resumenes</message>
 	<message key="manager.sections.assigned">Editor/a de esta sección</message>
 	<message key="manager.sections.create">Crear sección</message>
-	<message key="manager.sections.disableComments">Deshabilitar comentarios del lector para esta sección</message>
 	<message key="manager.section.sectionEditorInstructions">Seleccione uno/a de entre los/as Editores/as de Sección disponibles y "Asigne editor/a" a esta sección.</message>
 	<message key="manager.sections.editorRestriction">Sólo los/as editores/as y editores/as de sección pueden enviar elementos.</message>
 	<message key="manager.sections.editors">Editores/as de sección</message>

@@ -119,7 +119,6 @@
 	<message key="manager.sections.assigned">ഈ വിഭാഗത്തിന്റെ ഗ്രന്ഥപരിശോധകര്‍</message>
 	<message key="manager.sections.confirmDelete">ഈ സെക്ഷന്‍ സ്ഥിരമായി നീക്കം ചെയ്യണമെന്ന് താങ്കള്‍ ഉറപ്പാണോ? താങ്കള്‍ ഈ സെക്ഷനിലെ ഏതെങ്കിലും ഒരു ലേഖനത്തെ വീണ്ടും പ്രസിദ്ധീകരിക്കണം.</message>
 	<message key="manager.sections.create">സെക്ഷന്‍ സൃഷ്ടിക്കുക</message>
-	<message key="manager.sections.disableComments">ഈ വിഭാഗത്തില്‍ വായനകാരുടെ അഭിപ്രായം അപ്രാപ്യമാക്കുക.</message>
 	<message key="manager.section.sectionEditorInstructions">Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management.</message>
 	<message key="manager.sections.editorRestriction">എഡിറ്ററിനും സെക്ഷന്‍ എഡിറ്ററിനും മാത്രമേ ഐറ്റംസ് സമര്‍പ്പിക്കാന്‍ കഴിയൂ.</message>
 	<message key="manager.sections.editors">സെക്ഷന്‍ എഡിറ്റര്‍സ്</message>

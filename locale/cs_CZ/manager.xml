@@ -90,7 +90,6 @@
 	<message key="manager.sections.abstractsNotRequired">Nepožadovat abstrakta</message>
 	<message key="manager.sections.assigned">Editoři této sekce</message>
 	<message key="manager.sections.create">Vytvořit sekci</message>
-	<message key="manager.sections.disableComments">Zakázat komentáře čtenářů pro tuto sekci.</message>
 	<message key="manager.section.sectionEditorInstructions">Vyberte z dostupných editorů sekcí a "Přidělte editora" této sekci.</message>
 	<message key="manager.sections.editorRestriction">Položky mohou být zaslány pouze editory a editory sekcí.</message>
 	<message key="manager.sections.editors">Editoři sekce</message>

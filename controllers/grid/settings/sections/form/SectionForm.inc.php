@@ -63,7 +63,6 @@ class SectionForm extends PKPSectionForm {
 				'hideTitle' => $section->getHideTitle(),
 				'hideAuthor' => $section->getHideAuthor(),
 				'hideAbout' => $section->getHideAbout(),
-				'disableComments' => $section->getDisableComments(),
 				'policy' => $section->getPolicy(null), // Localized
 				'wordCount' => $section->getAbstractWordCount()
 			);
@@ -101,7 +100,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'disableComments', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'wordCount'));
 	}
 
 	/**
@@ -145,7 +144,6 @@ class SectionForm extends PKPSectionForm {
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);
 		$section->setHideAuthor($this->getData('hideAuthor') ? 1 : 0);
 		$section->setHideAbout($this->getData('hideAbout') ? 1 : 0);
-		$section->setDisableComments($this->getData('disableComments') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 

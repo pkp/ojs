@@ -21,9 +21,6 @@ switch ($op) {
 	// Profiles
 	//
 	case 'profile':
-	case 'saveProfile':
-	case 'changePassword':
-	case 'savePassword':
 		define('HANDLER_CLASS', 'ProfileHandler');
 		import('lib.pkp.pages.user.ProfileHandler');
 		break;
@@ -46,7 +43,6 @@ switch ($op) {
 	case 'setLocale':
 	case 'become':
 	case 'authorizationDenied':
-	case 'viewPublicProfile':
 	case 'purchaseSubscription':
 	case 'payPurchaseSubscription':
 	case 'completePurchaseSubscription':

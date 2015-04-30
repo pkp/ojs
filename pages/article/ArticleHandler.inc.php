@@ -124,12 +124,7 @@ class ArticleHandler extends Handler {
 				}
 			}
 
-			$commentDao = DAORegistry::getDAO('CommentDAO');
 			$enableComments = $journal->getSetting('enableComments');
-
-			if (($article->getEnableComments()) && ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS)) {
-				$comments = $commentDao->getRootCommentsBySubmissionId($article->getId());
-			}
 
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
@@ -205,19 +200,9 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('version', $version);
 			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('postingAllowed', (
-				($article->getEnableComments()) && (
-				$enableComments == COMMENTS_UNAUTHENTICATED ||
-				(($enableComments == COMMENTS_AUTHENTICATED ||
-				$enableComments == COMMENTS_ANONYMOUS) &&
-				Validation::isLoggedIn()))
-			));
-			$templateMgr->assign('enableComments', $enableComments);
-			$templateMgr->assign('postingLoginRequired', ($enableComments != COMMENTS_UNAUTHENTICATED && !Validation::isLoggedIn()));
 			$templateMgr->assign('galleyId', $galleyId);
 			$templateMgr->assign('fileId', $fileId);
 			$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
-			$templateMgr->assign('comments', isset($comments)?$comments:null);
 
 			$templateMgr->assign('sharingEnabled', $journalRt->getSharingEnabled());
 			$templateMgr->assign('ccLicenseBadge', Application::getCCLicenseBadge($article->getLicenseURL()));

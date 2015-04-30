@@ -234,7 +234,6 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		$section->setHideAuthor($node->getAttribute('hide_author'));
 		$section->setHideTitle($node->getAttribute('hide_title'));
 		$section->setHideAbout($node->getAttribute('hide_about'));
-		$section->setDisableComments($node->getAttribute('disable_comments'));
 		$section->setAbstractWordCount($node->getAttribute('abstract_word_count'));
 
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {

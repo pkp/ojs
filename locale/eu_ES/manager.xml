@@ -85,7 +85,6 @@
 	<message key="manager.sections.abstractsNotRequired">Ez zaie eskatuko laburpenik</message>
 	<message key="manager.sections.assigned">Atal honetako editoreak</message>
 	<message key="manager.sections.create">Sortu atala</message>
-	<message key="manager.sections.disableComments">Desgaitu irakurleen iruzkinak atal honetarako.</message>
 	<message key="manager.section.sectionEditorInstructions">Gehitu Ataleko editore bat, atal honetara iristen diren bidalketak automatikoki esleitzeko Ataleko editore horri. (Bestela, Ataleko editorea eskuz esleitu ahal izango da, bidalketa bat iristen den bakoitzean). Editore bat gehitzen bada, automatikoki esleitu ahal izango zaio atal honetarako bidaltzen diren lanen EBALUAZIOA (adituen ebaluazioa) eta/edo EDIZIOA (zuzenketa, maketazioa eta proba-zuzenketa) gainbegiratzea. Ataleko editoreak sortzeko, Aldizkariaren kudeaketako Funtzioetan, Ataleko editoreak esteka sakatu behar da. </message>
 	<message key="manager.sections.editorRestriction">Editoreek eta Ataleko editoreek bakarrik bidal ditzakete lanak.</message>
 	<message key="manager.sections.editors">Ataleko editoreak</message>

@@ -87,7 +87,6 @@
 	<message key="manager.sections.abstractsNotRequired">Ne trebaju sadržavati sažetke</message>
 	<message key="manager.sections.assigned">Urednici ove rubrike</message>
 	<message key="manager.sections.create">Kreiraj rubriku</message>
-	<message key="manager.sections.disableComments">Onemogući komentare čitatelja za ovu rubriku.</message>
 	<message key="manager.section.sectionEditorInstructions">Opcijama "odredi urednika" i "ukloni ulogu urednika" odredite koji će od postojećih urednika rubrika imati ovlasti uređivanja ove rubrike.</message>
 	<message key="manager.sections.editorRestriction">Samo urednici mogu prijavljivati priloge u ovu rubriku.</message>
 	<message key="manager.sections.editors">Urednici rubrika</message>

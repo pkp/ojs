@@ -1,34 +1,43 @@
 <?php
 
 /**
- * @file classes/user/form/ProfileForm.inc.php
+ * @file classes/notification/form/NotificationSettingsForm.inc.php
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ProfileForm
- * @ingroup user_form
+ * @class NotificationSettingsForm
+ * @ingroup notification_form
  *
- * @brief Form to edit user profile.
+ * @brief Form to edit notification settings.
  */
 
-import('lib.pkp.classes.user.form.PKPProfileForm');
 
-class ProfileForm extends PKPProfileForm {
+import('lib.pkp.classes.notification.form.PKPNotificationSettingsForm');
+
+class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	/**
 	 * Constructor.
 	 */
-	function ProfileForm($user) {
-		parent::PKPProfileForm($user);
+	function NotificationSettingsForm() {
+		parent::PKPNotificationSettingsForm();
+	}
+
+	/**
+	 * Assign form data to user-submitted data.
+	 */
+	function readInputData() {
+		parent::readInputData();
 	}
 
 	/**
 	 * Display the form.
+	 * @return PKPRequest
 	 */
 	function display($request) {
 		$templateMgr = TemplateManager::getManager($request);
-
+ 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journals = $journalDao->getAll(true);
 		while ($thisJournal = $journals->next()) {
@@ -36,7 +45,7 @@ class ProfileForm extends PKPProfileForm {
 				$templateMgr->assign('displayOpenAccessNotification', true);
 			}
 		}
-
+ 
 		parent::display($request);
 	}
 
@@ -45,11 +54,11 @@ class ProfileForm extends PKPProfileForm {
 	 */
 	function execute($request) {
 		$user = $request->getUser();
-
+ 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-
+ 
 		$openAccessNotify = $request->getUserVar('openAccessNotify');
-
+ 
 		$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
 		$journals = $journalDao->getAll(true);
 		while ($thisJournal = $journals->next()) {
@@ -61,7 +70,7 @@ class ProfileForm extends PKPProfileForm {
 				}
 			}
 		}
-
+ 
 		parent::execute($request);
 	}
 }

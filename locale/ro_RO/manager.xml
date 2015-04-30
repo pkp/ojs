@@ -115,7 +115,6 @@
 	<message key="manager.sections.abstractsNotRequired">Nu necesită abstracte</message>
 	<message key="manager.sections.assigned">Redactorii acestei secţiuni</message>
 	<message key="manager.sections.create">Creează secţiune</message>
-	<message key="manager.sections.disableComments">Dezactivează comentariile cititorilor pentru această secţiune.</message>
 	<message key="manager.section.sectionEditorInstructions">Adaugă un redactor de secțiune acestei secțiuni pentru a avea automat atribuite propunerile către acesta. Alternativa este ca redactorii de secțiune să fie angajați manual la momentul când apare o propunere. Dacă un redactor de secțiune este adăugat, acesta poate fi desemnat automat pentru a supraveghea EVALUAREA (peer review) și/sau REDACTAREA (redactarea, machetarea și corectura) propunerilor către această secțiune. Redactorii de secțiune sunt creați dând clic pe redactorii de secțiune de sub roluri în secțiunea de management a revistei.</message>
 	<message key="manager.sections.editorRestriction">Articolele pot fi propuse doar de redactori şi de redactorii de secţiune.</message>
 	<message key="manager.sections.editors">Redactorii de secțiune</message>

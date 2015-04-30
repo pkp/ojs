@@ -506,7 +506,6 @@
 	<message key="manager.people.roleEnrollment">{$role}-verving</message>
 	<message key="manager.plugins.description">Denne siden gir redaksjonsleder mulighet til å gjennomgå og konfigurerer de installerte programutvidelsene. Programutvidelsene er inndelt i kategorier etter funksjon. Disse kategoriene er listet opp nedenfor, med de programutvidelsene som for øyeblikket er gjort tilgjengelig.</message>
 	<message key="manager.sections.abstractsNotRequired">Ikke krev sammendrag</message>
-	<message key="manager.sections.disableComments">Slå av funksjonen leserkommentarer for denne seksjonen.</message>
 	<message key="manager.sections.form.mustAllowPermission">Vennligst kontrollér at minst én avkrysningsboks er krysset av for hvert oppdrag en seksjonsredaktør er oppnevnt til.</message>
 	<message key="manager.sections.form.reviewFormId">Vennligst kontrollér at du har valgt et gyldig vurderingsskjema.</message>
 	<message key="manager.sections.hideAbout">Utelat denne seksjonen fra 'Om' tidsskriftet.</message>

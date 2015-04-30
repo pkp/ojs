@@ -90,7 +90,6 @@
 	<message key="manager.sections.abstractsNotRequired">Samenvattingen niet verplicht stellen</message>
 	<message key="manager.sections.assigned">De redacteuren van deze sectie</message>
 	<message key="manager.sections.create">Sectie aanmaken</message>
-	<message key="manager.sections.disableComments">Lezerscommentaren uitschakelen voor deze sectie.</message>
 	<message key="manager.section.sectionEditorInstructions">Voeg een sectieredacteur toe aan deze sectie. Bepaal na het toevoegen of de sectieredacteur de REVIEW (peer review) en/of REDACTIE (tekstbewerken, opmaak en proeflezen) gaat regelen voor inzendingen voor deze sectie. Sectieredacteuren worden toegevoegd door te klikken op Sectieredacteuren bij Rollen in Tijdschriftbeheer.</message>
 	<message key="manager.sections.editorRestriction">Items kunnen alleen door redacteuren en sectieredacteuren ingezonden worden.</message>
 	<message key="manager.sections.editors">Sectieredacteuren</message>
