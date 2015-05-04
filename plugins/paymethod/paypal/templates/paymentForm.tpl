@@ -41,7 +41,7 @@
 	{if $params.item_description}
 	<table class="data">
 		<tr>
-			<td class="label" colspan="2">{$params.item_description|escape|nl2br}</td>
+			<td class="label" colspan="2">{$params.item_description|nl2br}</td>
 		</tr>
 	</table>
 	{/if}
