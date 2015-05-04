@@ -26,7 +26,7 @@
 	{/if}
 	{if $itemDescription}
 	<tr>
-		<td colspan="2">{$itemDescription|escape|nl2br}</td>
+		<td colspan="2">{$itemDescription|nl2br}</td>
 	</tr>
 	{/if}
 </table>
