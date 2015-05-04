@@ -1103,12 +1103,11 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<message key="notification.type.articleSubmitted">A new article, "{$title}", has been submitted.</message>
 	<message key="notification.type.editing">Editing Events</message>
+	<message key="notification.type.submissionSubmitted">A new article, "{$title}," has been submitted.</message>
 	<message key="notification.type.editorDecisionComment">A comment has been left on the editor decision for "{$title}."</message>
 	<message key="notification.type.galleyModified">A galley has been modified for "{$title}."</message>
 	<message key="notification.type.issuePublished">An issue has been published.</message>
-	<message key="notification.type.metadataModified">"{$title}'s" metadata has been modified.</message>
 	<message key="notification.type.newAnnouncement">A new announcement has been created.</message>
-	<message key="notification.type.reviewerComment">A reviewer has commented on "{$title}."</message>
 	<message key="notification.type.reviewerFormComment">A review form review has been submitted for "{$title}."</message>
 	<message key="notification.type.reviewing">Reviewing Events</message>
 	<message key="notification.type.site">Site Events</message>
