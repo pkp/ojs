@@ -75,6 +75,8 @@ class ArticleSearch extends SubmissionSearch {
 				}
 			}
 		}
+
+		$i=0; // Used to prevent ties from clobbering each other
 		foreach ($unorderedResults as $submissionId => $data) {
 			// Exclude unwanted IDs.
 			if (in_array($submissionId, $exclude)) continue;
@@ -119,7 +121,7 @@ class ArticleSearch extends SubmissionSearch {
 			if (!isset($orderedResults[$orderKey])) {
 				$orderedResults[$orderKey] = array();
 			}
-			$orderedResults[$orderKey][$data['score']] = $submissionId;
+			$orderedResults[$orderKey][$data['score'] + $i++] = $submissionId;
 		}
 
 		// Order the results by primary order.
