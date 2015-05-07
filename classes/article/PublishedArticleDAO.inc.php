@@ -711,17 +711,6 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Increment the views count for a galley.
-	 * @param $articleId int
-	 */
-	function incrementViewsByArticleId($articleId) {
-		return $this->update(
-			'UPDATE published_submissions SET views = views + 1 WHERE submission_id = ?',
-			(int) $articleId
-		);
-	}
-
-	/**
 	 * Return years of oldest/youngest published article on site or within a journal
 	 * @param $journalId int Optional
 	 * @return array (maximum date published, minimum date published)

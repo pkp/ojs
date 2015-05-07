@@ -97,16 +97,12 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 * @return ArticleGalley
 	 */
-	function &getGalleyByPubId($pubIdType, $pubId, $articleId = null) {
-		$galleyFactory =& $this->getGalleysBySetting('pub-id::'.$pubIdType, $pubId, $articleId);
-		if ($galleyFactory->wasEmpty()) {
-			$galley = null;
-		} else {
-			assert($galleyFactory->getCount() == 1);
-			$galley =& $galleyFactory->next();
-		}
+	function getGalleyByPubId($pubIdType, $pubId, $articleId = null) {
+		$galleyFactory = $this->getGalleysBySetting('pub-id::'.$pubIdType, $pubId, $articleId);
+		if ($galleyFactory->wasEmpty()) return null;
 
-		return $galley;
+		assert($galleyFactory->getCount() == 1);
+		return $galleyFactory->next();
 	}
 
 	/**
@@ -186,7 +182,7 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int
 	 * @return ArticleGalley object
 	 */
-	function getGalleyByBestGalleyId($galleyId, $articleId) {
+	function getByBestGalleyId($galleyId, $articleId) {
 		$galley = null;
 		if ($galleyId != '') $galley = $this->getGalleyByPubId('publisher-id', $galleyId, $articleId);
 		if (!isset($galley) && ctype_digit("$galleyId")) $galley = $this->getById((int) $galleyId, $articleId);
@@ -217,7 +213,7 @@ class ArticleGalleyDAO extends DAO {
 	 * Update the localized fields for this galley.
 	 * @param $galley
 	 */
-	function updateLocaleFields(&$galley) {
+	function updateLocaleFields($galley) {
 		$this->updateDataObjectSettings('submission_galley_settings', $galley, array(
 			'galley_id' => $galley->getId()
 		));
@@ -254,12 +250,11 @@ class ArticleGalleyDAO extends DAO {
 	function insertObject($galley) {
 		$this->update(
 			'INSERT INTO submission_galleys
-				(submission_id, file_id, label, locale, seq, remote_url, is_available, galley_type)
+				(submission_id, label, locale, seq, remote_url, is_available, galley_type)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				(int) $galley->getSubmissionId(),
-				0,
 				$galley->getLabel(),
 				$galley->getLocale(),
 				$galley->getSeq() == null ? $this->getNextGalleySequence($galley->getSubmissionId()) : $galley->getSeq(),
@@ -284,7 +279,6 @@ class ArticleGalleyDAO extends DAO {
 		$this->update(
 			'UPDATE submission_galleys
 				SET
-					file_id = ?,
 					label = ?,
 					locale = ?,
 					seq = ?,
@@ -293,7 +287,6 @@ class ArticleGalleyDAO extends DAO {
 					galley_type = ?
 				WHERE galley_id = ?',
 			array(
-				0,
 				$galley->getLabel(),
 				$galley->getLocale(),
 				$galley->getSeq(),
@@ -310,34 +303,31 @@ class ArticleGalleyDAO extends DAO {
 	 * Delete an ArticleGalley.
 	 * @param $galley ArticleGalley
 	 */
-	function deleteGalley(&$galley) {
-		return $this->deleteGalleyById($galley->getId());
+	function deleteObject($galley) {
+		return $this->deleteById($galley->getId());
 	}
 
 	/**
 	 * Delete a galley by ID.
-	 * @param $galleyId int
-	 * @param $articleId int optional
+	 * @param $galleyId int Galley ID.
+	 * @param $articleId int Optional article ID.
 	 */
-	function deleteGalleyById($galleyId, $articleId = null) {
+	function deleteById($galleyId, $articleId = null) {
 
-		HookRegistry::call('ArticleGalleyDAO::deleteGalleyById', array(&$galleyId, &$articleId));
+		HookRegistry::call('ArticleGalleyDAO::deleteById', array(&$galleyId, &$articleId));
 
-		if (isset($articleId)) {
-			$this->update(
-				'DELETE FROM submission_galleys WHERE galley_id = ? AND submission_id = ?',
-				array((int) $galleyId, (int) $articleId)
-			);
-		} else {
-			$this->update(
-				'DELETE FROM submission_galleys WHERE galley_id = ?', (int) $galleyId
-			);
-		}
+		$params = array((int) $galleyId);
+		if ($articleId) $params[] = (int) $articleId;
+		$this->update(
+			'DELETE FROM submission_galleys
+			WHERE galley_id = ?'
+			. ($articleId?' AND submission_id = ?':''),
+			$params
+		);
 		if ($this->getAffectedRows()) {
 			$this->update('DELETE FROM submission_galley_settings WHERE galley_id = ?', array((int) $galleyId));
 			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-			// Import constants
-			import('lib.pkp.classes.submission.SubmissionFile');
+			import('lib.pkp.classes.submission.SubmissionFile'); // Import constants
 
 			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galleyId, $articleId, SUBMISSION_FILE_PROOF);
 			foreach ($galleyFiles as $file) {
@@ -354,30 +344,11 @@ class ArticleGalleyDAO extends DAO {
 	 * NOTE that this will not delete article_file entities or the respective files.
 	 * @param $articleId int
 	 */
-	function deleteGalleysByArticle($articleId) {
+	function deleteByArticleId($articleId) {
 		$galleys = $this->getBySubmissionId($articleId);
 		while ($galley = $galleys->next()) {
-			$this->deleteGalleyById($galley->getId(), $articleId);
+			$this->deleteById($galley->getId(), $articleId);
 		}
-	}
-
-	/**
-	 * Check if a galley exists with the associated file ID.
-	 * @param $articleId int
-	 * @param $fileId int
-	 * @return boolean
-	 */
-	function galleyExistsByFileId($articleId, $fileId) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM submission_galleys
-			WHERE submission_id = ? AND file_id = ?',
-			array((int) $articleId, (int) $fileId)
-		);
-
-		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
-
-		$result->Close();
-		return $returner;
 	}
 
 	/**

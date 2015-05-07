@@ -82,7 +82,7 @@ class ArticleHandler extends Handler {
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($this->journal->getSetting('enablePublicGalleyId')) {
-			$this->galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $this->article->getId());
+			$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
 		}
 
 		if (!$this->galley) {
@@ -126,7 +126,7 @@ class ArticleHandler extends Handler {
 
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
-				$galley = $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getId());
+				$galley = $galleyDao->getByBestGalleyId($galleyId, $article->getId());
 			}
 
 			if (!isset($galley)) {

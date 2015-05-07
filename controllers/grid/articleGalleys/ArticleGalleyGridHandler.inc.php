@@ -243,7 +243,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function delete($args, $request) {
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
-		$articleGalleyDao->deleteGalley($articleGalley);
+		$articleGalleyDao->deleteObject($articleGalley);
 		return DAO::getDataChangedEvent();
 	}
 
@@ -256,7 +256,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function setAvailable($args, $request) {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalley = $articleGalleyDao->getGalleyByBestGalleyId(
+		$articleGalley = $articleGalleyDao->getByBestGalleyId(
 			$request->getUserVar('articleGalleyId'),
 			$submission->getId() // Make sure to validate the context.
 		);
