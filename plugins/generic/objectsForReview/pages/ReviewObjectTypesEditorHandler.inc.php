@@ -338,7 +338,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function createReviewObjectMetadata($args, &$request) {
-		$this->editReviewObjectMetadata($args, &$request);
+		$this->editReviewObjectMetadata($args, $request);
 	}
 
 	/**
