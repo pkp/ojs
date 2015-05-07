@@ -47,7 +47,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
 
 		// If a signoff ID was specified, authorize it.
-		if ($request->getUserVar('articleGalleyId')) {
+		if ($request->getUserVar('representationId')) {
 			import('classes.security.authorization.GalleyRequiredPolicy');
 			$this->addPolicy(new GalleyRequiredPolicy($request, $args));
 		}
@@ -87,7 +87,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 		$requestArgs = (array) parent::getRequestArgs();
 		$requestArgs['submissionId'] = $submission->getId();
-		if ($articleGalley) $requestArgs['articleGalleyId'] = $articleGalley->getId();
+		if ($articleGalley) $requestArgs['representationId'] = $articleGalley->getId();
 		return $requestArgs;
 	}
 
@@ -257,7 +257,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalley = $articleGalleyDao->getByBestGalleyId(
-			$request->getUserVar('articleGalleyId'),
+			$request->getUserVar('representationId'),
 			$submission->getId() // Make sure to validate the context.
 		);
 

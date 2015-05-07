@@ -66,7 +66,7 @@ class ArticleGalleyGridCellProvider extends GridCellProvider {
 						__($articleGalley->getIsAvailable()?'grid.issueEntry.availableGalley.removeMessage':'grid.issueEntry.availableGalley.message'),
 						__('grid.issueEntry.availableGalley.title'),
 						$router->url($request, null, 'grid.articleGalleys.ArticleGalleyGridHandler',
-							'setAvailable', null, array('articleGalleyId' => $articleGalleyId, 'newAvailableState' => $articleGalley->getIsAvailable()?0:1, 'submissionId' => $submissionId)),
+							'setAvailable', null, array('representationId' => $articleGalleyId, 'newAvailableState' => $articleGalley->getIsAvailable()?0:1, 'submissionId' => $submissionId)),
 						'modal_approve'),
 						__('manager.emails.disable'),
 						$articleGalley->getIsAvailable()?'completed':'new',

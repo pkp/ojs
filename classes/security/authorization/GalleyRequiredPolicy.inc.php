@@ -22,7 +22,7 @@ class GalleyRequiredPolicy extends DataObjectRequiredPolicy {
 	 * @param $submissionParameterName string the request parameter we expect
 	 *  the submission id in.
 	 */
-	function GalleyRequiredPolicy($request, &$args, $parameterName = 'articleGalleyId', $operations = null) {
+	function GalleyRequiredPolicy($request, &$args, $parameterName = 'representationId', $operations = null) {
 		parent::DataObjectRequiredPolicy($request, $args, $parameterName, 'user.authorization.invalidGalley', $operations);
 	}
 

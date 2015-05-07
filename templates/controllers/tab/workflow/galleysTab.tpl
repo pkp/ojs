@@ -30,7 +30,7 @@ $(function() {ldelim}
 			<li>
 				<a id="representation{$representation->getId()|escape}"
 					href="{url router=$smarty.const.ROUTE_PAGE page="workflow" op="fetchRepresentation"
-					articleGalleyId=$representation->getId()
+					representationId=$representation->getId()
 					submissionId=$representation->getSubmissionId()
 					stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION}">{$representation->getLocalizedName()|escape}</a>
 			</li>

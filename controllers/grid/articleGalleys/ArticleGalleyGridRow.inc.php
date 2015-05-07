@@ -53,7 +53,7 @@ class ArticleGalleyGridRow extends GridRow {
 					new AjaxModal(
 						$router->url(
 							$request, null, null, 'edit', null,
-							array_merge($this->getRequestArgs(), array('articleGalleyId' => $articleGalleyId))
+							array_merge($this->getRequestArgs(), array('representationId' => $articleGalleyId))
 						),
 						__('submission.layout.editGalley'),
 						'modal_edit',
@@ -72,7 +72,7 @@ class ArticleGalleyGridRow extends GridRow {
 						__('grid.action.delete'),
 						$router->url(
 							$request, null, null, 'delete', null,
-							array_merge($this->getRequestArgs(), array('articleGalleyId' => $articleGalleyId))
+							array_merge($this->getRequestArgs(), array('representationId' => $articleGalleyId))
 						),
 						'modal_delete'
 					),

@@ -111,7 +111,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	function getRequestArgs() {
 		return array_merge(
 			parent::getRequestArgs(),
-			array('articleGalleyId' => $this->getAssocId())
+			array('representationId' => $this->getAssocId())
 		);
 	}
 

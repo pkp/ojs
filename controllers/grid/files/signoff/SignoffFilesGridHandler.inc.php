@@ -43,7 +43,7 @@ class SignoffFilesGridHandler extends PKPSignoffFilesGridHandler {
 	function authorize($request, &$args, $roleAssignments) {
 
 		// If a galley ID was specified, authorize it.
-		if ($request->getUserVar('articleGalleyId')) {
+		if ($request->getUserVar('representationId')) {
 			import('classes.security.authorization.GalleyRequiredPolicy');
 			$this->addPolicy(new GalleyRequiredPolicy($request, $args));
 		}

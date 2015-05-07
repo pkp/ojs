@@ -73,7 +73,7 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	function getRequestArgs() {
 		$galley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 		$args = parent::getRequestArgs();
-		$args['articleGalleyId'] = $galley->getId();
+		$args['representationId'] = $galley->getId();
 		return $args;
 	}
 }

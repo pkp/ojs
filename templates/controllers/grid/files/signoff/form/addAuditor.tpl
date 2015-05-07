@@ -24,7 +24,7 @@
 
 		<input type="hidden" name="submissionId" value="{$submissionId|escape}" />
 		{if $galleyId}
-			<input type="hidden" name="articleGalleyId" value="{$galleyId|escape}" />
+			<input type="hidden" name="representationId" value="{$galleyId|escape}" />
 		{/if}
 
 		<!-- User autocomplete -->
@@ -39,7 +39,7 @@
 			{url|assign:filesListbuilderUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.files.CopyeditingFilesListbuilderHandler" op="fetch" submissionId=$submissionId escape=false}
 			{assign var="filesListbuilderId" value="copyeditingFilesListbuilder"}
 		{else $fileStage == $smarty.const.SUBMISSION_FILE_GALLEY}
-			{url|assign:filesListbuilderUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.files.GalleyFilesListbuilderHandler" op="fetch" submissionId=$submissionId articleGalleyId=$galleyId escape=false}
+			{url|assign:filesListbuilderUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.files.GalleyFilesListbuilderHandler" op="fetch" submissionId=$submissionId representationId=$galleyId escape=false}
 			{assign var="filesListbuilderId" value="galleyFilesListbuilder"}
 		{/if}
 
