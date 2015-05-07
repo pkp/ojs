@@ -56,8 +56,8 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	 * @copydoc FilesListbuilderHandler::getOptions()
 	 */
 	function getOptions() {
-		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$galley =& $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$galley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		$submissionFiles =& $submissionFileDao->getLatestRevisionsByAssocId(
@@ -71,7 +71,7 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	 * @copydoc FilesListbuilderHandler::getRequestArgs()
 	 */
 	function getRequestArgs() {
-		$galley =& $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
+		$galley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 		$args = parent::getRequestArgs();
 		$args['articleGalleyId'] = $galley->getId();
 		return $args;

@@ -37,7 +37,7 @@ class GalleyRequiredPolicy extends DataObjectRequiredPolicy {
 		if (!$galleyId) return AUTHORIZATION_DENY;
 
 		// Need a valid submission in request.
-		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		if (!is_a($submission, 'Submission')) return AUTHORIZATION_DENY;
 
 		// Make sure the galley belongs to the submission.
