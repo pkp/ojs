@@ -32,7 +32,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				'editorDecisionActions', // Submission & review
 				'externalReview', // review
 				'editorial',
-				'production', 'galleysTab', // Production
+				'production', 'representationsTab', // Production
 				'submissionHeader',
 				'submissionProgressBar',
 				'expedite'
@@ -51,14 +51,14 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	 * @param $args array
 	 * @return JSONMessage JSON object
 	 */
-	function galleysTab($args, $request) {
+	function representationsTab($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$galleys = $galleyDao->getBySubmissionId($submission->getId());
+		$representationDao = Application::getRepresentationDAO();
+		$representations = $representationDao->getBySubmissionId($submission->getId());
 		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('galleys', $galleys);
-		$templateMgr->assign('currentGalleyTabId', (int) $request->getUserVar('currentGalleyTabId'));
+		$templateMgr->assign('representations', $representations);
+		$templateMgr->assign('currentRepresentationTabId', (int) $request->getUserVar('currentRepresentationTabId'));
 
 		return $templateMgr->fetchJson('workflow/galleysTab.tpl');
 	}

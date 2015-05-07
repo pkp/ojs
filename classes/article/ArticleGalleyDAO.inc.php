@@ -15,13 +15,14 @@
  */
 
 import('classes.article.ArticleGalley');
+import('lib.pkp.classes.submission.RepresentationDAO');
 
-class ArticleGalleyDAO extends DAO {
+class ArticleGalleyDAO extends RepresentationDAO {
 	/**
 	 * Constructor.
 	 */
 	function ArticleGalleyDAO() {
-		parent::DAO();
+		parent::RepresentationDAO();
 	}
 
 	/**
@@ -144,18 +145,19 @@ class ArticleGalleyDAO extends DAO {
 
 	/**
 	 * Retrieve all galleys for an article.
-	 * @param $articleId int
-	 * @return array ArticleGalleys
+	 * @param $submissionId int Article ID.
+	 * @return DAOResultFactory
 	 */
-	function getBySubmissionId($articleId) {
-		$result = $this->retrieve(
-			'SELECT *
-			FROM submission_galleys
-			WHERE submission_id = ? ORDER BY seq',
-			(int) $articleId
+	function getBySubmissionId($submissionId) {
+		return new DAOResultFactory(
+			$this->retrieve(
+				'SELECT *
+				FROM submission_galleys
+				WHERE submission_id = ? ORDER BY seq',
+				(int) $submissionId
+			),
+			$this, '_fromRow'
 		);
-
-		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**

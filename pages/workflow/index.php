@@ -23,7 +23,7 @@ switch ($op) {
 	case 'externalReview':
 	case 'editorial':
 	case 'production':
-	case 'galleysTab':
+	case 'representationsTab':
 	case 'editorDecisionActions':
 	case 'submissionHeader':
 	case 'submissionProgressBar':
@@ -31,7 +31,7 @@ switch ($op) {
 		define('HANDLER_CLASS', 'WorkflowHandler');
 		import('pages.workflow.WorkflowHandler');
 		break;
-	case 'fetchGalley':
+	case 'fetchRepresentation':
 		define('HANDLER_CLASS', 'GalleyHandler');
 		import('pages.workflow.GalleyHandler');
 		break;

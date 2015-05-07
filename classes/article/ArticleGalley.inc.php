@@ -106,6 +106,15 @@ class ArticleGalley extends Representation {
 	}
 
 	/**
+	 * Override the parent class to fetch the non-localized label.
+	 * @see Representation::getLocalizedName()
+	 * @return string
+	 */
+	function getLocalizedName() {
+		return $this->getLabel();
+	}
+
+	/**
 	 * Get locale.
 	 * @return string
 	 */

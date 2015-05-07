@@ -1,5 +1,5 @@
 {**
- * templates/workflow/galleyTabs.tpl
+ * templates/workflow/galleysTab.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -11,30 +11,29 @@
 <script type="text/javascript">
 // Attach the JS file tab handler.
 $(function() {ldelim}
-	$('#galleyTabs').pkpHandler(
-		'$.pkp.controllers.tab.galley.GalleysTabHandler',
+	$('#representationTabs').pkpHandler(
+		'$.pkp.controllers.tab.representations.RepresentationsTabHandler',
 		{ldelim}
 			tabsUrl:'{url|escape:javascript router=$smarty.const.ROUTE_PAGE
-				op='galleysTab'
+				op='representationsTab'
 				submissionId=$submission->getId()
 				stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}',
-			{if $currentGalleyTabId}currentGalleyTabId: '{$currentGalleyTabId}',{/if}
+			{if $currentRepresentationTabId}currentRepresentationTabId: '{$currentRepresentationTabId}',{/if}
 			emptyLastTab: true,
 		{rdelim}
 	);
 {rdelim});
 </script>
-<div id="galleyTabs">
+<div id="representationTabs" class="pkp_controllers_tab">
 	<ul>
-		{foreach from=$galleys item=galley}
+		{foreach from=$representations item=representation}
 			<li>
-				<a id="galley{$galley->getId()|escape}"
-					href="{url router=$smarty.const.ROUTE_PAGE page="workflow" op="fetchGalley"
-					articleGalleyId=$galley->getId()
-					submissionId=$galley->getSubmissionId()
-					stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION}">{$galley->getLabel()|escape}</a>
+				<a id="representation{$representation->getId()|escape}"
+					href="{url router=$smarty.const.ROUTE_PAGE page="workflow" op="fetchRepresentation"
+					articleGalleyId=$representation->getId()
+					submissionId=$representation->getSubmissionId()
+					stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION}">{$representation->getLocalizedName()|escape}</a>
 			</li>
 		{/foreach}
 	</ul>
 </div>
-
