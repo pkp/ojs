@@ -40,6 +40,10 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR),
 			array('dependentFiles')
 		);
+		$this->addRoleAssignment(
+			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
+			array('selectFiles')
+		);
 
 		$this->setEmptyCategoryRowText('grid.noAuditors');
 	}
@@ -77,6 +81,18 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 
 		$router = $request->getRouter();
 
+		// Add a "select files" action for editors / subeditors
+		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		if (array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), $userRoles)) {
+			import('lib.pkp.controllers.grid.files.fileList.linkAction.SelectFilesLinkAction');
+			$this->addAction(new SelectFilesLinkAction(
+				$request,
+				$this->getRequestArgs(),
+				__('editor.submission.selectFiles')
+			));
+		}
+
+		// Add a "view document library" action
 		$this->addAction(
 			new LinkAction(
 				'viewLibrary',
@@ -126,6 +142,25 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 		$row->setCellProvider(new SignoffFilesGridCellProvider($submission->getId(), $this->getStageId()));
 		$row->addFlag('gridRowStyle', true);
 		return $row;
+	}
+
+	//
+	// Public handler methods
+	//
+	/**
+	 * Show the form to allow the user to select files from previous stages
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function selectFiles($args, $request) {
+		$submission = $this->getSubmission();
+		$representation = $this->getAuthorizedContextObject(ASSOC_TYPE_REPRESENTATION);
+
+		import('lib.pkp.controllers.grid.files.proof.form.ManageProofFilesForm');
+		$manageProofFilesForm = new ManageProofFilesForm($submission->getId(), $representation->getId());
+		$manageProofFilesForm->initData($args, $request);
+		return new JSONMessage(true, $manageProofFilesForm->fetch($request));
 	}
 
 	/**
