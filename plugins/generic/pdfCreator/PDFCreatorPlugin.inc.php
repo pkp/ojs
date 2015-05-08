@@ -30,7 +30,7 @@
  *		20110728	BLH	Commented out HookRegistry to disable plugin. Not the proper way to do this, I realize!
  */
 
-import('classes.plugins.GenericPlugin');
+import('lib.pkp.classes.plugins.GenericPlugin');
 
 class PDFCreatorPlugin extends GenericPlugin {
 	function register($category, $path) { 
