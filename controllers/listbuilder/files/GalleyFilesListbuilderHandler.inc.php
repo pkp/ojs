@@ -33,8 +33,8 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('classes.security.authorization.GalleyRequiredPolicy');
-		$this->addPolicy(new GalleyRequiredPolicy($request, $args));
+		import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+		$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
 		return parent::authorize($request, $args, $roleAssignments, WORKFLOW_STAGE_ID_PRODUCTION);
 	}
 

@@ -34,19 +34,20 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	}
 
 	/**
-	 * Retrieve a galley by ID.
-	 * @param $galleyId int
-	 * @param $submissionId int optional
-	 * @return ArticleGalley
+	 * @copydoc RepresentationDAO::getById()
 	 */
-	function getById($galleyId, $submissionId = null) {
+	function getById($galleyId, $submissionId = null, $contextId = null) {
 		$params = array((int) $galleyId);
-		if ($submissionId !== null) $params[] = (int) $submissionId;
+		if ($submissionId) $params[] = (int) $submissionId;
+		if ($contextId) $params[] = (int) $contextId;
+
 		$result = $this->retrieve(
-			'SELECT	*
-			FROM	submission_galleys
-			WHERE	galley_id = ?' .
-			($submissionId !== null?' AND submission_id = ?':''),
+			'SELECT	g.*
+			FROM	submission_galleys g
+			' . ($contextId?' JOIN submissions s ON (s.submission_id = g.submission_id)':'') . '
+			WHERE	g.galley_id = ?' .
+			($submissionId !== null?' AND g.submission_id = ?':'') .
+			($contextId?' AND s.context_id = ?':''),
 			$params
 		);
 
@@ -144,9 +145,7 @@ class ArticleGalleyDAO extends RepresentationDAO {
 	}
 
 	/**
-	 * Retrieve all galleys for an article.
-	 * @param $submissionId int Article ID.
-	 * @return DAOResultFactory
+	 * @copydoc RepresentationDAO::getBySubmissionId()
 	 */
 	function getBySubmissionId($submissionId) {
 		return new DAOResultFactory(

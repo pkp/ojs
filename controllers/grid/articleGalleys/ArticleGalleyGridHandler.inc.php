@@ -46,10 +46,10 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('classes.security.authorization.SubmissionAccessPolicy');
 		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
 
-		// If a signoff ID was specified, authorize it.
+		// If a representation was specified, authorize it.
 		if ($request->getUserVar('representationId')) {
-			import('classes.security.authorization.GalleyRequiredPolicy');
-			$this->addPolicy(new GalleyRequiredPolicy($request, $args));
+			import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+			$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
 		}
 
 		return parent::authorize($request, $args, $roleAssignments);

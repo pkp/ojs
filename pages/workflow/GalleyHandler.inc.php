@@ -40,9 +40,9 @@ class GalleyHandler extends Handler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		// Get the galley Policy
-		import('classes.security.authorization.GalleyRequiredPolicy');
-		$galleyPolicy = new GalleyRequiredPolicy($request, $args);
+		// Get the representation policy
+		import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+		$galleyPolicy = new RepresentationRequiredPolicy($request, $args);
 
 		// Get the workflow stage policy
 		import('classes.security.authorization.WorkflowStageAccessPolicy');
