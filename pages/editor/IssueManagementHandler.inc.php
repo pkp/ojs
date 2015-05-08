@@ -737,7 +737,7 @@ class IssueManagementHandler extends EditorHandler {
 		//
 		//OUTPUT XML TO FILE SYSTEM
 		//
-		$outputFile = '/apps/subi/tmp/' . 'ojsExportIssue' . $issue->getId() . '.xml';
+		$outputFile = '/apps/eschol/tmp/' . 'ojsExportIssue' . $issue->getId() . '.xml';
 		if (($h = fopen($outputFile, 'wb'))===false) return false;
 		fwrite($h, XMLCustomWriter::getXML($doc));
 		fclose($h);
@@ -746,7 +746,7 @@ class IssueManagementHandler extends EditorHandler {
 		// CONVERT XML TO ESCHOL FORMAT
 		//
 		// run script. if it ran OK (return 0) then proceed happily. if it errored (return not 0), then cause an error!
-		passthru("/apps/subi/subi/ojsConvert/convert.py $outputFile >> /apps/subi/ojs/logs/issue_export.log 2>&1 &");
+		passthru("/apps/eschol/subi/ojsConvert/convert.py $outputFile >> /apps/eschol/ojs/logs/issue_export.log 2>&1 &");
 
 		//send a notification of publication to help@escholarship.org, unless it's an Articles in Press (Vol=0 and Iss=0).
 		//error_log("JOURNAL CLASS", get_class($journal));
@@ -792,9 +792,9 @@ class IssueManagementHandler extends EditorHandler {
 				    $crossRefXML = $crossRefObject->exportArticles($journal, $result, $output);
                     //Need to get the ARK here
                      error_log("SINGLEARTICLEID:" . $singleArticleID);
-					 //$rawQualifiedArk = exec("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . //$singleArticleID, $execOutput, $execError );
+					 //$rawQualifiedArk = exec("/apps/eschol/subi/xtf-erep/control/tools/mintArk.py ojs " . //$singleArticleID, $execOutput, $execError );
                      //error_log ("ExecOutput:". print_r($execOutput, 1));
-                    $rawQualifiedArk = shell_exec("source /apps/subi/.bashrc && /apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID 2>&1");                                          
+                    $rawQualifiedArk = shell_exec("source /apps/eschol/.bashrc && /apps/eschol/subi/xtf-erep/control/tools/mintArk.py ojs $singleArticleID 2>&1");                                          
                      error_log("RAWQUALIFIED ARK:" . $rawQualifiedArk );
                      $qualifiedArk = trim($rawQualifiedArk);                     
                      error_log("Trimmed ARK from IssueMgngHndler:" . $qualifiedArk . ":END");
@@ -861,7 +861,7 @@ class IssueManagementHandler extends EditorHandler {
 		
 		
 		return true;
-		//exec("/apps/subi/subi/ojsConvert/convert.py $outputFile",$conversionOutput,$returnValue); //returns 0 on success
+		//exec("/apps/eschol/subi/ojsConvert/convert.py $outputFile",$conversionOutput,$returnValue); //returns 0 on success
 		//if(!$returnValue) {
 			//system("rm $outputFile");
 			//return true;

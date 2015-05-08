@@ -6,7 +6,7 @@ run before doing this!
 
 To run the script:
 
-cd /apps/subi/apache/htdocs/ojs/eschol/utilities/
+cd /apps/eschol/apache/htdocs/ojs/eschol/utilities/
 php -f article_user_id_update.php
 
 

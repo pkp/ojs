@@ -256,13 +256,13 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			
             if (!empty($articleID)){
                 //check first to see if an ARK has already been assigned			
-		        $rawQualifiedArk = shell_exec('sqlite3 /apps/subi/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
+		        $rawQualifiedArk = shell_exec('sqlite3 /apps/eschol/subi/xtf-erep/control/db/arks.db "select id from arks where external_id=' .$articleID. '"');
                 $qualifiedArk = trim($rawQualifiedArk);
                 //No ARK exists, so assign one now                 
 		        if (!$qualifiedArk){                
 		             error_log($articleID . " has no ARK in the database; will generate now!");					 
-					 $rawQualifiedArk = shell_exec("source /apps/subi/.bashrc &&  /apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $articleID);
-                     error_log("/apps/subi/subi/xtf-erep/control/tools/mintArk.py ojs " . $articleID);
+					 $rawQualifiedArk = shell_exec("source /apps/eschol/.bashrc &&  /apps/eschol/subi/xtf-erep/control/tools/mintArk.py ojs " . $articleID);
+                     error_log("/apps/eschol/subi/xtf-erep/control/tools/mintArk.py ojs " . $articleID);
                      $qualifiedArk = trim($rawQualifiedArk);  
 					 if (empty($qualifiedArk)){
 					     error_log("Failed to generate an ARK for " . $articleID);

@@ -48,7 +48,7 @@ foreach($badArticleFilesInfo as $badFileInfo) {
         //
         // CHANGE FILENAME ON FILESYSTEM
         //
-	$baseUploadDir = '/apps/subi/ojs/files';
+	$baseUploadDir = '/apps/eschol/ojs/files';
 	$baseFilesDir = $baseUploadDir . '/journals/' . $journalId . '/articles/' . $articleId;
 	$oldFilePath = $baseFilesDir . '/supp/';
 	$oldFileFullPath = $oldFilePath . $badFileName;

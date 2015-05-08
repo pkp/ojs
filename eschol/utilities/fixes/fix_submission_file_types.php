@@ -5,7 +5,7 @@ require_once './import_journals.php';
 require_once './import_set_parameters.php';
 require_once './ojs_db_connect.php';
 
-$baseFileDir = '/apps/subi/ojs/files/journals';
+$baseFileDir = '/apps/eschol/ojs/files/journals';
 $unknownFileDescs = array();
 $filesToBeFixed = 0;
 $filesNotFound = 0;

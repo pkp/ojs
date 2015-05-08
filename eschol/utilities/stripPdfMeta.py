@@ -1,9 +1,9 @@
-#!/apps/subi/sw/bin/python
+#!/usr/pkg/bin/python
 
 import re, os, subprocess, sys, tempfile
 
 fileToModify = sys.argv[1]
-pdfTkCmd = '/apps/subi/sw/bin/pdftk'
+pdfTkCmd = '/usr/pkg/bin/pdftk'
 
 # Dump the existing metadata to a temp file
 (handle1,temp1) = tempfile.mkstemp('_pdfMeta.in')

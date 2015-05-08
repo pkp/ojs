@@ -33,7 +33,7 @@ ADMIN_PASS=`cat ~/.passwords/ojs_admin_pw.txt`
 # Generate an "expect" script to drive the OJS command-line installation program
 cat > /tmp/initdb_script.exp <<DONE
 set timeout -1
-spawn php -c /apps/subi/apache/conf/php.ini tools/install.php
+spawn php -c /apps/eschol/apache/conf/php.ini tools/install.php
 match_max 100000
 expect "Select (en_US): "
 send -- "\r"
@@ -97,7 +97,7 @@ rm /tmp/initdb_script.exp
 
 #echo ""
 #echo "------------------ Running upgrade tool --------------------"
-#php -c /apps/subi/apache/conf/php.ini tools/upgrade.php upgrade || die
+#php -c /apps/eschol/apache/conf/php.ini tools/upgrade.php upgrade || die
 
 echo ""
 echo "------------------ Inserting default users ---------------------"

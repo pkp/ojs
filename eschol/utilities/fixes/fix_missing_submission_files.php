@@ -4,7 +4,7 @@
 require_once './import_set_parameters.php';
 require_once './ojs_db_connect.php';
 
-$baseUploadDir = '/apps/subi/ojs/files/journals';
+$baseUploadDir = '/apps/eschol/ojs/files/journals';
 $filesNotFound = 0;
 $transitionFilesMissing = 0;
 $filesFixed = 0;
@@ -117,7 +117,7 @@ foreach($importedArticleFiles as $articleFile) {
 
 mysql_close($conn);
 
-echo "\nFiles not found in /apps/subi/ojs/files/: $filesNotFound\n";
+echo "\nFiles not found in /apps/eschol/ojs/files/: $filesNotFound\n";
 echo "\nFiles not found in transition data: $transitionFilesMissing\n";
 echo "\nFiles fixed: $filesFixed\n";
 ?>

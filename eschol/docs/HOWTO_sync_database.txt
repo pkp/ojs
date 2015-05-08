@@ -24,7 +24,7 @@ with the database (and files) from prod:
        but not the .hg directory, since that contains backups of the local database.
        The rsync will blow away any extraneous files and directories, so if you want 
        any of these be sure to move them elsewhere. But backups are kept for 30 days
-       in /apps/subi/tmp/rolling/ojs_data/)
+       in /apps/eschol/tmp/rolling/ojs_data/)
    d. gomysql < ojs/db_backup/ojs_db_dump.sql     # this recreates all tables
    e. monit start apache
    f. (now test)

@@ -451,8 +451,8 @@ class ArticleFileManager extends FileManager {
 		}
 
 		//create PDF file
-		$libreOffice = "/apps/subi/sw/libreoffice/program/soffice";
-		$convertCmd = "$libreOffice --headless --convert-to pdf -outdir $outdir $origFilePath >> /apps/subi/ojs/logs/pdf_conversion.log";
+		$libreOffice = "/usr/pkg/bin/soffice";
+		$convertCmd = "$libreOffice --headless --convert-to pdf --outdir $outdir $origFilePath >> /apps/eschol/ojs/logs/pdf_conversion.log";
 		passthru($convertCmd,$return);
 
 		//LibreOffice doesn't provide useful return codes, so just do a simple check for the PDF file
@@ -460,8 +460,8 @@ class ArticleFileManager extends FileManager {
 
 			// strip out the PDF metadata for non-galley (e.g. review) PDFs
 			if(!$isGalley) {
-				$stripPdfMeta = "/apps/subi/apache/htdocs/ojs/eschol/utilities/stripPdfMeta.py";
-				$stripCmd = "LD_LIBRARY_PATH=/apps/subi/sw/lib $stripPdfMeta $pdfFilepath >> /apps/subi/ojs/logs/pdf_strip.log";
+				$stripPdfMeta = "/apps/eschol/apache/htdocs/ojs/eschol/utilities/stripPdfMeta.py";
+				$stripCmd = "LD_LIBRARY_PATH=/usr/pkg/lib $stripPdfMeta $pdfFilepath >> /apps/eschol/ojs/logs/pdf_strip.log";
 				passthru($stripCmd,$return);
 			}
 			else {

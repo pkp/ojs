@@ -12,19 +12,19 @@ Now start running BH's stuff:
 
 2) Fix bad characters in data by following instructions in:
 	
-	/apps/subi/apache/htdocs/ojs/eschol/docs/HOWTO_fix_unicode.txt
+	/apps/eschol/apache/htdocs/ojs/eschol/docs/HOWTO_fix_unicode.txt
 
 -------------------------------------------------------------------------------------------
 
 3) Link authors and users by following instructions in:
 	
-	/apps/subi/apache/htdocs/ojs/eschol/docs/HOWTO_link_authors_users.txt
+	/apps/eschol/apache/htdocs/ojs/eschol/docs/HOWTO_link_authors_users.txt
 
 -------------------------------------------------------------------------------------------
 
 4) If necessary, update data directory & list of journals you are running the scripts for in:
 
-	/apps/subi/apache/htdocs/ojs/eschol/utilities/import_set_parameters.php
+	/apps/eschol/apache/htdocs/ojs/eschol/utilities/import_set_parameters.php
 	
 	If doing locally, don't forget to hg commit and push to prod!
 
@@ -32,7 +32,7 @@ Now start running BH's stuff:
 
 5) Update DB connection if necessary in:
 
-	/apps/subi/apache/htdocs/ojs/eschol/utilities/ojs_db_connect.php
+	/apps/eschol/apache/htdocs/ojs/eschol/utilities/ojs_db_connect.php
 
 	If doing locally, don't forget to hg commit and push to prod!
 	
@@ -40,7 +40,7 @@ Now start running BH's stuff:
 
 6) Now run the scripts in this order:
 
-	cd /apps/subi/apache/htdocs/ojs/eschol/utilities
+	cd /apps/eschol/apache/htdocs/ojs/eschol/utilities
 	
 	CHANGE RANGE OF JOURNAL IDs if necessary
 	php -f article_user_id_update.php						# update article submitter IDs
@@ -72,7 +72,7 @@ Now start running BH's stuff:
 															# these are text.* files
 															# original, review, and editor versions
 															# creates article_files records in DB
-															# UPLOADS files to /apps/subi/ojs/files/
+															# UPLOADS files to /apps/eschol/ojs/files/
 													
 	php -f review_import.php								# import reviewers' reviews of articles
 															# from review-* files
@@ -80,7 +80,7 @@ Now start running BH's stuff:
 															# creates article_files records
 															# (type 'submission/review')
 															# updates review_assignments.reviewer_file_id
-															# UPLOADS txt & pdf files to /apps/subi/ojs/files/
+															# UPLOADS txt & pdf files to /apps/eschol/ojs/files/
 
 	php -f reviewer_recommendation_import.php				# import reviewer recommendations for articles
 															# from reviews.tsv

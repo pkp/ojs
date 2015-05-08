@@ -3,14 +3,14 @@
 
 //require './import_set_parameters.php';
 
-$importHome = '/apps/subi/transition/cdltransition.bepress.com/cdlib/';
-$baseUploadDir = '/apps/subi/ojs/files';
+$importHome = '/apps/eschol/transition/cdltransition.bepress.com/cdlib/';
+$baseUploadDir = '/apps/eschol/ojs/files';
 $importParentDir[] = array('nelc/uee/', 'nelc_uee', 38, 'wendrich@humnet.ucla.edu','Wendrich','Willeke','');
-$fileTypeInfo = '/apps/subi/apache/htdocs/ojs/eschol/docs/uee_review_filetype.txt';
+$fileTypeInfo = '/apps/eschol/apache/htdocs/ojs/eschol/docs/uee_review_filetype.txt';
 
 /***
 $importHome= '/Users/bhui/Documents/bepressdata/'; // Barbara's local machine
-$baseUploadDir = '/apps/subi/ojs/files';
+$baseUploadDir = '/apps/eschol/ojs/files';
 $importParentDir[] = array('nelc/uee/', 'nelc_uee', 38, 'wendrich@humnet.ucla.edu','Wendrich','Willeke','');
 $fileTypeInfo = '/Library/WebServer/Documents/ojs/eschol/docs/uee_review_filetype.txt';
 ***/

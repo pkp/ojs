@@ -8,12 +8,12 @@
 //
 $importHome = '/apps/bpress/transition/cdltransition.bepress.com/cdlib/';
 //$importHome= '/Users/bhui/Documents/bepressdata/'; // Barbara's local machine
-//$importHome = '/apps/subi/transition/2011-09-30_transition_data/cdlib/';
+//$importHome = '/apps/eschol/transition/2011-09-30_transition_data/cdlib/';
 
 // 
 // WHERE TO UPLOAD THE OJS FILES (ARTICLE VERSIONS, REVIEWS, ETC):
 //
-$baseUploadDir = '/apps/subi/ojs/files';
+$baseUploadDir = '/apps/eschol/ojs/files';
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

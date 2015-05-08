@@ -25,7 +25,7 @@ def utfDoubleDecode(suspData):
 
 ###############################################################################
 def process(table, idcol, fix):
-  sqlCmd = "mysql --defaults-extra-file=/apps/subi/.passwords/ojs_db_pw.mysql"
+  sqlCmd = "mysql --defaults-extra-file=/apps/eschol/.passwords/ojs_db_pw.mysql"
   sqlFile = "tmp.sql"
   with open(sqlFile, "w") as f:
     f.write("select %s, first_name, middle_name, last_name from %s;" % (idcol, table))
