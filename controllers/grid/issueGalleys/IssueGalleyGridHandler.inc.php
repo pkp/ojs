@@ -164,7 +164,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return IssueGalleyGridRow
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		return new IssueGalleyGridRow($issue->getId());
 	}
@@ -274,7 +274,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	/**
 	 * @copydoc GridHandler::loadData
 	 */
-	function loadData($request, $filter) {
+	protected function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		return $issueGalleyDao->getByIssueId($issue->getId());

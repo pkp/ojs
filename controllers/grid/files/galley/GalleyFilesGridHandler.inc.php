@@ -115,7 +115,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	/**
 	 * @copydoc SignoffFilesGridHandler::getRowInstance()
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		$row = parent::getRowInstance();
 		$row->setRequestArgs($this->getRequestArgs());
 		return $row;
@@ -135,7 +135,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return CopyeditingFilesGridRow
 	 */
-	function getCategoryRowInstance() {
+	protected function getCategoryRowInstance() {
 		$galley = $this->getGalley();
 		$row = new GalleyFilesSignoffGridCategoryRow($galley->getId(), $this->getStageId());
 		$submission = $this->getSubmission();

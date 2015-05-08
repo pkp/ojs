@@ -57,7 +57,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	/**
 	 * @copydoc GridHandler::loadData()
 	 */
-	function loadData($request, $filter) {
+	protected function loadData($request, $filter) {
 		$journal = $request->getJournal();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getPublishedIssues($journal->getId());

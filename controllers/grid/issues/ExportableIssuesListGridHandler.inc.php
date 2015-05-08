@@ -55,7 +55,7 @@ class ExportableIssuesListGridHandler extends IssueGridHandler {
 	/**
 	 * @copydoc GridHandler::loadData()
 	 */
-	function loadData($request, $filter) {
+	protected function loadData($request, $filter) {
 		$journal = $request->getJournal();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getIssues($journal->getId(), $this->getGridRangeInfo($request, $this->getId()));
@@ -73,7 +73,7 @@ class ExportableIssuesListGridHandler extends IssueGridHandler {
 	 * Get the row handler - override the parent row handler. We do not need grid row actions.
 	 * @return GridRow
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		return new GridRow();
 	}
 }

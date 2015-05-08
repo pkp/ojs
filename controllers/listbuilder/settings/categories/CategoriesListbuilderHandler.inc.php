@@ -30,7 +30,7 @@ class CategoriesListbuilderHandler extends SetupListbuilderHandler {
 	/**
 	 * Load the list from an external source into the grid structure
 	 */
-	function loadData() {
+	protected function loadData() {
 		$journal = $this->getContext();
 		$categoryIds = (array) $journal->getSetting('categories');
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');
@@ -53,7 +53,7 @@ class CategoriesListbuilderHandler extends SetupListbuilderHandler {
 	 * Get the data element that corresponds to the current request
 	 * Allow for a blank $rowId for when creating a not-yet-persisted row
 	 */
-	function getRowDataElement($request, $rowId) {
+	protected function getRowDataElement($request, $rowId) {
 		// fallback on the parent if a rowId is found
 		if ( !empty($rowId) ) {
 			return parent::getRowDataElement($request, $rowId);

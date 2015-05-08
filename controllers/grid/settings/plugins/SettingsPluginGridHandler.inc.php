@@ -61,7 +61,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	/**
 	 * @copydoc CategoryGridHandler::getCategoryRowInstance()
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 
 		import('controllers.grid.plugins.PluginGridRow');

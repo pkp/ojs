@@ -178,7 +178,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return ArticleGalleyGridRow
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		return new ArticleGalleyGridRow($submission->getId());
 	}
@@ -286,7 +286,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	/**
 	 * @copydoc GridHandler::loadData()
 	 */
-	function loadData($request, $filter) {
+	protected function loadData($request, $filter) {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		return $articleGalleyDao->getBySubmissionId($submission->getId());

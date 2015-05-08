@@ -124,7 +124,7 @@ class SectionGridHandler extends SetupGridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return SectionGridRow
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		return new SectionGridRow();
 	}
 

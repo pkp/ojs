@@ -104,7 +104,7 @@ class TocGridHandler extends CategoryGridHandler {
 	 * Get the row handler - override the default row handler
 	 * @return TocGridRow
 	 */
-	function getRowInstance() {
+	protected function getRowInstance() {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		return new TocGridRow($issue->getId());
 	}
@@ -112,7 +112,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @copydoc CategoryGridHandler::getCategoryRowInstance()
 	 */
-	function getCategoryRowInstance() {
+	protected function getCategoryRowInstance() {
 		return new TocGridCategoryRow();
 	}
 
@@ -126,7 +126,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @copydoc GridHandler::loadData()
 	 */
-	function loadData($request, $filter) {
+	protected function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
