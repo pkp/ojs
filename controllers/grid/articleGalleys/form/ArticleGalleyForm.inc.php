@@ -64,7 +64,7 @@ class ArticleGalleyForm extends Form {
 
 		$templateMgr->assign('submissionId', $this->_submission->getId());
 		if ($this->_articleGalley) {
-			$templateMgr->assign('articleGalleyId', $this->_articleGalley->getId());
+			$templateMgr->assign('representationId', $this->_articleGalley->getId());
 			$templateMgr->assign('articleGalley', $this->_articleGalley);
 			$templateMgr->assign('galleyType', $this->_articleGalley->getGalleyType());
 		}

@@ -33,8 +33,8 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('classes.security.authorization.GalleyRequiredPolicy');
-		$this->addPolicy(new GalleyRequiredPolicy($request, $args));
+		import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+		$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
 		return parent::authorize($request, $args, $roleAssignments, WORKFLOW_STAGE_ID_PRODUCTION);
 	}
 
@@ -56,8 +56,8 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	 * @copydoc FilesListbuilderHandler::getOptions()
 	 */
 	function getOptions() {
-		$submission =& $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$galley =& $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$galley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		$submissionFiles =& $submissionFileDao->getLatestRevisionsByAssocId(
@@ -71,9 +71,9 @@ class GalleyFilesListbuilderHandler extends FilesListbuilderHandler {
 	 * @copydoc FilesListbuilderHandler::getRequestArgs()
 	 */
 	function getRequestArgs() {
-		$galley =& $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
+		$galley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 		$args = parent::getRequestArgs();
-		$args['articleGalleyId'] = $galley->getId();
+		$args['representationId'] = $galley->getId();
 		return $args;
 	}
 }

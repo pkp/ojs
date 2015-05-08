@@ -30,10 +30,7 @@ class ArticleGalley extends Representation {
 	 * @return boolean
 	 */
 	function isHTMLGalley() {
-		if ($this->getGalleyType() == 'htmlarticlegalleyplugin')
-			return true;
-		else
-			return false;
+		return $this->getGalleyType() == 'htmlarticlegalleyplugin';
 	}
 
 	/**
@@ -41,10 +38,7 @@ class ArticleGalley extends Representation {
 	 * @return boolean
 	 */
 	function isPdfGalley() {
-		if ($this->getGalleyType() == 'pdfarticlegalleyplugin')
-			return true;
-		else
-			return false;
+		return $this->getGalleyType() == 'pdfarticlegalleyplugin';
 	}
 
 	/**
@@ -112,6 +106,15 @@ class ArticleGalley extends Representation {
 	}
 
 	/**
+	 * Override the parent class to fetch the non-localized label.
+	 * @see Representation::getLocalizedName()
+	 * @return string
+	 */
+	function getLocalizedName() {
+		return $this->getLabel();
+	}
+
+	/**
 	 * Get locale.
 	 * @return string
 	 */
@@ -163,7 +166,7 @@ class ArticleGalley extends Representation {
 	 * @return boolean
 	 */
 	function getIsAvailable() {
-		return $this->getData('isAvailable') ? true : false;
+		return (boolean) $this->getData('isAvailable');
 	}
 
 	/**

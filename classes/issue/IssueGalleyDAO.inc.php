@@ -315,7 +315,7 @@ class IssueGalleyDAO extends DAO {
 	 * @param $issueId int optional
 	 */
 	function deleteById($galleyId, $issueId = null) {
-		HookRegistry::call('IssueGalleyDAO::deleteGalleyById', array(&$galleyId, &$issueId));
+		HookRegistry::call('IssueGalleyDAO::deleteById', array(&$galleyId, &$issueId));
 
 		if (isset($issueId)) {
 			$this->update(
@@ -342,37 +342,6 @@ class IssueGalleyDAO extends DAO {
 		foreach ($galleys as $galley) {
 			$this->deleteById($galley->getId(), $issueId);
 		}
-	}
-
-	/**
-	 * Check if a galley exists with the associated file ID.
-	 * @param $issueId int
-	 * @param $fileId int
-	 * @return boolean
-	 */
-	function galleyExistsByFileId($issueId, $fileId) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM issue_galleys
-			WHERE issue_id = ? AND file_id = ?',
-			array((int) $issueId, (int) $fileId)
-		);
-
-		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
-		$result->Close();
-		return $returner;
-	}
-
-	/**
-	 * Increment the views count for a galley.
-	 * @param $galleyId int
-	 */
-	function incrementViews($galleyId) {
-		if ( !HookRegistry::call('IssueGalleyDAO::incrementViews', array(&$galleyId)) ) {
-			return $this->update(
-				'UPDATE issue_galleys SET views = views + 1 WHERE galley_id = ?',
-				(int) $galleyId
-			);
-		} else return false;
 	}
 
 	/**

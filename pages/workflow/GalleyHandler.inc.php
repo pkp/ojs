@@ -28,7 +28,7 @@ class GalleyHandler extends Handler {
 
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER, ROLE_ID_ASSISTANT),
-			array('fetchGalley')
+			array('fetchRepresentation')
 		);
 	}
 
@@ -40,9 +40,9 @@ class GalleyHandler extends Handler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		// Get the galley Policy
-		import('classes.security.authorization.GalleyRequiredPolicy');
-		$galleyPolicy = new GalleyRequiredPolicy($request, $args);
+		// Get the representation policy
+		import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+		$galleyPolicy = new RepresentationRequiredPolicy($request, $args);
 
 		// Get the workflow stage policy
 		import('classes.security.authorization.WorkflowStageAccessPolicy');
@@ -56,33 +56,6 @@ class GalleyHandler extends Handler {
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
-	/**
-	 * @see PKPHandler::initialize()
-	 */
-	function initialize($request, $args) {
-		$this->setupTemplate($request);
-	}
-
-	/**
-	 * Setup variables for the template
-	 * @param $request Request
-	 */
-	function setupTemplate($request) {
-		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION, LOCALE_COMPONENT_APP_EDITOR);
-
-		$templateMgr = TemplateManager::getManager($request);
-
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
-		$galley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
-
-		// Assign the authorized submission.
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('stageId', $stageId);
-		$templateMgr->assign('galley', $galley);
-	}
-
 
 	//
 	// Public operations
@@ -93,9 +66,14 @@ class GalleyHandler extends Handler {
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
-	function fetchGalley($args, $request) {
-		// Fetch the template
+	function fetchRepresentation($args, $request) {
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION, LOCALE_COMPONENT_APP_EDITOR);
 		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign(array(
+			'submission' => $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION),
+			'stageId' => $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE),
+			'representation' => $this->getAuthorizedContextObject(ASSOC_TYPE_REPRESENTATION)
+		));
 		return $templateMgr->fetchJson('controllers/tab/workflow/galley.tpl');
 	}
 }

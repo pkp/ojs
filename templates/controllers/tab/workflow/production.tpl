@@ -1,5 +1,5 @@
 {**
- * templates/workflow/production.tpl
+ * templates/controllers/tab/workflow/production.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -13,7 +13,7 @@
 		$('#production').pkpHandler(
 			'$.pkp.pages.workflow.ProductionHandler',
 			{ldelim}
-				formatsTabContainerSelector: '#galleyTabsContainer',
+				formatsTabContainerSelector: '#representationsTabsContainer',
 				submissionProgressBarSelector: '#submissionProgressBarDiv'
 			{rdelim}
 		);
@@ -30,18 +30,18 @@
 	{load_url_in_div id="productionReadyFilesGridDiv" url=$productionReadyFilesGridUrl}
 
 	{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), $userRoles)}
-		{fbvFormArea id="galleys"}
+		{fbvFormArea id="representations"}
 			{fbvFormSection}
-				<!--  Galleys -->
-				{url|assign:galleyGridUrl router=$smarty.const.ROUTE_COMPONENT  component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId()}
-				{load_url_in_div id="formatsGridContainer"|uniqid url=$galleyGridUrl}
+				<!--  Representations -->
+				{url|assign:representationsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId()}
+				{load_url_in_div id="formatsGridContainer"|uniqid url=$representationsGridUrl}
 			{/fbvFormSection}
 		{/fbvFormArea}
 	{else}
 		<h3>{translate key="submission.galleys"}</h3>
 	{/if}
 
-	<div id='galleyTabsContainer'>
-		{include file="controllers/tab/workflow/galleysTab.tpl" galleyTabsId=$galleyTabsId galleys=$representations}
+	<div id="representationsTabsContainer">
+		{include file="controllers/tab/workflow/galleysTab.tpl" galleyTabsId=$galleyTabsId representations=$representations}
 	</div>
 </div>

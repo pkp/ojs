@@ -7,8 +7,8 @@
  *
  * Accordion with galley grid and related actions.
  *}
-{assign var="galleyId" value=$galley->getId()}
+{assign var="representationId" value=$representation->getId()}
 
-{url|assign:galleyFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.galley.GalleyFilesGridHandler" op="fetchGrid" submissionId=$submission->getId() articleGalleyId=$galleyId escape=false}
-{assign var=galleyContainerId value='galleyFilesGrid-'|concat:$galleyId|concat:'-'|uniqid}
-{load_url_in_div id=$galleyContainerId url=$galleyFilesGridUrl}
+{url|assign:representationFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.galley.GalleyFilesGridHandler" op="fetchGrid" submissionId=$submission->getId() representationId=$representationId escape=false}
+{assign var=representationContainerId value='representationFilesGrid-'|concat:$representationId|concat:'-'|uniqid}
+{load_url_in_div id=$representationContainerId url=$representationFilesGridUrl}

@@ -47,7 +47,7 @@ class GalleyFilesSignoffGridCategoryRow extends SignoffFilesGridCategoryRow {
 			$actionArgs = array(
 				'submissionId' => $submissionFile->getSubmissionId(),
 				'fileId' => $submissionFile->getFileId(),
-				'articleGalleyId' => $this->_galleyId,
+				'representationId' => $this->_galleyId,
 			);
 
 			$router = $request->getRouter();

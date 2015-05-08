@@ -46,10 +46,10 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('classes.security.authorization.SubmissionAccessPolicy');
 		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
 
-		// If a signoff ID was specified, authorize it.
-		if ($request->getUserVar('articleGalleyId')) {
-			import('classes.security.authorization.GalleyRequiredPolicy');
-			$this->addPolicy(new GalleyRequiredPolicy($request, $args));
+		// If a representation was specified, authorize it.
+		if ($request->getUserVar('representationId')) {
+			import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+			$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
 		}
 
 		return parent::authorize($request, $args, $roleAssignments);
@@ -87,7 +87,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
 		$requestArgs = (array) parent::getRequestArgs();
 		$requestArgs['submissionId'] = $submission->getId();
-		if ($articleGalley) $requestArgs['articleGalleyId'] = $articleGalley->getId();
+		if ($articleGalley) $requestArgs['representationId'] = $articleGalley->getId();
 		return $requestArgs;
 	}
 
@@ -243,7 +243,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function delete($args, $request) {
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_GALLEY);
-		$articleGalleyDao->deleteGalley($articleGalley);
+		$articleGalleyDao->deleteObject($articleGalley);
 		return DAO::getDataChangedEvent();
 	}
 
@@ -256,8 +256,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function setAvailable($args, $request) {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalley = $articleGalleyDao->getGalleyByBestGalleyId(
-			$request->getUserVar('articleGalleyId'),
+		$articleGalley = $articleGalleyDao->getByBestGalleyId(
+			$request->getUserVar('representationId'),
 			$submission->getId() // Make sure to validate the context.
 		);
 

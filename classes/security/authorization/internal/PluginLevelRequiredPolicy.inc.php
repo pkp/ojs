@@ -37,7 +37,7 @@ class PluginLevelRequiredPolicy extends AuthorizationPolicy {
 	 */
 	function effect() {
 		// Get the plugin.
-		$plugin =& $this->getAuthorizedContextObject(ASSOC_TYPE_PLUGIN);
+		$plugin = $this->getAuthorizedContextObject(ASSOC_TYPE_PLUGIN);
 		if (!is_a($plugin, 'Plugin')) return AUTHORIZATION_DENY;
 
 		// Test the plugin level.

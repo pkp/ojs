@@ -42,10 +42,10 @@ class SignoffFilesGridHandler extends PKPSignoffFilesGridHandler {
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 
-		// If a galley ID was specified, authorize it.
-		if ($request->getUserVar('articleGalleyId')) {
-			import('classes.security.authorization.GalleyRequiredPolicy');
-			$this->addPolicy(new GalleyRequiredPolicy($request, $args));
+		// If a representation ID was specified, authorize it.
+		if ($request->getUserVar('representationId')) {
+			import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+			$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
 		}
 
 		return parent::authorize($request, $args, $roleAssignments);

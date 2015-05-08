@@ -101,7 +101,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 			$user = $request->getUser();
 
 			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-			$galley = $articleGalleyDao->getGalleyByBestGalleyId($submissionFile->getAssocId(), $submission->getId());
+			$galley = $articleGalleyDao->getByBestGalleyId($submissionFile->getAssocId(), $submission->getId());
 
 			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_PROOFS_APPROVED, 'submission.event.proofsApproved', array('formatName' => $galley->getLabel(),'name' => $user->getFullName(), 'username' => $user->getUsername()));
 		}

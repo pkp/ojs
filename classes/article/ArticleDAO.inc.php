@@ -219,7 +219,7 @@ class ArticleDAO extends SubmissionDAO {
 		$publishedArticleDao->deletePublishedArticleByArticleId($submissionId);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalleyDao->deleteGalleysByArticle($submissionId);
+		$articleGalleyDao->deleteByArticleId($submissionId);
 
 		$articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$articleSearchDao->deleteSubmissionKeywords($submissionId);

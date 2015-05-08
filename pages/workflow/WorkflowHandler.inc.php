@@ -32,7 +32,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				'editorDecisionActions', // Submission & review
 				'externalReview', // review
 				'editorial',
-				'production', 'galleysTab', // Production
+				'production',
 				'submissionHeader',
 				'submissionProgressBar',
 				'expedite'
@@ -44,25 +44,6 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	//
 	// Public handler methods
 	//
-
-	/**
-	 * Show the production stage accordion contents
-	 * @param $request PKPRequest
-	 * @param $args array
-	 * @return JSONMessage JSON object
-	 */
-	function galleysTab($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$galleys = $galleyDao->getBySubmissionId($submission->getId());
-		$templateMgr->assign('submission', $submission);
-		$templateMgr->assign('galleys', $galleys);
-		$templateMgr->assign('currentGalleyTabId', (int) $request->getUserVar('currentGalleyTabId'));
-
-		return $templateMgr->fetchJson('workflow/galleysTab.tpl');
-	}
-
 	/**
 	 * Expedites a submission through the submission process, if the submitter is a manager or editor.
 	 * @param $args array
