@@ -877,6 +877,10 @@
 	<message key="about.subscriptionTypes.duration">Продолжительность</message>
 	<message key="about.subscriptionTypes.cost">Цена</message>
 	<message key="about.availableSubscriptionTypes">Типы подписок</message>
+	<message key="about.purchaseIssue">Купить выпуск</message>
+	<message key="about.purchaseArticle">Купить статью</message>
+	<message key="about.purchaseIssueDescription">Читатели без подписки могут покупать отдельные выпуски. Доступны следующие способы оплаты и цены:</message>
+	<message key="about.purchaseArticleDescription">Читатели без подписки могут покупать отдельные статьи. Доступны следующие способы оплаты и цены:</message>
 	<message key="about.memberships">Членства</message>
 	<message key="about.journalSponsorship">Спонсоры журнала</message>
 	<message key="about.aboutThisPublishingSystem">Об этой издательской системе</message>
