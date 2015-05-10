@@ -13,7 +13,7 @@
  * @brief Article report plugin
  */
 
-import('classes.plugins.ReportPlugin');
+import('lib.pkp.classes.plugins.ReportPlugin');
 
 class ArticleReportPlugin extends ReportPlugin {
 	/**

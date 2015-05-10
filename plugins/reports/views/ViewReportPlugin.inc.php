@@ -14,7 +14,7 @@
  */
 
 
-import('classes.plugins.ReportPlugin');
+import('lib.pkp.classes.plugins.ReportPlugin');
 
 class ViewReportPlugin extends ReportPlugin {
 	/**
