@@ -759,7 +759,7 @@ class IssueManagementHandler extends EditorHandler {
         $isBackIssue = $issue->getPublished() > 0 ? true: false;
 		
 		
-		if (($issueVolume != 0) && ($issueNumber != 0) && (gethostname == 'cdl-submit-p01' )){
+		if (($issueVolume != 0) && ($issueNumber != 0) && (gethostname() == 'cdl-submit-p01' )){
 		    $message = $journalTitle . ' has just published an issue, Volume ' . $issueVolume . ' Issue ' . $issueNumber;
 		    mail("help@escholarship.org","eScholarship Journal Issue Publication Notification", $message);
         }
