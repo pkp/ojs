@@ -106,11 +106,6 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 				'journalName' => $names[$site->getPrimaryLocale()]
 			));
 
-			// Install the default RT versions.
-			import('classes.rt.ojs.JournalRTAdmin');
-			$journalRtAdmin = new JournalRTAdmin($journalId);
-			$journalRtAdmin->restoreVersions(false);
-
 			// Create a default "Articles" section
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$section = new Section();
