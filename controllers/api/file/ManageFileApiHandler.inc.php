@@ -29,20 +29,17 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 	//
 	// Subclassed methods
 	//
-
 	/**
-	 * indexes the files associated with a submission.
-	 * @param $submission Submission
-	 * @param $submissionFile SubmissionFile
+	 * @copydoc PKPManageFileApiHandler::removeFileIndex()
 	 */
-	function indexSubmissionFiles($submission, $submissionFile) {
-		// update the submission's search index if this submission is published.
-		if ($submission->getDatePublished()) {
+	function removeFileIndex($submission, $submissionFile) {
+		// update the submission's search index if this was a proof file
+		if ($submissionFile->getFileStage() == SUBMISSION_FILE_PROOF) {
+			import('lib.pkp.classes.search.SubmissionSearch');
 			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::submissionFilesChanged($submission);
+			MonographSearchIndex::deleteTextIndex($submission->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getFileId());
 		}
 	}
-
 
 	/**
 	 * logs the deletion event using app-specific logging classes.

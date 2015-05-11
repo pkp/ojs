@@ -74,6 +74,17 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	}
 
 	/**
+	 * Delete keywords from the search index.
+	 * @param $articleId int
+	 * @param $type int optional
+	 * @param $assocId int optional
+	 */
+	function deleteTextIndex($articleId, $type = null, $assocId = null) {
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+		return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
+	}
+
+	/**
 	 * Signal to the indexing back-end that an article file changed.
 	 *
 	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
