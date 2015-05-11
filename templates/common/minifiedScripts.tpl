@@ -91,6 +91,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/WizardHandler.js"></script>
 
 {* Specific controllers *}
+<script src="{$baseUrl}/lib/pkp/js/controllers/grid/queries/form/QueryFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/FileUploadWizardHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/form/FileUploadFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/form/RevisionConfirmationHandler.js"></script>
