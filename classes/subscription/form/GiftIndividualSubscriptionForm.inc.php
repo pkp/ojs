@@ -49,7 +49,6 @@ class GiftIndividualSubscriptionForm extends Form {
 		$this->addCheck(new FormValidator($this, 'recipientFirstName', 'required', 'user.profile.form.firstNameRequired'));
 		$this->addCheck(new FormValidator($this, 'recipientLastName', 'required', 'user.profile.form.lastNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'recipientEmail', 'required', 'user.profile.form.emailRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'recipientEmail', 'required', 'user.register.form.emailsDoNotMatch', create_function('$recipientEmail,$form', 'return $recipientEmail == $form->getData(\'confirmRecipientEmail\');'), array($this)));
 
 		// Require gift note title and note from buyer
 		$this->addCheck(new FormValidator($this, 'giftNoteTitle', 'required', 'gifts.noteTitleRequired'));
@@ -102,7 +101,6 @@ class GiftIndividualSubscriptionForm extends Form {
 			'recipientMiddleName',
 			'recipientLastName',
 			'recipientEmail',
-			'confirmRecipientEmail',
 			'giftLocale',
 			'giftNoteTitle',
 			'giftNote',
