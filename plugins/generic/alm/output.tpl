@@ -43,13 +43,14 @@
 	// Import JQuery 1.10 version, needed for the tooltip plugin
 	// that we use below. jQuery.noConflict puts the old $ back.
 	$.getScript('{$jqueryImportPath}', function() {ldelim}
-		$.getScript('{$tooltipImportPath}', function() {ldelim}
+		var jquery_1_10 = jQuery.noConflict();
+		jquery_1_10.getScript('{$tooltipImportPath}', function() {ldelim}
 			// Assign the last inserted JQuery version to a new variable, to avoid
 			// conflicts with the current version in $ variable.
-			options.jQuery = $;
+			options.jQuery = jquery_1_10;
 			var almviz = new AlmViz(options);
 			almviz.initViz();
-			jQuery.noConflict(true);
+			jquery_1_10.noConflict(true);
 		{rdelim});
 	{rdelim});
 
