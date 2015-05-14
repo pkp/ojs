@@ -58,9 +58,9 @@ class IssueHandler extends Handler {
 
 		if ($issue != null) {
 			if ($showToc == 'showToc') {
-				$request->redirect(null, 'issue', 'view', array($issue->getId(), "showToc"), $request->getQueryArray());
+				$request->redirect(null, 'issue', 'view', array($issue->getBestIssueId($journal), "showToc"), $request->getQueryArray());
 			} else {
-				$request->redirect(null, 'issue', 'view', $issue->getId(), $request->getQueryArray());
+				$request->redirect(null, 'issue', 'view', $issue->getBestIssueId($journal), $request->getQueryArray());
 			}
 		} else {
 			$issueCrumbTitle = __('current.noCurrentIssue');
