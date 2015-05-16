@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  *
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.blocks.recentArticles.displayName">المقالات الأخيرةRecent Articles</message>
+	<message key="plugins.blocks.recentArticles.description">هذه الكتلة تعرض آخر المقالات المنشورة في مجلتك.</message>	
+
+	<message key="plugins.blocks.recentArticles.viewsSince">المعاينات منذ</message>	
+</locale>
