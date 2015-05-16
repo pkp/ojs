@@ -49,5 +49,5 @@
 	<locale key="vi_VN" complete="false" name="Tiếng Việt" iso639-2b="vie" iso639-3="vie" />
 	<locale key="zh_CN" complete="true" name="简体中文" iso639-2b="chi" iso639-3="zho" />
 	<locale key="zh_TW" complete="false" name="繁體中文" iso639-2b="chi" iso639-3="zho" />
-    	<locale key="ar_IQ" complete="true" name="العربية" iso639-2b="ara" iso639-3="ara" stylesheet="../lib/pkp/styles/rtl.css"/>
+    	<locale key="ar_IQ" complete="true" name="العربية" iso639-2b="ara" iso639-3="ara" stylesheet="/lib/pkp/styles/rtl.css"/>
 </locales>
