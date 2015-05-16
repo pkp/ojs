@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd"> <!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.oaiMetadata.dc.displayName">صيغة البيانات الوصفية DC</message>
+	<message key="plugins.oaiMetadata.dc.description">تقوم بتشكيل البيانات الوصفية بشكل يجعلها متوافقة مع صيغة DC.</message>
+</locale> 
