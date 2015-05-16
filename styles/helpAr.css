@@ -1,0 +1,125 @@
+/**
+ * styles/help.css
+ *
+ * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2003-2014 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Stylesheet for help pages.
+ *
+ */
+
+/**
+ * Misc
+ */
+style="text-align: right"
+#header h1 {
+	width: 100%; direction: rtl;
+}
+
+#container {
+	width: 100%; text-align: right; 
+}
+
+#sidebar {
+	float: right;
+	width: 20%;
+	padding: 1em 0em 1em 0em;
+	font-size: 0.65em;
+	height: 100%;
+	margin-right: 5%; text-align: right; direction: rtl;
+}
+
+#body {
+	width: 100%; text-align: right;
+}
+
+#main {
+	float: right; text-align: right;
+	width:58%;
+	height: 100%;
+	margin-left: 5%;
+}
+
+/* hack to set width for non-IE browsers to to a percentage 
+   width of container (like it should be), not the window */
+html>body #main {
+	width: 68%; text-align: right; direction: rtl;
+} 
+
+#main h4 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0.5em;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-weight: normal; text-align: right;
+}
+
+#toc ul {
+	margin: 0;
+	padding: 0;
+}
+
+#toc li {
+	list-style-type: none;
+	font-size: 1.2em;
+	padding: 1px 0px 1px 0px;
+}
+
+div.thickSeparator {
+	width: 100%;
+	padding: 0;
+	border-bottom: 2px dotted #000;
+	line-height: 0px; direction: rtl;
+}
+
+.code {
+	font-size: 1.2em;
+	padding-left: 5px;
+	color: #666;
+}
+
+span.blockTitle {
+	color: #375;
+}
+
+/**
+ * Sidebar
+ */
+
+#sidebar div.block span.blockTitle {
+	font-family: Georgia,'Times New Roman',Times,serif; direction: rtl; text-align: right;
+}
+
+#sidebar a {
+	text-decoration: none; direction: rtl; text-align: right;
+}
+
+#sidebar div.block span.blockTitle {
+	font-size: 1.1em;
+	text-transform: none; direction: rtl; text-align: right;
+}
+
+/**
+ * Breadcrumb
+ */
+
+li.current, a.current {
+	font-weight: bold; 
+}
+
+.searchBreadcrumb {
+	font-size: 0.8em;
+}
+
+.searchBreadcrumb a {
+	text-decoration: none;
+}
+
+#search li {
+	margin: 10px 0px 10px 0px;
+}
+
+#search p {
+	margin: 0px;
+	padding: 0px;
+}
