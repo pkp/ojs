@@ -1,4 +1,6 @@
 #!/bin/bash
+git config --global user.email "pkp@mailinator.com"
+git config --global user.name "PKP"
 echo "1 - Retrieving git user:"
 gitUser=$(cat .git/config | grep -A2 "remote \"origin\"" | grep "url" | cut -f2 -d":" | cut -f4 -d"/")
 echo "    Gituser: $gitUser"
@@ -33,7 +35,7 @@ if [ \( -n "$libModuleHash" \) -a \( "$strLength" -eq 40 \) ]; then
 		cd lib/pkp
 		echo "7 - Updating pkp-lib with code from $gitUser repository, $branch branch."
 		git remote add "$gitUser" git://github.com/"$gitUser"/pkp-lib
-		git pull "$gitUser" "$branch"
+		git pull --rebase "$gitUser" "$branch"
 		exit 0
 	fi
 fi
