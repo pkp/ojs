@@ -133,7 +133,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 
 	/**
 	 * Get the row handler - override the default row handler
-	 * @return CopyeditingFilesGridRow
+	 * @return GalleyFilesSignoffGridCategoryRow
 	 */
 	protected function getCategoryRowInstance() {
 		$galley = $this->getGalley();
