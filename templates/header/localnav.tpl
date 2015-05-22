@@ -13,7 +13,7 @@
 		{if $enableAnnouncements}
 			<li><a href="{url router=$smarty.const.ROUTE_PAGE page="announcement"}">{translate key="announcement.announcements"}</a></li>
 		{/if}
-		<li><a href="#">{translate key="navigation.about"}</a>
+		<li class="has-submenu"><a href="#">{translate key="navigation.about"}</a>
 			<ul>
 				{if not (empty($contextSettings.mailingAddress) && empty($contextSettings.contactName) && empty($contextSettings.contactAffiliation) && empty($contextSettings.contactMailingAddress) && empty($contextSettings.contactPhone) && empty($contextSettings.contactFax) && empty($contextSettings.contactEmail) && empty($contextSettings.supportName) && empty($contextSettings.supportPhone) && empty($contextSettings.supportEmail))}
 					<li><a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="contact"}">{translate key="about.contact"}</a></li>
@@ -39,10 +39,10 @@
 				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">{translate key="navigation.archives"}</a>
 			{/if}
 			{if array_intersect(array(ROLE_ID_MANAGER), $userRoles)}
-				<li>
+				<li class="has-submenu">
 					<a href="#">{translate key="navigation.management"}</a>
 					<ul>
-						<li>
+						<li class="has-submenu">
 							<a href="{url router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="index"}">{translate key="navigation.settings"}</a>
 							<ul>
 								<li><a href="{url router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="journal"}">{translate key="context.context"}</a></li>
@@ -52,7 +52,7 @@
 								<li><a href="{url router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="access"}">{translate key="navigation.access"}</a></li>
 							</ul>
 						</li>
-						<li>
+						<li class="has-submenu">
 							<a href="{url router=$smarty.const.ROUTE_PAGE page="management" op="tools" path="index"}">{translate key="navigation.tools"}</a>
 							<ul>
 								<li><a href="{url router=$smarty.const.ROUTE_PAGE page="management" op="importexport"}">{translate key="navigation.tools.importExport"}</a></li>
