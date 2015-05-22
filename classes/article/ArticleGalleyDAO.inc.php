@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleGalleyDAO.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyDAO
@@ -631,6 +631,34 @@ class ArticleGalleyDAO extends DAO {
 			unset($galley);
 		}
 		$this->flushCache();
+	}
+
+	/**
+	 * Delete the public ID of a galley.
+	 * @param $galleyId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deletePubId($galleyId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM article_galley_settings WHERE setting_name = ? AND galley_id = ?',
+			array(
+				$settingName,
+				(int)$galleyId
+			)
+		);
+		$this->flushCache();
+	}
+
+	/**
+	 * Flush the article galley cache.
+	 */
+	function flushCache() {
+		$cache =& $this->_getGalleyCache();
+		$cache->flush();
+		unset($cache);
 	}
 }
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/backup/locale/fr_FR/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2000-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  *
+  -->
+
+<locale name="fr_FR" full_name="Français">
+	<message key="plugins.generic.backup.name">Plugiciel Sauvegarde</message>
+	<message key="plugins.generic.backup.description">Ce plugiciel produit une sauvegarde de votre installation.</message>
+
+	<message key="plugins.generic.backup.link">Télécharger la sauvegarde</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Les liens suivants permettent à l'administrateur du site de télécharger une sauvegarde complète des différents composants d'une installation. Une sauvegarde complète contient <strong>tous</strong> les composants suivants. Veuillez vous référer à documention technique pour plus d'informations sur la façon dont ces composants interagissent.</p>]]></message>
+	<message key="plugins.generic.backup.db">Base de données</message>
+	<message key="plugins.generic.backup.files">Fichiers</message>
+	<message key="plugins.generic.backup.code">Code</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>ATTENTION :</strong> L'outil de sauvegarde de la base de données n'a pas été configuré dans le fichier de configuration config.inc.php. La configuration dépend de la configuration de votre base de données et du type de base de données. Cela devrait être précisé dans une section appelée [cli], dans l'option de configuration appelée "dump". Pour MySQL, utiliser l'outil mysqldump, i.e.:<br/>
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+Les "%s" jetons seront remplacés par, dans l'ordre :<ol>
+	<li>Database hostname</li>
+	<li>Database username</li>
+	<li>Database password</li>
+	<li>Database name</li>
+</ol>
+Notez que cela implique de spécifier le mot de passe de la base de données dans la ligne de commande, et donc peut être poser un problème de sécurité<br/><br/>]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>ATTENTION :</strong> L'outil "tar" n'a pas été configuré dans le fichier de configuration config.inc.php configuration file. La configuration dépend de la configuration de votre base de données et du type de base de données. Cela devrait être précisé dans une section appelée [cli], dans l'option de configuration appelée "tar", précisant le chemin vers l'utilitaire "tar", i.e.:<br/>
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br/>]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>ATTENTION : </strong>Une erreur a pu se produire pendant le processus de sauvegarde. La cause la plus fréquente se trouve dans les permissions de fichiers.]]></message>
+</locale>

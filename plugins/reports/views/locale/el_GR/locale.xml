@@ -4,8 +4,8 @@
 <!--
   * plugins/reports/views/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR (Greek) locale.
@@ -15,4 +15,9 @@
 <locale name="el_GR" full_name = "Greek">
 	<message key="plugins.reports.views.displayName">Προβολή Αναφοράς</message>
 	<message key="plugins.reports.views.description">Αυτό το πρόσθετο δημιουργεί μια αναφορά σε μορφή CSV περιγράφοντας την αναγνωσιμότητα κάθε άρθρου.</message>
+	<message key="plugins.reports.views.articleId">ID Άρθρου</message>
+	<message key="plugins.reports.views.articleTitle">Τίτλος Άρθου</message>
+	<message key="plugins.reports.views.datePublished">Ημερομηνία Δημοσίευσης</message>
+	<message key="plugins.reports.views.abstractViews">Προβολές Περιλήψεων</message>
+	<message key="plugins.reports.views.galleyViews">Σύνολο Προβολών Τυπογραφικών Δοκιμίων</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/usageStats/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -32,4 +32,8 @@
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Estatísticas de uso do carregador de arquivos</message>
 	<message key="plugins.generic.usageStats.removeUrlError">A linha {$lineNumber} do arquivo {$file} contém uma URL que o sistema não pode consegue remover a URL base.</message>
 	<message key="plugins.generic.usageStats.loadDataError">Não foi possível carregar os dados extraídos do arquivo {$file}. O erro foi: {$error}. O arquivo foi movido para o estágio novamente.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">O plugin de estatísticas de uso está desativado. Nenhum arquivo de log processado.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">O diretório {$directory} não está vazio. Isto pode indicar um processo que falhou anteriormente, ou um processo atualmente em execução. Este arquivo será reprocessado automaticamente se você estiver usando o scheduledTasksAutoStage.xml, caso contrário, você precisará mover manualmente quaisquer arquivos órfãos :( deixados no diretório de processamento de volta para o diretório de estagiamento (preprocessamento).</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">A lista de bot do COUNTER não pôde ser encontrado, ou mais de uma lista está presente. O arquivo {$file} não pôde ser processado.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">A lista de bot do COUNTER não pôde ser encontrado. O arquivo {$file} não pôde ser processado.</message>
 </locale>

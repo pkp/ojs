@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/default.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português do Brasil) locale.
@@ -13,7 +13,7 @@
   * Ramón Martins Sodoma da Fonseca (ramon@ibict.br)
   *
   -->
- 
+
 <locale name="pt_BR" full_name="Português do Brasil">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">A contribuição é original e inédita, e não está sendo avaliada para publicação por outra revista; caso contrário, deve-se justificar em "Comentários ao editor".</message>
 	<message key="default.journalSettings.checklist.fileFormat">O arquivo da submissão está em formato Microsoft Word, OpenOffice ou RTF.</message>
@@ -53,11 +53,11 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 <strong>Respondendo a dúvidas para o autor (DAs)</strong>
 &nbsp; Mantenha todas as DAs intactas e em negrito dentro do texto. Não as remova.
 &nbsp; Para responder a uma DA, insira um comentário após a dúvida. Delimite comentários da seguinte forma:
-<strong>[Comentário: ]</strong> 
+<strong>[Comentário: ]</strong>
 &nbsp; Ex.: <strong>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</strong>
 
 <strong>Incluindo Comentários</strong>
-&nbsp; Use comentários para explicar alterações organizacionais ou revisões mais importantes 
+&nbsp; Use comentários para explicar alterações organizacionais ou revisões mais importantes
 &nbsp; Ex.: <strong>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</strong>
 &nbsp; Aviso: Ao se referir a numeração de páginas, use a numeração da cópia impressa enviada, pois a numeração pode ser alterada nas revisões eletrônicas.
 
@@ -141,4 +141,6 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 	<message key="section.default.policy">Política padrão de seção</message>
 	<message key="default.journalSettings.purchaseIssueFee">Adquirir edição</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento desta taxa permite ver, baixar e imprimir esta edição.</message>
+	<message key="default.journalSettings.emailHeader">A seguinte mensagem será entregue em nome da {$journalName}.
+________________________________________________________________________</message>
 </locale>

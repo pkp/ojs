@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pln/locale/zh_CN/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * PLN plugin localization strings
+  -->
+
+<locale name="zh_CN" full_name="简体中文">
+	<message key="plugins.generic.pln">PKP PLN 插件</message>
+	<message key="plugins.generic.pln.description">PKP PLN插件将您出版的内容存储在PKP Private LOCKSS Network中。</message>
+	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Private LOCKSS Network</strong><br /><br />请阅读 <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank"> PKP PLN 概述</a> 并且完成 <a href="{$plnPluginURL}">这个简单的表格</a>. 该操作可以使你的期刊收录到公共知识项目的Private LOCKSS Network (PKP PLN)中。]]></message>
+	
+	<message key="plugins.generic.pln.settings_page">PKP PLN 插件 - 设置</message>
+	<message key="plugins.generic.pln.settings">设置</message>
+	<message key="plugins.generic.pln.settings.saved">保存PKP PLN 设置</message>
+	<message key="plugins.generic.pln.settings.terms_of_use">使用条款</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">在存储在网络前，您需要同意所有的使用条款。</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_agree">我同意</message>
+	<message key="plugins.generic.pln.settings.journal_uuid">期刊标识符</message>
+	<message key="plugins.generic.pln.settings.journal_uuid_help">这是您的期刊PKP PLN的唯一标识符。您可能需要与PKP PLN管理员分享以寻求支持。</message>
+	<message key="plugins.generic.pln.settings.refresh">刷新</message>
+	<message key="plugins.generic.pln.settings.refresh_help">如果由于某种原因，没有所列条款，或者您知道的条款已经更新，击刷新更新上面列出的条款。</message>
+	
+	<message key="plugins.generic.pln.required.object_type">请选择存储对象类型。</message>
+	<message key="plugins.generic.pln.required.object_threshold">请选择存储对象入口。</message>
+	<message key="plugins.generic.pln.required.terms_of_use_agreement">为了存放到PLN上，须同意网络的使用条款。</message>
+	
+	<message key="plugins.generic.pln.objects.article">文章</message>
+	<message key="plugins.generic.pln.objects.issue">期次</message>
+
+	<message key="plugins.generic.pln.status_page">PKP PLN 插件 - 状态</message>
+	<message key="plugins.generic.pln.status.network_status">网络状态: {$networkStatusMessage}</message>
+	<message key="plugins.generic.pln.status.deposits">存储</message>
+	<message key="plugins.generic.pln.status">状态</message>
+	<message key="plugins.generic.pln.status.id">ID</message>
+	<message key="plugins.generic.pln.status.type">类型</message>
+	<message key="plugins.generic.pln.status.items">项目</message>
+	<message key="plugins.generic.pln.status.packaged">包装的</message>
+	<message key="plugins.generic.pln.status.transferred">已转移</message>
+	<message key="plugins.generic.pln.status.received">已接收</message>
+	<message key="plugins.generic.pln.status.syncing">同步中</message>
+	<message key="plugins.generic.pln.status.synced">已同步</message>
+	<message key="plugins.generic.pln.status.updated">已更新</message>
+	<message key="plugins.generic.pln.status.local_failure">局部失败</message>
+	<message key="plugins.generic.pln.status.remote_failure">远程失败</message>
+	<message key="plugins.generic.pln.status.reset">重置</message>
+	<message key="plugins.generic.pln.status.yes">是</message>
+	<message key="plugins.generic.pln.status.no">否</message>
+
+	<message key="plugins.generic.pln.depositorTask.name">PKP PLN 存储器任务</message>
+	<message key="plugins.generic.pln.notifications.processing_for">存储进程</message>
+	<message key="plugins.generic.pln.notifications.pln_not_accepting">PKP PLN 当前不接受存储。</message>
+	<message key="plugins.generic.pln.notifications.pln_accepting">PKP PLN 正在接受存储。</message>
+	<message key="plugins.generic.pln.notifications.check_status">检查您存储的状态。</message>
+	<message key="plugins.generic.pln.notifications.issn_missing">您的期刊需要具备一个ISSN以完成在PKP PLN上存储。</message>
+	<message key="plugins.generic.pln.notifications.http_error">链接PKP PLN时出现错误。请联系你的系统管理员。</message>
+	<message key="plugins.generic.pln.notifications.terms_updated">PKP PLN的使用条款需要更新。在继续存储前须同意网络的使用条款。</message>
+	<message key="plugins.generic.pln.notifications.curl_missing">开启CURL支持以继续进行。</message>
+	<message key="plugins.generic.pln.notifications.zip_missing">开启ZipArchive 支持以继续进行。</message>
+</locale>

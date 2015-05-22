@@ -4,14 +4,14 @@
 <!--
   * locale/nl_NL/default.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<!-- Section default -->
 	<message key="section.default.title">Artikelen</message>
@@ -34,17 +34,17 @@
 	<message key="default.journalSettings.authorSelfArchivePolicy">Dit tijdschrift moedigt auteurs aan om de items die zijn ingezonden voor het tijdschrift ook op persoonlijke websites of in institutionele repositories te plaatsen, zowel voor als na publicatie onder vermelding van bibliografische gegevens die, indien van toepassing, de publicatie in dit tijdschrift aanhalen.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Het tekstredactie stadium is bedoeld om de loop, helderheid, grammatica en opmaak van het artikel te verbeteren. Het is de laatste gelegenheid voor de auteur om significante veranderingen in de tekst aan te brengen, aangezien het volgende stadium alleen bedoeld is voor taalfouten en opmaakcorrecties.
 
-Het te redigeren bestand is in Word of .rtf formaat en kan daardoor eenvoudig als tekstverwerkingsdocument bewerkt worden. De set instructies die hier getoond wordt stelt twee benaderingen voor tekstredactie voor. Het ene is gebaseerd op de voorziening voor het bijhouden van wijzigingen van Microsoft Word en vereist dat terkstredacteur, redacteur en auteur toegang hebben tot dit programma. Het andere systeem, dat niet afhankelijk is van software, is met toestemming geleend van het Harvard Educational Review. De redacteur kan de kan deze instructies aanpassen dus suggesties voor het verbeteren van het proces van dit tijdschrift zijn mogelijk. 
+Het te redigeren bestand is in Word of .rtf formaat en kan daardoor eenvoudig als tekstverwerkingsdocument bewerkt worden. De set instructies die hier getoond wordt stelt twee benaderingen voor tekstredactie voor. Het ene is gebaseerd op de voorziening voor het bijhouden van wijzigingen van Microsoft Word en vereist dat terkstredacteur, redacteur en auteur toegang hebben tot dit programma. Het andere systeem, dat niet afhankelijk is van software, is met toestemming geleend van het Harvard Educational Review. De redacteur kan de kan deze instructies aanpassen dus suggesties voor het verbeteren van het proces van dit tijdschrift zijn mogelijk.
 
 <h4>Tekstredactiesystemen</h4>
 
 <b>1. Track Changes in Microsoft Word's</b>
 
-Bij Tools in de menubalk, geeft Track Changes de tekstredacteur de mogelijkheid om tekst toe te voegen (tekst wordt gekleurd) en te verwijderen (tekst wordt doorgestreept en gekleurd, of in de marge getoond als verwijderd). De tekstredacteur kan vragen voor zowel de auteur (Auteursvragen) als de redacteur (Redacteursvragen) opnemen door de vragen tussen rechte haken op te nemen. De geredigeerde versie wordt dan geladen en de redacteur gewaarschuwd. De redacteur beoordeelt de tekst en bericht de auteur 
+Bij Tools in de menubalk, geeft Track Changes de tekstredacteur de mogelijkheid om tekst toe te voegen (tekst wordt gekleurd) en te verwijderen (tekst wordt doorgestreept en gekleurd, of in de marge getoond als verwijderd). De tekstredacteur kan vragen voor zowel de auteur (Auteursvragen) als de redacteur (Redacteursvragen) opnemen door de vragen tussen rechte haken op te nemen. De geredigeerde versie wordt dan geladen en de redacteur gewaarschuwd. De redacteur beoordeelt de tekst en bericht de auteur
 
-De redacteur en auteur laten de veranderingen waarmee ze het eens zijn ongemoeid. Als meer aanpassingen nodig zijn kunnen de redacteur en de auteur de toegevoegde of verwijderde tekst veranderen en verdere toevoegingen of verwijderingen doen. Auteurs en redacteuren dienen te reageren op de aan hen gerichte vragen en hun reacties tussen de rechte haken te plaatsen. 
+De redacteur en auteur laten de veranderingen waarmee ze het eens zijn ongemoeid. Als meer aanpassingen nodig zijn kunnen de redacteur en de auteur de toegevoegde of verwijderde tekst veranderen en verdere toevoegingen of verwijderingen doen. Auteurs en redacteuren dienen te reageren op de aan hen gerichte vragen en hun reacties tussen de rechte haken te plaatsen.
 
-Nadat de tekst is gereviewd door redacteur en auteur doet de tekstredacteur een laatste slag over de tekst en accepteert de wijzigingen ter voorbereiding op opmaak en proeflezen. 
+Nadat de tekst is gereviewd door redacteur en auteur doet de tekstredacteur een laatste slag over de tekst en accepteert de wijzigingen ter voorbereiding op opmaak en proeflezen.
 
 <b>2. Harvard Educational Review </b>
 
@@ -149,7 +149,7 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="default.journalSettings.forAuthors"><![CDATA[Bent u geïnteresseerd in het aanleveren van artikelen? Dan raden we u aan de pagina <a href="{$indexUrl}/{$journalPath}/about">Over het tijdschrift</a> te bekijken dat informatie biedt over het publicatiebeleid van de verschillende secties. Lees ook vooraf de pagina <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Auteursrichtlijnen<a>. Auteurs moeten zich <a href="{$indexUrl}/{$journalPath}/user/register">registreren</a> in het tijdschrift voordat ze artikelen kunnen inzenden. Als u al bent ingeschreven hoeft u alleen nog <a href="{$indexUrl}/{$journalPath}/login">in te loggen</a> en kunt u beginnen met de vijf stappen procedure. Indien u wel geregistreerd bent als lezer of reviewer maar nog niet als auteur, ga dan naar Mijn profiel in de rechter kolom en voeg de rol van auteur aan uw profiel toe.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[We moedigen bibliothecarissen van onderzoeksbibliotheken aan om dit tijdschrift op te nemen in hun digitale tijdschriftcollectie. Ook wijzen we u erop dat het open source systeem dat dit tijdschrift gebruikt om te publiceren, gehost kan worden door bibliotheken ter ondersteuning van hun bij de redactie van elektronische tijdschriften betrokken faculteitsmedewerkers. (zie <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://www.lockss.org/">Meer...</a>]]></message>
-	
+
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.submissionFee">Artikel inzending</message>
 	<message key="default.journalSettings.submissionFeeDescription">Auteurs zijn verplicht om een inzendingskosten te betalen als onderdeel van de inzendingsprocedure om bij te dragen aan de kosten voor review.</message>
@@ -166,4 +166,6 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="default.journalSettings.donationFeeDescription">Donaties van iedere omvang worden onder dank aanvaard en verschaffen de redactie middelen om een tijdschrift van de hoogst mogelijke kwaliteit aan de lezers aan te blijven bieden.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Koop issue</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Door deze kosten te betalen kunt u dit issue bekijken, downloaden en afdrukken.</message>
+	<message key="default.journalSettings.emailHeader">Dit bericht wordt u toegezonden namens {$journalName}.
+________________________________________________________________________</message>
 </locale>

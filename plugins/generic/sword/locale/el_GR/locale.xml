@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/sword/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR (Greek) locale.
@@ -16,7 +16,6 @@
 	<message key="plugins.generic.sword.displayName">Πρόσθετο SWORD</message>
 	<message key="plugins.generic.sword.description">Επιτρέπει στους διαχειριστές περιοδικού και (προαιρετικά) στους συγγραφείς να καταθέτουν άρθρα μέσω του πρωτοκόλλου SWORD.</message>
 	<message key="plugins.generic.sword.enabled">Το πρόσθετο SWORD ενεργοποιήθηκε.</message>
-	<message key="plugins.generic.sword.disable">Το πρόσθετο SWORD απενεργοποιήθηκε.</message>
 	<message key="plugins.generic.sword.settings">Ρυθμίσεις</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Επιτρέπεται στον συγγραφέα να καθορίζει ένα καταθετήριο.</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Καταθετήρια</message>
@@ -44,11 +43,5 @@
 	<message key="plugins.importexport.sword.deposit">Καταθετήριο</message>
 	<message key="plugins.importexport.sword.serviceDocUrl">URL εγγράφου υπηρεσίας</message>
 	<message key="plugins.importexport.sword.depositUrl">URL καταθετηρίου</message>
-	<message key="plugins.importexport.sword.depositPoint">Deposit Point</message>
-	<message key="plugins.importexport.sword.depositPoint.addRemove">Add/Remove</message>
-	<message key="plugins.importexport.sword.depositGalleys">Deposit Galleys</message>
-	<message key="plugins.importexport.sword.depositEditorial">Deposit Most Recent Editorial File</message>
-	<message key="plugins.importexport.sword.depositSuccessful">Deposit Successful</message>
-	<message key="plugins.importexport.sword.depositSuccessfulDescription">The item(s) selected have been deposited.</message>
-	<message key="plugins.importexport.sword.depositFailed">Deposit Failed</message>
+	<message key="plugins.generic.sword.descriptionUnsupported">Επιτρέψτε στους Διαχειριστές Περιοδικού και (προαιρετικά) στους Συγγραφείς να καταθέτουν άρθρα μέσω του πρωτοκόλλου SWORD. Θυμηθείτε ότι αυτό το plugin απαιτεί την επέκταση Zip, η οποίο δεν έχει ακόμα εγκατασταθεί.</message>
 </locale>

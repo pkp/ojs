@@ -4,8 +4,8 @@
 <!--
   * plugins/themes/custom/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -13,7 +13,7 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.theme.custom.name">Aangepast thema plugin</message>
 	<message key="plugins.theme.custom.description">Deze plugin implementeert een aanpasbaar thema.</message>
@@ -24,4 +24,6 @@
 	<message key="plugins.theme.custom.link">Link</message>
 	<message key="plugins.theme.custom.background">Achtergrond</message>
 	<message key="plugins.theme.custom.foreground">Voorgrond</message>
+	<message key="plugins.theme.custom.perJournal">Stylesheet voor het tijdschrift</message>
+	<message key="plugins.theme.custom.notWritablePlugin">Merk op: De stylesheet van het tijdschrift is ingeschakeld omdat het stylesheetbestand van deze plugin, "{$stylesheetFileLocation}", niet schrijfbaar is.</message>
 </locale>

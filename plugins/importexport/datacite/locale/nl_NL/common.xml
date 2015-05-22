@@ -4,13 +4,13 @@
 <!--
   * @file plugins/importexport/datacite/locale/nl_NL/common.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">GA, om deze plugin te gebruiken, naar de "Publieke identificatie" plugin categorie, schakel de DOI plugin in en configureer die specificeer een geldig DOI voorvoegsel.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">De plugin is niet volledig ingesteld.</message>
@@ -45,7 +45,7 @@
 	<message key="plugins.importexport.common.export.selectGalley">Selecteer proeven</message>
 	<message key="plugins.importexport.common.export.noGalleys">Er zijn geen proeven met een DOI.</message>
 	<message key="plugins.importexport.common.exportDescription">Klik op deze knop om XML gegevens van de geselecteerde objecten naar een lokaal bestand te exporteren zonder ze te registreren. Dit kan handig zijn als u een andere partij uw DOI's wilt laten registreren of als u het XML formaat wilt inspecteren voor registratie.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Geen nummer met het opgegeven ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Geen artikel met het opgegeven ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Geen proef met het opgegeven ID: {$param}.</message>
@@ -53,10 +53,12 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">Geen tijdschrift met het opgegeven pad: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">Het objecttype {$param} kan niet geëxporteerd worden.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Het uitvoerbestand {$param} is niet schrijfbaar.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">De geslecteerde objecten met succes geëxporteerd naar '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">FOUT:</message>
 	<message key="plugins.importexport.common.markRegistered">Markeer als geregistreerd</message>
 	<message key="plugins.importexport.common.markRegisteredDescription">Klik op deze knop om de objecten als geregistreerd te markeren (bv. indien eerder of handmatig geregistreerd)</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Merk op dat het wachtwoord als tekst wordt opgeslagen; niet versleuteld.</message>
+	<message key="plugins.importexport.common.export.unAvailable">Export van gegevens is momenteel niet mogelijk. Controleer de vereisten van de plugin.</message>
 </locale>

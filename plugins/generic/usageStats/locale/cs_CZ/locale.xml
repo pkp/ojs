@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/usageStats/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -19,7 +19,7 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Standardní použití regex může analyzovat přístupové soubory z apache v kombinovaném formátu a také používat log soubory pluginu. Pokud mají vaše přístupové soubory odlišný formát, musíte vložit regex schopný analyzovat formát a dávat očekávané hodnoty. Viz UsageStatsLoader::_getDataFromLogEntry() pro více informací.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Nastavení statistického pluginu uloženo</message>
 	
-	<message key="plugins.generic.usageStats.openFileFailed">Statistický plugin byl zakázán. Log není zpracován.</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Soubor {$file} nelze otevřít a byl odmítnut.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">Řádek číslo {$lineNumber} v souboru {$file} není platný log a soubor byl odmítnut.</message>
 	<message key="plugins.generic.usageStats.displayName">Statistiky využití</message>
 	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
@@ -32,4 +32,8 @@
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Statistika nahrávání souborů</message>
 	<message key="plugins.generic.usageStats.removeUrlError">Řádek číslo {$lineNumber} v souboru {$file} obsahuje url, ze kterého nejde odstranit základní url.</message>
 	<message key="plugins.generic.usageStats.loadDataError">Data extrahovaná ze souboru {$file} nejde nahrát. Vyskytla se chyba: {$error}. Soubor byl přesunut zpět.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">Seznam COUNTER botů {$botlist} nelze otevřít, nebo existuje více seznamů. Soubor {$file} nelze zpracovat.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">Seznam COUNTER botů {$botlist} nelze otevřít. Soubor {$file} nelze zpracovat.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Plugin statistik čtenosti je zakázán. Proces záznamů nefunguje.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">Knihovna {$directory} není prázdná. To může znamenat, že předešlý proces zkolaboval, nebo že běží současně jiný proces. Soubor bude automaticky zpracován, pokud používáte scheduledTasksAutoStage.xml, jinak budete muset sirotčí soubory ze složky procesu přesunout do složky etapy.</message>
 </locale>

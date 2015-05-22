@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/counter/schema.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Usage stats plugin temporary table for storing temporary stats records.
@@ -33,7 +33,7 @@
       <DEFAULT VALUE="1"/>
     </field>
     <field name="country_id" type="C2" size="2" />
-    <field name="region" type="I2" />
+    <field name="region" type="C2" size="2" />
     <field name="city" type="C2" size="255" />
     <field name="load_id" type="C2" size="255">
       <NOTNULL/>

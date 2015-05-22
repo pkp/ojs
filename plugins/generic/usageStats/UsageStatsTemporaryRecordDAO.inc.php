@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageStats/UsageStatsTemporaryRecordDAO.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageStatsTemporaryRecordDAO
@@ -39,7 +39,7 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 	 * @param $day string
 	 * @param $time int
 	 * @param $countryCode string
-	 * @param $region int
+	 * @param $region string
 	 * @param $cityName string
 	 * @param $fileType int
 	 * @param $loadId string
@@ -57,7 +57,7 @@ class UsageStatsTemporaryRecordDAO extends DAO {
 				$day,
 				(int) $time,
 				$countryCode,
-				(int) $region,
+				$region,
 				$cityName,
 				(int) $fileType,
 				$loadId // Not number.

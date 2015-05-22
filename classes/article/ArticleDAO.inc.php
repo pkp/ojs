@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleDAO.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleDAO
@@ -49,11 +49,11 @@ class ArticleDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return parent::getLocaleFieldNames() + array(
+		return array_merge(parent::getLocaleFieldNames(), array(
 			'title', 'cleanTitle', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
 			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor',
 			'copyrightHolder'
-		);
+		));
 	}
 
 	/**
@@ -751,6 +751,25 @@ class ArticleDAO extends DAO {
 			);
 			unset($article);
 		}
+		$this->flushCache();
+	}
+
+	/**
+	 * Delete the public ID of an article.
+	 * @param $articleId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deletePubId($articleId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM article_settings WHERE setting_name = ? AND article_id = ?',
+			array(
+				$settingName,
+				(int)$articleId
+			)
+		);
 		$this->flushCache();
 	}
 

@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/usageStats/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -20,17 +20,20 @@
 	<message key="plugins.generic.usageStats.settings.saved">使用统计插件设置保存</message>
 	
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">使用统计文件加载任务</message>
-	<message key="plugins.generic.usageStats.openFileFailed">Usage statistics plugin is disabled. No log files processed.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">在文件{$file} 中文件号为{$lineNumber} 不是一个有效的日至条目，文件被拒绝。</message>
 	<message key="plugins.generic.usageStats.removeUrlError">文件{$file} 中{$lineNumber}包含一个系统无法删除的网址。</message>
 	<message key="plugins.generic.usageStats.loadDataError">无法加载从文件{$file}提取的数据。出现错误：{$error}。文件再次被移动到之前阶段。</message>
 	<message key="plugins.generic.usageStats.displayName">使用统计</message>
 	<message key="plugins.generic.usageStats.description">呈现数据对象的使用统计。可以使用服务器访问日志文件提取数据。</message>
-	<message key="plugins.generic.usageStats.openFileFailed">Usage statistics plugin is disabled. No log files processed.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS使用统计报告</message>
 	<message key="plugins.reports.usageStats.report.description">OJS默认使用统计报告（计数器准备）</message>
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/计数器</message>
 	<message key="plugins.reports.usageStats.metricType.full">OJS系统数据（计数器准备）</message>
+	<message key="plugins.generic.usageStats.openFileFailed">{$file}文件无法打开，被拒绝了。</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">使用统计插件被禁用。没有日志文件进行处理。</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">目录{$directory}不是空的。这就意味着之前的进程失败，或者同时运行进程。如果您正在使用scheduledTasksAutoStage.xml，文件将被自动重新处理，否则您需要手动将处理目录中的孤立文件直接移动到阶段目录中去。</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">COUNTER bot{$botlist} 列表没有找到，或多个列表存在。文件{$}无法处理。</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">COUNTER bot{$botlist} 列表无法打开。文件{$}无法处理。</message>
 </locale>

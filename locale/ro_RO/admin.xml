@@ -4,12 +4,12 @@
 <!--
   * locale/ro_RO/admin.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ro_RO (Romanian) locale.
-  * Provided by Constantinescu Nicolaie. 
+  * Provided by Constantinescu Nicolaie.
   *
   -->
 
@@ -62,4 +62,13 @@
 	<message key="admin.mergeUsers.allUsers">Toţi utilizatorii angajați</message>
 	<message key="admin.mergeUsers.confirm">Eşti sigur că vrei să unești contul cu numele "{$oldUsername}" cu, contul cu numele "{$newUsername}"? Contul nu numele "{$oldUsername}" nu va mai exista după aceea. Această acţiune nu este reversibilă.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Utilizatori dezangajați.</message>
+	<message key="admin.categories">Categorii</message>
+	<message key="admin.categories.disableCategories">Nu organiza revistele în categorii.</message>
+	<message key="admin.categories.editTitle">Editează categorie</message>
+	<message key="admin.categories.createTitle">Creează categorie</message>
+	<message key="admin.categories.create">Creează o categorie nouă</message>
+	<message key="admin.categories.noneCreated">Nu au fost create categorii.</message>
+	<message key="admin.categories.confirmDelete">Ești sigur că dorești să ștergi această categorie?</message>
+	<message key="admin.categories.name">Nume</message>
+	<message key="admin.categories.nameRequired">Este necesar un nume pentru categorie.</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * ojs2-devel/locale/es_AR/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español (Argentina)) locale.
@@ -736,4 +736,6 @@ Hay casos en los que una sola estadística de uso debe ser usada, por ej. mostra
 	<message key="manager.setup.copyrightYearBasis.Article">Se tomará el  año por defecto desde la fecha de publicación del artículo, así como en  "publish-as-you-go"</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Se tomará el año por defecto desde la fecha de publicación del número</message>
 	<message key="manager.statistics.reports.objectNotFound">El objeto no se encontró en la base de datos</message>
+	<message key="manager.setup.emailHeader">Título del Email</message>
+	<message key="manager.setup.emailHeaderDescription">Los emails que son envíados por el sistema, comenzarán con el siguiente título. Estos emails serán envíados de parte del Contacto Principal, por lo que es importante dejar claro que el contacto principal no es necesariamente responsable del contenido del mensaje, que podría ser enviado por otro usuario.</message>
 </locale>

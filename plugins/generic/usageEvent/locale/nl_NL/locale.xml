@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageEvent/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.usageEvent.displayName">Usage event</message>
+	<message key="plugins.generic.usageEvent.description">Creëert een hook voor gebruiksgebeurtenissen in een gedefineerd formaat.</message>
+</locale>

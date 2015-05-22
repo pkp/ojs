@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/generic/objectsForReview/locale/nl_NL/emailTemplateData.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="nl_NL">
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Object ter review</subject>
+		<body>Beste {$authorName}:
+
+Deze-mail bevestigt dat u niet langer de object reviewer bent voor {$objectForReviewTitle}.
+
+Ik hoop dat u wilt overwegen een ander object te reviewen, nu of in de toekomst.
+
+{$editorialContactSignature}</body>
+		<description>Deze e-mail wordt door een redacteur verstuurd naar een geïnteresseerde auteur als een object niet langer beschikbaar is voor review</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Object voor review: object verstuurd</subject>
+		<body>Beste {$authorName}:
+
+Deze email is om te bevestigen dat ik een exemplaar van {$objectForReviewTitle}heb verstuur naar het volgende adres uit uw gebruikersprofiel:
+{$authorMailingAddress}
+
+Om uw review in te sturen kunt u inloggen op de website van het tijdschrift en daar het inzendingsproces doorlopen.
+
+URL van de inzending: {$submissionUrl}
+
+Voel u vrij om contact met mij op te nemen als u vragen of opmerkingen hebt over deze object review.
+
+{$editorialContactSignature}</body>
+		<description>Deze e-mail wordt door een redacteur verstuurd naar de auteur van een object review als een exemplaar van het object is verstuurd naar de auteur.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Object voor review: verzoek om een object</subject>
+		<body>Beste {$editorName}:
+
+Ik heb interesse in het object review voor {$objectForReviewTitle}.
+
+Kunt u bevestigen dat het object nog beschikbaar is voor review?
+
+{$authorContactSignature}</body>
+		<description>Deze e-mail wordt verstuurd naar een redacteur door een auteur dit interesse heeft in het schrijven van een object review voor een object in de lijst.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Object ter review</subject>
+		<body>Beste {$authorName}:
+
+Helaas kan ik {$objectForReviewTitle} momenteel niet aan u toekennen voor een object review.
+
+Ik hoop dat u wilt overwegen om een ander object te reviewen, nu of in de toekomst.
+
+{$editorialContactSignature}</body>
+		<description>deze e-mail wordt door een redacteur verstuurd aan een geïnteresseerde auteur als het object niet langer beschikbaar is voor review</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Object voor review: object toegekend</subject>
+		<body>Beste {$authorName}:
+
+Deze e-mail bevestigt dat {$objectForReviewTitle} aan u is toegekend voor een review, die we we van u verwachten op uiterlijk {$objectForReviewDueDate}.
+
+Gelieve ervoor te zorgen dat het postadres in uw gebruikersprofiel correct is. Dit adres wordt gebruikt om het object naar u te verzenden..
+
+Het adres dat we momenteel hebben is:
+{$authorMailingAddress}
+
+Als dit stres niet volledig of niet langer juist is, gelieve het aan te passen met behulp van de volgende link:
+
+Gebruikersprofiel URL: {$userProfileUrl}
+
+Om uw review in te sturen kunt u inloggen op de website van het tijdschrift en het inzendingsproces doorlopen.
+
+URL van de inzending: {$submissionUrl}
+
+Voel u vrij om contact met me op te nemen in het geval van vragen of opmerkingen over deze review.
+
+{$editorialContactSignature}</body>
+		<description>Deze e-mail wordt door een redacteur verstuurd aan een object reviewer, als het object aan die auteur wordt toegekend.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Object voor review: afloopdatum</subject>
+		<body>Beste {$authorName}:
+
+Dit is een vriendelijke herinnering dat uw object review voor {$objectForReviewTitle} werd verwacht op {$objectForReviewDueDate} maar nog niet door ons is ontvangen.
+
+Om uw review in te sturen kunt u inloggen op de website van het tijdschrift en het inzendingsproces doorlopen.Om het u makkelijk te maken staat hieronder een link naar de inzending
+
+URL van de inzending: {$submissionUrl}
+
+Voel u vrij om contact met me op te nemen in het geval van vragen of opmerkingen over deze review..
+
+Dank u voor uw bijdrage aan het tijdschrift en ik kijk uit naar uw review.
+
+{$editorialContactSignature}</body>
+		<description>Dit is een automatisch gegenereerde e-mail die naar de auteur van een review wordt verzonden als de inzenddatum is gepasseerd</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Object voor review: herinnering aan de uiterste datum</subject>
+		<body>Beste {$authorName}:
+
+Dit is een vriendelijke herinnering dat uw object review voor {$objectForReviewTitle} wordt verwacht op {$objectForReviewDueDate}.
+
+Om uw review in te sturen kunt u inloggen op de website van het tijdschrift en het inzendingsproces doorlopen.Om het u makkelijk te maken staat hieronder een link naar de inzending
+
+URL van de inzending: {$submissionUrl}
+
+Voel u vrij om contact met me op te nemen in het geval van vragen of opmerkingen over deze review..
+
+Dank u voor uw bijdrage aan het tijdschrift en ik kijk uit naar uw review.
+
+{$editorialContactSignature}</body>
+		<description>Dit is een automatisch gegenereerde email die wordt verstuurd naar de object voor review auteur als de afloopdatum nadert</description>
+	</email_text>
+</email_texts>

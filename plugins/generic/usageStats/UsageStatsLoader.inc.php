@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageStats/UsageStatsLoader.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageStatsLoader
@@ -90,39 +90,6 @@ class UsageStatsLoader extends FileLoader {
 			$this->_journalsByPath = $journalsByPath;
 
 			$this->checkFolderStructure(true);
-
-			if ($this->_autoStage) {
-				// Copy all log files to stage directory, except the current day one.
-				$fileMgr = new FileManager();
-				$logFiles = array();
-				$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
-
-				// It's possible that the processing directory have files that
-				// were being processed but the php process was stopped before
-				// finishing the processing. Just copy them to the stage directory too.
-				$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
-
-				if (is_array($logsDirFiles)) {
-					$logFiles = array_merge($logFiles, $logsDirFiles);
-				}
-
-				if (is_array($processingDirFiles)) {
-					$logFiles = array_merge($logFiles, $processingDirFiles);
-				}
-
-				foreach ($logFiles as $filePath) {
-					// Make sure it's a file.
-					if ($fileMgr->fileExists($filePath)) {
-						// Avoid current day file.
-						$filename = pathinfo($filePath, PATHINFO_BASENAME);
-						$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
-						if ($filename == $currentDayFilename) continue;
-						if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
-							$fileMgr->deleteFile($filePath);
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -139,11 +106,22 @@ class UsageStatsLoader extends FileLoader {
 	function executeActions() {
 		$plugin =& $this->_plugin;
 		if (!$plugin->getEnabled()) {
-			$this->addExecutionLogEntry(__('plugins.generic.usageStats.openFileFailed'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.pluginDisabled'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 			return true;
 		}
+		// It's possible that the processing directory has files that
+		// were being processed but the php process was stopped before
+		// finishing the processing, or there may be a concurrent process running.
+		// Warn the user if this is the case.
+		$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
+		$processingDirError = is_array($processingDirFiles) && count($processingDirFiles);
+		if ($processingDirError) {
+			$this->addExecutionLogEntry(__('plugins.generic.usageStats.processingPathNotEmpty', array('directory' => $this->getProcessingPath())), SCHEDULED_TASK_MESSAGE_TYPE_ERROR);
+		}
 
-		return parent::executeActions();
+		if ($this->_autoStage) $this->autoStage();
+
+		return (parent::executeActions() && !$processingDirError);
 	}
 
 	/**
@@ -154,6 +132,13 @@ class UsageStatsLoader extends FileLoader {
 		$geoTool = $this->_geoLocationTool;
 		if (!$fhandle) {
 			$errorMsg = __('plugins.generic.usageStats.openFileFailed', array('file' => $filePath));
+			return false;
+		}
+		if (!$this->_counterRobotsListFile) {
+			$errorMsg = __('plugins.generic.usageStats.noCounterBotList', array('botlist' => $this->_counterRobotsListFile, 'file' => $filePath));
+			return false;
+		} elseif (!file_exists($this->_counterRobotsListFile)) {
+			$errorMsg = __('plugins.generic.usageStats.failedCounterBotList', array('botlist' => $this->_counterRobotsListFile, 'file' => $filePath));
 			return false;
 		}
 
@@ -196,7 +181,7 @@ class UsageStatsLoader extends FileLoader {
 			list($assocId, $assocType) = $this->_getAssocFromUrl($entryData['url'], $filePath, $lineNumber);
 			if(!$assocId || !$assocType) continue;
 
-			list($countryCode, $cityName, $region) = $geoTool->getGeoLocation($entryData['ip']);
+			list($countryCode, $cityName, $region) = $geoTool ? $geoTool->getGeoLocation($entryData['ip']) : array(null, null, null);
 			$day = date('Ymd', $entryData['date']);
 
 			$type = $this->_getFileType($assocType, $assocId);
@@ -245,6 +230,48 @@ class UsageStatsLoader extends FileLoader {
 			return FILE_LOADER_RETURN_TO_STAGING;
 		} else {
 			return true;
+		}
+	}
+
+	//
+	// Protected methods.
+	//
+	/**
+	 * Auto stage usage stats log files, also moving files that
+	 * might be in processing folder to stage folder.
+	 */ 
+	function autoStage() {
+		$plugin = $this->_plugin;
+
+		// Copy all log files to stage directory, except the current day one.
+		$fileMgr = new FileManager();
+		$logFiles = array();
+		$logsDirFiles =  glob($plugin->getUsageEventLogsPath() . DIRECTORY_SEPARATOR . '*');
+
+		// It's possible that the processing directory has files that
+		// were being processed but the php process was stopped before
+		// finishing the processing. Just copy them to the stage directory too.
+		$processingDirFiles = glob($this->getProcessingPath() . DIRECTORY_SEPARATOR . '*');
+
+		if (is_array($logsDirFiles)) {
+			$logFiles = array_merge($logFiles, $logsDirFiles);
+		}
+
+		if (is_array($processingDirFiles)) {
+			$logFiles = array_merge($logFiles, $processingDirFiles);
+		}
+
+		foreach ($logFiles as $filePath) {
+			// Make sure it's a file.
+			if ($fileMgr->fileExists($filePath)) {
+				// Avoid current day file.
+				$filename = pathinfo($filePath, PATHINFO_BASENAME);
+				$currentDayFilename = $plugin->getUsageEventCurrentDayLogName();
+				if ($filename == $currentDayFilename) continue;
+				if ($fileMgr->copyFile($filePath, $this->getStagePath() . DIRECTORY_SEPARATOR . $filename)) {
+					$fileMgr->deleteFile($filePath);
+				}
+			}
 		}
 	}
 
@@ -648,7 +675,7 @@ class UsageStatsLoader extends FileLoader {
 
 		// We only expect one file inside the directory.
 		$fileCount = 0;
-		foreach (glob($dir . DIRECTORY_SEPARATOR . "*.*") as $file) {
+		foreach (glob($dir . DIRECTORY_SEPARATOR . '*') as $file) {
 			$fileCount++;
 		}
 		if (!$file || $fileCount !== 1) {

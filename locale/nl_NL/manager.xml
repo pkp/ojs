@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -702,7 +702,7 @@
 	<message key="manager.setup.resetPermissions.description">Het copyright statement en de licentie-informatie zullen permanent gekoppeld zijn aan de gepubliceerde inhoud, wat garandeert dat deze informatie niet wijzigt als het tijdschrift zijn beleid voor nieuwe inzendingen zou wijzigen. Klik op de knop hieronder om de reeds opgeslagen toestemmingen te terug te zetten</message>
 	<message key="manager.setup.confirmResetLicense">Weet u zeker dat u de licentie en copyright informatie van de gepubliceerde inhoud terug wilt zetten naar de licentie zoals die is vastgelegd bij de tijdschriftinstellingen?</message>
 	<message key="manager.statistics.defaultMetricDescription">Uw tijdschrift is geconfigureerd voor meer dan een gebruiksmeting Gebruiksstatistieken zullen getoond worden in verschillende contexten.
-		Er zijn situaties waar een enkele statistiek gebruikt moet worden, bv. om een geordende lijst van meestgebruikte artikelen te tonen of om 
+		Er zijn situaties waar een enkele statistiek gebruikt moet worden, bv. om een geordende lijst van meestgebruikte artikelen te tonen of om
 		zoekresultaten te ranngschikken. Kies een van de hieronder getoonde metrieken als standaard.</message>
 	<message key="manager.statistics.reports.aggregationColumns">Aggregeer statistieken per:</message>
 	<message key="manager.statistics.reports.defaultReportTemplates">Standaard rapportagesjablonen</message>
@@ -732,4 +732,11 @@
 	<message key="manager.statistics.reports.filters.byLocation.description">Verfijn resultaten naar land, regio en/of stad.</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Herinnering voorafgaand aan aflopen verstuurd</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Herinnering na aflopen verstuurd</message>
+	<message key="manager.statistics.reports.objectNotFound">Object niet gevonden in de database</message>
+	<message key="manager.setup.confirmResetLicenseChanged">U heeft de licentie en auteursrechten-informatie veranderd in de tijdschriftinstellingen. Sla deze wijzigingen op voor u de permissies herstelt.</message>
+	<message key="manager.setup.copyrightYearBasis">Baseer het jaartal voor het auteursrecht van nieuwe artikelen op</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Standaard wordt het jaar afgeleid van de publicatiedatum van het artikel, zoals bij "publish as you go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Standaard wordt het jaar afgeleid van de publicatiedatum van het nummer.</message>
+	<message key="manager.setup.emailHeader">E-mail koptekst</message>
+	<message key="manager.setup.emailHeaderDescription">De voorbereide e-mails die namens het tijdschrift door het systeem worden verstuurd beginnen met de volgende tekst. Deze e-mails worden verstuurd namens de eerste contactpersoon. Het is belangrijk om duidelijk te maken dat deze persoon het bericht niet zelf verstuurt.</message>
 </locale>

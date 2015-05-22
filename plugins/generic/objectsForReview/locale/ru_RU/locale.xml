@@ -4,8 +4,8 @@
 <!--
   * @file plugins/generic/objectsForReview/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Objects for review plugin localization strings for the ru_RU (Russian) locale.
@@ -230,7 +230,7 @@
 	<message key="plugins.generic.objectsForReview.notification.ofrRequested">Отправлен запрос на объект для рецензирования. Дождитесь подтверждения от редактора.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Объект для рецензирования обновлен.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Объект для рецензирования и его назначения рецензентам удалены.</message>
-	<message key="plugins.generic.objectsForReview.notification.ofrAauthorAssigned">Объекту для рецензирования назначен автор.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Объекту для рецензирования назначен автор.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Запрос автора отклонен. Объект для рецензирования возвращен в начальное состояние.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">OОбънкт для рецензирования отмечен как отправленный автору.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Автр удален. Объект для рецензирования возвращен в начальное состояние.</message>

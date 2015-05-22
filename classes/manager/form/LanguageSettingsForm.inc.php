@@ -3,8 +3,8 @@
 /**
  * @file classes/manager/form/LanguageSettingsForm.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LanguageSettingsForm
@@ -73,6 +73,7 @@ class LanguageSettingsForm extends Form {
 				$this->setData($name, array());
 			}
 		}
+		return parent::initData();
 	}
 
 	/**
@@ -120,6 +121,7 @@ class LanguageSettingsForm extends Form {
 		$this->setData('supportedLocales', $supportedLocales);
 		$this->setData('supportedSubmissionLocales', $supportedSubmissionLocales);
 		$this->setData('supportedFormLocales', $supportedFormLocales);
+		parent::execute();
 
 		foreach ($this->_data as $name => $value) {
 			if (!in_array($name, array_keys($this->settings))) continue;

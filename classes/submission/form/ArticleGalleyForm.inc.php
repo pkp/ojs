@@ -7,8 +7,8 @@
 /**
  * @file classes/submission/form/ArticleGalleyForm.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyForm
@@ -86,7 +86,8 @@ class ArticleGalleyForm extends Form {
 		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleylDao ArticleGalleyDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
-		if ($publicGalleyId && $galleyDao->getGalleyByPubId('publisher-id', $publicGalleyId, $this->articleId)) {
+		$galleyWithPublicGalleyId = $galleyDao->getGalleyByPubId('publisher-id', $publicGalleyId, $this->articleId);
+		if ($publicGalleyId && $galleyWithPublicGalleyId && $galleyWithPublicGalleyId->getId() != $this->galleyId) {
 			$this->addError('publicGalleyId', __('editor.publicGalleyIdentificationExists', array('publicIdentifier' => $publicGalleyId)));
 			$this->addErrorField('publicGalleyId');
 		}
@@ -246,6 +247,9 @@ class ArticleGalleyForm extends Form {
 					} else if (strstr($fileType, 'xml')) {
 						$galley->setLabel('XML');
 						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'xml');
+					} else if (strstr($fileType, 'epub')) {
+						$galley->setLabel('EPUB');
+						if ($enablePublicGalleyId) $galley->setStoredPubId('publisher-id', 'epub');
 					}
 				}
 

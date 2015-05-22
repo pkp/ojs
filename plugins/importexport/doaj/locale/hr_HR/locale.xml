@@ -3,8 +3,8 @@
 <!--
   * plugins/importexport/doaj/locale/hr_HR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -16,8 +16,6 @@
 	<message key="plugins.importexport.doaj.displayName">Dodatak za iznošenje u DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Ovaj dodatak iznosi časopis za DOAJ i omogućuje slanje informacija o časopisu DOAJ kontaktu</message>
 	<message key="plugins.importexport.doaj.export">Iznesi podatke časopisa u DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Iznesi časopis</message>
 	<message key="plugins.importexport.doaj.export.email">Iznesi relevantne informacije u DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Iznesi informacije o prilozima u XML formatu za arhiviranje u DOAJ</message>
 	<message key="plugins.importexport.doaj.export.emailInfo">Kako biste uključili svoj časopis u DOAJ, molimo do kraja ispunite ovaj obrazac, koji se djelomično automatski ispunjava i potom ga pošaljite DOAJ kontaktu.</message>
 </locale>

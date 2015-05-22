@@ -3,8 +3,8 @@
 /**
  * @file classes/manager/form/UserManagementForm.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserManagementForm
@@ -184,6 +184,7 @@ class UserManagementForm extends Form {
 				'enrollAs' => array($roleSymbolic)
 			);
 		}
+		return parent::initData();
 	}
 
 	/**
@@ -315,9 +316,8 @@ class UserManagementForm extends Form {
 				// FIXME Should try to create user here too?
 				$auth->doSetUserInfo($user);
 			}
-
+			parent::execute($user);
 			$userDao->updateObject($user);
-
 		} else {
 			$user->setUsername($this->getData('username'));
 			if ($this->getData('generatePassword')) {
@@ -338,6 +338,7 @@ class UserManagementForm extends Form {
 			}
 
 			$user->setDateRegistered(Core::getCurrentDate());
+			parent::execute($user);
 			$userId = $userDao->insertUser($user);
 
 			$isManager = Validation::isJournalManager();

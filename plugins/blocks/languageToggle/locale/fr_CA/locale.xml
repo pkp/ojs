@@ -4,15 +4,16 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   -->
- 
+
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.block.languageToggle.displayName">Bloc de changement de langue</message>
 	<message key="plugins.block.languageToggle.description">Ce plugiciel fournit un mécanisme de changement de langue dans l’encadré latéral.</message>
+	<message key="plugins.block.languageToggle.selectLabel">Sélectionnez un langage</message>
 </locale>

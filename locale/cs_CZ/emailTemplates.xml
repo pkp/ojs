@@ -4,12 +4,11 @@
 <!--
   * locale/cz_CZ/emailTemplateData.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Localization strings for the cs_CZ (Čeština) locale.
-  * Translation Jiří Dlouhý  
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29 
   -->
 
 <email_texts locale="cs_CZ">
@@ -1019,9 +1018,9 @@ Doufáme, že se vám dar bude líbit!
 {$giftContactSignature}</body>
 		<description>Tento email upozorňuje příjemce daru na jeho přihlašovací jméno.</description>
 	</email_text>
-	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>Byla nahrána upravená verze</subject>
-		<body>{$editorialContactName}:
+<email_text key="REVISED_VERSION_NOTIFY">
+	<subject>Byla nahrána upravená verze</subject>
+	<body>{$editorialContactName}:
 
 Upravená verze článku "{$articleTitle}" byla nahrána autorem {$authorName}.
 

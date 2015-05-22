@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/acron/AcronPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2000-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2000-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AcronPlugin
@@ -213,13 +213,14 @@ class AcronPlugin extends GenericPlugin {
 
 		ob_end_flush();
 		flush();
+		
+		set_time_limit(0);
 
 		// Fix the current working directory. See
 		// http://www.php.net/manual/en/function.register-shutdown-function.php#92657
 		chdir($this->_workingDir);
 
 		$taskDao =& DAORegistry::getDao('ScheduledTaskDAO');
-
 		foreach($this->_tasksToRun as $task) {
 			// Strip off the package name(s) to get the base class name
 			$className = $task['className'];
@@ -301,14 +302,16 @@ class AcronPlugin extends GenericPlugin {
 				// Tasks without a frequency defined, or defined to zero, will run on every request.
 				// To avoid that happening (may cause performance problems) we
 				// setup a default period of time.
-				$frequencyAttributes = $frequency->getAttributes();
-				$setDefaultFrequency = true;
 				$minHoursRunPeriod = 24;
-				if (is_array($frequencyAttributes)) {
-					foreach($frequencyAttributes as $key => $value) {
-						if ($value != 0) {
-							$setDefaultFrequency = false;
-							break;
+				$setDefaultFrequency = true;
+				if ($frequency) {
+					$frequencyAttributes = $frequency->getAttributes();
+					if (is_array($frequencyAttributes)) {
+						foreach($frequencyAttributes as $key => $value) {
+							if ($value != 0) {
+								$setDefaultFrequency = false;
+								break;
+							}
 						}
 					}
 				}
@@ -346,7 +349,7 @@ class AcronPlugin extends GenericPlugin {
 			}
 
 			foreach($scheduledTasks as $task) {
-				// We don't allow tasks without frequency, see _parseCronTab().
+				// We don't allow tasks without frequency, see _parseCrontab().
 				$frequency = new XMLNode();
 				$frequency->setAttribute(key($task['frequency']), current($task['frequency']));
 				$canExecute = ScheduledTaskHelper::checkFrequency($task['className'], $frequency);

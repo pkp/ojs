@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/usageStats/locale/en_US/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -20,13 +20,16 @@
 	<message key="plugins.generic.usageStats.settings.saved">Usage statistics plugin settings saved</message>
 	
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Usage statistics file loader task</message>
-	<message key="plugins.generic.usageStats.openFileFailed">The file {$file} could not be open and was rejected.</message>
+	<message key="plugins.generic.usageStats.openFileFailed">The file {$file} could not be opened and was rejected.</message>
 	<message key="plugins.generic.usageStats.invalidLogEntry">The line number {$lineNumber} from the file {$file} is not a valid log entry and the file was rejected.</message>
 	<message key="plugins.generic.usageStats.removeUrlError">The line number {$lineNumber} from the file {$file} contains an url that the system can't remove the base url from.</message>
 	<message key="plugins.generic.usageStats.loadDataError">Couldn't load data extracted from file {$file}. The error was: {$error}. The file was moved to stage again.</message>
 	<message key="plugins.generic.usageStats.displayName">Usage Statistics</message>
 	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
-	<message key="plugins.generic.usageStats.openFileFailed">Usage statistics plugin is disabled. No log files processed.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Usage statistics plugin is disabled. No log files processed.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">The directory {$directory} is not empty. This could indicate a previously failed process, or a concurrently running process.  This file will be automatically reprocessed if you are also using scheduledTasksAutoStage.xml, otherwise you will need to manually move any orphaned files in the processing directory back into the stage directory.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">The COUNTER bot list could not be found, or more than one list is present. The file {$file} could not be processed.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">The COUNTER bot list {$botlist} could not be opened. The file {$file} could not be processed.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS usage statistics report</message>
 	<message key="plugins.reports.usageStats.report.description">OJS default usage statistics report (COUNTER ready)</message>

@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR (Greek) locale.
@@ -18,8 +18,6 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Εξαγωγή δεδομένων του περιοδικού στο DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Εξαγωγή περιοδικού</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Εξαγωγή πληροφοριών άρθρου σε XML για αρχειοθέτηση στο DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Επικοινωνήστε με το DOAJ για να συμπεριλάβετε το περιοδικό</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Για να εξεταστεί η ευρετηρίαση του περιοδικού σας στο DOAJ, παρακαλούμε υποβάλλεται αυτή την μερικώς συμπληρωμένη φόρμα, αφού πρώτα συμπληρώσετε τα στοιχεία που λείπουν.</message>
 </locale>

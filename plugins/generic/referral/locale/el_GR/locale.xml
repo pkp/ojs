@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/referral/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR locale.
   *
   -->
- 
+
 <locale name="el_GR" full_name="Greek">
 	<message key="plugins.generic.referral.name">Πρόσθετο Παραπομπών</message>
 	<message key="plugins.generic.referral.description">Το Πρόσθετο Παραπομπών ανιχνεύει επιστρεφόμενες αναφορές (εισερχόμενους συνδέσμους) σε άρθρα  (π.χ. όταν ένας αναγνώστης ακολουθεί έναν εξωτερικό σύνδεσμο σε ένα άρθρο),  και επιτρέπει στους Συγγραφείς να διατηρούν και πιθανώς να δημοσιεύουν αυτόματα μια ενημερωμένη λίστα με εξωτερικούς συνδέσμους σε ένα άρθρο τους.</message>
@@ -36,4 +36,8 @@
 	<message key="plugins.generic.referral.settings.description">Το Πρόσθετο Παραπομών καταγράφει URL τα οποία οδηγούν σε δημοσιευμένα άρθρα του περιοδικού. Ο συγγραφέας έχει την δυνατότητα να επιμεληθεί/διορθώση την μορφή αυτών των URL και, προαιρετικά, να τα δημοσιεύσει. Αυτή η φόρμα επιτρέπει στον διαχειριστή του περιοδικού να ελέγχει πως αυτοί οι σύνδεσμοι καταγράφονται.</message>
 	<message key="plugins.generic.referral.excusions">Εξαιρέσεις</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Εισάγετε μια λίστα από κανονικά πρότυπα εκφράσεων, ένα ανά γραμμή, ώστε να χρησιμοποιηθούν ως εξαιρέσεις στην καταγραφή παραπομπών. Αυτό θα χρησιμεύσει στο να αποτρέψει τα αιτήματα μηχανών αναζήτησης να αχρηστεύσουν την λίστα παραπομπών/αναφορών. Για περισσότερες πληροφορίες, δείτε <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
+	<message key="plugins.generic.referral.status.accepted">Δημοσιευμένο</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Είστε σίγουροι ότι επιθυμείτε να δημοσεύσετε τα επιλεγμένα refback(s);</message>
+	<message key="plugins.generic.referral.status.declined">Αγνοήμένα</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Είστε σίγουτοι ότι επιθυμείται να αγνοήσετε τα επιλεγμένα refback(s);</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * 000001.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Preguntas Frecuentes "FAQ"
@@ -45,12 +45,12 @@
 	</section>
 	<section title="2. Onde podo atopar suporte técnico, enviar incidencias de erros, e propor milloras no uso de OJS?">
 		<![CDATA[
-<p>O Proxecto de Coñecimiento Público opera un <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Foro de Asistencia</a> con máis de un milleiro de comentarios entre os cales se poden procurar respostas, ademáis de facer preguntas. Por exemplo, pódense buscar mensaxes de erro, para chegar ás solucións propostas a problemas coñecidos. Se isto falla, os usuarios poden enviar preguntas a <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. As achegas de incidencias de erros deberán ser enviadas a través de PKP <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
+<p>O Proxecto de Coñecimiento Público opera un <a href="http://forum.pkp.sfu.ca/" target="_blank">Foro de Asistencia</a> con máis de un milleiro de comentarios entre os cales se poden procurar respostas, ademáis de facer preguntas. Por exemplo, pódense buscar mensaxes de erro, para chegar ás solucións propostas a problemas coñecidos. Se isto falla, os usuarios poden enviar preguntas a <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. As achegas de incidencias de erros deberán ser enviadas a través de PKP <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
 ]]>
 	</section>
 	<section title="3. Cómo debo proceder para traducir OJS noutro idioma?">
 		<![CDATA[
-<p>Hai Instruccións nos archivos docs/README incluidos na descarga de OJS. Información sobre problemas comúns de tradución pódese  atopar tamén en <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Foro de Asistencia de PKP</a>.</p>
+<p>Hai Instruccións nos archivos docs/README incluidos na descarga de OJS. Información sobre problemas comúns de tradución pódese  atopar tamén en <a href="http://forum.pkp.sfu.ca/" target="_blank">Foro de Asistencia de PKP</a>.</p>
 ]]>
 	</section>
 	<section title='4. Por qué os autores reciben a mensaxe "neste intre a revista non acepta envíos"'>

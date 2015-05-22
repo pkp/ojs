@@ -4,8 +4,8 @@
 <!--
   * 000001.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Frequently Asked Questions 
@@ -43,12 +43,12 @@
 	</section>
 	<section title="2. Hvor kan jeg finde teknisk support, fremsende fejl og foreslå forbedringer til anvendelsen af OJS?">
 		<![CDATA[
-<p>Public Knowledge Project driver et <a href="http://pkp.sfu.ca/support/forum/" target="_blank">supportforum</a> med langt over tusinde udvekslinger, hvor det er muligt at søge efter svar og stille spørgsmål. Det er f.eks. muligt at søge efter fejlmeddelelser, der leder dig videre til foreslåede løsninger på kendte problemer. Hvis der ikke gøres brug af dette, kan brugere sende forespørgsler til <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Fremsendelse af fejlrapporter skal ske via PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
+<p>Public Knowledge Project driver et <a href="http://forum.pkp.sfu.ca/" target="_blank">supportforum</a> med langt over tusinde udvekslinger, hvor det er muligt at søge efter svar og stille spørgsmål. Det er f.eks. muligt at søge efter fejlmeddelelser, der leder dig videre til foreslåede løsninger på kendte problemer. Hvis der ikke gøres brug af dette, kan brugere sende forespørgsler til <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Fremsendelse af fejlrapporter skal ske via PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. Hvordan skal jeg gribe det an, hvis jeg vil oversætte OJS til et andet sprog?">
 		<![CDATA[
-<p>Der findes instruktioner i filen docs/README, som følger med OJS-overførslen. Du kan også finde flere oplysninger om oversættelsesproblemer i <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP's supportforum</a>.</p>
+<p>Der findes instruktioner i filen docs/README, som følger med OJS-overførslen. Du kan også finde flere oplysninger om oversættelsesproblemer i <a href="http://forum.pkp.sfu.ca/" target="_blank">PKP's supportforum</a>.</p>
 		]]>
 	</section>
 	<section title='4. Hvorfor modtager forfattere meddelelsen om, at tidsskriftet "ikke accepterer manuskripter på nuværende tidspunkt"?'>

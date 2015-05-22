@@ -1,8 +1,8 @@
 {**
  * templates/about/editorialPolicies.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * About the Journal / Editorial Policies.
@@ -15,12 +15,16 @@
 
 <ul>
 	{if $currentJournal->getLocalizedSetting('focusScopeDesc') != ''}<li id="linkFocusScopeDesc"><a href="{url op="editorialPolicies" anchor="focusAndScope"}">{translate key="about.focusAndScope"}</a></li>{/if}
-	<li id="linkEditorialPolicies"><a href="{url op="editorialPolicies" anchor="SectionPolicies"}">{translate key="about.sectionPolicies"}</a></li>
-	{if $currentJournal->getLocalizedSetting('reviewPolicy') != ''}<li id="linkReviewPolicy"><a href="{url op="linkEditorialPolicies" anchor="peerReviewProcess"}">{translate key="about.peerReviewProcess"}</a></li>{/if}
-	{if $currentJournal->getLocalizedSetting('pubFreqPolicy') != ''}<li id="linkPubFreqPolicy"><a href="{url op="linkEditorialPolicies" anchor="publicationFrequency"}">{translate key="about.publicationFrequency"}</a></li>{/if}
+	<li id="linkEditorialPolicies"><a href="{url op="editorialPolicies" anchor="sectionPolicies"}">{translate key="about.sectionPolicies"}</a></li>
+	{if $currentJournal->getLocalizedSetting('reviewPolicy') != ''}<li id="linkReviewPolicy"><a href="{url op="editorialPolicies" anchor="peerReviewProcess"}">{translate key="about.peerReviewProcess"}</a></li>{/if}
+	{if $currentJournal->getLocalizedSetting('pubFreqPolicy') != ''}<li id="linkPubFreqPolicy"><a href="{url op="editorialPolicies" anchor="publicationFrequency"}">{translate key="about.publicationFrequency"}</a></li>{/if}
 	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''}<li id="linkOpenAccessPolicy"><a href="{url op="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
-	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $currentJournal->getSetting('enableAuthorSelfArchive')}<li id="enabledAuthorSelfArchive"><a href="{url op="editorialPolicies" anchor="authorSelfArchivePolicy"}">{translate key="about.authorSelfArchive"}</a></li>{/if}
-	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && $currentJournal->getSetting('enableDelayedOpenAccess')}<li id="enabledDelayedOpenAccess"><a href="{url op="editorialPolicies" anchor="delayedOpenAccessPolicy"}">{translate key="about.delayedOpenAccess"}</a></li>{/if}
+	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
+		{if $currentJournal->getSetting('enableAuthorSelfArchive')}<li id="enabledAuthorSelfArchive"><a href="{url op="editorialPolicies" anchor="authorSelfArchivePolicy"}">{translate key="about.authorSelfArchive"}</a></li>{/if}
+		{if $currentJournal->getSetting('enableDelayedOpenAccess')}<li id="enabledDelayedOpenAccess"><a href="{url op="editorialPolicies" anchor="delayedOpenAccessPolicy"}">{translate key="about.delayedOpenAccess"}</a></li>{/if}
+		{if $paymentConfigured && $currentJournal->getSetting('journalPaymentsEnabled') && $currentJournal->getSetting('acceptSubscriptionPayments') && $currentJournal->getSetting('purchaseIssueFeeEnabled') && $currentJournal->getSetting('purchaseIssueFee') > 0}<li id="purchaseIssue"><a href="{url op="editorialPolicies" anchor="purchaseIssue"}">{translate key="about.purchaseIssue"}</a></li>{/if}
+		{if $paymentConfigured && $currentJournal->getSetting('journalPaymentsEnabled') && $currentJournal->getSetting('acceptSubscriptionPayments') && $currentJournal->getSetting('purchaseArticleFeeEnabled') && $currentJournal->getSetting('purchaseArticleFee') > 0}<li id="purchaseArticle"><a href="{url op="editorialPolicies" anchor="purchaseArticle"}">{translate key="about.purchaseArticle"}</a></li>{/if}
+	{/if}
 	{if $currentJournal->getSetting('enableLockss') && $currentJournal->getLocalizedSetting('lockssLicense') != ''}<li id="linkLockssLicense"><a href="{url op="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
 	{foreach key=key from=$currentJournal->getLocalizedSetting('customAboutItems') item=customAboutItem}
 		{if !empty($customAboutItem.title)}
@@ -111,6 +115,42 @@
 
 <div class="separator">&nbsp;</div>
 </div>
+{/if}
+
+{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION &&
+	$paymentConfigured &&
+	$currentJournal->getSetting('journalPaymentsEnabled') &&
+	$currentJournal->getSetting('acceptSubscriptionPayments') &&
+	$currentJournal->getSetting('purchaseIssueFeeEnabled') &&
+	$currentJournal->getSetting('purchaseIssueFee') > 0}
+		<div id="purchaseIssue">
+			<h3>{translate key="about.purchaseIssue"}</h3>
+			<p>{translate key="about.purchaseIssueDescription"}</p>
+			<p>{if $currentJournal->getLocalizedSetting('purchaseIssueFeeName') != ''}{$currentJournal->getLocalizedSetting('purchaseIssueFeeName')|escape}: {/if}{$currentJournal->getSetting('purchaseIssueFee')|string_format:"%.2f"} {if $currentJournal->getSetting('currency') != ''}({$currentJournal->getSetting('currency')|escape}){/if}</p>
+			{if $currentJournal->getLocalizedSetting('purchaseIssueFeeDescription') != ''}
+				<p>{$currentJournal->getLocalizedSetting('purchaseIssueFeeDescription')|nl2br}</p>
+			{/if}
+
+			<div class="separator">&nbsp;</div>
+		</div>
+{/if}
+
+{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION &&
+	$paymentConfigured &&
+	$currentJournal->getSetting('journalPaymentsEnabled') &&
+	$currentJournal->getSetting('acceptSubscriptionPayments') &&
+	$currentJournal->getSetting('purchaseArticleFeeEnabled') &&
+	$currentJournal->getSetting('purchaseArticleFee') > 0}
+		<div id="purchaseArticle">
+			<h3>{translate key="about.purchaseArticle"}</h3>
+			<p>{translate key="about.purchaseArticleDescription"}</p>
+			<p>{if $currentJournal->getLocalizedSetting('purchaseArticleFeeName') != ''}{$currentJournal->getLocalizedSetting('purchaseArticleFeeName')|escape}: {/if} {$currentJournal->getSetting('purchaseArticleFee')|string_format:"%.2f"} {if $currentJournal->getSetting('currency') != ''}({$currentJournal->getSetting('currency')|escape}){/if}</p>
+			{if $currentJournal->getLocalizedSetting('purchaseArticleFeeDescription') != ''}
+				<p>{$currentJournal->getLocalizedSetting('purchaseArticleFeeDescription')|nl2br}</p>
+			{/if}
+
+			<div class="separator">&nbsp;</div>
+		</div>
 {/if}
 
 {if $currentJournal->getSetting('enableLockss') && $currentJournal->getLocalizedSetting('lockssLicense') != ''}

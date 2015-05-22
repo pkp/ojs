@@ -4,16 +4,16 @@
 <!--
   * plugins/generic/thesis/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Thesis abstracts plugin localization strings for the cs_CZ (Czech) locale.
+  * Thesis abstracts plugin Localization strings for the cs_CZ (Čeština) locale.
   * Translation Jiří Dlouhý  
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 
 	<!-- Thesis Abstract Management -->
 	<message key="plugins.generic.thesis.manager.settings">Nastavení</message>

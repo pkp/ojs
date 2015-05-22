@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/stopForumSpam/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Stop Forum Spam plugin localization strings
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+
+	<message key="plugins.generic.stopForumSpam.displayName">Stop Forum Spam Plugin</message>
+	<message key="plugins.generic.stopForumSpam.description">Integreer OJS met het Stop Forum Spam preventie systeem, wat het aantal spam registraties boogt te reduceren.</message>
+
+	<message key="plugins.generic.stopForumSpam.manager.settings">Instellingen</message>
+	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Stop Forum Spam instellingen</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>Als deze plugin ingeschakeld is, zal OJS controleren of  een gebruikersregistratie elementen bevat die op de Stop Forum Spam lijst staan.  Registraties worden in dat geval geweigerd.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">Controleer registratie IP</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Controleer registratie e-mail adres</message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Controleer registratie gebruikersnaam (met beleid gebruiken!)</message>
+	<message key="plugins.generic.stopForumSpam.checkName">stopForumSpamPlugin</message>
+	<message key="plugins.generic.stopForumSpam.checkMessage"><![CDATA[De <a href="http://www.stopforumspam.com" target="_blank">Stop Forum Spam</a> plugin heeft deze registratie geblokkeerd.]]></message>
+</locale>

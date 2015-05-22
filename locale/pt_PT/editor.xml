@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/editor.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português) locale.
@@ -220,4 +220,6 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública do galley já existe.</message>
 	<message key="editor.issues.backToIssueGalleys">Voltar ao galley dos números</message>
 	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar este galley do número?</message>
+	<message key="editor.publicGalleyIdentificationExists">O identificador público '{$publicIdentifier}' já existe para ouyra instância deste artigo. Por favor, escolha um identificador único dentro deste artigo.</message>
+	<message key="editor.issues.resetArticlePublicationDates">Restaurar as datas de publicação dos artigos</message>
 </locale>

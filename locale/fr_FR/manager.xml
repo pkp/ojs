@@ -4,12 +4,11 @@
 <!--
   * locale/fr_FR/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français) locale.
-  *
   -->
 
 <locale name="fr_FR" full_name = "Français">
@@ -153,7 +152,6 @@
 	<message key="manager.setup.addItemtoAboutJournal">Ajouter un élément à afficher dans  « À propos de la revue »</message>
 	<message key="manager.setup.additionalContent">Contenu additionnel</message>
 	<message key="manager.setup.additionalContentDescription">Ajouter le contenu suivant, en utilisant du texte/HTML, qui apparaîtra sous l'image de la page d'accueil, le cas échéant.</message>
-	<message key="bon ">Ajouter un élément</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Ajouter un nouveau lien de base de données</message>
 	<message key="manager.setup.addSponsor">Ajouter un commanditaire</message>
 	<message key="manager.setup.alternateHeader">En-tête secondaire</message>
@@ -200,8 +198,6 @@
 	<message key="manager.setup.disciplineExamples">(Par ex., Histoire; Éducation; Sociologie; Psychologie; Études culturelles; Droit)</message>
 	<message key="manager.setup.disciplineProvideExamples">Donner des exemples de disciplines académiques pertinentes pour cette revue</message>
 	<message key="manager.setup.displayCurrentIssue">Ajouter le sommaire pour le numéro courant (si disponible).</message>
-	<message key="manager.setup.doiPrefix">Préfixe DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Le préfixe DOI (Digital Object Identifier) est attribué par <a href="http://www.crossref.org" target="_new">CrossRef</a> et correspond au format 10.xxxx (par ex., 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Décision du rédacteur</message>
 	<message key="manager.setup.editorialMembers">Aller à Membres du comité et ajouter les noms des membres des comités éditorial et/ou d'évaluation. Cela peut être fait à n'importe quel moment de l'exploitation de la revue.</message>
 	<message key="manager.setup.editorialProcess1">Un ou plusieurs rédacteurs s'occupent des étapes de base sans rôle désigné.</message>
@@ -409,8 +405,6 @@
 	<message key="manager.setup.subjectExamples">(Par ex., Photosynthèse; Trous noirs; Cartes en quadrichromie; Théorème de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Mots-clés</message>
 	<message key="manager.setup.subjectProvideExamples">Donner des exemples de mots-clés ou de sujets comme guide pour les auteurs</message>
-	<message key="manager.setup.submissionEmailLogging">Tenez un registre, sur la page Historique, de tous les courriels envoyés concernant une soumission.</message>
-	<message key="manager.setup.submissionEventLogging">Tenez un registre, sur la page Historique, de toutes les actions prises concernant une soumission.</message>
 	<message key="manager.setup.submissionGuidelines">Directives pour la soumission</message>
 	<message key="manager.setup.submissionPreparationChecklist">Liste de vérification de la soumission</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Lors d'une soumission à la revue, on demande d'abord aux auteurs de s'assurer, avant d'aller plus loin, que toutes les conditions requises pour soumettre un article sont remplies. La liste de vérification doit aussi apparaître dans Directives aux auteurs, sous À propos de la revue. Cette liste peut être modifiée ci-dessous, mais tous les éléments de la liste devront être cochés avant que les auteurs puissent poursuivre la procédure de soumission.</message>
@@ -612,13 +606,6 @@
 	<message key="manager.setup.contributorNoteDescription">Ce texte apparaîtra sous l'en-tête « Sources d'appui » et au-dessus de la liste des noms et urls des organismes de soutien sous « Commanditaires de la revue » sur la page « À propos ».</message>
 	<message key="manager.setup.history">Historique de la revue</message>
 	<message key="manager.setup.historyDescription">Ce texte apparaîtra dans la section « À propos » du site Web de la revue et peut être utilisé pour décrire tout changement au titre de la revue, au comité éditorial, et tout autre élément d'intérêt dans l'histoire de la publication de la revue.</message>
-	<message key="manager.setup.doiSuffix">Suffixe DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Utiliser la forme par défaut (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Utiliser la forme inscrite ci-dessous pour générer les suffixes DOI. Utiliser %j pour les initiales de la revue, %v pour le numéro du volume, %i pour le numéro de la publication, %a pour l'ID de l'article dans OJS, et %p pour le numéro de page.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Par exemple, vol%viss%ipp%p pourrait générer un DOI tel que 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Un suffixe DOI peut prendre n'importe quelle forme, mais doit être unique pour chaque article publié.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Utiliser l'« Identifiant personnalisé » comme suffixe DOI pour les articles publiés (doit être activé à l'Étape 4).</message>
-	<message key="manager.setup.form.doiPrefixPattern">Le DOI doit avoir le format 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Icône (favicon) de la revue</message>
 	<message key="manager.setup.journalFaviconDescription">Ajouter un icône (favicon) pour cette revue pour fins d'affichage à côté de la barre de navigation quand les utilisateurs visitent votre site.</message>
 	<message key="manager.setup.journalFaviconInvalid">Format d'icône (favicon) invalide. Les formats acceptés sont .ico, .png et .gif.</message>
@@ -679,8 +666,6 @@
 	<message key="manager.plugins.versionFileInvalid">version.xml dans le répertoire du plugiciel contient des données invalides.</message>
 	<message key="manager.reviewFormElements.included">Inclus dans le message à l'auteur</message>
 	<message key="manager.setup.addNavItem">Ajouter un élément</message>
-	<message key="manager.setup.doiReassign">Réaffecter les DOIs</message>
-	<message key="manager.setup.doiReassign.description">Si vous modifier votre configuration DOI, les DOIs qui ont déjà été affectés ne seront pas visés. Du moment que la configuration DOI est enregistrée, utiliser ce bouton pour effacer tous les DOIs existants afin que les nouveaux paramètres s'appliquent aux articles existants.</message>
 	<message key="manager.payment.giftFees">Tarif des formules cadeau</message>
 	<message key="manager.payment.giftFeesDescription">Un lien vers les abonnements en cadeau apparaîtra sur la page des abonnements dans À propos de la revue et dans la barre latérale des abonnements.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Cela activera le règlement des abonnements en cadeau, permettant aux lecteurs de la revue d'acheter des abonnements en cadeau pour d'autres lecteurs.</message>
@@ -744,4 +729,11 @@
 	<message key="manager.statistics.reports.orderDir">Ordre</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Rappel de pré-expiration envoyé</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Rappel de post-expiration envoyé</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Vous avez modifié les informations de licence et de droits d'auteur dans la configuration de votre revue. Veuillez sauvegarder ces modifications avant de réinitialiser les autorisations.</message>
+	<message key="manager.setup.copyrightYearBasis">Droit de reproduction annuel</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Une année par défaut sera extraite et renseignée à partir de la date de publication de l’article comme dans un "publish-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Une année par défaut sera extraite de la date du numéro de la publication.</message>
+	<message key="manager.setup.emailHeader">En-tête du courriel</message>
+	<message key="manager.setup.emailHeaderDescription">Les courriels préparés envoyés par le système au nom de la revue débuteront avec l'en-tête suivant. Le contact principal figurera comme expéditeur de ces courriels. Il est donc important de préciser que le contact principal n’est pas nécessairement responsable du contenu du message, qui peut être envoyé au nom d'un autre utilisateur.</message>
+	<message key="manager.statistics.reports.objectNotFound">Objet introuvable dans la base</message>
 </locale>

@@ -4,13 +4,13 @@
 <!--
   * @file plugins/importexport/datacite/locale/tr_TR/common.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
   -->
- 
+
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.importexport.common.settings">Ayarlar</message>
 
@@ -51,4 +51,8 @@
 	<message key="plugins.importexport.common.export.error.unknownObjectType">The object type {$param} cannot be exported.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
 	<message key="plugins.importexport.common.notification.exportSuccessful">Successfully exported selected objects to '{$param}'</message>
+	<message key="plugins.importexport.common.markRegistered">Kayıtlıları işaretle</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Kayıtlı öğeleri işaretlemek için butunu tıklayınız (Ör.: daha önceden kayıtlı veya manuel kayıtlı)</message>
+	<message key="plugins.importexport.common.export.unAvailable">Veri ihracı şu anda kullanılabilir değil. Lütfen eklenti gereksinimlerini kontrol ediniz.</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Lütfen şifrenin düz metin olarak kaydedileceğini unutmayınız. Ör.: Şifreli değil (not encrypted).</message>
 </locale>

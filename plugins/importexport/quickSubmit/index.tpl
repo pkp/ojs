@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/quickSubmit/index.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Template for one-page submission form
@@ -253,6 +253,10 @@ function updateAbstractRequired() {
 				<td width="70%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
 			</tr>
 			<tr valign="top">
+				<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-orcid" key="user.orcid"}</td>
+				<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][orcid]" id="authors-{$authorIndex|escape}-orcid" value="{$author.orcid|escape}" size="30" maxlength="90" /><br />{translate key="user.orcid.description"}</td>
+			</tr>
+			<tr valign="top">
 				<td class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
 				<td class="value"><input type="text" name="authors[{$authorIndex|escape}][url]" id="authors-{$authorIndex|escape}-url" value="{$author.url|escape}" size="30" maxlength="255" class="textField" /></td>
 			</tr>
@@ -329,6 +333,10 @@ function updateAbstractRequired() {
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>
 				<td width="70%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" /></td>
+			</tr>
+			<tr valign="top">
+				<td width="20%" class="label">{fieldLabel name="authors-0-orcid" key="user.orcid"}</td>
+				<td width="80%" class="value"><input type="text" class="textField" name="authors[0][orcid]" id="authors-0-orcid" size="30" maxlength="90" /><br />{translate key="user.orcid.description"}</td>
 			</tr>
 			<tr valign="top">
 				<td width="30%" class="label">{fieldLabel name="authors-0-url" key="user.url"}</td>

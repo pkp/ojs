@@ -4,14 +4,14 @@
 <!--
   * locale/zh_CN/default.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   *
   -->
- 
+
 <locale name="zh_CN" full_name="China .PR">
 	<!-- Section default -->
 	<message key="section.default.title">论文</message>
@@ -140,8 +140,8 @@
 	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励读者订阅期刊的出版通知服务项目。登陆<a href="{$indexUrl}/{$journalPath}/user/register">注册</a> 链接，在期刊主页的上方。注册完成后，读者将收到期刊每一期目录的邮件。这个列表可以使期刊获得更多的支持和读者群。<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">隐私权声明</a>保证读者的姓名和邮箱不会用于其他用途。]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[ 
+	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励读者订阅期刊出版通知服务。 在期刊主页的顶部使用<a href="{$index Url}/{$journal Path}/user/register">注册</a>链接。完成注册后，读者可以接收到期刊每一期内容的目录表的电子邮件。这样期刊可以获得一定水平度额支持和读者群。期刊上的<a href="{$index Url}/{$journal Path}/about/submissions#privacyStatement">隐私声明</A>保证读者的姓名和电子邮件地址不会被用于其他用途。]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[
 		对这份期刊感兴趣吗？我们建议您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在进行投稿之前必须在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">注册</a>，而如果已经注册的话，可以简单地<a href="{$indexUrl}/index/login">登入</a>并且开始五个步骤的投稿流程。]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[
 		我们鼓励图书馆员将这份期刊加入其图书馆的电子期刊数据库之中。同时，这份期刊的开源码出版系统或许会适合图书馆放置他们的职员正在编辑的期刊。(请见<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
@@ -166,4 +166,6 @@
 	<message key="default.journalSettings.donationFeeDescription">对本期刊任何数额的捐赠将感激地接受，您将为编辑提供一个继续提供高质量的杂志给读者的机会.</message>
 	<message key="default.journalSettings.purchaseIssueFee">购买期次</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">支付该项费用后您可以查看、下载和打印该期文章。</message>
+	<message key="default.journalSettings.emailHeader">下面的信息以期刊{$journalName}的名义发出。
+________________________________________________________________________</message>
 </locale>

@@ -1,8 +1,8 @@
 {**
  * templates/author/submit/step3.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Step 3 of author article submission.
@@ -166,6 +166,10 @@ function moveAuthor(dir, authorIndex) {
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" /></td>
+</tr>
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-0-orcid" key="user.orcid"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][orcid]" id="authors-0-orcid" size="30" maxlength="90" /><br />{translate key="user.orcid.description"}</td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-url" key="user.url"}</td>

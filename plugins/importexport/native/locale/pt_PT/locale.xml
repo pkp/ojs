@@ -4,14 +4,14 @@
 <!--
   * plugins/importexport/native/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT locale.
   *
   -->
- 
+
 <locale name="pt_PT" full_name="Português">
 	<message key="plugins.importexport.native.displayName">Plugin XML de Artigos e Edições</message>
 	<message key="plugins.importexport.native.description">Importar e exportar artigos e edições</message>
@@ -141,6 +141,6 @@ Os seguintes formatos são aceitos:
 	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">O ID público indicado para o ficheiro suplementar importado "{$suppFileTitle}" está a ser usado por outro ficheiro suplementar para o mesmo artigo, "{$otherSuppFileTitle}".</message>
 	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">O ID público indicado para o artigo importado "{$articleTitle}" está a ser usado por outro artigo, "{$otherArticleTitle}".</message>
 	<message key="plugins.importexport.native.import.error.invalidPubId">O ficheiro importado contém dados com um inválido {$pubIdType}: '{$pubId}'.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePubId">O ficheiro importado contém um conjunto de dados com {$ pubIdType} '{$ PubID}' que já existe noutro objecto na base de dados. Por favor, certifique-se de que nunca importa objectos com IDs que já existem na base de dados.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">O ficheiro importado contém um conjunto de dados com {$ pubIdType} '{$ pubId}' que já existe noutro objecto na base de dados. Por favor, certifique-se de que nunca importa objectos com IDs que já existem na base de dados.</message>
 	<message key="plugins.importexport.native.import.error.unknownPubId">O ficheiro importado contém um conjunto de dados com um tipo ID '{$ pubIdType}' que nenhum ID-plugin pode manipular. Por favor, instale e / ou active o correspondente ID plugin antes de tentar importar este conjunto de dados.</message>
 </locale>

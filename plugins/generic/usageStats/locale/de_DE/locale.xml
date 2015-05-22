@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/usageStats/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
@@ -26,7 +26,10 @@
 	<message key="plugins.generic.usageStats.loadDataError">Konnte keine extrahierten Daten aus Datei {$file} laden. Der Fehler lautete: {$error}. Die Datei wurde entfernt, um sie erneut zu bearbeiten.</message>
 	<message key="plugins.generic.usageStats.displayName">Nutzungsstatistik</message>
 	<message key="plugins.generic.usageStats.description">Zeigt Nutzungsstatistik zu Objekten an. Kann Server-Logdateien benutzen, um Statistiken zu extrahieren.</message>
-	<message key="plugins.generic.usageStats.openFileFailed">Das Nutzungsstatistik-Plug-In ist deaktiviert. Es wurden keine Logdateien verarbeitet.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Das Nutzungsstatistik-Plug-In ist deaktiviert. Es wurden keine Logdateien verarbeitet.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">Das Verzeichnis {$directory} ist nicht leer. Dies kann auf einen zuvor gescheiterten oder einen momentan laufenden Prozess hinweisen. Diese Datei wird automatisch erneut verarbeitet, falls Sie auch scheduledTasksAutoStage.xml benutzen; ansonsten werden Sie manuell alle verwaisten Dateien aus dem Verarbeitungsverzeichnis zurück in das Bereitstellungsverzeichnis verschieben müssen.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">Die COUNTER-Bot-Liste konnte nicht gefunden werden, oder es liegt mehr als eine Liste vor. Die Datei {$file} konnte nicht verarbeitet werden.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">Die COUNTER-Bot-Liste {$botlist} konnte nicht geöffnet werden. Die Datei {$file} konnte nicht verarbeitet werden.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS-Nutzungsstatistik-Bericht</message>
 	<message key="plugins.reports.usageStats.report.description">OJS-Standardbericht zur Nutzungsstatistik (COUNTER-fähig)</message>

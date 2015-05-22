@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pl_PL (Polski) locale.
@@ -18,9 +18,7 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Export Journal Data to DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Export Journal</message>
 	<message key="plugins.importexport.doaj.export.contact">Contact DOAJ for inclusion</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Export article information in XML for archiving in the DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">For your journal's consideration in the DOAJ, please submit this partially autofilled form to the DOAJ, and fill out incomplete information as best you can.</message>
 
 </locale>

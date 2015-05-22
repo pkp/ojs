@@ -7,8 +7,8 @@
 /**
  * @file pages/manager/index.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_manager
@@ -94,6 +94,8 @@ switch ($op) {
 	case 'updateEmail':
 	case 'deleteCustomEmail':
 	case 'resetEmail':
+	case 'exportEmails':
+	case 'uploadEmails':
 	case 'disableEmail':
 	case 'enableEmail':
 	case 'resetAllEmails':

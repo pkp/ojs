@@ -4,14 +4,14 @@
 <!--
   * locale/tr_TR/default.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkiye Türkçesi) locale.
   *
   -->
- 
+
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<!-- Section default -->
 	<message key="section.default.title">Makaleler</message>
@@ -32,8 +32,8 @@
 	<message key="default.journalSettings.privacyStatement">Bu dergi sitesindeki isimler ve elektronik posta adresleri bu derginin belirtilen amaçları doğrultusunda kullanılacaktır. Diğer amaçlar veya başka bir bölüm için kullanılmaycaktır.</message>
 	<message key="default.journalSettings.openAccessPolicy">Bu dergi açık erişim sağlama politikasını benimsemiştir. Açık erişim bilginin global değişimini artırarak insanlık için yararlı sonuçlar doğurmaktadır.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Yazarlar bu dergide yayınlanan çalışmalarını kişisel web sitelerinde veya kurumsal arşivlerde, dergiye kütüphanecilik kurallarına uyan bağlantı vererek açık olarak yayınlayabilirler.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Sayfa düzenleme aşaması, makalenin şekli, sözcükleri, gramer yapısı, açıklığı ve akıcılığını geliştirme amaçldır. Bir diğer evrede de yalnızca yazın ve şekil düzeltmeleri yapılacağından bu yazar için yazıda yapabileceği son değişiklikler için son şans olmaktadır. 
- 
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Sayfa düzenleme aşaması, makalenin şekli, sözcükleri, gramer yapısı, açıklığı ve akıcılığını geliştirme amaçldır. Bir diğer evrede de yalnızca yazın ve şekil düzeltmeleri yapılacağından bu yazar için yazıda yapabileceği son değişiklikler için son şans olmaktadır.
+
 Sayfa düzenlemesi yapılacak dosya MS Word veya .rtf dosyası biçimindedir. Böylece belge kolayca biçimlendirilir. Buradaki açıklamalar iki yöntemi önerir. Birincisi MS Word programının Değişiklikleri İzle olanağını kullanmaktır. Ancak bu yol seçildiğinde yazar, editör ve dizgicilerin programa ulaşım olanağının olması gerekir. İkinci sistem ise, yazılım bağımsızdır ve Harward Educational Review yönteminden izin alınarak buraya alınmıştır. Dergi editörü bu açıklamaları düzenleyip, kendi koşullarına daha uygun biçime getirebilir.
 
 <h4> Sayfa düzenlemesi düzeltme sistemleri</h4>
@@ -82,20 +82,20 @@ Orjinal makalenizde yapısal veya biçimsel dramatik değişiklikler yaparken, l
 
 Makalenizde yapısal veya biçimsel dramatik değişiklikler yapmdan önce <strong>yazınızı izleyen editörlerle temas kurunuz</strong>.
 Revizyonlarınızı bitirdikten sonra elektronik yazı dosyanızı farklı ad ile kaydediniz.
-(Örneğin YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle 
+(Örneğin YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle
 değişen elektronik yazı dosyası ile birlikte geri gönderiniz.
 
 <strong>ONA yollanan revize edilmiş yazı</strong>
 
 Makalenizde yapısal veya biçimsel dramatik değişiklikler yapmdan önce
 <strong>yazınızı izleyen editörlerle temas kurunuz</strong>.
-<strong> Lütfen aşağıdaki kurallara uymadaki yetersizliğin yazınızın basılmasında 
+<strong> Lütfen aşağıdaki kurallara uymadaki yetersizliğin yazınızın basılmasında
 ciddi gecikmelere neden olabileceğini unutmayınız.</strong>
 
 Revizyonlarınızı bitirdikten sonra elektronik yazı dosyanızı farklı ad ile kaydediniz.
-(Örneğin YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle 
+(Örneğin YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle
 değişen elektronik yazı dosyası ile birlikte geri gönderiniz.
-Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler kalsın veya işaret edilsin 
+Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler kalsın veya işaret edilsin
 Örneğin [Yorum: Önerinize cevaben bir cümle ekledim.]</strong>
 
 <strong>Notlar:</strong>
@@ -144,7 +144,7 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<br />
 
 	<h4>Biçimlendirme hataları için</h4>
-	
+
 	<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows:</p>
 	<br />
 	<pre>3. FORMATTING
@@ -176,4 +176,6 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.donationFeeDescription">Bu derginin herhangi bir miktarı bağış olarak alması ve okurlarına yüksek kalitede bir dergi sunmaya devam etmek istemesi düzenleyiciler için bir araç sağlamaktadır.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Ücretin ödemesi, bu sayının yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
+	<message key="default.journalSettings.emailHeader">Aşağıdaki mesaj {$journalName} adına gönderilmiştir.
+________________________________________________________________________</message>
 </locale>

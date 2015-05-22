@@ -4,8 +4,8 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Introduction to OJS Main 
@@ -26,7 +26,7 @@
 ]]>
 	</section>
 	<section title="Supporto">
-		<![CDATA[<p>Si pu&#x00F2; accedere via web al forum di supporto del PKP e ad un sistema di tracciamento dei bug tecnici <a href="http://pkp.sfu.ca/support/forum/" target="_blank">sito web</a>.</p>
+		<![CDATA[<p>Si pu&#x00F2; accedere via web al forum di supporto del PKP e ad un sistema di tracciamento dei bug tecnici <a href="http://forum.pkp.sfu.ca/" target="_blank">sito web</a>.</p>
 		<p>Gli utenti che hanno domande su come interagire con una particolare rivista del sito debbono contattare il riferimento principale di quella rivista,  che è indicato nella pagina delle informazioni delle varie riviste.</p>
 		<p>CILEA offre supporto e consulenza agli utenti atraverso l'attività del gruppo <a target="_blank" href="http://www.aepic.it/ojs.php">AePIC</a></p>]]>
 	</section>

@@ -4,13 +4,13 @@
 <!--
   * @file plugins/importexport/datacite/locale/uk_UA/common.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
   -->
- 
+
 <locale name="uk_UA" full_name="Ukrainian">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Щоб використовувати цей модуль, будь ласка, перейдіть до категорії модулів "Публічні ідентифікатори", включіть та налаштуйте модуль DOI, а потім вкажіть тут Ваш префікс DOI.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Модуль не був повністю підключений.</message>
@@ -45,7 +45,7 @@
 	<message key="plugins.importexport.common.export.selectGalley">Оберіть гранки</message>
 	<message key="plugins.importexport.common.export.noGalleys">Зараз жодна гранка не має власного DOI.</message>
 	<message key="plugins.importexport.common.exportDescription">Натисніть цю кнопку, щоб експортувати дані XML обраних об'єктів у локальний файл без їх реєстрації через реєстраційну агенцію. Це може бути корисно, якщо DOI для Вас реєструватиме третя особа або, якщо Ви хочете перевірити коректність формату XML перед реєстрацією.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Жодний випуск не має визначеного ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Жодна стаття не має визначеного ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Жодна гранка не має визначеного ID: {$param}.</message>
@@ -53,8 +53,8 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">Жоден журнал не має вказаного шляху: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">Тип об'єкту {$param} не може бути експортований.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Файл результатів {$param} не доступний для запису.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">Успішно експортовано визначені об'єкти до '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">ПОМИЛКА:</message>
 </locale>

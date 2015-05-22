@@ -4,8 +4,8 @@
 <!--
   * locale/mk_MK/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -949,7 +949,7 @@
 	<message key="installer.ojsUpgrade">OJS Надградба</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Верзија{$version}</h4>
 
-<p>Благодарам што го предземавте Public Knowledge Project's <strong>Open Journal Systems</strong>. Пред да продолжите, прочитајте го <a href="{$baseUrl}/docs/README">README</a> фајлот вклучен во овој софтвер. За повеќе информации за Public Knowledge Project и неговите софтверски проекти, посетете ја <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Ако имате пријава за грешка или  прашања за техничка поддршка за Open Journal Systems, погледнете го <a href="http://pkp.sfu.ca/support/forum" target="_blank">форумот за поддршка </a> или посетете го PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">системот за пријава на грешка</a>. Исто така форумот за поддршка е префериран метод за контакт, исто така може да пратите е-маил на тимот на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарам што го предземавте Public Knowledge Project's <strong>Open Journal Systems</strong>. Пред да продолжите, прочитајте го <a href="{$baseUrl}/docs/README">README</a> фајлот вклучен во овој софтвер. За повеќе информации за Public Knowledge Project и неговите софтверски проекти, посетете ја <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Ако имате пријава за грешка или  прашања за техничка поддршка за Open Journal Systems, погледнете го <a href="http://forum.pkp.sfu.ca" target="_blank">форумот за поддршка </a> или посетете го PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">системот за пријава на грешка</a>. Исто така форумот за поддршка е префериран метод за контакт, исто така може да пратите е-маил на тимот на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Надградба</h4>
 
@@ -987,7 +987,7 @@
 <p>2. Директориум кој чува прикачени датотеки мора да се креира и исто така кој ќе може да запишува (види "File Settings" подолу).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Верзија {$version}</h4>
 
-<p>Ви благодарам за преземањето на Public Knowledge Project's <strong>Open Journal Systems</strong>. Пред да продолжите, прочитајте го  <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> фајловите вклучени во овој софтвер. За повеќе информации за Public Knowledge Project и неговите софтверски проекти, посетете ја <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Ако имате пријава за грешка или  прашања за техничка поддршка за Open Journal Systems, погледнете го  <a href="http://pkp.sfu.ca/support/forum" target="_blank">форумот за поддршка</a> или посетете го PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank"> системот за пријава на грешка </a>.Исто така форумот за поддршка е префериран метод за контакт, исто така може да пратите е-маил на тимот на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Ви благодарам за преземањето на Public Knowledge Project's <strong>Open Journal Systems</strong>. Пред да продолжите, прочитајте го  <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> фајловите вклучени во овој софтвер. За повеќе информации за Public Knowledge Project и неговите софтверски проекти, посетете ја <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Ако имате пријава за грешка или  прашања за техничка поддршка за Open Journal Systems, погледнете го  <a href="http://forum.pkp.sfu.ca" target="_blank">форумот за поддршка</a> или посетете го PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank"> системот за пријава на грешка </a>.Исто така форумот за поддршка е префериран метод за контакт, исто така може да пратите е-маил на тимот на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Строго <strong>се препорачува</strong> дека треба да направите копија на вашата база на податоци, датотеки, директориуми, и OJS инсталациониот директориум пред да продолжите.</p>
 <p>Ако работите во <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, осигурајте се дека директивата на max_извршно_време во вашиот php.ini конфигурациски фајл е поставен до највисоко ограничување. Ако ова или било кое друго временско ограничување(e.g. Apache's "Timeout" директива) е достигнато и процесот на надградба е прекинат, рачна интервенција ќе биде потребна.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[За целосна Unicode (UTF-8) поддршка, изберете UTF-8 за целото множество на поднесувања. Забележете дека оваа поддршка моментално бара MySQL >= 4.1.1 или PostgreSQL >= 7.1 сервер за бази на податоци. Исто така забележете дека целосната Unicode поддршка бара PHP >= 4.3.0 составен со поддршка за <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> библиотека (овозможен стандардно во најновите PHP инсталации). Може да имате проблем со користење на продолжен сет на знаци ако Вашиот сервер не ги исполнува овие барања.
@@ -1012,10 +1012,10 @@
 	<li>Придружите се на нашата<a href="http://pkp.sfu.ca/informed" target="_new">листа за дискусии</a> за OJS, OCS, the Harvester, Lemon8-XML, OMP, или сите од горенаведените.</li>
 	<li>Зачленете се за <a href="http://pkp.sfu.ca/blog" target="_new">PKP блог</a> <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a>.</li>
 </ol>
-<p>Ако имате прашања или коментари, посетете го <a href="http://pkp.sfu.ca/support/forum" target="_new">форумот за поддршка</a>.</p>]]></message>
+<p>Ако имате прашања или коментари, посетете го <a href="http://forum.pkp.sfu.ca" target="_new">форумот за поддршка</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Надградбата на OJS во верзија {$version} е завршена успешно.</p>
 <p>Не заборавајте да ги поставите "installed" подесувањата во вашата config.inc.php конфигурациска датотека назад кон <em>на</em>.</p>
-<p>Ако уште не сте регистрирани и сакате да добивате новости и надградби, <strong>регистрирајте се на <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Ако имате прашања или коментари, посетете го <a href="http://pkp.sfu.ca/support/forum" target="_new">форумот за поддршка</a>.</p>]]></message>
+<p>Ако уште не сте регистрирани и сакате да добивате новости и надградби, <strong>регистрирајте се на <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Ако имате прашања или коментари, посетете го <a href="http://forum.pkp.sfu.ca" target="_new">форумот за поддршка</a>.</p>]]></message>
 
 	<!-- Installation upgrade warnings -->
 	<message key="site.upgradeAvailable.admin"><![CDATA[Овде е достапна новата верзија на OJS ! Во моментот ја користите OJS {$currentVersion}. Најновата верзија е OJS {$latestVersion}. Посетете ја <a href="http://pkp.sfu.ca/ojs_download" target="_new">оваа страница</a> за да ја преземете најновата верзија и да се најдете инструкции за надградба.]]></message>

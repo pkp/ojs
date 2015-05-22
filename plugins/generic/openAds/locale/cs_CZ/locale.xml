@@ -4,15 +4,15 @@
 <!--
   * plugins/generic/openAds/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2013-2015 Simon Fraser University Library
   * Copyright (c) 2003-2009 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the cs_CZ (Czech) locale.
+  * Localization strings for the cs_CZ (Čeština) locale.
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.openads.description">OpenAds plugin umožňuje dynamické vkládání reklam z reklamního serveru OpenAds do OJS.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[OpenAds plugin umožňuje dynamické vkládání reklam z reklamního serveru OpenAds do OJS. <strong>Prosím přečtěte si soubor README v plugins/generic/openAds pro informace k povolení tohoto pluginu.</strong>]]></message>
 	<message key="plugins.generic.openads">Plugin OpenAds</message>

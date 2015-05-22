@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pln/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * PLN plugin localization strings
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.pln">PKP PLN Plugin</message>
+	<message key="plugins.generic.pln.description">De PKP PLN plugin deponeert uw publicaties in het PKP Private LOCKSS Network ter preservatie.</message>
+	<message key="plugins.generic.pln.manager.setup.description"><![CDATA[<strong>PKP Private LOCKSS Network</strong><br /><br />Gelieve het <a href="https://pkp.sfu.ca/pkp-lockss/" target="_blank">overshot van het PKP PLN</a> te lezen en <a href="{$plnPluginURL}">dit formulier</a> in te vullen. Deze optie zorgt ervoor dat uw tijdschrift wordt opgenomen in het  Public Knowledge Project Private LOCKSS Network (PKP PLN).]]></message>
+	
+	<message key="plugins.generic.pln.settings_page">PKP PLN Plugin - Instellingen</message>
+	<message key="plugins.generic.pln.settings">Instellingen</message>
+	<message key="plugins.generic.pln.settings.saved">PKP PLN instellingen opgeslagen.</message>
+	<message key="plugins.generic.pln.settings.terms_of_use">Gebruiksvoorwaarden</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_help">Voorafgaand aan deponeren moet u akkoord gaan met de gebruiksvoorwaarden</message>
+	<message key="plugins.generic.pln.settings.terms_of_use_agree">Akkoord</message>
+	<message key="plugins.generic.pln.settings.journal_uuid">Tijdschrift identificatie</message>
+	<message key="plugins.generic.pln.settings.journal_uuid_help">Dit is de unieke identificatie van uw tijdschrift voor het PKP PLN. Mogelijk heeft u dit nodig bij sondersteuningsvragen aan de  PKP PLN beheerders..</message>
+	<message key="plugins.generic.pln.settings.refresh">Verversen</message>
+	<message key="plugins.generic.pln.settings.refresh_help">Als hierboven geen gebruiksvoorwaarden getoond worden, of als u weet dat ze bijgewerkt zijn, klik dan op Verversen.</message>
+	
+	<message key="plugins.generic.pln.required.object_type">Kies een objet type voor het deponeren.</message>
+	<message key="plugins.generic.pln.required.object_threshold">Kies een drempelwaarde voor inzenden.</message>
+	<message key="plugins.generic.pln.required.terms_of_use_agreement">U moet akkoord gaan met de gebruiksvoorwaarden om te kunnen deponeren in de PLN</message>
+	
+	<message key="plugins.generic.pln.objects.article">Artikel</message>
+	<message key="plugins.generic.pln.objects.issue">Nummer</message>
+
+	<message key="plugins.generic.pln.status_page">PKP PLN Plugin - Status</message>
+	<message key="plugins.generic.pln.status.network_status">Netwerk status: {$networkStatusMessage}</message>
+	<message key="plugins.generic.pln.status.deposits">Deponeringen</message>
+	<message key="plugins.generic.pln.status">Status</message>
+	<message key="plugins.generic.pln.status.id">ID</message>
+	<message key="plugins.generic.pln.status.type">Type</message>
+	<message key="plugins.generic.pln.status.items">Items</message>
+	<message key="plugins.generic.pln.status.packaged">Ingepakt</message>
+	<message key="plugins.generic.pln.status.transferred">Verstuurd</message>
+	<message key="plugins.generic.pln.status.received">Ontvangen</message>
+	<message key="plugins.generic.pln.status.syncing">Synchroniseren</message>
+	<message key="plugins.generic.pln.status.synced">Gesunchroniseerd</message>
+	<message key="plugins.generic.pln.status.updated">Bijgewerkt</message>
+	<message key="plugins.generic.pln.status.local_failure">Lokale fout</message>
+	<message key="plugins.generic.pln.status.remote_failure">Fout aan de andere kant</message>
+	<message key="plugins.generic.pln.status.reset">Herstel</message>
+	<message key="plugins.generic.pln.status.yes">Ja</message>
+	<message key="plugins.generic.pln.status.no">Nee</message>
+
+	<message key="plugins.generic.pln.depositorTask.name">PKP PLN Depositor Taak</message>
+	<message key="plugins.generic.pln.notifications.processing_for">Depositor verwerken voor</message>
+	<message key="plugins.generic.pln.notifications.pln_not_accepting">Het PKP PLN accepteert momenteel geen inzendingen.</message>
+	<message key="plugins.generic.pln.notifications.pln_accepting">Het PKP PLN accepteert inzendingen.</message>
+	<message key="plugins.generic.pln.notifications.check_status">Controleer de status van uw inzendingen.</message>
+	<message key="plugins.generic.pln.notifications.issn_missing">Uw tijdschrift heeft een ISSN nodig om te kunnen deponeren in het PKP PLN.</message>
+	<message key="plugins.generic.pln.notifications.http_error">De verbinding met het PKP PLN is mislukt - neem contact op met uw systeembeheerder.</message>
+	<message key="plugins.generic.pln.notifications.terms_updated">De PKP PLN gebruiksvoorwaarden zijn verander. Inzenden is pas weer mogelijk na uw akkoord daarmee.</message>
+	<message key="plugins.generic.pln.notifications.curl_missing">CURL support moet ingeschakeld zijn om verder te gaan.</message>
+	<message key="plugins.generic.pln.notifications.zip_missing">ZipArchive support moet ingeschakeld zijn om verder te gaan.</message>
+</locale>

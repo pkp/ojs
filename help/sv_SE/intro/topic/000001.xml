@@ -4,8 +4,8 @@
 <!--
   * 000001.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Vanliga frågor 
@@ -43,12 +43,12 @@
 	</section>
 	<section title="2. Var finner jag teknisk support, skickar in buggar och föreslår förbättringar?">
 		<![CDATA[
-<p>The Public Knowledge Project tillhandahåller ett <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Support-forum</a> med över tusen frågor och svar, där man kan söka och lägga in frågor. T ex kan man söka efter felmeddelanden och få förslag på lösningar. Om man inte finner lösningen där kan man skicka frågor till <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Rapporter om buggar ska gå via PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a>.</p>
+<p>The Public Knowledge Project tillhandahåller ett <a href="http://forum.pkp.sfu.ca/" target="_blank">Support-forum</a> med över tusen frågor och svar, där man kan söka och lägga in frågor. T ex kan man söka efter felmeddelanden och få förslag på lösningar. Om man inte finner lösningen där kan man skicka frågor till <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Rapporter om buggar ska gå via PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. Hur gör jag för att översätta OJS till något annat språk?">
 		<![CDATA[
-<p>Instruktioner är tillgängliga i docs/README filen som är inkluderad i programfilen som laddats hem. Ytterligare information om vanliga översättningsfrågor finns på <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP Support-forum</a>.</p>
+<p>Instruktioner är tillgängliga i docs/README filen som är inkluderad i programfilen som laddats hem. Ytterligare information om vanliga översättningsfrågor finns på <a href="http://forum.pkp.sfu.ca/" target="_blank">PKP Support-forum</a>.</p>
 		]]>
 	</section>
 	

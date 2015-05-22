@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/sv_SE/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the sv_SE (Swedish) locale.
@@ -20,9 +20,7 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Exportera tidskriftsdata till DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exportera tisdskrift</message>
 	<message key="plugins.importexport.doaj.export.email">Eposta DOAJ representatnten</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Export artikelinformation i XML till arkiveringen i DOAJ</message>
 	<message key="plugins.importexport.doaj.export.emailInfo">Vänligen komplettera detta delvis ifyllda formulär och sänd det till DOAJ så er tidskrift kan komma med i DOAJ-katalogen.</message>
 
 </locale>

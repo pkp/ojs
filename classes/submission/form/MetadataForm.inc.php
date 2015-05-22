@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/form/MetadataForm.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MetadataForm
@@ -186,11 +186,11 @@ class MetadataForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array(
+		return array_merge(parent::getLocaleFieldNames(), array(
 			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
 			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor', 'citations',
 			'copyrightHolder'
-		);
+		));
 	}
 
 	/**

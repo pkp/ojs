@@ -7,8 +7,8 @@
 /**
  * @file classes/user/form/RegistrationForm.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RegistrationForm
@@ -226,8 +226,8 @@ class RegistrationForm extends Form {
 				return false;
 			}
 
+			parent::execute($user);
 			$userId = $user->getId();
-
 		} else {
 			// New user
 			$user = new User();
@@ -277,6 +277,7 @@ class RegistrationForm extends Form {
 				$user->setDisabledReason(__('user.login.accountNotValidated'));
 			}
 
+			parent::execute($user);
 			$userDao =& DAORegistry::getDAO('UserDAO');
 			$userDao->insertUser($user);
 			$userId = $user->getId();

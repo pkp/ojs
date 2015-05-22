@@ -1,8 +1,8 @@
 {**
  * templates/submission/comment/header.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Common header for comment pages.
@@ -29,7 +29,7 @@
 	{/foreach}
 
 	<!-- Base Jquery -->
-	{if $allowCDN}<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	{if $allowCDN}<script type="text/javascript" src="//www.google.com/jsapi"></script>
 	<script type="text/javascript">{literal}
 		// Provide a local fallback if the CDN cannot be reached
 		if (typeof google == 'undefined') {

@@ -9,8 +9,8 @@
   * La traducció amplia la tasca previament realitzada per a la UOC i l'IEC incorporant les
   * eines de lectura i l’ajuda.
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
@@ -31,6 +31,6 @@
 <p align="center"><a href="{$baseUrl}/locale/{$locale}/edprocesslarge.png"><img src="{$baseUrl}/locale/{$locale}/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>]]>
 	</section>
 	<section title="Suport">
-		<![CDATA[<p>El <a href="http://pkp.sfu.ca/support/forum/" target="_blank">lloc web</a> del PKP posa a la vostra disposició un fòrum de suport i un sistema d'informació d'errors per a problemes tècnics.</p><p>Si teniu cap consulta sobre el treball amb l'OJS o les polítiques d'una revista determinada, poseu-vos en contacte amb l'administrador/a de la revista o amb els contactes de suport, que trobareu enumerats a la pàgina «Sobre la revista».</p>]]>
+		<![CDATA[<p>El <a href="http://forum.pkp.sfu.ca/" target="_blank">lloc web</a> del PKP posa a la vostra disposició un fòrum de suport i un sistema d'informació d'errors per a problemes tècnics.</p><p>Si teniu cap consulta sobre el treball amb l'OJS o les polítiques d'una revista determinada, poseu-vos en contacte amb l'administrador/a de la revista o amb els contactes de suport, que trobareu enumerats a la pàgina «Sobre la revista».</p>]]>
 	</section>
 </topic>

@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/googleAnalytics/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Google Analytics plugin localization strings for the nl_NL (Nederlands) locale.
@@ -13,7 +13,7 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 
 	<!-- Google Analytics -->
@@ -35,4 +35,5 @@
 	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics account-nummer</message>
 	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Een of meer van de Google Analytics account-nummers van de auteurs van deze inzending zijn niet geldig.</message>
 	<message key="plugins.generic.googleAnalytics.authorAccount.description">Geef een Google Analytics account-nummer om de lezers van gepubliceerde artikelen te volgen met Google Analytics (bv. UA-xxxxxx-x)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.analytics">Nieuwe tracking code voor Universal analysis  (analytics.js)</message>
 </locale>

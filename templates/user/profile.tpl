@@ -1,8 +1,8 @@
 {**
  * templates/user/profile.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * User profile form.
@@ -30,7 +30,7 @@
 	</tr>
 {/if}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel suppressId="true" name="username" key="user.username"}</td>
+	<td width="20%" class="label">{translate key="user.username"}</td>
 	<td width="80%" class="value">{$username|escape}</td>
 </tr>
 <tr valign="top">

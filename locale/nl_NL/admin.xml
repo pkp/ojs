@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/admin.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -86,7 +86,7 @@
 	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Waarschuwing: bestand {$filePath} bestaat al in de map met gebruiksstatistieken</message>
 	<message key="admin.copyAccessLogFileTool.success">Success: {$filePath} naar {$destinationPath}</message>
 	<message key="admin.settings.defaultMetricDescription">Uw OJS installatie geconfigureerd voor meer dan een gebruiksmeting. Gebruiksstatistieken worden in verschillende contexten getoond.
-		Soms wordt een enkele statistiek getoond, bv, om een lijst van meestgebruikte artikelen te tonen of om 
+		Soms wordt een enkele statistiek getoond, bv, om een lijst van meestgebruikte artikelen te tonen of om
 		zoekresultaten te wegen. Kies een van de methodes als standaard.</message>
 	<message key="admin.copyAccessLogFileTool.usage">Kopieer de doorgegeven apace logbestanden, met een filter op de regelt voor deze installatie,
 naar de map met huidige bestanden in de  UsageStatsPlugin stage map. Moet draaien onder een gebruiker met genoeg rechten om de apache acces log bestanden te lezen.
@@ -95,4 +95,7 @@ Dit gereedschap kopieert alleen bestanden die niet al in de usageStats mappen zi
 
 Gebruik: {$scriptName} path/to/apache/log/file.log
 Gebruik (verwerk alle bestanden in een map): {$scriptName} path/to/apache/directory</message>
+	<message key="admin.settings.security">Veiligheid</message>
+	<message key="admin.settings.security.plugins">Voorkom dat tijdschriftbeheerders plugins installeren, bijwerken of verwijderen.</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Standaard email sjablonen terugzetten</message>
 </locale>

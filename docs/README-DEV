@@ -6,10 +6,10 @@
 Contributing Code
 _________________
 
-The PKP team is happy to accept patches in the public "OJS Development" forum
-at <http://pkp.sfu.ca/support/forum/viewforum.php?f=9>. If you would like to
-have your patch included in the OJS codebase, we suggest discussing it with the OJS team before implementation to ensure that it suits upcoming development
-plans.
+The PKP team is happy to accept patches in the public forum at
+<http://forum.pkp.sfu.ca/>. If you would like to have your patch included in
+the OJS codebase, we suggest discussing it with the OJS team before
+implementation to ensure that it suits upcoming development plans.
 
 For code that is intended for inclusion in the main codebase:
 * Patches against a current git clone are preferred; alternately, patches
@@ -194,8 +194,8 @@ File Header
 /**
  * @file FILENAME.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package PACKAGE
@@ -241,8 +241,8 @@ Templates
 	{**
 	 * FILENAME.tpl
 	 *
-	 * Copyright (c) 2013-2014 Simon Fraser University Library
-	 * Copyright (c) 2003-2014 John Willinsky
+	 * Copyright (c) 2013-2015 Simon Fraser University Library
+	 * Copyright (c) 2003-2015 John Willinsky
 	 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 	 *
 	 * DESCRIPTION.

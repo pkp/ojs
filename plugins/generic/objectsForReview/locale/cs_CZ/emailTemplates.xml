@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/generic/objectsForReview/locale/cs_CZ/emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="cs_CZ">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Objekt k recenzi: Připomenutí termínu</subject>
+		<body>Vážený pane/vážená paní {$authorName}:
+
+Rádi bychom vám připomenuli, že recenze objektu {$objectForReviewTitle} by měla být ukončena do {$objectForReviewDueDate}.
+
+K odevzdání recenze objektu, přihlaste se, prosím na stránkách časopisua ukončete proces odevzdání článku. Pro usnadnění najdete níže přímý odkaz na váš příspěvek
+
+URL příspěvku: {$submissionUrl}
+
+Pokud máte jakékoliv dotazy kolem recenze objektu, neváhejte mne kontaktovat.
+
+Děkujeme vám za spolupráci a těšíme se na váš příspěvek.
+
+{$editorialContactSignature}</body>
+		<description>Toto je automaticky generovaný e-mail posílaný recenzentovi objektu v momentě, kdy se blíží datum odevzdání příspěvku.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Objekt k recenzi: Uplynula lhůta</subject>
+		<body>Zpráva pro recenzenta: {$authorName}:
+
+Vážená paní kolegyně/Vážený pane kolego,
+
+dovolujeme si Vám zdvořile připomenout naši žádost o zpracování recenze  objektu "{$objectForReviewTitle}". Doufali jsme, že budeme mít tuto recenzi hotovou do {$objectForReviewDueDate} a tento email byl automaticky vygenerován a poslán, jelikož stanovený termín již vypršel. Budeme velice rádi, když od Vás recenzi dostaneme hned, jak ji budete moci dokončit.
+
+Pro odevzdání recenze se, prosím přihlaste na stránkách časopisu, pro usnadnění využijte, prosím následující odkaz:
+
+URL pro odevzdání recenze: {$submissionUrl}
+
+Pokud máte jakékoliv dotazy k odevzdání recenze, neváhejte mne kontaktovat.
+
+Děkujeme za vaši spolupráci s naším časopisem a těšíme se na vaši recenzi.
+
+{$editorialContactSignature}</body>
+		<description>Tento email je automaticky zasílán autorovi recenze po uplynutí termínu odevzdání recenze.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Objekt pro recenzi: Přidělení objektu</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+Tento email potvrzuje, že objekt {$objectForReviewTitle} vám byl přidělen k recenzi objektu, která by měla být dokončena do {$objectForReviewDueDate}.
+
+Ujistěte se, prosím, že e-mailová adresa ve vašem profilu je aktuální.
+
+E-mailová adresa, kterou máme v současnosti uloženou ve vašem profilu je:
+{$authorMailingAddress}
+
+Pokud není adresa kompletní, nebo pokud není aktuální, použijte, prosím následující odkaz na úpravu vašeho profilu:
+
+Odkaz na váš profil: {$userProfileUrl}
+
+K odevzdání recenze objektu se, prosím, zalogujte na stránkách časopisu a použijte odkaz na odevzdání příspěvku.
+
+Odkaz na odevzdání příspěvku: {$submissionUrl}
+
+Pokud máte jakékoliv dotazy k recenzi objektu, neváhejte mne kontaktovat.
+
+{$editorialContactSignature}</body>
+		<description>Tento email posílá editor recenzentovi knihy bezprostředně po přidělení recenze.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>Objekt k recenzi</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+Bohužel vám již nemohu přidělit k recenzi objekt {$objectForReviewTitle}.
+
+Doufáme, že si k recenzi vyberete jiný z objektů na našem seznamu buď hned teď, či kdykoliv v budoucnu.
+
+{$editorialContactSignature}</body>
+		<description>Tento email zasílá editor zájemci o recenzi objektu, který již k recenzi není dostupný.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Objekt k recenzi: Objekt je požadován</subject>
+		<body>Vážená paní/vážený pane {$editorName}:
+
+měl/a bych zájem o recenzi objektu {$objectForReviewTitle}.
+
+Můžete mi, prosím, potvrdit, že tento objekt je ještě dostupný pro recenzi?
+
+{$authorContactSignature}</body>
+		<description>Tento email posílá zájemce o recenzi objektu editorovi.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Objekt k recenzi: Objekt byl odeslán</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+Tímto e-mailem potvrzujeme, že jsme vám zaslali k recenzi objekt {$objectForReviewTitle} na následující e-mailovou adresu, uvedenou ve vašem profilu:
+{$authorMailingAddress}
+
+K odevzdání recenze objektu se, prosím přihlaste na stránkách našeho časopisu a využijte odkazu k odevzdání příspěvku.
+
+Odkaz na odevzdání příspěvku: {$submissionUrl}
+
+Neváhejte mne kontaktovat, pokud máte jakékoliv dotazy k recenzi objektu.
+
+{$editorialContactSignature}</body>
+		<description>Tento email zasílá editor autorovi recenze objektu poté, co mu zašle mailem objekt k recenzi.</description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Objekt k recenzi</subject>
+		<body>Vážená paní/vážený pane {$authorName}:
+
+Tento e-mail potvrzuje, že recenze objektu {$objectForReviewTitle} vám byla odebrána.
+
+Doufáme, že si zvolíte z našeho seznamu jiný objekt k recenzi, ať již nyní, či kdykoliv v budoucnosti.
+
+{$editorialContactSignature}</body>
+		<description>Tento email posílá editor autorovi recenze objektu v momentě, kdy mu odebere recenzi tohoto objektu.</description>
+	</email_text>
+</email_texts>

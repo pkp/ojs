@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
@@ -16,10 +16,13 @@
 	<message key="plugins.importexport.doaj.displayName">DOAJ-Export-Plug-In</message>
 	<message key="plugins.importexport.doaj.description">Zeitschrift für DOAJ exportieren und Zeitschrifteninformationen an die/den DOAJ-Vertreter/in per E-Mail schicken</message>
 
-	
+
+	<message key="plugins.importexport.doaj.markRegistered.success">Die ausgewählten Objekte wurden als registriert markiert!</message>	
 	<message key="plugins.importexport.doaj.export">Zeitschriftendaten zum DOAJ exportieren</message>
-	<message key="plugins.importexport.doaj.export.journal">Zeitschrift exportieren</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Artikelinformationen in XML exportieren, um sie im DOAJ zu archivieren</message>
+	<message key="plugins.importexport.doaj.export.issue">Ausgaben exportieren</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Einzelne Ausgaben in XML exportieren.</message>
+	<message key="plugins.importexport.doaj.export.article">Artikel exportieren</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Einzelne Artikel in XML exportieren.</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontaktieren Sie DOAJ zur Aufnahme</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Damit Ihre Zeitschrift zur Aufnahme in das DOAJ vorgeschlagen wird, übermitteln Sie bitte dieses teilweise automatisch ausgefüllte Formular an das DOAJ und füllen Sie die fehlenden Informationen so gut aus, wie Sie können.</message>
 </locale>

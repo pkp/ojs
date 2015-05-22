@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageEventPlugin
@@ -35,6 +35,7 @@ class UsageEventPlugin extends GenericPlugin {
 			// Register callbacks.
 			HookRegistry::register('TemplateManager::display', array($this, 'getUsageEvent'));
 			HookRegistry::register('ArticleHandler::viewFile', array($this, 'getUsageEvent'));
+			HookRegistry::register('ArticleHandler::viewRemoteGalley', array($this, 'getUsageEvent'));
 			HookRegistry::register('ArticleHandler::downloadFile', array($this, 'getUsageEvent'));
 			HookRegistry::register('ArticleHandler::downloadSuppFile', array($this, 'getUsageEvent'));
 			HookRegistry::register('IssueHandler::viewFile', array($this, 'getUsageEvent'));
@@ -145,7 +146,7 @@ class UsageEventPlugin extends GenericPlugin {
 		$canonicalUrlParams = array();
 		switch ($hookName) {
 
-			// Article abstract, HTML galley and remote galley.
+			// Article abstract and HTML galley.
 			case 'TemplateManager::display':
 				$page = $router->getRequestedPage($request);
 				$op = $router->getRequestedOp($request);
@@ -177,7 +178,7 @@ class UsageEventPlugin extends GenericPlugin {
 				if (!$issue && !$galley && !$article) return false;
 
 				if ($galley) {
-					if ($galley->isHTMLGalley() || $galley->getRemoteURL()) {
+					if ($galley->isHTMLGalley()) {
 						$pubObject =& $galley;
 						$assocType = ASSOC_TYPE_GALLEY;
 						$canonicalUrlParams = array($article->getBestArticleId(), $pubObject->getBestGalleyId($journal));
@@ -205,6 +206,15 @@ class UsageEventPlugin extends GenericPlugin {
 				$canonicalUrlOp = 'view';
 				break;
 
+			case 'ArticleHandler::viewRemoteGalley':
+				$article =& $args[0];
+				$pubObject =& $args[1];
+				$assocType = ASSOC_TYPE_GALLEY;
+				$canonicalUrlParams = array($article->getBestArticleId(), $pubObject->getBestGalleyId($journal));
+				$idParams = array('a' . $article->getId(), 'g' . $pubObject->getId());
+				$downloadSuccess = true;
+				$canonicalUrlOp = 'view';
+				break;
 			// Article galley (except for HTML and remote galley).
 			case 'ArticleHandler::viewFile':
 			case 'ArticleHandler::downloadFile':
@@ -275,6 +285,21 @@ class UsageEventPlugin extends GenericPlugin {
 		$canonicalUrl = $router->url(
 			$request, null, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams
 		);
+
+		// Make sure we log the server name and not aliases.
+		$configBaseUrl = Config::getVar('general', 'base_url');
+		$requestBaseUrl = $request->getBaseUrl();
+		if ($requestBaseUrl !== $configBaseUrl) {
+			// Make sure it's not an url override (no alias on that case).
+			if (!in_array($requestBaseUrl, Config::getContextBaseUrls()) && 
+					$requestBaseUrl !== Config::getVar('general', 'base_url[index]')) {
+				// Alias found, replace it by base_url from config file.
+				// Make sure we use the correct base url override value for the context, if any.
+				$baseUrlReplacement = Config::getVar('general', 'base_url['.$journal->getPath().']');
+				if (!$baseUrlReplacement) $baseUrlReplacement = $configBaseUrl;
+				$canonicalUrl = str_replace($requestBaseUrl, $baseUrlReplacement, $canonicalUrl);
+			}
+		}
 
 		// Public identifiers.
 		// 1) A unique OJS-internal ID that will help us to easily attribute

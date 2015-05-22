@@ -3,8 +3,8 @@
 /**
  * @file classes/user/form/ProfileForm.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ProfileForm
@@ -189,6 +189,8 @@ class ProfileForm extends Form {
 			'interestsKeywords' => $interestManager->getInterestsForUser($user),
 			'interestsTextOnly' => $interestManager->getInterestsString($user),
 		);
+
+		return parent::initData();
 	}
 
 	/**
@@ -270,6 +272,8 @@ class ProfileForm extends Form {
 			}
 		}
 		$user->setLocales($locales);
+
+		parent::execute($user);
 
 		$userDao =& DAORegistry::getDAO('UserDAO');
 		$userDao->updateObject($user);

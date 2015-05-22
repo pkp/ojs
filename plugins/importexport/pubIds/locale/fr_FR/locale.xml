@@ -4,13 +4,13 @@
 <!--
   * @file plugins/importexport/pubIds/locale/fr_FR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 	<!-- plugin -->
 	<message key="plugins.importexport.pubIds.displayName">Plugiciel d'identificateurs publics XML</message>
@@ -25,18 +25,18 @@ Commandes:
 	<message key="plugins.importexport.pubIds.export">Export d'identificateurs publics</message>
 	<message key="plugins.importexport.pubIds.export.forIssues">Export d'identificateurs publics</message>
 	<message key="plugins.importexport.pubIds.export.selectIssue">Sélectionner un numéro</message>
-	<message key="plugins.importexport.pubIds.export.selectIssue.description">S'il vous plaît, sélectionnez les numéros des objets pour lesquels vous souhaitez exporter les identificateurs publics.</message>
+	<message key="plugins.importexport.pubIds.export.selectIssue.description">Veuillez sélectionner les numéros des objets pour lesquels vous souhaitez exporter les identificateurs publics.</message>
 
 	<message key="plugins.importexport.pubIds.import">Importer les identificateurs publics</message>
 	<message key="plugins.importexport.pubIds.import.description">Ce plugiciel supporte l'import d'identificateurs publics basé sur la définition de document type .dtd publds.</message>
 	<message key="plugins.importexport.pubIds.import.results">Importer les résultats</message>
 	<message key="plugins.importexport.pubIds.import.errors">Erreur d'import</message>
-	<message key="plugins.importexport.pubIds.import.errors.description">Une ou plusieurs erreurs se sont produites durant l'import. Veuillez vérifier que le format du fichier d'import corresponde bien aux spécifications. Le détail des erreurs d'import sont listées ci-dessous.</message>
+	<message key="plugins.importexport.pubIds.import.errors.description">Une ou plusieurs erreurs se sont produites durant l'import. Veuillez vérifier que le format du fichier d'import correspond bien aux spécifications. Le détail des erreurs d'import sont listées ci-dessous.</message>
 	<message key="plugins.importexport.pubIds.import.success">Import réussi</message>
 	<message key="plugins.importexport.pubIds.import.success.description">Les identificateurs publics importés avec succès sont listées ci-dessous.</message>
 
 	<!-- errors -->
-	<message key="plugins.importexport.pubIds.cliError">ERREUR:</message>
+	<message key="plugins.importexport.pubIds.cliError">ERREUR :</message>
 	<message key="plugins.importexport.pubIds.cliError.unknownJournal">Le chemin de la revue indiqué, "{$journalPath}", n'existe pas.</message>
 	<message key="plugins.importexport.pubIds.cliError.unknownUser">L'utiliasteur indiqué, "{$userName}", n'existe pas.</message>
 	<message key="plugins.importexport.pubIds.cliError.issueNotFound">Aucun numéro de correspond l'ID du numéro indiqué "{$issueId}".</message>

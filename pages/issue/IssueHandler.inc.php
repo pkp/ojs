@@ -3,8 +3,8 @@
 /**
  * @file pages/issue/IssueHandler.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueHandler
@@ -58,9 +58,9 @@ class IssueHandler extends Handler {
 
 		if ($issue != null) {
 			if ($showToc == 'showToc') {
-				$request->redirect(null, 'issue', 'view', array($issue->getId(), "showToc"), $request->getQueryArray());
+				$request->redirect(null, 'issue', 'view', array($issue->getBestIssueId($journal), "showToc"), $request->getQueryArray());
 			} else {
-				$request->redirect(null, 'issue', 'view', $issue->getId(), $request->getQueryArray());
+				$request->redirect(null, 'issue', 'view', $issue->getBestIssueId($journal), $request->getQueryArray());
 			}
 		} else {
 			$issueCrumbTitle = __('current.noCurrentIssue');
@@ -124,6 +124,7 @@ class IssueHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('coverPagePath', $coverPagePath);
 		$templateMgr->assign('locale', AppLocale::getLocale());
+		$templateMgr->assign('primaryLocale', $journal->getPrimaryLocale());
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
@@ -438,13 +439,13 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('coverPagePath', $coverPagePath);
 			$templateMgr->assign('locale', $locale);
 
-
-			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageCover($locale)) {
-				$templateMgr->assign('fileName', $issue->getFileName($locale));
-				$templateMgr->assign('width', $issue->getWidth($locale));
-				$templateMgr->assign('height', $issue->getHeight($locale));
-				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
-				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
+			$coverLocale = $issue->getFileName($locale) ? $locale : $journal->getPrimaryLocale();
+			if (!$showToc && $issue->getFileName($coverLocale) && $issue->getShowCoverPage($coverLocale) && !$issue->getHideCoverPageCover($coverLocale)) {
+				$templateMgr->assign('fileName', $issue->getFileName($coverLocale));
+				$templateMgr->assign('width', $issue->getWidth($coverLocale));
+				$templateMgr->assign('height', $issue->getHeight($coverLocale));
+				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($coverLocale));
+				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($coverLocale));
 
 				$showToc = false;
 			} else {

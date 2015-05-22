@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/usageEvent/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
   -->
  
 <locale name="pt_PT" full_name="Português">
-	<message key="plugins.generic.usageEvent.displayName">Usage event</message>
-	<message key="plugins.generic.usageEvent.description">Creates a hook that provides usage event in a defined format.</message>
+	<message key="plugins.generic.usageEvent.displayName">Evento de Uso</message>
+	<message key="plugins.generic.usageEvent.description">Cria um evento de uso da revista num formato definido.</message>
 </locale>

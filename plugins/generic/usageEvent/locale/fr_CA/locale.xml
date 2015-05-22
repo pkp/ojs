@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageEvent/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fr_CA" full_name="Français">
+	<message key="plugins.generic.usageEvent.displayName">Évènement d'utilisation</message>
+	<message key="plugins.generic.usageEvent.description">Créer un hameçon (hook) qui fournit un événement d'utilisation dans un format défini.</message>
+</locale>

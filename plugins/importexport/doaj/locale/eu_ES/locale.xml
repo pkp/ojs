@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/eu_ES/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the eu_ES (Basque (Euskara)) locale.
@@ -18,8 +18,6 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Esportatu aldizkariaren datuak DOAJerako</message>
-	<message key="plugins.importexport.doaj.export.journal">Esportatu aldizkaria</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Esportatu artikuluen informazioa XMLn DOAJen artxibatzeko</message>
 	<message key="plugins.importexport.doaj.export.contact">Sartzeko, jarri harremanetan DOAJ-ekin.</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">DOAJ-en zure aldizkariaren ordainketa egiteko, automatikoki erdizka betetako inprimaki hau DOAJ-era bidali, eta bete falta den informazioa ahal bezain ondoen.</message>
 </locale>

@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/JournalStatisticsDAO.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalStatisticsDAO
@@ -28,15 +28,18 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getFirstActivityDate($journalId) {
 		$result =& $this->retrieve(
-			'SELECT	LEAST(a.date_submitted, COALESCE(pa.date_published, NOW()), COALESCE(i.date_published, NOW())) AS first_date
-			FROM	articles a
+			'SELECT	LEAST(a.date_submitted, COALESCE(pa.date_published, NOW()), COALESCE(i.date_published, NOW()), u.date_registered) AS first_date
+			FROM	articles a INNER JOIN users u
 				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
 				LEFT JOIN issues i ON (pa.issue_id = i.issue_id)
 				LEFT JOIN articles a2 ON (a2.article_id < a.article_id AND a2.date_submitted IS NOT NULL AND a2.journal_id = ?)
+				LEFT JOIN roles r ON (u.user_id = r.user_id)
 			WHERE	a2.article_id IS NULL AND
 				a.date_submitted IS NOT NULL AND
-				a.journal_id = ?',
+				a.journal_id = ? AND
+				r.journal_id = ?',
 			array(
+				(int) $journalId,
 				(int) $journalId,
 				(int) $journalId
 			)

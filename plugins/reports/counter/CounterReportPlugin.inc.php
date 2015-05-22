@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/counter/CounterReportPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CounterReportPlugin
@@ -86,7 +86,7 @@ class CounterReportPlugin extends ReportPlugin {
 	 * @see ReportPlugin::display()
 	 */
 	function display(&$args, &$request) {
-		parent::display($args);
+		parent::display($args, $request);
 
 		$journal =& $request->getJournal();
 		if (!Validation::isSiteAdmin()) {
@@ -291,6 +291,7 @@ class CounterReportPlugin extends ReportPlugin {
 	* Internal function to form some of the CSV columns
 	*/
 	function _formColumns(&$cols, $entries) {
+		$allMonthsTotal = 0;
 		$currTotal = 0;
 		$htmlTotal = 0;
 		$pdfTotal = 0;
@@ -303,14 +304,15 @@ class CounterReportPlugin extends ReportPlugin {
 					$currTotal += $metric;
 					if ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_HTML) {
 						$htmlTotal += $metric;
-					} else {
+					} else if ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_PDF) {
 						$pdfTotal += $metric;
 					}
 				}
 			}
 			$cols[]=$currTotal;
+			$allMonthsTotal += $currTotal;
 		}
-		$cols[] = $htmlTotal + $pdfTotal;
+		$cols[] = $allMonthsTotal;
 		$cols[] = $htmlTotal;
 		$cols[] = $pdfTotal;
 	}
@@ -391,10 +393,17 @@ class CounterReportPlugin extends ReportPlugin {
 				$workingKey = $key;
 			}
 
-			if ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_HTML) {
-				$ret[$workingKey]['count_html']  = $entry[STATISTICS_METRIC];
+			if (array_key_exists('count_total', $ret[$workingKey])) {
+				$totalCount = $ret[$workingKey]['count_total'];
 			} else {
-				$ret[$workingKey]['count_pdf']   = $entry[STATISTICS_METRIC];
+				$totalCount = 0;
+			}
+
+			$ret[$workingKey]['count_total'] = $entry[STATISTICS_METRIC] + $totalCount;
+			if ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_HTML) {
+				$ret[$workingKey]['count_html'] = $entry[STATISTICS_METRIC];
+			} else if ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_PDF) {
+				$ret[$workingKey]['count_pdf'] = $entry[STATISTICS_METRIC];
 			}
 		}
 

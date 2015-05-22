@@ -1,8 +1,8 @@
 <!--
   * plugins/importexport/native/native.dtd
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DTD for native XML import/export.
@@ -75,7 +75,7 @@
 
 <!ELEMENT copyright_year (#PCDATA)>
 
-<!ELEMENT permissions (license_url?, copyright_holder?, copyright_year?)>
+<!ELEMENT permissions (license_url?, copyright_holder*, copyright_year?)>
 
 <!ELEMENT sponsor (#PCDATA)>
 	<!ATTLIST sponsor

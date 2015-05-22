@@ -4,8 +4,8 @@
 <!--
   * locale/el_GR/admin.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR (Greek) locale.
@@ -61,4 +61,40 @@
 	<message key="admin.mergerUsers.noneEnrolled">Κανένας εγγεγραμμένος χρήστης.</message>
 	<message key="admin.journals.redirect">Δημιουργία κώδικα για την αντιστοίχηση OJS 1 URLs σε OJS 2 URLs</message>
 	<message key="admin.locale.maybeIncomplete">Οι επιλεγμένες γλώσσες μπορεί να μην είναι ολοκληρωμένες.</message>
+	<message key="admin.categories.name">Ονομα</message>
+	<message key="admin.categories.nameRequired">Απαιτείται ένα όνομα κατηγορίας</message>
+	<message key="admin.categories">Κστηγορίες</message>
+	<message key="admin.categories.enable.description">Ο διαχειριστής του δικτυακού τόπου μπορεί να επιλέξει να ορίσει ένα σύνολο κατηγοριών εδώ για να σας βοηθήσει να οργανώσετε μεγάλα σύνολα των περιοδικών. Ο Διαχειριστής Περιοδικού μπορεί να επιλέξει περισσότερες από τις κατηγορίες για κάθε ημερολόγιο, και οι αναγνώστες μπορούν να περιηγηθείτε σε συλλογές περιοδικών ανά κατηγορία.</message>
+	<message key="admin.categories.disableCategories">Μην οργανώνεται περιοδικά σε κατηγορίες</message>
+	<message key="admin.categories.enableCategories">Επιτρέψτε στους Διαχειριστές Περιοδικού να οργανώσουν τα περιοδικά σε κατηγορίες</message>
+	<message key="admin.categories.editTitle">Επεξεργασία Κατηγορίας</message>
+	<message key="admin.categories.createTitle">Δημιουργία Κατηγορίας</message>
+	<message key="admin.categories.create">Δημιουργία μιας νέας Κατηγορίας</message>
+	<message key="admin.categories.noneCreated">Δεν έχουν δημιουργηθεί κατηγορίες</message>
+	<message key="admin.categories.confirmDelete">Εϊστε σίγουροι ότι επιθυμείτε να διαγράψετε αυτή την κατηγορία;</message>
+	<message key="admin.copyAccessLogFileTool.usage">Αντιγράψτε το αρχείο καταγραφής του apache πρόσβαση (s),  φιλτράροντας τις εγγραφές που συνδέονται με αυτήν την εγκατάσταση, στον κατάλογο με τα τρέχοντα αρχεία, μέσα στον κατάλογο στάδιο UsageStatsPlugin. Πρέπει να τρέξει κάτω από το χρήστη με αρκετά privilegies να διαβάσει αρχεία πρόσβασης Apache.
+
+Το εργαλείο αυτό θα αντιγράψει μόνο τα αρχεία που δεν βρίσκονται ήδη στους φακέλλους τους usageStats file loader (στάδιο, επεξεργασία, αρχείο, απόρριψη).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (processing all files of a directory): {$scriptName} path/to/apache/directory
+Usage (processing all files of a directory whose names start with the passed string): {$scriptName} path/to/apache/directory starts_with_string</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Σφάλμα: δεν μπορεί να δημιουργηθεί προσωρινός φάκελλος  {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Σφάλμα: Το αρχείο {$filePath} δεν υπάρχει ή δεν μπορεί να προσπελαστεί</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Σφάλμα: δεν μπορεί να αντιγραφεί το αρχείο από {$filePath} στο {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Σφάλμα: δεν μπορείτε να διαγράψετε το αρχείο {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Προειδοποίηση: το αρχείο {$filePath} υπάρχει ήδη μέσα στο φάκελο των στατιστικών χρήσης.</message>
+	<message key="admin.copyAccessLogFileTool.success">Επιτυχία: {$filePath} σε {$destinationPath}</message>
+	<message key="admin.settings.security">Ασφάλεια</message>
+	<message key="admin.settings.options">Επιλογές</message>
+	<message key="admin.settings.security.plugins">Αποτρέψτε τους διαχειριστές περιοδικού από να εγκαταστούν, αναβαθμίζουν ή να διαγράφουν plugins.</message>
+	<message key="admin.settings.useAlphalist">Για ιστότοπους με πολλά περιοδικά, προβάλλετε μια αλφαβητική λίστα στην αρχική σελίδα για την γρήγορη αλφαβητική πλοήγηση μεταξύ των περιοδικών.</message>
+	<message key="admin.settings.usePaging">Για ιστοτόπους με πολλά περιοδικά, σάστε τη λίστα των περιοδικών σε πολλαπλές σελίδες.</message>
+	<message key="admin.settings.journalsList">Στοιχεία περιοδικού</message>
+	<message key="admin.settings.journalsList.description">Παρακαλούμε επιλέξτε τα στοιχεία του περιοδικού που θα εμφανίζονται για κάθε περιοδικό στην ιστοσελίδα του.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Εικονίδιο περιοδικού</message>
+	<message key="admin.settings.journalsList.showTitle">Τίτλος Περιοδικού</message>
+	<message key="admin.settings.journalsList.showDescription">Περιγραφή περιοδικού</message>
+	<message key="admin.settings.defaultMetricDescription">Η εγκατάσταση του OJS σας έχει ρυθμιστεί να καταγράφει περισσότερα του ενός μετρικά συστήματα χρήσης. Τα στατιστικά χρήσης θα εμφανίζονται σε πολλά πλαίσια.
+Υπάρχουν περιπτώσεις όπου ένα μοναδικό στατιστικό χρήσης πρέπει να χρησιμοποιηθεί, π.χ.η προβολή μιας λίστας των πιο δημοφιλών άρθρων ή η ταξινόμηση των αποτελεσμάτων αναζήτησης. Παρακαλούμε επιλέξτε ένα από τα μετρικά συστήματα ως προκαθορισμένο</message>
 </locale>

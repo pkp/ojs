@@ -4,13 +4,13 @@
 <!--
   * @file plugins/generic/booksForReview/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Books for review plugin localization strings for the el_GR locale.
   -->
- 
+
 <locale name="el_GR" full_name="Greek">
 
 	<!-- Books For Review Notifications -->
@@ -19,4 +19,164 @@
 	<message key="plugins.generic.booksForReview.notification.bookUpdated">Ενημέρωση βιβλίου για αξιολόγηση.</message>
 	<message key="plugins.generic.booksForReview.notification.bookMailed">Βιβλίο για αξιολόγηση - Καταγράφηκε ως απεσταλμένο.</message>
 	<message key="plugins.generic.booksForReview.notification.bookDeleted">Βιβλίο για αξιολόγηση - Διαγράφηκε</message>
+	<message key="plugins.generic.booksForReview.editor.form.publisher">Εκδότης</message>
+	<message key="plugins.generic.booksForReview.editor.form.year">Ετος</message>
+	<message key="plugins.generic.booksForReview.editor.form.language">Γλώσσα</message>
+	<message key="plugins.generic.booksForReview.editor.form.edition">Εκδοση</message>
+	<message key="plugins.generic.booksForReview.editor.form.pages">Σελίδες</message>
+	<message key="plugins.generic.booksForReview.editor.form.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.editor.form.url">URL εκδότη</message>
+	<message key="plugins.generic.booksForReview.editor.form.description">Περιγραφή</message>
+	<message key="plugins.generic.booksForReview.editor.form.notes">Σημειώσεις</message>
+	<message key="plugins.generic.booksForReview.editor.form.user">Μετάφραση</message>
+	<message key="plugins.generic.booksForReview.editor.form.article">Υποβολή</message>
+	<message key="plugins.generic.booksForReview.editor.form.saveAndCreateAnother">Αποθήκευση και ΔΗμιουργία νέου</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorTypeValid">Παρακαλούμε επιλέξτε έναν έγκυρο τύπο συγγραφέα</message>
+	<message key="plugins.generic.booksForReview.public.copy">Διαθέσιμο αντίγραφο</message>
+	<message key="plugins.generic.booksForReview.public.copyYes">Ναι</message>
+	<message key="plugins.generic.booksForReview.public.copyNo">Οχι</message>
+	<message key="plugins.generic.booksForReview.public.language">Γλώσσα</message>
+	<message key="plugins.generic.booksForReview.public.edition">Έκδοση</message>
+	<message key="plugins.generic.booksForReview.public.pages">Σελίδες</message>
+	<message key="plugins.generic.booksForReview.public.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.public.externalSite">εξωτερικός ιστότοπος</message>
+	<message key="plugins.generic.booksForReview.public.noneCreated">Κανένα βιβλίο για κριτική</message>
+	<message key="plugins.generic.booksForReview.public.noResults">Δεν υπάρχουν αποτελέσματα αναζήτησης</message>
+	<message key="plugins.generic.booksForReview.public.coverPage.altText">Εικόνα εξωφύλλου</message>
+	<message key="plugins.generic.booksForReview.public.bookDetails">Λεπτομέρειες βιβλίου</message>
+	<message key="plugins.generic.booksForReview.reminderTask.name">Υπενθύμιση για κριτική βιβλίων</message>
+	<message key="plugins.generic.booksForReview.displayName">Βιβλία για κριτκή</message>
+	<message key="plugins.generic.booksForReview.description">Ζητήστε κριτικές για τα βιβλία του ενδιαφέροντος ή λαμβάνονται από τους εκδότες. Διαχειριστείτε κριτικούς βιβλίων και τη διαδικασία αξιολόγησης του βιβλίου.</message>
+	<message key="plugins.generic.booksForReview.headerLink"><![CDATA[Βιβλία&nbsp;για&nbsp;Κριτική]]></message>
+	<message key="plugins.generic.booksForReview.status.available">Διαθέσιμο</message>
+	<message key="plugins.generic.booksForReview.status.requested">Αιτήθηκε</message>
+	<message key="plugins.generic.booksForReview.status.assigned">Ανατέθηκε</message>
+	<message key="plugins.generic.booksForReview.status.mailed">Ταχυδρομήθηκε</message>
+	<message key="plugins.generic.booksForReview.status.submitted">Υποβλήθηκε</message>
+	<message key="plugins.generic.booksForReview.authorType.by">Από</message>
+	<message key="plugins.generic.booksForReview.authorType.editedBy">Επιμελήθηκε από</message>
+	<message key="plugins.generic.booksForReview.authorType.editedByShort">Επ.</message>
+	<message key="plugins.generic.booksForReview.editionShort">επ.</message>
+	<message key="plugins.generic.booksForReview.field.status">Καθεστώς</message>
+	<message key="plugins.generic.booksForReview.field.publisher">Εκδότης</message>
+	<message key="plugins.generic.booksForReview.field.year">Έτος</message>
+	<message key="plugins.generic.booksForReview.field.isbn">ISBN</message>
+	<message key="plugins.generic.booksForReview.field.title">Τίτλος</message>
+	<message key="plugins.generic.booksForReview.field.description">Περιγραφή</message>
+	<message key="plugins.generic.booksForReview.editor.assignAuthor">Ανάθεση συγγραφέα</message>
+	<message key="plugins.generic.booksForReview.editor.assign">Ανάθεση</message>
+	<message key="plugins.generic.booksForReview.editor.form.status">Καθεστώς</message>
+	<message key="plugins.generic.booksForReview.editor.form.title">Τίτλος</message>
+	<message key="plugins.generic.booksForReview.editor.form.addAuthor">Προσθέστε Συγγραφέα</message>
+	<message key="plugins.generic.booksForReview.editor.form.deleteAuthor">Διαγραφή</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorType"><![CDATA[Τύπος&nbsp;Συγγραφέα]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.copy">Διαθέσιμο αντίγραφο</message>
+	<message key="plugins.generic.booksForReview.editor.form.dateRequested"><![CDATA[Ημερομηνία&nbsp;Αίτησης]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateAssigned"><![CDATA[Ημερομηνία&nbsp;Ανάθεσης]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateMailed"><![CDATA[Ημερομηνία&nbsp;Ταχυδρόμηση]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.dateDue">Προθεσμία</message>
+	<message key="plugins.generic.booksForReview.editor.form.dateSubmitted"><![CDATA[Ημερομηνία&nbsp;Υποβολής]]></message>
+	<message key="plugins.generic.booksForReview.editor.form.publisherRequired">Παρακαλούμε εισάγετε τον εκδότη αυτού του βιβλίου</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearRequired">Παρακαλούμε εισάγετε το έτος έκδοσης αυτού του βιβλίου</message>
+	<message key="plugins.generic.booksForReview.editor.form.yearValid">Παρακαλούμε εισάγετε ένα έγκυρο έτος έκδοσης.</message>
+	<message key="plugins.generic.booksForReview.editor.form.pagesValid">Παρακαλούμε εισάγετε έναν έγκυρο αριθμό σελίδων</message>
+	<message key="plugins.generic.booksForReview.editor.form.urlPrefixIncluded">Παρακαλούμε εισάγετε ένα πλήρες URL συμπεριλαμβάνοντας το πρόθεμα (π.χ. http://).</message>
+	<message key="plugins.generic.booksForReview.editor.form.titleRequired">Παρακαλούμε εισάγετε τον τίτλου του βιβλίου</message>
+	<message key="plugins.generic.booksForReview.editor.form.authorRequiredFields">Παρακαλούμε σιγουρευτείτε ότι ένα πρώτο όνομα και ένα επώνυμο έχει οριστεί για κάθε συγγραφέα.</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPage">Εψώφυλλο</message>
+	<message key="plugins.generic.booksForReview.editor.form.image">Εικόνα</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageInstructions">(Επιτρεπόμενοι τύποι αρχείων: .gif, .jpg, or .png )</message>
+	<message key="plugins.generic.booksForReview.editor.form.coverPageUploaded">Ανέβηκε</message>
+	<message key="plugins.generic.booksForReview.editor.form.removeCoverPage">Μετακίνηση εικόνας εξωφύλλου;</message>
+	<message key="plugins.generic.booksForReview.editor.form.remove">Μετακίνηση</message>
+	<message key="plugins.generic.booksForReview.settings">Ρυθμίσεις</message>
+	<message key="plugins.generic.booksForReview.booksForReviewSettings">Ρυθμίσεις Βιβλίων για Κριτική</message>
+	<message key="plugins.generic.booksForReview.settings.description"><![CDATA[<h5>Mode 1</h5><p>Υποστηρίζεται το παρακάτω διάγραμμα ροής:</p><ul><li>Ο Επιμελητής εισάγει βιβλία για κριτική.</li><li>Οι Συγγραφείς που ενδιαφέρονται να αναλάβουν την κριτική ενός βιβλίου μπορούν να αιτηθούν να γράψουν μια κριτική, ενημερώνοντας τον Επιμελητή.</li><li>Ο Επιμελητής μπορεί να αποδεκτεί ή να αρνηθεί το αίτημα κριτικής, ενημεώνοντας τον Συγγραφέα.</li><li>Αν το αίτημα γίνει αποδεκτό <ul><li>ΤΟ βιβλίο δεν είναι πλέον διαθέσιμο στη λίστα των διαθέσιμων βιβλίων για κριτική.</li><li>Μια προθεσμία εισάγεται την κριτική.</li><li>Ο Επιμελητής μπορεί να στείλει ένα αντίγραφο του βιβλίου του συγγραφέα.</li></ul></li><li>Ο Συγγραφέας υποβάλλει την κριτική βιβλίου μέσω της βασικής διαδικασίας υποβολής online.</li><li>Τα μεταδεδομένα του βιβλίου δημοσιεύονται ως μέρος της υποβολής της κριτικής.</li></ul><p>Αυτό το plugin υποστηρίζει περιοδικά με πολλούς επιμελητές. Όταν ένας Επιμελητής προσθέτει ένα νεό βιβλίο για κριτική, τότε αυτός/ή γίνεται ο πρωτεύον επιμελητής και επικοινωνία για το βιβλίο</p><h5>Mode 2</h5><p>Υποστηρίζεται το παρακάτω διαάγραμμα ροής:</p><ul><li>Ο Επιμελητής προσθέτει βιβλία.</li><li>Ο Επιμελητής ταιριάζει τις υποβολέ με κάθε βιβλίο.</li><li>Τα μεταδεδομένα του βιβλίου δημοσιεύονται ως μέρος της υποβολής της κριτικής.</li></ul>]]></message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewMode">Διαχείριση</message>
+	<message key="plugins.generic.booksForReview.notification.submissionAssigned">Η υποβολή ανατέθηκε για κριτική βιβλίου</message>
+	<message key="plugins.generic.booksForReview.notification.authorAssigned">Συγγραφέας ανέλαβε κριτική βιβλίου</message>
+	<message key="plugins.generic.booksForReview.notification.authorDenied">Το αίτημα του συγγραφέα απορρίφθηκε. Η κριτική βιβλίου επανήλθε στο αρχικό στάδιο</message>
+	<message key="plugins.generic.booksForReview.notification.authorRemoved">Ο συγγραφέας απομακρύνθηκε.Η κριτική βιβλίου επανήλθε στο αρχικό στάδιο.</message>
+	<message key="plugins.generic.booksForReview.notification.settingsSaved">Οι ρυθμίσεις κριτικής βιβλίου αποθηκεύτηκαν.</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReview"><![CDATA[Βιβλία&nbsp;Για&nbsp;Κριτική]]></message>
+	<message key="plugins.generic.booksForReview.editor.all">Όλα</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAll">Βιβλία Για Κριτική - Όλα</message>
+	<message key="plugins.generic.booksForReview.editor.available">Διαθέσιμα</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAvailable">Βιβλία Για Κριτική - Διαθέσιμα</message>
+	<message key="plugins.generic.booksForReview.editor.requested">Αιτήματα</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewRequested">Βιβλία Για Κριτική - Αιτήματα</message>
+	<message key="plugins.generic.booksForReview.editor.assigned">Ανατέθηκαν</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewAssigned">Βιβλία Για Κριτική - Ανατέθηκαν</message>
+	<message key="plugins.generic.booksForReview.editor.mailed">Απεσταλμένα</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewMailed">Βιβλία Για Κριτική - Απεσταλμένα</message>
+	<message key="plugins.generic.booksForReview.editor.submitted">Υποβλήθηκαν</message>
+	<message key="plugins.generic.booksForReview.editor.booksForReviewSubmitted">Βιβλία Για Κριτική - Υποβλήθηκαν</message>
+	<message key="plugins.generic.booksForReview.editor.create">ΔΗμιουργία Βιβλίου για Κριτική</message>
+	<message key="plugins.generic.booksForReview.editor.createNewUser">Δημιουργία Νέου Χρήστη</message>
+	<message key="plugins.generic.booksForReview.editor.editBookForReviewMetadata">Επεξεργασία Μεταδεδομένων Βιβλίων</message>
+	<message key="plugins.generic.booksForReview.editor.delete">Διαγραφή Βιβλίου για Κριτική</message>
+	<message key="plugins.generic.booksForReview.editor.bookDetails">Λεπτομέρειες Βιβλίου</message>
+	<message key="plugins.generic.booksForReview.editor.notes">Πρόσθετες Σημειώσεις</message>
+	<message key="plugins.generic.booksForReview.editor.notesInstructions">Για τον επιμελητή μόνο. Μη δημοσιευμένο σαν μέρος ενός βιβλίου για κριτική.</message>
+	<message key="plugins.generic.booksForReview.editor.title">Τίτλος</message>
+	<message key="plugins.generic.booksForReview.editor.editor">Επιμελητής</message>
+	<message key="plugins.generic.booksForReview.editor.status">Καθεστώς</message>
+	<message key="plugins.generic.booksForReview.editor.dueDate">Προθεσμία</message>
+	<message key="plugins.generic.booksForReview.editor.noMailingAddress">Δεν υπάρχει διεύθυνση ηλεκτρονικου ταχυδρομείου στο αρχείο.</message>
+	<message key="plugins.generic.booksForReview.editor.editSubmission"><![CDATA[Επεξεργασία&nbsp;Υποβολής]]></message>
+	<message key="plugins.generic.booksForReview.editor.confirmDelete">Είστε σίγουροι ότι επιθυμείτε να διαγράψετε μόνιμα αυτό το βιβλίο για κριτική;</message>
+	<message key="plugins.generic.booksForReview.editor.confirmRemove">Είστε σίγουροι ότι επιθυμείτε να απομακρύνετε αυτόν τον συγγραφέα και να καθαρίσετε το ιστορικό αυτού του βιβλίου για κριτική;</message>
+	<message key="plugins.generic.booksForReview.editor.selectSubmission"><![CDATA[Επιλέξτε&nbsp;Υποβολή]]></message>
+	<message key="plugins.generic.booksForReview.editor.select">Επιλέξτε</message>
+	<message key="plugins.generic.booksForReview.editor.edit">Επεξεργασία</message>
+	<message key="plugins.generic.booksForReview.editor.submission">Υποβολή</message>
+	<message key="plugins.generic.booksForReview.editor.bookReviewer">Κριτικός Βιβλίου</message>
+	<message key="plugins.generic.booksForReview.editor.assignBookReviewer">Ανάθεση</message>
+	<message key="plugins.generic.booksForReview.editor.removeBookReviewer">Μετακίνηση</message>
+	<message key="plugins.generic.booksForReview.editor.acceptBookReviewer">Αποδοχή</message>
+	<message key="plugins.generic.booksForReview.editor.denyBookReviewer">Άρνηση</message>
+	<message key="plugins.generic.booksForReview.editor.notifyBookMailed"><![CDATA[Το βιβλίο&nbsp;Ταχυδρομήθηκε]]></message>
+	<message key="plugins.generic.booksForReview.editor.noneCreated">Δεν υπάρχουν βιβλία για κριτική</message>
+	<message key="plugins.generic.booksForReview.editor.noResults">Κανένα αποτέλεσμα αναζήτησης</message>
+	<message key="plugins.generic.booksForReview.settings.modeFull">Τρόπος 1: Λίστα διαθέσιμων βιβλίων για κριτική, διαχείριση κριτικών βιβλίων και μεταδεδομένα βιβλίων</message>
+	<message key="plugins.generic.booksForReview.settings.modeMetadata">Τρόπος 2: Δημοσίευση μόνο μεταδεδομένα βιβλίων</message>
+	<message key="plugins.generic.booksForReview.settings.booksForReviewDue">Προθεσμία Κριτικής Βιβλίου</message>
+	<message key="plugins.generic.booksForReview.settings.coverImages">Εικόνες εξωφύλλου</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageIssue">Εμφάνιση εικόνων εξωφύλλων για κριτικές βιβλίων στον πίνακα περιεχομένων του τεύχους.</message>
+	<message key="plugins.generic.booksForReview.settings.coverPageAbstract">Εμφάνιση εικόνων εξωφύλλων βιβλίου για κριτικές βιβλίου στη σελίδα περίληψης του άρθρου.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks1">Εκκρεμείς κριτικές</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeks2">εβδομάδες από την ημερομηνία ανάθεσης της κριτικής βιβλίου στον συγγραφέα</message>
+	<message key="plugins.generic.booksForReview.settings.emailReminders">Email υπενθύμισης</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays1">Αποστολή email υπενθύμισης στους συγγραφείς</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">ημέρες για την προθεσμία ολοκλήρωσης της κριτικής.</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Αποστολή email υπενθύμισης στους συγγραφείς</message>
+	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">ημέρες μετά την προθεσμία ολοκλήρωσης της κριτικής.</message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Σημείωση:</strong> Για να ενεργοποιήσετε αυτές τις επιλογές, ο διαχιειρστής ιστοτόπου πρέπει να ενεργοποιήσεις την επιλογή <tt>scheduled_tasks</tt> στο αρχείο ρυθμίσεων του OJS. Μπορεί να απαιτηθούν πρόσθετες ρυθμίσεις του server για να υποστηριχθεί αυτή η λειτουργία (κάτι που μπορεί να μην είναι δυνατόν σε όλους τους servers), όπως προβλέπεται στην σχετική τεκμηρίωση του OJS.]]></message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformation">Πρόσθετες πληροφορίες</message>
+	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Πρόσθετες πληροφορίες δημοσιευμένες μαζί με τα βιβλία για κριτική.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Παρακαλούμε καθορίστε τον αριθμό των εβδομάδων μέχρι την προθεσμία ολοκλήρωσης τη κριτικής.</message>
+	<message key="plugins.generic.booksForReview.settings.dueWeeksValid">Παρακαλούμε καθορίστε έναν έγκυρο  αριθμό των εβδομάδων μέχρι την προθεσμία ολοκλήρωσης τη κριτικής.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysBeforeDueReminderValid">Παρακαλούμε καθορίστε έναν έγκυρο αριθμό ημερών για το email υπενθύμισης.</message>
+	<message key="plugins.generic.booksForReview.settings.numDaysAfterDueReminderValid">Παρακαλούμε καθορίστε έναν έγκυρο αριθμό ημερών για το email υπενθύμισης.</message>
+	<message key="plugins.generic.booksForReview.author.title">Τίτλος</message>
+	<message key="plugins.generic.booksForReview.author.editor">Επιμελητής</message>
+	<message key="plugins.generic.booksForReview.author.status">Καθεστώς</message>
+	<message key="plugins.generic.booksForReview.author.submit">Υποβολή</message>
+	<message key="plugins.generic.booksForReview.author.dueDate">Προθεσμία</message>
+	<message key="plugins.generic.booksForReview.author.noneCreated">Δεν υπάρχουν βιβλία για κριτική</message>
+	<message key="plugins.generic.booksForReview.author.booksForReview">Βιβλία για κριτική</message>
+	<message key="plugins.generic.booksForReview.author.myBooksForReview">Τα βιβλία μου</message>
+	<message key="plugins.generic.booksForReview.author.availableBooksForReview">Διαθέσιμα βιβλία</message>
+	<message key="plugins.generic.booksForReview.author.requestBookForReview">Αίτημα για Κριτική αυτού του Βιβλίου</message>
+	<message key="plugins.generic.booksForReview.author.submitInstructions">Παρακαλούμε προσδιορίστε αν αυτή η υποβολή είναι μια κριτική βιβλίου για κάποια από τα παρακάτω βιβλία που σας έχουν ανατεθεί.</message>
+	<message key="plugins.generic.booksForReview.author.requested">Αιτήθηκαν</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewRequested">Βιβλία για Κριτική - Αιτήθηκαν</message>
+	<message key="plugins.generic.booksForReview.author.assigned">Ανατέθηκαν</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewAssigned">Βιβλία για Κριτική - Ανατέθηκαν</message>
+	<message key="plugins.generic.booksForReview.author.mailed">Απεσταλμένα</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewMailed">Βιβλία για Κριτική - Απεσταλμένα</message>
+	<message key="plugins.generic.booksForReview.author.submitted">Υποβλήθηκαν</message>
+	<message key="plugins.generic.booksForReview.author.booksForReviewSubmitted">Βιβλία για Κριτική - Υποβλήθηκαν</message>
+	<message key="plugins.generic.booksForReview.public.booksForReview">Βιβλία για Κριτική</message>
+	<message key="plugins.generic.booksForReview.public.booksForReviewInstructions"><![CDATA[<p>Για να αιτηθείτε ένα βιβλίο για κριτική:</p><ul><li><a href="{$registerUrl}" target="_parent">Εγγραφείτε</a> ως συγγραφές σε αυτό το περιοδικό.</li><li><a href="{$loginAuthorUrl}" target="_parent">Συνδεθείτε</a> ως συγγραφέας.</li><li>Ακολουθήστε τον σύνδεσμο του αιτήματος που αντιστοιχεί στο βιβλίο που σας ενδιαφέρει.</li></ul>]]></message>
 </locale>

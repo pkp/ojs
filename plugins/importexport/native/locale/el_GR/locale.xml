@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/native/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the Greek locale.
@@ -80,7 +80,6 @@
 	<message key="plugins.importexport.native.import.error.illegalUrl">Το καθορισμένο URL "{$url}" για το τεύχος "{$issueTitle}" είναι παράτυπο. Οι εισαγωγές μέσω διαδικτύου υποστηρίζουν μόνο τις μεθόδους http, https, ftp, ή ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Καθορίστηκε ένας άγνωστος τύπος συμπληρωματικού αρχείου "{$suppFileType}" .</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">Ένα καθορισμένο URL "{$url}" δεν μπόρεσε να αντιγραφεί σε ένα τοπικό αρχείο.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">Το δημόσιο ID που δόθηκε για την εισαγωγή του τεύχους "{$issueTitle}" χρησιμοποιείται ήδη από ένα άλλο τεύχος, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Ένας τίτλος ενότητας λείπει από το τεύχος "{$issueTitle}". Σιγουρευτείτε ότι το XML αρχείο συμμορφώνεται με το κατάλληλο DTD.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">Η ενότητα "{$sectionTitle}" του τεύχους "{$issueTitle}" ταίριαξε με μια υπάρχουσα ενότητα περιοδικού, αλλά η καθορισμένη συντομογραφία ("{$sectionAbbrev}") ταίριαξε με μια διαφορετική ενότητα.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Ένας τίτλος άρθρου λείπει στην ενότητα "{$sectionTitle}" του τεύχους "{$issueTitle}" . Σιγουρευτείτε ότι το XML αρχείο συμμορφώνεται με το κατάλληλο DTD, και ότι ένας τίτλος έχει δοθεί για τη γλώσσα του περιοδικού.</message>
@@ -132,4 +131,11 @@
 
 	<message key="plugins.importexport.native.error.uploadFailed">Η μεταφόρτωση απέτυχε. Σιγουρευτείτε η μεταφόρτωση αρχείων στον εξυπηρετητή επιτρέπεται και ότι το αρχείο δεν είναι υπερβολικά μεγάλο σύμφωνα με τις ρυθμίσεις του εξυπηρετητή διαδικτύου σας και της PHP.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">Το περιοδικό δεν υποστηρίζει την συσχέτιση με έναν φορέα του συγγραφέα  "{$authorFullName}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" και στη γλώσσα ("{$locale}").</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">Το δημόσιο ID  που δόθηκε για το εισαγόμενο τυπογραφικό δοκίμιο  "{$publicId}" χρησιμοποιείται ήδη από ένα άλλο δοκίμιο για το ίδιο άρθρο, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">Το δημόσιο ID  που δόθηκε για το εισαγόμενο συμπληρωματικό αρχείο "{$suppFileTitle}" χρησιμοποιείται ήδη από ένα άλλο συμπληρωματικό αρχείο για το ίδιο άρθρο, "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">Το δημόσιο ID  που δόθηκε για το εισαγόμενο άρθρο "{$articleTitle}" χρησιμοποιείται ήδη από ένα άλλο άρθρο, "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">Το δημόσιο ID  που δόθηκε για το εισαγόμενο τεύχος "{$issueTitle}" χρησιμοποιείται ήδη από ένα άλλο τεύχος, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidPubId">Το εισαγόμενο αρχείο περιέχει ένα σύνολο δεδομένων με μη έγκυρο {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Το εισαγόμενο αρχείο περιέχει ένα σύνολο δεδομένων με  {$pubIdType} '{$pubId}' χρησιμοποιείται ήδη για ένα άλλο αντικείμενο στη βάση δεδομένων. Παρακαλούμε σιγουρευτείτε ότι ποτέ δεν εισάγετε αντικείμενα με IDs  που χρησιμοποιούνται ήδη στη βάση δεδομένων.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Το εισαγόμενο αρχείο σας περιέχει ένα σύνολο δεδομένων με τύπο ID '{$pubIdType}' που κανένα ID-plugin δεν μπορεί να διαχειριστεί. Παρακαλούμε  εγκαταστήστε  ή/και ενεργοποιήστε το αντίστοιχο ID plug-in πριν προσπαθήσετε να εισάγετε αυτό το σύνολο δεδομένων.</message>
 </locale>

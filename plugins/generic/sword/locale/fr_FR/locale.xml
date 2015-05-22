@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français) locale.
@@ -16,7 +16,6 @@
 	<message key="plugins.generic.sword.displayName">Plugiciel SWORD</message>
 	<message key="plugins.generic.sword.description">Permet aux directeurs et (optionnellement) aux auteurs de la revue de déposer des articles par l'intermédiaire du protocole SWORD</message>
 	<message key="plugins.generic.sword.enabled">Le plugiciel SWORD a été activé.</message>
-	<message key="plugins.generic.sword.disable">Le plugiciel SWORD a été désactivé.</message>
 	<message key="plugins.generic.sword.settings">Paramètres</message>
 	<message key="plugins.generic.sword.settings.allowAuthorSpecify">Permet à l'auteur de spécifier un point de dépôt</message>
 	<message key="plugins.generic.sword.settings.depositPoints">Points de dépôt</message>

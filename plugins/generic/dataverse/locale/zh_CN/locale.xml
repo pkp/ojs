@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/dataverse/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Dataverse plugin localization strings
@@ -158,4 +158,6 @@
 
 	<!-- Citation "in press" info -->
 	<message key="plugins.generic.dataverse.citationAPA.inPress">(出版中).</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription">主题研究</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">提供一份研究目的，性质，范围和数据的总结。</message>
 </locale>

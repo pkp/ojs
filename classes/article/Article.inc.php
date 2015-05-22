@@ -7,8 +7,8 @@
 /**
  * @file classes/article/Article.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Article
@@ -133,13 +133,8 @@ class Article extends Submission {
 	/**
 	 * Get the localized copyright holder for this article.
 	 */
-	function getLocalizedCopyrightHolder() {
-		$copyrightHolders = (array) $this->getCopyrightHolder(null);
-		foreach (AppLocale::getLocalePrecedence() as $locale) {
-			if (isset($copyrightHolders[$locale])) return $copyrightHolders[$locale];
-		}
-		// Fallback: return anything available
-		return array_shift($copyrightHolders);
+	function getLocalizedCopyrightHolder($preferredLocale = null) {
+		return $this->getLocalizedData('copyrightHolder', $preferredLocale);
 	}
 
 	/**
@@ -676,7 +671,7 @@ class Article extends Submission {
 			case COMMENTS_SECTION_DEFAULT:
 				$sectionDao =& DAORegistry::getDAO('SectionDAO');
 				$section =& $sectionDao->getSection($this->getSectionId(), $this->getJournalId(), true);
-				if ($section->getDisableComments()) {
+				if (!$section || $section->getDisableComments()) {
 					return false;
 				} else {
 					return true;

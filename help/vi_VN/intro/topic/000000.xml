@@ -4,8 +4,8 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Introduction to OJS Main 
@@ -25,7 +25,7 @@
 ]]>
 	</section>
 	<section title="Hỗ trợ">
-		<![CDATA[<p>Website PKP cung cấp một <a href="http://pkp.sfu.ca/support/forum/" target="_blank">diễn đàn hỗ trợ</a> và báo lỗi kỹ thuật cho người sử dụng.</p>
+		<![CDATA[<p>Website PKP cung cấp một <a href="http://forum.pkp.sfu.ca/" target="_blank">diễn đàn hỗ trợ</a> và báo lỗi kỹ thuật cho người sử dụng.</p>
 		<p>Bạn đọc có câu hỏi liên quan đến việc sử dụng một tạp chí cụ thể sử dụng phần mềm OJS hoặc liên quan tới chính sách của tạp chí đó, xin vui lòng liên hệ với các đầu mối liên lạc và hỗ trợ của tạp chí được cung cấp trong trang Giới thiệu trên website của tạp chí.</p>]]>
 	</section>
 </topic>

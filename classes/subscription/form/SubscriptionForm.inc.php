@@ -7,8 +7,8 @@
 /**
  * @file classes/subscription/form/SubscriptionForm.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionForm
@@ -166,6 +166,7 @@ class SubscriptionForm extends Form {
 				'notes' => $subscription->getNotes()
 			);
 		}
+		return parent::initData();
 	}
 
 	/**
@@ -257,6 +258,7 @@ class SubscriptionForm extends Form {
 		$user->setMailingAddress($this->getData('userMailingAddress'));
 		$user->setCountry($this->getData('userCountry'));
 
+		parent::execute($user);
 		$userDao->updateObject($user);
 	}
 

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/referral/ReferralPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReferralPlugin
@@ -44,7 +44,7 @@ class ReferralPlugin extends GenericPlugin {
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->getEnabled()) {
-			$verbs[] = array('settings', __('plugins.generic.googleAnalytics.manager.settings'));
+			$verbs[] = array('settings', __('plugins.generic.referral.settings'));
 		}
 		return parent::getManagementVerbs($verbs);
 	}

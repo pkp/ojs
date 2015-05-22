@@ -1,8 +1,8 @@
 {**
  * templates/admin/index.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Site administration index.
@@ -37,6 +37,7 @@
 	<li><a href="{url op="expireSessions"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
 	<li><a href="{url op="clearDataCache"}">{translate key="admin.clearDataCache"}</a></li>
 	<li><a href="{url op="clearTemplateCache"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
+	<li><a href="{url op="clearScheduledTaskLogFiles"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.scheduledTask.confirmClearLogs"}')">{translate key="admin.scheduledTask.clearLogs"}</a></li>
 	<li><a href="{url op="mergeUsers"}">{translate key="admin.mergeUsers"}</a></li>
 	{call_hook name="Templates::Admin::Index::AdminFunctions"}
 </ul>

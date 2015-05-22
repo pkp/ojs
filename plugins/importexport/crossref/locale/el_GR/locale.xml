@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the Greek locale.
@@ -18,24 +18,33 @@
   * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
   *
   -->
- 
+
 <locale name="el_GR" full_name="Greek">	
 	<message key="plugins.importexport.crossref.displayName">Πρόσθετο εξαγωγής CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Εξαγωγή των μεταδεδομένων του άρθρου σε μορφή CrossRef XML .</message>
 	
-	<message key="plugins.importexport.crossref.export">Εξαγωγή δεδομένων</message>
-	<message key="plugins.importexport.crossref.export.issues">Εξαγωγή Τευχών</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">Επιλέξτε ένα τεύχος για εξαγωγή.</message>
-	<message key="plugins.importexport.crossref.export.articles">Εξαγωγή Άρθρων</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">Επιλέξτε άρθρα για εξαγωγή.</message>
-	
-	<message key="plugins.importexport.crossref.cliUsage">Χρήση: 
+	<message key="plugins.importexport.crossref.cliUsage">Χρήση:
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
-	<message key="plugins.importexport.crossref.cliError">ΣΦΑΛΜΑ:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Δεν βρέθηκε τεύχος που να ταιριάζει με το συγκεκριμένο ID τεύχους "{$issueId}".</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Δεν βρέθηκε άρθρο που να ταιριάζει με το συγκεκριμένο ID άρθρου "{$articleId}".</message>
-
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">Ένα έγκυρο πρόθεμα DOI πρέπει να καθοριστεί στην "Οργάνωση του Περιοδικού" ώστε να μπορέσετε να χρησιμοποιήσετε αυτό το πρόσθετο.</message>
+	<message key="plugins.importexport.crossref.requirements">Απαιτήσεις</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Όλες οι απαιτήσεις του plugin έχουν ικανοποιηθεί</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Το CrossRef plugin δεν έχει ρυθμιστεί! Ρυθμίσετε το μέσα από τη <a href="{$settingsUrl}">σελίδα ρύθμισης plugin</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[To DOI Public Identifier plugin δεν έχει ρυθμιστεί! Ενεργοποιήσετ και ρυθμίσε το plugin μέσα από τη σελίδα ρυθμίσεων <a href="{$doiUrl}" target="_blank">DOI Plugin</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Ο Εκδότης του περιοδικού δεν έχει ρυθμιστεί! Θα πρέπει να προσθέσετε έναν οργανισμό έκδοσης μέσα από το <a href="{$publisherUrl}" target="_blank">Στήσιμο Περιοδικού Βήμα 1.5</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Τα ακόλουθα στοιχεία που απαιτούνται για μια επιτυχή CrossRef κατάθεση.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Όνομα καταθέτη</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email καταθέτη</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Παρακαλούμε εισάγετε το όνομα του καταθέτη</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Παρακαλούμε εισάγετε το email του καταθέτη</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Εγγράψτε τα DOIs αυτόματα</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[Το OJS θα καταθέσει τα DOIs των άρθρων αυτόματα στο CrossRef ως δημοσιευμένα άρθρα. Παρακαλούμε σημειώστε ότι αυτό μπορεί να πάρει ένα σύντομο χρονικό διάστημα μετά τη δημοσίευση στην διαδικασία. Μπορείτε να ελέγξετε για όλες τις unregistered DOIs στην <a href="">λίστα μη εγγεγραμμένων άρθρων</a>.]]></message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Αυτό το plugin μπορεί να ρυθμιστεί ώστε να εγγράψει αυτόματα DOIs στο CrossRef. Θα χρειαστείτε ένα όνομα χρήστη και κωδικό πρόσβασης (διατίθεται από href="http://www.crossref.org" <a target="_blank"> CrossRef </a>) προκειμένου να το πράξουν. Εάν δεν έχετε το δικό σας όνομα χρήστη και τον κωδικό πρόσβασης μπορείτε να εξάγετε σε μορφή CrossRef XML, αλλά δεν μπορείτε να καταχωρήσετε DOIs σας με CrossRef μέσα από το OJS.]]></message>
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Μπορείτε να <a href="{$settingsUrl}">ρυθμίσετε το CrossRef export/registration plug-in εδώ</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.description">Παρακαλούμε ρυθμίστε το CrossRef export/registration plug-in:</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Όνομα Χρήστη</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Παρακαλούμε εισάγετε το όνομα χρήστη έχετε από το CrossRef.</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Μη εγγεγραμμένα άρθρα</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Επιλέξτε μη εγγεγραμμένα άρθρα</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">Όλα τα δημοσιευμένα άρθρα έχουν ήδη εγγραφεί (ή κανένα από αυτά δεν έχει ένα DOI)</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Η ημερομηνία δημοσίευσης του άρθρου με ID {$param} λείπει.</message>
 </locale>

@@ -1,8 +1,8 @@
 {**
  * plugins/generic/lucene/templates/preResults.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * A template to be included via Templates::Search::SearchResults::PreResults hook.

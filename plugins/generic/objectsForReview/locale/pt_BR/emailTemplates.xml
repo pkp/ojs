@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/generic/objectsForReview/locale/pt_BR/emailTemplateData.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="pt_BR">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Objeto para revisão: Lembrete de Data de Vencimento</subject>
+		<body>Caro {$authorName}:
+
+Este é um lembrete que sua avaliação do objeto de {$objectForReviewTitle} é para {$objectForReviewDueDate}.
+
+Para submeter seus comentários, faça o login no site da revista e conclua o processo de submissão de artigos online. Para sua comodidade, a URL da submissão segue abaixo.
+
+URL Submission: {$submissionUrl}
+
+Por favor, não hesite em contactar-me se você tiver quaisquer perguntas ou preocupações sobre esta avaliação.
+
+Obrigado pela sua contribuição para a revista e esperamos receber sua avaliação.
+
+{$editorialContactSignature}</body>
+		<description>Este é um e-mail gerado automaticamente que é enviado para um autor como um lembrete de que a data prevista para a revisão está se aproximando.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Objeto de revisão: Revisão Devida</subject>
+		<body>Caro {$authorName}:
+
+Este é um lembrete de que sua opinião sobre {$objectForReviewTitle} prometida para {$objectForReviewDueDate} ainda não foi recebida.
+
+Para submeter o seu comentário, faça o login no site da revista e conclua o processo de submissão de artigos online. Para sua comodidade, a URL segue abaixo.
+
+URL Submission: {$submissionUrl}
+
+Por favor, não hesite em contactar-me se você tiver quaisquer perguntas ou preocupações sobre esta avaliação.
+
+Obrigado pela sua contribuição para a revista, estamos ansiosos para receber seu comentário.
+
+{$editorialContactSignature}</body>
+		<description>Este é um e-mail gerado automaticamente enviado para o autor após a data de vencimento de revisão.</description>
+	</email_text>
+</email_texts>

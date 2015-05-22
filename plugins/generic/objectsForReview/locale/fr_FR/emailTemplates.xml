@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/generic/objectsForReview/locale/fr_FR/emailTemplateData.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="fr_FR">
+	<email_text key="OFR_REVIEW_REMINDER">
+		<subject>Compte rendu d'un objet : rappel de la date d’échéance</subject>
+		<body>Madame, Monsieur, {$authorName}:
+
+Nous nous permettons de vous rappeler que la date d'échéance du compte rendu de l'objet {$objectForReviewTitle} est le {$objectForReviewDueDate}.
+
+Veuillez vous connecter au site web de la revue et compléter le processus de soumission en ligne pour soumettre votre compte rendu. Pour faciliter votre accès au site web, l'URL de la soumission vous est fourni ci-dessous.
+
+URL de soumission : {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou besoin d’informations complémentaires concernant ce compte rendu.
+
+Nous vous remercions de votre contribution à la revue et nous réjouissons de recevoir votre prochaine soumission.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel a été généré et envoyé automatiquement à l’auteur qui doit effectuer le compte rendu d’un objet lorsque la date d'échéance approche.</description>
+	</email_text>
+	<email_text key="OFR_REVIEW_REMINDER_LATE">
+		<subject>Compte rendu d’un objet : date d’échéance</subject>
+		<body>Madame, Monsieur, {$authorName}:
+
+Nous nous permettons de vous rappeler que nous n’avons pas reçu votre compte rendu de l'objet {$objectForReviewTitle}. La date d'échéance était le {$objectForReviewDueDate}.
+
+Pour soumettre votre compte rendu, veuillez vous connecter au site Web de la revue et compléter le processus de soumission. Pour faciliter votre accès au site web, l'URL de la soumission vous est fourni ci-dessous.
+
+URL de soumission : {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou préoccupations concernant ce compte rendu.
+
+N'hésitez pas à me contacter si vous avez des questions ou besoin d’informations complémentaires concernant l’évaluation de cet objet.
+
+Nous vous remercions de votre contribution à la revue et nous réjouissons de recevoir votre prochaine soumission.
+
+{$editorialContactSignature}</body>
+		<description>Ceci est un courriel généré automatiquement et qui est envoyé à un auteur lorsque la date d’échéance d'un compte rendu d’objet est dépassé.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ASSIGNED">
+		<subject>Compte rendu d’un objet : assignation d’un objet</subject>
+		<body>Madame, Monsieur, {$authorName}:
+
+Ce courriel confirme que le compte rendu d’un objet {$objectForReviewTitle} vous a été assigné. La date d’échéance est fixée au {$objectForReviewDueDate}.
+
+Veuillez vous assurer que le courriel indiqué sur votre profil utilisateur est à jour. Cette adresse sera utilisée pour vous envoyer une copie de l’objet à évaluer.
+
+Le courriel que nous avons actuellement dans nos fichiers est : {$authorMailingAddress}
+
+Si ce courriel est incomplet ou incorrect, veuillez utiliser le lien suivant pour mettre à jour votre adresse sur votre profil utilisateur :
+
+URL de votre profil d’utilisateur : {$userProfileUrl}
+
+Pour soumettre votre compte rendu, veuillez vous connecter au site Web de la revue et compléter le processus de soumission en ligne.
+
+URL de soumission : {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou besoin d’informations complémentaires concernant ce compte rendu.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé par un rédacteur à un auteur quand un rédacteur attribue un compte rendu d’un objet à un auteur.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DENIED">
+		<subject>compte rendu d’un objet</subject>
+		<body>Madame, Monsieur, {$authorName} :
+
+Malheureusement, je ne suis pas en mesure de vous attribuer {$objectForReviewTitle}.
+
+J’espère que vous pourrez envisager de réaliser le compte rendu d’un autre objet de notre liste, dès à présent ou dans un futur proche.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé par un rédacteur à un auteur intéressé par la réalisation d'un compte rendu d’un objet quand il n’y a pas plus d’objet disponible pour un compte rendu.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_REQUESTED">
+		<subject>Compte rendu d’un objet : demande</subject>
+		<body>Madame, Monsieur, {$editorName} :
+
+J’aimerais rédiger un compte rendu de {$objectForReviewTitle}.
+
+Pouvez-vous me confirmer la disponibilité de celui-ci ?
+
+{$authorContactSignature}</body>
+		<description>Ce courriel est envoyé à un rédacteur par un auteur intéressé par la réalisation d'un compte rendu d’un objet listé.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_MAILED">
+		<subject>Compte rendu d’un objet : objet envoyé par courriel</subject>
+		<body>Madame, Monsieur, {$authorName}:
+
+Ceci est une confirmation de l’envoi d’une copie de {$objectForReviewTitle} que je vous ai adressée par courriel à l’adresse indiquée sur votre profil d’utilisateur en ligne suivante :
+{$authorMailingAddress}
+
+Pour soumettre le compte rendu d’un objet, veuillez vous connecter au site Web de la revue et compléter le processus de soumission en ligne.
+
+URL de la soumission: {$submissionUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou besoin d’informations complémentaires concernant ce compte rendu.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé à par un rédacteur à un auteur intéressé par la réalisation d'un compte rendu d’un objet listé pour l'informer qu'une copie de l'objet lui a été envoyée par courriel.</description>
+	</email_text>
+	<email_text key="OFR_REVIEWER_REMOVED">
+		<subject>Compte rendu d’un objet</subject>
+		<body>Madame, Monsieur, {$authorName}:
+
+Ce courriel confirme que vous n’êtes plus l’évaluateur de l’objet {$objectForReviewTitle}.
+
+J’espère que vous pourrez réaliser le compte rendu d’un autre objet de notre liste, dès à présent ou dans un futur proche.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé par un rédacteur à un auteur intéressé par un compte rendu lorsqu'un objet n’est plus disponible pour un compte rendu.</description>
+	</email_text>
+</email_texts>

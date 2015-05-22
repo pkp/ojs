@@ -3,8 +3,8 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Introduction to OJS Main 
@@ -91,7 +91,7 @@ OJS مقالات ارسالی به ژورنال را در ۵ مرحله وارد
 <p align="center"><a href="{$baseUrl}/locale/{$locale}/edprocesslarge.png"><img src="{$baseUrl}/locale/{$locale}/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>]]></section>
 	<section title="Support" ><![CDATA[<p>
 یک سیستم گزارش خطا و تالار گفتگوی اصلاحی برای رفع اشکالات تکنیکی در آدرس زیر موجود است 
- <a href="http://pkp.sfu.ca/support/forum/" target="_blank">
+ <a href="http://forum.pkp.sfu.ca/" target="_blank">
 وب سایت
 </a>.</p><p>
 کاربرانی که در رابطه با طراحی سایت ژورنال با استفاده از OJSسوالاتی دارند ویا در راستای اهداف ژورنال خود تمایل به مشاوره با متخصصان دارند به صفحه ABOUTمراجعه کنند

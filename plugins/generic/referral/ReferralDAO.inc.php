@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/referral/ReferralDAO.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReferralDAO
@@ -115,7 +115,7 @@ class ReferralDAO extends DAO {
 	 */
 	function replaceReferral(&$referral) {
 		$date = trim($this->datetimeToDB($referral->getDateAdded()), "'");
-		$this->replace(
+		$result = $this->replace(
 			'referrals',
 			array(
 				'status' => (int) $referral->getStatus(),
@@ -127,7 +127,10 @@ class ReferralDAO extends DAO {
 			array('article_id', 'url')
 		);
 
-		$referral->setId($this->getInsertObjectId());
+		if ($result == 2) { // ADODB magic number: 2 means successful new insert
+			$referral->setId($this->getInsertObjectId());
+		}
+
 		$this->updateLocaleFields($referral);
 		return $referral->getId();
 	}

@@ -3,8 +3,8 @@
 <!--
   * plugins/importexport/datacite/locale/ca_ES/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_%28ca_ES%29
@@ -14,32 +14,4 @@
  
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.importexport.datacite.displayName">Mòdul d'exportació/registre DataCite</message>
-	<message key="plugins.importexport.datacite.description">Export or register issue, article, galley and supplementary file metadata in DataCite format.</message>
-
-	<message key="plugins.importexport.datacite.intro"><![CDATA[If you want to register DOIs with DataCite, please contact the Managing
-		Agent via the <a href="http://datacite.org/contact" target="_blank">DataCite
-		homepage</a>, who will refer you to your local DataCite Member. Once you have
-		established a relationship with the Member organisation, you will be provided
-		with access to the DataCite service for minting persistent identifiers (DOIs)
-		and registering associated metadata. If you do not have your own username and
-		password you'll still be able to export into the DataCite XML format but you
-		cannot register your DOIs with DataCite from within OJS.
-		Please note that the password will be saved as plain text, i.e. not encrypted, due
-		to the DataCite registration service requirements.]]></message>
-
-	<message key="plugins.importexport.datacite.settings.description"><![CDATA[Please <a href="{$settingsUrl}">configure</a> the DataCite export plug-in before using it for the first time.]]></message>
- 
-	<message key="plugins.importexport.datacite.settings.form.description">Please configure the DataCite export plug-in:</message>
-	<message key="plugins.importexport.datacite.settings.form.username">Username (symbol)</message>
-	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Please enter the username (symbol) you got from DataCite. The username may not contain colons.</message>
- 
-	<message key="plugins.importexport.datacite.export.suppFiles">Export specific supplementary files</message>
-	<message key="plugins.importexport.datacite.export.selectSuppFile">Select Supplementary Files</message>
-	<message key="plugins.importexport.datacite.export.noSuppFiles">No supplementary files currently have DOIs assigned.</message>
- 
-	<message key="plugins.importexport.datacite.export.error.suppFileNotFound">No supplementary file matched the specified suppfile ID: {$param}.</message>
- 
-	<message key="plugins.importexport.datacite.cliUsage">Usage: 
-{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
 </locale>

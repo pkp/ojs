@@ -4,14 +4,14 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français) locale.
   *
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 	<message key="plugins.theme.custom.name">Plugiciel de thème personnalisé</message>
 	<message key="plugins.theme.custom.description">Ce plugiciel met en place un thème personnalisable.</message>
@@ -22,4 +22,6 @@
 	<message key="plugins.theme.custom.link">Lien</message>
 	<message key="plugins.theme.custom.background">Arrière-plan</message>
 	<message key="plugins.theme.custom.foreground">Avant-plan</message>
+	<message key="plugins.theme.custom.notWritablePlugin">À noter : l’option feuille de style de la revue est automatiquement activée par défaut car le fichier du plugiciel gérant la feuille de style, “{$stylesheetFileLocation}”, n’est pas accessible en écriture.</message>
+	<message key="plugins.theme.custom.perJournal">Feuille de style de la revue par défaut</message>
 </locale>

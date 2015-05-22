@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/dataverse/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Dataverse plugin localization strings
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+
+	<!-- Dataverse Plugin -->
+	<message key="plugins.generic.dataverse.displayName">Dataverse Plugin</message>
+	<message key="plugins.generic.dataverse.description">Deponeer datasets en/of andere aanvullende bestanden bij een Dataverse.</message>
+
+	<!-- Set up Dataverse: DVN URL and authentication details -->
+	<message key="plugins.generic.dataverse.settings.connect">Verbind</message>
+	<message key="plugins.generic.dataverse.settings.dvnUri">Dataverse Network URL</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriDescription">URL van het Dataverse Network waar het Dataverse van het tijdschrift toe behoort</message>
+	<message key="plugins.generic.dataverse.settings.usernameDescription">Gebruikersnaam of account om bestanden te deponeren in Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.passwordDescription">Wachtwoord voor de gebruikersnaam hierboven</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Dataverse Network URL is verplicht.</message>
+	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">Dataverse Network URL is niet geldig</message>
+	<message key="plugins.generic.dataverse.settings.usernameRequired">Geef een geldige gebruikersnaam voor het opgegeven Dataverse Network.</message>
+	<message key="plugins.generic.dataverse.settings.passwordRequired">Geef een geldig wachtwoord voor het opgegeven Dataverse Network.</message>
+
+	<!-- Set up Dataverse: select Dataverse -->
+	<message key="plugins.generic.dataverse.settings.selectDataverse">Kies Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>
+	<message key="plugins.generic.dataverse.settings.dataverseDescription">Kies Dataverse om de databestanden van dit tijdschrift in te bewaren.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseRequired">Kies een  Dataverse.</message>
+
+	<!-- Plugin configuration: Settings -->
+	<message key="plugins.generic.dataverse.settings">Instellingen</message>
+	<message key="plugins.generic.dataverse.settings.dataPolicies">Data richtlijnen</message>
+	<message key="plugins.generic.dataverse.settings.dataPoliciesDescription">Configureer data richtlijnen.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicy">Data beschikbaarheids beleid</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityPolicyDescription">Algemene richtlijnen van het tijdschrift voor de beschikbaarheid van data. Dit wordt getoond bij 'over dit tijdschrift'.</message>
+	<message key="plugins.generic.dataverse.settings.dataAvailabilityRequired">Geef data beschikbaarheids richtlijnen op.</message>
+	<message key="plugins.generic.dataverse.settings.sectionPoliciesDescription">Voeg data beschikbaarheids richtlijnen voor specifieke tijdschriftsecties.</message>
+	<message key="plugins.generic.dataverse.settings.authorGuidelinesDescription"><![CDATA[Bewerk de <a href="{$authorGuidelinesUrl}" target="_blank">Auteursrichtlijnen</a> om richtlijnen toe te voegen voor data en citaties.]]></message>
+	<message key="plugins.generic.dataverse.settings.checklistDescription"><![CDATA[Bewerk de  <a href="{$checklistUrl}" target="_blank">inzendings voorbereidings checklist</a> om auteurs te helpen met richtlijnen voor data inzending en citaties.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewPolicyDescription"><![CDATA[Bewerk <a href="{$reviewPolicyUrl}" target="_blank">Review richtlijnen</a> vanwege datasets.]]></message>
+	<message key="plugins.generic.dataverse.settings.reviewGuidelinesUrl"><![CDATA[Bewerk <a href="{$reviewGuidelinesUrl}" target="_blank">Review richtlijnen</a> om instructies toe te voegen voor het reviewen van datasets.]]></message>
+	<message key="plugins.generic.dataverse.settings.copyeditInstructionsUrl"><![CDATA[Bewerk <a href="{$copyeditInstructionsUrl}" target="_blank">Tekstredactie instructies</a>om instructies voor datasets toe te voegen.]]></message>
+	<message key="plugins.generic.dataverse.settings.termsOfUse">Gebruiksvoorwaarden</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseRequired">Voeg gebruiksvoorwaarden toe of haal ze op uit Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.termsOfUseDescription">Geef de gebruiksvoorwaarden waar gebruikers akkoord met moeten gaan voor ze datasets kunnen deponeren</message>
+	<message key="plugins.generic.dataverse.settings.fetchTermsOfUse">Haal de gebruiksvoorwaarden op uit het Dataverse van dit tijdschrift.</message>
+	<message key="plugins.generic.dataverse.settings.defineTermsOfUse">Geef aangepaste gebruiksvoorwaarden in het veld hieronder.</message>
+	<message key="plugins.generic.dataverse.settings.dataverseTermsOfUseError">Kan de gebruiksvoorwaarden niet ophalen uit het Dataverse. Controleer de connectie-instellingen</message>
+	<message key="plugins.generic.dataverse.settings.metadata">Metadata instellingen</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat">Citatie formaat</message>
+	<message key="plugins.generic.dataverse.settings.citationFormatDescription">Kies het formaat van de citatie zoals die wordt getoond in de studie catalogus informatie.</message>
+	<message key="plugins.generic.dataverse.settings.citationFormat.apa">APA Citatie stijl</message>
+	<message key="plugins.generic.dataverse.settings.pubIdType">Publieke identificatie type</message>
+	<message key="plugins.generic.dataverse.settings.pubIdTypeDescription"><![CDATA[Kies welk type publieke identificatie wordt gebuikt om aan het artikel te refereren. Als er geen <a href="{$pubIdsUrl}">public identifier plugins</a> ingeschakeld zijn, zullen citaties gebruik maken van OJS URLs.]]></message>
+	<message key="plugins.generic.dataverse.settings.workflow">Workflow instellingen</message>
+	<message key="plugins.generic.dataverse.settings.requireData">Vereis dat bestanden</message>
+	<message key="plugins.generic.dataverse.settings.requireDataDescription">Vereis dat inzendingen databestanden bevatten die gedeponeerd zijn in Dataverse.</message>
+	<message key="plugins.generic.dataverse.settings.requireDataError">Auteurs zijn verplicht om de databestanden van hun inzending in Dataverse te deponeren. Laad een aanvullend bestand om verder te gaan.</message>
+	<message key="plugins.generic.dataverse.settings.studyRelease">Geef conceptstudies vrij</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseSubmissionAccepted">Redacteur accepteert inzending</message>
+	<message key="plugins.generic.dataverse.settings.studyReleaseArticlePublished">Artikel is gepubliceerd</message>
+
+	<!-- Settings: default values -->
+	<message key="plugins.generic.dataverse.settings.default.dataAvailabilityPolicy"><![CDATA[{$journal} vereist, als voorwaarde voor publicatie, dat data die de resultaten in het artikel onderbouwt, wordt gedeponeerd in een geschikt publiek archief. {$journal} beveelt het <a href="http://thedata.harvard.edu/">Harvard Dataverse</a>, aan. Dat is gratis en toegankelijk voor alle onderzoekers voor delen, citeren, hergebruiken en archiveren van onderzoeksdata. Data zijn belangrijke producten van wetenschappelijk onderzoek en moeten bewaard worden en ook in de verre toekomst bruikbaar zijn. Auteurs kunnen er voor kiezen om de data openbaar beschikaar te maken op het moment van publicatie. Uitzonderingen zijn mogelijk, dit is ter beoordeling aan een redacteur, vooral in het geval van gevoelige informatie zoals gegevens over personen of de locatie van bedreigde diersoorten. Uitzonderingen moeten gedocumenteerd worden met uitleg in het artikel. (Afgeleid van <a href="http://datadryad.org/pages/jdap">Joint Data Archiving Policy</a> (JDAP)).]]></message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras">Voorbeeld auteursrichtlijnen</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines.extras.label">Toon voorbeeld data inzending en citatie richtlijnen</message>
+	<message key="plugins.generic.dataverse.settings.default.authorGuidelines"><![CDATA[<ol>
+     <li>
+       <p>Definitie van data die gedeeld moet worden</p>
+       <p>Een "minimale dataset" kan gedefinieerd worden als de dataset die gebruikt is om te komen tot de conclusies uit het manuscript, met de gerelateerde metadata en methodes en alle additionele gegevens die nodig zijn om bevindingen uit de studie te repliceren. Geef voldoende informatie zodat een onderzoeker de data kan begrijpen en geef alle citaties naar de data waar de replicatieset van is afgeleid. De belangrijkste beschrijvende data, methodes en onderzoeksresultaten moeten onderdeel uitmaken van het manuscript, onafhanelijk van het deponeren van de data. Auteurs met datasets de te groot zijn om gedeeld te worden via repositories of ingezonden bestanden, kunnen contact opnemen met {$journal} voor advies. (Afgeleid van <a href="http://www.plos.org/data-access-for-the-open-access-literature-ploss-data-policy/">PLOS' Data Policy</a>)</p>
+     </li>
+     <li>
+       <p>Richtlijnen voor het delen van datasets die afgeleide zijn van onderzoek met menselijke deelnemers</p>
+       <p>{$journal} erkent dat er gevallen zijn waar privacy, nationale veiligheid of commerciële belangen verhinderen dat de volledige data openbaar gemaakt wordt. In die gevallen moeten de onderzoekers hun data analyse delen onder de minst beperkende voorwaarden die juridisch zijn toegestaan, conform de richtlijnen en ethiek van hun vakgebied. Dit houdt in dat niet-gevoelige gegevens, samenvattende data, metadata en code geopenbaard moeten worden. Er wordt ook medewerking verwacht als de eigenaar van de data andere onderzoekers toestemming geeft voor het gebruik van de data. (Afgeleid van OKF's <a href="http://openeconomics.net/principles/#sthash.MdxVXZlC.dpuf">Open Economics Priciples</a>)</p>
+     </li>
+     <li>
+       <p>Richtlijnen voor Data Citatie</p>
+       <p>Als uw data wordt met uw manuscript wordt ingezonden via het inzendingsformulier van OJS, dan zal Harvard Dataverse automatisch een citatie genereren. Mocht uw data al in een repository gedeponeerd zijn, dan kunt u dit data citatie formaat gebruiken bij het inzenden van uw manuscript:</p>
+       <p>Author(s), Year, Dataset Title, Global Persistent Identifier, Data Repository or Archive, version and subset.</p>
+       <p>Voor meer informatie over best practices voor data citatie, zie <a href="http://www.force11.org/datacitation">Force11's Data Citation Priciples</a>.</p>
+     </li>
+   </ol>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras">Inzending voorbereiding checklist voorbeelden</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist.extras.label">Toon checklist onderdelen voor inzendingen met datasets</message>
+	<message key="plugins.generic.dataverse.settings.default.checklist"><![CDATA[<ol>
+   <li><p>Als u datasets wilt delen over onderzoek met menselijke deelnemmers, bekijk dan eerst hierboven de richtlijnen daarover.</p></li>
+   <li><p>Bereid uw dataset voor op deponeren door de replicatierichtlijnen te bekijken: <a href="http://thedata.org/book/replication-guidelines">http://thedata.org/book/replication-guidelines</a></p></li>
+   <li><p>Als u deponeert in het Harvard Dataverse, kunt u uw dataset tegelijk met uw manuscript in OJS inzenden in {$journal}. De data zal automatisch gedeponeerd worden in het Harvard Dataverse en er wordt een data citatie met een persistente URL gegenereerd (DOI), waarmee u anderen uw data kunt laten citeren als uw artikel gepubliceerd is.</p></li>
+   <li><p>Als uw dataset al in een openbaar archief zit, kunt u een data citatie met een persistente URL opgeven. Zie de auteursrichtlijnen voor richtlijnen voor data citatie.</p></li>
+   </ol>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras">Bekijk voorbeeldrichtlijnen</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy.extras.label">Toon voorbeelden van review richtlijnen voor datasets</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewPolicy"><![CDATA[<ul>
+   <li><p>Ingezonden datasets worden behandeld als deel van de publicatie bij de peer review; OF</p></li>
+   <li><p>Bij acceptatie en voorafgaand aan de finale versie van het manuscript moet de onderliggende data ingezonden worden, met een beschrijvijgn van de totstandkoming van de dataset (inclusief verschillen met eerdere versies en de naam van alle software die gebruikt is).</p></li>
+   </ul>
+   <p>Een review richtlijn moet iets zeggen over datasets die voortkomen uit werken met menselijke deelnemers:</p>
+   <ul>
+   <li><p>Datasets die voortkomen uit werken met menselijke deelnemers moeten duidelijk maken dat de pricacy van de deelnemers wordt gewaarbordg in overeenstemming met het data beschikbaarheisbeleid. Bij voorkeur voldoen ze aan de "minimale dataset" eisen zoals beschieven in het data beschikbaarheidsbeleid.</p></li>
+   </ul>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras">Review richtlijnen voorbeeld</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines.extras.label">Toon voorbeeldrichtljnen voor het reviewen van datasets</message>
+	<message key="plugins.generic.dataverse.settings.default.reviewGuidelines"><![CDATA[<p>Met betrekking tot de beijgevoegde data, moeten reviewer vaststellen dat het artikel en de data in overeenstemming zijn met de de data-inzendings rechtlijnen van het tijdschrift, dat de data consitent lijkt met het artikel, en dat het artikel en de aanvullende documentatie voldoende zijn om de data te begrijpen alsmede de herkomst en de manier waarop ze gebruikt zijn.</p>]]></message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras">Tekstredactie instructies voorbeeld</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions.extras.label">Toon voorbeelden van tekstredactie instructies voor datasets</message>
+	<message key="plugins.generic.dataverse.settings.default.copyeditInstructions"><![CDATA[<ul>
+			<li><p>Tekstredacteuren hebben vastgesteld dat het data citatie beleid is gevolgd; OF</p></li>
+			<li><p>Tekstredacteuren hebben vastgesteld dat de empirische beweringen vergezeld zijn van toepasselijke data citaties.</p></li>
+		</ul>]]></message>
+
+	<!-- Notifications -->
+	<message key="plugins.generic.dataverse.notification.studyCreated">Data van de inzeniding is gedeponeerd in Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.studyUpdated">Data van de inzending is bijgewerkt in Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileAdded">Aanvullend bestand is gedeponeerd in Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.fileDeleted">Aanvullend bestand is verwijderd uit Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.studyDeleted">Data van de inzending is verwijderd uit Dataverse.</message>
+	<message key="plugins.generic.dataverse.notification.releaseDataverse">Data die gepubliceerd is in het Dataverse van dit tijdschrift is niet toegankelijk tot het dataverse is vrijgegeven. Log in op het Dataverse en geef het vrij.</message>
+	<message key="plugins.generic.dataverse.notification.studyReleased"><![CDATA[<p>Data van de inzending is gepubliceerd in Dataverse:</p><p>{$dataCitation}</p>]]></message>
+	<message key="plugins.generic.dataverse.notification.error">Er is een fout opgetreden tijdens het bijwerken van de data van de inzending in Dataverse.</message>
+
+	<!-- Article metadata for completed submissions: form errors -->
+	<message key="plugins.generic.dataverse.metadataForm.studyLocked">De Dataverse studie van deze inzending is geblokkeerd vanwege verwerking. Als de verwerking voltooid is kan er pas weer metadata bijgewerkt worden. .</message>
+
+	<!-- Additional metadata: suppfile form -->
+	<message key="plugins.generic.dataverse.suppFile.title">Dataverse Plugin: Publiceer data</message>
+	<message key="plugins.generic.dataverse.suppFile.description">Onderzoeksdata kan ingezonden worden voor publicatie door aanvullende bestanden te deponeren in het Dataverse van dit tijdschrift of door een citatie op te geven van data die al in een repository staat.</message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataNone"><![CDATA[Behandel het geladen bestand als een aanvullend bestand. Het bestand wordt <strong>niet</strong> in Dataverse gedeponeerd.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishDataDataverse"><![CDATA[Deponeer bestand in Dataverse. De auteur accepteert e en stemt in met de Dataverse <a href="javascript:openWindow('{$dataverseTermsOfUseUrl}');">gebruiksvoorwaarden</a>.]]></message>
+	<message key="plugins.generic.dataverse.suppFile.publishData.error">Laad een bestand om te deponeren in Dataverse.</message>
+	<message key="plugins.generic.dataverse.suppFile.dataCitationDescription">Het bestand wordt toegevoegd aan de Dataverse studie van deze inzending:</message>
+	<message key="plugins.generic.dataverse.suppFile.studyLocked">Deze studie is vergrendeld vanwege lopende bewerkingen. Er kunnen geen veranderingen worden aangebracht tot de bewerkingen voltooid zijn.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation">Externe datacitatie</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.description">Als de data die bij deze inzending gepubliceerd moet worden, al in een andere repository staat, geef daar dan een citatie van.</message>
+	<message key="plugins.generic.dataverse.suppFile.externalDataCitation.error">Laad de bestanden die gedeponeerd moeten worden in Dataverse of geef een externe data citatie</message>
+
+	<!-- Terms of use -->
+	<message key="plugins.generic.dataverse.termsOfUse.title">Gebruiksvoorwaarden</message>
+	<message key="plugins.generic.dataverse.termsOfUse.dataverse">Dataverse</message>
+
+	<!-- Data availality policy -->
+	<message key="plugins.generic.dataverse.dataAvailabilityPolicy.title">Data beschikbaarheids beleid</message>
+
+	<!-- Block plugin -->
+	<message key="plugins.generic.dataverse.block.displayName">Dataverse Block Plugin</message>
+	<message key="plugins.generic.dataverse.block.title">Data citatie</message>
+
+	<!-- Reading tools: suppfiles -->
+	<message key="plugins.generic.dataverse.suppFiles.view">Bekijk in Dataverse</message>
+
+	<!-- Field labels -->
+	<message key="plugins.generic.dataverse.dataCitation">Data citatie</message>
+
+	<!-- Citation "in press" info -->
+	<message key="plugins.generic.dataverse.citationAPA.inPress">(in press).</message>
+</locale>

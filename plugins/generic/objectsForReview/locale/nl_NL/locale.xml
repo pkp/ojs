@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/objectsForReview/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Objects for review plugin localization strings.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+
+	<!-- Objects For Review Plug-In -->
+	<message key="plugins.generic.objectsForReview.displayName">Objects For Review</message>
+	<message key="plugins.generic.objectsForReview.reminderTask.name">Object review herinnering</message>
+	<message key="plugins.generic.objectsForReview.description">Vraag om reviews van objecten. Beheer de te reviewen objecten en het reviewproces.</message>
+
+	<!--  Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
+
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectTypes">Objecttypes</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.description">Hier kunt u de voorgedefinieerde objecttypes installeren, geïnstalleerde wijzigen, of eigen objecttypes toevoegen.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.name">Naam</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.none">Geen</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons">Personen</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.persons.description">Geef alle mogelijke rollen die een persoon kan hebben die van belang zijn voor het reviewen van een object (bv. auteur, contributeur, enz). U kun ze later niet meer toevoegen of veranderen.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectType">Objecttype</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.confirmDelete">Hiermee worden ook alle bestaande objecten voor review van dit typer verwijderd. Weet u zeker dat u het object review type wilt verwijderen?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.create">Maak nieuw objecttype</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.edit">Objecctype</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.update">Bijwerken</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.updateLocales">Bewerk taalgegevens voor de hierboven geselecteerde objecten:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.install">Installeer</message>
+	<message key="plugins.generic.objectsForReview.editor.objectTypes.installObjects">Installeer de ontbrekende review objecten - kies de typen en talen en druk op de installeerknop:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.name">Naam</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.description">Beschrijving en instructies</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.metadata">Metadata</message>
+	<message key="plugins.generic.objectsForReview.editor.objectType.preview">Voorvertoning</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata">Bekijk object metadata</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.none">Geen</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copyTo">Kopieer naar:</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.create">Creëer review object metadata</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.edit">Review object metadata</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.confirmDelete">Hierdoor wordt ook alle identieke en bestaande review object metadata verwijderd. Weet u zeker dat u de metadata van het review object wilt verwijderen?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.copy">Exemplaar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.name">Naam</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.required">Verplicht</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.display">Toon</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.chooseType">Kies metadata type</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.smalltextfield">Tekstveld voor één woord</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textfield">Tekstveld voor één regel</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.textarea">Uitgebreid tekstveld</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.checkboxes">Aankruisvelden (u kunt er één of meer kiezen)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.radiobuttons">Radio knoppen (u kunt er slechts één kiezen)</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.dropdownbox">Uitklapveld</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.roledropdownbox">uitklapveld rol</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.type.langdropdownbox">Uitklapveld taal</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.changeType">Verander type</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.metadataType">Metadata type</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.possibleOptions">Opties</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.addOptionItem">Selectie toevoegen</message>
+
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings">Instellingen</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewMode">Beheer</message>
+	<message key="plugins.generic.objectsForReview.settings.modeFull">Modus 1: toon alle objecten voor review, beheer object reviewers en publiceer object metadata.</message>
+	<message key="plugins.generic.objectsForReview.settings.modeMetadata">Modus 2: Alleen publiceren object metadata.</message>
+	<message key="plugins.generic.objectsForReview.settings.description"><![CDATA[<h5>Modus 1</h5><p>Het volgende werkproces wordt ondersteund:</p><ul><li>Redacteur voegt de te reviewen objecten toe.</li><li>Auteurs die intersse hebben in het doen van een review, maken dat kenbaar aan een redacteur.</li><li>Dedacteur kan dat verzoek honoreren of weigeren en meldt dat aan de auteur.</li><li>Er wordt een datum vastgesteld waarop de review gereed moet zijn.</li><li>De redacteur stuurt een exemplaar van het object naar de auter en herbevestigt de inzenddatum.</li><li>Auteur stuurt het review in via het normale inzendproces.</li><li>Object metadata wordt gepubliceerd als onderdeel van de inzending van de review.</li></ul><p>Deze plugin ondersteunt tijdschiften met meerdere redacteuren. De redacteur die een object toevoegt wordt de redacteur en het primaire contact voor dat object.</p><h5>Modus 2</h5><p>Het volgende werkproces wordt onder steund:</p><ul><li>Redacteur voegt de te reviewen objecten toe.</li><li>Redacteur koppelt inzendingen (reviews) aan een object.</li><li>Object metadata wordt gepubliceerd als onderdeel van de inzending van de review.</li></ul>]]></message>
+	<message key="plugins.generic.objectsForReview.settings.displayMetadata">Toon object metadata</message>
+	<message key="plugins.generic.objectsForReview.settings.displayAbstract">Toon object metadata op de samenvattingspagina's van het artikel.</message>
+	<message key="plugins.generic.objectsForReview.settings.displayListing">Publiceer de lijst met beschikbare objecten via het navigatie-item "Objecten voor review"</message>
+	<message key="plugins.generic.objectsForReview.settings.objectsForReviewDue">Verwachte object reviews</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks1">Reviews worden verwacht</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeks2">week/weken nadat het object aan de auteur is toegekend.</message>
+	<message key="plugins.generic.objectsForReview.settings.emailReminders">E-mail herinneringen</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays1">Stuur auteurs een herinneringsmail</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">dag(en) voor het review verwacht wordt.</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">Stuur auteurs een herinneringsmail</message>
+	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">dag(en) nadat het review verwacht werd.</message>
+	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Noot:</strong> Om deze opties te activeren moet de sitebeheerder de <tt>scheduled_tasks</tt> optie in het OJS configuratiebestand inschakelen. Additionele configuratie van de serveren nodig zijn om dit mogelijk te maken (wat wellicht niet op alle servers mogelijk is), zoals aangegeven in de OJS documentatie..]]></message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Additionele informatie</message>
+	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Additionele informatie die bij de te reviewen objecten wordt gepubliceerd.</message>
+
+	<!-- Search, filter, sort -->
+	<message key="plugins.generic.objectsForReview.search.field.title">Titel</message>
+	<message key="plugins.generic.objectsForReview.search.field.abstract">Samenvatting</message>
+	<message key="plugins.generic.objectsForReview.search.noResults">Geen zoekresultaten</message>
+	<message key="plugins.generic.objectsForReview.filter.filterBy">Filter op</message>
+	<message key="plugins.generic.objectsForReview.sort.sortBy">Sorteer op</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionAsc">Oplopend</message>
+	<message key="plugins.generic.objectsForReview.sort.sortDirectionDesc">Aflopend</message>
+
+	<!-- Objects For Review -->
+	<message key="plugins.generic.objectsForReview.objectsForReview.pageTitle">Objecten voor review</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.noneCreated">Geen objecten voor review</message>	
+	<message key="plugins.generic.objectsForReview.objectsForReview.title">Titel</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.dateCreated">Aangemaakt</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.status">Status</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectReviewer">Object reviewer</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.objectType">Object type</message>
+	<message key="plugins.generic.objectsForReview.objectsForReview.editor">Redacteur</message>
+
+	<!-- Object For Review Assignments -->
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAll">Objecten voor review taken - Alle</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.all">Alle</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleRequested">Objecten voor review taken - Aangevraagd</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.requested">Aangevraagd</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned">Objecten voor review taken - Toegekend</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned">Toegekend</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleMailed">Objecten voor review taken - Verstuurd</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed">Verstuurd</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleSubmitted">Objecten voor review taken - Ingezonden</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submitted">Ingezonden</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.title">Titel</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.status">Status</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.objectReviewer">Object reviewer</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dateCreated">Aangemaakt</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.dueDate">Verwacht op</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.submission">Inzending</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.noneCreated">Geen object voor review taken</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status">Status</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">Beschikbaar</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.requested">Aangevraagd</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">Toegekend</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed">Verstuurd</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted">Ingezonden</message>
+
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.additionalNotes">Additionele opmerkingen</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notes">Opmerkingen</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.notesInstructions">Alleen voor de redacteur. Wordt niet gepubliceerd.</message>
+
+	<!-- Objects For Review Assignments Management by Editor -->
+	<message key="plugins.generic.objectsForReview.editor.objectsForReview">Objects For Review</message>
+	<message key="plugins.generic.objectsForReview.editor.assignments">Taken opnieuw laden</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.editor.select">Kies</message>
+	<message key="plugins.generic.objectsForReview.editor.assignObjectReviewer">Ken toe</message>
+	<message key="plugins.generic.objectsForReview.editor.acceptObjectReviewer">Accepteer</message>
+	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">Weiger</message>
+	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">Object verstuurd</message>
+	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">Verwijder</message>
+	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">Weet u zeker dat u deze auteur wilt verwijderen en de review geschiedenis van dit object wilt wissen?</message>
+	<message key="plugins.generic.objectsForReview.editor.selectSubmission">Kies inzending</message>
+	<!-- Assign Author -->
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor">Auteur toekennen</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.assign">Ken toe</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.createNewUser">Nieuwe gebruiker aanmaken</message>
+
+	<message key="plugins.generic.objectsForReview.editor.noMailingAddress">Geen postadres bekend.</message>
+
+	<!-- Object For Review Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview">Object voor review</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseLanguage">Kies taal</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseOption">Kies optie</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.chooseRole">Kies rol</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.noAnswer">Geen antwoord</message>
+	<message key="plugins.generic.objectsForReview.editor.edit">Bewerk</message>
+	<message key="plugins.generic.objectsForReview.editor.create">Object voor review aanmaken</message>
+	<message key="plugins.generic.objectsForReview.editor.saveAndCreateAnother">Bewaren en een nieuwe maken</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.addPerson">Persoon toevoegen</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.deletePerson">Verwijder</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPage">Omslag pagina</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageInstructions">(Toegestane formaten: .gif, .jpg, of .png )</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverPageUploaded">Geladen</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.removeCoverPage">Omslag pagina afbeelding verwijderen?</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.remove">Verwijder</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImage">Omslag afbeelding</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.coverImageAltText">Alternatieve tekst omslagafbeelding</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.additionalNotes">Additionele opmerkingen</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notes">Opmerkingen</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.notesInstructions">Alleen voor de redacteur. Wordt niet gepubliceerd.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditor">Redacteur toekennen</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.assignEditorInstructions">Kies de redacteur die verantwoordelijk wordt voor dit te reviewen object.</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.available">Beschikbaar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.availableInstructions">Geef aan of het object beschikbaar is om te reviewen</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.available">Beschikbaar</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.status.notAvailable">Niet beschikbaar</message>
+
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.delete">Verwijder</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.confirmDelete">Hiermee wordt het object en de toegekende taken verwijderd. Weet u zeker dat u dit object wilt verwijderen?</message>
+
+	<!-- Public -->
+	<message key="plugins.generic.objectsForReview.public.headerLink">Objecten voor review</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReview">Objecten voor review</message>
+	<message key="plugins.generic.objectsForReview.public.objectForReview">Object voor review</message>
+	<message key="plugins.generic.objectsForReview.public.objectsForReviewInstructions"><![CDATA[<p>Om een te reviewen object aan te vragen:</p><ul><li><a href="{$registerUrl}" target="_parent">Registreer</a> als auteur bij dit tijdschriftl.</li><li><a href="{$loginAuthorUrl}" target="_parent">Log in</a> als auteur.</li><li>Klik op de link die correspondeert met het object waar u interesse in heeft.</li></ul>]]></message>
+	
+	<!-- Article Abstract Page -->
+	<message key="plugins.generic.objectsForReview.public.articleObjectsForReview">Objecten gereviewd in dit artikel</message>
+
+
+	<!-- Author -->
+	<message key="plugins.generic.objectsForReview.author.objectsForReview">Objecten voor review</message>
+	<message key="plugins.generic.objectsForReview.author.myObjectsForReview">Mijn objecten</message>
+	<!--  Actions -->
+	<message key="plugins.generic.objectsForReview.author.requestObjectForReview">Vraag dit object aan om te reviewen</message>
+
+	<message key="plugins.generic.objectsForReview.author.submit">Stuur in</message>
+	<message key="plugins.generic.objectsForReview.author.view">Bekijk</message>
+	<!-- Submission -->
+	<message key="plugins.generic.objectsForReview.author.submitInstructions">Geef aan of deze inzending een review is voor een van de volgende aan u toegekende objecten</message>
+
+
+	<!-- Notifications -->
+	<message key="plugins.generic.objectsForReview.notification.objectTypeInstalled">Review object type geïnstalleerd.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeCreated">Review object type aangemaakt.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeUpdated">Review object type bijgewerkt</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeActivated">Review object type geactiveerd.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeactivated">Review object type gedeactiveerd.</message>
+	<message key="plugins.generic.objectsForReview.notification.objectTypeDeleted">Review object type verwijderd. Idem voor de gerelateerde objecten en de toegekende taken.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrCreated">Nieuw object voor review aangemaakt.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrRequested">Object voor review aangevraagd. In afwachting va.n bevestiging door de redacteur.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Object voor review bijgewerkt</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Object voor review en de taken daarvan verwijderd.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAauthorAssigned">Auteur toegekend aan object voor review.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Auteursverzoek geweigerd. Object hersteld naar de oorspronkelijke staat.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">Object voor review gemarkeerd als verstuurd naar de auteur.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Auteur verwijderd. Object hersteld naar de oorspronkelijke staat.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSubmissionAssigned">Inzending toegekend aan object voor review.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrSettingsSaved">Object voor review plugin instellingen opgeslagen.</message>
+
+
+	<!-- errors -->
+	<!-- Object Types Management -->
+	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">Er moet een naam opgegeven worden voor het review object type.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.nameRequired">Er moet een naam opgegeven worden voor de review object metadata.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectMetadata.form.typeRequired">Er moet een type opgegeven worden voor de review object metadata.</message>
+	<!-- Object For Review Edit -->
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredFields">Gelieve de verplichte velden in te vullen.</message>
+	<message key="plugins.generic.objectsForReview.editor.objectForReview.requiredPersonFields">Kies de rol van de persoon en geef de voornaam of de achternaam.</message>
+	<!-- Objects For Review Settings -->
+	<message key="plugins.generic.objectsForReview.settings.modeRequired">Er moet een modus opgegeven worden.</message>
+	<message key="plugins.generic.objectsForReview.settings.modeValid">Geef een geldige modus.</message>
+	<message key="plugins.generic.objectsForReview.settings.numDaysReminderValid">Geef een correct aantal dagen voor de herinneringsmail.</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksRequired">Geef het aantal weken waarbinnen objectreviews uitgevoerd moeten zijn.</message>
+	<message key="plugins.generic.objectsForReview.settings.dueWeeksValid">Geef een geldig aantal weken voor de reviewtermijn.</message>
+
+
+
+
+
+	<!-- Objects for Review and their Metadata -->
+	<!-- Common Metadata -->
+	<message key="plugins.generic.objectsForReview.object.metadata.title">Titel</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.person">Persoon</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.date">Datum</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.language">Taal</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.shortTitle">Korte titel</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.url">URL</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.rights">Rechten</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.abstract">Samenvatting</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable">Exemplaar beschikbaar</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.yes">Ja</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.copyAvailable.no">Nee</message>
+	<message key="plugins.generic.objectsForReview.object.metadata.coverPage">Omslagpagina</message>
+	<!-- Artwork -->
+	<message key="plugins.generic.objectsForReview.object.artwork">Omslagafbeelding</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.artist">Kunstenaar</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.medium">Middel</message>
+	<message key="plugins.generic.objectsForReview.object.artwork.size">Maat</message>
+	<!-- Audio Recording -->
+	<message key="plugins.generic.objectsForReview.object.audioRecording">Audio opname</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.performer">Uivoerende</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.composer">Componist</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.person.wordsByr">Tekst door</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.format">Formaat</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.seriesTitle">Serietitel</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.numberOfVolumes">Aantal volumes</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.label">Label</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.runningTime">Duur</message>
+	<message key="plugins.generic.objectsForReview.object.audioRecording.isbn">ISBN</message>
+	<!-- Bill -->
+	<message key="plugins.generic.objectsForReview.object.bill">Wet</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.sponsor">Sponsor</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.bill.person.cosponsor">Co-sponsor</message>
+	<message key="plugins.generic.objectsForReview.object.bill.number">Wet nummer</message>
+	<message key="plugins.generic.objectsForReview.object.bill.code">Code</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codeVolume">Code Volume</message>
+	<message key="plugins.generic.objectsForReview.object.bill.section">Sectie</message>
+	<message key="plugins.generic.objectsForReview.object.bill.codePages">Code Pages</message>
+	<message key="plugins.generic.objectsForReview.object.bill.legislativeBody">Wetgevend orgaan</message>
+	<message key="plugins.generic.objectsForReview.object.bill.session">Sessie</message>
+	<message key="plugins.generic.objectsForReview.object.bill.history">Geschiedenis</message>
+	<!-- Blog Post -->
+	<message key="plugins.generic.objectsForReview.object.blogPost">Blog Post</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.commenter">Comentator</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.blogTitle">Blog titel</message>
+	<message key="plugins.generic.objectsForReview.object.blogPost.websiteTitle">Website titel</message>
+	<!-- Book -->
+	<message key="plugins.generic.objectsForReview.object.book">Boek</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.seriesEditor">Serie-redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.book.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.book.series">Serie</message>
+	<message key="plugins.generic.objectsForReview.object.book.seriesNumber">Serie-nummer</message>
+	<message key="plugins.generic.objectsForReview.object.book.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfVolumes">Aantal volumes</message>
+	<message key="plugins.generic.objectsForReview.object.book.edition">Editie</message>
+	<message key="plugins.generic.objectsForReview.object.book.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisher">Uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.book.publisherURL">URL uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.book.numberOfPages">Aantal pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.book.isbn">ISBN</message>
+	<!-- Book Section -->
+	<message key="plugins.generic.objectsForReview.object.bookSection">Boeksectie</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.bookAuthor">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.seriesEditor">Serie-redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.bookTitle">Boektitel</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.series">Serie</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.seriesNumber">Serie-nummer</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfVolumes">Aantal volumes</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.edition">Editie</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisher">Uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.publisherURL">URL uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.numberOfPages">Aantal pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.bookSection.isbn">ISBN</message>
+	<!-- Case -->
+	<message key="plugins.generic.objectsForReview.object.case">Zaak</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.case.person.counsel">Raadgever</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporter">Reporter</message>
+	<message key="plugins.generic.objectsForReview.object.case.reporterVolume">Reporter volume</message>
+	<message key="plugins.generic.objectsForReview.object.case.court">Rechtbank</message>
+	<message key="plugins.generic.objectsForReview.object.case.docketNo">Docket nummer</message>
+	<message key="plugins.generic.objectsForReview.object.case.firstPage">Eerste pagina</message>
+	<message key="plugins.generic.objectsForReview.object.case.history">Geschiedenis</message>
+	<!-- Computer Program -->
+	<message key="plugins.generic.objectsForReview.object.computerProgram">Zaak</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.programmer">Programmeur</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.seriesTitle">Serie-titel</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.version">Versie</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.system">Systeem</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.programmingLanguage">Programmeertaal</message>
+	<message key="plugins.generic.objectsForReview.object.computerProgram.isbn">ISBN</message>
+	<!-- Conference Paper -->
+	<message key="plugins.generic.objectsForReview.object.conferencePaper">Conferentie-paper</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.seriesEditor">Serie-redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.person.translator">Vertale</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.proceedingsTitle">Proceedings-titel</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.conferenceName">Conferentienaam</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisher">Uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.publisherURL">URL uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.pages">Pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.series">Serie</message>
+	<message key="plugins.generic.objectsForReview.object.conferencePaper.isbn">ISBN</message>
+	<!-- Dictinary Entry -->
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry">Woordenboeklemma</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.seriesEditor">Serie-redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryEntry.dictionaryTitle">Titel woordenboek</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.series">Serie</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.seriesNumber">Serie-nummer</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.numberOfVolumes">Aantal volumes</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.edition">Editie</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.publisher">Uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitlek.numberOfPages">Aantal pagina;s</message>
+	<message key="plugins.generic.objectsForReview.object.dictionaryTitle.isbn">ISBN</message>
+	<!-- Document -->
+	<message key="plugins.generic.objectsForReview.object.document">Document</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.reviewedAuthor">Gerevieuwde auteur</message>
+	<message key="plugins.generic.objectsForReview.object.document.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.document.publisher">Uitgever</message>
+	<!-- E-mail -->
+	<message key="plugins.generic.objectsForReview.object.email">E-mail</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.email.person.recipient">Ontvanger</message>
+	<!-- Encyclopedia Article -->
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle">Enceclopedie-artikel</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.seriesEditor">Serie-redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.encyclopediaTitle">Ececlopedie-titel</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.series">Serie</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.seriesNo">Serie-nummer</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.volumeNo">Aantal volumes</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.edition">Editie</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.publisher">Uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.pages">Aantal pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.encyclopediaArticle.isbn">ISBN</message>
+	<!-- Film -->
+	<message key="plugins.generic.objectsForReview.object.film">Film</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.director">Regisseur</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.producer">Productie</message>
+	<message key="plugins.generic.objectsForReview.object.film.person.scriptwriter">Auteur script</message>
+	<message key="plugins.generic.objectsForReview.object.film.distributor">Distributie</message>
+	<message key="plugins.generic.objectsForReview.object.film.genre">Genre</message>
+	<message key="plugins.generic.objectsForReview.object.film.format">Formaat</message>
+	<message key="plugins.generic.objectsForReview.object.film.runningTime">Duur</message>
+	<!-- Forum Post -->
+	<message key="plugins.generic.objectsForReview.object.forumPost">Forum post</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.forumTitle">Forum titel</message>
+	<message key="plugins.generic.objectsForReview.object.forumPost.postType">Post type</message>
+	<!-- Hearing -->
+	<message key="plugins.generic.objectsForReview.object.hearing">Hearing</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.committee">Commissie</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.publisher">Uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.numberOfVolumes">Aantal volumes</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.documentNo">Documentnummer</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.pages">Pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.legislativeBody">Wetgevend orgaan</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.session">Sessie</message>
+	<message key="plugins.generic.objectsForReview.object.hearing.history">Geschiedenis</message>
+	<!-- Instant Message -->
+	<message key="plugins.generic.objectsForReview.object.instantMessage">Instant Message</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.instantMessage.person.recipient">Ontvanger</message>
+	<!-- Interview -->
+	<message key="plugins.generic.objectsForReview.object.interview">Interview</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewWith">Interview met</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.interviewer">Interviewer</message>
+	<message key="plugins.generic.objectsForReview.object.interview.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.interview.medium">Medium</message>
+	<!-- Journal Article -->
+	<message key="plugins.generic.objectsForReview.object.journalArticle">Tijdschriftartikel</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.editor">Redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.reviewedAuthor">Gereviewde auteur</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.publication">Publicatie</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issue">Nummer</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.pages">Pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.series">Serie</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesTitle">Serie-titel</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.seriesText">Serie-tekst</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.journalAbbr">Tijschriftafkorting</message>
+	<message key="plugins.generic.objectsForReview.object.journalArticle.issn">ISSN</message>
+	<!-- Letter -->
+	<message key="plugins.generic.objectsForReview.object.letter">Brief</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.letter.person.recepient">Ontvanger</message>
+	<message key="plugins.generic.objectsForReview.object.letter.type">Soort brief</message>
+	<!-- Magazine Article -->
+	<message key="plugins.generic.objectsForReview.object.magazineArticle">Lectuur-artikel</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.reviewedAuthor">Gereviewde auteur</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.publication">Publicatie</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issue">Nummer</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.pages">Pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.magazineArticle.issn">ISSN</message>
+	<!-- Manuscript -->
+	<message key="plugins.generic.objectsForReview.object.manuscript">Manuscript</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.type">Type</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.manuscript.numberOfPages">Aantal pagina's</message>
+	<!-- Map -->
+	<message key="plugins.generic.objectsForReview.object.map">Kaart</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.cartographer">Cartograaf</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.map.person.seriesEditor">Serie-redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.map.type">Type</message>
+	<message key="plugins.generic.objectsForReview.object.map.scale">Schaal</message>
+	<message key="plugins.generic.objectsForReview.object.map.seriesTitle">Serie-titel</message>
+	<message key="plugins.generic.objectsForReview.object.map.edition">Editie</message>
+	<message key="plugins.generic.objectsForReview.object.map.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.map.publisher">Uitgever</message>
+	<message key="plugins.generic.objectsForReview.object.map.isbn">ISBN</message>
+	<!-- Newspaper Article -->
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle">Krantenartikel</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.reviewedAuthor">Gereviede auteur</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.publication">Publicatie</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.edition">Editie</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.section">Sectie</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.pages">Pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.newspaperArticle.issn">ISSN</message>
+	<!-- Patent -->
+	<message key="plugins.generic.objectsForReview.object.patent">Patent</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.inventor">Uitvinder</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.attorney">Jurist/agent</message>
+	<message key="plugins.generic.objectsForReview.object.patent.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.patent.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.patent.country">Land</message>
+	<message key="plugins.generic.objectsForReview.object.patent.assignee">Toegekend aan</message>
+	<message key="plugins.generic.objectsForReview.object.patent.issuingAuthority">Toekennende autoriteit</message>
+	<message key="plugins.generic.objectsForReview.object.patent.number">Nummer</message>
+	<message key="plugins.generic.objectsForReview.object.patent.pages">Pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.patent.appNumber">Aanvraag nummer</message>
+	<message key="plugins.generic.objectsForReview.object.patent.priorityNumbers">Prioriteitsnummers</message>
+	<message key="plugins.generic.objectsForReview.object.patent.filingDate">Depot datum</message>
+	<message key="plugins.generic.objectsForReview.object.patent.references">Referenties</message>
+	<message key="plugins.generic.objectsForReview.object.patent.legalStatus">Juridische status</message>
+	<!-- Podcast -->
+	<message key="plugins.generic.objectsForReview.object.podcast">Podcast</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.podcaster">Uivoerende</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.person.guest">Gast</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.seriesTitle">Serie-titel</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.episodeNo">Episode nummer</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.fileType">Bestandstype</message>
+	<message key="plugins.generic.objectsForReview.object.podcast.runningTime">Duur</message>
+	<!-- Presentation -->
+	<message key="plugins.generic.objectsForReview.object.presentation">Prsentatie</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.presenter">Presentator</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.type">Type</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.presentation.meetingName">Naam van de meeting</message>
+	<!-- Radio Broadcast -->
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast">Radio uitzending</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.director">Regisseur</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.castMember">Uitvoerende</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.guest">Gast</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.producer">Productie</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.person.scriptWriter">Auteur script</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.programTitle">Programmatitel</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.episodeNo">Episode nummer</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.format">Formaat</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.network">Netwerk</message>
+	<message key="plugins.generic.objectsForReview.object.radioBroadcast.runningTime">Duur</message>
+	<!-- Report -->
+	<message key="plugins.generic.objectsForReview.object.report">Rapport</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.seriesEditor">Serie-redacteur</message>
+	<message key="plugins.generic.objectsForReview.object.report.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.report.no">Nummer</message>
+	<message key="plugins.generic.objectsForReview.object.report.type">Type</message>
+	<message key="plugins.generic.objectsForReview.object.report.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.report.seriesTitle">Serie-titel</message>
+	<message key="plugins.generic.objectsForReview.object.report.institution">Instituut</message>
+	<message key="plugins.generic.objectsForReview.object.report.pages">Pagina's</message>
+	<!-- Statute -->
+	<message key="plugins.generic.objectsForReview.object.statute">Statuut</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.statute.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.statute.code">Code</message>
+	<message key="plugins.generic.objectsForReview.object.statute.codeNo">Code nummer</message>
+	<message key="plugins.generic.objectsForReview.object.statute.publicLawNo">Openbare wet nummer</message>
+	<message key="plugins.generic.objectsForReview.object.statute.pages">Pagina's</message>
+	<message key="plugins.generic.objectsForReview.object.statute.section">Sectie</message>
+	<message key="plugins.generic.objectsForReview.object.statute.session">Sessie</message>
+	<message key="plugins.generic.objectsForReview.object.statute.history">Geschiedenis</message>
+	<!-- Thesis -->
+	<message key="plugins.generic.objectsForReview.object.thesis">Thesis</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.type">Type</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.university">Universiteit</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.thesis.numberOfPages">Aantal pagina's</message>
+	<!-- TV Broadcast -->
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast">TV uitzending</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.director">Regisseur</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.castMember">Uitvoerende</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.guest">Gast</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.producer">Producent</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.person.scriptWriter">Auteur script</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.programTitle">Programma-titel</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.episodeNo">Episode nummer</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.format">Formaat</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.network">Netwerk</message>
+	<message key="plugins.generic.objectsForReview.object.tvBroadcast.runningTime">Duur</message>
+	<!-- Video Recording -->
+	<message key="plugins.generic.objectsForReview.object.videoRecording">Video opname</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.director">Regisseur</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.castMember">Uitvoerende</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.guest">Gast</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.producer">Producent</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.person.scriptWriter">Auteur script</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.format">Formaat</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.seriesTitle">Serie titel</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.volume">Volume</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.numberOfVolumes">Aantal volumes</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.place">Plaats</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.studio">Studio</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.runningTime">Running Time</message>
+	<message key="plugins.generic.objectsForReview.object.videoRecording.isbn">ISBN</message>
+	<!-- Web Page -->
+	<message key="plugins.generic.objectsForReview.object.webPage">Webpagina</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.author">Auteur</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.contributor">Contributeur</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.person.translator">Vertaler</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteTitle">Website titel</message>
+	<message key="plugins.generic.objectsForReview.object.webPage.websiteType">Website type</message>
+
+
+</locale>

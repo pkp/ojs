@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
@@ -741,4 +741,6 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.subscriptions.form.dateRemindedAfter">Lembrete de pós-vencimento enviado</message>
 	<message key="manager.setup.copyrightYearBasis.Article">O ano padrão será deduzido da data de publicação do artigo, como em "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">O ano padrão será deduzido da data de publicação da edição.</message>
+	<message key="manager.setup.emailHeader">Cabeçalho do email</message>
+	<message key="manager.setup.emailHeaderDescription">Os e-mails predefinidos que são enviados pelo sistema em nome da revista começarão com este cabeçalho. Esses e-mails serão endereçados a partir do contato principal, por isso é importante esclarecer que o contato principal não é necessariamente o responsável pelo conteúdo da mensagem, que pode ser enviado em nome de um usuário diferente.</message>
 </locale>

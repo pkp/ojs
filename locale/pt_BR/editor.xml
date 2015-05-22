@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/editor.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
@@ -220,4 +220,6 @@
 	<message key="editor.issues.backToIssueGalleys">Voltar para composições de edição</message>
 	<message key="editor.issues.confirmDeleteGalley">Deseja realmente excluir esta composição?</message>
 	<message key="editor.notifyUsers.allMailingList">Incluir todas as mensagens na lista de correio ({$count} mensagens)</message>
+	<message key="editor.publicGalleyIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outra composição deste artigo. Por favor, escolha um identificador único no âmbito deste artigo.</message>
+	<message key="editor.issues.resetArticlePublicationDates">Redefinir as datas de publicação de artigo</message>
 </locale>

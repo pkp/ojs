@@ -7,8 +7,8 @@
 ;
 ; config.TEMPLATE.inc.php
 ;
-; Copyright (c) 2013-2014 Simon Fraser University Library
-; Copyright (c) 2003-2014 John Willinsky
+; Copyright (c) 2013-2015 Simon Fraser University Library
+; Copyright (c) 2003-2015 John Willinsky
 ; Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 ;
 ; OJS Configuration settings.
@@ -215,7 +215,7 @@ umask = 0022
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [finfo]
-mime_database_path = /etc/magic.mime
+; mime_database_path = /etc/magic.mime
 
 
 ;;;;;;;;;;;;;;;;;;;;;

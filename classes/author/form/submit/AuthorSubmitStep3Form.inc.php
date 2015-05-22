@@ -3,8 +3,8 @@
 /**
  * @file classes/author/form/submit/AuthorSubmitStep3Form.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorSubmitStep3Form
@@ -136,7 +136,9 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'abstract', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
+		return array_merge(parent::getLocaleFieldNames(), 
+							array('title', 'abstract', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 
+								'coverageSample', 'type', 'sponsor'));
 	}
 
 	/**

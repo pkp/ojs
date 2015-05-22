@@ -4,13 +4,13 @@
 <!--
   * @file plugins/generic/booksForReview/locale/fr_FR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Books for review plugin localization strings for the en_US (U.S. English) locale.
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 
 	<!-- Books For Review Notifications -->
@@ -190,4 +190,5 @@
 	<message key="plugins.generic.booksForReview.field.title">Titre</message>
 	<message key="plugins.generic.booksForReview.field.description">Description</message>
 
+	<message key="plugins.generic.booksForReview.reminderTask.name">Rappel pour l’évaluation d’un livre</message>
 </locale>

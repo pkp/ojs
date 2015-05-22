@@ -4,8 +4,8 @@
 <!--
   * locale/el_GR/author.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR (Greek) locale.
@@ -34,7 +34,6 @@
 	<message key="author.submit.cancelSubmission">Μπορείτε να ολοκληρώσετε αυτή την υποβολή αργότερα επιλέγοντας "Ενεργές Υποβολές" από την αρχική σελίδα του συγγραφέα.</message>
 	<message key="author.submit.notAccepting">Αυτό το περιοδικό δεν δέχεται υποβολές τη συγκεκριμένη χρονική στιγμή.</message>
 	<message key="author.submit.requestWaiver">Αίτηση Παράβλεψης Εισφοράς Συγγραφέα</message>
-	<message key="author.submit.qualityForWaiver">Παρακαλούμε εξετάστε την περίπτωση παράβλεψης της Εισφοράς του Συγγραφέα για την υποβολή αυτού του άρθρου</message>
 	<message key="author.submit.addReasonsForWaiver">Σας παρακαλούμε χρησιμοποιήστε το πλαίσιο σχολίων παρακάτω για να προσδιορίσετε τους λόγους για τους οποίους η καταβολή της εισφοράς συγγραφέα πρέπει να παραβλεφθεί.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Μεταφόρτωση έκδοσης με Επιμελημένο Κείμενο</message>
 	<message key="author.submissions.proofreadingCorrections">Διορθώσεις επιμελητή τυπογραφικών δοκιμίων</message>
@@ -127,4 +126,5 @@
 	<message key="author.submit.submissionLocale">Γλώσσα υποβολής</message>
 	<message key="author.submit.submissionLocaleDescription">Το περιοδικό δέχεται υποβολές σε πολλές γλώσσες. Επιλέξτε την κύρια γλώσσα της υποβολής από το παρακάτω μενού.</message>
 	<message key="author.submit.form.localeRequired">Παρακαλούμε επιλέξτε μια γλώσσα υποβολής.</message>
+	<message key="author.submit.qualifyForWaiver">Παρακαλούμε εξετάστε την εξαίρεση του Κόστους Υποβολής Άρθρου για αυτό το άρθρο.</message>
 </locale>

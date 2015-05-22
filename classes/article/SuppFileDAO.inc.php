@@ -3,8 +3,8 @@
 /**
  * @file classes/article/SuppFileDAO.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SuppFileDAO
@@ -17,13 +17,55 @@
 import('classes.article.SuppFile');
 
 class SuppFileDAO extends DAO {
+
+	/**
+	 * Get supp file objects cache.
+	 * @return GenericCache
+	 */
+	function &_getSuppFileCache() {
+		if (!isset($this->suppFileCache)) {
+			$cacheManager =& CacheManager::getManager();
+			$this->suppFileCache =& $cacheManager->getObjectCache('suppfile', 0, array(&$this, '_suppFileCacheMiss'));
+		}
+		return $this->suppFileCache;
+	}
+
+	/**
+	 * Callback when there is no object in cache.
+	 * @param $cache GenericCache
+	 * @param $id int The wanted object id.
+	 * @return SuppFile
+	 */
+	function &_suppFileCacheMiss(&$cache, $id) {
+		$suppFile =& $this->getSuppFile($id, null, false);
+		$cache->setCache($id, $suppFile);
+		return $suppFile;
+	}
+
+	/**
+	 * Flush the supp file galley cache.
+	 */
+	function flushCache() {
+		$cache =& $this->_getSuppFileCache();
+		$cache->flush();
+		unset($cache);
+	}
+
 	/**
 	 * Retrieve a supplementary file by ID.
 	 * @param $suppFileId int
 	 * @param $articleId int optional
+	 * @param $useCache boolean optional
 	 * @return SuppFile
 	 */
-	function &getSuppFile($suppFileId, $articleId = null) {
+	function &getSuppFile($suppFileId, $articleId = null, $useCache = false) {
+		if ($useCache) {
+			$cache =& $this->_getSuppFileCache();
+			$returner = $cache->get($suppFileId);
+			if ($returner && $articleId != null && $articleId != $returner->getArticleId()) $returner = null;
+			return $returner;
+		}
+
 		$params = array($suppFileId);
 		if ($articleId) $params[] = $articleId;
 
@@ -476,6 +518,25 @@ class SuppFileDAO extends DAO {
 			);
 			unset($suppFile);
 		}
+		$this->flushCache();
+	}
+
+	/**
+	 * Delete the public ID of a supp file.
+	 * @param $suppFileId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deletePubId($suppFileId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM article_supp_file_settings WHERE setting_name = ? AND supp_id = ?',
+			array(
+				$settingName,
+				(int)$suppFileId
+			)
+		);
 		$this->flushCache();
 	}
 }

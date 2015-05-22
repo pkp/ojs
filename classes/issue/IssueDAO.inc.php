@@ -3,8 +3,8 @@
 /**
  * @file classes/issue/IssueDAO.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueDAO
@@ -23,7 +23,7 @@ class IssueDAO extends DAO {
 		if ($cache->getCacheId() === 'current') {
 			$issue =& $this->getCurrentIssue($id, false);
 		} else {
-			$issue =& $this->getIssueById($id, null, false);
+			$issue =& $this->getIssueByBestIssueId($id, null, false);
 		}
 		$cache->setCache($id, $issue);
 		return $issue;
@@ -814,6 +814,25 @@ class IssueDAO extends DAO {
 			);
 			unset($issue);
 		}
+		$this->flushCache();
+	}
+
+	/**
+	 * Delete the public ID of an issue.
+	 * @param $issueId int
+	 * @param $pubIdType string One of the NLM pub-id-type values or
+	 * 'other::something' if not part of the official NLM list
+	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
+	 */
+	function deletePubId($issueId, $pubIdType) {
+		$settingName = 'pub-id::'.$pubIdType;
+		$this->update(
+			'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
+			array(
+				$settingName,
+				(int)$issueId
+			)
+		);
 		$this->flushCache();
 	}
 

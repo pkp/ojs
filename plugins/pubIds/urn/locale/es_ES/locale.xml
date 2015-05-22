@@ -3,15 +3,15 @@
 <!--
   * plugins/pubIds/urn/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
   * URN plugin localization strings
   -->
- 
+
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.pubIds.urn.urns">URN</message>
 
@@ -82,4 +82,11 @@
 
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">El sufijo URN indicado ya ha sido asignado a otro elemento publicado. Introduzca un único sufijo URN para cada elemento.</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Falta el número de comprobación.</message>
+	<message key="plugins.pubIds.urn.editor.excludePubObject">No asignar URN a {$pubObjectType}</message>
+	<message key="plugins.pubIds.urn.editor.urnClear">Limpiar URN</message>
+	<message key="plugins.pubIds.urn.editor.urnClear.description">Seleccione este checkbox para limpiar el URN existente de {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN">Excluir los objetos del número</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description">Use este botón para excluir los objetos (artículos, galeradas y ficheros complementarios) actualmente programados para este número de ser asignados a un URN. Note que los objetos que sean añadidos o programados más tarde no estarán afectados. Tendrá aún la posibilidad de usar las opciones de exclusión de cada objeto.</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Borrar los URNs de los objetos del número</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Use este botón para borrar los URNs de todos los objetos (artículos, galeradas y ficheros complementarios) actualmente programados para este número.</message>
 </locale>

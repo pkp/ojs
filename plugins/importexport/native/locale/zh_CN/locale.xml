@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/native/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the zh_CN (China) locale.
@@ -76,51 +76,51 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">指定的 "{$suppFileType}" 是未知的附件类型.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">指定的URL"{$url}"不能被复制到本地文件。</message>
 	<message key="plugins.importexport.native.import.error.duplicatePublicIssueId">为导入刊期指定的公共ID已经被其他刊期"{$otherIssueTitle}"使用.</message>
-	<message key="plugins.importexport.native.import.error.sectionTitleMissing">A section title was missing for the issue "{$issueTitle}". Please ensure that the XML document conforms to the appropriate DTD.</message>
-	<message key="plugins.importexport.native.import.error.sectionMismatch">The "{$sectionTitle}" section of the "{$issueTitle}" issue matched an existing journal section, but the specified abbreviation ("{$sectionAbbrev}") matched a different section.</message>
-	<message key="plugins.importexport.native.import.error.articleTitleMissing">An article title was missing for the issue "{$issueTitle}" in the section "{$sectionTitle}". Please ensure that the XML document conforms to the appropriate DTD, and that a title has been supplied for the journal's locale.</message>
-	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">An article title ("{$articleTitle}") was provided for the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">An article abstract was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.galleyLabelMissing">The article "{$articleTitle}" in the section "{$sectionTitle}" of the issue "{$issueTitle}" was missing a galley label.</message>
-	<message key="plugins.importexport.native.import.error.suppFileMissing">The article "{$articleTitle}" in the section "{$sectionTitle}" of the issue "{$issueTitle}" was missing a supplemental file.</message>
-	<message key="plugins.importexport.native.import.error.galleyFileMissing">The article "{$articleTitle}" in the section "{$sectionTitle}" of the issue "{$issueTitle}" was missing a galley file.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">期刊"{$issueTitle}"章节标题丢失。请确保XML文档符合相应的DTD。</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">期刊“{$ issueTitle}”的"{$sectionTitle}" 章节标题与现有期刊相匹配，但是指定缩写（“{$ sectionAbbrev}”与其它章节相匹配。</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">期刊"{$issueTitle}"章节中 "{$sectionTitle}"的文章标题丢失。请确保XML文档符合相应的DTD，并且标题已经提供了该期刊。</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">期刊"{$issueTitle}"不支持在"{$locale}"中的文章标题"{$articleTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">期刊"{$issueTitle}"不支持在"{$locale}"中"{$articleTitle}" 的文章摘要。</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">期刊"{$issueTitle}"中"{$sectionTitle}"章节 "{$articleTitle}"文章的样稿标签丢失。</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">期刊"{$issueTitle}"中"{$sectionTitle}"章节 "{$articleTitle}"文章的补充文件丢失</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">期刊"{$issueTitle}"中"{$sectionTitle}"章节 "{$articleTitle}"文章的样稿文件丢失。</message>
 
-	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">An issue title ("{$issueTitle}") was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">A description of the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">A cover of the the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">期刊不支持在"{$locale}"的期次标题"{$issueTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">期刊不支持在"{$locale}"的期次描述"{$issueTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">期刊不支持在"{$locale}"的期次封面"{$issueTitle}"。</message>
 
-	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">A section title ("{$sectionTitle}") was provided in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">A section abbreviation ("{$sectionAbbrev}") was provided in the issue  ("{$issueTitle}") in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">A section identifying type ("{$sectionIdentifyType}") was provided in the issue  ("{$issueTitle}") in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">A section policy ("{$sectionPolicy}") was provided in the issue ("{$issueTitle}") in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">期刊"{$issueTitle}" 不支持在"{$locale}"的章节标题"{$issueTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">期刊"{$issueTitle}" 不支持在"{$locale}"的章节缩写"{$sectionAbbrev}"。</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">期刊"{$issueTitle}"不支持在"{$locale}"的章节识别类型"{$sectionIdentifyType}"。</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">期刊"{$issueTitle}"不支持在"{$locale}"的章节政策"{$sectionPolicy}"。</message>
 
-	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">The section title "{$section1Title}" and the section title "{$section2Title}" in the "{$issueTitle}" issue matched the different existing journal sections.</message>
-	<message key="plugins.importexport.native.import.error.sectionTitleMatch">The section title "{$sectionTitle}" in the "{$issueTitle}" issue matched an existing journal section, but another title of this section doesn't match with another title of the existing journal section.</message>
-	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">The section abbreviation "{$section1Abbrev}" and the section abbreviation "{$section2Abbrev}" of the "{$issueTitle}" issue matched the different existing journal sections.</message>
-	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">The section abbreviation "{$sectionAbbrev}" in the "{$issueTitle}" issue matched an existing journal section, but another abbreviation of this section doesn't match with another abbreviation of the existing journal section.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">章节标题"{$section1Title}"和"{$issueTitle}"期的"{$section2Title}"的章节标题和现有的其它章节相匹配。</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">期刊"{$issueTitle}"的章节标题"{$sectionTitle}"与现有期刊相匹配，但是这一部分的其它标题与现有期刊章节补匹配。</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">期刊"{$issueTitle}" 的章节缩写"{$section1Abbrev}"和"{$section2Abbrev}"与不同现有期刊的其它章节相匹配。</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">期刊"{$issueTitle}"的章节缩写 "{$sectionAbbrev}"与现有期刊相匹配，但是这一部分的另一个缩写与期刊的其它缩写不匹配。</message>
 
-	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">An article discipline was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">An article type was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">An article subject was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">An article subject classification was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">An article geographical coverage was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">An article geographical coverage was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">An article sample coverage was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">An article sponsor was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的专业。</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的类型。</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的主题。</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的分类。</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的地理范围。</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的时间范围。</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的样本范围。</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的赞助商。</message>
 
-	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">An author competing interest was provided for the author "{$authorFullName}" of the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">An author biography was provided for the author "{$authorFullName}" of the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的作者"{$authorFullName}"提供的利益冲突。</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">期刊不支持{$issueTitle}"期中 "{$locale}"位置"{$articleTitle}"文章的作者"{$authorFullName}"提供的传记。</message>
 
-	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">A galley of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的文章样稿"{$articleTitle}" 。</message>
 
-	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">A supplementary file title ("{$suppFileTitle}") of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">A creator of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">A subject of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">A custom type of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">A description of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">A publisher of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">A sponsor of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
-	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">A source of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的补充文件 "{$suppFileTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的补充文件创建者 "{$suppFileTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的补充文件主题 "{$suppFileTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的自定义类型的补充文件 "{$suppFileTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的补充文件描述 "{$suppFileTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的出版商补充文件 "{$suppFileTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的赞助商补充文件 "{$suppFileTitle}"。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">期刊不支持"{$issueTitle}"期中 "{$articleTitle}"文章在"{$locale}"位置的补充文件 "{$suppFileTitle}"。</message>
 
 	<message key="plugins.importexport.native.import.success">导入成功</message>
 	<message key="plugins.importexport.native.import.success.description">导入已经成功，导入项目列表如下.</message>

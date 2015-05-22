@@ -4,8 +4,8 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Introduction to OJS Main 
@@ -28,7 +28,7 @@
 ]]>
 	</section>
 	<section title="Suporte">
-		<![CDATA[<p>Um Fórum de suporte técnico e submissão de bugs do sistema pode ser acedido via <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP</a>.</p>
+		<![CDATA[<p>Um Fórum de suporte técnico e submissão de bugs do sistema pode ser acedido via <a href="http://forum.pkp.sfu.ca/" target="_blank">PKP</a>.</p>
 		<p>Para perguntas sobre como interagir com uma revista eletrónica específica, que usa o sistema ou sobre a política de tal revista, devem entrar em contacto com o suporte listado em "Sobre" de cada revista.</p>]]>
 	</section>
 </topic>

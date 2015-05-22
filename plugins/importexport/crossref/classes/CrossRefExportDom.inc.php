@@ -3,7 +3,8 @@
 /**
  * @file plugins/importexport/crossref/classes/CrossRefExportDom.inc.php
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossRefExportDom
@@ -336,6 +337,13 @@ class CrossRefExportDom extends DOIExportDom {
 		}
 		XMLCustomWriter::appendChild($journalArticleNode, $contributorsNode);
 
+		/* Abstracts */
+		if ($article->getAbstract($journal->getPrimaryLocale())) {
+			$abstractNode =& XMLCustomWriter::createElement($doc, 'jats:abstract');
+			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'jats:p', $article->getAbstract($journal->getPrimaryLocale()));
+			XMLCustomWriter::appendChild($journalArticleNode, $abstractNode);
+		}
+
 		/* publication date of article */
 		if ($article->getDatePublished()) {
 			$publicationDateNode =& $this->_generatePublisherDateDom($doc, $article->getDatePublished());
@@ -356,6 +364,14 @@ class CrossRefExportDom extends DOIExportDom {
 				}
 			}
 			XMLCustomWriter::appendChild($journalArticleNode, $pageNode);
+		}
+
+		/* License URL */
+		if ($article->getLicenseUrl()) {
+			$licenseNode =& XMLCustomWriter::createElement($doc, 'ai:program');
+			XMLCustomWriter::setAttribute($licenseNode, 'name', 'AccessIndicators');
+			XMLCustomWriter::createChildWithText($doc, $licenseNode, 'ai:license_ref', $article->getLicenseUrl());
+			XMLCustomWriter::appendChild($journalArticleNode, $licenseNode);
 		}
 
 		// DOI data node

@@ -4,8 +4,8 @@
 <!--
   * locale/fr_FR/editor.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français) locale.
@@ -57,7 +57,6 @@
 	<message key="editor.issues.accessStatus">Statut d'accès</message>
 	<message key="editor.issues.accessDate">Date d'accès libre</message>
 	<message key="editor.issues.invalidAccessDate">La date d'accès n'est pas valide.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Le numéro d'identification publique existe déjà.</message>
 	<message key="editor.issues.coverPage">Image de la page couverture</message>
 	<message key="editor.issues.coverPageInstructions">(Formats acceptés : .gif, .jpg, ou .png)</message>
 	<message key="editor.issues.uploaded">Téléchargé</message>
@@ -221,4 +220,6 @@
 	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
 	<message key="editor.issues.confirmDeleteGalley">Êtes-vous certain de vouloir supprimer les épreuves de ce numéro?</message>
 	<message key="editor.notifyUsers.allMailingList">Inclure tous les courriel de la liste de diffusion ({$count} courriels)</message>
+	<message key="editor.publicGalleyIdentificationExists">L'identifiant public '{$publicIdentifier}' existe déjà pour une autre épreuve de cet article. Veuillez choisir un identifiant unique pour l’épreuve de cet article.</message>
+	<message key="editor.issues.resetArticlePublicationDates">Réinitialiser les dates de publication de l'article.</message>
 </locale>

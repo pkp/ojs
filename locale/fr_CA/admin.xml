@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/admin.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
@@ -78,4 +78,21 @@
 	<message key="admin.categories.confirmDelete">Voulez-vous vraiment supprimer cette catégorie?</message>
 	<message key="admin.categories.name">Nom</message>
 	<message key="admin.categories.nameRequired">Un nom de catégorie est requis.</message>
+	<message key="admin.settings.security">Sécurité</message>
+	<message key="admin.settings.security.plugins">Empêcher les directeurs de revue d'installer, mettre à jour et supprimer des plugiciels.</message>
+	<message key="admin.settings.defaultMetricDescription">Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seulement une statistique d'utilisation doit être utilisée, ex. pour afficher une liste ordonnée des articles les plus utilisés ou classer les résultats de recherche. Veuillez sélectionnez l'une des mesures comme celle par défaut.</message>
+	<message key="admin.languages.reloadDefaultEmailTemplates">Re-télécharger le modèle de courriel par défaut</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copiez le fichiers de fichier journal d'accès Apache, en filtrant les entrées en lien avec cette installation, dans le répertoire courant, dans le répertoire UsageStatsPlugin stage. Vous devez le rouler sous un usager qui a suffisamment de privilèges pour lire les fichiers de journal d'accès Apache.
+
+Cet outil ne copiera que les fichiers qui ne sont pas déjà à l'intérieur des répertoires de chargement de fichier usageStats (stage, processing, archive, reject).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (traiter tous les fichiers d'un répertoire): {$scriptName} path/to/apache/directory
+Usage (traiter tous les fichiers d'un répertoire dont les noms commencent par la chaîne de caractères suivantes): {$scriptName} path/to/apache/directory starts_with_string</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Erreur : le dossier temporaire {$tmpDir} ne peut être créé</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Erreur : le fichier {$filePath} n'existe pas ou n'est pas accessible.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Erreur : impossible de copier le fichier de {$filePath} à {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Erreur : impossible de supprimer le fichier {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Attention : le fichier {$filePath} existe déjà dans le répertoire des statistiques d'utilisation.</message>
+	<message key="admin.copyAccessLogFileTool.success">Succès : {$filePath} à {$destinationPath}</message>
 </locale>

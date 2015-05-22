@@ -3,8 +3,8 @@
 /**
  * @file tests/plugins/importexport/native/NativeImportExportPluginTest.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2000-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2000-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeImportExportPluginTest
@@ -99,11 +99,14 @@ class NativeImportExportPluginTest extends DatabaseTestCase {
 		$generatedXml = trim($doc->saveXML());
 
 		$dummyFile = getenv('DUMMYFILE');
+		import('lib.pkp.classes.site.VersionCheck');
+		$currentVersion =& VersionCheck::getCurrentDBVersion();
 		$params = array(
 			'{$embedContents}' => base64_encode(file_get_contents($dummyFile)),
 			'{$currentDate}' => date('Y-m-d'),
 			'{$currentYear}' => date('Y'),
 			'{$dummyFileName}' => basename($dummyFile),
+			'{$version}' => urlencode($currentVersion->getMajor() . '.' . $currentVersion->getMinor() . '.' . $currentVersion->getRevision()),
 		);
 
 		$this->assertEquals(

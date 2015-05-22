@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/form/comment/CommentForm.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CommentForm
@@ -38,6 +38,8 @@ class CommentForm extends Form {
 	 * @param $article object
 	 */
 	function CommentForm($article, $commentType, $roleId, $assocId = null) {
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR)); // editor.article.commentsRequired
+
 		if ($commentType == COMMENT_TYPE_PEER_REVIEW) {
 			parent::Form('submission/comment/peerReviewComment.tpl');
 		} else if ($commentType == COMMENT_TYPE_EDITOR_DECISION) {

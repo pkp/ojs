@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -736,4 +736,6 @@
 	<message key="manager.setup.copyrightYearBasis.Article">年份的默认值根据文章的发表日期，如在“发表日期”</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">年份的默认值根据期次的发表日期。</message>
 	<message key="manager.statistics.reports.objectNotFound">在数据库里未发现目标</message>
+	<message key="manager.setup.emailHeader">邮件标题</message>
+	<message key="manager.setup.emailHeaderDescription">由系统代表期刊发送准备好的电子邮件将以下面的标题开头。这些信件由主要联系人处理，所以必须弄清楚主要联系人并不一定是负责信息内容，而是代表其他用户发送。</message>
 </locale>

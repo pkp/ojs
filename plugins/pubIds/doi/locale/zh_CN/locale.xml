@@ -4,13 +4,13 @@
 <!--
   * plugins/pubIds/doi/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DOI plugin localization strings
   -->
- 
+
 <locale name="zh_CN" full_name="China">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">该插件能够为期次，文章，样稿和附加文件分配DOI。</message>
@@ -60,4 +60,5 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">附加文件</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">您看见的只是DOI预览，可能不会完整。DOI尚未生成。串班期次并且浏览公共{$pubObjectType}页将使{$pubObjectType}自动生成一个独特的DOI。</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">指定的DOI字尾已被其它出版项目使用。请输入一个独特的DOI字尾。</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">为每一个出版的项目输入一个单独的DOI后缀。你会在每个项目的元数据页面上发现附加的DOI输入字段。</message>
 </locale>

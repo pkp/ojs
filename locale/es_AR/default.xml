@@ -4,18 +4,18 @@
 <!--
   * default.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español (Argentina) locale.
   *
   *
-  * locale.xml,v 1.1 2005/09/06 00:00:00 Sergio Ruiz Exp 
-  * Traducción de la versión original 1.365 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/29    
+  * locale.xml,v 1.1 2005/09/06 00:00:00 Sergio Ruiz Exp
+  * Traducción de la versión original 1.365 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/29
   * Traducción de la version original 1.482 por Juan Pablo Alperin (juan@geeky.net) - 2006/06/29
   -->
- 
+
 <locale name="es_AR" full_name="Español (Argentina)">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La petición no ha sido publicada previamente, ni se ha presentado a otra revista (o se ha proporcionado una explicación en Comentarios al editor).</message>
 	<message key="default.journalSettings.checklist.fileFormat">El archivo  enviado está en formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
@@ -34,7 +34,7 @@ El archivo a corregir está en formato Word o .rtf y por lo tanto puede ser fác
 
 <strong>1. Seguimiento de Cambios de Microsoft Word</strong>
 
-Bajo el menú Herramientas, la característica Seguimiento de Cambios permite al / a la corrector/a hacer inserciones (el texto aparece en otro color) y borrar texto (el texto aparece tachado con otro color o en el margen cuando se borra). El/la corrector/a puede enviar preguntas tanto al / a la autor/a (Consultas de autor/a) como al / a la editor/a (Consultas de editor/a) insertando estas preguntas entre corchetes. La versión corregida se sube y se notifica al / a la editor/a. El/la editor/a revisa el texto y notifica al / a la autor/a. 
+Bajo el menú Herramientas, la característica Seguimiento de Cambios permite al / a la corrector/a hacer inserciones (el texto aparece en otro color) y borrar texto (el texto aparece tachado con otro color o en el margen cuando se borra). El/la corrector/a puede enviar preguntas tanto al / a la autor/a (Consultas de autor/a) como al / a la editor/a (Consultas de editor/a) insertando estas preguntas entre corchetes. La versión corregida se sube y se notifica al / a la editor/a. El/la editor/a revisa el texto y notifica al / a la autor/a.
 
 El/la editor/a y el/la autor/a deberían dejar los cambios con los que estén de acuerdo. Si se necesitan más cambios, el/la editor/a y el/la autor/a pueden hacerlos a las inserciones o textos borrados inicialmente, así como hacer inserciones o borrar texto en cualquier parte del texto. Los/as autores/as deberían responder a todas las consultas que se le hagan, con las respuestas dentro de los corchetes.
 
@@ -162,4 +162,6 @@ El tercer párrafo no está justificado.</pre>]]></message>
 	<message key="section.default.policy"><![CDATA[&nbsp;]]></message>
 	<message key="default.journalSettings.purchaseIssueFee">Comprar número</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">El pago de esta cuota le permitirá ver, descargar e imprimir este número</message>
+	<message key="default.journalSettings.emailHeader">El siguiente mensaje es enviado de parte de {$journalName}.
+________________________________________________________________________</message>
 </locale>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * plugins/generic/lucene/locale/fr_FR/emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  *
+  -->
+<email_texts locale="fr_FR">
+	<email_text key="LUCENE_ARTICLE_INDEXING_ERROR_NOTIFICATION">
+		<subject>Erreur d’indexation de l’article</subject>
+		<body>Une erreur d’indexation s’est produite au cours de la mise à jour de l’indexation de l’article.
+
+Message d’erreur généré par le service web (le cas échéant) : "{$error}"
+
+Ce courriel est généré par le plugiciel de recherche Lucene d’Open Journal Systems.</body>
+		<description>Ce modèle de courriel est utilisé pour notifier au contact technique de la revue qu'une erreur s’est produite lors de l'indexation de l'article.</description>
+	</email_text>
+	<email_text key="LUCENE_JOURNAL_INDEXING_ERROR_NOTIFICATION">
+		<subject>Erreur d’indexation de la revue</subject>
+		<body>Une erreur s’est produite lors de l'indexation de la revue "{$journalName}".
+
+Message d'erreur généré par le service Web (le cas échéant): "{$error}"
+
+Ce courriel est généré par le plugiciel de recherche Lucene d’Open Journal Systems.</body>
+		<description>Ce modèle de courriel est utilisé pour notifier au contact technique de la revue qu'une erreur s’est produite lors de l'indexation de la revue.</description>
+	</email_text>
+	<email_text key="LUCENE_SEARCH_SERVICE_ERROR_NOTIFICATION">
+		<subject>Erreur du service de recherche de la revue</subject>
+		<body>Une erreur d’indexation s’est produite à l’occasion d’une tentative de recherche de l'installation "{$siteName}".
+
+Message d'erreur généré par le service Web (le cas échéant): "{$error}"
+
+Ce courriel est généré par le plugiciel Lucene recherche d’Open Journal Systems.</body>
+		<description>Ce modèle de courriel est utilisé pour notifier au contact technique de la revue qu’une erreur s’est produite au cours d’une action sur le service de recherche Solr.</description>
+	</email_text>
+</email_texts>

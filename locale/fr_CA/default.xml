@@ -4,14 +4,14 @@
 <!--
   * default.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   -->
- 
+
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas déjà été publiée, et elle n'est pas considérée actuellement par une autre revue (ou une explication a été fournie dans Commentaires au rédacteur).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la soumission est dans un format de fichier de document OpenOffice, Microsoft Word, RTF, ou WordPerfect.</message>
@@ -52,8 +52,8 @@ Veuillez suivre le protocole suivant pour faire les révisions numériques de vo
 <br/>Si vous supprimez une phrase ou plus, veuillez l'indiquer dans une note, par ex., <strong>[supprimé 2 phrases]</strong></p>
 
 <p><strong>Répondre aux requêtes à l'auteur (QetR) :</strong>
-<br/> Gardez toutes les Q et R intactes et en gras dans le texte. Ne les supprimez pas. 
-<br/> Pour répondre à une QetR, ajoutez un commentaire à la suite. Les commentaires doivent être délimités par: 
+<br/> Gardez toutes les Q et R intactes et en gras dans le texte. Ne les supprimez pas.
+<br/> Pour répondre à une QetR, ajoutez un commentaire à la suite. Les commentaires doivent être délimités par:
 <strong>[Commentaire :</strong>]
 <br/>par ex., <strong>[Commentaire : Discussion élargie de la méthodologie telle que vous l'avez suggéré]</strong></p>
 
@@ -71,7 +71,7 @@ Avant d'apporter des changements importants à la structure ou à l'organisation
 <p><strong>Manuscrit retourné à l'auteur avec requêtes et suggestions :</strong>
 
 Avant d'apporter des changements importants à la structure ou à l'organisation <strong>du manuscrit que nous vous retournons</strong>, veuillez communiquer avec les <strong>rédacteurs qui évaluent</strong> votre texte. Lorsque vos modifications sont terminées, changez le nom du fichier de AuthorNameQA.doc à AuthorNameQAR.doc (par ex., de GagnonQA.doc à GagnonQAR.doc). <br/> Imprimez une copie papier de votre manuscrit et postez-la avec une disquette contenant le fichier de traitement de texte complètement révisé et renommé. </p>
- 
+
 <p><strong>Manuscrit révisé retourné à HER</strong></p>
 
 <p>Avant d'apporter des changements importants à la structure et à l'organisation du manuscrit que nous vous retournons, veuillez communiquer avec les <strong>rédacteurs qui révisent</strong> votre article. Sinon, le processus de publication pourrait être considérablement ralenti.</strong></p>
@@ -156,4 +156,6 @@ Le paragraphe qui commence par « Ce dernier sujet... » n'est pas en retrait.</
 	<message key="section.default.policy"></message>
 	<message key="default.journalSettings.purchaseIssueFee">Acheter un numéro</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Le règlement du montant dû vous permettra de voir, de télécharger et d'imprimer ce numéro.</message>
+	<message key="default.journalSettings.emailHeader">Le message suivant est délivré au nom de {$journalName}.
+________________________________________________________________________</message>
 </locale>

@@ -3,8 +3,8 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
@@ -24,6 +24,6 @@
 		<![CDATA[<h5>Proceso editorial</h5><p>OJS realiza los envíos a la revista a través de cinco pasos durante un proceso editorial gestionado por uno o más de los editores/as.</p><ol><li><em>Lista pendiente de asignación:</em> Los elementos comienzan aquí y se asignan a uno o más editores/as.</li><li><em>Revisión de envíos:</em> Los elementos pasan por una evaluación por pares y una decisión editorial.</li><li><em>Edición de envíos:</em> Los elementos pasan por la corrección de originales, maquetación, y corrección. El envío se asigna a un número para la publicación.</li><li><em>Tabla de contenidos:</em> Los elementos están pendientes de publicación y se publican.</li></ol><h5>Roles editoriales</h5>(Asignados durante la gestión de la revista)<ul><li><em>Gestor/a de la revista:</em> Controla la revista y los roles editoriales (puede también ocupar el rol de editor/a y otros roles).</li><li><em>Editor/a:</em> Supervisa el proceso editorial; puede asignar los envíos a los editores/as de sección para ver la revisión y edición de envíos; lleva a cabo la programación del contenido y la publicación de la revista.</li><li><em>Editor/a de sección:</em> Supervisa la revisión de envíos y la posible edición de envíos para envío asignados.</li><li><em>Corrector/a de originales:</em> Trabaja con los envíos para mejorar la gramática y la claridad, pregunta al autor/a sobre posibles errores, y asegura la fidelidad al estilo bibliográfico y textual de la revista.</li><li><em>Maquetista:</em> Transforma los envíos corregidos en galeradas en HTML, PDF o archivos PS en el formato adecuado para la publicación electrónica.</li><li><em>Corrector/a de pruebas:</em> Lee las galeradas en busca de errores tipográficos y de formato.</li></ul> <p align="center"><a href="{$baseUrl}/locale/{$locale}/edprocesslarge.png"><img src="{$baseUrl}/locale/{$locale}/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>]]>
 	</section>
 	<section title="Soporte técnico">
-		<![CDATA[<p>Se puede acceder a un foro de ayuda y a un sistema de informe de errores de problemas técnicos a través del  <a href="http://pkp.sfu.ca/support/forum/" target="_blank">sitio web</a> de PKP.</p><p>Los usuarios/as que tengan preguntas sobre cómo interactuar con el sitio web de una revista en particular a través de OJS o sobre la política de dicha revista pueden ponerse en contacto con los contactos principales o de soporte técnico de la revista.</p>]]>
+		<![CDATA[<p>Se puede acceder a un foro de ayuda y a un sistema de informe de errores de problemas técnicos a través del  <a href="http://forum.pkp.sfu.ca/" target="_blank">sitio web</a> de PKP.</p><p>Los usuarios/as que tengan preguntas sobre cómo interactuar con el sitio web de una revista en particular a través de OJS o sobre la política de dicha revista pueden ponerse en contacto con los contactos principales o de soporte técnico de la revista.</p>]]>
 	</section>
 </topic> 

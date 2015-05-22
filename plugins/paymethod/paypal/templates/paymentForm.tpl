@@ -1,7 +1,7 @@
 {**
  * plugins/paymethod/paypal/templates/paymentForm.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
+ * Copyright (c) 2013-2015 Simon Fraser University Library
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -35,7 +35,7 @@
 	{if $params.item_description}
 	<table class="data" width="100%">
 		<tr>
-			<td class="label" colspan="2">{$params.item_description|escape|nl2br}</td>
+			<td class="label" colspan="2">{$params.item_description|nl2br}</td>
 		</tr>
 	</table>
 	{/if}

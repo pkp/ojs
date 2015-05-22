@@ -4,13 +4,13 @@
 <!--
   * @file plugins/importexport/medra/locale/fr_FR/common.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Afin d'utiliser ce plugiciel, veuillez aller à la catégorie "identifiants publics", activez et configurez le plugiciel DOI et spécifiez un préfixe DOI valide.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Ce plugiciel n'est pas entièrement configuré.</message>
@@ -45,7 +45,7 @@
 	<message key="plugins.importexport.common.export.selectGalley">Sélectionner des épreuves</message>
 	<message key="plugins.importexport.common.export.noGalleys">Aucune épreuve n'a actuellement de DOI assigné.</message>
 	<message key="plugins.importexport.common.exportDescription">Cliquez ce bouton pour exporter les données XML pour le(s) objet(s) sélectionné(s) dans un fichier local sans les enregistrer avec l'agence d'enregistrement. Cela peut être utile si vous désirez qu'un tiers enregistre des DOIs pour vous ou si vous voulez inspecter le format XML avant de l'enregistrer.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Aucun numéro ne correspond à celui indiqué: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Aucun article ne correspond à l'ID de l'article spécifié: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Aucune épreuve ne correspond à l'ID de l'épreuve spécifiée: {$param}.</message>
@@ -53,10 +53,12 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">Aucune revue ne correspond au chemin spécifié: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">L'objet de type {$param} ne peut être exporté.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Le fichier de sortie {$param} n'est pas accessible en écriture.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">L'objet a été exporté avec succès vers '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">ERREUR:</message>
 	<message key="plugins.importexport.common.markRegistered">Marquer les objets déjà enregistrés</message>
 	<message key="plugins.importexport.common.markRegisteredDescription">Cliquez sur ce bouton afin de marquer les objets enregistrés (par exemple, s'ils ont été enregistrés antérieurement ou manuellement).</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Veuillez noter que le mot de passe sera enregistré en tant que texte brut (il ne sera pas chiffré).</message>
+	<message key="plugins.importexport.common.export.unAvailable">L'exportation de données est actuellement indisponible. Veuillez vérifier les spécifications de ce plugiciel.</message>
 </locale>

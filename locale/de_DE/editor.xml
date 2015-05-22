@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/editor.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
@@ -26,7 +26,8 @@
 	<message key="editor.allSections">Alle Rubriken</message>
 	<message key="editor.allEditors">Alle Redakteur/innen</message>
 	<message key="editor.me">Ich</message>
-	<message key="editor.publicIdentificationExists">Die Ausgabenkennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift.</message>
+	<message key="editor.publicIdentificationExists">Die Kennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift.</message>
+	<message key="editor.publicGalleyIdentificationExists">Die Kennzeichnung '{$publicIdentifier}' existiert bereits für eine andere Fahne dieses Artikels. Bitte wählen Sie eine innerhalb dieses Artikels eindeutige Fahnenkennzeichnung.</message>
 	<message key="editor.submissionArchive.noSubmissions">Kein Beitrag im Archiv</message>
 	<message key="editor.submissionArchive.saveChanges">Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht.</message>
 	<message key="editor.submissionArchive.confirmDelete">Sind Sie sicher, dass Sie diesen Beitrag endgültig löschen wollen?</message>

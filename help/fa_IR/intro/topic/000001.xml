@@ -3,8 +3,8 @@
 <!--
   * 000001.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Frequently Asked Questions 
@@ -80,7 +80,7 @@ OJSدر یک ساعت
 	<section title="۲. از کجا میتوانم برای کار با OJS پشتیبانی فنی ٫ دریافت کنم ٫ خطا هارا گزارش دهم و برای بهبود برنامه پیشنهاد ارائه کنم ؟" ><![CDATA[
 <p>
 پروژه توسعه اطلاعات عمومی یک 
- <a href="http://pkp.sfu.ca/support/forum/" target="_blank">
+ <a href="http://forum.pkp.sfu.ca/" target="_blank">
 تالار گفتمان
 </a> 
 را اداره میکند که در آن امکان طرح هزاران سوال و جواب وجود دارد .مثلا پیقامهای خطاهای برنامه را میتوان در آنجا جستجو و راه حل رفع آنها را پیدا کرد  
@@ -93,7 +93,7 @@ OJSدر یک ساعت
 	<section title="۳. من چطور میتوانم OJS را به زبانهای دیگرترجمه کنم؟" ><![CDATA[
 <p>
 دستورالعملها در فایلهای متنی با نام README ارائه شده اند که همراه با فایلهای نصب OJS قابل دانلود هستند اطلاعات اضافی درباره مشکلات ترجمه برنامه به زبانهای دیگررا میتوانید در تالار گفتگو PKP    
- <a href="http://pkp.sfu.ca/support/forum/" target="_blank">
+ <a href="http://forum.pkp.sfu.ca/" target="_blank">
 پیدا کنید
 </a>.</p>
 		]]></section>

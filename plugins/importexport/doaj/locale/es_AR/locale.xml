@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the es_AR (Español (Argentina)) locale.
@@ -18,8 +18,6 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Exportar Datos de la Revista a DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exportar Revista</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Exportar información del artículo en XML para archivar en DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Contactar con DOAJ para la inclusión</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Para el examen de su revista en el DOAJ, por favor envíe este formulario parcialmente autocumplimentado al DOAJ, y rellene la información incompleta lo mejor que pueda.</message>
 </locale>

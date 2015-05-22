@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA (Français (Canada)) locale.
@@ -200,8 +200,6 @@
 	<message key="manager.setup.disciplineExamples">(Par ex., Histoire; Éducation; Sociologie; Psychologie; Études culturelles; Droit)</message>
 	<message key="manager.setup.disciplineProvideExamples">Donner des exemples de disciplines académiques pertinentes pour cette revue</message>
 	<message key="manager.setup.displayCurrentIssue">Ajouter le sommaire pour le numéro courant (si disponible).</message>
-	<message key="manager.setup.doiPrefix">Préfixe DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Le préfixe DOI (Digital Object Identifier) est attribué par <a href="http://www.crossref.org" target="_new">CrossRef</a> et correspond au format 10.xxxx (par ex., 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Décision du rédacteur</message>
 	<message key="manager.setup.editorialMembers">Aller à Membres du comité et ajouter les noms des membres des comités éditorial et/ou d'évaluation. Cela peut être fait à n'importe quel moment de l'exploitation de la revue.</message>
 	<message key="manager.setup.editorialProcess1">Un ou plusieurs rédacteurs s'occupent des étapes de base sans rôle désigné.</message>
@@ -250,7 +248,6 @@
 	<message key="manager.setup.guidingSubmissions">Étape 3. Orienter les soumissions</message>
 	<message key="manager.setup.homepageImage">Image de la page d'accueil</message>
 	<message key="manager.setup.homepageImageDescription">Ajouter un fichier image ou graphique dans le milieu de la page.</message>
-	<message key="manager.setup.includeCreativeCommons">Pour les revues offrant l'accès libre immédiat ou différé, inclure la licence Creative Commons dans tous les ouvrages publiés, au moment opportun.</message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">De brèves descriptions de la revue pour les bibliothécaires, les auteurs et lecteurs potentiels sont disponibles dans la rubrique " Renseignements " du menu latéral.</message>
 	<message key="manager.setup.information.forAuthors">Pour les auteurs</message>
@@ -410,8 +407,6 @@
 	<message key="manager.setup.subjectExamples">(Par ex., Photosynthèse; Trous noirs; Cartes en quadrichromie; Théorème de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Mots-clés</message>
 	<message key="manager.setup.subjectProvideExamples">Donner des exemples de mots-clés ou de sujets comme guide pour les auteurs</message>
-	<message key="manager.setup.submissionEmailLogging">Tenez un registre, sur la page Historique, de tous les courriels envoyés concernant une soumission.</message>
-	<message key="manager.setup.submissionEventLogging">Tenez un registre, sur la page Historique, de toutes les actions prises concernant une soumission.</message>
 	<message key="manager.setup.submissionGuidelines">Directives pour la soumission</message>
 	<message key="manager.setup.submissionPreparationChecklist">Liste de vérification de la soumission</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Lors d'une soumission à la revue, on demande d'abord aux auteurs de s'assurer, avant d'aller plus loin, que toutes les conditions requises pour soumettre un article sont remplies. La liste de vérification doit aussi apparaître dans Directives aux auteurs, sous À propos de la revue. Cette liste peut être modifiée ci-dessous, mais tous les éléments de la liste devront être cochés avant que les auteurs puissent poursuivre la procédure de soumission.</message>
@@ -469,19 +464,14 @@
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mois après la publication du numéro.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Veuillez sélectionner une durée valide.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">La politique d'Accès libre différé suivante sera affichée dans À propos de la revue sous Politiques.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Veuillez utiliser les cases à cocher fournies.</message>
 	<message key="manager.subscriptionPolicies.expiry">Échéance de l'abonnement</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">À l'échéance de l'abonnement, les lecteurs peuvent se voir refuser l'accès à tout contenu restreint ou peuvent conserver l'accès au contenu publié avant la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Échéance complète</message>
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Les lecteurs se voient refuser l'accès à tout contenu restreint, à l'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Échéance partielle</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Les lecteurs se voient refuser l'accès au contenu restreint publié récemment, mais conservent l'accès au contenu publié avant la date d'échéance de l'abonnement.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Aviser les abonnés par courriel</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mois après la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Aviser les abonnés par courriel</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">semaine(s) après la date d'échéance de l'abonnement.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Aviser les abonnés par courriel</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mois avant la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Aviser les abonnés par courriel</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">semaine(s) avant la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Rappels de l'échéance de l'abonnement</message>
@@ -618,13 +608,6 @@
 	<message key="manager.setup.contributorNoteDescription">Ce texte apparaîtra sous l'en-tête « Sources d'appui » et au-dessus de la liste des noms et urls des organismes de soutien sous « Commanditaires de la revue » sur la page « À propos ».</message>
 	<message key="manager.setup.history">Historique de la revue</message>
 	<message key="manager.setup.historyDescription">Ce texte apparaîtra dans la section « À propos » du site Web de la revue et peut être utilisé pour décrire tout changement au titre de la revue, au comité éditorial, et tout autre élément d'intérêt dans l'histoire de la publication de la revue.</message>
-	<message key="manager.setup.doiSuffix">Suffixe DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Utiliser la forme par défaut (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Utiliser la forme inscrite ci-dessous pour générer les suffixes DOI. Utiliser %j pour les initiales de la revue, %v pour le numéro du volume, %i pour le numéro de la publication, %a pour l'ID de l'article dans OJS, et %p pour le numéro de page.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Par exemple, vol%viss%ipp%p pourrait générer un DOI tel que 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Un suffixe DOI peut prendre n'importe quelle forme, mais doit être unique pour chaque article publié.</message>
-	<message key="manager.setup.doiSuffixPublisherId">Utiliser l'« Identifiant personnalisé » comme suffixe DOI pour les articles publiés (doit être activé à l'Étape 4).</message>
-	<message key="manager.setup.form.doiPrefixPattern">Le DOI doit avoir le format 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Icône (favicon) de la revue</message>
 	<message key="manager.setup.journalFaviconDescription">Ajouter un icône (favicon) pour cette revue pour fins d'affichage à côté de la barre de navigation quand les utilisateurs visitent votre site.</message>
 	<message key="manager.setup.journalFaviconInvalid">Format d'icône (favicon) invalide. Les formats acceptés sont .ico, .png et .gif.</message>
@@ -685,8 +668,6 @@
 	<message key="manager.plugins.versionFileInvalid">version.xml dans le répertoire du plugiciel contient des données invalides.</message>
 	<message key="manager.reviewFormElements.included">Inclus dans le message à l'auteur</message>
 	<message key="manager.setup.addNavItem">Ajouter un élément</message>
-	<message key="manager.setup.doiReassign">Réaffecter les DOIs</message>
-	<message key="manager.setup.doiReassign.description">Si vous modifier votre configuration DOI, les DOIs qui ont déjà été affectés ne seront pas visés. Du moment que la configuration DOI est enregistrée, utiliser ce bouton pour effacer tous les DOIs existants afin que les nouveaux paramètres s'appliquent aux articles existants.</message>
 	<message key="manager.payment.giftFees">Tarif des formules cadeau</message>
 	<message key="manager.payment.giftFeesDescription">Un lien vers les abonnements en cadeau apparaîtra sur la page des abonnements dans À propos de la revue et dans la barre latérale des abonnements.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Cela activera le règlement des abonnements en cadeau, permettant aux lecteurs de la revue d'acheter des abonnements en cadeau pour d'autres lecteurs.</message>
@@ -701,4 +682,61 @@
 	<message key="manager.setup.useThumbnail">Vignette</message>
 	<message key="manager.setup.categories">Catégories</message>
 	<message key="manager.setup.categories.description">Choisir les catégories les plus appropriées dans la liste ci-dessus. Les lecteurs pourront naviguer par catégorie parmi l'ensemble des revues disponibles.</message>
+	<message key="manager.setup.permissions.priorAgreement">Accord préalable</message>
+	<message key="manager.setup.permissions.display">Afficher</message>
+	<message key="manager.setup.licenseURLDescription">Fournir l'URL de la licence du site web, si disponible.</message>
+	<message key="manager.setup.includeCopyrightStatement">Afficher la mention de droit d'auteur avec le contenu (recommandé lorsque les droits sont détenus par l'auteur)</message>
+	<message key="manager.setup.includeLicense">Afficher la licence avec l'oeuvre diffusée.</message>
+	<message key="manager.setup.resetPermissions">Réinitialiser les autorisations de l'article</message>
+	<message key="manager.setup.resetPermissions.description">La mention de droit d'auteur et l'information sur la licence seront attachées au contenu diffusé de façon permanente, afin d'assurer que les données restent telles quelles dans le cas d'un changement des politiques pour les nouvelles soumissions. Pour réinitialiser les autorisations stockées qui sont déjà attachées au contenu diffusé, utilisez le bouton ci-dessous.</message>
+	<message key="manager.setup.confirmResetLicense">Êtes-vous sûr de vouloir réinitialiser la licence et les informations de droits d'auteur attachés au contenu diffusé pour la licence paramétrée dans la configuration de la revue ?</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Vous avez changé la licence et les informations du droit d'auteur dans la configuration de la revue. Veuillez enregistrer les changements apportés avant de réinitialiser les autorisations.</message>
+	<message key="manager.setup.copyrightYearBasis">Baser l'année de mention de droit d'auteur du nouvel article sur</message>
+	<message key="manager.setup.copyrightYearBasis.Article">L'année par défaut sera prise de la date de publication de l'article, comme dans "publish-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">L'année par défaut sera prise de la date de publication du numéro.</message>
+	<message key="manager.setup.emailHeader">En-tête du courriel</message>
+	<message key="manager.setup.emailHeaderDescription">Les courriels préparés qui sont envoyés par le système au nom de la revue commenceront par l'en-tête suivant. Ces courriels seront adressés de la part du contact principal, c'est donc important de clarifier que le contact principal n'est pas forcément responsable du contenu du message, celui-ci pourrait être envoyé par un usager différent.</message>
+	<message key="manager.statistics.defaultMetricDescription">Votre revue est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes.
+Il y a des cas où seulement une seule statistique d'utilisation doit être utilisée , ex. pour afficher une liste ordonnée des articles les plus utilisés ou pour classer les résultats de recherche. Veuillez sélectionner l'une des mesures paramétrées comme celle par défaut.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Regrouper les stats par :</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Modèle de rapport par défaut</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Téléchargement du fichier de l'article</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Vues de la page résumé de l'article</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Résumé de l'article et téléchargements</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Téléchargements du fichier du numéro</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Vue de la page sommaire du numéro</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Sommaire du numéro et téléchargements</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Vue de la page principale de la revue</message>
+	<message key="manager.statistics.reports.generateReport">Générer un rapport personnalisé</message>
+	<message key="manager.statistics.reports.advancedOptions">Options avancées</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Personnaliser les colonnes, les filtres et les options de tri. Changer l'une des ces options peut changer les résultats attendus du modèle de rapport.</message>
+	<message key="manager.statistics.reports.columns">Colonnes</message>
+	<message key="manager.statistics.reports.columns.description">Défnir la colonne qui sera utilisé pour construire le rapport. Les colonnes que vous sélectionnez ici, ne définissent pas seulement les données qui seront présentées dans le rapport, mais aussi les niveaux de regroupements des statistiques. Par exemple, si vous choisissez les colonnes ID, Type et Mois, le rapport résumera toutes les vues d'un objet d'un mois donné et présentera ces données en une ligne. Si vous choisissez la colonne Jour à la place, chaque objet aura une ligne pour chaque jour.</message>
+	<message key="manager.statistics.reports.filters">Filtres</message>
+	<message key="manager.statistics.reports.objectNotFound">Objet non trouvé dans la base de données</message>
+	<message key="manager.statistics.reports.objectType">Type d'objet</message>
+	<message key="manager.statistics.reports.objectId">ID d'objet</message>
+	<message key="manager.statistics.reports.objectId.label">Définir un ou plusieurs ID d'objet séparés par une virgule (ex. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.today">Aujourd'hui</message>
+	<message key="manager.statistics.reports.currentMonth">Mois courant</message>
+	<message key="manager.statistics.reports.orderBy">Trier par</message>
+	<message key="manager.statistics.reports.orderDir">Direction</message>
+	<message key="manager.statistics.reports.orderDir.asc">Croissant</message>
+	<message key="manager.statistics.reports.orderDir.desc">Décroissant</message>
+	<message key="manager.statistics.reports.month.label">Utilisez le format AAAAMM.</message>
+	<message key="manager.statistics.reports.day.label">Utilisez le format AAAAMMJJ.</message>
+	<message key="manager.statistics.reports.cities.label">Un ou plusieurs noms de ville, séparés par une virgule (ex. Nom de ville 1,Nom de ville 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Vous devez sélectionner au moins une colonne pour générer le rapport.</message>
+	<message key="manager.statistics.reports.reportUrl">URL du rapport</message>
+	<message key="manager.statistics.reports.reportUrl.label">L'URL suivante peut être utilisée pour générer le rapport avec les paramètres courants. Copiez-là et collez-là dans votre navigateur puis appuyez sur la touche Entrée. Vous pouvez utiliser vos favoris pour conserver l'URL qui génère votre rapport personnalisé.</message>
+	<message key="manager.statistics.reports.filters.byContext">Par contexte</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Affiner les résultats par contexte (numéro et/ou article).</message>
+	<message key="manager.statistics.reports.filters.byObject">Par type d'objet et/ou ID d'objet</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Affiner les résultats par type d'objet (revue, numéro, article, épreuves PDF, autres épreuves) et/ou par un ou plusieurs ID(s) d'objet.</message>
+	<message key="manager.statistics.reports.filters.byTime">Sélectionnez la portée du rapport</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Ou sélectionnez la portée par :</message>
+	<message key="manager.statistics.reports.filters.byLocation">Par géolocation</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Affiner les résultats par pays, région et/ou ville.</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Rappel d'expiration prochaine envoyé</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Rappel que la date d'expiration est dépassé, envoyé</message>
 </locale>

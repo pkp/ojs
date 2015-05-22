@@ -4,13 +4,13 @@
 <!--
   * @file plugins/importexport/medra/locale/es_AR/common.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
   -->
- 
+
 <locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Para usar este plugin por favor vaya hacia la categoría  de plugins de "Identificadores Públicos", habilite y configure el plugin DOI y especifique un prefijo DOI válido ahí.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">El plugin no esta completamente configurado.</message>
@@ -45,7 +45,7 @@
 	<message key="plugins.importexport.common.export.selectGalley">Seleccionar versiones galeradas</message>
 	<message key="plugins.importexport.common.export.noGalleys">No hay versiones galeradas que tengan un DOI asignado por el momento.</message>
 	<message key="plugins.importexport.common.exportDescription">Click en este botón para exportar los datos en XML para el/los objeto(s) seleccionados en un archivo local, sin registrarlo con la agencia de registro. Esto podría ser útil si quiere tener una versión del registro de DOI para usted o si quiere inspeccionar el formato XML antes de registrarlo.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Ningun número se ha asociado con el ID especificado: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Ningun artículo se ha asociado con el ID especificado: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Ningua versión galerada se ha asociado con el ID especificado: {$param}.</message>
@@ -53,8 +53,12 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">Ninguna revista esta asociada con el path especificado: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">El tipo de objeto {$param} no puede ser exportado.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">El archivo de salida {$param} no puede ser escrito.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">Los objetos seleccionados fueron exportados con éxito '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Por favor note que la contraseña será guardada como texto plano, no encriptada</message>
+	<message key="plugins.importexport.common.markRegistered">Marcar como registrado</message>
+	<message key="plugins.importexport.common.markRegisteredDescription">Haga click en este boton para marcar que los objetos fueron registrados. (ej: si fueron registrados antes o de forma manual).</message>
+	<message key="plugins.importexport.common.export.unAvailable">La exportación de datos no esta disponible. Por favor cheque los requerimientos de los plugins</message>
 </locale>

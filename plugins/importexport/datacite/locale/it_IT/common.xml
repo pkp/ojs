@@ -4,13 +4,13 @@
 <!--
   * locale/it_IT/common.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings for the it_IT locale.
   -->
- 
+
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Per utilizzare questo plugin vai alla categoria di plugin "Identificatori pubblici", abilita e configura il plugin specifico per il DOI e specifica lì un prefisso valido.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Il plugin non è completamente configurato.</message>
@@ -45,7 +45,7 @@
 	<message key="plugins.importexport.common.export.selectGalley">Seleziona i file</message>
 	<message key="plugins.importexport.common.export.noGalleys">Nessun file ha attualmente DOI assegnati.</message>
 	<message key="plugins.importexport.common.exportDescription">Fare clic su questo pulsante per esportare i dati XML per l'oggetto selezionato in un file locale, senza registrarlo con l'agenzia di registrazione. Questo può essere utile se si desidera registrare un DOI con terze parti o se si desidera controllare il formato XML prima di registrarlo.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Nessun fascicolo corrisponde all'ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Nessun articolo corrisponde all'ID: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Nessun file corrisponde all'ID: {$param}.</message>
@@ -53,8 +53,8 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">Nessuna rivista corrisponde al path: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">L'oggetto tipo {$param} non può essere esportato.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Il file {$param} non è scrivibile.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">Gli oggetti selezionati sono stati esportati con successo in '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">ERRORE:</message>
 </locale>

@@ -1,8 +1,8 @@
 {**
  * templates/article/footer.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article View -- Footer component.
@@ -24,7 +24,7 @@
 				onmouseout="addthis_close()" onclick="return addthis_sendto()">
 					<img src="{$sharingButtonUrl}" width="{$sharingButtonWidth}" height="{$sharingButtonHeight}" border="0" alt="Bookmark and Share" style="border:0;padding:0" />
 			</a>
-			<script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+			<script type="text/javascript" src="//s7.addthis.com/js/200/addthis_widget.js"></script>
 		</div>
 	{else}
 		<a href="http://www.addthis.com/bookmark.php"
@@ -43,9 +43,13 @@
 		<br/><br/>
 		{translate key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear()|escape copyrightHolder=$article->getLocalizedCopyrightHolder()|escape}
 	{/if}
-	{if $currentJournal->getSetting('includeLicense') && $ccLicenseBadge}
+	{if $currentJournal->getSetting('includeLicense')}
 		<br /><br />
-		{$ccLicenseBadge}
+		{if $ccLicenseBadge}
+			{$ccLicenseBadge}
+		{elseif $article->getLicenseURL()}
+			{translate key="submission.licenseURL"}: <a href="{$article->getLicenseURL()|escape}" rel="license">{$article->getLicenseURL()|escape}</a>
+		{/if}
 	{/if}
 {/if}
 
@@ -83,12 +87,12 @@
 		document.captureEvents(Event.DBLCLICK);
 	}
 
-	// Make sure to only open the reading tools when double clicking within the galley	
+	// Make sure to only open the reading tools when double clicking within the galley
 	if (document.getElementById('inlinePdfResizer')) {
-		context = document.getElementById('inlinePdfResizer');	
+		context = document.getElementById('inlinePdfResizer');
 	}
 	else if (document.getElementById('content')) {
-		context = document.getElementById('content');	
+		context = document.getElementById('content');
 	}
 	else {
 		context = document;

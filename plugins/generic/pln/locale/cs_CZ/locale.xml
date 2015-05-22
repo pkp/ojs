@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/pln/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * PLN plugin localization strings
-  * Translation Jiří Dlouhý  
+  * Translation Jiří Dlouhý
   -->
- 
+
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.pln">Plugin PKP PLN</message>
 	<message key="plugins.generic.pln.description">Plugin PKP PLN uloží váš publikovaný obsah do PKP veřejné sítě LOCKSS pro jejich ochranu.</message>
@@ -28,7 +28,6 @@
 	<message key="plugins.generic.pln.settings.refresh">Obnovit</message>
 	<message key="plugins.generic.pln.settings.refresh_help">Pokud nejsou z nějakého důvodu zobrazeny položky, nebo pokud víte, že tyto položky byly aktualizovány, klikněte na Obnovit k jejich obnovení.</message>
 	
-	<message key="plugins.generic.pln.required.pln_network">Zvolte, prosím, síť PLN.</message>
 	<message key="plugins.generic.pln.required.object_type">Zvolte, prosím, typ objektu na ukládání.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Zvolte, prosím, práh ukládání souborů.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">Je třeba souhlas s podmínkami sítě, aby bylo možno ukládat do PLN</message>

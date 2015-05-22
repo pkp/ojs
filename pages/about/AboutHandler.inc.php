@@ -3,8 +3,8 @@
 /**
  * @file pages/about/AboutHandler.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AboutHandler
@@ -308,8 +308,10 @@ class AboutHandler extends Handler {
 
 	/**
 	 * Display editorialPolicies page.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
-	function editorialPolicies() {
+	function editorialPolicies($args, &$request) {
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 		$this->setupTemplate(true);
@@ -329,6 +331,10 @@ class AboutHandler extends Handler {
 			$sectionEditorEntriesBySection[$section->getId()] =& $sectionEditorsDao->getEditorsBySectionId($journal->getId(), $section->getId());
 		}
 		$templateMgr->assign_by_ref('sectionEditorEntriesBySection', $sectionEditorEntriesBySection);
+
+		import('classes.payment.ojs.OJSPaymentManager');
+		$paymentManager = new OJSPaymentManager($request);
+		$templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 
 		$templateMgr->display('about/editorialPolicies.tpl');
 	}

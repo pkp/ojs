@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/editor.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -17,7 +17,7 @@
 	<message key="editor.article.selectReviewForm">选择评审表单</message>
 	<message key="editor.article.clearReviewForm">清除评审表单</message>
 	<message key="editor.home">编辑首页</message>
-	 <message key="editor.article.confirmChangeReviewForm">警告：改变评审表单将影响到所有使用这个表单回复的审稿人，您确认继续吗?</message>
+	<message key="editor.article.confirmChangeReviewForm">警告：改变评审表单将影响到所有使用这个表单回复的审稿人，您确认继续吗?</message>
 	<message key="editor.submissionsAndPublishing">投稿与出版</message>
 	<message key="editor.submissionQueue">投稿队列</message>
 	<message key="editor.submissionArchive">投稿存档</message>
@@ -220,4 +220,6 @@
 	<message key="editor.issues.backToIssueGalleys">返回期目校样。</message>
 	<message key="editor.issues.confirmDeleteGalley">您确定要删除该期目校样吗？</message>
 	<message key="editor.notifyUsers.allMailingList">包含邮件列表上的所有邮件({$count} emails)</message>
+	<message key="editor.publicGalleyIdentificationExists">公共标识符'{$publicIdentifier}'已存在于文章的另一样稿中。请为该篇文章选择唯一的样稿标识符。</message>
+	<message key="editor.issues.resetArticlePublicationDates">重置文章出版日期</message>
 </locale>

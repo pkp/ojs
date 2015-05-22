@@ -3,15 +3,15 @@
 <!--
   * @file plugins/generic/alm/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
   * ALM plugin localization strings
   -->
- 
+
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.alm.displayName">Módulo ALM</message>
 	<message key="plugins.generic.alm.description">Módulo para mostrar la Métrica a Nivel de Artículo (ALM, Article Level Metrics). Para usar el servicio ALM, necesitas disponer de DOIs. Este requisito podría relajarse en un futuro.</message>
@@ -20,8 +20,6 @@
 
 	<message key="plugins.generic.alm.settings">Configuración</message>
 	<message key="plugins.generic.alm.settings.saved">Se ha guadado la configuración del módulo ALM.</message>
-	<message key="plugins.generic.alm.apiKeyRequired">Debe añadir la clave de la API de ALM (Article Level Metrics)</message>
-	<message key="plugins.generic.alm.depositUrlRequired">Debe añadir la url del dipósito de información del artículo.</message>
 	<message key="plugins.generic.alm.settings.apiKey">Clave API de ALM (Article Level Metrics)</message>
 	<message key="plugins.generic.alm.settings.apiKey.description"><![CDATA[Para que el servidor ALM pueda acceder a las métricas a nivel de artículo, es necesaria la clave de la API. Puedes crear una (utilizando Mozilla Persona) entrando en la <a href="http://pkp-alm.lib.sfu.ca/">página ALM de PKP</a>.]]></message>
 	<message key="plugins.generic.alm.settings.depositUrl">Article information deposit url</message>
@@ -49,4 +47,6 @@
 	{$payload}</message>
 	<message key="plugins.generic.alm.senderTask.name">Información ALM del remitente del artículo</message>
 	
+	<message key="plugins.generic.alm.settings.depositArticles">¿Depositar automáticamente la información del artículo? (No lo seleccione si deposita la información directamente en un servidor ALM usando el prefijo DOI.)</message>
+	<message key="plugins.generic.alm.senderTask.warning.noJournal">El plugin ALM no está habilitado en ninguna revista. No se ha enviado ninguna información.</message>
 </locale>

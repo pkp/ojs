@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/editor.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -220,4 +220,6 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Publieke identificatie van de nummer-proef bestaat al</message>
 	<message key="editor.publicIdentificationExists">De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander object (nummer, artikel, proef of aanvullend bestand). Kies een unieke identificatie.</message>
 	<message key="editor.notifyUsers.allMailingList">Neem alle e-mails op in de maillijst({$count} e-mails)</message>
+	<message key="editor.issues.resetArticlePublicationDates">Herstel artikel publicatie datums</message>
+	<message key="editor.publicGalleyIdentificationExists">De publieke identificatie '{$publicIdentifier}' bestaat al voor een andere proef van dit artikel. Kies een unieke identificatie voor dit artikel.</message>
 </locale>

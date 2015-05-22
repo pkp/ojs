@@ -4,13 +4,13 @@
 <!--
   * @file plugins/importexport/datacite/locale/sr_SR/common.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
   -->
- 
+
 <locale name="sr_SR" full_name="Srpski">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">Ako želite da koristite ovaj dodatak idite u kategoriju dodataka "Public Identifier (Javni dodaci)" i uključite i konfigurišite dodatak DOI.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Dodatak nije u potpunosti podešen.</message>
@@ -45,7 +45,7 @@
 	<message key="plugins.importexport.common.export.selectGalley">Odaberi prikaze</message>
 	<message key="plugins.importexport.common.export.noGalleys">Nema prikaza sa dodeljenim DOI-jima.</message>
 	<message key="plugins.importexport.common.exportDescription">Kliknite na dugme da izvezete XML podatke za izabrane objekte u lokalni fajl bez registrovanja kod agencije za registraciju. Ovo može biti korisno ako želite da treća strana registruje DOI-je za vas, ili ako želite da proverite XML format pre nego što ga registrujete.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">Ni jedan broj ne odgovara ID-ju: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">Ni jedan članak ne odgovara ID-ju: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">Ni jedan prikaz ne odgovara ID-ju: {$param}.</message>
@@ -53,8 +53,8 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">Ni jedan časopis ne odgovara datoj putanji časopisa: {$param}.</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">Objekat tipa {$param} ne može biti izvezen.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">U fajl {$param} nije moguće pisati.</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">Uspešan izvoz objekata u '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">GREŠKA:</message>
 </locale>

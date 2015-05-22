@@ -4,8 +4,8 @@
 <!--
   * 000001.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Frequently Asked Questions 
@@ -43,12 +43,12 @@
 	</section>
 	<section title="2. Onde eu posso encontrar suporte técnico, informar bugs, e sugerir melhorias no sistema?">
 		<![CDATA[
-<p>O Public Knowledge Project opera um <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum de Suporte</a> onde pode-se pesquisar por muitas respostas e colocar novas perguntas. Por exemplo, mensagens de erro podem ser pesquisadas, levando a soluções propostas para os assuntos mais comuns. Caso não encontre o que precisa, o usuário pode perguntar para <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Informes sobre Bugs devem ser submetidos para o <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a> do PKP.</p>
+<p>O Public Knowledge Project opera um <a href="http://forum.pkp.sfu.ca/" target="_blank">Forum de Suporte</a> onde pode-se pesquisar por muitas respostas e colocar novas perguntas. Por exemplo, mensagens de erro podem ser pesquisadas, levando a soluções propostas para os assuntos mais comuns. Caso não encontre o que precisa, o usuário pode perguntar para <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Informes sobre Bugs devem ser submetidos para o <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a> do PKP.</p>
 		]]>
 	</section>
 	<section title="3. Como traduzir o sistema para outros idiomas?">
 		<![CDATA[
-<p>Instruções para tradução estão disponíveis no arquivo docs/README que está incluído com o código fonte do sistema. Informações adicionais sobre tradução podem ser encontradas no <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Fórum de Suporte do PKP</a>.</p>
+<p>Instruções para tradução estão disponíveis no arquivo docs/README que está incluído com o código fonte do sistema. Informações adicionais sobre tradução podem ser encontradas no <a href="http://forum.pkp.sfu.ca/" target="_blank">Fórum de Suporte do PKP</a>.</p>
 		]]>
 	</section>
 	<section title='4. Por que está aparecendo a mensagem "Esta revista não está aceitando submissões neste momento"?'>

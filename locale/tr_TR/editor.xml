@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/editor.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkiye Türkçesi) locale.
@@ -221,4 +221,6 @@
 	<message key="editor.issues.confirmDeleteGalley">Bu sayı dizgisini silmek istediğinizden emin misiniz?</message>
 	<message key="editor.article.remove">Kaldır</message>
 	<message key="editor.notifyUsers.allMailingList">Posta listesinde tüm e-postalar dahil ({$count} e-posta)</message>
+	<message key="editor.publicGalleyIdentificationExists">Bu makale için başka bir dizgi tablasında '{$publicIdentifier}' genel belge belirleyicisi olarak zaten belirlenmiş. Lütfen bu makale için tekil bir dizgi tablası belirleyicisi seçiniz.</message>
+	<message key="editor.issues.resetArticlePublicationDates">Makale yayın tarihlerini yenile</message>
 </locale>

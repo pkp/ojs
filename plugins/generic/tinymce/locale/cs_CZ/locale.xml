@@ -4,15 +4,15 @@
 <!--
   * plugins/generic/tinymce/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the cs_CZ (Czech) locale.
+  * Localization strings for the cs_CZ (Čeština) locale.
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.tinymce.name">Plugin TinyMCE</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[Tento plugin umožňuje WYSIWYG editování textových polí OJS s využitím <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> editoru obsahu.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Tento plugin umožňuje WYSIWYG editování textových polí OJS s využitím <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> editor obsahu. <strong>TinyMCE není aktuálně nainstalován; prosím nainstalujte ho do {$tinyMcePath}.</strong>]]></message>

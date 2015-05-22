@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
@@ -18,8 +18,6 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Exportar dados da revista para DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exportar Revista</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Exportar informações de artigos em XML para arquivamento pelo DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Contactar DOAJ para inclusão</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Para que a sua revista seja considerada na DOAJ, submeta este formulário parcialmente preenchido para o DOAJ, e preencha a informação incompleta o melhor que puder.</message>
 </locale>

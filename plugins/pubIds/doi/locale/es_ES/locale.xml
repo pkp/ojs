@@ -3,15 +3,15 @@
 <!--
   * plugins/pubIds/doi/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
   *
   * DOI plugin localization strings
   -->
- 
+
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.pubIds.doi.displayName">Identificador de objeto digital (DOI)</message>
 	<message key="plugins.pubIds.doi.description">Este módulo activa la asignación del Identificador de objetos digitales a números, artículos, galeradas y archivos complementarios en OJS.</message>
@@ -62,4 +62,11 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">archivo complementario</message>
 	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Podría estar visualizando una vista previa incompleta de los DOI. No se generó un DOI. Se generará automaticamente un único DOI para {$pubObjectType} publicando el número y viendo la página pública {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">El sufijo del DOI indicado ya ha sido asignado a otro elemento publicado. Introduzca un único sufijo del DOI para cada elemento.</message>
+	<message key="plugins.pubIds.doi.editor.excludePubObject">No asignar DOI a {$pubObjectType}</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign">Reasignar DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiReassign.description">Seleccione este checkbox para quitar el DOI de este {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi.description">Use este botón para excluir los objetos (artículos, galeradas y ficheros complementarios) que están actualmente programados para este número de ser asignados a este DOI. Note que los objetos que sean añadidos o programados más tarde no estarán afectados. Tendrá aún la posibilidad de usar la opción de exclusión del objeto mismo.</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Borrar los DOIs de los objetos del número</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Use este botón para borrar los DOIs de todos los objetos  (artículos, galeradas y ficheros complementarios) actualmente programados para este número.</message>
+	<message key="plugins.pubIds.doi.editor.excludeIssueObjectsDoi">Excluir los objetos del número</message>
 </locale>

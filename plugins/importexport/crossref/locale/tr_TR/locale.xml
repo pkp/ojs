@@ -4,28 +4,40 @@
 <!--
   * plugins/importexport/crossref/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Turkish) locale.
   *
   -->
- 
+
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.importexport.crossref.displayName">Çapraz Referans XML İhraç Eklentisi</message>
 	<message key="plugins.importexport.crossref.description">Makale üst verilerini çapraz referans XML formatında ihraç et.</message>
 	
-	<message key="plugins.importexport.crossref.cliUsage">Kullanım: 
+	<message key="plugins.importexport.crossref.cliUsage">Kullanım:
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
-	<message key="plugins.importexport.crossref.export">İhtaç Tarihi</message>
-	<message key="plugins.importexport.crossref.export.issues">İhraç Görevi</message>
-	<message key="plugins.importexport.crossref.export.selectIssue">İhraç için bir sayı seçiniz.</message>
-	<message key="plugins.importexport.crossref.export.articles">Makale İhracı</message>
-	<message key="plugins.importexport.crossref.export.selectArticle">İhraç için makale seçiniz.</message>
-	<message key="plugins.importexport.crossref.cliError">HATA:</message>
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Belirtilen "{$issueId}" kodu ile hiçbir sayı eşleşmedi.</message>
-	<message key="plugins.importexport.crossref.export.error.articleNotFound">Belirtilen "{$articleId}" kodu ile hiç bir makale eşleşmedi.</message>
-	<message key="plugins.importexport.crossref.errors.noDOIprefix">In order to use this plug-in please go to the "Public Identifier" plug-in category, enable and configure the DOI plug-in and specify a valid DOI prefix there.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Kullanıcı adı</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Kayıtsız Makaleler</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Kayıtsız makaleleri seç</message>
+	<message key="plugins.importexport.crossref.requirements">Gereksinimler</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Tüm eklenti gereksinimleri belirlenmiştir.</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[CrossRef eklentisi konfigürasyonu yapılmamıştır! Eklenti ayarlarını eklenti <a href="{$settingsUrl}">düzenleme sayfasıda</a> yapınız.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Başarılı bir CrossRef arşivlemesi için aşağıdaki öğeler gereklidir.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Arşivleyenin adı</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Arşivleyenin e-postası</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Lütfen arşivleyenin adını giriniz.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Lütfen arşivleyenin e-posta adresini giriniz.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">DOI'leri otomatik kaydet</message>
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[<a href="{$settingsUrl}">CrossRef ihraç/kayıt eklentisi ayarını buradan</a> yapabilirsiniz.]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[Genel DOI Belirleyici eklentisi düzenlenmemiş! <a href="{$doiUrl}" target="_blank">DOI Eklentisi</a> ayarlar sayfasında bu eklentiyi etkinleştirin ve ayarlayın.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Henüz bir dergi yayıncısı belirtilmemiş! <a href="{$publisherUrl}" target="_blank">Dergi Ayar Adımı 1.5</a> altında yayıncının adını belirtmelisiniz.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.description">Lütfen CrossRef ihraç/kayıt eklentisini ayarlayın:</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Lütfen CrossRef'ten aldığınız kullanıcı adını giriniz.</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">Tüm yayımlanmış makaleler zaten kayıt edilmiş (veya onlardan hiçbirine DOI atanmamış).</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">{$param} ID'li makalenin yayın tarihi eksik.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS will deposit article DOIs automatically to CrossRef as articles are published. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs in the <a href="">unregistered articles listing</a>.]]></message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[This plugin can be configured to automatically register Digital Object Identifiers (DOIs) with CrossRef. You will need a username and password (available from <a href="http://www.crossref.org" target="_blank">CrossRef</a>) in order to do so. If you do not have your own username and password you can still export into the CrossRef XML format, but you cannot register your DOIs with CrossRef from within OJS.]]></message>
 </locale>

@@ -4,14 +4,14 @@
 <!--
   * locale/pt_PT/default.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português) locale (default journal settings).
   *
   -->
- 
+
 <locale name="pt_PT" full_name="Português">
 	<!-- Section default -->
 	<message key="section.default.title">Artigos</message>
@@ -63,11 +63,11 @@ Siga o seguinte protocolo para fazer revisões electrónicas no seu manuscrito:
 <strong>Respondendo a Dúvidas ao Autor (QAs)</strong>
    Mantenha todas as QAs intactas e em negrito dentro do texto. Não as remova.
    Para responder a uma QA, insira um comentário após a dúvida. Delimite comentários da seguinte forma:
-<strong>[Comentário: ]</strong> 
+<strong>[Comentário: ]</strong>
   Ex.: <strong>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</strong>
 
 <strong>Incluindo Comentários</strong>
-   Use comentários para explicar alterações organizacionais ou revisões mais importantes 
+   Use comentários para explicar alterações organizacionais ou revisões mais importantes
   Ex.: <strong>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</strong>
   Aviso: Ao se referir a numeração de páginas, use a numeração da cópia impressa enviada, pois a numeração pode ser alterada nas revisões eletrónicas.
 
@@ -88,7 +88,7 @@ Após o término das suas revisões, renomeie o arquivo de NomedoAutorQA.doc par
 
 <strong>Avisos:</strong>
 • Texto simples indica aceitação de alterações sugeridas à primeira frase
-• Frase inserida em resposta a QA. Texto em negrito indica inserção 
+• Frase inserida em resposta a QA. Texto em negrito indica inserção
 • [deleted word] indica remoção de "completamente"
 • Comentário contém a resposta às QAs dos editores]]></message>
 
@@ -163,4 +163,6 @@ O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]>
 	<message key="default.journalSettings.donationFee">Doações à revista</message>
 	<message key="default.journalSettings.purchaseIssueFee">Comprar Número</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento deste montante permite ver, descarregar e imprimir o número.</message>
+	<message key="default.journalSettings.emailHeader">A seguinte mensagem foi enviada em nome de {$journalName}.
+________________________________________________________________________</message>
 </locale>

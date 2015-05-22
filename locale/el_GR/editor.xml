@@ -4,8 +4,8 @@
 <!--
   * locale/el_GR/editor.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR (Greek) locale.
@@ -52,7 +52,6 @@
 	<message key="editor.issues.accessStatus">Κατάσταση πρόσβασης</message>
 	<message key="editor.issues.accessDate">Ημερομηνία έναρξης ανοιχτής πρόσβασης</message>
 	<message key="editor.issues.invalidAccessDate">Η ημερομηνία πρόσβασης δεν είναι έγκυρη.</message>
-	<message key="editor.issues.issuePublicIdentificationExists">Το δημόσιο αναγνωριστικό τεύχους υπάρχει ήδη.</message>
 	<message key="editor.issues.coverPage">Εικόνα εξωφύλλου</message>
 	<message key="editor.issues.coverPageInstructions">(Επιτρεπόμενες μορφές: .gif, .jpg, ή  .png )</message>
 	<message key="editor.issues.uploaded">Μεταφορτώθηκε</message>
@@ -208,4 +207,19 @@
 	<message key="editor.notifyUsers.allAuthors">Όλοι οι δημοσιευμένοι συγγραφείς ({$count} χρήστες)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Όλοι οι μεμονωμένοι συνδρομητές ({$count} χρήστες)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Όλοι ιδρυματικοί συνδρομητές ({$count} χρήστες)</message>
+	<message key="editor.reassign">Επα-ανάθεση</message>
+	<message key="editor.publicIdentificationExists">Το δημόσιο αναγνωριστικό  '{$publicIdentifier}' υπάρχει ήδη για ένα άλλο αντικείμενο  (τεύχος, άρθρο, τυπογραφικό δοκίμιο ή συμπληρωματικό αρχείο). Παρακαλούμε επιλέξτε μοναδικά αναγωνριστικά μέσα στο περιοδικό σας.</message>
+	<message key="editor.publicGalleyIdentificationExists">Το δημόσιο αναγνωριστικό  '{$publicIdentifier}' υπάρχει ήδη για ένα άλλο τυπογραφικό δοκίμιο αυτού του άρθρου. Παρακαλούμε επιλέξτε μοναδικά αναγωνριστικά για το τυπογραφικό δοκίμιο μέσα στο περιοδικό σας.</message>
+	<message key="editor.notifyUsers.allMailingList">Συμπεριλάβετε όλα τα emails στη λίστα ({$count} e-mail)</message>
+	<message key="editor.issues.resetArticlePublicationDates">Επαναφέρετε τις ημερομηνίες δημοσίευσης του άρθρου</message>
+	<message key="editor.issues.galleys">Τυπογραφικά δοκίμιο τεύχους</message>
+	<message key="editor.issues.galley">Τυπογραφικό δοκίμιο τεύχους</message>
+	<message key="editor.issues.viewingGalley">Προβολή Τυπογραφικού δοκιμίου τεύχους</message>
+	<message key="editor.issues.issueGalleysDescription">Δημοσιεύστεμτυπογραφικά δοκίμια με όλο το περιεχόμενο του τεύχους.</message>
+	<message key="editor.issues.noneIssueGalleys">Δεν έχουν δημοσιευτεί τυπογραφικά δοκίμια</message>
+	<message key="editor.issues.galleyLabelRequired">Απαιτείται μια ετικέτα τυπογραφικού δοκιμίου τεύχους.</message>
+	<message key="editor.issues.galleyLocaleRequired">Απαιτείται ένα αρχείο τοπικών ρυθμίσεων του τυπογραφικού δοκιμίου τεύχους.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Το δημόσιο τυπογραφικό δοκίμιο αναγνώριστης υπάρχει ήδη</message>
+	<message key="editor.issues.backToIssueGalleys">Πίσω στα τυπογραφικά δοκίμια του τεύχους</message>
+	<message key="editor.issues.confirmDeleteGalley">Είστε σίγουροι ότι επιθυμείτε να διαγράψετε αυτό το τυπογραφικό δοκίμιο τεύχους;</message>
 </locale>

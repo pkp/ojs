@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/urn/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * URN plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
@@ -64,6 +64,13 @@
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeGalley">Fahne</message>
 	<message key="plugins.pubIds.urn.editor.urnObjectTypeSuppFile">Zusatzdatei</message>
 	<message key="plugins.pubIds.urn.editor.urnNotYetGenerated">Sie sehen eine Vorschau der URN, die eventuell unvollständig ist. Der URN ist noch nicht erzeugt worden. Wenn die Ausgabe erzeugt wird und die öffentliche {$pubObjectType}-Seite aufgerufen wird, wird automatisch ein eindeutiger URN für dieses {$pubObjectType}-Objekt erzeugt.</message>
+	<message key="plugins.pubIds.urn.editor.excludePubObject">Diese/diesen/dieses {$pubObjectType} von der Zuweisung eines URN ausnehmen.</message>
+	<message key="plugins.pubIds.urn.editor.urnClear">URN entfernen</message>
+	<message key="plugins.pubIds.urn.editor.urnClear.description">Wählen Sie diese Box, um den existierenden URN für diese/diesen/dieses {$pubObjectType} zu löschen.</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN">Objekte einer Ausgabe ausnehmen</message>
+	<message key="plugins.pubIds.urn.editor.excludeIssueObjectsURN.description">Nutzen Sie diesen Knopf, um Objekte (Artikel, Fahnen, Zusatzdateien), die momentan für diese Ausgabe vorgesehen sind, von der URN-Zuweisung auszunehmen. Beachten Sie bitte, dass dies nicht für Objekte gilt, die Sie später hinzufügen/für die Ausgabe einplanen. Sie können immer noch Ausnahmen für einzelne Objekte vornehmen.</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">URN der Ausgabenobjekte löschen</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Nutzen Sie diesen Knopf, um die URN aller Objekte (Artikel, Fahnen, Zusatzdateien), die momentan für diese Ausgabe vorgesehen sind, zu löschen.</message>
 
 	<!-- consider URNs at other places in the system -->
 	<message key="plugins.pubIds.urn.rt.metadata.urn">Uniform Resource Name</message>

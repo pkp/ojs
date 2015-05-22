@@ -1,9 +1,9 @@
 	====================================
 	=== Open Journal Systems
 	=== The Public Knowledge Project
-	=== Version: 2.4.5
-	=== GIT tag: ojs-2_4_5-0
-	=== Release date: September 17, 2014
+	=== Version: 2.4.6
+	=== GIT tag: ojs-2_4_6-0
+	=== Release date: March 17, 2015
 	====================================
 
 About
@@ -215,6 +215,6 @@ Contact/Support
 The forum is the recommended method of contacting the team with technical
 issues.
 
-Forum: <http://pkp.sfu.ca/support/forum/>
+Forum: <http://forum.pkp.sfu.ca/>
 Bugs: <https://github.com/pkp/pkp-lib#issues>
 Email: <pkp.contact@gmail.com>

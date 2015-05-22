@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
@@ -198,7 +198,7 @@
 	<message key="submissions.queuedReview">На рецензии</message>
 	<message key="submissions.scheduled">Запланирована</message>
 	<message key="submissions.published">Опубликована</message>
-	<message key="submissions.initial">Первочальный</message>
+	<message key="submissions.initial">Первоначальный</message>
 	<message key="submissions.proofread">Корректура</message>
 	<message key="submissions.initialProof">Первоначальная корректура</message>
 	<message key="submissions.postAuthor">После автора</message>
@@ -427,10 +427,11 @@
 	рецензентам запрос на рецензирование по электронной почте, с прикрепленной к письму копией статьи. Рецензенты электронной почтой отправляют редакторам свое согласие (или свой отказ), а также свою рецензию и рекомендацию. Редакторы вносят согласие (или отказ) рецензента, рецензию и рекомендацию на странице «Рецензирование» этой статьи, чтобы отразить на сайте процесс рецензирования.</message>
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems поддерживает систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), которая обеспечивает безопасную и постоянную архивацию журнала. LOCKSS  — это программное обеспечение с открытым исходным кодом, разработанное в библиотеке Стенфордского университета, которое позволяет бибилотекам сохранять выбранные веб-журналы, регулярно просматривая веб-сайты зарегистрированные журналы на предмет нового опубликованного контента и архивируя его. Каждый архив постоянно сверяется с кэшами других библиотек и, если оказывается, что контент поврежден или утрачен, для его восстановления используются другие кэши или сам журнал.
+	<message key="manager.setup.preservationDescription"><![CDATA[Open Journal Systems поддерживает систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), которая обеспечивает безопасную и постоянную архивацию журнала. У вас есть несколько вариантов для включения вашего жкрнала в сеть LOCKSS:]]></message>
+
+	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Другие сети LOCKSS</strong>
 <br /><br />
-Настройка поддержки LOCKSS для Open Journal Systems не обязательна до тех пор, пока не начнется активная работа над изданием. Для настройки необходимо выполнить два шага:]]></message>
-	
+Если вам известно, что у вас есть доступ к одной или нескольким сетям LOCKSS, перечисленным в данном  <a href="http://www.lockss.org/community/networks/" target="_blank">списке</a>, пожалуйста свяжитесь с администратором сообветствующей сети LOCKSS для включения в нее. Заполнение приведенной ниже формы позволит включить ваш журнал в эти сети. <em>Контент не будет архивироваться до тех пор, пока вы не уведомите соответствующую сеть</em>.]]></message>
 	<!-- Настройка (Шаг 3) -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Примеры уведомлений о передаче авторских прав на основе лицензии Creative Commons</h3>
 <h4>1. Предлагаемая политика для журналов, предлагающих открытый доступ к статьям</h4>
@@ -652,7 +653,6 @@
 	<!-- Отправка статьи (Шаг 3) -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
 <p>Чтобы отправить статью для публикации в этом журнале, выполните следующие шаги.</p>
-
 <ol>
 <li>На этой странице щелкните на «Обзор» (или «Выбрать файл»), после чего откроется диалоговое окно для выбора файла на жестком диске Вашего компьютера.</li>
 <li>Найдите файл, который Вы хотите отправить, и выберите его.</li>
@@ -877,6 +877,10 @@
 	<message key="about.subscriptionTypes.duration">Продолжительность</message>
 	<message key="about.subscriptionTypes.cost">Цена</message>
 	<message key="about.availableSubscriptionTypes">Типы подписок</message>
+	<message key="about.purchaseIssue">Купить выпуск</message>
+	<message key="about.purchaseArticle">Купить статью</message>
+	<message key="about.purchaseIssueDescription">Читатели без подписки могут покупать отдельные выпуски. Доступны следующие способы оплаты и цены:</message>
+	<message key="about.purchaseArticleDescription">Читатели без подписки могут покупать отдельные статьи. Доступны следующие способы оплаты и цены:</message>
 	<message key="about.memberships">Членства</message>
 	<message key="about.journalSponsorship">Спонсоры журнала</message>
 	<message key="about.aboutThisPublishingSystem">Об этой издательской системе</message>
@@ -976,7 +980,7 @@
 	<message key="installer.ojsUpgrade">Обновление OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
-<p>Благодарим вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href="{$baseUrl}/docs/README">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://pkp.sfu.ca/support/forum" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарим вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href="{$baseUrl}/docs/README">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Обновление</h4>
 
@@ -1014,7 +1018,7 @@
 <p>2. Каталог для хранения загруженных файлов должен быть создан и сделан доступным для записи (смотри «Настройки файлов» ниже).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
-<p>Благодарим вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://pkp.sfu.ca/support/forum" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарим вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Перед продолжением <strong>настоятельно рекомендуется</strong> создать резервную копию вашей базы данных, каталога с файлами и каталога с установленной системой OJS.</p>
 <p>Если PHP запущен у вас в режиме <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, пожалуйста, убедитесь, что значение max_execution_time в файле конфигурации php.ini задано достаточно большим. Если это или какое-либо другое ограничение по времени (например, значение Timeout для Apache) будет достигнуто и процес обновления будет прерван, потребуется ручное вмешательство в процесс обновления.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Для полной поддержки Unicode (UTF-8), выберите UTF-8 для всех настроек кодировки символов. Обратите внимание, что поддержка этого на сегодняшний день требует версии СУБД MySQL >= 4.1.1 или PostgreSQL >= 7.1. Пожалуйста, также обратите внимание, что полная поддержка Unicode требует PHP >= 4.3.0, откомпилированного с поддержкой библиотеки <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (включена по умолчанию в большинстве современных инсталляций PHP). У вас могут возникнуть проблемы с расширенными кодировками, если ваш сервер не соответствует этим требованиям.
@@ -1039,10 +1043,10 @@
 	<li>Присоединиться к нашему <a href="http://pkp.sfu.ca/informed" target="_new">списку обсуждений</a> для OJS, OCS, the Harvester, Lemon8-XML, OMP или всего вышеперечисленного.</li>
 	<li>Подписаться на <a href="http://pkp.sfu.ca/blog" target="_new">блог PKP</a> (<a href="http://pkp.sfu.ca/blog/feed" target="_new">лента RSS</a>).</li>
 </ol>
-<p>Если у вас есть вопросы или предложения, пожалуйста, посетите <a href="http://pkp.sfu.ca/support/forum" target="_new">форум поддержки</a>.</p>]]></message>
+<p>Если у вас есть вопросы или предложения, пожалуйста, посетите <a href="http://forum.pkp.sfu.ca" target="_new">форум поддержки</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Обновление OJS до версии {$version} было успешно завершено.</p>
 <p>Не забудьте установить параметр installed в вашем файле конфигурации config.inc.php обратно в значение <em>On</em>.</p>
-<p>Если вы еще не зарегистрированы и хотите получать новости и обновления, <strong>пожалуйста, зарегистрируйтесь на <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Если у вас есть вопросы или предложения, пожалуйста, посетите <a href="http://pkp.sfu.ca/support/forum" target="_new">форум поддержки</a>.</p>]]></message>
+<p>Если вы еще не зарегистрированы и хотите получать новости и обновления, <strong>пожалуйста, зарегистрируйтесь на <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Если у вас есть вопросы или предложения, пожалуйста, посетите <a href="http://forum.pkp.sfu.ca" target="_new">форум поддержки</a>.</p>]]></message>
 
 	<!-- Предупреждения установщика при обновлении -->
 	<message key="site.upgradeAvailable.admin"><![CDATA[Доступна новая версия OJS! Сейчас вы пользуетесь OJS {$currentVersion}. Самая последняя версия — OJS {$latestVersion}. Пожалуйста, зайдите на <a href="http://pkp.sfu.ca/ojs_download" target="_new">эту страницу</a>, чтобы скачать самую последнюю версию и получить инструкции по обновлению.]]></message>

@@ -4,14 +4,14 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_CA locale.
   *
   -->
- 
+
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.referral.name">Plugiciel de référence</message>
 	<message key="plugins.generic.referral.description">Le plugiciel de référence retrace les URL entrants de renvoi aux articles (c.-à-d. quand un lecteur suit un lien externe vers un article), permettant à des auteurs de maintenir et, potentiellement, de publier une liste mise à jour automatiquement de références à un article.</message>
@@ -36,4 +36,8 @@
 	<message key="plugins.generic.referral.settings">Paramètres du plugiciel de référence</message>
 	<message key="plugins.generic.referral.settings.description">Le plugiciel de référence enregistre les URLs qui sont liés aux articles publiés dans la revue afin qu'il puissent être organisés par l'auteur et optionnellement publiés. Ce formulaire permet au Directeur de revue de contrôler comment ces liens sont enregistrés.</message>
 	<message key="plugins.generic.referral.excusions">Exclusions</message>
+	<message key="plugins.generic.referral.status.accepted">Diffusé</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Êtes vous sûr que vous désirez diffuser les renvois sélectionnés ?</message>
+	<message key="plugins.generic.referral.status.declined">Ignoré</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Êtes-vous sûr que vous désirez ignorez les renvois sélectionnés ?</message>
 </locale>

@@ -4,13 +4,13 @@
 <!--
   * @file plugins/importexport/medra/locale/zh_CN/common.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Shared localization strings
   -->
- 
+
 <locale name="zh_CN" full_name="China">
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">为使用该款插件，请在"公共标识符"插件种类中，开启和配置DOI插件并且指定一个有效的DOI字首。</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">插件尚未完全建立。</message>
@@ -50,7 +50,7 @@
 	<message key="plugins.importexport.common.export.selectGalley">选择样稿</message>
 	<message key="plugins.importexport.common.export.noGalleys">当前样稿没有指定的DOI。</message>
 	<message key="plugins.importexport.common.exportDescription">Click this button to export XML data for the selected object(s) into a local file without registering it with the registration agency. This can be useful if you want a third party to register DOIs for you or if you want to inspect the XML format before registering it.</message>
- 
+
 	<message key="plugins.importexport.common.export.error.issueNotFound">没有找到 ID： {$param}的期次。</message>
 	<message key="plugins.importexport.common.export.error.articleNotFound">没有找到ID： {$param}的文章。</message>
 	<message key="plugins.importexport.common.export.error.galleyNotFound">没有找到ID：{$param}的样稿。</message>
@@ -58,9 +58,9 @@
 	<message key="plugins.importexport.common.export.error.unknownJournal">没找到期刊路径：{$param}的期刊。</message>
 	<message key="plugins.importexport.common.export.error.unknownObjectType">对象类型{$param} 无法导出。</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">输出文件{$param}不可写。</message>
- 
+
 	<message key="plugins.importexport.common.notification.exportSuccessful">成功导出所选对象到 '{$param}'</message>
- 
+
 	<message key="plugins.importexport.common.cliError">错误：</message>
 </locale>
 

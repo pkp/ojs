@@ -3,8 +3,8 @@
 <!--
   * locale/es_ES/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
@@ -735,4 +735,10 @@
 	<message key="manager.statistics.reports.objectNotFound">Objeto no encontrado en la base de datos</message>
 	<message key="manager.subscriptions.form.dateRemindedBefore">Se ha enviado el recordatorio pre-vencimiento</message>
 	<message key="manager.subscriptions.form.dateRemindedAfter">Se ha enviado el recordatorio post-vencimiento</message>
+	<message key="manager.setup.copyrightYearBasis">Poner la fecha del copyright del artículo a</message>
+	<message key="manager.setup.copyrightYearBasis.Article">El año por defecto se obtendrá de la fecha de publicación del número, como en "publicar sobre la marcha"</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">El año por defecto se obtendrá de la fecha de publicación del número.</message>
+	<message key="manager.setup.emailHeader">Cabecera del correo electrónico</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Ha cambiado la información sobre licencia y copyright. Guarde los cambios antes de resetear los permisos.</message>
+	<message key="manager.setup.emailHeaderDescription">Las plantillas de correo que son enviadas por el sistema a nombre de la revista comenzarán con la siguiente cabecera. Estos correos se enviarán a nombre del Contacto Principal de la revista, así que es importante aclarar que el Contacto Principal de la revista no es necesariamente el responsable del contenido del mensaje, que puede haber sido enviado por otro usuario pero llega a su nombre.</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Introduction to OJS Main 
@@ -24,6 +24,6 @@
 <p align="center"><a href="{$baseUrl}/locale/{$locale}/edprocesslarge.png"><img src="{$baseUrl}/locale/{$locale}/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>]]>
 	</section>
 	<section title="Support">
-		<![CDATA[<p>Du kan få adgang til et supportforum og et fejlrapporteringssystem via PKP-webstedet <a href="http://pkp.sfu.ca/support/forum/" target="_blank"></a>.</p><p>Brugere, som har spørgsmål om interaktion med et bestemt tidsskrifts websted ved hjælp af OJS eller om det pågældende tidsskrifts politikker, bedes kontakte tidsskriftets primære kontaktperson eller kontaktpersonen for support, der er angivet på siden Om på tidsskriftets websted.</p>]]>
+		<![CDATA[<p>Du kan få adgang til et supportforum og et fejlrapporteringssystem via PKP-webstedet <a href="http://forum.pkp.sfu.ca/" target="_blank"></a>.</p><p>Brugere, som har spørgsmål om interaktion med et bestemt tidsskrifts websted ved hjælp af OJS eller om det pågældende tidsskrifts politikker, bedes kontakte tidsskriftets primære kontaktperson eller kontaktpersonen for support, der er angivet på siden Om på tidsskriftets websted.</p>]]>
 	</section>
 </topic>

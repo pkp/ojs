@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/usageStats/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
@@ -27,7 +27,10 @@
 	<message key="plugins.generic.usageStats.loadDataError">Невозможно загрузить данные, извлеченные из файла «{$file}». Ошибка: {$error}. Файл был перемещен обратно на свое место.</message>
 	<message key="plugins.generic.usageStats.displayName">Плагин «Статистика использования»</message>
 	<message key="plugins.generic.usageStats.description">Этот плагин представляет статистику использования объектов данных, может использовать файлы журнала доступа сервера для извлечения статистики.</message>
-	<message key="plugins.generic.usageStats.openFileFailed">Плагин «Статистика использования» отключен. Файлы журнала не обрабатываются.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Плагин «Статистика использования» отключен. Файлы журнала не обрабатываются.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">Каталог {$directory} не является пустым. Это может означать, что предыдущая обработка завершилась неудачей или обработка запущена параллельно.  Этот файл будет автоматически заново обработан, если вы используете scheduledTasksAutoStage.xml, в противном случае вам необходимо переместить любые оставшиеся файлы в каталоге обработки обратно в каталог хранения.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">Не удается найти список ботов COUNTER или этих списков более одного. Файл {$file} не может быть обработан.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">Список ботов COUNTER {$botlist} не удается открыть. Файл {$file} не может быть обработан.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">Отчет о статистике использования OJS</message>
 	<message key="plugins.reports.usageStats.report.description">Отчет о статистике использования OJS, формируемый по умолчанию (готовый для COUNTER)</message>

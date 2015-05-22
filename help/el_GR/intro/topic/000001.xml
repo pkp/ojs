@@ -4,8 +4,8 @@
 <!--
   * 000001.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Frequently Asked Questions 
@@ -50,12 +50,12 @@
 	</section>
 	<section title="2. Που μπορώ να βρω τεχνική υποστήριξη, να υποβάλλω προβλήματα και να προτείνω βελτιώσεις για το OJS;">
 		<![CDATA[
-<p>Το Public Knowledge Project λειτουργεί ένα <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum Υποστήριξης</a> όπου οι χρήστες μπορούν να ανζητήσουν απαντήσεις και να αποστείλουν ερωτήσεις. Σε περίπτωση που δεν μπορέσατε να βρείτε κάτι χρήσιμο στο forum, μπορείτε να επικοινωνήσετε στο <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Προβλήματα λειτουργίας θα πρέπει να υποβάλλονται μέσω του <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
+<p>Το Public Knowledge Project λειτουργεί ένα <a href="http://forum.pkp.sfu.ca/" target="_blank">Forum Υποστήριξης</a> όπου οι χρήστες μπορούν να ανζητήσουν απαντήσεις και να αποστείλουν ερωτήσεις. Σε περίπτωση που δεν μπορέσατε να βρείτε κάτι χρήσιμο στο forum, μπορείτε να επικοινωνήσετε στο <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>. Προβλήματα λειτουργίας θα πρέπει να υποβάλλονται μέσω του <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github issues</a>.</p>
 		]]>
 	</section>
 	<section title="3. Πως μπορώ να μεταφράσω το OJS σε άλλες γλώσσες;">
 		<![CDATA[
-<p>Σχετικές οδηγίες δίνονται στο αρχείο docs/README που περιλαμβάνεται στα αρχεία εγκατάστασης του OJS που κατεβάσατε. Επιπλέον πληροφορίες για συνήθη θέματα μετάφραση πορούν να βρεθούν στο <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP Support Forum</a>.</p>
+<p>Σχετικές οδηγίες δίνονται στο αρχείο docs/README που περιλαμβάνεται στα αρχεία εγκατάστασης του OJS που κατεβάσατε. Επιπλέον πληροφορίες για συνήθη θέματα μετάφραση πορούν να βρεθούν στο <a href="http://forum.pkp.sfu.ca/" target="_blank">PKP Support Forum</a>.</p>
 		]]>
 	</section>
 	<section title='4. Γιατί οι συγγραφείς λαμβάνουν μήνυμα ότι Το συγκεκριμένο περιοδικό δεν αποδέχεται υποβολές τη συγκεκριμένη χρονική στιγμή;'>

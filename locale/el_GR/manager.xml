@@ -4,8 +4,8 @@
 <!--
   * locale/el_GR/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR (Greek) locale.
@@ -162,8 +162,6 @@
 	<message key="manager.setup.disciplineExamples">(π.χ., Ιστορία, Εκπαίδευση, Κοινωνιολογία, Ψυχολογία, Πολιτικές επιστήμες, Νομικές επιστήμες)</message>
 	<message key="manager.setup.disciplineProvideExamples">Παραθέστε μερικά παραδείγματα για τα επιστημονικά πεδία που καλύπτει το περιοδικό σας</message>
 	<message key="manager.setup.displayCurrentIssue">Προσθήκη του πίνακα περιεχομένων για το τρέχον τεύχος (εάν είναι διαθέσιμος).</message>
-	<message key="manager.setup.doiPrefix">Το πρόθεμα DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Το πρόθημα DOI (Αναγνωριστικό Ψηφιακού Αντικειμένου) ανατίθεται από το <a href="http://www.crossref.org">CrossRef</a>  και βρίσκεται σε μορφή 10.xxxx (π.χ. 10.1234).]]></message>
 	<message key="manager.setup.editorDecision">Απόφαση Επιμελητή</message>
 	<message key="manager.setup.editorialMembers">Μεταβείτε στα Μέλη Επιτροπών και προσθέστε Μελη Συντακτικής Επιτροπής ή/και μέλη Επιτροπής Αξιολόγησης. Αυτό μπορεί να πραγματοποιηθεί οποιαδήποτε στιγμή λειτουργίας του περιοδικού.</message>
 	<message key="manager.setup.editorialProcess1">Ένας ή περισσότεροι επιμελητές χειρίζονται τα βασικά βήματα χωρίς να τους έχουν ανατεθεί ρόλοι.</message>
@@ -324,7 +322,7 @@
 	<message key="manager.setup.reviewerDatabaseLink">Βάση Δεδομένων Πιθανών Αξιολογητών</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Προσθέστε στην σελίδα "Επιλογή Αξιολογητή" ένα σύνδεσμο σε μια σχετική βάση δεδομένων όπου μπορείτε να να αναζητείται πιθανούς αξιολογητές και είναι ανοικτή στους επιμελητές χωρίς να απαιτείται συνδρομή.</message>
 	<message key="manager.setup.reviewGuidelines">Κατευθυντήριες γραμμές αξιολόγησης</message>
-	<message key="manager.setup.reviewGuidelinesDescription">Οι κατευθυντήριες γραμμές αξιολόγησης παρέχουν στους αξιολογητές κριτήρια για τον καθορισμό της καταλληλότητας δημοσίευσης των υποβληθέντων άρθρων στο περιοδικό, καθώς και ειδικές οδηγίες για την σύνταξη αποτελεσματικής και κατατοπιστικής αξιολόγησης.</message>
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Εναλλακτικά, ο Διαχειριστής του Περιοδικού μπορεί να δημιουργήσει μια φόρμα αξιολόγησης από ομοτίμους κάτω από  τις <a href="{$reviewFormsUrl}" Έντυπα class="action"> Φόρμες Αξιολόγησης </a>. Σε όλες τις περιπτώσεις, οι συντάκτες θα έχουν τη δυνατότητα να συμπεριληφθούν τα σχόλια που αντιστοιχεί με τον συγγραφέα.]]></message>
 	<message key="manager.setup.reviewOptions">Επιλογές αξιολόγησης</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Αυτοματοποιημένες υπενθυμίσεις μέσω email (διαθέσιμα στις προεπιλεγμένες διευθύνσεις email του OJS) μπορούν να αποσταλούν σε αξιολογητές σε δύο σημεία (ενώ ο επιμελητής μπορεί ανά πάσα στιγμή να αποστείλει email στον αξιολογητή)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Σημείωση:</strong>  Για να ενεργοποίησετε τις συγκεκριμένες επιλογές, ο τεχνικός διαχειριστής του ιστοτόπου πρέπει να ενεργοποιήσει την επιλογή <tt>scheduled_tasks</tt> στο αρχείο ρυθμίσεων του OJS. Ενδέχεται να απαιτούνται πρόσθετες ρυθμίσεις στον εξυπηρετητή για υποστήριξη της συγκεκριμένης λειτουργίας (που ενδέχεται να μην είναι διαθέσιμες σε όλους τους εξυπηρετητές), όπως διευκρινίζεται στα έγγραφα τεκμηρίωσης του OJS.]]></message>
@@ -369,8 +367,6 @@
 	<message key="manager.setup.subjectExamples">(π.χ., Φωτοσύνθεση; Μαύρες τρύπες; Οικονομική θεωρία; Θεωρία Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Λέξεις-κλειδιά</message>
 	<message key="manager.setup.subjectProvideExamples">Παραθέστε μερικά παραδείγματα λέξεων-κλειδιών ή θεμάτων για την καθοδήγηση των συγγραφέων</message>
-	<message key="manager.setup.submissionEmailLogging">Διατήρηση ενός αρχείου καταγραφής όλων των email που απεστάλησαν και σχετίζονται με κάποια υποβολή (με δυνατότητα πρόσβασης του αρχείου μέσω της σελίδας “Ιστορικό”).</message>
-	<message key="manager.setup.submissionEventLogging">Διατήρηση ενός αρχείου καταγραφής όλων των ενεργειών έλαβαν χώρα σχετικά με κάποια υποβολή (με δυνατότητα πρόσβασης του αρχείου μέσω της σελίδας "Ιστορικό").</message>
 	<message key="manager.setup.submissionGuidelines">Οδηγίες υποβολής</message>
 	<message key="manager.setup.submissionPreparationChecklist">Λίστα ελέγχου προετοιμασίας υποβολής</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Κατά την διάρκεια της διαδικασίας υποβολής άρθρου στο περιοδικό, αρχικά ζητείται από τους συγγραφείς να ελέγξουν κάθε στοιχείο της λίστας ελέγχου, πριν να προχωρήσουν σε επόμενο στάδιο. Η λίστα ελέγχου εμφανίζεται  επίσης και στις «Οδηγίες για τους Συγγραφείς» στην σελίδα «Σχετικά με το περιοδικό». Η λίστα μπορεί να επεξεργασθεί παρακάτω, αλλά όλα τα στοιχεία της λίστας θα πρέπει να έχουν επιλεχθεί από τους συγγραφείς ώστε να μπορέσουν να προχωρήσουν στην υποβολή του άρθρου τους.</message>
@@ -615,13 +611,6 @@
 	<message key="manager.setup.contributorNoteDescription">Το κείμενο αυτό θα εμφανιστεί κάτω από την κεφαλίδα "Πηγές Υποστήριξης" και πάνω από την λίστα ονομάτων και URL των οργανισμών υποστήριξης του περιοδικού κάτω από το "Χορηγοί του Περιοδικού" στην σελίδα "Σχετικά".</message>
 	<message key="manager.setup.history">Ιστορικό Περιοδικού</message>
 	<message key="manager.setup.historyDescription">Το κείμενο αυτό θα εμφανιστεί στην ενότητα "Σχετικά" του περιοδικού και μπορεί να χρησιμοποιηθεί για να περιγράψει αλλαγές στον τίτλο, στην ομάδα σύνταξης και άλλες πληροφορίες σχετικά με την εκδοτική ιστορία του περιοδικού.</message>
-	<message key="manager.setup.doiSuffix">Επίθεμα DOI</message>
-	<message key="manager.setup.doiSuffixDefault">Χρήση του προκαθορισμένου υποδείγματος (%j.v%vi%i.%a).</message>
-	<message key="manager.setup.doiSuffixPattern">Χρησιμοποιήστε το υπόδειγμα που εισάγατε παρακάτω για να δημιουργήσετε προθέματα DOI.  Χρησιμοποιήστε το %j για αρχικά περιοδικών, το %v για αριθμούς τόμων, το %i για αριθμούς τευχών, το %a για τα αναγνωριστικά άρθρων του OJS, και το %p για τους αριθμούς σελίδων.</message>
-	<message key="manager.setup.doiSuffixPattern.example">Για παράδειγμα, το vol%viss%ipp%p θα δημιουργήσει ένα DOI όπως το 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixDescription">Ένα επίθεμα DOI μπορεί να πάρει οποιαδήποτε μορφή, αλλά θα πρέπει να είναι μοναδικό για κάθε δημοσιευμένο τεκμήριο.</message>
-	<message key="manager.setup.doiSuffixCustomIdentifier">Χρησιμοποιήστε το "Προσαρμοσμένο Αναγνωριστικό" για δημοσιευμένα τεκμήρια όπως το επίθεμα DOI (πρέπει να ενεργοποιηθεί στο Βήμα 4.)</message>
-	<message key="manager.setup.form.doiPrefixPattern">Το υπόδειγμα DOI πρέπει να είναι της μορφής 10.xxxx.</message>
 	<message key="manager.setup.journalFavicon">Εικονίδιο ιστοτόπου (favicon) περιοδικού</message>
 	<message key="manager.setup.journalFaviconDescription">Εισάγετε ένα εικονίδιο ιστοτόπου για το περιοδικό, που θα εμφανίζεται δίπλα στη μπάρα πλοήγηση όταν οι χρήστες επισκέπτονται τον ιστότοπο του περιοδικού σας.</message>
 	<message key="manager.setup.journalFaviconInvalid">Μη έγκυρος τύπος εικονιδίου ιστοτόπου. Επιτρεπτοί τύποι αρχείων είναι .ico, .png, και .gif.</message>
@@ -679,6 +668,74 @@
 	<message key="manager.plugins.tarCommandNotFound">Η εντολή tar δεν είναι διαθέσιμη. Παρακαλούμε διορθώστε τις ρυθμίσεις στο αρχείο  "config.inc.php".</message>
 	<message key="manager.plugins.versionFileInvalid">Το αρχείο version.xml στον φάκελλο plugin περιέχει μη έγκυρα δεδομένα.</message>
 	<message key="manager.reviewFormElements.included">Περιλαμβάνονται στο μήνυμα προς τον Συγγραφέα</message>
-	<message key="manager.setup.doiReassign">Επανεκχώριση DOIs</message>
-	<message key="manager.setup.doiReassign.description">Αν αλλάξετε τις ρυθμίσεις των DOI, τα DOIs που έχετε ήδη εκχωρήσει/αναθέσει δεν θα επηρεαστούν. Μόλις οι νέες ρυθμίσεις αποθηκευτούν, χρησιμοποιήστε αυτό το κουμπί για να καθαρίσετε όλα τα υφιστάμενα DOIs ώστε οι νέες ρυθμίσεις να εφαρμοστούν στα υφιστάμενα άρθρα.</message>
+	<message key="manager.payment.giftFees">Τέλη δώρου</message>
+	<message key="manager.payment.giftFeesDescription">Έναν σύνδεσμος για τις συνδρομές δώρων θα εμφανιστεί στη σελίδα Συνδρομές στην ενόητα Σχετικά με το περιοδικό και ως μέρος του μπλοκ συνδρομών της πλαϊνής μπάρας.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Αυτό θα ενεργοποιήσει τις πληρωμές των συνδρομών δώρων, επιτρέποντας στους αναγνώστες του περιοδικύ να αγοράσουν δώρα συνδρομών για άλλους αναγνώστες.</message>
+	<message key="manager.payment.options.purchaseIssueFee">Αγορά τεύχους</message>
+	<message key="manager.plugins.wrongCategory">Το plugin που ανέβηκε δεν ταιριάζει στην κατηγορία αναβαθμισμένων plugin</message>
+	<message key="manager.plugins.wrongName">Η έκδοση .xml του ανεβασμένου plugin περιέχει ένα όνομα plugin που δεν ταιριάζει με το όνομα του αναβαθμισμένου plugin.</message>
+	<message key="manager.plugins.settings">Ρυθμίσεις</message>
+	<message key="manager.sections.alertDelete">Πριν διαγραφεί αυτή η ενότητα, θα πρέπει να μετακινήσετε τα δημοσιεύμενα άρθα της ενότητας σε άλλες ενότητες.</message>
+	<message key="manager.setup.permissions.priorAgreement">Προκαταστική συμφωνία</message>
+	<message key="manager.setup.permissions.display">Εμφανίστε</message>
+	<message key="manager.setup.licenseURLDescription">Δώστε ένα URL ιστοσελίδας άδειας, αν διατίθεται.</message>
+	<message key="manager.setup.includeCopyrightStatement">Εμφανίσετε τη δήλωση πνευματικών δικαιωμάτων με το περιεχόμενο (συνίσταται για τις περιπτώσεις που ο συγγραφέας κρατά τα πνευματικά δικαιώματα)</message>
+	<message key="manager.setup.includeLicense">Εμφανίστε την άδεια με την δημοσιευμένη εργασία</message>
+	<message key="manager.setup.resetPermissions">Επαναφορά Δικαιώματα Άρθρου</message>
+	<message key="manager.setup.resetPermissions.description">Η δήλωση και άδεια των Πνευματικών Δικαιωμάτων θα είναι μόνιμα συνδεδεμένα με το δημοσιευμένο περιεχόμενο, διασφαλίζοντας ότι τα δεδομένα αυτά δεν θα αλλάξουν στην περίπτωση ενός περιοδικού που αλλάξει τις πολιτικές για τις νέες υποβολές.Για να επαναφέρετε τις αποθηκευμένες πληροφορίες που έχουν ήδη συνδέονται με το δημοσιευμένο περιεχόμενο, χρησιμοποιήστε το κουμπί παρακάτω.</message>
+	<message key="manager.setup.confirmResetLicense">Είστε σίγουροι ότι επιθυμείτε να επαναφέρετε την άδεια και τις πληροφορίες των πνευματικών δικαιωμάτων που συνδέονται με το περιεχόμενο όπως έχει ρυθμιστεί στο Στήσιμο του Περιοδικού.</message>
+	<message key="manager.statistics.reports.filters.byTime">Επιλέξτε εύρος αναφοράς</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Ή επιλέξτε εύρος από:</message>
+	<message key="manager.setup.confirmResetLicenseChanged">Εχετε αλλάξει την άδεια και τις πληροφορίες πνευματικών δικαιωμάτων στο Στήσιμο Περιοδικού. Παρακαλούμε αποθηκεύστε τις αλλαγές πριν επναφέρετε τα δικαιώματα.</message>
+	<message key="manager.setup.copyrightYearBasis">Έτος - βάση πνευματικών δικαιωμάτων νέου άρθρου</message>
+	<message key="manager.setup.copyrightYearBasis.Article">Εξ'ορισμού το έτος θα συμπληρωθεί από την ημερομηνία δημοσίευσης, όπως "publish-as-you-go".</message>
+	<message key="manager.setup.copyrightYearBasis.Issue">Εξ'ορισμού το έτος θα συμπληρωθεί από την ημερομηνία δημοσίευσης.</message>
+	<message key="manager.setup.emailHeader">Επικεφαλίδα email</message>
+	<message key="manager.setup.emailHeaderDescription">Τα έτοιμα emails  που αποστέλλονται από το σύστημα για λογαριασμό του περιοδικού θα ξεκινήσει με την ακόλουθη επικεφαλίδα. Αυτά τα μηνύματα θα πρέπει να αντιμετωπιστούν από τον Κύριο Συγγραφέα επικοινωνίας, γι 'αυτό είναι σημαντικό να διευκρινιστεί ότι ο Κύριος Υπεύθυνος Επικοινωνίας δεν είναι απαραίτητα υπεύθυνη για το περιεχόμενο του μηνύματος, το οποίο μπορεί να αποστέλλεται για λογαριασμό ενός διαφορετικού χρήστη.</message>
+	<message key="manager.setup.journalThumbnail">Μικρογραφία περιοδικού</message>
+	<message key="manager.setup.subjectClassificationURLValid">Παρακαλούμε εισάγετε ένα έγκυρο απομακρυσμένο URL (συμπεριλάβετε http://).</message>
+	<message key="manager.setup.useThumbnail">Μικρογραφία</message>
+	<message key="manager.statistics.reports.aggregationColumns">Συγκεντρωτικά στατιστικά από:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Προκαθορισμένα πρότυπα αναφορών</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Μεταφορτώσεις αρχείου άρθρου.</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Προβολές σελίδας περίληψης άρθρου</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Περιλήψεις άρθρου και μεταφορτώσεις</message>
+	<message key="manager.statistics.reports.defaultReport.issueDownloads">Μεταφορτώσεις αρχείου τεύχους</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContents">Προβολές σελίδας περιεχομένων τεύχους</message>
+	<message key="manager.statistics.reports.defaultReport.issueTableOfContentsAndDownloads">Πίνακαας περιεχομένου τεύχους και μεταφορτώσεις</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Προβολές αρχικής σελίδας περιοδικού</message>
+	<message key="manager.statistics.reports.generateReport">Δημιουργία προσαρμοσμένη αναφοράς</message>
+	<message key="manager.statistics.reports.advancedOptions">Σύνθετες επιλογές</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Προσαρμόστε στήλες, φίλτρο και επιλογές παραγγελιών. Αλλάζοντας κάποια από αυτές τις επιλογές μπορεί να αλλάξει το αναμενόμενο αποτέλεσμα της πρότυπης αναφοράς.</message>
+	<message key="manager.statistics.reports.columns">Στήλες</message>
+	<message key="manager.statistics.reports.columns.description">Ορίστε τις στήλες που θα χρησιμοποιηθούν για την κατασκευή της αναφοράς. Οι στήλες που επιλέγετε εδώ δεν είναι μόνο να καθορίζει ποια δεδομένα θα παρουσιαστούν στο εσωτερικό των αναφορών, αλλά καθορίζει επίσης το επίπεδο συγκέντρωσης των στατιστικών. Για παράδειγμα, αν επιλέξετε ταυτότητας, Τύπος και Μήνας στήλες, η αναφορά θα συνοψίσει όλες τις απόψεις από ένα αντικείμενο από ένα μήνα και θα παρουσιάσει τα δεδομένα σε μία σειρά. Εάν επιλέξετε Day, αντί του μήνα, κάθε αντικείμενο θα έχει μια γραμμή για κάθε μέρα.</message>
+	<message key="manager.statistics.reports.filters">Φίλτρα</message>
+	<message key="manager.statistics.reports.objectNotFound">Το αντικείμενο δεν βέθηκε στη βάση δεδομένων</message>
+	<message key="manager.statistics.reports.objectType">Τύπος αντικειμένου</message>
+	<message key="manager.statistics.reports.objectId">Id αντικειμένου</message>
+	<message key="manager.statistics.reports.objectId.label">Ορίστε ένα ή περισσότερα ids αντικειμένων, διαχωρισμένα με κόμα (π.χ. 1,2,3,,4,5)</message>
+	<message key="manager.statistics.reports.today">Σήμερα</message>
+	<message key="manager.statistics.reports.currentMonth">Τρέχον μήνας</message>
+	<message key="manager.statistics.reports.orderBy">Ταξινόμηση κατά</message>
+	<message key="manager.statistics.reports.orderDir">Κατεύθυνση</message>
+	<message key="manager.statistics.reports.orderDir.asc">Αύξουσα</message>
+	<message key="manager.statistics.reports.orderDir.desc">Φθίνουσα</message>
+	<message key="manager.statistics.reports.month.label">Χρήση της ΕΕΕΕΜΜ μορφής</message>
+	<message key="manager.statistics.reports.day.label">Χρήση της ΕΕΕΕΜΜΗΗ μορφής</message>
+	<message key="manager.statistics.reports.cities.label">Ορίστε μία ή περισσότερα ονόματα πόλεων, διαχωρισμένα με κόμα (π.χ. Πόλη 1,Πόλη 2)</message>
+	<message key="manager.setup.categories">Κατηγορίες</message>
+	<message key="manager.setup.categories.description">Επιλέξτε τις κατάλληλες κατηγορίες από τη παραπάνω λίστα. Οι αναγνώστες θα μπορούν να πλοηγηθούν κατά κατηγορία από το ολοκλήρωμένο σετ του περιοδικού.</message>
+	<message key="manager.statistics.defaultMetricDescription">To Περιοδικό σας έχει ρυθμιστεί για να καταγράψει περισσότερα από ένα μετρικό σύστημα χρήσης. Τα στατιστικά χρήσης θα εμφανιστεί σε πολλαπλά πλαίσια.
+Υπάρχουν περιπτώσεις όπου ένα μοναδικό στατιστικό χρήσης πρέπει να χρησιμοποιηθεί, π.χ.η προβολή μιας λίστας των πιο δημοφιλών άρθρων ή η ταξινόμηση των αποτελεσμάτων αναζήτησης. Παρακαλούμε επιλέξτε ένα από τα μετρικά συστήματα ως προκαθορισμένο</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Θα πρέπει να επιλέξετε τουλάχιστον μια στήλη για να δημιουργήσετε την αναφορά</message>
+	<message key="manager.statistics.reports.reportUrl">URL αναφοράς</message>
+	<message key="manager.statistics.reports.reportUrl.label">Το παρακάτω url μπορεί να χρησιμοποιηθεί για να δημιουργήσετε την αναφορά σύμφωνα με τις υφιστάμενες ρυθμίσεις. Απλά αντιγράψτε το και επικολλήστε το στον browser σας. Μπορείτε να αποθηκεύσετε το url στα αγαπημένα σας.</message>
+	<message key="manager.statistics.reports.filters.byContext">Κατά πλαίσιο</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Περιορίστε τα αποτελέσματα κατά πλαίσιο (τεύχος ή/και άρθρο)</message>
+	<message key="manager.statistics.reports.filters.byObject">Κατά τύπο αντικειμένου ή/και id αντικειμένου</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Περιορίστε τα αποτελέσματα κατά τύπο αντικειμένου (περιοδικό, τεύχος, άρθρο, τυπογραφικό δοκίμιο κλπ) ή/και κατά ένα ή περισσότερα id αντικειμένων.</message>
+	<message key="manager.statistics.reports.filters.byLocation">Κατά τοποθεσία</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Περιορίστε τα αποτελέσματα κατά χώρα, περιφέρεια ή/και πόλη</message>
+	<message key="manager.subscriptions.form.dateRemindedBefore">Υπενθύμιση επικείμενης λήξης στάλθηκε</message>
+	<message key="manager.subscriptions.form.dateRemindedAfter">Υπενθύμιση μετά την λήξη στάλθηκε</message>
 </locale>

@@ -3,8 +3,8 @@
 <!--
   * plugins/generic/usageStats/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: http://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_%28es_ES%29
@@ -33,4 +33,8 @@
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">La tarea no ha generado ningún registro.</message>
 	<message key="plugins.generic.usageStats.removeUrlError">La linea {$lineNumber} del fichero {$file} contiene una url a la que no se le puede eliminar la url base de origen.</message>
 	<message key="plugins.generic.usageStats.loadDataError">No se pueden cargar los datos esperados del fichero {$file}. El error es: {$error}. El fichero se a movido de nuevo a su origen.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">El plugin de estadísticas de uso está deshabilitado. No se han procesado ficheros de log.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">El directorio {$directory} no está vacío. Esto puede indicar indicar o bien que ha fallado un proceso, o que se han ejecutado varios a la vez. Este fichero será reprocesado automáticamente si además está usando scheduledTasksAutoStage.xml, de otro modo necesitará mover manualmente cualquier fichero huérfano en el directorio de procesado de vuelta al directorio objetivo.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">No se puede encontrar la bot list could COUNTER, o hay más de una. El fichero {$file} no se puede procesar.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">La bot list COUNTER, {$botlist}, no se puede abrir. El fichero {$file} no se puede procesar.</message>
 </locale>

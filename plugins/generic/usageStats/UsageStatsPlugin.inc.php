@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageStats/UsageStatsPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageStatsPlugin
@@ -220,7 +220,7 @@ class UsageStatsPlugin extends GenericPlugin {
 	/**
 	 * Get the geolocation tool to process geo localization
 	 * data.
-	 * @return GeoLocationTool
+	 * @return mixed GeoLocationTool object or null
 	 */
 	function &getGeoLocationTool() {
 		/** Geo location tool wrapper class. If changing the geo location tool
@@ -228,8 +228,13 @@ class UsageStatsPlugin extends GenericPlugin {
 		* interface. */
 		$this->import('GeoLocationTool');
 
-		$tool = new GeoLocationTool();
-		return $tool;
+		$null = null;
+		$tool =& new GeoLocationTool();
+		if ($tool->isPresent()) {
+			return $tool;
+		} else {
+			return $null;
+		}
 	}
 
 	/**

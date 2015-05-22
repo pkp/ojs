@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/timedView/TimedViewReportPlugin.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TimedViewReportPlugin
@@ -86,8 +86,8 @@ class TimedViewReportPlugin extends ReportPlugin {
 		$templateMgr->assign('pageHierarchy', $pageCrumbs);
 	}
 
-	function display(&$args, $request) {
-		parent::display($args);
+	function display($args, $request) {
+		parent::display($args, $request);
 		$this->setBreadcrumbs();
 
 		$form = new TimedViewReportForm($this);

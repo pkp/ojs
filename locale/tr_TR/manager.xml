@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/manager.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Turkish) (English) locale.
@@ -740,4 +740,5 @@
 	<message key="manager.setup.copyrightYearBasis.Article">Varsayılan yıl makalenin yayın tarihinden itibaren çekilecektir.</message>
 	<message key="manager.setup.copyrightYearBasis.Issue">Varsayılan yıl sayının yayımı tarihinden itibaren çekilecek.</message>
 	<message key="manager.statistics.reports.objectNotFound">Obje veri tabanında bulunamadı</message>
+	<message key="manager.setup.emailHeader">e-Posta Başlığı</message>
 </locale>

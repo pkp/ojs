@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/dataverse/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Dataverse plugin localization strings
@@ -27,8 +27,6 @@
 	<message key="plugins.generic.dataverse.settings.dvnUriRequired">Je vyžadováno URL pro síť Dataverse.</message>
 	<message key="plugins.generic.dataverse.settings.dvnUriNotValid">URL pro síť Dataverse není platné.</message>
 	<message key="plugins.generic.dataverse.settings.usernameRequired">Vložte, prosím, platné uživatelské jméno pro specifikovanou síť Dataverse</message>
-	<message key="plugins.generic.dataverse.settings.passwordRequired">Please enter aVložte, prosím, platné heslo pro specifikovanou síť Dataverse valid password for the specified Dataverse Network.</message>
-
 	<!-- Set up Dataverse: select Dataverse -->
 	<message key="plugins.generic.dataverse.settings.selectDataverse">Zvolte Dataverse</message>
 	<message key="plugins.generic.dataverse.settings.dataverse">Dataverse</message>
@@ -160,4 +158,6 @@
 
 	<!-- Citation "in press" info -->
 	<message key="plugins.generic.dataverse.citationAPA.inPress">(v tisku).</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription">Popis studie</message>
+	<message key="plugins.generic.dataverse.suppFile.studyDescription.description">Vložte, prosím, anotaci o účelu, původu a rozsahu studijních dat.</message>
 </locale>

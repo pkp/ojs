@@ -4,8 +4,8 @@
 <!--
   * 000000.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Introdución principal a OJS 
@@ -23,6 +23,6 @@
 <![CDATA[<p><h5>Proceso Editorial</h5><p>OJS activa envíos á revista a través de cinco pasos do proceso editorial, os cales son administrados por un ou máis editores.</p><ol><li><em>Fileira de non asignados:</em> Os artigos comezan aquí e son asignados a un ou máis editores.</li><li><em>Revisión del Envío:</em> Os artigos pasan por unha revisión feita por expertos e por unha decisión editorial.</li><li><em>Edición de Envíos:</em> Os artigos pasan pola corrección do texto, a diagramación e a corrección de probas. O envío é asignado a un número para a súa publicación.</li><li><em>Táboa de Contidos:</em> Ordénanse os Artigos para a súa publicación e publícanse.</li></ol><h5>Funcións Editoriais</h5>(Asignadas pola Administración da Revista)<ul><li><em>Administrador da Revista:</em> Configura a revista e as funcións e roles do persoal editorial (tamén pode actuar de Editor e noutras funcións).</li><li><em>Editor:</em> Supervisa o proceso editorial; pode asignar envíos ao Editor da Sección para que os supervise durante a Revisión e Edición do envío; encárgase da programación do contido e publicación da revista.</li><li><em>Editor da Sección:</em> Supervisa a Revisión do Envío e posiblemente a Edición do Envío dos asignados.</li><li><em>Editor de Corrección de Textos:</em> Traballa cos envíos para millorar a gramática e claridade do texto, fai preguntas ao autor sobre posibles erros, asegúrase que a bibliografía e o estilo del texto concorden completamente cos estándares da revista.</li><li><em>Editor de Diagramación:</em> Transforma os envíos corrixidos con galeradas en arquivos tipo HTML, PDF, e/ou PS,  ao formato acaído de publicación.</li><li><em>Corrector de Probas:</em> Le as galeradas na procura de erros de formato e tipográficos.</li></ul></p> <p align="center"><a href="{$baseUrl}/locale/{$locale}/edprocesslarge.png"><img src="{$baseUrl}/locale/{$locale}/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>]]>
 	</section>
 	<section title="Suporte">
-<![CDATA[<p>Pódese acceder a un foro de asistencia e de corrección de erros e problemas técnicos do sistema a través de PKP <a href="http://pkp.sfu.ca/support/forum/" target="_blank">página Web</a>.</p><p>Los usuarios que tengan preguntas sobre la interacción con una revista en particular que utiliza OJS o sobre las políticas de esa revista deben contactar a los contactos de esa revista, listados en la página Web Sobre esa revista.</p>]]>
+<![CDATA[<p>Pódese acceder a un foro de asistencia e de corrección de erros e problemas técnicos do sistema a través de PKP <a href="http://forum.pkp.sfu.ca/" target="_blank">página Web</a>.</p><p>Los usuarios que tengan preguntas sobre la interacción con una revista en particular que utiliza OJS o sobre las políticas de esa revista deben contactar a los contactos de esa revista, listados en la página Web Sobre esa revista.</p>]]>
 </section>
 </topic>

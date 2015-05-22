@@ -4,13 +4,13 @@
 <!--
   * plugins/pubIds/urn/locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * URN plugin localization strings
   -->
- 
+
 <locale name="zh_CN" full_name="China">
 	<message key="plugins.pubIds.urn.urns">URNs</message>
 
@@ -81,4 +81,5 @@
 	<message key="plugins.pubIds.urn.form.customIdentifierNotUnique">给定的URN字尾已被请用。请输入一个独特的URN字尾。</message>
 	<message key="plugins.pubIds.urn.form.checkNoRequired">核对数目丢失。</message>
 
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.customIdentifier">为每一个出版的项目输入一个单独的URN后缀。你会在每个项目的元数据页面上发现附加的URN输入字段。</message>
 </locale>

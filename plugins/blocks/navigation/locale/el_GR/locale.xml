@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/navigation/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the Greek locale.
@@ -23,4 +23,5 @@
 	<message key="plugins.block.navigation.displayName">Δομική Μονάδα Πλοήγησης</message>
 	<message key="plugins.block.navigation.description">Το πρόσθετο αυτό παρέχει συνδέσμους Πλοήγησης στην πλαϊνή μπάρα.</message>
 	<message key="plugins.block.navigation.journalContent">Περιεχόμενα Περιοδικού</message>
+	<message key="plugins.block.navigation.searchScope">Αναζήτηση Πεδίου</message>
 </locale>

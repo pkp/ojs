@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/author/AuthorAction.inc.php
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorAction
@@ -112,7 +112,7 @@ class AuthorAction extends Action {
 			$user =& $request->getUser();
 			$journal =& $request->getJournal();
 			import('classes.mail.ArticleMailTemplate');
-			$email = new ArticleMailTemplate($authorSubmission, 'REVISED_VERSION_NOTIFY');			
+			$email = new ArticleMailTemplate($authorSubmission, 'REVISED_VERSION_NOTIFY', null, null, null, false);
 			if ($email->isEnabled()) {
 				$isEditor = false;
 				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($authorSubmission->getId());

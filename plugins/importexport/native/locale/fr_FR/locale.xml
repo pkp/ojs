@@ -4,14 +4,14 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (French) locale.
   *
   -->
- 
+
 <locale name="fr_FR" full_name="Français">
 	<message key="plugins.importexport.native.displayName">Plugiciel XML pour articles et numéros</message>
 	<message key="plugins.importexport.native.description">Importation et exportation d'articles et de numéros</message>
@@ -73,7 +73,6 @@ Les formats suivants sont acceptés :
 	<message key="plugins.importexport.native.import.error.illegalUrl">L'URL spécifiée "{$url}" pour le numéro "{$issueTitle}" est illégal. Les importations soumises par le Web prennent uniquement en charge les méthodes http, https, ftp, ou ftps.</message>
 	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Un type de fichier supplémentaire inconnu "{$suppFileType}" a été spécifié.</message>
 	<message key="plugins.importexport.native.import.error.couldNotCopy">L'URL spécifiée "{$url}" n'a pu être copié à un fichier local.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">L'identification publique fournie pour le numéro importé "{$issueTitle}" est déjà utilisée par un autre numéro, "{$otherIssueTitle}".</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Un titre de section est absent pour le numéro "{$issueTitle}". Veuillez vous assurer que le document XML correspond à la définition de type de document (DTD) appropriée.</message>
 	<message key="plugins.importexport.native.import.error.sectionMismatch">La section "{$sectionTitle}" du numéro "{$issueTitle}" correspond à une section de revue existante, mais l'abréviation spécifiée ("{$sectionAbbrev}") correspond à une section différente.</message>
 	<message key="plugins.importexport.native.import.error.articleTitleMissing">Un titre d'article est absent pour le numéro "{$issueTitle}" de la section "{$sectionTitle}". Veuillez vous assurer que le document XML correspond à la définition de type de document (DTD) appropriée, et qu'un titre a été fourni dans la langue de la revue.</message>

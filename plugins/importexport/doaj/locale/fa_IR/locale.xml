@@ -3,8 +3,8 @@
 <!--
   * plugins/importexport/doaj/locale/fa_IR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fa_IR (Persian) locale.
@@ -16,9 +16,7 @@
 
 	
 	<message key="plugins.importexport.doaj.export">صدور داده های مجله به دواج</message>
-	<message key="plugins.importexport.doaj.export.journal">صدور مجله</message>
 	<message key="plugins.importexport.doaj.export.email">ایمیل به نماینده دواج</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">صدور اطلاعات مقاله بصورت ایکس ام ال برای ذخیره در دواج</message>
 	<message key="plugins.importexport.doaj.export.emailInfo">این ایمیل برای ارسال درخواست به دواج است. لطفا قسمتهای مورد لزوم را بر حسب سلیقه خود کامل کنید.</message>
 
 	<message key="plugins.importexport.doaj.export.contact">برای محسوب شدن با DOAJ تماس بگیرید</message>

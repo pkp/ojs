@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Russian) locale.
@@ -17,10 +17,13 @@
 	<message key="plugins.importexport.doaj.description">Этот плагин позволяет экспортировать журнал для DOAJ и предоставить информацию о журнале для добавления в DOAJ</message>
 
 	
+	<message key="plugins.importexport.doaj.markRegistered.success">Выбранные объекты были помечены как зарегистрированные!</message>
 	<message key="plugins.importexport.doaj.export">Экспортировать данные журнала в DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Экспортировать журнал</message>
+	<message key="plugins.importexport.doaj.export.issue">Экспортировать выпуски</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Экспортировать выбранные выпуски в XML</message>
+	<message key="plugins.importexport.doaj.export.article">Экспортировать статьи</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Экспортировать выбранные статьи в XML</message>
 	<message key="plugins.importexport.doaj.export.contact">Связаться с DOAJ для добавления журнала</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Экспортировать информацию статьи в XML для архивации в DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Для рассмотрения вашего журнала в DOAJ, пожалуйста, отправьте в DOAJ эту форму, частично заполненную автоматически, и заполните остальную информацию в форме подробно настолько, насколько это возможно.</message>
 
 </locale>

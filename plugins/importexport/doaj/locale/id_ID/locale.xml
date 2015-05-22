@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/id_ID/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the id_ID (Indonesia) locale.
@@ -18,9 +18,7 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Ekspor Data Jurnal ke DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Ekspor Jurnal</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontak DOAJ untuk pencantuman</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Ekspor informasi artikel dalam XML untuk pengarsipan dalam DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">sebagai bahan pertimbangan, silahkan menyerahkan sebagian formulir yang telah diisi ke DOAJ, dan isi informasi yang belum lengkap sebaik yang kamu bisa.</message>
 
 </locale>

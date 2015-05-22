@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/uk_UA/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the uk_UA (Ukrainian) locale.
@@ -20,9 +20,7 @@
 
        
        <message key="plugins.importexport.doaj.export">Експорт даних журналу у DOAJ</message>
-       <message key="plugins.importexport.doaj.export.journal">Експорт журналу</message>
        <message key="plugins.importexport.doaj.export.contact">Контактувати з DOAJ щодо включення</message>
-       <message key="plugins.importexport.doaj.export.journalInfo">Експорт XML інформації про статтю для архівування у DOAJ</message>
        <message key="plugins.importexport.doaj.export.contactInfo">Для розгляду журналу DOAJ, будь ласка, заповніть з максимальною деталізацією всі незаповнені поля цієї форми та надішліть її DOAJ.</message>
 
 </locale>

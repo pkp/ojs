@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/usageStats/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -32,4 +32,8 @@
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Kullanım istatistikleri dosyası yükleyicisi</message>
 	<message key="plugins.generic.usageStats.removeUrlError">The line number {$lineNumber} from the file {$file} contains an url that the system can't remove the base url from.</message>
 	<message key="plugins.generic.usageStats.loadDataError">Couldn't load data extracted from file {$file}. The error was: {$error}. The file was moved to stage again.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">Kullanım istatistikleri eklentisi kapalı. Hiçbir günlük dosyası işlenmemiş.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">COUNTER robot listesi bulunamadı veya birden fazla liste mevcut. {$file} dosyası işlenemedi.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">COUNTER robot listesi {$botlist} açılamadı. {$file} dosyası işlenemedi.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">The directory {$directory} is not empty. This could indicate a previously failed process, or a concurrently running process.  This file will be automatically reprocessed if you are also using scheduledTasksAutoStage.xml, otherwise you will need to manually move any orphaned files in the processing directory back into the stage directory.</message>
 </locale>

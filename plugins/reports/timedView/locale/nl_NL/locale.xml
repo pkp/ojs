@@ -4,8 +4,8 @@
 <!--
   * plugins/reports/timedView/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -30,4 +30,5 @@
 	<message key="plugins.reports.timedView.report.abstractViews">Samenvatting bekeken</message>
 	<message key="plugins.reports.timedView.report.galleyViews">Totaal proeven bekeken</message>
 	<message key="plugins.reports.timedView.form.useTimedViewRecords">Aanvinken als u statistieken wilt volgens de oude Timed View Plugin. Als u een rapport wilt op basis van de nieuwe gegevens, dan dit veld niet aanvinken.</message>
+	<message key="plugins.reports.timedView.form.largeSetOfDataIssue">Als u bij een lange tijdsperiode kiest met veel statistische gegevens, kan het even duren voor het rapport klaar is. Als het teveel tijd neemt, verloopt de verbinding en krijgt u geen rapport. Probeer een kortere periode als dat gebeurt.</message>
 </locale>

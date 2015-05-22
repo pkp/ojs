@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/ja_JP/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ja_JP (日本語) locale.
@@ -18,8 +18,6 @@
 
 	
 	<message key="plugins.importexport.doaj.export">雑誌データをDOAJにエクスポートする</message>
-	<message key="plugins.importexport.doaj.export.journal">雑誌情報をエクスポートする</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">DOAJでアーカイブするための論文情報をXML形式でエクスポートします。</message>
 	<message key="plugins.importexport.doaj.export.contact">DOAJにメールする</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">この雑誌をDOAJに登録するために、このフォームを使ってDOAJにメールしてください。</message>
 </locale>

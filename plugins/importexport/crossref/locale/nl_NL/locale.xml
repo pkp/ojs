@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -13,12 +13,12 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Exporteer metadata in CrossRef XML formaat.</message>
 	
-	<message key="plugins.importexport.crossref.cliUsage">Gebruik: 
+	<message key="plugins.importexport.crossref.cliUsage">Gebruik:
 {$scriptName} {$pluginName} [xmlFileName] [tijdschrift_pad] artikelen [artikelId1] [artikelId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [tijdschrift_pad] nummer [nummerId]</message>
 	<message key="plugins.importexport.crossref.settings.form.description">Configureerd de CrossRef export/registratie plug-in:</message>
@@ -35,11 +35,17 @@
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Gebruik automatische registratie</message>
 	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">De publicatiedatum ontbreekt bij het artikel met ID {$param}.</message>
 	<message key="plugins.importexport.crossref.settings.description"><![CDATA[<a href="{$settingsUrl}">Configureer</a> de CrossRef export/registration plug-in voor u die de eerst keer gebruikt.]]></message>
-	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Als u DOIs bij CrossRef wilt registreren, volg dan de aanwijzingen op de 
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Als u DOIs bij CrossRef wilt registreren, volg dan de aanwijzingen op de
 		<a href="http://www.crossref.org" target="_blank">CrossRef homepage</a>
 		om een gebruikersnaam en wachtwoord te verwerven. Als u geen eigen gebruikersnaam en wachtwoord hebt
 		kunt u wel exporter   CrossRef XML formaat
 		maar u kunt uw DOIs niet registeren bij  CrossRef vanuit OJS.
 		Merk op dat het wachtwoord als test wordt opgeslagen, dus niet versleutel, vanwege
 		de eisen van de CrossRef registratieservice.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS stuurt artikel-DIO's automatisch naar Crossref als artikelen gepubliceerd worden. Merk op dat het verwerken daarvan enige tijd in beslag kan nemen. U kunt alle niet-geregistreerde DOI's opzoeken in de <a href="">lijst niet-geregistreerd DOI's]]></message>
+	<message key="plugins.importexport.crossref.requirements">Vereist</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Niet aan alle vereisten is voldaan</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Crossref plugin is niet geconfigureerd! Configureer de plugin op de <a href="{$settingsUrl}">instellingen pagina</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[DOI Public Identifier plugin is niet geconfigureerd! Schakel de plugin in en configureer deze op de <a href="{$doiUrl}" target="_blank">DOI Plugin</a> instellingen pagina.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Er is nog geen uitgever geconfigureerd! U moet een uitgevend instituut opgeven bij <a href="{$publisherUrl}" target="_blank">Tijdschrift inrichten stap 1.5</a>.]]></message>
 </locale>

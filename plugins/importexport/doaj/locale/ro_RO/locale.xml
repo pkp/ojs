@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/ro_RO/locale.xml
   *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ro_RO (Română) locale.
@@ -18,8 +18,6 @@
 
 	
 	<message key="plugins.importexport.doaj.export">Exportă datele revistei în DOAJ</message>
-	<message key="plugins.importexport.doaj.export.journal">Exportă revista</message>
-	<message key="plugins.importexport.doaj.export.journalInfo">Exportă informaţiile articolului în XML pentru arhivarea în DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Contactează DOAJ pentru includere</message>
 	<message key="plugins.importexport.doaj.export.contactInfo">Pentru includerea revistei în DOAJ, depune acest formular completat semiautomat către DOAJ și completează informația lipsă.</message>
 </locale>
