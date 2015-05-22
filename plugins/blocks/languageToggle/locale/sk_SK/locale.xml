@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/languageToggle/locale/en_US/locale.xml
+  *
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="sk_SK" full_name="Slovenčina">
+	<message key="plugins.block.languageToggle.selectLabel">Vyberte jazyk</message>
+	<message key="plugins.block.languageToggle.displayName">Language Toggle Block</message>
+	<message key="plugins.block.languageToggle.description">This plugin provides the sidebar language toggler.</message>
+</locale>
