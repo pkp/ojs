@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/crossref/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2014 Simon Fraser University Library
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.importexport.crossref.description">تصدير أو تسجيل البيانات الوصفية للمقالات بصيغة CrossRef.</message>
+	<message key="plugins.importexport.crossref.displayName">إضافة التصدير/التسجيل CrossRef</message>
+	<message key="plugins.importexport.crossref.requirements">المتطلبات</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">كل متطلبات الإضافة ملباة.</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[إضافة CrossRef غير مهيئة! قم بتهيئتها عبر <a href="{$settingsUrl}">صفحة الإعدادات</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[إضافة المعرف العام لـ DOI غير معرفة! قم بتمكين وتعريف هذه الإضافة عبر<a href="{$doiUrl}" target="_blank">إضافة DOI</a> صفحة الإعدادات.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[ناشر المجلة لم يتم تعريفه بعد! عليك إضافة مؤسسة النشر ضمن <a href="{$publisherUrl}" target="_blank">تهيئة المجلة، الخطوة 1.5</a>.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">الفقرات الآتية مطلوبة من أجل إيداع ناجح لدى CrossRef.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">اسم المودع</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">البريد الالكتروني للمودع</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">لطفاً، أدخل اسم المودع.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">لطفاً، أدخل البريد الالكتروني للمودع.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">قم بتسجيل DOI تلقائياً</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[نظام المجلات المفتوحة سيقوم بإيداع DOI الخاصة بالمقالات آلياً في CrossRef بمجرد نشر تلك المقالات. لطفاً، لاحظ أن هذا الأمر قد يستغرق وقتاً قصيراً للمعالجة بعد إجراء النشر. بإمكانك التحقق من كل DOI غير المسجلة عبر <a href="">قائمة المقالات غير المسجلة</a>.]]></message>
+
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[هذه الإضافة بإمكانك ضبطها لتقوم تلقائياً بتسجيل معرفات المكونات الرقمية (DOIs) في CrossRef. سيكون بحاجة إلى اسم مستخدم وكلمة مرور (متوافران عبر <a href="http://www.crossref.org" target="_blank">CrossRef</a>) من أجل القيام بذلك. إن لم يكن لك اسم مستخدم وكلمة مرور خاصين بك، سيكون بإمكانك أيضاً التصدير إلى CrossRef بصيغة XML، لكن لن تتمكن من تسجيل DOI الخاصة بك في CrossRef من داخل نظام المجلات المفتوحة.]]></message>
+
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[بإمكانك <a href="{$settingsUrl}">ضبط إضافة التصدير/التسجيل CrossRef هنا</a>.]]></message>
+
+	<message key="plugins.importexport.crossref.settings.form.description">لطفاً، قم بضبط إضافة التصدير/التسجيل CrossRef:</message>
+	<message key="plugins.importexport.crossref.settings.form.username">اسم المستخدم</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">لطفاً، أدخل اسم المستخدم الذي حصلت عليه من CrossRef.</message>
+
+	<message key="plugins.importexport.crossref.export.unregistered">المقالات غير المسجلة</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">إختر المقالات غير المسجلة</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">كل المقالات المنشورة قد تم تسجيلها سابقاً (أو ليس لأي منها DOI معينة لها).</message>
+
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[الاستعمال:
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...
+]]></message>
+
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">إن تأريخ النشر مفقود من المقالة ذات رمز التعريف {$param}.</message>
+</locale>
