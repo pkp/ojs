@@ -81,8 +81,16 @@ class RegistrationHandler extends UserHandler {
 
 			$reason = null;
 
-			if (Config::getVar('security', 'implicit_auth')) {
+			$implicitAuth = strtolower(Config::getVar('security', 'implicit_auth'));
+			if ($implicitAuth === true) {
 				Validation::login('', '', $reason);
+			} elseif ($implicitAuth === IMPLICIT_AUTH_OPTIONAL) {
+				// Try both types of authentication
+				if ($regForm->getData('username') && $regForm->getData('password')) {
+					Validation::login($regForm->getData('username'), $regForm->getData('password'), $reason);
+				} else {
+					Validation::login('', '', $reason);
+				}
 			} else {
 				Validation::login($regForm->getData('username'), $regForm->getData('password'), $reason);
 			}
