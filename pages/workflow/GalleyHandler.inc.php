@@ -45,7 +45,7 @@ class GalleyHandler extends Handler {
 		$galleyPolicy = new RepresentationRequiredPolicy($request, $args);
 
 		// Get the workflow stage policy
-		import('classes.security.authorization.WorkflowStageAccessPolicy');
+		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 		$stagePolicy = new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', WORKFLOW_STAGE_ID_PRODUCTION);
 
 		// Add the Galley policy to the stage policy.

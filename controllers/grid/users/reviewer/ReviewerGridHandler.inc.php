@@ -37,7 +37,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 		$this->_stageId = (int)$stageId;
 
 		// Get the stage access policy
-		import('classes.security.authorization.WorkflowStageAccessPolicy');
+		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 		$ompWorkflowStageAccessPolicy = new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId);
 
 		// Add policy to ensure there is a review round id.

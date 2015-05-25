@@ -59,7 +59,7 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 		// If a file ID was specified, authorize it.  dependentFiles requires this.
 		// fileId corresponds to the main galley file that these other files depend on.
 		if ($request->getUserVar('fileId')) {
-			import('classes.security.authorization.SubmissionFileAccessPolicy');
+			import('lib.pkp.classes.security.authorization.SubmissionFileAccessPolicy');
 			$this->addPolicy(new SubmissionFileAccessPolicy($request, $args, $roleAssignments, SUBMISSION_FILE_ACCESS_MODIFY));
 		}
 
