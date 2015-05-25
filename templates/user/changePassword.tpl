@@ -19,6 +19,9 @@
 
 {include file="common/formErrors.tpl"}
 
+{if $implicitAuth}
+<p><span class="instruct">{translate key="user.profile.implicitAuthChangePasswordInstructions"}</span></p>
+{/if}
 <p><span class="instruct">{translate key="user.profile.changePasswordInstructions"}</span></p>
 
 <table class="data" width="100%">

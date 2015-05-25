@@ -16,24 +16,26 @@
 import('classes.security.Role');
 import('classes.security.Hashing');
 
+define('IMPLICIT_AUTH_OPTIONAL', 'optional');
+
 class Validation {
 
 	/**
 	 * Authenticate user credentials and mark the user as logged in in the current session.
-	 * @param $username string
+	 * @param $username string authenticating user's id; null if implicit auth is happening
 	 * @param $password string unencrypted password
 	 * @param $reason string reference to string to receive the reason an account was disabled; null otherwise
 	 * @param $remember boolean remember a user's session past the current browser session
 	 * @return User the User associated with the login credentials, or false if the credentials are invalid
 	 */
 	function &login($username, $password, &$reason, $remember = false) {
-		$implicitAuth = Config::getVar('security', 'implicit_auth');
+		$implicitAuth = strtolower(Config::getVar('security', 'implicit_auth'));
 
 		$reason = null;
 		$valid = false;
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		if ($implicitAuth) { // Implicit auth
+		if ($implicitAuth && !$username) { // Implicit auth, and not regular auth
 			if (!Validation::isLoggedIn()) {
 				PluginRegistry::loadCategory('implicitAuth');
 

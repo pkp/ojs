@@ -263,12 +263,14 @@ allowed_html = "<a href|target> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> 
 ; </p></sub></sup></u></i></b></dd></dt></dl></li></ol></ul></code></cite></strong></em></a>
 
 
-;Is implicit authentication enabled or not
-
+; Configure whether implicit authentication (request headers) is used.
+; Valid values are: On, Off, Optional
+; If On or Optional, request headers are consulted for account metadata so
+; ensure that users cannot spoof headers. If Optional, users may use either
+; implicit authentication or local accounts to access the system.
 ;implicit_auth = On
 
-;Implicit Auth Header Variables
-
+; Implicit Auth Header Variables
 ;implicit_auth_header_first_name = HTTP_GIVENNAME
 ;implicit_auth_header_last_name = HTTP_SN
 ;implicit_auth_header_email = HTTP_MAIL
@@ -280,8 +282,8 @@ allowed_html = "<a href|target> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> 
 ; A space delimited list of uins to make admin
 ;implicit_auth_admin_list = "jdoe@email.ca jshmo@email.ca"
 
-; URL of the implicit auth 'Way Finder' page. See pages/login/LoginHandler.inc.php for usage.
-
+; URL of the implicit auth 'Way Finder' (Discovery Service [DS]) page.
+; See pages/login/LoginHandler.inc.php for usage.
 ;implicit_auth_wayf_url = "/Shibboleth.sso/wayf"
 
 
