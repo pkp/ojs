@@ -1,5 +1,5 @@
 {**
- * plugins/reports/counter/reportxml.tpl
+ * plugins/reports/counter/templates/reportxml.tpl
  *
  * Copyright (c) 2013-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -20,8 +20,8 @@
       <WebSiteUrl>{$base_url|escape:"html"}</WebSiteUrl>
     </Vendor>
     <Customer>
-      <Name>{$reqUser->getUserName()|escape:"html"}</Name>
-      <ID>{$reqUser->getUserID()|escape:"html"}</ID>
+      <Name>{$reqUserName|escape:"html"}</Name>
+      <ID>{$reqUserId|escape:"html"}</ID>
 
       {foreach from=$journalsArray key=journalkey item=journal}
 

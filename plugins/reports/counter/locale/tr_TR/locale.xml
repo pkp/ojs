@@ -15,8 +15,8 @@
 <locale name="tr_TR" full_name="Türkiye Türkçesi">
 	<message key="plugins.reports.counter.description"><![CDATA[Sayaç Eklentisi, site aktivitesini <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> uyumlu olarak raporlamak ve kayıt etmek için kullanılır.]]></message>
 	<message key="plugins.reports.counter">SAYAÇ İstatistikleri</message>
-	<message key="plugins.reports.counter.1a.title">Dergi Raporu 1 (R2): Aylık Tam Metin Makale İstekleri</message>
-	<message key="plugins.reports.counter.1a.title1">Dergi Raporu 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">Dergi Raporu 1 (R3): Aylık Tam Metin Makale İstekleri</message>
+	<message key="plugins.reports.counter.1a.title1">Dergi Raporu 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">Aylık Başarılı Tam Metin Makale İstekleri Sayısı (Yıl {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Başlangıç tarihi:</message>
 	<message key="plugins.reports.counter.1a.publisher">Yayncı</message>

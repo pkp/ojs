@@ -53,6 +53,13 @@ class CounterReportPlugin extends ReportPlugin {
 	}
 
 	/**
+	 * @see PKPPlugin::getTemplatePath()
+	 */
+	function getTemplatePath() {
+		return parent::getTemplatePath() . 'templates/';
+	}	 
+
+	/**
 	 * @see PKPPlugin::isSitePlugin()
 	 */
 	function isSitePlugin() {
@@ -353,7 +360,13 @@ class CounterReportPlugin extends ReportPlugin {
 		$base_url =& Config::getVar('general','base_url');
 
 		$reqUser =& Request::getUser();
-		$templateManager->assign_by_ref('reqUser', $reqUser);
+		if ($reqUser) {
+			$templateManager->assign('reqUserName', $reqUser->getUsername());
+			$templateManager->assign('reqUserId', $reqUser->getUserId());
+		} else {
+			$templateManager->assign('reqUserName', __('plugins.reports.counter.1a.anonymous'));
+			$templateManager->assign('reqUserId', '');
+		}
 
 		$templateManager->assign_by_ref('journalsArray', $journalsArray);
 
