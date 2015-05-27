@@ -27,7 +27,6 @@
 	{/if}
 
 	{assign var=lastAuthorName value=$authorName}
-	{assign var=lastAuthorCountry value=$authorCountry}
 
 	{assign var=authorAffiliation value=$author->getLocalizedAffiliation()}
 	{assign var=authorCountry value=$author->getCountry()}
