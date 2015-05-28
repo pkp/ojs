@@ -16,11 +16,19 @@
 @shade:                  #eee;
 
 // Primary "anchor" color for backgrounds and links
-@primary:                #007ab2;
-@primary-lift:           lighten( @primary, 15% );
-@primary-shade:          darken( @primary, 15% );
+@primary:                #113241;
+@primary-lift:           #007ab2;
+
+// Offset color used like an accent color, primarily for things to really stand
+// out strongly
+@offset:                 #D00A6C;
+@offset-shade:           #B50E61;
 
 // Text
+// Both colors should be applied like this:
+//   color: @text;
+//   color: @text-rgba;
+// Browsers that don't support rgba will fall back to the hex color
 @text:                   #222;
 @text-rgba:              rgba(0, 0, 0, 0.84);
 

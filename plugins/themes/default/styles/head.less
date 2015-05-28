@@ -111,8 +111,7 @@
 		&:hover,
 		&:focus {
 			background: @primary-lift;
-			color: @text;
-			color: @text-rgba;
+			color: #fff;
 		}
 	}
 
@@ -122,7 +121,7 @@
 		left: -9999px;
 		z-index: 1000;
 		width: 10em;
-		background: @primary;
+		background: @primary-lift;
 
 		li {
 			display: block;
@@ -131,17 +130,12 @@
 		ul {
 			top: 0;
 			background: @primary-lift;
+			border-left: 4px solid @primary;
+		}
 
-			a {
-				color: @text;
-				color: @text-rgba;
-
-				&:hover,
-				&:focus {
-					background: @primary;
-					color: #fff;
-				}
-			}
+		a:hover,
+		a:focus {
+			background: @primary;
 		}
 
 		li:hover > ul,
