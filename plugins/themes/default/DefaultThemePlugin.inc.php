@@ -61,7 +61,7 @@ class DefaultThemePlugin extends ThemePlugin {
 	 * @see ThemePlugin::getLessStylesheet
 	 */
 	function getLessStylesheet() {
-		return 'index.less';
+		return 'styles/index.less';
 	}
 }
 
