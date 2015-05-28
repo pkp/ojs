@@ -18,9 +18,6 @@
 
 @import "../lib/pkp/styles/lib/oocss/grids.css";
 
-/* Superfish - http://users.tpg.com.au/j_birch/plugins/superfish/ */
-@import "../lib/pkp/styles/lib/superfish/superfish.css";
-
 /* Pines Notify - http://pines.sourceforge.net/pnotify/ */
 @import "../lib/pkp/js/lib/pnotify/buildcustom.php?mode=css&modules=";
 
