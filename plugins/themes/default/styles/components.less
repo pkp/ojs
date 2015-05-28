@@ -1,0 +1,28 @@
+//
+// Components and mix-ins
+//
+// These utilities are used throughout the rest of the LESS stylesheets. It
+// should be loaded early but after the variables have been declared
+//
+
+// Site container
+// @todo eventually this won't exist when we have a properly responsive design
+.pkp_structure_content() {
+	margin: 0 auto;
+	width: 960px;
+}
+
+// Clearfix for floats
+// @note this must be used as a mix-in - .pkp_helpers_clear - instead of an
+//    extend - &:extend(.pkp_helpers_clear) - because extends don't recurse to
+//    the nested elements.
+.pkp_helpers_clear() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}

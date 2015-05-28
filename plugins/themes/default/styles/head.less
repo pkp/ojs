@@ -1,0 +1,214 @@
+/**
+ * @file styles/structure/head.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_structure_head
+ *
+ * @brief Classes for the page header structural elements
+ */
+
+//
+// Wrapper element for the head
+//
+.pkp_structure_head {
+	background-color: @primary;
+	font-size: @font-base;
+	line-height: @line-base;
+
+	h1 {
+		float: left;
+		padding: @base 0;
+		max-width: 160px;
+		background: @bg;
+
+		img {
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
+	#notificationsPopover {
+		border: 1px solid #999;
+		width: 400px;
+		right: -1px;
+		top: 24px;
+		margin-top: -2px;
+		position:absolute;
+		background-color: #fff;
+		color: #000;
+		z-index: 1001;
+
+		.pkp_controllers_grid {
+			margin-top: 0;
+			thead {
+				display: none;
+				th:first-child {
+					padding-left: 0px;
+				}
+			}
+
+			input {
+				margin-left: 10px;
+			}
+
+			.grid_link_actions_below {
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+//
+// Navigation wrapper
+//
+.pkp_navigation {
+	// @todo container for site width is temporary until we figure out the
+	//   best way to manage the site grids
+	.pkp_structure_content;
+	.pkp_helpers_clear;
+	position: relative;
+}
+
+//
+// A horizontal navigation list
+//
+// This component is applied to the hierarchical unordered navigation lists. It
+// supports nested lists that will be displayed on hover/focus.
+//
+// <ul class="pkp_nav_list">
+//   <li class="has-submenu">
+//     <a href="#">1</a>
+//     <ul>
+//       <li>
+//         <a href="#">1-a</a>
+//       </li>
+//     </ul>
+//   </li>
+// </ul>
+//
+.pkp_nav_list {
+	padding: 0;
+	list-style: none;
+
+	li {
+		position: relative;
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+		padding-left: 1em;
+		padding-right: 1em;
+		text-decoration: none;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: #fff;
+
+		&:hover,
+		&:focus {
+			background: @primary-lift;
+			color: @text;
+			color: @text-rgba;
+		}
+	}
+
+	ul {
+		position: absolute;
+		top: 100%;
+		left: -9999px;
+		z-index: 1000;
+		width: 10em;
+		background: @primary;
+
+		li {
+			display: block;
+		}
+
+		ul {
+			top: 0;
+			background: @primary-lift;
+
+			a {
+				color: @text;
+				color: @text-rgba;
+
+				&:hover,
+				&:focus {
+					background: @primary;
+					color: #fff;
+				}
+			}
+		}
+
+		li:hover > ul,
+		li:focus > ul,
+		li.in_focus > ul {
+			left: 100%;
+		}
+	}
+
+	li:hover > ul,
+	li:focus > ul,
+	li.in_focus > ul {
+		left: 0;
+	}
+
+	// Dropdown caret indicating submenus
+	// @todo these can probably abstracted into reusable components
+	.has-submenu > a:after {
+		content: ' ';
+		width: 0;
+		height: 0;
+		display: inline-block;
+		margin-left: 0.5em;
+		border-top: 4px solid;
+		border-right: 4px solid transparent;
+		border-left: 4px solid transparent;
+		vertical-align: middle;
+	}
+
+	ul .has-submenu > a:after {
+		border-left: 4px solid;
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+		border-right: 4px solid transparent;
+	}
+}
+
+// Primary navigation menu
+.pkp_navigation_primary {
+	position: absolute;
+	bottom: 0;
+	left: 180px; // logo + 20
+}
+
+// User-focused navigation menu with login/logout, tasks, etc
+.pkp_navigation_user {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 12px;
+
+	li:hover > ul,
+	li:focus > ul,
+	li.in_focus > ul {
+		left: auto;
+		right: 0;
+	}
+}
+
+// Search bar
+// @todo
+.pkp_structure_search {
+	margin: 7px 10px 7px 0;
+	input {
+	    min-height: 19px;
+		border: 1px solid #ccc;
+		padding: 2px;
+		font-size: 100%;
+	}
+}

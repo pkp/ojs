@@ -1,0 +1,48 @@
+//
+// Common variables
+//
+// These variables set common standards to be used throughout pkp-lib and its
+// associated projects. Unless a particular project is deliberately supposed
+// to be distinguished in style, such as a custom theme, it should make use of
+// these variables to define common sizing, colors and typography.
+//
+
+//
+// Colors
+//
+
+// Background
+@bg:                     #fff;
+@shade:                  #eee;
+
+// Primary "anchor" color for backgrounds and links
+@primary:                #007ab2;
+@primary-lift:           lighten( @primary, 15% );
+@primary-shade:          darken( @primary, 15% );
+
+// Text
+@text:                   #222;
+@text-rgba:              rgba(0, 0, 0, 0.84);
+
+//
+// Baseline
+//
+// This is a standard used for vertical rhythm. Wherever possible, all vertical
+// margins, paddings and heights should be set as multiples (or half/quarter) of
+// this baseline
+//
+@base:                   20px;
+@half:                   @base / 2;
+@double:                 @base * 2;
+
+//
+// Typography
+//
+@font-sml:               14px;
+@font-base:              16px;
+@font-lead:              18px;
+@font-heading:           24px;
+@line-sml:               @base;
+@line-base:              @base;
+@line-lead:              @double;
+@line-heading:           @double;
