@@ -733,7 +733,7 @@
 
 	<!-- Регистрация -->
 	<message key="user.register.emailValidation">Требуется подтверждение адреса электронной почты</message>
-	<message key="user.register.emailValidationDescription">Для продолжения работы Вам необходимо подтвердить ваш адрес электронной почты. Пожалуйста, проверьте ваш почтовый ящик для получения дальнейших инструкций. Как только вы подтвердите свою учетную запись, вы сможете войти в систему.</message>
+	<message key="user.register.emailValidationDescription">Для продолжения работы Вам необходимо подтвердить Ваш адрес электронной почты. Пожалуйста, проверьте свой почтовый ящик для получения дальнейших инструкций. Как только Вы подтвердите свою учетную запись, Вы сможете войти в систему.</message>
 	<message key="user.register.selectJournal">Выбрать журнал для регистрации</message>
 	<message key="user.register.noJournals">На сайте нет журналов, в которых вы могли бы зарегистрироваться.</message>
 	<message key="user.register.privacyStatement">Заявление о конфиденциальности</message>
