@@ -60,6 +60,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/ExtrasOnDemandHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/PageHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/TabHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/MenuHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/UploaderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/AutocompleteHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/RangeSliderHandler.js"></script>
