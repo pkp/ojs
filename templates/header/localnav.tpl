@@ -35,7 +35,7 @@
 				'$.pkp.controllers.MenuHandler');
 	{rdelim});
 </script>
-<ul id="navigationPrimary" class="pkp_navigation_primary">
+<ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
 	{if $isUserLoggedIn}
 		{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR), $userRoles)}
 			<li><a href="{url router=$smarty.const.ROUTE_PAGE page="dashboard"}">{translate key="navigation.dashboard"}</a></li>
