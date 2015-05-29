@@ -10,7 +10,5 @@
   -->
  
 <locale name="sk_SK" full_name="Slovenčina">
-	<message key="plugins.citationFormats.refMan.displayName">Reference Manager citation format plugin</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Reference Manager - RIS formát (len Windows)</message>
-	<message key="plugins.citationFormats.refMan.description">This plugin implements the Reference Manager citation format.</message>
 </locale>

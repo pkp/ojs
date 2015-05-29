@@ -10,8 +10,5 @@
   -->
  
 <locale name="sk_SK" full_name="Slovenčina">
-	<message key="plugins.citationFormats.mla.displayName">MLA citation format plugin</message>
-	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
-	<message key="plugins.citationFormats.mla.description">This plugin implements the MLA citation format.</message>
 	<message key="plugins.citationFormats.mla.noPages">n. S.</message>	
 </locale>

@@ -10,7 +10,5 @@
   -->
  
 <locale name="sk_SK" full_name="Slovenčina">
-	<message key="plugins.citationFormats.endNote.displayName">EndNote citation format plugin</message>
 	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - EndNote formát (Macintosh & Windows)]]></message>
-	<message key="plugins.citationFormats.endNote.description">This plugin implements the EndNote citation format.</message>
 </locale>

@@ -10,14 +10,8 @@
   -->
 
 <locale name="sk_SK" full_name="Slovenčina">
-	<message key="plugins.block.readingTools.displayName">Reading Tools Block</message>
-	<message key="plugins.block.readingTools.description">This plugin displays a block containing reading tools in the reading tools sidebar.</message>
-	<message key="plugins.block.readingTools.title">Reading tools</message>
-	<message key="plugins.block.readingTools.aboutTheAuthor">About The Author</message>
-	<message key="plugins.block.readingTools.aboutTheAuthors">About The Authors</message>
 	<message key="plugins.block.readingTools.articleTools">Nástroje článkov</message>
 	<message key="plugins.block.readingTools.emailThisArticle">Poslať článok emailom</message>
-	<message key="plugins.block.readingTools.loginRequired">Login required</message>
 	<message key="plugins.block.readingTools.printThisArticle">Vytlačiť článok</message>
 	<message key="plugins.block.readingTools.postComment">Umiestniť komentár</message>
 </locale>
