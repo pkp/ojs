@@ -10,7 +10,5 @@
   -->
  
 <locale name="sk_SK" full_name="Slovenčina">
-	<message key="plugins.citationFormats.proCite.displayName">ProCite citation format plugin</message>
 	<message key="plugins.citationFormats.proCite.citationFormatName"><![CDATA[ProCite - RIS formát (Macintosh & Windows)]]></message>
-	<message key="plugins.citationFormats.proCite.description">This plugin implements the ProCite citation format.</message>
 </locale>

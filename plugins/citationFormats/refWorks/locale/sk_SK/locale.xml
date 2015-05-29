@@ -10,8 +10,5 @@
   -->
  
 <locale name="sk_SK" full_name="Slovenčina">
-	<message key="plugins.citationFormats.refWorks.displayName">RefWorks citation format plugin</message>
-	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
-	<message key="plugins.citationFormats.refWorks.description">This plugin implements the RefWorks citation format.</message>
 	<message key="plugins.citationFormats.refWorks.export">Exportovať do RefWorks</message>
 </locale>

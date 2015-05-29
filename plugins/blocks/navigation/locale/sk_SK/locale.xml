@@ -10,8 +10,6 @@
   -->
  
 <locale name="sk_SK" full_name="Slovenčina">
-	<message key="plugins.block.navigation.displayName">Navigation Block</message>
-	<message key="plugins.block.navigation.description">This plugin provides sidebar navigation links.</message>
 	<message key="plugins.block.navigation.journalContent">Obsah časopisu</message>
 	<message key="plugins.block.navigation.searchScope">Oblasť vyhľadávania</message>
 </locale>

@@ -11,6 +11,4 @@
  
 <locale name="sk_SK" full_name="Slovenčina">
 	<message key="plugins.block.languageToggle.selectLabel">Vyberte jazyk</message>
-	<message key="plugins.block.languageToggle.displayName">Language Toggle Block</message>
-	<message key="plugins.block.languageToggle.description">This plugin provides the sidebar language toggler.</message>
 </locale>
