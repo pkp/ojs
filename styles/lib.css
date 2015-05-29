@@ -12,12 +12,6 @@
  * a particularly attractive idea.
  */
 
-/* OOCSS - http://github.com/stubbornella/oocss */
-
-@import "../lib/pkp/styles/lib/oocss/libraries.css";
-
-@import "../lib/pkp/styles/lib/oocss/grids.css";
-
 /* Pines Notify - http://pines.sourceforge.net/pnotify/ */
 @import "../lib/pkp/js/lib/pnotify/buildcustom.php?mode=css&modules=";
 
