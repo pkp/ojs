@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="search.authorIndex"}
-{include file="common/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {/strip}
 
 <p>{foreach from=$alphaList item=letter}<a href="{url op="authors" searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="authors"}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
@@ -54,5 +54,5 @@
 {else}
 {/if}
 </div>
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}
 

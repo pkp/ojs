@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="suppressPageTitle" value="true"}
-{include file="common/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {/strip}
 
 {if $intro}{$intro|nl2br}{/if}
@@ -44,4 +44,4 @@
 <div id="journalListPageInfo">{page_info iterator=$journals}</div>
 <div id="journalListPageLinks">{page_links anchor="journals" name="journals" iterator=$journals}</div>
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}

@@ -18,5 +18,5 @@
 		{* If the title is specified and should be displayed then show it as a subheading *}
 		{assign var="pageSubtitleTranslated" value=$issue->getLocalizedTitle()}
 	{/if}
-	{include file="common/header.tpl"}
+	{include file="common/frontend/header.tpl"}
 {/strip}

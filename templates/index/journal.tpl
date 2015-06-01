@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="pageTitleTranslated" value=$currentJournal->getLocalizedName()}
-{include file="common/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {/strip}
 
 {if $journalDescription}
@@ -56,4 +56,4 @@
 	</div>
 {/if}
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}

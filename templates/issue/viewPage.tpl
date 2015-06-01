@@ -26,4 +26,4 @@
 
 {include file="issue/view.tpl"}
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}
