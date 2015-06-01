@@ -31,8 +31,8 @@
 	<message key="plugins.reports.counter.entry.type.search">搜尋</message>
 	<message key="plugins.reports.counter.entry.value">值</message>
 
-	<message key="plugins.reports.counter.1a.title">期刊報告 1 (R2): 調閱全文文章的月份和期刊。</message>
-	<message key="plugins.reports.counter.1a.title1">期刊報告 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">期刊報告 1 (R3): 調閱全文文章的月份和期刊。</message>
+	<message key="plugins.reports.counter.1a.title1">期刊報告 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">成功調閱文章全文的月份和期刊數({$year}年)</message>
 	<message key="plugins.reports.counter.1a.dateRun">橫跨時間：</message>
 	<message key="plugins.reports.counter.1a.publisher">出版者</message>

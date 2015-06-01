@@ -16,8 +16,8 @@
 	<message key="plugins.reports.counter.description">COUNTER plugin umožňuje zaznamenávání a vytváření zpráv o aktivitě na stránkách.</message>
 	<message key="plugins.reports.counter">COUNTER statistiky</message>
 
-	<message key="plugins.reports.counter.1a.title">Zpráva časopisu 1 (R2): Požadavek na Full-Text článku po měsících a časopisech</message>
-	<message key="plugins.reports.counter.1a.title1">Zpráva časopisu 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">Zpráva časopisu 1 (R3): Požadavek na Full-Text článku po měsících a časopisech</message>
+	<message key="plugins.reports.counter.1a.title1">Zpráva časopisu 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">Počet úspěšných požadavků na Full-Text článků po měsících a časopisech (Rok {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Datum spuštění:</message>
 	<message key="plugins.reports.counter.1a.publisher">Vydavatel</message>
