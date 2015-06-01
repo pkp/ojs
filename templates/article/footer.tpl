@@ -27,4 +27,4 @@
 	{$pageFooter}
 {/if}
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}

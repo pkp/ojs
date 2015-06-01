@@ -10,7 +10,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="navigation.categories"}
-{include file="common/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {/strip}
 
 <br />
@@ -24,5 +24,5 @@
 {/foreach}
 </ul>
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}
 

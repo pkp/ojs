@@ -9,7 +9,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="about.editorialTeam"}
-{include file="common/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {/strip}
 
 {url|assign:editUrl page="management" op="settings" path="journal" anchor="masthead"}
@@ -19,4 +19,4 @@
 	{$currentJournal->getLocalizedSetting('masthead')}
 {/if}
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}

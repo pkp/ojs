@@ -9,7 +9,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="about.submissions"}
-{include file="common/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {/strip}
 
 <div id="onlineSubmissions">
@@ -79,4 +79,4 @@
 	<div class="separator"></div>
 {/if}
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}

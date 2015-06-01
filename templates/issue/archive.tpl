@@ -10,7 +10,7 @@
  * Available data:
  *  $issues: ItemIterator of issues in the journal's archive.
  *}
-{include file="common/header.tpl" pageTitle="archive.archives"}
+{include file="common/frontend/header.tpl" pageTitle="archive.archives"}
 
 <div id="issues">
 	{iterate from=issues item=issue}
@@ -49,4 +49,4 @@
 	{/if}
 </div>
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}

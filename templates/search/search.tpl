@@ -12,7 +12,7 @@
 {if !$instantSearch}
 	{strip}
 	{assign var="pageTitle" value="navigation.search"}
-	{include file="common/header.tpl"}
+	{include file="common/frontend/header.tpl"}
 	{/strip}
 
 	<div id="search">
@@ -253,5 +253,5 @@
 		</p>
 	</div>
 
-	{include file="common/footer.tpl"}
+	{include file="common/frontend/footer.tpl"}
 {/if}

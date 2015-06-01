@@ -44,4 +44,4 @@
 	<a class="action" href="#" id="fullscreenShow">{translate key="common.fullscreen"}</a>
 	<a class="action" href="#" id="fullscreenHide">{translate key="common.fullscreenOff"}</a>
 </p>
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}
