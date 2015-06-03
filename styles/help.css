@@ -41,16 +41,15 @@
 	margin-left: 5%;
 }
 
-/* hack to set width for non-IE browsers to to a percentage 
+/* hack to set width for non-IE browsers to to a percentage
    width of container (like it should be), not the window */
 html>body #main {
 	width: 68%;
-} 
+}
 
 #main h4 {
 	margin: 0 1em 0.5em 0;
 	padding-top: 0.5em;
-	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 }
 
@@ -85,10 +84,6 @@ span.blockTitle {
 /**
  * Sidebar
  */
-
-#sidebar div.block span.blockTitle {
-	font-family: Georgia,'Times New Roman',Times,serif;
-}
 
 #sidebar a {
 	text-decoration: none;
