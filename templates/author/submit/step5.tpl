@@ -51,20 +51,20 @@
 
 {if $authorFees}
 	{include file="author/submit/authorFees.tpl" showPayLinks=1}
+	{if $manualPayment}
+		<h3>{translate key="payment.alreadyPaid"}</h3>
+		<table class="data" width="100%">
+			<tr valign="top">
+			<td width="5%" align="left"><input type="checkbox" name="paymentSent" value="1" {if $paymentSent}checked="checked"{/if} /></td>
+			<td width="95%">{translate key="payment.paymentSent"}</td>
+			</tr>
+			<tr>
+			<td />
+			<td>{translate key="payment.alreadyPaidMessage"}</td>
+			<tr>
+		</table>
+	{/if}
 	{if $currentJournal->getLocalizedSetting('waiverPolicy') != ''}
-		{if $manualPayment}
-			<h3>{translate key="payment.alreadyPaid"}</h3>
-			<table class="data" width="100%">
-				<tr valign="top">
-				<td width="5%" align="left"><input type="checkbox" name="paymentSent" value="1" {if $paymentSent}checked="checked"{/if} /></td>
-				<td width="95%">{translate key="payment.paymentSent"}</td>
-				</tr>
-				<tr>
-				<td />
-				<td>{translate key="payment.alreadyPaidMessage"}</td>
-				<tr>
-			</table>
-		{/if}
 		<h3>{translate key="author.submit.requestWaiver"}</h3>
 		<table class="data" width="100%">
 			<tr valign="top">

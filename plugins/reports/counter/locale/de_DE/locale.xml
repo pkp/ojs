@@ -14,8 +14,8 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.reports.counter.description"><![CDATA[Das Counter-Plug-In ermöglicht die Aufzeichnung und <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-entsprechende Wiedergabe der Webseitenaktivität.]]></message>
 	<message key="plugins.reports.counter">COUNTER-Bericht</message>
-	<message key="plugins.reports.counter.1a.title">Zeitschriften-Report 1 (R2): Volltext-Seitenaufrufe pro Monat und Zeitschrift</message>
-	<message key="plugins.reports.counter.1a.title1">Zeitschriften-Report 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">Zeitschriften-Report 1 (R3): Volltext-Seitenaufrufe pro Monat und Zeitschrift</message>
+	<message key="plugins.reports.counter.1a.title1">Zeitschriften-Report 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">Zahl erfolgreicher Volltext-Seitenaufrufe pro Monat und Zeitschrift (Jahr {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Datum:</message>
 	<message key="plugins.reports.counter.1a.publisher">Verlag</message>

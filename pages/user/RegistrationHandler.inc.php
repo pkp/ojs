@@ -78,6 +78,15 @@ class RegistrationHandler extends UserHandler {
 
 		if ($regForm->validate()) {
 			$regForm->execute();
+
+			$reason = null;
+
+			if (Config::getVar('security', 'implicit_auth')) {
+				Validation::login('', '', $reason);
+			} else {
+				Validation::login($regForm->getData('username'), $regForm->getData('password'), $reason);
+			}
+
 			if (!Validation::isLoggedIn()) {
 				if (Config::getVar('email', 'require_validation')) {
 					// Inform the user that they need to deal with the
@@ -90,14 +99,6 @@ class RegistrationHandler extends UserHandler {
 					$templateMgr->assign('backLinkLabel', 'user.login');
 					return $templateMgr->display('common/error.tpl');
 				}
-			}
-
-			$reason = null;
-
-			if (Config::getVar('security', 'implicit_auth')) {
-				Validation::login('', '', $reason);
-			} else {
-				Validation::login($regForm->getData('username'), $regForm->getData('password'), $reason);
 			}
 
 			if ($reason !== null) {

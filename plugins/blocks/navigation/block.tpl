@@ -12,7 +12,7 @@
 <div class="block" id="sidebarNavigation">
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 
-	<form id="simpleSearchForm" method="post" action="{url page="search" op="search"}">
+	<form id="simpleSearchForm" action="{url page="search" op="search"}">
 		<table id="simpleSearchInput">
 			<tr>
 				<td>

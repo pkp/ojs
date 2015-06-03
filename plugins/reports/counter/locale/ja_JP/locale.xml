@@ -16,8 +16,8 @@
 	<message key="plugins.reports.counter.description"><![CDATA[サイトの運用状況を記録し、<a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>準拠の報告書を作成します。]]></message>
 	<message key="plugins.reports.counter">COUNTER統計</message>
 
-	<message key="plugins.reports.counter.1a.title">雑誌報告書 1 (R2): 月別・雑誌別の雑誌フルテキストへのリクエスト</message>
-	<message key="plugins.reports.counter.1a.title1">雑誌報告書 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">雑誌報告書 1 (R3): 月別・雑誌別の雑誌フルテキストへのリクエスト</message>
+	<message key="plugins.reports.counter.1a.title1">雑誌報告書 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">月別・雑誌別の成功した雑誌フルテキストへのリクエスト数（{$year}年）</message>
 	<message key="plugins.reports.counter.1a.dateRun">処理日:</message>
 	<message key="plugins.reports.counter.1a.publisher">出版者</message>

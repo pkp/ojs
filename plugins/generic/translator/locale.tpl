@@ -150,7 +150,7 @@
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="35%">{translate key="manager.emails.emailKey"}</td>
-		<td width="50%">{translate key="plugins.generic.translator.file.filename"}</td>
+		<td width="50%">{translate key="email.subject"}</td>
 		<td width="15%">{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>

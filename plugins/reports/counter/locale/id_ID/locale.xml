@@ -15,8 +15,8 @@
 	<message key="plugins.reports.counter.description"><![CDATA[COUNTER plugin bisa merekam dan <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> melaporkan di aktifitas situs.]]></message> 
 	<message key="plugins.reports.counter"> Statistik COUNTER </message> 
 	<message key="plugins.reports.counter.migrate"> Log Migrasi </message> 
-	<message key="plugins.reports.counter.1a.title"> Laporan Jurnal 1 (R2): Permintaan Artikel Lengkap berdasarkan Bulan dan Jurnal </message> 
-	<message key="plugins.reports.counter.1a.title1"> Laporan Jurnal 1 (R2)</message> 
+	<message key="plugins.reports.counter.1a.title"> Laporan Jurnal 1 (R3): Permintaan Artikel Lengkap berdasarkan Bulan dan Jurnal </message> 
+	<message key="plugins.reports.counter.1a.title1"> Laporan Jurnal 1 (R3)</message> 
 	<message key="plugins.reports.counter.1a.title2"> Jumlah Permintaan Artikel Full-Text yang sukses dari Bulan dan Jurnal (Year {$year})</message>	<message key="plugins.reports.counter.1a.dateRun"> Tanggal Operasi:</message> 
 	<message key="plugins.reports.counter.1a.publisher"> Penerbit </message> 
 	<message key="plugins.reports.counter.1a.platform">Platform</message> 
