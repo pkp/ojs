@@ -71,6 +71,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/ToggleFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/FileUploadFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/MultilingualInputHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/form/CancelActionAjaxFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/reviewer/ReviewerReviewStep3FormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/GridHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/CategoryGridHandler.js"></script>
@@ -91,7 +92,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/WizardHandler.js"></script>
 
 {* Specific controllers *}
-<script src="{$baseUrl}/lib/pkp/js/controllers/grid/queries/form/QueryFormHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/grid/queries/ReadQueryHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/FileUploadWizardHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/form/FileUploadFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/form/RevisionConfirmationHandler.js"></script>
