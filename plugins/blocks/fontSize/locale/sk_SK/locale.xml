@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/fontSize/locale/sk_SK/locale.xml
+  *
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="sk_SK" full_name="Slovenčina">
+	<message key="plugins.block.fontSize.title">Veľkosť písma</message>
+</locale>
