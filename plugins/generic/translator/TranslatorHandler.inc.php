@@ -409,6 +409,14 @@ class TranslatorHandler extends Handler {
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
 		$fileManager->copyFile(TranslatorAction::determineReferenceFilename($locale, $filename), $filename);
+		$localeKeys = LocaleFile::load($filename);
+		import('lib.pkp.classes.file.EditableLocaleFile');
+		$file = new EditableLocaleFile($locale, $filename);
+		// remove default translations from keys
+		foreach (array_keys($localeKeys) as $key) {
+			$file->update($key, '');
+		}
+		$file->write();
 		Request::redirectUrl(Request::getUserVar('redirectUrl'));
 	}
 
