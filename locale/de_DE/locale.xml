@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+l<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -886,8 +886,8 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<message key="about.journalSponsorship">Unterstützung</message>
 	<message key="about.aboutThisPublishingSystem">Über dieses Publikationssystem</message>
 	<message key="about.aboutThisPublishingSystem.altText">Redaktions- und Veröffentlichungsprozess mit OJS</message>
-	<message key="about.aboutOJSJournal"><![CDATA[Diese Zeitschrift verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public Licence entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[Diese Website verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public Licence entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
+	<message key="about.aboutOJSJournal"><![CDATA[Diese Zeitschrift verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[Diese Website verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href="http://pkp.sfu.ca/">Public Knowledge Project</a>.]]></message>
 
 	<!-- Mitteilungen -->
 
