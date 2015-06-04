@@ -28,22 +28,25 @@
 
 /* @group Content Overrides */
 
-body, .ui-widget {
-	color: #333;
+body {
 	font-family: @font;
-	font-size: 12px;
+	font-size: @font-base;
+	line-height: @line-base;
+	color: @text;
+	color: @text-rgba;
 }
 
 a {
-	color: #569bbe;
-}
+	color: @primary-lift;
 
-a:hover {
-	color: #E17009;
+	&:hover,
+	&:focus {
+		color: @primary;
+	}
 }
 
 h1, .h1, h1 a, h1 a:hover {
-	color: #333;
+	color: @text;
 }
 
 h1 a {
@@ -103,27 +106,6 @@ a.task:hover {
 
 /* @group jQuery UI */
 
-/* General */
-
-.ui-widget-content a {
-	color: #569bbe;
-}
-
-.ui-widget-content a:hover {
-	color: #E17009;
-}
-
-.ui-tabs {
-	background: none !important;
-}
-
-.ui-tabs-nav {
-	border: 0;
-	border-radius: 0px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-}
-
 /* Accordian */
 
 .ui-accordion, .ui-accordion-header, .ui-accordion-content, .ui-accordion-content-active {
@@ -149,49 +131,6 @@ a.task:hover {
 
 .ui-accordion-content-active {
 	border-bottom: 1px dotted #999;
-}
-
-/* Tabs */
-.ui-tabs {
-	border: 0;
-}
-
-.ui-tabs-nav {
-	border: 0;
-	border-bottom: 1px solid #999;
-	background-image: none;
-	background-color: transparent;
-	font: 100% @font;
-	text-transform: uppercase;
-}
-
-.ui-tabs-nav .ui-state-default {
-	background-color: #fff;
-	background-image: none;
-	color: #569bbe;
-	border-color: transparent;
-	font-weight: normal;
-	border-radius: 0px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-}
-
-.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
-	color:black;
-}
-
-.ui-tabs-nav .ui-state-hover a {
-	color: #E17009;
-}
-
-.ui-tabs-nav .ui-state-active {
-	border-color: #999;
-	font-weight: normal;
-}
-
-.ui-tabs-nav .ui-state-active a {
-	margin-top: 1px;
-	margin-bottom: -1px;
 }
 
 /* Button */
