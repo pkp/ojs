@@ -27,9 +27,9 @@
 {/if} 
 {$article->getLocalizedTitle()|strip_unsafe_html}.
 <strong>{$journal->getLocalizedName()|escape}</strong>, {$location|default:"[S.l.]"|escape}{if $issue}{if $issue->getShowVolume()}, v. {$issue->getVolume()|escape}{/if}{if $issue->getShowNumber()}, n. {$issue->getNumber()|escape}{/if}{/if}
-{if $article->getPages()}, p. {$article->getPages()|escape}{/if}, {if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%b. %Y'|lower}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%b. %Y'}{else}{$issue->getYear()|escape}{/if}. 
-{if $currentJournal->getSetting('onlineIssn')}ISSN {$currentJournal->getSetting('onlineIssn')|escape}.  
+{if $article->getPages()}, p. {$article->getPages()|escape}{/if}, {if $article->getDatePublished()}{$article->getDatePublished()|abnt_date_format|lower}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|abnt_date_format}{else}{$issue->getYear()|escape}{/if}.
+{if $currentJournal->getSetting('onlineIssn')}ISSN {$currentJournal->getSetting('onlineIssn')|escape}.
 {elseif $currentJournal->getSetting('printIssn')}ISSN {$currentJournal->getSetting('printIssn')|escape}. {/if}
-{translate key="plugins.citationFormats.abnt.retrieved" retrievedDate=$smarty.now|date_format:'%d %b. %Y' url=$articleUrl}
-{if $article->getPubId('doi')}doi:{$article->getPubId('doi')|escape}. {/if}
+{translate key="plugins.citationFormats.abnt.retrieved" retrievedDate=$smarty.now|abnt_date_format_with_day url=$articleUrl}
+{if $article->getPubId('doi')}doi:<a href="http://dx.doi.org/{$article->getPubId('doi')|escape}">http://dx.doi.org/{$article->getPubId('doi')|escape}</a>. {/if}
 </div>
