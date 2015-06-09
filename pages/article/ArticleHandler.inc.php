@@ -14,11 +14,7 @@
  *
  */
 
-
-import('classes.rt.ojs.RTDAO');
-import('classes.rt.ojs.JournalRT');
 import('classes.handler.Handler');
-import('classes.rt.ojs.SharingRT');
 
 class ArticleHandler extends Handler {
 	/** journal associated with the request **/
@@ -106,23 +102,8 @@ class ArticleHandler extends Handler {
 			$article = $this->article;
 			$this->setupTemplate($request);
 
-			$rtDao = DAORegistry::getDAO('RTDAO');
-			$journalRt = $rtDao->getJournalRTByJournal($journal);
-
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$section = $sectionDao->getById($article->getSectionId(), $journal->getId(), true);
-
-			$version = null;
-			if ($journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {
-				// Determine the "Define Terms" context ID.
-				$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId(), true);
-				if ($version) foreach ($version->getContexts() as $context) {
-					if ($context->getDefineTerms()) {
-						$defineTermsContextId = $context->getContextId();
-						break;
-					}
-				}
-			}
 
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 			if ($journal->getSetting('enablePublicGalleyId')) {
@@ -194,34 +175,13 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('article', $article);
 			$templateMgr->assign('galley', $galley);
 			$templateMgr->assign('section', $section);
-			$templateMgr->assign('journalRt', $journalRt);
-			$templateMgr->assign('version', $version);
 			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('galleyId', $galleyId);
 			$templateMgr->assign('fileId', $fileId);
 			$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 
-			$templateMgr->assign('sharingEnabled', $journalRt->getSharingEnabled());
 			$templateMgr->assign('ccLicenseBadge', Application::getCCLicenseBadge($article->getLicenseURL()));
-
-			if($journalRt->getSharingEnabled()) {
-				$templateMgr->assign('sharingRequestURL', $request->getRequestURL());
-				$templateMgr->assign('sharingArticleTitle', $article->getLocalizedTitle());
-				$templateMgr->assign('sharingUserName', $journalRt->getSharingUserName());
-				$templateMgr->assign('sharingButtonStyle', $journalRt->getSharingButtonStyle());
-				$templateMgr->assign('sharingDropDownMenu', $journalRt->getSharingDropDownMenu());
-				$templateMgr->assign('sharingBrand', $journalRt->getSharingBrand());
-				$templateMgr->assign('sharingDropDown', $journalRt->getSharingDropDown());
-				$templateMgr->assign('sharingLanguage', $journalRt->getSharingLanguage());
-				$templateMgr->assign('sharingLogo', $journalRt->getSharingLogo());
-				$templateMgr->assign('sharingLogoBackground', $journalRt->getSharingLogoBackground());
-				$templateMgr->assign('sharingLogoColor', $journalRt->getSharingLogoColor());
-				list($btnUrl, $btnWidth, $btnHeight) = SharingRT::sharingButtonImage($journalRt);
-				$templateMgr->assign('sharingButtonUrl', $btnUrl);
-				$templateMgr->assign('sharingButtonWidth', $btnWidth);
-				$templateMgr->assign('sharingButtonHeight', $btnHeight);
-			}
 
 			$templateMgr->assign('articleSearchByOptions', array(
 				'query' => 'search.allFields',
