@@ -1,4 +1,6 @@
 #!/bin/bash
+git config --global user.email "pkp@mailinator.com"
+git config --global user.name "PKP"
 echo "1 - Retrieving git user:"
 gitUser=$(cat .git/config | grep -A2 "remote \"origin\"" | grep "url" | cut -f2 -d":" | cut -f4 -d"/")
 echo "    Gituser: $gitUser"
