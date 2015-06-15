@@ -107,7 +107,7 @@ class OAIDAO extends PKPOAIDAO {
 		if (isset($journalId)) {
 			$journals = array($this->journalDao->getById($journalId));
 		} else {
-			$journals = $this->journalDao->getAll();
+			$journals = $this->journalDao->getAll(true);
 			$journals = $journals->toArray();
 		}
 
