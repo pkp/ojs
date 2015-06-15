@@ -64,4 +64,5 @@
 	<message key="plugins.generic.pln.notifications.curl_missing">CURL support must be enabled to proceed.</message>
 	<message key="plugins.generic.pln.notifications.zip_missing">ZipArchive support must be enabled to proceed.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">Your journal must have an ISSN before you can agree to the terms of service. You can enter the ISSN on the Journal Settings page. Once the journal ISSN is entered, the terms of service will be shown below.</message>
+	<message key="plugins.generic.pln.notifications.tar_missing">Your system must have a tar executable.</message>
 </locale>
