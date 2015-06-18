@@ -10,7 +10,7 @@
 {assign var="representationId" value=$representation->getId()}
 
 {url|assign:queriesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.queries.RepresentationQueriesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId representationId=$representationId escape=false}
-{load_url_in_div id="queriesGrid" url=$queriesGridUrl}
+{load_url_in_div id="queriesGrid-"|concat:$representation->getId() url=$queriesGridUrl}
 
 {url|assign:representationFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.galley.GalleyFilesGridHandler" op="fetchGrid" submissionId=$submission->getId() representationId=$representationId escape=false}
 {assign var=representationContainerId value='representationFilesGrid-'|concat:$representationId|concat:'-'|uniqid}
