@@ -17,11 +17,11 @@
 		<!--
 			function toggleURNClear() {
 				if ($('#excludeURN').is(':checked')) {
-					var $element = document.getElementById('other::urn');
+					var $element = document.getElementById('clear_other_urn');
 					$element.setAttribute('checked', 'checked');
 					$element.setAttribute('disabled', 'disabled');
 				} else {
-					var $element = document.getElementById('other::urn');
+					var $element = document.getElementById('clear_other_urn');
 					$element.removeAttribute('disabled');
 				}
 			}
@@ -50,7 +50,7 @@
 				</table>
 			{elseif $storedPubId}
 				<p>{$storedPubId|escape}</p>
-				<input type="checkbox" name="clear_{$pubIdPlugin->getPubIdType()|escape}" id="clear_{$pubIdPlugin->getPubIdType()|escape}" value="1" />
+				<input type="checkbox" name="clear_other_urn" id="clear_other_urn" value="1" />
 				{capture assign=translatedObjectType}{translate key="plugins.pubIds.urn.editor.urnObjectType"|cat:$pubObjectType}{/capture}
 				{translate key="plugins.pubIds.urn.editor.urnClear.description" pubObjectType=$translatedObjectType}<br />
 			{else}
