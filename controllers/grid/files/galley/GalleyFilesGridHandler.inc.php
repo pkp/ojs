@@ -13,39 +13,34 @@
  * @brief Subclass of file editor/auditor grid for proof files.
  */
 
-// import grid signoff files grid base classes
-import('controllers.grid.files.signoff.SignoffFilesGridHandler');
-import('controllers.grid.files.galley.GalleyFilesSignoffGridCategoryRow');
+import('lib.pkp.controllers.grid.files.fileList.FileListGridHandler');
 
-// Import file class which contains the SUBMISSION_FILE_* constants.
-import('lib.pkp.classes.submission.SubmissionFile');
-
-// Import SUBMISSION_EMAIL_* constants.
-import('classes.mail.ArticleMailTemplate');
-
-class GalleyFilesGridHandler extends SignoffFilesGridHandler {
+class GalleyFilesGridHandler extends FileListGridHandler {
 	/**
 	 * Constructor
 	 */
 	function GalleyFilesGridHandler() {
-		parent::SignoffFilesGridHandler(
-			WORKFLOW_STAGE_ID_PRODUCTION,
-			SUBMISSION_FILE_PROOF,
-			'SIGNOFF_PROOFING',
-			SUBMISSION_EMAIL_PROOFREAD_NOTIFY_AUTHOR,
-			ASSOC_TYPE_GALLEY
+		import('lib.pkp.controllers.grid.files.proof.ProofFilesGridDataProvider');
+		parent::FileListGridHandler(
+			new ProofFilesGridDataProvider(),
+			WORKFLOW_STAGE_ID_EDITING,
+			FILE_GRID_ADD|FILE_GRID_MANAGE|FILE_GRID_DELETE|FILE_GRID_VIEW_NOTES|FILE_GRID_EDIT
 		);
 
 		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR),
-			array('dependentFiles')
+			array(
+				ROLE_ID_SUB_EDITOR,
+				ROLE_ID_MANAGER,
+				ROLE_ID_ASSISTANT
+			),
+			array(
+				'fetchGrid', 'fetchRow',
+				'addFile', 'selectFiles',
+				'downloadFile',
+				'deleteFile',
+				'signOffFile'
+			)
 		);
-		$this->addRoleAssignment(
-			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
-			array('selectFiles')
-		);
-
-		$this->setEmptyCategoryRowText('grid.noAuditors');
 	}
 
 	/**
@@ -56,12 +51,17 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	 * @return boolean
 	 */
 	function authorize($request, $args, $roleAssignments) {
+		import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
+		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
+
 		// If a file ID was specified, authorize it.  dependentFiles requires this.
 		// fileId corresponds to the main galley file that these other files depend on.
 		if ($request->getUserVar('fileId')) {
 			import('lib.pkp.classes.security.authorization.SubmissionFileAccessPolicy');
 			$this->addPolicy(new SubmissionFileAccessPolicy($request, $args, $roleAssignments, SUBMISSION_FILE_ACCESS_MODIFY));
 		}
+		import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+		$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
@@ -74,23 +74,9 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 	 * @param PKPRequest $request
 	 */
 	function initialize($request) {
-		$galley = $this->getGalley();
-		$this->setAssocId($galley->getId());
-
 		parent::initialize($request);
 
 		$router = $request->getRouter();
-
-		// Add a "select files" action for editors / subeditors
-		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-		if (array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), $userRoles)) {
-			import('lib.pkp.controllers.grid.files.fileList.linkAction.SelectFilesLinkAction');
-			$this->addAction(new SelectFilesLinkAction(
-				$request,
-				$this->getRequestArgs(),
-				__('editor.submission.selectFiles')
-			));
-		}
 
 		// Add a "view document library" action
 		$this->addAction(
@@ -107,42 +93,12 @@ class GalleyFilesGridHandler extends SignoffFilesGridHandler {
 		);
 
 		// Basic grid configuration
-		$this->setId('articleGalleyFiles-' . $this->getAssocId());
+		$representation = $this->getAuthorizedContextObject(ASSOC_TYPE_REPRESENTATION);
+		$this->setId('articleGalleyFiles-' . $representation->getId());
 		$this->setTitle('submission.galleyFiles');
 		$this->setInstructions('submission.proofReadingDescription');
 	}
 
-	/**
-	 * @copydoc SignoffFilesGridHandler::getRowInstance()
-	 */
-	protected function getRowInstance() {
-		$row = parent::getRowInstance();
-		$row->setRequestArgs($this->getRequestArgs());
-		return $row;
-	}
-
-	/**
-	 * @copydoc GridHandler::getRequestArgs()
-	 */
-	function getRequestArgs() {
-		return array_merge(
-			parent::getRequestArgs(),
-			array('representationId' => $this->getAssocId())
-		);
-	}
-
-	/**
-	 * Get the row handler - override the default row handler
-	 * @return GalleyFilesSignoffGridCategoryRow
-	 */
-	protected function getCategoryRowInstance() {
-		$galley = $this->getGalley();
-		$row = new GalleyFilesSignoffGridCategoryRow($galley->getId(), $this->getStageId());
-		$submission = $this->getSubmission();
-		$row->setCellProvider(new SignoffFilesGridCellProvider($submission->getId(), $this->getStageId()));
-		$row->addFlag('gridRowStyle', true);
-		return $row;
-	}
 
 	//
 	// Public handler methods
