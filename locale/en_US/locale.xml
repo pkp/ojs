@@ -732,7 +732,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 	<!-- Registration -->
 	<message key="user.register.emailValidation">Email Validation Required</message>
-	<message key="user.register.emailValidationDescription">You are required to validate your email address before proceeding.  Please check your email account for further instructions.  Once you have validated your account, you may login.</message>
+	<message key="user.register.emailValidationDescription">You are required to validate your email address before proceeding. Please check your email account for further instructions. Once you have validated your account, you may login.</message>
 	<message key="user.register.selectJournal">Select a journal to register with</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>
 	<message key="user.register.privacyStatement">Privacy Statement</message>
