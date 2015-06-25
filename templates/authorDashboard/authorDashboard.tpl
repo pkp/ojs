@@ -8,35 +8,51 @@
  * Display the author dashboard.
  *}
 {strip}
-{assign var=primaryAuthor value=$submission->getPrimaryAuthor()}
-{if !$primaryAuthor}
-	{assign var=authors value=$submission->getAuthors()}
-	{assign var=primaryAuthor value=$authors[0]}
-{/if}
-{assign var="pageTitleTranslated" value=$primaryAuthor->getLastName()|concat:", <em>":$submission->getLocalizedTitle():"</em>"|truncate:50}
-{include file="common/header.tpl" suppressPageTitle=true}
+	{assign var=primaryAuthor value=$submission->getPrimaryAuthor()}
+	{if !$primaryAuthor}
+		{assign var=authors value=$submission->getAuthors()}
+		{assign var=primaryAuthor value=$authors[0]}
+	{/if}
+	{assign var="pageTitleTranslated" value=$primaryAuthor->getLastName()|concat:", <em>":$submission->getLocalizedTitle():"</em>"|truncate:50}
+	{include file="common/header.tpl" suppressPageTitle=true}
 {/strip}
 
-{assign var="stageId" value=$submission->getStageId()}
+{include file="authorDashboard/top.tpl"}
+
+{assign var=selectedTabIndex value=0}
+{foreach from=$workflowStages item=stage}
+	{if $stage.id < $submission->getStageId()}
+		{assign var=selectedTabIndex value=$selectedTabIndex+1}
+	{/if}
+{/foreach}
 
 <script type="text/javascript">
-	// Initialise JS handler.
+	// Attach the JS file tab handler.
 	$(function() {ldelim}
-		$('#authorDashboard').pkpHandler(
-				'$.pkp.pages.authorDashboard.PKPAuthorDashboardHandler',
-				{ldelim} currentStage: {$stageId} {rdelim});
+		$('#stageTabs').pkpHandler(
+			'$.pkp.controllers.tab.workflow.WorkflowTabHandler',
+			{ldelim}
+				selected: {$selectedTabIndex},
+				emptyLastTab: true
+			{rdelim}
+		);
 	{rdelim});
 </script>
-
-<div id="authorDashboard">
-	{include file="authorDashboard/top.tpl"}
-
-	{include file="authorDashboard/stages/submission.tpl"}
-	{include file="authorDashboard/stages/externalReview.tpl"}
-	{include file="authorDashboard/stages/editorial.tpl"}
-	{include file="authorDashboard/stages/production.tpl"}
-
-	{include file="authorDashboard/submissionDocuments.tpl"}
+<div style="clear:both">
+	<div id="stageTabs" class="pkp_controllers_tab">
+		<ul>
+			{foreach from=$workflowStages item=stage}
+				<li class="workflowStage">
+					<a class="{$stage.path} stageId{$stage.id}" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.authorDashboard.AuthorDashboardTabHandler" op="fetchTab" submissionId=$submission->getId() stageId=$stage.id escape=false}">
+					{translate key=$stage.translationKey}
+					<div class="stageState">
+							{translate key=$stage.statusKey}
+						</div>
+					</a>
+				</li>
+			{/foreach}
+		</ul>
+	</div>
 </div>
 
 {include file="common/footer.tpl"}
