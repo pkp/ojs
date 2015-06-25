@@ -111,7 +111,6 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/informationCenter/NotesHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/informationCenter/SignoffNotesHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js"></script>
-<script src="{$baseUrl}/lib/pkp/js/pages/header/ContextSwitcherFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/header/HeaderHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/admin/ContextsHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/submission/SubmissionTabHandler.js"></script>
