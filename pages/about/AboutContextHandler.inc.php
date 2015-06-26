@@ -34,9 +34,6 @@ class AboutContextHandler extends Handler {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
 
-		import('lib.pkp.classes.security.authorization.UserRolesRequiredPolicy');
-		$this->addPolicy(new UserRolesRequiredPolicy($request));
-
 		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
 		$this->addPolicy(new ContextRequiredPolicy($request));
 
