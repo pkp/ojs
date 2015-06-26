@@ -49,7 +49,7 @@ class Journal extends DataObject {
 
 	/**
 	 * Set the primary locale of this journal.
-	 * @param $locale string
+	 * @param $primaryLocale string
 	 */
 	function setPrimaryLocale($primaryLocale) {
 		return $this->setData('primaryLocale', $primaryLocale);
@@ -440,7 +440,7 @@ class Journal extends DataObject {
 	 *
 	 * @param $metricType null|integer|array metrics selection
 	 * @param $columns integer|array column (aggregation level) selection
-	 * @param $filters array report-level filter selection
+	 * @param $filter array report-level filter selection
 	 * @param $orderBy array order criteria
 	 * @param $range null|DBResultRange paging specification
 	 *

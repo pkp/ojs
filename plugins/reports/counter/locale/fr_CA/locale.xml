@@ -16,8 +16,8 @@
 	<message key="plugins.reports.counter.description"><![CDATA[Le plugiciel COUNTER permet la consignation de données et la production de rapports <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> des activités du site.]]></message>
 	<message key="plugins.reports.counter">Statistiques COUNTER</message>
 
-	<message key="plugins.reports.counter.1a.title">Rapport de revue 1 (R2) : Demandes de texte intégral, par mois et par revue</message>
-	<message key="plugins.reports.counter.1a.title1">Rapport de revue 1 (R2)</message>
+	<message key="plugins.reports.counter.1a.title">Rapport de revue 1 (R3) : Demandes de texte intégral, par mois et par revue</message>
+	<message key="plugins.reports.counter.1a.title1">Rapport de revue 1 (R3)</message>
 	<message key="plugins.reports.counter.1a.title2">Nombre de demandes de texte intégral acceptées, par mois et par revue (Année {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Date d'exécution :</message>
 	<message key="plugins.reports.counter.1a.publisher">Éditeur</message>
