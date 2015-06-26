@@ -34,8 +34,12 @@ class AboutContextHandler extends Handler {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
 
+		import('lib.pkp.classes.security.authorization.UserRolesRequiredPolicy');
+		$this->addPolicy(new UserRolesRequiredPolicy($request));
+
 		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
 		$this->addPolicy(new ContextRequiredPolicy($request));
+
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
@@ -47,6 +51,8 @@ class AboutContextHandler extends Handler {
 	function contact($args, $request) {
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$context = $request->getContext();
+
+		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('contextSettings', $settingsDao->getSettings($context->getId()));
 		$templateMgr->display('about/contact.tpl');
@@ -58,6 +64,7 @@ class AboutContextHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function description($args, $request) {
+		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->display('about/description.tpl');
 	}
@@ -68,12 +75,16 @@ class AboutContextHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function sponsorship($args, $request) {
+		$this->setupTemplate($request);
+
 		$context = $request->getContext();
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('contributorNote', $context->getLocalizedSetting('contributorNote'));
-		$templateMgr->assign('contributors', $context->getSetting('contributors'));
-		$templateMgr->assign('sponsorNote', $context->getLocalizedSetting('sponsorNote'));
-		$templateMgr->assign('sponsors', $context->getSetting('sponsors'));
+		$templateMgr->assign(array(
+			'contributorNote' => $context->getLocalizedSetting('contributorNote'),
+			'contributors' => $context->getSetting('contributors'),
+			'sponsorNote' => $context->getLocalizedSetting('sponsorNote'),
+			'sponsors' => $context->getSetting('sponsors'),
+		));
 		$templateMgr->display('about/sponsorship.tpl');
 	}
 
@@ -83,6 +94,7 @@ class AboutContextHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function editorialTeam($args, $request) {
+		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->display('about/editorialTeam.tpl');
 	}
@@ -93,6 +105,7 @@ class AboutContextHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function editorialPolicies($args, $request) {
+		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->display('about/editorialPolicies.tpl');
 	}
@@ -103,6 +116,8 @@ class AboutContextHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function submissions($args, $request) {
+		$this->setupTemplate($request);
+
 		$context = $request->getContext();
 		$templateMgr = TemplateManager::getManager($request);
 		$submissionChecklist = $context->getLocalizedSetting('submissionChecklist');
@@ -112,6 +127,15 @@ class AboutContextHandler extends Handler {
 		}
 		$templateMgr->assign('submissionChecklist', $submissionChecklist);
 		$templateMgr->display('about/submissions.tpl');
+	}
+
+	/**
+	 * @copydoc PKPHandler::setupTemplate()
+	 */
+	function setupTemplate($request) {
+		parent::setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('userRoles', $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES));
 	}
 }
 
