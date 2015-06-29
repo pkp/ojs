@@ -106,17 +106,17 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		$this->addAction(
 			new LinkAction(
-				'add',
+				'addItem',
 				new AjaxModal(
 					$router->url(
 						$request, null, null, 'add', null,
 						array_merge($this->getRequestArgs(), array('gridId' => $this->getId()))
 					),
 					__('submission.layout.addGalley'),
-					'modal_add'
+					'modal_add_file'
 				),
 				__('submission.layout.addGalley'),
-				'add_category'
+				'add'
 			)
 		);
 
