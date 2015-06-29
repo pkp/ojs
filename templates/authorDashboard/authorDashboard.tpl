@@ -43,7 +43,7 @@
 		<ul>
 			{foreach from=$workflowStages item=stage}
 				<li class="workflowStage">
-					<a class="{$stage.path} stageId{$stage.id}" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.authorDashboard.AuthorDashboardTabHandler" op="fetchTab" submissionId=$submission->getId() stageId=$stage.id escape=false}">
+					<a name="stage-{$stage.path}" class="{$stage.path} stageId{$stage.id}" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.authorDashboard.AuthorDashboardTabHandler" op="fetchTab" submissionId=$submission->getId() stageId=$stage.id escape=false}">
 					{translate key=$stage.translationKey}
 					<div class="stageState">
 							{translate key=$stage.statusKey}
