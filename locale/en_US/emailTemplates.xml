@@ -436,7 +436,7 @@ Please confirm your ability to complete this vital contribution to the work of t
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to:<br />
 <br />
@@ -474,7 +474,7 @@ Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to:<br />
 <br />
@@ -486,7 +486,7 @@ Our decision is to:<br />
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to:<br />
 <br />
@@ -498,7 +498,7 @@ Our decision is to:<br />
 		<subject>Editor Decision</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-We have reached a decision regarding your submission to {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to:<br />
 <br />
