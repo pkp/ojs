@@ -69,7 +69,7 @@
 	{/if}
 	<tr valign="top">
 		<td class="label">{fieldLabel name="title" key="issue.title"}</td>
-		<td class="value"><input type="text" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
+		<td class="value"><input type="text" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="40" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="description" key="editor.issues.description"}</td>

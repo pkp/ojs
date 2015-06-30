@@ -365,7 +365,7 @@ function updateAbstractRequired() {
 
 		<tr valign="top">
 			<td width="30%" class="label">{fieldLabel name="title" required="true" key="article.title"}</td>
-			<td width="70%" class="value"><input type="text" class="textField" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="60" maxlength="255" /></td>
+			<td width="70%" class="value"><input type="text" class="textField" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="60" /></td>
 		</tr>
 
 		<tr valign="top">
