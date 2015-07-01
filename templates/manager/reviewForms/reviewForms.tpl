@@ -27,8 +27,8 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveReviewForm"); })
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="40%">{translate key="manager.reviewForms.title"}</td>
-		<td width="20%">{translate key="manager.reviewForms.inReview"}</td>
-		<td width="15%">{translate key="manager.reviewForms.completed"}</td>
+		<td width="20%"></td>
+		<td width="15%"></td>
 		<td width="25%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr>
@@ -42,8 +42,8 @@ $(document).ready(function() { setupTableDND("#dragTable", "moveReviewForm"); })
 {/if}
 	<tr valign="top" id="reviewform-{$reviewForm->getId()}" class="data">
 		<td class="drag">{$reviewForm->getLocalizedTitle()|escape}</td>
-		<td class="drag">{$reviewForm->getIncompleteCount()|escape}</td>
-		<td class="drag">{$reviewForm->getCompleteCount()|escape}</td>
+		<td class="drag"></td>
+		<td class="drag"></td>
 		<td align="right" class="nowrap">
 			{if $canEdit}<a href="{url op="editReviewForm" path=$reviewForm->getId()}" class="action">{translate key="common.edit"}</a>&nbsp;|{/if}
 			{strip}
