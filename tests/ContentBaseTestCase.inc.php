@@ -42,7 +42,7 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 	 * @return string
 	 */
 	protected function _getSubmissionElementName() {
-		return 'Article';
+		return 'Article Text';
 	}
 
 	/**
