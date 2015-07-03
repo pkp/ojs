@@ -79,6 +79,41 @@ class ArticleDAO extends SubmissionDAO {
 	}
 
 	/**
+	 * Get all unpublished submissions for a user.
+	 * @param $userId int
+	 * @param $contextId int optional
+	 * @return array Submissions
+	 */
+	function getUnpublishedByUserId($userId, $contextId = null, $title = null, $stageId = null, $rangeInfo = null) {
+		$params = array_merge(
+			$this->getFetchParameters(),
+			array((int) ROLE_ID_AUTHOR, (int) $userId)
+		);
+		if ($title) $params[] = '%' . $title . '%';
+		if ($stageId) $params[] = (int) $stageId;
+		if ($contextId) $params[] = (int) $contextId;
+
+		$result = $this->retrieveRange(
+			'SELECT	s.*, ps.date_published,
+				' . $this->getFetchColumns() . '
+			FROM	submissions s
+				LEFT JOIN published_submissions ps ON (s.submission_id = ps.submission_id)
+				LEFT JOIN issues i ON (ps.issue_id = i.issue_id) ' .
+				($title?' LEFT JOIN submission_settings ss ON (s.submission_id = ss.submission_id)':'') .
+				$this->getFetchJoins() .
+			'WHERE	i.date_published IS NULL
+				AND s.submission_id IN (SELECT asa.submission_id FROM stage_assignments asa, user_groups aug WHERE asa.user_group_id = aug.user_group_id AND aug.role_id = ? AND asa.user_id = ?)' .
+				($contextId?' AND s.context_id = ?':'') .
+				($title?' AND (ss.setting_name = ? AND ss.setting_value LIKE ?)':'') .
+				($stageId?' AND s.stage_id = ?':'') .
+				' GROUP BY ' . $this->getGroupByColumns(),
+			$params, $rangeInfo
+		);
+
+		return new DAOResultFactory($result, $this, '_fromRow');
+	}
+
+	/**
 	 * Internal function to return an Article object from a row.
 	 * @param $row array
 	 * @return Article
