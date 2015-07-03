@@ -35,6 +35,10 @@
 		<name>numWeeksPerReview</name>
 		<value>4</value>
 	</setting>
+	<setting type="int" locale="0">
+		<name>defaultReviewMode</name>
+		<value>2</value><!-- SUBMISSION_REVIEW_METHOD_DOUBLEBLIND -->
+	</setting>
 	<setting type="string" locale="1">
 		<name>privacyStatement</name>
 		<value>{translate key="default.journalSettings.privacyStatement"}</value>
