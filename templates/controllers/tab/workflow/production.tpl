@@ -30,15 +30,8 @@
 	{load_url_in_div id="productionReadyFilesGridDiv" url=$productionReadyFilesGridUrl}
 
 	{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), $userRoles)}
-		{fbvFormArea id="representations"}
-			{fbvFormSection}
-				<!--  Representations -->
-				{url|assign:representationsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId()}
-				{load_url_in_div id="formatsGridContainer"|uniqid url=$representationsGridUrl}
-			{/fbvFormSection}
-		{/fbvFormArea}
-	{else}
-		<h3>{translate key="submission.galleys"}</h3>
+		{url|assign:representationsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId()}
+		{load_url_in_div id="formatsGridContainer"|uniqid url=$representationsGridUrl}
 	{/if}
 
 	<div id="representationsTabsContainer">
