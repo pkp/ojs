@@ -445,6 +445,21 @@ class ArticleDAO extends SubmissionDAO {
 	protected function getGroupByColumns() {
 		return 's.submission_id, ps.date_published, stl.setting_value, stpl.setting_value, sal.setting_value, sapl.setting_value';
 	}
+
+	/**
+	 * @copydoc SubmissionDAO::getCompletionJoins()
+	 */
+	protected function getCompletionJoins() {
+		return 'LEFT JOIN issues i ON (ps.issue_id = i.issue_id)';
+	}
+
+	/**
+	 * @copydoc SubmissionDAO::getCompletionConditions()
+	 */
+	protected function getCompletionConditions($completed) {
+		return ' i.date_published IS ' . ($completed?'NOT ':'') . 'NULL ';
+	}
+
 }
 
 ?>
