@@ -21,7 +21,7 @@
 	<message key="plugins.generic.referral.count">Hits</message>
 	<message key="plugins.generic.referral.dateAdded">Data de inclusão</message>
 	<message key="plugins.generic.referral.all">Todos</message>
-	<message key="plugins.generic.referral.all.empty">Não há appontadores.</message>
+	<message key="plugins.generic.referral.all.empty">Não há apontadores.</message>
 	<message key="plugins.generic.referral.status.new">Novo</message>
 	<message key="plugins.generic.referral.status.new.empty">Não há nenhum apontador novo.</message>
 	<message key="plugins.generic.referral.status.accept">Publicado</message>
