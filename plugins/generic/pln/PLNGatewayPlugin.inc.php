@@ -112,54 +112,54 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	 * Handle fetch requests for this plugin.
 	 */
 	function fetch() {
-		$plugin =& $this->getPLNPlugin();
-		$templateMgr =& TemplateManager::getManager();
+                $plugin =& $this->getPLNPlugin();
+                $templateMgr =& TemplateManager::getManager();
 
-		$journal =& Request::getJournal();
-		$templateMgr->assign_by_ref('journal', $journal);
+                $journal =& Request::getJournal();
+                $templateMgr->assign_by_ref('journal', $journal);
 
-		$pluginVersionFile = $this->getPluginPath() . DIRECTORY_SEPARATOR . '/version.xml';
-		$pluginVersion =& VersionCheck::parseVersionXml($pluginVersionFile);
-		$templateMgr->assign_by_ref('pluginVersion', $pluginVersion);
+                $pluginVersionFile = $this->getPluginPath() . DIRECTORY_SEPARATOR . '/version.xml';
+                $pluginVersion =& VersionCheck::parseVersionXml($pluginVersionFile);
+                $templateMgr->assign_by_ref('pluginVersion', $pluginVersion);
 
-		$terms = array();
-		$termsAccepted = $plugin->termsAgreed($journal->getId());				
-		if($termsAccepted) {
-			$templateMgr->assign('termsAccepted', 'yes');
-			$terms = unserialize($plugin->getSetting($journal->getId(), 'terms_of_use'));
-			$termsAgreement = unserialize($plugin->getSetting($journal->getId(), 'terms_of_use_agreement'));
-		}
-		else
-			$templateMgr->assign('termsAccepted', 'no');
+                $terms = array();
+                $termsAccepted = $plugin->termsAgreed($journal->getId());				
+                if($termsAccepted) {
+                    $templateMgr->assign('termsAccepted', 'yes');
+                    $terms = unserialize($plugin->getSetting($journal->getId(), 'terms_of_use'));
+                    $termsAgreement = unserialize($plugin->getSetting($journal->getId(), 'terms_of_use_agreement'));
+                }
+                else
+                    $templateMgr->assign('termsAccepted', 'no');
 
-		$termKeys = array_keys($terms);				
-		$termsDisplay = array();
-		foreach($termKeys as $key) {
-			$termsDisplay[] = array(
-				'key' => $key,
-				'term' => $terms[$key]['term'],
-				'updated' => $terms[$key]['updated'],
-				'accepted' => $termsAgreement[$key]
-			);
-		}
-		$templateMgr->assign_by_ref('termsDisplay', new ArrayItemIterator($termsDisplay));
+                $termKeys = array_keys($terms);				
+                $termsDisplay = array();
+                foreach($termKeys as $key) {
+                    $termsDisplay[] = array(
+                        'key' => $key,
+                        'term' => $terms[$key]['term'],
+                        'updated' => $terms[$key]['updated'],
+                        'accepted' => $termsAgreement[$key]
+                    );
+                }
+                $templateMgr->assign_by_ref('termsDisplay', new ArrayItemIterator($termsDisplay));
 
-		$versionDao =& DAORegistry::getDAO('VersionDAO');
-		$ojsVersion =& $versionDao->getCurrentVersion();
-		$templateMgr->assign('ojsVersion', $ojsVersion->getVersionString());
+                $versionDao =& DAORegistry::getDAO('VersionDAO');
+                $ojsVersion =& $versionDao->getCurrentVersion();
+                $templateMgr->assign('ojsVersion', $ojsVersion->getVersionString());
 
-		$publishedArticlesDAO =& DAORegistry::getDAO('PublishedArticleDAO');
-		$range = new DBResultRange(PLN_PLUGIN_PING_ARTICLE_COUNT);
-		$publishedArticles =& $publishedArticlesDAO->getPublishedArticlesByJournalId($journal->getId(), $range,  true);
-		$templateMgr->assign_by_ref('articles', $publishedArticles);
+                $publishedArticlesDAO =& DAORegistry::getDAO('PublishedArticleDAO');
+                $range = new DBResultRange(PLN_PLUGIN_PING_ARTICLE_COUNT);
+                $publishedArticles =& $publishedArticlesDAO->getPublishedArticlesByJournalId($journal->getId(), $range,  true);
+                $templateMgr->assign_by_ref('articles', $publishedArticles);
 
-		$templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl', 'text/xml');
+                $templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl', 'text/xml');
 
-		unset($terms);
-		unset($termsAccepted);
-		unset($termKeys);
+                unset($terms);
+                unset($termsAccepted);
+                unset($termKeys);
 
-		return true;
+                return true;
 	}
 }
 
