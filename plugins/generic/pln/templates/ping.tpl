@@ -8,6 +8,11 @@
 		<release>{$pluginVersion.release}</release>
 		<releaseDate>{$pluginVersion.date}</releaseDate>
 		<current>{$pluginVersion.version->getCurrent()}</current>
+		<terms termsAccepted="{$termsAccepted|escape}">
+			{iterate from=termsDisplay item=term}
+			<term key='{$term.key}' updated='{$term.updated}' accepted='{$term.accepted}'>{$term.term|escape}</term>
+			{/iterate}
+		</terms>
 	</pluginInfo>
 	<journalInfo>
 		<title>{$journal->getLocalizedTitle()|escape}</title>

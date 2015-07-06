@@ -17,6 +17,7 @@
 import('classes.plugins.GatewayPlugin');
 import('lib.pkp.classes.site.VersionCheck');
 import('lib.pkp.classes.db.DBResultRange');
+import('lib.pkp.classes.core.ArrayItemIterator');
 
 define('PLN_PLUGIN_PING_ARTICLE_COUNT', 12);
 
@@ -111,6 +112,7 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	 * Handle fetch requests for this plugin.
 	 */
 	function fetch() {
+				$plugin =& $this->getPLNPlugin();
                 $templateMgr =& TemplateManager::getManager();
 
                 $journal =& Request::getJournal();
@@ -120,6 +122,28 @@ class PLNGatewayPlugin extends GatewayPlugin {
                 $pluginVersion =& VersionCheck::parseVersionXml($pluginVersionFile);
                 $templateMgr->assign_by_ref('pluginVersion', $pluginVersion);
 
+				$terms = array();
+				$termsAccepted = $plugin->termsAgreed($journal->getId());				
+				if($termsAccepted) {
+					$templateMgr->assign('termsAccepted', 'yes');
+					$terms = unserialize($plugin->getSetting($journal->getId(), 'terms_of_use'));
+					$termsAgreement = unserialize($plugin->getSetting($journal->getId(), 'terms_of_use_agreement'));
+				}
+				else
+					$templateMgr->assign('termsAccepted', 'no');
+				
+				$termKeys = array_keys($terms);				
+				$termsDisplay = array();
+				foreach($termKeys as $key) {
+					$termsDisplay[] = array(
+						'key' => $key,
+						'term' => $terms[$key]['term'],
+						'updated' => $terms[$key]['updated'],
+						'accepted' => $termsAgreement[$key]
+					);
+				}
+				$templateMgr->assign_by_ref('termsDisplay', new ArrayItemIterator($termsDisplay));
+				
                 $versionDao =& DAORegistry::getDAO('VersionDAO');
                 $ojsVersion =& $versionDao->getCurrentVersion();
                 $templateMgr->assign('ojsVersion', $ojsVersion->getVersionString());
@@ -131,6 +155,10 @@ class PLNGatewayPlugin extends GatewayPlugin {
 
                 $templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl', 'text/xml');
 
+				unset($terms);
+				unset($termsAccepted);
+				unset($termKeys);
+				
                 return true;
 	}
 }

@@ -14,9 +14,18 @@
 <!ELEMENT ojsInfo (release)>
 <!ELEMENT release (#PCDATA)>
 
-<!ELEMENT pluginInfo (release, releaseDate, installed, current)>
+<!ELEMENT pluginInfo (release, releaseDate, installed, current, terms)>
 <!ELEMENT releaseDate (#PCDATA)>
 <!ELEMENT current (#PCDATA)>
+<!ELEMENT terms (term*)>
+		<!ATTLIST terms
+				termsAccepted CDATA #REQUIRED>
+
+<!ELEMENT term (#PCDATA)>
+		<!ATTLIST term
+				key CDATA #REQUIRED
+				updated CDATA #REQUIRED
+				accepted CDATA #REQUIRED>
 
 <!ELEMENT journalInfo (title, articles)>
 <!ELEMENT title (#PCDATA)>
