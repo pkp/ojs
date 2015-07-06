@@ -24,7 +24,7 @@
 	<message key="plugins.generic.usageStats.removeUrlError">A linha número {$lineNumber} do ficheiro {$file} contém um endereço url do qual o sistema não consegue retirar o URL base.</message>
 	<message key="plugins.generic.usageStats.loadDataError">Não é possível extrair a informação do ficheiro {$file}. O erro foi: {$error}. O ficheiro foi reposto na fila outra vez.</message>
 	<message key="plugins.generic.usageStats.displayName">Estatísticas de Uso</message>
-	<message key="plugins.generic.usageStats.description">Apresenta "data objects usage statistics". Pode usar os ficheiros log de acesso do servidor para extrair estatísticas.</message>
+	<message key="plugins.generic.usageStats.description">Apresenta as estatísticas de uso baseadas nos trabalhos da publicação. Pode usar os ficheiros log de acesso do servidor para extrair estatísticas.</message>
 	<message key="plugins.generic.usageStats.pluginDisabled">O plugin de Estatísticas de Uso está inativo. Não são processados ficheiros de log.</message>
 	<message key="plugins.generic.usageStats.processingPathNotEmpty">A pasta {$directory} não está vazia. Isto pode indicar uma falha anterior do processo, ou processos concurrentes (a correr em paralelo). Este ficheiro será automaticamente processado se está a usar o processo scheduledTasksAutoStage.xml, caso contrário, terá que manualmente mover os ficheiros para a pasta de processamento dos ficheiros de log.</message>
 	<message key="plugins.generic.usageStats.noCounterBotList">A lista de robots (bots) COUNTER não foi encontrada, ou existe mais do que uma lista. O ficheiro {$file} não pode ser processado.</message>
