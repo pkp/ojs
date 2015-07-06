@@ -16,7 +16,6 @@
 
 <!ELEMENT pluginInfo (release, releaseDate, installed, current)>
 <!ELEMENT releaseDate (#PCDATA)>
-<!ELEMENT installed (#PCDATA)>
 <!ELEMENT current (#PCDATA)>
 
 <!ELEMENT journalInfo (title, articles)>
