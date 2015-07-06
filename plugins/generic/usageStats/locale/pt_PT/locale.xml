@@ -12,27 +12,26 @@
   -->
 
 <locale name="pt_PT" full_name="Português">
-	<message key="plugins.generic.usageStats.settings.logging">Access log options</message>
-	<message key="plugins.generic.usageStats.settings.createLogFiles">Create log files</message>
-	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Activating this option will make the plugin create access log files inside the files directory. Those files should be used to extract the usage statistics data. If you don't want to create more access log files you can leave this option disabled and use your own server log access files.</message>
+	<message key="plugins.generic.usageStats.settings.logging">Opções de Access aos logs</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Criar ficheiros log</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Ao ativar esta opção vai permitir ao plugin criar ficheiros de logs nas pastas do sistema da revista. Esses ficheiros devem ser usados para extrair as estatísticas de uso. Se não pretende criar mais ficheiros de log, deixe esta opção inativa e use o sistema de logs do seu servidor.</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Parse log files regex</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">The default regex used can parse apache access log files in combined format and also the plugin's log files. If your access log files are in a different format you will have to insert a regex capable of parsing them and giving the expected values. See UsageStatsLoader::_getDataFromLogEntry() for more information.</message>
-	<message key="plugins.generic.usageStats.settings.saved">Usage statistics plugin settings saved</message>
+	<message key="plugins.generic.usageStats.settings.saved">Configurações do Plugin de Estatísticas de Uso</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Tarefa (file loader) das Estatísticas de Uso</message>
+	<message key="plugins.generic.usageStats.openFileFailed">O ficheiro {$file} não pode ser aberto e foi rejeitado.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">A linha número {$lineNumber} do ficheiro {$file} não possui uma entrada de log válida e o ficheiro foi rejeitado.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">A linha número {$lineNumber} do ficheiro {$file} contém um endereço url do qual o sistema não consegue retirar o URL base.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Não é possível extrair a informação do ficheiro {$file}. O erro foi: {$error}. O ficheiro foi reposto na fila outra vez.</message>
+	<message key="plugins.generic.usageStats.displayName">Estatísticas de Uso</message>
+	<message key="plugins.generic.usageStats.description">Apresenta "data objects usage statistics". Pode usar os ficheiros log de acesso do servidor para extrair estatísticas.</message>
+	<message key="plugins.generic.usageStats.pluginDisabled">O plugin de Estatísticas de Uso está inativo. Não são processados ficheiros de log.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">A pasta {$directory} não está vazia. Isto pode indicar uma falha anterior do processo, ou processos concurrentes (a correr em paralelo). Este ficheiro será automaticamente processado se está a usar o processo scheduledTasksAutoStage.xml, caso contrário, terá que manualmente mover os ficheiros para a pasta de processamento dos ficheiros de log.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">A lista de robots (bots) COUNTER não foi encontrada, ou existe mais do que uma lista. O ficheiro {$file} não pode ser processado.</message>
+	<message key="plugins.generic.usageStats.failedCounterBotList">A lista de robots (bots) COUNTER {$botlist} não pode ser aberta. O ficheiro {$file} não pode ser processado.</message>
 	
-	<message key="plugins.generic.usageStats.usageStatsLoaderName">Usage statistics file loader task</message>
-	<message key="plugins.generic.usageStats.openFileFailed">The file {$file} could not be opened and was rejected.</message>
-	<message key="plugins.generic.usageStats.invalidLogEntry">The line number {$lineNumber} from the file {$file} is not a valid log entry and the file was rejected.</message>
-	<message key="plugins.generic.usageStats.removeUrlError">The line number {$lineNumber} from the file {$file} contains an url that the system can't remove the base url from.</message>
-	<message key="plugins.generic.usageStats.loadDataError">Couldn't load data extracted from file {$file}. The error was: {$error}. The file was moved to stage again.</message>
-	<message key="plugins.generic.usageStats.displayName">Usage Statistics</message>
-	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
-	<message key="plugins.generic.usageStats.pluginDisabled">Usage statistics plugin is disabled. No log files processed.</message>
-	<message key="plugins.generic.usageStats.processingPathNotEmpty">The directory {$directory} is not empty. This could indicate a previously failed process, or a concurrently running process.  This file will be automatically reprocessed if you are also using scheduledTasksAutoStage.xml, otherwise you will need to manually move any orphaned files in the processing directory back into the stage directory.</message>
-	<message key="plugins.generic.usageStats.noCounterBotList">The COUNTER bot list could not be found, or more than one list is present. The file {$file} could not be processed.</message>
-	<message key="plugins.generic.usageStats.failedCounterBotList">The COUNTER bot list {$botlist} could not be opened. The file {$file} could not be processed.</message>
-	
-	<message key="plugins.reports.usageStats.report.displayName">OJS usage statistics report</message>
-	<message key="plugins.reports.usageStats.report.description">OJS default usage statistics report (COUNTER ready)</message>
+	<message key="plugins.reports.usageStats.report.displayName">Relatório de Estatísticas de Uso da Revista</message>
+	<message key="plugins.reports.usageStats.report.description">Relatório de Estatísticas de Uso da Revista(COUNTER)</message>
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (COUNTER ready)</message>
