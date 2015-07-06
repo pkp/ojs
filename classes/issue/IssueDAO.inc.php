@@ -56,11 +56,11 @@ class IssueDAO extends DAO {
 		if (isset($journalId)) {
 			$result =& $this->retrieve(
 				'SELECT i.* FROM issues i WHERE issue_id = ? AND journal_id = ?',
-				array($issueId, $journalId)
+				array((int) $issueId, (int) $journalId)
 			);
 		} else {
 			$result =& $this->retrieve(
-				'SELECT i.* FROM issues i WHERE issue_id = ?', $issueId
+				'SELECT i.* FROM issues i WHERE issue_id = ?', (int) $issueId
 			);
 		}
 
@@ -150,11 +150,11 @@ class IssueDAO extends DAO {
 	 */
 	function &getPublishedIssuesByNumber($journalId, $volume = null, $number = null, $year = null) {
 		$sql = 'SELECT i.* FROM issues i WHERE i.published = 1 AND i.journal_id = ?';
-		$params = array($journalId);
+		$params = array((int) $journalId);
 
 		if ($volume !== null) {
 			$sql .= ' AND i.volume = ?';
-			$params[] = $volume;
+			$params[] = (int) $volume;
 		}
 		if ($number !== null) {
 			$sql .= ' AND i.number = ?';
@@ -162,7 +162,7 @@ class IssueDAO extends DAO {
 		}
 		if ($year !== null) {
 			$sql .= ' AND i.year = ?';
-			$params[] = $year;
+			$params[] = (int) $year;
 		}
 
 		$result =& $this->retrieve($sql, $params);
@@ -191,7 +191,9 @@ class IssueDAO extends DAO {
 	 */
 	function &getLastCreatedIssue($journalId) {
 		$result =& $this->retrieveLimit(
-			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY year DESC, volume DESC, number DESC', $journalId, 1
+			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY year DESC, volume DESC, number DESC',
+			(int) $journalId,
+			1
 		);
 
 		$issue = null;
@@ -219,7 +221,8 @@ class IssueDAO extends DAO {
 		}
 
 		$result =& $this->retrieve(
-			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1', $journalId
+			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1',
+			(int) $journalId
 		);
 
 		$issue = null;
@@ -239,7 +242,8 @@ class IssueDAO extends DAO {
 	 */
 	function updateCurrentIssue($journalId, $issue = null) {
 		$this->update(
-			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', $journalId
+			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1',
+			(int) $journalId
 		);
 		if ($issue) $this->updateIssue($issue);
 
@@ -392,7 +396,7 @@ class IssueDAO extends DAO {
 	function issueExists($journalId, $volume, $number, $year, $issueId) {
 		$result =& $this->retrieve(
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND volume = ? AND number = ? AND year = ? AND issue_id <> ?',
-			array($journalId, $volume, $number, $year, $issueId)
+			array((int) $journalId, (int) $volume, $number, (int) $year, (int) $issueId)
 		);
 		$returner = $result->RecordCount() != 0 ? true : false;
 
@@ -432,9 +436,9 @@ class IssueDAO extends DAO {
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
-				$issue->getVolume(),
+				(int) $issue->getVolume(),
 				$issue->getNumber(),
-				$issue->getYear(),
+				(int) $issue->getYear(),
 				(int) $issue->getPublished(),
 				(int) $issue->getCurrent(),
 				(int) $issue->getAccessStatus(),
@@ -496,9 +500,9 @@ class IssueDAO extends DAO {
 		$publishedArticleDao->deletePublishedArticlesByIssueId($issueId);
 
 		// Delete issue settings and issue
-		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', $issueId);
-		$this->update('DELETE FROM issues WHERE issue_id = ?', $issueId);
-		$this->update('DELETE FROM custom_issue_orders WHERE issue_id = ?', $issueId);
+		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', (int) $issueId);
+		$this->update('DELETE FROM issues WHERE issue_id = ?', (int) $issueId);
+		$this->update('DELETE FROM custom_issue_orders WHERE issue_id = ?', (int) $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
 
 		$this->flushCache();
@@ -525,7 +529,7 @@ class IssueDAO extends DAO {
 	function issueIdExists($issueId, $journalId) {
 		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM issues WHERE issue_id = ? AND journal_id = ?',
-			array($issueId, $journalId)
+			array((int) $issueId, (int) $journalId)
 		);
 		return $result->fields[0] ? true : false;
 	}
@@ -566,7 +570,7 @@ class IssueDAO extends DAO {
 	 * @return issue object
 	 */
 	function &getIssueByArticleId($articleId, $journalId = null) {
-		$params = array($articleId);
+		$params = array((int) $articleId);
 		$sql = 'SELECT	i.*
 			FROM	issues i,
 				published_articles pa,
@@ -576,7 +580,7 @@ class IssueDAO extends DAO {
 				pa.article_id = a.article_id';
 		if ($journalId !== null) {
 			$sql .= ' AND i.journal_id = ? AND a.journal_id = i.journal_id';
-			$params[] = $journalId;
+			$params[] = (int) $journalId;
 		}
 
 		$result =& $this->retrieve($sql, $params);
@@ -600,10 +604,11 @@ class IssueDAO extends DAO {
 	 * @return issues object ItemIterator
 	 */
 	function &getIssues($journalId, $rangeInfo = null) {
-		$issues = array();
-
-		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';
-		$result =& $this->retrieveRange($sql, $journalId, $rangeInfo);
+		$result =& $this->retrieveRange(
+			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC',
+			(int) $journalId,
+			$rangeInfo
+		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
@@ -618,7 +623,7 @@ class IssueDAO extends DAO {
 	function &getPublishedIssues($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
 			'SELECT i.* FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? AND i.published = 1 ORDER BY o.seq ASC, i.current DESC, i.date_published DESC',
-			$journalId, $rangeInfo
+			(int) $journalId, $rangeInfo
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnIssueFromRow');
@@ -634,7 +639,7 @@ class IssueDAO extends DAO {
 	function &getUnpublishedIssues($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 0 ORDER BY year ASC, volume ASC, number ASC',
-			$journalId, $rangeInfo
+			(int) $journalId, $rangeInfo
 		);
 
 		$returner = new DAOResultFactory($result, $this, '_returnIssueFromRow');
@@ -647,7 +652,7 @@ class IssueDAO extends DAO {
 	 * @return int
 	 */
 	function getNumArticles($issueId) {
-		$result =& $this->retrieve('SELECT COUNT(*) FROM published_articles WHERE issue_id = ?', $issueId);
+		$result =& $this->retrieve('SELECT COUNT(*) FROM published_articles WHERE issue_id = ?', (int) $issueId);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 
 		$result->Close();
@@ -662,7 +667,7 @@ class IssueDAO extends DAO {
 	 */
 	function deleteCustomIssueOrdering($journalId) {
 		return $this->update(
-			'DELETE FROM custom_issue_orders WHERE journal_id = ?', $journalId
+			'DELETE FROM custom_issue_orders WHERE journal_id = ?', (int) $journalId
 		);
 	}
 
@@ -673,16 +678,16 @@ class IssueDAO extends DAO {
 	function resequenceCustomIssueOrders($journalId) {
 		$result =& $this->retrieve(
 			'SELECT i.issue_id FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? ORDER BY o.seq',
-			$journalId
+			(int) $journalId
 		);
 
 		for ($i=1; !$result->EOF; $i++) {
 			list($issueId) = $result->fields;
-			$resultB =& $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array($journalId, $issueId));
+			$resultB =& $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array((int) $journalId, (int) $issueId));
 			if (!$resultB->EOF) {
 				$this->update(
 					'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
-					array($i, $issueId, $journalId)
+					array($i, (int) $issueId, (int) $journalId)
 				);
 			} else {
 				// This entry is missing. Create it.
@@ -705,7 +710,7 @@ class IssueDAO extends DAO {
 	function customIssueOrderingExists($journalId) {
 		$result =& $this->retrieve(
 			'SELECT COUNT(*) FROM custom_issue_orders WHERE journal_id = ?',
-			$journalId
+			(int) $journalId
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 0 ? false : true;
 
@@ -724,7 +729,7 @@ class IssueDAO extends DAO {
 	function getCustomIssueOrder($journalId, $issueId) {
 		$result =& $this->retrieve(
 			'SELECT seq FROM custom_issue_orders WHERE journal_id = ? AND issue_id = ?',
-			array($journalId, $issueId)
+			array((int) $journalId, (int) $issueId)
 		);
 
 		$returner = null;
@@ -776,11 +781,11 @@ class IssueDAO extends DAO {
 	 * @param $newPos int The new position (0-based) of this section
 	 */
 	function moveCustomIssueOrder($journalId, $issueId, $newPos) {
-		$result =& $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array($journalId, $issueId));
+		$result =& $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array((int) $journalId, (int) $issueId));
 		if (!$result->EOF) {
 			$this->update(
 				'UPDATE custom_issue_orders SET seq = ? WHERE journal_id = ? AND issue_id = ?',
-				array($newPos, $journalId, $issueId)
+				array($newPos, (int) $journalId, (int) $issueId)
 			);
 		} else {
 			// This entry is missing. Create it.
