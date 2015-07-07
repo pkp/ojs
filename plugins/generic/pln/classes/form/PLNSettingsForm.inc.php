@@ -52,7 +52,6 @@ class PLNSettingsForm extends Form {
 		if (!$this->_plugin->getSetting($journalId, 'terms_of_use')) {
 			$this->_plugin->getServiceDocument($journalId);
 		}
-		$this->setData('journal_uuid', $this->_plugin->getSetting($journalId, 'journal_uuid'));
 		$this->setData('terms_of_use', unserialize($this->_plugin->getSetting($journalId, 'terms_of_use')));
 		$this->setData('terms_of_use_agreement', unserialize($this->_plugin->getSetting($journalId, 'terms_of_use_agreement')));
 		$this->setData('pln_network', $this->_plugin->getSetting($journalId, 'pln_network'));
@@ -91,6 +90,7 @@ class PLNSettingsForm extends Form {
 		}
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('hasIssn', $hasIssn);
+		$templateMgr->assign('journal_uuid', $this->_plugin->getSetting($this->_journalId, 'journal_uuid'));
 		$templateMgr->assign('terms_of_use', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use')));
 		$templateMgr->assign('terms_of_use_agreement', $this->getData('terms_of_use_agreement'));
 		parent::display();
