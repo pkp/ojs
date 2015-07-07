@@ -67,5 +67,5 @@
 	<message key="plugins.generic.pln.notifications.tar_missing">Your system must have a tar executable.</message>
 	
 	<message key="plugins.generic.plngateway.displayName">PLN Gateway</message>
-	<message key="plugins.genric.plngateway.description">Reports PLN Status and recent article titles for the staging server.</message>
+	<message key="plugins.generic.plngateway.description">Reports PLN Status and recent article titles for the staging server.</message>
 </locale>
