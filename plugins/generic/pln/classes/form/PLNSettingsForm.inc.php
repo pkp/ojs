@@ -12,7 +12,6 @@
  *
  * @brief Form for journal managers to modify PLN plugin settings
  */
-
 import('lib.pkp.classes.form.Form');
 
 class PLNSettingsForm extends Form {
@@ -22,7 +21,7 @@ class PLNSettingsForm extends Form {
 	 */
 	var $_journalId;
 
-	/** 
+	/**
 	 * @var $plugin object
 	 */
 	var $_plugin;
@@ -48,13 +47,15 @@ class PLNSettingsForm extends Form {
 	/**
 	 * Initialize form data.
 	 */
-	function initData() {		
-		if (!$this->_plugin->getSetting($this->_journalId, 'terms_of_use')) {
-			$this->_plugin->getServiceDocument($this->_journalId);
+	function initData() {
+		$journalId = $this->_journalId;
+		if (!$this->_plugin->getSetting($journalId, 'terms_of_use')) {
+			$this->_plugin->getServiceDocument($journalId);
 		}
-		$this->setData('journal_uuid',$this->_plugin->getSetting($this->_journalId, 'journal_uuid'));
-		$this->setData('terms_of_use', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use')));
-		$this->setData('terms_of_use_agreement', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use_agreement')));
+		$this->setData('journal_uuid', $this->_plugin->getSetting($journalId, 'journal_uuid'));
+		$this->setData('terms_of_use', unserialize($this->_plugin->getSetting($journalId, 'terms_of_use')));
+		$this->setData('terms_of_use_agreement', unserialize($this->_plugin->getSetting($journalId, 'terms_of_use_agreement')));
+		$this->setData('pln_network', $this->_plugin->getSetting($journalId, 'pln_network'));
 	}
 
 	/**
@@ -63,10 +64,13 @@ class PLNSettingsForm extends Form {
 	function readInputData() {
 		$terms_agreed = $this->getData('terms_of_use_agreement');
 		if (Request::getUserVar('terms_agreed')) {
-			foreach(array_keys(Request::getUserVar('terms_agreed')) as $term_agreed) {
+			foreach (array_keys(Request::getUserVar('terms_agreed')) as $term_agreed) {
 				$terms_agreed[$term_agreed] = gmdate('c');
 			}
 			$this->setData('terms_of_use_agreement', $terms_agreed);
+		}
+		if (Request::getUserVar('pln_network')) {
+			$this->setData('pln_network', Request::getUserVar('pln_network'));
 		}
 	}
 
@@ -82,7 +86,7 @@ class PLNSettingsForm extends Form {
 			$issn = $journal->getSetting('printIssn');
 		}
 		$hasIssn = false;
-		if($issn != '') {
+		if ($issn != '') {
 			$hasIssn = true;
 		}
 		$templateMgr =& TemplateManager::getManager();
@@ -90,14 +94,36 @@ class PLNSettingsForm extends Form {
 		$templateMgr->assign('terms_of_use', unserialize($this->_plugin->getSetting($this->_journalId, 'terms_of_use')));
 		$templateMgr->assign('terms_of_use_agreement', $this->getData('terms_of_use_agreement'));
 		parent::display();
-	}  
+	}
+
+	function _networkChanged() {
+		/** @var DepositDAO */
+		$depositDao =& DAORegistry::getDAO('DepositDAO');
+
+		$deposits =& $depositDao->getDepositsByJournalId($this->_journalId);
+		foreach ($deposits->toArray() as $deposit) {
+			$deposit->setStatus(PLN_PLUGIN_DEPOSIT_STATUS_NEW);
+			$depositDao->updateDeposit($deposit);
+		}
+		$this->_plugin->updateSetting($this->_journalId, 'terms_of_use', serialize(array()), 'object');
+		$this->_plugin->updateSetting($this->_journalId, 'terms_of_use_agreement', serialize(array()), 'object');
+		$this->_plugin->updateSetting($this->_journalId, 'pln_accepting', false, 'bool');
+		$this->_plugin->getServiceDocument($this->_journalId);
+	}
+
 	/**
 	 * @see Form::execute()
 	 */
-	function execute() { 
+	function execute() {
 		$this->_plugin->updateSetting($this->_journalId, 'terms_of_use_agreement', serialize($this->getData('terms_of_use_agreement')), 'object');
+
+		if($this->getData('pln_network') != $this->_plugin->getSetting($this->_journalId, 'pln_network')) {
+			$this->_networkChanged();
+			$this->_plugin->updateSetting($this->_journalId, 'pln_network', $this->getData('pln_network'));
+		}
+
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->installSettings($this->_journalId, $this->_plugin->getName(), $this->_plugin->getContextSpecificPluginSettingsFile());
 	}
-	
+
 }
