@@ -35,6 +35,11 @@ class PLNSettingsForm extends Form {
 		$this->_journalId = $journalId;
 		$this->_plugin =& $plugin;
 		parent::Form($plugin->getTemplatePath() . DIRECTORY_SEPARATOR . 'settings.tpl');
+
+		$this->addCheck(new FormValidatorUrl($this, 'pln_network', 'required', 'plugins.generic.pln.settings.pln_network_invalid'));
+		$this->addCheck(new FormValidatorCustom($this, 'pln_network', 'required', 'plugins.generic.pln.settings.pln_network_path_invalid',
+			create_function('$network', 'return PLNSettingsForm::validateNetwork($network);')
+		));
 	}
 
 	/**
@@ -112,14 +117,46 @@ class PLNSettingsForm extends Form {
 	}
 
 	/**
+	 * Custom network URL validation function.
+	 *
+	 * The PLN staging server must be run at the root of a domain name, and must
+	 * be http or https. An optional port may be specified.
+	 *
+	 * Sets the
+	 *
+	 * http://example.com:8080/ is OK
+	 * http://pln.example.com/path/to/pln is not OK.
+	 */
+	static function validateNetwork($url) {
+		// $url has already been validated as a URL at this point.
+		$parts = parse_url($url);
+		if( !preg_match('/^https?$/', $parts['scheme']))
+			return false;
+		if(isset($parts['user']) 
+				|| isset($parts['pass'])
+				|| (isset($parts['path']) && $parts['path'] != '/')
+				|| isset($parts['query'])
+				|| $parts['fragment']) {
+			error_log('Unexpected item in the bagging area: ' . print_r($parts, true));
+			return false;
+		}
+		return true;
+	}
+
+	/**
 	 * @see Form::execute()
 	 */
 	function execute() {
 		$this->_plugin->updateSetting($this->_journalId, 'terms_of_use_agreement', serialize($this->getData('terms_of_use_agreement')), 'object');
 
 		if($this->getData('pln_network') != $this->_plugin->getSetting($this->_journalId, 'pln_network')) {
+			$url = $this->getData('pln_network');
+
+			// If the URL ends in a slash, remove the slash.
+			if(substr($url, -1) == '/')
+				$url = substr($url, 0, -1);
 			$this->_networkChanged();
-			$this->_plugin->updateSetting($this->_journalId, 'pln_network', $this->getData('pln_network'));
+			$this->_plugin->updateSetting($this->_journalId, 'pln_network', $url, 'string');
 		}
 
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
