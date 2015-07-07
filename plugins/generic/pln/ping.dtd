@@ -26,6 +26,7 @@
 				key CDATA #REQUIRED
 				updated CDATA #REQUIRED
 				accepted CDATA #REQUIRED>
+<!ELEMENT network (#PCDATA)>
 
 <!ELEMENT journalInfo (title, articles)>
 <!ELEMENT title (#PCDATA)>
