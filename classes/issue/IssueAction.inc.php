@@ -119,6 +119,7 @@ class IssueAction {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
 		$result = false;
+		$issue = null;
 		if (isset($user) && isset($journal)) {
 			if (IssueAction::allowedPrePublicationAccess($journal, $publishedArticle)) {
 				 $result = true;
@@ -144,7 +145,7 @@ class IssueAction {
 				}
 			}
 		}
-		HookRegistry::call('IssueAction::subscribedUser', array(&$journal, &$result));
+		HookRegistry::call('IssueAction::subscribedUser', array(&$journal, &$result, &$issue, &$publishedArticle));
 		return $result;
 	}
 
