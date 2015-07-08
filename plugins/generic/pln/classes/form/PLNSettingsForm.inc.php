@@ -155,8 +155,8 @@ class PLNSettingsForm extends Form {
 			// If the URL ends in a slash, remove the slash.
 			if(substr($url, -1) == '/')
 				$url = substr($url, 0, -1);
-			$this->_networkChanged();
 			$this->_plugin->updateSetting($this->_journalId, 'pln_network', $url, 'string');
+			$this->_networkChanged();
 		}
 
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
