@@ -112,7 +112,7 @@
 	<p>
 		<strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong><br/>
 		{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
-		<input {if $remindForInvite != "1" {else checked}{/if} type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $remindForInvite} checked="checked"{/if} />&nbsp;
+		<input checked type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $remindForInvite} checked="checked"{/if} />&nbsp;
 		<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
 		<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite || !$scheduledTasksEnabled} disabled="disabled"{/if}>
 			{section name="inviteDayOptions" start=3 loop=11}

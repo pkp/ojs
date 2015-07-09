@@ -7,7 +7,10 @@
  * Navigation Bar
  *
  *}
+ {* 20150618 LS Adding an outage message *}
+<div id="outageMessage">
 
+</div>
 <div id="navbar">
 	<ul class="menu">
 		{* 20110824 BLH comment out HOME menu item link b/c we aren't using this. *}
