@@ -122,6 +122,7 @@
 		</select>
 		{translate key="manager.setup.reviewOptions.remindForInvite2"}
 		<br/>
+        Value of remindForInvite:{remindForInvite}<br />
 
 		<input checked type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled"{elseif $remindForSubmit} checked="checked"{/if} />&nbsp;
 		<label for="remindForSubmit">{translate key="manager.setup.reviewOptions.remindForSubmit1"}</label>
