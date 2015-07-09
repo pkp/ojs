@@ -7,28 +7,15 @@
  *
  * Form for PayPal settings.
  *}
-	<tr>
-		<td colspan="2"><h4>{translate key="plugins.paymethod.paypal.settings"}</td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="paypalurl" required="true" key="plugins.paymethod.paypal.settings.paypalurl"}</td>
-		<td class="value">
-			<input type="text" class="textField" name="paypalurl" id="paypalurl" size="50" value="{$paypalurl|escape}" /><br/>
-			{translate key="plugins.paymethod.paypal.settings.paypalurl.description"}<br/>
-			&nbsp;
-		</td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="selleraccount" required="true" key="plugins.paymethod.paypal.settings.selleraccount"}</td>
-		<td class="value">
-			<input type="text" class="textField" name="selleraccount" id="selleraccount" value="{$selleraccount|escape}" /><br/>
-			{translate key="plugins.paymethod.paypal.settings.selleraccount.description"}
-		</td>
-	</tr>
-	{if !$isCurlInstalled}
-		<tr>
-			<td colspan="2">
-				<span class="instruct">{translate key="plugins.paymethod.paypal.settings.curlNotInstalled"}</span>
-			</td>
-		</tr>
-	{/if}
+
+{fbvFormSection label="plugins.paymethod.paypal.settings.paypalurl" for="paypalurl" description="plugins.paymethod.paypal.settings.paypalurl.description"}
+	{fbvElement required="true" type="text" name="paypalurl" id="paypalurl" value=$paypalurl}
+{/fbvFormSection}
+{fbvFormSection label="plugins.paymethod.paypal.settings.selleraccount" for="selleraccount" description="plugins.paymethod.paypal.settings.selleraccount.description"}
+	{fbvElement required="true" type="text" name="selleraccount" id="selleraccount" value=$selleraccount}
+{/fbvFormSection}
+{if !$isCurlInstalled}
+	<div class="description">
+		{translate key="plugins.paymethod.paypal.settings.curlNotInstalled"}
+	</div>
+{/if}
