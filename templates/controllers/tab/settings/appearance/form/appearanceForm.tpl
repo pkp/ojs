@@ -8,19 +8,26 @@
  * Website appearance management form.
  *
  *}
+
+{* In wizard mode, these fields should be hidden *}
+{if $wizardMode}
+	{assign var="wizard_class" value="is_wizard_mode"}
+{else}
+	{assign var="wizard_class" value=""}
+{/if}
+
 {capture assign="additionalHomepageContent"}
 	{* Journal thumbnail *}
-	<div {if $wizardMode}class="pkp_form_hidden"{/if}>
-		{fbvFormArea id="thumbnailArea" title="manager.setup.journalThumbnail" class="border"}
-			{fbvFormSection description="manager.setup.journalThumbnail.description"}
-				<div id="{$uploadImageLinkActions.journalThumbnail->getId()}" class="pkp_linkActions">
-					{include file="linkAction/linkAction.tpl" action=$uploadImageLinkActions.journalThumbnail contextId="appearanceForm"}
-				</div>
-				<div id="journalThumbnail">
-					{$imagesViews.journalThumbnail}
-				</div>
-			{/fbvFormSection}
-		{/fbvFormArea}
-	</div>
+	{assign var="journal_thumbnail_field_id" value=$uploadImageLinkActions.journalThumbnail->getId()}
+	{fbvFormArea id="thumbnailArea" class="$wizard_class"}
+		{fbvFormSection for=$journal_thumbnail_field_id label="manager.setup.journalThumbnail" description="manager.setup.journalThumbnail.description"}
+			<div id="{$uploadImageLinkActions.journalThumbnail->getId()}" class="pkp_linkActions">
+				{include file="linkAction/linkAction.tpl" action=$uploadImageLinkActions.journalThumbnail contextId="appearanceForm"}
+			</div>
+			<div id="journalThumbnail">
+				{$imagesViews.journalThumbnail}
+			</div>
+		{/fbvFormSection}
+	{/fbvFormArea}
 {/capture}
 {include file="core:controllers/tab/settings/appearance/form/appearanceForm.tpl"}
