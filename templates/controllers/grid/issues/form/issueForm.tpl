@@ -33,7 +33,7 @@
 	{/if}
 
 	{if $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION || $issuePublished}
-		{fbvFormArea id="issueAccessArea" title="editor.issues.access" class="border"}
+		{fbvFormArea id="issueAccessArea" title="editor.issues.access"}
 			{fbvFormSection}
 				{if $issuePublished}
 					{fbvElement type="text" label="editor.issues.datePublished" id="datePublished" value=$datePublished|date_format:"%y-%m-%d" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
@@ -45,7 +45,7 @@
 	{/if}
 
 
-	{fbvFormArea id="identificationArea" class="border" title="editor.issues.identification"}
+	{fbvFormArea id="identificationArea" title="editor.issues.identification"}
 		{fbvFormSection}
 			{fbvElement type="text" label="issue.volume" id="volume" value=$volume maxlength="40" inline=true size=$fbvStyles.size.SMALL}
 			{fbvElement type="text" label="issue.number" id="number" value=$number maxlength="40" inline=true size=$fbvStyles.size.SMALL}

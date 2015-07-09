@@ -19,7 +19,7 @@
 <form class="pkp_form" id="accessForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.DistributionSettingsTabHandler" op="saveFormData" tab="access"}">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="accessFormNotification"}
 
-	{fbvFormArea id="userRegistration" class="border" title="manager.setup.onlineAccessManagement"}
+	{fbvFormArea id="userRegistration" title="manager.setup.onlineAccessManagement"}
 		<p>{translate key="manager.setup.securitySettingsDescription"}</p>
 		{fbvFormSection list=true}
 			{fbvElement type="radio" id="publishingMode-0" name="publishingMode" value=$smarty.const.PUBLISHING_MODE_OPEN checked=$publishingMode|compare:$smarty.const.PUBLISHING_MODE_OPEN label="manager.setup.openAccess"}
