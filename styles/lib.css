@@ -17,11 +17,3 @@
 
 /* Tag it! - http://plugins.jquery.com/project/tag-it/ */
 @import "../lib/pkp/styles/lib/tagit.css";
-
-/**
- * The following libraries are compilable but compiling throws image paths off.
- */
-
-/* Plupload - http://www.plupload.com/ */
-
-@import "../lib/pkp/lib/vendor/moxiecode/plupload/js/jquery.ui.plupload/css/jquery.ui.plupload.css";
