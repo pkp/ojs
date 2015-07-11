@@ -276,7 +276,7 @@ class Journal extends DataObject {
 	 * @return string
 	 */
 	function getLocalizedDescription() {
-		return $this->getDescription(AppLocale::getLocale());
+		return $this->getLocalizedSetting('description');
 	}
 
 	function getJournalDescription() {
