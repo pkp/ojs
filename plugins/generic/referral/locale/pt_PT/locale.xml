@@ -13,31 +13,30 @@
   -->
  
 <locale name="pt_PT" full_name="Português">
-	<message key="plugins.generic.referral.name">Plugin de Apontamentos a Artigos</message>
-	<message key="plugins.generic.referral.description">O Plugin de Apontamentos a Artigos mantém controle de URLs que apontam a artigos (quando um leitor clica num link para um artigo noutro site, por exemplo), permitindo aos autores manter e possivelmente publicar um lista actualizada automaticamente de apontamentos a um artigo.</message>
-	
-	<message key="plugins.generic.referral.editReferral">Editar apontamento</message>
-	<message key="plugins.generic.referral.createReferral">Criar apontamento</message>
-	<message key="plugins.generic.referral.referrals">Apontamentos</message>
+	<message key="plugins.generic.referral.name">Plugin de Apontadores para Artigos</message>
+	<message key="plugins.generic.referral.description">O Plugin de Apontadores para Artigos mantém o controlo dos URLs que apontam para os artigos (quando um leitor clica num link para um artigo noutro site, por exemplo), permitindo aos autores manter e possivelmente publicar automaticamente um lista actualizada de ligações para um artigo.</message>
+	<message key="plugins.generic.referral.editReferral">Editar Apontador</message>
+	<message key="plugins.generic.referral.createReferral">Criar Apontador</message>
+	<message key="plugins.generic.referral.referrals">Apontadores</message>
 	<message key="plugins.generic.referral.count">Hits</message>
 	<message key="plugins.generic.referral.dateAdded">Data de inclusão</message>
 	<message key="plugins.generic.referral.all">Todos</message>
-	<message key="plugins.generic.referral.all.empty">Não há apontamentos.</message>
+	<message key="plugins.generic.referral.all.empty">Não há apontadores.</message>
 	<message key="plugins.generic.referral.status.new">Novo</message>
-	<message key="plugins.generic.referral.status.new.empty">Não há nenhum apontamento novo.</message>
+	<message key="plugins.generic.referral.status.new.empty">Não há nenhum apontador novo.</message>
 	<message key="plugins.generic.referral.status.accept">Publicado</message>
-	<message key="plugins.generic.referral.status.accept.empty">Não há nenhum apontamento publicado.</message>
+	<message key="plugins.generic.referral.status.accept.empty">Não há nenhum apontador publicado.</message>
 	<message key="plugins.generic.referral.status.decline">Ignorado</message>
-	<message key="plugins.generic.referral.status.decline.empty">Não há nenhum apontamento ignorado.</message>
-	<message key="plugins.generic.referral.confirmDelete">Deseja realmente excluir este apontamento?</message>
-	<message key="plugins.generic.referral.nameRequired">Um nome para o apontamento é obrigatório.</message>
-	<message key="plugins.generic.referral.urlRequired">A URL do apontamento é obrigatória.</message>
-	<message key="plugins.generic.referral.settings">Configurações do Plugin Referral</message>
-	<message key="plugins.generic.referral.settings.description">O Plugin Referral captura os URL's que apontam para artigos publicados pela revista de modo a que possa revistos pelo autor e opcionalmente publicados. Este formulário permite ao Editor-Gestor controlar a forma como estes links são capturados.</message>
+	<message key="plugins.generic.referral.status.decline.empty">Não há nenhum apontador ignorado.</message>
+	<message key="plugins.generic.referral.confirmDelete">Deseja realmente excluir este apontador?</message>
+	<message key="plugins.generic.referral.nameRequired">O nome para o apontador é obrigatório.</message>
+	<message key="plugins.generic.referral.urlRequired">O endereço URL do apontador é obrigatório.</message>
+	<message key="plugins.generic.referral.settings">Configurações do Plugin de Apontadores para Artigos</message>
+	<message key="plugins.generic.referral.settings.description">O Plugin de Apontadores para Artigos captura os URL's que apontam para artigos publicados pela revista de modo a que possam ser revistos pelo autor e opcionalmente publicados. Este formulário permite ao Editor-Gestor controlar a forma como estes links são capturados.</message>
 	<message key="plugins.generic.referral.excusions">Exclusões</message>
 	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Insira uma lista de expressões regulares padronizadas, uma por linha, para serem tratadas como exclusões para o histórico do referral. Para mais informações sobre expressões regulares, consulte href="http://ca.php.net/manual/en/ref.pcre.php" <a target="_new"> http://ca.php.net/manual / pt / ref.pcre.php </ a>.]]></message>
 	<message key="plugins.generic.referral.status.accepted">Publicado</message>
-	<message key="plugins.generic.referral.status.accept.confirm">Tem a certeza que pretende publicar o seleccionado refback(s)?</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Tem a certeza que pretende publicar o apontador seleccionado?</message>
 	<message key="plugins.generic.referral.status.declined">Ignorado</message>
-	<message key="plugins.generic.referral.status.decline.confirm">Tem a certeza que pretende ignorar o seleccionado refback(s)?</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Tem a certeza que pretende ignorar o apontador seleccionado?</message>
 </locale>
