@@ -160,5 +160,3 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	}
 
 }
-
-?>

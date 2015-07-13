@@ -397,8 +397,8 @@ class DepositPackage {
 	 */
 	function updateDepositStatus() {
 		$journalId = $this->_deposit->getJournalID();
-		$depositDao = & DAORegistry::getDAO('DepositDAO');
-		$plnPlugin = & PluginRegistry::getPlugin('generic', 'plnplugin');
+		$depositDao =& DAORegistry::getDAO('DepositDAO');
+		$plnPlugin =& PluginRegistry::getPlugin('generic', 'plnplugin');
 
 		$url = $plnPlugin->getSetting($journalId, 'pln_network') . PLN_PLUGIN_CONT_IRI;
 		$url .= '/' . $plnPlugin->getSetting($journalId, 'journal_uuid');

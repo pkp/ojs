@@ -14,6 +14,7 @@
  */
 
 import('lib.pkp.classes.plugins.GenericPlugin');
+import('lib.pkp.classes.config.Config');
 import('classes.article.PublishedArticle');
 import('classes.issue.Issue');
 
@@ -188,17 +189,17 @@ class PLNPlugin extends GenericPlugin {
 				$this->updateSetting($journalId, $settingName, $this->newUUID());
 				break;
 			case 'pln_network':
-				$network = parent::getSetting($journalId, $settingName);
-				if (!is_null($network) && $network != '')
-					return $network;
-				$this->updateSetting($journalId, $settingName, PLN_DEFAULT_NETWORK);
+				$network = parent::getSetting($journalId, 'pln_network');
+				if($network) return $network;
+				$network = Config::getVar('lockss', 'pln_url', PLN_DEFAULT_NETWORK);
+				$this->updateSetting($journalId, 'pln_network', $network);
 				break;
 			default:
 				break;
 		}
 		return parent::getSetting($journalId,$settingName);
 	}
-	
+
 	/**
 	 * Register as a gateway plugin.
 	 * @param $hookName string

@@ -101,6 +101,14 @@ class PLNSettingsForm extends Form {
 		parent::display();
 	}
 
+	/**
+	 * When a journal manager changes the network URL, we assume that the new
+	 * network has none of the deposits, and that it is using different terms
+	 * of use. Reset all of the deposits to their initial state to force them
+	 * to be deposited to the new network, and remove the terms of use and
+	 * agreement data. A journal manager must accept the terms of use for the
+	 * new network.
+	 */
 	function _networkChanged() {
 		/** @var DepositDAO */
 		$depositDao =& DAORegistry::getDAO('DepositDAO');
@@ -122,8 +130,6 @@ class PLNSettingsForm extends Form {
 	 * The PLN staging server must be run at the root of a domain name, and must
 	 * be http or https. An optional port may be specified.
 	 *
-	 * Sets the
-	 *
 	 * http://example.com:8080/ is OK
 	 * http://pln.example.com/path/to/pln is not OK.
 	 */
@@ -137,7 +143,6 @@ class PLNSettingsForm extends Form {
 				|| (isset($parts['path']) && $parts['path'] != '/')
 				|| isset($parts['query'])
 				|| $parts['fragment']) {
-			error_log('Unexpected item in the bagging area: ' . print_r($parts, true));
 			return false;
 		}
 		return true;

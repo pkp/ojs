@@ -1,8 +1,9 @@
 ================================================================
 === OJS Private LOCKSS Network Plugin
-=== Version: 1.0
+=== Version: 1.0.2
 === Author: Chris MacDonald <chris@fcts.ca>
-=== Last update: September 2014
+=== Author: Michael Joyce <ubermichael@gmail.com>
+=== Last update: July 2015
 ================================================================
 
 About
@@ -37,6 +38,23 @@ Please use the PKP support forum (http://forum.pkp.sfu.ca/), PKP issue
 tracker (https://github.com/pkp/pkp-lib#issues) or email the authors for
 support, bugfixes, or comments.
 
+Setting a default
+-----------------
+By default, the PLN plugin deposits to http://pkp-pln.lib.sfu.ca. Journal
+managers can change the URL on the plugin settings page. The default URL can
+also be set in the OJS config.inc.php file by adding this configuation:
+
+; Change the default PLN
+[lockss]
+pln_url = http://example.com
+
+You will need to clear the data caches after adding or changing this setting.
+There is a link to clear the caches at
+Site Administration > Administrative Functions
+
 Version History
 ---------------
 1.0	- Initial Release
+1.0.1 - Make upgraded plugins use default settings
+1.0.2 - Bug fixes, add terms of use acceptance to the gateway, add setting for
+		default network URL.

@@ -46,6 +46,6 @@
     <!-- the default PLN Network URL -->
     <setting type='string'>
         <name>pln_network</name>
-        <value>http://pkp-pln.lib.sfu.ca</value>
+        <value></value>
     </setting>
 </plugin_settings>
