@@ -19,7 +19,7 @@
 <!ELEMENT current (#PCDATA)>
 <!ELEMENT terms (term*)>
 		<!ATTLIST terms
-				termsAccepted CDATA #REQUIRED>
+				termsAccepted (yes|no) #REQUIRED>
 
 <!ELEMENT term (#PCDATA)>
 		<!ATTLIST term
