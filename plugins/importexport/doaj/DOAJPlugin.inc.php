@@ -210,7 +210,7 @@ class DOAJPlugin extends ImportExportPlugin {
 		// Retrieve all published issues.
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_OJS_EDITOR));
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issueIterator = $issueDao->getPublishedIssues($journal->getId(), Handler::getRangeInfo('issues'));
+		$issueIterator = $issueDao->getPublishedIssues($journal->getId());
 
 		// check whether all articles of an issue are doaj::registered or not
 		$issues = array();
@@ -234,7 +234,7 @@ class DOAJPlugin extends ImportExportPlugin {
 
 		// Instantiate issue iterator.
 		import('lib.pkp.classes.core.ArrayItemIterator');
-		$rangeInfo = Handler::getRangeInfo('articles');
+		$rangeInfo = Handler::getRangeInfo('issues');
 		$iterator = new ArrayItemIterator($issues, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the issue template.
@@ -263,9 +263,11 @@ class DOAJPlugin extends ImportExportPlugin {
 		$totalArticles = count($articles);
 		$rangeInfo = Handler::getRangeInfo('articles');
 		if ($rangeInfo->isValid()) {
+			$paginatedArticles = array_slice($articles, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+			
 			// Instantiate article iterator.
 			import('lib.pkp.classes.core.VirtualArrayIterator');
-			$iterator = new VirtualArrayIterator($articles, $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$iterator = new VirtualArrayIterator($paginatedArticles, $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 			// Prepare and display the article template.
 			$templateMgr->assign_by_ref('articles', $iterator);
