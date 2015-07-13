@@ -142,7 +142,7 @@ class PLNGatewayPlugin extends GatewayPlugin {
 				'accepted' => $termsAgreement[$key]
 			);
 		}
-		$templateMgr->assign_by_ref('termsDisplay', new ArrayItemIterator($termsDisplay));
+		$templateMgr->assign('termsDisplay', new ArrayItemIterator($termsDisplay));
 
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$ojsVersion =& $versionDao->getCurrentVersion();
