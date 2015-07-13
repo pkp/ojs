@@ -112,14 +112,14 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	 * Handle fetch requests for this plugin.
 	 */
 	function fetch() {
-		$plugin = & $this->getPLNPlugin();
-		$templateMgr = & TemplateManager::getManager();
+		$plugin =& $this->getPLNPlugin();
+		$templateMgr =& TemplateManager::getManager();
 
-		$journal = & Request::getJournal();
+		$journal =& Request::getJournal();
 		$templateMgr->assign_by_ref('journal', $journal);
 
-		$pluginVersionFile = $this->getPluginPath() . DIRECTORY_SEPARATOR . '/version.xml';
-		$pluginVersion = & VersionCheck::parseVersionXml($pluginVersionFile);
+		$pluginVersionFile = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'version.xml';
+		$pluginVersion =& VersionCheck::parseVersionXml($pluginVersionFile);
 		$templateMgr->assign_by_ref('pluginVersion', $pluginVersion);
 
 		$terms = array();
@@ -144,13 +144,13 @@ class PLNGatewayPlugin extends GatewayPlugin {
 		}
 		$templateMgr->assign_by_ref('termsDisplay', new ArrayItemIterator($termsDisplay));
 
-		$versionDao = & DAORegistry::getDAO('VersionDAO');
-		$ojsVersion = & $versionDao->getCurrentVersion();
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$ojsVersion =& $versionDao->getCurrentVersion();
 		$templateMgr->assign('ojsVersion', $ojsVersion->getVersionString());
 
-		$publishedArticlesDAO = & DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticlesDAO =& DAORegistry::getDAO('PublishedArticleDAO');
 		$range = new DBResultRange(PLN_PLUGIN_PING_ARTICLE_COUNT);
-		$publishedArticles = & $publishedArticlesDAO->getPublishedArticlesByJournalId($journal->getId(), $range, true);
+		$publishedArticles =& $publishedArticlesDAO->getPublishedArticlesByJournalId($journal->getId(), $range, true);
 		$templateMgr->assign_by_ref('articles', $publishedArticles);
 
 		$templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl', 'text/xml');
