@@ -38,7 +38,7 @@
 			{/fbvFormSection}
 		{/fbvFormArea}
 	{else}
-		<h3>{translate key="submission.galleys"}</h3>
+		<h3>{translate key="submission.layout.galleys"}</h3>
 	{/if}
 
 	<div id="representationsTabsContainer">

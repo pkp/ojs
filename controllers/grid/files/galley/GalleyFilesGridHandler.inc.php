@@ -23,7 +23,7 @@ class GalleyFilesGridHandler extends FileListGridHandler {
 		import('lib.pkp.controllers.grid.files.proof.ProofFilesGridDataProvider');
 		parent::FileListGridHandler(
 			new ProofFilesGridDataProvider(),
-			WORKFLOW_STAGE_ID_EDITING,
+			WORKFLOW_STAGE_ID_PRODUCTION,
 			FILE_GRID_ADD|FILE_GRID_MANAGE|FILE_GRID_DELETE|FILE_GRID_VIEW_NOTES|FILE_GRID_EDIT
 		);
 
