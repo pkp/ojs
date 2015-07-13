@@ -125,7 +125,7 @@
 {/foreach}
 {if $galleys}
 	{foreach from=$pubIdPlugins item=pubIdPlugin}
-		{foreach from=$article->getGalleys() item=galley name=galleyList}
+		{foreach from=$galleys item=galley name=galleyList}
 			{if $issue->getPublished()}
 				{assign var=galleyPubId value=$pubIdPlugin->getPubId($galley)}
 			{else}

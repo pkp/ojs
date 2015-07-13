@@ -145,11 +145,12 @@
 		{assign var=pubId value=$pubIdPlugin->getPubId($article, true)}{* Preview rather than assign a pubId *}
 	{/if}
 	{if $pubId}
+		{assign var=pubIdResolvingURL value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)}
 		<tr valign="top">
 			<td>10.</td>
 			<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
 			<td>{$pubIdPlugin->getPubIdFullName()|escape} ({$pubIdPlugin->getPubIdDisplayType()|escape})</td>
-			<td>{if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}<a target="_new" id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}</a>{else}{$pubId|escape}{/if}</td>
+			<td>{if $pubIdResolvingURL}<a target="_new" id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdResolvingURL|escape}">{$pubIdResolvingURL|escape}</a>{else}{$pubId|escape}{/if}</td>
 		</tr>
 		<tr><td colspan="4" class="separator">&nbsp;</td></tr>
 	{/if}
@@ -164,11 +165,12 @@
 				{assign var=galleyPubId value=$pubIdPlugin->getPubId($galley, true)}{* Preview rather than assign a pubId *}
 			{/if}
 			{if $galleyPubId}
+				{assign var=galleyPubIdResolvingURL value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $galleyPubId)}
 				<tr valign="top">
 					<td>10.</td>
 					<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
 					<td>{$pubIdPlugin->getPubIdFullName()|escape} ({$pubIdPlugin->getPubIdDisplayType()|escape})<br />({$galley->getGalleyLabel()|escape})</td>
-					<td>{if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $galleyPubId)|escape}<a target="_new" id="pub-id::{$pubIdPlugin->getPubIdType()|escape}-g{$galley->getId()}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $galleyPubId)|escape}">{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $galleyPubId)|escape}</a>{else}{$galleyPubId|escape}{/if}</td>
+					<td>{if $galleyPubIdResolvingURL}<a target="_new" id="pub-id::{$pubIdPlugin->getPubIdType()|escape}-g{$galley->getId()}" href="{$galleyPubIdResolvingURL|escape}">{$galleyPubIdResolvingURL|escape}</a>{else}{$galleyPubId|escape}{/if}</td>
 				</tr>
 				<tr><td colspan="4" class="separator">&nbsp;</td></tr>
 			{/if}
