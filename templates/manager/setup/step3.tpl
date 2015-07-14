@@ -102,7 +102,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%" class="label">
-			<input checked type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />
+			<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree or !isset($copyrightNoticeAgree)} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value"><label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label>
 		</td>
@@ -156,7 +156,7 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label" valign="bottom"><input checked type="checkbox" name="metaDiscipline" id="metaDiscipline" value="1"{if $metaDiscipline} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaDiscipline" id="metaDiscipline" value="1"{if $metaDiscipline or !isset($metaDiscipline)} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
 			<h4>{fieldLabel name="metaDiscipline" key="manager.setup.discipline"}</h4>
 		</td>
@@ -205,7 +205,7 @@
 	</tr>
 	
 	<tr valign="top">
-		<td width="5%" class="label" valign="bottom"><input checked type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject or !isset($metaSubject)} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
 			<h4>{fieldLabel name="metaSubject" key="manager.setup.subjectKeywordTopic"}</h4>
 		</td>
@@ -314,7 +314,7 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td class="label"><input checked {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact}checked="checked"{/if}/></td>
+		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact or !isset($copySubmissionAckPrimaryContact)}checked="checked"{/if}/></td>
 		<td class="value">{fieldLabel name="copySubmissionAckPrimaryContact" key="manager.setup.notifications.copyPrimaryContact"}</td>
 	</tr>
 	<tr valign="top">
