@@ -112,7 +112,7 @@
 	<p>
 		<strong>{translate key="manager.setup.reviewOptions.reviewerReminders"}</strong><br/>
 		{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
-        Value of remindForInvite:{if $journal->getSetting('remindForInvite') !="" }NULL{/if}<br />
+        Value of remindForInvite:<br />
         <input type="hidden" name="remindForInvite" id="remindForInviteHidden" value="0" />         
 		<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $remindForInvite !="0"} checked="checked"{/if} />&nbsp;
 		<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
