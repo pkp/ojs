@@ -27,7 +27,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 			array(
 				'focusScopeDesc' => 'string',
 				'numWeeksPerReview' => 'int',
-				'remindForInvite' => 'int',
+				'remindForInvite' => 'bool',
 				'remindForSubmit' => 'bool',
 				'numDaysBeforeInviteReminder' => 'int',
 				'numDaysBeforeSubmitReminder' => 'int',
