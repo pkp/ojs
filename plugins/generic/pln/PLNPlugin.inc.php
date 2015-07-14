@@ -443,7 +443,7 @@ class PLNPlugin extends GenericPlugin {
 	/**
 	 * Request service document at specified URL
 	 * @param $journalId int The journal id for the service document we wish to fetch
-	 * @return int The HTTP response status
+	 * @return int The HTTP response status or FALSE for a network error.
 	 */
 	function getServiceDocument($journalId) {
 			
@@ -465,7 +465,14 @@ class PLNPlugin extends GenericPlugin {
 		);
 		
 		// stop here if we didn't get an OK
-		if ($result['status'] != PLN_PLUGIN_HTTP_STATUS_OK) return $result['status'];
+		if ($result['status'] != PLN_PLUGIN_HTTP_STATUS_OK) {
+			if($result['status'] === FALSE) {
+				error_log(__('plugins.generic.pln.error.network.servicedocument', array('error' => $result['error'])));
+			} else {
+				error_log(__('plugins.generic.pln.error.http.servicedocument', array('error' => $result['status'])));
+			}
+			return $result['status'];
+		}
 
 		$serviceDocument = new DOMDocument();
 		$serviceDocument->preserveWhiteSpace = false;
