@@ -114,8 +114,8 @@
 		{translate key="manager.setup.reviewOptions.automatedReminders"}:<br/>
         Value of remindForInvite:{$remindForInvite}<br />
         
-         <input type="hidden" name="remindForInvite" id="remindForInviteHidden" value="0" />
-		<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $remindForInvite != "0" } checked="checked"{/if} />&nbsp;
+        <input type="hidden" name="remindForInvite" id="remindForInviteHidden" value="3" />
+		<input type="checkbox" name="remindForInvite" id="remindForInvite" value="1" onclick="toggleAllowSetInviteReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $remindForInvite != "3" } checked="checked"{/if} />&nbsp;
 		<label for="remindForInvite">{translate key="manager.setup.reviewOptions.remindForInvite1"}</label>
 		<select name="numDaysBeforeInviteReminder" size="1" class="selectMenu"{if not $remindForInvite || !$scheduledTasksEnabled} disabled="disabled"{/if}>
 			{section name="inviteDayOptions" start=3 loop=11}
@@ -125,8 +125,8 @@
 		{translate key="manager.setup.reviewOptions.remindForInvite2"}
 		<br/>
         Value of remindForInvite:{$remindForInvite}<br />
-
-		<input checked type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled"{elseif $remindForSubmit} checked="checked"{/if} />&nbsp;
+        <input type="hidden" name="remindForSubmit" id="remindForSubmitHidden" value="0" />
+		<input type="checkbox" name="remindForSubmit" id="remindForSubmit" value="1" onclick="toggleAllowSetSubmitReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled"{elseif $remindForSubmit} checked="checked"{/if} />&nbsp;
 		<label for="remindForSubmit">{translate key="manager.setup.reviewOptions.remindForSubmit1"}</label>
 		<select name="numDaysBeforeSubmitReminder" size="1" class="selectMenu"{if not $remindForSubmit || !$scheduledTasksEnabled} disabled="disabled"{/if}>
 			{section name="submitDayOptions" start=0 loop=11}
