@@ -81,7 +81,6 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/ConfirmationModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/RedirectConfirmationModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/RemoteActionConfirmationModalHandler.js"></script>
-<script src="{$baseUrl}/lib/pkp/js/controllers/modal/CallbackConfirmationModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/ButtonConfirmationModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/JsEventConfirmationModalHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/modal/AjaxModalHandler.js"></script>
