@@ -219,7 +219,8 @@ class NativeExportDom {
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'date_submitted', NativeExportDom::formatDate($article->getDateSubmitted()), false);
         
-		XMLCustomWriter::createChildWithText($doc, $root, 'public_article_id', $article->getPublicArticleId(), false);        
+		XMLCustomWriter::createChildWithText($doc, $root, 'public_article_id', $article->getPublicArticleId(), false); 
+		XMLCustomWriter::createChildWithText($doc, $root, 'doi', $article->getDOI(), false);        
 
 		if (is_array($article->getEscholAcknowledgements(null))) foreach ($article->getEscholAcknowledgements(null) as $locale => $eschol_acknowledgements) {
 			$eschol_acknowledgementsNode =& XMLCustomWriter::createChildWithText($doc, $root, 'eschol_acknowledgements', $eschol_acknowledgements, false);
