@@ -123,6 +123,22 @@
 		{$pubIdPlugin->getPubIdDisplayType()|escape}: {if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}</a>{else}{$pubId|escape}{/if}
 	{/if}
 {/foreach}
+{if $galleys}
+	{foreach from=$pubIdPlugins item=pubIdPlugin}
+		{foreach from=$galleys item=galley name=galleyList}
+			{if $issue->getPublished()}
+				{assign var=galleyPubId value=$pubIdPlugin->getPubId($galley)}
+			{else}
+				{assign var=galleyPubId value=$pubIdPlugin->getPubId($galley, true)}{* Preview rather than assign a pubId *}
+			{/if}
+			{if $galleyPubId}
+				<br />
+				<br />
+				{$pubIdPlugin->getPubIdDisplayType()|escape} ({$galley->getGalleyLabel()|escape}): {if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $galleyPubId)|escape}<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}-g{$galley->getId()}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $galleyPubId)|escape}">{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $galleyPubId)|escape}</a>{else}{$galleyPubId|escape}{/if}
+			{/if}
+		{/foreach}
+	{/foreach}
+{/if}
 {call_hook name="Templates::Article::MoreInfo"}
 {include file="article/comments.tpl"}
 
