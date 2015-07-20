@@ -63,7 +63,7 @@ class Depositor extends ScheduledTask {
 			$this->_plugin->import('classes.DepositObject');
 			$this->_plugin->import('classes.DepositPackage');
 			
-			$this->addExecutionLogEntry(__('plugins.generic.pln.notifications.processing_for') . ' ' . $journal->getLocalizedTitle(), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
+			$this->addExecutionLogEntry(__('plugins.generic.pln.notifications.processing_for', array('title' => $journal->getLocalizedTitle())), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
 			
 			// check to make sure curl is installed
 			if (!$this->_plugin->curlInstalled()) {
@@ -85,6 +85,7 @@ class Depositor extends ScheduledTask {
 				continue;
                         }
                         
+			$this->addExecutionLogEntry(__('plugins.generic.pln.notifications.getting_servicedocument'), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
 			// get the sword service document
 			$sdResult = $this->_plugin->getServiceDocument($journal->getId());
 			
@@ -118,18 +119,23 @@ class Depositor extends ScheduledTask {
 			}
 			
 			// update the statuses of existing deposits
+			$this->addExecutionLogEntry(__("plugins.generic.pln.depositor.statusupdates"), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
 			$this->_processStatusUpdates($journal);
 			
 			// flag any deposits that have been updated and need to be rebuilt
+			$this->addExecutionLogEntry(__("plugins.generic.pln.depositor.updatedcontent"), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);			
 			$this->_processHavingUpdatedContent($journal);
 			
 			// create new deposits for new deposit objects
+			$this->addExecutionLogEntry(__("plugins.generic.pln.depositor.newcontent"), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);			
 			$this->_processNewDepositObjects($journal);
 			
 			// package any deposits that need packaging
+			$this->addExecutionLogEntry(__("plugins.generic.pln.depositor.packagingdeposits"), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);			
 			$this->_processNeedPackaging($journal);
 
 			// transfer the deposit atom documents
+			$this->addExecutionLogEntry(__("plugins.generic.pln.depositor.transferringdeposits"), SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
 			$this->_processNeedTransferring($journal);
 
 			unset($journal);
@@ -146,7 +152,7 @@ class Depositor extends ScheduledTask {
 		$depositQueue = $depositDao->getNeedStagingStatusUpdate($journal->getId());
 
 		while ($deposit =& $depositQueue->next()) {
-			$depositPackage = new DepositPackage($deposit);
+			$depositPackage = new DepositPackage($deposit, $this);
 			$depositPackage->updateDepositStatus();
 			unset($deposit);
 		}
@@ -170,7 +176,7 @@ class Depositor extends ScheduledTask {
 		$depositQueue =& $depositDao->getNeedTransferring($journal->getId());
 		
 		while ($deposit =& $depositQueue->next()) {
-			$depositPackage = new DepositPackage($deposit);
+			$depositPackage = new DepositPackage($deposit, $this);
 			$depositPackage->transferDeposit();
 			unset($deposit);
 		}
@@ -191,7 +197,7 @@ class Depositor extends ScheduledTask {
 
 		// loop though all of the deposits that need packaging
 		while ($deposit =& $depositQueue->next()) {
-			$depositPackage = new DepositPackage($deposit);
+			$depositPackage = new DepositPackage($deposit, $this);
 			$depositPackage->packageDeposit();
 			unset($deposit);
 		}
