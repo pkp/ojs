@@ -46,7 +46,7 @@ class PLNHandler extends Handler {
 		
 		if (!$deposit) return FALSE;
 		
-		$depositPackage = new DepositPackage($deposit);
+		$depositPackage = new DepositPackage($deposit, null);
 		$depositBag = $depositPackage->getPackageFilePath();
 		
 		if (!$fileManager->fileExists($depositBag)) return FALSE;

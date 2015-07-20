@@ -14,6 +14,7 @@
  */
 
 import('classes.file.JournalFileManager');
+import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
 require_once(dirname(__FILE__).'/../lib/bagit.php');
 
@@ -23,14 +24,41 @@ class DepositPackage {
 	 * @var $deposit Deposit
 	 */
 	var $_deposit;
+	
+	/**
+	 * If the DepositPackage object was created as part of a scheduled task
+	 * run, then save the task so error messages can be logged there.
+	 * @var ScheduledTask $_task;
+	 */
+	var $_task;
+	
 
 	/**
-	 * Constructor
+	 * Constructor. 
+	 * 
 	 * @param $deposit Deposit
+	 * @param $task ScheduledTask
+	 * 
 	 * @return DepositPackage
 	 */
-	function DepositPackage($deposit) {
+	function DepositPackage($deposit, $task = null) {
 		$this->_deposit = $deposit;
+		$this->_task = $task;
+	}
+	
+	/**
+	 * Send a message to a log. If the deposit package is aware of a 
+	 * a scheduled task, the message will be sent to the task's 
+	 * log. Otherwise it will be sent to error_log().
+	 * 
+	 * @param $message string Locale-specific message to be logged
+	 */
+	function _logMessage($message) {
+		if($this->_task) {
+			$task->addExecutionLogEntry($message, SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
+		} else {
+			error_log($message);
+		}
 	}
 
 	/**
@@ -75,9 +103,12 @@ class DepositPackage {
 		$packageFile = $this->getPackageFilePath();
 		
 		// make sure our bag is present
-		if (!$fileManager->fileExists($packageFile)) return false;
+		if (!$fileManager->fileExists($packageFile)) {
+			$this->_logMessage(__("plugins.generic.pln.error.depositor.missingpackage", array('file' => $packageFile)));
+			return false;
+		}
 		
-		$atom  = new DOMDocument('1.0', 'utf-8');
+		$atom = new DOMDocument('1.0', 'utf-8');
 		$entry = $atom->createElementNS('http://www.w3.org/2005/Atom', 'entry');
 		$entry->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:dcterms', 'http://purl.org/dc/terms/');
 		$entry->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:pkp', 'http://pkp.sfu.ca/SWORD');
@@ -218,7 +249,10 @@ class DepositPackage {
 				}
 				
 				// export all of the articles together
-				if ($exportPlugin->exportArticles($articles, $exportFile) !== true) return false;
+				if ($exportPlugin->exportArticles($articles, $exportFile) !== true) {
+					$this->_logMessage(__("plugins.generic.pln.error.depositor.export.articles.error"));
+					return false;
+				}
 				break;
 			case PLN_PLUGIN_DEPOSIT_OBJECT_ISSUE:
 			
@@ -227,7 +261,10 @@ class DepositPackage {
 				$issue =& $issueDao->getIssueByBestIssueId($depositObject->getObjectId(),$journal->getId());
 				
 				// export the issue
-				if ($exportPlugin->exportIssue($journal, $issue, $exportFile) !== true) return false;
+				if ($exportPlugin->exportIssue($journal, $issue, $exportFile) !== true) {
+					$this->_logMessage(__("plugins.generic.pln.error.depositor.export.issue.error"));
+					return false;
+				}
 				break;
 			default:
 		}
@@ -307,6 +344,11 @@ class DepositPackage {
 			$depositDao->updateDeposit($this->_deposit);
 		} else {
 			// we got an error back from the staging server
+			if($result['status'] == FALSE) {
+				$this->_logMessage(__("plugins.generic.pln.error.network.deposit", array('error' => $result['error'])));
+			} else {
+				$this->_logMessage(__("plugins.generic.pln.error.http.deposit", array('error' => $result['error'])));
+			}
 			$this->_deposit->setRemoteFailureStatus();
 			$this->_deposit->setLastStatusDate(time());
 			$depositDao->updateDeposit($this->_deposit);
