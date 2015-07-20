@@ -9,7 +9,7 @@
  * @class OjsJournalMustPublishPolicy
  * @ingroup security_authorization
  *
- * @brief Class to control access to OMP author dashboard.
+ * @brief Access policy to limit access to journals that do not publish online.
  */
 
 import('lib.pkp.classes.security.authorization.PolicySet');
