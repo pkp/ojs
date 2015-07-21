@@ -78,6 +78,9 @@
 	<message key="plugins.generic.pln.error.depositor.missingpackage">Cannot find package file {$file}.</message>
 	<message key="plugins.generic.pln.error.depositor.export.articles.error">An error occured while exporting articles. The server's error log may have more information.</message>
 	<message key="plugins.generic.pln.error.depositor.export.issue.error">An error occured while exporting an issue. The server's error log may have more information.</message>
+	<message key="plugins.generic.pln.error.handler.uuid.invalid">The requested UUID is not valid or is not formatted correctly.</message>
+	<message key="plugins.generic.pln.error.handler.uuid.notfound">There is no deposit with the requested UUID.</message>
+	<message key="plugins.generic.pln.error.handler.file.notfound">The deposit file cannot be found. It may not have been packaged yet, or the package may have been removed.</message>
 
 	<message key="plugins.generic.pln.depositor.statusupdates">Processing deposit status updates.</message>
 	<message key="plugins.generic.pln.depositor.updatedcontent">Processing updated content.</message>
