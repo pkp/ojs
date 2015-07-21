@@ -309,24 +309,24 @@ class DepositPackage {
 	 * Transfer the atom document to the PLN.
 	 */
 	function transferDeposit() {
-			
+		$journalId = $this->_deposit->getJournalId();
 		$depositDao =& DAORegistry::getDAO('DepositDAO');
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$plnPlugin =& PluginRegistry::getPlugin('generic',PLN_PLUGIN_NAME);
-		$fileManager = new JournalFileManager($journalDao->getById($this->_deposit->getJournalId()));
+		$fileManager = new JournalFileManager($journalDao->getById($journalId));
 		$plnDir = $fileManager->filesDir . PLN_PLUGIN_ARCHIVE_FOLDER;
 		
 		// post the atom document
-		$url = PLN_PLUGIN_NETWORK;
+		$url = $plnPlugin->getSetting($journalId, 'pln_network');
 		if ($this->_deposit->getUpdateStatus()) {
-			$url .= PLN_PLUGIN_CONT_IRI . '/' . $plnPlugin->getSetting($this->_deposit->getJournalID(), 'journal_uuid');
+			$url .= PLN_PLUGIN_CONT_IRI . '/' . $plnPlugin->getSetting($journalId, 'journal_uuid');
 			$url .= '/' . $this->_deposit->getUUID() . '/edit';
 			$result = $plnPlugin->_curlPutFile(
 				$url,
 				$this->getAtomDocumentPath()
 			);
 		} else {
-			$url .= PLN_PLUGIN_COL_IRI . '/' . $plnPlugin->getSetting($this->_deposit->getJournalID(), 'journal_uuid');
+			$url .= PLN_PLUGIN_COL_IRI . '/' . $plnPlugin->getSetting($journalId, 'journal_uuid');
 			$result = $plnPlugin->_curlPostFile(
 				$url,
 				$this->getAtomDocumentPath()
@@ -396,31 +396,32 @@ class DepositPackage {
 	 * Update the deposit's status by checking with the PLN.
 	 */
 	function updateDepositStatus() {
-			
+		$journalId = $this->_deposit->getJournalID();
 		$depositDao =& DAORegistry::getDAO('DepositDAO');
-		$plnPlugin =& PluginRegistry::getPlugin('generic','plnplugin');
-		
-		$url = PLN_PLUGIN_NETWORK . PLN_PLUGIN_CONT_IRI;
-		$url .= '/' . $plnPlugin->getSetting($this->_deposit->getJournalID(), 'journal_uuid');
+		$plnPlugin =& PluginRegistry::getPlugin('generic', 'plnplugin');
+
+		$url = $plnPlugin->getSetting($journalId, 'pln_network') . PLN_PLUGIN_CONT_IRI;
+		$url .= '/' . $plnPlugin->getSetting($journalId, 'journal_uuid');
 		$url .= '/' . $this->_deposit->getUUID() . '/state';
-		
+
 		// retrieve the content document
 		$result = $plnPlugin->_curlGet($url);
-		
+
 		// stop here if we didn't get an OK
 		if ($result['status'] != PLN_PLUGIN_HTTP_STATUS_OK) {
 			$this->_deposit->setRemoteFailureStatus();
 			$depositDao->updateDeposit($this->_deposit);
+			return;
 		}
 
 		$contentState = new DOMDocument();
 		$contentState->preserveWhiteSpace = false;
 		$contentState->loadXML($result['result']);
-		
+
 		// get the remote deposit state
 		$element = $contentState->getElementsByTagName('category')->item(0);
 		$state = $element->getAttribute('term');
-		
+
 		switch ($state) {
 			case 'agreement':
 				$this->_deposit->setSyncedStatus();
@@ -433,9 +434,8 @@ class DepositPackage {
 				$this->_deposit->setRemoteFailureStatus();
 				break;
 		}
-		
+
 		$depositDao->updateDeposit($this->_deposit);
-		
 	}
 }
 ?>
