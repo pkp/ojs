@@ -26,8 +26,12 @@
 	<message key="plugins.generic.pln.settings.journal_uuid_help">This is your journal's unique identifier for the PKP PLN. You may need to share this with PKP PLN administrators for support purposes.</message>
 	<message key="plugins.generic.pln.settings.refresh">Refresh</message>
 	<message key="plugins.generic.pln.settings.refresh_help">If for some reason there are no terms listed above or you know these terms have been updated, click Refresh to update the terms listed above.</message>
-	
-	<message key="plugins.generic.pln.required.object_type">Please choose a deposit object type.</message>
+	<message key="plugins.generic.pln.settings.pln_network">PLN Network URL</message>
+	<message key="plugins.generic.pln.settings.pln_network_help">The URL of your network's staging server. Do not change this unless instructed to do so by someone from your network.</message>
+	<message key='plugins.generic.pln.settings.pln_network_invalid'>The specified URL is not valid. Please double-check the URL and try again.</message>
+	<message key='plugins.generic.pln.settings.pln_network_path_invalid'>PLN Network URLs must include the scheme and host name, and may include a port number. They must not include paths, query strings, user names or passwords, or URL fragments.</message>
+
+	<message key="plugins.generic.pln.required.object_type">Please choose an deposit object type.</message>
 	<message key="plugins.generic.pln.required.object_threshold">Please choose a deposit object threshold.</message>
 	<message key="plugins.generic.pln.required.terms_of_use_agreement">Agreement to the network's terms of use is required in order to deposit to the PLN.</message>
 	

@@ -7,6 +7,7 @@
 #plnSettingsForm table .value input.button { width: 100px; float: right; margin: 0 10px;}
 #plnSettingsForm table .value input#refresh { float: none; }
 #plnSettingsForm table .value input#journal_uuid { width: 300px; }
+#plnSettingsForm table .value input#pln_network { width: 300px; }
 #plnSettingsForm table .value label.agree {clear: right; float: left; margin-left: 10px;}
 #plnSettingsForm table .value .separator { clear:both; margin-top: 1em; }
 

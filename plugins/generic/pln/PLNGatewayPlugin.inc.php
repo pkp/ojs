@@ -152,6 +152,7 @@ class PLNGatewayPlugin extends GatewayPlugin {
 		$range = new DBResultRange(PLN_PLUGIN_PING_ARTICLE_COUNT);
 		$publishedArticles =& $publishedArticlesDAO->getPublishedArticlesByJournalId($journal->getId(), $range, true);
 		$templateMgr->assign_by_ref('articles', $publishedArticles);
+		$templateMgr->assign_by_ref('pln_network', $plugin->getSetting($journal->getId(), 'pln_network'));
 
 		$templateMgr->display($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'ping.tpl', 'text/xml');
 
@@ -159,5 +160,3 @@ class PLNGatewayPlugin extends GatewayPlugin {
 	}
 
 }
-
-?>

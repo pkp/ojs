@@ -43,4 +43,9 @@
 		<name>pln_accepting</name>
 		<value>false</value>
 	</setting>
+    <!-- the default PLN Network URL -->
+    <setting type='string'>
+        <name>pln_network</name>
+        <value></value>
+    </setting>
 </plugin_settings>
