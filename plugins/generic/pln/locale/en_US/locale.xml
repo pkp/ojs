@@ -66,7 +66,7 @@
 	<message key="plugins.generic.pln.notifications.zip_missing">ZipArchive support must be enabled to proceed.</message>
 	<message key="plugins.generic.pln.notifications.issn_setting">Your journal must have an ISSN before you can agree to the terms of service. You can enter the ISSN on the Journal Settings page. Once the journal ISSN is entered, the terms of service will be shown below.</message>
 	<message key="plugins.generic.pln.notifications.tar_missing">Your system must have a tar executable.</message>
-	
+
 	<message key="plugins.generic.pln.error.network.servicedocument">Network error {$error} connecting to the PLN to get the service document.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Network error {$error} connecting to the PLN to send the deposit.</message>
 	<message key="plugins.generic.pln.error.http.servicedocument">PLN server returned HTTP error {$error} when attempting to get the service document.</message>
@@ -74,14 +74,13 @@
 	<message key="plugins.generic.pln.error.depositor.missingpackage">Cannot find package file {$file}.</message>
 	<message key="plugins.generic.pln.error.depositor.export.articles.error">An error occured while exporting articles. The server's error log may have more information.</message>
 	<message key="plugins.generic.pln.error.depositor.export.issue.error">An error occured while exporting an issue. The server's error log may have more information.</message>
-	
+
 	<message key="plugins.generic.pln.depositor.statusupdates">Processing deposit status updates.</message>
 	<message key="plugins.generic.pln.depositor.updatedcontent">Processing updated content.</message>
 	<message key="plugins.generic.pln.depositor.newcontent">Processing new content.</message>
 	<message key="plugins.generic.pln.depositor.packagingdeposits">Packaging content for deposit.</message>
 	<message key="plugins.generic.pln.depositor.transferringdeposits">Sending deposits to the PLN.</message>
 
-	
 	<message key="plugins.generic.plngateway.displayName">PLN Gateway</message>
 	<message key="plugins.generic.plngateway.description">Reports PLN Status and recent article titles for the staging server.</message>
 </locale>
