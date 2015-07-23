@@ -1,0 +1,26 @@
+/**
+ * @file styles/structure/body.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Classes for site-wide elements
+ */
+
+body {
+	font-family: @font;
+	font-size: @font-base;
+	line-height: @line-base;
+	color: @text;
+	color: @text-rgba;
+}
+
+a {
+	color: @primary-lift;
+
+	&:hover,
+	&:focus {
+		color: @primary;
+	}
+}
