@@ -24,3 +24,25 @@ a {
 		color: @primary;
 	}
 }
+
+// Page container widths
+.pkp_structure_head .pkp_navigation,
+.pkp_structure_content,
+.pkp_structure_footer {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 @base;
+
+	@media( min-width: @screen-tablet ) {
+		width: @screen-tablet - (@base * 4 );
+		padding: 0;
+	}
+
+	@media( min-width: @screen-desktop ) {
+		width: @screen-desktop - (@base * 4 );
+	}
+
+	@media( min-width: @screen-lg-desktop ) {
+		width: @screen-lg-desktop - (@base * 4 );
+	}
+}
