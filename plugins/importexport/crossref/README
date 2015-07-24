@@ -1,16 +1,17 @@
 ================================
 === OJS CrossRef Export Plugin
-=== Version: 2.0
+=== Version: 2.1
 === Author: Bozana Bokan <bozana.bokan@cedis.fu-berlin.de>
 === Author: Juan Pablo Alperin <juan@alperin.ca>
 === Author: James MacGregor <jmacgreg@gmail.com>
-=== Last update: July 2014
+=== Author: Michael Nason <michael.nason@gmail.com>
+=== Last update: July 2015
 ================================
 
 About
 -----
 This plugin provides an import/export plugin to generate metadata information for articles 
-and issues for indexing in CrossRef as well as registration of the metadata with CrossRef from within OJS. Details on the XML format and data requirements is available at: 
+and issues for indexing in CrossRef as well as depositing of the metadata with CrossRef from within OJS. Details on the XML format and data requirements is available at: 
 http://doi.crossref.org/schemas/common4.3.0.xsd
 
 License
@@ -31,7 +32,7 @@ guidelines, however, it has not been explicitly tested as of this release.
 
 Note
 ---------
-In order to register DOIs with CrossRef from within OJS you will have to enter your username and password. 
+In order to deposit DOIs with CrossRef from within OJS you will have to enter your username and password. 
 If you do not enter or have your own username and password you'll still be able to export into the 
 CrossRef XML format but you cannot register your DOIs from within OJS.
 Please note, that the password will be saved as plain text, i.e. not encrypted, due to CrossRef registration service requirements.
