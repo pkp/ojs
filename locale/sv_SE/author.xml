@@ -116,4 +116,13 @@
 	<message key="author.article.copyeditedFile">Manusredigerad fil</message>
 	<message key="author.article.authorRevisedFile">Författarfil</message>
 	<message key="author.submit.authorSubmitLoginMessage">Man måste registrera ett användarkonto för att skicka in bidrag till tidskriften. Detta för att våra granskare ska kunna arbeta med inlagda manuskript och kunna kontakta författare när statusen på inskickat material förändras.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Granskas, vända {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Granskas: revidering nödvändig</message>
+	<message key="author.submissions.queuedEditingCopyedit">Redigeras: manusredigering begärd</message>
+	<message key="author.submissions.queuedEditingProofread">Redigeras: Korrekturläsning begärd</message>
+	<message key="author.submit.submissionLocale">Bidragets språk</message>
+	<message key="author.submit.submissionSupportingAgencies">Organisationer eller kollegor som stöttat eller medfinansierat forskningen</message>
+	<message key="author.submit.submissionLocaleDescription">Den här tidskriften tar emot bidrag på fler än ett språk. Välj bidragets huvudsakliga språk från listan nedan.</message>
+	<message key="author.submit.form.localeRequired">Vänligen välj ett språk för bidraget</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Om det finns personer, institutioner eller tjänster som har bidragit till innehållet eller stöttat föreliggande arbete kan du ange det här. Om flera, separera dessa med semikolon (t.ex. Anna Andersson; Grönköpings universitet; Department of Computer Science, Metro University).</message>
 </locale>
