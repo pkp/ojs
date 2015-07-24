@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/readingTools/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.block.readingTools.displayName">Läsverktygsblocket</message>
+	<message key="plugins.block.readingTools.description">Det här pluginet visar ett block med läsverktyg i sidomenyn.</message>
+	<message key="plugins.block.readingTools.title">Läsverktyg</message>
+	<message key="plugins.block.readingTools.aboutTheAuthor">Om författaren</message>
+	<message key="plugins.block.readingTools.aboutTheAuthors">Om författarna</message>
+	<message key="plugins.block.readingTools.articleTools">Verktyg</message>
+	<message key="plugins.block.readingTools.emailThisArticle">Maila artikel</message>
+	<message key="plugins.block.readingTools.loginRequired">Inloggning krävs</message>
+	<message key="plugins.block.readingTools.printThisArticle">Skriv ut artikel</message>
+	<message key="plugins.block.readingTools.postComment">Kommentera</message>
+</locale>
