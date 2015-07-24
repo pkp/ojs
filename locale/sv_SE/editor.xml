@@ -17,8 +17,8 @@
 	<message key="editor.submissionsAndPublishing">Manuskript och publicering.</message>
 	<message key="editor.submissionQueue">Manuskriptprocess</message>
 	<message key="editor.submissionArchive">Manuskriptarkiv</message>
-	<message key="editor.publishing">Publisering</message>
-	<message key="editor.publishedIssues">Publiserade nummer</message>
+	<message key="editor.publishing">Publicering</message>
+	<message key="editor.publishedIssues">Publicerade nummer</message>
 	<message key="editor.allSections">Alla sektioner</message>
 	<message key="editor.allEditors">Alla Redaktörer</message>
 	<message key="editor.me">Mig själv</message>
@@ -195,4 +195,13 @@
 	<message key="editor.article.uploaded">Uppladdad</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar manuskriptet för redigering, kontrollera att det finns tillgängliga granskare och att författaren meddelas om granskning med hjälp av Meddela Författaren-länken ovan.</message>
 	<message key="editor.article.sendFileToCopyedit">Välj fil för Manusredigering</message>
+	<message key="editor.article.reviewForms">Granskningsformulär</message>
+	<message key="editor.article.selectReviewForm">Välj granskningsformulär</message>
+	<message key="editor.article.clearReviewForm">Nollställ granskningsformulär</message>
+	<message key="editor.submissionReview.sendToCopyediting">Skicka till manusredigering</message>
+	<message key="editor.issues.galleys">Korrekturversion nummer</message>
+	<message key="editor.issues.galley">Numrets korrekturversion</message>
+	<message key="editor.issues.viewingGalley">Visar numrets korrekturversion</message>
+	<message key="editor.issues.issueGalleysDescription">Publicera korrekturversion med hela numrets innehåll</message>
+	<message key="editor.issues.noneIssueGalleys">Ingen korrekturversion för hela numret har publicerat</message>
 </locale>

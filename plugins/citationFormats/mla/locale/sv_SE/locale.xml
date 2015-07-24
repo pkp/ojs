@@ -18,4 +18,5 @@
 	<message key="plugins.citationFormats.mla.displayName">MLA citeringsformattillägg</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Detta tillägg implementerar MLA citeringsformat</message>
+	<message key="plugins.citationFormats.mla.noPages">Antal sid.</message>
 </locale>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/referral/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.generic.referral.name">Hänvisningsplugin</message>
+	<message key="plugins.generic.referral.description">Hänvisningspluginet registrerar inkommande refback-URL:er (d.v.s. när en läsare kommer till en artikel via en extern länk). Detta ger författarna möjlighet att automatiskt uppdatera, och kanske publicera, en lista på refbacks till en artikel.</message>
+	
+	<message key="plugins.generic.referral.editReferral">Redigera refback</message>
+	<message key="plugins.generic.referral.createReferral">Skapa refback</message>
+	<message key="plugins.generic.referral.referrals">Refbacks</message>
+	<message key="plugins.generic.referral.count">Träffar</message>
+	<message key="plugins.generic.referral.dateAdded">Tillagd datum</message>
+	<message key="plugins.generic.referral.all">Alla</message>
+	<message key="plugins.generic.referral.all.empty">Det finns inga refbacks för tillfället.</message>
+	<message key="plugins.generic.referral.status.new">Ny</message>
+	<message key="plugins.generic.referral.status.new.empty">Det finns inga nya refbacks för tillfället.</message>
+	<message key="plugins.generic.referral.status.accepted">Publicerad</message>
+	<message key="plugins.generic.referral.status.accept">Publicera</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Är du säker på att du vill publicera vald(a) refback(s)?</message>
+	<message key="plugins.generic.referral.status.accept.empty">Det finns inga publicerade refbacks för tillfället.</message>
+	<message key="plugins.generic.referral.status.decline">Ignorera</message>
+	<message key="plugins.generic.referral.status.declined">Ignorerad</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Är du säker på att du vill ignorera vald(a) refback(s)?</message>
+	<message key="plugins.generic.referral.status.decline.empty">Det finns inga ignorerade refbacks för tillfället.</message>
+	<message key="plugins.generic.referral.confirmDelete">Är du säker på att du vill radera vald(a) refback(s)?</message>
+	<message key="plugins.generic.referral.nameRequired">En refback-titel krävs.</message>
+	<message key="plugins.generic.referral.urlRequired">En refback-URL krävs.</message>
+	<message key="plugins.generic.referral.settings">Referral Plugin Settings</message>
+	<message key="plugins.generic.referral.settings.description">Hänvisningspluginet fångar URL:er som länkar till artiklar publicerade i den här tidskriften. Dessa kan ses över av författaren, för att sedan eventuellt publiceras. Det här formuläret låter Tidskriftsansvariga kontrollera hur dessa länkar fångas in.</message>
+	<message key="plugins.generic.referral.excusions">Bortvalt</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Skriv in en lista med reguljära uttryck som ska filtrera bort vissa inkommande hänvisningar, ett per rad. Det här kan användas för att undvika att sökmotorers robotar fyller refback-listan. För att få reda på mer om reguljära uttryck, se <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
+</locale>

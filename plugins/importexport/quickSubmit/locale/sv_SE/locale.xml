@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/quickSubmit/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2000-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.importexport.quickSubmit.addToExisting">Lägg till till ett redan existerande nummer:</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestination">Mål</message>
+	<message key="plugins.importexport.quickSubmit.chooseDestinationDescription">Välj huruvida bidraget ska knytas till ett befintligt nummer eller lämnas opublicerat.</message>
+	<message key="plugins.importexport.quickSubmit.displayName">QuickSubmit-pluginet</message>
+	<message key="plugins.importexport.quickSubmit.description">Plugin för enstegs-inmatning.</message>
+	<message key="plugins.importexport.quickSubmit.descriptionLong">Med det här pluginet kan du snabbt lägga in hela bidrag i systemet och antingen knyta dem till ett befintligt nummer eller lämna dem opublicerade för framtida hantering.</message>
+	<message key="plugins.importexport.quickSubmit.issueRequired">Du måste välja ett nummer att knyta bidraget till.</message>
+	<message key="plugins.importexport.quickSubmit.leaveUnpublished">Lämna opublicerat.</message>
+	<message key="plugins.importexport.quickSubmit.saveAndCreateAnother">Spara och skapa nytt</message>
+	<message key="plugins.importexport.quickSubmit.submissionData">Detaljer</message>	
+	<message key="plugins.importexport.quickSubmit.submissionDescription">Välj den fil som ska användas som slutgiltig korrekturfil för bidraget.</message>	
+	<message key="plugins.importexport.quickSubmit.submissionRequired">Du måste ladda upp en fil för bidraget.</message>	
+	<message key="plugins.importexport.quickSubmit.success">Artikeln har lagts till</message>
+	<message key="plugins.importexport.quickSubmit.successDescription">Artikeln skapades utan problem.</message>
+	<message key="plugins.importexport.quickSubmit.successReturn">Återgå till QuickSubmit-pluginet.</message>
+</locale>

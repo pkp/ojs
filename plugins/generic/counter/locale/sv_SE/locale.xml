@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/counter/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.generic.counter.description"><![CDATA[COUNTER-pluginet möjliggör registrering och <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-rapportering av användningsstatistik.]]></message>
+	<message key="plugins.generic.counter">COUNTER-statistik</message>
+	<message key="plugins.generic.counter.migrate">Migrera händelselogg-fil</message>
+	<message key="plugins.generic.counter.1a.title">Tidskriftsrapport 1 (R2): Antal fulltext-anrop per tidskrift och månad</message>
+	<message key="plugins.generic.counter.1a.title1">Tidskriftsrapport 1 (R2)</message>
+	<message key="plugins.generic.counter.1a.title2">Antal lyckade fulltext-anrop per månad och tidskrift (år {$year})</message>
+	<message key="plugins.generic.counter.1a.dateRun">Datum för körning:</message>
+	<message key="plugins.generic.counter.1a.publisher">Utgivare</message>
+	<message key="plugins.generic.counter.1a.platform">Plattform</message>
+	<message key="plugins.generic.counter.1a.printIssn">ISSN (tryckt)</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">e-ISSN</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">YTD Totalt</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">YTD HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">YTD PDF</message>
+	<message key="plugins.generic.counter.1a.totalForAllJournals">Totalt för alla tidskrifter</message>
+</locale>

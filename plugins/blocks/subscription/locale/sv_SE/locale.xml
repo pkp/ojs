@@ -22,4 +22,5 @@
 	<message key="plugins.block.subscription.providedBy">Tillgång tillhandahållen av: </message>
 	<message key="plugins.block.subscription.providedByInstitution">Tillgång tillhandahålls av din egen organisation</message>
 	<message key="plugins.block.subscription.comingFromIP">Kommer från IP: </message>
+	<message key="plugins.block.subscription.about">Prenumerationer</message>
 </locale>
