@@ -221,7 +221,7 @@ class DepositPackage {
 		$depositObjects = $this->_deposit->getDepositObjects();
 		
 		// set up folder and file locations
-		$bagDir = $this->getDepositDir() . DIRECTORY_SEPARATOR . 'bag';
+		$bagDir = $this->getDepositDir() . DIRECTORY_SEPARATOR . $this->_deposit->getUUID();
 		$packageFile = $this->getPackageFilePath();
 		$exportFile =  tempnam(sys_get_temp_dir(), 'ojs-pln-export-');
 		$termsFile =  tempnam(sys_get_temp_dir(), 'ojs-pln-terms-');
