@@ -31,23 +31,23 @@ a {
 .pkp_structure_head .pkp_navigation_primary_wrapper,
 .pkp_structure_head .pkp_navigation_user,
 .pkp_structure_content,
-.pkp_structure_foot {
+.pkp_structure_footer {
 	.pkp_helpers_clear;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 @base;
 
 	@media( min-width: @screen-tablet ) {
-		width: @screen-tablet - (@double * 2);
+		width: @screen-tablet-container;
 		padding: 0;
 	}
 
 	@media( min-width: @screen-desktop ) {
-		width: @screen-desktop - (@double * 2);
+		width: @screen-desktop-container;
 	}
 
 	@media( min-width: @screen-lg-desktop ) {
-		width: @screen-lg-desktop - (@double * 2);
+		width: @screen-lg-desktop-container;
 	}
 }
 
@@ -77,7 +77,7 @@ a {
 	.has_right_sidebar .pkp_structure_main {
 		float: left;
 		// Screen width - container padding - sidebar width - gutter
-		width: @screen-desktop - (@double * 2) - 192px - @double;
+		width: @screen-desktop-container - 192px - @double;
 	}
 
 	// Add gutters between sidebar and main content
@@ -92,7 +92,7 @@ a {
 	// 2 sidebars
 	.has_left_sidebar.has_right_sidebar .pkp_structure_main {
 		// Screen width - container padding - 2 sidebar widths - two gutters
-		width: @screen-desktop - (@double * 2) - (192px * 2) - (@double * 2);
+		width: @screen-desktop-container - (192px * 2) - (@double * 2);
 	}
 }
 
@@ -114,12 +114,12 @@ a {
 	.has_right_sidebar .pkp_structure_main {
 		float: left;
 		// Screen width - container padding - sidebar width - gutter
-		width: @screen-lg-desktop - (@double * 2) - 256px - @double;
+		width: @screen-lg-desktop-container - 256px - @double;
 	}
 
 	.has_left_sidebar.has_right_sidebar .pkp_structure_main {
 		// Screen width - container padding - 2 sidebar widths - two gutters
-		width: @screen-lg-desktop - (@double * 2) - (256px * 2) - (@double * 2);
+		width: @screen-lg-desktop-container - (256px * 2) - (@double * 2);
 	}
 }
 

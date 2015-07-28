@@ -1,0 +1,97 @@
+/**
+ * @file styles/structure/footer.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Classes for the page footer elements
+ */
+
+.pkp_structure_footer_wrapper {
+	padding: @double 0;
+	background: @bg;
+
+	.categories {
+		.pkp_helpers_clear;
+	}
+
+	.category {
+		margin-bottom: @double;
+		text-align: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		h4 {
+			margin: 0;
+			line-height: @double;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			padding: 4px 0;
+			font-size: @font-sml;
+			line-height: @line-base;
+		}
+	}
+
+	// 2 categories per row
+	@media(min-width: @screen-tablet) {
+
+		.category {
+			float: left;
+			width: (@screen-tablet-container / 2) - @base;
+			text-align: left;
+
+			&:nth-child(odd) {
+				margin-right: @base;
+			}
+
+			&:nth-child(even) {
+				margin-left: @base;
+			}
+
+			&.category_1 {
+				margin-right: @base;
+			}
+		}
+	}
+
+	// 3 categories per row
+	@media(min-width: @screen-desktop) {
+
+		.categories:not(.categories_2) {
+
+			.category {
+				width: (@screen-desktop-container / 3) - @base;
+				margin-right: @base;
+			}
+
+			&.categories_3 .category 3
+			&.categories_6 .category 3,
+			&.categories_6 .category 6 {
+				margin-right: 0;
+				margin-left: @base;
+			}
+		}
+	}
+}
+
+// OJS brand images in footer
+.pkp_brand_footer {
+	padding: @base;
+	text-align: center;
+
+	a {
+		display: block;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+}
