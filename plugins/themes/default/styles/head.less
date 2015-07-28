@@ -44,7 +44,7 @@
 	a {
 		padding-top: 4px;
 		padding-bottom: 4px;
-		line-height: 24px;
+		line-height: @line-base;
 		color: #ddd;
 		color: rgba(255,255,255,0.7);
 
@@ -166,6 +166,10 @@
 	// Align to the left edge of the screen
 	> li:first-child a {
 		padding-left: 0;
+	}
+
+	a {
+		line-height: @double;
 	}
 
 	ul {
