@@ -13,25 +13,18 @@
 {include file="common/frontend/header.tpl"}
 {/strip}
 
-{if $journalDescription}
-	<div>{$journalDescription}</div>
-{/if}
+{$journalDescription}
 
 {call_hook name="Templates::Index::journal"}
 
 {if $homepageImage}
-<br />
-<div id="homepageImage"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" width="{$homepageImage.width|escape}" height="{$homepageImage.height|escape}" {if $homepageImageAltText != ''}alt="{$homepageImageAltText|escape}"{else}alt="{translate key="common.journalHomepageImage.altText"}"{/if} /></div>
+<div class="homepage_image"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" width="{$homepageImage.width|escape}" height="{$homepageImage.height|escape}" {if $homepageImageAltText != ''}alt="{$homepageImageAltText|escape}"{else}alt="{translate key="common.journalHomepageImage.altText"}"{/if} /></div>
 {/if}
 
-{if $additionalHomeContent}
-<br />
 {$additionalHomeContent}
-{/if}
 
 {if $enableAnnouncementsHomepage}
-	{* Display announcements *}
-	<div id="announcementsHome">
+	<div class="homepage_announcements">
 		<h3>{translate key="announcement.announcementsHome"}</h3>
 		{include file="announcements/announcements.tpl" displayLimit=true}
 	</div>
@@ -39,12 +32,9 @@
 
 {if $issue && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	{* Display the table of contents or cover page of the current issue. *}
-	<br />
 	<h3>{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</h3>
 	{include file="issue/view.tpl"}
 {/if}
-
-<div class="pkp_helpers_clear"></div>
 
 {if !empty($socialMediaBlocks)}
 	<div id="socialMediaBlocksContainer">
