@@ -113,7 +113,7 @@ class CopyAccessLogFileTool extends CommandLineTool {
 
 		if ($fileMgr->fileExists($filePath, 'dir')) {
 			// Directory.
-			$filesToCopy = glob($filePath . DIRECTORY_SEPARATOR . '*.*');
+			$filesToCopy = glob($filePath . DIRECTORY_SEPARATOR . '*');
 			foreach ($filesToCopy as $file) {
 				// If a base filename is given as a parameter, check it.
 				if (count($this->argv) == 2) {
