@@ -7,8 +7,8 @@
  *
  * Faceted search results navigation block.
  *}
-<div class="block plugins_generic_lucene_facets" id="luceneFacets">
-	<span class="blockTitle">{translate key="plugins.generic.lucene.faceting.title"}</span>
+<div class="pkp_block plugins_generic_lucene_facets" id="luceneFacets">
+	<span class="title">{translate key="plugins.generic.lucene.faceting.title"}</span>
 
 	{foreach from=$facets key="facetCategory" item="facetList"}<p>
 		{if count($facetList)}

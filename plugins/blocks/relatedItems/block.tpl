@@ -16,8 +16,8 @@
 </script>
 
 
-<div class="block" id="sidebarRTRelatedItems">
-	<span class="blockTitle">{translate key="plugins.block.relatedItems.title"}</span>
+<div class="pkp_block" id="sidebarRTRelatedItems">
+	<span class="title">{translate key="plugins.block.relatedItems.title"}</span>
 		<table>
 			<tr>
 				<td valign="top" style="width:26px;">

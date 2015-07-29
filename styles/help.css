@@ -77,23 +77,6 @@ div.thickSeparator {
 	color: #666;
 }
 
-span.blockTitle {
-	color: #375;
-}
-
-/**
- * Sidebar
- */
-
-#sidebar a {
-	text-decoration: none;
-}
-
-#sidebar div.block span.blockTitle {
-	font-size: 1.1em;
-	text-transform: none;
-}
-
 /**
  * Breadcrumb
  */

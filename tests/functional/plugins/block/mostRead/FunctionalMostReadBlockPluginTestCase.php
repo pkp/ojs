@@ -93,7 +93,7 @@ class FunctionalMostReadBlockPluginTest extends WebTestCase {
 		$this->verifyAndOpen($this->baseUrl . '/index.php/lucene-test');
 		
 		// Check that I see the block plugin.
-		$this->assertText('css=#sidebarMostRead .blockTitle', 'Most-Read Articles');
+		$this->assertText('css=#sidebarMostRead .title', 'Most-Read Articles');
 		
 		// Check that I see the articles:
 		// - correctly ordered

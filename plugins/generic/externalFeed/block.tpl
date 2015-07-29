@@ -8,9 +8,9 @@
  * External feed plugin navigation sidebar.
  *
  *}
-<div class="block" id="sidebarExternalFeed">
+<div class="pkp_block" id="sidebarExternalFeed">
 	{foreach from=$externalFeeds item=externalFeed}
-		<span class="blockTitle">{$externalFeed.title|truncate:20:"..."}</span>
+		<span class="title">{$externalFeed.title|truncate:20:"..."}</span>
 		<ul>
 		{foreach from=$externalFeed.items item=feedItem}
 			<li>

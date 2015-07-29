@@ -8,8 +8,8 @@
  * Feed plugin navigation sidebar.
  *
  *}
-<div class="block" id="sidebarWebFeed">
-	<span class="blockTitle">{translate key="journal.currentIssue"}</span>
+<div class="pkp_block" id="sidebarWebFeed">
+	<span class="title">{translate key="journal.currentIssue"}</span>
 	<a href="{url router=$smarty.const.ROUTE_PAGE page="gateway" op="plugin" path="WebFeedGatewayPlugin"|to_array:"atom"}">
 	<img src="{$baseUrl}/plugins/generic/webFeed/templates/images/atom10_logo.gif" alt="{translate key="plugins.generic.webfeed.atom.altText"}" border="0" /></a>
 	<br/>

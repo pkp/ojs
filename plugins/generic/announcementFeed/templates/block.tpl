@@ -8,8 +8,8 @@
  * Announcement feed plugin navigation sidebar.
  *
  *}
-<div class="block" id="sidebarAnnouncementFeed">
-	<span class="blockTitle">{translate key="announcement.announcements"}</span>
+<div class="pkp_block" id="sidebarAnnouncementFeed">
+	<span class="title">{translate key="announcement.announcements"}</span>
 	<a href="{url router=$smarty.const.ROUTE_PAGE page="gateway" op="plugin" path="AnnouncementFeedGatewayPlugin"|to_array:"atom"}">
 	<img src="{$baseUrl}/plugins/generic/announcementFeed/templates/images/atom10_logo.gif" alt="{translate key="plugins.generic.announcementfeed.atom.altText"}" border="0" /></a>
 	<br/>
