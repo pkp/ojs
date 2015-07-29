@@ -8,15 +8,17 @@
  * External feed plugin navigation sidebar.
  *
  *}
-<div class="pkp_block" id="sidebarExternalFeed">
-	{foreach from=$externalFeeds item=externalFeed}
+{foreach from=$externalFeeds item=externalFeed}
+	<div class="pkp_block block_external_feed">
 		<span class="title">{$externalFeed.title|truncate:20:"..."}</span>
-		<ul>
-		{foreach from=$externalFeed.items item=feedItem}
-			<li>
-				<a href="{$feedItem->get_permalink()}" target="_blank">{$feedItem->get_title()|truncate:40:"..."}</a>
-			</li>
-		{/foreach}
-		</ul>
-	{/foreach}
-</div>
+		<div class="content">
+			<ul>
+			{foreach from=$externalFeed.items item=feedItem}
+				<li>
+					<a href="{$feedItem->get_permalink()}" target="_blank">{$feedItem->get_title()|truncate:40:"..."}</a>
+				</li>
+			{/foreach}
+			</ul>
+		</div>
+	</div>
+{/foreach}
