@@ -68,7 +68,7 @@ class ArticleGalleyGridCellProvider extends GridCellProvider {
 						$router->url($request, null, 'grid.articleGalleys.ArticleGalleyGridHandler',
 							'setAvailable', null, array('representationId' => $articleGalleyId, 'newAvailableState' => $articleGalley->getIsAvailable()?0:1, 'submissionId' => $submissionId)),
 						'modal_approve'),
-						__('manager.emails.disable'),
+						__($articleGalley->getIsAvailable()?'manager.emails.disable':'manager.emails.enable'),
 						$articleGalley->getIsAvailable()?'completed':'new',
 						$toolTip
 				));
