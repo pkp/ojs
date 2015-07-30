@@ -137,3 +137,35 @@
 		}
 	}
 }
+
+// Issues archive
+.ojs_issues {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		margin-bottom: @double;
+	}
+
+	.title {
+		padding: ((@double - @line-bump) / 2) 0;
+		font-size: @font-bump;
+		line-height: @line-bump;
+		font-weight: @bold;
+		text-decoration: none;
+	}
+
+	.description {
+		font-size: @font-sml;
+		line-height: @line-sml;
+
+		p:first-child {
+			margin-top: 0;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
