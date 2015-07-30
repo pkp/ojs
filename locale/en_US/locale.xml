@@ -108,6 +108,7 @@
 	<message key="article.submissionId">Submission ID</message>
 	<message key="article.title">Title</message>
 	<message key="article.authors">Authors</message>
+	<message key="article.authorSeparator">, </message>
 	<message key="article.indexingInformation">Indexing Information</message>
 	<message key="article.metadata">Metadata</message>
 	<message key="article.journalSection">Journal Section</message>
@@ -234,7 +235,6 @@
 	<message key="issue.fullIssue">Full Issue</message>
 	<message key="issue.nonpdf.title">Issue Download</message>
 	<message key="issue.viewIssue">View Issue</message>
-	<message key="issue.viewIssueDescription">View or download the full issue</message>
 
 	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Currency</message>
@@ -314,8 +314,8 @@
 	<message key="reader.subscribersOnly">Subscribers Only</message>
 	<message key="reader.subscriptionRequiredLoginText">Subscription required to access item. To verify subscription, log in to journal.</message>
 	<message key="reader.openAccess">Open Access</message>
-	<message key="reader.subscriptionAccess">Subscription Access</message>
-	<message key="reader.subscriptionOrFeeAccess">Subscription or Fee Access</message>
+	<message key="reader.subscriptionAccess">Requires Subscription</message>
+	<message key="reader.subscriptionOrFeeAccess">Requires Subscription or Fee</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comments on this article</message>

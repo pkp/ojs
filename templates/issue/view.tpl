@@ -8,72 +8,102 @@
  * View issue -- This displays the issue TOC or title page, as appropriate,
  * *without* header or footer HTML (see viewPage.tpl)
  *}
-{if $subscriptionRequired && $showGalleyLinks && $showToc}
-	<div id="accessKey">
-		<img src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
-		{translate key="reader.openAccess"}&nbsp;
-		<img src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
-		{if $purchaseArticleEnabled}
-			{translate key="reader.subscriptionOrFeeAccess"}
+<div class="ojs_issue">
+
+	{* Display an issue without a Table of Contents *}
+	{if !$showToc && $issue}
+		{if $issueId}
+			{url|assign:"currentUrl" page="issue" op="view" path=$issueId|to_array:"showToc"}
 		{else}
-			{translate key="reader.subscriptionAccess"}
+			{url|assign:"currentUrl" page="issue" op="current" path="showToc"}
 		{/if}
-	</div>
-{/if}
-{if !$showToc && $issue}
-	{if $issueId}
-		{url|assign:"currentUrl" page="issue" op="view" path=$issueId|to_array:"showToc"}
-	{else}
-		{url|assign:"currentUrl" page="issue" op="current" path="showToc"}
-	{/if}
-	<ul class="menu">
-		<li><a href="{$currentUrl}">{translate key="issue.toc"}</a></li>
-	</ul>
-	<br />
-	{if $coverPagePath}<div id="issueCoverImage"><a href="{$currentUrl}"><img src="{$coverPagePath|escape}{$issue->getFileName($locale)|escape}"{if $coverPageAltText != ''} alt="{$coverPageAltText|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}{if $width} width="{$width|escape}"{/if}{if $height} height="{$height|escape}"{/if}/></a></div>{/if}
-	<div id="issueCoverDescription">{$issue->getLocalizedCoverPageDescription()|strip_unsafe_html|nl2br}</div>
-{elseif $issue}
-	<div id="issueDescription">{$issue->getLocalizedDescription()|strip_unsafe_html|nl2br}</div>
-	{if $issueGalleys}
-		<h3>{translate key="issue.fullIssue"}</h3>
-		{if (!$subscriptionRequired || $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $issueExpiryPartial))}
-			{assign var=hasAccess value=1}
-		{else}
-			{assign var=hasAccess value=0}
-		{/if}
-		<div class="tocArticle">
-			<div class="tocTitle">{translate key="issue.viewIssueDescription"}
-				<span class="tocGalleys">
+		<ul class="menu">
+			<li><a href="{$currentUrl}">{translate key="issue.toc"}</a></li>
+		</ul>
+		{if $coverPagePath}<div id="issueCoverImage"><a href="{$currentUrl}"><img src="{$coverPagePath|escape}{$issue->getFileName($locale)|escape}"{if $coverPageAltText != ''} alt="{$coverPageAltText|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}{if $width} width="{$width|escape}"{/if}{if $height} height="{$height|escape}"{/if}/></a></div>{/if}
+		<div id="issueCoverDescription">{$issue->getLocalizedCoverPageDescription()|strip_unsafe_html|nl2br}</div>
+
+	{* Display an issue with a Table of Contents *}
+	{elseif $issue}
+
+		<div class="description">
+			{$issue->getLocalizedDescription()|strip_unsafe_html|nl2br}
+		</div>
+
+		{* Display galleys for the entire issue *}
+		{if $issueGalleys}
+
+			{* Determine overall access status *}
+			{if (!$subscriptionRequired || $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $issueExpiryPartial))}
+				{assign var=hasAccess value=1}
+			{else}
+				{assign var=hasAccess value=0}
+			{/if}
+
+			<h3 class="heading_full_issue">{translate key="issue.fullIssue"}</h3>
+			<ul class="ojs_galleys">
+
 				{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 					{foreach from=$issueGalleys item=issueGalley}
+
+						{* Determine galley type and URL op *}
 						{if $issueGalley->isPdfGalley()}
-							<a href="{url page="issue" op="viewIssue" path=$issue->getBestIssueId()|to_array:$issueGalley->getBestGalleyId($currentJournal)}" class="file">{$issueGalley->getGalleyLabel()|escape}</a>
+							{assign var=type value="pdf"}
+							{assign var=op value="viewIssue"}
 						{else}
-							<a href="{url page="issue" op="viewDownloadInterstitial" path=$issue->getBestIssueId()|to_array:$issueGalley->getBestGalleyId($currentJournal)}" class="file">{$issueGalley->getGalleyLabel()|escape}</a>
+							{assign var=type value="file"}
+							{assign var=op value="viewDownloadInterstitial"}
 						{/if}
-						{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
-							{if $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN || !$issueGalley->isPdfGalley()}
-								<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
-							{else}
-								<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
+
+						{* Get user access flag *}
+						{assign var=restricted value=0}
+						{if $subscriptionRequired && $showGalleyLinks && !$hasAccess && $issue->getAccessStatus() != $smarty.const.ISSUE_ACCESS_OPEN}
+							{if $restrictOnlyPdf && type=='pdf'}
+								{assign var=restricted value="1"}
+							{elseif !$restrictOnlyPdf}
+								{assign var=restricted value="1"}
 							{/if}
 						{/if}
+
+						<li class="galley {$type}{if $restricted} restricted{/if}">
+
+							{* Add some screen reader text to indicate if a galley is restricted *}
+							{if $restricted}
+								<span class="pkp_screen_reader">
+									{if $purchaseArticleEnabled}
+										{translate key="reader.subscriptionOrFeeAccess"}
+									{else}
+										{translate key="reader.subscriptionAccess"}
+									{/if}
+								</span>
+							{/if}
+
+							<a href="{url page="issue" op=$op path=$issue->getBestIssueId()|to_array:$issueGalley->getBestGalleyId($currentJournal)}">
+								{$issueGalley->getGalleyLabel()|escape}
+							</a>
+						</li>
 					{/foreach}
-					{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
-						{if $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN}
-							<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
-						{else}
-							<img class="accessLogo" src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
-						{/if}
-					{/if}
 				{/if}
-				</span>
-			</div>
-		</div>
-		<br />
+			</ul>
+		{/if}
+
+		{include file="issue/issue.tpl"}
+
+		{* Display a legend describing the open/restricted access icons *}
+		{if $subscriptionRequired && $showGalleyLinks && $showToc}
+			<ul class="access_legend">
+				<li class="restricted">
+					{if $purchaseArticleEnabled}
+						{translate key="reader.subscriptionOrFeeAccess"}
+					{else}
+						{translate key="reader.subscriptionAccess"}
+					{/if}
+				</li>
+			</ul>
+		{/if}
+
+	{* Display a message if no current issue exists *}
+	{else}
+		{translate key="current.noCurrentIssueDesc"}
 	{/if}
-	<h3>{translate key="issue.toc"}</h3>
-	{include file="issue/issue.tpl"}
-{else}
-	{translate key="current.noCurrentIssueDesc"}
-{/if}
+</div><!-- .ojs_issue -->

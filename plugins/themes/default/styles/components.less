@@ -23,6 +23,26 @@
 	color: @text-light;
 }
 
+// Wire button
+.ojs_button_wire {
+	display: inline-block;
+	padding: 0 1em;
+	background: #fff;
+	border: 1px solid #9ecade;
+	border-radius: @radius;
+	font-size: @font-sml;
+	line-height: @double;
+	color: @primary-lift;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		background: @primary-lift;
+		border-color: @primary-lift;
+		color: #fff;
+	}
+}
+
 // Input field
 input[type="text"],
 input[type="email"],
