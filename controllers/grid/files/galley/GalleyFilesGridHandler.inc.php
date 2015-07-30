@@ -38,7 +38,6 @@ class GalleyFilesGridHandler extends FileListGridHandler {
 				'addFile', 'selectFiles',
 				'downloadFile',
 				'deleteFile',
-				'signOffFile'
 			)
 		);
 	}
