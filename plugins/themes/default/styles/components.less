@@ -15,7 +15,7 @@
 	background: #eee;
 	border: 1px solid #aaa;
 	border-top-color: #bbb;
-	border-radius: 4px;
+	border-radius: @radius;
 	box-shadow: inset 0 -1em 1em rgba(0, 0, 0, 0.1);
 	font-size: @font-sml;
 	line-height: @double - 2; // account for border
@@ -28,7 +28,7 @@
 	display: inline-block;
 	padding: 0 1em;
 	background: #fff;
-	border: 1px solid #9ecade;
+	border: 1px solid @primary-border;
 	border-radius: @radius;
 	font-size: @font-sml;
 	line-height: @double;
@@ -52,7 +52,7 @@ input[type="phone"],
 	padding: 0 0.5em;
 	background: #fff;
 	border: 1px solid #aaa;
-	border-radius: 4px;
+	border-radius: @radius;
 	font-size: @font-sml;
 	line-height: @double - 2; // account for border
 }
@@ -89,13 +89,11 @@ input[type="phone"],
 	.restricted a {
 		border-color: @bg;
 		color: @text-light;
-		color: @text-light-rgba;
 
 		&:hover,
 		&:focus {
 			background: @bg;
 			color: @text;
-			color: @text-rgba;
 		}
 
 		&:before {
