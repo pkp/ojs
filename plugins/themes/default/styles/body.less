@@ -60,7 +60,7 @@ a {
 @media( min-width: @screen-desktop ) {
 
 	.pkp_structure_sidebar {
-		width: 192px;
+		width: 256px;
 
 		&.left {
 			float: left;
@@ -76,7 +76,7 @@ a {
 	.has_right_sidebar .pkp_structure_main {
 		float: left;
 		// Screen width - container padding - sidebar width - gutter
-		width: @screen-desktop-container - 192px - @double;
+		width: @screen-desktop-container - 256px - @double;
 	}
 
 	// Add gutters between sidebar and main content
@@ -91,27 +91,14 @@ a {
 	// 2 sidebars
 	.has_left_sidebar.has_right_sidebar .pkp_structure_main {
 		// Screen width - container padding - 2 sidebar widths - two gutters
-		width: @screen-desktop-container - (192px * 2) - (@double * 2);
+		width: @screen-desktop-container - (256px * 2) - (@double * 2);
 	}
 }
 
 @media( min-width: @screen-lg-desktop ) {
 
-	.pkp_structure_sidebar {
-		width: 256px;
-
-		&.left {
-			float: left;
-		}
-
-		&.right {
-			float: right;
-		}
-	}
-
 	.has_left_sidebar .pkp_structure_main,
 	.has_right_sidebar .pkp_structure_main {
-		float: left;
 		// Screen width - container padding - sidebar width - gutter
 		width: @screen-lg-desktop-container - 256px - @double;
 	}
