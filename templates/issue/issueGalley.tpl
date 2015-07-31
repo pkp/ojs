@@ -7,7 +7,7 @@
  *
  * Issue galley view for PDF files.
  *}
-{include file="issue/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {url|assign:"pdfUrl" op="viewFile" path=$issueId|to_array:$galley->getBestGalleyId($currentJournal)}
 {translate|assign:"noPluginText" key='article.pdf.pluginMissing'}
 <script><!--{literal}

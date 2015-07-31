@@ -230,9 +230,9 @@ class OJSCompletedPayment extends Payment {
 						$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($gift->getAssocId());
 
 						if ($subscriptionType) {
-							return $subscriptionType->getSubscriptionTypeDescription();	
+							return $subscriptionType->getSubscriptionTypeDescription();
 						} else {
-							return __('payment.type.gift') . ' ' . __('payment.type.gift.subscription');								
+							return __('payment.type.gift') . ' ' . __('payment.type.gift.subscription');
 						}
 					}
 				}
@@ -334,7 +334,7 @@ class OJSCompletedPayment extends Payment {
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issue = $issueDao->getById($this->assocId, $this->journalId);
 				if (!$issue) return __('manager.payment.notFound');
-				return $issue->getIssueIdentification(false, true);
+				return $issue->getIssueIdentification();
 			case PAYMENT_TYPE_GIFT:
 				$giftDao = DAORegistry::getDAO('GiftDAO');
 				$gift =& $giftDao->getGift($this->assocId);

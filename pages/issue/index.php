@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_issue Issue Pages
  */
- 
+
 /**
  * @file pages/issue/index.php
  *
@@ -12,7 +12,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_issue
- * @brief Handle requests for issue functions. 
+ * @brief Handle requests for issue functions.
  *
  */
 
@@ -21,7 +21,7 @@ switch ($op) {
 	case 'current':
 	case 'view':
 	case 'archive':
-	case 'viewIssue':
+	case 'viewPdf':
 	case 'viewDownloadInterstitial':
 	case 'viewFile':
 	case 'download':

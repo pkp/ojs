@@ -9,7 +9,7 @@
  */
 
 // Button
-.pkpt_button {
+.cmp_button {
 	display: inline-block;
 	padding: 0 1em;
 	background: #eee;
@@ -24,7 +24,7 @@
 }
 
 // Wire button
-.ojs_button_wire {
+.cmp_button_wire {
 	display: inline-block;
 	padding: 0 1em;
 	background: #fff;
@@ -57,56 +57,39 @@ input[type="phone"],
 	line-height: @double - 2; // account for border
 }
 
-// Galley download links
-.ojs_galleys {
-	margin: 0;
+// Access legend
+.cmp_access_legend {
+	margin: @double 0;
 	padding: 0;
 	list-style: none;
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	li {
 		display: inline-block;
-	}
-
-	a {
-		&:extend(.ojs_button_wire);
-
-		&:hover,
-		&:focus {
-			&:extend(.ojs_button_wire:hover);
-		}
-
-		&:before {
-			&:extend(.fa);
-			content: @fa-var-file-text-o;
-			margin-right: 0.25em;
-		}
-	}
-
-	.pdf a:before {
-		content: @fa-var-file-pdf-o;
-	}
-
-	.restricted a {
-		border-color: @bg;
+		margin-right: 2em;
+		font-size: @font-sml;
+		line-height: @double;
 		color: @text-light;
-
-		&:hover,
-		&:focus {
-			background: @bg;
-			color: @text;
-		}
 
 		&:before {
 			&:extend( .fa );
-			content: @fa-var-lock;
-			color: @offset;
+			margin-right: 0.5em;
+			color: @text;
 		}
+	}
+
+	.restricted:before {
+		content: @fa-var-lock;
+		color: @offset;
 	}
 }
 
 // Pagination component
 // eg: 1-2 of 10 items
-.ojs_pagination {
+.cmp_pagination {
 	margin-top: @double;
 	font-size: @font-sml;
 	line-height: @double;

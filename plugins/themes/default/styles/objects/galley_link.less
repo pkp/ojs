@@ -1,0 +1,45 @@
+/**
+ * @file styles/objects/galley_link.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to an issue table of contents view
+ * @link templates/frontend/objects/galley_link.tpl
+ */
+.obj_galley_link {
+	&:extend(.cmp_button_wire);
+
+	&:hover,
+	&:focus {
+		&:extend(.cmp_button_wire:hover);
+	}
+
+	&:before {
+		&:extend(.fa);
+		content: @fa-var-file-text-o;
+		margin-right: 0.25em;
+	}
+
+	&.pdf:before {
+		content: @fa-var-file-pdf-o;
+	}
+
+	&.restricted {
+		border-color: @bg;
+		color: @text-light;
+
+		&:hover,
+		&:focus {
+			background: @bg;
+			color: @text;
+		}
+
+		&:before {
+			&:extend( .fa );
+			content: @fa-var-lock;
+			color: @offset;
+		}
+	}
+}
