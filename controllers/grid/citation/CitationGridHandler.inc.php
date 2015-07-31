@@ -37,7 +37,7 @@ class CitationGridHandler extends PKPCitationGridHandler {
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		// Make sure the user can edit the submission in the request.
-		import('classes.security.authorization.SubmissionAccessPolicy');
+		import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
 		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments, 'assocId'));
 		return parent::authorize($request, $args, $roleAssignments);
 	}

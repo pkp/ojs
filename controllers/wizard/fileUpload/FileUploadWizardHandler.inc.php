@@ -74,7 +74,7 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 			return false;
 		}
 		if ($fileIdToValidate) {
-			import('classes.security.authorization.SubmissionFileAccessPolicy');
+			import('lib.pkp.classes.security.authorization.SubmissionFileAccessPolicy');
 			$this->addPolicy(new SubmissionFileAccessPolicy($request, $args, $roleAssignments, SUBMISSION_FILE_ACCESS_READ, $fileIdToValidate));
 		}
 

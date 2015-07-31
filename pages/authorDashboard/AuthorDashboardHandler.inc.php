@@ -17,26 +17,11 @@
 import('lib.pkp.pages.authorDashboard.PKPAuthorDashboardHandler');
 
 class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
-
 	/**
 	 * Constructor
 	 */
 	function AuthorDashboardHandler() {
 		parent::PKPAuthorDashboardHandler();
-	}
-
-
-	//
-	// Implement template methods from PKPHandler
-	//
-	/**
-	 * @copydoc PKPHandler::authorize()
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		import('classes.security.authorization.OjsAuthorDashboardAccessPolicy');
-		$this->addPolicy(new OjsAuthorDashboardAccessPolicy($request, $args, $roleAssignments), true);
-
-		return parent::authorize($request, $args, $roleAssignments);
 	}
 }
 

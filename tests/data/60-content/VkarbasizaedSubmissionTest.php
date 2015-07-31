@@ -51,8 +51,8 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->assignParticipant('Proofreader', 'Catherine Turner');
 
 		// Create a galley
-		$this->waitForElementPresent('css=[id^=component-grid-articlegalleys-articlegalleygrid-add-button-]');
-		$this->click('css=[id^=component-grid-articlegalleys-articlegalleygrid-add-button-]');
+		$this->waitForElementPresent('css=[id^=component-grid-articlegalleys-articlegalleygrid-addItem-button-]');
+		$this->click('css=[id^=component-grid-articlegalleys-articlegalleygrid-addItem-button-]');
 		$this->waitForElementPresent('css=[id^=label-]');
 		$this->type('css=[id^=label-]', 'PDF');
 		$this->select('id=galleyType', 'PDF Article Galley');

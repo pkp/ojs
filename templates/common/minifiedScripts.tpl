@@ -71,6 +71,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/ToggleFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/FileUploadFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/MultilingualInputHandler.js"></script>
+<script src="{$baseUrl}/lib/pkp/js/controllers/form/CancelActionAjaxFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/form/reviewer/ReviewerReviewStep3FormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/GridHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/CategoryGridHandler.js"></script>
@@ -91,6 +92,7 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/WizardHandler.js"></script>
 
 {* Specific controllers *}
+<script src="{$baseUrl}/lib/pkp/js/controllers/grid/queries/ReadQueryHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/FileUploadWizardHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/form/FileUploadFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/wizard/fileUpload/form/RevisionConfirmationHandler.js"></script>
@@ -128,7 +130,6 @@
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/stageParticipant/form/StageParticipantNotifyHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/reviewer/ReviewerTabHandler.js"></script>
-<script src="{$baseUrl}/lib/pkp/js/pages/authorDashboard/PKPAuthorDashboardHandler.js"></script>
 <script src="{$baseUrl}/lib/pkp/js/pages/authorDashboard/SubmissionEmailHandler.js"></script>
 <script src="{$baseUrl}/js/controllers/tab/issueEntry/IssueEntryTabHandler.js"></script>
 <script src="{$baseUrl}/js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js"></script>

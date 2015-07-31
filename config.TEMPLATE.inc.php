@@ -305,11 +305,6 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ; Default envelope sender to use if none is specified elsewhere
 ; default_envelope_sender = my_address@my_host.com
 
-; Enable attachments in the various "Send Email" pages.
-; (Disabling here will not disable attachments on features that
-; require them, e.g. attachment-based reviews)
-enable_attachments = On
-
 ; Amount of time required between attempts to send non-editorial emails
 ; in seconds. This can be used to help prevent email relaying via OJS.
 time_between_emails = 3600

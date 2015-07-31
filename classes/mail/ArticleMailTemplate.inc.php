@@ -24,13 +24,12 @@ class ArticleMailTemplate extends SubmissionMailTemplate {
 	 * @param $article object
 	 * @param $emailKey string optional
 	 * @param $locale string optional
-	 * @param $enableAttachments boolean optional
 	 * @param $journal object optional
 	 * @param $includeSignature boolean optional
 	 * @see SubmissionMailTemplate::SubmissionMailTemplate()
 	 */
-	function ArticleMailTemplate($article, $emailKey = null, $locale = null, $enableAttachments = null, $journal = null, $includeSignature = true) {
-		parent::SubmissionMailTemplate($article, $emailKey, $locale, $enableAttachments, $journal, $includeSignature);
+	function ArticleMailTemplate($article, $emailKey = null, $locale = null, $journal = null, $includeSignature = true) {
+		parent::SubmissionMailTemplate($article, $emailKey, $locale, $journal, $includeSignature);
 	}
 
 	function assignParams($paramArray = array()) {
