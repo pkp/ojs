@@ -457,11 +457,11 @@ Please confirm your ability to complete this vital contribution to the work of t
 
 We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
 
-Our decision is to:
+Our decision is to: Accept Submission
 
 {$editorialContactSignature}
 </body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
+		<description>This email from the Editor or Section Editor to an Author notifies them of a final "accept submission" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Editor Decision</subject>
@@ -469,11 +469,11 @@ Our decision is to:
 
 We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
 
-Our decision is to:
+Our decision is: Revisions Required
 
 {$editorialContactSignature}
 </body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
+		<description>This email from the Editor or Section Editor to an Author notifies them of a final "revisions required" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Editor Decision</subject>
@@ -481,11 +481,11 @@ Our decision is to:
 
 We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
 
-Our decision is to:
+Our decision is: Resubmit
 
 {$editorialContactSignature}
 </body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
+		<description>This email from the Editor or Section Editor to an Author notifies them of a final "resubmit" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Editor Decision</subject>
@@ -493,11 +493,11 @@ Our decision is to:
 
 We have reached a decision regarding your submission to {$journalTitle}, "{$articleTitle}".
 
-Our decision is to:
+Our decision is to: Decline
 
 {$editorialContactSignature}
 </body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
+		<description>This email from the Editor or Section Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
