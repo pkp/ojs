@@ -442,7 +442,7 @@ Our decision is to: Accept Submission<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission is "Accept Submission".</description>
+		<description>This email from the Editor or Section Editor to an Author notifies them of a final "accept submission" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
 		<subject>Editor Decision</subject>
@@ -450,7 +450,7 @@ Our decision is to: Accept Submission<br />
 <br />
 We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Our decision is to:<br />
+Our decision is to: Send to Review<br />
 <br />
 Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 <br />
@@ -480,7 +480,7 @@ Our decision is: Revisions Required<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission is "Revisions Required".</description>
+		<description>This email from the Editor or Section Editor to an Author notifies them of a final "revisions required" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Editor Decision</subject>
@@ -492,7 +492,7 @@ Our decision is to: Resubmit for Review<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission is "Resubmit for Review".</description>
+		<description>This email from the Editor or Section Editor to an Author notifies them of a final "resubmit" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Editor Decision</subject>
@@ -504,7 +504,7 @@ Our decision is to: Decline Submission<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission is "Decline Submission".</description>
+		<description>This email from the Editor or Section Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
