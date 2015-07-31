@@ -33,17 +33,10 @@
 		{* Display galleys for the entire issue *}
 		{if $issueGalleys}
 
-			{* Determine overall access status *}
-			{if (!$subscriptionRequired || $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $issueExpiryPartial))}
-				{assign var=hasAccess value=1}
-			{else}
-				{assign var=hasAccess value=0}
-			{/if}
-
 			<h3 class="heading_full_issue">{translate key="issue.fullIssue"}</h3>
 			<ul class="ojs_galleys">
 
-				{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
+				{if $hasAccess || $showGalleyLinks}
 					{foreach from=$issueGalleys item=issueGalley}
 
 						{* Determine galley type and URL op *}
@@ -57,7 +50,7 @@
 
 						{* Get user access flag *}
 						{assign var=restricted value=0}
-						{if $subscriptionRequired && $showGalleyLinks && !$hasAccess && $issue->getAccessStatus() != $smarty.const.ISSUE_ACCESS_OPEN}
+						{if !$hasAccess && $showGalleyLinks}
 							{if $restrictOnlyPdf && type=='pdf'}
 								{assign var=restricted value="1"}
 							{elseif !$restrictOnlyPdf}
@@ -90,7 +83,7 @@
 		{include file="issue/issue.tpl"}
 
 		{* Display a legend describing the open/restricted access icons *}
-		{if $subscriptionRequired && $showGalleyLinks && $showToc}
+		{if $showGalleyLinks && $showToc}
 			<ul class="access_legend">
 				<li class="restricted">
 					{if $purchaseArticleEnabled}

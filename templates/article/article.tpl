@@ -12,26 +12,21 @@
  *  $galley ArticleGalley The (optional!) galley object for the current view
  *  $galleys array The list of galleys available for this article
  *  $citationsFactory ItemIterator List of citations from this article.
- *  $subscriptionRequired boolean Whether or not a subscription is required
- *  $subscribedUser boolean Whether or not the current user is subscribed
- *  $subscribedDomain boolean Whether or not the user has subscription access by domain
  *  $showGalleyLinks boolean True iff OJS should display galley links regardless of subscription status
  *}
-{strip}
-	{if $galley}
-		{assign var=pubObject value=$galley}
-	{else}
-		{assign var=pubObject value=$article}
-	{/if}
-	{include file="article/header.tpl"}
-{/strip}
+{if !$galley}
+	{assign var="pageTitleTranslated" value=$article->getLocalizedTitle()|escape}
+{/if}
+{include file="common/frontend/header.tpl"}
 
 {if $galley}
+	{assign var=pubObject value=$galley}
 	{call_hook name="Templates::Galley::displayGalley" fileId=$fileId}
 {else}
+	{assign var=pubObject value=$article}
 	<div id="topBar">
 		{if is_a($article, 'PublishedArticle')}{assign var=galleys value=$article->getGalleys()}{/if}
-		{if $galleys && $subscriptionRequired && $showGalleyLinks}
+		{if $galleys && $showGalleyLinks}
 			<div id="accessKey">
 				<img src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
 				{translate key="reader.openAccess"}&nbsp;

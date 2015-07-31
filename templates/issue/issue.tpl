@@ -38,10 +38,10 @@
 					{/if}
 
 					{assign var=articleId value=$article->getId()}
-					{if (!$subscriptionRequired || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $articleExpiryPartial.$articleId))}
-						{assign var=hasAccess value=1}
+					{if ($hasAccess || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN || ($subscriptionExpiryPartial && $articleExpiryPartial.$articleId))}
+						{assign var=hasArticleAccess value=1}
 					{else}
-						{assign var=hasAccess value=0}
+						{assign var=hasArticleAccess value=0}
 					{/if}
 
 					<div class="title">
@@ -59,7 +59,7 @@
 					</div>
 
 					<ul class="ojs_galleys">
-						{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
+						{if $hasArticleAccess || $showGalleyLinks}
 							{foreach from=$article->getGalleys() item=galley name=galleyList}
 								{if $galley->getIsAvailable()}
 
@@ -72,7 +72,7 @@
 
 									{* Get user access flag *}
 									{assign var=restricted value=0}
-									{if $subscriptionRequired && $showGalleyLinks && !$hasAccess && $article->getAccessStatus() != $smarty.const.ISSUE_ACCESS_OPEN}
+									{if $showGalleyLinks && !$hasArticleAccess && $article->getAccessStatus() != $smarty.const.ISSUE_ACCESS_OPEN}
 										{if $restrictOnlyPdf && type == 'pdf'}
 											{assign var=restricted value="1"}
 										{elseif !$restrictOnlyPdf}

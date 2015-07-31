@@ -418,10 +418,8 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
 		}
 
-		$templateMgr->assign('subscriptionRequired', $subscriptionRequired);
-		$templateMgr->assign('subscribedUser', $subscribedUser);
-		$templateMgr->assign('subscribedDomain', $subscribedDomain);
-		$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
+		$templateMgr->assign('showGalleyLinks', !$subscriptionRequired || $journal->getSetting('showGalleyLinks'));
+		$templateMgr->assign('hasAccess', !$subscriptionRequired || $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $issueExpiryPartial));
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);

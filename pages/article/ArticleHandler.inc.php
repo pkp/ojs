@@ -150,14 +150,16 @@ class ArticleHandler extends Handler {
 				// The issue may not exist, if this is an editorial user
 				// and scheduling hasn't been completed yet for the article.
 				$issueAction = new IssueAction();
+				$subscriptionRequired = false;
 				if ($issue) {
-					$templateMgr->assign('subscriptionRequired', $issueAction->subscriptionRequired($issue));
+					$subscriptionRequired = $issueAction->subscriptionRequired($issue);
 				}
 
-				$templateMgr->assign('subscribedUser', $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
-				$templateMgr->assign('subscribedDomain', $issueAction->subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
+				$subscribedUser = $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
+				$subscribedDomain = $issueAction->subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 
-				$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
+				$templateMgr->assign('showGalleyLinks', !$subscriptionRequired || $journal->getSetting('showGalleyLinks'));
+				$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
 
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($request);
