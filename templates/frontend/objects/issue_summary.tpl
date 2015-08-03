@@ -27,14 +27,14 @@
 
 	<a class="title" href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">
         {if $issueTitle}
-            {$issueTitle}
+            {$issueTitle|escape}
         {else}
-            {$issueSeries}
+            {$issueSeries|escape}
         {/if}
 	</a>
     {if $issueTitle}
         <div class="series">
-            {$issueSeries}
+            {$issueSeries|escape}
         </div>
     {/if}
 
