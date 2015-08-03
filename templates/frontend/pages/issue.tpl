@@ -9,7 +9,10 @@
  *  (toc) or a cover image, with a click through to the toc.
  *
  * @uses $issue Issue The issue
+ * @uses $issueIdentification string Label for this issue, consisting of one or
+ *       more of the volume, number, year and title, depending on settings
  *}
+{assign var=pageTitleTranslated value=$issueIdentification}
 {include file="common/frontend/header.tpl"}
 
 {* @todo look into this and find an appropriate place for it *}

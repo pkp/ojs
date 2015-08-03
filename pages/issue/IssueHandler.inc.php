@@ -357,6 +357,7 @@ class IssueHandler extends Handler {
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		}
 
+		$templateMgr->assign('issueIdentification', $issue->getIssueIdentification());
 		$templateMgr->assign('issueTitle', $issue->getLocalizedTitle());
 		$templateMgr->assign('issueSeries', $issue->getIssueIdentification(array('showTitle' => false)));
 
