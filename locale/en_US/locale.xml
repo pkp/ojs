@@ -141,6 +141,7 @@
 	<message key="article.fontSize.small.altText">Small</message>
 	<message key="article.fontSize.medium.altText">Medium</message>
 	<message key="article.fontSize.large.altText">Large</message>
+	<message key="article.return">Return to Article Details</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Submission Editing</message>
@@ -235,6 +236,7 @@
 	<message key="issue.fullIssue">Full Issue</message>
 	<message key="issue.nonpdf.title">Issue Download</message>
 	<message key="issue.viewIssue">View Issue</message>
+	<message key="issue.return">Return to Issue Details</message>
 
 	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Currency</message>
@@ -757,6 +759,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.pageTitle">PDF View of {$pdfTitle}</message>
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Download this PDF file</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>

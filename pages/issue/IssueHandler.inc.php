@@ -161,17 +161,12 @@ class IssueHandler extends Handler {
 
 			// Display PDF galley inline
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->addJavaScript('js/inlinePdf.js');
-			$templateMgr->addJavaScript('lib/pkp/lib/pdfobject/js/pdfobject.js');
-			$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/pdfView.css');
 
-			$templateMgr->assign('issue', $issue);
+			$templateMgr->assign('pdfTitle', $issue->getIssueIdentification());
+			$templateMgr->assign('parent', $issue);
 			$templateMgr->assign('galley', $galley);
-			$templateMgr->assign('issueId', $issue->getId());
-			$templateMgr->assign('galleyId', $galleyId);
 
-			$templateMgr->assign('issueHeadingTitle', __('issue.viewIssue'));
-			$templateMgr->display('issue/issueGalley.tpl');
+			$templateMgr->display('frontend/pages/viewPdf.tpl');
 		}
 	}
 
