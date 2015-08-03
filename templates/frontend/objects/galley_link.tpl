@@ -28,10 +28,10 @@
 {* Get page and parentId for URL *}
 {if $parent instanceOf Issue}
 	{assign var="page" value="issue"}
-	{assign var="parentId" value=$parent->getBestIssueID()}
+	{assign var="parentId" value=$parent->getBestIssueId()}
 {else}
 	{assign var="page" value="article"}
-	{assign var="parentId" value=$parent->getBestArticleID()}
+	{assign var="parentId" value=$parent->getBestArticleId()}
 {/if}
 
 {* Get user access flag *}
