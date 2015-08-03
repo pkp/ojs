@@ -9,12 +9,18 @@
  *
  * @uses $issues Array Collection of issues to display
  *}
-{include file="common/frontend/header.tpl"}
+{if $issues->getPageCount() > 0 && $issues->getPage() > 1}
+	{assign var=pageNumber value={translate key="common.pageNumber" pageNumber=$issues->getPage()}}
+{/if}
+{include file="common/frontend/header.tpl" pageTitle="archive.archives"}
 
 <div class="page">
 
 	<h1>
 		{translate key="archive.archives"}
+		{if $pageNumber}
+			{translate key="common.pageNumber"}
+		{/if}
 	</h1>
 
 	{* No issues have been published *}
