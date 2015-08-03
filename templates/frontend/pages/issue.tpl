@@ -12,8 +12,7 @@
  * @uses $issueIdentification string Label for this issue, consisting of one or
  *       more of the volume, number, year and title, depending on settings
  *}
-{assign var=pageTitleTranslated value=$issueIdentification}
-{include file="common/frontend/header.tpl"}
+{include file="common/frontend/header.tpl" pageTitleTranslated=$issueIdentification}
 
 {* @todo look into this and find an appropriate place for it *}
 {if $issue}
