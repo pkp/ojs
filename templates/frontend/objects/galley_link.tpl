@@ -9,7 +9,7 @@
  *  in a list of galleys.
  *
  * @uses $galley Galley
- * @uses $parent Issue|Article Object which these galleries are attached to
+ * @uses $parent Issue|Article Object which these galleys are attached to
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $restrictOnlyPdf bool Is access only restricted to PDF galleys?
  * @uses $purchaseArticleEnabled bool Can this article be purchased?
