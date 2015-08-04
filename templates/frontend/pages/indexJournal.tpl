@@ -1,17 +1,24 @@
 {**
- * templates/index/journal.tpl
+ * templates/frontend/pages/indexJournal.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Journal index page.
+ * @brief Display the index page for a journal
  *
+ * @uses $currentJournal Journal This journal
+ * @uses $journalDescription string Journal description from HTML text editor
+ * @uses $homepageImage object Image to be displayed on the homepage
+ * @uses $additionalHomeContent string Arbitrary input from HTML text editor
+ * @uses $enableAnnouncementsHomepage bool Should we display announcements here?
+ * @uses $issue Issue Current issue
+ * @uses $socialMediaBlocks @todo
  *}
-{include file="common/frontend/header.tpl"}
+{include file="common/frontend/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
 <div class="page">
-	<h2>{$currentJournal->getLocalizedName()}</h2>
+	<h2 class="page_title">{$currentJournal->getLocalizedName()}</h2>
 
 	{$journalDescription}
 
@@ -38,6 +45,8 @@
 		{include file="frontend/objects/issue_toc.tpl"}
 	{/if}
 
+	{* Social media sharing blocks *}
+	{* @todo this hasn't been formatted or styled. May be removed *}
 	{if !empty($socialMediaBlocks)}
 		<div id="socialMediaBlocksContainer">
 		{foreach from=$socialMediaBlocks item=block name=b}
