@@ -190,6 +190,10 @@ class ArticleHandler extends Handler {
 				$citationDao = DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
 				$citationFactory = $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $article->getId());
 				$templateMgr->assign('citationFactory', $citationFactory);
+
+				// Keywords
+				$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+				$templateMgr->assign('keywords', $submissionKeywordDao->getKeywords($article->getId(), AppLocale::getLocale()));
 			}
 
 			$templateMgr->assign('issue', $issue);
@@ -199,8 +203,6 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('journalRt', $journalRt);
 			$templateMgr->assign('version', $version);
 			$templateMgr->assign('journal', $journal);
-			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('galleyId', $galleyId);
 			$templateMgr->assign('fileId', $fileId);
 			$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 
@@ -240,7 +242,7 @@ class ArticleHandler extends Handler {
 			// load Article galley plugins
 			PluginRegistry::loadCategory('viewableFiles', true);
 
-			$templateMgr->display('article/article.tpl');
+			$templateMgr->display('frontend/pages/article.tpl');
 		}
 	}
 

@@ -108,7 +108,6 @@
 	<message key="article.submissionId">Submission ID</message>
 	<message key="article.title">Title</message>
 	<message key="article.authors">Authors</message>
-	<message key="article.authorSeparator">, </message>
 	<message key="article.indexingInformation">Indexing Information</message>
 	<message key="article.metadata">Metadata</message>
 	<message key="article.journalSection">Journal Section</message>
@@ -142,6 +141,8 @@
 	<message key="article.fontSize.medium.altText">Medium</message>
 	<message key="article.fontSize.large.altText">Large</message>
 	<message key="article.return">Return to Article Details</message>
+	<message key="article.publishedIn">Published in {$issueLink}.</message>
+	<message key="article.publishedInWithSection">Published in the {$sectionTitle} section in {$issueLink}.</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Submission Editing</message>
