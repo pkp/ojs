@@ -813,7 +813,7 @@ class IssueManagementHandler extends EditorHandler {
 					 //needs to be updated with each journal using DOIs
 					 $campusOwner = array("uciem_westjem"=>'cdllib', "cjpp"=>'ucblibrary');
 					 error_log("Campus Owner: $campusOwner[$journalPath]");
-					 $ezidIdentifier = 'https://ezid.cdlib.org/doi/' . $articleDOI;
+					 $ezidIdentifier = 'https://ezid.cdlib.org/id/doi:' . $articleDOI;
 					 error_log("EZID IDENTIFIER $ezidIdentifier");
                      //now pass this to EZID:
 					
@@ -832,7 +832,7 @@ class IssueManagementHandler extends EditorHandler {
                         $doiExist = curl_exec($ch);
                         print curl_getinfo($ch, CURLINFO_HTTP_CODE) . "\n";
                         error_log("Check to see if $ezidIdentifier exists: $doiExist");
-                        if ((!$isBackIssue) || (preg_match("/404/",$doiExist))){//if this is a new issue or if the DOI hasn't yet been registered with EZID, then do the PUT request
+                        if ((!$isBackIssue) || (preg_match("/no such identifier/",$doiExist))){//if this is a new issue or if the DOI hasn't yet been registered with EZID, then do the PUT request
                             error_log("New issue or no registered DOI;give EZID a PUT request");
                             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT'); 
                         }
