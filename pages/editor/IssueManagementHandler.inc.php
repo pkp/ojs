@@ -813,7 +813,7 @@ class IssueManagementHandler extends EditorHandler {
 					 //needs to be updated with each journal using DOIs
 					 $campusOwner = array("uciem_westjem"=>'cdllib', "cjpp"=>'ucblibrary');
 					 error_log("Campus Owner: $campusOwner[$journalPath]");
-					 $ezidIdentifier = 'https://ezid.cdlib.org/id/doi%3A' . $articleDOI;
+					 $ezidIdentifier = 'https://ezid.cdlib.org/doi%3A' . $articleDOI;
 					 error_log("EZID IDENTIFIER $ezidIdentifier");
                      //now pass this to EZID:
 					
