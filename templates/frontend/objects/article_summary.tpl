@@ -31,9 +31,7 @@
 
 <div class="authors">
 	{if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
-		{foreach from=$article->getAuthors() item=author name=authorList}
-			{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last}{translate key="article.authorSeparator"}{/if}
-		{/foreach}
+		{$article->getAuthorString()}
 	{/if}
 </div>
 
