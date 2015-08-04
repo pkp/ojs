@@ -15,7 +15,7 @@
  * @uses $pubIdPlugins @todo
  *}
 <article class="obj_article_details">
-	<h1 class="title">
+	<h1 class="page_title">
 		{$article->getLocalizedTitle()|escape}
 	</h1>
 

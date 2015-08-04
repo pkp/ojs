@@ -17,7 +17,7 @@
 	{* A specific galley is being viewed *}
 	{* @todo figure out when and how this is used *}
 	{if $galley}
-		<h1>{$article->getLocalizedTitle()|escape}</h1>
+		<h1 class="page_title">{$article->getLocalizedTitle()|escape}</h1>
 
 		{assign var=pubObject value=$galley}
 		{call_hook name="Templates::Galley::displayGalley" fileId=$fileId}
