@@ -40,7 +40,7 @@
 		{foreach from=$article->getGalleys() item=galley}
 			<li>
 				{assign var="hasArticleAccess" value=$hasAccess}
-				{if ($article->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN)}
+				{if ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
 					{assign var="hasArticleAccess" value=1}
 				{/if}
 				{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess}
