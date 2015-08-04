@@ -73,7 +73,7 @@
 
 	<div class="issue">
 		{capture assign="issueLink"}
-			<a class="title" href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">
+			<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">
 				{$issue->getIssueIdentification()}
 			</a>
 		{/capture}
