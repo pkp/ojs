@@ -830,7 +830,7 @@ class IssueManagementHandler extends EditorHandler {
                         //The test below should be if the DOI doesn't exist at EZID
                         $doiExist = curl_exec($ch);
                         error_log("Check to see if $ch exists: $doiExist");
-                        if ((!$isBackIssue) || (preg_match("/404/",$doiExist)){//if this is a new issue or if the DOI hasn't yet been registered with EZID, then do the PUT request
+                        if ((!$isBackIssue) || (preg_match("/404/",$doiExist))){//if this is a new issue or if the DOI hasn't yet been registered with EZID, then do the PUT request
                             error_log("New issue or no registered DOI;give EZID a PUT request");
                             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT'); 
                         }
