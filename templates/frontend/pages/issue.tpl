@@ -11,6 +11,8 @@
  * @uses $issue Issue The issue
  * @uses $issueIdentification string Label for this issue, consisting of one or
  *       more of the volume, number, year and title, depending on settings
+ * @uses $issueGalleys array Galleys for the entire issue
+ * @uses $showGalleyLinks bool Show galley links to users without access?
  *}
 {include file="common/frontend/header.tpl" pageTitleTranslated=$issueIdentification}
 
@@ -42,6 +44,11 @@
 {* Display an issue with the Table of Contents *}
 {elseif $showToc}
 	{include file="frontend/objects/issue_toc.tpl"}
+
+	{* Display a legend describing the open/restricted access icons *}
+	{if $showGalleyLinks && $issueGalleys && $issue->getNumArticles()}
+		{include file="frontend/components/accessLegend.tpl"}
+	{/if}
 
 {* Display an issue without a Table of Contents *}
 {* @todo create an appropriate issue_cover.tpl object template for this *}

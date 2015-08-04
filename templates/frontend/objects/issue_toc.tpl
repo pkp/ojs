@@ -10,7 +10,7 @@
  * @uses $issue Issue The issue
  * @uses $issueTitle string Title of the issue. May be empty
  * @uses $issueSeries string Vol/No/Year string for the issue
- * @uses $galleys IssueGalleys Galleys for the entire issue
+ * @uses $issueGalleys array Galleys for the entire issue
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $showGalleyLinks bool Show galley links to users without access?
  *}
@@ -78,9 +78,4 @@
 		{/if}
 	{/foreach}
 	</ul>
-
-	{* Display a legend describing the open/restricted access icons *}
-	{if $showGalleyLinks && $showToc}
-		{include file="frontend/components/accessLegend.tpl"}
-	{/if}
 </div>
