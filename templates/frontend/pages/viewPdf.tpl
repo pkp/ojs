@@ -68,5 +68,7 @@
 
 	<iframe class="pdf" src="{url page="issue" op="download" path=$parentId|to_array:$galley->getBestGalleyId($currentJournal)}"></iframe>
 
+	{call_hook name="Templates::Common::Footer::PageFooter"}
+
 </body>
 </html>
