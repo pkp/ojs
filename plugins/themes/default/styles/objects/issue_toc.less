@@ -1,0 +1,104 @@
+/**
+ * @file styles/objects/issue_toc.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to an issue table of contents view
+ * @link templates/frontend/objects/issue_toc.tpl
+ */
+.obj_issue_toc {
+
+	> .title {
+		margin: 0;
+	}
+
+	> .series {
+		margin: 0;
+		font-size: @font-lead;
+		line-height: @line-header;
+		font-weight: @normal;
+		color: @text-light;
+	}
+
+	h3 {
+		display: inline-block;
+		margin-top: @double * 2;
+		border-bottom: 2px solid @text;
+		font-size: @font-base;
+		line-height: @double - 2; // Adjust for border
+	}
+
+	.sections,
+	.articles,
+	.galleys_links {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.galleys_links {
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	.section_no_title {
+		margin-top: @double * 2;
+	}
+
+	// Articles in issue table of contents
+	.articles {
+
+		> li {
+			margin-bottom: @double * 2;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.title {
+			font-size: @font-lead;
+			line-height: @line-lead;
+
+			a {
+				text-decoration: none;
+			}
+		}
+
+		.meta {
+			position: relative;
+		}
+
+		.authors {
+			font-size: @font-bump;
+			line-height: @line-lead;
+			color: @text-light;
+		}
+
+		.pages {
+			font-size: @font-sml;
+		}
+
+		.galleys_links {
+			margin-top: @base;
+		}
+	}
+
+	@media(min-width: @screen-tablet) {
+
+		.authors {
+			padding-right: 5em;
+		}
+
+		.pages {
+			position: absolute;
+			top: 0;
+			right: 0;
+			line-height: @line-lead;
+		}
+	}
+}

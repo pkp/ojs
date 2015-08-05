@@ -1,0 +1,110 @@
+/**
+ * @file styles/pages/search.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the search form and results page
+ * @todo The search page needs major revision to improve layout and styling.
+ * @link templates/frontend/pages/search.tpl
+ */
+.page_search {
+
+	// Query input
+	.search_all {
+		margin: 0;
+		padding: 0;
+		border: none;
+
+		.submit {
+			margin-top: @double;
+			text-align: right;
+
+			input {
+				&:extend(.cmp_button);
+			}
+		}
+
+		.submit input,
+		.query {
+			width: 100%;
+			font-size: @font-base;
+			line-height: @line-header - 2; // account for border
+		}
+	}
+
+	// Advanced filters open/close panel
+	.pkp_controllers_extrasOnDemand {
+		margin-top: @double * 2;
+		background: @bg;
+
+		.toggleExtras {
+			padding: @half @base;
+			border-bottom: 1px solid @lift;
+			line-height: @double;
+			cursor: pointer;
+		}
+	}
+
+	.extrasContainer {
+		padding: @base;
+		background: @bg;
+
+		h3:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.preresults {
+		margin-top: @double * 2;
+		line-height: @base;
+	}
+
+	.results {
+		&:extend(.pkp_unstyled_list);
+
+		> li {
+			padding: @base 0;
+			border-bottom: @bg-border;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+
+		.title {
+			display: block;
+			font-size: @font-bump;
+			line-height: @line-bump;
+		}
+
+		.authors {
+			display: block;
+			color: @text-light;
+		}
+
+		.journal,
+		.issue {
+			display: block;
+			font-size: @font-sml;
+			line-height: @double;
+			max-width: 100%;
+			overflow-x: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.galley_links {
+			&:extend(.pkp_unstyled_list);
+
+			> li {
+				display: inline-block;
+			}
+		}
+	}
+
+	.cmp_notification {
+		margin-top: @double;
+	}
+}

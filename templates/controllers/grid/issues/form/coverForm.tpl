@@ -29,7 +29,7 @@
 			{fbvElement type="checkbox" id="showCoverPage" value=1 checked=$showCoverPage label="editor.issues.showCoverPage" inline=true}
 		{/fbvFormSection}
 	{/fbvFormArea}
-	{fbvFormArea id="coverFile" class="border"}
+	{fbvFormArea id="coverFile"}
 		{fbvFormSection title="editor.issues.coverPage"}
 			<div id="pluploadimage"></div>
 			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />

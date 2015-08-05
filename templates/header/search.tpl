@@ -8,18 +8,8 @@
  * Common search box.
  *}
 {if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
-	<script type="text/javascript">
-		$(function() {ldelim}
-			$('#topSearchFormField').jLabel();
-		{rdelim});
-	</script>
-
-	<div class="pkp_structure_search pkp_helpers_align_right">
-		<form id="topSearchForm" action="{url page="search" op="search"}" method="post">
-			<fieldset>
-				<input id="topSearchFormField" name="query" value="{$searchQuery|escape}" type="text" title="{translate key="common.search"}..." />
-				<button class="go">{translate key="common.go"}</button>
-			</fieldset>
-		</form>
-	</div>
+	<form class="pkp_search" action="{url page="search" op="search"}" method="post">
+		<input name="query" value="{$searchQuery|escape}" type="text">
+		<button>{translate key="common.search"}</button>
+	</form>
 {/if}

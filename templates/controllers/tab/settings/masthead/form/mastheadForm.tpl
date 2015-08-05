@@ -23,6 +23,12 @@
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="mastheadNotification"}
 
 	{fbvFormArea id="mastheadFormArea"}
+
+		{fbvFormSection list=true}
+			{if $enabled}{assign var="enabled" value="checked"}{/if}
+			{fbvElement type="checkbox" id="journalEnabled" value="1" checked=$enabled label="admin.journals.enableJournalInstructions"}
+		{/fbvFormSection}
+
 		{fbvFormSection title="manager.setup.contextName" for="name" required=true inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" multilingual=true name="name" id="name" value=$name}
 		{/fbvFormSection}
@@ -35,18 +41,13 @@
 			{fbvElement type="text" multilingual=true name="abbreviation" id="abbreviation" value=$abbreviation}
 		{/fbvFormSection}
 
-		{fbvFormSection for="onlineIssn" description="manager.setup.issnDescription"}
+		{fbvFormSection label="manager.setup.Issn" for="onlineIssn" description="manager.setup.issnDescription"}
 			{fbvElement type="text" name="onlineIssn" id="onlineIssn" value=$onlineIssn label="manager.setup.onlineIssn" size=$fbvStyles.size.SMALL inline=true}
 			{fbvElement type="text" name="printIssn" id="printIssn" value=$printIssn label="manager.setup.printIssn" size=$fbvStyles.size.SMALL inline=true}
 		{/fbvFormSection}
 
 		{fbvFormSection label="manager.setup.journalDescription" for="description"}
 			{fbvElement type="textarea" multilingual=true name="description" id="description" value=$description rich=true height=$fbvStyles.height.SHORT}
-		{/fbvFormSection}
-
-		{fbvFormSection list=true}
-			{if $enabled}{assign var="enabled" value="checked"}{/if}
-			{fbvElement type="checkbox" id="journalEnabled" value="1" checked=$enabled label="admin.journals.enableJournalInstructions"}
 		{/fbvFormSection}
 
 		{fbvFormSection label="manager.masthead.title" for="masthead" description="manager.setup.masthead.description"}

@@ -1,0 +1,87 @@
+//
+// Common variables
+//
+// These variables are used throughout the theme styles. They provide a fully
+// separated interface for defining variables, so that changes desired on the
+// frontend won't impact the backend.
+//
+
+//
+// Colors
+//
+
+// Background
+@bg:                     #ddd;
+@shade:                  #888;
+@lift:                   #fff;
+
+// Primary "anchor" color for backgrounds and links
+@primary:                #113241;
+@primary-lift:           #007ab2;
+
+// Offset "highlight" color
+@offset:                 #D00A6C;
+@offset-shade:           #B50E61;
+
+// Yes/no, success/error, on/off, go/stop, etc
+@yes:                    #00B24E;
+@no:                     @offset;
+@warn:                   @offset;
+
+// Text
+@text:                   #222;
+@text-light:             #777;
+
+// Border colors
+@bg-border-color:        #bbb;
+
+//
+// Spacing
+//
+// The baseline size should be used to achieve consistent vertical rhythm. All
+// vertical margins, padding, line-height and block heights should use a
+// multiple of this baseline (or half/quarter). Where appropriate, horizontal
+// spacings should also use this baseline. However, in some cases with inline
+// elements it is more appropriate to use an `em` spacing.
+//
+@base:                   16px;
+@half:                   @base / 2;
+@double:                 @base * 2;
+
+//
+// Typography
+//
+@font:                   "Noto Sans", Arial, Helvetica, sans-serif;
+@font-sml:               14px;
+@line-sml:               24px;
+@font-base:              16px;
+@line-base:              24px;
+@font-bump:              18px;
+@line-bump:              24px;
+@font-lead:              24px;
+@line-lead:              @double;
+@font-header:            36px;
+@line-header:            @double + @base;
+
+// Font weights
+@normal:                 400;
+@bold:                   700;
+
+//
+// Borders
+//
+@bg-border:              1px solid @bg-border-color;
+@radius:                 3px;
+
+
+//
+// Screen width breakpoints
+//
+@screen-phone:                480px;
+@screen-phone-container:      @screen-phone - (@base * 2);
+@screen-tablet:               768px;
+@screen-tablet-container:     @screen-tablet - (@double * 2);
+@screen-desktop:              992px;
+@screen-desktop-container:    @screen-desktop - (@double * 2);
+@screen-lg-desktop:           1200px;
+@screen-lg-desktop-container: @screen-lg-desktop - (@double * 2);

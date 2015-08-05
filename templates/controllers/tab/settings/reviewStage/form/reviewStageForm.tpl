@@ -11,8 +11,7 @@
 {capture assign="additionalReviewFormOptions"}
 	{* Extend the basic review stage form with additional settings for OJS *}
 
-	<p>{translate key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"}</p>
-	{fbvFormSection title="manager.setup.reviewOptions.reviewerAccess" list=true}
+	{fbvFormSection label="manager.setup.reviewOptions.reviewerAccess" for="notAnId" description="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description" list=true}
 		{fbvElement type="checkbox" id="reviewerAccessKeysEnabled" checked=$reviewerAccessKeysEnabled label="manager.setup.reviewOptions.reviewerAccessKeysEnabled"}
 		{fbvElement type="checkbox" id="restrictReviewerFileAccess" checked=$restrictReviewerFileAccess label="manager.setup.reviewOptions.restrictReviewerFileAccess"}
 	{/fbvFormSection}

@@ -16,8 +16,9 @@
 </script>
 
 
-<div class="block" id="sidebarRTRelatedItems">
-	<span class="blockTitle">{translate key="plugins.block.relatedItems.title"}</span>
+<div class="pkp_block block_rt_related_items">
+	<span class="title">{translate key="plugins.block.relatedItems.title"}</span>
+	<div class="content">
 		<table>
 			<tr>
 				<td valign="top" style="width:26px;">
@@ -40,6 +41,7 @@
 				</td>
 			</tr>
 		</table>
+	</div>
 </div>
 
 {/if}

@@ -55,7 +55,7 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{fbvFormArea id="journalListOptions" class="border"}
+	{fbvFormArea id="journalListOptions"}
 		<p>{translate key="admin.settings.journalsList.description"}</p>
 
 		{fbvFormSection list=true}

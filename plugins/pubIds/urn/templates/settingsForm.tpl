@@ -156,7 +156,7 @@
 		</td>
 	</tr>
 </table>
-{fbvFormArea id="doiSuffixReassignFormArea" class="border" title="plugins.pubIds.urn.manager.settings.clearURNs"}
+{fbvFormArea id="doiSuffixReassignFormArea" title="plugins.pubIds.urn.manager.settings.clearURNs"}
 	{fbvFormSection}
 		<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.clearURNs.description"}</span><br/>
 		{include file="linkAction/linkAction.tpl" action=$clearPubIdsLinkAction contextId="urnSettingsForm"}

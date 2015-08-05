@@ -1,0 +1,85 @@
+/**
+ * @file styles/structure/main.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the main content panel
+ */
+
+.pkp_structure_main {
+
+	h1 {
+		font-size: @font-header;
+		line-height: @line-header;
+		font-weight: @bold;
+	}
+
+	h2 {
+		font-size: @font-lead;
+		line-height: @line-lead;
+		font-weight: @bold;
+	}
+
+	h3 {
+		font-size: @font-bump;
+		line-height: @line-bump;
+		font-weight: @bold;
+	}
+
+	h4 {
+		font-size: @font-base;
+		line-height: @line-base;
+		font-weight: @bold;
+	}
+
+	h5 {
+		font-size: @font-base;
+		line-height: @line-base;
+		font-weight: @normal;
+	}
+
+	h6 {
+		font-size: @font-sml;
+		line-height: @line-sml;
+		font-weight: @bold;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin: (@double * 2) 0 @double;
+	}
+
+	h5,
+	h6 {
+		margin: @double 0;
+	}
+
+	p {
+		margin: @line-base 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	// Page titles shuld always have h1 styles
+	.page_title {
+		&:extend(.pkp_structure_main h1);
+		margin-top: 0;
+	}
+}
+
+// Issues archive page
+.issues_archive {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		margin-bottom: @double;
+	}
+}

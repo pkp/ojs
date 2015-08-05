@@ -37,7 +37,7 @@
 	<input type="hidden" name="markAsPaid" value="0" />
 
 	{if !$publicationFeeEnabled || $publicationPayment}
-		{fbvFormArea id="schedulingInformation" title="editor.article.scheduleForPublication" class="border"}
+		{fbvFormArea id="schedulingInformation" title="editor.article.scheduleForPublication"}
 			{fbvFormSection for="schedule"}
 				{if $publishedArticle}
 					{assign var=issueId value=$publishedArticle->getIssueId()}
@@ -49,7 +49,7 @@
 		{/fbvFormArea}
 
 		{if $enablePublicArticleId || $enablePageNumber}
-			{fbvFormArea id="customExtras" title="editor.article.customJournalSettings" class="border"}
+			{fbvFormArea id="customExtras" title="editor.article.customJournalSettings"}
 				{fbvFormSection for="customExtras"}
 					{if $enablePublicArticleId}
 							{if $publishedArticle}
@@ -72,7 +72,7 @@
 		{/if}
 
 		{if $publishedArticle}
-			{fbvFormArea id="schedulingInformation" title="editor.issues.published" class="border"}
+			{fbvFormArea id="schedulingInformation" title="editor.issues.published"}
 				{fbvFormSection for="publishedDate"}
 					{fbvElement type="text" required=true id="datePublished" value=$publishedArticle->getDatePublished()|date_format:$dateFormatShort translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM}
 				{if $issueAccess && $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $context->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
@@ -82,7 +82,7 @@
 			{/fbvFormArea}
 		{/if}
 	{else}
-		{fbvFormArea id="waivePayment" title="editor.article.payment.publicationFeeNotPaid" class="border"}
+		{fbvFormArea id="waivePayment" title="editor.article.payment.publicationFeeNotPaid"}
 			{fbvFormSection for="waivePayment" size=$fbvStyles.size.MEDIUM}
 				{fbvElement type="button" label="payment.paymentReceived" id="paymentReceivedButton" inline=true}
 				{fbvElement type="button" label="payment.waive" id="waivePaymentButton" inline=true}
@@ -90,7 +90,7 @@
 		{/fbvFormArea}
 	{/if}
 
-	{fbvFormArea id="permissions" title="submission.permissions" class="border"}
+	{fbvFormArea id="permissions" title="submission.permissions"}
 		{fbvFormSection list=true}
 			{fbvElement type="checkbox" id="attachPermissions" label="submission.attachPermissions"}
 		{/fbvFormSection}

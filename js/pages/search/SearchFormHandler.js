@@ -40,7 +40,6 @@
 			// Auto-complete is switched off.
 			$queryInput = $form.find('input[name="query"]');
 		}
-		$queryInput.focus().select();
 
 		// Configure the form handler.
 		options.submitHandler = this.submitForm;

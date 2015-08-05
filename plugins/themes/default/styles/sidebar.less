@@ -1,0 +1,45 @@
+/**
+ * @file plugins/themes/default/styles/sidebar.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles for the sidebar blocks
+ *
+ */
+
+.pkp_block {
+	margin-bottom: @double;
+	font-size: @font-sml;
+	line-height: @line-sml;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.title {
+		display: inline-block;
+		margin-bottom: @base;
+		border-bottom: @bg-border;
+		font-weight: @bold;
+		line-height: @double - 1; // account for border
+		color: @text-light;
+	}
+}
+
+// Strip styles from some of the block lists
+.block_information ul,
+.block_web_feed ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Information sidebar
+.block_information {
+
+	a {
+		text-decoration: none;
+	}
+}

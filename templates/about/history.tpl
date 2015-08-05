@@ -10,9 +10,9 @@
  *}
 {strip}
 {assign var="pageTitle" value="about.history"}
-{include file="common/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {/strip}
 
 {$history}
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}
