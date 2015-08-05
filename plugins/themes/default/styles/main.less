@@ -49,11 +49,17 @@
 	h1,
 	h2,
 	h3,
-	h4,
+	h4 {
+		margin: (@double * 2) 0 @double;
+	}
+
 	h5,
-	h6,
-	p {
+	h6 {
 		margin: @double 0;
+	}
+
+	p {
+		margin: @line-base 0;
 	}
 
 	p:last-child {
