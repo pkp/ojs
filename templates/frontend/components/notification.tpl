@@ -11,6 +11,6 @@
  * @uses $type string A class which will be added to the notification element
  * @uses $message string The notification message
  *}
-<div class="cmp_notification {$type}">
+<div class="cmp_notification {$type|escape|replace:' ':'_'}">
 	{$message}
 </div>
