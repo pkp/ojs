@@ -127,7 +127,7 @@ class AboutContextHandler extends Handler {
 			reset($submissionChecklist);
 		}
 		$templateMgr->assign('submissionChecklist', $submissionChecklist);
-		$templateMgr->display('about/submissions.tpl');
+		$templateMgr->display('frontend/pages/submissions.tpl');
 	}
 
 	/**

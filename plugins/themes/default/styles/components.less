@@ -95,3 +95,19 @@ input[type="phone"],
 	color: @text-light;
 	text-align: right;
 }
+
+// Edit link to jump from frontend section to backend editing location
+// It usually appears within a heading element <h*>
+.cmp_edit_link {
+	display: inline-block;
+	margin-left: 1em;
+	font-size: @font-sml;
+	line-height: 1; // Try not to disrupt parent line height
+	vertical-align: middle;
+	text-decoration: none;
+
+	&:before {
+		&:extend(.fa);
+		content: @fa-var-pencil;
+	}
+}

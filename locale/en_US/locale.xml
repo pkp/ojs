@@ -800,11 +800,9 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="about.sponsors">Sponsors</message>
 	<message key="about.contributors">Sources of Support</message>
 	<message key="about.onlineSubmissions">Online Submissions</message>
-	<message key="about.onlineSubmissions.haveAccount">Already have a Username/Password for {$journalTitle}?</message>
-	<message key="about.onlineSubmissions.login">Go to Login</message>
-	<message key="about.onlineSubmissions.needAccount">Need a Username/Password?</message>
-	<message key="about.onlineSubmissions.registration">Go to Registration</message>
-	<message key="about.onlineSubmissions.registrationRequired">Registration and login are required to submit items online and to check the status of current submissions.</message>
+	<message key="about.onlineSubmissions.login">Login</message>
+	<message key="about.onlineSubmissions.register">Register</message>
+	<message key="about.onlineSubmissions.registrationRequired">You must be registered and logged in to submit items and track current submissions. {$login} to an existing account or {$register} a new account.</message>
 	<message key="about.authorGuidelines">Author Guidelines</message>
 	<message key="about.submissionPreparationChecklist">Submission Preparation Checklist</message>
 	<message key="about.submissionPreparationChecklist.description">As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines.</message>
@@ -842,6 +840,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="help.ojsHelp">Open Journal Systems Help</message>
 	<message key="help.ojsHelpAbbrev">OJS Help</message>
 	<message key="help.searchReturnResults">Return to Search Results</message>
+	<message key="help.goToEditPage">Edit {$sectionTitle}</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Thank You</message>
