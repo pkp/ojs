@@ -108,7 +108,7 @@ class AboutContextHandler extends Handler {
 	function editorialTeam($args, $request) {
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->display('about/editorialTeam.tpl');
+		$templateMgr->display('frontend/pages/editorialTeam.tpl');
 	}
 
 	/**
