@@ -18,7 +18,7 @@
 
 	{* Indicate if this is only a preview *}
 	{if !$issue->getPublished()}
-		{include file="frontend/components/notification.tpl" type="warning" message={translate key="editor.issues.preview"}}
+		{include file="frontend/components/notification.tpl" type="warning" messageKey="editor.issues.preview"}
 	{/if}
 
 	{* Title *}

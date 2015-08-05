@@ -10,7 +10,12 @@
  *
  * @uses $type string A class which will be added to the notification element
  * @uses $message string The notification message
+ * @uses $messageKey string Optional translation key to generate the message
  *}
 <div class="cmp_notification {$type|escape|replace:' ':'_'}">
-	{$message}
+	{if $messageKey}
+		{translate key=$messageKey}
+	{else}
+		{$message}
+	{/if}
 </div>
