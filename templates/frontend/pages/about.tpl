@@ -205,13 +205,9 @@
 				<ul>
 					{foreach from=$sponsors item=sponsor}
 						<li>
-							{if $sponsor.url}
-								<a href="{$sponsor.url|escape}">
-									{$sponsor.institution|escape}
-								</a>
-							{else}
+							<a href="{$sponsor.url|escape}">
 								{$sponsor.institution|escape}
-							{/if}
+							</a>
 						</li>
 					{/foreach}
 				</ul>
@@ -230,13 +226,9 @@
 				<ul>
 					{foreach from=$contributors item=contributor}
 						<li>
-							{if $contributor.url}
-								<a href="{$contributor.url|escape}">
-									{$contributor.institution|escape}
-								</a>
-							{else}
+							<a href="{$contributor.url|escape}">
 								{$contributor.institution|escape}
-							{/if}
+							</a>
 						</li>
 					{/foreach}
 				</ul>
