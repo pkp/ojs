@@ -26,17 +26,17 @@
 	{/if}
 
 	<a class="title" href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">
-        {if $issueTitle}
-            {$issueTitle|escape}
-        {else}
-            {$issueSeries|escape}
-        {/if}
+		{if $issueTitle}
+			{$issueTitle|escape}
+		{else}
+			{$issueSeries|escape}
+		{/if}
 	</a>
-    {if $issueTitle}
-        <div class="series">
-            {$issueSeries|escape}
-        </div>
-    {/if}
+	{if $issueTitle}
+		<div class="series">
+			{$issueSeries|escape}
+		</div>
+	{/if}
 
 	<div class="description">
 		{$issueDescription|strip_unsafe_html|nl2br}

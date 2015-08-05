@@ -18,10 +18,10 @@
 	<meta name="citation_issn" content="{$issn|strip_tags|escape}"/>
 {/if}
 {foreach name="authors" from=$article->getAuthors() item=author}
-        <meta name="citation_author" content="{$author->getFirstName()|escape}{if $author->getMiddleName() != ""} {$author->getMiddleName()|escape}{/if} {$author->getLastName()|escape}"/>
-{if $author->getLocalizedAffiliation() != ""}
-        <meta name="citation_author_institution" content="{$author->getLocalizedAffiliation()|strip_tags|escape}"/>
-{/if}
+	<meta name="citation_author" content="{$author->getFirstName()|escape}{if $author->getMiddleName() != ""} {$author->getMiddleName()|escape}{/if} {$author->getLastName()|escape}"/>
+	{if $author->getLocalizedAffiliation() != ""}
+		<meta name="citation_author_institution" content="{$author->getLocalizedAffiliation()|strip_tags|escape}"/>
+	{/if}
 {/foreach}
 <meta name="citation_title" content="{$article->getLocalizedTitle()|strip_tags|escape}"/>
 

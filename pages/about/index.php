@@ -17,19 +17,19 @@
  */
 
 switch($op) {
-    case 'about':
-    case 'subscriptions':
-    case 'editorialTeam':
-    case 'submissions':
-    case 'memberships':
-    case 'history':
-        define('HANDLER_CLASS', 'AboutContextHandler');
-        import('pages.about.AboutContextHandler');
-        break;
-    case 'aboutThisPublishingSystem':
-        define('HANDLER_CLASS', 'AboutSiteHandler');
-        import('lib.pkp.pages.about.AboutSiteHandler');
-        break;
+	case 'about':
+	case 'subscriptions':
+	case 'editorialTeam':
+	case 'submissions':
+	case 'memberships':
+	case 'history':
+		define('HANDLER_CLASS', 'AboutContextHandler');
+		import('pages.about.AboutContextHandler');
+		break;
+	case 'aboutThisPublishingSystem':
+		define('HANDLER_CLASS', 'AboutSiteHandler');
+		import('lib.pkp.pages.about.AboutSiteHandler');
+		break;
 }
 
 ?>
