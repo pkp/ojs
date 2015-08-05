@@ -237,3 +237,5 @@
 	{/if}
 
 </div><!-- .page -->
+
+{include file="common/frontend/footer.tpl"}
