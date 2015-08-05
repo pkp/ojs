@@ -30,7 +30,7 @@
  *}
 {include file="common/frontend/header.tpl" pageTitle="about.aboutTheJournal"}
 
-<div class="page">
+<div class="page page_about">
 	<h1 class="page_title">
 		{translate key="about.aboutTheJournal"}
 	</h1>
