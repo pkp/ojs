@@ -13,6 +13,9 @@
  * @uses $showGalleyLinks bool Show galley links to users without access?
  *}
 {assign var=articlePath value=$article->getBestArticleId($currentJournal)}
+{if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
+	{assign var="showAuthor" value=true}
+{/if}
 
 {if $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getHideCoverPageToc($locale)}
 	<div class="cover">
@@ -29,11 +32,22 @@
 	</a>
 </div>
 
-<div class="authors">
-	{if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
+{if $showAuthor || $article->getPages()}
+<div class="meta">
+	{if $showAuthor}
+	<div class="authors">
 		{$article->getAuthorString()}
+	</div>
+	{/if}
+
+	{* Page numbers for this article *}
+	{if $article->getPages()}
+		<div class="pages">
+			{$article->getPages()|escape}
+		</div>
 	{/if}
 </div>
+{/if}
 
 <ul class="galleys_links">
 	{if $hasAccess || $showGalleyLinks}
@@ -48,11 +62,5 @@
 		{/foreach}
 	{/if}
 </ul>
-
-{if $article->getPages()}
-	<div class="pages">
-		{$article->getPages()|escape}
-	</div>
-{/if}
 
 {call_hook name="Templates::Issue::Issue::Article"}

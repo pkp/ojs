@@ -69,15 +69,36 @@
 			}
 		}
 
+		.meta {
+			position: relative;
+		}
+
 		.authors {
 			font-size: @font-bump;
-			font-style: italic;
 			line-height: @line-lead;
 			color: @text-light;
 		}
 
+		.pages {
+			font-size: @font-sml;
+		}
+
 		.galleys_links {
 			margin-top: @base;
+		}
+	}
+
+	@media(min-width: @screen-tablet) {
+
+		.authors {
+			padding-right: 5em;
+		}
+
+		.pages {
+			position: absolute;
+			top: 0;
+			right: 0;
+			line-height: @line-lead;
 		}
 	}
 }
