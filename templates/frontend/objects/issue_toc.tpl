@@ -60,13 +60,14 @@
 	<ul class="sections">
 	{foreach name=sections from=$publishedArticles item=section}
 		{if $section.articles}
-			<li class="section section_{$section.title|escape|replace:' ':'_'}">
-				{if $section.title}
+			{if !$section.title}
+				<li class="section section_no_title">
+			{else}
+				<li class="section section_{$section.title|escape|replace:' ':'_'}">
 					<h3>
-						{$section.title}
+						{$section.title|escape}
 					</h3>
-				{/if}
-
+			{/if}
 				<ul class="articles">
 					{foreach from=$section.articles item=article}
 						<li>
