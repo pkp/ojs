@@ -10,18 +10,21 @@
 
 .pkp_structure_main {
 
-	// h1's and h2's should only be assigned to page titles or section deviders
-	// of commensurable weight. Visibly we don't distinguish
-	h1,
-	h2 {
+	h1 {
 		font-size: @font-header;
 		line-height: @line-header;
 		font-weight: @bold;
 	}
 
-	h3 {
+	h2 {
 		font-size: @font-lead;
 		line-height: @line-lead;
+		font-weight: @bold;
+	}
+
+	h3 {
+		font-size: @font-bump;
+		line-height: @line-bump;
 		font-weight: @bold;
 	}
 
@@ -57,7 +60,9 @@
 		margin-bottom: 0;
 	}
 
+	// Page titles shuld always have h1 styles
 	.page_title {
+		&:extend(.pkp_structure_main h1);
 		margin-top: 0;
 	}
 }

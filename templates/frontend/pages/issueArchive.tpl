@@ -16,7 +16,7 @@
 
 <div class="page">
 
-	<h1>
+	<h1 class="page_title">
 		{translate key="archive.archives"}
 		{if $pageNumber}
 			{translate key="common.pageNumber"}
