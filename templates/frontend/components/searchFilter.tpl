@@ -1,20 +1,22 @@
 {**
- * templates/search/searchFilter.tpl
+ * templates/frontend/components/searchFilter.tpl
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Search filter template.
+ * @brief View of a filter (active or inactive) used on the search page.
+ * @todo The search filter component needs a pretty heavy rewrite along with the
+ *  search.tpl page template. This template includes far too much logic which
+ *  could be processed in SearchHandler.inc.php.
  *
- * Parameters:
- *   $filterType string Can be "date" or "text" (default: text)
- *   $filterName string
- *   $filterValue string
- *   $key string The translation key for the field name.
- *   $displayIf string Can be "emptyFilter" or "activeFilter".
- *   $startYear string Required for filter type "date".
- *   $endYear string Required for filter type "date".
+ * @uses $filterType string Can be "date" or "text" (default: text)
+ * @uses $filterName string
+ * @uses $filterValue string
+ * @uses $key string The translation key for the field name.
+ * @uses $displayIf string Can be "emptyFilter" or "activeFilter".
+ * @uses $startYear string Required for filter type "date".
+ * @uses $endYear string Required for filter type "date".
  *}
 {if empty($filterValue) || ($filterType == "date" && $filterValue == "--")}
 	{assign var="isEmptyFilter" value=1}
@@ -22,11 +24,11 @@
 	{assign var="isEmptyFilter" value=0}
 {/if}
 {if ($displayIf == "emptyFilter" && $isEmptyFilter) || ($displayIf == "activeFilter" && !$isEmptyFilter)}
-	<tr>
-		<td class="label">
-			<label for="{$filterName}">{translate key=$key}</label>
-		</td>
-		<td class="value">
+	<div class="cmp_search_filter">
+		<label for="{$filterName}">
+			{translate key=$key}
+		</label>
+		<div class="value">
 			{if $filterType == "date"}
 				{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
 				{if $filterName == "dateTo"}
@@ -59,7 +61,7 @@
 					{assign var=$filterName value=""}
 				{/if}
 				{* Display a link to the same search query without this filter *}
-				<a href="{url query=$query searchJournal=$searchJournal abstract=$abstract authors=$authors title=$title
+				<a class="delete" href="{url query=$query searchJournal=$searchJournal abstract=$abstract authors=$authors title=$title
 							galleyFullText=$galleyFullText discipline=$discipline subject=$subject
 							type=$type coverage=$coverage indexTerms=$indexTerms
 							dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear
@@ -76,6 +78,6 @@
 					{assign var=$filterName value=$filterValue}
 				{/if}
 			{/if}
-		</td>
-	</tr>
+		</div>
+	</div>
 {/if}

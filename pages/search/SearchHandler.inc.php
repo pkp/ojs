@@ -179,7 +179,7 @@ class SearchHandler extends Handler {
 		$this->_assignSearchFilters($request, $templateMgr, $searchFilters);
 		$templateMgr->assign('results', $results);
 		$templateMgr->assign('error', $error);
-		$templateMgr->display('search/search.tpl');
+		$templateMgr->display('frontend/pages/search.tpl');
 	}
 
 	/**

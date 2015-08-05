@@ -49,6 +49,7 @@ input[type="url"],
 input[type="phone"],
  {
 	padding: 0 0.5em;
+	max-width: 100%;
 	background: #fff;
 	border: 1px solid #aaa;
 	border-radius: @radius;
@@ -110,4 +111,32 @@ input[type="phone"],
 		&:extend(.fa);
 		content: @fa-var-pencil;
 	}
+}
+
+// Search result filter
+.cmp_search_filter {
+	margin-bottom: @base;
+	font-size: @font-sml;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	label {
+		font-style: italic;
+	}
+
+	.delete {
+		color: @no;
+	}
+}
+
+// Notification
+// @todo needs work and styles for error/warning/notice instances
+.cmp_notification {
+	display: block;
+	width: 100%;
+	padding: @double;
+	background: @bg;
+	text-align: center;
 }

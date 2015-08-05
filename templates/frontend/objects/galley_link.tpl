@@ -13,8 +13,15 @@
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $restrictOnlyPdf bool Is access only restricted to PDF galleys?
  * @uses $purchaseArticleEnabled bool Can this article be purchased?
- * @uses $currentJournal Journal The journal context
+ * @uses $currentJournal Journal The current journal context
+ * @uses $journalOverride Journal An optionl argument to override the current
+ *       journal with a specific context
  *}
+
+{* Override the $currentJournal context if desired *}
+{if $journalOverride}
+	{assign var="currentJournal" value=$journalOverride}
+{/if}
 
 {* Determine galley type and URL op *}
 {if $galley->isPdfGalley()}
