@@ -16,8 +16,8 @@
 <br/>
 
 <h3>{translate key="plugins.importexport.pubIds.export"}</h3>
-<ul class="plain">
-	<li>&#187; <a href="{plugin_url path="selectIssue"}">{translate key="plugins.importexport.pubIds.export.forIssues"}</a></li>
+<ul>
+	<li><a href="{plugin_url path="selectIssue"}">{translate key="plugins.importexport.pubIds.export.forIssues"}</a></li>
 </ul>
 
 <h3>{translate key="plugins.importexport.pubIds.import"}</h3>

@@ -17,10 +17,10 @@
 
 <a name="categories"></a>
 
-<ul class="plain">
+<ul>
 {foreach from=$categories item=categoryArray}
 	{assign var=category value=$categoryArray.category}
-	<li>&#187; <a href="{url op="category" path=$category->getId()}">{$category->getLocalizedName()|escape}</a> ({$categoryArray.journals|@count})</li>
+	<li><a href="{url op="category" path=$category->getId()}">{$category->getLocalizedName()|escape}</a> ({$categoryArray.journals|@count})</li>
 {/foreach}
 </ul>
 

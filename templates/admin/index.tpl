@@ -20,12 +20,12 @@
 <div id="siteManagement">
 <h3>{translate key="admin.siteManagement"}</h3>
 
-<ul class="plain">
+<ul>
 	{if $multipleContexts}
-		<li>&#187; <a href="{url op="settings"}">{translate key="admin.siteSettings"}</a></li>
+		<li><a href="{url op="settings"}">{translate key="admin.siteSettings"}</a></li>
 	{/if}
-	<li>&#187; <a href="{url op="contexts"}">{translate key="admin.hostedJournals"}</a></li>
-	<li>&#187; <a href="{url op="auth"}">{translate key="admin.authSources"}</a></li>
+	<li><a href="{url op="contexts"}">{translate key="admin.hostedJournals"}</a></li>
+	<li><a href="{url op="auth"}">{translate key="admin.authSources"}</a></li>
 	{call_hook name="Templates::Admin::Index::SiteManagement"}
 </ul>
 </div>
@@ -33,11 +33,11 @@
 <h3>{translate key="admin.adminFunctions"}</h3>
 
 <ul class="plain">
-	<li>&#187; <a href="{url op="systemInfo"}">{translate key="admin.systemInformation"}</a></li>
-	<li>&#187; <a href="{url op="expireSessions"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
-	<li>&#187; <a href="{url op="clearDataCache"}">{translate key="admin.clearDataCache"}</a></li>
-	<li>&#187; <a href="{url op="clearTemplateCache"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
-	<li>&#187; <a href="{url op="clearScheduledTaskLogFiles"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.scheduledTask.confirmClearLogs"}')">{translate key="admin.scheduledTask.clearLogs"}</a></li>
+	<li><a href="{url op="systemInfo"}">{translate key="admin.systemInformation"}</a></li>
+	<li><a href="{url op="expireSessions"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
+	<li><a href="{url op="clearDataCache"}">{translate key="admin.clearDataCache"}</a></li>
+	<li><a href="{url op="clearTemplateCache"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
+	<li><a href="{url op="clearScheduledTaskLogFiles"}" onclick="return confirm('{translate|escape:"jsparam" key="admin.scheduledTask.confirmClearLogs"}')">{translate key="admin.scheduledTask.clearLogs"}</a></li>
 	{call_hook name="Templates::Admin::Index::AdminFunctions"}
 </ul>
 </div>

@@ -16,9 +16,9 @@
 
 <h3>{translate key="plugins.importexport.crossref.export"}</h3>
 {if $doiPrefix}
-	<ul class="plain">
-		<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.crossref.export.issues"}</a></li>
-		<li>&#187; <a href="{plugin_url path="articles"}">{translate key="plugins.importexport.crossref.export.articles"}</a></li>
+	<ul>
+		<li><a href="{plugin_url path="issues"}">{translate key="plugins.importexport.crossref.export.issues"}</a></li>
+		<li><a href="{plugin_url path="articles"}">{translate key="plugins.importexport.crossref.export.articles"}</a></li>
 	</ul>
 {else}
 	{translate key="plugins.importexport.crossref.errors.noDOIprefix"} <br /><br />

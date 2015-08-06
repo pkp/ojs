@@ -63,7 +63,7 @@ class CounterPlugin extends GenericPlugin {
 		$output =& $args[2];
 
 		$request =& $this->getRequest();
-		$output .= '<li>&#187; <a href="' . $request->url(null, 'counter') . '">' . __('plugins.generic.counter') . '</a></li>';
+		$output .= '<li><a href="' . $request->url(null, 'counter') . '">' . __('plugins.generic.counter') . '</a></li>';
 		return false;
 	}
 

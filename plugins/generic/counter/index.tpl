@@ -14,10 +14,10 @@
 
 <p>{translate key="plugins.generic.counter.description"}</p>
 
-<ul class="plain">
-  <li>&#187; {translate key="plugins.generic.counter.1a.title"}{foreach from=$years item=year}&nbsp;&nbsp;<a href="{url op="report" year=$year}">{$year|escape}</a>{/foreach}</li>
-  <li>&#187; XML version {foreach from=$years item=year}&nbsp;&nbsp;<a href="{url op="reportxml" year=$year}">{$year|escape}</a>{/foreach}</li>
-  <li>&#187; SUSHI SOAP endpoint: sushixml</li>
+<ul>
+  <li>{translate key="plugins.generic.counter.1a.title"}{foreach from=$years item=year}&nbsp;&nbsp;<a href="{url op="report" year=$year}">{$year|escape}</a>{/foreach}</li>
+  <li>XML version {foreach from=$years item=year}&nbsp;&nbsp;<a href="{url op="reportxml" year=$year}">{$year|escape}</a>{/foreach}</li>
+  <li>SUSHI SOAP endpoint: sushixml</li>
   {call_hook name="Template::Plugin::Generic::Counter::Index"}
 </ul>
 

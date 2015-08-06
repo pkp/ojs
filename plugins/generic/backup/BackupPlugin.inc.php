@@ -53,7 +53,7 @@ class BackupPlugin extends GenericPlugin {
 		$smarty =& $args[1];
 		$output =& $args[2];
 		$request = $this->getRequest();
-		$output .= '<li>&#187; <a href="' . $request->url(null, 'backup') . '">' . __('plugins.generic.backup.link') . '</a></li>';
+		$output .= '<li><a href="' . $request->url(null, 'backup') . '">' . __('plugins.generic.backup.link') . '</a></li>';
 		return false;
 	}
 
