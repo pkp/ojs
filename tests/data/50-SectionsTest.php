@@ -21,20 +21,22 @@ class SectionsTest extends WebTestCase {
 	 */
 	function testConfigureSections() {
 		$this->open(self::$baseUrl);
+		$this->waitForElementPresent($selector='link=Dashboard');
+		$this->clickAndWait($selector);
 
-		// Management > Settings > Journal
-		$this->waitForElementPresent('link=Journal');
-		$this->click('link=Journal');
-		$this->waitForElementPresent('link=Sections');
-		$this->click('link=Sections');
+		// Section settings
+		$this->waitForElementPresent($selector='link=Journal');
+		$this->click($selector);
+		$this->waitForElementPresent($selector='link=Sections');
+		$this->click($selector);
 
 		// Edit Section (default "Articles")
-		$this->waitForElementPresent('css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]');
-		$this->click('css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]');
+		$this->waitForElementPresent($selector='css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]');
+		$this->click($selector);
 
 		// Add Section Editor (David Buskins)
-		$this->waitForElementPresent('css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]');
-		$this->clickAt('css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]', '10,10');
+		$this->waitForElementPresent($selector='css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]');
+		$this->clickAt($selector);
 
 		$this->waitForElementPresent('//select[@name=\'newRowId[name]\']//option[text()=\'David Buskins\']');
 		$this->select('name=newRowId[name]', 'label=David Buskins');
@@ -52,17 +54,24 @@ class SectionsTest extends WebTestCase {
 		// Verify resulting grid row
 		$this->assertEquals('Berardo, Buskins', $this->getText('css=#cell-1-editors > span'));
 
+		// Section settings
+		$this->waitForElementPresent($selector='link=Journal');
+		$this->clickAndWait($selector);
+		$this->waitForElementPresent($selector='link=Sections');
+		$this->click($selector);
+		$this->waitJQuery();
+
 		// Create a new "Reviews" section
 		$this->click('css=[id^=component-grid-settings-sections-sectiongrid-addSection-button-]');
-		$this->waitForElementPresent('css=[id^=title-]');
-		$this->type('css=[id^=title-]', 'Reviews');
+		$this->waitForElementPresent($selector='css=[id^=title-]');
+		$this->type($selector, 'Reviews');
 		$this->type('css=[id^=abbrev-]', 'REV');
 		$this->type('css=[id^=identifyType-]', 'Review Article');
 		$this->click('id=abstractsNotRequired');
 
 		// Add a Section Editor (Minoti Inoue)
-		$this->waitForElementPresent('css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]');
-		$this->clickAt('css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]', '10,10');
+		$this->waitForElementPresent($selector='css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]');
+		$this->clickAt($selector);
 		$this->waitForElementPresent('//select[@name=\'newRowId[name]\']//option[text()=\'Minoti Inoue\']');
 		$this->select('name=newRowId[name]', 'label=Minoti Inoue');
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');

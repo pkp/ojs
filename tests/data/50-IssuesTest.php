@@ -37,7 +37,7 @@ class IssuesTest extends WebTestCase {
 		$this->type('css=[id^=year-]', '2014');
 		$this->click('id=showTitle');
 		$this->click('//button[text()=\'Save\']');
-		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+		$this->waitJQuery();
 
 		// Create issue
 		$this->click('css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
@@ -52,8 +52,8 @@ class IssuesTest extends WebTestCase {
 		// Publish first issue
 		$this->waitForElementPresent($selector='//*[text()=\'Vol 1 No 1 (2014)\']/../../../../../following-sibling::*//a[text()=\'Publish Issue\']');
 		$this->click($selector);
-		$this->waitForElementPresent($selector='//button[text()=\'OK\']');
+		$this->waitForElementPresent($selector='//a[text()=\'OK\']');
 		$this->click($selector);
-		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+		$this->waitJQuery();
 	}
 }
