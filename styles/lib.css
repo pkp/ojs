@@ -12,8 +12,5 @@
  * a particularly attractive idea.
  */
 
-/* Pines Notify - http://pines.sourceforge.net/pnotify/ */
-@import "../lib/pkp/js/lib/pnotify/buildcustom.php?mode=css&modules=";
-
 /* Tag it! - http://plugins.jquery.com/project/tag-it/ */
 @import "../lib/pkp/styles/lib/tagit.css";
