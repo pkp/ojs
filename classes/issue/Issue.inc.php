@@ -747,7 +747,8 @@ class Issue extends DataObject {
 	 * @return bool
 	 */
 	function hasDescription() {
-		return !empty($this->getLocalizedDescription());
+		$description = $this->getLocalizedDescription();
+		return !empty($description);
 	}
 }
 
