@@ -71,8 +71,13 @@ class NativeImportDom {
 			// successfully created.
 			NativeImportDom::cleanupFailure ($dependentItems);
 			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			// Deprecate this call.  Shouldn't this be handled entirely by cleanupFailure($dependentItems) above?
+			// passing an already deleted issue causes a fatal error when instanciating a new IssueFileManager()
 			foreach ($issues as $issue) {
-				$issueDao->deleteIssue($issue);
+				if ($issueDao->getIssueById($issue->getId())) {
+					if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated functionality.  Trace and report this use-case.');
+					$issueDao->deleteIssue($issue);
+				}
 			}
 			return false;
 		}
