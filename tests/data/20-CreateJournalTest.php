@@ -43,7 +43,7 @@ class CreateJournalTest extends WebTestCase {
 		$this->typeTinyMCE('description-fr_CA', 'Le Journal de Public Knowledge est une publication trimestrielle évaluée par les pairs sur le thème de l\'accès du public à la science.');
 		$this->type('css=[id^=path-]', 'publicknowledge');
 		$this->clickAndWait('css=[id^=submitFormButton-]');
-		$this->waitForElementPresent('css=h2:contains(\'Settings Wizard\')');
+		$this->waitForElementPresent('css=div.header:contains(\'Settings Wizard\')');
 		$this->waitJQuery();
 	}
 
@@ -54,28 +54,30 @@ class CreateJournalTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		// Management > Settings > Journal
-		$this->waitForElementPresent('//ul[contains(@class, \'sf-js-enabled\')]//a[text()=\'Journal\']');
-		$this->clickAndWait('//ul[contains(@class, \'sf-js-enabled\')]//a[text()=\'Journal\']');
+		$this->waitForElementPresent($selector='link=Dashboard');
+		$this->clickAndWait($selector);
+		$this->waitForElementPresent($selector='css=ul#navigationPrimary a:contains(\'Journal\')');
+		$this->clickAndWait($selector);
     		$this->waitForElementPresent('css=[id^=abbreviation-]');
     		$this->type('css=[id^=abbreviation-]', 'PK');
-		$this->click('//form[@id=\'mastheadForm\']//span[text()=\'Save\']/..');
-		$this->waitJQuery();
+		$this->click('//form[@id=\'mastheadForm\']//button[text()=\'Save\']');
+		$this->waitForTextPresent('Your changes have been saved.');
 
 		// Management > Settings > Contact
 		$this->click('link=Contact');
-		$this->waitForElementPresent('css=[id^=contactEmail-]');
-		$this->type('css=[id^=contactEmail-]', 'rvaca@mailinator.com');
+		$this->waitForElementPresent($selector='css=[id^=contactEmail-]');
+		$this->type($selector, 'rvaca@mailinator.com');
 		$this->type('css=[id^=contactName-]', 'Ramiro Vaca');
 		$this->type('css=[id^=supportEmail-]', 'rvaca@mailinator.com');
 		$this->type('css=[id^=supportName-]', 'Ramiro Vaca');
-		$this->click('//form[@id=\'contactForm\']//span[text()=\'Save\']/..');
-		$this->waitJQuery();
+		$this->click('//form[@id=\'contactForm\']//button[text()=\'Save\']');
+		$this->waitForTextPresent('Your changes have been saved.');
 
 		// Management > Settings > Website
 		$this->click('link=Website');
 		$this->waitForElementPresent('css=[id^=pageHeaderTitle-]');
 		$this->type('css=[id^=pageHeaderTitle-]', 'Journal of Public Knowledge');
-		$this->click('//form[@id=\'appearanceForm\']//span[text()=\'Save\']/..');
-		$this->waitJQuery();
+		$this->click('//form[@id=\'appearanceForm\']//button[text()=\'Save\']');
+		$this->waitForTextPresent('Your changes have been saved.');
 	}
 }
