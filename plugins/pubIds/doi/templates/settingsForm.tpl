@@ -44,13 +44,13 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 		<table class="data">
-	{fbvFormArea id="enableDoiSettingsFormArea" class="border" title="plugins.pubIds.doi.manager.settings.doiSettings"}
+	{fbvFormArea id="enableDoiSettingsFormArea" title="plugins.pubIds.doi.manager.settings.doiSettings"}
 		{fbvFormSection}
 			<p class="pkp_help">{translate key="plugins.pubIds.doi.manager.settings.doiPrefixPattern"}</p>
 			{fbvElement type="text" label="plugins.pubIds.doi.manager.settings.doiPrefix" required="true" id="doiPrefix" value=$doiPrefix maxlength="40" size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 	{/fbvFormArea}
-	{fbvFormArea id="doiSuffixPatternFormArea" class="border" title="plugins.pubIds.doi.manager.settings.doiSuffix"}
+	{fbvFormArea id="doiSuffixPatternFormArea" title="plugins.pubIds.doi.manager.settings.doiSuffix"}
 		{fbvFormSection label="plugins.pubIds.doi.manager.settings.doiSuffixDescription" list="true"}
 			{if $doiSuffix eq "pattern"}
 				{assign var="checked" value=true}
@@ -88,7 +88,7 @@
 			{fbvElement type="radio" id="doiSuffixCustomIdentifier" name="doiSuffix" required="true" value="customId" checked=$checked label="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"}
 		{/fbvFormSection}
 	{/fbvFormArea}
-	{fbvFormArea id="doiSuffixReassignFormArea" class="border" title="plugins.pubIds.doi.manager.settings.doiReassign"}
+	{fbvFormArea id="doiSuffixReassignFormArea" title="plugins.pubIds.doi.manager.settings.doiReassign"}
 		{fbvFormSection}
 			<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiReassign.description"}</span><br/>
 			{include file="linkAction/linkAction.tpl" action=$clearPubIdsLinkAction contextId="doiSettingsForm"}

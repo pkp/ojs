@@ -1,0 +1,142 @@
+/**
+ * @file styles/components.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Reusable components
+ */
+
+// Button
+.cmp_button {
+	display: inline-block;
+	padding: 0 1em;
+	background: #eee;
+	border: 1px solid #aaa;
+	border-top-color: #bbb;
+	border-radius: @radius;
+	box-shadow: inset 0 -1em 1em rgba(0, 0, 0, 0.1);
+	font-size: @font-sml;
+	line-height: @double - 2; // account for border
+	font-weight: @bold;
+	color: @text-light;
+}
+
+// Wire button
+.cmp_button_wire {
+	display: inline-block;
+	padding: 0 1em;
+	background: #fff;
+	border: 1px solid @primary-lift;
+	border-radius: @radius;
+	font-size: @font-sml;
+	line-height: @double;
+	color: @primary-lift;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		background: @primary-lift;
+		color: #fff;
+	}
+}
+
+// Input field
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="phone"],
+ {
+	padding: 0 0.5em;
+	max-width: 100%;
+	background: #fff;
+	border: 1px solid #aaa;
+	border-radius: @radius;
+	font-size: @font-sml;
+	line-height: @double - 2; // account for border
+}
+
+// Access legend
+.cmp_access_legend {
+	margin: (@double * 2) 0;
+	padding: 0;
+	list-style: none;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 2em;
+		font-size: @font-sml;
+		line-height: @double;
+		color: @text-light;
+
+		&:before {
+			&:extend( .fa );
+			margin-right: 0.5em;
+			color: @text;
+		}
+	}
+
+	.restricted:before {
+		content: @fa-var-lock;
+		color: @offset;
+	}
+}
+
+// Pagination component
+// eg: 1-2 of 10 items
+.cmp_pagination {
+	margin-top: @double;
+	font-size: @font-sml;
+	line-height: @double;
+	color: @text-light;
+	text-align: right;
+}
+
+// Edit link to jump from frontend section to backend editing location
+// It usually appears within a heading element <h*>
+.cmp_edit_link {
+	display: inline-block;
+	margin-left: 1em;
+	font-size: @font-sml;
+	line-height: 1; // Try not to disrupt parent line height
+	vertical-align: middle;
+	text-decoration: none;
+
+	&:before {
+		&:extend(.fa);
+		content: @fa-var-pencil;
+	}
+}
+
+// Search result filter
+.cmp_search_filter {
+	margin-bottom: @base;
+	font-size: @font-sml;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	label {
+		font-style: italic;
+	}
+
+	.delete {
+		color: @no;
+	}
+}
+
+// Notification
+// @todo needs work and styles for error/warning/notice instances
+.cmp_notification {
+	display: block;
+	width: 100%;
+	padding: @double;
+	background: @bg;
+	text-align: center;
+}

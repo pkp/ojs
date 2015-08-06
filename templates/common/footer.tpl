@@ -5,7 +5,7 @@
  * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Common site footer.
+ * Backend site footer.
  *
  *}
 {assign var=brandImage value="templates/images/ojs_brand.png"}

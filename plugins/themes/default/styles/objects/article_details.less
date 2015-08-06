@@ -1,0 +1,67 @@
+/**
+ * @file styles/objects/article_details.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to a view of an article with all details
+ * @link templates/frontend/objects/article_details.tpl
+ */
+.obj_article_details {
+
+	> .page_title {
+		margin: 0;
+	}
+
+	> .subtitle {
+		margin: 0;
+		font-size: @font-lead;
+		line-height: @line-lead;
+		font-weight: @normal;
+	}
+
+	.authors,
+	.galleys_links,
+	.abstract,
+	.issue {
+		margin-top: @double * 2;
+	}
+
+	.authors {
+		&:extend(.pkp_unstyled_list);
+
+		li {
+			margin-bottom: @base;
+		}
+
+		.name {
+			font-weight: bold;
+			display: block;
+		}
+
+		.affiliation {
+			font-size: @font-sml;
+			color: @text-light;
+		}
+	}
+
+	.galleys_links {
+		&:extend(.pkp_unstyled_list);
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	.abstract {
+
+		h3 {
+			display: inline-block;
+			margin: 0;
+			border-bottom: 2px solid @text;
+			font-size: @base;
+			line-height: @double - 2;
+		}
+	}
+}

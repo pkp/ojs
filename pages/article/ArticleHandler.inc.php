@@ -131,14 +131,16 @@ class ArticleHandler extends Handler {
 				// The issue may not exist, if this is an editorial user
 				// and scheduling hasn't been completed yet for the article.
 				$issueAction = new IssueAction();
+				$subscriptionRequired = false;
 				if ($issue) {
-					$templateMgr->assign('subscriptionRequired', $issueAction->subscriptionRequired($issue));
+					$subscriptionRequired = $issueAction->subscriptionRequired($issue);
 				}
 
-				$templateMgr->assign('subscribedUser', $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
-				$templateMgr->assign('subscribedDomain', $issueAction->subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null));
+				$subscribedUser = $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
+				$subscribedDomain = $issueAction->subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 
-				$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
+				$templateMgr->assign('showGalleyLinks', !$subscriptionRequired || $journal->getSetting('showGalleyLinks'));
+				$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
 
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($request);
@@ -169,6 +171,10 @@ class ArticleHandler extends Handler {
 				$citationDao = DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
 				$citationFactory = $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $article->getId());
 				$templateMgr->assign('citationFactory', $citationFactory);
+
+				// Keywords
+				$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+				$templateMgr->assign('keywords', $submissionKeywordDao->getKeywords($article->getId(), AppLocale::getLocale()));
 			}
 
 			$templateMgr->assign('issue', $issue);
@@ -176,8 +182,6 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('galley', $galley);
 			$templateMgr->assign('section', $section);
 			$templateMgr->assign('journal', $journal);
-			$templateMgr->assign('articleId', $articleId);
-			$templateMgr->assign('galleyId', $galleyId);
 			$templateMgr->assign('fileId', $fileId);
 			$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
 
@@ -198,7 +202,7 @@ class ArticleHandler extends Handler {
 			// load Article galley plugins
 			PluginRegistry::loadCategory('viewableFiles', true);
 
-			$templateMgr->display('article/article.tpl');
+			$templateMgr->display('frontend/pages/article.tpl');
 		}
 	}
 

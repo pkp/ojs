@@ -1,0 +1,73 @@
+/**
+ * @file styles/pages/about.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the lightweight page for viewing PDFs
+ * @link templates/frontend/pages/about.tpl
+ */
+.page_about {
+
+    h3 {
+        font-size: @font-bump;
+        line-height: @line-bump;
+        margin-bottom: @base;
+    }
+
+    .address,
+    .phone,
+    .fax,
+    .email {
+        margin-top: @base;
+        margin-bottom: @base;
+        font-size: @font-sml;
+    }
+
+    .address {
+        margin-top: 0;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .label {
+        display: block;
+        font-weight: @bold;
+    }
+
+    .contact.support {
+        margin-top: @double * 2;
+    }
+
+    // Sponsor and Contributor lists
+    ul {
+        &:extend(.pkp_unstyled_list);
+    }
+
+    @media(min-width: @screen-tablet) {
+
+        .contact_section {
+            .pkp_helpers_clear;
+        }
+
+        .contact {
+            float: left;
+            width: 50%;
+
+            &.primary {
+                padding-right: @double;
+            }
+
+            &.support {
+                margin-top: 0;
+            }
+
+            h3 {
+                margin-top: 0;
+            }
+        }
+    }
+}

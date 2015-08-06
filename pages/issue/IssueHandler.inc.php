@@ -39,7 +39,7 @@ class IssueHandler extends Handler {
 
 		import('classes.security.authorization.OjsIssueRequiredPolicy');
 		// the 'archives' op does not need this policy so it is left out of the operations array.
-		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args, array('view', 'viewIssue', 'viewFile', 'viewDownloadIterstitial', 'download')));
+		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args, array('view', 'viewPdf', 'viewFile', 'viewDownloadInterstitial', 'download')));
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
@@ -94,7 +94,7 @@ class IssueHandler extends Handler {
 		// consider public identifiers
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
-		$templateMgr->display('issue/viewPage.tpl');
+		$templateMgr->display('frontend/pages/issue.tpl');
 	}
 
 	/**
@@ -113,7 +113,7 @@ class IssueHandler extends Handler {
 		// consider public identifiers
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
-		$templateMgr->display('issue/viewPage.tpl');
+		$templateMgr->display('frontend/pages/issue.tpl');
 
 	}
 
@@ -137,7 +137,7 @@ class IssueHandler extends Handler {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
 		$templateMgr->assign('issues', $publishedIssuesIterator);
-		$templateMgr->display('issue/archive.tpl');
+		$templateMgr->display('frontend/pages/issueArchive.tpl');
 	}
 
 	/**
@@ -145,7 +145,7 @@ class IssueHandler extends Handler {
 	 * @param $args array ($issueId, $galleyId)
 	 * @param $request Request
 	 */
-	function viewIssue($args, $request) {
+	function viewPdf($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 
@@ -161,17 +161,12 @@ class IssueHandler extends Handler {
 
 			// Display PDF galley inline
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->addJavaScript('js/inlinePdf.js');
-			$templateMgr->addJavaScript('lib/pkp/lib/pdfobject/js/pdfobject.js');
-			$templateMgr->addStyleSheet($request->getBaseUrl().'/styles/pdfView.css');
 
-			$templateMgr->assign('issue', $issue);
+			$templateMgr->assign('pdfTitle', $issue->getIssueIdentification());
+			$templateMgr->assign('parent', $issue);
 			$templateMgr->assign('galley', $galley);
-			$templateMgr->assign('issueId', $issue->getId());
-			$templateMgr->assign('galleyId', $galleyId);
 
-			$templateMgr->assign('issueHeadingTitle', __('issue.viewIssue'));
-			$templateMgr->display('issue/issueGalley.tpl');
+			$templateMgr->display('frontend/pages/viewPdf.tpl');
 		}
 	}
 
@@ -338,7 +333,8 @@ class IssueHandler extends Handler {
 
 	/**
 	 * Given an issue, set up the template with all the required variables for
-	 * issues/view.tpl to function properly (i.e. current issue and view issue).
+	 * frontend/objects/issue_toc.tpl to function properly (i.e. current issue
+	 * and view issue).
 	 * @param $issue object The issue to display
 	 * @param $showToc boolean iff false and a custom cover page exists,
 	 * 	the cover page will be displayed. Otherwise table of contents
@@ -355,7 +351,11 @@ class IssueHandler extends Handler {
 		if (!$issue) {
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		}
-		$templateMgr->assign('issueHeadingTitle', $issue->getIssueIdentification(false, true));
+
+		$templateMgr->assign('issueIdentification', $issue->getIssueIdentification());
+		$templateMgr->assign('issueTitle', $issue->getLocalizedTitle());
+		$templateMgr->assign('issueSeries', $issue->getIssueIdentification(array('showTitle' => false)));
+
 		$locale = AppLocale::getLocale();
 
 		import('classes.file.PublicFileManager');
@@ -395,9 +395,8 @@ class IssueHandler extends Handler {
 		$subscriptionRequired = $issueAction->subscriptionRequired($issue);
 		$subscribedUser = $issueAction->subscribedUser($journal);
 		$subscribedDomain = $issueAction->subscribedDomain($journal);
-		$subscriptionExpiryPartial = $journal->getSetting('subscriptionExpiryPartial');
 
-		if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
+		if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain) {
 			$templateMgr->assign('subscriptionExpiryPartial', true);
 
 			// Partial subscription expiry for issue
@@ -418,10 +417,8 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
 		}
 
-		$templateMgr->assign('subscriptionRequired', $subscriptionRequired);
-		$templateMgr->assign('subscribedUser', $subscribedUser);
-		$templateMgr->assign('subscribedDomain', $subscribedDomain);
-		$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
+		$templateMgr->assign('showGalleyLinks', !$subscriptionRequired || $journal->getSetting('showGalleyLinks'));
+		$templateMgr->assign('hasAccess', !$subscriptionRequired || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain);
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);

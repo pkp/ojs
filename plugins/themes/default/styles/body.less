@@ -1,0 +1,117 @@
+/**
+ * @file styles/structure/body.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Classes for site-wide elements and layout scaffolding
+ */
+
+body {
+	font-family: @font;
+	font-size: @font-base;
+	line-height: @line-base;
+	color: @text;
+}
+
+a {
+	color: @primary-lift;
+
+	&:hover,
+	&:focus {
+		color: @primary;
+	}
+}
+
+
+// Page container widths
+.pkp_structure_head .pkp_site_name,
+.pkp_structure_head .pkp_navigation_primary_wrapper,
+.pkp_structure_head .pkp_navigation_user,
+.pkp_structure_content,
+.pkp_structure_footer {
+	.pkp_helpers_clear;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 @base;
+
+	@media( min-width: @screen-tablet ) {
+		width: @screen-tablet-container;
+		padding: 0;
+	}
+
+	@media( min-width: @screen-desktop ) {
+		width: @screen-desktop-container;
+	}
+
+	@media( min-width: @screen-lg-desktop ) {
+		width: @screen-lg-desktop-container;
+	}
+}
+
+// Layout scaffold for content and sidebars
+.pkp_structure_main,
+.pkp_structure_sidebar {
+	padding-top: @double;
+	padding-bottom: @double * 2;
+}
+
+@media( min-width: @screen-desktop ) {
+
+	.pkp_structure_sidebar {
+		width: 256px;
+
+		&.left {
+			float: left;
+		}
+
+		&.right {
+			float: right;
+		}
+	}
+
+	// 1 sidebar
+	.has_left_sidebar .pkp_structure_main,
+	.has_right_sidebar .pkp_structure_main {
+		float: left;
+		// Screen width - container padding - sidebar width - gutter
+		width: @screen-desktop-container - 256px - @double;
+	}
+
+	// Add gutters between sidebar and main content
+	.has_left_sidebar .pkp_structure_main {
+		margin-left: @double;
+	}
+
+	.has_right_sidebar .pkp_structure_main {
+		margin-right: @double;
+	}
+
+	// 2 sidebars
+	.has_left_sidebar.has_right_sidebar .pkp_structure_main {
+		// Screen width - container padding - 2 sidebar widths - two gutters
+		width: @screen-desktop-container - (256px * 2) - (@double * 2);
+	}
+}
+
+@media( min-width: @screen-lg-desktop ) {
+
+	.has_left_sidebar .pkp_structure_main,
+	.has_right_sidebar .pkp_structure_main {
+		// Screen width - container padding - sidebar width - gutter
+		width: @screen-lg-desktop-container - 256px - @double;
+	}
+
+	.has_left_sidebar.has_right_sidebar .pkp_structure_main {
+		// Screen width - container padding - 2 sidebar widths - two gutters
+		width: @screen-lg-desktop-container - (256px * 2) - (@double * 2);
+	}
+}
+
+// Lock in images so they don't run outside their container
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}

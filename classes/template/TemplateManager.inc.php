@@ -71,6 +71,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('numPageLinks', $context->getSetting('numPageLinks'));
 				$this->assign('itemsPerPage', $context->getSetting('itemsPerPage'));
 				$this->assign('enableAnnouncements', $context->getSetting('enableAnnouncements'));
+				$this->assign('contextSettings', $context->getSettingsDAO()->getSettings($context->getId()));
 
 				// Assign stylesheets and footer
 				$contextStyleSheet = $context->getSetting('journalStyleSheet');

@@ -230,7 +230,13 @@
 
 	/**
 	 * Callback that overrides TabHandler's tabReloadRequested method
-	 * in order to deal with scrolling tabs.
+	 * in order to close the modal once the form has been submitted.
+	 *
+	 * @todo This should be handled earlier in the stack. Ideally, the issueEntry
+	 *  ajax form should return an empty content string once the form is
+	 *  submitted. If that happened, then AjaxFormHandler::handleResponse will
+	 *  automatically emit the `formSubmitted` event, which the modal will
+	 *  pick up on and close itself.
 	 *
 	 * @param {HTMLElement} divElement The parent DIV element
 	 *  which contains the tabs.
@@ -239,14 +245,7 @@
 	 */
 	$.pkp.controllers.tab.issueEntry.IssueEntryTabHandler.prototype.
 			tabsReloadRequested = function(divElement, event, jsonContent) {
-
-		var $element = this.getHtmlElement();
-		$.get(jsonContent.tabsUrl, function(data) {
-			var jsonData = $.parseJSON(data);
-			$element.unwrap();
-			$element.prev('div').remove();
-			$element.replaceWith(jsonData.content);
-		});
+		this.getHtmlElement().trigger( 'formSubmitted' );
 	};
 /** @param {jQuery} $ jQuery closure. */
 }(jQuery));

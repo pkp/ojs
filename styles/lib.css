@@ -12,29 +12,8 @@
  * a particularly attractive idea.
  */
 
-/* OOCSS - http://github.com/stubbornella/oocss */
-
-@import url("../lib/pkp/styles/lib/oocss/libraries.css");
-
-@import url("../lib/pkp/styles/lib/oocss/grids.css");
-
-/* Superfish - http://users.tpg.com.au/j_birch/plugins/superfish/ */
-@import url("../lib/pkp/styles/lib/superfish/superfish.css");
-
 /* Pines Notify - http://pines.sourceforge.net/pnotify/ */
-@import url("../lib/pkp/js/lib/pnotify/buildcustom.php?mode=css&modules=");
+@import "../lib/pkp/js/lib/pnotify/buildcustom.php?mode=css&modules=";
 
 /* Tag it! - http://plugins.jquery.com/project/tag-it/ */
-@import url("../lib/pkp/styles/lib/tagit.css");
-
-/**
- * The following libraries are compilable but compiling throws image paths off.
- */
-
-/* Plupload - http://www.plupload.com/ */
-
-@import url("../lib/pkp/lib/vendor/moxiecode/plupload/js/jquery.ui.plupload/css/jquery.ui.plupload.css");
-
-/* JqueryUI - http://jqueryui.com */
-
-@import url("../lib/pkp/lib/components/jquery-ui/themes/ui-lightness/jquery-ui.min.css");
+@import "../lib/pkp/styles/lib/tagit.css";

@@ -1,0 +1,204 @@
+/**
+ * @file styles/head.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_structure_head
+ *
+ * @brief Classes for the page header structural elements
+ */
+
+// Wrapper elements which construct the full-width vertical segments of the header
+.pkp_structure_head {
+	padding-top: @double; // Make room for the user nav at the top
+	background-color: @primary;
+}
+
+.pkp_navigation_user_wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: @primary;
+}
+
+.pkp_site_name_wrapper {
+	background-color: @primary-lift;
+}
+
+.pkp_navigation_primary_row {
+	background: @bg;
+}
+
+// User-focused navigation menu with login/logout, tasks, etc
+.pkp_navigation_user {
+	text-align: right;
+	font-size: @font-sml;
+
+	li {
+		text-align: left;
+	}
+
+	a {
+		padding-top: 4px;
+		padding-bottom: 4px;
+		line-height: @line-base;
+		color: #ddd;
+		color: rgba(255,255,255,0.7);
+
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+	}
+
+	ul {
+		padding: 0 2px 2px;
+		border-bottom-left-radius: @radius;
+		border-bottom-right-radius: @radius;
+		width: 10em;
+		background: @primary;
+
+		a {
+
+			&:hover,
+			&:focus {
+				background: @primary-lift;
+				color: #fff;
+			}
+		}
+	}
+
+	// Open submenus aligned to the right edge, so they don't overflow screen
+	li:hover > ul,
+	li:focus > ul,
+	li.in_focus > ul {
+		left: auto;
+		right: 0;
+	}
+
+	// Align to the right edge of the container
+	> li:last-child a {
+		padding-right: 0;
+	}
+}
+
+// Tasks panel
+#userTasks {
+	position: relative;
+
+	.task-count {
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		margin-left: 0.25em;
+		border-radius: 50%;
+		background: rgba(255,255,255,0.5);
+		line-height: 22px;
+		color: @primary;
+		vertical-align: middle;
+		text-align: center;
+
+		&.hasTasks {
+			background: #fff;
+		}
+	}
+
+	> a:hover .task-count,
+	> a:focus .task-count {
+		background: #fff;
+	}
+
+	// @todo needs some work
+	#notificationsPopover {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 30em;
+		padding: @base;
+		background: @primary;
+		color: #fff;
+	}
+}
+
+// Site logo/name
+.pkp_site_name {
+
+	.is_img {
+		display: inline-block;
+		// Trick to vertically align the image
+		height: 128px;
+		line-height: 128px;
+		font-size: 0; // prevent extra spacing from inline content
+
+		img {
+			max-height: 128px;
+			width: auto;
+			height: auto;
+			vertical-align: middle;
+		}
+	}
+
+	.is_text {
+		display: inline-block;
+		padding-top: @double;
+		padding-bottom: @double;
+		font-size: @font-lead;
+		line-height: @line-lead;
+		font-weight: @bold;
+		color: #fff;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: rgba(255,255,255,0.7);
+		}
+	}
+}
+
+// Primary site navigation menu
+.pkp_navigation_primary {
+	display: inline-block;
+
+	// Align to the left edge of the screen
+	> li:first-child a {
+		padding-left: 0;
+	}
+
+	a {
+		line-height: @double;
+	}
+
+	ul {
+		padding: 0 4px 4px;
+		border-bottom-left-radius: @radius;
+		border-bottom-right-radius: @radius;
+		background: @bg;
+
+		a {
+
+			&:hover,
+			&:focus {
+				background: @lift;
+			}
+		}
+	}
+}
+
+// Search bar
+.pkp_search {
+	display: inline-block;
+	float: right;
+	margin-left: 2em;
+	padding: @half 0;
+	font-size: @font-sml;
+	line-height: @double;
+
+	button {
+		&:extend( .cmp_button );
+	}
+
+}

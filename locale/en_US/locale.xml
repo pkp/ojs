@@ -140,6 +140,9 @@
 	<message key="article.fontSize.small.altText">Small</message>
 	<message key="article.fontSize.medium.altText">Medium</message>
 	<message key="article.fontSize.large.altText">Large</message>
+	<message key="article.return">Return to Article Details</message>
+	<message key="article.publishedIn">Published in {$issueLink}.</message>
+	<message key="article.publishedInWithSection">Published in the {$sectionTitle} section in {$issueLink}.</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Submission Editing</message>
@@ -234,7 +237,7 @@
 	<message key="issue.fullIssue">Full Issue</message>
 	<message key="issue.nonpdf.title">Issue Download</message>
 	<message key="issue.viewIssue">View Issue</message>
-	<message key="issue.viewIssueDescription">View or download the full issue</message>
+	<message key="issue.return">Return to Issue Details</message>
 
 	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Currency</message>
@@ -314,8 +317,8 @@
 	<message key="reader.subscribersOnly">Subscribers Only</message>
 	<message key="reader.subscriptionRequiredLoginText">Subscription required to access item. To verify subscription, log in to journal.</message>
 	<message key="reader.openAccess">Open Access</message>
-	<message key="reader.subscriptionAccess">Subscription Access</message>
-	<message key="reader.subscriptionOrFeeAccess">Subscription or Fee Access</message>
+	<message key="reader.subscriptionAccess">Requires Subscription</message>
+	<message key="reader.subscriptionOrFeeAccess">Requires Subscription or Fee</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comments on this article</message>
@@ -757,6 +760,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
+	<message key="article.pdf.pageTitle">PDF View of {$pdfTitle}</message>
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.download">Download this PDF file</message>
 	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
@@ -796,11 +800,9 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="about.sponsors">Sponsors</message>
 	<message key="about.contributors">Sources of Support</message>
 	<message key="about.onlineSubmissions">Online Submissions</message>
-	<message key="about.onlineSubmissions.haveAccount">Already have a Username/Password for {$journalTitle}?</message>
-	<message key="about.onlineSubmissions.login">Go to Login</message>
-	<message key="about.onlineSubmissions.needAccount">Need a Username/Password?</message>
-	<message key="about.onlineSubmissions.registration">Go to Registration</message>
-	<message key="about.onlineSubmissions.registrationRequired">Registration and login are required to submit items online and to check the status of current submissions.</message>
+	<message key="about.onlineSubmissions.login">Login</message>
+	<message key="about.onlineSubmissions.register">Register</message>
+	<message key="about.onlineSubmissions.registrationRequired">You must be registered and logged in to submit items and track current submissions. {$login} to an existing account or {$register} a new account.</message>
 	<message key="about.authorGuidelines">Author Guidelines</message>
 	<message key="about.submissionPreparationChecklist">Submission Preparation Checklist</message>
 	<message key="about.submissionPreparationChecklist.description">As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines.</message>
@@ -838,6 +840,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="help.ojsHelp">Open Journal Systems Help</message>
 	<message key="help.ojsHelpAbbrev">OJS Help</message>
 	<message key="help.searchReturnResults">Return to Search Results</message>
+	<message key="help.goToEditPage">Edit {$sectionTitle}</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Thank You</message>

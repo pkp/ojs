@@ -1,0 +1,56 @@
+/**
+ * @file styles/pages/submissions.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to submissions page
+ * @link templates/frontend/pages/submissions.tpl
+ */
+.page_submissions {
+
+	.submission_checklist {
+
+		ul {
+			margin: @double 0 0;
+			padding: 0;
+			list-style: none;
+			background: @bg;
+			font-size: @font-sml;
+		}
+
+		li {
+			position: relative;
+			padding: @base @base @base @double;
+			border-bottom: 1px solid @lift;
+
+			&:before {
+				&:extend(.fa);
+				content: @fa-var-check;
+				position: absolute;
+				left: @base;
+				top: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				font-size: @font-base;
+				color: @yes;
+			}
+		}
+	}
+
+	@media(min-width: @screen-phone) {
+
+		.submission_checklist li {
+				padding: @double @double @double (@double * 2);
+
+				&:before {
+					left: @double;
+					font-size: @font-lead;
+				}
+		}
+	}
+}

@@ -640,28 +640,19 @@ class Issue extends DataObject {
 
 	/**
 	 * Return the string of the issue identification based label format
-	 * @param $default bool labelFormat type
-	 * @param $breadcrumb bool return type of label
-	 * @param $long bool long format of label
+	 * @param $force array force show/hide of data components
 	 * @return string
 	 */
-	function getIssueIdentification($default = false, $breadcrumb = false, $long = false) {
+	function getIssueIdentification($force = array()) {
 
-		if ($default) {
-			$showVolume = 1;
-			$showNumber = 1;
-			$showYear = 1;
-			$showTitle = 0;
-		} else {
-			$showVolume = $this->getData('showVolume');
-			$showNumber = $this->getData('showNumber');
-			$showYear = $this->getData('showYear');
-			$showTitle = $this->getData('showTitle');
-		}
+		$displayOptions = array(
+			'showVolume' => $this->getData('showVolume'),
+			'showNumber' => $this->getData('showNumber'),
+			'showYear' => $this->getData('showYear'),
+			'showTitle' => $this->getData('showTitle'),
+		);
 
-		if ($breadcrumb && ($showVolume || $showNumber || $showYear)) {
-			$showTitle = 0;
-		}
+		$displayOptions = array_merge($displayOptions, $force);
 
 		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_COMMON));
 		$volLabel = __('issue.vol');
@@ -670,39 +661,55 @@ class Issue extends DataObject {
 		$vol = $this->getData('volume');
 		$num = $this->getData('number');
 		$year = $this->getData('year');
-		$title = $this->getLocalizedData('title');
+		$title = $this->getLocalizedTitle();
 
-		$identification = '';
+		$identification = array();
+		foreach($displayOptions as $opt => $val) {
 
-		if ($showVolume) {
-			$identification = "$volLabel $vol";
-		}
-		if ($showNumber) {
-			if (!empty($identification)) {
-				$identification .= ", ";
+			if (empty($val)) {
+				continue;
 			}
-			$identification .= "$numLabel $num";
-		}
-		if ($showYear) {
-			if (!empty($identification)) {
-				$identification .= " ($year)";
-			} else {
-				$identification = "$year";
+
+			if ($opt == 'showVolume') {
+				$identification[] = "$volLabel $vol";
+			} elseif ($opt == 'showNumber') {
+				$identification[] = "$numLabel $num";
+			} elseif ($opt == 'showYear') {
+				$identification[] = !empty($identification) ? "($year)" : $year;
+			} elseif ($opt == 'showTitle' ) {
+				if (!empty($title)) {
+					// Append a separator to the last key
+					if (!empty($identification)) {
+						end($identification);
+						$identification[key($identification)] .= ':';
+					}
+					$identification[] = $title;
+				}
 			}
 		}
 
-		if ($showTitle || ($long && !empty($title))) {
-			if (!empty($identification)) {
-				$identification .= ': ';
-			}
-			$identification .= "$title";
-		}
-
+		// If we've got an empty title, re-run the function and force a result
 		if (empty($identification)) {
-			$identification = "$volLabel $vol, $numLabel $num ($year)";
+			return $this->getIssueIdentification(
+				array(
+					'showVolume' => true,
+					'showNumber' => true,
+					'showYear' => true,
+					'showTitle' => false,
+				)
+			);
 		}
 
-		return $identification;
+		return join(' ', $identification);
+	}
+
+	/**
+	 * Return the string of the issue series identification
+	 * eg: Vol 1 No 1 (2000)
+	 * @return string
+	 */
+	function getIssueSeries() {
+		return $this->getIssueIdentification(array('showTitle' => false));
 	}
 
 	/**
@@ -733,6 +740,14 @@ class Issue extends DataObject {
 			if (!empty($publicIssueId)) return $publicIssueId;
 		}
 		return $this->getId();
+	}
+
+	/**
+	 * Check whether a description exists for this issue
+	 * @return bool
+	 */
+	function hasDescription() {
+		return !empty($this->getLocalizedDescription());
 	}
 }
 

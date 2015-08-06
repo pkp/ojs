@@ -119,7 +119,6 @@
 	<message key="manager.setup.masthead">Masthead</message>
 	<message key="manager.setup.masthead.description">The Masthead should contain a list of editors, managing directors, and other individuals associated with the journal. Information entered here will appear in About the Journal.</message>
 	<message key="manager.setup.sponsors.description">The name of the organizations (e.g., scholarly associations, university departments, cooperatives, etc.) sponsoring the journal will appear in About the Journal and may be accompanied by a note of acknowledgement.</message>
-	<message key="manager.setup.appearanceDescription">Various components of the journal appearance can be configured from this page, including header and footer elements, the journal style and theme, and how lists of information are presented to users.</message>
 	<message key="manager.setup.homepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.homepageContentDescription">The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</message>
 	<message key="manager.setup.pageHeaderDescription">A graphic version of the journal title and logo (.gif, .jpg, or .png file), possibly a smaller version of the one used on the homepage, can be uploaded to appear as a header on journal pages, which will replace the text version that otherwise appears.</message>
@@ -285,12 +284,17 @@
 	<message key="manager.setup.layoutTemplates.title">Title</message>
 	<message key="manager.setup.lists">Lists</message>
 	<message key="manager.setup.listsDescription">Enter the maximum number of items (for example, submissions, users, or editing assignments) that appear on each page of a list, and the number of pages links to display on each page.</message>
-	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page. A LOCKSS license will appear in About the Journal under Archiving:]]></message>
-	<message key="manager.setup.lockssLicenses"><![CDATA[<a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
+	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
+	<message key="manager.setup.lockssLicenseDescription"><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
+	<message key="manager.setup.lockssLicenseLabel">LOCKSS License Description</message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>. Use the prepared invitations for (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
-	<message key="manager.setup.clockssEnable"><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page. A CLOCKSS license will appear in About the Journal under Archiving:]]></message>
-	<message key="manager.setup.clockssLicenses"><![CDATA[<a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></message>
+	<message key="manager.setup.lockssTitle">LOCKSS</message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page. :]]></message>
+	<message key="manager.setup.clockssLicenseDescription"><![CDATA[A CLOCKSS license will appear in About the Journal under Archiving: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></message>
+	<message key="manager.setup.clockssLicenseLabel">CLOCKSS License Description</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></message>
+	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>
 	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>

@@ -3,7 +3,7 @@
 /**
  * @defgroup pages_about About Pages
  */
- 
+
 /**
  * @file pages/about/index.php
  *
@@ -12,19 +12,16 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_about
- * @brief Handle requests for about the journal functions. 
+ * @brief Handle requests for about the journal functions.
  *
  */
 
 switch($op) {
-	case 'description':
-	case 'contact':
+	case 'about':
 	case 'subscriptions':
 	case 'editorialTeam':
-	case 'editorialPolicies':
 	case 'submissions':
 	case 'memberships':
-	case 'sponsorship':
 	case 'history':
 		define('HANDLER_CLASS', 'AboutContextHandler');
 		import('pages.about.AboutContextHandler');

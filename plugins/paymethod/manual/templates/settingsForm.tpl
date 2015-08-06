@@ -7,13 +7,7 @@
  *
  * Form for manual payment settings.
  *}
-	<tr>
-		<td colspan="2"><h4>{translate key="plugins.paymethod.manual.settings"}</h4></td>
-	</tr>
-	<tr>
-		<td class="label">{fieldLabel name="manualInstructions" required="true" key="plugins.paymethod.manual.settings.instructions"}</td>
-		<td class="value">
-			{translate key="plugins.paymethod.manual.settings.manualInstructions"}<br />
-			<textarea name="manualInstructions" id="manualInstructions" rows="12" cols="60" class="textArea">{$manualInstructions|escape}</textarea>
-		</td>
-	</tr>
+
+{fbvFormSection label="plugins.paymethod.manual.settings" for="manualInstructions" description="plugins.paymethod.manual.settings.instructions"}
+	{fbvElement required="true" type="textarea" name="manualInstructions" id="manualInstructions" value=$manualInstructions}
+{/fbvFormSection}

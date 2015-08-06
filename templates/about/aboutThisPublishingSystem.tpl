@@ -12,7 +12,7 @@
  *}
 {strip}
 {assign var="pageTitle" value="about.aboutThisPublishingSystem"}
-{include file="common/header.tpl"}
+{include file="common/frontend/header.tpl"}
 {/strip}
 
 <p id="aboutThisPublishingSystem">
@@ -27,4 +27,4 @@
 	<img src="{$baseUrl}/{$pubProcessFile}" style="border: 0;" alt="{translate key="about.aboutThisPublishingSystem.altText"}" />
 </p>
 
-{include file="common/footer.tpl"}
+{include file="common/frontend/footer.tpl"}

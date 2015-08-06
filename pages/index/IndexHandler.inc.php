@@ -92,7 +92,7 @@ class IndexHandler extends Handler {
 			}
 			$templateMgr->assign('socialMediaBlocks', $blocks);
 
-			$templateMgr->display('index/journal.tpl');
+			$templateMgr->display('frontend/pages/indexJournal.tpl');
 		} else {
 			$site = $request->getSite();
 

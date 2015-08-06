@@ -22,7 +22,7 @@
 
 	<p>{translate key="manager.setup.forAuthorsToIndexTheirWorkDescription"}</p>
 
-	{fbvFormArea id="contentIndexingDiscipline" class="border"}
+	{fbvFormArea id="contentIndexingDiscipline"}
 		{fbvFormSection description="manager.setup.disciplineDescription" list=true}
 			{fbvElement type="checkbox" id="metaDiscipline" checked=$metaDiscipline label="manager.setup.discipline"}
 		{/fbvFormSection}
@@ -34,7 +34,7 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{fbvFormArea id="contentIndexingSubjectClass" class="border"}
+	{fbvFormArea id="contentIndexingSubjectClass"}
 		{fbvFormSection list=true}
 			{fbvElement type="checkbox" id="metaSubjectClass" checked=$metaSubjectClass label="manager.setup.subjectClassification"}
 		{/fbvFormSection}

@@ -1,0 +1,40 @@
+/**
+ * @file plugins/themes/default/index.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Default theme stylesheet
+ *
+ */
+
+// For now we'll inherit a lot of the work from the backend. In the future this
+// could probably be changed to streamline some things. Extra components that
+// could be removed to reduce the CSS file size include:
+//
+// FontAwesome and icon definitions
+// Lots of helpers which may not be needed
+@import "../../../../lib/pkp/styles/fonts.less";
+@import "../../../../lib/pkp/styles/lib/normalize.less";
+@import "../../../../lib/pkp/styles/variables.less";
+@import "../../../../lib/pkp/styles/utils.less";
+@import "../../../../lib/pkp/styles/helpers.less";
+
+// Styles unique to this theme
+@import "variables.less";
+@import "helpers.less";
+@import "components.less";
+@import "body.less";
+@import "head.less";
+@import "main.less";
+@import "pages/about.less";
+@import "pages/search.less";
+@import "pages/submissions.less";
+@import "pages/viewPdf.less";
+@import "objects/article_details.less";
+@import "objects/galley_link.less";
+@import "objects/issue_summary.less";
+@import "objects/issue_toc.less";
+@import "sidebar.less";
+@import "footer.less";

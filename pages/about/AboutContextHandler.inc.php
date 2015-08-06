@@ -41,48 +41,63 @@ class AboutContextHandler extends Handler {
 	}
 
 	/**
-	 * Display contact page.
+	 * Display about page.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function contact($args, $request) {
+	function about($args, $request) {
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$context = $request->getContext();
 
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('contextSettings', $settingsDao->getSettings($context->getId()));
-		$templateMgr->display('about/contact.tpl');
-	}
+		$contextSettings = $settingsDao->getSettings($context->getId());
+		$templateMgr->assign('contextSettings', $contextSettings);
 
-	/**
-	 * Display description page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function description($args, $request) {
-		$this->setupTemplate($request);
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->display('about/description.tpl');
-	}
+		// Contact details
+		$contactName = $contextSettings['contactName'];
+		$contactTitle = $context->getLocalizedSetting('contactTitle');
+		$contactAffiliation = $context->getLocalizedSetting('contactAffiliation');
+		$contactMailingAddress = $context->getLocalizedSetting('contactMailingAddress');
+		$contactPhone = $contextSettings['contactPhone'];
+		$contactFax = $contextSettings['contactFax'];
+		$contactEmail = $contextSettings['contactEmail'];
+		$supportName = $contextSettings['supportName'];
+		$supportPhone = $contextSettings['supportPhone'];
+		$supportEmail = $contextSettings['supportEmail'];
 
-	/**
-	 * Display sponsorship page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function sponsorship($args, $request) {
-		$this->setupTemplate($request);
+		// Whether or not contact details should be displayed
+		if ($contactName || $contactTitle || $contactAffiliation || $contactMailingAddress ||
+			$contactPhone || $contactFax || $contactEmail ) {
+			$templateMgr->assign('showContact', true);
+		}
 
-		$context = $request->getContext();
-		$templateMgr = TemplateManager::getManager($request);
+		// Whether or not to show contact details for a support tech
+		if ($supportName || $supportPhone || $supportEmail ) {
+			$templateMgr->assign('showSupportContact', true);
+		}
+
+		$templateMgr->assign('mailingAddress', $contextSettings->mailingAddress);
+		$templateMgr->assign('contactName', $contactName);
+		$templateMgr->assign('contactTitle', $contactTitle);
+		$templateMgr->assign('contactAffiliation', $contactAffiliate);
+		$templateMgr->assign('contactMailingAddress', $contactMailingAddress);
+		$templateMgr->assign('contactPhone', $contactPhone);
+		$templateMgr->assign('contactFax', $contactFax);
+		$templateMgr->assign('contactEmail', $contactEmail);
+		$templateMgr->assign('supportName', $supportName);
+		$templateMgr->assign('supportPhone', $supportPhone);
+		$templateMgr->assign('supportEmail', $supportEmail);
+
+		// Sponsorship details
 		$templateMgr->assign(array(
 			'contributorNote' => $context->getLocalizedSetting('contributorNote'),
 			'contributors' => $context->getSetting('contributors'),
 			'sponsorNote' => $context->getLocalizedSetting('sponsorNote'),
 			'sponsors' => $context->getSetting('sponsors'),
 		));
-		$templateMgr->display('about/sponsorship.tpl');
+
+		$templateMgr->display('frontend/pages/about.tpl');
 	}
 
 	/**
@@ -93,18 +108,7 @@ class AboutContextHandler extends Handler {
 	function editorialTeam($args, $request) {
 		$this->setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->display('about/editorialTeam.tpl');
-	}
-
-	/**
-	 * Display editorialPolicies page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function editorialPolicies($args, $request) {
-		$this->setupTemplate($request);
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->display('about/editorialPolicies.tpl');
+		$templateMgr->display('frontend/pages/editorialTeam.tpl');
 	}
 
 	/**
@@ -123,7 +127,7 @@ class AboutContextHandler extends Handler {
 			reset($submissionChecklist);
 		}
 		$templateMgr->assign('submissionChecklist', $submissionChecklist);
-		$templateMgr->display('about/submissions.tpl');
+		$templateMgr->display('frontend/pages/submissions.tpl');
 	}
 
 	/**

@@ -10,33 +10,25 @@
  */
 
 /**
- * Temporary back-porting styling
+ * PKP Library
+ *
+ * OJS application styles should inherit all variables and reset styles from
+ * the PKP Library. The library styles will also define many of the base
+ * structural elements, as well as common controllers, UI components and
+ * helpers.
+ *
+ * This @import should represent the single access point for all PKP Library
+ * styles. Individual LESS stylesheets should never be loaded directly from OJS.
  */
-@import url("styles/backport.less");
-@import url("styles/citationEditor.less");
-@import url("styles/search.less");
+ @import "lib/pkp/styles/index.less";
 
-/**
- * PKP Library imports
- */
-@import url("lib/pkp/styles/index.less");
-
-
-/**
- * OJS application imports
+/*
+ * OJS application
+ *
+ * Any components or styling required by OJS separate from PKP should be
+ * imported below. Re-usablee components should be declared first, followed by
+ * unique or one-off styling required by individual pages.
  */
 
-/* Structure */
-@import url("styles/structure/index.less");
-
-/* Link Actions */
-@import url("lib/pkp/styles/linkActions.less");
-
-/* Listing tables */
-@import url("lib/pkp/styles/listing.less");
-
-/* Controllers */
-@import url("styles/controllers/index.less");
-
-/* Styles specific to template subfolders. */
-@import url("styles/common.less");
+// Temporary back-porting styling
+@import "styles/citationEditor.less";
