@@ -46,7 +46,7 @@ class SectionsTest extends WebTestCase {
 		$this->select('xpath=(//select[@name="newRowId[name]"])[2]', 'label=Stephanie Berardo');
 
 		// Save changes
-		$this->click('//form[@id=\'sectionForm\']//span[text()=\'Save\']/..');
+		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
 		$this->waitJQuery();
 
 		// Verify resulting grid row
@@ -65,7 +65,7 @@ class SectionsTest extends WebTestCase {
 		$this->clickAt('css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]', '10,10');
 		$this->waitForElementPresent('//select[@name=\'newRowId[name]\']//option[text()=\'Minoti Inoue\']');
 		$this->select('name=newRowId[name]', 'label=Minoti Inoue');
-		$this->click('//form[@id=\'sectionForm\']//span[text()=\'Save\']/..');
+		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
 		$this->waitJQuery();
 	}
 }

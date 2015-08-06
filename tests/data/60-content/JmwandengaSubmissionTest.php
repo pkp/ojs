@@ -57,7 +57,7 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->waitForElementPresent('css=[id^=label-]');
 		$this->type('css=[id^=label-]', 'PDF');
 		$this->select('id=galleyType', 'PDF Article Galley');
-		$this->click('//span[text()=\'Save\']/..');
+		$this->click('//span[button()=\'Save\']');
 		$this->waitJQuery();
 
 		// Upload a galley file

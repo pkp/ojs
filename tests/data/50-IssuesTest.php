@@ -36,7 +36,7 @@ class IssuesTest extends WebTestCase {
 		$this->type('css=[id^=number-]', '1');
 		$this->type('css=[id^=year-]', '2014');
 		$this->click('id=showTitle');
-		$this->click('//span[text()=\'Save\']/..');
+		$this->click('//button[text()=\'Save\']');
 		$this->waitForElementNotPresent('css=.ui-widget-overlay');
 
 		// Create issue
@@ -46,12 +46,13 @@ class IssuesTest extends WebTestCase {
 		$this->type('css=[id^=number-]', '2');
 		$this->type('css=[id^=year-]', '2014');
 		$this->click('id=showTitle');
-		$this->click('//span[text()=\'Save\']/..');
-		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+		$this->click('//button[text()=\'Save\']');
+		$this->waitJQuery();
 
 		// Publish first issue
-		$this->click('//*[text()=\'Vol 1, No 1 (2014)\']/../../../../../following-sibling::*//a[text()=\'Publish Issue\']');
-		$this->waitForElementPresent($selector='//span[text()=\'OK\']/..');
+		$this->waitForElementPresent($selector='//*[text()=\'Vol 1 No 1 (2014)\']/../../../../../following-sibling::*//a[text()=\'Publish Issue\']');
+		$this->click($selector);
+		$this->waitForElementPresent($selector='//button[text()=\'OK\']');
 		$this->click($selector);
 		$this->waitForElementNotPresent('css=.ui-widget-overlay');
 	}

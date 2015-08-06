@@ -37,9 +37,9 @@ class JforchtSubmissionTest extends ContentBaseTestCase {
 		$this->logOut();
 
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->waitForElementPresent($selector = '//span[text()=\'Expedite submission\']/..');
+		$this->waitForElementPresent($selector = '//button[text()=\'Expedite submission\']');
 		$this->click($selector);
-		$this->waitForElementPresent($selector = '//span[text()=\'OK\']/..');
+		$this->waitForElementPresent($selector = '//button[text()=\'OK\']');
 		$this->click($selector);
 		$this->waitForElementPresent($selector = 'css=[id^=issueEntry-button-]');
 		$this->click($selector);
@@ -47,7 +47,7 @@ class JforchtSubmissionTest extends ContentBaseTestCase {
 		$this->click($selector);
 		$this->waitForElementPresent($selector = 'id=issueId');
 		$this->select($selector, 'Vol 1, No 1 (2014)');
-		$this->waitForElementPresent($selector = '//span[text()=\'Save\']/..');
+		$this->waitForElementPresent($selector = '//button[text()=\'Save\']');
 		$this->click($selector);
 		$this->logOut();
 	}
