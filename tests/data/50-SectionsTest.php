@@ -54,12 +54,7 @@ class SectionsTest extends WebTestCase {
 		// Verify resulting grid row
 		$this->assertEquals('Berardo, Buskins', $this->getText('css=#cell-1-editors > span'));
 
-		// Section settings
-		$this->waitForElementPresent($selector='link=Journal');
-		$this->clickAndWait($selector);
-		$this->waitForElementPresent($selector='link=Sections');
-		$this->click($selector);
-		$this->waitJQuery();
+		$this->pause(500); // pkp/pkp-lib#655
 
 		// Create a new "Reviews" section
 		$this->click('css=[id^=component-grid-settings-sections-sectiongrid-addSection-button-]');
