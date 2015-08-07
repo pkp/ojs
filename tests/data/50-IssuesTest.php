@@ -38,6 +38,7 @@ class IssuesTest extends WebTestCase {
 		$this->click('id=showTitle');
 		$this->click('//button[text()=\'Save\']');
 		$this->waitJQuery();
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel'); // pkp/pkp-lib#655
 
 		// Create issue
 		$this->click('css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
@@ -48,6 +49,7 @@ class IssuesTest extends WebTestCase {
 		$this->click('id=showTitle');
 		$this->click('//button[text()=\'Save\']');
 		$this->waitJQuery();
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel'); // pkp/pkp-lib#655
 
 		// Publish first issue
 		$this->waitForElementPresent($selector='//*[text()=\'Vol 1 No 1 (2014)\']/../../../../../following-sibling::*//a[text()=\'Publish Issue\']');
