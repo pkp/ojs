@@ -91,6 +91,9 @@ echo "Done"
 
 echo -n "Installing composer dependencies ... "
 composer.phar update
+cd lib/vendor/oyejorge/less.php
+composer.phar update
+cd ../../../..
 cd ../..
 
 echo -n "Preparing package ... "
