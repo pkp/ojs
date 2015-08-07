@@ -42,19 +42,101 @@
 	}
 }
 
-// Input field
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="phone"],
- {
-	padding: 0 0.5em;
-	max-width: 100%;
-	background: #fff;
-	border: 1px solid #aaa;
-	border-radius: @radius;
-	font-size: @font-sml;
-	line-height: @double - 2; // account for border
+// Forms
+// These don't yet follow the component pattern on the frontend, but should
+// eventually once the login/registration templates are incorporated into the
+// frontend template structure.
+.pkp_form {
+
+	fieldset {
+		margin: 0 0 @double;
+		padding: 0;
+		border: none;
+	}
+
+	legend {
+		margin-bottom: @base;
+		font-size: @font-bump;
+		font-weight: @bold;
+		line-height: @double;
+	}
+
+	.fields {
+		&:extend(.pkp_unstyled_list);
+
+		> li {
+			position: relative;
+			padding-bottom: @double; // Contain errors
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			// Nest so we don't grab .error class attached to li
+			.error {
+				position: absolute;
+				left: 0.5em; // Sit off the rounded edge of input fields
+				bottom: 9px; // Sit on the bottom line of the input field above
+				padding: 4px 0.5em; // Keep it tight so it doesn't bleed into next field
+				background: @no;
+				border-bottom-left-radius: 2px;
+				border-bottom-right-radius: 2px;
+				font-size: 12px; // Special case for tiny text
+				line-height: 16px;
+				font-weight: 700;
+				color: #fff;
+			}
+		}
+	}
+
+	label {
+		display: block;
+	}
+
+	.label {
+		display: block;
+		font-size: @font-sml;
+		font-weight: @normal;
+		font-style: italic;
+
+		.required {
+			color: @no;
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="url"],
+	input[type="phone"],
+	select,
+	textarea {
+		padding: 0 0.5em;
+		width: 100%;
+		height: @double - 2; // account for border
+		background: #fff;
+		border: 1px solid #aaa;
+		border-radius: @radius;
+		font-size: @font-sml;
+		line-height: @double - 2; // account for border
+	}
+
+	textarea {
+		width: 100%;
+		height: 8em;
+	}
+
+	@media(min-width: @screen-phone) {
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="url"],
+		input[type="phone"],
+		select {
+			max-width: 20em;
+		}
+	}
 }
 
 // Access legend
