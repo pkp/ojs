@@ -39,14 +39,14 @@ class RbaiyewuSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
 		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
 		$this->recordEditorialDecision('Send To Production');
-		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Layout Editor', 'Stephen Hellier');
 		$this->logOut();
 	}

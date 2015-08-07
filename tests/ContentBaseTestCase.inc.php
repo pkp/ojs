@@ -49,11 +49,11 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 	 * Send to review.
 	 */
 	protected function sendToReview() {
-		$this->waitForElementPresent($selector = '//span[text()=\'Send to Review\']/..');
+		$this->waitForElementPresent($selector = 'css=[id^=externalReview-button-]');
 		$this->click($selector);
 		$this->waitForElementPresent('//form[@id=\'initiateReview\']//input[@type=\'checkbox\']');
-		$this->waitForElementPresent($selector = '//form[@id=\'initiateReview\']//span[text()=\'Send to Review\']/..');
+		$this->waitForElementPresent($selector = '//form[@id=\'initiateReview\']//button[contains(@id, \'submitFormButton-\')]');
 		$this->click($selector);
-		$this->waitForElementNotPresent('css=.ui-widget-overlay');
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 	}
 }

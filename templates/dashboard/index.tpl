@@ -9,7 +9,7 @@
  *}
 {capture assign="additionalDashboardTabs"}
 	{if array_intersect(array(ROLE_ID_MANAGER), $userRoles)}
-		<li><a href="{url router=$smarty.const.ROUTE_PAGE page="manageIssues"}">{translate key="editor.navigation.issues"}</a></li>
+		<li><a name="issues" href="{url router=$smarty.const.ROUTE_PAGE page="manageIssues"}">{translate key="editor.navigation.issues"}</a></li>
 	{/if}
 {/capture}
 {include file="core:dashboard/index.tpl" additionalDashboardTabs=$additionalDashboardTabs}

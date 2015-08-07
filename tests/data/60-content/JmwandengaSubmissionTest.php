@@ -39,15 +39,15 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->assignParticipant('Section editor', 'David Buskins');
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('jjanssen', 'Julie Janssen');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
 		$this->assignReviewer('agallego', 'Adela Gallego');
 		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Editorial\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
 		$this->recordEditorialDecision('Send To Production');
-		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/div[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Layout Editor', 'Stephen Hellier');
 		$this->assignParticipant('Proofreader', 'Sabine Kumar');
 
@@ -57,7 +57,7 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->waitForElementPresent('css=[id^=label-]');
 		$this->type('css=[id^=label-]', 'PDF');
 		$this->select('id=galleyType', 'PDF Article Galley');
-		$this->click('//span[text()=\'Save\']/..');
+		$this->click('//button[text()=\'Save\']');
 		$this->waitJQuery();
 
 		// Upload a galley file

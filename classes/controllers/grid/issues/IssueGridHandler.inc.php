@@ -401,9 +401,9 @@ class IssueGridHandler extends GridHandler {
 		);
 
 		$dispatcher = $request->getDispatcher();
-		// FIXME: Find a better way to reload the containing tabs.
-		// Without this, issues don't move between tabs properly.
-		return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues'));
+		$json = new JSONMessage();
+		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'index')));
+		return $json;
 	}
 
 	/**
@@ -432,9 +432,9 @@ class IssueGridHandler extends GridHandler {
 		}
 
 		$dispatcher = $request->getDispatcher();
-		// FIXME: Find a better way to reload the containing tabs.
-		// Without this, issues don't move between tabs properly.
-		return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues'));
+		$json = new JSONMessage();
+		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'index')));
+		return $json;
 	}
 }
 
