@@ -1,0 +1,59 @@
+/**
+ * @file styles/pages/login.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the lightweight page for viewing PDFs
+ * @link templates/user/login.tpl
+ */
+.page_login {
+
+	// Form
+	.login {
+		margin-bottom: 0;
+		max-width: 17em;
+
+		input[type="text"],
+		input[type="password"] {
+			width: 100%;
+		}
+	}
+
+	.password {
+
+		.label {
+
+			a {
+				float: right;
+				font-size: 12px;
+				font-style: normal;
+			}
+		}
+	}
+
+	.remember {
+		padding-bottom: 0;
+
+		.label {
+			display: inline;
+			font-style: normal;
+		}
+	}
+
+	.buttons {
+
+		button {
+			&:extend(.cmp_button);
+			float: right;
+		}
+
+		a {
+			float: right;
+			font-size: 12px;
+			line-height: @double;
+			margin-right: 1em;
+		}
+	}
+}

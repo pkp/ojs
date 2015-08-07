@@ -1,0 +1,137 @@
+/**
+ * @file styles/pages/register.less
+ *
+ * Copyright (c) 2014-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the lightweight page for viewing PDFs
+ * @link templates/user/register.tpl
+ */
+.page_register {
+
+	.fields {
+
+		.username {
+
+			label {
+				display: inline-block;
+			}
+
+			.suggest_username {
+				&:extend(.cmp_button);
+			}
+		}
+	}
+
+	.required_label {
+		font-size: @font-sml;
+		line-height: @line-sml;
+		color: @text-light;
+	}
+
+	.buttons button {
+		&:extend(.cmp_button);
+	}
+
+	// Styles for form error list, which is still tied to a template shared by
+	// the backend
+	#formErrors {
+		margin: @double 0;
+		padding: @base;
+		background: @no;
+		color: #fff;
+
+		.pkp_form_error {
+			padding: ((@double - @line-sml) / 2) 0;
+			font-size: @font-sml;
+			font-weight: bold;
+			line-height: @line-sml;
+
+		}
+
+		.pkp_form_error_list {
+			margin: 0;
+			padding-left: @double;
+			font-size: @font-sml;
+			line-height: @line-sml;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	// Styles for user group panel, which is still tied to a template
+	// shared by the backend
+	.checkbox_and_radiobutton {
+		&:extend(.pkp_unstyled_list);
+	}
+
+	#interests {
+		margin-top: @double;
+
+		.sub_label {
+			font-size: @font-sml;
+			font-style: italic;
+			line-height: @double;
+		}
+	}
+
+	// Tag-it component
+	// @todo This just duplicates some styles from pkp-lib. We can probably
+	//  find a better way to share styles after beta, or move this to somewhere
+	//  more appropriate in the theme.
+	.tagit {
+		&:extend(.pkp_unstyled_list);
+		&:extend(.pkp_form input[type="text"]);
+		.pkp_helpers_clear();
+
+		// overwrite text field styles
+		max-width: 100%;
+		height: auto;
+
+		> li {
+			display: inline-block;
+
+			&.tagit-choice {
+				margin-right: 0.5em;
+				padding-left: 0.5em;
+				background: @bg;
+				border-radius: @radius;
+				line-height: @double - @half;
+			}
+		}
+
+		input[type="text"] {
+			display: inline-block;
+			border: none;
+			width: inherit;
+			line-height: 30px;
+			height: 30px;
+			vertical-align: top;
+			padding: 0 0.5em;
+		}
+	}
+
+	.tagit-close {
+		padding: 0 0.5em;
+		color: @no;
+	}
+
+	@media(min-width: @screen-tablet) {
+
+		.identity li {
+			display: inline-block;
+			padding-right: 1em;
+			max-width: 13em;
+		}
+	}
+
+	@media(min-width: @screen-lg-desktop) {
+
+		.identity li {
+			max-width: 17em;
+		}
+	}
+}
