@@ -34,6 +34,34 @@
 		&:extend(.cmp_button);
 	}
 
+	// Styles for form error list, which is still tied to a template shared by
+	// the backend
+	#formErrors {
+		margin: @double 0;
+		padding: @base;
+		background: @no;
+		color: #fff;
+
+		.pkp_form_error {
+			padding: ((@double - @line-sml) / 2) 0;
+			font-size: @font-sml;
+			font-weight: bold;
+			line-height: @line-sml;
+
+		}
+
+		.pkp_form_error_list {
+			margin: 0;
+			padding-left: @double;
+			font-size: @font-sml;
+			line-height: @line-sml;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
 	// Styles for user group panel, which is still tied to a template
 	// shared by the backend
 	.checkbox_and_radiobutton {
