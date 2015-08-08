@@ -29,9 +29,10 @@ class BvemerSubmissionTest extends ContentBaseTestCase {
 			'roles' => array('Author'),
 		));
 
+		$title = 'A Review of Information Systems and Corporate Memory: design for staff turn-over';
 		$this->createSubmission(array(
 			'section' => 'Reviews',
-			'title' => 'A Review of Information Systems and Corporate Memory: design for staff turn-over',
+			'title' => $title,
 		));
 
 		$this->logOut();
