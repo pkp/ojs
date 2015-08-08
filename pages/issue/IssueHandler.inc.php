@@ -342,7 +342,6 @@ class IssueHandler extends Handler {
 	 */
 	function _setupIssueTemplate($request, $issue, $showToc = false) {
 		$journal = $request->getJournal();
-		$journalId = $journal->getId();
 		$templateMgr = TemplateManager::getManager($request);
 
 		// Determine pre-publication access
@@ -352,42 +351,45 @@ class IssueHandler extends Handler {
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		}
 
-		$templateMgr->assign('issueIdentification', $issue->getIssueIdentification());
-		$templateMgr->assign('issueTitle', $issue->getLocalizedTitle());
-		$templateMgr->assign('issueSeries', $issue->getIssueIdentification(array('showTitle' => false)));
+		$templateMgr->assign(array(
+			'issueIdentification' => $issue->getIssueIdentification(),
+			'issueTitle' => $issue->getLocalizedTitle(),
+			'issueSeries' => $issue->getIssueIdentification(array('showTitle' => false)),
+		));
 
 		$locale = AppLocale::getLocale();
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
-		$coverPagePath = $request->getBaseUrl() . '/';
-		$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
-		$templateMgr->assign('coverPagePath', $coverPagePath);
-		$templateMgr->assign('locale', $locale);
+		$templateMgr->assign(array(
+			'coverPagePath' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/',
+			'locale' => $locale,
+		));
 
 
 		if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageCover($locale)) {
-			$templateMgr->assign('fileName', $issue->getFileName($locale));
-			$templateMgr->assign('width', $issue->getWidth($locale));
-			$templateMgr->assign('height', $issue->getHeight($locale));
-			$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
-			$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
-
+			$templateMgr->assign(array(
+				'fileName' => $issue->getFileName($locale),
+				'width' => $issue->getWidth($locale),
+				'height' => $issue->getHeight($locale),
+				'coverPageAltText' => $issue->getCoverPageAltText($locale),
+				'originalFileName' => $issue->getOriginalFileName($locale),
+				'originalFileName' => $issue->getOriginalFileName($locale),
+			));
 		} else {
-			// Issue galleys
 			$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-			$issueGalleys = $issueGalleyDao->getByIssueId($issue->getId());
-			$templateMgr->assign('issueGalleys', $issueGalleys);
-
-			// Published articles
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
+			$templateMgr->assign(array(
+				'issueGalleys' => $issueGalleyDao->getByIssueId($issue->getId()),
+				'publishedArticles' => $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true),
+			));
 
-			$templateMgr->assign('publishedArticles', $publishedArticles);
 			$showToc = true;
 		}
-		$templateMgr->assign('showToc', $showToc);
-		$templateMgr->assign('issue', $issue);
+		$templateMgr->assign(array(
+			'showToc' => $showToc,
+			'issue' => $issue
+		));
 
 		// Subscription Access
 		import('classes.issue.IssueAction');
@@ -417,8 +419,10 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
 		}
 
-		$templateMgr->assign('showGalleyLinks', !$subscriptionRequired || $journal->getSetting('showGalleyLinks'));
-		$templateMgr->assign('hasAccess', !$subscriptionRequired || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain);
+		$templateMgr->assign(array(
+			'showGalleyLinks' => !$subscriptionRequired || $journal->getSetting('showGalleyLinks'),
+			'hasAccess' => !$subscriptionRequired || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain
+		));
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
@@ -433,7 +437,7 @@ class IssueHandler extends Handler {
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
 			$templateMgr->addStyleSheet(
-				$request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journalId) . '/' . $styleFileName
+				$request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $styleFileName
 			);
 		}
 	}

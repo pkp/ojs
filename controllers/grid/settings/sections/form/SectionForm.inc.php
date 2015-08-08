@@ -152,7 +152,9 @@ class SectionForm extends PKPSectionForm {
 		if ($this->getSectionId()) {
 			$sectionDao->updateObject($section);
 		} else {
+			$section->setSequence(REALLY_BIG_NUMBER);
 			$this->setSectionId($sectionDao->insertObject($section));
+			$sectionDao->resequenceSections($journal->getId());
 		}
 
 		import('lib.pkp.classes.controllers.listbuilder.ListbuilderHandler');

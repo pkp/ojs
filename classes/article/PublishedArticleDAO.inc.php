@@ -187,7 +187,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				se.abstracts_not_required AS abstracts_not_required,
 				se.hide_title AS section_hide_title,
 				se.hide_author AS section_hide_author,
-				COALESCE(o.seq, ps.seq) AS section_seq,
+				COALESCE(o.seq, se.seq) AS section_seq,
 				ps.seq,
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
@@ -211,7 +211,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			if ($publishedArticle->getSectionId() != $currSectionId && !isset($publishedArticles[$publishedArticle->getSectionId()])) {
 				$currSectionId = $publishedArticle->getSectionId();
 				$publishedArticles[$currSectionId] = array(
-					'articles'=> array(),
+					'articles' => array(),
 					'title' => '',
 					'abstractsNotRequired' => $row['abstracts_not_required'],
 					'hideAuthor' => $row['section_hide_author']
