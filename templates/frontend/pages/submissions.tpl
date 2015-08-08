@@ -29,7 +29,7 @@
 	</p>
 
 	{if $currentJournal->getLocalizedSetting('authorGuidelines')}
-		<div class="author_guidelines">
+		<div id="authorGuidelines" class="author_guidelines">
 			<h2>
 				{translate key="about.authorGuidelines"}
 				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="journal" anchor="guides" sectionTitleKey="about.authorGuidelines"}
@@ -65,7 +65,7 @@
 	{/if}
 
 	{if $currentJournal->getLocalizedSetting('privacyStatement')}
-		<div class="privacy">
+		<div id="privacyStatement" class="privacy">
 			<h2>
 				{translate key="about.privacyStatement"}
 				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="journal" anchor="policies" sectionTitleKey="about.privacyStatement"}

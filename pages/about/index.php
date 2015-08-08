@@ -17,7 +17,7 @@
  */
 
 switch($op) {
-	case 'about':
+	case 'index':
 	case 'subscriptions':
 	case 'editorialTeam':
 	case 'submissions':

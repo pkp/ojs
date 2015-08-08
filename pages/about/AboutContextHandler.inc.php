@@ -45,7 +45,7 @@ class AboutContextHandler extends Handler {
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function about($args, $request) {
+	function index($args, $request) {
 		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$context = $request->getContext();
 
