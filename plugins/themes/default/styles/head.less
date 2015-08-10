@@ -110,17 +110,81 @@
 	> a:focus .task-count {
 		background: #fff;
 	}
+}
 
-	// @todo needs some work
-	#notificationsPopover {
-		display: none;
-		position: absolute;
-		top: 100%;
-		right: 0;
-		width: 30em;
-		padding: @base;
-		background: @primary;
+// Tasks grid. Hacky workarounds for styling a grid...
+#notificationsPopover {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 30em;
+	background: @primary;
+	color: #fff;
+
+	a {
 		color: #fff;
+	}
+
+	.footer {
+		float: left;
+	}
+
+	// Override .pkp_nav_list ul styles
+	.actions {
+		position: relative;
+		top: auto;
+		left: auto;
+		width: auto;
+
+		> li {
+			display: inline-block;
+		}
+
+		a {
+			padding: 0 @base;
+			line-height: @double;
+		}
+	}
+
+	.gridPaging {
+		float: right;
+		line-height: @double;
+	}
+
+	.gridPages {
+		padding: 0 @base;
+		color: rgba(255,255,255,0.7);
+	}
+
+	.pkp_controllers_grid {
+
+		thead {
+			line-height: @double;
+
+			th:first-child {
+				&:extend(.pkp_screen_reader);
+			}
+		}
+
+		tbody {
+			background: @bg;
+
+			a {
+				padding: @half 0;
+				color: @primary-lift;
+
+				&:hover,
+				&:focus {
+					color: @primary;
+				}
+			}
+		}
+
+		.first_column {
+			padding-left: @base;
+			min-width: @double + @base;
+		}
 	}
 }
 
