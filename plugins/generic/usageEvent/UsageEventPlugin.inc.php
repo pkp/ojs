@@ -147,7 +147,7 @@ class UsageEventPlugin extends GenericPlugin {
 				$issue = $templateMgr->get_template_vars('issue');
 				$galley = $templateMgr->get_template_vars('galley'); /* @var $galley ArticleGalley */
 				$article = $templateMgr->get_template_vars('article');
-				if ($galley) {
+				if ($galley && is_a($galley, 'ArticleGalley')) {
 					if ($galley->isHTMLGalley() || $galley->getRemoteURL()) {
 						$pubObject = $galley;
 						$assocType = ASSOC_TYPE_GALLEY;
