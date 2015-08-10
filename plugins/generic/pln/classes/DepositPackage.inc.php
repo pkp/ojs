@@ -55,7 +55,7 @@ class DepositPackage {
 	 */
 	function _logMessage($message) {
 		if($this->_task) {
-			$task->addExecutionLogEntry($message, SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
+			$this->_task->addExecutionLogEntry($message, SCHEDULED_TASK_MESSAGE_TYPE_NOTICE);
 		} else {
 			error_log($message);
 		}
@@ -347,7 +347,7 @@ class DepositPackage {
 			if($result['status'] == FALSE) {
 				$this->_logMessage(__("plugins.generic.pln.error.network.deposit", array('error' => $result['error'])));
 			} else {
-				$this->_logMessage(__("plugins.generic.pln.error.http.deposit", array('error' => $result['error'])));
+				$this->_logMessage(__("plugins.generic.pln.error.http.deposit", array('error' => $result['status'])));
 			}
 			$this->_deposit->setRemoteFailureStatus();
 			$this->_deposit->setLastStatusDate(time());
