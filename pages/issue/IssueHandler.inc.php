@@ -39,7 +39,7 @@ class IssueHandler extends Handler {
 
 		import('classes.security.authorization.OjsIssueRequiredPolicy');
 		// the 'archives' op does not need this policy so it is left out of the operations array.
-		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args, array('view', 'viewPdf', 'viewFile', 'viewDownloadInterstitial', 'download')));
+		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args, array('view', 'download')));
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
@@ -98,23 +98,37 @@ class IssueHandler extends Handler {
 	}
 
 	/**
-	 * Display issue view page.
+	 * View an issue.
 	 */
 	function view($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$showToc = isset($args[1]) ? $args[1] : '';
-
 		$this->setupTemplate($request);
-
 		$templateMgr = TemplateManager::getManager($request);
-		$this->_setupIssueTemplate($request, $issue, ($showToc == 'showToc') ? true : false);
-		$templateMgr->assign('issueId', $issue->getBestIssueId());
 
-		// consider public identifiers
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
-		$templateMgr->display('frontend/pages/issue.tpl');
+		if ($galley = $this->getGalley()) {
+			// Ensure we have PDF galley for inline viewing
+			// Otherwise redirect to download issue galley page
+			$galley = $this->getGalley();
 
+			// load Article galley plugins
+			PluginRegistry::loadCategory('viewableFiles', true);
+
+			$templateMgr->assign('pdfTitle', $issue->getIssueIdentification());
+			$templateMgr->assign('parent', $issue);
+			$templateMgr->assign('galley', $galley);
+
+			if (!HookRegistry::call('IssueHandler::view::galley', array(&$request, &$issue, &$galley))) {
+				return $templateMgr->display('frontend/pages/issueGalley.tpl');
+			}
+		} else {
+			$this->_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);
+			$templateMgr->assign('issueId', $issue->getBestIssueId());
+
+			// consider public identifiers
+			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+			$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
+			$templateMgr->display('frontend/pages/issue.tpl');
+		}
 	}
 
 	/**
@@ -141,77 +155,20 @@ class IssueHandler extends Handler {
 	}
 
 	/**
-	 * View a PDF issue galley inline
-	 * @param $args array ($issueId, $galleyId)
-	 * @param $request Request
-	 */
-	function viewPdf($args, $request) {
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-
-		if ($galleyId && $this->userCanViewGalley($request)) {
-			$this->setupTemplate($request);
-
-			// Ensure we have PDF galley for inline viewing
-			// Otherwise redirect to download issue galley page
-			$galley = $this->getGalley();
-			if (!$galley->isPdfGalley()) {
-				$request->redirect(null, null, 'viewDownloadInterstitial', array($issue->getId(), $galleyId));
-			}
-
-			// Display PDF galley inline
-			$templateMgr = TemplateManager::getManager($request);
-
-			$templateMgr->assign('pdfTitle', $issue->getIssueIdentification());
-			$templateMgr->assign('parent', $issue);
-			$templateMgr->assign('galley', $galley);
-
-			$templateMgr->display('frontend/pages/viewPdf.tpl');
-		}
-	}
-
-	/**
-	 * Issue galley interstitial page for non-PDF files
-	 * @param $args array ($issueId, $galleyId)
-	 * @param $request Request
-	 */
-	function viewDownloadInterstitial($args, $request) {
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		if ($galleyId && $this->userCanViewGalley($request)) {
-			$this->setupTemplate($request);
-			$galley = $this->getGalley();
-
-			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign('issueId', $issue->getId());
-			$templateMgr->assign('galleyId', $galleyId);
-			$templateMgr->assign('galley', $galley);
-			$templateMgr->assign('issue', $issue);
-			$templateMgr->display('issue/interstitial.tpl');
-		}
-	}
-
-	/**
-	 * View an issue galley file (inline file).
-	 * @param $args array ($issueId, $galleyId)
-	 * @param $request Request
-	 */
-	function viewFile($args, $request) {
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		if ($galleyId && $this->userCanViewGalley($request)) {
-			$this->_showIssueGalley($request, true);
-		}
-	}
-
-	/**
 	 * Downloads an issue galley file
 	 * @param $args array ($issueId, $galleyId)
 	 * @param $request Request
 	 */
 	function download($args, $request) {
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		if ($galleyId && $this->userCanViewGalley($request)) {
-			$this->_showIssueGalley($request, false);
+		if ($this->userCanViewGalley($request)) {
+			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+			$galley = $this->getGalley();
+
+			if (!HookRegistry::call('IssueHandler::download', array(&$issue, &$galley))) {
+				import('classes.file.IssueFileManager');
+				$issueFileManager = new IssueFileManager($issue->getId());
+				return $issueFileManager->downloadFile($galley->getFileId(), $request->getUserVar('inline')?true:false);
+			}
 		}
 	}
 
@@ -311,24 +268,6 @@ class IssueHandler extends Handler {
 	function setupTemplate($request) {
 		parent::setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_EDITOR);
-	}
-
-	/**
-	 * Show an issue galley file (either inline or download)
-	 * @param $issueId int
-	 * @param $galleyId int
-	 * @param $request Request
-	 * @param $inline boolean
-	 */
-	function _showIssueGalley($request, $inline = false) {
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$galley = $this->getGalley();
-
-		if (!HookRegistry::call('IssueHandler::viewFile', array(&$issue, &$galley))) {
-			import('classes.file.IssueFileManager');
-			$issueFileManager = new IssueFileManager($issue->getId());
-			return $issueFileManager->downloadFile($galley->getFileId(), $inline);
-		}
 	}
 
 	/**

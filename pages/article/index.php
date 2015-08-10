@@ -18,9 +18,6 @@
 
 switch ($op) {
 	case 'view':
-	case 'viewArticle':
-	case 'viewRST':
-	case 'viewFile':
 	case 'download':
 		define('HANDLER_CLASS', 'ArticleHandler');
 		import('pages.article.ArticleHandler');

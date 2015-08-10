@@ -1148,4 +1148,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<message key="user.profile.form.showOtherContexts">Show Other Journals</message>
 	<message key="user.profile.form.hideOtherContexts">Hide Other Journals</message>
+
+	<message key="article.view.interstitial"><![CDATA[Please <a href="{$galleyUrl}">click here</a> to download the article file.]]></message>
 </locale>

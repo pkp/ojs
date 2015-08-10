@@ -13,17 +13,13 @@
 {include file="common/frontend/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
 <div class="page">
-
-	{* A specific galley is being viewed *}
-	{* @todo figure out when and how this is used *}
 	{if $galley}
 		<h1 class="page_title">{$article->getLocalizedTitle()|escape}</h1>
 
-		{assign var=pubObject value=$galley}
-		{call_hook name="Templates::Galley::displayGalley" fileId=$fileId}
-
-	{* Show article overview *}
+		{url|assign:"fileUrl" op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$firstGalleyFile->getId() escape=false}
+		{translate key="article.view.interstitial" galleyUrl=$fileUrl}
 	{else}
+		{* Show article overview *}
 		{include file="frontend/objects/article_details.tpl"}
 
 		{* Display a legend describing the open/restricted access icons *}

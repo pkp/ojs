@@ -84,7 +84,7 @@ class IssueFileManager extends FileManager {
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 		$issueFile = $issueFileDao->getById($fileId);
 
-		if (parent::deleteFile($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName())) {
+		if (parent::deleteFile($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName())) {
 			$issueFileDao->deleteById($fileId);
 			return true;
 		}
@@ -111,7 +111,7 @@ class IssueFileManager extends FileManager {
 
 		if ($issueFile) {
 			$fileType = $issueFile->getFileType();
-			$filePath = $this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getFileName();
+			$filePath = $this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 
 			return parent::downloadFile($filePath, $fileType, $inline);
 

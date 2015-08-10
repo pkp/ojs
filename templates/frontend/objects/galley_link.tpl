@@ -14,7 +14,7 @@
  * @uses $restrictOnlyPdf bool Is access only restricted to PDF galleys?
  * @uses $purchaseArticleEnabled bool Can this article be purchased?
  * @uses $currentJournal Journal The current journal context
- * @uses $journalOverride Journal An optionl argument to override the current
+ * @uses $journalOverride Journal An optional argument to override the current
  *       journal with a specific context
  *}
 
@@ -26,10 +26,8 @@
 {* Determine galley type and URL op *}
 {if $galley->isPdfGalley()}
 	{assign var="type" value="pdf"}
-	{assign var="op" value="viewPdf"}
 {else}
 	{assign var="type" value="file"}
-	{assign var="op" value="viewInterstitial"}
 {/if}
 
 {* Get page and parentId for URL *}
@@ -43,7 +41,7 @@
 
 {* Get user access flag *}
 {if !$hasAccess}
-	{if $restrictOnlyPdf && type=='pdf'}
+	{if $restrictOnlyPdf && type=="pdf"}
 		{assign var=restricted value="1"}
 	{elseif !$restrictOnlyPdf}
 		{assign var=restricted value="1"}
@@ -51,7 +49,7 @@
 {/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="obj_galley_link {$type}{if $restricted} restricted{/if}" href="{url page=$page op=$op path=$parentId|to_array:$galley->getBestGalleyId($currentJournal)}">
+<a class="obj_galley_link {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId($currentJournal)}">
 
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}

@@ -199,13 +199,14 @@ class ArticleGalley extends Representation {
 	 * @return array SubmissionFile
 	 */
 	function getLatestGalleyFiles($fileExtensionMatch = null) {
+		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$submissionFiles = $submissionFileDao->getLatestRevisionsByAssocId(
 			ASSOC_TYPE_GALLEY, $this->getId(),
 			$this->getSubmissionId(), SUBMISSION_FILE_PROOF
 		);
 
-		if (!$fileExtensionMatch) {
+		if ($fileExtensionMatch === null) {
 			return $submissionFiles;
 		} else {
 			$filteredFiles = array();
@@ -228,13 +229,7 @@ class ArticleGalley extends Representation {
 	function getFirstGalleyFile($fileType = null, $allFiles = false) {
 		$submissionFiles = $this->getLatestGalleyFiles($fileType);
 		if (is_array($submissionFiles) && sizeof($submissionFiles) > 0) {
-			if ($allFiles) {
-				return array_shift($submissionFiles);
-			} else { // return first viewable file.
-				foreach ($submissionFiles as $id => $file) {
-					if ($file->getViewable()) return $file;
-				}
-			}
+			return array_shift($submissionFiles);
 		}
 
 		return null;

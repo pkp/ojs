@@ -202,16 +202,18 @@ class ArticleHandler extends Handler {
 			// load Article galley plugins
 			PluginRegistry::loadCategory('viewableFiles', true);
 
-			$templateMgr->display('frontend/pages/article.tpl');
+			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$galley, &$article))) {
+				return $templateMgr->display('frontend/pages/article.tpl');
+			}
 		}
 	}
 
 	/**
-	 * View a file in a browser (inline)
+	 * Download an article file
 	 * @param array $args
 	 * @param PKPRequest $request
 	 */
-	function viewFile($args, $request, $hookName = 'ArticleHandler::viewFile', $inline = true) {
+	function download($args, $request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
@@ -229,21 +231,12 @@ class ArticleHandler extends Handler {
 				}
 			}
 
-			if (!HookRegistry::call($hookName, array($this->article, &$this->galley, &$fileId))) {
+			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $articleId);
-				$submissionFileManager->downloadFile($fileId, null, $inline);
+				$submissionFileManager->downloadFile($fileId, null, $request->getUserVar('inline')?true:false);
 			}
 		}
-	}
-
-	/**
-	 * download a file in a browser
-	 * @param array $args
-	 * @param PKPRequest $request
-	 */
-	function download($args, $request) {
-		return $this->viewFile($args, $request, 'ArticleHandler::download', false);
 	}
 
 	/**

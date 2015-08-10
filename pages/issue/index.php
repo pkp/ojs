@@ -19,11 +19,8 @@
 switch ($op) {
 	case 'index':
 	case 'current':
-	case 'view':
 	case 'archive':
-	case 'viewPdf':
-	case 'viewDownloadInterstitial':
-	case 'viewFile':
+	case 'view':
 	case 'download':
 		define('HANDLER_CLASS', 'IssueHandler');
 		import('pages.issue.IssueHandler');

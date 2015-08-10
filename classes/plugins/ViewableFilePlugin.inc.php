@@ -29,7 +29,8 @@ abstract class ViewableFilePlugin extends PKPViewableFilePlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('Templates::Galley::displayGalley', array($this, 'callback'));
+				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleCallback'));
+				HookRegistry::register('IssueHandler::view::galley', array($this, 'issueCallback'));
 			}
 			return true;
 		}
@@ -37,34 +38,87 @@ abstract class ViewableFilePlugin extends PKPViewableFilePlugin {
 	}
 
 	/**
-	 * Display this galley in some manner.
-	 *
-	 * @param $templateMgr object
-	 * @param $request PKPRequest
-	 * @param $params array
-	 * @return string
+	 * Determine whether this plugin can handle the specified content.
+	 * @param $galley ArticleGalley|IssueGalley
+	 * @return boolean True iff the plugin can handle the content
 	 */
-	function displayArticleGalley($templateMgr, $request, $params) {
-		$templateFilename = $this->getTemplateFilename();
-		if ($templateFilename === null) return '';
-		return $templateMgr->fetch($this->getTemplatePath() . $templateFilename);
+	function canHandle($galley) {
+		return false;
 	}
 
 	/**
-	 * Callback that renders the galley.
+	 * Display an article galley.
+	 * @param $request PKPRequest
+	 * @param $issue Issue
+	 * @param $article Article
+	 * @param $galley ArticleGalley
+	 * @return string
+	 */
+	function displayArticleGalley($request, $issue, $article, $galley) {
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign(array(
+			'issue' => $issue,
+			'article' => $article,
+			'galley' => $galley,
+		));
+		$templateMgr->display($this->getTemplatePath() . '/articleGalley.tpl');
+	}
+
+	/**
+	 * Display an issue galley.
+	 * @param $request PKPRequest
+	 * @param $issue Issue
+	 * @param $galley IssueGalley
+	 * @return string
+	 */
+	function displayIssueGalley($request, $issue, $galley) {
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign(array(
+			'issue' => $issue,
+			'galley' => $galley,
+		));
+		$templateMgr->display($this->getTemplatePath() . '/issueGalley.tpl');
+	}
+
+	/**
+	 * Callback that renders the article galley.
 	 *
 	 * @param $hookName string
 	 * @param $args array
 	 * @return string
 	 */
-	function callback($hookName, $args) {
-		$params =& $args[0];
-		$templateMgr =& $args[1];
-		$output =& $args[2];
+	function articleCallback($hookName, $args) {
+		$request =& $args[0];
+		$issue =& $args[1];
+		$galley =& $args[2];
+		$article =& $args[3];
 
-		$galley = $templateMgr->get_template_vars('galley'); // set in ArticleHandler
-		if ($galley && $galley->getGalleyType() == $this->getName()) {
-			$output .= $this->displayArticleGalley($templateMgr, $this->getRequest(), $params);
+		$templateMgr = TemplateManager::getManager($request);
+		if ($this->canHandle($galley)) {
+			$this->displayArticleGalley($request, $issue, $article, $galley);
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Callback that renders the issue galley.
+	 *
+	 * @param $hookName string
+	 * @param $args array
+	 * @return string
+	 */
+	function issueCallback($hookName, $args) {
+		$request = $args[0];
+		$issue = $args[1];
+		$galley = $args[2];
+
+		$templateMgr = TemplateManager::getManager($request);
+		$fileId = $galley->getFileId();
+		if ($this->canHandle($galley)) {
+			$this->displayIssueGalley($request, $issue, $galley);
+			return true;
 		}
 
 		return false;
