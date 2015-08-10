@@ -140,9 +140,8 @@ class PLNSettingsForm extends Form {
 			return false;
 		if(isset($parts['user']) 
 				|| isset($parts['pass'])
-				|| (isset($parts['path']) && $parts['path'] != '/')
 				|| isset($parts['query'])
-				|| $parts['fragment']) {
+				|| isset($parts['fragment'])) {
 			return false;
 		}
 		return true;
