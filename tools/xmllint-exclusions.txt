@@ -10,6 +10,7 @@
 ./plugins/generic/lucene/embedded
 ./plugins/generic/lucene/tests/classes/test-article.xml
 ./plugins/oaiMetadataFormats/dc/tests/expectedResult.xml
+./plugins/viewableFiles/lensGalley/tests/functional/sample.xml
 ./plugins/importexport/medra/tests/functional
 ./plugins/importexport/datacite/tests/functional
 ./plugins/importexport/native/sample.xml
