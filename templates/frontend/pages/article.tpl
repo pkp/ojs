@@ -12,14 +12,16 @@
  *}
 {include file="common/frontend/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
-<div class="page">
+<div class="page page_article">
 	{if $galley}
 		<h1 class="page_title">{$article->getLocalizedTitle()|escape}</h1>
 
 		{translate key="article.view.interstitial" galleyUrl=$fileUrl}
-		<ul>
+		<ul class="galleys_links">
 			{foreach from=$galley->getLatestGalleyFiles() item=galleyFile}
-				<li><a href="{url op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$galleyFile->getFileId() escape=false}">{$galleyFile->getName()|escape}</a></li>
+				<li>
+                    <a class="obj_galley_link" href="{url op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$galleyFile->getFileId() escape=false}">{$galleyFile->getLocalizedName()|escape}</a>
+                </li>
 			{/foreach}
 		</ul>
 	{else}
