@@ -16,8 +16,12 @@
 	{if $galley}
 		<h1 class="page_title">{$article->getLocalizedTitle()|escape}</h1>
 
-		{url|assign:"fileUrl" op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$firstGalleyFile->getId() escape=false}
 		{translate key="article.view.interstitial" galleyUrl=$fileUrl}
+		<ul>
+			{foreach from=$galley->getLatestGalleyFiles() item=galleyFile}
+				<li><a href="{url op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal):$galleyFile->getFileId() escape=false}">{$galleyFile->getName()|escape}</a></li>
+			{/foreach}
+		</ul>
 	{else}
 		{* Show article overview *}
 		{include file="frontend/objects/article_details.tpl"}

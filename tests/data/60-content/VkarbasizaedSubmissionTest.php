@@ -55,7 +55,7 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->click('css=[id^=component-grid-articlegalleys-articlegalleygrid-addItem-button-]');
 		$this->waitForElementPresent('css=[id^=label-]');
 		$this->type('css=[id^=label-]', 'PDF');
-		$this->select('id=galleyType', 'PDF Article Galley');
+		$this->select('id=galleyType', 'PDF.JS PDF Viewer');
 		$this->click('//button[text()=\'Save\']');
 		$this->waitJQuery();
 
