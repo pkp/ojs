@@ -41,6 +41,7 @@ class IssueGalleyGridRow extends GridRow {
 
 		// Is this a new row or an existing row?
 		$issueGalleyId = $this->getId();
+		error_log( $issueGalleyId);
 		if (!empty($issueGalleyId) && is_numeric($issueGalleyId)) {
 			$issue = $this->getData();
 			assert(is_a($issue, 'IssueGalley'));
@@ -72,7 +73,7 @@ class IssueGalleyGridRow extends GridRow {
 						__('grid.action.delete'),
 						$router->url(
 							$request, null, null, 'delete', null,
-							array($this->getRequestArgs(), array('issueGalleyId' => $issueGalleyId))
+							array_merge($this->getRequestArgs(), array('issueGalleyId' => $issueGalleyId))
 						),
 						'modal_delete'
 					),
