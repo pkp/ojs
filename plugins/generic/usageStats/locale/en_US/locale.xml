@@ -18,6 +18,8 @@
 	<message key="plugins.generic.usageStats.settings.logParseRegex">Parse log files regex</message>
 	<message key="plugins.generic.usageStats.settings.logParseRegex.description">The default regex used can parse apache access log files in combined format and also the plugin's log files. If your access log files are in a different format you will have to insert a regex capable of parsing them and giving the expected values. See UsageStatsLoader::_getDataFromLogEntry() for more information.</message>
 	<message key="plugins.generic.usageStats.settings.saved">Usage statistics plugin settings saved</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Activate this option if you would like to use a plugin version that considers the privacy legislations: the logged IP addresses are hashed using a daily randomly generated salt, the users are informed about the tracking and an opt-out option is provided for the users. For more information on system requirements for this plugin version please see the plugin README file. Note: using this option you will not be able to use the geo location features of the plugin.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Consider data privacy</message>
 	
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Usage statistics file loader task</message>
 	<message key="plugins.generic.usageStats.openFileFailed">The file {$file} could not be opened and was rejected.</message>
@@ -33,6 +35,20 @@
 	
 	<message key="plugins.reports.usageStats.report.displayName">OJS usage statistics report</message>
 	<message key="plugins.reports.usageStats.report.description">OJS default usage statistics report (COUNTER ready)</message>
+
+	<message key="plugins.reports.usageStats.optout.displayName">Usage Statistics Privacy Information</message>
+	<message key="plugins.reports.usageStats.optout.description">Usage Statistics Privacy Information</message>
+	<message key="plugins.generic.usageStats.optout.title">Privacy Information</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[We log anonymous usage statistics. Please read the <a href="{$privacyInfo}">privacy information</a> for details.]]></message>	
+	<message key="plugins.generic.usageStats.optout.done">You successfully opted out from usage statistics collection. While you see this message no statistics will be collected from your usage of this site. Click the below button to revert your decision.</message>
+	<message key="plugins.generic.usageStats.optin">Opt In</message>
+	<message key="plugins.generic.usageStats.optout">Opt Out</message>
+	<message key="plugins.generic.usageStats.optout.cookie">
+		If you click the opt-out button below then your browser will receive an "opt-out cookie" and no statistics information will be collected at all as long as
+		this cookie is present in your browser. The opt-out information will be stored for one year and will be renewed for another year whenever you access OJS. The
+		cookie contains no information that may be used to identify you. Please note that if you are using a different browser or if you delete cookies from your
+		browser then you'll have to opt-out again as we'll not keep any personal information about you on our side to protect your privacy.
+	</message>
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (COUNTER ready)</message>

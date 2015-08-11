@@ -37,15 +37,16 @@ class UsageStatsSettingsForm extends Form {
 	function initData() {
 		$plugin =& $this->plugin;
 
-		$this->setData('createLogFiles', $plugin->getSetting(CONTEXT_SITE, 'createLogFiles'));
-		$this->setData('accessLogFileParseRegex', $plugin->getSetting(0, 'accessLogFileParseRegex'));
+		$this->setData('createLogFiles', $plugin->getSetting(CONTEXT_ID_NONE, 'createLogFiles'));
+		$this->setData('accessLogFileParseRegex', $plugin->getSetting(CONTEXT_ID_NONE, 'accessLogFileParseRegex'));
+		$this->setData('dataPrivacyOption', $plugin->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption'));
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('createLogFiles','accessLogFileParseRegex'));
+		$this->readUserVars(array('createLogFiles','accessLogFileParseRegex', 'dataPrivacyOption'));
 	}
 
 	/**
@@ -63,8 +64,9 @@ class UsageStatsSettingsForm extends Form {
 	function execute() {
 		$plugin =& $this->plugin;
 
-		$plugin->updateSetting(0, 'createLogFiles', $this->getData('createLogFiles'));
-		$plugin->updateSetting(0, 'accessLogFileParseRegex', $this->getData('accessLogFileParseRegex'));
+		$plugin->updateSetting(CONTEXT_ID_NONE, 'createLogFiles', $this->getData('createLogFiles'));
+		$plugin->updateSetting(CONTEXT_ID_NONE, 'accessLogFileParseRegex', $this->getData('accessLogFileParseRegex'));
+		$plugin->updateSetting(CONTEXT_ID_NONE, 'dataPrivacyOption', $this->getData('dataPrivacyOption'));
 	}
 
 }

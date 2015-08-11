@@ -1,0 +1,10 @@
+Data Privacy Option
+--------------------
+This option will hash the logged IP adresses using a randomly generated salt that will be daily changed.
+The salt is randomly generated either using:
+- the funciton mcrypt_create_iv, which requires the PHP mcrypt
+- the function openssl_random_pseudo_bytes, which requires the PHP openssl
+- the file /dev/urandom, which works only on *nix systems
+- the function mt_rand, which is not cryptographicaly safe.
+Thus, if you are using a Windows server, please ensure that you install either the PHP mcrypt or openssl, 
+in order to have the cryptographicaly safe generated salt.

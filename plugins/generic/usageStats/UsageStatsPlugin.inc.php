@@ -46,6 +46,7 @@ class UsageStatsPlugin extends GenericPlugin {
 
 		if ($this->getEnabled() && $success) {
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+			HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
 
 			// If the plugin will provide the access logs,
 			// register to the usage event hook provider.
@@ -163,6 +164,10 @@ class UsageStatsPlugin extends GenericPlugin {
 			$this->import('UsageStatsReportPlugin');
 			$plugin = new UsageStatsReportPlugin();
 		}
+		if ($category ==  'blocks') {
+			$this->import('UsageStatsOptoutBlockPlugin');
+			$plugin = new UsageStatsOptoutBlockPlugin($this->getName());
+		}
 
 		// Register report plugin (by reference).
 		if ($plugin) {
@@ -173,6 +178,24 @@ class UsageStatsPlugin extends GenericPlugin {
 		}
 
 		return false;
+	}
+
+	/**
+ 	 * @see PKPPageRouter::route()
+	 */
+	function callbackLoadHandler($hookName, $args) {
+		// Check the page.
+		$page = $args[0];
+		if ($page !== 'usageStats') return;
+		// Check the operation.
+		$availableOps = array('privacyInformation');
+		$op = $args[1];
+		if (!in_array($op, $availableOps)) return;
+		// The handler had been requested.
+		define('HANDLER_CLASS', 'UsageStatsHandler');
+		define('USAGESTATS_PLUGIN_NAME', $this->getName());
+		$handlerFile =& $args[2];
+		$handlerFile = $this->getPluginPath() . '/' . 'UsageStatsHandler.inc.php';
 	}
 
 	/**
@@ -194,6 +217,17 @@ class UsageStatsPlugin extends GenericPlugin {
 	function logUsageEvent($hookName, $args) {
 		$hookName = $args[0];
 		$usageEvent = $args[1];
+
+		// Check (and renew) the statistics opt-out.
+		$application = Application::getApplication();
+		$request = $application->getRequest();
+		$optedOut = $request->getCookieVar('usageStats-opt-out');
+
+		if ($optedOut) {
+			// Renew the Opt-Out cookie if present.
+			$request->setCookieVar('usageStats-opt-out', true, time() + 60*60*24*365);
+			return false;
+		}
 
 		if ($hookName == 'FileManager::downloadFileFinished' && !$usageEvent && $this->_currentUsageEvent) {
 			// File download is finished, try to log the current usage event.
@@ -272,7 +306,49 @@ class UsageStatsPlugin extends GenericPlugin {
 	 * @param $usageEvent array
 	 */
 	function _writeUsageEventInLogFile($usageEvent) {
-		$desiredParams = array($usageEvent['ip']);
+		import('lib.pkp.classes.file.PrivateFileManager');
+		$fileMgr = new PrivateFileManager();
+
+		// Check the plugin file directory.
+		$usageEventFilesPath = $this->getUsageEventLogsPath();
+		if (!$fileMgr->fileExists($usageEventFilesPath, 'dir')) {
+			$success = $fileMgr->mkdirtree($usageEventFilesPath);
+			if (!$success) {
+				// Files directory wrong configuration?
+				assert(false);
+				return false;
+			}
+		}
+		// Get the current day filename.
+		$filename = $this->getUsageEventCurrentDayLogName();
+		$filePath = $usageEventFilesPath . DIRECTORY_SEPARATOR . $filename;
+
+		// Salt management.
+		$salt = $this->getSetting(0, 'salt');
+		if (empty($salt) || !file_exists($filePath)) {
+			if(function_exists('mcrypt_create_iv')) {
+				$newSalt = bin2hex(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM|MCRYPT_RAND));
+			} elseif (function_exists('openssl_random_pseudo_bytes')){
+				$newSalt = bin2hex(openssl_random_pseudo_bytes(16, $cstrong));
+			} elseif (file_exists('/dev/urandom')){
+				$newSalt = bin2hex(file_get_contents('/dev/urandom', false, null, 0, 16));
+			} else {
+				$newSalt = mt_rand();
+			}
+			$this->updateSetting(0, 'salt', $newSalt);
+			$salt = $newSalt;
+		}
+
+		// Manage the IP address (evtually hash it)
+		if ($this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
+			// Hash the IP
+			$hashedIp = $this->_hashIp($usageEvent['ip'], $salt);
+			// Never store unhashed IPs!
+			if ($hashedIp === false) return false;
+			$desiredParams = array($hashedIp);
+		} else {
+			$desiredParams = array($usageEvent['ip']);
+		}
 
 		if (isset($usageEvent['classification'])) {
 			$desiredParams[] = $usageEvent['classification'];
@@ -293,24 +369,7 @@ class UsageStatsPlugin extends GenericPlugin {
 
 		$usageLogEntry = implode(' ', $desiredParams) . PHP_EOL;
 
-		import('lib.pkp.classes.file.PrivateFileManager');
-		$fileMgr = new PrivateFileManager();
-
-		// Get the current day filename.
-		$filename = $this->getUsageEventCurrentDayLogName();
-
-		// Check the plugin file directory.
-		$usageEventFilesPath = $this->getUsageEventLogsPath();
-		if (!$fileMgr->fileExists($usageEventFilesPath, 'dir')) {
-			$success = $fileMgr->mkdirtree($usageEventFilesPath);
-			if (!$success) {
-				// Files directory wrong configuration?
-				assert(false);
-				return false;
-			}
-		}
-
-		$filePath = $usageEventFilesPath . DIRECTORY_SEPARATOR . $filename;
+		// Log the entry
 		$fp = fopen($filePath, 'ab');
 		if (flock($fp, LOCK_EX)) {
 			fwrite($fp, $usageLogEntry);
@@ -321,6 +380,31 @@ class UsageStatsPlugin extends GenericPlugin {
 		}
 		fclose($fp);
 	}
+
+	//
+	// Private helper methods.
+	//
+	/**
+	* Hash (SHA256) the given IP using the given SALT.
+	*
+	* NB: This implementation was taken from OA-S directly. See
+	* http://sourceforge.net/p/openaccessstati/code-0/3/tree/trunk/logfile-parser/lib/logutils.php
+	* We just do not implement the PHP4 part as OJS dropped PHP4 support.
+	*
+	* @param $ip string
+	* @param $salt string
+	* @return string|boolean The hashed IP or boolean false if something went wrong.
+	*/
+	function _hashIp($ip, $salt) {
+		if(function_exists('mhash')) {
+			return bin2hex(mhash(MHASH_SHA256, $ip.$salt));
+		} else {
+			assert(function_exists('hash'));
+			if (!function_exists('hash')) return false;
+			return hash('sha256', $ip.$salt);
+		}
+	}
+
 }
 
 ?>
