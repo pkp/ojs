@@ -846,12 +846,6 @@ Note that if your site administrator has already registered this site with these
 <li>在检索词里使用 <strong>*</strong>作为通配符匹配任何字符序列; 例如., <em>soci* morality</em> 将符合含有 "sociological" or "societal"的词语</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">便携文件格式(PDF)</message>
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">文章下载</message>
-	<message key="article.nonpdf.note"><![CDATA[您选择的文件将开始自动下载。如果没有，请点击下面的链接。请注意，此文件可能需要一种特殊的工具或插件来查看.<br /><br />如果该文件不自动下载， <a href="{$url}">请点击这里</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">本网站主办的期刊</message>
 	<message key="site.journalView">查看期刊</message>
@@ -1151,7 +1145,6 @@ Note that if your site administrator has already registered this site with these
 	<message key="user.subscriptions.status.needsApprovalDescription">订阅在激活前必须被审查</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">人工付费已经可以支付但是尚未收到。</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">在线支付已经被初始化但是被取消或者不完整</message>
-	<message key="article.pdf.download">下载PDF文件</message>
 	<message key="payment.authorFees">作者费用</message>
 	<message key="navigation.categories">类别</message>
 	<message key="navigation.categories.browse">浏览</message>
@@ -1173,7 +1166,6 @@ Note that if your site administrator has already registered this site with these
 </ol>]]></message>
 	<message key="user.register.reviewerInterests">识别审稿利益冲突 （实质性领域和研究方法）：</message>
 	<message key="user.subscriptions.statusInformation">活跃和无效的订阅将会随着到期日列在下面。此外，下面的状态信息可以包含在每个订阅之中。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>如果您的Web浏览器安装了PDF阅读器插件（如，最新的版本<a href="https://get.adobe.com/reader/"> Adobe Acrobat Reader</a>).您所选择的PDF文件应加载到这里。</p>]]></message>
 	<message key="site.noJournals">没有可用期刊。</message>
 	<message key="gifts.buyer">从</message>
 	<message key="gifts.buyerDescription">谁送来的礼品？</message>

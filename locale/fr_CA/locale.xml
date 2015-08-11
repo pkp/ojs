@@ -581,9 +581,6 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 <li>Utiliser <strong>*</strong> comme troncature dans un terme pour y faire correspondre toute séquence de caractères, c.-à-d. <em>soci* moralité</em> feront apparaître les documents contenant « sociologique » ou « socialisme »</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Format de document portable (PDF)</message>
-	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Télécharger l'article</message>
 	<message key="article.nonpdf.note"><![CDATA[Le fichier que vous avez sélectionné devrait commencer à se télécharger automatiquement. S'il ne le fait pas, cliquer sur le lien ci-dessous. Noter que ce fichier peut nécessiter un logiciel de lecture particulier ou un plugiciel pour être visualisé.<br /><br />Si le fichier ne se télécharge pas automatiquement, <a href="{$url}">cliquer ici</a>.]]></message>
@@ -994,7 +991,6 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="notification.type.submissionComment">Un rédacteur a fait un commentaire sur "{$param}".</message>
 	<message key="notification.type.submissions">Événements de soumission</message>
 	<message key="notification.type.userComment">Un lecteur a fait un commentaire sur "{$param}"</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Le fichier PDF que vous avez sélectionné devrait s'afficher ici si votre navigateur Web a un plugiciel de lecture PDF d'installé (par exemple, une version récente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Sinon, vous pouvez également télécharger directement le fichier PDF sur votre poste de travail, où il peut être ouvert à l'aide d'un outil de lecture PDF. Pour télécharger le PDF, cliquer sur le lien Télécharger ci-dessous.</p>]]></message>
 	<message key="user.register.reviewerInterests">Identifier les intérêts d'évaluation (questions de fond et méthodes de recherche) :</message>
 	<message key="user.subscriptions.subscriptionStatus">Statut de l'abonnement</message>
 	<message key="user.subscriptions.statusInformation">Les abonnements actifs et échus sont affichés ci-dessous avec leur date d'expiration. De plus, les informations suivantes sur le statut peuvent être incluses avec chaque abonnement.</message>
@@ -1004,7 +1000,6 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="user.subscriptions.status.needsApprovalDescription">L'abonnement doit être étudié avant d'être activé</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Le paiement manuel a été initié mais n'a pas encore été reçu</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Un paiement en ligne a été initié mais annulé ou non complété</message>
-	<message key="article.pdf.download">Télécharger ce fichier PDF</message>
 	<message key="payment.authorFees">Droits d'auteur</message>
 
 	<!-- Included here because it may be used in the navigation bar -->

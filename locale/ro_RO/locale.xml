@@ -852,13 +852,6 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Descarcă articolul</message>
-	
-	<message key="article.nonpdf.note"><![CDATA[Fişierul selectat ar trebui să înceapă să se descarce automat. Dacă nu, apasă pe linkul de mai jos. Trebuie remarcat că acest fişier ar putea avea nevoie de un cititor sau modul special pentru a fi vizualizat.<br /><br />Dacă fişierul nu se descarcă automat, <a href="{$url}">apăsaţi aici</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistele găzduite pe acest site</message>
 	<message key="site.journalView">Vezi revista</message>
@@ -1206,8 +1199,6 @@ Validarea poate eşua pe URL-urile de căutare care necesită date postate într
 	<message key="user.subscriptions.status.needsApprovalDescription">Propunerea trebuie să fie evaluată înainte de a fi activată</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">A fost inițiată plata manuală, dar nu a fost primită încă</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">A fost inițiată plata online dar nu a fost încheiată</message>
-	<message key="article.pdf.download">Descarcă acest fișier PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Fișierul PDF pe care l-ai selectat ar trebui încărcat aici dacă browserul web are un modul specific instalat (de exemplu, o versiune recentă <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Poți descărca fișierul direct pe computerul propriu, de unde pot fi deschise. Pentru a descărca PDF-ul, clic pe linkul pentru descărcare de mai jos.</p>]]></message>
 	<message key="payment.authorFees">Taxe pentru autori</message>
 
 	<!-- Included here because it may be used in the navigation bar -->

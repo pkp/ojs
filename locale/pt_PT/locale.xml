@@ -577,13 +577,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 <li>Use <strong>*</strong> como caracter coringa; ex.: <em>soci* moralidade</em> recuperará documentos contendo "sociedade" ou "sociológico"</li>
 </ul>]]></message>	
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Transferir artigo</message>
-	<message key="article.nonpdf.note"><![CDATA[O documento seleccionado deverá transferir automaticamente. Em caso negativo, clique no atalho abaixo. Note que o documento pode requerer um visualizador especial ou extensão para ser executado.<br /><br />Caso o documento não seja transferido automaticamente, <a href="{$url}">clique aqui</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistas hospedadas no portal</message>
 	<message key="site.journalView">Aceder à revista</message>
@@ -1029,8 +1022,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="user.subscriptions.status.needsApprovalDescription">A subscrição é analisada antes de ser activada</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">O pagamento manual foi iniciado mas ainda não foi recebido</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Um pagamento online foi iniciado mas foi cancelado ou está incompleto</message>
-	<message key="article.pdf.download">Transferir este ficheiro PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>O ficheiro PDF seleccionado deveria ser carregado no se browser como um plugin de leitura de PDF previamente instalado (por exemplo, uma versão recente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Em alternativa, pode transferir o ficheiro PDF directamente para o seu computador, onde pode ser aberto com um leitor PDF. Para transferir o PDF, clique sobre o link em baixo.</p>]]></message>
 	<message key="payment.authorFees">Taxas de Autor</message>
 
 	<!-- Included here because it may be used in the navigation bar -->

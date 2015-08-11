@@ -760,10 +760,10 @@ Active is how many reviews are currently being considered or underway.]]></messa
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.pageTitle">PDF View of {$pdfTitle}</message>
+	<message key="article.pageTitle">View of {$title}</message>
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Download this PDF file</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="article.download">Download this PDF file</message>
+	<message key="article.pluginMissing"><![CDATA[<p>The PDF file you selected should load here if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Article Download</message>

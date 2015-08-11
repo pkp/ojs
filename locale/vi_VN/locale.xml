@@ -594,13 +594,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 <li>Dùng dấu <strong>*</strong> trong một thuật ngữ như là ký tự đại diện; thí dụ, <em>soci*</em> sẽ tìm các từ "sociological" hoặc "societal"</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Định dạng file PDF (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Tải bài viết</message>
-	<message key="article.nonpdf.note"><![CDATA[File quý vị đã chọn sẽ bắt đầu tự động tải xuống. Nếu không, nhấp chuột vào đường dẫn dưới đây. Lưu ý là file này có thể cần phải có một phần mềm xem đặc biệt.<br /><br />Nếu fil không tự động tải xuống, <a href="{$url}">nhấp chuột vào đây</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Các tạp chí có trên Web site</message>
 	<message key="site.journalView">Xem tạp chí</message>

@@ -714,13 +714,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 <li>Använd <b>*</b> för att matcha mot alla typer av tecken; t.ex., <i>soci* morality</i> ger träffar på "sociological" eller "societal"</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Artikelnedladdning</message>
-	<message key="article.nonpdf.note"><![CDATA[Nedladdning av vald fil sker automatiskt. Om nedladdningen inte påbörjas, klicka på länken nedan. Observera att filen kan behöva ett speciellt läsarprogram eller en särskild typ av plugin för att synas.<br /><br />Om filen inte laddas ned automatiskt, <a href="{$url}"> klicka här</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tidskrifter som den här sidan är värd för</message>
 	<message key="site.journalView">Visa tidskrift</message>

@@ -738,15 +738,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Unduh file PDF  ini</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>File PDF yang Anda pilih harus dimuat di sini jika perambah web mempunyai plugin PDF reader diinstall (sebagai contoh: versi sekarang dari <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Alternatif lain, Anda juga bisa mengunduh file PDF langsung ke komputer Anda, dan bisa dibuka dengan menggunakan PDF reader. Untuk mengunduh PDF, klik tautan Unduh di bawah ini</p>]]></message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Unduh Artikel</message>
-	<message key="article.nonpdf.note"><![CDATA[File yang Anda pilih dapat meng-unggah secara otomatis. Jika tidak, klik tautan dibawah ini. Perhatikan file ini mungkin memerlukan plugin untuk dilihat.<br /><br />Jika file tidak meng-unggah secara otomatis <a href="{$url}">klik disini</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Jurnal yang dimasukkan di situs ini</message>
 	<message key="site.journalView">Lihat Jurnal</message>

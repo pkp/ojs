@@ -647,13 +647,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 <li>Brug <b>*</b> som jokertegn i et ord for at søge efter tegnenes rækkefølge, f.eks. <i>soci* politik</i> returnerer dokumenter, der indeholder ordet "sociologisk" eller "social"</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">PDF (Portable Document Format)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Hent artikel</message>
-	<message key="article.nonpdf.note"><![CDATA[Den valgte fil hentes automatisk. Hvis det ikke er tilfældet, skal du klikke på linket nedenfor. Vær opmærksom på, at der til visning af filen muligvis kræves en speciel fremviser eller plug-in.<br /><br />Hvis filen ikke hentes automatisk, skal du <a href="{$url}">klikke her</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tidsskrifter tilknyttet dette websted</message>
 	<message key="site.journalView">Vis tidsskrift</message>
@@ -985,8 +978,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.subscriptions.form.ipRangeValid">Indtast et gyldigt IP-område.</message>
 	<message key="user.subscriptions.form.deleteIpRange">Slet</message>
 	<message key="user.subscriptions.form.addIpRange">Tilføj</message>
-	<message key="article.pdf.download">Download denne pdf-fil</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Den valgte pdf-fil vil blive indlæst her, hvis din browser har en PDF reader-plugin installeret (for eksempel en nyere version af <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Du kan også downloade pdf-filen direkte til din computer, hvorfra den kan åbnes med en PDF reader. Klik på Download-linket herunder for at downloade pdf-filen.</p>]]></message>
 	<message key="about.history">Tidsskriftshistorik</message>
 	<message key="about.subscriptions.individual">Individuelle abonnementer</message>
 	<message key="about.subscriptions.institutional">Institutionsabonnementer</message>

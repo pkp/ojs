@@ -613,15 +613,6 @@ Se pensi di avere accesso a uno o più dei network LOCKSS elencati <a href="http
 <li>Usa <strong>*</strong> in un termine come un carattere speciale per associare ogni sequenza di caratteri; es. <em>soci* moralit&#x00E0;</em> potrebbe associare documenti contenenti "sociological" or "societal"</li>
 </ul>]]></message>
 
-
-
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Scarica articolo</message>
-	<message key="article.nonpdf.note"><![CDATA[Il file che hai selezionato dovrebbe scaricarsi automaticamente. Se questo non accade, clicca il link sotto. Nota che questo file potrebbe richiedere un visualizzatore specifico speciale o un plugin per essere visualizzato.<br /><br />Se il file non si scarica automaticamente, <a href="{$url}">clicca qui</a>.]]></message>
-
 	<!-- Site index -->
 	<message key="site.journalsHosted">Riviste ospitate su questo sito</message>
 	<message key="site.journalView">Vai alla rivista</message>
@@ -1065,14 +1056,12 @@ Titolo dello schema di classificazione]]></message>
 	<message key="user.subscriptions.subscriptionStatus">Stato dell'abbonamento</message>
 	<message key="user.subscriptions.status">Stato</message>
 	<message key="user.subscriptions.statusDescription">Descrizione</message>
-	<message key="article.pdf.download">Scarica questo file PDF</message>
 	<message key="user.subscriptions.status.needsInformationDescription">Sono richieste informazioni aggiuntive prima dell'attivazione dell'abbonamento</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription"><![CDATA[Il pagamento manuale &#232; stato iniziato ma non ancora ricevuto]]></message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription"><![CDATA[Il pagamento online iniziato &#232; stato cancellato o non completato]]></message>
 	<message key="user.register.reviewerInterests">Identifica le aree di interesse per la revisione (aree e metodi di ricerca):</message>
 	<message key="user.subscriptions.status.needsApprovalDescription">L'abbonamento deve essere controllato prima di poter essere attivato.</message>
 	<message key="payment.authorFees">Tariffe per gli autori</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Il file PDF selezionato dovrebbe caricarsi qui, se il tuo web browser ha un plugin per un lettore PDF installato (per esempio, una versione recente di <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>In alternativa, puoi anche scaricare direttamente il file PDF nel computer, dove puoi aprirlo con un lettore di PDF. Per scaricare il PDF, clicca sul link Download qui sotto.</p> <p>Se vuoi avere maggiori informazioni su come stampare, salvare e lavorare con i PDF, Highwire Press ha preparato un'utile rassegna di <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions sui PDF</a>.</p>]]></message>
 	<message key="user.subscriptions.statusInformation">Gli abbonamenti attivi e quelli scaduti sono visualizzati sotto, con la relativa data di scadenza. Inoltre, è possibile aggiungere le seguenti indicazioni di stato a ciascun abbonamento.</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Accesso negato! Non hai incarico di copyeditor su quest'articolo.</message>
 	<message key="user.authorization.noJournal">Nessuna rivista nel contesto!</message>

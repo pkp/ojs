@@ -700,13 +700,6 @@ El camp Actives llista les revisions en curs.]]></message>
 <li>Utilitzeu l’asterisc (<strong>*</strong>) en un terme com a comodí per cercar qualsevol seqüència de caràcters; p. ex. si introduïu <em>moralitat soci*</em> se cercaran tant els documents que contenen tant la paraula &#171;social&#187; com els que contenen la paraula &#171;sociològica&#187;.</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Baixada de l’article</message>
-	<message key="article.nonpdf.note"><![CDATA[El fitxer que heu seleccionat començarà a baixar automàticament. Si no ho fa, feu clic a l’enllaç següent. Noteu que pot ser que necessiteu un visualitzador o un connector especial per a aquest fitxer.<br /><br />Si el fitxer no baixa automàticament, <a href="{$url}">feu clic aquí</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistes allotjades en aquest lloc web</message>
 	<message key="site.journalView">Accés a la revista</message>

@@ -488,12 +488,6 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 <li>ある語を除外する場合は、<strong>-</strong> または <em>NOT</em> を前に付けてください。例: <em>online -politics</em> または <em>online NOT politics</em></li>
 <li>任意の文字列にマッチさせるためのワイルドカードには <strong>*</strong> を使用してください。例えば、 <em>soci* morality</em> は、"sociological" または "societal" を持つ文書にヒットします。</li>
 </ul>]]></message>
-  <!-- Interstitial page for PDFs -->
-  <message key="article.pdf.title">PDF</message>
-
-  <!-- Interstitial page for non-PDF non-HTML galleys -->
-  <message key="article.nonpdf.title">論文のダウンロード</message>
-  <message key="article.nonpdf.note"><![CDATA[選択したファイルは自動的にダウンロードが開始するはずです。開始しない場合は、下のリンクをクリックしてください。このファイルを見るには特別なビューアーやプラグインが必要な場合がありますので注意してください。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]></message>
   <!-- Site index -->
   <message key="site.journalsHosted">このサイトで提供している雑誌</message>
   <message key="site.journalView">雑誌の閲覧</message>
@@ -851,14 +845,12 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
 	<message key="user.subscriptions.subscriptionStatus">講読状態</message>
 	<message key="user.register.reviewerInterests">査読可能分野を定義 (研究テーマや研究手法)</message>
 	<message key="user.subscriptions.status.needsInformationDescription">講読をアクティベートする前に追加情報が必要です。</message>
-	<message key="article.pdf.download">このPDFをダウンロード</message>
 	<message key="user.subscriptions.status">状態</message>
 	<message key="user.subscriptions.statusDescription">備考</message>
 	<message key="user.subscriptions.status.needsApprovalDescription">講読がアクティベイトされる前に審査が必要です。</message>
 	<message key="payment.authorFees">投稿料</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">手作業による支払いは開始されましたが，まだ受け取っていません。</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">オンライン支払は開始されましたが，キャンセルあるいは完了していません。</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a> の最新版）をインストールしていれば，選択したPDFファイルがここにロードされるはずです。</p><p>また，PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 ダウンロードする場合は下記のリンクをクリックしてください。</p>]]></message>
 	<message key="user.subscriptions.statusInformation">アクティベートあるいは有効期限切れの講読が有効期限順に下記に表示されます。また，次のようなステータス情報がそれぞれの講読ごとに表示される場合があります。</message>
 
 	<!-- Included here because it may be used in the navigation bar -->

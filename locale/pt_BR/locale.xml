@@ -573,13 +573,6 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 <li>Use <strong>*</strong> como caracter coringa; ex.: <em>soci* moralidade</em> recuperará documentos contendo "sociedade" ou "sociológico"</li>
 </ul>]]></message>	
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Baixar artigo</message>
-	<message key="article.nonpdf.note"><![CDATA[O documento selecionado deverá ser baixado automaticamente. Em caso negativo, clique no atalho abaixo. Note que o documento pode requerer um visualizador especial ou plugin para ser executado.<br /><br />Caso o documento não seja baixado automaticamente, <a href="{$url}">clique aqui</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistas hospedadas no portal</message>
 	<message key="site.journalView">Acessar revista</message>
@@ -1017,7 +1010,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="navigation.archives">Anteriores</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Um pagamento manual foi iniciado, mas não foi recebido ainda</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Um pagamento online foi iniciado, mas não foi concluído.</message>
-	<message key="article.pdf.download">Baixar este arquivo PDF</message>
 	<message key="payment.authorFees">Taxas para autores</message>
 	<message key="user.register.reviewerInterests">Identifique as áreas de interesse para avaliação (áreas específicas e métodos de pesquisa):</message>
 	<message key="user.subscriptions.subscriptionStatus">Situação da assinatura</message>
@@ -1026,7 +1018,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.subscriptions.status.needsInformationDescription">Informações adicionais são necessárias para a ativação da assinatura</message>
 	<message key="user.subscriptions.status.needsApprovalDescription">A assinatura deve ser avaliada antes de poder ser ativada</message>
 	<message key="user.subscriptions.statusInformation">Assinaturas vencidas e ativas estão disponíveis a seguir, junto com a data de expiração. Além disso, as seguintes informações adicionais sobre a situação podem estar disponíveis para cada assinatura.</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>O arquivo PDF selecionado deve ser carregado no navegador caso tenha instalado um plugin de leitura de arquivos PDF (por exemplo, uma versão atual do <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Como alternativa, pode-se baixar o arquivo PDF para o computador, de onde poderá abrí-lo com o leitor PDF de sua preferência. Para baixar o PDF, clique no link abaixo.</p>]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Acesso negado! Você não foi designado como editor de texto deste artigo.</message>
 	<message key="user.authorization.noJournal">Nenhum periódico no contexto!</message>
 	<message key="user.authorization.sectionAssignment">Está tentando acessar um artigo que não faz parte da sua seção.</message>

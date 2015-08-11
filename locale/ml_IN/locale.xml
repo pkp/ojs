@@ -570,13 +570,6 @@
 	<message key="search.authorIndex">ഓതര്‍ ഇന്‍ഡക്സ് ബ്രൗസ് ചെയ്യുക</message>
 	<message key="search.authorDetails">ഗ്രന്ഥകര്‍ത്താവിന്റെ വിശദാംശങ്ങള്‍</message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">പോര്‍ട്ടബിള്‍ ഡോക്യുമെന്റ് ഫോര്‍മാറ്റ് (പിഡിഎഫ് )</message>
-	<message key="article.pdf.download">ഈ പിഡിഎഫ് ഫയല്‍ ഡൗണ്‍ലോഡ് ചെയ്യുക</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">ലേഖനങ്ങള്‍ ഡൗണ്‍ലോഡ് ചെയ്യുന്നതിന്</message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">ജര്‍ണലുകള്‍ ഈ സൈറ്റില്‍ ആണ് ഹോസ്റ്റ് ചെയ്യപ്പെട്ടിരിക്കുന്നത്</message>
 	<message key="site.journalView">ജര്‍ണല്‍ കാണുക</message>

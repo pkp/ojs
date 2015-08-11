@@ -627,12 +627,8 @@ vaš korisnički račun, unesite u polja ispod vašu sadašnju i novu lozinku.</
 <li>Koristite <i>*</i> u izrazu kao zamjenski znak za bilo koji niz znakova; npr. <i>soci*</i> pronaći će dokumente koji sadržavaju "sociološka" ili "socijalna".</li>
 </ul>]]></message>
 
-	<!--  Interstitial page for PDFs  --><message key="article.pdf.title">Prijenosni format dokumenta (PDF)</message>
-	
-	<!--  Interstitial page for non-PDF non-HTML galleys  --><message key="article.nonpdf.title">Preuzimanje članka</message>
-	<message key="article.nonpdf.note"><![CDATA[Datoteka koju ste odabrali trebala bi se započeti automatski preuzimati. Ako se to ne dogodi, kliknite na poveznicu ispod. Ova datoteka možda zahtijeva posebni program ili dodatak za prikaz.<br /><br />Ako se datoteka ne skida automatski, <a href="{$url}">kliknite ovdje</a>.]]></message>
-	
-	<!--  Site index  --><message key="site.journalsHosted">Časopisi udomaćeni na ovoj stranici</message>
+	<!--  Site index  -->
+	<message key="site.journalsHosted">Časopisi udomaćeni na ovoj stranici</message>
 	<message key="site.journalView">Pregled časopisa</message>
 	<message key="site.journalRegister">Registracija</message>
 	<message key="site.journalCurrent">Trenutni broj časopisa</message>

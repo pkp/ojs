@@ -656,13 +656,6 @@
         <li>Με τη χρήση του συμβόλου <strong>*</strong> σε ένα όρο αναζήτησης μπορείτε να αναζητήσετε οποιονδήποτε άλλον όρο που τον περιέχει, π.χ. η αναζήτηση με τον όρο <em>"συνεργά*"</em> θα επιστρέψει αποτελέσματα που θα περιέχουν τους όρους "συνεργάτες" ή "συνεργάται" ή "συνεργάτης" κ.ο.κ.</li> 
         </ul>]]></message>
 
-        <!-- Interstitial page for PDFs -->
-        <message key="article.pdf.title">Portable Document Format (PDF)</message>
-        
-        <!-- Interstitial page for non-PDF non-HTML galleys -->
-        <message key="article.nonpdf.title">Κατέβασμα άρθρου</message>
-        <message key="article.nonpdf.note"><![CDATA[Το αρχείο που επιλέξατε πρέπει να κατέβει αυτόματα. Εάν αυτό δεν συμβεί, κάντε κλικ στον παρακάτω σύνδεσμο. Λάβετε υπόψη σας ότι για την προβολή του συγκεκριμένου αρχείου μπορείς να είναι απαραίτητο ένα ειδικό πρόγραμμα προβολής ή ένα plugin.<br /><br /> Εάν το αρχείο δεν κατέβει αυτόματα, <a href="{$url}"> κάντε κλικ εδώ</a>.]]></message>
-        
         <!-- Site index -->
         <message key="site.journalsHosted">Περιοδικά Συλλογής</message>
         <message key="site.journalView">Προβολή Περιοδικού</message>
@@ -1024,8 +1017,6 @@
 	<message key="user.subscriptions.status.needsApprovalDescription">Η συνδρομή θα πρέπει να ελεγχθεί πρι ενεργοποιηθεί</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Η χειρωνακτική πληρωμή έχει ξεκινήσει αλλά δεν έχει ακόμα παραληφθεί</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Μια online πληρωμή έχει ξεκινήσει, αλλά ακυρώθηκε ή δεν ολοκληρώθηκε</message>
-	<message key="article.pdf.download">Κατεβάστε αυτό το αρχείο PDF</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Το αρχείο PDF που επιλέξατε αθ πρέπει να φορτωθείεδώ αν ο Web browser σας έχει εγκατεστημένο ένα PDF plug-in ανάγνωσης τέτοιων αρχείων (π.χ. μια πρόσφατη έκδοση του <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>Εναλλακτικά μπορείτε να κατεβάσετε το αρχείο κατευθείαν στον υπολογιστή σας, όπου μπορείτε να το ανοίξετε με ένα πρόγραμμα ανάγνωσης PDF. Για να κατεβάσετε το  αρχείο PDF, πατήστε τον σύνδεσμο φόρτωσης παρακάτω .</p>]]></message>
 	<message key="payment.authorFees">Εισφορές Συγγραφέων</message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Η πρόσβαση δεν είναι δυνατή. Δεν σας έχει ανατεθεί ο ρόλος του Επιμελητή Κειμένου για αυτό το άρθρο.</message>
 	<message key="user.authorization.noJournal">Δεν υπάρχει κανένα περιοδικό!</message>

@@ -647,13 +647,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 <li>Gebruik <b>*</b> in een zoekterm als joker voor een willekeurige reeks tekens. bv. <i>soci* moraal</i> vindt documenten met  "sociologisch" of "sociaal"</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Artikel download</message>
-	<message key="article.nonpdf.note"><![CDATA[Het bestand dat u gekozen hebt, zou automatisch op uw computer geladen moeten worden. Als dat niet gebeurt, klik op de link hieronder. Het bestand vereist mogelijk een programma of plugin om te bekijken<br /><br />Als de download niet vanzelf start, <a href="{$url}">klik hier</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tijdschriften op deze site</message>
 	<message key="site.journalView">Bekijk tijdschrift</message>
@@ -1010,11 +1003,9 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="user.subscriptions.status.needsApprovalDescription">Het abonnement moet beoordeeld worden voor het geactiveerd kan worden</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Handmatige betaling is gestart, maar nog niet ontvangen</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Een online betaling is gestart, maar gestopt of niet voltooid</message>
-	<message key="article.pdf.download">Dit PDF bestand downloaden</message>
 	<message key="user.subscriptions.statusInformation">Actieve en verlopen abonnementen worden hieronder met hun afloopdatum getoond. De volgende aanvullende informatie kan bij de abonnementen opgenomen worden.</message>
 	<message key="payment.authorFees">Kosten auteurs</message>
 	<message key="user.register.reviewerInterests">Geef review-interesses (kennisgebieden en onderzoeksmethodes)</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Het PDF bestand dat u gekozen hebt zal hier geladen worden als uw webbrowser een plugin voor het lezen  van PDF's geïnstalleerd heeft (bijvoorbeeld een recente versie van <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p> <p>U kunt het PDF bestand ook direct naar uw computer downloaden en het openen in een PDF-lezer.]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Bezoek <a href="http://pkp.sfu.ca/ojs_download" target="_new">deze pagina</a> om de meest recente versie op te halen en voor installatieinstructies.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Neem contact op met uw sitebeheerder ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) om die te wijzen op de nieuwe versie. Meer informatie <a href="http://pkp.sfu.ca/ojs_download" target="_new">hier</a>.]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Geen toegang! U bent niet de tekstredacteur voor dit artikel.</message>

@@ -681,13 +681,6 @@
 <li>在一個詞彙中使用<strong>*</strong>當作萬用字元，以搜尋符合任何字串的結果。例如：<em>soci* morality</em> 會找到包含 "sociological" 或者"societal"的文章。</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs 插入PDF頁面 -->
-	<message key="article.pdf.title">可攜式文件格式(Portable Document Format; PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys 非PDF、非HTML排版樣式的插入頁面-->
-	<message key="article.nonpdf.title">文章下載</message>
-	<message key="article.nonpdf.note"><![CDATA[您選擇的檔案應該會被自動下載到您的電腦上。如果沒有的話，請點擊下面的連結。請注意，這個檔案可能會需要一個特定的閱讀器或者外掛程式才能被檢視。<a href="{$url}">點擊這裡</a>.]]></message>
-	
 	<!-- Site index 網站索引 -->
 	<message key="site.journalsHosted">這個網站上的各種期刊</message>
 	<message key="site.journalView">瀏覽期刊</message>

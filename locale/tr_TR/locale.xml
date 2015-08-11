@@ -695,16 +695,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 <li>Bir kelime içinde ardışık karakterleri ifade etmek için <strong>*</strong> sembolünü kullanın; ör., <em>Türk*</em> = "Türkiye", "Türkler", "Türklerin" vb. terimlerinin bulunmasını sağlar</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Taşınabilir Döküman Biçimi (PDF)</message>
-	<message key="article.pdf.download">PDF İndir</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Web tarayıcınıza bir PDF okuyucu eklentisi kuruluysa seçtiğiniz PDF dosyası buraya yüklenecetir. (örneğin; <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>'ın güncel sürümü).</p><p> Alternatif olarak, PDF okuyucusu kullanarak açmak için dosyayı doğrudan bilgisayarınıza yükleyebilirsiniz. PDF dosyayı indirmek için aşağıdaki indir bağlantısını tıklayın.</p>]]></message>
-	
-	<!-- PDF ve HTML dışı gönderiler için ara sayfa -->
-	<message key="article.nonpdf.title">Makale İndir</message>
-	<message key="article.nonpdf.note"><![CDATA[Seçmiş olduğunuz dosya otomatik olarak indirilmeye başlanacaktır. Eğer indirme otomatiok olarak başlamaz ise aşağıdaki bağlantıyı tıklayın. Bu dosyanın görülebilmesi için özel bir görüntüleyici veya bağlantıya gereksinim olabilir.<br /><br />Eğer makale otomatik olarak indirilmez ise  <a href="{$url}">buraya tıklayın</a>.]]></message>
-
-<!-- Site index -->
+	<!-- Site index -->
 	<message key="site.journalsHosted">Bu sitedeki dergiler</message>
 	<message key="site.journalView">Dergiyi Görüntüle</message>
 	<message key="site.journalRegister">Kayıt</message>

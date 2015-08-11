@@ -426,14 +426,6 @@
 <li>Используйте <strong>*</strong> в качестве версификатора, напр. <em>научн*</em> охватит слова "научный", "научные" и т.д.</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Скачать статью</message>
-	<message key="article.nonpdf.note"><![CDATA[Выбранный Вами файл должен скачаться автоматически. Если не получается, <a href="{$pdfUrl}">нажмите здесь</a>.]]></message>
-
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Журналы на этом сайте</message>
 	<message key="site.journalView">Посмотреть</message>
@@ -765,7 +757,6 @@
 	<message key="user.subscriptions.subscriptionStatus">Статус подписки</message>
 	<message key="user.subscriptions.status">Статус</message>
 	<message key="user.subscriptions.statusDescription">Описание</message>
-	<message key="article.pdf.download">Загрузить этот файл PDF</message>
 	<message key="gifts.buyer">От</message>
 	<message key="gifts.buyerDescription">От кого этот подарок?</message>
 	<message key="gifts.recipient">Кому</message>

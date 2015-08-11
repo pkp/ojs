@@ -609,13 +609,6 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 <li>Use <strong>*</strong> en un término como comodín para encontrar cualquier secuencia de caracteres; p.e., <em>moralidad soci* </em> encontraría documentos que contengan "sociológico" o "sociología"</li>
 </ul>]]></message>
 	
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Descargar artículo</message>
-	<message key="article.nonpdf.note"><![CDATA[El fichero que ha seleccionado debería empezar a descargarse automáticamente. Si no lo hace haga click en el siguiente enlace. Tenga en cuenta que este fichero puede necesitar un visor especial o un plug-in.<br /><br />Si el fichero no se descarga automáticamente, <a href="{$url}">haga click aquí</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistas alojadas en este servidor</message>
 	<message key="site.journalView">Ver revista</message>
@@ -994,12 +987,10 @@ Título del sistema de clasificación]]></message>
 	<message key="user.register.reviewerInterests">Identificar los intereses de la revisión (áreas sustantivas y métodos de investigación):</message>
 	<message key="user.subscriptions.status.needsInformationDescription">Se necesita información adicional antes de que se pueda activar la suscripción</message>
 	<message key="user.subscriptions.status.needsApprovalDescription">La suscripción debe ser revisada antes de pueda ser activada</message>
-	<message key="article.pdf.download">Descargar este fichero PDF</message>
 	<message key="payment.authorFees">Tasas Autor</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Se ha iniciado un pago online pero ha sido cancelado o no completado.</message>
 	<message key="user.subscriptions.statusInformation">Las suscripciones activas y vencidas se muestran a continuación junto con su fecha de caducidad. Además, la siguiente información de estado se pueden incluir con cada suscripción.</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Se ha iniciado un pago manual, pero aún no se ha recibido.</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>El archivo PDF que ha seleccionado se debe cargar aquí si su navegador Web tiene un lector de PDF plug-in instalado (por ejemplo, una versión reciente de <a href = "http://www.adobe.com/products/acrobat/ readstep2.html "> Adobe Acrobat Reader </a>).</p> Si lo prefiere, también puede descargar el archivo PDF directamente a su ordenador, desde donde se puede abrir usando un lector de PDF. Para descargar el PDF, haga clic en el enlace de descarga. </p>]]></message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
 <h4>1. Política propuesta para Revistas que ofrecen Acceso Abierto</h4>
 Los autores que publican en esta revista están de acuerdo con los siguientes términos:

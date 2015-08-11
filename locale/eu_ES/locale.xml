@@ -689,13 +689,6 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 <li>Komodin gisa, hainbat karaktere adierazteko, erabili <strong>*</strong>; adib. <em>soziologi*</em> , "soziologia" edo "soziologiko" bilatzeko, forma deklinatu guztiak barne.</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Artikulua deskargatu</message>
-	<message key="article.nonpdf.note"><![CDATA[Zuk hautatutako fitxategia automatikoki hasi behar da deskargatzen. Ez bada hasten, egin klik beheko estekan. Kontuan izan, fitxategi hau ikusteko ikustaile edo plugin berezi bat behar dela.<br /><br />Fitxategia ez bada automatikoki deskargatzen, <a href="{$url}">egin klik hemen</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Gune honetan ostatatutako aldizkariak</message>
 	<message key="site.journalView">Aldizkaria ikusi</message>
@@ -1005,8 +998,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="user.subscriptions.form.ipRangeValid">Mesedez, sartu baliozko IP barruti bat.</message>
 	<message key="user.subscriptions.form.deleteIpRange">Ezabatu</message>
 	<message key="user.subscriptions.form.addIpRange">Gehitu</message>
-	<message key="article.pdf.download">Deskargatu PDF fitxategi hau.</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p> Hautatu duzun PDF fitxategia hemen kargatu beharko litzateke, zure web arakatzaileak PDF formatua duten testuak irakurtzeko plugina instalatuta badu (adibidez, <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader </a>irakurlearen bertsio berri bat).</p> <p>Osterantzean, PDF artxiboa zuzenean deskargatu dezakezu zure ordenagailura, eta bertan PDF irakurle bat erabiliz ireki dezakezu. PDFa deskargatzeko, egin klik beheko “Deskargatu” estekan. </p>]]></message>
 	<message key="about.history">Aldizkariaren historia</message>
 	<message key="about.subscriptions.individual">Harpidetza indibidualak</message>
 	<message key="about.subscriptions.institutional">Harpidetza instituzionalak</message>

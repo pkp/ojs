@@ -406,10 +406,7 @@ http://journals.mui.ac.ir/index.php/index/index
 <li>برای حذف یک کلمه از جستجو به نحوی که حاصل جستجو فاقد آن کلمه باشد ، قبل از آن کلمه <b>-</b> یا <i>NOT</i> بیاورید مانند  <i>online -politics</i> یا <i>online NOT politics</i></li>
 <li>از ستاره یعنی <b>*</b> در کلمات به عنوان علامت سرکش استفاده کنید تا جایگزین هر تعداد حروف شود. مثلا  <i>soci* morality</i> معادل  "sociological" یا "societal" میباشد</li>
 </ul>]]></message>
-<!-- صفحه بینابینی PDF ها-->  <message key="article.pdf.title">فايل پی دی اف</message>
-<!-- صفحه بینابینی برای گالی های غیر PDF و غیر  HTML-->  <message key="article.nonpdf.title">دان لود مقاله</message>
-	<message key="article.nonpdf.note"><![CDATA[فایل انتخاب شده بصورت اتوماتیک دان لود خواهد شد. در غیر این صورت بر روی لینک زیر کلیک کنید. توجه داشته باشید که برای دیدن محتویات این فایل ممکن است ابزار خاصی احتیاج داشته باشید.<br /><br />چنانچه فایل بصورت اتوماتیک دان لود نشد ، <a href="{$url}">اینجا</a> را کلیک کنید.]]></message>
-<!-- اندکس سایت -->  <message key="site.journalsHosted">لیست مجلات موجود بر روی این سایت</message>
+	<message key="site.journalsHosted">لیست مجلات موجود بر روی این سایت</message>
 	<message key="site.journalView">مشاهده مجله</message>
 	<message key="site.journalRegister">ثبت نام</message>
 	<message key="site.journalCurrent">شماره جاری</message>
@@ -880,14 +877,6 @@ lib.sfu.ca]]></message>
 	<message key="user.subscriptions.status.needsApprovalDescription">قبل از فعال سازی اشتراک می بایست مرور گردد</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">پرداخت دستی راه اندازی شده است ولی هنوز وصول نشده است</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">پرداخت آن لاین شورع شده است ولی کامل نشده است</message>
-	<message key="article.pdf.download">دانلود این فایل پی دی اف</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>
-در صورتی که مرورگر شما پلاگین خواندن پی دی اف را داشته باشد فایل پی دی اف خود را می تواندی در اینجا لود کنید. به عنوان مثال نسخه اخیر
-(<a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>)
-</p>
-<p>
-همچنین می توانید فایل پی دی اف را دالود کرده و با یک برنامه مخصوص خواندن فایلهای پی دی اف آن را باز کنید. برای دان لود فایل پی دی اف بر روی لینک دانلود کلیک گنید.
-</p>]]></message>
 	<message key="payment.authorFees">نرخ نویسنده</message>
 
 	<!-- Included here because it may be used in the navigation bar -->

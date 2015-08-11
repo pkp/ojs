@@ -654,13 +654,6 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 <li>Použijte <b>*</b> v termínu jako divokou kartu pro nalezení jakékoliv sekvence znaků; např. <i>soci* etika</i> by vrátilo dokumenty obsahující "sociologický" nebo "sociální"</li>
 </ul>]]></message>
 
-	<!-- Interstitial page for PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	
-	<!-- Interstitial page for non-PDF non-HTML galleys -->
-	<message key="article.nonpdf.title">Stažení článku</message>
-	<message key="article.nonpdf.note"><![CDATA[Stahování vybraného souboru by mělo začít automaticky. Pokud nezačne, klikněte na odkaz níže. Vězte, že soubor může vyžadovat pro své zobrazení speciální prohlížeč nebo plug-in.<br /><br />Pokud nezačalo stahování automaticky, <a href="{$url}">klikněte zde</a>.]]></message>
-	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Časopisy hostované na této stránce</message>
 	<message key="site.journalView">Zobrazit časopis</message>

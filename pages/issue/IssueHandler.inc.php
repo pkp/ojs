@@ -118,7 +118,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('galley', $galley);
 
 			if (!HookRegistry::call('IssueHandler::view::galley', array(&$request, &$issue, &$galley))) {
-				return $templateMgr->display('frontend/pages/issueGalley.tpl');
+				return $templateMgr->display('frontend/pages/issueInterstitial.tpl');
 			}
 		} else {
 			$this->_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);

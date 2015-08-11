@@ -751,15 +751,6 @@
 <li>Використовуйте у термінах символ <strong>*</strong> як метасимвол, що позначає будь-яку послідовність символів; наприклад, за запитом <em>соці*</em> будуть знайдені документи, що містять слова "соціальний", "соціалістичний", "соціологічний" тощо</li>
 </ul>]]></message>
 
-       <!-- Interstitial page for PDFs -->
-       <message key="article.pdf.title">Portable Document Format (PDF)</message>
-       <message key="article.pdf.download">Завантажити цей PDF-файл</message>
-       <message key="article.pdf.pluginMissing"><![CDATA[<p>Якщо у Вашому браузері встановлений модуль читання PDF-файлів (наприклад, остання версія <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>), то обраний Вами файл PDF завантажиться у це вікно.</p> <p>Крім того, Ви можете завантажити PDF-файл безпосередньо на свій комп'ютер, де його можна буде відкрити за допомогою програми читання PDF-файлів. Щоб завантажити PDF-файл, натисніть посилання "Завантажити" нижче.</p>]]></message>
-       
-       <!-- Interstitial page for non-PDF non-HTML galleys -->
-       <message key="article.nonpdf.title">Завантаження статті</message>
-       <message key="article.nonpdf.note"><![CDATA[Обраний Вами файл почне завантажуватись автоматично. Зауважте, що для перегляду цього файлу може знадобитись спеціалізоване програмне забезпечення.<br /><br />Якщо файл не завантажився автоматично, <a href="{$url}">натисніть сюди</a>.]]></message>
-       
        <!-- Site index -->
        <message key="site.journalsHosted">Журнали, розміщені на цьому сайті</message>
        <message key="site.journalView">Перегляд журналу</message>

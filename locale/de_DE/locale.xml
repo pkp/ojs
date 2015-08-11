@@ -772,15 +772,6 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 <li>Verwenden Sie <strong>*</strong> als Platzhalter für beliebige Zeichenfolgen, z.B. <em>Sozi* Moral</em> listet alle Dokumente, die "soziologisch" oder "sozial" enthalten.</li>
 </ul>]]></message>
 
-	<!-- Einschubseite für PDFs -->
-	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.download">Diese PDF-Datei herunterladen</message>
-	<message key="article.pdf.pluginMissing"><![CDATA[<p>Die PDF-Datei, die Sie ausgewählt haben, sollte hier geöffnet werden, wenn für Ihren Webbrowser ein PDF-Lese-Plug-In installiert ist (zum Beispiel eine aktuelle Version des <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
-
-	<!-- Einschubseite für Fahnen, die weder PDF noch HTML sind -->
-	<message key="article.nonpdf.title">Artikel herunterladen</message>
-	<message key="article.nonpdf.note"><![CDATA[Die gewählte Datei sollte automatisch geladen werden. Falls nicht, klicken Sie auf den nachstehenden Link. Beachten Sie bitte, dass die Datei zur Wiedergabe ein spezielles Programm oder ein Plug-In benötigen kann.<br /><br />Falls die Datei nicht automatisch geladen wird, <a href="{$url}">hier klicken</a>.]]></message>
-
 	<!-- Index: Site -->
 	<message key="site.journalsHosted">Zeitschriften auf dieser Seite</message>
 	<message key="site.journalView">Zur Zeitschrift</message>
