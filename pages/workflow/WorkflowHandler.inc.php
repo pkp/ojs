@@ -82,10 +82,10 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				// Next, create a galley PROOF file out of the submission file uploaded.
 				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 				$submissionFiles = $submissionFileDao->getLatestRevisions($submission->getId(), SUBMISSION_FILE_SUBMISSION);
-				// Assume a single file was uploaded, but check for something that's PDF anyway.
+				// Watch for a single file, or any PDFs.
 				foreach ($submissionFiles as $submissionFile) {
 					// test both mime type and file extension in case the mime type isn't correct after uploading.
-					if ($submissionFile->getFileType() == 'application/pdf' || preg_match('/\.pdf$/', $submissionFile->getOriginalFileName())) {
+					if (count($submissionFiles) == 1 || $submissionFile->getFileType() == 'application/pdf' || preg_match('/\.pdf$/', $submissionFile->getOriginalFileName())) {
 
 						// Get the path of the current file because we change the file stage in a bit.
 						$currentFilePath = $submissionFile->getFilePath();
