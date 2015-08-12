@@ -117,6 +117,7 @@ class ViewReportPlugin extends ReportPlugin {
 				$articleIssueIdentificationMap[$articleId] = $issueId;
 				if (!isset($issueIdentifications[$issueId])) {
 					$issue =& $issueDao->getIssueById($issueId);
+					if (!$issue) continue;
 					$issueIdentifications[$issueId] = $issue->getIssueIdentification();
 					$issueDatesPublished[$issueId] = $issue->getDatePublished();
 					unset($issue);
@@ -131,6 +132,7 @@ class ViewReportPlugin extends ReportPlugin {
 				foreach ($galleysResult as $galleyRecord) {
 					$galleyId = $galleyRecord[STATISTICS_DIMENSION_ASSOC_ID];
 					$galley =& $galleyDao->getGalley($galleyId);
+					if (!$galley) continue;
 					$label = $galley->getGalleyLabel();
 					$i = array_search($label, $galleyLabels);
 					if ($i === false) {
