@@ -38,6 +38,7 @@ class GalleyFilesGridHandler extends FileListGridHandler {
 				'addFile', 'selectFiles',
 				'downloadFile',
 				'deleteFile',
+				'viewLibrary',
 			)
 		);
 	}
@@ -131,6 +132,18 @@ class GalleyFilesGridHandler extends FileListGridHandler {
 		$templateMgr->assign('fileId', $submissionFile->getFileId());
 		$templateMgr->assign('submissionId', $submissionFile->getSubmissionId());
 		return $templateMgr->fetchJson('controllers/grid/files/galley/dependentFiles.tpl');
+	}
+
+	/**
+	 * Load the (read only) context file library.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function viewLibrary($args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('canEdit', true);
+		return $templateMgr->fetchJson('controllers/tab/settings/library.tpl');
 	}
 }
 
