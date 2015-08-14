@@ -1,28 +1,8 @@
-OJS 3.0a1 Release Notes
-CVS tag: ojs-3_0a1
-Release date: August 15, 2013
+OJS 3.0 Beta 1 Release Notes
+CVS tag: ojs-3_0b1
+Release date: August 15, 2015
 =================================
 
 ===============================================================================
-NOTE: This is an alpha release of OJS 3.0 and not intended for production usee
+NOTE: This is a beta release of OJS 3.0 and not intended for production use
 ===============================================================================
-
-Configuration Changes
----------------------
-
-See config.TEMPLATE.inc.php for a description and examples of all supported
-configuration parameters.
-
-Changed config.inc.php parameters:
-	- mail:smtp_auth: The possible values of this setting have changed from
-		PLAIN, LOGIN, CRAM-MD5, and DIGEST-MD5 to ssl or tls (or leave
-		unspecified to disable SMTP authentication). See the phpmailer
-		library's documentation for further details.
-	- security:allowed_html: The format of this setting has changed for
-		compatibility with HTMLPurifier's HTML.Allowed setting. See
-		config.TEMPLATE.inc.php for a sensible default.
-	- captcha:captcha: This option has been deprecated in favour of
-		ReCaptcha. See config.TEMPLATE.inc.php in the [captcha] section
-		for the replacement configuration options.
-	- debug:show_stats: This option has been removed. Profiling is available
-		in various PHP opcode caches.
