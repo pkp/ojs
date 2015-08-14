@@ -1,7 +1,7 @@
-Upgrading an OJS Installation from OJS < 2.3
---------------------------------------------
+UPGRADES
+========
 
-Note that upgrades from OJS 2.0.x, 2.1.x, and 2.2.x directly to 3.0 or newer
-are not directly supported. In order to upgrade from one of these versions of
-OJS, it will be necessary to first upgrade via an interim OJS 2.3.x or 2.4.x
-installation.
+OJS 3.0 Beta 1 does not support upgrades from prior installations of OJS.
+Upgrades will be supported in following releases.
+
+Note that OJS 3.0 Beta 1 is not intended for production use.

@@ -11,8 +11,8 @@
   *
   -->
 
-<install version="2.9.0.0">
-	<upgrade minversion="2.0.0.0" maxversion="2.2.9.9">
+<install version="2.9.9.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.9.8.9">
 		<code function="abort" message="installer.unsupportedUpgradeError" />
 	</upgrade>
 
