@@ -26,7 +26,8 @@ class UserManagementForm extends Form {
 	function UserManagementForm($userId = null) {
 		parent::Form('manager/people/userProfileForm.tpl');
 
-		if (!Validation::isJournalManager()) $userId = null;
+		$journal =& Request::getJournal();
+		if ($userId && !Validation::canAdminister($journal->getId(), $userId)) $userId = null;
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$site =& Request::getSite();
 
