@@ -423,7 +423,7 @@ function AlmViz(options) {
 			.attr("width", viz.width + viz.margin.left + viz.margin.right)
 			.attr("height", viz.height + viz.margin.top + viz.margin.bottom)
 			.append("g")
-			.attr("transform", "translate(" + viz.margin.left + "," + viz.margin.top + ")");
+			.attr("transform", "translate(" + viz.margin.left + "," + (viz.margin.top - 5) + ")");
 
 
 		// draw the bars g first so it ends up underneath the axes
